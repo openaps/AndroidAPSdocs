@@ -22,13 +22,13 @@
     1. CROWDIN 翻譯和
     2. Read The Docs 部署。
 
-You can dirctly jump from here to the second label in this file - ["Jump"](#this-is-another-test).
+你可以從這裡直接跳轉到此文件中的第二個標籤 - [「跳轉」](#this-is-another-test)。
 
-And you can jump to the first label too - ["Jump"](#this-is-a-test).
+你也可以跳轉到第一個標籤 - [「跳轉」](#this-is-a-test)。
 
 這裡可以跳轉到第二個沙盒文件 - [「跳轉」](./MoveTest/sandbox2.md)。
 
-You can dirctly jump from here to the first label in the sandbox2.md file - ["Jump"](./MoveTest/sandbox2.md#this-is-a-test).
+你可以從這裡直接跳轉到 sandbox2.md 文件中的第一個標籤 - [「跳轉」](./MoveTest/sandbox2.md#this-is-a-test)。
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。
 
@@ -54,10 +54,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 帶有錨點的連結：
 - [這會花多久時間？](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up)
-- [NSClient settings in Preferences](../SettingUpAaps/Preferences.md#nsclient).
-- [AAPS 總覽中的預測線](../Getting-Started/Screenshots.md#prediction-lines)，標題層級 4
-- [螢幕截圖](../Getting-Started/Screenshots.md)
-- [主要圖表截圖](../Getting-Started/Screenshots.md#section-f---main-graph)，標題層級 3
-- [OpenAPS 功能](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
-- [最大 IOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
-- [本文件中的 SMB 章節](../Usage/Open-APS-features.md#super-micro-bolus-smb)
+- [偏好設定中的 NSClient 設定](../SettingUpAaps/Preferences.md#nsclient)。
+- [AAPS 總覽中的預測線](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)，標題層級 4
+- [螢幕截圖](../DailyLifeWithAaps/AapsScreens.md)
+- [主要圖表截圖](../DailyLifeWithAaps/AapsScreens.md#section-f---main-graph)，標題層級 3
+- [OpenAPS 功能](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
+- [最大 IOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
+- [本文件中的 SMB 章節](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb)

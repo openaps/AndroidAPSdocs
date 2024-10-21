@@ -105,14 +105,14 @@ V případě, že dojde k přerušení spojení mezi AAPS a pumpou Dana RS v pr�
 
 * Ve většině případů se jedná pouze o problém s komunikací, který se netýká vydaného inzulinu (je vydáno správné množství).
 * Podívejte se do historie pumpy (buď v pumpě, nebo na kartě Dana > Historie pumpy > Bolusy), zda byl vydán správný bolus.
-* Delete error entry in [treatments tab](../Getting-Started/Screenshots.md#carb-correction) if you wish.
+* Delete error entry in [treatments tab](../DailyLifeWithAaps/AapsScreens.md#carb-correction) if you wish.
 * Skutečně vydaný bolus se načte a zaznamená při příštím připojení. Chcete-li vynutit připojení okamžitě, klikněte na ikonu BT na kartě Dana, nebo prostě počkejte na příští připojení.
 
 ## Zvláštní poznámka, pokud měníte telefon
 
 Pokud měníte telefon za nový, je nezbytné, abyste provedli následující kroky:
 
-* [Export settings](../Usage/ExportImportSettings.md) on your old phone
+* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
 * Přesuňte nastavení ze starého do nového telefonu
 
 ### DanaRS v1
@@ -120,7 +120,7 @@ Pokud měníte telefon za nový, je nezbytné, abyste provedli následující kr
 * **Ručně spárujte** Danu RS s novým telefonem
 * Vzhledem k tomu, že nastavení týkající se připojení pumpy jsou také importována, AAPS na vašem novém telefonu již pumpu „zná“, a proto nezahájí skenování bluetooth. Proto je třeba nový telefon a pumpu spárovat ručně.
 * Nainstalujte na novém telefonu AAPS.
-* [Import settings](../Usage/ExportImportSettings.md) on your new phone
+* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
 
 ### DanaRS v3, Dana-i
 
@@ -129,4 +129,4 @@ Pokud měníte telefon za nový, je nezbytné, abyste provedli následující kr
 
 ## Cestování mezi časovými pásmy s pumpou Dana RS
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#danarv2-danars).

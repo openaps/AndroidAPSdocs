@@ -134,7 +134,7 @@
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-מומלץ לייצא הגדרות לאחר הפעלת הפוד. עשו זאת בכל החלפת פוד ופעם בחודש, העתיקו את הקובץ המיוצא לגיבוי בענן שלכם. see [**Export settings Doc**](../Usage/ExportImportSettings.md).
+מומלץ לייצא הגדרות לאחר הפעלת הפוד. עשו זאת בכל החלפת פוד ופעם בחודש, העתיקו את הקובץ המיוצא לגיבוי בענן שלכם. see [**Export settings Doc**](../Maintenance/ExportImportSettings.md).
 
 
 (OmnipodDASH-deactivate-pod)=
@@ -361,7 +361,7 @@
   * **SMS** - מחזירה ערך או 50+U בתגובות של SMS
   * **נייטסקאוט** - העלאת ערך של 50 כאשר מעל 50 יחידות לנייטסקאוט (גרסה 14.07 ומעלה).  גרסאות חדשות יותר ידווחו על ערך של 50+ כאשר מעל 50 יחידות.
 
-## פתרון בעיות
+## Troubleshooting
 
 (OmnipodDASH-delivery-suspended)=
 
@@ -466,5 +466,5 @@
 
 -  **רמה 0** קראו את הסעיף הרלוונטי בתיעוד זה כדי להבטיח שאתם מבינים כיצד להשתמש במה שאתם מתקשים איתו.
 -  **רמה 1:** אם אתם עדיין נתקלים בבעיות שאתם לא מצליחים לפתור באמצעות מסמך זה, אנא עברו לערוץ *#androidaps* ב-**Discord** באמצעות [קישור ההזמנה](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. אם לא, צרו [בעיה חדשה](https://github.com/nightscout/AndroidAPS/issues) וצרפו את [קובצי היומן (Log) שלכם](../Usage/Accessing-logfiles.md).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
 -  **היו סבלניים - רוב חברי הקהילה שלנו מורכבים ממתנדבים בעלי אופי טוב, ופתרון בעיות דורש לעתים קרובות זמן וסבלנות מצד המשתמשים והמפתחים כאחד.**

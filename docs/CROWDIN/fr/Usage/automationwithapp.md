@@ -1,6 +1,6 @@
 # Automatisation avec une application Android Automate tierce
 
-**This article has been written before AAPS version 2.5. There is an [automation plugin in AAPS](./Automation.md) itself with AAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
+**This article has been written before AAPS version 2.5. There is an [automation plugin in AAPS](../DailyLifeWithAaps/Automations.md) itself with AAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
 
 As AAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Frequent manual user inputs can be automated via external tools like Automate or IFTTT to extend the recent AAPS functionality.
 
@@ -32,7 +32,7 @@ In AAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NS
 
 In AAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
 
-Soyez conscient des [problèmes de sécurité](Nightscout-security-considerations) qui pourraient se produire et soyez très prudent si vous utilisez une [pompe Insight](Accu-Chek-Insight-Pump-settings-in-aaps).
+Be aware of the [security issues](../SettingUpAaps/Nightscout.md#security-considerations) that might occure and be very careful if you are using an [Insight pump](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps).
 
 ![Paramètres de téléchargement Nighscout](../images/automate-aaps2.jpg)
 
@@ -119,7 +119,7 @@ Démarrer le script : Cliquez sur le bouton Start
 
 #### Exemple 3: À vous de l'ajouter !!!
 
-Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSDocs repository](../make-a-PR.md).
+Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSDocs repository](../SupportingAaps/HowToEditTheDocs.md).
 
 ## IF This, Then That (IFTTT)
 

@@ -707,7 +707,7 @@ Pil seviyesi bildirimi, OrangeLink, EmaLink veya DiaLink gibi pod iletişim ciha
 
 (OmnipodEros-troubleshooting)=
 
-## Sorun giderme
+## Troubleshooting
 
 ### Pod Hataları
 
@@ -788,5 +788,5 @@ Omnipod sürücüsü için tüm geliştirme çalışmaları topluluk tarafından
 
 - **Seviye 0:** Sorun yaşadığınız işlevin nasıl çalışması gerektiğini anladığınızdan emin olmak için bu dokümantasyonun ilgili bölümünü okuyun.
 - **Seviye 1:** Bu dokümantasyonu kullanmanıza rağmen hâlâ çözemediğiniz sorunlarla karşılaşıyorsanız, lütfen [bu davet bağlantısını](https://discord.gg/4fQUWHZ4Mw) kullanarak **Discord**'da * #androidaps* kanalına gidin.
-- **Seviye 2:** Sorununuzun bildirilip bildirilmediğini görmek için mevcut sorunları arayın; değilse, lütfen yeni bir [sorun](https://github.com/nightscout/AndroidAPS/issues) oluşturun ve [günlük dosyalarınızı](../Usage/Accessing-logfiles.md) ekleyin.
+- **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
 - **Sabırlı olun - topluluğumuzun üyelerinin çoğu iyi huylu gönüllülerden oluşur ve sorunları çözmek genellikle hem kullanıcılar hem de geliştiriciler için zaman ve sabır gerektirir.**

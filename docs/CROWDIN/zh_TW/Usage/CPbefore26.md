@@ -4,7 +4,7 @@
 
 最初用來新增離線支援照護入口的程式碼與 AAPS 的開發並不相容，且實際上阻礙了後續的程式開發。 **因此，決定在 AAPS 版本 2.6 中移除照護入口。**
 
-照護入口的大多數功能仍可在「操作」或主畫面中找到。 The actions can be reached either via actions tab or hamburger menu - depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md).
+照護入口的大多數功能仍可在「操作」或主畫面中找到。 這些動作可以通過動作選項頁或漢堡選單訪問 - 具體取決於您在[配置建構器](../SettingUpAaps/ConfigBuilder.md)中的設定。
 
 此頁面將展示你可以在哪裡找到先前照護入口的功能。
 
@@ -15,7 +15,7 @@
 - 年齡資訊已移至「操作」標籤/選單。
 - 血糖偵測已移至「操作」標籤/選單。
 - 臨時目標已移至「操作」標籤/選單。
-- Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
+- 運動功能已不再可用，但你可以在執行動作時使用對話框中的備註欄位（如進行注射等，參見[此頁面上的碳水化合物與注射截圖](#carbs--bolus)）。
 
 (CPbefore26-carbs-bolus)=
 
@@ -38,7 +38,7 @@
 ![照護入口的 CGM 與 OpenAPS](../images/Careportal_25_26_3_IIa.png)
 
 - CGM 感測器插入已移至「操作」標籤/選單。
-- 此部分的所有其他功能已被移除。 You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
+- 此部分的所有其他功能已被移除。 你可以在執行動作時使用對話框中的備註欄位（如進行注射等，參見[此頁面上的碳水化合物與注射截圖](#carbs--bolus)）。
 
 ## 幫浦
 

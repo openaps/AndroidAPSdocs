@@ -200,7 +200,7 @@ Nutze [diese Anleitung](https://navid200.github.io/xDrip/docs/Dexcom/SensorFaile
 ### Batteriestand Libre Smart Reader
 
 - Der Batteriestand von Bluethooth-Bridges (wie z.B. MiaoMiao oder Bubble) kann in AAPS angezeigt werden (nicht möglich beim BluCon).
-- Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
+- Details can be found on [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery).
 
 ### Libre Transmitter verbinden und Sensor starten
 

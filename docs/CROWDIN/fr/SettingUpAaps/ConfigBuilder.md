@@ -24,7 +24,7 @@ Avec la case à cocher sous le symbole de l'oeil, vous pouvez décider comment o
 
 ## Profil
 
-* Sélectionnez le profil de basal que vous souhaitez utiliser. Voir la page [Profils](../Usage/Profiles.md) pour plus d'informations sur la configuration.
+* Sélectionnez le profil de basal que vous souhaitez utiliser. See [Profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) page for more setup information.
 * A partir d'AAPS 3.0, seul le profil local est disponible.
 
 Cependant, il est possible de synchroniser un profil Nightscout dans un profil local. Pour cela, cependant, il est important de cloner toute la base de données composée de plusieurs profils dans l'éditeur Nightscout. Veuillez consulter les instructions ci-dessous. Cela peut être utile si des modifications majeures d'un profil peuvent être introduites plus facilement via l'interface web, par ex. pour copier manuellement les données d'une feuille de calcul.
@@ -35,7 +35,7 @@ Cependant, il est possible de synchroniser un profil Nightscout dans un profil l
 
 Le profil local utilise le profil de basal entré manuellement sur le téléphone. Dès qu'il est sélectionné, un nouvel onglet apparaît dans AAPS, où vous pouvez modifier les données de profil lues à partir de la pompe si nécessaire. Avec le changement de profil suivant, les données sont ensuite écrites dans la pompe dans le profil 1. Ce profil est recommandé car il ne dépend pas de la connectivité Internet.
 
-Vos profils locaux font partie des [paramètres exportés](../Usage/ExportImportSettings.md). Donc assurez vous d'avoir une sauvegarde dans un endroit sûr.
+Your local profiles are part of [exported settings](../Maintenance/ExportImportSettings.md). Donc assurez vous d'avoir une sauvegarde dans un endroit sûr.
 
 ![Paramètres profil local](../images/LocalProfile_Settings.png)
 
@@ -82,7 +82,7 @@ L'assistant profil a deux fonctions :
 1. Trouver un profil pour les enfants
 2. Comparer deux profils ou changements de profil pour cloner un nouveau profil
 
-Les détails sont expliqués sur la [page d'aide des profils](../Configuration/profilehelper.md).
+Details are explained on the separate [profile helper page](../SettingUpAaps/ProfileHelper.md).
 
 (Config-Builder-insulin)=
 
@@ -102,13 +102,13 @@ Les détails sont expliqués sur la [page d'aide des profils](../Configuration/p
 * La DAI n'est pas la même pour chaque personne. C'est pourquoi vous devez la tester par vous-même. 
 * Mais elle doit toujours être au minimum de 5 heures.
 * Pour beaucoup de personnes utilisant des insulines ultra rapide comme la FIASP, il n'y a pratiquement pas d'effet notable après 3-4 heures tout au plus, même si 0.0 xx unités sont disponibles en tant que règle. Cette quantité résiduelle peut encore être perceptible pendant le sport, par exemple. Par conséquent, AAPS utilise au minimum une DAI de 5h.
-* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots.md#insulin-profile) page.
+* You can read more about that in the Insulin Profile section of [this](../DailyLifeWithAaps/AapsScreens.md#insulin-profile) page.
 
 ### Différences entre les types d'insuline
 
 * Pour l'insuline à "Action Rapide", "Ultra-Rapide" et "Lyumjev", la DAI est la seule variable que vous pouvez ajuster vous-même, le temps du pic est fixé. 
 * Le Profil d'insuline ajustable vous permet d'ajuster à la fois la DAI et le temps du pic, et ne doit être utilisé que par les utilisateurs confirmés qui connaissent les effets de ces paramètres. 
-* The [insulin curve graph](../Getting-Started/Screenshots.md#insulin-profile) helps you to understand the different curves.
+* The [insulin curve graph](../DailyLifeWithAaps/AapsScreens.md#insulin-profile) helps you to understand the different curves.
 * Vous pouvez le voir en activant la case à cocher pour l'afficher sous forme d'onglet, sinon il se trouve dans le menu hamburger.
 
 #### Insuline à Action Rapide Oref 
@@ -165,7 +165,7 @@ Select the blood glucose source you are using - see [BG Source](../Getting-Start
 
 (Config-Builder-pump)=
 
-## Pompe
+## Pump
 
 Sélectionner la pompe que vous utilisez.
 
@@ -191,15 +191,15 @@ Sélectionner la pompe que vous utilisez.
 
 ## Estimation de Sensibilité
 
-Sélectionnez le type de calcul pour la sensibilité. Pour plus de détails sur la conception, veuillez [lire ceci](../Configuration/Sensitivity-detection-and-COB.md). Cela analysera les données historiques au fur et à mesure et fera des ajustements si elle détecte que vous réagissez de façon plus sensible (ou plus résistante) à l'insuline que d'habitude. Plus de détails sur l'algorithme de la Sensitibilité peuvent être lus dans la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Sélectionnez le type de calcul pour la sensibilité. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Cela analysera les données historiques au fur et à mesure et fera des ajustements si elle détecte que vous réagissez de façon plus sensible (ou plus résistante) à l'insuline que d'habitude. Plus de détails sur l'algorithme de la Sensitibilité peuvent être lus dans la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-Vous pouvez voir votre sensibilité sur l'écran d'accueil en sélectionnant Sensibilité dans les paramètres du graphique et en observant la ligne blanche. Note, you need to be in [Objective 8](../SettingUpAaps/CompletingTheObjectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.md#autosens) automatically adjust the amount of insulin delivered. Avant d'atteindre cet objectif, le poucentage Autosens ainsi que la ligne dans votre graphique ne sont affichés que pour information.
+Vous pouvez voir votre sensibilité sur l'écran d'accueil en sélectionnant Sensibilité dans les paramètres du graphique et en observant la ligne blanche. Note, you need to be in [Objective 8](../SettingUpAaps/CompletingTheObjectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) automatically adjust the amount of insulin delivered. Avant d'atteindre cet objectif, le poucentage Autosens ainsi que la ligne dans votre graphique ne sont affichés que pour information.
 
 (Config-Builder-absorption-settings)=
 
 ### Paramètres d’absorption
 
-Si vous utilisez le type Oref1 avec les SMB, vous devez modifier **min_5m_carbimpact** à 8. La valeur n'est utilisée que pendant les lacunes dans les lectures de MGC ou lorsque l'activité physique "utilise" l'augmentation de la glycémie qui autrement aurai permis la décomposition des GA par AAPS. Parfois, lorsque l'[absorption de glucides](../Usage/COB-calculation.md) ne peut pas être déterminée de façon dynamique en fonction des glycémies, AAPS intègre une décomposition par défaut à vos glucides. De base, c'est une sécurité intégrée.
+Si vous utilisez le type Oref1 avec les SMB, vous devez modifier **min_5m_carbimpact** à 8. La valeur n'est utilisée que pendant les lacunes dans les lectures de MGC ou lorsque l'activité physique "utilise" l'augmentation de la glycémie qui autrement aurai permis la décomposition des GA par AAPS. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. De base, c'est une sécurité intégrée.
 
 (Config-Builder-aps)=
 
@@ -208,7 +208,7 @@ Si vous utilisez le type Oref1 avec les SMB, vous devez modifier **min_5m_carbim
 Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous pouvez afficher le détail actif de l'algorithme choisi dans l'onglet OpenAPS (OAPS).
 
 * OpenAPS AMA (Assistance Améliorée Repas, état de l'algorithme en 2017) En termes simples, les avantages sont après un bolus de repas le système peut faire une temporaire haute plus rapidement SI vous entrez les glucides de manière fiable.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* [OpenAPS SMB](../DailyLifeWithAaps/KeyAapsFeatures.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Boucle
 
@@ -250,19 +250,19 @@ Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous
 
 AAPS a un programme d'apprentissage (objectifs) que vous devez réaliser étape par étape. Cela devrait vous guider en toute sécurité à travers la mise en place d'un système de boucle fermée. Ce programme d'apprentissage garantit que vous avez tout mis en place correctement et que vous comprenez ce que le système fait exactement. C'est la seule façon pour vous de faire confiance au système.
 
-Vous devez [exporter régulièrement vos paramètres](../Usage/ExportImportSettings.md) (y compris la progression des objectifs). Au cas où vous devrez remplacer votre smartphone plus tard (nouvel achat, problème d'écran, etc.) vous pouvez simplement importer ces paramètres.
+You should [export your settings](../Maintenance/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. Au cas où vous devrez remplacer votre smartphone plus tard (nouvel achat, problème d'écran, etc.) vous pouvez simplement importer ces paramètres.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 
 ## Traitements
 
-Si vous affichez les traitements, vous pouvez voir ceux qui ont été téléchargés dans Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
+Si vous affichez les traitements, vous pouvez voir ceux qui ont été téléchargés dans Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../DailyLifeWithAaps/AapsScreens.md#carb-correction).
 
-## Généralités
+## General
 
 ### Aperçu
 
-Affiche l'état en cours de votre boucle et les boutons de la plupart des actions courantes (voir la section [Ecran d'accueil](../Getting-Started/Screenshots.md) pour plus de détails). Vous pouvez accéder aux paramètres en cliquant sur la roue crantée.
+Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../DailyLifeWithAaps/AapsScreens.md) for details). Vous pouvez accéder aux paramètres en cliquant sur la roue crantée.
 
 #### Garder l'écran allumé
 
@@ -321,24 +321,24 @@ Choose if you want to have [status lights](../SettingUpAaps/Preferences.md#statu
 
 **Injecter cette partie de Bolus calculée par l’assistant** : Avec l'utilisation des SMB, beaucoup de personnes ne font pas de bolus repas avec 100% de l'insuline nécessaire, mais seulement une partie de celle-ci (par ex. 75 %) et laissent les SMB avec les RNS (repas non signalés) faire le reste. Avec ce paramètre, vous pouvez choisir une valeur par défaut pour le pourcentage que l'assistant bolus doit prendre. Si ce paramètre est de 75 % et que vous avez besoin d'un de bolus 10U, l'assistant de bolus proposera un bolus repas de seulement 7,5 unités.
 
-**Activer la fonction super bolus dans l'Assistant** (c'est différent des *super micro bolus* !) : à utiliser avec prudence et ne l'activez pas tans que vous n'avez pas appris ce qu'il fait vraiment. En gros, l'insuline correspondant au débit de basal des deux heures suivantes est ajoutée au bolus et deux heures de zéro-temp sont activées. **Les fonctions de boucle AAPS seront désactivées - c'est donc à utiliser avec prudence ! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Activer la fonction super bolus dans l'Assistant** (c'est différent des *super micro bolus* !) : à utiliser avec prudence et ne l'activez pas tans que vous n'avez pas appris ce qu'il fait vraiment. En gros, l'insuline correspondant au débit de basal des deux heures suivantes est ajoutée au bolus et deux heures de zéro-temp sont activées. **Les fonctions de boucle AAPS seront désactivées - c'est donc à utiliser avec prudence ! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../DailyLifeWithAaps/KeyAapsFeatures.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
 
 ### Actions
 
 * Quelques boutons pour accéder rapidement aux fonctions communes.
-* See [AAPS screenshots](../Getting-Started/Screenshots.md#action-tab) for details.
+* See [AAPS screenshots](../DailyLifeWithAaps/AapsScreens.md#action-tab) for details.
 
 ### Automatisation
 
-Tâches d'automatisation définies par l'utilisateur (si-alors-sinon). Veuillez [lire ici](../Usage/Automation.md).
+Tâches d'automatisation définies par l'utilisateur (si-alors-sinon). Please [read on here](../DailyLifeWithAaps/Automations.md).
 
 (Config-Builder-sms-communicator)=
 
 ### Communicateur SMS
 
-Permet aux aidants à distance de contrôler certaines fonctionnalités d'AAPS via SMS, voir [Commandes SMS](../Children/SMS-Commands.md) pour plus d'informations sur la configuration.
+Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
 
 ### Aliments
 
@@ -350,7 +350,7 @@ Remarque : Les entrées ne peuvent pas être utilisées dans la calculatrice AAP
 
 ### Wear
 
-Contrôler et contrôler AAPS à l'aide de votre montre Android Wear (voir la page [AAPS sur montres Wear OS](../Configuration/Watchfaces.md)). Utilisez les paramètres (roue crantée) pour définir quelles variables doivent être prises en compte lors du calcul du bolus donné par votre montre (par ex. tendance de 15min, GA...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)). Utilisez les paramètres (roue crantée) pour définir quelles variables doivent être prises en compte lors du calcul du bolus donné par votre montre (par ex. tendance de 15min, GA...).
 
 Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
 
@@ -363,7 +363,7 @@ Via l'onglet Wear ou le menu hamburger (en haut à gauche de l'écran, si l'ongl
 
 ### Barre d'état pour xDrip (Montre)
 
-Affiche les informations de la boucle sur votre cadran xDrip+ (si vous n'utilisez pas les cadrans AAPS/[cadran AAPSv2](../Configuration/Watchfaces.md)
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../UsefulLinks/WearOsSmartwatch.md)
 
 ### NSClient
 

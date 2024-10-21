@@ -17,7 +17,7 @@ These instructions are for configuring the Medtrum insulin pump.
         - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
 * **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * **טלפון Android תואם** עם חיבור בלוטות' (BLE)
-    - See AAPS [Release Notes](../Installing-AndroidAPS/Releasenotes.md)
+    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
 * [**חיישן סוכר רציף (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
 ## Before you begin
@@ -166,7 +166,7 @@ This setting can be changed when using Medtrum pump but it is recommended to set
 
 **Before you continue:**
 - Have your Medtrum Nano pumpbase and a reservoir patch ready.
-- Make sure that AAPS is properly set up and a [profile is activated](../Usage/Profiles.md).
+- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 - Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
 
 #### Activate patch from the Medtrum overview Tab
@@ -331,7 +331,7 @@ The alarm button will appear on the overview screen when there is an active alar
 
 Press the **Reset Alarms** button to reset the alarms and resume normal operation.
 
-## פתרון בעיות
+## Troubleshooting
 
 ### Connection issues
 
@@ -354,5 +354,5 @@ All of the development work for the Medtrum driver is done by the community on a
 
 -  **רמה 0** קראו את הסעיף הרלוונטי בתיעוד זה כדי להבטיח שאתם מבינים כיצד להשתמש במה שאתם מתקשים איתו.
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **רמה 2:** חפשו בעיות קיימות כדי לראות אם הבעיה שלכם כבר דווחה ב-[בעיות](https://github.com/nightscout/AAPS/issues) אם היא קיימת, אנא אשרו/הגיבו/הוסיפו מידע על הבעיה שלכם. אם לא, צרו [בעיה חדשה](https://github.com/nightscout/AndroidAPS/issues) וצרפו את [קובצי היומן (Log) שלכם](../Usage/Accessing-logfiles.md).
+-  **רמה 2:** חפשו בעיות קיימות כדי לראות אם הבעיה שלכם כבר דווחה ב-[בעיות](https://github.com/nightscout/AAPS/issues) אם היא קיימת, אנא אשרו/הגיבו/הוסיפו מידע על הבעיה שלכם. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
 -  **היו סבלניים - רוב חברי הקהילה שלנו מורכבים ממתנדבים בעלי אופי טוב, ופתרון בעיות דורש לעתים קרובות זמן וסבלנות מצד המשתמשים והמפתחים כאחד.**

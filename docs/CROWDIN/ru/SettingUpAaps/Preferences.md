@@ -22,7 +22,7 @@
 ```
 
 (Preferences-general)=
-## Общие настройки
+## General
 
 ![Preferences > General](../images/Pref2020_General.png)
 
@@ -52,7 +52,7 @@
 
 #### Главный пароль
 
-- Необходимо для [экспорта настроек](../Usage/ExportImportSettings.md), т. к. они шифруются начиная с версии 2.7. **Защита биометрией (отпечаток пальца, распознавание лица) может не работать на некоторых телефонах OnePlus. Это известная проблема телефонов OnePlus.**
+- Necessary to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7. **Защита биометрией (отпечаток пальца, распознавание лица) может не работать на некоторых телефонах OnePlus. Это известная проблема телефонов OnePlus.**
 
 - Откройте настройки (трехточечное меню в правом верхнем углу начального экрана)
 
@@ -66,9 +66,9 @@
 
 #### Защита настроек
 
-- Защитите свои настройки с помощью пароля или биометрии (полезно в случае, когда [AAPS используется ребенком](../Children/Children.md)).
+- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../RemoteFeatures/RemoteMonitoring.md)).
 
-- Если вы хотите, чтобы главный пароль использовался только для [экспорта настроек](../Usage/ExportImportSettings.md). то примените отдельный пароль для настроек.
+- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md).
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
 
@@ -81,7 +81,7 @@
 
 #### Защита болюсов
 
-- Защита болюсов бывает полезна, если AAPS используется маленьким ребенком и вы [вводите болюсы через SMS](../Children/SMS-Commands.md).
+- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
 - В примере ниже вы видите запрос на биометрическую защиту. Если биометрическое распознавание не работает, нажмите на пробел над запросом и введите главный пароль.
 
@@ -154,7 +154,7 @@
 (Preferences-default-temp-targets)=
 ### Временные цели по умолчанию
 
-- [Временные цели(TT)](../Usage/temptarget.md) позволяют вам задавать целевое значение ГК на определенный период времени.
+- [Temp targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to define change your blood glucose target for a certain time period.
 
 - При помощи временных целей TT, заданных по умолчанию, можно легко установить цель при нагрузках, предстоящем питании и т. п.
 
@@ -168,7 +168,7 @@
 
 ### Заполнить стандартное количество инсулина
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
 - В этом диалоге можно задать предустановленные значения.
 
 (Preferences-range-for-visualization)=
@@ -198,7 +198,7 @@
 - Индикаторы состояния сообщают:
 
   - сколько времени отработал сенсор
-  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
+  - Sensor battery level for certain smart readers (see [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery) for details).
   - сколько времени прошло с момента установки резервуара
   - об уровне заполнения резервуара (в единицах)
   - сколько времени прошло с момента установки канюли
@@ -231,7 +231,7 @@
 - Ограничения безопасности устанавливаются на основе возраста, который вы выбираете в этом параметре.
 - Если вы начинаете достигать верхних ограничений (как например максимальный болюс) пора подняться на один шаг вверх (например, от ребенка перейти к подростку - прим. перев.).
 - Выбирать возраст выше, чем реальный, не следует, потому что может привести к передозировке при введении ошибочного значения в диалоге инсулина (например, если пропущен десятичный разделитель - точка или запятая).
-- Если вы хотите знать фактические величины жестких ограничений безопасности в коде, перейдите к функции алгоритма на [этой странице](../Usage/Open-APS-features.md).
+- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 ### Максимально разрешённый болюс \[ед.\]
 
@@ -268,8 +268,8 @@
 
 Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### Настройки OpenAPS AMA
 
@@ -283,7 +283,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 - Значение задается в единицах в час (ед./ч).
 - Рекомендуется установить какое-то разумное значение. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 4**.
 - Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 4, вы получите значение 2 ед./ч.
-- See also [detailed feature description](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### Максимальный активный базальный инсулин IOB, разрешенный в OpenAPS [ед.]
 
@@ -307,7 +307,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 
 #### Autosens
 
-- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
 - На основе отклонений он пытается выяснить, насколько вы чувствительны/резистентны к инсулину и корректирует базальную скорость и коэффициент чувствительности к инсулину ISF.
 - Если вы выберете "Autosense также подстраивает цели", алгоритм будет менять целевую ГК.
 
@@ -319,17 +319,17 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 (Preferences-openaps-smb-settings)=
 ### Настройки OpenAPS SMB
 
-- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
 - You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
 - The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
 
-- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb).
 
 - *Как часто SMB будут подаваться в минутах* - по умолчанию эта величина определена только в четыре минуты. Эта величина не позволяет системе подавать микроболюсы слишком часто (например, при постановке временной цели). Не следует менять эту настройку, если только точно не осознаете последствия.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Если цель изменена, она будет отображаться в поле целей на зеленом фоне на главном экране.
 
@@ -387,7 +387,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 
 ### Расширенные настройки - коэффициент autosens
 
-- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
+- Define min. and max. [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) ratio.
 - Обычно стандартные значения (макс. 1.2 и мин. 0.7) не должны меняться.
 
 ## Настройки помпы
@@ -419,7 +419,7 @@ The options here will vary depending on which pump driver you have selected in [
 
 ![Клиент NSV3](../images/Pref2024_NSClientV3.png)
 
-[Новый протокол, начиная с AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) - безопаснее и эффективнее.
+[New protocol introduced with AAPS 3.2.](../Maintenance/ReleaseNotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
 ```{admonition} V3 data uploaders
 :class: warning
@@ -472,7 +472,7 @@ Options in advanced settings are self-explanatory.
 
 - Options will only be displayed if SMS communicator is selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#sms-communicator).
 - Эта настройка позволяет осуществлять удаленное управление приложением при помощи смс-инструкций, отправляемых на телефон пациента, который выполняет их в AAPS, например, приостанавливая работу цикла или подавая болюсы.
-- Дальнейшая информация описана в [Команды SMS ](../Children/SMS-Commands.md).
+- Further information is described in [SMS Commands](../RemoteFeatures/SMSCommands.md).
 - Дополнительная безопасность обеспечивается с помощью приложения-Аутентификатора и дополнительного PIN-кода в конце сообщения.
 
 ## Автоматизация
@@ -503,7 +503,7 @@ Select which location service shall be used:
 
 ## Проект Open Humans
 
-- Вы можете помочь науке, поделившись данными с исследовательскими проектами! Детали описаны на странице [Open Humans](../Configuration/OpenHumans.md).
+- Вы можете помочь науке, поделившись данными с исследовательскими проектами! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
 
 - В настройках вы можете определить, когда загружать данные
 

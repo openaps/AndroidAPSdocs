@@ -22,7 +22,7 @@
 ```
 
 (Preferences-general)=
-## Genel
+## General
 
 ![Preferences > General](../images/Pref2020_General.png)
 
@@ -52,7 +52,7 @@
 
 #### Ana parola
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted from version 2.7. **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. Bu bazı OnePlus telefonlarında bilinen bir sorunudur.**
+- Necessary to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7. **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. Bu bazı OnePlus telefonlarında bilinen bir sorunudur.**
 
 - Tercihleri Açın (ana ekranın sağ üst köşesindeki üç noktalı menü)
 
@@ -66,9 +66,9 @@
 
 #### Ayarların Güvenliği "Settings protection"
 
-- Ayarlarınızı bir parola veya telefonun biyometrik kimlik doğrulaması ile koruyun (ör. [çocuk AAPS kullanıyor](../Children/Children.md)).
+- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../RemoteFeatures/RemoteMonitoring.md)).
 
-- Yalnızca [dışa aktarılan ayarların](../Usage/ExportImportSettings.md) güvenliğini sağlamak için ana parola kullanmak istiyorsanız, özel parola kullanılmalıdır.
+- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md).
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
 
@@ -81,7 +81,7 @@
 
 #### Bolus koruması
 
-- AAPS küçük bir çocuk tarafından kullanılıyorsa ve siz [SMS yoluyla bolus](../Children/SMS-Commands.md) gönderiyorsanız, bolus koruması yararlı olabilir.
+- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
 - Aşağıdaki örnekte biyometrik koruma istemini görüyorsunuz. Biyometrik kimlik doğrulama çalışmazsa, beyaz kısmın üzerindeki boşluğa tıklayın ve ana parolayı girin.
 
@@ -154,7 +154,7 @@
 (Preferences-default-temp-targets)=
 ### Varsayılan Geçici hedefler
 
-- [Geçici hedefler (GH)](../Usage/temptarget.md), kan şekeri hedefinizi belirli bir süre için değiştirmenizi sağlar.
+- [Temp targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to define change your blood glucose target for a certain time period.
 
 - Varsayılan GH ayarı ile aktivite, yakında öğün vb. butonlar için hedefinizi kolayca değiştirebilirsiniz.
 
@@ -168,7 +168,7 @@
 
 ### Standart insülin miktarlarını Hazırla/Doldur
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
 - Bu diyalogda önceden ayarlanmış (pompanıza göre) değerler tanımlanabilir.
 
 (Preferences-range-for-visualization)=
@@ -198,7 +198,7 @@
 - Durum ışıkları için görsel bir uyarı verir
 
   - Sensör yaşı
-  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
+  - Sensor battery level for certain smart readers (see [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery) for details).
   - İnsülin yaşı (rezervuarın kullanıldığı gün sayısı)
   - Rezervuar seviyesi (Ünite)
   - Kanül yaşı
@@ -231,7 +231,7 @@
 - Güvenlik limitleri bu ayarda seçtiğiniz yaşa göre belirlenir.
 - Bu limitlere (maksimum bolus gibi) çok sık ulaşıyorsanız, bir adım yukarı çıkmanın zamanı gelmiştir.
 - Gerçek yaştan daha yüksek olanı seçmek kötü bir fikirdir çünkü insülin iletişim kutusuna yanlış değer girilerek (örneğin ondalık nokta atlanarak) aşırı doz almaya neden olabilir.
-- Bu sabit güvenlik sınırları için gerçek rakamları bilmek istiyorsanız, [bu sayfada](../Usage/Open-APS-features.md) kullandığınız algoritma özelliğine gidin.
+- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 ### Maks izin verilen bolus \[Ü\]
 
@@ -268,8 +268,8 @@
 
 Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS SMB ayarları
 
@@ -283,7 +283,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 - Değer, ünite/saat (Ü/s) cinsinden ölçülür.
 - It is advised to set this to something sensible. Profilinizdeki **en yüksek bazal oranı** alıp **4 ile çarpmanız** iyi bir öneridir.
 - Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 4 ile çarparak maks geçici bazal için 2 Ü/s değerini elde edersiniz.
-- See also [detailed feature description](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### OpenAPS'in \[U\] iletebileceği maksimum bazal AİNS
 
@@ -307,7 +307,7 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 #### Otoduyarlılık
 
-- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
 - Bu sapmalara göre sizin ne kadar duyarlı/dirençli olduğunuzu anlamaya çalışacak ve bu sapmalara göre bazal hızı ve IDF'yi ayarlayacaktır.
 - "Otoduyarlılıkta hedefi ayarla"yı seçerseniz, algoritma ayrıca glikoz hedefinizi de değiştirir.
 
@@ -319,17 +319,17 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB ayarları
 
-- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
 - You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
 - The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
 
-- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb).
 
 - *SMB'lerin dakika cinsinden ne sıklıkta verileceği*, SMB'nin varsayılan olarak yalnızca 4 dakikada bir teslim edilmesi için bir kısıtlamadır. Bu değer, sistemin SMB'yi çok sık verilmesini engeller (örneğin, bir geçici hedefin ayarlanması durumunda). Sonuçları tam olarak bilmiyorsanız bu ayarı değiştirmemelisiniz.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Hedef değiştirilirse, giriş ekranınızda hedef yeşil bir arka planla görüntülenecektir.
 
@@ -387,7 +387,7 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 ### Gelişmiş ayarlar - otoduyarlılık oranı
 
-- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
+- Define min. and max. [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) ratio.
 - Normalde standart değerler (maks. 1.2 ve min. 0.7) değiştirilmemelidir.
 
 ## Pompa Ayarları
@@ -419,7 +419,7 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+[New protocol introduced with AAPS 3.2.](../Maintenance/ReleaseNotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
 ```{admonition} V3 data uploaders
 :class: warning
@@ -472,7 +472,7 @@ Options in advanced settings are self-explanatory.
 
 - Options will only be displayed if SMS communicator is selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#sms-communicator).
 - Bu ayar, döngüyü askıya alma veya bolus yapma gibi uygulamanın izleyeceği talimatları hastanın telefonuna mesaj göndererek uygulamanın uzaktan kontrol edilmesini sağlar.
-- Daha fazla bilgi [SMS Komutları](../Children/SMS-Commands.md)nda açıklanmıştır.
+- Further information is described in [SMS Commands](../RemoteFeatures/SMSCommands.md).
 - Bir kimlik doğrulama uygulaması ve mesaj sonunda ek PIN kullanılarak ek güvenlik elde edilir.
 
 ## Otomasyon
@@ -503,7 +503,7 @@ Select which location service shall be used:
 
 ## Open Humans
 
-- Verilerinizi araştırma projelerine bağışlayarak topluluğa yardımcı olabilirsiniz! Ayrıntılar [Open Humans sayfasında](../Configuration/OpenHumans.md) açıklanmıştır.
+- Verilerinizi araştırma projelerine bağışlayarak topluluğa yardımcı olabilirsiniz! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
 
 - Tercihler'de verilerin ne zaman yükleneceğini tanımlayabilirsiniz
 

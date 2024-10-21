@@ -8,7 +8,7 @@
 
 - Μία αντλία Roche Accu-Check Combo (οποιοδήποτε λογισμικό, όλα είναι συμβατά)
 - Μια συσκευή Smartpix ή Realtyme μαζί με το λογισμικό 360 Configuration Software για τη ρύθμιση της αντλίας. (Η Roche αποστέλλει τις συσκευές Smartpix και το λογισμικό για τη ρύθμιση δωρεάν στους πελάτες της κατόπιν αιτήματος.)
-- Ένα συμβατό τηλέφωνο: Ένα κινητό τηλέφωνο Android με τηλέφωνο που χρησιμοποιεί το LineageOS 14.1 (πρώην CyanogenMod) ή τουλάχιστον το Android 8.1 (Oreo). As of AAPS 3.0 Android 9 is mandatory. See [release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version) for details.
+- Ένα συμβατό τηλέφωνο: Ένα κινητό τηλέφωνο Android με τηλέφωνο που χρησιμοποιεί το LineageOS 14.1 (πρώην CyanogenMod) ή τουλάχιστον το Android 8.1 (Oreo). As of AAPS 3.0 Android 9 is mandatory. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
 - Με το LineageOS 14.1 πρέπει να είναι μια πρόσφατη έκδοση, τουλάχιστον από τον Ιούνιο του 2017, καθώς η αλλαγή που είναι απαραίτητη για να συνδεθεί η αντλία Combo έγινε εκείνη τη χρονική περίοδο. 
 - Μια λίστα τηλεφώνων μπορεί να βρεθεί στα έγγραφα [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 - Παρακαλώ προσέξτε ότι η λίστα δεν είναι ολοκληρωμένη και έχει φτιαχτεί από την προσωπική εμπειρία άλλων χρηστών. Σας ενθαρρύνουμε επίσης να εισαγάγετε και εσείς την εμπειρία σας και, συνεπώς, να βοηθήσετε άλλους (αυτά τα προγράμματα προχωρούν με τη συνδρομή όλων).
@@ -17,10 +17,10 @@
 
 ## Περιορισμοί
 
-- Εκτεταμένα bolus και συνδυαστικά bolus δεν υποστηρίζονται (βλέπε [Εκτεταμένοι Υδατάνθρακες](../Usage/Extended-Carbs.md)αντί αυτού).
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 - Υποστηρίζεται μόνο ένα βασικό προφίλ.
 - Η ρύθμιση παραπάνω από ενός βασικού προφίλ στην αντλία ή η εκτέλεση εκτεταμένων bolus ή συνδυαστικών bolus από την αντλία εμπλέκεται με τα TBRs και εξαναγκάζει το κύκλωμα να μπει σε λειτουργία αναστολής για 6 ώρες αφου το κύκλωμα δεν μπορεί να λειτουργήσει με ασφάλεια με αυτές τις συνθήκες.
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - Επί του παρόντος μόνο βασική δόση με εύρος από 0,05 με 10 U/h υποστηρίζονται. Αυτό επίσης ισχύει κατά τη μετατροπή ενός προφίλ, π.χ. όταν αυξάνετε στο 200% το βασικό ρυθμό σε ένα προφίλ δεν πρέπει να ξεπερνάει τις 5 μονάδες/ ώρα καθώς αυτό θα διπλασιαστεί. Παρόμοια, όταν μειώνεται στο 50%, η ελάχιστη τιμή βασικού πρέπει να είναι τουλάχιστον 0,10 U/h.
 - Αν το κύκλωμα ζητήσει να ακυρωθεί ένας τρέχον προσωρινός ρυθμός (TBR), η Combo αντί αυτού θα ορίσει έναν προσωρινό ρυθμό (TBR) 90% ή 110% για 15 λεπτά. Αυτό συμβαίνει επειδή η ακύρωση ενός προσωρινού βασικού ρυθμού προκαλεί ένα συναγερμό στην αντλία, ο οποίος προκαλεί πολλές δονήσεις.
 - Περιστασιακά (κάθε μία δύο ημέρες ή κάτι τέτοιο) το AAPS μπορεί να αποτύχει να ακυρώσει αυτόματα ενα συναγερμό TBR CANCELLED, κάτι το οποίο ο χρήστης πρέπει να αντιμετωπίσει (πατώντας το κουμπί ανανέωσης στο AAPS για να μεταφέρει την προειδοποίηση στο AAPS ή επιβεβαιώνοντας την ειδοποίηση στην αντλία).

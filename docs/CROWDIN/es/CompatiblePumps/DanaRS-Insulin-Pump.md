@@ -105,14 +105,14 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 * En la mayoría de los casos, se trata sólo de un problema de comunicación y se inyecta la cantidad correcta de insulina.
 * Compruebe el historial de la bomba (ya sea en la bomba o a través de la pestaña Dana > historial de bomba > bolos) para ver si se ha administrado el bolo correctamente.
-* Delete error entry in [treatments tab](../Getting-Started/Screenshots.md#carb-correction) if you wish.
+* Delete error entry in [treatments tab](../DailyLifeWithAaps/AapsScreens.md#carb-correction) if you wish.
 * La cantidad real será leída y grabada en la siguiente conexión. Para forzar esto pulse el icono BT en la pestaña de dana o simplemente espere a la siguiente conexión.
 
 ## Nota especial al cambiar de teléfono
 
 When switching to a new phone the following steps are necessary:
 
-* [Export settings](../Usage/ExportImportSettings.md) on your old phone
+* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
 * Transfer settings from old to new phone
 
 ### DanaRS v1
@@ -120,7 +120,7 @@ When switching to a new phone the following steps are necessary:
 * **Manually pair** Dana RS with the new phone
 * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
 * Install AAPS on the new phone.
-* [Import settings](../Usage/ExportImportSettings.md) on your new phone
+* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
 
 ### DanaRS v3, Dana-i
 
@@ -129,4 +129,4 @@ When switching to a new phone the following steps are necessary:
 
 ## Cambio de zona horaria al viajar con la bomba Dana RS
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#danarv2-danars).

@@ -4,14 +4,14 @@
 
 **由於醫療設備的相關規範，AAPS應用程式（apk檔案）無法下載。 你可以合法地建置應用程式供自己使用，但不得將副本提供給他人！**
 
-詳情請參閱[FAQ頁面](../Getting-Started/FAQ.md)。
+請參閱[常見問題頁面](../UsefulLinks/FAQ.md)以獲得詳細資訊。
 
 (建置APK推薦的電腦規格)=
 
 ## 建置AAPS所需的電腦和軟體規格
 
 - 請使用\*\*[至少為 Hedgehog (2023.1.1) 或更近期版本如 Iguana、Jellyfish、Koala 或 Ladybug 的 Android Studio 版本](https://developer.android.com/studio/)\*\*來建立 apk。 舊版本的Android Studio需要先更新！
-- [Windows 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio. 請記住，**64位CPU和64位作業系統是必備條件。** 如果你的系統不符合此條件，你需要更換硬體或軟體，或更換整個系統。
+- 不支援[Windows 32位系統](../GettingHelp/TroubleshootingAndroidStudio#unable-to-start-daemon-process)。 請記住，**64位CPU和64位作業系統是必備條件。** 如果你的系統不符合此條件，你需要更換硬體或軟體，或更換整個系統。
 
 <table class="tg">
 <tbody>
@@ -50,29 +50,29 @@
 
 ## 建置過程中的幫助與支援
 
-如果你在建置 **AAPS** 應用程式的過程中遇到困難，請先參閱專門的[**問題排除Android Studio**](../Installing-AndroidAPS/troubleshooting_androidstudio) 部分。
+如果您在構建 **AAPS** 應用的過程中遇到困難，請參閱專門的[**Android Studio 故障排除**](../GettingHelp/TroubleshootingAndroidStudio)部分，請首先參考該部分。
 
-如果您認為建構指示中的某些內容是錯誤的、缺失的或令人困惑的，或者您仍然遇到困難，請聯繫其他**AAPS**使用者群組，在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 或 [Discord](https://discord.gg/4fQUWHZ4Mw)。 如果你想自行更改一些內容（例如更新螢幕截圖_等），請提交[拉取請求（PR）](../make-a-PR.md)。
+如果您認為建構指示中的某些內容是錯誤的、缺失的或令人困惑的，或者您仍然遇到困難，請聯繫其他**AAPS**使用者群組，在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 或 [Discord](https://discord.gg/4fQUWHZ4Mw)。 如果您想自己更改某些內容（更新螢幕截圖等），請提交[拉取請求（PR）](../SupportingAaps/HowToEditTheDocs.md)。
 
 ## 建置AAPS應用程式的逐步指南
 
 ```{admonition} WARNING
 :class: warning
-如果你之前建置過 AAPS，則不需要再次執行以下所有步驟。
-請直接跳至 [更新指南](../Installing-AndroidAPS/Update-to-new-version)!
+如果您之前已經構建過AAPS，那麼您不需要再次執行以下所有步驟。
+請直接跳至[更新指南](../Maintenance/UpdateToNewVersion.md)!
 ```
 
 建置 **AAPS** apk檔案的整體步驟如下：
 
-4.1 [Install Git](#install-git-if-you-dont-have-it)
+4.1 [安裝 Git](#install-git-if-you-dont-have-it)
 
-4.2 [Install Android Studio](#install-android-studio)
+4.2 [安裝 Android Studio](#install-android-studio)
 
-4.3 [Download AAPS code](#download-the-aaps-code)
+4.3 [下載 AAPS 代碼](#download-the-aaps-code)
 
-4.4. [Set Git path in Android Studio preferences](#set-git-path-in-android-studio-preferences)
+4.4. [在 Android Studio 偏好設定中設置 Git 路徑](#set-git-path-in-android-studio-preferences)
 
-4.5. [Build AAPS "signed" apk](#build-the-aaps-signed-apk)
+4.5. [建置 AAPS "簽名" apk](#build-the-aaps-signed-apk)
 
 在本指南中，你將看到建置 **AAPS** apk檔案的_示例_螢幕截圖。 由於 **Android Studio**——我們用來建置 **AAPS** apk 的軟體——會定期更新，這些截圖可能與你的安裝不完全相同，但他們仍應該可以參照進行。
 
@@ -91,7 +91,7 @@ Git 是一個允許你追蹤代碼變更和與他人合作的程式。你將使�
 
 #### 安裝Git的步驟
 
-1. 檢查你是否已安裝 **Git**。 You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#install-android-studio):
+1. 檢查你是否已安裝 **Git**。 您可以通過在 Windows 搜尋列中輸入“git”來完成此操作—如果您看到\*\*“Git bash”\*\*或其他形式的 Git，則它已安裝，您可以直接進入[安裝 Android Studio](#install-android-studio)：
 
 ![Git\_installed](../images/Building-the-App/001_check_git_installed.png)
 
@@ -278,9 +278,9 @@ Android Studio 可能會建議更新 gradle 系統。**請絕對不要更新 gra
 
 ### 在 Android Studio 偏好設定中設置 Git 路徑
 
-Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
+現在我們將告訴 Android Studio 尋找 Git 之處，您[早先](#install-git-if-you-dont-have-it)已安裝它。
 
-- Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). 如果尚未重開電腦，請現在重啟並重新打開 Android Studio
+- 僅限 Windows 使用者：確保您在[安裝 Git](#install-git-if-you-dont-have-it)後已重新啟動計算機。 如果尚未重開電腦，請現在重啟並重新打開 Android Studio
 
 在 **Android Studio** 的左上角，打開漢堡選單，然後導航至 **檔案** > **設定**（在 Windows 上）或 **Android Studio** > **偏好設定**（在 Mac 上）。
 這將打開以下視窗，點擊展開名為 **版本控制** 的下拉選單（1），並選擇 **Git**
@@ -297,8 +297,8 @@ Now we will tell Android studio where to find Git, which you installed [earlier]
 
 如果您發現 **git.exe** 無法自動找到，或者點擊 "測試" 出現錯誤（1），您可以
 
-- manually enter the path which you saved [earlier](#steps-for-installing-git), or
-- click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#steps-for-installing-git)
+- 手動輸入您[早先](#steps-for-installing-git)儲存的路徑，或
+- 點擊資料夾圖示 (1) 並手動導航到**git.exe**安裝的目錄[早先](#steps-for-installing-git)
 - 使用 **測試** 按鈕驗證您的設定！
 
   ![Git not found](../images/Building-the-App/039_GitTestError.png)
@@ -360,7 +360,7 @@ Android 要求每個應用程式都必須 _簽名_，以確保其只能從同一
 
 - 現在選擇一個簡單的密碼（並記下來），在密碼框中輸入它（2），並確認（2）。
 
-  密鑰庫和密鑰的密碼不必過於複雜。 If you lose your password in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
+  密鑰庫和密鑰的密碼不必過於複雜。 如果您在未來遺失密碼，請參見[遺失金鑰存儲的故障排除](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore)。
 
 - 密鑰的預設別名（3）為“key0”，保持不變。
 
@@ -397,7 +397,7 @@ Android Studio在建置完成後將顯示“BUILD SUCCESSFUL”的訊息。 你�
 
 ![建置完成](../images/Building-the-App/049_ReopenNotification.png)
 
-_如果建置不成功，請參閱[Android Studio 問題排除部分](../Installing-AndroidAPS/troubleshooting_androidstudio)._
+_如果建置不成功，請參考[Android Studio 故障排除部分](../GettingHelp/TroubleshootingAndroidStudio)。_
 
 在通知欄中，點擊藍色連結“定位”：
 
@@ -408,4 +408,4 @@ _如果建置不成功，請參閱[Android Studio 問題排除部分](../Install
 
 恭喜！ 現在您已經建置完成 **AAPS** 的 apk 檔案，接下來您將把這個檔案轉移到您的智慧型手機。
 
-Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
+進入[傳輸和安裝 **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md)的下一階段。

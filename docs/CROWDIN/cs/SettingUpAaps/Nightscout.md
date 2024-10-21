@@ -8,13 +8,13 @@ Kromě sledování může být Nightscout použit také k ovládání AAPS. Tj. 
 
 Buďte maximálně opatrní, pokud používáte Nightscout jako zdroj dat v AAPS.
 
-### Nastavení Nightscoutu
+### Nightscout settings
 
 Veřejný přístup k webu Nightscout můžete odepřít použitím [autentizačních rolí](https://nightscout.github.io/nightscout/security): ujistěte se, že sdílíte svou URL pouze pomocí `tokenu pro čtení`, nikdy s `admin` tokenem.
 
 Nightscout `API_SECRET` je hlavní heslo vašeho webu: nesdílejte jej veřejně.
 
-### Nastavení AAPS
+### AAPS settings
 
 AAPS můžete nastavit tak, aby přijímal Nightscout příkazy (změny profilu, ošetření, ...), nebo je zcela zakázat.
 

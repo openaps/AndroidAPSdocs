@@ -12,7 +12,7 @@
 
 注意：AAPS 將資料寫入**幫浦的第一個基礎率設定檔**。
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md) page which Android version is required to run AAPS.)
+* 一台 Android 手機（基本上每個 Android 版本都適用於 Insight，但請檢查[模組](../Getting-Started/ComponentOverview)頁面了解運作 AAPS 所需的 Android 版本）。
 * 你的手機上安裝了 AAPS 應用程式
 
 ## 設定
@@ -21,7 +21,7 @@
     
     ![移除血糖機 Insight 的螢幕截圖](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* 在 AAPS 應用程式的[Config builder](../SettingUpAaps/ConfigBuilder.md)中，選擇 Accu-Chek Insight 作為幫浦部分。
     
     ![組態建置工具 Insight 的螢幕截圖](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -54,7 +54,7 @@
 
 ## AAPS 設定
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../SettingUpAaps/Preferences.md#advanced-settings-nsclient)).
+**注意：現在可以（僅在 AAPS v2.7.0 及以上版本）使用「始終使用基礎絕對值」，如果您想使用 Autotune 與 Insight 幫浦，即使在 Nightscout 中啟用同步。**（在 AAPS 中轉到[偏好設定 > NSClient > 進階設定](../SettingUpAaps/Preferences.md#advanced-settings-nsclient)）。
 
 ![Insight 設定的螢幕截圖](../images/Insight_settings.png)
 
@@ -122,7 +122,7 @@
 
 * 韌體 1.x：設計上沒有震動。
 * 韌體 2.x：無法停用震動。
-* 韌體 3.x：AAPS 安靜地發送注射。 (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614))
+* 韌體 3.x：AAPS 安靜地發送注射。 (最低[版本 2.6.1.4](../Maintenance/ReleaseNotes.md#version-2614))
 
 你可以在選單中找到韌體版本。
 
@@ -150,4 +150,4 @@ Insight 幫浦有一個小型內部電池，可在更換可拆卸電池時維持
 
 ## 跨時區使用 Insight 幫浦
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+有關跨時區旅行的信息，請參見[幫浦旅行時的時區](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#insight)。

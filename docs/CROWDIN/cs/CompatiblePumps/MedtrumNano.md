@@ -17,7 +17,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
         - Pokud máte nepodporovaný model a jste ochotni darovat hardware nebo pomoci s testováním, kontaktujte nás prostřednictvím discordu [zde](https://discordapp.com/channels/629952586895851530/1076120802476441641).
 * **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * **Compatible Android phone** with a BLE Bluetooth connection
-    - Viz AAPS [poznámky k vydání](../Installing-AndroidAPS/Releasenotes.md)
+    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
 * [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
 ## Než začnete
@@ -166,7 +166,7 @@ Toto nastavení lze při použití pumpy Medtrum změnit, ale doporučuje se nas
 
 **Než budete pokračovat:**
 - Mějte připravenou základnu Medtrum Nano a zásobník (patch).
-- Ujistěte se, že je AAPS správně nastavena a [profil je aktivován](../Usage/Profiles.md).
+- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 - Ostatní zařízení, která mohou komunikovat s pumpou Medtrum, jsou vypnuta (PDM a aplikace Medtrum)
 
 #### Aktivujte patch z karty Medtrum
@@ -331,7 +331,7 @@ Tlačítko alarmu se zobrazí na obrazovce přehledu, když je aktivní alarm, k
 
 Stiskněte tlačítko **Resetovat alarmy** k resetování alarmů a obnovení normálního provozu.
 
-## Řešení problémů
+## Troubleshooting
 
 ### Problémy s připojením
 
@@ -354,5 +354,5 @@ Veškerý vývoj ovladače pro Medtrum je prováděn komunitou na **dobrovolnick
 
 -  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
 -  **Úroveň 1:** Pokud přetrvávají problémy, které nejste schopni vyřešit použitím tohoto dokumentu, pak přejděte na kanál *#Medtrum* na **Discordu** pomocí [tohoto odkazu s pozvánkou](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.md).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**

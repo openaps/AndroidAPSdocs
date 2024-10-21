@@ -17,7 +17,7 @@ Sensörü ayarlarken, kanamayı önlemek için aplikatöre çok fazla bastırmam
 
 Sensör yerleştirildikten sonra, verici sensör üzerindeki tutucusuna takılabilir. Dikkat! Önce sensörün kare tarafını yerleştirip ardından yuvarlak tarafa bastırın.
 
-## Sorun giderme
+## Troubleshooting
 
 ### Bağlantı problemleri
 
@@ -37,4 +37,4 @@ Gürültü engelleme ayarlarını xdrip'te (Ayarlar - Gelişmiş Ayarlar - Gür�
 
 ![Negatif sensör yaşı](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Getting-Started/Screenshots.md#action-tab) or a sensor insert with wrong date. Tedaviler sekmesine gidin ve \> bakımportalında yanlış girişi silin.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../DailyLifeWithAaps/AapsScreens.md#action-tab) or a sensor insert with wrong date. Tedaviler sekmesine gidin ve \> bakımportalında yanlış girişi silin.

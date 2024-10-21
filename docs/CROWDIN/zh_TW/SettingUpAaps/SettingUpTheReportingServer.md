@@ -29,9 +29,9 @@ Nightscout是一個開源軟體。 任何人都可以使用免費或付費服務
 
 一些託管Nightscout服務列在[這裡](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table)。
 
-### Further configuration of Nightscout
+### 進一步配置 Nightscout
 
-One you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
+一旦您啟動並運行 Nightscout 實例，請參見[Nightscout 配置頁面](../SettingUpAaps/Nightscout.md)以獲取額外考量。
 
 ## Tidepool
 
@@ -45,13 +45,13 @@ Tidepool自 **AAPS** 3.2版本（2023年末釋出）以來才可用。
 
 Tidepool是一個[開源](https://github.com/tidepool-org)專案。 他提供在Tidepool伺服器上免費運作帳號的選項。
 
-More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tidepool.md).
+有關將 Tidepool 與 AAPS 設定的更多信息，請[點擊這裡](../SettingUpAaps/Tidepool.md)。
 
 ```{admonition} **AAPS** has a the uploader for Tidepool integrated
 :class: note
 你**不需要**使用上傳應用程式到 Tidepool：**AAPS** 會為你上傳血糖、治療和基礎胰島素。你只需擁有一個 Tidepool 的個人帳號即可。請勿使用單獨的 Tidepool 上傳工具來上傳你的資料，因為這會導致重複的數值。
 ```
 
-## Next step
+## 下一步
 
-Once you have set up your reporting server, you can now either set up a [dedicated Google account for AAPS use](../SettingUpAaps/DedicatedGoogleAccountForAaps.md), or go straight to [building the AAPS app](../SettingUpAaps/BuildingAaps.md).
+一旦您設置了報告伺服器，您現在可以設置[專用的 Google 帳號以供 AAPS 使用](../SettingUpAaps/DedicatedGoogleAccountForAaps.md)，或直接前往[建置 AAPS 應用程式](../SettingUpAaps/BuildingAaps.md)。

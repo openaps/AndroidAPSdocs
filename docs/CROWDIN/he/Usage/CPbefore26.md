@@ -40,7 +40,7 @@ This page will show where you can find the functions previously available in car
 - CGM sensor insert can now be found in the actions tab / menu.
 - All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
-## משאבה
+## Pump
 
 ![Careportal Pump](../images/Careportal_25_26_4_IIb.png)
 

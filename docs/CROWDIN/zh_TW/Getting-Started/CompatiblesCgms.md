@@ -1,10 +1,10 @@
 # CGMS/FGMS 設定
 
-- [General](../CompatibleCgms/GeneralCGMRecommendation.md)
-- [Data Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md)
-- [xDrip+Settings](../CompatibleCgms/xDrip.md)
-- [Dexcom G7 and ONE+](../CompatibleCgms/DexcomG7.md)
-- [Dexcom G6 and ONE](../CompatibleCgms/DexcomG6.md)
+- [一般](../CompatibleCgms/GeneralCGMRecommendation.md)
+- [數據平滑處理](../CompatibleCgms/SmoothingBloodGlucoseData.md)
+- [xDrip+設定](../CompatibleCgms/xDrip.md)
+- [Dexcom G7 和 ONE+](../CompatibleCgms/DexcomG7.md)
+- [Dexcom G6 和 ONE](../CompatibleCgms/DexcomG6.md)
 - [Dexcom G5](../CompatibleCgms/DexcomG5.md)
 - [Libre 3](../CompatibleCgms/Libre3.md)
 - [Libre 2](../CompatibleCgms/Libre2.md)
@@ -12,4 +12,4 @@
 - [Eversense](../CompatibleCgms/Eversense.md)
 - [MM640g/MM630g](../CompatibleCgms/MM640g.md)
 - [PocTech](../CompatibleCgms/PocTech.md)
-- [Nightscout as BG Source](../CompatibleCgms/CgmNightscoutUpload.md)
+- [Nightscout 作為 BG 來源](../CompatibleCgms/CgmNightscoutUpload.md)

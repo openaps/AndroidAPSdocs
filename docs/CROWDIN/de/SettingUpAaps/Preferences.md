@@ -22,7 +22,7 @@
 ```
 
 (Preferences-general)=
-## Allgemein
+## General
 
 ![Einstellungen > Allgemein](../images/Pref2020_General.png)
 
@@ -52,7 +52,7 @@
 
 #### Master-Passwort
 
-- Da ab Version 2.7 die Einstellungen verschlüsselt sind, wird ein Passwort benötigt, um die [Einstellungen exportieren](../Usage/ExportImportSettings.md) zu können. **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
+- Necessary to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7. **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
 
 - Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 
@@ -66,9 +66,9 @@
 
 #### Schutz der Einstellungen
 
-- Schütze deine Einstellungen mit einem Passwort oder einer biometrischen Authentifizierung (d. h. [AAPS-Nutzung durch Kinder](../Children/Children.md)).
+- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../RemoteFeatures/RemoteMonitoring.md)).
 
-- Das 'Benutzerdefinierte Passwort' sollte verwendet werden, wenn Du das Master-Passwort nur für die Sicherung der [exportierten Einstellungen](../Usage/ExportImportSettings.md) verwenden möchtest.
+- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md).
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
 
@@ -81,7 +81,7 @@
 
 #### Bolus-Schutz
 
-- Bolus Schutz könnte nützlich sein, wenn AAPS von einem kleinen Kind verwendet wird und Du [SMS für Boli](../Children/SMS-Commands.md) verwendest.
+- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
 - Im Beispiel unten siehst du die Aufforderung zur biometrischen Freigabe. Falls die biometrische Authentifizierung nicht funktioniert, klicke in den Bereich oberhalb der weißen Eingabeaufforderung und gib das Master-Passwort ein.
 
@@ -154,7 +154,7 @@
 (Preferences-default-temp-targets)=
 ### Vordefinierte temporäre Ziele
 
-- [Temp Targets (TT)](../Usage/temptarget.md) erlauben es dir, dein Blutzuckerziel für einen bestimmten Zeitraum zu ändern.
+- [Temp targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to define change your blood glucose target for a certain time period.
 
 - Mit dem Setzen von Standard-TT kannst Du Dein Ziel für Aktivität, Bald essen, usw. einfach verändern.
 
@@ -168,7 +168,7 @@
 
 ### Füll-/Vorfüll-Standardmengen
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
 - Voreinstellungen für Füllmengen können in diesem Dialog definiert werden.
 
 (Preferences-range-for-visualization)=
@@ -198,7 +198,7 @@
 - Status Lights geben eine optische Warnung für
 
   - Sensoralter
-  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
+  - Sensor battery level for certain smart readers (see [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery) for details).
   - Insulinalter (Tage Reservoirverwendung)
   - Reservoirstand (Einheiten)
   - Kanülenalter
@@ -231,7 +231,7 @@
 - Sicherheitsgrenzwerte werden auf der Grundlage des Alters festgelegt, das Du in dieser Einstellung auswählst.
 - Wenn du an diese festen Grenzen (z.B. Maximal-Bolus) kommst, ist es an der Zeit, einen Schritt weiter zu gehen.
 - Es ist keine gute Idee, ein höheres Alter anzugeben als das tatsächliche, weil es zu einer Überdosierung führen kann, wenn ein falscher Wert im Insulin-Dialog eingegeben wird (z. B.
-- Wenn du die Werte für diese fest codierten Sicherheitsgrenzen wissen möchtest, scrolle auf [dieser Seite](../Usage/Open-APS-features.md) zu der Algorithmenfunktion, die Du verwendest.
+- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 ### Maximal erlaubter Bolus \[U\]
 
@@ -268,8 +268,8 @@
 
 Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS AMA-Einstellungen
 
@@ -283,7 +283,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 - Der Wert wird in IE pro Stunde angegeben (IE/h).
 - Es wird empfohlen, hier etwas vernünftiges einzugeben. Eine gute Empfehlung ist, die **höchste Basalrate** in Deinem Profil zu verwenden und diese **mit 4 zu multiplizieren**.
 - Wenn zum Beispiel die höchste Basalrate in deinem Profil 0.5IE/h war, kannst du das mit 4 multiplizieren, um einen Wert von 2IE/h zu erhalten.
-- See also [detailed feature description](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### Maximales Basal-IOB, das OpenAPS abgeben darf \[U\]
 
@@ -307,7 +307,7 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 #### Autosens
 
-- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
 - Dabei wird anhand dieser Abweichungen ermittelt, wie empfindlich / resistent Du auf Insulin reagierst und Deine Basalrate und den ISF entsprechend angepasst.
 - Wenn Du "Autosens passt Zielwerte ebenfalls an" auswählst, wird der Algorithmus auch Dein BZ-Ziel entsprechend anpassen.
 
@@ -319,17 +319,17 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB-Einstellungen
 
-- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
 - You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
 - The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
 
-- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb).
 
 - *Wie häufig SMB abgegeben werden (in Min.)* ist eine Einschränkung für SMB, die standardmäßig nur alle vier Minuten abgegeben werden. Dieser Wert verhindert, dass das System SMB zu häufig abgibt (z. B. wenn Du ein temporäres Ziel setzt). Sie sollten diese Einstellung nicht ändern, außer Du weißt genau über die Folgen Bescheid.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Wenn der Zielwert angepasst wird, wird dies durch einen grünen Hintergrund des Zielwerts angezeigt.
 
@@ -387,7 +387,7 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 ### Erweiterte Einstellungen - Autosens-Faktoren
 
-- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
+- Define min. and max. [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) ratio.
 - Die Standardwerte (max. 1.2 und min. 0.7) sollten nicht verändert werden.
 
 ## Pumpen-Einstellungen
@@ -419,7 +419,7 @@ Ursprüngliches Kommunikations-Protokoll, dass mit älteren Nightscout-Versionen
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-Ein [mit AAPS 3.2 neu eingeführtes Kommunikations-Protokoll](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps). Sicherer und effizienter als das ursprüngliche Protokoll.
+[New protocol introduced with AAPS 3.2.](../Maintenance/ReleaseNotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
 ```{admonition} V3 data uploaders
 :class: warning
@@ -472,7 +472,7 @@ Die Optionen in den erweiterten Einstellungen sind selbsterklärend.
 
 - Options will only be displayed if SMS communicator is selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#sms-communicator).
 - Diese Einstellung erlaubt eine Fernsteuerung der App, indem Anweisungen an das Smartphone des Patienten gesendet werden, die die App ausführt (z.B. Loop oder Bolus anhalten).
-- Weitere Information findest Du auf der Seite [SMS-Befehle](../Children/SMS-Commands.md).
+- Further information is described in [SMS Commands](../RemoteFeatures/SMSCommands.md).
 - Zusätzliche Sicherheit wird durch die Verwendung einer Authentifikator-App und einer zusätzlichen PIN am Tokenende erreicht.
 
 ## Automatisierung
@@ -503,7 +503,7 @@ Wähle aus, welcher Standortservice verwendet werden soll:
 
 ## Open Humans
 
-- Du kannst die Community unterstützen, indem Du Deine Daten für Forschungsprojekte zur Verfügung stellst. Weitere Informationen dazu findest Du auf der [Open Humans Seite](../Configuration/OpenHumans.md).
+- Du kannst die Community unterstützen, indem Du Deine Daten für Forschungsprojekte zur Verfügung stellst. Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
 
 - In den Einstellungen kannst Du festlegen, wann Daten hochgeladen werden sollen
 

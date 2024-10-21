@@ -188,7 +188,7 @@ _表格說明：_
 
 #### 關於過快改善血糖控制的安全考量
 
-迅速降低HbA1c並改善血糖控制聽起來很吸引人。 然而，透過開始任何閉環系統過快降低平均血糖水平可能會導致永久損害，包括眼睛損傷，以及不可逆的疼痛性神經病變。 只要緩慢降低血糖水平，就可以避免這些損害。 如果你目前的HbA1c偏高，並且正在轉向使用AAPS（或其他閉環系統），請在開始之前與你的臨床團隊討論這個潛在風險，並與他們協商一個時間表。 More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](../Getting-Started/PreparingForAaps.md#safety-first).
+迅速降低HbA1c並改善血糖控制聽起來很吸引人。 然而，透過開始任何閉環系統過快降低平均血糖水平可能會導致永久損害，包括眼睛損傷，以及不可逆的疼痛性神經病變。 只要緩慢降低血糖水平，就可以避免這些損害。 如果你目前的HbA1c偏高，並且正在轉向使用AAPS（或其他閉環系統），請在開始之前與你的臨床團隊討論這個潛在風險，並與他們協商一個時間表。 關於如何安全降低血糖水平的更多資訊，包括與醫學文獻的連結，可以在安全部分[這裡](../Getting-Started/PreparingForAaps.md#safety-first)中找到。
 
 #### 關於設備、耗材和其他藥物的醫療安全
 
@@ -196,7 +196,7 @@ _表格說明：_
 
 請使用幫浦和CGM製造商批准的原裝耗材，如插入器、導管和胰島素容器。 使用未經測試或修改的耗材可能會導致 CGM 不準確和胰島素劑量錯誤。 胰島素劑量錯誤非常危險——請不要拿自己的生命開玩笑，隨便修改耗材。
 
-在使用 **AAPS**時，請不要服用SGLT-2抑制劑（格列酮類藥物），因為他們會無法預測地降低血糖水平。 Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](../Getting-Started/PreparingForAaps.md#safety-first).
+在使用 **AAPS**時，請不要服用SGLT-2抑制劑（格列酮類藥物），因為他們會無法預測地降低血糖水平。 將這種效果與降低基礎率以增加血糖的系統結合使用是危險的，詳細訊息可參閱主安全部分[這裡](../Getting-Started/PreparingForAaps.md#safety-first)。
 
 (introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
 ## 我該如何與我的臨床團隊討論AAPS？
@@ -375,4 +375,4 @@ AAPS 可以由盲人使用。 在Android設備上，操作系統有一個名為T
 
 最終，**AAPS** 能夠幫助個人更好地管理糖尿病，從而達到穩定的血糖水平並改善長期健康結果。
 
-有興趣了解如何開始設置AAPS嗎？ Take a look at the [preparing](../Getting-Started/PreparingForAaps.md) section.
+有興趣了解如何開始設置AAPS嗎？ 請查看 [事前準備](../Getting-Started/PreparingForAaps.md)章節。

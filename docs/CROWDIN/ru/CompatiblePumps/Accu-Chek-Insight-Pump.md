@@ -12,7 +12,7 @@
 
 Примечание: AAPS всегда записывает данные в **первый профиль скорости базала в помпе **.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md) page which Android version is required to run AAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Getting-Started/ComponentOverview) page which Android version is required to run AAPS.)
 * Приложение AAPS на вашем телефоне
 
 ## Настройки
@@ -122,7 +122,7 @@
 
 * Прошивка 1.х: нет вибрации конструктивно.
 * Прошивка 2.х: вибрация не может быть отключена.
-* Прошивка 3.х: AAPS подает болюс беззвучно. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614))
+* Прошивка 3.х: AAPS подает болюс беззвучно. (minimum [version 2.6.1.4](../Maintenance/ReleaseNotes.md#version-2614))
 
 Версию прошивки можно найти через меню.
 
@@ -150,4 +150,4 @@
 
 ## Пересечение часовых поясов с помпой Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#insight).

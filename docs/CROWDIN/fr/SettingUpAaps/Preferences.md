@@ -22,7 +22,7 @@
 ```
 
 (Preferences-general)=
-## Généralités
+## General
 
 ![Preferences > General](../images/Pref2020_General.png)
 
@@ -52,7 +52,7 @@
 
 #### Mot de passe principal
 
-- Nécessaire pour pouvoir [exporter les paramètres](../Usage/ExportImportSettings.md) car ils sont chiffrés depuis la version 2.7. **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. Ceci est un problème connu de OnePlus sur certains téléphones.**
+- Necessary to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7. **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. Ceci est un problème connu de OnePlus sur certains téléphones.**
 
 - Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 
@@ -66,9 +66,9 @@
 
 #### Protection des paramètres
 
-- Protégez vos paramètres avec un mot de passe ou l'authentification biométrique du téléphone (par ex. si votre [enfant utilise AAPS](../Children/Children.md)).
+- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../RemoteFeatures/RemoteMonitoring.md)).
 
-- Le mot de passe personnalisé doit être utilisé si vous voulez juste utiliser le mot de passe principal pour sécuriser [les paramètres exportés](../Usage/ExportImportSettings.md).
+- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md).
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
 
@@ -81,7 +81,7 @@
 
 #### Protection des bolus
 
-- La protection des bolus peut être utile si AAPS est utilisé par un petit enfant et que vous effectuez les [bolus par SMS](../Children/SMS-Commands.md).
+- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
 - Dans l'exemple ci-dessous, vous voyez l'invite de protection biométrique. Si l'authentification biométrique ne fonctionne pas, cliquez dans la zone au-dessus de l'invite blanche et entrez le mot de passe principal.
 
@@ -154,7 +154,7 @@
 (Preferences-default-temp-targets)=
 ### Cibles Temporaires par défaut
 
-- Les [Cibles Temporaires (CT)](../Usage/temptarget.md) vous permettent de définir une nouvelle cible de glycémie pour une certaine durée.
+- [Temp targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to define change your blood glucose target for a certain time period.
 
 - Avec la configuration de CT par défaut, vous pouvez facilement changer vos cibles d'activité, de repas imminent, etc.
 
@@ -168,7 +168,7 @@
 
 ### Insuline par défaut pour Amorcer/Remplir
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
 - Les valeurs prédéfinies peuvent être configurées dans cette boite de dialogue.
 
 (Preferences-range-for-visualization)=
@@ -198,7 +198,7 @@
 - Les voyants d'état donnent une alerte visuelle pour
 
   - Age du capteur
-  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
+  - Sensor battery level for certain smart readers (see [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery) for details).
   - Âge de l'insuline (jours d'utilisation du réservoir)
   - Niveau du réservoir (unités)
   - Âge de la canule
@@ -231,7 +231,7 @@
 - Les limites de sécurité sont établies en fonction de l'âge sélectionné dans ce paramètre.
 - Si vous commencez à atteindre ces limites restrictives (comme le Maximum Bolus), il est temps de changer d’un cran.
 - C’est une mauvaise idée de selectionner un âge supérieur a l'âge réel car cela peut conduire à un surdosage lorsque l'on entre une valeur incorrecte dans la boîte de dialogue de l’insuline (en oubliant le point décimal ou la virgule par exemple).
-- Si vous voulez connaître les valeurs réelles de ces limites de sécurité codées en dur, faites défiler jusqu'à l'algorithme que vous utilisez sur [cette page](../Usage/Open-APS-features.md).
+- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 ### Maximum Bolus autorisé \[U\]
 
@@ -268,8 +268,8 @@
 
 Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### Paramètres OpenAPS AMA
 
@@ -283,7 +283,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 - La valeur est definie en Unités d'insuline par heure (U/h).
 - Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le **débit de basal le plus élevé** de votre profil et de le **multiplier par 4**.
 - Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
-- See also [detailed feature description](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### L'IA basal maximum que OpenAPS peut délivrer \[U\]
 
@@ -307,7 +307,7 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 #### Autosens
 
-- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
 - Il essaiera de comprendre à quel point vous êtes sensible/résistant en fonction de ces écarts et ajustera le débit basal et la SI en fonction de ces écarts.
 - Si vous sélectionnez "Autosens ajuste aussi les cibles" l'algorithme modifiera également votre cible de glycémie.
 
@@ -319,17 +319,17 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 (Preferences-openaps-smb-settings)=
 ### Paramètres OpenAPS SMB
 
-- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
 - You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
 - The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
 
-- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb).
 
 - *La fréquence à laquelle les SMB seront donnés en min* est une restriction pour que le SMB ne soit distribué que toutes les 4 minutes par défaut. Cette valeur empêche le système d'émettre trop souvent des SMB (par exemple dans le cas où une cible temporaire a été définie). Vous ne devriez pas modifier ce paramètre sauf si vous en connaissez exactement les conséquences.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Si la cible est modifiée, elle sera affichée avec un fond vert sur votre écran d'accueil.
 
@@ -387,7 +387,7 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 ### Paramètres avancés - Ratio autosens
 
-- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
+- Define min. and max. [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) ratio.
 - Normalement les valeurs standards (max. 1,2 et min. 0,7) ne devrait pas être modifiées.
 
 ## Paramètres de la pompe
@@ -419,7 +419,7 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+[New protocol introduced with AAPS 3.2.](../Maintenance/ReleaseNotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
 ```{admonition} V3 data uploaders
 :class: warning
@@ -472,7 +472,7 @@ Options in advanced settings are self-explanatory.
 
 - Options will only be displayed if SMS communicator is selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#sms-communicator).
 - Ce paramètre permet de contrôler à distance de l'application en envoyant des instructions au téléphone du patient que l'application appliquera comme Suspendre la boucle ou un bolus.
-- De plus amples informations sont décrites dans [Commandes SMS](../Children/SMS-Commands.md).
+- Further information is described in [SMS Commands](../RemoteFeatures/SMSCommands.md).
 - Une sécurité supplémentaire est obtenue grâce à l'utilisation d'une application authentificateur et d'un code PIN supplémentaire à la fin du jeton.
 
 ## Automatisation
@@ -503,7 +503,7 @@ Select which location service shall be used:
 
 ## Open Humans
 
-- Vous pouvez aider la communauté en faisant don de vos données à des projets de recherche ! Les détails sont décrits sur la [page Open Humans](../Configuration/OpenHumans.md).
+- Vous pouvez aider la communauté en faisant don de vos données à des projets de recherche ! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
 
 - Dans les préférences, vous pouvez définir quand les données doivent être téléchargées
 

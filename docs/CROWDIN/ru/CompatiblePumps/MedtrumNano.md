@@ -17,7 +17,7 @@
         - Если у вас есть неподдерживаемая модель и вы хотите пожертвовать аппаратное обеспечение или помощь в тестировании, пожалуйста, свяжитесь с нами через discord [здесь](https://discordapp.com/channels/629952586895851530/1076120802476441641).
 * **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * **Совместимый Android-телефон** с рабочим модулем BLE Bluetooth
-    - См. AAPS [Примечания к выпуску](../Installing-AndroidAPS/Releasenotes.md)
+    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
 * [**Непрерывный мониторинг гликемии**](../Getting-Started/CompatiblesCgms.md)
 
 ## Подготовка к работе
@@ -166,7 +166,7 @@ On an existing installation you can select the **Medtrum** pump from the [Config
 
 **Прежде чем продолжить:**
 - Приготовьте к работе помповую базу Medtrum Nano и резервуар патча.
-- Убедитесь, что AAPS правильно настроен и [профиль активирован](../Usage/Profiles.md).
+- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 - Другие устройства, которые могут общаться с помпой Medtrum отключены (пульт PDM и приложение Medtrum)
 
 #### Активируйте патч из вкладки Medtrum
@@ -331,7 +331,7 @@ On an existing installation you can select the **Medtrum** pump from the [Config
 
 Нажмите кнопку **Убрать оповещения** для сброса оповещений и возобновления нормальной работы.
 
-## Устранение неполадок
+## Troubleshooting
 
 ### Проблемы подключения
 
@@ -354,5 +354,5 @@ On an existing installation you can select the **Medtrum** pump from the [Config
 
 -  **Уровень 0:** Прочитайте соответствующий раздел этой документации, чтобы удостовериться, что вы понимаете, как должна работать функция, с которой вы испытываете трудности.
 -  **Уровень 1:** Если вы все еще сталкиваетесь с проблемами, которые вы не можете решить, изучая документацию, перейдите в канал *#Medtrum* на **Discord** с помощью [этой ссылки-приглашения](https://discord.gg/4fQUWHZ4Mw).
--  **Уровень 2:** Ищите среди существующих проблем, отмечена ли она в [Issues](https://github.com/nightscout/AAPS/issues) если она существует, подтвердите/комментарий/добавьте информацию о вашей проблеме. Если нет, создайте [новую проблему](https://github.com/nightscout/AndroidAPS/issues) и прикрепите [ваши файлы журналов](../Usage/Accessing-logfiles.md).
+-  **Уровень 2:** Ищите среди существующих проблем, отмечена ли она в [Issues](https://github.com/nightscout/AAPS/issues) если она существует, подтвердите/комментарий/добавьте информацию о вашей проблеме. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
 -  **Будьте терпеливы - решения проблем часто требуют времени и терпения как от пользователей, так и от разработчиков.**

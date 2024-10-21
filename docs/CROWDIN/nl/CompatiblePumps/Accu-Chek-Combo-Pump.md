@@ -8,7 +8,7 @@
 
 - Een Roche Accu-Chek Combo pomp (elke firmware is geschikt).
 - Een Smartpix of Realtyme apparaatje met bijbehorende 360 Configuratie software om de pomp te configureren. (Op verzoek stuurt Roche de Smartpix met software gratis op aan haar klanten.)
-- Een geschikte telefoon: een Android telefoon met LineageOS 14.1 (vroeger bekend als CyanogenMod) of met Android 8.1 (Oreo) of hoger. As of AAPS 3.0 Android 9 is mandatory. See [release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version) for details.
+- Een geschikte telefoon: een Android telefoon met LineageOS 14.1 (vroeger bekend als CyanogenMod) of met Android 8.1 (Oreo) of hoger. As of AAPS 3.0 Android 9 is mandatory. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
 - LineageOS 14.1 dient een recente versie te zijn, van minimaal Juni 2017, omdat toen pas de functionaliteit beschikbaar is gekomen die nodig is om de Combo pomp te kunnen verbinden met de telefoon. 
 - Een lijst met telefoons vind je in dit document: [AAPS Telefoons](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 - NB: deze lijst is niet compleet en bevat persoonlijke ervaringen. Je wordt gevraagd om jouw eigen ervaring hier ook aan toe te voegen en zodoende anderen te helpen (deze projecten draaien allemaal om #payitforward mentaliteit).
@@ -17,10 +17,10 @@
 
 ## Beperkingen
 
-- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.md) instead).
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 - Slechts één basaal profiel wordt ondersteund.
 - Als je in de pomp meer dan één basaalprofiel instelt of wanneer je extended bolus of multiwave bolus geeft vanaf de pomp dan zal dit ingrijpen op de TBR en zal AAPS de loop dwingen tot een beperkte gebruiksmodus voor de duur van 6 uur, omdat de loop onder deze omstandigheden anders niet veilig kan blijven werken.
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - Op dit moment worden alleen basaal standen tussen de 0,05 en 10 E/uur ondersteund. Dit geldt ook voor profielwissels, bijvoorbeeld bij een verhoging tot 200% mag de hoogste basaalstand niet boven de 5 E/uur liggen omdat het nog wordt verdubbeld. Dit geldt ook voor de ondergrens: bij een verlaging tot 50% moet de laagste basaalstand minstens 0,10 E/uur zijn.
 - Als de loop een actieve TBR (tijdelijke basaalstand) eigenlijk zou willen cancellen, dan zal de Combo een TBR instellen van 90% of 110% gedurende 15 minuten. Dit is omdat het annuleren van een TBR een trilalarm geeft op de pomp. Op deze manier worden veelvuldige trilalarmen vermeden.
 - Zo nu en dan (ruwweg elke paar dagen) gebeurt het dat AAPS het TBR CANCELLED alarm niet automatisch kan onderdrukken. Dan moet jij zelf de Vernieuw-knop in AAPS gebruiken om de waarschuwing in AAPS te krijgen, of je moet het alarm wegdrukken via de knoppen op je pomp.

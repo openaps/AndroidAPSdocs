@@ -22,9 +22,9 @@ Göz simgesinin altındaki onay kutusu ile ilgili program bölümünün nasıl a
 
 (Config-Builder-profile)=
 
-## Profil
+## Profile
 
-* Kullanmak istediğiniz bazal profili seçin. Daha fazla kurulum bilgisi için [Profiller](../Usage/Profiles.md) sayfasına bakın.
+* Kullanmak istediğiniz bazal profili seçin. See [Profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) page for more setup information.
 * AAPS 3.0'dan itibaren yalnızca yerel profil kullanılabilir.
 
 Ancak Nightscout profilini yerel bir profile senkronize etmek mümkündür. Bunu yapmak için Nightscout editöründe birkaç profilden oluşan tüm veritabanı kaydını klonlamak önemlidir. Lütfen aşağıdaki talimatlara bakın. Eğer kapsamlı bir profildeki büyük değişiklikleri web arayüzü aracılığıyla yapacaksanız, bu işlem verilerin daha kolay girilebilmesine yardımcı olabilir, örn. verileri bir elektronik tablodan manuel olarak kopyalamak.
@@ -35,7 +35,7 @@ Ancak Nightscout profilini yerel bir profile senkronize etmek mümkündür. Bunu
 
 Yerel profil, telefona manuel olarak girilen bazal profili kullanır. Seçilir seçilmez, gerekirse pompadan okunan profil verilerini değiştirebileceğiniz AAPS'de yeni bir sekme görünür. Bir sonraki profil değişimi ile pompadaki profil1'e yazılırlar. İnternet bağlantısı gerektirmediği için bu profil önerilir.
 
-Yerel profilleriniz, [dışa aktarılan ayarların](../Usage/ExportImportSettings.md) bir parçasıdır. Bu yüzden güvenli bir yerde yedek aldığınızdan emin olun.
+Your local profiles are part of [exported settings](../Maintenance/ExportImportSettings.md). Bu yüzden güvenli bir yerde yedek aldığınızdan emin olun.
 
 ![Yerel Profil ayarları](../images/LocalProfile_Settings.png)
 
@@ -82,7 +82,7 @@ Profil yardımcısı iki işlev sunar:
 1. Çocuklar için bir profil bulmak
 2. Yeni bir profili klonlamak için iki profili veya profil değişimlerini karşılaştırmak
 
-Ayrıntılar, [profil yardımcısı sayfasında](../Configuration/profilehelper.md) açıklanmıştır.
+Details are explained on the separate [profile helper page](../SettingUpAaps/ProfileHelper.md).
 
 (Config-Builder-insulin)=
 
@@ -102,13 +102,13 @@ Ayrıntılar, [profil yardımcısı sayfasında](../Configuration/profilehelper.
 * İES her kişi için aynı değildir. Bu yüzden kendiniz test etmelisiniz. 
 * Ancak her zaman en az 5 saat olmalıdır.
 * Fiasp gibi ultra hızlı insülin kullanan birçok insan için, kural olarak 0.0xx ünite mevcut olsa bile, 3-4 saat sonra pratikte gözle görülür bir etkisi yoktur. Bu kalan miktar, örneğin spor sırasında hala görülebilir. Bu nedenle, AAPS, İES olarak minimum 5saat kullanır.
-* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots.md#insulin-profile) page.
+* You can read more about that in the Insulin Profile section of [this](../DailyLifeWithAaps/AapsScreens.md#insulin-profile) page.
 
 ### İnsülin tipi farklılıkları
 
 * 'Hızlı Etkili', 'Ultra Hızlı' ve 'Lyumjev' için İES, kendiniz ayarlayabileceğiniz tek değişkendir ve zirve zamanı sabittir. 
 * Free-Peak (serbest-zirve), hem İES'i hem de zirveye ulaşma süresini ayarlamanıza olanak tanır fakat yalnızca bu ayarların etkilerini bilen ileri düzey kullanıcılar tarafından kullanılmalıdır. 
-* The [insulin curve graph](../Getting-Started/Screenshots.md#insulin-profile) helps you to understand the different curves.
+* The [insulin curve graph](../DailyLifeWithAaps/AapsScreens.md#insulin-profile) helps you to understand the different curves.
 * Yukarıda bir sekme olarak görüntülemek için onay kutusunu etkinleştirebilirsiniz. Diğer türlü hamburger menüsünde olacaktır.
 
 #### Hızlı etkili Oref
@@ -165,7 +165,7 @@ Select the blood glucose source you are using - see [BG Source](../Getting-Start
 
 (Config-Builder-pump)=
 
-## Pompa
+## Pump
 
 Kullanmakta olduğunuz pompayı seçin.
 
@@ -191,15 +191,15 @@ Kullanmakta olduğunuz pompayı seçin.
 
 ## Duyarlılık algılaması
 
-Duyarlılık algılama türünü seçin. Farklı tasarımlarla ilgili daha fazla ayrıntı için lütfen [burayı okuyun](../Configuration/Sensitivity-detection-and-COB.md). Bu, hareket halindeyken geçmiş verileri analiz edecek ve insüline normalden daha duyarlı (veya tersine, daha dirençli) tepki verdiğinizi fark ederse ayarlamalar yapacaktır. Duyarlılık algoritması hakkında daha fazla ayrıntıyı [OpenAPS dokümantasyonu](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)nda bulabilirsiniz.
+Duyarlılık algılama türünü seçin. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Bu, hareket halindeyken geçmiş verileri analiz edecek ve insüline normalden daha duyarlı (veya tersine, daha dirençli) tepki verdiğinizi fark ederse ayarlamalar yapacaktır. Duyarlılık algoritması hakkında daha fazla ayrıntıyı [OpenAPS dokümantasyonu](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)nda bulabilirsiniz.
 
-Grafiklerde duyarlılık işaretlenerek beyaz çizgide duyarlılığınızı ana ekranda görüntüleyebilirsiniz. Note, you need to be in [Objective 8](../SettingUpAaps/CompletingTheObjectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.md#autosens) automatically adjust the amount of insulin delivered. Bu hedefe ulaşmadan önce, Otoduyarlılık yüzdesi veya grafiğinizdeki çizgi yalnızca bilgi amaçlı görüntülenir.
+Grafiklerde duyarlılık işaretlenerek beyaz çizgide duyarlılığınızı ana ekranda görüntüleyebilirsiniz. Note, you need to be in [Objective 8](../SettingUpAaps/CompletingTheObjectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) automatically adjust the amount of insulin delivered. Bu hedefe ulaşmadan önce, Otoduyarlılık yüzdesi veya grafiğinizdeki çizgi yalnızca bilgi amaçlı görüntülenir.
 
 (Config-Builder-absorption-settings)=
 
 ### Emilim ayarları
 
-Oref1 ile SMB kullanıyorsanız **min_5m_carbimpact**'i 8 olarak değiştirmelisiniz. Bu değer yalnızca CGM okumalarındaki boşluklar sırasında veya fiziksel aktivite kan şekeri artışını tükettiğinde kullanılır. Bunun dışında AAPS tarafından aktif karbonhidrat bozulur. [Karbonhidrat emiliminin](../Usage/COB-calculation.md) kan reaksiyonlarınıza göre dinamik olarak hesaplanamadığı zamanlarda, karbonhidratlarınıza varsayılan bir bozulma ekler. Temel olarak bir ön güvenliktir.
+Oref1 ile SMB kullanıyorsanız **min_5m_carbimpact**'i 8 olarak değiştirmelisiniz. Bu değer yalnızca CGM okumalarındaki boşluklar sırasında veya fiziksel aktivite kan şekeri artışını tükettiğinde kullanılır. Bunun dışında AAPS tarafından aktif karbonhidrat bozulur. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Temel olarak bir ön güvenliktir.
 
 (Config-Builder-aps)=
 
@@ -208,7 +208,7 @@ Oref1 ile SMB kullanıyorsanız **min_5m_carbimpact**'i 8 olarak değiştirmelis
 Terapi ayarlamaları için istenen APS algoritmasını seçin. OpenAPS(OAPS) sekmesinde seçilen algoritmanın aktif detayını görüntüleyebilirsiniz.
 
 * OpenAPS AMA (gelişmiş yemek yardımı, algoritmanın 2017'deki durumu) Basit bir ifadeyle faydası, yemek bolusu verdikten sonra eğer karbonhidratları doğru bir şekilde girerseniz, sistem daha hızlı bir şekilde kan şekerine yüksek geçici bazal oranları ile müdahale eder.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* [OpenAPS SMB](../DailyLifeWithAaps/KeyAapsFeatures.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Döngü
 
@@ -250,19 +250,19 @@ Terapi ayarlamaları için istenen APS algoritmasını seçin. OpenAPS(OAPS) sek
 
 AAPS, adım adım gerçekleştirmeniz gereken bir öğrenme programına (görevlere) sahiptir. Bunun amacı, güvenli bir şekilde kapalı döngü sistemi kurmak için size rehberlik etmektir. Her şeyi doğru bir şekilde kurmanızı ve sistemin tam olarak ne yaptığını anlamanızı garanti eder. Sisteme güvenmenizin tek yolu bu.
 
-Düzenli olarak [ayarlarınızı dışa aktarmalısınız](../Usage/ExportImportSettings.md) (görevlerin ilerlemesi dahil). Akıllı telefonunuzu daha sonra değiştirmeniz durumunda (yeni satın alma, ekran hasarı vb.) bu ayarları kolayca içe aktarabilirsiniz.
+You should [export your settings](../Maintenance/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. Akıllı telefonunuzu daha sonra değiştirmeniz durumunda (yeni satın alma, ekran hasarı vb.) bu ayarları kolayca içe aktarabilirsiniz.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 
 ## Tedaviler
 
-Tedaviler (TEDAVİ) sekmesine bakarsanız, nightcout'a yüklenen tedavileri görebilirsiniz. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
+Tedaviler (TEDAVİ) sekmesine bakarsanız, nightcout'a yüklenen tedavileri görebilirsiniz. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../DailyLifeWithAaps/AapsScreens.md#carb-correction).
 
-## Genel
+## General
 
 ### Genel Bakış
 
-Döngünüzün mevcut durumu ve en yaygın eylemler için butonları görüntüler (ayrıntılar için [GİRİŞ ekranı bölümüne bakın](../Getting-Started/Screenshots.md)). Ayarlara dişli çark tıklanarak erişilebilir.
+Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../DailyLifeWithAaps/AapsScreens.md) for details). Ayarlara dişli çark tıklanarak erişilebilir.
 
 #### Ekranı açık tut
 
@@ -321,24 +321,24 @@ Choose if you want to have [status lights](../SettingUpAaps/Preferences.md#statu
 
 **Bolus sihirbazı sonucunun bu kadarını iletin**: SMB kullanırken, birçok kişi ihtiyaç duyulan insülinin %100'ünü yemek bolusu olarak iletmez, sadece bir kısmını (örn. %75) gönderir ve SMB, UAM ile (Bildirilmemiş yemek algılama) gerisini halleder. Bu ayarda, bolus sihirbazının hesaplaması için varsayılan bir yüzde değer seçebilirsiniz. Bu ayar %75 ise ve 10ü bolus yapmanız gerekiyorsa, bolus sihirbazı yalnızca 7,5 ünitelik bir öğün bolusu önerecektir.
 
-**Sihirbazda süper bolus işlevini etkinleştirin** (*süper mikro bolustan* farklıdır!): Dikkatli kullanın ve gerçekte ne işe yaradığını öğrenene kadar etkinleştirmeyin. Temel olarak, sonraki iki saat için bazal bolusa eklenir ve iki saatlik sıfır geçici bazal etkinleştirilir. **AAPS döngü işlevleri devre dışı bırakılacak - bu nedenle dikkatli kullanın! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Sihirbazda süper bolus işlevini etkinleştirin** (*süper mikro bolustan* farklıdır!): Dikkatli kullanın ve gerçekte ne işe yaradığını öğrenene kadar etkinleştirmeyin. Temel olarak, sonraki iki saat için bazal bolusa eklenir ve iki saatlik sıfır geçici bazal etkinleştirilir. **AAPS döngü işlevleri devre dışı bırakılacak - bu nedenle dikkatli kullanın! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../DailyLifeWithAaps/KeyAapsFeatures.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
 
 ### Eylemler
 
 * Ortak özelliklere hızla erişmek için bazı butonlar.
-* See [AAPS screenshots](../Getting-Started/Screenshots.md#action-tab) for details.
+* See [AAPS screenshots](../DailyLifeWithAaps/AapsScreens.md#action-tab) for details.
 
 ### Otomasyon
 
-Kullanıcı tanımlı otomasyon görevleri. Lütfen otomasyonla ilgili [burayı okuyun](../Usage/Automation.md).
+Kullanıcı tanımlı otomasyon görevleri. Please [read on here](../DailyLifeWithAaps/Automations.md).
 
 (Config-Builder-sms-communicator)=
 
 ### SMS Kominikatör
 
-Ebeveynlerin bazı AAPS özelliklerini uzaktan SMS yoluyla kontrol etmesine izin verir, daha fazla kurulum bilgisi için [SMS Komutları](../Children/SMS-Commands.md)'na bakın.
+Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
 
 ### Yiyecek
 
@@ -350,7 +350,7 @@ Not: Girişler, AAPS hesap makinesinde kullanılamaz. (Sadece Görüntülenir)
 
 ### Wear
 
-Android saatinizi kullanarak AAPS'yi izleyin ve kontrol edin (bkz. [saat arayüzeyleri sayfası](../Configuration/Watchfaces.md)). Saatinizden verilen bolusu hesaplarken hangi değişkenlerin dikkate alınması gerektiğini belirlemek için ayarları (dişli çark) kullanın (15dk trend, AKARB., KŞ vb..).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)). Saatinizden verilen bolusu hesaplarken hangi değişkenlerin dikkate alınması gerektiğini belirlemek için ayarları (dişli çark) kullanın (15dk trend, AKARB., KŞ vb..).
 
 Saatinizden bolus vs. göndermek istiyorsanız "Wear ayarları" içinde "Saat tarafından kontrol"u etkinleştirmeniz gerekir.
 
@@ -363,7 +363,7 @@ Wear sekmesi veya hamburger menüsünden (sekme görüntülenmiyorsa ekranın so
 
 ### xDrip+ Durum Çizgisi (saat)
 
-Döngü bilgilerini xDrip+ saat arayüzünde görüntüleyin (Eğer AAPS/[AAPS v2 saat arayüzünü](../Configuration/Watchfaces.md) kullanmıyorsanız)
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../UsefulLinks/WearOsSmartwatch.md)
 
 ### NSClient
 

@@ -83,9 +83,9 @@ Der Zeitbedarf, um **AAPS** zu erstellen, hängt von Deiner Erfahrung und Deinem
 
 Um Dir durch den Erstellungsprozess zu helfen, gibt es eigene spezifische Abschnitte:
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../Getting-Started/FAQ.md) K);
+- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../UsefulLinks/FAQ.md) K);
 
-- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
+- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) Subsection.
 
 Wie lange es dauert den Closed Loop zu erreichen ist individuell verschieden, ein grober Zeitablauf bis zum vollen Loopen mit AAPS findest Du ([hier](#how-long-will-it-take-to-set-everything-up)).
 
@@ -101,9 +101,9 @@ Ein "keystore" ist eine mit einem Passwort verschlüsselte Datei, die ausschlie�
 
 Damit kannst Du die Keystore-Datei für jedes Update auf eine neue **AAPS**-Version nutzen. Im Durchschnitt werden zwei AAPS-Updates pro Jahr nötig.
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](../Usage/ExportImportSettings.md). Damit kannst Du das System z.B. bei einem Smartphone-Wechsel oder bei einer Neuinstallation/Update der App sicher wieder herstellen und es mit einer nur kurzen Unterbrechung weiter nutzen. 
+In addition, **AAPS** provides the ability to [export all your configuration settings](../Maintenance/ExportImportSettings.md). Damit kannst Du das System z.B. bei einem Smartphone-Wechsel oder bei einer Neuinstallation/Update der App sicher wieder herstellen und es mit einer nur kurzen Unterbrechung weiter nutzen. 
 
-#### Problembehandlung
+#### Troubleshooting
 
 Wenn Du Dir bei irgendetwas unsicher bist, gehe bitte auf die AAPS-Community zu - es gibt keine dummen Fragen! Alle Nutzenden, egal mit welcher Erfahrung, sollen sich bestärkt fühlen, Fragen zu stellen. Da es viele **AAPS**-Nutzende gibt, werden Fragen in der Regel schnell beantwortet.
 

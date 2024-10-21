@@ -8,7 +8,7 @@ Además de informar, Nightscout también se puede utilizar para controlar AAPS. 
 
 Exercise maximum caution if using Nightscout as your AAPS data source.
 
-### Ajustes de Nightscout
+### Nightscout settings
 
 You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
 

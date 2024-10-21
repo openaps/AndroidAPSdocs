@@ -17,7 +17,7 @@ Bu yazılım bir DIY (Kendin Yap) yapay pankreas çözümünün bir parçasıdı
         - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
 * **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * BLE Bluetooth bağlantısına sahip **Uyumlu Android telefon**
-    - See AAPS [Release Notes](../Installing-AndroidAPS/Releasenotes.md)
+    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
 * [**Sürekli Glikoz İzleme (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
 ## Başlamadan önce
@@ -166,7 +166,7 @@ This setting can be changed when using Medtrum pump but it is recommended to set
 
 **Before you continue:**
 - Have your Medtrum Nano pumpbase and a reservoir patch ready.
-- Make sure that AAPS is properly set up and a [profile is activated](../Usage/Profiles.md).
+- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 - Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
 
 #### Activate patch from the Medtrum overview Tab
@@ -331,7 +331,7 @@ The alarm button will appear on the overview screen when there is an active alar
 
 Press the **Reset Alarms** button to reset the alarms and resume normal operation.
 
-## Sorun giderme
+## Troubleshooting
 
 ### Connection issues
 
@@ -354,5 +354,5 @@ All of the development work for the Medtrum driver is done by the community on a
 
 -  **Seviye 0:** Sorun yaşadığınız işlevin nasıl çalışması gerektiğini anladığınızdan emin olmak için bu dokümantasyonun ilgili bölümünü okuyun.
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Seviye 2:** Sorununuzun daha önce [ sorunlar adresinde ](https://github.com/nightscout/AAPS/issues)bildirilmiş olup olmadığını görmek için mevcut sorunları arayın. Sorunuz burada mevcutsa, lütfen onaylayın/yorum yapın/ekleyin. Yoksa, lütfen bir [yeni sorun](https://github.com/nightscout/AndroidAPS/issues) oluşturun ve [günlük dosyalarınızı ekleyin](../Usage/Accessing-logfiles.md).
+-  **Seviye 2:** Sorununuzun daha önce [ sorunlar adresinde ](https://github.com/nightscout/AAPS/issues)bildirilmiş olup olmadığını görmek için mevcut sorunları arayın. Sorunuz burada mevcutsa, lütfen onaylayın/yorum yapın/ekleyin. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
 -  **Sabırlı olun - topluluğumuzun üyelerinin çoğu iyi huylu gönüllülerden oluşur ve sorunları çözmek genellikle hem kullanıcılar hem de geliştiriciler için zaman ve sabır gerektirir.**

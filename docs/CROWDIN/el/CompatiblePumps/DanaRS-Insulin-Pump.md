@@ -105,14 +105,14 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 * In most cases this is just a communication issue and the correct amount of insulin is delivered.
 * Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in [treatments tab](../Getting-Started/Screenshots.md#carb-correction) if you wish.
+* Delete error entry in [treatments tab](../DailyLifeWithAaps/AapsScreens.md#carb-correction) if you wish.
 * Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
 
 ## Ειδική σημείωση για την αλλαγή τηλεφώνου
 
 Κατά τη μετάβαση σε νέο τηλέφωνο απαιτούνται τα ακόλουθα βήματα:
 
-* [Export settings](../Usage/ExportImportSettings.md) on your old phone
+* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
 * Transfer settings from old to new phone
 
 ### DanaRS v1
@@ -120,7 +120,7 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 * **Manually pair** Dana RS with the new phone
 * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
 * Εγκατάσταση του AAPS στο νέο τηλέφωνο.
-* [Import settings](../Usage/ExportImportSettings.md) on your new phone
+* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
 
 ### DanaRS v3, Dana-i
 
@@ -129,4 +129,4 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 ## Ταξιδεύοντας σε διαφορετικές ζώνες ώρας με την Dana Rs
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#danarv2-danars).

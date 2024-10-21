@@ -18,7 +18,7 @@ So, please take your time in configuring your loop, the benefits of a well-runni
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../Where-To-Go-For-Help/Connect-with-other-users.md).
+If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
 
 ## Step-wise guide to the AAPS Setup Wizard
@@ -326,7 +326,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
-### Profiel
+### Profile
 
 Now we are entering a very important part of the Setup Wizard.
 
@@ -440,7 +440,7 @@ Press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-### APS algoritme
+### APS algorithm
 
 Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
 

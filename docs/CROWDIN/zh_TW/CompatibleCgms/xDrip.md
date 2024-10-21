@@ -72,7 +72,7 @@
 
 - Dexcom G6 傳輸器可以同時連線到 Dexcom 接收器（或替代的 t:slim 幫浦）和手機上的一個應用程式。
 - 當使用 xDrip+ 作為接收器時，請先卸載 Dexcom 應用程式。 **你無法同時將 xDrip+ 和 Dexcom 應用程式連線到傳輸器！**
-- If you need Clarity and want to profit from xDrip+ features, use the [Build Your Own Dexcom App](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+, or use xDrip+ as a Companion app receiving notifications from the official Dexcom app.
+- 如果你需要 Clarity 並想利用 xDrip+ 的功能，請使用[自行建立的 Dexcom 應用程式](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)與 xDrip+ 進行本地廣播，或者使用 xDrip+ 作為接收來自官方 Dexcom 應用程式通知的配套應用程式。
 
 ### G6 傳輸器序列號決定的 xDrip+ 版本
 
@@ -105,7 +105,7 @@ Dexcom 傳感器的自動延長（`預防性重啟`）不建議使用，因為�
 
 ### 首次連線 G6 傳輸器
 
-**For second and following transmitters see [Extend transmitter life](../CompatibleCgms/xDrip.md#extend-transmitter-life) below.**
+**如需第二個及後續傳輸器，請參閱[延長傳輸器壽命](../CompatibleCgms/xDrip.md#extend-transmitter-life)部分。**
 
 請按照[這些指示](https://navid200.github.io/xDrip/docs/Starting-G6.html)進行操作。
 
@@ -200,7 +200,7 @@ Dexcom 傳感器的自動延長（`預防性重啟`）不建議使用，因為�
 ### Libre 智慧讀取器電池電量
 
 - 如 MiaoMiao 和 Bubble 等橋接器的電池電量可以顯示在 AAPS 中（Blucon 不支援）。
-- Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
+- 詳細資訊請參閱[螢幕截圖頁面](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery)。
 
 ### 連線 Libre 傳輸器並啟動傳感器
 

@@ -22,9 +22,9 @@ Pomocí zaškrtávacího políčka pod symbolem oka se můžete rozhodnout, jak 
 
 (Config-Builder-profile)=
 
-## Profil
+## Profile
 
-* Vyberte bazální profil, který chcete použít. Viz stránka [Profily](../Usage/Profiles.md) pro další informace o nastavení.
+* Vyberte bazální profil, který chcete použít. See [Profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) page for more setup information.
 * Od AAPS 3.0 je k dispozici pouze lokální profil.
 
 Nicméně i nadále je možné synchronizovat Nightscout profil do lokálního profilu. Za tímto účelem je však důležité naklonovat celý záznam sestávající z několika profilů v Nightscoutu. Podívejte se prosím na níže uvedené pokyny. Zadání změny prostřednictvím webového rozhraní může být užitečné v případě, že se jedná o velmi rozsáhlé změny profilu, např. ruční zkopírování dat z tabulky.
@@ -35,7 +35,7 @@ Nicméně i nadále je možné synchronizovat Nightscout profil do lokálního p
 
 Místní profil používá bazální profil zapsaný přímo do telefonu. Po jeho vybrání se v AAPS objeví nová záložka, kde si můžete profil upravovat. Ten je pak v případě potřeby načten pumpou. Při přepnutí profilu je uložen do pumpy jako profil 1. Tento profil je doporučen, protože nevyžaduje připojení k internetu.
 
-Vaše místní profily jsou součástí [exportovaného nastavení](../Usage/ExportImportSettings.md). Proto se ujistěte, že máte zálohu bezpečně uloženou.
+Your local profiles are part of [exported settings](../Maintenance/ExportImportSettings.md). Proto se ujistěte, že máte zálohu bezpečně uloženou.
 
 ![Nastavení Místního profilu](../images/LocalProfile_Settings.png)
 
@@ -82,7 +82,7 @@ Pomocník s profilem nabízí dvě funkce:
 1. Najít profil pro děti
 2. Porovnání dvou profilů nebo přepnutí profilů za účelem naklonování nového profilu
 
-Podrobnosti jsou vysvětleny na stránce nápovědy [pomocník s profilem](../Configuration/profilehelper.md).
+Details are explained on the separate [profile helper page](../SettingUpAaps/ProfileHelper.md).
 
 (Config-Builder-insulin)=
 
@@ -102,13 +102,13 @@ Podrobnosti jsou vysvětleny na stránce nápovědy [pomocník s profilem](../Co
 * Hodnota DIA není u každého člověka stejná. Proto si ji musíte vyzkoušet sami na sobě. 
 * Vždy to však musí být alespoň 5 hodin.
 * Pro velké množství lidí nemá ultra-rychlý inzulin jako Fiasp po 3–4 hodinách prakticky žádné znatelné účinky, i když fakticky zbývá cca 0,0xx jednotky. Nicméně i toto zbytkové množství může mít vliv například při sportu. Z toho důvodu AAPS používá minimální hodnotu DIA 5 hodin.
-* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots.md#insulin-profile) page.
+* You can read more about that in the Insulin Profile section of [this](../DailyLifeWithAaps/AapsScreens.md#insulin-profile) page.
 
 ### Rozdíly v typu inzulínu
 
 * Pro „Rychle působící“ a „Ultra rychlý“ a „Lyumjev“ inzulín je DIA jediná proměnná, kterou si můžete upravovat. Doba maximální účinnosti je fixní. 
 * „Volitelný vrchol“ umožňuje nastavit obě proměnné – DIA i dobu maximální účinnosti inzulínu. Tato volba je určena pouze pro pokročilé uživatele, kteří znají důsledky nastavených hodnot. 
-* The [insulin curve graph](../Getting-Started/Screenshots.md#insulin-profile) helps you to understand the different curves.
+* The [insulin curve graph](../DailyLifeWithAaps/AapsScreens.md#insulin-profile) helps you to understand the different curves.
 * Zaškrtnutím čtverečku vedle názvu si je můžete prohlédnout v záložce. Další možnost jejich zobrazení je přes hamburgerové menu.
 
 #### Rychle působící - Oref
@@ -165,7 +165,7 @@ Select the blood glucose source you are using - see [BG Source](../Getting-Start
 
 (Config-Builder-pump)=
 
-## Pumpa
+## Pump
 
 Vyberte, kterou pumpu používáte.
 
@@ -191,15 +191,15 @@ Vyberte, kterou pumpu používáte.
 
 ## Detekce citlivosti
 
-Vyberte variantu detekce citlivosti. Další detaily o různých modelech si můžete [přečíst zde](../Configuration/Sensitivity-detection-and-COB.md). Bude prováděna analýza historických dat. Jestliže se zjistí, že na inzulín reagujete citlivěji než obvykle (nebo naopak máte vyšší rezistenci), provedou se úpravy. Další podrobnosti o algoritmu citlivosti si můžete přečíst v [dokumentaci OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Vyberte variantu detekce citlivosti. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Bude prováděna analýza historických dat. Jestliže se zjistí, že na inzulín reagujete citlivěji než obvykle (nebo naopak máte vyšší rezistenci), provedou se úpravy. Další podrobnosti o algoritmu citlivosti si můžete přečíst v [dokumentaci OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-Průběh citlivosti můžete na hlavní stránce zobrazit vybráním políčka Citlivost. Zobrazí se jako bílá čára. Note, you need to be in [Objective 8](../SettingUpAaps/CompletingTheObjectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.md#autosens) automatically adjust the amount of insulin delivered. Před dosažením tohoto cíle slouží procentuální údaj Autosens a bílá čára v grafu pouze pro informaci.
+Průběh citlivosti můžete na hlavní stránce zobrazit vybráním políčka Citlivost. Zobrazí se jako bílá čára. Note, you need to be in [Objective 8](../SettingUpAaps/CompletingTheObjectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) automatically adjust the amount of insulin delivered. Před dosažením tohoto cíle slouží procentuální údaj Autosens a bílá čára v grafu pouze pro informaci.
 
 (Config-Builder-absorption-settings)=
 
 ### Nastavení absorpce sacharidů
 
-Pokud používáte Oref1 s funkcí SMB, musíte změnit **min_5m_carbimpact** na 8. Tato hodnota se používá pouze při výpadcích hodnot odečítaných z CGM nebo v případech, kdy se fyzickou aktivitou vyrovná vzestup glykémie, který by jinak vedl k tomu, že by systém AAPS odbourával COB. V situacích, kdy [absorpci sacharidů](../Usage/COB-calculation.md) nelze počítat dynamicky na základě reakcí vaší glykémie, je použita tato výchozí hodnota absorpce. V podstatě jde o bezpečnostní pojistku.
+Pokud používáte Oref1 s funkcí SMB, musíte změnit **min_5m_carbimpact** na 8. Tato hodnota se používá pouze při výpadcích hodnot odečítaných z CGM nebo v případech, kdy se fyzickou aktivitou vyrovná vzestup glykémie, který by jinak vedl k tomu, že by systém AAPS odbourával COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. V podstatě jde o bezpečnostní pojistku.
 
 (Config-Builder-aps)=
 
@@ -208,7 +208,7 @@ Pokud používáte Oref1 s funkcí SMB, musíte změnit **min_5m_carbimpact** na
 Vyberte požadovaný algoritmus APS pro úpravy léčby. Detaily vybraného algoritmu můžete zobrazit na kartě OpenAPS (OAPS).
 
 * OpenAPS AMA (pokročilý asistent s jídly, stav algoritmu v roce 2017). Zjednodušeně řečeno, výhoda systému je v tom, že zadáte-li sacharidy, dokáže systém po poslání bolusu velmi rychle spustit vysoký dočasný bazál.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* [OpenAPS SMB](../DailyLifeWithAaps/KeyAapsFeatures.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Smyčka
 
@@ -250,19 +250,19 @@ Vyberte požadovaný algoritmus APS pro úpravy léčby. Detaily vybraného algo
 
 Součástí AndroidAPS je výukový program (cíle), které musíte splnit krok za krokem. Ty by vás měly bezpečně provést nastavením uzavřené smyčky. Postupným splněním cílů je zajištěno, že přesně porozumíte tomu, jak systém pracuje. Jedině tak můžete svému systému plně důvěřovat.
 
-Měli byste pravidelně [exportovat svá nastavení](../Usage/ExportImportSettings.md) (včetně pokroku v plnění cílů). V případě, že v budoucnosti budete muset svůj smartphone nahradit (nové zařízení, poškození displeje atd.), můžete tato nastavení jednoduše importovat.
+You should [export your settings](../Maintenance/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. V případě, že v budoucnosti budete muset svůj smartphone nahradit (nové zařízení, poškození displeje atd.), můžete tato nastavení jednoduše importovat.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 
 ## Ošetření
 
-Pokud se podíváte na záložku Ošetření, můžete vidět ošetření které byly nahrány na Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
+Pokud se podíváte na záložku Ošetření, můžete vidět ošetření které byly nahrány na Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../DailyLifeWithAaps/AapsScreens.md#carb-correction).
 
-## Obecné
+## General
 
 ### Přehled
 
-Zobrazuje aktuální stav smyčky a tlačítka pro přístup k běžným akcím (další podrobnosti viz část [Domácí obrazovka](../Getting-Started/Screenshots.md)). Kliknutím na ozubené kolo se dostanete do nastavení.
+Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../DailyLifeWithAaps/AapsScreens.md) for details). Kliknutím na ozubené kolo se dostanete do nastavení.
 
 #### Nechat obrazovku zapnutou
 
@@ -321,24 +321,24 @@ Choose if you want to have [status lights](../SettingUpAaps/Preferences.md#statu
 
 **Podat tuto část z výsledku kalkukace [%]**: Při použití SMB si mnoho lidí neposílá na jídlo 100% dávku inzulínu, ale pouze její část (např. 75 %), a nechá zbytek na SMB ve spolupráci s UAM (detekce neoznámeného jídla). V tomto nastavení si můžete zvolit výchozí hodnotu pro procento, se kterým by měl bolus kalkulátor počítat. Pokud je toto nastavení 75 % a máte dostat bolus 10 U, navrhne bolusový kalkulátor pouze 7,5 jednotky.
 
-**V průvodci povolte funkci superbolus** (jde o něco jiné než *super mikro bolus*!): Funkci používejte s opatrností a nepovolujte ji, dokud se nenaučíte, co to skutečně dělá. V podstatě je bazál za následující 2 hodiny přidán do bolusu a po dobu těchto 2 h je nastaven nulový dočasný bazál. **Funkce smyčky AAPS budou po dobu superbolusu deaktivovány – používat opatrně! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**V průvodci povolte funkci superbolus** (jde o něco jiné než *super mikro bolus*!): Funkci používejte s opatrností a nepovolujte ji, dokud se nenaučíte, co to skutečně dělá. V podstatě je bazál za následující 2 hodiny přidán do bolusu a po dobu těchto 2 h je nastaven nulový dočasný bazál. **Funkce smyčky AAPS budou po dobu superbolusu deaktivovány – používat opatrně! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../DailyLifeWithAaps/KeyAapsFeatures.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
 
 ### Akce
 
 * Tlačítka k běžně používaným úkonům.
-* See [AAPS screenshots](../Getting-Started/Screenshots.md#action-tab) for details.
+* See [AAPS screenshots](../DailyLifeWithAaps/AapsScreens.md#action-tab) for details.
 
 ### Automatizace
 
-Uživatelem vytvořené úlohy automatizace ('if-then-else'). Prosím, [přečtěte si zde](../Usage/Automation.md).
+Uživatelem vytvořené úlohy automatizace ('if-then-else'). Please [read on here](../DailyLifeWithAaps/Automations.md).
 
 (Config-Builder-sms-communicator)=
 
 ### SMS komunikátor
 
-Umožňuje vzdáleným pečovatelům ovládání některých funkcí AAPS prostřednictvím SMS, viz. [SMS příkazy](../Children/SMS-Commands.md) pro další informace o nastavení.
+Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
 
 ### Jídlo
 
@@ -350,7 +350,7 @@ Poznámka: Tyto záznamy nelze použít v Kalkulačce v AAPS. (Pouze je zobrazit
 
 ### Wear
 
-Sledování a ovládání AAPS prostřednictvím hodinek s Wear OS (viz [stránka Ciferníky](../Configuration/Watchfaces.md)). Chcete-li nastavit parametry pro výpočet bolusu na hodinkách (tj. 15min trend, COB…), klikněte na nastavení (ozubené kolo).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)). Chcete-li nastavit parametry pro výpočet bolusu na hodinkách (tj. 15min trend, COB…), klikněte na nastavení (ozubené kolo).
 
 Chcete-li z hodinek zadávat bolus atd., musíte v „Nastavení wear“ aktivovat volbu „Ovládání z hodinek“.
 
@@ -363,7 +363,7 @@ Prostřednictvím záložky Wear nebo hamburger menu (levý horní roh obrazovky
 
 ### Stavová řádka xDrip (hodinky)
 
-Zobrazit na displeji hodinek (ciferník xDrip+) stav smyčky (pokud nepoužíváte AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md))
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../UsefulLinks/WearOsSmartwatch.md)
 
 ### NSClient
 

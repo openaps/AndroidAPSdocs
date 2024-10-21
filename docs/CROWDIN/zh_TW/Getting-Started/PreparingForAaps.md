@@ -4,7 +4,7 @@
 
 ## 如何在文件中找到所需訊息
 
-An **index** and explanation of the documentation structure can be found [here](../index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. 在那裡，你會找到不同文件部分的概述和目的。 你也可以使用此頁面左側的標題來瀏覽文件。 最後，文件**AAPS**圖示下方有一個方便的搜索功能。
+可以在[這裡](../index.md)找到文件結構的**索引**和說明，你也可以點擊文件左上角的**AAPS**圖示進行查看。 在那裡，你會找到不同文件部分的概述和目的。 你也可以使用此頁面左側的標題來瀏覽文件。 最後，文件**AAPS**圖示下方有一個方便的搜索功能。
 
 我們主要在讓用戶輕鬆了解**AAPS**的功能和限制。 花時間閱讀文件後發現你的胰島素幫浦或 CGM 不相容，或者**AAPS**無法提供你期望的功能，這可能會令人失望。
 
@@ -16,9 +16,9 @@ An **index** and explanation of the documentation structure can be found [here](
 “能力越大，責任越大……”
 
 ### 技術安全
-**AAPS**具有一套廣泛的安全功能。 These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. 當成功完成目標後，**AAPS**的功能會逐步解鎖。 此過程允許用戶在從開環模式到閉環模式的過程中安全過渡，同時學習**AAPS**的不同功能。
+**AAPS**具有一套廣泛的安全功能。 這些功能會透過逐步完成一系列[目標](../SettingUpAaps/CompletingTheObjectives.md)，包括測試特定參數並回答選擇題，逐步解除限制。 當成功完成目標後，**AAPS**的功能會逐步解鎖。 此過程允許用戶在從開環模式到閉環模式的過程中安全過渡，同時學習**AAPS**的不同功能。
 
-The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. 初學者因為經驗不足或過於急切開始使用**AAPS**而犯錯，或忽略了關鍵點。 The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimise these issues.
+[目標](../SettingUpAaps/CompletingTheObjectives.md)設計主要在為用戶提供最好的**AAPS**入門體驗，考慮到了**AAPS**開發者觀察到的新用戶典型錯誤和趨勢。 初學者因為經驗不足或過於急切開始使用**AAPS**而犯錯，或忽略了關鍵點。 這些[目標](../SettingUpAaps/CompletingTheObjectives.md)主要在盡量減少這些問題。
 
 ### 醫療安全
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -75,7 +75,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 #### 技術相容性
 
-**AAPS**僅與某些類型的胰島素幫浦、CGM 和手機相容，有些技術在某些國家/地區可能無法使用。 In order to avoid any disappointment or frustrations, please read the [CGM](../Getting-Started/CompatiblesCgms.md), [pump](../Getting-Started/CompatiblePumps.md) and [phone](../Getting-Started/Phones.md) sections.
+**AAPS**僅與某些類型的胰島素幫浦、CGM 和手機相容，有些技術在某些國家/地區可能無法使用。 為避免任何失望或沮喪，請閱讀[CGM](../Getting-Started/CompatiblesCgms.md)、[幫浦](../Getting-Started/CompatiblePumps.md)和[手機](../Getting-Started/Phones.md)部分。
 
 #### 應用程序建置時間和進入完整閉環的進度
 
@@ -83,9 +83,9 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 為了幫助建置過程，有專門的部分：
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../Getting-Started/FAQ.md) K);
+- 列出**AAPS**中可能出現的常見錯誤的問答清單，請參閱[常見問題（K 部分）](../UsefulLinks/FAQ.md)；
 
-- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
+- “[如何安裝 AAPS](../SettingUpAaps/BuildingAaps.md)？” （D 部分），包括[問題排除](../GettingHelp/GeneralTroubleshooting.md)子部分。
 
 達到閉環控制的時間因人而異，但使用 AAPS 達到完全閉環控制的大致時間表可以參考[>此處](#how-long-will-it-take-to-set-everything-up)。
 
@@ -101,7 +101,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 這將確保每次建立**AAPS**的更新版本時，你都可以使用相同的 keystore 文件。 平均而言，每年需要更新**AAPS**兩次。
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](../Usage/ExportImportSettings.md). 這確保你可以在更換手機、升級/重新安裝應用程序時安全恢復系統，並將干擾降至最低。 
+此外，**AAPS**還提供了[匯出所有配置設置](../Maintenance/ExportImportSettings.md)的功能。 這確保你可以在更換手機、升級/重新安裝應用程序時安全恢復系統，並將干擾降至最低。 
 
 #### 問題排除
 
@@ -115,13 +115,13 @@ In addition, **AAPS** provides the ability to [export all your configuration set
 
 
 
-#### [Where to go for help](../Where-To-Go-For-Help/Background-reading.md)?
+#### [去哪裡尋求幫助](../Where-To-Go-For-Help/Background-reading.md)？
 
 本節主要在為新用戶提供資源連結，以便獲得幫助，包括由新手和有經驗的用戶組成的社區支援，這些用戶可以幫助解答問題並解決使用 AAPS 時常見的問題。
 
 #### [臨床醫師專區](../Resources/clinician-guide-to-AndroidAPS.md)
 
-This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](./Introduction.md#how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+這是一個[專為臨床醫師設立的專區](../Resources/clinician-guide-to-AndroidAPS.md)，希望了解更多關於 AAPS 及開源人工胰臟技術。 在簡介中還提供了[如何與你的臨床團隊討論 AAPS](./Introduction.md#how-can-i-approach-discussing-aaps-with-my-clinical-team)的指南。
 
 ## 我們要建置和安裝什麼？
 
@@ -142,7 +142,7 @@ This is a [section specificially for clinicians](../Resources/clinician-guide-to
 
 ### 3) CGM 傳感器應用程式
 
-根據你的血糖傳感器/CGM，你將需要一個相容的應用程式來接收血糖資料並將其發送到**AAPS**。 The different options are shown below and more information is given in the [compatible CGMs section](../Getting-Started/CompatiblesCgms.md):
+根據你的血糖傳感器/CGM，你將需要一個相容的應用程式來接收血糖資料並將其發送到**AAPS**。 以下展示了不同的選項，更多訊息請參閱[相容的 CGM 部分](../Getting-Started/CompatiblesCgms.md)：
 
 ![dexcom_options](../images/preparing_images/AAPS_connectivity_Dex_02.png) ![libre_options](../images/preparing_images/AAPSconnectivity_libre.png) ![eversense_options](../images/preparing_images/AAPS_connectivity_eversense.png)
 
@@ -187,7 +187,7 @@ This is a [section specificially for clinicians](../Resources/clinician-guide-to
 
 ### 醫療考量
 
-In addition to the medical warnings in the [safety section](#safety-first) there are also different parameters, depending on which insulin you are using in the pump.
+除了 [安全部分](#safety-first) 中的醫療警告外，根據你在幫浦中使用的胰島素類型，還有不同的參數需要考量。
 
 #### 胰島素選擇
 

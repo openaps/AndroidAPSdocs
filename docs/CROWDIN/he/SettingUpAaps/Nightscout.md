@@ -8,13 +8,13 @@ Besides reporting Nightscout can also be used to control AAPS. I.e. you can set 
 
 Exercise maximum caution if using Nightscout as your AAPS data source.
 
-### הגדרות Nightscout
+### Nightscout settings
 
 You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
 
 Nightscout `API_SECRET` is your site main password: don't share it publicly.
 
-### הגדרות AAPS
+### AAPS settings
 
 You can setup AAPS to accept Nightscout commands (profile changes, treatments, ...), or fully disable it.
 

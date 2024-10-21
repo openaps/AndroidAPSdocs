@@ -18,7 +18,7 @@ So, please take your time in configuring your loop, the benefits of a well-runni
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../Where-To-Go-For-Help/Connect-with-other-users.md).
+If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
 
 ## Step-wise guide to the AAPS Setup Wizard

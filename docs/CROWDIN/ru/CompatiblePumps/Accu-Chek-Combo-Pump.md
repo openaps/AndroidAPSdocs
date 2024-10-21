@@ -8,7 +8,7 @@
 
 - Помпа Roche Accu-Chek Combo (любая версия прошивки, работают все)
 - Устройство Smartpix или Realtyme с приложением "360" для конфигурирования помпы под свои параметры. По вашему запросу фирма Roche бесплатно вышлет устройства и По. (как всегда, Россия здесь исключение. По крайней мере, переводчику данной документации ничего не выслали. Возможно, надо разговаривать с сотрудниками или руководителями фирмы, а не с агентами, чьи контакты нам обычно дают при установке помпы)
-- Совместимый смартфон: телефон на Android с прошивкой LineageOS 14.1 (прежнее название - CyanogenMod) или Android 8.1 (Oreo). Начиная с AAPS 3.0 Android 9 является обязательным. See [release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version) for details.
+- Совместимый смартфон: телефон на Android с прошивкой LineageOS 14.1 (прежнее название - CyanogenMod) или Android 8.1 (Oreo). Начиная с AAPS 3.0 Android 9 является обязательным. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
 - LineageOS 14.1 должна иметь свежую версию, по крайней мере от июня 2017, когда в прошивку включили изменения, позволяющие соединяться с помпой Combo. 
 - Список телефонов можно найти в документе [Телефоны, работающие с AAPS](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 - Пожалуйста, имейте в виду, что это не полный список и отражает личный опыт пользователей. Вам предлагается также делиться результатами вашего опыта и тем самым помогать другим (все подобные проекты основаны на идеологии бескорыстной помощи).
@@ -17,10 +17,10 @@
 
 ## Ограничения
 
-- Пролонгированный болюс и многоволновый болюс не поддерживаются (вместо них см. [Расширенные углеводы](../Usage/Extended-Carbs.md)).
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 - Поддерживается только один базальной профиль.
 - Установка профиля, отличного от заданного на помпе или подача пролонгированного/многоволнового болюса с помпы конфликтует с временной скоростью базала TBR и приводит алгоритм ИПЖ к работе только в режиме приостановки на низких ГК в течение 6 часов поскольку безопасность работы цикла при этом нарушается.
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - В настоящее время поддерживаются только величины базала от 0.05 до 10 ед./час. Это также относится к изменениям профиля, например, при увеличении до 200% наивысшая скорость базала не должна превышать 5 ед/час, поскольку она удвоится. Аналогично, при снижении на 50%, самая низкая базальная скорость не должна быть меньше 0,10 U/ч.
 - Если алгоритм цикла запрашивает отмену текущей временной скорости базала TBR, Combo на 15 минут установит TBR в 90% или 110%. Это делается из-за того, что отмена TBR вызывает лишние вибрации на помпе.
 - Периодически (раз в несколько дней) AAPS может дать сбой оповещения TBR ОТМЕНЕН при автоматической отмене TBR. Пользователю придется самостоятельно разобраться с этим (нажав кнопку "обновить" в AAPS для передачи предупреждения в программу или подтвердив получение оповещения кнопкой помпы).

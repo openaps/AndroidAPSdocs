@@ -8,7 +8,7 @@ Tyto pokyny jsou pro nastavení pumpy Accu-Chek Combo pomocí nového ovladače 
 
 * Roche Accu-Chek Combo (jakýkoliv firmware, funguje se všemi).
 * Zařízení Smartpix nebo Realtyme spolu s 360 konfiguračním softwarem pro nastavení pumpy. (Roche poskytuje zařízením Smartpix a konfigurační software zdarma svým zákazníkům na vyžádání.)
-* Kompatibilní telefon. Android 9 (Pie) nebo novější je nutností. Pokud používáte LineageOS, minimální podporovaná verze je 16.1. See [release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version) for details.
+* Kompatibilní telefon. Android 9 (Pie) nebo novější je nutností. Pokud používáte LineageOS, minimální podporovaná verze je 16.1. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
 * Aplikace AndroidAPS nainstalovaná v telefonu.
 
 Některé telefony mohou pracovat lépe než jiné v závislosti na jejich kvalitě podpory technologie Bluetooth a na tom, zda mají doplňkové, velmi agresivní, metody úspory energie. Seznam telefonů lze nalézt v dokumentu [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). Uvědomte si, že toto není úplný seznam a odráží osobní zkušenosti uživatelů. Doporučuje se také sdílet své zkušenosti a pomáhat tak ostatním (tyto projekty jsou o tom, jak si navzájem pomáhat).
@@ -20,7 +20,7 @@ Některé telefony mohou pracovat lépe než jiné v závislosti na jejich kvali
 
 Mějte na paměti následující omezení:
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../Usage/Extended-Carbs.md) instead).
+* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 * Je podporovaný pouze jeden (první) bazální profil.
 * Pokud není na pumpě aktivovaný profil č. 1, smyčka je deaktivována. To bude pokračovat dokud profil č. 1 nebude aktivní; když bude aktivován, AAPS při dalším připojení (ať už samotnou aplikací nebo protože uživatel stiskne tlačítko Obnovit v uživatelském rozhraní combov2) zjistí, že byl profil č. 1 aktivován a povolí smyčku znovu.
 * Pokud smyčka požaduje zrušení spuštěného dočasného bazálu, Combo nastaví dočasný bazál na 90 % nebo 110 % na dobu 15 minut. Důvodem je, že skutečné zrušení dočasného bazálu vyvolá na pumpě alarm, který vyvolá mnoho vibrací, které nelze vypnout.

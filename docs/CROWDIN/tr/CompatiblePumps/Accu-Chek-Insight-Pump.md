@@ -12,7 +12,7 @@
 
 Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md) page which Android version is required to run AAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Getting-Started/ComponentOverview) page which Android version is required to run AAPS.)
 * The AAPS app installed on your phone
 
 ## Kurulum
@@ -122,7 +122,7 @@ Depending on the firmware version of your pump, the Insight will vibrate briefly
 
 * Firmware 1.x: Tasarımda titreşim yok.
 * Firmware 2.x: Titreşim devre dışı bırakılamaz.
-* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614))
+* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](../Maintenance/ReleaseNotes.md#version-2614))
 
 Donanım yazılımı sürümünü menüde bulabilirsiniz.
 
@@ -150,4 +150,4 @@ Bu durumda, pomp ve akıllı telefondaki bluetooth'u yaklaşık 10 saniye kapat�
 
 ## Insight pompasıyla zaman dilimlerini geçme
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#insight).

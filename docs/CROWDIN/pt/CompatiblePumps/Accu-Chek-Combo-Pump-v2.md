@@ -8,7 +8,7 @@ These instructions are for setting up the Accu-Chek Combo pump using the new com
 
 * A Roche Accu-Chek Combo (any firmware, they all work).
 * Um dispositivo Smartpix 1 ou um cabo 360 (Realtyme), juntamente com o software de configuração 360 poderão ser necessários para configurar a bomba. (A Roche, em alguns países, envia gratuitamente os dispositivos Smartpix e o software de configuração aos seus clientes, mediante pedido. Tal não se verifica em Portugal, mas a maioria das unidades de diabetes possuem-no.)
-* A compatible phone. Android 9 (Pie) or newer is a must. If using LineageOS, the minimum supported version is 16.1. See [release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version) for details.
+* A compatible phone. Android 9 (Pie) or newer is a must. If using LineageOS, the minimum supported version is 16.1. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
 * The AndroidAPS app installed on your phone.
 
 Some phones may work better than others, depending on their quality of Bluetooth support and whether or not they have additional, very aggressive power saving logic. Poderá encontrar uma lista de telefones compatíveis no documento [AAPS Telefones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). Por favor tenha em atenção que isto não é uma lista completa e reflecte apenas a experiência pessoal dos utilizadores. Encorajamo-lo a também introduzir a sua experiência para que possa ajudar os outros (estes projectos baseiam-se na solidariedade da comunidade).
@@ -20,7 +20,7 @@ Some phones may work better than others, depending on their quality of Bluetooth
 
 Be aware of the following limitations:
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../Usage/Extended-Carbs.md) instead).
+* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 * Only one basal profile (the first one) is supported.
 * The loop is disabled if the currently active profile on the pump isn't profile no. 1. This continues until profile no. 1 is made the active one; when that is done, the next time AAPS connects (either on its own after a while or because the user presses the Refresh button in the combov2 user interface), it will notice that profile no. 1 is the current one, and enable the loop again.
 * If the loop requests a running TBR to be cancelled, the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because actually cancelling a TBR causes an alert on the pump which causes a lot of vibrations, and these vibrations cannot be disabled.

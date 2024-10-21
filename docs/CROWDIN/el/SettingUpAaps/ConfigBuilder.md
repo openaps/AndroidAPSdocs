@@ -22,9 +22,9 @@
 
 (Config-Builder-profile)=
 
-## Προφίλ
+## Profile
 
-* Επιλέξτε το βασικό προφίλ που θέλετε να χρησιμοποιήσετε. Ανατρέξτε στη σελίδα [Προφίλ](../Usage/Profiles.md) για περισσότερες πληροφορίες εγκατάστασης.
+* Επιλέξτε το βασικό προφίλ που θέλετε να χρησιμοποιήσετε. See [Profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) page for more setup information.
 * Από το AAPS 3.0, μόνο το τοπικό προφίλ είναι διαθέσιμο.
 
 Ωστόσο, είναι εφικτό να συγχρονιστεί ένα προφίλ Nightscout σε ένα τοπικό προφίλ. Για να γίνει αυτό, ωστόσο, είναι σημαντικό να κλωνοποιηθεί ολόκληρη η εγγραφή βάσης δεδομένων που αποτελείται από πολλά προφίλ στον επεξεργαστή Nightscout. Παρακαλούμε δείτε τις παρακάτω οδηγίες. Αυτό μπορεί να είναι χρήσιμο αν σημαντικές αλλαγές σε ένα πιο εκτεταμένο προφίλ μπορούν να εισαχθούν πιο εύκολα μέσω της διεπαφής web, e.. για να αντιγράψετε χειροκίνητα δεδομένα από ένα υπολογιστικό φύλλο.
@@ -35,7 +35,7 @@
 
 Το τοπικό προφίλ χρησιμοποιεί το βασικό προφίλ που καταχωρήθηκε χειροκίνητα στο τηλέφωνο. Μόλις επιλεγεί, εμφανίζεται μια νέα καρτέλα στο AAPS, όπου μπορείτε να αλλάξετε τα δεδομένα προφίλ που διαβάζονται από την αντλία, εάν είναι απαραίτητο. Με την επόμενη αλλαγή προφίλ εγγράφονται στην αντλία στο προφίλ 1. Αυτό το προφίλ συνιστάται καθώς δεν εξαρτάται από τη σύνδεση στο διαδίκτυο.
 
-Τα τοπικά προφίλ σας είναι μέρος των ρυθμίσεων [που εξάγονται](../Usage/ExportImportSettings.md). Έτσι βεβαιωθείτε ότι έχετε ένα αντίγραφο ασφαλείας σε ασφαλές μέρος.
+Your local profiles are part of [exported settings](../Maintenance/ExportImportSettings.md). Έτσι βεβαιωθείτε ότι έχετε ένα αντίγραφο ασφαλείας σε ασφαλές μέρος.
 
 ![Ρυθμίσεις τοπικού προφίλ](../images/LocalProfile_Settings.png)
 
@@ -82,7 +82,7 @@ It is necessary to clone the actual active entire Nightscout database records fo
 1. Εύρεση προφίλ για παιδιά
 2. Σύγκριση δύο προφίλ ή εναλλαγή προφίλ προκειμένου να κλωνοποιηθεί ένα νέο προφίλ
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.md).
+Details are explained on the separate [profile helper page](../SettingUpAaps/ProfileHelper.md).
 
 (Config-Builder-insulin)=
 
@@ -102,13 +102,13 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * Η DIA (διάρκεια δράσης ινσουλίνης) δεν είναι η ίδια για κάθε άτομο Γι 'αυτό θα πρέπει να το δοκιμάσετε για τον εαυτό σας. 
 * Αλλά πρέπει πάντα να είναι τουλάχιστον 5 ώρες.
 * For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Για αυτόν ακριβώς τον λόγο το AAPS χρησιμοποιεί ως ελάχιστη ώρα τις 5 ώρες για τη διάρκεια δράσης (DIA) της ινσουλίνης 
-* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots.md#insulin-profile) page.
+* You can read more about that in the Insulin Profile section of [this](../DailyLifeWithAaps/AapsScreens.md#insulin-profile) page.
 
 ### Insulin type differences
 
 * For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
 * Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
-* The [insulin curve graph](../Getting-Started/Screenshots.md#insulin-profile) helps you to understand the different curves.
+* The [insulin curve graph](../DailyLifeWithAaps/AapsScreens.md#insulin-profile) helps you to understand the different curves.
 * You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
 #### Γρήγορη δράση - Oref
@@ -165,7 +165,7 @@ Select the blood glucose source you are using - see [BG Source](../Getting-Start
 
 (Config-Builder-pump)=
 
-## Αντλία
+## Pump
 
 Επιλέξτε την αντλία που χρησιμοποιείτε.
 
@@ -191,15 +191,15 @@ Select the blood glucose source you are using - see [BG Source](../Getting-Start
 
 ## Ανίχνευση ευαισθησίας
 
-Επιλέξτε τον τύπο ανίχνευσης ευαισθησίας. Για περισσότερες λεπτομέρειες σχετικά με διαφορετικά σχέδια παρακαλώ [διαβάστε εδώ](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Περισσότερες λεπτομέρειες σχετικά με τον αλγόριθμο ευαισθησίας μπορούν να διαβαστούν στα έγγραφα [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Επιλέξτε τον τύπο ανίχνευσης ευαισθησίας. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Περισσότερες λεπτομέρειες σχετικά με τον αλγόριθμο ευαισθησίας μπορούν να διαβαστούν στα έγγραφα [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../SettingUpAaps/CompletingTheObjectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.md#autosens) automatically adjust the amount of insulin delivered. Πριν την επίτευξη αυτού του στόχου, το ποσοστό ευαισθησίας Autosens / η γραμμή στο γράφημά σας εμφανίζεται μόνο για ενημέρωση.
+You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../SettingUpAaps/CompletingTheObjectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) automatically adjust the amount of insulin delivered. Πριν την επίτευξη αυτού του στόχου, το ποσοστό ευαισθησίας Autosens / η γραμμή στο γράφημά σας εμφανίζεται μόνο για ενημέρωση.
 
 (Config-Builder-absorption-settings)=
 
 ### Ρύθμιση απορρόφησης
 
-Εάν χρησιμοποιείτε Oref1 με SMB, πρέπει να αλλάξετε το **min_5m_carbimpact** στο 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+Εάν χρησιμοποιείτε Oref1 με SMB, πρέπει να αλλάξετε το **min_5m_carbimpact** στο 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
 (Config-Builder-aps)=
 
@@ -208,7 +208,7 @@ You can view your sensitivity on the homescreen by selecting SEN and watching th
 Επιλέξτε τον αλγόριθμο APS που θέλετε για τις ρυθμίσεις των παρεμβάσεων. Μπορείτε να δείτε την ενεργή λεπτομέρεια του επιλεγμένου αλγορίθμου στην καρτέλα OpenAPS (OAPS).
 
 * OpenAPS AMA ( προηγμένο βοήθημα γεύματος, Κατάσταση του αλγορίθμου για το 2017) Με απλά λόγια, τα οφέλη είναι αφού δώσετε στον εαυτό σας ένα bolus γεύματος, το σύστημα μπορεί να αντιδράσει γρηγορότερα ΑΝ εισάγετε υδατάνθρακες αξιόπιστα.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* [OpenAPS SMB](../DailyLifeWithAaps/KeyAapsFeatures.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Κύκλωμα
 
@@ -250,19 +250,19 @@ You can view your sensitivity on the homescreen by selecting SEN and watching th
 
 Το AAPS έχει ένα πρόγραμμα εκμάθησης (στόχοι) που πρέπει να εκπληρώσετε βήμα προς βήμα. Αυτό θα σας καθοδηγήσει με ασφάλεια με στη δημιουργία ενός συστήματος κλειστού κυκλώματος. Εξασφαλίζει ότι έχετε ρυθμίσει τα πάντα σωστά και καταλαβαίνετε τι ακριβώς κάνει το σύστημα. Αυτός είναι ο μόνος τρόπος για να εμπιστευτείτε το σύστημα.
 
-Θα πρέπει [να εξάγετε τις ρυθμίσεις σας](../Usage/ExportImportSettings.md) (συμπεριλαμβανομένης της προόδου των στόχων) σε τακτική βάση. Σε περίπτωση που πρέπει να αντικαταστήσετε το smartphone σας αργότερα (νέα αγορά, ζημιά οθόνης κ. λπ.), μπορείτε απλώς να εισαγάγετε αυτές τις ρυθμίσεις.
+You should [export your settings](../Maintenance/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. Σε περίπτωση που πρέπει να αντικαταστήσετε το smartphone σας αργότερα (νέα αγορά, ζημιά οθόνης κ. λπ.), μπορείτε απλώς να εισαγάγετε αυτές τις ρυθμίσεις.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 
 ## Θεραπείες
 
-Αν προβάλετε την καρτέλα Θεραπείες (Θεραπείες), μπορείτε να δείτε τις θεραπείες που έχουν μεταφορτωθεί στο nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
+Αν προβάλετε την καρτέλα Θεραπείες (Θεραπείες), μπορείτε να δείτε τις θεραπείες που έχουν μεταφορτωθεί στο nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../DailyLifeWithAaps/AapsScreens.md#carb-correction).
 
-## Γενικά
+## General
 
 ### Σφαιρική Εικόνα
 
-Εμφανίζει την τρέχουσα κατάσταση του κυκλώματος και των κουμπιών σας για τις περισσότερο συνηθισμένες ενέργειες (βλ. [ενότητα Η αρχική οθόνη](../Getting-Started/Screenshots.md) για λεπτομέρειες). Μπορείτε να έχετε πρόσβαση στις ρυθμίσεις κάνοντας κλικ στο γρανάζι.
+Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../DailyLifeWithAaps/AapsScreens.md) for details). Μπορείτε να έχετε πρόσβαση στις ρυθμίσεις κάνοντας κλικ στο γρανάζι.
 
 #### Κρατήστε την οθόνη ενεργή
 
@@ -321,24 +321,24 @@ Choose if you want to have [status lights](../SettingUpAaps/Preferences.md#statu
 
 **Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
 
-**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../DailyLifeWithAaps/KeyAapsFeatures.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
 
 ### Ενέργειες
 
 * Some buttons to quickly access common features.
-* See [AAPS screenshots](../Getting-Started/Screenshots.md#action-tab) for details.
+* See [AAPS screenshots](../DailyLifeWithAaps/AapsScreens.md#action-tab) for details.
 
 ### Αυτοματοποίηση
 
-Εργασίες αυτοματισμού που ορίζονται από τον χρήστη ('εάν-τότε'). Παρακαλώ [διαβάστε εδώ](../Usage/Automation.md).
+Εργασίες αυτοματισμού που ορίζονται από τον χρήστη ('εάν-τότε'). Please [read on here](../DailyLifeWithAaps/Automations.md).
 
 (Config-Builder-sms-communicator)=
 
 ### Επικοινωνία με SMS
 
-Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
+Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
 
 ### Φαγητό
 
@@ -350,7 +350,7 @@ Allows remote caregivers to control some AAPS features via SMS, see [SMS Command
 
 ### Wear
 
-Παρακολουθήστε και ελέγχετε το AAPS χρησιμοποιώντας το Android Wear ρολόι σας (δείτε [σελίδα Watchfaces](../Configuration/Watchfaces.md)). Χρησιμοποιήστε τις ρυθμίσεις (γρανάζι) για να ορίσετε ποιες μεταβλητές θα πρέπει να λαμβάνονται υπόψη κατά τον υπολογισμό του bolus που δίνεται από το ρολόι σας (δηλαδή τάση 15 λεπτών, COB...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)). Χρησιμοποιήστε τις ρυθμίσεις (γρανάζι) για να ορίσετε ποιες μεταβλητές θα πρέπει να λαμβάνονται υπόψη κατά τον υπολογισμό του bolus που δίνεται από το ρολόι σας (δηλαδή τάση 15 λεπτών, COB...).
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
@@ -363,7 +363,7 @@ If you want to bolus etc. from the watch then within "Wear settings" you need to
 
 ### xDrip Γραμμή κατάστασης (ρολόι)
 
-Δείτε της πληροφορίες του κυκλώματος στο xDrip+ watchface (εάν δεν χρησιμοποιείται το AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../UsefulLinks/WearOsSmartwatch.md)
 
 ### NSClient
 

@@ -17,7 +17,7 @@
 
 После установки сенсора трансмиттер может быть защелкнут на платформе. Осторожно! Сначала защелкните квадратную сторону, затем надавите на круглую.
 
-## Устранение неполадок
+## Troubleshooting
 
 ### Проблемы с подключением
 
@@ -37,4 +37,4 @@
 
 ![Отрицательный срок работы сенсора](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Getting-Started/Screenshots.md#action-tab) or a sensor insert with wrong date. Перейдите на вкладку терапии > портал терапии и удалите неверную запись.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../DailyLifeWithAaps/AapsScreens.md#action-tab) or a sensor insert with wrong date. Перейдите на вкладку терапии > портал терапии и удалите неверную запись.

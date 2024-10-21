@@ -8,7 +8,7 @@ Diese Anweisungen sind zum Einrichten der Accu-Chek Combo Pumpe mit dem neuen Co
 
 * Eine Roche Accu-Chek Combo (jede Firmware funktioniert).
 * Einen Smartpix oder Realtyme Adapter und die Accu-Chek 360°-Konfigurationssoftware um die Pumpe zu konfigurieren. (Kunden von Roche können die Software beim Kundendienst anfordern.)
-* Ein kompatibles Telefon. Android 9 (Pie) oder neuer ist ein Muss. Bei Verwendung von LineageOS ist die minimale unterstützte Version 16.1. See [release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version) for details.
+* Ein kompatibles Telefon. Android 9 (Pie) oder neuer ist ein Muss. Bei Verwendung von LineageOS ist die minimale unterstützte Version 16.1. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
 * AndroidAPS muss auf Deinem Smartphone installiert sein.
 
 Einige Telefone funktionieren vielleicht besser als andere je nach Qualität der Bluetooth-Unterstützung und ob sie eine zusätzliche, sehr aggressive Energiesparlogik haben oder nicht. Eine Liste gestester Telefone findet sich in der [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) Liste. Die Liste ist nicht abschließend und spiegelt nur die persönliche Erfahrung der Benutzer wieder. Bitte trage Deine Erfahrung in die Liste ein und hilf damit anderen. Die ganzen DIY-Projekte funktionieren nur, wenn jeder etwas zurückgibt.
@@ -20,7 +20,7 @@ Einige Telefone funktionieren vielleicht besser als andere je nach Qualität der
 
 Beachte folgende Einschränkungen:
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../Usage/Extended-Carbs.md) instead).
+* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 * Nur ein basales Profil (das erste Profil) wird unterstützt.
 * Der Loop ist deaktiviert, wenn das aktuell aktive Profil der Pumpe nicht Profil Nr. 1 ist. Dies geht bis das Profilnr. 1 aktiviert wird; wenn das erledigt ist, wird beim nächsten Verbindungsaufbau von AAPS (entweder allein nach einer Weile oder weil der Benutzer den Refresh Button in der Combov2 Benutzeroberfläche drückt), erkennen, dass Profil Nr. 1 das aktuell ist und den Loop wieder aktivieren.
 * Wenn der Loop eine laufende Basalrate abbrechen will, wird stattdessen die Basalrate für 15 min. auf 90% oder 110% gesetzt. Das liegt daran, dass das Abbrechen eines TBR eine Warnung auf die Pumpe verursacht, die viele Vibrationen verursacht, und diese Vibrationen können nicht deaktiviert werden.

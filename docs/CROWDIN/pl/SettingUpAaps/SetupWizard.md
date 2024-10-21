@@ -18,7 +18,7 @@ So, please take your time in configuring your loop, the benefits of a well-runni
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../Where-To-Go-For-Help/Connect-with-other-users.md).
+If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
 
 ## Step-wise guide to the AAPS Setup Wizard
@@ -326,7 +326,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
-### Profil
+### Profile
 
 Now we are entering a very important part of the Setup Wizard.
 

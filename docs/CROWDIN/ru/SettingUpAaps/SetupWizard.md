@@ -17,8 +17,8 @@ From previous experience, we are aware that new starters often put themselves un
 So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
 
 ```{admonition} Ask for Help
-:class: примечание
-Если в документации найдена ошибка или у вас есть идея, как объяснить что=то получше, обратитесь за помощью к сообществу по этой инструкции [Связаться с другими пользователями](../Куда-Обратиться-за-помощью/Связаться-с-другими-пользователями.md).
+:class: note
+If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
 
 ## Пошаговое руководство к Мастеру установки AAPS
@@ -326,7 +326,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![снимок экрана](../images/setup-wizard/Screenshot_20231202_141958.png)
 
-### Профиль
+### Profile
 
 Теперь мы переходим к очень важной части мастера установки.
 
@@ -440,7 +440,7 @@ Please read the documentation for your [insulin pump](../Getting-Started/Compati
 
 ![снимок экрана](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-### Алгоритм APS
+### APS algorithm
 
 Примените алгоритм OpenAPS SMB. Несмотря на название, функция алгоритма микроболюсов SMB отключена до полного знакомства с AAPS и прохождения первых целей. В любом случае алгоритм OpenAPS SMB новее и лучше по сравнению с OpenAPS AMA.
 

@@ -18,7 +18,7 @@ Alors, prenez votre temps pour configurer votre boucle, les avantages d'une bouc
 
 ```{admonition} Ask for Help
 :class: note
-Si vous trouvez une erreur dans la documentation ou si vous avez une suggestion pour mieux expliquer quelque chose, vous pouvez demander de l'aide à la communauté comme expliqué dans [Où trouver de l'aide](../Where-To-Go-For-Help/Connect-with-other-users.md).
+If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
 
 ## Guide pas à pas de l'assistant de configuration AAPS
@@ -326,7 +326,7 @@ Revenez en arrière et cliquez sur "SUIVANT" pour passer à l'écran suivant :
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
-### Profil
+### Profile
 
 Nous arrivons maintenant à une partie très importante de l'Assistant de configuration.
 
@@ -440,7 +440,7 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant :
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-### Algorithme APS
+### APS algorithm
 
 Choisissez l'algorithme SMB OpenAPS comme algorithme APS. Malgré son nom, la fonctionnalité SMB de l'algorithme est désactivée jusqu'à ce que vous soyez familier avec AAPS et ayez déjà travaillé sur les premiers objectifs. L'algorithme OpenAPS SMB est plus récent et de manière générale meilleur par rapport à OpenAPS AMA de toute façon.
 

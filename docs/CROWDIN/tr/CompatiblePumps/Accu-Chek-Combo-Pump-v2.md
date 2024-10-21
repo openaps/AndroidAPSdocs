@@ -8,7 +8,7 @@ Bu talimatlar, 3.2 sürümünden itibaren AndroidAPS'in bir parçası olan yeni 
 
 * Roche Accu-Chek Combo pompa(tüm pompa yazılımlarında çalışır).
 * Pompayı yapılandırmak için 360 Yapılandırma Yazılımı ile birlikte bir Smartpix veya Realtyme cihazı. (Roche, Smartpix cihazlarını ve konfigürasyon yazılımını talep üzerine müşterilerine ücretsiz olarak göndermektedir.)
-* Uyumlu bir telefon. Android 9 (Pie) veya daha üzeri zorunludur. LineageOS kullanıyorsanız desteklenen minimum sürüm 16.1'dir. See [release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version) for details.
+* Uyumlu bir telefon. Android 9 (Pie) veya daha üzeri zorunludur. LineageOS kullanıyorsanız desteklenen minimum sürüm 16.1'dir. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
 * Telefonunuzda yüklü olan AndroidAPS uygulaması.
 
 Bazı telefonlar, Bluetooth desteğinin kalitesine, çok agresif güç tasarrufu mantığına sahip olup olmadıklarına bağlı olarak diğerlerinden daha iyi çalışabilir. Telefonların listesini [AAPS Telefonlar](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) sayfasında bulabilirsiniz. Lütfen bunun tüm telefonların bir listesi olmadığını ve kişisel kullanıcı deneyimini yansıttığını unutmayın. Siz de kendi deneyiminizle katılmaya ve böylece başkalarına yardım etmeye teşvik ediliyorsunuz (bu projeler tamamen ileriye dönük ödeme yapılmasıyla ilgilidir).
@@ -20,7 +20,7 @@ Bazı telefonlar, Bluetooth desteğinin kalitesine, çok agresif güç tasarrufu
 
 Aşağıdaki sınırlamaların farkında olun:
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../Usage/Extended-Carbs.md) instead).
+* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 * Yalnızca bir temel profil (ilki) desteklenir.
 * Pompadaki o anda etkin olan profil, profil no.1 değilse döngü devre dışı bırakılır. Bu profil no.1 aktif olana kadar devam eder. Aktif yapıldığında ve AAPS bir dahaki sefere bağlandığında (ya bir süre sonra kendi kendine ya da kullanıcı combov2 kullanıcı arayüzünde Yenile düğmesine bastığı için), profil no.1 geçerli olur ve döngüyü tekrar etkinleştirebilirsiniz.
 * Döngü çalışan bir GBO'nun iptal edilmesini talep ederse, Combo bunun yerine 15 dakika boyunca %90 veya %110'luk bir GBO ayarlayacaktır. Bunun nedeni, bir GBO'nun fiilen iptal edilmesinin pompa üzerinde çok fazla titreşime neden olan bir uyarıya neden olması ve bu titreşimlerin devre dışı bırakılamamasıdır.

@@ -12,7 +12,7 @@
 Regularly export your **AAPS** settings after completing each **objective**!
 ```
 
-Настоятельно рекомендуем [экспортировать настройки](../Usage/ExportImportSettings.md) после завершения каждой **цели**. В процессе экспорта создается файл **настроек** (.json), резервную копию которого следует сохранить в одном или нескольких безопасных местах (_например, Google Drive, жёсткий диск, вложение к электронной почте _и т. д._). Это гарантирует сохранение прогресса в достижении **целей**, возможность легко восстановить его в случае случайного удаления, при помощи импорта последнего файла настроек. Наличие резервной копии файла **настроек** также пригодится, если вы хотите сменить смартфон **AAPS** по какой-либо причине (обновление/потеря/сломанный телефон _и т. д._)
+We strongly recommend that you  [export your settings](../Maintenance/ExportImportSettings.md) after completing each **objective**. В процессе экспорта создается файл **настроек** (.json), резервную копию которого следует сохранить в одном или нескольких безопасных местах (_например, Google Drive, жёсткий диск, вложение к электронной почте _и т. д._). Это гарантирует сохранение прогресса в достижении **целей**, возможность легко восстановить его в случае случайного удаления, при помощи импорта последнего файла настроек. Наличие резервной копии файла **настроек** также пригодится, если вы хотите сменить смартфон **AAPS** по какой-либо причине (обновление/потеря/сломанный телефон _и т. д._)
 
 В файле **settings** будет сохраняться не только ваш прогресс в выполнении целей обучения, но и ваши собственные настройки **AAPS**, такие как **максимальный болюс** _и т. д._
 
@@ -76,14 +76,14 @@ From time to time, new features are added to **AAPS** which may require a new qu
 
 ## Цель 4: Начните с открытого цикла
 
-Эта цель обучения нужна, чтобы показать, как часто **AAPS** будет оценивать влияние базальной дозы на уровень гликемии и как часто он рекомендует изменить базальную скорость. В рамках этой цели обучения вы впервые активируете открытый цикл, и вручную смените скорость временного базала до 20 раз. Кроме того, вы увидите влияние временных целей и Временных Целей По Умолчанию (например, при физической нагрузке или гипотерапии). If you are not familiar with setting a temporay basal rate change in **AAPS** yet, please refer to the [ACTIONS tab](../Getting-Started/Screenshots.md#action-tab).
+Эта цель обучения нужна, чтобы показать, как часто **AAPS** будет оценивать влияние базальной дозы на уровень гликемии и как часто он рекомендует изменить базальную скорость. В рамках этой цели обучения вы впервые активируете открытый цикл, и вручную смените скорость временного базала до 20 раз. Кроме того, вы увидите влияние временных целей и Временных Целей По Умолчанию (например, при физической нагрузке или гипотерапии). If you are not familiar with setting a temporay basal rate change in **AAPS** yet, please refer to the [ACTIONS tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
 
 Расчетное время для прохождения этой цели: **7 дней**. Это обязательное время ожидания. Вы не сможете перейти к следующей цели раньше, даже если выполнили все изменения базальной скорости.
 
 - Выберите «ОТКРЫТЫЙ ЦИКЛ» либо в меню «Настройки», либо нажав и удерживая значок «Цикл» в левой верхней части экрана НАЧАЛО.
 - Walk through the [Preferences](../SettingUpAaps/Preferences.md) to set it up for you (scroll down to "Loop/APS Mode" and select "Open Loop".
 - Вручную активируйте по крайней мере 20 предложений временного базала на протяжении 7 дней, введите их в помпу (физическую) и подтвердите в AAPS что вы их приняли. Убедитесь, что эти изменения базальной дозы отображаются в AAPS и Nightscout.
-- При необходимости включите [временные Цели](../Usage/temptarget.md). После купирования гипогликемии используйте Временную Цель Гипо, чтобы предотвратить чрезмерную коррекцию системы при откате (при постгипогликемической гипергликемии).
+- Enable [temp targets](../DailyLifeWithAaps/TempTargets.md) if necessary. После купирования гипогликемии используйте Временную Цель Гипо, чтобы предотвратить чрезмерную коррекцию системы при откате (при постгипогликемической гипергликемии).
 
 ### Сократите количество уведомлений
 
@@ -101,11 +101,11 @@ From time to time, new features are added to **AAPS** which may require a new qu
 
 ## Цель 5: Глубже понимаем работу системы в режиме незамкнутого цикла, включая ее рекомендации по временным базалам
 
-В **Цели 5** вы начнете понимать, как формируются рекомендации по временному базальному инсулину. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab.
+В **Цели 5** вы начнете понимать, как формируются рекомендации по временному базальному инсулину. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab.
 
 Расчетное время для прохождения этой цели: 7 дней.
 
-This Objective requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal). Это значение может быть установлено в Настройках > OpenAPS.
+This Objective requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal). Это значение может быть установлено в Настройках > OpenAPS.
 Убедитесь, что эта настройка безопасности установлена как в **AAPS**, так и в помпе.
 
 Целевые значения гликемии следует несколько завысить до тех пор, пока вы не убедитесь в правильности всех вычислений и настроек.
@@ -143,7 +143,7 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 Вам придётся корректировать высокие значения ГК самостоятельно (вручную с помощью помпы или ручки)!
 ```
 
-As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. You have to remain in LGS mode for 5 days to complete this objective. You should use this time to check if your profile settings are accurate and don't trigger LGS events too often.
+As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. You have to remain in LGS mode for 5 days to complete this objective. You should use this time to check if your profile settings are accurate and don't trigger LGS events too often.
 
 Estimated time to complete this objective: 5 days.
 
@@ -170,7 +170,7 @@ This means that when you are on Objective 6, if sensor glucose levels are droppi
 
 ## Цель 7: Настройка замкнутого цикла с поднятием макс величины IOB выше 0 и постепенным понижением целевой ГК
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB was zeroed out automatically in **objective 6**. This is now reverted. **AAPS** will start to use your defined maxIOB value to correct high glucose values.
+To complete **Objective 7** you have to close your loop and raise your [maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB was zeroed out automatically in **objective 6**. This is now reverted. **AAPS** will start to use your defined maxIOB value to correct high glucose values.
 
 Estimated time to complete this objective: 1 day.
 
@@ -193,7 +193,7 @@ As part of this objective you will revist your profile's performance and will us
 Расчетное время для прохождения этой цели: 7 дней.
 
 - You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
-- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch OVERVIEW's graph white line showing your insulin sensitivity rising or falling due to exercise or hormones etc. and keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the basals and/or targets accordingly.
+- Enable [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days and watch OVERVIEW's graph white line showing your insulin sensitivity rising or falling due to exercise or hormones etc. and keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the basals and/or targets accordingly.
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 
@@ -201,8 +201,8 @@ As part of this objective you will revist your profile's performance and will us
 
 In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, reasonable starting point with SMBs and why basal is set to zero temporarily after SMBs are given (zero-temping). Estimated time to complete this objective: 28 days.
 
-- The [SMB section in this documentation](../Usage/Open-APS-features.md#super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
-- Once done, you [raise maxIOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working well. maxIOB now includes all IOB, not just accumulated basal. This threshold pauses SMBs until IOB drops below this value (_e.g._ maxIOB is set to 7 U and a bolus of 8 U is given to cover a meal: SMBs will be paused and not given unless IOB drops below 7 U). A good start is setting maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference)
+- The [SMB section in this documentation](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
+- Once done, you [raise maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working well. maxIOB now includes all IOB, not just accumulated basal. This threshold pauses SMBs until IOB drops below this value (_e.g._ maxIOB is set to 7 U and a bolus of 8 U is given to cover a meal: SMBs will be paused and not given unless IOB drops below 7 U). A good start is setting maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference)
 - Change "min_5m_carbimpact"-parameter (Preferences > Absorbtion settings > min_5m_carbimpact) to 8 as you move from an OpenAPS AMA algorithm to OpenAPS SMB. For AMAs the default value is 3. Read more about this setting [here](../SettingUpAaps/Preferences.md#min_5m_carbimpact)
 
 (Objectives-objective-10-automation)=
@@ -211,7 +211,7 @@ In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core 
 
 You have to start **Objective 10** to be able to use Automations.
 
-1. Read the documentation page  [Automation](../Usage/Automation.md) first.
+1. Read the documentation page  [Automation](../DailyLifeWithAaps/Automations.md) first.
 2. Set-up the most basic automation rule;
    for example trigger an Android notification in few minutes:
 
@@ -235,7 +235,7 @@ You have to start **Objective 10** to be able to use Automations.
 ## Objective 11: Enabling additional features for daytime use, such as Dynamic Senstivity plugin (DynISF).
 
 - Ensure that SMB is functioning properly
-- Read the documentation concerning Dynamic ISF [here](../Usage/DynamicISF.md)
+- Read the documentation concerning Dynamic ISF [here](../DailyLifeWithAaps/DynamicISF.md)
 - Search the Facbook and [Discord](https://discord.gg/4fQUWHZ4Mw) groups for discussions around Dynamic ISF and read about other users experiences and recommendations.
 - Enable the **DynamicISF plugin** and identify the appropriate calibration for your body's uniqueness. It is advisable to begin with a value lower than 100% for safety reasons.
 

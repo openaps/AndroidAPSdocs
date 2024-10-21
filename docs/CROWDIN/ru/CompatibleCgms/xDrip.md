@@ -200,7 +200,7 @@
 ### Уровень батареи Libre smart reader
 
 - Уровень заряда батареи таких мостов, как Miao Miao и Bubble (но не Blucon), отображается в AAPS.
-- Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
+- Details can be found on [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery).
 
 ### Подключите трансмиттер Libre и запустите сенсор
 
