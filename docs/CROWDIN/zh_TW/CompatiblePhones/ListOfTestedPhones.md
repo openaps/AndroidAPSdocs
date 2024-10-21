@@ -10,9 +10,9 @@
 
 當未來需要建立另一個硬體相容性清單時，我們鼓勵有興趣成為維護者的人與我們聯繫！
 
-The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
+測試過的手機名單可通過以下連結訪問 [Omnipod 胰島素幫浦的測試手機列表](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
 
-你可以使用 CRTL-F 在 Google 試算表中搜索文字。 該試算表為唯讀保護狀態。 To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
+你可以使用 CRTL-F 在 Google 試算表中搜索文字。 該試算表為唯讀保護狀態。 請填寫 [表格](https://forms.gle/g7GbSkMCTfFrWKjSA)，記錄您對手機的測試。
 
 在你提交表單資料後，維護者將審核資料並批准發佈！
 
@@ -22,6 +22,6 @@ The list of the tested phone can be accessed via the following link [list of tes
 
 # 手機背景
 
-![phone background](../images/bg_phone_thump.jpg) </br>
-Design: Thiago :) </br>
-If you want to decorate your phone with more AAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![手機背景](../images/bg_phone_thump.jpg) </br>
+設計：Thiago :) </br>
+如果您希望用更多 AAPS 裝飾您的手機，可以在這裡下載您的背景圖片： ![高解析度背景。](../images/bg_phone.jpg)
