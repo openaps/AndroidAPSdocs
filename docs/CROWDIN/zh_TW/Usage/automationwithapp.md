@@ -1,6 +1,6 @@
 # 與第三方 Android Automate 應用程式的自動化
 
-**This article has been written before AAPS version 2.5. There is an [automation plugin in AAPS](../DailyLifeWithAaps/Automations.md) itself with AAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
+**這篇文章是在 AAPS 2.5 版本之前撰寫的。在 AAPS 2.5 版本中，本身已包含[自動化外掛](../DailyLifeWithAaps/Automations.md)。對某些人來說，這裡的內容仍然有用，但應該僅限於進階使用者使用。**
 
 由於 AAPS 是一個混合閉環系統，仍然需要一些使用者的互動（例如告訴系統你正在走路、即將用餐、或是躺在沙發上...）。 透過外部工具如 Automate 或 IFTTT，你可以自動化頻繁的手動使用者輸入，從而擴展 AAPS 的最新功能。
 
@@ -32,7 +32,7 @@
 
 在 AAPS 中，點擊右上角的三點選單，進入偏好設定 > NSClient > 高級設定 > 取消勾選「僅上傳至 NS（已停用同步）」和「不向 NS 上傳」。
 
-Be aware of the [security issues](../SettingUpAaps/Nightscout.md#security-considerations) that might occure and be very careful if you are using an [Insight pump](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps).
+注意[安全問題](../SettingUpAaps/Nightscout.md#security-considerations)，可能會發生，並且如果您使用[Insight 幫浦](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)時要非常小心。
 
 ![Nightscout 下載偏好設定](../images/automate-aaps2.jpg)
 
@@ -119,7 +119,7 @@ Be aware of the [security issues](../SettingUpAaps/Nightscout.md#security-consid
 
 #### 範例 3：請自行添加！
 
-Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSDocs repository](../SupportingAaps/HowToEditTheDocs.md).
+請透過上傳 .flo 檔案到 Automate 社群（關鍵字為「Nightscout」）來添加其他工作流程，並在這裡描述，透過[Pull Request 提交至 AndroidAPSDocs 資料庫](../SupportingAaps/HowToEditTheDocs.md)。
 
 ## 如果這個，則那個（IFTTT）
 
