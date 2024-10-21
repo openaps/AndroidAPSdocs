@@ -48,4 +48,4 @@ Tidepool是一個[開源](https://github.com/tidepool-org)專案。 他提供在
 你**不需要**使用上傳應用程式到 Tidepool：**AAPS** 會為你上傳血糖、治療和基礎胰島素。你只需擁有一個 Tidepool 的個人帳號即可。請勿使用單獨的 Tidepool 上傳工具來上傳你的資料，因為這會導致重複的數值。
 ```
 
-一旦你設置了報告伺服器，你現在可以設置[專用的AAPS Google帳號](Dedicated-Google-account-for-AAPS.md)，或者直接進入[建置AAPS應用程式](building-AAPS.md)。
+當你設置了報告伺服器，你現在可以設置[專用的AAPS Google帳號](Dedicated-Google-account-for-AAPS.md)，或者直接進入[建置AAPS應用程式](building-AAPS.md)。

@@ -14,18 +14,18 @@
 
 ## Обзор порядка обновления до новой версии AAPS
 
-1. [Экспортируйте настройки](../Usage/ExportImportSettings-export-settings) из существующей версии **AAPS** на телефоне. Возможно, это не потребуется, но лучше обезопасить себя, чем потом жалеть.
-2. [Обновите локальную копию](Update-to-new-version-update-your-local-copy) исходного кода AAPS (Git->Fetch и Git -> Pull)
-3. [Постройте подписанный APK](Update-to-new-version-build-the-signed-apk)
-4. [Перенесите собранное приложение](Building-APK-transfer-apk-to-smartphone) на телефон и установите его
-5. [Проверьте версию](Update-to-new-version-check-aaps-version-on-phone) в AAPS
-6. В зависимости от [источника ГК](../Configuration/BG-Source.md) убедитесь, что в xDrip отмечен [identify receiver](xdrip-identify-receiver)или воспользуйтесь ['самостоятельно собранным приложением Dexcom BYODA'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+1. [Export your settings](../Usage/ExportImportSettings.md) from the existing **AAPS** version on your phone. Возможно, это не потребуется, но лучше обезопасить себя, чем потом жалеть.
+2. [Update local copy](#2-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
+3. [Постройте подписанный APK](#3-build-the-signed-apk)
+4. [Transfer the built apk](#4-transfer-the-apk) to your phone and install it
+5. [Check the version](#6-check-aaps-version-on-phone) in AAPS
+6. Depending on your [BG source](../Getting-Started/CompatiblesCgms.md) make sure to [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app).
 
-Если возникают сложности, см. отдельную страницу [ устранение неполадок Android Studio ](../Installing-AndroidAPS/troubleshooting_androidstudio).
+In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md).
 
 ## 1. Экспорт настроек
 
-Смотрите [Настройки экспорта & импорта](ExportImportSettings-export-settings), если не помните, как это сделать.
+See the [Export & import settings](../Usage/ExportImportSettings.md) page if you don't remember how to do this.
 
 (Update-to-new-version-update-your-local-copy)=
 
@@ -67,13 +67,13 @@
 
 ## 3. Построение подписанного приложения APK
 
-Ваш исходный код теперь текущая версия. Пора собрать подписанное приложение apk, как описано в разделе [собираем подписанное приложениес apk](Building-APK-generate-signed-apk).
+Ваш исходный код теперь текущая версия. It's time to build the signed apk from it as described in the [build signed apk section](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk).
 
 ## 4. Перемещение apk
 
 Следуето перенести apk на телефон, чтобы установить.
 
-См. инструкции для [Передача APK на смартфон](Building-APK-transfer-apk-to-smartphone)
+See the instructions for [Transfer APK to smartphone](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 ## 5. Установка apk
 
@@ -93,6 +93,6 @@
 
 Выдохните!
 
-См. отдельную страницу [ устранение неполадок Android Studio ](../Installing-AndroidAPS/troubleshooting_androidstudio), возможно решение проблемы там уже есть!
+Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) if your problem is already documented!
 
 :::{admonition} ПРЕДУПРЕЖДЕНИЕ :class: предупреждение Если вам нужна дальнейшая помощь, свяжитесь с другими пользователями **AAPS** на [Facebook](https://www.facebook.com/groups/AndroidAPSUsers), [Discord](https://discord.gg/4fQUWHZ4Mw) и т.п!

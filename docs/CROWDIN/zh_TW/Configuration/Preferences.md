@@ -70,7 +70,7 @@
 
 - 如果你只希望使用主密碼保護[匯出的設定](../Usage/ExportImportSettings.md)，可以設定自定密碼。
 
-- 如果你使用自定密碼，請點擊「設定密碼」來設置密碼，如上文[所述](Preferences-master-password)。
+- If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
 
   ![保護](../images/Pref2020_Protection.png)
 
@@ -145,7 +145,7 @@
 
   ![偏好設定 > 快速嚮導按鈕設置](../images/Pref2020_OV_QuickWizard.png)
 
-- 如果你點擊快速嚮導按鈕，AAPS會根據你當前的比例（考慮血糖值或體內已注射的胰島素，如果設置了）計算並推薦一個追加注射量。
+- 如果你點擊快速嚮導按鈕，AAPS會根據你目前的比例（考慮血糖值或體內已注射的胰島素，如果設置了）計算並推薦一個追加注射量。
 
 - 該建議需要確認後才會注射胰島素。
 
@@ -168,7 +168,7 @@
 
 ### 填充/啟動標準胰島素量
 
-- 如果你想透過AAPS填充管線或初始充填導管，你可以在[手動操作標籤](Screenshots-action-tab)中進行。
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
 - 可以在此對話框中定義預設值。
 
 (Preferences-range-for-visualization)=
@@ -198,16 +198,16 @@
 - 狀態指示燈為以下情況提供視覺警告：
 
   - 傳感器使用時間
-  - 某些智慧讀取器的感應器電池電量（詳情請參閱[螢幕截圖頁面](Screenshots-sensor-level-battery)）。
+  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
   - 胰島素的使用時間（儲液罐使用的天數）
   - 儲液罐的剩餘容量（單位）
   - 輸注針頭的使用時間
   - 幫浦電池壽命
   - 幫浦電池電量（百分比）
 
-- 如果超過閾值警告，數值將顯示為黃色。
+- 如果超過警告門檻值，數值將顯示為黃色。
 
-- 如果超過臨界值警告，數值將顯示為紅色。
+- 如果超過危急門檻值警告，數值將顯示為紅色。
 
 - 在AAPS 2.7版本之前，狀態燈設置必須在Nightscout設置中進行。
 
@@ -268,8 +268,8 @@
 
 根據你的設置在[組態建置工具](../Configuration/Config-Builder.md)中，你可以在兩種算法之間進行選擇：
 
-- [進階餐前注射助手（OpenAPS AMA）](Open-APS-features-advanced-meal-assist-ama) - 2017年的算法狀態
-- [超微量注射（OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - 最推薦給初學者的最新算法
+- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS AMA設置
 
@@ -283,12 +283,12 @@
 - 該值以每小時單位（U/h）測量。
 - 建議將此設為合理的數值。 一個好的建議是取你的**最高基礎率**，並**將其乘以4**。
 - 例如，如果你的最高基礎率為0.5 U/h，你可以將其乘以4得到2 U/h的值。
-- 另見[詳細功能描述](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal)。
+- See also [detailed feature description](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### OpenAPS可以輸送的最大基礎IOB \[U\]
 
 - 允許在你的身體中累積的額外基礎胰島素（以單位計），超出你的正常基礎配置。
-- 一旦此值達到，AAPS將停止給予額外的基礎胰島素，直到你的基礎胰島素庫存（IOB）衰減回該範圍內。
+- 當達到此數值後，AAPS 會暫停提供額外的基礎胰島素，直到你的基礎胰島素剩餘量（IOB）再次下降到這個範圍內。
 - 此值**不考慮注射IOB**，僅考慮基礎。
 - 此值是根據你的正常基礎率獨立計算和監控的。 僅考慮超出正常率的額外基礎胰島素。
 
@@ -307,7 +307,7 @@
 
 #### 自動敏感度調整 (Autosens)
 
-- [Autosens](Open-APS-features-autosens) 會根據血糖偏差（正/負/中性）進行調整。
+- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
 - 他會根據這些偏差計算出你對胰島素的敏感度或抗性，並根據偏差調整基礎速率和胰島素敏感指數（ISF）。
 - 如果你選擇「Autosens 調整目標」，演算法也會修改你的血糖目標。
 
@@ -319,17 +319,17 @@
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB 設定
 
-- 與 AMA 相比，[SMB](Open-APS-features-super-micro-bolus-smb) 不使用臨時基礎速率來控制血糖，而是主要使用小型超級微量注射。
+- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- 你必須開始使用[目標 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)來使用 SMB。
+- You must have started [objective 9](../Usage/completing-the-objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- 前三個設定在[上方](Preferences-max-u-h-a-temp-basal-can-be-set-to)進行了解釋。
+- The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
 
-- 不同啟用選項的詳細資訊在[OpenAPS 功能部分](Open-APS-features-enable-smb)中描述。
+- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
 
 - *SMB 的發放頻率（以分鐘為單位）*受限於預設每 4 分鐘發放一次。 此數值防止系統過於頻繁發放 SMB（例如當設定臨時目標時）。 除非你確切知道後果，否則不應更改此設定。
 
-- 如果啟用了「敏感性提高目標」或「抗性降低目標」，[Autosens](Open-APS-features-autosens) 會根據你的血糖偏差修改血糖目標。
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
 - 如果目標被修改，會在主畫面以綠色背景顯示。
 
@@ -340,15 +340,15 @@
 
 - 此功能僅在選擇 SMB 演算法時可用。
 
-- 當參考設計檢測到需要碳水化合物時，會建議食用額外的碳水化合物。
+- 當系統偵測到需要碳水化合物時，會建議食用額外的碳水化合物。
 
 - 在此情況下，你會收到一個可以延後 5、15 或 30 分鐘的通知。
 
 - 此外，主畫面的 COB 部分也會顯示所需的碳水化合物量。
 
-- 可定義一個閾值——觸發通知所需的最小碳水化合物量。
+- 可定義一個門檻值——觸發通知所需的最小碳水化合物量。
 
-- 如果需要，碳水化合物需求通知可以推送到 Nightscout，屆時會顯示並廣播公告。
+- 如果有需要，碳水化合物需求通知可以推送到 Nightscout，屆時會顯示並廣播公告。
 
   ![在主畫面顯示所需的碳水化合物量](../images/Pref2020_CarbsRequired.png)
 
@@ -369,7 +369,7 @@
 
 - 當無法動態計算碳水化合物吸收時，演算法會插入預設的碳水化合物衰減值。 基本上，這是一個安全保護機制。
 
-- 簡單來說：演算法「知道」在當前胰島素劑量等影響下，你的血糖應該如何變化。
+- 簡單來說：演算法「知道」在目前胰島素劑量等影響下，你的血糖應該如何變化。
 
 - 每當預期行為與實際行為有正向偏差時，部分碳水化合物會被吸收/衰減。 大的變化＝許多碳水化合物等。
 
@@ -387,18 +387,18 @@
 
 ### 進階設定 - autosens 比例
 
-- 定義最小和最大[autosens](Open-APS-features-autosens) 比例。
+- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
 - 通常標準值（最大 1.2 和最小 0.7）不應更改。
 
 ## 幫浦設定
 
-此處的選項會根據你在[組態建置工具](Config-Builder-pump)中選擇的幫浦驅動程式而有所不同。  根據幫浦相關的指示來配對並設定你的幫浦：
+The options here will vary depending on which pump driver you have selected in [Config Builder](../Configuration/Config-Builder.md#pump).  根據幫浦相關的指示來配對並設定你的幫浦：
 
-- [DanaR 胰島素幫浦](../Configuration/DanaR-Insulin-Pump.md)
-- [DanaRS 胰島素幫浦](../Configuration/DanaRS-Insulin-Pump.md)
-- [Accu Chek Combo 幫浦](../Configuration/Accu-Chek-Combo-Pump.md)
-- [Accu Chek Insight 幫浦](../Configuration/Accu-Chek-Insight-Pump.md)
-- [Medtronic 幫浦](../Configuration/MedtronicPump.md)
+- [DanaR 胰島素幫浦](../CompatiblePumps/DanaR-Insulin-Pump.md)
+- [DanaRS 胰島素幫浦](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+- [Accu Chek Combo 幫浦](../CompatiblePumps/Accu-Chek-Combo-Pump.md)
+- [Accu Chek Insight 幫浦](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
+- [Medtronic 幫浦](../CompatiblePumps/MedtronicPump.md)
 
 如果使用 AAPS 進行開環模式，請確保你已在組態建置工具中選擇虛擬幫浦。
 
@@ -449,7 +449,7 @@
   - 這些警報僅在你與 Nightscout 有連線時工作，且主要針對家長/照護者。
   - 如果你的 CGM 資料來自手機（如 xDrip+ 或 BYODA），請使用這些警報，而非 Nightscout 警報。
 - 從 Nightscout 公告中建立通知[公告](https://nightscout.github.io/nightscout/discover/#announcement)，將在 AAPS 通知欄中回顯 Nightscout 公告。
-- 當在一定時間內未從 Nightscout 收到資料時，你可以更改過時資料和緊急過時資料警報的閾值。
+- 當在一定時間內未從 Nightscout 收到資料時，你可以更改過時資料和緊急過時資料警報的門檻值。
 
 ### 連線設定
 
@@ -470,7 +470,7 @@
 
 ## SMS(簡訊) 通訊器
 
-- 僅當在[組態建置工具](Config-Builder-sms-communicator)中選擇 SMS 通訊器時才會顯示選項。
+- Options will only be displayed if SMS communicator is selected in [Config Builder](../Configuration/Config-Builder.md#sms-communicator).
 - 此設定允許透過傳簡訊指令來遠端控制應用程式，如暫停循環或進行注射。
 - 更多資訊在[SMS 指令](../Children/SMS-Commands.md)中描述。
 - 透過使用身份驗證應用程式和憑證末端的額外 PIN 獲得額外的安全保障。

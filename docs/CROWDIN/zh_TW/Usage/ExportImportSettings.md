@@ -25,7 +25,7 @@
 
 2 - 每當你計劃對配置進行重大變更時（例如更改 SMB 設定、更改胰島素類型、更換幫浦、進行自動化變更），應在變更前後備份偏好設定。 這樣你就可以保留最新的設定副本以及變更前的設定副本，萬一需要回滾時可以使用。
 
-3 - _僅限 Omnipod Dash 用戶_ - 偏好設定檔案包含當前幫浦的連線詳細資訊，可用來在新手機上恢復幫浦連線。 如果你在開始使用當前幫浦後未匯出偏好設定的副本，當需要更換手機時，將需要重新啟動一個新的幫浦。
+3 - _僅限 Omnipod Dash 用戶_ - 偏好設定檔案包含目前幫浦的連線詳細資訊，可用來在新手機上恢復幫浦連線。 如果你在開始使用目前幫浦後未匯出偏好設定的副本，當需要更換手機時，將需要重新啟動一個新的幫浦。
 
 **如何進行備份：**
 
@@ -44,11 +44,11 @@ _如果你是使用相同金鑰庫建置的 APK 更新 AAPS，則不需要按照
 
 如果你在丟失或更換原金鑰庫後更新 AAPS（例如在未傳輸金鑰庫的情況下使用新電腦建置），請確保根據上述方法備份所有設定，然後在手機上卸載現有版本的 AAPS。
 
-如果需要，請在下面步驟之前設定你的 CGM/血糖來源接收器（連結：[https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)）
+If needed, [setup your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) prior to the steps listed below
 
-_Omnipod 用戶：_ 如果在不同的幫浦活動期間匯出偏好設定檔案，匯入該檔案將會停用當前幫浦。
+_Omnipod 用戶：_ 如果在不同的幫浦活動期間匯出偏好設定檔案，匯入該檔案將會停用目前幫浦。
 
-1 - 使用上述的 APK 備份，按照[新安裝指示](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Transferring-and-installing-AAPS.html)進行操作。
+1 - Using the back-up copy of your APK from above, follow the instructions for a [new installation](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 2 - 啟動 AAPS 並允許任何請求的權限。
 
@@ -72,7 +72,7 @@ _Omnipod 用戶：_ 如果在不同的幫浦活動期間匯出偏好設定檔案
 
 11 - 僅限 Omnipod Dash 用戶 - 如果你的偏好設定不是從你目前使用的幫浦備份的，你將需要啟動一個新的幫浦以開始胰島素輸送。
 
-**疑難排解：** 如果你無法從 AAPS 主畫面設置一個啟動的設定檔，請選擇左上角的三條線（漢堡）選單 > 組態建置工具 > 幫浦 > 切換到虛擬幫浦，然後再切換回你的幫浦類型。
+**問題排除：** 如果你無法從 AAPS 主畫面設置一個啟動的設定檔，請選擇左上角的三條線（漢堡）選單 > 組態建置工具 > 幫浦 > 切換到虛擬幫浦，然後再切換回你的幫浦類型。
 
 
 ### Dana RS 使用者注意事項

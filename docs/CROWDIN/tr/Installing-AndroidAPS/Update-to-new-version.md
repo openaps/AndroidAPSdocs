@@ -14,18 +14,18 @@
 
 ## Overview for updating to a new version of AAPS
 
-1. [Export your settings](../Usage/ExportImportSettings-export-settings) from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
-2. [Update local copy](Update-to-new-version-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
-3. [İmzalı APK Derleyin](Update-to-new-version-build-the-signed-apk)
-4. [Derlenmiş apk'yı](Building-APK-transfer-apk-to-smartphone) telefonunuza aktarın ve yükleyin
-5. [Check the version](Update-to-new-version-check-aaps-version-on-phone) in AAPS
-6. [KŞ kaynağınıza](../Configuration/BG-Source.md) bağlı olarak, xDrip'te [alıcıyı tanımladığınızdan](xdrip-identify-receiver) emin olun veya ['Kendi Dexcom Uygulamanızı oluşturun (BYODA)'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+1. [Export your settings](../Usage/ExportImportSettings.md) from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+2. [Update local copy](#2-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
+3. [İmzalı APK Derleyin](#3-build-the-signed-apk)
+4. [Transfer the built apk](#4-transfer-the-apk) to your phone and install it
+5. [Check the version](#6-check-aaps-version-on-phone) in AAPS
+6. Depending on your [BG source](../Getting-Started/CompatiblesCgms.md) make sure to [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app).
 
-Sorun yaşamanız durumunda, [Android Studio'da sorun giderme](../Installing-AndroidAPS/troubleshooting_androidstudio) konusu için ayrı sayfaya bakın.
+In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md).
 
 ## 1. Ayarlarınızı dışa aktarın
 
-Bunu nasıl yapacağınızı hatırlamıyorsanız, [ayarları dışa & içe aktarma](ExportImportSettings-export-settings) sayfasına bakın.
+See the [Export & import settings](../Usage/ExportImportSettings.md) page if you don't remember how to do this.
 
 (Update-to-new-version-update-your-local-copy)=
 
@@ -67,13 +67,13 @@ Bunu nasıl yapacağınızı hatırlamıyorsanız, [ayarları dışa & içe akta
 
 ## 3. İmzalı APK'yı Derleyin
 
-Kaynak kodunuz artık yayınlanan güncel sürümdür. [İmzalı apk derle bölümünde](Building-APK-generate-signed-apk) açıklandığı gibi bundan imzalı apk derlemenin zamanı geldi.
+Kaynak kodunuz artık yayınlanan güncel sürümdür. It's time to build the signed apk from it as described in the [build signed apk section](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk).
 
 ## 4. Apk dosyasını aktarma
 
 Yükleyebilmeniz için apk'yı telefonunuza aktarmanız gerekir.
 
-[APK'yi akıllı telefona aktarma](Building-APK-transfer-apk-to-smartphone) talimatlarına bakın
+See the instructions for [Transfer APK to smartphone](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 ## 5. Apk dosyasını kurun
 
@@ -93,6 +93,6 @@ Bir şeyler ters giderse, panik yapmayın.
 
 Bir Nefes Alın!
 
-Ardından, sorununuz zaten belgelenmişse, [Android Studio sorun giderme](../Installing-AndroidAPS/troubleshooting_androidstudio) sayfasına bakın!
+Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) if your problem is already documented!
 
 If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).

@@ -1,5 +1,5 @@
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
-# 疑難排解 Android Studio
+# 問題排除 Android Studio
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## 遺失的密鑰庫
@@ -138,7 +138,7 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
   你可能會收到此錯誤訊息：
 
-    ![無法解析... 無緩存版本](../images/studioTroubleshooting/08_NoCachedVersion.png)
+![無法解析... 無快取版本](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
   * 在右側，打開 Gradle 標籤 (1)。
 
@@ -197,7 +197,7 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
 ![密鑰生成時出現錯誤](../images/AndroidStudio35SigningKeys.png)
 
-這似乎是 Android Studio 3.5.1 及其在 Windows 中捆綁的 Java 環境中的一個錯誤。 密鑰已正確建立，但建議錯誤顯示為錯誤。 當前可以忽略此問題。
+這似乎是 Android Studio 3.5.1 及其在 Windows 中捆綁的 Java 環境中的一個錯誤。 密鑰已正確建立，但建議錯誤顯示為錯誤。 目前可以忽略此問題。
 
 
 ## AAPS 未接收 CGM 資料

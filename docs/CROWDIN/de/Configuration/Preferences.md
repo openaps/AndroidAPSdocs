@@ -70,7 +70,7 @@
 
 - Das 'Benutzerdefinierte Passwort' sollte verwendet werden, wenn Du das Master-Passwort nur für die Sicherung der [exportierten Einstellungen](../Usage/ExportImportSettings.md) verwenden möchtest.
 
-- Wenn Du ein 'benutzerdefiniertes Kennwort' verwendest, klicke auf die Zeile 'Passwort für Einstellungen', um das Kennwort wie [oben beschrieben](Preferences-master-password) festzulegen.
+- If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
 
   ![Schutz](../images/Pref2020_Protection.png)
 
@@ -168,7 +168,7 @@
 
 ### Füll-/Vorfüll-Standardmengen
 
-- Katheter (Schlauch) oder Kanüle (Nadel) kannst Du in AAPS über den Button 'Katheterwechsel' im [Aktionen-Tab](Screenshots-action-tab) füllen.
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
 - Voreinstellungen für Füllmengen können in diesem Dialog definiert werden.
 
 (Preferences-range-for-visualization)=
@@ -198,7 +198,7 @@
 - Status Lights geben eine optische Warnung für
 
   - Sensoralter
-  - Batteriestand des Sensor-Lesegeräts (für bestimmte Geräte). Weitere Details findest Du auf dieser [Seite](Screenshots-sensor-level-battery).
+  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
   - Insulinalter (Tage Reservoirverwendung)
   - Reservoirstand (Einheiten)
   - Kanülenalter
@@ -268,8 +268,8 @@
 
 Abhängig von Deinen Einstellungen im [Konfigurations-Generator](../Configuration/Config-Builder.md) kannst Du zwischen zwei Algorithmen wählen:
 
-- [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - Entwicklungsstand des Algorithmus von 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - der neueste für Anfänger empfohlene Algorithmus
+- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS AMA-Einstellungen
 
@@ -283,7 +283,7 @@ Abhängig von Deinen Einstellungen im [Konfigurations-Generator](../Configuratio
 - Der Wert wird in IE pro Stunde angegeben (IE/h).
 - Es wird empfohlen, hier etwas vernünftiges einzugeben. Eine gute Empfehlung ist, die **höchste Basalrate** in Deinem Profil zu verwenden und diese **mit 4 zu multiplizieren**.
 - Wenn zum Beispiel die höchste Basalrate in deinem Profil 0.5IE/h war, kannst du das mit 4 multiplizieren, um einen Wert von 2IE/h zu erhalten.
-- Siehe dazu auch die [detaillierte Funktionsbeschreibung](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### Maximales Basal-IOB, das OpenAPS abgeben darf \[U\]
 
@@ -307,7 +307,7 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 #### Autosens
 
-- [Autosens](Open-APS-features-autosens) analysiert Deine Glukosewert-Abweichungen (positiv/negativ/neutral).
+- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
 - Dabei wird anhand dieser Abweichungen ermittelt, wie empfindlich / resistent Du auf Insulin reagierst und Deine Basalrate und den ISF entsprechend angepasst.
 - Wenn Du "Autosens passt Zielwerte ebenfalls an" auswählst, wird der Algorithmus auch Dein BZ-Ziel entsprechend anpassen.
 
@@ -319,17 +319,17 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB-Einstellungen
 
-- Im Gegensatz zu AMA verwendet [SMB](Open-APS-features-super-micro-bolus-smb) keine temporären Basalraten, um den Blutzuckerspiegel zu steuern, sondern hauptsächlich kleine Supermicroboli.
+- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- Du musst [Ziel 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) gestartet haben, um SMB nutzen zu können.
+- You must have started [objective 9](../Usage/completing-the-objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- Die ersten drei Einstellungen werden [oben](Preferences-max-u-h-a-temp-basal-can-be-set-to) erklärt.
+- The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
 
-- Details zu den verschiedenen Optionen sind auf der Seite [OpenAPS-Funktionen](Open-APS-features-enable-smb) beschrieben.
+- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
 
 - *Wie häufig SMB abgegeben werden (in Min.)* ist eine Einschränkung für SMB, die standardmäßig nur alle vier Minuten abgegeben werden. Dieser Wert verhindert, dass das System SMB zu häufig abgibt (z. B. wenn Du ein temporäres Ziel setzt). Sie sollten diese Einstellung nicht ändern, außer Du weißt genau über die Folgen Bescheid.
 
-- Wenn 'Empfindlichkeit erhöht den Zielwert' oder 'Resistenz senkt den Zielwert' aktiviert ist, passt [Autosens](Open-APS-features-autosens) Deinen BZ-Zielwert entsprechend der BZ-Abweichungen an.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Wenn der Zielwert angepasst wird, wird dies durch einen grünen Hintergrund des Zielwerts angezeigt.
 
@@ -387,18 +387,18 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 ### Erweiterte Einstellungen - Autosens-Faktoren
 
-- Definiere einen minimalen und maximalen [Autosens](Open-APS-features-autosens)-Faktor.
+- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
 - Die Standardwerte (max. 1.2 und min. 0.7) sollten nicht verändert werden.
 
 ## Pumpen-Einstellungen
 
-Die Einstellungen hier sind je nach Pumpenmodell, das Du im [Konfigurations-Generator](Config-Builder-pump) gewählt hast, unterschiedlich.  Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
+The options here will vary depending on which pump driver you have selected in [Config Builder](../Configuration/Config-Builder.md#pump).  Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
 
-- [DanaR Insulinpumpe](../Configuration/DanaR-Insulin-Pump.md)
-- [DanaRS Insulinpumpe](../Configuration/DanaRS-Insulin-Pump.md)
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-- [Accu Chek Insight Pumpe](../Configuration/Accu-Chek-Insight-Pump.md)
-- [Medtronic Pumpe](../Configuration/MedtronicPump.md)
+- [DanaR Insulinpumpe](../CompatiblePumps/DanaR-Insulin-Pump.md)
+- [DanaRS Insulinpumpe](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)
+- [Accu Chek Insight Pumpe](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
+- [Medtronic Pumpe](../CompatiblePumps/MedtronicPump.md)
 
 Stelle sicher, dass Du die virtuelle Pumpe in der KONFIGURATION ausgewählt hast, wenn Du AAPS als Open Loop betreibst.
 
@@ -470,7 +470,7 @@ Die Optionen in den erweiterten Einstellungen sind selbsterklärend.
 
 ## SMS Kommunikator
 
-- Einstellmöglichkeiten werden nur angezeigt, wenn Du zuvor den SMS Kommunikator im [Konfigurations-Generator](Config-Builder-sms-communicator) aktiviert hast.
+- Options will only be displayed if SMS communicator is selected in [Config Builder](../Configuration/Config-Builder.md#sms-communicator).
 - Diese Einstellung erlaubt eine Fernsteuerung der App, indem Anweisungen an das Smartphone des Patienten gesendet werden, die die App ausführt (z.B. Loop oder Bolus anhalten).
 - Weitere Information findest Du auf der Seite [SMS-Befehle](../Children/SMS-Commands.md).
 - Zusätzliche Sicherheit wird durch die Verwendung einer Authentifikator-App und einer zusätzlichen PIN am Tokenende erreicht.

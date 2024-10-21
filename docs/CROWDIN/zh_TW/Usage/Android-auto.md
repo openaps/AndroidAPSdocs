@@ -1,6 +1,6 @@
 # Android Auto
 
-**AAPS** 能夠將你的當前狀態以訊息形式直接發送到車內的 Android Auto。
+**AAPS** 能夠將你的目前狀態以訊息形式直接發送到車內的 Android Auto。
 
 ```{admonition} 版本和最後更改訊息 :class: dropdown 最後編輯日期：2023/07/05
 

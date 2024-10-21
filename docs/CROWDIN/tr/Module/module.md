@@ -47,23 +47,23 @@ E-tabloyla ilgili herhangi bir sorun olursa lütfen [hardware@androidaps.org](ma
 
 AAPS **şu an için** şu pompalarla çalışır;
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)  (Old driver that uses the additional Ruffy app)
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) (New driver, available starting with AndroidAPS v.3.2)
-- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
-- [DanaR](../Configuration/DanaR-Insulin-Pump.md)
-- [DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
-- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md)
-- [Diaconn G8 ](../Configuration/DiaconnG8.md)
-- [EOPatch2](../Configuration/EOPatch2.md)
-- [Omnipod Eros](../Configuration/OmnipodEros.md)  ([additional communication device](module-additional-communication-device) needed)
-- [Omnipod DASH](../Configuration/OmnipodDASH.md)
-- [Medtrum Nano](../Configuration/MedtrumNano.md)
-- [Medtrum 300U](../Configuration/MedtrumNano.md)
-- Certain older [Medtronic](../Configuration/MedtronicPump.md) ([additional communication device](module-additional-communication-device) needed)
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)  (Old driver that uses the additional Ruffy app)
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (New driver, available starting with AndroidAPS v.3.2)
+- [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
+- [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md)
+- [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+- [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+- [Diaconn G8 ](../CompatiblePumps/DiaconnG8.md)
+- [EOPatch2](../CompatiblePumps/EOPatch2.md)
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  ([additional communication device](#additional-communication-device) needed)
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+- [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)
+- [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)
+- Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#additional-communication-device) needed)
 
 Ek bir iletişim cihazından bahsedilmiyorsa, insülin pompası ve AAPS arasındaki iletişim, iletişim protokolünü çevirmek için ek bir iletişim cihazına ihtiyaç duymadan Android'in entegre bluetooth yığınına dayanır.
 
-AAPS ile çalışma potansiyeline sahip olabilecek **diğer pompalar**, [Gelecekteki (olası) Pompalar](../Getting-Started/Future-possible-Pump-Drivers.md) sayfasında listelenmiştir.
+**Other pumps** that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md) page.
 
 (module-additional-communication-device)=
 #### Ek iletişim cihazı
@@ -91,18 +91,17 @@ Bununla birlikte, tercih edilen pompa olarak DanaR/RS ve Dana-i'nin Combo'ya kar
 
 ### KŞ kaynağı
 
-Bu, AAPS ile uyumlu tüm CGM'lere/FGM'lere kısa bir genel bakıştır. Daha fazla ayrıntı için [buraya](../Configuration/BG-Source.md) bakın. Kısa bir ipucu: glikoz verilerinizi xDrip+ uygulamasında veya Nightscout web sitesinde görüntüleyebiliyorsanız, AAPS'de KŞ kaynağı olarak xDrip+'ı (veya web bağlantılı Nightscout'u) seçebilirsiniz.
+Bu, AAPS ile uyumlu tüm CGM'lere/FGM'lere kısa bir genel bakıştır. For further details, look [here](../Getting-Started/CompatiblesCgms.md). Kısa bir ipucu: glikoz verilerinizi xDrip+ uygulamasında veya Nightscout web sitesinde görüntüleyebiliyorsanız, AAPS'de KŞ kaynağı olarak xDrip+'ı (veya web bağlantılı Nightscout'u) seçebilirsiniz.
 
-- [Dexcom G7](../Hardware/DexcomG7.md): Works with xDrip+ or patched app
-- [Dexcom G6](../Hardware/DexcomG6.md): BOYDA, 3.0 sürümünden itibaren önerilir (ayrıntılar için [sürüm notlarına](Releasenotes-important-hints-3-0-0) bakın). xDrip+ en az 2022.01.14 veya daha yeni sürüm olmalıdır
-- [Dexcom G5](../Hardware/DexcomG5.md): xDrip+ uygulamasıyla veya yamalı Dexcom uygulamasıyla çalışır
-- [Dexcom G4](../Hardware/DexcomG4.md): Bu sensörler oldukça eskidir, ancak bunların nasıl kullanılacağına ilişkin talimatları xDrip+ uygulamasıyla bulabilirsiniz
-- [Libre 3](../Hardware/Libre3.md): It works with xDrip+ (no transmitter needed)
-- [Libre 2](../Hardware/Libre2.md): It works with xDrip+ (no transmitter needed)
-- [Libre 1](../Hardware/Libre1.md): Bunun için (inşa et veya satın al) Bluecon veya MiaoMiao gibi bir vericiye ve xDrip+ uygulamasına ihtiyacınız var
-- [Eversense](../Hardware/Eversense.md): Şimdiye kadar yalnızca ESEL uygulaması ve yamalı bir Eversense-Uygulaması ile birlikte çalışır (Dana RS ve LineageOS ile çalışmaz ancak DanaRS ve Android veya Combo ve Lineage OS ile çalışır)
-- [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): pek çok ekstra öğe gerekir ve oldukça karmaşıktır
-- [PocTech](../Hardware/PocTech.md)
+- [Dexcom G7](../CompatibleCgms/DexcomG7.md): Works with xDrip+ or patched app
+- [Dexcom G6](../CompatibleCgms/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#version-300) for details). xDrip+ en az 2022.01.14 veya daha yeni sürüm olmalıdır
+- [Dexcom G5](../CompatibleCgms/DexcomG5.md): It works with xDrip+ app or patched Dexcom app
+- [Libre 3](../CompatibleCgms/Libre3.md): It works with xDrip+ (no transmitter needed)
+- [Libre 2](../CompatibleCgms/Libre2.md): It works with xDrip+ (no transmitter needed)
+- [Libre 1](../CompatibleCgms/Libre1.md): You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
+- [Eversense](../CompatibleCgms/Eversense.md): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
+- [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md): quite complicated with a lot of extra stuff
+- [PocTech](../CompatibleCgms/PocTech.md)
 
 ### Nightscout
 
@@ -110,11 +109,11 @@ Nightscout, CGM verilerinizi ve AAPS verilerinizi kaydedip görüntüleyebilen v
 
 Nightscout diğer modüllerden bağımsızdır. Görev 1'i yerine getirmek için Nightscout'a ihtiyacınız olacak.
 
-Nightscout'un AAPS ile kullanım için nasıl yapılandırılacağına ilişkin ek bilgiler [burada](../Installing-AndroidAPS/Nightscout.md) bulunabilir.
+Additional information on how to configure Nightscout for use with AAPS can be found [here](../SettingUpAaps/Nightscout.md).
 
 ### AAPS-.apk dosyası
 
-Sistemin temel bileşeni. Uygulamayı yüklemeden önce, apk dosyasını (bir Android Uygulaması için dosya adı uzantısıdır) oluşturmanız gerekir. Talimatları  [burada](../Installing-AndroidAPS/Building-APK.md) bulabilirsiniz.
+Sistemin temel bileşeni. Uygulamayı yüklemeden önce, apk dosyasını (bir Android Uygulaması için dosya adı uzantısıdır) oluşturmanız gerekir. Instructions are  [here](../SettingUpAaps/BuildingAaps.md).
 
 ## Opsiyonel Modüller
 
@@ -130,7 +129,7 @@ E-tabloyla ilgili herhangi bir sorun olursa lütfen [hardware@androidaps.org](ma
 
 ### xDrip+
 
-KŞ Kaynağı olarak xDrip+ Uygulamasına ihtiyacınız olmasa bile, onu alarmlar veya iyi bir kan şekeri ekranı için kullanabilirsiniz. İstediğiniz kadar alarmınız olabilir, alarmın ne zaman aktif olacağını belirleyebilir, sessiz modu geçersiz kılabilirsiniz vb. Bazı xDrip+ bilgileri [burada](../Configuration/xdrip.md) bulunabilir. İlerlemesi oldukça hızlı olduğu için bu uygulamanın belgelerinin her zaman güncel olmadığını lütfen unutmayın.
+KŞ Kaynağı olarak xDrip+ Uygulamasına ihtiyacınız olmasa bile, onu alarmlar veya iyi bir kan şekeri ekranı için kullanabilirsiniz. İstediğiniz kadar alarmınız olabilir, alarmın ne zaman aktif olacağını belirleyebilir, sessiz modu geçersiz kılabilirsiniz vb. Some xDrip+ information can be found [here](../CompatibleCgms/xDrip.md). İlerlemesi oldukça hızlı olduğu için bu uygulamanın belgelerinin her zaman güncel olmadığını lütfen unutmayın.
 
 ## Modülleri beklerken yapılması gerekenler
 
@@ -138,4 +137,4 @@ Kapalı döngüye geçmek için için tüm modülleri elde etmek bazen biraz zam
 
 Buradaki dokümanları okumaya devam edebilir, çevrimiçi veya çevrimdışı olarak diğer döngü kullanıcılarıyla iletişime geçebilir, [bu linkteki](../Where-To-Go-For-Help/Background-reading.md) dokümanları veya diğer döngü kullanıcılarının yazdıklarını okuyabilirsiniz. (Yazılanlara rağmen dikkatli olmalısınız, her şey doğru olmayabilir veya sizin konfigürasyonunuz için uygun değildir).
 
-**Bitti mi?** AAPS bileşenleriniz tamamlandıysa (tebrikler!) En azından açık döngü modunda başlayabilirsiniz. Her yeni görev ve [donanım](index-component-setup) kurulumundan önce ilk olarak [Görev açıklamaları](../Usage/Objectives.md) bölümünü okumalısınız.
+**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your [hardware](index-component-setup).

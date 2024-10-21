@@ -6,7 +6,7 @@
 
 ## Μπορώ απλά να κατεβάσω το αρχείο εγκατάστασης του AAPS;
 
-Όχι. Δεν υπάρχει κανένα αρχείο apk που να μπορείτε να κατεβάσετε για το AAPS. Χρειάζεται να δημιουργήσετε ένα τέτοιο αρχείο μόνοι σας. Αναλυτικές οδηγίες μπορείτε να βρείτε [εδώ](../Installing-AndroidAPS/Building-APK.md). Ο λόγος που δεν διανέμεται τέτοιο αρχείο είναι ο εξής:
+Όχι. Δεν υπάρχει κανένα αρχείο apk που να μπορείτε να κατεβάσετε για το AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Ο λόγος που δεν διανέμεται τέτοιο αρχείο είναι ο εξής:
 
 Το AAPS χρησιμοποιείται για να ελέγξει την αντλία σας και να χορηγήσει ινσουλίνη. Σύμφωνα με την ισχύουσα νομοθεσία στην Ευρώπη, όλα τα συστήματα που ανήκουν σε κατηγορίες όπως είναι οι lla ή llb χαρακτηρίζονται ως ιατρικές συσκευές. Για την κυκλοφορία τέτοιων συσκευών απαιτείται έγκριση από τους αρμόδιους φορείς. Προκειμένου να ληφθεί τέτοιου είδους έγκριση (CE) απαιτείται μία σειρά μελετών, δοκιμών και ελέγχων. Διαφορετικά, η διάθεση τους δεν είναι νόμιμη. Τέτοιες διαδικασίες ελέγχου και εγκρίσεων υπάρχουν και σε άλλα μέρη του κόσμου.
 
@@ -20,9 +20,9 @@
 
 Πρώτον, χρειάζονται τα εξής (hardware) **εξαρτήματα συμβατά με το κύκλωμα**:
 
-- Μία αντλία ινσουλίνης (Για περισσότερα δείτε τις [υποστηριζόμενες αντλίες ινσουλίνης](./Pump-Choices.md)) 
-- ένα [Android smartphone](Phones.md) (η Apple iOS δεν υποστηρίζεται από το AAPS - μπορείτε να διερευνήσετε το [iOS Loop](https://loopkit.github.io/loopdocs/)) και
-- [Ένα σύστημα συνεχούς καταγραφής γλυκόζης](../Configuration/BG-Source.md). 
+- A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
+- an [Android smartphone](../CompatiblePhones/ListOfTestedPhones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
+- a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
 
 Δεύτερον, πρέπει να **ρυθμίσετε τα εξαρτήματα** που θα χρησιμοποιήσετε. Δείτε το [παράδειγμα εγκατάστασης με αναλυτικές οδηγίες για τις απαραίτητες ρυθμίσεις](Sample-Setup.md).
 
@@ -46,7 +46,7 @@ If you don't want your preferences to be easily changed then you can password pr
 
 Εάν αφαιρέσετε την αντλία σας για ντους, κολύμβηση, κολύμπι, σπορ ή άλλες δραστηριότητες θα πρέπει να ενημερώσετε το AAPS ότι δεν χορηγείται ινσουλίνη για να διατηρηθεί η ενεργή σας ινσουλίνη σωστά.
 
-Η αντλία μπορεί να αποσυνδεθεί χρησιμοποιώντας το εικονίδιο κατάστασης κυκλώματος στην [αρχική οθόνη του AAPS](Screenshots-loop-status).
+The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](../Getting-Started/Screenshots.md#loop-status).
 
 ### Συστάσεις όχι μόνο βάσει μιας μόνο ανάγνωσης του CGM
 
@@ -67,7 +67,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 - Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 - Μπαταρίες για την αντλία έγχυσης ινσουλίνης
-- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## How can I safely and securely attach the CGM/FGM?
 
@@ -246,8 +246,8 @@ Looping can reduce the pump battery faster than normal use because the system in
 
 - clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
 
-- for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Αφαιρέστε και επανατοποθετήστε την μπαταρία 2-3 φορές μέχρι να εμφανιστεί 100% στην οθόνη ή χρησιμοποιήστε το κλειδί της μπαταρίας για βραχυκύκλωμα μπαταρίας πριν την τοποθέτηση εφαρμόζοντας και στους δύο ακροδέκτες για ένα δευτερόλεπτο.
-- δείτε επίσης περισσότερες συμβουλές στο [ συγκεκριμένους τύπους μπαταρίας ](Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+- for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Αφαιρέστε και επανατοποθετήστε την μπαταρία 2-3 φορές μέχρι να εμφανιστεί 100% στην οθόνη ή χρησιμοποιήστε το κλειδί της μπαταρίας για βραχυκύκλωμα μπαταρίας πριν την τοποθέτηση εφαρμόζοντας και στους δύο ακροδέκτες για ένα δευτερόλεπτο.
+- see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
 
 ### Αλλαγή δεξαμενών και σωληνών
 
@@ -255,14 +255,14 @@ The change of cartridge cannot be done via AAPS but must be carried out as befor
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
 - Now nnect the pump and change the reservoir as per pump instructions.
-- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](CPbefore26-pump) in the actions tab just to record the change.
+- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Getting-Started/Screenshots.md#action-tab) in the actions tab just to record the change.
 - Μόλις επανασυνδεθείτε με την αντλία, συνεχίστε με το πάτημα του κουμπιού "Αναστολή (X m)".
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Αυτό σημαίνει ότι δεν διακόπτει ένα τρέχον προσωρινό βασικό ρυθμό. On the Actions (Act) tab, use the [PRIME/FILL button](CPbefore26-pump) to set the amount of insulin needed to fill the infusion set and start the priming. Αν η ποσότητα δεν είναι αρκετή, επαναλάβετε την πλήρωση. Μπορείτε να ορίσετε κουμπιά προεπιλεγμένου ποσού στις Προτιμήσεις > Άλλο > Συμπληρώστε / Αρχίστε την κανονική ποσότητα ινσουλίνης. Ανατρέξτε στο φυλλάδιο οδηγιών στο κουτί της κάνουλας για το πόσες μονάδες θα πρέπει να γίνουν ανάλογα με το μήκος της βελόνας και το μήκος της σωλήνωσης.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Αυτό σημαίνει ότι δεν διακόπτει ένα τρέχον προσωρινό βασικό ρυθμό. On the Actions (Act) tab, use the [PRIME/FILL button](../Getting-Started/Screenshots.md#action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. Αν η ποσότητα δεν είναι αρκετή, επαναλάβετε την πλήρωση. Μπορείτε να ορίσετε κουμπιά προεπιλεγμένου ποσού στις Προτιμήσεις > Άλλο > Συμπληρώστε / Αρχίστε την κανονική ποσότητα ινσουλίνης. Ανατρέξτε στο φυλλάδιο οδηγιών στο κουτί της κάνουλας για το πόσες μονάδες θα πρέπει να γίνουν ανάλογα με το μήκος της βελόνας και το μήκος της σωλήνωσης.
 
 ## Ταπετσαρία
 
-You can find the AAPS wallpaper for your phone on the [phones page](Phones-phone-background).
+You can find the AAPS wallpaper for your phone on the [phones page](../CompatiblePhones/ListOfTestedPhones.md#phone-background).
 
 ## Καθημερινή χρήση
 
@@ -270,11 +270,11 @@ You can find the AAPS wallpaper for your phone on the [phones page](Phones-phone
 
 #### Πώς μπορώ να κάνω ένα μπάνιο ή ντουζ;
 
-Μπορείτε να αφαιρέσετε την αντλία ενώ κάνετε ντους ή μπάνιο. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](FAQ-disconnect-pump).
+Μπορείτε να αφαιρέσετε την αντλία ενώ κάνετε ντους ή μπάνιο. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### Εργασία
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](Profiles-time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.md#time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Αθλητικές δραστηριότητες
 
@@ -289,8 +289,8 @@ So, you would have more carbohydrates on board, but at the same time the loop wo
 When looping you should try these steps:
 
 - Make a [profile switch](../Usage/Profiles.md) < 100%.
-- Set an [activity temp target](temptarget-activity-temp-target) above your standard target.
-- If you are using SMB make sure ["Enable SMB with high temp targets"](Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](Open-APS-features#enable-smb-always) are disabled.
+- Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
+- If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features.md#enable-smb-always) are disabled.
 
 Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
 
@@ -300,7 +300,7 @@ The percentage of the profile switch, the value for your activity temp target an
 
 ### Σεξ
 
-You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](FAQ-disconnect-pump).
+You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](#disconnect-pump).
 
 ### Κατανάλωση Αλκοόλ
 
@@ -316,7 +316,7 @@ You can remove the pump to be 'free', but you should tell AAPS so that the IOB c
 
 #### Πώς μπορώ να χρησιμοποιώ το κλειστό σύστημα ρύθμισης σακχάρου (loop) το βράδυ, χωρίς να εκτίθεμαι στην ακτινοβολία του κινητού και του WiFi;
 
-Πολλοί χρήστες γυρίζουν το τηλέφωνο τους σε λειτουργία αεροπλάνου το βράδυ. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Πολλοί χρήστες γυρίζουν το τηλέφωνο τους σε λειτουργία αεροπλάνου το βράδυ. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Ενεργοποιήστε τη "λειτουργία πτήσης" στο κινητό σας.
 2. Περιμένετε μέχρι να ενεργοποιηθεί η λειτουργία του αεροπλάνου.
@@ -350,11 +350,11 @@ You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or
 
 ## My problem is not listed here.
 
-[Information to get help.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users.md#im-getting-stuck-what-do-i-do-who-can-i-ask)
 
 ## My problem is not listed here but I found the solution
 
-[Information to get help.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users.md#im-getting-stuck-what-do-i-do-who-can-i-ask)
 
 **Remind us to add your solution to this list!**
 
@@ -372,7 +372,7 @@ Copy on an internet drive (Dropbox, Google etc) : all the apks you used to insta
 
 Please
 
-- check [Troubleshooting Android Studio](troubleshooting_androidstudio-troubleshooting-android-studio) for typical errors and
+- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) for typical errors and
 - the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ## I'm stuck on an objective and need help.
@@ -385,7 +385,7 @@ Open the hamburger menu, start the Configuration wizard and enter new password w
 
 ## How to reset the password in AAPS v3.x
 
-You find the documentation [here](update3_0-reset-master-password).
+You find the documentation [here](../Installing-AndroidAPS/update3_0.md#reset-master-password).
 
 ## My link/pump/pod is unresponsive (RL/OL/EmaLink…)
 

@@ -5,7 +5,7 @@
 
 * 向文件團隊發送加入請求。 為此，點擊所需語言的國旗，然後在下一頁的右上角點擊“加入”按鈕。 請指定語言，提供一些關於你的資訊以及你的 AAPS 經驗，並說明你想成為翻譯者還是校對者（僅限具有翻譯技能且為進階 AAPS 用戶的人成為校對者）。
 
-```{admonition} 審閱時間:class: note
+```{admonition} 審閱時間 :class: note
 
 審閱是一個手動步驟。 作為非營利組織，我們不提供 SLA，但一般情況下審閱會在 1 天內完成。 如果沒有，請透過 Facebook 或 Discord 聯繫文件團隊。
 
@@ -39,7 +39,7 @@
     
         ![批准文本](./images/translations-proofreading.png)
     
-    當校對者批准翻譯後，他將被添加到下一版本的 AAPS 中。
+    當校對者批准翻譯後，他會添加到下一版本的 AAPS 中。
     
     (translations-translation-of-the-documentation)=
     ## Translation of the documentation
@@ -51,13 +51,13 @@
     
     * Translate sentences by sentence
     
-        1. 黃色文本是你當前正在處理的文本。
+        1. 黃色文本是你目前正在處理的文本。
     
         1. 綠色文本是已翻譯的文本。 你不需要再次翻譯這些。
     
         1. 紅色文本是仍需翻譯的文本。
     
-        1. 這是你當前正在處理的原始文本
+        1. 這是你目前正在處理的原始文本
     
         1. 這是你正在準備的翻譯。 你可以從上方複製文本或選擇下方的建議之一。
     
@@ -68,7 +68,7 @@
     
     * 翻譯的頁面不會在文件中發布，直到
     
-        1. 翻譯已被校對
+        1. 翻譯已校對
     
         1. Crowdin 和 Github 之間的同步運作已完成（每小時一次），這會為 Github 建立 PR。
     

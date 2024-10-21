@@ -33,9 +33,9 @@
 
 在最終用戶許可協議中，有關於使用 **AAPS** 的法律方面的重要訊息。 請仔細閱讀。
 
-如果你不理解或不同意最終用戶許可協議，請不要使用 **AAPS**！
+如果你不暸解或不同意最終用戶許可協議，請不要使用 **AAPS**！
 
-如果你理解並同意，請點擊“我理解並同意”按鈕並繼續設定嚮導：
+如果你暸解並同意，請點擊“我暸解並同意”按鈕並繼續設定嚮導：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125650.png)
 
@@ -195,7 +195,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 在此示例中，我們選擇Nightscout作為報告伺服器，並將進行配置。
 
 ```{admonition} Make sure to choose the correct **NSClient** version for your needs! 
-:class 注意
+:class Note
 點擊 [這裡](./Releasenotes.md) 查看 **AAPS** 3.2.0.0 的版本說明，這些說明解釋了頂部選項 **NSClient** （這是「v1」，雖然沒有明確標示）與第二個選項 **NSClient v3** 之間的差異。
 
 Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout 監控或發送遠端治療（例如:父母或看護使用 **AAPS** 幫助孩子），在這種情況下，請選擇第一個選項「**NSClient**」，直到進一步通知為止。
@@ -293,7 +293,7 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 選擇在幫浦中使用的胰島素類型。
 
-胰島素名稱應該很好理解。
+胰島素名稱應該很好暸解。
 
 ```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger
@@ -306,7 +306,7 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ### 血糖來源
 
-選擇你使用的血糖來源。 請閱讀[血糖來源](../Configuration/BG-Source.md)的文檔。
+選擇你使用的血糖來源。 Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
 由於有多個選項可用，因此我們不會在此詳細解釋所有選項的配置。 在這裡我們使用Dexcom G6與BYODA應用程式的示例：
 
@@ -428,7 +428,7 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 否則，請使用左上角的箭頭退出設定嚮導，讓 **AAPS** 首先顯示一些血糖值。 你可以隨時返回或使用直接配置選項（不使用嚮導）。
 
-請閱讀你的[胰島素幫浦](../Getting-Started/Pump-Choices.md)文檔。
+Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
 
 按“下一步”進入下一個螢幕。
 
@@ -471,7 +471,7 @@ OpenAPS AMA 是最基本的演算法，不支援微量注射來修正高值。�
 
 ![image](../images/setup-wizard/Screenshot_20231202_144049.png)
 
-### 敏感度檢測
+### 敏感度偵測
 
 讓“敏感度Oref1”保持為敏感度外掛的標準選項。
 

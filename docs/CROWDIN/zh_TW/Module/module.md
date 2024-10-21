@@ -47,23 +47,23 @@ SGLT-2 抑制劑，又稱格列佛新類，會抑制腎臟對葡萄糖的再吸�
 
 AAPS **目前**適用於以下幫浦：
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)  （舊驅動程式，需使用額外的 Ruffy 應用程式）
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) （新驅動程式，自 AndroidAPS v.3.2 開始提供）
-- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
-- [DanaR](../Configuration/DanaR-Insulin-Pump.md)
-- [DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
-- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md)
-- [Diaconn G8 ](../Configuration/DiaconnG8.md)
-- [EOPatch2](../Configuration/EOPatch2.md)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) （需要[額外的通訊設備](module-additional-communication-device)）
-- [Omnipod DASH](../Configuration/OmnipodDASH.md)
-- [Medtrum Nano](../Configuration/MedtrumNano.md)
-- [Medtrum 300U](../Configuration/MedtrumNano.md)
-- 某些舊型[美敦力](../Configuration/MedtronicPump.md)幫浦（需要[額外的通訊設備](module-additional-communication-device)）
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)  (Old driver that uses the additional Ruffy app)
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (New driver, available starting with AndroidAPS v.3.2)
+- [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
+- [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md)
+- [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+- [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+- [Diaconn G8 ](../CompatiblePumps/DiaconnG8.md)
+- [EOPatch2](../CompatiblePumps/EOPatch2.md)
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  ([additional communication device](#additional-communication-device) needed)
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+- [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)
+- [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)
+- Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#additional-communication-device) needed)
 
 如果未提到額外的通訊設備，那麼胰島素幫浦與 AAPS 之間的通訊是基於 Android 的內建藍牙堆疊，不需要額外的通訊設備來轉換通訊協議。
 
-**其他幫浦** 有潛力與 AAPS 一同使用，列在[未來可能的幫浦](../Getting-Started/Future-possible-Pump-Drivers.md)頁面中。
+**Other pumps** that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md) page.
 
 (module-additional-communication-device)=
 #### 額外的通訊設備
@@ -91,18 +91,17 @@ Combo、Insight 和舊型美敦力幫浦都是穩定且可用於閉環系統的�
 
 ### 血糖來源
 
-這只是與 AAPS 相容的所有 CGM/FGM 的簡短概述。 有關更多詳情，請參閱[這裡](../Configuration/BG-Source.md)。 簡單提示：如果你能在 xDrip+ 應用程式或 Nightscout 網站上顯示你的血糖資料，則可以在 AAPS 中選擇 xDrip+（或使用網路連線的 Nightscout）作為血糖來源。
+這只是與 AAPS 相容的所有 CGM/FGM 的簡短概述。 For further details, look [here](../Getting-Started/CompatiblesCgms.md). 簡單提示：如果你能在 xDrip+ 應用程式或 Nightscout 網站上顯示你的血糖資料，則可以在 AAPS 中選擇 xDrip+（或使用網路連線的 Nightscout）作為血糖來源。
 
-- [Dexcom G7](../Hardware/DexcomG7.md)：可與 xDrip+ 或修補版應用程式配合使用
-- [Dexcom G6](../Hardware/DexcomG6.md)：建議使用版本 3.0 的 BOYDA（詳見[版本說明](Releasenotes-important-hints-3-0-0)）。 xDrip+ 至少需要 2022.01.14 版本或更高版本
-- [Dexcom G5](../Hardware/DexcomG5.md)：他可以與 xDrip+ 應用程式或修補版 Dexcom 應用程式配合使用
-- [Dexcom G4](../Hardware/DexcomG4.md)：這些傳感器已經很舊了，但你可以找到如何將他們與 xDrip+ 應用程式一起使用的說明
-- [Libre 3](../Hardware/Libre3.md)：他可以與 xDrip+ 一起使用（不需要發射器）
-- [Libre 2](../Hardware/Libre2.md)：他可以與 xDrip+ 一起使用（不需要發射器）
-- [Libre 1](../Hardware/Libre1.md)：你需要一個發射器，例如 Bluecon 或 MiaoMiao（自己製作或購買）以及 xDrip+ 應用程式
-- [Eversense](../Hardware/Eversense.md)：目前僅能與 ESEL 應用程式和修補版 Eversense 應用程式結合使用（不適用於 Dana RS 和 LineageOS，但 DanaRS 和 Android 或 Combo 和 Lineage OS 配合使用效果良好）
-- [Enlite（MM640G/MM630G）](../Hardware/MM640g.md)：相當複雜，需要很多額外的設備
-- [PocTech](../Hardware/PocTech.md)
+- [Dexcom G7](../CompatibleCgms/DexcomG7.md): Works with xDrip+ or patched app
+- [Dexcom G6](../CompatibleCgms/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#version-300) for details). xDrip+ 至少需要 2022.01.14 版本或更高版本
+- [Dexcom G5](../CompatibleCgms/DexcomG5.md): It works with xDrip+ app or patched Dexcom app
+- [Libre 3](../CompatibleCgms/Libre3.md): It works with xDrip+ (no transmitter needed)
+- [Libre 2](../CompatibleCgms/Libre2.md): It works with xDrip+ (no transmitter needed)
+- [Libre 1](../CompatibleCgms/Libre1.md): You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
+- [Eversense](../CompatibleCgms/Eversense.md): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
+- [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md): quite complicated with a lot of extra stuff
+- [PocTech](../CompatibleCgms/PocTech.md)
 
 ### Nightscout
 
@@ -110,11 +109,11 @@ Nightscout 是一個開源網頁應用程式，可以記錄並顯示你的 CGM �
 
 Nightscout 與其他模組獨立運作。 要完成目標 1，你將需要他。
 
-有關如何配置 Nightscout 以與 AAPS 一起使用的更多訊息，請參閱[這裡](../Installing-AndroidAPS/Nightscout.md)。
+Additional information on how to configure Nightscout for use with AAPS can be found [here](../SettingUpAaps/Nightscout.md).
 
 ### AAPS-.apk 檔案
 
-系統的基本組件。 在安裝應用程式之前，你需要先生成 apk 檔案（這是 Android 應用程式的檔案擴展名）。 說明位於[這裡](../Installing-AndroidAPS/Building-APK.md)。
+系統的基本組件。 在安裝應用程式之前，你需要先生成 apk 檔案（這是 Android 應用程式的檔案擴展名）。 Instructions are  [here](../SettingUpAaps/BuildingAaps.md).
 
 ## 可選模組
 
@@ -130,7 +129,7 @@ Nightscout 與其他模組獨立運作。 要完成目標 1，你將需要他。
 
 ### xDrip+
 
-即使你不需要將 xDrip+ 應用程式作為血糖來源，你仍然可以使用他來設置警報或顯示血糖資料。 你可以設置任意多的警報，指定警報應該啟動的時間，是否可以覆蓋靜音模式等。 有關一些 xDrip+ 資訊，請參閱[這裡](../Configuration/xdrip.md)。 請注意，這款應用程式的文檔並非總是最新的，因為其進展相當快速。
+即使你不需要將 xDrip+ 應用程式作為血糖來源，你仍然可以使用他來設置警報或顯示血糖資料。 你可以設置任意多的警報，指定警報應該啟動的時間，是否可以覆蓋靜音模式等。 Some xDrip+ information can be found [here](../CompatibleCgms/xDrip.md). 請注意，這款應用程式的文檔並非總是最新的，因為其進展相當快速。
 
 ## 等待模組期間該做什麼
 
@@ -138,4 +137,4 @@ Nightscout 與其他模組獨立運作。 要完成目標 1，你將需要他。
 
 你可以繼續閱讀這裡的文檔，與其他閉環系統用戶線上或離線交流，或[閱讀](../Where-To-Go-For-Help/Background-reading.md)文檔或其他用戶撰寫的內容（即使需要小心，不是所有內容都正確或適合你複製）。
 
-**完成了嗎？** 如果你已經將所有 AAPS 組件組裝好（恭喜！）或至少有足夠的組件來開始使用開環模式，那麼在每個新目標之前，你應該先閱讀[目標描述](../Usage/Objectives.md)，然後設置你的[硬體](index-component-setup)。
+**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your [hardware](index-component-setup).

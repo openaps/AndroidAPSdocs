@@ -4,15 +4,15 @@
 
 Android APS (**AAPS**) est une application open source pour les personnes vivant avec un diabète insulino-dépendant. C'est un système de pancréas artificiel ("artificial pancreas system" ou APS) qui fonctionne sur smartphone Android. **AAPS** utilise l'algorithme du logiciel openAPS et s'efforce de reproduire ce que fait un pancréas sain : maintenir la glycémie dans un intervalle correct pour être en bonne santé, via l'administration automatisée de l'insuline. Pour utiliser **AAPS**, vous aurez besoin de **trois** appareils compatibles : un téléphone Android, une pompe à insuline approuvée par les autorités médicales et un capteur permettant la mesure du glucose en continu (MGC).
 
-Cette documentation explique comment installer et utiliser **AAPS**. Vous pouvez naviguer dans la documentation de **AAPS** soit via le menu de gauche (et la fonction pratique "**Rechercher docs**"), soit en utilisant l'[index](Index-of-the-AAPS-Documentation.md) en bas de cette page.
+Cette documentation explique comment installer et utiliser **AAPS**. Vous pouvez naviguer dans la documentation de **AAPS** soit via le menu de gauche (et la fonction pratique "**Rechercher docs**"), soit en utilisant l'[index](#aaps-documentation-index) en bas de cette page.
 
 ## Vue d'ensemble de la documentation AAPS ("Les docs")
 
-Dans le chapitre 2) "Démarrage", l'[Introduction](introduction.md) explique de manière générale à quoi sert un système de pancréas artificiel (APS). Cette page décrit le contexte global de la boucle, pourquoi **AAPS** a été développé, compare **AAPS** à d'autres systèmes, et parle de la sûreté. Elle donne des suggestions sur la façon d'aborder le sujet d'**AAPS** avec votre équipe médicale, explique pourquoi vous devez compiler l'application **AAPS** vous-même plutôt que de simplement la télécharger, et donne un aperçu basique de la façon dont communiquent les différents éléments d'un système **AAPS**. Elle aborde également l'accessibilité et qui peut bénéficier de l'utilisation d'**AAPS**.
+Dans le chapitre 2) "Démarrage", l'[Introduction](Getting-Started/Introduction.md) explique de manière générale à quoi sert un système de pancréas artificiel (APS). Cette page décrit le contexte global de la boucle, pourquoi **AAPS** a été développé, compare **AAPS** à d'autres systèmes, et parle de la sûreté. Elle donne des suggestions sur la façon d'aborder le sujet d'**AAPS** avec votre équipe médicale, explique pourquoi vous devez compiler l'application **AAPS** vous-même plutôt que de simplement la télécharger, et donne un aperçu basique de la façon dont communiquent les différents éléments d'un système **AAPS**. Elle aborde également l'accessibilité et qui peut bénéficier de l'utilisation d'**AAPS**.
 
-[Se préparer à AAPS](preparing.md) donne plus de détails sur les considérations de sûreté, ainsi que sur les téléphones, les MGC (Mesure de Glycémie en Continu) et les pompes à insuline qui sont compatibles avec **AAPS**. Cette page donne un aperçu du processus que vous allez suivre, et vous donne une idée du temps nécessaire jusqu'à pouvoir profiter pleinement de toutes les fonctionnalités de **AAPS**. Cette section vous prépare techniquement à assembler aussi rapidement et efficacement que possible les différents éléments de votre **AAPS**. Le sous-chapitre [Configuration MGC](Configuration/BG-Source.md) explique comment optimiser la configuration de votre capteur de glycémie et quelles options de lissage sont les meilleures.
+[Preparing for AAPS](./Getting-Started/PreparingForAaps.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. Cette page donne un aperçu du processus que vous allez suivre, et vous donne une idée du temps nécessaire jusqu'à pouvoir profiter pleinement de toutes les fonctionnalités de **AAPS**. Cette section vous prépare techniquement à assembler aussi rapidement et efficacement que possible les différents éléments de votre **AAPS**. The subsection [CGM Configuration](./Getting-Started/CompatiblesCgms.md) explains how to optimse CGM setup and what smoothing options are best.
 
-Maintenant que vous avez une bonne compréhension du processus, vous pouvez démarrer l'assemblage de votre boucle **AAPS**. Vous trouverez les instructions détaillées pour ce faire dans le chapitre **3) Installation d'AAPS**. On y parlera du choix et du [serveur de reporting](setting-up-the-reporting-server.md) (Nightscout ou Tidepool) afin que vous puissiez analyser et partager vos données, de la préparation de votre ordinateur pour installer Android Studio, de la compilation elle-même de l'application AAPS et du transfert de l'application AAPS sur votre téléphone. Ce chapitre décrit également la configuration de l'application **AAPS** à l'aide de l'Assistant de configuration, pour qu'il puisse communiquer avec votre application MGC et avec une pompe à insuline réelle ou virtuelle, ainsi qu'en liant **AAPS** à votre serveur de reporting. Vous serez ensuite petit à petit guidé dans l'utilisation d'**AAPS**, via un processus progressif, sécurisé et soigneusement calibré. Ce processus est conçu pour s'assurer que vous/votre enfant connaissez bien et êtes à l'aise dans la navigation entre les différents menus et sous-menus de configuration avant de passer à la phase suivante. Ces phases sont communément appelées Objectifs, et visent à vous faire acquérir suffisamment d'expérience pour pouvoir commencer à utiliser les fonctionnalités les plus avancées de l'application. Ces objectifs sont conçus spécifiquement de manière à débloquer progressivement plus de possibilités dans **AAPS** et à passer de la boucle ouverte à la boucle fermée.
+Maintenant que vous avez une bonne compréhension du processus, vous pouvez démarrer l'assemblage de votre boucle **AAPS**. Vous trouverez les instructions détaillées pour ce faire dans le chapitre **3) Installation d'AAPS**. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting your computer ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. Ce chapitre décrit également la configuration de l'application **AAPS** à l'aide de l'Assistant de configuration, pour qu'il puisse communiquer avec votre application MGC et avec une pompe à insuline réelle ou virtuelle, ainsi qu'en liant **AAPS** à votre serveur de reporting. Vous serez ensuite petit à petit guidé dans l'utilisation d'**AAPS**, via un processus progressif, sécurisé et soigneusement calibré. Ce processus est conçu pour s'assurer que vous/votre enfant connaissez bien et êtes à l'aise dans la navigation entre les différents menus et sous-menus de configuration avant de passer à la phase suivante. Ces phases sont communément appelées Objectifs, et visent à vous faire acquérir suffisamment d'expérience pour pouvoir commencer à utiliser les fonctionnalités les plus avancées de l'application. Ces objectifs sont conçus spécifiquement de manière à débloquer progressivement plus de possibilités dans **AAPS** et à passer de la boucle ouverte à la boucle fermée.
 
 Le chapitre 4) [Fonctionnalités à distance](remote-control.md) met en avant un atout majeur d'**AAPS**. Il y a tout un éventail de possibilités pour envoyer des commandes à distance à **AAPS**, ou simplement pour en suivre les données. Ceci est également utile pour les aidants qui souhaitent utiliser **AAPS** pour les mineurs, et pour les adultes diabétiques qui souhaitent soit surveiller leur glycémie (et d'autres mesures) de manière plus pratique que sur leur téléphone (sur une montre, dans la voiture _etc._), ou encore que d'autres personnes de leur entourage surveillent également les données. Ce chapitre fournit également des conseils pour utiliser Android Auto afin que vous puissiez afficher la glycémie dans la voiture.
 
@@ -21,7 +21,7 @@ Le chapitre **5) Utilisation d'AAPS** couvre les principales fonctionnalités d'
 
 Le chapitre **6) Maintenance d'AAPS** explique comment exporter et sauvegarder vos paramètres (ce qui est très important en cas de perte/de casse de votre téléphone), donne les dernières notes de version et la procédure pour mettre à jour **AAPS**. En moyenne, vous pouvez vous attendre à une nouvelle version et 2 à 3 mises à jour par an. Comme pour tout logiciel, vous devez effectuer ces mises à jour, car elles corrigent des bogues mineurs et apportent des améliorations à **AAPS**. Sur la page de dépannage, il y a une section dédiée "Mise à jour" avec les questions fréquentes.
 
-Le chapitre **7) [Obtenir de l'aide](Where-To-Go-For-Help/Connect-with-other-users.html)** vous aidera à trouver l'endroit approprié pour demander de l'aide à propos d'**AAPS**. C'est très important pour que vous puissiez entrer en contact avec d'autres utilisateurs aussi rapidement que possible, clarifier les questions et résoudre les écueils communs. Beaucoup de gens utilisent déjà **AAPS** avec succès, mais chacun a eu à un moment une question à laquelle il ou elle ne savait pas répondre seul(e). Grâce au grand nombre d'utilisateurs, les temps de réponse sont généralement très courts, de l'ordre de quelques heures. N'ayez pas peur de demander de l’aide, il n’y a pas de question stupide ! Nous encourageons les utilisateurs, quelque soit leur niveau, à poser autant de questions qu’ils jugent nécessaire pour les aider à fonctionner en toute sécurité. Ce chapitre comprend une section de résolution de problèmes d'ordre général avec **AAPS** et **AAPSClient** (une application de suivi) ainsi que des explications sur la façon d'envoyer vos données **AAPS** (fichiers de logs ou journaux) aux développeurs pour investigation, si vous pensez qu'un problème technique avec **AAPS** nécessite un examen.
+Le chapitre **7) [Obtenir de l'aide](Where-To-Go-For-Help/Connect-with-other-users.md)** vous aidera à trouver l'endroit approprié pour demander de l'aide à propos d'**AAPS**. C'est très important pour que vous puissiez entrer en contact avec d'autres utilisateurs aussi rapidement que possible, clarifier les questions et résoudre les écueils communs. Beaucoup de gens utilisent déjà **AAPS** avec succès, mais chacun a eu à un moment une question à laquelle il ou elle ne savait pas répondre seul(e). Grâce au grand nombre d'utilisateurs, les temps de réponse sont généralement très courts, de l'ordre de quelques heures. N'ayez pas peur de demander de l’aide, il n’y a pas de question stupide ! Nous encourageons les utilisateurs, quelque soit leur niveau, à poser autant de questions qu’ils jugent nécessaire pour les aider à fonctionner en toute sécurité. Ce chapitre comprend une section de résolution de problèmes d'ordre général avec **AAPS** et **AAPSClient** (une application de suivi) ainsi que des explications sur la façon d'envoyer vos données **AAPS** (fichiers de logs ou journaux) aux développeurs pour investigation, si vous pensez qu'un problème technique avec **AAPS** nécessite un examen.
 
 La section **8) Liens utiles** offre un accès rapide à certaines pages. Parmi celles-ci, le [Glossaire](Getting-Started/Glossary.md), une liste des acronymes (ou abréviations) utilisés dans **AAPS**. C'est ici que vous trouverez ce que signifient les termes SI ou CT, par exemple. Cette section contient également des liens vers des captures d'écran utiles et d'autres données.
 
@@ -29,14 +29,14 @@ Le chapitre 9) parle des **Options avancées d'AAPS** telles que comment passer 
 
 Dans le chapitre 10) [Comment soutenir AAPS](make-a-PR.md), nous fournissons des informations pour que vous puissiez soutenir ce projet. Vous pouvez faire un don d'argent, d'équipement ou de connaissances. Vous pouvez suggérer/apporter des modifications à la documentation vous-même, aider avec [la traduction de la documentation](translations.md) ou partager vos données via le projet Open Humans.
 
-Le chapitre 11 contient de la documentation additionnelle ou archivée, dont une page pour les [professionnels de santé](Resources/clinician-guide-to-AAPS.md) qui s'intéressent à la technologie du pancréas artificiel open source comme **AAPS**, ou pour les patients qui veulent partager ces informations avec leur équipe médicale. Ce sujet est également abordé dans l'introduction. D'autres références et ressources sur le diabète et la boucle sont listées dans le chapitre 12).
+Le chapitre 11 contient de la documentation additionnelle ou archivée, dont une page pour les [professionnels de santé](Resources/clinician-guide-to-AndroidAPS.md) qui s'intéressent à la technologie du pancréas artificiel open source comme **AAPS**, ou pour les patients qui veulent partager ces informations avec leur équipe médicale. Ce sujet est également abordé dans l'introduction. D'autres références et ressources sur le diabète et la boucle sont listées dans le chapitre 12).
 
 
- ### Prêt à commencer avec **AAPS**? Apprenez-en plus sur **AAPS** dans l'[Introduction](introduction.md).
+ ### Prêt à commencer avec **AAPS**? Apprenez-en plus sur **AAPS** dans l'[Introduction](Getting-Started/Introduction.md).
 
 ```{admonition} SAFETY NOTICE
 :class: AVIS DE SÉCURITÉ
-La sécurité de **AAPS** repose sur les fonctionnalités de sécurité de votre matériel (téléphone, pompe, MCG). Utilisez uniquement une pompe à insuline et un MGC approuvés par les autorités sanitaires, en bon état de fonctionnement. N'utilisez pas de pompes à insuline ni de capteurs MGC endommagés, modifiés ou fabriqués maison. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user. 
+La sécurité de **AAPS** repose sur les fonctionnalités de sécurité de votre matériel (téléphone, pompe, MCG). Utilisez uniquement une pompe à insuline et un MGC approuvés par les autorités sanitaires, en bon état de fonctionnement. N'utilisez pas de pompes à insuline ni de capteurs MGC endommagés, modifiés ou fabriqués maison. Utilisez uniquement du matériel d'origine pour les consommables (applicateurs, cathéters et réservoirs d'insuline), approuvés par le fabricant de votre pompe et de votre MGC. L'utilisation de matériel non testé ou modifié peut entraîner un manque de précision et des erreurs de dosage de l'insuline, ce qui représente un risque important pour l'utilisateur. 
 
 N'utilisez pas **AAPS** si vous prenez des inhibiteurs de SGLT-2 (gliflozines), car ils font baisser la glycémie. Le risque d'acidocétose diabétique est accru à cause de la baisse de l'insuline administrée ; et celui d'hypoglycémie est accru à cause de la baisse de la glycémie. 
 ```
@@ -57,31 +57,31 @@ Toutes les informations et le code décrits ici le sont à des fins d'informatio
 ## Index de la documentation AAPS
 
 ```{toctree}
-:caption: 1) Changer la langue
+:caption: 1) Change language
 
-Changer la langue <./changelanguage.md>
+Change language <./ChangeLanguage/ChangeLanguage.md>
 ```
 ```{toctree}
-:caption: 2) Démarrage
+:caption: 2) Getting started
 
-Introduction aux APS et à AAPS <./introduction.md>
-Se préparer à AAPS <preparing.md>
-Pompes compatibles <./Getting-Started/Pump-Choices.md>
-MGCs compatibles <./Configuration/BG-Source.md>
-Téléphones compatibles <./Hardware/Phoneconfig.md>
+Introduction to AAPS <./Getting-Started/Introduction.md>
+Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
+Compatible pumps <./Getting-Started/CompatiblePumps.md>
+Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
+Compatible phones  <./Getting-Started/Phones.md>
 ```
 
 ```{toctree}
-:caption: 3) Installation d'AAPS
+:caption: 3) Setting up AAPS
 
-Serveur de reporting <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
-Compilation d'AAPS <./Installing-AndroidAPS/building-AAPS.md>
-Transfert et Installation d'AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
-Assistant de configuration <./Installing-AndroidAPS/setup-wizard.md>
-Modifier la configuration AAPS <./Installing-AndroidAPS/change-configuration.md>
-- Générateur de configuration <./Configuration/Config-Builder.md>
-- Préférences <./Configuration/Preferences.md>
-Compléter les objectifs <./Usage/completing-the-objectives.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Setup Wizard<./SettingUpAaps/SetupWizard.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -132,17 +132,15 @@ Au secours !
 ```
 
 ```{toctree}
-:caption: 8) Liens utiles
+:caption: 8) Useful AAPS Links
 
-Glossaire <./Getting-Started/Glossary.md>
-Écrans d'AAPS <./Getting-Started/Screenshots.md>
-Pompes compatibles <./Getting-Started/Pump-Choices.md>
-Astuces Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-MGC compatibles <./Configuration/BG-Source.md>
-Téléphones compatible <./Hardware/Phoneconfig.md>
-Utiliser Wear AAPS sur une montre connectée <./Configuration/Watchfaces.md>
-Personnaliser votre cadran AAPS <./Usage/Custom_Watchface_Reference.md>
-Configuration de xDrip <./Configuration/xdrip.md>
+Glossary <./Getting-Started/Glossary.md>
+AAPS Screens <./Getting-Started/Screenshots.md>
+Your AAPS profile 
+Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+Operation of Wear AAPS on a Smartwatch <./Configuration/Watchfaces.md>
+How to customise your AAPS watchface <./Usage/Custom_Watchface_Reference.md>
+xDrip Settings <./CompatibleCgms/xDrip.md>
 Autotune <./Usage/autotune.md>
 
 ```
@@ -168,14 +166,19 @@ Projet Open Humans <./Configuration/OpenHumans.md>
 ```
 
 ```{toctree}
-:caption: 11) Documentation additionnelle/archivée
+:caption: 11) Additional/archive documentation
 
-Compte Google dédié pour AAPS (optionnel)<./Installing-AndroidAPS/Dedicated-Google-account-for-AAPS.md>
-Careportal (déprécié) <./Usage/CPbefore26.md>
-Pour les professionels de santé (obsolète) <./Resources/clinician-guide-to-AndroidAPS.md>
-Automatisation avec des applications tierces <./Usage/automationwithapp.md>
-Vérifications après la mise à jour vers AAPS 3.0 <./Installing-AndroidAPS/update3_0.md>
-Vérifications après la mise à jour vers AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
+Dedicated Google account for AAPS (optional)<./SettingUpAaps/DedicatedGoogleAccountForAaps.md>
+
+Careportal (discontinued) <./Usage/CPbefore26.md>
+
+For Clinicians (outdated) <./Resources/clinician-guide-to-AndroidAPS.md>
+
+Automation with 3rd party apps <./Usage/automationwithapp.md>
+
+Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+
+Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 
 ```
 

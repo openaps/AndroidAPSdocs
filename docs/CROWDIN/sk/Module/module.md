@@ -47,23 +47,23 @@ Any problems with the spreadsheet please send an email to [hardware@androidaps.o
 
 AAPS **currently** works with
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)  (Old driver that uses the additional Ruffy app)
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) (New driver, available starting with AndroidAPS v.3.2)
-- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
-- [DanaR](../Configuration/DanaR-Insulin-Pump.md)
-- [DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
-- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md)
-- [Diaconn G8 ](../Configuration/DiaconnG8.md)
-- [EOPatch2](../Configuration/EOPatch2.md)
-- [Omnipod Eros](../Configuration/OmnipodEros.md)  ([additional communication device](module-additional-communication-device) needed)
-- [Omnipod DASH](../Configuration/OmnipodDASH.md)
-- [Medtrum Nano](../Configuration/MedtrumNano.md)
-- [Medtrum 300U](../Configuration/MedtrumNano.md)
-- Certain older [Medtronic](../Configuration/MedtronicPump.md) ([additional communication device](module-additional-communication-device) needed)
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)  (Old driver that uses the additional Ruffy app)
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (New driver, available starting with AndroidAPS v.3.2)
+- [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
+- [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md)
+- [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+- [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+- [Diaconn G8 ](../CompatiblePumps/DiaconnG8.md)
+- [EOPatch2](../CompatiblePumps/EOPatch2.md)
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  ([additional communication device](#additional-communication-device) needed)
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+- [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)
+- [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)
+- Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#additional-communication-device) needed)
 
 If no additional communication device  is mentioned the communication betweeen insulin pump and AAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
 
-**Other pumps** that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../Getting-Started/Future-possible-Pump-Drivers.md) page.
+**Other pumps** that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md) page.
 
 (module-additional-communication-device)=
 #### Additional communication device
@@ -91,18 +91,17 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 
 ### BG Source
 
-This is just a short overview of all compatible CGMs/FGM with AAPS. For further details, look [here](../Configuration/BG-Source.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
+This is just a short overview of all compatible CGMs/FGM with AAPS. For further details, look [here](../Getting-Started/CompatiblesCgms.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
 
-- [Dexcom G7](../Hardware/DexcomG7.md): Works with xDrip+ or patched app
-- [Dexcom G6](../Hardware/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](Releasenotes-important-hints-3-0-0) for details). xDrip+ must be at least version 2022.01.14 or newer
-- [Dexcom G5](../Hardware/DexcomG5.md): It works with xDrip+ app or patched Dexcom app
-- [Dexcom G4](../Hardware/DexcomG4.md): These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-- [Libre 3](../Hardware/Libre3.md): It works with xDrip+ (no transmitter needed)
-- [Libre 2](../Hardware/Libre2.md): It works with xDrip+ (no transmitter needed)
-- [Libre 1](../Hardware/Libre1.md): You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
-- [Eversense](../Hardware/Eversense.md): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-- [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): quite complicated with a lot of extra stuff
-- [PocTech](../Hardware/PocTech.md)
+- [Dexcom G7](../CompatibleCgms/DexcomG7.md): Works with xDrip+ or patched app
+- [Dexcom G6](../CompatibleCgms/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#version-300) for details). xDrip+ must be at least version 2022.01.14 or newer
+- [Dexcom G5](../CompatibleCgms/DexcomG5.md): It works with xDrip+ app or patched Dexcom app
+- [Libre 3](../CompatibleCgms/Libre3.md): It works with xDrip+ (no transmitter needed)
+- [Libre 2](../CompatibleCgms/Libre2.md): It works with xDrip+ (no transmitter needed)
+- [Libre 1](../CompatibleCgms/Libre1.md): You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
+- [Eversense](../CompatibleCgms/Eversense.md): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
+- [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md): quite complicated with a lot of extra stuff
+- [PocTech](../CompatibleCgms/PocTech.md)
 
 ### Nightscout
 
@@ -110,11 +109,11 @@ Nightscout is a open source web application that can log and display your CGM da
 
 Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
 
-Additional information on how to configure Nightscout for use with AAPS can be found [here](../Installing-AndroidAPS/Nightscout.md).
+Additional information on how to configure Nightscout for use with AAPS can be found [here](../SettingUpAaps/Nightscout.md).
 
 ### AAPS-.apk file
 
-The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  [here](../Installing-AndroidAPS/Building-APK.md).
+The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  [here](../SettingUpAaps/BuildingAaps.md).
 
 ## Optional Modules
 
@@ -130,7 +129,7 @@ Any problems with the spreadsheet please send an email to [hardware@androidaps.o
 
 ### xDrip+
 
-Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../Configuration/xdrip.md). Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../CompatibleCgms/xDrip.md). Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
 
 ## What to do while waiting for modules
 
@@ -138,4 +137,4 @@ It sometimes takes a while to get all modules for closing the loop. But no worri
 
 You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../Where-To-Go-For-Help/Background-reading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
-**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.md) before each new Objective and setup up your [hardware](index-component-setup).
+**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your [hardware](index-component-setup).

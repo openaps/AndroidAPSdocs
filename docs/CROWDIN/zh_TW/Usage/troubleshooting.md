@@ -1,33 +1,33 @@
-# 疑難排解
+# 問題排除
 
-你可以在許多 wiki 頁面上找到疑難排解的資訊。 此頁面是幫助你找到解決問題資訊的鏈接集合。
+你可以在許多 wiki 頁面上找到問題排除的資訊。 此頁面是幫助你找到解決問題資訊的鏈接集合。
 
-額外的有用資訊可能也會在 [FAQ](../Getting-Started/FAQ.html) 中找到。
+Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.md).
 
 ## AAPS 應用程式
 
 ### 建立 & 更新
 
-* [遺失的密鑰庫](troubleshooting_androidstudio-lost-keystore)
-* [疑難排解 AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
+* [遺失的密鑰庫](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore)
+* [問題排除 AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
 ### 設定
 * [設定檔](Profiles-troubleshooting-profile-errors)
 
   ![錯誤：基礎率未對齊到整點](../images/Screen_DifferentPump.png)
 
-* [幫浦 - 來自不同幫浦的資料](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
+* [幫浦 - 來自不同幫浦的資料](../Installing-AndroidAPS/update3_0.md#failure-message-data-from-different-pump)
 
   ![錯誤訊息：來自不同幫浦的資料](../images/BasalNotAlignedToHours2.png)
 
-* [Nightscout 用戶端](../Usage/Troubleshooting-NSClient.html)
+* [Nightscout 用戶端](../Usage/Troubleshooting-NSClient.md)
 
 ### 使用說明
-* [碳水化合物值錯誤](COB-calculation-detection-of-wrong-cob-values)
+* [碳水化合物值錯誤](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
 
    ![錯誤：碳水化合物吸收速度過慢](../images/Calculator_SlowCarbAbsorption.png)
 
-* [SMS 指令](SMS-Commands-troubleshooting)
+* [SMS 指令](../Children/SMS-Commands.md#troubleshooting)
 
 ### 頻繁的藍牙連線問題
 
@@ -84,27 +84,27 @@
 
 ## CGM
 
-* [一般問題](GeneralCGMRecommendation-troubleshooting)
-* [Dexcom G6](DexcomG6-troubleshooting-g6)
-* [Libre 3](Libre3-experiences-and-troubleshooting)
-* [Libre 2](Libre2-experiences-and-troubleshooting)
-* [xDrip - 無 CGM 資料](xdrip-identify-receiver)
-* [xDrip - Dexcom 疑難排解](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [一般問題](../CompatibleCgms/GeneralCGMRecommendation.md#troubleshooting)
+* [Dexcom G6](../CompatibleCgms/DexcomG6.md#troubleshooting-g6-and-one)
+* [Libre 3](../CompatibleCgms/Libre3.md#experiences-and-troubleshooting)
+* [Libre 2](../CompatibleCgms/Libre2.md#experiences-and-troubleshooting)
+* [xDrip - 無 CGM 資料](../CompatibleCgms/xDrip.md#identify-receiver)
+* [xDrip - Dexcom 問題排除](../CompatibleCgms/xDrip.md#troubleshooting-dexcom-g5g6-and-xdrip)
 
 ## 幫浦
 
-* [DanaRS](DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo 總覽](Accu-Chek-Combo-Tips-for-Basic-usage)
-* [Accu-Chek Combo + Ruffy](Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
-* [Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
-* [Medtronic + RileyLink](MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+* [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md#dana-rs-specific-errors)
+* [Accu-Chek Combo 總覽](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md)
+* [Accu-Chek Combo + Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
+* [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md#insight-specific-errors)
+* [Medtronic + RileyLink](../CompatiblePumps/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-andor-pump)
 
 ## 手機
 
-* [Jelly](../Usage/jelly.md)
-* [華為藍牙 & 電池優化](../Usage/huawei.md)
+* [Jelly](../CompatiblePhones/Jelly.md)
+* [華為藍牙 & 電池優化](../CompatiblePhones/Huawei.md)
 
 ## 智慧型手錶
 
-* [疑難排解 Wear 應用程式](Watchfaces-troubleshooting-the-wear-app)
+* [問題排除 Wear 應用程式](../Configuration/Watchfaces.md#troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../Usage/SonySW3.md)

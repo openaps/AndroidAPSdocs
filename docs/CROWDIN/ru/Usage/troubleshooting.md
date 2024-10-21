@@ -2,13 +2,13 @@
 
 Много информации об устранении неполадок можно найти на страницах этого документа. На этой странице собраны ссылки, которые помогут найти решения вашей проблемы.
 
-Дополнительную полезную информацию можно также найти в часто задаваемых вопросах [FAQ](../Getting-Started/FAQ.html).
+Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.md).
 
 ## Приложение AAPS
 
 ### Сборка и обновление
 
-* [Потеряно хранилище ключей](troubleshooting_androidstudio-lost-keystore)
+* [Потеряно хранилище ключей](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore)
 * [Устранение неполадок Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
 ### Настройки
@@ -16,18 +16,18 @@
 
   ![Ошибка: Базал не выровнен по часам](../images/Screen_DifferentPump.png)
 
-* [Помпа - данные с разных помп](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
+* [Помпа - данные с разных помп](../Installing-AndroidAPS/update3_0.md#failure-message-data-from-different-pump)
 
   ![Сообщение об ошибке: данные с другой помпы](../images/BasalNotAlignedToHours2.png)
 
-* [Клиент Nightscout](../Usage/Troubleshooting-NSClient.html)
+* [Клиент Nightscout](../Usage/Troubleshooting-NSClient.md)
 
 ### Применение
-* [Неверные значения углеводов](COB-calculation-detection-of-wrong-cob-values)
+* [Неверные значения углеводов](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
 
    ![Ошибка: Медленное поглощение углеводов](../images/Calculator_SlowCarbAbsorption.png)
 
-* [SMS-команды](SMS-Commands-troubleshooting)
+* [SMS-команды](../Children/SMS-Commands.md#troubleshooting)
 
 ### Частые проблемы с подключением Bluetooth
 
@@ -84,27 +84,27 @@
 
 ## CGM /  НМГ
 
-* [Общие настройки](GeneralCGMRecommendation-troubleshooting)
-* [Dexcom G6](DexcomG6-troubleshooting-g6)
-* [Libre 3](Libre3-experiences-and-troubleshooting)
-* [Libre 2](Libre2-experiences-and-troubleshooting)
-* [xDrip - нет данных CGM](xdrip-identify-receiver)
-* [xDrip - Устранение неполадок Dexcom](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [Общие настройки](../CompatibleCgms/GeneralCGMRecommendation.md#troubleshooting)
+* [Dexcom G6](../CompatibleCgms/DexcomG6.md#troubleshooting-g6-and-one)
+* [Libre 3](../CompatibleCgms/Libre3.md#experiences-and-troubleshooting)
+* [Libre 2](../CompatibleCgms/Libre2.md#experiences-and-troubleshooting)
+* [xDrip - нет данных CGM](../CompatibleCgms/xDrip.md#identify-receiver)
+* [xDrip - Устранение неполадок Dexcom](../CompatibleCgms/xDrip.md#troubleshooting-dexcom-g5g6-and-xdrip)
 
 ## Помпы
 
-* [DanaRS](DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo общее](Accu-Chek-Combo-Tips-for-Basic-usage)
-* [Accu-Chek Combo + Ruffy](Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
-* [Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
-* [Medtronic + RileyLink](MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+* [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md#dana-rs-specific-errors)
+* [Accu-Chek Combo общее](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md)
+* [Accu-Chek Combo + Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
+* [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md#insight-specific-errors)
+* [Medtronic + RileyLink](../CompatiblePumps/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-andor-pump)
 
 ## Телефоны
 
-* [Jelly](../Usage/jelly.md)
-* [Huawei bluetooth & оптимизация батареи](../Usage/huawei.md)
+* [Jelly](../CompatiblePhones/Jelly.md)
+* [Huawei bluetooth & оптимизация батареи](../CompatiblePhones/Huawei.md)
 
 ## Смарт-часы
 
-* [Устранение неполадок в приложении Wear](Watchfaces-troubleshooting-the-wear-app)
+* [Устранение неполадок в приложении Wear](../Configuration/Watchfaces.md#troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../Usage/SonySW3.md)

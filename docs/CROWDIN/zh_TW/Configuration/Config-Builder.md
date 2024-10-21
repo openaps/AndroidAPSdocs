@@ -33,7 +33,7 @@
 
 ### 本地設定檔(Local profile)
 
-本地設定檔使用手動輸入到手機中的基礎率設定檔。 一旦選擇他，AAPS 中將會顯示一個新標籤，必要時你可以更改從幫浦讀取的設定檔資料。 下次切換設定檔時，這些資料將寫入幫浦中的設定檔 1。 建議使用這個設定檔，因為他不依賴於網際網路連線。
+本地設定檔使用手動輸入到手機中的基礎率設定檔。 選擇他，AAPS 中將會顯示一個新標籤，必要時你可以更改從幫浦讀取的設定檔資料。 下次切換設定檔時，這些資料將寫入幫浦中的設定檔 1。 建議使用這個設定檔，因為他不依賴於網際網路連線。
 
 你的本地設定檔是[匯出設定](../Usage/ExportImportSettings.md)的一部分。 因此，確保有一個安全的備份。
 
@@ -45,7 +45,7 @@
 * 紅色 X：刪除
 * 藍色箭頭：複製
 
-如果你對設定檔進行任何更改，請確保你正在編輯正確的設定。 在設定檔標籤中，不一定會顯示當前正在使用的設定檔——例如，如果你使用主畫面的設定檔標籤進行切換，該設定檔可能與設定檔標籤中顯示的不同，因為兩者之間沒有連線。
+如果你對設定檔進行任何更改，請確保你正在編輯正確的設定。 在設定檔標籤中，不一定會顯示目前正在使用的設定檔——例如，如果你使用主畫面的設定檔標籤進行切換，該設定檔可能與設定檔標籤中顯示的不同，因為兩者之間沒有連線。
 
 #### 複製設定檔切換
 
@@ -63,15 +63,15 @@
 
 #### 上傳本地設定檔到 Nightscout
 
-本地設定檔也可以上傳到 Nightscout。 可以在[NSClient 偏好設定](Preferences-nsclient)中找到這些設定。
+本地設定檔也可以上傳到 Nightscout。 The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
 
 ![上傳本地設定檔到 NS](../images/LocalProfile_UploadNS_AASP30.png)
 
 #### 在 Nightscout 設定檔編輯器中更改設定檔
 
-你可以將 Nightscout 設定檔編輯器中的更改同步至本地設定檔。 可以在[NSClient 偏好設定](Preferences-nsclient)中找到這些設定。
+你可以將 Nightscout 設定檔編輯器中的更改同步至本地設定檔。 The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
 
-有必要複製整個當前活動的 Nightscout 資料庫記錄，而不僅僅是藍色箭頭的設定檔！ 新的資料庫記錄將攜帶當前日期，並可以透過「本地設定檔」標籤啟用。
+有必要複製整個目前活動的 Nightscout 資料庫記錄，而不僅僅是藍色箭頭的設定檔！ 新的資料庫記錄將攜帶目前日期，並可以透過「本地設定檔」標籤啟用。
 
 ![複製資料庫記錄](../images/Nightscout_Profile_Editor.PNG)
 
@@ -102,13 +102,13 @@
 * DIA 對每個人來說並不相同。 這就是為什麼你需要自行測試。 
 * 但他必須至少是 5 小時。
 * 對於許多使用超快速胰島素如 Fiasp 的人來說，實際上在 3-4 小時後已經沒有顯著效果了，即使此時理論上仍有 0.0xx 單位的胰島素存在。 例如，在運動期間，這些殘餘量可能仍然是顯著的。 因此，AAPS 使用最少 5 小時作為 DIA。
-* 你可以在[此頁面](Screenshots-insulin-profile)的胰島素設定檔部分中閱讀更多相關資訊。
+* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots.md#insulin-profile) page.
 
 ### 胰島素類型差異
 
 * 對於 'Rapid-Acting'、'Ultra-Rapid' 和 'Lyumjev'，DIA 是唯一可以自行調整的變數，峰值時間是固定的。 
 * Free-Peak 允許你同時調整 DIA 和峰值時間，這僅應由了解這些設置效果的高級使用者使用。 
-* [胰島素曲線圖](Screenshots-insulin-profile)幫助你了解不同的曲線。
+* The [insulin curve graph](../Getting-Started/Screenshots.md#insulin-profile) helps you to understand the different curves.
 * 你可以透過啟用勾選框將其顯示為標籤，否則他將在選單中。
 
 #### Rapid-Acting Oref
@@ -149,7 +149,7 @@
 
 ## 血糖來源
 
-選擇你正在使用的血糖來源——詳情請參閱[血糖來源](BG-Source.md)頁面。
+Select the blood glucose source you are using - see [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
 ![組態建置工具：血糖來源選擇](../images/ConfBuild_BG.png)
 
@@ -171,29 +171,29 @@
 
 ![組態建置工具幫浦選擇](../images/ConfBuild_Pump_AAPS30.png)
 
-* [Dana R](DanaR-Insulin-Pump.md)
+* [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R Korean（適用於國內 DanaR 幫浦）
 * Dana Rv2（升級了非官方韌體的 DanaR 幫浦）
-* [Dana-i/RS](DanaRS-Insulin-Pump.md)
+* [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
     
     * 對於 Dana 幫浦，必要時請使用**進階設定**來啟用藍牙監控。 如果無法連線幫浦，他會關閉藍牙一秒鐘。 這可能對於某些藍牙系統卡住的手機可能會有幫助。
-    * 必須正確輸入 [Dana RS 幫浦的密碼](../Configuration/DanaRS-Insulin-Pump.md)。 在之前的版本中未檢查密碼。
+    * [Password for Dana RS pump](../CompatiblePumps/DanaRS-Insulin-Pump.md) must be entered correctly. 在之前的版本中未檢查密碼。
 
-* [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
+* [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 
-* [Accu Chek Combo](Accu-Chek-Combo-Pump.md)（需要安裝 ruffy）
-* [Omnipod Eros](OmnipodEros.md)
-* [Omnipod DASH](OmnipodDASH.md)
-* [Medtronic](MedtronicPump.md)
-* [Diaconn G8](DiaconnG8.md)
+* [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
+* [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+* [Medtronic](../CompatiblePumps/MedtronicPump.md)
+* [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * MDI（接收 AAPS 對你多次每日注射治療的建議）
 * 虛擬幫浦（對於尚無驅動程式的幫浦開放循環——僅 AAPS 建議）
 
-## 敏感性檢測
+## 敏感性偵測
 
-選擇你正在使用的敏感性檢測類型。 如需不同設計的更多詳情，請[點此繼續閱讀](../Configuration/Sensitivity-detection-and-COB.md)。 此功能會即時分析歷史資料，並在你對胰島素的反應比平常更敏感（或相反，更具抗性）時進行調整。 更多關於敏感性演算法的詳細資訊請參閱[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
+選擇你正在使用的敏感性偵測類型。 如需不同設計的更多詳情，請[點此繼續閱讀](../Configuration/Sensitivity-detection-and-COB.md)。 此功能會即時分析歷史資料，並在你對胰島素的反應比平常更敏感（或相反，更具抗性）時進行調整。 更多關於敏感性演算法的詳細資訊請參閱[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
 
-你可以在主畫面上選擇 SEN 並觀看白線來查看你的敏感性狀況。 注意，你需要在[目標 8](Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)，才能讓敏感性檢測/[Autosens](Open-APS-features-autosens) 自動調整輸送的胰島素量。 在達到該目標之前，Autosens 的百分比/圖表中的線僅供參考。
+你可以在主畫面上選擇 SEN 並觀看白線來查看你的敏感性狀況。 Note, you need to be in [Objective 8](../Usage/completing-the-objectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.md#autosens) automatically adjust the amount of insulin delivered. 在達到該目標之前，Autosens 的百分比/圖表中的線僅供參考。
 
 (Config-Builder-absorption-settings)=
 
@@ -208,7 +208,7 @@
 選擇用於治療調整的 APS 演算法。 你可以在 OpenAPS (OAPS) 標籤中查看選定演算法的活動詳情。
 
 * OpenAPS AMA（進階餐前輔助，2017 年的演算法狀態）簡單來說，他的好處是在你自己進行餐前注射後，如果你可靠地輸入碳水化合物，系統可以更快地提高臨時基礎率。
-* [OpenAPS SMB](../Usage/Open-APS-features.md)（超微量注射，針對進階使用者的最新演算法） 注意：你需要在[目標 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)，才能使用 OpenAPS SMB，並且必須在組態建置工具 > 敏感性檢測 > 敏感性 Oref1 設定中將 min_5m_carbimpact 設置為 8。
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../Usage/completing-the-objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## 循環
 
@@ -230,7 +230,7 @@
 
 * AAPS 會持續評估所有可用資料（IOB、COB、血糖等），並在必要時自動調整治療（即無需你進一步干預），以達到設定的目標範圍或值（注射、臨時基礎率、胰島素關閉以避免低血糖等）。 
 * 閉合循環在多個安全限制範圍內工作，你可以個別設定這些限制。
-* 閉合循環僅在你達到[目標 6](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)或更高目標且使用支援的幫浦時才可能。
+* Closed Loop is only possible if you are in [Objective 6](../Usage/completing-the-objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
 * 請注意：在閉合循環模式下，建議使用單一目標而非目標範圍（即 5.5 mmol 或 100 mg/dl，而非 5.0 - 7.0 mmol 或 90 - 125 mg/dl）。
 
 ### 低血糖暫停 (LGS)
@@ -252,17 +252,17 @@ AAPS 有一個學習計畫（目標），你必須逐步完成他。 這將引�
 
 你應該[定期匯出你的設置](../Usage/ExportImportSettings.md)（包括目標的進度）。 如果稍後需要更換手機（新購、螢幕損壞等），你可以簡單地匯入這些設置。
 
-更多資訊請參閱[目標](../Usage/Objectives.md)頁面。
+See [Objectives](../Usage/completing-the-objectives.md) page for more information.
 
 ## 治療
 
-如果你查看「治療」（Treat）標籤，你可以看到已上傳到 Nightscout 的治療記錄。 如果你希望編輯或刪除一個條目（例如你吃的碳水化合物比預期少），請選擇「刪除」，然後透過[主畫面的碳水按鈕](Screenshots-carb-correction)輸入新數值（如果有需要，請更改時間）。
+如果你查看「治療」（Treat）標籤，你可以看到已上傳到 Nightscout 的治療記錄。 Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
 
 ## 一般問題
 
 ### 首頁總覽
 
-顯示當前循環狀態和最常見操作的按鈕（詳情請參閱[主畫面](../Getting-Started/Screenshots.md)部分）。 你可以透過點擊齒輪圖示查看設置。
+顯示目前循環狀態和最常見操作的按鈕（詳情請參閱[主畫面](../Getting-Started/Screenshots.md)部分）。 你可以透過點擊齒輪圖示查看設置。
 
 #### 保持螢幕常亮
 
@@ -315,20 +315,20 @@ AAPS 有一個學習計畫（目標），你必須逐步完成他。 這將引�
 
 #### 狀態燈
 
-選擇是否要在首頁總覽中顯示[狀態燈](Preferences-status-lights)，顯示導管時間、胰島素時間、傳感器時間、電池時間、儲液罐液位或電池電量。 當達到警告等級時，狀態燈的顏色會變為黃色。 關鍵時間將顯示為紅色。
+Choose if you want to have [status lights](../Configuration/Preferences.md#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. 當達到警告等級時，狀態燈的顏色會變為黃色。 關鍵時間將顯示為紅色。
 
 #### 進階設定
 
-**交付此部分注射嚮導結果：**使用 SMB 時，許多人不會進行 100% 的餐前注射，而只注射一部分（例如 75%），其餘部分由 SMB 和 UAM（無人值守餐點檢測）處理。 在此設置中，你可以選擇注射嚮導應計算的預設值。 如果此設置為 75%，而你需要注射 10 單位，注射嚮導將建議餐前注射 7.5 單位。
+**交付此部分注射嚮導結果：**使用 SMB 時，許多人不會進行 100% 的餐前注射，而只注射一部分（例如 75%），其餘部分由 SMB 和 UAM（無人值守餐點偵測）處理。 在此設置中，你可以選擇注射嚮導應計算的預設值。 如果此設置為 75%，而你需要注射 10 單位，注射嚮導將建議餐前注射 7.5 單位。
 
-**在嚮導中啟用超級注射功能**（與*超微量注射*不同！）：請謹慎使用，在瞭解其真正作用之前不要啟用。 基本上，接下來兩個小時的基礎率將加到注射中，並啟用兩小時的0基礎率。 **AAPS 的循環功能將停用——請小心使用！** 如果你使用 SMB，根據你在["限制 SMB 的基礎率最長分鐘數"](Open-APS-features-max-minutes-of-basal-to-limit-smb-to)中的設置，AAPS 循環功能將停用。如果你不使用 SMB，循環功能將停用兩個小時。關於超級注射的詳細資訊可在[此處](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)找到。
+**在嚮導中啟用超級注射功能**（與*超微量注射*不同！）：請謹慎使用，在瞭解其真正作用之前不要啟用。 基本上，接下來兩個小時的基礎率將加到注射中，並啟用兩小時的0基礎率。 **AAPS 的循環功能將停用——請小心使用！** If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.</strong> Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
 
 ### 操作
 
 * 一些按鈕可快速查看常見功能。
-* 詳情請參閱[AAPS 截圖](Screenshots-action-tab)。
+* See [AAPS screenshots](../Getting-Started/Screenshots.md#action-tab) for details.
 
 ### 自動化
 
@@ -368,7 +368,7 @@ AAPS 有一個學習計畫（目標），你必須逐步完成他。 這將引�
 ### NSClient
 
 * 設定 AAPS 資料與 Nightscout 的同步。
-* 點擊齒輪圖示打開[偏好設定](Preferences-nsclient)。
+* Settings in [preferences](../Configuration/Preferences.md#nsclient) can be opened by clicking the cog wheel.
 
 ### 維護
 

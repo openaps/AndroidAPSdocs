@@ -306,7 +306,7 @@ Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 
 ### Zdroj informací o glykémii
 
-Vyberte zdroj dat o glykémii, který používáte. Přečtěte si dokumentaci k vašemu [Zdroji glykémie](../Configuration/BG-Source.md).
+Vyberte zdroj dat o glykémii, který používáte. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
 Jelikož je k dispozici více možností, nebudeme zde popisovat všechny. V našem příkladu uvažujeme použití senzoru Dexcom G6 a aplikace BYODA:
 
@@ -428,7 +428,7 @@ Pokud jste již v předchozích krocích nastavili svůj profil a víte, jak př
 
 V opačném případě opusťte Průvodce nastavením kliknutím na šipku v levém horním rohu a nechte zatím **AAPS** zobrazovat hodnoty glykémie. Kdykoli se k připojení pumpy můžete vrátit nebo můžete využít možnost přímé konfigurace (bez využití Průvodce).
 
-Přečtěte si prosím dokumentaci k vaší [inzulínové pumpě](../Getting-Started/Pump-Choices.md).
+Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
 
 Klikněte na tlačítko "DALŠÍ" a přejdete k další obrazovce.
 

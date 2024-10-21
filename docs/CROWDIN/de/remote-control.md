@@ -309,7 +309,7 @@ Mit einem USB-Kabel auf das Follower-Smartphone übertragen werden, oder in eine
 
 ### Synchronisierung - AAPSClient und AAPS einrichten (für Version 3.2.0.0 und höher)
 
-Sobald die __AAPSClient__-APK auf dem Follower-Smartphone installiert ist, muss dafür gesorgt werden, dass die „Einstellungen“ in der KONFIGURATION mit denen für __AAPS__ mit Nightscout 15 abgeglichen sind (siehe Versionshinweise [hier](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Update-to-new-version.html)). Das folgende Beispiel bietet Hilfestellung bei den Synchronisierungs-Einstellungen für NSClient und NSClientV3 im Zusammenspiel mit Nightscout 15. Es gibt daneben auch noch andere __AAPS__-Optionen (z.B. xDrip+).
+Once __AAPSClient__ apk is installed on the follower phone, the user must ensure their ‘Preferences’ in Config Builder are correctly set up and aligned with __AAPS__ for Nightscout 15 (see Release Notes [here](./Installing-AndroidAPS/Update-to-new-version.md)). Das folgende Beispiel bietet Hilfestellung bei den Synchronisierungs-Einstellungen für NSClient und NSClientV3 im Zusammenspiel mit Nightscout 15. Es gibt daneben auch noch andere __AAPS__-Optionen (z.B. xDrip+).
 
 Innerhalb des Abschnitts 'Synchronisierung' in der 'KONFIGURATION' kannst Du Dich für verschiedene Synchronisierungsoptionen sowohl für __AAPS__ als auch das Follower-Smartphone entscheiden:
 
@@ -528,7 +528,7 @@ b) der Nutzende möchte die Eingabe eines Authentifizierungscode vermeiden (wie 
 
 Um **AAPS** steuern zu können, muss auf der Smartwatch **Android Wear** Software (idealerweise 10 oder höher) laufen. Bitte schau Dir dazu die technischen Details der Smartwatch an und schlage auch in der [Übersicht kompatibler Smartwatches](link) nach. Wenn Du Dir nicht sicher sein solltest, frage einfach in den **AAPS**  Facobook/Discord Gruppen nach.
 
-Eine detaillierte Schritt-für-Schritt Anleitung für die **AAPS**-Einrichtung auf der Samsung Galaxy Watch 4 (40mm) findest Du weiter unten. Die [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)-Smartwatch ist ebenfalls gerne gewählt. Füge gerne andere Smartwatches und Deine damit gemachten Kompatibilitäts-Erfahrungen in der Dokumentation und [verbessere die Dokumentation](https://androidaps.readthedocs.io/en/latest/make-a-PR.html), damit die gesamte **AAPS**-Community davon profitieren kann.
+Eine detaillierte Schritt-für-Schritt Anleitung für die **AAPS**-Einrichtung auf der Samsung Galaxy Watch 4 (40mm) findest Du weiter unten. Die [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)-Smartwatch ist ebenfalls gerne gewählt. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../make-a-PR.md) to share your findings with the wider **AAPS** community.
 
 #### Die AAPS Wear APK
 
@@ -752,7 +752,7 @@ Durch Anpassungen sowohl in der **Galaxy Wearable** App auf dem **AAPS** Smartph
 
 #### Fehlerbehebung für Sony Smartwach 3
 
-Obwohl es die Sony Smartwatch SW 3 seit einigen Jahren nicht mehr zu kaufen gibt, wird diese noch genutzt. Eine Anleitung zur Fehlerbehebung findest Du im Abschnitt: [Fehlerbehebung für Sony Smartwatch SW 3](https://androidaps.readthedocs.io/en/latest/Usage/SonySW3.html)
+Although it was discontinued a few years ago, if you are using a Sony Smartwatch SW 3 please see here for a troubleshooting guide: [Troubleshooting Sony Smartwatch SW 3](./Usage/SonySW3.md)
 
 
 

@@ -10,9 +10,7 @@
 
 * ניווט בין מודולי AndroidAPS השונים.
 * לחלופין ניתן לעבור בין המסכים ע"י החלקה שמאלה וימינה.
-* הלשוניות שניתנות להצגה נבחרות ב[בונה התצורה](Config-Builder-tab-or-hamburger-menu).
-
-(Screenshots-section-b-profile-target)=
+* Displayed tabs can be selected in [config builder](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu).
 
 ### חלק B - פרופיל וערכי מטרה
 
@@ -22,7 +20,7 @@
 
 * הפרופיל הנוכחי מוצג בסרגל הימיני (כששפת המערכת עברית).
 * לחיצה קצרה על הפרופיל מציגה את פרטי הפרופיל
-* לחיצה ארוכה על הפרופיל תפתח את תיבת דו השיח [החלפת פרופיל](Profiles-profile-switch).
+* Long press profile bar to [switch between different profiles](../Usage/Profiles.md#profile-switch--profile-percentage).
 * אם החלפת הפרופיל בוצעה עם משך זמן מוגדר, הזמן הנותר מוצג בסוגריים.
 
 #### ערך מטרה
@@ -33,14 +31,12 @@
 * לחצו לחיצה קצרה על ערכי המטרה כדי להגדיר [ערך מטרה זמני](../Usage/temptarget.md).
 * אם הוגדר ערך מטרה זמני, צבע הכפתור יצבע בצהוב והזמן הנותר בדקות מוצג בסוגריים.
 
-(Screenshots-visualization-of-dynamic-target-adjustment)=
-
 #### הצגת שינויים דינמיים בערכי המטרה
 
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS יכול להתאים באופן דינמי את ערכי המטרה על סמך הרגישות אם אתם משתמשים באלגוריתם SMB.
-* הפעילו את אחת [מהאפשרויות הבאות](Preferences-openaps-smb-settings) או את שתיהן: 
+* Enable either one or both of the [following options](../SettingUpAaps/Preferences.md#openaps-smb-settings) 
    * "רגישות מעלה את ערך המטרה" ו\או 
    * "תנגודת מורידה את ערך המטרה" 
 * אם AAPS מזהה תנגודת או רגישות, המטרה תשונה ממה שנקבע בפרופיל. 
@@ -51,13 +47,11 @@
 #### רמת סוכר נוכחית
 
 * קריאת הסוכר האחרונה מהחיישן מוצגת בצד ימין.
-* הצבע של ערך הסוכר משקף את הסטטוס לפי [הטווח](Preferences-range-for-visualization) המוגדר. 
+* Color of the BG value reflects the status to the defined [range](../SettingUpAaps/Preferences.md#range-for-visualization). 
    * ירוק = בטווח
    * אדום = מתחת לטווח
    * צהוב = מעל הטווח
 * הערכים האפורים באמצע מציגים דקות מאז הקריאה האחרונה ושינויים מאז הקריאה האחרונה, ב-15 וב-40 הדקות האחרונות.
-
-(Screenshots-loop-status)=
 
 #### סטטוס הלולאה
 
@@ -66,7 +60,7 @@
 * סמל חדש מציג את מצב הלולאה:
    
    * עיגול ירוק = לולאה פועלת
-   * עיגול ירוק מְקֻוְוקָּו = השהיית בזאלי עקב סוכר נמוך (LGS)
+   * green circle with dotted line = [low glucose suspend (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
    * מעגל אדום = לולאה מושבתת (קבוע)
    * עיגול צהוב = לולאה מושהת (השהיה זמנית אך אינסולין בזאלי יינתן) - הזמן שנותר להשהיה מוצג מתחת לסמל
    * עיגול אפור = המשאבה מנותקת (האופן זמני, ללא הזרמת כל אינסולין) - הזמן שנותר מוצג מתחת לסמל
@@ -78,8 +72,6 @@
    * אם הלחיצה על סמל לולאה היתה קצרה, תידרשו לאשר את בחירתכם בתיבת דו-שיח לאחר בחירתכם
    
    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
-
-(Screenshots-bg-warning-sign)=
 
 #### סימן אזהרה לצד רמת הסוכר
 
@@ -137,7 +129,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * קו סגול: מינון בזאלי - שינויים בסמל המשקפים שינויים זמניים במינון הבזאלי (שטוח ב-100%) 
    * לחצו על הסמל כדי לראות את המינון הבזאלי ופרטים של בזאלי זמני אם מופעל (כולל משך הזמן הנותר)
-* חצים למעלה ולמטה: מציינים את מצב [Autosens](Open-APS-features-autosens) בפועל (מופעל או מושבת) והערך המוצג מתחת לסמליל
+* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features.md#autosens) status (enabled or disabled) and value is shown below icon
 
 #### דרושות פחמימות
 
@@ -160,9 +152,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    * גיל ורמת הסוללה (%)
 * אם חורגים מסף האזהרה, הערכים יוצגו בצהוב.
 * אם חורגים מסף האזהרה הקריטי, הערכים יוצגו באדום.
-* ניתן להגדיר את החיוויים ב[העדפות](Preferences-status-lights).
-
-(Screenshots-section-f-main-graph)=
+* Settings can be made in [preferences](../SettingUpAaps/Preferences.md#status-lights).
 
 ### חלק F - גרף ראשי
 
@@ -171,8 +161,8 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 * הגרף מציג את רמת הסוכר בדם (BG) כפי שנקרא מהחיישן. 
 * הערות שהוזנו בלשונית פעולות, כגון כיולים מבדיקות עם גלוקומטר וערכים של פחמימות וכן החלפות פרופיל מוצגות כאן. 
 * לחצו לחיצה ארוכה על הגרף כדי לשנות את קנה המידה של ציר הזמן. אפשר לבחור 6, 12, 18 או 24 שעות.
-* האזור הירוק משקף את טווח המטרה. ניתן להגדירו ב[העדפות](Preferences-range-for-visualization).
-* משולשים כחולים מציגים [SMB](Open-APS-features-super-micro-bolus-smb) - אם הופעל ב[העדפות](Preferences-openaps-smb-settings).
+* האזור הירוק משקף את טווח המטרה. It can be configured in [preferences](../SettingUpAaps/Preferences.md#range-for-visualization).
+* Blue triangles show [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) - if enabled in [preferences](../SettingUpAaps/Preferences.md#openaps-smb-settings).
 * מידע אופציונלי:
    
    * חיזוי
@@ -202,19 +192,19 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    
    עקום החיזוי מראה כיצד ישתנה עקום הסוכר בדם אם המשאבה תפסיק כל מתן אינסולין (בזאלי זמני 0%).
    
-   *שורה זו מופיעה רק כאלגוריתם [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) נבחר ופועל (אחרי תחילת משימה 9).*
+   *This line appears only when the [SMB](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
-* עקום **צהוב כהה**: [UAM](Sensitivity-detection-and-COB-sensitivity-oref1) (ארוחות לא מוכרזות)
+* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB.md#sensitivity-oref1) (un-announced meals)
    
    ארוחות לא מוכרזות מראש - זיהוי של עלייה משמעותית ברמות הסוכר עקב ארוחות, אדרנלין או השפעות אחרות. עקום החיזוי דומה לעקום הפחמימות הכתום אך הוא מניח שהסטיות יצטמצמו בקצב קבוע (על ידי הארכת קצב הדעיכה הנוכחי).
    
-   *שורה זו מופיעה רק כאלגוריתם [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) נבחר ופועל (אחרי תחילת משימה 9).*
+   *This line appears only when the [SMB](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 * **עקום כתום כהה**: ספיגת פחמימות מואצת
    
    דומה לפחמימות פעילות אז מניח שספיגת הפחמימות קבועה ב-10 מ"ג\ד"ל\5דק'. מיושן ובעל תועלת מוגבלת.
    
-   *עקום זה מופיע אך ורק כשמשתמשים באלגוריתם המיושן [AMA](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb).*
+   *This line appears only when the older [AMA](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 בדרך כלל עקומת הסוכר האמיתית נמצאת באמצע בין העקומים הללו, או קרובה לזו שמניחה הנחות שהכי דומות למצבכם הנוכחי.
 
@@ -233,7 +223,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 ### חלק G - גרפים נוספים
 
 * ניתן להפעיל עד ארבעה גרפים נוספים מתחת לגרף הראשי.
-* כדי לפתוח הגדרות של גרפים נוספים, לחצו על המשולש בפינה שמאלית עליונה של [הגרף הראשי](Screenshots-section-f-main-graph) וגללו מטה.
+* To open settings for additional graphs click the triangle on the right side of the [main graph](#section-f---main-graph) and scroll down.
 
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
@@ -246,9 +236,9 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 #### אינסולין פעיל
 
 * מראה את האינסולין הפעיל. הוא כולל אינסולין מבולוס ובזאלי זמני (**אך אינו כולל מינונים בזאליים שנקבעו בפרופיל**).
-* אם לא היו [SMB](Open-APS-features-super-micro-bolus-smb), ללא בולוסים וללא בזאלי זמני בזמן משך הפעילות של האינסולין ערך זה יהיה אפס.
+* If there were no [SMBs](../Usage/Open-APS-features.md#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
 * אינסולין פעיל יכול להיות שלילי אם אין בולוס או בזאלי זמני אפס/נמוך למשך זמן רב יותר.
-* הדעיכה תלויה ב[הגדרות DIA ופרופיל פעילות האינסולין שבחרתם](Config-Builder-local-profile). 
+* Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/ConfigBuilder.md#local-profile). 
 
 #### פחמימות פעילות
 
@@ -259,14 +249,14 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 #### סטיות
 
 * עמודות **אפורות** מראות סטייה עקב פחמימות. 
-* עמודות **ירוקות** מראות שרמת הסוכר גבוהה ממה שהאלגוריתם ציפה. העמודות הירוקות מציינות הגברת התנגודת ע"י [Autosens](Open-APS-features-autosens).
-* עמודות **אדומות** מראות שרמת הסוכר נמוכה ממה שהאלגוריתם ציפה. העמודות האדומות מציינות הפחתת התנגודת ע"י [Autosens](Open-APS-features-autosens).
+* עמודות **ירוקות** מראות שרמת הסוכר גבוהה ממה שהאלגוריתם ציפה. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features.md#autosens).
+* עמודות **אדומות** מראות שרמת הסוכר נמוכה ממה שהאלגוריתם ציפה. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features.md#autosens).
 * עמודות **צהובות** מראות סטייה עקב ארוחות לא מוכרזות.
 * עמודות **שחורות** מציגות סטיות קטנות שלא נלקחו בחשבון בחישוב הרגישות
 
 #### רגישות
 
-* מציג את הרגישות שזוהתה על ידי [Autosens](Open-APS-features-autosens). 
+* Shows the sensitivity that [Autosens](../Usage/Open-APS-features.md#autosens) has detected. 
 * חישוב רגישות לאינסולין כתוצאה מפעילות גופנית, תגובות הורמונליות וכו'.
 
 #### פעילות
@@ -287,14 +277,14 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    
    * אם החיבור למשאבה אובד, כפתור האינסולין מוסתר.
 
-* "כפתורים אחרים צריכים להיות מוגדרים בהעדפות, כפתורים".
+* Other Buttons have to be setup in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### אינסולין
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* נועד לתת כמות מסוימת של אינסולין מבלי להשתמש ב[מחשבון בולוס](Screenshots-bolus-wizard).
-* על ידי סימון התיבה תוכלו להתחיל אוטומטית את [ערך המטרה הזמני לאכילה בקרוב](Preferences-default-temp-targets).
+* To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
+* By checking the box you can automatically start your [eating soon temp target](../SettingUpAaps/Preferences.md#default-temp-targets).
 * אם אינכם רוצים להכניס בולוס דרך המשאבה אלא לרשום את כמות האינסולין (כלומר אינסולין שניתן באמצעות מזרק) סמנו את התיבה המתאימה.
 
 #### פחמימות
@@ -302,33 +292,31 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 ![Carbs button](../images/Home2020_ButtonCarbs.png)
 
 * נועד לרישום פחמימות ללא בולוס.
-* ניתן להגדיר [ערכי מטרה זמניים מוגדרים מראש](Preferences-default-temp-targets) מסוימים ישירות על ידי סימון התיבה.
+* Certain [pre-set temporary targets](../SettingUpAaps/Preferences.md#default-temp-targets) can be set directly by checking the box.
 * היסט זמן: מתי תאכלו פחמימות (בדקות) יחסית לעכשיו.
 * משך: לשימוש ב[פחמימות ממושכות](../Usage/Extended-Carbs.md)
 * ניתן להשתמש בכפתורי התוספת כדי לרשום את מספר הפחמימות ביתר קלות.
-* הערות יועלו ל-Nightscout - בהתאם להגדרותיכם עבור [קליינט נייטסקאוט](Preferences-nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../SettingUpAaps/Preferences.md#nsclient).
 
 #### מחשבון
 
-* ראו אשף הבולוסים [מטה](Screenshots-bolus-wizard)
+* See Bolus Wizard [section below](#bolus-wizard)
 
 #### כיולים
 
 * שולח כיול ל- xDrip או פותח את חלון הכיול של אפליקציית Dexcom.
-* חייב להיות מופעל ב[העדפות](Preferences-buttons).
+* Must be activated in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### סנסור
 
 * פותח את xDrip+.
 * כפתור החזרה מחזיר ל-AAPS.
-* חייב להיות מופעל ב[העדפות](Preferences-buttons).
+* Must be activated in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### אשף מהיר
 
 * הזנה בקלות של כמות הפחמימות והגדרת נתוני החישוב.
-* פרטים מוגדרים ב[העדפות](Preferences-quick-wizard).
-
-(Screenshots-bolus-wizard)=
+* Details are setup in [preferences](../SettingUpAaps/Preferences.md#quick-wizard).
 
 ## אשף הבולוס
 
@@ -353,7 +341,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ### חלק J
 
-* סופר בולוס גורם להזרקת האינסולין הבזאלי של השעתיים הקרובות יחד עם בולוס הארוחה ובתמורה, מפעיל בזאלי זמני אפס במשך השעתיים הקרובות. האפשרות מוצגת רק כאשר "אפשר [סופרבולוס](Preferences-superbolus) באשף" מוגדר ב[העדפות סקירה כללית](Preferences-overview).
+* סופר בולוס גורם להזרקת האינסולין הבזאלי של השעתיים הקרובות יחד עם בולוס הארוחה ובתמורה, מפעיל בזאלי זמני אפס במשך השעתיים הקרובות. The option only shows when "Enable [superbolus](../SettingUpAaps/Preferences.md#superbolus) in wizard" is set in the [preferences overview](../SettingUpAaps/Preferences.md#overview).
 * הרעיון הוא לספק את האינסולין מוקדם יותר ובתקווה להפחית עליות חדות ברמות הסוכר.
 * לפרטים עיינו ב-[diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -361,7 +349,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * מציג את הבולוס המחושב. 
 * אם כמות האינסולין הפעיל עולה על הבולוס המחושב, תוצג רק כמות הפחמימות הנדרשת.
-* הערות יועלו ל-Nightscout - בהתאם להגדרותיכם עבור [קליינט נייטסקאוט](Preferences-nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../SettingUpAaps/Preferences.md#nsclient).
 
 ### חלק L
 
@@ -384,7 +372,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * אם האזהרה למעלה מופיעה לאחר שימוש באשף הבולוס, AndroidAPS זיהה שייתכן שערך הפחמימות הפעילות המחושב שגוי.
 * לכן, אם תרצו להזריק בולוס לאחר ארוחה קודמת עם פחמימות פעילות, עליכם להיות מודעים למינון ביתר! 
-* לפרטים נוספים ראו [חישוב פחמימות פעילות](COB-calculation-detection-of-wrong-cob-values).
+* For details see the hints on [COB calculation page](../Usage/COB-calculation.md#detection-of-wrong-cob-values).
 
 (Screenshots-action-tab)=
 
@@ -394,10 +382,10 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ### פעולות - חלק M
 
-* לחצן [החלפת פרופיל](Profiles-profile-switch) כחלופה ללחיצה על ה[פרופיל הנוכחי](Screenshots-section-b-profile-target) במסך הבית.
-* לחצן [ערך מטרה זמני](temptarget-temp-targets) כחלופה ללחיצה על ה[ערך מטרה הנוכחי](Screenshots-section-b-profile-target) במסך הבית.
+* Button [profile switch](../Usage/Profiles.md#profile-switch--profile-percentage) as an alternative to pressing the [current profile](#section-b---profile--target) on homescreen.
+* Button [temporary target](../Usage/temptarget.md) as an alternative to pressing the [current target](#section-b---profile--target) on homescreen.
 * לחצן להפעלה או ביטול של מינון בזאלי זמני. שימו לב שהלחצן משתנה מ-"בזאלי זמני" ל-"ביטול %x" כאשר מוגדר מינון בזאלי זמני.
-* למרות ש[בולוסים ממושכים](Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) לא באמת עובדים בסביבת לולאה סגורה, אנשים מסוימים ביקשו בכל מקרה אפשרות להשתמש בבולוס ממושך.
+* Even though [extended boluses](../Usage/Extended-Carbs.md#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
    * אפשרות זו קיימת רק במשאבות Dana RS ו-Accu chek Insight. 
    * לולאה סגורה תיעצר אוטומטית ותעבור למצב לולאה פתוחה למשך זמן פעילות הבולוס הממושך.
@@ -414,7 +402,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    * גיל הצינורית
    * גיל ודרגת טעינת סוללת המשאבה
 
-* אם משתמשים בסקין [רזולוציה נמוכה](Preferences-skin), תוצג פחות אינפורמציה.
+* Less information will be shown if [low resolution skin](../SettingUpAaps/Preferences.md#skin) is used.
 
 (Screenshots-sensor-level-battery)=
 
@@ -422,14 +410,14 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * דרוש xDrip nightly מדצמבר 10, 2020 או חדש יותר.
 * עובד עם חיישנים ומשדרים כדוגמת MiaoMiao 2. (טכנית, החיישן צריך לשלוח את המידע של רמת הסוללה לxDrip+.)
-* ניתן להגדיר את ספי החיוויים ב[העדפות](Preferences-status-lights).
+* Thresholds can be set in [preferences](../SettingUpAaps/Preferences.md#status-lights).
 * אם רמת החיישן זהה לרמת הסוללה של הטלפון, כנראה שגרסת ה-xDrip+ ישנה מדי וצריכה עדכון.
    
    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
 
 ### פורטל הטיפולים - חלק O
 
-* בדיקת רמת סוכר, תיחול\מילוי, הכנסת חיישן והחלפת סוללת משאבה הם הבסיס לנתונים המוצגים ב[חלק O](Screenshots-careportal-section-n).
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal---section-n).
 * תיחול\מילוי מאפשר לתעד את החלפת מיקום חיבור צינורית המשאבה ואת החלפת מכל האינסולין.
 * חלק O משקף את פורטל הטיפולים שבנייטסקאוט. לכן התעמלות, הכרזות ושאלות הן סוגים מיוחדים של הערות.
 
@@ -455,7 +443,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ![פרופיל האינסולין](../images/Screenshot_insulin_profile.png)
 
-* כאן ניתן לראות את פרופיל הפעילות של האינסולין שבחרתם ב[בונה התצורה](Config-Builder-insulin). 
+* This shows the activity profile of the insulin you have chosen in [config builder](../SettingUpAaps/ConfigBuilder.md#insulin). 
 * העקום הסגול מראה כמה אינסולין נשאר לאחר הזרקתו כשהוא דועך לאורך הזמן והעקום הכחול מראה כמה הוא פעיל.
 * חשוב לשים לב לכך שלדעיכה יש זנב ארוך. 
 * אם השתמשתם בעבר במשאבה, כנראה שהנחתם שדעיכת האינסולין לוקחת כ-3.5 שעות. 
@@ -472,7 +460,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 ![סטטוס המשאבה](../images/Screenshot_PumpStatus.png)
 
 * מידעים שונים על מצב המשאבה. המידע המוצג תלוי בדגם המשאבה.
-* ראו [דף המשאבות](../Hardware/pumps.md) לפרטים.
+* See [pumps page](../Getting-Started/CompatiblePumps.md) for details.
 
 ## פורטל הטיפולים
 
@@ -482,7 +470,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ![Review carb calculation on t tab](../images/Screenshots_TreatCalc.png)
 
-* אם השתמשתם ב[אשף הבולוס](Screenshots-bolus-wizard) כדי לחשב את מינון האינסולין, תוכלו לעיין בחישוב זה מאוחר יותר בלשונית הטיפולים.
+* If you have used the [Bolus Wizard](#bolus-wizard) to calculate insulin dosage you can review this calculation later on ts tab.
 * פשוט לחץ על קישור "חישוב" הירוק. (בהתאם למשאבה שבשימוש, אינסולין ופחמימות ניתנים להצגה בשורה אחת בטיפולים.)
 
 (Screenshots-carb-correction)=
@@ -509,7 +497,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * לשוניות אלה מציגות פרטים על חישובי האלגוריתם ומדוע AAPS פועל כפי שהוא פועל.
 * החישובים מחושבים בכל פעם שהמערכת מקבלת קריאה חדשה מהחיישן.
-* לפרטים נוספים ראו [חלק APS בדף בונה התצורה](Config-Builder-aps).
+* For more details see [APS section on config builder page](../SettingUpAaps/ConfigBuilder.md#aps).
 
 ## פרופיל
 
@@ -523,20 +511,18 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    * מינון בזאלי
    * ערך מטרה: רמת הגלוקוז בדם שאליה AAPS שואף
 
-* החל מגרסה 3.0 קיים רק [פרופיל מקומי](Config-Builder-local-profile). ניתן לערוך את הפרופיל המקומי בסמארטפון ולסנכרנו עם אתר הנייטסקאוט שלכם.
-
 (Screenshots-treatment)=
 
 ## טיפול
 
 היסטוריה של הטיפולים הבאים:
 
-* בולוס ופחמימות -> אפשרות [להסיר ערכים](Screenshots-carb-correction) כדי לתקן את ההיסטוריה
-* [בולוס ממושך](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+* Bolus & carbs -> option to [remove entries](#carb-correction) to correct history
+* [בולוס ממושך](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 * מינון בזאלי זמני
 * [ערך מטרה זמני](../Usage/temptarget.md)
 * [החלפת פרופיל](../Usage/Profiles.md)
-* [פורטל הטיפולים](CPbefore26-careportal-discontinued) - הערות המוזנות דרך לשונית הפעולות והערות בדיאלוגים
+* Careportal - notes entered through action tab and notes in dialogues
 
 ## מקורות נתוני סוכר - xDrip+, BYODA...
 
@@ -550,5 +536,5 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 ![NSClient](../images/Screenshots_NSClient.png)
 
 * מציג את מצב החיבור עם אתר הנייטסקאוט שלכם.
-* פרטים מוגדרים ב[העדפות](Preferences-nsclient). אפשר לפתוח את החלק המתאים על ידי לחיצה על גלגל השיניים בצד השמאלי העליון של המסך.
+* Settings are made in [preferences](../SettingUpAaps/Preferences.md#nsclient). אפשר לפתוח את החלק המתאים על ידי לחיצה על גלגל השיניים בצד השמאלי העליון של המסך.
 * לפתרון בעיות עיינו ב[דף זה](../Usage/Troubleshooting-NSClient.md).

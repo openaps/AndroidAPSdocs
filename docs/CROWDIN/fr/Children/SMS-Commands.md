@@ -10,7 +10,7 @@
 
 ## Paramétrer les commandes SMS
 
-![SMS Commands Setup](../images/SMSCommandsSetup.png)
+![Paramétrage des commandes SMS](../images/SMSCommandsSetup.png)
 
 - La plupart des ajustements des cibles temporaires, le suivi d'AAPS, etc. peuvent être faits avec l'application [AAPSClient](../Children/Children.md) sur un téléphone Android avec une connexion Internet.
 - Les bolus ne peuvent pas être donnés à partir de Nightscout, mais vous pouvez utiliser des commandes SMS.
@@ -35,7 +35,7 @@
 
   - Entrez le(s) numéro(s) supplémentaire(s) séparé(s) par un point-virgule, pas d'espace.
 
-    ![SMS Commands Setup multiple numbers](../images/SMSCommandsSetupSpace2.png)
+    ![Commandes SMS Configurer plusieurs numéros](../images/SMSCommandsSetupSpace2.png)
 
 ### Délai entre les commandes bolus
 
@@ -96,7 +96,7 @@
 
 Les commandes doivent être envoyées en anglais, la réponse sera dans votre langue locale si la chaîne de réponse a déjà été [traduite](translations-translate-strings-for-AAPS-app).
 
-![SMS Commands Example](../images/SMSCommands.png)
+![Example de commandes SMS](../images/SMSCommands.png)
 
 ### Boucle
 
@@ -116,9 +116,9 @@ Les commandes doivent être envoyées en anglais, la réponse sera dans votre la
 
 - LOOP RESUME \* Réponse : Boucle relancée
 
-- LOOP CLOSED \* Response: Current loop mode: Closed Loop
+- LOOP CLOSED \* Réponse: Current loop mode: Closed Loop
 
-- LOOP LGS \* Response: Current loop mode: Low Glucose Suspend
+- LOOP LGS \* Réponse: Current loop mode: Low Glucose Suspend
 
 ### Données MGC
 
@@ -156,7 +156,7 @@ Un bolus à distance n'est pas possible dans les 15 minutes suivant le dernier b
 ### Autres
 
 - TREATMENTS REFRESH \* Réponse : Actualiser les données depuis NS
-- NSClient RESTART \* Response: NSCLIENT RESTART SENT
+- NSClient RESTART \* Réponse: NSCLIENT RESTART SENT
 - POMPE \* Réponse : Dernière conn : il y a 1 min Temp: 0.00U/h @11:38 5/30min IA: 0.5U Réserv: 34U Batt.: 100
 - PUMP CONNECT \* Réponse : Pompe reconnectée
 - PUMP DISCONNECT *30* \* Réponse : Pour déconnecter la pompe pendant *30* min, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
@@ -179,7 +179,7 @@ Si l'autre application est installée sur plusieurs téléphones assurez-vous de
 
 Il y a eu un signalement sur les commandes SMS s'arrêtant après une mise à jour sur le téléphone Galaxy S10. Peut être résolu en désactivant 'envoyer en tant que message chat'.
 
-![Disable SMS as chat message](../images/SMSdisableChat.png)
+![Désactiver SMS en tant que message chat](../images/SMSdisableChat.png)
 ### Application de messages Android
 
 Si vous rencontrez des problèmes pour envoyer ou recevoir des commandes par SMS avec l'application Messages Android, désactivez le cryptage de bout en bout à la fois sur les téléphones des soignants et des enfants.

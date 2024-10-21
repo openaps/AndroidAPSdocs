@@ -8,13 +8,13 @@ Pendant, et juste après avoir l'exécution de l'**Assistant de configuration**,
 
 ```{admonition} Preview Objectives
 :class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../Usage/completing-the-objectives.md) but then come back here to run the Setup Wizard first.
+Si vous souhaitez connaître la structure des objectifs, veuillez lire [Compléter les objectifs](../Usage/completing-the-objectives.md) mais revenez ensuite ici pour lancer l'assistant de configuration d'abord.
 
 ```
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+D'expérience, nous savons que les personnes qui se lancent se mettent souvent la pression pour configurer **AAPS** le plus rapidement possible, ce qui peut entraîner de la frustration car il y a beaucoup de choses à apprendre.
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+Alors, prenez votre temps pour configurer votre boucle, les avantages d'une boucle **AAPS** bien configurée sont énormes.
 
 ```{admonition} Ask for Help
 :class: note
@@ -162,7 +162,7 @@ Cliquez sur le bouton "SUIVANT" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-### Units (mg/dL <-> mmol/L)
+### Unités (mg/dL <-> mmol/L)
 
 Veuillez sélectionner si vos glycémies sont en mg/dL ou mmol/L, puis cliquez sur le bouton "SUIVANT" :
 
@@ -196,14 +196,14 @@ Dans cet exemple, nous sélectionnons Nightscout comme serveur de reporting, et 
 
 ```{admonition} Make sure to choose the correct **NSClient** version for your needs! 
 :class: Note
-Click [here](./Releasenotes.md) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
+Cliquez [ici](./Releasenotes.md) pour les notes de version de **AAPS** 3.2.0.2 qui expliquent les différences entre l'option du haut **NSClient** (il s'agit de la "v1", même si ce n'est pas indiqué dans le libellé) et la deuxième option, **NSClient v3**. 
 
-Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
+Les utilisateurs de Nightscout devraient choisir **NSClient v3**, sauf si vous voulez surveiller ou envoyer des traitements à distance via Nightscout (_par ex._ en tant que parent ou aidant, utilisant **AAPS** pour un enfant), dans ce cas, choisissez la première option "**NSClient**" jusqu'à nouvel ordre. 
 ```
 
 Pour Tidepool, c'est encore plus simple, car vous n'avez besoin que de vos informations de connexion personnelles.
 
-After making your selection, please press the cogwheel button next to the item you selected :
+Après avoir fait votre sélection, cliquez sur le bouton Engrenage à côté de l'élément que vous avez sélectionné :
 
 ![image](../images/setup-wizard/Screenshot_20231202_140916.png)
 
@@ -261,7 +261,7 @@ Activer "Créer des messages d'erreur" et "Créer des annonces à partir des ale
 
 Laissez la fonction "Ralentir les téléversements" désactivée. Cette option n'est utile que dans un contexte particulier, si par exemple vous avez beaucoup de données à envoyer au serveur Nightscout, et que ce serveur est lent à traiter les données.
 
-Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
+Revenez deux fois en arrière, jusqu'à la liste des plugins et sélectionnez "SUIVANT" pour passer à la suite :
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
@@ -297,7 +297,7 @@ Les noms d'insuline affichés doivent vous parler.
 
 ```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger
-For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
+Pour les utilisateurs avancés ou les études médicales, il est possible de définir avec "Profil d'insuline ajustable Oref" un profil personnalisé de la façon dont l'insuline agit. Veuillez ne pas l'utiliser à moins d'être un expert, généralement les valeurs prédéfinies fonctionnent bien pour chaque marque d'insuline.
 ```
 
 Appuyez sur "SUIVANT" pour passer à l'écran suivant :
@@ -306,7 +306,7 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant :
 
 ### Source des glycémies
 
-Sélectionnez d'où vous allez recevoir les glycémies. Veuillez lire la documentation correspondant à votre [source de glycémie (MGC)](../Configuration/BG-Source.md).
+Sélectionnez d'où vous allez recevoir les glycémies. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
 Comme il existe diverses possibilités, nous n'expliquons pas la configuration de chacune ici. Nous utilisons Dexcom G6 avec l'application BYODA dans notre exemple ici :
 
@@ -318,11 +318,11 @@ Après avoir fait votre sélection, appuyez sur "SUIVANT" pour passer à l'écra
 
 ![image](../images/setup-wizard/Screenshot_20231202_141925.png)
 
-If you are using Dexcom G6 with BYODA, click on the cogwheel button to access the settings for BYODA.
+Si vous utilisez Dexcom G6 avec BYODA, cliquez sur le bouton Engrenage pour accéder aux paramètres de BYODA.
 
 Cochez "Remonter les glycémies vers NS" et "Enregistrement du changement de capteur sur NS".
 
-Go back and press "NEXT" to go to the next screen:
+Revenez en arrière et cliquez sur "SUIVANT" pour passer à l'écran suivant :
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
@@ -334,11 +334,11 @@ Veuillez lire la documentation sur les profils avant d'essayer de saisir les don
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-An accurate profile is necessary to control the safe action of **AAPS**
+Un profil bien étudié est nécessaire pour assurer l'utilisation en toute sécurité d'**AAPS**
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+Il est impératif que vous ayez déterminé et discuté de votre profil avec votre équipe médicale, et que ce profil soit validé par des tests concluants sur la basale, la SI et les ratios G/I !
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+Si on donne à un robot des paramètres incorrects, il échouera - systématiquement. **AAPS** ne fonctionne qu'avec les informations qui lui sont fournies. Si votre profil est trop fort, vous risquez l'hypoglycémie, et s'il est trop faible, vous risquez l'hyperglycémie. 
 ```
 
 Appuyez sur "SUIVANT" pour passer à l'écran suivant. Saisissez un "Nom de profil" :
@@ -349,11 +349,11 @@ Par la suite, vous pourrez avoir plusieurs profils si nécessaire. Nous n'en cr�
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: information
-The example profile here is only to show you how to enter data.
+Le profil donné ici en exemple n'est là que pour vous montrer comment entrer les données.
 
-It is not intended to be an accurate profile or something very well optimised, because each person's needs are so different.
+Les données montrées ici ne sont pas celles d'un profil précis ni très optimisées, car les besoins de chaque personne sont complètement différents.
 
-Don't use it for actually looping!
+Ne les utilisez pas réellement pour votre boucle !
 ```
 
 Entrez votre Durée d'action de l'insuline (DAI) en heures. Ensuite, appuyez sur "G/I":
@@ -428,7 +428,7 @@ Si vous avez déjà configuré votre profil dans les étapes précédentes et qu
 
 Sinon, quittez l'Assistant de configuration en utilisant la flèche en haut à gauche et laissez **AAPS** vous montrer d'abord quelques valeurs de glycémie. Vous pouvez revenir à tout moment ou accéder directement à la configuration (sans utiliser l'Assistant).
 
-Veuillez lire la documentation pour votre [pompe à insuline](../Getting-Started/Pump-Choices.md).
+Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
 
 Appuyez sur "SUIVANT" pour passer à l'écran suivant.
 
@@ -448,10 +448,10 @@ La raison pour laquelle le SMB est désactivé au début est que la fonction SMB
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: information
-OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+OpenAPS AMA est l'algorithme le plus basique et ne prend pas en charge les microbolus pour corriger les valeurs élevées. Il y a peut-être des cas où il est préférable d'utiliser cet algorithme mais ce n'est pas la recommandation.
 ```
 
-Press the cogwheel to see the details:
+Appuyez sur le bouton Engrenage pour voir les détails :
 
 ![image](../images/setup-wizard/Screenshot_20231202_144014.png)
 
@@ -459,7 +459,7 @@ Parcourez seulement les options et ne changez rien ici.
 
 En raison des limitations imposées par les **Objectifs**, vous ne pouvez de toute façon pas utiliser les fonctionnalités "boucle fermée" ou "SMB" pour le moment.
 
-Go back and press "NEXT" to go to the next screen:
+Revenez en arrière et cliquez sur "SUIVANT" pour passer à l'écran suivant :
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 

@@ -7,7 +7,7 @@
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-У вас есть 60 дней для обновления. Если вы не обновитесь в течение 60 дней AAPS войдет в режим LGS (приостановка на низких ГК - см. [глоссарий](../Getting-Started/Glossary.md)), [цель 6](../Usage/Objectives.html).
+У вас есть 60 дней для обновления. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 6](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend).
 
 Если вы не обновитесь еще 30 дней (90 дней с новой даты выпуска) AAPS переключится в режим открытого цикла.
 
@@ -55,7 +55,7 @@
 
 - Требуется NS 15
 - При подключении к NS через модуль v3 с помощью NS UI (кнопки плюс) и других приложений, использующих v1 APS, терапия не отправляется на AAPS. Это будет исправлено в будущем релизе NS. Всегда пользуйтесь одной и той же версией (v1 или v3) в AAPS и AAPSClient до тех пор, пока NS не полностью не переключится на v3. То же самое верно и для самого AAPS и AAPSClient.
-- Веб-сокеты в модуле v3 работают аналогично v1. Без веб-сокетов AAPS по графику загружает данные из NS, что снижает энергопотребление т. к. NS не подключен постоянно. С другой стороны это означает задержки в обмене данными. Прежде чем пользоваться, читайте [здесь](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)важные комментарии разработчиков!
+- Веб-сокеты в модуле v3 работают аналогично v1. Без веб-сокетов AAPS по графику загружает данные из NS, что снижает энергопотребление т. к. NS не подключен постоянно. С другой стороны это означает задержки в обмене данными. Please read [here](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) the important comments from the dev team before you use it!
 - Если вы используете xdrip в качестве источника ГК, из-за внутренних изменений после обновления следует выбрать его снова
 - Для прохождения первой цели в качестве замены Nightscout может использоваться Tidepool
 - Если вы отправляете на xDrip+ необходимо настроить модуль синхронизации xDrip. Для получения показаний ГК от AAPS в xDrip, необходимо выбрать "xDrip+ Sync Follower" в качестве источника
@@ -175,11 +175,11 @@ v3 - новый протокол. Более безопасный и эффек�
 
 - изменено 100k строк, 105k новых строк кода
 
-- [поддержка Omnipod Dash](../Configuration/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
+- [Omnipod DASH support](../CompatiblePumps/OmnipodDASH.md) @AdrianLxM @avereha @bartsopers @vanelsberg
 
-- [поддержка Dana-i](../Configuration/DanaRS-Insulin-Pump.md) @MilosKozak
+- [Dana-i support](../CompatiblePumps/DanaRS-Insulin-Pump.md) @MilosKozak
 
-- [Поддержка DiaconnG8](../Configuration/DiaconnG8.md)
+- [Поддержка DiaconnG8](../CompatiblePumps/DiaconnG8.md)
 
 - Поддержка Glunovo
 
@@ -200,9 +200,9 @@ v3 - новый протокол. Более безопасный и эффек�
 
 - Можно начать выполнение временной цели при создании переключателя профиля @MilosKozak
 
-- NSProfile отсутствует, остался только локальный профиль. Локальный профиль может быть [синхронизирован с NS](update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak.
+- NSProfile отсутствует, остался только локальный профиль. Local profile can be [synced to NS](../Installing-AndroidAPS/update3_0.md#nightscout-profile-cannot-be-pushed). @MilosKozak.
 
-- [процедура сброса забытого пароля](update3_0-reset-master-password) @MilosKozak
+- Forgotten [master password reset procedure](../Installing-AndroidAPS/update3_0.md#reset-master-password) @MilosKozak
 
 - Отслеживание действий пользователя @Philoul
 
@@ -240,7 +240,7 @@ v3 - новый протокол. Более безопасный и эффек�
 
 Дата выпуска: 23-01-2021
 
-- См. также [важные подсказки для версии 2.8.1.1](Releasenotes-important-hints-2-8-1-1) ниже.
+- Please see also [important hints for version 2.8.1.1](#version-2811) below.
 
 ### Изменения
 
@@ -285,24 +285,24 @@ v3 - новый протокол. Более безопасный и эффек�
 ### Важные Примечания
 
 - **Минимальная версия теперь Android 8.0.** Для более старых версий Android, все еще можно использовать 2.6.1.4 в старом репозитории.
-- [Изменения в Целях](Objectives-objective-3-prove-your-knowledge) **Завершите незавершенные Цели перед обновлениями**
-- Репозиторий все еще на <https://github.com/nightscout/AndroidAPS> . Если вы не знакомы с Git самый простой способ обновления- удалить каталог с AndroidAPS и [ клонировать заново](../Installing-AndroidAPS/Building-APK.md).
+- [Objectives have changed.](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) **Finish not completed objectives before update.**
+- Репозиторий все еще на <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../SettingUpAaps/BuildingAaps.md).
 - Используйте [](https://developer.android.com/studio/) Android Studio версии 4.1.1 или новее для построения apk.
 
 ### Новые возможности
 
-- [Поддержка Omnipod Eros](../Configuration/OmnipodEros.md)@bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda и отдельная благодарность @ps2 @itsmojo, всем остальным, участвующим в разработке драйвера для Omnipod, а также @jlucasvt с GetRileyLink.org
-- [калькулятор болюсаr](Preferences-bolus-advisor) & [напоминания о болюсах](Screenshots-eating-reminder) @MilosKozak
-- [Новые циферблаты](Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
+- [Omnipod Eros support](../CompatiblePumps/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
+- [bolus advisor](../SettingUpAaps/Preferences.md#quick-wizard) & [eating reminder](../Getting-Started/Screenshots.md#eating-reminder) @MilosKozak
+- [New watchface](../Configuration/Watchfaces.md#new-watchface-as-of-aaps-28) @rICTx-T1D
 - Улучшение связи с Dana RS @MilosKozak
 - Удален алгоритм "Неизмененные значения CGM " в SMB для оригинального приложения Dexcom
-- Новый скин в [Низком разрешении](Preferences-skin)
-- Новый тип пациента [Беременность](Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
+- New [Low Ressolution Skin](../SettingUpAaps/Preferences.md#skin)
+- New ["Pregnant" patient type](../Usage/Open-APS-features.md#overview-of-hard-coded-limits) @Brian Quinion
 - Новый макет вкладки NSClient @MilosKozak
 - Передача данных об инсулине, чувствительности и настройках отображения непосредственно с приложения AAPS @MilosKozak
-- [Фильтр настроек](../Configuration/Preferences.md) @Brian Quinion
+- [Preferences filter](../SettingUpAaps/Preferences.md) @Brian Quinion
 - Новые иконки помп @Rig22 @@teleriddler @osodebailar
-- Новый [тип инсулина Люмжев](Config-Builder-lyumjev)
+- New [insulin type Lyumjev](../SettingUpAaps/ConfigBuilder.md#lyumjev)
 - Улучшения Помощника настройки @MilosKozak
 - Улучшения безопасности @dlvoy
 - Различные улучшения и исправления @AdrianLxM @Philoul @swissalpine @MilosKozak @Brian Quinion
@@ -314,34 +314,34 @@ v3 - новый протокол. Более безопасный и эффек�
 
 **Проверьте настройки после обновления до 2.7, как описано** [здесь](../Installing-AndroidAPS/update2_7.md).
 
-Чтобы заработала [ автоматизация ](Objectives-objective-10-automation) необходимо начать [ цель 11 (в более поздних версиях Цель 10)](../Usage/Automation.md) (все предыдущие цели должны быть пройдены, иначе начать цель11 невозможно). Если например не пройден экзамен в [Цели 3](Objectives-objective-3-prove-your-knowledge), его надо завершить, прежде чем перейти к [Цели 11](Objectives-objective-10-automation). Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
+You need at least start [objective 11 (in later versions objective 10!)](../SettingUpAaps/CompletingTheObjectives.md#objective-10-automation) in order to continue using [Automation feature](../Usage/Automation.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf). Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
 
 ### Новые возможности
 
 - внутреннее использование зависимостей инъекций, библиотеки обновлений, код переписан на kotlin @MilosKozak @AdrianLxM
 - применение модулей для помп Dana @MilosKozak
 - [новый макет, выбор макета](../Getting-Started/Screenshots.md) @MilosKozak
-- новый макет [подсветки статусов](Preferences-status-lights) @MilosKozak
-- [поддержка нескольких графиков](Screenshots-section-f-main-graph) @MilosKozak
+- new [status lights layout](../SettingUpAaps/Preferences.md#status-lights) @MilosKozak
+- [multiple graphs support](../Getting-Started/Screenshots.md#activate-optional-information) @MilosKozak
 - [Помощник профиля ](../Configuration/profilehelper.md) @MilosKozak
-- визуализация [динамической подстройки целей](Screenshots-visualization-of-dynamic-target-adjustment) @Tornado-Tim
-- новый макет [настроек](../Configuration/Preferences.md) @Brian Quinion
+- visualization of [dynamic target adjustment](../Getting-Started/Screenshots.md#visualization-of-dynamic-target-adjustment) @Tornado-Tim
+- new [preferences layout](../SettingUpAaps/Preferences.md) @MilosKozak
 - Обновление алгоритма микроболюсов SMB @Tornado-Tim
-- [ режим приостановки на низких](Preferences-aps-mode) @Tornado-Tim@
-- [уведомления о потребности в углеводах](Preferences-carb-required-notification) @twain47 @Tornado-Tim
+- [Low glucose suspend mode](../SettingUpAaps/Preferences.md#aps-mode) @Tornado-Tim
+- [carbs required notifications](../SettingUpAaps/Preferences.md#carb-required-notification) @twain47 @Tornado-Tim
 - удален портал терапии Careportal (перемещен в Действия) @MilosKozak
 - [новый зашифрованный формат резервной копии](../Usage/ExportImportSettings.md) @dlvoy
 - [новая SMS TOTP проверка подлинности](../Children/SMS-Commands.md) @dlvoy
-- [новые команды SMS PUMP CONNECT, DISCONNECT](SMS-Commands-commands) @Lexsus
+- [new SMS PUMP CONNECT, DISCONNECT](../Children/SMS-Commands.md#commands) commands @Lexsus
 - улучшена поддержка микро базалов на помпах Dana @Mackwe
 - небольшие исправления для помпы Insight @TebbeUbben @MilosKozak
-- ["Язык по умолчанию"](Preferences-general) @MilosKozak
+- ["Default language" option](../SettingUpAaps/Preferences.md#general) @MilosKozak
 - векторные иконки @Philoul
-- [установка нейтральные временных базалов для подколок на шприц-ручках MDT ](MedtronicPump-configuration-of-the-pump) @Tornado-Tim
+- [set neutral temps for MDT pump](../CompatiblePumps/MedtronicPump.md#configuration-of-the-pump) @Tornado-Tim
 - Улучшения в журнале @MilosKozak
 - удалён алгоритм OpenAPS MA @Tornado-Tim
 - Удалена чувствительность Oref0 @Tornado-Tim
-- [Биометрическая или парольная защита](Preferences-protection) для болюсов @MilosKozak
+- [Biometric or password protection](../SettingUpAaps/Preferences.md#protection) for settings, bolus @MilosKozak
 - [новый триггер автоматизации](../Usage/Automation.md) @PoweRGbg
 - [загрузчик Open Humans ](../Configuration/OpenHumans.md) @TebbeUbben @AdrianLxM
 - Новая документация @Achim
@@ -404,7 +404,7 @@ v3 - новый протокол. Более безопасный и эффек�
 - Исправлены мелкие ошибки интерфейса
 - Исправлены сбои Insight
 - Исправлены углеводы в будущем с помпой Combo
-- Исправлено [LocalProfile -> NS sync](Config-Builder-upload-local-profiles-to-nightscout)
+- Fixed LocalProfile -> NS sync
 - Улучшения оповещений Insight
 - Улучшено обнаружение болюсов в истории помпы
 - Исправлены параметры соединения NSClient (wifi, зарядка)
@@ -423,7 +423,7 @@ v3 - новый протокол. Более безопасный и эффек�
 
 - Вкладка Портал терапии/ удалена из меню - подробнее [здесь](../Usage/CPbefore26.md)
 
-- Новый модуль (расширение/плагин) [ Локальный Профиль](Config-Builder-local-profile)
+- New Local Profile plugin
 
   - Локальный профиль может иметь более 1 профиля
   - Профили можно копировать и редактировать
@@ -433,7 +433,7 @@ v3 - новый протокол. Более безопасный и эффек�
 
 - SimpleProfile удален
 
-- [Пролонгированный болюс](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) - закрытый цикл будет отключен
+- [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
 
 - Плагин MDT: Исправлена ошибка с дублирующимися записями
 
@@ -449,9 +449,9 @@ v3 - новый протокол. Более безопасный и эффек�
 
 - Исправлена поддержка языков
 
-- Цели: [Позволить вернуться назад](Objectives-go-back-in-objectives), диалог загрузки времени
+- Objectives: [Allow to go back](../SettingUpAaps/CompletingTheObjectives.md#go-back-in-objectives), Time fetching dialog
 
-- Автоматизация: [разрешена сортировка](Automation-sort-automation-rules)
+- Automation: [allow sorting](../Usage/Automation.md#the-order-of-the-automations-in-the-list-matters)
 
 - Автоматизация: исправляется ошибка, когда автоматизация выполнялась с отключенным циклом
 
@@ -473,7 +473,7 @@ v3 - новый протокол. Более безопасный и эффек�
 
 Дата выпуска: 31-10-2019
 
-Обратите внимание на [важные примечания](Releasenotes-important-notes-2-5-0) и [ограничения](Releasenotes-is-this-update-for-me-currently-is-not-supported) перечисленные для [версии 2.5.0](Releasenotes-version-2-5-0). \* Исправлена ошибка в сетевом состоянии, которые приводят к ошибкам (не критично, но будет тратить много энергии на пересчет). \* Новая иерархия версий, позволяющая выполнять незначительные обновления без уведомлений об обновлении.
+Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#version-250) and [limitations](../Installing-AndroidAPS/Releasenotes.md#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes.md#version-250). \* Исправлена ошибка в сетевом состоянии, которые приводят к ошибкам (не критично, но будет тратить много энергии на пересчет). \* Новая иерархия версий, позволяющая выполнять незначительные обновления без уведомлений об обновлении.
 
 (Releasenotes-version-2-5-0)=
 ## Версия 2.5.0
@@ -484,8 +484,8 @@ v3 - новый протокол. Более безопасный и эффек�
 
 ### Важные Примечания
 
-- Используйте [ Android Studio 3.5.1 ](https://developer.android.com/studio/) или новее для [ сборки apk ](../Installing-AndroidAPS/Building-APK.md) или [обновлений](../Installing-AndroidAPS/Update-to-new-version.html).
-- Если вы используете xDrip должен быть указан.[идентификатор приемника](xdrip-identify-receiver).
+- Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../SettingUpAaps/BuildingAaps.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+- If you are using xDrip [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) must be set.
 - Если вы используете Dexcom G6 с модифицированным приложением Dexcom, вам понадобится версия из папки [2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 - Поддержка Glimp версии 4.15.57 и новее.
 
@@ -501,15 +501,15 @@ v3 - новый протокол. Более безопасный и эффек�
 
 - Внутреннее изменение targetSDK на 28 (Android 9), поддержка jetpack
 - Поддержка RxJava2, Okhttp3, Retrofit
-- Поддержка старых [помп Medtronic](../Configuration/MedtronicPump.md) (нужен RileyLink)
+- Old [Medtronic pumps](../CompatiblePumps/MedtronicPump.md) support (RileyLink need)
 - Новый [ модуль автоматизации ](../Usage/Automation.md)
-- Позволить [только часть болюса](Preferences-advanced-settings-overview) из калькулятора болюса
+- Allow to [bolus only part](../SettingUpAaps/Preferences.md#advanced-settings-overview) from bolus wizard calculation
 - Рендеринг активности инсулина
 - Корректировка прогнозов IOB с помощью результата autosense
 - Новая поддержка модифицированных приложений Dexcom ([ папка 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
 - Верификатор подписи
 - Возможность обойти цели пользователям OpenAPS
-- Новые [Цели](../Usage/Objectives.md) - экзамен, работа приложения (Если вы начали с "Начать с открытого цикла" предыдущих версий, экзамен необязателен)
+- New [objectives](../SettingUpAaps/CompletingTheObjectives.md) - exam, application handling (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 - Исправлена ошибка в драйверах Dana*, где сообщалось о ложной разнице во времени
 - Исправлена ошибка [СМС коммуникатора](../Children/SMS-Commands.md)
 
@@ -546,7 +546,7 @@ v3 - новый протокол. Более безопасный и эффек�
 
 ### Новые возможности
 
-- [Исправление перехода на летнее время](Timezone-traveling-time-adjustment-daylight-savings-time-dst)
+- [Исправление перехода на летнее время](../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst)
 - Обновление Wear
 - [Обновление расширения SMS](../Children/SMS-Commands.md)
 - Возможность возврата к предыдущим целям.
@@ -558,7 +558,7 @@ v3 - новый протокол. Более безопасный и эффек�
 
 ### Новые возможности
 
-- Поддержка Аccu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) (от Tebbe Ubben и JamOrHam)
+- [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
 - Индикаторы состояния на главном экране (Nico Schmitz)
 - Помощник перехода на летнее время (Румен Георгиев)
 - Исправлеие обработки названий профилей, поступивших от NS (Johannes Mockenhaupt)
@@ -578,7 +578,7 @@ v3 - новый протокол. Более безопасный и эффек�
 ### Новые возможности
 
 - поддержка oref1/SMB ([документация oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)). Обязательно прочтите документацию, чтобы знать, чего ожидать от SMB, как он себя поведет, чего может достичь и как добиться его ровной работы.
-- [Поддержка помпы\_Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
+- [\_Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md) pump support
 - Мастер установки: направляет вас через процесс настройки AndroidAPS
 
 (Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=
@@ -602,7 +602,7 @@ v3 - новый протокол. Более безопасный и эффек�
 
 - Верхняя полоса дает доступ к приостановке/отключению цикла, просмотру/настройке профиля и запуску/остановке временных целей (TT). Временные цели TT используют настройки по умолчанию. Новая опция Гипо TT является высокой временной целью TT для предотвращения слишком агрессивной реакции на корректирующие углеводы.
 - Кнопки лечения: старая кнопка все еще доступна, но скрыта по умолчанию. Видимость кнопок теперь может быть сконфигурирована. Новая кнопка инсулина, новая кнопка углеводов (включая [eCarbs/extended carbs](../Usage/Extended-Carbs.md))
-- [Цветные линии прогноза](../Getting-Started/Screenshots-prediction-lines)
+- [Цветные линии прогноза](../Getting-Started/Screenshots.md#prediction-lines)
 - Опция отображения поля заметок об инсулине/углеводах/калькуляторе/первичном заполнении которые передаются в NS
 - Обновленное диалоговое окно «первичное/заполнение» позволяет заполнять инфузионный набор и вносить данные об изменении места установки и замене картриджа
 

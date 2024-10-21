@@ -306,7 +306,7 @@ Press "NEXT" to go to the next screen:
 
 ### Blood sugar source
 
-Select the BG source you are using. Please read the documentation for your [BG source](../Configuration/BG-Source.md).
+Select the BG source you are using. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
 As there are several options available, we don't explain the configuration for all of them here. We are using Dexcom G6 with the BYODA app in our example here:
 
@@ -428,7 +428,7 @@ If your have already setup your profile in the steps before and you know how to 
 
 Otherwise, leave the Setup Wizard, using the arrow in the top left corner and let **AAPS** first show you some blood glucose values. You can come back anytime or use one of the direct configuration options (not using the Wizard).
 
-Please read the documentation for your [insulin pump](../Getting-Started/Pump-Choices.md).
+Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
 
 Press "NEXT" to go to the next screen.
 

@@ -25,7 +25,7 @@ Informații secrete sau private, cum ar fi Nightscout URL sau API secret nu vor 
 ## Instalare
 
 1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. Poți utiliza, dacă dorești, conturile tale de Google sau Facebook.
-2. Enable the “Open Humans” plugin in [Config Builder](../Configuration/Config-Builder.md).
+2. Enable the “Open Humans” plugin in [Config Builder](../SettingUpAaps/ConfigBuilder.md).
 3. Deschide setarea folosind iconița roata dințată. Poți restricționa încărcarea pe durata în care telefonul utilizează Wi-Fi și/sau este conectat la un încărcător.
 4. Deschide conectarea Open Humans (fir prin secțiunea OH sau meniul complet) și apasă pe 'LOGIN'.
 

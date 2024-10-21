@@ -8,9 +8,9 @@
 
 開始使用 AAPS，請按照以下步驟操作：
 
-* 找到一個[相容的幫浦](../Hardware/pumps.md)、一個[相容的 Android 設備](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)和一個[相容的 CGM 來源](../Configuration/BG-Source.md)。
-* [下載 AAPS 原始碼並建置軟體](../Installing-AndroidAPS/Building-APK.md)。
-* [配置軟體以連線到糖尿病設備並指定設定與安全偏好](index-configuration)。
+* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
+* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
 ## DIY 閉環系統的工作原理
 
@@ -18,7 +18,7 @@
 
 在自動胰島素輸送系統中，系統執行相同的操作：他從幫浦、CGM 及其他記錄資訊的來源（如 Nightscout）收集資料，使用這些資訊進行計算，並決定需要多少胰島素（超過或低於基礎速率），然後使用臨時基礎速率進行必要的調整，以保持或最終將血糖控制在目標範圍內。
 
-如果運作 AAPS 的設備損壞或超出幫浦範圍，一旦最新的臨時基礎速率結束，幫浦將恢復運作預編程的基礎速率。
+如果運作 AAPS 的設備損壞或超出幫浦範圍，最新的臨時基礎速率結束，幫浦將恢復運作預編程的基礎速率。
 
 ## 資料如何收集：
 
@@ -27,7 +27,7 @@
 Android 設備需要：
 
 * 與幫浦連線並讀取歷史記錄 - 已輸送多少胰島素
-* 與 CGM 直接或透過雲端通訊 - 查看當前及歷史血糖變化
+* 與 CGM 直接或透過雲端通訊 - 查看目前及歷史血糖變化
 
 當設備收集到這些資料後，演算法將根據設定（ISF、碳水比例、DIA、目標等）進行決策。 如果需要，他會向幫浦發出指令以修改胰島素輸送速率。
 
@@ -43,7 +43,7 @@ AAPS 設計用來透明地追蹤其收集的所有輸入資料、產生的建議
 
 ## AAPS 演算法決策的範例：
 
-AAPS 使用了與 OpenAPS 相同的核心演算法和功能集。 演算法會根據設定和當前情況進行多種預測，代表未來可能發生的不同情景。 在 Nightscout 中，這些顯示為「紫色線條」。 AAPS 使用不同的顏色來區分這些[預測線](Releasenotes-overview-tab)。 在日誌中，他會描述這些預測中的哪一條和哪個時間範圍驅動了必要的行動。
+AAPS 使用了與 OpenAPS 相同的核心演算法和功能集。 演算法會根據設定和目前情況進行多種預測，代表未來可能發生的不同情景。 在 Nightscout 中，這些顯示為「紫色線條」。 AAPS uses different colors to separate these [prediction lines](../Getting-Started/Screenshots.md#prediction-lines). 在日誌中，他會描述這些預測中的哪一條和哪個時間範圍驅動了必要的行動。
 
 ### 這裡是一些紫色預測線的範例，以及他們可能的不同：
 
@@ -53,19 +53,19 @@ AAPS 使用了與 OpenAPS 相同的核心演算法和功能集。 演算法會�
 
 ### 情境 1 - 為安全設置零臨時基礎速率
 
-在此範例中，血糖在短期內上升；然而，預計長期內會偏低。 事實上，預計會低於目標值*和*安全閾值。 為了安全預防低血糖，AAPS 會發出零臨時基礎速率（0% 的臨時基礎速率），直到最終血糖（在任何時間範圍內）高於閾值。
+在此範例中，血糖在短期內上升；然而，預計長期內會偏低。 事實上，預計會低於目標值*和*安全門檻值。 為了安全預防低血糖，AAPS 會發出零臨時基礎速率（0% 的臨時基礎速率），直到最終血糖（在任何時間範圍內）高於門檻值。
 
 ![劑量情境 1](../images/Dosing_scenario_1.jpg)
 
 ### 情境 2 - 為安全設置零臨時基礎速率
 
-在此範例中，預計血糖在短期內會偏低，但預計最終會高於目標值。 然而，由於短期內的低血糖實際上低於安全閾值，AAPS 會發出零臨時基礎速率，直到預測線不再有低於閾值的點。
+在此範例中，預計血糖在短期內會偏低，但預計最終會高於目標值。 然而，由於短期內的低血糖實際上低於安全門檻值，AAPS 會發出零臨時基礎速率，直到預測線不再有低於門檻值的點。
 
 ![劑量情境 2](../images/Dosing_scenario_2.jpg)
 
 ### 情境 3 - 需要更多胰島素
 
-在此範例中，短期預測顯示目標下方的下降。 然而，預測不會低於安全閾值。 最終血糖高於目標值。 因此，AAPS 會避免添加可能導致預測低於閾值的胰島素。 一旦安全，AAPS 會評估是否添加胰島素以將最終預測血糖降低至目標範圍。 *（根據設定以及所需胰島素的數量和時間安排，這些胰島素可能透過臨時基礎速率或 SMB（超微量注射）輸送。）*
+在此範例中，短期預測顯示目標下方的下降。 然而，預測不會低於安全門檻值。 最終血糖高於目標值。 因此，AAPS 會避免添加可能導致預測低於門檻值的胰島素。 當情況安全時，AAPS 會評估是否添加胰島素以將最終預測血糖降低至目標範圍。 *（根據設定以及所需胰島素的數量和時間安排，這些胰島素可能透過臨時基礎速率或 SMB（超微量注射）輸送。）*
 
 ![劑量情境 3](../images/Dosing_scenario_3.jpg)
 
@@ -95,7 +95,7 @@ AAPS 使用了與 OpenAPS 相同的核心演算法和功能集。 演算法會�
 
 其他推薦閱讀：
 
-* [AAPS 完整文檔](../index)
+* The [full AAPS documentation](../index.md)
 * [OpenAPS 參考設計](https://OpenAPS.org/reference-design/)，其中解釋了 OpenAPS 如何為安全設計：https://openaps.org/reference-design/
 * [OpenAPS 完整文檔](https://openaps.readthedocs.io/en/latest/index.html) 
   * 有關 OpenAPS 計算的更多詳情請參閱[這裡](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

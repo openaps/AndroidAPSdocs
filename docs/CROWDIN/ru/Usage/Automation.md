@@ -40,7 +40,7 @@
 
 ## Где находятся настройки автоматизации в AAPS?
 
-В зависимости от настроек [конфигуратора](../Installing-AndroidAPS/change-configuration.md#config-builder) **Automation** находится либо в выпадающем сэндвич-меню, либо в виде вкладки с **AAPS**.
+Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
 
 ## Как настроить автоматизацию?
 

@@ -14,18 +14,18 @@
 
 ## 更新到新版本 AAPS 的概述
 
-1. [匯出你的設定](../Usage/ExportImportSettings-export-settings) 從手機上現有的**AAPS**版本。 你可能不需要這樣做，但防患於未然更好。
-2. [更新本地副本](Update-to-new-version-update-your-local-copy) 的 AAPS 原始碼 (Git->Fetch 和 Git -> Pull)
-3. [建置簽章 APK](Update-to-new-version-build-the-signed-apk)
-4. [將建置的 APK](Building-APK-transfer-apk-to-smartphone) 傳送到你的手機並安裝他
-5. [檢查 AAPS 上的版本](Update-to-new-version-check-aaps-version-on-phone)
-6. 根據你的[血糖來源](../Configuration/BG-Source.md) 確保在 xDrip 中[識別接收器](xdrip-identify-receiver)，或使用[“建置你自己的 Dexcom 應用程式”](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)。
+1. [Export your settings](../Usage/ExportImportSettings.md) from the existing **AAPS** version on your phone. 你可能不需要這樣做，但防患於未然更好。
+2. [Update local copy](#2-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
+3. [建置簽章 APK](#3-build-the-signed-apk)
+4. [Transfer the built apk](#4-transfer-the-apk) to your phone and install it
+5. [Check the version](#6-check-aaps-version-on-phone) in AAPS
+6. Depending on your [BG source](../Getting-Started/CompatiblesCgms.md) make sure to [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app).
 
-如果你遇到問題，請參閱專頁 [Android Studio 疑難排解](../Installing-AndroidAPS/troubleshooting_androidstudio)。
+In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md).
 
 ## 1. 匯出你的設定
 
-如果你忘記如何執行此操作，請參閱 [匯出與匯入設定](ExportImportSettings-export-settings) 頁面。
+See the [Export & import settings](../Usage/ExportImportSettings.md) page if you don't remember how to do this.
 
 (Update-to-new-version-update-your-local-copy)=
 
@@ -67,13 +67,13 @@
 
 ## 3. 建置簽章 APK
 
-你的原始碼現在是當前發布的版本。 是時候按照[建置簽章 APK 章節](Building-APK-generate-signed-apk)中的說明從中建置簽章 apk 了。
+你的原始碼現在是目前發布的版本。 It's time to build the signed apk from it as described in the [build signed apk section](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk).
 
 ## 4. 傳送 APK
 
 你需要將 apk 傳送到手機以便你安裝他。
 
-請參閱 [傳送 APK 至智慧型手機](Building-APK-transfer-apk-to-smartphone) 的說明
+See the instructions for [Transfer APK to smartphone](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 ## 5. 安裝 APK
 
@@ -83,16 +83,16 @@
 
 ## 6. 檢查手機上的 AAPS 版本
 
-安裝新 apk 後，你可以點擊右上角的三點選單，然後選擇 "關於"，以檢查手機上的 AAPS 版本。 你應該能看到當前版本。
+安裝新 apk 後，你可以點擊右上角的三點選單，然後選擇 "關於"，以檢查手機上的 AAPS 版本。 你應該能看到目前版本。
 
 ![已安裝的 AAPS 版本](../images/Update_VersionCheck282.png)
 
-# 疑難排解
+# 問題排除
 
 如果發生任何錯誤，不要慌張。
 
 先深呼吸！
 
-然後查看專門頁面[疑難排解 Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio)，看看你的問題是否已經記錄在案！
+Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) if your problem is already documented!
 
 如果你需要進一步幫助，請聯繫其他**AAPS**使用者，透過[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)。

@@ -18,9 +18,9 @@ Le fichier **paramètres** sauvegardera non seulement votre progression à trave
 
 Si vous n'avez pas de sauvegarde de vos **paramètres**, s'il arrive quoi que ce soit arrive à votre smartphone **AAPS**, vous devrez reprendre les **objectifs** au début.
 
-Dans l'ensemble, les **objectifs** prendront environ 6 semaines à compléter (voir [combien de temps cela prendra-t-il?](preparing-how-long-will-it-take?) pour le détail), de la configuration d'**AAPS** sur votre smartphone jusqu'à la boucle fermée hybride "de base" (de l'objectif 1 à l'objectif 8), donc, bien que vous _puissiez_ aller jusqu'à l'**objectif 5** en utilisant une **pompe virtuelle** (et en utilisant une autre méthode d'administration d'insuline entre-temps), devoir recommencer tous les **objectifs** parce que vous avez par exemple perdu votre smartphone, est quelque chose que vous voulez vraiment éviter.
+Overall the **objectives** take around 6 weeks to complete (see [how long will it take?](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up) for a detailed breakdown) from configuring **AAPS** on your smartphone to "basic" hybrid closed looping (from objective 1 to objective 8), so, although you _can_ proceed up to **objective 5** using a **virtual pump** (and using some other method of insulin delivery in the meantime), having to re-complete all the **objectives** because for example, you lost your smartphone, is still something you really want to avoid.
 
-Lors de votre progression dans les **objectifs**, si vous le souhaitez, vous pouvez également supprimer votre progression et [retourner à un objectif précédent](Objectives-go-back-in-objectives).
+As well as progressing through the **objectives**, if you want, you can also remove your progress and [go back to an earlier objective](#go-back-in-objectives).
 
 ## Objectif 1 : Paramétrage de la visualisation et la surveillance des données, analyse des débits Basal et des ratios
 
@@ -28,10 +28,10 @@ Lors de votre progression dans les **objectifs**, si vous le souhaitez, vous pou
 
 Si ce n'est pas le cas, vous devrez corriger votre configuration jusqu'à ce que ça fonctionne pour **AAPS**.
 
-- Sélectionnez le MGC/MGF approprié dans le [Générateur de configuration](../Configuration/Config-Builder.md).  Voir [MGCs compatibles](../Configuration/BG-Source.html) pour plus d'informations.
-- Sélectionnez la pompe appropriée dans le [Générateur de configuration](../Configuration/Config-Builder.md) pour vous assurer que votre pompe peut communiquer avec AAPS. Choisissez la **pompe virtuelle** si vous utilisez un modèle de pompe sans pilote **AAPS** pour la boucle, ou si vous voulez travailler sur les premiers **objectifs** tout en utilisant un autre système pour l'administration d'insuline. Voir [Pompes compatibles](../Getting-Started/Pump-Choices.md) pour plus d'informations.
+- Sélectionnez le MGC/MGF approprié dans le [Générateur de configuration](../Configuration/Config-Builder.md).  See [BG Source](../Getting-Started/CompatiblesCgms.md) for more information.
+- Sélectionnez la pompe appropriée dans le [Générateur de configuration](../Configuration/Config-Builder.md) pour vous assurer que votre pompe peut communiquer avec AAPS. Choisissez la **pompe virtuelle** si vous utilisez un modèle de pompe sans pilote **AAPS** pour la boucle, ou si vous voulez travailler sur les premiers **objectifs** tout en utilisant un autre système pour l'administration d'insuline. See [insulin pump](../Getting-Started/CompatiblePumps.md) for more information.
 - Suivez les instructions de la page [Nightscout](../Installing-AndroidAPS/Nightscout.html) pour faire en sorte que Nightscout puisse recevoir et afficher ces données.
-- Notez que l'URL dans NSClient ne pas doit **PAS** contenir **/api/v1/** à la fin - voir les [paramètres NSClient dans les Préférences](Preferences-nsclient).
+- Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [NSClient settings in Preferences](../Configuration/Preferences.md#NSClient).
 
 Note : _Vous devrez peut-être attendre la prochaine lecture de glycémie avant qu'elle n'arrive dans **AAPS**._
 
@@ -76,7 +76,7 @@ De temps en temps, de nouvelles fonctionnalités sont ajoutées à **AAPS** qui 
 
 ## Objectif 4 : Démarrage de la boucle ouverte
 
-Durant cet objectif, vous comprendrez à quelle fréquence **AAPS** évalue l'impact du débit basal sur la glycémie, et recommande des ajustements temporaires de ce débit. Dans le cadre de cet objectif, vous allez activer pour la première fois la boucle ouverte et accepter manuellement sur votre pompe 20 changements de débit basal temporaire proposés. De plus, vous allez observer l'impact des cibles temporaires (personnalisées ou pré-configurées, _par ex_ pour l'activité ou les hypos). Si vous n'êtes pas encore à l'aise avec l'acceptation d'un débit basal temporaire dans **AAPS**, veuillez vous référer à l'onglet [ACTIONS](Screenshots#Screenshots-action-tab).
+Durant cet objectif, vous comprendrez à quelle fréquence **AAPS** évalue l'impact du débit basal sur la glycémie, et recommande des ajustements temporaires de ce débit. Dans le cadre de cet objectif, vous allez activer pour la première fois la boucle ouverte et accepter manuellement sur votre pompe 20 changements de débit basal temporaire proposés. De plus, vous allez observer l'impact des cibles temporaires (personnalisées ou pré-configurées, _par ex_ pour l'activité ou les hypos). If you are not familiar with setting a temporay basal rate change in **AAPS** yet, please refer to the [ACTIONS tab](../Getting-Started/Screenshots.md#action-tab).
 
 Temps estimé pour terminer cet objectif : **7 jours**. Vous serez obligé d'attendre que ce temps soit écoulé. Vous ne pouvez pas passer à l'objectif suivant avant, même si vous avez réalisé tous les changements de débit basal.
 
@@ -101,11 +101,11 @@ Temps estimé pour terminer cet objectif : **7 jours**. Vous serez obligé d'att
 
 ## Objectif 5 : Compréhension de la Boucle Ouverte, y compris les propositions de débits Basal temporaires
 
-Dans le cadre de l'**Objectif 5**, vous allez commencer à comprendre comment les recommandations de basal temporaire sont calculées. Cela inclut la [logique de détermination de la basale](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), l'analyse de l'impact en observant les [lignes de prédiction dans l'écran d'accueil](Screenshots-prediction-lines)/Nightscout et l'examen des calculs détaillés, disponibles dans l'onglet OPENAPS.
+Dans le cadre de l'**Objectif 5**, vous allez commencer à comprendre comment les recommandations de basal temporaire sont calculées. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab.
 
 Temps estimé pour terminer cet objectif : **7 jours**.
 
-Cette Objectif vous demande de calculer et de configurer la valeur de votre "Débit max en U/h pour une Temp Basal" (max-basal), comme décrit dans [les fonctionnalités OpenAPS](Open-APS-features#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal). Cette valeur est à définir dans Préférences > OpenAPS.
+This Objective requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal). Cette valeur est à définir dans Préférences > OpenAPS.
 Assurez-vous que ce paramètre de sécurité est défini à la fois dans **AAPS** et dans votre pompe à insuline.
 
 Vous voudrez peut-être fixer une cible de glycémie un peu plus haute que d'habitude jusqu'à ce que vous ayez confiance dans les calculs et les paramètres.
@@ -143,7 +143,7 @@ Si vous êtes en boucle ouverte avec une pompe virtuelle, arrêtez-vous ici. Cli
 Vous devrez toujours corriger les glycémies élevées vous-même (manuellement avec des corrections par pompe ou stylo) !
 ```
 
-Dans le cadre de l'**Objectif 6**, vous allez fermer la boucle et activer le mode arrêt glycémie basse (AGB). Pendant cet objectif, [max-IA](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) est réglé à zéro. Vous devez rester en mode AGB pendant 5 jours pour terminer cet objectif. Vous devriez mettre à profit ce temps pour vérifier si vos paramètres de profil sont justes et ne déclenchent pas trop souvent d'événement AGB.
+As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. Vous devez rester en mode AGB pendant 5 jours pour terminer cet objectif. Vous devriez mettre à profit ce temps pour vérifier si vos paramètres de profil sont justes et ne déclenchent pas trop souvent d'événement AGB.
 
 Temps estimé pour terminer cet objectif : **5 jours**.
 
@@ -170,7 +170,7 @@ Cela signifie que lorsque vous êtes à l'Objectif 6, si la glycémie chute, **A
 
 ## Objectif 7 : Réglage de la Boucle Fermée, augmentation de l'IA (Insuline Active) maximale au dessus de 0 et abaissement progressif des cibles glycémiques
 
-Pour compléter l'**Objectif 7**, vous devez passer en boucle fermée et augmenter votre [max-IA](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob). Pendant l'**objectif 6**, le paramètre max-IA était automatiquement considéré comme étant à 0. Ce n'est plus le cas. **AAPS** va commencer à utiliser la valeur max-IA telle que définie pour corriger les valeurs de glycémie élevées.
+To complete **Objective 7** you have to close your loop and raise your [maxIOB](Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob). Pendant l'**objectif 6**, le paramètre max-IA était automatiquement considéré comme étant à 0. Ce n'est plus le cas. **AAPS** va commencer à utiliser la valeur max-IA telle que définie pour corriger les valeurs de glycémie élevées.
 
 Temps estimé pour terminer cet objectif : 1 jour.
 
@@ -201,9 +201,9 @@ Temps estimé pour terminer cet objectif : **7 jours**.
 
 Dans cet objectif, vous découvrez l'utilisation des "Super Micro Bolus (SMB)", une fonctionnalité très importante. Après avoir lu la documentation appropriée, vous aurez une bonne compréhension de ce que sont les SMB, de leur fonctionnement, et de pourquoi la basale est mise à zéro temporairement après l'envoi d'un SMB ("zero-temp"). Temps estimé pour terminer cet objectif : 28 jours.
 
-- Pour comprendre les SMB et le concept de zero-temp, lisez la [section SMB de cette documentation](Open-APS-features-super-micro-bolus-smb) et la [page oref1 dans la doc openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) (en anglais).
-- Une fois cela fait, vous [augmentez max-IA](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) pour mettre en route les SMB. max-IA inclut maintenant toutes les IA, pas seulement la basale excédentaire. Ce seuil désactive les SMB jusqu'à ce que l'IA descende sous cette valeur (_par ex._ si max-IA est fixé à 7U et un bolus de 8U est donné pour couvrir un repas : les SMB seront suspendus et ne seront pas donnés jusqu'à ce que l'IA descende en dessous de 7U). Un bon point de départ est de fixer maxIA = bolus moyen des repas + 3 x basale max quotidienne (basale max quotidienne = débit horaire max de basale sur n'importe quelle période de la journée - voir [objectif 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) à ce propos)
-- Changez le paramètre "min_5m_carbimpact" (Préférences > Paramètres d'absorption > min_5m_carbimpact) à 8 lorsque vous passez de l'algorithme OpenAPS AMA à OpenAPS SMB. Pour AMA, la valeur par défaut est 3. Pour en savoir plus sur ce paramètre, cliquez [ici](../Configuration/Preferences.html#min-5m-carbimpact)
+- The [SMB section in this documentation](Open-APS-features.md#super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
+- Once done, you [raise maxIOB](Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working well. max-IA inclut maintenant toutes les IA, pas seulement la basale excédentaire. Ce seuil désactive les SMB jusqu'à ce que l'IA descende sous cette valeur (_par ex._ si max-IA est fixé à 7U et un bolus de 8U est donné pour couvrir un repas : les SMB seront suspendus et ne seront pas donnés jusqu'à ce que l'IA descende en dessous de 7U). A good start is setting maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference)
+- Changez le paramètre "min_5m_carbimpact" (Préférences > Paramètres d'absorption > min_5m_carbimpact) à 8 lorsque vous passez de l'algorithme OpenAPS AMA à OpenAPS SMB. Pour AMA, la valeur par défaut est 3. Read more about this setting [here](../Configuration/Preferences.md#min_5m_carbimpact)
 
 (Objectives-objective-10-automation)=
 
@@ -249,4 +249,4 @@ Si vous voulez revenir en arrière sur les objectifs terminés pour quelque rais
 
 ## Objectifs dans Android APS avant la version 3.0
 
-Un objectif a été supprimé lors de la sortie d'**AAPS** 3.0.  Les utilisateurs d'AAPS version 2.8.2.1 qui sont sur une version d'Android plus ancienne (_par ex._ antérieur à la version 9) utiliseront une série d'objectifs plus ancienne qui est documentée [ici](../Usage/Objectives_old.md).
+Un objectif a été supprimé lors de la sortie d'**AAPS** 3.0.  Users of Android APS version 2.8.2.1 who are on older Android software (_i.e._ earlier than version 9) will be using an older set of Objectives which can be found [here].

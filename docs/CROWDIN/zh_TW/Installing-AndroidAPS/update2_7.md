@@ -2,13 +2,13 @@
 
 - 當切換到 AAPS 2.7 時，程式碼進行了顯著更改。
 - 因此，在更新後，請務必進行一些更改或檢查設置。
-- 有關新功能和擴展功能的詳細訊息，請參閱[版本 2.7 的發佈說明](Releasenotes-version-2-7-0)。
+- Please see [release notes](../Installing-AndroidAPS/Releasenotes.md#version-270) for details on new and extended features.
 
 ## 檢查血糖資料來源
 
 - 更新後檢查血糖資料來源是否正確。
-- 特別是在使用 [xDrip+](../Configuration/xdrip.md) 時，可能會發生血糖資料來源被更改為 Dexcom 應用（已修補）的情況。
-- 打開 [組態建置工具](Config-Builder-bg-source)（主螢幕左上角的漢堡選單）
+- Especially when using [xDrip+](../CompatibleCgms/xDrip.md) it might happen, that BG source is changed to Dexcom app (patched).
+- Open [Config builder](../SettingUpAaps/ConfigBuilder.md#bg-source) (hamburger menu on top left side of home screen)
 - 向下滾動至「血糖資料來源」。
 - 如果需要，請選擇正確的血糖資料來源。
 
@@ -17,8 +17,8 @@
 ## 完成考試
 
 - AAPS 2.7 包含新的目標 11（在後來的版本中重新編號為目標 10），用於[自動化](../Usage/Automation.md)。
-- 你必須完成考試（[目標 3 和 4](Objectives-objective-3-prove-your-knowledge)），才能完成[目標 11](Objectives-objective-10-automation)。
-- 例如，如果你尚未完成[目標 3](../Usage/Objectives-objective-3-prove-your-knowledge)中的考試，你必須先完成考試，才能開始[目標 11](Objectives-objective-10-automation)。
+- You have to finish exam ([objective 3 and 4](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf).
+- If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf).
 - 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
 
 ## 設置主密碼
@@ -39,7 +39,7 @@
 - 確保將匯出的設定不僅存儲在你的手機上，還應至少存儲在一個安全的地方（你的電腦、雲端存儲等）。
 - 如果你使用與先前版本相同的密鑰庫來建置 AAPS 2.7 apk，則可以安裝新版本而無需刪除舊版本。
 - 所有設定以及已完成的目標將保持與之前版本相同。
-- 如果你遺失了密鑰庫，請使用新密鑰庫來建置 2.7 版本，並按照[疑難解答部分](troubleshooting_androidstudio-lost-keystore)的說明從舊版本匯入設定。
+- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
 
 ## 自動敏感度調整（提示 - 無需操作）
 
@@ -49,12 +49,12 @@
 
 ## 為 Dana RS 設置幫浦密碼（如果使用 Dana RS）
 
-- [Dana RS](../Configuration/DanaRS-Insulin-Pump.md) 的幫浦密碼在先前版本中未被檢查。
+- Pump password for [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) was not checked in previous versions.
 - 打開「偏好設定」（螢幕右上角的三點選單）
 - 向下滾動並點擊「Dana RS」旁的小三角形。
 - 點擊「幫浦密碼（僅限 v1）」
-- 輸入幫浦密碼（[預設密碼](DanaRS-Insulin-Pump-default-password)取決於韌體版本），然後點擊確定。
+- Enter pump password ([Default password](../CompatiblePumps/DanaRS-Insulin-Pump.md#default-password) is different depending on firmware version) and click OK.
 
 ![設置 Dana RS 密碼](../images/DanaRSPW.png)
 
-要更改 Dana RS 密碼，請按照[Dana RS 頁面](DanaRS-Insulin-Pump-change-password-on-pump)上的說明進行操作。
+To change password on Dana RS follow instructions on [DanaRS page](../CompatiblePumps/DanaRS-Insulin-Pump.md#change-password-on-pump).

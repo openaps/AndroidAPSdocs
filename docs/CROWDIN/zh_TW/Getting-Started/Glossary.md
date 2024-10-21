@@ -86,7 +86,7 @@
 
 **Open Loop system** = **AAPS** 的一項功能，將建議調整，必須由用戶在 **AAPS** 上手動執行。 進一步資訊 → Wiki - 「config builder」。
 
-**Oref0 / Oref1** = 敏感性檢測和 "參考設計實現版本 0/1"。 這是 OpenAPS 背後的關鍵演算法。Wiki - 敏感性檢測。
+**Oref0 / Oref1** = 敏感性偵測和 "參考設計實現版本 0/1"。 這是 OpenAPS 背後的關鍵演算法。Wiki - 敏感性偵測。
 
 `**Peak time**` = 胰島素發揮最大效果的時間。 進一步資訊 → Wiki - 「config builder」。
 
@@ -124,7 +124,7 @@
 
 **TT** = 臨時目標(temporary target)。用戶血糖目標（範圍）的臨時增加/減少，例如用於用餐或運動活動。 進一步資訊 → Wiki - 「temp targets」。
 
-**UAM** = 未事先報備的用餐(unannounced meals)。 檢測因餐飲、腎上腺素或其他因素引起的 **血糖** 水平顯著上升並嘗試進行調整。 進一步資訊 → Wiki - 'UAM' 另見 **SMB**。
+**UAM** = 未事先報備的用餐(unannounced meals)。 偵測因餐飲、腎上腺素或其他因素引起的 **血糖** 水平顯著上升並嘗試進行調整。 進一步資訊 → Wiki - 'UAM' 另見 **SMB**。
 
 **虛擬幫浦(Virtual pump)** = **AAPS** 的一項功能，允許用戶嘗試 **AAPS** 的功能，或供使用沒有 **AAPS** 驅動程式的幫浦型號進行閉環使用的糖尿病患者使用。→ 另見 **Open Loop**。
 
