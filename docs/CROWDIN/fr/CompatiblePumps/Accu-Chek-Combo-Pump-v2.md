@@ -8,7 +8,7 @@ Ces instructions sont pour configurer la pompe Accu-Chek Combo à l'aide du nouv
 
 * Une pompe Roche Accu-Chek Combo (avec n’importe quel firmware, ils fonctionnent tous).
 * Un dispositif Accu-Chek Smartpix V1 ou Accu-Chek Realtyme, ainsi que le logiciel de configuration Accu-Chek 360. (Sur demande Roche envoie gratuitement ces dispositifs Smartpix et la configuration logiciel à leurs clients, sauf en France ou il faut contacter son prestataire).
-* Un téléphone compatible. Android 9 (Pie) ou plus récent. Si vous utilisez LineageOS, la version minimale supportée est 16.1. See [release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version) for details.
+* Un téléphone compatible. Android 9 (Pie) ou plus récent. Si vous utilisez LineageOS, la version minimale supportée est 16.1. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
 * L'application AAPS installée sur votre téléphone.
 
 Certains téléphones peuvent fonctionner mieux que d'autres, en fonction de la qualité du Bluetooth et s'ils ont une logique supplémentaire agressive d'économie d'énergie. Une liste de téléphones compatibles se trouvent dans le document [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). Cette liste n’est pas une liste complète. Elle reflète l’expérience personnelle de quelques utilisateurs. Nous vous encourageons à partager également votre expérience et ainsi aider les autres.
@@ -20,7 +20,7 @@ Certains téléphones peuvent fonctionner mieux que d'autres, en fonction de la 
 
 Soyez conscient des limitations suivantes :
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../Usage/Extended-Carbs.md) instead).
+* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 * Un seul profil de basal (le premier) est pris en charge.
 * La boucle est désactivée si le profil actif sur la pompe n'est pas le profil no. 1. Cela continuera jusqu'à ce que le profil no. 1 soit rendu actif; lorsque cela est fait, la prochaine fois que AAPS se connecte (soit par lui-même après un certain temps ou soit parce que l'utilisateur appuie sur le bouton Rafraîchir dans l'interface utilisateur combov2), il verra que le profil no. 1 est actif, et réactivera la boucle.
 * Si la boucle demande l'annulation d'un DBT en cours, le Combo fixera un DBT de 90% ou 110% pendant 15 minutes à la place. Cela est dû au fait que l'annulation d'un DBT provoque une alerte sur la pompe qui provoque de nombreuses vibrations, et ces vibrations ne peuvent pas être désactivées.
