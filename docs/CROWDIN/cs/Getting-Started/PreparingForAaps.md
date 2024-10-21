@@ -83,9 +83,9 @@ V počátečních fázích zahájení provozu **AAPS** může docházet k potí�
 
 Pro podporu procesu sestavení aplikace jsou vyčleněny tyto oddíly dokumentace:
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../Getting-Started/FAQ.md) K);
+- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../UsefulLinks/FAQ.md) K);
 
-- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
+- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) Subsection.
 
 How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
 
@@ -101,9 +101,9 @@ How long it takes to get to closed looping depends on the individual, but an app
 
 Tím zajistíte, že při každém dalším sestavení aktualizované verze **AAPS** budete moct použít stejný soubor úložiště klíčů. V průměru budou potřebné 2 aktualizace **AAPS** ročně.
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](../Usage/ExportImportSettings.md). To vám umožní bezpečně obnovit váš systém s minimálním výpadkem v případě změny telefonu, aktualizace/přeinstalování aplikace. 
+In addition, **AAPS** provides the ability to [export all your configuration settings](../Maintenance/ExportImportSettings.md). To vám umožní bezpečně obnovit váš systém s minimálním výpadkem v případě změny telefonu, aktualizace/přeinstalování aplikace. 
 
-#### Řešení problémů
+#### Troubleshooting
 
 Prosím, neváhejte se obrátit na komunitu AAPS, pokud si s něčím nejste jistí - neexistují žádné pošetilé otázky! Všichni uživatelé, bez ohledu na úroveň jejich zkušeností, mohou klást otázky podle potřeby. Díky množství **AAPS** uživatelů dostanete obvykle odpovědi na vaše otázky poměrně rychle.
 
