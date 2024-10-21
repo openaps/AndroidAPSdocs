@@ -200,7 +200,7 @@ Dexcom 傳感器的自動延長（`預防性重啟`）不建議使用，因為�
 ### Libre 智慧讀取器電池電量
 
 - 如 MiaoMiao 和 Bubble 等橋接器的電池電量可以顯示在 AAPS 中（Blucon 不支援）。
-- Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
+- Details can be found on [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery).
 
 ### 連線 Libre 傳輸器並啟動傳感器
 
