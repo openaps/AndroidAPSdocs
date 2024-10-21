@@ -12,7 +12,7 @@
 Regularly export your **AAPS** settings after completing each **objective**!
 ```
 
-Důrazně doporučujeme, abyste [exportovali své nastavení](../Usage/ExportImportSettings.md) po dokončení každého **Cíle**. Tento proces exportu vytváří soubor dat **nastavení** (.json), které by jste měli udržovat zálohované na jednom nebo více bezpečných místech (např. Google Drive, pevný disk, e-mailové přílohy atd.). Tím si zajistíte, že udržíte svůj pokrok při plnění **cílů**, a pokud omylem smažete (resetujete) dokončení některého cíle, můžete jej jednoduše znovu načíst importováním souboru s aktuálním nastavením. Stejně tak potřebujete zálohu **nastavení** v situaci, kdy musíte změnit z jakéhokoli důvodu váš chytrý telefon s nainstalovaným **AAPS** (výměna, ztráta, zničení telefonu atd.)
+We strongly recommend that you  [export your settings](../Maintenance/ExportImportSettings.md) after completing each **objective**. Tento proces exportu vytváří soubor dat **nastavení** (.json), které by jste měli udržovat zálohované na jednom nebo více bezpečných místech (např. Google Drive, pevný disk, e-mailové přílohy atd.). Tím si zajistíte, že udržíte svůj pokrok při plnění **cílů**, a pokud omylem smažete (resetujete) dokončení některého cíle, můžete jej jednoduše znovu načíst importováním souboru s aktuálním nastavením. Stejně tak potřebujete zálohu **nastavení** v situaci, kdy musíte změnit z jakéhokoli důvodu váš chytrý telefon s nainstalovaným **AAPS** (výměna, ztráta, zničení telefonu atd.)
 
 Soubor **nastavení** zálohuje nejen váš postup v plnění Cílů, ale také vlastní nastavení **AAPS** jako je např. **max bolus** _atd._
 
@@ -76,14 +76,14 @@ From time to time, new features are added to **AAPS** which may require a new qu
 
 ## Cíl 4: Začít s otevřenou smyčkou
 
-Účelem tohoto cíle je objasnit, jak často bude **AAPS** vyhodnocovat vliv bazálních dávek na úroveň glykémie a jak je schopen doporučovat dočasné úpravy bazálních dávek. Jako součást splnění tohoto Cíle budete poprvé aktivovat otevřenou smyčku, a provádět 20 navrhovaných změn dočasných bazálních dávek ručně na vaší pumpě. Kromě toho budete sledovat dopad dočasných a výchozích dočasných cílů (např. pro řešení fyz. aktivity nebo řešení hypoglykémie). If you are not familiar with setting a temporay basal rate change in **AAPS** yet, please refer to the [ACTIONS tab](../Getting-Started/Screenshots.md#action-tab).
+Účelem tohoto cíle je objasnit, jak často bude **AAPS** vyhodnocovat vliv bazálních dávek na úroveň glykémie a jak je schopen doporučovat dočasné úpravy bazálních dávek. Jako součást splnění tohoto Cíle budete poprvé aktivovat otevřenou smyčku, a provádět 20 navrhovaných změn dočasných bazálních dávek ručně na vaší pumpě. Kromě toho budete sledovat dopad dočasných a výchozích dočasných cílů (např. pro řešení fyz. aktivity nebo řešení hypoglykémie). If you are not familiar with setting a temporay basal rate change in **AAPS** yet, please refer to the [ACTIONS tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
 
 Odhadovaný čas k dokončení tohoto Cíle: **7 dní**. To je povinná čekací doba. Nemůžete přejít k dalšímu Cíli, i když jste již provedli všechny požadované úpravy bazálních dávek.
 
 - Vyberte možnost Otevřená smyčka buď v Nastavení, nebo stisknutím a podržením ikony Smyčka v pravém horním rohu hlavní obrazovky.
 - Walk through the [Preferences](../SettingUpAaps/Preferences.md) to set it up for you (scroll down to "Loop/APS Mode" and select "Open Loop".
 - Ručně proveďte alespoň 20 nastavení dočasných cílů, které vám systém navrhuje, a to během 7 dní; zadejte je do své pumpy a potvrďte v **AAPS**, že jste návrhy přijali. Ujistěte se, že se tyto úpravy bazálních dávek zobrazí v **AAPS** a Nightscoutu.
-- Povolte [dočasné cíle](../Usage/temptarget.md) pokud je potřeba. Při výskytu hypoglykémie použijte dočasný cíl hypogkylémie, abyste zabránili přehnané korekci systému jakmile se hodnota začne obracet.
+- Enable [temp targets](../DailyLifeWithAaps/TempTargets.md) if necessary. Při výskytu hypoglykémie použijte dočasný cíl hypogkylémie, abyste zabránili přehnané korekci systému jakmile se hodnota začne obracet.
 
 ### Snížení počtu oznámení
 
@@ -101,11 +101,11 @@ Odhadovaný čas k dokončení tohoto Cíle: **7 dní**. To je povinná čekací
 
 ## Cíl 5: Porozumění otevřené smyčce, včetně doporučení pro dočasné bazály
 
-Záměrem při plnění **Cíle 5** je pochopit, jak jsou odvozena doporučení k úpravě dočasnému bazálu. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab.
+Záměrem při plnění **Cíle 5** je pochopit, jak jsou odvozena doporučení k úpravě dočasnému bazálu. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab.
 
 Odhadovaný čas k dokončení tohoto Cíle: **7 dní**.
 
-This Objective requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal). Tuto hodnotu lze upravit v menu Nastavení > **OpenAPS**.
+This Objective requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal). Tuto hodnotu lze upravit v menu Nastavení > **OpenAPS**.
 Ujistěte se, že toto bezpečnostní nastavení je nastaveno jak v **AAPS**, tak ve vaší inzulínové pumpě.
 
 Cílovou hodnotu (glykémie) nastavte o něco výše než je obvyklé, dokud si nebudete jisti správností výpočtů a nastavení.
@@ -143,7 +143,7 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 Budete muset korigovat vysoké hodnoty glykémií samostatně (ručním posíláním inzulinu z pumpy nebo nebo perem)!
 ```
 
-As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. Pro dokončení Cíle musíte zůstat v tomto režimu 5 dní. Tento čas byste měli použít ke kontrole, zda jsou nastavení profilu přesná a nespouštějí režim "Ochrana před nízkou glykémií" příliš často.
+As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. Pro dokončení Cíle musíte zůstat v tomto režimu 5 dní. Tento čas byste měli použít ke kontrole, zda jsou nastavení profilu přesná a nespouštějí režim "Ochrana před nízkou glykémií" příliš často.
 
 Odhadovaný čas k dokončení tohoto Cíle: **5 dní**.
 
@@ -170,7 +170,7 @@ To znamená, že pokud v průběhu plnění Cíle 6 hodnota glykémie klesá, **
 
 ## Cíl 7: Vyladění uzavřené smyčky, zvýšení maxIOB nad 0 a postupné snižování cílové hladiny cukru v krvi
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB byl automaticky vynulován v **Cíli 6**. To se nyní vrací zpět. **AAPS** začne používat stanovenou hodnotu maxIOB ke korekci vysokých hodnot glykémie.
+To complete **Objective 7** you have to close your loop and raise your [maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB byl automaticky vynulován v **Cíli 6**. To se nyní vrací zpět. **AAPS** začne používat stanovenou hodnotu maxIOB ke korekci vysokých hodnot glykémie.
 
 Odhadovaný čas k dokončení tohoto Cíle: **1 den**.
 
@@ -194,7 +194,7 @@ V rámci tohoto cíle budete znovu upravovat výkonnost svého profilu a budete 
 Odhadovaný čas k dokončení tohoto Cíle: **7 dní**.
 
 - Můžete použít [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) jako jednorázovou kontrolu vašich bazálních dávek nebo provést tradiční test bazálu.
-- Povolte [autosens](../Usage/Open-APS-features.md) po dobu 7 dní a sledujte bílou linku v přehledovém grafu, která ukazuje jak vaše citlivost roste a klesá v důsledku civčení, hormonálních změn apod. a zároveň sledujte na záložce OpenAPS, jak vzhledem k tomu aplikace **AAPS** upravila hodnoty vašich bazálů nebo cílových hodnot glykemie.
+- Enable [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days and watch OVERVIEW's graph white line showing your insulin sensitivity rising or falling due to exercise or hormones etc. and keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the basals and/or targets accordingly.
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 
@@ -202,8 +202,8 @@ Odhadovaný čas k dokončení tohoto Cíle: **7 dní**.
 
 V tomto cíli se budete řešit a používat "Super Micro Bolus (SMB)" jako jednu základní funkcionalitu. Po absolvování nutné četby budete dobře rozumnět tomu, co jsou SMB, jak fungují, jaký je rozumný výchozí bod s SMB a proč je bazál dočasně nastaven na nulu po podání SMB (nulové nastavení). Odhadovaný čas k dokončení tohoto Cíle: **28 dní**.
 
-- The [SMB section in this documentation](../Usage/Open-APS-features.md#super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
-- Once done, you [raise maxIOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working well. MaxIOB nyní zahrnuje veškerý aktivní inzulín (IOB), nejen akumulované bazály. Tato prahová hodnota zastavuje podávání SMB dokud IOB neklesne pod tuto hodnotu (_např._ maxIOB je nastaveno na 7 U a bolus 8 U je podán k pokrytí jídla: mikrobolusy budou pozastaveny a nebudou podávány dokud IOB neklesne pod 7 U). A good start is setting maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference)
+- The [SMB section in this documentation](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
+- Once done, you [raise maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working well. MaxIOB nyní zahrnuje veškerý aktivní inzulín (IOB), nejen akumulované bazály. Tato prahová hodnota zastavuje podávání SMB dokud IOB neklesne pod tuto hodnotu (_např._ maxIOB je nastaveno na 7 U a bolus 8 U je podán k pokrytí jídla: mikrobolusy budou pozastaveny a nebudou podávány dokud IOB neklesne pod 7 U). A good start is setting maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference)
 - Změňte parametr "min_5m_carbimpact" (Nastavení > Nastavení absorpce sacharidů > min_5m_carbimpact) na hodnotu 8 jakmile přepnete z algoritmu OpenAPS AMA na OpenAPS SMB. Pro AMA je výchozí hodnota 3. Read more about this setting [here](../SettingUpAaps/Preferences.md#min_5m_carbimpact)
 
 (Objectives-objective-10-automation)=
@@ -212,7 +212,7 @@ V tomto cíli se budete řešit a používat "Super Micro Bolus (SMB)" jako jedn
 
 Abyste mohli používat automatizace, musíte začít pracovat na **Cíli 10**.
 
-1. Nejdříve si přečtěte stránku dokumentace  [Automation](../Usage/Automation.md) first.
+1. Read the documentation page  [Automation](../DailyLifeWithAaps/Automations.md) first.
 2. Nastavte nejzákladnější pravidlo automatizace;
    například spuštění Android oznámení během několika minut:
 
@@ -236,7 +236,7 @@ Abyste mohli používat automatizace, musíte začít pracovat na **Cíli 10**.
 ## Cíl 11: Povolit další funkce pro každodenní používání, jako je například Dynamic sensitivity plugin (Dynamická ISF).
 
 - Zajistěte, aby správně fungovaly SMB
-- Přečtěte si dokumentaci týkající se dynamické ISF [zde](../Usage/DynamicISF.md)
+- Read the documentation concerning Dynamic ISF [here](../DailyLifeWithAaps/DynamicISF.md)
 - Search the Facbook and [Discord](https://discord.gg/4fQUWHZ4Mw) groups for discussions around Dynamic ISF and read about other users experiences and recommendations.
 - Povolte **DynamicISF plugin** a nastavte vhodnou kalibraci podle fyziologických parametrů uživatele. Z bezpečnostních důvodů je vhodné začít hodnotou Korekčního faktoru nižší než 100%.
 
