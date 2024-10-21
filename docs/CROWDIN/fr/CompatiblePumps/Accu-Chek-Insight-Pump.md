@@ -12,7 +12,7 @@
 
 Remarque : AAPS écrira toujours les données dans le **premier profil débit de base de la pompe**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md) page which Android version is required to run AAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Getting-Started/ComponentOverview) page which Android version is required to run AAPS.)
 * The AAPS app installed on your phone
 
 ## Paramètres
@@ -122,7 +122,7 @@ Depending on the firmware version of your pump, the Insight will vibrate briefly
 
 * Firmware 1.x : Aucune vibration par conception.
 * Firmware 2.x : Les vibrations ne peuvent pas être désactivées.
-* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614))
+* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](../Maintenance/ReleaseNotes.md#version-2614))
 
 La version du firmware se trouve dans le menu Appairage de Insight / Version du logiciel.
 
@@ -150,4 +150,4 @@ Dans ce cas, désactivez le bluetooth sur la pompe ET sur le smartphone pendant 
 
 ## Voyager avec différents fuseaux horaires avec une pompe Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#insight).
