@@ -14,7 +14,7 @@ You can deny public access to your Nightscout site by using [authentication role
 
 Nightscout `API_SECRET` is your site main password: don't share it publicly.
 
-### AAPS Ayarları
+### AAPS settings
 
 You can setup AAPS to accept Nightscout commands (profile changes, treatments, ...), or fully disable it.
 
