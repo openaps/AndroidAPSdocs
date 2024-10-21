@@ -134,7 +134,7 @@
 
 ![Активировать Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Активировать Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-Настройки лучше всего экспортировать ПОСЛЕ активации Pod. Делайте это при каждой замене пода и раз в месяц, копируйте экспортированный файл на ваш интернет-диск. see [**Export settings Doc**](../Usage/ExportImportSettings.md).
+Настройки лучше всего экспортировать ПОСЛЕ активации Pod. Делайте это при каждой замене пода и раз в месяц, копируйте экспортированный файл на ваш интернет-диск. see [**Export settings Doc**](../Maintenance/ExportImportSettings.md).
 
 
 (OmnipodDASH-деактивация-пода)=
@@ -361,7 +361,7 @@
   * **SMS** - В SMS сообщается реальный остаток в ед. или 50+ед
   * **Nightscout** - при более чем 50 единиц в Nightscout выгружается значение 50 ед.(версия 14.07 и старше).  Более новые версии покажут 50 + когда более 50 единиц.
 
-## Устранение неполадок
+## Troubleshooting
 
 (OmnipodDASH-подача-приостановлена)=
 
@@ -466,5 +466,5 @@
 
 -  **Уровень 0:** Прочитайте соответствующий раздел этой документации, чтобы удостовериться, что вы понимаете, как должна работать функция, с которой вы испытываете трудности.
 -  **Уровень 1:** Если вы все еще сталкиваетесь с проблемами, которые не можете решить, изучая документацию, перейдите в канал *#AAPS* на **Discord** с помощью [этой ссылки-приглашения](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. Если нет, создайте [новую проблему](https://github.com/nightscout/AndroidAPS/issues) и прикрепите [ваши файлы журналов](../Usage/Accessing-logfiles.md).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
 -  **Будьте терпеливы - решения проблем часто требуют времени и терпения как от пользователей, так и от разработчиков.**
