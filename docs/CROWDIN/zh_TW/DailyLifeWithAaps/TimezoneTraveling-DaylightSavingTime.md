@@ -24,7 +24,7 @@
    
    * 例如：維也納 -> 紐約：設定切換 +6 小時
    * 例如：維也納 -> 悉尼：設定切換 -8 小時
-* Probably not an option if using [patched LibreLink app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
+* 如果使用[修補版 LibreLink 應用程式](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip)，可能無法選擇，因為必須設置自動時區才能啟動新的 Libre 2 感測器。
 
 ### 方案2：刪除幫浦歷史記錄
 
@@ -52,7 +52,7 @@ Insight 也會記錄更改時間的歷史條目，記錄時間從哪個（舊）
 
 ## Accu-Chek Combo
 
-The [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. Combo 無法儲存時區，只能儲存本地時間，這正是新的驅動程式將其編程至幫浦中的方式。 此外，他會將時區儲存在本地 AAPS 偏好設定中，以便將幫浦的本地時間轉換為具有時區偏移的完整時間戳記。 使用者不需要做任何操作；如果 Combo 的時間與手機的目前時間相差太大，幫浦的時間會自動調整。
+新的[Combo 驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)會自動將幫浦的時間調整為手機的時間。 Combo 無法儲存時區，只能儲存本地時間，這正是新的驅動程式將其編程至幫浦中的方式。 此外，他會將時區儲存在本地 AAPS 偏好設定中，以便將幫浦的本地時間轉換為具有時區偏移的完整時間戳記。 使用者不需要做任何操作；如果 Combo 的時間與手機的目前時間相差太大，幫浦的時間會自動調整。
 
 請注意，這需要一些時間，因為只能在遠端終端模式下完成，而該模式通常較慢。 這是 Combo 無法克服的限制。
 
