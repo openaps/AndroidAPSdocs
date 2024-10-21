@@ -25,7 +25,7 @@
 ## 設定
 
 1. 如果尚未建立帳號，請至 [Open Humans](https://www.openhumans.org) 建立帳號。 若你願意，你也可以使用現有的 Google 或 Facebook 帳號。
-2. Enable the “Open Humans” plugin in [Config Builder](../SettingUpAaps/ConfigBuilder.md).
+2. 在[設定建構器](../SettingUpAaps/ConfigBuilder.md)中啟用“開放人類”外掛。
 3. 透過齒輪按鈕開啟設定。 你可以限制只有在手機使用 Wi-Fi 和/或正在充電時進行上傳。
 4. 打開 Open Humans 外掛（可透過 OH 頁籤或漢堡選單），然後點擊「登入」。
 
