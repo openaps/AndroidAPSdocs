@@ -1,6 +1,6 @@
 # DanaR 幫浦
 
-*這些說明適用於配置該應用程式與 DanaR 幫浦。 Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*
+*這些說明適用於配置該應用程式與 DanaR 幫浦。 如果您擁有 2017 年推出的 DanaRS，請訪問[DanaRS 胰島素幫浦](./DanaRS-Insulin-Pump.md)。*
 
 * 在幫浦中進入主選單 > 設置 > 用戶選項
 * 開啟「8. 延時注射」 延長注射
@@ -23,4 +23,4 @@
 
 ## Dana R 幫浦的時區旅行
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#danarv2-danars).
+有關跨時區旅行的資訊請參見[使用幫浦的時區旅行](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#danarv2-danars)頁面。
