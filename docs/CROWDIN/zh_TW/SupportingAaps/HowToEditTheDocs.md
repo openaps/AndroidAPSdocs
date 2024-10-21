@@ -2,9 +2,9 @@
 
 **此描述僅適用於編輯英文文檔。 所有新訊息必須首先以英文添加。 如果你想將文檔翻譯成其他語言（感謝你的貢獻），請使用[Crowdin](https://crowdin.com/project/androidapsdocs)。**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
+有關如何格式化文本（標題、加粗...）以及設置連結的提示，請參閱此頁面的["代碼語法"](#code-syntax)部分。
 
-## General
+## 一般問題
 
 如有任何問題、反饋或新想法，你可以透過[Discord](https://discord.gg/4fQUWHZ4Mw)聯繫文件團隊。
 
@@ -34,7 +34,7 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 3. 這兩種選擇中的任何一個都將在你的庫中建立一個新分支，你的編輯將儲存在該分支中。 對文件進行編輯。
 
-我們使用Markdown語法來編寫文檔頁面。 文件的後綴為“.md”。目前我們使用myst_parser來處理我們的Markdown文件。 Take care to use the correct syntax as [described below](#code-syntax).
+我們使用Markdown語法來編寫文檔頁面。 文件的後綴為“.md”。目前我們使用myst_parser來處理我們的Markdown文件。 請確保使用正確的語法，如[以下所述](#code-syntax)。
 
 ![編輯分支](../images/PR3.png)
 
