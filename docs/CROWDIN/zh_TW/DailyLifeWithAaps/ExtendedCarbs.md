@@ -3,7 +3,7 @@
 
 ## 什麼是 eCarbs？什麼時候使用 eCarbs 有效？
 
-在一般幫浦療法中，延長注射（延長胰島素注射）是應對高脂肪或慢速吸收餐食的好方法，這些餐食會讓血糖在胰島素效果結束後仍然上升。 然而，在循環系統中，延長注射並不那麼適用（且技術上有困難），因為他基本上是一個固定的高臨時基礎率，而循環系統的工作原理是動態調整基礎率。 For details see [extended bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) below.
+在一般幫浦療法中，延長注射（延長胰島素注射）是應對高脂肪或慢速吸收餐食的好方法，這些餐食會讓血糖在胰島素效果結束後仍然上升。 然而，在循環系統中，延長注射並不那麼適用（且技術上有困難），因為他基本上是一個固定的高臨時基礎率，而循環系統的工作原理是動態調整基礎率。 有關詳細資訊，請參見以下[延長注射](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment)。
 
 然而，處理這類餐食的需求仍然存在。 這就是為什麼從 AAPS 版本 2.0 開始支援所謂的延長碳水化合物或 eCarbs。
 
@@ -42,7 +42,7 @@ ______________________________________________________________________
 (Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## 延長注射及其為何在閉環系統中無法運作？
 
-如上所述，延長或多波段注射在閉環系統中並不真正有效。 [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
+如上所述，延長或多波段注射在閉環系統中並不真正有效。 [請參閱下方詳情](#why-extended-boluses-wont-work-in-a-closed-loop-environment)
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### 延長注射與切換至開放循環 - 僅限 Dana 與 Insight 幫浦
@@ -53,7 +53,7 @@ ______________________________________________________________________
 
 - 閉環將自動停止並切換為開環模式，以運作延長注射。
 - 注射單位、剩餘和總時間將顯示在主畫面。
-- On Insight pump extended bolus is *not available* if [TBR emulation](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
+- 在 Insight 幫浦上，如果使用[TBR 模擬](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)，則不提供延長注射功能。
 
 ![AAPS 2.6 中的延長注射](../images/ExtendedBolus2_6.png)
 
