@@ -18,7 +18,7 @@ If you are keen to know the structure of the objectives, please read [Completing
 
 ```{admonition} Ask for Help
 :class: note
-如果文檔中有錯誤或你有更好的解釋建議，你可以按照[與其他用戶聯繫](../Where-To-Go-For-Help/Connect-with-other-users.md)中的說明，向社群尋求幫助。
+If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
 
 ## AAPS設定嚮導逐步指南
@@ -326,7 +326,7 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
-### 設定檔
+### Profile
 
 現在我們進入設定嚮導中的一個非常重要的部分。
 
@@ -440,7 +440,7 @@ Please read the documentation for your [insulin pump](../Getting-Started/Compati
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-### APS 演算法
+### APS algorithm
 
 選擇OpenAPS SMB演算法作為你的APS演算法。 即使有這個名稱，SMB功能在你熟悉 **AAPS** 並完成第一階段目標之前是停用的。 無論如何，OpenAPS SMB 相較於 OpenAPS AMA 更新且通常效果更好。
 
