@@ -26,11 +26,11 @@
 6. 按下螢幕頂部的「比較設定檔」按鈕。
 7. 會顯示兩個調整後的設定檔的比較結果。
 
-Once you are fine with the profile adjustments you can [clone the profile](#clone-profile) as described below.
+當你對設定檔調整感到滿意時，可以按照以下描述[複製設定檔](#clone-profile)。
 
 ## 比較兩個設定檔
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+你還可以使用設定檔助手來比較兩個不同的設定檔或設定檔切換（之前在[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)中使用的一個設定檔的百分比）。
 
 ![設定檔助手 1](../images/ProfileHelper1.png)
 
@@ -50,7 +50,7 @@ You can use profile helper also to compare to different profiles or profile swit
 (profilehelper-clone-profile)=
 ## 複製設定檔
 
-You can clone a profile / profile switch directly from profile helper.
+您可以直接從個人設置助手複製一個個人設置/個人設置切換。
 
 ![設定檔助手 複製設定檔/設定檔切換](../images/ProfileHelperClone.png)
 
