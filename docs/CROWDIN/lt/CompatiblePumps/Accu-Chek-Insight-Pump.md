@@ -12,7 +12,7 @@
 
 Pastaba: AAPS visada duomenis įrašys į **pirmąjį pompos bazės profilį**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md) page which Android version is required to run AAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Getting-Started/ComponentOverview) page which Android version is required to run AAPS.)
 * The AAPS app installed on your phone
 
 ## Sąranka
@@ -122,7 +122,7 @@ Depending on the firmware version of your pump, the Insight will vibrate briefly
 
 * Programinė versija 1.x: Jokios vibracijos.
 * Programinė versija 2.x: Vibracija negali būti išjungta.
-* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614))
+* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](../Maintenance/ReleaseNotes.md#version-2614))
 
 Firmware version can be found in the menu.
 
@@ -150,4 +150,4 @@ In this case turn off bluetooth on pump AND smartphone for about 10 seconds and 
 
 ## Kelionė per laiko zonas su Insight pompa
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#insight).
