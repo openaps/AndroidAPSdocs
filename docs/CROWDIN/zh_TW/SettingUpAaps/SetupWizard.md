@@ -8,7 +8,7 @@
 
 ```{admonition} Preview Objectives
 :class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) but then come back here to run the Setup Wizard first.
+如果您想了解目標的結構，請參閱[完成目標](../SettingUpAaps/CompletingTheObjectives.md)，但然後請回來先運行設置嚮導。
 
 ```
 
@@ -18,7 +18,7 @@ If you are keen to know the structure of the objectives, please read [Completing
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+如果文檔中有錯誤或您對如何解釋某些內容有更好的想法，您可以按照[與其他用戶聯繫](../GettingHelp/WhereCanIGetHelp.md)的說明向社區尋求幫助。
 ```
 
 ## AAPS設定嚮導逐步指南
@@ -306,7 +306,7 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ### 血糖來源
 
-選擇你使用的血糖來源。 Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+選擇你使用的血糖來源。 請參閱您的[BG 來源](../Getting-Started/CompatiblesCgms.md)的文檔。
 
 由於有多個選項可用，因此我們不會在此詳細解釋所有選項的配置。 在這裡我們使用Dexcom G6與BYODA應用程式的示例：
 
@@ -326,7 +326,7 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
-### Profile
+### 設定檔
 
 現在我們進入設定嚮導中的一個非常重要的部分。
 
@@ -428,7 +428,7 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 否則，請使用左上角的箭頭退出設定嚮導，讓 **AAPS** 首先顯示一些血糖值。 你可以隨時返回或使用直接配置選項（不使用嚮導）。
 
-Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
+請參閱您的[胰島素幫浦](../Getting-Started/CompatiblePumps.md)的文檔。
 
 按“下一步”進入下一個螢幕。
 
@@ -440,7 +440,7 @@ Please read the documentation for your [insulin pump](../Getting-Started/Compati
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-### APS algorithm
+### APS 演算法
 
 選擇OpenAPS SMB演算法作為你的APS演算法。 即使有這個名稱，SMB功能在你熟悉 **AAPS** 並完成第一階段目標之前是停用的。 無論如何，OpenAPS SMB 相較於 OpenAPS AMA 更新且通常效果更好。
 
@@ -507,6 +507,6 @@ OpenAPS AMA 是最基本的演算法，不支援微量注射來修正高值。�
 
 ![image](../images/setup-wizard/Screenshot_20231202_144156.png)
 
-If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
+如果您意外地在任何時候離開了設置嚮導，您可以簡單地重新啟動嚮導，或手動更改[AAPS 循環的配置](../SettingUpAaps/ChangeAapsConfiguration.md)。
 
-If your **AAPS** loop is now fully setup, please move on to the next section ["Completing the objectives"](../SettingUpAaps/CompletingTheObjectives.md).
+如果您的 **AAPS** 循環現在已完全設置，請繼續下一個部分[“完成目標”](../SettingUpAaps/CompletingTheObjectives.md)。
