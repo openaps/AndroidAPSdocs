@@ -1,8 +1,8 @@
-# Troubleshooting
+# 問題排除
 
 你可以在許多 wiki 頁面上找到問題排除的資訊。 此頁面是幫助你找到解決問題資訊的鏈接集合。
 
-Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
+額外的有用資訊也可能在[FAQ](../UsefulLinks/FAQ.md)中提供。
 
 ## AAPS 應用程式
 
@@ -12,7 +12,7 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 * [問題排除 AndroidStudio](TroubleshootingAndroidStudio)
 
 ### 設定
-* [Profile](Profiles-troubleshooting-profile-errors)
+* [設定檔](Profiles-troubleshooting-profile-errors)
 
   ![錯誤：基礎率未對齊到整點](../images/Screen_DifferentPump.png)
 
@@ -84,7 +84,7 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 
 ## CGM
 
-* [General](../CompatibleCgms/GeneralCGMRecommendation.md#troubleshooting)
+* [一般問題](../CompatibleCgms/GeneralCGMRecommendation.md#troubleshooting)
 * [Dexcom G6](../CompatibleCgms/DexcomG6.md#troubleshooting-g6-and-one)
 * [Libre 3](../CompatibleCgms/Libre3.md#experiences-and-troubleshooting)
 * [Libre 2](../CompatibleCgms/Libre2.md#experiences-and-troubleshooting)
