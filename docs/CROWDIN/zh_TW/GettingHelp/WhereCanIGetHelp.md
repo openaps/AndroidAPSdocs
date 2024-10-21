@@ -1,22 +1,22 @@
-# Where can I get help ?
+# 我能去哪裡尋求幫助？
 
-## I'm getting stuck; What do I do? Who can I ask?
+## 我卡住了；該怎麼辦？ 我可以問誰？
 
-This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:
+這個項目基於志願者工作，因此有一些規則需要遵守，以避免給那些慷慨捐出時間和技能的人增加額外的工作：
 
 * 第一層：閱讀 Wiki - 我們現在有搜索功能可以幫助你！
 * 第二層：搜索 Facebook 群組，如果沒有已經回答的問題，請在 [AndroidAPS 用戶 Facebook 群組](https://www.facebook.com/groups/1900195340201874/)中提問
 * 第三層：如果 Facebook 沒有結果，請在 [Discord](https://discord.gg/4fQUWHZ4Mw) 上提問。 為避免重複回答，直接的跨頻道貼文將會被忽略或刪除。 不要忘記，大多數開發者都在歐洲，所以回覆可能不是 24 小時不間斷的；你可能需要等待幾個小時，尤其是週末和假期。
-* level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md)
+* 第4級：創建一個[問題](https://github.com/nightscout/AndroidAPS/issues)並附上您的[日誌檔案](../GettingHelp/AccessingLogFiles.md)
 * 第五層：發送電子郵件至 *developers@androidaps.org*（僅限涉及個人資料且未能在其他層面解決問題時使用）
 
-For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
+對於 CGM 來源的支援，請加入 Facebook 群組或該特定系統的 Discord 頻道（例如[xdrip](https://www.facebook.com/groups/xDripG5/)，[600系列上載器](https://www.facebook.com/groups/NightscoutForMedtronic/)），或對於 Nightscout 的支援，請加入[CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/)，因為那裡的使用者對於不同系統會有更深入的專業知識。
 
-## Make sure to join the AndroidAPS users group on Facebook!
+## 務必加入 AndroidAPS 用戶群組 Facebook！
 
-Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
+加入主要的[AndroidAPS Facebook 群組](https://www.facebook.com/groups/1900195340201874/)。 你可以在這裡提問有關算法的問題、關於 Android Studio 設置和建置 APK 的問題、以及有關應用使用的任何疑問，還有如何充分利用他的提示。 對於 Combo 幫浦使用者，還有一個[AAPSCombo](https://www.facebook.com/groups/127507891261169/)群組，這有著稍微更具體的設置。
 
-## Other resources in English
+## 其他英文資源
 
 * [Looped Facebook 群組](https://www.facebook.com/groups/TheLoopedGroup)：涵蓋所有 DIY 閉環系統（OpenAPS、Loop 和 AndroidAPS）
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
@@ -24,7 +24,7 @@ Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/190019
 * [雲端中的 CGM](https://www.facebook.com/groups/cgminthecloud/)：關於 CGM 的一般資訊
 * [AndroidAPS 在 Discord 上](https://discord.gg/4fQUWHZ4Mw)
 
-## Country / language specific resources
+## 國家/語言特定資源
 
 ### 澳大利亞
 
