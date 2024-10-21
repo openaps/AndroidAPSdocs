@@ -105,14 +105,14 @@
 
 * 大多數情況下，這只是通訊問題，正確劑量的胰島素已經注射完畢。
 * 檢查幫浦歷史記錄（在幫浦或透過 Dana 標籤 > 幫浦歷史 > 注射記錄），確認正確的注射劑量。
-* Delete error entry in [treatments tab](../Getting-Started/Screenshots.md#carb-correction) if you wish.
+* Delete error entry in [treatments tab](../DailyLifeWithAaps/AapsScreens.md#carb-correction) if you wish.
 * 實際注射量會在下次連線時讀取並記錄。 要強制此操作，請按下 Dana 標籤上的藍牙圖示，或等待下一次連線。
 
 ## 更換手機時的特別注意事項
 
 更換新手機時，需要進行以下步驟：
 
-* [Export settings](../Usage/ExportImportSettings.md) on your old phone
+* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
 * 將設定從舊手機傳輸至新手機
 
 ### DanaRS v1
@@ -120,7 +120,7 @@
 * **手動配對** Dana RS 與新手機
 * 由於幫浦連線設定也會匯入，新手機上的 AAPS 已經「認識」幫浦，因此不會啟動藍牙掃描。 因此必須手動將新手機與幫浦配對。
 * 在新手機上安裝 AAPS。
-* [Import settings](../Usage/ExportImportSettings.md) on your new phone
+* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
 
 ### DanaRS v3, Dana-i
 
@@ -129,4 +129,4 @@
 
 ## Dana RS 幫浦跨時區旅行
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#danarv2-danars).
