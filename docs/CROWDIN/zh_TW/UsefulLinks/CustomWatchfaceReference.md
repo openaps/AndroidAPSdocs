@@ -9,12 +9,12 @@
 錶面檔案是一個簡單的 zip 檔案，但要被識別為錶面檔案，該 zip 檔案必須包含以下檔案：
 
 - 一個名為 CustomWatchface 的圖片檔案（可以是點陣圖檔案 `CustomWatchface.jpg`、`CustomWatchface.png` 或向量檔案 `CustomWatchface.svg`）。 此檔案是用於在你點選「載入錶面」按鈕時選擇錶面的圖示，也是在 AAPS Wear 外掛中可見的圖像。
-- One file named `CustomWatchface.json` (see [JSON structure](#json-structure) below). 這個第二個檔案是核心檔案，將包含設計錶面所需的所有資訊。 此 json 檔案必須是有效的（手動編輯此檔案時可能是最具挑戰性的部分，因為遺漏或額外的逗號就足以破壞 json 格式）。 此 JSON 檔案還必須包含一個 `"metadata"` 區塊，內含 `"name"` 鍵，且其值不能為空。 This will be the name of your custom watchface (see [Metadata settings](#metadata-settings) below)
+- 一個名為`CustomWatchface.json`的檔案（見下方[JSON 結構](#json-structure)）。 這個第二個檔案是核心檔案，將包含設計錶面所需的所有資訊。 此 json 檔案必須是有效的（手動編輯此檔案時可能是最具挑戰性的部分，因為遺漏或額外的逗號就足以破壞 json 格式）。 此 JSON 檔案還必須包含一個 `"metadata"` 區塊，內含 `"name"` 鍵，且其值不能為空。 這將是您的自定義手錶錶盤的名稱（見下方[元數據設定](#metadata-settings)）
 - 此 zip 檔案的大小應盡可能小（不超過約 500KB）。 如果檔案太大，將會被阻擋，無法傳送到手錶。
 
 該 zip 檔案還可以包含一些額外的資源檔案：
 
-- Hardcoded file names for images that will be used used in standard views included in the watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](#list-of-hardcoded-resource-files) below). 這些檔案可以是 `jpg`、`png` 或 `svg` 格式。 但對於大多數情況，你需要使用支援透明度的 `png` 或 `svg`（相較於 png，jpg 檔案較小但不支援透明度）。 請注意，與最小的檔案大小相結合的最佳品質通常是 svg 檔案（向量格式）。
+- 會在錶盤的標準視圖中使用的圖像的硬編碼檔案名稱（如`Background`、`CoverChart`...見下方[硬編碼資源檔案列表](#list-of-hardcoded-resource-files)）。 這些檔案可以是 `jpg`、`png` 或 `svg` 格式。 但對於大多數情況，你需要使用支援透明度的 `png` 或 `svg`（相較於 png，jpg 檔案較小但不支援透明度）。 請注意，與最小的檔案大小相結合的最佳品質通常是 svg 檔案（向量格式）。
 - 具有自由命名的額外資源檔案。 這些額外檔案可以是圖片檔案，也可以是字體檔案（支援的字體格式為 `ttf` 和 `otf`）。 請注意，對於這些額外檔案，`檔名`（不含副檔名）將在 JSON 檔案中用作 keyValue，以指定這些檔案應該在哪裡或何時使用。
   - 圖片檔案通常用作文字視圖的背景或用於動態動畫（如從 0% 到 100% 的電池電量）。
   - 字體檔案允許你在錶面中使用專用字體。
@@ -58,7 +58,7 @@ JSON 檔案可以在 Notepad（或 Notepad++）文字編輯器中編輯（建議
 
 ### 一般參數設定
 
-After the first block with metadata, you will set some general parameters (see [List of general parameters](#list-of-general-parameters) below), this allow you to set Graph colors (Carbs, Bolus, BG values...), and also default colors for value in range, hyper or hypo (default colors of BG value and arrows)
+在帶有元數據的第一塊區塊之後，您將設置一些一般參數（見下方[一般參數列表](#list-of-general-parameters)），這樣您可以設定圖表顏色（碳水化合物、注射、血糖值...），還可以設定預設顏色以表示在範圍內、高血糖或低血糖（血糖值及箭頭的預設顏色）。
 
 請參閱下方的一般參數範例：
 
@@ -237,7 +237,7 @@ TexView 比 ImageView 有更多可用參數：你可以調整旋轉（度數的�
 
 ### 管理顏色
 
-Within json file, you will have several keys to specify colors: `"color"`, `"fontColor"`for views, but also `"highColor"`, `"midColor"`, `"lowColor"`, ... (see [List of General Parameters](#list-of-general-parameters))
+在 json 檔案中，你將有幾個鍵來指定顏色：`"color"`、`"fontColor"` 對於視圖來說，但也有 `"highColor"`、`"midColor"`、`"lowColor"` 等（請參閱下方的[一般參數列表](#list-of-general-parameters)）。
 
 顏色透過文本欄位指定，該欄位以 `#` 開頭，後接 RRGGBB（紅、綠、藍）值的十六進制格式：
 
@@ -250,13 +250,13 @@ Within json file, you will have several keys to specify colors: `"color"`, `"fon
 你也可以使用特定的鍵值 `"bgColor"`，根據血糖值自動使用 `"highColor"`、`"midColor"`、`"lowColor"`，這些值已在一般參數中指定：
 
 - `"fontColor": "bgColor",` 將自動根據血糖值設置視圖的字體顏色。
-- Note that `sgv` (for BG Value) and `direction` (for trend arrow) views automatically apply BG colors set into general parameters (for these 2 views, if you want to have different colors, you will have to use advanced [dynData](#dyndata-feature) feature with one step color...)
+- 請注意，`sgv`（血糖 值）和 `direction`（趨勢箭頭）視圖會自動應用血糖色彩（這兩個視圖，如果你想要不同顏色，你將需要使用進階的[dynData](#dyndata-feature) 功能並使用單步顏色）。
 
-For more information concerning ImageViews and `"color":` key, see dedicated chapter [Tune image color](#tune-image-color) below.
+有關 ImageViews 和 `"color":` 鍵的更多資訊，請參閱下方的專用章節 [調整圖像顏色](#tune-image-color)。
 
 ### 包含硬編碼圖像
 
-the easiest way to start tuning your watchface is to include within zip file some images with a specific names (see [List of Hardcoded resource files](#list-of-hardcoded-resource-files))
+開始調整你的錶面的最簡單方法是將一些特定名稱的圖像包含在 zip 檔案中（請參閱[硬編碼資源檔案列表](#list-of-hardcoded-resource-files)）。
 
 - 圖像應為 `.jpg`、`.png` 或 `.svg` 格式。 但要注意，jpg 不支援透明度，因此應僅用於背景圖層。 對於所有中間圖層（cover_chart、cover_plate、指針等）請使用 `.png` 或 `.svg` 圖像。
 
@@ -269,7 +269,7 @@ the easiest way to start tuning your watchface is to include within zip file som
 
 - 這些圖像將自動繞圖像中心旋轉，因此這些圖像應設置為 00:00:00（對於「全畫幅」類比錶面，請使用 400 x 400 px 的大小，並定位於 top 0 left 0）。
 
-You can also noticed within [List of Hardcoded resource files](#list-of-hardcoded-resource-files) that for each image view, you have two additional hardcoded filenames `High` and `Low` (for example you can include other images named `BackgroundHigh.jpg` and `BackgroundLow.jpg` within zip file). 然後圖像將根據你的血糖水平自動更改（在範圍內、高血糖或低血糖）。 請參閱 AIMICO 錶面作為範例。
+你還可以在[硬編碼資源檔案列表](#list-of-hardcoded-resource-files)中注意到，對於每個圖像視圖，你有兩個額外的硬編碼檔名 `High` 和 `Low`（例如，你可以在 zip 檔案中包含其他名為 `BackgroundHigh.jpg` 和 `BackgroundLow.jpg` 的圖像）。 然後圖像將根據你的血糖水平自動更改（在範圍內、高血糖或低血糖）。 請參閱 AIMICO 錶面作為範例。
 
 (cwf-reference-tune-image-color)=
 
@@ -282,11 +282,11 @@ You can also noticed within [List of Hardcoded resource files](#list-of-hardcode
 
 當你將 `"color"` 鍵應用於點陣圖圖像（`.jpg` 或 `.png`）時，顏色將對色彩飽和度產生有趣的效果。 因此，你仍然可以識別你的點陣圖圖像。
 
-最後，對於 `.svg` 圖像檔案，`"color"` 鍵將不起作用，向量圖像的顏色被視為硬編碼在圖像內。 If you want to change colors, you will have to include several `svg` files, and use advanced [dynData](#dyndata-feature) feature to change it
+最後，對於 `.svg` 圖像檔案，`"color"` 鍵將不起作用，向量圖像的顏色被視為硬編碼在圖像內。 如果你想更改顏色，你將需要包含多個 `svg` 檔案，並使用進階的[dynData](#dyndata-feature) 功能來更改他。
 
 ### 為 TextViews 使用額外字體
 
-Several defaults font are already available within wear apk (see font keys included into [key values](#key-values) chapter). 但如果你想使用未預設的額外字體，可以在 zip 檔案中包含額外的字體：
+wear apk 中已經有多個預設字體（請參閱 [鍵值](#key-values) 章節中的字體鍵）。 但如果你想使用未預設的額外字體，可以在 zip 檔案中包含額外的字體：
 
 - 支援的字體格式為 `.ttf` 和 `.otf`。
 - 如果你在 zip 檔案中包含自訂字體，例如名為 `myCustomFont.ttf` 的檔案，則你需要使用檔名在 json 檔案中將其用於 TextView：
@@ -394,13 +394,13 @@ CustomWatchface 可以自動調整一些手錶的偏好設定，以確保正確�
 
 ### DynData 功能
 
-DynData is the most powerfull feature if you want to include some animation within you watchface, according to some internal values (like BG value, BG level, delta, % of battery... see list of available data [here](#dyndata-key-values))
+DynData 是你想要根據一些內部資料（如血糖值、血糖 等級、delta、電池百分比等，詳見可用資料 [此處](#dyndata-key-values)）在錶面中加入動畫時，最強大的功能。
 
 為了說明此功能，我將以 AAPS（蒸汽龐克）錶面為例：
 
 ![CustomWatchface_4](../images/CustomWatchface_4.png)
 
-In this watchface, we will have to manage the [rotation of BG value](#background-management) (from 30 degrees to 330 degrees) on the right, the [dynamic range of avg_delta](#avg-delta-management) (scale up to 5mgdl, 10mgdl or 20mgdl according to value), the [rotation of pointer](#cwf-reference-dynamic-rotation-management) that should be synchronized to the scale, and also the different layer of the views...
+在此錶面中，我們需要管理 [BG 值旋轉](#background-management)（從 30 度到 330 度），[avg_delta 的動態範圍](#avg-delta-management)（根據值縮放至 5mgdl、10mgdl 或 20mgdl），[指針的旋轉](#cwf-reference-dynamic-rotation-management)應與縮放同步，還有檢視的不同圖層...
 
 要管理此錶面，請參閱以下包含於 zip 檔案中的所有圖片：
 
@@ -458,7 +458,7 @@ In this watchface, we will have to manage the [rotation of BG value](#background
 
 這個區塊很簡單：你有一個名為`"valueKey":`的第一個鍵，將用來定義應該使用哪個值。 在這種情況下，`"sgv"`是定義血糖值的 "keyValue"（請注意，在大多數情況下，keyValue與顯示此資訊的視圖名稱相同）。
 
-Concerning BG value, default min data is set to 39mgdl and max  data is set to 400mgdl (see [DynData reference key values](#dyndata-key-values) below all available keyValues and associated min/max data values).
+關於血糖值，預設的最小資料設為39 mg/dL，最大資料設為400 mg/dL（請參閱[DynData 參考鍵值](#dyndata-key-values)，下方列出了所有可用的keyValue及其相關的最小/最大資料值）。
 
 在`"rotateSgv"`區塊內，將使用兩個附加的鍵（`"minData":` 和 `"maxData":`）來調整最小和最大資料至30和330。 有了這些最小和最大值，我們將能夠直接使用資料值（無需任何轉換）來以角度旋轉背景。 在這種情況下，所有超過330 mg/dL的血糖值將被限制在圖像的上限330。
 
@@ -659,7 +659,7 @@ Concerning BG value, default min data is set to 39mgdl and max  data is set to 4
 ```
 你可以在這裡看到，這兩個視圖共用一個名為 `batteryIcons` 的動態資料區塊。 這是可能的，因為預設情況下，附加的資料是視圖的資料（因此不需要在 `batteryIcons` 區塊中指定 `"數值鍵"` 鍵，他會根據視圖應用於 `uploader_battery` 資料或 `rig_battery` 資料）。
 
-Note these two views also use TwinView feature explain [here](#twinview-feature).
+注意，這兩個視圖也使用了 [這裡](#twinview-feature)解釋的雙視圖功能。
 
 現在來看看動態資料區塊：
 
@@ -682,7 +682,7 @@ Note these two views also use TwinView feature explain [here](#twinview-feature)
 
 ### 動態偏好功能
 
-Before reading this chapter, you have to understand how [dynData](#dyndata-feature) works, because DynPref is an advanced usage of DynData: You will now be able to adjust each DynData block according to preferences set by the user:
+在閱讀本章之前，必須了解 [動態資料](#dyndata-feature) 的工作原理，因為動態偏好是動態資料的進階用法：現在你可以根據使用者設定的偏好來調整每個動態資料區塊：
 
 為了說明動態偏好功能，我們將使用兩個範例：
 
@@ -1204,21 +1204,21 @@ Before reading this chapter, you have to understand how [dynData](#dyndata-featu
 
 ### DynPref 鍵
 
-| 鍵            | 類型 | 註解                                                                                                                                                                                                                                                                                                                                             |
-| ------------ | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dynPref      | 區塊 | 定義所有動態偏好設定區塊的區塊，將用於視圖。 通常位於最後一個視圖或 dynData 區塊之後。<br />在此區塊中定義的所有鍵將用作視圖區塊中的鍵值：<br />`"dynPref": { dynPref 區塊 }`<br />每個區塊由自訂名稱和若干內部鍵定義：<br />`"customName": { 一個 dynPref 區塊 }`                                                                                                                                          |
-| dynPref      | 字串 | *在視圖區塊中*<br />要使用的動態 dynPref 區塊名稱（通常與相關的視圖鍵或相關的偏好設定相同）。                                                                                                                                                                                                                                                                                  |
-| dynPref      | 字串 | *在 dynPref 區塊中包含的部分 dynData 區塊內*<br />要使用的動態 dynPref 區塊名稱，用於補全 dynData 區塊。 這使你可以根據多個偏好設定調整 dynData 區塊。                                                                                                                                                                                                                                   |
-| dynPrefColor | 字串 | 此鍵專用於包含所有主顏色的主區塊（highColor、midColor、lowColor、圖表顏色...）。 如果你希望根據偏好設定調整主顏色，將使用此鍵。                                                                                                                                                                                                                                                                 |
-| prefKey      | 字串 | specify the preference key Value that will be used to get user preferences (see [PrefKey values](#prefkey-values) below). 此鍵應用於 `dynPref` 區塊內。<br />然後根據偏好鍵，`dynPref` 區塊應包含與 prefKey 值數量相同的鍵。<br />請注意，大多數偏好設定是 "布林值"，因此你應在 dynPref 區塊中找到這兩個 dynData 區塊：<br />`"true": { dynData 區塊 },`<br />`"false": { dynData 區塊 }` |
-| true         | 區塊 | 大多數偏好設定將設置布林值 `"true"` 或 `"false"`。 如果使用者選擇的偏好設定為 true，則指定要使用的 dynData 區塊。<br />請注意，如果該區塊還包含 `"dynPref":` 鍵，則 dynData 區塊將與其他區塊合併。 這允許你根據一個偏好設定調整顏色，並根據另一個偏好設定調整文字大小                                                                                                                                                                      |
-| false        | 區塊 | 大多數偏好設定將設置布林值 `"true"` 或 `"false"`。 如果使用者選擇的偏好設定為 false，則指定要使用的 dynData 區塊。<br />請注意，如果該區塊還包含 `"dynPref":` 鍵，則 dynData 區塊將與其他區塊合併。 這允許你根據一個偏好設定調整顏色，並根據另一個偏好設定調整文字大小                                                                                                                                                                     |
+| 鍵            | 類型 | 註解                                                                                                                                                                                                                                                                             |
+| ------------ | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| dynPref      | 區塊 | 定義所有動態偏好設定區塊的區塊，將用於視圖。 通常位於最後一個視圖或 dynData 區塊之後。<br />在此區塊中定義的所有鍵將用作視圖區塊中的鍵值：<br />`"dynPref": { dynPref 區塊 }`<br />每個區塊由自訂名稱和若干內部鍵定義：<br />`"customName": { 一個 dynPref 區塊 }`                                                                          |
+| dynPref      | 字串 | *在視圖區塊中*<br />要使用的動態 dynPref 區塊名稱（通常與相關的視圖鍵或相關的偏好設定相同）。                                                                                                                                                                                                                  |
+| dynPref      | 字串 | *在 dynPref 區塊中包含的部分 dynData 區塊內*<br />要使用的動態 dynPref 區塊名稱，用於補全 dynData 區塊。 這使你可以根據多個偏好設定調整 dynData 區塊。                                                                                                                                                                   |
+| dynPrefColor | 字串 | 此鍵專用於包含所有主顏色的主區塊（highColor、midColor、lowColor、圖表顏色...）。 如果你希望根據偏好設定調整主顏色，將使用此鍵。                                                                                                                                                                                                 |
+| prefKey      | 字串 | 指定將用來獲取使用者偏好設定的偏好鍵值（請參閱下文的 [PrefKey 值](#prefkey-values)）。 此鍵應用於 `dynPref` 區塊內。<br />然後根據偏好鍵，`dynPref` 區塊應包含與 prefKey 值數量相同的鍵。<br />請注意，大多數偏好設定是 "布林值"，因此你應在 dynPref 區塊中找到這兩個 dynData 區塊：<br />`"true": { dynData 區塊 },`<br />`"false": { dynData 區塊 }` |
+| true         | 區塊 | 大多數偏好設定將設置布林值 `"true"` 或 `"false"`。 如果使用者選擇的偏好設定為 true，則指定要使用的 dynData 區塊。<br />請注意，如果該區塊還包含 `"dynPref":` 鍵，則 dynData 區塊將與其他區塊合併。 這允許你根據一個偏好設定調整顏色，並根據另一個偏好設定調整文字大小                                                                                                      |
+| false        | 區塊 | 大多數偏好設定將設置布林值 `"true"` 或 `"false"`。 如果使用者選擇的偏好設定為 false，則指定要使用的 dynData 區塊。<br />請注意，如果該區塊還包含 `"dynPref":` 鍵，則 dynData 區塊將與其他區塊合併。 這允許你根據一個偏好設定調整顏色，並根據另一個偏好設定調整文字大小                                                                                                     |
 
 (cwf-reference-prefkey-values)=
 
 ### 偏好設定鍵值
 
-All keys included into [Preference keys](#preference-keys) chapter above can be used to tune view parameters
+上述的 [偏好設定鍵](#preference-keys) 章節中包含的所有鍵都可以用來調整視圖參數
 
 你也可以使用以下 AAPS（自訂）特定參數中包含的附加鍵：
 
