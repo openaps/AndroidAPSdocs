@@ -1,6 +1,6 @@
 # DanaRS 和 Dana-i 幫浦
 
-*這些說明適用於配置 2017 年之後的 DanaRS 或更新的 Dana-i 幫浦。 Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
+*這些說明適用於配置 2017 年之後的 DanaRS 或更新的 Dana-i 幫浦。 如果您擁有原始的 DanaR，請訪問[DanaR 胰島素幫浦](./DanaR-Insulin-Pump.md)。*
 
 **Dana RS v3 韌體從 AAPS 版本 2.7 開始支援使用。**
 
@@ -73,7 +73,7 @@
 
 * 按下「OK」進入舊密碼。
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* 輸入**舊密碼**（預設密碼見[上方](#default-password)）並按下 OK。
     
     ![DanaRS 輸入舊密碼](../images/DanaRSPW_04_11PWenter.png)
 
@@ -105,14 +105,14 @@
 
 * 大多數情況下，這只是通訊問題，正確劑量的胰島素已經注射完畢。
 * 檢查幫浦歷史記錄（在幫浦或透過 Dana 標籤 > 幫浦歷史 > 注射記錄），確認正確的注射劑量。
-* Delete error entry in [treatments tab](../DailyLifeWithAaps/AapsScreens.md#carb-correction) if you wish.
+* 如果希望，可以在[療法標籤](../DailyLifeWithAaps/AapsScreens.md#carb-correction)中刪除錯誤條目。
 * 實際注射量會在下次連線時讀取並記錄。 要強制此操作，請按下 Dana 標籤上的藍牙圖示，或等待下一次連線。
 
 ## 更換手機時的特別注意事項
 
 更換新手機時，需要進行以下步驟：
 
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
+* [在舊手機上匯出設定](../Maintenance/ExportImportSettings.md)
 * 將設定從舊手機傳輸至新手機
 
 ### DanaRS v1
@@ -120,13 +120,13 @@
 * **手動配對** Dana RS 與新手機
 * 由於幫浦連線設定也會匯入，新手機上的 AAPS 已經「認識」幫浦，因此不會啟動藍牙掃描。 因此必須手動將新手機與幫浦配對。
 * 在新手機上安裝 AAPS。
-* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
+* [在新手機上匯入設定](../Maintenance/ExportImportSettings.md)
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](#pairing-pump).
+* 開始配對程序，如[上方](#pairing-pump)所述。
 * 有時可能需要透過長按 Dana-i/RS 標籤上的藍牙圖示來清除 AAPS 中的配對資訊。
 
 ## Dana RS 幫浦跨時區旅行
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#danarv2-danars).
+有關跨時區旅行的資訊請參見[使用幫浦的時區旅行](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#danarv2-danars)頁面。
