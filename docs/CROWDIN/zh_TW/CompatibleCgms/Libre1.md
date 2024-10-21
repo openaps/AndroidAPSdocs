@@ -24,22 +24,22 @@
 
 -   xDrip+ 支援 MiaoMiao、Bubble、Blucon、Atom 和 LibreAlarm。
 -   除非你需要最新功能，否則可以安全下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)，在這種情況下，你應該使用最新的[Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases)。
--   Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+-   按照[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)上的設置說明進行操作。
 -    你還需要適用於 Libre 1 US（和 Libre 2 EU）的[OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)。
--   Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+-   在[組態建置工具的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source)中選擇 xDrip+。
 
 ## 2. 使用 Glimp
 
 -   Glimp 支援 Miaomiao、Blucon 和 Bubble 用於 Libre 1 和 Libre 2 EU。
 -   你需要 Glimp 版本 4.15.57 或更新版本。 舊版本不支援。
 -   安裝 [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)。
--   Select Glimp in in [ConfigBuilder, BG Source.](../SettingUpAaps/ConfigBuilder.md#bg-source)
+-   在 [ConfigBuilder 的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source) 中選擇 Glimp。
 
 ## 3. 使用 Tomato
 
 - Tomato 是 Miaomiao 的官方應用程式。
 - 安裝 [Tomato](http://tomato.cool/#download_page) 並按照廠商的[說明](http://tomato.cool/how-to-broadcast-data-to-android-aps/tips/)操作。
-- Select Tomato in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- 在 [ConfigBuilder 的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source) 中選擇 Tomato。
 
 ## 4. 使用 Diabox
 
@@ -48,4 +48,4 @@
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- 在[組態建置工具的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source)中選擇 xDrip+。
