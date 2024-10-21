@@ -9,12 +9,12 @@
 
 如果你無法再找到舊密鑰庫或其密碼，請按照以下步驟進行：
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) on your phone.
+1. [匯出設定](../Maintenance/ExportImportSettings.md)到您的手機。
 2. 將設置文件從手機複製或上傳到外部位置（例如你的電腦、雲端存儲服務……）。
-4. Generate signed apk of new version as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
+4. 生成新版本的簽名 apk，具體描述請參見[更新指南](../Maintenance/UpdateToNewVersion)並將其轉移到您的手機。
 5. 卸載手機上的上一個 AAPS 版本。
 6. 在手機上安裝新的 AAPS 版本。
-7. [Import settings](../Maintenance/ExportImportSettings.md#restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+7. [匯入設置](../Maintenance/ExportImportSettings.md#restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)以恢復你的目標和配置。
 
    如果你無法在手機上找到他們，請將他們從外部存儲複製到手機上。
 
@@ -32,7 +32,7 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 * [不相容的 Gradle JVM](#incompatible-gradle-jvm)
 * [Android Gradle 外掛程式版本不相容](#incompatible-version-of-android-gradle-plugin)
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*重要*: 在您遵循針對具體問題的指示後，您需要再次觸發[gradle 同步](#gradle-resync)。
 
 (troubleshooting_androidstudio-uncommitted-changes)=
 ### 未提交的更改
@@ -51,7 +51,7 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
     注意：git 和 version 之間有一個空格和兩個破折號！
 
-  * 你應該收到一條訊息，告訴你安裝了什麼版本的 git，正如上面的截圖所示。 In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
+  * 你應該收到一條訊息，告訴你安裝了什麼版本的 git，正如上面的截圖所示。 在這種情況下，轉到[第2步](#step-2-check-for-uncommitted-changes)。
 
   * 如果你收到訊息提示
     ```
@@ -86,7 +86,7 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
       ![提交標籤：回滾變更](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * 文件將再次從 Git 服務器中獲取。 If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+    * 文件將再次從 Git 服務器中獲取。 如果在提交標籤中沒有其他更改，請轉到[第3步](#gradle-resync)。
 
   * 如果你看到“未版本化文件”，你可能將文件存儲在源碼目錄中，應將其移到其他地方，例如你的密鑰庫文件。
 
@@ -94,14 +94,14 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
     * 返回 Android Studio，並點擊提交標籤中的重新整理按鈕 (4)，以確保該文件不再存儲在 AAPS 目錄中。
 
-      If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+      如果在提交標籤中沒有其他更改，請轉到[第3步](#gradle-resync)。
 
 
 (troubleshooting_androidstudio-step-3-gradle-resync)=
 
 #### 步驟 3：再次同步 Gradle
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+請按照[Gradle Resync](#gradle-resync)上的指示進行操作。
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
@@ -122,7 +122,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 ![選擇JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
 * 用**OK**關閉**設定**對話框。
-* 您現在需要重新啟動Gradle同步。 Follow the instructions at [Gradle Resync](#gradle-resync).
+* 您現在需要重新啟動Gradle同步。 請按照[Gradle Resync](#gradle-resync)上的指示進行操作。
 
 (incompatible-version-of-android-gradle-plugin)=
 ### 不相容的 Android Gradle 外掛版本
@@ -146,7 +146,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
     ![Gradle 離線模式](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * 現在你需要觸發[Gradle 重新同步](#gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### 無法啟動守護程序進程
@@ -179,7 +179,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ![生成了 0 個建置變體的 APK](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-這是一個錯誤警告。 Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk)) and you will find the generated apk there!
+這是一個錯誤警告。 檢查你選擇作為 "目標文件夾" 的目錄（步驟 [生成簽章 APK](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk)），你將在那裡找到生成的 apk！
 
 
 ## 應用程序是用編譯器/Kotlin 警告建立的
@@ -202,9 +202,9 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ## AAPS 未接收 CGM 資料
 
-* 如果你使用的是修補過的 Dexcom G6 應用程序：此應用程序已過時。 Use the [BYODA](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* 如果你使用的是修補過的 Dexcom G6 應用程序：此應用程序已過時。 請改用[BYODA](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)應用程序。
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../CompatibleCgms/xDrip.md#identify-receiver).
+* 如果你使用的是 xDrip+：請按照[xDrip+ 設置頁面](../CompatibleCgms/xDrip.md#identify-receiver)中的說明識別接收器。
 
 
 ## 應用程序未安裝
@@ -214,7 +214,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 * 請確保你已將 "app-full-release.apk" 文件傳輸到你的手機。
 * 如果手機上顯示 "應用程序未安裝"，請按照以下步驟操作：
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
+1. [匯出設定](../Maintenance/ExportImportSettings.md)（在已安裝於您手機上的 AAPS 版本中）
 2. 卸載手機上的 AAPS。
 3. 啟用飛行模式並關閉藍牙。
 4. 安裝新版本（"app-full-release.apk"）
@@ -223,22 +223,22 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ## 應用程序已安裝但版本仍為舊版本
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Maintenance/UpdateToNewVersion.md#2-update-your-local-copy)
+如果你成功建置了應用程序，將其傳輸到手機並成功安裝，但版本號保持不變，則可能是你遺漏了[更新本地副本](../Maintenance/UpdateToNewVersion.md#2-update-your-local-copy)。
 
 ## 上述方法均無效
 
 如果上述提示均無法幫助你，你可能需要考慮從頭開始建置應用程序：
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
+1. [匯出設定](../Maintenance/ExportImportSettings.md)（在已安裝於您手機上的 AAPS 版本中）
 
 2. 準備好你的密鑰密碼和密鑰庫密碼。 如果你忘記了密碼，可以嘗試在項目文件中找到他們，具體方法如[此處](https://youtu.be/nS3wxnLgZOo)所述。
 
     或者你可以使用新的密鑰庫。
 
-3. Build app from scratch as described [here](../SettingUpAaps/BuildingAaps.md#download-the-aaps-code).
+3. 按照[這裡描述的步驟](../SettingUpAaps/BuildingAaps.md#download-the-aaps-code)從頭開始構建應用程式。
 
 4. 當你成功建置 APK 後，請刪除手機上的現有應用程序，將新 APK 傳輸到手機並安裝。
-5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
+5. [再次匯入設定](../Maintenance/ExportImportSettings.md)以恢復您的目標和設定。
 6. 你應該檢查你的電池優化選項並再次停用他們。
 
 ## 最壞的情況
@@ -249,4 +249,4 @@ If you built the app successfully, transferred it to your phone and installed it
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10)。
 
-Install Android Studio from scratch as described [here](../SettingUpAaps/BuildingAaps.md#install-android-studio).
+按照[此處](../SettingUpAaps/BuildingAaps.md#install-android-studio)的說明從頭安裝 Android Studio。
