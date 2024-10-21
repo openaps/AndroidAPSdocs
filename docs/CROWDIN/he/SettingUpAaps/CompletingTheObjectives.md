@@ -12,7 +12,7 @@
 Regularly export your **AAPS** settings after completing each **objective**!
 ```
 
-אנו ממליצים בחום [לייצא את ההגדרות שלכם](../Usage/ExportImportSettings.md) לאחר השלמת כל **משימה**. תהליך הייצוא יוצר קובץ **הגדרות** (מסוג.json) שעליכם ללגבות במקום בטוח אחד או יותר (_למשל_ Google Drive, קובץ מצורף לדוא"ל, דיסק קשיח וכו'). גיבוי מבטיח שתשמרו על ההתקדמותכם ב**משימות** ואם תמחק בטעות את ההתקדמות שלכם, תוכלו פשוט לטעון אותה מחדש על ידי ייבוא קובץ ההגדרות האחרון. יש גם צורך בגיבוי קובץ **הגדרות** אם ברצונכם להחליף את מכשיר הטלפון עליו מותקן **AAPS** מכל סיבה שהיא (שדרוג/אבדה/נזק וכו')
+We strongly recommend that you  [export your settings](../Maintenance/ExportImportSettings.md) after completing each **objective**. תהליך הייצוא יוצר קובץ **הגדרות** (מסוג.json) שעליכם ללגבות במקום בטוח אחד או יותר (_למשל_ Google Drive, קובץ מצורף לדוא"ל, דיסק קשיח וכו'). גיבוי מבטיח שתשמרו על ההתקדמותכם ב**משימות** ואם תמחק בטעות את ההתקדמות שלכם, תוכלו פשוט לטעון אותה מחדש על ידי ייבוא קובץ ההגדרות האחרון. יש גם צורך בגיבוי קובץ **הגדרות** אם ברצונכם להחליף את מכשיר הטלפון עליו מותקן **AAPS** מכל סיבה שהיא (שדרוג/אבדה/נזק וכו')
 
 קובץ **הגדרות** ישמור לא רק את ההתקדמות במשימות, אלא גם הגדרות **AAPS** המותאמות אישית שלכם כגון **בולוס מקסימלי** _וכו'._
 
@@ -76,14 +76,14 @@ From time to time, new features are added to **AAPS** which may require a new qu
 
 ## משימה 4: התחלת לופ פתוח
 
-מטרת משימה זו היא לזהות באיזו תדירות **AAPS** יעריך את השפעת המינון הבזאלי על רמות הגלוקוז ולהמליץ על שינויים זמניים במינונים. כחלק משימה זו, אתם תפעילו לולאה פתוחה בפעם הראשונה ותבצעו ידנית 20 שינויים זמניים המוצעים, במינוניים הבזאליים. בנוסף אתם תתנסו בהשפעת ברירות המחדל של המטרות הזמניות (_למשל_ עבור פעילות גופנית או טיפולים בהיפו). If you are not familiar with setting a temporay basal rate change in **AAPS** yet, please refer to the [ACTIONS tab](../Getting-Started/Screenshots.md#action-tab).
+מטרת משימה זו היא לזהות באיזו תדירות **AAPS** יעריך את השפעת המינון הבזאלי על רמות הגלוקוז ולהמליץ על שינויים זמניים במינונים. כחלק משימה זו, אתם תפעילו לולאה פתוחה בפעם הראשונה ותבצעו ידנית 20 שינויים זמניים המוצעים, במינוניים הבזאליים. בנוסף אתם תתנסו בהשפעת ברירות המחדל של המטרות הזמניות (_למשל_ עבור פעילות גופנית או טיפולים בהיפו). If you are not familiar with setting a temporay basal rate change in **AAPS** yet, please refer to the [ACTIONS tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
 
 זמן משוער להשלמת משימה זו: **7 ימים**. חובה להמתין את זמן זה. אינכם יכולים להמשיך אל המשימה הבאה, גם אם ביצעתם כבר את כל השינויים הזמניים במינונים הבזאליים.
 
 - בחרו בלולאה פתוחה בהעדפות או ע"י לחיצה ארוכה על סמל הלופ בחלק העליון של המסך הראשי, בצד שמאל (אם שפת AAPS היא עברית).
 - Walk through the [Preferences](../SettingUpAaps/Preferences.md) to set it up for you (scroll down to "Loop/APS Mode" and select "Open Loop".
 - אשרו באופן ידני לפחות 20 הצעות לשינוי במינון הבזאלי הזמני על פני תקופה של 7 ימים. בשימוש במשאבה וירטואלית הזינו את השינויים המוצעים במשאבה ואשרו ב-AAPS שביצעתם אותן. ודאו כי ההתאמות במינונים הבזאליים שאישרתם מופיעות ב-AAPS וב-Nightscout.
-- אפשרו [ערכי מטרה זמניים](../Usage/temptarget.md) במקרה הצורך. לאחר טיפול בהיפו, השתמשו בערך מטרה היפו כדי למנוע מהמערכת לתקן ביתר על החזרה מההיפו.
+- Enable [temp targets](../DailyLifeWithAaps/TempTargets.md) if necessary. לאחר טיפול בהיפו, השתמשו בערך מטרה היפו כדי למנוע מהמערכת לתקן ביתר על החזרה מההיפו.
 
 ### צמצום מספר התראות הלולאה הפתוחה
 
@@ -101,11 +101,11 @@ From time to time, new features are added to **AAPS** which may require a new qu
 
 ## משימה 5: העמקת הבנת הלולאה הפתוחה, לרבות המינונים הבזאליים הזמניים וההמלצות
 
-במסגרת **משימה 5** אתם תתחילו להבין כיצד מחושבות המלצות בזאליות זמניות. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab.
+במסגרת **משימה 5** אתם תתחילו להבין כיצד מחושבות המלצות בזאליות זמניות. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab.
 
 זמן משוער להשלמת משימה זו: 7 ימים.
 
-This Objective requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal). ניתן להגדיר ערך זה בהעדפות > OpenAPS AMA.
+This Objective requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal). ניתן להגדיר ערך זה בהעדפות > OpenAPS AMA.
 יש לוודא שהגדרת בטיחות זו מוגדרת גם ב-**AAPS** וגם במשאבת האינסולין.
 
 רצוי שתקבעו ערכי מטרה גבוהים מהרגיל עד אשר תבטחו בהגדרות ובחישובי הלופ.
@@ -143,7 +143,7 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 עדיין תצטרכו לתקן ערכי סוכר גבוהים בעצמכם (ידנית עם תיקונים באמצעות משאבה או עט)!
 ```
 
-As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. עליכם להישאר במצב LGS למשך 5 ימים כדי להשלים את משימה זו. כדאי לנצל את הזמן הזה כדי לבדוק אם הגדרות הפרופיל שלכם מדויקות ואינן מפעילות אירועי היפו לעתים קרובות מדי.
+As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. עליכם להישאר במצב LGS למשך 5 ימים כדי להשלים את משימה זו. כדאי לנצל את הזמן הזה כדי לבדוק אם הגדרות הפרופיל שלכם מדויקות ואינן מפעילות אירועי היפו לעתים קרובות מדי.
 
 זמן משוער להשלמת משימה זו: 5 ימים.
 
@@ -170,7 +170,7 @@ As part of **Objective 6** you will close the loop and activate its Low Glucose 
 
 ## משימה 7: כוונון לולאה סגורה, העלאת האינסולין הפעיל המרבי מ-0 והורדה מדורגת של ערכי המטרה
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB אופס אוטומטית ב**משימה 6**. איפוס זה מבוטל עכשיו. **AAPS** יתחיל להשתמש בערך maxIOB שהגדרתם כדי לתקן ערכי סוכר גבוהים.
+To complete **Objective 7** you have to close your loop and raise your [maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB אופס אוטומטית ב**משימה 6**. איפוס זה מבוטל עכשיו. **AAPS** יתחיל להשתמש בערך maxIOB שהגדרתם כדי לתקן ערכי סוכר גבוהים.
 
 זמן משוער להשלמת משימה זו: יום אחד.
 
@@ -194,7 +194,7 @@ To complete **Objective 7** you have to close your loop and raise your [maxIOB](
 זמן משוער להשלמת משימה זו: 7 ימים.
 
 - אתם יכולים להשתמש ב-[autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) כפעולה חד פעמית כדי לבדוק שהתוכנית הבזאלית שלכם מדוייקת או לבצע בדיקה מסורתית.
-- הפעילו autosens למשך 7 ימים וצפו בהתנהגות עקום כתוצאה משינויים הורמונליים, פעילות גופנית וכו'. עקום הרגישות הלבן נמצא הוא גרף משני במסך הבית (יש להפעילו).
+- Enable [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days and watch OVERVIEW's graph white line showing your insulin sensitivity rising or falling due to exercise or hormones etc. and keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the basals and/or targets accordingly.
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 
@@ -202,8 +202,8 @@ To complete **Objective 7** you have to close your loop and raise your [maxIOB](
 
 במטרה זו תתמודדו ותשתמשו ב"סופר מיקרו בולוס (SMB)" ככלי מרכזי. לאחר קריאות החובה תהיה לכם הבנה טובה של מהו SMB, איך הוא עובד, נקודת התחלה סבירה של הגדרות שימוש ב-SMB ומדוע הבזאלי מוגדר כאפס באופן זמני לאחר מתן SMB. זמן משוער להשלמת משימה זו: 28 ימים.
 
-- The [SMB section in this documentation](../Usage/Open-APS-features.md#super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
-- Once done, you [raise maxIOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working well. מעכשיו, האינסולין הפעיל המרבי כולל את כל האינסולין המוזרק, לא רק את הבזאלי. סף זה משהה את מתן ה-SMB עד שהאינסולין הפעיל (IOB) יורד אל מתחת לערך זה (_למשל_ maxIOB מוגדר ל-7 יח' וניתן בולוס של 8 יח' לכיסוי ארוחה: הזרקת SMB יושהה ולא יינתן אלא אם IOB יורד אל מתחת ל-7 יח'). A good start is setting maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference)
+- The [SMB section in this documentation](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
+- Once done, you [raise maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working well. מעכשיו, האינסולין הפעיל המרבי כולל את כל האינסולין המוזרק, לא רק את הבזאלי. סף זה משהה את מתן ה-SMB עד שהאינסולין הפעיל (IOB) יורד אל מתחת לערך זה (_למשל_ maxIOB מוגדר ל-7 יח' וניתן בולוס של 8 יח' לכיסוי ארוחה: הזרקת SMB יושהה ולא יינתן אלא אם IOB יורד אל מתחת ל-7 יח'). A good start is setting maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference)
 - שנו את הפרמטר "min_5m_carbimpact" (העדפות > הגדרות ספיגה > min_5m_carbimpact) ל-8 כשאתם עוברים מאלגוריתם OpenAPS AMA ל-OpenAPS SMB. עבור AMA ערך ברירת המחדל הוא 3. Read more about this setting [here](../SettingUpAaps/Preferences.md#min_5m_carbimpact)
 
 (Objectives-objective-10-automation)=
@@ -212,7 +212,7 @@ To complete **Objective 7** you have to close your loop and raise your [maxIOB](
 
 חובה להתחיל את משימה 10 כדי להיות מסוגלים להשתמש באוטומציות.
 
-1. קראו תחילה את דף התיעוד [אוטומציה](../Usage/Automation.md).
+1. Read the documentation page  [Automation](../DailyLifeWithAaps/Automations.md) first.
 2. הגדר את כלל האוטומציה הבסיסי ביותר;
    לדוגמה, הפעל הודעת אנדרואיד בעוד מספר דקות:
 
@@ -236,7 +236,7 @@ To complete **Objective 7** you have to close your loop and raise your [maxIOB](
 ## משימה 11: הפעלת פונקציות נוספות לשימוש במשך היום כמו רגישות דינאמית).
 
 - ודאו ש-SMB פועל כראוי
-- קראו את ההוראות של Dynamic ISF [כאן](../Usage/DynamicISF.md)
+- Read the documentation concerning Dynamic ISF [here](../DailyLifeWithAaps/DynamicISF.md)
 - Search the Facbook and [Discord](https://discord.gg/4fQUWHZ4Mw) groups for discussions around Dynamic ISF and read about other users experiences and recommendations.
 - הפעילו את התוסף **DynamicISF** וזהו את הכיול המתאים בדיוק לגופכם. רצוי להתחיל עם ערך נמוך מ-100% מטעמי בטיחות.
 
