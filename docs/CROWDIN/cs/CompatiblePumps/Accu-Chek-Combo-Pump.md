@@ -8,7 +8,7 @@
 
 - Roche Accu-Chek Combo (jakýkoli firmware, všechny fungují)
 - Zařízení Smartpix nebo Realtyme spolu s 360 konfiguračním softwarem pro nastavení pumpy. (Roche poskytuje zařízením Smartpix a konfigurační software zdarma svým zákazníkům na vyžádání.)
-- Kompatibilní telefon: Android telefon s verzí LineageOS 14.1 (dříve CyanogenMod) nebo alespoň Android 8.1 (Oreo). Od verze AAPS 3.0 je Android 9 povinný. See [release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version) for details.
+- Kompatibilní telefon: Android telefon s verzí LineageOS 14.1 (dříve CyanogenMod) nebo alespoň Android 8.1 (Oreo). Od verze AAPS 3.0 je Android 9 povinný. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
 - S verzí LineageOS 14.1 musí být aktuální verze alespoň z června 2017, protože změna potřebná k párování Combo pumpy byla zavedena až tehdy. 
 - Seznam telefonů lze nalézt v dokumentu [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 - Uvědomte si, že toto není úplný seznam a odráží osobní zkušenosti uživatelů. Doporučuje se také sdílet své zkušenosti a pomáhat tak ostatním (tyto projekty jsou o tom, jak si navzájem pomáhat).
@@ -17,10 +17,10 @@
 
 ## Omezení
 
-- Rozšířené bolusy a multiwave bolusy nejsou podporovány (viz [Rozšířené sacharidy](../Usage/Extended-Carbs.md) místo toho).
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 - Podporován je pouze jeden profil bazálního inzulínu.
 - Nastavení bazálního profilu jiného než 1 na pumpě nebo dodávání rozšířených bolusů či multiwave bolusů z pumpy narušuje TBR a způsobuje, že smyčka přejde do režimu nízkého pozastavení na 6 hodin, protože smyčka nemůže bezpečně fungovat za těchto podmínek.
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - V současnosti jsou podporovány pouze bazální dávky v rozmezí 0,05 až 10 U/h. To se také vztahuje při úpravě profilu, např. když se zvyšuje na 200%, maximální bazální dávka nesmí překročit 5 U/h, protože bude zdvojena. Podobně, při redukci na 50% musí být minimální bazální dávka alespoň 0,10 U/h.
 - Pokud smyčka požaduje zrušení probíhajícího TBR, Combo nastaví TBR na 90% nebo 110% na 15 minut místo toho. To je proto, že zrušení TBR způsobuje na pumpě upozornění, které způsobuje mnoho vibrací.
 - Občas (každých pár dní) může AAPS selhat v automatickém zrušení upozornění TBR ZRUŠENO, což musí uživatel poté vyřešit (stisknutím tlačítka aktualizace v AAPS, aby převedl varování do AAPS, nebo potvrzením upozornění na pumpě).
