@@ -8,9 +8,9 @@
 
 開始使用 AAPS，請按照以下步驟操作：
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
-* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
+* 找到[兼容的幫浦](../Getting-Started/CompatiblePumps.md)、[兼容的 Android 設備](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)和[兼容的 CGM 源](../Getting-Started/CompatiblesCgms.md)。
+* [下載 AAPS 原始碼並建立軟體](../SettingUpAaps/BuildingAaps.md)。
+* [配置軟體以連線到糖尿病設備並指定設定與安全偏好](../SettingUpAaps/SetupWizard.md)。
 
 ## DIY 閉環系統的工作原理
 
@@ -43,7 +43,7 @@ AAPS 設計用來透明地追蹤其收集的所有輸入資料、產生的建議
 
 ## AAPS 演算法決策的範例：
 
-AAPS 使用了與 OpenAPS 相同的核心演算法和功能集。 演算法會根據設定和目前情況進行多種預測，代表未來可能發生的不同情景。 在 Nightscout 中，這些顯示為「紫色線條」。 AAPS uses different colors to separate these [prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines). 在日誌中，他會描述這些預測中的哪一條和哪個時間範圍驅動了必要的行動。
+AAPS 使用了與 OpenAPS 相同的核心演算法和功能集。 演算法會根據設定和目前情況進行多種預測，代表未來可能發生的不同情景。 在 Nightscout 中，這些顯示為「紫色線條」。 AAPS 使用不同的顏色來區分這些[預測線](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)。 在日誌中，他會描述這些預測中的哪一條和哪個時間範圍驅動了必要的行動。
 
 ### 這裡是一些紫色預測線的範例，以及他們可能的不同：
 
@@ -95,7 +95,7 @@ AAPS 使用了與 OpenAPS 相同的核心演算法和功能集。 演算法會�
 
 其他推薦閱讀：
 
-* The [full AAPS documentation](../index.md)
+* 完整的[AAPS 文檔](../index.md)
 * [OpenAPS 參考設計](https://OpenAPS.org/reference-design/)，其中解釋了 OpenAPS 如何為安全設計：https://openaps.org/reference-design/
 * [OpenAPS 完整文檔](https://openaps.readthedocs.io/en/latest/index.html) 
   * 有關 OpenAPS 計算的更多詳情請參閱[這裡](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
