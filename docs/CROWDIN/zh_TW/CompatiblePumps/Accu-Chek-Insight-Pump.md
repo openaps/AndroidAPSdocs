@@ -12,7 +12,7 @@
 
 注意：AAPS 將資料寫入**幫浦的第一個基礎率設定檔**。
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md) page which Android version is required to run AAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Getting-Started/ComponentOverview) page which Android version is required to run AAPS.)
 * 你的手機上安裝了 AAPS 應用程式
 
 ## 設定
@@ -122,7 +122,7 @@
 
 * 韌體 1.x：設計上沒有震動。
 * 韌體 2.x：無法停用震動。
-* 韌體 3.x：AAPS 安靜地發送注射。 (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614))
+* 韌體 3.x：AAPS 安靜地發送注射。 (minimum [version 2.6.1.4](../Maintenance/ReleaseNotes.md#version-2614))
 
 你可以在選單中找到韌體版本。
 
@@ -150,4 +150,4 @@ Insight 幫浦有一個小型內部電池，可在更換可拆卸電池時維持
 
 ## 跨時區使用 Insight 幫浦
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#insight).
