@@ -8,13 +8,13 @@ Neben der Erstellung von Berichten, kann Nightscout auch genutzt werden, um Andr
 
 Handle mit größter Vorsicht, wenn Du mit Nightscout als Datenquelle für Dein AAPS verwendest.
 
-### Nightscout Einstellungen
+### Nightscout settings
 
 Du kannst den öffentlichen Zugang zu Deinen Nightscout-Daten verweigern, indem Du [authentication roles](https://nightscout.github.io/nightscout/security) (Authentifizierungsrollen) verwendest: stelle sicher, dass Du Deinen URL mit einem `readable` (nur lesen) Token zur Verfügung stellst und niemals mit einem `admin` (Administrator) Token.
 
 Das Nightscout `API_SECRET` ist das Hauptpasswort für Deinen Nightscout-Server, mache es keinesfalls öffentlich zugänglich.
 
-### AAPS-Einstellungen
+### AAPS settings
 
 Du kannst AAPS so einstellen, dass Nightscout-Befehle akzeptiert werden (Profiländerungen, Behandlungsparameter, ...) oder dies vollständig ausschalten.
 
