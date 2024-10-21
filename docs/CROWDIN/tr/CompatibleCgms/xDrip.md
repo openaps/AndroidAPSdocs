@@ -200,7 +200,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 ### Libre akıllı okuyucu pil seviyesi
 
 - Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
-- Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
+- Details can be found on [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery).
 
 ### Libre Vericiyi Bağla & sensörü başlat
 
