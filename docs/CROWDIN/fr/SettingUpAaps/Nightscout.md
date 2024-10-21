@@ -8,7 +8,7 @@ En complément des rapports, Nightscout peut également être utilisé pour cont
 
 Exercise maximum caution if using Nightscout as your AAPS data source.
 
-### Paramètres Nightscout
+### Nightscout settings
 
 You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
 
