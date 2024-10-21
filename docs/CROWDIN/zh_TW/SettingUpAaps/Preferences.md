@@ -22,7 +22,7 @@
 ```
 
 (Preferences-general)=
-## General
+## 一般問題
 
 ![偏好設定 > 一般](../images/Pref2020_General.png)
 
@@ -52,7 +52,7 @@
 
 #### 主密碼
 
-- Necessary to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7. **OnePlus 手機可能無法使用生物辨識保護。 這是部分 OnePlus 手機的已知問題。**
+- 從版本 2.7 開始，必須使用主密碼才能[匯出設定](../Maintenance/ExportImportSettings.md)，因為這些資料將加密。 **OnePlus 手機可能無法使用生物辨識保護。 這是部分 OnePlus 手機的已知問題。**
 
 - 打開偏好設定（三點選單位於主畫面右上角）
 
@@ -66,11 +66,11 @@
 
 #### 設定保護
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../RemoteFeatures/RemoteMonitoring.md)).
+- 使用密碼或手機的生物識別認證來保護您的設定（例如 [孩子正在使用 AAPS](../RemoteFeatures/RemoteMonitoring.md)）。
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md).
+- 如果您希望僅為保護[匯出的設定](../Maintenance/ExportImportSettings.md)使用主密碼，則應使用自定義密碼。
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
+- 如果你使用自定密碼，請點擊「設定密碼」來設置密碼，如上文[所述](#master-password)。
 
   ![保護](../images/Pref2020_Protection.png)
 
@@ -81,7 +81,7 @@
 
 #### 注射保護
 
-- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
+- 如果 AAPS 被小孩使用，並且您[透過簡訊注射](../RemoteFeatures/SMSCommands.md)，則注射保護可能會很有用。
 
 - 在下圖示例中，你會看到生物辨識保護提示。 如果生物辨識驗證無法運作，請點擊白色提示上方的空白處並輸入主密碼。
 
@@ -154,7 +154,7 @@
 (Preferences-default-temp-targets)=
 ### 預設臨時目標
 
-- [Temp targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to define change your blood glucose target for a certain time period.
+- [臨時目標 (TT)](../DailyLifeWithAaps/TempTargets.md) 允許您在特定時間段內定義血糖目標的變更。
 
 - 透過設置預設的TT，你可以輕鬆更改活動、即將用餐等目標。
 
@@ -168,7 +168,7 @@
 
 ### 填充/啟動標準胰島素量
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
+- 如果您想通過 AAPS 填充管路或啟動導管，您可以通過[行動選單](../DailyLifeWithAaps/AapsScreens.md#action-tab)來進行。
 - 可以在此對話框中定義預設值。
 
 (Preferences-range-for-visualization)=
@@ -198,7 +198,7 @@
 - 狀態指示燈為以下情況提供視覺警告：
 
   - 傳感器使用時間
-  - Sensor battery level for certain smart readers (see [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery) for details).
+  - 某些智慧讀取器的感測器電池電量（詳情請參見[截圖頁面](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery)）。
   - 胰島素的使用時間（儲液罐使用的天數）
   - 儲液罐的剩餘容量（單位）
   - 輸注針頭的使用時間
@@ -231,7 +231,7 @@
 - 安全限制是根據你在此設置中選擇的年齡設定的。
 - 如果你開始觸及這些嚴格的限制（如最大注射量），那麼是時候提升一步了。
 - 選擇高於實際年齡是不好的主意，因為這可能會導致輸入胰島素對話框中錯誤的值（例如跳過小數點），從而導致過量注射。
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
+- 如果你想知道這些硬編碼的安全限制的實際數字，請滾動到你在[這個頁面](../DailyLifeWithAaps/KeyAapsFeatures.md)上使用的算法功能。
 
 ### 允許的最大注射量 \[U\]
 
@@ -266,10 +266,10 @@
 (Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## 進階餐前注射助手（AMA）或超微量注射（SMB）
 
-Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+根據你的設置在[組態建置工具](../SettingUpAaps/ConfigBuilder.md)中，你可以在兩種算法之間進行選擇：
 
-- [Advanced meal assist (OpenAPS AMA)](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [進階餐前注射助手（OpenAPS AMA）](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama) - 2017年的算法狀態
+- [超微量注射（OpenAPS SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) - 最推薦給初學者的最新算法
 
 ### OpenAPS AMA設置
 
@@ -283,7 +283,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 - 該值以每小時單位（U/h）測量。
 - 建議將此設為合理的數值。 一個好的建議是取你的**最高基礎率**，並**將其乘以4**。
 - 例如，如果你的最高基礎率為0.5 U/h，你可以將其乘以4得到2 U/h的值。
-- See also [detailed feature description](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
+- 另見[詳細功能描述](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)。
 
 #### OpenAPS可以輸送的最大基礎IOB \[U\]
 
@@ -307,7 +307,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 
 #### 自動敏感度調整 (Autosens)
 
-- [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) 會根據血糖偏差（正/負/中性）進行調整。
 - 他會根據這些偏差計算出你對胰島素的敏感度或抗性，並根據偏差調整基礎速率和胰島素敏感指數（ISF）。
 - 如果你選擇「Autosens 調整目標」，演算法也會修改你的血糖目標。
 
@@ -319,17 +319,17 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB 設定
 
-- In contrast to AMA, [SMB](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- 與 AMA 相比，[SMB](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) 不使用臨時基礎速率來控制血糖，而是主要使用小型超級微量注射。
 
-- You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
+- 你必須開始使用[目標 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)來使用 SMB。
 
-- The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
+- 前三個設定在[上方](#max-uh-a-temp-basal-can-be-set-to)進行了解釋。
 
-- Details on the different enable options are described in [OpenAPS feature section](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb).
+- 不同啟用選項的詳細資訊在[OpenAPS 功能部分](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb)中描述。
 
 - *SMB 的發放頻率（以分鐘為單位）*受限於預設每 4 分鐘發放一次。 此數值防止系統過於頻繁發放 SMB（例如當設定臨時目標時）。 除非你確切知道後果，否則不應更改此設定。
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) will modify your glucose target according to your blood glucose deviations.
+- 如果啟用了「敏感性提高目標」或「抗性降低目標」，[Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) 會根據你的血糖偏差修改血糖目標。
 
 - 如果目標被修改，會在主畫面以綠色背景顯示。
 
@@ -387,12 +387,12 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 
 ### 進階設定 - autosens 比例
 
-- Define min. and max. [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) ratio.
+- 定義最小和最大[autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) 比例。
 - 通常標準值（最大 1.2 和最小 0.7）不應更改。
 
 ## 幫浦設定
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump).  根據幫浦相關的指示來配對並設定你的幫浦：
+此處的選項會根據你在[組態建置工具](../SettingUpAaps/ConfigBuilder.md#pump)中選擇的幫浦驅動程式而有所不同。  根據幫浦相關的指示來配對並設定你的幫浦：
 
 - [DanaR 胰島素幫浦](../CompatiblePumps/DanaR-Insulin-Pump.md)
 - [DanaRS 胰島素幫浦](../CompatiblePumps/DanaRS-Insulin-Pump.md)
@@ -419,7 +419,7 @@ The options here will vary depending on which pump driver you have selected in [
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](../Maintenance/ReleaseNotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+[AAPS 3.2 引入的新協議](../Maintenance/ReleaseNotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps)。更安全且更高效。
 
 ```{admonition} V3 data uploaders
 :class: warning
@@ -438,7 +438,7 @@ The options here will vary depending on which pump driver you have selected in [
 
 同步選項將取決於你希望如何使用 AAPS。
 
-You can select which data you want to [upload and download to or from Nightscout](../SettingUpAaps/Nightscout.md#aaps-settings).
+你可以選擇[上傳和下載至 Nightscout 的資料](../SettingUpAaps/Nightscout.md#aaps-settings)。
 
 ### 警報選項
 
@@ -470,9 +470,9 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ## SMS(簡訊) 通訊器
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#sms-communicator).
+- 僅當在[組態建置工具](../SettingUpAaps/ConfigBuilder.md#sms-communicator)中選擇 SMS 通訊器時才會顯示選項。
 - 此設定允許透過傳簡訊指令來遠端控制應用程式，如暫停循環或進行注射。
-- Further information is described in [SMS Commands](../RemoteFeatures/SMSCommands.md).
+- 更多資訊在[SMS 指令](../RemoteFeatures/SMSCommands.md)中描述。
 - 透過使用身份驗證應用程式和憑證末端的額外 PIN 獲得額外的安全保障。
 
 ## 自動化
@@ -503,7 +503,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ## Open Humans
 
-- 你可以透過捐贈你的資料來協助研究項目，幫助社群！ Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
+- 你可以透過捐贈你的資料來協助研究項目，幫助社群！ 詳細資訊請參閱[Open Humans 頁面](../SupportingAaps/OpenHumans.md)。
 
 - 在偏好設定中，你可以定義何時上傳資料
 
