@@ -17,7 +17,7 @@
         - 如果你擁有不支援的型號，並願意捐贈硬體或協助測試，請透過discord與我們聯繫[這裡](https://discordapp.com/channels/629952586895851530/1076120802476441641)。
 * **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * **相容的 Android 手機** 需具備 BLE 藍牙連線
-    - 請參閱AAPS的[版本說明](../Installing-AndroidAPS/Releasenotes.md)
+    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
 * [**連續血糖監測儀（CGM）**](../Getting-Started/CompatiblesCgms.md)
 
 ## 開始之前
@@ -166,7 +166,7 @@ On an existing installation you can select the **Medtrum** pump from the [Config
 
 **在繼續之前：**
 - 準備好你的Medtrum Nano幫浦基座與儲液瓶修補版。
-- 請確保AAPS已正確設置，並已[註冊設定檔](../Usage/Profiles.md)。
+- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 - 停用其他可與Medtrum幫浦連線的裝置（PDM與Medtrum App）
 
 #### 從Medtrum總覽標籤啟動修補版
@@ -331,7 +331,7 @@ On an existing installation you can select the **Medtrum** pump from the [Config
 
 按下**重置警報**按鈕以重置警報並恢復正常運作。
 
-## 問題排除
+## Troubleshooting
 
 ### 連線問題
 
@@ -354,5 +354,5 @@ On an existing installation you can select the **Medtrum** pump from the [Config
 
 -  **等級 0：** 閱讀此文件的相關部分，以確保你了解遇到困難的功能應如何工作。
 -  **第一層：**如果你仍遇到無法透過此文件解決的問題，請前往**Discord**上的*#Medtrum*頻道，使用[此邀請連結](https://discord.gg/4fQUWHZ4Mw)。
--  **第二層：**搜尋現有問題，看看你的問題是否已在[問題頁面](https://github.com/nightscout/AAPS/issues)中報告 如果存在，請確認/評論/添加你的問題資訊。 如果沒有，請建立[新問題](https://github.com/nightscout/AndroidAPS/issues)並附上你的[日誌檔案](../Usage/Accessing-logfiles.md)。
+-  **第二層：**搜尋現有問題，看看你的問題是否已在[問題頁面](https://github.com/nightscout/AAPS/issues)中報告 如果存在，請確認/評論/添加你的問題資訊。 If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
 -  **保持耐心——我們社群中的大多數成員都是善良的志願者，解決問題通常需要使用者和開發者雙方的時間和耐心。**
