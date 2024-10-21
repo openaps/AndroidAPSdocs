@@ -2,7 +2,7 @@
 
 一些 **AAPS** 用戶喜歡將他們的主電子郵件帳戶用於 **AAPS**。 或者，一些 **AAPS** 用戶（或他們的照護者）會設置專用的 **AAPS** 電子郵件帳戶 - 這是可選的，我們在下方介紹如何設置。
 
-If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](../SettingUpAaps/BuildingAaps.md).
+如果您不想設置專門用於 **AAPS** 的 Gmail 帳號，可以直接進入下一部分，[建立 AAPS](../SettingUpAaps/BuildingAaps.md)。
 
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
@@ -146,4 +146,4 @@ Gmail將顯示帳號名稱。 他將要求你接受Gmail的條款與條件，並
 
 ![](../images/Building-the-App/building_0014.png)
 
-恭喜！ 現在，你已經建立了一個專用於AAPS的Google帳號。 The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+恭喜！ 現在，你已經建立了一個專用於AAPS的Google帳號。 下一步是[建立 AAPS 應用](../SettingUpAaps/BuildingAaps.md)。
