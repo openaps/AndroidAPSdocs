@@ -22,7 +22,7 @@
 ```
 
 (Preferences-general)=
-## Obecné
+## General
 
 ![Nastavení > Obecné](../images/Pref2020_General.png)
 
@@ -52,7 +52,7 @@
 
 #### Hlavní heslo
 
-- Je nezbytné, aby bylo možné provést [export nastavení](../Usage/ExportImportSettings.md), protože jsou od verze 2.7 šifrovány. **Na OnePlus telefonech nemusí fungovat biometrická ochrana. Jedná se o známou chybu OnePlus telefonů.**
+- Necessary to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7. **Na OnePlus telefonech nemusí fungovat biometrická ochrana. Jedná se o známou chybu OnePlus telefonů.**
 
 - Otevřete nastaní (tříbodové menu v právém horním rohu domovské obrazovky)
 
@@ -66,9 +66,9 @@
 
 #### Ochrana nastavení
 
-- Chraňte své nastavení pomocí hesla nebo biometrického ověření telefonu (např. pokud [AAPS používá dítě](../Children/Children.md)).
+- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../RemoteFeatures/RemoteMonitoring.md)).
 
-- Pokud chcete použít hlavní heslo pouze pro zabezpečení exportovaného nastavení \<../Usage/ExportImportSettings.md> \` \_, můžete si vytvořit Vlastní heslo.
+- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md).
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
 
@@ -81,7 +81,7 @@
 
 #### Ochrana bolusu
 
-- Ochrana bolusu je užitečná, pokud AAPS používá malé dítě, a vy podáváte [bolus prostřednictvím SMS](../Children/SMS-Commands.md).
+- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
 - V níže uvedeném příkladu vidíte výzvu k biometrické ochraně. Pokud biometrické ověření nefunguje, klepněte na místo nad bílou výzvou k zadání, a zadejte hlavní heslo.
 
@@ -154,7 +154,7 @@
 (Preferences-default-temp-targets)=
 ### Výchozí nastavení dočasných cílů
 
-- [Dočasné cíle (DC)](../Usage/temptarget.md) vám umožní nastavit na určitou dobu změněnou cílovou hodnotu glykémie.
+- [Temp targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to define change your blood glucose target for a certain time period.
 
 - S nastavením základních hodnot DC můžete jednodušeji měnit své cílové hodnoty glykémie pro aktivity, blížící se jídlo atd.
 
@@ -168,7 +168,7 @@
 
 ### Standardní množství inzulinu pro Plnění/Doplňování
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
 - Přednastavené hodnoty se dají měnit v tomto dialogu.
 
 (Preferences-range-for-visualization)=
@@ -198,7 +198,7 @@
 - Stavové indikátory zobrazují vizuální varování pro
 
   - Stáří senzoru
-  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
+  - Sensor battery level for certain smart readers (see [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery) for details).
   - Stáří inzulínu (doba použití aktuálního zásobníku)
   - Stav zásobníku (jednotky)
   - Stáří kanyly
@@ -231,7 +231,7 @@
 - Bezpečnostní limity jsou nastaveny na základě věku, který jste zvolili v tomto nastavení.
 - Pokud začnete narážet na pevně nastavené limity (jako například na maximální bolus), je čas posunout se o stupeň výš.
 - Nastavení vyššího než skutečného věku není dobrý nápad, protože může vést k předávkování inzulínem při chybném nastavení množství inzulínu (například vynecháním desetinné čárky v dialogu).
-- Chcete-li zjistit, jaké máte pevně nastavené bezpečnostní limity, podívejte se na popis Vámi používaného algoritmu [na této stránce](../Usage/Open-APS-features.md).
+- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 ### Maximální povolený bolus \[U\]
 
@@ -268,8 +268,8 @@
 
 Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### Nastavení OpenAPS AMA
 
@@ -283,7 +283,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 - Jakmile je tato hodnota dosažena, AAPS zastaví přidávání dodatečného bazálu, dokud hodnota inzulínu v těle (IOB) opět neklesne pod tuto hodnotu.
 - Doporučuje se nastavit toto na rozumnou hodnotu. Je doporučeno vzít **nejvyšší hodnotu bazálu** v profilu a **vynásobit ji 4**.
 - Například: máte-li ve svém profilu nejvyšší hodnotu bazálu 0.5U/h, dostanete po vynásobení 4 hodnotu 2U/h.
-- See also [detailed feature description](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### Maximální bazální IOB \[U\]
 
@@ -307,7 +307,7 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 #### Autosens
 
-- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
 - Pokud je chcete i přesto změnit, prostudujte si podrobnosti v , abyste pochopili, co děláte.
 - Pokud vyberete "Autosens také nastavuje cíl", bude algoritmus upravovat i vaši cílovou hodnotu glykémie.
 
@@ -319,17 +319,17 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 (Preferences-openaps-smb-settings)=
 ### Nastavení OpenAPS SMB
 
-- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
 - You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
 - The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
 
-- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb).
 
 - *Jak často budou SMB podávány v min.* je omezení SMB, které je standardně nastaveno na každé 4 minuty. Tato hodnota brání systému vydávat SMB příliš často (např. v případě nastavení dočasného cíle). Toto nastavení byste neměli změnit, pokud přesně nevíte, jaké mohou být následky.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Je-li cíl upraven, bude na domovské obrazovce zobrazen se zeleným pozadím.
 
@@ -387,7 +387,7 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 ### Pokročilé nastavení - autosens ratio
 
-- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
+- Define min. and max. [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) ratio.
 - Normálně by se neměly měnit standardní hodnoty (max. 1.2 a min. 0.7).
 
 ## Nastavení pumpy
@@ -419,7 +419,7 @@ Původní komunikační protokol, lze použít se staršími verzemi Nightscoutu
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[Nový protokol byl zaveden s AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) je bezpečnější a efektivnější.
+[New protocol introduced with AAPS 3.2.](../Maintenance/ReleaseNotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
 ```{admonition} V3 data uploaders
 :class: warning
@@ -472,7 +472,7 @@ Options in advanced settings are self-explanatory.
 
 - Options will only be displayed if SMS communicator is selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#sms-communicator).
 - Používat zjištění polohy podle sítě: Poloha podle vaší Wi-Fi sítě
-- Podrobnější informace jsou popsány v sekci [SMS příkazy](../Children/SMS-Commands.md).
+- Further information is described in [SMS Commands](../RemoteFeatures/SMSCommands.md).
 - Dodatečná bezpečnost je zajištěna použitím autentizační aplikace a dodatečného PIN na konci tokenu.
 
 ## Automatizace
@@ -503,7 +503,7 @@ Select which location service shall be used:
 
 ## Open Humans
 
-- Můžete pomoci komunitě tím, že daruje vaše data do výzkumných projektů! Podrobnosti jsou popsány na stránce [Open Humans](../Configuration/OpenHumans.md).
+- Můžete pomoci komunitě tím, že daruje vaše data do výzkumných projektů! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
 
 - V předvolbách můžete definovat, kdy budou data odeslána
 
