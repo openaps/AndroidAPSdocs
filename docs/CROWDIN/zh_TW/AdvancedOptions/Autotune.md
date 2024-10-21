@@ -4,7 +4,7 @@
 
 Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
 
-**Currently Autotune Plugin is only available in [dev branch](../AdvancedOptions/DevBranch.md) and with Engineering mode.**
+**目前 Autotune 外掛僅在[開發分支](../AdvancedOptions/DevBranch.md)和工程模式下可用。**
 
 ## Autotune 使用者介面
 
@@ -41,7 +41,7 @@ Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
 
 - 「比較設定檔」按鈕會打開設定檔比較視圖。 輸入設定檔顯示為藍色，輸出設定檔（名稱為「調整後」）顯示為紅色。
 
-  - 注意：以下範例中，輸入設定檔有 IC 和 ISF 的日夜變化，但輸出計算後的設定檔只有單一數值。 If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
+  - 注意：以下範例中，輸入設定檔有 IC 和 ISF 的日夜變化，但輸出計算後的設定檔只有單一數值。 如果您希望獲得生理節律輸出配置，請參見[生理節律 IC 或 ISF 配置](#circadian-ic-or-isf-profile)。
 
   ![Autotune 設定檔比較。](../images/Autotune/Autotune_5.png)
 
@@ -84,15 +84,15 @@ Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
 
 ![Autotune 預設畫面](../images/Autotune/Autotune_11.png)
 
-- Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#run-autotune-with-an-automation-rule) below. 如果你將此設定更改為開啟，則輸入設定檔將自動被調整後的設定檔更新並啟用。
+- 自動開關配置 (預設關閉)：請參見[使用自動化規則運行 Autotune](#run-autotune-with-an-automation-rule)。 如果你將此設定更改為開啟，則輸入設定檔將自動被調整後的設定檔更新並啟用。
   - **請小心，你必須在接下來的幾天中檢查並信任更新後的調整檔未經修改的情況下是否改善了你的循環。**
 
 - 將 UAM 分類為基礎率（預設為開啟）：此設定適用於未輸入碳水化合物的 AndroidAPS 用戶（完全 UAM）。 當關閉時，他將阻止 UAM 被分類為基礎率。
   - 注意：如果當天偵測到至少一小時的碳水化合物吸收，無論此設定（開啟或關閉），所有分類為「UAM」的資料都會被分類為基礎率。
 - 資料天數（預設為5天）：你可以使用此設定定義預設值。 每次你在 Autotune 外掛中選擇新設定檔時，調整天數參數將被替換為此預設值。
-- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
+- 將平均結果應用於日夜變化的 IC/ISF（預設為關閉）：請參閱[日夜變化 IC 或 ISF 設定檔](#circadian-ic-or-isf-profile)。
 
-### Other settings
+### 其他設置
 
 - Autotune 也使用自動敏感度最大比率和自動敏感度最小比率來限制變異。 你可以在「組態建置工具 > 敏感度偵測外掛 > 設定 > 高級設定」中查看並調整這些值。
 
@@ -136,7 +136,7 @@ Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
 
 第一步是為 Autotune 定義正確的自動化規則觸發條件：
 
-Note: for more information on how to set an automation rule, see [here](../DailyLifeWithAaps/Automations.md).
+注意：有關如何設定自動化規則的更多資訊，請參閱[此處](../DailyLifeWithAaps/Automations.md)。
 
 - 你應該選擇「重複時間觸發」：每天只運作一次 Autotune，並且 Autotune 設計為每日運作（每次新運作你會推遲一天，設定檔的修改會快速變得微小）。
 
@@ -154,7 +154,7 @@ Note: for more information on how to set an automation rule, see [here](../Daily
 
   ![Autotune 預設畫面](../images/Autotune/Autotune_19b.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
+- 經過幾天後，如果你完全信任 Autotune 結果且修改百分比很小，你可以修改[Autotune 設定](#autotune-plugin-settings)中的「自動切換設定檔」，將其設為啟用，讓計算後自動更新並啟用調整後的設定檔。
 
 注意：如果你想為特定的星期幾自動調整設定檔（例如「週末天數」的設定檔和「工作日」的設定檔），那麼為每個設定檔建立一個規則，選擇相同的日期作為觸發條件和 Autotune 動作中的日期，調整天數必須足夠高以確保至少有 6 或 8 天包含在內，且不要忘記在觸發條件中選擇 4AM 之後的時間…
 
