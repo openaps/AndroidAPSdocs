@@ -17,7 +17,7 @@ Diese Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein k
         - Wenn Du ein bisher nicht unterstütztes Modell hast und bereit bist es zu spenden oder Du beim Testen helfen möchtest, kontaktiere uns über den Discord-Kanal [hier](https://discordapp.com/channels/629952586895851530/1076120802476441641).
 * **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * **Kompatibles Android Smartphone** mit Bluetooth-Verbindung (Bluetooth Low Energy, BLE)
-    - Vgl. AAPS [Release Notes](../Installing-AndroidAPS/Releasenotes.md)
+    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
 * [**Kontinuierliche Glukosemessung (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
 ## Bevor du startest
@@ -166,7 +166,7 @@ Diese Einstellung kann für eine Medtrum-Pumpe geändert werden. Aus Sicherheits
 
 **Bevor Du weiter machst:**
 - Habe Deine Medtrum Nano Pumpenbasis und ein Reservoir-Patch zur Hand.
-- Stell sicher, dass AAPS korrekt eingerichtet und ein [Profil aktiviert ist](../Usage/Profiles.md).
+- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 - Andere Geräte, die sich mit der Medtrum-Pumpe verbinden könnten, sind deaktiviert (PDM und Medtrum-App)
 
 #### Patch über den Medtrum Übersichts-Reiter aktivieren
@@ -331,7 +331,7 @@ Die Alarmtaste wird auf der Übersicht angezeigt, wenn es einen aktiven Alarm, d
 
 Tippe auf **Alarme zurücksetzen**, um die Alarme zurückzusetzen und den normalen Betrieb fortzusetzen.
 
-## Problembehandlung
+## Troubleshooting
 
 ### Verbindungsprobleme
 
@@ -354,5 +354,5 @@ Die gesamte Entwicklungsarbeit rund um das Medtrum-Modul wird von der Community 
 
 -  **Level 0:** Lies den entsprechenden Abschnitt dieser Dokumentation um sicherzustellen, dass du verstehst, wie die Funktion, mit der Du Schwierigkeiten hast, funktionieren soll.
 -  **Level 1:** Solltest Du trotz dieses Dokuments ein Problem nicht lösen können, tritt dem *#Medtrum* **Discord**-Channel bei, indem Du auf diesen [Einladungs-Link](https://discord.gg/4fQUWHZ4Mw) klickst.
--  **Level 2:** Vorhandene 'Issues' durchsuchen um zu sehen, ob Dein Problem bereits in den [Issues](https://github.com/nightscout/AAPS/issues) gemeldet wurde. Falls vorhanden, bitte bestätige/kommentiere/ergänze Informationen zu Deinem Problem. Wenn nicht, erstelle bitte ein [neues Issue](https://github.com/nightscout/AndroidAPS/issues) und füge [Deine Logdateien](../Usage/Accessing-logfiles.md) an.
+-  **Level 2:** Vorhandene 'Issues' durchsuchen um zu sehen, ob Dein Problem bereits in den [Issues](https://github.com/nightscout/AAPS/issues) gemeldet wurde. Falls vorhanden, bitte bestätige/kommentiere/ergänze Informationen zu Deinem Problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
 -  **Sei geduldig - die meisten Mitglieder unserer Community sind gutmütige Freiwillige und die Lösung von Problemen erfordert oft Zeit und Geduld von Nutzern und Entwicklern.**
