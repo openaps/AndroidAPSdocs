@@ -82,4 +82,4 @@
 
 ## 問題排除：
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#use-system-notifications-in-aaps-for-alerts-and-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
+* 如果您沒有看到通知，請檢查您是否[允許 AAPS 顯示通知](#use-system-notifications-in-aaps-for-alerts-and-notifications)，並檢查[Android Auto 是否有權限存取通知](#allow-the-use-of-unknown-sources-with-android-auto)。
