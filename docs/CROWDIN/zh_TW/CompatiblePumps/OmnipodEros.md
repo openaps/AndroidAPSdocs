@@ -707,7 +707,7 @@ Omnipod Eros 幫浦中的胰島素量報告並不精準。  這是因為無法�
 
 (OmnipodEros-troubleshooting)=
 
-## 問題排除
+## Troubleshooting
 
 ### Pod 故障
 
@@ -788,5 +788,5 @@ RileyLink上用來與Omnipod通訊的天線是一個433 MHz的螺旋天線。 �
 
 - **等級 0：** 閱讀此文件的相關部分，以確保你了解遇到困難的功能應如何工作。
 - **第一層：**如果你仍遇到無法解決的問題，請前往**Discord**上的*#androidaps*頻道，使用[此邀請連結](https://discord.gg/4fQUWHZ4Mw)。
-- **第二層：**搜尋現有的問題，看看你的問題是否已被報告；如果沒有，請建立一個[新問題](https://github.com/nightscout/AndroidAPS/issues)並附上你的[日誌檔案](../Usage/Accessing-logfiles.md)。
+- **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
 - **保持耐心——我們社群中的大多數成員都是善良的志願者，解決問題通常需要使用者和開發者雙方的時間和耐心。**
