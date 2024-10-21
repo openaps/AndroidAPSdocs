@@ -8,13 +8,13 @@
 
 如果使用 Nightscout 作為你的 AAPS 資料來源，請極為謹慎。
 
-### Nightscout settings
+### Nightscout 設置
 
 你可以使用 [身份驗證角色](https://nightscout.github.io/nightscout/security) 來拒絕公眾查看你的 Nightscout 網站：請確保僅與具有`readable` 權限的使用者共享 URL，絕不要與擁有`admin` 權限的使用者共享。
 
 Nightscout 的 `API_SECRET` 是你網站的主要密碼：切勿公開分享他。
 
-### AAPS settings
+### AAPS 設置
 
 你可以設置 AAPS 接收 Nightscout 指令（例如配置更改、治療等），或完全停用此功能。
 
@@ -40,7 +40,7 @@ Nightscout 的 `API_SECRET` 是你網站的主要密碼：切勿公開分享他�
 
 ### 進一步的安全設置
 
-Keep your phone up to date as described in [safety first](../Getting-Started/PreparingForAaps.md#safety-first).
+保持你的手機最新，如[安全第一](../Getting-Started/PreparingForAaps.md#safety-first)所述。
 
 (Nightscout-manual-nightscout-setup)=
 
