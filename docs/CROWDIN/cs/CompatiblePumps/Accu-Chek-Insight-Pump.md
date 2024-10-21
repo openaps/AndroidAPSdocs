@@ -12,7 +12,7 @@
 
 Poznámka: AAPS vždy zapíše data do **prvního bazálního profilu v pumpě**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md) page which Android version is required to run AAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Getting-Started/ComponentOverview) page which Android version is required to run AAPS.)
 * Aplikace AAPS nainstalovaná na vašem telefonu
 
 ## Nastavení
@@ -122,7 +122,7 @@ V závislosti na verzi firmwaru vaší pumpy bude Insight krátce vibrovat poka�
 
 * Firmware 1.x: Žádné vibrace z výroby
 * Firmware 2.x: Vibrace nelze vypnout.
-* Firmware 3.x: AAPS vydává bolus potichu. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614))
+* Firmware 3.x: AAPS vydává bolus potichu. (minimum [version 2.6.1.4](../Maintenance/ReleaseNotes.md#version-2614))
 
 Verzi firmwaru lze nalézt v menu.
 
@@ -150,4 +150,4 @@ V tom případě vypněte bluetooth v pumpě i telefonu na 10 sekund a potom jej
 
 ## Změna časových pásem s pumpou Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#insight).
