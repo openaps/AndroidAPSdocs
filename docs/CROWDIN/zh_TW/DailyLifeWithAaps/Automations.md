@@ -40,7 +40,7 @@
 
 ## AAPS 中的自動化在哪裡？
 
-Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
+根據你的[組態建置工具](../SettingUpAaps/ConfigBuilder.md)設定，**自動化**位於‘漢堡選單’中或作為**AAPS**的一個標籤頁。
 
 ## 如何設置自動化？
 
@@ -251,7 +251,7 @@ Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, 
 
 ![替代文字](../images/automation_2024-02-12_21-05-56.png-500x.png)
 
-## Troubleshooting
+## 問題排除
 
 * 問題：__我的自動化沒有被 AAPS 觸發嗎？__
 
