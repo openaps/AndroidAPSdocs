@@ -3,14 +3,14 @@
 ```{admonition} Documentation
 :class: note
 
-This section may contain outdated content. Please also see the page [SMS Commands](../RemoteFeatures/RemoteControl.md#1-sms-commands)).
+此部分可能包含過時的內容。 請參見頁面 [簡訊指令](../RemoteFeatures/RemoteControl.md#1-sms-commands)。
 
 ```
 
 ## 安全第一
 .
 - AAPS 允許你透過簡訊遠端控制孩子的手機。 如果你啟用此 SMS 通訊功能，請務必記住，設置為傳送遠端指令的手機可能會被盜。 因此，務必至少使用 PIN 碼來保護手機。 建議使用強度較高的密碼或生物識別技術。
-- Additionally it is recommended to allow a [second phone number](../RemoteFeatures/SMSCommands.md#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](../RemoteFeatures/SMSCommands.md#other) SMS communicator in case your main remote phone gets lost or stolen.
+- 此外，建議允許為簡訊指令設置[第二個電話號碼](../RemoteFeatures/SMSCommands.md#authorized-phone-numbers)。 這樣，當你的主遠端手機丟失或被盜時，可以使用第二個號碼 [臨時停用](../RemoteFeatures/SMSCommands.md#other) SMS 通訊功能。
 - 如果你傳送的遠端指令（如注射或更改設定檔）已執行，AAPS 也會透過簡訊通知你。 建議將其設置為至少傳送到兩個不同的手機號碼，以防其中一部接收手機被盜。
 - **如果你透過 SMS 指令進行注射，則必須透過 Nightscout（AAPSClient、網站等）輸入碳水化合物！** 如果你未這樣做，活性胰島素（IOB）數值會正確，但活性碳水化合物化合物（COB）可能過低，導致 **AAPS** 假設你有過多的活性胰島素，從而未執行糾正注射。
 - 從 AAPS 2.7 版本起，當使用 SMS 指令時，必須使用帶有時間一次性密碼的身份驗證器應用程式來提高安全性。
@@ -19,7 +19,7 @@ This section may contain outdated content. Please also see the page [SMS Command
 
 ![SMS 指令設定](../images/SMSCommandsSetup.png)
 
-- Most of the adjustments of temp targets, following AAPS etc. can be done on [AAPSClient app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection.
+- 大多數臨時目標的調整、追蹤 AAPS 等操作可以在連線網路的 Android 手機上的 [AAPSClient 應用程式](../RemoteFeatures/RemoteMonitoring.md) 中完成。
 - 無法透過 Nightscout 進行注射，但可以使用 SMS 指令。
 - 如果你使用 iPhone 作為追蹤者，無法使用 AAPSClient 應用程式，則有其他 SMS 指令可用。
 - 在 Android 手機設定中，前往應用程式 > AndroidAPS > 權限並啟用 SMS。
@@ -84,7 +84,7 @@ This section may contain outdated content. Please also see the page [SMS Command
 
 ## 使用 SMS 指令
 
-- Send a SMS to the phone with AAPS running from your approved phone number(s) using any of the [commands](#commands) below.
+- 從你的授權手機號碼向運作 AAPS 的手機發送 SMS，使用以下任何[指令](#commands)。
 
 - AAPS 手機將回覆以確認指令是否成功執行或請求的狀態。
 
@@ -98,7 +98,7 @@ This section may contain outdated content. Please also see the page [SMS Command
 
 ## 指令
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../SupportingAaps/Translations#translate-strings-for-aaps-app).
+指令必須以英文發送，回覆將使用你當地的語言，如果該回覆字符串已經[翻譯](../SupportingAaps/Translations#translate-strings-for-aaps-app)。
 
 ![SMS 指令範例](../images/SMSCommands.png)
 
@@ -148,7 +148,7 @@ Commands must be sent in English, the response will be in your local language if
 - EXTENDED STOP/CANCEL (擴展停止/取消) \* 回覆：要停止擴展注射，請回覆來自身份驗證器應用程式的代碼和 PIN
 - EXTENDED 2 120 (擴展 2 120) \* 回覆：要開始擴展注射 2U 持續 120 分鐘，請回覆來自身份驗證器應用程式的代碼和 PIN
 
-### Profile
+### 設定檔
 
 - PROFILE STATUS (設定檔狀態) \* 回覆：設定檔 1
 - PROFILE LIST (設定檔清單) \* 回覆：1.\`設定檔 1\` 2.\`設定檔 2\`
@@ -169,7 +169,7 @@ Commands must be sent in English, the response will be in your local language if
 - HELP (幫助) \* 回覆：BG, LOOP, TREATMENTS，...... (回覆各項可用指令)
 - HELP BOLUS (幫助 注射) \* 回覆：BOLUS 1.2 BOLUS 1.2 餐前
 
-## Troubleshooting
+## 問題排除
 
 ### 多條簡訊
 
