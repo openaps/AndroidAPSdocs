@@ -40,7 +40,7 @@ Bu sayfa, daha önce bakım portalında mevcut olan işlevleri nerede bulabilece
 - CGM sensör eki artık eylemler sekmesinde / menüsünde bulunabilir.
 - Bu bölümdeki diğer tüm işlevler kaldırılmıştır. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
-## Pompa
+## Pump
 
 ![Careportal Pump](../images/Careportal_25_26_4_IIb.png)
 
