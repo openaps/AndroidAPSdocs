@@ -4,14 +4,14 @@
 
 **L'application AAPS (le fichier apk) n'est pas disponible en téléchargement, en raison de la réglementation concernant les dispositifs médicaux. Il est légal de compiler l'application pour votre usage personnel, mais vous ne devez en aucun cas en donner une copie à quelqu'un d'autre !**
 
-Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.
+See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
 ## Prérequis matériels et logiciels pour la compilation de AAPS
 
 - Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, Koala or Ladybug](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first!
-- [Windows 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio. Veuillez garder à l'esprit qu'à la fois **le processeur (CPU 64 bits) et le système d'exploitation 64 bits sont des conditions obligatoires**. Si votre système NE satisfait PAS à cette condition, vous devez changer le matériel ou le système d'exploitation qui pose problème, ou tout le système.
+- [Windows 32-bit systems](../GettingHelp/TroubleshootingAndroidStudio#unable-to-start-daemon-process) are not supported by Android Studio. Veuillez garder à l'esprit qu'à la fois **le processeur (CPU 64 bits) et le système d'exploitation 64 bits sont des conditions obligatoires**. Si votre système NE satisfait PAS à cette condition, vous devez changer le matériel ou le système d'exploitation qui pose problème, ou tout le système.
 
 <table class="tg">
 <tbody>
@@ -50,16 +50,16 @@ Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.
 
 ## Aide et support pour le processus de compilation
 
-Si vous rencontrez des difficultés dans le processus de compilation de l'application **AAPS**, il existe une page dédiée au [**dépannage d'Android Studio**](../Installing-AndroidAPS/troubleshooting_androidstudio), veuillez la consulter en premier lieu.
+If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio) section, please consult that first.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). Si vous voulez changer quelque chose vous-même (mettre à jour les captures d'écran _etc_), veuillez soumettre un [pull request (PR)](../make-a-PR.md).
+If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
 ## Guide pas à pas pour compiler l'application AAPS
 
 ```{admonition} WARNING
 :class: warning
 If you have built AAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version)!
+Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
 ```
 
 Les grandes étapes pour construire le fichier apk **AAPS** sont les suivantes :
@@ -361,7 +361,7 @@ Make sure to note down for yourself where your keystore is stored. You will need
 
 - Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
 
-  Les mots de passe du fichier de clés et de la clé n'ont pas besoin d'être très complexes. If you lose your password in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
+  Les mots de passe du fichier de clés et de la clé n'ont pas besoin d'être très complexes. If you lose your password in the future, see [troubleshooting for lost key store](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore).
 
 - L'alias par défaut (3) de votre clé est "key0", laissez-le tel quel.
 
@@ -398,7 +398,7 @@ Le message "BUILD SUCCESSFUL / COMPILATION RÉUSSIE" s'affiche quand la généra
 
 ![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
-_If the build was not successful, refer to the [Android Studio Troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio)._
+_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio)._
 
 Dans la fenêtre des notifications, cliquez sur le lien bleu "locate/trouver" :
 
