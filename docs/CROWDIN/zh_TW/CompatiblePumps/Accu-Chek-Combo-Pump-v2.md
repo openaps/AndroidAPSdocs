@@ -8,7 +8,7 @@
 
 * 一台 Roche Accu-Chek Combo 幫浦（任何韌體版本均可使用）。
 * 一個 Smartpix 或 Realtyme 裝置，配合 360 設定軟體來配置幫浦。 （Roche 在客戶要求下會免費寄送 Smartpix 裝置和設定軟體。）
-* 一台相容的手機。 至少需要 Android 9（Pie）或更新版本。 如果使用 LineageOS，最低支援版本為 16.1。 See [release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version) for details.
+* 一台相容的手機。 至少需要 Android 9（Pie）或更新版本。 如果使用 LineageOS，最低支援版本為 16.1。 See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
 * 手機上安裝了 AndroidAPS 應用程式。
 
 根據手機的藍牙支援品質及其是否具備額外的省電邏輯，有些手機可能比其他手機運作得更好。 可以在[AAPS 手機列表](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit)文件中找到相容手機。 請注意，這不是完整的列表，只反應個人使用經驗。 我們鼓勵你也分享你的經驗，這樣可以幫助其他人（這些專案是關於傳遞經驗）。
@@ -20,7 +20,7 @@
 
 請注意以下限制：
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../Usage/Extended-Carbs.md) instead).
+* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 * 僅支援一個基礎設定檔（第一個）。
 * 如果幫浦上的目前活動設定檔不是設定檔 1，則循環模式將被停用。 這種情況會持續到設定檔 1 被設為活動檔案；當這樣做後，下一次 AAPS 連線時（無論是自動還是因為用戶在 combov2 用戶介面中按下了重新整理按鈕），他會注意到設定檔 1 是目前的活動檔案，並重新啟用循環模式。
 * 如果循環請求取消正在運作的 TBR，Combo 將設置一個 90% 或 110% 的 TBR，持續 15 分鐘。 這是因為實際取消 TBR 會在幫浦上觸發警報，並產生大量震動，這些震動無法停用。
