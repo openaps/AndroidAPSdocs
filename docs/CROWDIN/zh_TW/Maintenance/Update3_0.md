@@ -3,11 +3,11 @@
 * **最低 Android 版本現在為 9.0。**
 * **資料不會遷移至新資料庫。**
 
-  請不要抱怨，這是非常重大的變更，無法避免。 因此，更新後 IOB、COB、治療等資料將被清除。 You have to create new [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) and start with zero IOB and COB.
+  請不要抱怨，這是非常重大的變更，無法避免。 因此，更新後 IOB、COB、治療等資料將被清除。 您必須建立新的[個人設置切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)並從零 IOB 和 COB 開始。
 
   請謹慎規劃更新！！！ 最好在無活動胰島素和碳水化合物的情況下進行更新。
 
-* Please see the [Release Notes](../Maintenance/ReleaseNotes.md) for details on new and changed features.
+* 請參閱 [發行說明](../Maintenance/ReleaseNotes.md) 以獲取有關新功能和變更的詳細資訊。
 
 
 ## 檢查自動化設置
@@ -47,11 +47,11 @@
 
   ![黃色血糖警告](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign)
+詳細資訊請參見 [AAPS螢幕頁面](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign)
 
 
 ## 錯誤訊息：來自不同幫浦的資料
 
    ![錯誤訊息：來自不同幫浦的資料](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../SettingUpAaps/ConfigBuilder.md#pump). 將幫浦更改為虛擬幫浦，然後再切換回你的實際幫浦。 這將重置幫浦狀態。
+要解決此問題，請前往 [設定建構器](../SettingUpAaps/ConfigBuilder.md#pump)。 將幫浦更改為虛擬幫浦，然後再切換回你的實際幫浦。 這將重置幫浦狀態。
