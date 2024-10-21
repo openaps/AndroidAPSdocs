@@ -1,6 +1,6 @@
 # 追蹤 AAPS（無需與 AAPS 系統互動）
 
-In addition to the range of possibilities available for remotely controlling _and_ following **AAPS** which are described at [remote control](../RemoteFeatures/RemoteControl.md), there are several additional apps and devices which the community has developed, to simply follow numbers (glucose levels and other information), without interacting with AAPS.
+除了可用於遠端控制_和_跟踪**AAPS**的各種可能性，這些功能在[遠端控制](../RemoteFeatures/RemoteControl.md)中描述，社群還開發了一些額外的應用程式和設備，僅用於跟踪數據 (血糖水平和其他信息)，而無需與 AAPS 互動。
 
 對於如何追蹤**AAPS**，一個非常好的概述可以在[Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#)網頁中找到；如果你展開左側選單：
 
@@ -184,7 +184,7 @@ Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報�
 
 ## 2) 用於 **監控 AAPS** 的智慧型手錶（完整的個人資料資料或僅顯示血糖）當 **AAPS** 在手機上運作時。
 
-Smartwatch options which also allow interaction with **AAPS** are described in the ["remote control"](../RemoteFeatures/RemoteControl.md) section of the documentation.
+允許與 **AAPS** 進行互動的智慧型手錶選項已在文件的 ["遠端控制"](../RemoteFeatures/RemoteControl.md) 部分中描述。
 
 還有各種經濟實惠的智慧型手錶可供顯示資料使用。 如果你使用 Nightscout，那麼這裡有關所有選項的一個不錯的概述 [這裡](https://nightscout.github.io/nightscout/wearable/#)
 
