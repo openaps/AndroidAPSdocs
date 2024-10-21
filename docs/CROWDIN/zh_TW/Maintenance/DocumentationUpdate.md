@@ -1,5 +1,20 @@
 # 文檔更新與變更
 
+## October 2024
+
+- [COB Calculation](../DailyLifeWithAaps/CobCalculation.md) @UnderCliffe10
+- [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
+- [How long will it take](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up) @emilise
+- [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+- [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) @emilise
+- Technical work (deployment process for the documentation, files organisation...) @psonnerat & @emilise
+
+***
+
+Missing history from March 2022 to September 2024
+
+***
+
 ## 2022年2月
 
 - [血糖質量警告標誌](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign) @tanja
