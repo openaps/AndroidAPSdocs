@@ -707,7 +707,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 (OmnipodEros-troubleshooting)=
 
-## Устранение неполадок
+## Troubleshooting
 
 ### Сбои в работе Pod
 
@@ -788,5 +788,5 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 - **Уровень 0:** Прочитайте соответствующий раздел этой документации, чтобы удостовериться, что вы понимаете, как должна работать функция, с которой вы испытываете трудности.
 - **Уровень 1:** Если вы все еще сталкиваетесь с проблемами, которые не можете решить, изучая документацию, перейдите в канал *#Aaps* на **Discord** с помощью [этой ссылки-приглашения](https://discord.gg/4fQUWHZ4Mw).
-- **Уровень 2:** Ищите среди существующих проблем, отмечена ли она в [Issues](https://github.com/nightscout/AndroidAPS/issues)если она существует, подтвердите/комментарий/добавьте информацию о проблеме.
+- **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
 - **Будьте терпеливы - решения проблем часто требуют времени и терпения как от пользователей, так и от разработчиков.**
