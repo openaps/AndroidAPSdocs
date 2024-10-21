@@ -8,7 +8,7 @@
 
 - 任何版本的 Roche Accu-Chek Combo（任何韌體版本皆支援）
 - 一個 Smartpix 或 Realtyme 裝置，配合 360 設定軟體來配置幫浦。 （Roche 在客戶要求下會免費寄送 Smartpix 裝置和設定軟體。）
-- 一部相容的手機：Android 手機，需安裝 LineageOS 14.1（前稱 CyanogenMod）或至少 Android 8.1（Oreo）。 從 AAPS 3.0 開始，Android 9 是必須的。 See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
+- 一部相容的手機：Android 手機，需安裝 LineageOS 14.1（前稱 CyanogenMod）或至少 Android 8.1（Oreo）。 從 AAPS 3.0 開始，Android 9 是必須的。 請參閱 [發行說明](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) 以獲取詳細信息。
 - 使用 LineageOS 14.1 時，手機必須是 2017 年 6 月以後的版本，因為只有那時的改變才允許配對 Combo 幫浦。 
 - 可以在[AAPS 手機列表](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit)文件中找到相容手機。
 - 請注意，這不是完整的列表，只反應個人使用經驗。 我們鼓勵你也分享你的經驗，這樣可以幫助其他人（這些專案是關於傳遞經驗）。
@@ -17,10 +17,10 @@
 
 ## 限制
 
-- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
+- 延長注射和多波段注射不支援（請參閱[延長碳水化合物](../DailyLifeWithAaps/ExtendedCarbs.md)）。
 - 僅支援一個基礎率設定檔。
 - 在幫浦上設定其他基礎率設定檔或進行延長注射或多波段注射，會干擾 TBR，並使循環進入低懸掛模式6小時，因為在這種情況下無法安全運作循環。
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- 目前無法在幫浦上設定時間和日期，因此必須手動進行[夏令時間變更](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst)（您可以在晚上停用手機的自動時鐘更新，早上與幫浦時鐘一起改回來，以避免夜間鬧鐘）。
 - 目前僅支援 0.05 至 10 U/h 範圍內的基礎率。 這也適用於修改設定檔的情況，例如當增加到 200% 時，最高基礎率不得超過 5 U/h，因為加倍計算後會超過10 U/h。 同樣地，當減少到 50% 時，最低基礎率必須至少為 0.10 U/h。
 - 如果循環要求取消正在運作的 TBR，Combo 將設定 90% 或 110% 的 TBR 持續 15 分鐘。 這是因為取消 TBR 會在幫浦上觸發警報，導致大量震動。
 - 偶爾（大約每幾天），AAPS 可能無法自動取消 TBR 警報，用戶需要處理此問題（按下 AAPS 的重新整理按鈕以將警告傳送至 AAPS 或在幫浦上確認警報）。
@@ -29,7 +29,7 @@
 - 另一個問題是，當重啟無效時，必須按下幫浦上的按鈕（這會重設幫浦的藍牙），然後幫浦才能再次接受來自手機的連線。 
 - 目前對這些問題幾乎無法解決。 因此，如果你經常看到這些錯誤，目前唯一的選擇是換一部已知與 AAPS 和 Combo 幫浦相容的手機（請參閱上文）。
 - 從幫浦發出的注射未必會及時偵測到（每當 AAPS 連線到幫浦時檢查），最壞情況下可能需要長達 20 分鐘。 
-- 幫浦上的注射總是在 AAPS 發出高 TBR 或注射前檢查，但由於限制，AAPS 將拒絕執行這些操作，因為他們是在錯誤的前提下計算的。 （→不要從幫浦進行注射！ See chapter [Usage](#usage) below)
+- 幫浦上的注射總是在 AAPS 發出高 TBR 或注射前檢查，但由於限制，AAPS 將拒絕執行這些操作，因為他們是在錯誤的前提下計算的。 （→不要從幫浦進行注射！ 請參閱下方章節[使用方式](#usage))
 - 避免在幫浦上設定 TBR，因為循環控制 TBR。 在幫浦上偵測到新的 TBR 可能需要長達 20 分鐘，並且 TBR 的效果僅從偵測時開始計算，因此最壞情況下可能有 20 分鐘的 TBR 沒有反應在 IOB 中。 
 
 ## 設定
