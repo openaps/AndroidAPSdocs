@@ -34,7 +34,7 @@ SMB 功能包含一些安全機制：
 
 3. 額外的計算可以預測血糖的變化趨勢，例如透過 UAM（未公告的餐食）。 即使用戶沒有手動輸入碳水化合物，UAM 也可以自動偵測到由於餐食、腎上腺素或其他影響而導致的血糖水平顯著增加，並嘗試使用 SMB 進行調整。 為了安全起見，這也能反向運作，如果血糖意外快速下降，系統可以提前停止 SMB。 這就是為什麼 UAM 應該在 SMB 中始終處於啟用狀態的原因。
 
-**You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
+**你必須開始使用[目標 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)來使用 SMB。**
 
 另見：[OpenAPS 的 oref1 SMB 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) 和 [Tim 的 SMB 資訊](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/)。
 
@@ -58,7 +58,7 @@ AAPS 對此數值的限制如下：
 * 胰島素抗性成人：12
 * 孕婦：25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*請參閱 [硬性限制概述](#overview-of-hard-coded-limits)。*
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob)=
 
@@ -71,7 +71,7 @@ AAPS 對此數值的限制如下：
     最大 IOB = 平均餐食注射量 + 每日最大基礎率的 3 倍
     
 
-請謹慎並耐心地逐步更改設定。 每個人的情況都不同，這也可能取決於每日總劑量 (TDD) 的平均值。 For safety reason, there is a limit, which depends on the patient age. The 'hard limit' for maxIOB is higher than in [AMA](#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
+請謹慎並耐心地逐步更改設定。 每個人的情況都不同，這也可能取決於每日總劑量 (TDD) 的平均值。 出於安全原因，存在一個限制，這取決於病人的年齡。 最大IOB的「硬限制」比[AMA](#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)中的更高。
 
 * 兒童：3
 * 青少年：7
@@ -79,13 +79,13 @@ AAPS 對此數值的限制如下：
 * 胰島素抗性成人：25
 * 孕婦：40
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*請參閱 [硬性限制概述](#overview-of-hard-coded-limits)。*
 
 另見 [OpenAPS 的 SMB 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb)。
 
 ### 啟用 AMA Autosens
 
-Here, you can choose if you want to use the [sensitivity detection](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) 'autosens' or not.
+在這裡，您可以選擇是否要使用[敏感度檢測](../DailyLifeWithAaps/SensitivityDetectionAndCob.md)「自動調節」功能。
 
 (Open-APS-features-enable-smb)=
 
@@ -103,7 +103,7 @@ Here, you can choose if you want to use the [sensitivity detection](../DailyLife
 
 ### 始終啟用 SMB
 
-如果啟用了此設定，SMB 將始終啟用（無論 COB、臨時目標或注射量）。 如果啟用了此設定，下方的其他啟用設定將不再生效。 然而，如果「啟用具有高臨時目標的 SMB」被停用且設置了高臨時目標，SMB 將被停用。 為了安全起見，此選項僅適用於具有良好資料過濾系統的血糖來源。 Currently it is only an available option with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. 如果血糖數值偏差過大，G5/G6 不會發送資料，並等待 5 分鐘後的下一個數值。
+如果啟用了此設定，SMB 將始終啟用（無論 COB、臨時目標或注射量）。 如果啟用了此設定，下方的其他啟用設定將不再生效。 然而，如果「啟用具有高臨時目標的 SMB」被停用且設置了高臨時目標，SMB 將被停用。 為了安全起見，此選項僅適用於具有良好資料過濾系統的血糖來源。 目前，這僅適用於使用[「自訂您的 Dexcom 應用程式」](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)或在 xDrip+ 中的「原生模式」的 Dexcom G5 或 G6。 如果血糖數值偏差過大，G5/G6 不會發送資料，並等待 5 分鐘後的下一個數值。
 
 對於其他 CGM/FGM（如 Freestyle Libre），「始終啟用 SMB」將停用，直到 xDrip+ 具有更好的噪音濾波外掛。 你可以在 [這裡找到更多資訊](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)。
 
@@ -117,7 +117,7 @@ Here, you can choose if you want to use the [sensitivity detection](../DailyLife
 
 ### 啟用碳水後的 SMB
 
-如果啟用了此設定，在碳水化合物被記錄後的 6 小時內，SMB 會啟用，即使 COB 已降至 0。 為了安全起見，此選項僅適用於具有良好資料過濾系統的血糖來源。 Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. 如果血糖數值偏差過大，G5/G6 不會發送資料，並等待 5 分鐘後的下一個數值。
+如果啟用了此設定，在碳水化合物被記錄後的 6 小時內，SMB 會啟用，即使 COB 已降至 0。 為了安全起見，此選項僅適用於具有良好資料過濾系統的血糖來源。 目前，這僅適用於使用[「自訂您的 Dexcom 應用程式」](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)或在 xDrip+ 中的「原生模式」的 Dexcom G5 或 G6。 如果血糖數值偏差過大，G5/G6 不會發送資料，並等待 5 分鐘後的下一個數值。
 
 對於其他 CGM/FGM（如 Freestyle Libre），「啟用碳水後的 SMB」將停用，直到 xDrip+ 具有更好的噪音濾波外掛。 你可以在 [這裡找到更多資訊](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)。
 
@@ -199,7 +199,7 @@ AAPS 中的硬性參數如下：
 * 胰島素抗性成人：12
 * 孕婦：25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*請參閱 [硬性限制概述](#overview-of-hard-coded-limits)。*
 
 ### OpenAPS 可注射的最大基礎 IOB [U]（OpenAPS "最大 IOB"）
 
@@ -213,11 +213,11 @@ AAPS 中的硬性參數如下：
 * 胰島素抗性成人：12
 * 孕婦：25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*請參閱 [硬性限制概述](#overview-of-hard-coded-limits)。*
 
 ### 啟用 AMA Autosens
 
-Here, you can chose, if you want to use the [sensitivity detection](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) autosens or not.
+在此你可以選擇是否使用 [敏感度偵測](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) Autosens。
 
 ### Autosens 也調整臨時目標
 
