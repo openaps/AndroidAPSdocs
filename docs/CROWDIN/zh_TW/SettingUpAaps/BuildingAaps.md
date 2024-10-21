@@ -4,14 +4,14 @@
 
 **由於醫療設備的相關規範，AAPS應用程式（apk檔案）無法下載。 你可以合法地建置應用程式供自己使用，但不得將副本提供給他人！**
 
-詳情請參閱[FAQ頁面](../Getting-Started/FAQ.md)。
+See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 (建置APK推薦的電腦規格)=
 
 ## 建置AAPS所需的電腦和軟體規格
 
 - 請使用\*\*[至少為 Hedgehog (2023.1.1) 或更近期版本如 Iguana、Jellyfish、Koala 或 Ladybug 的 Android Studio 版本](https://developer.android.com/studio/)\*\*來建立 apk。 舊版本的Android Studio需要先更新！
-- [Windows 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio. 請記住，**64位CPU和64位作業系統是必備條件。** 如果你的系統不符合此條件，你需要更換硬體或軟體，或更換整個系統。
+- [Windows 32-bit systems](../GettingHelp/TroubleshootingAndroidStudio#unable-to-start-daemon-process) are not supported by Android Studio. 請記住，**64位CPU和64位作業系統是必備條件。** 如果你的系統不符合此條件，你需要更換硬體或軟體，或更換整個系統。
 
 <table class="tg">
 <tbody>
@@ -50,16 +50,16 @@
 
 ## 建置過程中的幫助與支援
 
-如果你在建置 **AAPS** 應用程式的過程中遇到困難，請先參閱專門的[**問題排除Android Studio**](../Installing-AndroidAPS/troubleshooting_androidstudio) 部分。
+If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio) section, please consult that first.
 
-如果您認為建構指示中的某些內容是錯誤的、缺失的或令人困惑的，或者您仍然遇到困難，請聯繫其他**AAPS**使用者群組，在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 或 [Discord](https://discord.gg/4fQUWHZ4Mw)。 如果你想自行更改一些內容（例如更新螢幕截圖_等），請提交[拉取請求（PR）](../make-a-PR.md)。
+如果您認為建構指示中的某些內容是錯誤的、缺失的或令人困惑的，或者您仍然遇到困難，請聯繫其他**AAPS**使用者群組，在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 或 [Discord](https://discord.gg/4fQUWHZ4Mw)。 If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
 ## 建置AAPS應用程式的逐步指南
 
 ```{admonition} WARNING
 :class: warning
-如果你之前建置過 AAPS，則不需要再次執行以下所有步驟。
-請直接跳至 [更新指南](../Installing-AndroidAPS/Update-to-new-version)!
+If you have built AAPS before, you don't need to take all the following steps again.
+Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
 ```
 
 建置 **AAPS** apk檔案的整體步驟如下：
@@ -360,7 +360,7 @@ Android 要求每個應用程式都必須 _簽名_，以確保其只能從同一
 
 - 現在選擇一個簡單的密碼（並記下來），在密碼框中輸入它（2），並確認（2）。
 
-  密鑰庫和密鑰的密碼不必過於複雜。 If you lose your password in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
+  密鑰庫和密鑰的密碼不必過於複雜。 If you lose your password in the future, see [troubleshooting for lost key store](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore).
 
 - 密鑰的預設別名（3）為“key0”，保持不變。
 
@@ -397,7 +397,7 @@ Android Studio在建置完成後將顯示“BUILD SUCCESSFUL”的訊息。 你�
 
 ![建置完成](../images/Building-the-App/049_ReopenNotification.png)
 
-_如果建置不成功，請參閱[Android Studio 問題排除部分](../Installing-AndroidAPS/troubleshooting_androidstudio)._
+_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio)._
 
 在通知欄中，點擊藍色連結“定位”：
 
