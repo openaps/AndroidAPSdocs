@@ -55,9 +55,9 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 帶有錨點的連結：
 - [這會花多久時間？](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up)
 - [NSClient settings in Preferences](../SettingUpAaps/Preferences.md#nsclient).
-- [AAPS 總覽中的預測線](../Getting-Started/Screenshots.md#prediction-lines)，標題層級 4
-- [螢幕截圖](../Getting-Started/Screenshots.md)
-- [主要圖表截圖](../Getting-Started/Screenshots.md#section-f---main-graph)，標題層級 3
-- [OpenAPS 功能](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
-- [最大 IOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
-- [本文件中的 SMB 章節](../Usage/Open-APS-features.md#super-micro-bolus-smb)
+- [prediction lines in AAPS OVERVIEW](../DailyLifeWithAaps/AapsScreens.md#prediction-lines) to header level 4
+- [螢幕截圖](../DailyLifeWithAaps/AapsScreens.md)
+- [Screenshot main graph](../DailyLifeWithAaps/AapsScreens.md#section-f---main-graph) to header level 3
+- [OpenAPS 功能](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
+- [最大 IOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
+- [本文件中的 SMB 章節](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb)
