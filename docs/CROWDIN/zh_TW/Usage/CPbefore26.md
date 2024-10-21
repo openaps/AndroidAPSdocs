@@ -40,7 +40,7 @@
 - CGM 感測器插入已移至「操作」標籤/選單。
 - 此部分的所有其他功能已被移除。 You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
-## 幫浦
+## Pump
 
 ![照護入口的幫浦](../images/Careportal_25_26_4_IIb.png)
 
