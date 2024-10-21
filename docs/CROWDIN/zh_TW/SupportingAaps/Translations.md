@@ -9,49 +9,49 @@
 
 審閱是一個手動步驟。 作為非營利組織，我們不提供 SLA，但一般情況下審閱會在 1 天內完成。 如果沒有，請透過 Facebook 或 Discord 聯繫文件團隊。
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* 當我們批准您後，請點擊旗幟
+       ![當我們批准您後，請點擊旗幟](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## 應用程式的翻譯
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### 翻譯 AAPS 應用程式的字串
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. 他會顯示需要翻譯的字串。
+    * 如果您對翻譯的字串沒有特別偏好，只需選擇「翻譯全部」按鈕即可開始。 他會顯示需要翻譯的字串。
     
-       ![Click translate all](../images/translations-click-translate-all.png)
+       ![點擊翻譯全部](../images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * 如果您想翻譯個別檔案，請透過搜索對話框或樹狀結構搜尋該檔案，然後點擊檔名以開始對該檔案中的字串進行翻譯工作。
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![點擊 strings.xml](../images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * 通過添加新的翻譯文字或使用＆編輯建議來翻譯左側的句子
     
-       ![Translation app](../images/translations-translate.png)
-    
-    
-    ### Proofread strings for AAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](../images/translations-proofreading-mode.png) 
+       ![翻譯應用程式](../images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### 校對 AAPS 應用程式的字串
     
-       ![approve text](../images/translations-proofreading.png)
+    * 校對者從語言主頁選擇「校對」開始。
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+       ![校對模式應用程式](../images/translations-proofreading-mode.png) 
+    
+    
+      並批准翻譯的文字 
+    
+       ![批准文字](../images/translations-proofreading.png)
+    
+    當校對者批准翻譯時，它將被添加到下一個 AAPS 版本中。
     
     (translations-translation-of-the-documentation)=
-    ## Translation of the documentation
+    ## 文檔的翻譯
     
-    * Click the name of the docs page you want to translate
+    * 點擊您想翻譯的文檔頁面名稱
     
-    ![Click docs page](../images/translation_WikiPage.png)
+    ![點擊文檔頁面](../images/translation_WikiPage.png)
     
     
-    * Translate sentences by sentence
+    * 逐句翻譯句子
     
         1. 黃色文本是你目前正在處理的文本。
     
@@ -66,9 +66,9 @@
         1. 這些是翻譯建議。 特別是，你可以看到 Crowdin 如何評價這一翻譯是否符合要求，或者這是否只是過去的內容經過文本重新排列而沒有內容更改。
         1. 按下“儲存”按鈕以儲存翻譯建議。 然後他會提交給校對者進行最終檢查。
     
-    ![Translation docs](../images/translation_WikiTranslate.png)
+    ![翻譯文檔](../images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * 轉換的頁面在文檔中不會發佈，直到 
     
         1. 翻譯已校對
     
