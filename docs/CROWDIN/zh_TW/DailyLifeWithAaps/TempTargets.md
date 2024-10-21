@@ -75,7 +75,7 @@
 
 為了簡化**臨時目標-運動**的設定，使用者可以配置一個預設的**臨時目標-運動**，透過減少胰島素使用來提高**血糖**水平，以減緩**血糖**下降並避免低血糖。
 
-新手使用者可能需要嘗試並個人化他們的**臨時目標-運動**預設設置，以優化這項功能的效果。 每個人在運動期間達到穩定**血糖**控制的情況各不相同。 See also the [sports section in FAQ](../UsefulLinks/FAQ.md#sports). 在常見問題中。
+新手使用者可能需要嘗試並個人化他們的**臨時目標-運動**預設設置，以優化這項功能的效果。 每個人在運動期間達到穩定**血糖**控制的情況各不相同。 另請參閱常見問題中的[運動部分](../UsefulLinks/FAQ.md#sports)。 在常見問題中。
 
 一些使用者還喜歡在啟用**臨時目標-運動**之前和期間啟動一個**設定切換**（即設定降至100%以下以減少**AAPS**的胰島素給藥）。
 
@@ -91,7 +91,7 @@
 
 你可以在文章[「如何啟用‘即將用餐模式’」](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/)或[這裡](https://diyps.org/tag/eating-soon-mode/)了解更多關於「即將用餐模式」的訊息。
 
-Advanced, [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. 此選項要求**臨時目標**低於100mg/dl或5.5mmol/l。
+進階設定，[目標9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)：如果你使用 OpenAPS SMB 並啟用了*「低臨時目標降低敏感度」*，**AAPS**會更加積極地運作。 此選項要求**臨時目標**低於100mg/dl或5.5mmol/l。
 
 ## 如何在臨時目標期間關閉**SMB**？
 
