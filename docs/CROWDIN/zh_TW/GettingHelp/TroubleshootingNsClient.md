@@ -42,4 +42,4 @@ Azure 連線問題的解決方法是在應用程式設定中將 HTTP 協議設�
 
 檢查 MongoDB 中資料庫的大小（或透過 Nightscout 中的資料庫大小外掛）。 如果你使用的是 MongoDB 的免費層，496MB 表示已滿，需要清理。 [請按照這些 Nightscout 說明檢查資料庫大小並清理資料](https://nightscout.github.io/troubleshoot/troublehoot/#database-full)。
 
-在清理資料庫中的資料之前，如果你還沒有設置，應該考慮將你的 AAPS 資料捐贈給 Open Humans 項目（用於研究）。 The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
+在清理資料庫中的資料之前，如果你還沒有設置，應該考慮將你的 AAPS 資料捐贈給 Open Humans 項目（用於研究）。 指示在[OpenHumans 設定頁面](../SupportingAaps/OpenHumans.md)上。
