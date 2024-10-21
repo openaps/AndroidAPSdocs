@@ -83,9 +83,9 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 為了幫助建置過程，有專門的部分：
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../Getting-Started/FAQ.md) K);
+- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../UsefulLinks/FAQ.md) K);
 
-- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
+- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) Subsection.
 
 達到閉環控制的時間因人而異，但使用 AAPS 達到完全閉環控制的大致時間表可以參考[>此處](#how-long-will-it-take-to-set-everything-up)。
 
@@ -101,9 +101,9 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 這將確保每次建立**AAPS**的更新版本時，你都可以使用相同的 keystore 文件。 平均而言，每年需要更新**AAPS**兩次。
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](../Usage/ExportImportSettings.md). 這確保你可以在更換手機、升級/重新安裝應用程序時安全恢復系統，並將干擾降至最低。 
+In addition, **AAPS** provides the ability to [export all your configuration settings](../Maintenance/ExportImportSettings.md). 這確保你可以在更換手機、升級/重新安裝應用程序時安全恢復系統，並將干擾降至最低。 
 
-#### 問題排除
+#### Troubleshooting
 
 如果你對任何問題感到不確定，請隨時聯繫**AAPS**社區——沒有什麼問題是愚蠢的！ 鼓勵具有不同經驗水平的所有用戶提出問題。 由於**AAPS**用戶眾多，問題的回應時間通常很快。
 
