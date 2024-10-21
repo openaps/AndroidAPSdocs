@@ -707,7 +707,7 @@ Die Batteriestandsmeldung ist eine Einstellung, die aktiviert werden kann, um de
 
 (OmnipodEros-troubleshooting)=
 
-## Problembehandlung
+## Troubleshooting
 
 ### Pod Fehler
 
@@ -788,5 +788,5 @@ Die gesamte Entwicklungsarbeit für den Omnipod-Treiber wird von der Community a
 
 - **Level 0:** Lies den entsprechenden Abschnitt dieser Dokumentation um sicherzustellen, dass du verstehst, wie die Funktion, mit der Du Schwierigkeiten hast, funktionieren soll.
 - **Level 1:** Wenn Du immer noch Probleme hast, die du mit diesem Dokument nicht lösen kannst, dann gehe bitte in den *#androidaps* Channel auf **Discord**, indem du [diesen Einladungslink <https://discord.gg/4fQUWHZ4Mw>](https://discord.gg/4fQUWHZ4Mw) benutzt.
-- **Level 2:** Durchsuche bestehende Probleme, um zu sehen, ob dein Problem bereits gemeldet wurde; wenn nicht, erstelle bitte ein neues [Problem](https://github.com/nightscout/AndroidAPS/issues) und füge deine [Logdateien](../Usage/Accessing-logfiles.md) hinzu.
+- **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
 - **Sei geduldig - die meisten Mitglieder unserer Community sind gutmütige Freiwillige und die Lösung von Problemen erfordert oft Zeit und Geduld von Nutzern und Entwicklern.**
