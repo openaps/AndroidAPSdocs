@@ -1,0 +1,21 @@
+name: manual Trigger Only Traditional und Simplified Chinese RTD Builds
+
+on:
+  workflow_dispatch:
+
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_ZH_CN }}" https://readthedocs.org/api/v2/webhook/androidaps/281205/
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_ZH_TW }}" https://readthedocs.org/api/v2/webhook/androidaps/281206/
