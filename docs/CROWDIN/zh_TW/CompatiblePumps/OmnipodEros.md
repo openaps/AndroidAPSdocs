@@ -788,5 +788,5 @@ RileyLink上用來與Omnipod通訊的天線是一個433 MHz的螺旋天線。 �
 
 - **等級 0：** 閱讀此文件的相關部分，以確保你了解遇到困難的功能應如何工作。
 - **第一層：**如果你仍遇到無法解決的問題，請前往**Discord**上的*#androidaps*頻道，使用[此邀請連結](https://discord.gg/4fQUWHZ4Mw)。
-- **等級 2:** 搜尋現有問題，以查看您的問題是否已經報告；如果沒有，請創建新的[問題](https://github.com/nightscout/AndroidAPS/issues)並附上[您的日誌文件](../GettingHelp/AccessingLogFiles.md)。
+- **等級 2:** 搜尋現有問題，以查看您的問題是否已經報告；如果沒有，請建立新的[問題](https://github.com/nightscout/AndroidAPS/issues)並附上[您的日誌文件](../GettingHelp/AccessingLogFiles.md)。
 - **保持耐心——我們社群中的大多數成員都是善良的志願者，解決問題通常需要使用者和開發者雙方的時間和耐心。**
