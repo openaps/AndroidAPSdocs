@@ -141,7 +141,7 @@ AAPS 釋出說明 <./Maintenance/ReleaseNotes.md>
 
 詞彙表 <./UsefulLinks/Glossary.md>
 常見問題 <./UsefulLinks/FAQ.md>
-WearOS 智能手錶 <./UsefulLinks/WearOsSmartwatch.md>
+WearOS 智慧型手錶 <./UsefulLinks/WearOsSmartwatch.md>
 
 ```
 
