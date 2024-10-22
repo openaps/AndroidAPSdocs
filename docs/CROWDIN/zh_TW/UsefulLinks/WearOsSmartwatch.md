@@ -242,11 +242,11 @@ Tiles 與任何手錶外觀「並存」使用。 這些Tiles會在所有錶面�
 
 ![Wear 操作 Tile，示例計算機](../images/wear_actions.png)
 
-[1] 透過 Wear OS 選單，將「計算機百分比」選項設置為「開」，以便在注射計算機中顯示百分比輸入。 Výchozí procento je založeno na nastavení telefonu v sekci "Přehled" ["Dodat tuto část výsledku bolusového čaroděje %"](../SettingUpAaps/Preferences.md#not-documented-anymore-please-fix-me) Když uživatel neposkytne procento, použije se výchozí hodnota z telefonu. 透過手機應用程式的「偏好設定」-「嚮導設置」配置注射計算機的其他參數。
+[1] 透過 Wear OS 選單，將「計算機百分比」選項設置為「開」，以便在注射計算機中顯示百分比輸入。 The default percentage is based on the phone settings in the"Overview" section ["Deliver this part of the bolus wizard result %"](../SettingUpAaps/Preferences.md#not-documented-anymore-please-fix-me) When the user does not provide a percentage, the default value from the phone is used. 透過手機應用程式的「偏好設定」-「嚮導設置」配置注射計算機的其他參數。
 
 ### AAPS（臨時目標）Tile
 
-臨時目標 Tile 可以根據 AAPS 手機預設請求臨時目標。 Nakonfigurujte přednastavený čas a cíle prostřednictvím nastavení aplikace telefonu přechodem do "Preference", "Přehled", ["Výchozí dočasné cíle"](../SettingUpAaps/Preferences.md#default-temp-targets) a nastavte trvání a cíle pro každé přednastavení. 透過 Tile 設置配置在 Tile 上可見的操作。 長按 Tile 以顯示配置選項並選擇 1 到 4 個選項：
+臨時目標 Tile 可以根據 AAPS 手機預設請求臨時目標。 Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](../SettingUpAaps/Preferences.md#default-temp-targets) and set the duration and targets for each preset. 透過 Tile 設置配置在 Tile 上可見的操作。 長按 Tile 以顯示配置選項並選擇 1 到 4 個選項：
 
 * **運動**；適用於運動
 * **低血糖**；在低血糖治療期間提高目標
@@ -258,7 +258,7 @@ Tiles 與任何手錶外觀「並存」使用。 這些Tiles會在所有錶面�
 
 ### AAPS(快速嚮導)Tile
 
-快速嚮導圖磚可以容納1到4個快速嚮導動作按鈕，這些按鈕由手機應用程式[2]定義。 Viz [QuickWizard](../SettingUpAaps/Preferences.md#quick-wizard). 你可以設定標準餐點（碳水化合物及注射計算方式）依據一天中的時間顯示在圖磚上。 非常適合用於一天中最常食用的餐點/點心。 你可以指定快速嚮導按鈕是否會顯示在手機、手錶或兩者。 請注意，手機一次只能顯示一個快速嚮導按鈕。 快速嚮導設置還可以指定注射的自訂胰島素百分比。 自訂百分比可讓你變化，例如點心 120%、緩慢吸收的早餐 80% 和低血糖處理用糖點心 0%
+快速嚮導圖磚可以容納1到4個快速嚮導動作按鈕，這些按鈕由手機應用程式[2]定義。 See [QuickWizard](../SettingUpAaps/Preferences.md#quick-wizard). 你可以設定標準餐點（碳水化合物及注射計算方式）依據一天中的時間顯示在圖磚上。 非常適合用於一天中最常食用的餐點/點心。 你可以指定快速嚮導按鈕是否會顯示在手機、手錶或兩者。 請注意，手機一次只能顯示一個快速嚮導按鈕。 快速嚮導設置還可以指定注射的自訂胰島素百分比。 自訂百分比可讓你變化，例如點心 120%、緩慢吸收的早餐 80% 和低血糖處理用糖點心 0%
 
 ![可穿戴裝置動作圖磚與手機配置](../images/quickwizard_watch_phone.png)
 
@@ -314,11 +314,11 @@ Wear OS 手錶是非常耗電且又受限的裝置。 手錶機殼的尺寸限�
 * 最好使用在非活動/調暗模式下顯示較少資料的錶盤。
 * 在使用其他小工具時要注意，像是第三方天氣小工具或其他從外部來源利用資料的小工具。
 * 先從較簡單的錶盤開始。 一次添加一個小工具並觀察他們對電池壽命的影響。
-* Zkuste používat **tmavé** téma pro AAPS ciferníky a [**odpovídající oddělovač**](#watchface-settings). 在 OLED 裝置上，這將限制點亮的像素數量並減少燒灼風險。
+* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). 在 OLED 裝置上，這將限制點亮的像素數量並減少燒灼風險。
 * 檢查 AAPS 預設錶盤與其他帶有 AAPS 小工具的錶盤在你的手錶上哪個效能更好。
 * 在幾天內觀察不同的活動模式。 大多數手錶會因為抬腕查看、移動及其他使用相關的觸發事件而啟動螢幕顯示。
 * 檢查影響效能的全局系統設定：通知、背光/活動顯示逾時、GPS 啟動時。
-* Zkontrolujte [seznam testovaných telefonů a hodinek](../CompatiblePhones/ListOfTestedPhones.md) a [zeptejte se komunity](../GettingHelp/WhereCanIGetHelp.md) na zkušenosti ostatních uživatelů a hlášenou životnost baterie.
+* Check [list of tested phones and watches](../CompatiblePhones/ListOfTestedPhones.md) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
 * **我們無法保證錶盤或小工具上顯示的資料是最新的**。 最終，Wear OS 決定何時更新錶盤或小工具。 即使 AAPS 應用程式請求更新，系統也可能為了節省電池而延後或忽略更新。 當手錶電量不足時有疑慮時，請務必使用手機上的 AAPS 應用程式進行雙重檢查。
 
 (Watchfaces-troubleshooting-the-wear-app)=
@@ -347,6 +347,6 @@ AAPS Glucose Watch 可直接與 AAPS 整合。 他顯示循環狀態資料（活
 
 ## 自己製作錶盤
 
-Pokud chcete vytvořit vlastní ciferník, řiďte se [tímto průvodcem](../UsefulLinks/CustomWatchfaceReference.md).
+If you want to build your own watchface, follow the [guide here](../UsefulLinks/CustomWatchfaceReference.md).
 
 建立自訂錶盤後，你可以與其他人分享自己的**AAPS**自訂錶盤，將 zip 檔上傳至“ExchangeSiteCustomWatchfaces”資料夾，並透過 Pull Request 上傳到 Github。 在合併 Pull Request 時，文件團隊會提取 CustomWatchface.png 檔案，並在檔名前加上 Zip 檔案名稱作為前綴。
