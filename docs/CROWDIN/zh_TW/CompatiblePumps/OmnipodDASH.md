@@ -466,5 +466,5 @@ Omnipod DASH 驅動程式的所有開發工作都是由社群志願者完成的�
 
 -  **等級 0：** 閱讀此文件的相關部分，以確保你了解遇到困難的功能應如何工作。
 -  **等級 1：** 如果你仍然遇到無法解決的問題，請使用[此邀請鏈接](https://discord.gg/4fQUWHZ4Mw)進入**Discord**的*#AAPS* 頻道。
--  **等級 2：** 搜尋現有問題，以查看你的問題是否已被報告，請在[問題](https://github.com/nightscout/AndroidAPS/issues)中確認/評論/添加有關你的問題的訊息。 如果沒有，請創建一個[新問題](https://github.com/nightscout/AndroidAPS/issues)並附上[您的日誌文件](../GettingHelp/AccessingLogFiles.md)。
+-  **等級 2：** 搜尋現有問題，以查看你的問題是否已被報告，請在[問題](https://github.com/nightscout/AndroidAPS/issues)中確認/評論/添加有關你的問題的訊息。 如果沒有，請建立一個[新問題](https://github.com/nightscout/AndroidAPS/issues)並附上[您的日誌文件](../GettingHelp/AccessingLogFiles.md)。
 -  **保持耐心——我們社群中的大多數成員都是善良的志願者，解決問題通常需要使用者和開發者雙方的時間和耐心。**
