@@ -62,4 +62,4 @@ APK 檔案應該已經上傳到 Google 雲端硬碟。
 
 在手機上，你需要允許安裝來自未知來源的應用程式。 有關如何進行此操作的說明，你可以在網上找到（例如，請參閱[這裡](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) 或 [這裡](https://www.androidcentral.com/unknown-sources)）。
 
-將檔案拖入後，在手機上打開“下載”資料夾，按下 **AAPS** APK 檔案並選擇“安裝”。 然後您可以繼續到下一步，[設定嚮導](../SettingUpAaps/SetupWizard.md)，它將幫助您在智能手機上設置 **AAPS** 應用程式和循環。
+將檔案拖入後，在手機上打開“下載”資料夾，按下 **AAPS** APK 檔案並選擇“安裝”。 然後您可以繼續到下一步，[設定嚮導](../SettingUpAaps/SetupWizard.md)，它將幫助您在智慧型手機上設置 **AAPS** 應用程式和循環。
