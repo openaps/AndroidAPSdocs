@@ -2,16 +2,16 @@
 
 ## 2024年10月
 
-- [COB Calculation](../DailyLifeWithAaps/CobCalculation.md) @UnderCliffe10
-- [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- [How long will it take](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up) @emilise
-- [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
-- [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) @emilise
-- Technical work (deployment process for the documentation, files organisation...) @psonnerat & @emilise
+- [碳水計算](../DailyLifeWithAaps/CobCalculation.md) @UnderCliffe10
+- [Android Studio Ladybug的建立指導](../SettingUpAaps/BuildingAaps.md) @tanja
+- [需要多長時間](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up) @emilise
+- [動態ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+- [完成目標](../SettingUpAaps/CompletingTheObjectives.md) @emilise
+- 技術工作（文檔的部署過程、檔案組織…） @psonnerat & @emilise
 
 ***
 
-Missing history from March 2022 to September 2024
+2022年3月到2024年9月的歷史紀錄遺失
 
 ***
 
