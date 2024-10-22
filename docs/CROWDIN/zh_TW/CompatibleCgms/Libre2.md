@@ -160,7 +160,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 
 ### 步驟 5：配置 AAPS（僅適用於循環）
 
--   在 AAPS 中，前往 Config Builder >血糖來源，並勾選 'xDrip+'。
+-   在 AAPS 中，前往 組態建置工具 >血糖來源，並勾選 'xDrip+'。
 
 ![xDrip+血糖來源](../images/ConfBuild_BG_xDrip.png)
 
