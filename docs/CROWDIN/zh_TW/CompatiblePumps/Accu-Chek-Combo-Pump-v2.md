@@ -96,7 +96,7 @@
 
 * 在[配置建構器](../SettingUpAaps/ConfigBuilder.md)中選擇 "Accu-Chek Combo" 驅動程序。 **重要提示**：名單中也有舊驅動，稱為 "Accu-Chek Combo (Ruffy)"。 請 _不要_ 選擇那個。
 
-  ![Config Builder Combo 截圖](../images/combo/combov2-config-builder.png)
+  ![組態建置工具 Combo 截圖](../images/combo/combov2-config-builder.png)
 
 * 點擊齒輪圖示以打開驅動設定。
 
