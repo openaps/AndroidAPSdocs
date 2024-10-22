@@ -1,6 +1,6 @@
 # 文檔更新與變更
 
-## October 2024
+## 2024年10月
 
 - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md) @UnderCliffe10
 - [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
