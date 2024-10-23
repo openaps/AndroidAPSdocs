@@ -4,7 +4,7 @@
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
-This is the first screen you will come across when you open AAPS and it contains most of the information that you will need day to day.
+This is the first screen you will come across when you open AAPS, and it contains most of the information that you will need day to day.
 
 ### Section A - Tabs
 * Navigate between the various AAPS modules.
@@ -86,7 +86,7 @@ However, when there are a lot of duplicates, it might be easier to
 
 ##### Red warning sign: Duplicate BG data
 
-The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
+The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
 
   ![Red BG warning](../images/bg_warn_red.png)
 
@@ -102,12 +102,12 @@ You need to find out why you get duplicate BGs:
   ![Yellow BG warning](../images/bg_warn_yellow.png)
 
 * Usually you do not have to take any action. The closed loop will continue to work!
-* As a sensor change is interupting the constant flow of BG data a yellow warning sign after sensor change is normal and nothing to worry about.
+* As a sensor change is interrupting the constant flow of BG data a yellow warning sign after sensor change is normal and nothing to worry about.
 * Special note for libre users:
 
    * Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
-   * Also jumpy readings interrupt the continous flow.
-   * Therefore the yellow warning sign will be 'always on' for libre users.
+   * Also, jumpy readings interrupt the continuous flow.
+   * Therefore, the yellow warning sign will be 'always on' for libre users.
 
 ### Section D - IOB, COB, BR and AS
 
@@ -128,7 +128,7 @@ You need to find out why you get duplicate BGs:
 #### Carbs required
 ![Carbs required](../images/Home2020_CarbsRequired.png)
 * Carbs suggestions are given when the reference design detects that it requires carbs.
-* This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
+* This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping, and you will need carbs to fix.
 * The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
@@ -152,7 +152,7 @@ You need to find out why you get duplicate BGs:
 
 * Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
 * Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
-* Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
+* Long press on the graph to change the timescale. You can choose 6, 12, 18 or 24 hours.
 * The green area reflects your target range. It can be configured in [preferences](../SettingUpAaps/Preferences.md#range-for-visualization).
 * Blue triangles show [SMB](KeyAapsFeatures#super-micro-bolus-smb) - if enabled in [preferences](../SettingUpAaps/Preferences.md#openaps-smb-settings).
 * Optional information:
@@ -167,7 +167,6 @@ You need to find out why you get duplicate BGs:
 
    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
-(Screenshots-prediction-lines)=
 #### Prediction lines
 
 * **Orange** line: [COB](CobCalculation) (colour is used generally to represent COB and carbs)
@@ -188,7 +187,7 @@ You need to find out why you get duplicate BGs:
 
 * **Dark yellow** line: [UAM](../DailyLifeWithAaps/SensitivityDetectionAndCob.md#sensitivity-oref1) (un-announced meals)
 
-  Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+  Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
 
    *This line appears only when the [SMB](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
@@ -220,7 +219,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
-* To add an additional graph check the box on the left side of its name (i.e. ------- Graph 1 -------).
+* To add another graph check the box on the left side of its name (i.e. ------- Graph 1 -------).
 
 #### Absolute insulin
 * Active insulin including boluses **and basal**.
@@ -259,7 +258,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
-* Buttons for insulin, carbs and Calculator are almost'always on'. 
+* Buttons for insulin, carbs and Calculator are almost 'always on'. 
 
    * If connection to pump is lost, the insulin button will not be visible.
 
@@ -298,7 +297,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Quick Wizard
 * Easily enter amount of carbs and set calculation basics.
-* Details are setup in [preferences](../SettingUpAaps/Preferences.md#quick-wizard).
+* Details are set up in [preferences](../SettingUpAaps/Preferences.md#quick-wizard).
 
 ## Bolus Wizard
 
@@ -312,7 +311,6 @@ When you want to make a meal bolus this is where you will normally make it from.
 * The CORR field is if you want to modify the end dosage for some reason.
 * The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
 
-(Screenshots-eating-reminder)=
 #### Eating reminder
 * For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
 
@@ -330,7 +328,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ### Section L
 * Details of wizard's bolus calculation.
-* You can deselect any that you do not want to include but you normally wouldn't want to.
+* You can deselect any that you do not want to include, but you normally wouldn't want to.
 * For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
 
 #### Combinations of COB and IOB and what they mean
@@ -339,7 +337,6 @@ When you want to make a meal bolus this is where you will normally make it from.
 * If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
 * If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
-(Screenshots-wrong-cob-detection)=
 #### Wrong COB detection
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
@@ -348,7 +345,6 @@ When you want to make a meal bolus this is where you will normally make it from.
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](CobCalculation#detection-of-wrong-cob-values).
 
-(Screenshots-action-tab)=
 ## Action tab
 
 ![Actions tab](../images/Home2021_Action.png)
@@ -363,8 +359,6 @@ When you want to make a meal bolus this is where you will normally make it from.
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
    * Make sure to read the [details](ExtendedCarbs) before using this option.
 
-(Screenshots-careportal-section-n)=
-
 ### Careportal - section N
 
 * Displays information on
@@ -376,7 +370,6 @@ When you want to make a meal bolus this is where you will normally make it from.
    
 * Less information will be shown if [low resolution skin](../SettingUpAaps/Preferences.md#skin) is used.
 
-(Screenshots-sensor-level-battery)=
 #### Sensor level (battery)
 * Needs xDrip+ nightly build Dec. 10, 2020 or newer.
 * Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level  information to xDrip+.)
@@ -399,13 +392,12 @@ When you want to make a meal bolus this is where you will normally make it from.
 #### TDD
 * Total daily dose = bolus + basal per day
 * Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
-* Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
+* Therefore, ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
 * Others prefer range of 32% to 37% of TDD for TBB. 
 * Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
-![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+![History browser + TDD](../images/Home2021_Action_HB_TDD.png)
 
-(Screenshots-insulin-profile))=
 ## Insulin Profile
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
@@ -438,7 +430,6 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 * If you have used the [Bolus Wizard](#bolus-wizard) to calculate insulin dosage you can review this calculation later on ts tab.
 * Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in ts.)
 
-(Screenshots-carb-correction)=
 ### Carb correction
 ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
 
@@ -450,7 +441,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 4. Make sure carbs are removed successfully by checking COB on homescreen again.
 5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
 
-   -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   -> If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
    
 6. Enter correct carb amount through carbs button on homescreen and make sure to set the correct event time.
 7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
@@ -471,7 +462,6 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * Basal rate
    * Target: Blood glucose level that you want AAPS to be aiming for
 
-(Screenshots-treatment)=
 ## Treatment
 
 History of the following treatments:
