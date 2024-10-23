@@ -332,7 +332,7 @@ Android 要求每個應用程式都必須 _簽名_，以確保其只能從同一
 
 ```{admonition} INFORMATION!
 :class: information
-如果您想為您的手錶創建 APK，您現在需要選擇 AAPS.wear！
+如果您想為您的手錶建立 APK，您現在需要選擇 AAPS.wear！
 ```
 
 ![Create\_key\_store](../images/Building-the-App/042_CreateNewKey.png)
@@ -342,7 +342,7 @@ Android 要求每個應用程式都必須 _簽名_，以確保其只能從同一
 ```{admonition} INFORMATION!
 :class: information
 您只需生成金鑰庫一次。
-如果您之前建構過 AAPS，請不要創建新的金鑰庫，而是選擇您已有的並輸入其密碼！
+如果您之前建構過 AAPS，請不要建立新的金鑰庫，而是選擇您已有的並輸入其密碼！
 ```
 
 **_注意：_** 密鑰庫是一個用於存儲應用程式簽章訊息的檔案。 他是加密的，並且訊息透過密碼進行保護。
@@ -381,7 +381,7 @@ Android 要求每個應用程式都必須 _簽名_，以確保其只能從同一
 
 ![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 
-在下一個螢幕上，選擇建構變體 "fullRelease"（2），然後點擊 "創建"（3）。 您應該記住在（1）顯示的目錄，因為稍後您會在那裡找到生成的 APK 檔案！
+在下一個螢幕上，選擇建構變體 "fullRelease"（2），然後點擊 "建立"（3）。 您應該記住在（1）顯示的目錄，因為稍後您會在那裡找到生成的 APK 檔案！
 
 ![Select build variant](../images/Building-the-App/045_BuildPath.png)
 

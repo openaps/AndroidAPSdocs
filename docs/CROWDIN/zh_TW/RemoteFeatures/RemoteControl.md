@@ -317,7 +317,7 @@ _請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及�
 
 當追蹤者手機上安裝了 __AAPSClient__ apk，用戶必須確保在 "組態建置工具" 中的“偏好設定”已正確設置並與 __AAPS__ 的 Nightscout 15 對齊（請參閱發佈說明 [此處](../Maintenance/UpdateToNewVersion)）。 以下範例提供了使用 Nightscout 15 的 NSClient 和 NSClientV3 的同步指南，但 __AAPS__ 也有其他選項（例如 xDrip+）。
 
-在“Config Builder”的“同步設置”中，用戶可以選擇 __AAPS__ 和追蹤者手機的同步選項：
+在“組態建置工具”的“同步設置”中，用戶可以選擇 __AAPS__ 和追蹤者手機的同步選項：
 
 - 選項 1：NSClient（也稱為“v1”）- 同步用戶的資料與 Nightscout；或
 
@@ -691,11 +691,11 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ##### 設置 **AAPS** 手機與手錶的連線
 
-最後一步是配置手機上的 **AAPS** 與智慧型手錶上的 **AAPS** Wear 互動。 為此，在 Config Builder 中啟用 Wear 外掛：
+最後一步是配置手機上的 **AAPS** 與智慧型手錶上的 **AAPS** Wear 互動。 為此，在 組態建置工具 中啟用 Wear 外掛：
 
 ● 打開手機上的 **AAPS** 應用程式
 
-● 選擇 > 左側漢堡選單中的 Config Builder
+● 選擇 > 左側漢堡選單中的 組態建置工具
 
 ● 在常規部分勾選 Wear 選項
 

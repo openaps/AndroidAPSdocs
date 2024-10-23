@@ -21,7 +21,7 @@
     
     ![移除血糖機 Insight 的螢幕截圖](../images/Insight_RemoveMeter.png)
 
-* 在 AAPS 應用程式的[Config builder](../SettingUpAaps/ConfigBuilder.md)中，選擇 Accu-Chek Insight 作為幫浦部分。
+* 在 AAPS 應用程式的[組態建置工具](../SettingUpAaps/ConfigBuilder.md)中，選擇 Accu-Chek Insight 作為幫浦部分。
     
     ![組態建置工具 Insight 的螢幕截圖](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
