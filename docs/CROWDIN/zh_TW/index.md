@@ -67,9 +67,9 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 AAPS 介紹 <./Getting-Started/Introduction.md>
 準備好 AAPS <./Getting-Started/PreparingForAaps.md>
 組件總覽 <./Getting-Started/ComponentOverview.md>
-- 兼容的幫浦 <./Getting-Started/CompatiblePumps.md>
-- 兼容的 CGM <./Getting-Started/CompatiblesCgms.md>
-- 兼容的手機  <./Getting-Started/Phones.md>
+- 相容的幫浦 <./Getting-Started/CompatiblePumps.md>
+- 相容的 CGM <./Getting-Started/CompatiblesCgms.md>
+- 相容的手機  <./Getting-Started/Phones.md>
 ```
 
 ```{toctree}
@@ -91,7 +91,7 @@ AAPS 介紹 <./Getting-Started/Introduction.md>
 
 遠端監控 <./RemoteFeatures/RemoteMonitoring.md>
 遠端控制 <./RemoteFeatures/RemoteControl.md>
-僅跟隨 <./RemoteFeatures/FollowingOnly.md>
+僅用來追隨 <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
