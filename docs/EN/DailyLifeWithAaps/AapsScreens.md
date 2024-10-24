@@ -49,7 +49,7 @@ If a temp target is set, the bar turns yellow and the remaining time in minutes 
 
 When using the [SMB algorithm](../SettingUpAaps/ConfigBuilder.md#aps) and [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity. 
 
-Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](../SettingUpAaps/Preferences.md#openaps-smb-settings)
+Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](../SettingUpAaps/Preferences.md#openaps-smb-settings):
    * "sensitivity raises target" and/or 
    * "resistance lowers target" 
 
@@ -149,7 +149,9 @@ Up to 30h hours are taken into accord for **AAPS** calculations. So even after y
 * **Arrows up & down**: indicating actual [Autosens](KeyAapsFeatures#autosens) status (enabled or disabled) and value is shown below icon
 
 #### Carbs required
+
 ![Carbs required](../images/Home2020_CarbsRequired.png)
+
 Carbs suggestions are given when the reference design detects that it requires carbs.
 
 This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
@@ -207,18 +209,14 @@ To show this information, click the triangle on the right side of the main graph
 * **Orange** line: [COB](CobCalculation) (color is used generally to represent COB and carbs)
 
   This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. This line only appears if there are known COB.
-* 
 * **Dark blue** line: IOB (color is used generally to represent IOB and insulin)
 
   This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
-
-
 * **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
 
   This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
 
    *This line appears only when the [SMB](../SettingUpAaps/ConfigBuilder.md#aps) algorithm is used.*
-
 * **Dark yellow** line: [UAM](../DailyLifeWithAaps/SensitivityDetectionAndCob.md#sensitivity-oref1) (un-announced meals)
 
   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
@@ -313,13 +311,11 @@ It is a good combination to display this line along with the Deviation bars. The
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
-Buttons for Insulin, Carbs and Calculator are almost always visible. If connection to the pump is lost, the insulin button will not be visible.
-
-   * If connection to pump is lost, the insulin button will not be visible.
+Buttons for Insulin, Carbs and Calculator are almost always visible. If the connection to the pump is lost, the insulin button will not be visible.
 
 Other Buttons can be setup in [Preferences > Overview > Buttons](../SettingUpAaps/Preferences.md#buttons).
 
-About using the Insulin, Carbs and Calculator* buttons : If enabled in the [Preferences > Overview](../SettingUpAaps/Preferences.md#show-notes-field-in-treatments-dialogs), the *Notes* field allows you to enter text that will be uploaded to Nightscout - depending on your settings for NS client.
+About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](../SettingUpAaps/Preferences.md#show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
 
 #### Insulin
 
@@ -391,7 +387,7 @@ The **Corr** field is if you want to modify the end dosage for some reason.
 
 The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
 
-** Eating reminder** : For carbs in the future, the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at the given time, when to eat the carbs you have input into **AAPS**.
+**Eating reminder** : For carbs in the future, the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at the given time, when to eat the carbs you have input into **AAPS**.
 
 ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
@@ -399,7 +395,7 @@ The **Carb time** field is for pre-bolusing so you can tell the system that ther
 
 **Profile** allows you to select a different profile than the current one, to make the calculation for the insulin required. This profile selection applies only for the current bolus, it is not a profile change.
 
-**Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](../SettingUpAaps/Preferences.md#superbolus). The idea is to deliver the insulin sooner and hopefully reduce spikes.
+**Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](../SettingUpAaps/Preferences.md#advanced-settings-overview). The idea is to deliver the insulin sooner and hopefully reduce spikes.
 
 For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -409,7 +405,7 @@ Details of the wizard's bolus calculation.
 
 You can deselect any that you do not want to include, but you normally wouldn't want to.
 
-For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
+For safety reasons the **TT box must be ticked manually**, if you want the bolus wizard to calculate based on an existing temporary target.
 
 #### Combinations of COB and IOB and what they mean
 * For safety reasons, the IOB box cannot be unticked when COB box is ticked as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
@@ -563,7 +559,7 @@ This view can be accessed by pressing the 3 dots on the right of the menu, then 
 In this view, you can view and alter the history of the following treatments:
 
 * Bolus & carbs
-* [Extended bolus](ExtendedCarbs#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
+* [Extended bolus](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 * Temporary basal rate
 * [Temporary target](../DailyLifeWithAaps/TempTargets.md)
 * [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
@@ -584,7 +580,7 @@ Each bolus (line **1** and **4**) shows the remaining associated IOB next to the
 * SMB, when using the SMB Functionnality
 
 The carbs (line **2**) are only stored in Nightscout.
-If you have used the [Bolus Wizard](#bolus-wizard) to calculate insulin dosage, you can press.
+If you have used the [Bolus Wizard](#bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
 
 Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
 
@@ -623,7 +619,7 @@ The history of temporary targets can be seen here.
 
 ![Profile Switch](../images/TreatmentsView4.png)
 
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored in Nightscout but now in Pump History, corresponds to the request of a profile switch made by the user. Line **2**, stored both in NS and PH, correspond to the actual switch.
+The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user. Line **2**, stored both in NS and PH, correspond to the actual switch.
 
 Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
 
