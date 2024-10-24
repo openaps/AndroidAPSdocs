@@ -64,11 +64,11 @@ Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In
 
 Be careful and patient and only change the settings step by step. It is different for everyone and can also depend on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age. The 'hard limit' for maxIOB is higher than in [AMA](#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
 
-* Child: 3
-* Teenager: 7
-* Adult: 12
-* Insulin resistant adult: 25
-* Pregnant: 40
+* Child: 7
+* Teenager: 13
+* Adult: 22
+* Insulin resistant adult: 30
+* Pregnant: 70
 
 *See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
 
