@@ -162,7 +162,7 @@ Once the ‘Action’ is added,  the default values must be changed to the desir
 
 ![Alt text](../images/automation_2024-02-12_20-57-29.png)
 
-## The order of the automations in the list matters 
+## The order of the automations in the list matters
  **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘low hypoglycemia’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 

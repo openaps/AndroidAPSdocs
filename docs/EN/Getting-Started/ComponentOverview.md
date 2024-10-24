@@ -64,7 +64,7 @@ AAPS **currently** works with
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) 
 - Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#additional-communication-device) needed)
 
-If no additional communication device  is mentioned the communication betweeen insulin pump and AAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
+If no additional communication device  is mentioned the communication between insulin pump and AAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communication protocol.
 
 **Other pumps** that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md) page.
 
@@ -97,7 +97,7 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 This is just a short overview of all compatible CGMs/FGM with AAPS. For further details, look [here](CompatiblesCgms.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
 
 - [Dexcom G7](../CompatibleCgms/DexcomG7.md): Works with xDrip+ or patched app
-- [Dexcom G6](../CompatibleCgms/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](../Maintenance/ReleaseNotes.md#version-300) for details). xDrip+ must be at least version 2022.01.14 or newer
+- [Dexcom G6](../CompatibleCgms/DexcomG6.md): BYODA is recommended as of version 3.0 (see [release notes](../Maintenance/ReleaseNotes.md#version-300) for details). xDrip+ must be at least version 2022.01.14 or newer
 - [Dexcom G5](../CompatibleCgms/DexcomG5.md): It works with xDrip+ app or patched Dexcom app
 - [Libre 3](../CompatibleCgms/Libre3.md): It works with xDrip+ (no transmitter needed)
 - [Libre 2](../CompatibleCgms/Libre2.md): It works with xDrip+ (no transmitter needed)

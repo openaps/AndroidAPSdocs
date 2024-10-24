@@ -577,7 +577,7 @@ In the last column, the data source for each line is displayed in blue. It can b
 On this tab you can view the bolus and carbs log.
 Each bolus (line **1** and **4**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
 * Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionnality
+* SMB, when using the SMB Functionality
 
 The carbs (line **2**) are only stored in Nightscout.
 If you have used the [Bolus Wizard](#bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
