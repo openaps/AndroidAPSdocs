@@ -16,4 +16,4 @@ AAPS 支援多種胰島素幫浦。  以下列表顯示目前支援的裝置，�
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) （藍牙）
 - 某些舊版的 [Medtronic](../CompatiblePumps/MedtronicPump.md) （Rileylink 相容設備）
 
-可能與 AAPS 兼容的其他幫浦狀態的詳細信息列在 [未來（可能）幫浦](../CompatiblePumps/Future-possible-Pump-Drivers.md) 頁面。
+可能與 AAPS 相容其他幫浦狀態的詳細信息列在 [未來（可能）幫浦](../CompatiblePumps/Future-possible-Pump-Drivers.md) 頁面。
