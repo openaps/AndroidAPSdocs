@@ -1,6 +1,6 @@
-# 如何為 AAPS 應用程式或文件翻譯字串
+# 如何為 AAPS 應用程式或文件翻譯文字
 
-* 要翻譯應用程式中使用的字串，請前往 <https://crowdin.com/project/androidaps>，並使用你的 GitHub 帳號登入
+* 要翻譯應用程式中使用的文字，請前往 <https://crowdin.com/project/androidaps>，並使用你的 GitHub 帳號登入
 * 要翻譯文件，請查看 <https://crowdin.com/project/androidapsdocs>，並使用你的 GitHub 帳號登入
 
 * 向文件團隊發送加入請求。 為此，點擊所需語言的國旗，然後在下一頁的右上角點擊“加入”按鈕。 請指定語言，提供一些關於你的資訊以及你的 AAPS 經驗，並說明你想成為翻譯者還是校對者（僅限具有翻譯技能且為進階 AAPS 用戶的人成為校對者）。
@@ -15,13 +15,13 @@
     ## 應用程式的翻譯
     
     (translations-translate-strings-for-AAPS-app)=
-    ### 翻譯 AAPS 應用程式的字串
+    ### 翻譯 AAPS 應用程式的文字
     
-    * 如果您對翻譯的字串沒有特別偏好，只需選擇「翻譯全部」按鈕即可開始。 他會顯示需要翻譯的字串。
+    * 如果您對翻譯的文字沒有特別偏好，只需選擇「翻譯全部」按鈕即可開始。 他會顯示需要翻譯的文字。
     
        ![點擊翻譯全部](../images/translations-click-translate-all.png)
     
-    * 如果您想翻譯個別檔案，請透過搜索對話框或樹狀結構搜尋該檔案，然後點擊檔名以開始對該檔案中的字串進行翻譯工作。
+    * 如果您想翻譯個別檔案，請透過搜索對話框或樹狀結構搜尋該檔案，然後點擊檔名以開始對該檔案中的文字進行翻譯工作。
     
        ![點擊 strings.xml](../images/translations-click-strings.png)
     
@@ -30,7 +30,7 @@
        ![翻譯應用程式](../images/translations-translate.png)
     
     
-    ### 校對 AAPS 應用程式的字串
+    ### 校對 AAPS 應用程式的文字
     
     * 校對者從語言主頁選擇「校對」開始。
     
