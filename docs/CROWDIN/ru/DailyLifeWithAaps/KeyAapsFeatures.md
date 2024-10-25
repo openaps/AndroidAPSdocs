@@ -105,7 +105,7 @@ Here, you can choose if you want to use the [sensitivity detection](../DailyLife
 
 Если включена эта настройка, микроболюсы SMB работают всегда (независимо от активных углеводов COB, временных целей или болюсов). Если этот параметр включен, остальные параметры включения не будут иметь эффекта. Однако, если отключена настройка «Включить SMB с высокими временными целями» и задается высокая временная цель, SMB будут отключены. По соображениям безопасности, эта опция возможна только для источников ГК с хорошей системой фильтрации зашумленных данных. Currently it is only an available option with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Если значение ГК имеет слишком большое отклонение, G5/G6 не отправляет его и ожидает следующего значения через 5 минут.
 
-Для других систем мониторинга, таких как Freestyle Libre, функция ‘всегда включать SMB’ будет оставаться неактивной пока в xDrip+ не появится более адекватное расширение для сглаживания данных. Подробнее [здесь](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Для других систем мониторинга, таких как Freestyle Libre, функция ‘всегда включать SMB’ будет оставаться неактивной пока в xDrip+ не появится более адекватное расширение для сглаживания данных. You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Включать супер микро болюсы при активных углеводах COB
 
@@ -119,7 +119,7 @@ Here, you can choose if you want to use the [sensitivity detection](../DailyLife
 
 Если это включено, то микроболюсы SMB работают в течение 6 часов после внесения углеводов, даже если значение COB достигло 0. По соображениям безопасности, эта опция возможна только для источников ГК с хорошей системой фильтрации зашумленных данных. Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Если значение ГК имеет слишком большое отклонение, G5/G6 не отправляет его и ожидает следующего значения через 5 минут.
 
-Для других систем мониторинга, таких как Freestyle Libre, функция "включать SMB после углеводов" будет оставаться неактивной пока в xDrip+ не появится более адекватное расширение для сглаживания данных. Подробнее [здесь](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Для других систем мониторинга, таких как Freestyle Libre, функция "включать SMB после углеводов" будет оставаться неактивной пока в xDrip+ не появится более адекватное расширение для сглаживания данных. You can find [more information here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### How frequently SMBs will be given in min
 
