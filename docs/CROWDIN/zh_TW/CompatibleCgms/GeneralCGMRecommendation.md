@@ -31,7 +31,7 @@
 
 ### 跳動的數值
 
-你可以嘗試更改 xDrip 的噪音阻擋設置（設定 > 應用間設置 > 噪音阻擋），如「阻擋非常高的噪音及更差的情況」。 另請參閱[平滑血糖資料](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)。
+你可以嘗試更改 xDrip 的噪音阻擋設置（設定 > 應用間設置 > 噪音阻擋），如「阻擋非常高的噪音及更差的情況」。 See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### 負傳感器年齡
 
