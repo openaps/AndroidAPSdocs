@@ -14,7 +14,7 @@ Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
   - 注意：每次選擇新的設定檔時，先前的結果將被移除，並且「調整天數」參數將重設為預設值。
 - 「調整天數」是用來選擇用於計算來調整你設定檔的天數。 最小值為 1 天，最大值為 30 天。 此數字不應該太小，才能獲得正確的迭代和平滑結果（每次計算需超過7天）。
   - 注意：每次變更調整天數參數時，先前的結果將被移除。
-- 「最後運作」是一個鏈接，可恢復你最後一次有效的計算結果。 如果你當天沒有啟動 Autotune，或是先前的結果因計算參數變更而被移除，你可以恢復上次成功運作的參數和結果。
+- 「最後運作」是一個鏈接，可恢復你最後一次有效的計算結果。 If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successful run.
 - 警告範例顯示有關選定設定檔的一些資訊（例如你有多個 IC 值或 ISF 值）。
   - 注意：Autotune 計算僅適用於單一的 IC 和單一的 ISF 值。 目前沒有用於調整日夜變化 IC 或日夜變化 ISF 的 Autotune 演算法。 如果你的輸入設定檔有多個數值，你可以在警告區看到調整設定檔時考慮的平均值。
 - 「檢查輸入設定檔」按鈕可打開設定檔檢視器，讓你快速驗證設定檔（單位、DIA、IC、ISF、基礎率和目標）。
@@ -70,7 +70,7 @@ Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
 
   ![Autotune 更新輸入設定檔。](../images/Autotune/Autotune_9.png)
 
-- 如果你已更新你的輸入設定檔，那麼「更新輸入設定檔」按鈕將被「還原輸入設定檔」按鈕替代（參見下圖）。 這樣你可以立即看到本地設定檔外掛中的目前輸入設定檔是否已包含上次運作的結果。 你也可以使用此按鈕恢復未包含 Autotune 結果的輸入設定檔。
+- 如果你已更新你的輸入設定檔，那麼「更新輸入設定檔」按鈕將被「還原輸入設定檔」按鈕替代（參見下圖）。 You can that way immediately see if your current input profile in Local profile plugin already include the result of last run or not. 你也可以使用此按鈕恢復未包含 Autotune 結果的輸入設定檔。
 
   ![Autotune 更新輸入設定檔。](../images/Autotune/Autotune_10.png)
 
@@ -85,7 +85,7 @@ Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
 ![Autotune 預設畫面](../images/Autotune/Autotune_11.png)
 
 - 自動開關配置 (預設關閉)：請參見[使用自動化規則運行 Autotune](#run-autotune-with-an-automation-rule)。 如果你將此設定更改為開啟，則輸入設定檔將自動被調整後的設定檔更新並啟用。
-  - **請小心，你必須在接下來的幾天中檢查並信任更新後的調整檔未經修改的情況下是否改善了你的循環。**
+  - **Be Careful, you must trust and verified during several following days that after an update and activation of Tuned profile without modification, it improves your loop**
 
 - 將 UAM 分類為基礎率（預設為開啟）：此設定適用於未輸入碳水化合物的 AndroidAPS 用戶（完全 UAM）。 當關閉時，他將阻止 UAM 被分類為基礎率。
   - 注意：如果當天偵測到至少一小時的碳水化合物吸收，無論此設定（開啟或關閉），所有分類為「UAM」的資料都會被分類為基礎率。
@@ -94,7 +94,7 @@ Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
 
 ### 其他設置
 
-- Autotune 也使用自動敏感度最大比率和自動敏感度最小比率來限制變異。 你可以在「組態建置工具 > 敏感度偵測外掛 > 設定 > 高級設定」中查看並調整這些值。
+- Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. 你可以在「組態建置工具 > 敏感度偵測外掛 > 設定 > 高級設定」中查看並調整這些值。
 
   ![Autotune 預設畫面](../images/Autotune/Autotune_12.png)
 
@@ -106,7 +106,7 @@ Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
 
 ### 日夜變化的 IC 或 ISF 設定檔
 
-- 如果你的設定檔中 IC 和/或 ISF 有顯著的變化，並且你完全信任你的日夜變化時間和變化，你可以設定「將平均結果應用於日夜變化的 IC/ISF」。
+- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can set "Apply average result in circadian IC/ISF"
 
   - 注意，Autotune 計算將始終使用單一數值，Autotune 不會調整日夜變化。 此設定僅適用於將計算的平均變化應用於 IC 和/或 ISF 的日夜變化數值。
 
@@ -138,7 +138,7 @@ Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
 
 注意：有關如何設定自動化規則的更多資訊，請參閱[此處](../DailyLifeWithAaps/Automations.md)。
 
-- 你應該選擇「重複時間觸發」：每天只運作一次 Autotune，並且 Autotune 設計為每日運作（每次新運作你會推遲一天，設定檔的修改會快速變得微小）。
+- You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be run daily (each new run you shift one day later and quickly profile modification should be tiny)
 
   ![Autotune 預設畫面](../images/Autotune/Autotune_16.png)
 
@@ -188,7 +188,7 @@ Autotune 只是輔助工具，重要的是定期檢查你是否同意計算出�
   - 所有的未註明餐點（UAM）時間段（除非你在一天內沒有輸入碳水化合物並且未啟用將未註明餐點歸類為基礎率），所有的未註明餐點時間將會被歸類為基礎率，這可能會大幅增加你的基礎率（遠超出必要範圍）。
 
 - 你的碳水化合物吸收速度非常慢：如果大部分的碳水化合物吸收是根據 min_5m_carbimpact 參數計算的（你可以在 COB 曲線頂端看到一個小橙點標示的這些時間段），COB 的計算可能會出錯，並導致錯誤的結果。
-  - 當你進行運動時，你的身體通常會變得更敏感，血糖不會大幅上升，因此在運動期間或之後，經常會看到一些碳水化合物吸收緩慢的時間段。 但如果你經常發生意外的碳水化合物吸收過慢的情況，那麼你可能需要調整你的設定檔（增加 IC 值）或調低 min_5m_carbimpact。
+  - When you practice sport, you are generally more sensitive and your BG doesn't rise a lot, so during or after an exercise, it's usual to see some periods with slow carbs. 但如果你經常發生意外的碳水化合物吸收過慢的情況，那麼你可能需要調整你的設定檔（增加 IC 值）或調低 min_5m_carbimpact。
 - 你有「非常糟糕的日子」，例如數小時處於高血糖狀態，需要大量的胰島素才能將血糖降至正常範圍，或者在更換感應器後，出現長時間的錯誤血糖值。 如果在過去幾周內，你只有一到兩個「糟糕的日子」，你可以手動停用這些日子，以將他們排除在自動調整的計算之外，並再次**仔細檢查你是否可以信任結果**。
 - 如果修改的百分比過高。
   - 你可以嘗試增加天數以獲得更平滑的結果。
