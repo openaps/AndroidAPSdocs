@@ -67,9 +67,9 @@
 
 ![上傳本地設定檔到 NS](../images/LocalProfile_UploadNS_AASP30.png)
 
-#### 在 Nightscout 設定檔編輯器中更改設定檔
+#### Change profile in Nightscout profile editor
 
-你可以將 Nightscout 設定檔編輯器中的更改同步至本地設定檔。 設定可以在[NSClient 偏好設定](../SettingUpAaps/Preferences.md#nsclient)中找到。
+You can synchronize changes to the profile in the Nightscout profile editor to local profiles. 設定可以在[NSClient 偏好設定](../SettingUpAaps/Preferences.md#nsclient)中找到。
 
 有必要複製整個目前活動的 Nightscout 資料庫記錄，而不僅僅是藍色箭頭的設定檔！ 新的資料庫記錄將攜帶目前日期，並可以透過「本地設定檔」標籤啟用。
 
@@ -248,7 +248,7 @@
 
 ## 目標（學習計畫）
 
-AAPS 有一個學習計畫（目標），你必須逐步完成他。 這將引導你安全地設置閉合循環系統。 他保證你已正確設置所有內容，並了解系統的具體操作。 這是你可以信任系統的唯一方式。
+AAPS has a learning program (objectives) that you have to fulfill step by step. 這將引導你安全地設置閉合循環系統。 他保證你已正確設置所有內容，並了解系統的具體操作。 這是你可以信任系統的唯一方式。
 
 您應該定期[匯出您的設定](../Maintenance/ExportImportSettings.md)（包括目標的進度）。 如果稍後需要更換手機（新購、螢幕損壞等），你可以簡單地匯入這些設置。
 
@@ -256,7 +256,7 @@ AAPS 有一個學習計畫（目標），你必須逐步完成他。 這將引�
 
 ## 治療
 
-如果你查看「治療」（Treat）標籤，你可以看到已上傳到 Nightscout 的治療記錄。 如果你希望編輯或刪除一個條目（例如你吃的碳水化合物比預期少），請選擇「刪除」，然後透過[主畫面的碳水按鈕](../DailyLifeWithAaps/AapsScreens.md#carb-correction)輸入新數值（如果有需要，請更改時間）。
+如果你查看「治療」（Treat）標籤，你可以看到已上傳到 Nightscout 的治療記錄。 Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs).
 
 ## 一般問題
 
@@ -307,7 +307,7 @@ AAPS 有一個學習計畫（目標），你必須逐步完成他。 這將引�
 
 #### 縮短標籤標題
 
-選擇 AAPS 中的標籤標題是長的（例如：操作、本地設定檔、自動化）還是短的（例如：操作、本地設定、自動）
+Choose whether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### 在治療對話框中顯示備註欄位
 
@@ -319,7 +319,7 @@ AAPS 有一個學習計畫（目標），你必須逐步完成他。 這將引�
 
 #### 進階設定
 
-**交付此部分注射嚮導結果：**使用 SMB 時，許多人不會進行 100% 的餐前注射，而只注射一部分（例如 75%），其餘部分由 SMB 和 UAM（無人值守餐點偵測）處理。 在此設置中，你可以選擇注射嚮導應計算的預設值。 如果此設置為 75%，而你需要注射 10 單位，注射嚮導將建議餐前注射 7.5 單位。
+**交付此部分注射嚮導結果：**使用 SMB 時，許多人不會進行 100% 的餐前注射，而只注射一部分（例如 75%），其餘部分由 SMB 和 UAM（無人值守餐點偵測）處理。 In this setting, you can choose a default value for the percentage the bolus wizard should calculate with. 如果此設置為 75%，而你需要注射 10 單位，注射嚮導將建議餐前注射 7.5 單位。
 
 **在嚮導中啟用超級注射功能**（與*超微量注射*不同！）：請謹慎使用，在瞭解其真正作用之前不要啟用。 基本上，接下來兩個小時的基礎率將加到注射中，並啟用兩小時的0基礎率。 **AAPS 的循環功能將停用——請小心使用！** 如果您使用 SMB，根據您在[“限制 SMB 的最大基礎分鐘數”](../DailyLifeWithAaps/KeyAapsFeatures.md#max-minutes-of-basal-to-limit-smb-to)的設定，AAPS 循環功能將被停用；如果您不使用 SMB，則循環功能將在兩小時內被停用。詳細的超注射資訊可以在[這裡](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)找到。
 
