@@ -105,7 +105,7 @@ Quand ce paramètre est activé, les SMB ne seront activés avec une cible tempo
 
 Quand ce paramètre est activé, les SMB sont activés en permanence (indépendamment des GA, des cibles temporaires ou des bolus). Quand ce paramètre est activé, les autres paramètres d'activation ci-dessous sont ignorés. Cependant, si “Activer les SMB avec cibles temp hautes” est désactivé et qu'une cible temporaire élevée est définie, les SMB seront désactivés. Pour des raisons de sécurité, cette option n'est utilisable que pour les sources de glycémie ayant un bon filtrage des données bruitées ou erratiques. Currently it is only an available option with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Si une valeur de glycémie montre une variation trop importante par rapport à la précédente, le G5/G6 ne l'envoie pas et attend la valeur suivante 5 minutes après.
 
-Pour les autres MGC/MGF comme le Freestyle Libre, "Activer les SMB en permanence" ne sera disponible que quand xDrip+ aura un meilleur plugin de lissage du bruit. Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Pour les autres MGC/MGF comme le Freestyle Libre, "Activer les SMB en permanence" ne sera disponible que quand xDrip+ aura un meilleur plugin de lissage du bruit. You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Activer les SMB avec les GA
 
@@ -119,7 +119,7 @@ Quand ce paramètre est activé, les SMB sont activés lorsqu'une cible temporai
 
 Quand ce paramètre est activé, les SMB sont activés pendant 6h après l'annonce des glucides, même si les GA sont revenus à 0. Pour des raisons de sécurité, cette option n'est utilisable que pour les sources de glycémie ayant un bon filtrage des données bruitées. Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Si une valeur de glycémie montre une variation trop importante par rapport à la précédente, le G5/G6 ne l'envoie pas et attend la valeur suivante 5 minutes après.
 
-Pour les autres MGC/MGF comme le Freestyle Libre, les ‘SMB sans glucides actifs’ seront désactivés jusqu'à ce que xDrip+ dispose d'un meilleur plugin de filtrage. Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Pour les autres MGC/MGF comme le Freestyle Libre, les ‘SMB sans glucides actifs’ seront désactivés jusqu'à ce que xDrip+ dispose d'un meilleur plugin de filtrage. You can find [more information here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Fréquence des SMB en min
 
