@@ -31,7 +31,7 @@ Oftmals kann ein Sensorfehler durch sofortiges Trinken und "Massage" an der Sens
 
 ### Springende Werte
 
-Versuche, die Einstellungen zum "noise blocking" in xDrip (Einstellungen -> Inter-App Einstellungen -> Verrauschungsunterdrückung) zu ändern, z.B. "Block Very High noise and worse". Siehe auch die Informationen zur [Glättung von BZ-Daten](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Versuche, die Einstellungen zum "noise blocking" in xDrip (Einstellungen -> Inter-App Einstellungen -> Verrauschungsunterdrückung) zu ändern, z.B. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Negatives Sensor-Alter
 
