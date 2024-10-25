@@ -6,7 +6,7 @@ Antes de comenzar tu rig, necesitarás muchas horas de lectura para comprender c
 
 [OpenAPS.org #noestamosesperando -https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documention - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Documentación de Loop -https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
