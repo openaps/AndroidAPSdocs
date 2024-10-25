@@ -31,7 +31,7 @@ Genellikle bir "Sensör Hatası", hemen su içerek (dehidrasyon) ve sensörün e
 
 ### Atlamalı değerler
 
-Gürültü engelleme ayarlarını xdrip'te (Ayarlar - Gelişmiş Ayarlar - Gürültü Engelleme) değiştirmeyi deneyebilirsiniz. Örn". Ayrıca bkz. [KŞ verilerini yumuşatma](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Gürültü engelleme ayarlarını xdrip'te (Ayarlar - Gelişmiş Ayarlar - Gürültü Engelleme) değiştirmeyi deneyebilirsiniz. Örn". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Negatif Sensör Yaşı
 
