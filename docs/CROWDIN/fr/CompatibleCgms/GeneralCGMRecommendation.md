@@ -31,7 +31,7 @@ Souvent une "erreur de capteur" peut être corrigée en buvant immédiatement et
 
 ### Saut de valeurs
 
-Vous pouvez essayer de modifier les paramètres de blocage du bruit dans xdrip (Paramètres - Inter-app settings - Noise Blocking) par ex". Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Vous pouvez essayer de modifier les paramètres de blocage du bruit dans xdrip (Paramètres - Inter-app settings - Noise Blocking) par ex". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Âge du capteur négatif
 
