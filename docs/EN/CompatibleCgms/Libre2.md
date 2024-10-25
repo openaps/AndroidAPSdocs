@@ -237,7 +237,7 @@ activation and make a new initial calibration.
 Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB
 always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values
 of Libre 2 are not smooth enough to use it safely. See [Smoothing blood
-glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
 
 (Libre2-experiences-and-troubleshooting)=
 ### Experiences and Troubleshooting

@@ -27,8 +27,7 @@ wanting to use their Libre 1 (non-US) as a CGM.
 As it currently stands, if using Libre 1 as BG source you cannot
 activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB
 algorithm. The BG values of Libre 1 are not smooth enough to use it
-safely. See [Smoothing blood glucose
-data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more
+safely. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more
 details.
 
 ## 1. Using xDrip+
