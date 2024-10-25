@@ -24,7 +24,7 @@ The documentation relating to the config builder is available [here](../SettingU
 
 ## Einstellungen
 
-Der Einstellungsdialog kann über das Drei-Punkte-Menü oben rechts auf dem AAPS-**Startbildschirm** aufgerufen werden. Das gibt Dir die Möglichkeit die Konfiguration **aller aktivierten Module auf einmal** zu ändern.
+Der Einstellungsdialog kann über das Drei-Punkte-Menü oben rechts auf dem AAPS-**Startbildschirm** aufgerufen werden. It gives you the possibility to change the configuration of **all enabled plugins at once**.
 
 Dies ist ein guter Weg, wenn Du nicht wirklich sicher bist, wo Du die Konfigurationsoptionen sind. Es kann allerdings etwas mühselig sein, wenn Du die Konfiguration nur eines bestimmten Moduls ändern möchtest.
 
@@ -32,7 +32,7 @@ The documentation of the preferences is available [here](../SettingUpAaps/Prefer
 
 ## Plugin-Einstellungen
 
-Den **Plugin-Einstellungen**-Dialog kannst Du über das Drei-Punkte-Menü oben rechts auf dem AAPS-Startbildschirm aufrufen. Damit kannst Du die Konfiguration des aktuell angezeigten "Plugin"s ändern.
+Den **Plugin-Einstellungen**-Dialog kannst Du über das Drei-Punkte-Menü oben rechts auf dem AAPS-Startbildschirm aufrufen. It provides the possibility to change the configuration of the plugin currently on screen.
 
 Dies ist ein guter Weg, wenn Du _z.B._ nur die Konfiguration für BYODA ändern möchtest. Dann würdest Du den Tab "BYODA" im oberen Menü von **AAPS** auswählen, und sobald Du auf der BYODA-Seite bist, wählst Du oben rechts das Drei-Punkte-Menü und dann den Eintrag "Plugin-Einstellungen" aus. Du wirst zum Einstellungsdialog für das BYODA-Plugin weitergeleitet.
 
