@@ -1,27 +1,19 @@
-(Phones-list-of-tested-phones)=
+# List of tested Phones
+
+Generic recommendations for choosing a phone suitable for **AAPS** can be found [here](../Getting-Started/Phones.md).
+
+We currently don't have a generic list of tested phones working with **AAPS**.
+If you have questions regarding a specific phone model, please search or ask in our [Facebook or Discord community](../GettingHelp/WhereCanIGetHelp.md).
+
+You may also refer to this outdated and **not maintained anymore** [list of compatible phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?gid=698881435#gid=698881435).
 
 # Список проверенных телефонов, совместимых с помпой Omnipod Dash
 
-Подготовлен список телефонов/смартчасов, подходящих для работы с Omnipod Dash, самой новой помпой из помп, способных работать с AAPS в режиме замкнутого цикла!
+Users of the [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) pump can go through the list of the [tested phones for Omnipod Dash](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY).
+This list provides user feedback on the usage of a phone along with **AAPS** and Omnipod Dash pump. It can help you check if your phone and pump has been used successfully by other users.
 
-Потрачено много времени и усилий на то, чтобы облегчить занесение данных в таблицу при помощи формы с удобными информациоными полями! Существующие данные в таблицах не могут быть случайно перезаписаны или удалены. Этот опыт можно использовать с таблицами Google и в дальнейшем.
+The document is read-only. With CRTL-F, you can search in the text of the Google sheet.
 
-Благодаря простоте таблиц Google, были обобщены знания и уроки, извлеченные на ранних этапах тестирования помпы Dash. Результаты работы представлены в полном списке телефонов Android и смарт-часов, пригодных для работы с Omnipod Dash. Кроме того, здесь представлены и несовместимые устройства, чтобы новые пользователи знали, чего избегать из-за проблем со скоростью или устойчивостью подключения.
-
-Когда наступит время создания нового списка совместимости, мы рекомендуем участникам этой работы связаться с нами!
-
-The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
-
-В тексте таблицы Google при помощи CRTL-F можно выполнить поиск. Таблица защищена от записи. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
-
-После заполнения формы группа редакторов проверит данные и утвердит их для публикации!
+To record your test of a phone, please fill in this [form](https://forms.gle/g7GbSkMCTfFrWKjSA). After you fill in the form data, the maintainer will check the data and approve it for publishing!
 
 При возникновении сложностей с электронной таблицей свяжитесь с нами непосредственно или по GitHub в рамках проекта openaps/AAPSdocs.
-
-(Phones-phone-background)=
-
-# Обои для телефона
-
-![phone background](../images/bg_phone_thump.jpg) </br>
-Design: Thiago :) </br>
-If you want to decorate your phone with more AAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
