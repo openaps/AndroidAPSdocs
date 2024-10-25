@@ -52,7 +52,7 @@ Hinweis: Es besteht keine permanente Verbindung zwischen Pumpe und Smartphone. E
 
 (Accu-Chek-Insight-Pump-settings-in-aaps)=
 
-## Einstellungen in AndroidAPS
+## Einstellungen in AAPS
 
 **Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../SettingUpAaps/Preferences.md#advanced-settings-nsclient)).
 
