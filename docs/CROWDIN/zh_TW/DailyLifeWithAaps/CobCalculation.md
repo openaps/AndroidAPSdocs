@@ -69,7 +69,7 @@
 
 ## 手動修正輸入的碳水化合物
 
-如果碳水化合物輸入過多或過少，可以透過「治療」選單進行更正，具體步驟如 [這裡](AapsScreens.md#carb-correction) 所述。
+If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs).
 
 
 ## 碳水化合物更正—如何從「治療」中刪除碳水化合物的項目
