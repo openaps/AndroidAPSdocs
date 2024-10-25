@@ -32,7 +32,7 @@ Tippe in AAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand und geh
 
 Tippe in AAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand und gehe auf Einstellungen > Nightscout-Client > Erweiterte Einstellungen und deaktiviere 'Zu Nightscout nur hochladen (keine Synchronisation)' und 'kein Upload zu Nightscout'.
 
-Be aware of the [security issues](../SettingUpAaps/Nightscout.md#security-considerations) that might occure and be very careful if you are using an [Insight pump](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps).
+Be aware of the [security issues](../SettingUpAaps/Nightscout.md#security-considerations) that might occur and be very careful if you are using an [Insight pump](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps).
 
 ![Nightscout download preferences](../images/automate-aaps2.jpg)
 
