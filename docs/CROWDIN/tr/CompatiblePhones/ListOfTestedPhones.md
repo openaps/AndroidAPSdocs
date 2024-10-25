@@ -1,27 +1,19 @@
-(Phones-list-of-tested-phones)=
+# List of tested Phones
+
+Generic recommendations for choosing a phone suitable for **AAPS** can be found [here](../Getting-Started/Phones.md).
+
+We currently don't have a generic list of tested phones working with **AAPS**.
+If you have questions regarding a specific phone model, please search or ask in our [Facebook or Discord community](../GettingHelp/WhereCanIGetHelp.md).
+
+You may also refer to this outdated and **not maintained anymore** [list of compatible phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?gid=698881435#gid=698881435).
 
 # Omnipod Dash İnsülin Pompası Podları ile uyumlu, test edilmiş Telefonların listesi
 
-Currently, we have a very hard-working behind-the-scenes Maintainer, who is in charge of ensuring the integrity of the Hardware List of all Android Phones/Smartwatches Capable of Looping with the Omnipod Dash; the newest pump driver addition to our ever-expanding network of Bluetooth enabled insulin pumps for use within the AAPS/OpenAPS ecosystem!
+Users of the [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) pump can go through the list of the [tested phones for Omnipod Dash](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY).
+This list provides user feedback on the usage of a phone along with **AAPS** and Omnipod Dash pump. It can help you check if your phone and pump has been used successfully by other users.
 
-Bakım Sorumlumuz, kullanım kolaylığı için önceden doldurulmuş bilgi başlıklarına sahip bir Google Formu aracılığıyla Hesap Tablosuna veri girmenin herkes için kolay olduğundan emin olmak için çok zaman ve çaba harcadı. Bu, sayfalardaki mevcut verilerin yanlışlıkla üzerine yazılmamasını veya silinmemesini sağlar. Aynı deneyim, yine Google E-Tablolar kullanılarak ilk elde edilen başarının üzerine inşa edilebilir.
+The document is read-only. With CRTL-F, you can search in the text of the Google sheet.
 
-Google E-Tabloların kolaylığı, erken benimseyenler arasındaki yakın iletişim ve Dash pompa pod sürücülerinin erken test/geri bildirim aşamaları boyunca öğrenilen toplu bilgileri ve dersleri bir araya getirme yeteneği sayesinde oldukça verimli bir şekilde derlendi. Dash Bluetooth sürücülerinin her yeni sürümü hakkında adım adım geri bildirim sağlayan çok sayıda İlk kullanıcı tarafından sağlanan zaman, bilgi ve enerjinin sonuçları, şimdi açtığınızda hepsinin göründüğü kapsamlı bir Karşılaştırma listesidir. Birçok Android Telefon ve Akıllı Saat uyumluluk açısından test edilmiş ve derecelendirilmiştir. Buna ek olarak, yeni kullanıcıların bağlantı hızı veya gücü ile ilgili sorunlar nedeniyle hangi donanımdan kaçınmaları gerektiğini bilmeleri için daha uyumsuz kurulumlar da bu Elektronik Tabloya dahil edilmiştir.
-
-İleride başka bir Donanım Uyumluluk Listesi oluşturulması zamanı geldiğinde; Bakıcı olmaktan keyif alacağını düşünen herkesi lütfen bizimle iletişime geçmeye davet ediyoruz!
-
-The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
-
-CTRL-F ile Google sayfasının metninde arama yapabilirsiniz. Sayfa yazmaya karşı korumalıdır. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
-
-Form verilerini doldurduktan sonra, bakıcı verileri kontrol edecek ve yayınlamak için onaylayacaktır!
+To record your test of a phone, please fill in this [form](https://forms.gle/g7GbSkMCTfFrWKjSA). After you fill in the form data, the maintainer will check the data and approve it for publishing!
 
 E-tabloyla ilgili herhangi bir sorun varsa, lütfen doğrudan veya openaps/AndroidAPSDocs projesi için bir GitHub sorunu aracılığıyla bizimle iletişime geçin.
-
-(Phones-phone-background)=
-
-# Telefon Arka Planı
-
-![phone background](../images/bg_phone_thump.jpg) </br>
-Design: Thiago :) </br>
-If you want to decorate your phone with more AAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
