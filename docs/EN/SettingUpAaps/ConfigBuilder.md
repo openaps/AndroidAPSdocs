@@ -58,8 +58,8 @@ Local profiles can also be uploaded to Nightscout. The settings can be found in 
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
 
-#### Change profile in Nighscout profile editor
-You can synchronize changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../SettingUpAaps/Preferences.md#nsclient).
+#### Change profile in Nightscout profile editor
+You can synchronize changes to the profile in the Nightscout profile editor to local profiles. The settings can be found in [NSClient preferences](../SettingUpAaps/Preferences.md#nsclient).
 
 It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
 
@@ -218,14 +218,14 @@ Note you need to be in [Objective 9](../SettingUpAaps/CompletingTheObjectives.md
 * This defines the relative change required to trigger a notification.
 
 ## Objectives (learning program)
-AAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+AAPS has a learning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
 You should [export your settings](../Maintenance/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 
 ## Treatments
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout.  Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../DailyLifeWithAaps/AapsScreens.md#carb-correction).
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout.  Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs).
 
 ## General
 ### Overview
@@ -266,7 +266,7 @@ Choose the default amounts of the three buttons in fill/prime dialogue, dependin
 Choose the high and low marks for the BG-graph on AAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
 #### Shorten tab titles
-Choose wether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+Choose whether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### Show notes field in treatment dialogs
 Choose if you want to have a notes field when entering treatments or not.
@@ -275,7 +275,7 @@ Choose if you want to have a notes field when entering treatments or not.
 Choose if you want to have [status lights](../SettingUpAaps/Preferences.md#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
 #### Advanced settings
-**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units. 
+**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percentage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units. 
 
 **Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../DailyLifeWithAaps/KeyAapsFeatures.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
