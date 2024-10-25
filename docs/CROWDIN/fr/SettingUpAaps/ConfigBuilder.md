@@ -67,9 +67,9 @@ Les profils locaux peuvent également être téléchargés sur Nightscout. The s
 
 ![Télécharger profil local sur NS](../images/LocalProfile_UploadNS_AASP30.png)
 
-#### Changer de profil dans l'éditeur de profil Nighscout
+#### Change profile in Nightscout profile editor
 
-Vous pouvez synchroniser les modifications du profil depuis l'éditeur de profil Nighscout vers les profils locaux. The settings can be found in [NSClient preferences](../SettingUpAaps/Preferences.md#nsclient).
+You can synchronize changes to the profile in the Nightscout profile editor to local profiles. The settings can be found in [NSClient preferences](../SettingUpAaps/Preferences.md#nsclient).
 
 Il est nécessaire de cloner toute la base de données Nightscout active pour les profils, et pas seulement le profil avec la flèche bleue ! Les nouveaux enregistrements de la base de données portent ensuite la date courante et peuvent être activés via l'onglet "Profil local".
 
@@ -248,7 +248,7 @@ Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous
 
 ## Objectifs (programme d'apprentissage)
 
-AAPS a un programme d'apprentissage (objectifs) que vous devez réaliser étape par étape. Cela devrait vous guider en toute sécurité à travers la mise en place d'un système de boucle fermée. Ce programme d'apprentissage garantit que vous avez tout mis en place correctement et que vous comprenez ce que le système fait exactement. C'est la seule façon pour vous de faire confiance au système.
+AAPS has a learning program (objectives) that you have to fulfill step by step. Cela devrait vous guider en toute sécurité à travers la mise en place d'un système de boucle fermée. Ce programme d'apprentissage garantit que vous avez tout mis en place correctement et que vous comprenez ce que le système fait exactement. C'est la seule façon pour vous de faire confiance au système.
 
 You should [export your settings](../Maintenance/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. Au cas où vous devrez remplacer votre smartphone plus tard (nouvel achat, problème d'écran, etc.) vous pouvez simplement importer ces paramètres.
 
@@ -256,7 +256,7 @@ See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more info
 
 ## Traitements
 
-Si vous affichez les traitements, vous pouvez voir ceux qui ont été téléchargés dans Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../DailyLifeWithAaps/AapsScreens.md#carb-correction).
+Si vous affichez les traitements, vous pouvez voir ceux qui ont été téléchargés dans Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs).
 
 ## General
 
@@ -307,7 +307,7 @@ Choisissez les valeurs de glycémies hautes et basses du graphique principal sur
 
 #### Raccourcir les titres des onglets
 
-Choisissez si les titres des onglets dans AAPS sont longs (ex : ACTIONS, PROFIL LOCAL, AUTOMATION) ou courts (ex : ACT, PL, AUTO)
+Choose whether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### Affiche les notes dans les dialogues
 
@@ -319,7 +319,7 @@ Choose if you want to have [status lights](../SettingUpAaps/Preferences.md#statu
 
 #### Paramètres Avancés
 
-**Injecter cette partie de Bolus calculée par l’assistant** : Avec l'utilisation des SMB, beaucoup de personnes ne font pas de bolus repas avec 100% de l'insuline nécessaire, mais seulement une partie de celle-ci (par ex. 75 %) et laissent les SMB avec les RNS (repas non signalés) faire le reste. Avec ce paramètre, vous pouvez choisir une valeur par défaut pour le pourcentage que l'assistant bolus doit prendre. Si ce paramètre est de 75 % et que vous avez besoin d'un de bolus 10U, l'assistant de bolus proposera un bolus repas de seulement 7,5 unités.
+**Injecter cette partie de Bolus calculée par l’assistant** : Avec l'utilisation des SMB, beaucoup de personnes ne font pas de bolus repas avec 100% de l'insuline nécessaire, mais seulement une partie de celle-ci (par ex. 75 %) et laissent les SMB avec les RNS (repas non signalés) faire le reste. In this setting, you can choose a default value for the percentage the bolus wizard should calculate with. Si ce paramètre est de 75 % et que vous avez besoin d'un de bolus 10U, l'assistant de bolus proposera un bolus repas de seulement 7,5 unités.
 
 **Activer la fonction super bolus dans l'Assistant** (c'est différent des *super micro bolus* !) : à utiliser avec prudence et ne l'activez pas tans que vous n'avez pas appris ce qu'il fait vraiment. En gros, l'insuline correspondant au débit de basal des deux heures suivantes est ajoutée au bolus et deux heures de zéro-temp sont activées. **Les fonctions de boucle AAPS seront désactivées - c'est donc à utiliser avec prudence ! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../DailyLifeWithAaps/KeyAapsFeatures.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
