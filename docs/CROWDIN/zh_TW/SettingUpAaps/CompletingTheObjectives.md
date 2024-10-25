@@ -115,18 +115,7 @@
 此 **目標** 要求您確定並設置「臨時基礎率最大 U/h 值」（max-basal），如 [OpenAPS 功能介紹](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to) 中所述。 此數值可以在 [偏好設定 > OpenAPS](../SettingUpAaps/Preferences.md#max-uh-a-temp-basal-can-be-set-to) 中設置。
 如果您仍在使用虛擬幫浦，請確保此安全設置在 **AAPS** 和您的胰島素幫浦中均已設定。
 
-您可能希望將 BG 目標設置得比平常高，直到您對 **AAPS** 的計算和設定感到舒適為止。
-
-目標可以在這些範圍內定義：
-
-|    | 個人設置 _低_ [目標](../SettingUpAaps/YourAapsProfile.md#glucose-targets) | 個人設置 _高_ 目標           | [臨時目標](../DailyLifeWithAaps/TempTargets.md) |
-| -- | ------------------------------------------------------------------ | --------------------- | ------------------------------------------- |
-| 最小 | 4 mmol/l 或 72 mg/dL                                                | 5 mmol/l 或 90 mg/dL   | 4 mmol/l 或 72 mg/dL                         |
-| 最大 | 10 mmol/l 或 180 mg/dL                                              | 15 mmol/l 或 225 mg/dL | 15 mmol/l 或 225 mg/dL                       |
-
-您的 **BG 目標** 是核心數值，所有 **AAPS** 的計算均基於此。 他不同於目標範圍，目標範圍是你通常希望血糖值保持在內的範圍。 如果你的目標範圍過寬（例如 3 mmol/l [50 mg/dl] 或更寬），你會發現 **AAPS** 幾乎不會採取行動。 這是因為 **BG** 水平預測將在這個較寬範圍內，因此很少建議改變臨時基礎率。
-
-您可能希望在您的 **個人設置** 中嘗試調整 **血糖目標** 至較緊湊的範圍（例如，1 或更少 mmol/l [20 mg/dl 或更少] 的範圍），並觀察所得到的行為。
+You might wish to set your [**Profile** BG target](../SettingUpAaps/YourAapsProfile.md#glucose-targets) higher than usual until you are comfortable with **AAPS**' calculations and settings. 您可能希望在您的 **個人設置** 中嘗試調整 **血糖目標** 至較緊湊的範圍（例如，1 或更少 mmol/l [20 mg/dl 或更少] 的範圍），並觀察所得到的行為。
 
 ![停止標誌](../images/sign_stop.png)
 
@@ -175,7 +164,7 @@
 
 要完成**目標 7**，您必須關閉循環並提高您的[maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)。 **maxIOB** 在 **目標 6** 中自動被設為零。 現在這個設定將被恢復。 **AAPS** 將開始使用你設定的 maxIOB 值來修正高血糖值。
 
-完成此目標的最少時間：**1 天**。 這是一個強制的等待時間。 在此時間段結束之前無法進入下一個 **目標**。
+完成此目標的最少時間：**1 天**。 這是一個強制的等待時間。 It is not possible to proceed to the next **Objective** until this period of time has expired.
 
 - 從 [偏好設定 > OpenAPS](../SettingUpAaps/Preferences.md) 中選擇 **閉環**，或透過長按 **總覽** 螢幕右上角的 Loop 圖示來選擇。 在 **閉環** 中持續 1 天。
 
@@ -198,7 +187,7 @@
 
 作為此 **目標** 的一部分，你將重新檢視你的 **個人設置** 的表現，並利用 [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) 功能作為錯誤設定的指標。
 
-完成此目標的最少時間：**7 天**。 這是一個強制的等待時間。 在此時間段結束之前無法進入下一個 **目標**。
+完成此目標的最少時間：**7 天**。 這是一個強制的等待時間。 It is not possible to proceed to the next **Objective** until this period of time has expired.
 
 在 7 天內啟用 [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md)，並觀察 [**總覽** 的圖表白線](../DailyLifeWithAaps/AapsScreens.md#section-g---additional-graphs) 反映你因運動或激素等因素而上升或下降的胰島素敏感度。 留意 OpenAPS 報告標籤，它顯示 **AAPS** 根據需要調整敏感度、基礎率和目標。
 
@@ -245,7 +234,7 @@
 
 ## 目標 11：啟用白天使用的其他功能，例如動態敏感度外掛 (DynISF)。
 
-完成這個 **目標** 的最少時間：**28 天**。 這是一個強制的等待時間。 在此時間段結束之前無法進入下一個 **目標**。
+完成這個 **目標** 的最少時間：**28 天**。 這是一個強制的等待時間。 It is not possible to proceed to the next **Objective** until this period of time has expired.
 
 - 確保 **SMB** 正常運行
 - 在這裡閱讀關於 **動態 ISF** 的文檔 [這裡](../DailyLifeWithAaps/DynamicISF.md)
