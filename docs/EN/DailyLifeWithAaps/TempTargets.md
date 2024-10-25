@@ -2,7 +2,14 @@
 # Temp-Targets
 
 ## What are Temp-Targets and where can I set and configure them?
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their **BG** target range for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage. 
+A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](../SettingUpAaps/YourAapsProfile.md#glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage. 
+
+Temporary targets can be defined within those boundaries :
+
+|         | Temporary target       |
+|---------|------------------------|
+| Minimum | 4 mmol/l or 72 mg/dL   |
+| Maximum | 15 mmol/l or 225 mg/dL |
 
 **AAPS** provides for three **Temp-Target** options suitable for exercise (**Temp-Target- Activity**), meals (**Temp-Target- Eating soon**) and predicted hypoglycemia (**Temp-Target-Hypo**). **Temp-Targets** are located under the **Actions tab**.
 
