@@ -170,7 +170,7 @@ Select "Standard" as installation type.
 
 Verify the settings by clicking "Next" again.
 
-![Verify\_Settigns](../images/Building-the-App/024_DefaultInstallation.png)
+![Verify\_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
 Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
 
@@ -220,7 +220,7 @@ Nyní řekneme Android Studiu, odkud kód získat:
   ```
   a vložte ji do textového pole URL (3).
 
-- Check the (default) directory for saving the cloned code exists on your computer and doesn't already exists (4). You can change it to some directoy, but please remember where you stored it!
+- Check the (default) directory for saving the cloned code exists on your computer and doesn't already exists (4). You can change it to some directory, but please remember where you stored it!
 
 - Nyní spusťte klonování kódu kliknutím na tlačítko "Clone" (5).
 
