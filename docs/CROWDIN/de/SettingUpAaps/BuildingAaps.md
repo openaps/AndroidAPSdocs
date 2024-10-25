@@ -170,7 +170,7 @@ Wähle "Standard" als Installationstyp aus.
 
 Überprüfe die Einstellungen, indem Du erneut auf "Next" (dt. Weiter) klickst.
 
-![Verify\_Settigns](../images/Building-the-App/024_DefaultInstallation.png)
+![Verify\_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
 Jetzt musst Du die Lizenzvereinbarungen akzeptieren. Du hast auf der linken Seite zwei Abschnitte (1 + 3) die Du einen nach dem anderen auswählst und mit "Accept" (2 + 4) auf der rechten Seite bestätigst.
 
@@ -220,7 +220,7 @@ Wir werden Android Studio nun sagen, wo es den Code herunterladen soll:
   ```
   und füge sie in das URL-Textfeld (3) ein.
 
-- Überprüfe ob das (Standard)-Verzeichnis zum Speichern des geklonten Codes auf Deinem Computer nicht bereits existiert (4). Du kannst das Verzeichnis wechseln, aber merke Dir bitte, wo Du den Code gespeichert hast!
+- Überprüfe ob das (Standard)-Verzeichnis zum Speichern des geklonten Codes auf Deinem Computer nicht bereits existiert (4). You can change it to some directory, but please remember where you stored it!
 
 - Klicke nun auf "Clone" (5).
 
