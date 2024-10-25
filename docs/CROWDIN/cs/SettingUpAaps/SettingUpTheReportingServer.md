@@ -11,11 +11,13 @@ Doporučujeme používat Nightscout.
 
 ## Nightscout
 
-Nightscout je výkonná platforma, která je po mnoho let integrována do **AAPS**. Umožňuje uživatelům a pečovatelům sledovat údaje o cukrovce pacienta téměř v reálném čase (mezi příjmem dat a poskytováním dat může uplynout jen několik minut, pokud je k dispozici vyhovující internetové připojení mezi všemi součástmi). Také umožňuje pečovatelům posílat vzdálené příkazy na **AAPS**.
+Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). Také umožňuje pečovatelům posílat vzdálené příkazy na **AAPS**.
 
 Nightscout je poskytován jako open source software. Kdokoli může vytvořit a provozovat Nightscout server, a to buď zdarma, nebojako placenou službu.
 
-### Možnost 1 - Nastavte si Nightscout server sami
+You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+
+### Option 1 - Set up your Nightscout server yourself
 
 Vytváření Nightscout reporting serveru může vyžadovat jednu nebo více webových aplikací, které budou vyžadovat údržbu. Aby byla služba zcela zdarma, možná budete muset migrovat vaše stránky Nightscout a data, pokud poskytovatelé přestanou poskytovat servis zdarma.
 
