@@ -41,6 +41,7 @@ extensions = [
     'sphinx.ext.todo',
     'myst_parser',
     'sphinx_togglebutton',
+    'notfound.extension',
     # 'alabaster',
 ]
 
