@@ -69,7 +69,7 @@ Das kann folgende Gründe haben:
 
 ## Manuelle Korrektur der eingegebenen Kohlenhydrate
 
-If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](AapsScreens.md#carb-correction).
+If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs).
 
 
 ## Kohlenhydrate korrigieren - wie KH-Einträge aus den Behandlungen gelöscht werden
