@@ -1,22 +1,54 @@
-## Введение в профиль AAPS
+# Your **AAPS** profile
 
-### What is an AAPS profile?
+Your **AAPS** profile is a set of five key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. **AAPS** has several _additional_ modifiable parameters (like SMB settings), but using these well relies on your underlying **AAPS** profile being correct. The **AAPS** profile incorporates:
 
-Профиль AAPS представляет собой набор из пяти ключевых параметров, которые определяют, как AAPS подает инсулин на основе данных с сенсора. AAPS имеет несколько дополнительных изменяемых параметров (например, настройки SMB), но их правильное использование зависит от профиля AAPS. Профиль ААПС включает в себя: продолжительность действия инсулина (DIA), целевые показатели ГК, скорость базального инсулина, (BR), коэффициент чувствительности к инсулину (ISF) и углеводный коэффициент (IC или ICR). Снимки экрана AAPS с примером профиля показаны внизу. Обратите внимание, этот профиль имеет большое количество точек времени. Когда вы начинаете AAPS, профиль, скорее всего, будет намного проще. Профили значительно различаются у разных людей, примеры профилей AAPS для маленьких детей, подростков и взрослых смотрите в следующем разделе, оптимизация[профиля] (ссылка).
+- [duration of insulin action](#duration-of-insulin-action-dia) (DIA),
+- [glucose targets](#glucose-targets),
+- [basal rates](#basal-rates) (BR),
+- [insulin sensitivity factors](#insulin-sensitivity-factor-isf) (ISF) and
+- [insulin-to-carb ratios](#insulin-to-carb-ratio-icr) (IC or ICR).
 
-#### Duration of insulin action (DIA)
+The four last parameters can be set to different values, changing hourly if required, over a 24-hour period. Please note, the sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
 
-Длительность действия инсулина устанавливается на единичное значение в AAPS, так как помпа вводит один тип инсулина. Остальные четыре параметра могут иметь разные значения, при необходимости изменяться в течение 24 часов.
+```{admonition} Your diabetes may vary
+:class: information
+Profiles vary significantly from person-to-person.
 
-#### Glucose targets
+For the final three parameters, basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in your insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://brightspotsandlandmines.org/Bright_Spots_and_Landmines_by_Adam_Brown.pdf) by Adam Brown is an excellent book to read.
 
-Цели ГК устанавливаются в соответствии с личными предпочтениями. Например, если вас беспокоят ночные гипо, с 19: 00 до 7: 00 можно установить цель чуть выше - на 6,5 ммоль/л. Если вы хотите убедиться, что у вас достаточно активного инсулина (IOB) утром перед болюсом на завтрак, можно установить нижнюю цель в 4. ммоль/л с 7 до 8 утра. Целевой уровень глюкозы, особенно если он кратковременный (продолжительностью менее 4 часов), не обязательно должен соответствовать \* фактическому значению\*, которого вы ожидаете или хотите достичь, скорее, это хороший способ сообщить алгоритму AAPS быть более или менее агрессивным при поддержании ГК в пределах нормы. На **рисунке ниже** показан пример того как в профиле AAPS можно установить продолжительность действия инсулина DIA и целевые значения гликемии.
+```
+
+Screenshots from **AAPS** of an _example_ profile are shown in below.
+
+## Duration of insulin action (DIA)
+
+The duration of insulin action is set to a single value in **AAPS**, because your pump will continually infuse the same type of insulin.
+
+In combination with the [insulin type](../SettingUpAaps/ConfigBuilder.md#insulin), this will result in the [insulin profile](../DailyLifeWithAaps/AapsScreens.md#insulin-profile). Read more there to help you define a proper DIA.
+
+## Glucose targets
+
+The **figure below** shows an example of how the DIA and glucose targets could be set in an **AAPS** profile.
 
 ![24-07-23, profile basics - DIA and target](../images/f3904cc3-3d9e-497e-a3b6-3a49650053e6.png)
 
-Что касается последних трех параметров, то базальная скорость (BR), коэффициент чувствительности к инсулину (ISF) и углеводный коэффициент (IC или ICR), их абсолютные значения и тенденции при работе в AAPS, весьма различны в зависимости от биологии, пола, возраста, уровня физического развития и т. д. а также от более краткосрочных факторов, таких как болезнь и нагрузки. Дополнительные рекомендации по этому поводу можно найти в книге [“Bright Spots and Landmines” (Светлые ориентиры и черные дыры)](https://brightspotsandlandmines.org/Bright_Spots_and_Landmines_by_Adam_Brown.pdf) Адама Брауна - отличная книга для чтения.
+Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in:
 
-#### Basal rates
+- A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the _actual value_ you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+- If your target is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate changes are rarely suggested.
+- When beginning with **AAPS**, especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and ajusting your **Profile**.
+- Later on, you will probably find more appropriate to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+
+The targets can be defined within those boundaries :
+
+|         | _Low_ target           | _High_ target          |
+| ------- | ---------------------- | ---------------------- |
+| Minimum | 4 mmol/l or 72 mg/dL   | 5 mmol/l or 90 mg/dL   |
+| Maximum | 10 mmol/l or 180 mg/dL | 15 mmol/l or 225 mg/dL |
+
+Цели ГК устанавливаются в соответствии с личными предпочтениями. Например, если вас беспокоят ночные гипо, с 19: 00 до 7: 00 можно установить цель чуть выше - на 6,5 ммоль/л. Если вы хотите убедиться, что у вас достаточно активного инсулина (IOB) утром перед болюсом на завтрак, можно установить нижнюю цель в 4. ммоль/л с 7 до 8 утра.
+
+## Basal rates
 
 Базальная скорость инсулина (ед./час) обеспечивает фоновый инсулин, поддерживая нужную гликемию в отсутствие пищи или физических упражнений.
 
@@ -24,7 +56,7 @@
 
 Большинство эндокринологов (и людей с сахарным диабетом 1 типа!) сходятся на том, что прежде чем оптимизировать коэффициенты ISF и ICR, следует скорректировать базальную скорость.
 
-#### Insulin sensitivity factor (ISF)
+## Insulin sensitivity factor (ISF)
 
 Коэффициент чувствительности к инсулину (иногда называемый корректирующим фактором) - это то, насколько 1 единица инсулина понижает ваш уровень гликемии.
 
@@ -34,7 +66,7 @@
 **В единицах ммоль/л:**
 Если ваш ISF равен 1,5, каждая единица инсулина снизит уровень глюкозы в крови примерно на 1,5 ммоль/л (например, с 8 ммоль/л до 6,5 ммоль/л).
 
-Из этих примеров видно, что чем меньше значение ISF, тем вы менее чувствительны к инсулину. Таким образом, если вы уменьшите ISF с 40 до 35 (мг/дл) или 1.5 до 1.3 (ммоль/л), то это часто называется усилением вашего ISF. И наоборот, увеличение ISF с 40 до 45 (мг/дл) или 1,5 до 1,8 ммоль/л) ослабляет ваш ISF.
+Из этих примеров видно, что чем меньше значение ISF, тем вы менее чувствительны к инсулину. So if you reduce your ISF from 40 to 35 (mg/dl) or 1.5 to 1.3 (mmol/L), this is often called strengthening your ISF. И наоборот, увеличение ISF с 40 до 45 (мг/дл) или 1,5 до 1,8 ммоль/л) ослабляет ваш ISF.
 
 Если ваш ISF слишком силен (малая величина), это приведет к гипогликемии, а если он слишком слаб (большая величина), то приведет к гипергликемии.
 
@@ -46,37 +78,37 @@
 ISF приблиз. (мг/дл) = 1700/40 = 43
 ISF приблиз. (ммоль/л) = 94/40 = 2,4
 
-смотрите \*\* рисунок ниже\*\*, как можно установить базальную скорость и значения ISF в профиле AAPS.
+See the **figure below** for an example of how the basal rates and ISF values could be set in an **AAPS** profile.
 
 ![24-07-23, profile basics - basal and ISF](../images/55c8ed24-e24e-4caa-9c17-294fa93cb84a.png)
 
-#### Insulin to Carb ratio (ICR)
+## Insulin to Carb ratio (ICR)
 
 ICR представляет собой количество граммов углеводов покрываемых одной единицей инсулина.
 
 Некоторые также используют I:C в качестве сокращения вместо IC или говорят об углеводном коэффициенте (carb ratio, CR).
 
-Из-за уровня гормонов и физической активности ICR различен в разное время суток. Многие находят, что самые низкие ICR у них в районе времени завтрака. Так, например, ваш ICR может быть 1:8 на завтрак, 1:10 на обед и 1:10 на ужин, но эти шаблоны не универсальны, и некоторые люди более устойчивы к инсулину во время обеда и имеют потребность в большем/меньшем ICR.
-
 Например, соотношение инсулина 1 к 10 (1:10) означает, что вам требуется 1 ед. инсулина на каждые 10 граммов съеденных углеводов. Еда из 25г углеводов потребует 2,5 ед. инсулина.
 
 Если ваш ICR слабее, скажем 1:20, вам понадобится только 0,5 ед. на покрытие 10 г углеводов. Еда из 25г углеводов потребует 25/20 = 1,25 ед. инсулина.
 
-Как показано на \*\* рисунке ниже\*\*, при вводе этих значений в профиль AAPS мы просто вводим конечную часть соотношения, поэтому отношение инсулина к углеводам, равное 1:3,5, вводится просто как “3,5”.
+Из-за уровня гормонов и физической активности ICR различен в разное время суток. Многие находят, что самые низкие ICR у них в районе времени завтрака. Так, например, ваш ICR может быть 1:8 на завтрак, 1:10 на обед и 1:10 на ужин, но эти шаблоны не универсальны, и некоторые люди более устойчивы к инсулину во время обеда и имеют потребность в большем/меньшем ICR.
+
+As shown in the **figure below**, when entering these values into an **AAPS** profile, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
 
 ![24-07-23, profile basics - ICR](../images/7741eefb-cae5-45c5-a9e5-8eae5ead3f48.png)
 
-#### Why should I try to get my profile settings right? Can’t the loop just take care of it?
+## About the importance of getting your profile right
 
-Гибридный замкнутый цикл может попытаться скорректировать подачу инсулина, чтобы свести к минимуму плохой гликемический контроль из-за неправильных значений профиля. Это можно сделать, например, путем прекращения введения инсулина, если у вас гипогликемия. Однако можно добиться гораздо лучшего контроля гликемии, если настройки профиля уже максимально приближены к потребностям вашего организма. Это одна из причин, по которым AAPS использует поэтапные цели для перехода от открытого цикла к гибридному замкнутому циклу. Кроме того, будут моменты, когда потребуется разомкнуть цикл (прогрев сенсора, отказ сенсора и т. д.), иногда посреди ночи, и для таких ситуаций нужны правильные настройки.
+**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
 
-Если вы начинаете работу с AAPS после другой помповой системы с открытым или закрытым циклом, у вас уже будет четкое представление о том, какие значения использовать для базальных доз (BR), фактора чувствительности к инсулину (ISF) и соотношения инсулина и углеводов (IC или ICR).
+Гибридный замкнутый цикл может попытаться скорректировать подачу инсулина, чтобы свести к минимуму плохой гликемический контроль из-за неправильных значений профиля. It can do this, for example, by withholding insulin delivery if you are going to hypo. Однако можно добиться гораздо лучшего контроля гликемии, если настройки профиля уже максимально приближены к потребностям вашего организма. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. Кроме того, будут моменты, когда потребуется разомкнуть цикл (прогрев сенсора, отказ сенсора и т. д.), иногда посреди ночи, и для таких ситуаций нужны правильные настройки.
 
-Если вы двигаетесь от инъекций шприц-ручками (MDI) к AAPS, тогда стоит прочитать сначала о том, как сделать переход с MDI на помпу и тщательно спланировать этот шаг с эндокринологом. Весьма полезны книги ["Pumping insulin" (Подача инсулина помпой)](https://amzn.eu/d/iaCsFa2) авторов John Walsh & Ruth Roberts и [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR).
 
-В разделе [оптимизация профиля] (operating - optimizing - your profile link) мы приводим примеры профилей, обсуждаем, как установить и оптимизировать параметры, которые формируют ваш профиль AAPS, и предоставляем рекомендации по дополнительным ресурсам, таким как **Автонастройка**, которые автоматизируют оптимизацию профиля.
+If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. Весьма полезны книги ["Pumping insulin" (Подача инсулина помпой)](https://amzn.eu/d/iaCsFa2) авторов John Walsh & Ruth Roberts и [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
 
-### Profile Helper
+## Profile Helper
 
 The [Profile Helper](../SettingUpAaps/ProfileHelper.md) can help you:
 
