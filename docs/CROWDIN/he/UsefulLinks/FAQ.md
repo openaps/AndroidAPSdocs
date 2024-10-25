@@ -218,7 +218,7 @@ In AAPSClient check 'Connection settings'. יכול להיות שאתם כרגע
 
 #### Why does AAPS say 'BG source doesn't support advanced filtering'?
 
-אם אתם משתמשים בחיישן שאינו דקסקום G5 או G6 עם xDrip במצב נטיבי, התראה זו תופיע בלשונית OpenAPS. ראו [שיפור נתוני סוכר](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) לקבלת פרטים נוספים.
+אם אתם משתמשים בחיישן שאינו דקסקום G5 או G6 עם xDrip במצב נטיבי, התראה זו תופיע בלשונית OpenAPS. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
 
 ### Pump
 
@@ -262,7 +262,7 @@ In AAPSClient check 'Connection settings'. יכול להיות שאתם כרגע
 
 ### Wallpaper
 
-You can find the AAPS wallpaper for your phone on the [phones page](../CompatiblePhones/ListOfTestedPhones.md#phone-background).
+You can find the AAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones.md#phone-wallpaper).
 
 ### Daily usage
 
