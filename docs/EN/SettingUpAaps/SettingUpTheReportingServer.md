@@ -9,14 +9,15 @@ There are currently two reporting servers available for use with **AAPS**:
 
 We recommend using Nightscout.
 
-## Nightscout 
+## Nightscout
 
-
-Nightscout is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few minutes may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also allows caregivers to send remote commands to **AAPS**.
+Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also allows caregivers to send remote commands to **AAPS**.
 
 Nightscout is provided as open-source software. Anyone can create and operate a Nightscout server, using either free or paid-for services. 
 
-### Option 1 - Setup your Nightscout server yourself
+You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+
+### Option 1 - Set up your Nightscout server yourself
 
 Creating your Nightscout reporting server can require one or more web-based applications that will require maintenance. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
 
