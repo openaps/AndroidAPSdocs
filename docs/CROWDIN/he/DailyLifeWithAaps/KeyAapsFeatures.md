@@ -105,7 +105,7 @@ Here, you can choose if you want to use the [sensitivity detection](../DailyLife
 
 אם הגדרה זו מופעלת, SMB מופעל תמיד (ללא תלות ב-COB, יעדים זמניים או בולוסים). בהפעלת הגדרה זו, שאר הגדרות ההפעלה שלהלן לא ישפיעו. עם זאת, אם "הפעל SMB עם ערכי מטרה זמניים גבוהים" מושבת ומוגדר ערך מטרה זמני גבוהה, SMB יהיו מושבתים. מטעמי בטיחות, אפשרות זו מיועדת רק למקורות נתוני סוכר עם סינון איכותי לנתונים רועשים. Currently it is only an available option with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. אם בערך הסוכר יש סטייה גדולה מדי, חיישן ה-G7/G6 לא שולח אותו ללופ ומחכה לערך הבא בעוד 5 דקות.
 
-עבור חיישנים אחרים כמו Freestyle Libre, ''השימוש ב-SMB מושבת עד של-xDrip+ יהיה תהליך החלקת רעשים טוב יותר. לקריאה נוספת [כאן](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+עבור חיישנים אחרים כמו Freestyle Libre, ''השימוש ב-SMB מושבת עד של-xDrip+ יהיה תהליך החלקת רעשים טוב יותר. You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### הפעלת SMB עם פחמ' פעילות
 
@@ -119,7 +119,7 @@ Here, you can choose if you want to use the [sensitivity detection](../DailyLife
 
 אם מופעל, SMB יישאר פעיל במשך 6 שעות לאחר שהוכרזו פחמימות, אפילו אם הפחמימות הפעילות ירדו ל-0. מטעמי בטיחות, אפשרות זו מיועדת רק למקורות נתוני סוכר עם סינון איכותי לנתונים רועשים. Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. אם בערך הסוכר יש סטייה גדולה מדי, חיישן ה-G7/G6 לא שולח אותו ללופ ומחכה לערך הבא בעוד 5 דקות.
 
-עבור חיישנים אחרים כמו Freestyle Libre, ''השימוש ב-SMB מושבת עד של-xDrip+ יהיה תהליך החלקת רעשים טוב יותר. לקריאה נוספת [כאן](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+עבור חיישנים אחרים כמו Freestyle Libre, ''השימוש ב-SMB מושבת עד של-xDrip+ יהיה תהליך החלקת רעשים טוב יותר. You can find [more information here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### תדירות מתן SMB (דקות)
 
