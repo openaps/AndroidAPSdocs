@@ -2,7 +2,14 @@
 
 ## 什麼是臨時目標，並且我可以在哪裡設置和配置他們？
 
-**臨時目標**（或簡稱**TT**）是 **AAPS** 的一個功能，允許使用者調整其**血糖**目標範圍以配合計畫中的活動。 這是透過 **AAPS** 操控使用者的胰島素使用來實現的。
+A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](../SettingUpAaps/YourAapsProfile.md#glucose-targets) for planned activities. 這是透過 **AAPS** 操控使用者的胰島素使用來實現的。
+
+Temporary targets can be defined within those boundaries :
+
+|    | 臨時目標                  |
+| -- | --------------------- |
+| 最小 | 4 mmol/l 或 72 mg/dL   |
+| 最大 | 15 mmol/l 或 225 mg/dL |
 
 **AAPS** 提供了三種適合不同情況的**臨時目標**選項，分別是運動（**臨時目標-運動**）、餐前準備（**臨時目標-即將用餐**）以及預測低血糖（**臨時目標-低血糖**）。 **臨時目標**位於**操作選單**下。
 
