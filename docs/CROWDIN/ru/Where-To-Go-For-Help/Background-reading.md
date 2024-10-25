@@ -6,7 +6,7 @@
 
 [Проект OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[Документация OpenAPS - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Документация Loop - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
