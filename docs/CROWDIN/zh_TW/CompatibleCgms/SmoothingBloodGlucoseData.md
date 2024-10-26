@@ -4,9 +4,9 @@
 
 某些 CGM 系統內建算法來偵測讀取值中的干擾，**AAPS** 可以利用此資訊避免在血糖資料過於不可靠時給予 SMB 劑量。 然而，部分 CGM 不會傳送此資料，對於這些血糖來源，「始終啟用 SMB」和「碳水化合物後啟用 SMB」會為了安全起見被停用。
 
-## Smoothing data within AAPS
+## 在 AAPS 中平滑資料
 
-As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. 在[配置生成器](../SettingUpAaps/ConfigBuilder.md)中有三個可用的選項。
+自 **AAPS** 版本 3.2 起，**AAPS** 提供選項可以在 **AAPS** 中平滑資料，而不是在 CGM 應用程式中。 在[配置生成器](../SettingUpAaps/ConfigBuilder.md)中有三個可用的選項。
 
 ![平滑處理](../images/ConfBuild_Smoothing.png)
 
@@ -31,23 +31,23 @@ As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within
 | Libre 1 或 Juggluco    | 建議使用 |       |       |
 | Libre 2 和 3 使用 xDrip+ |      |       |  建議使用 |
 
-### Dexcom sensors
+### Dexcom 感測器
 
-#### Build Your Own Dexcom App
+#### 自己動手打造您的 Dexcom 應用程式
 
-When using [BYODA](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), your BG data is smooth and consistent. Furthermore, you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMBs, because the noise-level data is shared with AAPS.
+使用 [BYODA](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) 時，您的 BG 資料是平滑且一致的。 此外，您可以利用 Dexcom 的回彈平滑功能。 使用 SMBs 並沒有任何限制，因為噪音級別資料會與 AAPS 共享。
 
-#### xDrip+ with Dexcom G6 or Dexcom ONE
+#### xDrip+ 與 Dexcom G6 或 Dexcom ONE 配合使用
 
-Noise-level data and smooth BG readings are only shared with AAPS if you use xDrip+ [native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm). Using native mode, there are no restrictions in using SMBs.
+只有在使用 xDrip+ [原生模式](https://navid200.github.io/xDrip/docs/Native-Algorithm)時，噪音級別資料才會與 AAPS 共享。 使用原生模式時，使用 SMBs 並沒有任何限制。
 
-#### Dexcom G6 or Dexcom ONE with xDrip+ Companion Mode
+#### Dexcom G6 或 Dexcom ONE 與 xDrip+ 陪伴模式
 
-The noise-level data is not shared with AAPS using this method. Therefore, 'Enable SMB always' and 'Enable SMB after carbs' are disabled.
+使用此方法時，噪音級別資料不會與 AAPS 共享。 因此，「始終啟用 SMB」和「在碳水化合物後啟用 SMB」是停用的。
 
-### Freestyle Libre sensors
+### Freestyle Libre 感測器
 
-#### xDrip+ with FreeStyle Libre
+#### xDrip+ 與 FreeStyle Libre 配合使用
 
-None of the FreeStyle Libre systems (FSL1, FSL2, or FSL3) broadcast any information about the level of noise detected in the readings, and therefore 'Enable SMB always' and 'Enable SMB after carbs' are disabled for all setups using the FreeStyle Libre.
-In addition, many people have reported the FreeStyle Libre often produces noisy data.
+所有 FreeStyle Libre 系統 (FSL1, FSL2 或 FSL3) 均不傳送任何有關讀取中檢測到的噪音等級的信息，因此對於使用 FreeStyle Libre 的所有設置「始終啟用 SMB」和「在碳水化合物後啟用 SMB」都被停用。
+此外，許多人報告說 FreeStyle Libre 經常產生嘈雜的資料。
