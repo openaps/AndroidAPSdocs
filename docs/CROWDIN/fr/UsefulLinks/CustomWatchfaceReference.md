@@ -371,7 +371,7 @@ To illustrate this feature, I will take the example of AAPS (SteamPunk) watchfac
 
 ![CustomWatchface_4](../images/CustomWatchface_4.png)
 
-In this watchface, we will have to manage the [rotation of BG value](#background-management) (from 30 degrees to 330 degrees) on the right, the [dynamic range of avg_delta](#avg-delta-management) (scale up to 5mgdl, 10mgdl or 20mgdl according to value), the [rotation of pointer](#cwf-reference-dynamic-rotation-management) that should be synchronized to the scale, and also the different layer of the views...
+In this watchface, we will have to manage the [rotation of BG value](#background-management) (from 30 degrees to 330 degrees) on the right, the [dynamic range of avg_delta](#avg-delta-management) (scale up to 5mgdl, 10mgdl or 20mgdl according to value), the [rotation of pointer](#avg-delta-management) that should be synchronized to the scale, and also the different layer of the views...
 
 To be able to manage this Watchface, see below all the images included into the zip file:
 
@@ -502,8 +502,6 @@ Then we will use a serie of images, starting from `"image1":` to `"image8":`. Th
 - `image1` will define image to show when avg_delta is equal or close to `minData` and the image with the highest number (here `image8`) will be used to define the image that should be shown when avg_delta is equal or close to `maxData`
 - between -20mgdl and 20mgdl, the overall range is 40mgdl, devided by 8 (number of images provided), we will have 8 steps of 5mgdl
 - Now we can map background images according to avg_delta value, starting from the lowest values: between -20 and -15, and also between -15 and -10 we will use  `steampunk_gauge_mgdl_20` for the scale, then between -10 and -5 `steampunk_gauge_mgdl_10`, and so on until +15 and +20 where we will again use `steampunk_gauge_mgdl_20` background image
-
-(cwf-reference-dynamic-rotation-management)=
 
 **freetext2 to freetext4**
 
