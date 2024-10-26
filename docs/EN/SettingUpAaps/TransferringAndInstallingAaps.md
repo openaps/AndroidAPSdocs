@@ -4,7 +4,7 @@ In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), 
 
 The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, Xdrip+ or another CGM reciever app) to your Android smartphone, and then **install** the app(s). 
 
-Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](configuring-the-AAPS-loop.md).
+Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
 
 There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways: 
 
@@ -28,7 +28,7 @@ Right click in the free area below the files and folders in the Google Drive app
 The apk file should now be uploaded on Google Drive.
 
 
-### use the Google Drive app to excute the apk file for installation
+### Use the Google Drive app to execute the apk file for installation
 
 Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
 
@@ -54,7 +54,6 @@ Did you remeber to disallow the installation from Google Drive?
 ```
 
 Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
----
 
 ## Option 2. Use a USB cable to transfer files
 The second way to transfer the AAPS apk file is with a  [USB cable](https://support.google.com/android/answer/9064445?hl=en).
@@ -65,3 +64,4 @@ On your phone, you will have to allow installation from unknown sources. Explana
 
 Once you have transferred the file by dragging it across, to install it, open the "downloads" folder on the phone, press the AAPS apk and select "install". You can then proceed to the next step, [Setup Wizard](../SettingUpAaps/SetupWizard.md), which will help you setup the **AAPS** app and loop on your smartphone.    
 
+Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).

@@ -1,9 +1,9 @@
 (Profiles-profile-switch)=
 # Profile switch & Profile Percentage
 
-This section will explain what is a **Profile Switch** and **Profile Percentage** . You can learn about how to create a **Profiles** at [Config Builder - profile](Config-Builder-profile).
+This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn about how to create a **Profile** at [Config Builder - profile](../SettingUpAaps/SetupWizard.md#profile).
 
-When first embarking on your **AAPS** journey you will need to create a **Profile**, understand how to action a **Profile Switch** and the learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can offer be particularly beneficial for:
+When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can offer be particularly beneficial for:
 
 - the Menstrual Cycle - a percentage adjustment within a **Profile** can be set up in **Automations** in order to allow **AAPS** to accommodate for different stages of the hormone cycle and with predicted insulin resistance.
 
