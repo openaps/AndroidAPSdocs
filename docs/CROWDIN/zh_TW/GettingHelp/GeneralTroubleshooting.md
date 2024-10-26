@@ -12,7 +12,7 @@
 * [問題排除 AndroidStudio](TroubleshootingAndroidStudio)
 
 ### 設定
-* [設定檔](Profiles-troubleshooting-profile-errors)
+* 設定檔
 
   ![錯誤：基礎率未對齊到整點](../images/Screen_DifferentPump.png)
 

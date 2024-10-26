@@ -50,7 +50,7 @@
 (profilehelper-clone-profile)=
 ## 複製設定檔
 
-您可以直接從個人設置助手複製一個個人設置/個人設置切換。
+您可以直接從設定檔助手複製一個設定檔/設定檔切換。
 
 ![設定檔助手 複製設定檔/設定檔切換](../images/ProfileHelperClone.png)
 

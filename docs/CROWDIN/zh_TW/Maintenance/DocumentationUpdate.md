@@ -54,7 +54,7 @@
 
 ## 2021年4月
 
-- Omnipod 和美敦力藥量的[通訊設備](../Getting-Started/ComponentOverview#additional-communication-device)列表
+- Omnipod 和美敦力藥量的[通訊設備](../Getting-Started/CompatiblePumps.md#additional-communication-device)列表
 - AAPS 在[Nightscout](../SettingUpAaps/Nightscout.md#manual-nightscout-setup)中的預測
 
 ## 2021年3月
@@ -176,7 +176,7 @@
 - [Automate](../DailyLifeWithAaps/Automations.md)
 - [注射計算器](../DailyLifeWithAaps/AapsScreens.md#wrong-cob-detection) - 緩慢的碳水吸收
 - [Nightscout 安全性](../SettingUpAaps/Nightscout.md#security-considerations)
-- [個人設置時差](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#time-shift-of-the-circadian-percentage-profile)（更多詳細資訊）
+- [設定檔時差](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#time-shift-of-the-circadian-percentage-profile)（更多詳細資訊）
 - [遠端監控](../RemoteFeatures/RemoteMonitoring.md)
 - [什麼是閉環系統？](../Getting-Started/Introduction.md#what-does-hybrid-closed-loop-mean)
 

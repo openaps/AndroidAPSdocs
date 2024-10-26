@@ -213,7 +213,16 @@
 
   ![偏好設定 > 狀態燈](../images/Pref2020_OV_StatusLights2.png)
 
-(Preferences-advanced-settings-overview)=
+### 傳送一部分的注射嚮導結果
+
+設置使用注射嚮導時計算的注射的[預設百分比](../DailyLifeWithAaps/AapsScreens.md#section-j)。
+
+預設值為 100%：無需修正。 即便在這裡設置不同的值，您每次使用注射嚮導時仍然可以更改。
+
+當使用[微量注射](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)時，在這裡使用低於 100%的值可能會有幫助：
+* 對於消化緩慢的人來說：一次傳送所有的注射劑量可能會引起低血糖，因為胰島素的作用速度比消化快。
+* 為了留更多空間讓**AAPS**自行處理**血糖上升**。 在兩種情況下，**AAPS**將透過微量注射來補償缺失的注射部分，如果/當被認為合適時。
+
 ### 高級設置（總覽）
 
 ![偏好設定 > 高級設置](../images/Pref2021_OV_Adv.png)

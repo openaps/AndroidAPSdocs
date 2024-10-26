@@ -14,9 +14,9 @@ Bu, dokümantasyon ekibinin test etmesi için dahili bir sanal alan dosyasıdır
     1. CROWDIN çevirisi ve
     2. Dok. dağıtımını okuyun.
 
-You can dirctly jump from here to the first label in the sandbox1.md file - ["Jump"](sandbox1-this-is-a-test).
+You can dirctly jump from here to the first label in the sandbox1.md file - ["Jump"](../sandbox1.md#this-is-a-test).
 
-Buradan doğrudan bu dosyadaki ikinci etikete atlayabilirsiniz - ["Atla"](sandbox1-this-is-another-test).
+You can dirctly jump from here to the second label in this file - ["Jump"](../sandbox1.md#this-is-another-test).
 
 Here you can jump to the first sandbox file - ["Jump"](../sandbox1.md).
 

@@ -12,7 +12,7 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 * [Android Studio'da Sorun Giderme](TroubleshootingAndroidStudio)
 
 ### Ayarlar
-* [Profile](Profiles-troubleshooting-profile-errors)
+* Profile
 
   ![Hata: Bazal saatlere göre ayarlanamadı](../images/Screen_DifferentPump.png)
 

@@ -242,7 +242,7 @@ Les actions prises en charge dans la tuile d'action peuvent envoyer des requête
 
 ![Wear action tile, sample calculator](../images/wear_actions.png)
 
-[1] Via, le menu Wear OS, réglez l'option "Pourcentage de Calculateur" à "ON" pour afficher le pourcentage d'entrée dans la calculatrice de bolus. The default percentage is based on the phone settings in the"Overview" section ["Deliver this part of the bolus wizard result %"](../SettingUpAaps/Preferences.md#not-documented-anymore-please-fix-me) When the user does not provide a percentage, the default value from the phone is used. Configurez les autres paramètres de l'assistant bolus dans l'application téléphone via "Préférences" "Paramètres de l'assistant".
+[1] Via, le menu Wear OS, réglez l'option "Pourcentage de Calculateur" à "ON" pour afficher le pourcentage d'entrée dans la calculatrice de bolus. The default percentage is based on the phone settings in the "Overview" section ["Deliver this part of the bolus wizard result %"](../SettingUpAaps/Preferences.md#deliver-this-part-of-bolus-wizard-result) When the user does not provide a percentage, the default value from the phone is used. Configurez les autres paramètres de l'assistant bolus dans l'application téléphone via "Préférences" "Paramètres de l'assistant".
 
 ### Tuile AAPS(Cible Temp)
 

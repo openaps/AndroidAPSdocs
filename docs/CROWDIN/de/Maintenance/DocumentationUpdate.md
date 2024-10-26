@@ -54,7 +54,7 @@ Missing history from March 2022 to September 2024
 
 ## April 2021
 
-- List of [communication devices](../Getting-Started/ComponentOverview#additional-communication-device) for Omnipod and Medtronic pumps
+- List of [communication devices](../Getting-Started/CompatiblePumps.md#additional-communication-device) for Omnipod and Medtronic pumps
 - AAPS predictions in [Nightscout](../SettingUpAaps/Nightscout.md#manual-nightscout-setup)
 
 ## März 2021

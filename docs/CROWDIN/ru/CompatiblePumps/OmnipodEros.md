@@ -25,7 +25,7 @@
 
 > Компонент, который будет работать с AAPS и отправлять команды управления устройству Pod.
 > 
-> > - Поддерживаемый [телефон на Android с драйвером Omnipod](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) версии AAPS 2.8 и позднее с соответствующими [настройками компонентов](index-component-setup)
+> > - Supported [Omnipod driver Android phone](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) with a version of AAPS 2.8 and related components set up.
 
 - ![POD Omnipod](../images/omnipod/Omnipod_Pod.png)  **Устройство подачи инсулина**
 
