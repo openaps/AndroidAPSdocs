@@ -1,17 +1,17 @@
 # 手機
 
-The current version of **AAPS** requires an Android smartphone with Google Android 9.0 or above. So if you are thinking about a new phone, Android 9 is recommended at a minimum but optimally choose Android 13 or 14.
+當前版本的 **AAPS** 需要具備 Google Android 9.0 或以上的 Android 智慧型手機。 因此，如果您考慮購買新手機，建議至少選擇 Android 9，但最佳選擇是 Android 13 或 14。
 
-For older Android versions, older **AAPS** versions are available see: [Release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version).
+對於較舊的 Android 版本，可以使用舊版本的 **AAPS**，詳細資訊請見： [版本說明](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version)。
 
 - [已測試的手機清單](../CompatiblePhones/ListOfTestedPhones.md)
 - [Jelly Pro 設定](../CompatiblePhones/Jelly.md)
 - [華為設定](../CompatiblePhones/Huawei.md)
 
-# Phone Wallpaper
+# 手機壁紙
 
-If you want to decorate your phone with more **AAPS**, you can download your background image [here](../images/bg_phone.jpg)!
+如果您想以更多 **AAPS** 裝飾您的手機，可以 [在這裡下載背景圖片](../images/bg_phone.jpg)！
 
-![phone background](../images/bg_phone_thump.jpg)
+![手機背景](../images/bg_phone_thump.jpg)
 
-Design: Thiago :)
+設計：Thiago :)
