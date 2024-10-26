@@ -69,7 +69,7 @@
 
 ## 手動修正輸入的碳水化合物
 
-If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs).
+如果碳水化合物被高估或低估，則可以通過治療選項卡和動作選項卡 / 選單進行修正，如 [這裡](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs) 所述。
 
 
 ## 碳水化合物更正—如何從「治療」中刪除碳水化合物的項目
