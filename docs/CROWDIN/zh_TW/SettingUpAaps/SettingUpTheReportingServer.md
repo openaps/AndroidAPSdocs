@@ -11,13 +11,13 @@
 
 ## Nightscout
 
-Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). 他還允許照護者向 **AAPS** 發送遠端指令。
+Nightscout 是一個網頁應用程式，可以記錄和顯示您的 CGM 資料和 **AAPS** 資料並生成報告。 這是一個功能強大的平台，多年來已整合到 **AAPS** 中。 它使使用者和照顧者能夠近乎實時地追蹤患者的糖尿病資料（如果所有相關組件之間有足夠的網路連線，資料接收與提供之間僅幾秒鐘的時間可能會過去）。 他還允許照護者向 **AAPS** 發送遠端指令。
 
 Nightscout是一個開源軟體。 任何人都可以使用免費或付費服務建立和運作一個Nightscout伺服器。
 
-You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+您可以在 [Nightscout 專案的網站](http://nightscout.github.io/) 上找到更多資訊。
 
-### Option 1 - Set up your Nightscout server yourself
+### 選項 1 - 自行設置您的 Nightscout 伺服器
 
 建立你的Nightscout報告伺服器可能需要一個或多個基於網路的應用程式，這些應用程式需要維護。 為了獲得完全免費的服務，當提供商移除免費方案時，你可能需要遷移你的Nightscout網站和資料。
 
