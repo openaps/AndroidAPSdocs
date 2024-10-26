@@ -144,7 +144,8 @@ Help! My AAPS phone is broken/stolen/lost
 Glossary <./UsefulLinks/Glossary.md>
 FAQ <./UsefulLinks/FAQ.md>
 WearOS Smartwatch <./UsefulLinks/WearOsSmartwatch.md>
-WearOS Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
+WearOS Custom Watchfaces <./UsefulLinks/CustomWatchfaceReference.md>
+Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
