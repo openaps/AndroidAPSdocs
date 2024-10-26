@@ -2,9 +2,9 @@
 
 ## **AAPS History Browser**
 
-****AAPS**** stores all the user’s history (__**BG**__, treatments, basal, targets, __**Profile Switch**_,…) in its own database, that cannot be exported or copied and might require clean up after a while. In order to clean up, a review of 'older history’ is required in ****AAPS***. This can be done by uploading to Nightscout.
+**AAPS** stores all the user’s history (__**BG**__, treatments, basal, targets, **Profile Switch**,…) in its own database, that cannot be exported or copied and might require clean up after a while. In order to clean up, a review of 'older history’ is required in **AAPS**. This can be done by uploading to Nightscout.
 
-_****AAPS\**** history can be reviewed using the ‘History’ browser, from the Overview menu.
+**AAPS** history can be reviewed using the ‘History’ browser, from the Overview menu.
 
 ![History Browser](../images/Maintenance/historybrowser.png)
 
@@ -30,7 +30,7 @@ To return to real time select this button:
 
 ## **AAPS Statistics**
 
-****AAPS**** provides basic monitoring statistics.
+**AAPS** provides basic monitoring statistics.
 
 Most values are referenced by ADA 2023 [recommendations](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
 
@@ -54,13 +54,13 @@ TDD section is calculated on the go when you display the page, and takes a few s
 
 Time In Range (**TIR**): 70-180 mg/dl or 3.9-10 mmol/l.
 
-*TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
+**TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
 
 Time In Tight Range (TITR) 70-140 mg/dl or 3.9-7.8 mmol/l statistics are available below.
 
 **Discuss targets with your endo**
 
-Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow ___BG__ trends and monitor progress .
+Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress .
 
 ![Statistics](../images/Maintenance/statistics3.png)
 
