@@ -2,9 +2,9 @@
 
 ## 什麼是臨時目標，並且我可以在哪裡設置和配置他們？
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](../SettingUpAaps/YourAapsProfile.md#glucose-targets) for planned activities. 這是透過 **AAPS** 操控使用者的胰島素使用來實現的。
+一個 **臨時目標**（簡稱 **TT**）是 **AAPS** 的一項功能，允許用戶根據計畫活動更改其 [**血糖** 目標範圍](../SettingUpAaps/YourAapsProfile.md#glucose-targets)。 這是透過 **AAPS** 操控使用者的胰島素使用來實現的。
 
-Temporary targets can be defined within those boundaries :
+臨時目標可以在這些範圍內定義：
 
 |    | 臨時目標                  |
 | -- | --------------------- |
