@@ -292,11 +292,11 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 
 ### OpenAPS AMA
 
-All the settings for OpenAPS SMB are described in the dedicated section in [Key **AAPS** Features > Super Micro Bolus (SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama).
+All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama).
 
 ### OpenAPS SMB
 
-All the settings for OpenAPS SMB are described in the dedicated section in [Key **AAPS** Features > Super Micro Bolus (SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb).
+All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb).
 
 ## Absorption settings
 
@@ -420,6 +420,7 @@ Select which location service shall be used:
 ## Local alerts
 
 ![Local alerts](../images/Pref2020_LocalAlerts.png)
+
 Settings should be self-explanatory.
 
 ## Data choices
@@ -432,13 +433,12 @@ You can help develop **AAPS** further by sending crash reports to the developers
 
 ![Maintenance settings](../images/Pref2020_Maintenance.png)
 
-- Standard recipient of logs is <mailto:logs@aaps.app>.
+Standard recipient of logs is <mailto:logs@aaps.app>.
 
 ## Open Humans
 
 You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
 
 In Preferences, you can define when data shall be uploaded
-
 - only if connected to Wi-Fi
 - only if charging
