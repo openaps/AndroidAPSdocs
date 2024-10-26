@@ -3,7 +3,7 @@
 * **最低 Android 版本現在為 9.0。**
 * **資料不會遷移至新資料庫。**
 
-  請不要抱怨，這是非常重大的變更，無法避免。 因此，更新後 IOB、COB、治療等資料將被清除。 您必須建立新的[個人設置切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)並從零 IOB 和 COB 開始。
+  請不要抱怨，這是非常重大的變更，無法避免。 因此，更新後 IOB、COB、治療等資料將被清除。 您必須建立新的[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)並從零 IOB 和 COB 開始。
 
   請謹慎規劃更新！！！ 最好在無活動胰島素和碳水化合物的情況下進行更新。
 

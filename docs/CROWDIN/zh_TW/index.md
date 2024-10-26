@@ -103,7 +103,7 @@ AAPS 螢幕 <./DailyLifeWithAaps/AapsScreens.md>
 AAPS 主要功能 <./DailyLifeWithAaps/KeyAapsFeatures.md>
 COB 計算 <./DailyLifeWithAaps/CobCalculation.md>
 敏感度檢測 <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-個人設置切換 <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+設定檔切換 <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
 臨時目標 <./DailyLifeWithAaps/TempTargets.md>
 延長碳水化合物 <./DailyLifeWithAaps/ExtendedCarbs.md>
 自動化 <./DailyLifeWithAaps/Automations.md>

@@ -158,7 +158,7 @@ v3 是新的協議。 更加安全和高效
 ### 重要提示
 
 - **最低 Android 版本現在為 9.0。**
-- **資料未遷移到新資料庫。** 請勿抱怨，這是非常大的變更，因此無法遷移。 因此，更新後 IOB、COB、治療等資料將被清除。 您必須建立新的[個人設置切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)並從零 IOB 和 COB 開始。 請謹慎規劃更新！！！ 最好在無活動胰島素和碳水化合物的情況下進行更新。
+- **資料未遷移到新資料庫。** 請勿抱怨，這是非常大的變更，因此無法遷移。 因此，更新後 IOB、COB、治療等資料將被清除。 您必須建立新的[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)並從零 IOB 和 COB 開始。 請謹慎規劃更新！！！ 最好在無活動胰島素和碳水化合物的情況下進行更新。
 - 請使用相同版本的 AAPS 和 NSClient
 
 **請確保在更新至 3.0 後檢查並調整設置，如 [此處](../Maintenance/Update3_0.md) 所述。**
@@ -323,7 +323,7 @@ v3 是新的協議。 更加安全和高效
 - [新佈局，佈局選擇](../DailyLifeWithAaps/AapsScreens.md) @MilosKozak
 - 新[狀態燈佈局](../SettingUpAaps/Preferences.md#status-lights) @MilosKozak
 - [多重圖表支援](../DailyLifeWithAaps/AapsScreens.md#activate-optional-information) @MilosKozak
-- [個人設置助手](../SettingUpAaps/ProfileHelper.md) @MilosKozak
+- [設定檔助手](../SettingUpAaps/ProfileHelper.md) @MilosKozak
 - 動態目標調整的[視覺化](../DailyLifeWithAaps/AapsScreens.md#visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - 新[偏好設定佈局](../SettingUpAaps/Preferences.md) @MilosKozak
 - SMB 算法更新 @Tornado-Tim

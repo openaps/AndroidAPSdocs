@@ -4,7 +4,7 @@ In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), 
 
 La prochaine étape consiste à **transférer** le fichier APK **AAPS** (ainsi que d'autres applications dont vous pourriez avoir besoin, comme BYODA, Xdrip+ ou une autre application MGC) sur votre smartphone Android, puis à **installer** la/les application(s).
 
-Après avoir installé **AAPS** sur votre smartphone, vous pourrez passer à la [**configuration de la boucle AAPS**](configuring-the-AAPS-loop.md).
+Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
 
 Plusieurs possibilités existent pour transférer le fichier APK de **AAPS** de votre ordinateur vers le smartphone. Nous détaillons ici deux de ces possibilités :
 
@@ -27,7 +27,7 @@ Dans l'application Google Drive, faites un clic droit dans la zone libre en dess
 
 Vous devriez maintenant voir le fichier APK téléchargé sur Google Drive.
 
-### Utiliser l'application Google Drive pour installer le fichier APK
+### Use the Google Drive app to execute the apk file for installation
 
 Passez sur votre téléphone portable et lancez l'application Google Drive. Il s'agit d'une application installée par défaut, que vous retrouverez avec les autres applications Google ou en faisant une recherche sur le nom de l'application.
 
@@ -52,7 +52,7 @@ Vous devriez voir l'icône **AAPS** et pouvoir ouvrir l'application.
 Avez-vous pensé à désactiver l'autorisation d'installation depuis Google Drive ?
 ```
 
-## Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
 
 ## Option 2. Utiliser un câble USB pour transférer des fichiers
 
@@ -63,3 +63,5 @@ Transférez le fichier depuis son emplacement sur votre ordinateur vers le dossi
 Sur votre téléphone, vous devez autoriser l'installation à partir de sources inconnues. Vous trouverez les explications pour ce faire sur Internet (_par exemple_ [ici](https://www.expressvpn.com/fr/support/vpn-setup/enable-apk-installs-android/) ou [ici](https://www.frandroid.com/comment-faire/tutoriaux/184151_comment-installer-un-fichier-apk-sur-son-terminal-android)).
 
 Une fois que vous avez transféré le fichier en le faisant glisser de votre ordinateur à votre smartphone, pour l'installer, ouvrez le dossier "Downloads" sur le téléphone, cliquez sur l'APK AAPS et sélectionnez "installer". You can then proceed to the next step, [Setup Wizard](../SettingUpAaps/SetupWizard.md), which will help you setup the **AAPS** app and loop on your smartphone.
+
+Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).

@@ -25,7 +25,7 @@ Ces instructions sont pour configurer la pompe de génération Omnipod Eros (**P
 
 > Composant qui utilisera AAPS et enverra des commandes de contrôle au périphérique de communication Pod.
 > 
-> > - Smartphone compatible du [driver Omnipod Android](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) avec une version AAPS 2.8 et [configuration des composants](index-component-setup) associés
+> > - Supported [Omnipod driver Android phone](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) with a version of AAPS 2.8 and related components set up.
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Dispositif d'injection d'Insuline**
 

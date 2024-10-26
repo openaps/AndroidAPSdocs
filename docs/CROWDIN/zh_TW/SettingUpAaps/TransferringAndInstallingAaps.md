@@ -4,7 +4,7 @@
 
 接下來的步驟是將 **AAPS** APK 檔案（以及其他你可能需要的應用程式，例如 BYODA、Xdrip+ 或其他 CGM 接收應用程式）傳輸到你的 Android 智慧型手機，然後**安裝**這些應用程式。
 
-在智慧型手機上安裝 **AAPS** 後，你將能夠進入[**配置 AAPS 循環**](configuring-the-AAPS-loop.md)。
+安裝<strong>AAPS</strong>在智慧型手機後，您將能繼續進行[**配置 AAPS 循環**](../SettingUpAaps/SetupWizard.md)。
 
 有多種方式可以將 **AAPS** APK 檔案從電腦傳輸到智慧型手機。 在這裡，我們介紹兩種不同的傳輸方式：
 
@@ -27,7 +27,7 @@
 
 APK 檔案應該已經上傳到 Google 雲端硬碟。
 
-### 使用 Google 雲端硬碟應用程式來執行 APK 檔案進行安裝
+### 使用 Google Drive 應用程式執行 apk 檔案以進行安裝。
 
 切換到你的手機並啟動 Google 雲端硬碟應用程式。 他是預裝的應用程式，你可以在其他 Google 應用程式所在的位置找到他，或透過搜尋應用程式名稱來找到他。
 
@@ -52,7 +52,7 @@ APK 檔案應該已經上傳到 Google 雲端硬碟。
 你是否記得取消從 Google 雲端硬碟安裝應用程式的允許權限？
 ```
 
-## 請繼續進行 [配置 AAPS 循環](../SettingUpAaps/SetupWizard.md)。
+請繼續進行 [配置 AAPS 循環](../SettingUpAaps/SetupWizard.md)。
 
 ## 選項 2。 使用 USB 傳輸線來傳輸檔案
 
@@ -63,3 +63,5 @@ APK 檔案應該已經上傳到 Google 雲端硬碟。
 在手機上，你需要允許安裝來自未知來源的應用程式。 有關如何進行此操作的說明，你可以在網上找到（例如，請參閱[這裡](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) 或 [這裡](https://www.androidcentral.com/unknown-sources)）。
 
 將檔案拖入後，在手機上打開“下載”資料夾，按下 **AAPS** APK 檔案並選擇“安裝”。 然後您可以繼續到下一步，[設定嚮導](../SettingUpAaps/SetupWizard.md)，它將幫助您在智慧型手機上設置 **AAPS** 應用程式和循環。
+
+請繼續進行 [配置 AAPS 循環](../SettingUpAaps/SetupWizard.md)。

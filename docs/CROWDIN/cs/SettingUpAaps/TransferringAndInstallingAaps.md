@@ -4,7 +4,7 @@ In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), 
 
 Dalším krokem je **přenos** APK souboru **AAPS** (a dalších souborů, které můžete potřebovat, jako BYODA, Xdrip+ nebo jiná CGM aplikace) na váš Android telefon a jeho následná **instalace**.
 
-Po instalaci **AAPS** do vašeho telefonu budete pokračovat s [**Konfigurací smyčky AAPS**](configuring-the-AAPS-loop.md).
+Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
 
 Existuje několik možností, jak přenést **AAPS** APK soubor z vašeho počítače na váš chytrý telefon. Zde popíšeme dva různé způsoby:
 
@@ -27,7 +27,7 @@ Klikněte pravým tlačítkem do prázdného místa pod vašimi soubory a ložka
 
 Váš APK soubor by teď měl být nahrán ve vašem Google Drive.
 
-### Instalace APK souboru pomocí aplikace Google Drive
+### Use the Google Drive app to execute the apk file for installation
 
 Vezměte si váš telefon a spusťte aplikaci Google Drive. Jedná se předinstalovanou aplikaci a najdete ji na stejném místě, kde se nachází všechny vaše Google aplikace nebo pomocí vyhledávání.
 
@@ -52,7 +52,7 @@ Na telefonu byste měli vidět ikonu **AAPS** a měli byste mít možnost ji ote
 Nezapomněli jste zakázat intalaci aplikací z Google Drive?
 ```
 
-## Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
 
 ## Možnost 2. Přenos pomocí USB kabelu
 
@@ -63,3 +63,5 @@ Přenos souboru z jeho umístění ve vašem počítači do adresáře "Stažen�
 Ve vašem telefonu budete muset povolit instalaci aplikací z neznámých zdrojů. Popis jak to udělat je dostupný na internetu (_např._ [zde](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) nebo [zde](https://www.androidcentral.com/unknown-sources)).
 
 Jakmile jste přenesli soubor jeho přetažením, otevřete na telefonu složku "Stažené soubory", podržte ikonu AAPS apk souboru a vyberte "Instalovat". You can then proceed to the next step, [Setup Wizard](../SettingUpAaps/SetupWizard.md), which will help you setup the **AAPS** app and loop on your smartphone.
+
+Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).

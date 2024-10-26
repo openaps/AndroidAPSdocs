@@ -400,7 +400,7 @@ DynData 是你想要根據一些內部資料（如血糖值、血糖 等級、de
 
 ![CustomWatchface_4](../images/CustomWatchface_4.png)
 
-在此錶面中，我們需要管理 [BG 值旋轉](#background-management)（從 30 度到 330 度），[avg_delta 的動態範圍](#avg-delta-management)（根據值縮放至 5mgdl、10mgdl 或 20mgdl），[指針的旋轉](#cwf-reference-dynamic-rotation-management)應與縮放同步，還有檢視的不同圖層...
+在此錶面中，我們需要管理 [BG 值旋轉](#background-management)（從 30 度到 330 度），[avg_delta 的動態範圍](#avg-delta-management)（根據值縮放至 5mgdl、10mgdl 或 20mgdl），[指針的旋轉](#avg-delta-management)應與縮放同步，還有檢視的不同圖層...
 
 要管理此錶面，請參閱以下包含於 zip 檔案中的所有圖片：
 
@@ -531,8 +531,6 @@ DynData 是你想要根據一些內部資料（如血糖值、血糖 等級、de
 - `image1`將定義當avg_delta等於或接近`minData`時顯示的圖像，而編號最高的圖像（此處為`image8`）將用於定義當avg_delta等於或接近`maxData`時應顯示的圖像。
 - 在-20 mg/dL和20 mg/dL之間，總範圍是40 mg/dL，分為8個步驟（提供的圖像數量），每步5 mg/dL。
 - 現在我們可以根據avg_delta值來映射背景圖像，從最低值開始：在-20和-15之間以及-15和-10之間，我們將使用`steampunk_gauge_mgdl_20`來顯示刻度，然後在-10和-5之間使用`steampunk_gauge_mgdl_10`，依此類推，直到+15和+20，我們再次使用`steampunk_gauge_mgdl_20`背景圖像。
-
-(cwf-reference-dynamic-rotation-management)=
 
 **freetext2 到 freetext4**
 

@@ -12,7 +12,7 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 * [Fehlerbehebung Android Studio](TroubleshootingAndroidStudio)
 
 ### Einstellungen
-* [Profile](Profiles-troubleshooting-profile-errors)
+* Profile
 
   !['Fehler: Basal ist nicht auf Stunden ausgerichtet'](../images/Screen_DifferentPump.png)
 
