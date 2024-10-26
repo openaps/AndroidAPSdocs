@@ -2,11 +2,10 @@
 
 ## October 2024
 
-- [COB Calculation](../DailyLifeWithAaps/CobCalculation.md) @UnderCliffe10
+- Update of several pages: 
+  - [How long will it take](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up), [Component Overview](../DailyLifeWithAaps/CobCalculation.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- [How long will it take](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up) @emilise
-- [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
-- [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) @emilise
 - Technical work (deployment process for the documentation, files organisation...) @psonnerat & @emilise
 
 ***
@@ -20,7 +19,7 @@ Missing history from March 2022 to September 2024
 - [BG quality warning sign](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign) @tanja
 - [Medtronic pump update](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [Necessary checks after update to AAPS 3.0](Update3_0.md) @tanja
-- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
+- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
 - Update docs for AAPS 3.0 (partly) @xJoe
 - [Wear OS for AAPS 3.0](../UsefulLinks/WearOsSmartwatch.md) @peterleimbach
 
@@ -37,7 +36,7 @@ Missing history from March 2022 to September 2024
 
 - Best practices for calibrating a [libre 2 sensor](../CompatibleCgms/Libre2.md#best-practices-for-calibrating-a-libre-2-sensor)
 - [ISF](../UsefulLinks/FAQ.md) reformulation of impact
-- Update [troubleshooting Android stduio](../GettingHelp/TroubleshootingAndroidStudio)
+- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio)
 - Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
 
 ## October 2021
@@ -101,7 +100,7 @@ Missing history from March 2022 to September 2024
 
 - [Extended bolus only for Dana + Insight pumps](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [Insight deactivate vibration](../CompatiblePumps/Accu-Chek-Insight-Pump.md#vibration) (firmware 3.x only)
-- [Minimal request rate](../SettingUpAaps/Preferences.md#minimal-request-change-) to reduce number of notifications in open loop mode
+- [Minimal request rate](../SettingUpAaps/Preferences.md#minimal-request-change) to reduce number of notifications in open loop mode
 - [Patched Libre Link app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) - check if correctly patched
 - [Prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines) - more details
 
@@ -123,7 +122,7 @@ Missing history from March 2022 to September 2024
 - [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) - short explanation
 - [Careportal alternatives](../Usage/CPbefore26.md)
 - [Extended bolus](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
-- New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md#local-profile)
+- New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md)
 - Sample Setup - update Dexcom G6
 - [Version 2.6.0](ReleaseNotes.md#version-260) - major new features
 - [Wear complications](../UsefulLinks/WearOsSmartwatch.md)

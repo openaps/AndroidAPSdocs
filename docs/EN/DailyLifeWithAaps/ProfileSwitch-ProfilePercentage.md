@@ -94,4 +94,8 @@ It is always a question of which hour’s **Profile’s** settings should replac
 
 This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile**  changes.
 
+## Keep a profile switch for later use
 
+Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
+
+To do this, go to the tab [Treatments > Profile Switch](../DailyLifeWithAaps/AapsScreens.md#clone-profile-switch).
