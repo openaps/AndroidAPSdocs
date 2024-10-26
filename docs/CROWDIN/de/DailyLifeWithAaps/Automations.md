@@ -2,41 +2,41 @@
 
 ## Was ist eine Automatisierung?
 
-"**Automatisierung**" ist eine **AAPS**-Funktion, die das Diabetes-Management eines Nutzenden durch automatische Änderungen der Insulingaben vereinfacht. Durch **Automatisierungen** kann **AAPS** sehr gut an die Bedürfnisse des jeweiligen Nutzenden angepasst werden (Personalisierung).
+"**Automation**" is a feature within **AAPS** which can simplify a user’s diabetes management by making automatic changes to insulin delivery in order to fit within the individual's lifestyle needs.
 
-Eine **Automatisierung** sorgt dafür, dass in **AAPS** aufgrund einer oder mehrerer Bedingungen oder Auslöser Aktionen gestartet werden. Das können unregelmäßig wiederkehrende Ereignisse wie zum Beispiel niedrige oder hohe Glukosewerte oder eine bestimmte Menge negativen IoBs sein. Es können auch regelmäßig wiederkehrende Ereignisse, wie zum Beispiel Mahlzeiten, Sport zu bestimmten Uhrzeiten oder das Aufhalten einer Person in der Umgebung einer bestimmten GPS Position oder eines WLAN-Bereichs, sein.
+An **Automation** instructs **AAPS** to carry out a specific action 'automatically' as a result of one or more conditions or triggers. This can be for irregular episodic events, like low or high **BG**, a set amount of negative **IOB**. It can also be for reoccurring events, for example a meal or exercise at a certain time of day, or when the user is located within a certain distance of GPS location or WIFI SSID area.
 
-Es gibt eine Vielzahl von Automatisierungsmöglichkeiten und Du solltest Dich mit ihnen in der **AAPS**-App im Abschnitt Automatisierung vertraut machen. In den jeweiligen **AAPS**-Gruppen auf **Facebook** und **Discord** findest Du einige Beispiele für Automatisierungen aus dem echten Leben.
+There are a wide range of **Automation** options, and users are encouraged to study these within the **AAPS** app, in the **Automation** section. You can also search the **AAPS** user groups on **Facebook** and **Discord** for **Automation** examples from other users.
 
 ## Wie Automatisierung helfen kann
 
-1. 1) **Entscheidungsmüdigkeit verringern:** Der Hauptvorteil von **Automatisierungen** ist, den Nutzenden von der Last manueller Eingriffe in **AAPS** zu befreien. Die [Forschung](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) schätzt, dass Menschen mit Diabetes Typ 1 täglich durchschnittlich 180 zusätzliche Entscheidungen treffen müssen. **Automatisierungen** können diese mentale Belastung verringern und so Freiräume für andere Dinge des Lebens schaffen können.
+1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. Die [Forschung](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) schätzt, dass Menschen mit Diabetes Typ 1 täglich durchschnittlich 180 zusätzliche Entscheidungen treffen müssen. **Automatisierungen** können diese mentale Belastung verringern und so Freiräume für andere Dinge des Lebens schaffen können.
 
-1. **Potentiell verbesserte glykämische Kontrolle:** **Automatisierungen** können zum Beispiel dabei helfen, dass auch bei vollen Terminkalendern oder Vergesslichkeitsphasen, **temporäre Ziele** trotzdem gesetzt werden, wo es notwendig ist. Wenn beispielsweise ein Kind mit Diabetes für dienstags um 10.00h und donnerstags um 14.00h in der Schule Sport-Unterricht geplant ist, und dafür 30 Minuten vor Beginn ein hohes temporäres Ziel gesetzt werden muss, kann das automatisiert erfolgen.
+1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**.
 
-1. **Ermöglicht es AAPS sehr individuell** in speziellen Situation, wie es die Einstellungen vorsehen, mehr oder weniger aggressiv zu arbeiten. Wenn sich beispielsweise eine längere Phase mit negativem **IOB** mitten in der Nacht, als Zeichen für ein zu starkes Profil, abzeichnet, kann automatisiert ein temporäres schwächeres Profil (in %) gesetzt werden.
+1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
 
-Im Beispiel unten wird gezeigt, wie mit einer **Automatisierung** einzelne manuelle Schritte überflüssig gemacht werden. Der Benutzer hat eine **Automatisierung** erstellt, die um 5.00h am Morgen ein ‘Temporäres Ziel für Aktivität’ setzt, um mit optimalem **Glukosewert** und **IOB** in das um 6.00h beginnende Training gehen zu können:
+Im Beispiel unten wird gezeigt, wie mit einer **Automatisierung** einzelne manuelle Schritte überflüssig gemacht werden. The user has set an **Automation** to trigger a 5am ‘Temp Target Exercise’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
 
 ![Alt text](../images/automation_2024-02-12_20-54-49.png)
 
 ## Wichtige Vorüberlegungen, bevor mit Automatisierung gestartet wird
 
-1. Bevor Du mit **Automatisierungen** beginnst, solltest Du bereits eine gute und stabile Blutzucker-Kontrolle mit **AAPS** haben. **Automatisierungen** sollten nicht dazu verwendet werden schiefe/schlechte Einstellungen (Basalraten, Korrekturfaktoren oder Mahlzeitenfaktoren) auszugleichen (wird in Tiefe weiter unten beschrieben). Vermeide automatisierte **Profilwechsel**, um einen Glukosewert-Anstieg durch _z.B._ Mahlzeiten abzufangen. Diese Anstiege sind durch bestehende AAPS-Funktionen (SMBs etc.) besser abgedeckt.
+1. Before setting up an **Automation**, you should have reasonable **BG** control with **AAPS**. **Automations** should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
 
-1. So wie bei jeder Technik: **CGMs**, **Pumpen** und **Smartphones** können versagen: Technische Probleme oder Sensorfehler können eine laufende **Automatisierung** stören und müssen eventuell durch manuelles Eingreifen behoben werden.
+1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
 
-1. **Der Bedarf an Automatisierungen wird sich mit ändernden Tagesabläufen über die Zeit verändern**. Wenn zwischen Arbeits-, Schul- und Urlaubsphasen gewechselt wird, macht eine Kalendererinnerung zur Überprüfung der laufenden Automatisierungen Sinn (Automatisierungen lassen sich leicht aktivieren und de-aktiveren). Ein Beispiel ist: Du machst Urlaub und deswegen können/sollten Automatisierungen für Schulsport oder Dein tägliches Training ausgesetzt oder deren Timing angepasst werden.
+1. **Requirements for **Automations** are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need a Automation set up for school sports or daily exercise, or need to adjust the timings.
 
-1. Automatisierungen können miteinander in Konflikt stehen. Daher sollten neue Automatisierungen in einer gesicherten Umgebung sehr genau geprüft werden. Wichtig ist zu verstehen, warum eine bestimmte Automatisierung ggf. nicht wie Du es erwartet hast, ausgelöst wurde.
+1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
 
-1. Wenn Du die Autosens-Funktionalität nutzt, versuche, anstelle von **Profilwechseln** **temporäre Ziele** zu nutzen. **Temporäre Ziele** setzen Autosens nicht auf 0 zurück. **Profilwechsel** setzen Autosens zurück (reset).
+1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temporäre Ziele** setzen Autosens nicht auf 0 zurück. **Profilwechsel** setzen Autosens zurück (reset).
 
-1. Die meisten Automatisierungen sollten nur für einen **beschränkten Zeitraum** laufen. Danach kann **AAPS** die Situation erneut bewerten und die Automatisierung erneut starten, sofern das notwendig ist und die Startbedingungen weiterhin erreicht sind. Zum Beispiel: "Setze ein temporäres Ziel mit 120 mg/dl für 30 Minuten" oder "Setze ein Profil mit 110% für 10 Minuten" _und_ "Setze ein temporäres Ziel mit 90 mg/dl für 10 Minuten". Automatisierungen zu nutzen, um dauerhafte Änderungen (z.B. das Profil prozentual anzuheben), kann Hypoglykämien zu Folge haben.
+1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/l for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/l for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
 
 ## Wann kann ich mit Automatisierungen beginnen?
 
-Mit dem Start von Ziel 10.
+**Automations** can be started in **objective 10**.
 
 ## Wo finden sich die Automatisierungen in AAPS?
 
@@ -46,27 +46,28 @@ Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, 
 
 Um eine **Automatisierung** einzurichten, erstelle in **AAPS** eine 'Regel/Aufgabe'. Das kann so aussehen:
 
-* Vergebe einen Namen für die Aufgabe (Regel);
-* Wähle mindestens eine 'Bedingung' oder 'Auslöser'; und
-* Wähle eine ‘Aktion’;
-* Markiere das rechte obere Kästchen im **Automatisierungs-Ereignis**, um die Automatisierung zu aktivieren:
+* give your ‘rule’ a title;
+* select at least one ‘Condition’; and
+* select one ‘Action’;
+* check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
 
-![Alt text](../images/automation_2024-02-12_20-55-35.png)
+![Automatisierung](../images/automation_2024-10-26_17-48-05.png)
 
 
-Um eine **Automatisierungsregel** zu deaktivieren, deaktiviere das Kästchen links neben dem Namen der **Automatisierung**. Das folgende Beispiel zeigt eine **Automatisierung**  mit dem Titel „Low Glucose TT“ als aktiviert ('angehakt') oder deaktiviert (‘ausgehakt’).
+
+Um eine **Automatisierungsregel** zu deaktivieren, deaktiviere das Kästchen links neben dem Namen der **Automatisierung**. The example below shows an **Automation** entitled ‘Low Glucose TT’ as either activated (‘ticked') or deactivated (‘unticked’).
 
 ![Alt text](../images/automation_2024-02-12_20-56-08.png)
 
 
-Beim Einrichten einer Automatisierung kannst Du sie zuerst dadurch testen, dass unter "Aktion" die Option "Benachrichtigung" aktivierst. **AAPS** löst damit zunächst nur eine Benachrichtigung aus und nicht eine tatsächliche automatisierte Aktion. Wenn Du dann sicher bist, dass die Benachrichtigung zur richtigen Zeit bzw. Bedingung ausgelöst worden ist, kannst Du die **Automatisierungsregel** anpassen und die 'Benachrichtigung' durch die tatsächlich gewünschte 'Aktion' ersetzen.
+When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". **AAPS** löst damit zunächst nur eine Benachrichtigung aus und nicht eine tatsächliche automatisierte Aktion. Wenn Du dann sicher bist, dass die Benachrichtigung zur richtigen Zeit bzw. Bedingung ausgelöst worden ist, kannst Du die **Automatisierungsregel** anpassen und die 'Benachrichtigung' durch die tatsächlich gewünschte 'Aktion' ersetzen.
 
 ![Alt text](../images/automation_2024-02-12_20-55-05.png)
 
 ```{admonition} Important note
 :class: note
 
-Automatisierungen sind auch dann aktiv, wenn der Loop deaktiviert ist!
+**Automations** are still active when the Loop is disabled!
 ```
 
 
@@ -75,7 +76,7 @@ Automatisierungen sind auch dann aktiv, wenn der Loop deaktiviert ist!
 Es gibt Sicherheitsbeschränkungen für **Automatisierungen**:
 
 * Der **Glukosewert** muss zwischen 72 und 270 mg/dl (bzw. zwischen 4 und 15 mmol/l) liegen.
-* Der **Prozentsatz des Profils** muss zwischen 70% und 130% liegen.
+* The **Profile Percentage** has to be between 70% and 130%.
 * Es müssen 5 Minuten zwischen der Ausführung der einzelnen **Automatisierungen** (und der erstmaligen Ausführung) liegen.
 
 ## Negative Werte richtig nutzen
@@ -83,7 +84,7 @@ Es gibt Sicherheitsbeschränkungen für **Automatisierungen**:
 ```{admonition} Warning
 :class: warning
 
-Vorsicht bei der Auswahl eines negativen Wertes in der Automatisierung
+Please be careful when selecting a negative value in **Automation**
 ```
 
 Besonderer Vorsicht bedarf es, wenn in einer **Automatisierung** ein 'negativer Wert' innerhalb einer "kleiner als"-Bedingung genutzt werden soll. Zum Beispiel:
@@ -131,7 +132,7 @@ Mit den folgenden Auslösern können mehrer Bedinungen miteinander verknüpft we
 **Optionen:**
 
 * Passiven Standort verwenden: **AAPS** nutzt nur die Standorte, wenn sie von anderen Apps angefordert werden.
-* Netzwerkstandort verwenden: Bestimmung des Standorts mithilfe der Infrastruktur Deines Mobilfunkanbieters.
+* Use network location: Location of your Wi-Fi.
 * GPS-Standort (Achtung! Kann zu übermäßigem Akkuverbrauch führen!)
 
 ## Aktion
@@ -149,12 +150,12 @@ Mit den folgenden Auslösern können mehrer Bedinungen miteinander verknüpft we
 
 kein(e)
 
-**Aktion:** **Prozentsatz des Profils**
+**Actions:** **Profile Percentage**
 
 **Optionen:**
 
 * **Prozentsatz** muss zwischen 70% und 130% liegen
-* funktioniert nur, wenn das Profil zu dem Zeitpunkt mit 100% läuft
+* works only if the previous Percentage is 100%
 
 Sobald die Aktion hinzugefügt wurde, müssen die voreingestellten Werte durch Klicken auf Deine Wünsche angepasst werden.
 
@@ -162,13 +163,13 @@ Sobald die Aktion hinzugefügt wurde, müssen die voreingestellten Werte durch K
 
 ![Alt text](../images/automation_2024-02-12_20-57-29.png)
 
-## Die Reihenfolge innerhalb der Liste der Automatisierungen ist entscheidend
+## The order of the **Automations** in the list matters
  **AAPS** ordnet die Regeln in der Reihenfolge, wie sie erstellt wurden und beginnt bei der oberen Automatisierung mit dem Abarbeiten der **Automatisierungsliste**. Wenn beispielsweise ‘Hypobehandlung’ unter allen Automatisierungsregeln die wichtigste **Automatisierung** ist, sollte diese ganz oben auf der Liste Deiner **Automatisierungen** erscheinen:
 
 
 ![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
 
-Um die Reihenfolge der **Automatisierungsregeln** zu ändern, drücke und halte den Button mit den vier Strichen am rechten Rand der Anzeige. Sortiere die  **Automatisierungen** neu, indem Du die entsprechende Regel nach oben oder unten verschiebst.
+To reprioritize the **Automation** rules, click and hold the four-lines-button on the right side of the screen. Sortiere die  **Automatisierungen** neu, indem Du die entsprechende Regel nach oben oder unten verschiebst.
 
 ![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
 
@@ -192,9 +193,9 @@ Diese **Automatisierung** setzt beim Erreichen eines bestimmten **Glukosewerts**
 
 ![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
 
-Diese **Automatisierung** wurde für eine Person erstellt, die das Mittagessen an Werktagen (Mo - Fr) ungefähr zur gleichen Zeit auf der Arbeit isst, und nur ausgeführt wird, wenn die Person an einem bestimmten 'Standort' ist.  Sollte die Person nicht auf der Arbeit sein, wird diese Automatisierung folglich nicht ausgeführt werden.
+Diese **Automatisierung** wurde für eine Person erstellt, die das Mittagessen an Werktagen (Mo - Fr) ungefähr zur gleichen Zeit auf der Arbeit isst, und nur ausgeführt wird, wenn die Person an einem bestimmten 'Standort' ist.  So if the user is not at work one day, this **Automation** will be activated.
 
-Diese **Automatisierung** setzt in Vorbereitung auf das Mittagsessen um 13.00h für 30 Minuten ein niedriges temporäres Ziel (Bald Essen), um den Glukosewert auf bis 90 mg/dl (oder 5 mmol/l) zu bringen.
+This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive ‘BG, to 90mg (or 5 mmol/l) in preparation for lunch.
 
 Der Standort wird als 'Auslöser' eingestellt, indem die Koordinaten für Breitengrad und Längengrad wie unten angegeben werden:
 
@@ -214,14 +215,14 @@ Hier nun ein weiteres Beispiel für das frühzeitige Setzen eines **temporären 
 Die **Automatisierung** wird montags - freitags (2), wenn man sich im heimischen WLAN (3) befindet, ausgelöst.
 
 
-Es wird dann ein**temporäres Ziel** von 75 mg/dl für 30 Minuten (4) gesetzt. Den Standort zu berücksichtigen hat den Vorteil, dass die Automatisierung (zum Beispiel auf Reisen) nicht gestartet wird.
+It will then set a **Temp Target**  of 75mg/dl for 30 minutes (4). Den Standort zu berücksichtigen hat den Vorteil, dass die Automatisierung (zum Beispiel auf Reisen) nicht gestartet wird.
 
 ![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
 
-Der Screenshot zeigt die detaillierten Auslöser der **Automatisierung**:
+Here is the screenshot detailing the **Automation** triggers:
 
-1) Im “UND”-Rahmen (beide Bedingungen müssen erfüllt sein, damit ausgelöst wird) 1) Wiederholungszeit = Mo, Di, Mi, Do, Fr um 5:30h  
-1) WIFI SSID = My_Home_Wifi_Name
+1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
+1) WIFI SSID = My_Home_WiFi_Name
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
@@ -254,7 +255,9 @@ Die **Automatisierung** wird:
 
 * Problem: __Meine Automatisierungen werden durch AAPS nicht gestartet__
 
-Setze einen Haken im Kästchen in der rechten oberen Ecke des **Automatisierungs-Ereignis**, um sicherzustellen, dass die Regel aktiviert ist.
+Check the box to the right of **Automation** event is ‘ticked’ to ensure the rule is activated.
+
+## Troubleshooting
 
 ![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
 
@@ -262,7 +265,6 @@ Setze einen Haken im Kästchen in der rechten oberen Ecke des **Automatisierungs
 
 Überprüfe die Reihenfolge der Regeln in Deiner Liste, so es oben beschrieben wurde.
 
-## Alternativen zu einer Automatisierung
+## Alternatives to Automations
 
 Für fortgeschrittene Benutzer gibt es andere Möglichkeiten, Aufgaben mit IFTTT oder einer Drittanbieter-Android-App namens Automate zu automatisieren. 
-
