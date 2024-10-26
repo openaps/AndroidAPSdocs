@@ -242,7 +242,7 @@ Tiles 與任何手錶外觀「並存」使用。 這些Tiles會在所有錶面�
 
 ![Wear 操作 Tile，示例計算機](../images/wear_actions.png)
 
-[1] 透過 Wear OS 選單，將「計算機百分比」選項設置為「開」，以便在注射計算機中顯示百分比輸入。 預設的百分比是基於手機設定中的"首頁總覽"部分 ["傳送這部分的注射嚮導結果百分比"](../SettingUpAaps/Preferences.md#not-documented-anymore-please-fix-me) 當使用者未提供百分比時，將使用手機中的預設值。 透過手機應用程式的「偏好設定」-「嚮導設置」配置注射計算機的其他參數。
+[1] 透過 Wear OS 選單，將「計算機百分比」選項設置為「開」，以便在注射計算機中顯示百分比輸入。 預設百分比是根據手機設定在「總覽」部分的 [「傳送這部分的注射嚮導結果 %」](../SettingUpAaps/Preferences.md#deliver-this-part-of-bolus-wizard-result) 當使用者未提供百分比時，將使用手機的預設值。 透過手機應用程式的「偏好設定」-「嚮導設置」配置注射計算機的其他參數。
 
 ### AAPS（臨時目標）Tile
 
