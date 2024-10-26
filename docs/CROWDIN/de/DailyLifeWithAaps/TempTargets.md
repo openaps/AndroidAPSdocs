@@ -2,7 +2,14 @@
 
 ## Was sind temporäre Ziele und wie nutzt und richtet man sie ein?
 
-Mit der **AAPS**-Funktion **Temporäres Ziel** (oder **TT** - temp target) kannst Du Dein **Glukoseziel** vor geplanten Aktivitäten anpassen. **AAPS** verändert dadurch die Insulingaben.
+A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](../SettingUpAaps/YourAapsProfile.md#glucose-targets) for planned activities. **AAPS** verändert dadurch die Insulingaben.
+
+Temporary targets can be defined within those boundaries :
+
+|         | Temporäres Ziel        |
+| ------- | ---------------------- |
+| Minimum | 4 mmol/l or 72 mg/dL   |
+| Maximum | 15 mmol/l or 225 mg/dL |
 
 In **AAPS** gibt es drei voreingestellte **Temporäre Ziele**: eines für Aktivität (**Temporäres Ziel für Aktivität**), eines für Mahlzeiten (**Temporäres Ziel für 'Bald essen'**) und eines für eine bevorstehende Hypoglykämie (**Temporäres Ziel für Hypo**). **Temporäres Ziel** findest Du im Reiter **AKTIONEN**.
 

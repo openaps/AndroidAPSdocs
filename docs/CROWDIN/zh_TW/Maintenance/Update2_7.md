@@ -17,8 +17,8 @@
 ## 完成考試
 
 - AAPS 2.7 包含新的目標 11（在以後的版本中重新編號為目標 10！）針對[自動化](../DailyLifeWithAaps/Automations.md).
-- 您必須完成考試（[目標 3 和 4](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge)）才能完成[目標 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf).
-- 例如，如果你尚未完成 [目標 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) 的測驗，則必須完成測驗後才能開始 [目標 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf)。
+- 您必須完成考試（[目標 3 和 4](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge)），才能完成 [目標 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf)。
+- 例如，如果您尚未完成 [目標 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) 的考試，則在開始 [目標 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf) 之前，您必須先完成考試。
 - 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
 
 ## 設置主密碼

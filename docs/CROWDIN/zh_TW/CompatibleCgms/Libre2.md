@@ -166,7 +166,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 
 -   如果 AAPS 在手機處於飛行模式時無法接收血糖值，請參閱[xDrip+ 設定頁面](./xDrip.md#identify-receiver)，使用「識別接收器」。
 
-目前，將 Libre 2 作為血糖來源時，無法在 SMB 演算法中啟用「始終啟用 SMB」和「碳水後啟用 SMB」功能。 Libre 2 的血糖值不夠平滑，無法安全使用。 詳情請參閱[平滑血糖資料](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)。
+目前，將 Libre 2 作為血糖來源時，無法在 SMB 演算法中啟用「始終啟用 SMB」和「碳水後啟用 SMB」功能。 Libre 2 的血糖值不夠平滑，無法安全使用。 請參見 [平滑血糖資料](../CompatibleCgms/SmoothingBloodGlucoseData.md) 獲得更多詳情。
 
 (Libre2-experiences-and-troubleshooting)=
 ### 經驗與問題排除

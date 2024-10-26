@@ -24,7 +24,7 @@ The documentation relating to the config builder is available [here](../SettingU
 
 ## Préférences
 
-L'écran des préférences peut être atteint via le menu à trois points en haut à droite de l'**écran d'accueil** de AAPS. Il vous donne la possibilité de changer la configuration de **tous les plugins activés au même endroit**.
+L'écran des préférences peut être atteint via le menu à trois points en haut à droite de l'**écran d'accueil** de AAPS. It gives you the possibility to change the configuration of **all enabled plugins at once**.
 
 C'est une bonne façon de faire si vous n'êtes pas vraiment sûr de l'endroit où chercher une option, mais cela peut être un peu fastidieux si vous savez que vous voulez changer la configuration pour un plugin spécifique seulement.
 
@@ -32,7 +32,7 @@ The documentation of the preferences is available [here](../SettingUpAaps/Prefer
 
 ## Préférences du plugin
 
-L'écran des **préférences du plugin** se trouve dans le menu à trois points en haut à droite de l'**écran d'accueil** de AAPS. Il donne la possibilité de modifier la configuration du plugin actuellement à l'écran.
+L'écran des **préférences du plugin** se trouve dans le menu à trois points en haut à droite de l'**écran d'accueil** de AAPS. It provides the possibility to change the configuration of the plugin currently on screen.
 
 C'est une bonne façon de faire si vous savez que _par ex._, vous voulez juste changer la configuration pour BYODA. Sélectionnez alors l'onglet "BYODA" dans le menu supérieur de **AAPS**, puis une fois sur la page BYODA, en haut à droite, sélectionnez le menu à trois points, puis l'entrée "Préférences du plugin". Vous arrivez directement sur la section des préférences du plugin BYODA.
 

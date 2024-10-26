@@ -218,7 +218,7 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 #### Why does AAPS say 'BG source doesn't support advanced filtering'?
 
-Если у вас иной источник данных ГК чем Dexcom G5 или G6 в нативном режиме xDrip, вы получите это уведомление на вкладке OpenAPS. Для более подробной информации см [Сглаживание данных ГК](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Если у вас иной источник данных ГК чем Dexcom G5 или G6 в нативном режиме xDrip, вы получите это уведомление на вкладке OpenAPS. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
 
 ### Pump
 
@@ -262,7 +262,7 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 ### Wallpaper
 
-You can find the AAPS wallpaper for your phone on the [phones page](../CompatiblePhones/ListOfTestedPhones.md#phone-background).
+You can find the AAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones.md#phone-wallpaper).
 
 ### Daily usage
 

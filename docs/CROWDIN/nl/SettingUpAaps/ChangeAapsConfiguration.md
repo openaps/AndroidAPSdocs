@@ -24,7 +24,7 @@ The documentation relating to the config builder is available [here](../SettingU
 
 ## Instellingen
 
-The preferences dialogue can be reached via the top right three dot menu on the **home screen** of AAPS. It gives you the possibilty to change the configuration of **all enabled plugins at once**.
+The preferences dialogue can be reached via the top right three dot menu on the **home screen** of AAPS. It gives you the possibility to change the configuration of **all enabled plugins at once**.
 
 This is a good route if you are not really sure where to look for an configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
 
@@ -32,7 +32,7 @@ The documentation of the preferences is available [here](../SettingUpAaps/Prefer
 
 ## Plugin preferences
 
-The **plugin preferences** dialogue can be reached via the top right three dot menu on the home screen of AAPS. It provides the possibilty to change the configuration of the plugin currently on screen.
+The **plugin preferences** dialogue can be reached via the top right three dot menu on the home screen of AAPS. It provides the possibility to change the configuration of the plugin currently on screen.
 
 This is a good route if you know that _e.g._ you _just_ want to change the configuration for BYODA. Then, you would select the tab "BYODA" on the top menu of **AAPS**, and then once you are on the BYODA page, in the top right, select the three dot menu and then the "plugin preferences" entry. You are taken directly to the preferences dialogue specifically for the BYODA plugin.
 

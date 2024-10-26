@@ -69,7 +69,7 @@ This could be because:
 
 ## Įvestų angliavandenių koregavimas rankiniu būdu
 
-If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](AapsScreens.md#carb-correction).
+If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs).
 
 
 ## Carb correction - how to delete a Carb entry from Treatments

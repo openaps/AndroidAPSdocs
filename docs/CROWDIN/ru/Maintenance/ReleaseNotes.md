@@ -292,7 +292,7 @@ v3 - новый протокол. Более безопасный и эффек�
 ### Новые возможности
 
 - [Omnipod Eros support](../CompatiblePumps/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
-- [bolus advisor](../SettingUpAaps/Preferences.md#quick-wizard) & [eating reminder](../DailyLifeWithAaps/AapsScreens.md#eating-reminder) @MilosKozak
+- [bolus advisor](../SettingUpAaps/Preferences.md#quick-wizard) & [eating reminder](../DailyLifeWithAaps/AapsScreens.md#section-j) @MilosKozak
 - [New watchface](../UsefulLinks/WearOsSmartwatch.md#new-watchface-as-of-aaps-28) @rICTx-T1D
 - Улучшение связи с Dana RS @MilosKozak
 - Удален алгоритм "Неизмененные значения CGM " в SMB для оригинального приложения Dexcom
@@ -314,7 +314,7 @@ v3 - новый протокол. Более безопасный и эффек�
 
 **Make sure to check and adjust settings after updating to 2.7 as described** [here](../Maintenance/Update2_7.md).
 
-You need at least start [objective 11 (in later versions objective 10!)](../SettingUpAaps/CompletingTheObjectives.md#objective-10-automation) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf). Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
+You need at least start [objective 11 (in later versions objective 10!)](../SettingUpAaps/CompletingTheObjectives.md#objective-10-automation) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf). Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
 
 ### Новые возможности
 

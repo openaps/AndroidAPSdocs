@@ -1,27 +1,19 @@
-(Phones-list-of-tested-phones)=
+# List of tested Phones
+
+Generic recommendations for choosing a phone suitable for **AAPS** can be found [here](../Getting-Started/Phones.md).
+
+We currently don't have a generic list of tested phones working with **AAPS**.
+If you have questions regarding a specific phone model, please search or ask in our [Facebook or Discord community](../GettingHelp/WhereCanIGetHelp.md).
+
+You may also refer to this outdated and **not maintained anymore** [list of compatible phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?gid=698881435#gid=698881435).
 
 # Liste der getesteten Smartphones
 
-Es gibt hinter den Kulissen einen sehr hart arbeitenden Menschen, der dafür verantwortlich ist, eine aktuelle Liste aller Smartphones/Smartwatches zu pflegen, die mit dem Omnipod Dash, als einer der neuesten Zugänge zum sich ständig erweiternden Kreis der bluetoothfähigen Insulinpumpen, die mit dem AAPS/OpenAPS Ökosystem loopbar sind.
+Users of the [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) pump can go through the list of the [tested phones for Omnipod Dash](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY).
+This list provides user feedback on the usage of a phone along with **AAPS** and Omnipod Dash pump. It can help you check if your phone and pump has been used successfully by other users.
 
-Unser Betreuer hat viel Zeit und Mühe damit verbracht, dass es für Jeden leicht ist, Daten in die Tabelle einzugeben; über ein Google-Formular mit vorgefüllten Überschriften zur einfachen Anwendung! Dadurch wird sichergestellt, dass die vorhandenen Daten der Tabellen nicht versehentlich überschrieben oder gelöscht werden können. Diese Version basiert auf dem Erfolg des ersten Sheets, das nicht mehr gepflegt wurde und nutzt hierzu wiederum Google Sheets.
+The document is read-only. With CRTL-F, you can search in the text of the Google sheet.
 
-Der neue Treiber für den  DASH Pod konnte sehr effizient und schnell erstellt werden, Dank der Einfachheit von Google Spreadsheets, welches den Anwendern einen leichten Zugang ermöglicht, der engen Kommunikation zwischen den frühen Anwendern und der Fähigkeit, ihr gemeinsames Wissen und die Erkenntnisse zu bündeln, die während der frühen Test- und Feedback-Phasen der Dash-Pump-Pod-Treiber gewonnen wurden. Die Ergebnisse, Informationen und Energie, die von den zahlreichen Early Adoptern bereitgestellt wurden, um Schritt für Schritt Feedback zu jeder neuen Version der Dash Bluetooth-Treiber zu geben, wird deutlich, wenn Du die umfassende Vergleichs- und Kontrastliste der Hardware öffnest, die für das Loopen mit dem Omnipod-Dash, geeignet ist, mit vielen Android Phones und Smartwatches getestet und die als kompatibel eingestuft wird. Darüber hinaus sind inkompatibleren Setups auch in dieser Spreadshee enthalten, so dass neue Benutzer wissen, welche Hardware sie aufgrund von Verbindungsgeschwindigkeit oder -stärke vermeiden können.
-
-Wenn in Zukunft wieder eine andere Hardwareliste benötigt wird und Jemand sich um diese Liste kümmern möchte, kontaktiere uns bitte!
-
-The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
-
-Mit STRG-F kannst Du im Text der Google Tabelle suchen. Die Tabelle ist schreibgeschützt. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
-
-Nachdem Du die Formulardaten ausgefüllt hast, wird der Betreuer die Daten überprüfen und sie zur Veröffentlichung freigeben!
+To record your test of a phone, please fill in this [form](https://forms.gle/g7GbSkMCTfFrWKjSA). After you fill in the form data, the maintainer will check the data and approve it for publishing!
 
 Im Falle von Fragen oder Problemen mit der Tabelle kontaktiere uns bitte direkt oder über einen GitHub Issue für das openaps/AndroidAPSDocs Projekt.
-
-(Phones-phone-background)=
-
-# Handy Hintergrundbild
-
-![phone background](../images/bg_phone_thump.jpg) </br>
-Design: Thiago :) </br>
-If you want to decorate your phone with more AAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)

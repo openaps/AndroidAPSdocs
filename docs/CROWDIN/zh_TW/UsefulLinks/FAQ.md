@@ -218,7 +218,7 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 #### 為什麼 AAPS 顯示“血糖來源不支援進階過濾”？
 
-如果你使用的是 Dexcom G5 或 G6 以外的 CGM/FGM 且在 xDrip 原生模式中運作，你將在 AAPS OpenAPS 選項卡中收到此提示。 詳情請參閱[xDrip 中的血糖資料平滑處理](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)。
+如果你使用的是 Dexcom G5 或 G6 以外的 CGM/FGM 且在 xDrip 原生模式中運作，你將在 AAPS OpenAPS 選項卡中收到此提示。 請參閱 [平滑血糖資料](../CompatibleCgms/SmoothingBloodGlucoseData.md) 獲得更多細節。
 
 ### 幫浦
 
@@ -262,7 +262,7 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 ### 桌布
 
-您可以在[手機頁面](../CompatiblePhones/ListOfTestedPhones.md#phone-background)上找到適合您手機的 AAPS 壁紙。
+您可以在 [手機頁面](../Getting-Started/Phones.md#phone-wallpaper) 找到適合您手機的 AAPS 壁紙。
 
 ### 日常使用
 

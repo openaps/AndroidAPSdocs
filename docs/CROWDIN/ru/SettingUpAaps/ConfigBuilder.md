@@ -67,9 +67,9 @@ Your local profiles are part of [exported settings](../Maintenance/ExportImportS
 
 ![Выгрузить локальный профиль в NS](../images/LocalProfile_UploadNS_AASP30.png)
 
-#### Изменить профиль в редакторе профиля Nighscout
+#### Change profile in Nightscout profile editor
 
-Можно синхронизировать изменения в профиле с локальными профилями в редакторе профиля Nighscout. The settings can be found in [NSClient preferences](../SettingUpAaps/Preferences.md#nsclient).
+You can synchronize changes to the profile in the Nightscout profile editor to local profiles. The settings can be found in [NSClient preferences](../SettingUpAaps/Preferences.md#nsclient).
 
 Необходимо клонировать активные данные всей базы данных Nightscout для профилей, а не просто профиль с синей стрелкой! Новые записи базы данных сохраняют текущую дату и могут быть активированы на вкладке "local profile".
 
@@ -248,7 +248,7 @@ Select the blood glucose source you are using - see [BG Source](../Getting-Start
 
 ## Цели (обучающая программа)
 
-AAPS содержит обучающую программу с рядом задач (целей), которые следует выполнить шаг за шагом. Подобная организация алгоритма безопасно проведет вас к созданию замкнутой системы. Она гарантирует, что вы все правильно наладили и понимаете, что именно делает система. Это единственный способ понять, что вы можете доверять системе.
+AAPS has a learning program (objectives) that you have to fulfill step by step. Подобная организация алгоритма безопасно проведет вас к созданию замкнутой системы. Она гарантирует, что вы все правильно наладили и понимаете, что именно делает система. Это единственный способ понять, что вы можете доверять системе.
 
 You should [export your settings](../Maintenance/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. В дальнейшем, если вам потребуется заменить смартфон (новая покупка, повреждение и т. д.) вы можете просто импортировать эти параметры.
 
@@ -256,7 +256,7 @@ See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more info
 
 ## Терапия
 
-На вкладке Терапия отражены назначения, загруженные из nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../DailyLifeWithAaps/AapsScreens.md#carb-correction).
+На вкладке Терапия отражены назначения, загруженные из nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs).
 
 ## General
 
@@ -307,7 +307,7 @@ Displays the current state of your loop and buttons for most common actions (see
 
 #### сокращенные имена табул
 
-Выберите каким образом будут отображаться заголовки вкладок в AAPS: полностью (НАЧАЛО, ДЕЙСТВИЯ, MEDTRONIC, ЗАМКНУТЫЙ ЦИКЛ и т.п.) или сокращенно (НАЧАЛО, ДЕЙСТВ, MDT, ЗЦ и т.п.)
+Choose whether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### Показать поле примечаний в диалогах терапии
 
@@ -319,7 +319,7 @@ Choose if you want to have [status lights](../SettingUpAaps/Preferences.md#statu
 
 #### Расширенные настройки
 
-**Подать часть инсулина, предложенного мастером болюса**: При пользовании алгоритмом микроболюсов SMB многие не колют все 100% сразу, а дают, например, 75% и позволяют алгоритму SMB самостоятельно справляться с остальным. При такой настройке можно выбрать процентное значение по умолчанию, с которым должен работать мастер болюса. Если этот параметр составляет 75%, а требуемое конечное количество инсулина 10 ед., то мастер болюса предложит только 7,5 единиц.
+**Подать часть инсулина, предложенного мастером болюса**: При пользовании алгоритмом микроболюсов SMB многие не колют все 100% сразу, а дают, например, 75% и позволяют алгоритму SMB самостоятельно справляться с остальным. In this setting, you can choose a default value for the percentage the bolus wizard should calculate with. Если этот параметр составляет 75%, а требуемое конечное количество инсулина 10 ед., то мастер болюса предложит только 7,5 единиц.
 
 **Включить функции суперболюса в калькуляторе болюса** (Суперболюс отличается от *супер микро болюсов SMB *!): Применяйте с осторожностью и не включайте, пока не узнаете, в чем принцип его работы. В общем виде база следующих двух часов добавляется к болюсу и при этом активируется нулевой временный базал. **Другие функции алгоритма AAPS будут отключены - поэтому применяйте с осторожностью! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../DailyLifeWithAaps/KeyAapsFeatures.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 

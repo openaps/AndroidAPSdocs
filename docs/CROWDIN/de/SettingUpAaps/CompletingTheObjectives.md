@@ -115,18 +115,7 @@ Geschätzte Zeit, um dieses Ziel abzuschließen: **7 Tage**.
 This **Objective** requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal). This value can be set in [Preferences > OpenAPS](../SettingUpAaps/Preferences.md#max-uh-a-temp-basal-can-be-set-to).
 If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
 
-You might wish to set your BG target higher than usual until you are comfortable with **AAPS**' calculations and settings.
-
-The targets can be defined within those boundaries :
-
-|         | Profile _low_ [target](../SettingUpAaps/YourAapsProfile.md#glucose-targets) | Profile _high_ target  | [Temporary target](../DailyLifeWithAaps/TempTargets.md) |
-| ------- | --------------------------------------------------------------------------- | ---------------------- | ------------------------------------------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL                                                        | 5 mmol/l or 90 mg/dL   | 4 mmol/l or 72 mg/dL                                    |
-| Maximum | 10 mmol/l or 180 mg/dL                                                      | 15 mmol/l or 225 mg/dL | 15 mmol/l or 225 mg/dL                                  |
-
-Your **BG target** is a core value and all of **AAPS** calculations are based on it. Er ist nicht der Zielbereich, in dem Du normalerweise versuchst Deine Glukosewerte zu halten. Wenn Du einen sehr weiten Zielbereich (z. B. 3 mmol/l [50 mg/dl oder weiter] wählst, wirst Du nur wenige **AAPS**-Eingriffe feststellen. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate changes are rarely suggested.
-
-You may wish to experiment with adjusting your **BG target** in your **Profile** being in a tighter range (say, 1 or less mmol/l [20 mg/dl or less] wide) and observe the resulting behavior.
+You might wish to set your [**Profile** BG target](../SettingUpAaps/YourAapsProfile.md#glucose-targets) higher than usual until you are comfortable with **AAPS**' calculations and settings. You may wish to experiment with adjusting your **BG target** in your **Profile** being in a tighter range (say, 1 or less mmol/l [20 mg/dl or less] wide) and observe the resulting behavior.
 
 ![Stop sign](../images/sign_stop.png)
 

@@ -130,7 +130,7 @@
 
 ## 2020年1月
 
-- [手動碳水修正](../DailyLifeWithAaps/AapsScreens.md#carb-correction) 用於錯誤的碳水輸入
+- [手動碳水化合物修正](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs) 用於錯誤的碳水化合物條目
 - [編輯文件](../SupportingAaps/HowToEditTheDocs.md) 時的圖片大小
 
 ## 2019年12月

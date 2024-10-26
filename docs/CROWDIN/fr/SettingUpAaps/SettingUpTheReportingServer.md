@@ -11,11 +11,13 @@ Nous recommandons l'utilisation de Nightscout.
 
 ## Nightscout
 
-Nightscout est une plateforme puissante intégrée à **AAPS** depuis de nombreuses années. Il permet aux utilisateurs et aux aidants de suivre les données sur le diabète du patient en quasi temps réel (il y aura au maximum quelques minutes entre la réception des données et leur visibilité si la connexion Internet est suffisante entre tous les composants impliqués). Il permet également aux soignants d'envoyer des commandes à distance à **AAPS**.
+Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). Il permet également aux soignants d'envoyer des commandes à distance à **AAPS**.
 
 Nightscout est un logiciel open-source. N'importe qui peut créer et maintenir un serveur Nightscout, en utilisant des services gratuits ou payants.
 
-### Option 1 - Configurez votre serveur Nightscout vous-même
+You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+
+### Option 1 - Set up your Nightscout server yourself
 
 La création de votre serveur de reporting Nightscout peut nécessiter une ou plusieurs applications en ligne qu'il faudra ensuite maintenir. Afin de bénéficier d'un service totalement gratuit, vous aurez peut-être à migrer votre site Nightscout et vos données, si ou quand le fournisseur supprimera l'option gratuite.
 

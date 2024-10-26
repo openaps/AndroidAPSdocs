@@ -11,11 +11,13 @@
 
 ## Nightscout
 
-Nightscout — мощная платформа, интегрированная в **AAPS** уже много лет. Он позволяет пользователям и лицам, осуществляющим уход, отслеживать данные состоянии гликемии и других параметрах пациента практически в режиме реального времени (между получением и предоставлением данных может пройти всего несколько минут при хорошем интернет-соединении между всеми компонентами). Он также позволяет родителям и опекунам отправлять удаленные команды на **AAPS**.
+Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). Он также позволяет родителям и опекунам отправлять удаленные команды на **AAPS**.
 
 Nightscout существует как программное обеспечение с открытым исходным кодом. Любой человек может создать и управлять сервером Nightscout используя либо бесплатные, либо платные сервисы.
 
-### Вариант 1 - настройте сервер Nightscout самостоятельно
+You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+
+### Option 1 - Set up your Nightscout server yourself
 
 Создание сервера Nightscout может потребовать одного или нескольких веб-приложений, которые будут нуждаться в обслуживании. Чтобы получить совершенно бесплатную услугу, вам придется переносить сайт и данные Nightscout, если провайдер прекратит бесплатное обслуживание.
 

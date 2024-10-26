@@ -130,7 +130,7 @@ Missing history from March 2022 to September 2024
 
 ## Janvier 2020
 
-- [Manual carb correction](../DailyLifeWithAaps/AapsScreens.md#carb-correction) for faulty carb entries
+- [Manual carb correction](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs) for faulty carb entries
 - [Image size](../SupportingAaps/HowToEditTheDocs.md) when editing docs
 
 ## Décembre 2019

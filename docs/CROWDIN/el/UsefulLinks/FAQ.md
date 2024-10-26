@@ -218,7 +218,7 @@ In AAPSClient check 'Connection settings'. Maybe you actually are not in an allo
 
 #### Why does AAPS say 'BG source doesn't support advanced filtering'?
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AAPS OpenAPS-tab. Δείτε [ Εξομάλυνση δεδομένων γλυκόζης αίματος ](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) για περισσότερες λεπτομέρειες.
+If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AAPS OpenAPS-tab. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
 
 ### Pump
 
@@ -262,7 +262,7 @@ The change of a cannula however does not use the "prime infusion set" function o
 
 ### Wallpaper
 
-You can find the AAPS wallpaper for your phone on the [phones page](../CompatiblePhones/ListOfTestedPhones.md#phone-background).
+You can find the AAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones.md#phone-wallpaper).
 
 ### Daily usage
 

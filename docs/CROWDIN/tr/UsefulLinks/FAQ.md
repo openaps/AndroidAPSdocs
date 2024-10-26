@@ -218,7 +218,7 @@ In AAPSClient check 'Connection settings'. Belki de aslında izin verilen bir WL
 
 #### Why does AAPS say 'BG source doesn't support advanced filtering'?
 
-xDrip yerel modunda Dexcom G5 veya G6'dan başka bir CGM/FGM kullanırsanız, bu uyarıyı AAPS OpenAPS sekmesinde alırsınız. Daha fazla ayrıntı için [Kan şekeri verilerini yumuşatma](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) konusuna bakın.
+xDrip yerel modunda Dexcom G5 veya G6'dan başka bir CGM/FGM kullanırsanız, bu uyarıyı AAPS OpenAPS sekmesinde alırsınız. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
 
 ### Pump
 
@@ -262,7 +262,7 @@ Ancak bir kanülün değiştirilmesi, pompanın "prime infüzyon seti" işlevini
 
 ### Wallpaper
 
-You can find the AAPS wallpaper for your phone on the [phones page](../CompatiblePhones/ListOfTestedPhones.md#phone-background).
+You can find the AAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones.md#phone-wallpaper).
 
 ### Daily usage
 

@@ -18,7 +18,7 @@
 
 -   Sony Smartwatch 3（SWR50）<https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-目前來看，使用 Libre 1 作為血糖來源時，無法在 SMB 算法中啟用「始終啟用 SMB」和「在用餐後啟用 SMB」。 Libre 1 的血糖值不夠平滑，無法安全使用。 有關更多詳細資訊，請參閱[平滑血糖資料](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)。
+目前來看，使用 Libre 1 作為血糖來源時，無法在 SMB 算法中啟用「始終啟用 SMB」和「在用餐後啟用 SMB」。 Libre 1 的血糖值不夠平滑，無法安全使用。 請參見 [平滑血糖資料](../CompatibleCgms/SmoothingBloodGlucoseData.md) 獲得更多 詳情。
 
 ## 1. 使用 xDrip+
 

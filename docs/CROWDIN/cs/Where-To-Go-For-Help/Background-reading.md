@@ -6,7 +6,7 @@ Než si začnete připravovat svou vlastní soustavu smyčky, budete si k tomu m
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS dokumentace - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Loop dokumetace- https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 

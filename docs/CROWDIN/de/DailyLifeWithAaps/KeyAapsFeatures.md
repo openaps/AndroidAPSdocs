@@ -105,7 +105,7 @@ Wenn diese Option aktiviert ist, werden SMB bei einem hohen temporären Ziel nur
 
 Wenn diese Option aktiviert ist, sind SMS immer aktiviert (unabhängig von COB, temporären Zielen und Bolus). Wenn diese Einstellung aktiviert ist, sind die übrigen Bedingungen ohne Einfluss und werden nicht berücksichtigt. Wenn jedoch „Aktiviere SMB bei hohem temporären Ziel“ ausgeschalter ist und ein hohes temporäres Ziel aktiv ist, werden SMBs nicht abgegeben. Diese Option ist nur für Sensorsysteme, die gut gefilterte (nicht rauschende /springende) Glukosewerte liefert, verfügbar. Currently it is only an available option with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Falls ein gemessener Wert zu weit vom vorherigen Wert abweicht, gibt der G5/G6 einfach gar keinen Wert aus und wartet die nächste Messung in 5 Minuten ab.
 
-Für andere CGM/FGM wie das Freestyle Libre ist die SMB-always-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte filtert. Weitere Informationen dazu findest du [hier](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Für andere CGM/FGM wie das Freestyle Libre ist die SMB-always-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte filtert. You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Aktiviere SMB während aktiver Kohlenhydrate.
 
@@ -119,7 +119,7 @@ Wenn diese Option eingeschaltet ist, werden SMBs bei einem beliebigen gesetzten 
 
 Bei eingeschalter Option, sind SMBs für einen Zeitraum von 6h ab dem Zeitpunkt für den KH angekündigt sind aktiv, auch wenn COB mittlerweile 0 ist (keine aktiven KH mehr vorhanden sind). Diese Option ist nur für Sensorsysteme, die gut gefilterte (nicht rauschende /springende) Glukosewerte liefert, verfügbar. Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Falls ein gemessener Wert zu weit vom vorherigen Wert abweicht, gibt der G5/G6 einfach gar keinen Wert aus und wartet die nächste Messung in 5 Minuten ab.
 
-Für andere CGM/FGM wie das Freestyle Libre ist die SMB-always-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte besser glättet. Weitere Informationen dazu findest du [hier](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Für andere CGM/FGM wie das Freestyle Libre ist die SMB-always-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte besser glättet. You can find [more information here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Wie häufig SMBs abgegeben werden (in Min.)
 
