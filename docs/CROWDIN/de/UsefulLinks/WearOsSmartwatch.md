@@ -242,7 +242,7 @@ Aktionen aus der Aktions-Kachel können folgendes aus der AAPS-Telefon-App anfor
 
 ![Wear Aktions-Kachel, Beispielrechner](../images/wear_actions.png)
 
-[1] Über das Wear-OS-Menü, setze die Option "Rechner Prozentsatz" auf "AN", um die prozentuale Eingabe im Bolus-Rechner anzuzeigen. The default percentage is based on the phone settings in the"Overview" section ["Deliver this part of the bolus wizard result %"](../SettingUpAaps/Preferences.md#not-documented-anymore-please-fix-me) When the user does not provide a percentage, the default value from the phone is used. Konfiguriere die anderen Parameter für den Bolus-Rechner in der Smartphone-App über "Einstellungen" "Assistenteneinstellungen".
+[1] Über das Wear-OS-Menü, setze die Option "Rechner Prozentsatz" auf "AN", um die prozentuale Eingabe im Bolus-Rechner anzuzeigen. The default percentage is based on the phone settings in the "Overview" section ["Deliver this part of the bolus wizard result %"](../SettingUpAaps/Preferences.md#deliver-this-part-of-bolus-wizard-result) When the user does not provide a percentage, the default value from the phone is used. Konfiguriere die anderen Parameter für den Bolus-Rechner in der Smartphone-App über "Einstellungen" "Assistenteneinstellungen".
 
 ### AAPS (Temp Target) Kachel
 
