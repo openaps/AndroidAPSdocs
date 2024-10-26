@@ -4,7 +4,7 @@ In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), 
 
 Следующие шаги - **перенести** файл **AAPS** APK (а также другие необходимые приложения, такие как BYODA, Xdrip+ или другое приложение для мониторинга CGM на Android-смартфон, а затем **установить** приложение(я).
 
-После установки **AAPS** на смартфон, можно переходить к [**конфигурации цикла AAPS**](configuring-the-AAPS-loop.md).
+Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
 
 Есть несколько способов переноса файла **AAPS** с компьютера на телефон. Здесь мы объясняем два различных способа:
 
@@ -27,7 +27,7 @@ In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), 
 
 Файл apk будет загружен на Google Drive.
 
-### используйте приложение Google Drive для установки apk файла
+### Use the Google Drive app to execute the apk file for installation
 
 Перейдите в мобильный телефон и запустите приложение Google Drive. Это предварительно установленное приложение и находится где расположены другие приложения Google, а также может быть найдено утилитой поиска.
 
@@ -52,7 +52,7 @@ In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), 
 Вы не забыли отменить разрешение на установку приложений из Google Drive?
 ```
 
-## Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
 
 ## Вариант 2. Использовать кабель USB для передачи файлов
 
@@ -63,3 +63,5 @@ In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), 
 На телефоне необходимо разрешить установку из неизвестных источников. Как это сделать, объясняется в Интернете (_например._ [здесь](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) или [здесь](https://www.androidcentral.com/unknown-sources)).
 
 После того, как вы перетащите файл в папку загрузок откройте папку "downloads" на телефоне, нажмите на значок установочного файла AAPS apk и выберите команду "install" (установить). You can then proceed to the next step, [Setup Wizard](../SettingUpAaps/SetupWizard.md), which will help you setup the **AAPS** app and loop on your smartphone.
+
+Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
