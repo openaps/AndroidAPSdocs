@@ -25,7 +25,7 @@
 
 > 運作 AAPS 並向 Pod 通訊裝置發送控制指令的組件。
 > 
-> > - 支援的 [Omnipod 驅動程式 Android 手機](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit)具有 AAPS 2.8 版本和相關 [組件設置](index-component-setup)
+> > - 支援[Omnipod 驅動的 Android 手機](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit)，並配置有 AAPS 2.8 及相關元件。
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **胰島素輸送裝置**
 
