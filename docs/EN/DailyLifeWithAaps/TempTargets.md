@@ -33,6 +33,10 @@ Alternatively, **Temp-Target** can be activated in the “Carbs” button (step 
 
 ![TT3_Screenshot 2024-01-26 194318](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a0627667-fb73-4791-8a1a-328eaaf1af2a)
 
+- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+
+![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
+
 ## Where can I change the default Temp-Target and override with my own preferences?
 
 To reconfigure the ‘BG target range’ and ‘duration’ allocated to the user’s default **Temp-Target** settings, go to the menu in **AAPS** on the top right hand corner and

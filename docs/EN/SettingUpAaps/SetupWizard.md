@@ -195,10 +195,11 @@ If you are not able to set it up at the moment, skip it for now. You can configu
 If you select an item here on the left tick box, on the right you can then ticking the visibility (eye) box, which will place this plugin in the upper menu on the **AAPS** home screen. Please select the visibility too if you configure your reporting server at this point.
 
 In this example we select Nightscout as reporting server, and will configure it.
-
+()[fixme]
 ```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
 :class: Note
-Click [here](../Maintenance/ReleaseNotes.md) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
+
+Click [here](../Maintenance/ReleaseNotes.md#version-3200-dedicated-to-philoul) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**.
 
 Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
 ```
