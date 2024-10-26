@@ -115,7 +115,7 @@
 此 **目標** 要求您確定並設置「臨時基礎率最大 U/h 值」（max-basal），如 [OpenAPS 功能介紹](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to) 中所述。 此數值可以在 [偏好設定 > OpenAPS](../SettingUpAaps/Preferences.md#max-uh-a-temp-basal-can-be-set-to) 中設置。
 如果您仍在使用虛擬幫浦，請確保此安全設置在 **AAPS** 和您的胰島素幫浦中均已設定。
 
-You might wish to set your [**Profile** BG target](../SettingUpAaps/YourAapsProfile.md#glucose-targets) higher than usual until you are comfortable with **AAPS**' calculations and settings. 您可能希望在您的 **個人設置** 中嘗試調整 **血糖目標** 至較緊湊的範圍（例如，1 或更少 mmol/l [20 mg/dl 或更少] 的範圍），並觀察所得到的行為。
+您可能希望將您的 [**個人設置** BG 目標](../SettingUpAaps/YourAapsProfile.md#glucose-targets) 設定為高於平常，直到您對 **AAPS** 的計算和設置感到滿意。 您可能希望在您的 **個人設置** 中嘗試調整 **血糖目標** 至較緊湊的範圍（例如，1 或更少 mmol/l [20 mg/dl 或更少] 的範圍），並觀察所得到的行為。
 
 ![停止標誌](../images/sign_stop.png)
 
@@ -164,7 +164,7 @@ You might wish to set your [**Profile** BG target](../SettingUpAaps/YourAapsProf
 
 要完成**目標 7**，您必須關閉循環並提高您的[maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)。 **maxIOB** 在 **目標 6** 中自動被設為零。 現在這個設定將被恢復。 **AAPS** 將開始使用你設定的 maxIOB 值來修正高血糖值。
 
-完成此目標的最少時間：**1 天**。 這是一個強制的等待時間。 It is not possible to proceed to the next **Objective** until this period of time has expired.
+完成此目標的最少時間：**1 天**。 這是一個強制的等待時間。 在此時段結束之前，無法進入下一個**目標**。
 
 - 從 [偏好設定 > OpenAPS](../SettingUpAaps/Preferences.md) 中選擇 **閉環**，或透過長按 **總覽** 螢幕右上角的 Loop 圖示來選擇。 在 **閉環** 中持續 1 天。
 
@@ -187,7 +187,7 @@ You might wish to set your [**Profile** BG target](../SettingUpAaps/YourAapsProf
 
 作為此 **目標** 的一部分，你將重新檢視你的 **個人設置** 的表現，並利用 [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) 功能作為錯誤設定的指標。
 
-完成此目標的最少時間：**7 天**。 這是一個強制的等待時間。 It is not possible to proceed to the next **Objective** until this period of time has expired.
+完成此目標的最少時間：**7 天**。 這是一個強制的等待時間。 在此時段結束之前，無法進入下一個**目標**。
 
 在 7 天內啟用 [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md)，並觀察 [**總覽** 的圖表白線](../DailyLifeWithAaps/AapsScreens.md#section-g---additional-graphs) 反映你因運動或激素等因素而上升或下降的胰島素敏感度。 留意 OpenAPS 報告標籤，它顯示 **AAPS** 根據需要調整敏感度、基礎率和目標。
 
@@ -200,7 +200,7 @@ You might wish to set your [**Profile** BG target](../SettingUpAaps/YourAapsProf
 完成此目標的最少時間：**28 天**。 這是一個強制的等待時間。 在這段時間內你無法進入下一個目標。
 
 - 要理解 **SMB** 以及 **零暫停** 的概念，查看[本文件的 SMB 區段](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) 和 [openAPS 文檔中的 oref1 覆蓋](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) 是必讀的。
-- 完成後，你可以 [提高 maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) 以使 **SMB** 更有效率。 maxIOB 現在包括所有 **IOB**，不僅僅是累積的基礎。 這個閾值會暫停 **SMB**，直到 IOB 降到這個值以下（例如 **maxIOB** 設為 7U，而給予了 8U 的注射來覆蓋一餐：除非 **IOB** 降到 7U 以下，否則 **SMB** 將被暫停且不會給予）。
+- 完成後，你可以 [提高 maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) 以使 **SMB** 更有效率。 maxIOB 現在包括所有 **IOB**，不僅僅是累積的基礎。 這個門檻值會暫停 **SMB**，直到 IOB 降到這個值以下（例如 **maxIOB** 設為 7U，而給予了 8U 的注射來覆蓋一餐：除非 **IOB** 降到 7U 以下，否則 **SMB** 將被暫停且不會給予）。
   一個好的開始是設定 **maxIOB** = **平均餐前注射 + 3 倍最大日基礎**，其中“最大日基礎”是在一天任何時間段的最大每小時值。 請參考 [目標 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets)。
 - 評估你的碳水化合物吸收率，並考慮在 [偏好設定 > 吸收設定 > min_5m_carbimpact](../SettingUpAaps/Preferences.md#min_5m_carbimpact) 中更改“min_5m_carbimpact”參數，如果你發現它太慢或太快。
 
@@ -234,7 +234,7 @@ You might wish to set your [**Profile** BG target](../SettingUpAaps/YourAapsProf
 
 ## 目標 11：啟用白天使用的其他功能，例如動態敏感度外掛 (DynISF)。
 
-完成這個 **目標** 的最少時間：**28 天**。 這是一個強制的等待時間。 It is not possible to proceed to the next **Objective** until this period of time has expired.
+完成這個 **目標** 的最少時間：**28 天**。 這是一個強制的等待時間。 在此時段結束之前，無法進入下一個**目標**。
 
 - 確保 **SMB** 正常運行
 - 在這裡閱讀關於 **動態 ISF** 的文檔 [這裡](../DailyLifeWithAaps/DynamicISF.md)
