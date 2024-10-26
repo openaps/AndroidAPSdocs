@@ -21,14 +21,12 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 首先，你需要**獲取可循環的硬體元件**：
 
 - 一個[支援的胰島素幫浦](../Getting-Started/CompatiblePumps.md)， 
-- 一部[Android 智慧型手機](../CompatiblePhones/ListOfTestedPhones.md)（Apple iOS 未被 AAPS 支援 - 您可以查看[iOS Loop](https://loopkit.github.io/loopdocs/)）以及
+- 一部[Android 智慧型手機](../Getting-Started/Phones.md)（Apple iOS 未被 AAPS 支援 - 您可以查看[iOS Loop](https://loopkit.github.io/loopdocs/)）以及
 - 一個[持續監測血糖系統](../Getting-Started/CompatiblesCgms.md)。 
 
-其次，你需要**設定你的硬體**。 請參閱[步驟教學的範例設置](Sample-Setup.md)。
+接著，您需要**設置您的軟體組件**：[AAPS](../SettingUpAaps/BuildingAaps.md)、[CGM/FGM 資源](../Getting-Started/CompatiblesCgms.md)和[報告伺服器](../SettingUpAaps/SettingUpTheReportingServer.md)。
 
-第三，你需要**設定你的軟體元件**：AAPS 和 CGM/FGM 資源。
-
-第四，你需要學習並**了解 OpenAPS 參考設計以檢查你的治療參數**。 閉環循環的基本原則是你的基礎率和碳水化合物比率是準確的。 所有建議都假設你的基礎需求已得到滿足，任何峰值或谷底的變化是由其他因素引起的，因此需要一些一次性的調整（如運動、壓力等）。 閉環系統為安全所做的調整是有限的（請參閱[OpenAPS 參考設計](https://openaps.org/reference-design/)中的允許最大臨時基礎率），這意味著你不希望浪費這些劑量來修正錯誤的基礎率。 例如，如果你經常在用餐前臨時降低基礎率，那麼很可能需要調整你的基礎率。 你可以使用[autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig)來考慮大量資料，以建議是否以及如何調整基礎率和/或 ISF，並且是否需要更改碳水化合物比率。 或者，你也可以使用[傳統方法](https://integrateddiabetes.com/basal-testing/)來測試並設定你的基礎率。
+第三，您需要學習並**了解 OpenAPS 參考設計，以檢查您的治療因素**。 閉環循環的基本原則是您的[基礎率和碳水化合物比例](../SettingUpAaps/YourAapsProfile.md)是正確的。 所有建議都假設你的基礎需求已得到滿足，任何峰值或谷底的變化是由其他因素引起的，因此需要一些一次性的調整（如運動、壓力等）。 閉環系統為安全所做的調整是有限的（請參閱[OpenAPS 參考設計](https://openaps.org/reference-design/)中的允許最大臨時基礎率），這意味著你不希望浪費這些劑量來修正錯誤的基礎率。 例如，如果你經常在用餐前臨時降低基礎率，那麼很可能需要調整你的基礎率。 您可以使用[自動調整](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig)來考慮大量資料，以建議基礎率和/或 ISF 是否需要調整，以及碳水化合物比例是否需要改變。 或者您可以以[傳統方式](https://integrateddiabetes.com/basal-testing/)測試並設置您的基礎率。
 
 ### 我有哪些實際的循環考量？
 
