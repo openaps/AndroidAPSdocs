@@ -220,7 +220,7 @@ Android Studio 是一個在你的計算機上運行的程式。他允許你從�
   ```
   然後將其粘貼到URL文本框中（3）。
 
-- 檢查保存複製代碼的（預設）目錄在您的計算機上存在，並且該目錄尚未存在（4）。 You can change it to some directory, but please remember where you stored it!
+- 檢查保存複製代碼的（預設）目錄在您的計算機上存在，並且該目錄尚未存在（4）。 您可以將其更改為某個目錄，但請記得您放置的位置!
 
 - 現在點擊“複製”按鈕（5）。
 
