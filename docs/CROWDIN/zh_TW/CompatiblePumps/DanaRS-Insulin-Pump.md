@@ -105,7 +105,7 @@
 
 * 大多數情況下，這只是通訊問題，正確劑量的胰島素已經注射完畢。
 * 檢查幫浦歷史記錄（在幫浦或透過 Dana 標籤 > 幫浦歷史 > 注射記錄），確認正確的注射劑量。
-* Delete error entry in [treatments tab](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs) if you wish.
+* 如果您希望，請在 [治療選項卡](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs) 中刪除錯誤的條目。
 * 實際注射量會在下次連線時讀取並記錄。 要強制此操作，請按下 Dana 標籤上的藍牙圖示，或等待下一次連線。
 
 ## 更換手機時的特別注意事項
