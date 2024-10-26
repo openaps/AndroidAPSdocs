@@ -213,7 +213,16 @@
 
   ![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
 
-(Preferences-advanced-settings-overview)=
+### Deliver this part of bolus wizard result
+
+Set the [default percentage](../DailyLifeWithAaps/AapsScreens.md#section-j) of the bolus calculated when using the bolus wizard.
+
+Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard.
+
+When using [SMB](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb), using a value lower than 100% here can be useful:
+* for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
+* to leave more room to *AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate the missing part of the bolus with SMBs, if/when deemed adequate.
+
 ### Geavanceerde instellingen (Overzicht)
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
