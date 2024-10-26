@@ -2,41 +2,41 @@
 
 ## 什麼是自動化？
 
-「**自動化**」是 **AAPS** 的一項功能，他可以透過自動調整胰島素的供應來簡化使用者的糖尿病管理。 **自動化**允許**AAPS**根據個別使用者的需求進行高度個人化的設定。
+"**Automation**" is a feature within **AAPS** which can simplify a user’s diabetes management by making automatic changes to insulin delivery in order to fit within the individual's lifestyle needs.
 
-一個**自動化**會根據一個或多個條件或觸發器來指示**AAPS**執行特定操作。 這可以是非經常性事件，例如低血糖或高血糖，一定量的負 IOB。 也可以是定期事件，例如在一天中的特定時間進行用餐或運動，或當使用者位於 GPS 位置或 Wi-Fi SSID 區域內。
+An **Automation** instructs **AAPS** to carry out a specific action 'automatically' as a result of one or more conditions or triggers. This can be for irregular episodic events, like low or high **BG**, a set amount of negative **IOB**. It can also be for reoccurring events, for example a meal or exercise at a certain time of day, or when the user is located within a certain distance of GPS location or WIFI SSID area.
 
-有多種自動化選項，建議使用者在 **AAPS** 應用程式的自動化部分仔細研究。 你也可以在 **AAPS** 用戶群組（如**Facebook** 和 **Discord**）搜尋來自其他用戶的自動化範例。
+There are a wide range of **Automation** options, and users are encouraged to study these within the **AAPS** app, in the **Automation** section. You can also search the **AAPS** user groups on **Facebook** and **Discord** for **Automation** examples from other users.
 
 ## 自動化如何幫助你
 
-1. **減少決策疲勞：** **自動化**的主要優勢是減輕使用者在 **AAPS** 中進行手動介入的負擔。 [研究](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4)估計，1型糖尿病患者每天需要做出額外的180個決策。 **自動化**可以減輕心理負擔，釋放使用者的精神能量來處理生活中的其他事務。
+1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [研究](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4)估計，1型糖尿病患者每天需要做出額外的180個決策。 **自動化**可以減輕心理負擔，釋放使用者的精神能量來處理生活中的其他事務。
 
-1. **潛在改善血糖控制：**例如，**自動化**可以確保**臨時目標**在需要時自動設置，即使在忙碌或忘記的時候也能執行。 例如，如果一名患有糖尿病的孩子每週二上午10點和週四下午2點在學校有運動課程，並且這些活動開始前30分鐘需要執行高臨時目標，這些動作可以透過自動化來完成。
+1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**.
 
-1. **讓 AAPS 高度自訂化**，以在特定情況下根據使用者偏好調整攻擊性。 例如，若在半夜出現負**IOB**，表明現有的設定過強，可以啟動臨時減少的個人化設定來解決。
+1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
 
-以下範例說明了如何透過**自動化**來簡化步驟。 使用者已設置**自動化**，在清晨5點觸發「運動臨時目標」，以確保他們的**血糖**和**IOB**在6點運動前達到最佳狀態：
+以下範例說明了如何透過**自動化**來簡化步驟。 The user has set an **Automation** to trigger a 5am ‘Temp Target Exercise’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
 
 ![替代文字](../images/automation_2024-02-12_20-54-49.png)
 
 ## 開始使用自動化前的關鍵考慮因素
 
-1. 在設定**自動化**之前，你應該對**AAPS**有合理的血糖控制。 **自動化**不應用來補償次優的基礎胰島素、ISF 或 ICR 設定（在下文進一步討論）。 避免設置自動**檔案切換**來補償由於食物引起的血糖上升，這類情況應該用其他策略（如 SMBs 等）處理。
+1. Before setting up an **Automation**, you should have reasonable **BG** control with **AAPS**. **Automations** should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
 
-1. 與任何技術一樣，**CGM**、**幫浦**和**手機**都可能發生故障：技術問題或感測器錯誤可能會中斷**自動化**行動，並且可能需要手動介入。
+1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
 
-1. **隨著日常習慣的變化，自動化需求也可能改變**。 當工作、學校或假期期間變更時，請在日曆中設置提醒，檢查目前啟動的自動化（他們很容易啟動和停用）。 例如，如果你外出度假，不再需要為學校運動或日常運動設定的自動化，或需要調整時間。
+1. **Requirements for **Automations** are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need a Automation set up for school sports or daily exercise, or need to adjust the timings.
 
-1. 自動化可能會相互衝突，建議在安全環境中仔細審查新的自動化設定，並暸解為什麼自動化可能未如預期啟動。
+1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
 
-1. 如果使用 Autosense，請盡量使用**臨時目標**而非**檔案切換**。 **臨時目標**不會將 Autosens 重置為 0。 **檔案切換**會重置 Autosens。
+1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **臨時目標**不會將 Autosens 重置為 0。 **檔案切換**會重置 Autosens。
 
-1. 大多數自動化應僅設置為**有限的時間持續**，之後**AAPS**可以重新評估並在必要時重複自動化，如果條件仍然符合的話。 例如，「啟動 7.0 mmol/l 的臨時目標持續 30 分鐘」或「啟動 110% 檔案持續 10 分鐘」_和_「啟動 5.0 mmol/l 的臨時目標持續 10 分鐘」。 使用自動化來創造永久變更（如更強的%檔案）可能會增加低血糖風險。
+1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/l for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/l for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
 
 ## 何時可以開始使用自動化？
 
-當你開始第10個目標時。
+**Automations** can be started in **objective 10**.
 
 ## AAPS 中的自動化在哪裡？
 
@@ -46,27 +46,28 @@
 
 要設置**自動化**，請按照以下步驟在**AAPS**中建立一個「規則」：
 
-* 為你的「規則」命名；
-* 選擇至少一個「條件」；
-* 選擇一個「動作」；
-* 勾選正確的框以啟動**自動化**事件：
+* give your ‘rule’ a title;
+* select at least one ‘Condition’; and
+* select one ‘Action’;
+* check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
 
-![替代文字](../images/automation_2024-02-12_20-55-35.png)
+![自動化](../images/automation_2024-10-26_17-48-05.png)
 
 
-要停用**自動化**規則，請取消勾選**自動化**名稱左側的框。 以下範例顯示一個名為‘低血糖臨時目標’的**自動化**已啟動（勾選）或停用（未勾選）。
+
+要停用**自動化**規則，請取消勾選**自動化**名稱左側的框。 The example below shows an **Automation** entitled ‘Low Glucose TT’ as either activated (‘ticked') or deactivated (‘unticked’).
 
 ![替代文字](../images/automation_2024-02-12_20-56-08.png)
 
 
-設置自動化時，你可以先透過啟動「通知」選項進行測試。 這會觸發**AAPS**首先顯示通知，而不是實際自動執行動作。 當你確認通知在正確的時間/條件下觸發時，可以更新**自動化**規則，將「通知」替換為「動作」。
+When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". 這會觸發**AAPS**首先顯示通知，而不是實際自動執行動作。 當你確認通知在正確的時間/條件下觸發時，可以更新**自動化**規則，將「通知」替換為「動作」。
 
 ![替代文字](../images/automation_2024-02-12_20-55-05.png)
 
 ```{admonition} Important note
 :class: note
 
-當循環被禁用時，自動化仍然是活躍的！
+**Automations** are still active when the Loop is disabled!
 ```
 
 
@@ -75,7 +76,7 @@
 針對**自動化**設置了安全限制：
 
 * 血糖值必須介於 72 到 270 mg/dl（或 4 到 15 mmol/l）之間。
-* 檔案百分比必須介於 70% 到 130% 之間。
+* The **Profile Percentage** has to be between 70% and 130%.
 * 自動化執行間隔必須至少 5 分鐘（包括首次執行）。
 
 ## 正確使用負值
@@ -83,7 +84,7 @@
 ```{admonition} Warning
 :class: warning
 
-在自動化中選擇負值時請小心
+Please be careful when selecting a negative value in **Automation**
 ```
 
 在**自動化**中的「條件」選擇‘小於’這類負值時，請務必謹慎。 例如：
@@ -131,7 +132,7 @@
 **選項：**
 
 * 使用被動位置：**AAPS** 只會在其他應用程式請求位置時獲取位置。
-* 使用網路位置：WiFi 的位置。
+* Use network location: Location of your Wi-Fi.
 * 使用 GPS 定位（注意！ 這可能會導致過多的電池消耗！
 
 ## 動作
@@ -149,12 +150,12 @@
 
 無
 
-**動作：****檔案**百分比
+**Actions:** **Profile Percentage**
 
 **選項：**
 
 * **檔案**必須在 70% 和 130% 之間
-* 僅當之前的百分比是 100% 時工作
+* works only if the previous Percentage is 100%
 
 添加了「動作」後，應透過點擊並調整預設值將預設數值更改為所需的數字。
 
@@ -162,13 +163,13 @@
 
 ![替代文字](../images/automation_2024-02-12_20-57-29.png)
 
-## 列表中的自動化順序很重要
+## The order of the **Automations** in the list matters
  **AAPS**將根據偏好的順序，自**自動化**列表的頂部開始執行建立的規則。 例如，如果‘低血糖’**自動化**是最重要的**自動化**，那麼他應該位於使用者**自動化**列表的頂部，如下所示：
 
 
 ![替代文字](../images/automation_2024-02-12_20-57-48.png-500x.png)
 
-要重新排列**自動化**規則，請按住螢幕右側的四行按鈕。 透過移動規則上下來重新排序**自動化**。
+To reprioritize the **Automation** rules, click and hold the four-lines-button on the right side of the screen. 透過移動規則上下來重新排序**自動化**。
 
 ![替代文字](../images/automation_2024-02-12_20-58-00.png-500x.png)
 
@@ -192,9 +193,9 @@
 
 ![替代文字](../images/automation_2024-02-12_21-04-25.png-500x.png)
 
-這個**自動化**是為一名每天在工作時於相同時間吃午餐的用戶設置的，但僅在用戶位於設定的‘位置’時才觸發。  因此，如果某天用戶不在工作場所，則此自動化將被啟動。
+這個**自動化**是為一名每天在工作時於相同時間吃午餐的用戶設置的，但僅在用戶位於設定的‘位置’時才觸發。  So if the user is not at work one day, this **Automation** will be activated.
 
-這個**自動化**會在13:00設定低臨時目標（即將用餐），使血糖降至90mg（或5 mmol/l），以準備午餐。
+This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive ‘BG, to 90mg (or 5 mmol/l) in preparation for lunch.
 
 透過輸入經緯度 GPS 座標來設置‘觸發’位置，如下所示：
 
@@ -215,14 +216,14 @@
 當連線到家庭 wifi 網路時（3）。
 
 
-然後將設置 75mg/dl 的**臨時目標**，持續 30 分鐘 (4)。 加入位置的好處之一是，如果用戶外出度假，則不會觸發此自動化。
+It will then set a **Temp Target**  of 75mg/dl for 30 minutes (4). 加入位置的好處之一是，如果用戶外出度假，則不會觸發此自動化。
 
 ![替代文字](../images/automation_2024-02-12_21-05-02.png-500x.png)
 
-以下是詳細的**自動化**觸發截圖：
+Here is the screenshot detailing the **Automation** triggers:
 
-1) 主「和」（兩個條件都需要滿足才能觸發） 1) 循環時間 = 週一至週五 上午 5:30  
-1) WIFI SSID = My_Home_Wifi_Name
+1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
+1) WIFI SSID = My_Home_WiFi_Name
 
 ![替代文字](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
@@ -255,7 +256,9 @@
 
 * 問題：__我的自動化沒有被 AAPS 觸發嗎？__
 
-檢查**自動化**事件右側的框是否勾選，以確保規則已啟用。
+Check the box to the right of **Automation** event is ‘ticked’ to ensure the rule is activated.
+
+## 問題排除
 
 ![替代文字](../images/automation_2024-02-12_21-06-12.png-500x.png)
 
@@ -263,7 +266,6 @@
 
 檢查你的規則優先順序，如上所述。
 
-## 自動化的替代方案
+## Alternatives to Automations
 
 對於進階使用者，還有其他選擇，例如使用 IFTTT 或第三方 Android 應用程式 Automate 來自動化任務。 
-
