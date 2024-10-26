@@ -292,7 +292,7 @@ v3 是新的協議。 更加安全和高效
 ### 主要新功能
 
 - [Omnipod Eros 支援](../CompatiblePumps/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda，特別感謝 @ps2 @itsmojo 以及所有參與 Omnipod Loop 驅動程序的人，還有 @jlucasvt 來自 GetRileyLink.org
-- [bolus advisor](../SettingUpAaps/Preferences.md#quick-wizard) & [eating reminder](../DailyLifeWithAaps/AapsScreens.md#section-j) @MilosKozak
+- [注射顧問](../SettingUpAaps/Preferences.md#quick-wizard) 和 [用餐提醒](../DailyLifeWithAaps/AapsScreens.md#section-j) @MilosKozak
 - [新錶盤](../UsefulLinks/WearOsSmartwatch.md#new-watchface-as-of-aaps-28) @rICTx-T1D
 - Dana RS 連線改進 @MilosKozak
 - 移除了 Dexcom 原生應用中 SMB 的「未變更 CGM 值」行為
@@ -314,7 +314,7 @@ v3 是新的協議。 更加安全和高效
 
 **請確保在更新至 2.7 後檢查並調整設置，如 [此處](../Maintenance/Update2_7.md) 所述。**
 
-你至少需要開始 [目標 11（在後續版本中為目標 10）](../SettingUpAaps/CompletingTheObjectives.md#objective-10-automation) 才能繼續使用 [自動化功能](../DailyLifeWithAaps/Automations.md)（所有之前的目標必須完成，否則無法開始目標 11）。 If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf). 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
+你至少需要開始 [目標 11（在後續版本中為目標 10）](../SettingUpAaps/CompletingTheObjectives.md#objective-10-automation) 才能繼續使用 [自動化功能](../DailyLifeWithAaps/Automations.md)（所有之前的目標必須完成，否則無法開始目標 11）。 例如，如果您尚未完成 [目標 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) 的考試，則在開始 [目標 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf) 之前，您必須先完成考試。 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
 
 ### 主要新功能
 
