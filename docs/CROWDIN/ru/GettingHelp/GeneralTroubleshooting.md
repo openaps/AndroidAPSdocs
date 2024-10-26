@@ -12,7 +12,7 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 * [Устранение неполадок Android Studio](TroubleshootingAndroidStudio)
 
 ### Настройки
-* [Profile](Profiles-troubleshooting-profile-errors)
+* Profile
 
   ![Ошибка: Базал не выровнен по часам](../images/Screen_DifferentPump.png)
 
