@@ -242,7 +242,7 @@ AAPS дает возможность отображать следующие н�
 
 ![Плитка активности, калькулятор](../images/wear_actions.png)
 
-[1] Через меню Wear OS установите опцию "Процент калькулятора" на "Вкл.", чтобы показать процент введенного в калькулятор болюсов. The default percentage is based on the phone settings in the"Overview" section ["Deliver this part of the bolus wizard result %"](../SettingUpAaps/Preferences.md#not-documented-anymore-please-fix-me) When the user does not provide a percentage, the default value from the phone is used. Настройте в приложении другие параметры калькулятора болюсов с помощью "Настроек" "Настройки мастера".
+[1] Через меню Wear OS установите опцию "Процент калькулятора" на "Вкл.", чтобы показать процент введенного в калькулятор болюсов. The default percentage is based on the phone settings in the "Overview" section ["Deliver this part of the bolus wizard result %"](../SettingUpAaps/Preferences.md#deliver-this-part-of-bolus-wizard-result) When the user does not provide a percentage, the default value from the phone is used. Настройте в приложении другие параметры калькулятора болюсов с помощью "Настроек" "Настройки мастера".
 
 ### Плитка AAPS(Временная Цель)
 
