@@ -6,7 +6,7 @@
 
 [OpenAPS.org #我們不再等待 - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[OpenAPS 文件 - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Loop 文檔 - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
