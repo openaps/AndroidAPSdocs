@@ -1,8 +1,6 @@
 # Standard dependencies installed by RTD
-setuptools==41.0.1
+setuptools==65.5.0
 mock==1.0.1
-pillow==5.4.1
-setuptools==41.0.1
-mock==1.0.1
+pillow==10.2.0
 sphinx-rtd-theme
 readthedocs-sphinx-ext
