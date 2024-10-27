@@ -343,7 +343,7 @@ Although it was discontinued a few years ago, if you are using a Sony Smartwatch
 
 ## Additional AAPS custom watchfaces are also available
 
-[Here](../UsefulLinks/AdditionalWatchfaces.md) you can download Zip-Files with custom watchfaces made by other users.
+[Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
 
 ## Build your own watchface
 

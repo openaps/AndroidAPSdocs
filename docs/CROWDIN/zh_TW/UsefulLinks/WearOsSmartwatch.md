@@ -343,7 +343,7 @@ AAPS Glucose Watch 可直接與 AAPS 整合。 他顯示循環狀態資料（活
 
 ## 額外的 AAPS 自訂錶盤也可以使用
 
-[在這裡](../UsefulLinks/AdditionalWatchfaces.md)您可以下載其他用戶製作的自訂錶盤的 Zip 檔案。
+你可以在此下載由其他用戶建立的自訂錶盤 Zip 檔：
 
 ## 自己製作錶盤
 

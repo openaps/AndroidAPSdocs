@@ -106,7 +106,7 @@
 
 * 您的 Nightscout 網站上是否啟用了 Dexcom 橋接？ 通過進入 Nightscout 實例的管理面板，編輯 "enable" 變數並刪除其中的 "bridge" 部分來禁用橋接。 （有關 heroku 的[詳細資訊可以在此找到](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings)。）
 * 是否有多個來源將您的血糖上傳到 Nightscout？ 如果您使用 BYODA 應用程式，請在 **AAPS** 中啟用上傳，但不要在 xDrip+ 中啟用。
-* 您是否有任何可能會接收您的血糖並再次上傳到您的 Nightscout 網站的追隨者？
+* 您是否有任何可能會接收您的血糖並再次上傳到您的 Nightscout 網站的追蹤者？
 * 最後的手段：在 **AAPS** 中，請前往 [偏好設定 > NSClient](../SettingUpAaps/Preferences.md#nsclient)，選擇同步設定並禁用 "接受來自 NS 的 CGM 數據" 選項。
 
 要立即移除警告並重新啟動循環，您需要手動刪除 Dexter/xDrip+ 標籤中的幾個條目。
@@ -450,7 +450,7 @@ Libre 使用者的特殊注意事項：
 
 啟動或取消臨時基礎率的按鈕。 請注意，當設置了臨時基礎率時，按鈕將從“TEMPBASAL”變為“CANCEL x%”。
 
-儘管[延伸注射](ExtendedCarbs#extended-bolus-and-why-they-wont-work-in-closed-loop-environment)在封閉循環環境中實際上無法運作，但有些人還是要求提供使用延伸注射的選項。
+儘管[延長注射](ExtendedCarbs#extended-bolus-and-why-they-wont-work-in-closed-loop-environment)在封閉循環環境中實際上無法運作，但有些人還是要求提供使用延長注射的選項。
 
 * 此選項僅適用於 Dana RS 和 Insight 幫浦。 
    * 閉環將自動停止並切換為開環模式，以運作延長注射。

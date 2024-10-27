@@ -91,7 +91,7 @@ AAPS 介紹 <./Getting-Started/Introduction.md>
 
 遠端監控 <./RemoteFeatures/RemoteMonitoring.md>
 遠端控制 <./RemoteFeatures/RemoteControl.md>
-僅用來追隨 <./RemoteFeatures/FollowingOnly.md>
+僅用來追蹤 <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
@@ -114,15 +114,15 @@ COB 計算 <./DailyLifeWithAaps/CobCalculation.md>
 ```
 
 ```{toctree}
-:caption: 6) AAPS 的維護
+:caption: 6) AAPS的維護
 
-匯出/匯入設置 <./Maintenance/ExportImportSettings.md>
-檢視您的資料
-AAPS 釋出說明 <./Maintenance/ReleaseNotes.md>
-文檔更新 <./Maintenance/DocumentationUpdate.md>
-更新到 AAPS 新版本 <./Maintenance/UpdateToNewVersion.md>
-- 更新到 AAPS 2.7 <./Maintenance/Update2_7.md>
-- 更新到 AAPS 3.0<./Maintenance/Update3_0.md>
+匯出/匯入設定 <./Maintenance/ExportImportSettings.md>
+資料檢視 <./Maintenance/Reviewing.md>
+AAPS 版本說明 <./Maintenance/ReleaseNotes.md>
+文件更新 <./Maintenance/DocumentationUpdate.md>
+更新到AAPS的新版本 <./Maintenance/UpdateToNewVersion.md>
+- 更新到AAPS 2.7 <./Maintenance/Update2_7.md>
+- 更新到AAPS 3.0<./Maintenance/Update3_0.md>
 
 ```
 
@@ -142,6 +142,8 @@ AAPS 釋出說明 <./Maintenance/ReleaseNotes.md>
 詞彙表 <./UsefulLinks/Glossary.md>
 常見問題 <./UsefulLinks/FAQ.md>
 WearOS 智慧型手錶 <./UsefulLinks/WearOsSmartwatch.md>
+WearOS 自訂錶盤 <./UsefulLinks/CustomWatchfaceReference.md>
+交流網站自訂錶盤 <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 

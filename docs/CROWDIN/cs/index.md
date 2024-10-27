@@ -117,7 +117,7 @@ Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling
 :caption: 6) Maintenance of AAPS
 
 Export/Import Settings <./Maintenance/ExportImportSettings.md>
-Reviewing your data
+Reviewing your data <./Maintenance/Reviewing.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
@@ -142,6 +142,8 @@ Help! My AAPS phone is broken/stolen/lost
 Glossary <./UsefulLinks/Glossary.md>
 FAQ <./UsefulLinks/FAQ.md>
 WearOS Smartwatch <./UsefulLinks/WearOsSmartwatch.md>
+WearOS Custom Watchfaces <./UsefulLinks/CustomWatchfaceReference.md>
+Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 

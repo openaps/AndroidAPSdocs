@@ -272,7 +272,7 @@ Android Studio 可能會建議更新 gradle 系統。**請絕對不要更新 gra
 
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
-您可以讓 Gradle 同步運行，同時已經可以追隨下一步。
+您可以讓 Gradle 同步運行，同時已經可以追蹤下一步。
 
 (Building-APK-set-git-path-in-preferences)=
 
