@@ -1,7 +1,10 @@
-# Formats in addition to HTML
+version: 2
 
-formats:
-   - none
+# Build Container
+build:
+   os: ubuntu-22.04
+   tools:
+    python: "3.11"
 
 # Pip requirements
 requirements_file: ./requirements.txt
