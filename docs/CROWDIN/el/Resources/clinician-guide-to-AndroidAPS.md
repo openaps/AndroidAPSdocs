@@ -8,9 +8,9 @@ This guide has some high-level information about DIY closed looping and specific
 
 To start using AAPS, the following steps should be taken:
 
-* Βρείτε μια [ συμβατή αντλία ](../Hardware/pumps.md), μια [ συμβατή συσκευή Android ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) και μια[ συμβατή πηγή συνεχούς παρακολούθησης (CGM) ](../Configuration/BG-Source.md).
-* [Download the AAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
-* [ Διαμορφώστε το λογισμικό για να επικοινωνεί με τις συσκευές διαβήτη και καθορίστε τις ρυθμίσεις και τις προτιμήσεις ασφαλείας ](index-configuration).
+* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
+* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
 ## Πώς λειτουργεί ένα κλειστό κύκλωμα DIY
 
@@ -43,7 +43,7 @@ AAPS is designed to transparently track all input data it gathers, the resulting
 
 ## Examples of AAPS algorithm decision making:
 
-AAPS uses the same core algorithm and feature set as OpenAPS. Ο αλγόριθμος κάνει πολλαπλές προβλέψεις (με βάση τις ρυθμίσεις και την κατάσταση) που αντιπροσωπεύουν διαφορετικά σενάρια για το τι μπορεί να συμβεί στο μέλλον. Στη Nightscout, αυτά εμφανίζονται ως "μοβ γραμμές". AAPS uses different colors to separate these [prediction lines](Releasenotes-overview-tab). Στα ημερολόγια, θα περιγράψει ποιες από αυτές τις προβλέψεις και ποιο χρονικό πλαίσιο οδηγεί τις απαραίτητες ενέργειες.
+AAPS uses the same core algorithm and feature set as OpenAPS. Ο αλγόριθμος κάνει πολλαπλές προβλέψεις (με βάση τις ρυθμίσεις και την κατάσταση) που αντιπροσωπεύουν διαφορετικά σενάρια για το τι μπορεί να συμβεί στο μέλλον. Στη Nightscout, αυτά εμφανίζονται ως "μοβ γραμμές". AAPS uses different colors to separate these [prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines). Στα ημερολόγια, θα περιγράψει ποιες από αυτές τις προβλέψεις και ποιο χρονικό πλαίσιο οδηγεί τις απαραίτητες ενέργειες.
 
 ### Here are examples of the purple prediction lines, and how they might differ:
 
@@ -95,7 +95,7 @@ This is meant to be a high-level overview of how AAPS works. For more details, a
 
 Επιπλέον προτεινόμενη ανάγνωση:
 
-* The [full AAPS documentation](../index)
+* The [full AAPS documentation](../index.md)
 * Το [ Σχεδιασμό Αναφοράς OpenAPS ](https://OpenAPS.org/reference-design/), το οποίο εξηγεί πώς είναι σχεδιασμένο το OpenAPS για ασφάλεια: https://openaps.org/reference-design/
 * The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
   * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

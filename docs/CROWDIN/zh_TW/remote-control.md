@@ -1,7 +1,7 @@
 # 遠端控制 AAPS
 有四種非常有效的工具可以遠端管理 **AAPS**：
 
-1) [SMS 指令](sms-commands)（追蹤者的手機可以是 Android 或 iOS），2) [AAPSClient](aapsclient)（追蹤者的手機是 Android）3) [Nightscout](nightscout)（Android、iOS 或其他電腦/設備），4) [智慧型手錶](smartwatches)（Android）
+1) [SMS 指令](sms-commands)（追蹤者的手機可以是 Android 或 iOS） 2) [AAPSClient](aapsclient)（追蹤者的手機是 Android） 3) [Nightscout](nightscout)（Android、iOS 或其他電腦/設備） 4) [智慧型手錶](smartwatches)（Android）
 
 前三個工具主要適合照顧者/父母使用，但智慧型手錶對於照顧者/父母以及糖尿病患者自己都非常有用。
 
@@ -14,7 +14,7 @@
 3.  確保其他照顧者/老師了解你孩子的治療計畫，並確定遠端控制如何與現有計畫協作或增強其效果。
 4.  許多父母發現，與兒童看護人員保持單獨的聯繫方式是有幫助的，例如準備一個便宜的小型教師“追蹤”手機。
 5.  不同年齡兒童學校護理計畫的示例可以在 **AAPS** Facebook 頁面的["文件區"](https://www.facebook.com/groups/AndroidAPSUsers/files/)找到。
-6.  當遠端控制無法工作時，你的應急計劃是什麼（_例如_網絡問題或藍牙連線丟失）？  始終考慮當你突然無法發送新指令時，**AAPS** 會發生什麼情況。 **AAPS** 會使用當前設定覆蓋幫浦的基礎率、ISF 和 ICR。 如果切換到更強的胰島素設定，請只使用臨時設定切換（_例如_設置特定的持續時間），以防止遠端連線中斷。 當時間到期時，幫浦將恢復到原始設定。
+6.  當遠端控制無法工作時，你的應急計劃是什麼（_例如_網絡問題或藍牙連線丟失）？  始終考慮當你突然無法發送新指令時，**AAPS** 會發生什麼情況。 **AAPS** 會使用目前設定覆蓋幫浦的基礎率、ISF 和 ICR。 如果切換到更強的胰島素設定，請只使用臨時設定切換（_例如_設置特定的持續時間），以防止遠端連線中斷。 當時間到期時，幫浦將恢復到原始設定。
 
 (sms-commands)=
 ## 1) SMS 指令
@@ -34,7 +34,7 @@
 如果你啟用 **SMS 通訊** 功能，請考慮設定為傳送遠端指令的手機可能會被竊取，或者被他人使用。 請務必用至少 PIN 碼鎖定你的手機。 強密碼和/或生物辨識鎖定是非常推薦的，並且確保這個密碼與 APK 主密碼（修改 **AAPS** 設定所需的密碼）不同。 必須啟用第二個手機號碼才能使 SMS 指令生效，即使你只有一位主要的照護者/追蹤者。 如果主要照護者/父母的手機遭到侵入，你可以使用第二個號碼暫時停用 SMS 通訊（使用指令**“SMS stop”**）。 2.7 版及更新版本的 **AAPS** 還使用 [驗證器應用程式](authentication-or-not)。
 
 ### 不同類型的 SMS 指令
-下表列出了所有可能的 **SMS 指令**。 給出了一些_範例值_來幫助理解。 這些指令的值範圍與 AAPS 應用程式中允許的值相同（目標、百分比設定等）。 下表根據可能的使用頻率列出了指令，前兩個表格應該包含了你在完整循環中需要的大部分 SMS 指令。
+下表列出了所有可能的 **SMS 指令**。 給出了一些_範例值_來幫助暸解。 這些指令的值範圍與 AAPS 應用程式中允許的值相同（目標、百分比設定等）。 下表根據可能的使用頻率列出了指令，前兩個表格應該包含了你在完整循環中需要的大部分 SMS 指令。
 
 ### SMS 指令表
 
@@ -49,7 +49,7 @@
 (authentication-or-not)=
 ### 是否需要驗證？
 
-你可能注意到，上述表格中的某些 SMS 指令會立即回應，而某些 SMS 指令則需要透過額外應用程式的安全碼和 PIN 進行 **驗證**（請參閱以下鏈接以獲取更多詳細資訊）。 簡單查詢如「**bg**」（請求當前血糖更新）打字快速，不需要驗證，並且返回以下所示的 **AAPS** 狀態資訊：
+你可能注意到，上述表格中的某些 SMS 指令會立即回應，而某些 SMS 指令則需要透過額外應用程式的安全碼和 PIN 進行 **驗證**（請參閱以下鏈接以獲取更多詳細資訊）。 簡單查詢如「**bg**」（請求目前血糖更新）打字快速，不需要驗證，並且返回以下所示的 **AAPS** 狀態資訊：
 
 ![圖像](images/remote-control-06.png)
 
@@ -93,7 +93,7 @@
 
 範例（以 Samsung S23 手機為例）：設置 > 通用管理 > 日期和時間 > 自動日期和時間
 
-某些選項可能會被灰階化，這是因為手機設置為兒童帳戶，並需要透過家庭帳戶管理員啟用。 在照護者/父母的 iPhone 上，這個日期和時間設置稱為「自動設置」。 如果你不確定手機是否同步，別擔心，你可以先設置 SMS 指令，然後如果發現問題再進行故障排除（如果需要，可以請求幫助）。
+某些選項可能會被灰階化，這是因為手機設置為兒童帳戶，並需要透過家庭帳戶管理員啟用。 在照護者/父母的 iPhone 上，這個日期和時間設置稱為「自動設置」。 如果你不確定手機是否同步，別擔心，你可以先設置 SMS 指令，然後如果發現問題再進行問題排除（如果需要，可以請求幫助）。
 
 4) **AAPS 設定：**
 
@@ -191,7 +191,7 @@ vi) 在偏好設定頁面中，選擇「驗證器設置」
 
 ●   你傳送了格式不正確的指令（例如：「disconnect pump 45」應為「pump disconnect 45」）
 
-●   你使用了不正確或過期的驗證碼（當前驗證碼即將過期時，等待幾秒產生新的驗證碼通常是個好主意）
+●   你使用了不正確或過期的驗證碼（目前驗證碼即將過期時，等待幾秒產生新的驗證碼通常是個好主意）
 
 ●   驗證碼和 PIN 碼正確，但 SMS 傳送或接收的延遲，導致 AAPS 判定驗證碼已過期
 
@@ -217,11 +217,11 @@ vi) 在偏好設定頁面中，選擇「驗證器設置」
 
 1) 發送胰島素注射指令（_例如_ 「bolus 2」將指令注射 2 單位的胰島素），透過 SMS 指令相當於在 **AAPS** 中使用「注射」圖示。 2) 發送碳水化合物指令（_例如_「carbs 20」將報告 20 克的碳水化合物）。 這相當於在 **AAPS** 中使用「碳水化合物」標籤。
 
-為了避免低血糖，最好保守起見，注射 **少於** 按照你的碳水比率所需的胰島素，因為你沒有考慮當前的血糖水平或血糖趨勢。
+為了避免低血糖，最好保守起見，注射 **少於** 按照你的碳水比率所需的胰島素，因為你沒有考慮目前的血糖水平或血糖趨勢。
 
 **發送這些指令的順序很重要**。 如果你透過任何方式報告大量碳水化合物，並啟用了 SMB（超小注射），**AAPS** 可能會立即透過部分胰島素注射作出回應。 因此，如果你在報告碳水化合物後嘗試發送胰島素注射指令，你可能會遇到延遲並顯示「注射進行中」的訊息，你需要檢查已經執行的 SMB 注射。 或者，如果你沒有意識到正在進行 SMB 注射，並且你後續的注射也成功，則可能會為這頓飯過多注射胰島素。 因此，如果遠端控制餐時注射，請務必在報告碳水化合物 _之前_ 發送胰島素注射指令。 如果你願意，你可以結合使用 Nightscout 或 AAPSClient 與 SMS 指令。 碳水化合物可以透過 Nightscout 報告，且不需要驗證（請參閱下方的說明部分），因此速度比 SMS 指令更快。
 
-### SMS 指令的疑難排解與常見問題解答
+### SMS 指令的問題排除與常見問題解答
 
 #### Q: SMS 指令有哪些限制？
 
@@ -243,7 +243,7 @@ vi) 在偏好設定頁面中，選擇「驗證器設置」
 
 1) 訊息未到達手機（網絡問題）。 2) **AAPS** 還在處理請求（_例如_ 注射，根據注射速率，可能需要一些時間來執行）。 3) 當收到指令時，AAPS 手機與幫浦之間的藍牙連線不良，導致指令失敗（這通常會在 AAPS 手機上觸發警報）。
 
-#### Q: 一旦指令經過驗證，我可以停止嗎？
+#### Q: 我該如何停止已經通過驗證的指令？
 
 不可以。 但是，你可以透過在 **AAPS** 手機的注射彈出窗口中快速取消來停止 SMS 發送的注射。 除了注射和碳水化合物報告外，許多 SMS 指令可以輕鬆撤銷，或透過某些操作來減輕錯誤的影響。
 
@@ -308,7 +308,7 @@ _請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及�
 
 ### 同步設置 - AAPSClient 和 AAPS 配置（適用於 3.2.0.0 版本以上）
 
-一旦在追蹤者手機上安裝了 __AAPSClient__ apk，用戶必須確保在 Config Builder 中的“偏好設定”已正確設置並與 __AAPS__ 的 Nightscout 15 對齊（請參閱發佈說明 [此處](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Update-to-new-version.html)）。 以下範例提供了使用 Nightscout 15 的 NSClient 和 NSClientV3 的同步指南，但 __AAPS__ 也有其他選項（例如 xDrip+）。
+Once __AAPSClient__ apk is installed on the follower phone, the user must ensure their ‘Preferences’ in Config Builder are correctly set up and aligned with __AAPS__ for Nightscout 15 (see Release Notes [here](./Installing-AndroidAPS/Update-to-new-version.md)). 以下範例提供了使用 Nightscout 15 的 NSClient 和 NSClientV3 的同步指南，但 __AAPS__ 也有其他選項（例如 xDrip+）。
 
 在“Config Builder”的“同步設置”中，用戶可以選擇 __AAPS__ 和追蹤者手機的同步選項：
 
@@ -343,7 +343,7 @@ _請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及�
 
 用戶還應確保在 __AAPSClient__ 和 __AAPS__ 中的“治療”中記錄碳水化合物，否則這可能表明用戶的設置存在問題。
 
-### 疑難排解“NS 查看權杖”配置問題
+### 問題排除“NS 查看權杖”配置問題
 
 具體的“NS 查看權杖”配置可能會根據你的 Nightscout 提供商是否為付費託管網站而有所不同。
 
@@ -359,14 +359,14 @@ _請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及�
 
 ### AAPSClient 與智慧型手錶的選項
 
-智慧型手錶可以是一個非常有用的工具，幫助管理兒童的 **AAPS**。 有幾種不同的配置方式可供選擇。 如果**AAPSClient** 安裝在父母的手機上，則可以下載並安裝[**AAPSClient WearOS** 應用程式](https://github.com/nightscout/AndroidAPS/releases/)在與父母手機連線的相容智慧型手錶上。 這將顯示當前的血糖值、循環狀態，並允許輸入碳水化合物、設定臨時目標和更換設定檔。 無法從 WearOS 應用程式進行注射。 你可以在[這裡](smartwatches)閱讀更多關於智慧型手錶的資訊。
+智慧型手錶可以是一個非常有用的工具，幫助管理兒童的 **AAPS**。 有幾種不同的配置方式可供選擇。 如果**AAPSClient** 安裝在父母的手機上，則可以下載並安裝[**AAPSClient WearOS** 應用程式](https://github.com/nightscout/AndroidAPS/releases/)在與父母手機連線的相容智慧型手錶上。 這將顯示目前的血糖值、循環狀態，並允許輸入碳水化合物、設定臨時目標和更換設定檔。 無法從 WearOS 應用程式進行注射。 你可以在[這裡](smartwatches)閱讀更多關於智慧型手錶的資訊。
 
 (nightscout)=
 ## 3) Nightscout
 
 Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout** 應用程式，可以直接從 iPhone 的 App Store 下載。 如果你有 Android 追蹤者手機，並沒有專用的 Nightscout 應用程式，建議使用 [**AAPSClient**](AAPSClient)，或者如果你只想要追蹤而不發送治療資料，你可以從 Play 商店下載並安裝 [Nightwatch](link) 應用程式。
 
-一旦你在 iPhone 上安裝了 **Nightscout** 應用程式，打開應用並按照設置提示進行操作，輸入你的 Nightscout 地址（見下方左側）。 此地址的格式可能取決於你的 Nightscout 是如何託管的。 (_例如_ http://youraddresshere.herokuapp.com)。 然後輸入你的 Nightscout API 密碼（見下方右側）。 如果未提示你輸入 API 密碼，請點擊應用程式頂部的鎖形圖示輸入密碼：
+當你在 iPhone 上安裝了 **Nightscout** 應用程式，打開應用並按照設置提示進行操作，輸入你的 Nightscout 地址（見下方左側）。 此地址的格式可能取決於你的 Nightscout 是如何託管的。 (_例如_ http://youraddresshere.herokuapp.com)。 然後輸入你的 Nightscout API 密碼（見下方右側）。 如果未提示你輸入 API 密碼，請點擊應用程式頂部的鎖形圖示輸入密碼：
 
 ![圖像](images/remote-control-24.png)
 
@@ -376,7 +376,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 ![圖像](images/remote-control-25.png)
 
-向下滾動到“設置”。 你可能會想將 血糖 顯示的“比例”設置為“線性”，因為預設值是對數比例，並在“渲染基礎率”下選擇“預設”以顯示幫浦的基礎率。 繼續向下滾動直到找到“顯示外掛”。 你需要確保已勾選“照護入口”，還可以選擇其他有用的指標（最常用的包括：IOB、照護入口、幫浦、套管齡、胰島素齡、基礎率設定和 OpenAPS）。
+向下滾動到“設置”。 你可能會想將 血糖 顯示的“比例”設置為“線性”，因為預設值是對數比例，並在“渲染基礎率”下選擇“預設”以顯示幫浦的基礎率。 繼續向下滾動直到找到“顯示外掛”。 你需要確保已勾選“照護入口”，還可以選擇其他有用的指標（最常用的包括：IOB、照護入口、幫浦、套管時間、胰島素時間、基礎率設定和 OpenAPS）。
 
 ![圖像](images/remote-control-26.png)
 
@@ -423,7 +423,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 1). 如果你被困在某個頁面上，並希望再次查看主畫面，只需點擊“重新整理”（底部中間），這將帶你返回 **Nightscout** 主頁，顯示 血糖 圖表。
 
-要查看手機上當前運作的個人設定，請按圖表上方的各個圖示。 按下“基礎率”可以查看更多資訊（當前的碳水化合物比率、敏感性和時區等），“OpenAPS”顯示有關個人設定和當前目標的資訊。 你還可以監控手機電池百分比和幫浦電池百分比。 BWP 提供關於算法在考慮 IOB 和 COB 情況下預測未來結果的資訊。
+要查看手機上目前運作的個人設定，請按圖表上方的各個圖示。 按下“基礎率”可以查看更多資訊（目前的碳水化合物比率、敏感性和時區等），“OpenAPS”顯示有關個人設定和目前目標的資訊。 你還可以監控手機電池百分比和幫浦電池百分比。 BWP 提供關於算法在考慮 IOB 和 COB 情況下預測未來結果的資訊。
 
 #### 選單中的其他圖示：鉛筆（編輯）圖示是什麼意思？
 
@@ -527,7 +527,7 @@ b) 使用者希望避免輸入驗證碼（追蹤者手機需要在輸入資料�
 
 智慧型手錶需要運作 **Android wear** 軟體（最好是 10 或更新版本）才能控制 **AAPS**。 請檢查手錶的技術規格，並查看[相容手錶的表格](link)。 如果不確定，請在 **AAPS** 的 Facebook/Discord 群組中搜尋或詢問。
 
-以下是設置流行型號 Samsung Galaxy Watch 4（40 毫米）的具體操作指南。 Garmin 手錶也是一個受歡迎的選擇，請參閱[這裡](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)。 如果你有設置其他智慧型手錶的經驗，並且認為這對其他用戶有幫助，請[編輯文件](https://androidaps.readthedocs.io/en/latest/make-a-PR.html)，將你的發現分享給更廣泛的 **AAPS** 社群。
+以下是設置流行型號 Samsung Galaxy Watch 4（40 毫米）的具體操作指南。 Garmin 手錶也是一個受歡迎的選擇，請參閱[這裡](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)。 If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../make-a-PR.md) to share your findings with the wider **AAPS** community.
 
 #### AAPS Wear apk
 
@@ -590,13 +590,13 @@ b) 使用者希望避免輸入驗證碼（追蹤者手機需要在輸入資料�
 
 請耐心等待 - 建置 **AAPS** Wear apk 大約需要 10-20 分鐘，具體取決於你的網路連線速度。
 
-### 疑難排解
+### 問題排除
 
 在建置 3.2 版完整 **AAPS** 應用程式（實際上是任何已簽章的應用程式）過程中，Android Studio 會在同一個資料夾中生成一個 .json 檔案。 這會在你嘗試建置下一個已簽章的應用程式（如 **AAPS** wear 應用程式）時，導致[未提交的變更](troubleshooting_androidstudio-uncommitted-changes)錯誤。 解決此問題的最快方法是導航到建置完整 AAPS 應用程式的資料夾，你的資料夾可能類似於：
 
 C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release。
 
-將不需要的 .json 檔案刪除或移出該資料夾。 然後再次嘗試建置 **AAPS** wear 應用程式。 如果這不起作用，請參閱[更詳細的疑難排解指南](troubleshooting_androidstudio-troubleshooting-android-studio)，以幫助你識別導致問題的具體檔案，也可能是你的密鑰庫檔案。
+將不需要的 .json 檔案刪除或移出該資料夾。 然後再次嘗試建置 **AAPS** wear 應用程式。 如果這不起作用，請參閱[更詳細的問題排除指南](troubleshooting_androidstudio-troubleshooting-android-studio)，以幫助你識別導致問題的具體檔案，也可能是你的密鑰庫檔案。
 
 
 #### 如何設置 Samsung Galaxy 4 智慧型手錶與 **AAPS** 搭配使用
@@ -617,7 +617,7 @@ https://www.youtube.com/watch?v=tSVkqWNmO2c
 
 ##### 設置 Samsung 帳號
 
-你需要確保用來設置 Samsung 帳號的電子郵件帳戶的出生日期顯示用戶年齡 13 歲以上，否則 Samsung 的許可權批准將非常困難。 如果你已為 13 歲以下的孩子建立了 Gmail 帳號並使用該電子郵件地址，你無法簡單地將其更改為成人帳戶。 解決此問題的一種方法是將當前的出生日期修改為使當前年齡為 12 歲零 363 天。 第二天，該帳戶將被轉換為成人帳戶，然後你可以繼續設置 Samsung 帳戶。
+你需要確保用來設置 Samsung 帳號的電子郵件帳戶的出生日期顯示用戶年齡 13 歲以上，否則 Samsung 的許可權批准將非常困難。 如果你已為 13 歲以下的孩子建立了 Gmail 帳號並使用該電子郵件地址，你無法簡單地將其更改為成人帳戶。 解決此問題的一種方法是將目前的出生日期修改為使目前年齡為 12 歲零 363 天。 第二天，該帳戶將被轉換為成人帳戶，然後你可以繼續設置 Samsung 帳戶。
 
 ##### 將 **AAPS** Wear 應用程式傳輸到 **AAPS** 手機
 
@@ -710,11 +710,11 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 5.  假設你已經成功下載 Wear.apk 到手機，但未收到任何血糖資料，_請檢查_ 你是否已將正確的 **AAPS** apk 版本側載到手錶上。 如果你的 AAPS wear.apk 版本列為以下任何一個：a) “wear-AAPSClient-release”；b) “wear-full-release.aab”；或c) 標題中出現“debug”一詞，那麼你在建置過程中選擇了錯誤的 Wear OS apk 版本。
 6.  檢查路由器是否未將設備相互隔離。
 
-更多疑難排解提示請參閱[這裡](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+更多問題排除提示請參閱[這裡](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
 ### 從 Wear 手錶控制 AAPS
 
-一旦你在手錶上設置了 **AAPS**，關於智慧型手錶錶盤及其功能的詳細資訊，請參閱[Wear AAPS 在智慧型手錶上的操作](../Configuration/Watchfaces.md)。
+當你在手錶上設置了 **AAPS**，關於智慧型手錶錶盤及其功能的詳細資訊，請參閱[Wear AAPS 在智慧型手錶上的操作](../Configuration/Watchfaces.md)。
 
 簡要概述，以下功能可以從智慧型手錶觸發：
 
@@ -734,7 +734,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ● 檢查循環狀態
 
-● 檢查和更改個人設定檔，CPP（晝夜節律百分比個人設定檔 = 時間偏移 + 百分比）
+● 檢查和更改個人設定檔，CPP（日夜節律百分比個人設定檔 = 時間偏移 + 百分比）
 
 ● 顯示 TDD（每日總劑量 = 每日注射 + 基礎）
 
@@ -748,9 +748,9 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 在 **Galaxy wearable** 應用程式中的手機和手錶上進行調整後，可以使 Whatsapp 訊息透過輕微振動通知，並且 Whatsapp 訊息會顯示在現有錶盤上方。
 
-#### Sony 智慧型手錶設置疑難排解
+#### Sony 智慧型手錶設置問題排除
 
-雖然 Sony 智慧型手錶 SW 3 已於幾年前停產，但如果你正在使用此型號，請參閱[Sony 智慧型手錶 SW 3 疑難排解指南](https://androidaps.readthedocs.io/en/latest/Usage/SonySW3.html)。
+Although it was discontinued a few years ago, if you are using a Sony Smartwatch SW 3 please see here for a troubleshooting guide: [Troubleshooting Sony Smartwatch SW 3](./Usage/SonySW3.md)
 
 
 

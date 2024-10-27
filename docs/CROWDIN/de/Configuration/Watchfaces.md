@@ -224,7 +224,7 @@ Abhängig von Deiner Wear-OS-Version, Marke und Smartphone gibt es zwei Möglich
 1. Von Deinem Zifferblatt aus: - Wische von rechts nach links bis Du "+ Zifferblatt hinzufügen" erreichst - Wähle eine der Kacheln aus.
 2. Öffne auf deinem Smartphone die Begleit-App für Ihre Uhr. - Für Samsung öffne "Galaxy Wearable" oder für andere Marken "Wear OS" 
   * Mit dem Klick auf den Abschnitt "Kacheln", gefolgt von "+ Hinzufügen" Button
-  * Entscheide Dich für die Kachel, die Du hinzufügen möchtest, indem Du sie auswählst. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
+  * Entscheide Dich für die Kachel, die Du hinzufügen möchtest, indem Du sie auswählst. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) Die Anordnung der Kacheln kann durch Ziehen und Ablegen geändert werden
 
 Der Inhalt der Kacheln kann angepasst werden, indem Du lange auf eine Kachel drückst und auf den Button "Bearbeiten" oder "gear icon" tippst.
 
@@ -331,15 +331,15 @@ Da wir bei der Kommunikation keine Kompromisse eingehen können (wir brauchen ak
 
 ## Garmin
 
-There are a couple of watch faces for Garmin that integrate with xDrip or Nightscout on the [Garmin ConnectIQ store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30).
+Es gibt im [Garmin ConnectIQ Store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30) einige Zifferblätter, die eine Integration mit xDrip oder Nightscout haben.
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with AAPS. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to AAPS. It is available in the ConnectIQ store, the necessary AAPS plugin is only available from AAPS 3.2.
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) hat eine direkte AAPS-Integration. Es zeigt neben den Glukosewerten auch Daten über den Loop-Status (aktives Insulin, temporäres Basal) und sendet Herzfrequenzmessungen an AAPS. Es ist im ConnectIQ Store verfügbar. Das notwendige AAPS-Plugin ist erst ab AAPS 3.2 verfügbar.
 
 ![Screenshot](../images/Garmin_WF.png) ![Screenshot](../images/Garmin_WF-annotated.png)
 
 ## Es gibt weitere benutzerdefinierte AAPS Watchfaces
 
-[Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+[Hier](../ExchangeSiteCustomWatchfaces/index.md) kannst Du ZIP-Dateien mit von anderen erstellen Watchfaces herunterladen.
 
 Um Dein eigenes Watchface zu erstellen, findest Du [hier](../Usage/Custom_Watchface_Reference.md) eine <0>Anleitung</0>.
 

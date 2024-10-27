@@ -4,7 +4,7 @@ Careportal reproduit les fonctions que vous pouvez trouver dans Nightscout sous 
 
 Le code utilisé à l'origine pour ajouter le support hors ligne de Careportal n'a pas été harmonisé avec le développement de AAPS et était vraiment bloquant pour les développements supplémentaires. **Par conséquent, la décision a été prise de supprimer Careportal dans la version 2.6 de AAPS.**
 
-La plupart des fonctions de Careportal sont encore disponibles dans les Actions ou dans l'écran d'accueil. Ces actions peuvent être effectuées soit via l'onglet Actions soit via le menu hamburger, selon vos paramètres dans la [Configuration](../Configuration/Config-Builder.md).
+La plupart des fonctions de Careportal sont encore disponibles dans les Actions ou dans l'écran d'accueil. The actions can be reached either via actions tab or hamburger menu - depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md).
 
 Cette page indique où retrouver les fonctions précédemment disponibles dans Careportal.
 
@@ -15,7 +15,7 @@ Cette page indique où retrouver les fonctions précédemment disponibles dans C
 - Les informations d'âge ont été déplacées dans l'onglet/menu Actions.
 - La vérification de glycémie a été déplacée dans l'onglet/menu Actions.
 - Cible temporaire a été déplacée dans l'onglet/menu Actions.
-- Exercice n'est plus disponible, mais vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section [Glucides et bolus](CPbefore26-carbs-bolus) de cette page).
+- Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
 (CPbefore26-carbs-bolus)=
 
@@ -38,9 +38,9 @@ Cette page indique où retrouver les fonctions précédemment disponibles dans C
 ![Careportal CGM & OpenAPS](../images/Careportal_25_26_3_IIa.png)
 
 - L'insertion d'un capteur MGC est maintenant dans l'onglet/menu Actions.
-- Toutes les autres fonctions de cette section ont été supprimées. Vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section [Glucides et bolus](CPbefore26-carbs-bolus) de cette page).
+- Toutes les autres fonctions de cette section ont été supprimées. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
-## Pompe
+## Pump
 
 ![Careportal Pump](../images/Careportal_25_26_4_IIb.png)
 

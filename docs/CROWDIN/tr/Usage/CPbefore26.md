@@ -4,7 +4,7 @@ Bakım portalı, Nightscout ekranınızda göreceğiniz fonksiyonları, kayıtla
 
 Başlangıçta bakımportalı çevrimdışı destek eklemek için kullanılan kod, AAPS'in geliştirilmesiyle uyumlu değildi ve daha fazla kodlamayı engelliyordu. **Bu nedenle, AAPS sürüm 2.6'da bakım portalının kaldırılmasına karar verildi.**
 
-Bakım portalının çoğu işlevi hala eylemlerde veya başlangıç ekranında bulunabilir. Eylemlere, eylemler sekmesinden veya hamburger menüsü aracılığıyla [Konfigürasyon ayarları](../Configuration/Config-Builder.md) içindeki ayarlarınızdan erişilebilir.
+Bakım portalının çoğu işlevi hala eylemlerde veya başlangıç ekranında bulunabilir. The actions can be reached either via actions tab or hamburger menu - depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md).
 
 Bu sayfa, daha önce bakım portalında mevcut olan işlevleri nerede bulabileceğinizi gösterecektir.
 
@@ -15,7 +15,7 @@ Bu sayfa, daha önce bakım portalında mevcut olan işlevleri nerede bulabilece
 - Yaş bilgisi işlemler sekmesine / menüsüne taşındı.
 - KŞ kontrolü işlemler sekmesine / menüsüne taşındı.
 - Geçici hedef, işlemler sekmesine / menüsüne taşındı.
-- Egzersiz artık mevcut değildir, ancak bolus vermek gibi bir eylem gerçekleştirirken diyalog kutusundaki not alanını kullanabilirsiniz ([Bu sayfadaki karbonhidratlar & bolus](CPbefore26-carbs-bolus) bölümündeki ekran görüntülerine bakabilirsiniz).
+- Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
 (CPbefore26-carbs-bolus)=
 
@@ -38,9 +38,9 @@ Bu sayfa, daha önce bakım portalında mevcut olan işlevleri nerede bulabilece
 ![Careportal CGM & OpenAPS](../images/Careportal_25_26_3_IIa.png)
 
 - CGM sensör eki artık eylemler sekmesinde / menüsünde bulunabilir.
-- Bu bölümdeki diğer tüm işlevler kaldırılmıştır. Bolus vermek gibi bir eylem gerçekleştirirken diyalog kutusundaki not alanını kullanabilirsiniz ([Bu sayfadaki karbonhidratlar & bolus](CPbefore26-carbs-bolus) bölümündeki ekran görüntülerine bakabilirsiniz).
+- Bu bölümdeki diğer tüm işlevler kaldırılmıştır. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
-## Pompa
+## Pump
 
 ![Careportal Pump](../images/Careportal_25_26_4_IIb.png)
 

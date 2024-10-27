@@ -1,32 +1,7 @@
-(Smoothing-Blood-Glucose-Data)=
+- - -
+orphan: true
+- - -
 
-# 平滑血糖資料
-
-如果 **血糖** 資料跳動或干擾，**AAPS** 可能會錯誤劑量胰島素，導致高血糖或低血糖。 如果你發現你的連續血糖監測（CGM）資料出錯，應在問題解決前暫停循環。 根據你的 CGM，不同問題可能來自 **AAPS** 中的 CGM 設定（如下文所述），或者是 CGM 感測器的問題（可能需要更換感測器）。
-
-某些 CGM 系統內建算法來檢測讀取值中的干擾，**AAPS** 可以利用此資訊避免在血糖資料過於不可靠時給予 SMB 劑量。 然而，部分 CGM 不會傳送此資料，對於這些血糖來源，「始終啟用 SMB」和「碳水化合物後啟用 SMB」會為了安全起見被停用。
-
-此外，從 **AAPS** 3.2 版本開始，**AAPS** 提供選項在 **AAPS** 內平滑資料，而非在 CGM 應用程式內處理。 在 [設定建置器](../Configuration/Config-Builder.md) 中有三個選項可用。
-
-![平滑處理](../images/ConfBuild_Smoothing.png)
-
-## 指數平滑
-
-這是建議的起始選項，因為他最積極解決干擾問題，並重寫最近的數值。
-
-## 平均平滑
-
-此選項與先前在某些 CGM 平台上實作的反向平滑相似。 他對血糖值的近期變化反應更敏感，因此更容易對干擾的 CGM 資料反應不正確。
-
-## 無平滑處理
-
-僅當你的 CGM 資料已在收集器應用程式中妥善平滑處理後傳送至 **AAPS** 時，才使用此選項。
-
-## 平滑處理建議
-
-|                       | 指數平滑 |  平均平滑 | 無平滑處理 |
-| --------------------- | :--: | :---: | :---: |
-| G5 和 G6               |      | 如果有干擾 |  建議使用 |
-| G7                    | 建議使用 |       |       |
-| Libre 1 或 Juggluco    | 建議使用 |       |       |
-| Libre 2 和 3 使用 xDrip+ |      |       |  建議使用 |
+<head>
+  <meta http-equiv="Refresh" content="0; URL=https://androidaps.readthedocs.io/en/latest/CompatibleCgms/SmoothingBloodGlucoseData.html" />
+</head>

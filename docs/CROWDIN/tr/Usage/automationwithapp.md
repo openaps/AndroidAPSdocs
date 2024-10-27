@@ -1,6 +1,6 @@
 # Üçüncü taraf Android Automate Uygulaması ile otomasyon
 
-**This article has been written before AAPS version 2.5. There is an [automation plugin in AAPS](./Automation.md) itself with AAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
+**This article has been written before AAPS version 2.5. There is an [automation plugin in AAPS](../DailyLifeWithAaps/Automations.md) itself with AAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
 
 As AAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Frequent manual user inputs can be automated via external tools like Automate or IFTTT to extend the recent AAPS functionality.
 
@@ -32,7 +32,7 @@ In AAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NS
 
 In AAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
 
-Oluşabilecek [güvenlik sorunlarının](Nightscout-security-considerations) farkında olun ve bir [Insight pump](Accu-Chek-Insight-Pump-settings-in-aaps) kullanıyorsanız çok dikkatli olun.
+Be aware of the [security issues](../SettingUpAaps/Nightscout.md#security-considerations) that might occur and be very careful if you are using an [Insight pump](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps).
 
 ![Nightscout indirme tercihleri](../images/automate-aaps2.jpg)
 
@@ -119,7 +119,7 @@ Askıyı başlat: Oynat düğmesine dokunun
 
 #### Örnek 3: Sizin tarafınızdan eklenecek!!!
 
-Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSDocs repository](../make-a-PR.md).
+Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSDocs repository](../SupportingAaps/HowToEditTheDocs.md).
 
 ## Eğer buysa, o zaman (IFTTT)
 

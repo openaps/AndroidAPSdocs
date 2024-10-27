@@ -25,7 +25,7 @@
 ## 設定
 
 1. 如果尚未建立帳號，請至 [Open Humans](https://www.openhumans.org) 建立帳號。 若你願意，你也可以使用現有的 Google 或 Facebook 帳號。
-2. 在[組態建置工具](../Configuration/Config-Builder.md)中啟用「Open Humans」外掛。
+2. Enable the “Open Humans” plugin in [Config Builder](../SettingUpAaps/ConfigBuilder.md).
 3. 透過齒輪按鈕開啟設定。 你可以限制只有在手機使用 Wi-Fi 和/或正在充電時進行上傳。
 4. 打開 Open Humans 外掛（可透過 OH 頁籤或漢堡選單），然後點擊「登入」。
 
@@ -61,7 +61,7 @@
 
 ### [OpenAPS 資料公用](https://www.openhumans.org/activity/openaps-data-commons/)
 
-OpenAPS 資料公用旨在為 DIYAPS 社群提供簡單的方法來共享資料集以供研究。 這些資料既可供傳統研究人員進行傳統研究，也可供社群中的團體或個人進行自己的研究項目。 OpenAPS 資料公用使用「Open Humans」平台，使人們能夠輕鬆上傳並共享來自 DIYAPS 的資料，包括 AAPS、Loop 和 OpenAPS。
+OpenAPS 資料公用主要在為 DIYAPS 社群提供簡單的方法來共享資料集以供研究。 這些資料既可供傳統研究人員進行傳統研究，也可供社群中的團體或個人進行自己的研究項目。 OpenAPS 資料公用使用「Open Humans」平台，使人們能夠輕鬆上傳並共享來自 DIYAPS 的資料，包括 AAPS、Loop 和 OpenAPS。
 
 你可以透過三種方式之一將你的資料匯入 Open Humans：
 
@@ -69,7 +69,7 @@ OpenAPS 資料公用旨在為 DIYAPS 社群提供簡單的方法來共享資料�
 2. 使用 Nightscout 資料傳輸將你的資料匯入 Open Humans
 3. 手動將資料檔案上傳至 Open Humans。
 
-一旦你建立帳號並讓你的資料進入 Open Humans，請務必加入 OpenAPS 資料公用，以便捐贈你的資料供研究使用（如果你選擇）。
+你建立帳號並讓你的資料進入 Open Humans，請務必加入 OpenAPS 資料公用，以便捐贈你的資料供研究使用（如果你選擇）。
 
 ## 使用條款
 

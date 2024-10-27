@@ -138,7 +138,7 @@ Follow the instructions at [Gradle Resync](gradle-resync).
 
   Вы можете столкнуться с этой ошибкой:
 
-    ![Не удалось разрешить... Нет кэшированной версии](../images/studioTroubleshooting/08_NoCachedVersion.png)
+![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
   * С правой стороны откройте вкладку Gradle (1).
 

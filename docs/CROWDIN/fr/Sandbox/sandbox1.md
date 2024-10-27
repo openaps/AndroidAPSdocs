@@ -22,13 +22,13 @@ Ceci est un fichier sandbox interne pour que l'équipe de documentation puisse t
     1. les traductions CROWDIN
     2. Lire la doc de déploiement.
 
-Vous pouvez sauter directement d'ici à la deuxième étiquette dans ce fichier - ["Sauter"](sandbox1-this-is-another-test).
+You can dirctly jump from here to the second label in this file - ["Jump"](#this-is-another-test).
 
-Et vous pouvez aussi aller à la première étiquette - ["Sauter"](sandbox1-this-is-a-test).
+And you can jump to the first label too - ["Jump"](#this-is-a-test).
 
 Here you can jump to the second sandbox file - ["Jump"](./MoveTest/sandbox2.md).
 
-Vous pouvez sauter directement d'ici à la première étiquette dans le fichier sandbox2.md - ["Sauter"](sandbox2-this-is-a-test).
+You can dirctly jump from here to the first label in the sandbox2.md file - ["Jump"](./MoveTest/sandbox2.md#this-is-a-test).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -51,3 +51,13 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 testing abbr : <abbr title="Insulin Sensitivity Factor">ISF</abbr>, <abbr title="Insulin On Board">IOB</abbr>
+
+Links with anchor :
+- [how long will it take?](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up)
+- [NSClient settings in Preferences](../SettingUpAaps/Preferences.md#nsclient).
+- [prediction lines in AAPS OVERVIEW](../DailyLifeWithAaps/AapsScreens.md#prediction-lines) to header level 4
+- [Screenshots](../DailyLifeWithAaps/AapsScreens.md)
+- [Screenshot main graph](../DailyLifeWithAaps/AapsScreens.md#section-f---main-graph) to header level 3
+- [OpenAPS-features](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
+- [max IOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
+- [SMB section in this documentation](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb)

@@ -116,9 +116,9 @@
 
 - LOOP RESUME (循環恢復) \* 回覆：循環已恢復
 
-- LOOP CLOSED (循環關閉) \* 回覆：當前循環模式：循環關閉
+- LOOP CLOSED (循環關閉) \* 回覆：目前循環模式：循環關閉
 
-- LOOP LGS (循環低血糖暫停) \* 回覆：當前循環模式：低血糖暫停
+- LOOP LGS (循環低血糖暫停) \* 回覆：目前循環模式：低血糖暫停
 
 ### CGM 資料
 
@@ -167,7 +167,7 @@
 - HELP BOLUS (幫助 注射) \* 回覆：BOLUS 1.2 BOLUS 1.2 餐前
 
 (SMS-Commands-troubleshooting)=
-## 疑難排解
+## 問題排除
 
 ### 多條簡訊
 

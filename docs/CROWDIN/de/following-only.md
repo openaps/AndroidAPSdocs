@@ -8,7 +8,7 @@ Ein guter Überblick über die umfangreichen Optionen zum Folgen von **AAPS** is
 
 Die häufigsten Strategien im Zusammenhang mit **AAPS** werden weiter unten erläutert.
 
-## 1) Smartphone apps
+## 1) Smartphone Apps
 
 Dies sind einige der wichtigsten „Follower“-Apps, die von **AAPS**-Nutzenden verwendet werden. Alle diese Apps sind „kostenlos“:
 
@@ -29,7 +29,7 @@ G)  Spike (iOS)
 
 
 
-### A) Dexcom Follow (Android and iOS)
+### A) Dexcom Follow (Android und iOS)
 
 ![grafik](./images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
@@ -39,7 +39,7 @@ G)  Spike (iOS)
 
 ● Dexcom Follow eignet sich besonders gut für Menschen (z. B. Lehrer/Großeltern), die sehr wenig über Diabetes und Glukosewerte wissen. Es hat anpassbare Alarme (Glukosewert, welcher Alarmsound abgespielt werden soll usw.). Alarme können bei Bedarf komplett abgeschaltet werden. Das kann z.B. in Situationen, in denen der Sensor noch nicht zuverlässig läuft und falsche tiefe Werte anzeigt, hilfreich sein.
 
-#### Setting up Dexcom Follow: how-to-guide
+#### Dexcom Follow konfigurieren: Schritt-für-Schritt-Anleitung
 
 Wenn Du die inoffizielle Dexcom App BYODA für das Auslesen der Sensorwerte nutzt, kannst Du weitere Follower aus der BYODA App heraus einladen. Es können Einladungen an Dexcom Follow auch aus xDrip+ heraus gesendet werden (Einstellungen - Cloud-Upload - Dexcom Share Server Upload). Siehe Anleitung:
 
@@ -103,23 +103,23 @@ Nachteile (von Nutzenden gemeldet)
 
 ### D) xDrip+ (Android)
 
-You can use xDrip+ as a follower.
+Du kannst xDrip+ als Follower-App nutzen.
 
-#### With Nightscout
+#### Wenn Du Nightscout nutzt ...
 
-Set xDrip+ as a Nightscout Follower. You will receive BG and treatments, not basal.
+Konfiguriere in xDrip+ Nightscout Follower als Datenquelle. Du kannst damit Glukosewerte und Behandlungsdaten empfangen, nicht jedoch das Basal.
 
 ![grafik](./images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
-#### Without Nightscout - xDrip+ BG data source
+#### Wenn Du Nightscout nicht nutzt (Datenquelle: xDrip+ Sync Follower) ...
 
-If your AAPS data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+Wenn AAPS die Informationen und Daten über xDrip+ erhält - xDrip+ kann diese Daten wiederum auch über andere Apps (BYODA, Juggluco, ...) erhalten - kann das Master-Smartphone Glukosewerte, Behandlungen und Basalraten mit xDrip+ Followern teilen.
 
 ![grafik](./images/remote_control_and_following/xDrip+_Master_Sync.png)
 
-#### Without Nightscout - xDrip+ BG companion app
+#### Wenn Du Nightscout nicht nutzt (Datenquelle: Companion App) ...
 
-If your AAPS data source is not xDrip+ but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+Wenn Deine AAPS-Datenquelle nicht xDrip+ sein sollte, kannst Du die Glukosewerte auch aus der Companion-App als Datenquelle anzeigen lassen. Glukosewerte, Behandlungen und Basalraten können über das Master-Smartphone mit xDrip+-Followern geteilt werden.
 
 ![grafik](./images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
@@ -133,21 +133,21 @@ Eine Version von **xDrip4iOS** ist im Apple Store unter dem Namen **Shuggah** ve
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). However, it is difficult to actually _get_ the **xDrip4iOS** app for your phone. 
+Die [xDrip4iOS Facebook-Gruppe](https://www.facebook.com/groups/853994615056838/announcements) ist die wichtigste Community-Unterstützung für xDrip4iOS und Shuggah. **xDrip4iOS** kann sich mit vielen verschiedenen CGM-Systemen und -Transmittern verbinden und Glukosewerte, Diagramme und Statistiken anzeigen und Alarme auslösen. Es kann auch zu Nightscout hochladen oder als [Follower-App für Nightscout](https://xdrip4ios.readthedocs.io/de/latest/connect/follower/) fungieren. Die Schwierigkeit besteht allerdings darin, die **xDrip4iOS**-App für Dein Smartphone zu bekommen. 
 
-"How can I get **xDrip4iOS** on my iPhone?"
-There are two options:
+"Wie bekomme ich **xDrip4iOS** für mein iPhone?"
+Es gibt zwei Möglichkeiten:
 
-1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by following the instructions below:
+1. Wenn Du einen Mac und einen Apple Developer Account (99 EUR/USD pro Jahr) hast, kannst Du Dein eigenes xDrip4iOS erstellen, indem Du den folgenden Anweisungen folgst:
 
-https://xdrip4ios.readthedocs.io/en/latest/install/build/
+https://xdrip4ios. eadthedocs. o/de/latest/install/build/
 
-If you want, you can then become a "releaser" and share a Personal Testflight xDrip4iOS with up to 100 other people to help them:
-https://xdrip4ios.readthedocs.io/.../personal_testflight/
+Wenn Du möchtest, kannst Du dann zu einem Herausgeber ("releaser") werden, einen persönlichen Testflight xDrip4iOS mit bis zu 100 anderen Personen teilen, um ihnen damit zu helfen:
+https://xdrip4ios. eadthedocs.io/.../personal_testflight/
 
-2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and monitor the posts… wait for somebody to offer an invitation to their Personal Testflight releases in the group. **You should not ask for an invitation to the app** (read the group rules). 
+2. Du bist der [xDrip4iOS Facebook-Gruppe](https://www.facebook. om/groups/853994615056838/announcements) beigetreten und verfolgst die Beiträge… warte darauf, dass jemand eine Einladung zu seinem eigenen Testflight-Release in der Gruppe anbietet. **Du solltest nicht um eine Einladung zur App** bitten (lies die Gruppenregeln). 
 
-An easier solution is therefore to download the **Shuggah** app. 
+Einfacher ist es deswegen, die **Shuggah**-App herunterzuladen. 
 ```
 
 #### [Shuggah](https://apps.apple.com/sa/app/shuggah/id1586789452)
@@ -190,7 +190,7 @@ Es gibt eine große Auswahl an erschwinglichen Smartwatches, die Glukosewerte an
 
 Hier fassen wir einige der bei **AAPS**-Nutzenden populären Follower-Optionen zusammen:
 
-### a)  **Xiaomi and Amazfit watches**
+### a) **Xiaomi und Amazfit Smartwatches**
 
 [Artem](https://github.com/bigdigital) hat die xDrip-Integration für verschiedene Smartwatch Modelle entwickelt, hauptsächlich für Xiaomi (_z. B._ MiBand) und Amazfit-Modelle:
 

@@ -8,9 +8,9 @@ This guide has some high-level information about DIY closed looping and specific
 
 To start using AAPS, the following steps should be taken:
 
-* Opatřete si [kompatibilní pumpu](../Hardware/pumps.md), [kompatibilní zařízení se systémem Android](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) a [kompatibilní senzor](../Configuration/BG-Source.md).
-* [Download the AAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
-* [Nakonfigurujte software tak, aby komunikoval s ostatními zařízeními a upravte nastavení a bezpečnostní opatření](index-configuration).
+* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
+* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
 ## Jak DIY uzavřená smyčka funguje
 
@@ -43,7 +43,7 @@ AAPS is designed to transparently track all input data it gathers, the resulting
 
 ## Examples of AAPS algorithm decision making:
 
-AAPS uses the same core algorithm and feature set as OpenAPS. Algoritmus vytváří několik predikcí (na základě nastavení a aktuální situace), které představují různé scénáře toho, co se může stát v budoucnosti. V Nightscoutu jsou tyto predikce zobrazeny jako „fialové křivky“. AAPS uses different colors to separate these [prediction lines](Releasenotes-overview-tab). V protokolech najdete informace o tom, která z těchto křivek predikce a kdy byla použita pro danou akci.
+AAPS uses the same core algorithm and feature set as OpenAPS. Algoritmus vytváří několik predikcí (na základě nastavení a aktuální situace), které představují různé scénáře toho, co se může stát v budoucnosti. V Nightscoutu jsou tyto predikce zobrazeny jako „fialové křivky“. AAPS uses different colors to separate these [prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines). V protokolech najdete informace o tom, která z těchto křivek predikce a kdy byla použita pro danou akci.
 
 ### Zde jsou příklady fialových křivek predikce a toho, jak se mohou lišit:
 
@@ -95,7 +95,7 @@ This is meant to be a high-level overview of how AAPS works. For more details, a
 
 Další doporučená literatura:
 
-* The [full AAPS documentation](../index)
+* The [full AAPS documentation](../index.md)
 * Dokument [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), který vysvětluje, jak je systém OpenAPS navržen z hlediska bezpečnosti: https://openaps.org/reference-design/
 * [Kompletní dokumentace k OpenAPS](https://openaps.readthedocs.io/en/latest/index.html) 
   * Další [podrobnosti o výpočtech OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

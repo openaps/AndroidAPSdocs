@@ -1,6 +1,6 @@
 # Android Auto
 
-**AAPS** 能夠將你的當前狀態以訊息形式直接發送到車內的 Android Auto。
+**AAPS** 能夠將你的目前狀態以訊息形式直接發送到車內的 Android Auto。
 
 ```{admonition} 版本和最後更改訊息 :class: dropdown 最後編輯日期：2023/07/05
 
@@ -84,6 +84,6 @@
 
 ![AAPS CGM 資料在 Android Auto 上的顯示](../images/android_auto_01.png)
 
-## 故障排除：
+## 問題排除：
 
 * 如果你看不到通知，請檢查是否已在 Android 中[允許 AAPS 顯示通知](Android-auto-AAPS-settings-for-android-auto)，以及 Android Auto 是否[擁有通知的存取權限](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)。

@@ -2,6 +2,17 @@ import os
 
 exec (open("../shared.conf.py").read())
 
+# Theme options are theme-specific and customize the look and feel of a theme
+# further.  For a list of options available for each theme, see the
+# documentation.
+
+html_context = {
+  'display_github': True,
+  'github_user': 'openaps',
+  'github_repo': 'AndroidAPSdocs',
+  'github_version': 'master/docs/EN/',
+}
+
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 #html_logo = None

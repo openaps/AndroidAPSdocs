@@ -1,8 +1,8 @@
 # AndroidAPSdocs
 
-Documentation for AndroidAPS
+Documentation for [AndroidAPS](https://github.com/nightscout/AndroidAPS)
 
-To view documentation, visit https://androidaps.readthedocs.io
+To view documentation, visit <https://androidaps.readthedocs.io>
 
 ## Docs Status
 

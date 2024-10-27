@@ -1,333 +1,333 @@
-# Provoz AAPS prostřednictvím vaší chytré hodinky Wear OS
+# 透過 Wear OS 智慧型手錶操作 AAPS
 
 (Watchfaces-aaps-watchfaces)=
 
-## Hodinky AAPS
+## AAPS 手錶外觀
 
-Existuje několik ciferníků, ze kterých si můžete vybrat, které jsou součástí základní verze AAPS Wear APK. Tyto ciferníky zahrnují průměrný delta, IOB, aktuálně aktivní temp. bazální rychlost a bazální profily a graf měření CGM.
+AAPS Wear APK 的基礎版本中包含多種手錶外觀供選擇。 這些手錶外觀包括平均變化量、IOB、目前的臨時基礎速率和基礎設定檔，以及 CGM 資料圖。
 
-Ujistěte se, že notifikace z AAPS nejsou na hodinkách zablokované. Potvrzení akce (např. bolus, cílová teplota) přijde prostřednictvím notifikace, kterou je potřeba přejet a potvrdit.
+確保手錶上未封鎖來自 AAPS 的通知。 確認操作（例如注射、臨時目標）會透過通知進行，你需要滑動並勾選。
 
-Některé dostupné akce na cifernících jsou:
+手錶外觀上一些可用的操作：
 
-* Dvojitým tapnutím na BG přejdete do menu AAPS
-* Dvojitým tapnutím na graf BG změníte časovou škálu grafu
+* 雙擊血糖以進入 AAPS 選單
+* 雙擊血糖圖表可更改圖表的時間尺度
 
-## Změna na ciferník AAPS na vaší hodinkách WearOS
+## 在 WearOS 手錶上切換到 AAPS 手錶外觀
 
-V standardní verzi AAPS Wear OS APK je k dispozici řada ciferníků. Jakmile nainstalujete AAPS Wear APK na své hodinky, budou k dispozici. Zde jsou kroky pro výběr jednoho:
+AAPS Wear OS APK 的標準版本中提供了多種手錶外觀。 當你在手錶上安裝 AAPS Wear APK 後，他們將可供使用。 以下是選擇其中一個手錶外觀的步驟：
 
-1. Na hodinkách (předpokládejme WearOS) dlouze stiskněte svůj aktuální ciferník, aby se zobrazila obrazovka výběru ciferníků, a posuňte se úplně doprava, dokud neuvidíte tlačítko „Přidat ciferník“ a vyberte je
+1. 在手錶上（假設使用 WearOS），長按目前手錶外觀以打開手錶外觀選擇畫面，然後向右捲動直到看到「新增手錶外觀」按鈕並選擇他
 
 ![Screenshot_20231123_124657_sysui](https://github.com/openaps/AndroidAPSdocs/assets/10778155/efd4268f-0536-4a31-9ba1-f98108f32483)
 
-2. Posuňte se dolů na seznamu, dokud neuvidíte sekci „Stažené“ a najděte „AAPS (Custom)“ a klikněte na prostředek obrázku, abyste ho přidali do svého krátkého seznamu aktuálních ciferníků. Není třeba se obávat aktuálního vzhledu ciferníku „AAPS (Custom)“, v dalším kroku vybereme vaši preferovanou kůži.
+2. 向下捲動到列表底部，直到看到「已下載」部分，找到「AAPS（自訂）」並點擊圖像中央將其新增至你目前的手錶外觀清單。 不用擔心目前「AAPS（自訂）」手錶外觀的外觀，我們將在下一步選擇你喜歡的外觀。
 
 ![Screenshot_20231123_124619_sysui](https://github.com/openaps/AndroidAPSdocs/assets/10778155/036dc7c4-6672-46c8-b604-8810a16a2eb3)
 
-3. Nyní otevřete AAPS na svém telefonu a přejděte na plugin pro Wear (povolte ho v Config Builderu (pod Synchronizací), pokud ho nevidíte ve svých aktuálních pluginech nahoře).
+3. 現在打開你手機上的 AAPS，進入 Wear 外掛（如果你在頂部的外掛列表中未看到他，請在組態建置工具中啟用他（位於同步選項下）。
 
 ![Screenshot_20231123_090941_AAPS](https://github.com/openaps/AndroidAPSdocs/assets/10778155/5df23fa3-791b-4c9a-999a-251391a82835)
 
-4. Klikněte na tlačítko „Načíst ciferník“ a vyberte ciferník, který se vám líbí
+4. 點擊「載入手錶外觀」按鈕，並選擇你喜歡的手錶外觀。
 
 ![Screenshot_20231123_130410_AAPS](https://github.com/openaps/AndroidAPSdocs/assets/10778155/adde2eca-1df7-4382-b9ab-346819c35d9d)
 
-5. Zkontrolujte své hodinky, ciferník „AAPS (Custom)“ by nyní měl zobrazovat vybranou kůži. Dejte tomu několik sekund na obnovení. Nyní si můžete přizpůsobit komplikace atd. dlouhým stisknutím ciferníku a poté stisknutím tlačítka „Přizpůsobit“ na obrázku ciferníku.
+5. 查看你的手錶，現在應該顯示你選擇的「AAPS（自訂）」手錶外觀。 等待幾秒鐘讓他重新整理。 現在你可以透過長按手錶外觀並點擊「自訂」按鈕來自訂複雜功能等內容。 長按錶盤，然後按下錶盤圖片上的「自訂」按鈕。
 
-## Dostupné ciferníky
+## 可用的手錶外觀
 
-![Dostupné ciferníky](../images/Watchface_Types.png)
+![可用的手錶外觀](../images/Watchface_Types.png)
 
 (Watchfaces-new-watchface-as-of-AAPS-2-8)=
 
-### Nový ciferník od verze AAPS 2.8
+### AAPS 2.8 版本新增的手錶外觀
 
-![Ciferník Digitální styl](../images/Watchface_DigitalStyle.png)
+![數位風格手錶外觀](../images/Watchface_DigitalStyle.png)
 
-* Barvy, linky a kruhy jsou konfigurovatelné v nastavení menu na ozubeném kole ciferníka.
+* 顏色、線條和圓形可在手錶外觀選擇器選單的齒輪圖示設定選單中配置。
 
-## Ciferník AAPSv2 - Legend
+## AAPSv2 手錶外觀 - 圖例
 
-![Legenda ciferníku AAPSv2](../images/Watchface_Legend.png)
+![AAPSv2 手錶外觀圖例](../images/Watchface_Legend.png)
 
-A - doba od posledního běhu smyčky
+A - 從最後一次循環運作以來的時間
 
-B - měření CGM
+B - CGM 資料讀取值
 
-C - minuty od posledního měření CGM
+C - 自最後一次 CGM 資料讀取以來的分鐘數
 
-D - změna ve srovnání s posledním měřením CGM (v mmol nebo mg/dl)
+D - 與上次 CGM 讀取值相比的變化（以 mmol 或 mg/dl 為單位）
 
-E - průměrná změna měření CGM za posledních 15 minut
+E - 過去 15 分鐘的 CGM 讀取值平均變化
 
-F - baterie telefonu
+F - 手機電池
 
-G - bazální rychlost (zobrazena v U/h během standardní rychlosti a v % během TBR)
+G - 基礎率（標準率顯示為U/h，臨時基礎率（TBR）顯示為百分比）
 
-H - BGI (interakce s hladinou glukózy) -> míra, do jaké by BG „měla“ růst nebo klesat pouze na základě aktivity inzulínu.
+G - 基礎速率（以 U/h 顯示標準速率，以 % 顯示臨時基礎速率）
 
-I - sacharidy (sacharidy na palubě | e-sacharidy v budoucnu)
+H - BGI（血糖影響） -> 基於胰島素活性，血糖「應該」上升或下降的程度。
 
-J - insulin na palubě (z bolusu | z bazálního)
+I - 碳水化合物（碳水化合物在體內的數量 | 未來的碳水化合物）
 
-## Přístup do hlavního menu AAPS
+## J - 活性胰島素（來自注射 | 來自基礎速率）
 
-Pro přístup do hlavního menu AAPS můžete použít jednu z následujících možností:
+進入 AAPS 主選單
 
-* dvojitě klepněte na svou hodnotu BG
-* vyberte ikonu AAPS v nabídce aplikací hodinkách
-* klepněte na komplikaci AAPS (pokud je nakonfigurována pro menu)
+* 雙擊你的血糖值
+* 在手錶應用程式選單中選擇 AAPS 圖示
+* 點擊 AAPS 複雜功能（如果已配置選單）
 
-## Nastavení (v nositelných hodinkách)
+## 設置（在 Wear 手錶上）
 
-Pro přístup k nastavení ciferníku hodinek vstupte do hlavního menu AAPS, posuňte nahoru a vyberte "Nastavení".
+要進入手錶外觀設置，進入 AAPS 主選單，上滑並選擇「設置」。
 
-Vyplněná hvězda je pro povolený stav (**Zapnuto**), a prázdná hvězda označuje, že nastavení je zakázáno (**Vypnuto**):
+實心星星表示啟用狀態（**開**），空心星星圖示表示該設置已停用（**關**）：
 
-![Nastavení zapnuto/vypnuto](../images/Watchface_Settings_On_Off.png)
+![設置開/關](../images/Watchface_Settings_On_Off.png)
 
-### Parametry AAPS companion
+### AAPS 配套參數
 
-* **Vibrace při Bolusu** (výchozí `Zapnuto`):
-* **Jednotky pro akce** (výchozí `mg/dl`): pokud je **Zapnuto**, jednotky pro akce jsou `mg/dl`, pokud je **Vypnuto**, jednotka je `mmol/l`. Používá se při nastavování TT z hodinek.
+* **注射時震動**（預設`開`）：
+* **動作單位**（預設`mg/dl`）：如果**開**，動作單位為`mg/dl`，如果**關**，單位為`mmol/l`。 設定 TT 時使用。
 
-(Nastavení ciferníku-ciferník-nastavení)=
+(Watchfaces-watchface-settings)=
 
-### Nastavení ciferníku
+### 手錶外觀設置
 
-* **Zobrazit datum** (výchozí `Vypnuto`): pozor, datum není k dispozici na všech cifernících
-* **Zobrazit IOB** (výchozí `Zapnuto`): Zobrazit nebo nezobrazit hodnotu IOB (nastavení pro podrobnou hodnotu je v AAPS wear parametrech)
-* **Zobrazit COB** (výchozí `Zapnuto`): Zobrazit nebo nezobrazit hodnotu COB
-* **Zobrazit Delta** (výchozí `Zapnuto`): Zobrazit nebo nezobrazit BG změnu za posledních 5 minut
-* **Zobrazit AvgDelta** (výchozí `Zapnuto`): Zobrazit nebo nezobrazit průměrnou BG změnu za posledních 15 minut
-* **Zobrazit baterii telefonu** (výchozí `Zapnuto`): Baterie telefonu v %. Červená, pokud je pod 30%.
-* **Zobrazit baterii zařízení** (výchozí `Vypnuto`): Baterie zařízení je součtem baterie telefonu, baterie pumpy a baterie senzoru (obecně nejnižší z 3 hodnot)
-* **Zobrazit bazální rychlost** (výchozí `Zapnuto`): Zobrazit nebo nezobrazit aktuální bazální rychlost (v U/h nebo v % pokud TBR)
-* **Zobrazit stav smyčky** (výchozí `Zapnuto`): zobrazit, kolik minut uplynulo od posledního běhu smyčky (šipky kolem hodnoty se zbarví na červeno, pokud je nad 15').
-* **Zobrazit BG** (výchozí `Zapnuto`): Zobrazit nebo nezobrazit poslední hodnotu BG
-* **Zobrazit směr šipky** (výchozí `Zapnuto`): Zobrazit nebo nezobrazit šipku trendu BG
-* **Zobrazit Ago** (výchozí `Zapnuto`): zobrazit, kolik minut uplynulo od posledního měření.
-* **Tmavý** (výchozí `Zapnuto`): Můžete přepnout z černého pozadí na bílé pozadí (kromě ciferníku Cockpit a Steampunk)
-* **Zvýraznit bazální** (výchozí `Vypnuto`): Zlepšit viditelnost bazální rychlosti a dočasných bazálních
-* **Harmonizovaný oddělovač** (výchozí `Vypnuto`): Pro ciferníky AAPS, AAPSv2 a AAPS(Large), zobrazit kontrastní pozadí pro oddělovač (**Vypnuto**) nebo sladit oddělovač s barvou pozadí (**Zapnuto**)
-* **Časový rámec grafu** (výchozí `3 hodiny`): můžete v podmenu vybrat maximální časový rámec vašeho grafu mezi 1 hodinou a 5 hodinami.
+* **顯示日期**（預設`關`）：注意，並非所有手錶外觀都支援日期顯示
+* **顯示 IOB**（預設`開`）：是否顯示 IOB 值（詳細值設置在 AAPS wear 參數中）
+* **顯示 COB**（預設`開`）：是否顯示 COB 值
+* **顯示 Delta**（預設`開`）：是否顯示過去 5 分鐘的血糖變化
+* **顯示平均 Delta**（預設`開`）：是否顯示過去 15 分鐘的血糖平均變化
+* **顯示手機電池**（預設`開`）：手機電池百分比。 低於 30% 時顯示為紅色。
+* **顯示 Rig 電池**（預設`關`）：Rig 電池是手機電池、幫浦電池和傳感器電池的綜合結果（通常顯示最低的值）。
+* **顯示基礎速率**（預設`開`）：是否顯示目前的基礎速率（以 U/h 顯示，或如果是臨時基礎速率則以 % 顯示）
+* **顯示循環狀態**（預設`開`）：顯示自上次循環運作以來的分鐘數（如果超過 15 分鐘，數值周圍的箭頭變為紅色）。
+* **顯示 血糖**（預設`開`）：是否顯示最近的血糖值
+* **顯示方向箭頭**（預設`開`）：是否顯示血糖趨勢箭頭
+* **顯示經過時間**（預設`開`）：顯示自上次讀取以來的分鐘數。
+* **深色背景**（預設`開`）：你可以將黑色背景切換為白色背景（除了 Cockpit 和 Steampunk 手錶外觀）
+* **高亮基礎速率**（預設`關`）：提高基礎速率和臨時基礎速率的可見性
+* **匹配分隔線**（預設`關`）：對於 AAPS、AAPSv2 和 AAPS（大）手錶外觀，顯示分隔線的對比背景（**關**）或匹配分隔線與背景顏色（**開**）。
+* **圖表時間範圍**（預設`3 小時`）：你可以在子選單中選擇圖表的最大時間範圍，從 1 小時到 5 小時。
 
-### Nastavení uživatelského rozhraní
+### 用戶界面設置
 
-* **Design vstupu**: s tímto parametrem můžete vybrat pozici tlačítek "+" a "-" při zadávání příkazů pro AAPS (TT, inzulín, sacharidy...)
+* **輸入設計**：使用此參數，你可以選擇「+」和「-」按鈕的位置訊息，當你為 AAPS 輸入指令（TT、胰島素、碳水化合物...）時使用。
 
-![Možnosti designu vstupu](../images/Watchface_InputDesign.png)
+![輸入設計選項](../images/Watchface_InputDesign.png)
 
-### Specifické parametry ciferníku
+### 特定手錶外觀參數
 
-#### Ciferník Steampunk
+#### Steampunk 手錶外觀
 
-* **Delta granularita** (výchozí `Střední`)
+* **Delta 精度**（預設`中等`）
 
 ![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
-#### Ciferník Circle WF
+#### Circle WF
 
-* **Velká čísla** (výchozí `Vypnuto`): Zvýšení velikosti písma pro lepší viditelnost
-* **Historie kruhu** (výchozí `Vypnuto`): Zobrazit graficky historii BG s šedými kruhy uvnitř zeleného kruhu hodiny
-* **Lehká historie kruhu** (výchozí `Zapnuto`): Historie kruhu je více diskrétní s tmavší šedou
-* **Animace** (výchozí `Zapnuto`): Když je povoleno, na podporovaných hodinkách a ne v režimu úspory energie s nízkým rozlišením, bude ciferník hodinek animován
+* **大字體**（預設`關`）：增加字體大小以提高可見性
+* **環狀歷史**（預設`關`）：以灰色環在小時的綠色環內圖形顯示血糖歷史記錄
+* **輕環狀歷史**（預設`開`）：以更深的灰色顯示較不顯眼的環狀歷史
+* **動畫效果**（預設`開`）：如果啟用，且手錶支援並非處於省電低解析度模式時，手錶外觀的圓形會有動畫效果。
 
-### Nastavení příkazů
+### 指令設置
 
-* **Průvodce v menu** (výchozí `Zapnuto`): Umožnit rozhraní průvodce v hlavním menu pro zadání sacharidů a nastavení bolusu z hodinek
-* **Prime v menu** (výchozí `Vypnuto`): Umožnit akci Prime / Fill z hodinek
-* **Jednotný cíl** (výchozí `Zapnuto`):
+* **主選單嚮導**（預設`開`）：允許在主選單中使用嚮導介面從手錶輸入碳水化合物並設置注射量
+* **主選單注射前充填**（預設`關`）：允許從手錶進行注射前充填/填充操作
+* **單一目標**（預設`開`）：
   
-  * `Zapnuto`: nastavíte jednu hodnotu pro TT
-  * `Vypnuto`: nastavíte nízký a vysoký cíl pro TT
+  * `開`：你設置一個單一的 TT 值
+  * `關`：你設置低目標和高目標的 TT 值
 
-* **Procento průvodce** (výchozí `Vypnuto`): Umožňuje opravu bolusu podle průvodce (hodnota zadaná v procentech před potvrzovací notifikací)
+* **嚮導百分比**（預設`關`）：允許從嚮導進行注射校正（在確認通知前以百分比輸入值）
 
-(Hodinky-komplikace)=
+(Watchfaces-complications)=
 
-## Komplikace
+## 複雜功能
 
-*Komplikace* je termín z tradičního hodinářství, který popisuje přídavek na hlavním ciferníku - jako další malé okno nebo sub-ciferník (s datem, dnem v týdnu, fázi měsíce atd.). Wear OS 2.0 přináší tento metaforu, aby bylo možné přidávat vlastního poskytovatele dat, jako jsou počasí, notifikace, fitness počítadla a další - k jakýmkoliv ciferníkům, které podporují komplikace.
+*複雜功能* 是傳統製錶術中的術語，描述的是手錶主錶盤的附加功能 - 例如另一個小窗或副表盤（顯示日期、星期、月相等）。 Wear OS 2.0 將此隱喻引入，允許自訂資料提供者（例如天氣、通知、健身計數器等）新增到支援複雜功能的任何手錶外觀中。
 
-AAPS Wear OS aplikace podporuje komplikace od verze `2.6` a umožňuje jakémukoli třetímu dodavateli ciferníků, který podporuje komplikace, konfigurovat zobrazení údajů souvisejících s AAPS (BG s trendem, IOB, COB atd.).
+AAPS Wear OS 應用程式自 build `2.6` 開始支援複雜功能，並允許支援複雜功能的第三方手錶外觀配置顯示與 AAPS 相關的資料（如血糖值與趨勢、IOB、COB 等）。
 
-Komplikace také slouží jako **zkratka** k funkcím AAPS. Klepnutím na ně můžete otevřít menu a dialogy související s AAPS (v závislosti na typu komplikace a konfiguraci).
+複雜功能也可作為 AAPS 功能的 **快捷方式**。 點擊他們可以打開與 AAPS 相關的選單和對話框（具體取決於複雜功能類型和配置）。
 
-![Komplikace_na_cifernících](../images/Watchface_Complications_On_Watchfaces.png)
+![複雜功能_在_手錶外觀上](../images/Watchface_Complications_On_Watchfaces.png)
 
-### Typy komplikací
+### 複雜功能類型
 
-AAPS Wear OS aplikace poskytuje pouze surová data, podle předem definovaných formátů. Na třetím dodavateli ciferníků záleží, kde a jak zobrazit komplikace, včetně jejich rozložení, okrajů, barev a písma. Z mnoha typů komplikací dostupných v systému Wear OS AAPS používá:
+AAPS Wear OS 應用程式僅提供根據預定義格式的原始資料。 第三方手錶外觀決定如何及在哪裡呈現複雜功能，包括其佈局、邊框、顏色和字體。 在眾多 Wear OS 複雜功能類型中，AAPS 使用以下類型：
 
-* `KRÁTÝ TEXT` - Obsahuje dva řádky textu, 7 znaků každý, někdy označovaný jako hodnota a štítek. Obvykle se zobrazuje uvnitř kruhu nebo malého pilulky - jeden pod druhým, nebo vedle sebe. Je to velmi prostorově omezená komplikace. AAPS se snaží odstranit zbytečné znaky, aby se vešly: zaokrouhlením hodnot, odstraněním předních a zadních nul z hodnot atd.
-* `DLOUHÝ TEXT` - Obsahuje dva řádky textu, přibližně 20 znaků každý. Obvykle se zobrazuje uvnitř obdélníku nebo dlouhé pilulky - jeden pod druhým. Používá se pro podrobnosti a textový stav.
-* `ROZSAHOVÁ HODNOTA` - Používá se pro hodnoty z předdefinovaného rozsahu, jako je procento. Obsahuje ikonu, štítek a obvykle se zobrazuje jako kruhový pokrokový ukazatel.
-* `VELKÝ OBRAZ` - Vlastní pozadí, které může být použito (pokud je podporováno ciferníkem) jako pozadí.
+* `短文本` - 包含兩行文本，每行 7 個字元，有時稱為值和標籤。 通常呈現在一個圓圈或小 POD 中 - 一行在另一行下方或並排顯示。 這是一個空間非常有限的複雜功能。 AAPS 試圖移除不必要的字符以適應：透過四捨五入數值、去除值中的前導和尾隨零等方式。
+* `長文本` - 包含兩行文本，每行大約 20 個字元。 通常呈現在一個矩形或長 POD 中 - 一行在另一行下方顯示。 用於顯示更多詳情和文本狀態。
+* `範圍值` - 用於顯示預定範圍內的值，例如百分比。 他包含圖示和標籤，通常以圓形進度表盤呈現。
+* `大圖像` - 自訂背景圖像，可用作手錶外觀的背景（如果手錶外觀支援）。
 
-### Nastavení komplikací
+### 複雜功能設置
 
-Chcete-li přidat komplikaci k ciferníku, nakonfigurujte ji dlouhým stisknutím a kliknutím na ikonu ozubeného kola níže. V závislosti na tom, jak konkrétní ciferník je nakonfigurován - buď klikněte na zástupné symboly, nebo vstupte do nastavení ciferníku pro komplikace. Komplikace AAPS jsou seskupeny pod položkou menu AAPS.
+要將複雜功能添加到手錶外觀，請長按並點擊下方的齒輪圖示進行配置。 根據具體手錶外觀的配置方式 - 可以點擊佔位符或進入複雜功能設置選單。 AAPS 複雜功能歸類在 AAPS 選單項目下。
 
-Při konfiguraci komplikací na ciferníku představí Wear OS a filtruje seznam komplikací, které mohou být přizpůsobeny pro zvolené místo komplikace na ciferníku. Pokud nelze konkrétní komplikace najít na seznamu, pravděpodobně to souvisí s tím, že jejich typ nemůže být použit pro dané místo.
+在配置手錶外觀上的複雜功能時，Wear OS 會顯示並篩選適合放置在選定複雜功能位置的列表。 如果列表中找不到特定的複雜功能，可能是由於該類型不適用於該位置。
 
-### Komplikace poskytované AAPS
+### AAPS 提供的複雜功能
 
-AAPS poskytuje následující komplikace:
+AAPS 提供以下複雜功能：
 
-![AAPS_Seznam_Komplikací](../images/Watchface_Complications_List.png)
+![AAPS_複雜功能列表](../images/Watchface_Complications_List.png)
 
-* **BR, CoB & IoB** (`KRÁTÝ TEXT`, otevírá *Menu*): Zobrazuje *Bazální sazbu* na prvním řádku a *Carbs na palubě* a *Inzulin na palubě* na druhém řádku.
-* **Hladina glukózy v krvi** (`KRÁTÝ TEXT`, otevírá *Menu*): Zobrazuje hodnotu *Hladiny glukózy v krvi* a šipku *trendu* na prvním řádku a *věk měření* a *BG delta* na druhém řádku.
-* **CoB & IoB** (`KRÁTÝ TEXT`, otevírá *Menu*): Zobrazuje *Carbs na palubě* na prvním řádku a *Inzulin na palubě* na druhém řádku.
-* **CoB Podrobně** (`KRÁTÝ TEXT`, otevírá *Průvodce*): Zobrazuje aktuální aktivní *Carbs na palubě* na prvním řádku a plánované (budoucí, eCarbs) Carbs na druhém řádku.
-* **CoB Ikona** (`KRÁTÝ TEXT`, otevírá *Průvodce*): Zobrazuje hodnotu *Carbs na palubě* s statickou ikonou.
-* **Úplný stav** (`DLOUHÝ TEXT`, otevírá *Menu*): Zobrazuje většinu dat najednou: hodnotu *Hladiny glukózy v krvi* a šipku *trendu*, *BG delta* a *věk měření* na prvním řádku. Na druhém řádku *Carbs na palubě*, *Inzulin na palubě* a *Bazální sazba*.
-* **Úplný stav (převrácený)** (`DLOUHÝ TEXT`, otevírá *Menu*): Stejná data jako pro standardní *Úplný stav*, ale řádky jsou převráceny. Může být použito na cifernících, které ignorují jeden z dvou řádků v `DLOUHÝ TEXT`
-* **IoB Podrobně** (`KRÁTÝ TEXT`, otevírá *Bolus*): Zobrazuje celkový *Inzulin na palubě* na prvním řádku a podíl *IoB* na *Bolus* a *Bazální* část na druhém řádku.
-* **IoB Ikona** (`KRÁTÝ TEXT`, otevírá *Bolus*): Zobrazuje hodnotu *Inzulin na palubě* s statickou ikonou.
-* **Baterie Uploader/Telefonu** (`ROZSAHOVÁ HODNOTA`, otevírá *Status*): Zobrazuje procento baterie AAPS telefonu (uploader), jak je uvedeno AAPS. Zobrazeno jako procentuální měřič s ikonou baterie, která odráží hlášenou hodnotu. Nemusí být aktualizováno v reálném čase, ale když se změní jiné důležité údaje AAPS (obvykle: každých ~5 minut s novým měřením *Hladiny glukózy v krvi*).
+* **基礎速率、COB 和 IOB**（`短文本`，打開*選單*）：顯示第一行的*基礎速率*，第二行顯示*活性碳水化合物化合物*和*活性胰島素*。
+* **血糖**（`短文本`，打開*選單*）：顯示第一行的*血糖*值和*趨勢箭頭*，第二行顯示*測量時間*和*血糖變化量*。
+* **COB 和 IOB**（`短文本`，打開*選單*）：顯示第一行的*活性碳水化合物化合物*，第二行顯示*活性胰島素*。
+* **COB 詳細訊息**（`短文本`，打開*嚮導*）：顯示第一行的目前活動*活性碳水化合物化合物*，第二行顯示計劃中的（未來的，eCarbs）碳水化合物。
+* **COB 圖示**（`短文本`，打開*嚮導*）：顯示帶有靜態圖示的*活性碳水化合物化合物*值。
+* **完整狀態**（`長文本`，打開*選單*）：顯示所有資料：第一行顯示*血糖*值和*趨勢箭頭*、*血糖變化量*及*測量時間*。 第二行顯示*活性碳水化合物化合物*、*活性胰島素*和*基礎速率*。
+* **完整狀態（反轉）**（`長文本`，打開*選單*）：與標準的*完整狀態*顯示相同資料，但行順序相反。 可用於忽略`長文本`中一行的手錶外觀。
+* **IOB 詳細訊息**（`短文本`，打開*注射*）：顯示第一行的總*活性胰島素*，第二行顯示*注射*和*基礎速率*部分的 IOB。
+* **IOB 圖示**（`短文本`，打開*注射*）：顯示帶有靜態圖示的*活性胰島素*值。
+* **上傳裝置/手機電池**（`範圍值`，打開*狀態*）：顯示 AAPS 手機（上傳裝置）報告的電池百分比。 顯示為百分比儀表盤，並顯示反應報告值的電池圖示。 他可能不會即時更新，但會在其他重要的 AAPS 資料更改時更新（通常是每次~5 分鐘新的*血糖*測量時）。
 
-Kromě toho existují tři komplikace typu `VELKÝ OBRAZ`: **Tmavá tapeta**, **Šedá tapeta** a **Světla tapeta**, zobrazující statickou AAPS tapetu.
+此外，還有三種`大圖像`類型的複雜功能：**深色壁紙**、**灰色壁紙**和**淺色壁紙**，顯示靜態 AAPS 壁紙。
 
-### Nastavení související s komplikacemi
+### 與複雜功能相關的設置
 
-* **Akce po klepnutí na komplikaci** (default `Výchozí`): Rozhoduje, která dialogové okno se otevře, když uživatel tapne na komplikaci: 
-  * *Výchozí*: akce specifická pro typ komplikace *(viz seznam výše)*
-  * *Menu*: hlavní menu AAPS
-  * *Čaroděj*: bolusový čaroděj - kalkulačka bolusu
-  * *Bolus*: přímý vstup hodnoty bolusu
-  * *eCarb*: dialog pro konfiguraci eCarb
-  * *Status*: podmenu stavu
-  * *Žádný*: Zde deaktivuje akci tapnutí na komplikacích AAPS
-* **Unicode v komplikacích** (výchozí `Zapnuto`): Když je `Zapnuto`, komplikace použije Unicode znaky pro symboly jako `Δ` Delta, `⁞` vertikální tečka oddělovač nebo `⎍` symbol bazální sazby. Zobrazení závisí na písmu a to může být velmi specifické pro ciferník. Tato volba umožňuje přepínání Unicode symbolů `Vypnuto`, pokud je to potřeba - pokud písmo používané vlastním ciferníkem tyto symboly nepodporuje - aby se předešlo grafickým chybám.
+* **複雜功能點擊操作** （預設`預設`）：決定當用戶點擊複雜功能時打開的對話框： 
+  * *預設*：與複雜功能類型相關的動作*（見上方列表）*
+  * *選單*：AAPS 主選單
+  * *嚮導*：注射嚮導 - 注射計算機
+  * *注射*：直接輸入注射值
+  * *eCarb*：eCarb 配置對話框
+  * *狀態*：狀態子選單
+  * *無*：停用 AAPS 複雜功能的點擊操作
+* **複雜功能中的 Unicode**（預設`開`）：當`開`時，複雜功能將使用 Unicode 字符來顯示圖示，如`Δ`（變化量）、`⁞`（垂直點分隔符）或`⎍`（基礎速率圖示）。 他們的渲染取決於字體，這可能非常特定於手錶外觀。 如果自訂手錶外觀使用的字體不支援這些圖示，則可以將此選項設置為`關`，以避免圖形故障。
 
-## Ciferníky Wear OS
+## Wear OS Tiles(資訊方塊)
 
-Ciferníky Wear OS poskytují snadný přístup k informacím a akcím uživatelů pro splnění úkolů. Ciferníky jsou k dispozici pouze na chytrých hodinkách s Androidem běžících na verzi Wear OS 2.0 a vyšší.
+Wear OS Tiles 提供用戶快速查看資訊和操作的便捷方式。 這些 Tiles 僅在運作 Wear OS 版本 2.0 及更高版本的 Android 智慧型手錶上可用。
 
-Ciferníky umožňují rychlý přístup k akcím na aplikaci AAPS bez procházení menu ciferníku. Ciferníky jsou volitelné a mohou být přidány a nakonfigurovány uživatelem.
+Tiles 允許你快速查看 AAPS 應用程式中的操作，而無需透過手錶外觀選單。 Tiles 是可選的，並且可以由用戶自行添加和配置。
 
-Ciferníky se používají "vedle" jakéhokoli ciferníku. Pro přístup k ciferníku, když je povolen, přejeďte prstem zprava doleva na ciferníku, abyste je zobrazili.
+Tiles 與任何手錶外觀「並存」使用。 這些Tiles會在所有錶面的旁邊。 啟用後，透過從手錶外觀向左滑動即可查看 Tiles。
 
-Poznámka; ciferníky nezobrazují aktuální stav aplikace AAPS na telefonu a pouze provedou požadavek, který musí být potvrzen na hodinkách, než bude aplikován.
+請注意：這些Tiles並不顯示 AAPS 手機應用程式的實際狀態，他們僅會發出請求，該請求必須在手錶上確認後才會生效。
 
-## Jak přidat Ciferníky
+## 如何添加 Tiles
 
-Před použitím ciferníků musíte zapnout "Ovládání z hodinek" v nastavení "Wear OS" aplikace Android APS.
+在使用 Tiles 之前，你必須在 Android APS 的「Wear OS」設置中打開「從手錶控制」。
 
-![Povolené preference telefonu Wear](../images/wear_phone_preferences.jpg)
+![Wear 手機偏好設置已啟用](../images/wear_phone_preferences.jpg)
 
-V závislosti na vaší verzi Wear OS, značce a smartphonu existují dva způsoby, jak povolit ciferníky:
+根據你的 Wear OS 版本、品牌和智慧型手機，有兩種啟用 Tiles 的方式：
 
-1. Na hodinkách, z ciferníku; - Přejeďte zprava doleva, dokud nedosáhnete "+ Přidat ciferníky" - Vyberte jeden z ciferníků.
-2. Na telefonu otevřete aplikaci pro společníka pro vaše hodinky. - Pro Samsung otevřete "Galaxy Wearable", nebo pro jiné značky "Wear OS" 
-  * Klikněte na sekci "Ciferníky", následované tlačítkem "+ Přidat"
-  * Najděte ciferník AAPS, který chcete přidat, jeho výběrem. ![Wear phone add tile](../images/wear_companion_app_add_tile.png)你可以透過拖放來更改 Tiles 的順序
+1. 在手錶上，從手錶外觀開始； - 向左滑動直到到達「+ 添加 Tiles」 - 選擇其中一個 Tiles。
+2. 在手機上打開手錶原廠的應用程式。 - 對於三星手錶，打開「Galaxy Wearable」，其他品牌則打開「Wear OS」 
+  * 點擊「Tiles」部分，然後點擊「+ 添加」按鈕
+  * 找到你想添加的 AAPS Tile 並選擇他。 ![Wear phone add tile](../images/wear_companion_app_add_tile.png)你可以透過拖放來更改 Tiles 的順序
 
-Obsah ciferníků lze přizpůsobit dlouhým stiskem ciferníku a kliknutím na tlačítko "Upravit" nebo "ikona ozubeného kola".
+你可以透過長按 Tile 並點擊「編輯」或「齒輪圖示」按鈕來自訂 Tiles 的內容。
 
-### APS (Akce) Ciferník
+### APS（操作）Tile
 
-Akční ciferník může obsahovat 1 až 4 uživatelsky definované akční tlačítka. Chcete-li nakonfigurovat, dlouze stiskněte ciferník, což zobrazí možnosti konfigurace. Podobné akce jsou také k dispozici prostřednictvím standardního menu hodinek.
+操作 Tile 可以包含 1 到 4 個用戶自訂的操作按鈕。 要進行配置，長按 Tile，這將顯示配置選項。 類似的操作也可以透過標準的手錶選單進行。
 
-Akce podporované v akčním ciferníku mohou požadovat aplikaci AAPS na telefonu pro:
+操作 Tile 支援的操作可以向 AAPS 手機應用程式發出請求：
 
-* **Výpočet**; provést výpočet bolusu na základě příjmu sacharidů a případně procenta [1]
-* **Inzulin**; požádat o dodání inzulínu zadáním jednotky inzulínu
-* **Ošetření**; požádat o dodání inzulínu a přidat sacharidy
-* **Sacharidy**; přidat (rozšířené) sacharidy
-* **TempT**; nastavit vlastní dočasný cíl a dobu trvání
+* **計算**；根據碳水化合物輸入和可選的百分比[1]進行注射計算
+* **胰島素**；透過輸入胰島素單位請求注射
+* **治療**；請求注射並添加碳水化合物
+* **碳水化合物**；添加（延長的）碳水化合物
+* **臨時目標**；設置自訂臨時目標和持續時間
 
-![Akční ciferník Wear, ukázková kalkulačka](../images/wear_actions.png)
+![Wear 操作 Tile，示例計算機](../images/wear_actions.png)
 
-[1] Prostřednictvím menu Wear OS nastavte volbu "Procento kalkulátoru" na "ZAPNUTO", aby se zobrazilo procento vstupu v kalkulačce bolusu. Výchozí procento je založeno na nastavení telefonu v sekci "Přehled" ["Dodat tuto část výsledku bolusového čaroděje %"](Config-Builder.html#advanced-settings) Když uživatel neposkytne procento, použije se výchozí hodnota z telefonu. Nakonfigurujte další parametry pro kalkulačku bolusu v aplikaci telefonu prostřednictvím "Preference" "Nastavení čaroděje".
+[1] 透過 Wear OS 選單，將「計算機百分比」選項設置為「開」，以便在注射計算機中顯示百分比輸入。 預設百分比基於手機設置中的「首頁總覽」部分[「注射嚮導結果的百分比」](Config-Builder.html#advanced-settings)。當用戶未提供百分比時，將使用手機中的預設值。 透過手機應用程式的「偏好設定」-「嚮導設置」配置注射計算機的其他參數。
 
-### AAPS (Dočasný cíl) Ciferník
+### AAPS（臨時目標）Tile
 
-Dočasný cíl Ciferník může požádat o dočasný cíl na základě přednastavení telefonu AAPS. Nakonfigurujte přednastavený čas a cíle prostřednictvím nastavení aplikace telefonu přechodem do "Preference", "Přehled", ["Výchozí dočasné cíle"](Config-Builder.html#default-temp-targets) a nastavte trvání a cíle pro každé přednastavení. Nakonfigurujte viditelné akce na ciferníku prostřednictvím nastavení ciferníku. Dlouze stiskněte ciferník, abyste zobrazili možnosti konfigurace a vyberte 1 až 4 možnosti:
+臨時目標 Tile 可以根據 AAPS 手機預設請求臨時目標。 透過進入手機應用程式的「偏好設定」-「首頁總覽」部分，[「預設臨時目標」](Config-Builder.html#default-temp-targets)，設置每個預設的持續時間和目標來進行配置。 透過 Tile 設置配置在 Tile 上可見的操作。 長按 Tile 以顯示配置選項並選擇 1 到 4 個選項：
 
-* **Aktivita**; pro sport
-* **Hypo**; zvýšit cíl během léčby hypoglykémie
-* **Jíst brzy**; snížit cíl pro zvýšení hladiny inzulínu v oběhu
-* **Manuální**; nastavit vlastní dočasný cíl a trvání
-* **Zrušit**; zastavit aktuální dočasný cíl
+* **運動**；適用於運動
+* **低血糖**；在低血糖治療期間提高目標
+* **即將進餐**；降低目標以增加活性胰島素
+* **手動**；設置自訂臨時目標和持續時間
+* **取消**；停止目前的臨時目標
 
-![Úprava dlaždice akcí nošení](../images/wear_tile_tempt_edit.png)
+![可穿戴裝置動作圖磚編輯](../images/wear_tile_tempt_edit.png)
 
-### Dlaždice AAPS(QuickWizard)
+### AAPS(快速嚮導)Tile
 
-Dlaždice QuickWizard může mít 1 až 4 tlačítka rychlého kouzelníka, definovaná pomocí aplikace na telefonu. Viz [QuickWizard](Config-Builder.html#quickwizard-settings). Můžete nastavit standardní jídla (sacharidy a metodu výpočtu bolusu), která se zobrazí na dlaždici podle času dne. Ideální pro nejběžnější jídla/ svačiny, které během dne jíte. Můžete specifikovat, zda se tlačítka rychlého kouzelníka zobrazí na telefonu, hodinkách nebo obojím. Vezměte prosím na vědomí, že telefon může zobrazit pouze jedno tlačítko rychlého kouzelníka najednou. Nastavení rychlého kouzelníka také může specifikovat vlastní procento inzulínu pro bolus. Vlastní procento vám umožňuje měnit, například svačinu na 120%, pomalu vstřebatelné snídaně na 80% a cukrovou svačinu na léčbu hypoglykémie na 0%
+快速嚮導圖磚可以容納1到4個快速嚮導動作按鈕，這些按鈕由手機應用程式[2]定義。 請參閱[快速嚮導](Config-Builder.html#quickwizard-settings)。 你可以設定標準餐點（碳水化合物及注射計算方式）依據一天中的時間顯示在圖磚上。 非常適合用於一天中最常食用的餐點/點心。 你可以指定快速嚮導按鈕是否會顯示在手機、手錶或兩者。 請注意，手機一次只能顯示一個快速嚮導按鈕。 快速嚮導設置還可以指定注射的自訂胰島素百分比。 自訂百分比可讓你變化，例如點心 120%、緩慢吸收的早餐 80% 和低血糖處理用糖點心 0%
 
-![Úprava dlaždice akcí nošení a konfigurace telefonu](../images/quickwizard_watch_phone.png)
+![可穿戴裝置動作圖磚與手機配置](../images/quickwizard_watch_phone.png)
 
-[2] Wear OS omezuje frekvenci aktualizace dlaždic pouze na jednou za 30 sekund. Když si všimnete, že změny na vašem telefonu se neprojeví na dlaždici, zvažte; počkat 30 sekund, použít tlačítko "Znovu odeslat všechna data" z části Wear OS AAPS, nebo odstranit dlaždici a přidat ji znovu. Chcete-li změnit pořadí tlačítek QuickWizard, přetáhněte položku nahoru nebo dolů.
+[2] Wear OS 將圖磚更新頻率限制為每30秒一次。 當你發現手機上的變更未反應在圖磚上時，請考慮：等待30秒，使用 AAPS 的 Wear OS 區段中的“重新發送所有資料”按鈕，或刪除並重新添加圖磚。 要更改快速嚮導按鈕的順序，將項目向上或向下拖動。
 
-## Vždy zapnuto
+## 永遠開啟
 
-Dlouhá životnost baterie pro chytré hodinky s Android Wear OS je výzvou. Některé chytré hodinky vydrží až 30 hodin, než je potřeba je nabít. Pro optimální úsporu energie by měl být displej vypnutý, když se nepoužívá. Většina hodinek podporuje displej "Vždy zapnuto".
+對於 Android Wear OS 智慧型手錶來說，長時間的電池續航力是一個挑戰。 有些智慧型手錶最多可以持續使用30小時再充電。 螢幕在不使用時應關閉以達到最佳節電效果。 大多數手錶支援“永遠開啟”螢幕顯示。
 
-Od verze AAPS 3 můžeme používat "Zjednodušené UI" během režimu vždy zapnuto. Toto UI obsahuje pouze hladinu glukózy v krvi, směr a čas. Toto zjednodušené UI je optimalizováno pro úsporu energie s méně častými aktualizacemi, zobrazuje méně informací a osvětluje méně pixelů pro úsporu energie na OLED displejích.
+自 AAPS 版本3開始，我們可以在永遠開啟模式下使用“簡化 UI”。 此 UI 只包含血糖值、方向和時間。 此 UI 已經過電力優化，更新頻率較低，顯示較少的資訊，並減少點亮的像素數，以節省 OLED 螢幕上的電量。
 
-Režim zjednodušeného UI je dostupný pro ciferníky: AAPS, AAPS V2, Home Big, Digital Style, Steampunk a Cockpit. Zjednodušené UI je volitelné a je nastaveno prostřednictvím nastavení ciferníku. (dlouze stiskněte ciferník a klikněte na "úpravy" nebo ikonu ozubeného kola) Vyberte konfiguraci "Zjednodušení UI" a nastavte ji na "Vždy zapnuto" nebo "Vždy zapnuto a nabíjení".
+簡化 UI 模式適用於以下錶盤：AAPS、AAPS V2、Home Big、Digital Style、Steampunk 和 Cockpit。 簡化 UI 是可選的，並透過錶盤設定進行配置。 （長按錶盤並點擊“編輯”或齒輪圖示）選擇配置“簡化 UI”並將其設為“永遠開啟”或“永遠開啟且充電中”。
 
-### Noční režim
+### 夜間模式
 
-Během nabíjení by bylo užitečné, kdyby displej mohl zůstat "vždy zapnutý" a zobrazovat vaši hladinu glukózy v noci. Nicméně, standardní ciferníky jsou příliš jasné a obsahují příliš mnoho informací, a detaily se špatně čtou se spícími očima. Proto jsme přidali možnost pro ciferník zjednodušit UI pouze během nabíjení, pokud je nastaveno v konfiguraci.
+在充電期間，若能在夜間保持螢幕“永遠開啟”並顯示你的血糖值會非常有用。 然而，標準錶盤過於明亮，資訊太多，而且在困倦的狀態下很難閱讀細節。 因此，我們在配置中新增了一個選項，讓錶盤在充電期間可以簡化 UI。
 
-Režim zjednodušeného UI je dostupný pro ciferníky: AAPS, AAPS V2, Home Big, Digital Style, Steampunk a Cockpit. Zjednodušené UI je volitelné a je nastaveno prostřednictvím nastavení ciferníku. (dlouze stiskněte ciferník a klikněte na "úpravy" nebo ikonu ozubeného kola) Vyberte konfiguraci "Zjednodušení UI" a nastavte ji na "Během nabíjení" nebo "Vždy zapnuto a nabíjení"
+簡化 UI 模式適用於以下錶盤：AAPS、AAPS V2、Home Big、Digital Style、Steampunk 和 Cockpit。 簡化 UI 是可選的，並透過錶盤設定進行配置。 （長按錶盤並點擊“編輯”或齒輪圖示）選擇配置“簡化 UI”並將其設為“充電期間”或“永遠開啟且充電中”
 
-Možnosti pro vývojáře Android umožňují, aby vaše hodinky zůstaly aktivní během nabíjení. Abyste zpřístupnili možnosti pro vývojáře, podívejte se na [oficiální dokumentaci](https://developer.android.com/training/wearables/get-started/debugging). Nastavte "Zůstat aktivní při nabíjení" na "zapnuto" v nastaveních pro vývojáře.
+Android 開發者選項允許你的手錶在充電期間保持喚醒狀態。 若要啟用開發者選項，請參閱[官方文件](https://developer.android.com/training/wearables/get-started/debugging)。 在開發者選項中，將“充電時保持喚醒”設置為“開啟”。
 
-Poznámka: ne všechny displeje dokážou dobře fungovat v režimu vždy zapnuto. Může to způsobit burn-in displeje, zejména u starších OLED displejů. Hodinky obvykle ztlumí displej, aby se zabránilo burn-inu; prosím, zkontrolujte příručku k obsluze, výrobce nebo internet pro radu.
+注意：並非所有螢幕都能很好地處理永遠開啟功能。 這可能會導致螢幕燒灼，特別是在較舊的 OLED 螢幕上。 手錶通常會調暗螢幕以防止燒灼；請查閱你的使用手冊、製造商或網路上的建議。
 
-![Ciferník noční stojan](../images/Watchface_nightstand.jpg)
+![錶盤夜間模式](../images/Watchface_nightstand.jpg)
 
-![Zjednodušené UI](../images/Watchface_simplified_ui.png)
+![簡化 UI](../images/Watchface_simplified_ui.png)
 
-## Zkratka pro odložení upozornění
+## 延後警報捷徑
 
-Je možné vytvořit zkratku pro odložení upozornění/ budíku AAPS. Ztlumení zvuku přes hodinky je pohodlné a rychlejší než sahání po telefonu. Poznámka; stále musíte zkontrolovat zprávu o budíku na svém telefonu a jednat podle ní, ale to můžete zkontrolovat později. Když vaše hodinky mají dvě tlačítka, můžete přiřadit klávesu k programu `AAPS Snooze Alert`.
+可以建立一個捷徑來暫停 AAPS 的警報/鬧鐘。 透過手錶靜音更方便且比拿手機快。 注意：你仍然需要檢查手機上的警報訊息並相應處理，但可以稍後再檢查。 如果你的手錶有兩個按鈕，你可以將其中一個按鍵分配給`AAPS 延後警報`程式。
 
-Chcete-li propojit tlačítko na Samsung Watch 4, přejděte na `Nastavení > Pokročilé funkce > Přizpůsobit tlačítka > Dvojité stisknutí > AAPS Snooze Alert`
+要在 Samsung Watch 4 上綁定按鈕，請前往`設定 > 高級功能 > 自訂按鈕 > 雙擊 > AAPS 延後警報`
 
-### Odložení xDrip
+### 暫停 xDrip
 
-Pokud používáte xDrip a máte nainstalovaný xDrip na hodinkách, zkratka 'AAPS Snooze Alert' také odloží jakýkoli alarm xDrip.
+當你使用 xDrip 並將其安裝在手錶上時，'AAPS 延後警報' 捷徑也會暫停任何 xDrip 警報。
 
-## Tipy pro výkon a životnost baterie
+## 效能與電池壽命提示
 
-Hodinky s Wear OS jsou zařízení s velice omezenou spotřebou energie. Velikost pouzdra hodinek omezuje kapacitu dodávané baterie. I přes nedávné pokroky jak v hardwaru, tak v softwaru, vyžadují hodinky Wear OS každodenní nabíjení.
+Wear OS 手錶是非常耗電且又受限的裝置。 手錶機殼的尺寸限制了內置電池的容量。 即使硬體和軟體方面都有了最新的進展，Wear OS 手錶仍然需要每天充電。
 
-Pokud má zkušenost s výdrží baterie kratší než jeden den (od soumraku do úsvitu), zde jsou některé tipy, jak problémy vyřešit.
+如果電池續航時間短於一天（從黃昏到黎明），以下是一些排除問題的建議：
 
-Hlavní oblasti náročné na baterii jsou:
+主要耗電區域包括：
 
-* Aktivní displej s podsvícením zapnutým (pro LED) nebo v režimu plné intenzity (pro OLED)
-* Zobrazování na obrazovce
-* Rádiová komunikace přes Bluetooth
+* 螢幕顯示（對 LED 為背光，對 OLED 為全亮模式）
+* 螢幕顯示
+* 透過藍牙的無線通訊
 
-Jelikož nemůžeme kompromitovat komunikaci (potřebujeme aktuální data) a chceme mít nejnovější data zobrazená, většina optimalizací může být provedena v oblasti *času zobrazení*:
+由於我們不能在通訊效能上妥協（我們需要最新的資料）並且希望顯示最新的資料，因此大多數的優化可以在*顯示時間*區域中進行：
 
-* Výchozí ciferníky jsou obvykle lépe optimalizované než vlastní, stažené z obchodu.
-* Lepší je používat ciferníky, které omezují množství vykreslených dat v neaktivním / tlumeném režimu.
-* Buďte opatrní při kombinování dalších komplikací, jako jsou widgety počasí od třetích stran nebo jiná data z externích zdrojů.
-* Začněte s jednoduššími ciferníky. Přidávejte jednu komplikaci po druhé a sledujte, jak ovlivňují výdrž baterie.
-* Zkuste používat **tmavé** téma pro AAPS ciferníky a [**odpovídající oddělovač**](Watchfaces-watchface-settings). Na OLED zařízeních to omezí počet rozsvícených pixelů a omezí vyhoření.
-* Zkontrolujte, co lépe funguje na vašich hodinkách: výchozí ciferníky AAPS nebo jiné ciferníky s komplikacemi AAPS.
-* Sledujte to několik dní s různými profily aktivity. Většina hodinek aktivuje displej při pohledu, pohybu a dalších uživatelských spouštěčích.
-* Zjistěte své globální systémové nastavení, která ovlivňují výkon: oznámení, časový limit podsvícení/aktivního displeje, když je GPS aktivováno.
-* Zkontrolujte [seznam testovaných telefonů a hodinek](Phones-list-of-tested-phones) a [zeptejte se komunity](../Where-To-Go-For-Help/Connect-with-other-users.md) na zkušenosti ostatních uživatelů a hlášenou životnost baterie.
-* **Nemůžeme zaručit, že data zobrazovaná na ciferníku nebo komplikaci jsou aktuální**. Nakonec je na Wear OS, aby rozhodlo, kdy aktualizovat ciferník nebo komplikaci. I když aplikace AAPS žádá o aktualizaci, systém může rozhodnout aktualizace odložit nebo ignorovat, aby šetřil baterii. Když máte pochybnosti a baterie na hodinkách je nízká - vždy znovu zkontrolujte hlavní aplikaci AAPS na telefonu.
+* 預設錶盤通常比從商店下載的自訂錶盤優化得更好。
+* 最好使用在非活動/調暗模式下顯示較少資料的錶盤。
+* 在使用其他小工具時要注意，像是第三方天氣小工具或其他從外部來源利用資料的小工具。
+* 先從較簡單的錶盤開始。 一次添加一個小工具並觀察他們對電池壽命的影響。
+* 嘗試為 AAPS 錶盤使用**深色**主題，並使用[**匹配的分隔線**](Watchfaces-watchface-settings)。 在 OLED 裝置上，這將限制點亮的像素數量並減少燒灼風險。
+* 檢查 AAPS 預設錶盤與其他帶有 AAPS 小工具的錶盤在你的手錶上哪個效能更好。
+* 在幾天內觀察不同的活動模式。 大多數手錶會因為抬腕查看、移動及其他使用相關的觸發事件而啟動螢幕顯示。
+* 檢查影響效能的全局系統設定：通知、背光/活動顯示逾時、GPS 啟動時。
+* 查看[已測試手機和手錶列表](Phones-list-of-tested-phones)，並與[社群連結](../Where-To-Go-For-Help/Connect-with-other-users.md)，了解其他用戶的經驗和報告的電池壽命。
+* **我們無法保證錶盤或小工具上顯示的資料是最新的**。 最終，Wear OS 決定何時更新錶盤或小工具。 即使 AAPS 應用程式請求更新，系統也可能為了節省電池而延後或忽略更新。 當手錶電量不足時有疑慮時，請務必使用手機上的 AAPS 應用程式進行雙重檢查。
 
-(錶盤-故障排除-Wear-app)=
+(Watchfaces-troubleshooting-the-wear-app)=
 
-## Odstraňování problémů s aplikací Wear:
+## 問題排除 Wear 應用程式：
 
-* Někdy pomůže znovu synchronizovat aplikace s hodinkami, protože může být trochu pomalé to udělat samo: Android Wear > Ikona ozubeného kola > Název hodinek > Znovu synchronizovat aplikace.
-* Povolte ADB debugging v Možnostech vývojáře (na hodinkách), připojte hodinky přes USB a spusťte aplikaci Wear jednou v Android Studiu.
-* Pokud komplikace neaktualizuje data - nejdříve zkontrolujte, zda AAPS ciferníky vůbec fungují.
+* 有時候重新同步應用程式到手錶上是有幫助的，因為他本身的同步速度可能有點慢：Android Wear > 齒輪圖示 > 手錶名稱 > 重新同步應用程式。
+* 在開發者選項中啟用 ADB 偵錯（手錶上），透過 USB 連線手錶，並在 Android Studio 中啟動 Wear 應用程式。
+* 如果小工具不更新資料，首先檢查 AAPS 錶盤是否正常運作。
 
 ## Garmin
 
@@ -337,10 +337,10 @@ AAPS Glucose Watch 可直接與 AAPS 整合。 他顯示循環狀態資料（活
 
 ![螢幕截圖](../images/Garmin_WF.png) ![螢幕截圖](../images/Garmin_WF-annotated.png)
 
-## Další vlastní AAPS ciferníky jsou také k dispozici
+## 額外的 AAPS 自訂錶盤也可以使用
 
 你可以在此下載由其他用戶建立的自訂錶盤 Zip 檔：
 
-Pokud chcete vytvořit vlastní ciferník, řiďte se [tímto průvodcem](../Usage/Custom_Watchface_Reference.md).
+如果你想建立自己的錶盤，請參閱[此處的指南](../Usage/Custom_Watchface_Reference.md)。
 
-Jakmile vytvoříte vlastní ciferník, můžete sdílet své vlastní **AAPS** vlastní ciferník s ostatními, zip-soubor může být nahrán do složky "ExchangeSiteCustomWatchfaces" prostřednictvím Pull Request do Githubu. Při sloučení pull requestu dokumentační tým extrahuje soubor CustomWatchface.png a prefixuje ho názvem zip-souboru.
+建立自訂錶盤後，你可以與其他人分享自己的**AAPS**自訂錶盤，將 zip 檔上傳至“ExchangeSiteCustomWatchfaces”資料夾，並透過 Pull Request 上傳到 Github。 在合併 Pull Request 時，文件團隊會提取 CustomWatchface.png 檔案，並在檔名前加上 Zip 檔案名稱作為前綴。

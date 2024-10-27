@@ -14,7 +14,7 @@
 
 「在道格拉斯·亞當斯的《銀河便車指南》一書中，數字 43 是由一台名為「深思」的超級電腦在 750 萬年內計算出來的『生命、宇宙以及一切的最終答案』。」 - [維基百科](https://en.wikipedia.org/wiki/42_(number))。
 
-這是供文檔團隊測試的內部沙盒文件
+這是供文件團隊測試的內部沙盒文件
 
 1. Markdown 語法和
 
@@ -22,13 +22,13 @@
     1. CROWDIN 翻譯和
     2. Read The Docs 部署。
 
-你可以從這裡直接跳轉到此文件中的第二個標籤 - [「跳轉」](sandbox1-this-is-another-test)。
+你可以從這裡直接跳轉到此文件中的第二個標籤 - [「跳轉」](#this-is-another-test)。
 
-你也可以跳轉到第一個標籤 - [「跳轉」](sandbox1-this-is-a-test)。
+你也可以跳轉到第一個標籤 - [「跳轉」](#this-is-a-test)。
 
 這裡可以跳轉到第二個沙盒文件 - [「跳轉」](./MoveTest/sandbox2.md)。
 
-你可以從這裡直接跳轉到 sandbox2.md 文件中的第一個標籤 - [「跳轉」](sandbox2-this-is-a-test)。
+你可以從這裡直接跳轉到 sandbox2.md 文件中的第一個標籤 - [「跳轉」](./MoveTest/sandbox2.md#this-is-a-test)。
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。
 
@@ -50,4 +50,14 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。
 
-testing abbr : <abbr title="Insulin Sensitivity Factor">ISF</abbr>, <abbr title="Insulin On Board">IOB</abbr>
+測試縮寫 : <abbr title="Insulin Sensitivity Factor">ISF</abbr>, <abbr title="Insulin On Board">IOB</abbr>
+
+帶有錨點的連結：
+- [這會花多久時間？](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up)
+- [偏好設定中的 NSClient 設定](../SettingUpAaps/Preferences.md#nsclient)。
+- [AAPS 總覽中的預測線](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)，標題層級 4
+- [螢幕截圖](../DailyLifeWithAaps/AapsScreens.md)
+- [主要圖表截圖](../DailyLifeWithAaps/AapsScreens.md#section-f---main-graph)，標題層級 3
+- [OpenAPS 功能](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
+- [最大 IOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
+- [本文件中的 SMB 章節](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb)

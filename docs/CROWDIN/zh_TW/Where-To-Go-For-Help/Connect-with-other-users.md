@@ -6,7 +6,7 @@
 
 * 第一層：閱讀 Wiki - 我們現在有搜索功能可以幫助你！
 * 第二層：搜索 Facebook 群組，如果沒有已經回答的問題，請在 [AndroidAPS 用戶 Facebook 群組](https://www.facebook.com/groups/1900195340201874/)中提問
-* 第三層：如果 Facebook 沒有結果，請在 [Discord](https://discord.gg/4fQUWHZ4Mw) 上提問。 為避免重複回答，兩個頻道中的直接轉貼內容將會被無視或移除。 不要忘記，大多數開發者都在歐洲，所以回覆可能不是 24 小時不間斷的；你可能需要等待幾個小時，尤其是週末和假期。
+* 第三層：如果 Facebook 沒有結果，請在 [Discord](https://discord.gg/4fQUWHZ4Mw) 上提問。 為避免重複回答，直接的跨頻道貼文將會被忽略或刪除。 不要忘記，大多數開發者都在歐洲，所以回覆可能不是 24 小時不間斷的；你可能需要等待幾個小時，尤其是週末和假期。
 * 第四層：建立一個[問題](https://github.com/nightscout/AndroidAPS/issues)，並附上你的[日誌文件](../Usage/Accessing-logfiles.md)
 * 第五層：發送電子郵件至 *developers@androidaps.org*（僅限涉及個人資料且未能在其他層面解決問題時使用）
 

@@ -8,9 +8,9 @@ Ce guide contient des informations de haut niveau sur la boucle fermée DIY et p
 
 Pour commencer à utiliser AAPS, les étapes suivantes doivent être faites :
 
-* Trouver une [pompe compatible](../Hardware/pumps.md), un [équipement Android compatible](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), et une [source MGC compatible](../Configuration/BG-Source.md).
-* [Télécharger le code source AAPS et compiler le logiciel](../Installing-AndroidAPS/Building-APK.md).
-* [Configurer le logiciel pour qu'il dialogue avec ses périphériques et définir les préférences et les paramètres de sécurité](index-configuration).
+* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
+* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
 ## Comment fonctionne une boucle fermée DIY
 
@@ -43,7 +43,7 @@ AAPS est conçu pour suivre de façon transparente toutes les données d'entrée
 
 ## Exemples de prise de décision de l'algorithme AAPS :
 
-AAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que OpenAPS. L'algorithme fait des prédictions multiples (basées sur les paramètres et la situation) représentant différents scénarios de ce qui pourrait arriver à l'avenir. Dans Nightscout, ces lignes sont affichées sous la forme de "lignes violettes". AAPS utilise différentes couleurs pour séparer ces [lignes de prédiction](Releasenotes-overview-tab). Dans les logs, il décrira laquelle de ces prédictions et quelle période est à l'origine des actions nécessaires.
+AAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que OpenAPS. L'algorithme fait des prédictions multiples (basées sur les paramètres et la situation) représentant différents scénarios de ce qui pourrait arriver à l'avenir. Dans Nightscout, ces lignes sont affichées sous la forme de "lignes violettes". AAPS uses different colors to separate these [prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines). Dans les logs, il décrira laquelle de ces prédictions et quelle période est à l'origine des actions nécessaires.
 
 ### Voici des exemples de lignes de prédiction pourpres et de la façon dont elles peuvent varier :
 
@@ -95,7 +95,7 @@ Il s'agit d'un aperçu macroscopique de la façon dont AAPS fonctionne. Pour plu
 
 Autres lectures recommandées :
 
-* La [documentation complète AAPS](../index)
+* The [full AAPS documentation](../index.md)
 * Le document [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), qui explique comment OpenAPS est conçu pour la sécurité : https://openaps.org/reference-design/
 * La [documentation complète OpenAPS](https://openaps.readthedocs.io/en/latest/index.html) 
   * Plus de [détails sur les calculs d'OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

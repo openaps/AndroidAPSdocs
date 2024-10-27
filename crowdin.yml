@@ -1,6 +1,7 @@
 files:
   - source: /docs/EN/**/*.md
     translation: /docs/CROWDIN/%two_letters_code%/**/%original_file_name%
+    type: md35
   - source: /docs/EN/**/*.rst
     translation: /docs/CROWDIN/%two_letters_code%/**/%original_file_name%
   - source: /docs/EN/images/**/*

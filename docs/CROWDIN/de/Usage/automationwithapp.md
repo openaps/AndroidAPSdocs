@@ -1,6 +1,6 @@
 # Automatisierung mit Drittanbieter-App Android Automate
 
-**Dieser Artikel wurde vor Erscheinen der AAPS Version 2.5 geschrieben. Mittlerweile gibt es ein [Automatsierungs-Modul in AAPS](./Automation.md) selbst. Für einige ist dieser Artikel vielleicht dennoch nützlich, die Drittanbieter-App sollte jedoch nur von fortgeschrittenen Benutzern verwendet werden.**
+**This article has been written before AAPS version 2.5. There is an [automation plugin in AAPS](../DailyLifeWithAaps/Automations.md) itself with AAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
 
 Da AAPS ein hybrides Closed-Loop-System ist, muss der Nutzende noch einige Informationen von Hand eingeben (z.B. Bewegung, Spritz-Ess-Abstand ("eating soon"), Chillen auf dem Sofa...). Häufig wiederkehrende manuelle Eingaben können über externe Tools wie Automate oder IFTTT automatisiert werden und erweitern damit die AAPS-Funktionen.
 
@@ -32,7 +32,7 @@ Tippe in AAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand und geh
 
 Tippe in AAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand und gehe auf Einstellungen > Nightscout-Client > Erweiterte Einstellungen und deaktiviere 'Zu Nightscout nur hochladen (keine Synchronisation)' und 'kein Upload zu Nightscout'.
 
-Beachte die [Sicherheitsüberlegungen](Nightscout-security-considerations) und sei besonders vorsichtig, wenn Du eine [Insight-Pumpe](Accu-Chek-Insight-Pump-settings-in-aaps) verwendest.
+Be aware of the [security issues](../SettingUpAaps/Nightscout.md#security-considerations) that might occur and be very careful if you are using an [Insight pump](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps).
 
 ![Nightscout download preferences](../images/automate-aaps2.jpg)
 
@@ -119,7 +119,7 @@ Workflow starten: Tippe auf die Play-Taste
 
 #### Beispiel 3: Kann von dir selbst hinzugefügt werden!!!
 
-Bitte ergänze weitere Workflows, indem Du die .flo-Datei in die Automate-Community hochlädst (unter dem Stichwort 'Nightscout') und beschreibe sie hier, indem Du einen [Pull Request auf das AndroidAPSDocs Repository](../make-a-PR.md) machst.
+Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSDocs repository](../SupportingAaps/HowToEditTheDocs.md).
 
 ## If this, then that (IFTTT)
 

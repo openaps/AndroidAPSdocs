@@ -1,6 +1,6 @@
 # Автоматизация при помощи стороннего приложения Android Automate
 
-**Эта статья была написана перед появлением AndroidAPS версии 2.5. В AndroidAPS 2.5. теперь есть [ модуль автоматизации ](./Automation.md). Таким образом, это описание может быть полезно, но только для опытных пользователей.**
+**This article has been written before AAPS version 2.5. There is an [automation plugin in AAPS](../DailyLifeWithAaps/Automations.md) itself with AAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
 
 Так как AAPS-гибридная замкнутая система замкнутого цикла, необходимо некоторое взаимодействие пользователя с алгоритмом (например, сообщить ему, что вы на прогулке, ожидаете приема пищи, лежите на диване...). Часто вводимые вручную пользовательские данные можно автоматизировать с помощью таких внешних инструментов, как Automate или IFTTT, что расширяет функциональность AAPS.
 
@@ -32,7 +32,7 @@
 
 В AAPS коснитесь выпадающего меню в верхней правой части экране и перейдите в меню Параметры > AAPSClient > Дополнительные параметры > Снимите галочки с 'Только загрузка в NS (без синхронизации)' и 'Без загрузки в NS'.
 
-Будьте готовы к возможным [проблемам с безопасностью](Nightscout-security-considerations) и с осторожностью применяйте для [помпы Insight](Accu-Chek-Insight-Pump-settings-in-aaps) .
+Be aware of the [security issues](../SettingUpAaps/Nightscout.md#security-considerations) that might occur and be very careful if you are using an [Insight pump](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps).
 
 ![Настройки загрузок Nightscout](../images/automate-aaps2.jpg)
 
@@ -119,7 +119,7 @@
 
 #### Пример 3: Добавьте сами!!!
 
-Добавьте дополнительные автоматизированные рабочие потоки, загрузив файл .flo в группу Automate (под ключевым словом 'Nightscout') и опишите его здесь, выполнив [ Pull Request ](../make-a-Pr.md) в репозитории AAPSdocs.
+Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSDocs repository](../SupportingAaps/HowToEditTheDocs.md).
 
 ## Если так, тогда (IFTTT)
 

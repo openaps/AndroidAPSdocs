@@ -4,7 +4,7 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 
 De code die ervoor zorgde dat de Careportal in AndroidAPS offline kon worden gebruikt, hield bepaalde ontwikkelingen in de AndroidAPS code tegen. **Therefore, decision was made to remove careportal in AAPS version 2.6.**
 
-De meeste functies van Careportal zijn nog beschikbaar, ze zijn verhuisd naar Acties of naar het Overzichtscherm. The actions can be reached either via actions tab or hamburger menu - depending on your settings in [config builder](../Configuration/Config-Builder.md).
+De meeste functies van Careportal zijn nog beschikbaar, ze zijn verhuisd naar Acties of naar het Overzichtscherm. The actions can be reached either via actions tab or hamburger menu - depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md).
 
 Hieronder staat een overzicht van waar je de verschillende functies kunt vinden die voorheen in de Careportal stonden.
 
@@ -15,7 +15,7 @@ Hieronder staat een overzicht van waar je de verschillende functies kunt vinden 
 - Age information was moved to actions tab / menu.
 - BG check was moved to actions tab / menu.
 - Temporary target was moved to actions tab / menu.
-- Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](CPbefore26-carbs-bolus) on this page).
+- Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
 (CPbefore26-carbs-bolus)=
 
@@ -38,9 +38,9 @@ Hieronder staat een overzicht van waar je de verschillende functies kunt vinden 
 ![Careportal CGM & OpenAPS](../images/Careportal_25_26_3_IIa.png)
 
 - CGM sensor insert can now be found in the actions tab / menu.
-- All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](CPbefore26-carbs-bolus) on this page).
+- All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
-## Pomp
+## Pump
 
 ![Careportal Pump](../images/Careportal_25_26_4_IIb.png)
 

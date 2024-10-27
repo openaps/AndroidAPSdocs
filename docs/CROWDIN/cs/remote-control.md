@@ -354,7 +354,7 @@ Zkopírován do telefonu pečovatele pomocí USB kabelu nebo přetáhnut do adre
 
 ### Nastavení synchronizace - AAPSClient a AAPS (pro verzi 3.2.0.0 a vyšší)
 
-Jakmile je nainstalován apk soubor __AAPSClient__ na telefonu pečovatele, uživatel musí zajistit, že jsou jejich „Předvolby“ v Config builderu správně nastaveny a sladěny s __AAPS__ pro Nightscout 15 (viz poznámky k verzi [zde](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Update-to-new-version.html)). Níže uvedený příklad poskytuje pokyny pro synchronizaci pro NSClient a NSClientV3 pomocí Nightscout15, ale jsou k dispozici i jiné možnosti s __AAPS__ (například xDrip+). 
+Once __AAPSClient__ apk is installed on the follower phone, the user must ensure their ‘Preferences’ in Config Builder are correctly set up and aligned with __AAPS__ for Nightscout 15 (see Release Notes [here](./Installing-AndroidAPS/Update-to-new-version.md)). Níže uvedený příklad poskytuje pokyny pro synchronizaci pro NSClient a NSClientV3 pomocí Nightscout15, ale jsou k dispozici i jiné možnosti s __AAPS__ (například xDrip+). 
 
 V rámci „Synchronizace“ v „Config builderu“ může uživatel zvolit synchronizační možnosti pro __AAPS__ i sledující telefon:
 
@@ -603,7 +603,7 @@ b) uživatel se chce vyhnout potřebě autentizace (jak je požadováno pro sled
 
 Chytré hodinky musí mít systém **Android wear** (ideálně 10 nebo vyšší), aby mohl ovládat **AAPS**. Zkontrolujte prosím technické specifikace hodinek a projděte si [tabulku kompatibilních hodinek](link). Pokud si nejste jistí, vyhledejte si informace ve v **AAPS** skupinách na Facebook/Discord. 
 
-Konkrétní návody jak nastavit **AAPS** na Samsung Galaxy Watch 4 (40 mm) jsou uvedeny níže. Hodinky [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) jsou také oblíbenou volbou. Pokud máte zkušenost s nastavením jiného typu chytrých hodinek, který by byl podle vás užitečný pro ostatní, přidejte jej do na tyto stránky [editace dokumentace](https://androidaps.readthedocs.io/en/latest/make-a-PR.html), abyste mohli sdílet svá zjištění s širší komunitou **AAPS**. 
+Konkrétní návody jak nastavit **AAPS** na Samsung Galaxy Watch 4 (40 mm) jsou uvedeny níže. Hodinky [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) jsou také oblíbenou volbou. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../make-a-PR.md) to share your findings with the wider **AAPS** community. 
 
 
 
@@ -851,7 +851,7 @@ Provedením úprav zároveň v aplikaci **Galaxy werable** na **AAPS** telefonu 
 
 #### Řešení problémů s chytrými hodinkami Sony
 
-Ačkoli došlo k ukončení výroby už před několika lety, pokud stále používáte Sony Smartwatch SW 3, podívejte se na průvodce řešením problémů: [Řešení problémů se Sony Smartwatch SW3](https://androidaps.readthedocs.io/en/latest/Usage/SonySW3.html)
+Although it was discontinued a few years ago, if you are using a Sony Smartwatch SW 3 please see here for a troubleshooting guide: [Troubleshooting Sony Smartwatch SW 3](./Usage/SonySW3.md)
 
 
 

@@ -306,7 +306,7 @@ For advanced users or medical studies there is the possibility to define with "F
 
 ### Источник ГК
 
-Выберите используемый вами источник ГК Изучите документацию по вашему [источнику ГК](../Configuration/BG-Source.md).
+Выберите используемый вами источник ГК Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
 Поскольку доступно несколько вариантов, мы не объясняем здесь конфигурацию каждого. В нашем примере мы приводим Dexcom G6 с самостоятельно собранным приложением BYODA:
 
@@ -428,7 +428,7 @@ Don't use it for actually looping!
 
 В ином случае, выйдите из мастера установки через стрелку в верхнем левом углу и дождитесь, когда **AAPS**отобразит несколько значений ГК. Вы можете вернуться к этому в любое время или использовать один из параметров прямой конфигурации (минуя мастер).
 
-Ознакомьтесь с документацией по вашей [инсулиновой помпе](../Getting-Started/Pump-Choices.md).
+Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану.
 

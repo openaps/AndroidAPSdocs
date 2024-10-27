@@ -1,5 +1,5 @@
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
-# 疑難排解 Android Studio
+# 問題排除 Android Studio
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## 遺失的密鑰庫
@@ -29,8 +29,8 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 這些是常見的 gradle 同步失敗：
 * [未提交的更改](troubleshooting_androidstudio-uncommitted-changes)
 * [無法使用 ... 的緩存版本](troubleshooting_androidstudio-could-not-resolve-no-cached-version)
-* [Incompatible Gradle JVM](incompatible-gradle-jvm)
-* [Incompatible version of the Android Gradle plugin](incompatible-version-of-android-gradle-plugin)
+* [不相容的 Gradle JVM](incompatible-gradle-jvm)
+* [Android Gradle 外掛程式版本不相容](incompatible-version-of-android-gradle-plugin)
 
 *重要提示*: 按照你的特定問題的說明操作後，你需要再次觸發 [gradle 同步](troubleshooting_androidstudio-gradle-resync)。
 
@@ -101,28 +101,28 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
 #### 步驟 3：再次同步 Gradle
 
-Follow the instructions at [Gradle Resync](gradle-resync).
+請按照[Gradle Resync](gradle-resync)上的指示進行操作。
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 (incompatible-gradle-jvm)=
-### Incompatible Gradle JVM
+### 不相容的 Gradle JVM
 
-![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) If you experience the following error message, you need to download a correct JVM version before you can try again:
-* Open the gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+![不相容的 Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) 如果您遇到以下錯誤訊息，您需要下載正確的JVM版本後再重新嘗試：
+* 點擊Android Studio右側的大象圖示 (1) 來打開Gradle視圖，然後打開設定 (2)，並選擇**Gradle設定** (3)：
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
+![開啟Gradle設定](../images/studioTroubleshooting/161_GradleSettings.png)
 
-* Open the **Gradle JDK** options, then select **Download JDK...**
+* 打開**Gradle JDK**選項，然後選擇**下載JDK...**
 
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+![選擇下載JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-* At **Version** (1), you need to select **17**. Then select the **JetBrains Runtime** from the **Vendor** (2) options. Do not change the **Location** (3).
+* 在**版本** (1) 中，您需要選擇**17**。 然後從**供應商** (2) 選項中選擇**JetBrains Runtime**。 不要更改**位置** (3)。
 
-![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
+![選擇JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
-* Close the **Settings** dialog with **OK**.
-* You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](gradle-resync).
+* 用**OK**關閉**設定**對話框。
+* 您現在需要重新啟動Gradle同步。 請按照[Gradle Resync](gradle-resync)上的指示進行操作。
 
 (incompatible-version-of-android-gradle-plugin)=
 ### 不相容的 Android Gradle 外掛版本
@@ -138,7 +138,7 @@ Follow the instructions at [Gradle Resync](gradle-resync).
 
   你可能會收到此錯誤訊息：
 
-    ![無法解析... 無緩存版本](../images/studioTroubleshooting/08_NoCachedVersion.png)
+![無法解析... 無快取版本](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
   * 在右側，打開 Gradle 標籤 (1)。
 
@@ -146,12 +146,12 @@ Follow the instructions at [Gradle Resync](gradle-resync).
 
     ![Gradle 離線模式](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](gradle-resync)
+  * 現在你需要觸發[Gradle 重新同步](gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### 無法啟動守護程序進程
 
-  如果你看到如下所示的錯誤訊息，你可能使用的是 Windows 10 32 位系統。 This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about!
+  如果你看到如下所示的錯誤訊息，你可能使用的是 Windows 10 32 位系統。 這不被Android Studio 3.5.1及以上版本支援，遺憾的是AAPS開發者無法解決這個問題！
 
   互聯網上有很多指南介紹如何確定你擁有 32 位或 64 位操作系統 - 例如[這篇文章](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)。
 
@@ -197,7 +197,7 @@ Follow the instructions at [Gradle Resync](gradle-resync).
 
 ![密鑰生成時出現錯誤](../images/AndroidStudio35SigningKeys.png)
 
-這似乎是 Android Studio 3.5.1 及其在 Windows 中捆綁的 Java 環境中的一個錯誤。 密鑰已正確建立，但建議錯誤顯示為錯誤。 當前可以忽略此問題。
+這似乎是 Android Studio 3.5.1 及其在 Windows 中捆綁的 Java 環境中的一個錯誤。 密鑰已正確建立，但建議錯誤顯示為錯誤。 目前可以忽略此問題。
 
 
 ## AAPS 未接收 CGM 資料

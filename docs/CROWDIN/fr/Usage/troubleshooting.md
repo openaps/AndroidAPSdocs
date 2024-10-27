@@ -2,13 +2,13 @@
 
 Vous pouvez trouver des informations de dépannage sur de nombreuses pages dans le wiki. Cette page est une collection de liens pour vous aider à trouver les informations nécessaires pour résoudre votre problème.
 
-D'autres informations utiles peuvent également être disponibles dans la rubrique [FAQ](../Getting-Started/FAQ.html).
+Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.md).
 
 ## AAPS app
 
 ### Génération et mise à jour
 
-* [Fichier de clés perdu](troubleshooting_androidstudio-lost-keystore)
+* [Fichier de clés perdu](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore)
 * [Dépannage AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
 ### Paramètres
@@ -16,18 +16,18 @@ D'autres informations utiles peuvent également être disponibles dans la rubriq
 
   ![Error: Débits de Basal non alignés sur les heures](../images/Screen_DifferentPump.png)
 
-* [Pompe - données provenant de différentes pompes](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
+* [Pompe - données provenant de différentes pompes](../Installing-AndroidAPS/update3_0.md#failure-message-data-from-different-pump)
 
   ![Message d'échec : Données provenant de pompes différentes](../images/BasalNotAlignedToHours2.png)
 
-* [Client Nightscout](../Usage/Troubleshooting-NSClient.html)
+* [Client Nightscout](../Usage/Troubleshooting-NSClient.md)
 
 ### Utilisation
-* [Valeur de glucides incorrectes](COB-calculation-detection-of-wrong-cob-values)
+* [Valeur de glucides incorrectes](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
 
    ![Erreur: Absorption lente des glucides](../images/Calculator_SlowCarbAbsorption.png)
 
-* [Commandes SMS](SMS-Commands-troubleshooting)
+* [Commandes SMS](../Children/SMS-Commands.md#troubleshooting)
 
 ### Problèmes de connexion bluetooth fréquents
 
@@ -84,27 +84,27 @@ Voici des exemples pour les trouver sur des téléphones Android spécifiques.
 
 ## MGC
 
-* [Généralités](GeneralCGMRecommendation-troubleshooting)
-* [Dexcom G6](DexcomG6-troubleshooting-g6)
-* [Libre 3](Libre3-experiences-and-troubleshooting)
-* [Libre 2](Libre2-experiences-and-troubleshooting)
-* [xDrip - pas de données MGC](xdrip-identify-receiver)
-* [Dépannage xDrip - Dexcom](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [Généralités](../CompatibleCgms/GeneralCGMRecommendation.md#troubleshooting)
+* [Dexcom G6](../CompatibleCgms/DexcomG6.md#troubleshooting-g6-and-one)
+* [Libre 3](../CompatibleCgms/Libre3.md#experiences-and-troubleshooting)
+* [Libre 2](../CompatibleCgms/Libre2.md#experiences-and-troubleshooting)
+* [xDrip - pas de données MGC](../CompatibleCgms/xDrip.md#identify-receiver)
+* [Dépannage xDrip - Dexcom](../CompatibleCgms/xDrip.md#troubleshooting-dexcom-g5g6-and-xdrip)
 
 ## Pompes
 
-* [DanaRS](DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo généralités](Accu-Chek-Combo-Tips-for-Basic-usage)
-* [Accu-Chek Combo + Ruffy](Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
-* [Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
-* [Medtronic + RileyLink](MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+* [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md#dana-rs-specific-errors)
+* [Accu-Chek Combo généralités](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md)
+* [Accu-Chek Combo + Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
+* [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md#insight-specific-errors)
+* [Medtronic + RileyLink](../CompatiblePumps/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-andor-pump)
 
 ## Téléphones
 
-* [Jelly](../Usage/jelly.md)
-* [Huawei optimisation bluetooth & batterie](../Usage/huawei.md)
+* [Jelly](../CompatiblePhones/Jelly.md)
+* [Huawei optimisation bluetooth & batterie](../CompatiblePhones/Huawei.md)
 
 ## Montres connectées
 
-* [Dépannage de l'application Wear](Watchfaces-troubleshooting-the-wear-app)
+* [Dépannage de l'application Wear](../Configuration/Watchfaces.md#troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../Usage/SonySW3.md)

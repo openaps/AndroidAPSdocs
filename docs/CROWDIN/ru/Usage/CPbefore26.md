@@ -4,7 +4,7 @@
 
 Код портала терапии изначально предназначался для оффлайн-поддержки AAPS, но в итоге не гармонизировался с разработкой AAPS и блокировал дальнейшее кодирование. **Поэтому, начиная с версии AAPS 2.6 принято решение удалить его из системы</p>
 
-Большинство функций портала терапии все еще можно найти либо на вкладке действий, либо на стартовом экране. Запустить их можно либо с помощью вкладки действий или - в зависимости от настроек - через [конфигуратор](../Configuration/Config-Builder.md).
+Большинство функций портала терапии все еще можно найти либо на вкладке действий, либо на стартовом экране. The actions can be reached either via actions tab or hamburger menu - depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md).
 
 На этой странице видно где можно найти функции, ранее доступные в портале терапии.
 
@@ -15,7 +15,7 @@
 - Информация по возрастам была перемещена на вкладку действий / меню.
 - Проверка ГК была перемещена на вкладку действий / меню.
 - Временные цели были перемещены на вкладку действий / меню.
-- Нагрузка больше не применяется, но вы можно использовать поле заметок в диалоговом окне при выполнении таких действий, как введение болюса и т. д. (см. снимок экрана в разделе [углеводы & болюс](CPbefore26-carbs-bolus) на этой странице).
+- Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
 (CPbefore26-carbs-bolus)=
 
@@ -38,9 +38,9 @@
 ![Careportal CGM & OpenAPS](../images/Careportal_25_26_3_IIa.png)
 
 - Время установки сенсора CGM теперь находится на вкладке действий / меню.
-- Все другие функции из этого раздела были удалены. Вы можете использовать поле заметок в диалоговом окне при выполнении таких действий, как введение болюса и т. д. (см. снимок экрана в разделе [углеводы & болюс](CPbefore26-carbs-bolus) на этой странице).
+- Все другие функции из этого раздела были удалены. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
-## Помпа
+## Pump
 
 ![Careportal Pump](../images/Careportal_25_26_4_IIb.png)
 

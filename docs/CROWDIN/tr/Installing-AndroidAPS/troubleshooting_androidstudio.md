@@ -138,7 +138,7 @@ Follow the instructions at [Gradle Resync](gradle-resync).
 
   Bu hata mesajını alabilirsiniz:
 
-    ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
+![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
   * Sağ tarafta Gradle sekmesini (1) açın.
 

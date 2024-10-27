@@ -4,18 +4,18 @@ Careportal hat die Funktionen repliziert, die auf der Nightscout-Webseite unter 
 
 Der ursprünglich für die Offline-Unterstützung des Careportals verwendete Code harmonierte nicht mit der Entwicklung von AAPS und blockierte die weitere Programmierung. **Deshalb wurde beschlossen, Careportal in der AAPS-Version 2.6 zu entfernen.**
 
-Die meisten Funktionen des Careportals sind weiter entweder in "Aktionen" oder auf dem Startbildschirm zu finden. Die "Aktionen" können entweder über den Tab "Aktionen" (AKT) oder das Hamburger-Menü erreicht werden - abhängig von den Einstellungen in der [Konfiguration](../Configuration/Config-Builder.md).
+Die meisten Funktionen des Careportals sind weiter entweder in "Aktionen" oder auf dem Startbildschirm zu finden. The actions can be reached either via actions tab or hamburger menu - depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md).
 
 Auf dieser Seite zeigen wir, wo die bisher über das Careportal verfügbaren Funktionen nun zu finden sind.
 
 ## Aktivität & Feedback
 
-![Careportal activity & feedback](../images/Careportal_25_26_1_IIb.png)
+!["Careportal Aktivität & Feedback"](../images/Careportal_25_26_1_IIb.png)
 
 - Alter-Informationen wurden in Aktionen-Tab / Menü verschoben.
 - BZ Test wurde auf den Tab / in das Menü "Aktionen" verschoben.
 - Temporäres Ziel wurde auf den Tab / in das Menü "Aktionen" verschoben.
-- Übung ist nicht mehr verfügbar, aber Du kannst das Notizfeld im Dialogfeld verwenden, wenn Du eine Aktion wie Bolus usw. durchführst. (siehe Screenshot in Abschnitt [Carbs & bolus](CPbefore26-carbs-bolus) auf dieser Seite).
+- Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
 (CPbefore26-carbs-bolus)=
 
@@ -38,11 +38,11 @@ Auf dieser Seite zeigen wir, wo die bisher über das Careportal verfügbaren Fun
 ![Careportal CGM & OpenAPS](../images/Careportal_25_26_3_IIa.png)
 
 - Das Setzen des CGM-Sensors kannst Du jetzt im Tab / Menü "Aktionen" erfassen.
-- Alle anderen Funktionen aus diesem Abschnitt wurden entfernt. Wenn Du eine Aktion wie z.B. Bolusabgabe dokumentieren möchtest, nutze das Notizfeld im Dialogfeld (siehe Screenshot im Bereich [Kohlenhydrate & Bolus](CPbefore26-carbs-bolus) auf dieser Seite).
+- Alle anderen Funktionen aus diesem Abschnitt wurden entfernt. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
-## Pumpe
+## Pump
 
-![Careportal Pump](../images/Careportal_25_26_4_IIb.png)
+![Careportal Pumpe](../images/Careportal_25_26_4_IIb.png)
 
 - Katheter- und Reservoirwechsel können über die Schaltfläche "Katheterwechsel" im Tab / Menü "Aktionen" erfasst werden.
 - Der Profilwechsel wurde auf den Tab / in das Menü "Aktionen" verschoben.
