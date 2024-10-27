@@ -344,7 +344,7 @@ v3 是新的協議。 更加安全和高效
 - [生物識別或密碼保護](../SettingUpAaps/Preferences.md#protection) 用於設定、注射 @MilosKozak
 - [新自動化觸發](../DailyLifeWithAaps/Automations.md) @PoweRGbg
 - [Open Humans 上傳器](../SupportingAaps/OpenHumans.md) @TebbeUbben @AdrianLxM
-- 新文檔 @Achim
+- 新文件 @Achim
 
 (Releasenotes-version-2-6-1-4)=
 ## 版本 2.6.1.4
@@ -561,7 +561,7 @@ v3 是新的協議。 更加安全和高效
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) 支援 (由 Tebbe Ubben 和 JamOrHam 提供)
 - 主螢幕上的狀態燈（Nico Schmitz）
 - 夏令時幫助器（Roumen Georgiev）
-- 修復來自 NS 的個人設定名稱處理問題（Johannes Mockenhaupt）
+- 修復來自 NS 的設定檔名稱處理問題（Johannes Mockenhaupt）
 - 修復 UI 阻塞（Johannes Mockenhaupt）
 - 支援更新的 G5 應用（Tebbe Ubben 和 Milos Kozak）
 - G6、Poctech、Tomato、Eversense血糖資料來源支援（Tebbe Ubben 和 Milos Kozak）
@@ -600,7 +600,7 @@ v3 是新的協議。 更加安全和高效
 (Releasenotes-overview-tab)=
 ### 概述標籤
 
-- 頂部功能區可用於暫停/停用循環、查看/調整個人設定，並開始/停止臨時目標（TT）。 TT 使用偏好設置中設置的預設值。 新的 Hypo TT 選項是一個高溫 TT，用於防止循環過度積極地糾正急救碳水化合物。
+- 頂部功能區可用於暫停/停用循環、查看/調整設定檔，並開始/停止臨時目標（TT）。 TT 使用偏好設置中設置的預設值。 新的 Hypo TT 選項是一個高溫 TT，用於防止循環過度積極地糾正急救碳水化合物。
 - 治療按鈕：舊的治療按鈕仍可用，但預設情況下被隱藏。 按鈕的可見性現在可以配置。 新增胰島素按鈕，新增碳水化合物按鈕（包括[eCarbs/延長碳水化合物](../DailyLifeWithAaps/ExtendedCarbs.md)）
 - [彩色預測線](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)
 - 選項可在胰島素/碳水化合物/計算機/注射+填充對話框中顯示筆記字段，這些字段會上傳到 NS
