@@ -91,7 +91,7 @@ AAPS 介紹 <./Getting-Started/Introduction.md>
 
 遠端監控 <./RemoteFeatures/RemoteMonitoring.md>
 遠端控制 <./RemoteFeatures/RemoteControl.md>
-僅用來追隨 <./RemoteFeatures/FollowingOnly.md>
+僅用來追蹤 <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
