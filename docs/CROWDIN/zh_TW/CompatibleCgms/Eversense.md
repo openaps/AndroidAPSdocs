@@ -21,7 +21,7 @@
 從 Eversense 應用程式通知中讀取資料（自 ESEL 版本 3.0.1 起可與標準 Eversense 應用程式一起使用）。
 
 1. 使用來自 Google Play 商店的官方 Eversense 應用程式
-   - 選擇性操作，但若需回填則必須：登錄你的 Eversense 帳號
+   - 選擇性的操作，但若需回填則必須：登錄你的 Eversense 帳號
    - 在同步中，啟用自動同步功能
 2. ESEL 設定：
    - 停用「從修改版 Eversense 應用程式獲取資料」設置
