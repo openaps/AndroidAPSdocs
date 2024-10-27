@@ -74,7 +74,7 @@ Combo、Insight 及舊版 Medtronic 是穩定的幫浦，且可以迴路使用�
 
 您可以選擇任何搭載 Android WearOS 1.x 至 4.x 的智慧手錶。 **請注意，WearOS 5.x 不相容！**
 
-Sony Smartwatch 3（SWR50）在使用者中普遍用於迴路，因為這是唯一一款能在手機超出範圍時從 Dexcom G6/G5 獲取讀取的手錶。 某些其他手錶也可以透過修補來作為獨立接收器使用（更多詳情請參閱[這份文檔](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5)）。
+Sony Smartwatch 3（SWR50）在使用者中普遍用於迴路，因為這是唯一一款能在手機超出範圍時從 Dexcom G6/G5 獲取讀取的手錶。 某些其他手錶也可以透過修補來作為獨立接收器使用（更多詳情請參閱[這份文件](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5)）。
 
 用戶正在建立一個[已測試的手機和手錶清單](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)。 有不同的錶盤可供 **AAPS** 使用，您可以在 [這裡](../UsefulLinks/WearOsSmartwatch.md)找到。
 
@@ -84,12 +84,12 @@ Sony Smartwatch 3（SWR50）在使用者中普遍用於迴路，因為這是唯�
 
 ### xDrip+
 
-即使您不需要使用 [xDrip+ 應用程式](https://xdrip.readthedocs.io/en/latest/) 作為 **BG 資料源**，您仍然可以使用它來設定 _例如_ 警報或不同的血糖顯示。 您可以設定任意多的警報，指定警報應該在什麼時間啟動，是否可以覆蓋靜音模式等。 有關一些 xDrip+ 資訊，請參閱[這裡](../CompatibleCgms/xDrip.md)。 請注意，這款應用程式的文檔並非總是最新的，因為其進展相當快速。
+即使您不需要使用 [xDrip+ 應用程式](https://xdrip.readthedocs.io/en/latest/) 作為 **BG 資料源**，您仍然可以使用它來設定 _例如_ 警報或不同的血糖顯示。 您可以設定任意多的警報，指定警報應該在什麼時間啟動，是否可以覆蓋靜音模式等。 有關一些 xDrip+ 資訊，請參閱[這裡](../CompatibleCgms/xDrip.md)。 請注意，這款應用程式的文件並非總是最新的，因為其進展相當快速。
 
 ## 等待模組期間該做什麼
 
 有時候獲得所有模組以完成迴路需要一些時間。 但不用擔心，還有很多事情可以在等待期間進行。 確定需要檢查和（如有需要）調整基礎率（BR）、胰島素-碳水比（IC）、胰島素敏感性因子（ISF）等是**必要的**。 或許開放迴路可以是一個測試該系統並熟悉 **AAPS** 的好方法。 使用此模式，**AAPS** 會提供您可以手動執行的治療建議。
 
-你可以繼續閱讀這裡的文檔，與其他閉環系統用戶線上或離線交流，或[閱讀](../Where-To-Go-For-Help/Background-reading.md)文檔或其他用戶撰寫的內容（即使需要小心，不是所有內容都正確或適合你複製）。
+你可以繼續閱讀這裡的文件，與其他閉環系統用戶線上或離線交流，或[閱讀](../Where-To-Go-For-Help/Background-reading.md)文件或其他用戶撰寫的內容（即使需要小心，不是所有內容都正確或適合你複製）。
 
 **完成了嗎？** 如果您已經擁有所有 **AAPS** 組件（恭喜您！）或至少足夠開始使用開放迴路模式，您應該首先閱讀每個新目標的 [目標說明](../SettingUpAaps/CompletingTheObjectives.md) 並設置您的硬體。
