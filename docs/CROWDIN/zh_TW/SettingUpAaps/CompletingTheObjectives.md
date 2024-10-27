@@ -199,7 +199,7 @@
 
 完成此目標的最少時間：**28 天**。 這是一個強制的等待時間。 在這段時間內你無法進入下一個目標。
 
-- 要理解 **SMB** 以及 **零暫停** 的概念，查看[本文件的 SMB 區段](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) 和 [openAPS 文檔中的 oref1 覆蓋](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) 是必讀的。
+- 要理解 **SMB** 以及 **零暫停** 的概念，查看[本文件的 SMB 區段](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) 和 [openAPS 文件中的 oref1 覆蓋](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) 是必讀的。
 - 完成後，你可以 [提高 maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) 以使 **SMB** 更有效率。 maxIOB 現在包括所有 **IOB**，不僅僅是累積的基礎。 這個門檻值會暫停 **SMB**，直到 IOB 降到這個值以下（例如 **maxIOB** 設為 7U，而給予了 8U 的注射來覆蓋一餐：除非 **IOB** 降到 7U 以下，否則 **SMB** 將被暫停且不會給予）。
   一個好的開始是設定 **maxIOB** = **平均餐前注射 + 3 倍最大日基礎**，其中“最大日基礎”是在一天任何時間段的最大每小時值。 請參考 [目標 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets)。
 - 評估你的碳水化合物吸收率，並考慮在 [偏好設定 > 吸收設定 > min_5m_carbimpact](../SettingUpAaps/Preferences.md#min_5m_carbimpact) 中更改“min_5m_carbimpact”參數，如果你發現它太慢或太快。
@@ -210,7 +210,7 @@
 
 完成此目標的最少時間：**28 天**。 這是一個強制的等待時間。 在這段時間內你無法進入下一個目標。
 
-首先閱讀文檔頁面 [自動化](../DailyLifeWithAaps/Automations.md)。
+首先閱讀文件頁面 [自動化](../DailyLifeWithAaps/Automations.md)。
 
 設置最基本的自動化規則；例如在幾分鐘內觸發一個 Android 通知：
 
@@ -228,7 +228,7 @@
 - 等到時間觸發通知（根據你的手機，可能會有幾分鐘的延遲）
 
 然後你可以嘗試設置一個更有用的 **自動化**。
-文檔頁面提供了一些示例，你也可以在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 群組中搜尋 “自動化” 截圖。 在 [Discord](https://discord.gg/4fQUWHZ4Mw) 社區中也有一個專門的頻道。
+文件頁面提供了一些示例，你也可以在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 群組中搜尋 “自動化” 截圖。 在 [Discord](https://discord.gg/4fQUWHZ4Mw) 社區中也有一個專門的頻道。
 
 例如，如果你每天早上在上學/上班前的同一時間吃相同的早餐，你可以建立一個 **自動化**，例如“早餐前目標”，在早餐前 30 分鐘設置一個稍低的 **臨時目標**。 在這種情況下，你的條件可能會包括 "定期時間"，選擇一週中的特定日子（星期一、星期二、星期三、星期四、星期五）和特定時間（上午 06:30）。 該行動將包含“開始臨時目標”，搭配一個低於平常目標值的設定，並持續 30 分鐘。
 
@@ -237,7 +237,7 @@
 完成這個 **目標** 的最少時間：**28 天**。 這是一個強制的等待時間。 在此時段結束之前，無法進入下一個**目標**。
 
 - 確保 **SMB** 正常運行
-- 在這裡閱讀關於 **動態 ISF** 的文檔 [這裡](../DailyLifeWithAaps/DynamicISF.md)
+- 在這裡閱讀關於 **動態 ISF** 的文件 [這裡](../DailyLifeWithAaps/DynamicISF.md)
 - 在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 和 [Discord](https://discord.gg/4fQUWHZ4Mw) 群組搜尋有關 **動態 ISF** 的討論，了解其他用戶的經驗和建議。
 - 啟用 **DynamicISF 外掛**，並確定適合你身體需求的校正值。 出於安全考量，建議初始值設置為低於 100%。
 

@@ -2,7 +2,7 @@
 
 本頁面是為對開源人工胰臟技術如 AAPS 感興趣的臨床醫生或想與其臨床醫生分享此類資訊的患者設計的。
 
-本指南提供了一些有關 DIY 閉環系統的高階資訊，特別是 AAPS 的運作方式。 有關這些主題的更多詳細資訊，請查看[AAPS 線上完整文檔](../index.md)。 如果你有疑問，請向你的患者詢問更多詳情，或隨時向社群提出問題。 （如果你不使用社交媒體（如 [Twitter](https://twitter.com/kozakmilos) 或 Facebook），也可以隨時發送電子郵件至 developers@AndroidAPS.org）。 [你也可以在此找到一些最新的研究與結果相關資料](https://openaps.org/outcomes/)。
+本指南提供了一些有關 DIY 閉環系統的高階資訊，特別是 AAPS 的運作方式。 有關這些主題的更多詳細資訊，請查看[AAPS 線上完整文件](../index.md)。 如果你有疑問，請向你的患者詢問更多詳情，或隨時向社群提出問題。 （如果你不使用社交媒體（如 [Twitter](https://twitter.com/kozakmilos) 或 Facebook），也可以隨時發送電子郵件至 developers@AndroidAPS.org）。 [你也可以在此找到一些最新的研究與結果相關資料](https://openaps.org/outcomes/)。
 
 ## 建立 DIY 閉環系統的步驟：
 
@@ -91,11 +91,11 @@ AAPS 使用了與 OpenAPS 相同的核心演算法和功能集。 演算法會�
 
 ## 總結
 
-這主要在對 AAPS 的運作方式進行高階概述。 有關更多詳細資訊，請諮詢你的患者，聯繫社群，或閱讀線上提供的 AAPS 完整文檔。
+這主要在對 AAPS 的運作方式進行高階概述。 有關更多詳細資訊，請諮詢你的患者，聯繫社群，或閱讀線上提供的 AAPS 完整文件。
 
 其他推薦閱讀：
 
-* 完整的[AAPS 文檔](../index.md)
+* 完整的[AAPS 文件](../index.md)
 * [OpenAPS 參考設計](https://OpenAPS.org/reference-design/)，其中解釋了 OpenAPS 如何為安全設計：https://openaps.org/reference-design/
-* [OpenAPS 完整文檔](https://openaps.readthedocs.io/en/latest/index.html) 
+* [OpenAPS 完整文件](https://openaps.readthedocs.io/en/latest/index.html) 
   * 有關 OpenAPS 計算的更多詳情請參閱[這裡](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

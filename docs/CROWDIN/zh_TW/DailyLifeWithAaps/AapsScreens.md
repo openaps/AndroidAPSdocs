@@ -22,7 +22,7 @@
     
     點一下設定檔欄位查看設定檔詳細資訊. 長按設定檔工具列以 [切換不同的設定檔](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#profile-switch--profile-percentage)。
     
-    ![個人設定切換剩餘時間](../images/Home2020_ProfileSwitch.png)
+    ![設定檔切換剩餘時間](../images/Home2020_ProfileSwitch.png)
     
     1. 常規顯示標準的設定檔激活。
     2. 設定檔切換剩餘時間為 59 分鐘。
@@ -281,7 +281,7 @@ Libre 使用者的特殊注意事項：
 
 如果沒有剩餘注射且長時間設置為零/低基礎率，IOB 可能為負值。
 
-衰減取決於您的[DIA和胰島素個人設定](../SettingUpAaps/YourAapsProfile.md)。
+衰減取決於您的[DIA和胰島素設定檔](../SettingUpAaps/YourAapsProfile.md)。
 
 #### 活性碳水化合物(COB)
 
@@ -511,7 +511,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ![胰島素設定檔](../images/Screenshot_insulin_profile.png)
 
-這顯示您在[配置建構器](../SettingUpAaps/ConfigBuilder.md#insulin)中選擇的胰島素的活動特徵。
+這顯示您在[組態設置工具](../SettingUpAaps/ConfigBuilder.md#insulin)中選擇的胰島素的活動特徵。
 
 **紫色** 線顯示在注射後胰島素量隨時間衰減的情況，**藍色** 線顯示其活性狀態。 需要注意的重要點是衰減具有**長尾巴**。 如果您習慣手動注射，可能已經習慣認為胰島素的衰減大約需要 3.5 小時。 然而，當您在迴路中時，長尾巴的關鍵在於計算非常精確，這些小數量在 **AAPS** 算法進行遞迴計算時都會累加。
 
@@ -534,7 +534,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 每次系統從 CGM 獲取新讀取值時，計算都會運行。
 
-有關更多詳細資訊，請參見[配置建構器頁面的APS部分](../SettingUpAaps/ConfigBuilder.md#aps)。
+有關更多詳細資訊，請參見[組態設置工具頁面的APS部分](../SettingUpAaps/ConfigBuilder.md#aps)。
 
 ## 設定檔
 
@@ -640,7 +640,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ![設定檔切換](../images/TreatmentsView4.png)
 
-個人設定切換的歷史可以在這裡查看。 每次切換設定檔時，您可能會看到多條條目：第**1**行，存儲在 Nightscout 中但不在幫浦歷史中，對應於用戶進行的設定檔切換請求。 第**2**行，存儲在 NS 和 PH 中，對應於實際切換。
+設定檔切換的歷史可以在這裡查看。 每次切換設定檔時，您可能會看到多條條目：第**1**行，存儲在 Nightscout 中但不在幫浦歷史中，對應於用戶進行的設定檔切換請求。 第**2**行，存儲在 NS 和 PH 中，對應於實際切換。
 
 刪除輸入僅影響您在 Nightscout 的報告，永遠不會實際更改當前的設定檔。
 
@@ -660,6 +660,6 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 此視圖可以通過按下選單右側的 3 個點然後選擇「設定檔助手」來訪問。 無法通過 Config Builder 在主選單中放入它。 [設定檔助手](../SettingUpAaps/ProfileHelper.md) 可以幫助您：
 
-* 從零開始為小孩建立個人設定
+* 從零開始為小孩建立設定檔
 * 比較兩個設定檔
-* 複製一份個人設定
+* 複製一份設定檔

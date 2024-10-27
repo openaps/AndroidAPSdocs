@@ -8,7 +8,7 @@
 - [Jelly Pro 設定](../CompatiblePhones/Jelly.md)
 - [華為設定](../CompatiblePhones/Huawei.md)
 
-# 手機壁紙
+# 手機桌布
 
 如果您想以更多 **AAPS** 裝飾您的手機，可以 [在這裡下載背景圖片](../images/bg_phone.jpg)！
 

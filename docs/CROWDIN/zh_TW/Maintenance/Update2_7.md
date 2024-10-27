@@ -8,7 +8,7 @@
 
 - 更新後檢查血糖資料來源是否正確。
 - 尤其在使用[xDrip+](../CompatibleCgms/xDrip.md)時，BG來源可能會改變為Dexcom應用程式（已修補）。
-- 開啟[配置建構器](../SettingUpAaps/ConfigBuilder.md#bg-source)（主畫面左上角的漢堡選單）
+- 開啟[組態設置工具](../SettingUpAaps/ConfigBuilder.md#bg-source)（主畫面左上角的漢堡選單）
 - 向下滾動至「血糖資料來源」。
 - 如果需要，請選擇正確的血糖資料來源。
 

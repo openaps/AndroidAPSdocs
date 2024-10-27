@@ -50,7 +50,7 @@
 
 #### 選項 2：組態建置工具
 
-在現有安裝中，您可以在[配置建構器](../SettingUpAaps/ConfigBuilder.md#pump)中選擇**Medtrum** 幫浦：
+在現有安裝中，您可以在[組態設置工具](../SettingUpAaps/ConfigBuilder.md#pump)中選擇**Medtrum** 幫浦：
 
 在左上角的**漢堡選單**中選擇**組態建置工具**\ ➜\ **幫浦**\ ➜\ **Medtrum**，選擇**啟用按鈕**標題為**Medtrum**。
 

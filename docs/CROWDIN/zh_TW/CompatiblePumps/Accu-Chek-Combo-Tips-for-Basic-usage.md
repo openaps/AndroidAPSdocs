@@ -1,6 +1,6 @@
 # Accu-Chek Combo 基本使用技巧
 
-**注意:** 從AAPS版本3.2開始，新增了[新的Combo驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)（有時稱為「combov2」）。 舊的驅動程式也稱為 "Ruffy 基於的驅動程式"。 本文檔的某些部分僅適用於舊的驅動程式。 這些將會依照情況進行註解。
+**注意:** 從AAPS版本3.2開始，新增了[新的Combo驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)（有時稱為「combov2」）。 舊的驅動程式也稱為 "Ruffy 基於的驅動程式"。 本文件的某些部分僅適用於舊的驅動程式。 這些將會依照情況進行註解。
 
 ## 如何確保系統運作順暢
 

@@ -44,11 +44,11 @@
     當校對者批准翻譯時，它將被添加到下一個 AAPS 版本中。
     
     (translations-translation-of-the-documentation)=
-    ## 文檔的翻譯
+    ## 文件的翻譯
     
-    * 點擊您想翻譯的文檔頁面名稱
+    * 點擊您想翻譯的文件頁面名稱
     
-    ![點擊文檔頁面](../images/translation_WikiPage.png)
+    ![點擊文件頁面](../images/translation_WikiPage.png)
     
     
     * 逐句翻譯句子
@@ -66,9 +66,9 @@
         1. 這些是翻譯建議。 特別是，你可以看到 Crowdin 如何評價這一翻譯是否符合要求，或者這是否只是過去的內容經過文本重新排列而沒有內容更改。
         1. 按下“儲存”按鈕以儲存翻譯建議。 然後他會提交給校對者進行最終檢查。
     
-    ![翻譯文檔](../images/translation_WikiTranslate.png)
+    ![翻譯文件](../images/translation_WikiTranslate.png)
     
-    * 轉換的頁面在文檔中不會發佈，直到 
+    * 轉換的頁面在文件中不會發佈，直到 
     
         1. 翻譯已校對
     

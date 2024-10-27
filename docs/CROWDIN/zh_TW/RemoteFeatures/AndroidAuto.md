@@ -4,7 +4,7 @@
 
 ```{admonition} 版本和最後更改訊息 :class: dropdown 最後編輯日期：2023/07/05
 
-文檔使用的版本：
+文件使用的版本：
 
 * AAPS 3.2.0-dev-i
 * Android Auto：9.3.631434-release ```

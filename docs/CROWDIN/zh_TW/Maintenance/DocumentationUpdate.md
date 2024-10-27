@@ -1,4 +1,4 @@
-# 文檔更新與變更
+# 文件更新與變更
 
 ## 2024年10月
 
@@ -7,7 +7,7 @@
 - [需要多長時間](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up) @emilise
 - [動態ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [完成目標](../SettingUpAaps/CompletingTheObjectives.md) @emilise
-- 技術工作（文檔的部署過程、檔案組織…） @psonnerat & @emilise
+- 技術工作（文件的部署過程、檔案組織…） @psonnerat & @emilise
 
 ***
 
@@ -21,7 +21,7 @@
 - [美敦力藥量更新](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [更新到 AAPS 3.0 後的必要檢查](Update3_0.md) @tanja
 - [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
-- 更新 AAPS 3.0 的文檔（部分）@xJoe
+- 更新 AAPS 3.0 的文件（部分）@xJoe
 - [AAPS 3.0 的 Wear OS](../UsefulLinks/WearOsSmartwatch.md) @peterleimbach
 
 ## 2022年1月

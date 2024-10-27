@@ -82,7 +82,7 @@
 
 **OpenAPS** = 開放式人工胰臟系統。
 
-**AAPS** 運作在小型電腦（例如 Raspberry Pi）上，並使用了一些 OpenAPS 功能。OpenAPS 文檔。
+**AAPS** 運作在小型電腦（例如 Raspberry Pi）上，並使用了一些 OpenAPS 功能。OpenAPS 文件。
 
 **Open Loop system** = **AAPS** 的一項功能，將建議調整，必須由用戶在 **AAPS** 上手動執行。 進一步資訊 → Wiki - 「組態建置工具」。
 

@@ -24,7 +24,7 @@
 
 ## 設定檔
 
-* 選擇你要使用的基礎率設定檔。 請參閱[個人設定](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)頁面以獲取更多設定資訊。
+* 選擇你要使用的基礎率設定檔。 請參閱[設定檔](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)頁面以獲取更多設定資訊。
 * 從 AAPS 3.0 開始，僅提供本地設定檔。
 
 然而，可以將 Nightscout 設定檔同步至本地設定檔。 不過，為此重要的是要在 Nightscout 編輯器中複製由多個設定檔組成的完整資料庫記錄。 請參閱下方的說明。 如果要對更廣泛的設定檔進行重大更改，這可能會很有幫助，例如從試算表手動複製資料。
@@ -35,7 +35,7 @@
 
 本地設定檔使用手動輸入到手機中的基礎率設定檔。 選擇他，AAPS 中將會顯示一個新標籤，必要時你可以更改從幫浦讀取的設定檔資料。 下次切換設定檔時，這些資料將寫入幫浦中的設定檔 1。 建議使用這個設定檔，因為他不依賴於網際網路連線。
 
-您的當地個人設定是[匯出設定](../Maintenance/ExportImportSettings.md)的一部分。 因此，確保有一個安全的備份。
+您的當地設定檔是[匯出設定](../Maintenance/ExportImportSettings.md)的一部分。 因此，確保有一個安全的備份。
 
 ![本地設定檔設置](../images/LocalProfile_Settings.png)
 
@@ -67,9 +67,9 @@
 
 ![上傳本地設定檔到 NS](../images/LocalProfile_UploadNS_AASP30.png)
 
-#### 在 Nightscout 個人設定編輯器中變更個人設定
+#### 在 Nightscout 設定檔編輯器中變更設定檔
 
-您可以將 Nightscout 個人設定編輯器中的變更同步到本地個人設定。 設定可以在[NSClient 偏好設定](../SettingUpAaps/Preferences.md#nsclient)中找到。
+您可以將 Nightscout 設定檔編輯器中的變更同步到本地設定檔。 設定可以在[NSClient 偏好設定](../SettingUpAaps/Preferences.md#nsclient)中找到。
 
 有必要複製整個目前活動的 Nightscout 資料庫記錄，而不僅僅是藍色箭頭的設定檔！ 新的資料庫記錄將攜帶目前日期，並可以透過「本地設定檔」標籤啟用。
 
@@ -82,7 +82,7 @@
 1. 為孩子們找到合適的設定檔
 2. 比較兩個設定檔或設定檔切換，以便複製新的設定檔
 
-詳細資訊在單獨的[個人設定協助頁](../SettingUpAaps/ProfileHelper.md)中解釋。
+詳細資訊在單獨的[設定檔協助頁](../SettingUpAaps/ProfileHelper.md)中解釋。
 
 (Config-Builder-insulin)=
 
@@ -102,7 +102,7 @@
 * DIA 對每個人來說並不相同。 這就是為什麼你需要自行測試。 
 * 但他必須至少是 5 小時。
 * 對於許多使用超快速胰島素如 Fiasp 的人來說，實際上在 3-4 小時後已經沒有顯著效果了，即使此時理論上仍有 0.0xx 單位的胰島素存在。 例如，在運動期間，這些殘餘量可能仍然是顯著的。 因此，AAPS 使用最少 5 小時作為 DIA。
-* 您可以在[這個](../DailyLifeWithAaps/AapsScreens.md#insulin-profile)頁面的胰島素個人設定部分中閱讀更多相關資訊。
+* 您可以在[這個](../DailyLifeWithAaps/AapsScreens.md#insulin-profile)頁面的胰島素設定檔部分中閱讀更多相關資訊。
 
 ### 胰島素類型差異
 

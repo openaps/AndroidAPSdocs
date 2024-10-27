@@ -8,7 +8,7 @@
 
 [OpenAPS 文件 - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
-[Loop 文檔 - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
+[Loop 文件 - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
 [微調你的設定 - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
