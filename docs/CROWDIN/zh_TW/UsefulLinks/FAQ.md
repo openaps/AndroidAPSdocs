@@ -260,7 +260,7 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 ### 桌布
 
-您可以在 [手機頁面](../Getting-Started/Phones.md#phone-wallpaper) 找到適合您手機的 AAPS 壁紙。
+您可以在 [手機頁面](../Getting-Started/Phones.md#phone-wallpaper) 找到適合您手機的 AAPS 桌布。
 
 ### 日常使用
 
