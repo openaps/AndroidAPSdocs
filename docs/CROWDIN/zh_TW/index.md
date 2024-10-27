@@ -27,7 +27,7 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 
 第九章節）涵蓋了高級AAPS選項，例如如何從使用AAPS進展到混合閉環（為餐飲等進行注射）到完全閉環（不進行手動注射），並詳細介紹了開發和工程模式。 大多數使用者只需使用主要或"Master" **AAPS**版本即可正常操作，無須查看這些選項；本節給那些已經控制良好並希望進一步改善其設置的使用者。
 
-第十章節）[如何支援 AAPS](SupportingAaps/HowToEditTheDocs.md) 提供了關於如何支援此項目的資訊。 你可以捐錢、設備或專業知識。 你可以建議/自行更改文檔，幫助 [翻譯文檔](SupportingAaps/Translations)，並透過 Open Humans 項目提供你的資料。
+第十章節）[如何支援 AAPS](SupportingAaps/HowToEditTheDocs.md) 提供了關於如何支援此項目的資訊。 你可以捐錢、設備或專業知識。 你可以建議/自行更改文件，幫助 [翻譯文件](SupportingAaps/Translations)，並透過 Open Humans 項目提供你的資料。
 
 第 11 章節）包含保存或其他文件，包括一個針對已表達對開放原始碼人工胰臟技術（如 **AAPS**）感興趣的 [臨床醫師](Resources/clinician-guide-to-AndroidAPS.md) ，或對想與臨床醫生分享此類訊息的患者，該主題也在介紹中說明。 第 12 節）包含更多糖尿病和循環的參考資料和資源。
 
@@ -160,8 +160,8 @@ xDrip 工程模式 <./AdvancedOptions/EnablingEngineeringModeInXdrip.md>
 :caption: 10) 如何支援 AAPS
 
 如何幫助 <./SupportingAaps/HowCanIHelp.md>
-編輯文檔 <./SupportingAaps/HowToEditTheDocs.md>
-翻譯應用程式和文檔 <./SupportingAaps/Translations.md>
+編輯文件 <./SupportingAaps/HowToEditTheDocs.md>
+翻譯應用程式和文件 <./SupportingAaps/Translations.md>
 翻譯狀態 <./SupportingAaps/StateOfTranslations.md>
 Open Humans 上傳器 <./SupportingAaps/OpenHumans.md>
 
@@ -170,7 +170,7 @@ Open Humans 上傳器 <./SupportingAaps/OpenHumans.md>
 ```{toctree}
 :caption: 11) 附加/檔案存檔文件
 
-專用的 Google 帳號用於 AAPS (選擇性)<./SettingUpAaps/DedicatedGoogleAccountForAaps.md>
+專用的 Google 帳號用於 AAPS (可選用)<./SettingUpAaps/DedicatedGoogleAccountForAaps.md>
 
 照護入口 (已停用) <./Usage/CPbefore26.md>
 
