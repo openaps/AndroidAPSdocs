@@ -20,7 +20,7 @@
 
 ### 敏感度 Oref1
 
-敏感度是根據過去8小時的資料計算，或是從最近的注射點更換時間開始計算（如果更換時間少於8小時）。 碳水化合物（如果尚未被吸收）會在偏好設定中指定的時間後被取消計算。 只有 Oref1 算法支援未宣佈的餐食（UAM）。 這意味著，偵測到 UAM 的時間將被排除在敏感度計算之外。 因此，如果你使用 SMB 並搭配 UAM，必須選擇 Oref1 算法才能正確運作。 欲了解更多資訊，請參閱[OpenAPS Oref1 文檔](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)。
+敏感度是根據過去8小時的資料計算，或是從最近的注射點更換時間開始計算（如果更換時間少於8小時）。 碳水化合物（如果尚未被吸收）會在偏好設定中指定的時間後被取消計算。 只有 Oref1 算法支援未宣佈的餐食（UAM）。 這意味著，偵測到 UAM 的時間將被排除在敏感度計算之外。 因此，如果你使用 SMB 並搭配 UAM，必須選擇 Oref1 算法才能正確運作。 欲了解更多資訊，請參閱[OpenAPS Oref1 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)。
 
 ## 同時進行碳水化合物處理
 
