@@ -6,4 +6,3 @@ setuptools==41.0.1
 mock==1.0.1
 sphinx-rtd-theme
 readthedocs-sphinx-ext
-jinja2==3.0.0
