@@ -2,7 +2,7 @@
 
 This page is for designers of new Watchfaces. It will list all the keywords and features available when you want to create or animate a new watchface.
 
-- New features and keys available in Custom Watchface V2 (Wear apk 3.3.0 or above) are available [here](cwf-reference-new-v2-features)
+- New features and keys available in Custom Watchface V2 (Wear apk 3.3.0 or above) are available [here](#cwf-reference-new-v2-features)
 
 ## Custom Watchface Format
 
@@ -11,12 +11,12 @@ Custom Watchface is an open format designed for AAPS and associated to the new "
 The Watchface file is a simple zip file, but to be recognized as a Watchface file, the zip file must contain the following files:
 
 - One image file named CustomWatchface (can be bitmap files `CustomWatchface.jpg`, `CustomWatchface.png` or a vector `CustomWatchface.svg`). This file is the little icon used to select the watchface when you click on "Load Watchface" button, and also the image visible within AAPS Wear plugin.
-- One file named `CustomWatchface.json` (see [JSON structure](cwf-reference-json-structure) below). This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because an missing or additional comma is enough to break the json format). This JSON file must also include a `"metadata"` bloc with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metadata settings](cwf-reference-metadata-settings) below)
+- One file named `CustomWatchface.json` (see [JSON structure](#cwf-reference-json-structure) below). This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because a missing or additional comma is enough to break the json format). This JSON file must also include a `"metadata"` bloc with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metadata settings](#cwf-reference-metadata-settings) below)
 - the size of this zip should be as small as possible (less than about 500kb). If this file is too big, it will just be blocked and not transmitted to the watch.
 
 The zip file can also contain some additional resource files:
 
-- Hardcoded file names for images that will be used used in standard views included in the watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](cwf-reference-list-of-hardcoded-resource-files) below). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
+- Hardcoded file names for images that will be used used in standard views included in the watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files) below). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
 - Addtional resource files with free names. These additional files can be either image files, or font files (`ttf` and `otf` format are accepted for fonts). Note that for these additional files, the `filename` (without extension) will be used as the keyValue, within JSON file, to specify where or when these files should be used.
   - image files are often used as background of text views or for dynamic animation (like battery level from 0% to 100%)
   - font files allow you to use dedicated fonts within your watchface
@@ -60,7 +60,7 @@ You can see in some json file an additional key `"filename"`, this key will be a
 
 ### General parameter settings
 
-After the first block with metadata, you will set some general parameters (see [List of general parameters](cwf-reference-list-of-general-parameters) below), this allow you to set Graph colors (Carbs, Bolus, BG values...), and also default colors for value in range, hyper or hypo (default colors of BG value and arrows)
+After the first block with metadata, you will set some general parameters (see [List of general parameters](#cwf-reference-list-of-general-parameters) below), this allow you to set Graph colors (Carbs, Bolus, BG values...), and also default colors for value in range, hyper or hypo (default colors of BG value and arrows)
 
 See below an example of general parameters
 
@@ -239,7 +239,7 @@ If you design or tune your first custom watchface, start by simple things: chang
 
 ### Manage colors
 
-Within json file, you will have several keys to specify colors: `"color"`, `"fontColor"`for views, but also `"highColor"`, `"midColor"`, `"lowColor"`, ... (see [List of General Parameters](cwf-reference-list-of-general-parameters))
+Within json file, you will have several keys to specify colors: `"color"`, `"fontColor"`for views, but also `"highColor"`, `"midColor"`, `"lowColor"`, ... (see [List of General Parameters](#cwf-reference-list-of-general-parameters))
 
 Colors are specified with a text field that starts by `#` followed by RRGGBB (Red, Green, Blue) values in hexadecimal format:
 
@@ -252,13 +252,13 @@ You can also include 2 additional values for alpha layer and specify a transpare
 You can also use the specific keyvalue `"bgColor"` to automatically use `"highColor"`, `"midColor"`, `"lowColor"` specified in general parameters according to BG Value:
 
 - `"fontColor": "bgColor",` will automatically set the font color of the view according to BG Value
-- Note that `sgv` (for BG Value) and `direction` (for trend arrow) views automatically apply BG colors set into general parameters (for these 2 views, if you want to have different colors, you will have to use advanced [dynData](cwf-reference-dyndata-feature) feature with one step color...)
+- Note that `sgv` (for BG Value) and `direction` (for trend arrow) views automatically apply BG colors set into general parameters (for these 2 views, if you want to have different colors, you will have to use advanced [dynData](#cwf-reference-dyndata-feature) feature with one step color...)
 
-For more information concerning ImageViews and `"color":` key, see dedicated chapter [Tune image color](cwf-reference-tune-image-color) below.
+For more information concerning ImageViews and `"color":` key, see dedicated chapter [Tune image color](#cwf-reference-tune-image-color) below.
 
 ### Include Hardcoded images
 
-the easiest way to start tuning your watchface is to include within zip file some images with a specific names (see [List of Hardcoded resource files](cwf-reference-list-of-hardcoded-resource-files))
+the easiest way to start tuning your watchface is to include within zip file some images with a specific names (see [List of Hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files))
 
 - Image should be in `.jpg`, `.png` or `.svg` format. but be carefull, jpg doesn't manage transparency, so should be only used for background layer. For all intermediate layers (cover_chart, cover_plate, hands) use eather `.png`or `.svg` image
 
@@ -271,7 +271,7 @@ If you want to customize hour_hand, minute_hand or second_hand for an analog wat
 
 - these images will automatically rotate around the center of the image, so the images should be set to 00:00:00 (and for a "full frame" analog watch, use a size of 400 x 400 px positioned at top 0 left 0)
 
-You can also noticed within [List of Hardcoded resource files](cwf-reference-list-of-hardcoded-resource-files) that for each image view, you have two additional hardcoded filenames `High` and `Low` (for example you can include other images named `BackgroundHigh.jpg` and `BackgroundLow.jpg` within zip file). then image will automatically change according to you BG level (within Range, Hyper or Hypo). See AIMICO watchface as example.
+You can also noticed within [List of Hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files) that for each image view, you have two additional hardcoded filenames `High` and `Low` (for example you can include other images named `BackgroundHigh.jpg` and `BackgroundLow.jpg` within zip file). then image will automatically change according to you BG level (within Range, Hyper or Hypo). See AIMICO watchface as example.
 
 (cwf-reference-tune-image-color)=
 
@@ -284,11 +284,11 @@ You can also noticed within [List of Hardcoded resource files](cwf-reference-lis
 
 When you apply `"color"` key on a bitmap image (`.jpg` or `.png`), color will apply an interresting effect on color saturation. So you will still recognize your bitmap.
 
-Finally on `.svg` image file, `"color"`key will have no effect, consider color of vector files as hardcoded within the image. If you want to change colors, you will have to include several `svg` files, and use advanced [dynData](cwf-reference-dyndata-feature) feature to change it
+Finally on `.svg` image file, `"color"`key will have no effect, consider color of vector files as hardcoded within the image. If you want to change colors, you will have to include several `svg` files, and use advanced [dynData](#cwf-reference-dyndata-feature) feature to change it
 
 ### Use additional fonts for TextViews
 
-Several defaults font are already available within wear apk (see font keys included into [key values](cwf-reference-key-values) chapter). But if you want to use additional fonts not available as default, you can include addtional fonts within zip file:
+Several defaults font are already available within wear apk (see font keys included into [key values](#cwf-reference-key-values) chapter). But if you want to use additional fonts not available as default, you can include addtional fonts within zip file:
 
 - the 2 accepted font format are `.ttf` and `.otf` files
 - if you include a custom font within zip file, for example with a file named `myCustomFont.ttf`, then you will have to use the filename to use it within json file for a TextView:
@@ -396,13 +396,13 @@ If the twin views are positioned vertically, in this case you must use the key `
 
 ### DynData Feature
 
-DynData is the most powerfull feature if you want to include some animation within you watchface, according to some internal values (like BG value, BG level, delta, % of battery... see list of available data [here](cwf-reference-dyndata-key-values))
+DynData is the most powerfull feature if you want to include some animation within you watchface, according to some internal values (like BG value, BG level, delta, % of battery... see list of available data [here](#cwf-reference-dyndata-key-values))
 
 To illustrate this feature, I will take the example of AAPS (SteamPunk) watchface:
 
 ![CustomWatchface_4](../images/CustomWatchface_4.png)
 
-In this watchface, we will have to manage the [rotation of BG value](cwf-reference-background-management) (from 30 degrees to 330 degrees) on the right, the [dynamic range of avg_delta](cwf-reference-avg-delta-management) (scale up to 5mgdl, 10mgdl or 20mgdl according to value), the [rotation of pointer](cwf-reference-dynamic-rotation-management) that should be synchronized to the scale, and also the different layer of the views...
+In this watchface, we will have to manage the [rotation of BG value](#cwf-reference-background-management) (from 30 degrees to 330 degrees) on the right, the [dynamic range of avg_delta](#cwf-reference-avg-delta-management) (scale up to 5mgdl, 10mgdl or 20mgdl according to value), the [rotation of pointer](#cwf-reference-dynamic-rotation-management) that should be synchronized to the scale, and also the different layer of the views...
 
 To be able to manage this Watchface, see below all the images included into the zip file:
 
@@ -460,7 +460,7 @@ The block defined within `"background"`view was named `"rotateSgv"`, it's the fi
 
 This block is simple: you have a first key named `"valueKey":` that will be used to define which value should be used. in this case `"sgv"` is a "keyValue" that defines BG value (note that in most cases the keyValue has the same name that the view that shows this information).
 
-Concerning BG value, default min data is set to 39mgdl and max  data is set to 400mgdl (see [DynData reference key values](cwf-reference-dyndata-key-values) below all available keyValues and associated min/max data values).
+Concerning BG value, default min data is set to 39mgdl and max  data is set to 400mgdl (see [DynData reference key values](#cwf-reference-dyndata-key-values) below all available keyValues and associated min/max data values).
 
 Within `"rotateSgv"` block the two additional keys (`"minData":` and `"maxData":`) will be used to tune min and max data to 30 and 330. With these min and max values, we will be able to directly use data value (without any convertion) to rotate background in degrees. In this situation all BG values above 330mgdl will be limited to 330, upper limit of the image. 
 
@@ -661,7 +661,7 @@ To finish the overview of dynData feature, we will take a look on battery manage
 ```
 You can see here that these both views share the same `dynData` block named `batteryIcons`. It's possible because by default attached data is the one of the view (to without specifying a  `"valueKey":` key within  `batteryIcons` block, it will be applied with `uploader_battery` data or `rig_battery` data according to the view).
 
-Note these two views also use TwinView feature explain [here](cwf-reference-twinview-feature).
+Note these two views also use TwinView feature explain [here](#cwf-reference-twinview-feature).
 
 Now lets take a look on dynData block:
 
@@ -684,7 +684,7 @@ Here we use exactly the same logic that for dynamic background image, but with d
 
 ### DynPref Feature
 
-Before reading this chapter, you have to understand how [dynData](cwf-reference-dyndata-feature) works, because DynPref is an advanced usage of DynData: You will now be able to adjust each DynData block according to preferences set by the user:
+Before reading this chapter, you have to understand how [dynData](#cwf-reference-dyndata-feature) works, because DynPref is an advanced usage of DynData: You will now be able to adjust each DynData block according to preferences set by the user:
 
 To illustrate DynPref feature, we will use two example:
 
@@ -955,7 +955,7 @@ This view could be managed in V1 using `"iob1"`, `"iob2"` and `"bgi"`  existing 
 
 #### New Formating feature for DynData or DynPref
 
-You can now manage a custom formating of raw values received by the watch and included in [dyndata key value table](cwf-reference-dyndata-key-values) below.
+You can now manage a custom formating of raw values received by the watch and included in [dyndata key value table](#cwf-reference-dyndata-key-values) below.
 
 To illustrate how this feature works, lets take as an example AAPS (Large) watchface and look at the results according to "time ago value" and the new "status" view visible or not:
 
@@ -1088,10 +1088,10 @@ Let's now take a look on timestamp dynPref block to manage plural:
 
 **Additional comment concerning formating feature**
 
-- keep in mind that the only dynamic values available are the one listed [here](cwf-reference-dyndata-key-values)
-- All `BG` values are in mgdl unit, if you want to use formating fetaure to show values in mmol units, you will have to manage mgdl to mmol convertion. Within a `dynData` or `dynPref` block, the key that should be used to name the block that will include `"minValue"`and `"maxValue"` for value convertion should be named `"dynValue": { ...  }`. (see [Dyn Data Keys](cwf-reference-dyndata-keys))
+- keep in mind that the only dynamic values available are the one listed [here](#cwf-reference-dyndata-key-values)
+- All `BG` values are in mgdl unit, if you want to use formating fetaure to show values in mmol units, you will have to manage mgdl to mmol convertion. Within a `dynData` or `dynPref` block, the key that should be used to name the block that will include `"minValue"`and `"maxValue"` for value convertion should be named `"dynValue": { ...  }`. (see [Dyn Data Keys](#cwf-reference-dyndata-keys))
 - If within a view you want to use a static formating string, with `"textvalue"` key to define format, and `"dynValue"` key to define usage of dynamic value, then you will have to also use a `"dynData"` or a `"dynPref"`block (even if empty), to be able to use formating feature.
-- `"textvalue1"`, `"textvalue2"` to textvalue*n* can be used without formating feature to replace double value step by a dedicated text label (for example with `"day_name"` key value and  seven steps to define custom name of the dayx of the week, ... )
+- `"textvalue1"`, `"textvalue2"` to textvalue*n* can be used without formating feature to replace double value step by a dedicated text label (for example with `"day_name"` key value and  seven steps to define custom name of the dayx of the week, ... )
 
 - For full documentation you can see [Class Formatter](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)
 
@@ -1391,7 +1391,7 @@ This list is sorted from background to foreground this is very important when yo
 | `"dynPref"`    | string | *Within a view Block*<br />name of dynamic dynPref block to use (generally same that associated view key or associated preference). |
 | `"dynPref"`    | string | *Within a partial dynData Block included into a dynPref Block*<br />name of dynamic dynPref block to use to complete the dynData block. This allow you to tune a dynData block according to several preferences |
 | dynPrefColor"` | string | this key is specific to the main block with all main colors (highColor, midColor, lowColor, graph colors...). you will use it if you want to tune main colors according to preferences |
-| `"prefKey"`    | string | specify the preference key Value that will be used to get user preferences (see [PrefKey values](cwf-reference-prefkey-values) below). This key should be used within a `dynPref` block.<br />Then according to preference key, the `dynPref`block should contains as many keys than prefKey has values.<br />Note that most of the time preferences are "Boolean" so you should find within the dynPref block these two dynData blocks: <br />```"true": { dynData Block },```<br />```"false": { dynData Block }``` |
+| `"prefKey"`    | string | specify the preference key Value that will be used to get user preferences (see [PrefKey values](#cwf-reference-prefkey-values) below). This key should be used within a `dynPref` block.<br />Then according to preference key, the `dynPref`block should contains as many keys than prefKey has values.<br />Note that most of the time preferences are "Boolean" so you should find within the dynPref block these two dynData blocks: <br />```"true": { dynData Block },```<br />```"false": { dynData Block }``` |
 | `"true"`       | block  | most preferences will set a boolean `"true"` or `"false"`. You will specify the dynData block to use if preference selected by user is true.<br />Note that if the block also contains a `"dynPref":`key, the dynData block wil be merged with other block. This allow you to tune for example color according to one preference, and textsize according to another preference |
 | `"false"`      | block  | most preferences will set a boolean `"true"` or `"false"`. You will specify the dynData block to use if preference selected by user is false.<br />Note that if the block also contains a `"dynPref":`key, the dynData block wil be merged with other block. This allow you to tune for example color according to one preference, and textsize according to another preference |
 
@@ -1399,7 +1399,7 @@ This list is sorted from background to foreground this is very important when yo
 
 ### PrefKey values
 
-All keys included into [Preference keys](cwf-reference-preference-keys) chapter above can be used to tune view parameters 
+All keys included into [Preference keys](#cwf-reference-preference-keys) chapter above can be used to tune view parameters 
 
 You can also you these additional key below included into AAPS (Custom) specific parameters:
 
