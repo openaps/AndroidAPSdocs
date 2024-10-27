@@ -430,7 +430,7 @@ AAPS 沒有運作在 "開發者模式"。 AAPS 顯示以下訊息："運作開�
 要啟用 AAPSClient 遠端功能，你必須： 1）安裝 AAPSClient 遠端應用程式（版本應與使用的 AAPS 版本匹配） 2）運作 AAPSClient 遠端應用程式，並按照設置嚮導的指示授予所需的權限並配置對 Nightscout 網站的查看。 3）此時，你可能希望停用一些警報選項，和/或停用啟動 AAPSClient 遠端應用程式時記錄到你的 Nightscout 網站的高級設置。 完成此操作後，AAPSClient 遠端將從你的 Nightscout 網站下載設定檔資料，"首頁總覽"標籤將顯示 CGM 資料和部分 AAPS 資料，但可能不會顯示圖表資料，並會顯示未設置設定檔的提示。 4）要啟用設定檔：
 
 - 在 AAPS > NSClient > 選項中啟用遠端設定檔同步
-- 在 NSClient 遠端中啟用設定檔 > 設定檔啟用後，設定檔將會生效，AAPSClient 遠端應顯示來自 AAPS 的所有資料。 提示：如果圖表仍然缺失，請嘗試更改圖表設置以觸發更新。 5）要啟用 AAPSClient 的遠端控制功能，請有選擇性地啟用 AAPS 中的功能（設定檔更改、臨時目標、碳水化合物等），這樣你就可以透過 AAPS > NSClient > 選項遠端控制 AAPS。 完成這些更改後，你將能夠透過 Nightscout 或 AAPSClient 遠端控制 AAPS。
+- 在 NSClient 遠端中啟用設定檔 > 設定檔啟用後，設定檔將會生效，AAPSClient 遠端應顯示來自 AAPS 的所有資料。 提示：如果圖表仍然缺失，請嘗試更改圖表設置以觸發更新。 5）要啟用 AAPSClient 的遠端控制功能，請選擇啟用 AAPS 中的功能（設定檔更改、臨時目標、碳水化合物等），這樣你就可以透過 AAPS > NSClient > 選項遠端控制 AAPS。 完成這些更改後，你將能夠透過 Nightscout 或 AAPSClient 遠端控制 AAPS。
 
 如果你想透過 AAPSClient 遠端 Wear 應用程式監控/控制 AAPS，則需要同時安裝 AAPSClient 遠端應用程式和相關的 Wear 應用程式。 要編譯 AAPSClient 遠端 Wear 應用程式，請按照安裝/配置 AAPS wear 應用程式的標準說明進行操作，只是在編譯時，選擇 AAPSClient 變體。
 
