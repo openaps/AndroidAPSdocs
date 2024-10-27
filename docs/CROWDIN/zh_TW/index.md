@@ -79,9 +79,9 @@ AAPS 介紹 <./Getting-Started/Introduction.md>
 建立 AAPS <./SettingUpAaps/BuildingAaps.md>
 轉移與安裝 AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
 設置嚮導 <./SettingUpAaps/SetupWizard.md>
-您的 AAPS 個人設定 <./SettingUpAaps/YourAapsProfile.md>
+您的 AAPS 設定檔 <./SettingUpAaps/YourAapsProfile.md>
 變更 AAPS 配置 <./SettingUpAaps/ChangeAapsConfiguration.md>
-- 配置建構器 <./SettingUpAaps/ConfigBuilder.md>
+- 組態設置工具 <./SettingUpAaps/ConfigBuilder.md>
 - 偏好設定 <./SettingUpAaps/Preferences.md>
 完成目標 <./SettingUpAaps/CompletingTheObjectives.md>
 ```
@@ -91,7 +91,7 @@ AAPS 介紹 <./Getting-Started/Introduction.md>
 
 遠端監控 <./RemoteFeatures/RemoteMonitoring.md>
 遠端控制 <./RemoteFeatures/RemoteControl.md>
-僅用來追蹤 <./RemoteFeatures/FollowingOnly.md>
+僅使用追蹤 <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
@@ -109,7 +109,7 @@ COB 計算 <./DailyLifeWithAaps/CobCalculation.md>
 自動化 <./DailyLifeWithAaps/Automations.md>
 動態ISF <./DailyLifeWithAaps/DynamicISF.md>
 幫浦與導管 <./DailyLifeWithAaps/PumpsAndCannulas.md>
-時區出行與夏令時間 <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
+跨時區旅行與夏令時間 <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
 ```
 
