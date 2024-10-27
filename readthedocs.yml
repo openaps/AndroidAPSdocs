@@ -2,8 +2,8 @@ version: 2
 
 # Build Container
 build:
-   os: ubuntu-22.04
-   tools:
+  os: ubuntu-20.04
+  tools:
     python: "3.11"
 
 # Pip requirements
@@ -11,4 +11,4 @@ requirements_file: ./requirements.txt
 
 # Build Container
 build:
-   image: latest
+  image: latest
