@@ -21,7 +21,7 @@
 5. [檢查AAPS中的版本](#6-check-aaps-version-on-phone)
 6. 根據您的[BG來源](../Getting-Started/CompatiblesCgms.md)確保在xDrip中[識別接收器](../CompatibleCgms/xDrip.md#identify-receiver)或使用[「建立您的Dexcom應用」](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)。
 
-如果您遇到問題，請參見單獨的[故障排除Android Studio](../GettingHelp/TroubleshootingAndroidStudio)頁面。
+如果您遇到問題，請參見單獨的[問題排除Android Studio](../GettingHelp/TroubleshootingAndroidStudio)頁面。
 
 ## 1. 匯出你的設定
 
