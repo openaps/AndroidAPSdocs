@@ -26,7 +26,7 @@
 
 ## 2022年1月
 
-- [故障排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio) - 更新 @tanja
+- [問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio) - 更新 @tanja
 
 ## 2021年12月
 
@@ -37,7 +37,7 @@
 
 - 校正 [Libre 2 感測器](../CompatibleCgms/Libre2.md#best-practices-for-calibrating-a-libre-2-sensor) 的最佳方法
 - [ISF](../UsefulLinks/FAQ.md) 影響的重新表述
-- 更新 [故障排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
+- 更新 [問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
 - 移除已修補的[Dexcom](../CompatibleCgms/DexcomG6.md)應用程式，因為它已過時
 
 ## 2021年10月
@@ -63,7 +63,7 @@
 
 ## 2021年2月
 
-- 新的導航列和[語言切換](../ChangeLanguage/ChangeLanguage.md)
+- 新的導覽列和[語系切換](../ChangeLanguage/ChangeLanguage.md)
 
 ## 2021年1月
 
