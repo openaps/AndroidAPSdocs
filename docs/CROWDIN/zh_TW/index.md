@@ -57,9 +57,9 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 ## AAPS文件索引
 
 ```{toctree}
-:caption: 1) 更改語言
+:caption: 1) 更改語系
 
-更改語言 <./ChangeLanguage/ChangeLanguage.md>
+更改語系 <./ChangeLanguage/ChangeLanguage.md>
 ```
 ```{toctree}
 :caption: 2) 開始使用
@@ -130,9 +130,9 @@ AAPS 版本說明 <./Maintenance/ReleaseNotes.md>
 :caption: 7) 獲得幫助
 
 在哪裡可以獲得 AAPS 的幫助 <./GettingHelp/WhereCanIGetHelp.md>
-故障排除 <./GettingHelp/GeneralTroubleshooting.md>
+問題排除 <./GettingHelp/GeneralTroubleshooting.md>
 如何報告錯誤/請求功能
-訪問日誌檔案 <./GettingHelp/AccessingLogFiles.md>
+讀取日誌檔案 <./GettingHelp/AccessingLogFiles.md>
 幫助！ 我的AAPS手機損壞/被偷/丟失
 ```
 
