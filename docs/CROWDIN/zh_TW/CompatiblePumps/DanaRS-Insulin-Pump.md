@@ -1,6 +1,6 @@
 # DanaRS 和 Dana-i 幫浦
 
-*這些說明適用於配置 2017 年之後的 DanaRS 或更新的 Dana-i 幫浦。 如果您擁有原始的 DanaR，請訪問[DanaR 胰島素幫浦](./DanaR-Insulin-Pump.md)。*
+*這些說明適用於配置 2017 年之後的 DanaRS 或更新的 Dana-i 幫浦。 如果您擁有原始的 DanaR，請讀取[DanaR 胰島素幫浦](./DanaR-Insulin-Pump.md)。*
 
 **Dana RS v3 韌體從 AAPS 版本 2.7 開始支援使用。**
 
