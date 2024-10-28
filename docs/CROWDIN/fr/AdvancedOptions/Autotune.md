@@ -4,7 +4,7 @@ La documentation sur l'algorythme Autotune peut être trouvée dans [la document
 
 Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans AAPS.
 
-**Currently Autotune Plugin is only available in [dev branch](../AdvancedOptions/DevBranch.md) and with Engineering mode.**
+**Actuellement, le plugin Autotune n'est disponible que dans la [branche dev](../AdvancedOptions/DevBranch.md) et avec le mode Ingénierie.**
 
 ## Interface utilisateur Autotune
 
@@ -14,7 +14,7 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
   - Remarque : chaque fois que vous sélectionnez un nouveau profil, les résultats précédents seront supprimés et le paramètre Nb jours sera défini à la valeur par défaut
 - Ensuite, Nb jours permet de choisir le nombre de jours à utiliser dans le calcul pour calculer votre profil. La valeur minimale est de 1 jour et la valeur maximale de 30 jours. Ce nombre ne devrait pas être trop petit pour obtenir des résultats itératifs et lisses corrects (au-dessus de 7 jours pour chaque calcul)
   - Remarque : chaque fois que vous changez le paramètre Nb jours, les résultats précédents seront supprimés
-- Dernier run affiche la date du dernier calcul et permet d'afficher votre dernier calcul valide. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successful run.
+- Dernier run affiche la date du dernier calcul et permet d'afficher votre dernier calcul valide. Si vous n'avez pas lancé Autotune le jour en cours, ou si les résultats précédents ont été supprimés avec une modification du paramètre de calcul ci-dessus, vous pouvez alors récupérer les paramètres et les résultats de la dernière exécution réussie.
 - L'avertissement vous montre par exemple des informations sur le profil sélectionné (si vous avez plusieurs valeurs G/I ou plusieurs valeurs SI)
   - Remarque : Le calcul Autotune fonctionne avec une seule valeur de G/I et une seule valeur de SI. Il n'existe actuellement aucun algorythme Autotune pour ajuster un G/I circadien ou une SI circadienne. Si votre profil d'entrée a plusieurs valeurs, vous pouvez voir dans la section Avertissement la valeur moyenne prise en compte pour calculer votre profil.
 - Le bouton Vérifiez Profil d'entrée permet d'ouvrir la Visionneuse de Profil pour vous permettre de faire une vérification rapide de votre profil (unités, DAI, G/I, SI, basal et cible)
@@ -41,7 +41,7 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 
 - Le bouton « Comparer les profils » ouvre la vue Comparateur de profil. Le profil d'entrée est en bleu, et le profil de sortie (nommé "Tuned") est en rouge.
 
-  - Remarque : dans l'exemple ci-dessous, le profil d'entrée a une variation circadienne pour le G/I et la SI, mais le profil calculé en sortie a une seule valeur. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
+  - Remarque : dans l'exemple ci-dessous, le profil d'entrée a une variation circadienne pour le G/I et la SI, mais le profil calculé en sortie a une seule valeur. Si pour vous il est important d'obtenir un profil de sortie circadien, voir [Profil G/I ou SI circadians](#circadian-ic-or-isf-profile) ci-dessous.
 
   ![Comparer les profils Autotune](../images/Autotune/Autotune_5.png)
 
@@ -70,7 +70,7 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 
   ![Mettre à jour le profil d'entrée](../images/Autotune/Autotune_9.png)
 
-- Si vous avez mis à jour votre profil d'entrée, alors le bouton "Mettre à jour profil d'entrée" est remplacé par le bouton "Réinitialiser profil d'entrée" (voir capture d'écran ci-dessous). You can that way immediately see if your current input profile in Local profile plugin already include the result of last run or not. Vous avez aussi la possibilité de récupérer votre profil d'entrée initial sans les résultats Autotune avec ce bouton
+- Si vous avez mis à jour votre profil d'entrée, alors le bouton "Mettre à jour profil d'entrée" est remplacé par le bouton "Réinitialiser profil d'entrée" (voir capture d'écran ci-dessous). Vous pouvez ainsi voir immédiatement si votre profil d'entrée actuel présent dans le plugin de profil local contient déjà le résultat de la dernière exécution Autotune ou non. Vous avez aussi la possibilité de récupérer votre profil d'entrée initial sans les résultats Autotune avec ce bouton
 
   ![Mettre à jour le profil d'entrée](../images/Autotune/Autotune_10.png)
 
@@ -84,8 +84,8 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 
 ![Autotune écran par défaut](../images/Autotune/Autotune_11.png)
 
-- Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#run-autotune-with-an-automation-rule) below. Si vous activez ce paramètre, le profil d'entrée sera automatiquement mis à jour par le profil Tuned, et il sera activé.
-  - **Be Careful, you must trust and verified during several following days that after an update and activation of Tuned profile without modification, it improves your loop**
+- Changer le profil avec l'Automatisation (Désactivé par défaut) : voir [Exécuter Autotune avec une règle d'automatisation](#run-autotune-with-an-automation-rule) ci-dessous. Si vous activez ce paramètre, le profil d'entrée sera automatiquement mis à jour par le profil Tuned, et il sera activé.
+  - **Soyez prudent, vous devez prendre confiance en vérifiant pendant plusieurs jours qu'après une mise à jour et l'activation du profil Tuned sans aucune modification, cela améliore effectivement votre boucle.**
 
 - Catégoriser UAM comme basal (par défaut On) : Ce paramètre est pour les utilisateurs utilisant AndroidAPS sans aucun glucide entré (Full UAM). Il empêchera (quand désactivé) de catégoriser les RNS en tant que basal.
   - Remarque : si vous avez au moins une heure d'absorption de glucides détectée pendant une journée, alors toutes les données catégorisées comme "RNS" seront catégorisées en tant que basal, quel que soit ce paramètre (Activé ou Désactivé)
