@@ -335,7 +335,7 @@ v3 是新的協議。 更加安全和高效
 - [新 SMS 幫浦連接、中斷連線](../RemoteFeatures/SMSCommands.md#commands) 指令 @Lexsus
 - 更好地支援 Dana 幫浦上的小基礎率 @Mackwe
 - 小型 Insight 修復 @TebbeUbben @MilosKozak
-- ["預設語言" 選項](../SettingUpAaps/Preferences.md#general) @MilosKozak
+- ["預設語系" 選項](../SettingUpAaps/Preferences.md#general) @MilosKozak
 - 矢量圖示 @Philoul
 - [為 MDT 幫浦設定中性溫度](../CompatiblePumps/MedtronicPump.md#configuration-of-the-pump) @Tornado-Tim
 - 歷史瀏覽器改進 @MilosKozak
@@ -447,7 +447,7 @@ v3 是新的協議。 更加安全和高效
 
 - 新增 [簡訊指令](../RemoteFeatures/SMSCommands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 
-- 修復語言支援
+- 修復語系支援
 
 - 目標: [允許返回](../SettingUpAaps/CompletingTheObjectives.md#go-back-in-objectives), 時間抓取對話框
 
@@ -522,7 +522,7 @@ v3 是新的協議。 更加安全和高效
 - Insight 的重要安全修復（如果你使用 Insight，這真的很重要！）
 - 修復歷史瀏覽器
 - 修復 delta 計算
-- 語言更新
+- 語系更新
 - 檢查 GIT 並在 Gradle 升級時發出警告
 - 更多自動測試
 - 修復 AlarmSound 服務中的潛在崩潰問題（感謝 @lee-b！）
