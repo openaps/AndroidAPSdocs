@@ -709,7 +709,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ![24-10-23，成功的 Galaxy 手錶照片](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
-#### 排查 **AAPS** 手錶與 **AAPS** 手機通訊的故障
+#### 排除 **AAPS** 手錶與 **AAPS** 手機通訊的問題
 1.  如果 EasyFire tools 無法連線，或者你收到“授權失敗”訊息 > 請檢查 IP 地址是否正確輸入。
 2.  檢查智慧型手錶是否已連線到網際網路（而不僅僅是透過藍牙與手機連線）。
 3.  檢查 **AAPS** 手機和智慧型手錶是否已在 Samsung 應用程式中配對或連線。
@@ -757,7 +757,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 #### Sony 智慧型手錶設置問題排除
 
-雖然幾年前已經停產，但如果您正在使用 Sony Smartwatch SW 3，請參閱這裡的故障排除指南: [故障排除 Sony Smartwatch SW 3](../UsefulLinks/SonySW3.md)
+雖然幾年前已經停產，但如果您正在使用 Sony Smartwatch SW 3，請參閱這裡的問題排除指南: [問題排除 Sony Smartwatch SW 3](../UsefulLinks/SonySW3.md)
 
 
 
