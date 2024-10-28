@@ -73,7 +73,7 @@
 
 透過左上角的 **漢堡選單** 進入 **組態建置工具 (1)** ➜**幫浦** ➜**Omnipod**，選擇標為 **Omnipod** 的 **單選按鈕 (2)**。 勾選 **設定齒輪圖示 (3)** 旁邊的 **勾選框(4)**， Omnipod 選單將會以標籤的形式顯示在 AAPS 界面中，標題為 **POD**。 此處在文件中被稱為 **Omnipod (POD)** 標籤。
 
-> **注意：** 可以在本文件的[Omnipod 設置部分](#omnipod-settings)中找到更快速訪問**Omnipod 設置**的方法。
+> **注意：** 可以在本文件的[Omnipod 設置部分](#omnipod-settings)中找到更快速讀取**Omnipod 設置**的方法。
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
@@ -442,7 +442,7 @@
   > 
   > 用於重新整理 Pod 狀態並消除顯示 (不確定) 訊息的狀態欄位。
   > 
-  > 請參閱下面的[故障排除部分](#troubleshooting)以獲取額外信息。
+  > 請參閱下面的[問題排除部分](#troubleshooting)以獲取額外信息。
 
 - **幫浦管理：**
 
