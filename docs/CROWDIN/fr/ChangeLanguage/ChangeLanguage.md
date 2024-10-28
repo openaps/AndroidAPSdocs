@@ -1,13 +1,13 @@
 # Changer la langue
 
 ```{note}
-The language selection have been moved to the bottom drawer of the left menu. Please click on the bottom bar to open language selection menu.
+La sélection de la langue a été déplacée en bas du menu de gauche. Cliquez sur la barre du bas pour ouvrir le menu de sélection de la langue.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![Ouvrir le menu de langue](../images/documentation_language_menu.png)
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+Lorsque vous changez de langue et/ou de version, vous pouvez obtenir un 404 - Page introuvable, si la page de langue ou de version n'existe pas. Cela se produit fréquemment lors du changement de version mais ne devrait pas se produire lors du changement de langue : la page s'affichera en anglais si elle n'est pas encore traduite.
 ```
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders.
+N'hésitez pas à rejoindre les traducteurs et les correcteurs de [Crowdin](https://crowdin.com/project/androidapsdocs).
