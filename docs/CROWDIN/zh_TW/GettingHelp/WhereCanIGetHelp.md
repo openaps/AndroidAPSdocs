@@ -24,7 +24,7 @@
 * [雲端中的 CGM](https://www.facebook.com/groups/cgminthecloud/)：關於 CGM 的一般資訊
 * [AndroidAPS 在 Discord 上](https://discord.gg/4fQUWHZ4Mw)
 
-## 國家/語言特定資源
+## 國家/語系特定資源
 
 ### 澳大利亞
 
