@@ -339,7 +339,7 @@ AAPS Glucose Watch 可直接與 AAPS 整合。 他顯示循環狀態資料（活
 
 ## Sony 智慧型手錶設置問題排除
 
-儘管幾年前已停產，但如果您正在使用 Sony Smartwatch SW 3，請查看這裡的故障排除指南： [故障排除 Sony Smartwatch SW 3](../UsefulLinks/SonySW3.md)
+儘管幾年前已停產，但如果您正在使用 Sony Smartwatch SW 3，請查看這裡的問題排除指南： [問題排除 Sony Smartwatch SW 3](../UsefulLinks/SonySW3.md)
 
 ## 額外的 AAPS 自訂錶盤也可以使用
 
