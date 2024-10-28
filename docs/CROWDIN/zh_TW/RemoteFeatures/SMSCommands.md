@@ -98,7 +98,7 @@
 
 ## 指令
 
-指令必須以英文發送，回覆將使用你當地的語言，如果該回覆字符串已經[翻譯](../SupportingAaps/Translations#translate-strings-for-aaps-app)。
+指令必須以英文發送，回覆將使用你當地的語系，如果該回覆字符串已經[翻譯](../SupportingAaps/Translations#translate-strings-for-aaps-app)。
 
 ![SMS 指令範例](../images/SMSCommands.png)
 
