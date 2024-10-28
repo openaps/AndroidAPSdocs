@@ -9,12 +9,12 @@ Le format des Cadrans personnalisés est ouvert et conçu specialement pour AAPS
 Le fichier Cadran est un fichier zip simple, mais pour être reconnu comme Cadran AAPS, le fichier zip doit contenir:
 
 - Un fichier image nommé CustomWatchface (cela peut être un fichier bitmap `CustomWatchface.jpg`, `CustomWatchface.png` ou un fichier vecteur `CustomWatchface.svg`). Ce fichier contient la petite icône utilisée pour sélectionner le cadran lorsque vous cliquez sur le bouton "Charger le cadran", et aussi l'image visible dans le plugin AAPS Wear.
-- One file named `CustomWatchface.json` (see [JSON structure](#json-structure) below). Ce deuxième fichier est le fichier principal qui contient toutes les informations nécessaires pour le cadran. Ce fichier json doit être valide (c'est probablement le point le plus délicat lorsque vous éditez manuellement ce fichier dans un éditeur de texte, parce qu'une simple virgule manquante ou additionnelle est suffisante pour casser le format json). Ce fichier JSON doit également inclure un bloc `"metadata"` avec une clé `"name"` contenant une valeur non vide. This will be the name of your custom watchface (see [Metadata settings](#metadata-settings) below)
+- Un fichier nommé `CustomWatchface.json` (voir [Structure JSON](#json-structure) ci-dessous). Ce deuxième fichier est le fichier principal qui contient toutes les informations nécessaires pour le cadran. Ce fichier json doit être valide (c'est probablement le point le plus délicat lorsque vous éditez manuellement ce fichier dans un éditeur de texte, parce qu'une simple virgule manquante ou additionnelle est suffisante pour casser le format json). Ce fichier JSON doit également inclure un bloc `"metadata"` avec une clé `"name"` contenant une valeur non vide. Ce sera le nom de votre cadran personnalisé (voir [Paramètres metadata](#metadata-settings) ci-dessous)
 - la taille de ce zip devrait être aussi petite que possible (moins de 500 ko). Si ce fichier est trop volumineux, il sera juste bloqué et ne sera pas transmis à la montre.
 
 Le fichier zip peut également contenir des fichiers de ressources supplémentaires :
 
-- Hardcoded file names for images that will be used used in standard views included in the watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](#list-of-hardcoded-resource-files) below). Tous ces fichiers peuvent être au format `jpg`, `png` ou `svg`. mais pour la plupart d'entre elles, vous devrez utiliser les formats `png` ou `svg` qui gèrent la transparence (le format jpg est plus compact que le png, mais sans aucune transparence). Notez que la meilleure qualité associée à la plus petite taille sera généralement obtenue avec les fichiers svg (format vectoriel).
+- Des noms de fichiers codés en dur pour les images qui seront utilisées dans les vues standards incluses dans le Cadran (comme `Background`, `CoverChart`... voir [Liste des fichiers de ressources codés en dur](#list-of-hardcoded-resource-files) ci-dessous). Tous ces fichiers peuvent être au format `jpg`, `png` ou `svg`. mais pour la plupart d'entre elles, vous devrez utiliser les formats `png` ou `svg` qui gèrent la transparence (le format jpg est plus compact que le png, mais sans aucune transparence). Notez que la meilleure qualité associée à la plus petite taille sera généralement obtenue avec les fichiers svg (format vectoriel).
 - Des fichiers de ressources supplémentaires avec Des noms libres. Ces fichiers supplémentaires peuvent être soit des fichiers image, soit des fichiers de polices de caractères (les formats `ttf` et `otf` sont acceptés pour les polices). Notez que pour ces fichiers supplémentaires, le `nom du fichier` (sans extension) sera utilisé comme valeur de clé, dans le fichier JSON, pour spécifier où et quand ces fichiers devront être utilisés
   - les fichiers image sont souvent utilisés comme arrière plan de vue texte ou pour une animation dynamique (comme le niveau de la batterie de 0% à 100%)
   - les fichiers de police de caractères vous permettent d'utiliser des polices spécifiques dans votre cadran
@@ -58,7 +58,7 @@ Vous pouvez voir dans un fichier JSON une clé supplémentaire `"filename"`, cet
 
 ### Paramètres généraux
 
-After the first block with metadata, you will set some general parameters (see [List of general parameters](#list-of-general-parameters) below), this allow you to set Graph colors (Carbs, Bolus, BG values...), and also default colors for value in range, hyper or hypo (default colors of BG value and arrows)
+Après le premier bloc avec les métadonnées, vous allez définir quelques paramètres généraux (voir [Liste des paramètres généraux](#list-of-general-parameters) ci-dessous), ceci vous permet de définir les couleurs du graphique (Glucides, Bolus, Glycémies...), et aussi les couleurs par défaut pour les valeurs dans la plage cible, hyper ou hypo (couleurs par défaut de la valeur de glycémie et des flèches)
 
 Voir ci-dessous un exemple de paramètres généraux
 
@@ -102,7 +102,7 @@ Pour avoir la vue second_hand (aiguille des secondes) avec la couleur par défau
 
 ### Paramètres TextView
 
-TexView have more available parameters compare to ImageView: you can tune rotation (integer value in degrees), textsize (integer value in pixel), gravity (to define if text value will be centered (default value), or aligned left or right), set the font, fontStyle and fontColor, and also background color of the TextView
+TexView a plus de paramètres disponibles comparés à ImageView: vous pouvez régler la rotation (valeur entière en degrés), taille du texte (valeur entière en pixel), gravité (pour définir si la valeur du texte sera centrée (valeur par défaut), ou alignée à gauche ou à droite), définir la police, le style et la couleur de fonte, ainsi que la couleur de fond de TextView
 
 ```json
 "basalRate": {
@@ -119,7 +119,7 @@ TexView have more available parameters compare to ImageView: you can tune rotati
     "fontColor": "#BDBDBD"
 },
 ```
-Note that if you don't want to manage one view within your watchface, then put the `"visibility"` key to `"gone"` but also set size and position outside visible area like that:
+Notez que si vous ne voulez pas gérer une vue dans votre watchface, puis mettez la touche `"visibility"`à `"gone"`mais définissez également la taille et la position en dehors de la zone visible comme ceci:
 
 ```json
 "second": {
