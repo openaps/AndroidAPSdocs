@@ -133,7 +133,7 @@ Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
 Troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
 How to report bugs/request features
 Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
-Help! Mein AAPS-Smartphone ist defekt/gestolen oder wurde verloren
+Help! Mein AAPS-Smartphone ist defekt/gestolhen oder wurde verloren
 ```
 
 ```{toctree}

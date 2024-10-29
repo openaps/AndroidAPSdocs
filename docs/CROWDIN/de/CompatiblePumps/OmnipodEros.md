@@ -21,7 +21,7 @@ Diese Anleitung ist für die Konfiguration der Omnipod Eros Pumpe (**NICHT Omnip
 > > - ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Kontakt:](mailto:Boshetyn@ukr.net)
 > > - ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Kontakt:](https://jameswedding.substack.com/) - nicht getestet
 
-- ![Android_phone](../images/omnipod/Android_phone.png)  **Mobiltelefongerät**
+- ![Android_phone](../images/omnipod/Android_phone.png)  **Smartphone**
 
 > Komponente, die AAPS betreibt und Steuerbefehle an das Pod-Kommunikationsgerät sendet.
 > 

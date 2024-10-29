@@ -369,7 +369,7 @@ Sonstiges
 
   * Es gibt keine Unterbrechen-Taste mehr. Wenn Du die Insulinabgabe unterbrechen möchtest, kannst Du eine Null-TBR für x Minuten setzen.
   * Während eines Profilwechsels muss der DASH die Insulinabgabe unterbrechen, bevor das neue Basal-Profil gesetzt wird. Wenn die Kommunikation zwischen den beiden Befehlen fehlschlägt, kann die Insulinabgabe unterbrochen bleiben. Wenn das passiert:
-     - Es wird gibt dann keine Insulinabgabe; dies schließt Basal-, SMB-, manuelle Boli usw. ein.
+     - Es gibt dann keine Insulinabgabe; dies schließt Basal, SMB, manuelle Boli usw. ein.
      - Es kann eine Benachrichtigung geben, dass einer der Befehle unbestätigt blieb: Dies hängt davon ab, wann der Fehler aufgetreten ist.
      - AAPS wird alle 15 Minuten versuchen, das neue Basalprofil zu setzen.
      - AAPS wird alle 15 Minuten eine Benachrichtigung anzeigen, dass die Insulinabgabe unterbrochen ist, wenn die Abgabe weiterhin unterbrochen ist (Insulinabgabe konnte nicht gestartet werden).
@@ -393,7 +393,7 @@ Wenn für eine voreingestellte Zeitspanne keine Kommunikation mit dem Pod herges
 
 ### Exporteinstellungen
 
-Durch den Export derAAPS-Einstellungen kannst Du alle Deine Einstellungen - und vielleicht noch wichtiger - alle Deine Objectives (Ziele) wiederherstellen. Es kann passieren, dass die Einstellungen in der „letzten bekannten funktionierenden Fassung“ wieder hergestellt werden müssen, etwa nach der Deinstallation/Neuinstallation von AAPS oder im Falle eines Smartphone-Verlustes.
+Durch den Export der AAPS-Einstellungen kannst Du alle Deine Einstellungen - und vielleicht noch wichtiger - alle Deine Objectives (Ziele) wiederherstellen. Es kann passieren, dass die Einstellungen in der „letzten bekannten funktionierenden Fassung“ wieder hergestellt werden müssen, etwa nach der Deinstallation/Neuinstallation von AAPS oder im Falle eines Smartphone-Verlustes.
 
 Hinweis: Die Informationen des aktiven Pod sind in den exportierten Einstellungen enthalten. Wenn Sie eine "alte" Exportdatei importieren, wird Ihr aktueller Pod "sterben". Es gibt hierzu keine Alternative. In einigen Fällen (wie bei einem _vorgesehenen_ Telefonwechsel) musst Du unter Umständen die exportierte Datei verwenden, um die AndroisAPS-Einstellungen wiederherzustellen **während der aktuelle aktive Pod** beibehalten wird. In diesem Fall ist es wichtig, nur die zuletzt exportierte Einstellungsdatei zu verwenden, die den aktuell aktiven Pod enthält.
 

@@ -52,7 +52,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。
 
-Label in the middle of [nowhere](#sandbox1-in-the-middle-of-nowhere) This instead is the label to [](#sandbox1-this-is-another-test) and it should display its name
+位於[偏遠地區](#sandbox1-in-the-middle-of-nowhere)的標籤 這是指向[](#sandbox1-this-is-another-test)的標籤，應顯示其名稱
 
 帶有錨點的連結：
 - [這會花多久時間？](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up)
