@@ -22,7 +22,6 @@
   - 字體檔案允許你在錶面中使用專用字體。
 
 (cwf-reference-json-structure)=
-
 ## JSON 結構
 
 JSON 檔案可以在 Notepad（或 Notepad++）文字編輯器中編輯（建議使用 Notepad++，他可識別 JSON 並使用彩色格式顯示）。
@@ -34,7 +33,6 @@ JSON 檔案可以在 Notepad（或 Notepad++）文字編輯器中編輯（建議
 - 為了提高 json 檔案的可讀性，通常會縮排（每個新鍵位於新行，每個新區塊向右縮進 4 個空格字元）。
 
 (cwf-reference-metadata-settings)=
-
 ### 中繼資料設定
 
 此區塊是 json 檔案中包含的第一個區塊，且是必需的。 他包含與此錶面相關的所有資訊，如名稱、作者、建立或更新日期、作者版本或外掛版本。
@@ -57,7 +55,6 @@ JSON 檔案可以在 Notepad（或 Notepad++）文字編輯器中編輯（建議
 你可以在某些 json 檔案中看到一個額外的鍵 `"filename"`，當自訂錶面載入 AAPS 時，這個鍵將自動建立或更新（他將用來向使用者顯示匯出資料夾中的 zip 檔案名），因此你可以在中繼資料區塊中刪除此鍵。
 
 (cwf-reference-general-parameter-settings)=
-
 ### 一般參數設定
 
 After the first block with metadata, you will set some general parameters (see [List of general parameters](#cwf-reference-list-of-general-parameters) below), this allow you to set Graph colors (Carbs, Bolus, BG values...), and also default colors for value in range, hyper or hypo (default colors of BG value and arrows)
@@ -77,7 +74,6 @@ After the first block with metadata, you will set some general parameters (see [
 "enableSecond": true,
 ```
 (cwf-reference-imageview-settings)=
-
 ### ImageView 設定
 
 自訂圖片可以使用與自訂錶面佈局中每個 ImageView 相關的正確檔名進行調整，然後 json 區塊僅用來定義位置、大小、視圖是否可見，並可選擇調整顏色：
@@ -101,7 +97,6 @@ After the first block with metadata, you will set some general parameters (see [
 ```
 
 (cwf-reference-textview-settings)=
-
 ### TextView 設定
 
 TexView 比 ImageView 有更多可用參數：你可以調整旋轉（度數的整數值）、字體大小（以像素為單位的整數值）、重力（用來定義文字值是置中（預設值）、靠左對齊還是靠右對齊）、設置字體、字體樣式和字體顏色，還有 TextView 的背景顏色。
@@ -149,7 +144,6 @@ If you want to customize background image of a text view, then you can use the k
 你還有 4 個特定的 TextView（名為 freetext1 到 freetext4），他們有一個特定的參數 `"textvalue":`，可用來設置標籤之類的東西。
 
 (cwf-reference-chartview-settings)=
-
 ### ChartView 設定
 
 圖表視圖是一個非常特定的視圖，可以與 ImageView 或 TextView 共享一些參數……
@@ -168,7 +162,6 @@ If you want to customize background image of a text view, then you can use the k
 此視圖的 2 個額外參數是背景顏色（預設為透明），使用鍵 `"color"`，或使用鍵 `"background"` 來設定背景圖像。
 
 (cwf-reference-how-to-build-watchface)=
-
 ## 如何建置/設計你的第一個錶面
 
 ### 所需工具
@@ -274,7 +267,6 @@ the easiest way to start tuning your watchface is to include within zip file som
 You can also noticed within [List of Hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files) that for each image view, you have two additional hardcoded filenames `High` and `Low` (for example you can include other images named `BackgroundHigh.jpg` and `BackgroundLow.jpg` within zip file). 然後圖像將根據你的血糖水平自動更改（在範圍內、高血糖或低血糖）。 請參閱 AIMICO 錶面作為範例。
 
 (cwf-reference-tune-image-color)=
-
 ### 調整圖像顏色
 
 `"color"` 鍵可用於調整預設的圖像顏色：
@@ -300,11 +292,9 @@ Several defaults font are already available within wear apk (see font keys inclu
 請記住，一些字體檔案可能很大（而你對 zip 檔案的大小有最大限制）。 So if you only use very few characters (numbers, `.`, `,`), you can use free tools to remove unused characters (for example [here](https://products.aspose.app/font/generator/ttf-to-ttf)) and then reduce font size.
 
 (cwf-reference-advanced-features)=
-
 ## 進階功能
 
 (cwf-reference-preference-feature)=
-
 ### 偏好設定功能
 
 CustomWatchface 可以自動調整一些手錶的偏好設定，以確保正確顯示錶面（如果使用者在 Wear 偏好設定中授權）。
@@ -343,7 +333,6 @@ CustomWatchface 可以自動調整一些手錶的偏好設定，以確保正確�
 
 
 (cwf-reference-twinview-feature)=
-
 ### 雙視圖功能
 
 雙視圖提供了一種基於可見檢視調整檢視位置的簡便方式。 這不如完全使用 LinearLayout 排版來得強大，但可以處理許多常見情況。
@@ -393,7 +382,6 @@ CustomWatchface 可以自動調整一些手錶的偏好設定，以確保正確�
 },
 ```
 (cwf-reference-dyndata-feature)=
-
 ### DynData 功能
 
 DynData is the most powerfull feature if you want to include some animation within you watchface, according to some internal values (like BG value, BG level, delta, % of battery... see list of available data [here](#cwf-reference-dyndata-key-values))
@@ -415,7 +403,6 @@ In this watchface, we will have to manage the [rotation of BG value](#cwf-refere
 - 在第三排中，chartBackground.jpg 會手動連結到圖表檢視，HourHand.png 和 MinuteHand.png 檔案將自動映射到相關的檢視。
 
 (cwf-reference-background-management)=
-
 #### **背景管理**
 
 首先，關於血糖值（BG）圖像，這裡無法選擇，他只能位於背景層（否則他將出現在圖表前面，圖表將無法顯示！）。 因此，我們必須將血糖值對應到背景，然後根據血糖值旋轉背景圖像。
@@ -481,7 +468,6 @@ Concerning BG value, default min data is set to 39mgdl and max  data is set to 4
 },
 ```
 (cwf-reference-avg-delta-management)=
-
 #### **平均變化管理**
 
 為了能夠管理平均變化的動態範圍，我們將使用四個自由文字視圖。 freetext1將用來管理圖像刻度，freetext2至freetext4將根據刻度管理指針的旋轉。
@@ -534,9 +520,7 @@ Concerning BG value, default min data is set to 39mgdl and max  data is set to 4
 - 在-20 mg/dL和20 mg/dL之間，總範圍是40 mg/dL，分為8個步驟（提供的圖像數量），每步5 mg/dL。
 - 現在我們可以根據avg_delta值來映射背景圖像，從最低值開始：在-20和-15之間以及-15和-10之間，我們將使用`steampunk_gauge_mgdl_20`來顯示刻度，然後在-10和-5之間使用`steampunk_gauge_mgdl_10`，依此類推，直到+15和+20，我們再次使用`steampunk_gauge_mgdl_20`背景圖像。
 
-(cwf-reference-dynamic-rotation-management)=
-
-**freetext2 到 freetext4**
+(cwf-reference-dynamic-rotation-management)= **freetext2 to freetext4**
 
 對於這些視圖，我們將結合之前解釋過的動態圖片和旋轉功能：
 
@@ -681,7 +665,6 @@ Note these two views also use TwinView feature explain [here](#cwf-reference-twi
 - 如果你想將門檻值降低到「低於 10%」，只需添加 5 個額外的鍵，從 `"字體顏色6"` 到 `"字體顏色10"`，但你也可以調整每種顏色，如果你想要從綠色到黃色、橙色和紅色的漸變……
 
 (cwf-reference-dynpref-feature)=
-
 ### 動態偏好功能
 
 Before reading this chapter, you have to understand how [dynData](#cwf-reference-dyndata-feature) works, because DynPref is an advanced usage of DynData: You will now be able to adjust each DynData block according to preferences set by the user:
@@ -928,7 +911,6 @@ You will see within default view settings the text size (19 on `iob1` and 24 on 
 - Only one key `"valueKey"` should be set for one view, so if the final `dynData` block is built from several `dynPref`blocks, do not include several `"valueKey"`  (and associated `"minData"`, `"maxData"`, ...)
 
 (cwf-reference-new-v2-features)=
-
 ### New Features in CustomWatchface V2 (AAPS V3.3.0 or above)
 
 Note that the watchfaces using these new features or views will require the latest wear apk built from 3.3.0 version of AAPS.
@@ -952,7 +934,6 @@ This `"status"` view is associated with `"key_show_loop_status"` key (within dyn
 This view could be managed in V1 using `"iob1"`, `"iob2"` and `"bgi"`  existing views, but with the need of complex dynPref settings to manage spacing within each information according to different settings selected within Watch.
 
 (cwf-reference-new-formating-feature)=
-
 #### New Formating feature for DynData or DynPref
 
 You can now manage a custom formating of raw values received by the watch and included in [dyndata key value table](#cwf-reference-dyndata-key-values) below.
@@ -1096,15 +1077,12 @@ Let's now take a look on timestamp dynPref block to manage plural:
 - For full documentation you can see [Class Formatter](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)
 
 (cwf-reference-key-and-keyvalue-reference)=
-
 ## 鍵與鍵值參考
 
 (cwf-reference-list-of-metadata-keys)=
-
 ### 中繼資料鍵清單
 
 (cwf-reference-list-of-standard-metadata-keys)=
-
 #### 標準資訊中繼資料鍵清單
 
 | 鍵                  | 註解                                              |
@@ -1117,7 +1095,6 @@ Let's now take a look on timestamp dynPref block to manage plural:
 | `"comment"`        | 可以用來提供目前錶面的一些資訊或限制的自由文本                         |
 
 (cwf-reference-preference-keys)=
-
 #### 偏好設定鍵
 
 | 鍵                             | 註解                                                                                                                                                        |
@@ -1147,7 +1124,6 @@ Let's now take a look on timestamp dynPref block to manage plural:
 | `"cwf_authorization"` | 當錶面載入時該鍵將被建立，並且每次在 Wear 設定中更改授權偏好設定時都會更新，並用於同步手錶授權 |
 
 (cwf-reference-list-of-general-parameters)=
-
 ### 常規參數清單
 
 | 鍵                        | 註解                                                                                |
@@ -1166,7 +1142,6 @@ Let's now take a look on timestamp dynPref block to manage plural:
 | `"monthFormat"`          | "MMM"（預設值）：從 "M" 到 "MMMM" 指定月份格式（數字、簡稱、全名）                                        |
 
 (cwf-reference-list-of-hardcoded-resource-files)=
-
 ### 硬編碼資源檔案清單
 
 對於大多數圖像，高和低後綴允許根據血糖水平（在範圍內、高血糖或低血糖）調整圖像
@@ -1192,7 +1167,6 @@ Let's now take a look on timestamp dynPref block to manage plural:
 對於上述的每個檔名，副檔名可以是 `.jpg`、`.png` 或 `.svg`。 但要注意，`.jpg` 不支援透明度（所以大多數檔案應使用 .png 或 .svg，以免遮擋後面的視圖...）
 
 (cwf-reference-list-of-view-keys)=
-
 ### 視圖鍵清單
 
 此清單從背景到前景排序，這在你組織錶面時非常重要，因為某些圖像或文字可能會被其他圖像遮住
@@ -1238,11 +1212,9 @@ Let's now take a look on timestamp dynPref block to manage plural:
 **View added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
 
 (cwf-reference-list-of-json-keys)=
-
 ### Json 鍵清單
 
 (cwf-reference-common-keys)=
-
 #### 通用鍵
 
  可用於所有視圖類型（文字視圖、圖像視圖、圖表視圖）
@@ -1265,7 +1237,6 @@ Let's now take a look on timestamp dynPref block to manage plural:
 | `"dynPref"`              | 文字  | 鍵區塊名稱，將指定要連結的動態偏好設定和相關動畫（顏色、圖像、位移、旋轉）<br />`"dynPref": "customName",` （見下文） |
 
 (cwf-reference-textview-keys)=
-
 #### 文字視圖鍵
 
 | 鍵              | 類型  | 註解                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -1285,7 +1256,6 @@ From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a f
 **Key added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
 
 (cwf-reference-imageview-keys)=
-
 #### 圖像視圖鍵
 
 | 鍵         | 類型 | 註解                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -1293,7 +1263,6 @@ From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a f
 | `"color"` | 文字 | 管理視圖背景顏色或調整圖像顏色（僅限點陣圖）<br />`"#RRVVBB"`：RVB 格式的顏色代碼，十六進制值 #FF0000 為紅色<br />`"#AARRVVBB"`：AA 包含 Alpha 資訊（透明度），00 為透明，FF 為不透明<br />`"bgColor"`：鍵值 bgColor 是根據血糖值使用 highColor、midColor 或 lowColor 的簡便方法<br />- 對於預設嵌入的圖像（指針、錶盤），將直接應用顏色，對於點陣圖圖像（jpg 或 png），這將在圖像上應用飽和度漸變濾鏡<br />- 對於 svg，此參數將無效（無法修改 svg 文件的顏色）<br />- 請注意，此鍵也可用於 `chart` 視圖中為圖表設置自訂背景，在背景圖像前顯示 |
 
 (cwf-reference-chartview-keys)=
-
 #### 圖表視圖鍵
 
 | 鍵              | 類型 | 註解                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -1302,7 +1271,6 @@ From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a f
 | `"background"` | 文字 | `resource_filename` 你可以包含資源圖像作為文字視圖的背景（資源檔案將被調整大小以適應文字視圖的高度和寬度，但保持圖像比例）。 文字將顯示在背景圖像前面。<br />- 請注意，此鍵也可用於 `chart` 視圖中為圖表設置自訂背景，在背景圖像前面顯示                                                                                                                                                                                                                                                    |
 
 (cwf-reference-key-values)=
-
 ### 鍵值
 
 | 鍵值                           | 鍵    | 註解                       |
@@ -1327,7 +1295,6 @@ From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a f
 | `"italic"`                   | 字體樣式 |                          |
 
 (cwf-reference-dyndata-keys)=
-
 ### DynData 鍵
 
 | 鍵                                                                                                                                                                                                                                                                               | 類型 | 註解                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -1363,7 +1330,6 @@ From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a f
 **Key added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
 
 (cwf-reference-dyndata-key-values)=
-
 ### DynData 鍵值
 
 | 鍵值                   | 鍵        | 註解                                                                                                                                                   |
@@ -1383,7 +1349,6 @@ From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a f
 | `"week_number"`      | valueKey | 預設 minData = 1<br />預設 maxData = 53                                                                                                            |
 
 (cwf-reference-dynpref-keys)=
-
 ### DynPref 鍵
 
 | 鍵               | 類型 | 註解                                                                                                                                                                                                                                                                                                                                                           |
@@ -1397,7 +1362,6 @@ From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a f
 | `"false"`       | 區塊 | 大多數偏好設定將設置布林值 `"true"` 或 `"false"`。 如果使用者選擇的偏好設定為 false，則指定要使用的 dynData 區塊。<br />請注意，如果該區塊還包含 `"dynPref":` 鍵，則 dynData 區塊將與其他區塊合併。 這允許你根據一個偏好設定調整顏色，並根據另一個偏好設定調整文字大小                                                                                                                                                                                   |
 
 (cwf-reference-prefkey-values)=
-
 ### 偏好設定鍵值
 
 All keys included into [Preference keys](#cwf-reference-preference-keys) chapter above can be used to tune view parameters
