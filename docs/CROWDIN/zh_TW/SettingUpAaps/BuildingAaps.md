@@ -50,7 +50,7 @@
 
 ## 建置過程中的幫助與支援
 
-如果您在構建 **AAPS** 應用的過程中遇到困難，請參閱專門的[**Android Studio 故障排除**](../GettingHelp/TroubleshootingAndroidStudio)部分，請首先參考該部分。
+如果您在構建 **AAPS** 應用的過程中遇到困難，請參閱專門的[**Android Studio 問題排除**](../GettingHelp/TroubleshootingAndroidStudio)部分，請首先參考該部分。
 
 如果您認為建構指示中的某些內容是錯誤的、缺失的或令人困惑的，或者您仍然遇到困難，請聯繫其他**AAPS**使用者群組，在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 或 [Discord](https://discord.gg/4fQUWHZ4Mw)。 如果您想自己更改某些內容（更新螢幕截圖等），請提交[拉取請求（PR）](../SupportingAaps/HowToEditTheDocs.md)。
 
@@ -360,7 +360,7 @@ Android 要求每個應用程式都必須 _簽名_，以確保其只能從同一
 
 - 現在選擇一個簡單的密碼（並記下來），在密碼框中輸入它（2），並確認（2）。
 
-  密鑰庫和密鑰的密碼不必過於複雜。 如果您在未來遺失密碼，請參見[遺失金鑰存儲的故障排除](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore)。
+  密鑰庫和密鑰的密碼不必過於複雜。 如果您在未來遺失密碼，請參見[遺失金鑰存儲的問題排除](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore)。
 
 - 密鑰的預設別名（3）為“key0”，保持不變。
 
@@ -397,7 +397,7 @@ Android Studio在建置完成後將顯示“BUILD SUCCESSFUL”的訊息。 你�
 
 ![建置完成](../images/Building-the-App/049_ReopenNotification.png)
 
-_如果建置不成功，請參考[Android Studio 故障排除部分](../GettingHelp/TroubleshootingAndroidStudio)。_
+_如果建置不成功，請參閱[Android Studio 問題排除部分](../GettingHelp/TroubleshootingAndroidStudio)。_
 
 在通知欄中，點擊藍色連結“定位”：
 

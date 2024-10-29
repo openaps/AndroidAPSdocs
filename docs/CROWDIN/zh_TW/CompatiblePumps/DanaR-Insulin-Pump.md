@@ -1,6 +1,6 @@
 # DanaR 幫浦
 
-*這些說明適用於配置該應用程式與 DanaR 幫浦。 如果您擁有 2017 年推出的 DanaRS，請訪問[DanaRS 胰島素幫浦](./DanaRS-Insulin-Pump.md)。*
+*這些說明適用於配置該應用程式與 DanaR 幫浦。 如果您擁有 2017 年推出的 DanaRS，請讀取[DanaRS 胰島素幫浦](./DanaRS-Insulin-Pump.md)。*
 
 * 在幫浦中進入主選單 > 設置 > 用戶選項
 * 開啟「8. 延時注射」 延長注射

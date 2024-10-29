@@ -563,7 +563,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 設定可以在 [偏好設定 > NS 客戶端](../SettingUpAaps/Preferences.md#nsclient) 中進行更改。
 
-如遇故障，請參考此[頁面](../GettingHelp/TroubleshootingNsClient.md)。
+如遇故障，請參閱此[頁面](../GettingHelp/TroubleshootingNsClient.md)。
 
 ## 血糖來源 - xDrip+、BYODA...
 
@@ -575,7 +575,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ## 治療
 
-可以通過按下選單右側的 3 個點來訪問此視圖，然後選擇「治療」。 無法通過 Config Builder 在主選單中顯示它。 在此視圖中，您可以查看和修改以下治療的歷史紀錄：
+可以通過按下選單右側的 3 個點來讀取此視圖，然後選擇「治療」。 無法通過 Config Builder 在主選單中顯示它。 在此視圖中，您可以查看和修改以下治療的歷史紀錄：
 
 * 注射與碳水化合物
 * [延長注射](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
@@ -652,13 +652,13 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ## 歷史瀏覽器
 
-可以通過按下選單右側的 3 個點然後選擇「歷史」來訪問此視圖。 無法通過 Config Builder 在主選單中放入它。 還可以通過 [動作標籤](#action-tab) 底部的一個按鈕訪問。
+可以通過按下選單右側的 3 個點然後選擇「歷史」來讀取此視圖。 無法通過 Config Builder 在主選單中放入它。 還可以通過 [動作標籤](#action-tab) 底部的一個按鈕讀取。
 
 允許您回溯在 **AAPS** 中的歷史記錄。
 
 ## 設定檔助手
 
-此視圖可以通過按下選單右側的 3 個點然後選擇「設定檔助手」來訪問。 無法通過 Config Builder 在主選單中放入它。 [設定檔助手](../SettingUpAaps/ProfileHelper.md) 可以幫助您：
+此視圖可以通過按下選單右側的 3 個點然後選擇「設定檔助手」來讀取。 無法通過 Config Builder 在主選單中放入它。 [設定檔助手](../SettingUpAaps/ProfileHelper.md) 可以幫助您：
 
 * 從零開始為小孩建立設定檔
 * 比較兩個設定檔
