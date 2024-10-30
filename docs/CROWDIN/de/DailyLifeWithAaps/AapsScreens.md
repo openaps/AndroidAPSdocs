@@ -1,104 +1,110 @@
 # AAPS-Bildschirme
 
-```{contents} Table of Contents :depth: 2
+```{contents}
+:backlinks: entry
+:depth: 2
+```
 
-    <br />## The Homescreen
+## The Homescreen
+
+![Homescreen V2.7](../images/Home2020_Homescreen.png)
+
+This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+
+### Section A - Tabs
+
+* Navigate between the various **AAPS** modules.
+* Alternatively you can change screens by swiping left or right.
+* Displayed tabs can be selected in [config builder](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu).
+
+### Section B - Profile & target
+
+#### Current Profile
+
+The current profile is displayed in the left bar.
+
+Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#profile-switch--profile-percentage).
+
+![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+
+1. Regular display with a standard profile activation.
+2. Profile switch with a remaining duration of 59mn.
+3. Profile switch with a specific percentage of 120%.
+4. Profile switch with a specific percentage of 80% and a remaining duration of 59 mn.
+5. Profile switch with a time shift of -1 hour.
+6. Profile switch with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
+
+#### Target
+
+![Temp target remaining duration](../images/Home2020_TT.png)
+
+Current target blood glucose level is displayed in the right bar.
+
+Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
+
+If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
+
+#### Visualization of Dynamic target adjustment
+
+![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+
+When using the [SMB algorithm](../SettingUpAaps/ConfigBuilder.md#aps) and [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+
+Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](../SettingUpAaps/Preferences.md#openaps-smb-settings):
+
+    * "sensitivity raises target" and/or 
+    * "resistance lowers target" 
     
-    ![Homescreen V2.7](../images/Home2020_Homescreen.png)
+
+If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
+
+### Section C - BG & loop status
+
+#### Current blood glucose
+
+The latest blood glucose reading from your CGM is shown on the left side.
+
+The color of the BG value reflects the status to the defined [range](../SettingUpAaps/Preferences.md#range-for-visualization).
+
+    * green = in range
+    * red = below range
+    * yellow = above range 
     
-    This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+
+The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+
+#### Loop status
+
+![Loop status](../images/Home2020_LoopStatus.png)
+
+On the right side, an icon shows the loop status:
+
+* Green circle = loop running
+* Green circle with dotted line = [low glucose suspend (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+* Red circled = loop disabled (not working permanently)
+* Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
+* Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
+* Orange circle = super bolus running - remaining time is shown below icon
+* Blue circle with dotted line = open loop
+
+Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
+
+    * If short press on Loop icon, a validation is required after selection in Loop Dialog
     
-    ### Section A - Tabs
+    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
     
-    * Navigate between the various **AAPS** modules.
-    * Alternatively you can change screens by swiping left or right.
-    * Displayed tabs can be selected in [config builder](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu).
-    
-    ### Section B - Profile & target
-    
-    #### Current Profile
-    
-    The current profile is displayed in the left bar. 
-    
-    Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#profile-switch--profile-percentage).
-    
-    ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
-    
-    1. Regular display with a standard profile activation.
-    2. Profile switch with a remaining duration of 59mn.
-    3. Profile switch with a specific percentage of 120%.
-    4. Profile switch with a specific percentage of 80% and a remaining duration of 59 mn.
-    5. Profile switch with a time shift of -1 hour.
-    6. Profile switch with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
-    
-    #### Target
-    
-    ![Temp target remaining duration](../images/Home2020_TT.png)
-    
-    Current target blood glucose level is displayed in the right bar.
-    
-    Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
-    
-    If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
-    
-    #### Visualization of Dynamic target adjustment
-    
-    ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
-    
-    When using the [SMB algorithm](../SettingUpAaps/ConfigBuilder.md#aps) and [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity. 
-    
-    Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](../SettingUpAaps/Preferences.md#openaps-smb-settings):
-    
-       * "sensitivity raises target" and/or 
-       * "resistance lowers target" 
-    
-    If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
-    
-    ### Section C - BG & loop status
-    
-    #### Current blood glucose
-    The latest blood glucose reading from your CGM is shown on the left side.
-    
-    The color of the BG value reflects the status to the defined [range](../SettingUpAaps/Preferences.md#range-for-visualization).
-    
-       * green = in range
-       * red = below range
-       * yellow = above range 
-    
-    The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
-    
-    #### Loop status
-    
-    ![Loop status](../images/Home2020_LoopStatus.png)
-    
-    On the right side, an icon shows the loop status:
-    
-    * Green circle = loop running
-    * Green circle with dotted line = [low glucose suspend (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-    * Red circled = loop disabled (not working permanently)
-    * Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-    * Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-    * Orange circle = super bolus running - remaining time is shown below icon
-    * Blue circle with dotted line = open loop
-    
-    Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
-    
-       * If short press on Loop icon, a validation is required after selection in Loop Dialog
-    
-       ![Loop status menu](../images/Home2020_Loop_Dialog.png)
-    
-    #### BG warning sign
-    
-    If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
-    
-    ##### Red warning sign: Duplicate BG data
-    
-    The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
-    
-    ```{admonition} Your loop is not running
+
+#### BG warning sign
+
+If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
+
+##### Red warning sign: Duplicate BG data
+
+The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
+
+    {admonition} Your loop is not running
     :class: note
     Your loop is not running until you solve this issue !
-    
 
 ![Rotes BG-Warndreieck](../images/bg_warn_red.png)
 
