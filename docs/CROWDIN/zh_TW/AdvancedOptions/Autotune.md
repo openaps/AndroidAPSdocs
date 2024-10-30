@@ -4,7 +4,7 @@
 
 Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
 
-**目前 Autotune 外掛僅在[開發分支](../AdvancedOptions/DevBranch.md)和工程模式下可用。**
+**目前 Autotune 外掛僅在[dev 分支](../AdvancedOptions/DevBranch.md)和工程模式下可用。**
 
 ## Autotune 使用者介面
 
