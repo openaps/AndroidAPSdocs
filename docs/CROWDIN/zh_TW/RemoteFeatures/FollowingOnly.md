@@ -1,6 +1,6 @@
 # 追蹤 AAPS（無需與 AAPS 系統互動）
 
-除了可用於遠端控制_和_跟踪**AAPS**的各種可能性，這些功能在[遠端控制](../RemoteFeatures/RemoteControl.md)中描述，社群還開發了一些額外的應用程式和設備，僅用於跟踪數據 (血糖水平和其他信息)，而無需與 AAPS 互動。
+除了可用於遠端控制_和_跟踪**AAPS**的各種可能性，這些功能在[遠端控制](../RemoteFeatures/RemoteControl.md)中描述，社群還開發了一些額外的應用程式和設備，僅用於跟踪資料 (血糖水平和其他信息)，而無需與 AAPS 互動。
 
 對於如何追蹤**AAPS**，一個非常好的概述可以在[Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#)網頁中找到；如果你展開左側選單：
 
