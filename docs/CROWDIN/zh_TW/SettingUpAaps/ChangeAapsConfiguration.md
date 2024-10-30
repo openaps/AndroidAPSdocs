@@ -20,7 +20,7 @@
 
 **組態建置工具** 是在使用 **設定嚮導** 後進一步修改配置的最簡單方法。
 
-與配置生成器相關的文件可在[這裡](../SettingUpAaps/ConfigBuilder.md)找到。
+與組態建置工具相關的文件可在[這裡](../SettingUpAaps/ConfigBuilder.md)找到。
 
 ## 偏好設定
 
