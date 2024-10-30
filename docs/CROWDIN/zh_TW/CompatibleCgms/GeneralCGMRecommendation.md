@@ -37,4 +37,4 @@
 
 ![負傳感器年齡](../images/Troubleshooting_SensorAge.png)
 
-如果在 [行動選單](../DailyLifeWithAaps/AapsScreens.md#action-tab)中有重複的"CGM感測器插入"條目，或 感測器插入的日期錯誤，就會發生此情況。 轉到治療選項卡 > 照護入口並刪除錯誤的條目。
+如果在 [行動選單](../DailyLifeWithAaps/AapsScreens.md#action-tab)中有重複的"CGM傳感器插入"條目，或 傳感器插入的日期錯誤，就會發生此情況。 轉到治療選項卡 > 照護入口並刪除錯誤的條目。
