@@ -1,104 +1,110 @@
 # AAPS 螢幕畫面
 
-```{contents} 目錄 :depth: 2
+```{contents}
+:backlinks: entry
+:depth: 2
+```
 
-    <br />## 主畫面
+## The Homescreen
+
+![Homescreen V2.7](../images/Home2020_Homescreen.png)
+
+This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+
+### Section A - Tabs
+
+* Navigate between the various **AAPS** modules.
+* Alternatively you can change screens by swiping left or right.
+* Displayed tabs can be selected in [config builder](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu).
+
+### Section B - Profile & target
+
+#### Current Profile
+
+The current profile is displayed in the left bar.
+
+點一下設定檔欄位查看設定檔詳細資訊. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#profile-switch--profile-percentage).
+
+![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+
+1. 常規顯示標準的設定檔激活。
+2. 設定檔切換剩餘時間為 59 分鐘。
+3. 設定檔切換特定百分比為 120%。
+4. 設定檔切換特定百分比為 80% 且剩餘時間為 59 分鐘。
+5. 設定檔切換時區偏移為 -1 小時。
+6. 設定檔切換特定百分比為 120%、時區偏移 1 小時，剩餘時間為 59 分鐘。
+
+#### Target
+
+![Temp target remaining duration](../images/Home2020_TT.png)
+
+Current target blood glucose level is displayed in the right bar.
+
+Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
+
+如果設定了臨時目標，工具列將變為黃色，並會在括號中顯示剩餘時間（以分鐘為單位）。
+
+#### Visualization of Dynamic target adjustment
+
+![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+
+When using the [SMB algorithm](../SettingUpAaps/ConfigBuilder.md#aps) and [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+
+Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](../SettingUpAaps/Preferences.md#openaps-smb-settings):
+
+    * "sensitivity raises target" and/or 
+    * "resistance lowers target" 
     
-    ![主畫面 V2.7](../images/Home2020_Homescreen.png)
+
+If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. 當它變更目標血糖時，背景顏色會變為綠色。
+
+### Section C - BG & loop status
+
+#### Current blood glucose
+
+The latest blood glucose reading from your CGM is shown on the left side.
+
+The color of the BG value reflects the status to the defined [range](../SettingUpAaps/Preferences.md#range-for-visualization).
+
+    * green = in range
+    * red = below range
+    * yellow = above range 
     
-    這是您開啟 **AAPS** 時首先會看到的畫面，裡面包含了您日常所需的大部分資訊。
+
+The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+
+#### Loop status
+
+![Loop status](../images/Home2020_LoopStatus.png)
+
+On the right side, an icon shows the loop status:
+
+* Green circle = loop running
+* Green circle with dotted line = [low glucose suspend (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+* Red circled = loop disabled (not working permanently)
+* Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
+* Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
+* Orange circle = super bolus running - remaining time is shown below icon
+* Blue circle with dotted line = open loop
+
+Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
+
+    * If short press on Loop icon, a validation is required after selection in Loop Dialog
     
-    ### 區域 A - 標籤
+    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
     
-    * 在不同的 **AAPS** 模組之間瀏覽。
-    * 您也可以透過向左或向右滑動來切換螢幕。
-    * 顯示的標籤可以在 [設定建構器](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu) 中選擇。
-    
-    ### 區域 B - 設定檔與目標
-    
-    #### 當前設定檔
-    
-    當前的設定檔顯示在左側的工具列中。 
-    
-    點一下設定檔欄位查看設定檔詳細資訊. 長按設定檔工具列以 [切換不同的設定檔](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#profile-switch--profile-percentage)。
-    
-    ![設定檔切換剩餘時間](../images/Home2020_ProfileSwitch.png)
-    
-    1. 常規顯示標準的設定檔激活。
-    2. 設定檔切換剩餘時間為 59 分鐘。
-    3. 設定檔切換特定百分比為 120%。
-    4. 設定檔切換特定百分比為 80% 且剩餘時間為 59 分鐘。
-    5. 設定檔切換時區偏移為 -1 小時。
-    6. 設定檔切換特定百分比為 120%、時區偏移 1 小時，剩餘時間為 59 分鐘。
-    
-    #### 目標
-    
-    ![臨時目標剩餘時間](../images/Home2020_TT.png)
-    
-    當前的目標血糖水平顯示在右側工具列中。
-    
-    輕按目標工具列以設定 **[臨時目標](../DailyLifeWithAaps/TempTargets.md)**。
-    
-    如果設定了臨時目標，工具列將變為黃色，並會在括號中顯示剩餘時間（以分鐘為單位）。
-    
-    #### 動態目標調整的視覺化
-    
-    ![動態目標調整的視覺化](../images/Home2020_DynamicTargetAdjustment.png)
-    
-    使用 [SMB 演算法](../SettingUpAaps/ConfigBuilder.md#aps) 和 [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) 功能時，**AAPS** 可以根據敏感性動態調整您的目標。 
-    
-    在 [偏好設定 > OpenAPS SMB 設定](../SettingUpAaps/Preferences.md#openaps-smb-settings) 中啟用以下一個或兩個選項：
-    
-       * “敏感性提高目標” 和/或 
-       * “抗性降低目標” 
-    
-    如果 **AAPS** 偵測到抗性或敏感性，目標將會變更為設定檔中設定的值。 當它變更目標血糖時，背景顏色會變為綠色。
-    
-    ### 區域 C - 血糖與循環狀態
-    
-    #### 當前血糖
-    來自 CGM 的最新血糖讀取值顯示在左側。
-    
-    血糖數值的顏色反映了與設定的 [範圍](../SettingUpAaps/Preferences.md#range-for-visualization) 相比的狀態。
-    
-       * 綠色 = 在範圍內
-       * 紅色 = 低於範圍
-       * 黃色 = 超出範圍 
-    
-    中間的灰色區塊顯示自上次讀取以來的分鐘數以及在最近 15 和 40 分鐘內的變化。
-    
-    #### 循環狀態
-    
-    ![循環狀態](../images/Home2020_LoopStatus.png)
-    
-    在右側，圖示顯示循環狀態：
-    
-    * 綠色圓圈 = 循環運行中
-    * 帶虛線的綠色圓圈 = [低血糖暫停 (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-    * 紅色圓圈 = 循環禁用（永久不工作）
-    * 黃色圓圈 = 循環暫停（暫時停止，但基礎胰島素將會給予）- 下方圖示顯示剩餘時間
-    * 灰色圓圈 = 幫浦已中斷連線（暫時沒有任何胰島素劑量）- 下方圖示顯示剩餘時間
-    * 橙色圓圈 = 超量注射運行中 - 下方圖示顯示剩餘時間
-    * 帶虛線的藍色圓圈 = 開放循環
-    
-    輕按或長按圖示以開啟循環對話框以切換循環模式（關閉、低血糖暫停、開放或禁用），暫停/重新啟用循環或中斷/重新連線幫浦。
-    
-       * 如果輕按循環圖示，則在選擇循環對話框後需要進行驗證
-    
-       ![循環狀態選單](../images/Home2020_Loop_Dialog.png)
-    
-    #### 血糖警告標誌
-    
-    如果 **AAPS** 接收到的血糖讀取值出現任何問題，您會在主畫面上的血糖數字下方收到警告信號。
-    
-    ##### 紅色警告標誌：重複的血糖數據
-    
-    紅色警告標誌提醒您立即行動：您正在接收 **重複的血糖數據**，這會妨礙循環的正常運作。 因此，您的循環將會被禁用，直到問題解決。
-    
-    ```{admonition} 您的循環未運行
+
+#### BG warning sign
+
+If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
+
+##### Red warning sign: Duplicate BG data
+
+The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. 因此，您的循環將會被禁用，直到問題解決。
+
+    {admonition} Your loop is not running
     :class: note
-    在解決此問題之前，您的循環不會運行！
-    
+    Your loop is not running until you solve this issue !
 
 ![紅色血糖警告](../images/bg_warn_red.png)
 
