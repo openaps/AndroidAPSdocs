@@ -4,7 +4,7 @@
 小提示：如果你能在xDrip+應用或Nightscout網站上顯示你的血糖資料，你可以在**AAPS**中選擇xDrip+（或Nightscout與網路連線）作為BG來源。
 
 - [一般](../CompatibleCgms/GeneralCGMRecommendation.md)
-- [數據平滑處理](../CompatibleCgms/SmoothingBloodGlucoseData.md)
+- [資料平滑處理](../CompatibleCgms/SmoothingBloodGlucoseData.md)
 - [xDrip+設定](../CompatibleCgms/xDrip.md)
 - [Dexcom G7 和 ONE+](../CompatibleCgms/DexcomG7.md)：與 xDrip+ 或打補丁的 Dexcom 應用兼容
 - [Dexcom G6 和 ONE](../CompatibleCgms/DexcomG6.md)：與 BYODA 或 xDrip+ 兼容

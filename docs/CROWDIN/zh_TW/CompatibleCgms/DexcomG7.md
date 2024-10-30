@@ -26,7 +26,7 @@
 
 - 在修補版應用程式中輸入傳感器代碼。
 
-- 請遵循一般 CGM 衛生規範和感測器安裝位置的建議，詳情請參閱[此處](../CompatibleCgms/GeneralCGMRecommendation.md)。
+- 請遵循一般 CGM 衛生規範和傳感器安裝位置的建議，詳情請參閱[此處](../CompatibleCgms/GeneralCGMRecommendation.md)。
 
 - 浸潤階段結束後，資料會顯示在 G7 應用程式中。
 

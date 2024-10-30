@@ -24,7 +24,7 @@
    
    * 例如：維也納 -> 紐約：設定切換 +6 小時
    * 例如：維也納 -> 悉尼：設定切換 -8 小時
-* 如果使用[修補版 LibreLink 應用程式](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip)，可能無法選擇，因為必須設置自動時區才能啟動新的 Libre 2 感測器。
+* 如果使用[修補版 LibreLink 應用程式](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip)，可能無法選擇，因為必須設置自動時區才能啟動新的 Libre 2 傳感器。
 
 ### 方案2：刪除幫浦歷史記錄
 

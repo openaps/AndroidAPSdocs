@@ -25,6 +25,6 @@ Jelly 2 配有強大的最佳化功能，**必須**停用這些功能以便 AAPS
 
 ![](../images/Jelly_Settings2.png)
 
-你可以啟用 NFC 來支援 Libre 感測器。
+你可以啟用 NFC 來支援 Libre 傳感器。
 
 ![](../images/Jelly_Settings3.png)

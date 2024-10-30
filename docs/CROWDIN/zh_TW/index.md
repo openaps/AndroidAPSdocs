@@ -25,7 +25,7 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 
 第八章節）有用的 **AAPS** 連線，供快速參考。 這包括[詞彙表](./UsefulLinks/Glossary.md)，他列出了**AAPS** 中使用的首字母縮寫或短名稱。 這是查找 ISF 或 TT 等術語的地方。 此部分還包含實用的螢幕截圖和其他資料的連線。
 
-第九章節）涵蓋了高級AAPS選項，例如如何從使用AAPS進展到混合閉環（為餐飲等進行注射）到完全閉環（不進行手動注射），並詳細介紹了開發和工程模式。 大多數使用者只需使用主要或"Master" **AAPS**版本即可正常操作，無須查看這些選項；本節給那些已經控制良好並希望進一步改善其設置的使用者。
+第九章節）涵蓋了進階AAPS選項，例如如何從使用AAPS進展到混合閉環（為餐飲等進行注射）到完全閉環（不進行手動注射），並詳細介紹了開發和工程模式。 大多數使用者只需使用主要或"Master" **AAPS**版本即可正常操作，無須查看這些選項；本節給那些已經控制良好並希望進一步改善其設置的使用者。
 
 第十章節）[如何支援 AAPS](SupportingAaps/HowToEditTheDocs.md) 提供了關於如何支援此項目的資訊。 你可以捐錢、設備或專業知識。 你可以建議/自行更改文件，幫助 [翻譯文件](SupportingAaps/Translations)，並透過 Open Humans 項目提供你的資料。
 
@@ -151,7 +151,7 @@ WearOS 自訂錶盤 <./UsefulLinks/CustomWatchfaceReference.md>
 :caption: 9) 進階 AAPS 選項
 
 完全閉環 <./AdvancedOptions/FullClosedLoop.md>
-開發分支 <./AdvancedOptions/DevBranch.md>
+dev 分支 <./AdvancedOptions/DevBranch.md>
 xDrip 工程模式 <./AdvancedOptions/EnablingEngineeringModeInXdrip.md>
 自動調整 <./AdvancedOptions/Autotune.md>
 

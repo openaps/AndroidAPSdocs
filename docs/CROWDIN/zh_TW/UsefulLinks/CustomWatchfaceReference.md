@@ -1338,7 +1338,7 @@ DynData 是你想要根據一些內部資料（如血糖值、血糖水平、del
 
 | 鍵值           | 鍵        | 註解                                                                                                                                                   |
 | ------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"SGV"`      | valueKey | 預設 minData = 39 mg/dL<br />預設 maxData = 400 mg/dL<br />- 請注意，實際的 maxData 與你的感測器相關，內部值的單位始終為 mg/dL                                        |
+| `"SGV"`      | valueKey | 預設 minData = 39 mg/dL<br />預設 maxData = 400 mg/dL<br />- 請注意，實際的 maxData 與你的傳感器相關，內部值的單位始終為 mg/dL                                        |
 | `"sgvLevel"` | valueKey | 預設 minData = -1（低血糖）<br />預設 maxData = 1（高血糖）<br />如果血糖在範圍內 = 0                                                                          |
 | `"方向"`       | valueKey | 預設 minData = 1（雙箭頭向下）<br />預設 maxValue = 7（雙箭頭向上）<br />水平箭頭資料 = 4<br />錯誤或遺失資料 = 0（??）                                             |
 | `"變化量"`      | valueKey | 預設 minData = -25 mg/dL<br />預設 maxData = 25 mg/dL<br />- 請注意，實際的 minData 和 maxData 可能會超出上述範圍，內部值的單位始終為 mg/dL                             |

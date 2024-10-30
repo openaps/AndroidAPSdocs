@@ -28,7 +28,7 @@
 
 **BR** = 基礎速率。 在特定時間段內維持 **血糖 ** 穩定所需的胰島素量。 → 另見 **IC** / **ISF**.
 
-**BYODA** = 自製 Dexcom 應用程式。一種用戶自行生成 Dexcom 應用程式以讀取 Dexcom G6 感測器資料的方法。
+**BYODA** = 自製 Dexcom 應用程式。一種用戶自行生成 Dexcom 應用程式以讀取 Dexcom G6 傳感器資料的方法。
 
 **CAGE** = 導管使用時間。 **CAGE** = 導管使用年限。顯示在 **AAPS** 主螢幕和 Nightscout 上，提供用戶在動作標籤 / 選單中輸入的資訊 → 另見 **Nightscout</0>。</p> 
 
@@ -106,7 +106,7 @@
 
 **SAGE** = 傳感器時間。 這會顯示在 **AAPS** 的主畫面以及 **Nightscout** 中，如果在 Actions 標籤/選單中輸入了資訊 → 另見 **Nightscout**。
 
-**SEN** = 主螢幕上的狀態指示燈，表示感測器更換。**偏好設定**, 截圖 → 另見 **BAT** / **CAN** / <0>RES</0>。
+**SEN** = 主螢幕上的狀態指示燈，表示傳感器更換。**偏好設定**, 截圖 → 另見 **BAT** / **CAN** / <0>RES</0>。
 
 **Sensivity detection** = 根據運動、荷爾蒙等因素計算胰島素敏感性。 另見 → DIABETTECH - 「Autosens」。
 

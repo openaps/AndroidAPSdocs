@@ -1,104 +1,110 @@
 # AAPS 螢幕畫面
 
-```{contents} 目錄 :depth: 2
+```{contents}
+:backlinks: entry
+:depth: 2
+```
 
-    <br />## 主畫面
+## 主畫面
+
+![主畫面 V2.7](../images/Home2020_Homescreen.png)
+
+這是您打開**AAPS**後會看到的第一個螢幕，裡面包含了您每天所需的大部分資訊。
+
+### A 區 - 分頁
+
+* 在各個**AAPS**模組之間進行導覽。
+* 你還可以透過向左或向右滑動來更換螢幕。
+* 顯示的標籤可以在[組態建構工具](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu)中選擇。
+
+### B 區 - 設定檔 & 目標
+
+#### 目前的設定檔
+
+目前的設定檔顯示在左側欄位。
+
+點一下設定檔欄位查看設定檔詳細資訊. 長按設定檔欄以[切換不同的設定檔](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#profile-switch--profile-percentage)。
+
+![設定檔切換剩餘時間](../images/Home2020_ProfileSwitch.png)
+
+1. 常規顯示標準的設定檔激活。
+2. 設定檔切換剩餘時間為 59 分鐘。
+3. 設定檔切換特定百分比為 120%。
+4. 設定檔切換特定百分比為 80% 且剩餘時間為 59 分鐘。
+5. 設定檔切換時區偏移為 -1 小時。
+6. 設定檔切換特定百分比為 120%、時區偏移 1 小時，剩餘時間為 59 分鐘。
+
+#### 目標
+
+![臨時目標剩餘時間](../images/Home2020_TT.png)
+
+目前的目標血糖值顯示在右側欄位。
+
+點一下目標欄位，可以設定**[臨時目標](../DailyLifeWithAaps/TempTargets.md)**。
+
+如果設定了臨時目標，工具列將變為黃色，並會在括號中顯示剩餘時間（以分鐘為單位）。
+
+#### 動態目標調整的可視化
+
+![動態目標調整的可視化](../images/Home2020_DynamicTargetAdjustment.png)
+
+當使用[SMB 演算法](../SettingUpAaps/ConfigBuilder.md#aps)和[自動感應](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens)功能時，**AAPS**可以根據敏感度動態調整您的目標。
+
+在[偏好設定 > OpenAPS SMB 設定](../SettingUpAaps/Preferences.md#openaps-smb-settings)中，啟用以下一項或兩項選項：
+
+    * "敏感度提高目標" 和/或 
+    * "阻力降低目標" 
     
-    ![主畫面 V2.7](../images/Home2020_Homescreen.png)
+
+如果**AAPS**檢測到阻力或敏感度，目標將會從設定檔中變更。 當它變更目標血糖時，背景顏色會變為綠色。
+
+### C 區 - 血糖 & 循環狀態
+
+#### 目前血糖值
+
+您的 CGM 最近的血糖讀取顯示在左側。
+
+血糖值的顏色反映了對定義的[範圍](../SettingUpAaps/Preferences.md#range-for-visualization)的狀態。
+
+    * 綠色 = 在範圍內
+    * 紅色 = 低於範圍
+    * 黃色 = 高於範圍 
     
-    這是您開啟 **AAPS** 時首先會看到的畫面，裡面包含了您日常所需的大部分資訊。
+
+中間的灰色區塊顯示自上次讀取值以來的分鐘數以及過去 15 和 40 分鐘內的變化。
+
+#### 循環狀態
+
+![循環狀態](../images/Home2020_LoopStatus.png)
+
+在右側，一個圖示顯示了循環狀態：
+
+* 綠色圓圈 = 循環運作中
+* 綠色圓圈帶虛線 = [低血糖暫停 (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+* 紅色圓圈 = 循環已停用（永久不起作用）
+* 黃色圓圈 = 循環暫停（臨時暫停，但基礎胰島素仍會給予） - 剩餘時間顯示在圖示下方
+* 灰色圓圈 = 幫浦中斷連線（臨時不給予任何胰島素劑量） - 剩餘時間顯示在圖示下方
+* 橙色圓圈 = 超級注射進行中 - 圖示下方顯示剩餘時間
+* 藍色圓圈帶虛線 = 開放循環
+
+點一下或長按圖示以打開循環對話框來切換循環模式（關閉、低血糖暫停(LGS)、開放或停用），暫停/重新啟動循環或中斷/重新連線幫浦。
+
+    * 如果短按循環圖示，則在循環對話框選擇後需要進行驗證
     
-    ### 區域 A - 標籤
+    ![循環狀態選單](../images/Home2020_Loop_Dialog.png)
     
-    * 在不同的 **AAPS** 模組之間瀏覽。
-    * 您也可以透過向左或向右滑動來切換螢幕。
-    * 顯示的標籤可以在 [設定建構器](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu) 中選擇。
-    
-    ### 區域 B - 設定檔與目標
-    
-    #### 當前設定檔
-    
-    當前的設定檔顯示在左側的工具列中。 
-    
-    點一下設定檔欄位查看設定檔詳細資訊. 長按設定檔工具列以 [切換不同的設定檔](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#profile-switch--profile-percentage)。
-    
-    ![設定檔切換剩餘時間](../images/Home2020_ProfileSwitch.png)
-    
-    1. 常規顯示標準的設定檔激活。
-    2. 設定檔切換剩餘時間為 59 分鐘。
-    3. 設定檔切換特定百分比為 120%。
-    4. 設定檔切換特定百分比為 80% 且剩餘時間為 59 分鐘。
-    5. 設定檔切換時區偏移為 -1 小時。
-    6. 設定檔切換特定百分比為 120%、時區偏移 1 小時，剩餘時間為 59 分鐘。
-    
-    #### 目標
-    
-    ![臨時目標剩餘時間](../images/Home2020_TT.png)
-    
-    當前的目標血糖水平顯示在右側工具列中。
-    
-    輕按目標工具列以設定 **[臨時目標](../DailyLifeWithAaps/TempTargets.md)**。
-    
-    如果設定了臨時目標，工具列將變為黃色，並會在括號中顯示剩餘時間（以分鐘為單位）。
-    
-    #### 動態目標調整的視覺化
-    
-    ![動態目標調整的視覺化](../images/Home2020_DynamicTargetAdjustment.png)
-    
-    使用 [SMB 演算法](../SettingUpAaps/ConfigBuilder.md#aps) 和 [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) 功能時，**AAPS** 可以根據敏感性動態調整您的目標。 
-    
-    在 [偏好設定 > OpenAPS SMB 設定](../SettingUpAaps/Preferences.md#openaps-smb-settings) 中啟用以下一個或兩個選項：
-    
-       * “敏感性提高目標” 和/或 
-       * “抗性降低目標” 
-    
-    如果 **AAPS** 偵測到抗性或敏感性，目標將會變更為設定檔中設定的值。 當它變更目標血糖時，背景顏色會變為綠色。
-    
-    ### 區域 C - 血糖與循環狀態
-    
-    #### 當前血糖
-    來自 CGM 的最新血糖讀取值顯示在左側。
-    
-    血糖數值的顏色反映了與設定的 [範圍](../SettingUpAaps/Preferences.md#range-for-visualization) 相比的狀態。
-    
-       * 綠色 = 在範圍內
-       * 紅色 = 低於範圍
-       * 黃色 = 超出範圍 
-    
-    中間的灰色區塊顯示自上次讀取以來的分鐘數以及在最近 15 和 40 分鐘內的變化。
-    
-    #### 循環狀態
-    
-    ![循環狀態](../images/Home2020_LoopStatus.png)
-    
-    在右側，圖示顯示循環狀態：
-    
-    * 綠色圓圈 = 循環運行中
-    * 帶虛線的綠色圓圈 = [低血糖暫停 (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-    * 紅色圓圈 = 循環禁用（永久不工作）
-    * 黃色圓圈 = 循環暫停（暫時停止，但基礎胰島素將會給予）- 下方圖示顯示剩餘時間
-    * 灰色圓圈 = 幫浦已中斷連線（暫時沒有任何胰島素劑量）- 下方圖示顯示剩餘時間
-    * 橙色圓圈 = 超量注射運行中 - 下方圖示顯示剩餘時間
-    * 帶虛線的藍色圓圈 = 開放循環
-    
-    輕按或長按圖示以開啟循環對話框以切換循環模式（關閉、低血糖暫停、開放或禁用），暫停/重新啟用循環或中斷/重新連線幫浦。
-    
-       * 如果輕按循環圖示，則在選擇循環對話框後需要進行驗證
-    
-       ![循環狀態選單](../images/Home2020_Loop_Dialog.png)
-    
-    #### 血糖警告標誌
-    
-    如果 **AAPS** 接收到的血糖讀取值出現任何問題，您會在主畫面上的血糖數字下方收到警告信號。
-    
-    ##### 紅色警告標誌：重複的血糖數據
-    
-    紅色警告標誌提醒您立即行動：您正在接收 **重複的血糖數據**，這會妨礙循環的正常運作。 因此，您的循環將會被禁用，直到問題解決。
-    
-    ```{admonition} 您的循環未運行
+
+#### 血糖警告標誌
+
+如果**AAPS**接收到的血糖讀取有任何問題，您將在主螢幕的血糖數字下方收到警告信號。
+
+##### 紅色警告標誌：重複的血糖資料
+
+紅色警告標誌表示你應立即採取行動：你正在接收**重複的血糖資料**，這會妨礙循環正常運作。 因此，您的循環將會被禁用，直到問題解決。
+
+    {admonition} 您的循環尚未運行
     :class: note
     在解決此問題之前，您的循環不會運行！
-    
 
 ![紅色血糖警告](../images/bg_warn_red.png)
 
@@ -107,25 +113,25 @@
 * 您的 Nightscout 網站上是否啟用了 Dexcom 橋接？ 通過進入 Nightscout 實例的管理面板，編輯 "enable" 變數並刪除其中的 "bridge" 部分來禁用橋接。 （有關 heroku 的[詳細資訊可以在此找到](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings)。）
 * 是否有多個來源將您的血糖上傳到 Nightscout？ 如果您使用 BYODA 應用程式，請在 **AAPS** 中啟用上傳，但不要在 xDrip+ 中啟用。
 * 您是否有任何可能會接收您的血糖並再次上傳到您的 Nightscout 網站的追蹤者？
-* 最後的手段：在 **AAPS** 中，請前往 [偏好設定 > NSClient](../SettingUpAaps/Preferences.md#nsclient)，選擇同步設定並禁用 "接受來自 NS 的 CGM 數據" 選項。
+* 最後的手段：在 **AAPS** 中，請前往 [偏好設定 > NSClient](../SettingUpAaps/Preferences.md#nsclient)，選擇同步設定並停用 "接受來自 NS 的 CGM 資料" 選項。
 
 要立即移除警告並重新啟動循環，您需要手動刪除 Dexter/xDrip+ 標籤中的幾個條目。
 
-然而，當有很多重複項目時，可能更容易
+然而，當有很多重複項目時，下面的作法也許更容易排除警告
 
-* [備份您的設定](../Maintenance/ExportImportSettings.md)，
+* [備份你的設定](../Maintenance/ExportImportSettings.md)，
 * 在維護選單中重置你的資料庫，然後
 * [再次匯入您的設定](../Maintenance/ExportImportSettings.md)
 
 ##### 黃色警告標誌
 
-黃色警告信號表示您的血糖數據抵達的不規則時間間隔或某些血糖數據缺失。 按壓標誌時，訊息顯示「使用了重新計算的數據」。
+黃色警告信號表示您的血糖資料抵達的不規則時間間隔或某些血糖資料缺失。 按壓標誌時，訊息顯示「使用了重新計算的資料」。
 
 ![黃色血糖警告](../images/bg_warn_yellow.png)
 
 通常你不需要採取任何行動。 閉環會繼續運作！
 
-由於感測器更換會中斷血糖數據的連續流動，因此在感測器更換後出現黃色警告標誌是正常的，無需擔心。
+由於傳感器更換會中斷血糖資料的連續流動，因此在傳感器更換後出現黃色警告標誌是正常的，無需擔心。
 
 Libre 使用者的特殊注意事項：
 
@@ -133,7 +139,7 @@ Libre 使用者的特殊注意事項：
 * 此外，波動的讀取值會中斷連續流動。
 * 因此，對於 Libre 使用者來說，黃色警告標誌將「始終開啟」。
 
-*注意*: 在 **AAPS** 計算中，最多考慮 30 小時的數據。 因此，即使你解決了問題，黃三角標誌可能會在最後一次不規則間隔發生後大約 30 小時內消失。
+*注意*: 在 **AAPS** 計算中，最多考慮 30 小時的資料。 因此，即使你解決了問題，黃三角標誌可能會在最後一次不規則間隔發生後大約 30 小時內消失。
 
 ### D 區 - 胰島素、碳水化合物、基礎率與自動敏感性
 
@@ -293,7 +299,7 @@ Libre 使用者的特殊注意事項：
 
 #### 敏感性
 
-顯示[自動感知](KeyAapsFeatures#autosens)檢測到的敏感度。
+顯示[自動敏感度調整](KeyAapsFeatures#autosens)檢測到的敏感度。
 
 敏感性是運動、荷爾蒙等導致的對胰島素的敏感性計算結果。
 
@@ -304,8 +310,8 @@ Libre 使用者的特殊注意事項：
 #### 偏差
 
 * **灰色**條顯示因碳水化合物引起的偏差。 
-* **綠色**條顯示血糖高於演算法預期的範圍。 綠色條用來增加[自動感知](KeyAapsFeatures#autosens)的抵抗力。
-* **紅色**條顯示血糖低於演算法預期的範圍。 紅色條用來增加[自動感知](KeyAapsFeatures#autosens)的敏感度。
+* **綠色**條顯示血糖高於演算法預期的範圍。 綠色條用來增加[自動敏感度調整](KeyAapsFeatures#autosens)的抵抗力。
+* **紅色**條顯示血糖低於演算法預期的範圍。 紅色條用來增加[自動敏感度調整](KeyAapsFeatures#autosens)的敏感度。
 * **黃色**條顯示因用餐而引起的偏差。
 * **黑色**條顯示未考慮敏感度的小偏差
 
@@ -407,7 +413,7 @@ Libre 使用者的特殊注意事項：
 
 **設定檔** 允許您選擇與當前不同的設定檔，以計算所需的胰島素。 此設定檔的選擇僅適用於當前的注射，不會變更設定檔。
 
-**超注射** 是指將未來兩小時的基礎胰島素加到即時的注射中，並在接下來的兩小時內發出零臨時基礎率來回收額外的胰島素。 該選項僅在「啟用超注射於嚮導中」在 [偏好設定 > 總覽 > 高級設定](../SettingUpAaps/Preferences.md#advanced-settings-overview) 中設置時顯示。 其目的是更快地注射胰島素，希望減少血糖高峰。
+**超注射** 是指將未來兩小時的基礎胰島素加到即時的注射中，並在接下來的兩小時內發出零臨時基礎率來回收額外的胰島素。 該選項僅在「啟用超注射於嚮導中」在 [偏好設定 > 總覽 > 進階設定](../SettingUpAaps/Preferences.md#advanced-settings-overview) 中設置時顯示。 其目的是更快地注射胰島素，希望減少血糖高峰。
 
 詳情請查看[diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/)。
 
@@ -460,7 +466,7 @@ Libre 使用者的特殊注意事項：
 
 顯示以下資訊:
 
-    * 感測器年齡 & 水準（電池百分比）
+    * 傳感器年齡 & 水準（電池百分比）
     * 胰島素年齡 & 水準（單位）
     * 輸管年齡
     * 幫浦電池年齡 & 水準（百分比）
@@ -474,9 +480,9 @@ Libre 使用者的特殊注意事項：
 
 門檻值可以在 [偏好設定 > 總覽 > 狀態燈](../SettingUpAaps/Preferences.md#status-lights) 中設置。
 
-如果感測器水準與手機電池水準相同，則您的 xDrip+ 版本可能過舊且需要更新。 (需要 xDrip+ 每日版本 2020年12月10日或更新版本。） 這將使您能夠回溯 **AAPS** 的歷史紀錄。
+如果傳感器水準與手機電池水準相同，則您的 xDrip+ 版本可能過舊且需要更新。 (需要 xDrip+ 每日版本 2020年12月10日或更新版本。） 這將使您能夠回溯 **AAPS** 的歷史紀錄。
 
-    ![感測器等於手機電池電量](../images/Home2021_ActionSensorBat.png)
+    ![傳感器等於手機電池電量](../images/Home2021_ActionSensorBat.png)
     
 
 ### 護理入口 - O 區

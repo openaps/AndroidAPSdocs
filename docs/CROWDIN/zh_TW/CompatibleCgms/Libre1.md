@@ -4,7 +4,7 @@
 
 ```{admonition} Libre 2, Libre 1 US and Libre Pro
 :class: warning
-驗證橋接和你想要使用的應用程式是否與你的感測器相容。  
+驗證橋接和你想要使用的應用程式是否與你的傳感器相容。  
 ```
 
 市場上有幾款橋接器可供選擇：

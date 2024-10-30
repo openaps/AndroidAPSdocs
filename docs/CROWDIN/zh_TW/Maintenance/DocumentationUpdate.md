@@ -35,7 +35,7 @@
 
 ## 2021年11月
 
-- 校正 [Libre 2 感測器](../CompatibleCgms/Libre2.md#best-practices-for-calibrating-a-libre-2-sensor) 的最佳方法
+- 校正 [Libre 2 傳感器](../CompatibleCgms/Libre2.md#best-practices-for-calibrating-a-libre-2-sensor) 的最佳方法
 - [ISF](../UsefulLinks/FAQ.md) 影響的重新表述
 - 更新 [問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
 - 移除已修補的[Dexcom](../CompatibleCgms/DexcomG6.md)應用程式，因為它已過時
@@ -75,7 +75,7 @@
 
 ## 2020年12月
 
-- [Libre 2](../CompatibleCgms/Libre2.md) - 已修補的應用不適用於美國感測器
+- [Libre 2](../CompatibleCgms/Libre2.md) - 已修補的應用不適用於美國傳感器
 - [OpenAPS 硬編碼限制](../DailyLifeWithAaps/KeyAapsFeatures.md#overview-of-hard-coded-limits)
 - Sony Smartwatch 3 [Google Play服務的手動安裝](../UsefulLinks/SonySW3.md)
 

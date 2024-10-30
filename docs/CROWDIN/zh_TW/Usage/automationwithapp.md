@@ -30,7 +30,7 @@
 
 ![Nightscout 連線偏好設定](../images/automate-aaps1.jpg)
 
-在 AAPS 中，點擊右上角的三點選單，進入偏好設定 > NSClient > 高級設定 > 取消勾選「僅上傳至 NS（已停用同步）」和「不向 NS 上傳」。
+在 AAPS 中，點擊右上角的三點選單，進入偏好設定 > NSClient > 進階設定 > 取消勾選「僅上傳至 NS（已停用同步）」和「不向 NS 上傳」。
 
 請注意可能出現的 [安全問題](../SettingUpAaps/Nightscout.md#security-considerations)，如果您正在使用 [Insight 幫浦](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)，需要格外小心。
 
@@ -40,7 +40,7 @@
 
 #### 範例 1：如果偵測到活動（如走路或跑步），則設定高 TT。 如果活動結束，等待 20 分鐘後取消 TT
 
-這個工作流程會監聽手機的感測器（步數計、重力感測器等），偵測活動行為。 如果最近有走路、跑步或騎自行車等活動，Automate 會為指定時間內設定使用者指定的高臨時目標。 如果活動結束，你的智慧型手機會偵測到此，等待 20 分鐘後將目標恢復為正常檔案值。
+這個工作流程會監聽手機的傳感器（步數計、重力傳感器等），偵測活動行為。 如果最近有走路、跑步或騎自行車等活動，Automate 會為指定時間內設定使用者指定的高臨時目標。 如果活動結束，你的智慧型手機會偵測到此，等待 20 分鐘後將目標恢復為正常檔案值。
 
 下載 Automate 腳本 <https://llamalab.com/automate/community/flows/27808>。
 
