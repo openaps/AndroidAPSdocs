@@ -1,6 +1,7 @@
 # AAPS screens
 
-```{contents} Table of Contents
+```{contents}
+:backlinks: entry
 :depth: 2
 ```
 
