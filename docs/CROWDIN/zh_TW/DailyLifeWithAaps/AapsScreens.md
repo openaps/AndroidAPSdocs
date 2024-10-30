@@ -15,7 +15,7 @@
 
 * 在各個**AAPS**模組之間進行導覽。
 * 你還可以透過向左或向右滑動來更換螢幕。
-* 顯示的標籤可以在[配置生成器](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu)中選擇。
+* 顯示的標籤可以在[組態建構工具](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu)中選擇。
 
 ### B 區 - 設定檔 & 目標
 
