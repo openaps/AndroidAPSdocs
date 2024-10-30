@@ -58,7 +58,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 :class: note
 你可以將 Juggluco 設置為廣播到 xDrip+，使用修補過的 Libre 廣播（你應該停用 xDrip+ 廣播），以進行校準（請見此處）並避免每分鐘讀取值被發送到 AAPS。  
 ![Juggluco 廣播到 xDrip+](../images/Juggluco_xDrip.png)  
-然後，你需要將 xDrip+ 數據來源設置為 Libre 2 修補應用程式，以從 Juggluco 接收數據。  
+然後，你需要將 xDrip+ 資料來源設置為 Libre 2 修補應用程式，以從 Juggluco 接收資料。  
 ```
 
 ## 5. 使用修補版 LibreLink 應用程式與 xDrip+ 搭配使用
