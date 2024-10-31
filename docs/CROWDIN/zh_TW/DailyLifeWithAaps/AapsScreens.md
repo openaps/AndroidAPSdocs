@@ -91,7 +91,7 @@
 
     * 如果短按循環圖示，則在循環對話框選擇後需要進行驗證
     
-    ![循環狀態選單](../images/Home2020_Loop_Dialog.png)
+    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
     
 
 #### 血糖警告標誌
@@ -201,11 +201,11 @@ Libre 使用者的特殊注意事項：
 
 綠色區域反應你的目標範圍。
 
-藍色三角形顯示 [微量注射 (SMB)](KeyAapsFeatures#super-micro-bolus-smb) - 如果在 [偏好設定 > OpenAPS SMB](../SettingUpAaps/Preferences.md#openaps-smb-settings) 中啟用。
+如果在 [偏好設定 > OpenAPS SMB](../SettingUpAaps/Preferences.md#openaps-smb-settings) 中啟用，將會有藍色三角形顯示 [微量注射 (SMB)](KeyAapsFeatures#super-micro-bolus-smb) 
 
 #### 啟用可選資訊
 
-在主圖表上，你可以開啟這些可選資訊：
+在主圖表上，你可以開啟這些線圖資訊：
 
 * 預測
 * 基礎率
@@ -213,14 +213,14 @@ Libre 使用者的特殊注意事項：
 
 要顯示這些資訊，請點擊主圖表右側的三角形。 對於主圖表，只有位於 "\---\---- 圖表 1 \---\----" 以上的三個選項可用。
 
-    ![主圖表設定](../images/Home2020_MainGraphSetting.png)
+    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
     
 
 #### 預測線
 
 * **橘色**線: [碳水化合物在體內 (COB)](CobCalculation)（顏色一般用於代表 COB 和碳水化合物）
    
-   此預測線顯示你的血糖 (BG) 將會如何變化，該變化是根據當前**設定檔**設定推測的，假設由碳水化合物吸收導致的偏差保持不變。 此線僅在有已知的 COB 時出現。
+   此預測線顯示了在目前**設定檔**下，假設碳水吸收的偏差保持不變，您的血糖（而非碳水本身）將會走向的趨勢。 此線僅在有輸入 COB 時才會顯示。
 
 * **深藍色**線: IOB（顏色一般用於代表 IOB 和胰島素）
    
@@ -232,7 +232,7 @@ Libre 使用者的特殊注意事項：
    
    *這條線僅在使用[SMB](../SettingUpAaps/ConfigBuilder.md#aps)算法時顯示。*
 
-* **深黃色**線: [未公告餐 (UAM)](../DailyLifeWithAaps/SensitivityDetectionAndCob.md#sensitivity-oref1)
+* **深黃色**線: [未公告餐點 (UAM)](../DailyLifeWithAaps/SensitivityDetectionAndCob.md#sensitivity-oref1)
    
    未輸入的餐點(UAM)表示偵測到由於用餐、腎上腺素或其他影響導致的血糖顯著上升。 預測線類似於**橘色的 COB 線**，但它假設偏差會以恆定速率減少（延長當前減少的速率）。
    
@@ -240,11 +240,11 @@ Libre 使用者的特殊注意事項：
 
 * **深橙色**線：aCOB（加速碳水化合物吸收）
    
-   類似於 COB，但假設碳水化合物吸收率為每 5 分鐘 10 mg/dL（-0.555 mmol/l/5 分鐘）。 已棄用，實用性有限。
+   類似於 COB，但假設碳水化合物吸收率為每 5 分鐘 10 mg/dL（-0.555 mmol/l/5 分鐘）。 因實用性有限，所以已棄用。
    
    *這條線僅在使用較舊的[AMA](../SettingUpAaps/ConfigBuilder.md#aps)算法時顯示。*
 
-通常你的實際血糖曲線最終會位於這些線之間，或接近最符合你情況的假設。
+通常您的實際血糖曲線會落在這些線的中間，或者接近某一條最符合您目前狀況的線
 
 #### 基礎率
 
@@ -258,7 +258,7 @@ Libre 使用者的特殊注意事項：
 
 一條**細黃色**線顯示胰島素的活動。
 
-他基於胰島素在系統中的預期血糖降低，如果沒有其他因素（如碳水化合物）存在。
+這是基於您體內胰島素預期降低血糖的效果，假設沒有其他因素（如碳水化合物）影響。
 
 ### G 區 - 其他圖表
 
@@ -275,7 +275,7 @@ Libre 使用者的特殊注意事項：
 * 圖表 1 包含 IOB、COB、敏感度
 * 圖表 2 包含偏差和 BGI。
 
-#### 絕對胰島素
+#### 絕對胰島素(Absolute insulin)
 
 活動中的胰島素，包括注射**和基礎率**。
 
@@ -283,9 +283,9 @@ Libre 使用者的特殊注意事項：
 
 顯示你體內的胰島素（= 體內的活動胰島素）。 包括注射胰島素和臨時的基礎率（**但不包括你設定檔中的基礎率**）。
 
-如果在DIA期間沒有任何[SMB](KeyAapsFeatures#super-micro-bolus-smb)、沒有注射和沒有TBR，則這將為零。
+如果在DIA期間沒有任何[SMB](KeyAapsFeatures#super-micro-bolus-smb)、沒有額外注射並且沒有臨時基礎率(TBR)的情況下，這個值會為零。
 
-如果沒有剩餘注射且長時間設置為零/低基礎率，IOB 可能為負值。
+如果沒有剩餘的劑量，且長時間處於零或低臨時基礎速率，則體內胰島素活性（IOB）可能會變為負值
 
 衰減取決於您的[DIA和胰島素設定檔](../SettingUpAaps/YourAapsProfile.md)。
 
@@ -297,17 +297,17 @@ Libre 使用者的特殊注意事項：
 
 如果他偵測到碳水化合物吸收率高於預期，將注射胰島素，這將增加 IOB（多或少，取決於你的安全設置）。
 
-#### 敏感性
+#### 敏感度 (Sensitivity)
 
 顯示[自動敏感度調整](KeyAapsFeatures#autosens)檢測到的敏感度。
 
-敏感性是運動、荷爾蒙等導致的對胰島素的敏感性計算結果。
+敏感度是運動、荷爾蒙等導致的對胰島素的敏感度計算結果。
 
-#### 心率
+#### 心率(Heart rate)
 
 使用 [Garmin 智慧手錶](../UsefulLinks/WearOsSmartwatch.md#garmin) 時，該資料可能可用。
 
-#### 偏差
+#### 偏差(Deviations)
 
 * **灰色**條顯示因碳水化合物引起的偏差。 
 * **綠色**條顯示血糖高於演算法預期的範圍。 綠色條用來增加[自動敏感度調整](KeyAapsFeatures#autosens)的抵抗力。
@@ -315,13 +315,13 @@ Libre 使用者的特殊注意事項：
 * **黃色**條顯示因用餐而引起的偏差。
 * **黑色**條顯示未考慮敏感度的小偏差
 
-#### 血糖變化率
+#### 血糖變化(BGI - Blood Glucose Impact)
 
 這條線顯示基於胰島素活動，血糖應該上升或下降的程度。
 
 ![主畫面按鈕](../images/Screenshots_DEV_BGI.png)
 
-將此線與偏差條一起顯示是一個很好的組合。 它們共享相同的尺度，但與其他可選資料的尺度不同，因此最好將它們顯示在單獨的圖表上，如上所示。 比較 BGI 線和偏差條是了解**血糖**波動的另一種方式。 在標記**1**的時間，此時偏差條大於 BGI 線，顯示血糖正在上升。 稍後，在標記**2**的時間，BGI 和 DEV 幾乎一致，顯示血糖穩定。
+將此線與偏差條一起顯示是個不錯的組合。 它們共用相同的刻度，但這個刻度與其他可選資料不同，因此建議將它們顯示在單獨的圖表上，如上所示 比較血糖影響(BGI)線和偏差條是另一種暸解**血糖(BG)**波動的方式。 在標記**1**的時間，此時偏差條大於血糖影響(BGI)線，表示血糖正在上升。 再後面一點時，在標記為 **2** 的幾小時中，血糖影響(BGI)和偏差幾乎持平，表示血糖穩定。
 
 ### H 區 - 按鈕
 
@@ -329,9 +329,9 @@ Libre 使用者的特殊注意事項：
 
 胰島素、碳水化合物和計算機的按鈕幾乎總是可見的。 如果與幫浦的連線中斷，胰島素按鈕將不會顯示。
 
-其他按鈕可以在 [偏好設定 > 總覽 > 按鈕](../SettingUpAaps/Preferences.md#buttons) 中設定。
+其他按鈕可以在 [偏好設定 > 首頁總覽 > 按鈕](../SettingUpAaps/Preferences.md#buttons) 中設定。
 
-關於使用胰島素、碳水化合物和計算機按鈕：如果在 [偏好設定 > 總覽](../SettingUpAaps/Preferences.md#show-notes-field-in-treatments-dialogs) 中啟用，**註記**欄位允許你輸入將顯示在主圖表上的文本，並可能根據你的 NS 客戶端設定上傳到 Nightscout。
+關於使用胰島素、碳水化合物和計算機按鈕：如果在 [偏好設定 > 首頁總覽](../SettingUpAaps/Preferences.md#show-notes-field-in-treatments-dialogs) 中啟用，**註記**欄位允許你輸入將顯示在主圖表上的文本，並可能根據你的 NS 客戶端設定上傳到 Nightscout。
 
 #### 胰島素
 
@@ -339,9 +339,9 @@ Libre 使用者的特殊注意事項：
 
 要在不使用[注射計算器](#bolus-wizard)的情況下給予特定的胰島素量。
 
-透過勾選 **起始餐前 TT**方框，你可以自動啟動你的 [即將進餐的臨時目標](../DailyLifeWithAaps/TempTargets.md#eating-soon-temp-target)。
+透過勾選 **即將用餐(臨時目標)**方框，你可以自動啟動你的 [即將進餐的臨時目標](../DailyLifeWithAaps/TempTargets.md#eating-soon-temp-target)。
 
-如果你不想透過幫浦注射，但想記錄一次胰島素注射（例如：使用筆注射的胰島素），請勾選相應的方框。 勾選此方框時，你將獲得一個額外欄位「時間偏移」，可用來記錄過去進行的胰島素注射。
+如果你不想透過幫浦注射，但想記錄一次胰島素注射（例如：使用筆注射的胰島素），請勾選「不注射，僅紀錄」的方框。 勾選此方框時，你將獲得一個額外欄位「時間偏移」，可用來記錄過去進行的胰島素注射。
 
 您可以使用按鈕快速增加胰島素的量。 增量值可以在 [偏好設定 > 總覽 > 按鈕](../SettingUpAaps/Preferences.md#buttons) 中更改。
 
