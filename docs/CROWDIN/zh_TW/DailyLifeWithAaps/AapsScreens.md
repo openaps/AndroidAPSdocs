@@ -185,7 +185,7 @@ Libre 使用者的特殊注意事項：
 
 如果超過危急門檻值警告，數值將顯示為紅色。
 
-可以在 [偏好設定 > 總覽 > 狀態燈](../SettingUpAaps/Preferences.md#status-lights) 中更改設置。
+可以在 [偏好設定 > 首頁總覽 > 狀態燈](../SettingUpAaps/Preferences.md#status-lights) 中更改設置。
 
 根據你使用的幫浦，你可能不會擁有所有這些圖示。
 
@@ -343,7 +343,7 @@ Libre 使用者的特殊注意事項：
 
 如果你不想透過幫浦注射，但想記錄一次胰島素注射（例如：使用筆注射的胰島素），請勾選「不注射，僅紀錄」的方框。 勾選此方框時，你將獲得一個額外欄位「時間偏移」，可用來記錄過去進行的胰島素注射。
 
-您可以使用按鈕快速增加胰島素的量。 增量值可以在 [偏好設定 > 總覽 > 按鈕](../SettingUpAaps/Preferences.md#buttons) 中更改。
+您可以使用按鈕快速增加胰島素的量。 每個按鈕的值可以在 [偏好設定 > 首頁總覽 > 按鈕](../SettingUpAaps/Preferences.md#buttons) 中更改。
 
 #### 碳水化合物
 
@@ -353,11 +353,11 @@ Libre 使用者的特殊注意事項：
 
 某些[預設的臨時目標](../DailyLifeWithAaps/TempTargets.md#hypo-temp-target)可以直接通過勾選框來設置。
 
-**時間偏移**: 您何時/曾經吃過碳水化合物（以分鐘計）。
+**時間偏移**: 您曾經吃過碳水化合物（以分鐘計）。
 
 **持續時間**: 用於 [“延長碳水化合物”](ExtendedCarbs)
 
-您可以使用按鈕快速增加碳水化合物的量。 增量值可以在 [偏好設定 > 總覽 > 按鈕](../SettingUpAaps/Preferences.md#buttons) 中更改。
+您可以使用按鈕快速增加碳水化合物的量。 每個按鈕的值可以在 [偏好設定 > 首頁總覽 > 按鈕](../SettingUpAaps/Preferences.md#buttons) 中更改。
 
 #### 計算機
 
@@ -367,7 +367,7 @@ Libre 使用者的特殊注意事項：
 
 發送校準至 xDrip+ 或打開 Dexcom 校準對話框。
 
-必須在 [偏好設定 > 總覽 > 按鈕](../SettingUpAaps/Preferences.md#buttons) 中註冊。
+必須在 [偏好設定 > 首頁總覽 > 按鈕](../SettingUpAaps/Preferences.md#buttons) 中註冊。
 
 #### CGM
 
@@ -375,13 +375,13 @@ Libre 使用者的特殊注意事項：
 
 返回按鈕將返回到 **AAPS**。
 
-必須在 [偏好設定 > 總覽 > 按鈕](../SettingUpAaps/Preferences.md#buttons) 中註冊。
+必須在 [偏好設定 > 首頁總覽 > 按鈕](../SettingUpAaps/Preferences.md#buttons) 中註冊。
 
 #### 快速嚮導
 
 輕鬆輸入碳水化合物數量並設置計算基礎。
 
-詳細信息在 [偏好設定 > 總覽 > 快速嚮導設定](../SettingUpAaps/Preferences.md#quick-wizard) 中設置。
+詳細信息在 [偏好設定 > 首頁總覽 > 快速嚮導設定](../SettingUpAaps/Preferences.md#quick-wizard) 中設置。
 
 ## 注射嚮導
 
@@ -397,23 +397,23 @@ Libre 使用者的特殊注意事項：
 
 ### J 區
 
-血糖 欄位通常會自動填充最新的 CGM 讀取值。 如果你沒有使用中的 CGM，則該欄位將保持空白。
+血糖欄位通常會自動填充最新的 CGM 讀取值。 如果你沒有使用中的 CGM，則該欄位顯示空白。
 
-在 **碳水化合物** 欄位中，您可以添加您估算的碳水化合物數量或等效值，以進行注射。
+在**碳水化合物**欄位中，您可以添加您估算的碳水化合物數量或等效值，以進行注射。
 
 如果您想基於某些理由修改最終劑量，請使用 **Corr** 欄位。
 
-**碳水化合物時間** 欄位用於預注射，讓系統知道在預期碳水化合物之前會有延遲。 如果你是為之前的碳水化合物進行注射，你可以在此欄位中輸入負數。
+**碳水化合物時間**欄位用於預先注射，讓系統知道在預期碳水化合物之前會有延遲。 如果你是為之前的碳水化合物進行注射，你可以在此欄位中輸入負數。
 
-**進食提醒** : 對於未來的碳水化合物，可以選擇啟用警報 checkbox（當未來時間被輸入時預設啟用），以便您可以在給定的時間受到提醒，提醒您進食已輸入到**AAPS**中的碳水化合物。
+**進食提醒** : 對於未來的碳水化合物，可以選擇啟用鬧鐘警報（當輸入一個未來時間時會預設勾選啟用），以便您可以在指定的時間受到提醒，提醒您進食已輸入到**AAPS**中的碳水化合物，應該開始用餐。
 
 ![帶有用餐提醒的注射嚮導](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### K 區
 
-**設定檔** 允許您選擇與當前不同的設定檔，以計算所需的胰島素。 此設定檔的選擇僅適用於當前的注射，不會變更設定檔。
+**設定檔**允許您選擇與當前不同的設定檔，以計算所需的胰島素。 此設定檔的選擇，僅適用於目前的注射，不會變更設定檔。
 
-**超注射** 是指將未來兩小時的基礎胰島素加到即時的注射中，並在接下來的兩小時內發出零臨時基礎率來回收額外的胰島素。 該選項僅在「啟用超注射於嚮導中」在 [偏好設定 > 總覽 > 進階設定](../SettingUpAaps/Preferences.md#advanced-settings-overview) 中設置時顯示。 其目的是更快地注射胰島素，希望減少血糖高峰。
+**超級注射** 是指將未來兩小時的基礎胰島素加到即時的注射中，並在接下來的兩小時內發出零臨時基礎率來回收額外的胰島素。 該選項僅在「啟用超注射於嚮導中」在 [偏好設定 > 首頁總覽 > 進階設定](../SettingUpAaps/Preferences.md#advanced-settings-overview) 中設置時顯示。 其目的是更快地注射胰島素，希望減少血糖高峰。
 
 詳情請查看[diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/)。
 
@@ -423,38 +423,38 @@ Libre 使用者的特殊注意事項：
 
 您可以取消選擇不想包括的項目，但通常您不會這樣做。
 
-出於安全原因，**TT 盒必須手動勾選**，如果您想讓注射嚮導根據現有的臨時目標進行計算。
+基於安全理由，如果您想讓注射嚮導根據現有的臨時目標進行計算，**臨時目標必須手動勾選**。
 
 #### COB 和 IOB 的組合及其含義
 
-* 出於安全原因，當 COB 盒已勾選時，無法取消勾選 IOB 盒，因為這樣可能會導致胰島素過多，因為 **AAPS** 不會考慮已經給予的胰島素。
+* 基於安全理由，當 COB 盒已勾選時，無法取消勾選 IOB 盒，因為這樣可能會導致胰島素過多，這會讓 **AAPS** 未將已注射的胰島素納入考慮。
 * 如果您同時勾選 COB 和 IOB，未被胰島素覆蓋的碳水化合物 + 所有作為臨時基礎率或微量注射給予的胰島素都會被考慮在內。
-* 如果您勾選 IOB 而不勾選 COB，**AAPS** 將考慮已給予的胰島素，但不會將其抵消任何仍需吸收的碳水化合物。 這會導致“缺少碳水化合物”的提示。
-* 如果你在餐後注射胰島素後，為了**額外食物**（如額外的甜點）再進行注射，最好取消勾選所有選項。 這樣只會加入新增的碳水化合物，因為主餐不一定會立刻被吸收，因此餐後的 IOB 和 COB 不會馬上精確匹配。
+* 如果您勾選 IOB 而不勾選 COB，**AAPS** 只會考慮已注射的胰島素，不會計算體內還沒吸收的碳水化合物。 這會導致出現“缺少碳水化合物”的提示。
+* 如果你在餐後注射胰島素後，為了**額外食物**（如額外的甜點）再進行注射，最好取消勾選所有選項。 這樣只會加入新增的碳水化合物，因為主餐不一定會立刻被吸收，所以餐後追加的 IOB 和 COB 可能會對應不太起來。
 
 ![注射嚮導與詳細信息](../images/Home2021_BolusWizard_Details.png)
 
-眼睛旁邊的框允許您在詳細視圖（每個項目進行計算的數字）和簡單視圖（圖示）之間進行選擇。 按一下圖示將啟用/禁用該條目從計算中。
+眼睛圖示旁邊的框允許您在詳細視圖（每個項目進行計算的數字）和簡單視圖（圖示）之間進行選擇。 按一下圖示將啟用/停用該項目從計算中。
 
 #### 錯誤的 COB 偵測
 
 ![碳水化合物吸收緩慢](../images/Calculator_SlowCarbAbsorption.png)
 
-如果您在使用注射嚮導後看到上述警告，**AAPS** 已檢測到計算的 COB 值可能是錯誤的。 因此，如果您想在之前進食後再次注射 COB，您應該注意過量注射！
+如果您在使用注射嚮導後看到上述警告，**AAPS** 已檢測到計算的 COB 值可能是錯誤的。 因此，如果您想在之前的進食後再次注射 COB，您應該小心注射過量！
 
 有關詳細信息，請參見[COB計算頁面](CobCalculation#detection-of-wrong-cob-values)上的提示。
 
-## 操作標籤
+## 手動操作標籤
 
 ![操作標籤](../images/Home2021_Action.png)
 
 ### 操作 - M 區
 
-按鈕**[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#profile-switch--profile-percentage)**作為按壓[主畫面當前設定檔](#section-b---profile--target)的替代項。
+按鈕**[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#profile-switch--profile-percentage)**作為按壓[主畫面當前設定檔](#section-b---profile--target)的替代選項。
 
-按鈕**[臨時目標](../DailyLifeWithAaps/TempTargets.md)**作為按壓[主畫面當前目標](#section-b---profile--target)的替代項。
+按鈕**[臨時目標](../DailyLifeWithAaps/TempTargets.md)**作為按壓[主畫面當前目標](#section-b---profile--target)的替代選項。
 
-啟動或取消臨時基礎率的按鈕。 請注意，當設置了臨時基礎率時，按鈕將從“TEMPBASAL”變為“CANCEL x%”。
+啟動或取消臨時基礎率的按鈕。 請注意，當設置了臨時基礎率時，按鈕將從「臨時基礎速度」變為「取消 x.xx U/H」。
 
 儘管[延長注射](ExtendedCarbs#extended-bolus-and-why-they-wont-work-in-closed-loop-environment)在封閉循環環境中實際上無法運作，但有些人還是要求提供使用延長注射的選項。
 
@@ -466,10 +466,10 @@ Libre 使用者的特殊注意事項：
 
 顯示以下資訊:
 
-    * 傳感器年齡 & 水準（電池百分比）
-    * 胰島素年齡 & 水準（單位）
-    * 輸管年齡
-    * 幫浦電池年齡 & 水準（百分比）
+    * 傳感器時間與電量（電池百分比）
+    * 胰島素使用時間與剩餘量（單位）
+    * 導管使用時間
+    * 幫浦電池使用時間與電量（百分比）
     
 
 如果使用**低解析度外觀**，將顯示較少資訊（[偏好設定 > 一般 > 外觀](../SettingUpAaps/Preferences.md#skin)）。
@@ -478,16 +478,16 @@ Libre 使用者的特殊注意事項：
 
 適用於具有額外發射器的 CGM，例如 MiaoMiao 2。 （技術上，傳感器必須將電量資訊傳送至 xDrip+。）
 
-門檻值可以在 [偏好設定 > 總覽 > 狀態燈](../SettingUpAaps/Preferences.md#status-lights) 中設置。
+門檻值可以在 [偏好設定 > 首頁總覽 > 狀態燈](../SettingUpAaps/Preferences.md#status-lights) 中設置。
 
 如果傳感器水準與手機電池水準相同，則您的 xDrip+ 版本可能過舊且需要更新。 (需要 xDrip+ 每日版本 2020年12月10日或更新版本。） 這將使您能夠回溯 **AAPS** 的歷史紀錄。
 
-    ![傳感器等於手機電池電量](../images/Home2021_ActionSensorBat.png)
+    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
     
 
 ### 護理入口 - O 區
 
-BG檢查、預備/填充、傳感器插入和幫浦電池更換是[N部分](#careportal---section-n)中顯示資料的基礎。
+血糖檢查、預備/填充、傳感器插入和幫浦電池更換是[N部分](#careportal---section-n)中顯示資料的基礎。
 
 填充/注入允許你記錄幫浦部位和胰島素筒的更換。
 
@@ -497,7 +497,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 #### 歷史瀏覽器
 
-允許您回溯在 **AAPS** 中的歷史記錄。
+允許您查詢在 **AAPS** 中的歷史記錄。
 
 #### 每日總劑量(TDD)
 
@@ -517,9 +517,9 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ![胰島素設定檔](../images/Screenshot_insulin_profile.png)
 
-這顯示您在[組態設置工具](../SettingUpAaps/ConfigBuilder.md#insulin)中選擇的胰島素的活動特徵。
+這顯示您在[組態設置工具](../SettingUpAaps/ConfigBuilder.md#insulin)中選擇的胰島素的活動曲線。
 
-**紫色** 線顯示在注射後胰島素量隨時間衰減的情況，**藍色** 線顯示其活性狀態。 需要注意的重要點是衰減具有**長尾巴**。 如果您習慣手動注射，可能已經習慣認為胰島素的衰減大約需要 3.5 小時。 然而，當您在迴路中時，長尾巴的關鍵在於計算非常精確，這些小數量在 **AAPS** 算法進行遞迴計算時都會累加。
+**紫色** 線顯示在注射後胰島素量隨時間衰減的情況，**藍色**線顯示其活性狀態。 需要注意的重要點是衰減具有**長尾巴**。 如果您習慣手動注射，可能已經習慣認為胰島素的衰減大約需要 3.5 小時。 然而，在使用循環系統時，這個長尾變得重要，因為 **AAPS** 演算法的計算非常精確，這些微小的剩餘量在遞迴計算下會逐漸累積。
 
 有關不同類型的胰島素、他們的活性設定檔以及為什麼這些很重要的更多詳細討論，你可以閱讀這篇文章[暸解基於指數活性曲線的新 IOB 曲線](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
@@ -552,7 +552,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
     * IC 或 I:C: 胰島素與碳水化合物比例
     * ISF: 胰島素敏感性係數
     * 基礎速率
-    * 目標: 您希望<strong>AAPS</strong> 針對的血糖水準
+    * 目標: 您希望 <strong>AAPS</strong> 的血糖範圍
     
 
 請參閱詳細的 **[設定檔](../SettingUpAaps/YourAapsProfile.md)** 頁面以獲取更多資訊。
@@ -575,13 +575,13 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ![血糖資料來源標籤 - 這裡是 Nightscout](../images/Screenshots_BGSource.png)
 
-根據您的 BG 資料來源設定，此標籤的名稱會有所不同。
+根據您的血糖資料來源設定，此標籤的名稱會有所不同。
 
-顯示 CGM 讀取的歷史紀錄並提供選項刪除失敗（例如：壓縮低）或重複讀取情況下的值。
+顯示 CGM 讀取的歷史紀錄並提供選項刪除失敗或重複讀取情況下的值。
 
 ## 治療
 
-可以通過按下選單右側的 3 個點來讀取此視圖，然後選擇「治療」。 無法通過 Config Builder 在主選單中顯示它。 在此視圖中，您可以查看和修改以下治療的歷史紀錄：
+可以通過按下選單右側的 3 個點來讀取此視圖，然後選擇「治療」。 無法通過組態建置工具在主選單中顯示它。 在此視圖中，您可以查看和修改以下治療的歷史紀錄：
 
 * 注射與碳水化合物
 * [延長注射](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
@@ -660,7 +660,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 可以通過按下選單右側的 3 個點然後選擇「歷史」來讀取此視圖。 無法通過 Config Builder 在主選單中放入它。 還可以通過 [動作標籤](#action-tab) 底部的一個按鈕讀取。
 
-允許您回溯在 **AAPS** 中的歷史記錄。
+允許您查詢在 **AAPS** 中的歷史記錄。
 
 ## 設定檔助手
 
