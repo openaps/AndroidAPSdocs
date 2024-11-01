@@ -6,5 +6,5 @@
 
 通常，只需要重新翻譯一句話，而不是全部內容。
 
-<span style="color:red">some RED text</span>
+<span style="color:red">一些紅色文字</span>
 
