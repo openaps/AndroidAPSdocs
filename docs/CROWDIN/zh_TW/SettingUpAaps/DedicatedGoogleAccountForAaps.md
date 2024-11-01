@@ -1,18 +1,18 @@
 # 為 AAPS 建立專用的 Google 帳戶（可選）
 
-Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.
+一些**AAPS**使用者也喜歡將他們主要的電子郵件帳號用於**AAPS**。 另外，一些**AAPS**使用者（或他們的照護者）會設置專屬的**AAPS**電子郵件帳號——這是可選的，下面會提供如何設置的示例。
 
-If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](../SettingUpAaps/BuildingAaps.md).
+如果你不想設置專用的**AAPS** Gmail帳號，你可以直接跳到下一個部分，[建立AAPS](../SettingUpAaps/BuildingAaps.md)。
 
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
-- Each version of **AAPS** (and supporting apps like xdrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
-- By harmonizing the setup, it will make online support simpler across users with similar folder structure.
-- Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
-- Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
-- Gmail allows you to register up to 4 accounts under the same phone number.
+- 專用的Google雲端空間意味著你不會冒著填滿個人Google雲端限額的風險，與**匯出偏好設定**有關。
+- 每個版本的**AAPS**（以及支持的應用程式如xdrip+、BYODA等）將存儲在一個獨立於你的電腦硬體的單一位置。 如果你的PC或手機被盜/遺失/損壞，你仍然可以訪問。
+- 通過統一設置，將簡化具有相似資料夾結構的使用者之間的線上支援。
+- 根據設置（見下文），你將有一個獨立身份作為別名在社群中進行溝通，這可以保護你的隱私。 
+- 患有1型糖尿病的孩子在使用**AAPS**和其他需要成人帳號的相關功能時可以保留自己的“日常”電子郵件帳號。
+- Gmail允許你在同一手機號碼下註冊最多4個帳號。
 ```
 
 ## 如何為AAPS設置專用的Google帳號
@@ -23,44 +23,44 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 
 需求：
 
-* You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. 這些設備都已安裝最新的安全更新，具備網際網路連線和管理員權限，因為某些步驟需要下載和安裝程式。
+* 你有一台Windows電腦（Windows 10或更新版）和一部Android手機（Android 9或更新版），將會主機**AAPS**應用程式。 這些設備都已安裝最新的安全更新，具備網際網路連線和管理員權限，因為某些步驟需要下載和安裝程式。
 * Android手機已經設置了你的個人“日常”電子郵件地址，例如Gmail帳號。
 
 ```{admonition} Things to consider when setting up your new account
 :class: dropdown
-- You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
-- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
-- We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
-- Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
-- If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
-- If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
+- 你可以使用與自己不同的名字，該名字與帳號有關聯（例如t1dsuperstar），以保護隱私。 然後可以在**AAPS**公共論壇中使用這個名字，並保護自己的身份隱私。 由於Google要求提供恢復電子郵件和電話號碼，因此它仍然是可追踪的。
+- 新的**AAPS**帳號將使用與你的“日常”帳號相同的電話號碼進行驗證。 它將使用“日常”電子郵件地址進行驗證；
+- 我們將設置電子郵件轉發，以便發送到新專用AAPS帳號的任何電子郵件都會轉發到主帳號（因此無需檢查兩個不同的郵箱）；
+- 為你的日常Gmail帳號和專用的AAPS Gmail帳號使用不同的密碼；
+- 如果你對一個Gmail帳號使用谷歌的“雙重驗證”（即多因素）身份驗證，那麼你也應該對兩個Gmail帳號都這樣做。
+- 如果你計劃使用谷歌“密碼鑰匙”，請確保你註冊多個設備。 這樣你就不會鎖定自己。 只在任何人無法訪問的設備上執行此操作（例如，不能在共用帳號的PC上執行）。
 ```
  
 
 ```{admonition}  Video Walkthrough! 
 :class: Note
-Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
+點擊[這裡](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>)觀看如何設置專用Google帳戶的視頻說明。
 ```
 
  影片中概述的步驟如下：
 
-In this example: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
-- Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
+在此示例中： 
+- 你現有的“_日常_”Google帳號是<donald.muck42@gmail.com>； ![](../images/Building-the-App/building_0002.png)
+- 你的新“_AAPS_” Gmail帳號將是：<donald.muck42.aaps@gmail.com>； ![](../images/Building-the-App/building_0003.png)
 
 
-#### Go to <https://account.google.com> 
+#### 訪問<https://account.google.com> 
 
- If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png) (2) select “_add another account_”.
+ 如果你已經登入Google，這會將你引導到你的“日常”**我的帳戶**頁面。 (1) 點擊頁面右上角的個人檔案圖片（此例為簡單的 ![](../images/Building-the-App/building_0002.png) (2) 選擇“_添加另一個帳號_”。
 
 ![](../images/Building-the-App/building_0005.png)
 
 
-#### Enter your NEW dedicated account details: 
+#### 輸入你的新專用帳號細節： 
 
-- Enter the new account: 
+- 輸入新帳號： 
 - 建立帳號
-- for my personal use. 
+- 供我個人使用。 
 
 
 
@@ -69,50 +69,50 @@ In this example: 
  - 姓氏
  - 出生日期（需要是成年人年齡）
 
-#### Choose your NEW email address & password
+#### 選擇你的新電子郵件地址和密碼
 
-This example appends “.AAPS” to Donald Muck’s existing one…\
-Set a password
+這個示例將“.AAPS”附加到Donald Muck的現有帳號…\
+設置一個密碼
 
-####  Enter a phone number which can receive the SMS verification
+####  輸入可以接收SMS驗證的電話號碼
 
 Gmail現在將向你發送一個唯一的驗證碼。
 
-#### Enter the recovery email address 
+#### 輸入恢復電子郵件地址 
 
-In this case it will be your existing “_everyday_” email…
+在此情況下，它將是你現有的“_日常_”電子郵件…
 
 #### 完成帳號設置
 
-Gmail將顯示帳號名稱。 It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
+Gmail將顯示帳號名稱。 系統會要求你接受Gmail的條款和條件並確認你的個人設定。
 
 #### 自定義新個人資料顯示
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. 預設情況下，個人資料圖片會設置為你名字的第一個字母。 Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
+此時，你應在Gmail的MyAccount頁面上，顯示你的新**AAPS**專用電子郵件帳號。 預設情況下，個人資料圖片會設置為你名字的第一個字母。 將其更改為某個獨特的名稱，以免混淆……在這個例子中，Donald.Muck.AAPS取代了 ![](../images/Building-the-App/building_0002.png) ![](../images/Building-the-App/building_0003.png)
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
 #### 在兩個視窗中打開Gmail網站來配置新帳號
 
-So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account \
-This part can be a bit confusing, since you will have to switch back and forth between both accounts. 為了使操作更簡單，將兩個獨立的瀏覽器視窗堆疊在一起：
+這樣你就不需要監控一個單獨的電子郵件帳號，將所有從新的**AAPS**專用帳號發送的電子郵件轉發到你的日常帳號 \
+這部分可能會有些混淆，因為你需要在兩個帳號之間切換。 為了使操作更簡單，將兩個獨立的瀏覽器視窗堆疊在一起：
 
-1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen… 
-2. Right click on your Browser logo in your taskbar 
-3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
+1. 將你現有的瀏覽器移到螢幕的上方，並調整大小，使其僅佔據螢幕上方的一半…… 
+2. 右鍵點擊你的瀏覽器圖示在任務欄上 
+3. 從菜單選擇“新視窗”……並調整，使其僅佔據螢幕的下半部。
 
-Open <https://gmail.com>  in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. （如果需要，你可以隨時透過點擊個人資料圖片切換帳號並選擇正確的帳號）。
+在每個瀏覽器視窗中打開<https://gmail.com>。 確保你的個人帳號在最上面，而新的專用**AAPS**帳號在底部，並且通過右上角的頭像容易辨識。 （如果需要，你可以隨時透過點擊個人資料圖片切換帳號並選擇正確的帳號）。
 
 ![](../images/Building-the-App/building_0009.png)
 
-Your Gmail homepages screen should look like this:\
+你的 Gmail 主頁螢幕應該看起來像這樣：\
 ![](../images/Building-the-App/building_0010.png)
 
- #### In the new Gmail account (bottom window), open Gmail settings… 
+ #### 在新的 Gmail 帳號（底部視窗）中，打開 Gmail 設定… 
 
-- Click on the gear on the left of the profile picture 
-- then select “**See all Settings**”
+- 點擊頭像左側的齒輪圖示 
+- 然後選擇「**查看所有設定**」
 
 ![](../images/Building-the-App/building_0011.png)
 
@@ -121,7 +121,7 @@ Your Gmail homepages screen should look like this:\
 - 點擊“轉發和POP/IMAP”設置標籤
 - 點擊“新增轉發地址”
 - 添加你的“日常”電子郵件地址
-- Gmail will send a verification code to your “everyday” email address. 
+- Gmail 將會向你的「日常」電子郵件地址發送驗證碼。 
 - 你需要切換回你的日常帳號，並點擊連結來驗證你接受轉發（或者從Gmail的驗證電子郵件中獲取驗證碼，然後將其粘貼到你的“新AAPS專用”Gmail視窗中）。
 
 這樣雖然需要在兩個視窗之間來回切換，但當你檢查“日常”帳號的郵件時，也會看到從AAPS專用帳號轉發的郵件，例如Gmail警報。
@@ -130,7 +130,7 @@ Your Gmail homepages screen should look like this:\
 
 #### 驗證轉發的電子郵件地址
 
-- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email. 
+- 在「日常」Gmail（頂部視窗）中，你將收到「Gmail 轉寄確認」的電子郵件。 
 - 打開郵件並“點擊連結確認請求”
 
 #### 將轉發的郵件存檔在新專用的Gmail帳號中（底部視窗）
@@ -140,9 +140,9 @@ Your Gmail homepages screen should look like this:\
 1. 重新整理底部視窗
 2. 勾選“轉發收到的電子郵件”
 3. 並存檔Gmail的副本（以保持你的新專用信箱整潔）
-4. Scroll all the way to the bottom to save your changes\
+4. 向下滾動到最底部以儲存你的更改\
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-恭喜！ 現在，你已經建立了一個專用於AAPS的Google帳號。 The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+恭喜！ 現在，你已經建立了一個專用於AAPS的Google帳號。 下一步是[建立 AAPS 應用程式](../SettingUpAaps/BuildingAaps.md)。
