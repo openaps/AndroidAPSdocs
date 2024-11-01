@@ -2,20 +2,20 @@
 
 In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), you built the **AAPS** app (which is an .apk file) on a computer.
 
-Dalším krokem je **přenos** APK souboru **AAPS** (a dalších souborů, které můžete potřebovat, jako BYODA, Xdrip+ nebo jiná CGM aplikace) na váš Android telefon a jeho následná **instalace**.
+The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, Xdrip+ or another CGM reciever app) to your Android smartphone, and then **install** the app(s).
 
 Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
 
-Existuje několik možností, jak přenést **AAPS** APK soubor z vašeho počítače na váš chytrý telefon. Zde popíšeme dva různé způsoby:
+There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Zde popíšeme dva různé způsoby:
 
-- Možnost 1 - Přenos pomocí Google drive (Gdrive)
-- Možnost 2 - Přenos pomocí USB kabelu
+* Možnost 1 - Přenos pomocí Google drive (Gdrive)
+* Možnost 2 - Přenos pomocí USB kabelu
 
 Vezměte prosím na vědomí, že přenos e-mailem může způsobit potíže, a není doporučován.
 
 ## Možnost 1. Přenos pomoví Google drive (Gdrive)
 
-Ve vašem webovém prohlížeči otevřete stránku [Google.com](https://www.google.com/) a přihlašte se k vašemu Účtu Google.
+Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
 
 V Google menu v pravém horním rohu vyberte aplikaci Drive.
 
@@ -26,6 +26,7 @@ Klikněte pravým tlačítkem do prázdného místa pod vašimi soubory a ložka
 ![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
 
 Váš APK soubor by teď měl být nahrán ve vašem Google Drive.
+
 
 ### Use the Google Drive app to execute the apk file for installation
 
@@ -45,7 +46,7 @@ V případě, že se vám zobrazí bezpečnostní upozornění, že nemůžete i
 
 Po dokončení instalace aplikace máte tuto část ukončenou.
 
-Na telefonu byste měli vidět ikonu **AAPS** a měli byste mít možnost ji otevřít.
+you should see the **AAPS** icon and be able to open the app.
 
 ```{warning}
 **DŮLEŽITÉ BEZPEČNOSTNÍ UPOZORNĚNÍ**
@@ -55,12 +56,11 @@ Nezapomněli jste zakázat intalaci aplikací z Google Drive?
 Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
 
 ## Možnost 2. Přenos pomocí USB kabelu
-
-Druhá možnost přenosu AAPS apk souboru je pomocí [USB kabelu](https://support.google.com/android/answer/9064445?hl=en).
+The second way to transfer the AAPS apk file is with a  [USB cable](https://support.google.com/android/answer/9064445?hl=en).
 
 Přenos souboru z jeho umístění ve vašem počítači do adresáře "Stažené soubory" ve vašem telefonu.
 
-Ve vašem telefonu budete muset povolit instalaci aplikací z neznámých zdrojů. Popis jak to udělat je dostupný na internetu (_např._ [zde](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) nebo [zde](https://www.androidcentral.com/unknown-sources)).
+Ve vašem telefonu budete muset povolit instalaci aplikací z neznámých zdrojů. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 Jakmile jste přenesli soubor jeho přetažením, otevřete na telefonu složku "Stažené soubory", podržte ikonu AAPS apk souboru a vyberte "Instalovat". You can then proceed to the next step, [Setup Wizard](../SettingUpAaps/SetupWizard.md), which will help you setup the **AAPS** app and loop on your smartphone.
 
