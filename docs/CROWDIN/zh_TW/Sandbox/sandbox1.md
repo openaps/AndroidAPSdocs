@@ -22,13 +22,13 @@
     1. CROWDIN 翻譯和
     2. Read The Docs 部署。
 
-你可以從這裡直接跳轉到此文件中的第二個標籤 - [「跳轉」](#this-is-another-test)。
+您可以直接從這裡跳轉到此檔案中的第二個標籤 - ["跳轉"](#this-is-another-test) 或 [標籤跳轉](#sandbox1-this-is-another-test)。
 
-你也可以跳轉到第一個標籤 - [「跳轉」](#this-is-a-test)。
+您也可以跳轉到第一個標籤 - ["跳轉"](#this-is-a-test) 或 [標籤跳轉](#sandbox1-this-is-another-test)。
 
-這裡可以跳轉到第二個沙盒文件 - [「跳轉」](./MoveTest/sandbox2.md)。
+在這裡您可以跳轉到第二個沙盒檔案 - ["跳轉"](./MoveTest/sandbox2.md) 或 [標籤跳轉](#sandbox2-this-is-another-test)。
 
-你可以從這裡直接跳轉到 sandbox2.md 文件中的第一個標籤 - [「跳轉」](./MoveTest/sandbox2.md#this-is-a-test)。
+您可以直接從這裡跳轉到sandbox2.md檔案中的第一個標籤 - ["跳轉"](./MoveTest/sandbox2.md#this-is-a-test)。
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。
 
