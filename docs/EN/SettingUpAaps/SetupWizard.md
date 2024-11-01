@@ -333,6 +333,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
+(setup-wizard-profile)=
 ### Profile
 
 Now we are entering a very important part of the Setup Wizard.

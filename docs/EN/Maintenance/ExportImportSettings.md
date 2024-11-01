@@ -40,6 +40,7 @@ Preferences are what tailors the stock AAPS application to how you have it setup
 
 3 - using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be YYYY-MM-DD_Time_appname.json. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.  
 
+(ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
 ## Restoring from your backups on a new phone or fresh installation of AAPS
 Use these instructions if you have a back-up of your APK and preferences that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
 

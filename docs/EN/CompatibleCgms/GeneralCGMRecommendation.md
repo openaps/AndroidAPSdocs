@@ -29,6 +29,7 @@ After setting the sensor, the transmitter can be clicked into the sensor
 holder. Caution! First click in the square side and then press down the
 round side.
 
+(general-cgm-troubleshooting)=
 ## Troubleshooting
 
 ### Connection problems
@@ -59,6 +60,6 @@ worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData
 ![Negative sensor age](../images/Troubleshooting_SensorAge.png)
 
 This occurs if there is either a double "CGM Sensor Insert" entry in
-[actions tab / menu](../DailyLifeWithAaps/AapsScreens.md#action-tab) or a
+[actions tab / menu](#screens-action-tab) or a
 sensor insert with wrong date. Go to treatments tab \> careportal and
 delete the wrong entry.

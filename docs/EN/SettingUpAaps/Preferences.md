@@ -169,7 +169,7 @@
 
 ### Fill/Prime standard insulin amounts
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](#screens-action-tab).
 - Pre-set values can be defined in this dialogue.
 
 (Preferences-range-for-visualization)=
@@ -187,6 +187,7 @@
 
   ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
+(Preferences-show-notes-field-in-treatments-dialogs)=
 ### Show notes field in treatments dialogs
 
 - Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
@@ -199,7 +200,7 @@
 - Status lights give a visual warning for
 
   - Sensor age
-  - Sensor battery level for certain smart readers (see [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery) for details).
+  - Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
   - Insulin age (days reservoir is used)
   - Reservoir level (units)
   - Cannula age
@@ -214,17 +215,19 @@
 
   ![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
 
+(Preferences-deliver-this-part-of-bolus-wizard-result)=
 ### Deliver this part of bolus wizard result
 
-Set the [default percentage](../DailyLifeWithAaps/AapsScreens.md#section-j) of the bolus calculated when using the bolus wizard.
+Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
 
 Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard.
 
-When using [SMB](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb), using a value lower than 100% here can be useful:
+When using [SMB](#objectives-objective9), using a value lower than 100% here can be useful:
 * for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
 * to leave more room to *AAPS** to deal by itself with **BG rise**.
 In both cases, **AAPS** will compensate the missing part of the bolus with SMBs, if/when deemed adequate.
 
+(Preferences-advanced-settings-overview)=
 ### Advanced Settings (Overview)
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
@@ -279,8 +282,8 @@ In both cases, **AAPS** will compensate the missing part of the bolus with SMBs,
 
 Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS AMA settings
 
@@ -294,7 +297,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 - The value is measured in units per hour (U/h).
 - It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
 - For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
-- See also [detailed feature description](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to).
 
 #### Maximum basal IOB OpenAPS can deliver \[U\]
 
@@ -318,7 +321,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 #### Autosens
 
-- [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](#Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
 - It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 - If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
 
@@ -330,17 +333,17 @@ When you feel comfortable, you can allow the system to start giving you addition
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB settings
 
-- In contrast to AMA, [SMB](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](#Open-APS-features-super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
+- You must have started [objective 9](#objectives-objective9) to use SMB.
 
 - The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
 
-- Details on the different enable options are described in [OpenAPS feature section](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](#Open-APS-features-enable-smb).
 
 - *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](#Open-APS-features-autosens) will modify your glucose target according to your blood glucose deviations.
 
 - If target is modified it will be displayed with a green background on your home screen.
 
@@ -372,6 +375,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 ![Absorption settings](../images/Pref2020_Absorption.png)
 
+(Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
 
 - The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed.
@@ -398,12 +402,12 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 ### Advanced settings - autosens ratio
 
-- Define min. and max. [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) ratio.
+- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
 - Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
 ## Pump settings
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump).  Pair and set your pump up according to the pump related instructions:
+The options here will vary depending on which pump driver you have selected in [Config Builder](#Config-Builder-pump).  Pair and set your pump up according to the pump related instructions:
 
 - [DanaR Insulin Pump](../CompatiblePumps/DanaR-Insulin-Pump.md)
 - [DanaRS Insulin Pump](../CompatiblePumps/DanaRS-Insulin-Pump.md)
@@ -430,7 +434,7 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](../Maintenance/ReleaseNotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+[New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
 
 ```{admonition} V3 data uploaders
 :class: warning
@@ -449,7 +453,7 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 
 Synchronization choices will depend on the way you will want to use AAPS.
 
-You can select which data you want to [upload and download to or from Nightscout](../SettingUpAaps/Nightscout.md#aaps-settings). 
+You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings). 
 
 ### Alarm options
 
@@ -481,7 +485,7 @@ Options in advanced settings are self-explanatory.
 
 ## SMS Communicator
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#sms-communicator).
+- Options will only be displayed if SMS communicator is selected in [Config Builder](#Config-Builder-sms-communicator).
 - This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.
 - Further information is described in [SMS Commands](../RemoteFeatures/SMSCommands.md).
 - Additional safety is obtained through use of an authenticator app and additional PIN at token end.

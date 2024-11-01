@@ -12,7 +12,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 ## Computer and software specifications for building AAPS
 
 * Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, Koala or Ladybug](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first! 
-* [Windows 32-bit systems](../GettingHelp/TroubleshootingAndroidStudio#unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.  
+* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.  
 
 <table class="tg">
 <tbody>
@@ -95,6 +95,7 @@ Git is known as a “_Versioning Control System_” (VCS).\
 Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk). 
 ```
 
+(BuildingAaps-steps-for-installing-git)=
 #### Steps for Installing Git
 
 1.	Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#install-android-studio): 
@@ -364,7 +365,7 @@ Make sure to note down for yourself where your keystore is stored. You will need
 
 * Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).  
 
-  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore).
+  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](#troubleshooting_androidstudio-lost-keystore).
 
 * The default alias (3) for your key is "key0", leave this unchanged.
 

@@ -14,7 +14,7 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
 4. Generate signed apk of new version as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
 5. Uninstall previous AAPS version on your phone.
 6. Install new AAPS version on your phone.
-7. [Import settings](../Maintenance/ExportImportSettings.md#restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+7. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
 
    If you can't find them on your phone copy them from the external storage to your phone.
    
@@ -60,7 +60,7 @@ If you receive a failure message like
     ```
     your Git installation is not right.
 
-  * [Check git installation](../SettingUpAaps/BuildingAaps.md#steps-for-installing-git)
+  * [Check git installation](#BuildingAaps-steps-for-installing-git)
 
   * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
 
@@ -185,7 +185,7 @@ When you generate the signed apk, you might get the notification that generation
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk)) and you will find the generated apk there!
+This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
 
 
 ## App was created with compiler/kotlin warnings
@@ -208,9 +208,9 @@ This seems to be a bug with Android Studio 3.5.1 and its shipped Java environmen
 
 ## No CGM data is received by AAPS
 
-* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../CompatibleCgms/xDrip.md#identify-receiver).
+* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](#xdrip-identify-receiver).
 
 
 ## App not installed
@@ -229,7 +229,7 @@ This seems to be a bug with Android Studio 3.5.1 and its shipped Java environmen
 
 ## App installed but old version
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Maintenance/UpdateToNewVersion.md#2-update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
 ## None of the above worked
 
@@ -241,7 +241,7 @@ If non of the above tips helped you might consider building the app from scratch
 
     Or you just use a new keystore.
 
-3. Build app from scratch as described [here](../SettingUpAaps/BuildingAaps.md#download-the-aaps-code).
+3. Build app from scratch as described [here](#Building-APK-download-AAPS-code).
 
 4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
 5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
@@ -255,4 +255,4 @@ In case even building the app from scratch does not solve your problem you might
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../SettingUpAaps/BuildingAaps.md#install-android-studio).
+Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
