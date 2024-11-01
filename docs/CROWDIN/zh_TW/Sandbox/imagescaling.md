@@ -9,7 +9,7 @@
 
 ## 標準 markdown
 
-![testimage](../images/setup-wizard/Screenshot_20231202_141912.png)
+![測試圖片](../images/setup-wizard/Screenshot_20231202_141912.png)
 
 ## 400px 圖像標籤 myst_parser 透過額外的寬度屬性
 
