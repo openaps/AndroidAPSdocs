@@ -1,4 +1,4 @@
 # 圖片翻譯測試頁面 Crowdin
 
-![simple test case](../images/ThisIsASimpleTestCase4ImageTranslation.png)
+![簡單測試案例](../images/ThisIsASimpleTestCase4ImageTranslation.png)
 
