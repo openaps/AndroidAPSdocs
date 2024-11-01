@@ -28,7 +28,7 @@ Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-lo
 
 - Adjust settings in xDrip+ according to [xDrip+ settings page](../CompatibleCgms/xDrip.md)
 
-(#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
+(DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## If using G6 with Build Your Own Dexcom App
 
 -   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+ (not for

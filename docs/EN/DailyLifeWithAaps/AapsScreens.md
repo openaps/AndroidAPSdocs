@@ -147,12 +147,13 @@ Up to 30h hours are taken into accord for **AAPS** calculations. So even after y
 * IOB may be negative if there have recently been periods of reduced basal.
 * Press the icon to see the split of bolus and basal insulin
    
-* **Grain**: [carbs on board (COB)](CobCalculation) - yet unabsorbed carbs you have eaten before
-  The icon pulses red if carbs are required (see [below](#carbs-required))
+* **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before
+  The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
 * **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%)
    * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
 * **Arrows up & down**: indicating actual [Autosens](#Open-APS-features-autosens) status (enabled or disabled) and value is shown below icon
 
+(aaps-screens-carbs-required)=
 #### Carbs required
 
 ![Carbs required](../images/Home2020_CarbsRequired.png)
@@ -466,7 +467,7 @@ Displays information on:
 
 Less information will be shown if **low resolution skin** is used ([Preferences > General > Skin](#Preferences-skin)).
 
-(screens-sensor-level-battery)
+(screens-sensor-level-battery)=
 #### Sensor level (battery)
 
 Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level  information to xDrip+.)

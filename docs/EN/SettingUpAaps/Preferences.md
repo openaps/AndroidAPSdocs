@@ -71,7 +71,7 @@
 
 - Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md).
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
+- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
 
   ![Protection](../images/Pref2020_Protection.png)
 
@@ -337,7 +337,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 - You must have started [objective 9](#objectives-objective9) to use SMB.
 
-- The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
+- The first three settings are explained [above](#Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
 - Details on the different enable options are described in [OpenAPS feature section](#Open-APS-features-enable-smb).
 

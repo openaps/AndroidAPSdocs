@@ -52,7 +52,7 @@ If you receive a failure message like
 
     Note: There is a space and two hyphens between git and version!
 
-  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
+  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
   * In case you get an message saying
     ```
@@ -77,6 +77,7 @@ If you receive a failure message like
 
   * Restart Android Studio.
 
+(troubleshooting-android-studio-check-for-uncommitted-changes)=
 #### Step 2: Check for uncommitted changes.
 
   * In Android Studio, oben the "Commit" Tab (1) on the left-hand side.

@@ -81,6 +81,7 @@ Here, you can choose if you want to use the [sensitivity detection](../DailyLife
 ### Enable SMB
 Enable this to use SMB functionality. If disabled, no SMBs will be given. 
 
+(Open-APS-features-enable-smb-with-high-temp-targets)=
 ### Enable SMB with high temp targets
 If this setting is enabled, SMB will be allowed, but not necessarily enabled, when there is a high temporary target active (defined as anything above 100mg/dl regardless of profile target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, SMBs can be disabled by setting a temp target above 100mg/dl. This option will also disable SMB regardless of what other condition is trying to enable SMB.
 

@@ -646,6 +646,7 @@ The app “Galaxy Wearable” also has an instruction manual section in it. Open
 
 You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 363 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account. 
 
+(remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 ##### Transferring the **AAPS** Wear app onto your **AAPS** phone
 
 Loading the Wear.apk from Android Studio to your phone can be done either by: 
@@ -807,7 +808,7 @@ Then "save as" and save the file to a convenient location on your computer:
 
 
 
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#transferring-the-aaps-wear-app-onto-your-aaps-phone)  
+The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
 
 ### Option 4) Limited Nightscout (and other options) on a watch - Fitbit watches
 

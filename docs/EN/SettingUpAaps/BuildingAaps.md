@@ -303,8 +303,8 @@ If the automatic setting is successful, your current version of **Git** will be 
 
 
 If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error (1), you can either 
-* manually enter the path which you saved [earlier](#steps-for-installing-git), or 
-* click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#steps-for-installing-git)
+* manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or 
+* click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * Verify your settings with the **Test** button!
 
   ![Git not found](../images/Building-the-App/039_GitTestError.png)

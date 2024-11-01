@@ -256,7 +256,7 @@ Release date: 23-01-2021
 
 Release date: 12-01-2021
 
-(important-hints-2-8-1-1)
+(important-hints-2-8-1-1)=
 ### Important hints
 
 - Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
