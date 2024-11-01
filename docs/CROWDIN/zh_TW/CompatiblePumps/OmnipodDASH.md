@@ -70,7 +70,7 @@
 
 ### 驗證 Omnipod 驅動程式選擇
 
-要驗證你是否已在 AAPS 中啟用了 Dash 驅動程式，勾選該框（4）後，**從** **首頁總覽**標籤**向左滑動**，你將看到一個**DASH**標籤。 如果你沒有勾選該框，你會在左上角的漢堡選單中找到 DASH 標籤。
+要驗證你是否已在 AAPS 中啟用了 Dash 驅動程式，勾選該框（4）後，**從** **首頁首頁總覽**標籤**向左滑動**，你將看到一個**DASH**標籤。 如果你沒有勾選該框，你會在左上角的漢堡選單中找到 DASH 標籤。
 
 ![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
@@ -80,7 +80,7 @@
 
 ![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) 重新整理 Pod 連線和狀態，能夠在 Pod 發出嗶聲時靜音 Pod 警報
 
-![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod 管理（註冊、停用、播放測試嗶聲和 Pod 歷史記錄）
+![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod 管理（註冊、停用、播放測試嗶聲和 Pod 歷史紀錄）
 
 (OmnipodDASH-activate-pod)=
 
@@ -208,19 +208,19 @@
 
 (OmnipodDASH-view-pod-history)=
 
-### 查看 Pod 歷史記錄
+### 查看 Pod 歷史紀錄
 
-本節將向你展示如何查看你的活動 Pod 歷史記錄，並根據不同的操作類別進行篩選。 Pod 歷史工具允許你查看在其三天（72 - 80 小時）使用壽命期間提交到目前活動 Pod 的操作和結果。
+本節將向你展示如何查看你的活動 Pod 歷史紀錄，並根據不同的操作類別進行篩選。 Pod 歷史工具允許你查看在其三天（72 - 80 小時）使用壽命期間提交到目前活動 Pod 的操作和結果。
 
 此功能有助於驗證發送到 Pod 的注射劑量、臨時基礎率和基礎指令。 其餘類別對於排除故障和確定發生失敗前的事件順序很有幫助。
 
 *注意：* **只有最後一個指令可能是不確定的**。 在**最後的“不確定”指令被“確認”或“拒絕”**之前，*不會發送新的指令*。 “修復”不確定指令的方法是按下 **“重新整理 Pod 狀態”**。
 
-1. 進入 **DASH** 標籤，按下 **POD 管理 (1)** 按鈕以進入 **Pod 管理** 選單，然後按下 **Pod 歷史記錄 (2)** 按鈕以進入 Pod 歷史記錄畫面。
+1. 進入 **DASH** 標籤，按下 **POD 管理 (1)** 按鈕以進入 **Pod 管理** 選單，然後按下 **Pod 歷史紀錄 (2)** 按鈕以進入 Pod 歷史紀錄畫面。
 
 ![Pod_history_1](../images/DASH_images/Pod_History/Pod_history_1.jpg) ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
 
-2. 在 **Pod 歷史記錄** 畫面中，顯示預設類別 **全部 (1)**，以逆序顯示所有 Pod **操作 (3)** 和 **結果 (4)** 的 **日期和時間 (2)**。 使用手機的 **返回按鈕按兩次** 以返回主 AAPS 介面中的 **DASH** 標籤。
+2. 在 **Pod 歷史紀錄** 畫面中，顯示預設類別 **全部 (1)**，以逆序顯示所有 Pod **操作 (3)** 和 **結果 (4)** 的 **日期和時間 (2)**。 使用手機的 **返回按鈕按兩次** 以返回主 AAPS 介面中的 **DASH** 標籤。
 
 
 ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
