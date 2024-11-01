@@ -264,7 +264,7 @@ TexView 比 ImageView 有更多可用參數：你可以調整旋轉（度數的�
 
 - 這些圖像將自動繞圖像中心旋轉，因此這些圖像應設置為 00:00:00（對於「全畫幅」類比錶盤，請使用 400 x 400 px 的大小，並定位於 top 0 left 0）。
 
-你還可以在[硬編碼資源檔案列表](#cwf-reference-list-of-hardcoded-resource-files)中注意到，對於每個圖像視圖，你有兩個額外的硬編碼檔名 `High` 和 `Low`（例如，你可以在 zip 檔案中包含其他名為 `BackgroundHigh.jpg` 和 `BackgroundLow.jpg` 的圖像）。 然後圖像將根據你的血糖水平自動更改（在範圍內、高血糖或低血糖）。 請參閱 AIMICO 錶盤作為範例。
+你還可以在[硬編碼資源檔案列表](#cwf-reference-list-of-hardcoded-resource-files)中注意到，對於每個圖像視圖，你有兩個額外的硬編碼檔名 `High` 和 `Low`（例如，你可以在 zip 檔案中包含其他名為 `BackgroundHigh.jpg` 和 `BackgroundLow.jpg` 的圖像）。 然後圖像將根據你的血糖數值自動更改（在範圍內、高血糖或低血糖）。 請參閱 AIMICO 錶盤作為範例。
 
 (cwf-reference-tune-image-color)=
 ### 調整圖像顏色
@@ -384,7 +384,7 @@ CustomWatchface 可以自動調整一些手錶的偏好設定，以確保正確�
 (cwf-reference-dyndata-feature)=
 ### DynData 功能
 
-DynData 是你想要根據一些內部資料（如血糖值、血糖水平、delta、電池百分比等，詳見可用資料 [此處](#cwf-reference-dyndata-key-values)）在錶盤中加入動畫時，最強大的功能。
+DynData 是你想要根據一些內部資料（如血糖值、血糖數值、delta、電池百分比等，詳見可用資料 [此處](#cwf-reference-dyndata-key-values)）在錶盤中加入動畫時，最強大的功能。
 
 為了說明此功能，我將以 AAPS（蒸汽龐克）錶盤為例：
 
@@ -1144,7 +1144,7 @@ DynData 是你想要根據一些內部資料（如血糖值、血糖水平、del
 (cwf-reference-list-of-hardcoded-resource-files)=
 ### 硬編碼資源檔案清單
 
-對於大多數圖像，高和低後綴允許根據血糖水平（在範圍內、高血糖或低血糖）調整圖像
+對於大多數圖像，高和低後綴允許根據血糖數值（在範圍內、高血糖或低血糖）調整圖像
 
 | 檔案名稱                                                            | 註解                                                             |
 | --------------------------------------------------------------- | -------------------------------------------------------------- |
@@ -1159,7 +1159,7 @@ DynData 是你想要根據一些內部資料（如血糖值、血糖水平、del
 | ArrowDoubleUp                                                   | ↑↑（預設值）：向上雙箭頭圖像                                                |
 | ArrowSingleUp                                                   | ↑（預設值）：單箭頭向上圖像                                                 |
 | Arrow45Up                                                       | ↗（預設值）：四十五度向上箭頭圖像                                              |
-| ArrowFlat                                                       | →（預設值）：水平箭頭圖像                                                  |
+| ArrowFlat                                                       | →（預設值）：數值箭頭圖像                                                  |
 | Arrow45Down                                                     | ↘（預設值）：四十五度向下箭頭圖像                                              |
 | ArrowSingleDown                                                 | ↓（預設值）：單箭頭向下圖像                                                 |
 | ArrowDoubleDown                                                 | ↓↓（預設值）：向下雙箭頭圖像                                                |
@@ -1228,12 +1228,12 @@ DynData 是你想要根據一些內部資料（如血糖值、血糖水平、del
 | `"旋轉"`                   | 整數  | 旋轉角度（度數）                                                                                                              |
 | `"可見性"`                  | 文字  | 請參閱鍵值表                                                                                                                |
 | `"dynData"`              | 文字  | 鍵區塊名稱，將指定要連結的動態資料和相關動畫（顏色、圖像、位移、旋轉）<br />`"dynData": "customName",` （見下文）                                       |
-| `"leftOffset"`           | 布林值 | 如果希望啟用由 dynData 值引起的水平位移（正值或負值），請包含此鍵並將鍵值設為 true                                                                      |
+| `"leftOffset"`           | 布林值 | 如果希望啟用由 dynData 值引起的數值位移（正值或負值），請包含此鍵並將鍵值設為 true                                                                      |
 | `"topOffset"`            | 布林值 | 如果希望啟用由 dynData 值引起的垂直位移（正值或負值），請包含此鍵並將鍵值設為 true                                                                      |
 | `"rotationOffset"`       | 布林值 | 如果希望啟用由 dynData 值引起的旋轉（正值或負值），請包含此鍵並將鍵值設為 true                                                                        |
 | `"twinView"`             | 文字  | 另一個視圖的鍵（通常另一個視圖也會包含雙視圖參數，並包含此視圖的鍵）                                                                                    |
 | `"topOffsetTwinHidden"`  | 整數  | 如果雙視圖被隱藏，則將視圖位置垂直移動的像素數（正值或負值）<br />topOffsetTwinHidden = (topOffset twinView - topOffset thisView)/2           |
-| `"leftOffsetTwinHidden"` | 整數  | 如果雙視圖被隱藏，則將視圖位置水平移動的像素數（正值或負值）<br />隱藏雙視圖時的leftOffsetTwinHidden =（leftOffset twinView - leftOffset thisView)）/2 |
+| `"leftOffsetTwinHidden"` | 整數  | 如果雙視圖被隱藏，則將視圖位置數值移動的像素數（正值或負值）<br />隱藏雙視圖時的leftOffsetTwinHidden =（leftOffset twinView - leftOffset thisView)）/2 |
 | `"dynPref"`              | 文字  | 鍵區塊名稱，將指定要連結的動態偏好設定和相關動畫（顏色、圖像、位移、旋轉）<br />`"dynPref": "customName",` （見下文）                                     |
 
 (cwf-reference-textview-keys)=
@@ -1277,7 +1277,7 @@ DynData 是你想要根據一些內部資料（如血糖值、血糖水平、del
 | ---------------------------- | ---- | ------------------------ |
 | `"消失"`                       | 可見性  | 視圖隱藏                     |
 | `"可見"`                       | 可見性  | 視圖在錶盤上可見（但可在參數中啟用或停用可見性） |
-| `"居中"`                       | 對齊   | 文字在視圖中垂直和水平置中            |
+| `"居中"`                       | 對齊   | 文字在視圖中垂直和數值置中            |
 | `"左"`                        | 對齊   | 文字在視圖中垂直置中但靠左對齊          |
 | `"右"`                        | 對齊   | 文字在視圖中垂直置中但靠右對齊          |
 | `"無襯線"`                      | 字體   |                          |
@@ -1303,7 +1303,7 @@ DynData 是你想要根據一些內部資料（如血糖值、血糖水平、del
 | `"valueKey"`                                                                                                                                                                                                                                                                                                         | 文字 | 要使用的動態資料名稱（通常與相關的視圖鍵相同）。<br />如果不存在，則預設值將是使用此區塊的視圖所使用的值。 <br />例如，你可以定義一個區塊來自訂電池電量百分比而不指定 valueKey，然後使用相同的區塊來自訂上傳器電池和 rig 電池。                                                                                                                                 |
 | `"minData"`                                                                                                                                                                                                                                                                                                          | 整數 | 指定 AAPS 資料的最小值：例如，如果值是 sgv（內部單位為 mg/dL），如果 minData 設置為 50，則所有低於 50 mg/dL 的血糖值將設置為 50。<br />- 請注意，minData 和 maxData 將用於計算動態值（以像素或度數表示）。                                                                                                                              |
 | `"maxData"`                                                                                                                                                                                                                                                                                                          | 整數 | 指定 AAPS 資料的最大值：例如，如果值是 sgv（內部單位為 mg/dL），如果 maxData 設置為 330，則所有高於 330 mg/dL 的血糖值將設置為 330。                                                                                                                                                                                  |
-| `"leftOffset"`                                                                                                                                                                                                                                                                                                       | 區塊 | 指定視圖的水平偏移，根據最小值和最大值的像素數量。<br />- 這包括 minValue 鍵、maxValue 鍵和 invalidValue 鍵（可選）<br />- 如果資料低於或等於 minData，則視圖將偏移到 minValue 像素；如果資料高於或等於 maxData，則視圖將偏移到 maxValue 像素<br />注意，要應用此偏移，`leftOffset` 必須設定為 true                                                |
+| `"leftOffset"`                                                                                                                                                                                                                                                                                                       | 區塊 | 指定視圖的數值偏移，根據最小值和最大值的像素數量。<br />- 這包括 minValue 鍵、maxValue 鍵和 invalidValue 鍵（可選）<br />- 如果資料低於或等於 minData，則視圖將偏移到 minValue 像素；如果資料高於或等於 maxData，則視圖將偏移到 maxValue 像素<br />注意，要應用此偏移，`leftOffset` 必須設定為 true                                                |
 | `"topOffset"`                                                                                                                                                                                                                                                                                                        | 區塊 | 根據最小值和最大值（以像素表示）指定視圖的垂直位移。<br />- 他包括 minValue 鍵、maxValueKey 和 invalidValue 鍵（可選）。<br />- 如果資料小於或等於 minData，則視圖將移動到 minValue 像素，如果資料大於或等於 maxData，則視圖將移動到 maxValue 像素。<br />請注意，要應用此位移，應在視圖中將 topOffset 設置為 true。                                       |
 | `"rotationOffset"`                                                                                                                                                                                                                                                                                                   | 區塊 | 指定視圖的旋轉角度，根據最小值和最大值的像素數量。<br />- 這包括 `minValue` 鍵、`maxValue` 鍵和 `invalidValue` 鍵（可選）<br />- 如果資料低於或等於 `minData`，則視圖將旋轉 `minValue` 度；如果資料高於或等於 `maxData`，則視圖將旋轉 `maxValue` 度<br />注意，要應用此旋轉，`rotationOffset` 必須設定為 true                                  |
 | `"dynValue"`*                                                                                                                                                                                                                                                                                                        | 區塊 | 指定 dynValue 轉換從最小和最大範圍到最小和最大值的像素數量。<br />- 這包括 `minValue` 鍵、`maxValue` 鍵和 `invalidValue` 鍵（可選）<br />- 如果資料低於或等於 `minData`，則發送的 dynValue 將是 minValue（轉換為雙精度），如果資料高於或等於 `maxData`，則計算的 dynValue 將是 maxValue（轉換為雙精度）<br />注意，要應用此轉換，`dynValue` 鍵必須設定為 true |
@@ -1340,7 +1340,7 @@ DynData 是你想要根據一些內部資料（如血糖值、血糖水平、del
 | ------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"SGV"`      | valueKey | 預設 minData = 39 mg/dL<br />預設 maxData = 400 mg/dL<br />- 請注意，實際的 maxData 與你的傳感器相關，內部值的單位始終為 mg/dL                                        |
 | `"sgvLevel"` | valueKey | 預設 minData = -1（低血糖）<br />預設 maxData = 1（高血糖）<br />如果血糖在範圍內 = 0                                                                          |
-| `"方向"`       | valueKey | 預設 minData = 1（雙箭頭向下）<br />預設 maxValue = 7（雙箭頭向上）<br />水平箭頭資料 = 4<br />錯誤或遺失資料 = 0（??）                                             |
+| `"方向"`       | valueKey | 預設 minData = 1（雙箭頭向下）<br />預設 maxValue = 7（雙箭頭向上）<br />數值箭頭資料 = 4<br />錯誤或遺失資料 = 0（??）                                             |
 | `"變化量"`      | valueKey | 預設 minData = -25 mg/dL<br />預設 maxData = 25 mg/dL<br />- 請注意，實際的 minData 和 maxData 可能會超出上述範圍，內部值的單位始終為 mg/dL                             |
 | `"平均變化量"`    | valueKey | 預設 minData = -25 mg/dL<br />預設 maxData = 25 mg/dL<br />- 請注意，實際的 minData 和 maxData 可能會超出上述範圍，內部值的單位始終為 mg/dL                             |
 | `"上傳器電池"`    | valueKey | 預設 minData = 0%<br />預設 maxData = 100%                                                                                                         |
