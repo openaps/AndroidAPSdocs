@@ -6,6 +6,7 @@ It is important to understand the tidepool is for reporting only. It is NOT a re
 
 Note: the Tidepool organization is also working on bringing the iOS Loop product to market with FDA approval. This effort has nothing to do with their data reporting platform or AAPS.
 
+
 ## Step 1 - Setup a tidepool account
 
 -Navigate to tidepool.org
@@ -19,6 +20,7 @@ Note: the Tidepool organization is also working on bringing the iOS Loop product
 -Complete the patient information section and accept the terms of use
 
 -Verify your email address via the instructions received to your email
+
 
 ## Step 2 - Enter credentials into AAPS
 
@@ -36,4 +38,4 @@ Note: the Tidepool organization is also working on bringing the iOS Loop product
 
 -Click on “Connection settings” and set based on your personal preferences
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
