@@ -255,7 +255,7 @@ If you do sports regularly at the same time (i.e. sports class in your gym) you 
 The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 
 #### Sex
-You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct.  See [description above](#disconnect-pump).
+You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct.  See [description above](#FAQ-disconnect-pump).
 
 #### Drinking alcohol
 Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AAPS:
