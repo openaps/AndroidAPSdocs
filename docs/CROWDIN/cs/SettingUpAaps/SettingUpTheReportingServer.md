@@ -1,6 +1,6 @@
 # Nastavení reportovacího serveru
 
-V současné době jsou k dispozici dva reportovací servery pro **AAPS**:
+There are currently two reporting servers available for use with **AAPS**:
 
 - [Nightscout](https://nightscout.github.io/)
 - [Tidepool](https://www.tidepool.org/)
@@ -11,7 +11,7 @@ Doporučujeme používat Nightscout.
 
 ## Nightscout
 
-Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). Také umožňuje pečovatelům posílat vzdálené příkazy na **AAPS**.
+Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also allows caregivers to send remote commands to **AAPS**.
 
 Nightscout je poskytován jako open source software. Kdokoli může vytvořit a provozovat Nightscout server, a to buď zdarma, nebojako placenou službu.
 
@@ -21,15 +21,16 @@ You can find more information on the [website of the Nightscout project](http://
 
 Vytváření Nightscout reporting serveru může vyžadovat jednu nebo více webových aplikací, které budou vyžadovat údržbu. Aby byla služba zcela zdarma, možná budete muset migrovat vaše stránky Nightscout a data, pokud poskytovatelé přestanou poskytovat servis zdarma.
 
-Popis toho, jak můžete založit Nightscout s výhodami a nevýhodami různých řešení, včetně odhadu nákladů lze nalézt [zde]https://nightscout. ithub.io/nightscout/new_user/#free-diy.
+A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
 ### Možnost 2 - Zaplaťe si hostovanou službu Nightscout
 
 Existují také možnosti od různých poskytovatelů služeb, kteří pro vás hostují Nightscout za měsíční poplatek. Náklady jsou zvládnutelné a výhodou hostovaného řešení je, že nemusíte IT znalosti ani ani mít provozní infrastrukturu.
 
+
 Stávající uživatelé Nightscoutu mohou čas od času přehodnotit, kde a jak je jejich Nightscout server hostován, a přejít na jiné řešení, pokud se stane vhodnější.
 
-Některé hostované služby Nightscoutu jsou uvedeny [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison on-table).
+Some Nightscout hosted services are listed [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
 
 ### Further configuration of Nightscout
 
@@ -37,7 +38,7 @@ One you have your Nightscout instance up and running, see [Nightscout configurat
 
 ## Tidepool
 
-Tidepool je k dispozici pouze od **AAPS** verze 3.2, která byla vydána koncem roku 2023.
+Tidepool has only been available in **AAPS** since version 3.2 which was released in late 2023.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  
@@ -45,7 +46,7 @@ As there is a delay of three hours between data income and data reporting when u
 On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
 ```
 
-Tidepool je [open source](https://github.com/tidepool-org) projekt. Nabízí bezplatné provozování účtu na serverech Tidepool.
+Tidepool is an [open source](https://github.com/tidepool-org) project. Nabízí bezplatné provozování účtu na serverech Tidepool.
 
 More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tidepool.md).
 
@@ -56,4 +57,4 @@ You do **not** need to use the uploader app to Tidepool: **AAPS** will upload bl
 
 ## Next step
 
-Once you have set up your reporting server, you can now either set up a [dedicated Google account for AAPS use](../SettingUpAaps/DedicatedGoogleAccountForAaps.md), or go straight to [building the AAPS app](../SettingUpAaps/BuildingAaps.md).
+Once you have set up your reporting server, you can now either set up a [dedicated Google account for AAPS use](../SettingUpAaps/DedicatedGoogleAccountForAaps.md), or go straight to [building the AAPS app](../SettingUpAaps/BuildingAaps.md). 
