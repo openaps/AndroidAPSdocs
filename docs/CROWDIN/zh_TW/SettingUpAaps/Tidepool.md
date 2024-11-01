@@ -38,4 +38,4 @@ Tidepool 是一個第三方工具，用於收集血糖、胰島素和碳水化�
 
 -點擊「連線設定」，根據你的個人偏好進行設置
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
+如需更多關於如何在 Tidepool 上傳資料後使用你的資料的協助，請訪問：[https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
