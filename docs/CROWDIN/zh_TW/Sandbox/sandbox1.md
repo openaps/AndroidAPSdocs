@@ -57,7 +57,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 帶有錨點的連結：
 - [這會花多久時間？](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up)
 - [偏好設定中的 NSClient 設定](../SettingUpAaps/Preferences.md#nsclient)。
-- [AAPS 總覽中的預測線](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)，標題層級 4
+- [AAPS 首頁總覽中的預測線](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)，標題層級 4
 - [螢幕截圖](../DailyLifeWithAaps/AapsScreens.md)
 - [主要圖表截圖](../DailyLifeWithAaps/AapsScreens.md#section-f---main-graph)，標題層級 3
 - [OpenAPS 功能](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
