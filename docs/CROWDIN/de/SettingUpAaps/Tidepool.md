@@ -6,6 +6,7 @@ Wichtig ist zu wissen, dass Tidepool lediglich für die Erstellung von Berichten
 
 Hinweis: Die Tidepool-Organisation arbeitet auch daran, den iOS Loop als Produkt mit einer FDA-Genehmigung auf den Markt zu bringen. Diese Anstrengungen sind unabhängig von deren Reportingplattform und AAPS.
 
+
 ## Schritt 1 - Ein Tidepool-Konto erstellen
 
 - Rufe "tidepool.org" auf
@@ -19,6 +20,7 @@ Hinweis: Die Tidepool-Organisation arbeitet auch daran, den iOS Loop als Produkt
 - Vervollständige den Abschnitt mit den Patienteninformationen und akzeptiere die Nutzungsbedingungen
 
 - Bestätige Deine E-Mail-Adresse in der E-Mail, die Du bekommen hast
+
 
 ## Schritt 2 - Zugangsdaten in AAPS eingeben
 
@@ -36,4 +38,4 @@ Hinweis: Die Tidepool-Organisation arbeitet auch daran, den iOS Loop als Produkt
 
 - Klicke auf "Verbindungs-Einstellungen" und aktiviere je nach Bedarf die entsprechenden Optionen
 
-Für weitere Hilfe dazu, wie Du Deine Daten, sobald nach Tidepool hochgeladen wurden, nutzen kannst, gehe bitte auf [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
