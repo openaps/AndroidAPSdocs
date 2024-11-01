@@ -6,19 +6,21 @@ Tidepool 是一個第三方工具，用於收集血糖、胰島素和碳水化�
 
 注意：Tidepool 組織也正在努力將 iOS Loop 產品推向市場並獲得 FDA 批准。 這與他們的資料報告平台或 AAPS 無關。
 
+
 ## 步驟 1 - 設置 Tidepool 帳戶
 
 -導航到 tidepool.org
 
 -選擇「個人註冊」或「註冊」
 
--建立並記錄電子郵件和密碼
+-建立並紀錄電子郵件和密碼
 
 -選擇「個人帳戶」並點擊「繼續」
 
 -完成患者資料部分並接受使用條款
 
 -透過你電子郵件中的指示來驗證你的電子郵件地址
+
 
 ## 步驟 2 - 在 AAPS 中輸入憑據
 
@@ -36,4 +38,4 @@ Tidepool 是一個第三方工具，用於收集血糖、胰島素和碳水化�
 
 -點擊「連線設定」，根據你的個人偏好進行設置
 
-有關如何使用上傳到 Tidepool 的資料的更多幫助，請查看：[https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
