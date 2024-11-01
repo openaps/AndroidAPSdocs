@@ -1,45 +1,45 @@
-# Your **AAPS** profile
+# 你的**AAPS**個人設定
 
-Your **AAPS** profile is a set of five key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. **AAPS** has several _additional_ modifiable parameters (like SMB settings), but using these well relies on your underlying **AAPS** profile being correct. The **AAPS** profile incorporates:
-* [duration of insulin action](#duration-of-insulin-action-dia) (DIA),
-* [glucose targets](#glucose-targets),
-* [basal rates](#basal-rates) (BR),
-* [insulin sensitivity factors](#insulin-sensitivity-factor-isf) (ISF) and
-* [insulin-to-carb ratios](#insulin-to-carb-ratio-icr) (IC or ICR).
+你的**AAPS**個人設定是一組五個關鍵參數，定義了**AAPS**如何根據你的感測器血糖水平給予胰島素。 **AAPS**有數個_額外_可修改參數（例如 SMB 設定），但使用這些參數的效果取決於你的**AAPS**個人設定是否正確。 該**AAPS**個人設定包含：
+* [胰島素作用持續時間](#duration-of-insulin-action-dia)（DIA）、
+* [血糖目標](#glucose-targets)、
+* [基礎率](#basal-rates)（BR）、
+* [胰島素敏感性因子](#insulin-sensitivity-factor-isf)（ISF）及
+* [胰島素與碳水化合物比率](#insulin-to-carb-ratio-icr)（IC 或 ICR）。
 
-最後四個參數的值可以在 24 小時內按需設置為不同的值，隨時間改變。 請注意，下方範例設定檔顯示了大量的時間點。 When you start out with **AAPS**, your profile is likely to be much simpler.
+最後四個參數的值可以在 24 小時內按需設置為不同的值，隨時間改變。 請注意，下方範例設定檔顯示了大量的時間點。 當你開始使用**AAPS**時，你的個人設定可能會簡單許多。
 
 ```{admonition} Your diabetes may vary
 :class: information
-Profiles vary significantly from person-to-person.
+個人設定可以因人而異。
 
-For the final three parameters, basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in your insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://brightspotsandlandmines.org/Bright_Spots_and_Landmines_by_Adam_Brown.pdf) by Adam Brown is an excellent book to read.
+對於最後三個參數，即基礎率（BR）、胰島素敏感性因子（ISF）和胰島素與碳水化合物比率（IC 或 ICR），你的胰島素需求的絕對值和趨勢會因人而異，這取決於你的生物特徵、性別、年齡、運動水平等，同時也會受到短期因素如生病和近期運動的影響。 關於這方面的更多指導，可以參考於 Adam Brown 所著的書籍[“亮點與雷區”](https://brightspotsandlandmines.org/Bright_Spots_and_Landmines_by_Adam_Brown.pdf)。
 
 ```
 
-Screenshots from **AAPS** of an _example_ profile are shown in below.
+下面顯示的**AAPS**截圖為一個_範例_個人設定。
 
 ## 胰島素作用持續時間（DIA）
 
-The duration of insulin action is set to a single value in **AAPS**, because your pump will continually infuse the same type of insulin.
+在**AAPS**中，胰島素作用持續時間設定為單一數值，因為你的幫浦會持續輸注相同類型的胰島素。
 
-In combination with the [insulin type](../SettingUpAaps/ConfigBuilder.md#insulin), this will result in the [insulin profile](../DailyLifeWithAaps/AapsScreens.md#insulin-profile). 請在那裡閱讀以幫助您定義適當的 DIA。
+搭配[胰島素類型](../SettingUpAaps/ConfigBuilder.md#insulin)，這將形成[胰島素配置](../DailyLifeWithAaps/AapsScreens.md#insulin-profile)。 請在那裡閱讀以幫助您定義適當的 DIA。
 
 ## 血糖目標
 
-The **figure below** shows an example of how the DIA and glucose targets could be set in an **AAPS** profile.
+以下**圖示**顯示了在**AAPS**個人設定中，DIA 和血糖目標可以如何設置的範例。
 
-![24-07-23, profile basics - DIA and target](../images/f3904cc3-3d9e-497e-a3b6-3a49650053e6.png)
+![24-07-23，個人設定基本 - DIA 和目標](../images/f3904cc3-3d9e-497e-a3b6-3a49650053e6.png)
 
-Your **BG target** is a core value and all of **AAPS** calculations are based on it. 它不同於您通常希望將您的血糖值保持在的目標範圍：
-* A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
-* If your target is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate changes are rarely suggested.
-* When beginning with **AAPS**, especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and ajusting your **Profile**.
-* Later on, you will probably find more appropriate to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+你的**BG 目標**是一個核心值，且所有**AAPS**的計算均以此為基礎。 它不同於您通常希望將您的血糖值保持在的目標範圍：
+* 血糖目標，特別是如果它僅是短期（持續時間少於 4 小時），不需要是你期望或想要的實際血糖值，而是一種良好的方式來告訴**AAPS**應該更積極或不那麼積極，同時仍能保持你的血糖數值在範圍內。
+* 如果你的目標範圍非常寬（例如，寬達 3 或以上 mmol/l [50 mg/dl 或更高]），你通常會發現**AAPS**的行動比較少。 這是因為**BG**數值預測會落在這個寬範圍內，因此很少建議做臨時基礎率調整。
+* 當開始使用**AAPS**時，尤其在完成[第一個目標](../SettingUpAaps/CompletingTheObjectives.md)的過程中，使用一個寬範圍的目標可以是一個不錯的選擇，因為你正在了解**AAPS**的運作方式並調整你的**個人設定**。
+* 稍後你可能會發現，將範圍縮小到每天每個時段都有單一目標（_低_目標 = _高_目標）會更加合適，以確保**AAPS**迅速對**BG**波動做出反應。
 
 目標可以在這些邊界內定義：
 
-|    | _Low_ target          | _High_ target         |
+|    | _低_目標                 | _高_目標                 |
 | -- | --------------------- | --------------------- |
 | 最小 | 4 mmol/l 或 72 mg/dL   | 5 mmol/l 或 90 mg/dL   |
 | 最大 | 10 mmol/l 或 180 mg/dL | 15 mmol/l 或 225 mg/dL |
@@ -50,31 +50,31 @@ Your **BG target** is a core value and all of **AAPS** calculations are based on
 
 你的胰島素基礎率（單位/小時）提供背景胰島素，在沒有食物或運動的情況下保持血糖穩定。
 
-精準的基礎率能讓你在醒來時保持血糖在範圍內，並在一天中可以提前或延後進餐，而不會引起血糖過高或過低。 胰島素幫浦每幾分鐘會輸送少量速效胰島素，以防止肝臟釋放過多的葡萄糖，並將葡萄糖輸送到體細胞中。 基礎胰島素通常占你每日總劑量（TDD）的 40-50%，取決於你的飲食，並且通常遵循日夜節律，在 24 小時內有一個高峰和一個低谷。 For more information, chapter 23 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+精準的基礎率能讓你在醒來時保持血糖在範圍內，並在一天中可以提前或延後進餐，而不會引起血糖過高或過低。 胰島素幫浦每幾分鐘會輸送少量速效胰島素，以防止肝臟釋放過多的葡萄糖，並將葡萄糖輸送到體細胞中。 基礎胰島素通常占你每日總劑量（TDD）的 40-50%，取決於你的飲食，並且通常遵循日夜節律，在 24 小時內有一個高峰和一個低谷。 有關更多資訊，Gary Scheiner 所著的[“像胰臟一樣思考”](https://amzn.eu/d/iVU0RGe)第 23 章非常有用。
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimise your ISF and ICR.
+大多數 1 型糖尿病教育工作者（以及 1 型糖尿病患者！）一致認為，在嘗試優化你的 ISF 和 ICR 之前，應該先著手於正確的基礎率設定。
 
 ## 胰島素敏感度因子（ISF）
 
 胰島素敏感性係數（有時稱為修正係數）是衡量 1 單位胰島素會降低血糖的程度。
 
-**In mg/dL units:** If you have an ISF of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
+**以 mg/dL 單位計算：** 如果你的 ISF 為 40，每一單位胰島素將使你的血糖大約降低 40 mg/dL（例如，你的血糖會從 140 mg/dL 下降到 100 mg/dL）。
 
-**In mmol/L units:** If you have an ISF of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
+**以 mmol/L 單位計算：** 如果你的 ISF 為 1.5，每一單位胰島素將使你的血糖大約降低 1.5 mmol/L（例如從 8 mmol/L 下降到 6.5 mmol/L）。
 
-From these examples you can see that the _smaller_ the ISF value, the less sensitive you are to insulin. 因此，如果你將胰島素敏感度因子（ISF）從 40 降至 35（mg/dl）或從 1.5 降至 1.3（mmol/L），這通常被稱為強化你的胰島素敏感度因子（ISF）。 相反，將 ISF 值從 40 增加到 45（mg/dl）或從 1.5 增加到 1.8（mmol/L）稱為削弱 ISF。
+從這些例子中，你可以看到，_ISF_ 值越小，你對胰島素的敏感性越低。 因此，如果你將胰島素敏感度因子（ISF）從 40 降至 35（mg/dl）或從 1.5 降至 1.3（mmol/L），這通常被稱為強化你的胰島素敏感度因子（ISF）。 相反，將 ISF 值從 40 增加到 45（mg/dl）或從 1.5 增加到 1.8（mmol/L）稱為削弱 ISF。
 
 如果你的 ISF 過強（值較小），會導致低血糖；如果 ISF 過弱（值較大），則會導致高血糖。
 
-確定你白天 ISF 的基本起點是基於你的每日總劑量（TDD），使用 1,700（94）規則。 More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+確定你白天 ISF 的基本起點是基於你的每日總劑量（TDD），使用 1,700（94）規則。 更多詳細內容見於 Gary Scheiner 所著的[“像胰臟一樣思考”](https://amzn.eu/d/iVU0RGe)第 7 章。
 
 1700（若以 mg/dl 為單位）或 94（mmol/L）/ TDD = 大約 ISF。
 
 範例：TDD = 40 U大約 ISF（mg/dl）= 1700/40 = 43大約 ISF（mmol/L）= 94/40 = 2.4
 
-See the **figure below** for an example of how the basal rates and ISF values could be set in an **AAPS** profile.
+參見**以下圖示**，了解基礎率和 ISF 值如何在**AAPS**個人設定中設置的範例。
 
-![24-07-23, profile basics - basal and ISF](../images/55c8ed24-e24e-4caa-9c17-294fa93cb84a.png)
+![24-07-23，個人設定基本 - 基礎率和 ISF](../images/55c8ed24-e24e-4caa-9c17-294fa93cb84a.png)
 
 ## 胰島素與碳水化合物的比例（ICR）
 
@@ -88,20 +88,20 @@ ICR 是衡量每單位胰島素覆蓋多少克碳水化合物的指標。
 
 由於荷爾蒙數值和體力活動，ICR 在一天中的不同時間可能會有所不同。 許多人發現，他們的 ICR 在早餐時間最低。 例如，你的 ICR 可能在早餐時為 1:8，午餐時為 1:10，晚餐時為 1:10，但這些模式並非普遍適用，某些人在晚餐時間對胰島素的抵抗力較高，因此需要更強/較小的 ICR。
 
-As shown in the **figure below**, when entering these values into an **AAPS** profile, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+如**下方圖示**所示，在將這些值輸入到**AAPS**個人設定時，我們僅輸入比率的最後一部分，因此胰島素與碳水化合物比率 1:3.5 僅需輸入“3.5”。
 
-![24-07-23, profile basics - ICR](../images/7741eefb-cae5-45c5-a9e5-8eae5ead3f48.png)
+![24-07-23，個人設定基本 - ICR](../images/7741eefb-cae5-45c5-a9e5-8eae5ead3f48.png)
 
 
 ## 關於正確設置你的設定檔的重要性
 
-**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+**我為什麼需要正確設置我的個人設定？ 循環不是可以自動處理這些嗎？**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect profile values. 它可以這樣做，例如如果你將要低血糖，它會暫停胰島素的輸送。 然而，若你的設定檔參數已經接近你身體所需的值，你將能夠實現更好的血糖控制。 This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+混合閉環系統_可以_試圖進行胰島素投放調整，以最小化因個人設定值不正確而導致的血糖控制不佳。 它可以這樣做，例如如果你將要低血糖，它會暫停胰島素的輸送。 然而，若你的設定檔參數已經接近你身體所需的值，你將能夠實現更好的血糖控制。 這是**AAPS**使用分階目標從開放式循環推進到混合閉環的原因之一。 此外，還會有需要打開循環的時候（感測器暖機、感測器故障_等_），有時發生在半夜，你希望在這些情況下設定是正確的。
 
-If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR).
+如果你是在使用其他開放式或閉環系統後開始使用**AAPS**，那麼你已經對基礎率（BR）、胰島素敏感性因子（ISF）和胰島素與碳水化合物比率（IC 或 ICR）要使用的值有合理的了解。
 
-If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+如果你是從注射（MDI）轉到**AAPS**，那麼最好先了解如何從 MDI 轉移到幫浦，並在與你的糖尿病團隊諮詢後仔細規劃並進行轉換。 ["胰島素輸注"](https://amzn.eu/d/iaCsFa2)由 John Walsh 和 Ruth Roberts 編寫的書籍，及[“像胰臟一樣思考”](https://amzn.eu/d/iVU0RGe)由 Gary Scheiner 編寫的書籍都是非常有用的參考資料。
 
 ## 設定檔助手
 
