@@ -224,7 +224,7 @@ vi) 在偏好設定頁面中，選擇「驗證器設置」
 
 1) 發送胰島素注射指令（_例如_ 「bolus 2」將指令注射 2 單位的胰島素），透過 SMS 指令相當於在 **AAPS** 中使用「注射」圖示。 2) 發送碳水化合物指令（_例如_「carbs 20」將報告 20 克的碳水化合物）。 這相當於在 **AAPS** 中使用「碳水化合物」標籤。
 
-為了避免低血糖，最好保守起見，注射 **少於** 按照你的碳水比率所需的胰島素，因為你沒有考慮目前的血糖水平或血糖趨勢。
+為了避免低血糖，最好保守起見，注射 **少於** 按照你的碳水比率所需的胰島素，因為你沒有考慮目前的血糖數值或血糖趨勢。
 
 **發送這些指令的順序很重要**。 如果你透過任何方式報告大量碳水化合物，並啟用了 SMB（超小注射），**AAPS** 可能會立即透過部分胰島素注射作出回應。 因此，如果你在報告碳水化合物後嘗試發送胰島素注射指令，你可能會遇到延遲並顯示「注射進行中」的訊息，你需要檢查已經執行的 SMB 注射。 或者，如果你沒有意識到正在進行 SMB 注射，並且你後續的注射也成功，則可能會為這頓飯過多注射胰島素。 因此，如果遠端控制餐時注射，請務必在報告碳水化合物 _之前_ 發送胰島素注射指令。 如果你願意，你可以結合使用 Nightscout 或 AAPSClient 與 SMS 指令。 碳水化合物可以透過 Nightscout 報告，且不需要驗證（請參閱下方的說明部分），因此速度比 SMS 指令更快。
 
@@ -348,7 +348,7 @@ _請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及�
 
 用戶應確保 __AAPSClient__ 和 __AAPS__ 均在“NSClient”標籤下顯示“已連線”，並且當在 __AAPSClient__ 中選擇後，“設定檔切換”或“臨時目標”可以在 __AAPS__ 中正確啟動。
 
-用戶還應確保在 __AAPSClient__ 和 __AAPS__ 中的“治療”中記錄碳水化合物，否則這可能表明用戶的設置存在問題。
+用戶還應確保在 __AAPSClient__ 和 __AAPS__ 中的“治療”中紀錄碳水化合物，否則這可能表明用戶的設置存在問題。
 
 ### 問題排除“NS 查看權杖”配置問題
 
@@ -475,7 +475,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 ### 在購買智慧型手錶之前……
 
-你購買的智慧型手錶具體型號取決於你所需的功能。 目前有兩份歷史性電子表格記錄了相容的[智慧型手機](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952)和[智慧型手機和手錶](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)，但由於選項繁多，建議透過 Discord 和 Facebook 群組進行詢問，這些表格將不再更新。
+你購買的智慧型手錶具體型號取決於你所需的功能。 目前有兩份歷史性電子表格紀錄了相容的[智慧型手機](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952)和[智慧型手機和手錶](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)，但由於選項繁多，建議透過 Discord 和 Facebook 群組進行詢問，這些表格將不再更新。
 
 受歡迎的手錶品牌包括三星 Galaxy、Garmin、Fossil、米動手環和 Fitbit。 上表中概述的不同選項將在下方詳細解釋，幫助你決定哪款智慧型手錶適合你的需求。
 
