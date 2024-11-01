@@ -1,20 +1,20 @@
 # AAPS設定嚮導
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
+當你首次啟動**AAPS**時，系統會引導你使用「**設定嚮導**」，以便快速設置應用程式的所有基本配置。 **設定嚮導**會引導你，以避免遺忘某些關鍵內容。 例如，**權限設定**對於正確設置**AAPS** 是非常重要的。
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimise/change the configuration. 這些路徑將在下一部分進行解釋。 因此，如果你在設定嚮導中跳過了一些選項，沒關係，你可以輕鬆地稍後配置他們。
+不過，在首次使用**設定嚮導**時，並不一定需要完全配置所有內容，你可以輕鬆地退出嚮導，稍後再返回。 在**設定嚮導**之後，有三條路徑可供選擇以進一步優化/變更配置。 這些路徑將在下一部分進行解釋。 因此，如果你在設定嚮導中跳過了一些選項，沒關係，你可以輕鬆地稍後配置他們。
 
-During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
+在使用**設定嚮導**期間及其後，你可能不會注意到**AAPS**中有任何顯著可見的變化。 要啟用你的**AAPS**循環，你必須遵循**目標**以啟用每一項功能。 你會在設定嚮導結束時開始**目標 1**。 你是**AAPS**的主導者，而不是相反。
 
 ```{admonition} Preview Objectives
 :class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) but then come back here to run the Setup Wizard first.
+如果你想知道目標的結構，請閱讀[完成目標](../SettingUpAaps/CompletingTheObjectives.md)，然後先返回這裡運行設定嚮導。
 
 ```
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+從以往經驗中，我們知道新用戶經常會給自己施加壓力，希望儘快設置**AAPS**，這可能會導致挫折，因為這是個龐大的學習曲線。
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+因此，請花時間配置你的循環，運行良好的**AAPS**循環帶來的好處是巨大的。
 
 ```{admonition} Ask for Help
 :class: note
@@ -29,9 +29,9 @@ So, please take your time in configuring your loop, the benefits of a well-runni
 
 ### 許可協議
 
-In the end user license agreement there is important information about the legal aspects of using **AAPS**. 請仔細閱讀。
+在最終用戶授權協議中，有關於使用**AAPS**的法律事宜的重要信息。 請仔細閱讀。
 
-If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
+如果你不理解或無法同意最終用戶授權協議，請根本不要使用**AAPS**！
 
 如果你暸解並同意，請點擊“我暸解並同意”按鈕並繼續設定嚮導：
 
@@ -39,9 +39,9 @@ If you don't understand, or can't agree to the end user license agreement please
 
 ### 必要的權限
 
-**AAPS** needs some requirements to operate correctly.
+**AAPS** 需要一些要求才能正常運行。
 
-In the following screens you are asked several questions you have to agree to, to get **AAPS** working. 嚮導本身會解釋為何需要相關設置。
+在接下來的畫面中，你會被問到幾個必須同意的問題，以使**AAPS**正常運作。 嚮導本身會解釋為何需要相關設置。
 
 在此畫面中，我們提供更多背景訊息，將更技術性的內容轉換為常用語系，或解釋其原因。
 
@@ -51,7 +51,7 @@ In the following screens you are asked several questions you have to agree to, t
 
 智慧型手機的電池消耗仍然是需要考慮的因素，因為電池性能仍然相當有限。 因此，智慧型手機上的Android操作系統在允許應用程式運作和消耗CPU時間（因此消耗電池電量）方面有嚴格的限制。
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. 因此，必須讓Android允許一些權限。
+然而，**AAPS** 需要定期運行，_例如_每幾分鐘接收血糖讀值，然後根據你的規範應用算法來決定如何處理你的血糖水平。 因此，必須讓Android允許一些權限。
 
 你可以透過確認設置來完成這一操作。
 
@@ -65,7 +65,7 @@ However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings
 
 如果應用程式希望向你發送通知，Android需要特殊的許可。
 
-While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
+雖然停用通知很方便_例如_來自社群媒體應用程式的通知，但你必須允許**AAPS**向你發送通知。
 
 請點擊“請求許可”按鈕：
 
@@ -86,13 +86,13 @@ While it is a good feature to disable notifications _e.g._ from  social media ap
 
 Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可能在其他應用程式中也見過這一點。 如果你想查看藍牙，通常需要位置權限。
 
-**AAPS** uses bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. 具體細節可能因設置而異。
+**AAPS** 使用藍牙與你的 CGM 和胰島素幫浦通信，如果這些設備是直接由**AAPS** 控制，而不是其他應用程式所使用的。 具體細節可能因設置而異。
 
 請點擊“請求許可”按鈕：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_125924.png)
 
-這很重要。 Otherwise **AAPS** can not work properly at all.
+這很重要。 否則**AAPS**將完全無法正常運作。
 
 點擊“使用應用程式時”：
 
@@ -102,7 +102,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_130002.png)
 
-**AAPS** needs to log information to the permanent storage of your smartphone. 永久儲存意味著即使重啟智慧型手機後，他仍然可用。 其他訊息則會遺失，因為他們沒有儲存到永久儲存中。
+**AAPS** 需要將信息記錄到你的智慧型手機的永久儲存中。 永久儲存意味著即使重啟智慧型手機後，他仍然可用。 其他訊息則會遺失，因為他們沒有儲存到永久儲存中。
 
 請點擊“請求許可”按鈕：
 
@@ -114,7 +114,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 你將被告知需要重新啟動智慧型手機以使更改生效。
 
-Please **don't stop the Setup Wizard now**. 你可以在完成設定嚮導後再進行。
+請**不要現在停止設定嚮導**。 你可以在完成設定嚮導後再進行。
 
 點擊“確定”然後點擊“下一步”按鈕：
 
@@ -123,9 +123,9 @@ Please **don't stop the Setup Wizard now**. 你可以在完成設定嚮導後再
 
 ### 主密碼
 
-As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
+由於**AAPS**的配置包含一些敏感資料（_例如_訪問你的 Nightscout 伺服器的 API_KEY），因此這些資料會通過你在此設置的密碼進行加密。
 
-The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD**. Please make a note of it _e.g._ on Google Drive. Google雲端硬碟是一個不錯的地方，因為他由Google為你進行備份。 你的智慧型手機或電腦可能會崩潰，並且你可能沒有實際副本。 If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+第二句非常重要，請**不要遺失你的主密碼**。 請將其記下來_例如：_在 Google 雲端硬碟上。 Google雲端硬碟是一個不錯的地方，因為他由Google為你進行備份。 你的智慧型手機或電腦可能會崩潰，並且你可能沒有實際副本。 如果你忘記了主密碼，將很難在稍後找回你的個人設定和在**目標**上的進度。
 
 填寫密碼兩次後，請點擊“下一步”按鈕：
 
@@ -164,7 +164,7 @@ The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-### Units (mg/dL <-> mmol/L)
+### 單位 (mg/dL <-> mmol/L)
 
 請選擇你的血糖值是以 mg/dl 還是 mmol/L 為單位，然後點擊“下一步”按鈕：
 
@@ -176,7 +176,7 @@ The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD
 
 你選擇的值只會影響圖表的圖形展示，其他方面不會受到影響。
 
-Your glucose target _e.g._ is configured separately in your profile.
+你的血糖目標_例如：_在你的個人設定中單獨配置。
 
 你的TIR（範圍內時間）分析範圍在你的報告伺服器中單獨配置。
 
@@ -192,15 +192,15 @@ Your glucose target _e.g._ is configured separately in your profile.
 
 如果你目前無法設置，請暫時跳過。 你可以稍後再進行配置。
 
-If you select an item here on the left tick box, on the right you can then ticking the visibility (eye) box, which will place this plugin in the upper menu on the **AAPS** home screen. 如果你在此處配置報告伺服器，請務必選擇顯示可見性。
+如果你在左側勾選此項目，則可以在右側勾選可見性（眼睛）框，這將使此外掛置於**AAPS**主螢幕的上方選單中。 如果你在此處配置報告伺服器，請務必選擇顯示可見性。
 
 在此示例中，我們選擇Nightscout作為報告伺服器，並將進行配置。
 
 ```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
-:class: Note
-Click [here](./Releasenotes.md) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
+:class: 注意
+請點擊[這裡](./Releasenotes.md)查看 **AAPS** 3.2.0.0 的發布說明，其中解釋了頂部選項 **NSClient**（這是「v1」，雖然未明確標註）與第二選項 **NSClient v3** 之間的差異。 
 
-Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
+Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout 監控或發送遠端治療（例如，作為孩子的父母或照顧者使用 **AAPS**），這種情況下請選擇第一個選項「**NSClient**」，直至另行通知。 
 ```
 
 對於Tidepool來說，這更簡單，因為你只需要你的個人登錄訊息。
@@ -223,15 +223,15 @@ Nightscout users should choose **NSClient v3**, unless you want to monitor or se
 
 輸入你的Nightscout存取權杖。 這是你配置的Nightscout伺服器的存取權杖。 沒有這個權杖，無法存取。
 
-If you don't have it at the moment please check the documentation for setting up the reporting server in the **AAPS** documentation.
+如果你目前沒有此文件，請查看**AAPS** 的文件以設置報告伺服器。
 
-After filling in the "**NS access token**" and clicking "OK", please click on the "Synchronization" button:
+在填寫「**NS 存取權杖**」並點擊「確定」後，請按下「同步」按鈕：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_141131.png)
 
 如果你在設定嚮導的前幾步中已經配置了Nightscout，請選擇“上傳資料到NS”。
 
-If you have stored profiles on Nightscout and want to download them to **AAPS**, enable "Receive profile store":
+如果你在 Nightscout 上已存儲個人設定並希望將其下載到**AAPS**，請啟用「接收個人設定」：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_141219.png)
 
@@ -246,9 +246,9 @@ If you have stored profiles on Nightscout and want to download them to **AAPS**,
 
 在這裡，你可以配置如何將資料傳輸到報告伺服器。
 
-Caregivers must enable "use cellular connection" as otherwise the smartphone which serves the dependant/child can not upload data outside of WiFi range _e.g._ on the way to school.
+照顧者必須啟用「使用手機網路連線」，否則提供依賴者/孩子的智慧型手機無法在 WiFi 範圍外上傳資料_例如：_在上學的路上。
 
-Other **AAPS** users can disable the tranfer via cellular connection if they want to save data or battery.
+其他**AAPS**使用者可以停用通過手機網路連線的傳輸，以節省資料或電池。
 
 如果不確定，建議保持所有選項啟用。
 
@@ -258,7 +258,7 @@ Other **AAPS** users can disable the tranfer via cellular connection if they wan
 
 如果你希望在報告伺服器中獲取應用程式啟動的相關訊息，請啟用“紀錄應用啟動到NS”。 這有助於你遠端了解應用程式是否已重新啟動，特別是作為照護者時。
 
-It might be interesting to see if **AAPS** is correctly configured now, but later it is usually not that important to be able to see **AAPS** stopping or starting in Nightscout.
+查看**AAPS**當前是否正確配置可能會很有趣，但稍後通常不太重要能否在 Nightscout 中看到**AAPS**的啟動或停止。
 
 啟用“從錯誤中建立公告”和“從需要碳水化合物警報中建立公告”。
 
@@ -270,7 +270,7 @@ It might be interesting to see if **AAPS** is correctly configured now, but late
 
 ### 患者名稱
 
-Here you can setup your name in **AAPS**.
+在這裡你可以在**AAPS**中設置你的姓名。
 
 這可以是任何名字。 他只是用來區分不同用戶。
 
@@ -282,9 +282,9 @@ Here you can setup your name in **AAPS**.
 
 ### 病人類型
 
-Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. 這對安全至關重要。
+在這裡你選擇你的「患者類型」，這點很重要，因為**AAPS**軟體根據患者的年齡有不同的限制。 這對安全至關重要。
 
-Here is where you also configure the **maximum allowed bolus** for a meal. 也就是說，你在典型餐點中需要的最大注射量。 這是一個安全功能，用於幫助避免在餐前注射時發生意外的過量注射。
+在這裡你也配置**每餐最高允許注射量**。 也就是說，你在典型餐點中需要的最大注射量。 這是一個安全功能，用於幫助避免在餐前注射時發生意外的過量注射。
 
 第二個限制與此類似，但涉及你預期的最大碳水化合物攝入量。
 
@@ -299,8 +299,8 @@ Here is where you also configure the **maximum allowed bolus** for a meal. 也�
 胰島素名稱應該很好暸解。
 
 ```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
-:class: danger
-For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
+:class: 危險
+對於進階使用者或醫學研究，提供使用「自由高峰參數」定義胰島素作用的個性化設定的可能性。 除非你是一位專家，否則請不要使用它，通常預設值對每品牌胰島素運作良好。
 ```
 
 按“下一步”進入下一個螢幕：
@@ -310,7 +310,7 @@ For advanced users or medical studies there is the possibility to define with "F
 
 ### 血糖來源
 
-選擇你使用的血糖來源。 Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+選擇你使用的血糖來源。 請閱讀你的[血糖資料來源](../Getting-Started/CompatiblesCgms.md)的文件。
 
 由於有多個選項可用，因此我們不會在此詳細解釋所有選項的配置。 在這裡我們使用Dexcom G6與BYODA應用程式的示例：
 
@@ -340,12 +340,12 @@ For advanced users or medical studies there is the possibility to define with "F
 請在嘗試輸入以下畫面的設定檔案詳細資訊之前閱讀設定檔案的文件。
 
 ```{admonition} Working profile required - no exceptions here !
-:class: danger
-An accurate profile is necessary to control the safe action of **AAPS**
+:class: 危險
+準確的個人設定對於控制 **AAPS** 的安全作用至關重要
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+需要你已經確定並與醫生討論你的個人設定，並且這一設定已成功通過基礎速率、ISF 和 IC 測試驗證有效！
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+如果一個機器人有錯誤的輸入，它將不斷失敗。 **AAPS** 只能使用所提供的信息。 如果你的個人設定過強，則可能會面臨低血糖風險；如果過弱，則可能會面臨高血糖風險。 
 ```
 
 按“下一步”進入下一個螢幕。 輸入一個“設定檔案名稱”：
@@ -356,12 +356,12 @@ If a robot has an incorrect input it will fail - consistently. **AAPS** can only
 長期來看，如果有需要，你可以擁有多個設定檔案。 這裡我們只建立一個。
 
 ```{admonition} Profile only for tutorial - not for your usage
-:class: information
-The example profile here is only to show you how to enter data.
+:class: 資訊
+這裡的實例個人設定僅顯示如何輸入資料。
 
-It is not intended to be an accurate profile or something very well optimised, because each person's needs are so different.
+它並不打算是一個準確的或非常優化的個人設定，因為每個人的需求差異很大。
 
-Don't use it for actually looping!
+不要用它進行實際循環！
 ```
 
 輸入你的胰島素作用時間（DIA），單位為小時。 然後按“IC”：
@@ -384,9 +384,9 @@ Don't use it for actually looping!
 
 按“TARG”。 輸入你的血糖目標值。
 
-For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
+對於開放循環，此目標範圍可以更寬，否則**AAPS**會持續通知你更改臨時基礎率或其他設定，這可能會很累人。
 
-稍後，對於閉環循環，你通常只會有一個上限和下限值。 That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+稍後，對於閉環循環，你通常只會有一個上限和下限值。 這樣可以使**AAPS**更容易達到目標，並為你提供更好的整體糖尿病控制。
 
 輸入/確認目標值：
 
@@ -448,9 +448,9 @@ For open looping this target can be a wider range, as otherwise **AAPS** notifie
 
 如果你已經在之前的步驟中設置了設定檔案，並且知道如何連線幫浦，現在可以隨時連線他。
 
-Otherwise, leave the Setup Wizard, using the arrow in the top left corner and let **AAPS** first show you some blood glucose values. 你可以隨時返回或使用直接配置選項（不使用嚮導）。
+否則，請離開設置嚮導，使用左上角的箭頭，讓**AAPS**首先向你顯示一些血糖值。 你可以隨時返回或使用直接配置選項（不使用嚮導）。
 
-Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
+請閱讀你[胰島素幫浦](../Getting-Started/CompatiblePumps.md)的文件。
 
 按“下一步”進入下一個螢幕。
 
@@ -470,8 +470,8 @@ Please read the documentation for your [insulin pump](../Getting-Started/Compati
 在初期，你的設定檔案通常不如經驗豐富後好，所以這個功能在初期被停用。 由於在開始時，你的設定檔案通常不如經驗豐富後那麼好，因此該功能在初期被停用。
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
-:class: information
-OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+:class: 資訊
+OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在某些情況下，使用此算法可能更好，但這不是推薦的做法。
 ```
 
 按齒輪查看詳細資訊：
@@ -481,7 +481,7 @@ OpenAPS AMA is the most basic algorithm which does not support micro boluses to 
 
 僅閱讀文本，此處不進行任何更改。
 
-Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
+由於**目標**所施加的限制，你目前無法使用「關閉循環」或「SMB 功能」。
 
 返回並按 "下一步" 以進入下一個螢幕：
 
@@ -505,7 +505,7 @@ Due to the limitations which are imposed by the **Objectives** you can't use eit
 
 ### 開始目標1
 
-你現在進入目標。 The qualification for access to further **AAPS** features.
+你現在進入目標。 獲取更進階**AAPS**功能的資格。
 
 我們從目標1開始，即使此刻我們的設置尚未完全準備好成功完成此目標。
 
@@ -521,9 +521,9 @@ Due to the limitations which are imposed by the **Objectives** you can't use eit
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_144135.png)
 
-You are coming to the home screen of **AAPS**.
+你即將進入**AAPS**的主螢幕。
 
-Here you find the information message in **AAPS** that you set your profile.
+在此你可以找到**AAPS**中設定個人設定的資訊消息。
 
 這是在我們切換到新設定檔案時完成的。
 
@@ -531,6 +531,6 @@ Here you find the information message in **AAPS** that you set your profile.
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_144156.png)
 
-If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
+如果你在任何時候不小心離開設置嚮導，你可以簡單地重新啟動嚮導，或手動更改[AAPS 循環的配置](../SettingUpAaps/ChangeAapsConfiguration.md)。
 
-If your **AAPS** loop is now fully setup, please move on to the next section ["Completing the objectives"](../SettingUpAaps/CompletingTheObjectives.md).
+如果你的**AAPS**循環現在已完全設置，請繼續下一部分[「完成目標」](../SettingUpAaps/CompletingTheObjectives.md)。
