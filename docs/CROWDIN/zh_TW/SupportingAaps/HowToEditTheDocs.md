@@ -18,7 +18,7 @@
 
 （附註：如果你是視覺型學習者，這裡有一個顯示PR工作流程的YouTube視頻[這裡](https://youtu.be/4b6tsL0_kzg)。）
 
-我們的範例是對AndroidAPS文件進行編輯。 這可以在任何Windows PC、Mac等設備上完成。 （任何有互聯網查看的電腦）。
+我們的範例是對AndroidAPS文件進行編輯。 這可以在任何Windows PC、Mac等設備上完成。 （任何有網際網路查看的電腦）。
 
 1. 前往 <https://github.com/openaps/AndroidAPSdocs>，然後在右上角點擊 Fork 來製作自己的儲存庫副本。
 
