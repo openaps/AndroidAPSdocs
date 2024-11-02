@@ -56,7 +56,7 @@ After a sensor change xDrip+ will automatically detect the new sensor and will d
 
 ### Step 4: Configure AndroidAPS (for looping only)
 
-- Select xDrip+ in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 - In xDrip+ select "Libre2 (patched App)" as data source
 - Turn of Smoothing (done in Xdrip+ already)
@@ -91,6 +91,7 @@ If the sensor has been started with a Libreview account logged in, it is also po
 
 In order to switch from the Libre 3 app to Juggluco, you need to force-stop Libre 3 app via Android settings and proceed with Step 1 & 2.
 
+(libre3-experiences-and-troubleshooting)=
 ## Experiences and Troubleshooting
 
 ### Troubleshooting Libre3 -> Juggluco Connection
