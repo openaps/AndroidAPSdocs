@@ -14,7 +14,7 @@ Eski keystore'unuzu veya parolasını artık bulamıyorsanız, aşağıdakileri 
 4. Generate signed apk of new version as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
 5. Telefonunuzdaki önceki AAPS sürümünü kaldırın.
 6. Telefonunuza yeni AAPS sürümünü yükleyin.
-7. [Import settings](../Maintenance/ExportImportSettings.md#restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+7. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
 
    Bunları telefonunuzda bulamazsanız, harici depolama biriminden telefonunuza kopyalayın.
 
@@ -51,7 +51,7 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
     Not: Git ve version arasında bir boşluk ve iki tire vardır!
 
-  * Yukarıdaki ekran görüntüsünde görebileceğiniz gibi, hangi git sürümünün kurulu olduğunu söyleyen bir mesaj almalısınız. In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
+  * Yukarıdaki ekran görüntüsünde görebileceğiniz gibi, hangi git sürümünün kurulu olduğunu söyleyen bir mesaj almalısınız. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
   * Diyen bir mesaj alırsanız
     ```
@@ -59,7 +59,7 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
     ```
     git kurulumunuz doğru değil.
 
-  * [Git kurulumunu kontrol et](../SettingUpAaps/BuildingAaps.md#steps-for-installing-git)
+  * [Git kurulumunu kontrol et](#BuildingAaps-steps-for-installing-git)
 
   * windows'ta ve git yeni kurulduysa, kurulumdan sonra git'i global olarak kullanılabilir hale getirmek için bilgisayarınızı yeniden başlatmanız gerekir
 
@@ -75,6 +75,7 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
   * Android Studio tekrar başlatın.
 
+(troubleshooting-android-studio-check-for-uncommitted-changes)=
 #### Adım 2: Taahhüt edilmemiş değişiklikleri kontrol edin.
 
   * Android Studio'da: soldaki "Commit" sekmesini (1) açın. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
@@ -179,7 +180,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-Bu yanlış bir uyarıdır. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk)) and you will find the generated apk there!
+Bu yanlış bir uyarıdır. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
 
 
 ## Uygulama, derleyici/kotlin uyarılarıyla oluşturuldu
@@ -202,9 +203,9 @@ Bu, Android Studio 3.5.1 ve Windowsa taşınan Java ortamı ile ilgili bir hata 
 
 ## No CGM data is received by AAPS
 
-* Yamalı Dexcom G6 uygulamasını kullanıyorsanız: Bu uygulama eski. Use the [BYODA](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* Yamalı Dexcom G6 uygulamasını kullanıyorsanız: Bu uygulama eski. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../CompatibleCgms/xDrip.md#identify-receiver).
+* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](#xdrip-identify-receiver).
 
 
 ## Uygulama yüklenmedi
@@ -223,7 +224,7 @@ Bu, Android Studio 3.5.1 ve Windowsa taşınan Java ortamı ile ilgili bir hata 
 
 ## Uygulama yüklendi ancak eski sürüm
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Maintenance/UpdateToNewVersion.md#2-update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
 ## Yukarıdakilerin hiçbiri işe yaramadı
 
@@ -235,7 +236,7 @@ Yukarıdaki ipuçlarından hiçbiri yardımcı olmadıysa, uygulamayı sıfırda
 
     Veya yeni bir anahtar deposu kullanabilirsiniz.
 
-3. Build app from scratch as described [here](../SettingUpAaps/BuildingAaps.md#download-the-aaps-code).
+3. Build app from scratch as described [here](#Building-APK-download-AAPS-code).
 
 4. APK'yı başarıyla oluşturduğunuz zaman, telefonunuzdaki mevcut uygulamayı silin, yeni apk'yı telefonunuza aktarın ve yükleyin.
 5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
@@ -249,4 +250,4 @@ Uygulamayı sıfırdan oluşturmanız bile sorununuzu çözmezse, Android Studio
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../SettingUpAaps/BuildingAaps.md#install-android-studio).
+Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
