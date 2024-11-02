@@ -4,6 +4,8 @@
 
 Нет проблем с изменением часового пояса в телефоне, так как в помпе не отслеживается история
 
+(timezone-traveling-danarv2-danars)=
+
 ## DanaRv2 / DanaRS
 
 Эти помпы требуют особого внимания, т. к. AAPS использует историю помпы, но электронный журнал помпы не имеет штампа часового пояса. **Это означает, что если вы просто измените часовой пояс в телефоне, записи будут читаться с различным часовым поясом и произойдет их задвоение.**
@@ -24,7 +26,7 @@
    
    * напр. Vienna -> New York: сдвиг профиля +6 часов
    * напр. Vienna -> Sydney: сдвиг профиля --8 часов
-* Probably not an option if using [patched LibreLink app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Вариант 2: Удалить историю работы помпы
 
@@ -39,6 +41,8 @@
 * измените время на помпе
 * включите телефон
 * позвольте телефону подключиться к помпе и точно подстроить время
+
+(timezone-traveling-insight)=
 
 ## Insight
 
@@ -65,6 +69,8 @@ The [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatica
 Изменения часового пояса не затрагивают историю, их смена может повлиять только на зачение суммарной суточной дозы TDD. Изменение вручную времени на телефоне может вызвать проблемы с историей и активным инсулином IOB. Если вы меняете время вручную, проверьте IOB.
 
 Когда изменяются часовой пояс или время, временная скорость базала TBR будет остановлена.
+
+(time-adjustment-daylight-savings-time-dst)=
 
 ## Корректировки при переходе на летнее/зимнее время (DST)
 
