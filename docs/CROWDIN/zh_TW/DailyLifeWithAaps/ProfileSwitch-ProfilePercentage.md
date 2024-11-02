@@ -1,8 +1,6 @@
-(Profiles-profile-switch)=
-
 # 設定檔切換及設定檔百分比
 
-本節將解釋什麼是**設定檔切換**和**設定檔百分比**。 您可以在[組態建置工具 - 設定檔](../SettingUpAaps/SetupWizard.md#profile)了解如何創建**設定檔**。
+本節將解釋什麼是**設定檔切換**和**設定檔百分比**。 You can learn about how to create a **Profile** at [Config Builder - profile](#setup-wizard-profile).
 
 在開始您的**AAPS**之旅時，您需要創建一個**設定檔**，了解如何執行**設定檔切換**，並學習**AAPS**中**設定檔百分比**的影響。 **設定檔切換**或**設定檔百分比**的功能對於以下情況特別有益：
 
@@ -72,6 +70,8 @@ B. 要啟用**設定檔百分比**：
 **設定百分比**的效果如下表所示：
 
 ![BB6_螢幕擷圖 2024-06-23 001542](https://github.com/openaps/AndroidAPSdocs/assets/137224335/db48f504-2249-4b94-b406-57524fe69322)
+
+(ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
 ## 日夜節律設定百分比的時間調整
 
