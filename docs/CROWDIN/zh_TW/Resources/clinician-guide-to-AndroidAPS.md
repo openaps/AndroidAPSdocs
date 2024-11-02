@@ -43,7 +43,7 @@ AAPS 設計用來透明地追蹤其收集的所有輸入資料、產生的建議
 
 ## AAPS 演算法決策的範例：
 
-AAPS 使用了與 OpenAPS 相同的核心演算法和功能集。 演算法會根據設定和目前情況進行多種預測，代表未來可能發生的不同情景。 在 Nightscout 中，這些顯示為「紫色線條」。 AAPS 使用不同的顏色來區分這些[預測線](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)。 在日誌中，他會描述這些預測中的哪一條和哪個時間範圍驅動了必要的行動。
+AAPS 使用了與 OpenAPS 相同的核心演算法和功能集。 演算法會根據設定和目前情況進行多種預測，代表未來可能發生的不同情景。 在 Nightscout 中，這些顯示為「紫色線條」。 AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). 在日誌中，他會描述這些預測中的哪一條和哪個時間範圍驅動了必要的行動。
 
 ### 這裡是一些紫色預測線的範例，以及他們可能的不同：
 
