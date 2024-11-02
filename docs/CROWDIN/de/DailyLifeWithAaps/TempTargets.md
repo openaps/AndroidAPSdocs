@@ -2,7 +2,7 @@
 
 ## Was sind temporäre Ziele und wie nutzt und richtet man sie ein?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](../SettingUpAaps/YourAapsProfile.md#glucose-targets) for planned activities. **AAPS** verändert dadurch die Insulingaben.
+A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. **AAPS** verändert dadurch die Insulingaben.
 
 Temporary targets can be defined within those boundaries :
 
@@ -62,6 +62,8 @@ Drücke kurz auf die Schaltfläche mit Deinem Zielwert/-bereich, um eines der **
 - Wenn Du die **vordefinierten Werte** anpassen willst, kannst Du *lange* auf den 'Bald essen'-, 'Aktivität'- oder 'Hypo'-Button drücken und dann Zielwert und Dauer verändern.
 - Wenn gerade ein **temporäres Ziel** aktiv ist, wird zusätzlich ein Button 'Abbrechen' angezeigt.
 
+(TempTargets-hypo-temp-target)=
+
 ## Hypo Temp-Target
 
 Das **temporäre Hypo-Ziel** soll **AAPS** helfen durch reduzieren der Indulinzufuhr niedrige Glukosewerte zu vermeiden. Wenn Du erwartest, dass Dein **Glukosewert** bald niedrig sein wird: Normalerweise sollte **AAPS** das lösen können. Die richtigen und getesteten (stabile) **AAPS**-Einstellungen sind dabei allerdings entscheidend. Ein **Temp-Target Hypo** kann frühzeitig einer erwarteten Hypo entgegenwirken und damit **AAPS** durch das geänderte erhöhte Ziel, Insulin reduzieren lassen.
@@ -76,19 +78,23 @@ Manchmal will man die Abgabe von **SMBs** während eines gesetzten erhöhten tem
 
 Hinweis: Wenn Du Kohlenhydrate über den Kohenhydrate-Button eingibst und Dein Glukosewert unter 72 mg/dl bzw. 4 mmol/l liegt, wird in **AAPS** **"Hypo Temp-Target"** (temporäres Hypo-Ziel) automatisch aktiviert.
 
+(TempTargets-activity-temp-target)=
+
 ## Aktivitäten Temp-Target
 
 Vor und während des Trainings benötigst Du möglicherweise ein höheres Ziel, um eine Hypoglykämie während der Aktivität zu verhindern.
 
 Um den Umgang mit dem **temporäres Ziel für Aktivitäten** zu vereinfachen, kannst Du ein für Dich passendes **temporäres Ziel für Aktivitäten** konfigurieren. Indem die Insulinmengen reduziert werden kannst Du Deinen **Glukosewert** anheben, und so das Fallen des **Glukosewertes** verlangsamen und damit eine Hypoglykämie vermeiden.
 
-Menschen, die neu im Umgang mit **AAPS** sind, müssen, um diese Funktion für sich optimal nutzen zu können, möglicherweise experimentieren und ihre persönlichen Standardeinstellungen für ein **temporäre Ziel für Aktivität** finden. Wenn es darum geht, eine stabile Blutzuckerkontrolle während des Trainings zu erreichen, ist jeder ein wenig anders. See also the [sports section in FAQ](../UsefulLinks/FAQ.md#sports). 
+Menschen, die neu im Umgang mit **AAPS** sind, müssen, um diese Funktion für sich optimal nutzen zu können, möglicherweise experimentieren und ihre persönlichen Standardeinstellungen für ein **temporäre Ziel für Aktivität** finden. Wenn es darum geht, eine stabile Blutzuckerkontrolle während des Trainings zu erreichen, ist jeder ein wenig anders. See also the [sports section in FAQ](#FAQ-sports). 
 
 Manche machen einen **Profilwechsel** (ein Profil unter 100% zur reduzierten Insulinabgabe durch **AAPS**) vor und während das **temporäre Ziel für Aktivität** läuft.
 
 Für Fortgeschrittene, Ziel (Objective) 9): Du kannst für **temporäre Ziele** über 100 mg/dl bzw. 5.5 mmol/l *“Hohe temporäre Ziele erhöhen die Sensitivität"* in OpenAPS **SMB** einstellen. **AAPS** reagiert dann empfindlicher (sensibler).
 
 Zusätzlich wird *'Aktiviere SMB bei temporären Zielen oberhalb des regulären Ziels'* deaktiviert, **AAPS** gibt keine **SMBs** ab, auch wenn COB > 0 ist, *'Aktiviere SMB bei aktiven temporären Zielen'-* oder *'SMB immer aktivieren'* aktiviert ist und OpenAPS **SMB** aktiv ist.
+
+(TempTargets-eating-soon-temp-target)=
 
 ## Bald essen Temp-Target
 
@@ -98,7 +104,7 @@ Das ist eine gute Möglichkeit für diejenigen, die nicht 'vorbolen' (und damit 
 
 Im Artikel ['How to do "eating soon" mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) oder [hier](https://diyps.org/tag/eating-soon-mode/) erfährst Du mehr zum „Bald essen“-Modus.
 
-Advanced, [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. Für diese Option muss das **Temporäre Ziel** kleiner als 100mg/dl oder 5,5mmol/l sein.
+Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. Für diese Option muss das **Temporäre Ziel** kleiner als 100mg/dl oder 5,5mmol/l sein.
 
 ## Wie kann ich SMB während eines Temp-Targets deaktivieren?
 
