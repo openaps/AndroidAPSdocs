@@ -18,6 +18,8 @@ Duyarlılık, Oref1 ile aynı şekilde hesaplanır ancak geçmişe zaman belirte
 
 Duyarlılık, sapmalardan ağırlıklı bir ortalama olarak hesaplanır. Geçmişe zaman belirtebilirsiniz. Daha yeni sapmalar daha yüksek ağırlığa sahiptir. Minimum karbonhidrat emilimi, tercihlerden maksimum karbonhidrat emilim süresinden hesaplanır. Bu algoritma, hassasiyet değişikliklerini takip etmede en hızlıdır.
 
+(SensitivityDetectionAndCob-sensitivity-oref1)=
+
 ### Oref1 duyarlılık
 
 Duyarlılık, geçmişteki 8 saatlik verilerden veya 8 saatten az ise son set değişikliğinden itibaren hesaplanır. Karbonhidratlar (emilmemişse) tercihlerde belirtilen süreden sonra kesilir. Yalnızca Oref1 algoritması, bildirilmemiş öğünleri (UAM) destekler. Bu, tespit edilen bildirilmemiş öğünlü zamanların duyarlılık hesaplamasının dışında tutulduğu anlamına gelir. Yani UAM ile SMB kullanıyorsanız, düzgün çalışması için Oref1 algoritmasını seçmelisiniz. Daha fazla bilgi için [OpenAPS Oref1 dokümantasyonunu](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) okuyun.
