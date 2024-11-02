@@ -14,7 +14,7 @@
 4. Generate signed apk of new version as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
 5. Деинсталлируйте предыдущую версию AAPS.
 6. Установите новую версию AAPS на телефон.
-7. [Import settings](../Maintenance/ExportImportSettings.md#restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+7. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
 
    Если не можете найти их, скопируйте из внешнего накопителя на ваш телефон.
 
@@ -51,7 +51,7 @@
 
     Примечание: Между git и version есть пробел и два дефиса!
 
-  * Вы получите сообщение о том, какая версия git установлена, как на снимке экрана выше. In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
+  * Вы получите сообщение о том, какая версия git установлена, как на снимке экрана выше. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
   * Если вы получите сообщение
     ```
@@ -59,7 +59,7 @@
     ```
     то Git установлен неправильно.
 
-  * [Проверьте установку git](../SettingUpAaps/BuildingAaps.md#steps-for-installing-git)
+  * [Проверьте установку git](#BuildingAaps-steps-for-installing-git)
 
   * после установки Git в Windows и, нужно перезапустить компьютер или хотя бы раз выйти и снова войти в систему, чтобы сделать git глобально доступным
 
@@ -75,6 +75,7 @@
 
   * Перезапустите Android Studio.
 
+(troubleshooting-android-studio-check-for-uncommitted-changes)=
 #### Шаг 2: Проверьте незафиксированные изменения.
 
   * В Android Studio откройте вкладку Commit (1) слева. ![Вкладка Commit: Незафиксированные изменения](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
@@ -179,7 +180,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ![APK создан с 0 вариантами сборки](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-Это неверное предупреждение. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk)) and you will find the generated apk there!
+Это неверное предупреждение. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
 
 
 ## Приложение было создано с предупреждениями компилятора/kotlin
@@ -202,9 +203,9 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ## AAPS не получает данные мониторинга CGM
 
-* Если вы используете пропатченное приложение Dexcom G6: это приложение устарело. Use the [BYODA](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* Если вы используете пропатченное приложение Dexcom G6: это приложение устарело. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../CompatibleCgms/xDrip.md#identify-receiver).
+* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](#xdrip-identify-receiver).
 
 
 ## Приложение не установлено
@@ -223,7 +224,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ## Приложение установлено, но старая версия
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Maintenance/UpdateToNewVersion.md#2-update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
 ## Ничего из вышеперечисленного не сработало
 
@@ -235,7 +236,7 @@ If you built the app successfully, transferred it to your phone and installed it
 
     Или просто создайте новый файл хранения ключей.
 
-3. Build app from scratch as described [here](../SettingUpAaps/BuildingAaps.md#download-the-aaps-code).
+3. Build app from scratch as described [here](#Building-APK-download-AAPS-code).
 
 4. Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на телефон и установите.
 5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
@@ -249,4 +250,4 @@ If you built the app successfully, transferred it to your phone and installed it
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../SettingUpAaps/BuildingAaps.md#install-android-studio).
+Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
