@@ -8,7 +8,7 @@ Tyto pokyny jsou pro nastavení pumpy Accu-Chek Combo pomocí nového ovladače 
 
 * Roche Accu-Chek Combo (jakýkoliv firmware, funguje se všemi).
 * Zařízení Smartpix nebo Realtyme spolu s 360 konfiguračním softwarem pro nastavení pumpy. (Roche poskytuje zařízením Smartpix a konfigurační software zdarma svým zákazníkům na vyžádání.)
-* Kompatibilní telefon. Android 9 (Pie) nebo novější je nutností. Pokud používáte LineageOS, minimální podporovaná verze je 16.1. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
+* Kompatibilní telefon. Android 9 (Pie) nebo novější je nutností. Pokud používáte LineageOS, minimální podporovaná verze je 16.1. See [release notes](#maintenance-android-version-aaps-version) for details.
 * Aplikace AndroidAPS nainstalovaná v telefonu.
 
 Některé telefony mohou pracovat lépe než jiné v závislosti na jejich kvalitě podpory technologie Bluetooth a na tom, zda mají doplňkové, velmi agresivní, metody úspory energie. Seznam telefonů lze nalézt v dokumentu [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). Uvědomte si, že toto není úplný seznam a odráží osobní zkušenosti uživatelů. Doporučuje se také sdílet své zkušenosti a pomáhat tak ostatním (tyto projekty jsou o tom, jak si navzájem pomáhat).
