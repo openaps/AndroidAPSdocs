@@ -14,6 +14,8 @@ Du kannst den öffentlichen Zugang zu Deinen Nightscout-Daten verweigern, indem 
 
 Das Nightscout `API_SECRET` ist das Hauptpasswort für Deinen Nightscout-Server, mache es keinesfalls öffentlich zugänglich.
 
+(Nightscout-aaps-settings)=
+
 ### AAPS settings
 
 Du kannst AAPS so einstellen, dass Nightscout-Befehle akzeptiert werden (Profiländerungen, Behandlungsparameter, ...) oder dies vollständig ausschalten.
@@ -40,7 +42,7 @@ Insulineingaben werden nur zu Kalkulationszwecken (wie auch bei "Bolus nur erfas
 
 ### Weitere Sicherheitseinstellungen
 
-Keep your phone up to date as described in [safety first](../Getting-Started/PreparingForAaps.md#safety-first).
+Keep your phone up to date as described in [safety first](#preparing-safety-first).
 
 (Nightscout-manual-nightscout-setup)=
 
