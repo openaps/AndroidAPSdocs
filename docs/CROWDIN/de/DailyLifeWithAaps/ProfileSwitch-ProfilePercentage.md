@@ -1,8 +1,6 @@
-(Profiles-profile-switch)=
-
 # Profilwechsel & Prozentuale Profilanpassung
 
-This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn about how to create a **Profile** at [Config Builder - profile](../SettingUpAaps/SetupWizard.md#profile).
+This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn about how to create a **Profile** at [Config Builder - profile](#setup-wizard-profile).
 
 When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. Die Funktionen **Profilwechsel** oder **Prozentsatz des Profils** (anteiliges Profil) können Dir in den folgenden Situationen das Leben einfacher machen:
 
@@ -72,6 +70,8 @@ Nach der Auswahl passt **AAPS** die Basalrate entsprechend an, und wird von da a
 Die Wirkung einer prozentualen **Profil**anpassung wird in der unten stehenden Tabelle zusammengefasst:
 
 ![BB6_Screenshot 2024-06-23 001542](https://github.com/openaps/AndroidAPSdocs/assets/137224335/db48f504-2249-4b94-b406-57524fe69322)
+
+(ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
 ## Zeitliche Verschiebung des prozentual angepassten zirkadianen Profils
 
