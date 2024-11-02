@@ -23,8 +23,9 @@ Screenshots from **AAPS** of an _example_ profile are shown in below.
 
 The duration of insulin action is set to a single value in **AAPS**, because your pump will continually infuse the same type of insulin. 
 
-In combination with the [insulin type](../SettingUpAaps/ConfigBuilder.md#insulin), this will result in the [insulin profile](../DailyLifeWithAaps/AapsScreens.md#insulin-profile). Read more there to help you define a proper DIA.
+In combination with the [insulin type](#Config-Builder-insulin), this will result in the [insulin profile](#AapsScreens-insulin-profile). Read more there to help you define a proper DIA.
 
+(profile-glucose-targets)=
 ## Glucose targets
 
 The **figure below** shows an example of how the DIA and glucose targets could be set in an **AAPS** profile.

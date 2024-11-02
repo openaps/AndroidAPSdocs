@@ -7,5 +7,5 @@
 
 -   Start X1 sensor
 
-- Select Syai Tag in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select Syai Tag in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 

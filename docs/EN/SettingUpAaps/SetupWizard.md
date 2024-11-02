@@ -198,11 +198,10 @@ In this example we select Nightscout as reporting server, and will configure it.
 
 ```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
 :class: Note
-Click [here](./Releasenotes.md) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
+Click [here](../Maintenance/ReleaseNotes.md) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
 
 Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
 ```
-
 For Tidepool it is even simpler, as you only need your personal login information.
 
 After making your selection, please press the cogwheel button next to the item you selected :
@@ -333,6 +332,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
+(setup-wizard-profile)=
 ### Profile
 
 Now we are entering a very important part of the Setup Wizard.
