@@ -5,7 +5,7 @@
 AAPS 支援多種胰島素幫浦。  以下列表顯示目前支援的設備，並指示**AAPS**是使用你的手機的本地藍牙功能與幫浦通訊，還是需要括號中的Rileylink相容設備。
 
 - [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)（藍牙；舊驅動程式使用附加的 Ruffy 應用程序 - 參見 [Accu-Chek Combo 基本用法提示](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)）
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (藍牙; 新驅動程式，從[AndroidAPS v.3.2](../Maintenance/ReleaseNotes.md#version-3200-dedicated-to-philoul) 開始可用 - 另請參閱[Accu-Chek Combo 基本使用提示](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; new driver, available starting with [AndroidAPS v.3.2](#version3200) - see also [Accu-Chek Combo Tips for Basic usage](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (藍牙)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (藍牙)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (藍牙)
@@ -22,6 +22,7 @@ AAPS 支援多種胰島素幫浦。  以下列表顯示目前支援的設備，�
 
 可與AAPS配合使用的其他幫浦的狀態詳細資訊列在[未來（可能）幫浦](../CompatiblePumps/Future-possible-Pump-Drivers.md)頁面上。
 
+(CompatiblePumps-additional-communication-device)=
 ## 附加通訊設備
 
 如果沒有額外的通訊設備，則胰島素幫浦與**AAPS**之間的通訊基於 Android 的內建藍牙功能，不需要額外的通訊設備來轉換通訊協議。
