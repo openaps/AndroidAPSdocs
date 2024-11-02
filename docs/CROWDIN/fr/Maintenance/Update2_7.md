@@ -2,13 +2,13 @@
 
 - Le code du programme a été changé de façon significative lors du passage à AAPS 2.7.
 - Par conséquent, il est important de faire des changements ou de vérifier les paramètres après la mise à jour.
-- Please see [release notes](ReleaseNotes.md#version-270) for details on new and extended features.
+- Please see [release notes](#Releasenotes-version-2-7-0) for details on new and extended features.
 
 ## Vérifier la source de glycémie
 
 - Vérifiez si la source de glycémie est correcte après la mise à jour.
 - Especially when using [xDrip+](../CompatibleCgms/xDrip.md) it might happen, that BG source is changed to Dexcom app (patched).
-- Open [Config builder](../SettingUpAaps/ConfigBuilder.md#bg-source) (hamburger menu on top left side of home screen)
+- Open [Config builder](#Config-Builder-bg-source) (hamburger menu on top left side of home screen)
 - Faites défiler vers le bas jusqu'à "Source des glycémies".
 - Sélectionnez la bonne source de glycémie si des changements sont nécessaires.
 
@@ -17,8 +17,8 @@
 ## Terminer les objectifs
 
 - AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for [automation](../DailyLifeWithAaps/Automations.md).
-- You have to finish exam ([objective 3 and 4](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf).
-- If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf).
+- You have to finish exam ([objective 3 and 4](#objectives-objective3)) in order to complete [objective 11](#objectives-objective11).
+- If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start [objective 11](#objectives-objective11).
 - Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 ## Définir le mot de passe principal
@@ -39,7 +39,7 @@
 - Assurez-vous de stocker vos paramètres exportés non seulement sur votre téléphone, mais également dans au moins un autre endroit sûr (votre pc, stockage cloud...).
 - Si vous construisez l'apk AAPS 2.7 avec le même fichier de clés que dans les versions précédentes, vous pouvez installer la nouvelle version sans supprimer la version précédente.
 - Tous les paramètres ainsi que les objectifs terminés resteront tels qu'ils étaient dans la version précédente.
-- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore).
+- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](#troubleshooting_androidstudio-lost-keystore).
 
 ## Autosens (un indice - aucune action nécessaire)
 
@@ -53,8 +53,8 @@
 - Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 - Faites défiler vers le bas et cliquez sur triangle à côté de "Dana RS".
 - Cliquez sur "Mot de passe pompe (v1 uniquement)"
-- Enter pump password ([Default password](../CompatiblePumps/DanaRS-Insulin-Pump.md#default-password) is different depending on firmware version) and click OK.
+- Enter pump password ([Default password](#DanaRS-Insulin-Pump-default-password) is different depending on firmware version) and click OK.
 
 ![Set Dana RS password](../images/DanaRSPW.png)
 
-To change password on Dana RS follow instructions on [DanaRS page](../CompatiblePumps/DanaRS-Insulin-Pump.md#change-password-on-pump).
+To change password on Dana RS follow instructions on [DanaRS page](#DanaRS-Insulin-Pump-change-password-on-pump).
