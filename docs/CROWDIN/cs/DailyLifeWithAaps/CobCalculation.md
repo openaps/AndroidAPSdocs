@@ -26,7 +26,9 @@ Carbs will also be absorbed via the methods described below based on which sensi
 
 Unabsorbed carbs are cut off after specified time:
 
-![Oref1](../images/cob_oref0_orange_II.png)![Screenshot 2024-10-05 161009](https://github.com/user-attachments/assets/e4eb93b2-bc93-462d-b4d6-854bb9264953)
+![Oref1](../images/cob_oref0_orange_II.png)
+
+![Screenshot 2024-10-05 161009](../images/cob_oref0_orange_I.png)
 
 
 ## Carbs Sensitivity - WeightedAverage
@@ -46,7 +48,7 @@ If minimal carbs absorption (min_5m_carbimpact) is used instead of value calcula
 
 Ordinarily __AAPS__ detects carb absorption through **BG** deviations. Incase the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
 
-![Pokyn pro chybnou hodnotu COB](../images/Calculator_SlowCarbAbsorption.png)
+![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
 
 In the screenshot above, 41% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
 
