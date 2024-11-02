@@ -86,7 +86,7 @@ AAPS 的“核心”是一個你自己建置的**應用程式**。 這裡有詳�
 **AAPS** 相對於商業系統的一個重大優勢是，關注者可以透過認證的簡訊（SMS）指令或應用程式（如 [Nightscout](https://nightscout.github.io/) 或 AAPSClient）向 **AAPS** 系統發送多種指令。 第1型糖尿病兒童的父母們廣泛使用AAPS。 例如，在遊樂場時，你可以透過自己的手機為孩子的點心提前注射，而孩子則繼續玩耍。 系統可透過不同裝置（_如_ Fitbit）進行監控，發送基本指令（_如_ Samsung Galaxy watch 4），甚至可以使用高階智慧型手錶(**5**（_如_ LEMFO LEM14）運作整個 AAPS 系統。 在這種情況下，你不需要使用手機運作AAPS。 隨著手錶的電池壽命提高和技術變得更加穩定，這最後一個選項可能會變得越來越具吸引力。
 
 #### 6) **開放的應用程式介面，無商業限制**
-除了使用開源方法外，允許隨時查看**AAPS**的程式碼，提供開放編程界面的一般原則也讓其他開發人員有機會貢獻新想法。 **AAPS** 與 Nightscout 緊密整合。 這加快了發展，讓用戶可以添加功能，使得與糖尿病的生活更加方便。 這類整合的良好範例包括 [Nightscout](https://nightscout.github.io/)、[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)、[Xdrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/)、[M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki?fbclid=IwAR1pupoCy-2GuXLS7tIO8HRkOC_536YqSxTK7eF0UrKkM1PuucFYRyPFvd0) 等。 開源開發者與商業系統開發者之間的對話持續進行。 許多 DIY 創新逐漸被商業系統採用，儘管開發速度較慢，這在一定程度上是因為不同公司的系統（如幫浦、應用程式、傳感器等）之間的介面需要謹慎協商和授權。 這也可能減緩創新，這些創新對患者（或一小部分特定需求的患者）很方便，因為這些創新無法帶來顯著的利潤。
+除了使用開源方法外，允許隨時查看**AAPS**的程式碼，提供開放的程式介面這一做法，也讓其他開發者有機會貢獻新想法。 **AAPS** 與 Nightscout 緊密整合。 這加快了發展，讓用戶可以添加功能，使得與糖尿病的生活更加方便。 這類整合的良好範例包括 [Nightscout](https://nightscout.github.io/)、[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)、[Xdrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/)、[M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki?fbclid=IwAR1pupoCy-2GuXLS7tIO8HRkOC_536YqSxTK7eF0UrKkM1PuucFYRyPFvd0) 等。 開源開發者與商業系統開發者之間的對話持續進行。 許多 DIY 創新逐漸被商業系統採用，儘管開發速度較慢，這在一定程度上是因為不同公司的系統（如幫浦、應用程式、傳感器等）之間的介面需要謹慎協商和授權。 這也可能減緩創新，這些創新對患者（或一小部分特定需求的患者）很方便，因為這些創新無法帶來顯著的利潤。
 
 #### 7) **詳細的應用程式介面**
 透過 **AAPS**，你可以輕鬆追蹤幫浦胰島素數值、套管使用時間、傳感器時間、幫浦電池時間、活性胰島素量_等等_。 許多操作可以直接在 **AAPS** 應用中完成（如幫浦注射、幫浦中斷等），無需在幫浦本身上操作，這樣幫浦可以一直放在你的口袋或腰帶上。
@@ -108,7 +108,7 @@ AAPS 的“核心”是一個你自己建置的**應用程式**。 這裡有詳�
 
 ## AAPS 與 MDI 和開環系統相比如何？
 
-每日多次注射 （a）（MDI，見下方**圖2**）通常包括每天注射一次長效胰島素（例如Tresiba），並在用餐時間或進行矯正時注射快速作用的胰島素（例如Novorapid、Fiasp）。 開環幫浦（b）使用幫浦以預先設定的速率輸送速效胰島素作為基礎率，然後在用餐或進行矯正時透過幫浦進行注射。 閉環系統（c）的基本原理是，應用程式使用傳感器的血糖資料來指導幫浦，在預測低血糖時停止胰島素輸送，並在血糖上升且預測過高時提供額外的胰島素。 雖然這個圖表與現實生活相比有所簡化，但他主要在展示這些方法的關鍵區別。 使用這三種方法中的任何一種都可以實現出色的血糖控制。
+每日多次注射 （a）（MDI，見下方**圖2**）通常包括每天注射一次長效胰島素（例如Tresiba），並在用餐時間或進行矯正時注射快速作用的胰島素（例如Novorapid、Fiasp）。 開環幫浦（b）是指使用幫浦以預先設定的速率持續注入速效胰島素作為基礎速率，並在用餐時間或進行修正時透過幫浦進行追加劑量。 閉環系統（c）的基本原理是，應用程式使用傳感器的血糖資料來指導幫浦，在預測低血糖時停止胰島素輸送，並在血糖上升且預測過高時提供額外的胰島素。 雖然這個圖表與現實生活相比有所簡化，但他主要在展示這些方法的關鍵區別。 使用這三種方法中的任何一種都可以實現出色的血糖控制。
 
 ![21-06-23 AAPS 血糖 MDI 等等](../images/basic-overview-mdi-open-and-closed-loop.png)
 
