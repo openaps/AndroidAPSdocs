@@ -21,10 +21,6 @@ Pagrindiniame ekrane atkreipkite dėmesį į angliavandenius skliausteliuose AAO
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
-Ateities angliavandeniai Terapijos skirtuke žymimi tamsiai oranžine spalva:
-
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
