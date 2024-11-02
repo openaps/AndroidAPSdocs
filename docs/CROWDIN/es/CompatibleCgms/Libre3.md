@@ -56,7 +56,7 @@ Después de un cambio de sensor, xDrip+ detectará automáticamente el nuevo sen
 
 ### Paso 4: Configurar AndroidAPS
 
-- Select xDrip+ in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 - If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
 - Desactiva el suavizado (ya activado en xDrip+)
@@ -91,6 +91,7 @@ Si el sensor se ha iniciado con una cuenta de Libreview conectada, también es p
 
 Para cambiar de la aplicación Libre 3 a Juggluco, necesitas forzar la detención de la aplicación Libre 3 a través de la configuración de Android y luego proceder con el Paso 1 & 2.
 
+(libre3-experiences-and-troubleshooting)=
 ## Experiences and Troubleshooting
 
 ### Resolución de problemas de la conexión entre Libre3 -> Juggluco
