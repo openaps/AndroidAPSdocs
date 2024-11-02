@@ -54,7 +54,7 @@
 
 ## Настройки на AAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../SettingUpAaps/Preferences.md#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](#Preferences-advanced-settings-nsclient)).
 
 ![Снимок экрана настроек Insight](../images/Insight_settings.png)
 
@@ -122,7 +122,7 @@
 
 * Прошивка 1.х: нет вибрации конструктивно.
 * Прошивка 2.х: вибрация не может быть отключена.
-* Прошивка 3.х: AAPS подает болюс беззвучно. (minimum [version 2.6.1.4](../Maintenance/ReleaseNotes.md#version-2614))
+* Прошивка 3.х: AAPS подает болюс беззвучно. (minimum [version 2.6.1.4](#Releasenotes-version-2-6-1-4))
 
 Версию прошивки можно найти через меню.
 
@@ -150,4 +150,4 @@
 
 ## Пересечение часовых поясов с помпой Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-insight).
