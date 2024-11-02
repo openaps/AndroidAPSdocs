@@ -18,6 +18,7 @@ Dans un avion, un pilote automatique ne fait pas tout le travail du pilote humai
 
 ![image](../images/autopilot.png)
 
+(Introduction-what-does-hybrid-closed-loop-mean)=
 ## Que signifie "boucle fermée hybride" ?
 
 La meilleure solution pour le diabète de type 1 serait un « traitement fonctionnel » (probablement un implant de cellules pancréatiques protégées du système immunitaire). En attendant son arrivée, un pancréas artificiel « boucle fermée complète » serait probablement le meilleur choix. Il s'agit d'un système technologique qui n'a besoin d'aucune entrée utilisateur (comme les bolus d'insuline pour les repas, ou l'annonce d'une activité physique), avec une bonne régulation des taux de glycémie. Pour le moment, il n'existe pas de systèmes largement disponibles qui soient en boucle fermée « complète », ces systèmes ont tous besoin de quelques informations entrées par l'utilisateur. Les systèmes actuellement disponibles sont appelés boucles fermées « hybrides », car ils utilisent une combinaison de technologie automatisée et d’informations entrées par l'utilisateur.
@@ -188,7 +189,7 @@ Si une attaque malveillante était effectuée contre votre pompe à insuline, ce
 
 #### Considérations de sécurité en lien avec l'amélioration trop rapide du contrôle de la glycémie
 
-Une baisse rapide de l'HbA1c et un meilleur contrôle de la glycémie paraissent attirants. Cependant, faire baisser les niveaux moyens de glucose sanguin _trop rapidement_ en démarrant un système de boucle fermée quel qu'il soit, peut causer des dommages permanents, y compris aux yeux, et une neuropathie douloureuse qui ne disparaîtra jamais. Ces atteintes peuvent être évitées simplement en baissant plus lentement les niveaux. Si vous avez actuellement un taux d'HbA1c élevé et que vous passez à AAPS (ou à tout autre système en boucle fermée), veuillez discuter de ce risque potentiel avec votre équipe médicale avant de commencer, et convenez d'un plan de mise en place avec elle. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](../Getting-Started/PreparingForAaps.md#safety-first).
+Une baisse rapide de l'HbA1c et un meilleur contrôle de la glycémie paraissent attirants. Cependant, faire baisser les niveaux moyens de glucose sanguin _trop rapidement_ en démarrant un système de boucle fermée quel qu'il soit, peut causer des dommages permanents, y compris aux yeux, et une neuropathie douloureuse qui ne disparaîtra jamais. Ces atteintes peuvent être évitées simplement en baissant plus lentement les niveaux. Si vous avez actuellement un taux d'HbA1c élevé et que vous passez à AAPS (ou à tout autre système en boucle fermée), veuillez discuter de ce risque potentiel avec votre équipe médicale avant de commencer, et convenez d'un plan de mise en place avec elle. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](#preparing-safety-first).
 
 #### Sûreté médicale autour des dispositifs, consommables et autres médicaments
 
@@ -196,7 +197,7 @@ Utilisez une pompe à insuline et un capteur de glycémie approuvés par la FDA 
 
 Utilisez du matériel d'origine pour les applicateurs, cathéters et réservoirs d'insuline, approuvés par le fabricant de votre pompe et de votre MGC. L'utilisation de consommables non testés ou modifiés peut entraîner une imprécision du MGC et des erreurs de dosage de l'insuline. L'insuline peut s'avérer très dangereuse lorsqu'elle est mal dosée - ne jouez pas avec votre vie en bricolant votre matériel.
 
-Ne prenez pas d'inhibiteurs de SGLT-2 (gliflozines) lorsque vous utilisez **AAPS** car il est impossible de calculer la manière dont ils font baisser la glycémie. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](../Getting-Started/PreparingForAaps.md#safety-first).
+Ne prenez pas d'inhibiteurs de SGLT-2 (gliflozines) lorsque vous utilisez **AAPS** car il est impossible de calculer la manière dont ils font baisser la glycémie. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](#preparing-safety-first).
 
 (introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
 ## Comment puis-je aborder AAPS avec mon équipe médicale ?
