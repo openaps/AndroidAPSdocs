@@ -203,6 +203,8 @@ AAPS 提供以下複雜功能：
   * *無*：停用 AAPS 複雜功能的點擊操作
 * **複雜功能中的 Unicode**（預設`開`）：當`開`時，複雜功能將使用 Unicode 字符來顯示圖示，如`Δ`（變化量）、`⁞`（垂直點分隔符）或`⎍`（基礎速率圖示）。 他們的渲染取決於字體，這可能非常特定於手錶外觀。 如果自訂手錶外觀使用的字體不支援這些圖示，則可以將此選項設置為`關`，以避免圖形故障。
 
+(WearOsSmartwatch-wear-os-tiles)=
+
 ## Wear OS Tiles(資訊方塊)
 
 Wear OS Tiles 提供用戶快速查看資訊和操作的便捷方式。 這些 Tiles 僅在運作 Wear OS 版本 2.0 及更高版本的 Android 智慧型手錶上可用。
@@ -242,11 +244,11 @@ Tiles 與任何手錶外觀「並存」使用。 這些Tiles會在所有錶面�
 
 ![Wear 操作 Tile，示例計算機](../images/wear_actions.png)
 
-[1] 透過 Wear OS 選單，將「計算機百分比」選項設置為「開」，以便在注射計算機中顯示百分比輸入。 預設百分比是根據手機設定在「首頁總覽」部分的 [「傳送這部分的注射嚮導結果 %」](../SettingUpAaps/Preferences.md#deliver-this-part-of-bolus-wizard-result) 當使用者未提供百分比時，將使用手機的預設值。 透過手機應用程式的「偏好設定」-「嚮導設置」配置注射計算機的其他參數。
+[1] 透過 Wear OS 選單，將「計算機百分比」選項設置為「開」，以便在注射計算機中顯示百分比輸入。 The default percentage is based on the phone settings in the "Overview" section ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result) When the user does not provide a percentage, the default value from the phone is used. 透過手機應用程式的「偏好設定」-「嚮導設置」配置注射計算機的其他參數。
 
 ### AAPS（臨時目標）Tile
 
-臨時目標 Tile 可以根據 AAPS 手機預設請求臨時目標。 通過手機應用程式設定配置預設時間和目標，前往"偏好設定"、"首頁總覽"，["預設臨時目標"](../SettingUpAaps/Preferences.md#default-temp-targets)，並為每個預設設置持續時間和目標。 透過 Tile 設置配置在 Tile 上可見的操作。 長按 Tile 以顯示配置選項並選擇 1 到 4 個選項：
+臨時目標 Tile 可以根據 AAPS 手機預設請求臨時目標。 Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](#Preferences-default-temp-targets) and set the duration and targets for each preset. 透過 Tile 設置配置在 Tile 上可見的操作。 長按 Tile 以顯示配置選項並選擇 1 到 4 個選項：
 
 * **運動**；適用於運動
 * **低血糖**；在低血糖治療期間提高目標
@@ -258,7 +260,7 @@ Tiles 與任何手錶外觀「並存」使用。 這些Tiles會在所有錶面�
 
 ### AAPS(快速嚮導)Tile
 
-快速嚮導圖磚可以容納1到4個快速嚮導動作按鈕，這些按鈕由手機應用程式[2]定義。 請參閱 [快速嚮導](../SettingUpAaps/Preferences.md#quick-wizard)。 你可以設定標準餐點（碳水化合物及注射計算方式）依據一天中的時間顯示在圖磚上。 非常適合用於一天中最常食用的餐點/點心。 你可以指定快速嚮導按鈕是否會顯示在手機、手錶或兩者。 請注意，手機一次只能顯示一個快速嚮導按鈕。 快速嚮導設置還可以指定注射的自訂胰島素百分比。 自訂百分比可讓你變化，例如點心 120%、緩慢吸收的早餐 80% 和低血糖處理用糖點心 0%
+快速嚮導圖磚可以容納1到4個快速嚮導動作按鈕，這些按鈕由手機應用程式[2]定義。 See [QuickWizard](#Preferences-quick-wizard). 你可以設定標準餐點（碳水化合物及注射計算方式）依據一天中的時間顯示在圖磚上。 非常適合用於一天中最常食用的餐點/點心。 你可以指定快速嚮導按鈕是否會顯示在手機、手錶或兩者。 請注意，手機一次只能顯示一個快速嚮導按鈕。 快速嚮導設置還可以指定注射的自訂胰島素百分比。 自訂百分比可讓你變化，例如點心 120%、緩慢吸收的早餐 80% 和低血糖處理用糖點心 0%
 
 ![可穿戴裝置動作圖磚與手機配置](../images/quickwizard_watch_phone.png)
 
@@ -328,6 +330,8 @@ Wear OS 手錶是非常耗電且又受限的裝置。 手錶機殼的尺寸限�
 * 有時候重新同步應用程式到手錶上是有幫助的，因為他本身的同步速度可能有點慢：Android Wear > 齒輪圖示 > 手錶名稱 > 重新同步應用程式。
 * 在開發者選項中啟用 ADB 偵錯（手錶上），透過 USB 連線手錶，並在 Android Studio 中啟動 Wear 應用程式。
 * 如果小工具不更新資料，首先檢查 AAPS 錶盤是否正常運作。
+
+(Watchfaces-garmin)=
 
 ## Garmin
 
