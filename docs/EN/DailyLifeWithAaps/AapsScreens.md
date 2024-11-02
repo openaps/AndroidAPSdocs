@@ -73,18 +73,18 @@ The greyish block in the middle shows minutes since last reading and changes sin
 ![Loop status](../images/Home2020_LoopStatus.png)
 
 On the right side, an icon shows the loop status:
-* Green circle = loop running
-* Green circle with dotted line = [low glucose suspend (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-* Red circled = loop disabled (not working permanently)
-* Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-* Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-* Orange circle = super bolus running - remaining time is shown below icon
-* Blue circle with dotted line = open loop
+1. Green circle = loop running
+2. Green circle with dotted line = [low glucose suspend (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+3. Red circled = loop disabled (not working permanently)
+4. Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
+5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
+6. Orange circle = super bolus running - remaining time is shown below icon
+7. Blue circle with dotted line = open loop
 
 Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
 
    * If short press on Loop icon, a validation is required after selection in Loop Dialog
-   
+
    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
 #### BG warning sign
@@ -139,15 +139,15 @@ Up to 30h hours are taken into accord for **AAPS** calculations. So even after y
 ![Section D](../images/Home2020_TBR.png)
 
 **Syringe**: insulin on board (IOB) - amount of active insulin inside your body
-* The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
-* IOB may be negative if there have recently been periods of reduced basal.
-* Press the icon to see the split of bolus and basal insulin
-   
-* **Grain**: [carbs on board (COB)](CobCalculation) - yet unabsorbed carbs you have eaten before
+1. The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
+   - IOB may be negative if there have recently been periods of reduced basal.
+   - Press the icon to see the split of bolus and basal insulin
+
+2. **Grain**: [carbs on board (COB)](CobCalculation) - yet unabsorbed carbs you have eaten before
   The icon pulses red if carbs are required (see [below](#carbs-required))
-* **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%)
+3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%)
    * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-* **Arrows up & down**: indicating actual [Autosens](KeyAapsFeatures#autosens) status (enabled or disabled) and value is shown below icon
+4. **Arrows up & down**: indicating actual [Autosens](KeyAapsFeatures#autosens) status (enabled or disabled) and value is shown below icon
 
 #### Carbs required
 
@@ -461,10 +461,6 @@ Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically se
 
 Thresholds can be set in [Preferences > Overview > Status lights](../SettingUpAaps/Preferences.md#status-lights).
 
-If the sensor level is the same as the phone battery level, your xDrip+ version is probably too old and needs an update. (Needs xDrip+ nightly build Dec. 10, 2020 or newer.)
-
-   ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
-
 ### Careportal - section O
 
 BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal---section-n).
@@ -477,7 +473,7 @@ Section O reflects the Nightscout careportal. So exercise, announcement and ques
 
 #### History Browser
 
-Allows you to ride back in **AAPS** history.
+Allows you to ride back in **AAPS** [history](../Maintenance/Reviewing.md).
 
 #### TDD
 
@@ -490,8 +486,6 @@ Therefore, ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal
 Others prefer range of 32% to 37% of TDD for TBB.
 
 Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
-
-![History browser + TDD](../images/Home2021_Action_HB_TDD.png)
 
 ## Insulin Profile
 
@@ -531,7 +525,7 @@ Profile contains information on your individual diabetes settings:
    * ISF: Insulin Sensitivity Factor
    * Basal rate
    * Target: Blood glucose level that you want **AAPS** to be aiming for
-   
+
 See the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
 
 ## Automation
