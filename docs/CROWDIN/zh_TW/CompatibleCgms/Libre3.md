@@ -34,9 +34,9 @@ AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理�
 
 - 如果尚未設定，請下載 [xDrip+](https://github.com/NightscoutFoundation/xDrip) 並按照[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)上的指示操作。
 - 在 xDrip+ 中選擇 "Libre2（修補版應用程式）" 作為資料來源。
-- 如果需要，請在「不常見的設定」→「額外日誌記錄設定」→「日誌記錄的額外標籤」下輸入 "BgReading:d,xdrip libre_receiver:v"。 這將記錄額外的錯誤訊息以便進行問題排除。
+- 如果需要，請在「不常見的設定」→「額外日誌紀錄設定」→「日誌紀錄的額外標籤」下輸入 "BgReading:d,xdrip libre_receiver:v"。 這將紀錄額外的錯誤訊息以便進行問題排除。
 
-![xDrip+ LibreLink 日誌記錄](../images/Libre2_Tags.png)
+![xDrip+ LibreLink 日誌紀錄](../images/Libre2_Tags.png)
 
 - 技術上來說，目前的血糖值每分鐘會傳送到 xDrip+。 加權平均濾波器預設會計算最近 25 分鐘內的平滑資料。 你可以在 NFC 掃描功能選單中更改此時間段。
 

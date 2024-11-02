@@ -2,7 +2,7 @@
 # Temp-Targets
 
 ## What are Temp-Targets and where can I set and configure them?
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](../SettingUpAaps/YourAapsProfile.md#glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage. 
+A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage. 
 
 Temporary targets can be defined within those boundaries :
 
@@ -63,6 +63,7 @@ To select a **Default-Temp-Target**, the user can short click on the target in t
 - To slightly adjust the values of a **Default-Temp-Target**t, _long press_ the 'Eating Soon', 'Activity' or 'Hypo' button and then edit the values in the Target or Duration fields.
 - If a **Temp target** is running, an additional "Cancel" button is shown in dialog to cancel it.
 
+(TempTargets-hypo-temp-target)=
 ## Hypo Temp-Target
 
 **Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
@@ -77,13 +78,14 @@ Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This 
 
 Note: if the user enters carbs with the carb button and your blood glucose is less than 72mg/dl or 4mmol/l, **Temp-Target Hypo** is automatically enabled by **AAPS**.
 
+(TempTargets-activity-temp-target)=
 ## Activity Temp-Target
 
 Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
 
 To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia. 
 
-New users to **AAPS** may need to experiment and personalise their **Temp-Target Activity** default settings in order to optimise this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](../UsefulLinks/FAQ.md#sports). in FAQ.
+New users to **AAPS** may need to experiment and personalise their **Temp-Target Activity** default settings in order to optimise this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports). in FAQ.
 
 Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduced insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. 
 
@@ -91,6 +93,7 @@ Advanced, objective 9: users can enable _'High Temp-Targets raises sensitivity'_
 
 Additionally, if _'SMB with high Temp-Target'_ is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, _'SMB with Temp-Target-_ or _'SMB always'_ enabled and OpenAPS **SMB** active.
 
+(TempTargets-eating-soon-temp-target)=
 ## Eating soon Temp-Target
 
 **Temp-Target -Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating. 
@@ -99,7 +102,7 @@ This can be an important tool for those users who do not pre bolus, however the 
 
 You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): If you use OpenAPS SMB and have _'Low temp target lowers sensitivity'_, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be less than 100mg/dl or 5.5mmol/l.
+Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have _'Low temp target lowers sensitivity'_, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be less than 100mg/dl or 5.5mmol/l.
 
 ## How do I turn off SMB during Temp-Targets?
 

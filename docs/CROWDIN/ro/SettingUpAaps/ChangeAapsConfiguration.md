@@ -7,8 +7,8 @@ There are three routes to change the different configuration settings, which rou
 These are as follows:
 
 1. Config builder,
-2. Three dot menu on the right and select "preferences" or
-3. Three dot menu on the right and select "plugin preferences".
+1. Three dot menu on the right and select "preferences" or
+1. Three dot menu on the right and select "plugin preferences".
 
 Here we explain which option is most convenient for each situation:
 
@@ -29,6 +29,7 @@ The preferences dialogue can be reached via the top right three dot menu on the 
 This is a good route if you are not really sure where to look for an configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
 
 The documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).
+
 
 ## Plugin preferences
 

@@ -8,8 +8,8 @@ Following installation of **AAPS** on the smartphone, you will then be able to m
 
 There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways:
 
-- Option 1 -  Use your Google drive (Gdrive)
-- Option 2 -  Use a USB cable
+* Option 1 -  Use your Google drive (Gdrive)
+* Option 2 -  Use a USB cable
 
 Please note that transfer by email might cause difficulties, and is discouraged.
 
@@ -26,6 +26,7 @@ Right click in the free area below the files and folders in the Google Drive app
 ![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
 
 The apk file should now be uploaded on Google Drive.
+
 
 ### Use the Google Drive app to execute the apk file for installation
 
@@ -55,7 +56,6 @@ Did you remeber to disallow the installation from Google Drive?
 Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
 
 ## Option 2. Use a USB cable to transfer files
-
 The second way to transfer the AAPS apk file is with a  [USB cable](https://support.google.com/android/answer/9064445?hl=en).
 
 Transfer the file from its location on your computer to the "downloads" folder on the phone.

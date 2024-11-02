@@ -27,7 +27,7 @@
 * 選擇你要使用的基礎率設定檔。 請參閱[設定檔](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)頁面以獲取更多設定資訊。
 * 從 AAPS 3.0 開始，僅提供本地設定檔。
 
-然而，可以將 Nightscout 設定檔同步至本地設定檔。 不過，為此重要的是要在 Nightscout 編輯器中複製由多個設定檔組成的完整資料庫記錄。 請參閱下方的說明。 如果要對更廣泛的設定檔進行重大更改，這可能會很有幫助，例如從試算表手動複製資料。
+然而，可以將 Nightscout 設定檔同步至本地設定檔。 不過，為此重要的是要在 Nightscout 編輯器中複製由多個設定檔組成的完整資料庫紀錄。 請參閱下方的說明。 如果要對更廣泛的設定檔進行重大更改，這可能會很有幫助，例如從試算表手動複製資料。
 
 (Config-Builder-local-profile)=
 
@@ -71,9 +71,9 @@
 
 您可以將 Nightscout 設定檔編輯器中的變更同步到本地設定檔。 設定可以在[NSClient 偏好設定](../SettingUpAaps/Preferences.md#nsclient)中找到。
 
-有必要複製整個目前活動的 Nightscout 資料庫記錄，而不僅僅是藍色箭頭的設定檔！ 新的資料庫記錄將攜帶目前日期，並可以透過「本地設定檔」標籤啟用。
+有必要複製整個目前活動的 Nightscout 資料庫紀錄，而不僅僅是藍色箭頭的設定檔！ 新的資料庫紀錄將攜帶目前日期，並可以透過「本地設定檔」標籤啟用。
 
-![複製資料庫記錄](../images/Nightscout_Profile_Editor.PNG)
+![複製資料庫紀錄](../images/Nightscout_Profile_Editor.PNG)
 
 ### 設定檔助手
 
@@ -256,7 +256,7 @@ AAPS 有一個學習計畫（目標），您需要逐步完成。 這將引導�
 
 ## 治療
 
-如果你查看「治療」（Treat）標籤，你可以看到已上傳到 Nightscout 的治療記錄。 如果您希望編輯或刪除一個條目（例如，您攝取的碳水化合物少於預期），請選擇「移除」，然後透過 [主螢幕上的碳水化合物按鈕](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs) 輸入新值（如有必要可以更改時間）。
+如果你查看「治療」（Treat）標籤，你可以看到已上傳到 Nightscout 的治療紀錄。 如果您希望編輯或刪除一個條目（例如，您攝取的碳水化合物少於預期），請選擇「移除」，然後透過 [主螢幕上的碳水化合物按鈕](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs) 輸入新值（如有必要可以更改時間）。
 
 ## 一般問題
 

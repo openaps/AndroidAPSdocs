@@ -153,7 +153,7 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
   如果你看到如下所示的錯誤訊息，你可能使用的是 Windows 10 32 位系統。 這不被Android Studio 3.5.1及以上版本支援，遺憾的是AAPS開發者無法解決這個問題！
 
-  互聯網上有很多指南介紹如何確定你擁有 32 位或 64 位操作系統 - 例如[這篇文章](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)。
+  網際網路上有很多指南介紹如何確定你擁有 32 位或 64 位操作系統 - 例如[這篇文章](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)。
 
   ![無法啟動守護進程的截圖](../images/AndroidStudioWin10_32bitError.png)
 
@@ -245,7 +245,7 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
 如果即使從頭建置應用程序也無法解決你的問題，你可能需要嘗試完全卸載 Android Studio。 一些用戶報告說，這解決了他們的問題。
 
-**確保卸載與 Android Studio 相關的所有文件。** 如果你未完全刪除 Android Studio 及其所有隱藏文件，卸載可能會導致新問題，而不是解決現有問題。 可以在互聯網上找到完整卸載指南，例如
+**確保卸載與 Android Studio 相關的所有文件。** 如果你未完全刪除 Android Studio 及其所有隱藏文件，卸載可能會導致新問題，而不是解決現有問題。 可以在網際網路上找到完整卸載指南，例如
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10)。
 

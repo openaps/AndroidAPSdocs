@@ -19,7 +19,7 @@ You might not need it, but better be safe than sorry.
 3. [Build signed APK](#3-build-the-signed-apk)
 4. [Transfer the built apk](#4-transfer-the-apk) to your phone and install it
 5. [Check the version](#6-check-aaps-version-on-phone) in AAPS
-6. Depending on your [BG source](../Getting-Started/CompatiblesCgms.md) make sure to [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app).
+6. Depending on your [BG source](../Getting-Started/CompatiblesCgms.md) make sure to [identify receiver](#xdrip-identify-receiver) in xDrip or use the ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 
 In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
 
@@ -66,7 +66,7 @@ Note: The files that were updated may vary! This is not an indication
 (Update-to-new-version-build-the-signed-apk)=
 ## 3. Build the Signed APK
 
-Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk).
+Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](#Building-APK-generate-signed-apk).
 
 ## 4. Transfer the apk
 You need to transfer the apk to your phone so you can install it.

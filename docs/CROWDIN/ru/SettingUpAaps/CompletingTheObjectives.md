@@ -2,9 +2,9 @@
 
 **AAPS** has a series of **Objectives** required to be completed to help the user progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **Objectives** aims to ensure you have:
 
-- Configured everything correctly in your **AAPS** setup;
-- Learned about the essential features of **AAPS**; and
-- A basic understanding of what your system can do, in order to help instill confidence when using **AAPS**.
+* Configured everything correctly in your **AAPS** setup;
+* Learned about the essential features of **AAPS**; and
+* A basic understanding of what your system can do, in order to help instill confidence when using **AAPS**.
 
 When **AAPS** is installed for the first time, each objective must be completed before moving on to the next one. New features will gradually be unlocked as progress is made through each **Objective**.
 
@@ -38,18 +38,15 @@ The **Objectives** will need to be restarted from the beginning should you fail 
 - If using Tidepool:
   - Follow instructions in [Tidepool](../SettingUpAaps/Tidepool.md) page to ensure **Tidepool** can receive and display **AAPS** data.
 
-Возможно, потребуется дождаться следующего значения ГК, прежде чем AAPS распознает его и примет в обработку.\*
+Note - *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it.*
 
 ## Цель 2: Научитесь контролировать AAPS
 
-**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below
-Click on the orange text "Not completed yet" to access the to-dos.
-Если вы еще не знаете как выполнить действие, вам будут предоставлены ссылки на инструкции.
+**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below Click on the orange text "Not completed yet" to access the to-dos. Если вы еще не знаете как выполнить действие, вам будут предоставлены ссылки на инструкции.
 
 ![Screenshot objective 2](../images/Objective2_V2_5.png)
 
-Задачи для выполнения **Цели 2**:
-
+Tasks to complete **Objective 2** are:
 - Set your **Profile** to 90% for a duration of 10 min.
   - _Hint_: Long press your Profile name on the OVERVIEW screen. More information in [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
   - _Note_: **AAPS** does not accept basal rates below 0.05U/hr. If your **Profile** includes rates 0.06U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Switch back to your normal **Profile** after completing this task.
@@ -69,18 +66,17 @@ Click on the orange text "Not completed yet" to access the to-dos.
 
 **Objective 3** requires the user to pass a multiple-choice exam which is designed to test your **AAPS** knowledge.
 
-Некоторые пользователи считают **Цель 3** самой трудной. Please read the **AAPS** documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group for "Objective 3" (because it is likely that your question has been asked before - and answered by the group). Эти группы могут дать подсказки или перенаправить вас на соответствующую часть документации AAPS.
+Some users find **Objective 3** to be the most difficult objective to complete. Please read the **AAPS** documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group for "Objective 3" (because it is likely that your question has been asked before - and answered by the group). These groups can provide friendly hints, or redirect you to the relevant part of the **AAPS** documents.
 
 In the meantime :
-
 - To reduce the number of notifications / decisions you are asked to make (temporary basal rates) while in Open Loop, set a wide target range in your **Profile** _e.g._ 90 - 150 mg/dl or 5.0 - 8.5 mmol/l.
 - Вы можете увеличить верхнюю границу диапазона на ночь или вовсе отключить цикл на это время.
 
-Чтобы приступить к реализации цели 3, нажмите на оранжевый текст «Не завершено», чтобы получить доступ к соответствующему вопросу. Прочтите внимательно все вопросы и выберите ответ(ы).
+To proceed with **Objective 3**, click on the orange text “**Not completed yet**” to access the relevant question. Прочтите внимательно все вопросы и выберите ответ(ы).
 
 Для каждого вопроса правильным может быть больше одного ответа! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Имейте в виду, что порядок ответов может измениться при следующей попытке ответа,, чтобы убедиться, что вы внимательно прочитали их и действительно понимали правильность (или нет) каждого ответа.
 
-```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
+```{admonition}  __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: Note
 From time to time, new features are added to **AAPS** which may require a new question to be added to the **Objectives**, particularly **Objective 3**. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other **Objectives** remain completed.
 ```
@@ -95,8 +91,7 @@ The minimal time to complete this objective: **7 days**. Это обязател
 - Вручную активируйте по крайней мере 20 предложений временного базала на протяжении 7 дней, введите их в помпу (физическую) и подтвердите в AAPS что вы их приняли. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
 - Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
 
-To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objective-3-prove-your-knowledge).
-Additionally, you can change the minimum percentage for recommended basal rate changes. The higher the value, the fewer change notifications you will receive.
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objective-3-prove-your-knowledge). Additionally, you can change the minimum percentage for recommended basal rate changes. The higher the value, the fewer change notifications you will receive.
 
 ![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
@@ -108,12 +103,11 @@ You don't need to action each and every system recommendation!
 
 ## Цель 5: Глубже понимаем работу системы в режиме незамкнутого цикла, включая ее рекомендации по временным базалам
 
-В **Цели 5** вы начнете понимать, как формируются рекомендации по временному базальному инсулину. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in **AAPS Overview**](../DailyLifeWithAaps/AapsScreens.md#prediction-lines) (or Nightscout) and looking at detailed calculations shown on your **OpenAPS** tab.
+As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in **AAPS Overview**](../DailyLifeWithAaps/AapsScreens.md#prediction-lines) (or Nightscout) and looking at detailed calculations shown on your **OpenAPS** tab.
 
-Расчетное время для прохождения этой цели: **7 дней**.
+Estimated time to complete this objective: **7 days**.
 
-This **Objective** requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal). This value can be set in [Preferences > OpenAPS](../SettingUpAaps/Preferences.md#max-uh-a-temp-basal-can-be-set-to).
-If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
+This **Objective** requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal). This value can be set in [Preferences > OpenAPS](../SettingUpAaps/Preferences.md#max-uh-a-temp-basal-can-be-set-to). If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
 
 You might wish to set your [**Profile** BG target](../SettingUpAaps/YourAapsProfile.md#glucose-targets) higher than usual until you are comfortable with **AAPS**' calculations and settings. You may wish to experiment with adjusting your **BG target** in your **Profile** being in a tighter range (say, 1 or less mmol/l [20 mg/dl or less] wide) and observe the resulting behavior.
 
@@ -131,8 +125,7 @@ If you are open looping with a virtual pump **stop here**. Only click verify at 
 ## Цель 6: Начинаем замыкать цикл с Low Glucose Suspend (прекращением подачи инсулина на низких сахарах)
 
 ![Warning sign](../images/sign_warning.png)
-
-```{admonition} Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
+```{admonition}  Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
 :class: Примечание
 Вам придётся корректировать высокие значения ГК самостоятельно (вручную с помощью помпы или ручки)!
 ```
@@ -144,6 +137,7 @@ Minimal time to complete this objective: **5 days**. Это обязательн
 It is crucial that your current **Profile** (basal, ISF, IC) have been well tested before you close your loop in **LGS** mode. Incorrect **Profile** settings might force you into hypo situations which have to be treated manually. An accurate **Profile** will help reduce the need for low glucose treatments during the 5 days period.
 
 **If you still observe frequent or severe low glucose episodes consider refining your DIA, basal, ISF and carb ratios.** Please refer to the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group which has much discussion on this.
+
 
 During **Objective 6**, **AAPS** will override the maxIOB setting to zero. **This override will end when moving to Objective 7.**
 
@@ -175,9 +169,8 @@ The default recommendation for this setting is “**average meal bolus + 3x max 
 ![max daily basal](../images/MaxDailyBasal2.png)
 
 Эта рекомендация должна рассматриваться как отправная точка. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
-
-- lower the "Maximum total IOB OpenAPS can’t go over" value;
-- review your **Profile** settings, only making one adjustment at a time.
+* lower the "Maximum total IOB OpenAPS can’t go over" value;
+* review your **Profile** settings, only making one adjustment at a time.
 
 Alternatively, if you are very insulin resistant, raise the **maxIOB** value very cautiously.
 
@@ -200,8 +193,7 @@ In **Objective 9**, you will tackle and use **"Super Micro Bolus (SMB)"** as one
 Minimal time to complete this objective: **28 days**. Это обязательное время ожидания. You can’t proceed to the next Objective before this time is up.
 
 - The [SMB section in this documentation](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) and [oref1 coverage in the openAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand **SMB** and the concept of **zero-temping**.
-- Once done, you can [raise maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get **SMBs** working more effectively. maxIOB now includes all **IOB**, not just accumulated basal. This threshold pauses **SMBs** until IOB drops below this value (_e.g._ **maxIOB** is set to 7U and a bolus of 8U is given to cover a meal: SMBs will be paused and not given unless **IOB** drops below 7U).
-  A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference.
+- Once done, you can [raise maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get **SMBs** working more effectively. maxIOB now includes all **IOB**, not just accumulated basal. This threshold pauses **SMBs** until IOB drops below this value (_e.g._ **maxIOB** is set to 7U and a bolus of 8U is given to cover a meal: SMBs will be paused and not given unless **IOB** drops below 7U). A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference.
 - Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Preferences > Absorption settings > min_5m_carbimpact](../SettingUpAaps/Preferences.md#min_5m_carbimpact) if you find it too slow or too fast.
 
 ## Цель 10: Автоматизация
@@ -213,7 +205,6 @@ Minimal time to complete this objective: **28 days**. Это обязатель�
 Read the documentation page [Automation](../DailyLifeWithAaps/Automations.md) first.
 
 Set-up the most basic automation rule; for example trigger an Android notification in a few minutes:
-
 - Select the notification tab
 - From the top right 3 dots menu, select add rule
 - Give a task name "My first automation notification"
@@ -227,10 +218,10 @@ Set-up the most basic automation rule; for example trigger an Android notificati
   - click "Notification" to edit the message, enter something like "My first automation"
 - Wait until the time triggers the notification (note that depending on your phone, it can be a few minutes late)
 
-You can then experiment with setting up a more useful **Automation**.
-The documentation page gives a few examples, and you can search for "Automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. There is also a dedicated channel in the [Discord](https://discord.gg/4fQUWHZ4Mw) community.
+You can then experiment with setting up a more useful **Automation**. The documentation page gives a few examples, and you can search for "Automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. There is also a dedicated channel in the [Discord](https://discord.gg/4fQUWHZ4Mw) community.
 
 For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
+
 
 ## Objective 11: Enabling additional features for daytime use, such as Dynamic Sensitivity plugin (DynISF).
 
@@ -245,4 +236,4 @@ Minimal time to complete this **Objective**: **28 days**. Это обязате�
 
 If you wish to go back in the **Objectives** for whatever reason you can do so by clicking at "clear finished".
 
-![Go back in objectives](../images/Objective_ClearFinished.png)
+![Возможность возврата к предыдущим целям](../images/Objective_ClearFinished.png)

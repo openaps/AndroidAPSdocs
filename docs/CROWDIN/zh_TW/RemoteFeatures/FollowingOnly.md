@@ -1,6 +1,6 @@
 # 追蹤 AAPS（無需與 AAPS 系統互動）
 
-除了可用於遠端控制_和_跟踪**AAPS**的各種可能性，這些功能在[遠端控制](../RemoteFeatures/RemoteControl.md)中描述，社群還開發了一些額外的應用程式和設備，僅用於跟踪資料 (血糖水平和其他信息)，而無需與 AAPS 互動。
+除了可用於遠端控制_和_跟踪**AAPS**的各種可能性，這些功能在[遠端控制](../RemoteFeatures/RemoteControl.md)中描述，社群還開發了一些額外的應用程式和設備，僅用於跟踪資料 (血糖數值和其他訊息)，而無需與 AAPS 互動。
 
 對於如何追蹤**AAPS**，一個非常好的概述可以在[Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#)網頁中找到；如果你展開左側選單：
 
@@ -37,7 +37,7 @@ G)  Spike（iOS）
 
 ●  許多照護者熟悉 Dexcom Follow，因為他簡單明瞭的界面相較於其他複雜的應用更受青睞。
 
-●  Dexcom Follow 非常適合教師/祖父母以及對糖尿病和血糖水平知識不多的人使用。 他具有可自訂的警報（血糖水平，播放的聲音等）。 如果傳感器仍在穩定中且產生多次假低血糖警報，則可以完全關閉警報，這非常實用。
+●  Dexcom Follow 非常適合教師/祖父母以及對糖尿病和血糖數值知識不多的人使用。 他具有可自訂的警報（血糖數值，播放的聲音等）。 如果傳感器仍在穩定中且產生多次假低血糖警報，則可以完全關閉警報，這非常實用。
 
 #### 設置 Dexcom Follow：操作指南
 
@@ -80,7 +80,7 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 ●   只適用於 iOS
 
-●   無論設置的 TT 水平如何，TT 始終顯示為 5 mmol
+●   無論設置的 TT 數值如何，TT 始終顯示為 5 mmol
 
 ●   從不顯示臨時基礎速率，儘管顯示了 TB
 
@@ -89,7 +89,7 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 ![圖像](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
 
 
-●   Nightwatch 自稱為 Nightscout 客戶端，可在 Android 手機或平板電腦上監控用戶的 Nightscout 血糖水平。
+●   Nightwatch 自稱為 Nightscout 客戶端，可在 Android 手機或平板電腦上監控用戶的 Nightscout 血糖數值。
 
 ●   該應用程式可從[Google play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch)下載，並以實時方式顯示血糖資料。
 
@@ -245,7 +245,7 @@ C)  PC（Teamviewer）
 
 
 
-M5Stack 是一個小盒子，可以編程為多種應用程式，Martin 的項目 [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) 顯示傳感器血糖值和趨勢、IOB 和 COB。 他是一個塑膠盒，配備了彩色顯示屏、micro SD 卡槽、3 個按鈕、揚聲器和內置電池。 他是一個很棒的血糖監測器，並且如果你擁有 Nightscout 帳戶，設置相對容易。 用戶通常將其運作在他們的家庭 wifi 上，但有些用戶報告說，他們透過手機 wifi 熱點在騎摩托車時使用他作為顯示器。
+M5Stack 是一個小盒子，可以用來進行多種程式開發，Martin 的項目 [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) 顯示傳感器血糖值和趨勢、IOB 和 COB。 他是一個塑膠盒，配備了彩色顯示屏、micro SD 卡槽、3 個按鈕、揚聲器和內置電池。 他是一個很棒的血糖監測器，並且如果你擁有 Nightscout 帳戶，設置相對容易。 用戶通常將其運作在他們的家庭 wifi 上，但有些用戶報告說，他們透過手機 wifi 熱點在騎摩托車時使用他作為顯示器。
 
 ### B) Sugarpixel
 

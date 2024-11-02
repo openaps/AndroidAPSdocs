@@ -27,7 +27,7 @@ Reads the data from the Eversense app notifications (works with the standard Eve
    - Disable the setting "Get data from patched Eversense App"
    - For backfilling: Enable "Fill missing data from eversensedms.com"
    - Provide as Email address and password your Eversense login data
-3. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+3. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ### Patched Eversense App
 
@@ -49,7 +49,7 @@ Reads the data from the Eversense app notifications (works with the standard Eve
 
 ​		If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
 
-4. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+4. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ## xDrip+
 
@@ -57,9 +57,9 @@ xDrip+ can read notifications from the vendor app, like ESEL does. No backfillin
 
 - Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
 - As data source in xDrip+ “Companion App” must be selected.
-- Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 - Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../CompatibleCgms/xDrip.md).
-- Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md#smoothing-blood-glucose-data) in AAPS.
+- Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
 
 ```{warning}
 BG values reading frequency is not always 5 minutes and duplicates can occur.

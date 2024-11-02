@@ -23,8 +23,8 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 
 Requirements:
 
-- You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
-- The Android phone is already set-up with your personal ”everyday”  email address, such as a Gmail account.
+* You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
+* The Android phone is already set-up with your personal ”everyday”  email address, such as a Gmail account.
 
 ```{admonition} Things to consider when setting up your new account
 :class: dropdown
@@ -35,28 +35,26 @@ Requirements:
 - If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
 - If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
 ```
+ 
 
-
-
-```{admonition} Video Walkthrough! 
+```{admonition}  Video Walkthrough! 
 :class: Note
 Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
 ```
 
-These are the steps outlined in the video:
+ These are the steps outlined in the video:
 
 In this example: 
-
 - Your existing “_Everyday_” Google account is <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
 - Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
+
 #### Go to <https://account.google.com> 
 
-If you are already logged into Google, this will direct you to your “Everyday” **My Account** page.
-(1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)
-(2) select “_add another account_”.
+ If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
+
 
 #### Enter your NEW dedicated account details: 
 
@@ -64,11 +62,12 @@ If you are already logged into Google, this will direct you to your “Everyday�
 - Create Account
 - for my personal use. 
 
-#### Enter your persona:
 
-- Enter firstname
-- lastname
-- birthdate (needs to be an Adult age)
+
+ #### Enter your persona:
+ - Enter firstname
+ - lastname
+ - birthdate (needs to be an Adult age)
 
 #### Choose your NEW email address & password
 
@@ -110,7 +109,7 @@ Open <https://gmail.com>  in each browser window. Make sure your personal accou
 Your Gmail homepages screen should look like this:\
 ![](../images/Building-the-App/building_0010.png)
 
-#### In the new Gmail account (bottom window), open Gmail settings… 
+ #### In the new Gmail account (bottom window), open Gmail settings… 
 
 - Click on the gear on the left of the profile picture 
 - then select “**See all Settings**”
