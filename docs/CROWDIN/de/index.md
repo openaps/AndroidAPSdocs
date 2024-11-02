@@ -4,7 +4,7 @@
 
 Android APS (**AAPS**) ist eine Open-Source-App für Menschen mit insulinabhängigem Diabetes. Es handelt sich dabei um ein künstliches Bauchspeicheldrüsen-System (APS), das auf Android-Smartphones läuft. **AAPS** nutzt verschiedene OpenAPS-Softwarealgorithmen, um damit genau das zu tun, was eine echte Bauchspeicheldrüse auch tut: den Glukosespiegel durch automatisierte Insulindosierung (AID) in gesunden Grenzen halten. Um **AAPS** nutzen zu können, brauchst Du **drei** kompatible Geräte: ein Android-Smartphone, eine von der FDA/CE zugelassene Insulinpumpe und einen Glukosesensor (CGM).
 
-Diese Dokumentation erklärt, wie Du **AAPS** einrichtest und nutzt. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy "**Search docs**" function), or by using the [index](#aaps-documentation-index) at the bottom of this page.
+Diese Dokumentation erklärt, wie Du **AAPS** einrichtest und nutzt. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy "**Search docs**" function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
 
 ## Überblick über die AAPS-Dokumentation ("The docs")
 
@@ -52,7 +52,7 @@ Solltest Du SGLT-2-Hemmer (Gliflozine) nehmen, kannst Du **AAPS** aufgrund der G
 
 ```
 
-(AAPS-Documentation-Index)=
+(index-aaps-documentation-index)=
 
 ## AAPS Dokumenten-Index
 
