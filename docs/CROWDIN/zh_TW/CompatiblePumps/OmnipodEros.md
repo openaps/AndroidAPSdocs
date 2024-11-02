@@ -179,7 +179,7 @@
 
     點擊手機上的返回按鈕返回 **Omnipod (POD)** 標籤畫面，現在會顯示你活動的幫浦會話資訊，包括目前基礎速率、幫浦儲庫數值、胰島素投放量、幫浦錯誤和警報。
 
-    有關顯示信息的更多詳細信息，請參見本文件的[Omnipod (POD) 標籤](#omnipod-pod-tab)部分。
+    有關顯示訊息的更多詳細訊息，請參見本文件的[Omnipod (POD) 標籤](#omnipod-pod-tab)部分。
 
     ![Activate_Pod_14](../images/omnipod/Activate_Pod_14.png) ![Activate_Pod_15](../images/omnipod/Activate_Pod_15.png)
 
@@ -360,6 +360,7 @@
 > - **Last Device Contact:**  POD 最後一次與通訊設備接觸的日期和時間。
 > - **Refresh button** 手動重新整理此頁面的設定。
 
+(omnipod-eros-rileylink-and-active-pod-history)=
 #### RileyLink 和啟動 Pod 歷史
 
 此頁面按時間倒序提供 RileyLink 或目前連線的 POD 每個狀態或動作的訊息。 整個歷史紀錄僅適用於目前啟動的 POD ， POD 更換後，此歷史紀錄將被清除，並且僅顯示新註冊的 POD 的事件。
@@ -428,7 +429,7 @@
 
 - **總輸送量：** 顯示從儲液中輸送的胰島素總單位數。 *注意，這是一個近似值，因為幫浦啟動和填充過程並不精準。*
 
-- **錯誤：** 顯示遇到的最後一個錯誤。 檢查[藥囊歷史](#view-pod-history)、[RileyLink 歷史](#rileylink-and-active-pod-history)及日誌文件，以了解過去的錯誤及更多詳細信息。
+- **錯誤：** 顯示遇到的最後一個錯誤。 Review the [Pod history](#view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
 - **啟用 Pod 警報：** 保留目前啟用 Pod 上運作的警報。 通常在幫浦到期超過 72 小時且原生幫浦嗶聲警告運作時使用。
 
@@ -442,7 +443,7 @@
   > 
   > 用於重新整理 Pod 狀態並消除顯示 (不確定) 訊息的狀態欄位。
   > 
-  > 請參閱下面的[問題排除部分](#troubleshooting)以獲取額外信息。
+  > 請參閱下面的[問題排除部分](#troubleshooting)以獲取額外訊息。
 
 - **幫浦管理：**
 
@@ -540,7 +541,7 @@
   > 按下此按鈕將重置目前連線的幫浦連線裝置配置。
   > 
   > > - 當通訊開始時，特定資料將發送至 RileyLink 並設置為 > - 記憶體暫存器已設置 > - 通訊協議已設置 > - 已設置調頻無線電頻率 
-  > > - 請參見本表末尾的[附加說明](#reset-rileylink-config-notes)
+  > > - See [additional notes](#OmnipodEros-reset-rileylink-config-notes) at the end of this table
 
 - **讀取脈搏日誌：**
 
