@@ -4,7 +4,7 @@
 
 Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的糖尿病患者所設計。 這是一個人工胰臟系統 (APS)，可以在 Android 智慧型手機上運作。 **AAPS**使用開源的 openAPS 軟體演算法，主要在模擬真實胰臟的功能：透過自動調控胰島素劑量來保持血糖數值在健康範圍內。 要使用**AAPS**，你需要**三種**相容設備：一台Android手機、一個經 FDA/CE 認證的胰島素幫浦，以及一個連續血糖監測儀（CGM）。
 
-本文件將詳細說明如何設置和使用**AAPS**。 你可以透過左側的選單（以及“**搜尋文件**”功能）或使用頁面底部的[索引](#aaps-documentation-index)瀏覽**AAPS**文件。
+本文件將詳細說明如何設置和使用**AAPS**。 You can navigate through the **AAPS** documentation either through the menu on the left (and the handy "**Search docs**" function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
 
 ## AAPS 文件總覽("簡稱本文件")
 
@@ -44,7 +44,7 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 ```{admonition} Disclaimer
 :class: note
 
-- 此處描述的所有信息和代碼僅供參考和教育目的使用。 使用 [Nightscout](https://nightscout.github.io/) 和 **AAPS** 需自行承擔風險，並且不應使用該信息或代碼來做出醫療決策。 Nightscout目前不符合HIPAA的隱私規定。 
+- 此處描述的所有訊息和代碼僅供參考和教育目的使用。 使用 [Nightscout](https://nightscout.github.io/) 和 **AAPS** 需自行承擔風險，並且不應使用該訊息或代碼來做出醫療決策。 Nightscout目前不符合HIPAA的隱私規定。 
 - 從 github.com 使用的代碼不提供任何保證或正式支援。 請檢視此儲存庫的許可證( LICENSE) 以暸解詳細資訊。
 - 所有產品和公司名稱、商標、服務標記、註冊商標和註冊服務標記均為其各自持有者的財產。 他們的使用僅供資訊用途，沒有任何關聯或背書。
 
@@ -52,7 +52,7 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 
 ```
 
-(AAPS-Documentation-Index)=
+(index-aaps-documentation-index)=
 
 ## AAPS文件索引
 
