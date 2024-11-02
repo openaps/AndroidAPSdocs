@@ -21,10 +21,6 @@ To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the t
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
-Οι καταχωρίσεις υδατανθράκων που στο μέλλον θα είναι χρωματισμένες σε σκούρο πορτοκαλί στην καρτέλα θεραπείας:
-
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
