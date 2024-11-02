@@ -70,7 +70,7 @@
 
 - Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md).
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
+- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
 
   ![Protection](../images/Pref2020_Protection.png)
 
@@ -168,7 +168,7 @@
 
 ### Insuline par défaut pour Amorcer/Remplir
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](#screens-action-tab).
 - Les valeurs prédéfinies peuvent être configurées dans cette boite de dialogue.
 
 (Preferences-range-for-visualization)=
@@ -186,6 +186,7 @@
 
   ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
+(Preferences-show-notes-field-in-treatments-dialogs)=
 ### Afficher les notes dans les boîtes de dialogue
 
 - Vous permet d'ajouter des textes courts de notes à vos traitements (assistant bolus, glucides, insuline...)
@@ -198,7 +199,7 @@
 - Les voyants d'état donnent une alerte visuelle pour
 
   - Age du capteur
-  - Sensor battery level for certain smart readers (see [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery) for details).
+  - Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
   - Âge de l'insuline (jours d'utilisation du réservoir)
   - Niveau du réservoir (unités)
   - Âge de la canule
@@ -213,16 +214,18 @@
 
   ![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
 
+(Preferences-deliver-this-part-of-bolus-wizard-result)=
 ### Deliver this part of bolus wizard result
 
-Set the [default percentage](../DailyLifeWithAaps/AapsScreens.md#section-j) of the bolus calculated when using the bolus wizard.
+Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
 
 Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard.
 
-When using [SMB](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb), using a value lower than 100% here can be useful:
+When using [SMB](#objectives-objective9), using a value lower than 100% here can be useful:
 * for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
 * to leave more room to *AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate the missing part of the bolus with SMBs, if/when deemed adequate.
 
+(Preferences-advanced-settings-overview)=
 ### Paramètres avancés (Aperçu)
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
@@ -277,8 +280,8 @@ When using [SMB](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enablin
 
 Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### Paramètres OpenAPS AMA
 
@@ -292,7 +295,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 - La valeur est definie en Unités d'insuline par heure (U/h).
 - Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le **débit de basal le plus élevé** de votre profil et de le **multiplier par 4**.
 - Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
-- See also [detailed feature description](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to).
 
 #### L'IA basal maximum que OpenAPS peut délivrer \[U\]
 
@@ -316,7 +319,7 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 #### Autosens
 
-- [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](#Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
 - Il essaiera de comprendre à quel point vous êtes sensible/résistant en fonction de ces écarts et ajustera le débit basal et la SI en fonction de ces écarts.
 - Si vous sélectionnez "Autosens ajuste aussi les cibles" l'algorithme modifiera également votre cible de glycémie.
 
@@ -328,17 +331,17 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 (Preferences-openaps-smb-settings)=
 ### Paramètres OpenAPS SMB
 
-- In contrast to AMA, [SMB](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](#Open-APS-features-super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
+- You must have started [objective 9](#objectives-objective9) to use SMB.
 
-- The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
+- The first three settings are explained [above](#Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
-- Details on the different enable options are described in [OpenAPS feature section](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](#Open-APS-features-enable-smb).
 
 - *La fréquence à laquelle les SMB seront donnés en min* est une restriction pour que le SMB ne soit distribué que toutes les 4 minutes par défaut. Cette valeur empêche le système d'émettre trop souvent des SMB (par exemple dans le cas où une cible temporaire a été définie). Vous ne devriez pas modifier ce paramètre sauf si vous en connaissez exactement les conséquences.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](#Open-APS-features-autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Si la cible est modifiée, elle sera affichée avec un fond vert sur votre écran d'accueil.
 
@@ -370,6 +373,7 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 ![Paramètres d’absorption](../images/Pref2020_Absorption.png)
 
+(Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
 
 - L'algorithme utilise l'IGly (impact glycémique) pour déterminer quand les glucides sont absorbés.
@@ -396,12 +400,12 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 ### Paramètres avancés - Ratio autosens
 
-- Define min. and max. [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) ratio.
+- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
 - Normalement les valeurs standards (max. 1,2 et min. 0,7) ne devrait pas être modifiées.
 
 ## Paramètres de la pompe
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump).  Appairez et réglez votre pompe selon les instructions relatives à la pompe :
+The options here will vary depending on which pump driver you have selected in [Config Builder](#Config-Builder-pump).  Appairez et réglez votre pompe selon les instructions relatives à la pompe :
 
 - [Pompe à Insuline DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md)
 - [Pompe à Insuline DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
@@ -428,7 +432,7 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](../Maintenance/ReleaseNotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+[New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
 
 ```{admonition} V3 data uploaders
 :class: warning
@@ -447,7 +451,7 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 
 Synchronization choices will depend on the way you will want to use AAPS.
 
-You can select which data you want to [upload and download to or from Nightscout](../SettingUpAaps/Nightscout.md#aaps-settings).
+You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
 ### Options d'alarme
 
@@ -479,7 +483,7 @@ Options in advanced settings are self-explanatory.
 
 ## Communicateur SMS
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#sms-communicator).
+- Options will only be displayed if SMS communicator is selected in [Config Builder](#Config-Builder-sms-communicator).
 - Ce paramètre permet de contrôler à distance de l'application en envoyant des instructions au téléphone du patient que l'application appliquera comme Suspendre la boucle ou un bolus.
 - Further information is described in [SMS Commands](../RemoteFeatures/SMSCommands.md).
 - Une sécurité supplémentaire est obtenue grâce à l'utilisation d'une application authentificateur et d'un code PIN supplémentaire à la fin du jeton.
