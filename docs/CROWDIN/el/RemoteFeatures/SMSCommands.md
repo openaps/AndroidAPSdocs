@@ -3,14 +3,14 @@
 ```{admonition} Documentation
 :class: note
 
-This section may contain outdated content. Please also see the page [SMS Commands](../RemoteFeatures/RemoteControl.md#1-sms-commands)).
+This section may contain outdated content. Please also see the page [SMS Commands](#RemoteControl-sms-commands)).
 
 ```
 
 ## Πρώτα η ασφάλεια
 .
 - Το AAPS σας επιτρέπει να ελέγχετε εξ αποστάσεως το τηλέφωνο ενός παιδιού μέσω ενός μηνύματος SMS. Αν ενεργοποιήσετε αυτό την επικοινωνία με SMS, θυμηθείτε πάντα ότι το τηλέφωνο που έχει ρυθμιστεί για να δώσει απομακρυσμένες εντολές μπορεί να κλαπεί. Συνεπώς, πάντα να το προστατεύετε τουλάχιστον από ένα κωδικό PIN. Συνιστάται ένας ισχυρός κωδικός πρόσβασης ή βιομετρικά στοιχεία για πρόσβαση.
-- Additionally it is recommended to allow a [second phone number](../RemoteFeatures/SMSCommands.md#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](../RemoteFeatures/SMSCommands.md#other) SMS communicator in case your main remote phone gets lost or stolen.
+- Additionally it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#SMSCommands-other) SMS communicator in case your main remote phone gets lost or stolen.
 - Το AndroidAPS θα σας ενημερώσει επίσης με μήνυμα κειμένου , εάν έχουν πραγματοποιηθεί οι απομακρυσμένες εντολές σας, όπως μια γευματική δόση ή μια αλλαγή προφίλ. Συνιστάται να το ρυθμίσετε έτσι ώστε τα κείμενα επιβεβαίωσης να αποστέλλονται σε τουλάχιστον δύο διαφορετικούς αριθμούς τηλεφώνου σε περίπτωση κλοπής ενός από τα τηλέφωνα λήψης.
 - **If you bolus through SMS Commands you must enter carbs through Nightscout (AAPSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 - Από την έκδοση AndroidAPS 2.7 και μετά, πρέπει να χρησιμοποιείται μια εφαρμογή ελέγχου ταυτότητας με ένα κωδικό μιας χρήσης με πρόσβαση περιορισμένου χρόνου προκειμένου να αυξηθεί η ασφάλεια κατά τη χρήση των εντολών με μηνύματα.
@@ -24,6 +24,7 @@ This section may contain outdated content. Please also see the page [SMS Command
 - If you use an iPhone as a follower and therefore cannot use AAPSClient app, there are additional SMS commands available.
 - Στις ρυθμίσεις του android τηλεφώνου σας, επιλέξτε Εφαρμογές> AndroidAPS> Άδειες και ενεργοποιήστε τα μηνύματα SMS
 
+(SMSCommands-authorized-phone-numbers)=
 ### Εξουσιοδοτημένα τηλεφωνικά νούμερα
 
 - Στο AndroidAPS μεταβείτε στην επιλογή **Προτιμήσεις> Επικοινωνία με SMS ** και εισαγάγετε τον/τους αριθμό/αριθμούς τηλεφώνου από τους οποίους θα επιτρέπεται να δέχονται εντολές με μηνύματα SMS (διαχωρισμένους με ερωτηματικά - π.χ. +306952441211;+306925542211)
@@ -96,9 +97,10 @@ This section may contain outdated content. Please also see the page [SMS Command
 
 **Συμβουλή**: Μπορεί να είναι χρήσιμο να διαθέτετε απεριόριστα μηνύματα στο συμβόλαιο του τηλεφώνου σας (για κάθε τηλέφωνο που χρησιμοποιείτε) αν στέλνετε πολλά μηνύματα.
 
+(SMSCommands-commands)=
 ## Εντολές
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../SupportingAaps/Translations#translate-strings-for-aaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app).
 
 ![SMS Commands Example](../images/SMSCommands.png)
 
@@ -155,7 +157,7 @@ Commands must be sent in English, the response will be in your local language if
 - PROFILE 1 \* Απάντηση: Για αλλαγή προφίλ σε Προφίλ1 100% απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το Χρήστη, ακολουθούμενο από PIN
 - PROFILE 2 30 \* Απάντηση: Για αλλαγή προφίλ σε Profile2 30% απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το Χρήστη, ακολουθούμενο από PIN
 
-
+(SMSCommands-other)=
 ### Άλλο
 
 - TREATMENTS REFRESH \* Απάντηση: Ανανέωση θεραπευτικών χειρισμών από το NS
@@ -169,6 +171,7 @@ Commands must be sent in English, the response will be in your local language if
 - HELP \* Απάντηση: ΓΛΥΚΟΖΗ ΑΙΜΑΤΟΣ (BG), ΚΥΚΛΩΜΑ (LOOP,) ΘΕΡΑΠΕΥΤΙΚΟΙ ΧΕΙΡΙΣΜΟΙ (TREATMENTS), .....
 - HELP BOLUS \* Απάντηση: Δόση ινσουλίνης 1.2 Δόση ινσουλίνης 1.2 Γεύμα
 
+(SMSCommands-troubleshooting)=
 ## Troubleshooting
 
 ### Πολλαπλά SMS
