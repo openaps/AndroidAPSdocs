@@ -1,6 +1,6 @@
 # 追蹤 AAPS（無需與 AAPS 系統互動）
 
-除了可用於遠端控制_和_跟踪**AAPS**的各種可能性，這些功能在[遠端控制](../RemoteFeatures/RemoteControl.md)中描述，社群還開發了一些額外的應用程式和設備，僅用於跟踪資料 (血糖數值和其他信息)，而無需與 AAPS 互動。
+除了可用於遠端控制_和_跟踪**AAPS**的各種可能性，這些功能在[遠端控制](../RemoteFeatures/RemoteControl.md)中描述，社群還開發了一些額外的應用程式和設備，僅用於跟踪資料 (血糖數值和其他訊息)，而無需與 AAPS 互動。
 
 對於如何追蹤**AAPS**，一個非常好的概述可以在[Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#)網頁中找到；如果你展開左側選單：
 
@@ -245,7 +245,7 @@ C)  PC（Teamviewer）
 
 
 
-M5Stack 是一個小盒子，可以編程為多種應用程式，Martin 的項目 [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) 顯示傳感器血糖值和趨勢、IOB 和 COB。 他是一個塑膠盒，配備了彩色顯示屏、micro SD 卡槽、3 個按鈕、揚聲器和內置電池。 他是一個很棒的血糖監測器，並且如果你擁有 Nightscout 帳戶，設置相對容易。 用戶通常將其運作在他們的家庭 wifi 上，但有些用戶報告說，他們透過手機 wifi 熱點在騎摩托車時使用他作為顯示器。
+M5Stack 是一個小盒子，可以用來進行多種程式開發，Martin 的項目 [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) 顯示傳感器血糖值和趨勢、IOB 和 COB。 他是一個塑膠盒，配備了彩色顯示屏、micro SD 卡槽、3 個按鈕、揚聲器和內置電池。 他是一個很棒的血糖監測器，並且如果你擁有 Nightscout 帳戶，設置相對容易。 用戶通常將其運作在他們的家庭 wifi 上，但有些用戶報告說，他們透過手機 wifi 熱點在騎摩托車時使用他作為顯示器。
 
 ### B) Sugarpixel
 
