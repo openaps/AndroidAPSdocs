@@ -44,7 +44,7 @@ Thirdly, you have to learn and **understand the OpenAPS reference design to chec
 
 אם אתם מורידים את המשאבה לצורך מקלחת, רחצה, שחייה, ספורט או פעילויות אחרות, עליכם ליידע את AndroidAPS על כך ולעצור את מתן האינסולין כדי לשמור על אינסולין פעיל (IOB) תקין.
 
-The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](../DailyLifeWithAaps/AapsScreens.md#loop-status).
+The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](#AapsScreens-loop-status).
 
 #### Recommendations not only based on one single CGM reading
 
@@ -245,7 +245,7 @@ In AAPSClient check 'Connection settings'. יכול להיות שאתם כרגע
 - נקו את מגעי הסוללה עם מטלית עם אלכוהול כדי לוודא שלא נשארו שאריות שומן וכו'.
 
 - for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. הוציאו והחזירו את הסוללה 2-3 פעמים עד להופעת 100% על המסך, או, לפני הכנסתה, געו בשני מסופי הסוללה בעזרת מפתח לזמן קצר מאוד, כדי לגרום לקצר רגעי.
-- see also more tips for [particular types of battery](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
+- see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
 
 #### Changing reservoirs and cannulas
 
@@ -253,14 +253,14 @@ In AAPSClient check 'Connection settings'. יכול להיות שאתם כרגע
 
 - לחצו לחיצה ארוכה על צלמית "לולאה פתוחה"/"לולאה סגורה" בלשונית דף הבית של AndroidAPS ובחרו 'השהה לולאה למשך שעה'
 - נתקו את המשאבה, החליפו את המכל בהתאם להוראות ההפעלה של המשאבה.
-- בצעו גם תיחול (Prime) של הצינורית ישירות במשאבה (במשאבות תומכות). In this case use [PRIME/FILL button](../DailyLifeWithAaps/AapsScreens.md#action-tab) in the actions tab just to record the change.
+- בצעו גם תיחול (Prime) של הצינורית ישירות במשאבה (במשאבות תומכות). In this case use [PRIME/FILL button](#screens-action-tab) in the actions tab just to record the change.
 - לאחר החיבור מחדש של המשאבה, הפעילו את הלולאה מחדש על ידי לחיצה על צלמית הלולאה ובחירת חיבור מחדש.
 
-כפתור החלפת הצינורית לא משתמש בפונקציית התיחול של המשאבה אלא ממלא את הצינורית ואת הקנולה ע"י ביצוע בולוס שאינו נרשם בהיסטוריית הטיפולים. אין השפעה על הבזאלי הזמני הנוכחי. On the Actions (Act) tab, use the [PRIME/FILL button](../DailyLifeWithAaps/AapsScreens.md#action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. אם הכמות לא הספיקה, חזרו את המילוי. ניתן להגדיר לחצנים עם כמויות ברירת מחדל בתפריט העדפות > סקירה כללית > מילוי\תיחול כמויות סטנדרטיות של אינסולין. עיינו בחוברת ההוראות שבקופסת הקנולות כדי לברר כמה יחידות דרושות לתיחול, בהתאם לאורך המחט ואורך הצינורות.
+כפתור החלפת הצינורית לא משתמש בפונקציית התיחול של המשאבה אלא ממלא את הצינורית ואת הקנולה ע"י ביצוע בולוס שאינו נרשם בהיסטוריית הטיפולים. אין השפעה על הבזאלי הזמני הנוכחי. On the Actions (Act) tab, use the [PRIME/FILL button](#screens-action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. אם הכמות לא הספיקה, חזרו את המילוי. ניתן להגדיר לחצנים עם כמויות ברירת מחדל בתפריט העדפות > סקירה כללית > מילוי\תיחול כמויות סטנדרטיות של אינסולין. עיינו בחוברת ההוראות שבקופסת הקנולות כדי לברר כמה יחידות דרושות לתיחול, בהתאם לאורך המחט ואורך הצינורות.
 
 ### Wallpaper
 
-You can find the AAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones.md#phone-wallpaper).
+You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phone-wallpaper).
 
 ### Daily usage
 
@@ -268,11 +268,11 @@ You can find the AAPS wallpaper for your phone on the [phones page](../Getting-S
 
 ##### What to do when taking a shower or bath?
 
-ניתן להסיר את המשאבה בזמן מקלחת וטבילה באמבט (לא רלוונטי למשתמשי אומניפוד). במשך פרק הזמן הקצר הזה אולי לא תזדקקו לכך, אך עליכם להודיע ל-AAPS שהתנתקתם כדי שחישובי IOB יהיו נכונים. See [description above](#disconnect-pump).
+ניתן להסיר את המשאבה בזמן מקלחת וטבילה באמבט (לא רלוונטי למשתמשי אומניפוד). במשך פרק הזמן הקצר הזה אולי לא תזדקקו לכך, אך עליכם להודיע ל-AAPS שהתנתקתם כדי שחישובי IOB יהיו נכונים. See [description above](#FAQ-disconnect-pump).
 
 #### Work
 
-בהתאם לסוג עבודתכם, ייתכן שתשתמשו בהגדרות טיפול שונות בימי עבודה לעומת ימי חופש. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. לדוגמה, ניתן לעבור לפרופיל גבוה מ-100% אם יש עבודה פחות תובענית (למשל ישיבה ליד שולחן), או פחות מ-100% אם אתם פעילים ועומדים על הרגליים כל היום. You could also consider a high or low temporary target or a [time shift of your profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. אפשר גם ליצור פרופיל נוסף (לדוגמה "בית", "יום עבודה") ולבצע החלפת פרופיל לפי הצורך.
+בהתאם לסוג עבודתכם, ייתכן שתשתמשו בהגדרות טיפול שונות בימי עבודה לעומת ימי חופש. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. לדוגמה, ניתן לעבור לפרופיל גבוה מ-100% אם יש עבודה פחות תובענית (למשל ישיבה ליד שולחן), או פחות מ-100% אם אתם פעילים ועומדים על הרגליים כל היום. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. אפשר גם ליצור פרופיל נוסף (לדוגמה "בית", "יום עבודה") ולבצע החלפת פרופיל לפי הצורך.
 
 ### Leisure activities
 
@@ -287,8 +287,8 @@ You can find the AAPS wallpaper for your phone on the [phones page](../Getting-S
 בעת שימוש בלופ, נסו את הפעולות הבאות:
 
 - Make a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) < 100%.
-- Set an [activity temp target](../DailyLifeWithAaps/TempTargets.md#activity-temp-target) above your standard target.
-- If you are using SMB make sure ["Enable SMB with high temp targets"](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb-always) are disabled.
+- Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target.
+- If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
 
 ביצוע הפעולות לפני וביטולן אחרי הפעילות הגופנית חשובים מאוד. בצעו את השינויים זמן מה לפני הפעילות הגופנית וקחו בחשבון את השפעת ניפוח השרירים.
 
@@ -298,7 +298,7 @@ If you do sports regularly at the same time (i.e. sports class in your gym) you 
 
 #### Sex
 
-ניתן להסיר את המשאבה כדי להרגיש יותר חופשיים אך עליכם להודיע ל-AAPS על כך "כניתוק" כדי שלא יחולו טעויות בחישובי האינסולין הפעיל. See [description above](#disconnect-pump).
+ניתן להסיר את המשאבה כדי להרגיש יותר חופשיים אך עליכם להודיע ל-AAPS על כך "כניתוק" כדי שלא יחולו טעויות בחישובי האינסולין הפעיל. See [description above](#FAQ-disconnect-pump).
 
 #### Drinking alcohol
 
@@ -314,7 +314,7 @@ If you do sports regularly at the same time (i.e. sports class in your gym) you 
 
 ##### How can I loop during the night without mobile and WIFI radiation?
 
-משתמשים רבים מפעילים את מצב המטוס של מכשירם בלילה. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+משתמשים רבים מפעילים את מצב המטוס של מכשירם בלילה. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. הפעילו מצב טיסה במכשירכם.
 2. המתינו להפעלת מצב טיסה.
@@ -383,7 +383,7 @@ Please
 
 ### How to reset the password in AAPS v3.x
 
-You find the documentation [here](../Maintenance/Update3_0.md#reset-master-password).
+You find the documentation [here](#Update3_0-reset-master-password).
 
 ### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
 
