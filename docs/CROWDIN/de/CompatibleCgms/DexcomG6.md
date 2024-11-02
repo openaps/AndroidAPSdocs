@@ -21,10 +21,10 @@ Mehr dazu findest Du in dem, von Tim Street auf der Seite [www.diabettech.com](h
 -   Nutzt Du einen 'rebatteried' Transmitter, ist es am sichersten [preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) zu **deaktivieren**. In diesem Setup ist es jedoch notwendig den G6 im 'non-[native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)' zu nutzen, da er sonst nach 10 Tagen endet. Der non-native mode ist allerdings grundsätzlich nicht zu empfehlen, da er die werkseitige Kalibrierung deaktiviert und verrauschte Werte nicht herausfiltert.
 -   The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 -   Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](#if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
 -   You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
 -   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
--   Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+-   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 - Adjust settings in xDrip+ according to [xDrip+ settings page](../CompatibleCgms/xDrip.md)
 
@@ -44,7 +44,7 @@ Mehr dazu findest Du in dem, von Tim Street auf der Seite [www.diabettech.com](h
 
 ### Einstellungen in AAPS
 
--   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+-   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 -   Falls AAPS keine Werte erhält, wechsle auf eine andere BZ-Quelle und dann wieder zurück zur 'gepatchte Dexcom App', um die Abfrage für die Genehmigung des Datenaustauschs zwischen AAPS und BYODA erneut auszulösen.
 
@@ -63,7 +63,7 @@ Mehr dazu findest Du in dem, von Tim Street auf der Seite [www.diabettech.com](h
 
 ### Allgemeine Problembehandlung
 
-General Troubleshooting for CGMs can be found [here](../CompatibleCgms/GeneralCGMRecommendation.md#troubleshooting).
+General Troubleshooting for CGMs can be found [here](#general-cgm-troubleshooting).
 
 ### Neuer Transmitter bei laufendem Sensor
 
