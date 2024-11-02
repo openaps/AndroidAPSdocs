@@ -34,11 +34,11 @@ Die SMB-Funktion arbeitet mit einigen Sicherheitsmechanismen:
 
 3. Zusätzliche Berechnungen zur Vorhersage des Glukoseverlaufs, z.B. durch UAM (un-announced meals). UAM kann auch ohne manuelle Kohlenhydrat-Eingaben des Nutzers automatisch erkennen, dass die Glukosewerte auf Grund von Mahlzeiten, Adrenalin oder anderen Einflüssen signifikant steigen und versuchen, dies mit SMB abzufangen. Dies funktioniert aber zur Sicherheit auch andersherum und kann bei unvorhergesehen schnellem Glukoseabfall den SMB früher stoppen. Deshalb sollte UAM bei SMB auch immer aktiv sein.
 
-**You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
+**You must have started [objective 9](#objectives-objective9) to use SMB.**
 
 Siehe dazu auch (beides in Englisch): [OpenAPS Dokumentation zu oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) und [Tim's Info zu SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
-(Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal)=
+(Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)=
 
 ### Max IE/h, die als TBR gesetzt werden können (OpenAPS “max-basal”)
 
@@ -60,7 +60,7 @@ AAPS beschränkt den Wert wie folgt:
 
 *See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
 
-(Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob)=
+(Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
 ### Maximales Basal-IOB, das OpenAPS abgeben darf (OpenAPS “max-iob”)
 
@@ -93,6 +93,8 @@ Here, you can choose if you want to use the [sensitivity detection](../DailyLife
 
 Aktiviere diese Option, um die SMB-Funktionalität zu nutzen. Wenn diese Option deaktiviert ist, werden keine SMB abgegeben.
 
+(Open-APS-features-enable-smb-with-high-temp-targets)=
+
 ### Aktiviere SMB bei temporären Zielen oberhalb des regulären Ziels
 
 Wenn diese Einstellung aktiviert ist, sind SMB unabhängig vom Profil bei einem aktiven hohen temporären Ziel (Zielwert über 100 mg/dl) grundsätzlich möglich. Ergänzender Hinweis: Andere Bedingungen können aber dazu führen, dass diese SMB nicht abgegeben werden. Bei ausgeschalteter Option werden SMBs nicht abgegeben. Wenn zum Beispiel diese Option deaktiviert ist, werden SMBs durch das Setzen eines Ziels über 100 mg/dl ausgeschaltet. Diese Option deaktiviert SMBs grundsätzlich (auch wenn andere Bedingungen versuchen SMBs zu aktivieren).
@@ -103,7 +105,7 @@ Wenn diese Option aktiviert ist, werden SMB bei einem hohen temporären Ziel nur
 
 ### SMB immer aktivieren
 
-Wenn diese Option aktiviert ist, sind SMS immer aktiviert (unabhängig von COB, temporären Zielen und Bolus). Wenn diese Einstellung aktiviert ist, sind die übrigen Bedingungen ohne Einfluss und werden nicht berücksichtigt. Wenn jedoch „Aktiviere SMB bei hohem temporären Ziel“ ausgeschalter ist und ein hohes temporäres Ziel aktiv ist, werden SMBs nicht abgegeben. Diese Option ist nur für Sensorsysteme, die gut gefilterte (nicht rauschende /springende) Glukosewerte liefert, verfügbar. Currently it is only an available option with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Falls ein gemessener Wert zu weit vom vorherigen Wert abweicht, gibt der G5/G6 einfach gar keinen Wert aus und wartet die nächste Messung in 5 Minuten ab.
+Wenn diese Option aktiviert ist, sind SMS immer aktiviert (unabhängig von COB, temporären Zielen und Bolus). Wenn diese Einstellung aktiviert ist, sind die übrigen Bedingungen ohne Einfluss und werden nicht berücksichtigt. Wenn jedoch „Aktiviere SMB bei hohem temporären Ziel“ ausgeschalter ist und ein hohes temporäres Ziel aktiv ist, werden SMBs nicht abgegeben. Diese Option ist nur für Sensorsysteme, die gut gefilterte (nicht rauschende /springende) Glukosewerte liefert, verfügbar. Currently it is only an available option with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Falls ein gemessener Wert zu weit vom vorherigen Wert abweicht, gibt der G5/G6 einfach gar keinen Wert aus und wartet die nächste Messung in 5 Minuten ab.
 
 Für andere CGM/FGM wie das Freestyle Libre ist die SMB-always-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte filtert. You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
@@ -117,7 +119,7 @@ Wenn diese Option eingeschaltet ist, werden SMBs bei einem beliebigen gesetzten 
 
 ### Aktiviere SMB nach Mahlzeiten
 
-Bei eingeschalter Option, sind SMBs für einen Zeitraum von 6h ab dem Zeitpunkt für den KH angekündigt sind aktiv, auch wenn COB mittlerweile 0 ist (keine aktiven KH mehr vorhanden sind). Diese Option ist nur für Sensorsysteme, die gut gefilterte (nicht rauschende /springende) Glukosewerte liefert, verfügbar. Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Falls ein gemessener Wert zu weit vom vorherigen Wert abweicht, gibt der G5/G6 einfach gar keinen Wert aus und wartet die nächste Messung in 5 Minuten ab.
+Bei eingeschalter Option, sind SMBs für einen Zeitraum von 6h ab dem Zeitpunkt für den KH angekündigt sind aktiv, auch wenn COB mittlerweile 0 ist (keine aktiven KH mehr vorhanden sind). Diese Option ist nur für Sensorsysteme, die gut gefilterte (nicht rauschende /springende) Glukosewerte liefert, verfügbar. Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Falls ein gemessener Wert zu weit vom vorherigen Wert abweicht, gibt der G5/G6 einfach gar keinen Wert aus und wartet die nächste Messung in 5 Minuten ab.
 
 Für andere CGM/FGM wie das Freestyle Libre ist die SMB-always-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte besser glättet. You can find [more information here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
