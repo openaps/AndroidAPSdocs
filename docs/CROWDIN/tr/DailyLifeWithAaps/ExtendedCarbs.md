@@ -21,10 +21,6 @@ Genel bakış (Giriş) sekmesindeki yKarb, gelecekte karbonhidratları gösteren
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
-Gelecekteki karbonhidrat girişleri, tedavi sekmesinde koyu turuncu renktedir:
-
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 Aşağıdaki linkte özellikle yağ ve proteini işlemenin bir yolu açıklanmaktadır: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
