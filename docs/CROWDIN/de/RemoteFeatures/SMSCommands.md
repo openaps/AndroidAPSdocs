@@ -3,14 +3,14 @@
 ```{admonition} Documentation
 :class: note
 
-This section may contain outdated content. Please also see the page [SMS Commands](../RemoteFeatures/RemoteControl.md#1-sms-commands)).
+This section may contain outdated content. Please also see the page [SMS Commands](#RemoteControl-sms-commands)).
 
 ```
 
 ## Sicherheitshinweise
 .
 - AAPS (z.B. auf dem Smartphone eines Kindes) kann über SMS-Befehle 'remote' gesteuert werden. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code. Es wird ein starkes Passwort oder biometrischer Schutz empfohlen.
-- Additionally it is recommended to allow a [second phone number](../RemoteFeatures/SMSCommands.md#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](../RemoteFeatures/SMSCommands.md#other) SMS communicator in case your main remote phone gets lost or stolen.
+- Additionally it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#SMSCommands-other) SMS communicator in case your main remote phone gets lost or stolen.
 - Wenn das Remote-Kommando (z.B. Bolusabgabe oder Profilwechsel) abgeschlossen ist, wird dies mit einer entsprechenden SMS von AAPS bestätigt. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
 - **Wenn Du einen Bolus über SMS-Kommandos abgibst, musst Du die Kohlenhydrate über Nightscout (NSClient, Webseite...) eingeben!** Wenn Du das unterlässt, ist zwar das aktive Insulin (IOB) korrekt, aber die COB sind zu gering. Dies kann dazu führen, dass notwendige Korrekturboli nicht abgegeben werden, da AAPS davon ausgeht, dass Du zu viel aktives Insulin hast.
 - Seit AAPS Version 2.7 muss eine Authentifizierungs-App mit einem zeitbasierten Einmalpasswort verwendet werden, um die Sicherheit bei der Verwendung von SMS-Kommandos zu erhöhen.
@@ -24,6 +24,7 @@ This section may contain outdated content. Please also see the page [SMS Command
 - Falls Du als Follower ein iPhone verwendest und daher die AAPSClient-App nicht nutzen kannst, gibt es weitere SMS-Kommandos.
 - Gehe dazu in den Systemeinstellungen deines Android-Telefons zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
 
+(SMSCommands-authorized-phone-numbers)=
 ### Erlaubte Telefonnummern
 
 - In AAPS gehst Du zu **Einstellungen > SMS-Kommunikator** und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AAPS zu senden. Mehrere Nummern werden dabei durch Semikolon ohne Leerzeichen getrennt (z.B. +6412345678;+6412345679)
@@ -96,9 +97,10 @@ This section may contain outdated content. Please also see the page [SMS Command
 
 **Hinweis**: Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
+(SMSCommands-commands)=
 ## Kommandos
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../SupportingAaps/Translations#translate-strings-for-aaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app).
 
 ![SMS Commands Example](../images/SMSCommands.png)
 
@@ -155,7 +157,7 @@ Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAP
 - PROFILE 1 \* Antwort: Um zum Profil 1 mit 100% zu wechseln, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 - PROFILE 2 30 \* Antwort: Um zum Profil 2 mit 30% zu wechseln, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 
-
+(SMSCommands-other)=
 ### Andere
 
 - TREATMENTS REFRESH \* Antwort: Behandlungen von NS aktualisieren
@@ -169,6 +171,7 @@ Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAP
 - HELP \* Antwort: BG, LOOP, TREATMENTS, .....
 - HELP BOLUS \* Antwort: BOLUS 1.2 BOLUS 1.2 MEAL
 
+(SMSCommands-troubleshooting)=
 ## Troubleshooting
 
 ### Mehrfach-SMS
