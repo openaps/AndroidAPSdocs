@@ -16,7 +16,7 @@ Why use a **Profile Percentage** rather than a temporary basal adjustment? To be
 
 Jedes **Profil** - einmal ausgewählt - wird einen „Profilwechsel“ erfordern. Um dies zu tun, sollte der Benutzende sein **Profil** bearbeiten oder ein neues **Profil** im Tab "Lokales Profil" einrichten. Sobald die gewünschten Einstellungen eingegeben wurden, sollten die Änderungen gespeichert werden und das **Profil** aktiviert werden. Die Aktivierung erfolgt, wie unten dargestellt, durch das Tippen auf 'Aktiviere Profil':
 
-![BB1_Screenshot 2024-06-22 234905](https://github.com/openaps/AndroidAPSdocs/assets/137224335/ecf5cc03-1e72-4521-92de-532fb3f0b287)
+![BB1_Screenshot 2024-06-22 234905](../images/ProfileSwitch1.png)
 
 Sobald ein neues **Profil** erstellt und gespeichert wurde, wird **AAPS** die erstellten **Profile** in einer Bibliothek sichern.
 
@@ -30,9 +30,9 @@ A. Um diese Funktion nutzen zu können, musst Du mehr als ein **Profil** in **AA
 2. Wähle das gewünschte **Profil** aus und
 3. Tippe dann auf ‘OK’.
 
-![BB2_Screenshot 2024-06-22 235345](https://github.com/openaps/AndroidAPSdocs/assets/137224335/ddf74092-fd33-4ac2-9aff-636eca676d33)
+![BB2_Screenshot 2024-06-22 235345](../images/ProfileSwitch2.png)
 
-![BB3_Screenshot 2024-06-22 235456](https://github.com/openaps/AndroidAPSdocs/assets/137224335/3e973822-f51e-4af0-b64c-5f4873fd6800)
+![BB3_Screenshot 2024-06-22 235456](../images/ProfileSwitch3.png)
 
 ## Um eine prozentuale Profilanpassung mit dem Profilwechsels zu aktivieren:
 
@@ -43,7 +43,7 @@ B. Um eine **prozentuale Profilanpassung** durchzuführen bzw. zu aktivieren:
     - leer gelassen wird: Das **Profil** wird ohne Zeitbegrenzung (unbegrenzt) aktiviert bleiben. Das **Profil** bleibt so lange aktiv, bis ein neuer „Profilwechsel“ durch den Nutzenden durchgeführt wird.
     - mit einer Zahl (in Minuten) gefüllt wird, ist das die Zeitdauer für die das ausgewählte **Profil** aktiv sein soll. Nach Ablauf des ausgewählten Zeitraums wird auf das **AAPS-Standardprofil** zurückgeschaltet.
 
-![BB4_Screenshot 2024-06-23 000029](https://github.com/openaps/AndroidAPSdocs/assets/137224335/2db86111-1a48-4f98-b501-53d6eb692595)
+![BB4_Screenshot 2024-06-23 000029](../images/ProfileSwitch4.png)
 
 Wie man eine **prozentuale Profilanpassung** durchführt:
 
@@ -67,9 +67,31 @@ Hab' im Hinterkopf, das eine Abschwächung des **ISF** oder des **IC** heißt, d
 
 Nach der Auswahl passt **AAPS** die Basalrate entsprechend an, und wird von da an sowohl im Closed Loop als auch im Open Loop mit der neu berechneten Basalrate des prozentual erhöhten **Profils** arbeiten.
 
-Die Wirkung einer prozentualen **Profil**anpassung wird in der unten stehenden Tabelle zusammengefasst:
+The effect of a **Profile** Percentage is summarized in the table below:
 
-![BB6_Screenshot 2024-06-23 001542](https://github.com/openaps/AndroidAPSdocs/assets/137224335/db48f504-2249-4b94-b406-57524fe69322)
+| Profile Switch  
+Percentage |    Effect    |    I:C  
+g/UI     | example  
+15g |         ISF  
+mmol/l/UI  
+mg/dl/UI         | UI to lower  
+2mmol/l  
+40mg/dl |
+|:---------------------------:|:------------:|:-----------------:|:-------------:|:------------------------------------------:|:-------------------------------:|
+|             90%             |    Weaker    | 5/0.9  
+=**5.55** |    2.7 UI     | 2.2/0.9  
+=**2.4**  
+  
+40/0.9  
+=**44.4** |             0.8 UI              |
+|          **100%**           | **Standard** |       **5**       |   **3 UI**    |                **2.2  
+40**                |           **0.9** UI            |
+|            130%             |   Stronger   | 5/1.3  
+=**3.85** |    3.9 UI     | 2.2/1.3  
+=**1.7**  
+  
+40/1.3  
+=**30.8** |             1.2 UI              |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
