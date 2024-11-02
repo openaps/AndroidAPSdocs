@@ -21,10 +21,10 @@
 -   如果你使用的是舊的更換過電池的傳輸器，最安全的做法是**停用**[預防性重新啟動](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html)。 但是，在這種情況下，你將不得不在非[原生模式](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)下使用 G6（這不建議使用，因為他會停用工廠校準並且不會過濾吵雜的讀取值），否則傳感器將在 10 天後停止運作。
 -   Dexcom G6 和 ONE 傳送器可以同時連接到 Dexcom 接收器（或替代的 t:slim 幫浦）以及你手機上的一個應用程式。
 -   使用 xDrip+ 作為接收器時，請先卸載 Dexcom 應用程式。 **你無法同時將 xDrip+ 和 Dexcom 應用程式連線到傳輸器！**
--   如果你需要 Clarity 並希望使用 xDrip+ 的警報，請使用 [BYODA](#if-using-g6-with-build-your-own-dexcom-app)（僅限 G6）並用本地廣播到 xDrip+。
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
 -   你還可以將 xDrip+ 用作官方 Dexcom 應用程式的配套程式，但你可能會遇到血糖讀取延遲。
 -   如果尚未設置，請下載[xDrip+](https://github.com/NightscoutFoundation/xDrip)並按照[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)上的指示進行操作。
--   在[組態建置工具的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source)中選擇 xDrip+。
+-   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 - 根據[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)調整設定。
 
@@ -44,7 +44,7 @@
 
 ### AAPS 設定
 
--   在[ConfigBuilder 的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source)中選擇「Dexcom App（修改版）」。
+-   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 -   如果你未收到任何數值，請選擇其他資料來源，然後重新選擇「Dexcom App（修改版）」以觸發 AAPS 和 BYODA 廣播之間連線所需的權限請求。
 
@@ -63,7 +63,7 @@
 
 ### 一般問題排除
 
-可以在[這裡](../CompatibleCgms/GeneralCGMRecommendation.md#troubleshooting)找到一般 CGM 的問題排除。
+General Troubleshooting for CGMs can be found [here](#general-cgm-troubleshooting).
 
 ### 新的傳輸器與正在運作的傳感器
 
