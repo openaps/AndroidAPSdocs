@@ -23,8 +23,9 @@
 
 在**AAPS**中，胰島素作用持續時間設定為單一數值，因為你的幫浦會持續輸注相同類型的胰島素。
 
-搭配[胰島素類型](../SettingUpAaps/ConfigBuilder.md#insulin)，這將形成[胰島素配置](../DailyLifeWithAaps/AapsScreens.md#insulin-profile)。 請在那裡閱讀以幫助您定義適當的 DIA。
+In combination with the [insulin type](#Config-Builder-insulin), this will result in the [insulin profile](#AapsScreens-insulin-profile). 請在那裡閱讀以幫助您定義適當的 DIA。
 
+(profile-glucose-targets)=
 ## 血糖目標
 
 以下**圖示**顯示了在**AAPS**個人設定中，DIA 和血糖目標可以如何設置的範例。
