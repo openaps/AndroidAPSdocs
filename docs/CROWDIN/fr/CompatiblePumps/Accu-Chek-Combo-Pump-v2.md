@@ -8,7 +8,7 @@ Ces instructions sont pour configurer la pompe Accu-Chek Combo à l'aide du nouv
 
 * Une pompe Roche Accu-Chek Combo (avec n’importe quel firmware, ils fonctionnent tous).
 * Un dispositif Accu-Chek Smartpix V1 ou Accu-Chek Realtyme, ainsi que le logiciel de configuration Accu-Chek 360. (Sur demande Roche envoie gratuitement ces dispositifs Smartpix et la configuration logiciel à leurs clients, sauf en France ou il faut contacter son prestataire).
-* Un téléphone compatible. Android 9 (Pie) ou plus récent. Si vous utilisez LineageOS, la version minimale supportée est 16.1. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
+* Un téléphone compatible. Android 9 (Pie) ou plus récent. Si vous utilisez LineageOS, la version minimale supportée est 16.1. See [release notes](#maintenance-android-version-aaps-version) for details.
 * L'application AAPS installée sur votre téléphone.
 
 Certains téléphones peuvent fonctionner mieux que d'autres, en fonction de la qualité du Bluetooth et s'ils ont une logique supplémentaire agressive d'économie d'énergie. Une liste de téléphones compatibles se trouvent dans le document [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). Cette liste n’est pas une liste complète. Elle reflète l’expérience personnelle de quelques utilisateurs. Nous vous encourageons à partager également votre expérience et ainsi aider les autres.
