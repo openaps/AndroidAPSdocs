@@ -27,7 +27,7 @@
    - 停用「從修改版 Eversense 應用程式獲取資料」設置
    - 若需回填：啟用「從 eversensedms.com 填補遺漏資料」
    - 輸入你的 Eversense 登錄資料作為電子郵件地址和密碼
-3. 在[ConfigBuilder 的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source)中將「MM640g」設為血糖來源。
+3. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ### 修改版 Eversense 應用程式
 
@@ -49,7 +49,7 @@
 
 如果你首次安裝 Eversense 並運作 ESEL，可能需要長達 15 分鐘才能在 xDrip 中顯示第一個數值！
 
-4. 在[ConfigBuilder 的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source)中將「MM640g」設為血糖來源。
+4. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ## xDrip+
 
@@ -57,9 +57,9 @@ xDrip+ 可以像 ESEL 一樣從供應商應用程式的通知中讀取資料。 
 
 - 下載並安裝 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
 - 在 xDrip+ 中必須選擇「配套應用程式」作為資料來源。
-- 在[組態建置工具的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source)中選擇 xDrip+。
+- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 - 根據 xDrip+ 設定頁面的說明[調整 xDrip+ 設定](../CompatibleCgms/xDrip.md)。
-- 在 AAPS 中啟用[指數平滑](../CompatibleCgms/SmoothingBloodGlucoseData.md#smoothing-blood-glucose-data)。
+- Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
 
 ```{warning}
 血糖 值的讀取頻率並不總是 5 分鐘，並且可能會出現重複數值。
