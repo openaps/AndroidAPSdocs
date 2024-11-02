@@ -299,7 +299,7 @@ Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
 
 Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#key-aaps-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
 
 #### Heart rate
 

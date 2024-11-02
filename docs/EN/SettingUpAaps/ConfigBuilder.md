@@ -133,7 +133,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 * OpenAPS AMA
   * Advanced Meal Assist: older algorithm not recommended anymore.
   * In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
-* [OpenAPS SMB](#key-aaps-features-super-micro-bolus)
+* [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb)
   * Super Micro Bolus: most recent algorithm recommended for all users.
   * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
   * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
