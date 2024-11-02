@@ -44,7 +44,7 @@ If you don't want your preferences to be easily changed then you can password pr
 
 Εάν αφαιρέσετε την αντλία σας για ντους, κολύμβηση, κολύμπι, σπορ ή άλλες δραστηριότητες θα πρέπει να ενημερώσετε το AAPS ότι δεν χορηγείται ινσουλίνη για να διατηρηθεί η ενεργή σας ινσουλίνη σωστά.
 
-The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](../DailyLifeWithAaps/AapsScreens.md#loop-status).
+The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](#AapsScreens-loop-status).
 
 #### Recommendations not only based on one single CGM reading
 
@@ -245,7 +245,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 - clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
 
 - for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Αφαιρέστε και επανατοποθετήστε την μπαταρία 2-3 φορές μέχρι να εμφανιστεί 100% στην οθόνη ή χρησιμοποιήστε το κλειδί της μπαταρίας για βραχυκύκλωμα μπαταρίας πριν την τοποθέτηση εφαρμόζοντας και στους δύο ακροδέκτες για ένα δευτερόλεπτο.
-- see also more tips for [particular types of battery](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
+- see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
 
 #### Changing reservoirs and cannulas
 
@@ -253,14 +253,14 @@ The change of cartridge cannot be done via AAPS but must be carried out as befor
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
 - Now nnect the pump and change the reservoir as per pump instructions.
-- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../DailyLifeWithAaps/AapsScreens.md#action-tab) in the actions tab just to record the change.
+- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](#screens-action-tab) in the actions tab just to record the change.
 - Μόλις επανασυνδεθείτε με την αντλία, συνεχίστε με το πάτημα του κουμπιού "Αναστολή (X m)".
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Αυτό σημαίνει ότι δεν διακόπτει ένα τρέχον προσωρινό βασικό ρυθμό. On the Actions (Act) tab, use the [PRIME/FILL button](../DailyLifeWithAaps/AapsScreens.md#action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. Αν η ποσότητα δεν είναι αρκετή, επαναλάβετε την πλήρωση. Μπορείτε να ορίσετε κουμπιά προεπιλεγμένου ποσού στις Προτιμήσεις > Άλλο > Συμπληρώστε / Αρχίστε την κανονική ποσότητα ινσουλίνης. Ανατρέξτε στο φυλλάδιο οδηγιών στο κουτί της κάνουλας για το πόσες μονάδες θα πρέπει να γίνουν ανάλογα με το μήκος της βελόνας και το μήκος της σωλήνωσης.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Αυτό σημαίνει ότι δεν διακόπτει ένα τρέχον προσωρινό βασικό ρυθμό. On the Actions (Act) tab, use the [PRIME/FILL button](#screens-action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. Αν η ποσότητα δεν είναι αρκετή, επαναλάβετε την πλήρωση. Μπορείτε να ορίσετε κουμπιά προεπιλεγμένου ποσού στις Προτιμήσεις > Άλλο > Συμπληρώστε / Αρχίστε την κανονική ποσότητα ινσουλίνης. Ανατρέξτε στο φυλλάδιο οδηγιών στο κουτί της κάνουλας για το πόσες μονάδες θα πρέπει να γίνουν ανάλογα με το μήκος της βελόνας και το μήκος της σωλήνωσης.
 
 ### Wallpaper
 
-You can find the AAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones.md#phone-wallpaper).
+You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phone-wallpaper).
 
 ### Daily usage
 
@@ -268,11 +268,11 @@ You can find the AAPS wallpaper for your phone on the [phones page](../Getting-S
 
 ##### What to do when taking a shower or bath?
 
-Μπορείτε να αφαιρέσετε την αντλία ενώ κάνετε ντους ή μπάνιο. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](#disconnect-pump).
+Μπορείτε να αφαιρέσετε την αντλία ενώ κάνετε ντους ή μπάνιο. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
 
 #### Work
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ### Leisure activities
 
@@ -287,8 +287,8 @@ So, you would have more carbohydrates on board, but at the same time the loop wo
 When looping you should try these steps:
 
 - Make a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) < 100%.
-- Set an [activity temp target](../DailyLifeWithAaps/TempTargets.md#activity-temp-target) above your standard target.
-- If you are using SMB make sure ["Enable SMB with high temp targets"](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb-always) are disabled.
+- Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target.
+- If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
 
 Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
 
@@ -298,7 +298,7 @@ The percentage of the profile switch, the value for your activity temp target an
 
 #### Sex
 
-You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](#disconnect-pump).
+You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
 
 #### Drinking alcohol
 
@@ -314,7 +314,7 @@ You can remove the pump to be 'free', but you should tell AAPS so that the IOB c
 
 ##### How can I loop during the night without mobile and WIFI radiation?
 
-Πολλοί χρήστες γυρίζουν το τηλέφωνο τους σε λειτουργία αεροπλάνου το βράδυ. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Πολλοί χρήστες γυρίζουν το τηλέφωνο τους σε λειτουργία αεροπλάνου το βράδυ. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Ενεργοποιήστε τη "λειτουργία πτήσης" στο κινητό σας.
 2. Περιμένετε μέχρι να ενεργοποιηθεί η λειτουργία του αεροπλάνου.
@@ -383,7 +383,7 @@ Open the hamburger menu, start the Configuration wizard and enter new password w
 
 ### How to reset the password in AAPS v3.x
 
-You find the documentation [here](../Maintenance/Update3_0.md#reset-master-password).
+You find the documentation [here](#Update3_0-reset-master-password).
 
 ### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
 
