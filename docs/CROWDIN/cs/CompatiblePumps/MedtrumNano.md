@@ -50,7 +50,7 @@ Pokud máte pochybnosti, můžete také vybrat možnost „Virtuální pumpa“ 
 
 #### Option 2: The Config Builder
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump):
+On an existing installation you can select the **Medtrum** pump from the [Config Builder](#Config-Builder-pump):
 
 V levém horním rohu klepněte na **hamburger menu**, vyberte **Konfigurace**\ ➜\ **Pumpa**\ ➜\ **Medtrum**\ klepnutím na **přepínač** s názvem **Medtrum**.
 
@@ -90,8 +90,9 @@ Toto nastavení mění způsob, jakým AAPS zobrazí upozornění na nekritická
     - Nízký stav zásobníku (20 U)
     - Připomenutí expirace patche
 
-Tato varování jsou také zobrazena na obrazovce přehledu Medtrum v části [Aktivní alarmy](#active-alarms).
+In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
 
+(medtrum-patch-expiration)=
 #### Vypršení platnosti patche
 
 ***Výchozí: Povoleno.***
@@ -104,7 +105,7 @@ Pokud je tato možnost zakázána, patch vás nebude varovat a bude nadále fung
 
 ***Výchozí: 72 hodin.***
 
-Toto nastavení změní čas upozornění na vypršení platnosti, když je povoleno [Vypršení platnosti patche](#patch-expiration), AAPS zobrazí oznámení v nastaveném čase po aktivaci.
+This setting changes the time of the expiration warning, when [Patch Expiration](#medtrum-patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
 
 #### Hodinové maximum inzulínu
 
@@ -213,6 +214,7 @@ Očistěte pokožku, odstraňte krycí fólie a připevněte patch k tělu. Odst
 
 Stisknutím tlačítka **Další** aktivujte patch.
 
+(medtrum-activate-patch)=
 ##### Aktivovat patch
 
 ![Aktivovat patch](../images/medtrum/activation/ActivatePatch.png)
@@ -287,6 +289,7 @@ Zobrazuje poslední vydaný bolus.
 
 Zobrazuje aktivní bolus, který je v současné době vydáván.
 
+(medtrum-active-alarms)=
 ##### Aktivní alarmy:
 
 Zobrazuje všechny aktivní alarmy.
@@ -321,7 +324,7 @@ Toto tlačítko obnoví stav patche.
 
 ##### Vyměnit patch:
 
-Toto tlačítko spustí proces výměny patche. Další informace viz [Aktivace patche](#activate-patch).
+Toto tlačítko spustí proces výměny patche. See [Activate patch](#medtrum-activate-patch) for more information.
 
 ### Resetovat alarmy
 
