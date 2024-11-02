@@ -3,14 +3,14 @@
 ```{admonition} Documentation
 :class: note
 
-This section may contain outdated content. Please also see the page [SMS Commands](../RemoteFeatures/RemoteControl.md#1-sms-commands)).
+This section may contain outdated content. Please also see the page [SMS Commands](#RemoteControl-sms-commands)).
 
 ```
 
 ## La seguridad primero
 .
 - AndroidAPS te permite controlar el teléfono de un niño de forma remota mediante mensajes de texto. Si activas esta función "SMS Communicator", recuerda siempre que el teléfono configurado para dar comandos remotos podría ser robado. Por lo que protege siempre el móvil con código PIN. Se recomienda usar una contraseña compleja o usar datos biométricos.
-- Additionally it is recommended to allow a [second phone number](../RemoteFeatures/SMSCommands.md#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](../RemoteFeatures/SMSCommands.md#other) SMS communicator in case your main remote phone gets lost or stolen.
+- Additionally it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#SMSCommands-other) SMS communicator in case your main remote phone gets lost or stolen.
 - AndroidAPS también te avisará por mensaje de texto si tus comandos remotos, tales como bolos o cambios de perfil, se han llevado a cabo. Es aconsejable, por seguridad, configurar esta función para que los textos de confirmación se envíen al menos a dos números de teléfono diferentes, así si falla (o ha sido robado) uno, quedará el otro.
 - **Si administras una dosis de insulina a través de comandos SMS, debes ingresar los carbohidratos a través de Nightscout (AAPSClient, sitio web...)** Si no lo haces, la cantidad de insulina activa en el organismo (IOB) podría ser incorrecta, lo que potencialmente llevaría a no realizar una corrección adecuada, ya que AAPS asumiría que tienes demasiada insulina activa.
 - Desde la versión 2.7 de AndroidAPS se debe utilizar una aplicación de autenticación por contraseña de un sólo uso, para mejorar la seguridad al usar la opción de comandos SMS.
@@ -24,6 +24,7 @@ This section may contain outdated content. Please also see the page [SMS Command
 - Si utilizas un iPhone como seguidor y, por lo tanto, no puedes usar la aplicación AAPSClient, hay comandos SMS adicionales disponibles.
 - En los ajustes de tu teléfono Android, ve a aplicaciones > AAPS > Permisos y activa el de SMS
 
+(SMSCommands-authorized-phone-numbers)=
 ### Números de teléfono permitidos
 
 - En AndroidAPS ir a Tabla de configuraciones > Comunicador SMS \*\* y añadir el número(s) de teléfono que deseas habilitar para enviar comandos SMS (separados por punto y coma - p.ej. +3412345678;+3412345679)
@@ -96,9 +97,10 @@ This section may contain outdated content. Please also see the page [SMS Command
 
 **Sugerencia**: Puede ser útil tener SMS ilimitados en tu plan de teléfono (para cada teléfono utilizado), si se van a enviar muchos SMS.
 
+(SMSCommands-commands)=
 ## Comandos
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../SupportingAaps/Translations#translate-strings-for-aaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app).
 
 ![SMS Commands Example](../images/SMSCommands.png)
 
@@ -155,7 +157,7 @@ No se permite el bolo remoto en los próximos 15 minutos (este valor sólo es ed
 - PERFIL 1 \* Respuesta: Para cambiar al perfil Perfil1 al 100%, responda con el código de la aplicación de autenticación del usuario seguido del PIN
 - PROFILE 2 30 \* Respuesta: Para cambiar al perfil Perfil2 al 30%, responda con el código de la aplicación de autenticación del usuario seguido del PIN
 
-
+(SMSCommands-other)=
 ### Otros
 
 - TREATMENTS REFRESH \* Respuesta: Actualizar tratamientos desde NS
@@ -169,6 +171,7 @@ No se permite el bolo remoto en los próximos 15 minutos (este valor sólo es ed
 - HELP \* Respuesta: Glucemia, Lazo, Tratamientos, ...
 - HELP BOLUS \* Respuesta: BOLO 1.2, BOLO 1.2 COMIDA
 
+(SMSCommands-troubleshooting)=
 ## Troubleshooting
 
 ### Múltiples SMS
