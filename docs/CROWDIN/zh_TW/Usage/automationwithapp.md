@@ -32,7 +32,7 @@
 
 在 AAPS 中，點擊右上角的三點選單，進入偏好設定 > NSClient > 進階設定 > 取消勾選「僅上傳至 NS（已停用同步）」和「不向 NS 上傳」。
 
-請注意可能出現的 [安全問題](../SettingUpAaps/Nightscout.md#security-considerations)，如果您正在使用 [Insight 幫浦](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)，需要格外小心。
+Be aware of the [security issues](#Nightscout-security-considerations) that might occur and be very careful if you are using an [Insight pump](#Accu-Chek-Insight-Pump-settings-in-aaps).
 
 ![Nightscout 下載偏好設定](../images/automate-aaps2.jpg)
 
