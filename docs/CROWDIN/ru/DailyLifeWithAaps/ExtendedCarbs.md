@@ -53,7 +53,7 @@ ______________________________________________________________________
 
 - Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов.
 - Единицы болюса, время оставшееся и общее, будут показаны на гланом экране.
-- On Insight pump extended bolus is *not available* if [TBR emulation](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
+- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
