@@ -17,21 +17,75 @@ Temporary targets can be defined within those boundaries :
 
 Для достижения желаемого значения **ГК** может потребоваться около 30 минут или больше с момента активации **Временной Цели**. **AAPS** не в состоянии достичь целевой **ГК** немедленно, и пользователи должны помнить об этом при использовании **Врем-Цели**.
 
-В таблице ниже приведены особенности **Врем-Цель-Нагрузка**, **Врем-цель-Ожидаемый приём пищи** и **Врем-Цель-Гипо**.
+The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
 
-![TT1_Снимок экрана 2024-01-26 231223](https://github.com/openaps/AndroidAPSdocs/assets/137224335/73eeadf1-c17e-4955-afd8-f49c281331e3)
+### TT - Activity
+
+![TT Activity](../images/TempTarget2.png)
+
+**BG Target (depending on users' settings)**
+
+AAPS will aim to reach 8mmol/l or 144mg/dl for 40 minutes
+
+**Other considerations users may wish to factor in when selecting**:
+
+Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+
+In closed loop mode, **SMB**:
+
+- *may be* deactivated (discussed further below); and/or
+- basal may be activated if **AAPS** is in negative **IOB** or <0.
+
+Users may also wish to consider:
+
+- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary peerson to person); and
+- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
+- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise as reduced **IOB** as some users experience a rapid rise in **BG **post exercise.
+
+### TT - Eating soon
+
+![TT Activity](../images/TempTarget1.png)
+
+**BG Target (depending on users' settings)**
+
+AAPS will aim to reach 5mmol/l or 90mg/dl for 30 minutes
+
+**Other considerations users may wish to factor in when selecting**:
+
+In closed loop mode, **SMB**:
+
+- will remain activated; and/or
+- basal may be also activated depending on the user's **Profile's** settings.
+
+Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+
+### TT - Hypo
+
+![TT Activity](../images/TempTarget3.png)
+
+**BG Target (depending on users' settings)**
+
+AAPS will aim to reach 7mmol/l or 126mg/dl for 30 minutes
+
+**Other considerations users may wish to factor in when selecting**:
+
+In closed loop mode, **SMB**:
+
+- *may be* deactivated (discussed further below); and/or
+- basal may be activated if **AAPS** is in negative **IOB** or <0.
 
 ## Как выбрать временную цель?
 
-1. перейдите во вкладку **Действия** главного экрана **AAPS**;
-2. выберите иконку **Временная Цель**; и затем
-3. настройте желаемые параметры **Врем-Цели**
+In the **Actions** tab in **AAPS**.
 
-![TT2_Снимок экрана 2024-01-26 194028](https://github.com/openaps/AndroidAPSdocs/assets/137224335/9b53d358-dc97-4dc5-9ffc-3d24bceea203)
+1. выберите иконку **Временная Цель**; и затем
+2. настройте желаемые параметры **Врем-Цели**
 
-Кроме этого, **Врем-Цель** можно активировать с помощью кнопки «Углеводы» (шаг 1), выбрав нужную **Врем-Цель** в иконках (шаг 2), как показано ниже:
+![Carbs TT](../images/TempTarget4a.png)
 
-![TT3_Снимок экрана 2024-01-26 194318](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a0627667-fb73-4791-8a1a-328eaaf1af2a)
+Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+
+![Carbs TT](../images/TempTarget6.png)
 
 ## Как изменить временную цель по умолчанию и переопределить её своими собственными значениями?
 
@@ -43,24 +97,38 @@ Temporary targets can be defined within those boundaries :
 4. шаг 4 указывает (ниже), где изменить временной диапазон **ВЦ- Ожидаемый приём пищи**
 5. шаг 5 указывает (ниже), где изменить **целевое значение ГК при ожидаемом приеме пищи eatingsoon** (и те же шаги можно повторить для **целевое значение ГК при физической нагрузке** и **целевое значение ГК при гипо**.
 
-![TT7_Снимок экрана 2024-01-26 213136](https://github.com/openaps/AndroidAPSdocs/assets/137224335/82cc08af-82bf-49e2-9a66-178fc9f6aa56)
+![Custom TT](../images/TempTarget7.png)
 
 ## Как отменить Врем-Цель?
 
-Чтобы отменить запущенную **Врем-Цель**, нажмите кнопку “Отмена” в разделе **Временная Цель** во вкладке **Действия**, как показано ниже.
+To cancel a **Temp-Target** running:
 
-![TT5_Снимок экрана 2024-01-26 195309](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a9299ec6-34ef-43da-a36c-4c06340878dc)
+Select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
+
+![Custom TT](../images/TempTarget8.png)
 
 Или коротко нажмите «Целевой ГК» в желто-зелёном поле, расположенном в правом верхнем углу **AAPS**, и выберите «Отмена», как показано ниже:
 
-![Задать врем цель](../images/TempTarget_Set2.png)
+![Actions TT](../images/TempTarget9.png)
 
 ## Как выбрать "Временные цели по умолчанию"
 
-Чтобы выбрать **Временные цели по умолчанию**, пользователь может кратковременно нажать по цели в правом верхнем углу вкладки "Начало", перейти в диалоговое окно **Временные Цели**, и нажать на кнопки «Ожидаемый приём пищи», «Активность», «Гипо» или воспользоваться ярлыками на оранжевой кнопке «Углеводы».
+In the **Actions** tab in **AAPS**.
 
-- Чтобы слегка изменить значения **Временных-Целей-по-умолчанию**t, *длительно нажмите* кнопку «Ожидаемый приём пищи», «Активность» или «Гипо», а затем отредактируйте значения в полях «Цель» или «Длительность».
-- Если **Временная цель** запущена, в диалоговом окне отображается дополнительная кнопка «Отмена» для ее отмены.
+1. выберите иконку **Временная Цель**; и затем
+2. настройте желаемые параметры **Врем-Цели**
+
+![Actions TT](../images/TempTarget4.png)
+
+Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+
+![BG TT](../images/TempTarget6.png)
+
+Or in the **Carbs** button
+
+1. selecting the desired **Temp-Target** in the shortcuts
+
+![Carbs TT](../images/TempTarget5.png)
 
 (TempTargets-hypo-temp-target)=
 
@@ -110,12 +178,6 @@ Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have
 
 Для этого зайдите в **Настройки** > и деактивируйте *Включать супер микро болюс SMB при высоких значениях временных целей*.
 
-![TT8_Снимок экрана 2024-01-26 230757](https://github.com/openaps/AndroidAPSdocs/assets/137224335/4471540e-fe2a-4ade-8f99-18ca0372da52)
+![Carbs TT](../images/TempTargetSMB.png)
 
-Это гарантирует, что **AAPS** не будет подавать **СМБ**, даже если Активные углеводы COB > 0, * 'Включить супер микро болюсы SMB с временными целями'* или *'Всегда включать супер микро болюс SMB'* включены и OpenAPS СМБ активирован.
-
-## Настраиваемая временная цель
-
-Если пользователю требуется ручная настройка **Временной-Цели**, * выполните длительное нажатие* кнопки «Ожидаемый прием пищи», «Нагрузка» или «Гипо», а затем отрегулируйте желаемые значения **ГК** напротив «цель» или «длительность».
-
-![Установите временные цели через вкладку Действия](../images/TempTarget_ActionTab.png)
+This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'SMB with Temp-Target'* or *'SMB always'* enabled and OpenAPS SMB active.
