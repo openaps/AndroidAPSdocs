@@ -4,6 +4,8 @@
 
 Il n'y a aucun problème avec le changement de fuseau horaire dans le téléphone car la pompe n'utilise pas l'historique
 
+(timezone-traveling-danarv2-danars)=
+
 ## DanaRv2, DanaRS
 
 These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **Cela signifie que si vous changez simplement de fuseau horaire dans le téléphone, les enregistrements seront lus avec un fuseau horaire différent et seront doublés.**
@@ -24,7 +26,7 @@ Pour éviter cela, il y a deux possibilités :
    
    * par ex. Vienne -> New York : Changement de profil +6 heures
    * par ex. Vienne -> Sydney : Changement de profil -8 heures
-* Probably not an option if using [patched LibreLink app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Option 2: Supprimer l'historique de la pompe
 
@@ -39,6 +41,8 @@ Quand vous sortez de l'avion :
 * changez l'heure de la pompe
 * allumez le telephone
 * laissez le téléphone se connecter à la pompe et ré-ajuster l'heure
+
+(timezone-traveling-insight)=
 
 ## Insight
 
@@ -65,6 +69,8 @@ Le driver Insight ajuste automatiquement l'heure de la pompe à l'heure du tél�
 Timezone changes keep the history in tact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and IOB. If you change time manually double check the IOB.
 
 When the timezone or time changes running TBR's are stopped.
+
+(time-adjustment-daylight-savings-time-dst)=
 
 ## Changements d'heure
 
