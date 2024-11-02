@@ -5,7 +5,7 @@
 -   Вы можете безопасно загрузить [свежую рабочую версию APK (стабильную)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны конкретные недавно разработанные функции.
 -   Настройте xDrip+ с G5 по [этим инструкциям](https://navid200.github.io/xDrip/docs/G5-Recommended-Settings.html).
 -   Setup xDrip+ reading the [xDrip+ settings page](../CompatibleCgms/xDrip.md) .
--   Select xDrip+ in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+-   Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ## При пользовании G5 с помощью модифицированного приложения Dexcom
 
@@ -27,6 +27,6 @@ These apps are not compatible with recent Android versions.
 
 -   Запустите сенсор
 
-- Select Dexcom App (patched) in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select Dexcom App (patched) in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 -   Если хотите использовать xDrip-оповещения через локальную трансляцию: в сэндвич-меню xDrip >> настройки> > источник данных ГК>> 640G /EverSense.
