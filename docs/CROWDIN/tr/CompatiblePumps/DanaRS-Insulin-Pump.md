@@ -105,7 +105,7 @@ Bolus insülin iletimi sırasında AAPS ile Dana RS arasındaki bağlantının k
 
 * Çoğu durumda bu sadece bir iletişim sorunudur ve doğru miktarda insülin verilir.
 * Doğru bolus verilip verilmediğini pompa geçmişinden (pompada veya Dana sekmesi > pompa geçmişi > boluslar aracılığıyla) kontrol edin.
-* Delete error entry in [treatments tab](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs) if you wish.
+* Delete error entry in [treatments tab](#screens-bolus-carbs) if you wish.
 * Bir sonraki pompa bağlantısında gerçek miktar okunur ve kaydedilir. Bunu yaptırmak için dana sekmesindeki BT simgesine basın veya bir sonraki bağlantı için bekleyin.
 
 ## Telefon değiştirirken özel not
@@ -129,4 +129,4 @@ Yeni bir telefona geçerken aşağıdaki adımları yapmanız gerekir:
 
 ## Dana RS pompasıyla seyahat edenler için saat dilimi
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
