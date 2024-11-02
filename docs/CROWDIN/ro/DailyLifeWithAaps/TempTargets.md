@@ -17,21 +17,75 @@ Users should have realistic expectations on the results that can be achieved whe
 
 A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
 
-The table below summarises the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
+The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
 
-![TT1_Screenshot 2024-01-26 231223](https://github.com/openaps/AndroidAPSdocs/assets/137224335/73eeadf1-c17e-4955-afd8-f49c281331e3)
+### TT - Activity
+
+![TT Activity](../images/TempTarget2.png)
+
+**BG Target (depending on users' settings)**
+
+AAPS will aim to reach 8mmol/l or 144mg/dl for 40 minutes
+
+**Other considerations users may wish to factor in when selecting**:
+
+Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+
+In closed loop mode, **SMB**:
+
+- *may be* deactivated (discussed further below); and/or
+- basal may be activated if **AAPS** is in negative **IOB** or <0.
+
+Users may also wish to consider:
+
+- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary peerson to person); and
+- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
+- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise as reduced **IOB** as some users experience a rapid rise in **BG **post exercise.
+
+### TT - Eating soon
+
+![TT Activity](../images/TempTarget1.png)
+
+**BG Target (depending on users' settings)**
+
+AAPS will aim to reach 5mmol/l or 90mg/dl for 30 minutes
+
+**Other considerations users may wish to factor in when selecting**:
+
+In closed loop mode, **SMB**:
+
+- will remain activated; and/or
+- basal may be also activated depending on the user's **Profile's** settings.
+
+Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+
+### TT - Hypo
+
+![TT Activity](../images/TempTarget3.png)
+
+**BG Target (depending on users' settings)**
+
+AAPS will aim to reach 7mmol/l or 126mg/dl for 30 minutes
+
+**Other considerations users may wish to factor in when selecting**:
+
+In closed loop mode, **SMB**:
+
+- *may be* deactivated (discussed further below); and/or
+- basal may be activated if **AAPS** is in negative **IOB** or <0.
 
 ## Where can I select a Temp-Target?
 
-1. go to **Actions** tab in **AAPS**;
-2. select **Temporary Target** button; and then
-3. select desired **Temp-Target**
+In the **Actions** tab in **AAPS**.
 
-![TT2_Screenshot 2024-01-26 194028](https://github.com/openaps/AndroidAPSdocs/assets/137224335/9b53d358-dc97-4dc5-9ffc-3d24bceea203)
+1. select **Temporary Target** button; and then
+2. select desired **Temp-Target**
 
-Alternatively, **Temp-Target** can be activated in the “Carbs” button (step 1) by selecting the desired **Temp-Target** in the shortcuts (step 2) as shown below:
+![Carbs TT](../images/TempTarget4a.png)
 
-![TT3_Screenshot 2024-01-26 194318](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a0627667-fb73-4791-8a1a-328eaaf1af2a)
+Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+
+![Carbs TT](../images/TempTarget6.png)
 
 ## Where can I change the default Temp-Target and override with my own preferences?
 
@@ -43,24 +97,38 @@ To reconfigure the ‘BG target range’ and ‘duration’ allocated to the use
 4. step 4 indicates (below) where to change **TT- Eating soon** time period
 5. step 5 indicates (below) where to change **TT - Eating soon** **BG** target range (and the same steps can be repeated for **TT -Activity** and **TT - Hypo**.
 
-![TT7_Screenshot 2024-01-26 213136](https://github.com/openaps/AndroidAPSdocs/assets/137224335/82cc08af-82bf-49e2-9a66-178fc9f6aa56)
+![Custom TT](../images/TempTarget7.png)
 
 ## How do I cancel a Temp-Target?
 
-To cancel a **Temp-Target** running, select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
+To cancel a **Temp-Target** running:
 
-![TT5_Screenshot 2024-01-26 195309](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a9299ec6-34ef-43da-a36c-4c06340878dc)
+Select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
+
+![Custom TT](../images/TempTarget8.png)
 
 Or short-click on the ‘BG Target’ in the yellow/green box located in the top right corner of **AAPS**, and select ‘cancel’ as shown below:
 
-![Set temp target](../images/TempTarget_Set2.png)
+![Actions TT](../images/TempTarget9.png)
 
 ## How do I select a “Default-Temp-Targets”
 
-To select a **Default-Temp-Target**, the user can short click on the target in the right corner on the top in the overview-tab to show **Temp Target** dialog and click on 'Eating Soon', 'Activity' or 'Hypo' button, or use the shortcuts in the orange 'Carbs' button.
+In the **Actions** tab in **AAPS**.
 
-- To slightly adjust the values of a **Default-Temp-Target**t, *long press* the 'Eating Soon', 'Activity' or 'Hypo' button and then edit the values in the Target or Duration fields.
-- If a **Temp target** is running, an additional "Cancel" button is shown in dialog to cancel it.
+1. select **Temporary Target** button; and then
+2. select desired **Temp-Target**
+
+![Actions TT](../images/TempTarget4.png)
+
+Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+
+![BG TT](../images/TempTarget6.png)
+
+Or in the **Carbs** button
+
+1. selecting the desired **Temp-Target** in the shortcuts
+
+![Carbs TT](../images/TempTarget5.png)
 
 (TempTargets-hypo-temp-target)=
 
@@ -110,12 +178,6 @@ Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have
 
 To action this select in **Preferences** > and deactivate *'Enable SMB with high Temp-Target'*.
 
-![TT8_Screenshot 2024-01-26 230757](https://github.com/openaps/AndroidAPSdocs/assets/137224335/4471540e-fe2a-4ade-8f99-18ca0372da52)
+![Carbs TT](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'SMB with Temp-Target'* or *'SMB alway'* enabled and OpenAPS SMB active.
-
-## Custom Temp-Target
-
-If the user requires an manual adjustment to the **Temp-Target** *long press* the ‘Eating Soon’, ‘Activity’ or ‘Hypo’ button and then edit the values to the desired **BG** ‘target’ or ‘duration’ field.
-
-![Set temp target through Action tab](../images/TempTarget_ActionTab.png)
+This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'SMB with Temp-Target'* or *'SMB always'* enabled and OpenAPS SMB active.
