@@ -24,6 +24,7 @@
 * Allez dans l'onglet NSClient et ouvrez les paramètres dans le menu de droite. Une nouvelle option "Synchronisation" est maintenant disponible.
 * Vous pouvez maintenant choisir en détail quels éléments seront synchronisés avec votre site Nightscout.
 
+(Update3_0-nightscout-profile-cannot-be-pushed)=
 ## Profil Nightscout ne peut plus être sélectionné
 * Le profil Nightscout est mort, repose en paix!
 * Pour copier votre profil Nightscout actuel dans un profil local, allez sur la page Traitements (maintenant accessible dans le menu de droite).
@@ -31,6 +32,7 @@
 * Un nouveau profil local est ajouté, valable à partir de la date actuelle.
 * Pour mettre à jour le profil du côté NS, utilisez "Clone" (enregistrement!!, pas profil) et enregistrez les modifications. Vous devriez voir "Profil valide à partir de :" et la date actuelle.
 
+(Update3_0-reset-master-password)=
 ## Réinitialiser le mot de passe principal
 * Vous pouvez maintenant réinitialiser votre mot de passe principal au cas où vous l'auriez oublié.
 * Vous devez ajouter un fichier nommé `PasswordReset` dans le répertoire `/AAPS/extra` du système de fichiers de votre téléphone.
@@ -47,11 +49,11 @@
 
   ![Avertissement de glycémie jaune](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign)
+For details see [AAPS screens page](#aaps-screens-bg-warning-sign)
 
-
+(update30-failure-message-data-from-different-pump)=
 ## Message d'échec : Données provenant de pompes différentes
 
    ![Message d'échec : Données provenant de pompes différentes](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../SettingUpAaps/ConfigBuilder.md#pump). Sélectionnez la pompe virtuelle puis resélectionnez votre pompe réelle. Cela réinitialisera l'état de la pompe.
+To resolve this issue go to [config builder](#Config-Builder-pump). Sélectionnez la pompe virtuelle puis resélectionnez votre pompe réelle. Cela réinitialisera l'état de la pompe.
