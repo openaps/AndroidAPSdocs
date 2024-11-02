@@ -17,21 +17,75 @@ A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user 
 
 一個**臨時目標**可能需要大約30分鐘甚至更長時間才能達到預期的**血糖**目標。 **AAPS** 無法立即達到**血糖**目標，因此使用者在選擇**臨時目標**時應注意這一點。
 
-下表總結了**臨時目標-運動**、**臨時目標-即將用餐**和**臨時目標-低血糖**的功能。
+The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
 
-![TT1_螢幕擷圖 2024-01-26 231223](https://github.com/openaps/AndroidAPSdocs/assets/137224335/73eeadf1-c17e-4955-afd8-f49c281331e3)
+### TT - Activity
+
+![TT Activity](../images/TempTarget2.png)
+
+**BG Target (depending on users' settings)**
+
+AAPS will aim to reach 8mmol/l or 144mg/dl for 40 minutes
+
+**Other considerations users may wish to factor in when selecting**:
+
+Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+
+In closed loop mode, **SMB**:
+
+- *may be* deactivated (discussed further below); and/or
+- basal may be activated if **AAPS** is in negative **IOB** or <0.
+
+Users may also wish to consider:
+
+- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary peerson to person); and
+- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
+- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise as reduced **IOB** as some users experience a rapid rise in **BG **post exercise.
+
+### TT - Eating soon
+
+![TT Activity](../images/TempTarget1.png)
+
+**BG Target (depending on users' settings)**
+
+AAPS will aim to reach 5mmol/l or 90mg/dl for 30 minutes
+
+**Other considerations users may wish to factor in when selecting**:
+
+In closed loop mode, **SMB**:
+
+- will remain activated; and/or
+- basal may be also activated depending on the user's **Profile's** settings.
+
+Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+
+### TT - Hypo
+
+![TT Activity](../images/TempTarget3.png)
+
+**BG Target (depending on users' settings)**
+
+AAPS will aim to reach 7mmol/l or 126mg/dl for 30 minutes
+
+**Other considerations users may wish to factor in when selecting**:
+
+In closed loop mode, **SMB**:
+
+- *may be* deactivated (discussed further below); and/or
+- basal may be activated if **AAPS** is in negative **IOB** or <0.
 
 ## 我可以在哪裡選擇臨時目標？
 
-1. 進入**AAPS**的**操作**選單；
-2. 選擇**臨時目標**按鈕；然後
-3. 選擇所需的**臨時目標**
+In the **Actions** tab in **AAPS**.
 
-![TT2_螢幕擷圖 2024-01-26 194028](https://github.com/openaps/AndroidAPSdocs/assets/137224335/9b53d358-dc97-4dc5-9ffc-3d24bceea203)
+1. 選擇**臨時目標**按鈕；然後
+2. 選擇所需的**臨時目標**
 
-另外，可以透過點擊「碳水化合物」按鈕（步驟1），在捷徑中選擇所需的**臨時目標**（步驟2）來啟用**臨時目標**，如下所示：
+![Carbs TT](../images/TempTarget4a.png)
 
-![TT3_螢幕擷圖 2024-01-26 194318](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a0627667-fb73-4791-8a1a-328eaaf1af2a)
+Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+
+![Carbs TT](../images/TempTarget6.png)
 
 ## 我可以在哪裡更改預設的**臨時目標**，並根據個人偏好進行覆蓋？
 
@@ -43,24 +97,38 @@ A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user 
 4. 步驟4 說明如何更改**臨時目標-即將用餐**的持續時間
 5. 步驟5 說明如何更改**臨時目標-即將用餐**的**血糖**目標範圍（同樣的步驟可應用於**臨時目標-運動**和**臨時目標-低血糖**）。
 
-![TT7_螢幕擷圖 2024-01-26 213136](https://github.com/openaps/AndroidAPSdocs/assets/137224335/82cc08af-82bf-49e2-9a66-178fc9f6aa56)
+![Custom TT](../images/TempTarget7.png)
 
 ## 如何取消一個正在運作的**臨時目標**？
 
-要取消正在運作的**臨時目標**，請在**操作選單**下的**臨時目標**中選擇「取消」按鈕，如下所示。
+To cancel a **Temp-Target** running:
 
-![TT5_螢幕擷圖 2024-01-26 195309](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a9299ec6-34ef-43da-a36c-4c06340878dc)
+Select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
+
+![Custom TT](../images/TempTarget8.png)
 
 或者，快速點擊**AAPS**右上角黃色/綠色框中的「血糖目標」，然後選擇「取消」，如下所示：
 
-![設置臨時目標](../images/TempTarget_Set2.png)
+![Actions TT](../images/TempTarget9.png)
 
 ## 如何選擇**預設臨時目標**？
 
-要選擇**預設臨時目標**，使用者可以快速點擊首頁總覽標籤頁右上角的目標，打開**臨時目標**對話框，然後點擊「即將用餐」、「運動」或「低血糖」按鈕，或者使用橘色「碳水化合物」按鈕中的捷徑。
+In the **Actions** tab in **AAPS**.
 
-- 要稍微調整**預設臨時目標**的值，*長按*「即將用餐」、「運動」或「低血糖」按鈕，然後在目標或持續時間欄位中編輯數值。
-- 如果臨時目標正在運作，對話框中會顯示一個額外的「取消」按鈕來取消他。
+1. 選擇**臨時目標**按鈕；然後
+2. 選擇所需的**臨時目標**
+
+![Actions TT](../images/TempTarget4.png)
+
+Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+
+![BG TT](../images/TempTarget6.png)
+
+Or in the **Carbs** button
+
+1. selecting the desired **Temp-Target** in the shortcuts
+
+![Carbs TT](../images/TempTarget5.png)
 
 (TempTargets-hypo-temp-target)=
 
@@ -110,12 +178,6 @@ Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have
 
 要執行此操作，請在**偏好設定**中選擇，並停用*「啟用高臨時目標時的SMB」*。
 
-![TT8_螢幕擷圖 2024-01-26 230757](https://github.com/openaps/AndroidAPSdocs/assets/137224335/4471540e-fe2a-4ade-8f99-18ca0372da52)
+![Carbs TT](../images/TempTargetSMB.png)
 
-這將確保**AAPS**即使在**COB**大於0，*「高臨時目標的SMB」*或*「始終啟用的SMB」*啟用且**OpenAPS SMB**處於活動狀態時，亦不會進行**SMB**。
-
-## 自定義臨時目標
-
-如果使用者需要手動調整**臨時目標**，*長按*「即將用餐」、「運動」或「低血糖」按鈕，然後在**血糖**「目標」或「持續時間」欄位中編輯值。
-
-![透過操作選單設置臨時目標](../images/TempTarget_ActionTab.png)
+This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'SMB with Temp-Target'* or *'SMB always'* enabled and OpenAPS SMB active.
