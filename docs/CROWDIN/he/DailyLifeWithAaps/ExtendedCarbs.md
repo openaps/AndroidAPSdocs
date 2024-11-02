@@ -21,10 +21,6 @@
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
-ערכים של פחמימות עתידיות נצבעים בכתום כהה בלשונית הטיפולים:
-
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 דרך לטפל בשומן וחלבון בעזרת תכונה זו מתוארת כאן: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
