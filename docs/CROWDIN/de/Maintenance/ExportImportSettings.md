@@ -39,6 +39,7 @@ Einstellungen sind das, was die Standard-AAPS-Anwendung an Deine Wünsche anpass
 
 3 - Navigiere mit dem Datei-Explorer auf Deinem Smartphone (meist als „Dateien“ oder „Meine Dateien“ bezeichnet) zu Interner Speicher > AAPS > Einstellungen. Hier findest Du Kopien aller exportierten Einstellungs-Dateien. Der Dateiname sollte JJJJ-MM-TT_Zeit_Appname.json sein. Lade diese Datei in den Cloud-Speicher Deiner Wahl hoch. Lade dann auch eine Kopie aus der Cloud auf Deinen lokalen Computer herunter.
 
+(ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
 ## Wiederherstellen Deines Backups auf einem neuen Smartphone oder AAPS-Neuinstallation
 Nutze diese Anleitung, wenn Du ein Backup Deiner APK-Datei oder der Einstellungen hast und das auf Dein Smartphone laden möchtest oder Du die bestehende APK-Datei auf Deinem aktuellen Smartphone - aus welchem Grund auch immer - löschen und neu installieren möchtest.
 
