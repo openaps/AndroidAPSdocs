@@ -24,6 +24,7 @@
 * 進入 nsclient 標籤，並在右側選單中打開設定。 現在提供了一個新的偏好 "同步"。
 * 你現在可以詳細選擇應與你的 Nightscout 網站同步的項目。
 
+(Update3_0-nightscout-profile-cannot-be-pushed)=
 ## Nightscout 檔案無法推送
 * Nightscout 檔案已消失，安息吧！
 * 要將目前的 Nightscout 檔案複製到本地檔案，請前往治療頁面（現在可從右側選單打開）。
@@ -31,6 +32,7 @@
 * 會新增一個從目前日期起生效的新本地檔案。
 * 要從 NS 端更新檔案，請使用 "Clone"（紀錄!!，不是檔案）並儲存更改。 你應該會看到 "檔案有效期從：" 設置為目前日期。
 
+(Update3_0-reset-master-password)=
 ## 重置主密碼
 * 如果你忘記了主密碼，現在可以進行重置。
 * 你需要在手機文件系統的 `/AAPS/extra` 目錄中添加一個名為 `PasswordReset` 的文件。
@@ -47,11 +49,11 @@
 
   ![黃色血糖警告](../images/bg_warn_yellow.png)
 
-詳細資訊請參見 [AAPS螢幕頁面](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign)
+For details see [AAPS screens page](#aaps-screens-bg-warning-sign)
 
-
+(update30-failure-message-data-from-different-pump)=
 ## 錯誤訊息：來自不同幫浦的資料
 
    ![錯誤訊息：來自不同幫浦的資料](../images/Screen_DifferentPump.png)
 
-要解決此問題，請前往 [設定建構器](../SettingUpAaps/ConfigBuilder.md#pump)。 將幫浦更改為虛擬幫浦，然後再切換回你的實際幫浦。 這將重置幫浦狀態。
+To resolve this issue go to [config builder](#Config-Builder-pump). 將幫浦更改為虛擬幫浦，然後再切換回你的實際幫浦。 這將重置幫浦狀態。
