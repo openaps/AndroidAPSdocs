@@ -21,10 +21,6 @@ Los eCarbs en la pestaña de información general, tenga en cuenta los carbohidr
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
-Las entradas de carbohidratos en el futuro están coloreadas en naranja oscuro en la pestaña de tratamiento:
-
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
