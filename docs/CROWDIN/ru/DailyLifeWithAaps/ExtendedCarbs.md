@@ -21,10 +21,6 @@ ECarbs на вкладке обзора, обратите внимание на 
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
-Углеводы в будущем окрашены в темно-оранжевый цвет на вкладке Терапии:
-
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 Способ компенсации жиров и белков при помощи этой функции описан здесь: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
