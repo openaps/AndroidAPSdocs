@@ -42,6 +42,7 @@ extensions = [
     'myst_parser',
     'sphinx_togglebutton',
     'notfound.extension',
+    'sphinxcontrib.jquery',
     # 'alabaster',
 ]
 
