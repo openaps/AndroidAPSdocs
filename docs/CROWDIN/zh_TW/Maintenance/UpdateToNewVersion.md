@@ -19,7 +19,7 @@
 3. [建置簽章 APK](#3-build-the-signed-apk)
 4. [將構建的apk轉移](#4-transfer-the-apk)到您的手機並安裝
 5. [檢查AAPS中的版本](#6-check-aaps-version-on-phone)
-6. 根據您的[BG來源](../Getting-Started/CompatiblesCgms.md)確保在xDrip中[識別接收器](../CompatibleCgms/xDrip.md#identify-receiver)或使用[「建立您的Dexcom應用」](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)。
+6. Depending on your [BG source](../Getting-Started/CompatiblesCgms.md) make sure to [identify receiver](#xdrip-identify-receiver) in xDrip or use the ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 
 如果您遇到問題，請參見單獨的[問題排除Android Studio](../GettingHelp/TroubleshootingAndroidStudio)頁面。
 
@@ -67,7 +67,7 @@
 
 ## 3. 建置簽章 APK
 
-你的原始碼現在是目前發布的版本。 是時候按照[建置簽章 APK 章節](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk)中的說明從中建置簽章 apk 了。
+你的原始碼現在是目前發布的版本。 It's time to build the signed apk from it as described in the [build signed apk section](#Building-APK-generate-signed-apk).
 
 ## 4. 傳送 APK
 
