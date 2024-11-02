@@ -70,7 +70,7 @@
 
 - Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md).
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
+- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
 
   ![Ochrana](../images/Pref2020_Protection.png)
 
@@ -168,7 +168,7 @@
 
 ### Standardní množství inzulinu pro Plnění/Doplňování
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](#screens-action-tab).
 - Přednastavené hodnoty se dají měnit v tomto dialogu.
 
 (Preferences-range-for-visualization)=
@@ -186,6 +186,7 @@
 
   ![Předvolby > Záložky](../images/Pref2020_OV_Tabs.png)
 
+(Preferences-show-notes-field-in-treatments-dialogs)=
 ### Zobrazovat kolonku poznámky v dialozích ošetření
 
 - Přidává možnost doplňovat k záznamům o ošetření krátkou textovou poznámku v dialozích, kde se zadávají (Bolusová kalkulačka, Sacharidy, Inzulín...)
@@ -198,7 +199,7 @@
 - Stavové indikátory zobrazují vizuální varování pro
 
   - Stáří senzoru
-  - Sensor battery level for certain smart readers (see [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery) for details).
+  - Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
   - Stáří inzulínu (doba použití aktuálního zásobníku)
   - Stav zásobníku (jednotky)
   - Stáří kanyly
@@ -213,16 +214,18 @@
 
   ![Předvolby > Stavové indikátory](../images/Pref2020_OV_StatusLights2.png)
 
+(Preferences-deliver-this-part-of-bolus-wizard-result)=
 ### Deliver this part of bolus wizard result
 
-Set the [default percentage](../DailyLifeWithAaps/AapsScreens.md#section-j) of the bolus calculated when using the bolus wizard.
+Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
 
 Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard.
 
-When using [SMB](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb), using a value lower than 100% here can be useful:
+When using [SMB](#objectives-objective9), using a value lower than 100% here can be useful:
 * for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
 * to leave more room to *AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate the missing part of the bolus with SMBs, if/when deemed adequate.
 
+(Preferences-advanced-settings-overview)=
 ### Rozšířená nastavení (přehled)
 
 ![Nastavení > Pokročilé nastavení](../images/Pref2021_OV_Adv.png)
@@ -277,8 +280,8 @@ When using [SMB](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enablin
 
 Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### Nastavení OpenAPS AMA
 
@@ -292,7 +295,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 - Jakmile je tato hodnota dosažena, AAPS zastaví přidávání dodatečného bazálu, dokud hodnota inzulínu v těle (IOB) opět neklesne pod tuto hodnotu.
 - Doporučuje se nastavit toto na rozumnou hodnotu. Je doporučeno vzít **nejvyšší hodnotu bazálu** v profilu a **vynásobit ji 4**.
 - Například: máte-li ve svém profilu nejvyšší hodnotu bazálu 0.5U/h, dostanete po vynásobení 4 hodnotu 2U/h.
-- See also [detailed feature description](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to).
 
 #### Maximální bazální IOB \[U\]
 
@@ -316,7 +319,7 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 #### Autosens
 
-- [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](#Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
 - Pokud je chcete i přesto změnit, prostudujte si podrobnosti v , abyste pochopili, co děláte.
 - Pokud vyberete "Autosens také nastavuje cíl", bude algoritmus upravovat i vaši cílovou hodnotu glykémie.
 
@@ -328,17 +331,17 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 (Preferences-openaps-smb-settings)=
 ### Nastavení OpenAPS SMB
 
-- In contrast to AMA, [SMB](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](#Open-APS-features-super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
+- You must have started [objective 9](#objectives-objective9) to use SMB.
 
-- The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
+- The first three settings are explained [above](#Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
-- Details on the different enable options are described in [OpenAPS feature section](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](#Open-APS-features-enable-smb).
 
 - *Jak často budou SMB podávány v min.* je omezení SMB, které je standardně nastaveno na každé 4 minuty. Tato hodnota brání systému vydávat SMB příliš často (např. v případě nastavení dočasného cíle). Toto nastavení byste neměli změnit, pokud přesně nevíte, jaké mohou být následky.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](#Open-APS-features-autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Je-li cíl upraven, bude na domovské obrazovce zobrazen se zeleným pozadím.
 
@@ -370,6 +373,7 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 ![Nastavení absorpce sacharidů](../images/Pref2020_Absorption.png)
 
+(Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
 
 - Algoritmus používá BGI (vliv na glukózu v krvi) k určení, kdy jsou absorbovány sacharidy.
@@ -396,12 +400,12 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 ### Pokročilé nastavení - autosens ratio
 
-- Define min. and max. [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) ratio.
+- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
 - Normálně by se neměly měnit standardní hodnoty (max. 1.2 a min. 0.7).
 
 ## Nastavení pumpy
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump).  Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
+The options here will vary depending on which pump driver you have selected in [Config Builder](#Config-Builder-pump).  Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
 
 - [Inzulinová pumpa DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md)
 - [Inzulinová pumpa DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
@@ -428,7 +432,7 @@ Původní komunikační protokol, lze použít se staršími verzemi Nightscoutu
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](../Maintenance/ReleaseNotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+[New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
 
 ```{admonition} V3 data uploaders
 :class: warning
@@ -447,7 +451,7 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 
 Synchronization choices will depend on the way you will want to use AAPS.
 
-You can select which data you want to [upload and download to or from Nightscout](../SettingUpAaps/Nightscout.md#aaps-settings).
+You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
 ### Nastavení alarmů
 
@@ -479,7 +483,7 @@ Options in advanced settings are self-explanatory.
 
 ## SMS komunikátor
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#sms-communicator).
+- Options will only be displayed if SMS communicator is selected in [Config Builder](#Config-Builder-sms-communicator).
 - Používat zjištění polohy podle sítě: Poloha podle vaší Wi-Fi sítě
 - Further information is described in [SMS Commands](../RemoteFeatures/SMSCommands.md).
 - Dodatečná bezpečnost je zajištěna použitím autentizační aplikace a dodatečného PIN na konci tokenu.
