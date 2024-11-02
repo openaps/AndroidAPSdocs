@@ -24,6 +24,7 @@
 * Gehe zur Registerkarte NSClient und öffne die Einstellungen im rechten Menü. Eine neue Einstellung "Synchronisierung" ist jetzt verfügbar.
 * Du kannst nun eine detaillierte Auswahl treffen, welche Daten mit deiner Nightscout-Seite synchronisiert werden sollen.
 
+(Update3_0-nightscout-profile-cannot-be-pushed)=
 ## Nightscout-Profil kann nicht geladen werden
 * Das Nightscout Profil ist verschwunden, Ruhe in Frieden!
 * Um Dein aktuelles Nightscout-Profil in ein lokales Profil zu kopieren, geh auf die Seite 'Behandlungen' (jetzt im rechten Dreipunkt-Menü).
@@ -31,6 +32,7 @@
 * Ein neues lokales Profil wird hinzugefügt, dass vom aktuellen Datum an gültig ist.
 * Um das Profil von Nightscout aus zu aktualisieren, musst Du 'Clone' verwenden (den Eintrag, nicht das Profil) und die Änderungen speichern. Du solltest "Profil gültig ab: <aktuelles Datum>" sehen.
 
+(Update3_0-reset-master-password)=
 ## Masterpasswort zurücksetzen
 * Du kannst nun Dein Master-Passwort zurücksetzen, falls Du es vergessen hast.
 * Dazu muss eine Datei mit dem Namen `PasswordReset` in das `/AAPS/extra` Verzeichnis Deines Telefon-Dateisystems hinzugefügt werden.
@@ -47,11 +49,11 @@ Beginnend mit Android 3.0 erhälst Du möglicherweise ein dreieckiges Warnsignal
 
   ![Gelbes BG-Warndreieck](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign)
+For details see [AAPS screens page](#aaps-screens-bg-warning-sign)
 
-
+(update30-failure-message-data-from-different-pump)=
 ## Fehlermeldung: Daten aus verschiedenen Pumpen
 
    ![Fehlermeldung: Daten aus verschiedenen Pumpen](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../SettingUpAaps/ConfigBuilder.md#pump). Wechsel die Pumpe zu einer virtuellen Pumpe und zurück zu Deiner aktuellen Pumpe. Dadurch wird der Pumpenzustand zurückgesetzt.
+To resolve this issue go to [config builder](#Config-Builder-pump). Wechsel die Pumpe zu einer virtuellen Pumpe und zurück zu Deiner aktuellen Pumpe. Dadurch wird der Pumpenzustand zurückgesetzt.
