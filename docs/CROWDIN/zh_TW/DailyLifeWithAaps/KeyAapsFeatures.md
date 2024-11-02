@@ -34,11 +34,11 @@ SMB 功能包含一些安全機制：
 
 3. 額外的計算可以預測血糖的變化趨勢，例如透過 UAM（未公告的餐食）。 即使用戶沒有手動輸入碳水化合物，UAM 也可以自動偵測到由於餐食、腎上腺素或其他影響而導致的血糖數值顯著增加，並嘗試使用 SMB 進行調整。 為了安全起見，這也能反向運作，如果血糖意外快速下降，系統可以提前停止 SMB。 這就是為什麼 UAM 應該在 SMB 中始終處於啟用狀態的原因。
 
-**你必須開始使用[目標 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)來使用 SMB。**
+**You must have started [objective 9](#objectives-objective9) to use SMB.**
 
 另見：[OpenAPS 的 oref1 SMB 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) 和 [Tim 的 SMB 資訊](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/)。
 
-(Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal)=
+(Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)=
 
 ### 臨時基礎率的最大 U/h (OpenAPS "最大基礎率")
 
@@ -60,7 +60,7 @@ AAPS 對此數值的限制如下：
 
 *請參閱 [硬性限制概述](#overview-of-hard-coded-limits)。*
 
-(Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob)=
+(Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
 ### OpenAPS 無法超過的最大 IOB 總量 (OpenAPS "最大 IOB")
 
@@ -93,6 +93,8 @@ AAPS 對此數值的限制如下：
 
 啟用此選項以使用 SMB 功能。 如果停用，則不會執行 SMB 注射。
 
+(Open-APS-features-enable-smb-with-high-temp-targets)=
+
 ### 啟用具有高臨時目標的 SMB
 
 如果啟用了此設定，當有高臨時目標（定義為超過 100 mg/dl 的任何目標）時，SMB 將允許，但不一定會啟用。 此選項主要在停用時禁止 SMB。 例如，如果此選項被停用，則可以透過設置超過 100 mg/dl 的臨時目標來停用 SMB。 此選項還會停用 SMB，不論其他任何條件是否嘗試啟用 SMB。
@@ -103,7 +105,7 @@ AAPS 對此數值的限制如下：
 
 ### 始終啟用 SMB
 
-如果啟用了此設定，SMB 將始終啟用（無論 COB、臨時目標或注射量）。 如果啟用了此設定，下方的其他啟用設定將不再生效。 然而，如果「啟用具有高臨時目標的 SMB」被停用且設置了高臨時目標，SMB 將被停用。 為了安全起見，此選項僅適用於具有良好資料過濾系統的血糖來源。 目前，這僅適用於使用[「自訂您的 Dexcom 應用程式」](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)或在 xDrip+ 中的「原生模式」的 Dexcom G5 或 G6。 如果血糖數值偏差過大，G5/G6 不會發送資料，並等待 5 分鐘後的下一個數值。
+如果啟用了此設定，SMB 將始終啟用（無論 COB、臨時目標或注射量）。 如果啟用了此設定，下方的其他啟用設定將不再生效。 然而，如果「啟用具有高臨時目標的 SMB」被停用且設置了高臨時目標，SMB 將被停用。 為了安全起見，此選項僅適用於具有良好資料過濾系統的血糖來源。 Currently it is only an available option with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. 如果血糖數值偏差過大，G5/G6 不會發送資料，並等待 5 分鐘後的下一個數值。
 
 對於其他 CGM/FGM（如 Freestyle Libre），「始終啟用 SMB」將停用，直到 xDrip+ 具有更好的噪音濾波外掛。 您可以在 [這裡](../CompatibleCgms/SmoothingBloodGlucoseData.md) 找到更多資訊。
 
@@ -117,7 +119,7 @@ AAPS 對此數值的限制如下：
 
 ### 啟用碳水後的 SMB
 
-如果啟用了此設定，在碳水化合物被紀錄後的 6 小時內，SMB 會啟用，即使 COB 已降至 0。 為了安全起見，此選項僅適用於具有良好資料過濾系統的血糖來源。 目前，這僅適用於使用[「自訂您的 Dexcom 應用程式」](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)或在 xDrip+ 中的「原生模式」的 Dexcom G5 或 G6。 如果血糖數值偏差過大，G5/G6 不會發送資料，並等待 5 分鐘後的下一個數值。
+如果啟用了此設定，在碳水化合物被紀錄後的 6 小時內，SMB 會啟用，即使 COB 已降至 0。 為了安全起見，此選項僅適用於具有良好資料過濾系統的血糖來源。 Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. 如果血糖數值偏差過大，G5/G6 不會發送資料，並等待 5 分鐘後的下一個數值。
 
 對於其他 CGM/FGM（如 Freestyle Libre），「啟用碳水後的 SMB」將停用，直到 xDrip+ 具有更好的噪音濾波外掛。 您可以在 [這裡](../CompatibleCgms/SmoothingBloodGlucoseData.md) 找到更多資訊。
 
