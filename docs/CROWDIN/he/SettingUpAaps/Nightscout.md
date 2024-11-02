@@ -14,6 +14,8 @@ You can deny public access to your Nightscout site by using [authentication role
 
 Nightscout `API_SECRET` is your site main password: don't share it publicly.
 
+(Nightscout-aaps-settings)=
+
 ### AAPS settings
 
 You can setup AAPS to accept Nightscout commands (profile changes, treatments, ...), or fully disable it.
@@ -40,7 +42,7 @@ Note that insulin treatments will only be used for calculations like "Do not bol
 
 ### הגדרות אבטחה נוספות
 
-Keep your phone up to date as described in [safety first](../Getting-Started/PreparingForAaps.md#safety-first).
+Keep your phone up to date as described in [safety first](#preparing-safety-first).
 
 (Nightscout-manual-nightscout-setup)=
 
