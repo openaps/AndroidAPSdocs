@@ -56,7 +56,7 @@ Nous utilisons markdown pour les pages de documentation. Le fichier a obtenu le 
 
 PS : Votre fork et votre branche seront toujours dans votre propre compte GitHub. Après avoir reçu une notification indiquant que votre PR avait été fusionné, vous pouvez supprimer votre branche si vous en avez terminé (la zone de notification de l'étape 8 fournira un lien pour supprimer la branche une fois qu'elle a été fermée ou fusionnée). Pour les modifications ultérieures, si vous suivez cette procédure, les éditions débuteront toujours par une version mise à jour des documents AndroidAPSdocs. Si vous choisissez d'utiliser une autre méthode pour faire une demande de PR (par ex. en partant de la branche master de dossier local comme point de départ), vous devez vous assurer que votre dossier fork est à jour en effectuant une "comparaison" en premier et en fusionnent dans toutes les mises à jour qui ont été faite depuis que vous avez mis à jour votre fork. Comme les gens ont tendance à oublier de mettre à jour leur fork, nous recommandons d'utiliser la procédure décrite ci-dessus pour faire vos PR jusqu'à ce que vous vous familiarisiez avec les exécutions des "comparaisons".
 
-(make-a-PR-code-syntax)=
+(edit-the-docs-code-syntax)=
 
 ## Syntaxe du Code
 
