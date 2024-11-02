@@ -20,9 +20,7 @@ So, please take your time in configuring your loop, the benefits of a well-runni
 :class: note
 If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
-
 ## Step-wise guide to the AAPS Setup Wizard
-
 ### Welcome message
 
 This is just the welcome message which you can skip with the "NEXT" button:
@@ -73,6 +71,7 @@ Please click the "ASK FOR PERMISSION" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_125813.png)
 
+
 Select the "AAPS" app:
 
 ![image](../images/setup-wizard/Screenshot_20231202_125833.png)
@@ -121,6 +120,7 @@ Click "OK" and then the "NEXT" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
+
 ### Master password
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
@@ -130,6 +130,7 @@ The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD
 After filling in the password twice, please click the "NEXT" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130122.png)
+
 
 ### Fabric upload
 
@@ -142,11 +143,12 @@ It helps the developers to better understand your usage of the app, and informs 
 They get:
 
 1. The information that the app crashed, which they would not otherwise know since in their own set-up everything works fine and
-2. In the send data (crash information), there is information about the circumstances under which the crash happened, and what kind of configuration is being used.
+1. In the send data (crash information), there is information about the circumstances under which the crash happened, and what kind of configuration is being used.
 
 So it helps the developers to improve the app.
 
 Please enable the "Fabric Upload" by sliding the slider to the right:
+
 
 ![image](../images/setup-wizard/Screenshot_20231202_130136.png)
 
@@ -170,7 +172,7 @@ Please select if your glucose values are in mg/dl or mmol/L and then please clic
 
 ### Display settings
 
-Here you select the range for the sensor glucose display, which will be shown as "in range" between the values you set. You can leave it as the default values for now, and edit it later.
+ Here you select the range for the sensor glucose display, which will be shown as "in range" between the values you set. You can leave it as the default values for now, and edit it later.
 
 The values you choose only affect the graphical presentation of the diagram, and nothing else.
 
@@ -194,7 +196,7 @@ If you select an item here on the left tick box, on the right you can then ticki
 
 In this example we select Nightscout as reporting server, and will configure it.
 
-```{admonition} Make sure to choose the correct **NSClient** version for your needs! 
+```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
 :class: Note
 Click [here](./Releasenotes.md) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
 
@@ -232,6 +234,7 @@ Please select "Upload data to NS" if you already configured nightscout in the pr
 If you have stored profiles on Nightscout and want to download them to **AAPS**, enable "Receive profile store":
 
 ![image](../images/setup-wizard/Screenshot_20231202_141219.png)
+
 
 Go back to the previous screen and select "Alarm option":
 
@@ -304,19 +307,23 @@ Press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141840.png)
 
+
 ### Blood sugar source
 
 Select the BG source you are using. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
 As there are several options available, we don't explain the configuration for all of them here. We are using Dexcom G6 with the BYODA app in our example here:
 
+
 ![image](../images/setup-wizard/Screenshot_20231202_141912.png)
+
 
 If you are using Dexcom G6 with BYODA, enable the visibility in the top level menu by clicking the tickbox on the right side.
 
 After making your selection, press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141925.png)
+
 
 If you are using Dexcom G6 with BYODA, click on the cogwheel button to access the settings for BYODA.
 
@@ -345,6 +352,7 @@ Press "NEXT" to go to the next screen. Enter a "profile name":
 
 ![image](../images/setup-wizard/Screenshot_20231202_142027.png)
 
+
 You can have several profiles in the long-term if needed. We only create one here.
 
 ```{admonition} Profile only for tutorial - not for your usage
@@ -368,9 +376,11 @@ Press "ISF". Enter your ISF values:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143009.png)
 
+
 Press "BAS". Enter your basal values:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143623.png)
+
 
 Press "TARG". Enter your blood sugar target values.
 
@@ -386,6 +396,7 @@ Save the profile by clicking on "SAVE":
 
 ![image](../images/setup-wizard/Screenshot_20231202_143724.png)
 
+
 After saving a new buttom "Activate Profile" occurs.
 
 ```{admonition} Several defined but only one active profile
@@ -397,6 +408,10 @@ Press "Activate Profile":
 
 ![image](../images/setup-wizard/Screenshot_20231202_143741.png)
 
+
+
+
+
 The profile switch dialogue appears. In this case let it stay as preset.
 
 ```{admonition} Several defined but only one active profile
@@ -404,9 +419,13 @@ The profile switch dialogue appears. In this case let it stay as preset.
 You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile suitable for the circumstances.
 ```
 
+
 Press "OK":
 
+
 ![image](../images/setup-wizard/Screenshot_20231202_143808.png)
+
+
 
 A confirmation dialog for the profile switch appears.
 
@@ -418,7 +437,10 @@ Your profile has now been set:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143833.png)
 
+
 ### Insulin pump
+
+
 
 Now you are selecting your insulin pump.
 
@@ -433,6 +455,7 @@ Please read the documentation for your [insulin pump](../Getting-Started/Compati
 Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_143909.png)
+
 
 In this case we select "Virtual Pump".
 
@@ -454,6 +477,7 @@ OpenAPS AMA is the most basic algorithm which does not support micro boluses to 
 Press the cogwheel to see the details:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144014.png)
+
 
 Only read the text and change nothing here.
 

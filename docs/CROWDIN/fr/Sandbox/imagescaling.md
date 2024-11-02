@@ -3,7 +3,7 @@
 We got some problems with scaling on different devices and wanted to check how we can solve in
 
 1. Markdown and
-2. Crowdin too.
+1. Crowdin too.
 
 This image width is in original 400px.
 

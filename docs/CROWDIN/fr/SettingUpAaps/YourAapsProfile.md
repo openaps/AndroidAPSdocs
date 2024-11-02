@@ -1,12 +1,11 @@
 # Your **AAPS** profile
 
 Your **AAPS** profile is a set of five key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. **AAPS** has several _additional_ modifiable parameters (like SMB settings), but using these well relies on your underlying **AAPS** profile being correct. The **AAPS** profile incorporates:
-
-- [duration of insulin action](#duration-of-insulin-action-dia) (DIA),
-- [glucose targets](#glucose-targets),
-- [basal rates](#basal-rates) (BR),
-- [insulin sensitivity factors](#insulin-sensitivity-factor-isf) (ISF) and
-- [insulin-to-carb ratios](#insulin-to-carb-ratio-icr) (IC or ICR).
+* [duration of insulin action](#duration-of-insulin-action-dia) (DIA),
+* [glucose targets](#glucose-targets),
+* [basal rates](#basal-rates) (BR),
+* [insulin sensitivity factors](#insulin-sensitivity-factor-isf) (ISF) and
+* [insulin-to-carb ratios](#insulin-to-carb-ratio-icr) (IC or ICR).
 
 The four last parameters can be set to different values, changing hourly if required, over a 24-hour period. Please note, the sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
 
@@ -33,11 +32,10 @@ The **figure below** shows an example of how the DIA and glucose targets could b
 ![24-07-23, profile basics - DIA and target](../images/f3904cc3-3d9e-497e-a3b6-3a49650053e6.png)
 
 Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in:
-
-- A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the _actual value_ you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
-- If your target is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate changes are rarely suggested.
-- When beginning with **AAPS**, especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and ajusting your **Profile**.
-- Later on, you will probably find more appropriate to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+* A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+* If your target is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate changes are rarely suggested.
+* When beginning with **AAPS**, especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and ajusting your **Profile**.
+* Later on, you will probably find more appropriate to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
 
 The targets can be defined within those boundaries :
 
@@ -60,11 +58,9 @@ Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you
 
 The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
 
-**In mg/dL units:**
-If you have an ISF of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
+**In mg/dL units:** If you have an ISF of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
 
-**In mmol/L units:**
-If you have an ISF of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
+**In mmol/L units:** If you have an ISF of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
 
 From these examples you can see that the _smaller_ the ISF value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dl) or 1.5 to 1.3 (mmol/L), this is often called strengthening your ISF. Conversely, increasing the ISF value from 40 to 45 (mg/dl) or 1.5 to 1.8 mmol/L) is weakening your ISF.
 
@@ -74,9 +70,7 @@ A basic starting point for determining your daytime ISF is to base it on your to
 
 1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.
 
-Example: TDD = 40 U
-Approx ISF (mg/dl) = 1700/40 = 43
-Approx ISF (mmol/L) = 94/40 = 2.4
+Example: TDD = 40 U Approx ISF (mg/dl) = 1700/40 = 43 Approx ISF (mmol/L) = 94/40 = 2.4
 
 See the **figure below** for an example of how the basal rates and ISF values could be set in an **AAPS** profile.
 
@@ -98,6 +92,7 @@ As shown in the **figure below**, when entering these values into an **AAPS** pr
 
 ![24-07-23, profile basics - ICR](../images/7741eefb-cae5-45c5-a9e5-8eae5ead3f48.png)
 
+
 ## About the importance of getting your profile right
 
 **Why should I try to get my profile settings right? Can’t the loop just take care of it?**
@@ -111,7 +106,6 @@ If you are moving from injections (MDI) to **AAPS**, then it is a good idea to r
 ## Profile Helper
 
 The [Profile Helper](../SettingUpAaps/ProfileHelper.md) can help you:
-
-- build a profile from scratch for a kid
-- compare two profiles
-- clone a profile
+* build a profile from scratch for a kid
+* compare two profiles
+* clone a profile

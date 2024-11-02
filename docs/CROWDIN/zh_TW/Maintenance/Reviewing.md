@@ -4,7 +4,7 @@
 
 **AAPS** 將所有使用者的歷史（__**血糖****、治療、基礎、目標、**設定檔切換**等）儲存在自己的資料庫中，這些資料無法被匯出或複製，可能需要在一段時間後進行清理。 為了進行清理，需要在**AAPS**中檢視“舊歷史”。 這可以通過上傳至 Nightscout 來完成。
 
-**AAPS**歷史可以透過從總覽選單中的‘歷史’瀏覽器進行檢視。
+**AAPS**歷史可以透過從首頁總覽選單中的‘歷史’瀏覽器進行檢視。
 
 ![歷史瀏覽器](../images/Maintenance/historybrowser.png)
 
@@ -12,7 +12,7 @@
 
 ![歷史瀏覽器](../images/Maintenance/historybrowser2.png)
 
-顯示選項與總覽主圖相同。
+顯示選項與首頁總覽主圖相同。
 
 ![歷史瀏覽器](../images/Maintenance/historybrowser3.png)
 

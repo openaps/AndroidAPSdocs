@@ -223,7 +223,7 @@
 * 對於消化緩慢的人來說：一次傳送所有的注射劑量可能會引起低血糖，因為胰島素的作用速度比消化快。
 * 為了留更多空間讓**AAPS**自行處理**血糖上升**。 在兩種情況下，**AAPS**將透過微量注射來補償缺失的注射部分，如果/當被認為合適時。
 
-### 進階設置（總覽）
+### 進階設置（首頁總覽）
 
 ![偏好設定 > 進階設置](../images/Pref2021_OV_Adv.png)
 
@@ -420,7 +420,7 @@
 
 - 設置你的*Nightscout URL*（即 <https://yoursitename.yourplaform.dom>）。
   - **確保網址末尾沒有 /api/v1/。**
-- *[API 密鑰](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)*（Nightscout 變數中記錄的一個 12 字符的密碼）。
+- *[API 密鑰](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)*（Nightscout 變數中紀錄的一個 12 字符的密碼）。
 - 這使資料能夠在 Nightscout 網站和 AAPS 之間讀取和寫入。
 - 如果你在目標 1 中遇到困難，請再次檢查是否有拼寫錯誤。
 
