@@ -14,7 +14,7 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
 4. Generate signed apk of new version as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
 5. הסירו את ההתקנה של גרסת ה-AAPS הקודמת מהטלפון.
 6. התקינו את גרסת ה-AAPS החדשה בטלפון.
-7. [Import settings](../Maintenance/ExportImportSettings.md#restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+7. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
 
    אם אינכם מוצאים אותן בטלפון, העתיקו אותן מהאחסון החיצוני אל הטלפון.
 
@@ -51,7 +51,7 @@ If you receive a failure message like
 
     הערה: יש רווח ושני מקפים בין git ל-version!
 
-  * עליכם לקבל הודעה שאומרת איזו גרסת git מותקנת, כפי שניתן לראות בצילום המסך למעלה. In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
+  * עליכם לקבל הודעה שאומרת איזו גרסת git מותקנת, כפי שניתן לראות בצילום המסך למעלה. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
   * למקרה שתקבלו את ההודעה
     ```
@@ -59,7 +59,7 @@ If you receive a failure message like
     ```
     התקנת Git שלכם בעייתית.
 
-  * [בדקו את התקנת git](../SettingUpAaps/BuildingAaps.md#steps-for-installing-git)
+  * [בדקו את התקנת git](#BuildingAaps-steps-for-installing-git)
 
   * אם אתם משתמשי Windows ו-git הותקן זה עתה, עליכם להפעיל מחדש את המחשב כדי להפוך את git לזמינה גלובלית לאחר ההתקנה
 
@@ -75,6 +75,7 @@ If you receive a failure message like
 
   * הפעילו מחדש את Android Studio.
 
+(troubleshooting-android-studio-check-for-uncommitted-changes)=
 #### שלב 2: בדקו אם יש שינויים לא שלא הוגשו (uncommitted changes).
 
   * ב-Android Studio, פתחו את הלשונית "Commit" (1) בצד שמאל.![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
@@ -179,7 +180,7 @@ When you generate the signed apk, you might get the notification that generation
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk)) and you will find the generated apk there!
+This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
 
 
 ## האפליקציה נוצרה עם אזהרות compiler/kotlin
@@ -202,9 +203,9 @@ This seems to be a bug with Android Studio 3.5.1 and its shipped Java environmen
 
 ## No CGM data is received by AAPS
 
-* במקרה שאתם משתמשים באפליקציית Dexcom G6 הפרוצה: אפליקציה זו מיושנת. Use the [BYODA](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* במקרה שאתם משתמשים באפליקציית Dexcom G6 הפרוצה: אפליקציה זו מיושנת. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../CompatibleCgms/xDrip.md#identify-receiver).
+* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](#xdrip-identify-receiver).
 
 
 ## אפליקציה לא הותקנה
@@ -223,7 +224,7 @@ This seems to be a bug with Android Studio 3.5.1 and its shipped Java environmen
 
 ## האפליקציה מותקנת אך הגרסה ישנה
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Maintenance/UpdateToNewVersion.md#2-update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
 ## אף אחת מהאפשרויות לא עזרה
 
@@ -235,7 +236,7 @@ If non of the above tips helped you might consider building the app from scratch
 
     או שתצרו מאגר מפתחות חדש.
 
-3. Build app from scratch as described [here](../SettingUpAaps/BuildingAaps.md#download-the-aaps-code).
+3. Build app from scratch as described [here](#Building-APK-download-AAPS-code).
 
 4. לאחר בניית ה-APK, מחקו את האפליקציה שבטלפון, העבירו את ה-APK החדש לטלפון והתקינו.
 5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
@@ -249,4 +250,4 @@ In case even building the app from scratch does not solve your problem you might
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../SettingUpAaps/BuildingAaps.md#install-android-studio).
+Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
