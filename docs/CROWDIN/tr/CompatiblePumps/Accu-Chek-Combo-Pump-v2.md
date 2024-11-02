@@ -8,7 +8,7 @@ Bu talimatlar, 3.2 sürümünden itibaren AndroidAPS'in bir parçası olan yeni 
 
 * Roche Accu-Chek Combo pompa(tüm pompa yazılımlarında çalışır).
 * Pompayı yapılandırmak için 360 Yapılandırma Yazılımı ile birlikte bir Smartpix veya Realtyme cihazı. (Roche, Smartpix cihazlarını ve konfigürasyon yazılımını talep üzerine müşterilerine ücretsiz olarak göndermektedir.)
-* Uyumlu bir telefon. Android 9 (Pie) veya daha üzeri zorunludur. LineageOS kullanıyorsanız desteklenen minimum sürüm 16.1'dir. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
+* Uyumlu bir telefon. Android 9 (Pie) veya daha üzeri zorunludur. LineageOS kullanıyorsanız desteklenen minimum sürüm 16.1'dir. See [release notes](#maintenance-android-version-aaps-version) for details.
 * Telefonunuzda yüklü olan AndroidAPS uygulaması.
 
 Bazı telefonlar, Bluetooth desteğinin kalitesine, çok agresif güç tasarrufu mantığına sahip olup olmadıklarına bağlı olarak diğerlerinden daha iyi çalışabilir. Telefonların listesini [AAPS Telefonlar](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) sayfasında bulabilirsiniz. Lütfen bunun tüm telefonların bir listesi olmadığını ve kişisel kullanıcı deneyimini yansıttığını unutmayın. Siz de kendi deneyiminizle katılmaya ve böylece başkalarına yardım etmeye teşvik ediliyorsunuz (bu projeler tamamen ileriye dönük ödeme yapılmasıyla ilgilidir).
