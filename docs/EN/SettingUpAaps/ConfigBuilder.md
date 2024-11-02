@@ -75,7 +75,6 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
-(Config-Builder-bg-source)=
 ## BG Source
 Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
@@ -144,22 +143,6 @@ If switching from AMA to SMB algorithm, _min_5m_carbimpact_ must be changed manu
 ## Loop
 
 This module should not be disabled as it is a core part of **AAPS**.
-* Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
-
-![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
-
-(Config-Builder-open-loop)=
-### Open Loop
-* AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
-* The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
-* This option is for getting to know how AAPS works or if you are using an unsupported pump.
-
-(Config-Builder-closed-loop)=
-### Closed Loop
-* AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
-* The Closed Loop works within numerous safety limits, which you can be set individually.
-* Closed Loop is only possible if you are in [Objective 6](#objectives-objective6) or higher and use a supported pump.
-* Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol or 100 mg/dl instead of 5,0 - 7,0 mmol or 90 - 125 mg/dl) is recommended.
 
 ## Constraints
 
@@ -232,6 +215,7 @@ A tab offering multiple buttons to take [actions](#screens-action-tab) in **AAPS
 
 A tab for managing your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
 
+(Config-Builder-sms-communicator)=
 ### SMS Communicator
 Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
 
@@ -252,13 +236,6 @@ Through Wear tab or hamburger menu (top left of screen, if tab is not displayed)
 * Resend all data.
 Might be helpful if watch was not connected for some time and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
-
-### xDrip Statusline (watch)
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../UsefulLinks/WearOsSmartwatch.md)
-
-### NSClient
-* Setup sync of your AAPS data with Nightscout.
-* Settings in [preferences](#Preferences-nsclient) can be opened by clicking the cog wheel.
 
 ### Maintenance
 

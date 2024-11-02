@@ -348,7 +348,7 @@ The options here will vary depending on which pump driver you have selected in [
 
 More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
 
-(preferences-nsclient)=
+(Preferences-nsclient)=
 ## NSClient
 
 ![NSClient](../images/Pref2020_NSClient.png)

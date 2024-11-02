@@ -1,6 +1,6 @@
 # OpenAPS features
 
-(key-aaps-features-autosens)=
+(Open-APS-features-autosens)=
 ## Autosens
 * Autosens is an algorithm which looks at blood glucose deviations (positive/negative/neutral).
 * It will try and figure out how sensitive/resistant you are based on these deviations.
@@ -12,7 +12,7 @@
 * Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
 * If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
 
-(key-aaps-features-super-micro-bolus)=
+(Open-APS-features-super-micro-bolus-smb)=
 ## Super Micro Bolus (SMB)
 SMB, the shortform of 'super micro bolus', is the latest OpenAPS feature (from 2018) within the Oref1 algorithm. In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly **small super micro boluses**. In situations where AMA would add 1.0 IU insulin using a temporary basal rate, SMB delivers several super micro boluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system adjust the blood glucose faster than with the temporary basal rate increase in AMA.
 
@@ -125,7 +125,7 @@ Note that the loop runs every time a glucose value comes in (generally 5 minutes
 
 Default value: 3 min.
 
-(KeyAapsFeatures-max-minutes-of-basal-to-limit-smb-to)=
+(Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
 ### Max minutes of basal to limit SMB to
 This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
@@ -184,7 +184,7 @@ Default value: 4 (shouldn’t be changed unless you really need to and know what
 
 ***
 
-(key-aaps-features-advanced-meal-assist)=
+(Open-APS-features-advanced-meal-assist-ama)=
 ## Advanced Meal Assist (AMA)
 AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
 
