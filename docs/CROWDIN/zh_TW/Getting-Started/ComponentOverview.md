@@ -11,7 +11,7 @@
 
 此外，僅使用製造商批准的原裝耗材，例如插入器、套管和胰島素容器，也同樣重要。 使用未經測試或修改的耗材可能會導致 CGM 不準確和胰島素劑量錯誤。 胰島素在劑量錯誤時極具危險 - 請勿透過修改耗材來冒生命危險。
 
-最後但同樣重要的是，您必須避免服用 SGLT-2 抑制劑（gliflozins），因為它們會不計其數地降低血糖值。 這種藥物與一個降低基礎速率以增加血糖的系統結合使用時尤其危險，因為由於格列佛新的影響，血糖可能不會上升，可能導致缺乏胰島素的危險情況發生。 [更多資訊請見這裡](../Getting-Started/PreparingForAaps.md#no-sglt-2-inhibitors)。
+最後但同樣重要的是，您必須避免服用 SGLT-2 抑制劑（gliflozins），因為它們會不計其數地降低血糖值。 這種藥物與一個降低基礎速率以增加血糖的系統結合使用時尤其危險，因為由於格列佛新的影響，血糖可能不會上升，可能導致缺乏胰島素的危險情況發生。 [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
 ## 必要模組
@@ -62,9 +62,9 @@ Combo、Insight 及舊版 Medtronic 是穩定的幫浦，且可以迴路使用�
 
 ### 報告伺服器
 
-報告伺服器顯示您的血糖和治療資料，並生成詳細分析報告。 目前有兩個報告伺服器可以與 AAPS 一起使用：[Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md#nightscout) 和 [Tidepool](../SettingUpAaps/SettingUpTheReportingServer.md#tidepool)。 它們都提供可視化您的糖尿病資料的方式，提供有關 **目標範圍內**（TIR）及其他指標的統計資料。
+報告伺服器顯示您的血糖和治療資料，並生成詳細分析報告。 There are currently two reporting servers available for use with AAPS : [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). 它們都提供可視化您的糖尿病資料的方式，提供有關 **目標範圍內**（TIR）及其他指標的統計資料。
 
-報告伺服器獨立於其他模組。 如果您不想使用報告伺服器，請知道這在長期運行 **AAPS** 時並不是強制的。 但您仍需設置一個，因為這將是完成 [**目標 1**](../SettingUpAaps/CompletingTheObjectives.md#objective-1-setting-up-visualization-and-monitoring-analyzing-basals-and-ratios) 的必要條件。
+報告伺服器獨立於其他模組。 如果您不想使用報告伺服器，請知道這在長期運行 **AAPS** 時並不是強制的。 But you still need to set up one as it will be required to fulfill [**Objective 1**](#objectives-objective1).
 
 有關如何設置報告伺服器的更多資訊，可以在 [這裡](../SettingUpAaps/SettingUpTheReportingServer.md)找到。
 
