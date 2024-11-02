@@ -5,7 +5,7 @@
 -   除非你需要特定新開發的功能，否則可以安全下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)。
 -   根據[這些指示](https://navid200.github.io/xDrip/docs/G5-Recommended-Settings.html)設定 xDrip+ 配合 G5。
 -   閱讀[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)來設定 xDrip+。
--   在[ConfigBuilder 的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source)中選擇 xDrip+。
+-   Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ## 如果使用 G5 配合修改過的 Dexcom 應用程式
 
@@ -27,6 +27,6 @@
 
 -   啟動傳感器
 
-- 在[ConfigBuilder 的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source)中選擇 Dexcom App（修改版）。
+- Select Dexcom App (patched) in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 -   如果你希望透過本地廣播使用 xDrip 警報：在 xDrip 選單 > 設定 > 硬體資料來源 > 640G /EverSense。
