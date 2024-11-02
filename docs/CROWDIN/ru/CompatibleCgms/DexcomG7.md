@@ -32,14 +32,14 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 ### Конфигурация в AAPS
 
-- Select 'BYODA' in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source) - even if it is not the BYODA app!
+- Select 'BYODA' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source) - even if it is not the BYODA app!
 
 - Если AAPS не получает данных ГК, переключитесь на другой источник ГК, а затем снова на 'BYODA'.
 
 ## 2. xDrip+ (direct connection to G7 or ONE+)
 
 - Следуйте инструкциям здесь: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Select  xDrip+ in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select  xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 - Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
 
@@ -47,6 +47,6 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 -   Скачайте и установите xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
 - В качестве источника данных в Xdrip должен быть выбран "Companion App" в разделе Менее распространенные настройки > Настройки Bluetooth > поставьте галочку рядом с "Companion Bluetooth".
--   Select  xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+-   Select  xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 -   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md) 
