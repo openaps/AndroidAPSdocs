@@ -21,10 +21,6 @@ Je ziet de eCarbs in de grafiek terug als kleine beetjes van 1 a 2 gram in de to
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
-Op de Behandelingen tab zie je koolhydraten staan, ze zijn donker oranje omdat ze in de toekomst zijn:
-
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
