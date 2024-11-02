@@ -14,6 +14,8 @@
 
 Nightscout 的 `API_SECRET` 是你網站的主要密碼：切勿公開分享他。
 
+(Nightscout-aaps-settings)=
+
 ### AAPS 設置
 
 你可以設置 AAPS 接收 Nightscout 指令（例如配置更改、治療等），或完全停用此功能。
@@ -40,7 +42,7 @@ Nightscout 的 `API_SECRET` 是你網站的主要密碼：切勿公開分享他�
 
 ### 進一步的安全設置
 
-保持你的手機最新，如[安全第一](../Getting-Started/PreparingForAaps.md#safety-first)所述。
+Keep your phone up to date as described in [safety first](#preparing-safety-first).
 
 (Nightscout-manual-nightscout-setup)=
 
