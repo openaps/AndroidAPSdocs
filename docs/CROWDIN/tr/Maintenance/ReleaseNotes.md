@@ -7,7 +7,7 @@ Yeni bir güncelleme çıkar çıkmaz aşağıdaki bilgileri alacaksınız:
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-O zaman güncellemek için 60 gününüz var. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend).
+O zaman güncellemek için 60 gününüz var. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
 
 30 gün daha güncelleme yapmazsanız (yeni yayın tarihinden 90 gün sonra) AAPS, Açık Döngüye geçecektir.
 
@@ -21,7 +21,7 @@ Lütfen bu değişikliğin sizi rahatsız etmeyi amaçlamadığını, ancak güv
 Bu yayımların kronolojisi şu anda mevcut değil, ancak bu sorular birçok kez sorulduğu için burada dokümante ediyoruz.
 
 ```
-
+(maintenance-android-version-aaps-version)=
 ## Android sürümü ve AAPS sürümü
 
 Akıllı telefonunuz Android 9'dan daha eski bir Android Sürümü kullanıyorsa, en az Android 9 gerektirdiğinden AAPS v3 ve sonraki sürümleri kullanamazsınız.
@@ -47,6 +47,7 @@ Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmas
 
 - AAPS 3.2 requires at least WearOS API level 28 (Android 9)
 
+(version3200)=
 ## Version 3.2.0.0 dedicated to @Philoul
 
 Release date: 23-10-2023
@@ -55,7 +56,7 @@ Release date: 23-10-2023
 
 - NS 15 is required
 - NS v3 eklentisinde websockets kullanırken, NS UI (artı düğmesi) aracılığıyla girilen işlemler ve v1 API kullanan diğer uygulamalar AAPS'e gönderilmez. Bu, NS'nin gelecekteki sürümünde düzeltilecektir. NS tamamen dahili olarak v3'e geçene kadar AAPS ve AAPSClient'te her zaman aynı istemciyi (v1 veya v3) kullanın. Aynısı AAPS ve AAPSClient'in kendisi için de geçerlidir.
-- v3 eklentisindeki websockets, v1 eklentisine benzer şekilde çalışır. AAPS, etkinleştirilmiş web yuvaları olmadan, NS'den düzenli olarak indirmeleri planlar ve bu, NS kalıcı olarak bağlı olmadığı için daha düşük güç tüketir. Bu da karşı tarafta, veri alışverişinde gecikmeler anlamına gelir. Please read [here](ReleaseNotes#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) the important comments from the dev team before you use it!
+- v3 eklentisindeki websockets, v1 eklentisine benzer şekilde çalışır. AAPS, etkinleştirilmiş web yuvaları olmadan, NS'den düzenli olarak indirmeleri planlar ve bu, NS kalıcı olarak bağlı olmadığı için daha düşük güç tüketir. Bu da karşı tarafta, veri alışverişinde gecikmeler anlamına gelir. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
 - Cgm kaynağı olarak xdrip kullanıyorsanız, dahili değişiklikler nedeniyle güncellemeden sonra tekrar seçmelisiniz.
 - Tidepool, ilk görevi geçmek için NS yerine kullanılabilir
 - xDrip+'a gönderirseniz, xDrip senkronizasyon eklentisini yapılandırmanız gerekir. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
@@ -141,7 +142,7 @@ Yayınlanma tarihi: 19-07-2022
 - büyük kullanıcı arayüzü iyileştirmesi, temizleme ve birleştirme, malzeme tasarımına geçiş, stiller, beyaz tema, yeni simgeler. @Andries-Smit @MilosKozak @osodebailar @Philoul
 - widget @MilosKozak
 - Aidex CGM desteği @andyrozman @markvader (Sadece pompa kontrolü)
-- Watch [Wear OS tiles](../UsefulLinks/WearOsSmartwatch.md#wear-os-tiles), translations @Andries-Smit
+- Watch [Wear OS tiles](#WearOsSmartwatch-wear-os-tiles), translations @Andries-Smit
 - Wear kodu yeniden düzenlendi. Artık geriye dönük uyumlu değil @MilosKozak
 - a11y iyileştirmeleri @Andries-Smit
 - yeni koruma seçeneği PIN @Andries-Smit
@@ -200,9 +201,9 @@ Yayınlanma tarihi: 31-01-2022
 
 - Profil anahtarının oluşturulması sırasında aktivite geçici hedefi başlatabilirsiniz @MilosKozak
 
-- NSProfili gitti, sadece yerel profil kullanılabilir. Local profile can be [synced to NS](../Maintenance/Update3_0.md#nightscout-profile-cannot-be-pushed). @MilosKozak.
+- NSProfili gitti, sadece yerel profil kullanılabilir. Local profile can be [synced to NS](#Update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak.
 
-- Forgotten [master password reset procedure](../Maintenance/Update3_0.md#reset-master-password) @MilosKozak
+- Forgotten [master password reset procedure](#Update3_0-reset-master-password) @MilosKozak
 
 - Kullanıcı eylemleri izleme @Philoul
 
@@ -285,24 +286,24 @@ Yayınlanma tarihi: 01-01-2021
 ### Önemli ipuçları
 
 - **Minimum Android sürümü şu anda 8.0'dır.** Daha eski Android sürümleri için eski depodan 2.6.1.4'ü kullanmaya devam edebilirsiniz.
-- [Objectives have changed.](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) **Finish not completed objectives before update.**
+- [Objectives have changed.](#objectives-objective3) **Finish not completed objectives before update.**
 - Depo konumu hâlâ <https://github.com/nightscout/AndroidAPS>'de. If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../SettingUpAaps/BuildingAaps.md).
 - Apk'yi oluşturmak için lütfen [Android Studio sürüm 4.1.1](https://developer.android.com/studio/) veya daha yenisini kullanın.
 
 ### Başlıca yeni özellikler
 
 - [Omnipod Eros support](../CompatiblePumps/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
-- [bolus advisor](../SettingUpAaps/Preferences.md#quick-wizard) & [eating reminder](../DailyLifeWithAaps/AapsScreens.md#section-j) @MilosKozak
-- [New watchface](../UsefulLinks/WearOsSmartwatch.md#new-watchface-as-of-aaps-28) @rICTx-T1D
+- [bolus advisor](#Preferences-quick-wizard) & [eating reminder](#AapsScreens-section-j) @MilosKozak
+- [New watchface](#Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
 - Dana RS bağlantı iyileştirmeleri @MilosKozak
 - Dexcom yerel uygulaması için SMB'deki "Değiştirilmemiş CGM değerleri" davranışı kaldırıldı
-- New [Low Ressolution Skin](../SettingUpAaps/Preferences.md#skin)
-- New ["Pregnant" patient type](../DailyLifeWithAaps/KeyAapsFeatures.md#overview-of-hard-coded-limits) @Brian Quinion
+- New [Low Ressolution Skin](#Preferences-skin)
+- New ["Pregnant" patient type](#Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
 - Yeni NSClient tablet düzeni @MilosKozak
 - NSClient insülin, hassasiyet ve ekran ayarlarını doğrudan ana AAPS'den aktarır @MilosKozak
 - [Preferences filter](../SettingUpAaps/Preferences.md) @Brian Quinion
 - Yeni pompa simgeleri @Rig22 @@teleriddler @osodebailar
-- New [insulin type Lyumjev](../SettingUpAaps/ConfigBuilder.md#lyumjev)
+- New [insulin type Lyumjev](#Config-Builder-lyumjev)
 - Kurulum sihirbazı iyileştirmeleri @MilosKozak
 - Güvenlik iyileştirmeleri @dlvoy
 - Çeşitli iyileştirmeler ve düzeltmeler @AdrianLxM @Philoul @swissalpine @MilosKozak @Brian Quinion
@@ -314,34 +315,34 @@ Yayınlanma tarihi: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** [here](../Maintenance/Update2_7.md).
 
-You need at least start [objective 11 (in later versions objective 10!)](../SettingUpAaps/CompletingTheObjectives.md#objective-10-automation) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf). Bu, daha önce tamamladığınız diğer görevleri etkilemeyecektir. Tüm tamamlanmış görevler korunacaktır!
+You need at least start [objective 11 (in later versions objective 10!)](#objectives-objective10) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start [objective 11](#objectives-objective11). Bu, daha önce tamamladığınız diğer görevleri etkilemeyecektir. Tüm tamamlanmış görevler korunacaktır!
 
 ### Başlıca yeni özellikler
 
 - bağımlılık enjeksiyonunun dahili kullanımı, kitaplık güncellemeleri, kotline yeniden kod yazımı @MilosKozak @AdrianLxM
 - Dana pompaları için modüllerin kullanılması @MilosKozak
 - [new layout, layout selection](../DailyLifeWithAaps/AapsScreens.md) @MilosKozak
-- new [status lights layout](../SettingUpAaps/Preferences.md#status-lights) @MilosKozak
-- [multiple graphs support](../DailyLifeWithAaps/AapsScreens.md#activate-optional-information) @MilosKozak
+- new [status lights layout](#Preferences-status-lights) @MilosKozak
+- [multiple graphs support](#AapsScreens-activate-optional-information) @MilosKozak
 - [Profile helper](../SettingUpAaps/ProfileHelper.md) @MilosKozak
-- visualization of [dynamic target adjustment](../DailyLifeWithAaps/AapsScreens.md#visualization-of-dynamic-target-adjustment) @Tornado-Tim
+- visualization of [dynamic target adjustment](#AapsScreens-visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - new [preferences layout](../SettingUpAaps/Preferences.md) @MilosKozak
 - SMB algoritması güncellemesi @Tornado-Tim
-- [Low glucose suspend mode](../SettingUpAaps/Preferences.md#aps-mode) @Tornado-Tim
-- [carbs required notifications](../SettingUpAaps/Preferences.md#carb-required-notification) @twain47 @Tornado-Tim
+- [Low glucose suspend mode](#Preferences-aps-mode) @Tornado-Tim
+- [carbs required notifications](#Preferences-carb-required-notification) @twain47 @Tornado-Tim
 - Bakım portalı kaldırıldı (Eylemlere taşındı) @MilosKozak
 - [new encrypted backup format](ExportImportSettings.md) @dlvoy
 - [new SMS TOTP authentication](../RemoteFeatures/SMSCommands.md) @dlvoy
-- [new SMS PUMP CONNECT, DISCONNECT](../RemoteFeatures/SMSCommands.md#commands) commands @Lexsus
+- [new SMS PUMP CONNECT, DISCONNECT](#SMSCommands-commands) commands @Lexsus
 - Dana pompalarında küçük bazallar için destek @Mackwe
 - küçük Insight düzeltmeleri @TebbeUbben @MilosKozak
-- ["Default language" option](../SettingUpAaps/Preferences.md#general) @MilosKozak
+- ["Default language" option](#Preferences-general) @MilosKozak
 - vektör simgeleri @Philoul
-- [set neutral temps for MDT pump](../CompatiblePumps/MedtronicPump.md#configuration-of-the-pump) @Tornado-Tim
+- [set neutral temps for MDT pump](#MedtronicPump-configuration-of-the-pump) @Tornado-Tim
 - Geçmiş tarayıcı geliştirmeleri @MilosKozak
 - OpenAPS MA algoritması kaldırıldı @Tornado-Tim
 - Oref0 duyarlılığı kaldırıldı @Tornado-Tim
-- [Biometric or password protection](../SettingUpAaps/Preferences.md#protection) for settings, bolus @MilosKozak
+- [Biometric or password protection](#Preferences-protection) for settings, bolus @MilosKozak
 - [new automation trigger](../DailyLifeWithAaps/Automations.md) @PoweRGbg
 - [Open Humans uploader](../SupportingAaps/OpenHumans.md) @TebbeUbben @AdrianLxM
 - Yeni dokümantasyon @Achim
@@ -433,7 +434,7 @@ Apk'yi oluşturmak için lütfen [Android Studio sürüm 3.6.1](https://develope
 
 - Basit profil kaldırıldı
 
-- [Extended bolus](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
+- [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
 
 - MDT eklentisi: Yinelenen girişlerle ilgili hata düzeltildi
 
@@ -449,9 +450,9 @@ Apk'yi oluşturmak için lütfen [Android Studio sürüm 3.6.1](https://develope
 
 - Dil desteği düzeltildi
 
-- Objectives: [Allow to go back](../SettingUpAaps/CompletingTheObjectives.md#go-back-in-objectives), Time fetching dialog
+- Objectives: [Allow to go back](#CompletingTheObjectives-go-back-in-objectives), Time fetching dialog
 
-- Automation: [allow sorting](../DailyLifeWithAaps/Automations.md#the-order-of-the-automations-in-the-list-matters)
+- Automation: [allow sorting](#Automations-the-order-of-the-automations-in-the-list-matters)
 
 - Otomasyon: devre dışı bırakılmış döngüde çalışan otomasyon hatası düzeltildi
 
@@ -473,7 +474,7 @@ Apk'yi oluşturmak için lütfen [Android Studio sürüm 3.6.1](https://develope
 
 Yayınlanma tarihi: 31-10-2019
 
-Please note the [important notes](ReleaseNotes#version-250) and [limitations](ReleaseNotes#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](ReleaseNotes#version-250). \* Ağ durumu alıcısında birçok kişinin çökmesine neden olan bir hata düzeltildi (kritik değil ama yeniden hesaplamada çok fazla enerji israfına neden oluyor). \* Güncelleme bildirimini tetiklemeden küçük güncellemelerin yapılmasına izin verecek yeni sürüm.
+Please note the [important notes](#Releasenotes-version-2-5-0) and [limitations](#Releasenotes-is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](#Releasenotes-version-2-5-0). \* Ağ durumu alıcısında birçok kişinin çökmesine neden olan bir hata düzeltildi (kritik değil ama yeniden hesaplamada çok fazla enerji israfına neden oluyor). \* Güncelleme bildirimini tetiklemeden küçük güncellemelerin yapılmasına izin verecek yeni sürüm.
 
 (Releasenotes-version-2-5-0)=
 ## Sürüm 2.5.0
@@ -485,7 +486,7 @@ Yayınlanma tarihi: 26-10-2019
 ### Önemli notlar
 
 - Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../SettingUpAaps/BuildingAaps.md) or [update](UpdateToNewVersion).
-- If you are using xDrip [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) must be set.
+- If you are using xDrip [identify receiver](#xdrip-identify-receiver) must be set.
 - Yamalı Dexcom uygulamasıyla Dexcom G6 kullanıyorsanız, [2.4 klasöründeki ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) sürümüne ihtiyacınız olacaktır.
 - Glimp, 4.15.57 ve daha yeni sürümlerde desteklenmektedir.
 
@@ -503,7 +504,7 @@ Yayınlanma tarihi: 26-10-2019
 - RxJava2, Okhttp3, Retrofit desteği
 - Old [Medtronic pumps](../CompatiblePumps/MedtronicPump.md) support (RileyLink need)
 - New [Automation plugin](../DailyLifeWithAaps/Automations.md)
-- Allow to [bolus only part](../SettingUpAaps/Preferences.md#advanced-settings-overview) from bolus wizard calculation
+- Allow to [bolus only part](#Preferences-advanced-settings-overview) from bolus wizard calculation
 - İnsülin aktivitesi oluşturma
 - AİNS tahminlerini otoduyarlılık sonucuna göre ayarlama
 - Yamalı Dexcom apk'leri için yeni destek ([2.4 klasörü ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
@@ -546,7 +547,7 @@ Yayın tarihi: 29-03-2019
 
 ### Başlıca yeni özellikler
 
-- [DST düzeltmesi](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst)
+- [DST düzeltmesi](#time-adjustment-daylight-savings-time-dst)
 - Wear güncellemesi
 - [SMS plugin](../RemoteFeatures/SMSCommands.md) update
 - Görevlere geri dönüş.
@@ -602,7 +603,7 @@ Yayınlanma tarihi: 03-11-2018
 
 - Üst şerit, döngüyü askıya alma/devre dışı bırakma, profili görüntüleme/ayarlama ve geçici hedefleri (GH) başlatma/durdurma erişimi sağlar. GH'ler, tercihlerde ayarlanan varsayılanları kullanır. Yeni Hypo GH seçeneği, döngünün karbonhidratları çok agresif aşırı düzeltmesini önlemek için yüksek geçici bir GH'dir.
 - Tedavi butonları: eski tedavi butonu hala kullanılabilir, ancak varsayılan olarak gizlidir. Butonların görünürlüğü artık yapılandırılabilir. New insulin button, new carbs button (including [eCarbs/extended carbs](../DailyLifeWithAaps/ExtendedCarbs.md))
-- [Renkli tahmin çizgileri](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)
+- [Renkli tahmin çizgileri](#aaps-screens-prediction-lines)
 - NS'ye yüklenen insülin/karbonhidrat/hesap makinesi/hazırlama+doldurma iletişim kutularında bir not alanı gösterme seçeneği
 - Güncellenmiş hazırlama/doldurma iletişim kutusu, set değişikliği ve kartuş değişikliği için hazırlamaya ve bakım portalı girişleri oluşturmaya olanak tanır
 
