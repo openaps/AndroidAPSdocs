@@ -26,7 +26,9 @@ Carbs will also be absorbed via the methods described below based on which sensi
 
 Unabsorbed carbs are cut off after specified time:
 
-![Oref1](../images/cob_oref0_orange_II.png)![Screenshot 2024-10-05 161009](https://github.com/user-attachments/assets/e4eb93b2-bc93-462d-b4d6-854bb9264953)
+![Oref1](../images/cob_oref0_orange_II.png)
+
+![Screenshot 2024-10-05 161009](../images/cob_oref0_orange_I.png)
 
 
 ## Carbs Sensitivity - WeightedAverage
