@@ -21,10 +21,6 @@ eCarbs 是指碳水化合物會在幾個小時內逐步釋放。 對於高碳水
 
 ![圖表中的 eCarbs](../images/eCarbs_Graph.png)
 
-未來的碳水化合物條目在治療標籤中會以深橙色顯示：
-
-![治療標籤中顯示的未來 eCarbs](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 此功能用於處理脂肪和蛋白質的方法描述在此處：[https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
