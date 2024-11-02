@@ -3,14 +3,14 @@
 ```{admonition} Documentation
 :class: note
 
-This section may contain outdated content. Please also see the page [SMS Commands](../RemoteFeatures/RemoteControl.md#1-sms-commands)).
+This section may contain outdated content. Please also see the page [SMS Commands](#RemoteControl-sms-commands)).
 
 ```
 
 ## Safety First
 .
 - AAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code. A strong password or biometrics are recommended.
-- Additionally it is recommended to allow a [second phone number](../RemoteFeatures/SMSCommands.md#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](../RemoteFeatures/SMSCommands.md#other) SMS communicator in case your main remote phone gets lost or stolen.
+- Additionally it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#SMSCommands-other) SMS communicator in case your main remote phone gets lost or stolen.
 - AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
 - **If you bolus through SMS Commands you must enter carbs through Nightscout (AAPSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 - As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
@@ -24,6 +24,7 @@ This section may contain outdated content. Please also see the page [SMS Command
 - If you use an iPhone as a follower and therefore cannot use AAPSClient app, there are additional SMS commands available.
 - In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
 
+(SMSCommands-authorized-phone-numbers)=
 ### Authorized phone numbers
 
 - In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
@@ -96,9 +97,10 @@ This section may contain outdated content. Please also see the page [SMS Command
 
 **Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
+(SMSCommands-commands)=
 ## Commands
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../SupportingAaps/Translations#translate-strings-for-aaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app).
 
 ![SMS Commands Example](../images/SMSCommands.png)
 
@@ -155,7 +157,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 - PROFILE 1 \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
 - PROFILE 2 30 \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
 
-
+(SMSCommands-other)=
 ### Altele
 
 - TREATMENTS REFRESH \* Response: Refresh treatments from NS
@@ -169,6 +171,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 - HELP \* Response: BG, LOOP, TREATMENTS, .....
 - HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
+(SMSCommands-troubleshooting)=
 ## Troubleshooting
 
 ### Multiple SMS
