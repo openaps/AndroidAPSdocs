@@ -53,7 +53,7 @@ ______________________________________________________________________
 
 - 閉環將自動停止並切換為開環模式，以運作延長注射。
 - 注射單位、剩餘和總時間將顯示在主畫面。
-- 在 Insight 幫浦上，如果使用[TBR 模擬](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)，則不提供延長注射功能。
+- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ![AAPS 2.6 中的延長注射](../images/ExtendedBolus2_6.png)
 
