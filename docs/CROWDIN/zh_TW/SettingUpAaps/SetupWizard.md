@@ -197,12 +197,11 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 在此示例中，我們選擇Nightscout作為報告伺服器，並將進行配置。
 
 ```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
-:class: 注意
-請點擊[這裡](./Releasenotes.md)查看 **AAPS** 3.2.0.0 的發布說明，其中解釋了頂部選項 **NSClient**（這是「v1」，雖然未明確標註）與第二選項 **NSClient v3** 之間的差異。 
+:class: Note
+Click [here](../Maintenance/ReleaseNotes.md) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
 
 Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout 監控或發送遠端治療（例如，作為孩子的父母或照顧者使用 **AAPS**），這種情況下請選擇第一個選項「**NSClient**」，直至另行通知。 
 ```
-
 對於Tidepool來說，這更簡單，因為你只需要你的個人登錄訊息。
 
 選擇後，請按下你選擇項目旁邊的齒輪按鈕：
@@ -333,6 +332,7 @@ Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_141958.png)
 
+(setup-wizard-profile)=
 ### 設定檔
 
 現在我們進入設定嚮導中的一個非常重要的部分。
