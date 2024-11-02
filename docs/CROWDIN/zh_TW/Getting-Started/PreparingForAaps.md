@@ -44,6 +44,7 @@ N.B. 如果你使用不同的 HbA1c 單位（mmol/mol 而非 %），請點擊[�
 
 通常認為，_新診斷的_ 1 型糖尿病患者（通常在診斷時 HbA1c 非常高，在開始胰島素治療之前）可以立即迅速降低 HbA1c，而不會遇到這些風險，因為他們的血糖數值未長期升高。 然而，這仍然是一個需要與你的臨床醫生討論的考慮因素。
 
+(PreparingForAaps-no-sglt-2-inhibitors)=
 ### 禁止使用 SGLT-2 抑制劑
 
 ```{admonition} NO SGLT-2 inhibitors
@@ -121,7 +122,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 #### [臨床醫師專區](../Resources/clinician-guide-to-AndroidAPS.md)
 
-這是一個[專為臨床醫師設立的專區](../Resources/clinician-guide-to-AndroidAPS.md)，希望了解更多關於 AAPS 及開源人工胰臟技術。 在簡介中還提供了[如何與你的臨床團隊討論 AAPS](./Introduction.md#how-can-i-approach-discussing-aaps-with-my-clinical-team)的指南。
+這是一個[專為臨床醫師設立的專區](../Resources/clinician-guide-to-AndroidAPS.md)，希望了解更多關於 AAPS 及開源人工胰臟技術。 There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
 
 ## 我們要建置和安裝什麼？
 
@@ -150,7 +151,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 **Nightscout**和**AAPS**必須大約每年更新一次，隨著改進版本的發佈。 在某些情況下，更新可以延後，但在其他情況下，更新被強烈建議或視為安全的重要措施。 這些更新的通知將在 Facebook 群組和 Discord 伺服器上發佈。 發佈說明將明確說明具體情況。 在更新時，可能會有許多人與你提出類似問題，你將獲得支援來進行更新。
 
-(preparing-how-long-will-it-take?)=
+(preparing-how-long-will-it-take)=
 ## 設置所有內容需要多長時間？
 
 如前所述，使用**AAPS**更像是一段旅程，需要你投入個人時間。 這不是一次性的設置。 關於建立建置**AAPS**、安裝和配置**AAPS**和**CGM**軟體，到從開放循環進入混合閉環循環的過程，大約需要 4 到 6 個月。 因此建議您優先建立 **AAPS** 應用程式並儘快完成早期目標，即使您仍然在使用其他胰島素輸送系統（您可以使用虛擬幫浦到達目標 5）。
