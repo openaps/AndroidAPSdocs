@@ -203,6 +203,8 @@ De plus, il y a trois complications de type `IMAGE LARGE` : **Fond d'écran noir
   * *Aucun* : Désactive l'action sur les complications AAPS
 * **Unicode dans Complications** (par défaut `On`) : Si `On`, la complication utilise des caractères Unicode pour les symboles tels que `Δ` Delta, `⁞` séparateur de point vertical ou `⎍` symbole du débit de basal. Le rendu de ces symboles dépend de la police, et cela peut être très spécifique au cadran. Cette option permet de désactiver les symboles `Unicode` quand c'est nécessaire - si la police utilisée par le cadran personnalisé ne prend pas en charge ces symboles - pour éviter les problèmes graphiques.
 
+(WearOsSmartwatch-wear-os-tiles)=
+
 ## Tuiles (ou Cartes) Wear OS
 
 Les tuiles Wear OS fournissent un accès facile aux informations et aux actions utilisateur pour faire les choses. Les tuiles ne sont disponibles que sur montres Android fonctionnant sur Wear Os version 2.0 et supérieure.
@@ -242,11 +244,11 @@ Les actions prises en charge dans la tuile d'action peuvent envoyer des requête
 
 ![Wear action tile, sample calculator](../images/wear_actions.png)
 
-[1] Via, le menu Wear OS, réglez l'option "Pourcentage de Calculateur" à "ON" pour afficher le pourcentage d'entrée dans la calculatrice de bolus. The default percentage is based on the phone settings in the "Overview" section ["Deliver this part of the bolus wizard result %"](../SettingUpAaps/Preferences.md#deliver-this-part-of-bolus-wizard-result) When the user does not provide a percentage, the default value from the phone is used. Configurez les autres paramètres de l'assistant bolus dans l'application téléphone via "Préférences" "Paramètres de l'assistant".
+[1] Via, le menu Wear OS, réglez l'option "Pourcentage de Calculateur" à "ON" pour afficher le pourcentage d'entrée dans la calculatrice de bolus. The default percentage is based on the phone settings in the "Overview" section ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result) When the user does not provide a percentage, the default value from the phone is used. Configurez les autres paramètres de l'assistant bolus dans l'application téléphone via "Préférences" "Paramètres de l'assistant".
 
 ### Tuile AAPS(Cible Temp)
 
-La tuile cible temporaire peut demander une cible temporaire basée sur les préréglages du téléphone AAPS. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](../SettingUpAaps/Preferences.md#default-temp-targets) and set the duration and targets for each preset. Configurez les actions visibles sur la tuile à travers les paramètres de tuile. Faites un appui long sur la tuile pour afficher les options de configuration et sélectionnez 1 à 4 options :
+La tuile cible temporaire peut demander une cible temporaire basée sur les préréglages du téléphone AAPS. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](#Preferences-default-temp-targets) and set the duration and targets for each preset. Configurez les actions visibles sur la tuile à travers les paramètres de tuile. Faites un appui long sur la tuile pour afficher les options de configuration et sélectionnez 1 à 4 options :
 
 * **Activité** : pour le sport
 * **Hypo** : pour augmenter la cible pendant le traitement d'une hypo
@@ -258,7 +260,7 @@ La tuile cible temporaire peut demander une cible temporaire basée sur les pré
 
 ### Tuile AAPS(Assistant rapide)
 
-La tuile Assistant rapide peut contenir 1 à 4 boutons d'action de l'assistant, définis avec l'application du téléphone[2]. See [QuickWizard](../SettingUpAaps/Preferences.md#quick-wizard). Vous pouvez définir des repas standards (glucides et méthode de calcul du bolus) à afficher sur la tuile en fonction de l'heure de la journée. Idéal pour les repas et collations les plus courants que vous mangez pendant la journée. Vous pouvez spécifier si les boutons de l'assistant rapide s'afficheront sur le téléphone, la montre ou les deux. Veuillez noter que le téléphone ne peut afficher qu'un seul bouton de l'assistant rapide à la fois. La configuration de l'assistant rapide peut également spécifier un pourcentage personnalisé de l'insuline pour le bolus. Le pourcentage personnalisé vous permet de varier, par exemple, la collation à 120%, l'absorption lente du petit déjeuner 80% et le traitement hypo de la collation à 0%
+La tuile Assistant rapide peut contenir 1 à 4 boutons d'action de l'assistant, définis avec l'application du téléphone[2]. See [QuickWizard](#Preferences-quick-wizard). Vous pouvez définir des repas standards (glucides et méthode de calcul du bolus) à afficher sur la tuile en fonction de l'heure de la journée. Idéal pour les repas et collations les plus courants que vous mangez pendant la journée. Vous pouvez spécifier si les boutons de l'assistant rapide s'afficheront sur le téléphone, la montre ou les deux. Veuillez noter que le téléphone ne peut afficher qu'un seul bouton de l'assistant rapide à la fois. La configuration de l'assistant rapide peut également spécifier un pourcentage personnalisé de l'insuline pour le bolus. Le pourcentage personnalisé vous permet de varier, par exemple, la collation à 120%, l'absorption lente du petit déjeuner 80% et le traitement hypo de la collation à 0%
 
 ![Wear actions tile and phone configuration](../images/quickwizard_watch_phone.png)
 
@@ -328,6 +330,8 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
 * Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 * If Complications does not update data - check first if AAPS watchfaces work at all.
+
+(Watchfaces-garmin)=
 
 ## Garmin
 
