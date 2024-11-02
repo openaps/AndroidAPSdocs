@@ -21,10 +21,6 @@ Die eCarbs auf dem Homescreen, beachte die Kohlenhydrate in Klammern im COB-Feld
 
 ![eCarbs im Diagramm](../images/eCarbs_Graph.png)
 
-Kohlenhydrat-Einträge, die in der Zukunft liegen, sind auf dem Behandlungen-Reiter dunkelorange:
-
-![eCarbs in der Zukunft im Reiter Behandlungen](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 Ein konkretes Beispiel zum Umgang mit Fett und Eiweiß im Rahmen dieser Funktion wird hier beschrieben: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
