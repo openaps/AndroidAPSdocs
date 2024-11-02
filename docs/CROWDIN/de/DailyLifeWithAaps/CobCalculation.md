@@ -37,14 +37,14 @@ Die Kohlenhydrat-Aufnahme wird so berechnet, dass nach einer vorgegebener Zeit C
 
 In der **COB**-Kurve wird ein orangener Punkt angezeigt, wenn die minimale Kohlenhydrat-Aufnahme (min_5m_carbimpact) anstelle eines aus den Entwicklungen des **Glukosewertes** berechneten Wertes verwendet wird.
 
-
+(CobCalculation-detection-of-wrong-cob-values)=
 ## Erkennung Fehlerhafter COB-Werte
 
 **AAPS** wird Dich warnen, wenn Du dabei bist einen Bolus abzugeben bei dem **COB**-Werte einer vorherigen Mahlzeit berücksichtigt werden, der Algorithmus aber erkennt, dass die  aktuelle **COB**-Berechnung nicht korrekt ist. In dieser Situation gibt es beim Nutzen des Bolus-Rechners einen zusätzlichen Hinweis im Bestätigungsfenster.
 
 ### Wie erkennt AAPS falsche COB-Werte?
 
-Normalerweise erkennt __AAPS__ eine Kohlenhydrat-Aufnahme anhand von **Glukosewert**-Veränderungen. Incase the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](../SettingUpAaps/Preferences.md#min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). Da dieses Verfahren nur die minimale Kohlenhydrat-Aufnahme ohne Berücksichtigung von Glukosewert-Änderungen berechnet, kann dies zu falschen COB-Werten führen.
+Normalerweise erkennt __AAPS__ eine Kohlenhydrat-Aufnahme anhand von **Glukosewert**-Veränderungen. Incase the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). Da dieses Verfahren nur die minimale Kohlenhydrat-Aufnahme ohne Berücksichtigung von Glukosewert-Änderungen berechnet, kann dies zu falschen COB-Werten führen.
 
 ![Hinweis fehlerhafte COB Werte](../images/Calculator_SlowCarbAbsorption.png)
 
@@ -69,7 +69,7 @@ Das kann folgende Gründe haben:
 
 ## Manuelle Korrektur der eingegebenen Kohlenhydrate
 
-If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs).
+If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](#screens-bolus-carbs).
 
 
 ## Kohlenhydrate korrigieren - wie KH-Einträge aus den Behandlungen gelöscht werden
