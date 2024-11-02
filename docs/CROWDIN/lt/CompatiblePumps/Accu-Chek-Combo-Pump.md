@@ -8,7 +8,7 @@
 
 - Roche Accu-Chek Combo pompa (bet kuri versija)
 - Smartpix arba Realtime kabelis bei 360 Configuration Software programėlė pompos modifikavimui. (Klientui pageidaujant Roche nemokamai išsiunčia Smartpix ir konfigūravimo programėlę.)
-- A compatible phone: An Android phone with a phone running LineageOS 14.1 (formerly CyanogenMod) or at least Android 8.1 (Oreo). As of AAPS 3.0 Android 9 is mandatory. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
+- A compatible phone: An Android phone with a phone running LineageOS 14.1 (formerly CyanogenMod) or at least Android 8.1 (Oreo). As of AAPS 3.0 Android 9 is mandatory. See [release notes](#maintenance-android-version-aaps-version) for details.
 - With LineageOS 14.1 it has to be a recent version from at least June 2017 since the change needed to pair the Combo pump was only introduced at that time. 
 - Telefonų sąrašas peteikiamas dokumente [AAPS telefonai](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 - Atkreipkite dėmesį, kad šis sąrašas remiasi tik asmenine vartotojų patirtimi ir gali būti nepilnas. Jūs taip pat galite prisidėti pranešdami apie savo patirtį (pagrindinis šio projekto principas - neatlygintinas asmeninis įnašas).
@@ -20,7 +20,7 @@
 - Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 - Galimas tik vienas bazės profilis.
 - Daugiau nei 1 bazinio profilio nustatymas, ištęsto ar daugiabangio boluso suleidimas iš pompos trukdo laikinų bazių nustatymui (TBR) ir išjungia ciklą 6 valandoms, todėl ciklas negali saugiai veikti tokiomis sąlygomis.
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - Šiuo metu yra palaikomi baziniai greičiai nuo 0.05 iki 10 vv/h. Tai taip pat taikoma koreguojant profilį, pvz., kai padidinama 200%, didžiausia bazė negali viršyti 5 vv/h, nes ji padvigubės. Analogiškai, kai reikia sumažinti iki 50%, mažiausias bazinis greitis turi būti bent 0.10 vv/h.
 - Jei Ciklas reikalauja atšaukti veikiančią laikiną bazę (TBR), vietoje 100% Combo nustatys 90% arba 110% 15-ai minučių. Taip nustatyta, nes laikinos bazės atšaukimas įjungia pompos aliarmą, kuris sukelia intensyvų vibravimą.
 - Retkarčiais (kartą per keletą dienų) AAPS gali nepasisekti automatiškai išjungti LAIKINOS BAZĖS ATŠAUKIMAS aliarmo, dėl to reikalingi vartotojo veiksmai (paspaudžiant ATNAUJINTI mygtuką AAPS, kad įspėjimas būtų perduotas AAPS, arba patvirtinant aliarmą pompoje).
