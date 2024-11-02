@@ -53,7 +53,7 @@ Bu nedenle 2.6 sürümünden itibaren Dana ve Insight pompa kullanıcıları iç
 
 - Kapalı döngü otomatik olarak durdurulacak ve yayma bolus çalıştığı süre boyunca açık döngü moduna geçecektir.
 - Kalan Bolus ve toplam süre ana ekranda gösterilecektir.
-- On Insight pump extended bolus is *not available* if [TBR emulation](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
+- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
