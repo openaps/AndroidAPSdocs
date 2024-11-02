@@ -8,7 +8,7 @@ Bluetooth-Transmitter können mit dem Libre 2 (EU) und einer [Out of Process Alg
 
 Prüfe im Vorfeld, ob der Bluetooth-Transmitter und die notwendige App, sowohl mit Deinem Sensor als auch mit xDrip+ kompatibel ist (ältere und auch aktuelle Blucons sind nicht kompatibel, Miaomiao 1 benötigt Firmwareversion 39 und Miaomiao 2 Firmwareversion 7).
 
-Die Libre2 OOP gibt die gleichen BZ-Messwerte aus wie das Lesegerät oder die LibreLink-App über einen NFC-Scan. AAPS glättet Libre2 Daten über 10-25 Minuten, um Sprünge zu vermeiden. See below [Value smoothing & raw values](#value-smoothing--raw-values).  OOP übergibt alle fünf Minuten einen Wert. Dieser entspricht dem Durchschnitt der letzten fünf Minuten. Daher sind die BZ-Werte nicht so glatt, stimmen aber mit dem Lesegerät überein und folgen den "echten" BZ-Entwicklungen schneller. Wenn Du mit OOP loppen möchtest, aktiviere alle Glättungseinstellungen in xDrip+.
+Die Libre2 OOP gibt die gleichen BZ-Messwerte aus wie das Lesegerät oder die LibreLink-App über einen NFC-Scan. AAPS glättet Libre2 Daten über 10-25 Minuten, um Sprünge zu vermeiden. See below [Value smoothing & raw values](#libre2-value-smoothing-raw-values).  OOP übergibt alle fünf Minuten einen Wert. Dieser entspricht dem Durchschnitt der letzten fünf Minuten. Daher sind die BZ-Werte nicht so glatt, stimmen aber mit dem Lesegerät überein und folgen den "echten" BZ-Entwicklungen schneller. Wenn Du mit OOP loppen möchtest, aktiviere alle Glättungseinstellungen in xDrip+.
 
 Es psricht viel dafür einen Bluetooth-Transmitter zu nutzen:
 
@@ -34,7 +34,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 - [Diese Anleitung](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) beschreibt, wie Du xDrip+ konfigurierst. Wichtig ist, dass Du die [neueste OOP2-Version](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) herunterlädst und nutzt, da die in der Dokumentation referenzierte Version veraltete ist.
 - Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 
--   Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+-   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ## 3. Diabox nutzen
 
@@ -42,7 +42,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ## 4. Juggluco nutzen
 
@@ -52,7 +52,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ```{admonition} Use with xDrip+
 :class: note
@@ -61,6 +61,7 @@ You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you sh
 You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
 ```
 
+(libre2-patched-librelink-app-with-xdrip)=
 ## 5. Use the patched LibreLink app with xDrip+
 
 ```{admonition} Libre 2 EU only
@@ -145,7 +146,7 @@ Es gibt jedoch eine Variante der gepatchten App, die LibreView mit aktivierter I
 Die Blutzuckerwerte werden von der xDrip + App auf dem Smartphone empfangen.
 
 -   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
--   Set xDrip+ with the [patched app data source](../CompatibleCgms/xDrip.md#libre-2-patched-app).
+-   Set xDrip+ with the [patched app data source](#xdrip-libre2-patched-app).
 -   Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 
 ### Schritt 4: Sensor starten
@@ -164,7 +165,7 @@ Nach einem Sensorwechsel erkennt xDrip+ den neuen Sensor automatisch und löscht
 
 ![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](./xDrip.md#identify-receiver).
+-   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](#xdrip-identify-receiver).
 
 Wenn Du den Libre 2 als BZ-Quelle nutzt, stehen die Funktionen 'Enable SMB always' und 'Enable SMB after carbs' mit dem SMB Algorithmus nicht zur Verfügung. Die BZ-Werte des Libre 2 sind für einen sicheren Einsatz dieser Funktionen nicht glatt genug. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
 
@@ -175,6 +176,7 @@ Wenn Du den Libre 2 als BZ-Quelle nutzt, stehen die Funktionen 'Enable SMB alway
 
 The connectivity is good with most phones, with the exception of Huawei mobile phones. Die Verbindung kann durchaus einmal abreißen, wenn sich der Sensor auf der einen Körperseite, das Handy auf der anderen in der Hosentasche befindet oder wenn man im Freien unterwegs ist. Wear your phone on the sensor side of your body. In Räumen, wo sich Bluetooth über Reflektionen ausbreitet, sollten keine Probleme auftreten. Bei Verbindungsproblemen bitte ein anderes Telefon testen. Es kann auch helfen, den Sensor so zu setzen, dass die interne Bluetooth-Antenne nach unten zeigt. Der Schlitz auf dem Applikator muss beim Setzen des Sensors nach unten zeigen.
 
+(libre2-value-smoothing-raw-values)=
 #### Glättung der Werte & Rohdaten
 
 Technisch wird alle Minute der aktuelle Blutzucker-Wert an xDrip+ übertragen. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
@@ -215,6 +217,7 @@ You can calibrate the Libre2 **with an offset of -40 mg/dl to +20 mg/dL \[-2,2 m
 
 Die Libre2 Sensoren enthalten Plausibilitätsprüfungen, um schlechte Sensorwerte zu erkennen. Sobald sich der Sensor am Arm bewegt oder leicht angehoben wird, können die Werte anfangen zu schwanken. Der Libre2 Sensor schaltet sich dann aus Sicherheitsgründen ab. Leider erfolgen beim Scannen mit der App weitere Prüfungen. Die App kann ebenfalls den Sensor deaktivieren, was zu einem frühen Ausfall führen kann, obwohl der Sensor in Ordnung ist. Derzeit ist der interne Test zu streng. Avoid scanning the sensor with another phone to reduce the risk of unexpected sensor shutdown.
 
+(Libre2-best-practices-for-calibrating-a-libre-2-sensor)=
 # Best practices for calibrating a Libre 2 sensor
 
 Um die besten Ergebnisse bei der Kalibrierung des Libre 2 zu erzielen, gibt es einige „Regeln“, denen Du folgen solltest. Sie gelten unabhängig von der Kombination von Software (z.B. gepatchte Libre-app, oop2, …), die verwendet wird, um die Libre 2 Werte zu handhaben.
