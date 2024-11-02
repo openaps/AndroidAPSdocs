@@ -50,7 +50,7 @@ If in doubt you can also select “Virtual Pump” and select “Medtrum” late
 
 #### Optie 2: De Configurator
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump):
+On an existing installation you can select the **Medtrum** pump from the [Config Builder](#Config-Builder-pump):
 
 On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**.
 
@@ -90,8 +90,9 @@ This settings changes the way AAPS will show notification on non ciritical pump 
     - Low reservoir (20 Units)
     - Patch expiration warning
 
-In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#active-alarms).
+In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
 
+(medtrum-patch-expiration)=
 #### Patch Expiration
 
 ***Default: Enabled.***
@@ -104,7 +105,7 @@ If this setting is disabled, the patch will not warn you and will continue runni
 
 ***Default: 72 hours.***
 
-This setting changes the time of the expiration warning, when [Patch Expiration](#patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
+This setting changes the time of the expiration warning, when [Patch Expiration](#medtrum-patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
 
 #### Hourly Maximum Insulin
 
@@ -213,6 +214,7 @@ Clean the skin, remove stickers and attach the patch to your body. Remove safety
 
 Press **Next** to activate the patch.
 
+(medtrum-activate-patch)=
 ##### Activate Patch
 
 ![Activate patch](../images/medtrum/activation/ActivatePatch.png)
@@ -287,6 +289,7 @@ This shows the last bolus that was delivered.
 
 This shows the active bolus that is currently being delivered.
 
+(medtrum-active-alarms)=
 ##### Active alarms:
 
 This shows any active alarms that are currently active.
@@ -321,7 +324,7 @@ This button will refresh the status of the patch.
 
 ##### Change patch:
 
-This button will start the process to change the patch. See [Activate patch](#activate-patch) for more information.
+This button will start the process to change the patch. See [Activate patch](#medtrum-activate-patch) for more information.
 
 ### Reset alarms
 
