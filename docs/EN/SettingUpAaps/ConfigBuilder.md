@@ -10,6 +10,7 @@ When there are additional settings available within the module, you can click on
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
+(Config-Builder-tab-or-hamburger-menu)=
 ## Tab or hamburger menu
 
 With the checkbox under the eye symbol you can decide how to open the corresponding program section.
@@ -28,6 +29,7 @@ This module can not be disabled as it is a core part of **AAPS**.
 * See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
 * See [AAPS Screens > Profile](#aaps-screens-profile) for more information about managing your profiles.
 
+(Config-Builder-insulin)=
 ## Insulin
 
 ![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
@@ -59,6 +61,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 * DIA = at least 5.0h
 * Max. peak = 55 minutes after injection (fixed, not adjustable)
 
+(Config-Builder-lyumjev)=
 #### Lyumjev
 
 ![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
@@ -75,6 +78,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
+(Config-Builder-bg-source)=
 ## BG Source
 Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
@@ -96,6 +100,7 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 
 See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
+(Config-Builder-pump)=
 ## Pump
 Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
 
@@ -128,6 +133,7 @@ You can view your sensitivity on the homescreen by selecting SEN and watching th
 ### Absorption settings
 If you use Oref1 with SMB you must change <b>min_5m_carbimpact</b> to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
+(Config-Builder-aps)=
 ## APS
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 * OpenAPS AMA

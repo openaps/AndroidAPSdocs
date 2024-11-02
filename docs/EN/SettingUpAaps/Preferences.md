@@ -20,6 +20,8 @@
 :backlinks: entry
 :depth: 2
 ```
+
+(Preferences-general)=
 ## General
 
 ![Preferences > General](../images/Pref2020_General.png)
@@ -40,10 +42,12 @@
 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 
+(Preferences-protection)=
 ### Protection
 
 ![Preferences > General - Protection](../images/Pref2020_General2.png)
 
+(Preferences-master-password)=
 #### Master password
 
 Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
@@ -79,6 +83,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 Define how long (in seconds), the preferences or bolus functionalities remain unlocked after your successfully entered the password.
 
+(Preferences-skin)=
 #### Skin
 You can choose from four types of skins:
 
@@ -111,6 +116,7 @@ In **Overview** section, you can define the preferences for the home screen.
 
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
+(Preferences-buttons)=
 ### Buttons
 
 - Define which buttons are visible on the bottom of your home screen.
@@ -123,6 +129,7 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 
 ![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
 
+(Preferences-quick-wizard)=
 ### Quick Wizard
 
 Create customized buttons for certain standard meals or snacks which will be displayed on the home screen. Useful for standard meals frequently eaten. 
@@ -138,6 +145,7 @@ The proposal has to be confirmed before insulin is delivered.
 
 ![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
 
+(Preferences-default-temp-targets)=
 ### Default temp targets
 
 [Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
@@ -158,6 +166,7 @@ If you want to fill tube or prime cannula through **AAPS** you can do this throu
 
 Pre-set values can be defined in this dialogue. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
 
+(Preferences-range-for-visualization)=
 ### Range for visualization
 
 Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
@@ -179,6 +188,7 @@ Gives you the option to add short text notes to your treatments (bolus wizard, c
 
 ![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
 
+(Preferences-status-lights)=
 ### Status lights
 
 Status lights give a visual warning for:
@@ -255,6 +265,7 @@ Use with caution and do not enable until you learn what it really does. Basicall
 
 ## Loop
 
+(Preferences-aps-mode)=
 ### APS mode
 Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
 
@@ -283,6 +294,7 @@ In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over
 
 This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current profile. Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
 
+(Preferences-minimal-request-change)=
 ### Minimal request change
 
 When using **Open loop**, you will receive notifications every time **AAPS** recommends to adjust basal rate.
@@ -300,6 +312,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 
 All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
 
+(Preferences-openaps-smb-settings)=
 ### OpenAPS SMB
 
 All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
@@ -407,6 +420,7 @@ You can select which data you want to [upload and download to or from Nightscout
 - Multiple SSIDs can be separated by semicolon.
 - To delete all SSIDs enter a blank space in the field.
 
+(Preferences-advanced-settings-nsclient)=
 ### Advanced settings (NSClient)
 
 ![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)

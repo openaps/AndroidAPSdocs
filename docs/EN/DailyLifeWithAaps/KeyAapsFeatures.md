@@ -246,6 +246,7 @@ Default value: 2
 
 ***
 
+(Open-APS-features-overview-of-hard-coded-limits)=
 ## Overview of hard-coded limits
 
 |            | Child | Teenager | Adult | Insulin resistant adult | Pregnant |
