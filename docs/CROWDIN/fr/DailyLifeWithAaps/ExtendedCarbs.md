@@ -53,7 +53,7 @@ C'est pourquoi à partir de la version 2.6, il y a une option pour un bolus éte
 
 - La boucle fermée sera automatiquement arrêtée et basculera en mode boucle ouverte pour la durée du bolus étendu.
 - La quantité d'insuline, le temps restant et le temps total seront affichés sur la page d'accueil.
-- On Insight pump extended bolus is *not available* if [TBR emulation](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
+- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
