@@ -43,7 +43,7 @@ AAPS is designed to transparently track all input data it gathers, the resulting
 
 ## Examples of AAPS algorithm decision making:
 
-AAPS uses the same core algorithm and feature set as OpenAPS. Ο αλγόριθμος κάνει πολλαπλές προβλέψεις (με βάση τις ρυθμίσεις και την κατάσταση) που αντιπροσωπεύουν διαφορετικά σενάρια για το τι μπορεί να συμβεί στο μέλλον. Στη Nightscout, αυτά εμφανίζονται ως "μοβ γραμμές". AAPS uses different colors to separate these [prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines). Στα ημερολόγια, θα περιγράψει ποιες από αυτές τις προβλέψεις και ποιο χρονικό πλαίσιο οδηγεί τις απαραίτητες ενέργειες.
+AAPS uses the same core algorithm and feature set as OpenAPS. Ο αλγόριθμος κάνει πολλαπλές προβλέψεις (με βάση τις ρυθμίσεις και την κατάσταση) που αντιπροσωπεύουν διαφορετικά σενάρια για το τι μπορεί να συμβεί στο μέλλον. Στη Nightscout, αυτά εμφανίζονται ως "μοβ γραμμές". AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). Στα ημερολόγια, θα περιγράψει ποιες από αυτές τις προβλέψεις και ποιο χρονικό πλαίσιο οδηγεί τις απαραίτητες ενέργειες.
 
 ### Here are examples of the purple prediction lines, and how they might differ:
 
