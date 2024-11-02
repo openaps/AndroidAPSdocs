@@ -55,11 +55,11 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 位於[偏遠地區](#sandbox1-in-the-middle-of-nowhere)的標籤 這是指向[](#sandbox1-this-is-another-test)的標籤，應顯示其名稱
 
 帶有錨點的連結：
-- [這會花多久時間？](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up)
-- [偏好設定中的 NSClient 設定](../SettingUpAaps/Preferences.md#nsclient)。
-- [AAPS 首頁總覽中的預測線](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)，標題層級 4
+- [這會花多久時間？](#preparing-how-long-will-it-take)
+- [NSClient settings in Preferences](#Preferences-nsclient).
+- [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4
 - [螢幕截圖](../DailyLifeWithAaps/AapsScreens.md)
-- [主要圖表截圖](../DailyLifeWithAaps/AapsScreens.md#section-f---main-graph)，標題層級 3
-- [OpenAPS 功能](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
-- [最大 IOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
-- [本文件中的 SMB 章節](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb)
+- [Screenshot main graph](#aaps-screens-main-graph) to header level 3
+- [OpenAPS 功能](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
+- [最大 IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
+- [本文件中的 SMB 章節](#Open-APS-features-super-micro-bolus-smb)
