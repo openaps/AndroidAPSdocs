@@ -105,7 +105,7 @@ Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe ab
 
 * In den meisten Fällen handelt es sich nur um ein Kommunikationsproblem und es wurde tatsächlich die korrekte Insulinmenge abgegeben.
 * Prüfe in der Historie der Dana RS (entweder direkt in der Pumpe oder über den Dana Tab > Pumpen-Speicher > Boli), ob die korrekte Bolusmenge abgegeben wurde.
-* Delete error entry in [treatments tab](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs) if you wish.
+* Delete error entry in [treatments tab](#screens-bolus-carbs) if you wish.
 * Die tatsächlich abgegebene Insulinmenge wird bei der nächsten Verbindung zwischen AAPS und Dana RS ausgelesen. Um eine Verbindung manuell herzustellen, drücke das Bluetooth Icon auf dem Dana Tab oder warte einfach auf die nächste Verbindung.
 
 ## Wichtiger Hinweis beim Wechsel des Smartphones
@@ -129,4 +129,4 @@ Falls Du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
 ## Mit der Dana RS Pumpe über Zeitzonen hinweg reisen
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
