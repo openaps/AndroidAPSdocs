@@ -12,7 +12,7 @@
 ## 建置AAPS所需的電腦和軟體規格
 
 * 請使用**[至少為Hedgehog的Android Studio版本（2023.1.1）或更新的版本，如Iguana、Jellyfish、Koala或Ladybug](https://developer.android.com/studio/)**來建立apk。 舊版本的Android Studio需要先更新！
-* [Windows 32位系統](../GettingHelp/TroubleshootingAndroidStudio#unable-to-start-daemon-process)不支援Android Studio。 請記住**64位中央處理器和64位作業系統是必要條件。** 如果你的系統不符合此條件，你必須更換受影響的硬體或軟體，或整個系統。
+* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. 請記住**64位中央處理器和64位作業系統是必要條件。** 如果你的系統不符合此條件，你必須更換受影響的硬體或軟體，或整個系統。
 
 <table class="tg">
 <tbody>
@@ -91,6 +91,7 @@ Git被稱為“_版本控制系統_”（VCS）。
 Git是一個可以讓你追蹤程式碼變更並與他人協作的程式。 你將使用Git從GitHub網站將**AAPS**的原始碼複製到你的本地電腦。 然後，你將在你的電腦上使用Git來建立**AAPS**應用程式（apk）。 
 ```
 
+(BuildingAaps-steps-for-installing-git)=
 #### 安裝Git的步驟
 
 1.  檢查你是否已經安裝**Git**。 你可以在Windows搜尋欄中輸入“git”來檢查—如果你看到**“Git bash”**或其他形式的Git，那麼它已經安裝，並且你可以直接前往[安裝Android Studio](#install-android-studio)：
@@ -296,8 +297,8 @@ Android Studio 可能會建議更新 gradle 系統。 **切勿更新 gradle！**
 
 
 如果你發現**git.exe** 無法自動找到，或者點擊 "測試" 出現錯誤（1），你可以選擇
-* 手動輸入你之前[儲存的路徑](#steps-for-installing-git)，或
-* 點擊資料夾圖示（1），手動導航至**git.exe** 安裝的目錄[上面](#steps-for-installing-git)
+* manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
+* click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * 用**測試**按鈕驗證你的設定！
 
   ![未找到 Git](../images/Building-the-App/039_GitTestError.png)
@@ -357,7 +358,7 @@ Android 要求每個應用程式必須被 _簽署_，以確保它只能從同一
 
 * 現在選擇一個簡單的密碼（並記下來），在密碼框中輸入它（2），並確認（2）。
 
-  密鑰庫和密鑰的密碼不必過於複雜。 如果將來遺失密碼，請參見[解決遺失金鑰庫的問題](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore).
+  密鑰庫和密鑰的密碼不必過於複雜。 If you lose your password in the future, see [troubleshooting for lost key store](#troubleshooting_androidstudio-lost-keystore).
 
 * 密鑰的預設別名（3）為“key0”，保持不變。
 
