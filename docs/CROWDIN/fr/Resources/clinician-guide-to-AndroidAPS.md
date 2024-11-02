@@ -43,7 +43,7 @@ AAPS est conçu pour suivre de façon transparente toutes les données d'entrée
 
 ## Exemples de prise de décision de l'algorithme AAPS :
 
-AAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que OpenAPS. L'algorithme fait des prédictions multiples (basées sur les paramètres et la situation) représentant différents scénarios de ce qui pourrait arriver à l'avenir. Dans Nightscout, ces lignes sont affichées sous la forme de "lignes violettes". AAPS uses different colors to separate these [prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines). Dans les logs, il décrira laquelle de ces prédictions et quelle période est à l'origine des actions nécessaires.
+AAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que OpenAPS. L'algorithme fait des prédictions multiples (basées sur les paramètres et la situation) représentant différents scénarios de ce qui pourrait arriver à l'avenir. Dans Nightscout, ces lignes sont affichées sous la forme de "lignes violettes". AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). Dans les logs, il décrira laquelle de ces prédictions et quelle période est à l'origine des actions nécessaires.
 
 ### Voici des exemples de lignes de prédiction pourpres et de la façon dont elles peuvent varier :
 
