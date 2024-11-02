@@ -38,6 +38,7 @@ details.
 -    You also need [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) for Libre 1 US (and Libre 2 EU).
 -   Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
+(libre1-using-glimp)=
 ## 2. Using Glimp
 
 -   Glimp supports Miaomiao, Blucon and Bubble for Libre 1 and Libre 2 EU.
@@ -45,6 +46,7 @@ details.
 -   Install [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia).
 -   Select Glimp in in [ConfigBuilder, BG Source.](#Config-Builder-bg-source)
 
+(libre1-using-tomato)=
 ## 3. Using Tomato
 
 - Tomato is the vendor app for Miaomiao.

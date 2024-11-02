@@ -1,5 +1,6 @@
 # OpenAPS features
 
+(key-aaps-features-autosens)=
 ## Autosens
 * Autosens is an algorithm which looks at blood glucose deviations (positive/negative/neutral).
 * It will try and figure out how sensitive/resistant you are based on these deviations.
@@ -11,6 +12,7 @@
 * Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
 * If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
 
+(key-aaps-features-super-micro-bolus)=
 ## Super Micro Bolus (SMB)
 SMB, the shortform of 'super micro bolus', is the latest OpenAPS feature (from 2018) within the Oref1 algorithm. In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly **small super micro boluses**. In situations where AMA would add 1.0 IU insulin using a temporary basal rate, SMB delivers several super micro boluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system adjust the blood glucose faster than with the temporary basal rate increase in AMA.
 
@@ -49,7 +51,7 @@ A good recommendation for setting this parameter is:
 
 For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 
-**AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](../SettingUpAaps/Preferences.md#patient-type). The hard limits are as follows:
+**AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
 
 * Child: 2
 * Teenager: 5
@@ -72,7 +74,7 @@ A good start for setting this parameter is:
 
 Be careful and patient and only change the settings step by step. It is different for everyone and can also depend on the average total daily dose (TDD). 
 
-**AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](../SettingUpAaps/Preferences.md#patient-type). The hard limits are as follows:
+**AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
 
 * Child: 3
 * Teenager: 7
@@ -99,7 +101,7 @@ If this setting is enabled, SMB will only be enabled with a high temp target if 
 If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled. 
 
 For safety reasons, this option is only available for BG sources with a good filtering system for noisy data.
-* Currently, it is only available with a Dexcom G5 or G6, if using the [Build your own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “[native mode](../CompatibleCgms/SmoothingBloodGlucoseDatafixme.md#xdrip-with-dexcom-g6-or-dexcom-one)” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value 5 minutes later.
+* Currently, it is only available with a Dexcom G5 or G6, if using the [Build your own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “[native mode](#smoothing-xdrip-dexcom-g6)” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value 5 minutes later.
 * For other CGM/FGM like Freestyle Libre, **SMB always** is deactivated until there is a better noise smoothing plugin. 
 * You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
@@ -113,7 +115,7 @@ If this setting is enabled, SMB is enabled when there is any temp target set (ea
 If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0.
 
 For safety reasons, this option is only available for BG sources with a good filtering system for noisy data.
-* Currently, it is only available with a Dexcom G5 or G6, if using the [Build your own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “[native mode](../CompatibleCgms/SmoothingBloodGlucoseDatafixme.md#xdrip-with-dexcom-g6-or-dexcom-one)” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value 5 minutes later.
+* Currently, it is only available with a Dexcom G5 or G6, if using the [Build your own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “[native mode](#smoothing-xdrip-dexcom-g6)” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value 5 minutes later.
 * For other CGM/FGM like Freestyle Libre, **SMB always** is deactivated until there is a better noise smoothing plugin.
 * You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
@@ -123,6 +125,7 @@ Note that the loop runs every time a glucose value comes in (generally 5 minutes
 
 Default value: 3 min.
 
+(KeyAapsFeatures-max-minutes-of-basal-to-limit-smb-to)=
 ### Max minutes of basal to limit SMB to
 This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
@@ -153,6 +156,7 @@ If you have this option enabled, the insulin sensitivity will be increased while
 ### Low temp-target lowers sensitivity
 If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise. This will effectively make **AAPS** more aggressive when you set a low temp target.
 
+(key-aaps-features-minimal-carbs-required-for-suggestion)=
 ### Minimal carbs required for suggestion
 
 Minimum grams of carbs to display a carbs suggestion alert. 
@@ -180,6 +184,7 @@ Default value: 4 (shouldn’t be changed unless you really need to and know what
 
 ***
 
+(key-aaps-features-advanced-meal-assist)=
 ## Advanced Meal Assist (AMA)
 AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
 

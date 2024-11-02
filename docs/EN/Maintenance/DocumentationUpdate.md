@@ -3,7 +3,7 @@
 ## October 2024
 
 - Update of several pages: 
-  - [How long will it take](../Getting-Started/PreparingForAapsfixme.md#how-long-will-it-take-to-set-everything-up), [Component Overview](../DailyLifeWithAaps/CobCalculation.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../DailyLifeWithAaps/CobCalculation.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
 - Technical work (deployment process for the documentation, files organisation...) @psonnerat & @emilise

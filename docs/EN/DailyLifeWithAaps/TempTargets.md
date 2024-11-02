@@ -21,7 +21,7 @@ The table below summarises the features of **Temp-Target- Activity**, **Temp-Tar
 
 ![TT1_Screenshot 2024-01-26 231223](https://github.com/openaps/AndroidAPSdocs/assets/137224335/73eeadf1-c17e-4955-afd8-f49c281331e3)
 
-
+(TempTargets-where-can-i-select-a-temp-target)=
 ## Where can I select a Temp-Target?
 1. go to **Actions** tab in **AAPS**;
 2. select **Temporary Target** button; and then

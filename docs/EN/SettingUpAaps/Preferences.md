@@ -150,7 +150,7 @@ Here you can change the target and the duration for each predefined TT. Preset v
 
 ![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
 
-Learn how to [activate Temp Targets here](../DailyLifeWithAaps/TempTargets.md#where-can-i-select-a-temp-target).
+Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
 
 ### Fill/Prime standard insulin amounts
 
@@ -228,10 +228,11 @@ Option to enable superbolus in bolus wizard.
 
 [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. It is different from *super micro bolus*!
 
-Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../DailyLifeWithAaps/KeyAapsFeatures.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#KeyAapsFeatures-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ## Treatment safety
 
+(preferences-patient-type)=
 ### Patient type
 
 - Safety limits are set based on the age you select in this setting.
@@ -259,31 +260,33 @@ Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
+(Preferences-pen-loop)=
 #### Open Loop
 **AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
 
 The suggestions will not be executed automatically (as in closed loop). They have to be entered manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to your real pump.
 
-This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](../SettingUpAaps/CompletingTheObjectives.md#objective-5-understanding-your-open-loop-including-its-temp-basal-recommendations)**.
+This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
 
+(preferences-closed-loop)=
 #### Closed Loop
 
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (_i.e._ without further intervention by you) to reach the set [target range or value](../SettingUpAaps/YourAapsProfile.md#glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
+**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (_i.e._ without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
 
 The Closed Loop works within numerous safety limits, which can be set individually.
 
-Closed Loop is only possible if you are in **[Objective 6](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)** or higher and use a supported pump.
+Closed Loop is only possible if you are in **[Objective 6](#objectives-objective6)** or higher and use a supported pump.
 
 #### Low Glucose Suspend (LGS)
 
-In this mode, [maxIOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over) is set to zero.
+In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
 
 This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current profile. Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
 
 ### Minimal request change
 
 When using **Open loop**, you will receive notifications every time **AAPS** recommends to adjust basal rate.
-To reduce number of notifications you can either use a [wider bg target range](../SettingUpAaps/YourAapsProfile.md#glucose-targets) or increase percentage of the minimal request rate. 
+To reduce number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase percentage of the minimal request rate. 
 This defines the relative change required to trigger a notification.
 
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
@@ -295,11 +298,11 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 
 ### OpenAPS AMA
 
-All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](../DailyLifeWithAaps/KeyAapsFeaturesfixme.md#advanced-meal-assist-ama).
+All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#key-aaps-features-advanced-meal-assist).
 
 ### OpenAPS SMB
 
-All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](../DailyLifeWithAaps/KeyAapsFeaturesfixme.md#super-micro-bolus-smb).
+All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#key-aaps-features-super-micro-bolus).
 
 ## Absorption settings
 
@@ -345,6 +348,7 @@ The options here will vary depending on which pump driver you have selected in [
 
 More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
 
+(preferences-nsclient)=
 ## NSClient
 
 ![NSClient](../images/Pref2020_NSClient.png)

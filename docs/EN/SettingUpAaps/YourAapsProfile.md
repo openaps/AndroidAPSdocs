@@ -19,6 +19,7 @@ For the final three parameters, basal rates (BR), insulin sensitivity factors (I
 
 Screenshots from **AAPS** of an _example_ profile are shown in below.
 
+(your-aaps-profile-duration-of-insulin-action)=
 ## Duration of insulin action (DIA)
 
 The duration of insulin action is set to a single value in **AAPS**, because your pump will continually infuse the same type of insulin. 
@@ -35,8 +36,8 @@ The **figure below** shows an example of how the DIA and glucose targets could b
 Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in:
 * A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
 * If your target is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate changes are rarely suggested.
-* When In [Open Loop](../SettingUpAaps/Preferences.md#open-loop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and ajusting your **Profile**.
-* When In [Closed Loop](../SettingUpAaps/Preferences.md#closed-loop) (starting at **[Objective 6](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)**), you will probably find more appropriate to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+* When In [Open Loop](#Preferences-pen-loop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and ajusting your **Profile**.
+* When In [Closed Loop](#preferences-closed-loop) (starting at **[Objective 6](#objectives-objective6)**), you will probably find more appropriate to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
 
 The targets can be defined within those boundaries :
 
@@ -112,12 +113,12 @@ If you are moving from injections (MDI) to **AAPS**, then it is a good idea to r
 Being a core setting of your looping system, your profiles are highly sensitive and something you really don't want to lose.
 
 * Your Profiles are stored in the **AAPS** database.
-* If enabled, Profiles are also uploaded to Nightscout. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Upload data to NS](../SettingUpAaps/Preferences.md#nsclient).
+* If enabled, Profiles are also uploaded to Nightscout. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Upload data to NS](#preferences-nsclient).
 * They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
 
 ## Editing Profiles from Nightscout
 
-If enabled, profile changes made directly in Nightscout can  be received in **AAPS**. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Receive profile store](../SettingUpAaps/Preferences.md#nsclient).
+If enabled, profile changes made directly in Nightscout can  be received in **AAPS**. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Receive profile store](#preferences-nsclient).
 
 This can be helpful when about to make major changes to a more extensive profile. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
 

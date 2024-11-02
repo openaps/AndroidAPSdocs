@@ -5,6 +5,7 @@
 :depth: 2
 ```
 
+(AapsScreens-the-homescreen)=
 ## The Homescreen
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
@@ -298,7 +299,7 @@ Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
 
 Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
-Note, you need to be in [Objective 8](../SettingUpAaps/CompletingTheObjectivesfixme.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../DailyLifeWithAaps/KeyAapsFeaturesfixme.md#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#key-aaps-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
 
 #### Heart rate
 
@@ -507,7 +508,7 @@ Like most of these rules-of-thumb it is of limited real validity. Note: Your dia
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin). The curves will vary based on the [DIA](../SettingUpAaps/YourAapsProfilefixme.md#duration-of-insulin-action-dia) and the time to peak.
+This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
 
 The **purple**  line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses minimum 5h as DIA.
 
@@ -531,6 +532,7 @@ Calculations are run each time the system gets a fresh reading from the CGM.
 
 For more details see [APS section on config builder page](#Config-Builder-aps).
 
+(aaps-screens-profile)=
 ## Profile
 ![Profile](../images/Screenshots_Profile.png)
 
@@ -634,6 +636,7 @@ The history of profile switches can be seen here. You may see multiple entries e
 
 Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
 
+(aaps-screens-clone-profile-switch)=
 #### Clone profile switch
 You can easily create a new local profile from a profile switch. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
 

@@ -26,7 +26,7 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 This module can not be disabled as it is a core part of **AAPS**.
 
 * See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
-* See [AAPS Screens > Profile](../DailyLifeWithAaps/AapsScreens.md#profile) for more information about managing your profiles.
+* See [AAPS Screens > Profile](#aaps-screens-profile) for more information about managing your profiles.
 
 ## Insulin
 
@@ -75,6 +75,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
+(Config-Builder-bg-source)=
 ## BG Source
 Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
@@ -83,10 +84,10 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - not recommended as closed loop relies on mobile data / Wi-Fi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
 * [MM640g](../CompatibleCgms/MM640g.md)
-* [Glimp](../CompatibleCgms/Libre1.md#2-using-glimp) - only version 4.15.57 and newer are supported
-* [Build Your Own Dexcom App (BYODA)](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app).
+* [Glimp](#libre1-using-glimp) - only version 4.15.57 and newer are supported
+* [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 * [Poctech](../CompatibleCgms/PocTech.md)
-* [Tomato App](../CompatibleCgms/Libre1.md#3-using-tomato) for MiaoMiao device
+* [Tomato App](#libre1-using-tomato) for MiaoMiao device
 * [Glunovo App](https://infinovo.com/) for Glunovo CGM system
 * Random BG: Generates random BG data (Demo mode only)
 
@@ -108,7 +109,7 @@ Select the pump you are using. See [Compatible pumps](../Getting-Started/Compati
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 * Accu Chek Combo
   * [Driver using Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-  * [Driver with no additional requirement](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md), added in [AAPS v.3.2](../Maintenance/ReleaseNotes.md#version-3200-dedicated-to-philoul)
+  * [Driver with no additional requirement](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md), added in [AAPS v.3.2](#version3200)
 * Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
 * Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 * [Medtronic](../CompatiblePumps/MedtronicPump.md)
@@ -122,7 +123,7 @@ Select the pump you are using. See [Compatible pumps](../Getting-Started/Compati
 ## Sensitivity Detection
 Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual.  More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).  
 
-You can view your sensitivity on the homescreen in an [additional graph](../DailyLifeWithAaps/AapsScreensfixme.md#section-g---additional-graphs).
+You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs).
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line.  Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
 ### Absorption settings
@@ -133,7 +134,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 * OpenAPS AMA
   * Advanced Meal Assist: older algorithm not recommended anymore.
   * In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
-* [OpenAPS SMB](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb)
+* [OpenAPS SMB](#key-aaps-features-super-micro-bolus)
   * Super Micro Bolus: most recent algorithm recommended for all users.
   * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
   * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
@@ -176,7 +177,7 @@ In this section, you can choose if/where you want **AAPS** to send your data to.
 
 Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md). 
 
-See [Synchronization with the reporting server](../SettingUpAaps/SetupWizard.md#synchronization-with-the-reporting-server-and-more) to help you choose between NSClient (v1) and NSClientV3.
+See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to help you choose between NSClient (v1) and NSClientV3.
 
 ### Tidepool
 
@@ -209,7 +210,7 @@ If you view the Treatments (Treat) tab, you can see the treatments that have bee
 
 ### Overview
 
-This is the [main screen](../DailyLifeWithAaps/AapsScreens.md#the-homescreen) of **AAPS** and can not be disabled.
+This is the [main screen](#AapsScreens-the-homescreen) of **AAPS** and can not be disabled.
 
 #### Show notes field in treatment dialogs
 Choose if you want to have a notes field when entering treatments or not.
@@ -229,7 +230,7 @@ A tab offering multiple buttons to take [actions](#screens-action-tab) in **AAPS
 
 ### Automation
 
-A tab for managing your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](../SettingUpAaps/CompletingTheObjectives.md#objective-10-automation).
+A tab for managing your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
 
 ### SMS Communicator
 Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.

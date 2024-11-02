@@ -8,7 +8,7 @@ Just a short hint: if you can display your glucose data in xDrip+ app or Nightsc
 * [xDrip+Settings](../CompatibleCgms/xDrip.md)
 * [Nightscout as BG Source](../CompatibleCgms/CgmNightscoutUpload.md): not recommended as closed loop relies on mobile data / Wi-Fi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
 
-| CGM                                                   | Available [BG Sources](../SettingUpAaps/ConfigBuilder.md#bg-source)          |
+| CGM                                                   | Available [BG Sources](#Config-Builder-bg-source)                            |
 |-------------------------------------------------------|------------------------------------------------------------------------------|
 | [Dexcom G7 and ONE+](../CompatibleCgms/DexcomG7.md)   | xDrip+ or DiaKEM app (select BYODA)                                          |
 | [Dexcom G6 and ONE](../CompatibleCgms/DexcomG6.md)    | xDrip+ or BYODA                                                              |
