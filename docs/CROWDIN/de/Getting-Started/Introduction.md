@@ -18,6 +18,7 @@ In einem Flugzeug erledigt ein Autopilot einen Teil der Arbeit des menschlichen 
 
 ![grafik](../images/autopilot.png)
 
+(Introduction-what-does-hybrid-closed-loop-mean)=
 ## Was bedeutet "Hybrid-Closed-Loop"?
 
 Die beste Lösung für Typ-1-Diabetes wäre eine „funktionale Heilung“ (wahrscheinlich die Implantierung von Bauchspeicheldrüsenzellen, die vor der Immunabwehr geschützt sind). Während wir darauf warten, ist eine „full closed Loop" künstliche Bauchspeicheldrüse wahrscheinlich das nächstbeste. Dies ist ein Technologiesystem, das keine Benutzereingabe benötigt (wie z. B. Mahlzeitenbolus abgeben oder körperliche Aktivität "ankündigen"), um eine gute Blutzucker-Kontrolle zu erreichen. Derzeit gibt es noch keine für die Allgemeinheit verfügbaren Systeme, die „full closed loop" sind. Alle benötigen noch Benutzereingaben. Die aktuell verfügbaren Systeme werden als "hybrid closed loop" bezeichnet, da sie eine Kombination aus automatisierter Technik und Benutzereingaben nutzen.
@@ -188,7 +189,7 @@ Diese Strategie reduziert das Risiko erheblich, wenn ein bösartiger Angriff auf
 
 #### Sicherheitsaspekte bezüglich einer allzu schnellen Absenkung der Blutzuckerwerte
 
-Eine schnelle Reduktion des HbA1c und eine verbesserte Blutzuckerkontrolle klingt verlockend. Allerdings kann das _zu schnelle_Senken des durchschnittlichen Blutzuckerspiegels, durch Start eines Closed-Loop-Systems zu permanenten Schäden führen, auch an den Augen, und schmerzhafter Neuropathie, die nie mehr verschwindet. Solche Schäden lassen sich einfach vermeiden, indem man die Werte langsamer reduziert. Wenn Du derzeit einen erhöhten HbA1c hast und zu **AAPS** (oder einem anderen Closed-Loop-System) wechselst, besprich dieses potentielle Risiko _bitte_ mit Deinem Klinik-Team, bevor Du startest, und lege gemeinsam einen Zeitraum fest, in dem Du den Glukosespiegel sicher schrittweise senkst. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](../Getting-Started/PreparingForAaps.md#safety-first).
+Eine schnelle Reduktion des HbA1c und eine verbesserte Blutzuckerkontrolle klingt verlockend. Allerdings kann das _zu schnelle_Senken des durchschnittlichen Blutzuckerspiegels, durch Start eines Closed-Loop-Systems zu permanenten Schäden führen, auch an den Augen, und schmerzhafter Neuropathie, die nie mehr verschwindet. Solche Schäden lassen sich einfach vermeiden, indem man die Werte langsamer reduziert. Wenn Du derzeit einen erhöhten HbA1c hast und zu **AAPS** (oder einem anderen Closed-Loop-System) wechselst, besprich dieses potentielle Risiko _bitte_ mit Deinem Klinik-Team, bevor Du startest, und lege gemeinsam einen Zeitraum fest, in dem Du den Glukosespiegel sicher schrittweise senkst. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](#preparing-safety-first).
 
 #### Medizinische Sicherheit bezüglich Geräte, Verbrauchsmaterialien und anderer Medikamente
 
@@ -196,7 +197,7 @@ Verwende eine getestete, voll funktionierende, FDA oder CE zugelassene Insulinpu
 
 Verwende Originalzubehör wie Inserter, Katheter und Insulinbehälter, die vom Hersteller für Deine Pumpe und Dein CGM zugelassen sind. Die Verwendung von nicht geprüftem oder modifiziertem Zubehör kann zu Ungenauigkeiten des CGM-Systems und Insulinabgabefehlern führen. Insulin ist höchst gefährlich, wenn es falsch dosiert wird. Spiele nicht mit Deinem Leben, indem Du Deine Diabetesausrüstung hackst.
 
-SGLT-2 Inhibitoren (Gliflozine) sollten bei der Verwendung von **AAPS** nicht eingenommen werden, da sie den Blutzuckerspiegel unberechenbar senken. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](../Getting-Started/PreparingForAaps.md#safety-first).
+SGLT-2 Inhibitoren (Gliflozine) sollten bei der Verwendung von **AAPS** nicht eingenommen werden, da sie den Blutzuckerspiegel unberechenbar senken. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](#preparing-safety-first).
 
 (introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
 ## Wie kann ich mit meinem Klinikteam über AAPS ins Gespräch kommen?
