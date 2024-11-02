@@ -16,7 +16,7 @@
 
 每個**設定檔**選擇後，都需要進行「設定檔切換」。 要做到這一點，使用者應編輯其**設定檔**或在「本地設定檔」標籤下設定一個新的**設定檔**。 應用所需的設定後，使用者應儲存更改並選擇「啟用設定檔」以啟用**設定檔**，如下所示：
 
-![BB1_截圖 2024-06-22 234905](https://github.com/openaps/AndroidAPSdocs/assets/137224335/ecf5cc03-1e72-4521-92de-532fb3f0b287)
+![BB1_截圖 2024-06-22 234905](../images/ProfileSwitch1.png)
 
 建立並儲存新的**設定檔**後，**AAPS** 將儲存使用者生成的**設定檔**庫。
 
@@ -30,9 +30,9 @@ A. 使用此功能時，使用者必須在**AAPS** 中儲存多個**設定檔**�
 2. 選擇所需的**設定檔**；然後按「確定」。
 3. 然後按下『確定』。
 
-![BB2_截圖 2024-06-22 235345](https://github.com/openaps/AndroidAPSdocs/assets/137224335/ddf74092-fd33-4ac2-9aff-636eca676d33)
+![BB2_截圖 2024-06-22 235345](../images/ProfileSwitch2.png)
 
-![BB3_截圖 2024-06-22 235456](https://github.com/openaps/AndroidAPSdocs/assets/137224335/3e973822-f51e-4af0-b64c-5f4873fd6800)
+![BB3_截圖 2024-06-22 235456](../images/ProfileSwitch3.png)
 
 ## 要在設定檔切換中啟用設定檔百分比：
 
@@ -43,7 +43,7 @@ B. 要啟用**設定檔百分比**：
     - 設為「0」，則此設定檔將無限期保持啟用狀態。 設定檔將保持啟用，直到使用者選擇並切換到新的「設定檔切換」。
     - 如果輸入了 [x] 分鐘數，則這將是**設定檔**的預期持續時間。 當選定的時間範圍過期後，標準**設定檔**將回到**AAPS**中。
 
-![BB4_截圖 2024-06-23 000029](https://github.com/openaps/AndroidAPSdocs/assets/137224335/2db86111-1a48-4f98-b501-53d6eb692595)
+![BB4_截圖 2024-06-23 000029](../images/ProfileSwitch4.png)
 
 如何啟用設定檔「百分比」：
 
@@ -67,9 +67,31 @@ B. 要啟用**設定檔百分比**：
 
 選擇後，**AAPS**會重新調整預設基礎率，並且**AAPS**（開啟或關閉）將在選擇的百分比**設定**上運作。
 
-**設定百分比**的效果如下表所示：
+The effect of a **Profile** Percentage is summarized in the table below:
 
-![BB6_螢幕擷圖 2024-06-23 001542](https://github.com/openaps/AndroidAPSdocs/assets/137224335/db48f504-2249-4b94-b406-57524fe69322)
+| Profile Switch  
+Percentage |    Effect    |    I:C  
+g/UI     | example  
+15g |         ISF  
+mmol/l/UI  
+mg/dl/UI         | UI to lower  
+2mmol/l  
+40mg/dl |
+|:---------------------------:|:------------:|:-----------------:|:-------------:|:------------------------------------------:|:-------------------------------:|
+|             90%             |    Weaker    | 5/0.9  
+=**5.55** |    2.7 UI     | 2.2/0.9  
+=**2.4**  
+  
+40/0.9  
+=**44.4** |             0.8 UI              |
+|          **100%**           | **Standard** |       **5**       |   **3 UI**    |                **2.2  
+40**                |           **0.9** UI            |
+|            130%             |   Stronger   | 5/1.3  
+=**3.85** |    3.9 UI     | 2.2/1.3  
+=**1.7**  
+  
+40/1.3  
+=**30.8** |             1.2 UI              |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
