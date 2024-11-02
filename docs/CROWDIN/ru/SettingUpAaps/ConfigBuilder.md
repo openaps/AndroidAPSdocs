@@ -63,13 +63,13 @@ Your local profiles are part of [exported settings](../Maintenance/ExportImportS
 
 #### Загрузить локальные профили в Nightscout
 
-Локальные профили также могут быть загружены на Nightscout. The settings can be found in [NSClient preferences](../SettingUpAaps/Preferences.md#nsclient).
+Локальные профили также могут быть загружены на Nightscout. The settings can be found in [NSClient preferences](#Preferences-nsclient).
 
 ![Выгрузить локальный профиль в NS](../images/LocalProfile_UploadNS_AASP30.png)
 
 #### Change profile in Nightscout profile editor
 
-You can synchronize changes to the profile in the Nightscout profile editor to local profiles. The settings can be found in [NSClient preferences](../SettingUpAaps/Preferences.md#nsclient).
+You can synchronize changes to the profile in the Nightscout profile editor to local profiles. The settings can be found in [NSClient preferences](#Preferences-nsclient).
 
 Необходимо клонировать активные данные всей базы данных Nightscout для профилей, а не просто профиль с синей стрелкой! Новые записи базы данных сохраняют текущую дату и могут быть активированы на вкладке "local profile".
 
@@ -102,13 +102,13 @@ Details are explained on the separate [profile helper page](../SettingUpAaps/Pro
 * Длительность работы инсулина не одинакова для всех. Поэтому ее следует проверить самостоятельно. 
 * Но она всегда должна быть минимум 5 часов.
 * Многие люди, использующие ультра-короткие инсулины вроде Fiasp, отмечают что его действие спустя 3-4 часа практически незаметно, даже если остается еще порядка 0.0xx единиц. Это остаточное количество может быть ощутимо во время занятий спортом, например. Поэтому в AAPS время действия инсулина DIA указывается минимум 5 часов.
-* You can read more about that in the Insulin Profile section of [this](../DailyLifeWithAaps/AapsScreens.md#insulin-profile) page.
+* You can read more about that in the Insulin Profile section of [this](#AapsScreens-insulin-profile) page.
 
 ### Различия типов инсулина
 
 * Для 'Коротких', 'Ультракоротких' и 'Lyumjev' инсулинов время действия DIA - единственный параметр, который можно изменить, время пика фиксировано. 
 * Безпиковый позволяет настроить как DIA, так и время пика, эта опция для опытных пользователей, которые знают последствия этих настроек. 
-* The [insulin curve graph](../DailyLifeWithAaps/AapsScreens.md#insulin-profile) helps you to understand the different curves.
+* The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
 * Эту диаграмму можно вывести на отдельной вкладке, включив соответствующий флажок в конфигураторе, ее также можно найти в выпадающем сэндвич-меню.
 
 #### Быстро действующий Oref
@@ -193,7 +193,7 @@ Select the blood glucose source you are using - see [BG Source](../Getting-Start
 
 Выберите тип анализа чувствительности. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Алгоритм будет сразу же анализировать историю данных и вносить коррективы, если признает, что вы реагируете более чутко (или, наоборот, более резистентно) на инсулин, чем обычно. Подробнее об алгоритме чувствительности можно прочитать в [документации OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-Вы можете вывести график чувствительности на экран, отметив галочкой соответствующий пункт из выпадающего меню графиков. Он изображается в виде белой линии. Note, you need to be in [Objective 8](../SettingUpAaps/CompletingTheObjectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) automatically adjust the amount of insulin delivered. До достижения этой цели процент / линия Autosens на диаграмме отображается только для информации.
+Вы можете вывести график чувствительности на экран, отметив галочкой соответствующий пункт из выпадающего меню графиков. Он изображается в виде белой линии. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. До достижения этой цели процент / линия Autosens на диаграмме отображается только для информации.
 
 (Config-Builder-absorption-settings)=
 
@@ -208,7 +208,7 @@ Select the blood glucose source you are using - see [BG Source](../Getting-Start
 Выберите нужный алгоритм APS для ведения терапии. Подробности выбранного алгоритма можно просмотреть на вкладке OpenAPS(OAPS).
 
 * OpenAPS AMA (расширенный помощник по питанию, Состояние алгоритма на 2017 год) Говоря простым языком, преимущества алгоритма в том, что после еды и при правильном вводе углеводов система может быстрее устанавливать временный базал.
-* [OpenAPS SMB](../DailyLifeWithAaps/KeyAapsFeatures.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* [OpenAPS SMB](../DailyLifeWithAaps/KeyAapsFeatures.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](#objectives-objective9) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Замкнутый цикл
 
@@ -230,7 +230,7 @@ Select the blood glucose source you are using - see [BG Source](../Getting-Start
 
 * AAPS постоянно оценивает доступные данные (активный инсулин IOB, активные углеводы COB, сахар крови и т. п.) и при необходимости автоматически корректирует лечение (без вашего дальнейшего вмешательства) для достижения целевого диапазона или величины (подача болюса, временная базальная скорость, отключение подачи инсулина во избежание гипогликемии и т.д.). 
 * Замкнутый цикл работает в рамках многочисленных ограничений безопасности, каждое из которых можно задать по отдельности.
-* Closed Loop is only possible if you are in [Objective 6](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
+* Closed Loop is only possible if you are in [Objective 6](#objectives-objective6) or higher and use a supported pump.
 * Обратите внимание: в режиме Замкнутого цикла рекомендуется использовать строгое значение целевой ГК вместо диапазона значений (например, 5,5 ммоль/л или 100 мг/дл вместо 5,0 - 7,0 ммоль/л или 90 - 125 мг/дл).
 
 ### Приостановка помпы на низкой ГК
@@ -256,7 +256,7 @@ See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more info
 
 ## Терапия
 
-На вкладке Терапия отражены назначения, загруженные из nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs).
+На вкладке Терапия отражены назначения, загруженные из nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](#screens-bolus-carbs).
 
 ## General
 
@@ -315,20 +315,20 @@ Choose whether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUT
 
 #### Индикаторы состояния
 
-Choose if you want to have [status lights](../SettingUpAaps/Preferences.md#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. При достижении уровня предупреждения цвет светового сигнала состояния переключится на желтый. Критические сроки будут показаны красным цветом.
+Choose if you want to have [status lights](#Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. При достижении уровня предупреждения цвет светового сигнала состояния переключится на желтый. Критические сроки будут показаны красным цветом.
 
 #### Расширенные настройки
 
 **Подать часть инсулина, предложенного мастером болюса**: При пользовании алгоритмом микроболюсов SMB многие не колют все 100% сразу, а дают, например, 75% и позволяют алгоритму SMB самостоятельно справляться с остальным. In this setting, you can choose a default value for the percentage the bolus wizard should calculate with. Если этот параметр составляет 75%, а требуемое конечное количество инсулина 10 ед., то мастер болюса предложит только 7,5 единиц.
 
-**Включить функции суперболюса в калькуляторе болюса** (Суперболюс отличается от *супер микро болюсов SMB *!): Применяйте с осторожностью и не включайте, пока не узнаете, в чем принцип его работы. В общем виде база следующих двух часов добавляется к болюсу и при этом активируется нулевой временный базал. **Другие функции алгоритма AAPS будут отключены - поэтому применяйте с осторожностью! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../DailyLifeWithAaps/KeyAapsFeatures.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Включить функции суперболюса в калькуляторе болюса** (Суперболюс отличается от *супер микро болюсов SMB *!): Применяйте с осторожностью и не включайте, пока не узнаете, в чем принцип его работы. В общем виде база следующих двух часов добавляется к болюсу и при этом активируется нулевой временный базал. **Другие функции алгоритма AAPS будут отключены - поэтому применяйте с осторожностью! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
 
 ### Действия
 
 * Кнопки быстрого доступа к некоторым распространенным настройкам.
-* See [AAPS screenshots](../DailyLifeWithAaps/AapsScreens.md#action-tab) for details.
+* See [AAPS screenshots](#screens-action-tab) for details.
 
 ### Автоматизация
 
@@ -368,7 +368,7 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 ### клиент NS
 
 * Настройка синхронизации данных AAPS с Nightscout.
-* Settings in [preferences](../SettingUpAaps/Preferences.md#nsclient) can be opened by clicking the cog wheel.
+* Settings in [preferences](#Preferences-nsclient) can be opened by clicking the cog wheel.
 
 ### Обслуживание
 
