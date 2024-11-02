@@ -50,7 +50,7 @@
 
 #### Вариант 2: Конфигуратор
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump):
+On an existing installation you can select the **Medtrum** pump from the [Config Builder](#Config-Builder-pump):
 
 В левом верхнем углу из **выпадающего меню** выберите **Конфигуратор**\ ➜\ **Помпа**\ ➜\ **Medtrum**\, включив кнопку **Medtrum**.
 
@@ -90,8 +90,9 @@ On an existing installation you can select the **Medtrum** pump from the [Config
     - В резервуаре мало инсулина (20 ед.)
     - Напоминание об истечении срока патча
 
-В любом случае эти предупреждения также отображаются на экране Medtrum в разделе [Активные оповещения](#active-alarms).
+In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
 
+(medtrum-patch-expiration)=
 #### Окончание срока действия патча
 
 ***По умолчанию: включено.***
@@ -104,7 +105,7 @@ On an existing installation you can select the **Medtrum** pump from the [Config
 
 ***По умолчанию: 72 часа.***
 
-Эта настройка изменяет время предупреждения об [истечении срока действия патча](#patch-expiration), AAPS выдаст уведомление в заданное время после активации.
+This setting changes the time of the expiration warning, when [Patch Expiration](#medtrum-patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
 
 #### Максимальное количество инсулина в час
 
@@ -213,6 +214,7 @@ On an existing installation you can select the **Medtrum** pump from the [Config
 
 Нажмите **Далее** для активации патча.
 
+(medtrum-activate-patch)=
 ##### Активируйте патч
 
 ![Активация патча](../images/medtrum/activation/ActivatePatch.png)
@@ -287,6 +289,7 @@ On an existing installation you can select the **Medtrum** pump from the [Config
 
 Показывает подающийся болюс.
 
+(medtrum-active-alarms)=
 ##### Активные оповещения:
 
 Показывает действующие оповещения.
@@ -321,7 +324,7 @@ On an existing installation you can select the **Medtrum** pump from the [Config
 
 ##### Заменить патч:
 
-Эта кнопка запустит процесс замены патча. Смотрите [Активировать патч](#activate-patch) для получения дополнительной информации.
+Эта кнопка запустит процесс замены патча. See [Activate patch](#medtrum-activate-patch) for more information.
 
 ### Сбросить оповещения
 
