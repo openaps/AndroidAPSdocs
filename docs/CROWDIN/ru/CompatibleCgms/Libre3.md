@@ -56,7 +56,7 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 
 ### Шаг 4: Настройка AndroidAPS
 
-- Select xDrip+ in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 - Если AndroidAPS не получает значения BG, когда телефон находится в режиме авиаперелета, проверьте, заполнено ли поле «Идентифицировать приемник»
 - Выключите сглаживание (уже сделано в Xdrip+)
@@ -91,6 +91,7 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 
 Чтобы перейти с приложения Libre 3 на Juggluco, нужно принудительно остановить Libre 3 через настройки Android и перейти к Шагу 1 & 2.
 
+(libre3-experiences-and-troubleshooting)=
 ## Опыт и устранение неполадок
 
 ### Устранение неполадок Libre3 -> Подключение Juggluco
