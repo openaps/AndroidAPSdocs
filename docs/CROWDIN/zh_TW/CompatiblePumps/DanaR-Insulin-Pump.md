@@ -23,4 +23,4 @@
 
 ## Dana R 幫浦的時區旅行
 
-有關跨時區旅行的資訊請參見[使用幫浦的時區旅行](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#danarv2-danars)頁面。
+For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
