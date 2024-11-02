@@ -44,6 +44,7 @@ A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this wo
 
 It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
 
+(PreparingForAaps-no-sglt-2-inhibitors)=
 ### Žádné SGLT-2 inhibitory
 
 ```{admonition} NO SGLT-2 inhibitors
@@ -121,7 +122,7 @@ Cílem této sekce je poskytnout novým uživatelům odkazy na zdroje, aby získ
 
 #### [Oddíl pro lékaře](../Resources/clinician-guide-to-AndroidAPS.md)
 
-This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](./Introduction.md#how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
 
 ## Co budeme sestavovat a instalovat?
 
@@ -150,7 +151,7 @@ V závislosti na vašem glukózovém senzoru/CGM budete potřebovat kompatibiln�
 
 **Nightscout** i **AAPS**musí být přibližně jednou ročně aktualizovány, když jsou vydány nové verze. V některých případech je možné aktualizaci odložit, zatímco v jiných se z bezpečnostních důvodů důrazně doporučuje aktualizaci provést bezodkladně. Upozornění na dostupnou aktualizaci jsou zveřejňována ve Facebook skupinách a na Discord serveru. Poznámky k vydání nové verze vždy objadní, o jaký scénář se jedná. V čase aktualizace bude pravděpodobně mnoho lidí klást obdobné otázky a budete mít podporu při provedení aktualizace.
 
-(preparing-how-long-will-it-take?)=
+(preparing-how-long-will-it-take)=
 ## Jak dlouho bude trvat všechno nastavit?
 
 Jak bylo zmíněno dříve, používání **AAPS** je víceméně "cesta", která od vás bude obětovat váš volný čas. Nejde se o jednorázové řešení. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
