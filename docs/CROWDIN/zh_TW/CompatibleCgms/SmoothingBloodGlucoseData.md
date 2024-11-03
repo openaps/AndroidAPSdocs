@@ -34,7 +34,7 @@
 ### Dexcom 傳感器
 
 #### 自己動手打造您的 Dexcom 應用程式
-When using [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), your BG data is smooth and consistent. 此外，您可以利用 Dexcom 的回彈平滑功能。 使用 SMBs 並沒有任何限制，因為噪音級別資料會與 AAPS 共享。
+當使用 [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) 時，你的 BG 資料是平滑且一致的。 此外，您可以利用 Dexcom 的回彈平滑功能。 使用 SMBs 並沒有任何限制，因為噪音級別資料會與 AAPS 共享。
 
 #### xDrip+ 與 Dexcom G6 或 Dexcom ONE 配合使用
 噪聲水平資料和平滑的 BG 讀數僅在你使用 xDrip+ 的 [原生模式](https://navid200.github.io/xDrip/docs/Native-Algorithm) 時與 AAPS 分享。 使用原生模式時，使用 SMBs 並沒有任何限制。
