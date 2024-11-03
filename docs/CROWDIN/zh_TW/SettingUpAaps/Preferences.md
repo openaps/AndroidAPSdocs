@@ -70,7 +70,7 @@
 
 - 如果您希望僅為保護[匯出的設定](../Maintenance/ExportImportSettings.md)使用主密碼，則應使用自定義密碼。
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
+- 如果你使用自定密碼，請點擊「設定密碼」來設置密碼，如上文[所述](#Preferences-master-password)。
 
   ![保護](../images/Pref2020_Protection.png)
 
@@ -168,7 +168,7 @@
 
 ### 填充/啟動標準胰島素量
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](#screens-action-tab).
+- 如果您想通過 AAPS 填充管路或啟動導管，您可以通過[行動選單](#screens-action-tab)來進行。
 - 可以在此對話框中定義預設值。
 
 (Preferences-range-for-visualization)=
@@ -199,7 +199,7 @@
 - 狀態指示燈為以下情況提供視覺警告：
 
   - 傳感器使用時間
-  - Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
+  - 某些智慧讀取器的傳感器電池電量（詳情請參見[截圖頁面](#screens-sensor-level-battery)）。
   - 胰島素的使用時間（儲液罐使用的天數）
   - 儲液罐的剩餘容量（單位）
   - 針頭的使用時間
@@ -217,11 +217,11 @@
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
 ### 傳送一部分的注射嚮導結果
 
-Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
+設置使用注射嚮導時計算的注射的[預設百分比](#AapsScreens-section-j)。
 
 預設值為 100%：無需修正。 即便在這裡設置不同的值，您每次使用注射嚮導時仍然可以更改。
 
-When using [SMB](#objectives-objective9), using a value lower than 100% here can be useful:
+當使用[微量注射](#objectives-objective9)時，在這裡使用低於 100%的值可能會有幫助：
 * 對於消化緩慢的人來說：一次傳送所有的注射劑量可能會引起低血糖，因為胰島素的作用速度比消化快。
 * 為了留更多空間讓**AAPS**自行處理**血糖上升**。 在兩種情況下，**AAPS**將透過微量注射來補償缺失的注射部分，如果/當被認為合適時。
 
@@ -280,8 +280,8 @@ When using [SMB](#objectives-objective9), using a value lower than 100% here can
 
 根據你的設置在[組態建置工具](../SettingUpAaps/ConfigBuilder.md)中，你可以在兩種算法之間進行選擇：
 
-- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [進階餐前注射助手（OpenAPS AMA）](#Open-APS-features-advanced-meal-assist-ama) - 2017年的算法狀態
+- [超微量注射（OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - 最推薦給初學者的最新算法
 
 ### OpenAPS AMA設置
 
@@ -295,7 +295,7 @@ When using [SMB](#objectives-objective9), using a value lower than 100% here can
 - 該值以每小時單位（U/h）測量。
 - 建議將此設為合理的數值。 一個好的建議是取你的**最高基礎率**，並**將其乘以4**。
 - 例如，如果你的最高基礎率為0.5 U/h，你可以將其乘以4得到2 U/h的值。
-- See also [detailed feature description](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to).
+- 另見[詳細功能描述](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)。
 
 #### OpenAPS可以輸送的最大基礎IOB \[U\]
 
@@ -319,7 +319,7 @@ When using [SMB](#objectives-objective9), using a value lower than 100% here can
 
 #### 自動敏感度調整 (Autosens)
 
-- [Autosens](#Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](#Open-APS-features-autosens) 會根據血糖偏差（正/負/中性）進行調整。
 - 他會根據這些偏差計算出你對胰島素的敏感度或抗性，並根據偏差調整基礎速率和胰島素敏感指數（ISF）。
 - 如果你選擇「Autosens 調整目標」，演算法也會修改你的血糖目標。
 
@@ -331,17 +331,17 @@ When using [SMB](#objectives-objective9), using a value lower than 100% here can
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB 設定
 
-- In contrast to AMA, [SMB](#Open-APS-features-super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- 與 AMA 相比，[SMB](#Open-APS-features-super-micro-bolus-smb) 不使用臨時基礎速率來控制血糖，而是主要使用小型超級微量注射。
 
-- You must have started [objective 9](#objectives-objective9) to use SMB.
+- 你必須開始使用[目標 9](#objectives-objective9)來使用 SMB。
 
-- The first three settings are explained [above](#Preferences-max-u-h-a-temp-basal-can-be-set-to).
+- 前三個設定在[上方](#Preferences-max-u-h-a-temp-basal-can-be-set-to)進行了解釋。
 
-- Details on the different enable options are described in [OpenAPS feature section](#Open-APS-features-enable-smb).
+- 不同啟用選項的詳細資訊在[OpenAPS 功能部分](#Open-APS-features-enable-smb)中描述。
 
 - *SMB 的發放頻率（以分鐘為單位）*受限於預設每 4 分鐘發放一次。 此數值防止系統過於頻繁發放 SMB（例如當設定臨時目標時）。 除非你確切知道後果，否則不應更改此設定。
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](#Open-APS-features-autosens) will modify your glucose target according to your blood glucose deviations.
+- 如果啟用了「敏感性提高目標」或「抗性降低目標」，[Autosens](#Open-APS-features-autosens) 會根據你的血糖偏差修改血糖目標。
 
 - 如果目標被修改，會在主畫面以綠色背景顯示。
 
@@ -400,12 +400,12 @@ When using [SMB](#objectives-objective9), using a value lower than 100% here can
 
 ### 進階設定 - autosens 比例
 
-- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
+- 定義最小和最大[autosens](#Open-APS-features-autosens) 比例。
 - 通常標準值（最大 1.2 和最小 0.7）不應更改。
 
 ## 幫浦設定
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](#Config-Builder-pump).  根據幫浦相關的指示來配對並設定你的幫浦：
+此處的選項會根據你在[組態建置工具](#Config-Builder-pump)中選擇的幫浦驅動程式而有所不同。  根據幫浦相關的指示來配對並設定你的幫浦：
 
 - [DanaR 胰島素幫浦](../CompatiblePumps/DanaR-Insulin-Pump.md)
 - [DanaRS 胰島素幫浦](../CompatiblePumps/DanaRS-Insulin-Pump.md)
@@ -432,7 +432,7 @@ The options here will vary depending on which pump driver you have selected in [
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
+[AAPS 3.2 引入的新協議](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)。更安全且更高效。
 
 ```{admonition} V3 data uploaders
 :class: warning
@@ -451,7 +451,7 @@ The options here will vary depending on which pump driver you have selected in [
 
 同步選項將取決於你希望如何使用 AAPS。
 
-You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
+你可以選擇[上傳和下載至 Nightscout 的資料](#Nightscout-aaps-settings)。
 
 ### 警報選項
 
@@ -483,7 +483,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ## SMS(簡訊) 通訊器
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](#Config-Builder-sms-communicator).
+- 僅當在[組態建置工具](#Config-Builder-sms-communicator)中選擇 SMS 通訊器時才會顯示選項。
 - 此設定允許透過傳簡訊指令來遠端控制應用程式，如暫停循環或進行注射。
 - 更多資訊在[SMS 指令](../RemoteFeatures/SMSCommands.md)中描述。
 - 透過使用身份驗證應用程式和憑證末端的額外 PIN 獲得額外的安全保障。
