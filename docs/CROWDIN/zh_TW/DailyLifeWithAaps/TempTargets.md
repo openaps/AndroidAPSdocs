@@ -2,7 +2,7 @@
 
 ## 什麼是臨時目標，並且我可以在哪裡設置和配置他們？
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. 這是透過 **AAPS** 操控使用者的胰島素使用來實現的。
+一個 **臨時目標**（簡稱 **TT**）是 **AAPS** 的一項功能，允許用戶根據計畫活動更改其 [**血糖** 目標範圍](#profile-glucose-targets)。 這是透過 **AAPS** 操控使用者的胰島素使用來實現的。
 
 臨時目標可以在這些範圍內定義：
 
@@ -17,167 +17,169 @@ A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user 
 
 一個**臨時目標**可能需要大約30分鐘甚至更長時間才能達到預期的**血糖**目標。 **AAPS** 無法立即達到**血糖**目標，因此使用者在選擇**臨時目標**時應注意這一點。
 
-The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
-
-### TT - Activity
-
-![TT Activity](../images/TempTarget2.png)
-
-**BG Target (depending on users' settings)**
-
-AAPS will aim to reach 8mmol/l or 144mg/dl for 40 minutes
-
-**Other considerations users may wish to factor in when selecting**:
-
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
-
-In closed loop mode, **SMB**:
-
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
-
-Users may also wish to consider:
-
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary peerson to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise as reduced **IOB** as some users experience a rapid rise in **BG **post exercise.
-
-### TT - Eating soon
-
-![TT Activity](../images/TempTarget1.png)
-
-**BG Target (depending on users' settings)**
-
-AAPS will aim to reach 5mmol/l or 90mg/dl for 30 minutes
-
-**Other considerations users may wish to factor in when selecting**:
-
-In closed loop mode, **SMB**:
-
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
-
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
-
-### TT - Hypo
-
-![TT Activity](../images/TempTarget3.png)
-
-**BG Target (depending on users' settings)**
-
-AAPS will aim to reach 7mmol/l or 126mg/dl for 30 minutes
-
-**Other considerations users may wish to factor in when selecting**:
-
-In closed loop mode, **SMB**:
-
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
-
-## 我可以在哪裡選擇臨時目標？
-
-In the **Actions** tab in **AAPS**.
-
-1. 選擇**臨時目標**按鈕；然後
-2. 選擇所需的**臨時目標**
-
-![Carbs TT](../images/TempTarget4a.png)
-
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
-
-![Carbs TT](../images/TempTarget6.png)
-
-## 我可以在哪裡更改預設的**臨時目標**，並根據個人偏好進行覆蓋？
-
-要重新配置分配給使用者的預設**臨時目標**的「血糖目標範圍」和「持續時間」，請進入**AAPS**右上角的選單並
-
-1. 選擇**偏好設定** 
-2. 向下滾動至「首頁總覽」 
-3. 選擇「預設臨時目標」
-4. 步驟4 說明如何更改**臨時目標-即將用餐**的持續時間
-5. 步驟5 說明如何更改**臨時目標-即將用餐**的**血糖**目標範圍（同樣的步驟可應用於**臨時目標-運動**和**臨時目標-低血糖**）。
-
-![Custom TT](../images/TempTarget7.png)
-
-## 如何取消一個正在運作的**臨時目標**？
-
-To cancel a **Temp-Target** running:
-
-Select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
-
-![Custom TT](../images/TempTarget8.png)
-
-或者，快速點擊**AAPS**右上角黃色/綠色框中的「血糖目標」，然後選擇「取消」，如下所示：
-
-![Actions TT](../images/TempTarget9.png)
-
-## 如何選擇**預設臨時目標**？
-
-In the **Actions** tab in **AAPS**.
-
-1. 選擇**臨時目標**按鈕；然後
-2. 選擇所需的**臨時目標**
-
-![Actions TT](../images/TempTarget4.png)
-
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
-
-![BG TT](../images/TempTarget6.png)
-
-Or in the **Carbs** button
-
-1. selecting the desired **Temp-Target** in the shortcuts
-
-![Carbs TT](../images/TempTarget5.png)
-
-(TempTargets-hypo-temp-target)=
-
-## 低血糖臨時目標
-
-**臨時目標-低血糖**可幫助**AAPS**透過減少胰島素攝入來防止使用者經歷低血糖。 如果使用者預測**血糖**會下降，通常**AAPS**會處理他，但很大程度上取決於使用者的**AAPS**設置是否穩定。 一個**臨時目標-低血糖**允許使用者提前應對預測的低血糖，並更新**AAPS**以減少胰島素。
-
-有時候當食用了治療低血糖的碳水化合物時，使用者的**血糖**會迅速上升，**AAPS**會透過啟用**SMB**來應對快速上升的**血糖**。
-
-一些使用者希望在**臨時目標-低血糖**期間避免**SMB**的給藥。 這可以透過在**偏好設定**中停用*「啟用高臨時目標時的SMB」*來實現（詳見下文）：
-
-- 在「進階設定，目標9」中，使用者可以啟用*「高臨時目標提高敏感度」*，當**臨時目標**的血糖達到100mg/dl或5.5mmol/l或更高時，**AAPS**將變得更加敏感。
-
-- 在「進階設定，目標9」中，使用者可以停用*「高臨時目標時的SMB」*，即使**COB**大於0，並且**SMB**已啟用，且**OpenAPS SMB**處於活動狀態，**AAPS**在高臨時目標期間也不會進行**SMB**。
-
-注意：如果使用者透過碳水化合物按鈕輸入碳水化合物，並且你的**血糖**低於72mg/dl或4mmol/l，**AAPS**會自動啟用**臨時目標-低血糖**。
-
-(TempTargets-activity-temp-target)=
-
-## 運動臨時目標
-
-在運動前和運動期間，使用者可能需要更高的目標來防止運動期間的低血糖。
-
-為了簡化**臨時目標-運動**的設定，使用者可以配置一個預設的**臨時目標-運動**，透過減少胰島素使用來提高**血糖**數值，以減緩**血糖**下降並避免低血糖。
-
-新手使用者可能需要嘗試並個人化他們的**臨時目標-運動**預設設置，以優化這項功能的效果。 每個人在運動期間達到穩定**血糖**控制的情況各不相同。 See also the [sports section in FAQ](#FAQ-sports). 在常見問題中。
-
-一些使用者還喜歡在啟用**臨時目標-運動**之前和期間啟動一個**設定切換**（即設定降至100%以下以減少**AAPS**的胰島素給藥）。
-
-進階設定，目標9：使用者可以為**臨時目標**啟用*「高臨時目標提高敏感度」*，當**臨時目標**達到或超過100mg/dl或5.5mmol/l時，**AAPS**將變得更加敏感。 此外，如果停用*「高臨時目標時的SMB」*，即使**COB**大於0，並且**SMB**已啟用，且**OpenAPS SMB**處於活動狀態，**AAPS**也不會在高臨時目標期間進行**SMB**。
-
-另外，如果停用了『高臨時目標下的 SMB』，即使 COB > 0，啟用了『臨時目標下的 SMB』或『始終啟用 SMB』，且 OpenAPS 的 SMB 活動中，AAPS 也不會執行 SMB。
-
-(TempTargets-eating-soon-temp-target)=
-
-## 即將用餐臨時目標
-
-**臨時目標-即將用餐**可以幫助實現緩和的血糖下降，並確保在用餐前有充足的**胰島素庫存量**。
-
-這對於那些不進行餐前注射的使用者來說是一個重要工具，然而**臨時目標-即將用餐**的效果將取決於多種因素，包括使用者的設置、是否採用低碳水化合物飲食以及是否使用快效胰島素（如 Fiasp 或 Lyjumjev），以消除餐前注射的需求。 通常，除非使用者對**AAPS**有一定的經驗，否則在使用**臨時目標-即將用餐**時應該預期進行餐前注射，特別是在進食高碳水化合物飲食時。
-
-你可以在文章[「如何啟用‘即將用餐模式’」](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/)或[這裡](https://diyps.org/tag/eating-soon-mode/)了解更多關於「即將用餐模式」的訊息。
-
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. 此選項要求**臨時目標**低於100mg/dl或5.5mmol/l。
-
-## 如何在臨時目標期間關閉**SMB**？
-
-要執行此操作，請在**偏好設定**中選擇，並停用*「啟用高臨時目標時的SMB」*。
-
-![Carbs TT](../images/TempTargetSMB.png)
-
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'SMB with Temp-Target'* or *'SMB always'* enabled and OpenAPS SMB active.
+下表總結了**臨時目標-活動**、**臨時目標-即將用餐**和**臨時目標-低血糖** 的特點。
+
+### 臨時目標 - 活動
+
+![臨時目標活動](../images/TempTarget2.png)
+
+**血糖目標（根據用戶的設置）**
+
+AAPS 會在 40 分鐘內目標達到 8mmol/l 或 144mg/dl
+
+**用戶在選擇時可能希望考慮的其他因素**：
+
+根據 **血糖**數值，**AAPS** 將「減少」胰島素的使用以達到 **血糖** 目標。 如果 **血糖** 目標不在範圍內（即高於用戶 **設定檔** 選定的 **血糖** 目標），則 **AAPS** 可能會保持基礎胰島素。
+
+在閉環模式下，**SMB**：
+
+- *可能會* 停用（進一步討論如下）；和/或
+- 如果 **AAPS** 在負的 **IOB** 狀態，基礎胰島素可能會被啟用或 <0.
+
+用戶可能也希望考慮：
+
+- *在計畫運動前 1-2 小時選擇這個**臨時目標**以確保減少 IOB（這個臨時目標的正確時機將因人而異）；以及</li> 
+    
+    - *在計畫活動期間選擇一個臨時設定檔（減少）以確保減少 **IOB**；</li> 
+        
+        - *確保***臨時目標**的時間設置在運動前不久 *停用*，因為一些用戶在運動後經歷 **BG** 的快速上升。</ul> 
+        
+        ### 臨時目標 - 即將用餐
+        
+        ![臨時目標活動](../images/TempTarget1.png)
+        
+        **血糖目標（根據用戶的設置）**
+        
+        AAPS 會在 30 分鐘內目標達到 5mmol/l 或 90mg/dl
+        
+        **用戶在選擇時可能希望考慮的其他因素**：
+        
+        在閉環模式下，**SMB**：
+        
+        - 將保持啟用；和/或
+        - 基礎胰島素也可能根據用戶的 **設定檔** 進行啟用。
+        
+        根據 **血糖**數值，**AAPS** 會在用戶的 **AAPS** 設置參數內「增加」胰島素使用，以達到期望的 **血糖** 目標。
+        
+        ### 臨時目標 - 低血糖
+        
+        ![臨時目標活動](../images/TempTarget3.png)
+        
+        **血糖目標（根據用戶的設置）**
+        
+        AAPS 會在 30 分鐘內目標達到 7mmol/l 或 126mg/dl
+        
+        **用戶在選擇時可能希望考慮的其他因素**：
+        
+        在閉環模式下，**SMB**：
+        
+        - *可能會* 停用（進一步討論如下）；和/或
+        - 如果 **AAPS** 在負的 **IOB** 狀態，基礎胰島素可能會被啟用或 <0.
+        
+        ## 我可以在哪裡選擇臨時目標？
+        
+        在 **AAPS** 的 **行動** 標籤中。
+        
+        1. 選擇**臨時目標**按鈕；然後
+        2. 選擇所需的**臨時目標**
+        
+        ![碳水化合物 臨時目標](../images/TempTarget4a.png)
+        
+        或者點擊位於 **AAPS** 右上角的「**血糖目標**」。
+        
+        ![碳水化合物 臨時目標](../images/TempTarget6.png)
+        
+        ## 我可以在哪裡更改預設的**臨時目標**，並根據個人偏好進行覆蓋？
+        
+        要重新配置分配給使用者的預設**臨時目標**的「血糖目標範圍」和「持續時間」，請進入**AAPS**右上角的選單並
+        
+        1. 選擇**偏好設定** 
+        2. 向下滾動至「首頁總覽」 
+        3. 選擇「預設臨時目標」
+        4. 步驟4 說明如何更改**臨時目標-即將用餐**的持續時間
+        5. 步驟5 說明如何更改**臨時目標-即將用餐**的**血糖**目標範圍（同樣的步驟可應用於**臨時目標-運動**和**臨時目標-低血糖**）。
+        
+        ![自訂 臨時目標](../images/TempTarget7.png)
+        
+        ## 如何取消一個正在運作的**臨時目標**？
+        
+        要取消正在運行的 **臨時目標**：
+        
+        在下面所示的 **行動** 標籤下，選擇 **臨時目標** 的「取消」按鈕。
+        
+        ![自訂 臨時目標](../images/TempTarget8.png)
+        
+        或者，快速點擊**AAPS**右上角黃色/綠色框中的「血糖目標」，然後選擇「取消」，如下所示：
+        
+        ![行動臨時目標](../images/TempTarget9.png)
+        
+        ## 如何選擇**預設臨時目標**？
+        
+        在 **AAPS** 的 **行動** 標籤中。
+        
+        1. 選擇**臨時目標**按鈕；然後
+        2. 選擇所需的**臨時目標**
+        
+        ![行動臨時目標](../images/TempTarget4.png)
+        
+        或者點擊位於 **AAPS** 右上角的「**血糖目標**」。
+        
+        ![血糖臨時目標](../images/TempTarget6.png)
+        
+        或者在 **碳水化合物** 按鈕中
+        
+        1. 在快捷選項中選擇所需的 **臨時目標**
+        
+        ![碳水化合物 臨時目標](../images/TempTarget5.png)
+        
+        (臨時目標-低血糖臨時目標)=
+        
+        ## 低血糖臨時目標
+        
+        **臨時目標-低血糖**可幫助**AAPS**透過減少胰島素攝入來防止使用者經歷低血糖。 如果使用者預測**血糖**會下降，通常**AAPS**會處理他，但很大程度上取決於使用者的**AAPS**設置是否穩定。 一個**臨時目標-低血糖**允許使用者提前應對預測的低血糖，並更新**AAPS**以減少胰島素。
+        
+        有時候當食用了治療低血糖的碳水化合物時，使用者的**血糖**會迅速上升，**AAPS**會透過啟用**SMB**來應對快速上升的**血糖**。
+        
+        一些使用者希望在**臨時目標-低血糖**期間避免**SMB**的給藥。 這可以透過在**偏好設定**中停用*「啟用高臨時目標時的SMB」*來實現（詳見下文）：
+        
+        - 在「進階設定，目標9」中，使用者可以啟用*「高臨時目標提高敏感度」*，當**臨時目標**的血糖達到100mg/dl或5.5mmol/l或更高時，**AAPS**將變得更加敏感。
+        
+        - 在「進階設定，目標9」中，使用者可以停用*「高臨時目標時的SMB」*，即使**COB**大於0，並且**SMB**已啟用，且**OpenAPS SMB**處於活動狀態，**AAPS**在高臨時目標期間也不會進行**SMB**。
+        
+        注意：如果使用者透過碳水化合物按鈕輸入碳水化合物，並且你的**血糖**低於72mg/dl或4mmol/l，**AAPS**會自動啟用**臨時目標-低血糖**。
+        
+        (臨時目標-活動臨時目標)=
+        
+        ## 運動臨時目標
+        
+        在運動前和運動期間，使用者可能需要更高的目標來防止運動期間的低血糖。
+        
+        為了簡化**臨時目標-運動**的設定，使用者可以配置一個預設的**臨時目標-運動**，透過減少胰島素使用來提高**血糖**數值，以減緩**血糖**下降並避免低血糖。
+        
+        新手使用者可能需要嘗試並個人化他們的**臨時目標-運動**預設設置，以優化這項功能的效果。 每個人在運動期間達到穩定**血糖**控制的情況各不相同。 另請參閱常見問題中的[運動部分](#FAQ-sports)。 在常見問題中。
+        
+        一些使用者還喜歡在啟用**臨時目標-運動**之前和期間啟動一個**設定切換**（即設定降至100%以下以減少**AAPS**的胰島素給藥）。
+        
+        進階設定，目標9：使用者可以為**臨時目標**啟用*「高臨時目標提高敏感度」*，當**臨時目標**達到或超過100mg/dl或5.5mmol/l時，**AAPS**將變得更加敏感。 此外，如果停用*「高臨時目標時的SMB」*，即使**COB**大於0，並且**SMB**已啟用，且**OpenAPS SMB**處於活動狀態，**AAPS**也不會在高臨時目標期間進行**SMB**。
+        
+        另外，如果停用了『高臨時目標下的 SMB』，即使 COB > 0，啟用了『臨時目標下的 SMB』或『始終啟用 SMB』，且 OpenAPS 的 SMB 活動中，AAPS 也不會執行 SMB。
+        
+        (臨時目標-即將用餐臨時目標)=
+        
+        ## 即將用餐臨時目標
+        
+        **臨時目標-即將用餐**可以幫助實現緩和的血糖下降，並確保在用餐前有充足的**胰島素庫存量**。
+        
+        這對於那些不進行餐前注射的使用者來說是一個重要工具，然而**臨時目標-即將用餐**的效果將取決於多種因素，包括使用者的設置、是否採用低碳水化合物飲食以及是否使用快效胰島素（如 Fiasp 或 Lyjumjev），以消除餐前注射的需求。 通常，除非使用者對**AAPS**有一定的經驗，否則在使用**臨時目標-即將用餐**時應該預期進行餐前注射，特別是在進食高碳水化合物飲食時。
+        
+        你可以在文章[「如何啟用‘即將用餐模式’」](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/)或[這裡](https://diyps.org/tag/eating-soon-mode/)了解更多關於「即將用餐模式」的訊息。
+        
+        進階設定，[目標9](#objectives-objective9)：如果你使用 OpenAPS SMB 並啟用了*「低臨時目標降低敏感度」*，**AAPS**會更加積極地運作。 此選項要求**臨時目標**低於100mg/dl或5.5mmol/l。
+        
+        ## 如何在臨時目標期間關閉**SMB**？
+        
+        要執行此操作，請在**偏好設定**中選擇，並停用*「啟用高臨時目標時的SMB」*。
+        
+        ![碳水化合物 臨時目標](../images/TempTargetSMB.png)
+        
+        這將確保 **AAPS** 不會提供 **SMBs**，即使 COB > 0，*'臨時目標下的 SMB'* 或 *'始終進行 SMB'* 被啟用且 OpenAPS SMB 也活躍。
