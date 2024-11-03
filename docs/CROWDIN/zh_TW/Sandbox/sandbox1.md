@@ -56,10 +56,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 帶有錨點的連結：
 - [這會花多久時間？](#preparing-how-long-will-it-take)
-- [NSClient settings in Preferences](#Preferences-nsclient).
-- [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4
+- [偏好設定中的 NSClient 設定](#Preferences-nsclient)。
+- [AAPS 首頁總覽中的預測線](#aaps-screens-prediction-lines)，標題層級 4
 - [螢幕截圖](../DailyLifeWithAaps/AapsScreens.md)
-- [Screenshot main graph](#aaps-screens-main-graph) to header level 3
+- [主要圖表截圖](#aaps-screens-main-graph)，標題層級 3
 - [OpenAPS 功能](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
 - [最大 IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
 - [本文件中的 SMB 章節](#Open-APS-features-super-micro-bolus-smb)
