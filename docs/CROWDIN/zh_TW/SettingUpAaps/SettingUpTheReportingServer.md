@@ -35,7 +35,7 @@ Nightscout是一個開源軟體。 任何人都可以使用免費或付費服務
 
 ### 進一步配置 Nightscout
 
-Once you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
+一旦你的 Nightscout 實例啟動並運行，請參見 [Nightscout 設定頁面](../SettingUpAaps/Nightscout.md) 以獲取額外的考量。
 
 (SettingUpTheReportingServer-tidepool)=
 ## Tidepool
