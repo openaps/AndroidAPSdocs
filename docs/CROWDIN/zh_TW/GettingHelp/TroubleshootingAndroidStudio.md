@@ -14,7 +14,7 @@
 4. 生成新版本的簽名 apk，具體描述請參見[更新指南](../Maintenance/UpdateToNewVersion)並將其轉移到您的手機。
 5. 卸載手機上的上一個 AAPS 版本。
 6. 在手機上安裝新的 AAPS 版本。
-7. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+7. [匯入設置](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)以恢復你的目標和配置。
 
    如果你無法在手機上找到他們，請將他們從外部存儲複製到手機上。
 
@@ -51,7 +51,7 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
     注意：git 和 version 之間有一個空格和兩個破折號！
 
-  * 你應該收到一條訊息，告訴你安裝了什麼版本的 git，正如上面的截圖所示。 In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
+  * 你應該收到一條訊息，告訴你安裝了什麼版本的 git，正如上面的截圖所示。 在這種情況下，請轉到 [第 2 步](#troubleshooting-android-studio-check-for-uncommitted-changes)。
 
   * 如果你收到訊息提示
     ```
@@ -75,7 +75,7 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
   * 重新啟動 Android Studio。
 
-(troubleshooting-android-studio-check-for-uncommitted-changes)=
+(問題排除-檢查 Android Studio 是否有未提交的更改)=
 #### 步驟 2：檢查未提交的更改。
 
   * 在 Android Studio 中，打開左側的“提交”標籤 (1)。 ![提交標籤：未提交的更改](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
@@ -180,7 +180,7 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
 ![生成了 0 個建置變體的 APK](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-這是一個錯誤警告。 Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
+這是一個錯誤警告。 檢查你選擇作為 "目標文件夾" 的目錄（步驟 [生成簽章 APK](#Building-APK-generate-signed-apk)），你將在那裡找到生成的 apk！
 
 
 ## 應用程序是用編譯器/Kotlin 警告建立的
@@ -203,9 +203,9 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
 ## AAPS 未接收 CGM 資料
 
-* 如果你使用的是修補過的 Dexcom G6 應用程序：此應用程序已過時。 Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
+* 如果你使用的是修補過的 Dexcom G6 應用程序：此應用程序已過時。 請改用[BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)應用程序。
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](#xdrip-identify-receiver).
+* 如果你使用的是 xDrip+：請按照[xDrip+ 設置頁面](#xdrip-identify-receiver)中的說明識別接收器。
 
 
 ## 應用程序未安裝
@@ -224,7 +224,7 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
 ## 應用程序已安裝但版本仍為舊版本
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](#Update-to-new-version-update-your-local-copy)
+如果你成功建置了應用程序，將其傳輸到手機並成功安裝，但版本號保持不變，則可能是你遺漏了[更新本地副本](#Update-to-new-version-update-your-local-copy)。
 
 ## 上述方法均無效
 
@@ -236,7 +236,7 @@ If you built the app successfully, transferred it to your phone and installed it
 
     或者你可以使用新的密鑰庫。
 
-3. Build app from scratch as described [here](#Building-APK-download-AAPS-code).
+3. 按照[這裡描述的步驟](#Building-APK-download-AAPS-code)從頭開始構建應用程式。
 
 4. 當你成功建置 APK 後，請刪除手機上的現有應用程序，將新 APK 傳輸到手機並安裝。
 5. [再次匯入設定](../Maintenance/ExportImportSettings.md)以恢復您的目標和設定。
@@ -250,4 +250,4 @@ If you built the app successfully, transferred it to your phone and installed it
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10)。
 
-Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
+按照[此處](#Building-APK-install-android-studio)的說明從頭安裝 Android Studio。
