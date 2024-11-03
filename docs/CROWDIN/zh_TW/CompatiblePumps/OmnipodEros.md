@@ -429,7 +429,7 @@
 
 - **總輸送量：** 顯示從儲液中輸送的胰島素總單位數。 *注意，這是一個近似值，因為幫浦啟動和填充過程並不精準。*
 
-- **錯誤：** 顯示遇到的最後一個錯誤。 Review the [Pod history](#view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **錯誤：** 顯示遇到的最後一個錯誤。 檢查[藥囊歷史](#view-pod-history)、[RileyLink 歷史](#omnipod-eros-rileylink-and-active-pod-history)及日誌文件，以了解過去的錯誤及更多詳細訊息。
 
 - **啟用 Pod 警報：** 保留目前啟用 Pod 上運作的警報。 通常在幫浦到期超過 72 小時且原生幫浦嗶聲警告運作時使用。
 
@@ -541,7 +541,7 @@
   > 按下此按鈕將重置目前連線的幫浦連線裝置配置。
   > 
   > > - 當通訊開始時，特定資料將發送至 RileyLink 並設置為 > - 記憶體暫存器已設置 > - 通訊協議已設置 > - 已設置調頻無線電頻率 
-  > > - See [additional notes](#OmnipodEros-reset-rileylink-config-notes) at the end of this table
+  > > - 請參見本表末尾的[附加說明](#OmnipodEros-reset-rileylink-config-notes)
 
 - **讀取脈搏日誌：**
 
