@@ -38,4 +38,4 @@
 
 ![負傳感器年齡](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](#screens-action-tab) or a sensor insert with wrong date. 轉到治療選項卡 > 照護入口並刪除錯誤的條目。
+如果在 [行動選單](#screens-action-tab)中有重複的"CGM傳感器插入"條目，或 傳感器插入的日期錯誤，就會發生此情況。 轉到治療選項卡 > 照護入口並刪除錯誤的條目。
