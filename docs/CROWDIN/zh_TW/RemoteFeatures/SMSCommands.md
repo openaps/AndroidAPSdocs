@@ -3,14 +3,14 @@
 ```{admonition} Documentation
 :class: note
 
-此部分可能包含過時的內容。 Please also see the page [SMS Commands](#RemoteControl-sms-commands)).
+此部分可能包含過時的內容。 請參閱頁面 [SMS 命令](#RemoteControl-sms-commands)。
 
 ```
 
 ## 安全第一
 .
 - AAPS 允許你透過簡訊遠端控制孩子的手機。 如果你啟用此 SMS 通訊功能，請務必記住，設置為傳送遠端指令的手機可能會被盜。 因此，務必至少使用 PIN 碼來保護手機。 建議使用強度較高的密碼或生物識別技術。
-- Additionally it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#SMSCommands-other) SMS communicator in case your main remote phone gets lost or stolen.
+- 此外，建議允許為簡訊指令設置[第二個電話號碼](#SMSCommands-authorized-phone-numbers)。 這樣，當你的主遠端手機丟失或被盜時，可以使用第二個號碼 [臨時停用](#SMSCommands-other) SMS 通訊功能。
 - 如果你傳送的遠端指令（如注射或更改設定檔）已執行，AAPS 也會透過簡訊通知你。 建議將其設置為至少傳送到兩個不同的手機號碼，以防其中一部接收手機被盜。
 - **如果你透過 SMS 指令進行注射，則必須透過 Nightscout（AAPSClient、網站等）輸入碳水化合物！** 如果你未這樣做，活性胰島素（IOB）數值會正確，但活性碳水化合物化合物（COB）可能過低，導致 **AAPS** 假設你有過多的活性胰島素，從而未執行糾正注射。
 - 從 AAPS 2.7 版本起，當使用 SMS 指令時，必須使用帶有時間一次性密碼的身份驗證器應用程式來提高安全性。
@@ -100,7 +100,7 @@
 (SMSCommands-commands)=
 ## 指令
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app).
+指令必須以英文發送，回覆將使用你當地的語系，如果該回覆字符串已經[翻譯](#translations-translate-strings-for-AAPS-app)。
 
 ![SMS 指令範例](../images/SMSCommands.png)
 
