@@ -8,7 +8,7 @@
 
 檢查你要使用的橋接器和應用程式是否與你的傳感器及 xDrip+ 相容（舊版 Blucon 及近期的版本不支援，Miaomiao 1 需要韌體 39，Miaomiao 2 則需要韌體 7）。
 
-Libre2 OOP 所生成的讀取值與原始讀取器或透過 NFC 掃描的 LibreLink 應用程式的讀取值相同。 AAPS 與 Libre 2 的讀取值會經過 10 至 25 分鐘的平滑處理，以避免某些讀取值的跳動。 See below [Value smoothing & raw values](#libre2-value-smoothing-raw-values). OOP 每 5 分鐘生成一次讀取值，並取最近 5 分鐘的平均值。 因此，這些血糖讀取值可能不如其他方法平滑，但他們與原始讀取器的讀取值一致，並且更快速地反應“真實”血糖讀取值。 如果你嘗試使用 OOP 進行循環，請在 xDrip+ 中啟用所有平滑設定。
+Libre2 OOP 所生成的讀取值與原始讀取器或透過 NFC 掃描的 LibreLink 應用程式的讀取值相同。 AAPS 與 Libre 2 的讀取值會經過 10 至 25 分鐘的平滑處理，以避免某些讀取值的跳動。 請參閱以下內容[讀取值平滑化及原始讀取值](#libre2-value-smoothing-raw-values)。 OOP 每 5 分鐘生成一次讀取值，並取最近 5 分鐘的平均值。 因此，這些血糖讀取值可能不如其他方法平滑，但他們與原始讀取器的讀取值一致，並且更快速地反應“真實”血糖讀取值。 如果你嘗試使用 OOP 進行循環，請在 xDrip+ 中啟用所有平滑設定。
 
 有幾個使用藍牙傳輸器的理由：
 
@@ -34,7 +34,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 - 請按照 [這些指示](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) 設定 xDrip+，但請確保下載 [此最新版 OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)，因為文件中的版本已過時。
 - 按照[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)上的設置說明進行操作。
 
--   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   在[組態建置工具的血糖來源](#Config-Builder-bg-source)中選擇 xDrip+。
 
 ## 3. 使用 Diabox
 
@@ -42,7 +42,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- 在[組態建置工具的血糖來源](#Config-Builder-bg-source)中選擇 xDrip+。
 
 ## 4. 使用 Juggluco
 
@@ -52,7 +52,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 
 ![Juggluco 廣播至 AAPS](../images/Juggluco_AAPS.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- 在[組態建置工具的血糖來源](#Config-Builder-bg-source)中選擇 xDrip+。
 
 ```{admonition} Use with xDrip+
 :class: note
@@ -146,7 +146,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 血糖讀取值會透過 xDrip+ 應用程式接收到智慧型手機上。
 
 -   除非你需要最新功能，否則可以安全下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)，在這種情況下，你應該使用最新的[Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases)。
--   Set xDrip+ with the [patched app data source](#xdrip-libre2-patched-app).
+-   使用 [修補版應用程式資料來源](#xdrip-libre2-patched-app)設定 xDrip+。
 -   按照[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)上的設置說明進行操作。
 
 ### 步驟 4：啟動傳感器
@@ -165,7 +165,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 
 ![xDrip+血糖來源](../images/ConfBuild_BG_xDrip.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](#xdrip-identify-receiver).
+-   如果 AAPS 在手機處於飛航模式時未接收到血糖 值，請使用「識別接收器」，如在 [xDrip+ 設定頁面](#xdrip-identify-receiver) 所述。
 
 目前，將 Libre 2 作為血糖來源時，無法在 SMB 演算法中啟用「始終啟用 SMB」和「碳水後啟用 SMB」功能。 Libre 2 的血糖值不夠平滑，無法安全使用。 請參見 [平滑血糖資料](../CompatibleCgms/SmoothingBloodGlucoseData.md) 獲得更多詳情。
 
