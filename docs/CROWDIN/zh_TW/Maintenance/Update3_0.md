@@ -49,11 +49,11 @@
 
   ![黃色血糖警告](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](#aaps-screens-bg-warning-sign)
+詳細資訊請參見 [AAPS螢幕頁面](#aaps-screens-bg-warning-sign)
 
 (update30-failure-message-data-from-different-pump)=
 ## 錯誤訊息：來自不同幫浦的資料
 
    ![錯誤訊息：來自不同幫浦的資料](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](#Config-Builder-pump). 將幫浦更改為虛擬幫浦，然後再切換回你的實際幫浦。 這將重置幫浦狀態。
+要解決此問題，請前往 [設定建構器](#Config-Builder-pump)。 將幫浦更改為虛擬幫浦，然後再切換回你的實際幫浦。 這將重置幫浦狀態。
