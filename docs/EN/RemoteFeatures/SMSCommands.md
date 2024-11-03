@@ -1,6 +1,10 @@
 # SMS Commands
 
-Most of the adjustments of temp targets, following **AAPS** etc. can be done on [AAPSClient app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection. Boluses, however, can't be given through **AAPSClient**, but you can use SMS commands. If you use an iPhone as a follower and therefore cannot use **AAPSClient** app, there are additional SMS commands available.
+```{contents} Table of contents
+:depth: 1
+```
+
+Most of the adjustments of temp targets, following **AAPS** etc. can be done on [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection. Boluses, however, can't be given through **AAPSClient**, but you can use SMS commands. If you use an iPhone as a follower and therefore cannot use **AAPSClient** app, there are additional SMS commands available.
 
 **SMS commands are really useful:**
 1. For routine remote control
@@ -28,8 +32,6 @@ For the sensitive commands, an authenticator app with a time-based one-time pass
 If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “[Reset Authenticators](#sms-commands-authenticator-setup)” in **AAPS** or send the SMS command “[SMS stop](#SMSCommands-other)”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
 
 ## Setup SMS commands
-
-![SMS Commands Setup](../images/SMSCommandsSetup.png)
 
 ```{contents} The overall process is as follows
 :depth: 1
@@ -60,7 +62,7 @@ The time on both phones must be synchronized. Best practice is set automatically
 
 On both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific device, you may need to try out different settings.
 
-Example (for Samsung S23): **Settings > General management > Date and time**: make sure that **Automatic date and time** is checked
+Example (for Samsung S23): **Settings > General management > Date and time**: make sure that **Automatic date and time** is checked.
 
 Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterward if it seems to be causing problems (ask for help if needed).
 
@@ -94,9 +96,9 @@ If you have more than one phone number to add, separate them by semicolons, with
 - You can define the minimum delay between two boluses issued via SMS.
 - For safety reasons you have to add at least two authorized phone numbers to edit this value.
 
-#### Additionally mandatory PIN at token end
+#### Additional mandatory PIN at token end
 
-For safety reasons the reply code must be followed by a PIN. Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+For safety reasons, the reply code must be followed by a PIN. Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
 
 PIN requirements are:
 
@@ -156,7 +158,7 @@ Remote bolusing of insulin can _only_ be done via **SMS Commands**, it cannot be
 
 To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or AAPSClient with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions subsection below) , and are therefore quicker than SMS commands.
+**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or **AAPSClient** with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions subsection below) , and are therefore quicker than SMS commands.
 
 (SMSCommands-commands)=
 ## Commands
@@ -187,18 +189,18 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 
 ### CGM data
 
-| Command    | Auth | Function & *Response*                                                                                                                                              |
-|------------|------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BG         | No   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                          |
-| CAL 5.6/90 | Yes  | Will calibrate the CGM with a value of 5.6/90 (use the value appropriate to your glucose units). Works only if properly set-up in **AAPS**.<br/>*Calibration sent* |
+| Command    | Auth | Function & *Response*                                                                                                                                                     |
+|------------|------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| BG         | No   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                 |
+| CAL 5.6/90 | Yes  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent* |
 
 ### Pump
 
-| Command              | Auth | Function & *Response*                                                             |
-|----------------------|------|-----------------------------------------------------------------------------------|
-| PUMP                 | No   | Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Yes  | To disconnect pump for *30* minutes                                               |
-| PUMP CONNECT         |      | Pump reconnected                                                                  |
+| Command              | Auth | Function & *Response*                                                                     |
+|----------------------|------|-------------------------------------------------------------------------------------------|
+| PUMP                 | No   | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Yes  | To disconnect pump for *30* minutes                                                       |
+| PUMP CONNECT         | Yes  | Pump reconnected                                                                          |
 
 ### Basal
 
@@ -227,22 +229,23 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 
 Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
 
-| Command              | Auth | Function & *Response*                                                                                              |
-|----------------------|------|--------------------------------------------------------------------------------------------------------------------|
-| BOLUS 1.2            | Yes  |                                                                                                                    |
-| BOLUS 0.60 MEAL      |      | Delivers the specified 0.60U bolus **and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target) |
-| CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                       |
-| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35. The acceptable time format depends on the time setting (12h/24h) on the phone.               |
-| EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min. Only for [compatible pumps](#screens-action-tab).                          |
-| EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                             |
+| Command              | Auth | Function & *Response*                                                                                                  |
+|----------------------|------|------------------------------------------------------------------------------------------------------------------------|
+| BOLUS 1.2            | Yes  |                                                                                                                        |
+| BOLUS 0.60 MEAL      | Yes  | Delivers the specified 0.60U bolus<br/>**and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target) |
+| CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                           |
+| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends on the time setting (12h/24h) on the phone.               |
+| EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#screens-action-tab).                          |
+| EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                 |
+
 ### Profile
 
-| Command        | Auth | Function & *Response*                                                                                                                    |
-|----------------|------|------------------------------------------------------------------------------------------------------------------------------------------|
-| PROFILE STATUS | No   | Current profile and percentage                                                                                                           |
-| PROFILE LIST   | No   | The current list of profiles in **AAPS**, e.g.:<br/>1. Profile1<br/> 2. Profile2                                                         |
-| PROFILE 1      | Yes  | To switch profile to profile 1 in the list. Use the numbers as returned by the **PROFILE LIST**, not the profile names as you saved them |
-| PROFILE 2 30   | Yes  | To switch profile to Profile2 30%                                                                                                        |
+| Command        | Auth | Function & *Response*                                                                                                                            |
+|----------------|------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| PROFILE STATUS | No   | Current profile and percentage                                                                                                                   |
+| PROFILE LIST   | No   | The current list of profiles in **AAPS**, e.g.:<br/>1. Profile1<br/> 2. Profile2                                                                 |
+| PROFILE 1      | Yes  | To switch profile to profile 1 in the list.<br/>Use the numbers as returned by the **PROFILE LIST**,<br/>not the profile names as you saved them |
+| PROFILE 2 30   | Yes  | To switch profile to Profile2 30%                                                                                                                |
 
 ### Temporary Targets
 
@@ -255,13 +258,13 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 (SMSCommands-other)=
 ### Other
 
-| Command            | Auth | Function & *Response*                                                                                                                                                  |
-|--------------------|------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| TREATMENTS REFRESH | No   | Refresh treatments from NS                                                                                                                                             |
-| NSCLIENT RESTART   | No   | Useful if you notice a communication problem with Nightscout or AAPSClient                                                                                             |
-| SMS DISABLE/STOP   | No   | To disable the SMS Remote Service reply with code Any.<br/>Keep in mind that you'll able to reactivate it directly from the **AAPS** master smartphone only.           |
-| HELP               | No   | Returns all functions available for interrogation: BG, LOOP, TREATMENTS, ..... Send further **HELP *FUNCTION*** command to list all options available in this section. |
-| HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                         |
+| Command            | Auth | Function & *Response*                                                                                                                                                             |
+|--------------------|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| TREATMENTS REFRESH | No   | Refresh treatments from NS                                                                                                                                                        |
+| NSCLIENT RESTART   | No   | Useful if you notice a communication problem<br/>with Nightscout or **AAPSClient**                                                                                                |
+| SMS DISABLE/STOP   | No   | To disable the SMS Remote Service reply with code Any.<br/>Keep in mind that you'll able to reactivate it directly<br/>from the **AAPS** master smartphone only.                  |
+| HELP               | No   | Returns all functions available for interrogation:<br/>BG, LOOP, TREATMENTS, ....<br/>Send further **HELP *FUNCTION*** command to list<br/>all options available in this section. |
+| HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                    |
 
 (SMSCommands-troubleshooting)=
 ## Troubleshooting and FAQ
@@ -294,12 +297,6 @@ It could be for one of these reasons:
 2)	**AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate).
 3)	The **AAPS** phone does not have good bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
 
-### How can I stop a command once it has been authenticated?
-
-You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
-
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
-
 ### No response whatsoever for SMS commands
 
 On the caregiver phone and/or **AAPS** phone, try disabling the following options : 
@@ -326,6 +323,12 @@ There are several possible reasons the command may not be successful:
 Common errors are shown in the examples below:
 
 ![image](../images/remote-control-17.png)
+
+### How can I stop a command once it has been authenticated?
+
+You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
+
+For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
 
 ### Multiple SMS
 
