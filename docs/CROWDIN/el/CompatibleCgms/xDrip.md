@@ -72,7 +72,7 @@ Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time A
 
 - The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 - When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-- If you need Clarity and want to profit from xDrip+ features, use the [Build Your Own Dexcom App](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+, or use xDrip+ as a Companion app receiving notifications from the official Dexcom app.
+- If you need Clarity and want to profit from xDrip+ features, use the [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+, or use xDrip+ as a Companion app receiving notifications from the official Dexcom app.
 
 ### xDrip + έκδοση ανάλογα με τον σειριακό αριθμό του πομπού G6.
 
@@ -105,7 +105,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Συνδέστε το πομπό G6 για πρώτη φορά
 
-**For second and following transmitters see [Extend transmitter life](../CompatibleCgms/xDrip.md#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](#xdrip-extend-transmitter-life) below.**
 
 Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
@@ -200,7 +200,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 ### Libre smart reader battery level
 
 - Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
-- Details can be found on [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery).
+- Details can be found on [screenshots page](#screens-sensor-level-battery).
 
 ### Connect Libre Transmitter & start sensor
 
@@ -231,6 +231,8 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
     → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
 
 ![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+
+(xdrip-libre2-patched-app)=
 
 ## Libre 2 patched app
 

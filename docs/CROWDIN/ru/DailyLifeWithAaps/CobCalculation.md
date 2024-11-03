@@ -26,7 +26,9 @@ Carbs will also be absorbed via the methods described below based on which sensi
 
 Unabsorbed carbs are cut off after specified time:
 
-![Oref1](../images/cob_oref0_orange_II.png)![Screenshot 2024-10-05 161009](https://github.com/user-attachments/assets/e4eb93b2-bc93-462d-b4d6-854bb9264953)
+![Oref1](../images/cob_oref0_orange_II.png)
+
+![Screenshot 2024-10-05 161009](../images/cob_oref0_orange_I.png)
 
 
 ## Carbs Sensitivity - WeightedAverage
@@ -37,14 +39,14 @@ Absorption is calculated to have COB = 0 after specified time:
 
 If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
 
-
+(CobCalculation-detection-of-wrong-cob-values)=
 ## Обнаружение неправильного значения COB
 
 **AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
 
 ### Как AndroidAPS обнаруживает неправильные значения активных углеводов COB?
 
-Ordinarily __AAPS__ detects carb absorption through **BG** deviations. Incase the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](../SettingUpAaps/Preferences.md#min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
+Ordinarily __AAPS__ detects carb absorption through **BG** deviations. Incase the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
 
 ![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
 
@@ -69,7 +71,7 @@ This could be because:
 
 ## Ручная коррекция введенных углеводов
 
-If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs).
+If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](#screens-bolus-carbs).
 
 
 ## Carb correction - how to delete a Carb entry from Treatments

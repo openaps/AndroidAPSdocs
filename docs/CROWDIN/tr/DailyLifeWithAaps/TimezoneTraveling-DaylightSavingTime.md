@@ -4,6 +4,8 @@
 
 Pompa geçmişi kullanmadığı için telefonda saat dilimini değiştirmekle ilgili bir sorun yok
 
+(timezone-traveling-danarv2-danars)=
+
 ## DanaRv2, DanaRS
 
 These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **Bu telefonda saat dilimini basitçe değiştirirseniz, kayıtların farklı saat dilimleriyle okunacağı ve iki katına çıkacağı anlamına gelir.**
@@ -24,7 +26,7 @@ Bunu önlemek için iki olasılık vardır:
    
    * ör. Viyana -> New York: profil değiştirme +6 saat
    * ör. Viyana -> Sidney: profil değiştirme -8 saat
-* Probably not an option if using [patched LibreLink app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Seçenek 2: Pompa geçmişini sil
 
@@ -39,6 +41,8 @@ Uçaktan inerken:
 * pompadaki zamanı değiştirin
 * telefonu açın
 * telefonun pompaya bağlanmasına ve zaman ince ayarının yapmasına izin verin
+
+(timezone-traveling-insight)=
 
 ## Insight
 
@@ -65,6 +69,8 @@ Sürücü, pompanın saatini telefonun saatine göre otomatik olarak ayarlar.
 Timezone changes keep the history in tact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and IOB. If you change time manually double check the IOB.
 
 When the timezone or time changes running TBR's are stopped.
+
+(time-adjustment-daylight-savings-time-dst)=
 
 ## Yaz saati uygulamasında (DST) zaman ayarı
 

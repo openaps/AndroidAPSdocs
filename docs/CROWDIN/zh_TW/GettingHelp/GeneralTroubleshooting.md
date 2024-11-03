@@ -8,7 +8,7 @@
 
 ### 建立 & 更新
 
-* [遺失的密鑰庫](TroubleshootingAndroidStudio#lost-keystore)
+* [遺失的密鑰庫](#troubleshooting_androidstudio-lost-keystore)
 * [問題排除 AndroidStudio](TroubleshootingAndroidStudio)
 
 ### 設定
@@ -16,18 +16,18 @@
 
   ![錯誤：基礎率未對齊到整點](../images/Screen_DifferentPump.png)
 
-* [幫浦 - 來自不同幫浦的資料](../Maintenance/Update3_0.md#failure-message-data-from-different-pump)
+* [幫浦 - 來自不同幫浦的資料](#update30-failure-message-data-from-different-pump)
 
   ![錯誤訊息：來自不同幫浦的資料](../images/BasalNotAlignedToHours2.png)
 
 * [Nightscout 用戶端](../GettingHelp/TroubleshootingNsClient.md)
 
 ### 使用說明
-* [碳水化合物值錯誤](../DailyLifeWithAaps/CobCalculation.md#detection-of-wrong-cob-values)
+* [碳水化合物值錯誤](#CobCalculation-detection-of-wrong-cob-values)
 
    ![錯誤：碳水化合物吸收速度過慢](../images/Calculator_SlowCarbAbsorption.png)
 
-* [SMS 指令](../RemoteFeatures/SMSCommands.md#troubleshooting)
+* [SMS 指令](#SMSCommands-troubleshooting)
 
 ### 頻繁的藍牙連線問題
 
@@ -84,20 +84,20 @@
 
 ## CGM
 
-* [一般問題](../CompatibleCgms/GeneralCGMRecommendation.md#troubleshooting)
-* [Dexcom G6](../CompatibleCgms/DexcomG6.md#troubleshooting-g6-and-one)
-* [Libre 3](../CompatibleCgms/Libre3.md#experiences-and-troubleshooting)
-* [Libre 2](../CompatibleCgms/Libre2.md#experiences-and-troubleshooting)
-* [xDrip - 無 CGM 資料](../CompatibleCgms/xDrip.md#identify-receiver)
-* [xDrip - Dexcom 問題排除](../CompatibleCgms/xDrip.md#troubleshooting-dexcom-g5g6-and-xdrip)
+* [一般問題](#general-cgm-troubleshooting)
+* [Dexcom G6](#DexcomG6-troubleshooting-g6)
+* [Libre 3](#libre3-experiences-and-troubleshooting)
+* [Libre 2](#Libre2-experiences-and-troubleshooting)
+* [xDrip - 無 CGM 資料](#xdrip-identify-receiver)
+* [xDrip - Dexcom 問題排除](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ## 幫浦
 
-* [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md#dana-rs-specific-errors)
+* [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
 * [Accu-Chek Combo 總覽](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
-* [Accu-Chek Combo + Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
-* [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md#insight-specific-errors)
-* [Medtronic + RileyLink](../CompatiblePumps/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-andor-pump)
+* [Accu-Chek Combo + Ruffy](#Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
+* [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
+* [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
 ## 手機
 
@@ -106,5 +106,5 @@
 
 ## 智慧型手錶
 
-* [問題排除 Wear 應用程式](../UsefulLinks/WearOsSmartwatch.md#troubleshooting-the-wear-app)
+* [問題排除 Wear 應用程式](#Watchfaces-troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../UsefulLinks/SonySW3.md)

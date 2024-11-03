@@ -18,6 +18,8 @@ La sensibilité est calculée de la même façon que Oref1, mais vous pouvez sp�
 
 La sensibilité est calculée par une moyenne pondérée des écarts. Vous pouvez spécifier la durée prise en compte. Les écarts les plus récents ont un poids plus élevé. L'absorption minimale des glucides est calculée à partir du temps d'absorption maximale des glucides renseigné dans les préférences. Cet algorithme est le plus rapide à suivre les changements de sensibilité.
 
+(SensitivityDetectionAndCob-sensitivity-oref1)=
+
 ### Sensibilité Oref1
 
 La sensibilité est calculée à partir des données des 8 dernières heures ou à partir du dernier changement de site, si celui-ci date de moins de 8 heures. Les glucides (si non absorbés) sont coupés après la durée spécifiée dans les préférences. Seul l'algorithme Oref1 prend en charge les repas non signalés (RNS ou UAM). Cela signifie que les périodes avec des RNS détectés sont exclus du calcul de sensibilité. Donc, si vous utilisez les SMB avec RNS, vous devez choisir l'algorithme Oref1 pour que cela fonctionne correctement. Pour plus d'informations, lisez la documentation [OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).

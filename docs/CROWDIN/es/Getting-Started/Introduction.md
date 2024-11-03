@@ -18,6 +18,7 @@ En una aeronave, un piloto automático no realiza completamente el trabajo del p
 
 ![imagen](../images/autopilot.png)
 
+(Introduction-what-does-hybrid-closed-loop-mean)=
 ## ¿Qué significa lazo cerrado híbrido?
 
 La mejor solución para la diabetes tipo 1 sería una 'cura funcional' (probablemente un implante de células pancreáticas que estén protegidas del sistema inmunológico). Mientras esperamos eso, un páncreas artificial de 'lazo completamente cerrado' probablemente sea la siguiente mejor opción. Se trata de un sistema tecnológico que no necesita ninguna intervención por parte del usuario (como la administración de insulina para las comidas o la notificación de ejercicio), con una buena regulación de los niveles de glucosa en sangre. En este momento, no existen sistemas ampliamente disponibles que sean de 'lazo completamente cerrado', todos requieren cierta intervención del usuario. Los sistemas actualmente disponibles se llaman sistemas de lazo cerrado 'híbridos', porque utilizan una combinación de tecnología automatizada y entradas del usuario.
@@ -188,7 +189,7 @@ Si se realizara un ataque malicioso a tu bomba de insulina, estas estrategias re
 
 #### Safety considerations around improving blood glucose control too fast
 
-A rapid reduction in HbA1c and improved blood glucose control sounds appealing. However, reducing average blood glucose levels _too fast_ by starting any closed loop system can cause permanent damage, including to the eyes, and painful neuropathy that never goes away. This damage can be avoided simply by reducing levels more slowly. If you currently have an elevated HbA1c and are moving to AAPS (or any other closed loop system), please discuss this potential risk with your clinical team before starting, and agree a timeplan with them. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](../Getting-Started/PreparingForAaps.md#safety-first).
+A rapid reduction in HbA1c and improved blood glucose control sounds appealing. However, reducing average blood glucose levels _too fast_ by starting any closed loop system can cause permanent damage, including to the eyes, and painful neuropathy that never goes away. This damage can be avoided simply by reducing levels more slowly. If you currently have an elevated HbA1c and are moving to AAPS (or any other closed loop system), please discuss this potential risk with your clinical team before starting, and agree a timeplan with them. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](#preparing-safety-first).
 
 #### Medical safety around devices, consumable supplies and other medications
 
@@ -196,7 +197,7 @@ Use a tested, fully functioning FDA or CE approved insulin pump and CGM for an a
 
 Use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer of your pump and CGM. El uso de suministros no probados o modificados puede provocar inexactitud del MCG y errores de dosificación de la insulina. Insulin is highly dangerous when misdosed - please do not play with your life by hacking your supplies.
 
-Do not take SGLT-2 inhibitors (gliflozins) when using **AAPS** as they incalculably lower blood sugar levels. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](../Getting-Started/PreparingForAaps.md#safety-first).
+Do not take SGLT-2 inhibitors (gliflozins) when using **AAPS** as they incalculably lower blood sugar levels. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](#preparing-safety-first).
 
 (introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
 ## ¿Cómo puedo abordar la discusión sobre AAPS con mi equipo médico?

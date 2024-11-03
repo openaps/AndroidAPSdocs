@@ -8,7 +8,7 @@
 
 - משאבת Accu-Check Combo של חברת Roche (אין חשיבות לגרסת ה-firmware, כולן עובדות היטב)
 - מכשיר Smartpix או Realtyme עם תוכנת 360 Configuration לקביעת הגדרות המשאבה. (חברת Roche שולחת מכשיר Smartpix ותוכנה ללקוחותיה לפי דרישה.)
-- מכשיר טלפון סלולרי מתאים: טלפון אנדרואיד עם מערכת הפעלה LineageOS 14.1 (לשעבר CyanogenMod) או מערכת הפעלה Android 8.1 Oreo. As of AAPS 3.0 Android 9 is mandatory. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
+- מכשיר טלפון סלולרי מתאים: טלפון אנדרואיד עם מערכת הפעלה LineageOS 14.1 (לשעבר CyanogenMod) או מערכת הפעלה Android 8.1 Oreo. As of AAPS 3.0 Android 9 is mandatory. See [release notes](#maintenance-android-version-aaps-version) for details.
 - במידה ונעשה שימוש ב-LineageOS 14.1 יש לוודא גרסת יוני 2017 או מאוחרת יותר, מאחר ושילוב משאבת Combo לבלוטוס נכלל ממעוד זה. 
 - רשימת מכשירי טלפון ניתן למצוא כאן: [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 - יש לשים לב - זו אינה רשימת טלפונים תואמים מלאה והיא כוללת התרשמות וחוו"ד שהועלו ע"י משתמשים. לאחר צבירת נסיון, חשוב להעלות את המסקנות והתובנות לגבי המכשיר שלך לטובת המשתמשים הבאים (הפרוייקט הזה ושכמותו נבנה ונסמך על רצון ונכונות המשתמשים "להעביר את זה הלאה").
@@ -20,7 +20,7 @@
 - Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 - רק פרופיל בזאלי אחד נתמך. 
 - הגדרת פרופיל בזאלי מעבר לאחד, שימוש בבולוסים מושהים או בולוסים מרובי גלים מגוף המשאבה מפריעים למינונים הבזאליים הזמניים של הלולאה ומאלצת אותה לעבור למצב "השהיה עקב ערך סוכר נמוך" למשך 6 שעות מכיוון שהלולאה לא יכולה לפעול בבטחה בתנאים אלה.
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - כיום נתמכים רק מינונים בזאליים בטווח של 0.05 עד 10 יח'\שעה. מגבלה זו חלה גם בעת שינוי פרופיל, למשל כאשר הוא עולה ל-200%, המינון הבזאלי הגבוה ביותר לא יעלה על 5 יח'\שעה מכיוון שהוא יוכפל. בדומה, בעת הפחתה ל-50%, המינון הבזאלי הנמוך ביותר חייב להיות לפחות 0.10 יח'\שעה. 
 - אם הלולאה מבקשת לבטל בזאלי זמני פעיל, המשאבה תגדיר במקום זאת בזאלי זמני של 90% או 110% למשך 15 דקות. הסיבה לכך היא שביטול בזאלי זמני גורם להתראה על המשאבה הגורמת לרטט רב.
 - לעיתים רחוקות AAPS עלול להיכשל בביטול אוטומטי של התראת "בזאלי זמני בוטל" והמשתמש צריך לבטלה בעצמו (על ידי לחיצה על כפתור הרענון ב-AAPS כדי להעביר את האזהרה ל-AAPS או לאשר את ההתראה על המשאבה). 

@@ -5,7 +5,7 @@
 -   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you want specific newly developed features.
 -   Setup xDrip+ with G5 following [these instructions](https://navid200.github.io/xDrip/docs/G5-Recommended-Settings.html).
 -   Setup xDrip+ reading the [xDrip+ settings page](../CompatibleCgms/xDrip.md) .
--   Select xDrip+ in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+-   Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ## G5 met aangepaste Dexcom G5 app
 
@@ -27,6 +27,6 @@ These apps are not compatible with recent Android versions.
 
 -   Start sensor
 
-- Select Dexcom App (patched) in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select Dexcom App (patched) in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 -   If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.

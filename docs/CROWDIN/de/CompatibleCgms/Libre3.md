@@ -56,7 +56,7 @@ Nach einem Sensorwechsel erkennt xDrip+ den neuen Sensor automatisch und löscht
 
 ### Schritt 4: AndroidAPS konfigurieren
 
-- Select xDrip+ in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 - Wenn sich das Smartphone im Flugmodus befindet und AAPS keine Glukosewerte erhält, verwende "Empfänger identifizieren"
 - Glättung aktivieren (in xDrip+ bereits erfolgt)
@@ -91,6 +91,7 @@ Wenn der Sensor mit einem eingeloggten Libreview-Konto gestartet wurde, ist es a
 
 Um von der Libre 3 App zu Juggluco zu wechseln, musst Du die Libre 3 App über Android-Einstellungen erzwingen und mit Schritt 1 & 2 fortfahren.
 
+(libre3-experiences-and-troubleshooting)=
 ## Erfahrungen und Troubleshooting
 
 ### Fehlerbehebung Libre 3 -> Juggluco-Verbindung

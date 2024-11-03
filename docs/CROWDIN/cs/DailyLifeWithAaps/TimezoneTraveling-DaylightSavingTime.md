@@ -4,6 +4,8 @@
 
 Se změnou časového pásma v telefonu není žádný problém, protože tyto pumpy nepoužívají historii
 
+(timezone-traveling-danarv2-danars)=
+
 ## DanaRv2, DanaRS
 
 These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **To znamená, že pokud prostě změníte časové pásmo na telefonu, historické záznamy se z pumpy načtou v jiném pásmu a zdvojí se.**
@@ -24,7 +26,7 @@ Abychom se tomu vyhnuli, existují dvě možnosti:
    
    * např. Vídeň -> New York: posun času +6 hodin
    * např. Vídeň -> Sydney: posun času -8 hodin
-* Probably not an option if using [patched LibreLink app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Možnost 2: Vymazat historii pumpy
 
@@ -39,6 +41,8 @@ Když vysednete z letadla:
 * změňte čas na pumpě
 * zapněte telefon
 * nechejte telefon spojit se s pumpou a sladit se s jejím časem
+
+(timezone-traveling-insight)=
 
 ## Insight
 
@@ -65,6 +69,8 @@ Ovladač automaticky upravuje čas v pumpě podle času v telefonu.
 Timezone changes keep the history in tact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and IOB. If you change time manually double check the IOB.
 
 When the timezone or time changes running TBR's are stopped.
+
+(time-adjustment-daylight-savings-time-dst)=
 
 ## Úpravy letního času
 

@@ -10,7 +10,7 @@
 - Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **AAPSClient app** on their phone. Settings must be the same in AAPS and AAPSClient app.
 - Οι γονείς μπορούν να έχουν συναγερμούς χρησιμοποιώντας την εφαρμογή **xDrip+ με λειτουργία ακόλουθου ** στο τηλέφωνο τους.
 - Remote control of AAPS using [SMS Commands](../RemoteFeatures/SMSCommands.md) secured by two-factor authentication.
-- Remote control through AAPSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](../Maintenance/ReleaseNotes.md#version-2811) for further details.
+- Remote control through AAPSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](#important-hints-2-8-1-1) for further details.
 
 ## Εργαλεία και εφαρμογές για την εξ αποστάσεως παρακολούθηση
 
@@ -30,7 +30,7 @@
 
 ## Πράγματα που πρέπει να σκεφτείτε
 
-- Setting the correct [treatment factors](../UsefulLinks/FAQ.md#how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
+- Setting the correct [treatment factors](#FAQ-how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
 - Settings must be the same in AAPS and AAPSClient app.
 - Λάβετε υπόψη το χρονικό κενό ανάμεσα στο βασικό χρήστη και τον ακόλουθο που δημιουργείται λόγω του χρόνου που χρειάζεται για να ανέβουν και να κατέβουν τα δεδομένα, όπως επίσης και το γεγονός ότι το βασικό τηλέφωνο με AAPS θα ανεβάσει τα δεδομένα μόνο αφού ξεκινήσει το κύκλωμα.
 - Επομένως, πάρτε το χρόνο σας προκειμένου να κάνετε τις ρυθμίσεις σωστά και δοκιμάστε τες στην πραγματική ζωή με το παιδί σας δίπλα σας προτού να ξεκινήσετε την απομακρυσμένη παρακολούθηση και τις απομακρυσμένες θεραπευτικές κινήσεις. Οι σχολικές διακοπές μπορεί να είναι μια καλή περίοδος για αυτό.

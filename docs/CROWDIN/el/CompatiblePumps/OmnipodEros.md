@@ -360,6 +360,7 @@ This screen will provide information, status, and settings configuration informa
 > - **Last Device Contact:** Date and time of the last contact the pod made with the pod communication device.
 > - **Refresh button** manually refresh the settings on this page.
 
+(omnipod-eros-rileylink-and-active-pod-history)=
 #### RileyLink and Active Pod History
 
 This screen provides information in reverse chronological order of each state or action that either the RileyLink or currently connected pod is in or has taken. The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
@@ -428,7 +429,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 - **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
 
-- **Errors:** Displays the last error encountered. Review the [Pod history](#view-pod-history), [RileyLink history](#rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **Errors:** Displays the last error encountered. Review the [Pod history](#view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
 - **Active pod alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
 
@@ -540,7 +541,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
   > When pressed this button resets the currently connected pod communication device configuration.
   > 
   > > - When communication is started, specific data is sent to and set in the RileyLink > - Memory Registers are set > - Communication Protocols are set > - Tuned Radio Frequency is set 
-  > > - See [additional notes](#reset-rileylink-config-notes) at the end of this table
+  > > - See [additional notes](#OmnipodEros-reset-rileylink-config-notes) at the end of this table
 
 - **Read pulse log:**
 

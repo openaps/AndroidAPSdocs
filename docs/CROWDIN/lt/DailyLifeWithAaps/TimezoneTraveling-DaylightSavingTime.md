@@ -4,6 +4,8 @@
 
 Nėra jokių problemų dėl laiko zonos keitimo telefone, nes pompa nenaudoja telefono istorijos
 
+(timezone-traveling-danarv2-danars)=
+
 ## DanaRv2, DanaRS
 
 These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
@@ -24,7 +26,7 @@ To avoid this there are two possibilities:
    
    * pvz.: Viena -> Niujorkas: profilio perjungimas +6 valandos
    * pvz.: Viena -> Sidnėjus: profilio perjungimas -8 valandos
-* Probably not an option if using [patched LibreLink app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Pasirinkimas Nr. 2: Pompos istorijos ištrynimas
 
@@ -39,6 +41,8 @@ When get out of plane:
 * pakeiskite pompos laiką
 * įjunkite telefoną
 * leiskite telefonui prisijungti prie pompos ir suderinti laiką
+
+(timezone-traveling-insight)=
 
 ## Insight
 
@@ -65,6 +69,8 @@ The driver automatically adjusts the time of the pump to the time of the phone.
 Timezone changes keep the history in tact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and IOB. If you change time manually double check the IOB.
 
 When the timezone or time changes running TBR's are stopped.
+
+(time-adjustment-daylight-savings-time-dst)=
 
 ## Vasaros laiko nustatymas (VL)
 

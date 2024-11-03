@@ -8,7 +8,7 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 
 ### Erstellen & Update
 
-* [Verlorener Keystore](TroubleshootingAndroidStudio#lost-keystore)
+* [Verlorener Keystore](#troubleshooting_androidstudio-lost-keystore)
 * [Fehlerbehebung Android Studio](TroubleshootingAndroidStudio)
 
 ### Einstellungen
@@ -16,18 +16,18 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 
   !['Fehler: Basal ist nicht auf Stunden ausgerichtet'](../images/Screen_DifferentPump.png)
 
-* [Daten kommen von einer anderen Pumpe.](../Maintenance/Update3_0.md#failure-message-data-from-different-pump)
+* [Daten kommen von einer anderen Pumpe.](#update30-failure-message-data-from-different-pump)
 
   ![Fehlermeldung: Daten aus verschiedenen Pumpen](../images/BasalNotAlignedToHours2.png)
 
 * [Nightscout-Client (NSClient)](../GettingHelp/TroubleshootingNsClient.md)
 
 ### Nutzung
-* [Fehlerhafte Kohlenhydrat-Werte (COB)](../DailyLifeWithAaps/CobCalculation.md#detection-of-wrong-cob-values)
+* [Fehlerhafte Kohlenhydrat-Werte (COB)](#CobCalculation-detection-of-wrong-cob-values)
 
    ![Fehler: Langsame KH-Aufnahme](../images/Calculator_SlowCarbAbsorption.png)
 
-* [SMS-Befehle](../RemoteFeatures/SMSCommands.md#troubleshooting)
+* [SMS-Befehle](#SMSCommands-troubleshooting)
 
 ### Häufige Bluetooth-Verbindungsprobleme
 
@@ -84,20 +84,20 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 
 ## CGM
 
-* [General](../CompatibleCgms/GeneralCGMRecommendation.md#troubleshooting)
-* [Dexcom G6](../CompatibleCgms/DexcomG6.md#troubleshooting-g6-and-one)
-* [Libre 3](../CompatibleCgms/Libre3.md#experiences-and-troubleshooting)
-* [Libre 2](../CompatibleCgms/Libre2.md#experiences-and-troubleshooting)
-* [xDrip - fehlende CGM Daten](../CompatibleCgms/xDrip.md#identify-receiver)
-* [xDrip - Dexcom Problembehandlung](../CompatibleCgms/xDrip.md#troubleshooting-dexcom-g5g6-and-xdrip)
+* [General](#general-cgm-troubleshooting)
+* [Dexcom G6](#DexcomG6-troubleshooting-g6)
+* [Libre 3](#libre3-experiences-and-troubleshooting)
+* [Libre 2](#Libre2-experiences-and-troubleshooting)
+* [xDrip - fehlende CGM Daten](#xdrip-identify-receiver)
+* [xDrip - Dexcom Problembehandlung](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ## Pumpen
 
-* [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md#dana-rs-specific-errors)
+* [Dana RS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
 * [Accu-Chek Combo allgemein](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
-* [Accu-Chek Combo + Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
-* [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md#insight-specific-errors)
-* [Medtronic + RileyLink](../CompatiblePumps/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-andor-pump)
+* [Accu-Chek Combo + Ruffy](#Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
+* [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
+* [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
 ## Smartphones
 
@@ -106,5 +106,5 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 
 ## Smartwatches
 
-* [Fehlerbehebung der Wear App](../UsefulLinks/WearOsSmartwatch.md#troubleshooting-the-wear-app)
+* [Fehlerbehebung der Wear App](#Watchfaces-troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../UsefulLinks/SonySW3.md)

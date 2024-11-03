@@ -3,14 +3,14 @@
 ```{admonition} Documentation
 :class: note
 
-This section may contain outdated content. Please also see the page [SMS Commands](../RemoteFeatures/RemoteControl.md#1-sms-commands)).
+This section may contain outdated content. Please also see the page [SMS Commands](#RemoteControl-sms-commands)).
 
 ```
 
 ## Önce Güvenlik
 .
 - AAPS, çocuğunuzun telefonunu kısa mesaj yoluyla uzaktan kontrol etmenizi sağlar. Bu SMS kominikatörü etkinleştirirseniz, uzak komutlar verecek şekilde ayarlanmış telefonun çalınabileceğini unutmayın. Bu yüzden her zaman en azından bir PIN kodu ile telefonu koruyun. Güçlü bir parola veya biyometrik doğrulama önerilir.
-- Additionally it is recommended to allow a [second phone number](../RemoteFeatures/SMSCommands.md#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](../RemoteFeatures/SMSCommands.md#other) SMS communicator in case your main remote phone gets lost or stolen.
+- Additionally it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#SMSCommands-other) SMS communicator in case your main remote phone gets lost or stolen.
 - AAPS ayrıca bolus veya profil değişikliği gibi uzak komutlarınızın gerçekleşip gerçekleşmediğini kısa mesajla size bildirecektir. Alıcı telefonlardan birinin çalınması durumuna karşı en az iki farklı telefon numarasına onay metinleri gönderilecek şekilde ayarlamanız önerilir.
 - **If you bolus through SMS Commands you must enter carbs through Nightscout (AAPSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 - AAPS sürüm 2.7'den itibaren, SMS komutlarını kullanırken güvenliği artırmak için zamana dayalı tek seferlik parolaya sahip bir kimlik doğrulama uygulaması (google authenticator) kullanılmaktadır.
@@ -24,6 +24,7 @@ This section may contain outdated content. Please also see the page [SMS Command
 - If you use an iPhone as a follower and therefore cannot use AAPSClient app, there are additional SMS commands available.
 - Android telefon ayarınızda Uygulamalar > AndroidAPS > İzinler'e gidin ve SMS'i etkinleştirin
 
+(SMSCommands-authorized-phone-numbers)=
 ### Yetkili telefon numaraları
 
 - AAPS'de **Tercihler > SMS Kominikatör**'e gidin ve SMS komutlarının gelmesine izin vereceğiniz telefon numaralarını girin (noktalı virgülle ayrılmış - örn. +6412345678;+6412345679)
@@ -96,9 +97,10 @@ This section may contain outdated content. Please also see the page [SMS Command
 
 **İpucu**: Çok fazla SMS gönderilecekse, telefon tarifenizde (kullanılan her telefon için) sınırsız SMS olması yararlı olabilir.
 
+(SMSCommands-commands)=
 ## Komutlar
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../SupportingAaps/Translations#translate-strings-for-aaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app).
 
 ![SMS Commands Example](../images/SMSCommands.png)
 
@@ -155,7 +157,7 @@ Son gerçekleşen bolus komutundan sonra 15 dakika için uzaktan bolusa izin ver
 - PROFILE 1 \* Yanıt: %100 Profil1 değişimini için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 - PROFILE 2 30 \* Yanıt: %30 Profil2 değişimini için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 
-
+(SMSCommands-other)=
 ### Diğer
 
 - TREATMENTS REFRESH \* Yanıt: Tedavileri NS'den yenile
@@ -169,6 +171,7 @@ Son gerçekleşen bolus komutundan sonra 15 dakika için uzaktan bolusa izin ver
 - HELP \* Yanıt: KŞ, DÖNGÜ, TEDAVİLER, .....
 - HELP BOLUS \* Yanıt: BOLUS 1.2 BOLUS 1.2 YEMEK
 
+(SMSCommands-troubleshooting)=
 ## Troubleshooting
 
 ### Çoklu SMS

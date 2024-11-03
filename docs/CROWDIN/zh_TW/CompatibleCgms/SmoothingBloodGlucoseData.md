@@ -34,7 +34,7 @@
 ### Dexcom 傳感器
 
 #### 自己動手打造您的 Dexcom 應用程式
-當使用 [BYODA](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) 時，你的 BG 資料是平滑且一致的。 此外，您可以利用 Dexcom 的回彈平滑功能。 使用 SMBs 並沒有任何限制，因為噪音級別資料會與 AAPS 共享。
+當使用 [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) 時，你的 BG 資料是平滑且一致的。 此外，您可以利用 Dexcom 的回彈平滑功能。 使用 SMBs 並沒有任何限制，因為噪音級別資料會與 AAPS 共享。
 
 #### xDrip+ 與 Dexcom G6 或 Dexcom ONE 配合使用
 噪聲水平資料和平滑的 BG 讀數僅在你使用 xDrip+ 的 [原生模式](https://navid200.github.io/xDrip/docs/Native-Algorithm) 時與 AAPS 分享。 使用原生模式時，使用 SMBs 並沒有任何限制。
@@ -45,4 +45,4 @@
 ### Freestyle Libre 傳感器
 
 #### xDrip+ 與 FreeStyle Libre 配合使用
-所有 FreeStyle Libre 系統 (FSL1, FSL2 或 FSL3) 均不傳送任何有關讀取中檢測到的噪音等級的信息，因此對於使用 FreeStyle Libre 的所有設置「始終啟用 SMB」和「在碳水化合物後啟用 SMB」都被停用。 此外，許多人報告說 FreeStyle Libre 經常產生嘈雜的資料。
+所有 FreeStyle Libre 系統 (FSL1, FSL2 或 FSL3) 均不傳送任何有關讀取中檢測到的噪音等級的訊息，因此對於使用 FreeStyle Libre 的所有設置「始終啟用 SMB」和「在碳水化合物後啟用 SMB」都被停用。 此外，許多人報告說 FreeStyle Libre 經常產生嘈雜的資料。

@@ -14,6 +14,8 @@ Veřejný přístup k webu Nightscout můžete odepřít použitím [autentizač
 
 Nightscout `API_SECRET` je hlavní heslo vašeho webu: nesdílejte jej veřejně.
 
+(Nightscout-aaps-settings)=
+
 ### AAPS settings
 
 AAPS můžete nastavit tak, aby přijímal Nightscout příkazy (změny profilu, ošetření, ...), nebo je zcela zakázat.
@@ -40,7 +42,7 @@ Mějte ale na paměti, že zadané dávky inzulínu budou použity pouze pro vý
 
 ### Další nastavení zabezpečení
 
-Keep your phone up to date as described in [safety first](../Getting-Started/PreparingForAaps.md#safety-first).
+Keep your phone up to date as described in [safety first](#preparing-safety-first).
 
 (Nightscout-manual-nightscout-setup)=
 

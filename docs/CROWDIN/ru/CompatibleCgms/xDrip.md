@@ -72,7 +72,7 @@
 
 - Трансмиттер Dexcom G6 может одновременно подключаться к ресиверу Dexcom (или к помпе T:slim) и одному приложению на вашем телефоне.
 - При использовании xDrip+ в качестве приемника сначала удалите приложение Dexcom. **Невозможно одновременно подключить к трансмиттеру приложения xDrip+ и Dexcom!**
-- If you need Clarity and want to profit from xDrip+ features, use the [Build Your Own Dexcom App](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+, or use xDrip+ as a Companion app receiving notifications from the official Dexcom app.
+- If you need Clarity and want to profit from xDrip+ features, use the [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+, or use xDrip+ as a Companion app receiving notifications from the official Dexcom app.
 
 ### Версия xDrip+ в зависимости от серии трансмиттера G6.
 
@@ -105,7 +105,7 @@
 
 ### Первое подключение трансмиттера G6
 
-**For second and following transmitters see [Extend transmitter life](../CompatibleCgms/xDrip.md#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](#xdrip-extend-transmitter-life) below.**
 
 Следуйте [этим инструкциям](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
@@ -200,7 +200,7 @@
 ### Уровень батареи Libre smart reader
 
 - Уровень заряда батареи таких мостов, как Miao Miao и Bubble (но не Blucon), отображается в AAPS.
-- Details can be found on [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery).
+- Details can be found on [screenshots page](#screens-sensor-level-battery).
 
 ### Подключите трансмиттер Libre и запустите сенсор
 
@@ -231,6 +231,8 @@
     → Сэндвич-меню (1) → Запустить сенсор (2) → Запустить сенсор (3) → Введите точное время запуска ридером или оригинальным приложением. Если запускали не сегодня, выберите "Не сегодня" (4).
 
 ![xDrip+ запуск трансмиттера Libre & Сенсора 3](../images/xDrip_Libre_Transmitter03.png)
+
+(xdrip-libre2-patched-app)=
 
 ## Модифицированное приложение Libre 2
 

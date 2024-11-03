@@ -21,10 +21,6 @@ eCarbs 是指碳水化合物會在幾個小時內逐步釋放。 對於高碳水
 
 ![圖表中的 eCarbs](../images/eCarbs_Graph.png)
 
-未來的碳水化合物條目在治療標籤中會以深橙色顯示：
-
-![治療標籤中顯示的未來 eCarbs](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 此功能用於處理脂肪和蛋白質的方法描述在此處：[https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
@@ -53,7 +49,7 @@ ______________________________________________________________________
 
 - 閉環將自動停止並切換為開環模式，以運作延長注射。
 - 注射單位、剩餘和總時間將顯示在主畫面。
-- 在 Insight 幫浦上，如果使用[TBR 模擬](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)，則不提供延長注射功能。
+- 在 Insight 幫浦上，如果使用[TBR 模擬](#Accu-Chek-Insight-Pump-settings-in-aaps)，則不提供延長注射功能。
 
 ![AAPS 2.6 中的延長注射](../images/ExtendedBolus2_6.png)
 

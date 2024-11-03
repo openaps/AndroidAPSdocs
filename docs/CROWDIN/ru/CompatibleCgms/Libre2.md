@@ -8,7 +8,7 @@
 
 Убедитесь, что мост и приложение, которое вы хотите использовать, совместимы с вашим сенсором и xDrip+ (более старые модели Blucon не будут работать, Miaomiao 1 требует прошивки 39 и Miaomiao 2 прошивки 7).
 
-Алгоритм ООП Libre2 выдает те же показания BГк, что и при использовании оригинального ридера или приложения LibreLink при сканировании NFC. Во избежание скачков, AAPS с Libre2 производит сглаживание в пределах от 10 до 25 минут. See below [Value smoothing & raw values](#value-smoothing--raw-values). Алгоритм программы генерирует данные каждые 5 минут со сглаживанием по среднему значению за последние 5 минут. Поэтому значения ГК не выглядят гладкими, а совпадают с показаниями оригинального устройства считывания и быстрее следуют "реальным". Если вы хотите пользоваться алгоритмом OOP, включите все настройки сглаживания в xDrip+.
+Алгоритм ООП Libre2 выдает те же показания BГк, что и при использовании оригинального ридера или приложения LibreLink при сканировании NFC. Во избежание скачков, AAPS с Libre2 производит сглаживание в пределах от 10 до 25 минут. See below [Value smoothing & raw values](#libre2-value-smoothing-raw-values). Алгоритм программы генерирует данные каждые 5 минут со сглаживанием по среднему значению за последние 5 минут. Поэтому значения ГК не выглядят гладкими, а совпадают с показаниями оригинального устройства считывания и быстрее следуют "реальным". Если вы хотите пользоваться алгоритмом OOP, включите все настройки сглаживания в xDrip+.
 
 Есть несколько веских причин пользоваться передатчиком Bluetooth:
 
@@ -34,7 +34,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 - Следуйте [этим инструкциям](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) для настройки xDrip+, но обязательно загрузите [эту новую версию OOP 2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view), поскольку та, что приведена в документе, устарела.
 - Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 
--   Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+-   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ## 3. Использовать Diabox
 
@@ -42,7 +42,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ## 4. Использовать Juggluco
 
@@ -52,7 +52,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ```{admonition} Use with xDrip+
 :class: note
@@ -61,6 +61,7 @@ You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you sh
 You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
 ```
 
+(libre2-patched-librelink-app-with-xdrip)=
 ## 5. Использовать модифицированное приложение LibreLink с xDrip+
 
 ```{admonition} Libre 2 EU only
@@ -145,7 +146,7 @@ The patched app is an old version (22/4/2019) and might not be compatible with r
 Значения гликемии передаются на смартфон приложением xDrip+.
 
 -   Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции. В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
--   Set xDrip+ with the [patched app data source](../CompatibleCgms/xDrip.md#libre-2-patched-app).
+-   Set xDrip+ with the [patched app data source](#xdrip-libre2-patched-app).
 -   Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 
 ### Шаг 4: Запускаем сенсор
@@ -164,7 +165,7 @@ The patched app is an old version (22/4/2019) and might not be compatible with r
 
 ![Источник ГК в xDrip+](../images/ConfBuild_BG_xDrip.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](./xDrip.md#identify-receiver).
+-   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](#xdrip-identify-receiver).
 
 До настоящего времени, при выборе Libre 2 в качестве источника данных ГК, в алгоритме SMB невозможно активировать «Включить SMB всегда» и «Включить SMB после углеводов». Значения BG Libre 2 недостаточно сглажены, чтобы их безопасно использовать. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
 
@@ -175,6 +176,7 @@ The patched app is an old version (22/4/2019) and might not be compatible with r
 
 У большинства телефонов связь хорошая, за исключением мобильных телефонов Huawei. Связь может прерваться, когда мобильный телефон находится в кармане напротив сенсора или когда вы на улице. Носите телефон на теле со стороны сенсора. В помещениях, где устройства Bluettooth работают за счет отражений, нет никаких проблем. Если возникают проблемы с подключением, попробуйте другой телефон. Также может помочь установка сенсора антенной BT вниз. При установке сенсора прорезь на аппликаторе должна быть направлена вниз.
 
+(libre2-value-smoothing-raw-values)=
 #### Сглаживание данных & необработанные данные
 
 Технически, текущее значение сахара в крови передается на xDrip + каждую минуту. По умолчанию фильтр средневзвешенного значения вычисляет сглаженное значение за последние 25 минут. Этот период можно изменить в меню функций сканирования NFC.
@@ -215,6 +217,7 @@ Libre2 можно калибровать **с погрешностью -40 мг/
 
 Сенсоры Libre2 способны выполнять самопроверку для обнаружения плохих сенсоров. Как только сенсор смещается на руке или слегка приподнимается, данные могут начать колебаться. После этого датчик Libre2 отключится по соображениям безопасности. К сожалению, при сканировании при помощи приложения, проводятся дополнительные проверки. Приложение может отключить сенсор, даже если он исправен. В настоящее время внутренний тест слишком жесткий. Избегайте сканирования сенсора другим телефоном, чтобы уменьшить риск его неожиданного отключения.
 
+(Libre2-best-practices-for-calibrating-a-libre-2-sensor)=
 # Наилучшие методы калибровки Libre 2
 
 Существует несколько "правил" для лучших результатов калибровки сенсоров Libre 2. Они не зависят от программного обеспечения (например, модифицированное приложение libre2, oop2, …), для обработки значений Libre2 .

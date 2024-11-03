@@ -21,10 +21,6 @@ Les eGlucides dans l’onglet Accueil, notez les glucides entre parenthèses dan
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
-Les glucides qui se seront pris en compte plus tard sont en orange foncé dans l'onglet Traitement :
-
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 Une façon de gérer les graisses et les protéines avec cette fonctionnalité est décrite ici: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
@@ -53,7 +49,7 @@ C'est pourquoi à partir de la version 2.6, il y a une option pour un bolus éte
 
 - La boucle fermée sera automatiquement arrêtée et basculera en mode boucle ouverte pour la durée du bolus étendu.
 - La quantité d'insuline, le temps restant et le temps total seront affichés sur la page d'accueil.
-- On Insight pump extended bolus is *not available* if [TBR emulation](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
+- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 

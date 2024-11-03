@@ -4,7 +4,7 @@
 
 Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an openAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: an Android phone, a FDA/CE approved insulin pump, and a continuous glucose meter (CGM).
 
-This documentation explains how to setup and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy "**Search docs**" function), or by using the [index](#aaps-documentation-index) at the bottom of this page.
+This documentation explains how to setup and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy "**Search docs**" function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
 
 ## Overview of the AAPS documentation ("The docs")
 
@@ -55,7 +55,7 @@ Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower bl
 
 ```
 
-(AAPS-Documentation-Index)=
+(index-aaps-documentation-index)=
 
 ## AAPS Documentation Index
 

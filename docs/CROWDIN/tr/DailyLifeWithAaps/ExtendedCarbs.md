@@ -21,10 +21,6 @@ Genel bakış (Giriş) sekmesindeki yKarb, gelecekte karbonhidratları gösteren
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
-Gelecekteki karbonhidrat girişleri, tedavi sekmesinde koyu turuncu renktedir:
-
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 Aşağıdaki linkte özellikle yağ ve proteini işlemenin bir yolu açıklanmaktadır: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
@@ -53,7 +49,7 @@ Bu nedenle 2.6 sürümünden itibaren Dana ve Insight pompa kullanıcıları iç
 
 - Kapalı döngü otomatik olarak durdurulacak ve yayma bolus çalıştığı süre boyunca açık döngü moduna geçecektir.
 - Kalan Bolus ve toplam süre ana ekranda gösterilecektir.
-- On Insight pump extended bolus is *not available* if [TBR emulation](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
+- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 

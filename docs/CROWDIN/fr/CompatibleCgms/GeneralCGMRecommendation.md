@@ -17,6 +17,7 @@ Lors de la mise en place du capteur, il est recommandé de ne pas appuyer trop f
 
 Après la mise en place du capteur, l'émetteur peut être cliqué dans son support. Attention ! Cliquez d'abord sur le côté carré, puis appuyez sur le côté rond.
 
+(general-cgm-troubleshooting)=
 ## Troubleshooting
 
 ### Problèmes de connexion
@@ -37,4 +38,4 @@ Vous pouvez essayer de modifier les paramètres de blocage du bruit dans xdrip (
 
 ![Âge du capteur négatif](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../DailyLifeWithAaps/AapsScreens.md#action-tab) or a sensor insert with wrong date. Allez dans l'onglet Traitements > Careportal et supprimez la mauvaise entrée.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](#screens-action-tab) or a sensor insert with wrong date. Allez dans l'onglet Traitements > Careportal et supprimez la mauvaise entrée.
