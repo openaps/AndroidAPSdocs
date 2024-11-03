@@ -48,9 +48,17 @@
 
 要設置**自動化**，請按照以下步驟在**AAPS**中建立一個「規則」：
 
+![Automation create](../images/automation_create.png)
+
 * 為你的「規則」命名；
-* 選擇至少一個「條件」；
+* select at least one ‘Condition’;
+
+![Automation condition](../images/automation_condition.png)
+
 * 選擇一個「動作」；
+
+![Automation action](../images/automation_action.png)
+
 * 檢查 **自動化** 事件的右側方框是否被「勾選」以啟用 **自動化**：
 
 ![自動化](../images/automation_2024-10-26_17-48-05.png)
@@ -93,13 +101,13 @@
 
 ![替代文字](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-**範例 1：**建立條件**「小於」**“-0.1”將：
+**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
 
-觸發**自動化**，當任何數字**小於**-0.1時。 這包括如-0.2、-0.3、-0.4等數值。 請記住，-0.1 本身**不**包含在此條件內。 （條件「小於或等於 -0.1」_才會_包含 -0.1）。
+Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/l (-2 mg/dl)" _would_ include -0.1 mmol/l or -2 mg/dl).
 
-**範例 2：**建立條件「大於 -0.1」將：
+**Example 2:** Creating a Condition "is greater than" -0.1mmol/l (-2mg/dl) will:
 
-觸發**自動化**，當任何數字**大於**-0.1時。 這包括如 0、0.2、0.4 和任何其他正數。
+Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-2mg/dl). This includes numbers like 0, 0.2, 0.4mmol/l, (0, 4, 8mg/dl) and any other positive number.
 
 在選擇這些條件和數值時，仔細考慮你的**自動化**的具體意圖非常重要。
 
@@ -162,8 +170,6 @@
 添加了「動作」後，應透過點擊並調整預設值，將預設數值更改為所需的數字。
 
 ![替代文字](../images/automation_2024-02-12_20-57-07.png)
-
-![替代文字](../images/automation_2024-02-12_20-57-29.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## 列表中**自動化**的順序非常重要

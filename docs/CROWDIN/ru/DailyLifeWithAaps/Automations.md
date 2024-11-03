@@ -46,9 +46,17 @@ Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, 
 
 Чтобы настроить **Automation** создайте правило **AAPS** следующим образом:
 
+![Automation create](../images/automation_create.png)
+
 * give your ‘rule’ a title;
-* select at least one ‘Condition’; and
+* select at least one ‘Condition’;
+
+![Automation condition](../images/automation_condition.png)
+
 * select one ‘Action’;
+
+![Automation action](../images/automation_action.png)
+
 * check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
 
 ![Автоматизация](../images/automation_2024-10-26_17-48-05.png)
@@ -91,13 +99,13 @@ Please be careful when selecting a negative value in **Automation**
 
 ![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-**Пример 1:** Создание условия **"меньше, чем"** "-0,1" приведет к:
+**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
 
-Запустит **Automation** для любого числа, которое **строго** меньше, чем** -0,1. Сюда войдут такие числа как -0.2, -0.3, -0.4 и так далее. Помните, что -0,1 само **не** включен в это условие. (условие "меньше или равно -0,1" _включало бы_ -0,1).
+Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/l (-2 mg/dl)" _would_ include -0.1 mmol/l or -2 mg/dl).
 
-**Пример 2:** Создание условия "больше, чем" -0,1 приведет к:
+**Example 2:** Creating a Condition "is greater than" -0.1mmol/l (-2mg/dl) will:
 
-Запустит **Автоматизацию** для любого числа, которое **строго** больше, чем** -0,1. Сюда входят такие числа как 0, 0,2, 0,4 и любые другие положительные числа.
+Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-2mg/dl). This includes numbers like 0, 0.2, 0.4mmol/l, (0, 4, 8mg/dl) and any other positive number.
 
 Важно тщательно учитывать точное назначение **автоматизации** при выборе этих условий и значений.
 
@@ -160,8 +168,6 @@ Please be careful when selecting a negative value in **Automation**
 После добавления «Действия» значения по умолчанию должны быть изменены на желаемую величину путем нажатия и изменения значения по умолчанию.
 
 ![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-57-07.png)
-
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-57-29.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## The order of the **Automations** in the list matters
