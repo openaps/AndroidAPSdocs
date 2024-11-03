@@ -4,7 +4,7 @@
 
 更改手機時區沒有問題，因為幫浦不使用歷史紀錄。
 
-(timezone-traveling-danarv2-danars)=
+(時區-旅行-danarv2-danars)=
 
 ## DanaRv2，DanaRS
 
@@ -26,7 +26,7 @@
    
    * 例如：維也納 -> 紐約：設定切換 +6 小時
    * 例如：維也納 -> 悉尼：設定切換 -8 小時
-* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
+* 如果使用[修補版 LibreLink 應用程式](#libre2-patched-librelink-app-with-xdrip)，可能無法選擇，因為必須設置自動時區才能啟動新的 Libre 2 傳感器。
 
 ### 方案2：刪除幫浦歷史紀錄
 
@@ -42,7 +42,7 @@
 * 打開手機。
 * 讓手機連線到幫浦並微調時間。
 
-(timezone-traveling-insight)=
+(時區-旅行洞察)=
 
 ## Insight
 
@@ -70,7 +70,7 @@ Insight 也會紀錄更改時間的歷史條目，紀錄時間從哪個（舊）
 
 當時區或時間更改時，正在運作的 TBR 會停止。
 
-(time-adjustment-daylight-savings-time-dst)=
+(時間調整-夏令時間-DST)=
 
 ## 時間調整夏令時間（DST）
 
