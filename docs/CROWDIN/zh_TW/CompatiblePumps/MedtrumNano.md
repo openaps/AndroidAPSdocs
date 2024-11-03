@@ -50,7 +50,7 @@
 
 #### 選項 2：組態建置工具
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](#Config-Builder-pump):
+在現有安裝中，您可以在[組態設置工具](#Config-Builder-pump)中選擇**Medtrum** 幫浦：
 
 在左上角的**漢堡選單**中選擇**組態建置工具**\ ➜\ **幫浦**\ ➜\ **Medtrum**，選擇**啟用按鈕**標題為**Medtrum**。
 
@@ -90,7 +90,7 @@ On an existing installation you can select the **Medtrum** pump from the [Config
     - 儲液瓶電量低（20單位）
     - 修補版即將過期警告
 
-In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
+無論如何，這些警告也會顯示在Medtrum總覽畫面中的[活動警報](#medtrum-active-alarms)下。
 
 (medtrum-patch-expiration)=
 #### 修補版過期
@@ -105,7 +105,7 @@ In either case these warnings are also shown on the Medtrum overview screen unde
 
 ***預設：72小時。***
 
-This setting changes the time of the expiration warning, when [Patch Expiration](#medtrum-patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
+此設置更改過期警告的時間，當[修補版過期](#medtrum-patch-expiration)啟用時，AAPS將在啟動後的設定小時內發送通知。
 
 #### 每小時最大胰島素輸送量
 
@@ -324,7 +324,7 @@ This setting changes the time of the expiration warning, when [Patch Expiration]
 
 ##### 更換修補版：
 
-此按鈕將啟動更換修補版的過程。 See [Activate patch](#medtrum-activate-patch) for more information.
+此按鈕將啟動更換修補版的過程。 詳情請參見 [啟用藥匣](#medtrum-activate-patch)。
 
 ### 重置警報
 
