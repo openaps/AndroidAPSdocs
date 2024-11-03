@@ -97,6 +97,7 @@ If this setting is enabled, SMB will be allowed, but not necessarily enabled, wh
 
 If this setting is enabled, SMB will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled. 
 
+(Open-APS-features-enable-smb-always)=
 ### Enable SMB always
 If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled. 
 
