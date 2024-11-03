@@ -56,7 +56,7 @@ AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理�
 
 ### 步驟 4：配置 AndroidAPS
 
-- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- 在[ConfigBuilder 的血糖來源](#Config-Builder-bg-source)中選擇 xDrip+。
 
 - 如果 AndroidAPS 在手機處於飛行模式時無法接收血糖值，請使用「識別接收器」。
 - 關閉平滑處理（已在 Xdrip+ 中完成）。
