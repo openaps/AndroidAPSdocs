@@ -32,7 +32,7 @@
 
 В AAPS коснитесь выпадающего меню в верхней правой части экране и перейдите в меню Параметры > AAPSClient > Дополнительные параметры > Снимите галочки с 'Только загрузка в NS (без синхронизации)' и 'Без загрузки в NS'.
 
-Be aware of the [security issues](../SettingUpAaps/Nightscout.md#security-considerations) that might occur and be very careful if you are using an [Insight pump](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps).
+Be aware of the [security issues](#Nightscout-security-considerations) that might occur and be very careful if you are using an [Insight pump](#Accu-Chek-Insight-Pump-settings-in-aaps).
 
 ![Настройки загрузок Nightscout](../images/automate-aaps2.jpg)
 

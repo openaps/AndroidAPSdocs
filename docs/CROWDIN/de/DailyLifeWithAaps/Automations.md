@@ -163,6 +163,7 @@ Sobald die Aktion hinzugefügt wurde, müssen die voreingestellten Werte durch K
 
 ![Alt text](../images/automation_2024-02-12_20-57-29.png)
 
+(Automations-the-order-of-the-automations-in-the-list-matters)=
 ## The order of the **Automations** in the list matters
  **AAPS** ordnet die Regeln in der Reihenfolge, wie sie erstellt wurden und beginnt bei der oberen Automatisierung mit dem Abarbeiten der **Automatisierungsliste**. Wenn beispielsweise ‘Hypobehandlung’ unter allen Automatisierungsregeln die wichtigste **Automatisierung** ist, sollte diese ganz oben auf der Liste Deiner **Automatisierungen** erscheinen:
 

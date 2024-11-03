@@ -18,6 +18,8 @@ Citlivost se počítá stejným způsobem jako Oref1, ale můžete specifikovat 
 
 Citlivost se počítá jako vážený průměr z odchylek. Můžete specifikovat čas do minulosti. Novější odchylky mají vyšší váhu. Minimální vstřebávání sacharidů se počítá z maximálního času vstřebávání sacharidů z předvoleb. Tento algoritmus je nejrychlejší v sledování změn citlivosti.
 
+(SensitivityDetectionAndCob-sensitivity-oref1)=
+
 ### Citlivost Oref1
 
 Citlivost se počítá z dat za posledních 8 hodin nebo od poslední změny místa, pokud to bylo méně než před 8 hodinami. Sacharidy (pokud nejsou absorbovány) jsou odečteny po čase uvedeném v předvolebních nastaveních. Jedině algoritmus Oref1 podporuje nenahlášené jídla (UAM). To znamená, že časy s detekovanými UAM jsou vyloučeny z výpočtu citlivosti. Pokud používáte SMB s UAM, musíte zvolit algoritmus Oref1, aby správně fungoval. Pro více informací si přečtěte [dokumentaci OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).

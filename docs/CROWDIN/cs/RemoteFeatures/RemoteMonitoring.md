@@ -10,7 +10,7 @@ AAPS nabízí několik možností pro vzdálené monitorování dětí a také u
 - Rodiče mohou vzdáleně sledovat všechny relevantní údaje jako např. hladiny glukózy, aktivní sacharidy aktivní inzulín atd. pomocí **aplikace AAPSClient** na svém telefonu. Nastavení v AAPS i AAPSClientu musí být stejné.
 - Rodiče mohou být na svém mobilu varováni alarmy v aplikaci **xDrip v režimu follower**.
 - Remote control of AAPS using [SMS Commands](../RemoteFeatures/SMSCommands.md) secured by two-factor authentication.
-- Remote control through AAPSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](../Maintenance/ReleaseNotes.md#version-2811) for further details.
+- Remote control through AAPSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](#important-hints-2-8-1-1) for further details.
 
 ## Nástroje a aplikace pro vzdálené monitorování
 
@@ -30,7 +30,7 @@ Když máte děti, mohou být chytré hodinky velmi užitečným nástrojem pro 
 
 ## Co je třeba zvážit
 
-- Setting the correct [treatment factors](../UsefulLinks/FAQ.md#how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
+- Setting the correct [treatment factors](#FAQ-how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
 - Nastavení v AAPS i AAPSClientu musí být stejné.
 - Vezměte v úvahu časový rozdíl mezi hlavním a sledujícím zařízením způsobený časem potřebným k nahrávání a stahování, a také skutečnost, že hlavní AAPS telefon bude nahrávat pouze po spuštění smyčky.
 - Takže si dejte načas a nastavte je správně a otestujte je v reálném životě se svým dítětem vedle sebe ještě předtím, než začnete se vzdáleným monitorováním a řízením na dálku. Ideální dobou pro jejich nastavení a otestování by mohly být školní prázdniny.

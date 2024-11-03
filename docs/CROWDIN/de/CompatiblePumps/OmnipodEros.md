@@ -360,6 +360,7 @@ Dieser Bildschirm liefert Informationen, Status und Einstellungen zur Konfigurat
 > - **Letzter Gerätekontakt:** Datum und Uhrzeit des letzten Kontakts vom Pod mit dem Pod-Kommunikationsgerät.
 > - **Aktualisieren Button:** Durch Klicken manuell die Einstellungen auf dieser Seite aktualisieren.
 
+(omnipod-eros-rileylink-and-active-pod-history)=
 #### Historie des RileyLink und aktiven Pods
 
 Dieser Bildschirm gibt in umgekehrter chronologischer Reihenfolge Auskunft über jeden Zustand oder jede Maßnahme des RileyLink und des aktuell verbundenen Pods. Die gesamte Historie ist nur für den gerade aktiven Pod verfügbar. Nach einem Podwechsel wird diese Historie gelöscht und nur die Ereignisse des neu aktivierten Pods werden aufgezeichnet und angezeigt.
@@ -428,7 +429,7 @@ Im Folgenden werden die Anordnung und die Bedeutung der Symbole und Statusfelder
 
 - **Insgesamt abgegeben:** Zeigt die Gesamtzahl der aus dem Reservoir abgegebenen Insulineinheiten an. *Beachte, dass es sich hierbei um einen Näherungswert handelt, da das Befüllen des Pods nicht absolut exakt geschieht.*
 
-- **Fehler:** Zeigt den letzten Fehler an. Review the [Pod history](#view-pod-history), [RileyLink history](#rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **Fehler:** Zeigt den letzten Fehler an. Review the [Pod history](#view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
 - **Aktive Pod-Warnungen:** Zeigt jeweils aktuelle Warnungen auf dem aktiven Pod. Wird normalerweise verwendet, wenn das Pod-Ablaufdatum nach 72 Stunden erreicht ist und native Pieptöne vom Pod ausgegeben werden.
 
@@ -540,7 +541,7 @@ Im Folgenden werden die Darstellung und die Bedeutung der Symbole im Menü **Pod
   > Durch Drücken dieser Taste wird die Konfiguration des aktuell angeschlossenen Pod-Kommunikationsgeräts zurückgesetzt.
   > 
   > > - Wenn die Kommunikation gestartet wird, werden bestimmte Daten an das Pod-Kommunikationsgerät gesendet und dort eingestellt > - Speicherregister werden gesetzt > - Kommunikationsprotokolle werden eingestellt > - Eingestellte Funkfrequenz wird gesetzt 
-  > > - See [additional notes](#reset-rileylink-config-notes) at the end of this table
+  > > - See [additional notes](#OmnipodEros-reset-rileylink-config-notes) at the end of this table
 
 - **Pulse-Log lesen:**
 

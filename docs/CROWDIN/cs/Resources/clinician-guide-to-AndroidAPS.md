@@ -43,7 +43,7 @@ AAPS is designed to transparently track all input data it gathers, the resulting
 
 ## Examples of AAPS algorithm decision making:
 
-AAPS uses the same core algorithm and feature set as OpenAPS. Algoritmus vytváří několik predikcí (na základě nastavení a aktuální situace), které představují různé scénáře toho, co se může stát v budoucnosti. V Nightscoutu jsou tyto predikce zobrazeny jako „fialové křivky“. AAPS uses different colors to separate these [prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines). V protokolech najdete informace o tom, která z těchto křivek predikce a kdy byla použita pro danou akci.
+AAPS uses the same core algorithm and feature set as OpenAPS. Algoritmus vytváří několik predikcí (na základě nastavení a aktuální situace), které představují různé scénáře toho, co se může stát v budoucnosti. V Nightscoutu jsou tyto predikce zobrazeny jako „fialové křivky“. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). V protokolech najdete informace o tom, která z těchto křivek predikce a kdy byla použita pro danou akci.
 
 ### Zde jsou příklady fialových křivek predikce a toho, jak se mohou lišit:
 

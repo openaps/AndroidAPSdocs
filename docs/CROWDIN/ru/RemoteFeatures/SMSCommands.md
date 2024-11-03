@@ -3,14 +3,14 @@
 ```{admonition} Documentation
 :class: note
 
-This section may contain outdated content. Please also see the page [SMS Commands](../RemoteFeatures/RemoteControl.md#1-sms-commands)).
+This section may contain outdated content. Please also see the page [SMS Commands](#RemoteControl-sms-commands)).
 
 ```
 
 ## Безопасность прежде всего
 .
 - AndroidAPS позволяет вам контролировать телефон ребенка удаленно посредством текстовых сообщений (смс). Если смс-коммуникатор активирован, не забывайте, что телефон, настроенный на подачу удаленных команд, может быть украден. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом. Рекомендуется использовать надежный пароль или биометрические данные.
-- Additionally it is recommended to allow a [second phone number](../RemoteFeatures/SMSCommands.md#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](../RemoteFeatures/SMSCommands.md#other) SMS communicator in case your main remote phone gets lost or stolen.
+- Additionally it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#SMSCommands-other) SMS communicator in case your main remote phone gets lost or stolen.
 - AndroidAPS также сообщит вам текстовым сообщением, выполнены ли ваши удаленные команды, такие как болюс или изменения профиля. Рекомендуется сделать такую настройку, чтобы подтверждающие тексты направлялись по меньшей мере на два разных телефона на тот случай, если один из них украден.
 - **Если вы подаете болюс через SMS-команды необходимо вводить углеводы через Nightscout (AAPSClient, сайт...)**Если вы этого не сделаете, AAPS будет считать, что активных углеводов COB слишком мало и, вероятно, не будет подавать корректировочный болюс, полагая, что у вас много активного инсулина.
 - Начиная с версии AndroidAPS 2.7 при использовании SMS-команд необходимо использовать приложение-аутентификатор с одноразовым паролем.
@@ -24,6 +24,7 @@ This section may contain outdated content. Please also see the page [SMS Command
 - Если у вас для слежения iPhone и, следовательно, нет возможности использовать AAPSclient, доступны дополнительные SMS-команды.
 - В настройках телефона перейдите в приложения > AndroidAPS > Разрешения и включите SMS
 
+(SMSCommands-authorized-phone-numbers)=
 ### Авторизованные номера телефонов
 
 - В AAPS перейдите в **Настройки > SMS Коммуникатор**и введите номер(а) телефона(ов), с которых хотите отправлять SMS команды (разделенные точками с запятыми - напр +6412345678;+6412345679)
@@ -96,9 +97,10 @@ This section may contain outdated content. Please also see the page [SMS Command
 
 ***Подсказка**: Если отправляется много SMS, полезно иметь тарифный план с неограниченным количеством SMS (на обоих телефонах).
 
+(SMSCommands-commands)=
 ## Команды
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../SupportingAaps/Translations#translate-strings-for-aaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app).
 
 ![SMS Commands Example](../images/SMSCommands.png)
 
@@ -155,7 +157,7 @@ Commands must be sent in English, the response will be in your local language if
 - PROFILE 1 \* Ответ: Для переключения профиля на Profile1 100% ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
 - PROFILE 2 30 \* Ответ: Для переключения профиля на Profile2 30% ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
 
-
+(SMSCommands-other)=
 ### Другое
 
 - TREATMENTS REFRESH \* Ответ: Обновление терапии из NS
@@ -169,6 +171,7 @@ Commands must be sent in English, the response will be in your local language if
 - HELP \* Ответ: BG, LOOP, TREATMENTS, ..... (ГК, ЦИКЛ, ТЕРАПИЯ...).....
 - HELP BOLUS \* Ответ: BOLUS 1.2 BOLUS 1.2 MEAL (БОЛЮС 1.2 БОЛЮС 1.2 НА ЕДУ)
 
+(SMSCommands-troubleshooting)=
 ## Troubleshooting
 
 ### Несколько SMS

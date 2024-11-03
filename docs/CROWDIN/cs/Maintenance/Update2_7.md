@@ -2,13 +2,13 @@
 
 - U verze AAPS 2.7 byl kód programu významně změněn.
 - Proto je důležité, abyste po aktualizaci provedli nějaké změny, nebo zkontrolovali nastavení.
-- Please see [release notes](ReleaseNotes.md#version-270) for details on new and extended features.
+- Please see [release notes](#Releasenotes-version-2-7-0) for details on new and extended features.
 
 ## Zkontrolujte zdroj glykémií
 
 - Zkontrolujte, zda je zdroj glykémií po aktualizaci správný.
 - Especially when using [xDrip+](../CompatibleCgms/xDrip.md) it might happen, that BG source is changed to Dexcom app (patched).
-- Open [Config builder](../SettingUpAaps/ConfigBuilder.md#bg-source) (hamburger menu on top left side of home screen)
+- Open [Config builder](#Config-Builder-bg-source) (hamburger menu on top left side of home screen)
 - Sjeďte dolů na "Zdroj glykémie".
 - Je-li to nutné, nastavte správný zdroj glykémie.
 
@@ -17,8 +17,8 @@
 ## Dokončit cíle
 
 - AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for [automation](../DailyLifeWithAaps/Automations.md).
-- You have to finish exam ([objective 3 and 4](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf).
-- If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf).
+- You have to finish exam ([objective 3 and 4](#objectives-objective3)) in order to complete [objective 11](#objectives-objective11).
+- If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start [objective 11](#objectives-objective11).
 - Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
 
 ## Nastavit hlavní heslo
@@ -39,7 +39,7 @@
 - Ujistěte se, že jste uložili exportovaná nastavení nejen na vašem telefonu, ale také alespoň na jednom bezpečném místě (pc, cloudové úložiště...).
 - Pokud sestavujete apk AAPS 2.7 za použití stejného podpisového klíče jako u předchozích verzí, můžete instalovat novou verzi bez odstranění předchozí verze.
 - Všechna nastavení i dokončené cíle zůstanou tak, jak byly v předchozí verzi.
-- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore).
+- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](#troubleshooting_androidstudio-lost-keystore).
 
 ## Autosens (Tip - není nutná žádná akce)
 
@@ -53,8 +53,8 @@
 - Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
 - Přejděte dolů a klikněte na trojúhelník vedle "Dana RS".
 - Klikněte na "Heslo pumpy (pouze v1)"
-- Enter pump password ([Default password](../CompatiblePumps/DanaRS-Insulin-Pump.md#default-password) is different depending on firmware version) and click OK.
+- Enter pump password ([Default password](#DanaRS-Insulin-Pump-default-password) is different depending on firmware version) and click OK.
 
 ![Set Dana RS password](../images/DanaRSPW.png)
 
-To change password on Dana RS follow instructions on [DanaRS page](../CompatiblePumps/DanaRS-Insulin-Pump.md#change-password-on-pump).
+To change password on Dana RS follow instructions on [DanaRS page](#DanaRS-Insulin-Pump-change-password-on-pump).

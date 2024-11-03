@@ -24,6 +24,7 @@
 * nsclient sekmesine gidin ve sağdaki menüden ayarları açın. Artık yeni bir "Senkronizasyon" tercihi mevcuttur.
 * Artık Nightscout sitenizle hangi öğelerin senkronize edileceği konusunda ayrıntılı bir seçim yapabilirsiniz.
 
+(Update3_0-nightscout-profile-cannot-be-pushed)=
 ## Nightscout profili aktarılamıyor
 * Nightscout profili gitti, huzur içinde uyu!
 * Mevcut nightscout profilinizi yerel bir profile kopyalamak için tedaviler sayfasına gidin (şimdi sağdaki menüde açılacaktır).
@@ -31,6 +32,7 @@
 * Geçerli tarihten itibaren geçerli olan yeni bir yerel profil eklenir.
 * Profili NS tarafından güncellemek için "Klonla" (kaydet!!, profil değil) kullanın ve değişiklikleri kaydedin. Geçerli tarihe ayarlanmış "Profil değeri:" görmelisiniz.
 
+(Update3_0-reset-master-password)=
 ## Ana parolayı sıfırla
 * Unutmanız durumunda artık ana şifrenizi sıfırlayabilirsiniz.
 * Telefonunuzun dosya sisteminde `/AAPS/extra` dizinine `PasswordReset` adlı bir dosya eklemeniz gerekiyor.
@@ -47,11 +49,11 @@ Android 3.0'dan itibaren, ana ekranda KŞ değerinizin altında bir uyarı sinya
 
   ![Sarı KŞ uyarısı](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign)
+For details see [AAPS screens page](#aaps-screens-bg-warning-sign)
 
-
+(update30-failure-message-data-from-different-pump)=
 ## Hata mesajı: Farklı pompadan gelen veriler
 
    ![Hata mesajı: Farklı pompadan gelen veriler](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../SettingUpAaps/ConfigBuilder.md#pump). Pompayı sanal pompa ile değiştirin ve daha sonra gerçek pompanıza geri dönün. Bu şekilde pompa durumu sıfırlanacaktır.
+To resolve this issue go to [config builder](#Config-Builder-pump). Pompayı sanal pompa ile değiştirin ve daha sonra gerçek pompanıza geri dönün. Bu şekilde pompa durumu sıfırlanacaktır.

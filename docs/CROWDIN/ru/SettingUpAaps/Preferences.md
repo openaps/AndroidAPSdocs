@@ -70,7 +70,7 @@
 
 - Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md).
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
+- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
 
   ![Защита](../images/Pref2020_Protection.png)
 
@@ -168,7 +168,7 @@
 
 ### Заполнить стандартное количество инсулина
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](#screens-action-tab).
 - В этом диалоге можно задать предустановленные значения.
 
 (Preferences-range-for-visualization)=
@@ -186,6 +186,7 @@
 
   ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
+(Preferences-show-notes-field-in-treatments-dialogs)=
 ### Показывать поле примечаний в диалогах терапии
 
 - Дает возможность добавить короткие примечания к терапии (мастер болюса, углеводы, инсулин...)
@@ -198,7 +199,7 @@
 - Индикаторы состояния сообщают:
 
   - сколько времени отработал сенсор
-  - Sensor battery level for certain smart readers (see [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery) for details).
+  - Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
   - сколько времени прошло с момента установки резервуара
   - об уровне заполнения резервуара (в единицах)
   - сколько времени прошло с момента установки канюли
@@ -213,16 +214,18 @@
 
   ![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
 
+(Preferences-deliver-this-part-of-bolus-wizard-result)=
 ### Deliver this part of bolus wizard result
 
-Set the [default percentage](../DailyLifeWithAaps/AapsScreens.md#section-j) of the bolus calculated when using the bolus wizard.
+Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
 
 Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard.
 
-When using [SMB](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb), using a value lower than 100% here can be useful:
+When using [SMB](#objectives-objective9), using a value lower than 100% here can be useful:
 * for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
 * to leave more room to *AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate the missing part of the bolus with SMBs, if/when deemed adequate.
 
+(Preferences-advanced-settings-overview)=
 ### Расширенные настройки (обзор)
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
@@ -277,8 +280,8 @@ When using [SMB](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enablin
 
 Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### Настройки OpenAPS AMA
 
@@ -292,7 +295,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 - Значение задается в единицах в час (ед./ч).
 - Рекомендуется установить какое-то разумное значение. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 4**.
 - Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 4, вы получите значение 2 ед./ч.
-- See also [detailed feature description](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to).
 
 #### Максимальный активный базальный инсулин IOB, разрешенный в OpenAPS [ед.]
 
@@ -316,7 +319,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 
 #### Autosens
 
-- [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](#Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
 - На основе отклонений он пытается выяснить, насколько вы чувствительны/резистентны к инсулину и корректирует базальную скорость и коэффициент чувствительности к инсулину ISF.
 - Если вы выберете "Autosense также подстраивает цели", алгоритм будет менять целевую ГК.
 
@@ -328,17 +331,17 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 (Preferences-openaps-smb-settings)=
 ### Настройки OpenAPS SMB
 
-- In contrast to AMA, [SMB](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](#Open-APS-features-super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
+- You must have started [objective 9](#objectives-objective9) to use SMB.
 
-- The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
+- The first three settings are explained [above](#Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
-- Details on the different enable options are described in [OpenAPS feature section](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](#Open-APS-features-enable-smb).
 
 - *Как часто SMB будут подаваться в минутах* - по умолчанию эта величина определена только в четыре минуты. Эта величина не позволяет системе подавать микроболюсы слишком часто (например, при постановке временной цели). Не следует менять эту настройку, если только точно не осознаете последствия.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](#Open-APS-features-autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Если цель изменена, она будет отображаться в поле целей на зеленом фоне на главном экране.
 
@@ -370,6 +373,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 
 ![Настройки усваиваемости](../images/Pref2020_Absorption.png)
 
+(Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
 
 - Алгоритм использует BGI (воздействие на глюкозу в крови) для определения поглощения углеводов.
@@ -396,12 +400,12 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 
 ### Расширенные настройки - коэффициент autosens
 
-- Define min. and max. [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) ratio.
+- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
 - Обычно стандартные значения (макс. 1.2 и мин. 0.7) не должны меняться.
 
 ## Настройки помпы
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump).  Выполните сопряжение и настройте помпу в соответствии с инструкциями относящимися к помпе:
+The options here will vary depending on which pump driver you have selected in [Config Builder](#Config-Builder-pump).  Выполните сопряжение и настройте помпу в соответствии с инструкциями относящимися к помпе:
 
 - [Инсулиновая помпа DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md)
 - [Инсулиновая помпа DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
@@ -428,7 +432,7 @@ The options here will vary depending on which pump driver you have selected in [
 
 ![Клиент NSV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](../Maintenance/ReleaseNotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+[New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
 
 ```{admonition} V3 data uploaders
 :class: warning
@@ -447,7 +451,7 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 
 Synchronization choices will depend on the way you will want to use AAPS.
 
-You can select which data you want to [upload and download to or from Nightscout](../SettingUpAaps/Nightscout.md#aaps-settings).
+You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
 ### Опции оповещения
 
@@ -479,7 +483,7 @@ Options in advanced settings are self-explanatory.
 
 ## СМС-коммуникатор
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#sms-communicator).
+- Options will only be displayed if SMS communicator is selected in [Config Builder](#Config-Builder-sms-communicator).
 - Эта настройка позволяет осуществлять удаленное управление приложением при помощи смс-инструкций, отправляемых на телефон пациента, который выполняет их в AAPS, например, приостанавливая работу цикла или подавая болюсы.
 - Further information is described in [SMS Commands](../RemoteFeatures/SMSCommands.md).
 - Дополнительная безопасность обеспечивается с помощью приложения-Аутентификатора и дополнительного PIN-кода в конце сообщения.

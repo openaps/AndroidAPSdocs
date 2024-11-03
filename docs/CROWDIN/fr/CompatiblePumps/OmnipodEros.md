@@ -360,6 +360,7 @@ Cet écran vous montre les informations, états et paramètres de configuration 
 > - **Dernier contact appareil :** Date et heure du dernier contact que le périphérique de communication pod a eu avec le pod.
 > - **Bouton Actualiser** Actualiser manuellement les informations de cette page.
 
+(omnipod-eros-rileylink-and-active-pod-history)=
 #### RileyLink et historique du Pod Actif
 
 Cet écran montre les informations dans l'ordre chronologique inverse de chaque état ou action que le RileyLink ou le pod actuellement connecté fait ou a fait. L'historique complet n'est disponible que pour le pod actuellement actif, après un changement de pod, cet historique sera effacé et seuls les événements du pod nouvellement activé seront enregistrés et affichés.
@@ -428,7 +429,7 @@ Vous trouverez ci-dessous une explication de la mise en page et la signification
 
 - **Total injecté :** Affiche le nombre total d'unités d'insuline injectées depuis le réservoir. *Notez que c'est une approximation comme amorçage et le remplissage du pod n'est pas un processus exact.*
 
-- **Erreurs :** Affiche la dernière erreur rencontrée. Review the [Pod history](#view-pod-history), [RileyLink history](#rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **Erreurs :** Affiche la dernière erreur rencontrée. Review the [Pod history](#view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
 - **Alertes Pod actif :** Réservées pour les alertes en cours sur le pod actif. Normalement utilisé lorsque la date d'expiration du pod est au delà de 72 heures et que des alertes sonores natives sont en cours d'exécution.
 
@@ -540,7 +541,7 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
   > Lorsque vous cliquez dessus, ce bouton réinitialise la configuration du périphérique de communication pod actuellement connecté.
   > 
   > > - Lorsque la communication est démarrée, des données spécifiques sont envoyées et placées dans le RileyLink > - Les registres de mémoire sont définis > - Les protocoles de communication sont définis > - La fréquence radio réglée est définie 
-  > > - See [additional notes](#reset-rileylink-config-notes) at the end of this table
+  > > - See [additional notes](#OmnipodEros-reset-rileylink-config-notes) at the end of this table
 
 - **Lire Journal d'impulsions:**
 

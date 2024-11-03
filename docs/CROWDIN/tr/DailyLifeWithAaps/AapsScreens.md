@@ -15,7 +15,7 @@ This is the first screen you will come across when you open **AAPS**, and it con
 
 * Navigate between the various **AAPS** modules.
 * Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu).
+* Displayed tabs can be selected in [config builder](#Config-Builder-tab-or-hamburger-menu).
 
 ### Section B - Profile & target
 
@@ -23,7 +23,7 @@ This is the first screen you will come across when you open **AAPS**, and it con
 
 The current profile is displayed in the left bar.
 
-Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#profile-switch--profile-percentage).
+Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
@@ -44,19 +44,22 @@ Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTa
 
 If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
 
+(AapsScreens-visualization-of-dynamic-target-adjustment)=
+
 #### Visualization of Dynamic target adjustment
 
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
-When using the [SMB algorithm](../SettingUpAaps/ConfigBuilder.md#aps) and [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
 
-Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](../SettingUpAaps/Preferences.md#openaps-smb-settings):
+Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](#Preferences-openaps-smb-settings):
 
-    * "sensitivity raises target" and/or 
-    * "resistance lowers target" 
-    
+* "sensitivity raises target" and/or 
+* "resistance lowers target" 
 
 If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
+
+(AapsScreens-section-c-bg-loop-status)=
 
 ### Section C - BG & loop status
 
@@ -64,14 +67,15 @@ If **AAPS** detects resistance or sensitivity, the target will change from what 
 
 The latest blood glucose reading from your CGM is shown on the left side.
 
-The color of the BG value reflects the status to the defined [range](../SettingUpAaps/Preferences.md#range-for-visualization).
+The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
 
-    * green = in range
-    * red = below range
-    * yellow = above range 
-    
+* green = in range
+* red = below range
+* yellow = above range 
 
 The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+
+(AapsScreens-loop-status)=
 
 #### Loop status
 
@@ -79,20 +83,21 @@ The greyish block in the middle shows minutes since last reading and changes sin
 
 On the right side, an icon shows the loop status:
 
-* Green circle = loop running
-* Green circle with dotted line = [low glucose suspend (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-* Red circled = loop disabled (not working permanently)
-* Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-* Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-* Orange circle = super bolus running - remaining time is shown below icon
-* Blue circle with dotted line = open loop
+1. Green circle = loop running
+2. Green circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
+3. Red circled = loop disabled (not working permanently)
+4. Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
+5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
+6. Orange circle = super bolus running - remaining time is shown below icon
+7. Blue circle with dotted line = open loop
 
 Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
 
-    * If short press on Loop icon, a validation is required after selection in Loop Dialog
+* If short press on Loop icon, a validation is required after selection in Loop Dialog
     
     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
-    
+
+(aaps-screens-bg-warning-sign)=
 
 #### BG warning sign
 
@@ -113,7 +118,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 * Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (Heroku için [ayrıntıları burada bulabilirsiniz](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
 * Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
 * Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In **AAPS**, go to [Preferences > NSClient](../SettingUpAaps/Preferences.md#nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
+* Last resort: In **AAPS**, go to [Preferences > NSClient](#Preferences-nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
 
 To remove the warning immediately and get to loop running again, you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
 
@@ -147,15 +152,18 @@ Special note for Libre users:
 
 **Syringe**: insulin on board (IOB) - amount of active insulin inside your body
 
-* Yalnızca standart bazalınız çalışıyorsa ve önceki boluslardan insülin kalmamışsa, aktif insülin rakamı sıfır olacaktır. 
-* Yakın zamanda bazalınız düşürülmüşse, (AİNS) aktif insülin negatif olabilir.
-* Bolus ve bazal insülinin ayrımını görmek için simgeye basın
+1. Yalnızca standart bazalınız çalışıyorsa ve önceki boluslardan insülin kalmamışsa, aktif insülin rakamı sıfır olacaktır.
+    
+    * Yakın zamanda bazalınız düşürülmüşse, (AİNS) aktif insülin negatif olabilir.
+    * Bolus ve bazal insülinin ayrımını görmek için simgeye basın
 
-* **Grain**: [carbs on board (COB)](CobCalculation) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#carbs-required))
+2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
 
-* **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%) 
-   * Herhangi bir geçici bazalın (kalan süre dahil) temel bazal oranını ve ayrıntılarını görmek için simgeye basın
-* **Arrows up & down**: indicating actual [Autosens](KeyAapsFeatures#autosens) status (enabled or disabled) and value is shown below icon
+3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%) 
+    * Herhangi bir geçici bazalın (kalan süre dahil) temel bazal oranını ve ayrıntılarını görmek için simgeye basın
+4. **Arrows up & down**: indicating actual [Autosens](#Open-APS-features-autosens) status (enabled or disabled) and value is shown below icon
+
+(aaps-screens-carbs-required)=
 
 #### Karbonhidrat İhtiyacı
 
@@ -185,9 +193,11 @@ Eşik uyarısı aşılırsa değerler sarı renkte gösterilecektir.
 
 Kritik eşik aşılırsa değerler kırmızı ile gösterilir.
 
-Settings can be changed in [Preferences > Overview > Status lights](../SettingUpAaps/Preferences.md#status-lights).
+Settings can be changed in [Preferences > Overview > Status lights](#Preferences-status-lights).
 
 Depending on the pump you use, you may not have all of these icons.
+
+(aaps-screens-main-graph)=
 
 ### Bölüm F - Ana grafik
 
@@ -201,7 +211,9 @@ Long press on the graph to change the timescale. 6, 12, 18 veya 24 saat seçebil
 
 Yeşil alan hedef aralığınızı yansıtmaktadır.
 
-Blue triangles show [SMB](KeyAapsFeatures#super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](../SettingUpAaps/Preferences.md#openaps-smb-settings).
+Blue triangles show [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings).
+
+(AapsScreens-activate-optional-information)=
 
 #### İsteğe bağlı bilgileri etkinleştir
 
@@ -213,36 +225,37 @@ On the main graph, you can switch on these optional information:
 
 To show this information, click the triangle on the right side of the main graph. Ana grafik için sadece "\---\---- Grafik 1 \---\----" satırının üzerindeki üç seçenek mevcuttur.
 
-    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
-    
+![Main graph setting](../images/Home2020_MainGraphSetting.png)
+
+(aaps-screens-prediction-lines)=
 
 #### Tahmin çizgileri
 
 * **Orange** line: [COB](CobCalculation) (color is used generally to represent COB and carbs)
-   
-   This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. Bu çizgi yalnızca bilinen AKRB (Aktif Karbonhidrat) varsa görünür.
+    
+    This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. Bu çizgi yalnızca bilinen AKRB (Aktif Karbonhidrat) varsa görünür.
 
 * **Dark blue** line: IOB (color is used generally to represent IOB and insulin)
-   
-   This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+    
+    This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
 
 * **Açık mavi** çizgi: sıfır geçici (geçici bazal oranı %0 olarak ayarlandıysa, tahmini KŞ)
-   
-   This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
-   
-   *This line appears only when the [SMB](../SettingUpAaps/ConfigBuilder.md#aps) algorithm is used.*
+    
+    This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+    
+    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
 
-* **Dark yellow** line: [UAM](../DailyLifeWithAaps/SensitivityDetectionAndCob.md#sensitivity-oref1) (un-announced meals)
-   
-   Bildirilmemiş öğünlerin anlamı, öğün, adrenalin veya diğer etkiler nedeniyle glikoz seviyelerinde önemli bir artışın tespit edilmesidir. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
-   
-   *This line appears only when the [SMB](../SettingUpAaps/ConfigBuilder.md#aps) algorithm is used.*
+* **Dark yellow** line: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (un-announced meals)
+    
+    Bildirilmemiş öğünlerin anlamı, öğün, adrenalin veya diğer etkiler nedeniyle glikoz seviyelerinde önemli bir artışın tespit edilmesidir. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+    
+    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
 
 * ** koyu turuncu ** çizgi: hAKRB (hızlandırılmış karbonhidrat emilimi)
-   
-   AKRB'e benzer, ancak statik bir 10 mg/dl/5m (-0.555 mmol/l/5m) karbonhidrat emme oranı varsayılır. Kullanımdan kaldırılmış ve sınırlı yararlılık.
-   
-   *This line appears only when the older [AMA](../SettingUpAaps/ConfigBuilder.md#aps) algorithm is used.*
+    
+    AKRB'e benzer, ancak statik bir 10 mg/dl/5m (-0.555 mmol/l/5m) karbonhidrat emme oranı varsayılır. Kullanımdan kaldırılmış ve sınırlı yararlılık.
+    
+    *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
 
 Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en çok benzeyen varsayımlarda bulunanın yakınında biter.
 
@@ -259,6 +272,8 @@ When the standard basal rate is given, the area under the curve is shown in dark
 **İnce sarı** çizgi, insülin aktivitesini gösterir.
 
 Başka hiçbir faktör (karbonhidrat gibi) mevcut değilse, sisteminizdeki insülinin KŞ'nde beklenen düşüşe dayanır.
+
+(AapsScreens-section-g-additional-graphs)=
 
 ### Bölüm G - ek grafikler
 
@@ -283,7 +298,7 @@ Boluslar dahil aktif insülin **ve bazal**.
 
 Aktif insülini gösterir (= vücudunuzdaki aktif insülin). Bolus ve geçici bazaldan alınan insülini içerir (**ancak profilinizde ayarlanan bazal oranları hariçtir**).
 
-If there were no [SMBs](KeyAapsFeatures#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
 
 Daha uzun bir süre boyunca bolus kalmazsa ve sıfır/düşük geçici bazal devam ederse AİNS negatif olabilir.
 
@@ -299,19 +314,19 @@ Beklenenden daha yüksek bir karbonhidrat emilimi tespit edilirse, insülin veri
 
 #### Duyarlılık
 
-Shows the sensitivity that [Autosens](KeyAapsFeatures#autosens) has detected.
+Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
 
 Duyarlılık, egzersiz, hormonlar vb. sonucunda insüline duyarlılığın hesaplanmasıdır.
 
 #### Heart rate
 
-This data may be available when using a [Garmin smartwatch](../UsefulLinks/WearOsSmartwatch.md#garmin).
+This data may be available when using a [Garmin smartwatch](#Watchfaces-garmin).
 
 #### Sapmalar
 
 * **Grey** bars show a deviation due to carbs. 
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](KeyAapsFeatures#autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](KeyAapsFeatures#autosens).
+* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
+* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
 * **Yellow** bars show a deviation due to UAM.
 * **Black** bars show small deviations not taken into account for sensitivity
 
@@ -329,9 +344,9 @@ It is a good combination to display this line along with the Deviation bars. The
 
 Buttons for Insulin, Carbs and Calculator are almost always visible. If the connection to the pump is lost, the insulin button will not be visible.
 
-Other Buttons can be setup in [Preferences > Overview > Buttons](../SettingUpAaps/Preferences.md#buttons).
+Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-buttons).
 
-About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](../SettingUpAaps/Preferences.md#show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
+About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
 
 #### İnsülin
 
@@ -339,11 +354,11 @@ About using the Insulin, Carbs and Calculator buttons : If enabled in the [Prefe
 
 To give a certain amount of insulin without using the [bolus calculator](#bolus-wizard).
 
-By checking the box **Start eating soon TT**, you can automatically start your [eating soon temp target](../DailyLifeWithAaps/TempTargets.md#eating-soon-temp-target).
+By checking the box **Start eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
 
 If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) check the corresponding box. When checking this box, you get an additional field “Time offset”, that you can use to record an insulin injection made in the past.
 
-You can use the buttons to quickly increase the insulin quantity. The increment values can be changed in the [Preferences > Overview > Buttons](../SettingUpAaps/Preferences.md#buttons).
+You can use the buttons to quickly increase the insulin quantity. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
 
 #### Karbonhidrat
 
@@ -351,13 +366,13 @@ You can use the buttons to quickly increase the insulin quantity. The increment 
 
 Karbonhidratları bolus olmadan kaydetmek için kullanılır.
 
-Certain [pre-set temporary targets](../DailyLifeWithAaps/TempTargets.md#hypo-temp-target) can be set directly by checking the box.
+Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) can be set directly by checking the box.
 
 **Time offset**: When will you / have you been eaten carbs (in minutes).
 
 **Duration**: To be used for ["extended carbs"](ExtendedCarbs)
 
-You can use the buttons to quickly increase the carb amount. The increment values can be changed in the [Preferences > Overview > Buttons](../SettingUpAaps/Preferences.md#buttons).
+You can use the buttons to quickly increase the carb amount. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
 
 #### Hesap makinesi
 
@@ -367,7 +382,7 @@ See Bolus Wizard [section below](#bolus-wizard).
 
 xDrip+'a bir kalibrasyon gönderir veya Dexcom kalibrasyon diyalog penceresini açar.
 
-Must be activated in [Preferences > Overview > Buttons](../SettingUpAaps/Preferences.md#buttons).
+Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
 
 #### CGM
 
@@ -375,13 +390,13 @@ xDrip+'ı açmak için kullanılır.
 
 Back button returns to **AAPS**.
 
-Must be activated in [Preferences > Overview > Buttons](../SettingUpAaps/Preferences.md#buttons).
+Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
 
 #### Hızlı Asistan
 
 Karbonhidrat miktarını kolayca girin ve temel hesaplamaları ayarlayın.
 
-Details are set up in [Preferences > Overview > QuickWizard settings](../SettingUpAaps/Preferences.md#quick-wizard).
+Details are set up in [Preferences > Overview > QuickWizard settings](#Preferences-quick-wizard).
 
 ## Bolus Sihirbazı
 
@@ -394,6 +409,8 @@ When you want to make a meal bolus, this is where you will normally make it from
 Hesaplanan bolusu gösterir.
 
 Aktif insülin miktarı hesaplanan bolusu aşarsa, o zaman sadece gerekli olan karbonhidrat miktarını gösterecektir.
+
+(AapsScreens-section-j)=
 
 ### Bölüm J
 
@@ -413,7 +430,7 @@ The **Carb time** field is for pre-bolusing so you can tell the system that ther
 
 **Profile** allows you to select a different profile than the current one, to make the calculation for the insulin required. This profile selection applies only for the current bolus, it is not a profile change.
 
-**Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](../SettingUpAaps/Preferences.md#advanced-settings-overview). Buradaki ana fikir, bazal insülini erkenden vererek ani artışları azaltmaktır.
+**Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](#Preferences-advanced-settings-overview). Buradaki ana fikir, bazal insülini erkenden vererek ani artışları azaltmaktır.
 
 Ayrıntılar için [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) adresini ziyaret edin.
 
@@ -436,13 +453,17 @@ For safety reasons the **TT box must be ticked manually**, if you want the bolus
 
 The box near the eye allows you to choose between the detailed view, with the numbers entering the calculation for each item, or the simple view with icons. Pressing on an icon will enable / disable this entry from the calculation.
 
+(AapsScreens-wrong-cob-detection)=
+
 #### Yanlış Aktif Karbonhidrat tespiti
 
 ![Yavaş karbonhidrat emilimi](../images/Calculator_SlowCarbAbsorption.png)
 
 If you see the warning above after using bolus wizard, **AAPS** has detected that the calculated COB value may be wrong. So, if you want to bolus again after a previous meal with COB, you should be aware of overdosing!
 
-For details, see the hints on [COB calculation page](CobCalculation#detection-of-wrong-cob-values).
+For details, see the hints on [COB calculation page](#CobCalculation-detection-of-wrong-cob-values).
+
+(screens-action-tab)=
 
 ## Eylem Sekmesi
 
@@ -450,40 +471,36 @@ For details, see the hints on [COB calculation page](CobCalculation#detection-of
 
 ### Eylemler - bölüm M
 
-Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#profile-switch--profile-percentage)** as an alternative to pressing the [current profile](#section-b---profile--target) on homescreen.
+Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#section-b---profile--target) on homescreen.
 
 Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#section-b---profile--target) on homescreen.
 
 Geçici bir bazal oranı başlatma veya iptal etme düğmesi. Geçici bir bazal oranı ayarlandığında düğmenin "GEÇICIBAZAL" yerine "İPTAL x%" olarak değiştiğini lütfen unutmayın.
 
-Even though [extended boluses](ExtendedCarbs#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+Even though [extended boluses](#Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
 
 * Bu seçenek yalnızca Dana RS ve Insight pompaları için mevcuttur. 
-   * Kapalı döngü otomatik olarak durdurulacak ve yayma bolus çalıştığı süre boyunca açık döngü moduna geçecektir.
-   * Make sure to read the [details](ExtendedCarbs) before using this option.
+    * Kapalı döngü otomatik olarak durdurulacak ve yayma bolus çalıştığı süre boyunca açık döngü moduna geçecektir.
+    * Make sure to read the [details](../DailyLifeWithAaps/ExtendedCarbs.md) before using this option.
 
 ### Bakım portalı - bölüm N
 
 Displays information on:
 
-    * sensor age & level (battery percentage)
-    * insulin age & level (units)
-    * cannula age
-    * pump battery age & level (percentage
-    
+* sensor age & level (battery percentage)
+* insulin age & level (units)
+* cannula age
+* pump battery age & level (percentage
 
-Less information will be shown if **low resolution skin** is used ([Preferences > General > Skin](../SettingUpAaps/Preferences.md#skin)).
+Less information will be shown if **low resolution skin** is used ([Preferences > General > Skin](#Preferences-skin)).
+
+(screens-sensor-level-battery)=
 
 #### Sensör seviyesi (pil)
 
 Works for CGM with an additional transmitter such as MiaoMiao 2. (Teknik olarak sensör pil seviyesi bilgilerini xDrip+'a göndermesi gerekir.)
 
-Thresholds can be set in [Preferences > Overview > Status lights](../SettingUpAaps/Preferences.md#status-lights).
-
-If the sensor level is the same as the phone battery level, your xDrip+ version is probably too old and needs an update. (Needs xDrip+ nightly build Dec. 10, 2020 or newer.)
-
-    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
-    
+Thresholds can be set in [Preferences > Overview > Status lights](#Preferences-status-lights).
 
 ### Bakım portalı - bölüm O
 
@@ -497,7 +514,7 @@ Bölüm O, Nightscout portalını yansıtır. Yani alıştırma, duyuru ve soru 
 
 #### Geçmiş Tarayıcısı
 
-Allows you to ride back in **AAPS** history.
+Allows you to ride back in **AAPS** [history](../Maintenance/Reviewing.md).
 
 #### GTD
 
@@ -511,13 +528,13 @@ Diğerleri, TTB için GTD'nin %32 ila %37 aralığını tercih eder.
 
 Bu genel kuralların çoğu gibi, geçerliliği sınırlıdır. Not: Diyabetiniz değişiklik gösterebilir!
 
-![History browser + TDD](../images/Home2021_Action_HB_TDD.png)
+(AapsScreens-insulin-profile)=
 
 ## İnsülin Profili
 
 ![İnsülin Profili](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [config builder](../SettingUpAaps/ConfigBuilder.md#insulin).
+This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin).
 
 The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm.
 
@@ -540,7 +557,7 @@ These tabs show details about the algorithm's calculations and why **AAPS** acts
 
 Calculations are run each time the system gets a fresh reading from the CGM.
 
-For more details see [APS section on config builder page](../SettingUpAaps/ConfigBuilder.md#aps).
+For more details see [APS section on config builder page](#Config-Builder-aps).
 
 ## Profile
 
@@ -548,12 +565,11 @@ For more details see [APS section on config builder page](../SettingUpAaps/Confi
 
 Profil, kişisel diyabet ayarlarınız hakkında bilgiler içerir:
 
-    * DIA (Duration of Insulin Action)
-    * IC or I:C: Insulin to Carb ratio
-    * ISF: Insulin Sensitivity Factor
-    * Basal rate
-    * Target: Blood glucose level that you want **AAPS** to be aiming for
-    
+* DIA (Duration of Insulin Action)
+* IC or I:C: Insulin to Carb ratio
+* ISF: Insulin Sensitivity Factor
+* Basal rate
+* Target: Blood glucose level that you want **AAPS** to be aiming for
 
 See the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
 
@@ -567,7 +583,7 @@ See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
 
 This page displays the status of the connection with your Nightscout site.
 
-Settings can be changed in [Preferences > NS Client](../SettingUpAaps/Preferences.md#nsclient).
+Settings can be changed in [Preferences > NS Client](#Preferences-nsclient).
 
 For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
 
@@ -584,7 +600,7 @@ Shows history of CGM readings and offers option to remove reading in case of fai
 This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder. In this view, you can view and alter the history of the following treatments:
 
 * Bolus & carbs
-* [Yayma Bolus](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
+* [Yayma Bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Geçici bazal oranı
 * [Geçici hedef](../DailyLifeWithAaps/TempTargets.md)
 * [Profil değiştir](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
@@ -595,6 +611,8 @@ In the last column, the data source for each line is displayed in blue. It can b
 
 * NS for Nightscout : the data comes from or has been recorded to Nightscout
 * PH for Pump History : the data has been processed by the pump
+
+(screens-bolus-carbs)=
 
 ### Bolus & carbs
 
@@ -616,8 +634,8 @@ The treatment tab can be used to correct faulty carb entries (*i.e.* you over- o
 3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. Ana ekranda AKRB'ı tekrar kontrol ederek karbonhidratların başarıyla kaldırıldığından emin olun.
 5. Tedavi sekmesinde karbonhidrat ve insülin için yalnızca bir satır varsa, AİNS için de aynısını yapın.
-   
-   → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+    
+    → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
 
 6. Ana ekrandaki karbonhidrat butonu aracılığıyla doğru karbonhidrat miktarını girin ve doğru etkinlik zamanını ayarladığınızdan emin olun.
 

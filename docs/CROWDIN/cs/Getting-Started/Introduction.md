@@ -18,6 +18,7 @@ V eltadle autopilot nevykonává všechnu lidskou práci, pilot nemůže celý l
 
 ![image](../images/autopilot.png)
 
+(Introduction-what-does-hybrid-closed-loop-mean)=
 ## Co znamená hybridní uzavřená smyčka?
 
 Nejlepším řešením cukrovky I. typu by byla "léčba příčiny" (pravděpodobně transplantace slinivkových buněk chráněných před imunitním systémem). Zatímco na to čekáme, uzavřená smyčka v systému umělé slinivky je pravděpodobně druhé nejlepší řešení. Takový systém nevyžaduje žádné vstupy uživatele (např. bolus k jídlu nebo hlášení aktivity), s dobrými výsledky regulace hladiny krevního cukru. V současné době neexistují žádné systémy "plně" uzavřené smyčky, všechny vyžadují nějaké informace od uživatele. Současné systémy jsou tzv. "hybridní" uzavřené smyčky, protože využívají kombinaci automatizace a uživatelských vstupů.
@@ -188,7 +189,7 @@ Pokud by došlo k útoku hackera na vaši inzulínovou pumpu, tato strategie mů
 
 #### Bezpečnostní hlediska týkající se příliš rychlého zlepšení kontroly glykémie
 
-Rychlé snížení HbA1c a zlepšení kontroly glukózy v krvi zní přitažlivě. Nicméně _příliš rychlé_ snížení průměrné úrovně glykémie nastartiváním uzavřené smyčky může způsobit trvalá poškození, včetně poškození očí nebo bolestivé neuropatie, které se nikdy nezbavíte. Těmto rizikům je možné snadno předejít pomalejším snižováním úrovní. Pokud v současné době máte zvýšenou hodnotu HbA1c a začínáte se systémem AAPS (nebo jiným systémem uzavřené smyčky), prodiskutujte prosím toto riziko s Vaším lékařem před zahájením, a dohodněte se na časovém horizontu s postupným bezpečným snižováním cílů glykémie. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](../Getting-Started/PreparingForAaps.md#safety-first).
+Rychlé snížení HbA1c a zlepšení kontroly glukózy v krvi zní přitažlivě. Nicméně _příliš rychlé_ snížení průměrné úrovně glykémie nastartiváním uzavřené smyčky může způsobit trvalá poškození, včetně poškození očí nebo bolestivé neuropatie, které se nikdy nezbavíte. Těmto rizikům je možné snadno předejít pomalejším snižováním úrovní. Pokud v současné době máte zvýšenou hodnotu HbA1c a začínáte se systémem AAPS (nebo jiným systémem uzavřené smyčky), prodiskutujte prosím toto riziko s Vaším lékařem před zahájením, a dohodněte se na časovém horizontu s postupným bezpečným snižováním cílů glykémie. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](#preparing-safety-first).
 
 #### Zdravotní bezpečnost zařízení, spotřebního materiálu a jiných léků
 
@@ -196,7 +197,7 @@ V systému umělé slinivky používejte otestované a plně funkční inzulíno
 
 Používejte originálnípříslušenství, jako zásobníky, kanyly a inzulíny schválené výrobcem vaší pumpy a CGM. Použití nevyzkoušeného nebo upraveného spotřebního materiálu může způsobit nepřesnosti a chyby při dodávce inzulínu. Inzulín je velmi nebezpečný, když není dávkovaný správně – prosím, nehazardujte se svým životem tím, že budete upravovat spotřební materiál.
 
-Při používání **AAPS** neberte SGLT-2 inhibitory (glifloziny), protože nepředvídatelně snižují hladinu cukru v krvi. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](../Getting-Started/PreparingForAaps.md#safety-first).
+Při používání **AAPS** neberte SGLT-2 inhibitory (glifloziny), protože nepředvídatelně snižují hladinu cukru v krvi. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](#preparing-safety-first).
 
 (introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
 ## Jak přistupovat k diskusi o AAPS s mojí diabetologickou ambulancí?

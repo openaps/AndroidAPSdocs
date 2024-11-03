@@ -34,7 +34,7 @@ Use this option only if your CGM data is being properly smoothed by your collect
 ### Dexcom sensors
 
 #### Build Your Own Dexcom App
-When using [BYODA](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), your BG data is smooth and consistent. Furthermore, you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMBs, because the noise-level data is shared with AAPS.
+When using [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), your BG data is smooth and consistent. Furthermore, you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMBs, because the noise-level data is shared with AAPS.
 
 #### xDrip+ with Dexcom G6 or Dexcom ONE
 Noise-level data and smooth BG readings are only shared with AAPS if you use xDrip+ [native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm). Using native mode, there are no restrictions in using SMBs.

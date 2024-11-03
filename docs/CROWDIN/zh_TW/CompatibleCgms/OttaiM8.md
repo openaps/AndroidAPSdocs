@@ -7,5 +7,5 @@
 
 -   啟動傳感器
 
-- 在 [組態建置工具，BG 資料來源](../SettingUpAaps/ConfigBuilder.md#bg-source) 中選擇 Ottai。
+- 在 [組態建置工具，BG 資料來源](#Config-Builder-bg-source) 中選擇 Ottai。
 

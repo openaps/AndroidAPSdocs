@@ -7,5 +7,5 @@
 
 -   Ξεκινήστε τον αισθητήρα
 
-- Select Ottai in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- Select Ottai in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 

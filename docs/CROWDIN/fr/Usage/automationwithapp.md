@@ -32,7 +32,7 @@ In AAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NS
 
 In AAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
 
-Be aware of the [security issues](../SettingUpAaps/Nightscout.md#security-considerations) that might occur and be very careful if you are using an [Insight pump](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps).
+Be aware of the [security issues](#Nightscout-security-considerations) that might occur and be very careful if you are using an [Insight pump](#Accu-Chek-Insight-Pump-settings-in-aaps).
 
 ![Paramètres de téléchargement Nighscout](../images/automate-aaps2.jpg)
 

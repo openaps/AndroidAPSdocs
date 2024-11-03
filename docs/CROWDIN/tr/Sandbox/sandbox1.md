@@ -55,11 +55,11 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Label in the middle of [nowhere](#sandbox1-in-the-middle-of-nowhere) This instead is the label to [](#sandbox1-this-is-another-test) and it should display its name
 
 Links with anchor :
-- [how long will it take?](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up)
-- [NSClient settings in Preferences](../SettingUpAaps/Preferences.md#nsclient).
-- [prediction lines in AAPS OVERVIEW](../DailyLifeWithAaps/AapsScreens.md#prediction-lines) to header level 4
+- [how long will it take?](#preparing-how-long-will-it-take)
+- [NSClient settings in Preferences](#Preferences-nsclient).
+- [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4
 - [Screenshots](../DailyLifeWithAaps/AapsScreens.md)
-- [Screenshot main graph](../DailyLifeWithAaps/AapsScreens.md#section-f---main-graph) to header level 3
-- [OpenAPS-features](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
-- [max IOB](../DailyLifeWithAaps/KeyAapsFeatures.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
-- [SMB section in this documentation](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb)
+- [Screenshot main graph](#aaps-screens-main-graph) to header level 3
+- [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
+- [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
+- [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb)

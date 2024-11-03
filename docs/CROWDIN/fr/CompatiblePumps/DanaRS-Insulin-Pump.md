@@ -105,7 +105,7 @@ Dans le cas où la connexion entre AAPS et DanaRS est perdue pendant un bolus d'
 
 * Dans la plupart des cas c'est juste un problème de communication et la quantité d'insuline délivrée est correcte.
 * Vérifiez dans l'historique de la pompe (à la pompe ou à l'aide de l'onglet Dana > historique de la pompe > bolus) si le bolus est correct.
-* Delete error entry in [treatments tab](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs) if you wish.
+* Delete error entry in [treatments tab](#screens-bolus-carbs) if you wish.
 * Le montant réel est lu et enregistré lors de la prochaine connexion. Pour forcer cette mise à jour, appuyez sur l'icône BT dans l'onglet dana ou attendez juste la prochaine connexion.
 
 ## Remarque spéciale lors du changement de téléphone
@@ -129,4 +129,4 @@ Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessair
 
 ## Voyager avec différents fuseaux horaires avec la pompe DanaR
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).

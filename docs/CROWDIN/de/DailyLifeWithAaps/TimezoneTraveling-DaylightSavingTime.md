@@ -4,6 +4,8 @@
 
 Es gibt keine Probleme beim Zeitzonenwechsel im Smartphone, da die Pumpe keine Historie verwendet
 
+(timezone-traveling-danarv2-danars)=
+
 ## DanaRv2, DanaRS
 
 Diese Pumpen benötigen besondere Aufmerksamkeit, da AAPS die Historie der Pumpe nutzt, die Einträge in der Pumpe aber keine Zeitangaben enthalten. **Das bedeutet, dass ein einfacher Zeitzonenwechsel im Smartphone dazu führt, dass Einträge mit verschiedenen Zeitzonen ausgelesen und doppelt angezeigt werden.**
@@ -24,7 +26,7 @@ Um dies zu vermeiden, gibt es zwei Möglichkeiten:
    
    * z.B. Wien -> New York: Profilwechsel +6 Stunden
    * z.B. Wien -> Sydney: Profilwechsel -8 Stunden
-* Probably not an option if using [patched LibreLink app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Option 2: Pumpenhistorie löschen
 
@@ -39,6 +41,8 @@ Wenn Du aus dem Flugzeug steigst:
 * ändere die Zeit in der Pumpe
 * schalte das Smartphone an
 * lasse das Smartphone mit der Pumpe verbinden und verfeinere die Zeiteinstellung
+
+(timezone-traveling-insight)=
 
 ## Insight
 
@@ -65,6 +69,8 @@ Der Treiber passt die Uhrzeit in der Pumpe automatisch an die Zeit im Smartphone
 Änderungen der Zeitzone haben ggf. einen Einfluss auf den gespeicherten Gesamtinsulinbedarf (TDD). Die übrige die Historie beleibt unberührt. Manuelle Anpassungen der Uhrzeit kann zu Problemen mit der Pumpenhistorie und dem IOB führen. Falls Du die Uhrzeit manuell anpasst, überprüfe das IOB (aktives Insulin).
 
 Wenn sich die Zeitzone oder die Uhrzeit ändert, wird eine laufende TBR gestoppt.
+
+(time-adjustment-daylight-savings-time-dst)=
 
 ## Zeitumstellung (Sommer-/Winterzeit)
 

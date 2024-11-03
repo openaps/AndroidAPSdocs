@@ -70,7 +70,7 @@
 
 - Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md).
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
+- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
 
   ![Güvenlik](../images/Pref2020_Protection.png)
 
@@ -168,7 +168,7 @@
 
 ### Standart insülin miktarlarını Hazırla/Doldur
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../DailyLifeWithAaps/AapsScreens.md#action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](#screens-action-tab).
 - Bu diyalogda önceden ayarlanmış (pompanıza göre) değerler tanımlanabilir.
 
 (Preferences-range-for-visualization)=
@@ -186,6 +186,7 @@
 
   ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
+(Preferences-show-notes-field-in-treatments-dialogs)=
 ### Tedavi diyaloglarında not alanını göster
 
 - Tedavilerinize kısa metin notları ekleme seçeneği sunar (bolus sihirbazı, karbonhidrat, insülin...)
@@ -198,7 +199,7 @@
 - Durum ışıkları için görsel bir uyarı verir
 
   - Sensör yaşı
-  - Sensor battery level for certain smart readers (see [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery) for details).
+  - Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
   - İnsülin yaşı (rezervuarın kullanıldığı gün sayısı)
   - Rezervuar seviyesi (Ünite)
   - Kanül yaşı
@@ -213,16 +214,18 @@
 
   ![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
 
+(Preferences-deliver-this-part-of-bolus-wizard-result)=
 ### Deliver this part of bolus wizard result
 
-Set the [default percentage](../DailyLifeWithAaps/AapsScreens.md#section-j) of the bolus calculated when using the bolus wizard.
+Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
 
 Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard.
 
-When using [SMB](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb), using a value lower than 100% here can be useful:
+When using [SMB](#objectives-objective9), using a value lower than 100% here can be useful:
 * for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
 * to leave more room to *AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate the missing part of the bolus with SMBs, if/when deemed adequate.
 
+(Preferences-advanced-settings-overview)=
 ### Gelişmiş ayarlar
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
@@ -277,8 +280,8 @@ When using [SMB](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enablin
 
 Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../DailyLifeWithAaps/KeyAapsFeatures.md#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS SMB ayarları
 
@@ -292,7 +295,7 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 - Değer, ünite/saat (Ü/s) cinsinden ölçülür.
 - It is advised to set this to something sensible. Profilinizdeki **en yüksek bazal oranı** alıp **4 ile çarpmanız** iyi bir öneridir.
 - Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 4 ile çarparak maks geçici bazal için 2 Ü/s değerini elde edersiniz.
-- See also [detailed feature description](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to).
 
 #### OpenAPS'in \[U\] iletebileceği maksimum bazal AİNS
 
@@ -316,7 +319,7 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 #### Otoduyarlılık
 
-- [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](#Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
 - Bu sapmalara göre sizin ne kadar duyarlı/dirençli olduğunuzu anlamaya çalışacak ve bu sapmalara göre bazal hızı ve IDF'yi ayarlayacaktır.
 - "Otoduyarlılıkta hedefi ayarla"yı seçerseniz, algoritma ayrıca glikoz hedefinizi de değiştirir.
 
@@ -328,17 +331,17 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB ayarları
 
-- In contrast to AMA, [SMB](../DailyLifeWithAaps/KeyAapsFeatures.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](#Open-APS-features-super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
+- You must have started [objective 9](#objectives-objective9) to use SMB.
 
-- The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
+- The first three settings are explained [above](#Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
-- Details on the different enable options are described in [OpenAPS feature section](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](#Open-APS-features-enable-smb).
 
 - *SMB'lerin dakika cinsinden ne sıklıkta verileceği*, SMB'nin varsayılan olarak yalnızca 4 dakikada bir teslim edilmesi için bir kısıtlamadır. Bu değer, sistemin SMB'yi çok sık verilmesini engeller (örneğin, bir geçici hedefin ayarlanması durumunda). Sonuçları tam olarak bilmiyorsanız bu ayarı değiştirmemelisiniz.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](#Open-APS-features-autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Hedef değiştirilirse, giriş ekranınızda hedef yeşil bir arka planla görüntülenecektir.
 
@@ -370,6 +373,7 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 ![Emilim ayarları](../images/Pref2020_Absorption.png)
 
+(Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
 
 - Algoritma, karbonhidratların ne zaman emildiğini belirlemek için BGI (kan şekeri etkisi) kullanır.
@@ -396,12 +400,12 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 ### Gelişmiş ayarlar - otoduyarlılık oranı
 
-- Define min. and max. [autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) ratio.
+- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
 - Normalde standart değerler (maks. 1.2 ve min. 0.7) değiştirilmemelidir.
 
 ## Pompa Ayarları
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump).  Pompanızı pompayla ilgili talimatlara göre eşleştirin ve ayarlayın:
+The options here will vary depending on which pump driver you have selected in [Config Builder](#Config-Builder-pump).  Pompanızı pompayla ilgili talimatlara göre eşleştirin ve ayarlayın:
 
 - [DanaR Insulin Pompası](../CompatiblePumps/DanaR-Insulin-Pump.md)
 - [DanaRS Insulin Pompası](../CompatiblePumps/DanaRS-Insulin-Pump.md)
@@ -428,7 +432,7 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](../Maintenance/ReleaseNotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+[New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
 
 ```{admonition} V3 data uploaders
 :class: warning
@@ -447,7 +451,7 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 
 Synchronization choices will depend on the way you will want to use AAPS.
 
-You can select which data you want to [upload and download to or from Nightscout](../SettingUpAaps/Nightscout.md#aaps-settings).
+You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
 ### Alarm türleri
 
@@ -479,7 +483,7 @@ Options in advanced settings are self-explanatory.
 
 ## SMS Kominikatör
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#sms-communicator).
+- Options will only be displayed if SMS communicator is selected in [Config Builder](#Config-Builder-sms-communicator).
 - Bu ayar, döngüyü askıya alma veya bolus yapma gibi uygulamanın izleyeceği talimatları hastanın telefonuna mesaj göndererek uygulamanın uzaktan kontrol edilmesini sağlar.
 - Further information is described in [SMS Commands](../RemoteFeatures/SMSCommands.md).
 - Bir kimlik doğrulama uygulaması ve mesaj sonunda ek PIN kullanılarak ek güvenlik elde edilir.

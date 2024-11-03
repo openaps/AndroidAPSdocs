@@ -17,6 +17,7 @@ When setting sensor, it is recommended not to press the inserter too firmly in o
 
 After setting the sensor, the transmitter can be clicked into the sensor holder. Pozor! First click in the square side and then press down the round side.
 
+(general-cgm-troubleshooting)=
 ## Troubleshooting
 
 ### Problém s připojením
@@ -37,4 +38,4 @@ You might try to change settings for noise blocking in xdrip (Settings - Inter-A
 
 ![Negative sensor age](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../DailyLifeWithAaps/AapsScreens.md#action-tab) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](#screens-action-tab) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.

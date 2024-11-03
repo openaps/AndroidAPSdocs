@@ -7,7 +7,7 @@ Jakmile bude k dispozici nová aktualizace, obdržíte následující informace:
 
 ![Informace o aktualizaci](../images/AAPS_LoopDisable90days.png)
 
-Pak máte 60 dnů na aktualizaci. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend).
+Pak máte 60 dnů na aktualizaci. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
 
 Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde AAPS na otevřenou smyčku.
 
@@ -21,7 +21,7 @@ První testovací verze byla spuštěna již v roce 2015. V roce 2016 byla vydá
 Chronologie těchto vydání momentálně není k dispozici, ale protože je tato otázka kladena často, zodpovídáme ji zde.
 
 ```
-
+(maintenance-android-version-aaps-version)=
 ## Verze Androidu a verze AAPS
 
 Pokud váš telefon používá verzi Androidu starší než 9, nebudete moct používat AAPS verze 3 a vyšší, protože ty vyžadují minimálně Android 9.
@@ -47,6 +47,7 @@ Aby bylo uživatelům se starším Androidem umožněno používat starší verz
 
 - AAPS 3.2 vyžaduje minimální úroveň WearOS API 28 (Android 9)
 
+(version3200)=
 ## Verze 3.2.0.0 věnována @Philoul
 
 Release date: 23-10-2023
@@ -55,7 +56,7 @@ Release date: 23-10-2023
 
 - Je vyžadován NS verze 15
 - Při používání websocketů v Nighscout pluginu v3, ošetření zadaná prostřednictvím NS (tlačítko +) a dalšími aplikacemi využívajícími API v. 1 nejsou do AAPS odeslána. To bude opraveno v některé následující verzi NS. Dokud NS vnitřně plně nepřejde na verzi 3, musíte vždy používat AAPS a AAPSClient pod stejnou verzí protokolu (v1 nebo v3). To samé platí i pro AAPS a samotný AAPSClient.
-- Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data. Please read [here](ReleaseNotes#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) the important comments from the dev team before you use it!
+- Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
 - If you are using xdrip as cgm source you must select it again after update due to internal changes
 - Tidepool can be used as a replacement of NS to pass first objective
 - If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
@@ -141,7 +142,7 @@ Release date: 19-07-2022
 - huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
 - widget @MilosKozak
 - Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
-- Watch [Wear OS tiles](../UsefulLinks/WearOsSmartwatch.md#wear-os-tiles), translations @Andries-Smit
+- Watch [Wear OS tiles](#WearOsSmartwatch-wear-os-tiles), translations @Andries-Smit
 - Wear code refactored. Not backward compatible anymore @MilosKozak
 - a11y improvements @Andries-Smit
 - new protection option PIN @Andries-Smit
@@ -200,9 +201,9 @@ Release date: 31-01-2022
 
 - Můžete spustit dočasný cíl aktivita během spuštění změny profilu @MilosKozak
 
-- NSProfile is gone, just local profile can be used. Local profile can be [synced to NS](../Maintenance/Update3_0.md#nightscout-profile-cannot-be-pushed). @MilosKozak.
+- NSProfile is gone, just local profile can be used. Local profile can be [synced to NS](#Update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak.
 
-- Forgotten [master password reset procedure](../Maintenance/Update3_0.md#reset-master-password) @MilosKozak
+- Forgotten [master password reset procedure](#Update3_0-reset-master-password) @MilosKozak
 
 - Stopování uživatelských akcí @Philoul
 
@@ -255,7 +256,7 @@ Release date: 23-01-2021
 
 Release date: 12-01-2021
 
-(important-hints-2-8-1-1)
+(important-hints-2-8-1-1)=
 ### Důležitá poznámky
 
 - Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
@@ -285,24 +286,24 @@ Datum vydání: 01. 01. 2021
 ### Důležitá poznámky
 
 - **Minimální verze Androidu je teď 8.0.** Pro starší verze Androidu lze stále použít verzi 2.6.1.4 ze starého úložiště kódů.
-- [Objectives have changed.](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) **Finish not completed objectives before update.**
+- [Objectives have changed.](#objectives-objective3) **Finish not completed objectives before update.**
 - Repository location still on <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../SettingUpAaps/BuildingAaps.md).
 - Please use [Android Studio 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Hlavní nové funkce
 
 - [Omnipod Eros support](../CompatiblePumps/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
-- [bolus advisor](../SettingUpAaps/Preferences.md#quick-wizard) & [eating reminder](../DailyLifeWithAaps/AapsScreens.md#section-j) @MilosKozak
-- [New watchface](../UsefulLinks/WearOsSmartwatch.md#new-watchface-as-of-aaps-28) @rICTx-T1D
+- [bolus advisor](#Preferences-quick-wizard) & [eating reminder](#AapsScreens-section-j) @MilosKozak
+- [New watchface](#Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
 - Vylepšení připojení Dana RS @MilosKozak
 - Odstraněno chování "Nezměněné hodnoty CGM" v SMB pro nativní aplikaci Dexcom
-- New [Low Ressolution Skin](../SettingUpAaps/Preferences.md#skin)
-- New ["Pregnant" patient type](../DailyLifeWithAaps/KeyAapsFeatures.md#overview-of-hard-coded-limits) @Brian Quinion
+- New [Low Ressolution Skin](#Preferences-skin)
+- New ["Pregnant" patient type](#Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
 - Nové rozložení NSClient pro tablety @MilosKozak
 - NSClient přenáší nastavení inzulinu, senzitivity a zobrazení přímo z hlavní AAPS @MilosKozak
 - [Preferences filter](../SettingUpAaps/Preferences.md) @Brian Quinion
 - Nové ikony <mailto:pumpy@Rig22> @@teleriddler @osodebailar
-- New [insulin type Lyumjev](../SettingUpAaps/ConfigBuilder.md#lyumjev)
+- New [insulin type Lyumjev](#Config-Builder-lyumjev)
 - Vylepšení instalačního průvodce @MilosKozak
 - Zlepšení zabezpečení @dlvoy
 - Různé vylepšení a opravy @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Chinon
@@ -314,34 +315,34 @@ Datum vydání: 24. 09. 2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** [here](../Maintenance/Update2_7.md).
 
-You need at least start [objective 11 (in later versions objective 10!)](../SettingUpAaps/CompletingTheObjectives.md#objective-10-automation) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf). Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
+You need at least start [objective 11 (in later versions objective 10!)](#objectives-objective10) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start [objective 11](#objectives-objective11). Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
 
 ### Hlavní nové funkce
 
 - interní použití vkládání závislostí, aktualizací knihoven, kódu přepsaného do kotlinu @MilosKozak @AdrianLxM
 - využití modulů pro pumpy Dana @MilosKozak
 - [new layout, layout selection](../DailyLifeWithAaps/AapsScreens.md) @MilosKozak
-- new [status lights layout](../SettingUpAaps/Preferences.md#status-lights) @MilosKozak
-- [multiple graphs support](../DailyLifeWithAaps/AapsScreens.md#activate-optional-information) @MilosKozak
+- new [status lights layout](#Preferences-status-lights) @MilosKozak
+- [multiple graphs support](#AapsScreens-activate-optional-information) @MilosKozak
 - [Profile helper](../SettingUpAaps/ProfileHelper.md) @MilosKozak
-- visualization of [dynamic target adjustment](../DailyLifeWithAaps/AapsScreens.md#visualization-of-dynamic-target-adjustment) @Tornado-Tim
+- visualization of [dynamic target adjustment](#AapsScreens-visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - new [preferences layout](../SettingUpAaps/Preferences.md) @MilosKozak
 - vylepšení SMB algoritmu @Tornado-Tim
-- [Low glucose suspend mode](../SettingUpAaps/Preferences.md#aps-mode) @Tornado-Tim
-- [carbs required notifications](../SettingUpAaps/Preferences.md#carb-required-notification) @twain47 @Tornado-Tim
+- [Low glucose suspend mode](#Preferences-aps-mode) @Tornado-Tim
+- [carbs required notifications](#Preferences-carb-required-notification) @twain47 @Tornado-Tim
 - odstraněn plugin Ošetření (přesunut do pluginu Akce) @MilosKozak
 - [new encrypted backup format](ExportImportSettings.md) @dlvoy
 - [new SMS TOTP authentication](../RemoteFeatures/SMSCommands.md) @dlvoy
-- [new SMS PUMP CONNECT, DISCONNECT](../RemoteFeatures/SMSCommands.md#commands) commands @Lexsus
+- [new SMS PUMP CONNECT, DISCONNECT](#SMSCommands-commands) commands @Lexsus
 - lepší podpora nízkých bazálů na pumpách Dana @Mackwe
 - drobná vylepšení pro pumpu Insight @TebbeUbben @MilosKozak
-- ["Default language" option](../SettingUpAaps/Preferences.md#general) @MilosKozak
+- ["Default language" option](#Preferences-general) @MilosKozak
 - vektorové ikony @Philoul
-- [set neutral temps for MDT pump](../CompatiblePumps/MedtronicPump.md#configuration-of-the-pump) @Tornado-Tim
+- [set neutral temps for MDT pump](#MedtronicPump-configuration-of-the-pump) @Tornado-Tim
 - vylepšení prohlížení historie @MilosKozak
 - odstraněn OpenAPS MA algoritmus @Tornado-Tim
 - odstraněna Oref0 senzitivita @Tornado-Tim
-- [Biometric or password protection](../SettingUpAaps/Preferences.md#protection) for settings, bolus @MilosKozak
+- [Biometric or password protection](#Preferences-protection) for settings, bolus @MilosKozak
 - [new automation trigger](../DailyLifeWithAaps/Automations.md) @PoweRGbg
 - [Open Humans uploader](../SupportingAaps/OpenHumans.md) @TebbeUbben @AdrianLxM
 - Nová dokumentace @Achim
@@ -433,7 +434,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Odstraněn Jednoduchý profil
 
-- [Extended bolus](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
+- [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
 
 - Plugin MDT: Opravena chyba s duplicitními záznamy
 
@@ -449,9 +450,9 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Opravená podpora jazyků
 
-- Objectives: [Allow to go back](../SettingUpAaps/CompletingTheObjectives.md#go-back-in-objectives), Time fetching dialog
+- Objectives: [Allow to go back](#CompletingTheObjectives-go-back-in-objectives), Time fetching dialog
 
-- Automation: [allow sorting](../DailyLifeWithAaps/Automations.md#the-order-of-the-automations-in-the-list-matters)
+- Automation: [allow sorting](#Automations-the-order-of-the-automations-in-the-list-matters)
 
 - Automatizace: opravena chyba, kdy byla automatizace spuštěna s vypnutou smyčkou
 
@@ -473,7 +474,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 Datum vydání: 31. 10. 2019
 
-Please note the [important notes](ReleaseNotes#version-250) and [limitations](ReleaseNotes#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](ReleaseNotes#version-250). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
+Please note the [important notes](#Releasenotes-version-2-5-0) and [limitations](#Releasenotes-is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](#Releasenotes-version-2-5-0). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
 
 (Releasenotes-version-2-5-0)=
 ## Verze 2.5.0
@@ -485,7 +486,7 @@ Datum vydání: 26. 10. 2019
 ### Důležité poznámky
 
 - Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../SettingUpAaps/BuildingAaps.md) or [update](UpdateToNewVersion).
-- If you are using xDrip [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) must be set.
+- If you are using xDrip [identify receiver](#xdrip-identify-receiver) must be set.
 - If you are using Dexcom G6 with the patched Dexcom app you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 - Glimp is supported from version 4.15.57 and newer.
 
@@ -503,7 +504,7 @@ Datum vydání: 26. 10. 2019
 - RxJava2, Okthttp3, podpora Retrofit
 - Old [Medtronic pumps](../CompatiblePumps/MedtronicPump.md) support (RileyLink need)
 - New [Automation plugin](../DailyLifeWithAaps/Automations.md)
-- Allow to [bolus only part](../SettingUpAaps/Preferences.md#advanced-settings-overview) from bolus wizard calculation
+- Allow to [bolus only part](#Preferences-advanced-settings-overview) from bolus wizard calculation
 - Vykreslování aktivity inzulínu
 - Adjusting IOB predictions by autosens result
 - Nová podpora pro upravené Dexcom plikace ([složka 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
@@ -546,7 +547,7 @@ Datum vydání: 29. 03. 2019
 
 ### Hlavní nové funkce
 
-- [Oprava letního času](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst)
+- [Oprava letního času](#time-adjustment-daylight-savings-time-dst)
 - Aktualizace Wear
 - [SMS plugin](../RemoteFeatures/SMSCommands.md) update
 - Návrat k předchozímu cíli.
@@ -602,7 +603,7 @@ Datum vydání: 03. 11. 2018
 
 - Horní pruh dává přístup k pozastavení/zakázání smyčky, zobrazení/úpravě profilu a k zahájení/ukončení dočasných cílů (DC). DC používají výchozí nastavení. Nová možnost DC Hypoglykémie je vysoký dočasný cíl, který má smyčce zabránit, aby příliš agresivně překorigovala dokrmové sacharidy na odvrácení hypoglykémie.
 - Tlačítka ošetření: staré tlačítko ošetření je stále dostupné, ale ve výchozím nastavení je skryté. Viditelnost tlačítek může být nově nastavitelná. New insulin button, new carbs button (including [eCarbs/extended carbs](../DailyLifeWithAaps/ExtendedCarbs.md))
-- [Zbarvené křivky předpovědí](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)
+- [Zbarvené křivky předpovědí](#aaps-screens-prediction-lines)
 - Možnost zobrazit pole poznámky v dialogových oknech inzulínu/sacharidů/kalkulátoru/plnění, poznámka se pak nahrává do NS
 - Aktualizované dialogové okno plnění umožňuje plnění samotné a navíc vložení ošetřujících vstupů pro výměnu kanyly a výměnu zásobníku
 

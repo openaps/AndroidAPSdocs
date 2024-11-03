@@ -44,6 +44,7 @@ Un [commentaire](https://academic.oup.com/brain/article/138/1/2/340563) sur ce t
 
 Il est généralement reconnu que les diabétiques de type 1 _nouvellement_ diagnostiqués (qui ont souvent un taux très élevé d'HbA1c au moment du diagnostic, avant de commencer la thérapie par insuline) semblent être en mesure de réduire rapidement leur taux d'HbA1c immédiatement après le diagnostic sans faire autant face à ces risques, car leur taux de glycémie n'a pas été élevé pendant une longue période. Cependant, cela reste important d'en discuter avec votre équipe médicale.
 
+(PreparingForAaps-no-sglt-2-inhibitors)=
 ### Aucun inhibiteur SGLT-2
 
 ```{admonition} NO SGLT-2 inhibitors
@@ -121,7 +122,7 @@ Cette section a pour but de fournir aux nouveaux utilisateurs des liens vers des
 
 #### [Pour les professionnels de santé](../Resources/clinician-guide-to-AndroidAPS.md)
 
-This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](./Introduction.md#how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
 
 ## Que va-t-on compiler et installer?
 
@@ -150,7 +151,7 @@ En fonction de votre capteur de glycémie/MGC, vous aurez besoin d'une applicati
 
 Aussi bien **Nightscout** qu'**AAPS** doivent être mis à jour environ une fois par an, car de nouvelles versions sont publiées. Dans certains cas, la mise à jour peut être repoussée, dans d'autres cas, elle est fortement recommandée ou considérée comme essentielle pour la sécurité. Ces mises à jour seront notifiées sur les groupes Facebook et les serveurs Discord. Les notes de version indiqueront clairement la marche à suivre. Il est probable que de nombreuses personnes se poseront des questions similaires aux vôtres au moment de la mise à jour, et vous trouverez le soutien nécessaire pour effectuer les mises à jour.
 
-(preparing-how-long-will-it-take?)=
+(preparing-how-long-will-it-take)=
 ## Combien de temps pour tout mettre en place ?
 
 Comme mentionné précédemment, l'utilisation de **AAPS** s'envisage au long terme et nécessite un investissement de votre temps personnel. Il ne s'agit pas d'une installation à faire une seule fois. Les estimations actuelles pour la compilation d'**AAPS**, l'installation et la configuration d'**AAPS** et de l'application de **MGC**, le passage d'une boucle ouverte à une boucle fermée hybride avec **AAPS** sont d'environ 4 à 6 mois en tout. Vous avez donc tout intérêt à commencer rapidement la compilation de l'application **AAPS** et vous mettre à travailler sur les premiers objectifs dès que possible, même si vous utilisez toujours un autre système d'administration d'insuline (vous pouvez utiliser une pompe virtuelle jusqu'à l'objectif 5).

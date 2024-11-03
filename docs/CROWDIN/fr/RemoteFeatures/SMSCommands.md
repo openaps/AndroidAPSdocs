@@ -3,14 +3,14 @@
 ```{admonition} Documentation
 :class: note
 
-This section may contain outdated content. Please also see the page [SMS Commands](../RemoteFeatures/RemoteControl.md#1-sms-commands)).
+This section may contain outdated content. Please also see the page [SMS Commands](#RemoteControl-sms-commands)).
 
 ```
 
 ## La sécurité avant tout
 .
 - AAPS vous permet de controler le téléphone d’un enfant à distance via un SMS. Si vous activez le Communicateur SMS, rappelez-vous toujours que le téléphone configuré pour donner des commandes distantes pourrait être volé. Donc, toujours le protéger au minimum par un code PIN. Un mot de passe robuste ou une identification biométrique sont recommandés.
-- Additionally it is recommended to allow a [second phone number](../RemoteFeatures/SMSCommands.md#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](../RemoteFeatures/SMSCommands.md#other) SMS communicator in case your main remote phone gets lost or stolen.
+- Additionally it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#SMSCommands-other) SMS communicator in case your main remote phone gets lost or stolen.
 - AAPS vous informera également par SMS si vos commandes à distance, comme un bolus ou un changement de profil, ont été effectuées. Il est conseillé de le configurer de sorte que les SMS de confirmation soient envoyés à au moins deux numéros de téléphone différents au cas où l'un des téléphones destinataires serait volé.
 - **Si vous effectuez un bolus à l'aide des commandes SMS, vous devez entrer les glucides dans Nightscout (AAPSClient, site Web...)!** Si vous ne le faites pas, l'IA sera correct avec des GA trop faibles, ce qui pourrait conduire à ne pas effectuer de bolus de correction car AAPS supposera que vous avez trop d'insuline active.
 - Depuis AndroidAPS version 2.7, une application d'authentification avec un mot de passe à usage unique basé sur l'heure doit être utilisée pour augmenter la sécurité lors de l'utilisation des commandes SMS.
@@ -24,6 +24,7 @@ This section may contain outdated content. Please also see the page [SMS Command
 - Si vous utilisez un iPhone comme suiveur (follower) et ne pouvez donc pas utiliser AAPSClient il y a des commandes SMS supplémentaires disponibles.
 - Dans les paramètres de votre téléphone android allez dans Applications > AndroidAPS > Autorisations et activez SMS
 
+(SMSCommands-authorized-phone-numbers)=
 ### Numéros de tél autorisés
 
 - Dans AndroidAPS, allez dans **Préférences > Communicateur SMS** et entrez le(s) numéro(s) de téléphone que vous autoriserez pour les commandes SMS (séparés par des points-virgules, par ex. +33123456789;+33123456798).
@@ -96,9 +97,10 @@ This section may contain outdated content. Please also see the page [SMS Command
 
 **Astuce** : Il peut être utile d'avoir un forfait SMS illimité (pour chaque téléphone utilisé) si beaucoup de SMS sont envoyés.
 
+(SMSCommands-commands)=
 ## Commandes
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../SupportingAaps/Translations#translate-strings-for-aaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app).
 
 ![Example de commandes SMS](../images/SMSCommands.png)
 
@@ -155,7 +157,7 @@ Un bolus à distance n'est pas possible dans les 15 minutes suivant le dernier b
 - PROFILE 1 \* Réponse : Pour changer le profil vers Profile1 100%, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
 - PROFILE 2 30 \* Réponse : Pour changer le profil vers Profile2 30%, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
 
-
+(SMSCommands-other)=
 ### Autres
 
 - TREATMENTS REFRESH \* Réponse : Actualiser les données depuis NS
@@ -169,6 +171,7 @@ Un bolus à distance n'est pas possible dans les 15 minutes suivant le dernier b
 - HELP \* Réponse : BG, LOOP, TREATMENTS, .....
 - HELP BOLUS \* Réponse : BOLUS 1.2 BOLUS 1.2 MEAL
 
+(SMSCommands-troubleshooting)=
 ## Troubleshooting
 
 ### SMS multiples

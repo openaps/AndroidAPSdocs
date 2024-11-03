@@ -360,6 +360,7 @@ Bu ekran, hem halihazırda yapılandırılmış pod iletişim cihazı hem de akt
 > - **Son Cihaz İletişimi:** Pod ile pod iletişim cihazı (örn. RilyLink) arasında yapılan son iletişimin tarihi ve saati.
 > - **Yenile butonu** bu sayfadaki ayarları manuel olarak yeniler.
 
+(omnipod-eros-rileylink-and-active-pod-history)=
 #### RileyLink ve Aktif Pod Geçmişi
 
 Bu ekran RileyLink'in veya o anda bağlı olan pod içinde olduğu veya gerçekleştirdiği her durum veya eylemin ters kronolojik sırayla bilgi sağlar. Tüm geçmiş yalnızca o anda etkin olan pod için kullanılabilir, bir bölme değişikliğinden sonra bu geçmiş silinecek ve yalnızca yeni etkinleştirilen podun olayları kaydedilecek ve gösterilecektir.
@@ -428,7 +429,7 @@ Aşağıda, ana AAPS arayüzündeki **Omnipod (POD)** sekmesindeki simgelerin ve
 
 - **Toplam iletilen:** Rezervuardan iletilen toplam insülin ünite miktarını görüntüler. *Pod mutlak kesinlikle hazırlanıp ve doldurulmadığı için bunun bir tahmin olduğunu unutmayın.*
 
-- **Hatalar:** Karşılaşılan son hatayı görüntüler. Review the [Pod history](#view-pod-history), [RileyLink history](#rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **Hatalar:** Karşılaşılan son hatayı görüntüler. Review the [Pod history](#view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
 - **Etkin pod alarmları:** Etkin pod alarmlarını gösteren satırdır. Genellikle pod son kullanma tarihi 72 saat sonraysa ve pod yerel bip sesleri çıkardığında kullanılır.
 
@@ -540,7 +541,7 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
   > Bu düğmeye basıldığında, o anda bağlı olan pod iletişim cihazı (örn. RileyLink) yapılandırmasını sıfırlar.
   > 
   > > - İletişim başladığında, belirli veriler RileyLink'e gönderilir ve burada ayarlanır > - Bellek Kayıtları ayarlandı > - İletişim Protokolleri ayarlandı > - Ayarlı Radyo Frekansı ayarlandı 
-  > > - See [additional notes](#reset-rileylink-config-notes) at the end of this table
+  > > - See [additional notes](#OmnipodEros-reset-rileylink-config-notes) at the end of this table
 
 - **Sinyal günlüğünü oku:**
 

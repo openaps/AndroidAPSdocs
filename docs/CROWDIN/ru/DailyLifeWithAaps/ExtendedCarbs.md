@@ -21,10 +21,6 @@ ECarbs на вкладке обзора, обратите внимание на 
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
-Углеводы в будущем окрашены в темно-оранжевый цвет на вкладке Терапии:
-
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 Способ компенсации жиров и белков при помощи этой функции описан здесь: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
@@ -53,7 +49,7 @@ ______________________________________________________________________
 
 - Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов.
 - Единицы болюса, время оставшееся и общее, будут показаны на гланом экране.
-- On Insight pump extended bolus is *not available* if [TBR emulation](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
+- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
