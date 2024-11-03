@@ -7,7 +7,7 @@ This guide has some high-level information about DIY closed looping and specific
 ## The steps for building a DIY Closed Loop:
 
 To start using AAPS, the following steps should be taken:
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
+* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
 * [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
