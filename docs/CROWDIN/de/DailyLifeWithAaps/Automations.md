@@ -46,9 +46,17 @@ Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, 
 
 Um eine **Automatisierung** einzurichten, erstelle in **AAPS** eine 'Regel/Aufgabe'. Das kann so aussehen:
 
+![Automation create](../images/automation_create.png)
+
 * give your ‘rule’ a title;
-* select at least one ‘Condition’; and
+* select at least one ‘Condition’;
+
+![Automation condition](../images/automation_condition.png)
+
 * select one ‘Action’;
+
+![Automation action](../images/automation_action.png)
+
 * check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
 
 ![Automatisierung](../images/automation_2024-10-26_17-48-05.png)
@@ -91,13 +99,13 @@ Besonderer Vorsicht bedarf es, wenn in einer **Automatisierung** ein 'negativer 
 
 ![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-**Beispiel 1:** Eine Bedingung **"kleiner als"** "-0,1" wird erstellt:
+**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
 
-Es wird eine **Automatisierung** für jeden Wert, der **genau** kleiner als** -0,1 ausgelöst. Dazu zählen damit z.B. auch die Werte -0,2; -0,3; 0,4 usw. Der Wert -0,1 selber **ist in der Bedingung nicht enthalten**. (Die Bedingung "ist gleicher oder kleiner als 0,1" _würde_ auch -0,1 enthalten).
+Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/l (-2 mg/dl)" _would_ include -0.1 mmol/l or -2 mg/dl).
 
-**Beispiel 2:** Eine Bedingung "ist größer als" -0,1 wird erstellt:
+**Example 2:** Creating a Condition "is greater than" -0.1mmol/l (-2mg/dl) will:
 
-Es wird eine **Automatisierung** für jeden Wert, der **größer als** -0,1, ausgelöst. Dazu gehören Zahlen wie 0; 0,2; 0,4 und jede andere positive Zahl.
+Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-2mg/dl). This includes numbers like 0, 0.2, 0.4mmol/l, (0, 4, 8mg/dl) and any other positive number.
 
 Bei der Auswahl Deiner **Automatisierung** und der Wahl der Bedingungen und Werte, ist es wichtig genau zu wissen, welches Ziel damit erreicht werden soll.
 
@@ -160,8 +168,6 @@ kein(e)
 Sobald die Aktion hinzugefügt wurde, müssen die voreingestellten Werte durch Klicken auf Deine Wünsche angepasst werden.
 
 ![Alt text](../images/automation_2024-02-12_20-57-07.png)
-
-![Alt text](../images/automation_2024-02-12_20-57-29.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## The order of the **Automations** in the list matters
