@@ -76,7 +76,7 @@ Combo、Insight 及舊版 Medtronic 是穩定的幫浦，且可以迴路使用�
 
 Sony Smartwatch 3（SWR50）在使用者中普遍用於迴路，因為這是唯一一款能在手機超出範圍時從 Dexcom G6/G5 獲取讀取的手錶。 某些其他手錶也可以透過修補來作為獨立接收器使用（更多詳情請參閱[這份文件](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5)）。
 
-Users are creating a [list of tested phones and watches](../CompatiblePhones/ListOfTestedPhones.md). 有不同的錶盤可供 **AAPS** 使用，您可以在 [這裡](../UsefulLinks/WearOsSmartwatch.md)找到。
+用戶正在建立一個[已測試的手機和手錶清單](../CompatiblePhones/ListOfTestedPhones.md)。 有不同的錶盤可供 **AAPS** 使用，您可以在 [這裡](../UsefulLinks/WearOsSmartwatch.md)找到。
 
 ### xDrip+
 
