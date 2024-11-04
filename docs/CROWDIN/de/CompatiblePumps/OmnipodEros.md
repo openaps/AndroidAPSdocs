@@ -25,7 +25,7 @@ Diese Anleitung ist für die Konfiguration der Omnipod Eros Pumpe (**NICHT Omnip
 
 > Komponente, die AAPS betreibt und Steuerbefehle an das Pod-Kommunikationsgerät sendet.
 > 
-> > - Supported [Omnipod driver Android phone](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) with a version of AAPS 2.8 and related components set up.
+> > - Supported [Omnipod driver Android phone](../CompatiblePhones/ListOfTestedPhones.md) with a version of AAPS 2.8 and related components set up.
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Insulin-Pumpe**
 
