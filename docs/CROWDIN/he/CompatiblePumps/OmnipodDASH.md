@@ -23,7 +23,7 @@
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
 * **טלפון Android תואם** עם חיבור בלוטות' (BLE)
-   -  לא כל דגמי הטלפון וגרסאות האנדרואיד מובטחות לעבוד כהלכה. יש לבדוק את [**הטלפונים שנבדקו עם DASH**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) או פשוט נסו עם הטלפון שלכם וספרו לנו את התוצאה (הפניה לטלפון ואזור גיאוגרפי, גרסת אנדרואיד, עבד / עם קשיים / לא עבד).
+   -  לא כל דגמי הטלפון וגרסאות האנדרואיד מובטחות לעבוד כהלכה. Please check [**DASH Tested phones**](../CompatiblePhones/ListOfTestedPhones.md) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
    - **הערה חשובה: היו מספר מקרים של איבודי חיבור קבועים שאינם ניתנים לשחזור בעת שימוש בפודים ישנים יותר עם גירסת קושחה 3X.XX  היזהרו בעת שימוש בפודים הישנים האלה עם AndroidAPS, במיוחד עם התקני בלוטות' מחוברים אחרים!** שימו לב שמנהל ההתקן של AAPS עם Omnipod Dash מתחבר לפוד באמצעות בלוטות' בכל פעם שהוא שולח פקודה ואז מתנתק מיד לאחר מכן. חיבורי הבלוטות' עלולים להיות מופרעים על ידי מכשירים אחרים המקושרים לטלפון המפעיל את AAPS כגון אוזניות וכו'... (מה שעלול לגרום, במקרים נדירים, לבעיית חיבור או לשגיאות\אובדן פוד בהפעלה או לאחר מכן בחלק מדגמי הטלפון).
    -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions.
 * [**חיישן סוכר רציף (CGM)**](../Getting-Started/CompatiblesCgms.md)

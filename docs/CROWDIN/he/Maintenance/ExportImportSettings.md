@@ -35,7 +35,7 @@ Preferences are what tailors the stock AAPS application to how you have it setup
 
 2 - From the AAPS home screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok
 
-![AAPS export settings 1](../images/AAPS_ExportSettings1.png) ![AAPS export settings 2](../images/AAPS_ExportSettings2.png)
+![AAPS export settings 1](../images/Maintenance/AAPS_ExportSettings1.png) ![AAPS export settings 2](../images/Maintenance/AAPS_ExportSettings2.png)
 
 3 - using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be YYYY-MM-DD_Time_appname.json. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
 
@@ -69,7 +69,7 @@ _Omnipod users:_ importing a preferences file will deactivate your current pod i
 
 9 - From the AAPS home screen, select the three line (hamburger) menu in the top left > Maintenance > Import settings > select the preferences file you want to back-up from > Ok > type in Master password set above > Ok. Make sure you select the correct preferences file, all .json files from the preferences folder will be shown.
 
-![AAPS import settings 1](../images/AAPS_ImportSettings1.png) ![AAPS import settings 2](../images/AAPS_ImportSettings2.png)
+![AAPS import settings 1](../images/Maintenance/AAPS_ImportSettings1.png) ![AAPS import settings 2](../images/Maintenance/AAPS_ImportSettings2.png)
 
 10 - AAPS will automatically restart and should then have all of your preferences imported.
 

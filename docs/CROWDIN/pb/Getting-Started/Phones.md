@@ -10,7 +10,7 @@ For older Android versions, older **AAPS** versions are available see: [Release 
 
 (Phones-phone-wallpaper)=
 
-# Phone Wallpaper
+## Phone Wallpaper
 
 If you want to decorate your phone with more **AAPS**, you can download your background image [here](../images/bg_phone.jpg)!
 

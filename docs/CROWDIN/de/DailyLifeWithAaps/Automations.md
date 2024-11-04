@@ -16,7 +16,13 @@ There are a wide range of **Automation** options, and users are encouraged to st
 
 1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
 
-Im Beispiel unten wird gezeigt, wie mit einer **Automatisierung** einzelne manuelle Schritte überflüssig gemacht werden. The user has set an **Automation** to trigger a 5am ‘Temp Target Exercise’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
+The example below illustrates how an **Automation** can enable steps to be eliminated.
+
+User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
+
+![Alt text](../images/automation_2024-02-12_20-54-50.png)
+
+The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
 
 ![Alt text](../images/automation_2024-02-12_20-54-49.png)
 
@@ -171,7 +177,7 @@ Sobald die Aktion hinzugefügt wurde, müssen die voreingestellten Werte durch K
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## The order of the **Automations** in the list matters
- **AAPS** ordnet die Regeln in der Reihenfolge, wie sie erstellt wurden und beginnt bei der oberen Automatisierung mit dem Abarbeiten der **Automatisierungsliste**. Wenn beispielsweise ‘Hypobehandlung’ unter allen Automatisierungsregeln die wichtigste **Automatisierung** ist, sollte diese ganz oben auf der Liste Deiner **Automatisierungen** erscheinen:
+ **AAPS** ordnet die Regeln in der Reihenfolge, wie sie erstellt wurden und beginnt bei der oberen Automatisierung mit dem Abarbeiten der **Automatisierungsliste**. For example, if the ‘Low’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
 ![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
@@ -210,7 +216,7 @@ Der Standort wird als 'Auslöser' eingestellt, indem die Koordinaten für Breite
 
 Aufgrund der ‘Und’-Verknüpfung wird die **Automatisierung** nur dann ausgeführt, wenn die Person sich zum gewählten Zeitpunkt am hinterlegten Standort aufhält.
 
-Diese **Automatisierung** wird zu keiner anderen Zeit an diesem Standort ausgeführt und auch nicht, wenn man sich zum gewählten Zeitpunkt weiter als 100 Meter von der hinterlegten GPS-Position aufhält.
+The **Automation** will not be triggered on any other time at this location or on this time outside of 50 meters set GPS coordinates.
 
 ### WLAN SSID und Standort-Automatisierungen
 

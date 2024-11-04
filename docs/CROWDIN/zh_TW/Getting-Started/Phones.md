@@ -10,7 +10,7 @@
 
 (Phones-phone-wallpaper)=
 
-# 手機桌布
+## 手機桌布
 
 如果您想以更多 **AAPS** 裝飾您的手機，可以 [在這裡下載背景圖片](../images/bg_phone.jpg)！
 

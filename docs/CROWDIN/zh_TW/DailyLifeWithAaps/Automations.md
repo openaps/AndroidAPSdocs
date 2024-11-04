@@ -18,7 +18,13 @@
 
 **使 AAPS 可以高度自訂** ，並根據用戶的偏好，在特定情況下變得更積極或保守。 例如，在半夜出現負 **IOB** 時觸發一個暫時降低的 **設定檔** %，表示現有的 **設定檔** 可能過強。 </ol>
 
-以下範例說明了如何透過**自動化**來簡化步驟。 用戶設置了一個**自動化** 以在早上 5 點觸發 '臨時目標運動'，以確保他們的**血糖**和 **IOB** 處於最佳狀態，為早上 6 點的運動做準備：
+以下範例說明了如何透過**自動化**來簡化步驟。
+
+用戶每天早上六點鍛鍊：他需要在早上五點在 AAPS 中手動設置 “臨時目標-活動”。
+
+![替代文字](../images/automation_2024-02-12_20-54-50.png)
+
+用戶已設置一個**自動化**，以在早上五點觸發“臨時目標-活動”，確保他們的**血糖**和**體內胰島素**處於最佳狀態，以備下午六點的鍛鍊：
 
 ![替代文字](../images/automation_2024-02-12_20-54-49.png)
 
@@ -48,16 +54,16 @@
 
 要設置**自動化**，請按照以下步驟在**AAPS**中建立一個「規則」：
 
-![Automation create](../images/automation_create.png)
+![自動化建立](../images/automation_create.png)
 
 * 為你的「規則」命名；
-* select at least one ‘Condition’;
+* 至少選擇一個‘條件’；
 
-![Automation condition](../images/automation_condition.png)
+![自動化條件](../images/automation_condition.png)
 
 * 選擇一個「動作」；
 
-![Automation action](../images/automation_action.png)
+![自動化行動](../images/automation_action.png)
 
 * 檢查 **自動化** 事件的右側方框是否被「勾選」以啟用 **自動化**：
 
@@ -101,13 +107,13 @@
 
 ![替代文字](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
+**範例 1：** 建立一個條件**"小於"** "-0.1mmol/l"（或 "-2mg/dl"）將會：
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/l (-2 mg/dl)" _would_ include -0.1 mmol/l or -2 mg/dl).
+對於任何小於 -0.1（-2）的數字觸發**自動化**。 這包括像 -0.2、-0.3、-0.4（-4、-6、-8）等數字。 請記住，-0.1（-2）本身**並不**包含在此條件內。 (條件“等於或小於 -0.1mmol/l（-2 mg/dl）”_將_包含 -0.1 mmol/l 或 -2 mg/dl)。
 
-**Example 2:** Creating a Condition "is greater than" -0.1mmol/l (-2mg/dl) will:
+**範例 2：** 建立條件“大於” -0.1mmol/l (-2mg/dl) 將會：
 
-Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-2mg/dl). This includes numbers like 0, 0.2, 0.4mmol/l, (0, 4, 8mg/dl) and any other positive number.
+對於任何大於 -0.1mmol/l (-2mg/dl) 的數字觸發**自動化**。 這包括像 0、0.2、0.4mmol/l（0、4、8mg/dl）和任何其他正數字。
 
 在選擇這些條件和數值時，仔細考慮你的**自動化**的具體意圖非常重要。
 
@@ -173,7 +179,7 @@ Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## 列表中**自動化**的順序非常重要
- **AAPS**將根據偏好的順序，由**自動化**列表的頂部開始執行規則。 例如，如果‘低血糖’**自動化**是最重要的**自動化**，那麼他應該位於使用者**自動化**列表的頂部，如下所示：
+ **AAPS**將根據偏好的順序，由**自動化**列表由上往下開始執行規則。 例如，如果‘低血糖’ **自動化** 是最重要的**自動化**，高於所有其他規則，那麼這**自動化**應該在用戶的**自動化**列表中出現在最上方，如下所示：
 
 
 ![替代文字](../images/automation_2024-02-12_20-57-48.png-500x.png)
@@ -212,7 +218,7 @@ Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-
 
 由於‘和’連線，只有在‘選擇的時間’並且使用者位於設定位置時，**自動化**才會發生。
 
-這個**自動化**不會在其他時間於該位置或在該時間超過設定100米 GPS 範圍內觸發。
+該**自動化**將不會在該地點或設置的 GPS 坐標 50 米以外的時間觸發。
 
 ### WIFI SSID 位置自動化
 
