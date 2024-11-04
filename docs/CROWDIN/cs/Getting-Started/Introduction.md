@@ -45,7 +45,7 @@ Zatímco OpenAPS je kompatibilní pouze s určitými staršími inzulinovými pu
 
 ## Jaké jsou základní komponenty AAPS?
 
-"Mozkem" AAPS je **aplikace**, kterou si sami sestavíte. Sestavením vás provede manuál, krok za krokem. Vy pak nainstalujete hotovou **AAPS aplikaci** do [kompatibilního](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit?pli=1#gid=2097219952) **chytrého telefonu se systémem Android** (**1**). Mnoho uživatelů upřednostňuje instalaci smyčky na vyhrazeném telefonu, místo na jejich hlavním. Takže nemusíte Android telefon používat na všechno ostatní, stačí pouze na AAPS smyčku.
+"Mozkem" AAPS je **aplikace**, kterou si sami sestavíte. Sestavením vás provede manuál, krok za krokem. You then install the **AAPS  app** on a [compatible](../Getting-Started/Phones.md) **Android smartphone** (**1**). Mnoho uživatelů upřednostňuje instalaci smyčky na vyhrazeném telefonu, místo na jejich hlavním. Takže nemusíte Android telefon používat na všechno ostatní, stačí pouze na AAPS smyčku.
 
 Kromě **AAPS** budete do Vašeho **chytrého telefonu s Androidem** muset také nainstalovat další aplikaci. Jedná se buď o upravenou Dexcom aplikaci nazvanou Build-Your-Own Dexcom App, tedy [**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0), a nebo [**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/). Tato další aplikace získává hodnoty glykémie ze senzoru (**2**) prostřednictvím bluetooth připojení a interně je v telefonu předává do **AAPS aplikace**.
 
