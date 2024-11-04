@@ -212,13 +212,7 @@ Cílem této dokumentace je snížení potřebné technické odbornosti na absol
 The current version of **AAPS** (3.2) requires an Android smartphone with Google **Android 9.0 or above**. Pokud zvažujete nákup nového telefonu (od 2024), je doporučována verze Android 13. Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons, however for users unable to use a device with Android 9.0 or newer, earlier versions of  **AAPS** compatible for older Android versions like [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) and [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2), remain available from previous releases (check the release notes for legacy versions).
 
 #### Výběr modelu smartphone
-Přesný model, který kupujete, závisí na požadovaných funkcích. Existují dvě archivované tabulky kompatibilních [smartphonů](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) a [smartphonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). Tabulky již nejsou aktualizovány, protože existuje příliš mnoho modelů, a proto nyní doporučujeme vyhledat ve skupinách podpory (Facebook nebo Discord) „telefon“ nebo konkrétní model, který si chcete pořídit. Pokud stále potřebujete další informace, zeptejte se v novém příspěvku.
-
-Pokud chcete poskytnout chytrý telefon nebo hodinky k provedení testování, napište prosím na [donations@androidaps.org](mailto:donations@androidaps.org).
-
-- [List of tested phones](../CompatiblePhones/ListOfTestedPhones.md)
-- [Jelly Settings](../CompatiblePhones/Jelly.md)
-- [Huawei Settings](../CompatiblePhones/Huawei.md)
+Přesný model, který kupujete, závisí na požadovaných funkcích. You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
 
 Uživatelům doporučujeme udržovat jejich Android telefon aktualizovaný, včetně bezpečnostních nastavení. Ovšem pokud jste noví uživatel **AAPS** nebo nejste technicky zdatný, možná budete chtít pozdržet aktualizaci svého telefonu do doby, než to udělají ostatní a potvrdí na fórech, že je to bezpečné.
 
