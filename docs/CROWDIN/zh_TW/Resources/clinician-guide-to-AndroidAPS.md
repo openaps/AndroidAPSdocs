@@ -8,7 +8,7 @@
 
 開始使用 AAPS，請按照以下步驟操作：
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
+* 找到[相容的幫浦](../Getting-Started/CompatiblePumps.md)、[相容的 Android 設備](../Getting-Started/Phones.md)和[相容的 CGM 來源](../Getting-Started/CompatiblesCgms.md)。
 * [下載 AAPS 原始碼並建立軟體](../SettingUpAaps/BuildingAaps.md)。
 * [配置軟體以連線到糖尿病設備並指定設定與安全偏好](../SettingUpAaps/SetupWizard.md)。
 
