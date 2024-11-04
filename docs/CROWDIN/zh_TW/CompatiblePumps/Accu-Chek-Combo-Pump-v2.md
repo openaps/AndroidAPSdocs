@@ -11,7 +11,7 @@
 * 一台相容的手機。 至少需要 Android 9（Pie）或更新版本。 如果使用 LineageOS，最低支援版本為 16.1。 請參閱 [發行說明](#maintenance-android-version-aaps-version) 以獲取詳細訊息。
 * 手機上安裝了 AndroidAPS 應用程式。
 
-根據手機的藍牙支援品質及其是否具備額外的省電邏輯，有些手機可能比其他手機運作得更好。 可以在[AAPS 手機列表](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit)文件中找到相容手機。 請注意，這不是完整的列表，只反應個人使用經驗。 我們鼓勵你也分享你的經驗，這樣可以幫助其他人（這些專案是關於傳遞經驗）。
+根據手機的藍牙支援品質及其是否具備額外的省電邏輯，有些手機可能比其他手機運作得更好。 A list of phones can be found in the [AAPS Phones](../CompatiblePhones/ListOfTestedPhones.md) document. 請注意，這不是完整的列表，只反應個人使用經驗。 我們鼓勵你也分享你的經驗，這樣可以幫助其他人（這些專案是關於傳遞經驗）。
 
 (combov2-before-you-begin)=
 ## 開始之前
