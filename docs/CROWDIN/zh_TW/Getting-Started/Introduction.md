@@ -45,7 +45,7 @@ Android APS（**AAPS**）是一個混合閉環系統，或稱人工胰臟系統�
 
 ## AAPS 的基本組成部分是什麼？
 
-AAPS 的“核心”是一個你自己建置的**應用程式**。 這裡有詳細的步驟說明。 You then install the **AAPS  app** on a [compatible](../Getting-Started/Phones.md) **Android smartphone** (**1**). 很多人喜歡將他們的 AAPS 循環放在另一隻獨立的手機上，而不是主要的手機 因此，你不必在日常生活中使用 Android 手機，只需用於運作你的 AAPS 循環即可。
+AAPS 的“核心”是一個你自己建置的**應用程式**。 這裡有詳細的步驟說明。 然後你可以將**AAPS** 應用程式安裝在[相容](../Getting-Started/Phones.md)的**Android 智慧型手機** (**1**) 上。 很多人喜歡將他們的 AAPS 循環放在另一隻獨立的手機上，而不是主要的手機 因此，你不必在日常生活中使用 Android 手機，只需用於運作你的 AAPS 循環即可。
 
 **安卓智慧型手機**也需要安裝另一個應用程式，以及 **AAPS**。 這是一個修改過的 Dexcom 應用程式，稱為自建 Dexcom 應用程式[**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) 或 [**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/)。 這個附加應用程序透過藍牙從傳感器(**2**) 接收葡萄糖資料，然後將資料內部發送到手機上的 **AAPS 應用程序**。
 
