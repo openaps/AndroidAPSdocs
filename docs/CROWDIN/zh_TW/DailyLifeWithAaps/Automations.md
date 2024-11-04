@@ -18,15 +18,15 @@
 
 **使 AAPS 可以高度自訂** ，並根據用戶的偏好，在特定情況下變得更積極或保守。 例如，在半夜出現負 **IOB** 時觸發一個暫時降低的 **設定檔** %，表示現有的 **設定檔** 可能過強。 </ol>
 
-The example below illustrates how an **Automation** can enable steps to be eliminated.
+以下範例說明了如何透過**自動化**來簡化步驟。
 
-User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
+用戶每天早上六點鍛鍊：他需要在早上五點在 AAPS 中手動設置 “臨時目標-活動”。
 
-![Alt text](../images/automation_2024-02-12_20-54-50.png)
+![替代文字](../images/automation_2024-02-12_20-54-50.png)
 
-The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
+用戶已設置一個**自動化**，以在早上五點觸發“臨時目標-活動”，確保他們的**血糖**和**體內胰島素**處於最佳狀態，以備下午六點的鍛鍊：
 
-![Alt text](../images/automation_2024-02-12_20-54-49.png)
+![替代文字](../images/automation_2024-02-12_20-54-49.png)
 
 ## 開始使用自動化前的關鍵考慮因素
 
@@ -54,16 +54,16 @@ The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ t
 
 要設置**自動化**，請按照以下步驟在**AAPS**中建立一個「規則」：
 
-![Automation create](../images/automation_create.png)
+![自動化建立](../images/automation_create.png)
 
 * 為你的「規則」命名；
-* select at least one ‘Condition’;
+* 至少選擇一個‘條件’；
 
-![Automation condition](../images/automation_condition.png)
+![自動化條件](../images/automation_condition.png)
 
 * 選擇一個「動作」；
 
-![Automation action](../images/automation_action.png)
+![自動化行動](../images/automation_action.png)
 
 * 檢查 **自動化** 事件的右側方框是否被「勾選」以啟用 **自動化**：
 
@@ -73,12 +73,12 @@ The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ t
 
 要停用**自動化**規則，請取消勾選**自動化**名稱左側的框。 下面的範例顯示了一個標題為‘低血糖 TT’的 **自動化** 是被啟用（‘勾選’）還是停用（‘未勾選’）。
 
-![Alt text](../images/automation_2024-02-12_20-56-08.png)
+![替代文字](../images/automation_2024-02-12_20-56-08.png)
 
 
 在設置 **自動化** 時，您可以先透過在「動作」裡的啟用「通知」選項進行測試。 這會觸發**AAPS**顯示通知，而不是自動執行動作。 當你確認通知在正確的時間/條件下觸發時，可以更新**自動化**規則，將「通知」替換為「動作」。
 
-![Alt text](../images/automation_2024-02-12_20-55-05.png)
+![替代文字](../images/automation_2024-02-12_20-55-05.png)
 
 ```{admonition} Important note
 :class: note
@@ -105,15 +105,15 @@ The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ t
 
 在**自動化**中的「條件」選擇‘小於’這類負值時，請務必謹慎。 例如：
 
-![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
+![替代文字](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
+**範例 1：** 建立一個條件**"小於"** "-0.1mmol/l"（或 "-2mg/dl"）將會：
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/l (-2 mg/dl)" _would_ include -0.1 mmol/l or -2 mg/dl).
+對於任何小於 -0.1（-2）的數字觸發**自動化**。 這包括像 -0.2、-0.3、-0.4（-4、-6、-8）等數字。 請記住，-0.1（-2）本身**並不**包含在此條件內。 (條件“等於或小於 -0.1mmol/l（-2 mg/dl）”_將_包含 -0.1 mmol/l 或 -2 mg/dl)。
 
-**Example 2:** Creating a Condition "is greater than" -0.1mmol/l (-2mg/dl) will:
+**範例 2：** 建立條件“大於” -0.1mmol/l (-2mg/dl) 將會：
 
-Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-2mg/dl). This includes numbers like 0, 0.2, 0.4mmol/l, (0, 4, 8mg/dl) and any other positive number.
+對於任何大於 -0.1mmol/l (-2mg/dl) 的數字觸發**自動化**。 這包括像 0、0.2、0.4mmol/l（0、4、8mg/dl）和任何其他正數字。
 
 在選擇這些條件和數值時，仔細考慮你的**自動化**的具體意圖非常重要。
 
@@ -175,24 +175,24 @@ Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-
 
 添加了「動作」後，應透過點擊並調整預設值，將預設數值更改為所需的數字。
 
-![Alt text](../images/automation_2024-02-12_20-57-07.png)
+![替代文字](../images/automation_2024-02-12_20-57-07.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## 列表中**自動化**的順序非常重要
- **AAPS**將根據偏好的順序，由**自動化**列表的頂部開始執行規則。 For example, if the ‘Low’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+ **AAPS**將根據偏好的順序，由**自動化**列表由上往下開始執行規則。 例如，如果‘低血糖’ **自動化** 是最重要的**自動化**，高於所有其他規則，那麼這**自動化**應該在用戶的**自動化**列表中出現在最上方，如下所示：
 
 
-![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
+![替代文字](../images/automation_2024-02-12_20-57-48.png-500x.png)
 
 要重新排列**自動化**規則，請長按螢幕右側的四條線按鈕。 透過移動規則上下來重新排序**自動化**。
 
-![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
+![替代文字](../images/automation_2024-02-12_20-58-00.png-500x.png)
 
 ## 如何刪除自動化規則
 
 要刪除**自動化**規則，請點擊垃圾桶圖示。
 
-![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
+![替代文字](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
 ## 自動化範例
 
@@ -202,11 +202,11 @@ Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-
 
 這個**自動化**會在血糖低於特定門檻時自動觸發‘低血糖臨時目標’。
 
-![Alt text](../images/automation_2024-02-12_21-04-01.png-500x.png)
+![替代文字](../images/automation_2024-02-12_21-04-01.png-500x.png)
 
 ### 午餐時間臨時目標（包含「位置」）
 
-![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
+![替代文字](../images/automation_2024-02-12_21-04-25.png-500x.png)
 
 這個**自動化**是為一名每天在工作時於相同時間吃午餐的用戶設置的，僅僅在用戶位於設定的‘位置’時才觸發。  因此，如果使用者某一天不在原定的位置工作，這個**自動化**將不會啟動。
 
@@ -214,11 +214,11 @@ Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-
 
 透過輸入經緯度 GPS 座標來設置‘觸發’位置，如下所示：
 
-![Alt text](../images/automation_2024-02-12_21-04-40.png-500x.png)
+![替代文字](../images/automation_2024-02-12_21-04-40.png-500x.png)
 
 由於‘和’連線，只有在‘選擇的時間’並且使用者位於設定位置時，**自動化**才會發生。
 
-The **Automation** will not be triggered on any other time at this location or on this time outside of 50 meters set GPS coordinates.
+該**自動化**將不會在該地點或設置的 GPS 坐標 50 米以外的時間觸發。
 
 ### WIFI SSID 位置自動化
 
@@ -233,14 +233,14 @@ The **Automation** will not be triggered on any other time at this location or o
 
 然後會在30分鐘內設置**暫時目標**為75mg/dl（4）。 加入位置的好處是，如果用戶外出度假，則不會觸發此自動化。
 
-![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
+![替代文字](../images/automation_2024-02-12_21-05-02.png-500x.png)
 
 以下是詳細說明**自動化**觸發條件的截圖：
 
 1) 在主要的“和”之下（需要滿足兩個條件才能觸發） 1) 週期性時間 = M,T,W,T,F 在凌晨5:30  
 1) WIFI SSID = My_Home_WiFi_Name
 
-![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
+![替代文字](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
 ## 自動化日誌
 
@@ -265,7 +265,7 @@ The **Automation** will not be triggered on any other time at this location or o
 * 將**設定檔**切換為 LocalProfile1（即：取消任何臨時檔案設定）
 * 停止**臨時目標**（如果有的話）
 
-![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
+![替代文字](../images/automation_2024-02-12_21-05-56.png-500x.png)
 
 ## 問題排除
 
@@ -275,7 +275,7 @@ The **Automation** will not be triggered on any other time at this location or o
 
 ## 問題排除
 
-![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
+![替代文字](../images/automation_2024-02-12_21-06-12.png-500x.png)
 
 * 問題：__我的自動化順序不正確的觸發。__
 
