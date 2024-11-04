@@ -45,7 +45,7 @@ Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (whi
 
 ## Ποια είναι τα βασικά στοιχεία του AAPS;
 
-Ο "εγκέφαλος" του AAPS είναι μια εφαρμογή **** την οποία χτίζετε μόνοι σας. Υπάρχουν λεπτομερείς οδηγίες βήμα προς βήμα για αυτό. You then install the **AAPS  app** on a [compatible](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit?pli=1#gid=2097219952) **Android smartphone** (**1**). Πολλοί χρήστες προτιμούν το loop τους σε ένα ξεχωριστό τηλέφωνο από το κύριο τηλέφωνό τους. So, you don’t necessarily have to be using an Android phone for everything else in your life, just for running your AAPS loop.
+Ο "εγκέφαλος" του AAPS είναι μια εφαρμογή **** την οποία χτίζετε μόνοι σας. Υπάρχουν λεπτομερείς οδηγίες βήμα προς βήμα για αυτό. You then install the **AAPS  app** on a [compatible](../Getting-Started/Phones.md) **Android smartphone** (**1**). Πολλοί χρήστες προτιμούν το loop τους σε ένα ξεχωριστό τηλέφωνο από το κύριο τηλέφωνό τους. So, you don’t necessarily have to be using an Android phone for everything else in your life, just for running your AAPS loop.
 
 The **Android smartphone** will also need to have another app installed on it as well as **AAPS**. This is either a modified Dexcom app called build-your-own dexcom app [**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) or [**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/). This additional app receives glucose data from a sensor (**2**) by bluetooth, and then sends the data internally on the phone to the **AAPS app**.
 
