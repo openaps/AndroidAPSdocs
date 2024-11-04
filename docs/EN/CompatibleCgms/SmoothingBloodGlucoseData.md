@@ -26,8 +26,8 @@ Use this option only if your CGM data is being properly smoothed by your collect
 
 |                           | Exponential | Average  |    None     |
 |---------------------------|:-----------:|:--------:|:-----------:|
-| G5 and G6                 |             | If noisy | Recommended |
-| G7                        | Recommended |          |             |
+| G5 and G6                 | If noisy    |          | Recommended |
+| G7                        | If noisy    | If stable|             |
 | Libre 1 or Juggluco       | Recommended |          |             |
 | Libre 2 and 3 from xDrip+ |             |          | Recommended |
 
