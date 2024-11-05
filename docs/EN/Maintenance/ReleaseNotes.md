@@ -60,6 +60,7 @@ Release date: XX-XX-202X
 ### Important hints
 
 - migrate to new native Combo driver from ruffy before update
+- profile switch percentage is now taken into a count for dynamic sensitivity strengthness
 
 ### Changes
 
