@@ -36,7 +36,7 @@ In order to allow users with older Android to use older version of AAPS new vers
 ### Android 9,10
 
 - Use AAPS version **3.2.0.4**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS>
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 3.2.0.4
 
 ### Android 8
 
