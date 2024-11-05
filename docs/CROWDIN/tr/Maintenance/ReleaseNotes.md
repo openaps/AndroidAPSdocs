@@ -28,10 +28,15 @@ Akıllı telefonunuz Android 9'dan daha eski bir Android Sürümü kullanıyorsa
 
 Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmasına izin vermek için, yalnızca sürüm doğrulamasını değiştiren yeni sürümler gönderildi. Başka hiçbir iyileştirme dahil değildir.
 
-### Android 9 ve üstü
+### Android 11 and up
 
 - En son AAPS sürümünü kullanın
 - AAPS Kodunu <https://github.com/nightscout/AndroidAPS> adresinden indirin
+
+### Android 9,10
+
+- Use AAPS version **3.2.0.4**
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 3.2.0.4
 
 ### Android 8
 
@@ -45,7 +50,49 @@ Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmas
 
 ## WearOS versiyonu
 
-- AAPS 3.2 requires at least WearOS API level 28 (Android 9)
+- AAPS requires at least WearOS API level 28 (Android 9)
+
+(version3300)=
+## Version 3.3.0.0
+
+Release date: XX-XX-202X
+
+### Önemli ipuçları
+
+- migrate to new native Combo driver from ruffy before update
+- profile switch percentage is now taken into a count for dynamic sensitivity strengthness
+
+### Değişiklikler
+
+- Equil pump driver @EquilHack
+- Insight driver rewitten to kotlin @Philoul
+- Ottai CGM source @ottai-developer
+- removed old ruffy dependent Combo driver
+- new internal modules stucture @MilosKozak
+- split persistence layer from main code @MilosKozak
+- new QuickWizard options @radicalb
+- build files rewritten to kts @MilosKozak
+- algorithms rewritten to kotlin for better performance @MilosKozak
+- tons of new unit tests @MilosKozak and others
+- more code converted to kotlin @MilosKozak
+- Simple mode @MilosKozak
+- new preferences management, xml -> kotlin @MilosKozak
+- new CI configuration, run CI on own servers @MilosKozak
+- wear and watchfaces improvement @Philoul @MilosKozak @olorinmaia
+- Random carbs in test mode @MilosKozak
+- libraries updated to latest version, toml @MilosKozak
+- variable sensitivity visible in AAPS client
+- fixed bug in TDD calculation @MilosKozak
+- BolusWizard UI improvements @kenzo44
+- updated Objectives @MilosKozak
+- different insulin button colors in pump suspended mode @jbr77rr
+- more color theming @jbr77rr
+- new Automation triggers @jbr77rr
+- Medtrum driver improvements @jbr77rr
+- New graph scale menu @Philoul
+- migration to kotlin 2.0, java 21 @MilosKozak
+- Allowing negative carbs entry  @MilosKozak
+- Unattended exports @vanelsberg
 
 (version3200)=
 ## Version 3.2.0.0 dedicated to @Philoul
