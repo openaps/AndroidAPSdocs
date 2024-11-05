@@ -132,7 +132,7 @@ Or in the **Carbs** button
 
 (TempTargets-hypo-temp-target)=
 
-## Hypo Temp-Target
+## Temporäres Ziel für Hypos
 
 Das **temporäre Hypo-Ziel** soll **AAPS** helfen durch reduzieren der Indulinzufuhr niedrige Glukosewerte zu vermeiden. Wenn Du erwartest, dass Dein **Glukosewert** bald niedrig sein wird: Normalerweise sollte **AAPS** das lösen können. Die richtigen und getesteten (stabile) **AAPS**-Einstellungen sind dabei allerdings entscheidend. Ein **Temp-Target Hypo** kann frühzeitig einer erwarteten Hypo entgegenwirken und damit **AAPS** durch das geänderte erhöhte Ziel, Insulin reduzieren lassen.
 
@@ -164,7 +164,7 @@ Zusätzlich wird *'Aktiviere SMB bei temporären Zielen oberhalb des regulären 
 
 (TempTargets-eating-soon-temp-target)=
 
-## Bald essen Temp-Target
+## Temporäres Ziel für „Bald essen“
 
 **Temporäres Ziel für 'Bald essen'** kann ein langsames Abfallen des **Glukosewerts** und eine ausreichendes **IOB** bis zum Beginn der Mahlzeit erreichen.
 
