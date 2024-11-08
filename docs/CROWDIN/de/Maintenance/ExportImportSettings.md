@@ -35,7 +35,7 @@ Einstellungen sind das, was die Standard-AAPS-Anwendung an Deine Wünsche anpass
 
 2 - Vom AAPS-Startbildschirm wähle Drei-Linien-Menü (Hamburger-Menü) oben links > Wartung > Einstellungen exportieren > gib das festgelegte Master-Passwort ein > Ok
 
-![AAPS Export der Einstellungen 1](../images/AAPS_ExportSettings1.png) ![AAPS Export der Einstellungen 2](../images/AAPS_ExportSettings2.png)
+![AAPS Export der Einstellungen 1](../images/Maintenance/AAPS_ExportSettings1.png) ![AAPS Export der Einstellungen 2](../images/Maintenance/AAPS_ExportSettings2.png)
 
 3 - Navigiere mit dem Datei-Explorer auf Deinem Smartphone (meist als „Dateien“ oder „Meine Dateien“ bezeichnet) zu Interner Speicher > AAPS > Einstellungen. Hier findest Du Kopien aller exportierten Einstellungs-Dateien. Der Dateiname sollte JJJJ-MM-TT_Zeit_Appname.json sein. Lade diese Datei in den Cloud-Speicher Deiner Wahl hoch. Lade dann auch eine Kopie aus der Cloud auf Deinen lokalen Computer herunter.
 
@@ -69,7 +69,7 @@ _Omnipod-Nutzende:_ Wenn die Einstellungen während einer früheren Pod-Session 
 
 9 - Vom AAPS-Startbildschirm wähle das Drei-Linien-Menü (Hamburger-Menü) oben links > Wartung > Einstellungen importieren > wähle die Einstellungsdatei aus, aus der Du wiederherstellen möchtest > Ok > Gib Dein Master-Passwort ein > Ok. Da alle vorhandenen .json Dateien im "preferences"-Verzeichnis angezeigt werden, ist Vorsicht bei Auswahl der richtigen Datei erforderlich.
 
-![AAPS Import der Einstellungen 1](../images/AAPS_ImportSettings1.png) ![AAPS Import der Einstellungen 2](../images/AAPS_ImportSettings2.png)
+![AAPS Import der Einstellungen 1](../images/Maintenance/AAPS_ImportSettings1.png) ![AAPS Import der Einstellungen 2](../images/Maintenance/AAPS_ImportSettings2.png)
 
 10 - AAPS wird nach dem Import automatisch neu starten und sollte dann die importierten Einstellungen bereits berücksichtigen.
 

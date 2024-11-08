@@ -35,7 +35,7 @@
 
 2 - 從 AAPS 主畫面，選擇左上角的三條線（漢堡）選單 > 維護 > 匯出設定 > 輸入上述設置的主密碼 > 確定。
 
-![AAPS 匯出設定 1](../images/AAPS_ExportSettings1.png) ![AAPS 匯出設定 2](../images/AAPS_ExportSettings2.png)
+![AAPS 匯出設定 1](../images/Maintenance/AAPS_ExportSettings1.png) ![AAPS 匯出設定 2](../images/Maintenance/AAPS_ExportSettings2.png)
 
 3 - 使用手機上的檔案總管（通常稱為「檔案」或「我的檔案」），導航到內部儲存空間 > AAPS > 偏好設定。 在這裡你可以看到所有匯出的偏好設定檔案副本。 檔案名稱應為 YYYY-MM-DD_時間_appname.json。 將此檔案上傳到你選擇的雲端平台。 然後從雲端平台下載一份副本到你的本地電腦。
 
@@ -69,7 +69,7 @@ _Omnipod 用戶：_ 如果在不同的幫浦活動期間匯出偏好設定檔案
 
 9 - 從 AAPS 主畫面，選擇左上角的三條線（漢堡）選單 > 維護 > 匯入設定 > 選擇你想要備份的偏好設定檔案 > 確定 > 輸入上述設置的主密碼 > 確定。 確保選擇正確的偏好設定檔案，所有來自偏好設定資料夾的 .json 檔案將顯示。
 
-![AAPS 匯入設定 1](../images/AAPS_ImportSettings1.png) ![AAPS 匯入設定 2](../images/AAPS_ImportSettings2.png)
+![AAPS 匯入設定 1](../images/Maintenance/AAPS_ImportSettings1.png) ![AAPS 匯入設定 2](../images/Maintenance/AAPS_ImportSettings2.png)
 
 10 - AAPS 會自動重新啟動，並應該匯入所有偏好設定。
 

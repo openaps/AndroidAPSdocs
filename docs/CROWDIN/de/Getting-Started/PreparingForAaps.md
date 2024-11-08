@@ -212,13 +212,7 @@ Diese Dokumentation möchte die notwendige technische Expertise auf ein absolute
 Die aktuelle **AAPS**-Version (3.2) setzt ein Android Smartphone mit Google **Android 9.0 oder höher** voraus. Wenn Du aktuell darüber nachdenkst Dir ein neues Smartphone zuzulegen, wäre Android 13 (Stand: Juli 2024) zu bevorzugen. Aus Sicherheitsgründen wird Dir dringend empfohlen Deine **AAPS**-Version immer auf dem letzten Stand zu halten bzw. zu bringen. Wenn Dein Smartphone kein Android 9.0 oder höher haben sollte, steht Dir eine ältere **AAPS**-Version zur Verfügung, die mit [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) und [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2) kompatibel ist. (Du findest diese Vorversionen in den Release Notes dieses Dokumentes).
 
 #### Smartphone-Modell wählen
-Welches genaue Modell Du kaufen solltest, hängt von den gewünschten Funktionen ab. Es gibt zwei (mittlerweile archivierte) Arbeitsblätter mit kompatiblen [Smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) und [Smartphones und Smartwatches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). Diese Übersichten werden nicht mehr aktualisiert, da es mittlerweile zu viele Modelle auf dem Markt gibt. Wir empfehlen Dir daher, die entsprechenden Supportgruppen (Facebook oder Discord) mit dem Schlagwort "phone" oder dem jeweiligen Modell, das Du kaufen möchtest, zu durchsuchen. Wenn Du dann darüber hinaus Informationen benötigen solltest, erstelle einen neuen Beitrag mit Deinen Fragen.
-
-Falls Du Smartphones oder Smartwatch-Modelle für Tests spenden möchtest, sende eine E-Mail an [donations@androidaps.org](mailto:donations@androidaps.org).
-
-- [Liste von getesteten Smartphones](../CompatiblePhones/ListOfTestedPhones.md)
-- [Jelly Einstellungen](../CompatiblePhones/Jelly.md)
-- [Huawei Einstellungen](../CompatiblePhones/Huawei.md)
+Welches genaue Modell Du kaufen solltest, hängt von den gewünschten Funktionen ab. You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
 
 Das Smartphone sollte regelmäßig Sicherheitsupdates erhalten und stets auf der aktuellen Android-Version gehalten werden. Wenn Du mit AAPS noch nicht sehr vertraut bist oder kein technischer Experte bist, solltest Du mit dem jeweiligen Update warten, bis andere das Update erfolgreich gemacht haben und in den verschiedenen Foren bestätigt haben, dass es problemlos durchgeführt werden kann.
 

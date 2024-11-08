@@ -23,7 +23,7 @@
 ![Под Omnipod](../images/DASH_images/Omnipod_Pod.png)
 
 * **Совместимый Android-телефон** с рабочим модулем BLE Bluetooth
-   -  Не все смартфоны и версии Android гарантированно работают. Пожалуйста, проверьте [**протестированные с DASH телефоны**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) или просто попробуйте с вашим телефоном и сообщите нам результат (модель смартфона, географический регион, версия Android, работает / работает с замечаниями / не работает).
+   -  Не все смартфоны и версии Android гарантированно работают. Please check [**DASH Tested phones**](../CompatiblePhones/ListOfTestedPhones.md) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
    - **Важно: было много случаев постоянных, невосстановимых потерь соединения при использовании старых подов с прошивкой версии 3.XX.X. Будьте осторожны при использовании этих старых подов с AAPS, особенно с другими подключенными Bluetooth-устройствами!** Имейте в виду, что драйвер Omnipod Dash соединяется с подом по Bluetooth каждый раз, когда отправляет команду, и отсоединяется сразу после этого. Соединения Bluetooth могут быть нарушены другими устройствами, связанными с телефоном, на котором работает AAPS, такими как беспроводные наушники и т. д... (что в редких случаях может вызвать проблемы подключения, погрешности при активации или после нее на некоторых моделях телефонов).
    -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions.
 * [**Непрерывный мониторинг гликемии**](../Getting-Started/CompatiblesCgms.md)

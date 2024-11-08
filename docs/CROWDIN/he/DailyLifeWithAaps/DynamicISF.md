@@ -13,13 +13,15 @@ To use **Dynamic ISF** effectively, **AAPS'** database requires a minimum of fiv
 
 The **Dynamic ISF**  equation implemented is: ISF = 1800 / (TDD * Ln (( glucose / insulin divisor) +1 ))
 
-![Screenshot 2024-10-19 145120](https://github.com/user-attachments/assets/472627ef-047f-438d-ba30-eba75eeaff97)
+SMB/AMA - an example of a user's **Profile** with static **ISF** as set by the user and utilized by **SMB** and **AMA**.
 
+![Static ISF](../images/DynISF1.png)
 
+Dynamic ISF - an example of a user's **ISF** subject to change as determined by **Dynamic ISF**.
 
+![Dyn ISF](../images/DynISF2.png)
 
-
-The implementation uses the aobve equation to calculate current **ISF** and in the oref1 predictions for **IOB**, **ZT** and **UAM**. It is not used for **COB**.  Further discussion can be found here: https://www.youtube.com/watch?v=oL49FhOts3c.
+The implementation uses the above equation to calculate current **ISF** and in the oref1 predictions for **IOB**, **ZT** and **UAM**. It is not used for **COB**.  Further discussion can be found here: https://www.youtube.com/watch?v=oL49FhOts3c.
 
 ### TDD (Total Daily Dose)
 TDD will use a combination of the following values:
@@ -37,7 +39,7 @@ The Adjustment Factor allows the user to specify a value between 1% and 300%. Th
 
 The Adjustment Factor can be located in ‘Preferences’ > **AAPS**:
 
-![Screenshot 2024-10-19 134558](https://github.com/user-attachments/assets/4b563c64-a924-49d3-904b-4e6fdb4dcc67)
+![Factor ISF](../images/DynISF3.png)
 
 
 ### Future ISF

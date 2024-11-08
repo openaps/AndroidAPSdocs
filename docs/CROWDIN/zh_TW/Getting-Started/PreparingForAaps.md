@@ -212,13 +212,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 目前版本的 **AAPS**（3.2）需要使用 Google **Android 9.0 或更高版本** 的 Android 智慧型手機。 如果你打算購買一部新手機，截至 2024 年 7 月，建議選擇 Android 13。 用戶強烈建議出於安全原因保持 **AAPS** 的最新版本，不過對於無法使用 Android 9.0 或更新設備的用戶，較早版本的 **AAPS** 仍然可用於舊版 Android，例如 [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) 和 [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2)，可以從過去的版本中找到（查看舊版本的發行說明）。
 
 #### 智慧型手機型號選擇
-你選購的具體型號取決於所需的功能。 這裡有兩個關於相容的[智慧型手機](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952)和[智慧型手機與智慧型手錶](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)的歷史電子表格。 由於可能的型號眾多，這些電子表格已不再更新，因此我們建議在支援群組（Facebook 或 Discord）中搜尋“手機”或你考慮購買的具體型號。 如果仍需更多資訊，請發佈新帖來詢問。
-
-如欲捐贈仍需測試的智慧型手機或智慧型手錶型號，請發送電子郵件至[donations@androidaps.org](mailto:donations@androidaps.org)。
-
-- [已測試的手機清單](../CompatiblePhones/ListOfTestedPhones.md)
-- [Jelly 設置](../CompatiblePhones/Jelly.md)
-- [華為設定](../CompatiblePhones/Huawei.md)
+你選購的具體型號取決於所需的功能。 你可以在 [手機頁面](../Getting-Started/Phones.md) 上找到推薦與用戶對於可用設置的反饋。
 
 我們鼓勵用戶保持手機 Android 版本的最新狀態，包括安全參數。 然而，如果你是 **AAPS** 的新手，或者不是技術專家，你可能希望等到其他人確認更新是安全的後再進行更新，這可以透過我們的各大論壇確認。
 

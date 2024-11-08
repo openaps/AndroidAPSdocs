@@ -45,7 +45,7 @@ Android APS (AAPS) — это гибридная система замкнуто
 
 ## Основные компоненты AAPS
 
-"Мозгом" AAPS является **приложение**, которое вы должны собрать сами. Для этого существует подробная пошаговая инструкция. Затем **AAPS ** устанавливается на совместимый [смартфон на Android](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit?pli=1#gid=2097219952) (1). Многие пользователи предпочитают иметь отдельный телефон для AAPS в дополнение к основному телефону. Таким образом, отдельный телефон на Android может предназначаться только для AAPS.
+"Мозгом" AAPS является **приложение**, которое вы должны собрать сами. Для этого существует подробная пошаговая инструкция. You then install the **AAPS  app** on a [compatible](../Getting-Started/Phones.md) **Android smartphone** (**1**). Многие пользователи предпочитают иметь отдельный телефон для AAPS в дополнение к основному телефону. Таким образом, отдельный телефон на Android может предназначаться только для AAPS.
 
 0>Телефон на Android</strong> должен иметь еще одно приложение наряду с **AAPS**. Это либо модифицированное приложение Dexcom под названием build-your-own dexcom app [**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) или [**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/). Это дополнительное приложение получает данные гликемии от сенсора (**2**) по bluetooth, и затем отправляет данные в телефоне в приложение **AAPS**.
 

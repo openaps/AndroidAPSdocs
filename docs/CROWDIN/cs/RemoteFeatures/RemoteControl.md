@@ -476,7 +476,7 @@ Vezměte prosím na vědomí, že tato tabulka byla vypracována v roce 2023, ne
 
 ### Než si koupíte smartwatch…
 
-Přesný model chytrých hodinek, který kupujete, závisí na požadovaných funkcích. V současné době existují dvě historické tabulky, které zaznamenávají kompatibilní [chytré telefony](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) a [chytré telefony a hodinky](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435), ale tyto už nebudou nadále aktualizovány, protože kvůli obrovskému množství možností je snazší se zeptat prostřednictvím Discord a Facebookové skupiny.
+Přesný model chytrých hodinek, který kupujete, závisí na požadovaných funkcích. You may find useful information on the [Phones page](../CompatiblePhones/ListOfTestedPhones.md), including a list a tested phones that also contains some smartwatches.
 
 Mezi oblíbené značky patří Samsung Galaxy, Garmin, Fossil, Mi a Fitbit. Různé možnosti, které jsou shrnuty v tabulce výše, jsou níže vysvětleny podrobněji, abysme vám pomohli s rozhodnutím, které smartwatch jsou ve vaší situaci ty správné.
 
@@ -533,7 +533,7 @@ a)  **AAPSClient**/Nightscout/**SMS** příkazy nemohou fungovat; nebo
 
 b) uživatel se chce vyhnout potřebě autentizace (jak je požadováno pro sledovací telefon se zadáním dat, výběrem TT nebo zadáním sacharidů).
 
-Chytré hodinky musí mít systém **Android wear** (ideálně 10 nebo vyšší), aby mohl ovládat **AAPS**. Please check the technical specifications of the watch, and check the [spreadsheet of compatible watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). Pokud si nejste jistí, vyhledejte si informace ve v **AAPS** skupinách na Facebook/Discord.
+Chytré hodinky musí mít systém **Android wear** (ideálně 10 nebo vyšší), aby mohl ovládat **AAPS**. Please check the technical specifications of the watch, and check the [Phones page](../Getting-Started/Phones.md). Pokud si nejste jistí, vyhledejte si informace ve v **AAPS** skupinách na Facebook/Discord.
 
 Konkrétní návody jak nastavit **AAPS** na Samsung Galaxy Watch 4 (40 mm) jsou uvedeny níže. Hodinky [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) jsou také oblíbenou volbou. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
 
