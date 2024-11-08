@@ -1,7 +1,7 @@
 # SMS Commands
 
 ```{contents} Table of contents
-:depth: 1
+:depth: 2
 ```
 
 Most of the adjustments of temp targets, following **AAPS** etc. can be done on [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection. Boluses, however, can't be given through **AAPSClient**, but you can use SMS commands. If you use an iPhone as a follower and therefore cannot use **AAPSClient** app, there are additional SMS commands available.
@@ -137,6 +137,8 @@ Use button "Authenticator setup > Reset Authenticators" if you want to remove pr
 
 ![image](../images/remote-control-15.png)
 
+If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
+
 2)	Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
 
 When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
@@ -218,12 +220,12 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 | Command           | Auth | Function & *Response*                                                                                                                                                                                                   |
 |-------------------|------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | LOOP STATUS       | No   | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled or LGS<br/> - *Loop is enabled* if the loop is closed or open<br/> - *Suspended (10 min)* if the loop is disconnected or suspended |
-| LOOP STOP/DISABLE |      | The pump will revert to the pre-programmed basal rate.<br/>*Loop has been disabled*                                                                                                                                     |
-| LOOP START/ENABLE |      | *Loop has been enabled*                                                                                                                                                                                                 |
-| LOOP SUSPEND 20   |      | *Loop suspended for 20 minutes*                                                                                                                                                                                         |
-| LOOP RESUME       |      | *Loop resumed*                                                                                                                                                                                                          |
-| LOOP CLOSED       |      | *Current loop mode: Closed Loop*                                                                                                                                                                                        |
-| LOOP LGS          |      | *Current loop mode: Low Glucose Suspend*                                                                                                                                                                                |
+| LOOP STOP/DISABLE | Yes  | The pump will revert to the pre-programmed basal rate.<br/>*Loop has been disabled*                                                                                                                                     |
+| LOOP START/ENABLE | Yes  | *Loop has been enabled*                                                                                                                                                                                                 |
+| LOOP SUSPEND 20   | Yes  | *Loop suspended for 20 minutes*                                                                                                                                                                                         |
+| LOOP RESUME       | Yes  | *Loop resumed*                                                                                                                                                                                                          |
+| LOOP CLOSED       | Yes  | *Current loop mode: Closed Loop*                                                                                                                                                                                        |
+| LOOP LGS          | Yes  | *Current loop mode: Low Glucose Suspend*                                                                                                                                                                                |
 
 ### Bolus
 
@@ -234,7 +236,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | BOLUS 1.2            | Yes  |                                                                                                                        |
 | BOLUS 0.60 MEAL      | Yes  | Delivers the specified 0.60U bolus<br/>**and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target) |
 | CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                           |
-| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends on the time setting (12h/24h) on the phone.               |
+| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends<br/> on the time setting (12h/24h) on the phone.          |
 | EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#screens-action-tab).                          |
 | EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                 |
 
