@@ -5,30 +5,37 @@
 * Autosens is an algorithm which looks at blood glucose deviations (positive/negative/neutral).
 * It will try and figure out how sensitive/resistant you are based on these deviations.
 * The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
-* In versions prior to **AAPS** 2.7 user had to choose between 8 or 24 hours manually.
-* From **AAPS** 2.7 on Autosens in **AAPS** will switch between a 24 and 8 hours window for calculating sensitivity. It will pick whichever one is more sensitive. 
+* In versions prior to **AAPS 2.7**, the user had to choose between 8 or 24 hours manually.
+* From **AAPS 2.7** on Autosens in **AAPS** will switch between a 24 and 8 hours window for calculating sensitivity. It will pick whichever one is more sensitive. 
 * If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
 * Changing a cannula or changing a profile will reset Autosens ratio back to 100% (a percentual profile switch with duration won't reset autosens).
 * Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
-* If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
+* If continuously eating carbs over an extended period, Autosens will be less effective during that period as carbs are excluded from **BG** delta calculations.
 
 (Open-APS-features-super-micro-bolus-smb)=
 ## Super Micro Bolus (SMB)
-SMB, the shortform of 'super micro bolus', is the latest OpenAPS feature (from 2018) within the Oref1 algorithm. In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly **small super micro boluses**. In situations where AMA would add 1.0 IU insulin using a temporary basal rate, SMB delivers several super micro boluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system adjust the blood glucose faster than with the temporary basal rate increase in AMA.
+**SMB**, the shortform of **Super micro bolus**, is an OpenAPS feature introduced from 2018 onwards, within the Oref1 algorithm. In contrast to **AMA**, **SMB** does not use temporary basal rates to control glucose levels, but mainly **small super micro boluses**. In situations where **AMA** would add 1.0 IU insulin using a temporary basal rate, **SMB** delivers several super micro boluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system to adjust the blood glucose faster than with the temporary basal rate increase in **AMA**.
 
-Thanks to SMB, it may be sufficient for meals containing only "slow" carbs to inform the system of the planned amount of carbohydrate and leave the rest to **AAPS**. However, this may lead to higher postprandial (post-meal) peaks because pre-bolusing isn’t possible. Or you can give, if necessary with pre-bolusing, a **start bolus**, which **only partly** covers the carbohydrates (e.g. 2/3 of the estimated amount) and let SMB provide the rest.
+Thanks to SMB, it may be sufficient for meals containing only "slow" carbs to inform the system of the planned amount of carbohydrate and leave the rest to **AAPS**. However, this may lead to higher postprandial (post-meal) peaks because pre-bolusing isn’t possible. Or you can give, if necessary with pre-bolusing, a **start bolus**, which **only partly** covers the carbohydrates (e.g. 2/3 of the estimated amount) and let **SMB** deliver the rest of the insulin.
 
-The SMB feature contains some safety mechanisms:
+![SMBs on main graph](../images/SMBs.png)
 
-1. The largest single SMB dose can only be the smallest value off:
+SMBs are shown on the main graph with blue triangles. Tap on the triangle to see how much insulin was delivered, or use the [Treatments tab](#aaps-screens-treatments).
+
+**SMB's** features contain some safety mechanisms:
+
+1. **Largest single SMB dose**<br/>
+The largest single SMB dose can only be the smallest value of:
 
       * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
       * half the amount of insulin currently required, or
       * the remaining portion of your maxIOB value in the settings.
 
-2. Probably you will often notice low temporary basal rates (called 'low temps') or temporary basal rates at 0 U/h (called 'zero-temps'). This is by design for safety reasons and has no negative effects if the profile is set correctly. The IOB curve is more meaningful than the course of the temporary basal rates.
+2. **Low temp basal rates**<br/>
+Low temporary basal rates (called 'low temps') or temporary basal rates at 0 U/h (called 'zero-temps') are activated more in **SMB**. This is by design for safety reasons and has no negative effects if the **Profile** is set correctly. On the main graph, the IOB curve (yellow thin line) is more meaningful than the course of the temporary basal rates.
 
-3. Additional calculations to predict the course of glucose, e.g. by UAM (un-announced meals). Even without manual carbohydrate input from the user, UAM can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with SMB. To be on the safe side this also works the other way round and can stop the SMB earlier if an unexpectedly rapid drop in glucose occurs. That's why UAM should always be active at SMB.
+3. **Un-Announced Meals**<br/>
+Additional calculations to predict the course of glucose, e.g. by **UAM** (un-announced meals). Even without manual carbohydrate input from the user, **UAM** can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with **SMB**. To be on the safe side this also works the other way round and can stop the SMB earlier if an unexpectedly rapid drop in glucose occurs. That's why UAM should always be active at SMB.
 
 **You must have started [objective 9](#objectives-objective9) to use SMB.**
 
@@ -72,7 +79,7 @@ A good start for setting this parameter is:
 
     maxIOB = average mealbolus + 3x max daily basal
 
-Be careful and patient and only change the settings step by step. It is different for everyone and can also depend on the average total daily dose (TDD). 
+Be careful and patient when adjusting your **max-IOB**. It is different for everyone and can also depend on the average total daily dose (TDD). 
 
 **AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
 
@@ -84,18 +91,23 @@ Be careful and patient and only change the settings step by step. It is differen
 
 *See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
 
+Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
+
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
+
 ### Enable Autosens
 
 [Autosens](#autosens) looks at blood glucose deviations (positive/negative/neutral). It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 
 ### Enable SMB
-Enable this to use SMB functionality. If disabled, no SMBs will be given. 
+Enable this to use SMB functionality. If disabled, no **SMBs** will be given. 
 
 (Open-APS-features-enable-smb-with-high-temp-targets)=
 ### Enable SMB with high temp targets
-If this setting is enabled, SMB will be allowed, but not necessarily enabled, when there is a high temporary target active (defined as anything above 100mg/dl regardless of profile target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, SMBs can be disabled by setting a temp target above 100mg/dl. This option will also disable SMB regardless of what other condition is trying to enable SMB.
 
-If this setting is enabled, SMB will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled. 
+If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l,  regardless of **Profile** target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
+
+If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled. 
 
 (Open-APS-features-enable-smb-always)=
 ### Enable SMB always
@@ -110,7 +122,7 @@ For safety reasons, this option is only available for BG sources with a good fil
 If this setting is enabled, SMB is enabled when the COB is greater than 0.
 
 ### Enable SMB with temp targets
-If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100mg/dl) but disabled when a high temp target is set.
+If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100mg/dL or 5.6mmol/l) but disabled when a high temp target is set.
 
 ### Enable SMB after carbs
 If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0.

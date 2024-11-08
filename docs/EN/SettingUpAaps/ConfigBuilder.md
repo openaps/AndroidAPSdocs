@@ -1,10 +1,10 @@
 # Config Builder
 
-Depending on your settings you can open Config Builder through a tab at the top of the screen or through hamburger menu.
+Depending on your settings you can open Config Builder through a tab at the top of **AAPS**' screen or through the hamburger menu.
 
 ![Open config builder](../images/ConfBuild_Open_AAPS30.png)
 
-The **Config Builder** is the tab where you turn the modular features on and off. On the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated, the boxes on the right-hand side (C) allow you to view these as a tab (E) in **AAPS**. In case the right box is not activated, you can reach the function by using the hamburger menu (D) on the top left of the screen. See [Tab or hamburger menu](#tab-or-hamburger-menu) below.
+The **Config Builder** is the tab where you turn the modular features on and off. In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated, the boxes on the right-hand side (C) allow you to view these as a tab (E) in **AAPS**. In case the right box is not activated, you can reach the function by using the hamburger menu (D) on the top left of the screen. See [Tab or hamburger menu](#tab-or-hamburger-menu) below.
 
 When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
 
@@ -27,7 +27,7 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 This module can not be disabled as it is a core part of **AAPS**.
 
 * See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
-* See [AAPS Screens > Profile](#aaps-screens-profile) for more information about managing your profiles.
+* See [AAPS Screens > Profile](#aaps-screens-profile) for more information about managing your **Profiles**.
 
 (Config-Builder-insulin)=
 ## Insulin
@@ -85,7 +85,7 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 ![Config Builder BG source](../images/ConfBuild_BG.png)
 
 * [xDrip+](../CompatibleCgms/xDrip.md)
-* [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - not recommended as closed loop relies on mobile data / Wi-Fi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
+* [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
 * [MM640g](../CompatibleCgms/MM640g.md)
 * [Glimp](#libre1-using-glimp) - only version 4.15.57 and newer are supported
 * [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
@@ -131,7 +131,7 @@ You can view your sensitivity on the homescreen in an [additional graph](#AapsSc
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line.  Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
 ### Absorption settings
-If you use Oref1 with SMB you must change <b>min_5m_carbimpact</b> to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
 (Config-Builder-aps)=
 ## APS

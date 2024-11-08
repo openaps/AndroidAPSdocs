@@ -1,12 +1,13 @@
-# CGMS/FGMS Configuration
+# CGMs/FGMs Configuration
 
-This is just a short overview of all compatible CGMs/FGMs with **AAPS**.
-Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in **AAPS**.
+This section provides a brief overview of all compatible **CGMs/FGMs** with **AAPS**.
+
+*Tip*: If you can display your glucose data in xDrip+ app, you can choose xDrip+ as **BG** source in **AAPS**.
 
 * [General recommendations](../CompatibleCgms/GeneralCGMRecommendation.md)
 * [Data Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md)
 * [xDrip+Settings](../CompatibleCgms/xDrip.md)
-* [Nightscout as BG Source](../CompatibleCgms/CgmNightscoutUpload.md): not recommended as closed loop relies on mobile data / Wi-Fi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
+* [Nightscout as BG Source](../CompatibleCgms/CgmNightscoutUpload.md): While it's possible to use Nightscout as a BG source for closed-loop insulin delivery, **this method is not recommended** due to its reliance on stable mobile data or Wi-Fi connectivity. This means your **CGM** data would only be received by **AAPS** when you have an online connection to your Nightscout site. For a more reliable set up, using a CGM with local broadcast from the receiver (as listed below) to **AAPS**, is a much better option.
 
 | CGM                                                   | Available [BG Sources](../SettingUpAaps/ConfigBuilder.md#bg-source)          |
 |-------------------------------------------------------|------------------------------------------------------------------------------|

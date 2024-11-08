@@ -68,20 +68,21 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 #### Application protection
 
-- If app is protected you must enter password or use phone's biometric authentication to open **AAPS**.
-- App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
+If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
+
+**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
 
 #### Bolus protection
 
 - Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
-- In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
+- In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter thr master password.
 
 ![Prompt biometric protection](../images/Pref2020_PW.png)
 
 #### Password and PIN retention
 
-Define how long (in seconds), the preferences or bolus functionalities remain unlocked after your successfully entered the password.
+Define how long (in seconds), the preferences or bolus functionalities remain unlocked after you successfully enter the password.
 
 (Preferences-skin)=
 #### Skin
@@ -89,7 +90,7 @@ You can choose from four types of skins:
 
 ![Select skin](../images/Pref2021_SkinWExample.png)
 
-'Low resolution skin' comes with shorter labels and age/level removed to have more available space on very low resolution screen.
+'Low resolution skin' comes with shorter labels and age/level removed to have more available space on a very low resolution screen.
 
 Difference between the other skins depends on the phone's display orientation:
 
@@ -108,7 +109,7 @@ Difference between the other skins depends on the phone's display orientation:
 
 ## Overview
 
-In **Overview** section, you can define the preferences for the home screen.
+In the **Overview** section, you can define the preferences for the home screen.
 
 ![Preferences > Overview](../images/Pref2020_OverviewII.png)
 
@@ -139,7 +140,7 @@ Then, you define during which time period the button will be visible on your hom
 
 ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
 
-f you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
+If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
 
 The proposal has to be confirmed before insulin is delivered.
 
@@ -162,7 +163,7 @@ Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp
 
 ### Fill/Prime standard insulin amounts
 
-If you want to fill tube or prime cannula through **AAPS** you can do this through the [**Actions** tab](#screens-action-tab).
+If you want to fill the tube or prime cannula through **AAPS** you can do this through the [**Actions** tab](#screens-action-tab).
 
 Pre-set values can be defined in this dialogue. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
 
@@ -216,8 +217,8 @@ Default is 100%: no correction. Even when setting a different value here, you ca
 
 When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (Unattended Meal Detection) do the rest. Using a value lower than 100% here can be useful:
 * for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
-* to leave more room to *AAPS** to deal by itself with **BG rise**.
-In both cases, **AAPS** will compensate the missing part of the bolus with SMBs, if/when deemed adequate.
+* to leave more room to **AAPS** to deal by itself with **BG rise**.
+In both cases, **AAPS** will compensate for the missing part of the bolus with SMBs, if/when deemed adequate.
 
 ### Enabled bolus advisor
 
@@ -238,7 +239,7 @@ Option to enable superbolus in bolus wizard.
 
 [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. It is different from *super micro bolus*!
 
-Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Use with caution and do not enable it until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ## Treatment safety
 
@@ -247,12 +248,12 @@ Use with caution and do not enable until you learn what it really does. Basicall
 
 - Safety limits are set based on the age you select in this setting.
 - If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example).
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
 - If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 ### Max allowed bolus
 
-- Defines maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
+- Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
 - This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
 - This restriction is also applied to the results of the bolus calculator.
@@ -275,7 +276,7 @@ Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
 #### Open Loop
 **AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
 
-The suggestions will not be executed automatically (as in closed loop). They have to be entered manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to your real pump.
+The suggestions will not be executed automatically (as in closed loop). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
 
 This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
 
@@ -292,21 +293,22 @@ Closed Loop is only possible if you are in **[Objective 6](#objectives-objective
 
 In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
 
-This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current profile. Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
+This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
 
 (Preferences-minimal-request-change)=
 ### Minimal request change
 
-When using **Open loop**, you will receive notifications every time **AAPS** recommends to adjust basal rate.
-To reduce number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase percentage of the minimal request rate. 
+When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate.
+To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the minimal request rate. 
 This defines the relative change required to trigger a notification.
 
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
 
-Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between three algorithms:
 
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) - released in 2024, available starting at **[Objective 11](#objectives-objective11)**
 
 ### OpenAPS AMA
 
@@ -317,6 +319,10 @@ All the settings for OpenAPS AMA are described in the dedicated section in [Key 
 
 All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
+### Dynamic ISF
+
+All the settings for Dynamic ISF are described in the dedicated section in [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md).
+
 ## Absorption settings
 
 (Preferences-min_5m_carbimpact)=
@@ -324,7 +330,7 @@ All the settings for OpenAPS SMB are described in the dedicated section in [Key 
 
 The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
 
-At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. Basically, it is a failsafe. This value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
+At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. Basically, it is a failsafe. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
 
 To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc.
 
@@ -388,7 +394,7 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in **NS access token** (not your API Secret!).
+- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **NS access token** (not your API Secret!).
 - This enables data to be read and written between both the Nightscout website and **AAPS**.
 - Double check for typos here if you are stuck in Objective 1.
 - Leave Connect to websockets enabled (recommended).
@@ -403,10 +409,10 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
-- Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarms trigger.
+- Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
 - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
 - They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
-- If you have the CGM source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
+- If you have the **CGM** source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
 - Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
 - You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 

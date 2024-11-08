@@ -565,6 +565,7 @@ Depending on your BG source settings, this tab is named differently.
 
 Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low) or duplicate readings.
 
+(aaps-screens-treatments)=
 ## Treatments
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder.
