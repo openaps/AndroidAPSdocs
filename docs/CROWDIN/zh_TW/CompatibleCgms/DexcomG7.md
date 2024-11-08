@@ -9,10 +9,17 @@
 
 ```{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)
 :class: warning
-**指數平滑** **必須** 啟用，以便有效使用 G7 / ONE+ 值。  
+**Average Smoothing or Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
 ```
 
-## 1.  修補版 Dexcom G7 應用程式 (DiaKEM)
+## 1. xDrip+（直接連接至 G7 或 ONE+）
+
+- 請參閱這裡的說明：[Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- 在 [ConfigBuilder 的血糖來源](#Config-Builder-bg-source) 中選擇 xDrip+。
+
+- 根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../CompatibleCgms/xDrip.md)
+
+## 2.  修補版 Dexcom G7 應用程式 (DiaKEM)
 
 **注意：需要 AAPS 3.2.0.0 或更高版本！ 不適用於 ONE+。**
 
@@ -35,13 +42,6 @@
 - 在 [ConfigBuilder 的血糖來源](#Config-Builder-bg-source) 中選擇 'BYODA' - 即便這不是 BYODA 應用程式！
 
 - 如果 AAPS 無法接收任何資料，請切換到其他血糖來源，然後再切回 'BYODA' 以調用查詢以批准 AAPS 和 BYODA 之間的資料交換。
-
-## 2. xDrip+（直接連接至 G7 或 ONE+）
-
-- 請參閱這裡的說明：[Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- 在 [ConfigBuilder 的血糖來源](#Config-Builder-bg-source) 中選擇 xDrip+。
-
-- 根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../CompatibleCgms/xDrip.md)
 
 ## 3. xDrip+（伴侶模式）
 
