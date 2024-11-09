@@ -6,12 +6,27 @@
 
 Il existe plusieurs cadrans de montres qui sont inclus dans la version de base de l'APK Wear de AAPS et que vous pouvez choisir. Ces cadrans incluent le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal ainsi que le graphique des glycémies.
 
-Vérifiez que les notifications d'AAPS ne sont pas bloquées sur la montre. La confirmation de l'action (par ex. bolus, cible temporaire) est envoyée par une notification que vous devrez glisser et cocher.
-
 Les actions disponibles sur les cadrans de montre sont :
 
 * Appuyez deux fois sur la glycémie pour accéder au menu AAPS
 * Appuyez deux fois sur le graphique de la glycémie pour changer l'échelle de temps du graphique
+
+## Configuration
+
+Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md).
+
+Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+
+Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
+
+![Paramètres Wear](../images/ConfBuild_Wear.png)
+
+Via l'onglet Wear ou le menu hamburger (en haut à gauche de l'écran, si l'onglet n'est pas affiché), vous pouvez
+
+* Renvoyer toutes les données. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* Ouvrez le menu Paramètres de votre montre directement depuis votre téléphone.
+
+Vérifiez que les notifications d'AAPS ne sont pas bloquées sur la montre. La confirmation de l'action (par ex. bolus, cible temporaire) est envoyée par une notification que vous devrez glisser et cocher.
 
 ## Sélectionnez un cadran AAPS sur votre montre WearOS
 

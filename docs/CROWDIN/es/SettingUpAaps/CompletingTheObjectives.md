@@ -102,14 +102,14 @@ To reduce the number of proposed basal rate changes while in Open Loop, you can 
 
 You don't need to action each and every system recommendation!
 ```
-
+(objectives-objective5)=
 ## Objetivo 5: Comprensión de su lazo abierto, incluidas sus recomendaciones basales temporales
 
 As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at detailed calculations shown on your **OpenAPS** tab.
 
 Estimated time to complete this objective: **7 days**.
 
-This **Objective** requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). This value can be set in [Preferences > OpenAPS](#Preferences-max-u-h-a-temp-basal-can-be-set-to). If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
+This **Objective** requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). This value can be set in **Preferences > OpenAPS**. If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
 
 You might wish to set your [**Profile** BG target](#profile-glucose-targets) higher than usual until you are comfortable with **AAPS**' calculations and settings. You may wish to experiment with adjusting your **BG target** in your **Profile** being in a tighter range (say, 1 or less mmol/l [20 mg/dl or less] wide) and observe the resulting behavior.
 
@@ -187,6 +187,8 @@ As part of this **objective**, you will revisit your **Profile**'s performance a
 Minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
 
 Enable [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days and watch [**Overview**'s graph white line](#AapsScreens-section-g-additional-graphs) showing your insulin sensitivity rising or falling due to exercise or hormones etc. Keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
+
+This is a good time to review your settings for [Sensitivity Detection](../SettingUpAaps/ConfigBuilder.md#sensitivity-detection). You can view your sensitivity on the homescreen in an [additional graph](../DailyLifeWithAaps/AapsScreens.md#section-g---additional-graphs).
 
 Additionally, you can use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
 
