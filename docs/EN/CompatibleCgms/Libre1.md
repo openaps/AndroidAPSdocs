@@ -36,8 +36,9 @@ details.
 -   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases). 
 -   Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 -    You also need [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) for Libre 1 US (and Libre 2 EU).
--   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
+(libre1-using-glimp)=
 ## 2. Using Glimp
 
 -   Glimp supports Miaomiao, Blucon and Bubble for Libre 1 and Libre 2 EU.
@@ -45,11 +46,12 @@ details.
 -   Install [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia).
 -   Select Glimp in in [ConfigBuilder, BG Source.](#Config-Builder-bg-source)
 
+(libre1-using-tomato)=
 ## 3. Using Tomato
 
 - Tomato is the vendor app for Miaomiao.
 - Install [Tomato](http://tomato.cool/#download_page) and follow the vendor [instructions](http://tomato.cool/how-to-broadcast-data-to-android-aps/tips/).
-- Select Tomato in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Select Tomato in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ## 4. Using Diabox
 
@@ -58,4 +60,4 @@ details.
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
