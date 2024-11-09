@@ -43,10 +43,10 @@
 
 - 如果 AAPS 無法接收任何資料，請切換到其他血糖來源，然後再切回 'BYODA' 以調用查詢以批准 AAPS 和 BYODA 之間的資料交換。
 
-## 3. xDrip+（伴侶模式）
+## 3. xDrip+（companion - 夥伴模式）
 
 -   下載並安裝 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
-- 在 xDrip+ 中必須選擇「伴侶應用程式」作為資料來源，並在進階設定 > 藍牙設定 > 啟用「伴侶藍牙」。
+- 在 xDrip+ 中必須選擇「夥伴應用程式」作為資料來源，並在進階設定 > 藍牙設定 > 啟用「夥伴藍牙」。
 -   在 [組態建置工具的血糖來源](#Config-Builder-bg-source) 中選擇 xDrip+。
 
 -   根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../CompatibleCgms/xDrip.md) 
