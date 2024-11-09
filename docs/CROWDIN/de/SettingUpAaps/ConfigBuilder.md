@@ -1,14 +1,12 @@
 # Konfigurations-Generator
 
-Abhängig von Deinen Einstellungen kannst Du den Konfigurationsgenerator über eine Registerkarte am oberen Bildschirmrand oder über das Hamburger-Menü öffnen.
+Depending on your settings you can open Config Builder through a tab at the top of **AAPS**' screen or through the hamburger menu.
 
 ![Konfigurations-Generator öffnen](../images/ConfBuild_Open_AAPS30.png)
 
-Im Reiter “Konfigurations-Generator” (KONF) kannst du fast alle AAPS-Funktionen konfigurieren. Die Auswahlfelder links (A) aktivieren die gewählte Funktion, die Auswahlfelder rechts (C) legen fest, ob die Funktion als Tab (E) in AAPS angezeigt wird oder nicht. Falls die rechte Box nicht aktiviert ist, sind die Funktionen über das Hamburger-Menü (D) oben links am Bildschirm erreichbar.
+The **Config Builder** is the tab where you turn the modular features on and off. In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated, the boxes on the right-hand side (C) allow you to view these as a tab (E) in **AAPS**. In case the right box is not activated, you can reach the function by using the hamburger menu (D) on the top left of the screen. See [Tab or hamburger menu](#tab-or-hamburger-menu) below.
 
-Falls zusätzliche Einstellungen innerhalb der Funktion möglich sind, können sie über das Zahnrad (B) aufgerufen werden.
-
-**Erste Konfiguration:** Seit AAPS 2.0 führt Dich der 'Einrichtungsassistent' durch die Einrichtung von AAPS. Drücke das 3-Punkte-Menü (F) oben rechts am Bildschirm und wähle "Einrichtungsassistent", um diesen zu starten.
+When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
 
 ![Konfigurations-Generator - Checkboxen und Zahnrad](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -20,69 +18,17 @@ Mit der Checkbox unter dem Augensymbol entscheidest Du, wie Du den entsprechende
 
 ![Registerkarte (Tab) oder Hamburger-Menü](../images/ConfBuild_TabOrHH_AAPS30.png)
 
-(Config-Builder-profile)=
+```{contents}
+:backlinks: entry
+:depth: 2
+```
 
 ## Profile
 
-* Wähle das Basal-Profil aus, das du benutzen möchtest. See [Profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) page for more setup information.
-* Ab AAPS 3.0 können nur lokale Profile verwendet werden.
+This module can not be disabled as it is a core part of **AAPS**.
 
-Es ist jedoch möglich, ein Nightscout-Profil mit einem lokalen Profil zu synchronisieren. Um dies zu tun, ist es jedoch wichtig, den gesamten Datenbank-Datensatz mit mehreren Profilen im Nightscout-Editor zu klonen. Bitte beachte die unten stehenden Informationen. Dies kann hilfreich sein, wenn größere Änderungen an einem umfassenderen Profil einfacher über das Web-Interface eingegeben werden können, z.B. um die Daten manuell aus einer Tabelle zu kopieren.
-
-(Config-Builder-local-profile)=
-
-### Lokales Profil
-
-Das lokale Profil nutzt das Profil, das in der Pumpe manuell erfasst wurde. Sobald "Lokales Profil" ausgewählt ist, erscheint ein weiterer Tab, in dem die aus der Pumpe ausgelesenen Profildaten bei Bedarf angepasst werden können. Beim nächsten Profil Wechsel werden sie an die Pumpe übertragen und in deren Profil 1 gespeichert. Diese Einstellung wird empfohlen, da keine Internetverbindung erforderlich ist.
-
-Your local profiles are part of [exported settings](../Maintenance/ExportImportSettings.md). Stelle also sicher, dass Du immer ein Backup an einem sicheren Ort hast.
-
-![Einstellungen lokales Profil](../images/LocalProfile_Settings.png)
-
-Schaltflächen:
-
-* grünes Plus: hinzufügen
-* rotes X: löschen
-* blauer Pfeil: duplizieren
-
-Achte darauf, dass Du das richtige Profil anpasst, wenn Du Änderungen vornimmst. Beim Wechsel zum Profil-Tab wird nicht immer das aktuell genutzte Profil angezeigt. Wenn Du z.B. einen Profilwechsel über den Startbildschirm durchgeführt hast, wird ggf. im Profil-Tab ein anderes Profil angezeigt.
-
-#### Profilwechsel klonen
-
-Aus einem Profilwechsel kannst Du ganz einfach ein neues lokales Profil erstellen. Zeitverschiebung und Prozentsatz des Profilwechsels werden in das neue lokale Profil übernommen.
-
-1. Klicke auf das 3-Punkte-Menü in der oberen rechten Ecke.
-2. Wähle "Behandlungen" aus.
-3. Drücke das Sternsymbol um auf die Seite des Profilwechsels zuzugreifen.
-4. Wähle den gewünschten Profilwechsel und drücke "Clone".
-5. Das neue lokale Profil kannst Du im Tab "Lokales Profil" (LP) oder über das Hamburger-Menü bearbeiten.
-
-![Profilwechsel klonen](../images/LocalProfile_ClonePS_AAPS30.png)
-
-(Config-Builder-upload-local-profiles-to-nightscout)=
-
-#### Lokale Profile zu Nightscout hochladen
-
-Lokale Profile können auch zu Nightscout hochgeladen werden. The settings can be found in [NSClient preferences](#Preferences-nsclient).
-
-![Lokales Profil zu NS hochladen](../images/LocalProfile_UploadNS_AASP30.png)
-
-#### Change profile in Nightscout profile editor
-
-You can synchronize changes to the profile in the Nightscout profile editor to local profiles. The settings can be found in [NSClient preferences](#Preferences-nsclient).
-
-Es ist erforderlich, alle aktiven Datensätze der gesamten Nightscout Datenbank für die Profile zu klonen und nicht nur ein Profil mit dem blauen Pfeil! Die neuen Datensätze tragen dann das aktuelle Datum und können über die Registerkarte "lokales Profil" aktiviert werden.
-
-![Datensätze klonen](../images/Nightscout_Profile_Editor.PNG)
-
-### Profil-Helfer
-
-Der Profil-Helfer ermöglicht zwei Funktionen:
-
-1. Finden eines Profils für Kinder
-2. Vergleichen von zwei Profilen oder von Profilwechseln, um ein neues Profil zu klonen.
-
-Details are explained on the separate [profile helper page](../SettingUpAaps/ProfileHelper.md).
+* See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
+* See [AAPS Screens > Profile](#aaps-screens-profile) for more information about managing your **Profiles**.
 
 (Config-Builder-insulin)=
 
@@ -90,26 +36,16 @@ Details are explained on the separate [profile helper page](../SettingUpAaps/Pro
 
 ![Insulintyp](../images/ConfBuild_Insulin_AAPS30.png)
 
-* Hier musst du auswählen, welchen Insulintyp du verwendest.
-* Die Oref Optionen 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' und 'Free-Peak Oref' haben einen exponentiellen Verlauf. Mehr Informationen dazu finden sich in den [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
-* Diese Kurven variieren basierend auf der DIA (Insulinwirkdauer) und dem zeitlichen Abstand zum Wirkmaximum.
-    
-    * Die LILA Line zeigt, wie viel **Insulin nach einer Injektion verbleibt** und wie es im Zeitverlauf abgebaut wird.
-    * Die BLAUE Line zeigt, **wie aktiv** das Insulin ist.
+Select the type of insulin you are using.
 
-### DIA
-
-* Die Insulinwirkdauer (DIA) ist nicht für jeden gleich. Daher musst Du es selbst für Dich austesten. 
-* Unter fünf Stunden darf der Wert aber nicht liegen.
-* Für viele Menschen mit Diabetes, die ultra-schnell wirkende Insuline wie Fiasp nutzen, gibt es 3 - 4 Stunden nach der Insulingabe nahezu keinen spürbaren Effekt mehr, auch wenn dann rechnerisch noch 0.0xx Einheiten vorhanden sind. Die verbleibende Menge kann aber bei Sport und anderen Aktivitäten doch noch einen Einfluss haben. Daher nutzt AAPS eine minimale Wirkdauer von 5 Stunden.
-* You can read more about that in the Insulin Profile section of [this](#AapsScreens-insulin-profile) page.
+More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
 
 ### Unterschiede der Insulintypen
 
+* Die Oref Optionen 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' und 'Free-Peak Oref' haben einen exponentiellen Verlauf.
 * Bei den Profilen 'Rapid-Acting', 'Ultra-Rapid' und 'Lyumjev' kannst du nur die Insulinwirkdauer (DIA) anpassen. Der Zeitpunkt der maximalen Insulinwirkung ist fest vorgegeben. 
 * Das Profil Free-Peak erlaubt, nicht nur die Insulinwirkdauer (DIA), sondern auch den Zeitpunkt der maximalen Insulinwirkung individuell festzulegen. Es sollte nur von erfahrenen Anwendern genutzt werden, die die Auswirkungen dieser Einstellungen kennen. 
 * The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
-* Wenn Du die Checkbox akivierst, wird das Diagramm als eigener Tab angezeigt, sonst ist es über das Hamburger-Menü links oben erreichbar.
 
 #### Rapid-Acting Oref
 
@@ -149,57 +85,61 @@ Details are explained on the separate [profile helper page](../SettingUpAaps/Pro
 
 ## BZ-Quelle
 
-Select the blood glucose source you are using - see [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
 ![Konfigurations-Generator - BZ-Quelle](../images/ConfBuild_BG.png)
 
-* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) - Wähle zusätzlich in den Einstellungen “Sende BZ-Werte zu xDrip+”, wenn du die xDrip+ Alarme nutzen willst.
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - nur Version 4.15.57 und neuer werden unterstützt
-* [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
-* [Tomato App](http://tomato.cool/) für MiaoMiao Geräte
+* [xDrip+](../CompatibleCgms/xDrip.md)
+* [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+* [MM640g](../CompatibleCgms/MM640g.md)
+* [Glimp](#libre1-using-glimp) - only version 4.15.57 and newer are supported
+* [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+* [Poctech](../CompatibleCgms/PocTech.md)
+* [Tomato App](#libre1-using-tomato) for MiaoMiao device
 * [Glunovo App](https://infinovo.com/) für Glunovo CGM System
-* NSClient BG - nicht empfohlen, da der Closed Loop in diesem Fall von der Verfügbarkeit mobiler Daten bzw. eines WLAN abhängt. CGM-Daten werden nur dann empfangen, wenn eine Online-Verbindung zu Deiner Nightscout-Website besteht. Nutze lieber lokale Broadcasts aus einer der anderen CGM-Datenquellen.
 * Zufalls-BZ: Generiert zufällige Blutzuckerdaten (nur im Demo-Modus)
+
+## Smoothing
+
+![Smoothing](../images/ConfBuild_Smoothing.png)
+
+See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 (Config-Builder-pump)=
 
 ## Pump
 
-Wähle die von dir genutzte Pumpe.
+Wähle die von dir genutzte Pumpe. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
 
-![Konfigurationsgenerator - Pumpe wählen](../images/ConfBuild_Pump_AAPS30.png)
+![Konfigurationsgenerator - Pumpe wählen](../images/ConfBuild_Pump_AAPS32.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * DanaR Korean (koreanische Version der DanaR)
 * Dana Rv2 (DanaR mit inoffiziellem Firmware Upgrade)
 * [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
-    
-    * Wenn Du eine Dana-Pumpe nutzt, kannst Du in den **erweiterten Einstellungen** den Bluetooth Watchdog aktivieren, falls dies notwendig sein sollte. Er deaktiviert Bluetooth für eine Sekunde, falls keine Verbindung zur Pumpe möglich ist. Dies kann helfen, falls bei deinem Smartphone Probleme mit der Bluetooth-Verbindung auftreten.
-    * [Password for Dana RS pump](../CompatiblePumps/DanaRS-Insulin-Pump.md) must be entered correctly. Das Passwort wurde in früheren Versionen nicht überprüft.
-
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
-
-* [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-* [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
-* [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+* Accu Chek Combo 
+  * [Driver using Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+  * [Driver with no additional requirement](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md), added in [AAPS v.3.2](#version3200)
+* Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
+* Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 * [Medtronic](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
-* ICT (für OpenLoop mit ICT, AAPS macht nur Behandlungsvorschläge, die du dann selbst mit dem Pen umsetzen musst)
-* Virtuelle Pumpe (für OpenLoop mit nicht unterstützten Pumpen, AAPS macht nur Behandlungsvorschläge, die du dann selbst in deiner Pumpe umsetzen musst)
+* [EOPatch2](../CompatiblePumps/EOPatch2.md)
+* [Medtrum](../CompatiblePumps/MedtrumNano.md)
+* Virtual pump: open loop - **AAPS** suggestions only 
+  * as you make you first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
+  * for pump which doesn't have any driver yet
 
 ## Empfindlichkeitserkennung
 
 Hier kannst Du auswählen, mit welchem Algorithmus AAPS die Insulinempfindlichkeit berechnen soll. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Bei der Empfindlichkeitserkennung werden historische Daten "on the go" analysiert und Anpassungen vorgenommen, falls der Algorithmus feststellt, dass du sensibler oder weniger empfindlich auf das Insulin reagierst als üblich. Mehr Details zum Sensitivitäts Algorithmus findest du in den [OpenAPS Docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-Die berechnete Insulinempfindlichkeit kannst du verfolgen, indem du auf der Startseite im Auswahlmenü der angezeigten Kurven “Sensitivität” auswählst. Die weiße Linie zeigt dir das graphisch an. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. So lange Du dieses Ziel (objective) noch nicht erreicht hast, wird der Autosens-Prozentsatz bzw. die Autosens-Kurve nur zu Deiner Information angezeigt. AAPS nimmt keine Änderungen vor.
-
-(Config-Builder-absorption-settings)=
+You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs). Die berechnete Insulinempfindlichkeit kannst du verfolgen, indem du auf der Startseite im Auswahlmenü der angezeigten Kurven “Sensitivität” auswählst. Die weiße Linie zeigt dir das graphisch an. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. So lange Du dieses Ziel (objective) noch nicht erreicht hast, wird der Autosens-Prozentsatz bzw. die Autosens-Kurve nur zu Deiner Information angezeigt. AAPS nimmt keine Änderungen vor.
 
 ### Resorptions-Einstellungen
 
-Wenn Du Oref1 mit SMB nutzt, musst du **min_5m_carbimpact** auf 8 ändern. Dieser Wert wird nur dann verwendet, wenn keine CGM-Werte empfangen werden oder körperliche Aktivitäten den Blutzuckeranstieg kompensieren, den AAPS normalerweise zur Berechnung des Kohlenhydratabbaus verwendet. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Im Prinzip ist es eine Notlauffunktion.
+If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Im Prinzip ist es eine Notlauffunktion.
 
 (Config-Builder-aps)=
 
@@ -207,52 +147,63 @@ Wenn Du Oref1 mit SMB nutzt, musst du **min_5m_carbimpact** auf 8 ändern. Diese
 
 Wähle den gewünschten APS-Algorithmus für Therapie-Anpassungen. Die Details zum ausgewählten Algorithmus findest du im Reiter OpenAPS (OPAS).
 
-* OpenAPS AMA (advanced meal assist [fortgeschrittener Mahlzeitenassistent], Stand des Algorithmus 2017) In einfachen Worten: Wenn Du die Kohlenhydrate verlässlich eingibst, kann das System nach einem Mahlzeitenbolus schneller auf BZ-Anstiege reagieren und z.B. eine höhere Basalrate abgeben.
-* [OpenAPS SMB](../DailyLifeWithAaps/KeyAapsFeatures.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](#objectives-objective9) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* OpenAPS AMA 
+  * Advanced Meal Assist: older algorithm not recommended anymore.
+  * In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
+* [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb) 
+  * Super Micro Bolus: most recent algorithm recommended for all users.
+  * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
+  * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
+
+If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Preferences > Sensitivity detection > Sensitivity Oref1 settings](../SettingUpAaps/Preferences.md).
 
 ## Loop
 
-* Wechsel zwischen Open Loop, Closed Loop und Unterbrechung bei niedrigen BZ (LGS).
+This module should not be disabled as it is a core part of **AAPS**.
 
-![Konfigurations-Generator - Loop Modus](../images/ConfigBuilder_LoopLGS.png)
+## Constraints
 
-(Config-Builder-open-loop)=
+### Objectives
 
-### Open Loop
-
-* AAPS wertet laufend alle verfügbaren Daten (IOB, COB, BZ-Wert) aus und macht dir bei Bedarf Behandlungsvorschläge, wie du deine Therapie anpassen solltest. 
-* Die Vorschläge werden nicht automatisch (wie im Closed Loop) ausgeführt, sondern müssen manuell in die Pumpe eingegeben werden. Wenn Du eine kompatible Pumpe (Dana R/RS oder Accu Chek Combo) verwendest, kann dies auch über eine Schaltfläche in AndroidAPS geschehen. 
-* Diese Option ist zum Kennenlernen der Funktionsweise gedacht oder falls Du eine nicht unterstützte Pumpe verwendest.
-
-(Config-Builder-closed-loop)=
-
-### Closed Loop
-
-* AAPS wertet laufend alle verfügbaren Daten (IOB, COB, BZ-Wert) aus und passt die Behandlung bei Bedarf automatisch (also ohne weiteren Eingriff durch dich) an, um den eingestellten Zielbereich oder Zielwert zu erreichen (Bolusabgabe, temporäre Basalrate, Insulinabschaltung zur Hypovermeidung etc.). 
-* Der Closed Loop arbeitet im Rahmen zahlreicher Sicherheitsgrenzen, die du individuell einstellen kannst.
-* Closed Loop is only possible if you are in [Objective 6](#objectives-objective6) or higher and use a supported pump.
-* Hinweis: Im Closed Loop wird ein Zielwert statt einem Zielbereich empfohlen (also z.B. 100 mg/dl statt 90 - 125 mg/dl bzw. 5,5 mmol statt 5,0 - 7,0 mmol).
-
-### Abschalten des Basalrate bei niedrigen Werten (Low Glucose Suspend - LGS)
-
-* maxIOB wird auf null gesetzt
-* Das bedeutet, wenn der Blutzuckerspiegel sinkt, kann AAPS die Basalrate automatisch reduzieren.
-* Aber wenn der Blutzuckerspiegel steigt, wird keine automatische Korrektur vorgenommen. Deine Basalrate bleibt die gleiche wie in Deinem ausgewählten Profil.
-* Nur wenn das Basal-IOB negativ ist (wegen einer vorangegangenen Abschaltung der Basalrate bei niedrigen Werten) wird zusätzliches Insulin abgegeben, um den BZ zu senken.
-
-### Minimaler Wert zur Anfrage einer Änderung
-
-* Im Open Loop erhälst Du jedes Mal eine Benachrichtigung, wenn AAPS empfiehlt, die Basalrate anzupassen. 
-* Um die Anzahl der Benachrichtigungen zu reduzieren, kannst Du entweder einen breiteren BZ-Zielbereich verwenden oder den Prozentsatz des minimalen Werts zur Anfrage einer Änderung erhöhen.
-* Diese definiert, wie hoch die relative Änderung sein muss, damit eine Benachrichtigung erscheint.
-
-## Ziele (objectives - Lernprogramm)
-
-AAPS has a learning program (objectives) that you have to fulfill step by step. Dies soll dich sicher durch die Einrichtung eines Closed Loop Systems führen. Das garantiert, dass du alles korrekt eingestellt hast und auch verstehst, was das System genau macht. Nur so kannst du dem System vertrauen.
-
-You should [export your settings](../Maintenance/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. Dann kannst du sie einfach importieren, wenn du später einmal Dein Smartphone austauschen musst (neues Gerät, Displayschaden...).
+**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. Dies soll dich sicher durch die Einrichtung eines Closed Loop Systems führen. Das garantiert, dass du alles korrekt eingestellt hast und auch verstehst, was das System genau macht. Nur so kannst du dem System vertrauen.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
+
+## Synchronisierung
+
+In this section, you can choose if/where you want **AAPS** to send your data to.
+
+### NSClient or NSClientV3
+
+Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md).
+
+See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to help you choose between NSClient (v1) and NSClientV3.
+
+### Tidepool
+
+Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+
+See [Tidepool](../SettingUpAaps/Tidepool.md).
+
+### xDrip
+
+Used to **send** data such as treatments to xDrip+.
+
+### Open Humans
+
+See [Open Humans](../SupportingAaps/OpenHumans.md).
+
+### Wear
+
+Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)).
+
+### Samsung Tizen
+
+Broadcast data to Samsung's G-Watch Wear App (Tizen OS).
+
+### Garmin
+
+Connection to Garmin device (Fenix, Edge...)
 
 ## Behandlungen
 
@@ -262,52 +213,7 @@ Der Reiter Behandlungen (BEH) zeigt Dir die zu Nightscout hochgeladenen Behandlu
 
 ### Übersicht
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../DailyLifeWithAaps/AapsScreens.md) for details). Die Einstellungen erreichst Du über das Zahnradsymbol.
-
-#### Bildschirm aktiv lassen
-
-Die Option "Bildschirm aktiv lassen" hindert Android daran, den Bildschirm abzuschalten. Dies ist z.B. zu Präsentationszwecken hilfreich, es verbraucht aber sehr viel Batterie. Deshalb wird empfohlen, das Smartphone an ein Ladekabel anzuschließen.
-
-#### Schaltflächen
-
-Hier kannst Du festlegen, welche Schaltflächen auf der Startseite angezeigt werden.
-
-* Behandlungen
-* Bolus-Rechner
-* Insulin
-* Kohlenhydrate
-* CGM (öffnet xDrip+)
-* Kalibrierung
-
-Außerdem kannst Du feste Werte für die Erhöhung der Insulin- und Kohlenhydratmengen festlegen und entscheiden, ob ein Notizfeld im Behandlungsdialog angezeigt werden soll.
-
-#### QuickWizard-Einstellungen
-
-Hier kannst Du eine Schaltfläche für eine bestimmte Standardmahlzeit erstellen (KH und Berechnungsmethode für den Bolus), die Dir dann auf dem Startbildschirm angezeigt wird. Dies ist sehr hilfreich, wenn Du z.B. morgens häufig dasselbe isst (Button “1 Vollkornbrot”). Wenn Du mehrere Standardmahlzeiten anlegst und für sie verschiedene Uhrzeiten angibst, dann hast Du je nach Tageszeit auf dem Startbildschirm immer den passenden Standardmahlzeit-Button.
-
-Hinweis: Die Schaltfläche wird außerhalb der eingestellten Zeiträume nicht angezeigt. Gleiches gilt, wenn genug Insulin (IOB) zur Verfügung steht, um die in den Schaltflächeneinstellungen definierte Kohlenhydratmenge abzudecken.
-
-![QuickWizard Schaltfläche](../images/ConfBuild_QuickWizard.png)
-
-#### Vordefinierte temporäre Ziele
-
-Wähle Deine vordefinierten temporären Ziele (Dauer und Zielwert). Voreingestellte Werte sind:
-
-* Bald essen: Zielwert 72 mg/dl / 4.0 mmol/l, Dauer 45 min
-* Aktivität: Zielwert 140 mg/dl / 7.8 mmol/l, Dauer 90 min
-* Hypo: Zielwert 125 mg/dl / 6.9 mmol/l, Dauer 45 min
-
-#### Füll-/Vorfüll-Standardmengen
-
-Stelle die Werte für die drei Buttons im Dialog 'Katheterwechsel' (Aktionen Tab / Menü) abhängig von der Länge Deines Katheters ein.
-
-#### Zielbereich für die Grafikanzeige
-
-Wähle die Ober- und Untergrenze des grün hinterlegten Zielbereichs im Diagramm auf der AAPS-Übersicht und auf der Smartwatch. Dies dient nur der Anzeige und ist nicht der Zielwert für Deinen Blutzucker. Beispiel: 70 - 180 mg/dl oder 3,9 - 10 mmol/l
-
-#### Kurze Tab-Überschriften
-
-Choose whether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+This is the [main screen](#AapsScreens-the-homescreen) of **AAPS** and can not be disabled.
 
 #### Zeige Feld für Notizen in den Behandlungsdialogen
 
@@ -327,24 +233,23 @@ Choose if you want to have [status lights](#Preferences-status-lights) on overvi
 
 ### Aktionen
 
-* Einige Schaltflächen, um auf häufig verwendete Funktionen zugreifen zu können.
-* See [AAPS screenshots](#screens-action-tab) for details.
+A tab offering multiple buttons to take [actions](#screens-action-tab) in **AAPS**.
 
 ### Automatisierung
 
-Benutzerdefinierte Automatisierung von Aufgaben ("wenn - dann - sonst"). Please [read on here](../DailyLifeWithAaps/Automations.md).
+A tab for managing your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
 
 (Config-Builder-sms-communicator)=
 
 ### SMS Kommunikator
 
-Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
+Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
 
 ### Essen
 
 Zeigt die im Nahrungsmittel-Editor erfassten Einträge an. Weitere Informationen zur Einrichtung der Nahrungsmitteldatenbank findest Du im [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
-Hinweis: Die Einträge können nicht im AAPS-Rechner verwendet werden. (reine Anzeigefunktion)
+Note: Entries cannot be used in the **AAPS** calculator. (reine Anzeigefunktion)
 
 (Config-Builder-wear)=
 
@@ -361,19 +266,10 @@ Wenn Du Deinen Loop von der Uhr aus steuern willst (z.B. Bolus abgeben), aktivie
 * Alle Daten erneut senden. Dies kann hilfreich sein, wenn die Uhr längere Zeit außer Reichweite war und du die Informationen an die Uhr pushen willst.
 * Über das Smartphone die Einstellungen auf der Uhr öffnen.
 
-### xDrip+ Statuszeile (Uhr)
-
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../UsefulLinks/WearOsSmartwatch.md)
-
-### Nightscout-Client
-
-* NSClient Synchronisierung Deiner AAPS-Daten mit Nightscout einrichten.
-* Settings in [preferences](#Preferences-nsclient) can be opened by clicking the cog wheel.
-
 ### Wartung
 
-E-Mail-Adresse und Anzahl der zu sendenden Protokolle. Normalerweise keine Änderung notwendig.
+Access this tab to export / import settings.
 
 ### Konfigurations-Generator
 
-Verwende einen Tab für den Konfigurations-Generator statt des Zugangs über das Hamburger-Menü.
+This current tab.
