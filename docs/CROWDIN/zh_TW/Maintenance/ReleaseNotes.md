@@ -376,7 +376,7 @@ v3 是新的協議。 更加安全和高效
 - 新[偏好設定佈局](../SettingUpAaps/Preferences.md) @MilosKozak
 - SMB 算法更新 @Tornado-Tim
 - [低血糖暫停模式](#Preferences-aps-mode) @Tornado-Tim
-- [需碳水提醒](#Preferences-carb-required-notification) @twain47 @Tornado-Tim
+- [carbs required notifications](#key-aaps-features-minimal-carbs-required-for-suggestion) @twain47 @Tornado-Tim
 - 移除了 Careportal（移至操作） @MilosKozak
 - [新加密備份格式](ExportImportSettings.md) @dlvoy
 - [新 SMS TOTP 驗證](../RemoteFeatures/SMSCommands.md) @dlvoy

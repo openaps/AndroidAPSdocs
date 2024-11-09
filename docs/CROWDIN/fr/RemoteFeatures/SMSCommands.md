@@ -116,7 +116,7 @@ PIN requirements are:
 * Use the caregiver phone to scan the QR code provided by **AAPS**, when prompted.
 * Test the one-time passcode from the authenticator app on the caregiver phone followed by your PIN:
 
-Par exemple :
+Exemple :
 * The token from the authenticator app is 457051
 * Your mandatory PIN is 2401
 * Code to check: 4570512401

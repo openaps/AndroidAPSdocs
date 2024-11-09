@@ -376,7 +376,7 @@ You need at least start [objective 11 (in later versions objective 10!)](#object
 - new [preferences layout](../SettingUpAaps/Preferences.md) @MilosKozak
 - Обновление алгоритма микроболюсов SMB @Tornado-Tim
 - [Low glucose suspend mode](#Preferences-aps-mode) @Tornado-Tim
-- [carbs required notifications](#Preferences-carb-required-notification) @twain47 @Tornado-Tim
+- [carbs required notifications](#key-aaps-features-minimal-carbs-required-for-suggestion) @twain47 @Tornado-Tim
 - удален портал терапии Careportal (перемещен в Действия) @MilosKozak
 - [new encrypted backup format](ExportImportSettings.md) @dlvoy
 - [new SMS TOTP authentication](../RemoteFeatures/SMSCommands.md) @dlvoy
