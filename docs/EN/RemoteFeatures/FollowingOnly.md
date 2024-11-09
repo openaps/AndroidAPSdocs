@@ -5,7 +5,8 @@ In addition to the range of possibilities available for remotely controlling _an
 A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage.
 
 ```{contents} Table of contents
-:depth: 2
+:depth: 1
+:local: true
 ```
 
 The most common strategies used in combination with **AAPS** are explained in more detail below.
