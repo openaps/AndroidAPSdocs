@@ -184,6 +184,7 @@ Cliquez sur le bouton "SUIVANT" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_135853.png)
 
+(SetupWizard-synchronization-with-the-reporting-server-and-more)=
 ### Synchronisation avec le serveur de reporting, etc
 
 Ici, vous configurez le téléchargement des données vers votre serveur de reporting.
@@ -198,7 +199,8 @@ Dans cet exemple, nous sélectionnons Nightscout comme serveur de reporting, et 
 
 ```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
 :class: Note
-Click [here](../Maintenance/ReleaseNotes.md) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
+
+Click [here](#version3200) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**.
 
 Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
 ```
@@ -267,7 +269,7 @@ Revenez deux fois en arrière, jusqu'à la liste des plugins et sélectionnez "S
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
-### Nom du patient
+### Patient name
 
 Here you can setup your name in **AAPS**.
 

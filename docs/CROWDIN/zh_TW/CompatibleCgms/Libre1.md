@@ -26,8 +26,9 @@
 -   除非你需要最新功能，否則可以安全下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)，在這種情況下，你應該使用最新的[Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases)。
 -   按照[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)上的設置說明進行操作。
 -    你還需要適用於 Libre 1 US（和 Libre 2 EU）的[OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)。
--   在[組態建置工具的血糖來源](#Config-Builder-bg-source)中選擇 xDrip+。
+-   在[ConfigBuilder 的血糖來源](#Config-Builder-bg-source)中選擇 xDrip+。
 
+(libre1-using-glimp)=
 ## 2. 使用 Glimp
 
 -   Glimp 支援 Miaomiao、Blucon 和 Bubble 用於 Libre 1 和 Libre 2 EU。
@@ -35,11 +36,12 @@
 -   安裝 [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)。
 -   在 [ConfigBuilder 的血糖來源](#Config-Builder-bg-source) 中選擇 Glimp。
 
+(libre1-using-tomato)=
 ## 3. 使用 Tomato
 
 - Tomato 是 Miaomiao 的官方應用程式。
 - 安裝 [Tomato](http://tomato.cool/#download_page) 並按照廠商的[說明](http://tomato.cool/how-to-broadcast-data-to-android-aps/tips/)操作。
-- 在 [ConfigBuilder 的血糖來源](#Config-Builder-bg-source) 中選擇 Tomato。
+- Select Tomato in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 ## 4. 使用 Diabox
 
@@ -48,4 +50,4 @@
 
 ![Diabox](../images/Diabox.png)
 
-- 在[組態建置工具的血糖來源](#Config-Builder-bg-source)中選擇 xDrip+。
+- 在[ConfigBuilder 的血糖來源](#Config-Builder-bg-source)中選擇 xDrip+。

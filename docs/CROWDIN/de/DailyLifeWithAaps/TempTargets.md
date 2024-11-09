@@ -74,6 +74,8 @@ In closed loop mode, **SMB**:
 - *may be* deactivated (discussed further below); and/or
 - basal may be activated if **AAPS** is in negative **IOB** or <0.
 
+(TempTargets-where-can-i-select-a-temp-target)=
+
 ## Wo kann ich ein Temporäres Ziel auswählen und setzen?
 
 In the **Actions** tab in **AAPS**.
@@ -86,6 +88,10 @@ In the **Actions** tab in **AAPS**.
 Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
 
 ![Carbs TT](../images/TempTarget6.png)
+
+- Drücke lange auf deinen Zielwert in der oberen rechten Ecke auf dem Home-Bildschirm oder verwende die Shortcuts im orange "Kohlenhydrate" (Carbs)-Button am unteren Rand.
+
+![Einstellungen > Vordefinierte temporäre Ziele](../images/Pref2020_OV_DefaultTT2.png)
 
 ## Wo kann ich die vorgegebenen temporären Ziele ändern und mit meinen eigenen Einstellungen überschreiben?
 
@@ -132,7 +138,7 @@ Or in the **Carbs** button
 
 (TempTargets-hypo-temp-target)=
 
-## Hypo Temp-Target
+## Temporäres Ziel für Hypos
 
 Das **temporäre Hypo-Ziel** soll **AAPS** helfen durch reduzieren der Indulinzufuhr niedrige Glukosewerte zu vermeiden. Wenn Du erwartest, dass Dein **Glukosewert** bald niedrig sein wird: Normalerweise sollte **AAPS** das lösen können. Die richtigen und getesteten (stabile) **AAPS**-Einstellungen sind dabei allerdings entscheidend. Ein **Temp-Target Hypo** kann frühzeitig einer erwarteten Hypo entgegenwirken und damit **AAPS** durch das geänderte erhöhte Ziel, Insulin reduzieren lassen.
 
@@ -164,7 +170,7 @@ Zusätzlich wird *'Aktiviere SMB bei temporären Zielen oberhalb des regulären 
 
 (TempTargets-eating-soon-temp-target)=
 
-## Bald essen Temp-Target
+## Temporäres Ziel für „Bald essen“
 
 **Temporäres Ziel für 'Bald essen'** kann ein langsames Abfallen des **Glukosewerts** und eine ausreichendes **IOB** bis zum Beginn der Mahlzeit erreichen.
 
