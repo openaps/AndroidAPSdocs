@@ -1,43 +1,32 @@
 # AAPS folgen (keine Interaktion mit dem AAPS-System)
 
-In addition to the range of possibilities available for remotely controlling _and_ following **AAPS** which are described at [remote control](../RemoteFeatures/RemoteControl.md), there are several additional apps and devices which the community has developed, to simply follow numbers (glucose levels and other information), without interacting with AAPS.
+In addition to the range of possibilities available for remotely controlling _and_ following **AAPS** which are described at [remote control](../RemoteFeatures/RemoteControl.md), there are several additional apps and devices which the community has developed, to simply follow numbers (glucose levels and other information), without interacting with **AAPS**.
 
-Ein guter Überblick über die umfangreichen Optionen zum Folgen von **AAPS** ist auf der [Nightscout-Follower](https://nightscout.github.io/nightscout/downloaders/#) Webseite zu finden; wenn Du das Menü auf der linken Seite ausklappst:
+A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage.
 
-![grafik](../images/dfa981c1-5a15-4498-88d2-0fd1462d8242.png)
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
 Die häufigsten Strategien im Zusammenhang mit **AAPS** werden weiter unten erläutert.
 
-## 1) Smartphone Apps
+## Smartphone apps
 
-Dies sind einige der wichtigsten „Follower“-Apps, die von **AAPS**-Nutzenden verwendet werden. Alle diese Apps sind „kostenlos“:
+```{contents} These are some of the main “follower” apps used by **AAPS** users. All of these apps are “free”: 
+:depth: 1
+:local: true
+```
 
-A)  Dexcom Follow (Android/iOS)
-
-B)  Nightguard (iOS)
-
-C)  Nightwatch (Android)
-
-D)  xDrip+ (Android)
-
-E)  xDrip4iOS (iOS)
-
-F)  Sugarmate (iOS)
-
-G)  Spike (iOS)
-
-
-
-
-### A) Dexcom Follow (Android und iOS)
+### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) and [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
 ![grafik](../images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
-●   Dexcom Follow ist mit vielen Smartphones kompatibel (sowohl Android als auch iPhone). Dexcom Follow kann, auch wenn Du nicht die offiziellen Dexcom App nutzt, dazu genutzt werden, Sensordaten zu empfangen.
+* Dexcom Follow is compatible with a wide range of handsets (both Android and iPhone). Dexcom Follow kann, auch wenn Du nicht die offiziellen Dexcom App nutzt, dazu genutzt werden, Sensordaten zu empfangen.
 
-●   Viele Betreuende kennen Dexcom Follow und finden die klare Benutzeroberfläche besser als etwas Kompliziertes.
+* Many caregivers are familiar with Dexcom Follow, preferring its clear interface over something more complicated.
 
-● Dexcom Follow eignet sich besonders gut für Menschen (z. B. Lehrer/Großeltern), die sehr wenig über Diabetes und Glukosewerte wissen. Es hat anpassbare Alarme (Glukosewert, welcher Alarmsound abgespielt werden soll usw.). Alarme können bei Bedarf komplett abgeschaltet werden. Das kann z.B. in Situationen, in denen der Sensor noch nicht zuverlässig läuft und falsche tiefe Werte anzeigt, hilfreich sein.
+* Dexcom Follow is very good for teachers/grandparents and people who know very little about diabetes and sugar levels. It has customisable alerts (BG level, what sound to play etc.). Alarme können bei Bedarf komplett abgeschaltet werden. Das kann z.B. in Situationen, in denen der Sensor noch nicht zuverlässig läuft und falsche tiefe Werte anzeigt, hilfreich sein.
 
 #### Dexcom Follow konfigurieren: Schritt-für-Schritt-Anleitung
 
@@ -55,53 +44,53 @@ Die Schritte dazu sind folgende:
 3)  Wische durch die einleitenden Menüs. 4)  Wähle “Kein Code” als Sensorcode aus. 5)  Unter Transmitter-SN wähle "Manuell eingeben" und gib einen gültigen Transmitter-Code ein (z. B. den eines bereits abgelaufenen Transmitters, damit dieser sich nicht mit einen laufenden Transmitter in die Quere kommt). Das Format ist ein Abfolge von Zahlen und Buchstaben: “ZBZZZB” einer bestimmten Kombination. Daher ist es am einfachsten einen Code eines alten Transmitters zu verwenden. 6) Sobald die App versucht, den Transmitter und den Sensor zu finden, kannst Du Follower einladen: Wähle die kleinen drei Punkte oben links in der App aus und füge einen neuen Follower hinzu. Wenn einer Deiner Follower ein neues Samrtphone hat, kannst Du diesen Weg auch nutzen,  um ihm/ihr - sofern nötig - eine neue Einladung zu schicken. An der Stelle löscht Du die Person zunächst aus der Follower-Liste und verschickst dann eine neue Einladungs-E-Mail, die dann auf dem neunen Smartphone ankommt. 7)  Lade die Dexcom Follow App auf das Follower-Smartphone herunter (iPhone: App Store oder Android: Play) und installiere sie. Richte die Dexcom Follow App ein. Während der Einrichtung wirst Du dazu aufgefordert, die E-Mail mit der Follower-Einladung zu öffnen.    
 8)  Jetzt kannst Du die offizielle Dexcom G6 App deinstallieren.
 
-Je nachdem welche App Du verwendest, werden die Sensordaten für Dexcom Follow vom AAPS-Smartphone entweder direkt aus BYODA oder aus xDrip+ exportiert.
+For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip+, depending on which app you are using.
 
 
-### B) Nightguard (iOS)
+### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
 ![grafik](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
 
 Vorteile (von Nutzenden gemeldet):
 
-Im [App Store](https://apps.apple.com/us/app/nightguard/id1116430352) verfügbar, einfach, nutzerfreundliches Interface.
+* Available in the [app store](https://apps.apple.com/us/app/nightguard/id1116430352), simple, user-friendly interface.
 
-●   Knopf wischen oder schütteln des iPones zum Schlummern der Alarme für verschiedene Dauern (5 Minuten bis zu 24 Stunden)
+* Swipe button or shake phone to snooze alarms at different intervals ranging from 5 min to 24 hours
 
-●   Anpassbare Alarme (Hoch-/Niedrig-Alarm, keine Sensordaten seit 15-45 Minuten).
+* Customize alarms (high, low alerts, missed readings when no data for 15-45 minutes).
 
-●   Schneller Anstieg/Fall für 2-5 aufeinanderfolgende Sensordaten (Du entscheidest). Du bestimmst auch das Delta zwischen zwei Sensorwerten
+* Fast rise/drop over 2-5 consecutive readings (you choose). Du bestimmst auch das Delta zwischen zwei Sensorwerten
 
-●   Intelligentes Schlummern, sodass es keinen Alarm gibt, wenn der Glukosewert sich in die richtige Richtung bewegt
+* Smart snooze so doesn't alert if levels are moving in right direction
 
-●   Es gibt einen Reiter "Care" (Behandlungen) auf dem neue temporäre Ziele für einen bestimmten Zeitraum gesetzt, temporäre Ziele gestoppt und Kohlenhydrate eingegeben werden können.
+* There is a Care tab which appears to enable you to set a new temp target for a certain duration, delete the temp target or enter carbs.
 
 Nachteile (von Nutzenden gemeldet)
 
-● Nur für iOS verfügbar
+* Only available for iOS
 
-●   Das temporäre Ziel wird immer als 5 mmol angezeigt, unabhängig davon welche Höhe eingestellt wurde
+* The TT shows as 5 mmol regardless of which TT level is set
 
-●   Die konkrete temporäre Basalrate wird nicht angezeigt, auch wenn ein laufendes temporäres Basal angezeigt wird
+* Never shows Temp Basal rate even though it shows TB
 
-### C) Nightwatch (Android)
+### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
 ![grafik](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
 
 
-●   Nightwatch bezeichnet sich selbst als ein Nightscout-Client und es überwacht die Nightscout-Glukosewerte des Nutzenden auf einem Android Smartphone oder Tablet.
+* Nightwatch markets itself as a Nightscout client and monitors the user’s Nightscout glucose levels on either Android phone or tablet.
 
-●   Die App kann aus [Google Play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) heruntergeladen werden und zeigt die Glukosewerte in Echtzeit an.
+* The app can be downloaded from [Google play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) and displays BG data in real time.
 
-●   Die Nutzenden können über anpassbare akustische Hoch- bzw- Tief Alarme alarmiert werden.
+* The user can be alerted with customised noisy low and high alarms set.
 
-●   Glukosewerte können sowohl in mmol/L als auch in mg/dl angezeigt werden.
+* BG data can be viewed in either mmol/L or mg/dL.
 
-●   Android 5.0 oder höher sind vorausgesetzt.
+* It requires Android 5.0 and up.
 
-●   Es hat eine dunkle Benutzeroberfläche, große Anzeigen und Schaltflächen für die Benutzung in der Nacht.
+* It has a dark Ul, large readings and buttons, designed for usage at night.
 
-### D) xDrip+ (Android)
+### [xDrip+](https://xdrip.readthedocs.io/en/latest/) (Android)
 
 Du kannst xDrip+ als Follower-App nutzen.
 
@@ -113,17 +102,17 @@ Konfiguriere in xDrip+ Nightscout Follower als Datenquelle. Du kannst damit Gluk
 
 #### Wenn Du Nightscout nicht nutzt (Datenquelle: xDrip+ Sync Follower) ...
 
-Wenn AAPS die Informationen und Daten über xDrip+ erhält - xDrip+ kann diese Daten wiederum auch über andere Apps (BYODA, Juggluco, ...) erhalten - kann das Master-Smartphone Glukosewerte, Behandlungen und Basalraten mit xDrip+ Followern teilen.
+If your **AAPS** data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
 
 ![grafik](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
 #### Wenn Du Nightscout nicht nutzt (Datenquelle: Companion App) ...
 
-Wenn Deine AAPS-Datenquelle nicht xDrip+ sein sollte, kannst Du die Glukosewerte auch aus der Companion-App als Datenquelle anzeigen lassen. Glukosewerte, Behandlungen und Basalraten können über das Master-Smartphone mit xDrip+-Followern geteilt werden.
+If your **AAPS** data source is not xDrip+ but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
 
 ![grafik](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
-### E) xDrip4iOS/Shuggah (iOS)
+### xDrip4iOS/Shuggah (iOS)
 
 ![grafik](../images/remote_control_and_following/xdrip4ios.jpg)
 
@@ -162,19 +151,22 @@ App:
 
 Die [xDrip4iOS Facebook-Gruppe](https://www.facebook.com/groups/853994615056838/announcements) unterstützt xDrip4iOS, Shuggah und die zugehörige Apple Watch App.
 
-### F) Sugarmate (iOS)
+### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
 ![grafik](../images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
 
 ![grafik](../images/21b83c41-85c6-4619-a702-a65450768855.png)
 
 
-[Sugarmate](https://sugarmate.io/) kann auf iPhones aus dem App Store heruntergeladen werden. Sugarmate ist kompatibel mit: ● Apple iPhone (Version 13.0 oder neuer) ● Apple iPad (Version 13.0 oder neuer) ● Google Android (Speichere die Web-App auf Deinem Startbildschirm)
+[Sugarmate](https://sugarmate.io/) kann auf iPhones aus dem App Store heruntergeladen werden. Sugarmate is compatible with:
+* Apple iPhone (Requires software version 13.0 or later)
+* Apple iPad (Requires software version 13.0 or later)
+* Google Android (Save web app to your homescreen)
 
 Es wurde von Sugarmate-Nutzenden berichtet, dass es in den USA mit Apple CarPlay genutzt werden kann, um Glukosewerte während des Fahrens anzuzeigen. Ob das in Ländern außerhalb der USA auch möglich ist, ist noch nicht geklärt. Wenn Du mehr dazu wissen solltest, ergänze Deine Informationen hier in der Dokumentation, indem Du einen Pull-Request (link), der schnell gemacht ist, machst.
 
 
-### G)  [Spike](https://spike-app.com/) (iOS)
+### [Spike](https://spike-app.com/) (iOS)
 
 ![grafik](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
@@ -182,7 +174,7 @@ Spike kann sowohl aus Hauptempfänger (Receiver) als auch als Follower-App verwe
 
 Um Spike zu installieren, schlage [hier](https://spike-app.com/#installation) nach
 
-## 2) Smartwatches zur **AAPS Überwachung** (vollständige Profilinformationen oder nur Glukosewerte), wobei **AAPS** auf einem Smartphone läuft.
+## Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
 
 Smartwatch options which also allow interaction with **AAPS** are described in the ["remote control"](../RemoteFeatures/RemoteControl.md) section of the documentation.
 
@@ -197,7 +189,7 @@ Hier fassen wir einige der bei **AAPS**-Nutzenden populären Follower-Optionen z
 ![grafik](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
 
-Mehr dazu kannst Du auf seiner Website [nachlesen](https://bigdigital.home.blog/). Der große Vorteil dieser Smartwatches sind neben der Größe auch deren günstiger Preis (das Xiaomi Mi Band 5 hat einen Verkaufspreis von €44,99 EUR). Sie sind insbesondere für Kinder und Menschen mit dünnen Handgelenken interessant.
+You can read more about them, including how to set up at his website [here](https://bigdigital.home.blog/). Der große Vorteil dieser Smartwatches sind neben der Größe auch deren günstiger Preis (das Xiaomi Mi Band 5 hat einen Verkaufspreis von €44,99 EUR). Sie sind insbesondere für Kinder und Menschen mit dünnen Handgelenken interessant.
 
 ### b) Pebble Watch
 
@@ -206,7 +198,7 @@ Mehr dazu kannst Du auf seiner Website [nachlesen](https://bigdigital.home.blog/
 ![grafik](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Pebble Smartwatches ([Produktion mittlerweile eingestellt](https://en.wikipedia.org/wiki/Pebble_(watch))) wurden von 2013 bis 2016 verkauft, und sind zum Teil gebraucht noch erhältlich. Fitbit übernahm das Pebble-Vermögen. Pebble-Nutzende können die Urchin Uhr verwenden, um Nightscout-Daten anzuzeigen. Informationen, die angezeigt werden: Aktives Insulin, die aktive temporäre Basalrate und Glukosewert-Vorhersagen. Wenn Du im "Open Loop" unterwegs bist, kannst Du mit IFTTT ein Applet erstellen, das Dir eine SMS oder eine Echtzeit-Benachrichtigung (pushover notification) schickt, wenn eine **AAPS**-Benachrichtigung eingegangen ist.
+Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Fitbit übernahm das Pebble-Vermögen. Pebble-Nutzende können die Urchin Uhr verwenden, um Nightscout-Daten anzuzeigen. Informationen, die angezeigt werden: Aktives Insulin, die aktive temporäre Basalrate und Glukosewert-Vorhersagen. Wenn Du im "Open Loop" unterwegs bist, kannst Du mit IFTTT ein Applet erstellen, das Dir eine SMS oder eine Echtzeit-Benachrichtigung (pushover notification) schickt, wenn eine **AAPS**-Benachrichtigung eingegangen ist.
 
 ### c) [BlueJay GTS Smartwatch](https://bluejay.website/shop/product/bluejay-gts-26)
 
@@ -214,11 +206,11 @@ Pebble Smartwatches ([Produktion mittlerweile eingestellt](https://en.wikipedia.
 ![grafik](../images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
 
 
-Dies ist ein besondere Technologie, die Glukosedaten **direkt** vom Dexcom G6-Transmitter empfangen kann. Es ist nicht so bekannt, dass ein Dexcom G6-Transmitter tatsächlich die aktuellen Glukosedaten auf _zwei_ getrennte Kanäle überträgt, einem Smartphone-Kanal und einem Pumpen-Kanal. Die BlueJay GTS Uhr nutzt eine angepasste xDrip+-Software und kann so eingerichtet werden, dass die Glukosewerte auf jedem Kanal empfangen werden können, falls **AAPS ** den Smartphone-Kanal belegt, kann die BlueJay GTS den Pumpen-Kanal nutzen.
+Dies ist ein besondere Technologie, die Glukosedaten **direkt** vom Dexcom G6-Transmitter empfangen kann. Es ist nicht so bekannt, dass ein Dexcom G6-Transmitter tatsächlich die aktuellen Glukosedaten auf _zwei_ getrennte Kanäle überträgt, einem Smartphone-Kanal und einem Pumpen-Kanal. The Bluejay GTS watch runs a modified version of xDrip+ software, and can be set to receive glucose data on either channel, so if **AAPS **  is using the phone channel, then the Bluejay GTS watch can use the pump channel.
 
-Die Bluejay GTS Smartwatch ist klein, wasserdicht und preiswert (derzeit €126 EUR) und kann in Großbritannien bestellt werden. Sie ist derzeitig die einzige Smartwatch, die ohne Smartphone und Loop-System in der Nähe genutzt werden kann. Beispiel: Wenn Du die Insulinpumpe und das **AAPS** -Smartphone am Strand oder im Wasserpark trennst, und Du entfernst Dich vom AAPS-Smartphone, kannst Du trotzdem die G6-Glukosewerte auf der BlueJay Smartwatch direkt empfangen.
+Die Bluejay GTS Smartwatch ist klein, wasserdicht und preiswert (derzeit €126 EUR) und kann in Großbritannien bestellt werden. Sie ist derzeitig die einzige Smartwatch, die ohne Smartphone und Loop-System in der Nähe genutzt werden kann. So, for example, if you disconnect the pump and the **AAPS** phone at the beach or flume park, and are out of range of the **AAPS** phone, you can still get readings from the Dexcom G6 directly to the Bluejay watch.
 
-Bekannte Nachteile sind, dass sie nicht zuverlässig alle 5 Minuten neue Werte verarbeitet und dass der Akku nicht auszutauschen ist. Die BlueJay GTS Smartwatch nutzt eine angepasste xDrip+-Software und funktioniert derzeit nicht mit anderen Dexcom-Versionen (G7) oder den Libre Sensoren.
+Reported disadvantages are that it doesn’t always pick up a reading every 5 min, and the battery is not replaceable. The Bluejay GTS watch runs a modified version of xDrip+ software, and it currently doesn’t work with other Dexcom versions (G7) or Libre sensors.
 
 ### d) Apple Watch
 
@@ -227,27 +219,20 @@ Bekannte Nachteile sind, dass sie nicht zuverlässig alle 5 Minuten neue Werte v
 Zu den Optionen gehören Nightguard, Sugarmate, Gluco-Tracker, und Loop Follow.
 
 
-## 3) Geräte, um AAPS zu folgen
+## Devices for following AAPS
 
-Mögliche Geräte sind: A) M5 Stack/M5 StickC
+```{contents} Devices include:
+:depth: 1
+:local: true
+```
 
-B)  SugarPixel
-
-C)  PC (TeamViewer)
-
-
-
-### A) M5Stack
-
+### M5 stack
 
 ![grafik](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
+Der [M5Stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) ist eine kleine Box, die für verschiedene Anwendungen programmiert werden kann. Eine dieser Anwendungen ist die Anzeige von Glukosewerten, den entsprechenden Verläufen, den wirkenden Kohlenhydraten und des aktiven Insulins. Es ist in einem Plastikgehäuse untergebracht und hat neben einem Farb-Display auch einen Micro-SD-Karten-Steckplatz, 3 Tasten, einen Lautsprecher und einen internen Akku. It is a great blood sugar monitor and is relatively easy to set up if you have a Nightscout account. Users typically run it on their home Wi-Fi, but some users report using it as a display when motorbiking, by running it off a phone Wi-Fi hotspot.
 
-
-
-Der [M5Stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) ist eine kleine Box, die für verschiedene Anwendungen programmiert werden kann. Eine dieser Anwendungen ist die Anzeige von Glukosewerten, den entsprechenden Verläufen, den wirkenden Kohlenhydraten und des aktiven Insulins. Es ist in einem Plastikgehäuse untergebracht und hat neben einem Farb-Display auch einen Micro-SD-Karten-Steckplatz, 3 Tasten, einen Lautsprecher und einen internen Akku. Es ist ein großartiger Glukose-Monitor und ist, wenn Du eine Nightscout-Seite hast, recht einfach einzurichten. Normalerweise wird er im WLAN zu Hause genutzt, aber es gibt auch einige Menschen, die ihn unterwegs auf dem Motorrad mit dem Smartphone-Hotspot verwenden.
-
-### B) SugarPixel
+### Sugarpixel
 
 SugarPixel ist ein Gerät, dass als Zweitanzeige für Glukosewerte und Alarme genutzt wird. Es wird mit der Dexcom App oder der Nightscout App auf dem Smartphone verbunden und man kann dann damit die Glukosewerte permanent verfolgen. Das Gerät zeigt die Glukosewerte in Echtzeit an. Dieser CGM-Hardware-Monitor kann unglaublich laute Zufallstöne für Alarme, und auch Vibrationsalarme für Hörgeschädigte erzeugen, hat verschiedene Einstellmöglichkeiten für die Anzeige und ein natives "Multi-User-Following".
 
@@ -255,16 +240,12 @@ SugarPixel ist ein Gerät, dass als Zweitanzeige für Glukosewerte und Alarme ge
 
 ![grafik](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-●   SugarPixel hat verschiedene Anzeigemöglichkeiten in mg/dl und mmol/l und kann Glukosewerte - wenn benötigt - in verschiedenen Farben anzeigen. ●   In der Standardanzeige wird der Glukosewert, ein Trendpfeil und die Veränderung (Delta) angezeigt. Delta ist die Veränderung + oder - seit dem letzten Messwert. ● SugarPixel kann für dunkle Umgebungen gedimmt werden. Es eignet sich damit auch für die Anzeige der Glukosewert und die Uhrzeit auf dem Nachttisch. ●   Die SugarPixel "xolour"-Anzeige nutzt die gesamte Fläche, um mit einer einzigen Farbe den Glukosewert darzustellen. Damit kann man die Glukosewerte auch auf große Entfernungen durch das Fenster erkennen, während im Hof, qauf der Terrasse oder im Planschbecken oder Pool gespielt wird. ●   Die "Big BG"-Anzeige ist Brillen- und Kontaktlinsen-Tragenden zu empfehlen.
+* SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with colour-coded glucose values.
+* The standard face displays BG, Trend Arrow, and Delta. Delta ist die Veränderung + oder - seit dem letzten Messwert.
+* SugarPixel can be customised for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
+* SugarPixel’s xolour face utilises the entire display to show a single colour representing the BG value. Damit kann man die Glukosewerte auch auf große Entfernungen durch das Fenster erkennen, während im Hof, qauf der Terrasse oder im Planschbecken oder Pool gespielt wird.
+* The Big BG face is useful for nightstand users who wear glasses or contact lenses.
 
 
-### C) PC (TeamViewer)
+### PC (TeamViewer)
 Zur Remote-Fehlerbehebung hat sich für einige Konstellationen ein Fernüberwachungs-Tool wie z. B. [TeamViewer](https://www.teamviewer.com/) bewährt.
-
-
- 
-
-
-
-
-
