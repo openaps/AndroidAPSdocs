@@ -222,7 +222,9 @@ In both cases, **AAPS** will compensate for the missing part of the bolus with S
 
 ### Enabled bolus advisor
 
-% todo
+![Bolus Advisor](../images/BolusAdvisor.png)
+
+When enabled, when you use the bolus wizard as you are in hyperglycemia, you will get a warning, prompting you if you wish to pe-bolus and eat later, when your **BG** gets back in range.
 
 ### Enabled bolus reminder
 
