@@ -9,17 +9,10 @@ Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not 
 
 ```{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)
 :class: warning
-**Average Smoothing or Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
+**Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
 ```
 
-## 1. xDrip+ (direct connection to G7 or ONE+)
-
-- Следуйте инструкциям здесь: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Select  xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
-
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
-
-## 2.  Patched Dexcom G7 App (DiaKEM)
+## 1.  Patched Dexcom G7 App (DiaKEM)
 
 **Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
@@ -42,6 +35,13 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 - Select 'BYODA' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source) - even if it is not the BYODA app!
 
 - Если AAPS не получает данных ГК, переключитесь на другой источник ГК, а затем снова на 'BYODA'.
+
+## 2. xDrip+ (direct connection to G7 or ONE+)
+
+- Следуйте инструкциям здесь: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Select  xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+
+- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
 
 ## 3. xdrip+ (режим спутника)
 

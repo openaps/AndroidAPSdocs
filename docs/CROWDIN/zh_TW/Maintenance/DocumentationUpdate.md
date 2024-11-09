@@ -2,10 +2,11 @@
 
 ## 2024年10月
 
-- Update of several pages:
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../DailyLifeWithAaps/CobCalculation.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
-  - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+- [碳水計算](../DailyLifeWithAaps/CobCalculation.md) @UnderCliffe10
 - [Android Studio Ladybug的建立指導](../SettingUpAaps/BuildingAaps.md) @tanja
+- [需要多長時間](#preparing-how-long-will-it-take) @emilise
+- [動態ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+- [完成目標](../SettingUpAaps/CompletingTheObjectives.md) @emilise
 - 技術工作（文件的部署過程、檔案組織…） @psonnerat & @emilise
 
 ***
@@ -19,7 +20,7 @@
 - [血糖質量警告標誌](#aaps-screens-bg-warning-sign) @tanja
 - [美敦力藥量更新](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [更新到 AAPS 3.0 後的必要檢查](Update3_0.md) @tanja
-- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
+- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
 - 更新 AAPS 3.0 的文件（部分）@xJoe
 - [AAPS 3.0 的 Wear OS](../UsefulLinks/WearOsSmartwatch.md) @peterleimbach
 
@@ -36,7 +37,7 @@
 
 - 校正 [Libre 2 傳感器](#Libre2-best-practices-for-calibrating-a-libre-2-sensor) 的最佳方法
 - [ISF](../UsefulLinks/FAQ.md) 影響的重新表述
-- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio)
+- 更新 [問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
 - 移除已修補的[Dexcom](../CompatibleCgms/DexcomG6.md)應用程式，因為它已過時
 
 ## 2021年10月

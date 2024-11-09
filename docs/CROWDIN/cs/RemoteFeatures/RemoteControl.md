@@ -17,9 +17,272 @@ První tři jsou většinou vhodné pro pečovatele/rodiče, ale chytré hodinky
 5.  Příklady odlišných plánů léčby pro děti různého věku můžete nalézt v oddíle ["soubory"](https://www.facebook.com/groups/AndroidAPSUsers/files/) ve Facebookové skupině **AAPS**.
 6.  Jaký je váš nouzový plán pro případy, kdy vzdálená kontrola nefunguje (_např._ problémy se sítí nebo ztráta konektivity bluetooth)?  Vždy zvažujte, co se stane s **AAPS** ve chvíli, kdy nemůžete odeslat příkazy. **AAPS** přepíše v pumpě nastavení bazálů, ISF a ICR aktuálními hodnotami profilu. Vždy používejte pouze dočasné přepnutí profilu (tzn. s nastavenou dobou trvání) pokud přepínáte na silnější inzulínový profil, pro případ že by došlo k přeručení spojení. Tak se po vypršení nastaveného času vrátí nastavení pumpy k původnímu profilu.
 
+(RemoteControl-sms-commands)=
 ## 1) SMS příkazy
 
-See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+```{admonition} Documentation
+:class: note
+
+This section may contain outdated content. Please also see the page [SMS Commands](../RemoteFeatures/SMSCommands.md).
+
+```
+
+**AAPS** můžete vzdáleně ovládat pomocí textových zpráv (SMS) pomocí funkce známé jako **SMS příkazy**. SMS příkazy mohou být odesílány na **AAPS** z _jakéhokoli_ typu telefonu (iPhone/Android).
+
+**SMS příkazy jsou opravdu užitečné:**
+1. Pro běžné dálkové ovládání
+
+2. Ke vzdálenému podávání bolusového inzulínu
+
+3. V místech, kde máte špatné připojení k internetu, textové zprávy projdou, zatímco data/internetová konektivita jsou omezené. To je velmi užitečné při cestách do odlehlých oblastí (např. kempování, lyžování).
+
+4. Pokud došlo dočasnému výpadku vašich dalších způsobů vzdáleného ovládání (Nightscout/AAPSClient)
+
+### Zabezpečení SMS příkazů
+Když v **AAPS** povolíte **SMS komunikátor**, vezměte do úvahy, že telefon, který má povoleno posílat příkazy, může být ukraden nebo použit jinou osobou. Vždy zamykejte svůj telefon alespoň pomocí PINu. Rozhodně doporučujeme biometrický zámek a/nebo silné heslo a ujistěte se, že nejde o stejné heslo jako vaše APK Master heslo (heslo které používáte pro změnu nastavení **AAPS**). Povolte SMS příkazy pro druhé telefonní číslo i v případě, že vzdáleně pracuje pouze jeden pečovatel/sledující. Potom můžete druhé telefonní číslo použít k dočasnému vypnutí SMS komunikátoru (příkazem **"SMS stop"**) pokud dojde ke kompromitaci primárního telefonu. Versions of **AAPS** 2.7 and newer also use an [Authenticator app](#authentication-or-not)).
+
+### Různé typy SMS příkazů
+V následující **tabulce SMS příkazů** jsou všechny dostupné SMS příkazy. Jsou uvedené _Příklady hodnot_, které pomáhají problematice porozumnět. Příkazy mají stejný rozsah možných hodnot (cíle, procento profilu atd.) jako aplikace AAPS. Níže uvedené příkazy byly seřazené podle toho, jak pravděpodobně jsou používány. První dvě tabulky by měly obsahovat většinu SMS příkazů, které potřebujete s plnou smyčkou.
+
+### Tabulky SMS příkazů
+
+![SMS_command_table_1](../images/remote-control-02.png)
+
+![SMS_command_table_2](../images/remote-control-03.png)
+
+![SMS_command_table_3](../images/remote_control_and_following/SMS_command_table_3_Loop_03.png)
+
+![SMS_command_table_4](../images/remote-control-05.png)
+
+(authentication-or-not)=
+### Autentizace ano nebo ne?
+
+Ve výše uvedené tabulce si můžete všimnout, že na některé SMS příkazy je reakce okamžitá, jiné vyžadují </strong>ověření/autentizaci</0> pomocí bezpečnostního kódu z další aplikace a zadání PIN (viz níže uvedený odkaz). Jednoduchý dotaz jako **bg** (zaslání aktuální hodnoty glikémie) je rychlý na napsání, nevyžaduje ověření, a vrátí **AAPS** tuto stavovou informaci:
+
+![image](../images/remote-control-06.png)
+
+Přikazy, které vyžadují vyšší bezpečnost, vyžadují zadání bezpečnostního kódu, např.:
+
+![SMS authenticated for markdown-smaller](../images/remote-control-07.png)
+
+### Jak nastavit SMS příkazy
+
+Celkově proces probíhá takto:
+
+**1) Stáhněte si authentikátor (telefon pečovatele)**
+
+**2) Zkontrolujte nastavení telefonu (telefon AAPS)**
+
+**3) Synchronizace data a času (pečovatelův a AAPS telefon)**
+
+**4) Nastavení AAPS (telefon APPS)**
+
+**5) Otestování SMS příkazů (pečovatelům a AAPS telefon)**
+
+### Pojďme na to!
+
+1) **Stáhněte si autentizátor**: Na telefonu pečovatele stáhněte (z App Store nebo Google play) a nainstalujte některý z tohoto seznamu autentizačních aplikací:
+
+[**Authy**](https://authy.com/download/)
+
+[**Google Authenticator - Android / iOS**](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&pli=1)
+
+[**LastPass Authenticator**](https://www.lastpass.com/solutions/authentication)
+
+[**FreeOTP Authenticator**](https://freeotp.github.io/)
+
+Tyto autentizační aplikace vytvářejí časově omezené, šestimístné heslo, podobně jako aplikace pro mobilní bankovnictví nebo nakupování. Můžete použít libovolnou autentizační aplikaci, která podporuje tokeny RFC 6238 TOTP. Microsoft Authenticator se s AAPS nefunguje.
+
+2) **Zkontrolujte nastavení telefonu:** V nastavení **AAPS** telefonu jděte do Aplikace > AndroidAPS > Oprávnění > SMS > Povolit SMS
+
+![image](../images/remote-control-08.png)
+
+3) **Synchronizace data a času:** V telefonu **AAPS** a telefonu pečovatele zkontrolujte, zda jsou datum a čas synchronizovány. Jak přesně toto nastavíte zavisí na zařízení, které používáte. Možná budete muset vyzkoušet různá nastavení.
+
+Příklad (pro Samsung S23): Nastavení – obecná správa – datum a čas – automatické nastavení data a času
+
+Některé možnosti mohou být neaktivní z důvodu potřeby oprávnění správce přes rodinný účet, pokud byl telefon nastaven jako dětský. Toto nastavení data a času je na telefonu pečovatele/rodiče nazváno „nastavit automaticky“. Pokud si nejste jistí, žemáte zařízení synchronizovaná, nedělejte si starosti. Můžete nastavit SMS příkazy a následně vyřešit problémy (pokud je to nutné, požádejte o pomoc).
+
+4) **Nastavení AAPS:**
+
+i) Nyní, když je nastavení telefonů zkontrolované, v **AAPS** aplikaci použijte hamburger menu na levé straně a otevřete Konfiguraci:
+
+![image](../images/remote-control-09.png)
+
+ii) Povolte "SMS komunikátor" zaškrtnutím políčka, pak klikněte na "ozubené kolečko" a tím otevřete obrazovku nastavení SMS komunikátoru:
+
+![image](../images/remote-control-10.png)
+
+_Poznámka: Jako alternativu ke Konfiguraci můžete také použít novou kartu „SMS komunikátor“ v horní části obrazovky AAPS, poté klikněte na ahmburger menu v pravé části a tak otevřete obrazovku nastavení SMS komunikátoru._
+
+iii) Na obrazovce nastavení povolte "Povolit vzdálené příkazy přes SMS":
+
+![image](../images/remote-control-11.png)
+
+iv) Zadejte telefonní číslo(a) pečovatele. Zadejte kód země a vynechte první "0" u telefonního čísla, jak je uvedeno v těchto příkladech:
+
+Telefon Spojeného království: +447976304596
+
+Telefon USA: +11234567890
+
+Telefon Francie: +33612344567
+
+_atp._
+
+Dejte pozor na to, že „+“ před číslem může nebo nemusí být požadováno na základě vaší polohy. Abyste to zjistili, pošlete vzorový text, který se zobrazí v přijatém formátu na kartě SMS komunikátoru.
+
+Chcete-li přidat více než jedno telefonní číslo, oddělte je středníky BEZ MEZER mezi čísly (to je kriticky důležité!). Stiskněte „OK“:
+
+
+![image](../images/remote-control-12.png)
+
+v) Vyberte PIN kód, který vy (a všichni ostatní pečovatelé) budete používat na konci ověřovacího kódu při odeslání SMS příkazu.
+
+Požadavky na PIN jsou:
+
+•3 až 6 číslic
+
+• různé číslice (_, tj._ 1111 nebo 1224)
+
+• bez následujících čísel (_, tj._ 1234)
+
+![image](../images/remote-control-13.png)
+
+vi) Na obrazovce nastavení vyberte "Nastavení autentizátoru"
+
+● Postupujte krok za krokem podle instrukcí na obrazovce.
+
+● Otevřete nainstalovanou ověřovací aplikaci na _pečovatelském telefonu_ a nechte přidat nové připojení.
+
+● Použijte telefon pečovatele k naskenování QR kódu poskytnutého **AAPS**, když budete vyzváni.
+
+● Otestujte jednorázové heslo z autentizační aplikace na telefonu pečovatele, po němž následuje váš PIN.
+
+Příklad:
+
+Jednorázové heslo z autentizační aplikace je 457051
+
+Váš povinný PIN je 2401
+
+Ověřovací kód: 4570512401
+
+Pokud je zadán správný kód, červený text „WRONG PIN“ se automaticky změní na zelený „OK“. Proces je nyní dokončen, po zadání kódu nemáte žádné potvrzovací tlačítko „OK“:
+
+
+![image](../images/remote-control-14.png)
+
+Nyní byste měli mít nastaveny SMS příkazy.
+
+### První kroky při užívání SMS příkazů
+
+1) Chcete-li zkontrolovat, že jste všechno nastavili správně, otestujte spojení zasláním „bg“ jako SMS zprávy z telefonu pečovatele do AAPS telefonu. Odpověď by se měla podobat té, která je zde zobrazena:
+
+![image](../images/remote-control-15.png)
+
+2) Nyní vyzkoušejte SMS příkaz, který vyžaduje autentifikátor. Chcete-li to udělat, pošlete z telefonu pečovatele text s požadovaným příkazem na **AAPS** telefon (_např._ ‚target hypo‘). Telefon pečovatele obdrží text zpět, vyzve vás k zadání **šestimístného ověřovacího hesla** z autentizační aplikace, následované dalším tajným kódem **PIN** známým pouze pečovateli/sledujícímu (celkem deset číslic, za předpokladu, že váš PIN je pouze 4 místný).
+
+Viz příklad níže, SMS příkaz „target hypo“ nastaví dočasný cíl:
+
+● V tomto příkladu je váš PIN 1289
+
+Jednorázové heslo z autentizační aplikace je 274127
+
+● Po výzvě odešlete 2741271289
+
+Příkazy musí být zadány v angličtině. Odpověď by měla přijít ve vašem místním jazyce. Když budete zkoušet odeslat SMS příkaz poprvé, testujte to, když máte po ruce AAPS telefon, abyste viděli, jak všechno funguje:
+
+![image](../images/remote-control-16.png)
+
+Na telefon pečovatele přijde SMS odpověď od **AAPS** jako potvrzení, že byl vzdálený SMS příkaz úspěšně proveden. Existuje několik možných důvodů, pokud příkaz nebyl úspěšný:
+
+● Nastavení SMS příkazů není úplné/správné
+
+●   Odeslali jste příkaz v nesprávném formátu (jako “disconnect pump 45” místo “pump disconnect 45”)
+
+● Použili jste nesprávný nebo prošlý ověřovací kód (je obvykle dobré počkat několik sekund na nový kód, pokud má platnost aktuálního kódu zrovna vypršet)
+
+● Kód + PIN byl v pořádku, ale došlo ke zpoždění v doručení SMS, podle čehož AAPS vypočetl, že ověřovací kód vypršel
+
+● Telefon AAPS je mimo dosah/kontakt s pumpou
+
+● Systém je již zaneprázdněn podáváním  bolusu
+
+Pokud je váš příkaz úspěšný, obdržíte odpověď s potvrzením. Pokud se vyskytne problém, obdržíte chybovou zprávu.
+
+Obecné chyby jsou uvedeny v následujících příkladech:
+
+![image](../images/remote-control-17.png)
+
+### Dodatečné bezpečnostní poznámky k SMS příkazům
+
+Výchozí minimální prodleva mezi bolusovými příkazy je 15 minut. Z bezpečnostních důvodů musíte přidat alespoň dvě autorizovaná telefonní čísla ke zkrácení tohoto limitu. Pokud se pokusíte znovu o vzdálený bolus do 15 minut od předchozího bolusu, obdržíte odpověď: „Vzdálený bolus není k dispozici. Zkuste to později.”.
+
+Pokud chcete telefonu pečovatele odebrat právo posílat SMS příkazy, použijte v AAPS nouzové tlačítko „RESET AUTHENTICATORS“ (viz snímek obrazovky nastavení výše, odkaz) nebo poslat SMS příkaz „SMS stop“. Resetováním autentizačních aplikací zneplatníte VŠECHNY telefony pečovatelů. Budete je muset nastavit znovu.
+
+### Posílání bolusů k jídlu prostřednictvím SMS příkazů
+
+Vzdálené posílání bolusů inzulínu může být provedeno _pouze_ prostřednictvím **SMS příkazů**, nelze to provést pomocí Nightscout nebo AAPSClienta. Naopak sacharidy mohou být zadány kteroukoli z těchto 4 metod. Ale není možné odesílat sacharidy i inzulínové příkazy v jedné SMS zprávě. Tyto příkazy musí být zaslány odděleně:
+
+1) Poslání bolusu (_např._"bolus 2" přikáže podat bolus 2 jednotek inzulínu) pomocí SMS příkazů je ekvivalenem použití ikony "injekční stříkačky" v **AAPS**. 2) Odeslání sacharidů (_např._ “carbs 20” oznámí 20 g sacharidů). To je ekvivalentem použití ikony "sacharidy" v **AAPS**.
+
+Abyste se vyhnuli hypoglykémii, je lepší začít opatrně podáváním **menšího množství inzulínu** než je podle vašeho inzulíno sacharidového poměru potřeba, protože nezohledňujete současnou hladinu glukézy nebo trend.
+
+**Pořadí, ve kterém odesíláte tyto příkazy, je důležité**. Pokud oznamujete velké množství sacharidů libovolnou cestou a máte povoleno SMB, **AAPS** může okamžitě reagovat podáním částečného bolusu inzulínu. Takže pokud se pak pokusíte odeslat bolus _po_ oznámení sacharidů, můžete dostat frustrující zprávu o povinné prodlevě mezi bolusy a pak musíte zkontrolovat, co bylo podáno jako SMB. Případně pokud si neuvědomíte, že jsou SMB doručovány a vámi poslaný následný bolus je úspěšný, na jídlo může být dodáno celkově příliš mnoho inzulínu. Z tohoto důvodu, pokud potřebujete posílat bolusy vzdáleně, je nutné vždy odeslat bolus _před_ oznámením sacharidů. Pokud vám to vyhovuje, můžete využívat kombinaci Nightscoutu nebo AAPSClienta s SMS příkazy. Sacharidy mohou být bez jakékoli autentizace oznámeny prostřednictvím Nighscoutu (viz instrukce níže v pododdíle) a tedy rychleji než prostřednictvím SMS příkazů.
+
+### Řešení problémů s SMS příkazy a FAQ
+
+#### Q: Co _nemůžeme_ dělat s SMS příkazy?
+
+1)  **Nemůžeme _dočasně_ přepnout profil** (například nastavit „profil na cvičení“ po dobu 60 minut), ale můžete natrvalo přepnout na „profil na cvičení“. Dočasná změna profilu může být provedena prostřednictvím Nightscoutu nebo AAPSClienta.
+
+2)  **Nemůžete zrušit automatizaci** nebo **nastavit uživatelem definované cíle**, ale existují jiná řešení: Například: Představte si, že normální cíl profilu je 5.5. V AAPS máte nastavenou automatizaci, která vždy mezi 2:30 a 3:30 odpoledne nastaví z důvodu tělocviku ve škole vyšší cíl na 7.0 mmol/L a podmínkou spuštění tohoto pravidla je, že "neexistuje dočasný cíl". Tento týden vám bylo na poslední chvíli oznámano, že tělocvik byl zrušen a místo něj se jde na pizzu. Vaše dítě už je ale ve škole s AAPS telefonem. Pokud automatizace spustí cíl 7.0 a vy ho zrušíte (na AAPS telefonu nebo vzdáleně), podmínky pro automatizační pravidlo jsou pořád platné a **AAPS** jednoduše nastaví vysoký cíl za minutu znovu.
+
+**Pokud máte přístup k AAPS telefonu**, můžete automatizaci vypnout nebo upravit, nebo, pokud nechcete automatizaci měnit, můžete jednoduše nastavit dočasný cíl na 5.6 na 60 min na záložce Akce nebo stisknutím tlačítka Cíl. To zabrání automatizaci v novém spuštění vysokého cíle 7.0.
+
+**Pokud nemáte přístup k AAPS telefonu**, SMS příkaz můžu být využit pro náhradní řešení: například odesláním příkazu "target meal" nastavíte cíl 5.0 na 45 minut (ostatní výchozí cíle jsou nastavené na 8.0, protože se používají na aktivitu nebo hypoglykémii). Nicméně SMS příkazem nemůžete zadat _konkrétní_ cílovou hodnotu (5.6 na 60 minut, například). Na to byste potřebovali **AAPSClient** nebo Nightscout.
+
+#### Q: Co se stane, když změním názor na příkaz, který jsem právě odeslal?
+
+**AAPS** doručí pouze poslení příkaz. Takže pokud napíšete "bolus 1,5" a potom, bez autentizace pošlete nový příkaz "bolus 1", Aaps bude ignorovat předchozí 1,5. **AAPS** vždy odešle telefonu pečovatele potvrzení, jaký SMS příkaz přišel, než vás vyzve k zadání ověřovacího kódu, stejně jako potvrzení po akci.
+
+#### Q: Proč jsem nedostal odpověď na SMS příkaz?
+
+Může jít o jeden z těchto důvodů:
+
+1) Zpráva se nedostala do telefonu (problémy se sítí). 2)  **AAPS** stále zpracovává požadavek (_např._ bolus, který může nějakou dobu trvat, v závislosti na rychlosti bolusu). 3) AAPS telefon nemá dobré bluetooth spojení s pumpou, když je příkaz přijal, a příkaz tedy selhal (tato situace obvykle nastaví alarm na AAPS telefonu).
+
+#### Q: Jak mohu zastavit příkaz, který už byl ověřený?
+
+Nemůžete. Nicméně můžete zrušit bolus odeslaný pomocí SMS na samotném **AAPS** telefonu, jednoduše jeho zrušením v popup okně pro podávání, pokud jste dostatečně rychlí. Mnoho příkazů (vyjma poslání bolusu a zadání sacharidů) může být snadno vráceno nebo mohou být provedeny kroky ke zmínění dopadů případné chyby.
+
+V případě chybně poslaného bolusu nebo oznámení sacharidů můžete stále podniknout opatření. Na příklad, pokud jste oznámili 20g sacharidů ale dítě snědlo pouze 10g a vy (nebo pečovatel na místě) nemůžete smazat ošetření přímo v **AAPS** telefonu, můžete nastavit vysoký dočasný cíl nebo nastavit slabší profil a tím zajistit, že se **AAPS** bude chovat méně agresivně.
+
+#### Q: Proč dostávám více SMS se stejnou zprávou?
+
+Pokud obdržíte opakovaně stejnou zprávu (_např._ o přepnutí profilu), mohlo se stát, že jste omylem vytvořili smyčku s ostatními aplikacemi. Například xDrip+. Pokud je to tak, ujistěte se prosím, že xDrip+ (nebo jakákoliv jiná aplikace) nenahrává ošetření přímo do NightScout.
+
+#### Q: Právě jsem nastavil SMS příkazy a nyní dostávám příliš mnoho textových zpráv. Mohu snížit jejich frekvenci nebo je zastavit?
+
+Použití SMS příkazů může generovat spoustu automatizovaných zpráv z AAPS telefonu do telefonu pečovatele. Budete také dostávat zprávy, na příklad "bazální profil aktualizován", pokud na to máte nastavenou v **AAPS** automatizaci. Může být užitečné mít nastavený neomezený počet odeslaných SMS na účtu vašeho AAPS telefonu (a na všech telefonech pečovatelů) pokud bude přicházet velké množství zpráv, případně deaktivovat oznámení o došlé SMS, alarmy a vibrace na telefonech. Není možné mít zapnuté SMS příkazy a zároveň nedostávat tyto stavové zprávy. Z toho důvodu můžete chtít nastavit alternativní způsob komunikace přímo s vaším dítětem (pokud je dostatečně staré), mimo SMS. Běžně používané aplikace pro komunikaci pečovatelů zahrnují Whatsapp, Lime a Facebook messenger.
+
+#### Q: Proč SMS příkazy nefungují na telefonech Samsung?
+
+Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím možnosti "odesílat zprávy jako konverzace".
+
+
+![image](../images/remote-control-18.png)
+
+#### Q: Jak mohu vyřešit problémy s aplikací Android Messages?
+
+Pokud máte problémy s posíláním nebo přijímáním SMS příkazů v aplikaci Android Message, zakažte end-to-end šifrování jak na telefonu péčovatele, tak na AAPS telefonu:
+
+● Otevřete patřičnou SMS konverzaci ve zprávách
+
+● Vyberte možnosti (elipsu) v pravém horním rohu
+
+● vyberte "Podrobnosti"
+
+● Aktivujte "Posílat pouze SMS a MMS zprávy"
 
 (aapsclient)=
 ## 2) AAPSClient
@@ -432,11 +695,11 @@ Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the 
 
 Posledním krokem je konfigurace **AAPS** na telefonu, který bude komunikovat s "**AAPS** Wear“ na hodinkách. Proveďte to povolením Wear pluginu v konfiguraci:
 
-* Go to the **AAPS** app on the phone
+● Přejděte do aplikace **AAPS** na telefonu
 
-* Select > Config Builder in the left-hand Hamburger tab
+● Vyberte > v levém hamburger menu záložku Konfigurace
 
-* Tick for Wear selection under General
+● Zaškrtněte Wear pod Obecné
 
 ![image](../images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466.png)
 
@@ -464,27 +727,27 @@ Once you have setup **AAPS** on your watch, extensive details about the smartwat
 
 Na hodinkách je možné spustit následující funkce:
 
-* set a temporary target
+●   nastavit dočasný cíl
 
-* use the bolus calculator (calculation variables can be defined in settings on the phone)
+●   použít bolusovou kalkulačku (nastavení kalkulátoru můžete upravit v nastaveni v telefonu)
 
-* administer eCarbs
+●   zadávat eSacharidy
 
-* administer a bolus (insulin + carbs)
+●   podávat bolus (inzulín + sacharidy)
 
-* watch settings
+●   měnit nastavení hodinek
 
-* status
+●   stav
 
-* check pump status
+●   zkontrolovat stav pumpy
 
-* check loop status
+●   kontrolovat stav smyčky
 
-* check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+●   kontrolovat a měnit profil, CPP (Circadian Percentage Profile = posun času + procentní změna)
 
-* show TDD (Total daily dose = bolus + basal per day)
+●   zobrazit TDD (celková denní dávka = bolus + bazál za den)
 
-* Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to a Wifi network)
+●   Vzdálené podání dávky, kdy pečovatel a dítě s T1D jsou na různých místech (což je možné pro hodinky **AAPS** a telefon **AAPS**, pokud jsou obě zařízení připojená k Wifi síti)
 
 #### Komunikace mezi pečovateli a hodinkami pomocí jiných aplikací (jako Whatsapp)
 

@@ -116,9 +116,3 @@ mg/dl/UI | UI降低
 ![設定切換時間調整指引](../images/ProfileSwitch_PlusMinus2.png)
 
 透過紀錄**設定**快照的機制，能夠更精準地計算過去的資料，並追蹤**設定**變更的可能性。
-
-## Keep a profile switch for later use
-
-Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
-
-To do this, go to the tab [Treatments > Profile Switch](#aaps-screens-clone-profile-switch).

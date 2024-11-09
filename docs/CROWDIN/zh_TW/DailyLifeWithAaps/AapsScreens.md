@@ -5,8 +5,6 @@
 :depth: 2
 ```
 
-(AapsScreens-the-homescreen)=
-
 ## 主畫面
 
 ![主畫面 V2.7](../images/Home2020_Homescreen.png)
@@ -320,8 +318,6 @@ Libre 使用者的特殊注意事項：
 
 敏感度是運動、荷爾蒙等導致的對胰島素的敏感度計算結果。
 
-請注意，您需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。 Before reaching that objective, the line in your graph is displayed for information only.
-
 #### 心率(Heart rate)
 
 使用 [Garmin 智慧手錶](#Watchfaces-garmin) 時，該資料可能可用。
@@ -538,9 +534,9 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ![胰島素設定檔](../images/Screenshot_insulin_profile.png)
 
-這顯示您在[組態設置工具](#Config-Builder-insulin)中選擇的胰島素的活動曲線。 The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
+這顯示您在[組態設置工具](#Config-Builder-insulin)中選擇的胰島素的活動曲線。
 
-**紫色** 線顯示在注射後胰島素量隨時間衰減的情況，**藍色**線顯示其活性狀態。 需要注意的重要點是衰減具有**長尾巴**。 如果您習慣手動注射，可能已經習慣認為胰島素的衰減大約需要 3.5 小時。 然而，在使用循環系統時，這個長尾變得重要，因為 **AAPS** 演算法的計算非常精確，這些微小的剩餘量在遞迴計算下會逐漸累積。 Therefore, **AAPS** uses minimum 5h as DIA.
+**紫色** 線顯示在注射後胰島素量隨時間衰減的情況，**藍色**線顯示其活性狀態。 需要注意的重要點是衰減具有**長尾巴**。 如果您習慣手動注射，可能已經習慣認為胰島素的衰減大約需要 3.5 小時。 然而，在使用循環系統時，這個長尾變得重要，因為 **AAPS** 演算法的計算非常精確，這些微小的剩餘量在遞迴計算下會逐漸累積。
 
 有關不同類型的胰島素、他們的活性設定檔以及為什麼這些很重要的更多詳細討論，你可以閱讀這篇文章[暸解基於指數活性曲線的新 IOB 曲線](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
@@ -563,21 +559,19 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 有關更多詳細資訊，請參見[組態設置工具頁面的APS部分](#Config-Builder-aps)。
 
-(aaps-screens-profile)=
-
 ## 設定檔
 
 ![設定檔](../images/Screenshots_Profile.png)
 
-Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+設定檔包含有關你個人糖尿病設定的資訊：
 
-The buttons on this page allow you to manage your profiles :
+* DIA（胰島素作用持續時間）
+* IC 或 I:C：胰島素與碳水化合物的比率
+* ISF：胰島素敏感性因數
+* 基礎率
+* 目標：你希望**AAPS**追蹤的血糖數值
 
-* **Green plus**: create new profile from scratch
-* **Red X**: delete the profile currently on screen
-* **Blue arrow**: duplicate the profile currently on screen
-
-When you want to make any changes to a profile, make sure you are editing the correct profile. When you reach the profile tab, it may not show the current profile in use, but the first one in the list.
+請參閱詳細的 **[設定檔](../SettingUpAaps/YourAapsProfile.md)** 頁面以獲取更多資訊。
 
 ## 自動化
 
@@ -600,8 +594,6 @@ When you want to make any changes to a profile, make sure you are editing the co
 根據您的血糖資料來源設定，此標籤的名稱會有所不同。
 
 顯示 CGM 讀取的歷史紀錄並提供選項刪除失敗或重複讀取情況下的值。
-
-(aaps-screens-treatments)=
 
 ## 治療
 
@@ -675,14 +667,6 @@ When you want to make any changes to a profile, make sure you are editing the co
 設定檔切換的歷史可以在這裡查看。 每次切換設定檔時，您可能會看到多條項目：第**1**行，存儲在 Nightscout 中但不在幫浦歷史中，對應於用戶進行的設定檔切換請求。 第**2**行，存儲在 NS 和 PH 中，對應於實際切換。
 
 刪除輸入僅影響您在 Nightscout 的報告，永遠不會實際更改當前的設定檔。
-
-(aaps-screens-clone-profile-switch)=
-
-#### 複製設定檔切換
-
-你可以輕鬆從設定檔切換中建立新的本地設定檔。 In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
-
-You can now go to the [Profile tab](#profile) to edit the newly created Profile.
 
 ### 照護入口
 

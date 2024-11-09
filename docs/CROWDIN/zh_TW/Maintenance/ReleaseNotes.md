@@ -28,15 +28,10 @@
 
 為了允許使用舊版 Android 的用戶繼續使用舊版 AAPS，我們發佈了一些僅更改版本驗證的版本。 這些版本不包含其他改進。
 
-### Android 11 及以上
+### Android 9 及以上
 
 - 使用最新的 AAPS 版本
 - 從 <https://github.com/nightscout/AndroidAPS> 下載 AAPS 程式碼
-
-### Android 9,10
-
-- 使用 AAPS 版本 **3.2.0.4**
-- 從 <https://github.com/nightscout/AndroidAPS> 下載 3.2.0.4 分支程式碼
 
 ### Android 8
 
@@ -50,49 +45,7 @@
 
 ## WearOS 版本
 
-- AAPS 需要至少 WearOS API 等級 28（Android 9）
-
-(版本3300)=
-## 版本 3.3.0.0
-
-發佈日期：XX-XX-202X
-
-### 重要提示
-
-- 在更新前將舊的 ruffy 進行移轉到新的原生 Combo 驅動程式
-- 個人設置切換百分比現在將計入動態敏感度強度中
-
-### 變更
-
-- Equil 幫浦驅動程式 @EquilHack
-- Insight 驅動程式重新編寫為 kotlin @Philoul
-- Ottai CGM 來源 @ottai-developer
-- 移除舊的 ruffy 依賴的 Combo 驅動程式
-- 新的內部模組結構 @MilosKozak
-- 將持久性層與主程式碼分離 @MilosKozak
-- 新的 QuickWizard 選項 @radicalb
-- 建置檔案重新編寫為 kts @MilosKozak
-- 算法重新編寫為 kotlin 以改善效能 @MilosKozak
-- 大量新的單元測試 @MilosKozak 和其他人
-- 更多的程式碼轉換為 kotlin @MilosKozak
-- 簡易模式 @MilosKozak
-- 新的偏好設定管理，xml -> kotlin @MilosKozak
-- 新的 CI 配置，在自己的伺服器上運行 CI @MilosKozak
-- 穿戴裝置和錶盤的改善 @Philoul @MilosKozak @olorinmaia
-- 測試模式下的隨機碳水化合物 @MilosKozak
-- 函式庫更新至最新版本，toml @MilosKozak
-- 在 AAPS 客戶端中顯示可變敏感度
-- 修正 TDD 計算中的錯誤 @MilosKozak
-- BolusWizard 使用者介面改善 @kenzo44
-- 更新目標 @MilosKozak
-- 在幫浦暫停模式中不同的胰島素按鈕顏色 @jbr77rr
-- 更多顏色主題設計 @jbr77rr
-- 新的自動化觸發 @jbr77rr
-- Medtrum 驅動程式改善 @jbr77rr
-- 新的圖表比例選單 @Philoul
-- 移轉至 kotlin 2.0，java 21 @MilosKozak
-- 允許輸入負碳水化合物 @MilosKozak
-- 無人值守匯出 @vanelsberg
+- AAPS 3.2 至少需要 WearOS API Level 28（Android 9）。
 
 (version3200)=
 ## 3.2.0.0 版本獻給 @Philoul
@@ -376,7 +329,7 @@ v3 是新的協議。 更加安全和高效
 - 新[偏好設定佈局](../SettingUpAaps/Preferences.md) @MilosKozak
 - SMB 算法更新 @Tornado-Tim
 - [低血糖暫停模式](#Preferences-aps-mode) @Tornado-Tim
-- [carbs required notifications](#key-aaps-features-minimal-carbs-required-for-suggestion) @twain47 @Tornado-Tim
+- [需碳水提醒](#Preferences-carb-required-notification) @twain47 @Tornado-Tim
 - 移除了 Careportal（移至操作） @MilosKozak
 - [新加密備份格式](ExportImportSettings.md) @dlvoy
 - [新 SMS TOTP 驗證](../RemoteFeatures/SMSCommands.md) @dlvoy

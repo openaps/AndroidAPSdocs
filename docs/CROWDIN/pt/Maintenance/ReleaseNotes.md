@@ -28,15 +28,10 @@ If your smartphone uses an Android Version older than Android 9 you will not be 
 
 In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
 
-### Android 11 and up
+### Android 9 and up
 
 - Use latest AAPS version
 - Download AAPS Code from <https://github.com/nightscout/AndroidAPS>
-
-### Android 9,10
-
-- Use AAPS version **3.2.0.4**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 3.2.0.4
 
 ### Android 8
 
@@ -50,49 +45,7 @@ In order to allow users with older Android to use older version of AAPS new vers
 
 ## WearOS version
 
-- AAPS requires at least WearOS API level 28 (Android 9)
-
-(version3300)=
-## Version 3.3.0.0
-
-Release date: XX-XX-202X
-
-### Notas importantes
-
-- migrate to new native Combo driver from ruffy before update
-- profile switch percentage is now taken into a count for dynamic sensitivity strengthness
-
-### Alterações
-
-- Equil pump driver @EquilHack
-- Insight driver rewitten to kotlin @Philoul
-- Ottai CGM source @ottai-developer
-- removed old ruffy dependent Combo driver
-- new internal modules stucture @MilosKozak
-- split persistence layer from main code @MilosKozak
-- new QuickWizard options @radicalb
-- build files rewritten to kts @MilosKozak
-- algorithms rewritten to kotlin for better performance @MilosKozak
-- tons of new unit tests @MilosKozak and others
-- more code converted to kotlin @MilosKozak
-- Simple mode @MilosKozak
-- new preferences management, xml -> kotlin @MilosKozak
-- new CI configuration, run CI on own servers @MilosKozak
-- wear and watchfaces improvement @Philoul @MilosKozak @olorinmaia
-- Random carbs in test mode @MilosKozak
-- libraries updated to latest version, toml @MilosKozak
-- variable sensitivity visible in AAPS client
-- fixed bug in TDD calculation @MilosKozak
-- BolusWizard UI improvements @kenzo44
-- updated Objectives @MilosKozak
-- different insulin button colors in pump suspended mode @jbr77rr
-- more color theming @jbr77rr
-- new Automation triggers @jbr77rr
-- Medtrum driver improvements @jbr77rr
-- New graph scale menu @Philoul
-- migration to kotlin 2.0, java 21 @MilosKozak
-- Allowing negative carbs entry  @MilosKozak
-- Unattended exports @vanelsberg
+- AAPS 3.2 requires at least WearOS API level 28 (Android 9)
 
 (version3200)=
 ## Version 3.2.0.0 dedicated to @Philoul
@@ -376,7 +329,7 @@ You need at least start [objective 11 (in later versions objective 10!)](#object
 - new [preferences layout](../SettingUpAaps/Preferences.md) @MilosKozak
 - SMB algorithm update @Tornado-Tim
 - [Low glucose suspend mode](#Preferences-aps-mode) @Tornado-Tim
-- [carbs required notifications](#key-aaps-features-minimal-carbs-required-for-suggestion) @twain47 @Tornado-Tim
+- [carbs required notifications](#Preferences-carb-required-notification) @twain47 @Tornado-Tim
 - removed Careportal (moved to Actions) @MilosKozak
 - [new encrypted backup format](ExportImportSettings.md) @dlvoy
 - [new SMS TOTP authentication](../RemoteFeatures/SMSCommands.md) @dlvoy

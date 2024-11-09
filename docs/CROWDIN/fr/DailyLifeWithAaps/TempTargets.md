@@ -74,8 +74,6 @@ In closed loop mode, **SMB**:
 - *may be* deactivated (discussed further below); and/or
 - basal may be activated if **AAPS** is in negative **IOB** or <0.
 
-(TempTargets-where-can-i-select-a-temp-target)=
-
 ## Where can I select a Temp-Target?
 
 In the **Actions** tab in **AAPS**.
@@ -88,10 +86,6 @@ In the **Actions** tab in **AAPS**.
 Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
 
 ![Carbs TT](../images/TempTarget6.png)
-
-- Faites un appui long sur votre cible dans le coin supérieur droit de l'écran d'accueil ou utilisez les raccourcis dans le bouton orange « Glucides » en bas.
-
-![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
 
 ## Where can I change the default Temp-Target and override with my own preferences?
 

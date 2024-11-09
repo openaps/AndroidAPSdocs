@@ -24,19 +24,18 @@ Use this option only if your CGM data is being properly smoothed by your collect
 
 ## Vorschläge zur Verwendung des Glättens
 
-|                          |  Exponentiell   | Durchschnitt |   Keine   |
-| ------------------------ |:---------------:|:------------:|:---------:|
-| G5 und G6                | Wenn verrauscht |              | Empfohlen |
-| G7                       | Wenn verrauscht |  If stable   |           |
-| Libre 1 oder Juggluco    |    Empfohlen    |              |           |
-| Libre 2 und 3 von xDrip+ |                 |              | Empfohlen |
+|                          | Exponentiell |  Durchschnitt   |   Keine   |
+| ------------------------ |:------------:|:---------------:|:---------:|
+| G5 und G6                |              | Wenn verrauscht | Empfohlen |
+| G7                       |  Empfohlen   |                 |           |
+| Libre 1 oder Juggluco    |  Empfohlen   |                 |           |
+| Libre 2 und 3 von xDrip+ |              |                 | Empfohlen |
 
 ### Dexcom sensors
 
 #### Build Your Own Dexcom App
 When using [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), your BG data is smooth and consistent. Furthermore, you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMBs, because the noise-level data is shared with AAPS.
 
-(smoothing-xdrip-dexcom-g6)=
 #### xDrip+ with Dexcom G6 or Dexcom ONE
 Noise-level data and smooth BG readings are only shared with AAPS if you use xDrip+ [native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm). Using native mode, there are no restrictions in using SMBs.
 

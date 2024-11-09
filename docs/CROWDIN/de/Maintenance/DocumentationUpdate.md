@@ -2,10 +2,11 @@
 
 ## October 2024
 
-- Update of several pages:
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../DailyLifeWithAaps/CobCalculation.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
-  - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+- [COB Calculation](../DailyLifeWithAaps/CobCalculation.md) @UnderCliffe10
 - [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
+- [How long will it take](#preparing-how-long-will-it-take) @emilise
+- [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+- [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) @emilise
 - Technical work (deployment process for the documentation, files organisation...) @psonnerat & @emilise
 
 ***
@@ -19,7 +20,7 @@ Missing history from March 2022 to September 2024
 - [BG quality warning sign](#aaps-screens-bg-warning-sign) @tanja
 - [Medtronic pump update](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [Necessary checks after update to AAPS 3.0](Update3_0.md) @tanja
-- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
+- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
 - Doku für AAPS 3.0 (teilweise) aktualisiert @xJoe
 - [Wear OS for AAPS 3.0](../UsefulLinks/WearOsSmartwatch.md) @peterleimbach
 
@@ -36,7 +37,7 @@ Missing history from March 2022 to September 2024
 
 - Best practices for calibrating a [libre 2 sensor](#Libre2-best-practices-for-calibrating-a-libre-2-sensor)
 - [ISF](../UsefulLinks/FAQ.md) reformulation of impact
-- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio)
+- Update [troubleshooting Android stduio](../GettingHelp/TroubleshootingAndroidStudio)
 - Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
 
 ## Oktober 2021

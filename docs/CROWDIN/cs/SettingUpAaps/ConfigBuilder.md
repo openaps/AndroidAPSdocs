@@ -1,12 +1,14 @@
 # Konfigurace
 
-Depending on your settings you can open Config Builder through a tab at the top of **AAPS**' screen or through the hamburger menu.
+V závislosti na vašich nastaveních můžete Konfiguraci otevřít prostřednictvím záložky v horní části obrazovky nebo pomocí nabídky hamburger.
 
 ![Otevřít průvodce konfigurací](../images/ConfBuild_Open_AAPS30.png)
 
-The **Config Builder** is the tab where you turn the modular features on and off. In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated, the boxes on the right-hand side (C) allow you to view these as a tab (E) in **AAPS**. In case the right box is not activated, you can reach the function by using the hamburger menu (D) on the top left of the screen. See [Tab or hamburger menu](#tab-or-hamburger-menu) below.
+Konfigurace (Conf) je záložka, kde si zapínáte nebo vypínáte jednotlivé moduly. Zaškrtávací políčka na levé straně (A) slouží k výběru používaných modulů, zatímco políčka na pravé straně (C) umožňují jejich zobrazení ve formě záložek (E) v AAPS. I když není pravý box zaškrtnutý, dostanete se k funkci přes hamburger menu (D) v levém horním rohu obrazovky.
 
-When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+Pokud má modul další dodatečná nastavení, dostanete se k nim kliknutím na ozubené kolo (B).
+
+**Prvotní nastavení**: od AAPS v 2.0 Vám s úvodním nastavením aplikace pomůže Průvodce nastavením. Stiskněte 3 tečky v pravé horní části obrazovky (F) a vyberte „Průvodce nastavením“.
 
 ![Tlačítko konfigurace a ozubené kolo](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -18,17 +20,69 @@ Pomocí zaškrtávacího políčka pod symbolem oka se můžete rozhodnout, jak 
 
 ![Záložka nebo hamburger menu](../images/ConfBuild_TabOrHH_AAPS30.png)
 
-```{contents}
-:backlinks: entry
-:depth: 2
-```
+(Config-Builder-profile)=
 
 ## Profile
 
-This module can not be disabled as it is a core part of **AAPS**.
+* Vyberte bazální profil, který chcete použít. See [Profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) page for more setup information.
+* Od AAPS 3.0 je k dispozici pouze lokální profil.
 
-* See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
-* See [AAPS Screens > Profile](#aaps-screens-profile) for more information about managing your **Profiles**.
+Nicméně i nadále je možné synchronizovat Nightscout profil do lokálního profilu. Za tímto účelem je však důležité naklonovat celý záznam sestávající z několika profilů v Nightscoutu. Podívejte se prosím na níže uvedené pokyny. Zadání změny prostřednictvím webového rozhraní může být užitečné v případě, že se jedná o velmi rozsáhlé změny profilu, např. ruční zkopírování dat z tabulky.
+
+(Config-Builder-local-profile)=
+
+### Místní profil
+
+Místní profil používá bazální profil zapsaný přímo do telefonu. Po jeho vybrání se v AAPS objeví nová záložka, kde si můžete profil upravovat. Ten je pak v případě potřeby načten pumpou. Při přepnutí profilu je uložen do pumpy jako profil 1. Tento profil je doporučen, protože nevyžaduje připojení k internetu.
+
+Your local profiles are part of [exported settings](../Maintenance/ExportImportSettings.md). Proto se ujistěte, že máte zálohu bezpečně uloženou.
+
+![Nastavení Místního profilu](../images/LocalProfile_Settings.png)
+
+Tlačítka:
+
+* zelené plus: přidat
+* červené X: odstranit
+* modrá šipka: kopírovat
+
+Děláte-li v profilu nějaké změny, ujistěte se, že upravujete správný profil. Na záložce profilu nemusí být pokaždé zobrazen aktuální profil. Například když na domovské obrazovce přepnete přes záložku profilu na jiný profil, může pak být aktuální profil odlišný od toho, který je zobrazen v záložce profil, protože mezi nimi není žádné spojení.
+
+#### Klonování přepnutí profilu
+
+Z přepnutí profilu můžete snadno vytvořit nový místní profil. Posun času a procentuální změna budou v takovém případě přeneseny do nového místního profilu.
+
+1. Klikněte na 3 tečky v pravém horním rohu.
+2. Vyberte „Ošetření“.
+3. Stiskněte symbol hvězdičky pro přístup na stránku přepnutí profilu.
+4. Vyberte požadovaný přepínač profilu, a stiskněte „Klonovat“.
+5. Nový místní profil můžete upravit na kartě Místní profil (MPRF) nebo prostřednictvím hamburger menu.
+
+![Klonování přepnutí profilu](../images/LocalProfile_ClonePS_AAPS30.png)
+
+(Config-Builder-upload-local-profiles-to-nightscout)=
+
+#### Nahrávání místních profilů do Nighscoutu
+
+Místní profily lze také nahrát do Nightscoutu. The settings can be found in [NSClient preferences](#Preferences-nsclient).
+
+![Nahrávání místního profilu do Nighscoutu](../images/LocalProfile_UploadNS_AASP30.png)
+
+#### Change profile in Nightscout profile editor
+
+You can synchronize changes to the profile in the Nightscout profile editor to local profiles. The settings can be found in [NSClient preferences](#Preferences-nsclient).
+
+Je nezbytné naklonovat všechny aktuální aktivní záznamy v databázi Nightscout, a ne pouze profil s modrou šipkou! Nové databázové záznamy pak obsahují aktuální datum a lze je aktivovat pomocí záložky "místní profil".
+
+![Klonovat databázové záznamy](../images/Nightscout_Profile_Editor.PNG)
+
+### Pomocník s profilem
+
+Pomocník s profilem nabízí dvě funkce:
+
+1. Najít profil pro děti
+2. Porovnání dvou profilů nebo přepnutí profilů za účelem naklonování nového profilu
+
+Details are explained on the separate [profile helper page](../SettingUpAaps/ProfileHelper.md).
 
 (Config-Builder-insulin)=
 
@@ -36,16 +90,26 @@ This module can not be disabled as it is a core part of **AAPS**.
 
 ![Typ inzulínu](../images/ConfBuild_Insulin_AAPS30.png)
 
-Select the type of insulin you are using.
+* Vyberte typ inzulínové křivky, kterou používáte.
+* Všechny varianty „Rychle působící Oref“, „Ultra rychlý Oref“, „Lyumjev“ a „Volitelný vrchol Oref“ mají exponenciální tvar. Více informací najdete v [dokumentaci k OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* Křivky se liší podle DIA a času max. účinnosti inzulínu.
+    
+    * FIALOVÁ linka ukazuje, kolik **inzulínu zbývá** poté, co byl aplikován a postupem času se vstřebává.
+    * MODRÁ linka ukazuje, **jak aktivní** inzulín je.
 
-More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
+### Doba působnosti inzulínu
+
+* Hodnota DIA není u každého člověka stejná. Proto si ji musíte vyzkoušet sami na sobě. 
+* Vždy to však musí být alespoň 5 hodin.
+* Pro velké množství lidí nemá ultra-rychlý inzulin jako Fiasp po 3–4 hodinách prakticky žádné znatelné účinky, i když fakticky zbývá cca 0,0xx jednotky. Nicméně i toto zbytkové množství může mít vliv například při sportu. Z toho důvodu AAPS používá minimální hodnotu DIA 5 hodin.
+* You can read more about that in the Insulin Profile section of [this](#AapsScreens-insulin-profile) page.
 
 ### Rozdíly v typu inzulínu
 
-* Všechny varianty „Rychle působící Oref“, „Ultra rychlý Oref“, „Lyumjev“ a „Volitelný vrchol Oref“ mají exponenciální tvar.
 * Pro „Rychle působící“ a „Ultra rychlý“ a „Lyumjev“ inzulín je DIA jediná proměnná, kterou si můžete upravovat. Doba maximální účinnosti je fixní. 
 * „Volitelný vrchol“ umožňuje nastavit obě proměnné – DIA i dobu maximální účinnosti inzulínu. Tato volba je určena pouze pro pokročilé uživatele, kteří znají důsledky nastavených hodnot. 
 * The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
+* Zaškrtnutím čtverečku vedle názvu si je můžete prohlédnout v záložce. Další možnost jejich zobrazení je přes hamburgerové menu.
 
 #### Rychle působící - Oref
 
@@ -85,61 +149,57 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 ## Zdroj glykémií
 
-Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+Select the blood glucose source you are using - see [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
 ![Konfigurace zdroje glykémie](../images/ConfBuild_BG.png)
 
-* [xDrip+](../CompatibleCgms/xDrip.md)
-* [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
-* [MM640g](../CompatibleCgms/MM640g.md)
-* [Glimp](#libre1-using-glimp) - only version 4.15.57 and newer are supported
-* [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
-* [Poctech](../CompatibleCgms/PocTech.md)
-* [Tomato App](#libre1-using-tomato) for MiaoMiao device
+* [Sestav si vlastní Dexcom aplikaci (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
+* [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - jsou podporovány pouze verze 4.15.57 a novější
+* [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
+* [Tomato App](http://tomato.cool/) pro zařízení MiaoMiao
 * [Glunovo aplikace](https://infinovo.com/) pro Glunovo CGM systém
+* NSClient BG - není doporučeno, protože v tomto případě je uzavřená smyčka závislá na mobilních datech / Wi-Fi. CGM data budou přijímána pouze v případě, jste-li připojeni ke svému Nightscoutu. Je mnohem lepší využít některý z lokálních zdrojů CGM.
 * Generovat náhodné hodnoty glykémie (pouze režim Demo)
-
-## Smoothing
-
-![Smoothing](../images/ConfBuild_Smoothing.png)
-
-See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 (Config-Builder-pump)=
 
 ## Pump
 
-Vyberte, kterou pumpu používáte. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
+Vyberte, kterou pumpu používáte.
 
-![Konfigurace – výběr pumpy](../images/ConfBuild_Pump_AAPS32.png)
+![Konfigurace – výběr pumpy](../images/ConfBuild_Pump_AAPS30.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * DanaR Korea (pro korejskou verzi pumpy DanaR)
 * Dana Rv2 (DanaR s neoficiálním upgradem firmwaru)
 * [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+    
+    * Pro pumpy Dana – pokud je nutný BT watchdog, aktivujte ho v **Rozšířená nastavení**. Při problémech s připojením k pumpě vypne bluetooth na 1 sekundu. Toto nastavení může u některých mobilů pomoci při zamrzání bluetooth.
+    * [Password for Dana RS pump](../CompatiblePumps/DanaRS-Insulin-Pump.md) must be entered correctly. V předchozích verzích nebylo heslo kontrolováno.
+
 * [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
-* Accu Chek Combo 
-  * [Driver using Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-  * [Driver with no additional requirement](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md), added in [AAPS v.3.2](#version3200)
-* Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
-* Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+
+* [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
+* [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 * [Medtronic](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
-* [EOPatch2](../CompatiblePumps/EOPatch2.md)
-* [Medtrum](../CompatiblePumps/MedtrumNano.md)
-* Virtual pump: open loop - **AAPS** suggestions only 
-  * as you make you first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
-  * for pump which doesn't have any driver yet
+* MDI (AAPS poskytuje návrhy pro aplikaci inzulínu pomocí inzulínových per)
+* Virtuální pumpa (otevřená smyčka pro pumpu, pro kterou zatím neexistuje ovladač – nabízí pouze návrhy AAPS)
 
 ## Detekce citlivosti
 
 Vyberte variantu detekce citlivosti. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Bude prováděna analýza historických dat. Jestliže se zjistí, že na inzulín reagujete citlivěji než obvykle (nebo naopak máte vyšší rezistenci), provedou se úpravy. Další podrobnosti o algoritmu citlivosti si můžete přečíst v [dokumentaci OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs). Průběh citlivosti můžete na hlavní stránce zobrazit vybráním políčka Citlivost. Zobrazí se jako bílá čára. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Před dosažením tohoto cíle slouží procentuální údaj Autosens a bílá čára v grafu pouze pro informaci.
+Průběh citlivosti můžete na hlavní stránce zobrazit vybráním políčka Citlivost. Zobrazí se jako bílá čára. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Před dosažením tohoto cíle slouží procentuální údaj Autosens a bílá čára v grafu pouze pro informaci.
+
+(Config-Builder-absorption-settings)=
 
 ### Nastavení absorpce sacharidů
 
-If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. V podstatě jde o bezpečnostní pojistku.
+Pokud používáte Oref1 s funkcí SMB, musíte změnit **min_5m_carbimpact** na 8. Tato hodnota se používá pouze při výpadcích hodnot odečítaných z CGM nebo v případech, kdy se fyzickou aktivitou vyrovná vzestup glykémie, který by jinak vedl k tomu, že by systém AAPS odbourával COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. V podstatě jde o bezpečnostní pojistku.
 
 (Config-Builder-aps)=
 
@@ -147,63 +207,52 @@ If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The va
 
 Vyberte požadovaný algoritmus APS pro úpravy léčby. Detaily vybraného algoritmu můžete zobrazit na kartě OpenAPS (OAPS).
 
-* OpenAPS AMA 
-  * Advanced Meal Assist: older algorithm not recommended anymore.
-  * In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
-* [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb) 
-  * Super Micro Bolus: most recent algorithm recommended for all users.
-  * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
-  * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
-
-If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Preferences > Sensitivity detection > Sensitivity Oref1 settings](../SettingUpAaps/Preferences.md).
+* OpenAPS AMA (pokročilý asistent s jídly, stav algoritmu v roce 2017). Zjednodušeně řečeno, výhoda systému je v tom, že zadáte-li sacharidy, dokáže systém po poslání bolusu velmi rychle spustit vysoký dočasný bazál.
+* [OpenAPS SMB](../DailyLifeWithAaps/KeyAapsFeatures.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](#objectives-objective9) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Smyčka
 
-This module should not be disabled as it is a core part of **AAPS**.
+* Přepínání mezi otevřenou smyčkou, uzavřenou smyčkou a pozastavením při nízké glykémii (LGS).
 
-## Constraints
+![Konfigurace – režim smyčky](../images/ConfigBuilder_LoopLGS.png)
 
-### Objectives
+(Config-Builder-open-loop)=
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. Ty by vás měly bezpečně provést nastavením uzavřené smyčky. Postupným splněním cílů je zajištěno, že přesně porozumíte tomu, jak systém pracuje. Jedině tak můžete svému systému plně důvěřovat.
+### Otevřená smyčka
+
+* AAPS průběžně hodnotí všechny dostupné údaje (IOB, COB, glykémie…) a předkládá návrhy, jak v případě potřeby upravit vaši léčbu. 
+* Návrhy nebudou provedeny automaticky (tak jako v uzavřené smyčce), ale mohou být zadány ručně přímo do pumpy nebo tlačítkem z aplikace – pokud používáte podporovanou pumpu (DanaR/RS nebo Accu-check Combo). 
+* Tato možnost slouží k tomu, abyste poznali, jak vlastně AndroidAPS funguje, nebo pro případ, že používáte nepodporovanou pumpu.
+
+(Config-Builder-closed-loop)=
+
+### Uzavřená smyčka (Closed Loop)
+
+* AAPS průběžně vyhodnocuje všechny dostupné údaje (IOB, COB, glykémie…) a podle potřeby automaticky upravuje léčbu (tj. bez dalšího Vašeho zásahu) s cílem dosáhnout nastaveného cílového pásma nebo hodnoty (podání bolusu, dočasné bazální dávky, vypnutí podávání inzulínu, aby se předešlo hypoglykémii atd.). 
+* Uzavřená smyčka je zabezpečena velkým množstvím bezpečnostních limitů, které lze nastavit individuálně.
+* Closed Loop is only possible if you are in [Objective 6](#objectives-objective6) or higher and use a supported pump.
+* Poznámka: při používání uzavřené smyčky se doporučuje nastavit jeden cíl místo cílového rozsahu (tj. 5,5 mmol nebo 100 mg/l místo rozsahu 5,0–7,0 mmol nebo 90–125 mg/dl).
+
+### Pozastavení při nízké glykémii (LGS)
+
+* maxIOB je nastaveno na nulu
+* To znamená, že klesá-li hladina glukózy v krvi, snížuje se odpovídajícím způsobem i bazál.
+* Při rostoucí hladině glukózy ale nedochází k žádné automatické korekci. Hodnota bazálu zůstává stále na hodnotě nastavené z profilu.
+* Dodatečný inzulín je pro snížení glykémie podáván pouze v případě, že je bazální IOB negativní (na základě jeho předchozího pozastavení při nízké glykémii).
+
+### Minimální změna pro oznámení
+
+* Při použití otevřené smyčky budete dostávat oznámení pokaždé, když AAPS doporučí úpravu bazální dávky. 
+* Ke snížení počtu oznámení můžete použít buď širší rozsah cílové glykemie, nebo vyšší procento minimální změny pro výzvu.
+* Toto definuje relativní změnu, která je požadována pro spuštění oznámení.
+
+## Cíle (výukový program)
+
+AAPS has a learning program (objectives) that you have to fulfill step by step. Ty by vás měly bezpečně provést nastavením uzavřené smyčky. Postupným splněním cílů je zajištěno, že přesně porozumíte tomu, jak systém pracuje. Jedině tak můžete svému systému plně důvěřovat.
+
+You should [export your settings](../Maintenance/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. V případě, že v budoucnosti budete muset svůj smartphone nahradit (nové zařízení, poškození displeje atd.), můžete tato nastavení jednoduše importovat.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
-
-## Synchronizace
-
-In this section, you can choose if/where you want **AAPS** to send your data to.
-
-### NSClient or NSClientV3
-
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md).
-
-See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to help you choose between NSClient (v1) and NSClientV3.
-
-### Tidepool
-
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
-
-See [Tidepool](../SettingUpAaps/Tidepool.md).
-
-### xDrip
-
-Used to **send** data such as treatments to xDrip+.
-
-### Open Humans
-
-See [Open Humans](../SupportingAaps/OpenHumans.md).
-
-### Wear
-
-Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)).
-
-### Samsung Tizen
-
-Broadcast data to Samsung's G-Watch Wear App (Tizen OS).
-
-### Garmin
-
-Connection to Garmin device (Fenix, Edge...)
 
 ## Ošetření
 
@@ -213,7 +262,52 @@ Pokud se podíváte na záložku Ošetření, můžete vidět ošetření které
 
 ### Přehled
 
-This is the [main screen](#AapsScreens-the-homescreen) of **AAPS** and can not be disabled.
+Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../DailyLifeWithAaps/AapsScreens.md) for details). Kliknutím na ozubené kolo se dostanete do nastavení.
+
+#### Nechat obrazovku zapnutou
+
+Tato volba zabrání tomu, aby systém Android vypnul obrazovku. To je vhodné například pro prezentace. Při tomto nastavení ale dochází k velmi rychlému vybíjení baterie. Proto je doporučeno připojit smartphone k napájecímu kabelu.
+
+#### Tlačítka
+
+Určuje, která tlačítka budou zobrazena na domácí obrazovce.
+
+* Ošetření
+* Kalkulačka
+* Inzulín
+* Sacharidy
+* CGM (otevře xDrip+)
+* Kalibrace
+
+Kromě toho můžete nastavit zkratky pro inzulín a sacharidy a rozhodnout se, zda bude v dialogu pro přidání ošetření i poznámka.
+
+#### Nastavení rychlých bolusů
+
+Vytvořte si tlačítko pro určité standardní jídlo (sacharidy a parametry pro výpočet bolusu), které se zobrazí na domácí obrazovce. Můžete ho použít pro standardní jídlo, které konzumujete pravidelně. U každého jídla (tlačítka) lze definovat i čas, a tak budete mít na domácí obrazovce k dispozici vhodné tlačítko pro dané jídlo odpovídající denní době.
+
+Poznámka: tlačítko nebude viditelné, pokud je aktuální čas mimo interval definovaný v nastavení nebo pokud máte dostatečný IOB k pokrytí sacharidů definovaných kalkulačkou.
+
+![Tlačítko průvodce nastavením](../images/ConfBuild_QuickWizard.png)
+
+#### Výchozí nastavení dočasných cílů
+
+Vyberte výchozí dočasné cíle (doba trvání a cíl). Přednastavené hodnoty jsou:
+
+* blížící se jídlo: cíl 72 mg/dl/4, 0 mmol/l, trvání 45 min
+* aktivita: cíl 140 mg/dl/7, 8 mmol/l, trvání 90 min
+* hypoglykemie: cíl 125 mg/dl/6, 9 mmol/l, trvání 45 min
+
+#### Standardní množství inzulinu pro Plnění/Doplňování
+
+Nastavte výchozí hodnoty tří tlačítek v dialogovém okně plnění/doplňování v závislosti na délce vaší hadičky.
+
+#### Rozsah pro zobrazení
+
+Nastavte hranice nízké a vysoké glykémie, které budou použité u grafů glykémie v AAPS a hodinkách. Jde pouze o zobrazení, nikoliv nastavení cílové hodnoty glykémie. Příklad: 70–180 mg/dl nebo 3,9–10 mmol/l
+
+#### Krátké názvy modulů
+
+Choose whether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### Zobrazovat kolonku poznámky v dialozích ošetření
 
@@ -233,23 +327,24 @@ Choose if you want to have [status lights](#Preferences-status-lights) on overvi
 
 ### Akce
 
-A tab offering multiple buttons to take [actions](#screens-action-tab) in **AAPS**.
+* Tlačítka k běžně používaným úkonům.
+* See [AAPS screenshots](#screens-action-tab) for details.
 
 ### Automatizace
 
-A tab for managing your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
+Uživatelem vytvořené úlohy automatizace ('if-then-else'). Please [read on here](../DailyLifeWithAaps/Automations.md).
 
 (Config-Builder-sms-communicator)=
 
 ### SMS komunikátor
 
-Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
+Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
 
 ### Jídlo
 
 Zobrazuje jídla přidaná do databáze Nightscoutu. Více informací viz [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
-Note: Entries cannot be used in the **AAPS** calculator. (Pouze je zobrazit)
+Poznámka: Tyto záznamy nelze použít v Kalkulačce v AAPS. (Pouze je zobrazit)
 
 (Config-Builder-wear)=
 
@@ -266,10 +361,19 @@ Prostřednictvím záložky Wear nebo hamburger menu (levý horní roh obrazovky
 * znovu poslat všechna data. To může pomoci v případech, kdy byly hodinky nějakou dobu nedostupné a potřebujete do nich poslat data.
 * Otevřít nastavení hodinek přímo z telefonu.
 
+### Stavová řádka xDrip (hodinky)
+
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../UsefulLinks/WearOsSmartwatch.md)
+
+### NSClient
+
+* Nastavení synchronizace dat mezi AAPS a Nightscoutem.
+* Settings in [preferences](#Preferences-nsclient) can be opened by clicking the cog wheel.
+
 ### Údržba
 
-Access this tab to export / import settings.
+E-mail a počet logů, které budou odeslány. Obvykle není nutné tyto hodnoty měnit.
 
 ### Konfigurace
 
-This current tab.
+Místo hamburger menu použijte záložku Konfigurace.

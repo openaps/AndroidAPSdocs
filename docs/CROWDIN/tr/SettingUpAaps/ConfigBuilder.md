@@ -1,12 +1,14 @@
 # Konfigürasyon ayarları
 
-Depending on your settings you can open Config Builder through a tab at the top of **AAPS**' screen or through the hamburger menu.
+Ayarlarınıza bağlı olarak, ekranın üst kısmındaki bir sekmeden veya hamburger menüsünden Konfigürasyon ayarları'nı açabilirsiniz.
 
 ![Konfigürasyon ayarlarını açmak](../images/ConfBuild_Open_AAPS30.png)
 
-The **Config Builder** is the tab where you turn the modular features on and off. In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated, the boxes on the right-hand side (C) allow you to view these as a tab (E) in **AAPS**. In case the right box is not activated, you can reach the function by using the hamburger menu (D) on the top left of the screen. See [Tab or hamburger menu](#tab-or-hamburger-menu) below.
+Konfigürasyon ayarları (KONF), modüler özellikleri açıp kapattığınız sekmedir. Sol taraftaki kutular (A) hangisini kullanacağınızı seçmenize izin verir, sağ taraftaki kutular (C) bunları AAPS'de bir sekme (E) olarak görmenizi sağlar. Sağ kutu aktif değilse ekranın sol üst köşesindeki hamburger menüsünü (D) kullanarak fonksiyona ulaşabilirsiniz.
 
-When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+Modül içinde ek ayarlar mevcut olduğunda, sizi tercihler içindeki belirli ayarlara götürecek olan dişli çarka (B) tıklayabilirsiniz.
+
+**İlk yapılandırma:** AAPS 2.0'dan bu yana bir Kurulum sihirbazı, AAPS'i kurma sürecinde size rehberlik eder. Ekranın sağ üst tarafındaki 3 nokta menüsüne basın (F) ve kullanmak için 'Kurulum Sihirbazı'nı seçin.
 
 ![Konfigürasyon ayarları kutusu ve dişli çark](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -18,17 +20,69 @@ Göz simgesinin altındaki onay kutusu ile ilgili program bölümünün nasıl a
 
 ![Sekme veya hamburger menüsü](../images/ConfBuild_TabOrHH_AAPS30.png)
 
-```{contents}
-:backlinks: entry
-:depth: 2
-```
+(Config-Builder-profile)=
 
 ## Profile
 
-This module can not be disabled as it is a core part of **AAPS**.
+* Kullanmak istediğiniz bazal profili seçin. See [Profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) page for more setup information.
+* AAPS 3.0'dan itibaren yalnızca yerel profil kullanılabilir.
 
-* See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
-* See [AAPS Screens > Profile](#aaps-screens-profile) for more information about managing your **Profiles**.
+Ancak Nightscout profilini yerel bir profile senkronize etmek mümkündür. Bunu yapmak için Nightscout editöründe birkaç profilden oluşan tüm veritabanı kaydını klonlamak önemlidir. Lütfen aşağıdaki talimatlara bakın. Eğer kapsamlı bir profildeki büyük değişiklikleri web arayüzü aracılığıyla yapacaksanız, bu işlem verilerin daha kolay girilebilmesine yardımcı olabilir, örn. verileri bir elektronik tablodan manuel olarak kopyalamak.
+
+(Config-Builder-local-profile)=
+
+### Yerel profil
+
+Yerel profil, telefona manuel olarak girilen bazal profili kullanır. Seçilir seçilmez, gerekirse pompadan okunan profil verilerini değiştirebileceğiniz AAPS'de yeni bir sekme görünür. Bir sonraki profil değişimi ile pompadaki profil1'e yazılırlar. İnternet bağlantısı gerektirmediği için bu profil önerilir.
+
+Your local profiles are part of [exported settings](../Maintenance/ExportImportSettings.md). Bu yüzden güvenli bir yerde yedek aldığınızdan emin olun.
+
+![Yerel Profil ayarları](../images/LocalProfile_Settings.png)
+
+Butonlar:
+
+* yeşil artı: profil ekleme
+* kırmızı X: profil silme
+* mavi ok: profil kopyalama
+
+Profilinizde herhangi bir değişiklik yaparsanız, doğru profili düzenlediğinizden emin olun. Profil sekmesinde, he zaman kullanılan gerçek profil gösterilmez - ör. ana ekrandaki profil sekmesini kullanarak bir profil geçişi yaptıysanız, bunlar arasında bağlantı olmadığı için sekmede gösterilen profil, gerçek profilinizden farklı olabilir.
+
+#### Klon profil değişikliği
+
+Bir profil değiştir'me ile kolayca yeni bir yerel profil oluşturabilirsiniz. Bu durumda, yeni yerel profile zaman kayması ve yüzdesel değişim uygulanabilecektir.
+
+1. Sağ üst köşedeki 3 nokta menüsüne tıklayın.
+2. 'Tedaviler'i seçin.
+3. Profil değiştirme sayfasına erişmek için yıldız sembolüne basın.
+4. İstediğiniz profil anahtarını seçin ve "Klonla"ya basın.
+5. Yeni yerel profili Yerel Profil (YP) sekmesinden veya hamburger menüsünde "profil"den düzenleyebilirsiniz.
+
+![Klon profil değişikliği](../images/LocalProfile_ClonePS_AAPS30.png)
+
+(Config-Builder-upload-local-profiles-to-nightscout)=
+
+#### Yerel profilleri Nightscout'a yükleyin
+
+Yerel profiller ayrıca Nightscout'a yüklenebilir. The settings can be found in [NSClient preferences](#Preferences-nsclient).
+
+![Yerel profili NS'a yükleyin](../images/LocalProfile_UploadNS_AASP30.png)
+
+#### Change profile in Nightscout profile editor
+
+You can synchronize changes to the profile in the Nightscout profile editor to local profiles. The settings can be found in [NSClient preferences](#Preferences-nsclient).
+
+Sadece mavi oklu bir profili değil, tüm aktif profiller için Nightscout veritabanı kayıtlarını klonlamak gerekir. Yeni veritabanı kayıtları daha sonra güncel tarihi taşır ve "yerel profil" sekmesi aracılığıyla etkinleştirilebilir.
+
+![Veritabanı kayıtlarını klonla](../images/Nightscout_Profile_Editor.PNG)
+
+### Profil yardımcısı
+
+Profil yardımcısı iki işlev sunar:
+
+1. Çocuklar için bir profil bulmak
+2. Yeni bir profili klonlamak için iki profili veya profil değişimlerini karşılaştırmak
+
+Details are explained on the separate [profile helper page](../SettingUpAaps/ProfileHelper.md).
 
 (Config-Builder-insulin)=
 
@@ -36,16 +90,26 @@ This module can not be disabled as it is a core part of **AAPS**.
 
 ![İnsülin Tipi](../images/ConfBuild_Insulin_AAPS30.png)
 
-Select the type of insulin you are using.
+* Kullanmakta olduğunuz insülin eğrisinin türünü seçin.
+* 'Hızlı Etkili Oref', Ultra Hızlı Oref', 'Lyumjev' ve 'Serbest Tepe Oref' seçeneklerinin tümü üstel bir şekle sahiptir. Daha fazla bilgi [OpenAPS dokümantasyonu](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) sayfasında listelenmiştir. 
+* Eğriler, İES'e ve zirveye ulaşma süresine bağlı olarak değişecektir.
+    
+    * MOR çizgi, zamanla bozulduğu için enjekte edildikten sonra ne kadar **insülin kaldığını** gösterir.
+    * MAVİ çizgi, insülinin **ne kadar aktif** olduğunu gösterir.
 
-More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
+### İES (DIA) İnsülin etki süresi
+
+* İES her kişi için aynı değildir. Bu yüzden kendiniz test etmelisiniz. 
+* Ancak her zaman en az 5 saat olmalıdır.
+* Fiasp gibi ultra hızlı insülin kullanan birçok insan için, kural olarak 0.0xx ünite mevcut olsa bile, 3-4 saat sonra pratikte gözle görülür bir etkisi yoktur. Bu kalan miktar, örneğin spor sırasında hala görülebilir. Bu nedenle, AAPS, İES olarak minimum 5saat kullanır.
+* You can read more about that in the Insulin Profile section of [this](#AapsScreens-insulin-profile) page.
 
 ### İnsülin tipi farklılıkları
 
-* 'Hızlı Etkili Oref', Ultra Hızlı Oref', 'Lyumjev' ve 'Serbest Tepe Oref' seçeneklerinin tümü üstel bir şekle sahiptir.
 * 'Hızlı Etkili', 'Ultra Hızlı' ve 'Lyumjev' için İES, kendiniz ayarlayabileceğiniz tek değişkendir ve zirve zamanı sabittir. 
 * Free-Peak (serbest-zirve), hem İES'i hem de zirveye ulaşma süresini ayarlamanıza olanak tanır fakat yalnızca bu ayarların etkilerini bilen ileri düzey kullanıcılar tarafından kullanılmalıdır. 
 * The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
+* Yukarıda bir sekme olarak görüntülemek için onay kutusunu etkinleştirebilirsiniz. Diğer türlü hamburger menüsünde olacaktır.
 
 #### Hızlı etkili Oref
 
@@ -85,61 +149,57 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 ## KŞ kaynağı
 
-Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+Select the blood glucose source you are using - see [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
 ![Konfigürasyon ayarları KŞ kaynağı](../images/ConfBuild_BG.png)
 
-* [xDrip+](../CompatibleCgms/xDrip.md)
-* [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
-* [MM640g](../CompatibleCgms/MM640g.md)
-* [Glimp](#libre1-using-glimp) - only version 4.15.57 and newer are supported
-* [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
-* [Poctech](../CompatibleCgms/PocTech.md)
-* [Tomato App](#libre1-using-tomato) for MiaoMiao device
+* [Kendi Dexcom Uygulamanızı Oluşturun (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
+* [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - Sadece versiyon 4.15.57 ve daha yenisi için desteklenir.
+* [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
+* MiaoMiao cihazı için [Tomato Uygulaması](http://tomato.cool/)
 * Glunovo CGM sistemi için [Glunovo Uygulaması](https://infinovo.com/)
+* NSClient KŞ - bu durumda kapalı döngü mobil veri / wifi kapsama alanına bağlı olduğundan önerilmez. CGM verileri yalnızca NS sitenize çevrimiçi bir bağlantı varsa alınacaktır. En iyisi, diğer CGM veri kaynaklarından birinden yerel olarak kullanmaktır.
 * Rastgele KŞ: Rastgele KŞ verisi oluşturur (Yalnızca Demo modu)
-
-## Smoothing
-
-![Smoothing](../images/ConfBuild_Smoothing.png)
-
-See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 (Config-Builder-pump)=
 
 ## Pump
 
-Kullanmakta olduğunuz pompayı seçin. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
+Kullanmakta olduğunuz pompayı seçin.
 
-![Konfigürasyon ayarları Pompa seçimi](../images/ConfBuild_Pump_AAPS32.png)
+![Konfigürasyon ayarları Pompa seçimi](../images/ConfBuild_Pump_AAPS30.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R Kore (yerli DanaR pompası için)
 * Dana Rv2 (resmi olmayan ürün yazılımı yükseltmesine sahip DanaR pompası)
 * [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+    
+    * Dana pompalarında gerekirse BT watchdog'u etkinleştirmek için **Gelişmiş ayarlar**'ı kullanın. Bu seçenek, pompaya bağlantı yoksa bluetooth'u bir saniyeliğine kapatır. Böylelikle bluetooth yığınının donduğu bazı telefonlarda yardımcı olabilir.
+    * [Password for Dana RS pump](../CompatiblePumps/DanaRS-Insulin-Pump.md) must be entered correctly. Şifre önceki sürümlerde kontrol edilmiyordu.
+
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
-* Accu Chek Combo 
-  * [Driver using Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-  * [Driver with no additional requirement](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md), added in [AAPS v.3.2](#version3200)
-* Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
-* Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+
+* [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
+* [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 * [Medtronic](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
-* [EOPatch2](../CompatiblePumps/EOPatch2.md)
-* [Medtrum](../CompatiblePumps/MedtrumNano.md)
-* Virtual pump: open loop - **AAPS** suggestions only 
-  * as you make you first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
-  * for pump which doesn't have any driver yet
+* MDI (Çoklu Günlük Enjeksiyon tedaviniz için AAPS önerileri alın)
+* Sanal pompa (henüz sürücüsü olmayan pompa için açık döngü - yalnızca AAPS önerileri)
 
 ## Duyarlılık algılaması
 
 Duyarlılık algılama türünü seçin. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Bu, hareket halindeyken geçmiş verileri analiz edecek ve insüline normalden daha duyarlı (veya tersine, daha dirençli) tepki verdiğinizi fark ederse ayarlamalar yapacaktır. Duyarlılık algoritması hakkında daha fazla ayrıntıyı [OpenAPS dokümantasyonu](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)nda bulabilirsiniz.
 
-You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs). Grafiklerde duyarlılık işaretlenerek beyaz çizgide duyarlılığınızı ana ekranda görüntüleyebilirsiniz. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Bu hedefe ulaşmadan önce, Otoduyarlılık yüzdesi veya grafiğinizdeki çizgi yalnızca bilgi amaçlı görüntülenir.
+Grafiklerde duyarlılık işaretlenerek beyaz çizgide duyarlılığınızı ana ekranda görüntüleyebilirsiniz. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Bu hedefe ulaşmadan önce, Otoduyarlılık yüzdesi veya grafiğinizdeki çizgi yalnızca bilgi amaçlı görüntülenir.
+
+(Config-Builder-absorption-settings)=
 
 ### Emilim ayarları
 
-If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Temel olarak bir ön güvenliktir.
+Oref1 ile SMB kullanıyorsanız **min_5m_carbimpact**'i 8 olarak değiştirmelisiniz. Bu değer yalnızca CGM okumalarındaki boşluklar sırasında veya fiziksel aktivite kan şekeri artışını tükettiğinde kullanılır. Bunun dışında AAPS tarafından aktif karbonhidrat bozulur. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Temel olarak bir ön güvenliktir.
 
 (Config-Builder-aps)=
 
@@ -147,63 +207,52 @@ If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The va
 
 Terapi ayarlamaları için istenen APS algoritmasını seçin. OpenAPS(OAPS) sekmesinde seçilen algoritmanın aktif detayını görüntüleyebilirsiniz.
 
-* OpenAPS AMA 
-  * Advanced Meal Assist: older algorithm not recommended anymore.
-  * In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
-* [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb) 
-  * Super Micro Bolus: most recent algorithm recommended for all users.
-  * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
-  * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
-
-If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Preferences > Sensitivity detection > Sensitivity Oref1 settings](../SettingUpAaps/Preferences.md).
+* OpenAPS AMA (gelişmiş yemek yardımı, algoritmanın 2017'deki durumu) Basit bir ifadeyle faydası, yemek bolusu verdikten sonra eğer karbonhidratları doğru bir şekilde girerseniz, sistem daha hızlı bir şekilde kan şekerine yüksek geçici bazal oranları ile müdahale eder.
+* [OpenAPS SMB](../DailyLifeWithAaps/KeyAapsFeatures.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](#objectives-objective9) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Döngü
 
-This module should not be disabled as it is a core part of **AAPS**.
+* Açık Döngü, Kapalı Döngü ve Düşük Glikoz Askıya Alma (LGS) arasında geçiş yapın.
 
-## Constraints
+![Konfigürasyon ayarları - döngü modu](../images/ConfigBuilder_LoopLGS.png)
 
-### Objectives
+(Config-Builder-open-loop)=
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. Bunun amacı, güvenli bir şekilde kapalı döngü sistemi kurmak için size rehberlik etmektir. Her şeyi doğru bir şekilde kurmanızı ve sistemin tam olarak ne yaptığını anlamanızı garanti eder. Sisteme güvenmenizin tek yolu bu.
+### Açık Döngü
+
+* AAPS, mevcut tüm verileri (AİNS, AKARB, KŞ...) sürekli olarak değerlendirir ve gerekirse tedavinizi nasıl ayarlayacağınız konusunda tedavi önerilerinde bulunur. 
+* (kapalı döngüde olduğu gibi) Öneriler otomatik olarak yürütülmeyecektir. Uyumlu bir pompa (Dana R/RS veya Accu Chek Combo) kullanıyorsanız, pompaya manuel olarak veya bir düğme kullanılarak girilmelidir. 
+* Bu seçenek, AAPS'in nasıl çalıştığını veya desteklenmeyen bir pompa kullanıp kullanmadığınızı öğrenmek içindir.
+
+(Config-Builder-closed-loop)=
+
+### Kapalı Döngü
+
+* AAPS, mevcut tüm verileri (AİNS, AKARB, KŞ...) sürekli olarak değerlendirir ve ayarlanan hedef aralığa veya değere ulaşmak için (yani sizin tarafınızdan fazla müdahale olmadan) gerekirse tedaviyi (bolus iletimi, geçici bazal oranı, hipo öncesi insülin durdurma vb.) otomatik olarak ayarlar. 
+* Kapalı Döngü, bireysel olarak ayarlayabileceğiniz çok sayıda güvenlik limiti dahilinde çalışır.
+* Closed Loop is only possible if you are in [Objective 6](#objectives-objective6) or higher and use a supported pump.
+* Not: Kapalı döngü modunda hedef aralığı yerine tek bir hedef (yani 5,0 - 7,0 mmol veya 90 - 125 mg/dl yerine 5,5 mmol veya 100 mg/dl) önerilir.
+
+### Düşük Glikoz Süspansiyonu (LGS)
+
+* maxIOB (max.aktif insülin) sıfıra ayarlıdır.
+* Bu, kan şekeri düşüyorsa sizin için bazalı azaltabileceği anlamına gelir.
+* Ancak kan şekeri yükseliyorsa, otomatik düzeltme yapılmayacaktır. Bazal oranlarınız, seçtiğiniz profille aynı kalacaktır.
+* Yalnızca bazal AİNS (aktif insülin) negatifse (önceki Düşük Glikoz Süspansiyonundan), KŞ'ni düşürmek için ek insülin verilecektir.
+
+### Minimum istek değişikliği
+
+* Açık döngü kullanırken, AAPS'in bazal hızı ayarlamanızı önerdiği her seferde bildirim alırsınız. 
+* Bildirim sayısını azaltmak için daha geniş bir KŞ hedef aralığı kullanabilir veya minimum istek oranının yüzdesini artırabilirsiniz.
+* Bu, bir bildirimi tetiklemek için gereken göreli değişikliği tanımlar.
+
+## Görevler (öğrenme programı)
+
+AAPS has a learning program (objectives) that you have to fulfill step by step. Bunun amacı, güvenli bir şekilde kapalı döngü sistemi kurmak için size rehberlik etmektir. Her şeyi doğru bir şekilde kurmanızı ve sistemin tam olarak ne yaptığını anlamanızı garanti eder. Sisteme güvenmenizin tek yolu bu.
+
+You should [export your settings](../Maintenance/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. Akıllı telefonunuzu daha sonra değiştirmeniz durumunda (yeni satın alma, ekran hasarı vb.) bu ayarları kolayca içe aktarabilirsiniz.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
-
-## Synchronization
-
-In this section, you can choose if/where you want **AAPS** to send your data to.
-
-### NSClient or NSClientV3
-
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md).
-
-See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to help you choose between NSClient (v1) and NSClientV3.
-
-### Tidepool
-
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
-
-See [Tidepool](../SettingUpAaps/Tidepool.md).
-
-### xDrip
-
-Used to **send** data such as treatments to xDrip+.
-
-### Open Humans
-
-See [Open Humans](../SupportingAaps/OpenHumans.md).
-
-### Wear
-
-Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)).
-
-### Samsung Tizen
-
-Broadcast data to Samsung's G-Watch Wear App (Tizen OS).
-
-### Garmin
-
-Connection to Garmin device (Fenix, Edge...)
 
 ## Tedaviler
 
@@ -213,7 +262,52 @@ Tedaviler (TEDAVİ) sekmesine bakarsanız, nightcout'a yüklenen tedavileri gör
 
 ### Genel Bakış
 
-This is the [main screen](#AapsScreens-the-homescreen) of **AAPS** and can not be disabled.
+Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../DailyLifeWithAaps/AapsScreens.md) for details). Ayarlara dişli çark tıklanarak erişilebilir.
+
+#### Ekranı açık tut
+
+'Ekranı açık tut' seçeneği, Android telefonunuzun ekranını her zaman açık tutmaya zorlar. Bu, sunumlar vb. için kullanışlıdır. Ama çok fazla pil tüketir. Bu nedenle, telefonunuzu şarj kablosuna bağlamanız önerilir.
+
+#### Butonlar
+
+Ana ekranda hangi Butonların gösterileceğini tanımlayın.
+
+* Tedaviler
+* Hesap makinesi
+* İnsülin
+* Karbonhidrat
+* CGM (xDrip+ programını açar)
+* Kalibrasyon
+
+Ayrıca, insülin ve karbonhidrat artışları için kısayollar ayarlayabilir ve notlar alanının tedavi diyaloglarında gösterilip gösterilmeyeceğine karar verebilirsiniz.
+
+#### Hızlı asistan ayarları
+
+Standart bir yemek için giriş ekranında görüntülenecek bir buton oluşturun. (bolus için karbonhidrat hesaplama yöntemi) Sık yediğiniz standart yemekler için kullanın. Farklı öğünler için farklı saatler belirtilirse, günün saatine bağlı olarak ana ekranda her zaman uygun standart yemek butonunu görüntülersiniz.
+
+Not: Belirtilen zaman aralığının dışındaysa veya Hızlı asistan butonunda tanımlanan karbonhidratları karşılamak için yeterli aktif insülininiz varsa buton görünmeyecektir.
+
+![Hızlı asistan butonu](../images/ConfBuild_QuickWizard.png)
+
+#### Varsayılan Geçici hedefler
+
+Varsayılan geçici hedefleri seçin (süre ve hedef). Ön ayar değerleri şunlardır:
+
+* yakında öğün: hedef 72 mg/dl / 4.0 mmol/l, süre 45 dk
+* aktivite: hedef 140 mg/dl / 7.8 mmol/l, süre 90 dk
+* hipo: hedef 125 mg/dl / 6.9 mmol/l, süre 45 dk
+
+#### Standart insülin miktarlarını Hazırla/Doldur
+
+Kateterinizin (kanülünüzün) uzunluğuna bağlı olarak, doldurma/hazırlama diyalogunda üç düğmenin varsayılan miktarlarını seçin.
+
+#### Görüntüleme aralığı
+
+AAPS ve akıllı saatteki KŞ grafiği görünümü için yüksek ve düşük izleri seçin. Bu yalnızca görselleştirme içindir. KŞ'nizin hedef aralığı değildir. Örnek: 70 - 180 mg/dl veya 3,9 - 10 mmol/l
+
+#### Kısa sekme başlıkları
+
+Choose whether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### Tedavi diyaloglarında not alanını göster
 
@@ -233,23 +327,24 @@ Choose if you want to have [status lights](#Preferences-status-lights) on overvi
 
 ### Eylemler
 
-A tab offering multiple buttons to take [actions](#screens-action-tab) in **AAPS**.
+* Ortak özelliklere hızla erişmek için bazı butonlar.
+* See [AAPS screenshots](#screens-action-tab) for details.
 
 ### Otomasyon
 
-A tab for managing your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
+Kullanıcı tanımlı otomasyon görevleri. Please [read on here](../DailyLifeWithAaps/Automations.md).
 
 (Config-Builder-sms-communicator)=
 
 ### SMS Kominikatör
 
-Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
+Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
 
 ### Yiyecek
 
 Nightscout gıda veritabanında tanımlanan yemek ön ayarlarını görüntüler, daha fazla kurulum bilgisi için [Nightscout Beni Oku](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods)'ya bakın.
 
-Note: Entries cannot be used in the **AAPS** calculator. (Sadece Görüntülenir)
+Not: Girişler, AAPS hesap makinesinde kullanılamaz. (Sadece Görüntülenir)
 
 (Config-Builder-wear)=
 
@@ -266,10 +361,19 @@ Wear sekmesi veya hamburger menüsünden (sekme görüntülenmiyorsa ekranın so
 * Tüm verileri yeniden gönder. Saat bir süredir bağlı değilse ve bilgileri saate göndermek istiyorsanız yardımcı olabilir.
 * Telefonunuzu kullanarak Ayarları doğrudan saatinizde açar.
 
+### xDrip+ Durum Çizgisi (saat)
+
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../UsefulLinks/WearOsSmartwatch.md)
+
+### NSClient
+
+* AAPS verilerinizin Nightscout ile senkronizasyonunu ayarlayın.
+* Settings in [preferences](#Preferences-nsclient) can be opened by clicking the cog wheel.
+
 ### Bakım
 
-Access this tab to export / import settings.
+E-posta ve gönderilecek günlük sayısı. Normalde değişiklik gerekmez.
 
 ### Konfigürasyon ayarları
 
-This current tab.
+Konfigürasyon ayarları için hamburger menü yerine sekmeyi kullanın.

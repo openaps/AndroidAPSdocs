@@ -102,14 +102,14 @@
 
 您不需要執行每一個系統建議！
 ```
-(objectives-objective5)=
+
 ## 目標 5：暸解你的開環，包括其臨時基礎率建議
 
 作為**目標 5**的一部分，你將開始了解臨時基礎率建議是如何得出的。 這包括[基礎邏輯的確定](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html)，通過觀察[在**AAPS概覽**](#aaps-screens-prediction-lines)（或Nightscout）中的預測線來分析影響，並檢查顯示在**OpenAPS**標籤上的詳細計算。
 
 完成此目標的預計時間為：**7天**。
 
-這**目標**要求你確定並設置你的「最大U/h的臨時基礎率」（max-basal）值，如[OpenAPS特徵](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)所述。 This value can be set in **Preferences > OpenAPS**. 如果你仍在使用虛擬幫浦，請確保在**AAPS**和你的胰島素幫浦中均設置此安全設置。
+這**目標**要求你確定並設置你的「最大U/h的臨時基礎率」（max-basal）值，如[OpenAPS特徵](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)所述。 該值可以在[偏好設定 > OpenAPS](#Preferences-max-u-h-a-temp-basal-can-be-set-to)中設置。 如果你仍在使用虛擬幫浦，請確保在**AAPS**和你的胰島素幫浦中均設置此安全設置。
 
 你可能希望將你的[**設定檔**血糖目標](#profile-glucose-targets)設置得比平時高，直到你對**AAPS**的計算和設置熟悉為止。 你可能希望實驗一下將你的**BG目標**在**設定檔**中調整到更緊密的範圍（例如，寬度為1或更低的mmol/l [20 mg/dl或更低]），觀察其後的行為。
 
@@ -187,8 +187,6 @@
 完成此目標的最短時間為**7天**。 這是一個強制的等待時間。 在這段時間內，無法進入下一個**目標**。
 
 在7天內啟用[自動敏感度調整](../DailyLifeWithAaps/KeyAapsFeatures.md)，並關注[**總覽**圖表中的白線](#AapsScreens-section-g-additional-graphs)，以顯示你的胰島素敏感度因運動或荷爾蒙等因素而上升或下降。 注意查看OpenAPS報告標籤，其中顯示**AAPS**根據需要調整敏感度、基礎和目標。
-
-This is a good time to review your settings for [Sensitivity Detection](../SettingUpAaps/ConfigBuilder.md#sensitivity-detection). You can view your sensitivity on the homescreen in an [additional graph](../DailyLifeWithAaps/AapsScreens.md#section-g---additional-graphs).
 
 此外，你可以使用[自動調整](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)來檢查你的基礎是否準確，或進行傳統的基礎測試。
 
