@@ -24,12 +24,12 @@ Use this option only if your CGM data is being properly smoothed by your collect
 
 ## Vorschläge zur Verwendung des Glättens
 
-|                          | Exponentiell |  Durchschnitt   |   Keine   |
-| ------------------------ |:------------:|:---------------:|:---------:|
-| G5 und G6                |              | Wenn verrauscht | Empfohlen |
-| G7                       |  Empfohlen   |                 |           |
-| Libre 1 oder Juggluco    |  Empfohlen   |                 |           |
-| Libre 2 und 3 von xDrip+ |              |                 | Empfohlen |
+|                          |  Exponentiell   | Durchschnitt |   Keine   |
+| ------------------------ |:---------------:|:------------:|:---------:|
+| G5 und G6                | Wenn verrauscht |              | Empfohlen |
+| G7                       | Wenn verrauscht |  If stable   |           |
+| Libre 1 oder Juggluco    |    Empfohlen    |              |           |
+| Libre 2 und 3 von xDrip+ |                 |              | Empfohlen |
 
 ### Dexcom sensors
 
