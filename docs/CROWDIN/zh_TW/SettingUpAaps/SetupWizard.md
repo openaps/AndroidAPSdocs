@@ -184,6 +184,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_135853.png)
 
+(SetupWizard-synchronization-with-the-reporting-server-and-more)=
 ### 與報告伺服器同步及更多設置
 
 在這裡，你可以配置資料上傳到你的報告伺服器。
@@ -197,8 +198,9 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 在此示例中，我們選擇Nightscout作為報告伺服器，並將進行配置。
 
 ```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
-:class: 注意 
- 點擊 [這裡](../Maintenance/ReleaseNotes.md) 獲取 **AAPS** 3.2.0.0 的發行說明，其中解釋了選項 **NSClient**（這是 "v1"，雖然沒有明確標註）和第二選項 **NSClient v3** 之間的差異。 
+:class: Note
+
+Click [here](#version3200) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**.
 
 Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout 監控或發送遠端治療（例如，作為孩子的父母或照顧者使用 **AAPS**），這種情況下請選擇第一個選項「**NSClient**」，直至另行通知。 
 ```
@@ -267,7 +269,7 @@ Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_141351.png)
 
-### 患者名稱
+### Patient name
 
 在這裡你可以在**AAPS**中設置你的姓名。
 
