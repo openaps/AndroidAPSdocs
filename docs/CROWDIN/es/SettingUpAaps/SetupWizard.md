@@ -184,6 +184,7 @@ Please press the "NEXT" button:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_135853.png)
 
+(SetupWizard-synchronization-with-the-reporting-server-and-more)=
 ### Synchronization with the reporting server and more
 
 Here you are configuring the data upload to your reporting server.
@@ -198,7 +199,8 @@ In this example we select Nightscout as reporting server, and will configure it.
 
 ```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
 :class: Note
-Click [here](../Maintenance/ReleaseNotes.md) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
+
+Click [here](#version3200) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**.
 
 Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
 ```
