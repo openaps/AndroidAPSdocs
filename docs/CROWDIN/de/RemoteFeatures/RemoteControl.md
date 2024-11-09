@@ -17,272 +17,9 @@ Die ersten drei sind meist für Pflegende/Eltern geeignet, und Smartwatches sind
 5.  Beispiele für schulische Therapiepläne für Kinder unterschiedlicher Altersstufen sind unter ["Dateien“](https://www.facebook.com/groups/AndroidAPSUsers/files/) auf der **AAPS** Facebook-Seite hinterlegt.
 6.  Wie sieht der Notfallplan aus, wenn die Fernsteuerung nicht funktionieren sollte (_d.h._ Netzwerkprobleme auftreten oder die Bluetooth-Verbindung verloren geht)?  Denke immer daran, was mit **AAPS** passieren wird, wenn Du plötzlich keine neuen Befehle senden kannst. **AAPS** überschreibt die Basalrate, den ISF und das ICR mit den aktuellen Profilwerten. Falls Deine Remote-Verbindung unterbrochen wird, ist es ist besser temporäre Profilwechsel (_d.h._ mit einer beschränkten Dauer) genutzt zu haben, als auf ein dauerhaftes stärkeres Insulinprofil geschwechselt zu sein. Wenn Die eingegebene Zeitspanne abgelaufen ist, wird die Pumpe auf das Original-Profil zurückfallen.
 
-(RemoteControl-sms-commands)=
 ## 1) SMS-Befehle
 
-```{admonition} Documentation
-:class: note
-
-This section may contain outdated content. Please also see the page [SMS Commands](../RemoteFeatures/SMSCommands.md).
-
-```
-
-**AAPS** kann über die Funktion der **SMS-Befehle** 'remote' gesteuert werden. SMS-Befehle können durch _jedes_ Smartphone (iPhone/Android) an **AAPS** gesendet werden.
-
-**SMS-Befehle sind wirklich hilfreich:**
-1. Für die tägliche Remote-Steuerung
-
-2. Wenn Du einen Bolus remote abgeben möchtest
-
-3. In einer Gegend mit schwachem Internet-Empfang, in der Textnachrichten durchkommen, aber der übrige Empfang eingeschränkt ist. Dies hilft besonders in entlegenen Gebieten (z.B. beim Camping oder dem Skifahren.
-
-4. Wenn die anderen Methoden der Remote-Steuerung (Nightscout/AAPSClient) vorübergehend nicht funktionieren
-
-### Sicherheit der SMS-Befehle
-Wenn Du **SMS-Befehle** in **AAPS**freischaltest, behalte im Kopf, dass das Smartphone, dass SMS-Befehle versenden soll auch gestohlen werden kann und/oder von jemand anderem verwendet werden kann. Sichere Dein Smartphone mindestens mit einer PIN. Ein starkes Passwort und/oder eine biometrische Sicherung werden dringend empfohlen. Wichtig ist, dass das Smartphone-Passwort sich vom APK Master-Passwort (das Passwort, das benötigt wird, um die **AAPS** Einstellungen zu ändern) unterscheidet. Eine zweite Rufnummer muss für SMS-Befehle aktiviert sein, auch wenn es nur einen Follower/Betreuenden gibt. Wenn das Smartphone des hauptsächlich Betreuenden/Elternteils kompromitiert wurde, kann die zweite Rufnummer (mit dem Befehl **SMS STOP**) dazu genutzt werden, die SMS-Kommunikation vorübergehend zu deaktivieren. Versions of **AAPS** 2.7 and newer also use an [Authenticator app](#authentication-or-not)).
-
-### Unterschiedliche SMS-Befehle
-Die **Tabelle der SMS-Befehle** unten zeigt alle möglichen SMS-Befehle. Um die Nutzung noch verständlicher zu machen, sind auch _Beispiele_ enthalten. Die Gültigkeitsbereiche der Befehle (Zielwerte, Prozentsätze der Profile etc.) sind mit denen der AAPS-App identisch. Die Befehle sind nach Nutzungshäufigkeit sortiert aufgelistet, wobei die ersten beiden Tabellen das Gros der fürs Loopen benötigten SMS-Befehle enthalten.
-
-### Tabelle der SMS-Befehle
-
-![SMS_command_table_1](../images/remote-control-02.png)
-
-![](../images/remote-control-03.png)
-
-![SMS_command_table_3](../images/remote_control_and_following/SMS_command_table_3_Loop_03.png)
-
-![SMS_command_table_4](../images/remote-control-05.png)
-
-(authentication-or-not)=
-### Authentifizieren oder nicht?
-
-Du wirst in der oberen Tabelle bemerkt haben, dass einige SMS-Befehle eine sofortige Antwort haben und andere eine **Authentifizierung** mit einem Sicherheitscode aus einer weiteren App und einer PIN brauchen. (Details dazu findest Du hinter dem Link unten). Eine einfache Abfrage wie “**BG**”, die den aktuellen Glukosewert abfragt, ist schnell eingetippt und braucht nicht authentifiziert zu werden. Sie gibt die unten gezeigte **AAPS**-Statusinformation zurück:
-
-![grafik](../images/remote-control-06.png)
-
-Befehle, die kritischer sind und daher zusätzlich abgesichert werden, benötigen einen weiteren einzugebenden Code, wie zum Beispiel:
-
-![](../images/remote-control-07.png)
-
-### Wie man SMS-Befehle einrichtet
-
-Der Gesamtprozess sieht wie folgt aus:
-
-**1) Lade eine Authentifikator-App herunter (Eltern- oder Betreuenden-Smartphone)**
-
-**2)    Überprüfe die Smartphone-Einstellungen (AAPS Smartphone)**
-
-**3) Datum und Uhrzeit synchronisieren (Eltern- und AAPS-Smartphone)**
-
-**4) AAPS-Einstellungen (AAPS-Smartphone)**
-
-**5) Testen, ob SMS-Befehlen funktionieren (Eltern- und AAPS-Smartphone)**
-
-### Los gehts!
-
-1) **Lade eine Authentifikator-App** herunter: Lade (aus dem App Store oder Google Play) auf das Eltern-Smartphone eine Authentifikator App Deiner Wahl aus der Liste herunter und installiere diese:
-
-[**Authy**](https://authy.com/download/)
-
-[**Google Authenticator - Android / iOS**](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&pli=1)
-
-[**LastPass Authenticator**](https://www.lastpass.com/solutions/authentication)
-
-[**FreeOTP Authenticator**](https://freeotp.github.io/)
-
-Diese Authenticator-Apps erzeugen einen zeitlich begrenzten, 6-stelligen Code als Einmalkennwort, ähnlich dem des mobilen Bankings oder Online-Shoppings. Du kannst jede Authentifizierungs-App, die RFC 6238 TOTP-Token unterstützt, verwenden. Der Microsoft Authenticator funktioniert nicht.
-
-2) **Überprüfe die Smartphone-Einstellungen:** Öffne auf dem **AAPS**-Smartphone Einstellungen > Apps > AAPS > Berechtigungen > SMS  > Zulassen
-
-![grafik](../images/remote-control-08.png)
-
-3) **Datum und Uhrzeit synchronisieren:** Überprüfe sowohl auf dem **AAPS**-, als auch auf dem Eltern-Smartphone, dass das Datum und die Uhrzeit synchron sind. Wie Du das genau machen kannst, hängt vom jeweiligen Smartphone ab. Du musst möglicherweise verschiedene Einstellungen ausprobieren.
-
-Beispiel (Samsung S23): Einstellungen - Allgemeine Verwaltung - Datum und Uhrzeit - Datum und Uhrzeit automatisch stellen
-
-Einige Optionen können ausgegraut sein, wenn das Smartphone als Kinder-Smartphone aufgesetzt ist, und daher einen Administrator des Familienkontos benötigt. Diese Datums- und Zeiteinstellung wird auf einem (Eltern-) iPhone „automatisch“ gesetzt. Wenn Du Dir nicht sicher bist, ob beide Smartphones synchronisiert sind, ist das nicht schlimm. Wenn es deswegen zu Problemen kommen sollte, kannst Du das auch nach dem Einrichten der SMS-Befehle lösen (Bitte um Hilfe, wenn Du sie benötigen solltest). Sie sich nicht sicher sind, ob Sie die Telefone synchronisiert haben, machen Sie sich keine Sorgen, Sie können die SMS-Befehle einrichten und danach beheben, falls es zu Problemen zu führen scheint (fragen Sie bei Bedarf um Hilfe).
-
-4) **AAPS-Einstellungen:**
-
-i) Jetzt, wo Deine Smartphone-Einstellungen geprüft sind, gehe in der **AAPS**-App auf das linke Hamburger Menü und tippe auf KONFIGURATION:
-
-![grafik](../images/remote-control-09.png)
-
-ii) Aktiviere den "SMS-Kommunikator“ durch Markieren des Kästchens, und tippe dann auf das "Zahnrad", um zu den SMS-Kommunikator-Einstellungen zu gelangen:
-
-![grafik](../images/remote-control-10.png)
-
-_Hinweis - Ein anderer Weg zu den SMS-Kommunikator-Einstellungen führt über das 3-Punkte-Menü oben rechts._
-
-iii) Aktivieren in den Einstellungen die Option "Erlaube Fernsteuerung per SMS":
-
-![grafik](../images/remote-control-11.png)
-
-iv) Gebe die Rufnummer des/der Eltern-Smartphone(s) ein. Stelle die Landesvorwahl wie im Beispiel unten gezeigt und entferne die erste „0“ der Vorwahl (internationales Format):
-
-UK Telefonnummer: +447976304596
-
-US-Telefonnummer: +11234567890
-
-DE Telefonnummer: +491721234567
-
-_etc._
-
-Bitte beachte, dass je nach Deinem Standort ein vorangestelltes "+" erforderlich sein kann. Um das herauszufinden kannst Du eine Testnachricht senden und auf dem SMS-Kommunikator-Tab nachschauen, welches Format die Telefonnummer hat.
-
-Möchtest Du mehr als eine Rufnummer hinterlegen, müssen diese durch ein Semikolon und OHNE Leerzeichen (das ist wichtig!) getrennt werden. Wähle "OK":
-
-
-![grafik](../images/remote-control-12.png)
-
-v) Wähle eine PIN aus, die Du (und alle Betreuenden) beim Senden eines SMS-Befehls am Ende des Authentifizierungscodes anhängst.
-
-Anforderungen an die PIN sind:
-
-•3 bis 6 Ziffern
-
-•unterschiedliche Ziffern (_d.h._ 1111 oder 1224)
-
-•keine aufsteigenden Reihen (_d.h._ 1234)
-
-![grafik](../images/remote-control-13.png)
-
-vi) Wähle "Konfiguration der Authenticator App" in den SMS-Kommunikator-Einstellungen aus
-
-● Folge den Anweisungen auf dem Bildschirm.
-
-● Öffne die auf dem _Eltern-/Betreuenden-Smartphone_ installierte Authenticator App und füge ein neues Konto bzw. eine neue Verbindung hinzu
-
-●   Scanne den von **AAPS** angezeigten QR-Code mit dem Eltern-/Betreuenden-Smartphone, wenn Du dazu aufgefordert wirst.
-
-●   Teste das Einmal-Passcode (Deine PIN am Ende ergänzen) der Authenticator App auf dem Eltern-/Betreuenden-Smartphone:
-
-Beispiel:
-
-Der von der Authenticator angezeigte Einmal-Passcode ist 457051
-
-Deine zwingend erforderliche PIN ist 2401
-
-Der zu testende Code ist damit: 4570512401
-
-Wenn der Eingabe richtig ist, ändert sich der rote Text „FALSCHE PIN“ automatisch in ein grünes „OK“. Der Prozess ist damit abgeschlossen, es gibt keine "OK"-Taste, der nach der Eingabe des Codes gedrückt werden muss:
-
-
-![grafik](../images/remote-control-14.png)
-
-Es ist nun alles für die Nutzung der SMS-Befehle eingerichtet.
-
-### Erste Schritte bei der Nutzung der SMS-Befehle
-
-1) Um zu überprüfen, ob alles richtig eingerichtet ist, teste die Verbindung, indem Du „bg“ als SMS-Nachricht vom Eltern-Smartphone an das AAPS-Smartphone schickst. Die Rückmeldung sollte in etwa so aussehen:
-
-![grafik](../images/remote-control-15.png)
-
-2) Probiere nun einen SMS-Befehl aus, der den Authentifikator erfordert. Sende dazu eine SMS vom Eltern-Smartphone an das **AAPS**-Smartphone (_z. B._ „target hypo“). Du wirst auf dem Eltern-Smartphonen nun dazu aufgefordert den **6-stelligen Authenticator Code** aus der Authenticator App ergänzt um die geheime **PIN**, die nur den Eltern/Followern bekannt sein darf, einzugeben (10 Stellen insgesamt, davon 6 Stellen Passcode und 4 Stellen PIN, bei einer vierstelligen PIN).
-
-Das Beispiel unten zeigt den SMS-Befehl "target hypo", um ein temporäres Ziel HYPO zu setzen:
-
-● In diesem Beispiel ist Deine PIN 1289
-
-Der von der Authenticator angezeigte Einmal-Passcode ist 274127
-
-●   Sende 2741271289, wenn Du dazu aufgefordert wirst
-
-Die Befehle müssen in Englisch gesendet werden. Die Antwort sollte in Deiner Landessprache erfolgen. Wenn Du das allererste Mal einen SMS-Befehl schicken möchtest, schaue, dass das AAPS-Smartphone neben Dir liegt, sodass Du auf beiden Geräten nachverfolgen kannst was passiert:
-
-![grafik](../images/remote-control-16.png)
-
-Das Eltern-/Betreuenden-Smartphone wird eine SMS von **AAPS** erhalten, die bestätigt, dass der SMS-Befehl erfolgreich remote ausgeführt wurde. Es gibt verschiedene Gründe, warum der Befehl möglicherweise nicht erfolgreich war:
-
-● Die Einrichtung der SMS-Befehle ist nicht vollständig/korrekt
-
-● Der Befehl wurde im falschen Format geschickt (z. B. „disconnect pump 45" anstelle von "pump disconnect 45")
-
-●   Du hast eine falschen oder abgelaufenen Authenticator Code genutzt (es hat sich bewährt einige Sekunden auf einen neuen Code zu warten, wenn der andere nur noch kurz gültig sein sollte)
-
-●   Der Code + PIN waren richtig, aber die SMS-Kommunikation ist verzögert, sodass AAPS angenommen hat, dass der Code abgelaufen ist
-
-● Das AAPS-Smartphone hat keine Verbindung zur Pumpe
-
-● Es läuft zeitgleich eine Bolusabgabe
-
-Wenn Dein SMS-Befehl erfolgreich ausgeführt ist, wird Dir das durch eine Antwort-SMS bestätigt. Du wirst eine Fehlermeldung erhalten, wenn ein Problem aufgetreten sein sollte.
-
-Die Beispiele zeigen häufiger auftretende Fehler:
-
-![grafik](../images/remote-control-17.png)
-
-### Zusätzliche Sicherheitshinweise zu SMS-Befehlen
-
-Der voreingestellte Mindestabstand zwischen zwei Bolus-Befehlen beträgt 15 Minuten. Aus Sicherheitsgründen musst Du mindestens zwei berechtigte Rufnummern hinterlegt haben, um diesen Wert verändern zu können. Wenn Du versuchst innerhalb von 15 Minuten einen weiteren Bolus remote abzugeben, erhältst Du die Fehlermeldung "Bolusabgabe aus der Ferne nicht möglich. Versuch es später erneut.”
-
-Wenn Du einem Betreuenden-Smartphone die Berechtigung zum Senden von SMS-Befehlen entziehen möchtest, sende den SMS-Befehl "SMS stop" oder tippe auf "AUTHENTIFIKATOREN ZURÜCKSETZEN" (s. Screenshot der SMS-Kommunikator-Einstellungen oben, LINK). Durch das Zurücksetzen der Authentifikatoren werden ALLE Eltern-/Betreuenden-Smartphones ungültig. Diese müssen anschließend neu eingerichtet werden.
-
-### Mahlzeitenbolus über SMS-Befehle abgegeben
-
-Ein Remote-Bolus kann _ausschließlich_ durch **SMS-Befehle** abgegeben werden. Er kann nicht über Nightscout oder den AAPSClient ausgelöst werden. Kohlenhydrate jedoch, können auf allen drei Wegen angekündigt werden. Bolus-Befehle und Kohlenhydrate können nicht in einer gemeinsamen SMS gesendet werden. Diese Befehle müssen wie folgt gesendet werden:
-
-1)  Den Bolus über einen SMS-Befehl (_z. B. _“bolus 2” für einen Bolus von 2 IE) auszulösen verhält sich genauso, als ob das "Spritze"-Symbol in **AAPS** genutzt werden würde. 2) Sende die Kohlenhydrate (_z. B._ “carbs 20” wird 20g Kohlenhydrate ankündigen). Das verhält sich genauso, als ob das "Kohlenhydrate"-Symbol in **AAPS** genutzt werden würde.
-
-Um Hypos zu vermeiden, solltest Du zu Beginn **weniger Insulin** bolen, als es Dein Mahlzeitenfaktor vorgeben würde. Das wird gemacht, da in der Regel weder der aktuelle Glukosewert noch der aktuelle Glukosetrend berücksichtigt sind.
-
-**Die Reihenfolge, in der Du die SMS sendest, ist wichtig**. Wenn Du eine große Kohlenhydratmenge (egal auf welchem Weg) ankündigst und SMB aktiviert sind, wird **AAPS** sofort darauf mit einem (Teil)-Bolus reagieren. Wenn Du _nach_ der Ankündigung der Kohlenhydrate, dann versuchst einen Bolus abzugeben, wirst Du eine frustrierende Verzögerung erfahren und eine "Bolusabgabe läuft"-Meldung erhalten. Du wirst dann überprüfen müssen, wie viel Insulin bereits als SMB abgegeben wurde. Oder wenn Dir gar nicht auffällt, dass SMBs abgegeben wurden und Dein eigener Bolus ebenfalls durchgelaufen ist und damit insgesamt zu viel Insulin für die Mahlzeit gebolt wurde. Deshalb schicke, beim remote bolen einer Mahlzeit, den Bolus immer _vor_ der Kohlenhydratankündigung. Wenn Du magst, kannst Du Nightscout, AAPSClient und SMS-Befehle miteinander kombinieren. Kohlenhydrate können ohne Authentifizierung über Nightscout angekündigt werden (siehe Anleitung weiter unten) und sind daher schneller als SMS-Befehle.
-
-### Problembehandlung von SMS-Befehlen und FAQ
-
-#### F: Was kann mit SMS-Befehlen _nicht_ gemacht werden?
-
-1) Ein **zeitlich begrenzter Profilwechsel_ (z. B. ein "Trainings-Profil" für 60 Minuten setzen) ist _nicht über SMS-Befehle möglich**. Ein dauerhafter Profilwechsel auf ein "Trainings-Profil" ist allerdings möglich. Temporäre Profilwechsel können stattdessen über Nightscout oder den AAPSClient erfolgen.
-
-2)  **Automatisierungen** abgebrochen werden oder **benutzerdefinierte Ziele** können nicht gesetzt werden. Es gibt aber vergleichbare Lösungen: Stell' Dir beispielsweise vor, dass in Deinen normalen Profil das Glukoseziel 5.5 bzw. 100 sei. Du hast in AAPS eine Automatisierung erstellt, die in der Nacht zwischen 2:30h und 3:30h wegen des Sportunterrichts ein hohes Ziel von 7.0 bzw. 126 setzt, wenn "temporäres Ziel nicht vorhanden" als Bedingung zutrifft. Dein Kind ist mit dem AAPS-Smartphone bereits in der Schule und in dieser Woche wird der Sportunterricht kurzfristig abgesagt und durch eine Pizza-Party ersetzt. Wenn das hohe temporäre Ziel von 7.0 bzw 126 durch die Automatisierung gesetzt wurde und Du dieses Ziel (am AAPS-Smartphone oder remote) abbrichst, ist die Bedingung weiterhin erfüllt und **AAPS** wird einfach in der nächsten Minute das hohe temporäre Ziel erneut setzen.
-
-**Wenn Du Zugriff auf das AAPS Smartphone hättest**, könntest Du die Automatisierung deaktivieren/anpassenoder wenn Du das nicht machen möchtest, kannst Du einfach für 60 Minuten ein neues temporäres Ziel von 5.6 (bzw. 100 mg/dl) im Reiter AKTIONEN oder durch langes Drücken auf den Ziele-Button. Dadurch wird die Automatisierung daran gehindert, ein hohes Ziel von 7.0 (bzw. 126 mg/dl) zu setzen.
-
-**Wenn Du keinen Zugriff auf das AAPS-Telefon hast**, kannst Du mit SMS-Befehlen eine ähnliche Lösung erreichen: Mit dem Befehl "target meal" kannst Du beispielsweise ein Ziel von 5.0 für 45 Minuten setzen (andere voreingestellte Ziele sind Aktivität 8.0 ( bzw. 144 mg/dl) oder Hypo, siehe Tabelle). Mit SMS-Befehlen kannst Du allerdings keinen _selbstdefinierten_ Zielwert angeben (z. B. von 5.6 für 60 Minuten), dazu brauchst Du den **AAPSClient** oder Nightscout.
-
-#### F: Was passiert, wenn ich es mir nach dem Senden eines Befehls anders überlege?
-
-**AAPS** führt nur den letzten (aktuellen) Befehl aus. Wenn Du also "bolus 1.5" eingibst und dann ohne Authentifizierung einen neuen Befehl „bolus 1“ hinterherschickst, wird der vorherige Befehl (bolus 1.5) ignoriert. **AAPS** sendet dem Eltern-/Betreuenden-Smartphone zunächst immer eine Antwort zur Bestätigung des auszuführenden Befehls, bevor Du dazu aufgefordert wirst, den Authentifizierungscode einzugeben. Danach wird eine Antwort zur ausgeführten Aktion geschickt.
-
-#### F: Warum habe ich keine Antwort auf einen SMS-Befehl erhalten?
-
-Es könnte aus einem dieser Gründe sein:
-
-1) Die Nachricht hat es nicht bis zum AAPS-Smartphone geschafft (Netzwerk-Probleme). 2)  **AAPS** verarbeitet noch eine Anfrage (_z. B._ einen Bolus, der je nach Insulinmenge einige Zeit zur Abgabe benötigt). 3) Das AAPS-Smartphone hat beim Empfang des Befehls eine schwache Bluetooth-Verbindung zur Pumpe und das Kommando konnte nicht ausgeführt werden (dies löst normalerweise einen Alarm auf dem AAPS-Smartphone aus).
-
-#### F: Wie kann ich einen Befehl stoppen, nachdem er bereits authentifiziert wurde?
-
-Er kann nicht gestoppt werden. Du kannst allerdings eine Bolusgabe, die per SMS geschickt wurde direkt auf dem **AAPS**-Smartphone abbrechen, indem Du im Bolus-Popup auf "Abbrechen" tippst. Dazu musst Du aber schnell sein. Viele Befehle (abgesehen von Bolus- und Kohlenhydrat-Ankündigungen) können entweder leicht rückgängig gemacht werden oder deren ungewollte Auswirkungen können abgemildert werden.
-
-Bei Fehlern beim Bolen und Kohlenydrat-Ankündigungen, kannst Du trotzdem handeln. Wenn Du beispielsweise 20 g Kohlenhydrate angekündigt hast, aber Dein Kind isst nur 10 g und Du (oder ein verfügbarer Betreuer) kann die "Behandlung" nicht direkt auf dem **AAPS**-Smartphone löschen, kannst Du ein hohes temporäres Ziel oder ein reduziertes Profil setzen, um **AAPS** weniger aggressiv arbeiten zu lassen.
-
-#### F. Warum erhalte ich auf meinen SMS-Befehl mehrere Antwort-Nachrichten?
-
-Wenn Du Antworten mehrfach erhältst (_z. B._ auf einen Profilwechsel), hast Du möglicherweise versehentlich einen Zirkelbezug mit anderen Apps erzeugt. Das könnte zum Beispiel xDrip+ sein. Falls dies der Fall ist, stelle sicher, dass xDrip+ (oder eine andere App) keine Behandlungsdaten zu Nightscout hochlädt.
-
-#### F. Ich habe gerade die SMS-Befehle eingerichtet und bekomme jetzt viel zu viele SMS-Nachrichten. Kann ich die Häufigkeit reduzieren oder stoppen?
-
-Die Nutzung der SMS-Befehle kann viele automatisierte Nachrichten vom AAPS-Smartphone auf das Smartphone der Eltern/Betreuenden auslösen. Du wirst auch Nachrichten für aktive **AAPS**-Automatisierungen (z. B. “Basal-Profil in der Pumpe aktualisiert”) erhalten. Eine SMS-Flat für den Handyvertrag des AAPS-Smartphones und des Eltern-/Betreuenden-Smartphones wird sehr empfohlen, wenn viele SMS verschickt werden. Es kann auch hilfreich sein, SMS-Benachrichtigungen, Alarme und Vibrationen auf allen Smartphones zu deaktivieren. SMS-Befehle können nur mit den entsprechenden bestätigenden SMS genutzt werden. Falls Du direkt mit Deinem Kind (wenn es alt genug ist) kommunizieren möchtest, solltest Du etwas anderes als SMS dazu nutzen. **AAPS**-Elterrn/Betreuende nutzen daher häufig andere Kommunikations-Apps wie WhatsApp, Lime, Telegram und den Facebook-Messenger.
-
-#### F. Warum funktionieren SMS-Befehle auf meinem Samsung-Smartphone nicht?
-
-Es gab Hinweise, dass nach einem Update des Samsung Galaxy S10 die SMS-Befehle nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als Chat Message senden' behoben werden.
-
-
-![grafik](../images/remote-control-18.png)
-
-#### F. Wie kann ich Probleme mit Android Nachrichten App beheben?
-
-Wenn Du Probleme beim Senden oder Empfangen der SMS mit der Android Nachrichten App haben solltest, deaktiviere die Ende-zu-Ende-Verschlüsselung sowohl auf dem Smartphone des Kindes, als auch auf dem 'Follower'-Smartphone:
-
-●   Öffne den entsprechenden SMS-Nachrichtenverlauf
-
-●   Klicke auf die drei Punkte in der oberen rechten Ecke
-
-Wähle DETAILS aus
-
-Aktiviere NUR ALS SMS/MMS SENDEN
+See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
 
 (aapsclient)=
 ## 2) AAPSClient
@@ -696,11 +433,11 @@ Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the 
 
 Der letzte Schritt ist es, **AAPS** auf dem Smartphone so einzurichten, dass es mit "**AAPS** Wear“ auf der Smartwatch interagiert. Aktiviere dazu das Wear-Plugin in der KONFIGURATION:
 
-●   Gehe zur **AAPS** App auf dem Smartphone
+* Go to the **AAPS** app on the phone
 
-● Wähle > Konfiguration im linken Hamburger Reiter
+* Select > Config Builder in the left-hand Hamburger tab
 
-● Markiere unter dem Punkt Allgemein, Wear für die Auswahl der Wear-Optionen
+* Tick for Wear selection under General
 
 ![grafik](../images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466.png)
 
@@ -728,27 +465,27 @@ Once you have setup **AAPS** on your watch, extensive details about the smartwat
 
 Als kurze Übersicht: Die folgenden Funktionen können von der Smartwatch aus gestartet werden:
 
-●   temporäres Ziel setzen
+* set a temporary target
 
-Bolusrechner verwenden (welche Variablen bei der Berechnung berücksichtigt werden, lässt sich in den  Einstellungen auf dem Smartphone festlegen)
+* use the bolus calculator (calculation variables can be defined in settings on the phone)
 
-●   eCarbs (verzögerte Kohlenhydrate) eintragen
+* administer eCarbs
 
-●   Bolus (Insulin + Kohlenhydrate) abgeben
+* administer a bolus (insulin + carbs)
 
-●   Smartwatch-Einstellungen
+* watch settings
 
-●   Status
+* status
 
-●   Pumpenstatus überprüfen
+* check pump status
 
-●   Loop-Status überprüfen
+* check loop status
 
-●   Profil prüfen und ändern, CPP (Circadian Percentage Profile = Zeitverschiebung + Prozentsatz)
+* check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
 
-●   TDD (Total Daily Dose = Bolus + Basal pro Tag) anzeigen
+* show TDD (Total daily dose = bolus + basal per day)
 
-● Remote-Bolus, wenn Kind und betreuende Person an verschiedenen Orten sind (dies ist möglich, wenn die **AAPS**-Smartwatch und das **AAPS**-Smartphone  mit einem WLAN verbunden sind)
+* Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to a Wifi network)
 
 #### Kommunikation eines Betreuenden zur Smartwatch über andere Apps (wie WhatsApp)
 
