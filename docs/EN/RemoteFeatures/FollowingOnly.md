@@ -1,6 +1,6 @@
 # Following AAPS (no interaction with the AAPS system) 
 
-In addition to the range of possibilities available for remotely controlling _and_ following **AAPS** which are described at [remote control](../RemoteFeatures/RemoteControl.md), there are several additional apps and devices which the community has developed, to simply follow numbers (glucose levels and other information), without interacting with**AAPS**. 
+In addition to the range of possibilities available for remotely controlling _and_ following **AAPS** which are described at [remote control](../RemoteFeatures/RemoteControl.md), there are several additional apps and devices which the community has developed, to simply follow numbers (glucose levels and other information), without interacting with **AAPS**. 
 
 A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage.
 
@@ -48,7 +48,7 @@ The steps to do this are as follows:
 7)	On the Follower phone, install Dexcom Follow by downloading it from the App Store (iPhone) or Play (Android). Set up the Dexcom Follow app, and you will be prompted to open your email to find the invite to be a Follower.    
 8)	You can now delete the official Dexcom G6 app.
 
-For Dexcom Follow, the sensor data is then exported from the**AAPS** phone either directly from BYODA, or from xDrip+, depending on which app you are using. 
+For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip+, depending on which app you are using. 
 
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
@@ -106,13 +106,13 @@ Set xDrip+ as a Nightscout Follower. You will receive BG and treatments, not bas
 
 #### Without Nightscout - xDrip+ BG data source
 
-If your**AAPS** data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+If your **AAPS** data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
 
 ![image](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
 #### Without Nightscout - xDrip+ BG companion app
 
-If your**AAPS** data source is not xDrip+ but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+If your **AAPS** data source is not xDrip+ but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
 
 ![image](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
@@ -214,7 +214,7 @@ Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))
 
 This is a unique piece of technology which can receive glucose data **directly** from the Dexcom G6 transmitter. It is not widely known that a Dexcom G6 transmitter actually broadcasts the current glucose data on _two_ separate channels, a phone channel and a pump channel. The Bluejay GTS watch runs a modified version of xDrip+ software, and can be set to receive glucose data on either channel, so if **AAPS **  is using the phone channel, then the Bluejay GTS watch can use the pump channel. 
 
-The Bluejay GTS watch is small, waterproof and reasonably affordable (currently £115 GBP) and can be shipped internationally from the UK. The key advantage is that it is currently the only watch which is completely independent of both the phone and the looping system. So, for example, if you disconnect the pump and the **AAPS**  phone at the beach or flume park, and are out of range of the**AAPS** phone, you can still get readings from the Dexcom G6 directly to the Bluejay watch.
+The Bluejay GTS watch is small, waterproof and reasonably affordable (currently £115 GBP) and can be shipped internationally from the UK. The key advantage is that it is currently the only watch which is completely independent of both the phone and the looping system. So, for example, if you disconnect the pump and the **AAPS** phone at the beach or flume park, and are out of range of the **AAPS** phone, you can still get readings from the Dexcom G6 directly to the Bluejay watch.
 
 Reported disadvantages are that it doesn’t always pick up a reading every 5 min, and the battery is not replaceable. The Bluejay GTS watch runs a modified version of xDrip+ software, and it currently doesn’t work with other Dexcom versions (G7) or Libre sensors.  
 
