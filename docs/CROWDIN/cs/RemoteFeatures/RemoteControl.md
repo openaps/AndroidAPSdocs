@@ -17,6 +17,7 @@ První tři jsou většinou vhodné pro pečovatele/rodiče, ale chytré hodinky
 5.  Příklady odlišných plánů léčby pro děti různého věku můžete nalézt v oddíle ["soubory"](https://www.facebook.com/groups/AndroidAPSUsers/files/) ve Facebookové skupině **AAPS**.
 6.  Jaký je váš nouzový plán pro případy, kdy vzdálená kontrola nefunguje (_např._ problémy se sítí nebo ztráta konektivity bluetooth)?  Vždy zvažujte, co se stane s **AAPS** ve chvíli, kdy nemůžete odeslat příkazy. **AAPS** přepíše v pumpě nastavení bazálů, ISF a ICR aktuálními hodnotami profilu. Vždy používejte pouze dočasné přepnutí profilu (tzn. s nastavenou dobou trvání) pokud přepínáte na silnější inzulínový profil, pro případ že by došlo k přeručení spojení. Tak se po vypršení nastaveného času vrátí nastavení pumpy k původnímu profilu.
 
+(RemoteControl-sms-commands)=
 ## 1) SMS příkazy
 
 ```{admonition} Documentation
@@ -362,7 +363,7 @@ If you are struggling with **AAPS** v3 to accept the 'NS access token' and using
 
 **AAPSClient** umožňuje pečovateli provádět vzdáleně všechna nastavení, která umožňuje **AAPS** (s výjimkou posílání bolusů), prostřednictvím mobilních dat nebo internetu. Hlavními výhodami **AAPSClient** jsou rychlost a jednoduchost, s jakou mohou pečovatelé/rodiče použít ke vzdálenému ovládání **APPS**. __AAPSClient__ _může_ být mnohem rychlejší než posílání SMS příkazů, které vyžadují ověření. Příkazy zadané v **AAPSClient** jsou nahrány do Nightscoutu.
 
-Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](../Maintenance/ReleaseNotes#version-2811) for further details.
+Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](#important-hints-2-8-1-1) for further details.
 
 ### AAPSClient a možnosti chytrých hodinek
 
@@ -475,7 +476,7 @@ Vezměte prosím na vědomí, že tato tabulka byla vypracována v roce 2023, ne
 
 ### Než si koupíte smartwatch…
 
-Přesný model chytrých hodinek, který kupujete, závisí na požadovaných funkcích. V současné době existují dvě historické tabulky, které zaznamenávají kompatibilní [chytré telefony](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) a [chytré telefony a hodinky](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435), ale tyto už nebudou nadále aktualizovány, protože kvůli obrovskému množství možností je snazší se zeptat prostřednictvím Discord a Facebookové skupiny.
+Přesný model chytrých hodinek, který kupujete, závisí na požadovaných funkcích. You may find useful information on the [Phones page](../CompatiblePhones/ListOfTestedPhones.md), including a list a tested phones that also contains some smartwatches.
 
 Mezi oblíbené značky patří Samsung Galaxy, Garmin, Fossil, Mi a Fitbit. Různé možnosti, které jsou shrnuty v tabulce výše, jsou níže vysvětleny podrobněji, abysme vám pomohli s rozhodnutím, které smartwatch jsou ve vaší situaci ty správné.
 
@@ -532,7 +533,7 @@ a)  **AAPSClient**/Nightscout/**SMS** příkazy nemohou fungovat; nebo
 
 b) uživatel se chce vyhnout potřebě autentizace (jak je požadováno pro sledovací telefon se zadáním dat, výběrem TT nebo zadáním sacharidů).
 
-Chytré hodinky musí mít systém **Android wear** (ideálně 10 nebo vyšší), aby mohl ovládat **AAPS**. Please check the technical specifications of the watch, and check the [spreadsheet of compatible watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). Pokud si nejste jistí, vyhledejte si informace ve v **AAPS** skupinách na Facebook/Discord.
+Chytré hodinky musí mít systém **Android wear** (ideálně 10 nebo vyšší), aby mohl ovládat **AAPS**. Please check the technical specifications of the watch, and check the [Phones page](../Getting-Started/Phones.md). Pokud si nejste jistí, vyhledejte si informace ve v **AAPS** skupinách na Facebook/Discord.
 
 Konkrétní návody jak nastavit **AAPS** na Samsung Galaxy Watch 4 (40 mm) jsou uvedeny níže. Hodinky [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) jsou také oblíbenou volbou. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
 
@@ -599,7 +600,7 @@ Buďte trpěliví - **AAPS** Wear apk by měl být sestaven přibližně za 10-2
 
 ### Troubleshooting
 
-V procesu vytváření plné **AAPS** aplikace verze 3.2 (a vlastně jakékoli podepsané aplikace) Android Studio vygeneruje ve stejném adresáři soubor s příponou .json. This then causes errors with [uncommitted changes](../GettingHelp/TroubleshootingAndroidStudio#uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. Nejrychlejší způsob, jak to vyřešit, je přejít do složky, kde byla sestavena plná aplikace AAPS. Vaše složka je pravděpodobně na adrese:
+V procesu vytváření plné **AAPS** aplikace verze 3.2 (a vlastně jakékoli podepsané aplikace) Android Studio vygeneruje ve stejném adresáři soubor s příponou .json. This then causes errors with [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. Nejrychlejší způsob, jak to vyřešit, je přejít do složky, kde byla sestavena plná aplikace AAPS. Vaše složka je pravděpodobně na adrese:
 
 C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release.
 
@@ -626,6 +627,7 @@ Aplikace „Galaxy Wearable“ má také integrovaný manuál. Otevřete aplikac
 
 Musíte se ujistit, že e-mailový účet, který používáte pro nastavení účtu Samsung, má nastavené takové datum narození, že uživatel je ve věku 13+, jinak bude problém se schválením oprávnění Samsung. Pokud je účet založen na vaše dítě mladší 13 let a chcete použít tuto adresu, nebudete mít možnost to snadno změnit na účet dospělého. Jedním ze způsobů, jak to obejít, je upravit současné datum narození tak, aby se současný věk stal 12 let a 363 dní. Následující den bude účet převeden na účet pro dospělé a můžete pokračovat v nastavení účtu Samsung.
 
+(remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 ##### Přenos aplikace **AAPS** Wear na váš **AAPS** telefon
 
 Načtení Wear.apk z Android Studio do telefonu může být provedeno buď:
@@ -780,7 +782,7 @@ Pro stažení softwaru klikněte na požadovanou aplikaci (na tomto snímku obra
 
 
 
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#transferring-the-aaps-wear-app-onto-your-aaps-phone)
+The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)
 
 ### Možnost 4) Omezený Nightscout (a další možnosti) na hodinkách - Fitbit hodinky
 

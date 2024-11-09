@@ -25,7 +25,7 @@
 
 > Компонент, который будет работать с AAPS и отправлять команды управления устройству Pod.
 > 
-> > - Supported [Omnipod driver Android phone](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) with a version of AAPS 2.8 and related components set up.
+> > - Supported [Omnipod driver Android phone](../CompatiblePhones/ListOfTestedPhones.md) with a version of AAPS 2.8 and related components set up.
 
 - ![POD Omnipod](../images/omnipod/Omnipod_Pod.png)  **Устройство подачи инсулина**
 
@@ -360,6 +360,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 > - **Последняя Контактная запись устройства:** Дата и время последнего контакта c устройством соединения.
 > - **Кнопка Обновить** вручную обновите настройки на этой странице.
 
+(omnipod-eros-rileylink-and-active-pod-history)=
 #### RileyLink и журнал активного Пода
 
 На этом экране отображается информация в обратном хронологическом порядке каждого состояния или действия, которые выполняют в данный момент либо выполнили RileyLink и активный Pod. Вся история доступна только для текущего активного pod, после замены Pod журнал будет удален и будут записаны и показаны только события из вновь активированного Pod.
@@ -428,7 +429,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 - **Всего подано** Отображает общее количество единиц инсулина, доставленных из резервуара. *Обратите внимание, что это приблизительная величина, поскольку первичное заполнение POD не является точным процессом.*
 
-- **Ошибки:** Отображает последнюю возникшую ошибку. Review the [Pod history](#view-pod-history), [RileyLink history](#rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **Ошибки:** Отображает последнюю возникшую ошибку. Review the [Pod history](#view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
 - **Активные оповещения Pod** зарезервировано для текущих оповещений на активном Pod. Обычно используется при истечении срока действия pod последние 72 часа, а звуковые оповещения работают.
 
@@ -540,7 +541,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
   > При нажатии эта кнопка сбрасывает текущую конфигурацию подключенного коммуникационного устройства.
   > 
   > > - Когда начата коммуникация, в RileyLink передаются и настраиваются следующие данные > - установлены регистры памяти > -  установлены протоколы связи > - настроена частота 
-  > > - See [additional notes](#reset-rileylink-config-notes) at the end of this table
+  > > - See [additional notes](#OmnipodEros-reset-rileylink-config-notes) at the end of this table
 
 - **Читать журнал импульсов:**
 

@@ -26,29 +26,31 @@ In Abhängigkeit vom von Dir in **AAPS** gewählten Empfindlichkeits-Algorithmus
 
 Nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit verworfen, werden also bei Berechnungen nicht mehr berücksichtigt:
 
-![Oref1](../images/cob_oref0_orange_II.png)![Screenshot 2024-10-05 161009](https://github.com/user-attachments/assets/e4eb93b2-bc93-462d-b4d6-854bb9264953)
+![Oref1](../images/cob_oref0_orange_II.png)
+
+![Screenshot 2024-10-05 161009](../images/cob_oref0_orange_I.png)
 
 
 ## Kohlenhydrat-Empfindlichkeit - Gewichteter Mittelwert
 
-Die Kohlenhydrat-Aufnahme wird so berechnet, dass nach einer vorgegebener Zeit COB = 0 ist:
+Absorption is calculated to have COB = 0 after specified time:
 
-![AAPS, Gewichtetes Mittel](../images/cob_aaps2_orange_II.png)
+![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
 
-In der **COB**-Kurve wird ein orangener Punkt angezeigt, wenn die minimale Kohlenhydrat-Aufnahme (min_5m_carbimpact) anstelle eines aus den Entwicklungen des **Glukosewertes** berechneten Wertes verwendet wird.
+If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
 
-
+(CobCalculation-detection-of-wrong-cob-values)=
 ## Erkennung Fehlerhafter COB-Werte
 
-**AAPS** wird Dich warnen, wenn Du dabei bist einen Bolus abzugeben bei dem **COB**-Werte einer vorherigen Mahlzeit berücksichtigt werden, der Algorithmus aber erkennt, dass die  aktuelle **COB**-Berechnung nicht korrekt ist. In dieser Situation gibt es beim Nutzen des Bolus-Rechners einen zusätzlichen Hinweis im Bestätigungsfenster.
+**AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
 
 ### Wie erkennt AAPS falsche COB-Werte?
 
-Normalerweise erkennt __AAPS__ eine Kohlenhydrat-Aufnahme anhand von **Glukosewert**-Veränderungen. Incase the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](../SettingUpAaps/Preferences.md#min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). Da dieses Verfahren nur die minimale Kohlenhydrat-Aufnahme ohne Berücksichtigung von Glukosewert-Änderungen berechnet, kann dies zu falschen COB-Werten führen.
+Ordinarily __AAPS__ detects carb absorption through **BG** deviations. Incase the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
 
-![Hinweis fehlerhafte COB Werte](../images/Calculator_SlowCarbAbsorption.png)
+![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
 
-In der Abbildung oben wurde 41% der Kohlenhydrat-Resorption durch min_5m_carbimpact statt des Wertes, der bei Abweichungen festgestellt wurde, mathematisch berechnet. Das deutet darauf hin, dass weniger Kohlenhydrate aktiv sind (**COB**), als es vom Algorithmus berechnet wurde.
+In the screenshot above, 41% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
 
 ### Wie kann man mit dieser Warnung umgehen?
 
@@ -60,7 +62,7 @@ In der Abbildung oben wurde 41% der Kohlenhydrat-Resorption durch min_5m_carbimp
 
 ### Warum erkennt der Algorithmus COB nicht richtig?
 
-Das kann folgende Gründe haben:
+This could be because:
 - Die Kohlenhydratmenge wurde bei der Eingabe potenziell überschätzt.
 - Sportliche Aktivität oder Bewegung nach der vorangegangenen Mahlzeit.
 - Dein IC-Wert (dt. KH-Faktor) muss angepasst werden.
@@ -69,13 +71,13 @@ Das kann folgende Gründe haben:
 
 ## Manuelle Korrektur der eingegebenen Kohlenhydrate
 
-If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs).
+If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](#screens-bolus-carbs).
 
 
 ## Kohlenhydrate korrigieren - wie KH-Einträge aus den Behandlungen gelöscht werden
 
 
-Die Registerkarte „Behandlungen“ kann zur Korrektur eines fehlerhaften KH-Eintrags genutzt werden, in dem der Eintrag dort herausgelöscht wird. Dies kann dann notwendig sein, wenn die Kohlenhydratmenge über- oder unterschätzt wurde:
+The ‘Treatments’ tab can be used to correct a faulty carb entry by deleting the entry in Treatments. This may be because the user over or underestimated the carb entry:
 
 ![COB_Screenshot 2024-10-05 170124](https://github.com/user-attachments/assets/e123d85d-907e-4545-bf1b-09fee4d42555)
 

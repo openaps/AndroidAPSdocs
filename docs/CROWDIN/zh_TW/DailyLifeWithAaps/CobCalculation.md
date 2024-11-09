@@ -26,7 +26,9 @@
 
 未吸收的碳水化合物將在指定時間後將被切斷:
 
-![Oref1](../images/cob_oref0_orange_II.png)![截圖 2024-10-05 161009](https://github.com/user-attachments/assets/e4eb93b2-bc93-462d-b4d6-854bb9264953)
+![Oref1](../images/cob_oref0_orange_II.png)
+
+![截圖 2024-10-05 161009](../images/cob_oref0_orange_I.png)
 
 
 ## 碳水化合物敏感因子 - 加權平均
@@ -37,14 +39,14 @@
 
 如果使用最小碳水化合物吸收值（min_5m_carbimpact）而不是從**血糖**變化計算出的值，**COB** 圖上將出現一個橙色圓點。
 
-
+(CobCalculation-detection-of-wrong-cob-values)=
 ## 偵測錯誤的 COB 值
 
 假如演算法偵測到目前的 **COB** 計算不正確，**AAPS**  會在使用者準備進行注射時發出警告，這裡的 **COB** 是指之前吃東西輸入的碳水。 在這種情況下，系統會在使用者使用注射嚮導後，於確認畫面上出現額外的提示
 
 ### AAPS 如何偵測錯誤的 COB 值？
 
-通常 __AAPS__ 會透過 **血糖** 變化來偵測碳水化合物的吸收狀況。 如果使用者輸入了碳水化合物，但 **AAPS** 無法透過 **血糖** 變化偵測到預估的吸收量，系統會改用 [min_5m_carbimpact](../SettingUpAaps/Preferences.md#min_5m_carbimpact) 這個方法來計算吸收量（這稱為「備用」計算方式）。 但因為這個方法只會計算最低的碳水化合物吸收量，而不考慮 **血糖** 的變化，所以也可能會導致 COB 數值不正確。
+通常 __AAPS__ 會透過 **血糖** 變化來偵測碳水化合物的吸收狀況。 如果使用者輸入了碳水化合物，但 **AAPS** 無法透過 **血糖** 變化偵測到預估的吸收量，系統會改用 [min_5m_carbimpact](#Preferences-min_5m_carbimpact) 這個方法來計算吸收量（這稱為「備用」計算方式）。 但因為這個方法只會計算最低的碳水化合物吸收量，而不考慮 **血糖** 的變化，所以也可能會導致 COB 數值不正確。
 
 ![錯誤 COB 值的提示](../images/Calculator_SlowCarbAbsorption.png)
 
@@ -69,7 +71,7 @@
 
 ## 手動修正輸入的碳水化合物
 
-如果碳水化合物被高估或低估，則可以通過治療選項卡和動作選項卡 / 選單進行修正，如 [這裡](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs) 所述。
+如果碳水化合物被高估或低估，則可以通過治療選項卡和動作選項卡 / 選單進行修正，如 [這裡](#screens-bolus-carbs) 所述。
 
 
 ## 碳水化合物更正—如何從「治療」中刪除碳水化合物的項目

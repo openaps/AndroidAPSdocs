@@ -18,6 +18,7 @@ An artificial pancreas can be thought of as an [“autopilot for your diabetes�
 
 ![image](../images/autopilot.png)
 
+(Introduction-what-does-hybrid-closed-loop-mean)=
 ## Τι σημαίνει υβριδικό κλειστό κύκλωμα;
 
 Η καλύτερη λύση για τον διαβήτη τύπου 1 θα ήταν μια "λειτουργική θεραπεία" (πιθανώς ένα εμφύτευμα παγκρεατικών κυττάρων τα οποία προστατεύονται από το ανοσοποιητικό σύστημα). Ενώ περιμένουμε για αυτό, ένας «πλήρες κλειστός βρόχος» τεχνητού παγκρέατος είναι ίσως το επόμενο καλύτερο πράγμα. Αυτό είναι ένα τεχνολογικό σύστημα που δεν χρειάζεται καμία είσοδο χρήστη (όπως bolusing ινσουλίνη για τα γεύματα, ή ανακοινώνοντας την άσκηση), με καλή ρύθμιση των επιπέδων γλυκόζης στο αίμα. Προς το παρόν, δεν υπάρχουν ευρέως διαθέσιμα συστήματα τα οποία είναι «πλήρως» κλειστοί βρόχοι, όλοι χρειάζονται κάποια είσοδο χρήστη. Τα σημερινά διαθέσιμα συστήματα που ονομάζονται "υβριδικοί"κλειστοί βρόχοι, επειδή χρησιμοποιούν ένα συνδυασμό αυτοματοποιημένης τεχνολογίας και εισόδου χρήστη.
@@ -44,7 +45,7 @@ Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (whi
 
 ## Ποια είναι τα βασικά στοιχεία του AAPS;
 
-Ο "εγκέφαλος" του AAPS είναι μια εφαρμογή **** την οποία χτίζετε μόνοι σας. Υπάρχουν λεπτομερείς οδηγίες βήμα προς βήμα για αυτό. You then install the **AAPS  app** on a [compatible](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit?pli=1#gid=2097219952) **Android smartphone** (**1**). Πολλοί χρήστες προτιμούν το loop τους σε ένα ξεχωριστό τηλέφωνο από το κύριο τηλέφωνό τους. So, you don’t necessarily have to be using an Android phone for everything else in your life, just for running your AAPS loop.
+Ο "εγκέφαλος" του AAPS είναι μια εφαρμογή **** την οποία χτίζετε μόνοι σας. Υπάρχουν λεπτομερείς οδηγίες βήμα προς βήμα για αυτό. You then install the **AAPS  app** on a [compatible](../Getting-Started/Phones.md) **Android smartphone** (**1**). Πολλοί χρήστες προτιμούν το loop τους σε ένα ξεχωριστό τηλέφωνο από το κύριο τηλέφωνό τους. So, you don’t necessarily have to be using an Android phone for everything else in your life, just for running your AAPS loop.
 
 The **Android smartphone** will also need to have another app installed on it as well as **AAPS**. This is either a modified Dexcom app called build-your-own dexcom app [**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) or [**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/). This additional app receives glucose data from a sensor (**2**) by bluetooth, and then sends the data internally on the phone to the **AAPS app**.
 
@@ -188,7 +189,7 @@ If a malicious attack was made on your insulin pump, these strategies would sign
 
 #### Safety considerations around improving blood glucose control too fast
 
-A rapid reduction in HbA1c and improved blood glucose control sounds appealing. However, reducing average blood glucose levels _too fast_ by starting any closed loop system can cause permanent damage, including to the eyes, and painful neuropathy that never goes away. This damage can be avoided simply by reducing levels more slowly. If you currently have an elevated HbA1c and are moving to AAPS (or any other closed loop system), please discuss this potential risk with your clinical team before starting, and agree a timeplan with them. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](../Getting-Started/PreparingForAaps.md#safety-first).
+A rapid reduction in HbA1c and improved blood glucose control sounds appealing. However, reducing average blood glucose levels _too fast_ by starting any closed loop system can cause permanent damage, including to the eyes, and painful neuropathy that never goes away. This damage can be avoided simply by reducing levels more slowly. If you currently have an elevated HbA1c and are moving to AAPS (or any other closed loop system), please discuss this potential risk with your clinical team before starting, and agree a timeplan with them. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](#preparing-safety-first).
 
 #### Medical safety around devices, consumable supplies and other medications
 
@@ -196,7 +197,7 @@ Use a tested, fully functioning FDA or CE approved insulin pump and CGM for an a
 
 Use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer of your pump and CGM. Η χρήση μη δοκιμασμένων ή τροποποιημένων αναλωσίμων μπορεί να προκαλέσει ανακρίβεια CGM και σφάλματα δοσολογίας ινσουλίνης. Insulin is highly dangerous when misdosed - please do not play with your life by hacking your supplies.
 
-Do not take SGLT-2 inhibitors (gliflozins) when using **AAPS** as they incalculably lower blood sugar levels. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](../Getting-Started/PreparingForAaps.md#safety-first).
+Do not take SGLT-2 inhibitors (gliflozins) when using **AAPS** as they incalculably lower blood sugar levels. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](#preparing-safety-first).
 
 (introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
 ## How can I approach discussing AAPS with my clinical team?

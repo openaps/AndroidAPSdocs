@@ -44,6 +44,7 @@ Ein [Kommentar](https://academic.oup.com/brain/article/138/1/2/340563) zu dieser
 
 Es wird allgemein anerkannt, dass _neu_ diagnostizierte Typ-1 Diabetiker (die bei der Diagnose und vor der dem Beginn der Insulintherapie häufig sehr hohe HbA1c haben) in der Lage zu sein scheinen, ihren HbA1c, ohne das die Risiken im gleichen Maß steigen, schnell zu senken, da ihre Blutzuckerwerte vorher für einen so langen Zeitraum nicht erhöht waren. Dennoch ist es überlegenswert, dies mit Deinem Diabetes-Team zu besprechen.
 
+(PreparingForAaps-no-sglt-2-inhibitors)=
 ### Keine SGLT-2-Hemmern
 
 ```{admonition} NO SGLT-2 inhibitors
@@ -121,7 +122,7 @@ Dieser Abschnitt zielt darauf ab, neuen Benutzern Links zu Ressourcen bereitzust
 
 #### [Abschnitt für Mediziner und Fachpersonal](../Resources/clinician-guide-to-AndroidAPS.md)
 
-This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](./Introduction.md#how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
 
 ## Was werden wir bauen und installieren?
 
@@ -150,7 +151,7 @@ Um Glukosewerte zu empfangen und an **AAPS** weiterzureichen, benötigst Du die 
 
 Mit dem Erscheinen von verbesserten Versionen müssen **Nightscout** und **AAPS** ungefähr einmal pro Jahr aktualisiert werden. In einigen Fällen kann das Update verschoben werden, in anderen Fällen wird es dringend empfohlen oder ist aus Sicherheitsgründen zwingend erforderlich. In Facebook-Gruppen und Discord-Kanälen wird über diese Updates informiert werden. Die Release Notes werden das entsprechende Szenario beschreiben. Dadurch das viele Leute gleichzeitig durch den Update-Prozess gehen, werden sich deren Fragen mit Deinen ähneln und Dir die Antworten darauf auch helfen.
 
-(preparing-how-long-will-it-take?)=
+(preparing-how-long-will-it-take)=
 ## Wie lange wird es dauern, alles einzurichten?
 
 Wie schon erwähnt, ist die **AAPS**-Nutzung eher eine „Reise“, die es notwendig macht, dass Du Deine Zeit in sie investierst. Es ist kein einmaliger Aufwand. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
@@ -211,13 +212,7 @@ Diese Dokumentation möchte die notwendige technische Expertise auf ein absolute
 Die aktuelle **AAPS**-Version (3.2) setzt ein Android Smartphone mit Google **Android 9.0 oder höher** voraus. Wenn Du aktuell darüber nachdenkst Dir ein neues Smartphone zuzulegen, wäre Android 13 (Stand: Juli 2024) zu bevorzugen. Aus Sicherheitsgründen wird Dir dringend empfohlen Deine **AAPS**-Version immer auf dem letzten Stand zu halten bzw. zu bringen. Wenn Dein Smartphone kein Android 9.0 oder höher haben sollte, steht Dir eine ältere **AAPS**-Version zur Verfügung, die mit [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) und [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2) kompatibel ist. (Du findest diese Vorversionen in den Release Notes dieses Dokumentes).
 
 #### Smartphone-Modell wählen
-Welches genaue Modell Du kaufen solltest, hängt von den gewünschten Funktionen ab. Es gibt zwei (mittlerweile archivierte) Arbeitsblätter mit kompatiblen [Smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) und [Smartphones und Smartwatches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). Diese Übersichten werden nicht mehr aktualisiert, da es mittlerweile zu viele Modelle auf dem Markt gibt. Wir empfehlen Dir daher, die entsprechenden Supportgruppen (Facebook oder Discord) mit dem Schlagwort "phone" oder dem jeweiligen Modell, das Du kaufen möchtest, zu durchsuchen. Wenn Du dann darüber hinaus Informationen benötigen solltest, erstelle einen neuen Beitrag mit Deinen Fragen.
-
-Falls Du Smartphones oder Smartwatch-Modelle für Tests spenden möchtest, sende eine E-Mail an [donations@androidaps.org](mailto:donations@androidaps.org).
-
-- [Liste von getesteten Smartphones](../CompatiblePhones/ListOfTestedPhones.md)
-- [Jelly Einstellungen](../CompatiblePhones/Jelly.md)
-- [Huawei Einstellungen](../CompatiblePhones/Huawei.md)
+Welches genaue Modell Du kaufen solltest, hängt von den gewünschten Funktionen ab. You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
 
 Das Smartphone sollte regelmäßig Sicherheitsupdates erhalten und stets auf der aktuellen Android-Version gehalten werden. Wenn Du mit AAPS noch nicht sehr vertraut bist oder kein technischer Experte bist, solltest Du mit dem jeweiligen Update warten, bis andere das Update erfolgreich gemacht haben und in den verschiedenen Foren bestätigt haben, dass es problemlos durchgeführt werden kann.
 

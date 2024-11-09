@@ -3,14 +3,14 @@
 ```{admonition} Documentation
 :class: note
 
-This section may contain outdated content. Please also see the page [SMS Commands](../RemoteFeatures/RemoteControl.md#1-sms-commands)).
+This section may contain outdated content. Please also see the page [SMS Commands](#RemoteControl-sms-commands)).
 
 ```
 
 ## Bezpečnost především
 .
 - AAPS umožňuje vládat telefon vašeho dítěte na dálku prostřednictvím textových zpráv. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN. Doporučuje se zvolit si silné heslo nebo biometrické údaje.
-- Additionally it is recommended to allow a [second phone number](../RemoteFeatures/SMSCommands.md#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](../RemoteFeatures/SMSCommands.md#other) SMS communicator in case your main remote phone gets lost or stolen.
+- Additionally it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#SMSCommands-other) SMS communicator in case your main remote phone gets lost or stolen.
 - AAPS vás bude textovou zprávou informovat, že byl poslaný příkaz (bolus, změna profilu apod.) úspěšně vykonán. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
 - **Pokud jste zadali bolus prostřednictvím SMS příkazů, musíte přes Nightscout (AAPSClient, webovou stránku...) zadat odpovídající množství sacharidů!** Jestliže to neuděláte, bude IOB kalkulováno oproti nízkému COB. Případný korekční bolus pak nemusí být vydán, protože AAPS předpokládá, že máte příliš mnoho aktivního inzulínu.
 - Od AAPS verze 2.7 musí být kvůli zvýšení bezpečnosti při posílání SMS použita autentizační aplikace s časově omezeným jednorázovým heslem.
@@ -24,6 +24,7 @@ This section may contain outdated content. Please also see the page [SMS Command
 - Používáte-li ke sledování iPhone, nemůžete použít AAPSClient. Pak máte k dispozici pouze SMS příkazy.
 - Ve vašem Android telefonu přejděte do jeho systémového nastavení, následně do Aplikace > AndroidAPS > Oprávnění a povolte SMS
 
+(SMSCommands-authorized-phone-numbers)=
 ### Schválená telefonní čísla
 
 - V AAPS přejděte do **Nastavení > SMS komunikátor** a zadejte telefonní číslo (čísla), ze kterých umožníte přijímat příkazy SMS (čísla oddělená středníkem – např. +6412345678;+6412345679)
@@ -96,9 +97,10 @@ This section may contain outdated content. Please also see the page [SMS Command
 
 **Tip**:: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
 
+(SMSCommands-commands)=
 ## Příkazy
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../SupportingAaps/Translations#translate-strings-for-aaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app).
 
 ![Příklad SMS příkazů](../images/SMSCommands.png)
 
@@ -155,7 +157,7 @@ Vzdálený bolus není povolen do 15 minut (tato hodnota je upravitelná pouze v
 - PROFILE 1 \* Odpověď: Pro přepnutí profilu na Profil1 100% odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 - PROFILE 2 30 \* Odpověď: Pro přepnutí profilu na Profil2 30% odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 
-
+(SMSCommands-other)=
 ### Jiné
 
 - TREATMENTS REFRESH \* Odpověď: Obnovit ošetření z NS
@@ -169,6 +171,7 @@ Vzdálený bolus není povolen do 15 minut (tato hodnota je upravitelná pouze v
 - HELP \* Odpověď: BG, LOOP, TREATMENTS, .....
 - HELP BOLUS \* Odpoveď: BOLUS 1.2 BOLUS 1.2 MEAL
 
+(SMSCommands-troubleshooting)=
 ## Troubleshooting
 
 ### Duplicitní SMS

@@ -21,10 +21,6 @@ Pagrindiniame ekrane atkreipkite dėmesį į angliavandenius skliausteliuose AAO
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
-Ateities angliavandeniai Terapijos skirtuke žymimi tamsiai oranžine spalva:
-
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
@@ -53,7 +49,7 @@ Kai kurie žmonės vis dar prašė parinkties AAPS naudoti ištęstinius bolusus
 
 - Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
 - Bolus units, remaining and total time will be shown on homescreen.
-- On Insight pump extended bolus is *not available* if [TBR emulation](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
+- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 

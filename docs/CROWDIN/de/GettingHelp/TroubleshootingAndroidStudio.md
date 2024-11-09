@@ -14,7 +14,7 @@ Falls Du deinen alten keystore oder das dazugehörige Passwort nicht mehr wieder
 4. Generate signed apk of new version as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
 5. Deinstallieren die Vorgängerversion von AAPS auf Deinem Smartphone.
 6. Installiere die neue AAPS-Version auf Deinem Smartphone.
-7. [Import settings](../Maintenance/ExportImportSettings.md#restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+7. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
 
    Falls du die Einstellungen nicht findest, kopiere sie von deinem externen Speicher auf dein Smartphone.
 
@@ -51,7 +51,7 @@ Falls Du eine Fehlermeldung bekommst, die so aussieht
 
     Hinweis: Es ist ein Leerzeichen und zwei Bindestriche zwischen git und version!
 
-  * Im Terminal sollte ein Hinweis erscheinen, der übermittelt welche git Version installiert ist (siehe Screenshot oberhalb). In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
+  * Im Terminal sollte ein Hinweis erscheinen, der übermittelt welche git Version installiert ist (siehe Screenshot oberhalb). In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
   * Falls du einen Hinweis wie diesen bekommst
     ```
@@ -59,7 +59,7 @@ Falls Du eine Fehlermeldung bekommst, die so aussieht
     ```
     ist deine git Installation fehlerhaft.
 
-  * [Prüfe die git Installation](../SettingUpAaps/BuildingAaps.md#steps-for-installing-git)
+  * [Prüfe die git Installation](#BuildingAaps-steps-for-installing-git)
 
   * Falls du mit Windows arbeitest und Git erst kurz zuvor installiert wurde, solltest du deinen Computer neu starten, um Git nach der Installation global verfügbar zu machen
 
@@ -75,6 +75,7 @@ Falls Du eine Fehlermeldung bekommst, die so aussieht
 
   * Starte Android Studio neu.
 
+(troubleshooting-android-studio-check-for-uncommitted-changes)=
 #### Schritt 2: Prüfe, ob es uncommitted changes gibt.
 
   * In Android Studio: öffne den "Commit" Tab (1) auf der linken Seite. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
@@ -179,7 +180,7 @@ Wenn Du die Apk generierst, bekommst Du möglicherweise den Hinweis, dass das Ge
 
 ![APK mit 0 Build-Varianten erstellt](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-Diese Warnung ist falsch. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk)) and you will find the generated apk there!
+Diese Warnung ist falsch. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
 
 
 ## App was created with compiler/kotlin warnings
@@ -202,9 +203,9 @@ Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Wind
 
 ## AAPS empfängt keine CGM-Daten
 
-* Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Use the [BYODA](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../CompatibleCgms/xDrip.md#identify-receiver).
+* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](#xdrip-identify-receiver).
 
 
 ## App not installed
@@ -223,7 +224,7 @@ Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Wind
 
 ## App installiert, aber weiter die alte Version auf dem Smartphone
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Maintenance/UpdateToNewVersion.md#2-update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
 ## Keiner der oben genannten Löungsvorschläge funktioniert
 
@@ -235,7 +236,7 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
 
     Oder verwende einfach einen neuen keystore.
 
-3. Build app from scratch as described [here](../SettingUpAaps/BuildingAaps.md#download-the-aaps-code).
+3. Build app from scratch as described [here](#Building-APK-download-AAPS-code).
 
 4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
 5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
@@ -249,4 +250,4 @@ Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, kö
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../SettingUpAaps/BuildingAaps.md#install-android-studio).
+Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).

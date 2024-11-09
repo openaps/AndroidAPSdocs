@@ -21,10 +21,6 @@ Die eCarbs auf dem Homescreen, beachte die Kohlenhydrate in Klammern im COB-Feld
 
 ![eCarbs im Diagramm](../images/eCarbs_Graph.png)
 
-Kohlenhydrat-Einträge, die in der Zukunft liegen, sind auf dem Behandlungen-Reiter dunkelorange:
-
-![eCarbs in der Zukunft im Reiter Behandlungen](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 Ein konkretes Beispiel zum Umgang mit Fett und Eiweiß im Rahmen dieser Funktion wird hier beschrieben: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
@@ -53,7 +49,7 @@ Daher gibt es ab Version 2.6 für Nutzer der Dana- und Insight-Pumpe eine Option
 
 - Der Closed Loop wird automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt.
 - Die Einheiten des verzögerten Bolus, die verbleibende und die Gesamtzeit werden auf der Startseite angezeigt.
-- On Insight pump extended bolus is *not available* if [TBR emulation](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
+- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ![Verzögerter Bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 

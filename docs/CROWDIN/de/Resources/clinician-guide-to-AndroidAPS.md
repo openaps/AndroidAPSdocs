@@ -8,7 +8,7 @@ Dieser Leitfaden enthält einige wichtige Informationen über DIY Closed Looping
 
 Um mit AAPS zu beginnen, sollten folgende Schritte unternommen werden:
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
+* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
 * [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
@@ -43,7 +43,7 @@ AAPS wurde so entworfen, dass alle Eingabedaten, die daraus resultierende Empfeh
 
 ## Beispiele für die Entscheidungsfindung des AAPS-Algorithmus
 
-AAPS verwendet den gleichen OpenAPS-Algorithmus und -Funktionsumfang. Der Algorithmus macht, basierend auf den Einstellungen und der aktuellen Situation, mehrere Vorhersagen, die verschiedene Szenarien berechnen, was in der Zukunft passieren könnte. In Nightscout werden diese als "violette Linien" angezeigt. AAPS uses different colors to separate these [prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines). In den Log-Dateien kann nachvollzogen werden, welche dieser verschiedenen Vorhersagen in welchem Zeitraum für die Berechnung der notwendigen Maßnahmen verwendet wurde.
+AAPS verwendet den gleichen OpenAPS-Algorithmus und -Funktionsumfang. Der Algorithmus macht, basierend auf den Einstellungen und der aktuellen Situation, mehrere Vorhersagen, die verschiedene Szenarien berechnen, was in der Zukunft passieren könnte. In Nightscout werden diese als "violette Linien" angezeigt. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). In den Log-Dateien kann nachvollzogen werden, welche dieser verschiedenen Vorhersagen in welchem Zeitraum für die Berechnung der notwendigen Maßnahmen verwendet wurde.
 
 ### Hier einige Beispiele für die Vorhersagelinien und wie sie sich unterscheiden können:
 

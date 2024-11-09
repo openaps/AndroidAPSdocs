@@ -105,7 +105,7 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 * Dažniausiai tai tik ryšio klaida ir visas insulino kiekis sėkmingai suleidžiamas.
 * Patikrinkite, ar suleistas teisingas insulino kiekis pompos istorijoje (pačioje pompoje arba AAPS skirtuke Dana > Pompos istorija > Bolusai.
-* Delete error entry in [treatments tab](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs) if you wish.
+* Delete error entry in [treatments tab](#screens-bolus-carbs) if you wish.
 * Kito programos ir pompos susijungimo metu suleisto insulino kiekis bus patikrintas ir įrašytas. Galite tiesiog palaukti kito susijungimo arba jį pagreitinti paspaudę BT piktogramą Dana skirtuke.
 
 ## Specialūs veiksmai keičiant telefoną
@@ -129,4 +129,4 @@ When switching to a new phone the following steps are necessary:
 
 ## Keliavimas per skirtingas laiko juostas su DanaRS pompa
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).

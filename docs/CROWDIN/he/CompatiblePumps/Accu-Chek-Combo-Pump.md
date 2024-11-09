@@ -8,9 +8,9 @@
 
 - משאבת Accu-Check Combo של חברת Roche (אין חשיבות לגרסת ה-firmware, כולן עובדות היטב)
 - מכשיר Smartpix או Realtyme עם תוכנת 360 Configuration לקביעת הגדרות המשאבה. (חברת Roche שולחת מכשיר Smartpix ותוכנה ללקוחותיה לפי דרישה.)
-- מכשיר טלפון סלולרי מתאים: טלפון אנדרואיד עם מערכת הפעלה LineageOS 14.1 (לשעבר CyanogenMod) או מערכת הפעלה Android 8.1 Oreo. As of AAPS 3.0 Android 9 is mandatory. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
+- מכשיר טלפון סלולרי מתאים: טלפון אנדרואיד עם מערכת הפעלה LineageOS 14.1 (לשעבר CyanogenMod) או מערכת הפעלה Android 8.1 Oreo. As of AAPS 3.0 Android 9 is mandatory. See [release notes](#maintenance-android-version-aaps-version) for details.
 - במידה ונעשה שימוש ב-LineageOS 14.1 יש לוודא גרסת יוני 2017 או מאוחרת יותר, מאחר ושילוב משאבת Combo לבלוטוס נכלל ממעוד זה. 
-- רשימת מכשירי טלפון ניתן למצוא כאן: [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
+- A list of phones can be found in the [AAPS Phones](../CompatiblePhones/ListOfTestedPhones.md) document.
 - יש לשים לב - זו אינה רשימת טלפונים תואמים מלאה והיא כוללת התרשמות וחוו"ד שהועלו ע"י משתמשים. לאחר צבירת נסיון, חשוב להעלות את המסקנות והתובנות לגבי המכשיר שלך לטובת המשתמשים הבאים (הפרוייקט הזה ושכמותו נבנה ונסמך על רצון ונכונות המשתמשים "להעביר את זה הלאה").
 - היו מודעים לכך שאמנם Android 8.1 תומך בתקשורת עם קומבו, ישנן עדיין סוגיות עם AAPS ב-8.1.
 - משתמשים מתקדמים יכולים לבצע צימוד עם טלפון שעבר ROOT ולהעביר לטלפון ROOT אחר לשימוש עם ruffy/AAPS. כך מתאפשר שימוש בטלפונים עם אנדרואיד <8.1 אך זה לא נבדק באופן נרחב: https://github.com/gregorybel/combo-pairing/blob/master/README.md
@@ -20,7 +20,7 @@
 - Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 - רק פרופיל בזאלי אחד נתמך. 
 - הגדרת פרופיל בזאלי מעבר לאחד, שימוש בבולוסים מושהים או בולוסים מרובי גלים מגוף המשאבה מפריעים למינונים הבזאליים הזמניים של הלולאה ומאלצת אותה לעבור למצב "השהיה עקב ערך סוכר נמוך" למשך 6 שעות מכיוון שהלולאה לא יכולה לפעול בבטחה בתנאים אלה.
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - כיום נתמכים רק מינונים בזאליים בטווח של 0.05 עד 10 יח'\שעה. מגבלה זו חלה גם בעת שינוי פרופיל, למשל כאשר הוא עולה ל-200%, המינון הבזאלי הגבוה ביותר לא יעלה על 5 יח'\שעה מכיוון שהוא יוכפל. בדומה, בעת הפחתה ל-50%, המינון הבזאלי הנמוך ביותר חייב להיות לפחות 0.10 יח'\שעה. 
 - אם הלולאה מבקשת לבטל בזאלי זמני פעיל, המשאבה תגדיר במקום זאת בזאלי זמני של 90% או 110% למשך 15 דקות. הסיבה לכך היא שביטול בזאלי זמני גורם להתראה על המשאבה הגורמת לרטט רב.
 - לעיתים רחוקות AAPS עלול להיכשל בביטול אוטומטי של התראת "בזאלי זמני בוטל" והמשתמש צריך לבטלה בעצמו (על ידי לחיצה על כפתור הרענון ב-AAPS כדי להעביר את האזהרה ל-AAPS או לאשר את ההתראה על המשאבה). 
@@ -95,7 +95,7 @@ There are serveral possible reasons. Try the following steps:
 9. עכשיו המשאבה צריכה להציג את שם הבלוטות' של הטלפון איתו מצמדים. כאן חשוב להמתין לפחות 5 שניות לפני שתלחץ על כפתור הבחירה במשאבה. אחרת המשאבה לא תשלח את בקשת הצימוד לטלפון כראוי.
     
     - אם המשאבה מוגדרת לפסק זמן מסך של 5 שניות, תוכלו לבדוק אותה עם 40 שניות (ההגדרה מקורית). מניסיון, הזמן שבין הצגת שם המשאבה בטלפון עד ללחיצה על בחירתו הוא בסביבות 5-10 שניות. במקרים רבים אחרים הצימוד נכשל. מאוחר יותר יש להחזיר את הגדרת הזמן הקצוב של המסך ל-5 שניות, כדי לעמוד בהגדרות המשאבה ב-AAPS.
-    - אם המשאבה אינה מציגה את הטלפון כמכשיר הניתן לצימוד כלל, מערכת הבלוטות' של הטלפון שלכם כנראה אינה תואמת את המשאבה. ודאו שאתם מפעילים **Android 9 ומעלה**. אם יש צורך, נסו סמארטפון אחר. תוכל למצוא רשימה של טלפונים חכמים שהיו בשימוש כבר בהצלחה תחת \[טלפוני AAPS\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
+    - אם המשאבה אינה מציגה את הטלפון כמכשיר הניתן לצימוד כלל, מערכת הבלוטות' של הטלפון שלכם כנראה אינה תואמת את המשאבה. ודאו שאתם מפעילים **Android 9 ומעלה**. אם יש צורך, נסו סמארטפון אחר. You can find a list of already successfully used smartphones under [AAPS Phones](../CompatiblePhones/ListOfTestedPhones.md). 
 
 10. לפעמים הטלפון מבקש מספר PIN של בלוטות' (בדרך כלל בן 4 ספרות) שאינו קשור ל-PIN בן 10 הספרות המוצג מאוחר יותר על המשאבה. בדרך כלל, ruffy יגדיר את ה-PIN הזה באופן אוטומטי, אבל בגלל בעיות תזמון, זה לא תמיד עובד. אם בקשה ל-PIN לצימוד של הבלוטות' מופיעה בטלפון לפני שמוצג קוד כלשהו במשאבה, עליכם להזין **}gZ='GD?gj2r|B}>** בתור ה-PIN. הדרך הכי קלה לעשות זאץ היא להעתיק את הטקסט הזה בן 16 התווים לפני התחלת רצף הצימוד ולהדביק אותו בתיבת הדו-שיח בשלב זה. ראו את [הדיון הבא](https://github.com/MilosKozak/ruffy/issues/14) לפרטים נוספים.
 

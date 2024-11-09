@@ -63,13 +63,13 @@ Vous pouvez facilement créer un profil local à partir d'un changement de profi
 
 #### Remonter les profils locaux sur Nightscout
 
-Les profils locaux peuvent également être téléchargés sur Nightscout. The settings can be found in [NSClient preferences](../SettingUpAaps/Preferences.md#nsclient).
+Les profils locaux peuvent également être téléchargés sur Nightscout. The settings can be found in [NSClient preferences](#Preferences-nsclient).
 
 ![Télécharger profil local sur NS](../images/LocalProfile_UploadNS_AASP30.png)
 
 #### Change profile in Nightscout profile editor
 
-You can synchronize changes to the profile in the Nightscout profile editor to local profiles. The settings can be found in [NSClient preferences](../SettingUpAaps/Preferences.md#nsclient).
+You can synchronize changes to the profile in the Nightscout profile editor to local profiles. The settings can be found in [NSClient preferences](#Preferences-nsclient).
 
 Il est nécessaire de cloner toute la base de données Nightscout active pour les profils, et pas seulement le profil avec la flèche bleue ! Les nouveaux enregistrements de la base de données portent ensuite la date courante et peuvent être activés via l'onglet "Profil local".
 
@@ -102,13 +102,13 @@ Details are explained on the separate [profile helper page](../SettingUpAaps/Pro
 * La DAI n'est pas la même pour chaque personne. C'est pourquoi vous devez la tester par vous-même. 
 * Mais elle doit toujours être au minimum de 5 heures.
 * Pour beaucoup de personnes utilisant des insulines ultra rapide comme la FIASP, il n'y a pratiquement pas d'effet notable après 3-4 heures tout au plus, même si 0.0 xx unités sont disponibles en tant que règle. Cette quantité résiduelle peut encore être perceptible pendant le sport, par exemple. Par conséquent, AAPS utilise au minimum une DAI de 5h.
-* You can read more about that in the Insulin Profile section of [this](../DailyLifeWithAaps/AapsScreens.md#insulin-profile) page.
+* You can read more about that in the Insulin Profile section of [this](#AapsScreens-insulin-profile) page.
 
 ### Différences entre les types d'insuline
 
 * Pour l'insuline à "Action Rapide", "Ultra-Rapide" et "Lyumjev", la DAI est la seule variable que vous pouvez ajuster vous-même, le temps du pic est fixé. 
 * Le Profil d'insuline ajustable vous permet d'ajuster à la fois la DAI et le temps du pic, et ne doit être utilisé que par les utilisateurs confirmés qui connaissent les effets de ces paramètres. 
-* The [insulin curve graph](../DailyLifeWithAaps/AapsScreens.md#insulin-profile) helps you to understand the different curves.
+* The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
 * Vous pouvez le voir en activant la case à cocher pour l'afficher sous forme d'onglet, sinon il se trouve dans le menu hamburger.
 
 #### Insuline à Action Rapide Oref 
@@ -193,7 +193,7 @@ Sélectionner la pompe que vous utilisez.
 
 Sélectionnez le type de calcul pour la sensibilité. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Cela analysera les données historiques au fur et à mesure et fera des ajustements si elle détecte que vous réagissez de façon plus sensible (ou plus résistante) à l'insuline que d'habitude. Plus de détails sur l'algorithme de la Sensitibilité peuvent être lus dans la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-Vous pouvez voir votre sensibilité sur l'écran d'accueil en sélectionnant Sensibilité dans les paramètres du graphique et en observant la ligne blanche. Note, you need to be in [Objective 8](../SettingUpAaps/CompletingTheObjectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) automatically adjust the amount of insulin delivered. Avant d'atteindre cet objectif, le poucentage Autosens ainsi que la ligne dans votre graphique ne sont affichés que pour information.
+Vous pouvez voir votre sensibilité sur l'écran d'accueil en sélectionnant Sensibilité dans les paramètres du graphique et en observant la ligne blanche. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Avant d'atteindre cet objectif, le poucentage Autosens ainsi que la ligne dans votre graphique ne sont affichés que pour information.
 
 (Config-Builder-absorption-settings)=
 
@@ -208,7 +208,7 @@ Si vous utilisez le type Oref1 avec les SMB, vous devez modifier **min_5m_carbim
 Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous pouvez afficher le détail actif de l'algorithme choisi dans l'onglet OpenAPS (OAPS).
 
 * OpenAPS AMA (Assistance Améliorée Repas, état de l'algorithme en 2017) En termes simples, les avantages sont après un bolus de repas le système peut faire une temporaire haute plus rapidement SI vous entrez les glucides de manière fiable.
-* [OpenAPS SMB](../DailyLifeWithAaps/KeyAapsFeatures.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* [OpenAPS SMB](../DailyLifeWithAaps/KeyAapsFeatures.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](#objectives-objective9) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Boucle
 
@@ -230,7 +230,7 @@ Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous
 
 * AAPS évalue en permanence toutes les données disponibles (IA, GA, Gly ...) et ajuste automatiquement le traitement si nécessaire (c'est-à-dire sans intervention de votre part) pour atteindre la plage ou la valeur cible fixée (bolus, débit de basal temporaire, arrêt de l'insuline pour éviter l'hypo, etc.). 
 * La boucle fermée fonctionne avec de nombreuses limites de sécurité, que vous pouvez définir individuellement.
-* Closed Loop is only possible if you are in [Objective 6](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
+* Closed Loop is only possible if you are in [Objective 6](#objectives-objective6) or higher and use a supported pump.
 * Remarque : En mode boucle fermée, une cible unique au lieu de la plage cible (par ex. 5,5 mmol ou 100 mg/dl au lieu de 5,0 - 7,0 mmol ou 90 - 125 mg/dl) est recommandée.
 
 ### Arrêt Glycémie Basse (AGB)
@@ -256,7 +256,7 @@ See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more info
 
 ## Traitements
 
-Si vous affichez les traitements, vous pouvez voir ceux qui ont été téléchargés dans Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../DailyLifeWithAaps/AapsScreens.md#bolus--carbs).
+Si vous affichez les traitements, vous pouvez voir ceux qui ont été téléchargés dans Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](#screens-bolus-carbs).
 
 ## General
 
@@ -315,20 +315,20 @@ Choisissez si vous voulez avoir un champ Notes lors de la saisie des traitements
 
 #### Voyants d'état
 
-Choose if you want to have [status lights](../SettingUpAaps/Preferences.md#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. Lorsque le seuil d'avertissement est atteint, la couleur du voyant d'état passe à jaune. Le seuil critique s'affichera en rouge.
+Choose if you want to have [status lights](#Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. Lorsque le seuil d'avertissement est atteint, la couleur du voyant d'état passe à jaune. Le seuil critique s'affichera en rouge.
 
 #### Paramètres Avancés
 
 **Injecter cette partie de Bolus calculée par l’assistant** : Avec l'utilisation des SMB, beaucoup de personnes ne font pas de bolus repas avec 100% de l'insuline nécessaire, mais seulement une partie de celle-ci (par ex. 75 %) et laissent les SMB avec les RNS (repas non signalés) faire le reste. In this setting, you can choose a default value for the percentage the bolus wizard should calculate with. Si ce paramètre est de 75 % et que vous avez besoin d'un de bolus 10U, l'assistant de bolus proposera un bolus repas de seulement 7,5 unités.
 
-**Activer la fonction super bolus dans l'Assistant** (c'est différent des *super micro bolus* !) : à utiliser avec prudence et ne l'activez pas tans que vous n'avez pas appris ce qu'il fait vraiment. En gros, l'insuline correspondant au débit de basal des deux heures suivantes est ajoutée au bolus et deux heures de zéro-temp sont activées. **Les fonctions de boucle AAPS seront désactivées - c'est donc à utiliser avec prudence ! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../DailyLifeWithAaps/KeyAapsFeatures.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Activer la fonction super bolus dans l'Assistant** (c'est différent des *super micro bolus* !) : à utiliser avec prudence et ne l'activez pas tans que vous n'avez pas appris ce qu'il fait vraiment. En gros, l'insuline correspondant au débit de basal des deux heures suivantes est ajoutée au bolus et deux heures de zéro-temp sont activées. **Les fonctions de boucle AAPS seront désactivées - c'est donc à utiliser avec prudence ! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
 
 ### Actions
 
 * Quelques boutons pour accéder rapidement aux fonctions communes.
-* See [AAPS screenshots](../DailyLifeWithAaps/AapsScreens.md#action-tab) for details.
+* See [AAPS screenshots](#screens-action-tab) for details.
 
 ### Automatisation
 
@@ -368,7 +368,7 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 ### NSClient
 
 * Configurer la synchronisation de vos données AAPS avec Nightscout.
-* Settings in [preferences](../SettingUpAaps/Preferences.md#nsclient) can be opened by clicking the cog wheel.
+* Settings in [preferences](#Preferences-nsclient) can be opened by clicking the cog wheel.
 
 ### Maintenance
 

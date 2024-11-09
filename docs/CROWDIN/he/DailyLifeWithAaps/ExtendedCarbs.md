@@ -21,10 +21,6 @@
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
-ערכים של פחמימות עתידיות נצבעים בכתום כהה בלשונית הטיפולים:
-
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 דרך לטפל בשומן וחלבון בעזרת תכונה זו מתוארת כאן: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
@@ -53,7 +49,7 @@ ______________________________________________________________________
 
 - לולאה סגורה תיעצר אוטומטית ותעבור למצב לולאה פתוחה למשך זמן פעילות הבולוס הממושך.
 - יחידות הבולוס, הזמן הנותר והזמן הכולל יוצגו במסך הבית.
-- On Insight pump extended bolus is *not available* if [TBR emulation](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
+- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 

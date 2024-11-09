@@ -11,7 +11,7 @@ The foundation of **AAPS** safety features discussed in this documentation is bu
 
 Außerdem ist es ebenso wichtig, nur Originalzubehör zu verwenden. Setzhilfen, Kanülen und Reservoire müssen vom Hersteller für den Einsatz mit deiner Pumpe bzw. deinem CGM zugelassen sein. Die Verwendung von nicht geprüftem oder modifiziertem Zubehör kann zu Ungenauigkeiten des CGM-Systems und Insulinabgabefehlern führen. Insulin ist sehr gefährlich, wenn es falsch dosiert wird. Spiele nicht mit deinem Leben, indem du ungeprüftes oder modifiziertes Zubehör verwendest.
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. Die Kombination mit einem Closed Loop System, das die basalen Raten senkt, um den BZ zu erhöhen ist besonders gefährlich, da durch die Gliflozin dieser BZ-Anstieg verhindert wird und ein gefährlicher Zustand durch Insulinmangel auftreten kann. [More information here](../Getting-Started/PreparingForAaps.md#no-sglt-2-inhibitors).
+Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. Die Kombination mit einem Closed Loop System, das die basalen Raten senkt, um den BZ zu erhöhen ist besonders gefährlich, da durch die Gliflozin dieser BZ-Anstieg verhindert wird und ein gefährlicher Zustand durch Insulinmangel auftreten kann. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
 ## Erforderliche Komponenten
@@ -62,9 +62,9 @@ The main component of the system. In order to install the app, you have to build
 
 ### Reporting server
 
-A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS : [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md#nightscout) and [Tidepool](../SettingUpAaps/SettingUpTheReportingServer.md#tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
+A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS : [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
 
-The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set up one as it will be required to fulfill [**Objective 1**](../SettingUpAaps/CompletingTheObjectives.md#objective-1-setting-up-visualization-and-monitoring-analyzing-basals-and-ratios).
+The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set up one as it will be required to fulfill [**Objective 1**](#objectives-objective1).
 
 Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
 
@@ -76,11 +76,7 @@ You can choose any smartwatch with Android WearOS 1.x up to 4.x. **Beware, WearO
 
 The Sony Smartwatch 3 (SWR50) is commonly used amongst loopers as it is the only watch that can get readings from Dexcom G6/G5 when phone is out of range. Einige andere Smartwatches können so gepatched werden, dass sie als 'Standalone receiver' verwendet werden können (siehe [diese Dokumentation](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) für weitere Details).
 
-Es gibt eine von AAPS Anwendern erstellte [Liste mit getesteten Smartphones und Smartwatches:](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with **AAPS**, which you can find [here](../UsefulLinks/WearOsSmartwatch.md).
-
-Um ein Handy oder eine Smartwatch einzutragen welches noch nicht in der Liste ist, bitte das  [Formular](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform) ausfüllen.
-
-Any problems with the spreadsheet please email [hardware@androidaps.org](mailto:hardware@androidaps.org), any donations of phone/watch models that still need testing please email [donations@androidaps.org](mailto:donations@androidaps.org).
+Users are creating a [list of tested phones and watches](../CompatiblePhones/ListOfTestedPhones.md). There are different watchfaces for use with **AAPS**, which you can find [here](../UsefulLinks/WearOsSmartwatch.md).
 
 ### xDrip+
 

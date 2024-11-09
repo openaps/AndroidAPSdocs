@@ -8,9 +8,9 @@
 
 - 任何版本的 Roche Accu-Chek Combo（任何韌體版本皆支援）
 - 一個 Smartpix 或 Realtyme 裝置，配合 360 設定軟體來配置幫浦。 （Roche 在客戶要求下會免費寄送 Smartpix 裝置和設定軟體。）
-- 一部相容的手機：Android 手機，需安裝 LineageOS 14.1（前稱 CyanogenMod）或至少 Android 8.1（Oreo）。 從 AAPS 3.0 開始，Android 9 是必須的。 請參閱 [發行說明](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) 以獲取詳細信息。
+- 一部相容的手機：Android 手機，需安裝 LineageOS 14.1（前稱 CyanogenMod）或至少 Android 8.1（Oreo）。 從 AAPS 3.0 開始，Android 9 是必須的。 請參閱 [發行說明](#maintenance-android-version-aaps-version) 以獲取詳細訊息。
 - 使用 LineageOS 14.1 時，手機必須是 2017 年 6 月以後的版本，因為只有那時的改變才允許配對 Combo 幫浦。 
-- 可以在[AAPS 手機列表](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit)文件中找到相容手機。
+- 手機列表可以在 [AAPS 手機列表](../CompatiblePhones/ListOfTestedPhones.md) 文件中找到。
 - 請注意，這不是完整的列表，只反應個人使用經驗。 我們鼓勵你也分享你的經驗，這樣可以幫助其他人（這些專案是關於傳遞經驗）。
 - 請注意，儘管 Android 8.1 允許與 Combo 通訊，但 AAPS 在 8.1 上仍有問題。
 - 對於進階使用者，可以在已 root 的手機上進行配對，然後將其轉移到另一部已 root 的手機上使用 ruffy/AAPS，這兩部手機都需要 root。 這使得使用 Android 版本低於 8.1 的手機成為可能，但尚未廣泛測試：https://github.com/gregorybel/combo-pairing/blob/master/README.md
@@ -20,7 +20,7 @@
 - 延長注射和多波段注射不支援（請參閱[延長碳水化合物](../DailyLifeWithAaps/ExtendedCarbs.md)）。
 - 僅支援一個基礎率設定檔。
 - 在幫浦上設定其他基礎率設定檔或進行延長注射或多波段注射，會干擾 TBR，並使循環進入低懸掛模式6小時，因為在這種情況下無法安全運作循環。
-- 目前無法在幫浦上設定時間和日期，因此必須手動進行[夏令時間變更](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst)（您可以在晚上停用手機的自動時鐘更新，早上與幫浦時鐘一起改回來，以避免夜間鬧鐘）。
+- 目前無法在幫浦上設定時間和日期，因此必須手動進行[夏令時間變更](#time-adjustment-daylight-savings-time-dst)（您可以在晚上停用手機的自動時鐘更新，早上與幫浦時鐘一起改回來，以避免夜間鬧鐘）。
 - 目前僅支援 0.05 至 10 U/h 範圍內的基礎率。 這也適用於修改設定檔的情況，例如當增加到 200% 時，最高基礎率不得超過 5 U/h，因為加倍計算後會超過10 U/h。 同樣地，當減少到 50% 時，最低基礎率必須至少為 0.10 U/h。
 - 如果循環要求取消正在運作的 TBR，Combo 將設定 90% 或 110% 的 TBR 持續 15 分鐘。 這是因為取消 TBR 會在幫浦上觸發警報，導致大量震動。
 - 偶爾（大約每幾天），AAPS 可能無法自動取消 TBR 警報，用戶需要處理此問題（按下 AAPS 的重新整理按鈕以將警告傳送至 AAPS 或在幫浦上確認警報）。
@@ -95,7 +95,7 @@
 9. 現在幫浦應該顯示出手機的藍牙名稱以供選擇配對。 在按下選擇按鈕之前，至少等待 5 秒 。 否則幫浦將無法正確地發送配對請求到手機。
     
     - 如果 Combo 幫浦的螢幕逾時設定為 5 秒，可以嘗試使用 40 秒（原始設定）。 根據經驗， 從幫浦顯示到手機，直到選擇手機，大約需要 5-10 秒。 在許多其他情況下，配對會因逾時而失敗 。 之後，你可將其設定回 5 秒，以符合 AAPS Combo 設定並加速連線。
-    - 如果幫浦根本未顯示手機作為配對裝置，則可能是手機的藍牙堆疊與幫浦不相容 。 確保你正在運作最新的 **LineageOS ≥ 14.1** 或 **Android ≥ 8.1（Oreo）**。 如果可能， 請嘗試使用另一部手機。 可以在\[AAPS 手機\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) 文件中找到已成功使用的手機列表。 
+    - 如果幫浦根本未顯示手機作為配對裝置，則可能是手機的藍牙堆疊與幫浦不相容 。 確保你正在運作最新的 **LineageOS ≥ 14.1** 或 **Android ≥ 8.1（Oreo）**。 如果可能， 請嘗試使用另一部手機。 你可以在 [AAPS 手機列表](../CompatiblePhones/ListOfTestedPhones.md) 找到已成功使用的智慧型手機。 
 
 10. 有時手機會要求輸入一個（通常為 4 位數的）藍牙 PIN 碼，這與幫浦稍後顯示的 10 位數 PIN 無關。 通常，ruffy 會自動設置這個 PIN，但由於時間問題，這並不總是有效。 如果在幫浦顯示任何代碼之前，手機出現藍牙配對 PIN 請求，你需要輸入**}gZ='GD?gj2r|B}>** 作為 PIN。 最簡單的方法是先將這 16 位字符的文本複製到剪貼板，然後在配對過程中出現此步驟時將其貼上。 詳情請參閱[Github 問題](https://github.com/MilosKozak/ruffy/issues/14)。
 

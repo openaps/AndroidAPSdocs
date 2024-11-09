@@ -44,6 +44,7 @@ Un [commentaire](https://academic.oup.com/brain/article/138/1/2/340563) sur ce t
 
 Il est généralement reconnu que les diabétiques de type 1 _nouvellement_ diagnostiqués (qui ont souvent un taux très élevé d'HbA1c au moment du diagnostic, avant de commencer la thérapie par insuline) semblent être en mesure de réduire rapidement leur taux d'HbA1c immédiatement après le diagnostic sans faire autant face à ces risques, car leur taux de glycémie n'a pas été élevé pendant une longue période. Cependant, cela reste important d'en discuter avec votre équipe médicale.
 
+(PreparingForAaps-no-sglt-2-inhibitors)=
 ### Aucun inhibiteur SGLT-2
 
 ```{admonition} NO SGLT-2 inhibitors
@@ -121,7 +122,7 @@ Cette section a pour but de fournir aux nouveaux utilisateurs des liens vers des
 
 #### [Pour les professionnels de santé](../Resources/clinician-guide-to-AndroidAPS.md)
 
-This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](./Introduction.md#how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
 
 ## Que va-t-on compiler et installer?
 
@@ -150,7 +151,7 @@ En fonction de votre capteur de glycémie/MGC, vous aurez besoin d'une applicati
 
 Aussi bien **Nightscout** qu'**AAPS** doivent être mis à jour environ une fois par an, car de nouvelles versions sont publiées. Dans certains cas, la mise à jour peut être repoussée, dans d'autres cas, elle est fortement recommandée ou considérée comme essentielle pour la sécurité. Ces mises à jour seront notifiées sur les groupes Facebook et les serveurs Discord. Les notes de version indiqueront clairement la marche à suivre. Il est probable que de nombreuses personnes se poseront des questions similaires aux vôtres au moment de la mise à jour, et vous trouverez le soutien nécessaire pour effectuer les mises à jour.
 
-(preparing-how-long-will-it-take?)=
+(preparing-how-long-will-it-take)=
 ## Combien de temps pour tout mettre en place ?
 
 Comme mentionné précédemment, l'utilisation de **AAPS** s'envisage au long terme et nécessite un investissement de votre temps personnel. Il ne s'agit pas d'une installation à faire une seule fois. Les estimations actuelles pour la compilation d'**AAPS**, l'installation et la configuration d'**AAPS** et de l'application de **MGC**, le passage d'une boucle ouverte à une boucle fermée hybride avec **AAPS** sont d'environ 4 à 6 mois en tout. Vous avez donc tout intérêt à commencer rapidement la compilation de l'application **AAPS** et vous mettre à travailler sur les premiers objectifs dès que possible, même si vous utilisez toujours un autre système d'administration d'insuline (vous pouvez utiliser une pompe virtuelle jusqu'à l'objectif 5).
@@ -211,13 +212,7 @@ Cette documentation a pour but de réduire autant que faire se peut l'expertise 
 La version actuelle d'**AAPS** (3.2) nécessite un smartphone Android avec Google **Android 9.0 ou supérieur**. Si vous pensez à acheter un nouveau téléphone (à compter de juillet 2024), préférez la version Android 13. Les utilisateurs sont fortement encouragés à mettre à jour **AAPS** à chaque nouvelle version pour des raisons de sécurité. Cependant pour les utilisateurs qui ne disposent pas d'un appareil avec Android 9 ou supérieur, des versions d'**AAPS** compatibles avec des versions plus anciennes d'Android, comme [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) et [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2), restent disponibles (vérifiez les notes de version de ces anciennes versions).
 
 #### Choix du modèle de smartphone
-Vous choisirez un modèle précis en fonction de la/des fonction(s) que vous recherchez. Nous avons deux tableaux archivés listant les [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) compatibles et les [smartphones et montres](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) compatibles. Ces tableaux ne sont plus mis à jour au vu du grand nombre de modèles possibles. Nous suggérons donc maintenant de faire une recherche dans les groupes de support (Facebook ou Discord) avec "phone", ou le modèle précis que vous envisagez d'acheter. Créez un nouveau post avec vos questions à ce sujet si vous avez encore besoin de davantage d'informations.
-
-Pour faire un don d'un modèle de smartphone ou de smartwatch qui n'a pas encore été testé, veuillez envoyer un e-mail à [donations@androidaps.org](mailto:donations@androidaps.org).
-
-- [Liste des téléphones testés](../CompatiblePhones/ListOfTestedPhones.md)
-- [Paramètres Jelly](../CompatiblePhones/Jelly.md)
-- [Paramètres Huawei](../CompatiblePhones/Huawei.md)
+Vous choisirez un modèle précis en fonction de la/des fonction(s) que vous recherchez. You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
 
 Les utilisateurs sont encouragés à faire les mises à jour de version Android sur leur téléphone, y compris avec les mises à jour de sécurité. Cependant, si démarrez avec **AAPS** ou si vous n'êtes pas à l'aise techniquement, vous voudrez peut-être attendre pour faire la mise à jour de votre téléphone que d'autres l'aient fait et aient confirmé le bon fonctionnement des applications, sur nos différents forums.
 

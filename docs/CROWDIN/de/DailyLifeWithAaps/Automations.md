@@ -16,7 +16,13 @@ There are a wide range of **Automation** options, and users are encouraged to st
 
 1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
 
-Im Beispiel unten wird gezeigt, wie mit einer **Automatisierung** einzelne manuelle Schritte überflüssig gemacht werden. The user has set an **Automation** to trigger a 5am ‘Temp Target Exercise’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
+The example below illustrates how an **Automation** can enable steps to be eliminated.
+
+User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
+
+![Alt text](../images/automation_2024-02-12_20-54-50.png)
+
+The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
 
 ![Alt text](../images/automation_2024-02-12_20-54-49.png)
 
@@ -46,9 +52,17 @@ Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, 
 
 Um eine **Automatisierung** einzurichten, erstelle in **AAPS** eine 'Regel/Aufgabe'. Das kann so aussehen:
 
+![Automation create](../images/automation_create.png)
+
 * give your ‘rule’ a title;
-* select at least one ‘Condition’; and
+* select at least one ‘Condition’;
+
+![Automation condition](../images/automation_condition.png)
+
 * select one ‘Action’;
+
+![Automation action](../images/automation_action.png)
+
 * check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
 
 ![Automatisierung](../images/automation_2024-10-26_17-48-05.png)
@@ -91,13 +105,13 @@ Besonderer Vorsicht bedarf es, wenn in einer **Automatisierung** ein 'negativer 
 
 ![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-**Beispiel 1:** Eine Bedingung **"kleiner als"** "-0,1" wird erstellt:
+**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
 
-Es wird eine **Automatisierung** für jeden Wert, der **genau** kleiner als** -0,1 ausgelöst. Dazu zählen damit z.B. auch die Werte -0,2; -0,3; 0,4 usw. Der Wert -0,1 selber **ist in der Bedingung nicht enthalten**. (Die Bedingung "ist gleicher oder kleiner als 0,1" _würde_ auch -0,1 enthalten).
+Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/l (-2 mg/dl)" _would_ include -0.1 mmol/l or -2 mg/dl).
 
-**Beispiel 2:** Eine Bedingung "ist größer als" -0,1 wird erstellt:
+**Example 2:** Creating a Condition "is greater than" -0.1mmol/l (-2mg/dl) will:
 
-Es wird eine **Automatisierung** für jeden Wert, der **größer als** -0,1, ausgelöst. Dazu gehören Zahlen wie 0; 0,2; 0,4 und jede andere positive Zahl.
+Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-2mg/dl). This includes numbers like 0, 0.2, 0.4mmol/l, (0, 4, 8mg/dl) and any other positive number.
 
 Bei der Auswahl Deiner **Automatisierung** und der Wahl der Bedingungen und Werte, ist es wichtig genau zu wissen, welches Ziel damit erreicht werden soll.
 
@@ -161,10 +175,9 @@ Sobald die Aktion hinzugefügt wurde, müssen die voreingestellten Werte durch K
 
 ![Alt text](../images/automation_2024-02-12_20-57-07.png)
 
-![Alt text](../images/automation_2024-02-12_20-57-29.png)
-
+(Automations-the-order-of-the-automations-in-the-list-matters)=
 ## The order of the **Automations** in the list matters
- **AAPS** ordnet die Regeln in der Reihenfolge, wie sie erstellt wurden und beginnt bei der oberen Automatisierung mit dem Abarbeiten der **Automatisierungsliste**. Wenn beispielsweise ‘Hypobehandlung’ unter allen Automatisierungsregeln die wichtigste **Automatisierung** ist, sollte diese ganz oben auf der Liste Deiner **Automatisierungen** erscheinen:
+ **AAPS** ordnet die Regeln in der Reihenfolge, wie sie erstellt wurden und beginnt bei der oberen Automatisierung mit dem Abarbeiten der **Automatisierungsliste**. For example, if the ‘Low’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
 ![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
@@ -203,7 +216,7 @@ Der Standort wird als 'Auslöser' eingestellt, indem die Koordinaten für Breite
 
 Aufgrund der ‘Und’-Verknüpfung wird die **Automatisierung** nur dann ausgeführt, wenn die Person sich zum gewählten Zeitpunkt am hinterlegten Standort aufhält.
 
-Diese **Automatisierung** wird zu keiner anderen Zeit an diesem Standort ausgeführt und auch nicht, wenn man sich zum gewählten Zeitpunkt weiter als 100 Meter von der hinterlegten GPS-Position aufhält.
+The **Automation** will not be triggered on any other time at this location or on this time outside of 50 meters set GPS coordinates.
 
 ### WLAN SSID und Standort-Automatisierungen
 

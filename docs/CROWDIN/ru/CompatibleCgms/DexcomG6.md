@@ -21,10 +21,10 @@
 -   Если вы используете старый трансмиттер с замененными батареями, самое безопасное - **отключить** [упреждающий перезапуск](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html). Хотя, в этом случае придется использовать G6 не в-[нативном режиме](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) (что нежелательно, так как отключает заводскую калибровку и не фильтрует зашумленные данные), в ином случае сенсор остановится через 10 дней.
 -   The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 -   При использовании xDrip+ в качестве считывателя сначала удалите приложение Dexcom. **Невозможно одновременно подключить к трансмиттеру приложения xDrip+ и Dexcom!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](#if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
 -   You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
 -   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
--   Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+-   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 - Adjust settings in xDrip+ according to [xDrip+ settings page](../CompatibleCgms/xDrip.md)
 
@@ -44,7 +44,7 @@
 
 ### Настройки для AAPS
 
--   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+-   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 -   Если данные не поступают, выберите любой другой источник данных, а затем снова выберите 'приложение Dexcom (модифицированное)', чтобы запустить запросы разрешений на установление соединения между AAPS и самостоятельно собранным приложением Dexcom.
 
@@ -63,7 +63,7 @@
 
 ### Устранение неполадок - общее
 
-General Troubleshooting for CGMs can be found [here](../CompatibleCgms/GeneralCGMRecommendation.md#troubleshooting).
+General Troubleshooting for CGMs can be found [here](#general-cgm-troubleshooting).
 
 ### Установка нового трансмиттера на работающий сенсор
 

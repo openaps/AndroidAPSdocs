@@ -24,6 +24,7 @@
 * Go to the nsclient tab and open the settings in the right-hand menu. A new preference "Synchronization" is available now.
 * You can now make a detailed selection about which items shall be synchronized with your Nightscout site.
 
+(Update3_0-nightscout-profile-cannot-be-pushed)=
 ## Nightscout profile cannot be pushed
 * The nightscout profile is gone, rest in peace!
 * To copy your current nightscout profile into a local profile, go to the treatments page (now to be opened in the right-hand menu).
@@ -31,6 +32,7 @@
 * A new local profile is added, valid from the current date.
 * To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date.
 
+(Update3_0-reset-master-password)=
 ## Reset master password
 * You can now reset your master password in case you have forgotten it.
 * You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones fileystem.
@@ -47,11 +49,11 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
   ![Yellow BG warning](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign)
+For details see [AAPS screens page](#aaps-screens-bg-warning-sign)
 
-
+(update30-failure-message-data-from-different-pump)=
 ## Failure message: Data from different pump
 
    ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../SettingUpAaps/ConfigBuilder.md#pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+To resolve this issue go to [config builder](#Config-Builder-pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.

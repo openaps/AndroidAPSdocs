@@ -44,6 +44,7 @@ A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this wo
 
 It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
 
+(PreparingForAaps-no-sglt-2-inhibitors)=
 ### Žádné SGLT-2 inhibitory
 
 ```{admonition} NO SGLT-2 inhibitors
@@ -121,7 +122,7 @@ Cílem této sekce je poskytnout novým uživatelům odkazy na zdroje, aby získ
 
 #### [Oddíl pro lékaře](../Resources/clinician-guide-to-AndroidAPS.md)
 
-This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](./Introduction.md#how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
 
 ## Co budeme sestavovat a instalovat?
 
@@ -150,7 +151,7 @@ V závislosti na vašem glukózovém senzoru/CGM budete potřebovat kompatibiln�
 
 **Nightscout** i **AAPS**musí být přibližně jednou ročně aktualizovány, když jsou vydány nové verze. V některých případech je možné aktualizaci odložit, zatímco v jiných se z bezpečnostních důvodů důrazně doporučuje aktualizaci provést bezodkladně. Upozornění na dostupnou aktualizaci jsou zveřejňována ve Facebook skupinách a na Discord serveru. Poznámky k vydání nové verze vždy objadní, o jaký scénář se jedná. V čase aktualizace bude pravděpodobně mnoho lidí klást obdobné otázky a budete mít podporu při provedení aktualizace.
 
-(preparing-how-long-will-it-take?)=
+(preparing-how-long-will-it-take)=
 ## Jak dlouho bude trvat všechno nastavit?
 
 Jak bylo zmíněno dříve, používání **AAPS** je víceméně "cesta", která od vás bude obětovat váš volný čas. Nejde se o jednorázové řešení. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
@@ -211,13 +212,7 @@ Cílem této dokumentace je snížení potřebné technické odbornosti na absol
 The current version of **AAPS** (3.2) requires an Android smartphone with Google **Android 9.0 or above**. Pokud zvažujete nákup nového telefonu (od 2024), je doporučována verze Android 13. Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons, however for users unable to use a device with Android 9.0 or newer, earlier versions of  **AAPS** compatible for older Android versions like [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) and [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2), remain available from previous releases (check the release notes for legacy versions).
 
 #### Výběr modelu smartphone
-Přesný model, který kupujete, závisí na požadovaných funkcích. Existují dvě archivované tabulky kompatibilních [smartphonů](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) a [smartphonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). Tabulky již nejsou aktualizovány, protože existuje příliš mnoho modelů, a proto nyní doporučujeme vyhledat ve skupinách podpory (Facebook nebo Discord) „telefon“ nebo konkrétní model, který si chcete pořídit. Pokud stále potřebujete další informace, zeptejte se v novém příspěvku.
-
-Pokud chcete poskytnout chytrý telefon nebo hodinky k provedení testování, napište prosím na [donations@androidaps.org](mailto:donations@androidaps.org).
-
-- [List of tested phones](../CompatiblePhones/ListOfTestedPhones.md)
-- [Jelly Settings](../CompatiblePhones/Jelly.md)
-- [Huawei Settings](../CompatiblePhones/Huawei.md)
+Přesný model, který kupujete, závisí na požadovaných funkcích. You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
 
 Uživatelům doporučujeme udržovat jejich Android telefon aktualizovaný, včetně bezpečnostních nastavení. Ovšem pokud jste noví uživatel **AAPS** nebo nejste technicky zdatný, možná budete chtít pozdržet aktualizaci svého telefonu do doby, než to udělají ostatní a potvrdí na fórech, že je to bezpečné.
 

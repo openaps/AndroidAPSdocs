@@ -24,6 +24,7 @@
 * Dirígete a la pestaña NSClient y abre la configuración en el menú de la derecha. Una nueva preferencia "Sincronización" está ahora disponible.
 * Ahora puedes realizar una selección detallada sobre qué elementos se sincronizarán con tu página de Nightscout.
 
+(Update3_0-nightscout-profile-cannot-be-pushed)=
 ## El perfil de Nightscout no puede ser enviado
 * El perfil de Nightscout ha sido eliminado, descanse en paz.
 * Para copiar tu perfil actual de Nightscout a un perfil local, dirígete a la página de tratamientos (se abrirá en el menú de la derecha).
@@ -31,6 +32,7 @@
 * Se añade un nuevo perfil local, válido desde la fecha actual.
 * Para actualizar el perfil desde Nightscout usa la opción "Clonar" (registro, no perfil) y guarda los cambios. Deberías ver "Perfil válido desde:" con la fecha actual.
 
+(Update3_0-reset-master-password)=
 ## Restablecer contraseña maestra
 * Ahora es posible restablecer la contraseña maestra, en caso de que se nos haya olvidado.
 * Es necesario añadir un fichero llamado `PasswordReset` en el directorio `/AAPS/extra` de tu teléfono.
@@ -47,11 +49,11 @@ Desde la versión de 3.0 de AndroidAPS, puede aparecer una señal de advertencia
 
   ![Triángulo de advertencia de glucosa en amarillo](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign)
+For details see [AAPS screens page](#aaps-screens-bg-warning-sign)
 
-
+(update30-failure-message-data-from-different-pump)=
 ## Mensaje de error: Los datos son de bombas diferentes
 
    ![Mensaje de error: Los datos son de bombas diferentes](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../SettingUpAaps/ConfigBuilder.md#pump). Cambia a bomba virtual y después vuelve a seleccionar la casilla de tu bomba actual. Eso restablecerá el estado de la bomba.
+To resolve this issue go to [config builder](#Config-Builder-pump). Cambia a bomba virtual y después vuelve a seleccionar la casilla de tu bomba actual. Eso restablecerá el estado de la bomba.

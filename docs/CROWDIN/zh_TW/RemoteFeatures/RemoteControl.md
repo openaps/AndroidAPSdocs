@@ -17,6 +17,7 @@
 5.  不同年齡兒童學校護理計畫的示例可以在 **AAPS** Facebook 頁面的["文件區"](https://www.facebook.com/groups/AndroidAPSUsers/files/)找到。
 6.  當遠端控制無法工作時，你的應急計劃是什麼（_例如_網絡問題或藍牙連線丟失）？  始終考慮當你突然無法發送新指令時，**AAPS** 會發生什麼情況。 **AAPS** 會使用目前設定覆蓋幫浦的基礎率、ISF 和 ICR。 如果切換到更強的胰島素設定，請只使用臨時設定切換（_例如_設置特定的持續時間），以防止遠端連線中斷。 當時間到期時，幫浦將恢復到原始設定。
 
+(RemoteControl-sms-commands)=
 ## 1) SMS 指令
 
 ```{admonition} Documentation
@@ -362,7 +363,7 @@ _請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及�
 
 **AAPSClient** 允許照護者透過移動網絡或網際網路，遠端進行許多 **AAPS** 中允許的調整（不包括胰島素注射）。 **AAPSClient** 的主要優點是照護者/父母能夠以快速、便捷的方式遠端控制 **AAPS**。 __AAPSClient__ _可能_ 比輸入 SMS 指令快得多，尤其是當執行需要身份驗證的指令時。 透過 **AAPSClient** 輸入的指令將上傳到 Nightscout。
 
-只有當你的同步運作良好時，才建議使用 **AAPSClient** 進行遠端控制（_即_ 不會出現不必要的資料更改，如自動修改臨時目標、臨時基礎率等），詳見[版本 2.8.1.1 發佈說明](../Maintenance/ReleaseNotes#version-2811)了解更多細節。
+只有當你的同步運作良好時，才建議使用 **AAPSClient** 進行遠端控制（_即_ 不會出現不必要的資料更改，如自動修改臨時目標、臨時基礎率等），詳見[版本 2.8.1.1 發佈說明](#important-hints-2-8-1-1)了解更多細節。
 
 ### AAPSClient 與智慧型手錶的選項
 
@@ -475,7 +476,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 ### 在購買智慧型手錶之前……
 
-你購買的智慧型手錶具體型號取決於你所需的功能。 目前有兩份歷史性電子表格紀錄了相容的[智慧型手機](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952)和[智慧型手機和手錶](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)，但由於選項繁多，建議透過 Discord 和 Facebook 群組進行詢問，這些表格將不再更新。
+你購買的智慧型手錶具體型號取決於你所需的功能。 你可能會在 [手機頁面](../CompatiblePhones/ListOfTestedPhones.md) 上找到有用的信息，包括一份測試過的手機列表，還包含一些智慧型手錶。
 
 受歡迎的手錶品牌包括三星 Galaxy、Garmin、Fossil、米動手環和 Fitbit。 上表中概述的不同選項將在下方詳細解釋，幫助你決定哪款智慧型手錶適合你的需求。
 
@@ -532,7 +533,7 @@ a) 當 **AAPSClient**/Nightscout/**SMS** 指令無法使用時；或
 
 b) 使用者希望避免輸入驗證碼（追蹤者手機需要在輸入資料、選擇 TT 或輸入碳水化合物時使用驗證碼）。
 
-智慧型手錶需要運作 **Android wear** 軟體（最好是 10 或更新版本）才能控制 **AAPS**。 請檢查手錶的技術規格，並查看[相容手錶的表格](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)。 如果不確定，請在 **AAPS** 的 Facebook/Discord 群組中搜尋或詢問。
+智慧型手錶需要運作 **Android wear** 軟體（最好是 10 或更新版本）才能控制 **AAPS**。 請檢查手錶的技術規格，並查看 [手機頁面](../Getting-Started/Phones.md)。 如果不確定，請在 **AAPS** 的 Facebook/Discord 群組中搜尋或詢問。
 
 以下是設置流行型號 Samsung Galaxy Watch 4（40 毫米）的具體操作指南。 Garmin 手錶也是一個受歡迎的選擇，請參閱[這裡](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)。 如果你有設置其他智慧型手錶的經驗，並且認為這對其他用戶有幫助，請[編輯文件](../SupportingAaps/HowToEditTheDocs.md)，將你的發現分享給更廣泛的 **AAPS** 社群。
 
@@ -599,7 +600,7 @@ b) 使用者希望避免輸入驗證碼（追蹤者手機需要在輸入資料�
 
 ### 問題排除
 
-在建置 3.2 版完整 **AAPS** 應用程式（實際上是任何已簽章的應用程式）過程中，Android Studio 會在同一個資料夾中生成一個 .json 檔案。 這會在你嘗試建置下一個已簽章的應用程式（如 **AAPS** wear 應用程式）時，導致[未提交的變更](../GettingHelp/TroubleshootingAndroidStudio#uncommitted-changes)錯誤。 解決此問題的最快方法是導航到建置完整 AAPS 應用程式的資料夾，你的資料夾可能類似於：
+在建置 3.2 版完整 **AAPS** 應用程式（實際上是任何已簽章的應用程式）過程中，Android Studio 會在同一個資料夾中生成一個 .json 檔案。 這會在你嘗試建置下一個已簽章的應用程式（如 **AAPS** wear 應用程式）時，導致[未提交的變更](#troubleshooting_androidstudio-uncommitted-changes)錯誤。 解決此問題的最快方法是導航到建置完整 AAPS 應用程式的資料夾，你的資料夾可能類似於：
 
 C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release。
 
@@ -626,6 +627,7 @@ https://www.youtube.com/watch?v=tSVkqWNmO2c
 
 你需要確保用來設置 Samsung 帳號的電子郵件帳戶的出生日期顯示用戶年齡 13 歲以上，否則 Samsung 的許可權批准將非常困難。 如果你已為 13 歲以下的孩子建立了 Gmail 帳號並使用該電子郵件地址，你無法簡單地將其更改為成人帳戶。 解決此問題的一種方法是將目前的出生日期修改為使目前年齡為 12 歲零 363 天。 第二天，該帳戶將被轉換為成人帳戶，然後你可以繼續設置 Samsung 帳戶。
 
+(remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 ##### 將 **AAPS** Wear 應用程式傳輸到 **AAPS** 手機
 
 從 Android Studio 將 Wear.apk 載入到你的手機，可以透過以下方式進行：
@@ -780,7 +782,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 
 
-您可以以與**AAPS** Wear 應用相同的方式，將**AAPSClient**穿戴 apk 傳輸到手機並側載到手錶上，如[將 Wear 應用傳輸到您的 AAPS 手機](#transferring-the-aaps-wear-app-onto-your-aaps-phone)中詳細說明。
+您可以以與**AAPS** Wear 應用相同的方式，將**AAPSClient**穿戴 apk 傳輸到手機並側載到手錶上，如[將 Wear 應用傳輸到您的 AAPS 手機](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)中詳細說明。
 
 ### 選項 4) FitBit 手錶的有限 Nightscout（和其他選項）
 

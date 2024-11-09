@@ -10,7 +10,7 @@ AAPS предлагает несколько опций для удаленно�
 - Родители могут дистанционно следить за всеми данными, такими как уровень глюкозы, активные углеводы, активный инсулин и т. д. с помощью приложения **AAPSClient** на своем телефоне. Настройки должны быть одинаковыми в AAPS и AAPSClient.
 - Родители могут слышать оповещения с помощью приложения **xDrip в режиме слежения (follower)** на своем телефоне.
 - Remote control of AAPS using [SMS Commands](../RemoteFeatures/SMSCommands.md) secured by two-factor authentication.
-- Remote control through AAPSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](../Maintenance/ReleaseNotes.md#version-2811) for further details.
+- Remote control through AAPSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](#important-hints-2-8-1-1) for further details.
 
 ## Инструменты и приложения для удаленного мониторинга
 
@@ -30,7 +30,7 @@ AAPS предлагает несколько опций для удаленно�
 
 ## Важные факторы
 
-- Setting the correct [treatment factors](../UsefulLinks/FAQ.md#how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
+- Setting the correct [treatment factors](#FAQ-how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
 - Настройки должны быть одинаковыми в AAPS и AAPSClient.
 - Учитывайте временной разрыв между ведущим телефоном и ведомым из-за времени на загрузку и выгрузку, а также из-за того, что ведущий телефон AAPS начнет выгрузку только после выполнения цикла.
 - Так что не торопитесь, установите их правильно и проверьте их в реальной жизни когда ребенок рядом прежде чем начать дистанционный контроль и дистанционное лечение. Школьные каникулы могут быть хорошим временем для этого.

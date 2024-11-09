@@ -16,9 +16,15 @@ There are a wide range of **Automation** options, and users are encouraged to st
 
 1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
 
-Приводимый ниже пример показывает, как **Автоматизация** может активировать шаги для устранения забот. The user has set an **Automation** to trigger a 5am ‘Temp Target Exercise’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
+The example below illustrates how an **Automation** can enable steps to be eliminated.
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-54-49.png)
+User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
+
+![Alt text](../images/automation_2024-02-12_20-54-50.png)
+
+The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
+
+![Alt text](../images/automation_2024-02-12_20-54-49.png)
 
 ## Основные соображения перед началом применения автоматизации
 
@@ -46,9 +52,17 @@ Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, 
 
 Чтобы настроить **Automation** создайте правило **AAPS** следующим образом:
 
+![Automation create](../images/automation_create.png)
+
 * give your ‘rule’ a title;
-* select at least one ‘Condition’; and
+* select at least one ‘Condition’;
+
+![Automation condition](../images/automation_condition.png)
+
 * select one ‘Action’;
+
+![Automation action](../images/automation_action.png)
+
 * check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
 
 ![Автоматизация](../images/automation_2024-10-26_17-48-05.png)
@@ -57,12 +71,12 @@ Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, 
 
 Чтобы отключить правило **Automation**, снимите галочку с поля слева от названия правила **Automation**. The example below shows an **Automation** entitled ‘Low Glucose TT’ as either activated (‘ticked') or deactivated (‘unticked’).
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-56-08.png)
+![Alt text](../images/automation_2024-02-12_20-56-08.png)
 
 
 When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". Это заставляет**AAPS** сначала вывести уведомление, а не автоматизировать действие. Когда вы убедитесь, что уведомление запущено в правильное время/ при правильных условиях, правило **Автоматизации** может быть обновлено, с заменой "Уведомления" на ‘Действие’.
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-55-05.png)
+![Alt text](../images/automation_2024-02-12_20-55-05.png)
 
 ```{admonition} Important note
 :class: note
@@ -89,15 +103,15 @@ Please be careful when selecting a negative value in **Automation**
 
 Необходимо соблюдать осторожность при выборе «отрицательного значения» в «Условиях», как например «менее чем» в **Automations**. Например:
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-56-25.png-500x.png)
+![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-**Пример 1:** Создание условия **"меньше, чем"** "-0,1" приведет к:
+**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
 
-Запустит **Automation** для любого числа, которое **строго** меньше, чем** -0,1. Сюда войдут такие числа как -0.2, -0.3, -0.4 и так далее. Помните, что -0,1 само **не** включен в это условие. (условие "меньше или равно -0,1" _включало бы_ -0,1).
+Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/l (-2 mg/dl)" _would_ include -0.1 mmol/l or -2 mg/dl).
 
-**Пример 2:** Создание условия "больше, чем" -0,1 приведет к:
+**Example 2:** Creating a Condition "is greater than" -0.1mmol/l (-2mg/dl) will:
 
-Запустит **Автоматизацию** для любого числа, которое **строго** больше, чем** -0,1. Сюда входят такие числа как 0, 0,2, 0,4 и любые другие положительные числа.
+Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-2mg/dl). This includes numbers like 0, 0.2, 0.4mmol/l, (0, 4, 8mg/dl) and any other positive number.
 
 Важно тщательно учитывать точное назначение **автоматизации** при выборе этих условий и значений.
 
@@ -159,25 +173,24 @@ Please be careful when selecting a negative value in **Automation**
 
 После добавления «Действия» значения по умолчанию должны быть изменены на желаемую величину путем нажатия и изменения значения по умолчанию.
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-57-07.png)
+![Alt text](../images/automation_2024-02-12_20-57-07.png)
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-57-29.png)
-
+(Automations-the-order-of-the-automations-in-the-list-matters)=
 ## The order of the **Automations** in the list matters
- <**AAPS** автоматизирует правила в порядке предпочтения, начиная с верхней части списка **Автоматизация**. Например, если **Автоматизация** ‘низкая гипогликемия’ является наиболее важной **автоматизацией**, превышающей все остальные правила, то эта **Автоматизация** должна отображаться в начале списка созданных пользователем **Автоматизаций **, как показано ниже:
+ <**AAPS** автоматизирует правила в порядке предпочтения, начиная с верхней части списка **Автоматизация**. For example, if the ‘Low’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-57-48.png-500x.png)
+![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
 
 To reprioritize the **Automation** rules, click and hold the four-lines-button on the right side of the screen. Меняйте порядок  **Автоматизаций**, перемещая правила вверх или вниз.
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-58-00.png-500x.png)
+![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
 
 ## Как удалить правила автоматизации
 
 Для удаления правила **автоматизации** нажмите на значок корзины.
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-58-26.png-500x.png)
+![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
 ## Примеры Автоматизации
 
@@ -187,11 +200,11 @@ To reprioritize the **Automation** rules, click and hold the four-lines-button o
 
 Эта **Автоматизация** запускает автоматическую  "Временную Цель Гипо", когда низкая **ГК** находится на определенном пороговом уровне.
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_21-04-01.png-500x.png)
+![Alt text](../images/automation_2024-02-12_21-04-01.png-500x.png)
 
 ### Временная цель Обеденный перерыв (с "Локацией")
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_21-04-25.png-500x.png)
+![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
 
 Эта **Автоматизация** была создана для пользователя, который обедает на работе примерно в одно и то же время каждый будний день, но запускается только в том случае, если пользователь находится в пределах заданного ‘местоположения’.  So if the user is not at work one day, this **Automation** will be activated.
 
@@ -199,11 +212,11 @@ This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to dri
 
 "Инициирующее" местоположение устанавливается путем ввода GPS-координат широты и долготы, как показано ниже:
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_21-04-40.png-500x.png)
+![Alt text](../images/automation_2024-02-12_21-04-40.png-500x.png)
 
 Из-за союза "И" **Автоматизация** происходит только в "выбранное" время при нахождении пользователя на предопределенном месте.
 
-**Автоматизация ** не будет активирована ни в какое другое время в этом месте или в это время за пределами 100 метров от установленных GPS-координат.
+The **Automation** will not be triggered on any other time at this location or on this time outside of 50 meters set GPS coordinates.
 
 ### Автоматизация по локации SSID WIFI
 
@@ -218,14 +231,14 @@ This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to dri
 
 It will then set a **Temp Target**  of 75mg/dl for 30 minutes (4). Одно из преимуществ включения местоположения заключается в том, что правило не будет срабатывать, если пользователь путешествует в отпуске, например.
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_21-05-02.png-500x.png)
+![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
 
 Here is the screenshot detailing the **Automation** triggers:
 
 1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
 1) WIFI SSID = My_Home_WiFi_Name
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_21-05-16.png-500x.png)
+![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
 ## Журналы автоматизации
 
@@ -250,7 +263,7 @@ Here is the screenshot detailing the **Automation** triggers:
 * изменит **профиль** на LocalProfile1 (т. е. отменит временный профиль, если таковой имеется)
 * остановит **Врем Цель Temp Target** (если есть)
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_21-05-56.png-500x.png)
+![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
 
 ## Troubleshooting
 
@@ -260,7 +273,7 @@ Check the box to the right of **Automation** event is ‘ticked’ to ensure the
 
 ## Troubleshooting
 
-![Альтернативный текст (alt text)](../images/automation_2024-02-12_21-06-12.png-500x.png)
+![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
 
 * Проблема: __ Мои автоматизации запускаются в неправильном порядке.__
 

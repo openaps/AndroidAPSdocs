@@ -50,7 +50,7 @@ Falls Du Dir nicht sicher bist, kannst Du auch zunächst die „Virtuelle Pumpe�
 
 #### Option 2: Der Konfigurations-Generator
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump):
+On an existing installation you can select the **Medtrum** pump from the [Config Builder](#Config-Builder-pump):
 
 Das **Hamburger-Menü** in der oberen linken Ecke antippen und **Konfiguration**\ ➜\ **Pumpe**\ ➜\ **Medtrum**\ durch **Aktivieren** des Optionsfelds vor dem Namen **Medtrum** auswählen.
 
@@ -90,8 +90,9 @@ Diese Einstellungen ändern die Art und Weise, wie AAPS Benachrichtigung bei nic
     - Reservoir fast leer (20 IE)
     - Patch-Ablaufwarnung
 
-In jedem Fall werden diese Warnungen auch auf der Medtrum-Übersichtsseite unter [Aktive Alarme](#active-alarms) angezeigt.
+In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
 
+(medtrum-patch-expiration)=
 #### Patch Ablaufdatum
 
 ***Voreingestellt: Aktiviert.***
@@ -104,7 +105,7 @@ Wenn diese Einstellung deaktiviert ist, wird der Patch keine Warnung abgeben und
 
 ***Voreingestellt: 72 Stunden.***
 
-Diese Einstellung ändert, wenn das [Patch Ablaufdatum](#patch-expiration) aktiviert ist, den Zeitpunkt (in Stunden nach der Aktivierung) zu dem AAPS eine Benachrichtigung anzeigen wird.
+This setting changes the time of the expiration warning, when [Patch Expiration](#medtrum-patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
 
 #### Stündliches Maximum Insulin
 
@@ -213,6 +214,7 @@ Reinige die Haut, entferne alle Aufkleber und befestige den Patch an Deinem Kör
 
 Drücke **Weiter**, um den Patch zu aktivieren.
 
+(medtrum-activate-patch)=
 ##### Patch aktivieren
 
 ![Patch aktivieren](../images/medtrum/activation/ActivatePatch.png)
@@ -287,6 +289,7 @@ Dies zeigt den letzten abgegebenen Bolus an.
 
 Dies zeigt den derzeit abgegebenen (laufenden) Bolus an.
 
+(medtrum-active-alarms)=
 ##### Aktive Alarme:
 
 Dies zeigt alle derzeit aktiven Alarme an.
@@ -321,7 +324,7 @@ Diese Schaltfläche aktualisiert den Patch-Status.
 
 ##### Wechsele Patch:
 
-Diese Schaltfläche startet den Prozess zum Wechseln des Patches. Weitere Informationen findest Du unter [Patch aktivieren](#activate-patch).
+Diese Schaltfläche startet den Prozess zum Wechseln des Patches. See [Activate patch](#medtrum-activate-patch) for more information.
 
 ### Alarme zurücksetzen
 

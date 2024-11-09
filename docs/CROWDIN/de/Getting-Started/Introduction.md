@@ -18,6 +18,7 @@ In einem Flugzeug erledigt ein Autopilot einen Teil der Arbeit des menschlichen 
 
 ![grafik](../images/autopilot.png)
 
+(Introduction-what-does-hybrid-closed-loop-mean)=
 ## Was bedeutet "Hybrid-Closed-Loop"?
 
 Die beste Lösung für Typ-1-Diabetes wäre eine „funktionale Heilung“ (wahrscheinlich die Implantierung von Bauchspeicheldrüsenzellen, die vor der Immunabwehr geschützt sind). Während wir darauf warten, ist eine „full closed Loop" künstliche Bauchspeicheldrüse wahrscheinlich das nächstbeste. Dies ist ein Technologiesystem, das keine Benutzereingabe benötigt (wie z. B. Mahlzeitenbolus abgeben oder körperliche Aktivität "ankündigen"), um eine gute Blutzucker-Kontrolle zu erreichen. Derzeit gibt es noch keine für die Allgemeinheit verfügbaren Systeme, die „full closed loop" sind. Alle benötigen noch Benutzereingaben. Die aktuell verfügbaren Systeme werden als "hybrid closed loop" bezeichnet, da sie eine Kombination aus automatisierter Technik und Benutzereingaben nutzen.
@@ -44,7 +45,7 @@ Da OpenAPS nur mit bestimmten älteren Insulinpumpen kompatibel ist, wurde **AAP
 
 ## Was sind die Grundbestandteile von AAPS?
 
-Das „Gehirn“ von AAPS ist eine **App**, die Du selber erstellen ("bauen") musst. Es gibt für dieses Erstellen sehr detaillierte Schritt-für-Schritt-Anleitungen. Anschließend installierst Du die **AAPS-App** auf einem [kompatiblen](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit?pli=1#gid=2097219952) **Android Smartphone** (**1**). Eine Reihe von Nutzenden bevorzugt es, den "Loop" auf einem separaten Smartphone zu haben und es nicht auf ihrem eigentlichen Haupttelefon. Damit ist es dann auch möglich, Dein bestehendes Systemumfeld (z.B. iOS) weiterzunutzen, und nur für AAPS ein Android-Smartphone zu nutzen.
+Das „Gehirn“ von AAPS ist eine **App**, die Du selber erstellen ("bauen") musst. Es gibt für dieses Erstellen sehr detaillierte Schritt-für-Schritt-Anleitungen. You then install the **AAPS  app** on a [compatible](../Getting-Started/Phones.md) **Android smartphone** (**1**). Eine Reihe von Nutzenden bevorzugt es, den "Loop" auf einem separaten Smartphone zu haben und es nicht auf ihrem eigentlichen Haupttelefon. Damit ist es dann auch möglich, Dein bestehendes Systemumfeld (z.B. iOS) weiterzunutzen, und nur für AAPS ein Android-Smartphone zu nutzen.
 
 Das **Android Smartphone** benötigt außer **AAPS** noch eine weitere App. Das ist entweder eine modifizierte Dexcom-App, genannt "build-your-own dexcom app" [**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) oder [**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/). Diese zusätzliche App empfängt über Bluetooth die BZ-Werte von einem Sensor (**2**) und sendet sie dann im Handy an die **AAPS-App**.
 
@@ -188,7 +189,7 @@ Diese Strategie reduziert das Risiko erheblich, wenn ein bösartiger Angriff auf
 
 #### Sicherheitsaspekte bezüglich einer allzu schnellen Absenkung der Blutzuckerwerte
 
-Eine schnelle Reduktion des HbA1c und eine verbesserte Blutzuckerkontrolle klingt verlockend. Allerdings kann das _zu schnelle_Senken des durchschnittlichen Blutzuckerspiegels, durch Start eines Closed-Loop-Systems zu permanenten Schäden führen, auch an den Augen, und schmerzhafter Neuropathie, die nie mehr verschwindet. Solche Schäden lassen sich einfach vermeiden, indem man die Werte langsamer reduziert. Wenn Du derzeit einen erhöhten HbA1c hast und zu **AAPS** (oder einem anderen Closed-Loop-System) wechselst, besprich dieses potentielle Risiko _bitte_ mit Deinem Klinik-Team, bevor Du startest, und lege gemeinsam einen Zeitraum fest, in dem Du den Glukosespiegel sicher schrittweise senkst. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](../Getting-Started/PreparingForAaps.md#safety-first).
+Eine schnelle Reduktion des HbA1c und eine verbesserte Blutzuckerkontrolle klingt verlockend. Allerdings kann das _zu schnelle_Senken des durchschnittlichen Blutzuckerspiegels, durch Start eines Closed-Loop-Systems zu permanenten Schäden führen, auch an den Augen, und schmerzhafter Neuropathie, die nie mehr verschwindet. Solche Schäden lassen sich einfach vermeiden, indem man die Werte langsamer reduziert. Wenn Du derzeit einen erhöhten HbA1c hast und zu **AAPS** (oder einem anderen Closed-Loop-System) wechselst, besprich dieses potentielle Risiko _bitte_ mit Deinem Klinik-Team, bevor Du startest, und lege gemeinsam einen Zeitraum fest, in dem Du den Glukosespiegel sicher schrittweise senkst. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](#preparing-safety-first).
 
 #### Medizinische Sicherheit bezüglich Geräte, Verbrauchsmaterialien und anderer Medikamente
 
@@ -196,7 +197,7 @@ Verwende eine getestete, voll funktionierende, FDA oder CE zugelassene Insulinpu
 
 Verwende Originalzubehör wie Inserter, Katheter und Insulinbehälter, die vom Hersteller für Deine Pumpe und Dein CGM zugelassen sind. Die Verwendung von nicht geprüftem oder modifiziertem Zubehör kann zu Ungenauigkeiten des CGM-Systems und Insulinabgabefehlern führen. Insulin ist höchst gefährlich, wenn es falsch dosiert wird. Spiele nicht mit Deinem Leben, indem Du Deine Diabetesausrüstung hackst.
 
-SGLT-2 Inhibitoren (Gliflozine) sollten bei der Verwendung von **AAPS** nicht eingenommen werden, da sie den Blutzuckerspiegel unberechenbar senken. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](../Getting-Started/PreparingForAaps.md#safety-first).
+SGLT-2 Inhibitoren (Gliflozine) sollten bei der Verwendung von **AAPS** nicht eingenommen werden, da sie den Blutzuckerspiegel unberechenbar senken. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](#preparing-safety-first).
 
 (introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
 ## Wie kann ich mit meinem Klinikteam über AAPS ins Gespräch kommen?

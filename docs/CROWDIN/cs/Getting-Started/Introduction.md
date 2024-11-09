@@ -18,6 +18,7 @@ V eltadle autopilot nevykonává všechnu lidskou práci, pilot nemůže celý l
 
 ![image](../images/autopilot.png)
 
+(Introduction-what-does-hybrid-closed-loop-mean)=
 ## Co znamená hybridní uzavřená smyčka?
 
 Nejlepším řešením cukrovky I. typu by byla "léčba příčiny" (pravděpodobně transplantace slinivkových buněk chráněných před imunitním systémem). Zatímco na to čekáme, uzavřená smyčka v systému umělé slinivky je pravděpodobně druhé nejlepší řešení. Takový systém nevyžaduje žádné vstupy uživatele (např. bolus k jídlu nebo hlášení aktivity), s dobrými výsledky regulace hladiny krevního cukru. V současné době neexistují žádné systémy "plně" uzavřené smyčky, všechny vyžadují nějaké informace od uživatele. Současné systémy jsou tzv. "hybridní" uzavřené smyčky, protože využívají kombinaci automatizace a uživatelských vstupů.
@@ -44,7 +45,7 @@ Zatímco OpenAPS je kompatibilní pouze s určitými staršími inzulinovými pu
 
 ## Jaké jsou základní komponenty AAPS?
 
-"Mozkem" AAPS je **aplikace**, kterou si sami sestavíte. Sestavením vás provede manuál, krok za krokem. Vy pak nainstalujete hotovou **AAPS aplikaci** do [kompatibilního](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit?pli=1#gid=2097219952) **chytrého telefonu se systémem Android** (**1**). Mnoho uživatelů upřednostňuje instalaci smyčky na vyhrazeném telefonu, místo na jejich hlavním. Takže nemusíte Android telefon používat na všechno ostatní, stačí pouze na AAPS smyčku.
+"Mozkem" AAPS je **aplikace**, kterou si sami sestavíte. Sestavením vás provede manuál, krok za krokem. You then install the **AAPS  app** on a [compatible](../Getting-Started/Phones.md) **Android smartphone** (**1**). Mnoho uživatelů upřednostňuje instalaci smyčky na vyhrazeném telefonu, místo na jejich hlavním. Takže nemusíte Android telefon používat na všechno ostatní, stačí pouze na AAPS smyčku.
 
 Kromě **AAPS** budete do Vašeho **chytrého telefonu s Androidem** muset také nainstalovat další aplikaci. Jedná se buď o upravenou Dexcom aplikaci nazvanou Build-Your-Own Dexcom App, tedy [**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0), a nebo [**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/). Tato další aplikace získává hodnoty glykémie ze senzoru (**2**) prostřednictvím bluetooth připojení a interně je v telefonu předává do **AAPS aplikace**.
 
@@ -188,7 +189,7 @@ Pokud by došlo k útoku hackera na vaši inzulínovou pumpu, tato strategie mů
 
 #### Bezpečnostní hlediska týkající se příliš rychlého zlepšení kontroly glykémie
 
-Rychlé snížení HbA1c a zlepšení kontroly glukózy v krvi zní přitažlivě. Nicméně _příliš rychlé_ snížení průměrné úrovně glykémie nastartiváním uzavřené smyčky může způsobit trvalá poškození, včetně poškození očí nebo bolestivé neuropatie, které se nikdy nezbavíte. Těmto rizikům je možné snadno předejít pomalejším snižováním úrovní. Pokud v současné době máte zvýšenou hodnotu HbA1c a začínáte se systémem AAPS (nebo jiným systémem uzavřené smyčky), prodiskutujte prosím toto riziko s Vaším lékařem před zahájením, a dohodněte se na časovém horizontu s postupným bezpečným snižováním cílů glykémie. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](../Getting-Started/PreparingForAaps.md#safety-first).
+Rychlé snížení HbA1c a zlepšení kontroly glukózy v krvi zní přitažlivě. Nicméně _příliš rychlé_ snížení průměrné úrovně glykémie nastartiváním uzavřené smyčky může způsobit trvalá poškození, včetně poškození očí nebo bolestivé neuropatie, které se nikdy nezbavíte. Těmto rizikům je možné snadno předejít pomalejším snižováním úrovní. Pokud v současné době máte zvýšenou hodnotu HbA1c a začínáte se systémem AAPS (nebo jiným systémem uzavřené smyčky), prodiskutujte prosím toto riziko s Vaším lékařem před zahájením, a dohodněte se na časovém horizontu s postupným bezpečným snižováním cílů glykémie. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](#preparing-safety-first).
 
 #### Zdravotní bezpečnost zařízení, spotřebního materiálu a jiných léků
 
@@ -196,7 +197,7 @@ V systému umělé slinivky používejte otestované a plně funkční inzulíno
 
 Používejte originálnípříslušenství, jako zásobníky, kanyly a inzulíny schválené výrobcem vaší pumpy a CGM. Použití nevyzkoušeného nebo upraveného spotřebního materiálu může způsobit nepřesnosti a chyby při dodávce inzulínu. Inzulín je velmi nebezpečný, když není dávkovaný správně – prosím, nehazardujte se svým životem tím, že budete upravovat spotřební materiál.
 
-Při používání **AAPS** neberte SGLT-2 inhibitory (glifloziny), protože nepředvídatelně snižují hladinu cukru v krvi. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](../Getting-Started/PreparingForAaps.md#safety-first).
+Při používání **AAPS** neberte SGLT-2 inhibitory (glifloziny), protože nepředvídatelně snižují hladinu cukru v krvi. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](#preparing-safety-first).
 
 (introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
 ## Jak přistupovat k diskusi o AAPS s mojí diabetologickou ambulancí?

@@ -16,7 +16,13 @@ There are a wide range of **Automation** options, and users are encouraged to st
 
 1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
 
-The example below illustrates how an **Automation** can enable steps to be eliminated. The user has set an **Automation** to trigger a 5am ‘Temp Target Exercise’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
+The example below illustrates how an **Automation** can enable steps to be eliminated.
+
+User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
+
+![Alt text](../images/automation_2024-02-12_20-54-50.png)
+
+The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
 
 ![Alt text](../images/automation_2024-02-12_20-54-49.png)
 
@@ -46,9 +52,17 @@ Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, 
 
 To set up an **Automation** create a ‘rule’ with **AAPS** as follows:
 
+![Automation create](../images/automation_create.png)
+
 * give your ‘rule’ a title;
-* select at least one ‘Condition’; and
+* select at least one ‘Condition’;
+
+![Automation condition](../images/automation_condition.png)
+
 * select one ‘Action’;
+
+![Automation action](../images/automation_action.png)
+
 * check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
 
 ![Automation](../images/automation_2024-10-26_17-48-05.png)
@@ -91,13 +105,13 @@ Caution must be taken when selecting a ‘negative value’ within the ‘Condit
 
 ![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1" will:
+**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
 
-Trigger an **Automation** for any number which is **strictly** less than** -0.1. This includes numbers like -0.2, -0.3, -0.4 and so on. Remember that -0.1 itself **is not** included in this condition. (The condition "is equal or lesser than -0.1" _would_ include -0.1).
+Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/l (-2 mg/dl)" _would_ include -0.1 mmol/l or -2 mg/dl).
 
-**Example 2:** Creating a Condition "is greater than" -0.1 will:
+**Example 2:** Creating a Condition "is greater than" -0.1mmol/l (-2mg/dl) will:
 
-Trigger an **Automation** for any number which is **greater than** -0.1. This includes numbers like 0, 0.2, 0.4, and any other positive number.
+Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-2mg/dl). This includes numbers like 0, 0.2, 0.4mmol/l, (0, 4, 8mg/dl) and any other positive number.
 
 It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.
 
@@ -161,10 +175,9 @@ Once the ‘Action’ is added,  the default values must be changed to the desir
 
 ![Alt text](../images/automation_2024-02-12_20-57-07.png)
 
-![Alt text](../images/automation_2024-02-12_20-57-29.png)
-
+(Automations-the-order-of-the-automations-in-the-list-matters)=
 ## The order of the **Automations** in the list matters
- **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘low hypoglycemia’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+ **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
 ![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
@@ -203,7 +216,7 @@ The ‘Trigger’ location is set by inputting the latitude and longitude GPS co
 
 Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
 
-The **Automation** will not be triggered on any other time at this location or on this time outside of 100 metres set GPS coordinates.
+The **Automation** will not be triggered on any other time at this location or on this time outside of 50 meters set GPS coordinates.
 
 ### WIFI SSID Location Automation
 

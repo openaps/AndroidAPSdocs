@@ -8,7 +8,7 @@ This guide has some high-level information about DIY closed looping and specific
 
 To start using AAPS, the following steps should be taken:
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
+* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
 * [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
@@ -43,7 +43,7 @@ AAPS is designed to transparently track all input data it gathers, the resulting
 
 ## Examples of AAPS algorithm decision making:
 
-AAPS uses the same core algorithm and feature set as OpenAPS. Remdamasis nustatymais ir esama situacija, algoritmas pateikia keletą prognozių, pagal kurias apskaičiuojami skirtingi scenarijai, kas gali nutikti ateityje. Nightscout jie rodomi kaip violetinės linijos. AAPS uses different colors to separate these [prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines). Žurnalo failai gali būti naudojami norint atsekti, kuris iš šių įvairių numatymų buvo naudojamas konkrečiu laikotarpiu, kad būtų apskaičiuotos būtinos priemonės.
+AAPS uses the same core algorithm and feature set as OpenAPS. Remdamasis nustatymais ir esama situacija, algoritmas pateikia keletą prognozių, pagal kurias apskaičiuojami skirtingi scenarijai, kas gali nutikti ateityje. Nightscout jie rodomi kaip violetinės linijos. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). Žurnalo failai gali būti naudojami norint atsekti, kuris iš šių įvairių numatymų buvo naudojamas konkrečiu laikotarpiu, kad būtų apskaičiuotos būtinos priemonės.
 
 ### Here are examples of the purple prediction lines, and how they might differ:
 

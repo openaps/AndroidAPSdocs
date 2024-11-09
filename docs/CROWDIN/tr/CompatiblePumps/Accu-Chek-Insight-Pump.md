@@ -54,7 +54,7 @@ Not: Pompa ile telefon arasında kalıcı bir bağlantı olmayacaktır. Yalnızc
 
 ## AAPS ayarları
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../SettingUpAaps/Preferences.md#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](#Preferences-advanced-settings-nsclient)).
 
 ![Screenshot of Insight Settings](../images/Insight_settings.png)
 
@@ -122,7 +122,7 @@ Depending on the firmware version of your pump, the Insight will vibrate briefly
 
 * Firmware 1.x: Tasarımda titreşim yok.
 * Firmware 2.x: Titreşim devre dışı bırakılamaz.
-* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](../Maintenance/ReleaseNotes.md#version-2614))
+* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](#Releasenotes-version-2-6-1-4))
 
 Donanım yazılımı sürümünü menüde bulabilirsiniz.
 
@@ -150,4 +150,4 @@ Bu durumda, pomp ve akıllı telefondaki bluetooth'u yaklaşık 10 saniye kapat�
 
 ## Insight pompasıyla zaman dilimlerini geçme
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-insight).

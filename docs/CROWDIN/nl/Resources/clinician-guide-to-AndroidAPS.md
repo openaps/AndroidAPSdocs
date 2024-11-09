@@ -8,7 +8,7 @@ This guide has some high-level information about DIY closed looping and specific
 
 To start using AAPS, the following steps should be taken:
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
+* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
 * [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
@@ -43,7 +43,7 @@ AAPS is designed to transparently track all input data it gathers, the resulting
 
 ## Examples of AAPS algorithm decision making:
 
-AAPS uses the same core algorithm and feature set as OpenAPS. Het algoritme maakt voorspellingen voor meerdere scenario's (zoals hierboven beschreven). Deze worden in Nightscout weergegeven als paarse lijnen in de toekomst. AAPS uses different colors to separate these [prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines). In de logs is terug te vinden welke voorspelling en welk tijdsbestek heeft geleid tot een actie van het algoritme.
+AAPS uses the same core algorithm and feature set as OpenAPS. Het algoritme maakt voorspellingen voor meerdere scenario's (zoals hierboven beschreven). Deze worden in Nightscout weergegeven als paarse lijnen in de toekomst. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). In de logs is terug te vinden welke voorspelling en welk tijdsbestek heeft geleid tot een actie van het algoritme.
 
 ### Here are examples of the purple prediction lines, and how they might differ:
 

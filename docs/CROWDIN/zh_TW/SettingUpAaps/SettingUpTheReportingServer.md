@@ -9,6 +9,7 @@
 
 我們推薦使用Nightscout。
 
+(SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
 Nightscout 是一個網頁應用程式，可以記錄和顯示你的 CGM 資料以及**AAPS** 資料並生成報告。 這是一個強大的平台，已經與**AAPS** 整合多年。 它使使用者和照顧者能夠近乎實時地追蹤患者的糖尿病資料（如果所有相關組件之間有足夠的網路連線，資料接收與提供之間僅幾秒鐘的時間可能會過去）。 它也允許照護者向**AAPS** 發送遠端命令。
@@ -34,15 +35,16 @@ Nightscout是一個開源軟體。 任何人都可以使用免費或付費服務
 
 ### 進一步配置 Nightscout
 
-一旦你啟動并運行 Nightscout 實例，請參考[Nightscout 設定頁面](../SettingUpAaps/Nightscout.md)以獲取額外考量。
+一旦你的 Nightscout 實例啟動並運行，請參見 [Nightscout 設定頁面](../SettingUpAaps/Nightscout.md) 以獲取額外的考量。
 
+(SettingUpTheReportingServer-tidepool)=
 ## Tidepool
 
 Tidepool 自**AAPS** 版本 3.2 開始提供，該版本於 2023 年底發布。
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  
-由於使用<strong>AAPS</strong>時資料收入和報告之間有三小時的延遲，Tidepool並不適合用於與照護者分享即時信息。  
+由於使用<strong>AAPS</strong>時資料收入和報告之間有三小時的延遲，Tidepool並不適合用於與照護者分享即時訊息。  
 另一方面，如果 Nightscout 不是被接受的解決方案，Tidepool 可以成為與患者內分泌科醫生共享報告的理想解決方案。  
 ```
 

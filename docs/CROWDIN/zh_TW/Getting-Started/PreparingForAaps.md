@@ -44,6 +44,7 @@ N.B. 如果你使用不同的 HbA1c 單位（mmol/mol 而非 %），請點擊[�
 
 通常認為，_新診斷的_ 1 型糖尿病患者（通常在診斷時 HbA1c 非常高，在開始胰島素治療之前）可以立即迅速降低 HbA1c，而不會遇到這些風險，因為他們的血糖數值未長期升高。 然而，這仍然是一個需要與你的臨床醫生討論的考慮因素。
 
+(PreparingForAaps-no-sglt-2-inhibitors)=
 ### 禁止使用 SGLT-2 抑制劑
 
 ```{admonition} NO SGLT-2 inhibitors
@@ -121,7 +122,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 #### [臨床醫師專區](../Resources/clinician-guide-to-AndroidAPS.md)
 
-這是一個[專為臨床醫師設立的專區](../Resources/clinician-guide-to-AndroidAPS.md)，希望了解更多關於 AAPS 及開源人工胰臟技術。 在簡介中還提供了[如何與你的臨床團隊討論 AAPS](./Introduction.md#how-can-i-approach-discussing-aaps-with-my-clinical-team)的指南。
+這是一個[專為臨床醫師設立的專區](../Resources/clinician-guide-to-AndroidAPS.md)，希望了解更多關於 AAPS 及開源人工胰臟技術。 在簡介中還提供了[如何與你的臨床團隊討論 AAPS](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)的指南。
 
 ## 我們要建置和安裝什麼？
 
@@ -150,7 +151,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 **Nightscout**和**AAPS**必須大約每年更新一次，隨著改進版本的發佈。 在某些情況下，更新可以延後，但在其他情況下，更新被強烈建議或視為安全的重要措施。 這些更新的通知將在 Facebook 群組和 Discord 伺服器上發佈。 發佈說明將明確說明具體情況。 在更新時，可能會有許多人與你提出類似問題，你將獲得支援來進行更新。
 
-(preparing-how-long-will-it-take?)=
+(preparing-how-long-will-it-take)=
 ## 設置所有內容需要多長時間？
 
 如前所述，使用**AAPS**更像是一段旅程，需要你投入個人時間。 這不是一次性的設置。 關於建立建置**AAPS**、安裝和配置**AAPS**和**CGM**軟體，到從開放循環進入混合閉環循環的過程，大約需要 4 到 6 個月。 因此建議您優先建立 **AAPS** 應用程式並儘快完成早期目標，即使您仍然在使用其他胰島素輸送系統（您可以使用虛擬幫浦到達目標 5）。
@@ -211,13 +212,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 目前版本的 **AAPS**（3.2）需要使用 Google **Android 9.0 或更高版本** 的 Android 智慧型手機。 如果你打算購買一部新手機，截至 2024 年 7 月，建議選擇 Android 13。 用戶強烈建議出於安全原因保持 **AAPS** 的最新版本，不過對於無法使用 Android 9.0 或更新設備的用戶，較早版本的 **AAPS** 仍然可用於舊版 Android，例如 [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) 和 [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2)，可以從過去的版本中找到（查看舊版本的發行說明）。
 
 #### 智慧型手機型號選擇
-你選購的具體型號取決於所需的功能。 這裡有兩個關於相容的[智慧型手機](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952)和[智慧型手機與智慧型手錶](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)的歷史電子表格。 由於可能的型號眾多，這些電子表格已不再更新，因此我們建議在支援群組（Facebook 或 Discord）中搜尋“手機”或你考慮購買的具體型號。 如果仍需更多資訊，請發佈新帖來詢問。
-
-如欲捐贈仍需測試的智慧型手機或智慧型手錶型號，請發送電子郵件至[donations@androidaps.org](mailto:donations@androidaps.org)。
-
-- [已測試的手機清單](../CompatiblePhones/ListOfTestedPhones.md)
-- [Jelly 設置](../CompatiblePhones/Jelly.md)
-- [華為設定](../CompatiblePhones/Huawei.md)
+你選購的具體型號取決於所需的功能。 你可以在 [手機頁面](../Getting-Started/Phones.md) 上找到推薦與用戶對於可用設置的反饋。
 
 我們鼓勵用戶保持手機 Android 版本的最新狀態，包括安全參數。 然而，如果你是 **AAPS** 的新手，或者不是技術專家，你可能希望等到其他人確認更新是安全的後再進行更新，這可以透過我們的各大論壇確認。
 

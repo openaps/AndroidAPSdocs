@@ -8,7 +8,7 @@
 
 Для начала работы с AAPS необходимо выполнить следующие действия:
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
+* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
 * [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
@@ -43,7 +43,7 @@ AAPS предназначен для прозрачного отслеживан
 
 ## Примеры принятия решений алгоритмом AAPS:
 
-AAPS основывается на том же алгоритме и наборе функций, что и OpenAPS. Алгоритм выполняет несколько предсказаний (на основе параметров и ситуации), представляющих различные сценарии того, что может произойти в будущем. В Nightscout они отображаются в виде фиолетовых линий. AAPS uses different colors to separate these [prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines). В журнале событий будет описано, какие из этих предсказаний и в какие временные рамки будут управлять необходимыми действиями.
+AAPS основывается на том же алгоритме и наборе функций, что и OpenAPS. Алгоритм выполняет несколько предсказаний (на основе параметров и ситуации), представляющих различные сценарии того, что может произойти в будущем. В Nightscout они отображаются в виде фиолетовых линий. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). В журнале событий будет описано, какие из этих предсказаний и в какие временные рамки будут управлять необходимыми действиями.
 
 ### Ниже приведены примеры фиолетовых линий прогнозирования, а также то, как они могут различаться:
 

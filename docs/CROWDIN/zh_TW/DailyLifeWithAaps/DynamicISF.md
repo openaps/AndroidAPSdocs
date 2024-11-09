@@ -13,13 +13,15 @@
 
 所實現的**動態 ISF**方程式為：ISF = 1800 / (TDD * Ln ((血糖 / 胰島素除數) +1 ))
 
-![截圖 2024-10-19 145120](https://github.com/user-attachments/assets/472627ef-047f-438d-ba30-eba75eeaff97)
+SMB/AMA - 用戶的**個人設定**示例，其中包含用戶設置的靜態**胰島素敏感性因子(ISF)**，並由**SMB** 和 **AMA** 使用。
 
+![靜態 ISF](../images/DynISF1.png)
 
+動態 ISF - 是用戶的**ISF**的示例，根據**動態 ISF** 進行變化。
 
+![實作使用上述方程計算當前<strong x-id="1">ISF</strong>，並在 oref1 預測中用於<strong x-id="1">體內胰島素</strong>、<strong x-id="1">ZT</strong> 和 <strong x-id="1">UAM</strong>。](../images/DynISF2.png)
 
-
-此實現使用上述方程計算當前的**ISF**，還有 oref1 針對**IOB**、**ZT** 和**UAM**的預測。 它不會用於**COB**。  進一步的討論可以在這裡找到：https://www.youtube.com/watch?v=oL49FhOts3c。
+該實作使用上述公式來計算當前的 **ISF**，並應用於 **IOB**、**ZT** 和 **UAM** 的oref1 預測中。 它不會用於**COB**。  進一步的討論可以在這裡找到：https://www.youtube.com/watch?v=oL49FhOts3c。
 
 ### TDD（每日總胰島素劑量）
 TDD 將使用以下數值的組合：
@@ -37,7 +39,7 @@ TDD 將使用以下數值的組合：
 
 調整因子位於「偏好設定」 > **AAPS**:
 
-![截圖 2024-10-19 134558](https://github.com/user-attachments/assets/4b563c64-a924-49d3-904b-4e6fdb4dcc67)
+![因子 ISF](../images/DynISF3.png)
 
 
 ### 未來胰島素敏感因子

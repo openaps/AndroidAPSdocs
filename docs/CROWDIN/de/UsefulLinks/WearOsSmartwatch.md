@@ -203,6 +203,8 @@ Darüber hinaus gibt es drei Komplikationen vom Typ `LARGE IMAGE` Art: **Dark Wa
   * *None*: Deaktiviert den Menüaufruf bei Tippen der Komplikation
 * **Unicode in Complications** (Standard: `On`): Wenn `On` gewählt ist, nutzt die Komplikation Unicode Zeichen für Symbole wie `Δ` Delta, `⁞` vertikaler Punkttrenner oder `⎍` Basalraten-Symbol. Die Anzeige hängt von der Schriftart ab und kann sich je nach Watchface unterscheiden. Mit dieser Option können die Unicode-Zeichen bei Bedarf ausgeschaltet werden (`Off`), wenn der Font des Watchfaces diese Zeichen nicht unterstützt. Anzeigefehler können so vermieden werden.
 
+(WearOsSmartwatch-wear-os-tiles)=
+
 ## Wear OS Kacheln
 
 Wear OS Kacheln bieten einfachen Zugriff auf die Informationen der Benutzer und Aktionen zum Ausführen. Die Kacheln sind nur auf Android Smartwatches mit Wear Os Version 2.0 und höher verfügbar.
@@ -242,11 +244,11 @@ Aktionen aus der Aktions-Kachel können folgendes aus der AAPS-Telefon-App anfor
 
 ![Wear Aktions-Kachel, Beispielrechner](../images/wear_actions.png)
 
-[1] Über das Wear-OS-Menü, setze die Option "Rechner Prozentsatz" auf "AN", um die prozentuale Eingabe im Bolus-Rechner anzuzeigen. The default percentage is based on the phone settings in the "Overview" section ["Deliver this part of the bolus wizard result %"](../SettingUpAaps/Preferences.md#deliver-this-part-of-bolus-wizard-result) When the user does not provide a percentage, the default value from the phone is used. Konfiguriere die anderen Parameter für den Bolus-Rechner in der Smartphone-App über "Einstellungen" "Assistenteneinstellungen".
+[1] Über das Wear-OS-Menü, setze die Option "Rechner Prozentsatz" auf "AN", um die prozentuale Eingabe im Bolus-Rechner anzuzeigen. The default percentage is based on the phone settings in the "Overview" section ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result) When the user does not provide a percentage, the default value from the phone is used. Konfiguriere die anderen Parameter für den Bolus-Rechner in der Smartphone-App über "Einstellungen" "Assistenteneinstellungen".
 
 ### AAPS (Temp Target) Kachel
 
-Die Temp Target Kachel kann ein temporäres Ziel basierend auf AAPS-Smartphone-Voreinstellungen anfordern. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](../SettingUpAaps/Preferences.md#default-temp-targets) and set the duration and targets for each preset. Konfiguriere die sichtbaren Aktionen auf der Kachel durch die Kachel-Einstellungen. Um die Konfigurationsoptionen anzuzeigen, halte die Kachel lange gedrückt und wähle dann 1 bis 4 Optionen:
+Die Temp Target Kachel kann ein temporäres Ziel basierend auf AAPS-Smartphone-Voreinstellungen anfordern. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](#Preferences-default-temp-targets) and set the duration and targets for each preset. Konfiguriere die sichtbaren Aktionen auf der Kachel durch die Kachel-Einstellungen. Um die Konfigurationsoptionen anzuzeigen, halte die Kachel lange gedrückt und wähle dann 1 bis 4 Optionen:
 
 * **Aktivität**; für Sport
 * **Hypo**; um das Ziel während der Hypo Behandlung zu erhöhen
@@ -258,7 +260,7 @@ Die Temp Target Kachel kann ein temporäres Ziel basierend auf AAPS-Smartphone-V
 
 ### AAPS (QuickWizard) Kachel
 
-Die QuickWizard-Kachel kann 1 bis 4 Schnellassistenten-Aktionstasten halten, die in der Smartphone-App[2] definiert sind. See [QuickWizard](../SettingUpAaps/Preferences.md#quick-wizard). Du kannst Standard-Mahlzeiten (Kohlenhydrate und Berechnung für den Bolus) setzen, die Du abhängig von der Tageszeit auf der Uhr anzeigen lassen kannst. Ideal für die gängigsten Mahlzeiten/Snacks, die Du tagsüber isst. Du kannst angeben, ob die Schnell-Assistenten-Tasten auf dem Smartphone, Uhr oder auf beiden angezeigt werden sollen. Hinweis: Das Smartphone kann immer nur eine Schnellassistenten-Aktionstaste gleichzeitig anzeigen. In den Einstellungen des Schnellassistenten kannst Du auch festlegen, wie viel Prozent des berechneten Bolus abgegeben werden soll. Mit der Einstellung kannst Du bestimmen, dass z.B. für einen Snack 120%, für langsame aufgenommenes Frühstück 80% und für Hypo-Behandlungen mit schnellen Kohlenhydraten 0% des Insulins abgegeben werden soll.
+Die QuickWizard-Kachel kann 1 bis 4 Schnellassistenten-Aktionstasten halten, die in der Smartphone-App[2] definiert sind. See [QuickWizard](#Preferences-quick-wizard). Du kannst Standard-Mahlzeiten (Kohlenhydrate und Berechnung für den Bolus) setzen, die Du abhängig von der Tageszeit auf der Uhr anzeigen lassen kannst. Ideal für die gängigsten Mahlzeiten/Snacks, die Du tagsüber isst. Du kannst angeben, ob die Schnell-Assistenten-Tasten auf dem Smartphone, Uhr oder auf beiden angezeigt werden sollen. Hinweis: Das Smartphone kann immer nur eine Schnellassistenten-Aktionstaste gleichzeitig anzeigen. In den Einstellungen des Schnellassistenten kannst Du auch festlegen, wie viel Prozent des berechneten Bolus abgegeben werden soll. Mit der Einstellung kannst Du bestimmen, dass z.B. für einen Snack 120%, für langsame aufgenommenes Frühstück 80% und für Hypo-Behandlungen mit schnellen Kohlenhydraten 0% des Insulins abgegeben werden soll.
 
 ![Wear Aktionskachel und Smartphone-Einstellungen](../images/quickwizard_watch_phone.png)
 
@@ -328,6 +330,8 @@ Da wir bei der Kommunikation keine Kompromisse eingehen können (wir brauchen ak
 * Manchmal hilft es, Apps erneut mit der Uhr zu synchronisieren, da es manchmal ein bisschen langsam sein kann, bis der Sync automatisch erfolgt: Wear Os > Zahnrad-Symbol (ganz unten) > Name deiner Uhr > Apps erneut synchronisieren.
 * Schalte ADB Debuggen in den Entwickleroptionen der Uhr ein, verbinde die Uhr via USB mit dem PC und starte die Wear App einmal in Android Studio.
 * Wenn die Daten in Komplikationen nicht aktualisiert werden, prüfe zuerst, ob AAPS-Watchfaces überhaupt funktionieren.
+
+(Watchfaces-garmin)=
 
 ## Garmin
 

@@ -8,9 +8,9 @@
 
 - Roche Accu-Chek Combo (jakýkoli firmware, všechny fungují)
 - Zařízení Smartpix nebo Realtyme spolu s 360 konfiguračním softwarem pro nastavení pumpy. (Roche poskytuje zařízením Smartpix a konfigurační software zdarma svým zákazníkům na vyžádání.)
-- Kompatibilní telefon: Android telefon s verzí LineageOS 14.1 (dříve CyanogenMod) nebo alespoň Android 8.1 (Oreo). Od verze AAPS 3.0 je Android 9 povinný. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
+- Kompatibilní telefon: Android telefon s verzí LineageOS 14.1 (dříve CyanogenMod) nebo alespoň Android 8.1 (Oreo). Od verze AAPS 3.0 je Android 9 povinný. See [release notes](#maintenance-android-version-aaps-version) for details.
 - S verzí LineageOS 14.1 musí být aktuální verze alespoň z června 2017, protože změna potřebná k párování Combo pumpy byla zavedena až tehdy. 
-- Seznam telefonů lze nalézt v dokumentu [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
+- A list of phones can be found in the [AAPS Phones](../CompatiblePhones/ListOfTestedPhones.md) document.
 - Uvědomte si, že toto není úplný seznam a odráží osobní zkušenosti uživatelů. Doporučuje se také sdílet své zkušenosti a pomáhat tak ostatním (tyto projekty jsou o tom, jak si navzájem pomáhat).
 - Vězte, že zatímco Android 8.1 umožňuje komunikaci s Combo, stále existují problémy s AAPS na 8.1.
 - Pro pokročilé uživatele je možné provést párování na rootovaném telefonu a přenést ho na jiný rootovaný telefon, který také musí být rootovaný. To umožňuje používání telefonů s Android < 8.1, ale nebylo to široce testováno: https://github.com/gregorybel/combo-pairing/blob/master/README.md
@@ -20,7 +20,7 @@
 - Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
 - Podporován je pouze jeden profil bazálního inzulínu.
 - Nastavení bazálního profilu jiného než 1 na pumpě nebo dodávání rozšířených bolusů či multiwave bolusů z pumpy narušuje TBR a způsobuje, že smyčka přejde do režimu nízkého pozastavení na 6 hodin, protože smyčka nemůže bezpečně fungovat za těchto podmínek.
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](#time-adjustment-daylight-savings-time-dst) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - V současnosti jsou podporovány pouze bazální dávky v rozmezí 0,05 až 10 U/h. To se také vztahuje při úpravě profilu, např. když se zvyšuje na 200%, maximální bazální dávka nesmí překročit 5 U/h, protože bude zdvojena. Podobně, při redukci na 50% musí být minimální bazální dávka alespoň 0,10 U/h.
 - Pokud smyčka požaduje zrušení probíhajícího TBR, Combo nastaví TBR na 90% nebo 110% na 15 minut místo toho. To je proto, že zrušení TBR způsobuje na pumpě upozornění, které způsobuje mnoho vibrací.
 - Občas (každých pár dní) může AAPS selhat v automatickém zrušení upozornění TBR ZRUŠENO, což musí uživatel poté vyřešit (stisknutím tlačítka aktualizace v AAPS, aby převedl varování do AAPS, nebo potvrzením upozornění na pumpě).
@@ -95,7 +95,7 @@ Existuje několik možných důvodů. Zkuste následující kroky:
 9. Nyní by se na pumpě měl zobrazit BT název telefonu pro výběr párování. Je důležité počkat alespoň 5s před stisknutím tlačítka výběru na pumpě. Jinak pumpa správně neodešle žádost o párování na telefon.
     
     - Pokud je Combo Pump nastavena na 5s doby obrazovky, můžete to vyzkoušet s 40s (původní nastavení). Zkušenost naznačuje, že doba mezi zobrazením pumpy na telefonu a výběrem telefonu je kolem 5-10s. V mnoha dalších případech párování prostě vyprší bez úspěšného spárování. Později byste to měli vrátit zpět na 5s, abyste splnili nastavení AAPS Combo a urychlili připojení.
-    - Pokud pumpa vůbec nezobrazuje telefon jako párovací zařízení, pravděpodobně není Bluetooth stack vašeho telefonu kompatibilní s pumpou. Ujistěte se, že používáte nový **LineageOS ≥ 14.1** nebo **Android ≥ 8.1 (Oreo)**. Pokud je to možné, vyzkoušejte jiný smartphone. Seznam již úspěšně používaných smartphoneů naleznete pod \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
+    - Pokud pumpa vůbec nezobrazuje telefon jako párovací zařízení, pravděpodobně není Bluetooth stack vašeho telefonu kompatibilní s pumpou. Ujistěte se, že používáte nový **LineageOS ≥ 14.1** nebo **Android ≥ 8.1 (Oreo)**. Pokud je to možné, vyzkoušejte jiný smartphone. You can find a list of already successfully used smartphones under [AAPS Phones](../CompatiblePhones/ListOfTestedPhones.md). 
 
 10. Někdy telefon požaduje (typicky 4místný) bluetooth PIN, který nesouvisí s 10místným PINem, který se později zobrazí na pumpě. Obvykle ruffy tento PIN nastaví automaticky, ale kvůli problémům s časováním to ne vždy funguje. Pokud se na telefonu zobrazí žádost o bluetooth párovací PIN před tím, než se na pumpě zobrazí jakýkoli kód, musíte zadat **}gZ='GD?gj2r|B}>** jako PIN. Nej snadněji to uděláte, pokud si tento 16 znakový text zkopírujete do schránky před zahájením sekvence párování a jednoduše jej vložíte do dialogového okna v tomto kroku. Viz související [Github issue](https://github.com/MilosKozak/ruffy/issues/14) pro podrobnosti.
 

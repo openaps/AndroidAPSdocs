@@ -17,6 +17,7 @@ Die ersten drei sind meist für Pflegende/Eltern geeignet, und Smartwatches sind
 5.  Beispiele für schulische Therapiepläne für Kinder unterschiedlicher Altersstufen sind unter ["Dateien“](https://www.facebook.com/groups/AndroidAPSUsers/files/) auf der **AAPS** Facebook-Seite hinterlegt.
 6.  Wie sieht der Notfallplan aus, wenn die Fernsteuerung nicht funktionieren sollte (_d.h._ Netzwerkprobleme auftreten oder die Bluetooth-Verbindung verloren geht)?  Denke immer daran, was mit **AAPS** passieren wird, wenn Du plötzlich keine neuen Befehle senden kannst. **AAPS** überschreibt die Basalrate, den ISF und das ICR mit den aktuellen Profilwerten. Falls Deine Remote-Verbindung unterbrochen wird, ist es ist besser temporäre Profilwechsel (_d.h._ mit einer beschränkten Dauer) genutzt zu haben, als auf ein dauerhaftes stärkeres Insulinprofil geschwechselt zu sein. Wenn Die eingegebene Zeitspanne abgelaufen ist, wird die Pumpe auf das Original-Profil zurückfallen.
 
+(RemoteControl-sms-commands)=
 ## 1) SMS-Befehle
 
 ```{admonition} Documentation
@@ -362,7 +363,7 @@ Wenn Du Probleme mit **AAPS** v3 hast ('NS Access Token' wird nicht akzeptiert) 
 
 Mit dem **AAPSClient** kann das Elternteil/Betreuende einen Großteil der Anpassungen direkt in **AAPS** (Ausnahme: Bolusabgabe) über das Mobilfunknetz oder Internet remote vornehmen. Die wichtigsten Vorteile des **AAPSClient** sind die Geschwindigkeit und Einfachheit mit der Eltern/Betreuende **AAPS** remote steuern können. Der __AAPSClient__ _kann_ deutlich schneller als die Eingabe von zu authentifizierenden SMS-Befehlen sein. Befehle, die im **AAPSClient** eingegeben werden, werden nach Nightscout hochgeladen.
 
-Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](../Maintenance/ReleaseNotes#version-2811) for further details.
+Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](#important-hints-2-8-1-1) for further details.
 
 ### AAPSClient mit Smartwatch-Optionen
 
@@ -475,7 +476,7 @@ Diese Tabelle wurde in 2023 erstellt und ist nicht vollständig. Es entstehen pe
 
 ### Bevor Du Dir eine Smartwatch kaufst …
 
-Welches genau Modell Du kaufen solltest, hängt von den gewünschten Funktionalitäten ab. Derzeit gibt es (noch) zwei Arbeitsblätter, die kompatible [Smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) und [Smartphones and Watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) zeigen. Wegen der großen Anzahl an Smartwatches und Smartphones werden diese allerdings nicht mehr aktualisiert. Es ist einfacher kurz über Discord und Facebook-Gruppen die entsprechende Information zu bekommen.
+Welches genau Modell Du kaufen solltest, hängt von den gewünschten Funktionalitäten ab. You may find useful information on the [Phones page](../CompatiblePhones/ListOfTestedPhones.md), including a list a tested phones that also contains some smartwatches.
 
 Zu den beliebten Smartwatch-Marken gehören Samsung Galaxy, Garmin, Fossil, Mi Band und Fitbit. Die verschiedenen Einsatzmöglichkeiten, die in der obigen Tabelle zusammengefasst sind, werden im Folgenden näher erläutert. Das soll Dir helfen, die Smartwatch auszuwählen, die am besten zu Deinen Bedürfnissen passt.
 
@@ -532,7 +533,7 @@ a)  **AAPSClient**/Nightscout/**SMS**-Befehle funktionieren nicht oder
 
 b) der Nutzende möchte die Eingabe eines Authentifizierungscode vermeiden (wie es bei der Dateneingabe, dem Setzen eines temporären Ziels oder der Kohlenhydrateingabe über das Follower-Smartphone notwendig ist).
 
-Um **AAPS** steuern zu können, muss auf der Smartwatch **Android Wear** Software (idealerweise 10 oder höher) laufen. Please check the technical specifications of the watch, and check the [spreadsheet of compatible watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). Wenn Du Dir nicht sicher sein solltest, frage einfach in den **AAPS**  Facobook/Discord Gruppen nach.
+Um **AAPS** steuern zu können, muss auf der Smartwatch **Android Wear** Software (idealerweise 10 oder höher) laufen. Please check the technical specifications of the watch, and check the [Phones page](../Getting-Started/Phones.md). Wenn Du Dir nicht sicher sein solltest, frage einfach in den **AAPS**  Facobook/Discord Gruppen nach.
 
 Eine detaillierte Schritt-für-Schritt Anleitung für die **AAPS**-Einrichtung auf der Samsung Galaxy Watch 4 (40mm) findest Du weiter unten. Die [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)-Smartwatch ist ebenfalls gerne gewählt. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
 
@@ -599,7 +600,7 @@ Sei geduldig - das Erzeugen der **AAPS** Wear apk wird (je nach Internetgeschwin
 
 ### Troubleshooting
 
-Beim Erstellen der 3.2 **AAPS** App Vollversion (und eigentlich bei jeder signierten App), erzeugt Android Studio eine .json-Datei im gleichen Ordner. This then causes errors with [uncommitted changes](../GettingHelp/TroubleshootingAndroidStudio#uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. Am schnellsten kann das behoben werden, in dem Du den Ordner, in dem die Vollversion der AAPS App erzeugt wurde, aufrufst. Der Ordner sollte ungefähr so aussehen:
+Beim Erstellen der 3.2 **AAPS** App Vollversion (und eigentlich bei jeder signierten App), erzeugt Android Studio eine .json-Datei im gleichen Ordner. This then causes errors with [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. Am schnellsten kann das behoben werden, in dem Du den Ordner, in dem die Vollversion der AAPS App erzeugt wurde, aufrufst. Der Ordner sollte ungefähr so aussehen:
 
 C:\Benutzer\Dein Name\StudioProjects\AndroidAPS\app\aapsclient\release.
 
@@ -626,6 +627,7 @@ Die App „Galaxy Wearable“ enthält auch ein Benutzerhandbuch. Öffne die Gal
 
 Stelle sicher, dass in dem eMail-Konto, das Du zur Einrichtung des Samsung-Kontos verwendest, ein Geburtsdatum älter als 13 Jahre hinterlegt ist, da die notwendigen Samsung Berechtigungen sonst nur schwer genehmigt werden können. Du kannst ein Gmail Konto eines Kindes (unter 13 Jahren) nicht problemlos in das eines Erwachsenen ändern. Ein möglicher Weg, das zu umgehen ist, das Geburtsdatum auf ein Alter von 12 Jahren und 363 Tagen zu ändern. Am folgenden Tag wird das Konto in ein Erwachsenen-Konto umgewandelt, und Du kannst mit der Einrichtung des Samsung-Kontos weiter machen.
 
+(remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 ##### Übertragen der **AAPS** Wear App auf Deine **AAPS** Smartphone
 
 Die wear.apk kann über mehrere Wege aus dem Android Studio auf Dein Smartphone übertragen werden:
@@ -781,7 +783,7 @@ Dann "Speichern unter" und speichere die Datei an einem Ort Deiner Wahl auf Dein
 
 
 
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#transferring-the-aaps-wear-app-onto-your-aaps-phone)
+The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)
 
 ### Option 4) Reduziertes Nightscout (und andere Optionen) auf einer Smartwatch - Fitbit Smartwatches
 
