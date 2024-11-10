@@ -1,3 +1,9 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Советы для пользователей Accu-Chek Combo
 
 **NOTE:** Starting with AAPS version 3.2, a [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (referred to as "combov2" sometimes) has been added. Старый драйвер также называется "драйвер, основанный на Ruffy. Некоторые части этого документа относятся только к старому драйверу. Они будут соответствующим образом аннотированы.
