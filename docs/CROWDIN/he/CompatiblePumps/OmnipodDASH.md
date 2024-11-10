@@ -88,7 +88,9 @@
 
 1. נווטו אל הלשונית **DASH** ולחצו על הלחצן **ניהול פוד (1)**, ולאחר מכן לחצו על **הפעל פוד (2)**.
 
-![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
+![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)
+
+​    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
 2. מסך **מילוי פוד** מוצג. מלאו פוד חדש עם לפחות 80 יחידות אינסולין והקשיבו לשני צפצופים המעידים על כך שהפוד מוכן להדבקה. בעת חישוב הכמות הכוללת של האינסולין הדרוש למשך 3 ימים, קחו בחשבון כי הפעלת הפוד תשתמש ב-3 עד 10 יחידות.
 
@@ -132,7 +134,9 @@
 
     For more details on the information displayed go to the [**DASH Tab**](#dash-tab) section of this document.
 
-![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
+
+​    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
 מומלץ לייצא הגדרות לאחר הפעלת הפוד. עשו זאת בכל החלפת פוד ופעם בחודש, העתיקו את הקובץ המיוצא לגיבוי בענן שלכם. see [**Export settings Doc**](../Maintenance/ExportImportSettings.md).
 
@@ -147,11 +151,17 @@
 
 1. נווטו ללשונית **DASH** ולחצו על **ניהול הפוד (1)** ולאחר מכן בחרו **ניהול פוד** ואז **כבה פוד**.
 
-![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
+![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+
+​    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
 
 2. במסך **כבה פוד**, לחצו על **הבא** כדי להתחיל בתהליך של השבתת הפוד. אתם תשמעו צפצוף אישור מהפוד שהכיבוי הצליח.
 
-![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg) ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
+![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
+
+ ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
+
+
 
 3. סימון ירוק יופיע לאחר השבתה מוצלחת. לחצו על **הבא** כדי לעבור אל המסך "הפוד הושבת". כעת תוכלו להסיר את הפוד כיוון שפעילותו הושבתה.
 
@@ -163,7 +173,9 @@
 
 5. בתפריט **ניהול פוד**; לחצו כפתור 'הקודם' של הטלפון כדי לחזור ללשונית **DASH**. ודאו שהשדה **סטטוס הפוד:** מציג הודעת **אין פוד פעיל**.
 
-![Deactivate_Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
+![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
+
+ ![Deactivate_Pod_8](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
 (OmnipodDASH-resuming-insulin-delivery)=
 
@@ -218,7 +230,13 @@
 
 1. נווטו ללשונית **DASH** ולחצו על **ניהול הפוד (1)** ולאחר מכן בחרו **היסטוריית פוד (2)** כדי לפתוח את מסך היסטוריית הפוד.
 
-![Pod_history_1](../images/DASH_images/Pod_History/Pod_history_1.jpg) ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
+![Pod_history_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+
+
+
+ ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
+
+
 
 2. במסך **היסטוריית הפוד**, קטגוריית ברירת המחדל של **הכל (1)** מוצגת ומציגה את **התאריך והשעה (2)** של כל **פעולות (3)** הפוד ו**תוצאות (4)** בסדר כרונולוגי הפוך. השתמשו ב**לחצן 'הקודם' של הטלפון פעמיים** כדי לחזור ללשונית **DASH** בממשק הראשי של AAPS.
 
@@ -282,12 +300,16 @@
 
 ### תפריט ניהול הפוד
 
-להלן המשמעות של הכפתורים בתפריט **ניהול פוד** שאליהם ניתן לגשת על ידי לחיצה על **ניהול פוד (0)** בלשונית **DASH**. ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (1)** button from the **DASH** tab.
 
-* 1 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
-* 2 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
-* 3 - **השמע צפצוף ניסיון** : בלחיצה כאן מושמע צפצוף ניסיון בודד בפוד.
-* 4 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
+![DASH_Tab_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+
+ ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+
+* 2 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
+* 3 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
+* 4 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
+* 5 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
 
 (DanaRS-Insulin-Pump-dash-settings)=
 
@@ -295,7 +317,9 @@
 
 בפינה הימנית-עליונה **בתפריט ההמבורגר (☰)** בחרו **בונה התצורה (1)** ← **משאבה** ← **Dash** ← **בחירת הכפתור העגול ("כפתור רדיו") (2) ← גלגל שיניים (3)**. בסימון **V (4)** בתיבה ליד **גלגל השיניים (3)** אתם תאפשרו לתפריט Dash להופיע כלשונית בממשק AAPS תחת השם **DASH**.
 
-![Dash_settings_1](../images/DASH_images/Dash_settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH_images/Dash_settings/Dash_settings_2.png)
+![Dash_settings_1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
+
+
 
 **הערה:** דרך מהירה יותר לגשת ל**הגדרות Dash** היא על ידי פתיחת**תפריט 3 הנקודות (⋮) (1)** בפינה הימנית העליונה של הלשונית **DASH** ובחירה ב**העדפות Dash (2)** מהתפריט שנפתח.
 
@@ -303,11 +327,11 @@
 
 להלן קבוצות ההגדרות; תוכלו להפעילן או להשביתן באמצעות מתגים שיש לרוב ההגדרות המתוארות להלן:
 
-![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
-
 *הערה: כוכבית (*) מציינת את ברירת המחדל של הגדרה מופעלת.*
 
 ### צפצופי אישור
+
+![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
 מספק צפצופי אישור מהפוד על ביצוע בולוס, שינויים במינון הבזאלי, בזאלי זמני, SMB ושינויים אחרים.
 
@@ -317,6 +341,8 @@
 * **צפצופי בזאלי זמני מופעלים:** הפעלת או השבתת צפצופי אישור כאשר בזאלי זמני מופעל או מבוטל.
 
 ### התראות
+
+![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
 מספק התראות של AAPS על תוקף הפוד, כיבויים, מכל נמוך על פי ספים מוגדרים.
 
@@ -328,6 +354,8 @@
 * **מספר יחידות:** מספר היחידות בהן מופעלת התראת המכל הנמוך.
 
 ### הודעות
+
+![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
 מספק התראות AAPS והתראות קוליות כאשר לא בטוח אם אירועי בזאלי זמני, SMB או בולוס הצליחו.
 
