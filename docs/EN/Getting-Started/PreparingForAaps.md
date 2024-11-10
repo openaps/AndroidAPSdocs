@@ -116,13 +116,13 @@ Please feel free to reach out to the AAPS community if there is anything you fee
 
 
 
-#### [Where to go for help](../Where-To-Go-For-Help/Background-reading.md)?
+#### [Where to go for help](../UsefulLinks/BackgroundReading.md)?
 
 This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
 
-#### [Section For Clinicians](../Resources/clinician-guide-to-AndroidAPS.md)
+#### [Section For Clinicians](../UsefulLinks/ClinicianGuideToAaps.md)
 
-This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.                                                                                                                                                                                                                             
+This is a [section specificially for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.                                                                                                                                                                                                                             
 
 ## What are we going to build and install?
 
