@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # EOPatch2 Kullanım Kılavuzu
 
 EOPatch pompası, NovoRapid veya Humalog gibi hızlı etkili U-100 tipi insülin kullanımını gerektirir. Doktorunuzun reçetesine göre sizin için uygun olan hızlı etkili bir insülin kullanın ve reçete edilen dozu enjekte edin.
