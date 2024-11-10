@@ -8,15 +8,6 @@ První tři jsou většinou vhodné pro pečovatele/rodiče, ale chytré hodinky
 
 ![image](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
-#### Věci ke zvážení když nastavujete vzdálené řízení **AAPS** pro dítě
-
-1.  Rozmyslete si, jak budete telefon dítěte udržovat v dosahy jeho pumpy a CGM. To může být náročné u dětí, které jsou příliš malé na to, aby mohly být zodpovědné za telefon. Ujistěte se, že pro AAPS vyberete telefon s dobrým dosahem bluetooth a naleznete způsob, jak může dítě pumpu a telefon nosiit - pokud je dostatečně staré/velké na to, aby telefon nosilo (např. _běžecký opasek_ může pomoct).
-2.  Udělejte si čas na otestování příkazů ve chvíli, kdy máte dítě po boku, než začnete dálkový monitoring a léčbu používat. Mnoho rodičů si k tomu vybírá školní prázdniny nebo víkendy.
-3.  Ujistěte se, že ostatní pečovatelé/učitelé jsou si vědomi způsobu léčby vašeho dítěte a rozmyslete, jak přidání vzdálené kontroly bude fungovat dohromady nebo vylepší již existující způsoby léčby.
-4.  Mnotí rodiče zjistili, že je užitečné mít samostatný komunikační kanál s ostatními pečovateli, například evný sledovací telefon pro učitele.
-5.  Příklady odlišných plánů léčby pro děti různého věku můžete nalézt v oddíle ["soubory"](https://www.facebook.com/groups/AndroidAPSUsers/files/) ve Facebookové skupině **AAPS**.
-6.  Jaký je váš nouzový plán pro případy, kdy vzdálená kontrola nefunguje (_např._ problémy se sítí nebo ztráta konektivity bluetooth)?  Vždy zvažujte, co se stane s **AAPS** ve chvíli, kdy nemůžete odeslat příkazy. **AAPS** přepíše v pumpě nastavení bazálů, ISF a ICR aktuálními hodnotami profilu. Vždy používejte pouze dočasné přepnutí profilu (tzn. s nastavenou dobou trvání) pokud přepínáte na silnější inzulínový profil, pro případ že by došlo k přeručení spojení. Tak se po vypršení nastaveného času vrátí nastavení pumpy k původnímu profilu.
-
 ## 1) SMS příkazy
 
 See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
