@@ -1,5 +1,9 @@
-# מצב הנדסה xDrip
+* * *
 
-הפעלת מצב הנדסה ב-xDrip+ מפעילה תכונות מורחבות וניסיוניות באפליקציה.
+orphan: true
 
-להפעלת מצב הנדסה, במסך הבית של xDrip+ הקישו על סמל הטיפול בצד ימין של המסך (הדומה למזרק). לאחר מכן לחצו לחיצה ארוכה על סמל המיקרופון בפינה השמאלית התחתונה של ממשק הטיפול. בתיבת הטקסט שנפתחת הקלידו "enable engineering mode". לחלופין, כאשר מנוע Google Speak פעיל, אמרו את הפקודה "enable engineering mode". מצב הנדסה מופעל עכשיו.
+* * *
+
+<head>
+  <meta http-equiv="Refresh" content="0; URL=https://navid200.github.io/xDrip/docs/Engineering-Mode.html" />
+</head>
