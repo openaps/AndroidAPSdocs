@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Ogólne zasady używania systemów CGM
 
 ## Higiena CGM
