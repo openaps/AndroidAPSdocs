@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Manual de instrucciones de EOPatch2 (Glucomen Day Pump)
 
 El parche requiere de insulina de acción rápida del tipo U-100, como NovoRapid o Humalog. Utiliza una insulina de acción rápida adecuada para tí, según la prescripción de tu médico e inyéctate la dosis prescrita.
