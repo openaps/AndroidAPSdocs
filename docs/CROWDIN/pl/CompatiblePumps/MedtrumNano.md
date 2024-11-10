@@ -1,8 +1,17 @@
+- - -
+orphan: true
+- - -
+
 # Medtrum Nano / 300U
 
 These instructions are for configuring the Medtrum insulin pump.
 
 This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.
+
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
 ## Pump capabilities with AAPS
 * All loop functionality supported (SMB, TBR etc)
@@ -259,70 +268,70 @@ The overview contains the current status of the Medtrum patch. It also contains 
 
 ![Medtrum Overview](../images/medtrum/Overview.png)
 
-##### BLE Status:
+### BLE Status:
 
 This shows the current status of the Bluetooth connection to the pumpbase.
 
-##### Last connected:
+### Last connected:
 
 This shows the last time the pump was connected to AAPS.
 
-##### Pump state:
+### Pump state:
 
 This shows the current state of the pump. For example:
     - ACTIVE : The pump is activated and running normally
     - STOPPED: The patch is not activated
 
-##### Basal type:
+### Basal type:
 
 This shows the current basal type.
 
-##### Basal rate:
+### Basal rate:
 
 This shows the current basal rate.
 
-##### Last bolus:
+### Last bolus:
 
 This shows the last bolus that was delivered.
 
-##### Active bolus:
+### Active bolus:
 
 This shows the active bolus that is currently being delivered.
 
 (medtrum-active-alarms)=
-##### Active alarms:
+### Active alarms:
 
 This shows any active alarms that are currently active.
 
-##### Reservoir:
+### Reservoir:
 
 This shows the current reservoir level.
 
-##### Battery:
+### Battery:
 
 This shows the current battery voltage of the patch.
 
-##### Pump type:
+### Pump type:
 
 This shows the current pump type number.
 
-##### FW version:
+### FW version:
 
 This shows the current firmware version of the patch.
 
-##### Patch no:
+### Patch no:
 
 This shows the sequence number of the activated patch. This number is incremented every time a new patch is activated.
 
-##### Patch expires:
+### Patch expires:
 
 This shows the date and time when the patch will expire.
 
-##### Refresh:
+### Refresh:
 
 This button will refresh the status of the patch.
 
-##### Change patch:
+### Change patch:
 
 This button will start the process to change the patch. See [Activate patch](#medtrum-activate-patch) for more information.
 
