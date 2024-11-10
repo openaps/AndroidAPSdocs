@@ -7,8 +7,7 @@ Your **AAPS Profile** is a set of five key parameters which define how **AAPS** 
 * [insulin sensitivity factors](#insulin-sensitivity-factor-isf) (ISF) and
 * [insulin-to-carb ratios](#insulin-to-carb-ratio-icr) (IC or ICR). 
 
-The four last parameters can be set to different values, changing hourly if required, over a 24-hour period.
-When working on your **Profile**, it is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after changing each change.
+When working on your **Profile**, it is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change.
 
 You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
 
@@ -19,6 +18,10 @@ Profiles vary significantly from person-to-person.
 For the final three parameters, basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in your insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
 
 ```
+
+The four last parameters can be set to different values, changing hourly if required, over a 24-hour period.
+
+![Hourly change of basal](../images/MaxDailyBasal2.png)
 
 Screenshots from **AAPS** of an _example_ profile are shown in below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
 
@@ -74,8 +77,6 @@ The targets can be defined within those boundaries :
 
 ### Impact
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
-
 If your target is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate changes are rarely suggested.
 
 ### How to set it
@@ -107,7 +108,7 @@ Too high basal rate can lead to low BGs. And vice versa.
 
 **AAPS** ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
-So, a basal rate too high will create low **BGs** both with the default rate, but also some hours hence as AAPS corrects to target.
+So, a basal rate too high will create low **BGs** both with the default rate, but also some hours hence as **AAPS** corrects to target.
 
 Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
 
@@ -121,9 +122,9 @@ Setting your basal rates right is done by trial and error. To test them, plan a 
 
 You can either do it by :
 * suspending the loop, and seeing how BG changes. If BG is dropping, basal rate is too high. And vice versa.
-* keeping the loop running, and seeing how IOB changes. If IOB is negative, basal rate is too high. And vice versa. Beware that this method relies on ISF to correct BG, and thus depends on other variables to be set reasonably for it to be successful.
+* keeping the loop running, and seeing how IOB changes. If IOB is negative, basal rate is too high. And vice versa. Beware that this method relies on ISF to correct BG, and thus depends on other variables to be set reasonably well for it to be successful.
 
-After doing this test, changes on your basal in the **Profile** should be done 1 hour before the rise/drop. Repeat the test while necessary.
+When taking action of the result of this test, changes on your basal in the **Profile** should be done 1 hour before the rise/drop. Repeat the test while necessary.
 
 ## Insulin sensitivity factor (ISF)
 
@@ -225,33 +226,33 @@ If after meal has digested and IOB has returned to zero, your BG remains higher 
 
 Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
 
-## About the importance of getting your profile right
+## Common questions related to the Profile
+
+### About the importance of getting your profile right
 
 **Why should I try to get my profile settings right? Can’t the loop just take care of it?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect profile values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your profile settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations. 
+A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect profile values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your profile settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
 
-If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR). 
+If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR).
 
 If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
 
-## Common questions related to the Profile
-
-#### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
+### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
 First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
 
 ![ISF too low](../images/isf.jpg)
 
-#### What causes high postprandial peaks in closed loop?
+### What causes high postprandial peaks in closed loop?
 First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
-#### I'm stuck high and the loop does not bring me down
-The possible reasons for the loop nod giving enough insulin are:
+### I'm stuck high and the loop does not bring me down
+The possible reasons for the loop not giving enough insulin are:
 * ISF is not strong enough
 * Basal might not be strong enough
 * A security setting might kick in, such as maxIOB. Or SMB is disabled at this time, depending on your settings.
 
-#### I have negative IOB, is this an issue ?
+### I have negative IOB, is this an issue ?
 Negative IOB means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the BG starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
 
 Here are some reasons why you may have negative IOB, and what action to take:
