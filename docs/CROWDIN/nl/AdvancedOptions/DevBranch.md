@@ -1,4 +1,4 @@
-## Development branch (voor ontwikkelaars)
+# Development branch
 
 <font color="#FF0000"><strong>Attention:</strong></font>
 Dev branch is for the further development of AAPS only. Het hoort op een aparte telefoon te worden gebruikt om nieuwe softwareversies uit te testen <font color="#FF0000"><strong>niet voor het daadwerkelijke loopen!</strong></font>
