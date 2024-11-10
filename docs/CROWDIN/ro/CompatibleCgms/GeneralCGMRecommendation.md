@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Recomandări generale CGM
 
 ## Igiena CGM

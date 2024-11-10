@@ -213,7 +213,7 @@ Please note this table was prepared in 2023, it is not exhaustive, and additiona
 
 ### Before you buy a smartwatch…
 
-The exact model of smartwatch you buy depends on the desired function(s). You may find useful information on the [Phones page](../CompatiblePhones/ListOfTestedPhones.md), including a list a tested phones that also contains some smartwatches.
+The exact model of smartwatch you buy depends on the desired function(s). You may find useful information on the [Phones page](#Phones-list-of-tested-phones), including a list a tested phones that also contains some smartwatches.
 
 Popular watch brands include Samsung Galaxy, Garmin, Fossil, Mi band and Fitbit. The different options summarised in the Table above are explained in more detail below, to help you decide which smartwatch is right for your situation.
 

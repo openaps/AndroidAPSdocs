@@ -26,7 +26,7 @@
 * When AAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **Refresh** on the **Combo Tab** in AAPS. Toto často pomůže obnovit komunikaci.
 * Když toto nepomůže, restartujte telefon. After the restart, AAPS will be reactivated and a new connection will be established with the pump. If you are using the old driver, ruffy will be reactivated as well.
 
-* Bylo zjištěno, že některé telefony jsou více náchylné ke spouštění alarmu „pumpa nedostupná“ než jiné. See [AAPS Phones](../CompatiblePhones/ListOfTestedPhones.md) for successfully tested smartphones.
+* Bylo zjištěno, že některé telefony jsou více náchylné ke spouštění alarmu „pumpa nedostupná“ než jiné. See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones.
 
 ### Hlavní příčiny a důsledky častých poruch v komunikaci
 

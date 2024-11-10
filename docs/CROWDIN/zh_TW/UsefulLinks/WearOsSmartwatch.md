@@ -335,7 +335,7 @@ Wear OS 手錶是非常耗電且又受限的裝置。 手錶機殼的尺寸限�
 * 檢查 AAPS 預設錶盤與其他帶有 AAPS 小工具的錶盤在你的手錶上哪個效能更好。
 * 在幾天內觀察不同的活動模式。 大多數手錶會因為抬腕查看、移動及其他使用相關的觸發事件而啟動螢幕顯示。
 * 檢查影響效能的全局系統設定：通知、背光/活動顯示逾時、GPS 啟動時。
-* 檢查[測試過的手機和手錶清單](../CompatiblePhones/ListOfTestedPhones.md)和[詢問社群](../GettingHelp/WhereCanIGetHelp.md)獲取其他使用者的經驗和報告的電池壽命。
+* Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
 * **我們無法保證錶盤或小工具上顯示的資料是最新的**。 最終，Wear OS 決定何時更新錶盤或小工具。 即使 AAPS 應用程式請求更新，系統也可能為了節省電池而延後或忽略更新。 當手錶電量不足時有疑慮時，請務必使用手機上的 AAPS 應用程式進行雙重檢查。
 
 (Watchfaces-troubleshooting-the-wear-app)=

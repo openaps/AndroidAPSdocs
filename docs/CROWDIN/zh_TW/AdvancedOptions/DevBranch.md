@@ -1,4 +1,4 @@
-## dev 分支( 開發環境 )
+# Development branch
 
 <font color="#FF0000"><strong>注意：</strong></font>
 dev 分支僅用於 AAPS 的進一步開發。 應在另一台手機上用於測試，<font color="#FF0000"><strong>而不是實際循環！</strong></font>

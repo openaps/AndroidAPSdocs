@@ -1,3 +1,9 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Accu-Chek Combo conseils pour une utilisation de base
 
 **NOTE:** Starting with AAPS version 3.2, a [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (referred to as "combov2" sometimes) has been added. L'ancien pilote est également appelé le "pilote avec Ruffy". Certaines parties de ce document ne s'appliquent qu'à l'ancien pilote. Celles-ci seront annotées en conséquence.
@@ -26,7 +32,7 @@
 * When AAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **Refresh** on the **Combo Tab** in AAPS. La plupart du temps la communication fonctionnera à nouveau.
 * If that does not help, reboot your smartphone. After the restart, AAPS will be reactivated and a new connection will be established with the pump. If you are using the old driver, ruffy will be reactivated as well.
 
-* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. See [AAPS Phones](../CompatiblePhones/ListOfTestedPhones.md) for successfully tested smartphones.
+* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones.
 
 ### Causes racines et conséquences des fréquentes erreurs de communication
 
