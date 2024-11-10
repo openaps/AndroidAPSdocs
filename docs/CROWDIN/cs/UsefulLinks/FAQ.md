@@ -336,7 +336,7 @@ S DanouR a korejskou verzí DanyR nemusíte dělat nic. For other pumps see [tim
 
 #### Hospitalization
 
-If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
 
 #### Medical appointment with your endocrinologist
 
