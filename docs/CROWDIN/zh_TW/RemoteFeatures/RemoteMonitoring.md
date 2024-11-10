@@ -30,10 +30,6 @@ AAPS 提供多種遠端監控兒童的選項，並允許傳送遠端指令。 �
 
 ## 需考慮的事項
 
-- 為孩子設定正確的 [治療因子](#FAQ-how-to-begin)（基礎率、胰島素作用時間、胰島素敏感因子等）是困難的，尤其是在涉及生長激素的情況下。
 - AAPS 和 AAPSClient 應用程式中的設定必須相同。
 - 考慮主裝置和追蹤者之間的時間差，因為上傳和下載需要時間，並且 AAPS 主手機只會在循環運作後上傳資料。
-- 因此，請花時間正確設定這些參數，並在現實生活中與你的孩子一起測試，然後再開始遠端監控和遠端治療。 學校假期可能是進行此操作的好時機。
-- 當遠端控制無法運作時（例如，網路問題），你的應變計劃是什麼？
-- 遠端監控和治療在幼兒園和小學中非常有幫助。 但請確保老師和教育工作者了解你孩子的治療計劃。 可以在 Facebook 上的 [AAPS 使用者群組檔案區](https://www.facebook.com/groups/AndroidAPSUsers/files/) 中找到此類照護計劃的範例。
-- 務必讓孩子的手機始終在幫浦和CGM的範圍內。 這對於非常年幼的孩子來說可能是一個挑戰。 有許多解決方案，一個受歡迎的選項是 [SPI Belt](https://spibelt.com/collections/kids-belts)。
+- What is your emergency plan for when remote control does not work (_i.e._ network problems or lost bluetooth connection)?  Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
