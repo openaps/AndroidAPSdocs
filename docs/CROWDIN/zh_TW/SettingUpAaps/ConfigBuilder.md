@@ -1,12 +1,12 @@
 # 組態建置工具
 
-Depending on your settings you can open Config Builder through a tab at the top of **AAPS**' screen or through the hamburger menu.
+根據你的設定，你可以透過**AAPS**螢幕頂部的選項卡或漢堡選單來開啟組態建置工具。
 
 ![開啟組態建置工具](../images/ConfBuild_Open_AAPS30.png)
 
-The **Config Builder** is the tab where you turn the modular features on and off. In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated, the boxes on the right-hand side (C) allow you to view these as a tab (E) in **AAPS**. In case the right box is not activated, you can reach the function by using the hamburger menu (D) on the top left of the screen. See [Tab or hamburger menu](#tab-or-hamburger-menu) below.
+強調**組態建置工具**是用來開啟和關閉模塊功能的選項卡。 在下面的圖片中，左側的方框 (A) 允許你選擇你想要啟動的模塊，右側的方框 (C) 允許你將其作為**AAPS**中的一個選項卡 (E) 查看。 如果右側的方框未被啟動，你可以使用螢幕左上方的漢堡選單 (D) 來訪問該功能。 請參閱下面的[選項卡或漢堡選單](#tab-or-hamburger-menu)。
 
-When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+當模塊內有額外設定可用時，你可以點擊齒輪圖示 (B)，這將帶你進入偏好設定中的具體設定。
 
 ![組態建置工具框和齒輪](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -25,10 +25,10 @@ When there are additional settings available within the module, you can click on
 
 ## 設定檔
 
-This module can not be disabled as it is a core part of **AAPS**.
+此模塊無法停用，因為它是**AAPS**的核心部分。
 
-* See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
-* See [AAPS Screens > Profile](#aaps-screens-profile) for more information about managing your **Profiles**.
+* 請參閱[你的 AAPS 個人設定](../SettingUpAaps/YourAapsProfile.md)以基本了解你的**個人設定**中包含的內容。
+* 請參閱[AAPS 螢幕 > 個人設定](#aaps-screens-profile)以獲取有關管理你的**個人設定**的更多資訊。
 
 (Config-Builder-insulin)=
 
@@ -36,9 +36,9 @@ This module can not be disabled as it is a core part of **AAPS**.
 
 ![胰島素類型](../images/ConfBuild_Insulin_AAPS30.png)
 
-Select the type of insulin you are using.
+選擇你正在使用的胰島素類型。
 
-More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
+有關如何理解**AAPS**中顯示的胰島素個人設定的更多資訊，請[查看這裡](#AapsScreens-insulin-profile)。
 
 ### 胰島素類型差異
 
@@ -85,17 +85,17 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 ## 血糖來源
 
-Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+選擇你正在使用的血糖來源。 請參閱[BG來源](../Getting-Started/CompatiblesCgms.md)頁面以獲取更多設置資訊。
 
 ![組態建置工具：血糖來源選擇](../images/ConfBuild_BG.png)
 
 * [xDrip+](../CompatibleCgms/xDrip.md)
-* [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+* [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - 僅當你清楚操作時，查看[BG來源](../Getting-Started/CompatiblesCgms.md)。
 * [MM640g](../CompatibleCgms/MM640g.md)
-* [Glimp](#libre1-using-glimp) - only version 4.15.57 and newer are supported
-* [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+* [Glimp](#libre1-using-glimp) - 僅支援版本 4.15.57 及更新版本
+* [自建你的 Dexcom 應用程式 (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)。
 * [Poctech](../CompatibleCgms/PocTech.md)
-* [Tomato App](#libre1-using-tomato) for MiaoMiao device
+* [Tomato 應用程式](#libre1-using-tomato)，用於 MiaoMiao 裝置
 * [Glunovo 應用程式](https://infinovo.com/) 用於 Glunovo CGM 系統
 * 隨機血糖：生成隨機血糖資料（僅限演示模式）
 
@@ -103,13 +103,13 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 
 ![平滑](../images/ConfBuild_Smoothing.png)
 
-See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+請參閱[平滑血糖資料](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
 
 (Config-Builder-pump)=
 
 ## 幫浦
 
-選擇你正在使用的幫浦。 See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
+選擇你正在使用的幫浦。 請參閱[相容的幫浦](../Getting-Started/CompatiblePumps.md)頁面以獲取更多設置資訊。
 
 ![組態建置工具幫浦選擇](../images/ConfBuild_Pump_AAPS32.png)
 
@@ -119,27 +119,27 @@ See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.m
 * [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 * Accu Chek Combo 
-  * [Driver using Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-  * [Driver with no additional requirement](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md), added in [AAPS v.3.2](#version3200)
-* Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
-* Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+  * [使用 Ruffy 的驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump.md)（需要安裝 ruffy）
+  * [無額外需求的驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)，在[AAPS v.3.2](#version3200)中新增
+* Omnipod 用於[Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
+* Dash 用於[Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 * [Medtronic](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
-* Virtual pump: open loop - **AAPS** suggestions only 
-  * as you make you first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
-  * for pump which doesn't have any driver yet
+* 虛擬幫浦：開放循環 - 僅限**AAPS**建議 
+  * 當你開始使用**AAPS**時，在首次[完成目標](../SettingUpAaps/CompletingTheObjectives.md)的過程中
+  * 針對尚未擁有驅動程式的幫浦
 
 ## 敏感性偵測
 
 選擇你正在使用的敏感性偵測類型。 欲了解不同設計的更多詳細資訊，請[在這裡閱讀](../DailyLifeWithAaps/SensitivityDetectionAndCob.md)。 此功能會即時分析歷史資料，並在你對胰島素的反應比平常更敏感（或相反，更具抗性）時進行調整。 更多關於敏感性演算法的詳細資訊請參閱[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
 
-You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs). 你可以在主畫面上選擇 SEN 並觀看白線來查看你的敏感性狀況。 請注意，您需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。 在達到該目標之前，Autosens 的百分比/圖表中的線僅供參考。
+你可以在主畫面上查看你的敏感性，顯示在[額外圖表](#AapsScreens-section-g-additional-graphs)中。 你可以在主畫面上選擇 SEN 並觀看白線來查看你的敏感性狀況。 請注意，您需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。 在達到該目標之前，Autosens 的百分比/圖表中的線僅供參考。
 
 ### 吸收設定
 
-If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. 基本上，這是一個安全保護機制。
+如果你使用 Oref1 與**SMB**，你必須將**min_5m_carbimpact**改成 8。 該值僅在**CGM**讀數缺口期間或當身體活動“消耗”所有本應導致**AAPS**降解 COB 的血糖上升時使用。 在無法根據你的血液反應動態計算[碳水化合物吸收](../DailyLifeWithAaps/CobCalculation.md)的情況下，系統會插入碳水化合物的預設衰減。 基本上，這是一個安全保護機制。
 
 (Config-Builder-aps)=
 
@@ -148,62 +148,62 @@ If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The va
 選擇用於治療調整的 APS 演算法。 你可以在 OpenAPS (OAPS) 標籤中查看選定演算法的活動詳情。
 
 * OpenAPS AMA 
-  * Advanced Meal Assist: older algorithm not recommended anymore.
-  * In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
+  * 進階餐點輔助：不再建議使用的舊演算法。
+  * 簡單來說，這些好處是在你提供餐前注射後，系統可以更快進行高溫调节，前提是你可靠地輸入碳水化合物。
 * [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb) 
-  * Super Micro Bolus: most recent algorithm recommended for all users.
-  * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
-  * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
+  * 超微量注射：建議所有用戶使用的最新演算法。
+  * 與 AMA 不同，SMB 不使用臨時基礎率來控制血糖水平，而主要使用小型**超微量注射**。
+  * 注意：建議你從一開始就使用這個演算法，儘管你實際上直到[目標 9](#objectives-objective9)才會收到 SMB。
 
-If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Preferences > Sensitivity detection > Sensitivity Oref1 settings](../SettingUpAaps/Preferences.md).
+如果從 AMA 切換到 SMB 演算法，*min_5m_carbimpact* 必須手動更改為**8**（SMB 的預設值），在[偏好設定 > 敏感性檢測 > 敏感性 Oref1 設定](../SettingUpAaps/Preferences.md)中進行。
 
 ## 循環
 
-This module should not be disabled as it is a core part of **AAPS**.
+此模塊不應停用，因為它是**AAPS**的核心部分。
 
-## Constraints
+## 約束條件
 
-### Objectives
+### 目標
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. 這將引導你安全地設置閉合循環系統。 他保證你已正確設置所有內容，並了解系統的具體操作。 這是你可以信任系統的唯一方式。
+**AAPS**有一個學習計畫（一系列目標），你需要逐步完成。 這將引導你安全地設置閉合循環系統。 他保證你已正確設置所有內容，並了解系統的具體操作。 這是你可以信任系統的唯一方式。
 
 請參閱[目標](../SettingUpAaps/CompletingTheObjectives.md)頁面以獲取更多資訊。
 
 ## 同步選項
 
-In this section, you can choose if/where you want **AAPS** to send your data to.
+在這部分中，你可以選擇要將**AAPS**將資料傳送到哪裡。
 
-### NSClient or NSClientV3
+### NSClient 或 NSClientV3
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md).
+可用作[報告伺服器](../SettingUpAaps/SettingUpTheReportingServer.md)以及/或[遠端監控](../RemoteFeatures/RemoteMonitoring.md)、[遠端控制](../RemoteFeatures/RemoteControl.md)。
 
-See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to help you choose between NSClient (v1) and NSClientV3.
+請參閱[與報告伺服器的同步](#SetupWizard-synchronization-with-the-reporting-server-and-more)幫助你選擇 NSClient (v1) 和 NSClientV3。
 
 ### Tidepool
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+可用作[報告伺服器](../SettingUpAaps/SettingUpTheReportingServer.md)。
 
-See [Tidepool](../SettingUpAaps/Tidepool.md).
+請參閱[Tidepool](../SettingUpAaps/Tidepool.md)。
 
 ### xDrip
 
-Used to **send** data such as treatments to xDrip+.
+用於**傳送**資料，例如治療方式給 xDrip+。
 
 ### Open Humans
 
-See [Open Humans](../SupportingAaps/OpenHumans.md).
+請參閱[Open Humans](../SupportingAaps/OpenHumans.md)。
 
 ### Wear
 
-Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)).
+使用你的 Android WearOS 手錶來監控和控制**AAPS**（請參見[錶盤頁面](../UsefulLinks/WearOsSmartwatch.md)）。
 
-### Samsung Tizen
+### 三星 Tizen
 
-Broadcast data to Samsung's G-Watch Wear App (Tizen OS).
+將資料傳送到三星的 G-Watch Wear 應用程式 (Tizen OS).
 
 ### Garmin
 
-Connection to Garmin device (Fenix, Edge...)
+連接到 Garmin 設備（Fenix、Edge...）
 
 ## 治療
 
@@ -213,7 +213,7 @@ Connection to Garmin device (Fenix, Edge...)
 
 ### 首頁總覽
 
-This is the [main screen](#AapsScreens-the-homescreen) of **AAPS** and can not be disabled.
+這是**AAPS**的[主畫面](#AapsScreens-the-homescreen)，不可停用。
 
 #### 在治療對話框中顯示備註欄位
 
@@ -233,23 +233,23 @@ This is the [main screen](#AapsScreens-the-homescreen) of **AAPS** and can not b
 
 ### 操作
 
-A tab offering multiple buttons to take [actions](#screens-action-tab) in **AAPS**.
+一個選項卡提供多個按鈕在**AAPS**中進行[操作](#screens-action-tab)。
 
 ### 自動化
 
-A tab for managing your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
+一個選項卡用於管理你的[自動化](../DailyLifeWithAaps/Automations.md)，從[目標 10](#objectives-objective10)開始。
 
 (Config-Builder-sms-communicator)=
 
 ### SMS(簡訊) 通訊器
 
-Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
+允許遠端照護人員透過簡訊控制某些**AAPS**功能，請參閱[簡訊指令](../RemoteFeatures/SMSCommands.md)以獲取更多設置資訊。
 
 ### 食物
 
 顯示 Nightscout 食物資料庫中定義的食物預設值，更多設定資訊請參閱[Nightscout 讀我](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods)。
 
-Note: Entries cannot be used in the **AAPS** calculator. （僅供檢視）
+注意：條目無法在**AAPS**計算機中使用。 （僅供檢視）
 
 (Config-Builder-wear)=
 
@@ -268,8 +268,8 @@ Note: Entries cannot be used in the **AAPS** calculator. （僅供檢視）
 
 ### 維護
 
-Access this tab to export / import settings.
+訪問此選項卡以匯出/匯入設定。
 
 ### 組態建置工具
 
-This current tab.
+當前選項卡。
