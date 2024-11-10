@@ -334,7 +334,7 @@ This setting changes the time of the expiration warning, when [Patch Expiration]
 
 Нажмите кнопку **Убрать оповещения** для сброса оповещений и возобновления нормальной работы.
 
-## Troubleshooting
+## Устранение неполадок
 
 ### Проблемы подключения
 
