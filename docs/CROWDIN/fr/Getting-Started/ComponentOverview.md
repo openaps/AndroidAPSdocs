@@ -86,6 +86,6 @@ Even if you don't need to have the [xDrip+ App](https://xdrip.readthedocs.io/en/
 
 It sometimes takes a while to get all the modules for closing the loop. Mais pas de soucis, il y a beaucoup de choses que vous pouvez faire en attendant. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
 
-Vous pouvez continuer à lire la documentation ici présente, entrer en contact avec d'autres boucleurs en ligne ou hors ligne, [lire les documentations](../Where-To-Go-For-Help/Background-reading.md) ou ce que d'autres boucleurs ont écrits (vous devez toutefois rester prudent, tout n'est pas correct ou adapté à votre situation).
+You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../UsefulLinks/BackgroundReading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
 **Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your hardware.
