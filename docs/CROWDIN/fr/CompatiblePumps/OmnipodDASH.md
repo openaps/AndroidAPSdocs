@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Omnipod Dash
 
 Ces instructions sont pour configurer la pompe de génération **Omnipod DASH** **(et pas Omnipod Eros)**. The Omnipod driver is available as part of AAPS (AAPS) as of version 3.0.
