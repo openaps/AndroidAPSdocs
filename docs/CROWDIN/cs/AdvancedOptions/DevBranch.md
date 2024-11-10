@@ -1,4 +1,4 @@
-## Vývojové větve
+# Development branch
 
 <font color="#FF0000"><strong>Upozornění:</strong></font>
 Vývojová větev slouží výhradně k dalšímu vývoji AAPS. Měli byste ji používat na samostatném telefonu pro účely testování, <font color="#FF0000"><strong>nikoli k provozování smyčky!</strong></font>
