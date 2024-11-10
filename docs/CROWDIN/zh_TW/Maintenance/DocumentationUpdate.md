@@ -120,7 +120,7 @@
 
 - 自動化警告
 - [自動感應](#Open-APS-features-autosens) - 簡短說明
-- [護理入口替代方案](../Usage/CPbefore26.md)
+- 護理入口替代方案
 - [延長注射](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) 功能 - 將停用關閉循環
 - 新增[本機設定外掛](../SettingUpAaps/ConfigBuilder.md)
 - 範本設定 - 更新 Dexcom G6
