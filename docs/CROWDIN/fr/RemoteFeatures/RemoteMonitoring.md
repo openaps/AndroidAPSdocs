@@ -30,10 +30,6 @@ Une montre peut être un outil très utile pour aider à gérer AAPS avec les en
 
 ## Points à considérer
 
-- Setting the correct [treatment factors](#FAQ-how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
 - Les paramètres doivent être les mêmes dans AAPS et AAPSClient.
 - Considérez un décalage de temps entre le maître et le suiveur dû au temps de téléchargement, et parce que le téléphone principal AAPS ne remontera les données qu'après l'exécution de la boucle.
-- Alors prenez le temps de les configurer correctement et de les tester dans la vrai vie avec votre enfant à côté de vous avant de commencer la surveillance et le traitement à distance. Les vacances scolaires pourraient être un bon moment pour cela.
-- Quel est votre plan d'urgence lorsque le contrôle à distance ne fonctionne pas (par ex. en cas de problèmes réseaux)?
-- La surveillance et le traitement à distance peuvent vraimpent être très utiles à la crèche et à l'école primaire. Mais assurez-vous que les enseignants et les éducateurs sont au courant du plan de traitement de votre enfant. Des exemples pour ce type de prise en charge peuvent être trouvés dans la [section fichiers des utilisateurs AAPS](https://www.facebook.com/groups/AndroidAPSUsers/files/) sur Facebook.
-- Il est important de garder en permanence le téléphone de l'enfant à proximité de la pompe et du capteur MGC. Cela peut être difficile, spécialement pour les enfants en bas âge. Plusieurs solutions existent, comme la ceinture [SPI Belt](https://spibelt.com/collections/kids-belts)
+- What is your emergency plan for when remote control does not work (_i.e._ network problems or lost bluetooth connection)?  Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
