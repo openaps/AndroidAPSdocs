@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Genel CGM önerileri
 
 ## CGM hijyeni
