@@ -1,3 +1,9 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Accu-Chek Combo conseils pour une utilisation de base
 
 **NOTE:** Starting with AAPS version 3.2, a [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (referred to as "combov2" sometimes) has been added. L'ancien pilote est également appelé le "pilote avec Ruffy". Certaines parties de ce document ne s'appliquent qu'à l'ancien pilote. Celles-ci seront annotées en conséquence.
