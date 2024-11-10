@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Accu Chek Combo Pump
 
 **This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
@@ -9,7 +13,7 @@
 * A Smartpix or Realtyme device together with the 360 Configuration Software to configure the pump. (Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.)
 * A compatible phone: An Android phone with a phone running LineageOS 14.1 (formerly CyanogenMod) or at least Android 8.1 (Oreo). As of AAPS 3.0 Android 9 is mandatory. See [release notes](#maintenance-android-version-aaps-version) for details.
 * With LineageOS 14.1 it has to be a recent version from at least June 2017 since the change needed to pair the Combo pump was only introduced at that time. 
-* A list of phones can be found in the [AAPS Phones](../CompatiblePhones/ListOfTestedPhones.md) document.
+* A list of phones can be found in the [AAPS Phones](#Phones-list-of-tested-phones) document.
 * Please be aware that this is not complete list and reflects personal user experience. You are encouraged to also enter your experience and thereby help others (these projects are all about paying it forward).
 * Be aware that while Android 8.1 allows communicating with the Combo, there are still issues with AAPS on 8.1.
 * For advanced users, it is possible to perform the pairing on a rooted phone and transfer it to another rooted phone to use with ruffy/AAPS, which must also be rooted. This allows using phones with Android < 8.1 but has not been widely tested: https://github.com/gregorybel/combo-pairing/blob/master/README.md
@@ -109,7 +113,7 @@ There are serveral possible reasons. Try the following steps:
       without successfully pair. Later you should set it back to 5s, to meet AAPS Combo settings and speed up connections.
     * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not 
       compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If 
-      possible, try another smartphone. You can find a list of already successfully used smartphones under [AAPS Phones](../CompatiblePhones/ListOfTestedPhones.md). 
+      possible, try another smartphone. You can find a list of already successfully used smartphones under [AAPS Phones](#Phones-list-of-tested-phones). 
 
 10.  Sometimes the phone asks for a (typically 4 digit) bluetooth PIN number that is not related to the 10 digit PIN later shown on the pump. Usually, ruffy will set this PIN automatically, but due to timing issues, this does not always work. If a request for a Bluetooth pairing PIN appears on the phone before any code is shown on the pump, you need to enter **}gZ='GD?gj2r|B}>** as the PIN. This is easiest done if you copy this 16 character text into the clipboard before starting the pairing sequence and just paste it in the dialog at this step. See related [Github issue](https://github.com/MilosKozak/ruffy/issues/14) for details.
 11.  At next the pump should show up a 10 digit security code. And Ruffy shold show a screen to enter it. So enter the code in Ruffy and you 

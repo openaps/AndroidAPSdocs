@@ -1,3 +1,9 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Comment configurer un téléphone Huawei
 
 Il y a différentes options, certaines spécifiques à Android, d'autres spécifiques à Huawei :

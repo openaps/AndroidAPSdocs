@@ -74,6 +74,8 @@ In closed loop mode, **SMB**:
 - *may be* deactivated (discussed further below); and/or
 - basal may be activated if **AAPS** is in negative **IOB** or <0.
 
+(TempTargets-where-can-i-select-a-temp-target)=
+
 ## Wo kann ich ein Temporäres Ziel auswählen und setzen?
 
 In the **Actions** tab in **AAPS**.
@@ -86,6 +88,10 @@ In the **Actions** tab in **AAPS**.
 Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
 
 ![Carbs TT](../images/TempTarget6.png)
+
+- Drücke lange auf deinen Zielwert in der oberen rechten Ecke auf dem Home-Bildschirm oder verwende die Shortcuts im orange "Kohlenhydrate" (Carbs)-Button am unteren Rand.
+
+![Einstellungen > Vordefinierte temporäre Ziele](../images/Pref2020_OV_DefaultTT2.png)
 
 ## Wo kann ich die vorgegebenen temporären Ziele ändern und mit meinen eigenen Einstellungen überschreiben?
 

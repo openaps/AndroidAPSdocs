@@ -133,7 +133,7 @@ Soyez prudent, car elle est bien souvent trop faible. Trop basse signifie qu'1 U
 
 **Une ISF plus haute** (par exemple 45 au lieu de 35) signifie que l'insuline va plus faire baisser votre glycémie pour une unité. Ceci conduit à une correction moins agressive / plus faible de la boucle avec **moins d'insuline**. Si elle est trop élevée, cela peut conduire à des hyperglycémies.
 
-**Par exemple :**
+**Exemple :**
 
 - Glycémie est à 190 mg/dl (10,5 mmol) et la cible est à 100 mg/dl (5,6 mmol). 
 - Donc, vous voulez une correction de 90 mg/dl (= 190 - 100).

@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Omnipod DASH
 
 These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The Omnipod driver is available as part of AAPS (AAPS) as of version 3.0.
@@ -24,7 +28,7 @@ These are the specifications of the **Omnipod DASH** and what differentiates it 
 
 * **Compatible Android phone** with a BLE Bluetooth connection  
    -  Not all phone hardware and Android versions are guaranteed to work.
-Please check [**DASH Tested phones**](../CompatiblePhones/ListOfTestedPhones.md) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
+   Please check [**DASH Tested phones**](#Phones-list-of-tested-phones) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
    - **Important note: There have been multiple cases of permanent, non-recoverable connection losses when using older pods with firmware version 3.XX.X. Be careful when using these old pods with AAPS, especially with other Bluetooth devices connected!**
    Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.  
    -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions.
@@ -54,7 +58,7 @@ While the DASH pods do support a zero basal rate, since AAPS uses multiples of t
 ## Enabling the Dash Driver in AAPS
 
 You can enable the Dash driver in AAPS in **two ways**:
- 
+
 ### Option 1: New installations
 
 When you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “DASH” when you reach Pump selection.
@@ -74,7 +78,7 @@ Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the 
 **NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
- 
+
 ### Verification of Omnipod Driver Selection
 
 To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left. 
@@ -95,7 +99,9 @@ Please **swipe left** to the **DASH** tab where you will be able to manage all p
 
 1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
-![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
+![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)
+
+​    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
 2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.
 
@@ -139,7 +145,9 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 
     For more details on the information displayed go to the [**DASH Tab**](#dash-tab) section of this document.
 
-![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
+
+​    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
 It is good practice to export settings AFTER activating the pod. Do this at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](../Maintenance/ExportImportSettings.md).
 
@@ -154,11 +162,17 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 1. Go to the **DASH** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
 
-![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
+![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+
+​    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
 
 2. On the **Deactivate Pod** screen, click on the **Next** button to begin the process of deactivating the pod. You will receive a confirmation beep from the pod that deactivation was successful.
 
-![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg) ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
+![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
+
+ ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
+
+
 
 3. A green checkmark will appear upon successful deactivation. Click on the **Next** button to display the pod deactivated screen. You may now remove your pod as the active session has been deactivated.
 
@@ -170,7 +184,9 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 5. You are now on the **Pod Management** menu; press the back button on your phone to return to the **DASH** tab. Verify that the **Pod status:** field displays a **No active Pod** message.
 
-![Deactivate_Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
+![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
+
+ ![Deactivate_Pod_8](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
 (OmnipodDASH-resuming-insulin-delivery)=
 
@@ -225,7 +241,13 @@ This feature is helpful in verifying boluses, TBRs and basal commands that were 
 
 1. Go to the **DASH** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu and then press the **Pod history (2)** button to access the pod history screen.
 
-![Pod_history_1](../images/DASH_images/Pod_History/Pod_history_1.jpg) ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
+![Pod_history_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+
+
+
+ ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
+
+
 
 2. On the **Pod history** screen, the default category of **All (1)** is displayed, showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **DASH** tab in the main AAPS interface.
 
@@ -277,25 +299,28 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
    * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
    * See the Troubleshooting section below for additional information.
-   
+
 ![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu.
 
 ![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) : When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
 
    * Button is displayed only when pod time is past expiration warning time.
    * Upon successful dismissal, this icon will no longer appear.
-   
+
 ![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod. 
      
 ### Pod Management Menu
 
-Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (0)** button from the **DASH** tab.
-![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (1)** button from the **DASH** tab.
 
-* 1 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
-* 2 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
-* 3 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
-* 4 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
+![DASH_Tab_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+
+ ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+
+* 2 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
+* 3 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
+* 4 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
+* 5 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
 
 (DanaRS-Insulin-Pump-dash-settings)=
 
@@ -303,19 +328,21 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**.
 
-![Dash_settings_1](../images/DASH_images/Dash_settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH_images/Dash_settings/Dash_settings_2.png)
+![Dash_settings_1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
+
+
 
 **NOTE:** A faster way to access the **Dash settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **DASH** tab and selecting **Dash preferences (2)** from the dropdown menu.
 
 ![Dash_settings_3](../images/DASH_images/Dash_settings/Dash_settings_3.png)
 
 The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
- 
-![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
- 
+
 *NOTE: An asterisk (\*) denotes the default setting is enabled.*
 
 ### Confirmation beeps
+
+![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
@@ -325,6 +352,8 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 * **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 
 ### Alerts
+
+![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
 Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
@@ -336,6 +365,8 @@ Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the de
 * **Number of units:** The number of units at which to trigger the pod low reservoir alert.
 
 ### Notifications
+
+![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus, and delivery suspended events were successful. 
 

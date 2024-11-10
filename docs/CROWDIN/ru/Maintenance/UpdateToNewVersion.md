@@ -87,7 +87,7 @@ See the instructions for [Transfer APK to smartphone](../SettingUpAaps/Transferr
 
 ![Установленная версия AAPS](../images/Update_VersionCheck282.png)
 
-## Troubleshooting
+## Устранение неполадок
 
 Если что-то пойдёт не так, не паникуйте.
 

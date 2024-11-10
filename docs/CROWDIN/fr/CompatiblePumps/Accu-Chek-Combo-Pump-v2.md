@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Pompe Accu-Chek Combo
 
 Ces instructions sont pour configurer la pompe Accu-Chek Combo à l'aide du nouveau pilote combov2, qui est disponible dans le cadre d'AAPS depuis la version 3.2. Ce driver est entièrement séparé de l'ancien.
@@ -11,7 +15,7 @@ Ces instructions sont pour configurer la pompe Accu-Chek Combo à l'aide du nouv
 * Un téléphone compatible. Android 9 (Pie) ou plus récent. Si vous utilisez LineageOS, la version minimale supportée est 16.1. See [release notes](#maintenance-android-version-aaps-version) for details.
 * L'application AAPS installée sur votre téléphone.
 
-Certains téléphones peuvent fonctionner mieux que d'autres, en fonction de la qualité du Bluetooth et s'ils ont une logique supplémentaire agressive d'économie d'énergie. A list of phones can be found in the [AAPS Phones](../CompatiblePhones/ListOfTestedPhones.md) document. Cette liste n’est pas une liste complète. Elle reflète l’expérience personnelle de quelques utilisateurs. Nous vous encourageons à partager également votre expérience et ainsi aider les autres.
+Certains téléphones peuvent fonctionner mieux que d'autres, en fonction de la qualité du Bluetooth et s'ils ont une logique supplémentaire agressive d'économie d'énergie. A list of phones can be found in the [AAPS Phones](#Phones-list-of-tested-phones) document. Cette liste n’est pas une liste complète. Elle reflète l’expérience personnelle de quelques utilisateurs. Nous vous encourageons à partager également votre expérience et ainsi aider les autres.
 
 (combov2-before-you-begin)=
 ## Avant de commencer

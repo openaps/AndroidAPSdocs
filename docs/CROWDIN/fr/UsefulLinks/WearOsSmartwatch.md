@@ -6,12 +6,27 @@
 
 Il existe plusieurs cadrans de montres qui sont inclus dans la version de base de l'APK Wear de AAPS et que vous pouvez choisir. Ces cadrans incluent le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal ainsi que le graphique des glycémies.
 
-Vérifiez que les notifications d'AAPS ne sont pas bloquées sur la montre. La confirmation de l'action (par ex. bolus, cible temporaire) est envoyée par une notification que vous devrez glisser et cocher.
-
 Les actions disponibles sur les cadrans de montre sont :
 
 * Appuyez deux fois sur la glycémie pour accéder au menu AAPS
 * Appuyez deux fois sur le graphique de la glycémie pour changer l'échelle de temps du graphique
+
+## Configuration
+
+Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md).
+
+Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+
+Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
+
+![Paramètres Wear](../images/ConfBuild_Wear.png)
+
+Via l'onglet Wear ou le menu hamburger (en haut à gauche de l'écran, si l'onglet n'est pas affiché), vous pouvez
+
+* Renvoyer toutes les données. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* Ouvrez le menu Paramètres de votre montre directement depuis votre téléphone.
+
+Vérifiez que les notifications d'AAPS ne sont pas bloquées sur la montre. La confirmation de l'action (par ex. bolus, cible temporaire) est envoyée par une notification que vous devrez glisser et cocher.
 
 ## Sélectionnez un cadran AAPS sur votre montre WearOS
 
@@ -320,7 +335,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
 * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-* Check [list of tested phones and watches](../CompatiblePhones/ListOfTestedPhones.md) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
+* Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
 
 (Watchfaces-troubleshooting-the-wear-app)=

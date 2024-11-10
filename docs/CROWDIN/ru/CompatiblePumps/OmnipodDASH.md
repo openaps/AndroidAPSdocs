@@ -23,7 +23,7 @@
 ![Под Omnipod](../images/DASH_images/Omnipod_Pod.png)
 
 * **Совместимый Android-телефон** с рабочим модулем BLE Bluetooth
-   -  Не все смартфоны и версии Android гарантированно работают. Возьмите телефоны, [**протестированные с DASH**](../CompatiblePhones/ListOfTestedPhones.md) или самостоятельно проверьте свой телефон на совместимость и сообщите нам результат (модель смартфона, географический регион, версия Android, работает / работает с замечаниями / не работает).
+   -  Не все смартфоны и версии Android гарантированно работают. Please check [**DASH Tested phones**](#Phones-list-of-tested-phones) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
    - **Важно: было много случаев постоянных, невосстановимых потерь соединения при использовании старых подов с прошивкой версии 3.XX.X. Будьте осторожны при использовании этих старых подов с AAPS, особенно с другими подключенными Bluetooth-устройствами!** Имейте в виду, что драйвер Omnipod Dash соединяется с подом по Bluetooth каждый раз, когда отправляет команду, и отсоединяется сразу после этого. Соединения Bluetooth могут быть нарушены другими устройствами, связанными с телефоном, на котором работает AAPS, такими как беспроводные наушники и т. д... (что в редких случаях может вызвать проблемы подключения, погрешности при активации или после нее на некоторых моделях телефонов).
    -  **Приложение AAPS версии 3.0 или новее, собранное и установленное** на основе [**инструкции по сборке приложения**](../SettingUpAaps/BuildingAaps.md).
 * [**Непрерывный мониторинг гликемии**](../Getting-Started/CompatiblesCgms.md)
@@ -88,7 +88,9 @@
 
 1. Перейдите на вкладку **DASH**, нажмите кнопку **УПРАВЛЕНИЕ помпой (1)**, затем нажмите **Активировать Pod (2)**.
 
-![Активировать Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)    ![Активировать Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
+![Активировать Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)
+
+​    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
 2. Появится экран **Заполнить Pod**. Заполните новый Pod по меньшей мере 80 единицами инсулина и дождитесь двух звуковых сигналов, подтверждающих, что Pod готов к первичному заполнению катетера. При подсчете общего количества инсулина на 3 дня, учитывайте, что первичное заполнение катетера Pod потребует около 3-10 единиц инсулина.
 
@@ -132,7 +134,9 @@
 
     Подробнее об информации на дисплее см в разделе [**Вкладка DASH**](#dash-tab) документации.
 
-![Активировать Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Активировать Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+![Активировать Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
+
+​    ![Активировать Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
 Настройки лучше всего экспортировать ПОСЛЕ активации Pod. Делайте это при каждой замене пода и раз в месяц, копируйте экспортированный файл на ваш интернет-диск. см. [**Экспорт настроек Doc**](../Maintenance/ExportImportSettings.md).
 
@@ -147,11 +151,17 @@
 
 1. Зайдите на вкладку **DASH**, нажмите на кнопку **УПРАВЛЕНИЕ ПОМПОЙ(1)** на экране **Управление помпой Omnipod** и нажмите на кнопку **Деактивировать Pod(2)**.
 
-![Деактивировать Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)    ![Деактивировать Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
+![Деактивировать Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+
+​    ![Деактивировать Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
 
 2. На экране **Деактивировать Pod** нажмите кнопку **Далее** для начала процесса деактивации пода. Вы получите подтверждающий звуковой сигнал о том, что деактивация прошла успешно.
 
-![Деактивировать Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg) ![Отключить Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
+![Деактивировать Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
+
+ ![Отключить Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
+
+
 
 3. После успешной деактивации на экране появится зеленая галочка. Нажмите на кнопку **Далее**, чтобы отобразился экран Pod деактивирован. Теперь вы можете удалить свой pod так как активная сессия завершена.
 
@@ -163,7 +173,9 @@
 
 5. Теперь вы оказались в меню **Управление помпой Omnipodt**; нажмите кнопку "Назад" на телефоне, чтобы вернуться на вкладку **DASH**. Убедитесь, что **Статус помпы:** отображает сообщение **Нет активных Pod**.
 
-![Деактивировать Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Деактивировать Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
+![Деактивировать Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
+
+ ![Деактивировать Pod_8](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
 (OmnipodDASH-возобновление-подачи-инсулина)=
 
@@ -218,7 +230,13 @@
 
 1. Перейдите на вкладку **DASH**, нажмите на кнопку **УПРАВЛЕНИЕ ПОМПОЙ(1)** чтобы вызвать меню **Управление помпой Omnipod** и нажмите на кнопку **История Pod(2)** для вызова экрана истории.
 
-![Под_история_1](../images/DASH_images/Pod_History/Pod_history_1.jpg) ![Под_история_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
+![Под_история_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+
+
+
+ ![Под_история_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
+
+
 
 2. На экране **под историей** по умолчанию отображается категория **Все (1)** и показывает **Дату и время (2)** всех подов **Действия (3)** и **Результаты (4)** в обратном хронологическом порядке,. Нажмите кнопку назад **в телефоне 2 раза** для возврата на вкладку **DASH** в главном интерфейсе AAPS.
 
@@ -282,12 +300,16 @@
 
 ### Меню управления помпой
 
-Ниже приведено значение иконок в меню **Управление помпой **, доступном после нажатием кнопки **УПРАВЛЕНМЕ ПОМПОЙ (0)** на вкладке **DASH**. ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (1)** button from the **DASH** tab.
 
-* 1 - [**Активировать Pod**](#activate-pod) : Заполняет катетер и активирует новый Pod.
-* 2 - [**Деактивировать Pod**](#deactivate-pod) : Деактивирует активный под.
-* 3 - **Воспроизвести тестовый звуковой сигнал** : При нажатии воспроизводит один тестовый сигнал на поде.
-* 4 - [**Журнал Pod **](#view-pod-history) : Отображает историю активности.
+![DASH_Tab_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+
+ ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+
+* 2 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
+* 3 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
+* 4 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
+* 5 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
 
 (DanaRS-Insulin-Pump-dash-settings)=
 
@@ -295,7 +317,9 @@
 
 Настройки помпы Dash доступны из левого верхнего **выпадающего меню** выберите **Конфигуратор(1)**\ ➜\ **Помпа**\ ➜\ **Dash**\ ➜\ **Шестеренка настроек (3)** включив ** радио кнопку (2) **с маркировкой **Dash**. Поставив флажок в **клетке** напротив **шестеренки настроек** вы активируете вкладку DASH в интерфейсе AAPS.
 
-![Dash_settings 1](../images/DASH_images/Dash_settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH_images/Dash_settings/Dash_settings_2.png)
+![Dash_settings 1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
+
+
 
 **ПРИМЕЧАНИЕ:** Более быстрый способ доступа к настройкам **Dash** - через меню **3 точки (1)** в правом верхнем углу вкладки **DASH** выбрать **Настройки Dash (2)** из выпадающего меню.
 
@@ -303,11 +327,11 @@
 
 Группы настроек перечислены ниже; вы можете включить или отключить их через переключатель большинства функций описанных ниже:
 
-![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
-
 *ПРИМЕЧАНИЕ: Знак (\*) обозначает значение по умолчанию.*
 
 ### Звуковые сигналы подтверждения
+
+![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
 Обеспечивает звуковые сигналы подтверждения от Pod об успешной подаче болюса, изменении базала, SMB и TBR.
 
@@ -317,6 +341,8 @@
 * **Звуковой сигнал временного базала TBR включен** Включить или отключить подтверждающие сигналы при установке или отмене TBR.
 
 ### Оповещения
+
+![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
 Оповещения AAPS об истечении срока, выключении, низком резервуаре на основе заданных пороговых значений.
 
@@ -328,6 +354,8 @@
 * **Количество единиц:** Количество единиц, на которые можно вызывать предупреждение о низком резервуаре резервуара.
 
 ### Уведомления
+
+![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
 Выдает уведомления AAPS и звуковые оповещения, когда нет уверенности в успешных TBR, SMB, болюсах или приостановленных событиях.
 
@@ -361,7 +389,7 @@
   * **SMS** - В SMS сообщается реальный остаток в ед. или 50+ед
   * **Nightscout** - при более чем 50 единиц в Nightscout выгружается значение 50 ед.(версия 14.07 и старше).  Более новые версии покажут 50 + когда более 50 единиц.
 
-## Troubleshooting
+## Устранение неполадок
 
 (OmnipodDASH-подача-приостановлена)=
 

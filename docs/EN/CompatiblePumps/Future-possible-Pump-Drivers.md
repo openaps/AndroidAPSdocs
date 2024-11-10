@@ -1,10 +1,12 @@
+---
+orphan: true
+---
+
 # Future (possible) Pump Drivers
 
 This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
 
 ## Pumps that are Loopable
-
-***
 
 ### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
@@ -15,17 +17,11 @@ More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.ht
 
 **Comments:** Dose version of pump had very heavy encryption added, so there is big probababilty that this pump won't be supported by AAPS in near future (or ever). We had developer working with Ypsomed and helping with medical trials, so maybe his version of driver will be alowed to be released, but this is just small possibility of that. You can find more information on our discord in channel "ypsopump-talk". 
 
-***
-
-
 ### Kaleido ([Homepage](https://www.hellokaleido.com/)) 
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.  
 
 **Hardware requirement for AAPS:** Probably none. It's BT enabled.
-
-***
-
 
 ### Equil (pump from Aidex/GlucoRx/MicroTechMD)  ([Homepage](https://www.glucorx.ie/glucorx-equil/))
 
@@ -35,9 +31,6 @@ More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.ht
 
 **Comment:** Some people started looking into supporting pump in AAPS, but this is still in beginning phases. You can find more information on our discord in channel "equil". 
 
-
-***
-
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
 **Loop status:** Is a Loop candidate. 
@@ -45,8 +38,6 @@ More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.ht
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
 **Comments:** There are some developers looking into decoding the protocol, but so far this is only in preliminary phases.
-
-***
 
 ### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
 
@@ -56,8 +47,6 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
-***
-
 ### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
 **Loop status:** All 3 pumps will be Loop candidates. 
@@ -66,14 +55,10 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
-
-***
-
 ### Medtronic Bluetooth
 
 **Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software
  ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
-
 
 ### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
 
@@ -82,9 +67,6 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
 **Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
-
-***
-
 
 ## Pumps no longer sold (companies no longer operating)
 
@@ -96,29 +78,17 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
-
 ## Pumps that aren't Loopable
-
-
 
 ### Animas Vibe
 
 **Loop status:** Not loopable. No remote control possibility. 
 **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
 
-
-
-***
-
-
 ### Animas Ping
 
 **Loop status:** Not loopable. It has bolus possibility, but no TBR one. 
 **Note** Stopped being sold when Vibe came out.
-
-
-
-
 
 ## Requirements for pumps being loopable
 
@@ -145,10 +115,6 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 - Cancel Extended Bolus
 - Read History
 - Read TDD
-
-
-***
-
 
 ### Other pumps support
 

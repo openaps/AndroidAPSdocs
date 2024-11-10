@@ -5,42 +5,44 @@
 :depth: 2
 ```
 
-## The Homescreen
+Экраны AAPS - главный экран
+
+## Главный экран
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Это первый экран, который виден при открытии приложения **AAPS**. Он отображает почти всю информацию, требующуюся повседневно.
 
-### Section A - Tabs
+### Раздел А - Вкладки
 
-* Navigate between the various **AAPS** modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Позволяют выполнять переход между различными модулями **AAPS**.
+* Между экранами также можно переходить свайпом влево или вправо.
+* Видимые вкладки можно выбрать в [Конфигураторе](#Config-Builder-tab-or-hamburger-menu).
 
-### Section B - Profile & target
+### Раздел B - Профиль & Цель
 
-#### Current Profile
+#### Текущий профиль
 
-The current profile is displayed in the left bar.
+Текущий профиль отображается на левой панели главного экрана.
 
-Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Короткое нажатие на панель открывает подробности о текущем профиле. Долгое нажатие дает возможность [переключаться между различными профилями](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a remaining duration of 59mn.
-3. Profile switch with a specific percentage of 120%.
-4. Profile switch with a specific percentage of 80% and a remaining duration of 59 mn.
-5. Profile switch with a time shift of -1 hour.
-6. Profile switch with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
+1. Обычный вид с активацией стандартного профиля.
+2. Переключение профиля с остающейся продолжительностью 59мн.
+3. Переключение профиля с заданным процентом 120%.
+4. Переключение профиля с заданным процентом 80% и остающейся продолжительностью 59 мин.
+5. Переключение профиля со сдвигом по времени --1 час.
+6. Переключение профиля с заданным процентом 120%, сдвигом по времени 1 час и остающейся продолжительностью 59 мин.
 
-#### Target
+#### Целевое значение ГК (Цель)
 
 ![Temp target remaining duration](../images/Home2020_TT.png)
 
-Current target blood glucose level is displayed in the right bar.
+Текущее целевое значение глюкозы крови (ГК) отображается на правой панели.
 
-Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
+Короткое нажатие позволяет установить **[временную цель](../DailyLifeWithAaps/TempTargets.md)**.
 
 If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
 
@@ -318,6 +320,8 @@ Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
 
 Чувствительность - это расчет чувствительности к инсулину в результате нагрузки, гормонов и т.д.
 
+Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+
 #### Heart rate
 
 This data may be available when using a [Garmin smartwatch](#Watchfaces-garmin).
@@ -534,9 +538,9 @@ Therefore, ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal
 
 ![Профиль Инсулина](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin).
+This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
 
-The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm.
+The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses minimum 5h as DIA.
 
 Более подробное обсуждение различных типов инсулина, их профилей активности и почему это важно, см. здесь [Понимание новых кривых IOB на основе экспоненциальных кривых активности](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
@@ -559,19 +563,21 @@ Calculations are run each time the system gets a fresh reading from the CGM.
 
 For more details see [APS section on config builder page](#Config-Builder-aps).
 
+(aaps-screens-profile)=
+
 ## Profile
 
 ![Profile](../images/Screenshots_Profile.png)
 
-Профиль содержит информацию об индивидуальных настройках диабета:
+Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
 
-* DIA (Duration of Insulin Action)
-* IC or I:C: Insulin to Carb ratio
-* ISF: Insulin Sensitivity Factor
-* Basal rate
-* Target: Blood glucose level that you want **AAPS** to be aiming for
+The buttons on this page allow you to manage your profiles :
 
-See the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+* **Green plus**: create new profile from scratch
+* **Red X**: delete the profile currently on screen
+* **Blue arrow**: duplicate the profile currently on screen
+
+When you want to make any changes to a profile, make sure you are editing the correct profile. When you reach the profile tab, it may not show the current profile in use, but the first one in the list.
 
 ## Автоматизация
 
@@ -594,6 +600,8 @@ For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
 Depending on your BG source settings, this tab is named differently.
 
 Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low) or duplicate readings.
+
+(aaps-screens-treatments)=
 
 ## Терапия
 
@@ -667,6 +675,14 @@ The history of temporary targets can be seen here.
 The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user. Line **2**, stored both in NS and PH, correspond to the actual switch.
 
 Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
+
+(aaps-screens-clone-profile-switch)=
+
+#### Переключение профиля и клонирование
+
+Вы можете легко создать новый локальный профиль с помощью переключения профиля. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
+
+You can now go to the [Profile tab](#profile) to edit the newly created Profile.
 
 ### Care portal
 

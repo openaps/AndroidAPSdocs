@@ -133,7 +133,7 @@ Be careful as this is quite often set too low. Too low means 1 U will drop BG fa
 
 **Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
 
-**Example:**
+**Exemplo:**
 
 - GLIC está 190 mg/dl (10,5 mmol) e o alvo é 100 mg/dl (5,6 mmol). 
 - Então, você quer corrigir 90 mg/dl (= 190 - 110).

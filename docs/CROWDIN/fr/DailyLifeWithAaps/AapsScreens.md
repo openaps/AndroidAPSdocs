@@ -5,6 +5,8 @@
 :depth: 2
 ```
 
+(AapsScreens-the-homescreen)=
+
 ## The Homescreen
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
@@ -318,6 +320,8 @@ Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
 
 C'est le résultat d'un calcul de la sensibilité à l'insuline suite à de l'exercice, aux hormones, etc.
 
+Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+
 #### Heart rate
 
 This data may be available when using a [Garmin smartwatch](#Watchfaces-garmin).
@@ -534,9 +538,9 @@ Comme la plupart de ces règles empiriques, leur validité réelle est limitée.
 
 ![Profil d'Insuline](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin).
+This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
 
-The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm.
+The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses minimum 5h as DIA.
 
 Pour plus d'informations sur les différents types d'insuline, leurs profils d'activité et l'importance de tout cela, vous pouvez lire un article ici sur [Comprendre les nouvelles courbes IA basées sur des courbes d'activité exponentielles](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
@@ -559,19 +563,21 @@ Calculations are run each time the system gets a fresh reading from the CGM.
 
 For more details see [APS section on config builder page](#Config-Builder-aps).
 
+(aaps-screens-profile)=
+
 ## Profile
 
 ![Profile](../images/Screenshots_Profile.png)
 
-Le profil contient des informations sur vos paramètres individuels du diabète :
+Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
 
-* DIA (Duration of Insulin Action)
-* IC or I:C: Insulin to Carb ratio
-* ISF: Insulin Sensitivity Factor
-* Basal rate
-* Target: Blood glucose level that you want **AAPS** to be aiming for
+The buttons on this page allow you to manage your profiles :
 
-See the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+* **Green plus**: create new profile from scratch
+* **Red X**: delete the profile currently on screen
+* **Blue arrow**: duplicate the profile currently on screen
+
+When you want to make any changes to a profile, make sure you are editing the correct profile. When you reach the profile tab, it may not show the current profile in use, but the first one in the list.
 
 ## Automatisation
 
@@ -594,6 +600,8 @@ For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
 Depending on your BG source settings, this tab is named differently.
 
 Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low) or duplicate readings.
+
+(aaps-screens-treatments)=
 
 ## Traitements
 
@@ -667,6 +675,14 @@ The history of temporary targets can be seen here.
 The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user. Line **2**, stored both in NS and PH, correspond to the actual switch.
 
 Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
+
+(aaps-screens-clone-profile-switch)=
+
+#### Dupliquer un changement de profil
+
+Vous pouvez facilement créer un profil local à partir d'un changement de profil. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
+
+You can now go to the [Profile tab](#profile) to edit the newly created Profile.
 
 ### Care portal
 

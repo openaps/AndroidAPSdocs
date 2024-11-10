@@ -6,12 +6,27 @@
 
 In der Basisversion der AAPS Wear APK sind bereits einige Zifferblätter enthalten, aus denen Du auswählen kannst. Diese Zifferblätter zeigen u. a. das durchschnittliche Delta, das IOB, die derzeit aktive temporäre Basalrate, das Basalprofil und den Glukoseverlauf aus den CGM-Werten.
 
-Stelle sicher, dass Benachrichtigungen von AAPS nicht auf der Uhr blockiert sind. Die Eingaben werden aktiviert, indem Du über die Benachrichtigung wischst und sie bestätigst.
-
 Einige der über die Smartwatch möglichen Aktionen sind:
 
 * Doppelt auf den Glukosewert tippen, um zum AAPS-Menü zu gelangen
 * Doppelt auf den Gluoseverlauf tippen, um die Zeitskala des Graphen zu ändern
+
+## Configuration
+
+Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md).
+
+Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+
+Wenn Du Deinen Loop von der Uhr aus steuern willst (z.B. Bolus abgeben), aktiviere "Steuerung durch die Uhr".
+
+![Wear-Einstellungen](../images/ConfBuild_Wear.png)
+
+Über den Wear Tab oder das Hamburger Menü (oben links, falls der Wear Tab nicht angezeigt wird) kannst Du
+
+* Alle Daten erneut senden. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* Über das Smartphone die Einstellungen auf der Uhr öffnen.
+
+Stelle sicher, dass Benachrichtigungen von AAPS nicht auf der Uhr blockiert sind. Die Eingaben werden aktiviert, indem Du über die Benachrichtigung wischst und sie bestätigst.
 
 ## Wechsel zu einem AAPS-Zifferblatt auf Deiner WearOS-Smartwatch
 
@@ -320,7 +335,7 @@ Da wir bei der Kommunikation keine Kompromisse eingehen können (wir brauchen ak
 * Prüfe, was auf Deiner Uhr besser funktioniert: Das Standard AAPS Watchface oder ein anderes Watchface mit Komplikationen.
 * Beobachte über mehrere Tage mit verschiedenen Aktivitätsprofilen. Die meisten Uhren aktivieren die Anzeige beim Draufschauen, bei Bewegung und anderen nutzungsbezogenen Auslösern.
 * Überprüfe die globalen Systemeinstellungen, die sich auf die Leistung auswirken: Benachrichtigungen, das Zeitlimit für eine Hintergrundanzeige oder das aktive Anzeigezeitlimit, wenn Ortungsdienste aktiviert sind.
-* Check [list of tested phones and watches](../CompatiblePhones/ListOfTestedPhones.md) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
+* Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
 * **Es kann nicht garantiert werden, dass die auf dem Watchface angezeigten Daten aktuell sind!** Am Ende entscheidet Wear OS, wann ein Watchface oder eine Komplikation neue Daten erhält. Selbst wenn die AAPS-App die Aktualisierung anstößt, kann das System die Aktualisierung verschieben oder ignorieren, um die Akku-Laufzeit zu erhöhen. Im Zweifel und vor allem bei niedrigem Akku-Ladestand der Uhr solltest Du die Werte immer mit einem Blick auf AAPS auf Deinem Smartphone gegenprüfen.
 
 (Watchfaces-troubleshooting-the-wear-app)=

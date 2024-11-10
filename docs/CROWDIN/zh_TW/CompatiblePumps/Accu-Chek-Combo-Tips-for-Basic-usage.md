@@ -1,3 +1,9 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Accu-Chek Combo 基本使用技巧
 
 **注意:** 從AAPS版本3.2開始，新增了[新的Combo驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)（有時稱為「combov2」）。 舊的驅動程式也稱為 "Ruffy 基於的驅動程式"。 本文件的某些部分僅適用於舊的驅動程式。 這些將會依照情況進行註解。
@@ -26,7 +32,7 @@
 * 當 AAPS 報告 **幫浦無法連線** 時，首先解除按鍵鎖定並**按下幫浦上的任意鍵**（例如 "下" 鍵）。 當幫浦螢幕熄滅後，按下 AAPS 中的**重新整理**按鈕。 通常這樣操作後，通訊就能恢復正常。
 * 如果這樣不行，請重新啟動你的手機。 重新啟動後，AAPS 會重新註冊並與幫浦建立新連線。 如果你使用的是舊驅動程式，ruffy 也會被重新註冊。
 
-* 測試顯示，某些手機更容易觸發 "幫浦無法連線" 錯誤。 請查看 [AAPS 手機列表](../CompatiblePhones/ListOfTestedPhones.md) 以獲得成功測試的智慧型手機。
+* 測試顯示，某些手機更容易觸發 "幫浦無法連線" 錯誤。 See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones.
 
 ### 頻繁通訊錯誤的根本原因及後果
 

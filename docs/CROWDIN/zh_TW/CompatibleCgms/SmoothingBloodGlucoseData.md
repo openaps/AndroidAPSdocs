@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # 平滑血糖資料
 
 如果 **血糖** 資料不穩定/干擾，**AAPS** 可能會錯誤地注射胰島素，導致血糖過高或過低。 如果你發現你的連續血糖監測（CGM）資料出錯，應在問題解決前暫停循環。 根據你的 CGM，這些問題可能是由於 **AAPS** 中的 CGM 韌體設定問題（如下文進一步說明）；或是 CGM 傳感器位置問題（這可能需要更換 CGM 傳感器）。
@@ -36,6 +40,7 @@
 #### 自己動手打造您的 Dexcom 應用程式
 當使用 [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) 時，你的血糖資料是平滑且一致的。 此外，您可以利用 Dexcom 的回彈平滑功能。 使用 SMBs 並沒有任何限制，因為噪音級別資料會與 AAPS 共享。
 
+(smoothing-xdrip-dexcom-g6)=
 #### xDrip+ 與 Dexcom G6 或 Dexcom ONE 配合使用
 干擾資料和平滑的血糖讀取僅在你使用 xDrip+ 的 [原生模式](https://navid200.github.io/xDrip/docs/Native-Algorithm) 時與 AAPS 分享。 使用原生模式時，使用 SMBs 並沒有任何限制。
 
