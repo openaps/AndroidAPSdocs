@@ -227,7 +227,7 @@ d) 你可以透過 GitHub、Discord 和 Facebook 私密群組中的 DIY 社群�
 
 e) 在診所會議中，你將能提供**CGM和胰島素閉環/幫浦資訊**的綜合報告（透過Nightscout或Tidepool），無論是列印出來還是顯示在螢幕上（如果你攜帶筆記型電腦或平板電腦）。 CGM和胰島素資料的整合將更有效地利用臨床醫生的時間來審查你的報告，並有助於他們在評估你的進展時進行討論。
 
-f) 如果你的醫療團隊仍然強烈反對，請將本文中提到的參考文章的列印件交給你的臨床醫生，並將網頁連結提供給 **AAPS**臨床醫生部分：[臨床醫生 – **AAPS**的一般介紹和指南](../Resources/clinician-guide-to-AndroidAPS.md)
+f) If there is still strong objection from your team, hand your clinician printouts of the reference articles linked here in the text, and give them the link to the **AAPS** clinicians section: [For Clinicians – A General Introduction and Guide to **AAPS**](../UsefulLinks/ClinicianGuideToAaps.md)
 
 #### 其他臨床醫生對DIY閉環系統的支援
 
