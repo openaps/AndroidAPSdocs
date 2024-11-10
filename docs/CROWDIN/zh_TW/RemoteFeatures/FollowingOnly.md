@@ -1,43 +1,32 @@
 # 追蹤 AAPS（無需與 AAPS 系統互動）
 
-除了可用於遠端控制_和_跟踪**AAPS**的各種可能性，這些功能在[遠端控制](../RemoteFeatures/RemoteControl.md)中描述，社群還開發了一些額外的應用程式和設備，僅用於跟踪資料 (血糖數值和其他訊息)，而無需與 AAPS 互動。
+In addition to the range of possibilities available for remotely controlling _and_ following **AAPS** which are described at [remote control](../RemoteFeatures/RemoteControl.md), there are several additional apps and devices which the community has developed, to simply follow numbers (glucose levels and other information), without interacting with **AAPS**.
 
-對於如何追蹤**AAPS**，一個非常好的概述可以在[Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#)網頁中找到；如果你展開左側選單：
+A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage.
 
-![圖像](../images/dfa981c1-5a15-4498-88d2-0fd1462d8242.png)
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
 以下將詳細說明與 **AAPS** 組合使用的最常見策略。
 
-## 1) 智慧型手機應用程式
+## Smartphone apps
 
-以下是一些**AAPS**用戶使用的主要 “追蹤者” 應用程式。 所有這些應用程式都是“免費”的：
+```{contents} These are some of the main “follower” apps used by **AAPS** users. All of these apps are “free”: 
+:depth: 1
+:local: true
+```
 
-A)  Dexcom Follow（Android/iOS）
-
-B)  Nightguard（iOS）
-
-C)  Nightwatch（Android）
-
-D)  xDrip+（Android）
-
-E)  xDrip4iOS（iOS）
-
-F)  Sugarmate（iOS）
-
-G)  Spike（iOS）
-
-
-
-
-### A) Dexcom Follow（Android 和 iOS）
+### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) and [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
 ![圖像](../images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
-●  Dexcom Follow 適用於多種手持設備（包括 Android 和 iPhone）。 即使你未使用官方的 Dexcom 應用程式接收傳感器資料，也可以使用 Dexcom Follow。
+* Dexcom Follow is compatible with a wide range of handsets (both Android and iPhone). 即使你未使用官方的 Dexcom 應用程式接收傳感器資料，也可以使用 Dexcom Follow。
 
-●  許多照護者熟悉 Dexcom Follow，因為他簡單明瞭的界面相較於其他複雜的應用更受青睞。
+* Many caregivers are familiar with Dexcom Follow, preferring its clear interface over something more complicated.
 
-●  Dexcom Follow 非常適合教師/祖父母以及對糖尿病和血糖數值知識不多的人使用。 他具有可自訂的警報（血糖數值，播放的聲音等）。 如果傳感器仍在穩定中且產生多次假低血糖警報，則可以完全關閉警報，這非常實用。
+* Dexcom Follow is very good for teachers/grandparents and people who know very little about diabetes and sugar levels. It has customisable alerts (BG level, what sound to play etc.). 如果傳感器仍在穩定中且產生多次假低血糖警報，則可以完全關閉警報，這非常實用。
 
 #### 設置 Dexcom Follow：操作指南
 
@@ -55,53 +44,53 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 3) 滑動瀏覽介紹選單。 4)  對於傳感器代碼，選擇“無代碼”。 5)  在發射器序號下，選擇“手動輸入”，並輸入任何有效的發射器代碼（如果你知道一個過期的發射器代碼，請使用他，這樣就不會干擾目前發射器的運作，他們遵循特定的數字和字母組合格式：“NLNNNL”，並且只使用特定的組合，因此使用你已知有效的代碼會更容易）。 6)  應用程式嘗試查找發射器和傳感器，你將能夠邀請追蹤者：選擇應用程式左上角的小三個點，然後新增追蹤者。 如果你的其中一個追蹤者更換了手機，需要重新發送邀請，也可以在此處刪除他們並重新發送新的邀請郵件，供他們在新設備上使用。 7)  在追蹤者的手機上，透過 App Store（iPhone）或 Play 商店（Android）下載並安裝 Dexcom Follow。 設置 Dexcom Follow 應用程式，系統會提示你打開電子郵件以找到成為跟追蹤的邀請。    
 )  現在你可以刪除官方的 Dexcom G6 應用程式。
 
-對於 Dexcom Follow，傳感器資料會根據你使用的應用程式，從 AAPS 手機直接透過 BYODA 或 xDrip+ 匯出。
+For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip+, depending on which app you are using.
 
 
-### B) Nightguard（iOS）
+### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
 ![圖像](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
 
 優點（用戶報告）：
 
-●  可在[app store](https://apps.apple.com/us/app/nightguard/id1116430352)中獲得，簡單且使用者友好的界面。
+* Available in the [app store](https://apps.apple.com/us/app/nightguard/id1116430352), simple, user-friendly interface.
 
-●  滑動按鈕或搖動手機以延後不同間隔的警報，範圍從5分鐘到24小時。
+* Swipe button or shake phone to snooze alarms at different intervals ranging from 5 min to 24 hours
 
-●  自訂警報（高、低警報，當無資料15-45分鐘時的警報）。
+* Customize alarms (high, low alerts, missed readings when no data for 15-45 minutes).
 
-●  快速上升/下降超過2-5次連續讀取值（你可以選擇）。 還可以選擇兩個單獨讀取值之間的差值。
+* Fast rise/drop over 2-5 consecutive readings (you choose). 還可以選擇兩個單獨讀取值之間的差值。
 
-●  智慧延後功能，不會在資料朝正確方向變動時發出警報。
+* Smart snooze so doesn't alert if levels are moving in right direction
 
-●  還有一個“照護”標籤，允許你設定一個臨時目標持續一段時間、刪除臨時目標或輸入碳水化合物數量。
+* There is a Care tab which appears to enable you to set a new temp target for a certain duration, delete the temp target or enter carbs.
 
 缺點（用戶報告）
 
-●   只適用於 iOS
+* Only available for iOS
 
-●   無論設置的 TT 數值如何，TT 始終顯示為 5 mmol
+* The TT shows as 5 mmol regardless of which TT level is set
 
-●   從不顯示臨時基礎速率，儘管顯示了 TB
+* Never shows Temp Basal rate even though it shows TB
 
-### C) Nightwatch（Android）
+### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
 ![圖像](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
 
 
-●   Nightwatch 自稱為 Nightscout 客戶端，可在 Android 手機或平板電腦上監控用戶的 Nightscout 血糖數值。
+* Nightwatch markets itself as a Nightscout client and monitors the user’s Nightscout glucose levels on either Android phone or tablet.
 
-●   該應用程式可從[Google play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch)下載，並以實時方式顯示血糖資料。
+* The app can be downloaded from [Google play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) and displays BG data in real time.
 
-●   用戶可以透過自訂的高低噪音警報進行提醒。
+* The user can be alerted with customised noisy low and high alarms set.
 
-●   血糖資料可以用 mmol/L 或 mg/dL 顯示。
+* BG data can be viewed in either mmol/L or mg/dL.
 
-●   需要 Android 5.0 及更高版本。
+* It requires Android 5.0 and up.
 
-●   他有一個黑色界面，大字體顯示和大按鈕，專為夜間使用設計。
+* It has a dark Ul, large readings and buttons, designed for usage at night.
 
-### D) xDrip+（Android）
+### [xDrip+](https://xdrip.readthedocs.io/en/latest/) (Android)
 
 你可以將 xDrip+ 作為追蹤者應用程式使用。
 
@@ -113,17 +102,17 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 #### 無 Nightscout - xDrip+ 作為血糖資料源
 
-如果你的 AAPS 資料源是 xDrip+（或如果 xDrip+ 也可以從其他應用程式接收血糖資料，如 BYODA、Juggluco 等），你可以從主手機分享資料給 xDrip+ 追蹤者，顯示血糖、治療和基礎速率資訊。
+If your **AAPS** data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
 
 ![圖像](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
 #### 無 Nightscout - xDrip+ 作為血糖輔助應用程式
 
-如果你的 AAPS 資料源不是 xDrip+，但可以顯示來自輔助應用程式資料源的血糖資料，你可以從主手機分享資料給 xDrip+ 追蹤者，顯示血糖、治療和基礎速率資訊。
+If your **AAPS** data source is not xDrip+ but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
 
 ![圖像](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
-### E) xDrip4iOS/Shuggah（iOS）
+### xDrip4iOS/Shuggah (iOS)
 
 ![圖像](../images/remote_control_and_following/xdrip4ios.jpg)
 
@@ -162,19 +151,22 @@ https://xdrip4ios.readthedocs.io/.../personal_testflight/
 
 xDrip4iOS Facebook 群組支援 xDrip4iOS、Shuggah 以及相應的 Apple Watch 應用程式。
 
-### F) Sugarmate（iOS）
+### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
 ![圖像](../images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
 
 ![圖像](../images/21b83c41-85c6-4619-a702-a65450768855.png)
 
 
-[Sugarmate](https://sugarmate.io/)可從 App Store 下載到 iPhone 上。 Sugarmate 相容於：●   Apple iPhone（需要 13.0 或更高版本的軟體）●   Apple iPad（需要 13.0 或更高版本的軟體）●   Google Android（將網頁應用程式儲存到主螢幕）
+[Sugarmate](https://sugarmate.io/)可從 App Store 下載到 iPhone 上。 Sugarmate is compatible with:
+* Apple iPhone (Requires software version 13.0 or later)
+* Apple iPad (Requires software version 13.0 or later)
+* Google Android (Save web app to your homescreen)
 
 據 Sugarmate 用戶報告，他可以在美國與 Apple CarPlay 一起使用，當駕駛時顯示血糖讀取值。 目前尚未確定這在美國以外的國家是否可行。 如果你知道更多有關此功能的資訊，請透過提交 pull-request（鏈接）將詳細資料添加到文件中，這過程快速且簡單。
 
 
-### G)  [Spike](https://spike-app.com/) (iOS)
+### [Spike](https://spike-app.com/) (iOS)
 
 ![圖像](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
@@ -182,7 +174,7 @@ Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報�
 
 要安裝 Spike，請參閱 [這裡](https://spike-app.com/#installation)
 
-## 2) 用於 **監控 AAPS** 的智慧型手錶（完整的個人資料資料或僅顯示血糖）當 **AAPS** 在手機上運作時。
+## Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
 
 允許與 **AAPS** 進行互動的智慧型手錶選項已在文件的 ["遠端控制"](../RemoteFeatures/RemoteControl.md) 部分中描述。
 
@@ -197,7 +189,7 @@ Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報�
 ![圖像](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
 
-你可以在他的網站上閱讀更多有關他們的資訊，包括如何設置 [這裡](https://bigdigital.home.blog/)。 這些手錶的優點是他們體積小且價格相對實惠（小米 Mi Band 5 的建議零售價為新台幣895元）。 他們是兒童和手腕較小的人們一個不錯的選擇。
+You can read more about them, including how to set up at his website [here](https://bigdigital.home.blog/). 這些手錶的優點是他們體積小且價格相對實惠（小米 Mi Band 5 的建議零售價為新台幣895元）。 他們是兒童和手腕較小的人們一個不錯的選擇。
 
 ### b) Pebble 手錶
 
@@ -206,7 +198,7 @@ Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報�
 ![圖像](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）於 2013 年至 2016 年間在市場上銷售，仍可二手購買。 Fitbit 接管了 Pebble 的資產。 Pebble 用戶可以使用 Urchin 表盤查看 Nightscout 資料。 顯示的資料選項包括 IOB、目前的臨時基礎速率和預測值。 如果使用開放循環，你可以使用 IFTTT 建立一個應用程式，如果收到來自**AAPS**的通知，則發送 SMS 或 pushover 通知。
+Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Fitbit 接管了 Pebble 的資產。 Pebble 用戶可以使用 Urchin 表盤查看 Nightscout 資料。 顯示的資料選項包括 IOB、目前的臨時基礎速率和預測值。 如果使用開放循環，你可以使用 IFTTT 建立一個應用程式，如果收到來自**AAPS**的通知，則發送 SMS 或 pushover 通知。
 
 ### c) [Bluejay GTS 手錶](https://bluejay.website/shop/product/bluejay-gts-26)
 
@@ -214,11 +206,11 @@ Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）�
 ![圖像](../images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
 
 
-這是一款獨特的技術產品，可以 **直接**從 Dexcom G6 發射器接收血糖資料。 很多人不知道 Dexcom G6 發射器實際上會在兩個獨立的通道上廣播目前的血糖資料，一個是手機通道，另一個是幫浦通道。 Bluejay GTS 手錶運作的是經過修改的 Xdrip+ 軟體，並且可以設置為在任一通道上接收血糖資料，因此如果 **AAPS** 使用手機通道，那麼 Bluejay GTS 手錶可以使用幫浦通道。
+這是一款獨特的技術產品，可以 **直接**從 Dexcom G6 發射器接收血糖資料。 很多人不知道 Dexcom G6 發射器實際上會在兩個獨立的通道上廣播目前的血糖資料，一個是手機通道，另一個是幫浦通道。 The Bluejay GTS watch runs a modified version of xDrip+ software, and can be set to receive glucose data on either channel, so if **AAPS **  is using the phone channel, then the Bluejay GTS watch can use the pump channel.
 
-Bluejay GTS 手錶體積小、防水且價格相對實惠（目前售價為 115 英鎊），可從英國國際運送。 其主要優點是他目前是唯一完全獨立於手機和循環系統的手錶。 例如，如果你在海灘或水上樂園時中斷幫浦和 **AAPS**手機的連線，並且超出了 AAPS 手機的範圍，你仍然可以從 Dexcom G6 直接獲取 Bluejay 手錶的讀取值。
+Bluejay GTS 手錶體積小、防水且價格相對實惠（目前售價為 115 英鎊），可從英國國際運送。 其主要優點是他目前是唯一完全獨立於手機和循環系統的手錶。 So, for example, if you disconnect the pump and the **AAPS** phone at the beach or flume park, and are out of range of the **AAPS** phone, you can still get readings from the Dexcom G6 directly to the Bluejay watch.
 
-報告的缺點是他並不總是每 5 分鐘獲取一次讀取值，並且電池不可更換。 Bluejay GTS 手錶運作的是經過修改的 Xdrip+ 軟體，目前不支援其他 Dexcom 版本（如 G7）或 Libre 傳感器。
+Reported disadvantages are that it doesn’t always pick up a reading every 5 min, and the battery is not replaceable. The Bluejay GTS watch runs a modified version of xDrip+ software, and it currently doesn’t work with other Dexcom versions (G7) or Libre sensors.
 
 ### d) Apple 手錶
 
@@ -227,27 +219,20 @@ Bluejay GTS 手錶體積小、防水且價格相對實惠（目前售價為 115 
 選項包括 Nightguard、Sugarmate、Gluco-Tracker 和 Loop Follow。
 
 
-## 3) 追蹤 AAPS 的設備
+## Devices for following AAPS
 
-設備包括：A)  M5 stack/M5 stickC
+```{contents} Devices include:
+:depth: 1
+:local: true
+```
 
-B)  Sugarpixel
-
-C)  PC（Teamviewer）
-
-
-
-### A) M5 stack
-
+### M5 stack
 
 ![圖像](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
+M5Stack 是一個小盒子，可以用來進行多種程式開發，Martin 的項目 [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) 顯示傳感器血糖值和趨勢、IOB 和 COB。 他是一個塑膠盒，配備了彩色顯示屏、micro SD 卡槽、3 個按鈕、揚聲器和內置電池。 It is a great blood sugar monitor and is relatively easy to set up if you have a Nightscout account. Users typically run it on their home Wi-Fi, but some users report using it as a display when motorbiking, by running it off a phone Wi-Fi hotspot.
 
-
-
-M5Stack 是一個小盒子，可以用來進行多種程式開發，Martin 的項目 [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) 顯示傳感器血糖值和趨勢、IOB 和 COB。 他是一個塑膠盒，配備了彩色顯示屏、micro SD 卡槽、3 個按鈕、揚聲器和內置電池。 他是一個很棒的血糖監測器，並且如果你擁有 Nightscout 帳戶，設置相對容易。 用戶通常將其運作在他們的家庭 wifi 上，但有些用戶報告說，他們透過手機 wifi 熱點在騎摩托車時使用他作為顯示器。
-
-### B) Sugarpixel
+### Sugarpixel
 
 SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次級血糖顯示警報系統，用於持續血糖監測。 該設備顯示實時的血糖讀取值。 這款 CGM 硬體顯示器具備隨機音調生成的音檔警報（聲音非常大）、針對聽力受損者的振動警報、自定義顯示選項以及原生多用戶追蹤功能。
 
@@ -255,16 +240,12 @@ SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次�
 
 ![圖像](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-●   SugarPixel 具有多種顯示選項，支援 mg/dL 和 mmol/L，以滿足用戶的需求，並且帶有顏色標識的血糖值。 ●   標準顯示面板顯示血糖讀取值、趨勢箭頭和 Delta 值。 Delta 是與上一次讀取值的變化值（正或負）。 ●   SugarPixel 可以自定義為低亮度模式，顯示血糖和時間面板，方便用戶在床邊桌上查看目前血糖讀取值和時間。 ●   SugarPixel 的彩色面板利用整個顯示屏來展示單一顏色，代表目前的血糖值。 這使得用戶可以在戶外的後院、露台或游泳池旁，透過窗戶從遠處看到血糖讀取值。 ●   大血糖面板非常適合床邊使用，特別是佩戴眼鏡或隱形眼鏡的用戶。
+* SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with colour-coded glucose values.
+* The standard face displays BG, Trend Arrow, and Delta. Delta 是與上一次讀取值的變化值（正或負）。
+* SugarPixel can be customised for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
+* SugarPixel’s xolour face utilises the entire display to show a single colour representing the BG value. 這使得用戶可以在戶外的後院、露台或游泳池旁，透過窗戶從遠處看到血糖讀取值。
+* The Big BG face is useful for nightstand users who wear glasses or contact lenses.
 
 
-### C) 電腦（TeamViewer）
+### PC (TeamViewer)
 一些用戶發現像[TeamViewer](https://www.teamviewer.com/)這樣的完整遠端桌面工具對於進行進階的遠端問題排除非常有幫助。
-
-
- 
-
-
-
-
-

@@ -131,7 +131,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 01. Перейдите на вкладку **Omnipod (POD)**, нажмите кнопку **УПРАВЛЕНИЕ помпой (1)**, затем нажмите **Активировать Pod (2)**.
 
-    > ![Активировать Pod_1](../images/omnipod/Activate_Pod_1.png) ![Активировать Pod_2](../images/omnipod/Activate_Pod_2.png)
+    > ![Активировать Pod_1](../images/omnipod/Activate_Pod_1.png) ![Activate_Pod_2](../images/omnipod/Activate_Pod_2.png)
 
 02. Появится экран **Заполнить Pod**. Заполните новый Pod по меньшей мере 80 единицами инсулина и дождитесь двух звуковых сигналов, подтверждающих, что Pod готов к первичному заполнению катетера. При подсчете общего количества инсулина на 3 дня, учитывайте, что первичное заполнение катетера Pod потребует 12-15 единиц инсулина.
 
