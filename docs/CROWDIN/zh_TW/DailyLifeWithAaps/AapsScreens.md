@@ -320,7 +320,7 @@ Libre 使用者的特殊注意事項：
 
 敏感度是運動、荷爾蒙等導致的對胰島素的敏感度計算結果。
 
-請注意，您需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。 Before reaching that objective, the line in your graph is displayed for information only.
+請注意，您需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。 在達到該目標之前，你的圖表中的線條僅顯示為資訊。
 
 #### 心率(Heart rate)
 
@@ -538,9 +538,9 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ![胰島素設定檔](../images/Screenshot_insulin_profile.png)
 
-這顯示您在[組態設置工具](#Config-Builder-insulin)中選擇的胰島素的活動曲線。 The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
+這顯示您在[組態設置工具](#Config-Builder-insulin)中選擇的胰島素的活動曲線。 曲線將根據[DIA](#your-aaps-profile-duration-of-insulin-action) 和達到高峰的時間而有所不同。
 
-**紫色** 線顯示在注射後胰島素量隨時間衰減的情況，**藍色**線顯示其活性狀態。 需要注意的重要點是衰減具有**長尾巴**。 如果您習慣手動注射，可能已經習慣認為胰島素的衰減大約需要 3.5 小時。 然而，在使用循環系統時，這個長尾變得重要，因為 **AAPS** 演算法的計算非常精確，這些微小的剩餘量在遞迴計算下會逐漸累積。 Therefore, **AAPS** uses minimum 5h as DIA.
+**紫色** 線顯示在注射後胰島素量隨時間衰減的情況，**藍色**線顯示其活性狀態。 需要注意的重要點是衰減具有**長尾巴**。 如果您習慣手動注射，可能已經習慣認為胰島素的衰減大約需要 3.5 小時。 然而，在使用循環系統時，這個長尾變得重要，因為 **AAPS** 演算法的計算非常精確，這些微小的剩餘量在遞迴計算下會逐漸累積。 因此，**AAPS**使用最少 5 小時作為 DIA。
 
 有關不同類型的胰島素、他們的活性設定檔以及為什麼這些很重要的更多詳細討論，你可以閱讀這篇文章[暸解基於指數活性曲線的新 IOB 曲線](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
@@ -569,15 +569,15 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ![設定檔](../images/Screenshots_Profile.png)
 
-Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+個人設置包含你個別糖尿病設定的資訊，請參閱詳細的**[個人設置](../SettingUpAaps/YourAapsProfile.md)**頁面以獲取更多資訊。
 
-The buttons on this page allow you to manage your profiles :
+此頁上的按鈕允許你管理你的個人設置：
 
-* **Green plus**: create new profile from scratch
-* **Red X**: delete the profile currently on screen
-* **Blue arrow**: duplicate the profile currently on screen
+* **綠色加號**：從頭創建新的個人設置
+* **紅色 X**：刪除當前顯示的個人設置
+* **藍色箭頭**：複製當前顯示的個人設置
 
-When you want to make any changes to a profile, make sure you are editing the correct profile. When you reach the profile tab, it may not show the current profile in use, but the first one in the list.
+當你想對個人設置進行任何更改時，請確保你正在編輯正確的個人設置。 當你到達個人設置選項卡時，可能不會顯示當前正在使用的個人設置，而是顯示列表中的第一個。
 
 ## 自動化
 
@@ -680,9 +680,9 @@ When you want to make any changes to a profile, make sure you are editing the co
 
 #### 複製設定檔切換
 
-你可以輕鬆從設定檔切換中建立新的本地設定檔。 In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
+你可以輕鬆從設定檔切換中建立新的本地設定檔。 在這種情況下，時差和百分比將應用於新的本地個人設置。 使用**複製**按鈕，該按鈕顯示在**1**行。
 
-You can now go to the [Profile tab](#profile) to edit the newly created Profile.
+你現在可以轉到[個人設置選項卡](#profile)以編輯新創建的個人設置。
 
 ### 照護入口
 
