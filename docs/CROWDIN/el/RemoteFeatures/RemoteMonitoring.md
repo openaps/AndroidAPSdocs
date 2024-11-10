@@ -30,10 +30,6 @@
 
 ## Πράγματα που πρέπει να σκεφτείτε
 
-- Setting the correct [treatment factors](#FAQ-how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
 - Settings must be the same in AAPS and AAPSClient app.
 - Λάβετε υπόψη το χρονικό κενό ανάμεσα στο βασικό χρήστη και τον ακόλουθο που δημιουργείται λόγω του χρόνου που χρειάζεται για να ανέβουν και να κατέβουν τα δεδομένα, όπως επίσης και το γεγονός ότι το βασικό τηλέφωνο με AAPS θα ανεβάσει τα δεδομένα μόνο αφού ξεκινήσει το κύκλωμα.
-- Επομένως, πάρτε το χρόνο σας προκειμένου να κάνετε τις ρυθμίσεις σωστά και δοκιμάστε τες στην πραγματική ζωή με το παιδί σας δίπλα σας προτού να ξεκινήσετε την απομακρυσμένη παρακολούθηση και τις απομακρυσμένες θεραπευτικές κινήσεις. Οι σχολικές διακοπές μπορεί να είναι μια καλή περίοδος για αυτό.
-- Ποιο είναι το σχέδιο έκτακτης ανάγκης σας όταν το σύστημα απομακρυσμένης παρακολούθησης δε λειτουργεί (π.χ προβλήματα με το ίντερνετ);
-- Η απομακρυσμένη παρακολούθηση και η απομακρυσμένη θεραπευτική αντιμετώπιση μπορεί να είναι ιδιαίτερα βοηθητικές στο νηπιαγωγείο και το Δημοτικό σχολείο. Αλλά βεβαιωθείτε ότι οι δάσκαλοι και οι εκπαιδευτικοί γνωρίζουν το θεραπευτικό πλάνο του παιδιού σας. Παραδείγματα τέτοιων θεραπευτικών πλάνων μπορούν να βρεθούν στην ενότητα [αρχεία των χρηστών AAPS](https://www.facebook.com/groups/AndroidAPSUsers/files/) στο Facebook.
-- Είναι σημαντικό να κρατάτε το τηλέφωνο του παιδιού σε σύνδεση με την αντλία και το CGM ανά πάσα στιγμή. Αυτό μπορεί να είναι δύσκολο ειδικά με πολύ μικρά παιδιά. Υπάρχουν πολλές λύσεις, μια δημοφιλής επιλογή είναι μια ζώνη [SPI](https://spibelt.com/collections/kids-belts)
+- What is your emergency plan for when remote control does not work (_i.e._ network problems or lost bluetooth connection)?  Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
