@@ -1,10 +1,14 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Zukünftig ggf. loopbare Pumpen
 
 Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie zum Loopen bzw. für AAPS geeignet sind. Am Schluss findest du Informationen, welche Eigenschaften eine Insulinpumpe haben müsste um damit loopen zu können.
 
 ## Pumpen, die für den Loop geeignet sind
-
-* * *
 
 ### Ypsomed Pumpe ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
@@ -14,15 +18,11 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Kommentare:** Für die Dose Version der Pumpe wurde eine starke Verschlüsselung hinzugefügt, so dass die Wahrscheinlichkeit hoch ist, dass diese Pumpe in naher Zukunft (oder immer) nicht von AAPS unterstützt wird. Wir hatten Entwickler, die mit Ypsomed zusammengearbeitet und mit medizinischen Studien geholfen haben, so dass vielleicht seine Version des Treibers freigegeben wird, aber es besteht nur eine kleine Chance dafür. Du kannst mehr Informationen in unserem Discord Channel "ypsopump-talk" finden.
 
-* * *
-
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
 **Loop Status:** Zur Zeit nicht umgesetzt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert. Die Pumpe kommuniziert über Bluetooth.
-
-* * *
 
 ### Equil (Pumpe von Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
 
@@ -32,8 +32,6 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Kommentar:** Einige Entwickler haben begonnen zu prüfen, ob die Pumpe in AAPS unterstützt werden kann, aber dies ist noch in der Anfangsphase. Du kannst mehr Informationen in unserem Discord Channel "equil" finden.
 
-* * *
-
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
 **Loop-status** Ist ein Loop-Kandidat.
@@ -41,8 +39,6 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 **Hardware Voraussetzungen für AAPS:** Keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
 **Anmerkung:** Es gibt einige Entwickler, die die Dekodierung des Protokolls prüfen, aber bis jetzt befindet sich dieses Projekt noch in einer vorläufigen Phase.
-
-* * *
 
 ### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
 
@@ -52,8 +48,6 @@ Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nich
 
 **Hardware Voraussetzungen für AAPS:** Keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
-* * *
-
 ### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
 **Loop Status:** Alle drei Pumpen werden Loop Kandidaten sein.
@@ -61,8 +55,6 @@ Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nich
 Sie planen zuerst die t:Mobi (vorher t:sport genannt) Ende 2022 oder 2023 auf den Markt zu bringen. Danach sollen t:slim X3 (vielleicht 2023) und später t:Mobi Tubeless folgen. t:mobi's wird nur über die Telefon-App kontrollierbar sein, während X3 ähnlich aussehen wird wie X2, mit einigen neuen Funktionen (Remote-Update von Firmware, Fernbedienung über Telefon-App, etc.).
 
 **Hardware Voraussetzungen für AAPS:** Keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
-
-* * *
 
 ### Medtronic Bluetooth
 
@@ -75,8 +67,6 @@ Sie planen zuerst die t:Mobi (vorher t:sport genannt) Ende 2022 oder 2023 auf de
 **Hardware Voraussetzungen für AAPS:** Keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
 **Kommentare:** Da das Unternehmen Interesse an der Integration mit AAPS hat, könnten sie evtl. selbst die Umsetzung vornehmen.
-
-* * *
 
 ## Pumps no longer sold (companies no longer operating)
 
@@ -93,8 +83,6 @@ Sie planen zuerst die t:Mobi (vorher t:sport genannt) Ende 2022 oder 2023 auf de
 ### Animas Vibe
 
 **Loop Status:** Nicht zum Loopen geeignet. Keine Fernsteuerung möglich. **Hinweis:** Pumpe wird nicht mehr verkauft. Das Unternehmen (Johnson&Johnson) hat sich aus dem Pumpengeschäft zurückgezogen.
-
-* * *
 
 ### Animas Ping
 
@@ -130,8 +118,6 @@ Sie planen zuerst die t:Mobi (vorher t:sport genannt) Ende 2022 oder 2023 auf de
 - Verlängerten Bolus abbrechen
 - History auslesen
 - TDD (Total daily dose = Bolus + Basal pro Tag) auslesen
-
-* * *
 
 ### Unterstützung weiterer Pumpen
 
