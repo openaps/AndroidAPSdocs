@@ -88,7 +88,9 @@
 
 1. 導航至**DASH**標籤，點擊**POD 管理（1）**按鈕，然後點擊**註冊 Pod（2）**。
 
-![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
+![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)
+
+​    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
 2. 顯示**填充 Pod**畫面。 將至少 80 單位的胰島素注入新的 Pod，等聽到兩聲嗶聲，表示 Pod 準備就緒並可續繼將胰島素輸入完。 計算 3 天所需的胰島素總量時，請考慮 Pod 本身的排空會占用約 3-10 單位。
 
@@ -132,7 +134,9 @@
 
     有關顯示的訊息的更多詳細資訊，請轉到本文件的[**DASH 標籤**](#dash-tab)部分。
 
-![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
+
+​    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
 在註冊 Pod 後匯出設置是一個好習慣。 每次更換 Pod 時都應執行此操作，每月一次，將匯出的文件複製到你的網路磁碟。 請見[**匯出設定文件**](../Maintenance/ExportImportSettings.md)。
 
@@ -147,11 +151,17 @@
 
 1. 進入 **DASH** 標籤，點擊 **POD 管理 (1)** 按鈕，然後在 **Pod 管理** 畫面中點擊 **停用 Pod (2)** 按鈕。
 
-![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
+![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+
+​    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
 
 2. 在 **停用 Pod** 畫面上，點擊 **下一步** 按鈕開始停用 Pod 的流程。 你會收到來自 Pod 的確認嗶聲，表明停用成功。
 
-![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg) ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
+![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
+
+ ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
+
+
 
 3. 停用成功後會顯示綠色勾號。 點擊 **下一步** 按鈕以顯示 Pod 停用畫面。 你現在可以移除 Pod，因為該使用階段已停用。
 
@@ -163,7 +173,9 @@
 
 5. 現在你已進入 **Pod 管理** 選單；按下手機上的返回按鈕返回 **DASH** 標籤。 確認 **Pod 狀態：** 欄位顯示 **無可用的 Pod** 訊息。
 
-![Deactivate_Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
+![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
+
+ ![Deactivate_Pod_8](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
 (OmnipodDASH-resuming-insulin-delivery)=
 
@@ -218,7 +230,13 @@
 
 1. 進入 **DASH** 標籤，按下 **POD 管理 (1)** 按鈕以進入 **Pod 管理** 選單，然後按下 **Pod 歷史紀錄 (2)** 按鈕以進入 Pod 歷史紀錄畫面。
 
-![Pod_history_1](../images/DASH_images/Pod_History/Pod_history_1.jpg) ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
+![Pod_history_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+
+
+
+ ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
+
+
 
 2. 在 **Pod 歷史紀錄** 畫面中，顯示預設類別 **全部 (1)**，以逆序顯示所有 Pod **操作 (3)** 和 **結果 (4)** 的 **日期和時間 (2)**。 使用手機的 **返回按鈕按兩次** 以返回主 AAPS 介面中的 **DASH** 標籤。
 
@@ -282,12 +300,16 @@
 
 ### Pod 管理選單
 
-以下是按下 **POD 管理 (0)** 按鈕從 **DASH** 標籤查看的 **Pod 管理** 選單中的圖示含義。 ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (1)** button from the **DASH** tab.
 
-* 1 - [**啟動 Pod**](#activate-pod) : 針對新 pod 進行排氣並啟動。
-* 2 - [**停用藥量**](#deactivate-pod) : 停用當前活躍的藥量。
-* 3 - **播放測試嗶聲** ：按下時播放 Pod 的單次測試嗶聲。
-* 4 - [**藥量歷史**](#view-pod-history) : 顯示活躍的藥量活動歷史。
+![DASH_Tab_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+
+ ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+
+* 2 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
+* 3 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
+* 4 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
+* 5 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
 
 (DanaRS-Insulin-Pump-dash-settings)=
 
@@ -295,7 +317,9 @@
 
 你可以從左上角 **漢堡選單** 下的 **組態建置工具 (1)**\ ➜\ **幫浦**\ ➜\ **Dash**\ ➜\ **設定齒輪 (3)** 中進行 Dash 驅動設定，方法是選擇標題為 **Dash** 的 **單選按鈕 (2)**。 選擇**設置齒輪（3）**旁的**複選框（4）**，將允許 DASH 選單作為 AAPS 介面中的一個標籤顯示，標題為**DASH**。
 
-![Dash_settings_1](../images/DASH_images/Dash_settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH_images/Dash_settings/Dash_settings_2.png)
+![Dash_settings_1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
+
+
 
 **注意：** 查看 **Dash 設定** 的更快方式是查看 **DASH** 標籤右上角的 **三點選單 (1)** 並從下拉選單中選擇 **Dash 偏好設定 (2)**。
 
@@ -303,11 +327,11 @@
 
 下方列出了設定組；大多數條目可透過切換開關啟用或停用：
 
-![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
-
 *注意：星號 (\*) 表示預設為啟用。*
 
 ### 確認嗶聲提示
+
+![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
 提供來自藥筒的確認聲音提示，用於注射、基礎輸注、SMB以及TBR輸送和變更。
 
@@ -317,6 +341,8 @@
 * **啟用 TBR 嗶聲：** 啟用或停用設置或取消 TBR 時的確認嗶聲。
 
 ### 警報
+
+![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
 提供 AAPS 警報，包括 Pod 到期、關閉、儲液量低，根據定義的門檻值單位觸發。
 
@@ -328,6 +354,8 @@
 * **單位數：** 定義觸發 Pod 儲液量低警報的單位數量。
 
 ### 通知
+
+![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
 提供 AAPS 通知和手機提示音，當 TBR、SMB 或注射的事件是否成功無法確定時發出。
 
