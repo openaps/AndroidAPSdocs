@@ -227,7 +227,7 @@ d) Technical support is available to you from the DIY community through GitHub, 
 
 e) Na schůzkách s lékaři budete moci poskytnout **jak informace o glykémiích, tak informace o smyčce/pumpě** formou kombinovaných výkazů (prostřednictvím Nightscoutu nebo Tidepoolu), buď vytištěných nebo online na obrazovce notebooku/tabletu. Urychlení procesu poskytování dat o glykémii a inzulínu umožní efektivnější využití času vašeho lékaře k přezkoumání reportů a pomůže při diskuzi o vašich pokrocích.
 
-f) If there is still strong objection from your team, hand your clinician printouts of the reference articles linked here in the text, and give them the link to the **AAPS** clinicians section: [For Clinicians – A General Introduction and Guide to **AAPS**](../Resources/clinician-guide-to-AndroidAPS.md)
+f) If there is still strong objection from your team, hand your clinician printouts of the reference articles linked here in the text, and give them the link to the **AAPS** clinicians section: [For Clinicians – A General Introduction and Guide to **AAPS**](../UsefulLinks/ClinicianGuideToAaps.md)
 
 #### Podpora pro smyčku DIY ze strany ostatních lékařů
 
