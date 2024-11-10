@@ -24,7 +24,7 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 Requirements:
 
 * You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
-* The Android phone is already set-up with your personal ”everyday”  email address, such as a Gmail account.
+* The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
 
 ```{admonition} Things to consider when setting up your new account
 :class: dropdown
@@ -49,7 +49,7 @@ In this example: 
 - Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-#### Go to <https://account.google.com> 
+### Go to <https://account.google.com> 
 
  If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. 
 (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png) 
@@ -58,83 +58,83 @@ In this example: 
 ![](../images/Building-the-App/building_0005.png)
 
 
-#### Enter your NEW dedicated account details: 
+### Enter your NEW dedicated account details: 
 
 - Enter the new account: 
 - Create Account
 - for my personal use. 
 
 
- #### Enter your persona:
+### Enter your persona:
  - Enter firstname
  - lastname
  - birthdate (needs to be an Adult age)
 
-#### Choose your NEW email address & password
+### Choose your NEW email address & password
 
 This example appends “.AAPS” to Donald Muck’s existing one…\
 Set a password
 
-####  Enter a phone number which can receive the SMS verification
+### Enter a phone number which can receive the SMS verification
 
 Gmail will now send you a unique code to enter for validation.
 
-#### Enter the recovery email address 
+### Enter the recovery email address
 
 In this case it will be your existing “_everyday_” email…
 
-#### Finish setting up the account
+### Finish setting up the account
 
 Gmail will display the account name. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
 
-#### Customize the new profile display
+### Customize the new profile display
 
 At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-#### Open the Gmail website on both windows to configure the new account
+### Open the Gmail website on both windows to configure the new account
 
-So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account \
+So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account\
 This part can be a bit confusing, since you will have to switch back and forth between both accounts. To make it easier, open 2 separate browser windows on top of each other:
 
-1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen… 
-2. Right click on your Browser logo in your taskbar 
+1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen…
+2. Right click on your Browser logo in your taskbar
 3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
 
-Open <https://gmail.com>  in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (if needed you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (if needed you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 
-Your Gmail homepages screen should look like this:\
+Your Gmail homepages screen should look like this:\
 ![](../images/Building-the-App/building_0010.png)
 
- #### In the new Gmail account (bottom window), open Gmail settings… 
+ ### In the new Gmail account (bottom window), open Gmail settings…
 
-- Click on the gear on the left of the profile picture 
+- Click on the gear on the left of the profile picture
 - then select “**See all Settings**”
 
 ![](../images/Building-the-App/building_0011.png)
 
-#### Setup forwarding…
+### Setup forwarding…
 
 - Click on the “Forwarding and POP/IMAP” Setting tab
 - Click on “add a forwarding address”
 - Add your “everyday” email address
-- Gmail will send a verification code to your “everyday” email address. 
+- Gmail will send a verification code to your “everyday” email address.
 - You will switch back to your everyday profile and click on the link to verify that you accept the forwarding (or get the code from Gmail’s verification email in your “everyday” Gmail window and cut and paste it in your “new AAPS dedicated” Gmail window).
 
 There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts.
 
 ![](../images/Building-the-App/building_0012.png)
 
-#### Verify the forwarded email address
+### Verify the forwarded email address
 
-- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email. 
+- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email.
 - Open it and “click the link to confirm the request”
 
-#### Archive forwarded emails in the new dedicated Gmail account (bottom window)
+### Archive forwarded emails in the new dedicated Gmail account (bottom window)
 
 <!---->
 

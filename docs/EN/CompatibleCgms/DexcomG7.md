@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Dexcom G7 and ONE+
 
 
