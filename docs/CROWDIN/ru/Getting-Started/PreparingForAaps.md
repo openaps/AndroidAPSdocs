@@ -116,13 +116,13 @@ In addition, **AAPS** provides the ability to [export all your configuration set
 
 
 
-#### [Where to go for help](../Where-To-Go-For-Help/Background-reading.md)?
+#### [Where to go for help](../UsefulLinks/BackgroundReading.md)?
 
 Целью этого раздела является предоставление новым пользователям ссылок на ресурсы помощи, включая доступ к поддержке сообщества, состоящего как из новых, так и из опытных пользователей, которые могут ответить на вопросы и устранить ошибки, при работе с AAPS.
 
-#### [Раздел для медицинских работников](../Resources/clinician-guide-to-AndroidAPS.md)
+#### [Раздел для медицинских работников](../UsefulLinks/ClinicianGuideToAaps.md)
 
-This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+This is a [section specificially for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
 
 ## Что мы будем собирать и устанавливать?
 
