@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Dokumentation zum AndroidAPS Omnipod Insulinpumpen-Treiber
 
 Diese Anleitung ist für die Konfiguration der Omnipod Eros Pumpe (**NICHT Omnipod Dash**). Der Omnipod-Treiber ist ab Version 2.8 als Teil von AAPS (AAPS) verfügbar.

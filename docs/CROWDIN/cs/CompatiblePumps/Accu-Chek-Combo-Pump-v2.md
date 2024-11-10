@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Pumpa Accu-Chek Combo
 
 Tyto pokyny jsou pro nastavení pumpy Accu-Chek Combo pomocí nového ovladače combov2, který je k dispozici jako součást AndroidAPS ve verzi 3.2. Tento ovladač je zcela nezávislý od starší verze.

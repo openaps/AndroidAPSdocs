@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Obecná doporučení ohledně CGM
 
 ## Opatření při používání CGM

@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Glättung der Blut-Glukose-Daten
 
 If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. Wenn Du Fehler in den CGM-Daten erkennst ist es wichtig, bis das Problem behoben ist, den Loop auszuschalten. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).

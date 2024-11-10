@@ -11,11 +11,11 @@ AAPS Wear APK 的基礎版本中包含多種手錶外觀供選擇。 這些手�
 * 雙擊血糖以進入 AAPS 選單
 * 雙擊血糖圖表可更改圖表的時間尺度
 
-## Configuration
+## 設定
 
-Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md).
+在[組態建置工具](../SettingUpAaps/ConfigBuilder.md)中啟用 Wear 模組。
 
-Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+使用 Wear 偏好設定定義在透過手錶計算注射時應考慮的變數（例如 15 分鐘趨勢、COB...）。
 
 如果你想要透過手錶進行注射等操作。 那麼在「Wear 設置」中需要啟用「從手錶進行控制」。
 
@@ -23,7 +23,7 @@ Use the Wear Preferences to define which variables should be considered when cal
 
 透過 Wear 標籤或選單（螢幕左上角的選單圖示，如果標籤未顯示）你可以
 
-* 重新發送所有資料。 Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* 重新發送所有資料。 如果手錶在一段時間內未連接，可能會有所幫助，並且你想將資訊推送至手錶。
 * 直接從手機上打開手錶的設置。
 
 確保手錶上未封鎖來自 AAPS 的通知。 確認操作（例如注射、臨時目標）會透過通知進行，你需要滑動並勾選。
@@ -335,7 +335,7 @@ Wear OS 手錶是非常耗電且又受限的裝置。 手錶機殼的尺寸限�
 * 檢查 AAPS 預設錶盤與其他帶有 AAPS 小工具的錶盤在你的手錶上哪個效能更好。
 * 在幾天內觀察不同的活動模式。 大多數手錶會因為抬腕查看、移動及其他使用相關的觸發事件而啟動螢幕顯示。
 * 檢查影響效能的全局系統設定：通知、背光/活動顯示逾時、GPS 啟動時。
-* Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
+* 檢查[測試過的手機和手錶清單](#Phones-list-of-tested-phones)和[詢問社群](../GettingHelp/WhereCanIGetHelp.md)獲取其他使用者的經驗和報告的電池壽命。
 * **我們無法保證錶盤或小工具上顯示的資料是最新的**。 最終，Wear OS 決定何時更新錶盤或小工具。 即使 AAPS 應用程式請求更新，系統也可能為了節省電池而延後或忽略更新。 當手錶電量不足時有疑慮時，請務必使用手機上的 AAPS 應用程式進行雙重檢查。
 
 (Watchfaces-troubleshooting-the-wear-app)=

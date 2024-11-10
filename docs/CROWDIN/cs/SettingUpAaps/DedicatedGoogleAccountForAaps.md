@@ -24,7 +24,7 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 Požadavky:
 
 * You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. Obě tato zařízení mají nainstalované všechny nejnovější bezpečnostní aktualizace, přístup k Internetu a administrátorská oprávnění, protože některé kroky vyžadují stažení a instalaci programů.
-* Android telefonu je už nastaven s vaší osobní každodenní e-mailovou adresou, například Gmailovým účtem.
+* The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
 
 ```{admonition} Things to consider when setting up your new account
 :class: dropdown
@@ -49,91 +49,90 @@ In this example: 
 - Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-#### Go to <https://account.google.com> 
+### Go to <https://account.google.com> 
 
  If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
 
-#### Enter your NEW dedicated account details: 
+### Enter your NEW dedicated account details: 
 
 - Enter the new account: 
 - Vytvořit účet
 - for my personal use. 
 
 
-
- #### Zadejte vaše osobní údaje:
+### Zadejte vaše osobní údaje:
  - Vložte křestní jméno
  - Příjmení
  - datum narození (musí být zadán věk dospělého)
 
-#### Choose your NEW email address & password
+### Choose your NEW email address & password
 
 This example appends “.AAPS” to Donald Muck’s existing one…\
 Set a password
 
-####  Enter a phone number which can receive the SMS verification
+### Enter a phone number which can receive the SMS verification
 
 Gmail vám nyní odešle jedinečný kód pro ověření.
 
-#### Enter the recovery email address 
+### Enter the recovery email address
 
 In this case it will be your existing “_everyday_” email…
 
-#### Dokončete nastavení vašeho účtu
+### Dokončete nastavení vašeho účtu
 
 Gmail zobrazí název účtu. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
 
-#### Přizpůsobte zobrazení nového profilu
+### Přizpůsobte zobrazení nového profilu
 
 At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. Profilový obrázek bude ve výchozím nastavení zobrazovat první písmeno vašeho jména. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-#### Pro nastavení nového účtu otevřete webovou stránku Gmail v obou oknech
+### Pro nastavení nového účtu otevřete webovou stránku Gmail v obou oknech
 
-So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account \
+So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account\
 This part can be a bit confusing, since you will have to switch back and forth between both accounts. Chcete-li si to usnadnit, otevřete si v prohlížeči dvě samostatná okna nad sebou:
 
-1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen… 
-2. Right click on your Browser logo in your taskbar 
+1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen…
+2. Right click on your Browser logo in your taskbar
 3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
 
-Open <https://gmail.com>  in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. Pokud je to potřeba, můžete vždy přepnout účty kliknutím na profilový obrázek a výběrem správného.
+Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. Pokud je to potřeba, můžete vždy přepnout účty kliknutím na profilový obrázek a výběrem správného.
 
 ![](../images/Building-the-App/building_0009.png)
 
-Your Gmail homepages screen should look like this:\
+Your Gmail homepages screen should look like this:\
 ![](../images/Building-the-App/building_0010.png)
 
- #### In the new Gmail account (bottom window), open Gmail settings… 
+ ### In the new Gmail account (bottom window), open Gmail settings…
 
-- Click on the gear on the left of the profile picture 
+- Click on the gear on the left of the profile picture
 - then select “**See all Settings**”
 
 ![](../images/Building-the-App/building_0011.png)
 
-#### Nastavení přeposílání…
+### Nastavení přeposílání…
 
 - Klikněte na záložku "Nastavení přeposlání a POP/IMAP"
 - Klikněte na "Přidat adresu pro přeposílání"
 - Zadejte vaši "každodenní" e-mailovou adresu
-- Gmail will send a verification code to your “everyday” email address. 
+- Gmail will send a verification code to your “everyday” email address.
 - Přepněte se zpět na svůj každodenní profil a klikněte na odkaz, abyste potvrdili, že přijímáte přeposílání (nebo vezměte kód z ověřovacího e-mailu ve svém „každodenním“ Gmail okně a vložte ho do „nového vyhrazeného AAPS“ Gmail okna).
 
 Budete muset docela přepínat tam a zpět mezi okny, ale zajistíte tak, že kdykoli zkontrolujete e-maily na vašem "každodenním" účtu, uvidíte zároveň e-maily přeposlané z vašeho účtu vyhrazeného pro AAPS, jako například upozornění Gmailu.
 
 ![](../images/Building-the-App/building_0012.png)
 
-#### Ověření přeposlané e-mailové adresy
+### Ověření přeposlané e-mailové adresy
 
-- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email. 
+- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email.
 - Otevřete jej a „klikněte na odkaz pro potvrzení požadavku“
 
-#### Archivace přeposílaných e-mailů ve vyhrazeném Gmail účtu (dolní okno)
+### Archivace přeposílaných e-mailů ve vyhrazeném Gmail účtu (dolní okno)
 
 <!---->
 

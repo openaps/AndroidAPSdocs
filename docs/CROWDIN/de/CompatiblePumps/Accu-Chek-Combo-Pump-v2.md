@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Accu-Chek Combo
 
 Diese Anweisungen sind zum Einrichten der Accu-Chek Combo Pumpe mit dem neuen Combo-Treiber, der als Teil von AAPS ab Version 3.2 verfügbar ist. Dieser Treiber ist völlig unabhängig vom alten Treiber.

@@ -32,7 +32,7 @@ orphan: true
 * 當 AAPS 報告 **幫浦無法連線** 時，首先解除按鍵鎖定並**按下幫浦上的任意鍵**（例如 "下" 鍵）。 當幫浦螢幕熄滅後，按下 AAPS 中的**重新整理**按鈕。 通常這樣操作後，通訊就能恢復正常。
 * 如果這樣不行，請重新啟動你的手機。 重新啟動後，AAPS 會重新註冊並與幫浦建立新連線。 如果你使用的是舊驅動程式，ruffy 也會被重新註冊。
 
-* 測試顯示，某些手機更容易觸發 "幫浦無法連線" 錯誤。 See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones.
+* 測試顯示，某些手機更容易觸發 "幫浦無法連線" 錯誤。 請查看 [AAPS 手機列表](#Phones-list-of-tested-phones) 以獲得成功測試的智慧型手機。
 
 ### 頻繁通訊錯誤的根本原因及後果
 

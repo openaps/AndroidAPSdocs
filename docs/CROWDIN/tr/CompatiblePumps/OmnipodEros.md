@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # AAPS Omnipod İnsülin Pompası Sürücü Dokümantasyonu
 
 Bu talimatlar, Omnipod Eros nesil pompayı yapılandırmak içindir (**Omnipod Dash DEĞİL**). Omnipod Eros sürücüsü, 2.8 sürümünden itibaren AAPS'in bir eklentisidir.

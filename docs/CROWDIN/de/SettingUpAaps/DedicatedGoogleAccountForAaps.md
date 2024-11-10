@@ -24,7 +24,7 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 Voraussetzungen:
 
 * You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. Beide Geräte haben die neuesten Sicherheitsupdates, Internetzugang und Administrator-Rechte, da einige Schritte das Herunterladen und die Installation von Programmen erfordern.
-* Das Android-Smartphone ist bereits mit Deiner persönlichen „Alltags“-E-Mail-Adresse [Standard-E-Mail-Adresse], wie z. B. einem Gmail-Konto, eingerichtet.
+* The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
 
 ```{admonition} Things to consider when setting up your new account
 :class: dropdown
@@ -49,91 +49,90 @@ In this example: 
 - Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-#### Go to <https://account.google.com> 
+### Go to <https://account.google.com> 
 
  If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
 
-#### Enter your NEW dedicated account details: 
+### Enter your NEW dedicated account details: 
 
 - Enter the new account: 
 - Konto erstellen
 - for my personal use. 
 
 
-
- #### Gib Deine persönlichen Daten ein:
+### Gib Deine persönlichen Daten ein:
  - Vorname eingeben
  - Nachname
  - Geburtsdatum (muss volljährig sein)
 
-#### Choose your NEW email address & password
+### Choose your NEW email address & password
 
 This example appends “.AAPS” to Donald Muck’s existing one…\
 Set a password
 
-####  Enter a phone number which can receive the SMS verification
+### Enter a phone number which can receive the SMS verification
 
 Gmail sendet Dir jetzt einen eindeutigen Code, der zur Validierung eingegeben werden kann.
 
-#### Enter the recovery email address 
+### Enter the recovery email address
 
 In this case it will be your existing “_everyday_” email…
 
-#### Einrichtung Deines Kontos abschließen
+### Einrichtung Deines Kontos abschließen
 
 Gmail wird den Kontonamen anzeigen. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
 
-#### Passe die Anzeige des neuen Profils an
+### Passe die Anzeige des neuen Profils an
 
 At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. Das Profilbild wird standardmäßig auf den ersten Buchstaben Deines Namens gesetzt. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-#### Öffne die Gmail-Website in beiden Fenstern, um das neue Konto zu konfigurieren
+### Öffne die Gmail-Website in beiden Fenstern, um das neue Konto zu konfigurieren
 
-So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account \
+So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account\
 This part can be a bit confusing, since you will have to switch back and forth between both accounts. Um es zu vereinfachen, öffne zwei separate Browserfenster übereinander:
 
-1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen… 
-2. Right click on your Browser logo in your taskbar 
+1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen…
+2. Right click on your Browser logo in your taskbar
 3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
 
-Open <https://gmail.com>  in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (falls erforderlich, kannst Du durch das Klicken auf das Profilbild und die Auswahl des richtigen Kontos zwischen Konten wechseln).
+Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (falls erforderlich, kannst Du durch das Klicken auf das Profilbild und die Auswahl des richtigen Kontos zwischen Konten wechseln).
 
 ![](../images/Building-the-App/building_0009.png)
 
-Your Gmail homepages screen should look like this:\
+Your Gmail homepages screen should look like this:\
 ![](../images/Building-the-App/building_0010.png)
 
- #### In the new Gmail account (bottom window), open Gmail settings… 
+ ### In the new Gmail account (bottom window), open Gmail settings…
 
-- Click on the gear on the left of the profile picture 
+- Click on the gear on the left of the profile picture
 - then select “**See all Settings**”
 
 ![](../images/Building-the-App/building_0011.png)
 
-#### Weiterleitung einrichten…
+### Weiterleitung einrichten…
 
 - Klicke auf die Registerkarte „Weiterleitung und POP/IMAP-Einstellungen“
 - Klicke auf „Weiterleitungsadresse hinzufügen“
 - Gib Deine "Standard"-E-Mail-Adresse ein
-- Gmail will send a verification code to your “everyday” email address. 
+- Gmail will send a verification code to your “everyday” email address.
 - Du wirst zu Deinem Standardprofil zurückkehren und dort auf den Link klicken, um die Weiterleitung zu bestätigen (oder den Code aus der Bestätigungs-E-Mail von Gmail in Deinem "Standard"-Gmail-Fenster zu erhalten und ihn in Dein "neues dediziertes AAPS"-Gmail-Fenster zu kopieren und einzufügen).
 
 Es gibt ziemlich viel Hin und Her zwischen den Fenstern, aber dies stellt sicher, dass Du beim Prüfen Deiner Standard-Kontomails auch die E-Mails (wie z. B. Gmail-Benachrichtigungen) siehst, die von Deinem dedizierten AAPS-Konto weitergeleitet wurden.
 
 ![](../images/Building-the-App/building_0012.png)
 
-#### Bestätige die E-Mail-Adresse für Weiterleitungen
+### Bestätige die E-Mail-Adresse für Weiterleitungen
 
-- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email. 
+- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email.
 - Öffne sie und "klicke auf den Link, um die Anfrage zu bestätigen"
 
-#### Archiviere weitergeleitete E-Mails im neuen dedizierten Gmail-Konto (unteres Fenster)
+### Archiviere weitergeleitete E-Mails im neuen dedizierten Gmail-Konto (unteres Fenster)
 
 <!---->
 

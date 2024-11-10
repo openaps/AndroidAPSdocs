@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Για χρήστες άλλων CGM ανεβασμένα στο Nightscout
 
 If you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).

@@ -2,9 +2,9 @@
 
 ## 2024年10月
 
-- Update of several pages:
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../DailyLifeWithAaps/CobCalculation.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
-  - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+- 多個頁面的更新：
+  - [需要多長時間](#preparing-how-long-will-it-take)、[成分概覽](../DailyLifeWithAaps/CobCalculation.md)、[完成目標](../SettingUpAaps/CompletingTheObjectives.md)、[你的 AAPS 個人檔案](../SettingUpAaps/YourAapsProfile.md)、[組態建置工具](../SettingUpAaps/ConfigBuilder.md)及[偏好設定](../SettingUpAaps/Preferences.md)、[AAPS螢幕](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [COB計算](../DailyLifeWithAaps/CobCalculation.md)、[動態ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Android Studio Ladybug的建立指導](../SettingUpAaps/BuildingAaps.md) @tanja
 - 技術工作（文件的部署過程、檔案組織…） @psonnerat & @emilise
 
@@ -36,7 +36,7 @@
 
 - 校正 [Libre 2 傳感器](#Libre2-best-practices-for-calibrating-a-libre-2-sensor) 的最佳方法
 - [ISF](../UsefulLinks/FAQ.md) 影響的重新表述
-- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio)
+- 更新[Android Studio故障排除](../GettingHelp/TroubleshootingAndroidStudio)
 - 移除已修補的[Dexcom](../CompatibleCgms/DexcomG6.md)應用程式，因為它已過時
 
 ## 2021年10月

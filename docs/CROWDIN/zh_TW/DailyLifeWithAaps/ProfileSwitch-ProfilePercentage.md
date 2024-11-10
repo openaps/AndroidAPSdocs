@@ -117,8 +117,8 @@ mg/dl/UI | UI降低
 
 透過紀錄**設定**快照的機制，能夠更精準地計算過去的資料，並追蹤**設定**變更的可能性。
 
-## Keep a profile switch for later use
+## 保留個人設置切換以供日後使用
 
-Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
+一旦你以百分比和/或時間偏移進行了個人設置切換，你可以將此臨時個人設置的複製製作成新的個人設置。
 
-To do this, go to the tab [Treatments > Profile Switch](#aaps-screens-clone-profile-switch).
+要這樣做，請前往選單[治療 > 個人設置切換](#aaps-screens-clone-profile-switch)。

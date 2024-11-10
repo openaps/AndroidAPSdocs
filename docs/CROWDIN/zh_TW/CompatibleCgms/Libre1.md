@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Freestyle Libre 1
 
 要將你的 Libre 用作 CGM，每 5 分鐘獲取一次新的血糖值，而無需掃描傳感器，你需要購買一個 NFC 到藍牙橋接器（基於已過時的[LimiTTer](https://github.com/JoernL/LimiTTer) 項目的商用設備）。
@@ -41,7 +45,7 @@
 
 - Tomato 是 Miaomiao 的官方應用程式。
 - 安裝 [Tomato](http://tomato.cool/#download_page) 並按照廠商的[說明](http://tomato.cool/how-to-broadcast-data-to-android-aps/tips/)操作。
-- Select Tomato in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- 在[ConfigBuilder，BG 來源](#Config-Builder-bg-source)中選擇 Tomato。
 
 ## 4. 使用 Diabox
 

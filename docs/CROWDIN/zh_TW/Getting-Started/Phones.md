@@ -13,13 +13,13 @@
 
 我們維護一份[已測試的硬體設置](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)清單。
 
-This list provides user feedback on the usage of a phone along with **AAPS** and a given pump and CGM. 這可以幫助你檢查你的手機/幫浦/CGM 是否有其他用戶已成功使用。
+此列表提供用戶對於使用手機搭配**AAPS**以及指定的幫浦和 CGM 的回饋。 這可以幫助你檢查你的手機/幫浦/CGM 是否有其他用戶已成功使用。
 
 該文件為唯讀。 使用CTRL-F，你可以在Google表單的文字中搜尋。
 
 若要記錄你的硬體設置測試，請填寫這個[表單](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform)。 填寫表單資料後，該表格會自動每 5 分鐘更新一次
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the [Where can I get help? 頁面](../GettingHelp/WhereCanIGetHelp.md)。
+對於試算表的任何問題，請聯繫其維護者*@theodoor5137*，在 Discord 聯絡，或請參閱[我可以在哪裡獲得幫助? 頁面](../GettingHelp/WhereCanIGetHelp.md)。
 
 ## 我找不到我的手機
 

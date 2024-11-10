@@ -148,12 +148,11 @@ WearOS 自訂錶盤 <./UsefulLinks/CustomWatchfaceReference.md>
 ```
 
 ```{toctree}
-:caption: 9) 進階 AAPS 選項
+:caption: 9) Advanced AAPS options
 
-完全閉環 <./AdvancedOptions/FullClosedLoop.md>
-dev 分支 <./AdvancedOptions/DevBranch.md>
-xDrip 工程模式 <./AdvancedOptions/EnablingEngineeringModeInXdrip.md>
-自動調整 <./AdvancedOptions/Autotune.md>
+Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
+Dev branch <./AdvancedOptions/DevBranch.md>
+Autotune <./AdvancedOptions/Autotune.md>
 
 ```
 ```{toctree}

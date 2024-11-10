@@ -1,8 +1,17 @@
+- - -
+orphan: true
+- - -
+
 # Medtrum Nano / 300U
 
 Diese Anleitung beschreibt die Konfiguration der Medtrum Insulinpumpe.
 
 Diese Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.
+
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
 ## Funktionalitäten bei der Nutzung mit AAPS
 * Alle Loop-Funktionen werden unterstützt (SMB, TBR usw.)
@@ -259,70 +268,70 @@ Die Übersicht enthält den aktuellen Status des Medtrum Patches. Sie enthält a
 
 ![Medtrum-Übersicht](../images/medtrum/Overview.png)
 
-##### BLE Status:
+### BLE Status:
 
 Zeigt den aktuellen Status der Bluetooth-Verbindung zur Pumpenbasis an.
 
-##### Zuletzt verbunden:
+### Zuletzt verbunden:
 
 Zeigt den Zeitpunkt, an dem die Pumpenbasis das letzte Mal mit AAPS verbunden war, an.
 
-##### Pumpenstatus:
+### Pumpenstatus:
 
 Dies zeigt den aktuellen Zustand der Pumpe. Zum Beispiel:
     - ACTIVE: Die Pumpe ist aktiviert und läuft normal
     - STOPPED: Der Patch ist nicht aktiviert
 
-##### Basaltyp:
+### Basaltyp:
 
 Das zeigt den aktuellen Basaltyp an.
 
-##### Basalrate:
+### Basalrate:
 
 Dies zeigt die aktuelle Basalrate an.
 
-##### Letzter Bolus:
+### Letzter Bolus:
 
 Dies zeigt den letzten abgegebenen Bolus an.
 
-##### Active bolus (Aktiver Bolus):
+### Active bolus (Aktiver Bolus):
 
 Dies zeigt den derzeit abgegebenen (laufenden) Bolus an.
 
 (medtrum-active-alarms)=
-##### Aktive Alarme:
+### Aktive Alarme:
 
 Dies zeigt alle derzeit aktiven Alarme an.
 
-##### Reservoir:
+### Reservoir:
 
 Dies zeigt den aktuellen Reservoir-Stand an.
 
-##### Batterie:
+### Batterie:
 
 Dies zeigt die aktuelle Batterie-Spannung des Patches an.
 
-##### Pumpentyp:
+### Pumpentyp:
 
 Zeigt die aktuelle Pumpentyp-Nummer an.
 
-##### FW-Version:
+### FW-Version:
 
 Dies zeigt die aktuelle Firmware-Version des Patches an.
 
-##### Patch Nr.:
+### Patch Nr.:
 
 Dies zeigt die laufende Nummer des aktivierten Patches an. Diese Nummer wird jedes Mal um eins erhöht, wenn ein neuer Patch aktiviert wird.
 
-##### Patch läuft ab:
+### Patch läuft ab:
 
 Hier wird das Datum und die Uhrzeit angezeigt, an dem der Patch ablaufen wird.
 
-##### Aktualisieren:
+### Aktualisieren:
 
 Diese Schaltfläche aktualisiert den Patch-Status.
 
-##### Wechsele Patch:
+### Wechsele Patch:
 
 Diese Schaltfläche startet den Prozess zum Wechseln des Patches. See [Activate patch](#medtrum-activate-patch) for more information.
 

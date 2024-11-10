@@ -1,10 +1,14 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Budoucí (možné) ovladače pump
 
 Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jejich podpory vůči jakémukoliv systému uzavřené smyčky a stav podpory vůči AAPS. Na konci stránky jsou informace, co je po pumpě vyžadováno, aby byla použitelná pro uzavřenou smyčku.
 
 ## Pumpy, které lze provozovat se smyčkou
-
-* * *
 
 ### Pumpa Ypsomed ([Domovská stránka](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
@@ -14,15 +18,11 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Comments:** Dose version of pump had very heavy encryption added, so there is big probababilty that this pump won't be supported by AAPS in near future (or ever). We had developer working with Ypsomed and helping with medical trials, so maybe his version of driver will be alowed to be released, but this is just small possibility of that. You can find more information on our discord in channel "ypsopump-talk".
 
-* * *
-
 ### Kaleido ([Domovská stránka](https://www.hellokaleido.com/))
 
 **Stav smyčky:** Aktuálně nepodporovaná žádným systémem smyčky. Pumpa je kandidátem na smyčku, ale jelikož je zatím neznámý její komunikační protokol, nezdá se, že by tato pumpa byla brzy podporovaná.
 
 **Hardwarové požadavky pro AAPS:** Zřejmě žádné. Podporuje bluetooth.
-
-* * *
 
 ### Equil (pump from Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
 
@@ -32,8 +32,6 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Comment:** Some people started looking into supporting pump in AAPS, but this is still in beginning phases. You can find more information on our discord in channel "equil".
 
-* * *
-
 ### Accu-Chek Solo ([Domovská stránka](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
 **Stav smyčky:** Je kandidátem na smyčku.
@@ -41,8 +39,6 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 **Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
 
 **Poznámky:** Existuje pár vývojářů, kteří se snaží dekódovat protokol, stále je to však v přípravné fázi.
-
-* * *
 
 ### Tandem: t:slim X2 ([Domovská stránka](https://www.tandemdiabetes.com/))
 
@@ -52,8 +48,6 @@ Zatímco v minulosti se společnost rozhodla nepovolit, aby bylo možné jejich 
 
 **Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
 
-* * *
-
 ### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
 **Loop status:** All 3 pumps will be Loop candidates.
@@ -61,8 +55,6 @@ Zatímco v minulosti se společnost rozhodla nepovolit, aby bylo možné jejich 
 They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).
 
 **Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
-
-* * *
 
 ### Medtronic Bluetooth
 
@@ -75,8 +67,6 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 **Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
 
 **Komentáře:** Vzhledem k tomu, že společnost má zájem o integraci AAPS, mohou udělat vlastní implementaci.
-
-* * *
 
 ## Pumpy, které již nejsou v prodeji (společnosti již nefungují)
 
@@ -93,8 +83,6 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 ### Animas Vibe
 
 **Stav smyčky:** Nelze použít pro smyčku. Není k dispozici (bezdrátový) ovladač. **Poznámka:** Pumpa se již neprodává. Společnost opustila trh s pumpami (J&J).
-
-* * *
 
 ### Animas Ping
 
@@ -130,8 +118,6 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 - Zrušit rozšířený bolus
 - Číst historii
 - Číst TDD
-
-* * *
 
 ### Podpora ostatních pump
 

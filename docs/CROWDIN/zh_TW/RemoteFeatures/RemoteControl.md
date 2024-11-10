@@ -213,7 +213,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 ### 在購買智慧型手錶之前……
 
-你購買的智慧型手錶具體型號取決於你所需的功能。 You may find useful information on the [Phones page](#Phones-list-of-tested-phones), including a list a tested phones that also contains some smartwatches.
+你購買的智慧型手錶具體型號取決於你所需的功能。 你可能會在 [手機頁面](#Phones-list-of-tested-phones) 上找到有用的信息，包括一份測試過的手機列表，還包含一些智慧型手錶。
 
 受歡迎的手錶品牌包括三星 Galaxy、Garmin、Fossil、米動手環和 Fitbit。 上表中概述的不同選項將在下方詳細解釋，幫助你決定哪款智慧型手錶適合你的需求。
 

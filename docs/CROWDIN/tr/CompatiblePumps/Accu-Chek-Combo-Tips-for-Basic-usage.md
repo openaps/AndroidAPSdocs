@@ -1,3 +1,9 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Temel kullanım için Accu-Chek Combo İpuçları
 
 **NOTE:** Starting with AAPS version 3.2, a [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (referred to as "combov2" sometimes) has been added. Eski sürücüye "Ruffy tabanlı sürücü" de denir. Bu dokümanın bazı bölümleri yalnızca eski sürücü için geçerlidir. Bunlara göre açıklama yapılacaktır.

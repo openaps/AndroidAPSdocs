@@ -1,10 +1,14 @@
+* * *
+
+orphan: true
+
+* * *
+
 # 가능한 펌프 드라이버.
 
 아래는 현재 유효한 펌프리스트이며, AAPS의 상태 및 루핑시스템의 지원과 관련된 것입니다. 펌프에서 루프를 가능하게 하기 위해서 요구되는 정보들이 포함되어있습니다.
 
 ## Pumps that are Loopable
-
-* * *
 
 ### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
@@ -14,15 +18,11 @@
 
 **Comments:** Dose version of pump had very heavy encryption added, so there is big probababilty that this pump won't be supported by AAPS in near future (or ever). We had developer working with Ypsomed and helping with medical trials, so maybe his version of driver will be alowed to be released, but this is just small possibility of that. You can find more information on our discord in channel "ypsopump-talk".
 
-* * *
-
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Hardware requirement for AAPS:** Probably none. It's BT enabled.
-
-* * *
 
 ### Equil (pump from Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
 
@@ -32,8 +32,6 @@
 
 **Comment:** Some people started looking into supporting pump in AAPS, but this is still in beginning phases. You can find more information on our discord in channel "equil".
 
-* * *
-
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
 **Loop status:** Is a Loop candidate.
@@ -41,8 +39,6 @@
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
 **Comments:** There are some developers looking into decoding the protocol, but so far this is only in preliminary phases.
-
-* * *
 
 ### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
 
@@ -52,8 +48,6 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
-* * *
-
 ### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
 **Loop status:** All 3 pumps will be Loop candidates.
@@ -61,8 +55,6 @@ While in the past company has decided not to allow their pumps to be controlled 
 They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-* * *
 
 ### Medtronic Bluetooth
 
@@ -75,8 +67,6 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
 **Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
-
-* * *
 
 ## Pumps no longer sold (companies no longer operating)
 
@@ -93,8 +83,6 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 ### Animas Vibe
 
 **Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
-
-* * *
 
 ### Animas Ping
 
@@ -130,8 +118,6 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 - Cancel Extended Bolus
 - Read History
 - Read TDD
-
-* * *
 
 ### Other pumps support
 

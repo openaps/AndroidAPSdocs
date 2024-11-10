@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Für Eversense Nutzer
 
 There are three different methods to access the readings from Eversense:
@@ -64,5 +68,3 @@ xDrip+ can read notifications from the vendor app, like ESEL does. No backfillin
 ```{warning}
 BG values reading frequency is not always 5 minutes and duplicates can occur.
 ```
-
-****

@@ -1,3 +1,9 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Huawei telefonlar nasıl yapılandırılır
 
 Bazıları Android'e özel, bazıları Huawei'ye özgü olmak üzere farklı seçenekler vardır:

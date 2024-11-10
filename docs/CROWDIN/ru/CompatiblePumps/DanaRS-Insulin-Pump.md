@@ -1,3 +1,9 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Помпы DanaRS и Dana-i
 
 *Эти инструкции подойдут для настройки приложения AAPS и помпы DanaRS, выпускаемой с 2017 года или для более поздней Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*

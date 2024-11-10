@@ -1,4 +1,4 @@
-## Geliştirici Sürümü
+# Development branch
 
 <font color="#FF0000"><strong>Attention:</strong></font>
 Dev branch is for the further development of AAPS only. <font color="#FF0000"><strong>Tedavi amaçlı döngü için değil</strong></font> test etmek için ayrı bir telefonda kullanılmalıdır!

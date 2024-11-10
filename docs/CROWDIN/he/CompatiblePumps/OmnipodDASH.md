@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Omnipod DASH
 
 הוראות אלה מיועדות להגדרת משאבת  **Omnipod DASH** ** החדשה (לא Omnipod Eros)**. מנהל ההתקן של Omnipod זמין כחלק מ-AndroidAPS החל מגרסה 3.0.

@@ -1,3 +1,9 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Medtronic Pumpen
 
 Der Treiber funktioniert nicht mit neueren Modellen, einschließlich aller Modelle mit Endung in G (530G, 600-Serie [630G, 640G, 670G], 700-Serie [770G, 780G], etc.).
