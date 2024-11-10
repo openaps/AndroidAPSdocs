@@ -336,7 +336,7 @@ Dana R ve Dana R Korean ile hiçbir şey yapmanıza gerek yok. For other pumps s
 
 #### Hospitalization
 
-Klinisyenlerinizle AAPS ve DIY döngüsü hakkında bazı bilgileri paylaşmak istiyorsanız, [klinisyenler için AAPS kılavuzunu](../Resources/clinician-guide-to-AndroidAPS.md) yazdırabilirsiniz.
+If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
 
 #### Medical appointment with your endocrinologist
 
