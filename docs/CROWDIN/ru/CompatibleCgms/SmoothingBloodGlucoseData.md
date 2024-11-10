@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Сглаживание данных гликемии
 
 If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. Если вы заметили ошибки в данных мониторинга CGM, важно отключить цикл до тех пор, пока проблема не будет решена. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
