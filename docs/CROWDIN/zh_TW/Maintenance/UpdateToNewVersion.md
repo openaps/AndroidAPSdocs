@@ -1,5 +1,10 @@
 # 更新至新版本或分支
 
+## Notes for specific versions
+
+* [Update to AAPS 2.7](../Maintenance/Update2_7.md)
+* [Update to AAPS 3.0](../Maintenance/Update3_0.md)
+
 ## 自行建置，而不是下載
 
 **AAPS** 無法下載，因為這涉及醫療設備的法規。 自行建置應用程式以供個人使用是合法的，但你不得將副本提供給他人！ 詳細資訊請參閱 [FAQ 頁面](../UsefulLinks/FAQ.md)。
