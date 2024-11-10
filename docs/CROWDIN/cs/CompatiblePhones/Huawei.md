@@ -1,3 +1,9 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Jak nastavit telefon Huawei
 
 Existují různé možnosti, některé jsou specifické pro Android, jiné pro Huawei:
