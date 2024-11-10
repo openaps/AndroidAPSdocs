@@ -213,7 +213,7 @@ Diese Tabelle wurde in 2023 erstellt und ist nicht vollständig. Es entstehen pe
 
 ### Bevor Du Dir eine Smartwatch kaufst …
 
-Welches genau Modell Du kaufen solltest, hängt von den gewünschten Funktionalitäten ab. You may find useful information on the [Phones page](../CompatiblePhones/ListOfTestedPhones.md), including a list a tested phones that also contains some smartwatches.
+Welches genau Modell Du kaufen solltest, hängt von den gewünschten Funktionalitäten ab. You may find useful information on the [Phones page](#Phones-list-of-tested-phones), including a list a tested phones that also contains some smartwatches.
 
 Zu den beliebten Smartwatch-Marken gehören Samsung Galaxy, Garmin, Fossil, Mi Band und Fitbit. Die verschiedenen Einsatzmöglichkeiten, die in der obigen Tabelle zusammengefasst sind, werden im Folgenden näher erläutert. Das soll Dir helfen, die Smartwatch auszuwählen, die am besten zu Deinen Bedürfnissen passt.
 
