@@ -1,4 +1,4 @@
-## Entwickler-Version (dev branch)
+# Development branch
 
 <font color="#FF0000"><strong>Achtung:</strong></font>
 Der 'Dev Branch' dient ausschließlich der Weiterentwicklung von AAPS. Er darf nur auf einem separaten Smartphone zu Testzwecken, <font color="#FF0000"><strong>nicht für das tatsächliche Loopen</strong></font> verwendet werden.
