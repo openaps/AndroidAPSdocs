@@ -1,3 +1,9 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Настройки xDrip+
 
 Если это еще не сделано, загрузите [xDrip+](https://jamorham.github.io/#xdrip-plus).
