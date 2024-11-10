@@ -44,20 +44,20 @@
 
 Короткое нажатие позволяет установить **[временную цель](../DailyLifeWithAaps/TempTargets.md)**.
 
-If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
+При установленной временной цели панель становится желтой, а в скобках отображается оставшееся время в минутах.
 
-(AapsScreens-visualization-of-dynamic-target-adjustment)=
+(Визуализация динамического изменения цели)=
 
-#### Visualization of Dynamic target adjustment
+#### Визуализация динамического изменения цели
 
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
-When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+При использовании алгоритма [микроболюсов SMB](#Config-Builder-aps) и [Autosens](#Open-APS-features-autosens) **AAPS** может динамически настроить цель на основе чувствительности.
 
-Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](#Preferences-openaps-smb-settings):
+Включите один или оба параметра в [Настройки > настройки OpenAPS SMB](#Preferences-openaps-smb-settings):
 
-* "sensitivity raises target" and/or 
-* "resistance lowers target" 
+* "чувствительность повышает цель" и/или 
+* "сопротивляемость понижает цель" 
 
 If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
 
