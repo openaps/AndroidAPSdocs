@@ -29,7 +29,7 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 
 第十章節）[如何支援 AAPS](SupportingAaps/HowToEditTheDocs.md) 提供了關於如何支援此項目的資訊。 你可以捐錢、設備或專業知識。 你可以建議/自行更改文件，幫助 [翻譯文件](SupportingAaps/Translations)，並透過 Open Humans 項目提供你的資料。
 
-第 11 章節）包含保存或其他文件，包括一個針對已表達對開放原始碼人工胰臟技術（如 **AAPS**）感興趣的 [臨床醫師](Resources/clinician-guide-to-AndroidAPS.md) ，或對想與臨床醫生分享此類訊息的患者，該主題也在介紹中說明。 第 12 節）包含更多糖尿病和循環的參考資料和資源。
+Section 11) contains archived or additional documentation, including a subsection for [clinicians](UsefulLinks/ClinicianGuideToAaps.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. 第 12 節）包含更多糖尿病和循環的參考資料和資源。
 
 
  ### 有興趣開始使用 **AAPS** 嗎？ 在 [介紹](Getting-Started/Introduction.md) 中閱讀更多關於 **AAPS** 的資訊。
@@ -87,64 +87,58 @@ AAPS 介紹 <./Getting-Started/Introduction.md>
 ```
 
 ```{toctree}
-:caption: 4) 遠端 AAPS 功能
+:caption: 4) Daily Life with AAPS
 
-遠端監控 <./RemoteFeatures/RemoteMonitoring.md>
-遠端控制 <./RemoteFeatures/RemoteControl.md>
-僅使用追蹤 <./RemoteFeatures/FollowingOnly.md>
+AAPS Screens <./DailyLifeWithAaps/AapsScreens.md>
+Key AAPS Features <./DailyLifeWithAaps/KeyAapsFeatures.md>
+COB calculation <./DailyLifeWithAaps/CobCalculation.md>
+Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
+Profile Switch & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
+Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
+Automations <./DailyLifeWithAaps/Automations.md>
+Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
+AAPS for children <./DailyLifeWithAaps/AapsForChildren.md>
+Pumps and cannulas <./DailyLifeWithAaps/PumpsAndCannulas.md>
+Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
+
+```
+
+```{toctree}
+:caption: 5) Remote AAPS features
+
+Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
+Remote control <./RemoteFeatures/RemoteControl.md>
+Following Only <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
-
 ```{toctree}
-:caption: 5) AAPS 的日常生活
+:caption: 6) Smartwatches
 
-AAPS 螢幕 <./DailyLifeWithAaps/AapsScreens.md>
-AAPS 主要功能 <./DailyLifeWithAaps/KeyAapsFeatures.md>
-COB 計算 <./DailyLifeWithAaps/CobCalculation.md>
-敏感度檢測 <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-設定檔切換 <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-臨時目標 <./DailyLifeWithAaps/TempTargets.md>
-延長碳水化合物 <./DailyLifeWithAaps/ExtendedCarbs.md>
-自動化 <./DailyLifeWithAaps/Automations.md>
-動態ISF <./DailyLifeWithAaps/DynamicISF.md>
-幫浦與導管 <./DailyLifeWithAaps/PumpsAndCannulas.md>
-跨時區旅行與夏令時間 <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
+WearOS Smartwatch <./UsefulLinks/WearOsSmartwatch.md>
+WearOS Custom Watchfaces <./UsefulLinks/CustomWatchfaceReference.md>
+Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
 ```{toctree}
-:caption: 6) AAPS的維護
+:caption: 7) Maintenance of AAPS
 
-匯出/匯入設定 <./Maintenance/ExportImportSettings.md>
-資料檢視 <./Maintenance/Reviewing.md>
-AAPS 版本說明 <./Maintenance/ReleaseNotes.md>
-文件更新 <./Maintenance/DocumentationUpdate.md>
-更新到AAPS的新版本 <./Maintenance/UpdateToNewVersion.md>
-- 更新到AAPS 2.7 <./Maintenance/Update2_7.md>
-- 更新到AAPS 3.0<./Maintenance/Update3_0.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+Reviewing your data <./Maintenance/Reviewing.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 
 ```
 
 ```{toctree}
-:caption: 7) 獲得幫助
+:caption: 8) Getting Help
 
-在哪裡可以獲得 AAPS 的幫助 <./GettingHelp/WhereCanIGetHelp.md>
-問題排除 <./GettingHelp/GeneralTroubleshooting.md>
-如何報告錯誤/請求功能
-讀取日誌檔案 <./GettingHelp/AccessingLogFiles.md>
-幫助！ 我的AAPS手機損壞/被偷/丟失
-```
-
-```{toctree}
-:caption: 8) 有用的 AAPS 連結
-
-詞彙表 <./UsefulLinks/Glossary.md>
-常見問題 <./UsefulLinks/FAQ.md>
-WearOS 智慧型手錶 <./UsefulLinks/WearOsSmartwatch.md>
-WearOS 自訂錶盤 <./UsefulLinks/CustomWatchfaceReference.md>
-交流網站自訂錶盤 <./ExchangeSiteCustomWatchfaces/index.md>
-
+Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
+Troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
+Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}
@@ -156,41 +150,23 @@ Autotune <./AdvancedOptions/Autotune.md>
 
 ```
 ```{toctree}
-:caption: 10) 如何支援 AAPS
+:caption: 10) How to support AAPS
 
-如何幫助 <./SupportingAaps/HowCanIHelp.md>
-編輯文件 <./SupportingAaps/HowToEditTheDocs.md>
-翻譯應用程式和文件 <./SupportingAaps/Translations.md>
-翻譯狀態 <./SupportingAaps/StateOfTranslations.md>
-Open Humans 上傳器 <./SupportingAaps/OpenHumans.md>
-
-```
-
-```{toctree}
-:caption: 11) 附加/檔案存檔文件
-
-專用的 Google 帳號用於 AAPS (可選用)<./SettingUpAaps/DedicatedGoogleAccountForAaps.md>
-
-照護入口 (已停用) <./Usage/CPbefore26.md>
-
-給臨床醫師 (過時) <./Resources/clinician-guide-to-AndroidAPS.md>
-
-與第三方應用程式的自動化 <./Usage/automationwithapp.md>
+How to help <./SupportingAaps/HowCanIHelp.md>
+Editing the docs <./SupportingAaps/HowToEditTheDocs.md>
+Translating the app and docs <./SupportingAaps/Translations.md>
+State of translations <./SupportingAaps/StateOfTranslations.md>
+Open Humans Uploader <./SupportingAaps/OpenHumans.md>
 
 ```
-
 ```{toctree}
-:caption: 12) 參考資料
+:caption: 11) Resources
 
-一般糖尿病和循環資源 <./Where-To-Go-For-Help/Background-reading.md>
-AAPS 相關的科學期刊文章
-```
-
-```{toctree}
-:caption: 13) 沙箱
-
-沙箱 <./Sandbox/sandbox1.md>
-Crowdin 測試 <./Sandbox/crowdintest.md>
-圖像縮放 <./Sandbox/imagescaling.md>
+Glossary <./UsefulLinks/Glossary.md>
+FAQ <./UsefulLinks/FAQ.md>
+General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
+Dedicated Google account for AAPS (optional)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
+For Clinicians (outdated) <./UsefulLinks/ClinicianGuideToAaps.md>
+Automation with 3rd party apps <./UsefulLinks/AutomationWith3rdPartyApps.md>
 
 ```
