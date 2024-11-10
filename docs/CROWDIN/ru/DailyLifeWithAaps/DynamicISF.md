@@ -1,5 +1,5 @@
 (возможности_Open-APS-DynamicISF)=
-## DynamicISF (DynISF)- Динамическое изменение коэффициента чувствительности к инсулину
+# DynamicISF (DynISF)
 **Dynamic ISF** was added in **AAPS** version 3.2 and requires Objective 11 to be started before **Dynamic ISF** can be activated. Select **Dynamic ISF** in the Config Builder > **AAPS** to activate. **Dynamic ISF** is recommended only for advanced users that have a good handle on their **AAPS'** controls and monitoring.
 
 To use **Dynamic ISF** effectively, **AAPS'** database requires a minimum of five (5) days of the user's **AAPS** data.
@@ -23,7 +23,7 @@ Dynamic ISF - an example of a user's **ISF** subject to change as determined by 
 
 The implementation uses the above equation to calculate current **ISF** and in the oref1 predictions for **IOB**, **ZT** and **UAM**. It is not used for **COB**.  Further discussion can be found here: https://www.youtube.com/watch?v=oL49FhOts3c.
 
-### TDD (Total Daily Dose)
+## TDD (Total Daily Dose)
 TDD will use a combination of the following values:
 1.  7 day average **TDD**;
 2.  the previous day’s **TDD**; and
@@ -31,10 +31,10 @@ TDD will use a combination of the following values:
 
 The **TDD** used in the above equation is weighted one third to each of the above values.
 
-### Делитель Инсулина
+## Insulin Divisor
 Делитель инсулина зависит от пика используемого инсулина и обратно пропорционален времени до пика. Для Люмжева его значение 75, для Фиаспа 65 и для обычных быстрых инсулинов 55.
 
-### Коэффициент настройки динамического диапазона чувствительности ISF
+## Dynamic ISF Adjustment Factor
 The Adjustment Factor allows the user to specify a value between 1% and 300%. This acts as a multiplier on the **TDD** value and results in the **ISF** values becoming *smaller* (i.e. more insulin required to move glucose levels a small amount) as the value is increased above 100% and *larger* (i.e. less insulin required to move glucose levels a small amount) as the value is decreased below 100%.
 
 The Adjustment Factor can be located in ‘Preferences’ > **AAPS**:
@@ -42,7 +42,7 @@ The Adjustment Factor can be located in ‘Preferences’ > **AAPS**:
 ![Factor ISF](../images/DynISF3.png)
 
 
-### Прогнозируемая чувствительность к инсулину ISF
+## Future ISF
 
 Future **ISF** is used in the dosing decisions that oref1 makes.  Future **ISF** uses the same **TDD** value as generated above, taking the Adjustment Factor (discussed above) into account. Далее в расчет берутся различные значения ГК, в зависимости от ситуации:
 
@@ -52,11 +52,11 @@ Future **ISF** is used in the dosing decisions that oref1 makes.  Future **ISF**
 
 Otherwise, minimum predicted **BG** is used.
 
-### Включить коэффициент чувствительности на основе суточной дозировки инсулина TDD для изменения базальной скорости и целевых значений гликемии
+## Enable TDD based sensitivity ratio for basal and glucose target modification
 
 This setting replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. Эта вычисляемая величина также применяется для подстройки цели, если включены опции подстройки целей в зависимости от чувствительности. Unlike Autosens, this option does not adjust **ISF** values.
 
-### CAUTION - Automations or Profile Percentage Increase
+## CAUTION - Automations or Profile Percentage Increase
 **Automations** should always be used with care. This is particularly so with **Dynamic ISF**.
 
 If **Dynamic ISF** is in operation, users should reconsider enabling any temporary **Profile** increase as an **Automation** rule or similarly activating a **Profile Percentage** which may create **Dynamic ISF** to be overly aggressive in correction bolusing and could cause hypoglycemia.
