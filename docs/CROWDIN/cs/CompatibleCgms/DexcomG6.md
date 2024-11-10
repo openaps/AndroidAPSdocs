@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Dexcom G6 a ONE
 
 ## Základní nastavení
