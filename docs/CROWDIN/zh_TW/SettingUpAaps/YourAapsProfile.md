@@ -36,8 +36,8 @@
 你的**血糖目標**是一個核心值，且所有**AAPS**的計算均以此為基礎。 它不同於您通常希望將您的血糖值保持在的目標範圍：
 * 血糖目標，特別是如果它僅是短期（持續時間少於 4 小時），不需要是你期望或想要的實際血糖值，而是一種良好的方式來告訴**AAPS**應該更積極或不那麼積極，同時仍能保持你的血糖數值在範圍內。
 * 如果你的目標範圍非常寬（例如，寬達 3 或以上 mmol/l [50 mg/dl 或更高]），你通常會發現**AAPS**的行動比較少。 這是因為**BG**數值預測會落在這個寬範圍內，因此很少建議做臨時基礎率調整。
-* When In [Open Loop](#Preferences-pen-loop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and ajusting your **Profile**.
-* When In [Closed Loop](#preferences-closed-loop) (starting at **[Objective 6](#objectives-objective6)**), you will probably find more appropriate to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+* 當在[開放循環](#Preferences-pen-loop)時，特別是在進行[第一項目標](../SettingUpAaps/CompletingTheObjectives.md)時，使用較寬的目標範圍可能是個不錯的選擇，因為你正在學習**AAPS**的運作方式並調整你的**個人設定**。
+* 當在[封閉循環](#preferences-closed-loop)（從**[目標 6](#objectives-objective6)**開始）時，你可能發現減少範圍至每天的單一目標更加合適（_低_目標 = _高_目標），以確保**AAPS**能迅速對**BG**的波動作出反應。
 
 目標可以在這些邊界內定義：
 
@@ -104,23 +104,23 @@ ICR 是衡量每單位胰島素覆蓋多少克碳水化合物的指標。
 如果你是在使用其他開放式或閉環系統後開始使用**AAPS**，那麼你已經對基礎率（BR）、胰島素敏感性因子（ISF）和胰島素與碳水化合物比率（IC 或 ICR）要使用的值有合理的了解。
 
 如果你是從注射（MDI）轉到**AAPS**，那麼最好先了解如何從 MDI 轉移到幫浦，並在與你的糖尿病團隊諮詢後仔細規劃並進行轉換。 ["胰島素輸注"](https://amzn.eu/d/iaCsFa2)由 John Walsh 和 Ruth Roberts 編寫的書籍，及[“像胰臟一樣思考”](https://amzn.eu/d/iVU0RGe)由 Gary Scheiner 編寫的書籍都是非常有用的參考資料。
-## Profile backup
+## 個人設定備份
 
-Being a core setting of your looping system, your profiles are highly sensitive and something you really don't want to lose.
+作為你循環系統的核心設置，你的個人設定非常敏感，你真的不想遺失它。
 
-* Your Profiles are stored in the **AAPS** database.
-* If enabled, Profiles are also uploaded to Nightscout. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Upload data to NS](#Preferences-nsclient).
-* They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
+* 你的個人設定儲存在**AAPS**資料庫中。
+* 如果啟用，個人設定也會上傳至 Nightscout。 這些設定可以在[NSClient 偏好設定 > NSClient > 同步 > 上傳資料至 NS](#Preferences-nsclient)找到。
+* 它們也是[匯出設定](../Maintenance/ExportImportSettings.md)的一部分。 因此，確保有一個安全的備份。
 
-## Editing Profiles from Nightscout
+## 從 Nightscout 編輯個人設定
 
-If enabled, profile changes made directly in Nightscout can  be received in **AAPS**. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Receive profile store](#Preferences-nsclient).
+如果啟用，直接在 Nightscout 進行的個人設定更改可以在**AAPS**中接受。 這些設定可以在[NSClient 偏好設定 > NSClient > 同步 > 接收個人設定儲存](#Preferences-nsclient)找到。
 
-This can be helpful when about to make major changes to a more extensive profile. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
+這在對更大範圍的個人設定進行重大更改時可能會很有幫助。 透過網頁介面輸入這些設定會更加方便，例如，手動從電子表格複製資料。
 
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenhost below). The new database records then carries the current date. After saving, the changed/new profile can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+要執行此操作，但重要的是要複製包含多個個人設定的整個**資料庫記錄**，在 Nightscout 編輯器中（下方截圖中的藍色箭頭）。 新的資料庫記錄將標示當前日期。 儲存後，可以通過常規的[個人設定切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)在**AAPS**中啟用更改/新增的個人設定。
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![複製資料庫紀錄](../images/Nightscout_Profile_Editor.PNG)
 
 ## 設定檔助手
 
