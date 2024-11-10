@@ -1,4 +1,4 @@
-## Kūrėjo versija (Development branch)
+# Development branch
 
 <font color="#FF0000"><strong>Attention:</strong></font>
 Dev branch is for the further development of AAPS only. Jis gali būti naudojamas tik atskirame išmaniajame telefone bandymo tikslais, <font color="#FF0000"><strong>o ne realiam ciklui</strong></font>
