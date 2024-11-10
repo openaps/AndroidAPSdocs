@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Accu Chek Combo Pompa
 
 Bu talimatlar, 3.2 sürümünden itibaren AndroidAPS'in bir parçası olan yeni combov2 sürücüsünü kullanarak Accu-Chek Combo pompasını kurmak içindir. Bu sürücü eskisinden tamamen ayrıdır.
