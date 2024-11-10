@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Pompe Accu-Chek Combo
 
 Ces instructions sont pour configurer la pompe Accu-Chek Combo à l'aide du nouveau pilote combov2, qui est disponible dans le cadre d'AAPS depuis la version 3.2. Ce driver est entièrement séparé de l'ancien.
