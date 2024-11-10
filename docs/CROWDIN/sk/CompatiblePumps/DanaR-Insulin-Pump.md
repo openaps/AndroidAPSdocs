@@ -1,3 +1,9 @@
+* * *
+
+orphan: true
+
+* * *
+
 # Pumpa DanaR
 
 *Tieto pokyny určené pre nastavenie vašej aplikácie a pumpy platia, pokiaľ máte pumpu DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*
