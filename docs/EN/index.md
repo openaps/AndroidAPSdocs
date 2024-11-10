@@ -110,6 +110,7 @@ Temp-targets <./DailyLifeWithAaps/TempTargets.md>
 Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
 Automations <./DailyLifeWithAaps/Automations.md>
 Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
+AAPS for children <./DailyLifeWithAaps/AapsForChildren.md>
 Pumps and cannulas <./DailyLifeWithAaps/PumpsAndCannulas.md>
 Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
