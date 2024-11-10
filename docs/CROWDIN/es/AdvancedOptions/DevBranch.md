@@ -1,4 +1,4 @@
-## Rama de desarrollo
+# Development branch
 
 <font color="#FF0000"><strong>Attention:</strong></font>
 Dev branch is for the further development of AAPS only. Se debe utilizar en un teléfono aparte para probar <font color="#FF0000"><strong>no para un lazo actual.</strong></font>
