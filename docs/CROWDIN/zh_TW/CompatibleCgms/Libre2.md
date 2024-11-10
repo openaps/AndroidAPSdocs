@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Freestyle Libre 2
 
 即使使用官方應用程式，Freestyle Libre 2 傳感器現在也是一款真正的連續血糖監測儀（CGM）。 然而，LibreLink 仍無法將資料傳送至 AAPS。 有幾種解決方案可以將其與 AAPS 搭配使用。
