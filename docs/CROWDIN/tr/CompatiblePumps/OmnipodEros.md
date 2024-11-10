@@ -25,7 +25,7 @@ Bu talimatlar, Omnipod Eros nesil pompayı yapılandırmak içindir (**Omnipod D
 
 > AAPS'i çalıştıracak ve Pod iletişim cihazına kontrol komutları gönderecek eklenti.
 > 
-> > - Supported [Omnipod driver Android phone](../CompatiblePhones/ListOfTestedPhones.md) with a version of AAPS 2.8 and related components set up.
+> > - Supported [Omnipod driver Android phone](#Phones-list-of-tested-phones) with a version of AAPS 2.8 and related components set up.
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **İnsülin İletim Cihazı**
 
