@@ -469,7 +469,7 @@ v3 是新的協議。 更加安全和高效
 
 - 小設計更改（首頁...）
 
-- 移除了 Careportal 標籤/選單 - 更多細節請見 [這裡](../Usage/CPbefore26.md)
+- Careportal tab / menu removed
 
 - 新增 Local Profile 外掛
 
