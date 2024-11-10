@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Помпа Omnipod DASH
 
 Эти инструкции для настройки помпы **Omnipod DASH** **(НЕ Omnipod Eros)**. Драйвер для Omnipod доступен как часть AAPS (AAPS) начиная с версии 3.0.
