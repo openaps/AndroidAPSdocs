@@ -694,7 +694,13 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 可以通過按下選單右側的 3 個點然後選擇「歷史」來讀取此視圖。 無法通過組態建置工具在主選單中放入它。 還可以通過[手動操作標籤](#action-tab)底部的一個按鈕讀取。
 
-允許您查詢在 **AAPS** 中的歷史紀錄。
+Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
+
+## 統計資料
+
+This view can be accessed by pressing the 3 dots on the right of the menu, then Statistics. 無法通過組態建置工具在主選單中放入它。
+
+Gives you statistics about your Time In Range and Total Daily Dose. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
 
 ## 設定檔助手
 
