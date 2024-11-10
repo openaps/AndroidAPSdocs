@@ -31,7 +31,7 @@ Section 9) covers **Advanced AAPS options** such as how to progress from using *
 
 In section 10) [How to support AAPS](SupportingAaps/HowToEditTheDocs.md) we provide  information so that you can support this project. You can donate money, equipment or expertise. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations) and provide your data through the Open Humans project. 
 
-Section 11) contains archived or additional documentation, including a subsection for [clinicians](Resources/clinician-guide-to-AndroidAPS.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are contained in Section 12). 
+Section 11) contains archived or additional documentation, including a subsection for [clinicians](UsefulLinks/ClinicianGuideToAaps.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are contained in Section 12). 
 
 
  ### Interested in getting started with **AAPS**? Read more about **AAPS** in the [Introduction](Getting-Started/Introduction.md). 
@@ -89,24 +89,14 @@ Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
-:caption: 4) Remote AAPS features
-
-Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
-Remote control <./RemoteFeatures/RemoteControl.md>
-Following Only <./RemoteFeatures/FollowingOnly.md>
-Android Auto <./RemoteFeatures/AndroidAuto.md>
-
-```
-
-```{toctree}
-:caption: 5) Daily Life with APPS
+:caption: 4) Daily Life with AAPS
 
 AAPS Screens <./DailyLifeWithAaps/AapsScreens.md>
 Key AAPS Features <./DailyLifeWithAaps/KeyAapsFeatures.md>
 COB calculation <./DailyLifeWithAaps/CobCalculation.md>
 Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-Profile switch <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-Temp-targets <./DailyLifeWithAaps/TempTargets.md>
+Profile Switch & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
 Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
 Automations <./DailyLifeWithAaps/Automations.md>
 Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
@@ -117,37 +107,40 @@ Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling
 ```
 
 ```{toctree}
-:caption: 6) Maintenance of AAPS
+:caption: 5) Remote AAPS features
+
+Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
+Remote control <./RemoteFeatures/RemoteControl.md>
+Following Only <./RemoteFeatures/FollowingOnly.md>
+Android Auto <./RemoteFeatures/AndroidAuto.md>
+
+```
+```{toctree}
+:caption: 6) Smartwatches
+
+WearOS Smartwatch <./UsefulLinks/WearOsSmartwatch.md>
+WearOS Custom Watchfaces <./UsefulLinks/CustomWatchfaceReference.md>
+Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
+
+```
+
+```{toctree}
+:caption: 7) Maintenance of AAPS
 
 Export/Import Settings <./Maintenance/ExportImportSettings.md>
 Reviewing your data <./Maintenance/Reviewing.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Update to AAPS 2.7 <./Maintenance/Update2_7.md>
-- Update to AAPS 3.0<./Maintenance/Update3_0.md>
 
 ```
 
 ```{toctree}
-:caption: 7) Getting Help
+:caption: 8) Getting Help
 
 Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
 Troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
-How to report bugs/request features
 Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
-Help! My AAPS phone is broken/stolen/lost
-```
-
-```{toctree}
-:caption: 8) Useful AAPS Links
-
-Glossary <./UsefulLinks/Glossary.md>
-FAQ <./UsefulLinks/FAQ.md>
-WearOS Smartwatch <./UsefulLinks/WearOsSmartwatch.md>
-WearOS Custom Watchfaces <./UsefulLinks/CustomWatchfaceReference.md>
-Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
-
 ```
 
 ```{toctree}
@@ -162,38 +155,20 @@ Autotune <./AdvancedOptions/Autotune.md>
 :caption: 10) How to support AAPS
 
 How to help <./SupportingAaps/HowCanIHelp.md>
-Editting the docs <./SupportingAaps/HowToEditTheDocs.md>
+Editing the docs <./SupportingAaps/HowToEditTheDocs.md>
 Translating the app and docs <./SupportingAaps/Translations.md>
 State of translations <./SupportingAaps/StateOfTranslations.md>
 Open Humans Uploader <./SupportingAaps/OpenHumans.md>
 
 ```
-
 ```{toctree}
-:caption: 11) Additional/archive documentation
+:caption: 11) Resources
 
-Dedicated Google account for AAPS (optional)<./SettingUpAaps/DedicatedGoogleAccountForAaps.md>
-
-Careportal (discontinued) <./Usage/CPbefore26.md>
-
-For Clinicians (outdated) <./Resources/clinician-guide-to-AndroidAPS.md>
-
-Automation with 3rd party apps <./Usage/automationwithapp.md>
-
-```
-
-```{toctree}
-:caption: 12) References
-
-General diabetes and looping resources <./Where-To-Go-For-Help/Background-reading.md>
-Scientific AAPS journal articles
-```
-
-```{toctree}
-:caption: 13) Sandbox
-
-Sandbox <./Sandbox/sandbox1.md>
-Crowdin Test <./Sandbox/crowdintest.md>
-Image Scaling <./Sandbox/imagescaling.md>
+Glossary <./UsefulLinks/Glossary.md>
+FAQ <./UsefulLinks/FAQ.md>
+General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
+Dedicated Google account for AAPS (optional)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
+For Clinicians (outdated) <./UsefulLinks/ClinicianGuideToAaps.md>
+Automation with 3rd party apps <./UsefulLinks/AutomationWith3rdPartyApps.md>
 
 ```
