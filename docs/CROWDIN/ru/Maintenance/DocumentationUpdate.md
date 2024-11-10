@@ -120,7 +120,7 @@ Missing history from March 2022 to September 2024
 
 - Автоматизация - предостережения
 - [Autosens](#Open-APS-features-autosens) - short explanation
-- [Альтернативы порталу терапии](../Usage/CPbefore26.md)
+- Альтернативы порталу терапии
 - [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
 - New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md)
 - Sample Setup - update Dexcom G6
