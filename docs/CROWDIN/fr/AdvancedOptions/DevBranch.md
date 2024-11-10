@@ -1,4 +1,4 @@
-## Branche "développement"
+# Development branch
 
 <font color="#FF0000"><strong>Attention:</strong></font>
 Dev branch is for the further development of AAPS only. Elle doit être utilisée sur un téléphone séparé pour faire des tests <font color="#FF0000"><strong>mais pas pour la boucle réellement utilisée !</strong></font>

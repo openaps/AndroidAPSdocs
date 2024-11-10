@@ -11,7 +11,7 @@ Bu talimatlar, 3.2 sürümünden itibaren AndroidAPS'in bir parçası olan yeni 
 * Uyumlu bir telefon. Android 9 (Pie) veya daha üzeri zorunludur. LineageOS kullanıyorsanız desteklenen minimum sürüm 16.1'dir. See [release notes](#maintenance-android-version-aaps-version) for details.
 * Telefonunuzda yüklü olan AndroidAPS uygulaması.
 
-Bazı telefonlar, Bluetooth desteğinin kalitesine, çok agresif güç tasarrufu mantığına sahip olup olmadıklarına bağlı olarak diğerlerinden daha iyi çalışabilir. A list of phones can be found in the [AAPS Phones](../CompatiblePhones/ListOfTestedPhones.md) document. Lütfen bunun tüm telefonların bir listesi olmadığını ve kişisel kullanıcı deneyimini yansıttığını unutmayın. Siz de kendi deneyiminizle katılmaya ve böylece başkalarına yardım etmeye teşvik ediliyorsunuz (bu projeler tamamen ileriye dönük ödeme yapılmasıyla ilgilidir).
+Bazı telefonlar, Bluetooth desteğinin kalitesine, çok agresif güç tasarrufu mantığına sahip olup olmadıklarına bağlı olarak diğerlerinden daha iyi çalışabilir. A list of phones can be found in the [AAPS Phones](#Phones-list-of-tested-phones) document. Lütfen bunun tüm telefonların bir listesi olmadığını ve kişisel kullanıcı deneyimini yansıttığını unutmayın. Siz de kendi deneyiminizle katılmaya ve böylece başkalarına yardım etmeye teşvik ediliyorsunuz (bu projeler tamamen ileriye dönük ödeme yapılmasıyla ilgilidir).
 
 (combov2-before-you-begin)=
 ## Başlamadan önce

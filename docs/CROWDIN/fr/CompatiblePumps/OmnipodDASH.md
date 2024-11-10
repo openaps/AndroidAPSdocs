@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Omnipod Dash
 
 Ces instructions sont pour configurer la pompe de génération **Omnipod DASH** **(et pas Omnipod Eros)**. The Omnipod driver is available as part of AAPS (AAPS) as of version 3.0.
@@ -23,7 +27,7 @@ Ce sont les spécifications du **Omnipod DASH** et ce qui le différencie du **O
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
 * **Un téléphone Android compatible** avec une connexion Bluetooth BLE
-   -  Tous les téléphones et versions d'Android ne sont pas garanties de fonctionner. Please check [**DASH Tested phones**](../CompatiblePhones/ListOfTestedPhones.md) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
+   -  Tous les téléphones et versions d'Android ne sont pas garanties de fonctionner. Please check [**DASH Tested phones**](#Phones-list-of-tested-phones) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
    - **Remarque importante : Il y a eu de multiples cas de pertes de connexion permanentes et non récupérables lors de l'utilisation de pods anciens avec la version 3.XX.X. Be careful when using these old pods with AAPS, especially with other Bluetooth devices connected!** Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. Les connexions Bluetooth peuvent être perturbées par d'autres périphériques connectés au téléphone qui exécutent AAPS, comme les écouteurs etc... (qui peuvent occasionner, dans des rares occasions, des problèmes de connexion ou des erreurs/perte de pod lors de l'activation ou par la suite pour certains téléphones), ou être perturbés par elle.
    -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions.
 * [**Moniteur Glycémie continue (MGC)**](../Getting-Started/CompatiblesCgms.md)

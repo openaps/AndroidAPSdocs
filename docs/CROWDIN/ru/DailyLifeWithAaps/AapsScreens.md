@@ -5,44 +5,44 @@
 :depth: 2
 ```
 
-(AapsScreens-the-homescreen)=
+Экраны AAPS - главный экран
 
-## The Homescreen
+## Главный экран
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Это первый экран, который виден при открытии приложения **AAPS**. Он отображает почти всю информацию, требующуюся повседневно.
 
-### Section A - Tabs
+### Раздел А - Вкладки
 
-* Navigate between the various **AAPS** modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Позволяют выполнять переход между различными модулями **AAPS**.
+* Между экранами также можно переходить свайпом влево или вправо.
+* Видимые вкладки можно выбрать в [Конфигураторе](#Config-Builder-tab-or-hamburger-menu).
 
-### Section B - Profile & target
+### Раздел B - Профиль & Цель
 
-#### Current Profile
+#### Текущий профиль
 
-The current profile is displayed in the left bar.
+Текущий профиль отображается на левой панели главного экрана.
 
-Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Короткое нажатие на панель открывает подробности о текущем профиле. Долгое нажатие дает возможность [переключаться между различными профилями](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a remaining duration of 59mn.
-3. Profile switch with a specific percentage of 120%.
-4. Profile switch with a specific percentage of 80% and a remaining duration of 59 mn.
-5. Profile switch with a time shift of -1 hour.
-6. Profile switch with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
+1. Обычный вид с активацией стандартного профиля.
+2. Переключение профиля с остающейся продолжительностью 59мн.
+3. Переключение профиля с заданным процентом 120%.
+4. Переключение профиля с заданным процентом 80% и остающейся продолжительностью 59 мин.
+5. Переключение профиля со сдвигом по времени --1 час.
+6. Переключение профиля с заданным процентом 120%, сдвигом по времени 1 час и остающейся продолжительностью 59 мин.
 
-#### Target
+#### Целевое значение ГК (Цель)
 
 ![Temp target remaining duration](../images/Home2020_TT.png)
 
-Current target blood glucose level is displayed in the right bar.
+Текущее целевое значение глюкозы крови (ГК) отображается на правой панели.
 
-Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
+Короткое нажатие позволяет установить **[временную цель](../DailyLifeWithAaps/TempTargets.md)**.
 
 If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
 

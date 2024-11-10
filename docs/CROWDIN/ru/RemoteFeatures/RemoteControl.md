@@ -213,7 +213,7 @@ A smartwatch can be used either _in addition_ to, or as an _alternative_ to the 
 
 ### Перед тем как купить смарт-часы…
 
-Модель, которую вы покупаете, зависит от желаемых функций. You may find useful information on the [Phones page](../CompatiblePhones/ListOfTestedPhones.md), including a list a tested phones that also contains some smartwatches.
+Модель, которую вы покупаете, зависит от желаемых функций. You may find useful information on the [Phones page](#Phones-list-of-tested-phones), including a list a tested phones that also contains some smartwatches.
 
 Популярные марки смарт-часов -- Samsung Galaxy, Garmin, Fossil, Mi band и Fitbit. Различные варианты, описанные в таблице выше, подробнее описаны далее, чтобы помочь принять решение, какие смарт-часы подойдут именно в вашем случае.
 
@@ -335,7 +335,7 @@ Specific How-to guides for setting up **AAPS** on the popular [Samsung Galaxy Wa
 
 Наберитесь терпения - **AAPS** Wear apk должен быть собран примерно через 10-20 минут, в зависимости от скорости подключения к Интернету.
 
-### Troubleshooting
+### Устранение неполадок
 
 В процессе сборки полного приложения **AAPS** 3.2 (и в принципе любого подписанного приложения) Android Studio генерирует файл с расширением .json. This then causes errors with [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. Самый быстрый способ решения это переход к папке, в которой было построено полное приложение AAPS, путь к папке, вероятно, выглядит как-то так:
 

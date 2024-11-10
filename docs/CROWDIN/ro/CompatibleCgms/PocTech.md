@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Pentru utilizatorii de PocTech CT-100
 
 - Install [PocTech App](https://play.google.com/store/apps/details?id=com.poctechcorp.pocct)

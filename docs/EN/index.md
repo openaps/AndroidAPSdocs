@@ -154,7 +154,6 @@ Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
 Dev branch <./AdvancedOptions/DevBranch.md>
-xDrip engineering mode <./AdvancedOptions/EnablingEngineeringModeInXdrip.md>
 Autotune <./AdvancedOptions/Autotune.md>
 
 ```

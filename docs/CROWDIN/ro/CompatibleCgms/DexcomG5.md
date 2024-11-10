@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Dexcom G5
 
 ## Dacă utilizaţi G5 cu xDrip+

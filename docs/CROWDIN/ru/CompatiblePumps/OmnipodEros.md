@@ -25,7 +25,7 @@
 
 > Компонент, который будет работать с AAPS и отправлять команды управления устройству Pod.
 > 
-> > - Supported [Omnipod driver Android phone](../CompatiblePhones/ListOfTestedPhones.md) with a version of AAPS 2.8 and related components set up.
+> > - Supported [Omnipod driver Android phone](#Phones-list-of-tested-phones) with a version of AAPS 2.8 and related components set up.
 
 - ![POD Omnipod](../images/omnipod/Omnipod_Pod.png)  **Устройство подачи инсулина**
 
@@ -708,7 +708,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 (OmnipodEros-troubleshooting)=
 
-## Troubleshooting
+## Устранение неполадок
 
 ### Сбои в работе Pod
 
