@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Bomba de Insulina Accu Chek Combo
 
 These instructions are for setting up the Accu-Chek Combo pump using the new combov2 driver, which is available as part of AndroidAPS as of version 3.2. This driver is entirely separate from the old one.
