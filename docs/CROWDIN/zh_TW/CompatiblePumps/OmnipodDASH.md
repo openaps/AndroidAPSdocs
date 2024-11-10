@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Omnipod DASH
 
 這些說明適用於配置 **Omnipod DASH** 世代幫浦**（不包括 Omnipod Eros）**。 Omnipod 驅動程式可在 AAPS 3.0 版中使用。
@@ -23,7 +27,7 @@
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
 * **相容的 Android 手機** 需具備 BLE 藍牙連線
-   -  並非所有手機硬體和 Android 版本都能保證工作。 Please check [**DASH Tested phones**](#Phones-list-of-tested-phones) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
+   -  並非所有手機硬體和 Android 版本都能保證工作。 請查看 [**DASH 測試手機**](#Phones-list-of-tested-phones)，或者直接試試你的手機並告訴我們結果（手機型號及地區、Android 版本、運作良好/有些困難/無法使用）。
    - **重要提示：使用舊版韌體 3.XX.X 的 Pod 時，曾有多起永久、不可恢復的連線損失案例。 使用這些舊 Pod 時請小心，尤其是當其他藍牙裝置連線到你的手機時！** 請注意，AAPS Omnipod Dash 驅動程式每次發送指令時都會透過藍牙連線到 Dash POD，並在隨後立即中斷連線。 藍牙連線可能會受到連線到運作 AAPS 手機的其他裝置（例如耳機等）的干擾（在某些手機型號中，這可能會導致連線問題或 Pod 註冊期間或之後的錯誤/遺失），或者被他們干擾。
    -  **使用[**Build APK**](../SettingUpAaps/BuildingAaps.md)指示構建和安裝的 AAPS 版本 3.0 或更高版本**。
 * [**連續血糖監測儀（CGM）**](../Getting-Started/CompatiblesCgms.md)
@@ -90,7 +94,7 @@
 
 ![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)
 
-​    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
+​![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
 2. 顯示**填充 Pod**畫面。 將至少 80 單位的胰島素注入新的 Pod，等聽到兩聲嗶聲，表示 Pod 準備就緒並可續繼將胰島素輸入完。 計算 3 天所需的胰島素總量時，請考慮 Pod 本身的排空會占用約 3-10 單位。
 
@@ -136,7 +140,7 @@
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
 
-​    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+​![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
 在註冊 Pod 後匯出設置是一個好習慣。 每次更換 Pod 時都應執行此操作，每月一次，將匯出的文件複製到你的網路磁碟。 請見[**匯出設定文件**](../Maintenance/ExportImportSettings.md)。
 
@@ -153,7 +157,7 @@
 
 ![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
 
-​    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
+​![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
 
 2. 在 **停用 Pod** 畫面上，點擊 **下一步** 按鈕開始停用 Pod 的流程。 你會收到來自 Pod 的確認嗶聲，表明停用成功。
 
@@ -300,16 +304,16 @@
 
 ### Pod 管理選單
 
-Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (1)** button from the **DASH** tab.
+以下是通過按下**POD MGMT (1)**按鈕從**DASH**選單訪問的**Pod 管理**菜單中圖示的含義。
 
 ![DASH_Tab_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
 
  ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 2 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
-* 3 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
-* 4 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
-* 5 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
+* 2 - [**激活 Pod**](#activate-pod)：對新的 Pod 進行灌注並激活。
+* 3 - [**停用 Pod**](#deactivate-pod)：停用目前啟用的 Pod。
+* 4 - **播放測試嗶聲** ：按下時播放 Pod 的單次測試嗶聲。
+* 5 - [**Pod 歷史**](#view-pod-history)：顯示當前 Pod 的活動歷史紀錄。
 
 (DanaRS-Insulin-Pump-dash-settings)=
 
