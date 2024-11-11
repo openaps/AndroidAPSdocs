@@ -310,7 +310,7 @@ b) 使用者希望避免輸入驗證碼（追蹤者手機需要在輸入資料�
 ![圖像](../images/Installation_Screenshot_39b.PNG)
 
 
-在模塊中選擇：AndroidAPSwear
+在模組中選擇：AndroidAPSwear
 
 ![圖像](../images/cceaa832-70e6-4ad5-95ec-a82e2a6add1e.png)
 
