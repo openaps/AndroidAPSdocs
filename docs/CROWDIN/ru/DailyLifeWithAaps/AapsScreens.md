@@ -59,31 +59,31 @@
 * "чувствительность повышает цель" и/или 
 * "сопротивляемость понижает цель" 
 
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
+Если **AAPS** обнаружит повышенную сопротивляемость или чувствительность - цель, заданная в профиле, будет изменена. При таком изменении панель окрашивается в зеленый цвет.
 
 (AapsScreens-section-c-bg-loop-status)=
 
-### Section C - BG & loop status
+### Раздел C - ГК & статус контура
 
-#### Current blood glucose
+#### Текущий уровень глюкозы крови
 
-The latest blood glucose reading from your CGM is shown on the left side.
+Самое свежее значение ГК, переданное системой мониторинга, отображается в левой части экрана.
 
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
+Цвет показаний ГК соответствует настроенному [даипазону](#Preferences-range-for-visualization).
 
-* green = in range
-* red = below range
-* yellow = above range 
+* зеленый = в заданном диапазоне
+* красный = ниже заданного диапазона
+* желтый = выше заданного диапазона 
 
-The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+Серый блок по центру экрана отображает изменение текущего уровня ГК относительно предыдущего показания и изменение за последние 15 и 40 минут.
 
 (AapsScreens-loop-status)=
 
-#### Loop status
+#### Статус контура
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Статус контура](../images/Home2020_LoopStatus.png)
 
-On the right side, an icon shows the loop status:
+Пиктограмма справа показывает состояние цикла:
 
 1. Green circle = loop running
 2. Green circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
