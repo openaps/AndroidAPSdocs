@@ -85,9 +85,9 @@
 
 Пиктограмма справа показывает состояние цикла:
 
-1. Green circle = loop running
-2. Green circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
-3. Red circled = loop disabled (not working permanently)
+1. Зеленый круг = замкнутый цикл активен
+2. Зелёный круг с пунктирной линией = [ приостановка на низкой ГК (LGS)](#objectives-objective6)
+3. Красный круг = цикл деактивирован (постоянно отключен)
 4. Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
 5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
 6. Orange circle = super bolus running - remaining time is shown below icon
