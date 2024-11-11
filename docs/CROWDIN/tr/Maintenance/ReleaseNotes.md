@@ -469,7 +469,7 @@ Apk'yi oluşturmak için lütfen [Android Studio sürüm 3.6.1](https://develope
 
 - Küçük tasarım değişiklikleri (başlangıç sayfası...)
 
-- Bakım portalı sekmesi / menüsü kaldırıldı - daha fazla ayrıntı [burada](../Usage/CPbefore26.md)
+- Careportal tab / menu removed
 
 - New Local Profile plugin
 

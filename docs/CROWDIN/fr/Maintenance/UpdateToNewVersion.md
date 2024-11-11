@@ -1,5 +1,10 @@
 # Mise à jour vers une nouvelle version ou une branche
 
+## Notes for specific versions
+
+* [Update to AAPS 2.7](../Maintenance/Update2_7.md)
+* [Update to AAPS 3.0](../Maintenance/Update3_0.md)
+
 ## Construire vous-même au lieu de télécharger
 
 **AAPS** is not available to download, due to regulations concerning medical devices. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! See [FAQ page](../UsefulLinks/FAQ.md) for details.

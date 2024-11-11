@@ -251,7 +251,7 @@ d) Technical support is available to you from the DIY community through GitHub, 
 
 e) Вы сможете предоставлять **информацию о мониторинге CGM и петле/помпе** в виде объединенных отчетов на совещаниях в клинике (через Nightscout или Tidepool), либо в распечатанном виде, либо на экране (если принесете с собой ноутбук/ планшет). Рационализация данных мониторинга CGM и инсулиновой помпы позволит более эффективно использовать время врача для проверки ваших отчетов и оценки хода терапии.
 
-f) If there is still strong objection from your team, hand your clinician printouts of the reference articles linked here in the text, and give them the link to the **AAPS** clinicians section: [For Clinicians – A General Introduction and Guide to **AAPS**](../Resources/clinician-guide-to-AndroidAPS.md)
+f) If there is still strong objection from your team, hand your clinician printouts of the reference articles linked here in the text, and give them the link to the **AAPS** clinicians section: [For Clinicians – A General Introduction and Guide to **AAPS**](../UsefulLinks/ClinicianGuideToAaps.md)
 
 
 

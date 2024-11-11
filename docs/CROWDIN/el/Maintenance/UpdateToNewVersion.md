@@ -1,5 +1,10 @@
 # Ενημερώστε σε μια νέα έκδοση ή κλάδο
 
+## Notes for specific versions
+
+* [Update to AAPS 2.7](../Maintenance/Update2_7.md)
+* [Update to AAPS 3.0](../Maintenance/Update3_0.md)
+
 ## Φτιάξτε το μόνοι σας, αντί να το κατεβάσετε
 
 **AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.

@@ -469,7 +469,7 @@ You need at least start [objective 11 (in later versions objective 10!)](#object
 
 - Небольшие изменения дизайна (стартовая страница...)
 
-- Вкладка Портал терапии/ удалена из меню - подробнее [здесь](../Usage/CPbefore26.md)
+- Careportal tab / menu removed
 
 - New Local Profile plugin
 

@@ -116,13 +116,13 @@ Prosím, neváhejte se obrátit na komunitu AAPS, pokud si s něčím nejste jis
 
 
 
-#### [Where to go for help](../Where-To-Go-For-Help/Background-reading.md)?
+#### [Where to go for help](../UsefulLinks/BackgroundReading.md)?
 
 Cílem této sekce je poskytnout novým uživatelům odkazy na zdroje, aby získali pomoc včetně přístupu ke komunitní podpoře složené z nových i zkušených uživatelů, kteří mohou objasnit otázky, a vyřešit obvyklé nástrahy, které přicházejí s AAPS.
 
-#### [Oddíl pro lékaře](../Resources/clinician-guide-to-AndroidAPS.md)
+#### [Oddíl pro lékaře](../UsefulLinks/ClinicianGuideToAaps.md)
 
-This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+This is a [section specificially for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
 
 ## Co budeme sestavovat a instalovat?
 

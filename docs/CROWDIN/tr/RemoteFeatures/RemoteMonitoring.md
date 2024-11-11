@@ -30,10 +30,6 @@ Akıllı saat, çocuklarla AAPS'nin yönetilmesine yardımcı olmak için çok y
 
 ## Dikkat edilmesi gereken önemli noktalar
 
-- Setting the correct [treatment factors](#FAQ-how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
 - Settings must be the same in AAPS and AAPSClient app.
 - AAPS ana telefonunun yalnızca döngü çalıştırıldıktan sonra karşıya bilgi yükleyeceğini, bunun yanı sıra yükleme ve indirme süresi nedeniyle ana ve takipçi arasında bilgide zaman farkının oluşacağını da göz önünde bulundurun.
-- Bu nedenle, uzaktan izleme ve uzaktan tedaviye başlamadan önce, bunları doğru bir şekilde ayarlamak için zaman ayırın ve çocuğunuz yanınızdayken test edin. Okul tatilleri bunun için iyi bir zaman olabilir.
-- Uzaktan kontrol çalışmadığında acil durum planınız nedir (örn. ağ sorunları)?
-- Anaokulu ve ilkokulda uzaktan izleme ve tedavi gerçekten yardımcı olabilir. Ancak öğretmenlerin ve eğitimcilerin çocuğunuzun tedavi planından haberdar olmalıdır. Bu tür bakım planlarının örnekleri, facebook'ta [AAPS kullanıcılarının dosyalar bölümünde](https://www.facebook.com/groups/AndroidAPSUsers/files/) bulunabilir.
-- Çocuğun telefonunu her zaman pompasının ve CGM'inin menzilinde tutmak önemlidir. Bu, özellikle çok küçük çocuklarda zor olabilir. Pek çok çözüm mevcuttur, popüler bir seçenek [SPI Kemeri](https://spibelt.com/collections/kids-belts)'dir.
+- What is your emergency plan for when remote control does not work (_i.e._ network problems or lost bluetooth connection)?  Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.

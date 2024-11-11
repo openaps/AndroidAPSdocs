@@ -469,7 +469,7 @@ Nutze bitte [Android Studio 3.6.1](https://developer.android.com/studio/) oder n
 
 - Kleinere Designänderungen (Startseite...)
 
-- Careportal Tab / Menü entfernt - weitere Details dazu [hier](../Usage/CPbefore26.md)
+- Careportal tab / menu removed
 
 - New Local Profile plugin
 

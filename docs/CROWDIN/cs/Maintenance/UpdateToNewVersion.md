@@ -1,5 +1,10 @@
 # Aktualizace na novou verzi nebo větev (branch)
 
+## Notes for specific versions
+
+* [Update to AAPS 2.7](../Maintenance/Update2_7.md)
+* [Update to AAPS 3.0](../Maintenance/Update3_0.md)
+
 ## Vyrobte si místo stažení
 
 **AAPS** is not available to download, due to regulations concerning medical devices. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním! See [FAQ page](../UsefulLinks/FAQ.md) for details.

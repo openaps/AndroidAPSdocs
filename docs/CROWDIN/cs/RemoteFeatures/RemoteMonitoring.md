@@ -30,10 +30,6 @@ Když máte děti, mohou být chytré hodinky velmi užitečným nástrojem pro 
 
 ## Co je třeba zvážit
 
-- Setting the correct [treatment factors](#FAQ-how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
 - Nastavení v AAPS i AAPSClientu musí být stejné.
 - Vezměte v úvahu časový rozdíl mezi hlavním a sledujícím zařízením způsobený časem potřebným k nahrávání a stahování, a také skutečnost, že hlavní AAPS telefon bude nahrávat pouze po spuštění smyčky.
-- Takže si dejte načas a nastavte je správně a otestujte je v reálném životě se svým dítětem vedle sebe ještě předtím, než začnete se vzdáleným monitorováním a řízením na dálku. Ideální dobou pro jejich nastavení a otestování by mohly být školní prázdniny.
-- Jaký je váš nouzový plán, když vzdálené ovládání nefunguje (např. síťové problémy)?
-- Vzdálené monitorování a řízení může být opravdu užitečné ve školce a na základní škole. Ujistěte se však, že učitelé a pedagogové jsou si vědomi plánu léčby vašich dětí. Příklady takových plánů péče najdete v sekci [soubory uživatelů AAPS](https://www.facebook.com/groups/AndroidAPSUsers/files/) na Facebooku.
-- Je velmi důležité neustále udržovat mobilní telefon dítěte v dosahu jejich pumpy a CGM. Zvláště u velmi malých dětí to může být opravdu náročné. Existuje mnoho řešení, oblíbená volba jsou třeba [ledvinky](https://spibelt.com/collections/kids-belts)
+- What is your emergency plan for when remote control does not work (_i.e._ network problems or lost bluetooth connection)?  Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.

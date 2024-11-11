@@ -120,7 +120,7 @@ Missing history from March 2022 to September 2024
 
 - Avertissement pour l'automatisation
 - [Autosens](#Open-APS-features-autosens) - short explanation
-- [Alternatives à Careportal](../Usage/CPbefore26.md)
+- Alternatives à Careportal
 - [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
 - New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md)
 - Sample Setup - update Dexcom G6

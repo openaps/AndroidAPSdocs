@@ -8,15 +8,6 @@ Die ersten drei sind meist für Pflegende/Eltern geeignet, und Smartwatches sind
 
 ![grafik](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
-#### Dinge, die bei der Einrichtung eines **AAPS** für Kinder, das remote gesteuert werden soll, bedacht werden müssen
-
-1.  Überlege, wie das Kinder-Smartphone permanent in der Nähe der Insulinpumpe und des Glukose-Sensors bleibt. Besonders bei sehr kleinen/jungen Kindern, die noch nicht eigenverantwortlich genug sind, kann das mitunter schwierig sein. Es hilft, wenn ein Smartphone mit einer guten Bluetooth-Reichweite benutzt wird und das Kind - wenn es alt genug für ein eigenes Smartphone ist - Pumpe und Smartphones komfortabel bei sich tragen kann. Das Tragen eines Bauchgurts (_z.B._ [SPI Belt](https://spibelt.com/collections/kids-belts)) kann in solchen Fällen eine Lösung sein.
-2.  Nimm' Dir Zeit bei der Einrichtung und teste die Befehle in aller Ruhe mit Deinem Kind in der Nähe, bevor Du mit dem Remote-Monitoring und den Remote-Behandlungen beginnst. Viele Eltern nutzen Wochenenden oder Schulferien dazu.
-3.  Stelle sicher, dass Lehrer und Erzieher über den Behandlungsplan Deines Kindes Bescheid wissen und überlege Dir wie die Fernsteuerung mit dem bestehenden Therapieplan zusammenpasst bzw. ihn erweitert.
-4.  Viele Eltern finden es hilfreich, einen separaten Kommunikationsweg (z.B. über ein kleines günstiges Lehrer-Follower-Smartphone) mit der KiTa oder Schule zu haben.
-5.  Beispiele für schulische Therapiepläne für Kinder unterschiedlicher Altersstufen sind unter ["Dateien“](https://www.facebook.com/groups/AndroidAPSUsers/files/) auf der **AAPS** Facebook-Seite hinterlegt.
-6.  Wie sieht der Notfallplan aus, wenn die Fernsteuerung nicht funktionieren sollte (_d.h._ Netzwerkprobleme auftreten oder die Bluetooth-Verbindung verloren geht)?  Denke immer daran, was mit **AAPS** passieren wird, wenn Du plötzlich keine neuen Befehle senden kannst. **AAPS** überschreibt die Basalrate, den ISF und das ICR mit den aktuellen Profilwerten. Falls Deine Remote-Verbindung unterbrochen wird, ist es ist besser temporäre Profilwechsel (_d.h._ mit einer beschränkten Dauer) genutzt zu haben, als auf ein dauerhaftes stärkeres Insulinprofil geschwechselt zu sein. Wenn Die eingegebene Zeitspanne abgelaufen ist, wird die Pumpe auf das Original-Profil zurückfallen.
-
 ## 1) SMS-Befehle
 
 See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.

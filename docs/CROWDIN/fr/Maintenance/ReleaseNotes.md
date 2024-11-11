@@ -469,7 +469,7 @@ Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une ve
 
 - Petites modifications de l'affichage (page d'accueil...)
 
-- Onglet/Menu Careportal supprimé - plus de détails [ici](../Usage/CPbefore26.md)
+- Careportal tab / menu removed
 
 - New Local Profile plugin
 

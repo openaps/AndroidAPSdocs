@@ -59,4 +59,4 @@ Tidepool 是一個[開源](https://github.com/tidepool-org)專案。 他提供�
 
 ## 下一步
 
-一旦你設置了報告伺服器，你現在可以選擇設置[專用的 Google 帳號以供 AAPS 使用](../SettingUpAaps/DedicatedGoogleAccountForAaps.md)，或直接去[建立 AAPS 應用程式](../SettingUpAaps/BuildingAaps.md)。 
+一旦你設置了報告伺服器，你現在可以選擇設置[專用的 Google 帳號以供 AAPS 使用](../UsefulLinks/DedicatedGoogleAccountForAaps.md)，或直接去[建立 AAPS 應用程式](../SettingUpAaps/BuildingAaps.md)。 

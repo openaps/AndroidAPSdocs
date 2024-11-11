@@ -227,7 +227,7 @@ d) Vous trouverez toujours le support technique dont vous avez besoin auprès de
 
 e) Vous serez en mesure de fournir **aussi bien des informations sur votre glycémie que sur votre boucle/administration d'insuline par la pompe** sous forme de rapports synthétiques lors de vos RDV médicaux (grâce à Nightscout ou Tidepool), soit imprimés soit sous format numérique (si vous apportez un ordinateur portable/tablette). La mise en parallèle des données de glycémie et d'insuline permettra une utilisation plus efficace du temps de votre docteur lors de l'examen vos rapports et des discussions pour évaluer vos progrès.
 
-f) Si votre équipe continue de s'opposer fermement, donnez à votre docteur une copie imprimée des articles de référence cités plus haut, et donnez-lui le lien vers la page de **AAPS** à destination des docteurs : [Pour les cliniciens - Une introduction générale et un guide de **AAPS**](../Resources/clinician-guide-to-AndroidAPS.md)
+f) If there is still strong objection from your team, hand your clinician printouts of the reference articles linked here in the text, and give them the link to the **AAPS** clinicians section: [For Clinicians – A General Introduction and Guide to **AAPS**](../UsefulLinks/ClinicianGuideToAaps.md)
 
 #### Support pour la boucle DIY par d'autres docteurs
 

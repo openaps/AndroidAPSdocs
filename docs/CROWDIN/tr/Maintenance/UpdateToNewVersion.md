@@ -1,5 +1,10 @@
 # Yeni bir ana sürüme veya yan sürüme güncelleme
 
+## Notes for specific versions
+
+* [Update to AAPS 2.7](../Maintenance/Update2_7.md)
+* [Update to AAPS 3.0](../Maintenance/Update3_0.md)
+
 ## Programı İndirmek yerine kendiniz oluşturun...
 
 **AAPS** is not available to download, due to regulations concerning medical devices. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz! See [FAQ page](../UsefulLinks/FAQ.md) for details.

@@ -28,6 +28,7 @@
 
 ![歷史瀏覽器](../images/Maintenance/historybrowser6.png)
 
+(reviewing-statistics)=
 ## **AAPS 統計**
 
 **AAPS**提供基本的監控統計資料。
