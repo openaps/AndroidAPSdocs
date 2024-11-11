@@ -116,13 +116,13 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 
 
-#### [Where to go for help](../UsefulLinks/BackgroundReading.md)?
+#### [去哪裡尋求幫助](../UsefulLinks/BackgroundReading.md)？
 
 本節主要在為新用戶提供資源連結，以便獲得幫助，包括由新手和有經驗的用戶組成的社區支援，這些用戶可以幫助解答問題並解決使用 AAPS 時常見的問題。
 
 #### [臨床醫師專區](../UsefulLinks/ClinicianGuideToAaps.md)
 
-This is a [section specificially for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. 在簡介中還提供了[如何與你的臨床團隊討論 AAPS](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)的指南。
+這是一個[專為臨床醫師設立的專區](../UsefulLinks/ClinicianGuideToAaps.md)，希望了解更多關於 AAPS 及開源人工胰臟技術。 在簡介中還提供了[如何與你的臨床團隊討論 AAPS](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)的指南。
 
 ## 我們要建置和安裝什麼？
 
