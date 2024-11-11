@@ -129,7 +129,7 @@
 
 ## 2020年1月
 
-- [手動碳水化合物修正](#screens-bolus-carbs) 用於錯誤的碳水化合物條目
+- [手動碳水化合物修正](#screens-bolus-carbs) 用於錯誤的碳水化合物項目
 - [編輯文件](../SupportingAaps/HowToEditTheDocs.md) 時的圖片大小
 
 ## 2019年12月
@@ -148,7 +148,7 @@
 - [常見問題解答 - 運動](#FAQ-sports)
 - [主螢幕 - 圖表上的線條](#aaps-screens-main-graph)
 - [Insight - 在 NS 客戶端中停用絕對值](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- [Medtronic 幫浦 - 可能的重複條目](../CompatiblePumps/MedtronicPump.md)
+- [Medtronic 幫浦 - 可能的重複項目](../CompatiblePumps/MedtronicPump.md)
 - [新的 Freestyle Libre 2 教程](../CompatibleCgms/Libre2.md)
 - [帶百分比的設定檔切換 - 示例](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [SMS 指令更新](../RemoteFeatures/SMSCommands.md)
