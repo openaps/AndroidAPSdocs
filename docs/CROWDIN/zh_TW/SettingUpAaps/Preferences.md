@@ -58,7 +58,7 @@
 
 #### 設定保護
 
-- 用密碼或手機的生物識別身份驗證來保護你的設定（例如：[小孩正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）。 如果你啟用此功能，每次你想要訪問任何偏好設置相關視圖時，系統都會提示你進行身份驗證。
+- 用密碼或手機的生物識別身份驗證來保護你的設定（例如：[小孩正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）。 如果你啟用此功能，每次你想要進入任何偏好設置相關視圖時，系統都會提示你進行身份驗證。
 
 - 如果你希望使用主密碼僅用於保護[匯出設定](../Maintenance/ExportImportSettings.md)，則應使用自定義密碼，並為編輯偏好設置使用不同的密碼。
 
@@ -130,7 +130,7 @@
 
 ![偏好設定 > 按鈕 > 碳水化合物](../images/Pref2020_OV_Buttons3.png)
 
-(偏好設定-快速嚮導)=
+(Preferences-quick-wizard)=
 ### 快速嚮導
 
 為某些標準餐點或小吃建立自訂按鈕，這些按鈕將顯示在首頁。 適用於經常食用的標準餐點。
@@ -162,14 +162,14 @@
 
 ### 填充/啟動標準胰島素量
 
-如果你想透過**AAPS**填充管路或引導導管，你可以透過[**動作**標籤](#screens-action-tab)執行此操作。
+如果你想透過**AAPS**填充管路或引導導管，你可以透過[**手動操作**標籤](#screens-action-tab)執行此操作。
 
 可以在此對話框中定義預設值。 根據你的導管長度選擇填充/啟動對話框中的三個按鈕的預設量。
 
 (Preferences-range-for-visualization)=
 ### 可視化範圍
 
-選擇**AAPS**總覽和智慧手錶上BG圖表的高低標記。 這僅限於視覺化顯示，並非血糖的目標範圍。 範例：70 - 180 mg/dl 或 3.9 - 10 mmol/l
+選擇**AAPS**總覽和智慧手錶上血糖圖表的高低標記。 這僅限於視覺化顯示，並非血糖的目標範圍。 範例：70 - 180 mg/dl 或 3.9 - 10 mmol/l
 
 ![偏好設定 > 可視化範圍](../images/Pref2020_OV_Range2.png)
 
@@ -201,7 +201,7 @@
 - 幫浦電池壽命
 - 幫浦電池電量（百分比）
 
-如果超出警告閾值，數值將顯示為黃色。 如果超出臨界閾值，數值將顯示為紅色。
+如果超出警告門檻值，數值將顯示為黃色。 如果超出危急門檻值，數值將顯示為紅色。
 
 最後一個選項允許你從Nightscout匯入那些設定（如果在那裡定義）。 詳情請參考[Nightscout文檔](https://nightscout.github.io/nightscout/setup_variables/#age-pills)。
 
@@ -216,7 +216,7 @@
 
 使用[SMB](#objectives-objective9)時，許多人不會注射所需胰島素的100%，而只會注射部分（例如75%），並讓SMB以UAM（不在場用餐偵測）處理餘下的部分。 在這裡使用低於100%的值可能會有用：
 * 對於消化緩慢的人來說：一次傳送所有的注射劑量可能會引起低血糖，因為胰島素的作用速度比消化快。
-* 以便給**AAPS**留出更多空間自行處理**BG上升**。 在這兩種情況下，**AAPS**將在需要時透過SMB來補償缺失的注射部分。
+* 以便給**AAPS**留出更多空間自行處理**血糖上升**。 在這兩種情況下，**AAPS**將在需要時透過SMB來補償缺失的注射部分。
 
 ### 啟用的注射顧問
 
@@ -233,7 +233,7 @@
 
 ![偏好設定 > 進階設置](../images/Pref2021_OV_Adv.png)
 
-#### 超級追加注射
+#### 超級注射
 
 選擇在注射嚮導中啟用超級注射的選項。
 
@@ -243,7 +243,7 @@
 
 ## 治療安全
 
-(偏好設定-患者類型)=
+(preferences-patient-type)=
 ### 病人類型
 
 - 安全限制是根據你在此設置中選擇的年齡設定的。
@@ -272,7 +272,7 @@
 
 ![組態建置工具 - 循環模式](../images/ConfigBuilder_LoopLGS.png)
 
-(偏好設定-筆迴路)=
+(Preferences-pen-loop)=
 #### 開放循環
 **AAPS**持續評估所有可用資料（IOB、COB、BG...）並在必要時提供治療建議（臨時基礎率），告訴你如何調整治療。
 
@@ -283,7 +283,7 @@
 (preferences-closed-loop)=
 #### 閉合循環
 
-**AAPS** 持續評估所有可用的資料（IOB、COB、BG……）並在必要時自動調整治療（_即_ 無需你進一步干預）以達到設定的 [目標範圍或數值](#profile-glucose-targets) （注射給藥、臨時基礎率、停用胰島素以避免低血糖等）。
+**AAPS** 持續評估所有可用的資料（IOB、COB、血糖……）並在必要時自動調整治療（_即_ 無需你進一步干預）以達到設定的 [目標範圍或數值](#profile-glucose-targets) （注射給藥、臨時基礎率、停用胰島素以避免低血糖等）。
 
 閉環系統在多個安全限制內運行，可以個別設置。
 
@@ -298,7 +298,7 @@
 (Preferences-minimal-request-change)=
 ### 最小請求變更
 
-使用 **開放環路** 時，你將在每次**AAPS** 建議調整基礎率時收到通知。 為了減少通知數量，你可以使用[更寬的BG目標範圍](#profile-glucose-targets) 或增加最小請求率的百分比。 這定義了觸發通知所需的相對變更。
+使用 **開放環路** 時，你將在每次**AAPS** 建議調整基礎率時收到通知。 為了減少通知數量，你可以使用[更寬的血糖目標範圍](#profile-glucose-targets) 或增加最小請求率的百分比。 這定義了觸發通知所需的相對變更。
 
 ## 進階餐前注射助手（AMA）或超微量注射（SMB）
 
@@ -306,7 +306,7 @@
 
 - [進階餐前注射助手（OpenAPS AMA）](#Open-APS-features-advanced-meal-assist-ama) - 2017年的算法狀態
 - [超微量注射（OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - 最推薦給初學者的最新算法
-- [動態ISF](../DailyLifeWithAaps/DynamicISF.md) - 將於2024年釋出，從**[目標11](#objectives-objective11)**開始可用
+- [動態ISF](../DailyLifeWithAaps/DynamicISF.md) - 於2024年釋出，從**[目標11](#objectives-objective11)**開始可用
 
 ### OpenAPS AMA
 
@@ -424,7 +424,7 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 - 多個 SSID 可以用分號分隔。
 - 若要刪除所有 SSID，請在該欄位中輸入空格。
 
-(偏好設定-進階-設定-nsclient)=
+(Preferences-advanced-settings-nsclient)=
 ### 進階設定（NSClient）
 
 ![NS Client 進階設定](../images/Pref2024_NSClientAdv.png)
