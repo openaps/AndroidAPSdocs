@@ -131,8 +131,8 @@
 - UI 修復 @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
 - 新的 SMS 指令 LOOP LGS/CLOSED @pzadroga
 - WearOS 翻譯 @Andries-Smit
-- xDrip 通訊移至獨立模塊 @MilosKozak
-- 內部變更：更新的庫版本，rx3 遷移，新模塊結構 @MilosKozak
+- xDrip 通訊移至獨立模組 @MilosKozak
+- 內部變更：更新的庫版本，rx3 遷移，新模組結構 @MilosKozak
 - Diaconn 驅動修復 @miyeongkim
 - 更多資料庫維護選項 @MilosKozak
 - AAPSClient 提供主要手機是否已接入電源的訊息 @MilosKozak
@@ -469,7 +469,7 @@ v3 是新的協議。 更加安全和高效
 
 - 小設計更改（首頁...）
 
-- Careportal tab / menu removed
+- 移除 Careportal 標籤/選單
 
 - 新增 Local Profile 外掛
 
@@ -483,7 +483,7 @@ v3 是新的協議。 更加安全和高效
 
 - [延長注射](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) 功能 - 將停用關閉循環
 
-- MDT 外掛：修復了重複條目錯誤
+- MDT 外掛：修復了重複項目錯誤
 
 - 單位不再在設定檔中指定，而是全域設置
 
@@ -652,7 +652,7 @@ v3 是新的協議。 更加安全和高效
 - 治療按鈕：舊的治療按鈕仍可用，但預設情況下被隱藏。 按鈕的可見性現在可以配置。 新增胰島素按鈕，新增碳水化合物按鈕（包括[eCarbs/延長碳水化合物](../DailyLifeWithAaps/ExtendedCarbs.md)）
 - [彩色預測線](#aaps-screens-prediction-lines)
 - 選項可在胰島素/碳水化合物/計算機/注射+填充對話框中顯示筆記字段，這些字段會上傳到 NS
-- 更新的注射/填充對話框允許進行注射，並建立護理入口條目以紀錄站點更換和藥筒更換
+- 更新的注射/填充對話框允許進行注射，並建立護理入口項目以紀錄站點更換和藥筒更換
 
 ### 手錶
 
