@@ -1,9 +1,9 @@
 # 更新至新版本或分支
 
-## Notes for specific versions
+## 特定版本的備註
 
-* [Update to AAPS 2.7](../Maintenance/Update2_7.md)
-* [Update to AAPS 3.0](../Maintenance/Update3_0.md)
+* [更新至 AAPS 2.7](../Maintenance/Update2_7.md)
+* [更新至 AAPS 3.0](../Maintenance/Update3_0.md)
 
 ## 自行建置，而不是下載
 
