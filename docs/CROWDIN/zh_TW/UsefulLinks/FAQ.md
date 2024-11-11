@@ -336,7 +336,7 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 #### 住院
 
-If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
+如果你想與臨床醫師分享一些有關 AAPS 和 DIY 循環的資訊，你可以列印[給臨床醫師的 AAPS 指南](../UsefulLinks/ClinicianGuideToAaps.md)。
 
 #### 與內分泌科醫生的醫療約診
 
