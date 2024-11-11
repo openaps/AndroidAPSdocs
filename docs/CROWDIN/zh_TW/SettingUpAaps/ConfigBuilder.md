@@ -4,9 +4,9 @@
 
 ![開啟組態建置工具](../images/ConfBuild_Open_AAPS30.png)
 
-強調**組態建置工具**是用來開啟和關閉模塊功能的選項卡。 在下面的圖片中，左側的方框 (A) 允許你選擇你想要啟動的模塊，右側的方框 (C) 允許你將其作為**AAPS**中的一個選項卡 (E) 查看。 如果右側的方框未被啟動，你可以使用螢幕左上方的漢堡選單 (D) 來訪問該功能。 請參閱下面的[選項卡或漢堡選單](#tab-or-hamburger-menu)。
+強調**組態建置工具**是用來開啟和關閉模組功能的選項卡。 在下面的圖片中，左側的方框 (A) 允許你選擇你想要啟動的模組，右側的方框 (C) 允許你將其作為**AAPS**中的一個選項卡 (E) 查看。 如果右側的方框未被啟動，你可以使用螢幕左上方的漢堡選單 (D) 來進入該功能。 請參閱下面的[選項卡或漢堡選單](#tab-or-hamburger-menu)。
 
-當模塊內有額外設定可用時，你可以點擊齒輪圖示 (B)，這將帶你進入偏好設定中的具體設定。
+當模組內有額外設定可用時，你可以點擊齒輪圖示 (B)，這將帶你進入偏好設定中的具體設定。
 
 ![組態建置工具框和齒輪](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -25,10 +25,10 @@
 
 ## 設定檔
 
-此模塊無法停用，因為它是**AAPS**的核心部分。
+此模組無法停用，因為它是**AAPS**的核心部分。
 
 * 請參閱[你的 AAPS 個人設定](../SettingUpAaps/YourAapsProfile.md)以基本了解你的**個人設定**中包含的內容。
-* 請參閱[AAPS 螢幕 > 個人設定](#aaps-screens-profile)以獲取有關管理你的**個人設定**的更多資訊。
+* 請參閱[AAPS 螢幕 > 設定檔](#aaps-screens-profile)以獲取有關管理你的**設定檔**的更多資訊。
 
 (Config-Builder-insulin)=
 
@@ -85,12 +85,12 @@
 
 ## 血糖來源
 
-選擇你正在使用的血糖來源。 請參閱[BG來源](../Getting-Started/CompatiblesCgms.md)頁面以獲取更多設置資訊。
+選擇你正在使用的血糖來源。 請參閱[血糖來源](../Getting-Started/CompatiblesCgms.md)頁面以獲取更多設置資訊。
 
 ![組態建置工具：血糖來源選擇](../images/ConfBuild_BG.png)
 
 * [xDrip+](../CompatibleCgms/xDrip.md)
-* [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - 僅當你清楚操作時，查看[BG來源](../Getting-Started/CompatiblesCgms.md)。
+* [NSClient 血糖](../CompatibleCgms/CgmNightscoutUpload.md) - 僅當你清楚操作時，查看[血糖來源](../Getting-Started/CompatiblesCgms.md)。
 * [MM640g](../CompatibleCgms/MM640g.md)
 * [Glimp](#libre1-using-glimp) - 僅支援版本 4.15.57 及更新版本
 * [自建你的 Dexcom 應用程式 (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)。
@@ -159,7 +159,7 @@
 
 ## 循環
 
-此模塊不應停用，因為它是**AAPS**的核心部分。
+此模組不應停用，因為它是**AAPS**的核心部分。
 
 ## 約束條件
 
@@ -207,7 +207,7 @@
 
 ## 治療
 
-如果你查看「治療」（Treat）標籤，你可以看到已上傳到 Nightscout 的治療紀錄。 如果您希望編輯或刪除一個條目（例如，您攝取的碳水化合物少於預期），請選擇「移除」，然後透過 [主螢幕上的碳水化合物按鈕](#screens-bolus-carbs) 輸入新值（如有必要可以更改時間）。
+如果你查看「治療」（Treat）標籤，你可以看到已上傳到 Nightscout 的治療紀錄。 如果您希望編輯或刪除一個項目（例如，您攝取的碳水化合物少於預期），請選擇「移除」，然後透過 [主螢幕上的碳水化合物按鈕](#screens-bolus-carbs) 輸入新值（如有必要可以更改時間）。
 
 ## 一般問題
 
@@ -249,7 +249,7 @@
 
 顯示 Nightscout 食物資料庫中定義的食物預設值，更多設定資訊請參閱[Nightscout 讀我](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods)。
 
-注意：條目無法在**AAPS**計算機中使用。 （僅供檢視）
+注意：項目無法在**AAPS**計算機中使用。 （僅供檢視）
 
 (Config-Builder-wear)=
 
@@ -268,7 +268,7 @@
 
 ### 維護
 
-訪問此選項卡以匯出/匯入設定。
+進入此選項卡以匯出/匯入設定。
 
 ### 組態建置工具
 
