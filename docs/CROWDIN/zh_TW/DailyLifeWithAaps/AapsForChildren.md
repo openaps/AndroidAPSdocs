@@ -1,27 +1,27 @@
-# AAPS for children
+# 適合兒童的 AAPS
 
-**AAPS** can be used successfully with type 1 kids as well. Anyway, there are things to consider.
+**AAPS** 也可以成功應用在一型糖尿病的孩子身上。 總之，還是有一些事項需要考量。
 
 ## 需考慮的事項
 
-### Initial Profile
+### 初始個人設定
 
-Setting the correct [**Profile**](../SettingUpAaps/YourAapsProfile.md) (basal rate, DIA, ISF...) may prove difficult for children with type 1, especially when growth hormones are involved. Take your time to test and ensure that you are happy with your child’s basal, I:C, DIA and ISF. Test them in real life with your kid next to you before starting remote monitoring and remote treatment. Weekends or school holidays might be a good time for that.<br/>
+設定正確的 [**個人設置**](../SettingUpAaps/YourAapsProfile.md)（基礎率、DIA、ISF...）對於一型糖尿病的孩子來說，可能會有一定困難，尤其是當涉及生長激素的時候。 請花時間測試，並確保您對孩子的基礎率、碳水化合物比（I:C）、DIA 和 ISF 感到滿意。 在開始遠端監控和治療之前，請在孩子身邊測試這些設定。 週末或學校假期可能是一個不錯的時機。<br/>
 
-### Monitor and adjust your child’s Profile where necessary
+### 在必要時監控並調整您孩子的個人設定。
 
-As the child grows, **Profile** adjustments will be necessary in order to account for your child’s body’s demands and needs. However this issue exists for all type 1 children including those who are on other pumps or injections.
+隨著孩子的成長，您需要對 **個人設定** 進行調整，以滿足孩子身體的需求。 然而，這個問題在所有一型糖尿病的孩子中都是存在的，包括那些使用其他幫浦或注射的孩子。
 
-### Keeping the phone in range
+### 保持手機在範圍內
 
-Think about how you will keep the child’s phone in range of their pump and **CGM**. 對於年齡較小，還無法對手機負責的兒童來說，這可能是一個挑戰。 An **AAPS** phone with a good bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Many solutions exist, like insulin pump belts that also have space for a phone, or a harness to carry like a backpack.
+考慮如何讓孩子的手機保持在他們的幫浦和 **CGM** 的範圍內。 對於年齡較小，還無法對手機負責的兒童來說，這可能是一個挑戰。 應該選擇一部與 **AAPS** 配對良好的手機，並找到一個孩子方便攜帶幫浦和手機的方式。 許多解決方案可供選擇，例如有空間放手機的胰島素幫浦腰帶，或者像背包一樣的背帶。
 
-### How to protect your child’s AAPS from being misused?
+### 如何保護您孩子的 AAPS 免於被濫用？
 
-There are several protection settings available with **AAPS** to avoid the child or a stranger misuse of **AAPS**. See [Preferences > General > Protection](#Preferences-protection) to add password or biometric protection to boluses, settings changes, or even **AAPS** itself.
+在 **AAPS** 中有幾個保護設定可用來避免孩子或陌生人濫用 **AAPS**。 請參閱 [偏好設定 > 一般 > 保護](#Preferences-protection) 來為注射、設定變更，甚至 **AAPS** 本身添加密碼或生物識別保護。
 
-## Remote monitoring and remote control
+## 遠端監控和遠端控制
 
-Remote monitoring is an essential functionality when using **AAPS** for children. See the dedicated section [Remote Monitoring](../RemoteFeatures/RemoteMonitoring.md) to explore possible options.
+當為孩子使用 **AAPS** 時，遠端監控是一個重要的功能。 請參閱專門部分 [遠端監控](../RemoteFeatures/RemoteMonitoring.md) 以探索可能的選項。
 
-Remote monitoring and treatment can be hugely beneficial for parents of a type 1 child and this is particularly so when the child attends kindergarten and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan.<br/> Work out how adding in remote control is going to work with/enhance the existing plan. Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher “follow” phone.<br/> Examples for school care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook. 
+遠端監控和治療對於一型糖尿病孩子的父母是非常有益的，尤其是在孩子上幼稚園和小學的時候。 但請確保老師和教育工作者了解您孩子的治療計劃。<br/> 思考如何將遠端控制添加到/增強現有計劃。 許多父母發現與托兒機構保持單獨的聯繫會很有幫助，例如一部便宜的小型「跟隨」手機給老師使用。<br/> 學校護理計劃的範例可以在 [AAPS 使用者的 Facebook 文件區](https://www.facebook.com/groups/AndroidAPSUsers/files/) 找到。 
