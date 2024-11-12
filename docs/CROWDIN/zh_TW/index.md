@@ -93,14 +93,14 @@ AAPS 螢幕 <./DailyLifeWithAaps/AapsScreens.md>
 AAPS 重要功能 <./DailyLifeWithAaps/KeyAapsFeatures.md>
 碳水化合物計算 <./DailyLifeWithAaps/CobCalculation.md>
 敏感度檢測 <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-個人設置切換與百分比 <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+設定檔切換與百分比 <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
 臨時目標 <./DailyLifeWithAaps/TempTargets.md>
 擴展碳水化合物 <./DailyLifeWithAaps/ExtendedCarbs.md>
 自動化 <./DailyLifeWithAaps/Automations.md>
 動態 ISF <./DailyLifeWithAaps/DynamicISF.md>
 適合兒童的 AAPS <./DailyLifeWithAaps/AapsForChildren.md>
 幫浦和導管 <./DailyLifeWithAaps/PumpsAndCannulas.md>
-時區旅行與夏令時間 <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
+跨時區旅行與夏令時間 <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
 ```
 
