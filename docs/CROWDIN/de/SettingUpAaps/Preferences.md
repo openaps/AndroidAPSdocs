@@ -437,7 +437,7 @@ More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.m
 
 ## Automatisierung
 
-Wähle aus, welcher Standortservice verwendet werden soll:
+Wähle aus, welcher Standortdienst verwendet werden soll:
 
 - Use passive location: **AAPS** only takes locations if other apps are requesting it
 - Netzwerkstandort: Standort Ihres Wi-Fi
