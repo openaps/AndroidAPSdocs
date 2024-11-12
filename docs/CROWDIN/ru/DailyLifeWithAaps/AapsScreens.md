@@ -334,21 +334,21 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 * **Желтые** столбцы показывают отклонение, вызванное непредвиденным приемом пищи UAM.
 * **Черные** столбцы показывают небольшие отклонения, не принятые во внимание при расчете чувствительности
 
-#### Blood Glucose Impact
+#### Влияние ГК
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+Эта линия показывает, в какой степени ГК "должна" подниматься или падать, только на основании активности инсулина.
 
 ![Кнопки главного экрана](../images/Screenshots_DEV_BGI.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are greater than the BGI line, indicating that BG is rising. Later, during the hours marked **2**, BGI and DEV are pretty much in line, indicating that BG is stable.
+Эту линию стоит вывести вместе со столбцами отклонения. Они имеют одинаковые масштабы, но отличаются от других необязательных данных,, поэтому неплохо отобразить их на отдельном графике, как показано выше. Сравнение линии влияния ГК и шкалы отклонений -еще один способ понять флуктуации **ГК**. Здесь, в момент, отмеченный **1**, столбцы отклонения больше линии влияния ГК, что указывает на повышение ГК. Позднее, в часы, отмеченные **2**, линии влияния ГК и отклонения DEV в значительной степени совпадают, что указывает на стабильность ГК.
 
 ### Раздел H - Кнопки
 
 ![Кнопки главного экрана](../images/Home2020_Buttons.png)
 
-Buttons for Insulin, Carbs and Calculator are almost always visible. If the connection to the pump is lost, the insulin button will not be visible.
+Кнопки инсулина, углеводов и калькулятора отображаются почти всегда. При потере связи с помпой кнопка инсулина не видна.
 
-Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-buttons).
+Другие кнопки можно установить в [Настройках > Обзор > Кнопки](#Preferences-buttons).
 
 About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
 
