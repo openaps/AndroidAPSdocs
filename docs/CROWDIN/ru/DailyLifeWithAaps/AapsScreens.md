@@ -88,84 +88,84 @@
 1. Зеленый круг = замкнутый цикл активен
 2. Зелёный круг с пунктирной линией = [ приостановка на низкой ГК (LGS)](#objectives-objective6)
 3. Красный круг = цикл деактивирован (постоянно отключен)
-4. Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-6. Orange circle = super bolus running - remaining time is shown below icon
-7. Blue circle with dotted line = open loop
+4. Желтый круг = цикл приостановлен (временно приостановлен, но базальный инсулин будет вводиться) - оставшееся время паузы отображается под пиктограммой
+5. Серый круг = помпа отключена (временно отключена любая подача инсулина) - оставшееся время остановки отображается под пиктограммой
+6. Оранжевый круг = запущен суперболюс - оставшееся время отображаешься под пиктограммой
+7. Синий круг с пунктирной линией = активен незамкнутый цикл
 
-Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
+Короткое или длинное нажатие на пиктограмму откроет диалоговое окно для переключения между режимами контура (Закрытый, Приостановка на низкой ГК, Открытый или Отключен), для отключения / возобновления цикла или отключения / подключения помпы обратно.
 
-* If short press on Loop icon, a validation is required after selection in Loop Dialog
+* Если диалоговое окно было вызвано коротким нажатием - после смены режима появится запрос на подтверждение. Если долгим нажатием - смена режима применится сразу.
     
     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
 (aaps-screens-bg-warning-sign)=
 
-#### BG warning sign
+#### Восклицательный знак возле ГК
 
-If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
+Если по какой-то причине возникают проблемы с показаниями ГК, которые поступают в **AAPS**, на главном экране под значением ГК появляется восклицательный знак.
 
-##### Red warning sign: Duplicate BG data
+##### Красный восклицательный знак: Задвоенные данные ГК
 
-The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
+Красный предупреждающий знак служит сигналом для немедленных действий: поступают **дублирующиеся данные ГК**, не позволяющие алгоритму цикла работать правильно. Поэтому замкнутый цикл будет отключен до устранения проблемы.
 
-    {admonition} Your loop is not running
-    :class: note
-    Your loop is not running until you solve this issue !
+    {admonition} {предупреждение} Цикл не запущен
+    :class::класс: примечание
+    Цикл не будет работать до устранения проблемы!
 
 ![Красное предупреждение о ГК](../images/bg_warn_red.png)
 
-Следует выяснить, почему данные ГК дублируются:
+Следует выяснить, почему дублируются данные ГК:
 
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (Для Heroku [подробности можно найти здесь](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In **AAPS**, go to [Preferences > NSClient](#Preferences-nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
+* Активирован ли мост Dexcom на сайте NS? Отключите мост, перейдя в панель управления сайта NS, отредактируйте переменную «enable» и удалите оттуда "bridge". (Для Heroku [подробности можно найти здесь](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Данные о ГК поступают в Nightscout (NS) из нескольких источников? Если у вас самостоятельно собранное приложение BYODA, включите выгрузку в **AAPS**, но не активируйте её в xDrip+.
+* Есть ли у вас подписчики (фолоуеры), которые могут получать ГК и снова передавать ее на ваш сайт NS?
+* Последний вариант: В **AAPS** перейдите в [Настройки > NS Client ](#Preferences-nsclient), выберите настройки синхронизации и отключите опцию "Принимать данные CGM из NS".
 
-To remove the warning immediately and get to loop running again, you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+Чтобы немедленно удалить знак предупреждения, нужно вручную удалить несколько задвоенных записей из вкладки Dexcom/xDrip+.
 
-Однако если задублированных данных много, может быть проще сделать следующее:
+Однако если задублированных данных много, проще сделать следующее
 
-* [backup your settings](../Maintenance/ExportImportSettings.md),
-* сбросить базу данных в меню обслуживания и
-* [import your settings](../Maintenance/ExportImportSettings.md) again
+* [сохраните настройки](../Maintenance/ExportImportSettings.md),
+* сбросьте базу данных в меню обслуживания и
+* [импортируйте настройки](../Maintenance/ExportImportSettings.md) заново
 
 ##### Желтый восклицательный знак
 
-The yellow warning signal is indicating that your BG arrived in irregular time intervals or that some BGs are missing. When pressing the sign, the message indicates “Recalculated data used”.
+Желтый сигнал предупреждения указывает, что значения ГК получены через нерегулярные промежутки времени или имеются пропуски значений. При нажатии на значок появляется сообщение «Используются пересчитанные данные».
 
 ![Желтое предупреждение о ГК](../images/bg_warn_yellow.png)
 
 Обычно предпринимать никаких действий не требуется. Замкнутый цикл продолжит работать!
 
-As a sensor change is interrupting the constant flow of BG data, a yellow warning sign after sensor change is normal and nothing to worry about.
+Так как замена сенсора прерывает поток данных, то появление предупреждающего знака после замены сенсора - явление нормальное и не должно вызывать беспокойства.
 
-Special note for Libre users:
+Специальное примечание для пользователей Libre:
 
-* Каждый сенсор libre пропускает данные раз или два в несколько часов, а это означает, что идеального потока значений ГК не получится.
-* Also, jumpy readings interrupt the continuous flow.
-* Therefore, the yellow warning sign will be 'always on' for Libre users.
+* Cенсорs Libre раз или два за несколько часов могут пропускать данные, а это означает, что идеального потока значений ГК не получится.
+* Непрерывный поток также нарушается скачками данных.
+* Поэтому желтый предупреждающий «постоянно включен» для пользователей Libre.
 
-*Note*: Up to 30h hours are taken into accord for **AAPS** calculations. Поэтому даже после устранения проблемы нерегулярной передачи данных, может потребоваться до 30 часов, чтобы исчез желтый треугольник.
+*Примечание*: В своих расчетах.**AAPS** учитывает данные за 30 часов. Поэтому даже после устранения проблемы нерегулярной передачи данных, может потребоваться до 30 часов, чтобы исчез желтый треугольник.
 
 ### Раздел D - АктИнс, АктУгл, БС и AS
 
 ![Раздел D](../images/Home2020_TBR.png)
 
-**Syringe**: insulin on board (IOB) - amount of active insulin inside your body
+**Пиктограмма шприца**: инсулин "на борту" (IOB, АктИнс) - количество активного инсулина в организме
 
 1. Значение активного инсулина IOB будет равно нулю, если активна только база текущего профиля и нет остаточного инсулина от предыдущих болюсов.
     
     * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
     * Нажмите на иконку (только короткое нажатие), чтобы увидеть как IOB распределяется между базой и болюсом.
 
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
+2. **Пиктограмма колоска**: [углеводы "на борту" (COB, АктУгл)](../DailyLifeWithAaps/CobCalculation.md) - количество еще не усвоенных углеводов из тех, чтоб были съедены ранее. Пиктограмма мерцает, если необходимо съесть дополнительные углеводы (см [ниже](#aaps-screens-carbs-required))
 
-3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%) 
+3. **Фиолетовая линия**: текущая скорость базала. Пиктограмма меняется, отражая временные изменения в базальной скорости (плоская при 100%) 
     * Кратко нажмите на иконку, чтобы увидеть подробности базала (значение текущего базала, время начала, остаток/общая продолжительность в минутах)
-4. **Arrows up & down**: indicating actual [Autosens](#Open-APS-features-autosens) status (enabled or disabled) and value is shown below icon
+4. **Пиктограмма со стрелками вверх & вниз**: отображает актуальный статус [Autosens](#Open-APS-features-autosens) (включен или отключен) и под ней его текущий расчет
 
-(aaps-screens-carbs-required)=
+(aaps-screens-carbs-requirement)=
 
 #### Требуются углеводы
 
@@ -173,7 +173,7 @@ Special note for Libre users:
 
 Требование углеводов появляется, когда расчеты определяют их недостаток.
 
-This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
+Это происходит, когда алгоритм Oref решает, что не сможет помочь простым отключением подачи инсулина и во избежание гипогликемии необходимы углеводы.
 
 Уведомления об углеводах значительно сложнее, чем уведомления калькулятора болюса. Вы можете увидеть требование углеводов даже когда калькулятор болюса не показывает их нехватку.
 
@@ -195,9 +195,9 @@ This is when the oref algorithm thinks it can't rescue you by zero-temping, and 
 
 Если превышено критическое пороговое значение, значения будут показаны красным цветом.
 
-Settings can be changed in [Preferences > Overview > Status lights](#Preferences-status-lights).
+Настройки можно изменить в [Настройках > Обзор > Статус](#Preferences-status-lights).
 
-Depending on the pump you use, you may not have all of these icons.
+В зависимости от помпы у вас могут отсутствовать некоторые пиктограммы.
 
 (aaps-screens-main-graph)=
 
@@ -205,27 +205,27 @@ Depending on the pump you use, you may not have all of these icons.
 
 ![Раздел F](../images/Home2020_MainGraph.png)
 
-The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
+График показывает уровень глюкозы в крови (ГК) считываемый с мониторинга глюкозы (CGM).
 
 Здесь показаны заметки, введенные на вкладке действия, такие как калибровка с глюкометра и записи углеводов, а также переключения профиля.
 
-Long press on the graph to change the timescale. Можно выбрать отображение последних 6, 8, 12, 18 или 24 часов.
+Длительное нажатие на графике изменит его масштаб. Можно выбрать отображение последних 6, 8, 12, 18 или 24 часов.
 
 Зеленая область отражает ваш целевой диапазон.
 
-Blue triangles show [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings).
+Синие треугольники отображают микроболюсы[SMB](#Open-APS-features-super-micro-bolus-smb) - если они включены в [Настройках > OpenAPS SMB](#Preferences-openaps-smb-settings).
 
 (AapsScreens-activate-optional-information)=
 
 #### Активация дополнительной информации
 
-On the main graph, you can switch on these optional information:
+На главном графике можно включить следующую дополнительную информацию:
 
 * Прогнозирование
 * Базал
 * Нагрузка - кривая действия инсулина
 
-To show this information, click the triangle on the right side of the main graph. Для главного графика доступны три варианта выше строки "\---\---- График 1 \---\----".
+Чтобы показать эту информацию, нажмите на маленький треугольник справа от основного графика. Для главного графика доступны три варианта выше строки "\---\---- График 1 \---\----".
 
 ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
@@ -233,31 +233,31 @@ To show this information, click the triangle on the right side of the main graph
 
 #### Линии прогнозирования
 
-* **Orange** line: [COB](CobCalculation) (color is used generally to represent COB and carbs)
+* **Оранжевая** линия: активные углеводы [COB](CobCalculation)- (этот цвет как правило используется для представления активных углеводов COB и углеводов в целом)
     
-    This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. Эта линия появляется только при известном наличии активных углеводов COB.
+    Эта линия прогнозирования показывает, где будет ГК (а не сами активные углеводы COB) на основе текущих настроек **Профиля** с учетом того, что отклонения из-за усвоения углеводов останутся постоянными. Эта линия появляется только при известном наличии активных углеводов COB.
 
-* **Dark blue** line: IOB (color is used generally to represent IOB and insulin)
+* **Темно-синяя** линия: активный инсулин IOB (этот цвет обычно используется для отображения активного инсулина IOB и инсулина)
     
-    This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+    Эта линия прогнозирования показывает, что будет происходить только под воздействием инсулина. Например, если ввести инсулин, а потом не есть никаких углеводов.
 
 * **Голубая** линия: нулевой временный базал (предсказанная ГК, если будет установлена временная базальная скорость в 0%)
     
-    This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+    Эта линия прогнозирования показывает, как изменится траектория ГК, если помпа прекратит введение инсулина (0% временной базальной скорости TBR).
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+    *Эта линия появляется только при использовании алгоритма [SMB](#Config-Builder-aps).*
 
-* **Dark yellow** line: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (un-announced meals)
+* <**Темно-желтая** линия: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (незаявленное питание)
     
-    Незапланированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других факторов. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+    Незапланированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других факторов. Линия прогнозирования аналогична **оранжевой линии активных углеводов COB**, но предполагает, что отклонения будут понижаться с постоянной скоростью (за счет продления текущей скорости понижения).
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+    *Эта линия появляется только при использовании алгоритма [SMB](#Config-Builder-aps).*
 
 * **Темно-оранжевая** линия: aCOB (ускоренное усвоение углеводов)
     
     Аналогично COB, но скорость усвоения углеводов считается постоянной и равной 10 мг/дл/5м (-0.555 ммоль/л/5м). Устарело и имеет ограниченную полезность.
     
-    *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
+    *Эта линия появляется только при использовании устаревшего алгоритма помощника болюса[AMA](#Config-Builder-aps).*
 
 Обычно реальная кривая глюкозы находится где-то между этих линий, или близка к той, которая ближе всего описывает вашу текущую ситуацию.
 
@@ -267,7 +267,7 @@ To show this information, click the triangle on the right side of the main graph
 
 **Пунктирная синяя** линия - это базальная скорость из профиля, если бы не было временных изменений базальной скорости (ВБС).
 
-When the standard basal rate is given, the area under the curve is shown in dark blue. When the basal rate is temporarily adjusted (increased or decreased), the area under the curve is shown in light blue.
+При стандартной базальной скорости область под линией показывается в темно-синем цвете. Когда базальная скорость временно изменяется (увеличивается или уменьшается), область под линией отображается в светло-синем цвете.
 
 #### Нагрузка
 
@@ -281,16 +281,16 @@ When the standard basal rate is given, the area under the curve is shown in dark
 
 Можно активировать до четырех дополнительных графиков ниже главного графика.
 
-To open settings for additional graphs click the triangle on the right side of the [main graph](#section-f---main-graph) and scroll down.
+Чтобы настроить дополнительные графики щелкните по маленькомутреугольнику справа от [главного](#section-f---main-graph) и прокрутите вниз.
 
 ![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
 
-To add another graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
+Для добавления дополнительного графика установите флажок с левой стороны его названия (например, \---\---- График 1 \---\----).
 
-Most users find the following configuration of additional graphs to be adequate :
+Большинство пользователей считают достаточной следующую конфигурацию дополнительных графиков:
 
-* Graph 1 with IOB, COB, Sensitivity
-* Graph 2 with Deviations and BGI.
+* График 1 с IOB, COB, чувствительностью
+* Диаграмма 2 с отклонениями и влиянием ГК
 
 #### Абсолютный инсулин
 
@@ -300,65 +300,65 @@ Most users find the following configuration of additional graphs to be adequate 
 
 Показывает инсулин, который вы имеете "на борту" (= активный инсулин в вашем теле). Он включает инсулин болюсов и временного базала (**но исключает базальную скорость, установленную в вашем профиле**).
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+Если бы не было болюсов, микроболюсов [SMB](#Open-APS-features-super-micro-bolus-smb), временных базалов TBR во время действия инсулина DIA, он равнялся бы нулю.
 
-Активный инсулин IOB может быть отрицательным, если у не осталось ни болюсов, ни нулевого/низкого временного базала в течение более длительного времени чем DIA.
+Активный инсулин IOB может быть отрицательным, если у васне осталось ни болюсов, ни нулевого/низкого временного базала в течение более длительного времени чем DIA.
 
-Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/YourAapsProfile.md).
+Усвоение инсулина зависит от времени его действия [DIA и настроек профиля инсулина](../SettingUpAaps/YourAapsProfile.md).
 
 #### Активные углеводы (COB)
 
 Показывает активные углеводы в организме (= еще не усвоенные углеводы).
 
-Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
+Усвоение инсулина зависит от [отклонений, замеченных алгоритмом](../DailyLifeWithAaps/CobCalculation.md).
 
 Если обнаружится более быстрое усвоение углеводов, чем ожидалось, будет подан инсулин, и это увеличит количество активного инсулина IOB (с учетом настроек безопасности).
 
 #### Чувствительность
 
-Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
+Показывает чувствительность, обнаруженную алгоритмом [Autosens](#Open-APS-features-autosens).
 
 Чувствительность - это расчет чувствительности к инсулину в результате нагрузки, гормонов и т.д.
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. До достижения этой цели линия Autosens на диаграмме отображается только для информации.
 
-#### Heart rate
+#### Частота сердцебиения
 
-This data may be available when using a [Garmin smartwatch](#Watchfaces-garmin).
+Эти данные могут быть доступны при использовании [смарт-часов Garmin](#Watchfaces-garmin).
 
 #### Отклонения
 
-* **Grey** bars show a deviation due to carbs. 
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
-* **Yellow** bars show a deviation due to UAM.
-* **Black** bars show small deviations not taken into account for sensitivity
+* **Серые** столбцы показывают отклонения, вызванные углеводами. 
+* **Зеленые** столбцы показывают, что ГК превышает уровень, ожидаемый алгоритмом. Зеленые столбцы используются для увеличения сопротивляемости в [Autosens](#Open-APS-features-autosens).
+* **Красные** столбцы показывают, что ГК ниже величины, ожидаемой алгоритмом. Красные столбцы используются для увеличения чувствительности в [Autosens](#Open-APS-features-autosens).
+* **Желтые** столбцы показывают отклонение, вызванное непредвиденным приемом пищи UAM.
+* **Черные** столбцы показывают небольшие отклонения, не принятые во внимание при расчете чувствительности
 
-#### Blood Glucose Impact
+#### Влияние ГК
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+Эта линия показывает, в какой степени ГК "должна" подниматься или падать, только на основании активности инсулина.
 
 ![Кнопки главного экрана](../images/Screenshots_DEV_BGI.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are greater than the BGI line, indicating that BG is rising. Later, during the hours marked **2**, BGI and DEV are pretty much in line, indicating that BG is stable.
+Эту линию стоит вывести вместе со столбцами отклонения. Они имеют одинаковые масштабы, но отличаются от других необязательных данных,, поэтому неплохо отобразить их на отдельном графике, как показано выше. Сравнение линии влияния ГК и шкалы отклонений -еще один способ понять флуктуации **ГК**. Здесь, в момент, отмеченный **1**, столбцы отклонения больше линии влияния ГК, что указывает на повышение ГК. Позднее, в часы, отмеченные **2**, линии влияния ГК и отклонения DEV в значительной степени совпадают, что указывает на стабильность ГК.
 
 ### Раздел H - Кнопки
 
 ![Кнопки главного экрана](../images/Home2020_Buttons.png)
 
-Buttons for Insulin, Carbs and Calculator are almost always visible. If the connection to the pump is lost, the insulin button will not be visible.
+Кнопки инсулина, углеводов и калькулятора отображаются почти всегда. При потере связи с помпой кнопка инсулина не видна.
 
-Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-buttons).
+Другие кнопки можно установить в [Настройках > Обзор > Кнопки](#Preferences-buttons).
 
-About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
+Что касается использовании кнопок Insulin, Carbs и Калькулятора : При включении в [Настройках > Обзор](#Preferences-show-notes-field-in-treatments-dialogs), поле **Примечания** позволяет ввести текст, который будет отображаться на главном графике, и может быть загружен в Nightscout - в зависимости от ваших настроек для клиента NS.
 
 #### Инсулин
 
 ![Кнопка инсулина](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#bolus-wizard).
+Чтобы ввести заданное количество инсулина без использования [калькулятора болюса](#bolus-wizard).
 
-By checking the box **Start eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
+Можно автоматически начать временную цель TT **Ожидаемый прием пищи**, поставив флажок рядом с опцией [Начать ВЦ ожидаемый прием пищи](#TempTargets-eating-soon-temp-target).
 
 If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) check the corresponding box. When checking this box, you get an additional field “Time offset”, that you can use to record an insulin injection made in the past.
 

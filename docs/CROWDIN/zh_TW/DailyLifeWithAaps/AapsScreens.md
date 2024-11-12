@@ -538,7 +538,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ![胰島素設定檔](../images/Screenshot_insulin_profile.png)
 
-這顯示您在[組態設置工具](#Config-Builder-insulin)中選擇的胰島素的活動曲線。 曲線將根據[DIA](#your-aaps-profile-duration-of-insulin-action) 和達到高峰的時間而有所不同。
+這顯示您在[組態建置工具](#Config-Builder-insulin)中選擇的胰島素的活動曲線。 曲線將根據[DIA](#your-aaps-profile-duration-of-insulin-action) 和達到高峰的時間而有所不同。
 
 **紫色** 線顯示在注射後胰島素量隨時間衰減的情況，**藍色**線顯示其活性狀態。 需要注意的重要點是衰減具有**長尾巴**。 如果您習慣手動注射，可能已經習慣認為胰島素的衰減大約需要 3.5 小時。 然而，在使用循環系統時，這個長尾變得重要，因為 **AAPS** 演算法的計算非常精確，這些微小的剩餘量在遞迴計算下會逐漸累積。 因此，**AAPS**使用最少 5 小時作為 DIA。
 
@@ -561,7 +561,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 每次系統從 CGM 獲取新讀取值時，計算都會運行。
 
-有關更多詳細資訊，請參見[組態設置工具頁面的APS部分](#Config-Builder-aps)。
+有關更多詳細資訊，請參見[組態建置工具頁面的APS部分](#Config-Builder-aps)。
 
 (aaps-screens-profile)=
 
