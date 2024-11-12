@@ -350,15 +350,15 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 Другие кнопки можно установить в [Настройках > Обзор > Кнопки](#Preferences-buttons).
 
-About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
+Что касается использовании кнопок Insulin, Carbs и Калькулятора : При включении в [Настройках > Обзор](#Preferences-show-notes-field-in-treatments-dialogs), поле **Примечания** позволяет ввести текст, который будет отображаться на главном графике, и может быть загружен в Nightscout - в зависимости от ваших настроек для клиента NS.
 
 #### Инсулин
 
 ![Кнопка инсулина](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#bolus-wizard).
+Чтобы ввести заданное количество инсулина без использования [калькулятора болюса](#bolus-wizard).
 
-By checking the box **Start eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
+Можно автоматически начать временную цель TT **Ожидаемый прием пищи**, поставив флажок рядом с опцией [Начать ВЦ ожидаемый прием пищи](#TempTargets-eating-soon-temp-target).
 
 If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) check the corresponding box. When checking this box, you get an additional field “Time offset”, that you can use to record an insulin injection made in the past.
 
