@@ -281,16 +281,16 @@
 
 Можно активировать до четырех дополнительных графиков ниже главного графика.
 
-To open settings for additional graphs click the triangle on the right side of the [main graph](#section-f---main-graph) and scroll down.
+Чтобы настроить дополнительные графики щелкните по маленькомутреугольнику справа от [главного](#section-f---main-graph) и прокрутите вниз.
 
 ![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
 
-To add another graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
+Для добавления дополнительного графика установите флажок с левой стороны его названия (например, \---\---- График 1 \---\----).
 
-Most users find the following configuration of additional graphs to be adequate :
+Большинство пользователей считают достаточной следующую конфигурацию дополнительных графиков:
 
-* Graph 1 with IOB, COB, Sensitivity
-* Graph 2 with Deviations and BGI.
+* График 1 с IOB, COB, чувствительностью
+* Диаграмма 2 с отклонениями и влиянием ГК
 
 #### Абсолютный инсулин
 
@@ -300,39 +300,39 @@ Most users find the following configuration of additional graphs to be adequate 
 
 Показывает инсулин, который вы имеете "на борту" (= активный инсулин в вашем теле). Он включает инсулин болюсов и временного базала (**но исключает базальную скорость, установленную в вашем профиле**).
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+Если бы не было болюсов, микроболюсов [SMB](#Open-APS-features-super-micro-bolus-smb), временных базалов TBR во время действия инсулина DIA, он равнялся бы нулю.
 
-Активный инсулин IOB может быть отрицательным, если у не осталось ни болюсов, ни нулевого/низкого временного базала в течение более длительного времени чем DIA.
+Активный инсулин IOB может быть отрицательным, если у васне осталось ни болюсов, ни нулевого/низкого временного базала в течение более длительного времени чем DIA.
 
-Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/YourAapsProfile.md).
+Усвоение инсулина зависит от времени его действия [DIA и настроек профиля инсулина](../SettingUpAaps/YourAapsProfile.md).
 
 #### Активные углеводы (COB)
 
 Показывает активные углеводы в организме (= еще не усвоенные углеводы).
 
-Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
+Усвоение инсулина зависит от [отклонений, замеченных алгоритмом](../DailyLifeWithAaps/CobCalculation.md).
 
 Если обнаружится более быстрое усвоение углеводов, чем ожидалось, будет подан инсулин, и это увеличит количество активного инсулина IOB (с учетом настроек безопасности).
 
 #### Чувствительность
 
-Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
+Показывает чувствительность, обнаруженную алгоритмом [Autosens](#Open-APS-features-autosens).
 
 Чувствительность - это расчет чувствительности к инсулину в результате нагрузки, гормонов и т.д.
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. До достижения этой цели линия Autosens на диаграмме отображается только для информации.
 
-#### Heart rate
+#### Частота сердцебиения
 
-This data may be available when using a [Garmin smartwatch](#Watchfaces-garmin).
+Эти данные могут быть доступны при использовании [смарт-часов Garmin](#Watchfaces-garmin).
 
 #### Отклонения
 
-* **Grey** bars show a deviation due to carbs. 
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
-* **Yellow** bars show a deviation due to UAM.
-* **Black** bars show small deviations not taken into account for sensitivity
+* **Серые** столбцы показывают отклонения, вызванные углеводами. 
+* **Зеленые** столбцы показывают, что ГК превышает уровень, ожидаемый алгоритмом. Зеленые столбцы используются для увеличения сопротивляемости в [Autosens](#Open-APS-features-autosens).
+* **Красные** столбцы показывают, что ГК ниже величины, ожидаемой алгоритмом. Красные столбцы используются для увеличения чувствительности в [Autosens](#Open-APS-features-autosens).
+* **Желтые** столбцы показывают отклонение, вызванное непредвиденным приемом пищи UAM.
+* **Черные** столбцы показывают небольшие отклонения, не принятые во внимание при расчете чувствительности
 
 #### Blood Glucose Impact
 
