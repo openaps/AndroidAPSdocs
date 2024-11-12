@@ -88,10 +88,10 @@
 1. Зеленый круг = замкнутый цикл активен
 2. Зелёный круг с пунктирной линией = [ приостановка на низкой ГК (LGS)](#objectives-objective6)
 3. Красный круг = цикл деактивирован (постоянно отключен)
-4. Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-6. Orange circle = super bolus running - remaining time is shown below icon
-7. Blue circle with dotted line = open loop
+4. Желтый круг = цикл приостановлен (временно приостановлен, но базальный инсулин будет вводиться) - оставшееся время паузы отображается под пиктограммой
+5. Серый круг = помпа отключена (временно отключена любая подача инсулина) - оставшееся время остановки отображается под пиктограммой
+6. Оранжевый круг = запущен суперболюс - оставшееся время отображаешься под пиктограммой
+7. Синий круг с пунктирной линией = активен незамкнутый цикл
 
 Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
 
