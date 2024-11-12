@@ -93,32 +93,32 @@
 6. Оранжевый круг = запущен суперболюс - оставшееся время отображаешься под пиктограммой
 7. Синий круг с пунктирной линией = активен незамкнутый цикл
 
-Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
+Короткое или длинное нажатие на пиктограмму откроет диалоговое окно для переключения между режимами контура (Закрытый, Приостановка на низкой ГК, Открытый или Отключен), для отключения / возобновления цикла или отключения / подключения помпы обратно.
 
-* If short press on Loop icon, a validation is required after selection in Loop Dialog
+* Если диалоговое окно было вызвано коротким нажатием - после смены режима появится запрос на подтверждение. Если долгим нажатием - смена режима применится сразу.
     
     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
 (aaps-screens-bg-warning-sign)=
 
-#### BG warning sign
+#### Восклицательный знак возле ГК
 
-If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
+Если по какой-то причине возникают проблемы с показаниями ГК, которые поступают в **AAPS**, на главном экране под значением ГК появляется восклицательный знак.
 
-##### Red warning sign: Duplicate BG data
+##### Красный восклицательный знак: Задвоенные данные ГК
 
-The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
+Красный предупреждающий знак служит сигналом для немедленных действий: поступают **дублирующиеся данные ГК**, не позволяющие алгоритму цикла работать правильно. Поэтому замкнутый цикл будет отключен до устранения проблемы.
 
-    {admonition} Your loop is not running
-    :class: note
-    Your loop is not running until you solve this issue !
+    {admonition} {предупреждение} Цикл не запущен
+    :class::класс: примечание
+    Цикл не будет работать до устранения проблемы!
 
 ![Красное предупреждение о ГК](../images/bg_warn_red.png)
 
-Следует выяснить, почему данные ГК дублируются:
+Следует выяснить, почему дублируются данные ГК:
 
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (Для Heroku [подробности можно найти здесь](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
+* Активирован ли мост Dexcom на сайте NS? Отключите мост, перейдя в панель управления сайта NS, отредактируйте переменную «enable» и удалите оттуда "bridge". (Для Heroku [подробности можно найти здесь](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Данные о ГК поступают в Nightscout (NS) из нескольких источников? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
 * Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
 * Last resort: In **AAPS**, go to [Preferences > NSClient](#Preferences-nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
 
