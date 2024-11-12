@@ -81,7 +81,7 @@ AAPS 介紹 <./Getting-Started/Introduction.md>
 設置嚮導 <./SettingUpAaps/SetupWizard.md>
 您的 AAPS 設定檔 <./SettingUpAaps/YourAapsProfile.md>
 變更 AAPS 配置 <./SettingUpAaps/ChangeAapsConfiguration.md>
-- 組態設置工具 <./SettingUpAaps/ConfigBuilder.md>
+- 組態設建工具 <./SettingUpAaps/ConfigBuilder.md>
 - 偏好設定 <./SettingUpAaps/Preferences.md>
 完成目標 <./SettingUpAaps/CompletingTheObjectives.md>
 ```
