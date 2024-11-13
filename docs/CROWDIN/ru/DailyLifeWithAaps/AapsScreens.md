@@ -449,13 +449,13 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 #### Комбинации активных углеводов COB и активного инсулина IOB и что они означают
 
 * По соображениям безопасности флажок активного инсулина IOB не может быть снят когда отмечены активные углеводы COB, из-за риска передозировки инсулина, поскольку **AAPS **не может учесть то, что уже введено.
-* If you tick COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Это приводит к уведомлению о "недостатке углеводов".
+* Если отметить галочками COB и IOB, то будут учтены неусвоенные углеводы которые еще не покрыты инсулином + все инсулины, которые были введены в качестве временного базала или микроболюсов SMB.
+* Если отметить галочкой активный инсулин IOB без активных углеводов COB, **AAPS** примет в расчет уже введенный инсулин, но не инсулин на углеводы, которые еще предстоит усвоить. Это приводит к уведомлению о "недостатке углеводов".
 * Если подается болюс на ** дополнительную еду** вскоре после болюса на прием пищи (напр. дополнительный десерт) полезно **снять все галочки**. Таким образом, добавляются только новые углеводы а поскольку основная еда не еще не усвоена, то IOB не будет точно соответствовать углеводам COB вскоре после болюса на еду.
 
 ![BolusWizard with Details](../images/Home2021_BolusWizard_Details.png)
 
-The box near the eye allows you to choose between the detailed view, with the numbers entering the calculation for each item, or the simple view with icons. Pressing on an icon will enable / disable this entry from the calculation.
+Блок возле символа глаза позволяет выбрать между подробным представлением, с числами, входящими в расчет каждого элемента, или простым видом с пиктограммами. Нажатие на флажок включит / исключит эту запись из вычисления.
 
 (AapsScreens-wrong-cob-detection)=
 
@@ -463,9 +463,9 @@ The box near the eye allows you to choose between the detailed view, with the nu
 
 ![Медленное усвоение углеводов](../images/Calculator_SlowCarbAbsorption.png)
 
-If you see the warning above after using bolus wizard, **AAPS** has detected that the calculated COB value may be wrong. So, if you want to bolus again after a previous meal with COB, you should be aware of overdosing!
+Если после применения мастера болюса появляется вышеприведенное сообщение, то **AAPS** обнаружил, что расчет активных углеводов может быть неправильным. Так что, если вы хотите повторно ввести болюс после предшествуещей еды с активными углеводами, учитывайте возможность передозировки!
 
-For details, see the hints on [COB calculation page](#CobCalculation-detection-of-wrong-cob-values).
+Подробнее см. в подсказках на странице расчета активных углеводов [COB](#CobCalculation-detection-of-wrong-cob-values).
 
 (screens-action-tab)=
 
