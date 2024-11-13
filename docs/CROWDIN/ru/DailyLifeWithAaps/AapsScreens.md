@@ -534,34 +534,34 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 (AapsScreens-insulin-profile)=
 
-## Профиль Инсулина
+## Профиль инсулина
 
-![Профиль Инсулина](../images/Screenshot_insulin_profile.png)
+![Профиль инсулина](../images/Screenshot_insulin_profile.png)
 
 Это профиль активности инсулина, который вы выбрали в [конфигураторе](#Config-Builder-insulin). Кривые зависят от продолжительности действия инсулина [DIA](#your-aaps-profile-duration-of-insulin-action) и времени до пика.
 
-The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses minimum 5h as DIA.
+**Фиолетовая** линия показывает, сколько инсулина остается после его введения по мере усваивания, а **синяя** линия показывает его активность. Важно помнить, что усваивание инсулина имеет большую **остаточную длительность** (хвост). Если вы раньше управляли помпой вручную, то, вероятно, привыкли считать, что инсулин усваивается примерно за 3,5 часа. Тем не менее, когда вы используете замкнутый цикл длинные хвосты имеют важное значение при расчетах, т. к. все эти незначительные хвостики складываются и становятся значимыми в дальнейших расчетах алгоритма **AAPS**. Поэтому в **AAPS** время действия инсулина DIA указывается минимум 5 часов.
 
 Более подробное обсуждение различных типов инсулина, их профилей активности и почему это важно, см. здесь [Понимание новых кривых IOB на основе экспоненциальных кривых активности](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
 Отличная статья об этом: [Почему мы регулярно ошибались в определении длительности действия инсулина (DIA) и почему это важно…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-And even more at: [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+И еще больше в: [Экспоненциальные кривые инсулина + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Статус помпы
 
 ![Статус помпы](../images/Screenshot_PumpStatus.png)
 
 * Разная информация о состоянии помпы. Отображаемая информация зависит от модели помпы.
-* See [pumps page](../Getting-Started/CompatiblePumps.md) for details.
+* Подробнее см страницу [помпы](../Getting-Started/CompatiblePumps.md).
 
 ## Замкнутый цикл, помощник болюса AMA / микроболюсы SMB
 
-These tabs show details about the algorithm's calculations and why **AAPS** acts the way it does.
+Эти вкладки показывают подробную информацию о расчетах алгоритма и почему **AAPS** действует так, а не иначе.
 
-Calculations are run each time the system gets a fresh reading from the CGM.
+Расчеты производятся каждый раз, когда система получает свежие данные мониторинга CGM.
 
-For more details see [APS section on config builder page](#Config-Builder-aps).
+Дополнительную информацию см. в разделе [система ИПЖ на вкладке конфигуратора](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
@@ -569,43 +569,43 @@ For more details see [APS section on config builder page](#Config-Builder-aps).
 
 ![Profile](../images/Screenshots_Profile.png)
 
-Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+Профиль содержит информацию о ваших индивидуальных параметрах диабета, дополнительную информацию см на стр **[профиль](../SettingUpAaps/YourAapsProfile.md)**.
 
-The buttons on this page allow you to manage your profiles :
+Кнопки на этой странице позволяют управлять профилями:
 
-* **Green plus**: create new profile from scratch
-* **Red X**: delete the profile currently on screen
-* **Blue arrow**: duplicate the profile currently on screen
+* **Зеленый плюс**: создать новый профиль с нуля
+* **Красный X**: удалить профиль на экране
+* **Синяя стрелка**: дублировать профиль, показываемый в настоящее время на экране
 
-When you want to make any changes to a profile, make sure you are editing the correct profile. When you reach the profile tab, it may not show the current profile in use, but the first one in the list.
+Если вы вносите изменения в профиль, убедитесь, что редактируете правильный профиль. Когда вы попадете на вкладку профиля, она может не показывать используемый текущий профиль, но показывает первый из списка.
 
 ## Автоматизация
 
-See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
+Смотрите специальную страницу, посвященную этому вопросу [здесь](../DailyLifeWithAaps/Automations.md).
 
 ## клиент NS
 
 ![клиент NS](../images/Screenshots_NSClient.png)
 
-This page displays the status of the connection with your Nightscout site.
+Эта страница отображает состояние связи с вашим сайтом Nightscout.
 
-Settings can be changed in [Preferences > NS Client](#Preferences-nsclient).
+Настройки можно изменить в [Настройках > Клиент NS](#Preferences-nsclient).
 
-For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
+Для устранения неполадок см [эту страницу ](../GettingHelp/TroubleshootingNsClient.md).
 
 ## Источник ГК - xDrip+, BYODA...
 
 ![BG Source tab - here Nightscout](../images/Screenshots_BGSource.png)
 
-Depending on your BG source settings, this tab is named differently.
+В зависимости от источника ГК, заданного в параметрах, эта вкладка называется по-разному.
 
-Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low) or duplicate readings.
+Показывает хронологию показаний мониторинга и предлагает возможность удаления данных при сбое (например, при компрессии сенсора).
 
-(aaps-screens-treatments)=
+(aaps-screens-treatments) =
 
 ## Терапия
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder. In this view, you can view and alter the history of the following treatments:
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Терапия. Его невозможно показать в главном меню через Конфигуратор. In this view, you can view and alter the history of the following treatments:
 
 * Bolus & carbs
 * [Пролонгированный болюс](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
