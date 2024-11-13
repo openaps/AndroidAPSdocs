@@ -362,51 +362,51 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 Если не хотите подавать болюс с помпы, а только сделать запись о введенном инсулине (например, поданного шприц-ручкой), поставьте флажок рядом с соответствующей опцией. При установке этого флажка, появится дополнительное поле "Смещение по времени", которое можно использовать для записи об инъекциях, сделанных в прошлом.
 
-Можно использовать кнопки для быстрого приращения количества инсулина. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+Можно использовать кнопки для быстрого приращения количества инсулина. Величину приращения можно изменить в [Настройках > Общие > Кнопки](#Preferences-buttons).
 
 #### Углеводы
 
 ![Кнопка углеводов](../images/Home2020_ButtonCarbs.png)
 
-Делает запись об углеводах без подачи болюса.
+Для записи углеводов без подачи болюса.
 
-Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) can be set directly by checking the box.
+Можно активировать [заранее настроенную временную цель](#TempTargets-hypo-temp-target) отметив ее флажком.
 
-**Time offset**: When will you / have you been eaten carbs (in minutes).
+**Смещение по времени**: сколько минут пройдет до начала приема пищи (или после этого момента).
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs)
+**Длительность действия**: для ["растянутых углеводов"](ExtendedCarbs)
 
-You can use the buttons to quickly increase the carb amount. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+Можно использовать кнопки для быстрого приращения количества углеводов. Величину приращения можно изменить в [Настройках > Общие > Кнопки](#Preferences-buttons).
 
 #### Калькулятор
 
-See Bolus Wizard [section below](#bolus-wizard).
+Смотрите раздел Мастер болюса [ниже](#bolus-wizard).
 
 #### Калибровки
 
 Отправляет калибровку в xDrip+ или открывает диалог калибровки Dexcom.
 
-Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
+Должен быть активирован в [Настройках > Обзор > Кнопки](#Preferences-buttons).
 
 #### CGM / НМГ
 
 Открывает xDrip+.
 
-Back button returns to **AAPS**.
+Кнопка Назад возвращает в **AAPS**.
 
-Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
+Должен быть активирован в [Настройках > Обзор > Кнопки](#Preferences-buttons).
 
 #### Мастер быстрых настроек
 
 Быстрый ввод заранее заданного количества углеводов с предварительно настроенными параметрами расчета дозы.
 
-Details are set up in [Preferences > Overview > QuickWizard settings](#Preferences-quick-wizard).
+Детали настраиваются в [Настройках > Общее > БыстрыйБолюс настройки](#Preferences-quick-wizard).
 
 ## Мастер Болюса
 
 ![Мастер Болюса](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus, this is where you will normally make it from.
+Чаще всего болюс на еду вводят отсюда.
 
 ### Раздел I
 
@@ -420,27 +420,27 @@ When you want to make a meal bolus, this is where you will normally make it from
 
 Поле ГК обычно уже заполнено данными с мониторинга. Если мониторинг ГК не работает, то поле будет пустым.
 
-In the **Carbs** field, you add your estimate of the amount of carbs - or equivalent - that you want to bolus for.
+В поле **Углеводы** вводим расчетное количество углеводов - или эквивалент - на которое хотим дать болюс.
 
-The **Corr** field is if you want to modify the end dosage for some reason.
+Поле **Коррекция** - для корректировки, если вы по какой-либо причине хотите изменить конечную дозу.
 
-The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Вы можете добавить отрицательное число в это поле, если даете болюс на прошлые углеводы.
+Поле **Время приема углеводов** предназначено для преболюса, чтобы сообщить системе о задержке в появлении углеводов. Вы можете добавить отрицательное число в это поле, если даете болюс на прошлые углеводы.
 
-**Eating reminder** : For carbs in the future, the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at the given time, when to eat the carbs you have input into **AAPS**.
+**Напоминание о "будущих" углеводах**: можно поставить флажок в поле рядом с иконкой будильника (флажок поставится автоматически, если указано время в будущем), в этом случае в указанное время сработает оповещение о необходимости начать есть заведенные в **AAPS** углеводы.
 
 ![Мастер болюса с напоминанием о питании](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Раздел K
 
-**Profile** allows you to select a different profile than the current one, to make the calculation for the insulin required. This profile selection applies only for the current bolus, it is not a profile change.
+**Профиль** позволяет выбрать другой профиль, отличный от текущего профиля, для расчета требуемого инсулина. Выбор профиля применяется только для текущего болюса, это не изменение профиля.
 
-**Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](#Preferences-advanced-settings-overview). Идея заключается в том, чтобы доставить инсулин по возможности раньше и, желательно, сократить пики.
+**Суперболюс** означает, что к обычной дозе вводимого сейчас болюса будет добавлена база следующих двух часов, а ВБС на это время будет установлен в ноль, чтобы компенсировать этот дополнительный инсулин. Эта опция появляется только если отмечено "активировать суперболюс в помощнике болюса" в [Настройках > Начало > Дополнительные настройки](#Preferences-advanced-settings-overview). Идея заключается в том, чтобы доставить инсулин по возможности раньше и, желательно, сократить пики.
 
 Подробная информация находится на сайте [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Раздел L
 
-Details of the wizard's bolus calculation.
+Подробности расчётов мастера болюса.
 
 You can deselect any that you do not want to include, but you normally wouldn't want to.
 
