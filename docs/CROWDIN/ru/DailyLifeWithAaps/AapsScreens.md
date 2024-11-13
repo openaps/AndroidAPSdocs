@@ -360,53 +360,53 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 Можно автоматически начать временную цель TT **Ожидаемый прием пищи**, поставив флажок рядом с опцией [Начать ВЦ ожидаемый прием пищи](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) check the corresponding box. When checking this box, you get an additional field “Time offset”, that you can use to record an insulin injection made in the past.
+Если не хотите подавать болюс с помпы, а только сделать запись о введенном инсулине (например, поданного шприц-ручкой), поставьте флажок рядом с соответствующей опцией. При установке этого флажка, появится дополнительное поле "Смещение по времени", которое можно использовать для записи об инъекциях, сделанных в прошлом.
 
-You can use the buttons to quickly increase the insulin quantity. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+Можно использовать кнопки для быстрого приращения количества инсулина. Величину приращения можно изменить в [Настройках > Общие > Кнопки](#Preferences-buttons).
 
 #### Углеводы
 
 ![Кнопка углеводов](../images/Home2020_ButtonCarbs.png)
 
-Делает запись об углеводах без подачи болюса.
+Для записи углеводов без подачи болюса.
 
-Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) can be set directly by checking the box.
+Можно активировать [заранее настроенную временную цель](#TempTargets-hypo-temp-target) отметив ее флажком.
 
-**Time offset**: When will you / have you been eaten carbs (in minutes).
+**Смещение по времени**: сколько минут пройдет до начала приема пищи (или после этого момента).
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs)
+**Длительность действия**: для ["растянутых углеводов"](ExtendedCarbs)
 
-You can use the buttons to quickly increase the carb amount. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+Можно использовать кнопки для быстрого приращения количества углеводов. Величину приращения можно изменить в [Настройках > Общие > Кнопки](#Preferences-buttons).
 
 #### Калькулятор
 
-See Bolus Wizard [section below](#bolus-wizard).
+Смотрите раздел Мастер болюса [ниже](#bolus-wizard).
 
 #### Калибровки
 
 Отправляет калибровку в xDrip+ или открывает диалог калибровки Dexcom.
 
-Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
+Должен быть активирован в [Настройках > Обзор > Кнопки](#Preferences-buttons).
 
 #### CGM / НМГ
 
 Открывает xDrip+.
 
-Back button returns to **AAPS**.
+Кнопка Назад возвращает в **AAPS**.
 
-Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
+Должен быть активирован в [Настройках > Обзор > Кнопки](#Preferences-buttons).
 
 #### Мастер быстрых настроек
 
 Быстрый ввод заранее заданного количества углеводов с предварительно настроенными параметрами расчета дозы.
 
-Details are set up in [Preferences > Overview > QuickWizard settings](#Preferences-quick-wizard).
+Детали настраиваются в [Настройках > Общее > БыстрыйБолюс настройки](#Preferences-quick-wizard).
 
 ## Мастер Болюса
 
 ![Мастер Болюса](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus, this is where you will normally make it from.
+Чаще всего болюс на еду вводят отсюда.
 
 ### Раздел I
 
@@ -420,42 +420,42 @@ When you want to make a meal bolus, this is where you will normally make it from
 
 Поле ГК обычно уже заполнено данными с мониторинга. Если мониторинг ГК не работает, то поле будет пустым.
 
-In the **Carbs** field, you add your estimate of the amount of carbs - or equivalent - that you want to bolus for.
+В поле **Углеводы** вводим расчетное количество углеводов - или эквивалент - на которое хотим дать болюс.
 
-The **Corr** field is if you want to modify the end dosage for some reason.
+Поле **Коррекция** - для корректировки, если вы по какой-либо причине хотите изменить конечную дозу.
 
-The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Вы можете добавить отрицательное число в это поле, если даете болюс на прошлые углеводы.
+Поле **Время приема углеводов** предназначено для преболюса, чтобы сообщить системе о задержке в появлении углеводов. Вы можете добавить отрицательное число в это поле, если даете болюс на прошлые углеводы.
 
-**Eating reminder** : For carbs in the future, the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at the given time, when to eat the carbs you have input into **AAPS**.
+**Напоминание о "будущих" углеводах**: можно поставить флажок в поле рядом с иконкой будильника (флажок поставится автоматически, если указано время в будущем), в этом случае в указанное время сработает оповещение о необходимости начать есть заведенные в **AAPS** углеводы.
 
 ![Мастер болюса с напоминанием о питании](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Раздел K
 
-**Profile** allows you to select a different profile than the current one, to make the calculation for the insulin required. This profile selection applies only for the current bolus, it is not a profile change.
+**Профиль** позволяет выбрать другой профиль, отличный от текущего профиля, для расчета требуемого инсулина. Выбор профиля применяется только для текущего болюса, это не изменение профиля.
 
-**Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](#Preferences-advanced-settings-overview). Идея заключается в том, чтобы доставить инсулин по возможности раньше и, желательно, сократить пики.
+**Суперболюс** означает, что к обычной дозе вводимого сейчас болюса будет добавлена база следующих двух часов, а ВБС на это время будет установлен в ноль, чтобы компенсировать этот дополнительный инсулин. Эта опция появляется только если отмечено "активировать суперболюс в помощнике болюса" в [Настройках > Начало > Дополнительные настройки](#Preferences-advanced-settings-overview). Идея заключается в том, чтобы доставить инсулин по возможности раньше и, желательно, сократить пики.
 
 Подробная информация находится на сайте [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Раздел L
 
-Details of the wizard's bolus calculation.
+Подробности расчётов мастера болюса.
 
-You can deselect any that you do not want to include, but you normally wouldn't want to.
+Можно отменить выбор нежелательный опций, но обычно это не требуется.
 
-For safety reasons the **TT box must be ticked manually**, if you want the bolus wizard to calculate based on an existing temporary target.
+По соображениям безопасности флажок против временной цели **TT ставится вручную**, если нужно, чтобы калькулятор болюса отталкивался от действующей временной цели.
 
 #### Комбинации активных углеводов COB и активного инсулина IOB и что они означают
 
-* For safety reasons, the IOB box cannot be unticked when COB box is ticked as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
-* If you tick COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Это приводит к уведомлению о "недостатке углеводов".
+* По соображениям безопасности флажок активного инсулина IOB не может быть снят когда отмечены активные углеводы COB, из-за риска передозировки инсулина, поскольку **AAPS **не может учесть то, что уже введено.
+* Если отметить галочками COB и IOB, то будут учтены неусвоенные углеводы которые еще не покрыты инсулином + все инсулины, которые были введены в качестве временного базала или микроболюсов SMB.
+* Если отметить галочкой активный инсулин IOB без активных углеводов COB, **AAPS** примет в расчет уже введенный инсулин, но не инсулин на углеводы, которые еще предстоит усвоить. Это приводит к уведомлению о "недостатке углеводов".
 * Если подается болюс на ** дополнительную еду** вскоре после болюса на прием пищи (напр. дополнительный десерт) полезно **снять все галочки**. Таким образом, добавляются только новые углеводы а поскольку основная еда не еще не усвоена, то IOB не будет точно соответствовать углеводам COB вскоре после болюса на еду.
 
 ![BolusWizard with Details](../images/Home2021_BolusWizard_Details.png)
 
-The box near the eye allows you to choose between the detailed view, with the numbers entering the calculation for each item, or the simple view with icons. Pressing on an icon will enable / disable this entry from the calculation.
+Блок возле символа глаза позволяет выбрать между подробным представлением, с числами, входящими в расчет каждого элемента, или простым видом с пиктограммами. Нажатие на флажок включит / исключит эту запись из вычисления.
 
 (AapsScreens-wrong-cob-detection)=
 
@@ -463,9 +463,9 @@ The box near the eye allows you to choose between the detailed view, with the nu
 
 ![Медленное усвоение углеводов](../images/Calculator_SlowCarbAbsorption.png)
 
-If you see the warning above after using bolus wizard, **AAPS** has detected that the calculated COB value may be wrong. So, if you want to bolus again after a previous meal with COB, you should be aware of overdosing!
+Если после применения мастера болюса появляется вышеприведенное сообщение, то **AAPS** обнаружил, что расчет активных углеводов может быть неправильным. Так что, если вы хотите повторно ввести болюс после предшествуещей еды с активными углеводами, учитывайте возможность передозировки!
 
-For details, see the hints on [COB calculation page](#CobCalculation-detection-of-wrong-cob-values).
+Подробнее см. в подсказках на странице расчета активных углеводов [COB](#CobCalculation-detection-of-wrong-cob-values).
 
 (screens-action-tab)=
 
@@ -475,40 +475,40 @@ For details, see the hints on [COB calculation page](#CobCalculation-detection-o
 
 ### Действия-раздел M
 
-Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#section-b---profile--target) on homescreen.
+Кнопка **[Смена профиля](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** является альтернативой нажатию на [текущий профиль](#section-b---profile--target) на главном экране.
 
-Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#section-b---profile--target) on homescreen.
+Кнопка **[Временная цель](../DailyLifeWithAaps/TempTargets.md)** - альтернатива нажатию на [текущую цель](#section-b---profile--target) на главном экране.
 
 Кнопка начала или отмены временного базала. Обратите внимание, что кнопка меняется с “TEMPBASAL” (ВРЕМБАЗАЛ) на “CANCEL x%” (ОТМЕНА х%), после начала действия.
 
-Even though [extended boluses](#Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+Несмотря на то, что [пролонгированные болюсы](#Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) не работают в замкнутом цикле, некоторые всё равно просили оставить эту опцию.
 
 * Эта опция доступна только для помпDana RS и Insight. 
     * Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов.
-    * Make sure to read the [details](../DailyLifeWithAaps/ExtendedCarbs.md) before using this option.
+    * Убедитесь, что ознакомились с [подробностями](../DailyLifeWithAaps/ExtendedCarbs.md) перед использованием этой опции.
 
 ### Портал терапии-раздел N
 
-Displays information on:
+Отображает информацию о:
 
-* sensor age & level (battery percentage)
-* insulin age & level (units)
-* cannula age
-* pump battery age & level (percentage
+* время, отработанное сенсором & уровень заряда (процент заряда батареи)
+* время нахождения инсулина в картридже & уровень (единицы)
+* отработанное время (возраст) катетера помпы
+* время, отработанное батареей (аккумулятором) помпы & уровень заряда (процент)
 
-Less information will be shown if **low resolution skin** is used ([Preferences > General > Skin](#Preferences-skin)).
+Будет показано меньше информация, если применена э**тема экрана с низким разрешением ** ([Настройки > Общее > тема оформления](#Preferences-skin)).
 
-(screens-sensor-level-battery)=
+(снимки экрана-сенсор-уровень-заряд батареи)
 
 #### Уровень заряда сенсора (батарея)
 
-Works for CGM with an additional transmitter such as MiaoMiao 2. (Датчик должен послать информацию об уровне батареи на xDrip+.)
+Работает в мониторинге с дополнительным передатчиком, например MiaoMiao 2. (Датчик должен послать информацию об уровне батареи на xDrip+.)
 
-Thresholds can be set in [Preferences > Overview > Status lights](#Preferences-status-lights).
+Пороговые значения можно задать в [Настройках расширений > Индикаторы состояния](#Preferences-status-lights).
 
 ### Портал терапии-раздел О
 
-BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal---section-n).
+Контроль ГК, заполнение инфузионного набора, установка сенсора и замена батареи помпы - основные данные в [разделе N](#careportal---section-n).
 
 Кнопка Заполнение инфузионного набора позволяет регистрировать смену места катетера помпы, а также замену картриджа инсулина.
 
@@ -516,9 +516,9 @@ BG check, prime/fill, sensor insert and pump battery change are the base for the
 
 ### Инструменты - раздел P
 
-#### Просмотр логов
+#### Просмотр журнала
 
-Allows you to ride back in **AAPS** [history](../Maintenance/Reviewing.md).
+Позволяет перемещаться по **журналу** [AAPS](../Maintenance/Reviewing.md).
 
 #### TDD / общая суточная доза инсулина
 
@@ -526,7 +526,7 @@ Allows you to ride back in **AAPS** [history](../Maintenance/Reviewing.md).
 
 Некоторые врачи рекомендуют - особенно для новых пользователей - соотношение базал-болюс 50:50.
 
-Therefore, ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours).
+Поэтому эта величина рассчитывается как TDD / 2 * TBB (общая суточная база = сумма базала в течение 24 часов).
 
 Другие принимают за суточную базу TBB диапазон от 32% до 37% от суммарной суточной дозы TDD.
 
@@ -534,34 +534,34 @@ Therefore, ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal
 
 (AapsScreens-insulin-profile)=
 
-## Профиль Инсулина
+## Профиль инсулина
 
-![Профиль Инсулина](../images/Screenshot_insulin_profile.png)
+![Профиль инсулина](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
+Это профиль активности инсулина, который вы выбрали в [конфигураторе](#Config-Builder-insulin). Кривые зависят от продолжительности действия инсулина [DIA](#your-aaps-profile-duration-of-insulin-action) и времени до пика.
 
-The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses minimum 5h as DIA.
+**Фиолетовая** линия показывает, сколько инсулина остается после его введения по мере усваивания, а **синяя** линия показывает его активность. Важно помнить, что усваивание инсулина имеет большую **остаточную длительность** (хвост). Если вы раньше управляли помпой вручную, то, вероятно, привыкли считать, что инсулин усваивается примерно за 3,5 часа. Тем не менее, когда вы используете замкнутый цикл длинные хвосты имеют важное значение при расчетах, т. к. все эти незначительные хвостики складываются и становятся значимыми в дальнейших расчетах алгоритма **AAPS**. Поэтому в **AAPS** время действия инсулина DIA указывается минимум 5 часов.
 
 Более подробное обсуждение различных типов инсулина, их профилей активности и почему это важно, см. здесь [Понимание новых кривых IOB на основе экспоненциальных кривых активности](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
 Отличная статья об этом: [Почему мы регулярно ошибались в определении длительности действия инсулина (DIA) и почему это важно…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-And even more at: [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+И еще больше в: [Экспоненциальные кривые инсулина + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Статус помпы
 
 ![Статус помпы](../images/Screenshot_PumpStatus.png)
 
 * Разная информация о состоянии помпы. Отображаемая информация зависит от модели помпы.
-* See [pumps page](../Getting-Started/CompatiblePumps.md) for details.
+* Подробнее см страницу [помпы](../Getting-Started/CompatiblePumps.md).
 
 ## Замкнутый цикл, помощник болюса AMA / микроболюсы SMB
 
-These tabs show details about the algorithm's calculations and why **AAPS** acts the way it does.
+Эти вкладки показывают подробную информацию о расчетах алгоритма и почему **AAPS** действует так, а не иначе.
 
-Calculations are run each time the system gets a fresh reading from the CGM.
+Расчеты производятся каждый раз, когда система получает свежие данные мониторинга CGM.
 
-For more details see [APS section on config builder page](#Config-Builder-aps).
+Дополнительную информацию см. в разделе [система ИПЖ на вкладке конфигуратора](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
@@ -569,142 +569,142 @@ For more details see [APS section on config builder page](#Config-Builder-aps).
 
 ![Profile](../images/Screenshots_Profile.png)
 
-Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+Профиль содержит информацию о ваших индивидуальных параметрах диабета, дополнительную информацию см на стр **[профиль](../SettingUpAaps/YourAapsProfile.md)**.
 
-The buttons on this page allow you to manage your profiles :
+Кнопки на этой странице позволяют управлять профилями:
 
-* **Green plus**: create new profile from scratch
-* **Red X**: delete the profile currently on screen
-* **Blue arrow**: duplicate the profile currently on screen
+* **Зеленый плюс**: создать новый профиль с нуля
+* **Красный X**: удалить профиль на экране
+* **Синяя стрелка**: дублировать профиль, показываемый в настоящее время на экране
 
-When you want to make any changes to a profile, make sure you are editing the correct profile. When you reach the profile tab, it may not show the current profile in use, but the first one in the list.
+Если вы вносите изменения в профиль, убедитесь, что редактируете правильный профиль. Когда вы попадете на вкладку профиля, она может не показывать используемый текущий профиль, но показывает первый из списка.
 
 ## Автоматизация
 
-See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
+Смотрите специальную страницу, посвященную этому вопросу [здесь](../DailyLifeWithAaps/Automations.md).
 
 ## клиент NS
 
 ![клиент NS](../images/Screenshots_NSClient.png)
 
-This page displays the status of the connection with your Nightscout site.
+Эта страница отображает состояние связи с вашим сайтом Nightscout.
 
-Settings can be changed in [Preferences > NS Client](#Preferences-nsclient).
+Настройки можно изменить в [Настройках > Клиент NS](#Preferences-nsclient).
 
-For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
+Для устранения неполадок см [эту страницу ](../GettingHelp/TroubleshootingNsClient.md).
 
 ## Источник ГК - xDrip+, BYODA...
 
 ![BG Source tab - here Nightscout](../images/Screenshots_BGSource.png)
 
-Depending on your BG source settings, this tab is named differently.
+В зависимости от источника ГК, заданного в параметрах, эта вкладка называется по-разному.
 
-Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low) or duplicate readings.
+Показывает хронологию показаний мониторинга и предлагает возможность удаления данных при сбое (например, при компрессии сенсора).
 
-(aaps-screens-treatments)=
+(aaps-screens-treatments) =
 
 ## Терапия
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder. In this view, you can view and alter the history of the following treatments:
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Терапия. Его невозможно показать в главном меню через Конфигуратор. Здесь можно просматривать и изменять историю следующих видов терапии:
 
-* Bolus & carbs
+* Болюсы & углеводы
 * [Пролонгированный болюс](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Временная базальная скорость
 * [Временная цель](../DailyLifeWithAaps/TempTargets.md)
 * [Переключение профиля](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes entered through action tab and notes in dialogues
-* User entry: other notes that are not sent to Nightscout
+* Портал терапии - примечания, введенные через вкладку действий и примечания в диалогах
+* Записи пользователя: другие заметки, которые не отправляются в Nightscout
 
-In the last column, the data source for each line is displayed in blue. It can be :
+В последнем столбце источник данных для каждой строки отображается синим. Это может быть :
 
-* NS for Nightscout : the data comes from or has been recorded to Nightscout
-* PH for Pump History : the data has been processed by the pump
+* NS или Nightscout : данные поступают или были записаны в Nightscout
+* PH или журнал помпы: данные, обработанные помпой
 
-(screens-bolus-carbs)=
+(screens-bolus-carbs) =
 
-### Bolus & carbs
+### Болюсы & углеводы
 
 ![Углеводы & болюс](../images/TreatmentsView1.png)
 
-On this tab you can view the bolus and carbs log. Each bolus (line **1** and **4**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
+На этой вкладке показывается журнал болюсов и углеводов. Каждый болюс (строка **1** и **4**) показывает остающийся активный инсулин IOB рядом с количеством введенного инсулина. Источники болюса указываются следующим образом:
 
-* Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
+* Прием пищи (вручную введенный кнопками Insulin, Quick Wizard или Bolus Wizard)
+* Микроболюсы SMB, при включенной опции подачи микроболюсов
 
-The carbs (line **2**) are only stored in Nightscout. If you have used the [Bolus Wizard](#bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
+Углеводы (строка **2**) хранятся только в Nightscout. Если вы пользовались Помощником болюса [](#bolus-wizard) для вычисления инсулина, то можете нажать на текст «Calc» (строка **3**) и увидеть детали расчета.
 
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
+В зависимости от используемой помпы инсулин и углеводов могут быть показаны на одной строке или на нескольких - для углеводов и для собственно болюса.
 
-The treatment tab can be used to correct faulty carb entries (*i.e.* you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
+На вкладке Терапии можно исправить ошибочные записи углеводов (*напр* если вы их переоценили или недооценили). Обратите внимание, что редактирование существующей записи невозможно, для этого надо действовать по следующему процедуре:
 
 1. Проверьте и запомните фактические активные углеводы COB и активный инсулин IOB на главном экране.
 2. В зависимости от помпы углеводы на вкладке терапии могут быть показаны одной линией с инсулином или в виде отдельной записи (например, для Dana RS).
-3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
+3. Удалите запись с неверным количеством углеводов. (В свежих версиях терапии есть иконка корзины для удаления записи). Нажмите на значок Корзина, выберите строки для удаления, а затем нажмите на Корзину для завершения.)
 4. Убедитесь, что углеводы удалены успешно, повторно проверив активные углеводы COB на главном экране.
 5. Сделайте то же для активного инсулина IOB, если на вкладке терапии только одна линия для углеводов и инсулина.
     
-    → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+    → Если углеводы не удаляются должным образом, а вы добавили дополнительные углеводы, как описано здесь (в п. 6), активных углеводов COB окажется слишком много, что может привести к передозировке инсулина.
 
 6. Введите правильное количество углеводов при помощи кнопки углеводов на главном экране и убедитесь, что точное время события также введено.
 
 7. Если на вкладке терапии только одна линия для углеводов и инсулина, следует также добавить и запись о количестве инсулина. Убедитесь в том, чтобы установить правильное время событие и проверить активный инсулин IOB на главном экране после подтверждения новой записи.
 
-### Temp Basal
+### Временный базал
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Временный базал](../images/TreatmentsView2.png)
 
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown in green. It can be:
+На этой вкладке показаны все **временные базалы Tbr**, примененные алгоритмом. Когда на активный инсулин IOB, показанный на строчке, продолжается воздействие, информация показана зеленым цветом. Возможны:
 
-* Positive IOB if the temp basal was higher than the one set in the Profile (line **2**)
-* Negative IOB for a zero-temp or if the temp basal was lower than the one set in the Profile (line **1**)
+* Положительное значение IOB, если временный базал TBR был выше, чем установленный в профиле (строка **2**)
+* Отрицательный IOB для нулевой скорости базала (zero temp) или если временный базал TBR был ниже, чем в Профиле (строка **1**)
 
-Deleting the entries only affects your reports in Nightscout and will probably tamper your real IOB - it is not recommended.
+Удаление записей затрагивает только отчеты в Nightscout и скорее всего исказит реальный IOB - делать это не рекомендуется.
 
-On the left of a line, a red S means “Suspend” : it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
+В левой части строки красный S означает "Suspend": это происходит когда базал не выполнен на данный момент. Это нормальная ситуация, например, в процессе замены POD'а.
 
 ### Временная цель
 
 ![Временная цель](../images/TreatmentsView3.png)
 
-The history of temporary targets can be seen here.
+Здесь можно просмотреть историю временных целей.
 
-### Profile Switch
+### Cмена профиля
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Cмена профиля](../images/TreatmentsView4.png)
 
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user. Line **2**, stored both in NS and PH, correspond to the actual switch.
+Здесь можно просмотреть историю смен профиля. Каждый раз при переключении профиля об этом вносится запись : строка **1**, хранится в Nightscout но не в Журнале Помпы и соответствует запросу на переключение профиля со стороны пользователя. Строка **2**, хранимая как в NS, так и в истории помпы (PH) соответствует фактическому переключению.
 
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
+Удаление записей влияет только на отчеты в Nightscout и на самом деле никогда не изменяет текущий профиль.
 
-(aaps-screens-clone-profile-switch)=
+(aaps-screens-clone-profile-profile-switch)=
 
 #### Переключение профиля и клонирование
 
-Вы можете легко создать новый локальный профиль с помощью переключения профиля. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
+Вы можете легко создать новый локальный профиль с помощью переключения профиля. В этом случае к новому локальному профилю будет применяться сдвиг по времени и процент. Пользуйтесь кнопкой **Клонировать** показанной на строке **1**.
 
-You can now go to the [Profile tab](#profile) to edit the newly created Profile.
+Теперь вы можете перейти на вкладку [Профиль](#profile) для редактирования недавно созданного профиля.
 
-### Care portal
+### Портал терапии
 
-![Care portal](../images/TreatmentsView5.png)
+![Портал терапии](../images/TreatmentsView5.png)
 
-This tab shows all notes and alerts recorded in Nightscout.
+Эта вкладка показывает все заметки и оповещения, записанные в Nightscout.
 
-## Просмотр логов
+## Просмотр журнала
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then History. It is not possible to put in the main menu through the Config Builder. It can also be accessed through a button at the bottom of the [Action tab](#action-tab).
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Просмотр журнала. Его невозможно показать в главном меню через Конфигуратор. Доступ к нему также можно получить через кнопку в нижней части вкладки [Действия](#action-tab).
 
-Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
+Позволяет перемещаться по журналу **AAPS**. См соответствующую страницу - [ Просмотр данных > Журнал истории](../Maintenance/Reviewing.md).
 
 ## Statistics
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Statistics. It is not possible to put in the main menu through the Config Builder.
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Статистика. Его невозможно показать в главном меню через Конфигуратор.
 
-Gives you statistics about your Time In Range and Total Daily Dose. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
+Дает статистику о времени в целевом диапазоне и суммарной суточной дозе инсулина TDD. См соответствующую страницу - [Просмотр данных > Статистика](#reviewing-statistics).
 
 ## Profile Helper
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Profile Helper. It is not possible to put in the main menu through the Config Builder. The [Profile Helper](../SettingUpAaps/ProfileHelper.md) can help you:
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Помощник профиля. Его невозможно показать в главном меню через Конфигуратор. [Помощник профиля](../SettingUpAaps/ProfileHelper.md) поможет:
 
 * build a profile from scratch for a kid
 * compare two profiles
