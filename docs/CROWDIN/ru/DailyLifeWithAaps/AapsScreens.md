@@ -605,74 +605,74 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 ## Терапия
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Терапия. Его невозможно показать в главном меню через Конфигуратор. In this view, you can view and alter the history of the following treatments:
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Терапия. Его невозможно показать в главном меню через Конфигуратор. Здесь можно просматривать и изменять историю следующих видов терапии:
 
-* Bolus & carbs
+* Болюсы & углеводы
 * [Пролонгированный болюс](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Временная базальная скорость
 * [Временная цель](../DailyLifeWithAaps/TempTargets.md)
 * [Переключение профиля](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes entered through action tab and notes in dialogues
-* User entry: other notes that are not sent to Nightscout
+* Портал терапии - примечания, введенные через вкладку действий и примечания в диалогах
+* Записи пользователя: другие заметки, которые не отправляются в Nightscout
 
-In the last column, the data source for each line is displayed in blue. It can be :
+В последнем столбце источник данных для каждой строки отображается синим. Это может быть :
 
-* NS for Nightscout : the data comes from or has been recorded to Nightscout
-* PH for Pump History : the data has been processed by the pump
+* NS или Nightscout : данные поступают или были записаны в Nightscout
+* PH или журнал помпы: данные, обработанные помпой
 
-(screens-bolus-carbs)=
+(screens-bolus-carbs) =
 
-### Bolus & carbs
+### Болюсы & углеводы
 
 ![Углеводы & болюс](../images/TreatmentsView1.png)
 
-On this tab you can view the bolus and carbs log. Each bolus (line **1** and **4**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
+На этой вкладке показывается журнал болюсов и углеводов. Каждый болюс (строка **1** и **4**) показывает остающийся активный инсулин IOB рядом с количеством введенного инсулина. Источники болюса указываются следующим образом:
 
-* Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
+* Прием пищи (вручную введенный кнопками Insulin, Quick Wizard или Bolus Wizard)
+* Микроболюсы SMB, при включенной опции подачи микроболюсов
 
-The carbs (line **2**) are only stored in Nightscout. If you have used the [Bolus Wizard](#bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
+Углеводы (строка **2**) хранятся только в Nightscout. Если вы пользовались Помощником болюса [](#bolus-wizard) для вычисления инсулина, то можете нажать на текст «Calc» (строка **3**) и увидеть детали расчета.
 
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
+В зависимости от используемой помпы инсулин и углеводов могут быть показаны на одной строке или на нескольких - для углеводов и для собственно болюса.
 
-The treatment tab can be used to correct faulty carb entries (*i.e.* you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
+На вкладке Терапии можно исправить ошибочные записи углеводов (*напр* если вы их переоценили или недооценили). Обратите внимание, что редактирование существующей записи невозможно, для этого надо действовать по следующему процедуре:
 
 1. Проверьте и запомните фактические активные углеводы COB и активный инсулин IOB на главном экране.
 2. В зависимости от помпы углеводы на вкладке терапии могут быть показаны одной линией с инсулином или в виде отдельной записи (например, для Dana RS).
-3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
+3. Удалите запись с неверным количеством углеводов. (В свежих версиях терапии есть иконка корзины для удаления записи). Нажмите на значок Корзина, выберите строки для удаления, а затем нажмите на Корзину для завершения.)
 4. Убедитесь, что углеводы удалены успешно, повторно проверив активные углеводы COB на главном экране.
 5. Сделайте то же для активного инсулина IOB, если на вкладке терапии только одна линия для углеводов и инсулина.
     
-    → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+    → Если углеводы не удаляются должным образом, а вы добавили дополнительные углеводы, как описано здесь (в п. 6), активных углеводов COB окажется слишком много, что может привести к передозировке инсулина.
 
 6. Введите правильное количество углеводов при помощи кнопки углеводов на главном экране и убедитесь, что точное время события также введено.
 
 7. Если на вкладке терапии только одна линия для углеводов и инсулина, следует также добавить и запись о количестве инсулина. Убедитесь в том, чтобы установить правильное время событие и проверить активный инсулин IOB на главном экране после подтверждения новой записи.
 
-### Temp Basal
+### Временный базал
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Временный базал](../images/TreatmentsView2.png)
 
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown in green. It can be:
+На этой вкладке показаны все **временные базалы Tbr**, примененные алгоритмом. Когда на активный инсулин IOB, показанный на строчке, продолжается воздействие, информация показана зеленым цветом. Возможны:
 
-* Positive IOB if the temp basal was higher than the one set in the Profile (line **2**)
-* Negative IOB for a zero-temp or if the temp basal was lower than the one set in the Profile (line **1**)
+* Положительное значение IOB, если временный базал TBR был выше, чем установленный в профиле (строка **2**)
+* Отрицательный IOB для нулевой скорости базала (zero temp) или если временный базал TBR был ниже, чем в Профиле (строка **1**)
 
-Deleting the entries only affects your reports in Nightscout and will probably tamper your real IOB - it is not recommended.
+Удаление записей затрагивает только отчеты в Nightscout и скорее всего исказит реальный IOB - делать это не рекомендуется.
 
-On the left of a line, a red S means “Suspend” : it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
+В левой части строки красный S означает "Suspend": это происходит когда базал не выполнен на данный момент. Это нормальная ситуация, например, в процессе замены POD'а.
 
 ### Временная цель
 
 ![Временная цель](../images/TreatmentsView3.png)
 
-The history of temporary targets can be seen here.
+Здесь можно просмотреть историю временных целей.
 
-### Profile Switch
+### Cмена профиля
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Cмена профиля](../images/TreatmentsView4.png)
 
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user. Line **2**, stored both in NS and PH, correspond to the actual switch.
+Здесь можно просмотреть историю смен профиля. Каждый раз при переключении профиля об этом вносится запись : строка **1**, хранится в Nightscout но не в Журнале Помпы и соответствует запросу на переключение профиля со стороны пользователя. Line **2**, stored both in NS and PH, correspond to the actual switch.
 
 Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
 
