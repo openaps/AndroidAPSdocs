@@ -360,9 +360,9 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 Можно автоматически начать временную цель TT **Ожидаемый прием пищи**, поставив флажок рядом с опцией [Начать ВЦ ожидаемый прием пищи](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) check the corresponding box. When checking this box, you get an additional field “Time offset”, that you can use to record an insulin injection made in the past.
+Если не хотите подавать болюс с помпы, а только сделать запись о введенном инсулине (например, поданного шприц-ручкой), поставьте флажок рядом с соответствующей опцией. При установке этого флажка, появится дополнительное поле "Смещение по времени", которое можно использовать для записи об инъекциях, сделанных в прошлом.
 
-You can use the buttons to quickly increase the insulin quantity. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+Можно использовать кнопки для быстрого приращения количества инсулина. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
 
 #### Углеводы
 
