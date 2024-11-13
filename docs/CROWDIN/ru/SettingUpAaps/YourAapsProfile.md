@@ -124,7 +124,7 @@ To do this, however, it is important to clone the whole **database record** cons
 
 ## Profile Helper
 
-The [Profile Helper](../SettingUpAaps/ProfileHelper.md) can help you:
+[Помощник профиля](../SettingUpAaps/ProfileHelper.md) поможет:
 * build a profile from scratch for a kid
 * compare two profiles
 * clone a profile
