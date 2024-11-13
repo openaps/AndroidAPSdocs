@@ -475,40 +475,40 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 ### Действия-раздел M
 
-Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#section-b---profile--target) on homescreen.
+Кнопка **[Смена профиля](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** является альтернативой нажатию на [текущий профиль](#section-b---profile--target) на главном экране.
 
-Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#section-b---profile--target) on homescreen.
+Кнопка **[Временная цель](../DailyLifeWithAaps/TempTargets.md)** - альтернатива нажатию на [текущую цель](#section-b---profile--target) на главном экране.
 
 Кнопка начала или отмены временного базала. Обратите внимание, что кнопка меняется с “TEMPBASAL” (ВРЕМБАЗАЛ) на “CANCEL x%” (ОТМЕНА х%), после начала действия.
 
-Even though [extended boluses](#Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+Несмотря на то, что [пролонгированные болюсы](#Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) не работают в замкнутом цикле, некоторые всё равно просили оставить эту опцию.
 
 * Эта опция доступна только для помпDana RS и Insight. 
     * Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов.
-    * Make sure to read the [details](../DailyLifeWithAaps/ExtendedCarbs.md) before using this option.
+    * Убедитесь, что ознакомились с [подробностями](../DailyLifeWithAaps/ExtendedCarbs.md) перед использованием этой опции.
 
 ### Портал терапии-раздел N
 
-Displays information on:
+Отображает информацию о:
 
-* sensor age & level (battery percentage)
-* insulin age & level (units)
-* cannula age
-* pump battery age & level (percentage
+* время, отработанное сенсором & уровень заряда (процент заряда батареи)
+* время нахождения инсулина в картридже & уровень (единицы)
+* отработанное время (возраст) катетера помпы
+* время, отработанное батареей (аккумулятором) помпы & уровень заряда (процент)
 
-Less information will be shown if **low resolution skin** is used ([Preferences > General > Skin](#Preferences-skin)).
+Будет показано меньше информация, если применена э**тема экрана с низким разрешением ** ([Настройки > Общее > тема оформления](#Preferences-skin)).
 
-(screens-sensor-level-battery)=
+(снимки экрана-сенсор-уровень-заряд батареи)
 
 #### Уровень заряда сенсора (батарея)
 
-Works for CGM with an additional transmitter such as MiaoMiao 2. (Датчик должен послать информацию об уровне батареи на xDrip+.)
+Работает в мониторинге с дополнительным передатчиком, например MiaoMiao 2. (Датчик должен послать информацию об уровне батареи на xDrip+.)
 
-Thresholds can be set in [Preferences > Overview > Status lights](#Preferences-status-lights).
+Пороговые значения можно задать в [Настройках расширений > Индикаторы состояния](#Preferences-status-lights).
 
 ### Портал терапии-раздел О
 
-BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal---section-n).
+Контроль ГК, заполнение инфузионного набора, установка сенсора и замена батареи помпы - основные данные в [разделе N](#careportal---section-n).
 
 Кнопка Заполнение инфузионного набора позволяет регистрировать смену места катетера помпы, а также замену картриджа инсулина.
 
@@ -516,9 +516,9 @@ BG check, prime/fill, sensor insert and pump battery change are the base for the
 
 ### Инструменты - раздел P
 
-#### Просмотр логов
+#### Просмотр журнала
 
-Allows you to ride back in **AAPS** [history](../Maintenance/Reviewing.md).
+Позволяет перемещаться по **журналу** [AAPS](../Maintenance/Reviewing.md).
 
 #### TDD / общая суточная доза инсулина
 
@@ -526,7 +526,7 @@ Allows you to ride back in **AAPS** [history](../Maintenance/Reviewing.md).
 
 Некоторые врачи рекомендуют - особенно для новых пользователей - соотношение базал-болюс 50:50.
 
-Therefore, ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours).
+Поэтому эта величина рассчитывается как TDD / 2 * TBB (общая суточная база = сумма базала в течение 24 часов).
 
 Другие принимают за суточную базу TBB диапазон от 32% до 37% от суммарной суточной дозы TDD.
 
@@ -538,7 +538,7 @@ Therefore, ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal
 
 ![Профиль Инсулина](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
+Это профиль активности инсулина, который вы выбрали в [конфигураторе](#Config-Builder-insulin). Кривые зависят от продолжительности действия инсулина [DIA](#your-aaps-profile-duration-of-insulin-action) и времени до пика.
 
 The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses minimum 5h as DIA.
 
@@ -690,7 +690,7 @@ You can now go to the [Profile tab](#profile) to edit the newly created Profile.
 
 This tab shows all notes and alerts recorded in Nightscout.
 
-## Просмотр логов
+## Просмотр журнала
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then History. It is not possible to put in the main menu through the Config Builder. It can also be accessed through a button at the bottom of the [Action tab](#action-tab).
 
