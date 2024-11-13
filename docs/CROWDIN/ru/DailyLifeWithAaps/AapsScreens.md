@@ -442,13 +442,13 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 Подробности расчётов мастера болюса.
 
-You can deselect any that you do not want to include, but you normally wouldn't want to.
+Можно отменить выбор нежелательный опций, но обычно это не требуется.
 
-For safety reasons the **TT box must be ticked manually**, if you want the bolus wizard to calculate based on an existing temporary target.
+По соображениям безопасности флажок против временной цели **TT ставится вручную**, если нужно, чтобы калькулятор болюса отталкивался от действующей временной цели.
 
 #### Комбинации активных углеводов COB и активного инсулина IOB и что они означают
 
-* For safety reasons, the IOB box cannot be unticked when COB box is ticked as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
+* По соображениям безопасности флажок активного инсулина IOB не может быть снят когда отмечены активные углеводы COB, из-за риска передозировки инсулина, поскольку **AAPS **не может учесть то, что уже введено.
 * If you tick COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
 * If you tick IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Это приводит к уведомлению о "недостатке углеводов".
 * Если подается болюс на ** дополнительную еду** вскоре после болюса на прием пищи (напр. дополнительный десерт) полезно **снять все галочки**. Таким образом, добавляются только новые углеводы а поскольку основная еда не еще не усвоена, то IOB не будет точно соответствовать углеводам COB вскоре после болюса на еду.
