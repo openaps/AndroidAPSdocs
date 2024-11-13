@@ -672,39 +672,39 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 ![Cмена профиля](../images/TreatmentsView4.png)
 
-Здесь можно просмотреть историю смен профиля. Каждый раз при переключении профиля об этом вносится запись : строка **1**, хранится в Nightscout но не в Журнале Помпы и соответствует запросу на переключение профиля со стороны пользователя. Line **2**, stored both in NS and PH, correspond to the actual switch.
+Здесь можно просмотреть историю смен профиля. Каждый раз при переключении профиля об этом вносится запись : строка **1**, хранится в Nightscout но не в Журнале Помпы и соответствует запросу на переключение профиля со стороны пользователя. Строка **2**, хранимая как в NS, так и в истории помпы (PH) соответствует фактическому переключению.
 
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
+Удаление записей влияет только на отчеты в Nightscout и на самом деле никогда не изменяет текущий профиль.
 
-(aaps-screens-clone-profile-switch)=
+(aaps-screens-clone-profile-profile-switch)=
 
 #### Переключение профиля и клонирование
 
-Вы можете легко создать новый локальный профиль с помощью переключения профиля. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
+Вы можете легко создать новый локальный профиль с помощью переключения профиля. В этом случае к новому локальному профилю будет применяться сдвиг по времени и процент. Пользуйтесь кнопкой **Клонировать** показанной на строке **1**.
 
-You can now go to the [Profile tab](#profile) to edit the newly created Profile.
+Теперь вы можете перейти на вкладку [Профиль](#profile) для редактирования недавно созданного профиля.
 
-### Care portal
+### Портал терапии
 
-![Care portal](../images/TreatmentsView5.png)
+![Портал терапии](../images/TreatmentsView5.png)
 
-This tab shows all notes and alerts recorded in Nightscout.
+Эта вкладка показывает все заметки и оповещения, записанные в Nightscout.
 
 ## Просмотр журнала
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then History. It is not possible to put in the main menu through the Config Builder. It can also be accessed through a button at the bottom of the [Action tab](#action-tab).
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Просмотр журнала. Его невозможно показать в главном меню через Конфигуратор. Доступ к нему также можно получить через кнопку в нижней части вкладки [Действия](#action-tab).
 
-Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
+Позволяет перемещаться по журналу **AAPS**. См соответствующую страницу - [ Просмотр данных > Журнал истории](../Maintenance/Reviewing.md).
 
 ## Statistics
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Statistics. It is not possible to put in the main menu through the Config Builder.
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Статистика. Его невозможно показать в главном меню через Конфигуратор.
 
-Gives you statistics about your Time In Range and Total Daily Dose. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
+Дает статистику о времени в целевом диапазоне и суммарной суточной дозе инсулина TDD. См соответствующую страницу - [Просмотр данных > Статистика](#reviewing-statistics).
 
 ## Profile Helper
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Profile Helper. It is not possible to put in the main menu through the Config Builder. The [Profile Helper](../SettingUpAaps/ProfileHelper.md) can help you:
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Помощник профиля. Его невозможно показать в главном меню через Конфигуратор. [Помощник профиля](../SettingUpAaps/ProfileHelper.md) поможет:
 
 * build a profile from scratch for a kid
 * compare two profiles
