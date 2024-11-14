@@ -70,7 +70,7 @@
 
   ![Autotune - обновить профиль ввода](../images/Autotune/Autotune_9.png)
 
-- Если вы обновили свой профиль ввода, то кнопка «Обновить профиль ввода» заменяется кнопкой «Вернуть профиль ввода» (см. снимок экрана ниже). You can that way immediately see if your current input profile in Local profile plugin already include the result of last run or not. Также есть возможность восстановить профиль ввода без результатов autotune с помощью этой кнопки
+- Если вы обновили свой профиль ввода, то кнопка «Обновить профиль ввода» заменяется кнопкой «Вернуть профиль ввода» (см. снимок экрана ниже). Таким образом, можно сразу увидеть, содержит ли профиль, вводимый как локальный, результаты последнего запуска. Также есть возможность восстановить профиль ввода без результатов autotune с помощью этой кнопки
 
   ![Autotune - обновить профиль ввода](../images/Autotune/Autotune_10.png)
 
@@ -84,13 +84,13 @@
 
 ![Экран Autotune по умолчанию](../images/Autotune/Autotune_11.png)
 
-- Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#run-autotune-with-an-automation-rule) below. Если изменить эту настройку на Включить, профиль ввода будет автоматически обновлен профилем Tuned и активирован.
+- Переключение профиля при Автоматизации (по умолчанию выключено): см. [Запуск Autotune с правилом автоматизации](#run-autotune-with-an-automation-rule) ниже. Если изменить эту настройку на Включить, профиль ввода будет автоматически обновлен профилем Tuned и активирован.
   - **Be Careful, you must trust and verified during several following days that after an update and activation of Tuned profile without modification, it improves your loop**
 
 - Классифицировать UAM как базал (по умолчанию Вкл.): Этот параметр предназначен для пользователей, использующих AAPS без ввода углеводов (Полный UAM). Это помешает (когда Выключено) классифицировать UAM как базал.
   - Примечание: если в течение одного дня обнаружен по крайней мере один час абсорбции углеводов, тогда все данные, классифицированные как UAM, будут классифицированы как basal, вне зависимости от того, включен параметр или выключен
 - Количество дней данных (по умолчанию 5): Для этого параметра можно задать значение по умолчанию. Каждый раз, когда вы выбираете новый профиль в модуле Autotune, параметр "дней для анализа" будет заменен на это значение по умолчанию
-- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
+- Применить средний суточный результат IC/ISF (по умолчанию Off): см. [Circadian IC или ISF профиль](#circadian-ic-or-isf-profile) ниже.
 
 ### Other settings
 
@@ -136,7 +136,7 @@
 
 Первый шаг заключается в определении правильной отправной точки (триггера) для правила автоматизации с автонастройкой:
 
-Note: for more information on how to set an automation rule, see [here](../DailyLifeWithAaps/Automations.md).
+Примечание: подробнее о создании правил для автоматизации см [здесь](../DailyLifeWithAaps/Automations.md).
 
 - You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be run daily (each new run you shift one day later and quickly profile modification should be tiny)
 
@@ -154,7 +154,7 @@ Note: for more information on how to set an automation rule, see [here](../Daily
 
   ![Экран Autotune по умолчанию](../images/Autotune/Autotune_19b.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
+- Через несколько дней, если вы полностью доверяете результатам Autotune и процент изменений невысок, можно изменить [настройки Autotune ](#autotune-plugin-settings) "Автоматический переключатель профиля", чтобы включить автоматическое обновление и активацию настроенного после вычислений профиля.
 
 Примечание: если вы хотите автоматически настраивать профили на определенные дни недели (например, профиль для "выходных" и другой для "рабочих дней"), создайте по одному правилу для каждого профиля, выберите те же дни в триггере и в действиях Autotune. Количество дней для настройки должно быть достаточно высоким, не менее 6 или 8 дней, и не забудьте выбрать время после 04: 00 в триггере...
 
