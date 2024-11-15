@@ -60,7 +60,7 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 
 ### Шаг 4: Настройка AndroidAPS
 
-- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
 
 - Если AndroidAPS не получает значения BG, когда телефон находится в режиме авиаперелета, проверьте, заполнено ли поле «Идентифицировать приемник»
 - Выключите сглаживание (уже сделано в Xdrip+)
