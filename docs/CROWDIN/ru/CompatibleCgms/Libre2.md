@@ -38,7 +38,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 - Следуйте [этим инструкциям](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) для настройки xDrip+, но обязательно загрузите [эту новую версию OOP 2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view), поскольку та, что приведена в документе, устарела.
 - Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 
--   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
 
 ## 3. Использовать Diabox
 
@@ -46,7 +46,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
 
 ## 4. Использовать Juggluco
 
@@ -56,7 +56,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
 
 ```{admonition} Use with xDrip+
 :class: note
