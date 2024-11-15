@@ -11,8 +11,8 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 
 | CGM /  НМГ                                            | Available [BG Sources](../SettingUpAaps/ConfigBuilder.md#bg-source)          |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [Dexcom G7 and ONE+](../CompatibleCgms/DexcomG7.md)   | xDrip+ or DiaKEM app (select BYODA)                                          |
-| [Dexcom G6 and ONE](../CompatibleCgms/DexcomG6.md)    | xDrip+ or BYODA                                                              |
+| [Dexcom G7 и ONE+](../CompatibleCgms/DexcomG7.md)     | xDrip+ or DiaKEM app (select BYODA)                                          |
+| [Dexcom G6 и ONE](../CompatibleCgms/DexcomG6.md)      | xDrip+ or BYODA                                                              |
 | [Работа с Dexcom G5](../CompatibleCgms/DexcomG5.md)   | xDrip +                                                                      |
 | [Libre 3](../CompatibleCgms/Libre3.md)                | xDrip+ (no transmitter needed)                                               |
 | [Libre 2](../CompatibleCgms/Libre2.md)                | xDrip+ (no transmitter needed)                                               |
