@@ -4,11 +4,11 @@ orphan: true
 
 # Для пользователей Eversense
 
-There are three different methods to access the readings from Eversense:
+Существует три различных способа получения данных от Eversense:
 
-- ESEL companion mode
-- ESEL patched mode
-- xDrip+ companion app
+- Режим спутника ESEL
+- Режим модифицированного приложения ESEL
+- Приложение спутника xDrip+
 
 ## ESEL
 
@@ -61,7 +61,7 @@ xDrip+ can read notifications from the vendor app, like ESEL does. No backfillin
 
 - Скачайте и установите xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
 - As data source in xDrip+ “Companion App” must be selected.
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
 - Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../CompatibleCgms/xDrip.md).
 - Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
 
