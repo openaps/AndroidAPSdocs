@@ -85,7 +85,7 @@
 ![Экран Autotune по умолчанию](../images/Autotune/Autotune_11.png)
 
 - Переключение профиля при Автоматизации (по умолчанию выключено): см. [Запуск Autotune с правилом автоматизации](#run-autotune-with-an-automation-rule) ниже. Если изменить эту настройку на Включить, профиль ввода будет автоматически обновлен профилем Tuned и активирован.
-  - **Be Careful, you must trust and verified during several following days that after an update and activation of Tuned profile without modification, it improves your loop**
+  - **Будьте внимательны, в течение нескольких следующих дней следите, чтобы после обновления и активации настроенного профиля ваша система заработала лучше по сравнен с профилем без изменений**
 
 - Классифицировать UAM как базал (по умолчанию Вкл.): Этот параметр предназначен для пользователей, использующих AAPS без ввода углеводов (Полный UAM). Это помешает (когда Выключено) классифицировать UAM как базал.
   - Примечание: если в течение одного дня обнаружен по крайней мере один час абсорбции углеводов, тогда все данные, классифицированные как UAM, будут классифицированы как basal, вне зависимости от того, включен параметр или выключен
@@ -106,7 +106,7 @@
 
 ### Циркадный профиль IC или ISF
 
-- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can set "Apply average result in circadian IC/ISF"
+- Если в профиле присутствуют существенные вариации IC и/или ISF, и вы полностью доверяете своим циркадным (суточным) биоритмам, то можно активировать параметр "Применять средний результат в циркадных IC/ISF"
 
   - Обратите внимание, что вычисление Autotune всегда будет выполняться с одним значением, а циркадные вариации не будут подстроены при помощи Autotune. Эта настройка применяет среднее отклонение, рассчитанное только для IC и/или ISF на ваши циркадные величины
 
@@ -138,7 +138,7 @@
 
 Примечание: подробнее о создании правил для автоматизации см [здесь](../DailyLifeWithAaps/Automations.md).
 
-- You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be run daily (each new run you shift one day later and quickly profile modification should be tiny)
+- Следует выбрать время повторения запускать Autotune только один раз в сутки, ежедневно (после каждого нового выполнения Autotune смещать график на день вперед и делать небольшие быстрые модификации профиля)
 
   ![Экран Autotune по умолчанию](../images/Autotune/Autotune_16.png)
 
