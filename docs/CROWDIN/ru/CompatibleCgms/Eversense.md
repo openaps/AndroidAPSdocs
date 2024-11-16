@@ -12,24 +12,24 @@ orphan: true
 
 ## ESEL
 
-Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+Скачайте и установите приложение [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), следуя этим [инструкциям](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- Enable "Send to AAPS and xDrip"
-- **Disable** "Send to Nightscout"
-- As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
+- Включите "Транслировать в AAPS и xDrip"
+- **Отключите** "Отправлять в Nightscout"
+- Поскольку данные ГК из Eversense могут быть зашумленными, рекомендуется включить "Сглаживать данные" в ESEL.
 
 ![трансляция ESEL](../images/ESEL.png)
 
-### Companion Mode
+### Режим спутника
 
-Reads the data from the Eversense app notifications (works with the standard Eversense App, available since ESEL version 3.0.1).
+Считывает данные из уведомлений Eversense (работает со стандартным приложением Eversense начиная с ESEL версии 3.0.1).
 
-1. Use the official Eversense App from the Google Play Store
-   - Optional, but required for backfilling: Login to your Eversense account
-   - In Sync, enable Auto synchronization
-2. Configuration of ESEL:
-   - Disable the setting "Get data from patched Eversense App"
-   - For backfilling: Enable "Fill missing data from eversensedms.com"
+1. Используйте официальное приложение Eversense из Google Play Store
+   - Необязательно, но желательно для обратного заполнения пропущенных данных: войти в учетную запись Eversense
+   - В Синхронизации, включить автосинхронизацию
+2. Конфигурация ESEL:
+   - Отключить настройку «Получать данные из модифицированного приложения Eversense»
+   - Для обратного заполнения: включите «Заполнять недостающие данные из eversensedms.com»
    - Provide as Email address and password your Eversense login data
 3. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
@@ -43,7 +43,7 @@ Reads the data from the Eversense app notifications (works with the standard Eve
 
    - Start the Eversense App, login, connect to your transmitter and use it just like the normal app.
 
-3. Configuration of ESEL:
+3. Конфигурация ESEL:
 
    - Enable the setting "Get data from patched Eversense App"
 
