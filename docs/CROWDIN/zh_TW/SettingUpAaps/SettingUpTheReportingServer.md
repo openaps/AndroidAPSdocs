@@ -24,7 +24,7 @@ Nightscout是一個開源軟體。 任何人都可以使用免費或付費服務
 
 有關如何設置 Nightscout 以及各種操作選項的優缺點，包括成本估算的描述，可以在[這裡](https://nightscout.github.io/nightscout/new_user/#free-diy)找到。
 
-### 選項2 - 付費使用託管Nightscout服務
+### 選項 2 - 付費使用託管Nightscout服務
 
 也有不同服務提供商提供的託管Nightscout選項，按月收費。 成本是可負擔的，託管選項的好處是你無需具備IT知識或任何操作基礎設施。
 
