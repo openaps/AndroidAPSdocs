@@ -30,9 +30,7 @@ orphan: true
 
 Если Нажать на `Дополнительные опции`)
 
-    {admonition} Safety warning
-    :class: warning
-    You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
+    {admonition} :class:Предупреждение безопасности: Следует деактивировать "Загружать лечение/назначения" с xDrip, иначе в AAPS эти величины удвоятся, что приведет к неверному количеству активных углеводов COB и активного инсулина IOB.
 
 Отключите `Загрузку терапии`(9) и убедитесь, что вы ** НЕ будете** пользоваться `Обратным заполнением данных` (11).
 
@@ -78,7 +76,7 @@ orphan: true
 
 - Трансмиттер Dexcom G6 может одновременно подключаться к ресиверу Dexcom (или к помпе T:slim) и одному приложению на вашем телефоне.
 - При использовании xDrip+ в качестве приемника сначала удалите приложение Dexcom. **Невозможно одновременно подключить к трансмиттеру приложения xDrip+ и Dexcom!**
-- If you need Clarity and want to profit from xDrip+ features, use the [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+, or use xDrip+ as a Companion app receiving notifications from the official Dexcom app.
+- Если вам нужно ПО Clarity и вы хотите максимально воспользоваться функционалом xDrip+, применяйте [Самостоятельно собранное приложение Dexcom BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) с локальной трансляцией на xDrip+ или же xDrip + в качестве приложения-компаньона, получающего уведомления от официального приложения Dexcom.
 
 ### Версия xDrip+ в зависимости от серии трансмиттера G6.
 
@@ -111,7 +109,7 @@ orphan: true
 
 ### Первое подключение трансмиттера G6
 
-**For second and following transmitters see [Extend transmitter life](#xdrip-extend-transmitter-life) below.**
+**Для второго и следующего трансмиттера смотрите [Продление срока работы трансмиттера](#xdrip-extend-transmitter-life) ниже.**
 
 Следуйте [этим инструкциям](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
@@ -206,7 +204,7 @@ orphan: true
 ### Уровень батареи Libre smart reader
 
 - Уровень заряда батареи таких мостов, как Miao Miao и Bubble (но не Blucon), отображается в AAPS.
-- Details can be found on [screenshots page](#screens-sensor-level-battery).
+- Подробности можно найти на странице [снимков экрана](#screens-sensor-level-battery).
 
 ### Подключите трансмиттер Libre и запустите сенсор
 
@@ -230,9 +228,9 @@ orphan: true
 
 - Запустите сенсор в xDrip+.
     
-        {admonition} Safety warning
-        :class: warning
-        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
+        {admonition} Предостережение безопасности::class: предупреждение
+        Не используйте данные сенсора до окончания часового прогрева: значения могут быть чрезвычайно высокими и вызвать неверные решения AAPS.
+        .
     
     → Сэндвич-меню (1) → Запустить сенсор (2) → Запустить сенсор (3) → Введите точное время запуска ридером или оригинальным приложением. Если запускали не сегодня, выберите "Не сегодня" (4).
 
