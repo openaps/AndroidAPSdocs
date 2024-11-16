@@ -134,11 +134,12 @@ AAPS 發佈說明 <./Maintenance/ReleaseNotes.md>
 ```
 
 ```{toctree}
-:caption: 8) 尋求協助
+:caption: 8) Getting Help
 
-我可以在哪裡獲得 AAPS 的幫助 <./GettingHelp/WhereCanIGetHelp.md>
-故障排除 <./GettingHelp/GeneralTroubleshooting.md>
-訪問日誌檔案 <./GettingHelp/AccessingLogFiles.md>
+Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
+General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
+Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}
