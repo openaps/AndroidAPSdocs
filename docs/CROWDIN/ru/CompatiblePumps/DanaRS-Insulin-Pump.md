@@ -6,7 +6,7 @@ orphan: true
 
 # Помпы DanaRS и Dana-i
 
-*Эти инструкции подойдут для настройки приложения AAPS и помпы DanaRS, выпускаемой с 2017 года или для более поздней Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
+*Эти инструкции подойдут для настройки приложения AAPS и помпы DanaRS, выпускаемой с 2017 года или для более поздней Dana-i. Если у вас оригинальная помпа DanaR, перейдите на страницу [DanaR](./DanaR-Insulin-Pump.md).*
 
 **Новая прошивка Dana RS v3 может быть использована начиная с AAPS версии 2.7.**
 
@@ -79,7 +79,7 @@ orphan: true
 
 * Нажмите OK, чтобы ввести старый пароль.
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* Введите **старый пароль** (пароль по умолчанию см. [выше](#default-password)) и нажмите OK
     
     ![Ввод старого пароля](../images/DanaRSPW_04_11PWenter.png)
 
@@ -111,14 +111,14 @@ orphan: true
 
 * В большинстве случаев это просто проблема связи и нужное количество инсулина все равно подается.
 * Проверьте в истории помпы (либо на помпе, либо через вкладку Dana > история помпы> болюс), был ли подан правильный болюс.
-* Delete error entry in [treatments tab](#screens-bolus-carbs) if you wish.
+* Если хотите, удалите запись об ошибке на вкладке [терапия](#screens-bolus-carbs).
 * Реальный объем читается и записывается при следующем подключении. Чтобы принудительно выполнить действие, нажмите на иконку BT на вкладке Dana или просто подождите следующего подключения.
 
 ## Отдельное замечание при смене телефона
 
 При переходе на новый телефон требуются следующие действия:
 
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
+* Выполните [Экспорт настроек](../Maintenance/ExportImportSettings.md) на вашем старом телефоне
 * Перенести настройки со старого на новый телефон
 
 ### DanaRS v1
@@ -126,13 +126,13 @@ orphan: true
 * **Вручную выполните сопряжение** Dana RS с новым телефоном
 * Поскольку настройки подключения помпы также переносятся на новый телефон, AAPS на новом телефоне уже будет "знать" помпу и не запустит сканирование bluetooth. Поэтому новый телефон и помпа должны сопрягатся вручную.
 * Установите AAPS на новом телефоне.
-* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
+* [Импортируйте настройки](../Maintenance/ExportImportSettings.md) на новом телефоне
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](#pairing-pump).
+* Начните процедуру сопряжения как описано [выше](#pairing-pump).
 * Иногда необходимо очистить информацию о сопряжении в AAPS - долгое нажатие на иконке BT на вкладке Dana-i/RS.
 
 ## Пересечение часовых поясов с помпой Dana RS
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](#timezone-traveling-danarv2-danars).
