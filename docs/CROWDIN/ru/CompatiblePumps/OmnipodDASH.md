@@ -27,7 +27,7 @@ orphan: true
 ![Под Omnipod](../images/DASH_images/Omnipod_Pod.png)
 
 * **Совместимый Android-телефон** с рабочим модулем BLE Bluetooth
-   -  Не все смартфоны и версии Android гарантированно работают. Please check [**DASH Tested phones**](#Phones-list-of-tested-phones) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
+   -  Не все смартфоны и версии Android гарантированно работают. Возьмите телефоны, [**протестированные с DASH**](#Phones-list-of-tested-phones) или самостоятельно проверьте свой телефон на совместимость и сообщите нам результат (модель смартфона, географический регион, версия Android, работает / работает с замечаниями / не работает).
    - **Важно: было много случаев постоянных, невосстановимых потерь соединения при использовании старых подов с прошивкой версии 3.XX.X. Будьте осторожны при использовании этих старых подов с AAPS, особенно с другими подключенными Bluetooth-устройствами!** Имейте в виду, что драйвер Omnipod Dash соединяется с подом по Bluetooth каждый раз, когда отправляет команду, и отсоединяется сразу после этого. Соединения Bluetooth могут быть нарушены другими устройствами, связанными с телефоном, на котором работает AAPS, такими как беспроводные наушники и т. д... (что в редких случаях может вызвать проблемы подключения, погрешности при активации или после нее на некоторых моделях телефонов).
    -  **Приложение AAPS версии 3.0 или новее, собранное и установленное** на основе [**инструкции по сборке приложения**](../SettingUpAaps/BuildingAaps.md).
 * [**Непрерывный мониторинг гликемии**](../Getting-Started/CompatiblesCgms.md)
@@ -94,7 +94,7 @@ orphan: true
 
 ![Активировать Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)
 
-​    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
+​    ![Активировать Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
 2. Появится экран **Заполнить Pod**. Заполните новый Pod по меньшей мере 80 единицами инсулина и дождитесь двух звуковых сигналов, подтверждающих, что Pod готов к первичному заполнению катетера. При подсчете общего количества инсулина на 3 дня, учитывайте, что первичное заполнение катетера Pod потребует около 3-10 единиц инсулина.
 
@@ -304,16 +304,16 @@ orphan: true
 
 ### Меню управления помпой
 
-Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (1)** button from the **DASH** tab.
+Ниже приведено значение пиктограмм в меню **Управление помпой **, доступном после нажатием кнопки **УПРАВЛЕНМЕ ПОМПОЙ (1)** на вкладке **DASH**.
 
 ![DASH_Tab_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
 
  ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 2 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
-* 3 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
-* 4 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
-* 5 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
+* 2 - [**Активировать Pod**](#activate-pod) : Заполняет и активирует новый Pod.
+* 3 - [**Деактивировать Pod**](#deactivate-pod) : Деактивирует текущий Pod.
+* 4 - **Воспроизвести тестовый звуковой сигнал** : При нажатии воспроизводит один тестовый сигнал на поде.
+* 5 - [**журнал Pod **](#view-pod-history) : Отображает историю активности Pod.
 
 (DanaRS-Insulin-Pump-dash-settings)=
 
@@ -346,7 +346,7 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 ### Оповещения
 
-![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
+![Настройки Dash 5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
 Оповещения AAPS об истечении срока, выключении, низком резервуаре на основе заданных пороговых значений.
 
@@ -359,7 +359,7 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 ### Уведомления
 
-![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
+![Настройки Dash 6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
 Выдает уведомления AAPS и звуковые оповещения, когда нет уверенности в успешных TBR, SMB, болюсах или приостановленных событиях.
 
@@ -498,5 +498,5 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 -  **Уровень 0:** Прочитайте соответствующий раздел этой документации, чтобы удостовериться, что вы понимаете, как должна работать функция, с которой вы испытываете трудности.
 -  **Уровень 1:** Если вы все еще сталкиваетесь с проблемами, которые не можете решить, изучая документацию, перейдите в канал *#AAPS* на **Discord** с помощью [этой ссылки-приглашения](https://discord.gg/4fQUWHZ4Mw).
--  **Уровень 2:** Найдите, есть ли ваш случай среди существующих [проблем](https://github.com/nightscout/AndroidAPS/issues), и если есть, подтвердите/прокомментируйте/добавьте информацию о нем. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
+-  **Уровень 2:** Найдите, есть ли ваш случай среди существующих [проблем](https://github.com/nightscout/AndroidAPS/issues), и если есть, подтвердите/прокомментируйте/добавьте информацию о нем. Если нет, создайте [новый вопрос](https://github.com/nightscout/AndroidAPS/issues) и приложите [свои лог-файлы](../GettingHelp/AccessingLogFiles.md).
 -  **Будьте терпеливы - решения проблем часто требуют времени и терпения как от пользователей, так и от разработчиков.**
