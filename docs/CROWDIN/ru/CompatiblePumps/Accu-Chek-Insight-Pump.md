@@ -18,7 +18,7 @@ orphan: true
 
 Примечание: AAPS всегда записывает данные в **первый профиль скорости базала в помпе **.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Getting-Started/ComponentOverview) page which Android version is required to run AAPS.)
+* Телефон на Android- (Вообще каждая версия Android будет работать с Insight, но проверьте на странице [ Module ](../Getting-Started/ComponentOverview), какая версия Android требуется для запуска AAPS.)
 * Приложение AAPS на вашем телефоне
 
 ## Настройки
@@ -27,7 +27,7 @@ orphan: true
     
     ![Снимок экрана удаления глюкометра из помпы Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* В [Конфигураторе](../SettingUpAaps/ConfigBuilder.md) приложения AAPS выберите Accu-Chek Insight в разделе помп
     
     ![Снимок экрана конфигуратора Config Builder помпы Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -60,7 +60,7 @@ orphan: true
 
 ## Настройки на AAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](#Preferences-advanced-settings-nsclient)).
+**Примечание: В настоящее время есть возможность (начиная с версии AAPS v2.7.) «Всегда использовать абсолютные значения базала», если вы намерены использовать Autotune с помпой Insight даже если 'Синхронизация включена' с Nightscout.** (В AAPS перейдите в [Настройки > NSClient > Расширенные настройки](#Preferences-advanced-settings-nsclient)).
 
 ![Снимок экрана настроек Insight](../images/Insight_settings.png)
 
@@ -128,7 +128,7 @@ orphan: true
 
 * Прошивка 1.х: нет вибрации конструктивно.
 * Прошивка 2.х: вибрация не может быть отключена.
-* Прошивка 3.х: AAPS подает болюс беззвучно. (minimum [version 2.6.1.4](#Releasenotes-version-2-6-1-4))
+* Прошивка 3.х: AAPS подает болюс беззвучно. (минимальная версия [2.6.1.4](#Releasenotes-version-2-6-1-4))
 
 Версию прошивки можно найти через меню.
 
@@ -156,4 +156,4 @@ orphan: true
 
 ## Пересечение часовых поясов с помпой Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-insight).
+Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](#timezone-traveling-insight).
