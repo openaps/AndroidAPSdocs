@@ -140,7 +140,8 @@ Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 :caption: 8) Getting Help
 
 Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-Troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
+General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
+Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
 Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 ```
 

@@ -6,7 +6,7 @@ orphan: true
 
 # Инсулиновая помпа DanaR
 
-*Эти инструкции предназначены для настройки приложения AAPS и помпы DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*
+*Эти инструкции предназначены для настройки приложения AAPS и помпы DanaR. Если у вас помпа DanaRS, появившаяся в продаже в 2017 году, перейдите на страницу [DanaRS](./DanaRS-Insulin-Pump.md).*
 
 * В помпе войдите в главное меню > параметры > пользовательские настройки
 * Включите «8. Пролонгированный болюс"
@@ -29,4 +29,4 @@ orphan: true
 
 ## Пересечение часовых поясов с помпой Dana R
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](#timezone-traveling-danarv2-danars).

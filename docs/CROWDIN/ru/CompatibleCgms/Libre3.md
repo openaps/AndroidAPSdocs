@@ -19,7 +19,7 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 ## Метод 1: 1-минутные замеры
 Версия 3.2.0.1 AndroidAPS не поддерживает 1-минутные значения. Ускорение и сглаживание не работает с 1-минутными значениями.
 
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+![Трансляция Juggluco в AAPS](../images/Juggluco_AAPS.png)
 
 
 ## Метод 2: 5-минутные замеры
@@ -36,7 +36,7 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 
 Приложение xDrip+ получает значения ГК на телефоне.
 
-- If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+- Если это еще не сделано, скачайте [xDrip+](https://github.com/NightscoutFoundation/xDrip) и следуйте инструкциям на странице настроек [xDrip+](../CompatibleCgms/xDrip.md).
 - В xDrip+ в качестве источника данных выберите "Libre (patched app)".
 - При необходимости введите "BgReading:d, xdrip libr_receiver:v" в разделе Менее распространенные настройки -Дополнительные настройки журналирования- Дополнительные теги для добавления в журнал. Это позволит записывать дополнительные сообщения об ошибках для устранения неисправностей.
 
@@ -95,7 +95,7 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 
 Чтобы перейти с приложения Libre 3 на Juggluco, нужно принудительно остановить Libre 3 через настройки Android и перейти к Шагу 1 & 2.
 
-(libre3-experiences-and-troubleshooting)=
+(libre3-experiences-and-troubling)=
 ## Опыт и устранение неполадок
 
 ### Устранение неполадок Libre3 -> Подключение Juggluco

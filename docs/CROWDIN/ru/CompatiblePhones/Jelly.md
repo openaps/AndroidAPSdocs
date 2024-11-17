@@ -8,29 +8,29 @@ orphan: true
 
 ## Jelly 2
 
-Do not confuse with Jelly Star.
+Не путайте с Jelly Star.
 
-**Advantages**
+**Преимущества**
 
 * Он действительно маленький.
 * Android 11.
 * Даже если сообщить о его наличии, его могут не посчитать обычным смартфоном, и легче примут как исключение, в тех ситуациях, когда телефоны обычно не разрешаются.
 
-**Disadvantages**
+**Недостатки**
 
 * Рекомендуется только для опытных пользователей (некоторые настройки не распознаются, их расположение нужно помнить из опыта работы с большим телефоном с Android AAPS). Некоторые кнопки AAPS трудно нажимать из-за их маленького размера.)
 * Может использоваться только как телефон для APS. Лучше иметь обычный смартфон в кармане. 
 
-### Battery life optimization
+### Оптимизация срока службы батареи
 
-The Jelly 2 comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip+, OOP2, Juggluco, etc...).
+В Jelly 2 реализованы мощные функции оптимизации, которые ** должны** быть отключены для нормальной работы AAPS (и другие самостоятельно собранных приложений, таких как BYODA, xDrip +, OOP2, Juggluco и т. д.).
 
 ![](../images/Jelly_Settings1.png)
 
-You can leave Intelligent assistance enabled, but it **must be disabled for DIY apps**.
+Вы можете оставить интеллектуальную поддержку включенной, но она ** должна быть отключена для самостоятельно собранных приложений DIY**.
 
 ![](../images/Jelly_Settings2.png)
 
-You can enable NFC for Libre sensors.
+Для сенсоров Libre можете включить NFC.
 
 ![](../images/Jelly_Settings3.png)

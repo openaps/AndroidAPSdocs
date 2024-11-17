@@ -6,7 +6,7 @@ orphan: true
 
 ## Bluetooth-сопряжение
 
-- Click on the hamburger menu in the top left corner.
+- Нажмите на выпадающее меню в левом верхнем углу.
 
 ![изображение](../images/DiaconnG8/DiaconnG8_01.jpg)
 
@@ -45,7 +45,7 @@ orphan: true
 
 ## Устранение неполадок Bluetooth-соединения
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+**Что делать в случае нестабильного подключения Bluetooth к помпе.**
 
 ### Метод 1 ) Проверьте помпу снова после завершения работы приложения AAPS.
 
@@ -92,4 +92,4 @@ orphan: true
 ### Функция пролонгированного (расширенного) болюса
 
 - Если вы пользуетесь пролонгированным болюсом, замкнутый цикл будет деактивирован.
-- See [this page](#Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- [На этой странице](#Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) приведена подробная информация о том, почему расширенный болюс не работает в условиях замкнутого цикла.

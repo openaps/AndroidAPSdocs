@@ -8,11 +8,11 @@ orphan: true
 
 ## 1. Использовать мост Bluetooth и алгоритм OOP
 
-Трансмиттеры Bluetooth Libre 2 (EU) можно использовать с приложением [алгоритма выхода из процесса](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) OOP. You can receive blood sugar readings every 5 minutes like with the [Libre 1](./Libre1.md).
+Трансмиттеры Bluetooth Libre 2 (EU) можно использовать с приложением [алгоритма выхода из процесса](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) OOP. В этом случае Вы будете получать показания сахара крови каждые 5 минут, так же как с [Libre1](./Libre1.md).
 
 Убедитесь, что мост и приложение, которое вы хотите использовать, совместимы с вашим сенсором и xDrip+ (более старые модели Blucon не будут работать, Miaomiao 1 требует прошивки 39 и Miaomiao 2 прошивки 7).
 
-Алгоритм ООП Libre2 выдает те же показания BГк, что и при использовании оригинального ридера или приложения LibreLink при сканировании NFC. Во избежание скачков, AAPS с Libre2 производит сглаживание в пределах от 10 до 25 минут. See below [Value smoothing & raw values](#libre2-value-smoothing-raw-values). Алгоритм программы генерирует данные каждые 5 минут со сглаживанием по среднему значению за последние 5 минут. Поэтому значения ГК не выглядят гладкими, а совпадают с показаниями оригинального устройства считывания и быстрее следуют "реальным". Если вы хотите пользоваться алгоритмом OOP, включите все настройки сглаживания в xDrip+.
+Алгоритм ООП Libre2 выдает те же показания BГк, что и при использовании оригинального ридера или приложения LibreLink при сканировании NFC. Во избежание скачков, AAPS с Libre2 производит сглаживание в пределах от 10 до 25 минут. См. ниже [Сглаживание показаний & необоаботанные данные](#libre2-value-smoothing-raw-values). Алгоритм программы генерирует данные каждые 5 минут со сглаживанием по среднему значению за последние 5 минут. Поэтому значения ГК не выглядят гладкими, а совпадают с показаниями оригинального устройства считывания и быстрее следуют "реальным". Если вы хотите пользоваться алгоритмом OOP, включите все настройки сглаживания в xDrip+.
 
 Есть несколько веских причин пользоваться передатчиком Bluetooth:
 
@@ -32,17 +32,17 @@ orphan: true
 
 ```{admonition} Libre 2 EU only
 :class: warning
-xDrip+ doesn't support direct connection to Libre 2 US and AUS.  
+xDrip+ не поддерживает прямое подключение к Libre 2 US и AUS.  
 ```
 
 - Следуйте [этим инструкциям](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) для настройки xDrip+, но обязательно загрузите [эту новую версию OOP 2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view), поскольку та, что приведена в документе, устарела.
-- Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+- Следуйте инструкциям по установке на странице настроек [xDrip+](../CompatibleCgms/xDrip.md).
 
 -   В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
 
 ## 3. Использовать Diabox
 
-- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). В Настройках, Интеграция, включите "Делиться данными с другими приложениями".
+- Установите [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). В Настройках, Интеграция, включите "Делиться данными с другими приложениями".
 
 ![Diabox](../images/Diabox.png)
 
@@ -54,15 +54,15 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 - Следуйте инструкциям [здесь](https://www.juggluco.nl/Juggluco/index.html)
 - В Настройках включите трансляцию в xDrip+ (посылает данные не в xDrip+, а в AAPS).
 
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+![Трансляция Juggluco в AAPS](../images/Juggluco_AAPS.png)
 
 - В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
 
 ```{admonition} Use with xDrip+
-:class: note
-You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
-![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
-You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
+:class: заметка
+Вы можете установить Juggluco на трансляцию в xDrip+ при помощи трансляции Patched Libre (необходимо отключить трансляцию xDrip+), для калибровки (см. здесь) и чтобы избежать ежеминутной отправки показаний на AAPS.  
+![Трансляция Juggluco на xDrip+](../images/Juggluco_xDrip.png)  
+Потребуется в качестве аппаратного источник данных в xDrip+указать Libre 2 patched чтобы получать данные с Juggluco.  
 ```
 
 (libre2-patched-librelink-app-with-xdrip)=
@@ -70,7 +70,7 @@ You will then need to set xDrip+ data source to Libre 2 Patched App to receive d
 
 ```{admonition} Libre 2 EU only
 :class: warning
-The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
+Устаревшая версия (22/4/2019) модифицированного приложения может быть несовместима с новыми версиями Android.  
 ```
 
 ### Шаг 1: Создаем модифицированное приложение
@@ -150,8 +150,8 @@ The patched app is an old version (22/4/2019) and might not be compatible with r
 Значения гликемии передаются на смартфон приложением xDrip+.
 
 -   Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции. В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
--   Set xDrip+ with the [patched app data source](#xdrip-libre2-patched-app).
--   Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+-   Настройте xDrip+ с [модифицированным приложением LibreLink в качестве источника данных ГК](#xdrip-libre2-patched-app).
+-   Следуйте инструкциям по установке на странице настроек [xDrip+](../CompatibleCgms/xDrip.md).
 
 ### Шаг 4: Запускаем сенсор
 
@@ -169,9 +169,9 @@ The patched app is an old version (22/4/2019) and might not be compatible with r
 
 ![Источник ГК в xDrip+](../images/ConfBuild_BG_xDrip.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](#xdrip-identify-receiver).
+-   Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией "Установить получателя" в соответствии с описанием на [странице настроек xDrip+](#xdrip-identify-receiver).
 
-До настоящего времени, при выборе Libre 2 в качестве источника данных ГК, в алгоритме SMB невозможно активировать «Включить SMB всегда» и «Включить SMB после углеводов». Значения BG Libre 2 недостаточно сглажены, чтобы их безопасно использовать. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
+До настоящего времени, при выборе Libre 2 в качестве источника данных ГК, в алгоритме SMB невозможно активировать «Включить SMB всегда» и «Включить SMB после углеводов». Значения BG Libre 2 недостаточно сглажены, чтобы их безопасно использовать. Подробнее см. [Сглаживание данных ГК](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 (Libre2-experiences-and-troubleshooting)=
 ### Опыт и устранение неполадок

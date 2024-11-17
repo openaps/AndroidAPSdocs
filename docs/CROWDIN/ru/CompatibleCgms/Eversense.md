@@ -12,59 +12,59 @@ orphan: true
 
 ## ESEL
 
-Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+Скачайте и установите приложение [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), следуя этим [инструкциям](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- Enable "Send to AAPS and xDrip"
-- **Disable** "Send to Nightscout"
-- As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
+- Включите "Транслировать в AAPS и xDrip"
+- **Отключите** "Отправлять в Nightscout"
+- Поскольку данные ГК из Eversense могут быть зашумленными, рекомендуется включить "Сглаживать данные" в ESEL.
 
 ![трансляция ESEL](../images/ESEL.png)
 
-### Companion Mode
+### Режим спутника
 
-Reads the data from the Eversense app notifications (works with the standard Eversense App, available since ESEL version 3.0.1).
+Считывает данные из уведомлений Eversense (работает со стандартным приложением Eversense начиная с ESEL версии 3.0.1).
 
-1. Use the official Eversense App from the Google Play Store
-   - Optional, but required for backfilling: Login to your Eversense account
-   - In Sync, enable Auto synchronization
-2. Configuration of ESEL:
-   - Disable the setting "Get data from patched Eversense App"
-   - For backfilling: Enable "Fill missing data from eversensedms.com"
-   - Provide as Email address and password your Eversense login data
-3. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+1. Используйте официальное приложение Eversense из Google Play Store
+   - Необязательно, но желательно для обратного заполнения пропущенных данных: войти в учетную запись Eversense
+   - В Синхронизации, включить автосинхронизацию
+2. Конфигурация ESEL:
+   - Отключить настройку «Получать данные из модифицированного приложения Eversense»
+   - Для обратного заполнения: включите «Заполнять недостающие данные из eversensedms.com»
+   - В качестве адреса электронной почты и пароля предоставьте ваши данные для входа в систему Eversense
+3. Выберите "MM640g" в качестве источника ГК в [Конфигураторе, Источник ГК](#Config-Builder-bg-source).
 
-### Patched Eversense App
+### Модифицированное приложение Eversense
 
- Requires a patched version of the Eversense App (works completely offline, including backfilling).
+ Требует патч-версию приложения Eversense (работает полностью в автономном режиме, в том числе и для обратного заполнения данных режиме).
 
-1. Uninstall the Eversense App (Warning: your local historical data (older than 1 week) will be lost!)
+1. Удалите приложения Eversense (Предупреждение: локальные данные истории (старше 1 недели) будут потеряны!)
 
-2. Install the [patched Eversense app](https://cr4ck3d3v3r53n53.club) and use it as described by the vendor
+2. Установите [модифицированное приложение Eversense ](https://cr4ck3d3v3r53n53.club) и используйте его в соответствии с инструкцией поставщика
 
-   - Start the Eversense App, login, connect to your transmitter and use it just like the normal app.
+   - Запустите приложение Eversense, войдите в систему, подключитесь к трансмиттеру и используйте его так же, как и обычное приложение.
 
-3. Configuration of ESEL:
+3. Конфигурация ESEL:
 
-   - Enable the setting "Get data from patched Eversense App"
+   - Включить настройку «Получать данные из модифицированного приложения Eversense»
 
 
 
 ![трансляция ESEL](../images/ESELpatch.png)
 
-​       If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
+Если вы запускаете ESEL с новой установкой Eversense впервые, то до появления первых данных в xDrip может понадобиться до 15 минут!
 
-4. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+4. Выберите "MM640g" в качестве источника ГК в [Конфигураторе, Источник ГК](#Config-Builder-bg-source).
 
 ## xDrip +
 
-xDrip+ can read notifications from the vendor app, like ESEL does. No backfilling available.
+xDrip+ может читать уведомления из оригинального приложения, как и ESEL. При этом обратное заполнение недоступно.
 
 - Скачайте и установите xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ “Companion App” must be selected.
+- В качестве источника данных в xDrip+ следует выбрать."Companion App".
 - В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../CompatibleCgms/xDrip.md).
-- Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
+- Настройте параметры xDrip+ в соответствии с пояснениями на странице [настройки xDrip+](../CompatibleCgms/xDrip.md).
+- Включите [экспоненциальное сглаживание](../CompatibleCgms/SmoothingBloodGlucoseData.md) в AAPS.
 
 ```{warning}
-BG values reading frequency is not always 5 minutes and duplicates can occur.
+Частота чтения значений BG не всегда 5 минут, могут возникнуть дубликаты.
 ```

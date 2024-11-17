@@ -7,9 +7,9 @@ orphan: true
 
 ## Using M8 with Ottai app
 
--   Download and Install the apk from <https://play.google.com/store/apps/details?id=com.ottai.seas>.
+-   Скачайте и установите приложение с <https://play.google.com/store/apps/details?id=com.ottai.seas>.
 
 -   Запустите сенсор
 
-- Select Ottai in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- В [Конфигураторе в качестве источника ГК](#Config-Builder-bg-source) выберите Ottai.
 
