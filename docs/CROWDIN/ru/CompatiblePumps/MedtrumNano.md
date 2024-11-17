@@ -24,9 +24,9 @@ orphan: true
         - Medtrum TouchCare Nano с помповой базой моделей: **MD0201** и **MD8201**.
         - Medtrum TouchCare Nano 300Uс помповой базой модели: **MD8301**.
         - Если у вас есть неподдерживаемая модель и вы хотите пожертвовать аппаратное обеспечение или помощь в тестировании, пожалуйста, свяжитесь с нами через discord [здесь](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
+* **Версия 3.2.0.0 или новее, собранная и установленная** с помощью инструкций [Сборка приложения](../SettingUpAaps/BuildingAaps.md).
 * **Совместимый Android-телефон** с рабочим модулем BLE Bluetooth
-    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
+    - См. AAPS [Примечания к выпуску](../Maintenance/ReleaseNotes.md)
 * [**Непрерывный мониторинг гликемии**](../Getting-Started/CompatiblesCgms.md)
 
 ## Подготовка к работе
@@ -59,7 +59,7 @@ orphan: true
 
 #### Вариант 2: Конфигуратор
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](#Config-Builder-pump):
+В текущей версии можно выбрать помпу **Medtrum** в [Конфигураторе](#Config-Builder-pump):
 
 В левом верхнем углу из **выпадающего меню** выберите **Конфигуратор**\ ➜\ **Помпа**\ ➜\ **Medtrum**\, включив кнопку **Medtrum**.
 
@@ -99,9 +99,9 @@ On an existing installation you can select the **Medtrum** pump from the [Config
     - В резервуаре мало инсулина (20 ед.)
     - Напоминание об истечении срока патча
 
-In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
+В любом случае эти предупреждения также отображаются на экране Medtrum в разделе [Активные оповещения](#medtrum-active-alarms).
 
-(medtrum-patch-expiration)=
+(истечение срока действия medtrum)=
 #### Окончание срока действия патча
 
 ***По умолчанию: включено.***
@@ -114,7 +114,7 @@ In either case these warnings are also shown on the Medtrum overview screen unde
 
 ***По умолчанию: 72 часа.***
 
-This setting changes the time of the expiration warning, when [Patch Expiration](#medtrum-patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
+Эта настройка изменяет время предупреждения об [истечении срока действия патча](#medtrum-patch-expiration), AAPS выдаст уведомление в заданное время после активации.
 
 #### Максимальное количество инсулина в час
 
@@ -176,7 +176,7 @@ This setting changes the time of the expiration warning, when [Patch Expiration]
 
 **Прежде чем продолжить:**
 - Приготовьте к работе помповую базу Medtrum Nano и резервуар патча.
-- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+- Убедитесь, что AAPS правильно настроен и [профиль активирован](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 - Другие устройства, которые могут общаться с помпой Medtrum отключены (пульт PDM и приложение Medtrum)
 
 #### Активируйте патч из вкладки Medtrum
@@ -333,7 +333,7 @@ This setting changes the time of the expiration warning, when [Patch Expiration]
 
 ### Заменить патч:
 
-Эта кнопка запустит процесс замены патча. See [Activate patch](#medtrum-activate-patch) for more information.
+Эта кнопка запустит процесс замены патча. См [Активировать патч](#medtrum-activate-patch) для получения дополнительной информации.
 
 ### Сбросить оповещения
 
@@ -366,5 +366,5 @@ This setting changes the time of the expiration warning, when [Patch Expiration]
 
 -  **Уровень 0:** Прочитайте соответствующий раздел этой документации, чтобы удостовериться, что вы понимаете, как должна работать функция, с которой вы испытываете трудности.
 -  **Уровень 1:** Если вы все еще сталкиваетесь с проблемами, которые вы не можете решить, изучая документацию, перейдите в канал *#Medtrum* на **Discord** с помощью [этой ссылки-приглашения](https://discord.gg/4fQUWHZ4Mw).
--  **Уровень 2:** Ищите среди существующих проблем, отмечена ли она в [Issues](https://github.com/nightscout/AAPS/issues) если она существует, подтвердите/комментарий/добавьте информацию о вашей проблеме. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
+-  **Уровень 2:** Ищите среди существующих проблем, отмечена ли она в [Issues](https://github.com/nightscout/AAPS/issues) если она существует, подтвердите/комментарий/добавьте информацию о вашей проблеме. Если нет, создайте [новый вопрос](https://github.com/nightscout/AndroidAPS/issues) и приложите [свои лог-файлы](../GettingHelp/AccessingLogFiles.md).
 -  **Будьте терпеливы - решения проблем часто требуют времени и терпения как от пользователей, так и от разработчиков.**
