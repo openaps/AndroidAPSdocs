@@ -51,6 +51,7 @@
 ## WearOS 版本
 
 - AAPS 需要至少 WearOS API 等級 28（Android 9）
+- 請記住**最新的 WearOS 5 將無法運作**
 
 (版本3300)=
 ## 版本 3.3.0.0
@@ -93,6 +94,8 @@
 - 移轉至 kotlin 2.0，java 21 @MilosKozak
 - 允許輸入負碳水化合物 @MilosKozak
 - 無人值守匯出 @vanelsberg
+- 從自動化操作中檢視功能塊 @Philoul
+- 結合來自 AAPS、AAPSClient 和 AAPSClient2 的手錶錶盤，以監控更多患者 @Philoul @MilosKozak
 
 (version3200)=
 ## 3.2.0.0 版本獻給 @Philoul
