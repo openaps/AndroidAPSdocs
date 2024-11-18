@@ -1,12 +1,12 @@
-# AAPS for children
+# AAPS для детей
 
-**AAPS** can be used successfully with type 1 kids as well. Anyway, there are things to consider.
+**AAPS** может использоваться и для детей с диабетом первого типа. Тем не менее есть соображения, которые следует иметь в виду.
 
 ## Важные факторы
 
-### Initial Profile
+### Исходный профиль
 
-Setting the correct [**Profile**](../SettingUpAaps/YourAapsProfile.md) (basal rate, DIA, ISF...) may prove difficult for children with type 1, especially when growth hormones are involved. Take your time to test and ensure that you are happy with your child’s basal, I:C, DIA and ISF. Test them in real life with your kid next to you before starting remote monitoring and remote treatment. Weekends or school holidays might be a good time for that.<br/>
+Установка правильного [**профиля**](../SettingUpAaps/YourAapsProfile.md) (базал, DIA, ISF.) может оказаться трудной для детей, особенно с гормонами роста. Не торопитесь, убедитесь в том, что вы довольны базой, I:C, DIA и ISF ребенка,. Test them in real life with your kid next to you before starting remote monitoring and remote treatment. Weekends or school holidays might be a good time for that.<br/>
 
 ### Monitor and adjust your child’s Profile where necessary
 
