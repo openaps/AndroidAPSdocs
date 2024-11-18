@@ -1,4 +1,4 @@
-# Konfigurations-Generator
+# Konfiguration (Konfigurations-Generator)
 
 Depending on your settings you can open Config Builder through a tab at the top of **AAPS**' screen or through the hamburger menu.
 
@@ -270,6 +270,6 @@ Wenn Du Deinen Loop von der Uhr aus steuern willst (z.B. Bolus abgeben), aktivie
 
 Access this tab to export / import settings.
 
-### Konfigurations-Generator
+### Konfiguration (Konfigurations-Generator)
 
 This current tab.
