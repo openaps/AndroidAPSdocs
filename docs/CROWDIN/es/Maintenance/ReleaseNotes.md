@@ -49,6 +49,7 @@ Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Andr
 ## Versión de WearOS
 
 - AAPS requires at least WearOS API level 28 (Android 9)
+- Remember **Latest WearOS 5 will not work**
 
 (version3300)=
 ## Version 3.3.0.0
@@ -91,6 +92,8 @@ Release date: XX-XX-202X
 - migration to kotlin 2.0, java 21 @MilosKozak
 - Allowing negative carbs entry  @MilosKozak
 - Unattended exports @vanelsberg
+- Watch tiles from Automation actions @Philoul
+- Combined watchfaces from AAPS, AAPSClient and AAPSClient2 to monitor more patients @Philoul @MilosKozak
 
 (version3200)=
 ## Version 3.2.0.0 dedicada a @Philoul
