@@ -65,7 +65,7 @@ Das **Hamburger-Menü** in der oberen linken Ecke antippen und **Konfiguration**
 
 Wenn Du das **Kontrollkästchen** neben dem **Zahnrad** auswählst, wird die Medtrum-Übersicht als Registerkarte **MEDTRUM**> in der AAPS-Menüleiste sichtbar werden. Wenn Du dieses Kästchen aktivierst, hast Du beim Nutzen von AAPS einen einfachen Zugriff auf die Medtrum-Befehle und es wird deshalb sehr empfohlen.
 
-![Konfigurations-Generator](../images/medtrum/ConfigBuilder.png)
+![Konfiguration (Konfigurations-Generator)](../images/medtrum/ConfigBuilder.png)
 
 ### Schritt 2: Ändern der Medtrum-Einstellungen
 
