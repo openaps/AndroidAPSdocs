@@ -1,11 +1,18 @@
 # Operation of AAPS via your Wear OS smartwatch
+
 (Watchfaces-aaps-watchfaces)=
 
 ## AAPS Watchfaces
 
+```{warning}
+AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.
+Wear OS 5 changes locked the watchfaces: only complications can be used.
+```
+
 There are several watchfaces to choose from that are included in the base build of the AAPS Wear APK. These watchfaces include average delta, IOB, currently active temp basal rate and basal profiles and a CGM readings graph.
 
 Some available actions on the watchfaces are:
+
 * Double tap on the BG to get to the AAPS menu
 * Double tap on the BG graph to change the graph's time scale
 
@@ -20,73 +27,17 @@ If you want to bolus etc. from the watch then within "Wear settings" you need to
 ![Wear settings](../images/ConfBuild_Wear.png)
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+
 * Resend all data.
   Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
 
 Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
 
-## Changing to an AAPS Watchface on your WearOS watch
-There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
-
-1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
-
-![Screenshot_20231123_124657_sysui](https://github.com/openaps/AndroidAPSdocs/assets/10778155/efd4268f-0536-4a31-9ba1-f98108f32483)
-
-2. Scroll to the bottom of the list until you see the "Downloaded" section and find "AAPS (Custom)" and click the middle of the image to add it to your shortlist of current watchfaces. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
-
-![Screenshot_20231123_124619_sysui](https://github.com/openaps/AndroidAPSdocs/assets/10778155/036dc7c4-6672-46c8-b604-8810a16a2eb3)
-
-3. Now open AAPS on your phone and go to the Wear plugin (enable it in Config Builder (under Synchronization) if you don't see it in your current plugins along the top).
-
-![Screenshot_20231123_090941_AAPS](https://github.com/openaps/AndroidAPSdocs/assets/10778155/5df23fa3-791b-4c9a-999a-251391a82835)
-
-4. Click on the "Load Watchface" button and select the watchface that you like
-
-![Screenshot_20231123_130410_AAPS](https://github.com/openaps/AndroidAPSdocs/assets/10778155/adde2eca-1df7-4382-b9ab-346819c35d9d)
-
-5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
-
-
-## Watchfaces available
-
-![Available watchfaces](../images/Watchface_Types.png)
-
-(Watchfaces-new-watchface-as-of-AAPS-2-8)=
-### New watchface as of AAPS 2.8
-
-![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
-
-* Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
-
-## AAPSv2 watchface - Legend
-
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
-
-A - time since last loop run
-
-B - CGM reading
-
-C - minutes since last CGM reading
-
-D - change compared to last CGM reading (in mmol or mg/dl)
-
-E - average change CGM reading last 15 minutes
-
-F - phone battery
-
-G - basal rate (shown in U/h during standard rate and in % during TBR)
-
-H - BGI (blood glucose interaction)
-    -> the degree to which BG “should” be rising or falling based on insulin activity alone.
-
-I - carbs (carbs on board | e-carbs in the future)
-
-J - insulin on board (from bolus | from basal)
-
 ## Accessing main menu of AAPS
 
 To access main menu of AAPS you can use on of following options:
+
 * double tap on your BG value
 * select AAPS icon in watch applications menu
 * tap on AAPS complication (if configured for menu)
@@ -215,6 +166,7 @@ Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpa
 * **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
 
 (WearOsSmartwatch-wear-os-tiles)=
+
 ## Wear OS Tiles
 
 Wear OS Tiles provide easy access to users' information and actions to get things done. The tiles are only available on Android smartwatches running on Wear Os version 2.0 and higher.
@@ -233,15 +185,16 @@ Before using the tiles, you have to switch on "Control from Watch" in the "Wear 
 ![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
 
 Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
+
 1. On your watch, from your watch face;
-    - Swipe right to left till you reach the "+ Add tiles" 
-    - Select one of the tiles.
+   - Swipe right to left till you reach the "+ Add tiles" 
+   - Select one of the tiles.
 2. On your phone open the companion app for your watch. 
-    - For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
+   - For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
    - In the click on the section "Tiles", followed by "+ Add" button
    - Find the AAPS tile you like to add by selecting it.
-    ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
-     The order of the tiles can be changed by dragging and dropping
+     ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
+   - The order of the tiles can be changed by dragging and dropping
 
 The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
 
@@ -308,11 +261,13 @@ Note: not all displays can handle always-on very well. It can cause screen burn-
 ![Simplified UI](../images/Watchface_simplified_ui.png)
 
 ## Snooze Alert shortcut
+
 It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note; you still have to check your alarm message on your phone and handle it accordingly,  but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
 
 To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
 
 ### Snooze xDrip
+
 When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm. 
 
 
@@ -342,25 +297,12 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
 
 (Watchfaces-troubleshooting-the-wear-app)=
+
 ## Troubleshooting the wear app:
 
 *  Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
 *  Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 *  If Complications does not update data - check first if AAPS watchfaces work at all.
-
-(Watchfaces-garmin)=
-## Garmin
-There are a couple of watch faces for Garmin that integrate with xDrip or Nightscout on the [Garmin ConnectIQ store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30).
-
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with AAPS. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to AAPS. It is available in the ConnectIQ store, the necessary AAPS plugin is only available from AAPS 3.2.
-
-![Screenshot](../images/Garmin_WF.png)
-![Screenshot](../images/Garmin_WF-annotated.png)
-
-## Troubleshooting Sony smartwatch setup
-
-Although it was discontinued a few years ago, if you are using a Sony Smartwatch SW 3 please see here for a troubleshooting guide:
-[Troubleshooting Sony Smartwatch SW 3](../UsefulLinks/SonySW3.md)
 
 ## Additional AAPS custom watchfaces are also available
 
@@ -368,6 +310,7 @@ Although it was discontinued a few years ago, if you are using a Sony Smartwatch
 
 ## Build your own watchface
 
-If you want to build your own watchface, follow the [guide here](../UsefulLinks/CustomWatchfaceReference.md).
+If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
 
 Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder  "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+

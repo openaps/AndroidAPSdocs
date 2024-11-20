@@ -183,7 +183,7 @@ Used to **send** data such as treatments to xDrip+.
 See [Open Humans](../SupportingAaps/OpenHumans.md).
 
 ### Wear
-Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)).
+Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)).
 
 ### Samsung Tizen
 
@@ -232,7 +232,7 @@ Note: Entries cannot be used in the **AAPS** calculator. (View only)
 
 (Config-Builder-wear)=
 ### Wear
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 

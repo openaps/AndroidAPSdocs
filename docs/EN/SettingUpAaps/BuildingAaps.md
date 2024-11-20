@@ -286,7 +286,7 @@ You can leave the gradle sync running and follow the next steps already.
 Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
 
 * Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
- 
+
 In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). 
 This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** 
 
@@ -413,8 +413,12 @@ In the Notifications box, click on the blue link "locate":
    Your file manager will open and show you the build apk file that you have just built. 
 
    ![File location apk](../images/Building-the-App/050_LocateAPK.png)
- 
+
 Congratulations! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs. 
+
+```{tip}
+If you think you might want to use an Android Wear smartwatch in the future, this is the best time to build the AAPS Wear apk to be sure it will be synchronized with your AAPS apk.
+```
 
 Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
 

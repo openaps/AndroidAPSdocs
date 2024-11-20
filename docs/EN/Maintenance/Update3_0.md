@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Necessary checks after update to AAPS 3.0
 
 * **Minimum Android version is 9.0 now.**
@@ -48,7 +52,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
   ![Red BG warning](../images/bg_warn_red.png)
 
   ![Yellow BG warning](../images/bg_warn_yellow.png)
-   
+
 For details see [AAPS screens page](#aaps-screens-bg-warning-sign)
 
 (update30-failure-message-data-from-different-pump)=
