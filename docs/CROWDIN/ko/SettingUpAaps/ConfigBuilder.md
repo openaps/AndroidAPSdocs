@@ -195,7 +195,7 @@ See [Open Humans](../SupportingAaps/OpenHumans.md).
 
 ### Wear
 
-Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)).
+Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)).
 
 ### Samsung Tizen
 
@@ -255,7 +255,7 @@ Note: Entries cannot be used in the **AAPS** calculator. (View only)
 
 ### Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
 Watch에서 bolus 주입 등을 하려면, "Wear 설정"에서 "Watch로부터 컨트롤하기"를 사용합니다.
 
