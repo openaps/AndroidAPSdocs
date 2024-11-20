@@ -176,47 +176,7 @@ Um Spike zu installieren, schlage [hier](https://spike-app.com/#installation) na
 
 ## Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
 
-Smartwatch options which also allow interaction with **AAPS** are described in the ["remote control"](../RemoteFeatures/RemoteControl.md) section of the documentation.
-
-Es gibt eine große Auswahl an erschwinglichen Smartwatches, die Glukosewerte anzeigen können. Nutzt Du Nightscout, findest Du einen guten Überblick über die verschiedenen Möglichkeiten auf den [Nightscout-Seiten](https://nightscout.github.io/nightscout/wearable/#).
-
-Hier fassen wir einige der bei **AAPS**-Nutzenden populären Follower-Optionen zusammen:
-
-### a) **Xiaomi und Amazfit Smartwatches**
-
-[Artem](https://github.com/bigdigital) hat die xDrip-Integration für verschiedene Smartwatch Modelle entwickelt, hauptsächlich für Xiaomi (_z. B._ MiBand) und Amazfit-Modelle:
-
-![grafik](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
-
-
-You can read more about them, including how to set up at his website [here](https://bigdigital.home.blog/). Der große Vorteil dieser Smartwatches sind neben der Größe auch deren günstiger Preis (das Xiaomi Mi Band 5 hat einen Verkaufspreis von €44,99 EUR). Sie sind insbesondere für Kinder und Menschen mit dünnen Handgelenken interessant.
-
-### b) Pebble Watch
-
-![grafik](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
-
-![grafik](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
-
-
-Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Fitbit übernahm das Pebble-Vermögen. Pebble-Nutzende können die Urchin Uhr verwenden, um Nightscout-Daten anzuzeigen. Informationen, die angezeigt werden: Aktives Insulin, die aktive temporäre Basalrate und Glukosewert-Vorhersagen. Wenn Du im "Open Loop" unterwegs bist, kannst Du mit IFTTT ein Applet erstellen, das Dir eine SMS oder eine Echtzeit-Benachrichtigung (pushover notification) schickt, wenn eine **AAPS**-Benachrichtigung eingegangen ist.
-
-### c) [BlueJay GTS Smartwatch](https://bluejay.website/shop/product/bluejay-gts-26)
-
-
-![grafik](../images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
-
-
-Dies ist ein besondere Technologie, die Glukosedaten **direkt** vom Dexcom G6-Transmitter empfangen kann. Es ist nicht so bekannt, dass ein Dexcom G6-Transmitter tatsächlich die aktuellen Glukosedaten auf _zwei_ getrennte Kanäle überträgt, einem Smartphone-Kanal und einem Pumpen-Kanal. The Bluejay GTS watch runs a modified version of xDrip+ software, and can be set to receive glucose data on either channel, so if **AAPS **  is using the phone channel, then the Bluejay GTS watch can use the pump channel.
-
-Die Bluejay GTS Smartwatch ist klein, wasserdicht und preiswert (derzeit €126 EUR) und kann in Großbritannien bestellt werden. Sie ist derzeitig die einzige Smartwatch, die ohne Smartphone und Loop-System in der Nähe genutzt werden kann. So, for example, if you disconnect the pump and the **AAPS** phone at the beach or flume park, and are out of range of the **AAPS** phone, you can still get readings from the Dexcom G6 directly to the Bluejay watch.
-
-Reported disadvantages are that it doesn’t always pick up a reading every 5 min, and the battery is not replaceable. The Bluejay GTS watch runs a modified version of xDrip+ software, and it currently doesn’t work with other Dexcom versions (G7) or Libre sensors.
-
-### d) Apple Watch
-
-[Nightscout mit Deiner Smartwatch](https://nightscout.github.io/nightscout/wearable/#) folgen:
-
-Zu den Optionen gehören Nightguard, Sugarmate, Gluco-Tracker, und Loop Follow.
+See [here](../Getting-Started/Watches.md).
 
 
 ## Devices for following AAPS
