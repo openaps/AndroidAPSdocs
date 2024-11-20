@@ -23,7 +23,7 @@ _Note that **NSClient** has been replaced by **AAPSClient** for AAPS version 3.2
 
 For versions of **AAPS** which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) apk. **AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**:
 
-![NSCLIENT_ 2024-05-17 134512](https://github.com/openaps/AndroidAPSdocs/assets/137224335/6c66a27c-21d7-4c43-ac66-001669c0634f)
+![NSCLIENT_ 2024-05-17 134512](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
 
 
 There are 2 versions of the apk that can be [downloaded from here](https://github.com/nightscout/AndroidAPS/releases/),  **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below. 
@@ -54,11 +54,11 @@ Once __AAPSClient__ apk is installed on the follower phone, the user must ensure
 
 Within the ‘Synchronization’ located under ‘Config Builder’, the user can opt for either Synchronization options for both __AAPS__ and follower phone being:
 
-- Option 1: NSClient (also known as ‘v1’) - which synchronises the user’s data with Nightscout; or 
+- Option 1: NSClient (also known as ‘v1’) - which synchronizes the user’s data with Nightscout; or 
 
-- Option 2: NSClientV3 (also referred to as ‘v3’).- which synchronises the user’s data with Nightscout using v3 API. 
+- Option 2: NSClientV3 (also referred to as ‘v3’).- which synchronizes the user’s data with Nightscout using v3 API. 
 
-![AAPS1_Screenshot 2024-05-17 133502](https://github.com/openaps/AndroidAPSdocs/assets/137224335/4bdfed7e-3b2f-4fe8-b6db-6fcf0e5c7d98)
+![AAPS1_Screenshot 2024-05-17 133502](../images/4bdfed7e-3b2f-4fe8-b6db-6fcf0e5c7d98.png)
 
 The user must ensure that __both__ the AAPS and AAPS Client phones are synched together by actioning either option for v1 or v3 being:
 
@@ -76,9 +76,7 @@ Option 2: v3 for both phones:
 
 If selecting Websockets (which is optional) ensure this is activated or deactivated for both __AAPS’__ and __AAPSClient’s__ phone. Activating Websockets in __AAPS__ and not within __AAPSClient__ (and vice versa) will only cause __AAPS__ to malfunction. By enabling websockets will allow for faster synchronization with Nightscout but may lead to more phone battery consumption.
 
-
-
-![WB2_Screenshot 2024-05-17 140548](https://github.com/openaps/AndroidAPSdocs/assets/137224335/8d9a7dc5-b3ea-4bf3-9286-313f329b1966)
+![WB2_Screenshot 2024-05-17 140548](../images/d9a7dc5-b3ea-4bf3-9286-313f329b1966.png)
 
 
 Users should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ under the ‘NSClient' tab for each phone, and that ‘Profile Switches’ or ‘Temp Target' can be correctly activated in __AAPS__ once selected in __AAPSClient__. 
@@ -93,7 +91,13 @@ If you are struggling with **AAPS** v3 to accept the 'NS access token' and using
 
 ### Features of AAPSClient include:
 
-![Sara's AAPSClient table](../images/remote-control-23.png)
+| Tab / Hamburger     | Features                                                     |
+| ------------------- | ------------------------------------------------------------ |
+| **Action** Tab      | - Profile Switch <br>- Temp Target<br>- BG Check<br>- CGM Sensor Insert<br>- Note<br>- Exercise<br>- Announcement<br>- Question?<br>- History Browser |
+| **Food** Tab        |                                                              |
+| **Treatments** Tab  | - Check Treatments delivered including bolus and carbs entered |
+| **Maintenance** Tab | - Export and Import Settings                                 |
+| **Profile** Tab     | - Creating new profile<br>- Profile switch                   |
 
 **AAPSClient** allows the caregiver to make many of the adjustments that are allowed directly in **AAPS** (excluding insulin boluses) remotely, via the mobile or internet network. The main benefits of **AAPSClient** are the speed and ease with which caregivers/parents can use it to remotely control **APPS**. __AAPSClient__ _can_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Commands entered on **AAPSClient** are uploaded onto Nightscout.
 
@@ -157,7 +161,23 @@ Some of the most useful **Nightscout** commands are described in the table below
 
 #### Nightscout command table 
 
-![image](../images/remote-control-33.png)
+| Most commonly used treatments                       | Function, example of when command is useful                  |
+| --------------------------------------------------- | ------------------------------------------------------------ |
+| **Correction bolus**                                | Allows you to announce **but <u>not</u> bolus** insulin. Very useful for cancelling negative insulin to prevent a hypo, for example in the middle of the night, if the profile has been too strong. |
+| **Carb correction**                                 | Announce carbs now                                           |
+| **Temporary Target**<br>**Temporary Target cancel** | Allows temp targets to be set and cancelled. Note that cancelling does not always work, in this instance you can set a new target for a short time period (2 min) which will then revert back to the normal target afterwards. |
+| **Profile switch**                                  | Allows you to check the current profile which is running, and switch to another profile, either permanently, or for a defined length of time (mins). |
+
+
+
+| Less widely used commands                                    | Function, example of when command is useful                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **BG check**                                                 | Send a BG check to AAPS.                                     |
+| **Snack bolus**<br>**Meal bolus**<br>**Combo bolus**         | Can announce carbs (plus proteins and fat) from 60 min in the past to 60 min in the future. Combo bolus allows insulin announcement at the same time. |
+| **Announcement**<br>**Note**<br>**Question**<br>**Exercise**<br>**Open APS offline**<br>**DAD alert** | Add these info notes (DAD = diabetic dog alert).             |
+| **Pump site change**<br>**Battery change**<br>**Insulin cartridge change** | Announces these pump changes.                                |
+| **CGM sensor start**<br>**CGM sensor insert**<br>**CGM sensor stop** | Announces these CGM changes.                                 |
+| **Temp basal start**<br>**Temp basal end**                   | Most useful in open looping.                                 |
 
 Read more about **Nightscout** options [here](https://nightscout.github.io/)
 
