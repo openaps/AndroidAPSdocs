@@ -195,7 +195,7 @@ See [Open Humans](../SupportingAaps/OpenHumans.md).
 
 ### Wear
 
-Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)).
+Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)).
 
 ### Samsung Tizen
 
@@ -255,7 +255,7 @@ Note: Entries cannot be used in the **AAPS** calculator. (reine Anzeigefunktion)
 
 ### Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)). In den Einstellungen (Zahnradsymbol) kannst Du die Variablen festlegen, die bei der Berechnung eines über die Uhr gegebenen Bolus berücksichtigt werden sollen (z.B. 15'-Trend, COB...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). In den Einstellungen (Zahnradsymbol) kannst Du die Variablen festlegen, die bei der Berechnung eines über die Uhr gegebenen Bolus berücksichtigt werden sollen (z.B. 15'-Trend, COB...).
 
 Wenn Du Deinen Loop von der Uhr aus steuern willst (z.B. Bolus abgeben), aktiviere "Steuerung durch die Uhr".
 
