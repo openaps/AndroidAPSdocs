@@ -1,4 +1,4 @@
-# Update auf eine neue Version oder branch
+# Update auf eine neue Version oder einen Branch
 
 ## Notes for specific versions
 
@@ -21,7 +21,7 @@ Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als
 
 1. [Export your settings](ExportImportSettings.md) from the existing **AAPS** version on your phone. Vielleicht brauchst Du sie nicht, aber sicher ist sicher.
 2. [Update local copy](#2-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
-3. [Erstelle signierte APK](#3-build-the-signed-apk)
+3. [Erstelle die signierte APK](#3-build-the-signed-apk)
 4. [Transfer the built apk](#4-transfer-the-apk) to your phone and install it
 5. [Check the version](#6-check-aaps-version-on-phone) in AAPS
 6. Depending on your [BG source](../Getting-Started/CompatiblesCgms.md) make sure to [identify receiver](#xdrip-identify-receiver) in xDrip or use the ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
@@ -72,7 +72,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ## 3. Erstelle die signierte APK
 
-Dein Sourcecode ist jetzt die aktuelle veröffentlichte Version. It's time to build the signed apk from it as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Dein Quellcode entspricht jetzt der neuesten freigegebenen Version. It's time to build the signed apk from it as described in the [build signed apk section](#Building-APK-generate-signed-apk).
 
 ## 4. Übertrage die APK-Datei
 
