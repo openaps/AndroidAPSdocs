@@ -106,5 +106,4 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 
 ## Smartwatches
 
-* [Fehlerbehebung der Wear App](#Watchfaces-troubleshooting-the-wear-app)
-* [Sony Smartwatch 3](../UsefulLinks/SonySW3.md)
+* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
