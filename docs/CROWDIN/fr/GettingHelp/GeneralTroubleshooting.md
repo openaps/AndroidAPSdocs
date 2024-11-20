@@ -106,5 +106,4 @@ Voici des exemples pour les trouver sur des téléphones Android spécifiques.
 
 ## Montres connectées
 
-* [Dépannage de l'application Wear](#Watchfaces-troubleshooting-the-wear-app)
-* [Sony Smartwatch 3](../UsefulLinks/SonySW3.md)
+* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
