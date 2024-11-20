@@ -107,4 +107,3 @@ Here are examples how to find them on specific android phones.
 ## Chytré hodinky
 
 * [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
-* [Sony Smartwatch 3](../UsefulLinks/SonySW3.md)
