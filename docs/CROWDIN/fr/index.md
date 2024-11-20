@@ -62,14 +62,15 @@ Toutes les informations et le code décrits ici le sont à des fins d'informatio
 Changer la langue <./ChangeLanguage/ChangeLanguage.md>
 ```
 ```{toctree}
-:caption: 2) Démarrage
+:caption: 2) Getting started
 
-Introduction aux APS et à AAPS <./Getting-Started/Introduction.md>
-Se préparer à AAPS <./Getting-Started/PreparingForAaps.md>
-Les différents composants <./Getting-Started/ComponentOverview.md>
-- Pompes compatibles <./Getting-Started/CompatiblePumps.md>
-- MGCs compatibles <./Getting-Started/CompatiblesCgms.md>
-- Téléphones compatibles <./Getting-Started/Phones.md>
+Introduction to AAPS <./Getting-Started/Introduction.md>
+Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
+Component Overview <./Getting-Started/ComponentOverview.md>
+- Compatible pumps <./Getting-Started/CompatiblePumps.md>
+- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
+- Compatible phones  <./Getting-Started/Phones.md>
+- Compatible watches  <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
@@ -105,20 +106,23 @@ Changement de fuseau horaire & Heure d'été <./DailyLifeWithAaps/TimezoneTravel
 ```
 
 ```{toctree}
-:caption: 5) AAPS à distance
+:caption: 5) Remote AAPS features
 
-Surveillance à distance <./RemoteFeatures/RemoteMonitoring.md>
-Contrôle à distance <./RemoteFeatures/RemoteControl.md>
-Suivi simple <./RemoteFeatures/FollowingOnly.md>
+Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
+Remote control <./RemoteFeatures/RemoteControl.md>
+SMS Commands <./RemoteFeatures/SMSCommands.md>
+Following Only <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
 ```{toctree}
-:caption: 6) Montres connectées
+:caption: 6) Wear OS Smartwatches
 
-Montres connectées WearOS <./UsefulLinks/WearOsSmartwatch.md>
-Cadrans personnalisés WearOS <./UsefulLinks/CustomWatchfaceReference.md>
-Site d'échange des cadrans personnalisés <./ExchangeSiteCustomWatchfaces/index.md>
+AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
+Use the smartwatch <./WearOS/WearOsSmartwatch.md>
+Remote control <./RemoteFeatures/RemoteControlWearOS.md>
+Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
+Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
