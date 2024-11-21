@@ -176,7 +176,7 @@ Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報�
 
 ## 智慧手錶用於**監控 AAPS**（完整個人設置資料或僅限血糖），其中**AAPS**在手機上運行。
 
-See [here](../Getting-Started/Watches.md).
+請參閱 [這裡](../Getting-Started/Watches.md).
 
 
 ## 追蹤 AAPS 的設備
