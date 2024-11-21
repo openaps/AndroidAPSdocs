@@ -21,7 +21,7 @@ Missing history from March 2022 to September 2024
 - [Necessary checks after update to AAPS 3.0](Update3_0.md) @tanja
 - [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
 - AAPS 3.0 için dokümanları güncelleyin (kısmen) @xJoe
-- [Wear OS for AAPS 3.0](../UsefulLinks/WearOsSmartwatch.md) @peterleimbach
+- [Wear OS for AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
 ## Ocak 2022
 
@@ -49,7 +49,7 @@ Missing history from March 2022 to September 2024
 
 ## Haziran 2021
 
-- [Saat arayüz yüklemesi ](../UsefulLinks/WearOsSmartwatch.md)
+- [Saat arayüz yüklemesi ](../WearOS/WearOsSmartwatch.md)
 
 ## Nisan 2021
 
@@ -76,7 +76,7 @@ Missing history from March 2022 to September 2024
 
 - [Libre 2](../CompatibleCgms/Libre2.md) - patched app does not work with US sensors
 - [OpenAPS sabit kodlu limitler](#Open-APS-features-overview-of-hard-coded-limits)
-- Sony Smartwatch 3 [Manual Installation of Google Play Service](../UsefulLinks/SonySW3.md)
+- Sony Smartwatch 3 Manual Installation of Google Play Service
 
 ## Ekim 2020
 
@@ -125,7 +125,7 @@ Missing history from March 2022 to September 2024
 - New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md)
 - Sample Setup - update Dexcom G6
 - [Version 2.6.0](#Releasenotes-version-2-6-0) - major new features
-- [Wear komplikasyonları](../UsefulLinks/WearOsSmartwatch.md)
+- [Wear komplikasyonları](../WearOS/WearOsSmartwatch.md)
 
 ## Ocak 2020
 
@@ -137,7 +137,7 @@ Missing history from March 2022 to September 2024
 - [Android auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight & Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) - workaround for usage
 - [Glimp](#Config-Builder-bg-source) - version 4.15.57 and newer supported
-- [Watchfaces](../UsefulLinks/WearOsSmartwatch.md) - major update, way more details
+- [Watchfaces](../WearOS/WearOsSmartwatch.md) - major update, way more details
 - [Watchface complications](#Watchfaces-complications) - use your favorite watchface with AAPS data
 
 ## Kasım 2019
