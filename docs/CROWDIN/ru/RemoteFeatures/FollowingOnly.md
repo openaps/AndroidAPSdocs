@@ -176,47 +176,7 @@ Spike может использоваться и как первичный пр�
 
 ## Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
 
-Smartwatch options which also allow interaction with **AAPS** are described in the ["remote control"](../RemoteFeatures/RemoteControl.md) section of the documentation.
-
-Существует множество доступных смарт-часов, которые дают только отображение ГК. Если вы пользуетесь сайтом Nightscout, то хороший обзор вариантов дан [здесь](https://nightscout.github.io/nightscout/wearable/#)
-
-Here we summarize some of the follow-only watch options popular with **AAPS** users:
-
-### a)  **Xiaomi and Amazfit watches**
-
-[Artem](https://github.com/bigdigital) has created an xDrip+ integration app WatchDrip+ for various smartwatch models, mostly for Xiaomi (_e.g._ Mi band) and Amazfit brands:
-
-![изображение](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
-
-
-You can read more about them, including how to set up at his website [here](https://bigdigital.home.blog/). Преимущество этих часов заключается в том, что они небольшие и относительно доступные (Xiaomi Mi Band 5 продается за £39.99 GBP). Они особенно популярны как часы для детей и людей с небольшими запястьями.
-
-### b) Часы Pebble
-
-![изображение](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
-
-![изображение](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
-
-
-Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Активы Pebble перешли к Fitbit. Пользователи Pebble могут пользоваться циферблатом Urchin для просмотра данных Nightscout. Отображаемые данные включают активный инсулин IOB, действующий временный базал и прогнозирование. В случае открытого цикла вы можете использовать алгоритм IFTTT для создания апплета, который сообщает об уведомлениях от **AAPS**, вслед за чем можно отправить либо SMS, либо push-уведомление.
-
-### c) смарт-часы [Bluejay GTS](https://bluejay.website/shop/product/bluejay-gts-26)
-
-
-![изображение](../images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
-
-
-Это уникальное устройство может получать данные гликемии **непосредственно** с трансмиттера Dexcom G6. Малоизвестно, что трансмиттер Dexcom G6 передает текущие данные гликемии по _двум_ отдельным каналам: телефонному каналу и каналу помпы. The Bluejay GTS watch runs a modified version of xDrip+ software, and can be set to receive glucose data on either channel, so if **AAPS **  is using the phone channel, then the Bluejay GTS watch can use the pump channel.
-
-Часы Bluejay GTS небольшие, водонепроницаемые, доступны по цене (в настоящее время 115 фунтов стерлингов) и могут быть доставлены по всему миру из Великобритании. Главное их преимущество заключается в том, что часы полностью независимы как от телефона, так и от системы ИПЖ. So, for example, if you disconnect the pump and the **AAPS** phone at the beach or flume park, and are out of range of the **AAPS** phone, you can still get readings from the Dexcom G6 directly to the Bluejay watch.
-
-Reported disadvantages are that it doesn’t always pick up a reading every 5 min, and the battery is not replaceable. The Bluejay GTS watch runs a modified version of xDrip+ software, and it currently doesn’t work with other Dexcom versions (G7) or Libre sensors.
-
-### d) Часы Apple
-
-Проверьте [Nightscout на часах](https://nightscout.github.io/nightscout/wearable/#):
-
-Options include Nightguard, sugarmate, Gluco-Tracker and Loop Follow.
+See [here](../Getting-Started/Watches.md).
 
 
 ## Devices for following AAPS
