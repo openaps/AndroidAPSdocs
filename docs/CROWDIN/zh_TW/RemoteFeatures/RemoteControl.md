@@ -1,10 +1,10 @@
 # 遠端控制 AAPS
 有四種非常有效的工具可以遠端管理 **AAPS**：
 
-1) [SMS commands](RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](RemoteControl_aapsclient) (follower phone is Android) 3) [Nightscout](RemoteControl_nightscout) (Android, iOS or other computer/device).  
-4) [Smartwatches](RemoteControl_smartwatches) (Android)
+1) [簡訊指令](RemoteControl_SMS-Commands) (關注者的手機可以是 Android 或 iOS)， 2) [AAPSClient](RemoteControl_aapsclient) (關注者的手機是 Android) 3) [Nightscout](RemoteControl_nightscout) (Android、iOS 或其他計算機/設備)。  
+4) [智慧手錶](RemoteControl_smartwatches) (Android)
 
-The first three are mostly appropriate for caregivers/parents, but smartwatches are very useful for caregivers/parents **and** for adults with diabetes themselves.
+前三個主要適合於照護者/父母，但智慧型手錶對照護者/父母**和**糖尿病患者本身都非常有用。
 
 ![圖像](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
@@ -50,9 +50,9 @@ _請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及�
 
 在“組態建置工具”的“同步設置”中，用戶可以選擇 __AAPS__ 和追蹤者手機的同步選項：
 
-- Option 1: NSClient (also known as ‘v1’) - which synchronizes the user’s data with Nightscout; or
+- 選項 1：NSClient（也稱為‘v1’） - 將用戶的資料與 Nightscout 同步；或
 
-- Option 2: NSClientV3 (also referred to as ‘v3’).- which synchronizes the user’s data with Nightscout using v3 API.
+- 選項 2：NSClientV3（也稱為‘v3’） - 將用戶的資料與 Nightscout 通過 v3 API 同步。
 
 ![AAPS1_截圖 2024-05-17 133502](../images/4bdfed7e-3b2f-4fe8-b6db-6fcf0e5c7d98.png)
 
@@ -87,13 +87,13 @@ _請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及�
 
 ### AAPSClient 的功能包括：
 
-| Tab / Hamburger     | Features                                                                                                                                                                                              |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Action** Tab      | - Profile Switch <br>- Temp Target<br>- BG Check<br>- CGM Sensor Insert<br>- Note<br>- Exercise<br>- Announcement<br>- Question?<br>- History Browser |
-| **Food** Tab        |                                                                                                                                                                                                       |
-| **Treatments** Tab  | - Check Treatments delivered including bolus and carbs entered                                                                                                                                        |
-| **Maintenance** Tab | - Export and Import Settings                                                                                                                                                                          |
-| **Profile** Tab     | - Creating new profile<br>- Profile switch                                                                                                                                                      |
+| 標籤 / 漢堡選單   | 功能                                                                                                                                       |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| **功能** 標籤   | - 個人設置切換 <br>- 臨時目標<br>- 血糖檢查<br>- CGM 感測器插入<br>- 註解<br>- 運動<br>- 公告<br>- 問題?<br>- 歷史瀏覽器 |
+| **飲食** 標籤   |                                                                                                                                          |
+| **治療** 標籤   | - 檢查已交付的治療，包括注射和輸入的碳水化合物                                                                                                                 |
+| **維護** 標籤   | - 匯出和匯入設定                                                                                                                                |
+| **個人設置** 標籤 | - 建立新個人設置<br>- 個人設置切換                                                                                                              |
 
 **AAPSClient** 允許照護者透過移動網絡或網際網路，遠端進行許多 **AAPS** 中允許的調整（不包括胰島素注射）。 **AAPSClient** 的主要優點是照護者/父母能夠以快速、便捷的方式遠端控制 **AAPS**。 __AAPSClient__ _可能_ 比輸入 SMS 指令快得多，尤其是當執行需要身份驗證的指令時。 透過 **AAPSClient** 輸入的指令將上傳到 Nightscout。
 
@@ -157,23 +157,23 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 #### Nightscout 指令表
 
-| Most commonly used treatments                             | Function, example of when command is useful                                                                                                                                                                                    |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Correction bolus**                                      | Allows you to announce **but <u>not</u> bolus** insulin. Very useful for cancelling negative insulin to prevent a hypo, for example in the middle of the night, if the profile has been too strong.                            |
-| **Carb correction**                                       | Announce carbs now                                                                                                                                                                                                             |
-| **Temporary Target**<br>**Temporary Target cancel** | Allows temp targets to be set and cancelled. Note that cancelling does not always work, in this instance you can set a new target for a short time period (2 min) which will then revert back to the normal target afterwards. |
-| **設定檔切換**                                                 | Allows you to check the current profile which is running, and switch to another profile, either permanently, or for a defined length of time (mins).                                                                           |
+| 最常使用的治療                      | 功能，指令有用的例子                                                    |
+| ---------------------------- | ------------------------------------------------------------- |
+| **修正注射**                     | 允許你登記**但<u>不</u>注射** 胰島素。 非常適合在夜間取消負面胰島素，以防止低血糖，例如如果個人設定過強。   |
+| **碳水化合物修正**                  | 現在宣告碳水化合物                                                     |
+| **臨時目標**<br>**取消臨時目標** | 允許設定和取消臨時目標。 請注意，取消不一定有效，在此情況下，你可以設定新的短時間目標（2 分鐘），然後再恢復到正常目標。 |
+| **設定檔切換**                    | 允許你檢查當前正在運行的個人設定，並切換到另一個個人設定，不論是永久開啟還是定義的時間（分鐘）。              |
 
 
 
-| Less widely used commands                                                                                                           | Function, example of when command is useful                                                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **BG check**                                                                                                                        | Send a BG check to AAPS.                                                                                                                              |
-| **Snack bolus**<br>**Meal bolus**<br>**Combo bolus**                                                                    | Can announce carbs (plus proteins and fat) from 60 min in the past to 60 min in the future. Combo bolus allows insulin announcement at the same time. |
-| **Announcement**<br>**Note**<br>**Question**<br>**Exercise**<br>**Open APS offline**<br>**DAD alert** | Add these info notes (DAD = diabetic dog alert).                                                                                                      |
-| **Pump site change**<br>**Battery change**<br>**Insulin cartridge change**                                              | Announces these pump changes.                                                                                                                         |
-| **CGM sensor start**<br>**CGM sensor insert**<br>**CGM sensor stop**                                                    | Announces these CGM changes.                                                                                                                          |
-| **Temp basal start**<br>**Temp basal end**                                                                                    | Most useful in open looping.                                                                                                                          |
+| 不常用的指令                                                                                           | 功能，指令有用的例子                                      |
+| ------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| **血糖檢查**                                                                                         | 將血糖檢查傳送至 AAPS。                                  |
+| **點心注射**<br>**餐前注射**<br>**組合注射**                                                     | 可以宣告過去60分鐘到未來60分鐘的碳水（包括蛋白質和脂肪）。 組合注射可同時進行胰島素宣告。 |
+| **宣告**<br>**備註**<br>**問題**<br>**運動**<br>**離線開啟 APS**<br>**DAD 警報** | 新增這些資訊備註（DAD = 糖尿病守護犬警報）。                       |
+| **幫浦位置更換**<br>**電池更換**<br>**胰島素藥囊更換**                                                | 宣告這些幫浦變更。                                       |
+| **CGM 感測器啟動**<br>**CGM 感測器插入**<br>**CGM 感測器停止**                                      | 宣告這些 CGM 變更。                                    |
+| **臨時基礎開始**<br>**臨時基礎結束**                                                                   | 在開放式循環中最為有用。                                    |
 
 閱讀更多關於 **Nightscout** 的選項[此處](https://nightscout.github.io/)
 
@@ -191,12 +191,12 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 雖然這可能對刪除已宣佈（但未實際注射）的碳水化合物有幫助，但在實際操作中，這在 **AAPS** 中並不運作良好，因此我們建議直接透過 **AAPS** 應用程式進行此類更改。
 
-(RemoteControl_smartwatches)=
+(遠端控制智慧型手錶)=
 ## 4) 智慧型手錶
 
-### Option 1) Controlling AAPS from a Wear OS Watch
+### 選項 1) 從 Wear OS 手錶控制 AAPS
 
-Once you have setup **AAPS** on your watch, extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+一旦您在手錶上設置**AAPS**，有關手錶錶盤及其功能的詳細資訊可以在[Wear AAPS 在手錶上的操作](../WearOS/WearOsSmartwatch.md)中找到。
 
 簡要概述，以下功能可以從智慧型手錶觸發：
 
@@ -220,19 +220,19 @@ Once you have setup **AAPS** on your watch, extensive details about the smartwat
 
 * 顯示 TDD（每日總劑量 = 每日注射 + 基礎劑量）
 
-* Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to the network)
+* 遠端注射，照顧者與 T1D 兒童位於不同地點（這在 **AAPS** 手錶和 **AAPS** 手機互相連線時是可能的）
 
-#### Communication from caregivers to the watch using other apps (like WhatsApp)
+#### 從照顧者到手錶的通訊使用其他應用程式（如 WhatsApp）
 
-It is possible to add additional apps to the watch, like WhatsApp, for messaging (for example) between caregivers and kids. 重要的是，手機上只應關聯一個 Google 帳戶，否則手錶無法同步這些資料。 你需要年滿 13 歲才能擁有 Samsung 帳戶，並且此帳戶需要使用與 Android 手機相同的電子郵件地址設置。
+可以在手錶上新增額外的應用程式，如 WhatsApp，用於照顧者與孩子之間的訊息交流（例如）。 重要的是，手機上只應關聯一個 Google 帳戶，否則手錶無法同步這些資料。 你需要年滿 13 歲才能擁有 Samsung 帳戶，並且此帳戶需要使用與 Android 手機相同的電子郵件地址設置。
 
-A video explaining getting WhatsApp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of WhatsApp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+一段解釋如何在 Galaxy 4 手錶上設定 WhatsApp 進行訊息的影片（您無法獲得 WhatsApp 的完整功能）見 [這裡](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
 
-Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for WhatsApp messages to announce with a slight vibration, and also for the WhatsApp message to display over the existing watchface.
+在 **AAPS** 手機和手錶的 **Galaxy wearable** 應用中進行調整，讓 WhatsApp 訊息以輕微震動的方式宣告，並且 WhatsApp 訊息可以顯示在現有的錶盤上。
 
 ### 選項 2) 在手錶上運作 **AAPS**，以遠端控制手機上的 **AAPS**
 
-類似於使用追蹤者手機搭配 AAPSClient、Nightscout 或 SMS 指令（鏈接到相應部分），智慧型手錶可以用來遠端控制 **AAPS**，並提供完整的設定檔資料。 與使用追蹤者手機的主要區別是，智慧型手錶與 **AAPS** 手機的連線是透過藍牙進行的，並且不需要驗證碼。 As a side-note, if both smartwatch and **AAPS** phone linked by bluetooth are also on a Wi-Fi/Cellular data network, the watch will also interact with the **AAPS** phone, giving a longer range of communication. 這包括在不同位置遠端注射胰島素，例如照護者透過 **AAPS** 手錶為 T1D 孩子（持有 **AAPS** 手機）進行注射，這在孩子上學時特別有用。
+類似於使用追蹤者手機搭配 AAPSClient、Nightscout 或 SMS 指令（鏈接到相應部分），智慧型手錶可以用來遠端控制 **AAPS**，並提供完整的設定檔資料。 與使用追蹤者手機的主要區別是，智慧型手錶與 **AAPS** 手機的連線是透過藍牙進行的，並且不需要驗證碼。 此外，如果智慧型手錶與藍牙連線的 **AAPS** 手機也連接至 Wi-Fi/行動網路，那麼手錶也會與 **AAPS** 手機互動，提供更長的通訊範圍。 這包括在不同位置遠端注射胰島素，例如照護者透過 **AAPS** 手錶為 T1D 孩子（持有 **AAPS** 手機）進行注射，這在孩子上學時特別有用。
 
 因此，遠端控制智慧型手錶在以下情況中特別有用：
 
