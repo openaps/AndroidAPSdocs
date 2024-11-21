@@ -5,8 +5,8 @@
 ## AAPS 手錶外觀
 
 ```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.
-Wear OS 5 changes locked the watchfaces: only complications can be used.
+AAPS 錶盤適用於 API 等級 28 至 33 的 Wear OS 智慧型手錶。
+Wear OS 5 的更改限制了錶盤：僅可使用複雜功能。
 ```
 
 AAPS Wear APK 的基礎版本中包含多種手錶外觀供選擇。 這些手錶外觀包括平均變化量、IOB、目前的臨時基礎速率和基礎設定檔，以及 CGM 資料圖。
@@ -185,14 +185,14 @@ Tiles 與任何手錶外觀「並存」使用。 這些Tiles會在所有錶面�
 
 根據你的 Wear OS 版本、品牌和智慧型手機，有兩種啟用 Tiles 的方式：
 
-1. On your watch, from your watch face; 
-  * Swipe right to left till you reach the "+ Add tiles" 
-  * Select one of the tiles.
+1. 在你的手錶上，從你的錶盤開始； 
+  * 向右滑到左，直到你看到“+ 添加小工具” 
+  * 選擇其中一個小工具。
 2. 在手機上打開手錶原廠的應用程式。 
-  * For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
+  * 對於三星，打開“Galaxy Wearable”，或對於其他品牌，打開“Wear OS”
   * 點擊「Tiles」部分，然後點擊「+ 添加」按鈕
-  * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
-  * The order of the tiles can be changed by dragging and dropping
+  * 通過選擇來找到你喜歡的 AAPS 小工具來添加。 ![穿戴手機添加小工具](../images/wear_companion_app_add_tile.png)
+  * 小工具的順序可以通過拖放來改變
 
 你可以透過長按 Tile 並點擊「編輯」或「齒輪圖示」按鈕來自訂 Tiles 的內容。
 
@@ -303,6 +303,6 @@ Wear OS 手錶是非常耗電且又受限的裝置。 手錶機殼的尺寸限�
 
 ## 自己製作錶盤
 
-If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
+如果您想建立自己的手錶面，請遵循[這裡的指導](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md)。
 
 建立自訂錶盤後，你可以與其他人分享自己的**AAPS**自訂錶盤，將 zip 檔上傳至“ExchangeSiteCustomWatchfaces”資料夾，並透過 Pull Request 上傳到 Github。 在合併 Pull Request 時，文件團隊會提取 CustomWatchface.png 檔案，並在檔名前加上 Zip 檔案名稱作為前綴。
