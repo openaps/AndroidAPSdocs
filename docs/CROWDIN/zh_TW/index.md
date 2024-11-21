@@ -62,15 +62,15 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 更改語系 <./ChangeLanguage/ChangeLanguage.md>
 ```
 ```{toctree}
-:caption: 2) Getting started
+:caption: 2) 開始使用
 
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
-Component Overview <./Getting-Started/ComponentOverview.md>
-- Compatible pumps <./Getting-Started/CompatiblePumps.md>
-- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
-- Compatible phones  <./Getting-Started/Phones.md>
-- Compatible watches  <./Getting-Started/Watches.md>
+AAPS 簡介 <./Getting-Started/Introduction.md>
+準備 AAPS <./Getting-Started/PreparingForAaps.md>
+組件概覽 <./Getting-Started/ComponentOverview.md>
+- 相容的幫浦 <./Getting-Started/CompatiblePumps.md>
+- 相容的 CGMs <./Getting-Started/CompatiblesCgms.md>
+- 相容的手機 <./Getting-Started/Phones.md>
+- 相容的手錶 <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
@@ -106,23 +106,23 @@ AAPS 重要功能 <./DailyLifeWithAaps/KeyAapsFeatures.md>
 ```
 
 ```{toctree}
-:caption: 5) Remote AAPS features
+:caption: 5) 遠端 AAPS 功能
 
-Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
-Remote control <./RemoteFeatures/RemoteControl.md>
-SMS Commands <./RemoteFeatures/SMSCommands.md>
-Following Only <./RemoteFeatures/FollowingOnly.md>
+遠端監控 <./RemoteFeatures/RemoteMonitoring.md>
+遠端控制 <./RemoteFeatures/RemoteControl.md>
+簡訊指令 <./RemoteFeatures/SMSCommands.md>
+僅追蹤 <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
 ```{toctree}
-:caption: 6) Wear OS Smartwatches
+:caption: 6) Wear OS 智慧型手錶
 
 AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
-Use the smartwatch <./WearOS/WearOsSmartwatch.md>
-Remote control <./RemoteFeatures/RemoteControlWearOS.md>
-Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
+使用智慧型手錶 <./WearOS/WearOsSmartwatch.md>
+遠端控制 <./RemoteFeatures/RemoteControlWearOS.md>
+自訂錶盤參考 <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
+交換站自訂錶盤 <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
