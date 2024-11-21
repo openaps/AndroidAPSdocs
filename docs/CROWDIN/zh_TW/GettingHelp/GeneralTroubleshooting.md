@@ -106,4 +106,4 @@
 
 ## 智慧型手錶
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
+* [問題排除 Wear 應用程式](#Watchfaces-troubleshooting-the-wear-app)
