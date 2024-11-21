@@ -70,6 +70,7 @@ Component Overview <./Getting-Started/ComponentOverview.md>
 - Compatible pumps <./Getting-Started/CompatiblePumps.md>
 - Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
 - Compatible phones  <./Getting-Started/Phones.md>
+- Compatible watches  <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
@@ -109,15 +110,18 @@ Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling
 
 Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
 Remote control <./RemoteFeatures/RemoteControl.md>
+SMS Commands <./RemoteFeatures/SMSCommands.md>
 Following Only <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
 ```{toctree}
-:caption: 6) Smartwatches
+:caption: 6) Wear OS Smartwatches
 
-WearOS Smartwatch <./UsefulLinks/WearOsSmartwatch.md>
-WearOS Custom Watchfaces <./UsefulLinks/CustomWatchfaceReference.md>
+AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
+Use the smartwatch <./WearOS/WearOsSmartwatch.md>
+Remote control <./RemoteFeatures/RemoteControlWearOS.md>
+Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
 Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
