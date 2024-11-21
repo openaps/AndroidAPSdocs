@@ -51,7 +51,7 @@ Please follow the instructions in the [update manual](UpdateToNewVersion). На 
 ## Версия WearOS
 
 - AAPS requires at least WearOS API level 28 (Android 9)
-- Remember **Latest WearOS 5 will not work**
+- WearOS 5, API level 34 (Android 14) and above only allow complications: constraints decided by Google and Samsung lock most of existing watchfaces.
 
 (version3300)=
 ## Version 3.3.0.0
@@ -344,7 +344,7 @@ v3 - новый протокол. Более безопасный и эффек�
 
 - [Omnipod Eros support](../CompatiblePumps/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
 - [bolus advisor](#Preferences-quick-wizard) & [eating reminder](#AapsScreens-section-j) @MilosKozak
-- [New watchface](#Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
+- New watchface @rICTx-T1D
 - Улучшение связи с Dana RS @MilosKozak
 - Удален алгоритм "Неизмененные значения CGM " в SMB для оригинального приложения Dexcom
 - New [Low Ressolution Skin](#Preferences-skin)
@@ -494,7 +494,7 @@ You need at least start [objective 11 (in later versions objective 10!)](#object
 
 - Измененный пользовательский интерфейс и внутренние улучшения
 
-- [Усложнения для циферблатов Wear](../UsefulLinks/WearOsSmartwatch.md)
+- [Усложнения для циферблатов Wear](../WearOS/WearOsSmartwatch.md)
 
 - New [SMS commands](../RemoteFeatures/SMSCommands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 
