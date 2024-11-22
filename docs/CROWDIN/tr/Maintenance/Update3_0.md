@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # AAPS 3.0 güncellemesinden sonra gerekli kontroller
 
 * **Minimum Android sürümü artık 9.0'dır.**

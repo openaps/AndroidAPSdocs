@@ -51,7 +51,7 @@
 ## WearOS 版本
 
 - AAPS 需要至少 WearOS API 等級 28（Android 9）
-- 請記住**最新的 WearOS 5 將無法運作**
+- 僅支援 WearOS 5、API 34（Android 14）及以上版本的複雜功能：由 Google 和三星決定的限制鎖定了大部分現有的錶盤。
 
 (版本3300)=
 ## 版本 3.3.0.0
@@ -344,7 +344,7 @@ v3 是新的協議。 更加安全和高效
 
 - [Omnipod Eros 支援](../CompatiblePumps/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda，特別感謝 @ps2 @itsmojo 以及所有參與 Omnipod Loop 驅動程序的人，還有 @jlucasvt 來自 GetRileyLink.org
 - [注射顧問](#Preferences-quick-wizard) 和 [用餐提醒](#AapsScreens-section-j) @MilosKozak
-- [新錶盤](#Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
+- 新錶盤 @rICTx-T1D
 - Dana RS 連線改進 @MilosKozak
 - 移除了 Dexcom 原生應用中 SMB 的「未變更 CGM 值」行為
 - 新增[低解析度外觀](#Preferences-skin)
@@ -494,7 +494,7 @@ v3 是新的協議。 更加安全和高效
 
 - 不同的 UI 和內部改進
 
-- [Wear OS 複雜功能](../UsefulLinks/WearOsSmartwatch.md)
+- [Wear OS 複雜功能](../WearOS/WearOsSmartwatch.md)
 
 - 新增 [簡訊指令](../RemoteFeatures/SMSCommands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 

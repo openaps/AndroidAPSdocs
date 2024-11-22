@@ -64,12 +64,13 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 ```{toctree}
 :caption: 2) 開始使用
 
-AAPS 介紹 <./Getting-Started/Introduction.md>
-準備好 AAPS <./Getting-Started/PreparingForAaps.md>
-組件總覽 <./Getting-Started/ComponentOverview.md>
+AAPS 簡介 <./Getting-Started/Introduction.md>
+準備 AAPS <./Getting-Started/PreparingForAaps.md>
+組件概覽 <./Getting-Started/ComponentOverview.md>
 - 相容的幫浦 <./Getting-Started/CompatiblePumps.md>
-- 相容的 CGM <./Getting-Started/CompatiblesCgms.md>
-- 相容的手機  <./Getting-Started/Phones.md>
+- 相容的 CGMs <./Getting-Started/CompatiblesCgms.md>
+- 相容的手機 <./Getting-Started/Phones.md>
+- 相容的手錶 <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
@@ -109,16 +110,19 @@ AAPS 重要功能 <./DailyLifeWithAaps/KeyAapsFeatures.md>
 
 遠端監控 <./RemoteFeatures/RemoteMonitoring.md>
 遠端控制 <./RemoteFeatures/RemoteControl.md>
+簡訊指令 <./RemoteFeatures/SMSCommands.md>
 僅追蹤 <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
 ```{toctree}
-:caption: 6) 智慧手錶
+:caption: 6) Wear OS 智慧型手錶
 
-WearOS 智慧手錶 <./UsefulLinks/WearOsSmartwatch.md>
-WearOS 自訂錶盤 <./UsefulLinks/CustomWatchfaceReference.md>
-交流網站自訂錶盤 <./ExchangeSiteCustomWatchfaces/index.md>
+AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
+使用智慧型手錶 <./WearOS/WearOsSmartwatch.md>
+遠端控制 <./RemoteFeatures/RemoteControlWearOS.md>
+自訂錶盤參考 <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
+交換站自訂錶盤 <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 

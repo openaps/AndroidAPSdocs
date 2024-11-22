@@ -176,47 +176,7 @@ To install Spike, see [here](https://spike-app.com/#installation)
 
 ## Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
 
-Smartwatch options which also allow interaction with **AAPS** are described in the ["remote control"](../RemoteFeatures/RemoteControl.md) section of the documentation.
-
-There are a wide range of affordable smartwatches which can provide display only. If you are using Nightscout, then a good overview of all the options is [here](https://nightscout.github.io/nightscout/wearable/#)
-
-Here we summarize some of the follow-only watch options popular with **AAPS** users:
-
-### a)  **Xiaomi and Amazfit watches**
-
-[Artem](https://github.com/bigdigital) has created an xDrip+ integration app WatchDrip+ for various smartwatch models, mostly for Xiaomi (_e.g._ Mi band) and Amazfit brands:
-
-![imagen](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
-
-
-You can read more about them, including how to set up at his website [here](https://bigdigital.home.blog/). The advantage of these watches is that they are small and relatively affordable (the Xiaomi Mi Band 5 has a RRP of £39.99 GBP). They are a popular option especially for kids and those with smaller wrists to wear.
-
-### b) Pebble watch
-
-![imagen](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
-
-![imagen](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
-
-
-Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Fitbit took over Pebble’s assets. Pebble users can use the Urchin watchface to view Nightscout data. Displayed data options include IOB, currently active temp basal rate and predictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS**  then send either an SMS or pushover notification.
-
-### c) [Bluejay GTS watch](https://bluejay.website/shop/product/bluejay-gts-26)
-
-
-![imagen](../images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
-
-
-This is a unique piece of technology which can receive glucose data **directly** from the Dexcom G6 transmitter. It is not widely known that a Dexcom G6 transmitter actually broadcasts the current glucose data on _two_ separate channels, a phone channel and a pump channel. The Bluejay GTS watch runs a modified version of xDrip+ software, and can be set to receive glucose data on either channel, so if **AAPS **  is using the phone channel, then the Bluejay GTS watch can use the pump channel.
-
-The Bluejay GTS watch is small, waterproof and reasonably affordable (currently £115 GBP) and can be shipped internationally from the UK. The key advantage is that it is currently the only watch which is completely independent of both the phone and the looping system. So, for example, if you disconnect the pump and the **AAPS** phone at the beach or flume park, and are out of range of the **AAPS** phone, you can still get readings from the Dexcom G6 directly to the Bluejay watch.
-
-Reported disadvantages are that it doesn’t always pick up a reading every 5 min, and the battery is not replaceable. The Bluejay GTS watch runs a modified version of xDrip+ software, and it currently doesn’t work with other Dexcom versions (G7) or Libre sensors.
-
-### d) Apple watch
-
-Check [Nightscout on your watch](https://nightscout.github.io/nightscout/wearable/#):
-
-Options include Nightguard, sugarmate, Gluco-Tracker and Loop Follow.
+See [here](../Getting-Started/Watches.md).
 
 
 ## Devices for following AAPS

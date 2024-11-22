@@ -51,7 +51,7 @@ Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmas
 ## WearOS versiyonu
 
 - AAPS requires at least WearOS API level 28 (Android 9)
-- Remember **Latest WearOS 5 will not work**
+- WearOS 5, API level 34 (Android 14) and above only allow complications: constraints decided by Google and Samsung lock most of existing watchfaces.
 
 (version3300)=
 ## Version 3.3.0.0
@@ -344,7 +344,7 @@ Yayınlanma tarihi: 01-01-2021
 
 - [Omnipod Eros support](../CompatiblePumps/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
 - [bolus advisor](#Preferences-quick-wizard) & [eating reminder](#AapsScreens-section-j) @MilosKozak
-- [New watchface](#Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
+- New watchface @rICTx-T1D
 - Dana RS bağlantı iyileştirmeleri @MilosKozak
 - Dexcom yerel uygulaması için SMB'deki "Değiştirilmemiş CGM değerleri" davranışı kaldırıldı
 - New [Low Ressolution Skin](#Preferences-skin)
@@ -494,7 +494,7 @@ Apk'yi oluşturmak için lütfen [Android Studio sürüm 3.6.1](https://develope
 
 - Farklı kullanıcı arayüzü ve dahili iyileştirmeler
 
-- [Wear komplikasyonları](../UsefulLinks/WearOsSmartwatch.md)
+- [Wear komplikasyonları](../WearOS/WearOsSmartwatch.md)
 
 - New [SMS commands](../RemoteFeatures/SMSCommands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 

@@ -1,25 +1,27 @@
 # Дистанционное управление AAPS
 Существует 4 наиболее эффективных инструмента для удаленного управления **AAPS**:
 
-1) [SMS commands](#1-sms-commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#2-aapsclient) (follower phone is Android) 3) [Nightscout](#3-nightscout) (Android, iOS or other computer/device).  
-4) [Smartwatches](#4-smartwatches) (Android)
+1) [SMS commands](RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](RemoteControl_aapsclient) (follower phone is Android) 3) [Nightscout](RemoteControl_nightscout) (Android, iOS or other computer/device).  
+4) [Smartwatches](RemoteControl_smartwatches) (Android)
 
-Первые три варианта вполне подходят родителям или опекунам, однако умные часы весьма удобны не только им, но **и** взрослым с диабетом.
+The first three are mostly appropriate for caregivers/parents, but smartwatches are very useful for caregivers/parents **and** for adults with diabetes themselves.
 
 ![изображение](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
+
+(RemoteControl_SMS-Commands)=
 
 ## 1) SMS Commands
 
 See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
 
-(клиентaaps)=
+(RemoteControl_aapsclient)=
 ## 2) AAPSClient
 
 _Обратите внимание, что **NSClient** теперь заменен на **AAPSClient** для AAPS версии 3. и выше, подробности см. в примечаниях к версиям._
 
 For versions of **AAPS** which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) apk. **AAPSClient** похож внешне на сам **AAPS**, но позволяет опекунам отправлять команды в **AAPS** дистанционно:
 
-![NSCLIENT_ 2024-05-17 134512](https://github.com/openaps/AndroidAPSdocs/assets/137224335/6c66a27c-21d7-4c43-ac66-001669c0634f)
+![NSCLIENT_ 2024-05-17 134512](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
 
 
 There are 2 versions of the apk that can be [downloaded from here](https://github.com/nightscout/AndroidAPS/releases/),  **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
@@ -48,11 +50,11 @@ Once __AAPSClient__ apk is installed on the follower phone, the user must ensure
 
 Within the ‘Synchronization’ located under ‘Config Builder’, the user can opt for either Synchronization options for both __AAPS__ and follower phone being:
 
-- Option 1: NSClient (also known as ‘v1’) - which synchronises the user’s data with Nightscout; or
+- Option 1: NSClient (also known as ‘v1’) - which synchronizes the user’s data with Nightscout; or
 
-- Option 2: NSClientV3 (also referred to as ‘v3’).- which synchronises the user’s data with Nightscout using v3 API.
+- Option 2: NSClientV3 (also referred to as ‘v3’).- which synchronizes the user’s data with Nightscout using v3 API.
 
-![AAPS1_Screenshot 2024-05-17 133502](https://github.com/openaps/AndroidAPSdocs/assets/137224335/4bdfed7e-3b2f-4fe8-b6db-6fcf0e5c7d98)
+![AAPS1_Screenshot 2024-05-17 133502](../images/4bdfed7e-3b2f-4fe8-b6db-6fcf0e5c7d98.png)
 
 The user must ensure that __both__ the AAPS and AAPS Client phones are synched together by actioning either option for v1 or v3 being:
 
@@ -70,9 +72,7 @@ Option 2: v3 for both phones:
 
 If selecting Websockets (which is optional) ensure this is activated or deactivated for both __AAPS’__ and __AAPSClient’s__ phone. Activating Websockets in __AAPS__ and not within __AAPSClient__ (and vice versa) will only cause __AAPS__ to malfunction. By enabling websockets will allow for faster synchronization with Nightscout but may lead to more phone battery consumption.
 
-
-
-![WB2_Screenshot 2024-05-17 140548](https://github.com/openaps/AndroidAPSdocs/assets/137224335/8d9a7dc5-b3ea-4bf3-9286-313f329b1966)
+![WB2_Screenshot 2024-05-17 140548](../images/d9a7dc5-b3ea-4bf3-9286-313f329b1966.png)
 
 
 Users should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ under the ‘NSClient' tab for each phone, and that ‘Profile Switches’ or ‘Temp Target' can be correctly activated in __AAPS__ once selected in __AAPSClient__.
@@ -87,7 +87,13 @@ If you are struggling with **AAPS** v3 to accept the 'NS access token' and using
 
 ### Возможности AAPSClient включают:
 
-![Таблица AAPSClient от Sara](../images/remote-control-23.png)
+| Tab / Hamburger     | Features                                                                                                                                                                                              |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Action** Tab      | - Profile Switch <br>- Temp Target<br>- BG Check<br>- CGM Sensor Insert<br>- Note<br>- Exercise<br>- Announcement<br>- Question?<br>- History Browser |
+| **Food** Tab        |                                                                                                                                                                                                       |
+| **Treatments** Tab  | - Check Treatments delivered including bolus and carbs entered                                                                                                                                        |
+| **Maintenance** Tab | - Export and Import Settings                                                                                                                                                                          |
+| **Profile** Tab     | - Creating new profile<br>- Profile switch                                                                                                                                                      |
 
 **AAPSClient** позволяет родителю/опекуну выполнять действия, которые выполняются непосредственно в приложении **AAPS** (за исключением болюсов) дистанционно по мобильной или интернет-сети. Основными преимуществами **AAPSClient** являются скорость и легкость, с которой опекуны/родители могут использовать его для дистанционного управления **APPS**. __AAPSClient__ _can_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Команды, введенные в **AAPSClient** загружаются в Nightscout.
 
@@ -97,7 +103,7 @@ Remote control through **AAPSClient** is only recommended if your synchronizatio
 
 Смарт-часы - полезный инструмент в управлении **AAPS** у детей. Возможны несколько различных конфигураций. Если AAPSClient установлен на родительский телефон,, приложение [AAPSClient WearOS](https://github.com/nightscout/AndroidAPS/releases/) может быть установлено на смарт-часах, сопряженных с родительским телефоном. На них будет отображаться текущая ГК, статус замкнутого цикла, возможность вписать углеводы, временные цели и изменения профиля. Возможности ввести болюс с приложения на WearOS не будет. You can read more about Smartwatches [here](#4-smartwatches).
 
-(nightscout)=
+(RemoteControl_nightscout)=
 ## 3) Nightscout
 
 Кроме того, что Nightscout является сервером в «Облаке», также есть специальное приложение **Nightscout**, которое можно загрузить непосредственно из App Store на iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#2-aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
@@ -151,7 +157,23 @@ Nightscout на iPhone имеет те же функции, что и Nightscout
 
 #### Таблица команд Nightscout
 
-![изображение](../images/remote-control-33.png)
+| Most commonly used treatments                             | Function, example of when command is useful                                                                                                                                                                                    |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Correction bolus**                                      | Allows you to announce **but <u>not</u> bolus** insulin. Very useful for cancelling negative insulin to prevent a hypo, for example in the middle of the night, if the profile has been too strong.                            |
+| **Carb correction**                                       | Announce carbs now                                                                                                                                                                                                             |
+| **Temporary Target**<br>**Temporary Target cancel** | Allows temp targets to be set and cancelled. Note that cancelling does not always work, in this instance you can set a new target for a short time period (2 min) which will then revert back to the normal target afterwards. |
+| **Переключение профиля**                                  | Allows you to check the current profile which is running, and switch to another profile, either permanently, or for a defined length of time (mins).                                                                           |
+
+
+
+| Less widely used commands                                                                                                           | Function, example of when command is useful                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **BG check**                                                                                                                        | Send a BG check to AAPS.                                                                                                                              |
+| **Snack bolus**<br>**Meal bolus**<br>**Combo bolus**                                                                    | Can announce carbs (plus proteins and fat) from 60 min in the past to 60 min in the future. Combo bolus allows insulin announcement at the same time. |
+| **Announcement**<br>**Note**<br>**Question**<br>**Exercise**<br>**Open APS offline**<br>**DAD alert** | Add these info notes (DAD = diabetic dog alert).                                                                                                      |
+| **Pump site change**<br>**Battery change**<br>**Insulin cartridge change**                                              | Announces these pump changes.                                                                                                                         |
+| **CGM sensor start**<br>**CGM sensor insert**<br>**CGM sensor stop**                                                    | Announces these CGM changes.                                                                                                                          |
+| **Temp basal start**<br>**Temp basal end**                                                                                    | Most useful in open looping.                                                                                                                          |
 
 Подробнее возможностях **Nightscout** [здесь](https://nightscout.github.io/)
 
@@ -169,290 +191,12 @@ Nightscout на iPhone имеет те же функции, что и Nightscout
 
 Хотя это может пригодиться для удаления внесенных (но не получивших болюса) углеводов, на практике эта функция плохо работает с **AAPS** и мы рекомендуем вносить такие изменения непосредственно через приложение **AAPS**.
 
-(смарт-часы)=
+(RemoteControl_smartwatches)=
 ## Смарт-часы
 
-Смарт-часы все чаще используются с **AAPS** _и_ для взрослых с диабетом и опекунов/родителей детей с диабетом.
+### Option 1) Controlling AAPS from a Wear OS Watch
 
-### Преимущества смарт-часов в связке с **AAPS**
-
-
-Смарт-часы - в зависимости от модели - могут найти различное применение с **AAPS**. С их помощью можно полностью или частично контролировать работу **AAPS**, а также проверять уровни гликемии, количество активного инсулина и другие параметры.
-
-Интеграция смартфонов с **AAPS** может быть полезна во многих ситуациях, включая вождение автомобиля, мотоцикла, велосипеда, во время занятий спортом и т. п. Многие считают, что взгляд, брошенный на часы (на переговорах, банкетах, приемах и т. п.) вызывает меньше негативных реакций, чем общение со смартфоном. С точки зрения безопасности, смарт-часы также удобнее в пути, и позволяют пользователю не держать телефон с **AAPS** на виду (а, например, в сумке), и управлять системой дистанционно.
-
-### Конкретные преимущества **AAPS** для родителей/опекунов
-
-Для ребенка - если телефон **AAPS**  находится поблизости - опекун может использовать смарт-часы для мониторинга или внесения модификаций не прибегая к помощи телефона **AAPS**. Это может пригодиться, например, если телефон **AAPS** скрыт в поясе для помпы.
-
-A smartwatch can be used either _in addition_ to, or as an _alternative_ to the PHONE-based options for remote control or [following only](../RemoteFeatures/FollowingOnly.md).
-
-Кроме этого, в отличие от телефонов родителей/опекунов (которые зависят от мобильной сети или wi-fi связи), смарт-часы с их bluetooth-технологией пригодятся в таких местах, как пещеры, на катере, при восхождении на гору. Если оба устройства ( телефон**AAPS** и смарт-часы) находятся в одной и той же сети Wi-Fi, они также могут использовать wifi.
-
-### Различные типы взаимодействия смарт-часов и AAPS
-
-Многие возможноси смарт-часов для пользователей **AAPS** подробно описаны на [Nightscout на ваших часах](https://nightscout.github.io/nightscout/wearable/#), так что рекомендуется сначала ознакомиться с этим источником.
-
-В настоящее время существует пять основных способов использования смарт-часов в связке с **AAPS**. Эти данные приводятся ниже в таблице: 
-
-
-![29-10-23, updated AAPSClient watch option table](../images/bbbe0e84-1a8c-4163-8a0b-dcf91144af14.png)
-
-
-
-Обратите внимание, что таблица была подготовлена в 2023 году, она не является исчерпывающей, дополнительные варианты добавляются постоянно.
-
-### Перед тем как купить смарт-часы…
-
-Модель, которую вы покупаете, зависит от желаемых функций. You may find useful information on the [Phones page](#Phones-list-of-tested-phones), including a list a tested phones that also contains some smartwatches.
-
-Популярные марки смарт-часов -- Samsung Galaxy, Garmin, Fossil, Mi band и Fitbit. Различные варианты, описанные в таблице выше, подробнее описаны далее, чтобы помочь принять решение, какие смарт-часы подойдут именно в вашем случае.
-
-Если вы интегрируете смарт-часы с телефоном **AAPS** чтобы удаленно взаимодействовать с **AAPS**, нужно учитывать, совместимы ли оба устройства друг с другом, особенно если у вас устаревший или необычный телефон.
-
-В общем, если вы хотите только следить за гликемией и не взаимодействовать с **AAPS**, то имеется большой выбор доступных и простых смарт-часов.
-
-The best way to choose a smartwatch is to search for "watch" posts on either Discord or Facebook **AAPS** groups. Have a read of others experiences, and post any specific questions, if your query isn't answered by older posts.
-
-#### Для вариантов 1-3 со смарт-часами: _Что такое_ Wear OS?
-
-Первые три варианта требуют наличия операционной системы **Wear OS**. на смарт-часах.
-
-**Wear OS** - это операционная система некоторых современных смарт-часов Android. В [2018](https://en.wikipedia.org/wiki/Wear_OS), Google сделал ребрендинг _Android Wear 1.x на Wear OS_ начиная с версии 2.x. Поэтому, если устройство маркируется «_Android Wear_», а не **Wear OS** — то мы имеем дело с более старой версией. Если в описании смарт-часов указывается только _совместимость_ с Android и iOS - это не означает, что они работают под управлением Wear OS. Это может быть какая-то другая специальная операционная система, не совместимая с **AAPS**. Для поддержки установки и использования любой версии **AAPS** или **AAPSClient**, смарт-часы должен работать на **Wear OS**, а в идеале на Android 10 или новее. В качестве ориентира, по состоянию на октябрь 2023 года новейший выпуск **Wear OS** -- версия 4.0 (на основе Android 13).
-
-Если вы устанавливаете **AAPS**wear.apk на часы с **Wear OS**, для этого существует ряд циферблатов **AAPS**. Кроме того, вы можете использовать стандартный циферблат с информацией **AAPS** которая отображается на маленьких плитках, известных как "усложнения". Усложнение - это любая функция, которая отображается на циферблате помимо времени. Такие функции как усложнения, требуют Wear OS версии 2.0 или новее.
-
-
-#### Как выглядят смарт-часы с дистанционным управлением AAPS?
-
-After installing **AAPS** onto your watch, you will automatically be able to select your preferred watchface from these **AAPS**-dedicated watchfaces. On most watches, you simply long-press on the homescreen until the screen shrinks and swipe right to select an alernative screen:
-
-![изображение](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
-
-#### How would I operate a Wear OS watch from day-to-day?
-
-Further details about the watchfaces, and day-to-day use, including how to make (and share) your own customised watchface, can be found in the section [Operation of Wear AAPS on a Smartwatch](../UsefulLinks/WearOsSmartwatch.md).
-
-### Вариант 1) Автономные часы с **AAPS**
-
-Похоже на привлекательный вариант? Однако в настоящее время лишь несколько энтузиастов экспериментируют с **AAPS**  на отдельных часах. Есть не так много смарт-часов с удобным интерфейсом, которые также способны работать с **AAPS** и приложением мониторинга. Популярные модели включают LEMFO LEM 14, 15 и 16. На них потребуется установить "полноценное" приложение **AAPS** (которое обычно устанавливается на телефон), а не приложение  **AAPS** "wear".
-
-Пока нет четкой спецификации, которая поможет узнать, будут ли часы самостоятельно работать с **AAPS**, но ориентиром будут следующие параметры:
-
-1) Android 10 или новее. 2) Возможность выключать "квадратный" режим для увеличения и упрощения чтения текста. 3) Очень хороший срок службы батареи. 4) Хороший диапазон Bluetooth.
-
-Большинство разочарований от автономных часов с **AAPS** происходит от взаимодействия с крошечным экраном, и то, что текущий полный интерфейс AAPS не был разработан для часов. Из-за величины экрана возможно понадобится стилус для редактирования настроек **AAPS**  на часах, а некоторые кнопки AAPS могут не отображаться на экране просмотра.
-
-Дополнительные проблемы заключаются в том, что трудно получить хороший срок службы батареи, а часы с хорошей батареей часто громоздкие и толстые. Пользователи сообщают о борьбе с настройками энергосбережения, трудностях с запуском сенсоров, плохом диапазоне Bluetooth (для поддержания связи с сенсором и помпой) и сомнительной влагоустойчивости. Примеры на фотографиях ниже (фото: Janvier Doyon).
-
-![изображение](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
-
-![изображение](../images/5d2feecc-3f10-4767-b143-1a72da2b9bd4.png)
-
-Если вы хотите автономно пользоваться смарт-часами, прочтите сообщения и комментарии в группе **AAPS**  на Facebook (ищите по "standalone" (автономные) и "Lemfo") и на Discord для дополнительной информации.
-
-### Вариант 2) **AAPS** на смарт-часах, для дистанционного управления **AAPS** на телефоне
-
-Аналогично использованию телефона фоллоуэра либо с AAPSClient, Nightscout или SMS (ссылка на разделы) смарт-часы можно использовать для удаленного управления **AAPS** и предоставления полных данных профиля. Ключевое различие с телефоном фоллоуэра заключается в том, что смарт-часы связываются с **AAPS** через Bluetooth и не требуют кода аутентификатора. As a side-note, users have reported that if both smartwatch and **AAPS** phone linked by bluetooth are also a wifi network, the watch may also interact with the **AAPS** phone over the wifi, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations and which can useful in circumstances where the T1D child is in school.
-
-Таким образом, смарт-часы дистанционного управления полезны когда:
-
-a)  команды **AAPSClient**/Nightscout/**SMS** не работают; или
-
-b)  The user wishes to avoid the need for authenticator code (as required for the follower phone with inputting data, selecting TT or entering carbs).
-
-На смарт-часах требуется программное обеспечение **Android wear** (идеально версии 10 или выше), чтобы управлять **AAPS**. Please check the technical specifications of the watch, and check the [Phones page](../Getting-Started/Phones.md). Воспользуйтесь поиском или задайте вопрос в группе **AAPS** на Facebook или в Discord если есть сомнения.
-
-Specific How-to guides for setting up **AAPS** on the popular [Samsung Galaxy Watch 4 (40mm) is given below. Часы [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) также популярны. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
-
-#### Приложение AAPS Wear apk
-
-Приложение ОС Wear OS **AAPS**  («Apk Wear OS»), необходимое для смарт-часов теперь отделено от "полной" сборки **AAPS** для телефонов Android. Поэтому следует создать второй установочный файл, или apk, для установки **AAPS**wear на часы (который параллельно загружается с телефона). Настоятельно рекомендуется, чтобы файл **AAPS** Wear apk был собран сразу же после сборки полноценного **AAPS** apk для телефона. Это не только не займет много времени, но и позволит избежать возможных проблем совместимости при попытке установить связь с телефоном. **AAPS** Wear apk на часах вряд ли будет совместимо с телефоном**AAPS**, если было создано в другой версии Android studio, или если с момента первоначальной сборки **AAPS** истекли месяцы.
-
-Если вы уже используете **AAPS** на телефоне, и не собирали сразу оба приложения тогда лучше сделать новую сборку обоих apk файлов одновременно. Если у вас уже установлена Android studio, то переустановите ее и соберите AAPS для двух устройств одновременно используя один файл **хранилища ключей**.
-
-#### Как удалить Android Studio
-
-Убедитесь, что файл хранилища ключей безопасно хранится за пределами папок Android Studio.
-
-Существует несколько шагов, необходимых для полного удаления Android Studio с компьютера. Вот [хорошее руководство](https://www.geeksforgeeks.org/how-to-completely-uninstall-android-studio-on-windows/) для Windows. На последнем этапе этих инструкций также необходимо вручную удалить папку «StudioProjects».
-
-Теперь переустановите свежую версию Android Studio.
-
-#### Создание приложения **AAPS** Wear apk
-Процесс сборки Wear apk очень похож на процесс "полного" apk, разница в том, что в Android Studio необходимо выбрать “**AndroidAPS. wear**» а в выпадающем меню вариант сборки выберите “**fullRelease**”. Это создаст файл **AAPS** Wear apk.  Вместо этого можно собрать **“pumpcontrolRelease”** из выпадающего меню, которое позволит дистанционно управлять помпой, но вне цикла.
-
-Это руководство предполагает, что вы переустановили версию Android studio( Giraffe 2022.3.1)).
-
-![изображение](../images/e8e3b7f3-f82e-425a-968c-cc196434a5f8.png)
-
-Чтобы вернуться сюда:
-
-![изображение](../images/37f4589c-6097-49d4-b0b9-087664914198.png)
-
-продолжайте следовать инструкциям.
-
-Следуйте подсказкам через различные экраны, пока вам не будет предложена опция с выпадающим меню, предлагающим сборку полного AAPS apk. На данном этапе выберите «Wear» из выпадающего списка вместо «AndroidAPS.apk», потому что вы собираете apk для смарт-часов.
-
-
-Следующий шаг перейдите в «Собрать» наверху в ленте
-
-![изображение](../images/b2cccc84-85b6-4ee1-800b-7c6dcb9dd857.png)
-
-
-Перейти к сборке > Сгенерировать подписанный комплект / APK
-
-
-![изображение](../images/f488fe36-8cb9-4d81-9d94-5f742a1aaaee.png)
-
-Выберите > APK:
-
-![изображение](../images/Installation_Screenshot_39b.PNG)
-
-
-Выберите в модуле: AndroidAPSwear
-
-![изображение](../images/cceaa832-70e6-4ad5-95ec-a82e2a6add1e.png)
-
-Введите файл keystore в расположении по умолчанию. Путь к хранилищу ключей будет зависеть от того, где расположено хранилище. В нашем варианте путь к хранилищу ключей: C:\Program Files\Android\Android Studio\jbr\bin
-
-
-Следующий экран должен показать:
-
-![изображение](../images/87ce7943-256e-449e-8439-8f9fd5bef05e.png)
-
-
-И выберите "fullRelease".
-
-Наберитесь терпения - **AAPS** Wear apk должен быть собран примерно через 10-20 минут, в зависимости от скорости подключения к Интернету.
-
-### Устранение неполадок
-
-В процессе сборки полного приложения **AAPS** 3.2 (и в принципе любого подписанного приложения) Android Studio генерирует файл с расширением .json. This then causes errors with [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. Самый быстрый способ решения это переход к папке, в которой было построено полное приложение AAPS, путь к папке, вероятно, выглядит как-то так:
-
-C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release.
-
-Удалите или переместите ненужный файл .json из этой папки. Затем попробуйте снова создать приложение **AAPS**. If that doesn't work, the more detailed [troubleshooting guide](../GettingHelp/TroubleshootingAndroidStudio) will help you to identify the specific file causing the issue, which could also be your keystore file.
-
-
-#### Как настроить смарт-часы Samsung Galaxy 4 с **AAPS**
-
-Этот раздел предполагает, что вы новичок в смарт-часах; он сориентирует в популярных часах, **Galaxy Watch 4**, и даст пошаговое руководство по настройке **AAPS** на часах.
-
-_В этом руководстве предполагается, что на часах Samsung Galaxy, с которыми вы сейчас разбираетесь, работает Wear OS версии 3 или ниже._. Если же вы настраиваете часы под управлением Wear OS 4/OneUI 5 или более поздней, то нужно использовать новый процесс сопряжения через ADB, это объясняется в программном обеспечении Samsung на телефоне и будет своевременно здесь обновляться. Вот основные параметры настройки для [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) и [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
-
-##### Базовое знакомство с часами
-
-После базовой настройки часов в соответствии с видео выше, перейдите в playstore на телефоне и загрузите следующие приложения: "Galaxy Wearable" "Samsung" и "Easy Fire tools" или "Wear Installer 2".
-
-Существует множество сторонних видео на YouTube, которые помогут ознакомиться с этими смарт-часами, например:
-
-https://www.youtube.com/watch?v=tSVkqWNmO2c
-
-В приложении «Galaxy Wearable» также имеется встроенное руководство. В телефоне откройте приложение galaxy wearable, выполните поиск часов, попытайтесь связать часы с телефоном. В зависимости от вашей версии, в ходе этого может появиться запрос на установку еще одного приложения «galaxy watch 4 plugin» из playstore (потребуется некоторое время для загрузки). Установите его на телефон, а затем попытайтесь снова связать часы и телефон в приложении. Пройдите через ряд меню и отметьте предпочтения.
-
-##### Настройка учетной записи Samsung
-
-Вы должны убедиться, что учетная запись электронной почты для настройки учетной записи Samsung имеет дату рождения пользователя старше 13+, ибо в противном случае получить разрешения Samsung не получится. Если вы настроили вашему ребенку до 13 лет детскую учетную запись Gmail и используете этот адрес электронной почты, вы не можете просто изменить его на аккаунт для взрослых. Один из вариантов заключается в том, чтобы изменить текущую дату рождения и сделать текущий возраст 12 лет и 363 дня. На следующий день аккаунт будет преобразован в учётную запись для взрослых, и вы сможете выполнить настройку учетной записи Samsung.
-
-(remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
-##### Перенос приложения **AAPS** Wear на телефон **AAPS**
-
-Загрузка Aapswear.apk из Android Studio на телефон может быть выполнена:
-
-a) при помощи USB-кабеля, разместив файл **AAPS**wear. apk на телефон, а затем выполнив "параллельную загрузку" на часы. Перенесите файл Wear.apk в телефон через USB в папку загрузок; или
-
-b) вырежьте и вставьте файл Wear.apk из Android Studio на Gdrive.
-
-
-Можно использовать либо Wear Installer 2, либо Easy Fire tools для "побочной" (параллельной) загрузки AAPSwear на часы. Здесь мы рекомендуем Wear Installer 2, потому что инструкции и процесс в видео понятны и хорошо описаны.
-
-##### Использование Wear Installer 2 для параллельной загрузки **AAPS** на часы
-
- ![изображение](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
-
-Установщик Wear Installer 2, разработанный [Malcolm Bryant](https://www.youtube.com/@Freepoc)загружается из Google Play и может применяться для "побочной" загрузки приложения AAPS wear на часы. В состав приложения входит понятное [видео](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) "как выполнить параллельную загрузку"
-
-В нем есть вся необходимая информация (лучше всего открыть видео на отдельном устройстве, чтобы посмотреть при настройке телефона).
-
-Как сказано в видео, после завершения установки выключите отладку ADB на часах, чтобы не перегружать аккумулятор смарт-часов.
-
-В качестве альтернативы можно:
-
-```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
-:class: dropdown
-
-1)   Download _Easy Fire Tools_ from playstore onto phone 
-
-![image](../images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
-
-2)  Make yourself a developer in the watch (once set up and connected to phone): 
-
-Go to settings >about watch (bottom option) >- software info > software version. 
-
-Быстро нажимайте на «номер сборки» (7 раз), пока не появится уведомление о том, что часы находятся в «режиме разработчика». Вернитесь в верхнюю часть меню настроек, прокрутите вниз
- и посмотрите «настройки разработчика» ниже «о часах». 
-
-В «опциях разработчика» включите «Отладку ADB и «беспроводную отладку». Эта последняя опция показывает IP адрес часов, последние две цифры которого меняются каждый раз, когда часы сопрягаются с новым телефоном. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Обратите внимание, что последние две цифры (здесь «20») этого адреса будут меняться каждый раз, когда вы меняете телефон для AAPS.  
-
-![24-10-23, watch ADB debug pic](../images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
-
-STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Затем нажмите на значок розетки в правом верхнем углу.  
-
-![image](../images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
-
-
-![image](../images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
-
-
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
-
-Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch: 
-
-![image](../images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
-
-
- Next step > accept the authorisation request on the smartwatch
-
-
-![image](../images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
-
-```
-
-
-##### Настройка связи между часами и телефоном **AAPS**
-
-Последним шагом является настройка **AAPS** на телефоне для работы с **AAPS** Wear на часах. Для этого включите плагин Wear в Конфигураторе настроек:
-
-* Go to the **AAPS** app on the phone
-
-* Select > Config Builder in the left-hand Hamburger tab
-
-* Tick for Wear selection under General
-
-![изображение](../images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466.png)
-
-
-Чтобы изменить внешний вид циферблата **AAPS**  выполните долгое нажатие на главный экран часов и перейдите к кастомизации. Затем проведите вправо, пока не дойдете до всех циферблатов **AAPS**.
-
-Если приложение **AAPS** Wear.apk успешно загружено в смарт-часы, оно будет выглядеть так:
-
-
-![24-10-23, успешная установка на Galaxy Watch фотография](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
-
-#### Устранение неполадок связки **AAPS**часы-**AAPS** телефон
-1.  Если инструменты EasyFire не сработали, или если «авторизация не выполнена» > проверьте правильность ввода IP-адреса.
-2.  Проверьте, что часы подключены к Интернету (а не просто подключены к телефону через Bluetooth).
-3.  Убедитесь, что телефон и смарт-часы **AAPS** сопряжены и связаны в приложении Samsung.
-4.  Жесткий перезапуск телефона и смарт-часов (включение и выключение телефона и часов) может устранить проблему подключения
-5.  Если вам удалось загрузить Wear. телефон, но данных ГК не поступают, _проверьте_, что вы загрузили корректную версию apk **AAPS** на часы. Если ваша версия AAPS wear.apk указана как любая из следующих версий: a) «wear-AAPSClient-release»; b) «wear-full-release». aab’; или c) в заголовке присутствует слово «debug», то выбрана неправильная версия apk OS Wear во время сборки.
-6.  Убедитесь, что ваш роутер не изолирует устройства друг от друга.
-
-Общее устранение неполадок можно найти [здесь](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
-
-### Контроль AAPS с помощью часов Wear
-
-Once you have setup **AAPS** on your watch, extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../UsefulLinks/WearOsSmartwatch.md).
+Once you have setup **AAPS** on your watch, extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
 
 As a brief overview, the following functions can be triggered from the smartwatch:
 
@@ -476,21 +220,29 @@ As a brief overview, the following functions can be triggered from the smartwatc
 
 * show TDD (Total daily dose = bolus + basal per day)
 
-* Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to a Wifi network)
+* Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to the network)
 
-#### Communication from caregivers to the watch using other apps (like Whatsapp)
+#### Communication from caregivers to the watch using other apps (like WhatsApp)
 
-It is possible to add additional apps to the watch, like Whatsapp, for messaging (for example) between caregivers and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
+It is possible to add additional apps to the watch, like WhatsApp, for messaging (for example) between caregivers and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
 
-A video explaining getting Whatsapp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of Whatsapp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+A video explaining getting WhatsApp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of WhatsApp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
 
-Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for Whatsapp messages to announce with a slight vibration, and also for the Whatsapp message to display over the existing watchface.
+Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for WhatsApp messages to announce with a slight vibration, and also for the WhatsApp message to display over the existing watchface.
 
-#### Устранение неполадок со смарт-часами Sony
+### Вариант 2) **AAPS** на смарт-часах, для дистанционного управления **AAPS** на телефоне
 
-Although it was discontinued a few years ago, if you are using a Sony Smartwatch SW 3 please see here for a troubleshooting guide: [Troubleshooting Sony Smartwatch SW 3](../UsefulLinks/SonySW3.md)
+Аналогично использованию телефона фоллоуэра либо с AAPSClient, Nightscout или SMS (ссылка на разделы) смарт-часы можно использовать для удаленного управления **AAPS** и предоставления полных данных профиля. Ключевое различие с телефоном фоллоуэра заключается в том, что смарт-часы связываются с **AAPS** через Bluetooth и не требуют кода аутентификатора. As a side-note, if both smartwatch and **AAPS** phone linked by bluetooth are also on a Wi-Fi/Cellular data network, the watch will also interact with the **AAPS** phone, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations and which can useful in circumstances where the T1D child is in school.
 
+Таким образом, смарт-часы дистанционного управления полезны когда:
 
+a)  команды **AAPSClient**/Nightscout/**SMS** не работают; или
+
+b)  The user wishes to avoid the need for authenticator code (as required for the follower phone with inputting data, selecting TT or entering carbs).
+
+На смарт-часах требуется программное обеспечение **Android wear** (идеально версии 10 или выше), чтобы управлять **AAPS**. Please check the technical specifications of the watch, and check the [Phones page](../Getting-Started/Phones.md). Воспользуйтесь поиском или задайте вопрос в группе **AAPS** на Facebook или в Discord если есть сомнения.
+
+Specific How-to guides for setting up **AAPS** on the popular [Samsung Galaxy Watch 4 (40mm) is given below. Часы [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) также популярны. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
 
 ### Вариант 3) AAPS на смарт-часах, для дистанционного управления **AAPS** на телефоне
 
@@ -511,31 +263,10 @@ Although it was discontinued a few years ago, if you are using a Sony Smartwatch
 
 
 
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)
-
-### Вариант 4) Nightscout с ограничениями (и другими опциями) на часах - часы Fitbit
+The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
 
 
 
-![изображение](../images/98620770-2fb3-47af-a13e-28af7db69096.png)
-
-
-
-**"Sentinel"**(дозор)-циферблат, разработанный [Ryan Chen](http://ryanwchen.com/sentinel.html) для членов семьи и бесплатно выложенный для смарт-часов Fitbit: Sense1/2, Versa 2/3/4. fitBit Luxe не совместим с FitBit Luxe, так как это только фитнес-трек. Sentinel можно загрузить с мобильных приложений для [FitBit](https://gallery.fitbit.com/details/5f75448f-413d-4ece-a53d-b969c6afea7c).
-
-Он позволяет контролировать гликемию 1,2 или 3 человек, используя либо Dexcom Share, либо Nightscout или сочетание двух источников данных.
-
-Также можно использовать xDrip+ или SpikeApp, в локальном режиме веб-сервера. Пользователи могут установить свои сигналы оповещений и отправлять события, используя функциональность портала терапии Nightscout непосредственно с часов для отслеживания инсулина на борту (IOB), активные углеводы(COB), вводить информацию о питании (количество углеводов и болюсов) и проверить ГК.
-
-Все они появятся в графике Nightscout и в обновленных значениях полей активного инсулина IOB и углеводов COB. Поддержку пользователей можно найти в группе [Facebook, Sentinel.](https://www.facebook.com/groups/3185325128159614)
-
-Есть дополнительные опции для часов FitBit, которые, как представляется, предназначены только для мониторинга. Сюда входит [Glance](https://glancewatchface.com/). Эти дополнительные опции описаны на веб-страницах [Nightscout](https://nightscout.github.io/nightscout/wearable/#fitbit)
-
-### Вариант 5) **Мониторинг AAPS** (полные данные профиля или только гликемия), когда **AAPS** работает на телефоне.
-
-These options are described in more detail in the ["following only"](../RemoteFeatures/FollowingOnly.md) section of the documentation.
-
-В общем, существует широкий ассортимент доступных смартфонов, которые могут обеспечить только отображение ГК. Если вы пользуетесь сайтом Nightscout, то хороший обзор всех параметров дан на страницах [Nightscout](https://nightscout.github.io/nightscout/wearable/#).
 
 
 

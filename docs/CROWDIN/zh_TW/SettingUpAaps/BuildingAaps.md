@@ -408,6 +408,10 @@ _如果建置不成功，請參考[Android Studio 問題排除部分](../Getting
 
 恭喜！ 現在你已經建置了**AAPS** apk 檔案，接下來你將把此檔案傳送到你的智慧型手機。
 
+```{tip}
+如果您認為未來可能想使用 Android Wear 智慧型手錶，現在正是建立 AAPS Wear apk 的最佳時機，以確保它與您的 AAPS apk 同步。
+```
+
 移動到[傳送和安裝**AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md)的下一個階段。
 
 

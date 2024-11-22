@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Necessary checks after update coming from AAPS 2.6
 
 - The program code was changed significantly when switching to AAPS 2.7.

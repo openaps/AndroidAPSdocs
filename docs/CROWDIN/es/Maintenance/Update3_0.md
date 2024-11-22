@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Comprobaciones necesarias después de actualizar a AndroidAPS 3.0
 
 * **Ahora, la versión mínima requerida de Android es la 9.0**
