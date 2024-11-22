@@ -571,14 +571,6 @@ For more details see [APS section on config builder page](#Config-Builder-aps).
 
 Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
 
-The buttons on this page allow you to manage your profiles :
-
-* **Green plus**: create new profile from scratch
-* **Red X**: delete the profile currently on screen
-* **Blue arrow**: duplicate the profile currently on screen
-
-When you want to make any changes to a profile, make sure you are editing the correct profile. When you reach the profile tab, it may not show the current profile in use, but the first one in the list.
-
 ## Automatisering
 
 See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
