@@ -343,6 +343,18 @@ orphan: true
 
 按下**重置警報**按鈕以重置警報並恢復正常運作。
 
+## Switching phone, export/import settings
+
+更換新手機時，需要進行以下步驟：
+* [Export settings](ExportImportSettings-export-settings) on your old phone
+* Transfer settings from old to new phone, and import them into AAPS
+
+The imported settings file has to be of the same patch session that you are currently using, otherwise the patch will not connect.
+
+After a settings import the driver will sync history with the pump, this can take a while depending on the age of the settings file.
+
+From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen: ![Sync progress](../images/medtrum/SyncProgress.png)
+
 ## 問題排除
 
 ### 連線問題
