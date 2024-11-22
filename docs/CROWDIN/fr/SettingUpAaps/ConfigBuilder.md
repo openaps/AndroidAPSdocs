@@ -23,18 +23,19 @@ Avec la case à cocher sous le symbole de l'oeil, vous pouvez décider comment o
 :depth: 2
 ```
 
+(ConfigBuilder_Profile)=
+
 ## Profil
 
 This module can not be disabled as it is a core part of **AAPS**.
 
-* See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
-* See [AAPS Screens > Profile](#aaps-screens-profile) for more information about managing your **Profiles**.
+See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
 
 (Config-Builder-insulin)=
 
 ## Insuline
 
-![Type d'insuline](../images/ConfBuild_Insulin_AAPS30.png)
+![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
 
 Select the type of insulin you are using.
 
@@ -42,44 +43,44 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 ### Différences entre les types d'insuline
 
-* Les options 'Insuline à Action rapide Oref', 'Insuline à action Ultra Rapide Oref', 'Lyumjev' et 'Profil d'insuline ajustable Oref' ont toutes une forme exponentielle.
-* Pour l'insuline à "Action Rapide", "Ultra-Rapide" et "Lyumjev", la DAI est la seule variable que vous pouvez ajuster vous-même, le temps du pic est fixé. 
-* Le Profil d'insuline ajustable vous permet d'ajuster à la fois la DAI et le temps du pic, et ne doit être utilisé que par les utilisateurs confirmés qui connaissent les effets de ces paramètres. 
+* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape.
+* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
+* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
 * The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
 
 #### Insuline à Action Rapide Oref 
 
-![Insuline à action rapide Oref](../images/ConfBuild_Insulin_RAO.png)
+![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
 
-* recommandé pour Humalog, Novolog et Novorapid
+* recommended for Humalog, Novolog and Novorapid
 * DAI = au moins 5.0h
-* Pic maxi = 75 minutes après l'injection (fixe, non réglable)
+* Pic peak = 75 minutes after injection (fixed, not adjustable)
 
 #### Insuline Ultra Rapide Oref
 
-![Insuline Ultra Rapide Oref](../images/ConfBuild_Insulin_URO.png)
+![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
 
-* recommendé pour FIASP
+* recommended for FIASP
 * DAI = au moins 5.0h
-* Pic maxi = 55 minutes après l'injection (fixe, non réglable)
+* Pic peak = 55 minutes after injection (fixed, not adjustable)
 
 (Config-Builder-lyumjev)=
 
 #### Lyumjev
 
-![Insuline Lyumjev](../images/ConfBuild_Insulin_L.png)
+![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
 
-* profil d'insuline spécifique pour Lyumjev
+* special insulin profile for Lyumjev
 * DAI = au moins 5.0h
-* Pic maxi = 45 minutes après l'injection (fixe, non réglable)
+* Pic peak = 45 minutes after injection (fixed, not adjustable)
 
 #### Profil d'insuline ajustable Oref
 
-![Insuline ajustable Oref](../images/ConfBuild_Insulin_FPO.png)
+![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
 
-* Avec le "Profil d'insuline ajustable 0ref" vous pouvez entrer individuellement l'heure du pic. Pour cela, cliquez sur la roue crantée pour entrer dans les paramètres avancés.
-* La DAI est automatiquement définie à 5 heures s'il n'est pas spécifié plus haut dans le profil.
-* Ce profil est recommandé si une insuline non soutenue ou un mélange d'insulines différentes est utilisé.
+* With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
+* The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+* This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 (Config-Builder-bg-source)=
 
@@ -87,17 +88,17 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
-![Générateur de Configuration Source de Glycémie](../images/ConfBuild_BG.png)
+![Config Builder BG source](../images/ConfBuild_BG.png)
 
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
-* [Medtronic 640g](../CompatibleCgms/MM640g.md)
+* [MM640g](../CompatibleCgms/MM640g.md)
 * [Glimp](#libre1-using-glimp) - only version 4.15.57 and newer are supported
 * [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 * [Poctech](../CompatibleCgms/PocTech.md)
 * [Tomato App](#libre1-using-tomato) for MiaoMiao device
-* [Application Glunovo](https://infinovo.com/) pour le système MGC Glunovo
-* Gly Aléatoire : Génère des données de glycémie aléatoires (mode Démo uniquement)
+* [Glunovo App](https://infinovo.com/) for Glunovo CGM system
+* Random BG: Generates random BG data (Demo mode only)
 
 ## Smoothing
 
@@ -109,13 +110,13 @@ See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.m
 
 ## Pump
 
-Sélectionner la pompe que vous utilisez. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
+Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
 
-![Sélection de la pompe dans le Générateur de configuration](../images/ConfBuild_Pump_AAPS32.png)
+![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS32.png)
 
-* [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md)
-* DanaR coréenne (pour la pompe DanaR domestique)
-* DanaRv2 (pompe DanaR avec mise à niveau du firmware non officiel)
+* [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
+* Dana R Korean (for domestic DanaR pump)
+* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
 * [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 * Accu Chek Combo 
@@ -133,19 +134,19 @@ Sélectionner la pompe que vous utilisez. See [Compatible pumps](../Getting-Star
 
 ## Estimation de Sensibilité
 
-Sélectionnez le type de calcul pour la sensibilité. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Cela analysera les données historiques au fur et à mesure et fera des ajustements si elle détecte que vous réagissez de façon plus sensible (ou plus résistante) à l'insuline que d'habitude. Plus de détails sur l'algorithme de la Sensitibilité peuvent être lus dans la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs). Vous pouvez voir votre sensibilité sur l'écran d'accueil en sélectionnant Sensibilité dans les paramètres du graphique et en observant la ligne blanche. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Avant d'atteindre cet objectif, le poucentage Autosens ainsi que la ligne dans votre graphique ne sont affichés que pour information.
+You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs). You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
 ### Paramètres d’absorption
 
-If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. De base, c'est une sécurité intégrée.
+If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
 (Config-Builder-aps)=
 
 ## APS
 
-Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous pouvez afficher le détail actif de l'algorithme choisi dans l'onglet OpenAPS (OAPS).
+Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
 * OpenAPS AMA 
   * Advanced Meal Assist: older algorithm not recommended anymore.
@@ -165,7 +166,7 @@ This module should not be disabled as it is a core part of **AAPS**.
 
 ### Objectives
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. Cela devrait vous guider en toute sécurité à travers la mise en place d'un système de boucle fermée. Ce programme d'apprentissage garantit que vous avez tout mis en place correctement et que vous comprenez ce que le système fait exactement. C'est la seule façon pour vous de faire confiance au système.
+**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 
@@ -207,7 +208,7 @@ Connection to Garmin device (Fenix, Edge...)
 
 ## Traitements
 
-Si vous affichez les traitements, vous pouvez voir ceux qui ont été téléchargés dans Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](#screens-bolus-carbs).
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](#screens-bolus-carbs).
 
 ## General
 
@@ -217,17 +218,17 @@ This is the [main screen](#AapsScreens-the-homescreen) of **AAPS** and can not b
 
 #### Affiche les notes dans les dialogues
 
-Choisissez si vous voulez avoir un champ Notes lors de la saisie des traitements ou non.
+Choose if you want to have a notes field when entering treatments or not.
 
 #### Voyants d'état
 
-Choose if you want to have [status lights](#Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. Lorsque le seuil d'avertissement est atteint, la couleur du voyant d'état passe à jaune. Le seuil critique s'affichera en rouge.
+Choose if you want to have [status lights](#Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
 #### Paramètres Avancés
 
-**Injecter cette partie de Bolus calculée par l’assistant** : Avec l'utilisation des SMB, beaucoup de personnes ne font pas de bolus repas avec 100% de l'insuline nécessaire, mais seulement une partie de celle-ci (par ex. 75 %) et laissent les SMB avec les RNS (repas non signalés) faire le reste. In this setting, you can choose a default value for the percentage the bolus wizard should calculate with. Si ce paramètre est de 75 % et que vous avez besoin d'un de bolus 10U, l'assistant de bolus proposera un bolus repas de seulement 7,5 unités.
+**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percentage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
 
-**Activer la fonction super bolus dans l'Assistant** (c'est différent des *super micro bolus* !) : à utiliser avec prudence et ne l'activez pas tans que vous n'avez pas appris ce qu'il fait vraiment. En gros, l'insuline correspondant au débit de basal des deux heures suivantes est ajoutée au bolus et deux heures de zéro-temp sont activées. **Les fonctions de boucle AAPS seront désactivées - c'est donc à utiliser avec prudence ! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
 
@@ -247,24 +248,24 @@ Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Com
 
 ### Aliments
 
-Affiche les préréglages alimentaires définis dans la base de données Nightscout, voir [Nightscout Lisez-moi](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pour plus d'informations sur la configuration.
+Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Note: Entries cannot be used in the **AAPS** calculator. (Affichage uniquement)
+Note: Entries cannot be used in the **AAPS** calculator. (View only)
 
 (Config-Builder-wear)=
 
 ### Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Utilisez les paramètres (roue crantée) pour définir quelles variables doivent être prises en compte lors du calcul du bolus donné par votre montre (par ex. tendance de 15min, GA...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
+If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Paramètres Wear](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-Via l'onglet Wear ou le menu hamburger (en haut à gauche de l'écran, si l'onglet n'est pas affiché), vous pouvez
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Renvoyer toutes les données. Cela peut être utile si la montre n'est pas connectée pendant un certain temps et que vous voulez envoyer toutes les informations à la montre.
-* Ouvrez le menu Paramètres de votre montre directement depuis votre téléphone.
+* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Open settings on your watch directly from your phone.
 
 ### Maintenance
 
