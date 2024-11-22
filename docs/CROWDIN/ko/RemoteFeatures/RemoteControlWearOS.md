@@ -22,7 +22,7 @@ Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md
 
 Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-Watch에서 bolus 주입 등을 하려면, "Wear 설정"에서 "Watch로부터 컨트롤하기"를 사용합니다.
+If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
 ![Wear settings](../images/ConfBuild_Wear.png)
 
