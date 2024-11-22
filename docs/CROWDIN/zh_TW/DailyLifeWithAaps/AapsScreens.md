@@ -320,7 +320,7 @@ Libre 使用者的特殊注意事項：
 
 敏感度是運動、荷爾蒙等導致的對胰島素的敏感度計算結果。
 
-請注意，您需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。 在達到該目標之前，你的圖表中的線條僅顯示為資訊。
+Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. 在達到該目標之前，你的圖表中的線條僅顯示為資訊。
 
 #### 心率(Heart rate)
 
@@ -570,14 +570,6 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 ![設定檔](../images/Screenshots_Profile.png)
 
 個人設置包含你個別糖尿病設定的資訊，請參閱詳細的**[個人設置](../SettingUpAaps/YourAapsProfile.md)**頁面以獲取更多資訊。
-
-此頁上的按鈕允許你管理你的個人設置：
-
-* **綠色加號**：從頭創建新的個人設置
-* **紅色 X**：刪除當前顯示的個人設置
-* **藍色箭頭**：複製當前顯示的個人設置
-
-當你想對個人設置進行任何更改時，請確保你正在編輯正確的個人設置。 當你到達個人設置選項卡時，可能不會顯示當前正在使用的個人設置，而是顯示列表中的第一個。
 
 ## 自動化
 
