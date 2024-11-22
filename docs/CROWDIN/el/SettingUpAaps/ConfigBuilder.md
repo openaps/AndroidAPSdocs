@@ -23,18 +23,19 @@ When there are additional settings available within the module, you can click on
 :depth: 2
 ```
 
+(ConfigBuilder_Profile)=
+
 ## Profile
 
 This module can not be disabled as it is a core part of **AAPS**.
 
-* See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
-* See [AAPS Screens > Profile](#aaps-screens-profile) for more information about managing your **Profiles**.
+See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
 
 (Config-Builder-insulin)=
 
 ## Ινσουλίνη
 
-![Τύπος Ινσουλίνης](../images/ConfBuild_Insulin_AAPS30.png)
+![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
 
 Select the type of insulin you are using.
 
@@ -49,37 +50,37 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 #### Γρήγορη δράση - Oref
 
-![Τύπος ινσουλίνης Rapid- Acting Oref](../images/ConfBuild_Insulin_RAO.png)
+![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
 
-* προτεινόμενο για Humalog, Novolog και Novorapid
+* recommended for Humalog, Novolog and Novorapid
 * DIA = τουλάχιστον 5 ώρες
-* Μέγιστη. κορυφή = 75 λεπτά μετά την ένεση (σταθερή, μη ρυθμιζόμενη)
+* Μέγιστη. peak = 75 minutes after injection (fixed, not adjustable)
 
 #### Έξτρα Γρήγορη δράση - Oref
 
-![Τύπος ινσουλίνης Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
+![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
 
-* προτείνεται για FIASP
+* recommended for FIASP
 * DIA = τουλάχιστον 5 ώρες
-* Μέγιστη. κορυφή = 55 λεπτά μετά την ένεση (σταθερή, μη ρυθμιζόμενη)
+* Μέγιστη. peak = 55 minutes after injection (fixed, not adjustable)
 
 (Config-Builder-lyumjev)=
 
 #### Lyumjev
 
-![Τύπος ινσουλίνης Lyumjev](../images/ConfBuild_Insulin_L.png)
+![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
 
-* ειδικό προφίλ ινσουλίνης για το Lyumjev
+* special insulin profile for Lyumjev
 * DIA = τουλάχιστον 5 ώρες
-* Μέγιστη. κορυφή = 45 λεπτά μετά την ένεση (σταθερή, μη ρυθμιζόμενη)
+* Μέγιστη. peak = 45 minutes after injection (fixed, not adjustable)
 
 #### Ελεύθερης κορυφής Oref
 
-![Τύπος ινσουλίνης Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
+![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
 
-* Με το προφίλ "Ελεύθερης κορυφής Oref" μπορείτε να εισάγετε μεμονωμένα την ώρα της κορυφής. Για να το κάνετε αυτό, κάντε κλικ στο cogwheel για να εισάγετε προηγμένες ρυθμίσεις.
+* With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
-* Αυτή η επιλογή στο προφίλ συνιστάται εάν χρησιμοποιείται μη επαναλαμβανόμενη ινσουλίνη ή μείγμα διαφορετικών ινσουλινών.
+* This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 (Config-Builder-bg-source)=
 
@@ -87,7 +88,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
-![Διαμόρφωση BG πηγή](../images/ConfBuild_BG.png)
+![Config Builder BG source](../images/ConfBuild_BG.png)
 
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
@@ -96,8 +97,8 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 * [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 * [Poctech](../CompatibleCgms/PocTech.md)
 * [Tomato App](#libre1-using-tomato) for MiaoMiao device
-* [Εφαρμογή Glunovo](https://infinovo.com/) για το σύστημα καταγραφης Glunovo CGM
-* Τυχαία τιμή γλυκόζης (BG): Δημιουργεί τυχαία δεδομένα τιμών γλυκόζης (λειτουργία επίδειξης μόνο)
+* [Glunovo App](https://infinovo.com/) for Glunovo CGM system
+* Random BG: Generates random BG data (Demo mode only)
 
 ## Smoothing
 
@@ -109,14 +110,14 @@ See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.m
 
 ## Pump
 
-Επιλέξτε την αντλία που χρησιμοποιείτε. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
+Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
 
-![Επιλογή διαμόρφωσης για την εφαρμογή δημιουργίας της αντλίας ](../images/ConfBuild_Pump_AAPS32.png)
+![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS32.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
-* DanaR Korean (τοπική αντλία DanaR pump για τη Κορέα)
-* Αντλία Dana Rv2 (αντλία DanaR με την ανεπίσημη αναβάθμιση λογισμικού)
-* [Αντλία Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+* Dana R Korean (for domestic DanaR pump)
+* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+* [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 * Accu Chek Combo 
   * [Driver using Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
@@ -133,9 +134,9 @@ See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.m
 
 ## Ανίχνευση ευαισθησίας
 
-Επιλέξτε τον τύπο ανίχνευσης ευαισθησίας. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Περισσότερες λεπτομέρειες σχετικά με τον αλγόριθμο ευαισθησίας μπορούν να διαβαστούν στα έγγραφα [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs). You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Πριν την επίτευξη αυτού του στόχου, το ποσοστό ευαισθησίας Autosens / η γραμμή στο γράφημά σας εμφανίζεται μόνο για ενημέρωση.
+You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs). You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
 ### Ρύθμιση απορρόφησης
 
@@ -145,7 +146,7 @@ If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The va
 
 ## APS
 
-Επιλέξτε τον αλγόριθμο APS που θέλετε για τις ρυθμίσεις των παρεμβάσεων. Μπορείτε να δείτε την ενεργή λεπτομέρεια του επιλεγμένου αλγορίθμου στην καρτέλα OpenAPS (OAPS).
+Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
 * OpenAPS AMA 
   * Advanced Meal Assist: older algorithm not recommended anymore.
@@ -165,7 +166,7 @@ This module should not be disabled as it is a core part of **AAPS**.
 
 ### Objectives
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. Αυτό θα σας καθοδηγήσει με ασφάλεια με στη δημιουργία ενός συστήματος κλειστού κυκλώματος. Εξασφαλίζει ότι έχετε ρυθμίσει τα πάντα σωστά και καταλαβαίνετε τι ακριβώς κάνει το σύστημα. Αυτός είναι ο μόνος τρόπος για να εμπιστευτείτε το σύστημα.
+**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 
@@ -207,7 +208,7 @@ Connection to Garmin device (Fenix, Edge...)
 
 ## Θεραπείες
 
-Αν προβάλετε την καρτέλα Θεραπείες (Θεραπείες), μπορείτε να δείτε τις θεραπείες που έχουν μεταφορτωθεί στο nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](#screens-bolus-carbs).
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](#screens-bolus-carbs).
 
 ## General
 
@@ -217,11 +218,11 @@ This is the [main screen](#AapsScreens-the-homescreen) of **AAPS** and can not b
 
 #### Show notes field in treatment dialogs
 
-Επιλέξτε αν θέλετε να έχετε ένα πεδίο σημειώσεων όταν εισάγετε θεραπείες ή όχι.
+Choose if you want to have a notes field when entering treatments or not.
 
 #### Φώτα κατάστασης
 
-Choose if you want to have [status lights](#Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Η κρίσιμη ηλικία θα εμφανιστεί με κόκκινο χρώμα.
+Choose if you want to have [status lights](#Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
 #### Προηγμένες ρυθμίσεις
 
@@ -247,24 +248,24 @@ Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Com
 
 ### Φαγητό
 
-Εμφανίζει τις προεπιλογές τροφίμων που ορίζονται στη βάση δεδομένων τροφίμων Nightscout, δείτε [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) για περισσότερες πληροφορίες ρύθμισης.
+Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Note: Entries cannot be used in the **AAPS** calculator. (μόνο για ανάγνωση)
+Note: Entries cannot be used in the **AAPS** calculator. (View only)
 
 (Config-Builder-wear)=
 
 ### Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Χρησιμοποιήστε τις ρυθμίσεις (γρανάζι) για να ορίσετε ποιες μεταβλητές θα πρέπει να λαμβάνονται υπόψη κατά τον υπολογισμό του bolus που δίνεται από το ρολόι σας (δηλαδή τάση 15 λεπτών, COB...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Ρυθμίσεις Wear](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-Μέσα από την καρτέλα Wear ή το μενού χάμπουργκερ (στην πάνω αριστερή πλευρά της οθόνης, αν δεν εμφανίζεται η καρτέλα) μπορείτε
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Ξαναστείλετε όλα τα δεδομένα. Μπορεί να είναι χρήσιμο εάν το ρολόι δεν συνδεόταν για κάποιο χρονικό διάστημα και θέλετε να ωθήσετε τις πληροφορίες στο ρολόι.
-* Ανοίξτε τις ρυθμίσεις στο ρολόι σας απευθείας από το τηλέφωνό σας.
+* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Open settings on your watch directly from your phone.
 
 ### Συντήρηση
 
