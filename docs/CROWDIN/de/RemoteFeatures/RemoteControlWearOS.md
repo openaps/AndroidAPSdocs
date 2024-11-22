@@ -22,14 +22,14 @@ Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md
 
 Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-Wenn Du Deinen Loop von der Uhr aus steuern willst (z.B. Bolus abgeben), aktiviere "Steuerung durch die Uhr".
+If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Wear-Einstellungen](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-Über den Wear Tab oder das Hamburger Menü (oben links, falls der Wear Tab nicht angezeigt wird) kannst Du
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Alle Daten erneut senden. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Über das Smartphone die Einstellungen auf der Uhr öffnen.
+* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* Open settings on your watch directly from your phone.
 
 Stelle sicher, dass Benachrichtigungen von AAPS nicht auf der Uhr blockiert sind. Die Eingaben werden aktiviert, indem Du über die Benachrichtigung wischst und sie bestätigst.
 
