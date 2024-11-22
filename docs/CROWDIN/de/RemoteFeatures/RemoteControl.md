@@ -157,23 +157,23 @@ Einige der hilfreichsten **Nightscout**-Befehle sind in der unten stehenden Tabe
 
 #### Nightscout Befehls-Tabelle
 
-| Most commonly used treatments                             | Function, example of when command is useful                                                                                                                                                                                    |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Correction bolus**                                      | Allows you to announce **but <u>not</u> bolus** insulin. Very useful for cancelling negative insulin to prevent a hypo, for example in the middle of the night, if the profile has been too strong.                            |
-| **Kohlenhydrat-Korrektur**                                | Announce carbs now                                                                                                                                                                                                             |
-| **Temporary Target**<br>**Temporary Target cancel** | Allows temp targets to be set and cancelled. Note that cancelling does not always work, in this instance you can set a new target for a short time period (2 min) which will then revert back to the normal target afterwards. |
-| **Profilwechsel**                                         | Allows you to check the current profile which is running, and switch to another profile, either permanently, or for a defined length of time (mins).                                                                           |
+| Most commonly used treatments                             | Function, example of when command is useful                                                                                                                                                                                                               |
+| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Correction bolus**                                      | Allows you to announce **but <u>not</u> bolus** insulin.<br>Very useful for cancelling negative insulin to prevent a hypo,<br>for example in the middle of the night, if the profile has been too strong.                                     |
+| **Kohlenhydrat-Korrektur**                                | Announce carbs now                                                                                                                                                                                                                                        |
+| **Temporary Target**<br>**Temporary Target cancel** | Allows temp targets to be set and cancelled.<br>Note that cancelling does not always work,<br>in this instance you can set a new target for a short time period (2 min)<br>which will then revert back to the normal target afterwards. |
+| **Profilwechsel**                                         | Allows you to check the current profile which is running,<br>and switch to another profile, either permanently,<br>or for a defined length of time (mins).                                                                                    |
 
 
 
-| Less widely used commands                                                                                                           | Function, example of when command is useful                                                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **BG check**                                                                                                                        | Send a BG check to AAPS.                                                                                                                              |
-| **Snack bolus**<br>**Meal bolus**<br>**Combo bolus**                                                                    | Can announce carbs (plus proteins and fat) from 60 min in the past to 60 min in the future. Combo bolus allows insulin announcement at the same time. |
-| **Announcement**<br>**Note**<br>**Question**<br>**Exercise**<br>**Open APS offline**<br>**DAD alert** | Add these info notes (DAD = diabetic dog alert).                                                                                                      |
-| **Pump site change**<br>**Battery change**<br>**Insulin cartridge change**                                              | Announces these pump changes.                                                                                                                         |
-| **CGM sensor start**<br>**CGM sensor insert**<br>**CGM sensor stop**                                                    | Announces these CGM changes.                                                                                                                          |
-| **Temp basal start**<br>**Temp basal end**                                                                                    | Most useful in open looping.                                                                                                                          |
+| Less widely used commands                                                                                                           | Function, example of when command is useful                                                                                                                              |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **BG check**                                                                                                                        | Send a BG check to AAPS.                                                                                                                                                 |
+| **Snack bolus**<br>**Meal bolus**<br>**Combo bolus**                                                                    | Can announce carbs (plus proteins and fat)<br> from 60 min in the past to 60 min in the future.<br>Combo bolus allows insulin announcement at the same time. |
+| **Announcement**<br>**Note**<br>**Question**<br>**Exercise**<br>**Open APS offline**<br>**DAD alert** | Add these info notes (DAD = diabetic dog alert).                                                                                                                         |
+| **Pump site change**<br>**Battery change**<br>**Insulin cartridge change**                                              | Announces these pump changes.                                                                                                                                            |
+| **CGM sensor start**<br>**CGM sensor insert**<br>**CGM sensor stop**                                                    | Announces these CGM changes.                                                                                                                                             |
+| **Temp basal start**<br>**Temp basal end**                                                                                    | Most useful in open looping.                                                                                                                                             |
 
 Mehr zu den **Nightscout**-Optionen kannst Du [hier](https://nightscout.github.io/) nachlesen
 
@@ -196,7 +196,9 @@ Obwohl dies potenziell nützlich sein könnte, um angekündigte (aber nicht gebo
 
 ### Option 1) Controlling AAPS from a Wear OS Watch
 
-Once you have setup **AAPS** on your watch, extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+![Wear Remote 1](../images/Wear_Remote1.png)
+
+Once you have [setup **AAPS** on your watch](../WearOS/BuildingAapsWearOS.md), extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
 
 Als kurze Übersicht: Die folgenden Funktionen können von der Smartwatch aus gestartet werden:
 
@@ -245,6 +247,8 @@ Um **AAPS** steuern zu können, muss auf der Smartwatch **Android Wear** Softwar
 Eine detaillierte Schritt-für-Schritt Anleitung für die **AAPS**-Einrichtung auf der Samsung Galaxy Watch 4 (40mm) findest Du weiter unten. Die [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)-Smartwatch ist ebenfalls gerne gewählt. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
 
 ### Option 3) **AAPS** auf dem Smartphone wird über AAPS auf der Smartwatch gesteuert
+
+![Wear Remote 2](../images/Wear_Remote2.png)
 
 Die notwendige Smartwatch-Software (**AAPSClient** Wear APK) kann direkt von [Github](https://github.com/nightscout/AndroidAPS/releases/) heruntergeladen werden.
 
