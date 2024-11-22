@@ -157,23 +157,23 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 #### Nightscout 指令表
 
-| 最常使用的治療                      | 功能，指令有用的例子                                                    |
-| ---------------------------- | ------------------------------------------------------------- |
-| **修正注射**                     | 允許你登記**但<u>不</u>注射** 胰島素。 非常適合在夜間取消負面胰島素，以防止低血糖，例如如果個人設定過強。   |
-| **碳水化合物修正**                  | 現在宣告碳水化合物                                                     |
-| **臨時目標**<br>**取消臨時目標** | 允許設定和取消臨時目標。 請注意，取消不一定有效，在此情況下，你可以設定新的短時間目標（2 分鐘），然後再恢復到正常目標。 |
-| **設定檔切換**                    | 允許你檢查當前正在運行的個人設定，並切換到另一個個人設定，不論是永久開啟還是定義的時間（分鐘）。              |
+| 最常使用的治療                      | 功能，指令有用的例子                                                                                                                                                                                                                                                |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **修正注射**                     | Allows you to announce **but <u>not</u> bolus** insulin.<br>Very useful for cancelling negative insulin to prevent a hypo,<br>for example in the middle of the night, if the profile has been too strong.                                     |
+| **碳水化合物修正**                  | 現在宣告碳水化合物                                                                                                                                                                                                                                                 |
+| **臨時目標**<br>**取消臨時目標** | Allows temp targets to be set and cancelled.<br>Note that cancelling does not always work,<br>in this instance you can set a new target for a short time period (2 min)<br>which will then revert back to the normal target afterwards. |
+| **設定檔切換**                    | Allows you to check the current profile which is running,<br>and switch to another profile, either permanently,<br>or for a defined length of time (mins).                                                                                    |
 
 
 
-| 不常用的指令                                                                                           | 功能，指令有用的例子                                      |
-| ------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
-| **血糖檢查**                                                                                         | 將血糖檢查傳送至 AAPS。                                  |
-| **點心注射**<br>**餐前注射**<br>**組合注射**                                                     | 可以宣告過去60分鐘到未來60分鐘的碳水（包括蛋白質和脂肪）。 組合注射可同時進行胰島素宣告。 |
-| **宣告**<br>**備註**<br>**問題**<br>**運動**<br>**離線開啟 APS**<br>**DAD 警報** | 新增這些資訊備註（DAD = 糖尿病守護犬警報）。                       |
-| **幫浦位置更換**<br>**電池更換**<br>**胰島素藥囊更換**                                                | 宣告這些幫浦變更。                                       |
-| **CGM 感測器啟動**<br>**CGM 感測器插入**<br>**CGM 感測器停止**                                      | 宣告這些 CGM 變更。                                    |
-| **臨時基礎開始**<br>**臨時基礎結束**                                                                   | 在開放式循環中最為有用。                                    |
+| 不常用的指令                                                                                           | 功能，指令有用的例子                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **血糖檢查**                                                                                         | 將血糖檢查傳送至 AAPS。                                                                                                                                                           |
+| **點心注射**<br>**餐前注射**<br>**組合注射**                                                     | Can announce carbs (plus proteins and fat)<br> from 60 min in the past to 60 min in the future.<br>Combo bolus allows insulin announcement at the same time. |
+| **宣告**<br>**備註**<br>**問題**<br>**運動**<br>**離線開啟 APS**<br>**DAD 警報** | 新增這些資訊備註（DAD = 糖尿病守護犬警報）。                                                                                                                                                |
+| **幫浦位置更換**<br>**電池更換**<br>**胰島素藥囊更換**                                                | 宣告這些幫浦變更。                                                                                                                                                                |
+| **CGM 感測器啟動**<br>**CGM 感測器插入**<br>**CGM 感測器停止**                                      | 宣告這些 CGM 變更。                                                                                                                                                             |
+| **臨時基礎開始**<br>**臨時基礎結束**                                                                   | 在開放式循環中最為有用。                                                                                                                                                             |
 
 閱讀更多關於 **Nightscout** 的選項[此處](https://nightscout.github.io/)
 
@@ -196,7 +196,9 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 ### 選項 1) 從 Wear OS 手錶控制 AAPS
 
-一旦您在手錶上設置**AAPS**，有關手錶錶盤及其功能的詳細資訊可以在[Wear AAPS 在手錶上的操作](../WearOS/WearOsSmartwatch.md)中找到。
+![Wear Remote 1](../images/Wear_Remote1.png)
+
+Once you have [setup **AAPS** on your watch](../WearOS/BuildingAapsWearOS.md), extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
 
 簡要概述，以下功能可以從智慧型手錶觸發：
 
@@ -245,6 +247,8 @@ b) 使用者希望避免輸入驗證碼（追蹤者手機需要在輸入資料�
 以下是設置流行型號 Samsung Galaxy Watch 4（40 毫米）的具體操作指南。 Garmin 手錶也是一個受歡迎的選擇，請參閱[這裡](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)。 如果你有設置其他智慧型手錶的經驗，並且認為這對其他用戶有幫助，請[編輯文件](../SupportingAaps/HowToEditTheDocs.md)，將你的發現分享給更廣泛的 **AAPS** 社群。
 
 ### 選項 3) 在手錶上運作 AAPSClient 以遠端控制手機上的 **AAPS**
+
+![Wear Remote 2](../images/Wear_Remote2.png)
 
 手錶軟體 **AAPSClient** Wear apk 可以直接從[Github](https://github.com/nightscout/AndroidAPS/releases/)下載。
 
