@@ -176,47 +176,7 @@ Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報�
 
 ## 智慧手錶用於**監控 AAPS**（完整個人設置資料或僅限血糖），其中**AAPS**在手機上運行。
 
-允許與 **AAPS** 進行互動的智慧型手錶選項已在文件的 ["遠端控制"](../RemoteFeatures/RemoteControl.md) 部分中描述。
-
-還有各種經濟實惠的智慧型手錶可供顯示資料使用。 如果你使用 Nightscout，那麼這裡有關所有選項的一個不錯的概述 [這裡](https://nightscout.github.io/nightscout/wearable/#)
-
-在這裡我們總結了一些 **AAPS** 用戶流行的僅追蹤手錶選項：
-
-### a)  **小米和 Amazfit 手錶**
-
-[Artem](https://github.com/bigdigital) 為各種智慧型手錶型號建立了一個 xDrip+ 集成應用程式 WatchDrip+，主要針對小米（如 Mi band）和 Amazfit 品牌：
-
-![圖像](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
-
-
-你可以在他的网站[這裡](https://bigdigital.home.blog/)了解更多，包括如何設置。 這些手錶的優點是他們體積小且價格相對實惠（小米 Mi Band 5 的建議零售價為新台幣895元）。 他們是兒童和手腕較小的人們一個不錯的選擇。
-
-### b) Pebble 手錶
-
-![圖像](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
-
-![圖像](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
-
-
-Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）從 2013 年到 2016 年一般出售，可能仍有二手產品可供購買。 Fitbit 接管了 Pebble 的資產。 Pebble 用戶可以使用 Urchin 表盤查看 Nightscout 資料。 顯示的資料選項包括 IOB、目前的臨時基礎速率和預測值。 如果使用開放循環，你可以使用 IFTTT 建立一個應用程式，如果收到來自**AAPS**的通知，則發送 SMS 或 pushover 通知。
-
-### c) [Bluejay GTS 手錶](https://bluejay.website/shop/product/bluejay-gts-26)
-
-
-![圖像](../images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
-
-
-這是一款獨特的技術產品，可以 **直接**從 Dexcom G6 發射器接收血糖資料。 很多人不知道 Dexcom G6 發射器實際上會在兩個獨立的通道上廣播目前的血糖資料，一個是手機通道，另一個是幫浦通道。 Bluejay GTS 手錶運行修改版的 xDrip+ 軟體，可以設置接收任何通道的血糖資料，所以如果**AAPS**使用手機通道，那麼 Bluejay GTS 手錶可以使用幫浦通道。
-
-Bluejay GTS 手錶體積小、防水且價格相對實惠（目前售價為 115 英鎊），可從英國國際運送。 其主要優點是他目前是唯一完全獨立於手機和循環系統的手錶。 例如，如果你在海灘或水上樂園中斷開幫浦和**AAPS**手機的連線，並且超出**AAPS**手機的範圍，仍然可以直接從 Dexcom G6 讀取到 Bluejay 手錶。
-
-報告的缺點包括它不一定每 5 分鐘都能讀取一個資料，且電池不可更換。 Bluejay GTS 手錶運行修改版的 xDrip+ 軟體，目前不與其他 Dexcom 版本（G7）或 Libre 感測器兼容。
-
-### d) Apple 手錶
-
-查看 [你的手錶上的 Nightscout](https://nightscout.github.io/nightscout/wearable/#)：
-
-選項包括 Nightguard、Sugarmate、Gluco-Tracker 和 Loop Follow。
+請參閱 [這裡](../Getting-Started/Watches.md).
 
 
 ## 追蹤 AAPS 的設備

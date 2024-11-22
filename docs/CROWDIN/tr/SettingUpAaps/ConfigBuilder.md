@@ -195,7 +195,7 @@ See [Open Humans](../SupportingAaps/OpenHumans.md).
 
 ### Wear
 
-Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)).
+Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)).
 
 ### Samsung Tizen
 
@@ -255,7 +255,7 @@ Note: Entries cannot be used in the **AAPS** calculator. (Sadece Görüntülenir
 
 ### Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../UsefulLinks/WearOsSmartwatch.md)). Saatinizden verilen bolusu hesaplarken hangi değişkenlerin dikkate alınması gerektiğini belirlemek için ayarları (dişli çark) kullanın (15dk trend, AKARB., KŞ vb..).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Saatinizden verilen bolusu hesaplarken hangi değişkenlerin dikkate alınması gerektiğini belirlemek için ayarları (dişli çark) kullanın (15dk trend, AKARB., KŞ vb..).
 
 Saatinizden bolus vs. göndermek istiyorsanız "Wear ayarları" içinde "Saat tarafından kontrol"u etkinleştirmeniz gerekir.
 

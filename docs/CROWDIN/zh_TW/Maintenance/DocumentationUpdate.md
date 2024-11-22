@@ -21,7 +21,7 @@
 - [更新到 AAPS 3.0 後的必要檢查](Update3_0.md) @tanja
 - [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
 - 更新 AAPS 3.0 的文件（部分）@xJoe
-- [AAPS 3.0 的 Wear OS](../UsefulLinks/WearOsSmartwatch.md) @peterleimbach
+- [AAPS 3.0 的 Wear OS](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
 ## 2022年1月
 
@@ -49,7 +49,7 @@
 
 ## 2021年6月
 
-- [Watchface 側載](../UsefulLinks/WearOsSmartwatch.md)
+- [Watchface 側載](../WearOS/WearOsSmartwatch.md)
 
 ## 2021年4月
 
@@ -76,7 +76,7 @@
 
 - [Libre 2](../CompatibleCgms/Libre2.md) - 已修補的應用不適用於美國傳感器
 - [OpenAPS 硬編碼限制](#Open-APS-features-overview-of-hard-coded-limits)
-- Sony Smartwatch 3 [Google Play服務的手動安裝](../UsefulLinks/SonySW3.md)
+- Sony Smartwatch 3 Google Play服務的手動安裝
 
 ## 2020年10月
 
@@ -125,7 +125,7 @@
 - 新增[本機設定外掛](../SettingUpAaps/ConfigBuilder.md)
 - 範本設定 - 更新 Dexcom G6
 - [版本 2.6.0](#Releasenotes-version-2-6-0) - 主要新功能
-- [Wear OS 複雜功能](../UsefulLinks/WearOsSmartwatch.md)
+- [Wear OS 複雜功能](../WearOS/WearOsSmartwatch.md)
 
 ## 2020年1月
 
@@ -137,7 +137,7 @@
 - [Android Auto](../RemoteFeatures/AndroidAuto.md) - 附上截圖的設定
 - [Accu-Chek Insight 與自動調整](#Accu-Chek-Insight-Pump-settings-in-aaps) - 使用的替代方案
 - [Glimp](#Config-Builder-bg-source) - 支援版本 4.15.57 及更新版本
-- [錶盤](../UsefulLinks/WearOsSmartwatch.md) - 重大的更新，更多詳細資訊
+- [錶盤](../WearOS/WearOsSmartwatch.md) - 重大的更新，更多詳細資訊
 - [錶盤小工具](#Watchfaces-complications) - 使用您最喜愛的錶盤與 AAPS 資料
 
 ## 2019年11月

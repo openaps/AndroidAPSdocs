@@ -106,5 +106,4 @@ Bunları belirli android telefonlarda nasıl bulacağınıza dair örnekler aşa
 
 ## Akıllı saatler
 
-* [Wear uygulamasında sorun giderme](#Watchfaces-troubleshooting-the-wear-app)
-* [Sony Smartwatch 3](../UsefulLinks/SonySW3.md)
+* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)

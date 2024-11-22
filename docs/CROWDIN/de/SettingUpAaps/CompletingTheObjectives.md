@@ -12,7 +12,7 @@ When **AAPS** is installed for the first time, each objective must be completed 
 
 As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#go-back-in-objectives).
 
-### Backup your settings
+## Backup your settings
 
 ```{admonition} Note
 :class: note
@@ -241,7 +241,7 @@ Minimal time to complete this **Objective**: **28 days**. Das ist eine Pflichtwa
 - Enable the **DynamicISF plugin** and identify the appropriate calibration for your body's uniqueness. Aus Sicherheitsgründen ist es ratsam, mit einem Wert unter 100% zu beginnen.
 
 (CompletingTheObjectives-go-back-in-objectives)=
-### Objective (Ziel) neu starten
+## Objective (Ziel) neu starten
 
 If you wish to go back in the **Objectives** for whatever reason you can do so by clicking at "clear finished".
 

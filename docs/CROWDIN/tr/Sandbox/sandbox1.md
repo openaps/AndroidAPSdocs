@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # sprint testi için dahili sanal alan dosyası 1
 
 ```{admonition} no need to translate this

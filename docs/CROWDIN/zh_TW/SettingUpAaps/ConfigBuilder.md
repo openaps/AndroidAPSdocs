@@ -195,7 +195,7 @@
 
 ### Wear
 
-使用你的 Android WearOS 手錶來監控和控制**AAPS**（請參見[錶盤頁面](../UsefulLinks/WearOsSmartwatch.md)）。
+使用你的 Android WearOS 手錶來監控和控制**AAPS**（請參見[錶盤頁面](../WearOS/WearOsSmartwatch.md)）。
 
 ### 三星 Tizen
 
@@ -255,7 +255,7 @@
 
 ### Wear
 
-使用您的 Android Wear 手錶監控和控制 AAPS（請參見[錶盤頁面](../UsefulLinks/WearOsSmartwatch.md)）。 使用設置（齒輪圖示）來定義在透過手錶進行注射時應考慮哪些變數（例如 15 分鐘趨勢，COB...）。
+使用您的 Android Wear 手錶監控和控制 AAPS（請參見[錶盤頁面](../WearOS/WearOsSmartwatch.md)）。 使用設置（齒輪圖示）來定義在透過手錶進行注射時應考慮哪些變數（例如 15 分鐘趨勢，COB...）。
 
 如果你想要透過手錶進行注射等操作。 那麼在「Wear 設置」中需要啟用「從手錶進行控制」。
 

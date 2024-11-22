@@ -107,4 +107,3 @@
 ## 智慧型手錶
 
 * [問題排除 Wear 應用程式](#Watchfaces-troubleshooting-the-wear-app)
-* [Sony Smartwatch 3](../UsefulLinks/SonySW3.md)

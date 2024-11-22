@@ -107,4 +107,3 @@ Here are examples how to find them on specific android phones.
 ## Smartwatches
 
 * [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
-* [Sony Smartwatch 3](../UsefulLinks/SonySW3.md)

@@ -410,6 +410,10 @@ _If the build was not successful, refer to the [Android Studio Troubleshooting s
 
 Поздравляем! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs.
 
+```{tip}
+If you think you might want to use an Android Wear smartwatch in the future, this is the best time to build the AAPS Wear apk to be sure it will be synchronized with your AAPS apk.
+```
+
 Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
 
 
