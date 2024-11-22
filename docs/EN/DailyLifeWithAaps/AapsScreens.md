@@ -149,7 +149,7 @@ Up to 30h hours are taken into accord for **AAPS** calculations. So even after y
    - Press the icon to see the split of bolus and basal insulin
 
 2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before
-  The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
+    The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
 3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%)
    * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
 4. **Arrows up & down**: indicating actual [Autosens](#Open-APS-features-autosens) status (enabled or disabled) and value is shown below icon
@@ -537,13 +537,6 @@ For more details see [APS section on config builder page](#Config-Builder-aps).
 ![Profile](../images/Screenshots_Profile.png)
 
 Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
-
-The buttons on this page allow you to manage your profiles :
-* **Green plus**: create new profile from scratch
-* **Red X**: delete the profile currently on screen
-* **Blue arrow**: duplicate the profile currently on screen
-
-When you want to make any changes to a profile, make sure you are editing the correct profile. When you reach the profile tab, it may not show the current profile in use, but the first one in the list.
 
 ## Automation
 
