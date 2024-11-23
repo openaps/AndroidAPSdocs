@@ -62,7 +62,11 @@ A modelling study (details see LINK FullLoop V2/March2023; there section 2.2) ca
 
 Source: 
 
-1) ![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg) IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
+![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg) 
+
+
+
+IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
 - will result in significantly **lower** glucose **peaks** than slower insulins
 - **tolerate** a couple of minutes **delayed** first meal bolus while not incurring unacceptable height of peaks
@@ -89,6 +93,19 @@ The best way currently is to use Dexcom G5 or **G6**, and to ensure via **overla
 Setting up a full closed loop is relatively easy for people whose diet does not consist **mainly** of components with **rapid high effect on blood glucose**, and whose meal patterns do not wildly vary day-to-day. They do not have to be low carb.                                                               
 
 Fat or protein rich diets, or slow digestion/gastroparesis, make things easier rather than harder for the full closed loop because late carbs nicely cover for inevitable “tails” of late action from boli needed around peak time.
+
+#### Glycemic index and effect on blood glucose
+
+Challenge for the UAM mode rises with rising EBG (effect on blood glucose)
+
+- Start moderate/low, and tune your settings. Inly then, "test" meals with high EBG
+- Consider a < 50% initial bolus if consuming very high EBG
+
+1) **No EBG**: fresh meat, fish, eggs, bacon, oils, cheese.
+2) **Low EBG**: fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese.
+3) **Moderate EBG**: whole grain bread/noodles, potatoes, wild rice, oats, dried fruits.
+4) **High EBG**: wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice.
+5) **Very High EBG**: (sugar-) sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
 
 ![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
 
@@ -265,7 +282,7 @@ Automation #4
 Automation #5
 
 Automation #4, “post-meal High”, is also suitable in hybrid closed loop.
- 
+
 In addition, a termination-Automation #5, “Stop pmH”, is needed, so that the aggressiveness of the insulin administration is reduced, as soon as the glucose value is falling. (However, often the loop will limit more insulin anyways for hypo prevention because predicted glucose runs low already).
 
 ### Hypo prevention
@@ -356,5 +373,5 @@ Make sure you stay in touch with other FCL users.
 Discussion Full Closed Loop using Automations:
 
 - English:   [Discord Channel](https://discord.gg/ChXj8BaKwA)
-                 
+  
 - German:  [German Looper Community](https://de.loopercommunity.org/t/ueber-die-kategorie-full-loop/10107)
