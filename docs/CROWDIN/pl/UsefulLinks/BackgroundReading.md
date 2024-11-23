@@ -26,6 +26,12 @@ Zanim zbudujesz swoją pętlę, będziesz musiał dużo czytać, aby zrozumieć,
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
+[“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+
+[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+
+["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
+
 ## Dodatkowe artykuły na temat zamkniętej pętli DIY
 
 <https://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>
