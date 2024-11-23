@@ -73,113 +73,6 @@ You can tape it. There are several pre-perforated 'overpatches' for common CGM s
 
 You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
 
-## AAPS settings
-
-The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
-
-### Duration of insulin activity (DIA)
-
-#### Description & testing
-
-The length of time that insulin decays to zero.
-
-This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
-
-(FAQ-impact)=
-
-#### Impact
-
-Too short DIA can lead to low BGs. And vice-versa.
-
-If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
-
-Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
-
-### Basal rate schedule (U/h)
-
-#### Description & testing
-
-The amount of insulin in a given hour time block to maintain BG at a stable level.
-
-Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
-
-If BG is dropping, basal rate is too high. And vice-versa.
-
-#### Impact
-
-Too high basal rate can lead to low BGs. And vice-versa.
-
-AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
-
-So, a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.
-
-Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
-
-### Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
-
-#### Description & testing
-
-The drop in BG expected from dosing 1U of insulin.
-
-Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
-
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
-
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
-
-#### Impact
-
-**Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If the ISF is too low, this can lead to low BGs.
-
-**Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
-
-**예:**
-
-- BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
-- So, you want correction of 90 mg/dl (= 190 - 110).
-- ISF = 30 -> 90 / 30 = 3 units of insulin
-- ISF = 45 -> 90 / 45 = 2 units of insulin
-
-An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp. when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
-
-Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
-
-### Insulin to carb ratio (IC) (g/U)
-
-#### Description & testing
-
-The grams of carbohydrate for each unit of insulin.
-
-Some people also use I:C as abbreviation instead of IC or talk about carb ratio (CR).
-
-Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
-
-> **참고:**
-> 
-> 일부 유럽 국가들에서는 얼마나 많은 인슐린이 필요한지 결정하기 위해 빵 단위(bread units)를 사용합니다. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
-> 
-> 이 빵단위 모델에서는 탄수화물의 양은 고정되어있고 인슐린의 양이 가변적입니다. ("1 빵단위(bread unit)를 처리하기 위해 얼마나 많은 인슐린이 필요합니까?")
-> 
-> 반대로 IC를 사용할땐 인슐린 양이 고정되어 있고 탄수화물 양이 가변적입니다. ("1유닛의 인슐린이 얼마나 많은 탄수화물(g)을 처리할 수 있습니까?")
-> 
-> 예:
-> 
-> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
-> 
-> Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
-> 
-> BU factor 2,4 U / 12g ===> IC = 12g / 2,4 U = 5,0 g/U
-> 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
-
-#### Impact
-
-**Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.
-
-**Higher IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.
-
-If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Conversely if your BG is lower than before food, IC is too small.
-
 ## APS algorithm
 
 ### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
@@ -187,22 +80,6 @@ If after meal has digested and IOB has returned to zero, your BG remains higher 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
 In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter any longer.
-
-### Profile
-
-#### Why using min. 5h DIA (insulin end time) instead of 2-3h?
-
-Well explained in [this article](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
-
-#### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
-
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
-
-![ISF too low](../images/isf.jpg)
-
-#### What causes high postprandial peaks in closed loop?
-
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
 ## Other settings
 
