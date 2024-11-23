@@ -397,8 +397,7 @@ Po dokončení sestavení aplikace zobrazí Android Studio informaci "BUILD SUCC
 
 ![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
-
-_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio)._
+**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio)._**
 
 V oznámení klikněte na modrý odkaz "locate":
 
