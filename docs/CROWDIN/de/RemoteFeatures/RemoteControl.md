@@ -114,31 +114,68 @@ Sobald Du die **Nightscout**-App auf Deinem iPhone installiert hast, öffne die 
 
 Weitere Informationen zur Einrichtung findest Du direkt bei [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
-Wenn Du Dich das allererste Mal einloggst, siehst Du eine sehr einfache Ansicht (links unten). Passe die Anzeige an, indem Du das "Hamburger"-Menü oben rechts auswählst und nach unten scrollst:
+When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
 
 ![grafik](../images/remote-control-25.png)
 
-Scrolle bis zu den „Einstellungen“ herunter. Die Darstellung der Glukosewerte erfolgt standardmäßig "logaritmisch". Das kannst Du unter "Skalierung" auf "Linear" ändern. Um das Basal der Pumpe einzublenden, ändere unter dem Abschnitt "Basalraten-Darstellung" den Wert auf "Standard“. Scrolle weiter herunter bis zum Abschnitt "Zeige Plugins". Wichtig ist, dass dort “Behandlungs-Portal” ausgewählt ist. In diesem Abschnitt kannst Du einige andere Metriken zusätzlich auswählen, von denen Aktives Insulin, Behandlungs-Portal, Pumpe, Kanülenalter, Insulin-Alter, Basalraten-Profil, und OpenAPS am nützlichsten sind.
+Scrolle bis zu den „Einstellungen“ herunter. Die Darstellung der Glukosewerte erfolgt standardmäßig "logaritmisch". Das kannst Du unter "Skalierung" auf "Linear" ändern. Um das Basal der Pumpe einzublenden, ändere unter dem Abschnitt "Basalraten-Darstellung" den Wert auf "Standard“.
+
+![grafik](../images/remote-control-25b.png)
+
+Select your desired options. Uncheck alarms if you use an alternative app for alarms.
 
 ![grafik](../images/remote-control-26.png)
 
-![grafik](../images/remote-control-27.png)
+Scrolle weiter herunter bis zum Abschnitt "Zeige Plugins".
+
+Wichtig ist, dass dort “Behandlungs-Portal” ausgewählt ist. In diesem Abschnitt kannst Du einige andere Metriken zusätzlich auswählen, von denen Aktives Insulin, Behandlungs-Portal, Pumpe, Kanülenalter, Insulin-Alter, Basalraten-Profil, und OpenAPS am nützlichsten sind.
 
 Wichtig ist, dass Du nach Deinen Änderungen unten auf "Speichern“ klickst, damit diese Änderungen wirksam werden.
 
+![grafik](../images/remote-control-27.png)
+
 Nach dem Drücken von „Speichern“ wird die App zum Hauptbildschirm der Nightscout-App zurückkehren. Es sollte ungefähr so aussehen:
+
+1. Current glucose value
+2. Information on AAPS system status - touch the individual tabs on the screen to display more detail. Add or remove these display options using hamburger menu.
+3. Recent glucose trace with treatments (carbs, boluses) displayed
+4. Longer-term glucose trace
+5. "Hamburger" menu for setting display options, generating reports, editing profiles and Nightscout admin tools
+6. "**+**" menu for entering treatments to send to AAPS.
+7. Select different time period to display
+8. Basal insulin profile
+9. Green line = historical glucose Blue lines = predicted glucose
 
 ![grafik](../images/remote-control-28.png)
 
 Schauen wir uns das obere linke Menü der Nightscout-App etwas genauer an:
 
+1. Careportal retrospective edit
+2. Turn on/off alarms
+3. Hamburger - for setting preferences
+4. Careportal - Log treatment - to send changes to AAPS
+
 ![nightscout top bar](../images/remote-control-29.png)
 
 Es gibt auf diesem Bildschirm eine Vielzahl an Statusinformationen des **AAPS**-Systems in den grauen Tabs (und noch mehr Informationen werden angezeigt, wenn Du auf die Tabs tippst):
 
+1. 5min glucose trend
+2. Bolus wizard preview
+3. Press on Basal to see your current profile and basal information
+4. Time since latest CGM reading in AAPS
+5. **Pump**: insulin, battery % and when AAPS last connected to it
+6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
+7. Press on IOB to see split of basal and bolus insulin
+8. Insulin age in reservoir
+9. Kanülenalter
+10. Battery status of AAPS phone
+11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+
 ![grafik](../images/remote-control-30.png)
 
 ![grafik](../images/remote-control-31.png)
+
+Press "refresh" at the bottom of the page to close the popup.
 
 ### Behandlungen über die Nightscout-App an AAPS senden
 

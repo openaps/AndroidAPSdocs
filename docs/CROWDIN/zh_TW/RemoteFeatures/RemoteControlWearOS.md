@@ -22,14 +22,14 @@ AAPS Wear APK 的基礎版本中包含多種手錶外觀供選擇。 這些手�
 
 使用 Wear 偏好設定定義在透過手錶計算注射時應考慮的變數（例如 15 分鐘趨勢、COB...）。
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+如果你想要透過手錶進行注射等操作。 那麼在「Wear 設置」中需要啟用「從手錶進行控制」。
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Wear 設置](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+透過 Wear 標籤或選單（螢幕左上角的選單圖示，如果標籤未顯示）你可以
 
-* Resend all data. 如果手錶在一段時間內未連接，可能會有所幫助，並且你想將資訊推送至手錶。
-* Open settings on your watch directly from your phone.
+* 重新發送所有資料。 如果手錶在一段時間內未連接，可能會有所幫助，並且你想將資訊推送至手錶。
+* 直接從手機上打開手錶的設置。
 
 確保手錶上未封鎖來自 AAPS 的通知。 確認操作（例如注射、臨時目標）會透過通知進行，你需要滑動並勾選。
 

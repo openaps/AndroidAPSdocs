@@ -21,7 +21,7 @@
 
 **我為什麼需要正確設置我的個人設定？ 循環不是可以自動處理這些嗎？**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect profile values. 它可以這樣做，例如如果你將要低血糖，它會暫停胰島素的輸送。 然而，若你的設定檔參數已經接近你身體所需的值，你將能夠實現更好的血糖控制。 這是**AAPS**使用分階目標從開放式循環推進到混合閉環的原因之一。 此外，還會有需要打開循環的時候（感測器暖機、感測器故障_等_），有時發生在半夜，你希望在這些情況下設定是正確的。
+混合閉環系統_可以_嘗試調整胰島素的輸送，以減少由於設定檔數值不正確而導致的血糖控制不佳的情況。 它可以這樣做，例如如果你將要低血糖，它會暫停胰島素的輸送。 然而，若你的設定檔參數已經接近你身體所需的值，你將能夠實現更好的血糖控制。 這是**AAPS**使用分階目標從開放式循環推進到混合閉環的原因之一。 此外，還會有需要打開循環的時候（感測器暖機、感測器故障_等_），有時發生在半夜，你希望在這些情況下設定是正確的。
 
 如果你是在使用其他開放式或閉環系統後開始使用**AAPS**，那麼你已經對基礎率（BR）、胰島素敏感性因子（ISF）和胰島素與碳水化合物比率（IC 或 ICR）要使用的值有合理的了解。
 
@@ -44,10 +44,10 @@ A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minim
 ![24-07-23，設定檔基本 - DIA 和目標](../images/f3904cc3-3d9e-497e-a3b6-3a49650053e6.png)
 
 你的**血糖目標**是一個核心值，且所有**AAPS**的計算均以此為基礎。 它不同於您通常希望將您的血糖值保持在的目標範圍：
-* 血糖目標，特別是如果它僅是短期（持續時間少於 4 小時），不需要是你期望或想要的實際血糖值，而是一種良好的方式來告訴**AAPS**應該更積極或不那麼積極，同時仍能保持你的血糖數值在範圍內。
-* 如果你的目標範圍非常寬（例如，寬達 3 或以上 mmol/l [50 mg/dl 或更高]），你通常會發現**AAPS**的行動比較少。 這是因為**BG**數值預測會落在這個寬範圍內，因此很少建議做臨時基礎率調整。
-* 當在[開放循環](#Preferences-pen-loop)時，特別是在進行[第一項目標](../SettingUpAaps/CompletingTheObjectives.md)時，使用較寬的目標範圍可能是個不錯的選擇，因為你正在學習**AAPS**的運作方式並調整你的**個人設定**。
-* 當在[封閉循環](#preferences-closed-loop)（從**[目標 6](#objectives-objective6)**開始）時，你可能發現減少範圍至每天的單一目標更加合適（_低_目標 = _高_目標），以確保**AAPS**能迅速對**BG**的波動作出反應。
+* 血糖目標，特別是如果它僅是短期（持續時間少於 4 小時），不需要是你期望或想要的實際血糖值，而是一種良好的方式來告訴 **AAPS** 應該更積極或不那麼積極，同時仍能保持你的血糖數值在範圍內。
+* 如果你的目標範圍非常寬（例如，寬達 3 或以上 mmol/l [50 mg/dl 或更高]），你通常會發現 **AAPS** 的行動比較少。 這是因為**BG**數值預測會落在這個寬範圍內，因此很少建議做臨時基礎率調整。
+* 當在[開放循環](#Preferences-pen-loop)時，特別是在進行[第一項目標](../SettingUpAaps/CompletingTheObjectives.md)時，使用較寬的目標範圍可能是個不錯的選擇，因為你正在學習 **AAPS** 的運作方式並調整你的**設定檔**。
+* 當在[封閉循環](#preferences-closed-loop)（從**[目標 6](#objectives-objective6)**開始）時，你可能發現減少範圍至每天的單一目標更加合適（_低_目標 = _高_目標），以確保 **AAPS** 能迅速對**血糖**的波動作出反應。
 
 目標可以在這些邊界內定義：
 
@@ -106,33 +106,33 @@ ICR 是衡量每單位胰島素覆蓋多少克碳水化合物的指標。
 
 (YourAapsProfile_Local-profile)=
 
-## Local profile
+## 本地設定檔(Local profile)
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+本地設定檔使用手動輸入到手機中的基礎率設定檔。 選擇他，AAPS 中將會顯示一個新標籤，必要時你可以更改從幫浦讀取的設定檔資料。 下次切換設定檔時，這些資料將寫入幫浦中的設定檔 1。 建議使用這個設定檔，因為他不依賴於網際網路連線。
 
-![Local Profile buttons](../images/LocalProfile_Settings.png)
+![本地設定檔按鈕](../images/LocalProfile_Settings.png)
 
-Buttons:
+按鈕：
 
-- green plus: add
-- red X: delete
-- blue arrow: duplicate
+- 綠色加號：新增
+- 紅色 X：刪除
+- 藍色箭頭：複製
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+如果你對設定檔進行任何更改，請確保你正在編輯正確的設定。 在設定檔標籤中，不一定會顯示目前正在使用的設定檔——例如，如果你使用主畫面的設定檔標籤進行切換，該設定檔可能與設定檔標籤中顯示的不同，因為兩者之間沒有連線。
 
 (YourAapsProfile_Clone-profile-switch)=
 
 ## 複製設定檔切換
 
-你可以輕鬆從設定檔切換中建立新的本地設定檔。 In this case timeshift and percentage will be applied to the new local profile.
+你可以輕鬆從設定檔切換中建立新的本地設定檔。 在此情況下，時間偏移和百分比將應用於新本地設定檔。
 
-![Clone Profile switch](../images/LocalProfile_ClonePS_AAPS30.png)
+![複製設定檔切換](../images/LocalProfile_ClonePS_AAPS30.png)
 
-1. Click 3-dots-menu in upper right corner.
-2. Select ‘Treatments’.
-3. Press star symbol to access profile switch page.
-4. Select the desired profile switch and press “Clone”.
-5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+1. 點擊右上角的三點選單。
+2. 選擇「處理」。
+3. 按下星號圖示以進入設定檔切換頁面。
+4. 選擇所需的設定檔切換，然後按「複製」。
+5. 你可以在本地設定檔（LP）標籤中或透過選單編輯新的本地設定檔。
 
 (YourAapsProfile_Profile-backup)=
 
@@ -143,7 +143,7 @@ If you make any changes to your profile, make sure, you are editing the correct 
 * 你的個人設定儲存在**AAPS**資料庫中。
 * 如果啟用，個人設定也會上傳至 Nightscout。 這些設定可以在[NSClient 偏好設定 > NSClient > 同步 > 上傳資料至 NS](#Preferences-nsclient)找到。
 
-![Backup Profile Nightscout](../images/LocalProfile_UploadNS_AASP30.png)
+![備份設定檔 Nightscout](../images/LocalProfile_UploadNS_AASP30.png)
 
 * 它們也是[匯出設定](../Maintenance/ExportImportSettings.md)的一部分。 因此，確保有一個安全的備份。
 

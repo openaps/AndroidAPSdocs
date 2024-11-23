@@ -114,31 +114,68 @@ Once you have installed the **Nightscout** app on your iPhone, open the app and 
 
 More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
-When you first log in, you will have a very simple display (below, left). Customise the display options, by selecting the “hamburger” in the top right and scrolling down:
+When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
 
 ![image](../images/remote-control-25.png)
 
-Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up. Continue to scroll down until you get to “show plugins”. You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS).
+Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up.
+
+![image](../images/remote-control-25b.png)
+
+Select your desired options. Uncheck alarms if you use an alternative app for alarms.
 
 ![image](../images/remote-control-26.png)
 
-![image](../images/remote-control-27.png)
+Continue to scroll down until you get to “show plugins”.
+
+You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS).
 
 Importantly, you now need to click “save” at the bottom for these changes to take effect.
 
+![image](../images/remote-control-27.png)
+
 After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
+
+1. Current glucose value
+2. Information on AAPS system status - touch the individual tabs on the screen to display more detail. Add or remove these display options using hamburger menu.
+3. Recent glucose trace with treatments (carbs, boluses) displayed
+4. Longer-term glucose trace
+5. "Hamburger" menu for setting display options, generating reports, editing profiles and Nightscout admin tools
+6. "**+**" menu for entering treatments to send to AAPS.
+7. Select different time period to display
+8. Basal insulin profile
+9. Green line = historical glucose Blue lines = predicted glucose
 
 ![image](../images/remote-control-28.png)
 
 Looking in more detail at the top left menu of the Nightscout app:
 
+1. Careportal retrospective edit
+2. Turn on/off alarms
+3. Hamburger - for setting preferences
+4. Careportal - Log treatment - to send changes to AAPS
+
 ![nightscout top bar](../images/remote-control-29.png)
 
 There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
 
+1. 5min glucose trend
+2. Bolus wizard preview
+3. Press on Basal to see your current profile and basal information
+4. Time since latest CGM reading in AAPS
+5. **Pump**: insulin, battery % and when AAPS last connected to it
+6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
+7. Press on IOB to see split of basal and bolus insulin
+8. Insulin age in reservoir
+9. Âge de la canule
+10. Battery status of AAPS phone
+11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+
 ![image](../images/remote-control-30.png)
 
 ![image](../images/remote-control-31.png)
+
+Press "refresh" at the bottom of the page to close the popup.
 
 ### Sending treatments through the Nightscout app to AAPS
 

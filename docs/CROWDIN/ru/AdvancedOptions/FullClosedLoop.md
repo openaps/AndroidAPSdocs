@@ -60,7 +60,11 @@
 
 Источник:
 
-1) ![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg) Журнал IEEE Control Systems, ResearchGate [ Искусственная поджелудочная железа и контроль приема пищи: Обзор постпрандиальной регуляции уровня глюкозы при сахарном диабете 1 типа](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
+![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
+
+
+
+IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
 - дают значительно **более низкие** **пики** глюкозы, по сравнению с медленными инсулинами
 - **легко переносят** **задержку болюса на пару минут ** при первом приеме пищи, не допуская при этом неприемлемых пиков
@@ -87,6 +91,15 @@
 Настроить самодостаточный замкнутый цикл относительно легко людям, чья диета, **в основном**, не состоит из продуктов, оказывающих **быстрое влияние на рост глюкозы в крови**, и чей режим питания не сильно меняется изо дня в день. Пища не обязательно должна быть низкоуглеводной.
 
 Богатый белком и жирами рацион или медленное усваивание пищи/ гастропарез облегчают, а не усложняют работу в самодостаточном замкнутом цикле, потому что поздние углеводы прекрасно маскируют неизбежные “хвосты” от запоздалых болюсов, требующихся на пиках.
+
+#### Гликемический индекс и влияние на глюкозу в крови
+
+Challenge for the UAM mode rises with rising EBG (effect on blood glucose)
+
+- Start moderate/low, and tune your settings. Inly then, "test" meals with high EBG
+- Consider a < 50% initial bolus if consuming very high EBG
+
+1) **No EBG**: fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**: wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: (sugar-) sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
 
 ![Гликемический индекс и влияние на глюкозу в крови](../images/fullClosedLoop01.png)
 
