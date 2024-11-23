@@ -24,11 +24,11 @@
 
 ![Fork庫](../images/PR0.png)
 
-2. 查看任何頁面，導航到你想編輯的頁面。 點擊頁面左下方黑色方框中的綠色字“v: latest”或類似的字樣。 在出現的彈出窗口中，點擊“edit”來在GitHub中進行編輯。 
+2. 查看任何頁面，導航到你想編輯的頁面。 You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
 
 ![編輯文件](../images/PR1.png)
 
-或者你可以點擊右上角的“Edit in GitHub”連結，然後點擊頂部欄中出現的鉛筆圖示以進行編輯。 你需要已經登錄到你的GitHub帳號才能執行此操作（如果你還沒有帳號，他們的設置非常簡單）。
+Or click the pencil icon that appears in the top bar of the page contents to be edited. 你需要已經登錄到你的GitHub帳號才能執行此操作（如果你還沒有帳號，他們的設置非常簡單）。
 
 ![RTD io](../images/PR2.png)
 
@@ -154,13 +154,13 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 圖像位於英文語系的圖像文件夾中，並透過Crowdin自動傳播到其他語系。 你無需為此做任何事！
 
-我們目前不翻譯圖像。
+We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
 
 (make-a-PR-image-size)=請使用合理的圖像尺寸，使其在PC、平板電腦和手機上可讀。
 
 - 來自網頁的截圖圖像寬度應達到**1050像素**。
 - 流程圖的寬度應達到**1050像素**。
-- 應用程序的截圖寬度應達到**500像素**。
+- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
 
 ### 連結
 
@@ -419,8 +419,32 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 - 步驟n —— 執行最後一件事（第2級標題）
 
 - 結論（第2級標題）
-
-![圖像](../images/styleguide04.png)
+    
+    - **The Language of Tutorials**
+        
+        *In this tutorial, you will…*
+        
+        Describe what the learner will accomplish (note - not: “you will learn…”).
+        
+        *First, do x. Now, do y. Now that you have done y, do z.*
+        
+        No room for ambiguity or doubt.
+        
+        *We must always do x before we do y because… (see Explanation for more details).*
+        
+        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        
+        *The output should look something like this…*
+        
+        Give your learner clear expectations.
+        
+        *Notice that… Remember that…*
+        
+        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        
+        *You have built a secure, three-layer hylomorphic stasis engine…*
+        
+        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
 
 ##### ![圖像](../images/styleguide05.png) 操作指南（例如食譜）
 
@@ -453,8 +477,20 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 - 步驟n —— 執行最後一件事（第2級標題）
 
 - 結論段落
-
-![圖像](../images/styleguide06.png)
+    
+    - **The Language of How-To Guides**
+        
+        *This guide shows you how to…*
+        
+        Describe clearly the problem or task that the guide shows the user how to solve.
+        
+        *If you want x, do y. To achieve w, do z.*
+        
+        Use conditional imperatives.
+        
+        *Refer to the x reference guide for a full list of options.*
+        
+        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
 
 ##### ![圖像](../images/styleguide07.png) 解釋（例如：為什麼打蛋白會變硬的科學原理）
 
@@ -481,8 +517,28 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 - 子主題1（第2級標題）
 
 - 結論（第2級標題）
-
-![圖像](../images/styleguide08.png)
+    
+    - **The Language of Explanation**
+    
+    *The reason for x is because historically, y…*
+    
+    Explain.
+    
+    *W is better than z, because…*
+    
+    Offer judgements and even opinions where appropriate..
+    
+    *An x in system y is analogous to a w in system z. However…*
+    
+    Provide context that helps the reader.
+    
+    *Some users prefer w (because z). This can be a good approach, but…*
+    
+    Weigh up alternatives.
+    
+    *An x interacts with a y as follows:…*
+    
+    Unfold the machinery’s internal secrets, to help understand why something does what it does.
 
 ### 2\. AAPS 特定的寫作/更新筆記
 
