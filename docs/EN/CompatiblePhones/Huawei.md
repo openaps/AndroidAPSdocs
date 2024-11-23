@@ -19,18 +19,18 @@ There are different options, some Android specific, some Huawei specific:
      * Automatic launch
      * Secondary launch (can be launched from other apps)
      * Background run
-      
+          
        ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
-   
-   
+  
 * Lock App
   * Go into App recent list and select the lock icon
   
     ![Huawei - lock app](../images/Huawei_LockApp.png)
   
   
-For xdrip+, you can also enable persistent notifications (within xdrip+ app):
-* Setttings / less common settings / other misc options / Run Collector in foreground
+
+For xDrip+, you must enable persistent notifications (within xDrip+ app):
+* Settings / less common settings / other misc options / Run Collector in foreground
 
    ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
 

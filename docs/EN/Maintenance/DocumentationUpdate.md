@@ -12,6 +12,10 @@
 
 Missing history from March 2022 to September 2024
 
+With 3.2 rework, some obsolete information was removed. You can find it in the previous documentation version:
+
+AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/3.1/index.html).
+
 ***
 
 ## February 2022
