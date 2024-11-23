@@ -56,10 +56,6 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
 
-### Medtronic Bluetooth
-
-**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
-
 ### Inzulínová pumpa Willcare ([Domovská stránka](http://shinmyungmedi.com/en/))
 
 **Stav smyčky:** V tomto okamžiku to není kandidát na smyčku, ale byli jsme kontaktováni jejich zaměstnanci a mají zájem o rozšíření jejich pumpy tak, aby smyčku podporovala (v současné době tuším chybí pouze příkazy pro nastavení / načtení profilu).
@@ -87,6 +83,10 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 ### Animas Ping
 
 **Stav smyčky:** Nelze použít pro smyčku. Dokáže vydávat bolusy, ale ne dočasné bazály. **Poznámka** Přestala se prodávat s příchodem modelu Vibe.
+
+### Medtronic Bluetooth
+
+**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
 ## Požadavky na pumpu, aby podporovala smyčku
 
