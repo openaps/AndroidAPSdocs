@@ -6,6 +6,8 @@
 
 **В настоящее время модуль Autotune доступен только в [ветке dev](../AdvancedOptions/DevBranch.md) и в режиме разработчика.**
 
+![Autotune plugin](../images/Autotune/Autotune_1.png)
+
 ## Интерфейс пользователя Autotune
 
 ![Экран Autotune по умолчанию](../images/Autotune/Autotune_1b.png)
