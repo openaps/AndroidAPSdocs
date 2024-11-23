@@ -60,7 +60,11 @@ Eine Modellierungsstudie (Details siehe LINK FullLoop V2/March2023; dort Abschni
 
 Quelle:
 
-1) ![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg) IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
+![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
+
+
+
+IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
 - zu signifikant **niedrigeren** Glukose-**Spitzen** führen, als langsamere Insuline
 - **tolerieren** ein um ein paar Minuten **verzögerten** ersten Mahlzeiten-Bolus, ohne dabei zu inakzeptable Höhen der Spitzen zu führen
@@ -87,6 +91,15 @@ Der derzeit beste Weg ist einen Dexcom G5 oder **G6** zu nutzen und sicherzustel
 Das Einrichten eines Full Closed Loop ist für Menschen, deren Ernährung **überwiegend** auf Bestandteile verzichtet, die den **Glukosewert schnell beeinflussen** und deren Mahlzeiten-Gewohnheiten sich wenig zwischen einzelnen Tagen unterscheiden, relativ einfach. Sie müssen sich nicht kohlenhydratarm (Low Carb) ernähren.
 
 Fette oder proteinreiche Ernährung oder langsame Verdauung/Gastroparese machen die Dinge eher einfacher als schwieriger für den Full Closed Loop, weil späte Kohlenhydrate schön die unvermeidlichen "späten Wirkenden" (tails), die durch die zur Spitzenabdeckung benötigten Boli abdecken.
+
+#### Glykämischer Index und Wirkung auf den Blutzucker
+
+Challenge for the UAM mode rises with rising EBG (effect on blood glucose)
+
+- Start moderate/low, and tune your settings. Inly then, "test" meals with high EBG
+- Consider a < 50% initial bolus if consuming very high EBG
+
+1) **No EBG**: fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**: wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: (sugar-) sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
 
 ![Glykämischer Index und Wirkung auf den Blutzucker](../images/fullClosedLoop01.png)
 
