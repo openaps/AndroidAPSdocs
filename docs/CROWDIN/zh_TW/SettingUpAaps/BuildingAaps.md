@@ -397,8 +397,7 @@ Android Studio在建置完成後將顯示“BUILD SUCCESSFUL”的訊息。 你�
 
 ![建置完成](../images/Building-the-App/049_ReopenNotification.png)
 
-
-_如果建置不成功，請參考[Android Studio 問題排除部分](../GettingHelp/TroubleshootingAndroidStudio)。_
+**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio)._**
 
 在通知欄中，點擊藍色連結“定位”：
 
