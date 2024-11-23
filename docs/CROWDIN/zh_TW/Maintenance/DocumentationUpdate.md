@@ -1,5 +1,9 @@
 # 文件更新與變更
 
+## November 2024
+
+- Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
+
 ## 2024年10月
 
 - 多個頁面的更新：
@@ -11,6 +15,10 @@
 ***
 
 2022年3月到2024年9月的歷史紀錄遺失
+
+With 3.2 rework, some obsolete information was removed. You can find it in the previous documentation version:
+
+AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/3.1/index.html).
 
 ***
 
