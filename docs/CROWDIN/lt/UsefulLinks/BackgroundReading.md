@@ -26,6 +26,12 @@ Prieš jums sukuriant savo platformą, turėsite daug perskaityti, siekiant supr
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
+[“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+
+[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+
+["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
+
 ## Kiti skaitiniai ir straipsniai apie Pasidaryk pats uždarąjį ciklą
 
 <https://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>
