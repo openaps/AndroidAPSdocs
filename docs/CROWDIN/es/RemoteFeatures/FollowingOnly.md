@@ -170,9 +170,9 @@ It has been reported by users of Sugarmate that it can be used with Apple CarPla
 
 ![imagen](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
-Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more. The website and app are no longer developed. Details [here](https://spike-app.com/#features2). Support can be found on [Facebook](https://www.facebook.com/groups/1973791946274873) and [Gitter](https://gitter.im/SpikeiOS/Lobby).
+Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more.
 
-To install Spike, see [here](https://spike-app.com/#installation)
+The website and app are no longer developed. Support can be found on [Facebook](https://www.facebook.com/groups/1973791946274873) and [Gitter](https://gitter.im/SpikeiOS/Lobby).
 
 ## Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
 
