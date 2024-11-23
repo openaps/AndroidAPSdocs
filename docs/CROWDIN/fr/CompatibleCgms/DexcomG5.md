@@ -4,7 +4,7 @@ orphan: true
 
 # Dexcom G5
 
-## Si vous utilisez le G5 avec xdrip +
+## If using G5 with xDrip+
 
 -   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you want specific newly developed features.
 -   Setup xDrip+ with G5 following [these instructions](https://navid200.github.io/xDrip/docs/G5-Recommended-Settings.html).
@@ -33,4 +33,4 @@ These apps are not compatible with recent Android versions.
 
 - Select Dexcom App (patched) in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
--   Si vous voulez utiliser les alarmes xDrip via une diffusion locale, allez dans xDrip, Menu hamburger > Paramètres > Source de données matérielles > 640G /EverSense.
+-   If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
