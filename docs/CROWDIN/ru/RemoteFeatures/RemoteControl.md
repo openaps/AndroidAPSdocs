@@ -114,31 +114,68 @@ Remote control through **AAPSClient** is only recommended if your synchronizatio
 
 Дополнительная информация об установке доступна непосредственно на ресурсе [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
-Когда вы впервые входите в систему, перед вами будет очень простой дисплей (ниже, слева). Настройте параметры отображения, выбрав выпадающее меню в правом верхнем углу и прокручивая его вниз:
+When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
 
 ![изображение](../images/remote-control-25.png)
 
-Прокрутите вниз до «Настройки». "Масштаб" можно заменить на "линейный" т. к. по умолчанию он логарифмический, и в строке «отображать базал» выберите «по умолчанию», чтобы появился график базала. Продолжайте прокручивать вниз до «показать расширения (плагины)». Убедитесь, что «портал терапии» отмечен галочкой, а также можете выбрать другие показатели (наиболее полезные: активный инсулин IOB, помпа, катетер, отсчет возраста инсулина, базальный профиль и OpenAPS).
+Прокрутите вниз до «Настройки». "Масштаб" можно заменить на "линейный" т. к. по умолчанию он логарифмический, и в строке «отображать базал» выберите «по умолчанию», чтобы появился график базала.
+
+![изображение](../images/remote-control-25b.png)
+
+Select your desired options. Uncheck alarms if you use an alternative app for alarms.
 
 ![изображение](../images/remote-control-26.png)
 
-![изображение](../images/remote-control-27.png)
+Продолжайте прокручивать вниз до «показать расширения (плагины)».
+
+Убедитесь, что «портал терапии» отмечен галочкой, а также можете выбрать другие показатели (наиболее полезные: активный инсулин IOB, помпа, катетер, отсчет возраста инсулина, базальный профиль и OpenAPS).
 
 Не забудьте, это важно, чтобы эти изменения вступили в силу, нажать кнопку «сохранить» в нижней части.
 
+![изображение](../images/remote-control-27.png)
+
 После нажатия «сохранить» приложение вернется на главный экран Nightscout и будет выглядеть примерно так:
+
+1. Current glucose value
+2. Information on AAPS system status - touch the individual tabs on the screen to display more detail. Add or remove these display options using hamburger menu.
+3. Recent glucose trace with treatments (carbs, boluses) displayed
+4. Longer-term glucose trace
+5. "Hamburger" menu for setting display options, generating reports, editing profiles and Nightscout admin tools
+6. "**+**" menu for entering treatments to send to AAPS.
+7. Select different time period to display
+8. Basal insulin profile
+9. Green line = historical glucose Blue lines = predicted glucose
 
 ![изображение](../images/remote-control-28.png)
 
 В верхнем левом меню приложения Nightscout вы найдете дополнительную информацию:
 
+1. Careportal retrospective edit
+2. Turn on/off alarms
+3. Hamburger - for setting preferences
+4. Careportal - Log treatment - to send changes to AAPS
+
 ![верхняя панель Nightscout](../images/remote-control-29.png)
 
 На серых вкладках огромное количество информации о состоянии системы **AAPS** (и еще больше информации если щелкуть по вкладкам):
 
+1. 5min glucose trend
+2. Bolus wizard preview
+3. Press on Basal to see your current profile and basal information
+4. Time since latest CGM reading in AAPS
+5. **Pump**: insulin, battery % and when AAPS last connected to it
+6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
+7. Press on IOB to see split of basal and bolus insulin
+8. Insulin age in reservoir
+9. сколько времени прошло с момента установки канюли
+10. Battery status of AAPS phone
+11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+
 ![изображение](../images/remote-control-30.png)
 
 ![изображение](../images/remote-control-31.png)
+
+Press "refresh" at the bottom of the page to close the popup.
 
 ### Отправка событий терапии через приложение Nightscout в AAPS
 
