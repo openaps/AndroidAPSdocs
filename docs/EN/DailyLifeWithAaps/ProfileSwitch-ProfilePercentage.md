@@ -101,4 +101,4 @@ This mechanism of taking snapshots of the **Profile** allows a much more precise
 
 Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
 
-To do this, go to the tab [Treatments > Profile Switch](#aaps-screens-clone-profile-switch).
+To do this, go to the tab [Treatments > Profile Switch](#your-aaps-profile-clone-profile-switch).
