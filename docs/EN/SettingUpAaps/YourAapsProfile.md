@@ -1,19 +1,21 @@
 # Your AAPS profile
 
-Your **AAPS Profile** is a set of five key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. **AAPS** has several _additional_ modifiable parameters (like SMB settings), but using these well relies on your underlying **Profile** being correct. The **Profile** incorporates: 
+Your **AAPS Profile** is a set of five key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates: 
 * [duration of insulin action](#duration-of-insulin-action-dia) (DIA),
 * [glucose targets](#glucose-targets),
 * [basal rates](#basal-rates) (BR),
 * [insulin sensitivity factors](#insulin-sensitivity-factor-isf) (ISF) and
 * [insulin-to-carb ratios](#insulin-to-carb-ratio-icr) (IC or ICR). 
 
-When working on your **Profile**, it is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change.
+As part of **AAPS**’ management, users should continually assess and scrutinise the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [backup your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your Preferences.
 
-You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
+Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider all the settings and check they work harmoniously together in a variety of circumstances.
+
+You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances.
 
 ```{admonition} Your diabetes may vary
 :class: information
-Profiles vary significantly from person-to-person.
+**Profiles** vary significantly from person-to-person.
 
 For the final three parameters, basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in your insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
 
@@ -49,7 +51,7 @@ Additional reading on the topic of duration of insulin action, and why it matter
 
 Too short DIA can lead to low BGs. And vice versa.
 
-If DIA is too short, **AAPS** thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that **AAPS** is unaware of.
+If DIA is too short, **AAPS** will calculate too early that your previous bolus is all consumed, and if your **BG** is still high, it will overdeliver in insulin. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that **AAPS** is unaware of.
 
 Example of a too-short DIA is a high BG followed by **AAPS** over-correcting and giving a low BG.
 
@@ -77,7 +79,7 @@ The targets can be defined within those boundaries :
 
 ### Impact
 
-If your target is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate changes are rarely suggested.
+If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
 
 ### How to set it
 
@@ -118,13 +120,15 @@ The **figure below** shows an example of how the basal rates can be set in an **
 
 ![Basal rates](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error. To test them, plan a fasting period during which you will observe your BG. Although you need to test your basals for the whole day, it is not recommended to fast during 24h straight : the body triggers mechanisms such as hormones to compensate. A recommended way is to fast 3 times for 8 hours.
+Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetic team.
 
-You can either do it by :
-* suspending the loop, and seeing how BG changes. If BG is dropping, basal rate is too high. And vice versa.
-* keeping the loop running, and seeing how IOB changes. If IOB is negative, basal rate is too high. And vice versa. Beware that this method relies on ISF to correct BG, and thus depends on other variables to be set reasonably well for it to be successful.
+There are basal testing methods which usually entails observing your basal rates and insulin needs during an intermittent fasting over a 24 hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast 3 times for 8 hours.
 
-When taking action of the result of this test, changes on your basal in the **Profile** should be done 1 hour before the rise/drop. Repeat the test while necessary.
+The recommended method is to suspend the loop, which will revert to your default background basal rate. Observe how your BG changes. If your BG is dropping, basal rate is too high. And vice versa.<br/>
+An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If IOB is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/>
+Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyse overnight BG lines in order to optimise your basal rates.
+
+When taking action on the result of your basal testing, changes in the **Profile** should be done 1 hour before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
 
 ## Insulin sensitivity factor (ISF)
 
@@ -133,28 +137,30 @@ When taking action of the result of this test, changes on your basal in the **Pr
 The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin. 
 
 **In mg/dL units:** 
-If you have an ISF of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL). 
+If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL). 
 
 **In mmol/L units:** 
-If you have an ISF of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L). 
+If you have an **ISF** of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L). 
 
-From these examples you can see that the _smaller_ the ISF value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dl) or 1.5 to 1.3 (mmol/L), this is often called strengthening your ISF. Conversely, increasing the ISF value from 40 to 45 (mg/dl) or 1.5 to 1.8 mmol/L) is weakening your ISF. 
+From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dl) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dl) or 1.5 to 1.8 mmol/L) is weakening your **ISF**. 
 
 ### Impact
 
-A **lower / stronger ISF** (i.e. 40 instead of 50) means insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If the ISF is too strong (small value), this can lead to low **BGs**.
+A **lower / stronger ISF** (i.e. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
 
-A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too weak (large value), this can lead to high **BGs**.
+A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
 
 **Example:**
-* BG is 190 mg/dL (10,5 mmol/L) and target is 100 mg/dL (5,6 mmol/L).
+* **BG** is 190 mg/dL (10,5 mmol/L) and target is 100 mg/dL (5,6 mmol/L).
 * So, you want a correction of `190 - 110 = 90 mg/dL` or `10,5 - 5,6 = 4.9 mmol/L`
 * If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
 * If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 3`: 2 units of insulin
 
-An ISF that is too low (not uncommon) can result in ‘over corrections’, because **AAPS** thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp. when fasting). In this circumstance you need to increase your ISF. This will mean **AAPS** gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
+An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
 
-Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
+![ISF too low](../images/isf.jpg)
+
+Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
 
 ### How to set it
 
@@ -170,7 +176,7 @@ A basic starting point for determining your daytime ISF is to base it on your to
     Approx ISF (mg/dl) = 1700/40 = 43
     Approx ISF (mmol/L) = 94/40 = 2.4
 
-Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+Assuming correct basal, you can test this by suspending the loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
 
 Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
 
@@ -182,13 +188,13 @@ Be careful as this is quite often set too low. Too low means 1 U will drop BG fa
   
 The ICR is a measure of how many grams of carbohydrate are covered by one unit of insulin.
 
-Some people also use I:C as an abbreviation instead of ICR, or talk about carb ratio (CR). 
+Some people also use **I:C** as an abbreviation instead of ICR, or talk about carb ratio : **CR. 
 
 For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
 
 If your ICR is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.  
 
-It is common to have different ICR at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest ICR around breakfast time. So, for example, your ICR could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller ICR then. 
+It is common to have different ICR at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest ICR around breakfast time. So, for example, one adult user's ICR could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller ICR then. 
 
 > **NOTE:**
 >
@@ -212,19 +218,19 @@ It is common to have different ICR at different times of day due to hormone leve
 
 ### Impact
 
-A **lower / stronger IC** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’. If you IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
+A **lower / stronger IC** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’. If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
 
-A **higher / weaker IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’. If you IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
+A **higher / weaker IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’. If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
 
 ### How to set it
 
-The **figure below** shows an example of how the ICR can be set in an **AAPS** profile. When entering these values, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+The **figure below** shows an example of a user's ICR and how it can be set in an **AAPS Profile**. When entering these values, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
 
 ![Profile ICR](../images/Profile_ICR.png)
 
-If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too high / weak. Conversely, if your BG is lower than before food, IC is too small / strong.
+If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are IC is too high / weak. Conversely, if your **BG** is lower than before food, IC is too small / strong.
 
-Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
+Assuming correct basal are used, you can test by checking if **IOB** is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food you normally eat at that time of day and count its carbs precisely.
 
 ## Common questions related to the Profile
 
@@ -232,73 +238,65 @@ Assuming correct basal, you can test by checking IOB is zero and that you are in
 
 **Why should I try to get my profile settings right? Can’t the loop just take care of it?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect profile values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your profile settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
 
 If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR).
 
 If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
 
 ### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
+First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF typically looks like this:
 
 ![ISF too low](../images/isf.jpg)
 
 ### What causes high postprandial peaks in closed loop?
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your **BG** is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/>
+If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **IC** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your IC and an appropriate pre-bolus time with your endocrinologist.
 
 ### I'm stuck high and the loop does not bring me down
-The possible reasons for the loop not giving enough insulin are:
-* ISF is not strong enough
+The possible reasons for **AAPS** not giving enough insulin are:
+* **ISF** is not strong enough
 * Basal might not be strong enough
-* A security setting might kick in, such as maxIOB. Or SMB is disabled at this time, depending on your settings.
+* A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
+* Automation has been set up and has overridden **AAPS**.
 
 ### I have negative IOB, is this an issue ?
-Negative IOB means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the BG starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
+Negative **IOB** means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the **BG** starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
 
 Here are some reasons why you may have negative IOB, and what action to take:
 * a too strong basal: tweak your **Profile**
 * too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
 * physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
 
-(YourAapsProfile_Clone-profile-switch)=
+## Manage your profiles
 
-## Clone profile switch
-
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
-
-![Clone Profile switch](../images/LocalProfile_ClonePS_AAPS30.png)
-
-1. Click 3-dots-menu in upper right corner.
-2. Select ‘Treatments’.
-3. Press star symbol to access profile switch page.
-4. Select the desired profile switch and press “Clone”.
-5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+There are various operations that you can perform on your **Profiles** in **AAPS**. See the specific documentation sections:
+* Create and edit **Profiles**, see [AAPS Screens > Profile](#aaps-screens-profile).
+* Build a **Profile** from scratch for a kid, see [Profile Helper](../SettingUpAaps/ProfileHelper.md).
+* Switch **Profile**, see [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+* Clone a **Profile switch** to a new **Profile**, see [AAPS Screens > Treatments > Profile Switch](#aaps-screens-clone-profile-switch).
+* Backup your **Profiles**, see [below](#YourAapsProfile_Profile-backup).
+* Editing **Profiles** from Nightscout, see [below](#YourAapsProfile_Profile-backup).
+* Compare two **Profiles**, see [Profile Helper](../SettingUpAaps/ProfileHelper.md).
 
 (YourAapsProfile_Profile-backup)=
-## Profile backup
+### Profile backup
 
-Being a core setting of your looping system, your profiles are highly sensitive and something you really don't want to lose.
+Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
 
-* Your Profiles are stored in the **AAPS** database.
-* If enabled, Profiles are also uploaded to Nightscout. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Upload data to NS](#Preferences-nsclient).
+* Your **Profiles** are stored in the **AAPS** database.
+* If enabled, **Profiles** are also uploaded to Nightscout. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Upload data to NS](#Preferences-nsclient).
 
 ![Backup Profile Nightscout](../images/LocalProfile_UploadNS_AASP30.png)
 
 * They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
 
-## Editing Profiles from Nightscout
+### Editing Profiles from Nightscout
 
 If enabled, profile changes made directly in Nightscout can  be received in **AAPS**. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Receive profile store](#Preferences-nsclient).
 
-This can be helpful when about to make major changes to a more extensive profile. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
+This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
 
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new profile can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 ![Clone database records](../images/Nightscout_Profile_Editor.PNG)
-
-## Profile Helper
-
-The [Profile Helper](../SettingUpAaps/ProfileHelper.md) can help you:
-* build a profile from scratch for a kid
-* compare two profiles
-* clone a profile
