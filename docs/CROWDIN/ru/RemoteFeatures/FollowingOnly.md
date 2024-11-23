@@ -170,9 +170,9 @@ The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/a
 
 ![изображение](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
-Spike может использоваться и как первичный приемник и как приложение-фоллоуэр, показывающее ГК, сигналы оповещений, активный инсулин IOB и многое другое. The website and app are no longer developed. Details [here](https://spike-app.com/#features2). Support can be found on [Facebook](https://www.facebook.com/groups/1973791946274873) and [Gitter](https://gitter.im/SpikeiOS/Lobby).
+Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more.
 
-Чтобы установить Spike, см. [здесь](https://spike-app.com/#installation)
+The website and app are no longer developed. Support can be found on [Facebook](https://www.facebook.com/groups/1973791946274873) and [Gitter](https://gitter.im/SpikeiOS/Lobby).
 
 ## Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
 
