@@ -280,9 +280,11 @@ Here are some reasons why you may have negative IOB, and what action to take:
 :depth: 1
 :local: true
 ```
+(your-aaps-profile-create-and-edit-profiles)=
 ### Create and edit Profiles
 
 The **Profile** tab can be found from the top menu or hamburger menu, depending on your [Config Builder settings](../SettingUpAaps/ConfigBuilder.md).
+
 ![Local Profile buttons](../images/LocalProfile_Settings.png)
 
 Buttons:
@@ -328,7 +330,7 @@ See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-Pro
 
 The [Treatments](#aaps-screens-treatments) tab shows all past **Profile Switches**. When going to the **Profile Switch** sub-tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
 
-You can now go to the [Profile tab](#profile) to edit the newly created Profile.
+You can now go to the [Profile tab](#your-aaps-profile-create-and-edit-profiles) to edit the newly created Profile.
 
 (YourAapsProfile_Profile-backup)=
 ### Profile backup
