@@ -60,7 +60,11 @@ AAPS 還允許在不輸入任何胰島素和碳水化合物的情況下進行**�
 
 來源：
 
-1) ![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg) IEEE 控制系統雜誌，ResearchGate [人工胰臟與餐後血糖控制：1 型糖尿病餐後血糖調節概述](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes)；
+![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
+
+
+
+IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
 - 會顯著降低血糖**峰值**，相比較慢的胰島素。
 - **延遲幾分鐘的餐前注射**對血糖峰值的影響會被最小化，而不會造成不可接受的峰值高度。
@@ -87,6 +91,15 @@ AAPS 還允許在不輸入任何胰島素和碳水化合物的情況下進行**�
 對於飲食主要不由對血糖有快速影響的成分構成，且進餐模式不會每天大幅變動的人來說，設置全自動循環系統相對容易。 他們不一定需要是低碳水化合物飲食。
 
 富含脂肪或蛋白質的飲食，或者消化緩慢/胃輕癱，反而使全自動循環系統更加簡單，因為晚期碳水化合物可以很好地彌補胰島素作用高峰期的“尾巴”。
+
+#### 血糖指數與血糖影響
+
+Challenge for the UAM mode rises with rising EBG (effect on blood glucose)
+
+- Start moderate/low, and tune your settings. Inly then, "test" meals with high EBG
+- Consider a < 50% initial bolus if consuming very high EBG
+
+1) **No EBG**: fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**: wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: (sugar-) sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
 
 ![血糖指數與血糖影響](../images/fullClosedLoop01.png)
 
