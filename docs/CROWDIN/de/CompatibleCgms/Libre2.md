@@ -2,13 +2,13 @@
 orphan: true
 - - -
 
-# Freestyle Libre 2
+# Freestyle Libre 2 and 2+
 
 Der Freestyle Libre 2 Sensor ist mittlerweile (auch mit der offiziellen App) ein echtes CGM. Dennoch kann LibreLink auch weiterhin keine Daten an AAPS senden. Es gibt aber verschiedene Lösungen für den Einsatz mit AAPS.
 
 ## 1. Verwende einen Bluetooth-Transmitter und OOP
 
-Bluetooth-Transmitter können mit dem Libre 2 (EU) und einer [Out of Process Algorithmus](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)-App verwendet werden. You can receive blood sugar readings every 5 minutes like with the [Libre 1](./Libre1.md).
+Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an [out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](./Libre1.md).
 
 Prüfe im Vorfeld, ob der Bluetooth-Transmitter und die notwendige App, sowohl mit Deinem Sensor als auch mit xDrip+ kompatibel ist (ältere und auch aktuelle Blucons sind nicht kompatibel, Miaomiao 1 benötigt Firmwareversion 39 und Miaomiao 2 Firmwareversion 7).
 
@@ -32,7 +32,8 @@ Bemerkung: Der Transmitter kann parallel zur LibreLink-App verwendet werden.
 
 ```{admonition} Libre 2 EU only
 :class: warning
-xDrip+ doesn't support direct connection to Libre 2 US and AUS.  
+xDrip+ doesn't support direct connection to Libre 2 US and AUS.
+Only Libre 2 and 2+ **EU** models.
 ```
 
 - [Diese Anleitung](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) beschreibt, wie Du xDrip+ konfigurierst. Wichtig ist, dass Du die [neueste OOP2-Version](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) herunterlädst und nutzt, da die in der Dokumentation referenzierte Version veraltete ist.
