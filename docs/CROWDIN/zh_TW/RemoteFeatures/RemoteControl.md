@@ -114,31 +114,68 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 更多設置資訊可直接從 [Nightscout](https://nightscout.github.io/nightscout/discover/) 獲得
 
-當你首次登入時，將會顯示一個非常簡單的介面（見下方左側）。 透過點擊右上角的“漢堡”選單並向下滾動來自定義顯示選項：
+When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
 
 ![圖像](../images/remote-control-25.png)
 
-向下滾動到“設置”。 你可能會想將 血糖 顯示的“比例”設置為“線性”，因為預設值是對數比例，並在“渲染基礎率”下選擇“預設”以顯示幫浦的基礎率。 繼續向下滾動直到找到“顯示外掛”。 你需要確保已勾選“照護入口”，還可以選擇其他有用的指標（最常用的包括：IOB、照護入口、幫浦、套管時間、胰島素時間、基礎率設定和 OpenAPS）。
+向下滾動到“設置”。 你可能會想將 血糖 顯示的“比例”設置為“線性”，因為預設值是對數比例，並在“渲染基礎率”下選擇“預設”以顯示幫浦的基礎率。
+
+![圖像](../images/remote-control-25b.png)
+
+Select your desired options. Uncheck alarms if you use an alternative app for alarms.
 
 ![圖像](../images/remote-control-26.png)
 
-![圖像](../images/remote-control-27.png)
+繼續向下滾動直到找到“顯示外掛”。
+
+你需要確保已勾選“照護入口”，還可以選擇其他有用的指標（最常用的包括：IOB、照護入口、幫浦、套管時間、胰島素時間、基礎率設定和 OpenAPS）。
 
 重要的是，你現在需要點擊底部的“儲存”，以使這些更改生效。
 
+![圖像](../images/remote-control-27.png)
+
 按下“儲存”後，應用程式將返回你的 Nightscout 主畫面，顯示如下：
+
+1. Current glucose value
+2. Information on AAPS system status - touch the individual tabs on the screen to display more detail. Add or remove these display options using hamburger menu.
+3. Recent glucose trace with treatments (carbs, boluses) displayed
+4. Longer-term glucose trace
+5. "Hamburger" menu for setting display options, generating reports, editing profiles and Nightscout admin tools
+6. "**+**" menu for entering treatments to send to AAPS.
+7. Select different time period to display
+8. Basal insulin profile
+9. Green line = historical glucose Blue lines = predicted glucose
 
 ![圖像](../images/remote-control-28.png)
 
 更詳細地查看 Nightscout 應用程式左上角的選單：
 
+1. Careportal retrospective edit
+2. Turn on/off alarms
+3. Hamburger - for setting preferences
+4. Careportal - Log treatment - to send changes to AAPS
+
 ![Nightscout 頂部欄](../images/remote-control-29.png)
 
 此畫面上的灰色標籤包含大量關於 **AAPS** 系統狀態的資訊（點擊標籤可顯示更多資訊）：
 
+1. 5min glucose trend
+2. Bolus wizard preview
+3. Press on Basal to see your current profile and basal information
+4. Time since latest CGM reading in AAPS
+5. **Pump**: insulin, battery % and when AAPS last connected to it
+6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
+7. Press on IOB to see split of basal and bolus insulin
+8. Insulin age in reservoir
+9. 針頭的使用時間
+10. Battery status of AAPS phone
+11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+
 ![圖像](../images/remote-control-30.png)
 
 ![圖像](../images/remote-control-31.png)
+
+Press "refresh" at the bottom of the page to close the popup.
 
 ### 透過 Nightscout 應用程式向 AAPS 發送治療資料
 
