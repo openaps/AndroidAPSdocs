@@ -1,5 +1,9 @@
 # Docs updates & changes
 
+## November 2024
+
+- Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
+
 ## October 2024
 
 - Update of several pages: 

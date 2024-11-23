@@ -626,11 +626,7 @@ The history of profile switches can be seen here. You may see multiple entries e
 
 Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
 
-(aaps-screens-clone-profile-switch)=
-#### Clone profile switch
-You can easily create a new local profile from a profile switch. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
-
-You can now go to the [Profile tab](#profile) to edit the newly created Profile.
+You can use the **Clone** button shown on line **1** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
 
 ### Care portal
 
@@ -650,10 +646,10 @@ This view can be accessed by pressing the 3 dots on the right of the menu, then 
 
 Gives you statistics about your Time In Range and Total Daily Dose. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
 
+(aaps-screens-profile-helper)=
 ## Profile Helper
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then Profile Helper. It is not possible to put in the main menu through the Config Builder.
-The [Profile Helper](../SettingUpAaps/ProfileHelper.md) can help you:
-* build a profile from scratch for a kid
-* compare two profiles
-* clone a profile
+The Profile Helper can help you:
+* [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
+* [compare two profiles](#your-aaps-profile-compare-profiles)

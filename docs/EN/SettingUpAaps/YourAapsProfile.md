@@ -17,11 +17,11 @@ You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thi
 :class: information
 **Profiles** vary significantly from person-to-person.
 
-For the final three parameters, basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in your insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+For basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
 
 ```
 
-The four last parameters can be set to different values, changing hourly if required, over a 24-hour period.
+The four last parameters (glucose targets, basal rates, insulin sensitivity factors and insulin-to-carb ratios) can be set to different values, changing hourly if required, over a 24-hour period.
 
 ![Hourly change of basal](../images/MaxDailyBasal2.png)
 
@@ -51,7 +51,7 @@ Additional reading on the topic of duration of insulin action, and why it matter
 
 Too short DIA can lead to low BGs. And vice versa.
 
-If DIA is too short, **AAPS** will calculate too early that your previous bolus is all consumed, and if your **BG** is still high, it will overdeliver in insulin. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that **AAPS** is unaware of.
+If DIA is too short, **AAPS** will calculate too early that your previous bolus is all consumed, and if your **BG** is still high, it will over-deliver in insulin. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that **AAPS** is unaware of. This is especially noticeable at night, if you see negative IOB with no other explanation than the queue of the last bolus.
 
 Example of a too-short DIA is a high BG followed by **AAPS** over-correcting and giving a low BG.
 
@@ -61,7 +61,7 @@ The **figure below** shows an example of how the DIA set in an **AAPS** profile.
 
 ![DIA](../images/Profile_DIA.png)
 
-This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7 or more. See the additional reading mentioned above.
+This is quite often set too short. A DIA of 6 or 7 is probably a good place to start. A growing number of people find that a DIA of 8 to 9 hours works good for them. See the additional reading mentioned above.
 
 (profile-glucose-targets)=
 ## Glucose targets
@@ -122,10 +122,10 @@ The **figure below** shows an example of how the basal rates can be set in an **
 
 Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetic team.
 
-There are basal testing methods which usually entails observing your basal rates and insulin needs during an intermittent fasting over a 24 hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast 3 times for 8 hours.
+There are basal testing methods which usually entails observing your basal rates and insulin needs during an intermittent fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast 3 times for 8 hours.
 
-The recommended method is to suspend the loop, which will revert to your default background basal rate. Observe how your BG changes. If your BG is dropping, basal rate is too high. And vice versa.<br/>
-An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If IOB is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/>
+The recommended method is to suspend the loop, which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/>
+An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/>
 Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyse overnight BG lines in order to optimise your basal rates.
 
 When taking action on the result of your basal testing, changes in the **Profile** should be done 1 hour before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
@@ -234,6 +234,11 @@ Assuming correct basal are used, you can test by checking if **IOB** is zero and
 
 ## Common questions related to the Profile
 
+```{contents} Common questions related to the Profile
+:depth: 1
+:local: true
+```
+
 ### About the importance of getting your profile right
 
 **Why should I try to get my profile settings right? Can’t the loop just take care of it?**
@@ -266,18 +271,64 @@ Negative **IOB** means the amount of absolute insulin (basal + bolus) in your bo
 Here are some reasons why you may have negative IOB, and what action to take:
 * a too strong basal: tweak your **Profile**
 * too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
+* DIA too short, resulting in insulin stacking: tweak your **Profile**
 * physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
 
 ## Manage your profiles
 
-There are various operations that you can perform on your **Profiles** in **AAPS**. See the specific documentation sections:
-* Create and edit **Profiles**, see [AAPS Screens > Profile](#aaps-screens-profile).
-* Build a **Profile** from scratch for a kid, see [Profile Helper](../SettingUpAaps/ProfileHelper.md).
-* Switch **Profile**, see [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-* Clone a **Profile switch** to a new **Profile**, see [AAPS Screens > Treatments > Profile Switch](#aaps-screens-clone-profile-switch).
-* Backup your **Profiles**, see [below](#YourAapsProfile_Profile-backup).
-* Editing **Profiles** from Nightscout, see [below](#YourAapsProfile_Profile-backup).
-* Compare two **Profiles**, see [Profile Helper](../SettingUpAaps/ProfileHelper.md).
+```{contents} Operations that you can perform on your **Profiles** in **AAPS**
+:depth: 1
+:local: true
+```
+### Create and edit Profiles
+
+The **Profile** tab can be found from the top menu or hamburger menu, depending on your [Config Builder settings](../SettingUpAaps/ConfigBuilder.md).
+![Local Profile buttons](../images/LocalProfile_Settings.png)
+
+Buttons:
+
+- green plus: add
+- red X: delete
+- blue arrow: duplicate
+
+If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** tab may not always show the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen, it may differ from the profile actually shown in profile tab as there is no connection between these.
+
+(your-aaps-profile-profile-from-scratch-for-a-kid)=
+### Build a Profile from scratch for a kid
+
+The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a profile for a child (up to 18 years).
+
+**Important note:**
+
+**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+
+Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+
+![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
+
+1. Make sure you are in **Profile 1**.
+2. In **Profile type**, make sure you have "Default profile" selected.
+3. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
+4. Change screen by clicking on **Profile 2** on the right.
+5. Press **Profile type** and select "DPV Default profile".
+6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
+7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button either from **Profile 1** ou **Profile 2**.
+
+![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
+
+### Switch Profile
+
+See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+
+(your-aaps-profile-clone-profile-switch)=
+### Clone a Profile switch to a new Profile
+
+![Profile Switch](../images/TreatmentsView4.png)
+
+The [Treatments](#aaps-screens-treatments) tab shows all past **Profile Switches**. When going to the **Profile Switch** sub-tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
+
+You can now go to the [Profile tab](#profile) to edit the newly created Profile.
 
 (YourAapsProfile_Profile-backup)=
 ### Profile backup
@@ -300,3 +351,20 @@ This can be helpful when about to make major changes to a more extensive **Profi
 To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 ![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+
+(your-aaps-profile-compare-profiles)=
+### Compare two Profiles
+
+You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+
+![Profile Helper 1](../images/ProfileHelper1.png)
+
+1. Make sure you are in **Profile 1**.
+2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
+3. Choose the **Profile** you want to compare from.
+4. Change screen by clicking on **Profile 2** on the right.
+5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profiles Switched**.
+6. Choose the **Profile Switch** you want to compare to.
+7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+
+![Profile Helper 2](../images/ProfileHelper2.png)
