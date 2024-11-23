@@ -343,24 +343,24 @@ orphan: true
 
 按下**重置警報**按鈕以重置警報並恢復正常運作。
 
-## Switching phone, export/import settings
+## 切換手機，匯出/匯入設定
 
 更換新手機時，需要進行以下步驟：
-* [Export settings](ExportImportSettings-export-settings) on your old phone
-* Transfer settings from old to new phone, and import them into AAPS
+* [在舊手機上匯出設定](ExportImportSettings-export-settings)
+* 將設定從舊手機轉移到新手機，並匯入到 AAPS 中
 
-The imported settings file has to be of the same patch session that you are currently using, otherwise the patch will not connect.
+匯入的設定檔必須與您目前使用的修補版本相同，否則無法連線。
 
-After a settings import the driver will sync history with the pump, this can take a while depending on the age of the settings file.
+在完成設置匯入後，驅動程式會與幫浦同步歷史資料，這可能會根據設置的檔案需要一些時間。
 
-From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen: ![Sync progress](../images/medtrum/SyncProgress.png)
+從 AAPS 版本 3.3.0.0 開始，同步進度將顯示在主畫面： ![同步進度](../images/medtrum/SyncProgress.png)
 
 ## 問題排除
 
 ### 連線問題
 
 如果你遇到連線逾時或其他連線問題：
-- 在AAPS的Android應用程式設置中：將定位權限設置為「始終允許」。
+- 在 AAPS 的 Android 應用程式設置中：將定位權限設置為「始終允許」。
 
 ### 啟動中斷
 
