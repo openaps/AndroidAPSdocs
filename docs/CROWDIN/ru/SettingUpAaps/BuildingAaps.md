@@ -399,8 +399,7 @@ Android Studio will now build the **AAPS** apk. It will show "Gradle Build runni
 
 ![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
-
-_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio)._
+**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio)._**
 
 В окне Уведомления нажмите на синюю ссылку "locate":
 
