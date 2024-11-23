@@ -9,11 +9,11 @@ orphan: true
 Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
 
 -   Βεβαιωθείτε ότι τα χέρια και το κιτ είναι καθαρά.
--   Προσπαθήστε να βαθμονομήσετε όταν έχετε μια σειρά από κουκίδες με ένα επίπεδο βέλος (συνήθως είναι αρκετά 15-30 λεπτά)
+-   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
 -   Αποφύγετε τη βαθμονόμηση όταν τα επίπεδα γλυκόζης κινούνται προς τα επάνω ή προς τα κάτω.
 -   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
 -   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
--   Αν είναι δυνατόν, βαθμονομήστε με μερικές από τις μετρήσεις σας σε χαμηλότερο εύρος (4-5mmol / l ή 72-90mg / dl) και μερικές σε ελαφρώς υψηλότερο επίπεδο (7-9mmol / l ή 126-160mg / dl) καθώς αυτό παρέχει μια καλύτερη περιοχή για τη βαθμονόμηση σημείου / κλίσης.
+-   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
 
 ## Ρυθμίζοντας τον αισθητήρα(G6)
 
@@ -26,17 +26,17 @@ After setting the sensor, the transmitter can be clicked into the sensor holder.
 
 ### Προβλήματα σύνδεσης
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is restabilised the data is backfilled.
+Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip+ does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
 
 ### Σφάλματα αισθητήρα
 
 If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor contacts should not come into contact with blood.
 
-Συχνά ένα "σφάλμα αισθητήρα" μπορεί να διορθωθεί με άμεση ενυδάτωση και μασάζ γύρω από τον αισθητήρα!
+Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
 
 ### Παράξενες τιμές
 
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+You might try to change settings for noise blocking in xDrip+ (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Negative Sensor Age
 
