@@ -73,113 +73,6 @@ Bantlayabilirsiniz. Yaygın CGM sistemleri için önceden delinmiş birkaç çe�
 
 Siz bunu düzeltebilirsiniz. CGM/FGM'yi bir bantla sabitleyen üst kol bilezikleri de satın alabilirsiniz (Google, eBay veya Amazon'da arama yapın).
 
-## AAPS settings
-
-Aşağıdaki liste, ayarları optimize etmenize yardımcı olmayı amaçlamaktadır. En baştan başlamak ve en alta kadar çalışmak en iyisi olabilir. Diğerini değiştirmeden hemen önce bir ayarı almayı hedefleyin. Tek seferde büyük değişiklikler yapmak yerine küçük adımlarla çalışın. [Otoayar](https://autotuneweb.azurewebsites.net/)'ı düşüncenize rehberlik etmesi için kullanabilirsiniz, ancak körü körüne takip edilmemelidir: sizin için veya her durumda iyi çalışmayabilir. Ayarların birbiriyle etkileşime girdiğine dikkat edin - bazı durumlarda birlikte iyi çalışan 'yanlış' ayarlarınız olabilir (örneğin, çok yüksek bir bazal, çok yüksek bir Karbonhidrat oranı ile aynı anda olursa), ancak diğerlerinde çalışmaz. Bu tüm ayarları göz önünde bulundurmanız ve çeşitli koşullarda birlikte çalıştıklarını kontrol etmeniz gerektiği anlamına gelir.
-
-### Duration of insulin activity (DIA)
-
-#### Description & testing
-
-İnsülinin metabolizmada tamamen parçalanması için geçen süre.
-
-Bu genellikle çok kısa ayarlanır. Çoğu insanın en az 5 saat, bazen 6 veya 7 saate ihtiyacı vardır.
-
-(FAQ-impact)=
-
-#### Impact
-
-Çok kısa İES, düşük KŞ'lere yol açabilir. Veya tam tersi.
-
-İES çok kısa ayarlanırsa, AAPS çok yakında önceki bolusun tamamen "kullanıldığını" varsayacak ve glikoz seviyeleri yükseldikçe ek insülin verecektir. (Aslında o kadar da beklemez ama ne olacağını tahmin eder ve insülin eklemeye devam eder). Bu esasen AAPS'nin farkında olmadan 'insülin yığını'na yol açar.
-
-Çok kısa bir İES örneği, yüksek KŞ takibende AAPS'nin aşırı düzeltme yapması ve düşük KŞ yol açması.
-
-### Basal rate schedule (U/h)
-
-#### Description & testing
-
-KŞ'yi sabit bir seviyede tutmak için belirli bir saat zaman bloğundaki insülin miktarı.
-
-Döngüyü askıya alarak, aç kalarak, örneğin yemekten sonra 5 saat bekleyerek ve KŞ'nin nasıl değiştiğini görerek bazal oranlarınızı test edin. Birkaç kez tekrarlayın.
-
-KŞ düşüyorsa, bazal oran çok yüksektir. Veya tam tersi.
-
-#### Impact
-
-Çok yüksek bazal oran, düşük KŞ'lere yol açabilir. Veya tam tersi.
-
-Varsayılan bazal orana karşı AAPS "temel çizgileri". Bazal oran çok yüksekse, bir 'sıfır geçici' (bazal hızı AAPS ile geçici olarak kapatır), olması gerekenden daha yüksek bir negatif AİNS (metabolizmada aktif insülin) ile sonuçlanır. Bu AAPS'nin AİNS'i nihai olarak sıfıra getirmek için gerekenden daha fazla düzeltme yapmasına yol açacaktır.
-
-Dolayısıyla, çok yüksek bir bazal oran, hem varsayılan oranla hem de AAPS'nin hedefi düzeltmesiyle birkaç saat sonra düşük KŞ'ler yaratacaktır.
-
-Tersine, çok düşük bir bazal oran, yüksek KŞ'lere ve seviyelerin hedef değere indirilememesine neden olabilir.
-
-### Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
-
-#### Description & testing
-
-1Ü insülin dozundan beklenen KŞ'deki düşüş.
-
-Doğru bazal varsayarak, döngüyü askıya alarak, AİNS'in sıfır olduğunu kontrol ederek ve kararlı bir "yüksek" seviyeye ulaşmak için birkaç glikoz tableti alarak bunu test edebilirsiniz.
-
-Ardından, hedef KŞ'nize ulaşmak için tahmini miktarda insülin (mevcut 1/İDF'ine göre) alın.
-
-Bu genellikle çok düşük ayarlandığından dikkatli olun. Çok düşük ayarlamak, 1 Ü insülininin, KŞ'ni beklenenden daha hızlı düşüreceği anlamına gelir.
-
-#### Impact
-
-**Düşük İDF** (örn. 50 yerine 40), insülinin birim başına KŞ'nizi daha az düşürdüğü anlamına gelir. Bu **daha fazla insülin** ile döngüden daha agresif/daha güçlü bir düzeltmeye yol açar. İDF çok düşükse, bu düşük KŞ'lere yol açabilir.
-
-**Daha yüksek İDF** (örn. 35 yerine 45), insülinin birim başına KŞ'nizi daha fazla düşürdüğü anlamına gelir. Bu **daha az insülin** ile döngüden daha az agresif/daha zayıf bir düzeltmeye yol açar. İDF çok yüksekse, bu yüksek KŞ'lere yol açabilir.
-
-**Örnek kullanım:**
-
-- KŞ 190 mg/dl (10,5 mmol) ve hedef 100 mg/dl (5,6 mmol). 
-- Yani 90 mg/dl (= 190 - 110) düzeltmesi istiyorsunuz.
-- İDF = 30 -> 90 / 30 = 3 ünite insülin
-- İDF = 45 -> 90 / 45 = 2 ünite insülin
-
-AAPS, yüksek bir KŞ'yi düzeltmek için gerçekte olduğundan daha fazla insüline ihtiyaç duyduğunu düşündüğünden, çok düşük (nadir olmayan) bir İDF "aşırı düzeltmelere" neden olabilir. Bu da 'hız treni misali' KŞ'nin inişli çıkışlı olmasına sebep olur. (özellikle. oruçluyken). Bu durumda İDF'nizi artırmanız gerekir. Bu AAPS'nin daha küçük düzeltme dozları verdiği anlamına gelir ve bu düşük KŞ ile sonuçlanan yüksek bir KŞ'nin aşırı düzeltilmesini önler.
-
-Tersine, çok yüksek bir İDF ayarı eksik düzeltmelere neden olabilir, bu da KŞ'nizin hedefin üzerinde kaldığı anlamına gelir - özellikle gece boyunca fark edilir.
-
-### Insulin to carb ratio (IC) (g/U)
-
-#### Description & testing
-
-Her birim ünite insülin için karbonhidrat gramı.
-
-Bazı insanlar ayrıca IC yerine kısaltma olarak I:C kullanır veya karbonhidrat oranı (CR) hakkında bahseder.
-
-Bazalın doğru olduğunu varsayarak, AİNS'in sıfır olduğunu ve aralıkta olduğunuzu, tam olarak bilinen karbonhidratları yediğinizi ve mevcut insülin / karbonhidrat oranına göre tahmini bir miktarda insülin aldığınızı kontrol ederek test edebilirsiniz. En iyisi, normalde yediğiniz yemeği günün o saatinde yemek ve karbonhidratlarını tam olarak saymaktır.
-
-> **NOT:**
-> 
-> Bazı Avrupa ülkelerinde, gıda için ne kadar insüline ihtiyaç olduğunun belirlenmesi için dilim ekmek birimi kullanılmıştır. Başlangıçta 1 dilim ekmek 12 gr karbonhidrata eşitken, bazıları daha sonra 10 gr karbonhidrata dönüştürdü.
-> 
-> Bu modelde karbonhidrat miktarı sabit ve insülin miktarı değişkendi. ("Bir dilim ekmeğin üstesinden gelebilmek için ne kadar insülin gerekir?")
-> 
-> IC kullanırken insülin miktarı sabittir ve karbonhidrat miktarı değişkendir. ("Bir ünite insülin kaç gram karbonhidratı karşılayabilir?")
-> 
-> Örnek kullanım:
-> 
-> Ekmek birim faktörü (BU = 12g karbonhidrat): 2,4 U/BU -> Bir ünite ekmek yediğinizde 2,4 ünite insüline ihtiyacınız var.
-> 
-> Karşılık gelen IC: 12g / 2,4 U = 5,0 g/U -> 5,0g karbonhidrat bir ünite insülin ile karşılanabilir.
-> 
-> BU faktörü 2,4 U / 12g ===> IC = 12g / 2,4 U = 5,0 g/U
-> 
-> Dönüşüm tabloları çevrimiçi olarak mevcuttur, [buradan](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf) ulaşabilirsiniz.
-
-#### Impact
-
-**Düşük IC** = birim başına daha az yiyecek, yani sabit miktarda karbonhidrat için daha fazla insülin alıyorsunuz. 'Daha agresif' olarak da adlandırılabilir.
-
-**Daha yüksek IC** = birim başına daha fazla yiyecek, yani sabit miktarda karbonhidrat için daha az insülin alıyorsunuz. "Daha az agresif" olarak da adlandırılabilir.
-
-Yemekten sonra sindirim gerçekleşmiş ve AİNS sıfıra dönmüşse, KŞ'niz de yemek öncesi değerden daha yüksekse, IC'nin çok büyük olma ihtimali vardır. Tersine, KŞ'niz yemekten sonra düşükse, IC çok küçüktür.
-
 ## APS algorithm
 
 ### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
@@ -187,22 +80,6 @@ Yemekten sonra sindirim gerçekleşmiş ve AİNS sıfıra dönmüşse, KŞ'niz d
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
 AMA algoritmasında, İES aslında 'insülin etkisinin süresi' anlamına gelmez. Eskiden İES'ine bağlanan bir parametreydi. Şimdi ise 'düzeltme bolusunun ne zaman biteceği' anlamına geliyor. AİNS'in hesaplanmasıyla ilgisi yoktur. OpenAPS SMB'de artık bu parametreye gerek yoktur.
-
-### Profile
-
-#### Why using min. 5h DIA (insulin end time) instead of 2-3h?
-
-[Bu makalede](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) iyi bir şekilde açıklanmıştır. İES'ini değiştirdikten sonra `PROFİLİ ETKİNLEŞTİR` yapmayı unutmayın.
-
-#### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
-
-Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa, bu davranışa genellikle çok düşük bir İDF neden olur. Çok düşük bir İDF tipik olarak şöyle görünür:
-
-![İDF çok düşük](../images/isf.jpg)
-
-#### What causes high postprandial peaks in closed loop?
-
-Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa ve karbonhidratlar tamamen emildikten sonra KŞ'niz hedefinize düşüyorsa, AAPS'de yemekten bir süre önce bir "yakında yemek yeme" geçici hedefi belirlemeye çalışın veya endokrinologunuzla uygun bir bolus öncesi zamanı düşünün. KŞ'niz yemekten sonra çok yüksekse ve karbonhidratlar tamamen emildikten sonra hala çok yüksekse, endokrinologunuzla IC'nizi azaltmayı düşünün. KŞ değerleriniz aktif karbonhidratlarla çok yüksekse ve tam karbonhidrat emiliminden sonra da çok düşerse, diyabet uzmanınıza Kİ oranınızı artırıp artırmayacağınızı danışın ve uygun bir insülin- yemek arası süre belirleyin.
 
 ## Other settings
 
