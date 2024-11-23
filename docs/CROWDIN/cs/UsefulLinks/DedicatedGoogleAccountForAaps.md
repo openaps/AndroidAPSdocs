@@ -8,7 +8,7 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 :class: dropdown
 
 - Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
-- Each version of **AAPS** (and supporting apps like xdrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
+- Each version of **AAPS** (and supporting apps like xDrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
 - By harmonizing the setup, it will make online support simpler across users with similar folder structure.
 - Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
 - Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
@@ -35,7 +35,7 @@ Požadavky:
 - If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
 - If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
 ```
- 
+
 
 ```{admonition}  Video Walkthrough! 
 :class: Note
