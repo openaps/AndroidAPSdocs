@@ -74,17 +74,19 @@ Component Overview <./Getting-Started/ComponentOverview.md>
 ```
 
 ```{toctree}
-:caption: 3) Installation d'AAPS
+:caption: 3) Setting up AAPS
 
-Serveur de reporting <./SettingUpAaps/SettingUpTheReportingServer.md>
-Compilation d'AAPS <./SettingUpAaps/BuildingAaps.md>
-Transfert et Installation d'AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Assistant de configuration <./SettingUpAaps/SetupWizard.md>
-Votre Profil AAPS <./SettingUpAaps/YourAapsProfile.md>
-Modifier la configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Générateur de configuration <./SettingUpAaps/ConfigBuilder.md>
-- Préférences <./SettingUpAaps/Preferences.md>
-Compléter les objectifs <./SettingUpAaps/CompletingTheObjectives.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+- Nightscout <./SettingUpAaps/Nightscout.md>
+- Tidepool <./SettingUpAaps/Tidepool.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
