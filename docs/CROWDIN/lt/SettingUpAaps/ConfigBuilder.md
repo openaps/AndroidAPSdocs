@@ -23,12 +23,13 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 :depth: 2
 ```
 
+(ConfigBuilder_Profile)=
+
 ## Profile
 
 This module can not be disabled as it is a core part of **AAPS**.
 
-* See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
-* See [AAPS Screens > Profile](#aaps-screens-profile) for more information about managing your **Profiles**.
+See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
 
 (Config-Builder-insulin)=
 
@@ -257,7 +258,7 @@ Note: Entries cannot be used in the **AAPS** calculator. (View only)
 
 Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turėtumėte įjungti „Valdymas iš laikrodžio“.
+If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
 ![Wear settings](../images/ConfBuild_Wear.png)
 

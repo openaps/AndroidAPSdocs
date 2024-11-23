@@ -239,7 +239,7 @@
 
 [超級注射](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/)是一種「借用」接下來兩小時的基礎率部分胰島素來防止血糖尖峰的概念。 這與*超微量注射*不同！
 
-使用時需謹慎，直到你了解它實際上的作用再啟用。 基本上，接下來兩個小時的基礎率將加到注射中，並啟用兩小時的0基礎率。 **AAPS 的循環功能將停用——請小心使用！** 如果你使用SMB**AAPS**的迴路功能將根據你在["最大基礎數分鐘限制SMB"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to)設定來禁用，如果不使用SMB則會禁用兩個小時。**有關超注射的詳細內容請參見[這裡](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)。
+使用時需謹慎，直到你了解它實際上的作用再啟用。 Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS 的循環功能將停用——請小心使用！** 如果你使用SMB**AAPS**的迴路功能將根據你在["最大基礎數分鐘限制SMB"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to)設定來禁用，如果不使用SMB則會禁用兩個小時。**有關超注射的詳細內容請參見[這裡](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)。
 
 ## 治療安全
 
@@ -328,7 +328,7 @@
 
 該演算法使用BGI（血糖影響）來確定[碳水化合物的吸收](../DailyLifeWithAaps/CobCalculation.md)時間。
 
-在無法根據你血液反應動態計算碳水化合物吸收的時候，**AAPS** 會為你的碳水化合物插入一個預設衰減值。 基本上，這是一個安全保護機制。 此值僅在**CGM** 讀數出現間隙或當身體活動“消耗掉”所有本來會引起**AAPS**衰減COB的血糖上升時使用。
+在無法根據你血液反應動態計算碳水化合物吸收的時候，**AAPS** 會為你的碳水化合物插入一個預設衰減值。 Basically, it is a failsafe. 此值僅在**CGM** 讀數出現間隙或當身體活動“消耗掉”所有本來會引起**AAPS**衰減COB的血糖上升時使用。
 
 簡單來說：演算法「知道」在目前胰島素劑量等影響下，你的血糖應該如何變化。 每當預期行為與實際行為有正向偏差時，部分碳水化合物會被吸收/衰減。 大的變化＝許多碳水化合物等。
 

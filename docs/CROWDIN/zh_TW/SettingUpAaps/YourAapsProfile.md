@@ -17,6 +17,16 @@
 
 ```
 
+## 關於正確設置你的設定檔的重要性
+
+**我為什麼需要正確設置我的個人設定？ 循環不是可以自動處理這些嗎？**
+
+A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect profile values. 它可以這樣做，例如如果你將要低血糖，它會暫停胰島素的輸送。 然而，若你的設定檔參數已經接近你身體所需的值，你將能夠實現更好的血糖控制。 這是**AAPS**使用分階目標從開放式循環推進到混合閉環的原因之一。 此外，還會有需要打開循環的時候（感測器暖機、感測器故障_等_），有時發生在半夜，你希望在這些情況下設定是正確的。
+
+如果你是在使用其他開放式或閉環系統後開始使用**AAPS**，那麼你已經對基礎率（BR）、胰島素敏感性因子（ISF）和胰島素與碳水化合物比率（IC 或 ICR）要使用的值有合理的了解。
+
+如果你是從注射（MDI）轉到**AAPS**，那麼最好先了解如何從 MDI 轉移到幫浦，並在與你的糖尿病團隊諮詢後仔細規劃並進行轉換。 ["胰島素輸注"](https://amzn.eu/d/iaCsFa2)由 John Walsh 和 Ruth Roberts 編寫的書籍，及[“像胰臟一樣思考”](https://amzn.eu/d/iVU0RGe)由 Gary Scheiner 編寫的書籍都是非常有用的參考資料。
+
 下面顯示的**AAPS**截圖為一個_範例_個人設定。
 
 (your-aaps-profile-duration-of-insulin-action)=
@@ -94,22 +104,47 @@ ICR 是衡量每單位胰島素覆蓋多少克碳水化合物的指標。
 
 ![24-07-23，設定檔基本 - ICR](../images/7741eefb-cae5-45c5-a9e5-8eae5ead3f48.png)
 
+(YourAapsProfile_Local-profile)=
 
-## 關於正確設置你的設定檔的重要性
+## Local profile
 
-**我為什麼需要正確設置我的個人設定？ 循環不是可以自動處理這些嗎？**
+Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
-混合閉環系統_可以_試圖進行胰島素投放調整，以最小化因個人設定值不正確而導致的血糖控制不佳。 它可以這樣做，例如如果你將要低血糖，它會暫停胰島素的輸送。 然而，若你的設定檔參數已經接近你身體所需的值，你將能夠實現更好的血糖控制。 這是**AAPS**使用分階目標從開放式循環推進到混合閉環的原因之一。 此外，還會有需要打開循環的時候（感測器暖機、感測器故障_等_），有時發生在半夜，你希望在這些情況下設定是正確的。
+![Local Profile buttons](../images/LocalProfile_Settings.png)
 
-如果你是在使用其他開放式或閉環系統後開始使用**AAPS**，那麼你已經對基礎率（BR）、胰島素敏感性因子（ISF）和胰島素與碳水化合物比率（IC 或 ICR）要使用的值有合理的了解。
+Buttons:
 
-如果你是從注射（MDI）轉到**AAPS**，那麼最好先了解如何從 MDI 轉移到幫浦，並在與你的糖尿病團隊諮詢後仔細規劃並進行轉換。 ["胰島素輸注"](https://amzn.eu/d/iaCsFa2)由 John Walsh 和 Ruth Roberts 編寫的書籍，及[“像胰臟一樣思考”](https://amzn.eu/d/iVU0RGe)由 Gary Scheiner 編寫的書籍都是非常有用的參考資料。
+- green plus: add
+- red X: delete
+- blue arrow: duplicate
+
+If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+
+(YourAapsProfile_Clone-profile-switch)=
+
+## 複製設定檔切換
+
+你可以輕鬆從設定檔切換中建立新的本地設定檔。 In this case timeshift and percentage will be applied to the new local profile.
+
+![Clone Profile switch](../images/LocalProfile_ClonePS_AAPS30.png)
+
+1. Click 3-dots-menu in upper right corner.
+2. Select ‘Treatments’.
+3. Press star symbol to access profile switch page.
+4. Select the desired profile switch and press “Clone”.
+5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+
+(YourAapsProfile_Profile-backup)=
+
 ## 設定檔備份
 
 作為你循環系統的核心設置，你的個人設定檔十分敏感且不容遺失
 
 * 你的個人設定儲存在**AAPS**資料庫中。
 * 如果啟用，個人設定也會上傳至 Nightscout。 這些設定可以在[NSClient 偏好設定 > NSClient > 同步 > 上傳資料至 NS](#Preferences-nsclient)找到。
+
+![Backup Profile Nightscout](../images/LocalProfile_UploadNS_AASP30.png)
+
 * 它們也是[匯出設定](../Maintenance/ExportImportSettings.md)的一部分。 因此，確保有一個安全的備份。
 
 ## 從 Nightscout 編輯個人設定

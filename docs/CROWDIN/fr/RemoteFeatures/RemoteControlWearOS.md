@@ -22,14 +22,14 @@ Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md
 
 Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
+If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Paramètres Wear](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-Via l'onglet Wear ou le menu hamburger (en haut à gauche de l'écran, si l'onglet n'est pas affiché), vous pouvez
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Renvoyer toutes les données. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Ouvrez le menu Paramètres de votre montre directement depuis votre téléphone.
+* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* Open settings on your watch directly from your phone.
 
 Vérifiez que les notifications d'AAPS ne sont pas bloquées sur la montre. La confirmation de l'action (par ex. bolus, cible temporaire) est envoyée par une notification que vous devrez glisser et cocher.
 

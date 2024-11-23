@@ -17,6 +17,16 @@ For the final three parameters, basal rates (BR), insulin sensitivity factors (I
 
 ```
 
+## About the importance of getting your profile right
+
+**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+
+A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect profile values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your profile settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+
+If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR).
+
+If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+
 Screenshots from **AAPS** of an _example_ profile are shown in below.
 
 (your-aaps-profile-duration-of-insulin-action)=
@@ -94,22 +104,47 @@ As shown in the **figure below**, when entering these values into an **AAPS** pr
 
 ![24-07-23, profile basics - ICR](../images/7741eefb-cae5-45c5-a9e5-8eae5ead3f48.png)
 
+(YourAapsProfile_Local-profile)=
 
-## About the importance of getting your profile right
+## Local profile
 
-**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect profile values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your profile settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+![Local Profile buttons](../images/LocalProfile_Settings.png)
 
-If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR).
+Buttons:
 
-If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+- green plus: add
+- red X: delete
+- blue arrow: duplicate
+
+If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+
+(YourAapsProfile_Clone-profile-switch)=
+
+## Clone profile switch
+
+You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+
+![Clone Profile switch](../images/LocalProfile_ClonePS_AAPS30.png)
+
+1. Click 3-dots-menu in upper right corner.
+2. Select ‘Treatments’.
+3. Press star symbol to access profile switch page.
+4. Select the desired profile switch and press “Clone”.
+5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+
+(YourAapsProfile_Profile-backup)=
+
 ## Profile backup
 
 Being a core setting of your looping system, your profiles are highly sensitive and something you really don't want to lose.
 
 * Your Profiles are stored in the **AAPS** database.
 * If enabled, Profiles are also uploaded to Nightscout. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Upload data to NS](#Preferences-nsclient).
+
+![Backup Profile Nightscout](../images/LocalProfile_UploadNS_AASP30.png)
+
 * They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
 
 ## Editing Profiles from Nightscout

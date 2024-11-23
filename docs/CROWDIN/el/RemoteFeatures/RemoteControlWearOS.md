@@ -24,12 +24,12 @@ Use the Wear Preferences to define which variables should be considered when cal
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Ρυθμίσεις Wear](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-Μέσα από την καρτέλα Wear ή το μενού χάμπουργκερ (στην πάνω αριστερή πλευρά της οθόνης, αν δεν εμφανίζεται η καρτέλα) μπορείτε
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Ξαναστείλετε όλα τα δεδομένα. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Ανοίξτε τις ρυθμίσεις στο ρολόι σας απευθείας από το τηλέφωνό σας.
+* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* Open settings on your watch directly from your phone.
 
 Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
 

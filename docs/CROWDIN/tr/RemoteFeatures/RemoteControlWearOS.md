@@ -22,14 +22,14 @@ Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md
 
 Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-Saatinizden bolus vs. göndermek istiyorsanız "Wear ayarları" içinde "Saat tarafından kontrol"u etkinleştirmeniz gerekir.
+If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Wear ayarları](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-Wear sekmesi veya hamburger menüsünden (sekme görüntülenmiyorsa ekranın sol üst kısmında)
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Tüm verileri yeniden gönder. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Telefonunuzu kullanarak Ayarları doğrudan saatinizde açar.
+* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* Open settings on your watch directly from your phone.
 
 Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
 

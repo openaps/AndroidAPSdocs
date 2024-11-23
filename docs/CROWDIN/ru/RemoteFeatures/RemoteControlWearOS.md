@@ -22,14 +22,14 @@ Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md
 
 Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-Если вы хотите подавать болюс и т. д. с часов, тогда в настройках часов Wear следует включить «Управление с часов».
+If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![настройки смарт-часов Wear](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-При помощи вкладки Wear или многослойного сэндвич-меню (в левой верхней части экрана, если вкладка не отображается) вы можете
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Повторить отправку всех данных. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Открыть настройки на часах прямо с телефона.
+* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* Open settings on your watch directly from your phone.
 
 Убедитесь, что уведомления AAPS не заблокированы на часах. Подтверждение действия (например, болюс, временные цели) происходит через уведомления, которые нужно смахнуть в сторону и нажать на галочку.
 
