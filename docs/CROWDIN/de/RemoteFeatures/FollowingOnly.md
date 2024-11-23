@@ -170,9 +170,9 @@ Es wurde von Sugarmate-Nutzenden berichtet, dass es in den USA mit Apple CarPlay
 
 ![grafik](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
-Spike kann sowohl aus Hauptempfänger (Receiver) als auch als Follower-App verwendet werden. Es hat eine Glukosewert-Anzeige, Alarme und aktives Insulin im Funktionsumfang. Die Website und die App werden nicht mehr weiterentwickelt. Hintergründe dazu, findest Du [hier](https://spike-app.com/#features2). Support bekommst Du auf [Facebook](https://www.facebook.com/groups/1973791946274873) oder [Gitter](https://gitter.im/SpikeiOS/Lobby).
+Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more.
 
-Um Spike zu installieren, schlage [hier](https://spike-app.com/#installation) nach
+The website and app are no longer developed. Support bekommst Du auf [Facebook](https://www.facebook.com/groups/1973791946274873) oder [Gitter](https://gitter.im/SpikeiOS/Lobby).
 
 ## Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
 
