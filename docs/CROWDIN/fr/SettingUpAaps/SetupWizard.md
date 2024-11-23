@@ -335,7 +335,7 @@ Revenez en arrière et cliquez sur "SUIVANT" pour passer à l'écran suivant :
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
 (setup-wizard-profile)=
-### Profile
+### Profil
 
 Nous arrivons maintenant à une partie très importante de l'Assistant de configuration.
 
