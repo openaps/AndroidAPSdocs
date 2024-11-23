@@ -33,9 +33,9 @@ Bazıları Android'e özel, bazıları Huawei'ye özgü olmak üzere farklı se�
     
     ![Huawei - kilit uygulaması](../images/Huawei_LockApp.png)
 
-xdrip+ için kalıcı bildirimleri de etkinleştirebilirsiniz (xdrip+ uygulaması içinden):
+For xDrip+, you must enable persistent notifications (within xDrip+ app):
 
-* Ayarlar / gelişmiş ayarlar / diğer çeşitli seçenekler / Toplayıcıyı ön planda çalıştır
+* Settings / less common settings / other misc options / Run Collector in foreground
   
   ![xdrip+ ayarları - toplayıcı ön planda](../images/xdrip_collector_foreground.png)
 
