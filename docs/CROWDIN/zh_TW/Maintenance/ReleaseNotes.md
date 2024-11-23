@@ -374,7 +374,7 @@ v3 是新的協議。 更加安全和高效
 - [新佈局，佈局選擇](../DailyLifeWithAaps/AapsScreens.md) @MilosKozak
 - 新[狀態燈佈局](#Preferences-status-lights) @MilosKozak
 - [多重圖表支援](#AapsScreens-activate-optional-information) @MilosKozak
-- [設定檔助手](../SettingUpAaps/ProfileHelper.md) @MilosKozak
+- [Profile helper](../SettingUpAaps/YourAapsProfile.md) @MilosKozak
 - 動態目標調整的[視覺化](#AapsScreens-visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - 新[偏好設定佈局](../SettingUpAaps/Preferences.md) @MilosKozak
 - SMB 算法更新 @Tornado-Tim
