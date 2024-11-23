@@ -320,7 +320,7 @@ Libre 使用者的特殊注意事項：
 
 敏感度是運動、荷爾蒙等導致的對胰島素的敏感度計算結果。
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. 在達到該目標之前，你的圖表中的線條僅顯示為資訊。
+請注意，您需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。 在達到該目標之前，你的圖表中的線條僅顯示為資訊。
 
 #### 心率(Heart rate)
 
