@@ -121,4 +121,4 @@ mg/dl/UI | UI降低
 
 一旦你以百分比和/或時間偏移進行了個人設置切換，你可以將此臨時個人設置的複製製作成新的個人設置。
 
-要這樣做，請前往選單[治療 > 個人設置切換](#aaps-screens-clone-profile-switch)。
+To do this, go to the tab [Treatments > Profile Switch](#your-aaps-profile-clone-profile-switch).
