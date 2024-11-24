@@ -170,9 +170,9 @@ xDrip4iOS Facebook 群組支援 xDrip4iOS、Shuggah 以及相應的 Apple Watch 
 
 ![圖像](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
-Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more.
+Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報、IOB 等功能。
 
-The website and app are no longer developed. 支援可以在 [Facebook](https://www.facebook.com/groups/1973791946274873) 和 [Gitter](https://gitter.im/SpikeiOS/Lobby) 上找到。
+該網站和應用程式已不再開發。 支援可以在 [Facebook](https://www.facebook.com/groups/1973791946274873) 和 [Gitter](https://gitter.im/SpikeiOS/Lobby) 上找到。
 
 ## 智慧手錶用於**監控 AAPS**（完整個人設置資料或僅限血糖），其中**AAPS**在手機上運行。
 
