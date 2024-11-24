@@ -74,19 +74,19 @@ AAPS 簡介 <./Getting-Started/Introduction.md>
 ```
 
 ```{toctree}
-:caption: 3) Setting up AAPS
+:caption: 3) 設置 AAPS
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+設置報告伺服器 <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+建立 AAPS <./SettingUpAaps/BuildingAaps.md>
+傳輸和安裝 AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+設置嚮導 <./SettingUpAaps/SetupWizard.md>
+你的 AAPS 配置 <./SettingUpAaps/YourAapsProfile.md>
+變更 AAPS 配置 <./SettingUpAaps/ChangeAapsConfiguration.md>
+- 配置建置工具 <./SettingUpAaps/ConfigBuilder.md>
+- 偏好設定 <./SettingUpAaps/Preferences.md>
+完成目標 <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
