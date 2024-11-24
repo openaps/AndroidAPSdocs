@@ -2,7 +2,7 @@
 orphan: true
 - - -
 
-# **Freestyle Libre 3**
+# **Freestyle Libre 3** and 3+
 
 Libre 3 Freestyle (FSL3) требует уникальной настройки для получения ГК в AAPS. Есть два возможных способа получения ГК с Freestyle Libre 3 (FSL3) в AAPS.
 

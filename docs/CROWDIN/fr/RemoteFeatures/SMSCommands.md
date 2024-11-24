@@ -239,7 +239,7 @@ Un bolus à distance n'est pas possible dans les 15 minutes suivant le dernier b
 | EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#screens-action-tab).                          |
 | EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                       |
 
-### Profile
+### Profil
 
 | Command        | Auth | Function & *Response*                                                                                                                                        |
 | -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |

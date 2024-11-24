@@ -2,13 +2,13 @@
 orphan: true
 - - -
 
-# Freestyle Libre 2
+# Freestyle Libre 2 和 2+
 
 即使使用官方應用程式，Freestyle Libre 2 傳感器現在也是一款真正的連續血糖監測儀（CGM）。 然而，LibreLink 仍無法將資料傳送至 AAPS。 有幾種解決方案可以將其與 AAPS 搭配使用。
 
 ## 1. 使用藍牙橋接器和 OOP
 
-可以使用藍牙傳輸器與 Libre 2（EU）及一款 [進程外算法](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) 應用程式。 你可以像使用 [Libre 1](./Libre1.md) 一樣每 5 分鐘接收一次血糖讀取值。
+藍牙發射器可用於 Libre 2（EU）或 2+（EU），以及一個 [非處理演算法](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) 應用程式。 你可以像使用 [Libre 1](./Libre1.md) 一樣每 5 分鐘接收一次血糖讀取值。
 
 檢查你要使用的橋接器和應用程式是否與你的傳感器及 xDrip+ 相容（舊版 Blucon 及近期的版本不支援，Miaomiao 1 需要韌體 39，Miaomiao 2 則需要韌體 7）。
 
@@ -32,7 +32,8 @@ Libre2 OOP 所生成的讀取值與原始讀取器或透過 NFC 掃描的 LibreL
 
 ```{admonition} Libre 2 EU only
 :class: warning
-xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。  
+xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
+僅支持 Libre 2 和 2+ **EU** 型號。
 ```
 
 - 請按照 [這些指示](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) 設定 xDrip+，但請確保下載 [此最新版 OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)，因為文件中的版本已過時。

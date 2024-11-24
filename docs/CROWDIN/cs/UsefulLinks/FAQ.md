@@ -73,113 +73,6 @@ Můžete ho přelepit. K dispozici je několik předperperforovaných "přelepů
 
 Můžete to opravit. Můžete si zakoupit speciální náramky na paži, které upevňují CGM/FGM pomocí pásku (hledejte na Googlu, eBay nebo Amazonu).
 
-## AAPS settings
-
-Následující seznam vám pomůže s optimalizací nastavení. Nejlepší bude, když ji projdete odshora dolů. Cílem je mít dané nastavení správně, předtím než začnete měnit další. Postupujte po malých krocích a neprovádějte velké změny najednou. Jako vodítko můžete použít nástroj [Autotune](https://autotuneweb.azurewebsites.net/), ale nesmíte mu slepě věřit: ve vašem případě nebo za všech okolností nemusí fungovat správně. Myslete na to, že jednotlivá nastavení se navzájem ovlivňují – můžete mít „špatné“ nastavení, které bude za určitých okolností fungovat dobře (např. vysoký bazál a současně nízký sacharidový poměr), ale nebude tak fungovat vždy. To znamená, že musíte vždy zohledňovat všechna nastavení a ověřovat, zda fungují společně za různých okolností.
-
-### Duration of insulin activity (DIA)
-
-#### Description & testing
-
-Doba, za kterou se inzulín zcela rozloží.
-
-Tato doba je poměrně často nastavena jako příliš krátká. Většina lidí bude mít nastaveno 5 hodin, v některých případech 6 nebo 7 hodin.
-
-(FAQ-impact)=
-
-#### Impact
-
-Příliš krátká hodnota DIA může vést k nízkým glykémiím. A naopak. Pokud glykémie stoupá, bazální dávka je příliš nízká.
-
-Je-li hodnota DIA příliš krátká, AAPS si bude příliš brzy myslet, že váš předchozí bolus je již zcela spotřebován, a, v případě, že je vaše glykémie stále vyšší, přidá vám více inzulinu. (Systém ve skutečnosti nečeká tak dlouho, ale počítá predikce toho, co by se mohlo stát, a bude přidávat inzulin). Tímto dochází k "hromadění inzulinu", o kterém však AAPS neví.
-
-Příkladem příliš nízké hodnoty DIA je vysoká glykémie následovaná přehnanou korekcí AAPS, která vede k nízké glykémii.
-
-### Basal rate schedule (U/h)
-
-#### Description & testing
-
-Množství inzulínu v daném hodinovém úseku sloužící k udržení stabilní glykémie.
-
-Svůj bazál můžete otestovat tak, že vypnete smyčku, nebudete přijímat potravu, počkáte řekněme 5 hodin po jídle a budete sledovat, jak se glykémie mění. Toto je třeba několikrát opakovat.
-
-Pokud glykémie klesá, základní bazální dávka je příliš vysoká. A naopak. Pokud glykémie stoupá, bazální dávka je příliš nízká.
-
-#### Impact
-
-Příliš vysoký bazál může vést k nízkým glykémiím. A naopak. Pokud glykémie stoupá, bazální dávka je příliš nízká.
-
-Výchozí výpočty AAPS se drží těchto výchozích bazálních dávek. Je-li bazál příliš vysoký, „dočasný nulový bazál“ bude započítán jako větší záporný IOB, než by měl být. To povede k tomu, že AAPS bude provádět více následných korekčních zásahů, než by měl, aby v konečném důsledku dosáhl nulového IOB.
-
-Takže příliš vysoký bazál povede k nízkým glykémiím jak v době základní bazální dávky, tak několik hodin potom, protože AAPS provádí korekce k cílové hodnotě.
-
-Podobně příliš nízký bazál může vést k vysokým glykémiím a následně může být obtížné vrátit glykémie zpět k cílové hodnotě.
-
-### Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
-
-#### Description & testing
-
-Očekávaný pokles glykémie po podání 1 jednotky inzulinu.
-
-Za předpokladu, že máte správně nastavený bazál, ho můžete otestovat tak, že pozastavíte smyčku, zkontrolujete, že IOB je nulový, a vezmete si pár glukózových tablet, abyste se dostali na stabilní vyšší glykémii.
-
-Poté si aplikujete adekvátní množství inzulinu (podle aktuálního nastavení citlivosti), abyste glykémii dostali na cílovou hodnotu.
-
-Buďte opatrní, protože tato hodnota je často nastavena příliš nízko. Příliš nízko znamená, že vám 1 jednotka inzulinu sníží glykémii více, než jste očekávali.
-
-#### Impact
-
-**Nižší citlivost** (tj. 2 namísto 3), znamená, že inzulín snižuje vaši glykémii méně na 1U. To vede k agresivnější / silnější korekci smyčky s vydáním **více inzulínu**. Je-li ISF příliš nízká, může to vést k nízkým glykémiím.
-
-**Vyšší citlivost** (tj. 2,5 namísto 2) znamená, že inzulín snižuje vaši glykémii více na 1U. To vede k méně agresivní / slabší korekci smyčky s vydáním **méně inzulínu**. Je-li citlivost příliš vysoká, může to vést k vysokým glykémiím.
-
-**Příklad:**
-
-- Glykémie je 10,5 mmol a cílová glykémie je 5,5 mmol. 
-- Chcete tedy provést korekci o 5 mmol (= 10,5 - 5,5).
-- ISF = 1,5 -> 5 / 1,5 = 3,3 jednotky inzulinu
-- ISF = 2,5 -> 5 / 2,5 = 2 jednotky izulinu
-
-Je-li tato hodnota nastavena příliš nízko (není neobvyklé), může způsobovat ‘přehnané korekce’, protože systém AAPS si bude myslet, že ke srovnání vysoké glykémie je třeba použít více inzulinu, než kolik je ve skutečnosti potřeba. Toto může vést k efektu ‘horské dráhy’ (zejména při hladovění). Pokud se to děje, musíte zvýšit svou hodnotu citlivosti. Bude to znamenat, že AAPS bude používat menší korekční dávky a zabrání se tak přehnaným korekcím vysokých glykémií, které by vedly k příliš nízkým glykémiím.
-
-Pokud je citlivost naopak nastavena příliš vysoko, bude docházet k nedostatečným korekcím a vaše glykémie bude zůstávat nad cílovou hodnotou – to je patrné zejména v noci.
-
-### Insulin to carb ratio (IC) (g/U)
-
-#### Description & testing
-
-Kolik gramů sacharidů pokryje jedna jednotka inzulinu.
-
-Někteří lidé také používají I:C jako zkratku místo IC nebo mluví o carb ratio (CR).
-
-Za předpokladu, že máte správný bazál, můžete tento parametr otestovat tak, že zkontrolujete, že IOB je nula a vy máte dobrou glykémii, zkonzumujete přesně odměřené množství sacharidů a aplikujete si příslušnou dávku inzulinu podle aktuálního sacharidového poměru. Ideální je k testu využít jídlo, které v danou denní dobu běžně jíte a přesně spočítat obsah sacharidů.
-
-> **POZNÁMKA:**
-> 
-> V některých evropských zemích se používaly chlebové/výměnné jednotky pro stanovení toho, kolik inzulínu je na dané jídlo potřeba. Z počátku odpovídala 1 výměnná jednotka 12 g sacharidů, později se to změnilo na 10 g sacharidů.
-> 
-> V tomto modelu bylo množství sacharidů fixní a měnilo se množství inzulinu. („Kolik inzulínu je zapotřebí k pokrytí jedné výměnné jednotky?“)
-> 
-> Při používání inzulino-sacharidového poměru je naopak fixní množství inzulinu a mění se množství sacharidů. („Kolik g sacharidů lze pokrýt jednou jednotkou inzulínu?“)
-> 
-> Příklad:
-> 
-> Faktor výměnných jednotek (VJ = 12 g sacharidů): 2,4 U/BJ -> potřebujete 2,4 jednotky inzulínu na jednu výměnnou jednotku.
-> 
-> Odpovídající inzulino-sacharidový poměr: I:C - 12 g / 2,4 U = 5,0 g/U -> 1 jednotka inzulinu pokryje 5,0 g sacharidů.
-> 
-> VJ faktor 2,4 U / 12 g ===> IC = 12 g / 2,4 U = 5,0 g/U
-> 
-> Převodní tabulky jsou k dispozici online, např. [zde](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
-
-#### Impact
-
-**Nižší inzulínosacharidový poměr** = menší množství jídla na jednotku inzulinu, tzn. dostanete více inzulinu pro dané množství sacharidů. Lze také označit za „agresivnější“.
-
-**Vyšší inzulínosacharidový poměr** = větší množství jídla na jednotku inzulinu, tzn. dostanete méně inzulinu pro dané množství sacharidů. Lze také označit za „méně agresivní“.
-
-Jestliže po strávení jídla a poté, co se váš IOB vrátil na nulu, zůstává vaše glykémie vyšší než před jídlem, máte pravděpodobně nastavenu příliš vysokou hodnotu sacharidového poměru. A naopak, pokud je vaše glykémie nižší než před jídlem, sach. poměr je příliš nízký.
-
 ## APS algorithm
 
 ### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
@@ -187,22 +80,6 @@ Jestliže po strávení jídla a poté, co se váš IOB vrátil na nulu, zůstá
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
 V AMA režimu ve skutečnosti DIA neznamená „doba působnosti inzulínu“. Je to parametr, který dříve souvisel s DIA. Parametr nyní znamená, „do kdy by měla být korekce dokončená“. Nemá to žádnou souvislost s výpočtem IOB. V režimu OpenAPS SMB již tento parametr není vůbec potřebný.
-
-### Profile
-
-#### Why using min. 5h DIA (insulin end time) instead of 2-3h?
-
-Je to dobře vysvětleno [zde](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Nezapomeňte po úpravě svého DIA `AKTIVOVAT PROFIL`.
-
-#### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
-
-Ze všeho nejdřív ověřte své bazály a proveďte „hladový test“ bazálu (bez příjmu sacharidů). Je-li bazál nastaven správně, pak je toto chování obvykle způsobeno příliš nízkou citlivostí. Příliš nízká citlivost typicky vypadá takto:
-
-![Příliš nízká citlivost](../images/isf.jpg)
-
-#### What causes high postprandial peaks in closed loop?
-
-Ze všeho nejdřív ověřte své bazály a proveďte „hladový test“ bazálu (bez příjmu sacharidů). If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. Je-li vaše glykémie po jídle vysoká a je-li vysoká i poté, co jsou všechny sacharidy stráveny, měli byste se svým lékařem zvážit možnost snížení sacharidového poměru. Je-li vaše glykémie vysoká, když máte aktivní COB, a příliš nízká poté, co jsou všechny sacharidy stráveny, zvažte ve spolupráci se svým lékařem zvýšení sacharidového poměru a také bolusování s adekvátním předstihem.
 
 ## Other settings
 

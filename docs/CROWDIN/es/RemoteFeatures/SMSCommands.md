@@ -239,7 +239,7 @@ No se permite el bolo remoto en los próximos 15 minutos (este valor sólo es ed
 | EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#screens-action-tab).                          |
 | EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                       |
 
-### Profile
+### Perfil
 
 | Command        | Auth | Function & *Response*                                                                                                                                        |
 | -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |

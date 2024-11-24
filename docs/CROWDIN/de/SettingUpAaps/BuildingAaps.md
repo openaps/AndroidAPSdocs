@@ -397,8 +397,7 @@ Sobald der Build abgeschlossen ist, wird Android Studio "BUILD SUCCESSFUL" anzei
 
 ![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
-
-_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio)._
+**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio)._**
 
 Klicke im Benachrichtigungsfeld auf den blauen Link "locate":
 

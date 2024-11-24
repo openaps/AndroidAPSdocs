@@ -6,40 +6,40 @@ orphan: true
 
 ## CGM hijyeni
 
-Hangi CGM sistemini kullanırsanız kullanın, eğer kan bazlı kalibrasyon yapacaksanız, DIY CGM yazılımını veya resmi uygulamaları kullansanız da kullanmasanız da uygulamanız gereken çok net kurallar vardır.
+Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
 
 -   Ellerin ve kitin temiz olduğundan emin olun.
--   Düz bir dizi ölçüm noktanız olduğunda kalibre etmeye çalışın (15-30 dakika genellikle yeterlidir)
+-   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
 -   Glikoz seviyeleri yukarı veya aşağı hareket ederken kalibrasyon yapmaktan kaçının.
--   * "Yeterli" kalibrasyon yapın - resmi uygulamalarda, günde bir veya iki kez kontrol yapmanız istenir. Kendin Yap sistemlerde yapmayabilirsiniz ancak kalibrasyon yapmadan devam etme konusunda dikkatli olmalısınız.
+-   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
 -   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
--   Mümkünse, bazı okumalarınızı daha düşük bir aralıkta (4-5mmol/l veya 72-90mg/dl) ve bazılarını biraz daha yüksek bir seviyede (7-9mmol/l veya 126-160mg/dl) olarak kalibre edin. bu, nokta/eğim kalibrasyonu için daha iyi bir aralık sağlar.
+-   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
 
 ## Sensör Ayarlama (G6)
 
-Sensörü ayarlarken, kanamayı önlemek için aplikatöre çok fazla bastırmamanız önerilir. The sensor contacts should not come into contact with blood.
+When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor contacts should not come into contact with blood.
 
-Sensör yerleştirildikten sonra, verici sensör üzerindeki tutucusuna takılabilir. Dikkat! Önce sensörün kare tarafını yerleştirip ardından yuvarlak tarafa bastırın.
+After setting the sensor, the transmitter can be clicked into the sensor holder. Dikkat! First click in the square side and then press down the round side.
 
 (general-cgm-troubleshooting)=
 ## Troubleshooting
 
 ### Bağlantı problemleri
 
-Bluetooth bağlantısı, kan şekeri ölçüm cihazları, kulaklıklar, tabletler gibi yakındaki diğer bluetooth cihazları veya mikrodalga fırınlar veya seramik ocaklar gibi mutfak cihazları tarafından bozulabilir. Bu durumda xdrip herhangi bir KŞ değeri göstermez. Bluetooth bağlantısı stabil olduğunda veriler yeniden gelmeye başlar.
+Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip+ does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
 
 ### Sensör Hataları
 
-Yinelenen sensör hataları meydana gelirse, sensörünüzü yerleştirmek için farklı bir vücut bölgesi seçmeyi deneyin. The sensor contacts should not come into contact with blood.
+If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor contacts should not come into contact with blood.
 
-Genellikle bir "Sensör Hatası", hemen su içerek (dehidrasyon) ve sensörün etrafına masaj yaparak düzeltilebilir!
+Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
 
 ### Atlamalı değerler
 
-Gürültü engelleme ayarlarını xdrip'te (Ayarlar - Gelişmiş Ayarlar - Gürültü Engelleme) değiştirmeyi deneyebilirsiniz. Örn". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+You might try to change settings for noise blocking in xDrip+ (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Negatif Sensör Yaşı
 
 ![Negatif sensör yaşı](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](#screens-action-tab) or a sensor insert with wrong date. Tedaviler sekmesine gidin ve \> bakımportalında yanlış girişi silin.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](#screens-action-tab) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.

@@ -6,6 +6,8 @@ Das Autotune-Plugin ist die Umsetzung des OpenAPS Autotune-Algorithmus in AAPS.
 
 **Currently Autotune Plugin is only available in [dev branch](../AdvancedOptions/DevBranch.md) and with Engineering mode.**
 
+![Autotune plugin](../images/Autotune/Autotune_1.png)
+
 ## Autotune Dialogbox
 
 ![Autotune Standardbildschirm](../images/Autotune/Autotune_1b.png)

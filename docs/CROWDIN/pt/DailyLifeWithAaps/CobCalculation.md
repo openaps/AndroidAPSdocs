@@ -79,7 +79,7 @@ If carbs are over or underestimated carbs this can be corrected through the Trea
 
 The ‘Treatments’ tab can be used to correct a faulty carb entry by deleting the entry in Treatments. This may be because the user over or underestimated the carb entry:
 
-![COB_Screenshot 2024-10-05 170124](https://github.com/user-attachments/assets/e123d85d-907e-4545-bf1b-09fee4d42555)
+![COB_Screenshot 2024-10-05 170124](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
 1. Check and remember actual **COB** and **IOB** on the **AAPS'** homescreen.
 2. Depending on the pump, the carbs in the Treatments tab might show together with insulin in one line or as a separate entry (i.e. with Dana RS).

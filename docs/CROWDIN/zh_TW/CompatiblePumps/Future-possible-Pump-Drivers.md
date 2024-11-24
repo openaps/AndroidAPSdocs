@@ -56,10 +56,6 @@ orphan: true
 
 **AAPS 硬體需求：**無。 看起來他支援藍牙。
 
-### Medtronic 藍牙
-
-**評論：**這是一款即將推出的幫浦，計劃在未來幾年內推出，並計劃在 Tidepool Loop 軟體中支援 ([請參閱此文章](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration))。
-
 ### Willcare 胰島素幫浦 ([官網](http://shinmyungmedi.com/en/))
 
 **閉環狀態：** 目前尚未是閉環候選者，但他們的員工已與我們聯繫，表示有興趣將幫浦擴展為可閉環（目前我認為他只缺少設定/取得設定檔的指令）。
@@ -87,6 +83,10 @@ orphan: true
 ### Animas Ping
 
 **閉環狀態：** 無法閉環。 具有注射功能，但沒有 TBR 功能。 **說明：**Vibe 推出後，該幫浦停止銷售。
+
+### Medtronic 藍牙
+
+**評論：** 美敦力 [已撤回](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps)。
 
 ## 幫浦成為可閉環的需求
 

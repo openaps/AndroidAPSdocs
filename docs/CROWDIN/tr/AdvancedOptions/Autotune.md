@@ -6,6 +6,8 @@ Otoayar eklentisi, AAPS içindeki OpenAPS otoayar algoritmasının uygulanmasıd
 
 **Currently Autotune Plugin is only available in [dev branch](../AdvancedOptions/DevBranch.md) and with Engineering mode.**
 
+![Autotune plugin](../images/Autotune/Autotune_1.png)
+
 ## Otoayar kullanıcı arabirimi
 
 ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_1b.png)

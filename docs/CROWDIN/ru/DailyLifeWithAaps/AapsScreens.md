@@ -540,13 +540,9 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 Это профиль активности инсулина, который вы выбрали в [конфигураторе](#Config-Builder-insulin). Кривые зависят от продолжительности действия инсулина [DIA](#your-aaps-profile-duration-of-insulin-action) и времени до пика.
 
-**Фиолетовая** линия показывает, сколько инсулина остается после его введения по мере усваивания, а **синяя** линия показывает его активность. Важно помнить, что усваивание инсулина имеет большую **остаточную длительность** (хвост). Если вы раньше управляли помпой вручную, то, вероятно, привыкли считать, что инсулин усваивается примерно за 3,5 часа. Тем не менее, когда вы используете замкнутый цикл длинные хвосты имеют важное значение при расчетах, т. к. все эти незначительные хвостики складываются и становятся значимыми в дальнейших расчетах алгоритма **AAPS**. Поэтому в **AAPS** время действия инсулина DIA указывается минимум 5 часов.
+The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is.
 
-Более подробное обсуждение различных типов инсулина, их профилей активности и почему это важно, см. здесь [Понимание новых кривых IOB на основе экспоненциальных кривых активности](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
-
-Отличная статья об этом: [Почему мы регулярно ошибались в определении длительности действия инсулина (DIA) и почему это важно…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
-
-И еще больше в: [Экспоненциальные кривые инсулина + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+See [Your AAPS Profile > Duration of insulin action](#your-aaps-profile-duration-of-insulin-action) to learn more about what it is and how to set it.
 
 ## Статус помпы
 
@@ -668,13 +664,7 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 Удаление записей влияет только на отчеты в Nightscout и на самом деле никогда не изменяет текущий профиль.
 
-(aaps-screens-clone-profile-profile-switch)=
-
-#### Переключение профиля и клонирование
-
-Вы можете легко создать новый локальный профиль с помощью переключения профиля. В этом случае к новому локальному профилю будет применяться сдвиг по времени и процент. Пользуйтесь кнопкой **Клонировать** показанной на строке **1**.
-
-Теперь вы можете перейти на вкладку [Профиль](#profile) для редактирования недавно созданного профиля.
+You can use the **Clone** button shown on line **1** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
 
 ### Портал терапии
 
@@ -694,10 +684,11 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 Дает статистику о времени в целевом диапазоне и суммарной суточной дозе инсулина TDD. См соответствующую страницу - [Просмотр данных > Статистика](#reviewing-statistics).
 
+(aaps-screens-profile-helper)=
+
 ## Profile Helper
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Помощник профиля. Его невозможно показать в главном меню через Конфигуратор. [Помощник профиля](../SettingUpAaps/ProfileHelper.md) поможет:
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Помощник профиля. Его невозможно показать в главном меню через Конфигуратор. The Profile Helper can help you:
 
-* build a profile from scratch for a kid
-* compare two profiles
-* clone a profile
+* [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
+* [compare two profiles](#your-aaps-profile-compare-profiles)

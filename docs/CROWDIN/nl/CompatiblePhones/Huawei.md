@@ -33,9 +33,9 @@ Er zijn verschillende opties, sommige Android specifiek, sommige Huawei specifie
     
     ![Huawei - app vergrendelen](../images/Huawei_LockApp.png)
 
-For xdrip+, you can also enable persistent notifications (within xdrip+ app):
+For xDrip+, you must enable persistent notifications (within xDrip+ app):
 
-* Instellingen / minder vaak voorkomende instellingen / other misc options / Run Collector op voorgrond
+* Settings / less common settings / other misc options / Run Collector in foreground
   
   ![xdrip+ instellingen - collector in voorgrond](../images/xdrip_collector_foreground.png)
 

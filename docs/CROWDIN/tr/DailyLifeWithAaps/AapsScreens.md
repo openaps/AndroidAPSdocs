@@ -540,13 +540,9 @@ Bu genel kuralların çoğu gibi, geçerliliği sınırlıdır. Not: Diyabetiniz
 
 This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
 
-The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses minimum 5h as DIA.
+The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is.
 
-Farklı insülin türleri, aktivite profilleri ve tüm bunların neden önemli olduğu hakkında daha fazla ayrıntı için [Üstel Etkinlik Eğrilerine Dayalı Yeni AİNS Eğrilerini Anlamak](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) makalesini okuyabilirsiniz.
-
-Ve bununla ilgili mükemmel bir blog makalesini burada [Kullandığımız insülin etki (DIA) sürelerinde neden düzenli olarak yanılıyoruz ve neden önemli…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action -dia-times-we-use-and-why-it-matters/) okuyabilirsiniz.
-
-And even more at: [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+See [Your AAPS Profile > Duration of insulin action](#your-aaps-profile-duration-of-insulin-action) to learn more about what it is and how to set it.
 
 ## Pompa Durumu
 
@@ -668,13 +664,7 @@ The history of profile switches can be seen here. You may see multiple entries e
 
 Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
 
-(aaps-screens-clone-profile-switch)=
-
-#### Klon profil değişikliği
-
-Bir profil değiştir'me ile kolayca yeni bir yerel profil oluşturabilirsiniz. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
-
-You can now go to the [Profile tab](#profile) to edit the newly created Profile.
+You can use the **Clone** button shown on line **1** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
 
 ### Care portal
 
@@ -694,10 +684,11 @@ This view can be accessed by pressing the 3 dots on the right of the menu, then 
 
 Gives you statistics about your Time In Range and Total Daily Dose. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
 
+(aaps-screens-profile-helper)=
+
 ## Profile Helper
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Profile Helper. It is not possible to put in the main menu through the Config Builder. The [Profile Helper](../SettingUpAaps/ProfileHelper.md) can help you:
+This view can be accessed by pressing the 3 dots on the right of the menu, then Profile Helper. It is not possible to put in the main menu through the Config Builder. The Profile Helper can help you:
 
-* build a profile from scratch for a kid
-* compare two profiles
-* clone a profile
+* [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
+* [compare two profiles](#your-aaps-profile-compare-profiles)

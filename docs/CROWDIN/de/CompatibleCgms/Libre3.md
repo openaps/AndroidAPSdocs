@@ -2,7 +2,7 @@
 orphan: true
 - - -
 
-# **Freestyle Libre 3**
+# **Freestyle Libre 3** and 3+
 
 Der Freestyle Libre 3 (FSL3) benötigt ein besonderes Setup, um Glukosewerte in AAPS verfügbar zu machen. Es gibt zwei Wege die Werte des Freestyle Libre 3 (FSL3) in AAPS verfügbar zu machen.
 

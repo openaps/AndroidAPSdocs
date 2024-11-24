@@ -56,10 +56,6 @@ Sie planen zuerst die t:Mobi (vorher t:sport genannt) Ende 2022 oder 2023 auf de
 
 **Hardware Voraussetzungen für AAPS:** Keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
-### Medtronic Bluetooth
-
-**Kommentare:** Diese Pumpe soll in den kommenden Jahren auf den Markt kommen und von der Tidepool Loop Software unterstützt werden ([siehe dieser Artikel [englisch]](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration)).
-
 ### Willcare Insulin Pumpe ([Homepage](http://shinmyungmedi.com/en/))
 
 **Loop-Status:** Momentan kein Loop-Kandidat. Aber wir wurden von Mitarbeitern des Herstellers kontaktiert, da sie daran interessiert sind, ihre Pumpe loopfähig zu machen. Momentan fehlen wohl nur Kommandos zum Lesen und Schreiben der Profile.
@@ -87,6 +83,10 @@ Sie planen zuerst die t:Mobi (vorher t:sport genannt) Ende 2022 oder 2023 auf de
 ### Animas Ping
 
 **Loop Status:** Nicht zum Loopen geeignet. Bolus-Steuerung möglich, aber keine Steuerung von temporären Basalraten (TBR). **Note** Vertrieb nach Erscheinen der Vibe eingestellt.
+
+### Medtronic Bluetooth
+
+**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
 ## Anforderungen an Pumpen, um loopbar zu sein
 

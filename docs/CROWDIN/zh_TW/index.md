@@ -74,15 +74,17 @@ AAPS 簡介 <./Getting-Started/Introduction.md>
 ```
 
 ```{toctree}
-:caption: 3) 設定 AAPS
+:caption: 3) 設置 AAPS
 
-設定報告伺服器 <./SettingUpAaps/SettingUpTheReportingServer.md>
+設置報告伺服器 <./SettingUpAaps/SettingUpTheReportingServer.md>
+- Nightscout <./SettingUpAaps/Nightscout.md>
+- Tidepool <./SettingUpAaps/Tidepool.md>
 建立 AAPS <./SettingUpAaps/BuildingAaps.md>
-轉移與安裝 AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+傳輸和安裝 AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
 設置嚮導 <./SettingUpAaps/SetupWizard.md>
-您的 AAPS 設定檔 <./SettingUpAaps/YourAapsProfile.md>
+你的 AAPS 配置 <./SettingUpAaps/YourAapsProfile.md>
 變更 AAPS 配置 <./SettingUpAaps/ChangeAapsConfiguration.md>
-- 組態設建工具 <./SettingUpAaps/ConfigBuilder.md>
+- 配置建置工具 <./SettingUpAaps/ConfigBuilder.md>
 - 偏好設定 <./SettingUpAaps/Preferences.md>
 完成目標 <./SettingUpAaps/CompletingTheObjectives.md>
 ```

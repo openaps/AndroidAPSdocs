@@ -12,7 +12,7 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 * [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
 
 ### Configuración
-* Profile
+* Perfil
 
   ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
 

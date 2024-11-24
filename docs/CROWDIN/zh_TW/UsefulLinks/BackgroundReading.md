@@ -26,6 +26,12 @@
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
+[“亮點與地雷”](https://diatribe.org/bright-spots-and-landmines/) 由亞當·布朗著
+
+[《像胰臟一樣思考》](https://amzn.eu/d/iVU0RGe) 作者：Gary Scheiner
+
+[《幫浦胰島素》](https://amzn.eu/d/iaCsFa2) 作者：John Walsh & Ruth Roberts
+
 ## 關於 DIY 閉環系統的背景閱讀和文章
 
 <https://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>

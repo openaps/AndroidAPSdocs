@@ -15,15 +15,15 @@ Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als
 * Sobald eine neue Version verfügbar ist, wird Dir in der **AAPS**-App ein Hinweis darüber angezeigt.
 * Wenn eine neue Version verfügbar ist, wird darüber auch auf Facebook informiert.
 * Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-* Nutze bitte nur die Android Studio Versionen **[Hedgehog (2023.1.1) oder Iguana (2023.2.1)](https://developer.android.com/studio/)**. Nutzt Du derzeit eine ältere Version, aktualisiere bitte zuerst Dein Android Studio! 
+* You need to use version **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, Koala or Ladybug](https://developer.android.com/studio/)** of Android Studio. Nutzt Du derzeit eine ältere Version, aktualisiere bitte zuerst Dein Android Studio! 
 
 ## Übersicht zum Aktualisieren auf eine neue AAPS Version
 
 1. [Export your settings](ExportImportSettings.md) from the existing **AAPS** version on your phone. Vielleicht brauchst Du sie nicht, aber sicher ist sicher.
-2. [Update local copy](#2-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
-3. [Erstelle die signierte APK](#3-build-the-signed-apk)
-4. [Transfer the built apk](#4-transfer-the-apk) to your phone and install it
-5. [Check the version](#6-check-aaps-version-on-phone) in AAPS
+2. [Update local copy](Update-to-new-version-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
+3. [Erstelle die signierte APK](Update-to-new-version-build-the-signed-apk)
+4. [Transfer the built apk](Update-to-new-version-transfer-and-install) to your phone and install it
+5. [Check the version](Update-to-new-version-check-aaps-version-on-phone) in AAPS
 6. Depending on your [BG source](../Getting-Started/CompatiblesCgms.md) make sure to [identify receiver](#xdrip-identify-receiver) in xDrip or use the ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 
 In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
@@ -36,61 +36,64 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ## 2. Führe ein Update deiner lokalen Version durch
 
-    {admonition} WARNING
-    :class: warning
-    If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/building-AAPS), as this guide will not work for you!
+```{admonition} WARNING :class: warning If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/building-AAPS), as this guide will not work for you!
 
-* Öffne Dein bestehendes AAPS-Projekt mit Android Studio. Möglicherweise musst Du Dein Projekt wählen. Klicke (doppelt) auf das AAPS-Projekt.
+    <br />* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
     
-    ![Android Studio - Projekt auswählen](../images/update/01_ProjectSelection.png)
-
-* Wähle in der Menüleiste von Android Studio Git -> Fetch.
+      ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
     
-    ![Android Studio Menü - Git - Fetch](../images/update/02_GitFetch.png)
-
-* Unten rechts wird Dir eine Meldung angezeigt, sobald der Fetch erfolgreich durchgeführt wurde.
+    * In the menu bar of Android Studio, select Git -> Fetch
     
-    ![Android Studio Menü - Git - Fetch erfolgreich](../images/update/03_GitFetchSuccessful.png)
-
-* Wähle nun in der Menüleiste Git -> Pull.
+       ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
     
-    ![Android Studio Menü - Git - Pull](../images/update/04_GitPull.png)
-
-* Lasse alle Optionen wie sie sind (Original/Master) und wähle Pull.
+    * You will see a message in the lower right corner that Fetch was successful.
     
-    ![Android Studio - Git - Pull-Dialog](../images/update/05_GitPullOptions.png)
-
-* Warte ab, während der Download läuft. Du siehst dazu einen Hinweis in der Fußzeile. Eine Erfolgsmeldung wird angezeigt, so bald erfolgreich heruntergeladen wurde. Hinweis: Die Zahl der Dateien, die aktualisiert wurden, kann variieren! Dies ist kein Hinweis auf einen Download-Fehler.
+       ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
     
-    ![Android Studio - Pull erfolgreich](../images/update/06_GitPullSuccess.png)
-
-* Gradle Sync wird ein paar Sekunden benötigen, um einige Abhängigkeiten herunterzuladen. Warte, bis es fertig ist.
+    * In the menu bar, now select Git -> Pull
     
-    ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
+       ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)  
+    
+    * Leave all options as they are (origin/master) and select Pull
+    
+       ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+    
+    * Wait while download is in progress, you will see this as info in the bottom bar. Eine Erfolgsmeldung wird angezeigt, so bald erfolgreich heruntergeladen wurde.
+    
+      ```{note}
+      The files that were updated may vary! This is not an indication
+      ```
+    
+       ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+    
+    * Gradle Sync will be running to download some dependencies. Warte, bis es fertig ist.
+    
+      ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
+    
+    (Update-to-new-version-build-the-signed-apk)=
+    ## 3. Build the Signed APK
+    
+    Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+    
+    (Update-to-new-version-transfer-and-install)=
+    
+    ## 4. Transfer and install the apk
+    You need to transfer the apk to your phone so you can install it.
+    
+    ```{note}
+    If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. Um die APK zu installieren, folge den Anweisungen während des Updatevorgangs.
+    In allen anderen Fällen (z.B. wenn ein neuer 'key store' für das Signieren der APK genutzt wurde), muss die alte App gelöscht werden, bevor die neue Version installiert werden kann. **Make sure to export your settings!**
+    
 
-(Update-to-new-version-build-the-signed-apk)=
-
-## 3. Erstelle die signierte APK
-
-Dein Quellcode entspricht jetzt der neuesten freigegebenen Version. It's time to build the signed apk from it as described in the [build signed apk section](#Building-APK-generate-signed-apk).
-
-## 4. Übertrage die APK-Datei
-
-Du musst die APK-Datei auf Dein Smartphone übertragen, um sie dort installieren zu können.
-
-See the instructions for [Transfer APK to smartphone](../SettingUpAaps/TransferringAndInstallingAaps.md)
-
-## 5. APK installieren
-
-Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Anleitungen dazu findest Du im Internet (z.B. hier</0a> oder [hier](https://www.androidcentral.com/unknown-sources)). Hinweis: Wenn Du beim Erstellen Deinen bestehenden 'key store' im Android Studio verwendest hast, muss die alte AAPS nicht vom Smartphone deinstalliert werden. Um die APK zu installieren, folge den Anweisungen während des Updatevorgangs. In allen anderen Fällen (z.B. wenn ein neuer 'key store' für das Signieren der APK genutzt wurde), muss die alte App gelöscht werden, bevor die neue Version installiert werden kann.</p> 
+See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-## 6. AAPS-Version auf dem Smartphone überprüfen
+## 5. AAPS-Version auf dem Smartphone überprüfen
 
 Nachdem Du die neue APK-Datei installiert hast, kannst Du auf dem Smartphone die Version prüfen. Gehe dazu oben rechts auf die drei Punkte und wähle dann "Über". Du solltest die aktuelle Version angezeigt bekommen.
 
-![Installierte AAPS Version](../images/Update_VersionCheck282.png)
+![Installierte AAPS Version](../images/Update_VersionCheck320.png)
 
 ## Troubleshooting
 

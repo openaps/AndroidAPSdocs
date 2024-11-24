@@ -6,6 +6,8 @@ Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
 
 **Currently Autotune Plugin is only available in [dev branch](../AdvancedOptions/DevBranch.md) and with Engineering mode.**
 
+![Autotune plugin](../images/Autotune/Autotune_1.png)
+
 ## Autotune user interface
 
 ![Autotune default screen](../images/Autotune/Autotune_1b.png)

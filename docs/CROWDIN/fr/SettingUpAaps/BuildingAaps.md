@@ -397,8 +397,7 @@ Le message "BUILD SUCCESSFUL / COMPILATION RÉUSSIE" s'affiche quand la généra
 
 ![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
-
-_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio)._
+**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio)._**
 
 Dans la fenêtre des notifications, cliquez sur le lien bleu "locate/trouver" :
 

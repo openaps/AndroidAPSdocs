@@ -12,7 +12,7 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 * [Dépannage AndroidStudio](TroubleshootingAndroidStudio)
 
 ### Paramètres
-* Profile
+* Profil
 
   ![Error: Débits de Basal non alignés sur les heures](../images/Screen_DifferentPump.png)
 

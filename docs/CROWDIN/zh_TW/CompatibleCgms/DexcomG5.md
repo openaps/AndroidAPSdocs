@@ -4,7 +4,7 @@ orphan: true
 
 # Dexcom G5
 
-## 如果使用 G5 配合 xDrip+
+## 如果使用 G5 與 xDrip+
 
 -   除非你需要特定新開發的功能，否則可以安全下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)。
 -   根據[這些指示](https://navid200.github.io/xDrip/docs/G5-Recommended-Settings.html)設定 xDrip+ 配合 G5。
@@ -33,4 +33,4 @@ orphan: true
 
 - 在[ConfigBuilder 的血糖來源](#Config-Builder-bg-source)中選擇 Dexcom App（修改版）。
 
--   如果你希望透過本地廣播使用 xDrip 警報：在 xDrip 選單 > 設定 > 硬體資料來源 > 640G /EverSense。
+-   如果你想通過本地廣播使用 xDrip+ 鬧鐘：在 xDrip+ 漢堡選單  > 設定 > 硬體資料來源 > 640G / EverSense.

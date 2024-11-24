@@ -540,13 +540,9 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 這顯示您在[組態建置工具](#Config-Builder-insulin)中選擇的胰島素的活動曲線。 曲線將根據[DIA](#your-aaps-profile-duration-of-insulin-action) 和達到高峰的時間而有所不同。
 
-**紫色** 線顯示在注射後胰島素量隨時間衰減的情況，**藍色**線顯示其活性狀態。 需要注意的重要點是衰減具有**長尾巴**。 如果您習慣手動注射，可能已經習慣認為胰島素的衰減大約需要 3.5 小時。 然而，在使用循環系統時，這個長尾變得重要，因為 **AAPS** 演算法的計算非常精確，這些微小的剩餘量在遞迴計算下會逐漸累積。 因此，**AAPS**使用最少 5 小時作為 DIA。
+**紫色** 線顯示在注射後胰島素量隨時間衰減的情況，**藍色**線顯示其活性狀態。
 
-有關不同類型的胰島素、他們的活性設定檔以及為什麼這些很重要的更多詳細討論，你可以閱讀這篇文章[暸解基於指數活性曲線的新 IOB 曲線](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
-
-你還可以在這裡閱讀一篇出色的部落格文章：[我們經常在使用的胰島素作用時間（DIA）上出錯的原因以及為什麼這很重要...](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
-
-更多資訊請查看：[指數胰島素曲線 + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+請參閱 [你的 AAPS 設定檔 > 胰島素作用持續時間](#your-aaps-profile-duration-of-insulin-action) 以了解更多資訊以及如何設定。
 
 ## 幫浦狀態
 
@@ -668,13 +664,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 刪除輸入僅影響您在 Nightscout 的報告，永遠不會實際更改當前的設定檔。
 
-(aaps-screens-clone-profile-switch)=
-
-#### 複製設定檔切換
-
-你可以輕鬆從設定檔切換中建立新的本地設定檔。 在這種情況下，時差和百分比將應用於新的本地個人設置。 使用**複製**按鈕，該按鈕顯示在**1**行。
-
-你現在可以轉到[個人設置選項卡](#profile)以編輯新創建的個人設置。
+你可以使用第**1**行中顯示的**複製**按鈕來製作**設定檔切換**的副本。 有關更多資訊，請參閱 [你的 AAPS 設定檔 > 管理你的設定檔](#your-aaps-profile-clone-profile-switch)。
 
 ### 照護入口
 
@@ -694,10 +684,11 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 提供您有關您在範圍內的時間和每日總劑量的統計資料。 請參閱專門頁面 [檢視您的資料 > 統計資料](#reviewing-statistics)。
 
+(aaps-screens-profile-helper)=
+
 ## 設定檔助手
 
-此視圖可以通過按下選單右側的 3 個點然後選擇「設定檔助手」來讀取。 無法通過組態建置工具在主選單中放入它。 [設定檔助手](../SettingUpAaps/ProfileHelper.md) 可以幫助您：
+此視圖可以通過按下選單右側的 3 個點然後選擇「設定檔助手」來讀取。 無法通過組態建置工具在主選單中放入它。 設定檔助手 可以幫助您：
 
-* 從零開始為小孩建立設定檔
-* 比較兩個設定檔
-* 複製一份設定檔
+* [從零開始為小孩建立設定檔](#your-aaps-profile-profile-from-scratch-for-a-kid)
+* [比較兩個設定檔](#your-aaps-profile-compare-profiles)

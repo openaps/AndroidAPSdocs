@@ -6,6 +6,8 @@ Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
 
 **Currently Autotune Plugin is only available in [dev branch](../AdvancedOptions/DevBranch.md) and with Engineering mode.**
 
+![Autotune plugin](../images/Autotune/Autotune_1.png)
+
 ## Autotune user interface
 
 ![Autotune default screen](../images/Autotune/Autotune_1b.png)
@@ -85,7 +87,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
 ![Autotune default screen](../images/Autotune/Autotune_11.png)
 
 - Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#run-autotune-with-an-automation-rule) below. If you change this setting to On, the input profile will automatically be updated by the Tuned profile, and it will be activated.
-  - **Be Careful, you must trust and verified during several following days that after an update and activation of Tuned profile without modification, it improves your loop**
+  - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
 
 - Categorize UAM as basal (default On): This setting is for the users using AndroidAPS without any carbs entered (Full UAM). It will prevent (when Off) to categorize UAM as basal.
   - Note: if you have at least one hour of Carbs absorption detected during one day, then all data categorized as "UAM" will be categorized as basal, whatever this setting (On or Off)

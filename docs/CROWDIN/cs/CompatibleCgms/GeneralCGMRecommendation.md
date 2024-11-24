@@ -6,10 +6,10 @@ orphan: true
 
 ## Opatření při používání CGM
 
-Ať už používáte jakýkoliv systém CGM, pokud chcete kalibrovat z krve, je třeba dodržovat několik velmi jednoduchých pravidel, a to bez ohledu, zda používáte nebo nepoužíváte DIY software CGM nebo oficiální aplikace.
+Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
 
 -   Ujistěte se, že máte čisté ruce i používaná zařízení.
--   Snažte se kalibrovat tehdy, když je vaše glykémie stabilní (rovná křivka po dobu 15–30 minut je obvykle dostatečná)
+-   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
 -   Nekalibrujte, pokud se vaše glykémie pohybuje (stoupá nebo klesá).
 -   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
 -   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
@@ -26,7 +26,7 @@ After setting the sensor, the transmitter can be clicked into the sensor holder.
 
 ### Problém s připojením
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is restabilised the data is backfilled.
+Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip+ does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
 
 ### Chyby senzorů
 
@@ -36,7 +36,7 @@ Often a "Sensor Error" can be corrected by immediate drinking and massage around
 
 ### Skákající hodnoty
 
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+You might try to change settings for noise blocking in xDrip+ (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Záporné stáří senzoru
 

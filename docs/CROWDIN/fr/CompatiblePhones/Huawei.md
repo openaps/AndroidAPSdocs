@@ -33,9 +33,9 @@ Il y a différentes options, certaines spécifiques à Android, d'autres spécif
     
     ![Huawei - lock app](../images/Huawei_LockApp.png)
 
-Pour xdrip+, vous pouvez également activer les notifications persistantes (dans l'application xdrip+) :
+For xDrip+, you must enable persistent notifications (within xDrip+ app):
 
-* Paramères / Paramètres moins courants / other misc options / Exécutez Collector au premier plan
+* Settings / less common settings / other misc options / Run Collector in foreground
   
   ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
 

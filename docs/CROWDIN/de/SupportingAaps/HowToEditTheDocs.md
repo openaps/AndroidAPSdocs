@@ -24,11 +24,11 @@ In unserem Beispiel nehmen wir nun eine Änderung an der AndroidAPS-Dokumentatio
 
 ![Fork repo](../images/PR0.png)
 
-2. Wechsle zu einer beliebigen Seite und navigiere zu der Seite, die du bearbeiten möchtest. Klicke auf die Black-Box unten links in der Seite mit dem grünen Wort "v: newest" oder ähnliches. Es öffnet sich ein Pop-Up-Fenster. Klicke in diesem auf "edit", um in GitHub zu bearbeiten. 
+2. Wechsle zu einer beliebigen Seite und navigiere zu der Seite, die du bearbeiten möchtest. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
 
 ![edit doc](../images/PR1.png)
 
-Oder du klickst auf den “Edit in Github”-Link in der oberen rechten Ecke und klickst dann auf das Bleistift-Symbol, das in der oberen Leiste der Seite erscheint, um diese zu editieren. Du musst in Deinem GitHub-Konto angemeldet sein, um dies zu tun (falls Du noch keines hast, kannst Du es problemlos einrichten).
+Or click the pencil icon that appears in the top bar of the page contents to be edited. Du musst in Deinem GitHub-Konto angemeldet sein, um dies zu tun (falls Du noch keines hast, kannst Du es problemlos einrichten).
 
 ![RTD io](../images/PR2.png)
 
@@ -154,13 +154,13 @@ Bildnamen sollten einer der folgenden Namenskonventionen folgen. Im Beispiel ben
 
 Bilder befinden sich im 'images'-Ordner der englischen Dokumentation und werden von Crowdin automatisch in die anderen Sprachen überführt. Du musst hier nichts tun!
 
-Im Moment werden Bilder und Screenshots nicht übersetzt.
+We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
 
 (make-a-PR-image-size)= Verwende eine sinnvolle Bildauflösung, die auf PC, Tablet und Mobiltelefonen lesbar ist.
 
 - Screenshots von Webseiten sollten bis zu **1050 Pixel breit** sein.
 - Prozessdiagramme sollten bis zu **1050 Pixel breit** sein.
-- Screenshots aus der App sollten bis zu **500 Pixel breit** sein.
+- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
 
 ### Links
 
@@ -419,8 +419,32 @@ Ein Tutorial hilft dem Schüler grundlegende Kompetenzen zu erwerben. Der Benutz
 - Schritt n — Das Letzte tun (Level 2 Überschrift)
 
 - Fazit (Level 2 Überschrift)
-
-![Grafik](../images/styleguide04.png)
+    
+    - **The Language of Tutorials**
+        
+        *In this tutorial, you will…*
+        
+        Describe what the learner will accomplish (note - not: “you will learn…”).
+        
+        *First, do x. Now, do y. Now that you have done y, do z.*
+        
+        No room for ambiguity or doubt.
+        
+        *We must always do x before we do y because… (see Explanation for more details).*
+        
+        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        
+        *The output should look something like this…*
+        
+        Give your learner clear expectations.
+        
+        *Notice that… Remember that…*
+        
+        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        
+        *You have built a secure, three-layer hylomorphic stasis engine…*
+        
+        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
 
 ##### ![Grafik](../images/styleguide05.png) Anleitungen (z.B. Rezepte)
 
@@ -453,8 +477,20 @@ Eine Anleitung soll dem bereits kompetenten Anwender helfen, eine bestimmte Aufg
 - Schritt n — Das Letzte tun (Level 2 Überschrift)
 
 - Zusammenfassender Abschnitt
-
-![Grafik](../images/styleguide06.png)
+    
+    - **The Language of How-To Guides**
+        
+        *This guide shows you how to…*
+        
+        Describe clearly the problem or task that the guide shows the user how to solve.
+        
+        *If you want x, do y. To achieve w, do z.*
+        
+        Use conditional imperatives.
+        
+        *Refer to the x reference guide for a full list of options.*
+        
+        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
 
 ##### ![Grafik](../images/styleguide07.png) Erklärung (z. B. wissenschaftlicher Hintergrund, warum Eiweiß beim Schlagen steif wird)
 
@@ -481,8 +517,28 @@ Eine Erklärung klärt, vertieft und erweitert das Verständnis des Lesenden fü
 - Unterthema 1 (Level 2 Überschrift)
 
 - Fazit (Level 2 Überschrift)
-
-![Grafik](../images/styleguide08.png)
+    
+    - **The Language of Explanation**
+    
+    *The reason for x is because historically, y…*
+    
+    Explain.
+    
+    *W is better than z, because…*
+    
+    Offer judgements and even opinions where appropriate..
+    
+    *An x in system y is analogous to a w in system z. However…*
+    
+    Provide context that helps the reader.
+    
+    *Some users prefer w (because z). This can be a good approach, but…*
+    
+    Weigh up alternatives.
+    
+    *An x interacts with a y as follows:…*
+    
+    Unfold the machinery’s internal secrets, to help understand why something does what it does.
 
 ### 2\. AAPS-spezifische Schreib- und Aktualisierungshinweise
 

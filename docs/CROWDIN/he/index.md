@@ -80,6 +80,8 @@ Component Overview <./Getting-Started/ComponentOverview.md>
 :caption: 3) Setting up AAPS
 
 Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+- Nightscout <./SettingUpAaps/Nightscout.md>
+- Tidepool <./SettingUpAaps/Tidepool.md>
 Building AAPS <./SettingUpAaps/BuildingAaps.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
 Setup Wizard <./SettingUpAaps/SetupWizard.md>

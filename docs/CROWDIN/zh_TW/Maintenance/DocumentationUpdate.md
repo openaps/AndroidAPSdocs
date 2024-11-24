@@ -1,5 +1,9 @@
 # 文件更新與變更
 
+## 2024年11月
+
+- 更新 [你的 AAPS 配置](../SettingUpAaps/YourAapsProfile.md) @emilise
+
 ## 2024年10月
 
 - 多個頁面的更新：
@@ -11,6 +15,10 @@
 ***
 
 2022年3月到2024年9月的歷史紀錄遺失
+
+隨著 3.2 的重製，一些過時的信息已被移除。 你可以在之前的文檔版本中找到它：
+
+AAPS 3.1 文檔可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.html) 獲得。
 
 ***
 

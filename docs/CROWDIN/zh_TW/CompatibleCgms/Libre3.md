@@ -2,7 +2,7 @@
 orphan: true
 - - -
 
-# **Freestyle Libre 3**
+# **Freestyle Libre 3** 和 3+
 
 Freestyle Libre 3 (FSL3) 需要特殊設定才能將血糖值接收至 AAPS。 有兩種可能的方法將 Freestyle Libre 3 (FSL3) 值傳送到 AAPS。
 

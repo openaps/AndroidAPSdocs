@@ -6,40 +6,40 @@ orphan: true
 
 ## CGM "Hygiene"
 
-Welches CGM-System Du auch immer verwendest, wenn Du blutbasierte Kalibrierung verwenden willst dann gibt es einige sehr klare Regeln, die Du anwenden solltest, unabhängig davon ob Du DIY CGM oder die offiziellen Apps verwendest oder nicht.
+Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
 
 -   Hände und Geräte müssen sauber sein.
--   Kalibriere immer dann, wenn Du stabile Werte hast (Messwerte auf einem Niveau und waagerechter Pfeil). In der Regel reicht ein Zeitraum von 15 - 30 Minuten aus.
+-   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
 -   Vermeide die Kalibrierung, wenn der Glukoselevel steigt oder fällt.
--   Kalibriere "ausreichend" oft. Die offiziellen Apps fordern Dich ein oder zwei Mal pro Tag zum blutigen Test auf. Bei DIY Systemen ist das evtl. nicht der Fall und Du solltest vorsichtig sein, ohne die empfohlenen Kalibrierungen zu arbeiten.
+-   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
 -   Überprüfe Deinen echten Glukosewert mindestens einmal am Tag, wenn Du Sensoren nutzt, die keine Kalibrierung benötigen oder zulassen. AAPS ist nur so sicher, wie Deine Sensorwerte verlässlich sind.
--   Falls möglich, kalibriere mal mit Werten im niedrigen Bereich (72 - 90 mg/dl bzw. 4 - 5 mmol) und mal im erhöhten Bereich (126 - 160 mg/dl bzw. 7 - 9 mmol).  Dies führt zu besseren Ergebnissen, da sich die Kalibrierungsgerade leichter durch zwei entferntere Punkte legen lässt.
+-   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
 
 ## Sensor setzen (Dexcom G6)
 
-Beim Setzen des Sensors darf die Setzhilfe nicht zu stark auf die Haut gedrückt werden, um Blutungen zu vermeiden. Die Sensorkontakte sollten nicht mit Blut in Berührung kommen.
+When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor contacts should not come into contact with blood.
 
-Nach dem Setzen des Sensors wird der Transmitter in den Halter auf dem Sensorpflaster eingeklickt. Achtung! Zuerst auf der rechteckigen Seite einführen und danach auf der runden Seite nach unten Drücken bis der Transmitter mit einem Klick einrastet.
+After setting the sensor, the transmitter can be clicked into the sensor holder. Achtung! First click in the square side and then press down the round side.
 
 (general-cgm-troubleshooting)=
 ## Problembehandlung
 
 ### Verbindungsprobleme
 
-Die Bluetooth-Verbindung kann durch andere Bluetooth-Geräte, die sich in der Nähe befinden, gestört werden, Solche Geräte können Blutzuckermessgeräte, Headsets, Tablets (iPad...) aber auch Küchengeräte wie Mikrowellen oder Cerankochfelder sein. In diesem Fall zeigt xDrip keine BZ-Werte an. Die Daten werden nachgetragen, sobald die Bluetooth-Verbindung wieder hergestellt wurde.
+Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip+ does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
 
 ### Sensorfehler
 
-Wenn Sensorfehler wiederholt auftreten, probiere den Sensor an einer anderen Körperstelle zu setzen. Die Sensorkontakte sollten nicht mit Blut in Berührung kommen.
+If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor contacts should not come into contact with blood.
 
-Oftmals kann ein Sensorfehler durch sofortiges Trinken und "Massage" an der Sensorsetzstelle beseitigt werden.
+Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
 
 ### Springende Werte
 
-Versuche, die Einstellungen zum "noise blocking" in xDrip (Einstellungen -> Inter-App Einstellungen -> Verrauschungsunterdrückung) zu ändern, z.B. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+You might try to change settings for noise blocking in xDrip+ (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Negatives Sensor-Alter
 
 ![Negatives Sensor-Alter](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](#screens-action-tab) or a sensor insert with wrong date. Wechsle zur Registerkarte "Behandlungen" > "Careportal" und lösche den falschen Eintrag.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](#screens-action-tab) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.

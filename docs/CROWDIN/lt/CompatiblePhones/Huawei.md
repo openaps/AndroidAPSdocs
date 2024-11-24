@@ -33,9 +33,9 @@ Yra įvairių variantų, kai kurie būdingi konkrečiai "Android", kai kurie - "
     
     ![Huawei - užrakinti programą](../images/Huawei_LockApp.png)
 
-For xdrip+, you can also enable persistent notifications (within xdrip+ app):
+For xDrip+, you must enable persistent notifications (within xDrip+ app):
 
-* Setttings / less common settings / other misc options / Run Collector in foreground
+* Settings / less common settings / other misc options / Run Collector in foreground
   
   ![xdrip+ parametrai - kolektorius priekiniame plane](../images/xdrip_collector_foreground.png)
 
