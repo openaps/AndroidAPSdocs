@@ -24,11 +24,11 @@
 
 ![Fork庫](../images/PR0.png)
 
-2. 查看任何頁面，導航到你想編輯的頁面。 You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. 查看任何頁面，導航到你想編輯的頁面。 你可以點擊右上角的「在 GitHub 編輯」連結。 這僅適用於英文頁面。 
 
 ![編輯文件](../images/PR1.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. 你需要已經登錄到你的GitHub帳號才能執行此操作（如果你還沒有帳號，他們的設置非常簡單）。
+或點擊頁面內容上方出現的鉛筆圖示以進行編輯。 你需要已經登錄到你的GitHub帳號才能執行此操作（如果你還沒有帳號，他們的設置非常簡單）。
 
 ![RTD io](../images/PR2.png)
 
@@ -154,13 +154,13 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 圖像位於英文語系的圖像文件夾中，並透過Crowdin自動傳播到其他語系。 你無需為此做任何事！
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+目前我們不翻譯圖片：圖片應包含**最少的文字**以便非英文讀者能夠訪問。
 
 (make-a-PR-image-size)=請使用合理的圖像尺寸，使其在PC、平板電腦和手機上可讀。
 
 - 來自網頁的截圖圖像寬度應達到**1050像素**。
 - 流程圖的寬度應達到**1050像素**。
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
+- 應用程序的截圖寬度應達到**500像素**。 如果沒有必要，請不要將它們並排放置。
 
 ### 連結
 
@@ -420,31 +420,31 @@ We are not translating images at the moment: images should contain the **minimum
 
 - 結論（第2級標題）
     
-    - **The Language of Tutorials**
+    - **教學的語言**
         
-        *In this tutorial, you will…*
+        *在本教學中，你將…*
         
-        Describe what the learner will accomplish (note - not: “you will learn…”).
+        描述學習者將達成的目標（注意 - 不要說：“你將學習…”）。
         
-        *First, do x. Now, do y. Now that you have done y, do z.*
+        *首先，進行 x。 現在，進行 y。 現在你已完成 y，請進行 z。*
         
-        No room for ambiguity or doubt.
+        不容許模糊或懷疑的空間。
         
-        *We must always do x before we do y because… (see Explanation for more details).*
+        *我們必須總是先做 x，然後再做 y，因為…（詳情請見解釋）。*
         
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        用最簡單的語言提供對行動的最少解釋。 連結到更詳細的解釋。
         
-        *The output should look something like this…*
+        *輸出內容應該類似於這樣…*
         
-        Give your learner clear expectations.
+        給學習者明確的預期。
         
-        *Notice that… Remember that…*
+        *請注意…請記得…*
         
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        給學習者提供足夠的線索，以幫助他們確認自己是否在正確的軌道上並找到方向。
         
-        *You have built a secure, three-layer hylomorphic stasis engine…*
+        *你已經建立了一個安全的三層形態安定引擎…*
         
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
+        描述（並以輕微的方式讚美）學習者所達成的成就（注意 - 不要說：“你已經學習到…”）
 
 ##### ![圖像](../images/styleguide05.png) 操作指南（例如食譜）
 
@@ -478,19 +478,19 @@ We are not translating images at the moment: images should contain the **minimum
 
 - 結論段落
     
-    - **The Language of How-To Guides**
+    - **如何指導的語言**
         
-        *This guide shows you how to…*
+        *本指南顯示你如何…*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        清楚描述指南顯示用戶如何解決的問題或任務。
         
-        *If you want x, do y. To achieve w, do z.*
+        *如果你想要 x，請做 y。 要達成 w，請做 z。*
         
-        Use conditional imperatives.
+        使用條件命令。
         
-        *Refer to the x reference guide for a full list of options.*
+        *參考 x 參考指南以獲取完整的選項列表。*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        不要在你的實用操作指南中混合用戶可能對 x 所做的每一個可能的操作。
 
 ##### ![圖像](../images/styleguide07.png) 解釋（例如：為什麼打蛋白會變硬的科學原理）
 
@@ -518,27 +518,27 @@ We are not translating images at the moment: images should contain the **minimum
 
 - 結論（第2級標題）
     
-    - **The Language of Explanation**
+    - **解釋的語言**
     
-    *The reason for x is because historically, y…*
+    *x 的原因是歷史上 y…*
     
-    Explain.
+    解釋。
     
-    *W is better than z, because…*
+    *w 比 z 更好，因為…*
     
-    Offer judgements and even opinions where appropriate..
+    在適當的地方提供評價甚至意見。
     
-    *An x in system y is analogous to a w in system z. However…*
+    *系統 y 中的 x 類似於系統 z 中的 w。 然而…*
     
-    Provide context that helps the reader.
+    提供幫助讀者理解的背景。
     
-    *Some users prefer w (because z). This can be a good approach, but…*
+    *一些用戶偏好 w（因為 z）。 這可能是一個不錯的方式，但…*
     
-    Weigh up alternatives.
+    權衡不同的選擇。
     
-    *An x interacts with a y as follows:…*
+    *x 與 y 的相互作用如下：…*
     
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    揭示機器內部的秘密，以幫助理解某些東西的運作原理。
 
 ### 2\. AAPS 特定的寫作/更新筆記
 
