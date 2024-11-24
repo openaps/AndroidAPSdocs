@@ -60,11 +60,11 @@ AAPS 還允許在不輸入任何胰島素和碳水化合物的情況下進行**�
 
 來源：
 
-![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
+![IEEE 控制系統雜誌](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
 
 
 
-IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
+IEEE 控制系統雜誌，ResearchGate [人工胰臟與餐點控制：1型糖尿病餐後血糖調節概述](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
 - 會顯著降低血糖**峰值**，相比較慢的胰島素。
 - **延遲幾分鐘的餐前注射**對血糖峰值的影響會被最小化，而不會造成不可接受的峰值高度。
@@ -94,12 +94,12 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 #### 血糖指數與血糖影響
 
-Challenge for the UAM mode rises with rising EBG (effect on blood glucose)
+UAM 模式的挑戰隨著 EBG（對血糖的影響）的上升而增加
 
-- Start moderate/low, and tune your settings. Inly then, "test" meals with high EBG
-- Consider a < 50% initial bolus if consuming very high EBG
+- 從適度/低開始，然後調整你的設置。 只有在這之後，才能「測試」高 EBG 的餐點
+- 若進食非常高 EBG 的食物，請考慮 < 50% 的初始注射
 
-1) **No EBG**: fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**: wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: (sugar-) sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
+1) **無 EBG**：新鮮肉類、魚類、蛋、培根、油、起司。 2) **低 EBG**：新鮮蔬菜和漿果、蘑菇、堅果、牛奶、優格、嫩酪。 3) **中等 EBG**：全麥麵包/麵條、馬鈴薯、野米、燕麥、乾果。 4) **高 EBG**：小麥麵包、法國長棍、土司、鬆餅、餅乾、馬鈴薯泥、麵條、米飯。 5) **非常高 EBG**：（糖）甜飲料、水果汁、玉米片、糖果、點心、洋芋片、鹹椒脆條。
 
 ![血糖指數與血糖影響](../images/fullClosedLoop01.png)
 
