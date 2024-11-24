@@ -4,7 +4,7 @@
 
 一個 **臨時目標**（簡稱 **TT**）是 **AAPS** 的一項功能，允許用戶根據計畫活動更改其 [**血糖** 目標範圍](#profile-glucose-targets)。 這是透過 **AAPS** 操控使用者的胰島素使用來實現的。
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+一個血糖目標，尤其是如果它僅僅是短期的（持續少於 4 小時），並不需要是你預期或希望血糖水平達到的*實際數值*，而是指示**AAPS**在保持血糖水平在範圍內的同時，應更具攻擊性或較不攻擊性的一個好方法。
 
 臨時目標可以在這些範圍內定義：
 
