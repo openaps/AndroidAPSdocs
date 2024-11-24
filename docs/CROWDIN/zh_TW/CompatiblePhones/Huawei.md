@@ -33,9 +33,9 @@ orphan: true
     
     ![華為 - 鎖定應用程式](../images/Huawei_LockApp.png)
 
-For xDrip+, you must enable persistent notifications (within xDrip+ app):
+對於 xDrip+，你必須啟用持久通知（在 xDrip+應用程式內）：
 
-* Settings / less common settings / other misc options / Run Collector in foreground
+* 設定 / 不太常見的設定 / 其他雜項選項 / 在前景中運行收集器
   
   ![xdrip+ 設定 - 在前台運作收集器](../images/xdrip_collector_foreground.png)
 
