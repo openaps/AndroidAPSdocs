@@ -346,7 +346,7 @@ orphan: true
 ## 切換手機，匯出/匯入設定
 
 更換新手機時，需要進行以下步驟：
-* [在舊手機上匯出設定](ExportImportSettings-export-settings)
+* [在舊手機上匯出設定](../Maintenance/ExportImportSettings.md)
 * 將設定從舊手機轉移到新手機，並匯入到 AAPS 中
 
 匯入的設定檔必須與您目前使用的修補版本相同，否則無法連線。
