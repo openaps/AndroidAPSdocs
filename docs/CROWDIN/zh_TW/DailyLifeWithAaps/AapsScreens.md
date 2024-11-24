@@ -540,9 +540,9 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 這顯示您在[組態建置工具](#Config-Builder-insulin)中選擇的胰島素的活動曲線。 曲線將根據[DIA](#your-aaps-profile-duration-of-insulin-action) 和達到高峰的時間而有所不同。
 
-The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is.
+**紫色** 線顯示在注射後胰島素量隨時間衰減的情況，**藍色**線顯示其活性狀態。
 
-See [Your AAPS Profile > Duration of insulin action](#your-aaps-profile-duration-of-insulin-action) to learn more about what it is and how to set it.
+請參閱 [你的 AAPS 設定檔 > 胰島素作用持續時間](#your-aaps-profile-duration-of-insulin-action) 以了解更多資訊以及如何設定。
 
 ## 幫浦狀態
 
@@ -664,7 +664,7 @@ See [Your AAPS Profile > Duration of insulin action](#your-aaps-profile-duration
 
 刪除輸入僅影響您在 Nightscout 的報告，永遠不會實際更改當前的設定檔。
 
-You can use the **Clone** button shown on line **1** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
+你可以使用第**1**行中顯示的**複製**按鈕來製作**設定檔切換**的副本。 有關更多資訊，請參閱 [你的 AAPS 設定檔 > 管理你的設定檔](#your-aaps-profile-clone-profile-switch)。
 
 ### 照護入口
 
@@ -688,7 +688,7 @@ You can use the **Clone** button shown on line **1** to make a copy of a **Profi
 
 ## 設定檔助手
 
-此視圖可以通過按下選單右側的 3 個點然後選擇「設定檔助手」來讀取。 無法通過組態建置工具在主選單中放入它。 The Profile Helper can help you:
+此視圖可以通過按下選單右側的 3 個點然後選擇「設定檔助手」來讀取。 無法通過組態建置工具在主選單中放入它。 設定檔助手 可以幫助您：
 
 * [從零開始為小孩建立設定檔](#your-aaps-profile-profile-from-scratch-for-a-kid)
 * [比較兩個設定檔](#your-aaps-profile-compare-profiles)
