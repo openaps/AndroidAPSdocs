@@ -179,6 +179,4 @@ FAQ <./UsefulLinks/FAQ.md>
 General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
 Dedicated Google account for AAPS (optional)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
 For Clinicians (outdated) <./UsefulLinks/ClinicianGuideToAaps.md>
-Automation with 3rd party apps <./UsefulLinks/AutomationWith3rdPartyApps.md>
-
 ```
