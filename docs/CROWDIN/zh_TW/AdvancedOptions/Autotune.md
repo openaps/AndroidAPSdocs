@@ -6,7 +6,7 @@ Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
 
 **目前 Autotune 外掛僅在[dev 分支](../AdvancedOptions/DevBranch.md)和工程模式下可用。**
 
-![Autotune plugin](../images/Autotune/Autotune_1.png)
+![自動調整外掛](../images/Autotune/Autotune_1.png)
 
 ## Autotune 使用者介面
 
@@ -87,7 +87,7 @@ Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
 ![Autotune 預設畫面](../images/Autotune/Autotune_11.png)
 
 - 自動開關配置 (預設關閉)：請參見[使用自動化規則運行 Autotune](#run-autotune-with-an-automation-rule)。 如果你將此設定更改為開啟，則輸入設定檔將自動被調整後的設定檔更新並啟用。
-  - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
+  - **請小心，你必須在接下來幾天內信任並驗證，在更新和啟用未修改的調整配置後，它會改善你的循環運行**
 
 - 將 UAM 分類為基礎率（預設為開啟）：此設定適用於未輸入碳水化合物的 AndroidAPS 用戶（完全 UAM）。 當關閉時，他將阻止 UAM 被分類為基礎率。
   - 注意：如果當天偵測到至少一小時的碳水化合物吸收，無論此設定（開啟或關閉），所有分類為「UAM」的資料都會被分類為基礎率。
