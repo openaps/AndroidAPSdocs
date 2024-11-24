@@ -1,74 +1,74 @@
-# Your AAPS profile
+# 你的 AAPS 配置
 
-Your **AAPS Profile** is a set of five key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates:
+你的 **AAPS 配置** 是一組五個關鍵參數，定義了 **AAPS** 根據你的傳感器血糖水平如何輸送胰島素。 這些是 **AAPS** 的主要參數。 隨著你逐步完成 **目標**，你將解鎖其他可修改的參數（如 SMB 設置），但這些功能的性能依賴於你的基礎 **配置** 是否正確。 該 **配置** 包含：
 * [胰島素作用持續時間](#duration-of-insulin-action-dia)（DIA）、
 * [血糖目標](#glucose-targets)、
 * [基礎率](#basal-rates)（BR）、
 * [胰島素敏感性因子](#insulin-sensitivity-factor-isf)（ISF）及
 * [胰島素與碳水化合物比率](#insulin-to-carb-ratio-icr)（IC 或 ICR）。
 
-As part of **AAPS**’ management, users should continually assess and scrutinise the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. 在更改另一個設置之前，請確保先調整好一個設置。 逐步進行調整，而不是一次性做出大幅更改。 Don't forget to activate the new profile after each change. Regularly [backup your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your Preferences.
+作為 **AAPS** 管理的一部分，用戶應不斷評估和檢查其 **配置** 設定的準確性。 建議按照此處所提供的順序進行設定。 在更改另一個設置之前，請確保先調整好一個設置。 逐步進行調整，而不是一次性做出大幅更改。 記得在每次更改後啟用新配置。 定期 [備份你的 **配置**](#YourAapsProfile_Profile-backup) 設置，通過匯出你的偏好設定。
 
-Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider all the settings and check they work harmoniously together in a variety of circumstances.
+你的 **配置** 設置之間相互影響—你可能會有「錯誤」設置在某些情況下運作良好，但在其他情況下卻無法正常運作。 例如，若基礎胰島素過高與太高的**CR**同時發生。 這意味著你需要考慮所有的設定，並檢查它們在各種情況下能否協調運作。
 
 你可以使用 [Autotune](https://autotuneweb.azurewebsites.net/) 來引導你的思路，但不要盲目遵循：他可能並不適合你或所有情況。
 
 ```{admonition} Your diabetes may vary
 :class: information
-**Profiles** vary significantly from person-to-person.
+**設定檔**因人而異，差異相當顯著。
 
-For basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+對於基礎率（BR）、胰島素敏感度因子（ISF）和胰島素與碳水化合物比率（IC或ICR），胰島素需求的絕對值和趨勢因每個人的生理性別、年齡、體能水平等而異，還有一些短期因素如疾病和近期運動。 想要獲得更多指導，亞當·布朗的書籍[“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/)是一本非常值得閱讀的好書。
 
 ```
 
-The four last parameters (glucose targets, basal rates, insulin sensitivity factors and insulin-to-carb ratios) can be set to different values, changing hourly if required, over a 24-hour period.
+最後四個參數（血糖目標、基礎率、胰島素敏感度因子和胰島素與碳水化合物比率）可以設定不同的值，並根據需要在24小時內每小時變更。
 
-![Hourly change of basal](../images/MaxDailyBasal2.png)
+![基礎胰島素的小時變化](../images/MaxDailyBasal2.png)
 
-Screenshots from **AAPS** of an _example_ profile are shown in below. Please note, this sample profile below shows a large number of timepoints. 當你開始使用**AAPS**時，你的個人設定可能會簡單許多。
+下面顯示的**AAPS**截圖為一個_範例_個人設定。 請注意，下面這個範例設定檔顯示了大量的時間點。 當你開始使用**AAPS**時，你的個人設定可能會簡單許多。
 
 (your-aaps-profile-duration-of-insulin-action)=
 ## 胰島素作用持續時間（DIA）
 
-### Description
+### 描述
 
-The length of time that insulin takes to decay to zero.
+胰島素降至零所需的時間長度。
 
 在**AAPS**中，胰島素作用持續時間設定為單一數值，因為你的幫浦會持續輸注相同類型的胰島素。
 
-![Sample insulin Profile](../images/Screenshot_insulin_profile.png)
+![範例胰島素設定檔](../images/Screenshot_insulin_profile.png)
 
-In combination with the [insulin type](#Config-Builder-insulin), this will result in the [insulin profile](#AapsScreens-insulin-profile), as shown in the image above. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses minimum 5h as DIA.
+結合[胰島素類型](#Config-Builder-insulin)，這將形成上述圖像中所示的[胰島素設定檔](#AapsScreens-insulin-profile)。 需要注意的重要點是衰減具有**長尾巴**。 如果您習慣手動注射，可能已經習慣認為胰島素的衰減大約需要 3.5 小時。 然而，在使用循環系統時，這個長尾變得重要，因為 **AAPS** 演算法的計算非常精確，這些微小的剩餘量在遞迴計算下會逐漸累積。 因此，**AAPS**使用最少 5 小時作為 DIA。
 
-Additional reading on the topic of duration of insulin action, and why it matters :
-* [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) on OpenAPS documentation.
-* [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
-* [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
-* [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
+關於胰島素作用持續時間及其重要性的額外閱讀：
+* [了解基於指數活動曲線的新 IOB 曲線](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)，可在 OpenAPS 文件中找到。
+* [為什麼我們在使用胰島素作用持續時間（DIA）時經常出錯，以及這為什麼重要…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)，可以在 Diabettech 上閱讀。
+* [指數胰島素曲線 + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)，可於 See My CGM 網站（存檔）查看。
+* [修訂的 Humalog 模型在閉環中](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/)以及其他文章，均建議 Lyumjev、Fiasp、NovoRapid、Humalog 的 DIA 為 9 小時。
 
 
 ### 影響
 
-DIA 設置過短可能會導致低血糖。 And vice versa.
+DIA 設置過短可能會導致低血糖。 反之亦然。
 
-If DIA is too short, **AAPS** will calculate too early that your previous bolus is all consumed, and if your **BG** is still high, it will over-deliver in insulin. （實際上，他不會等那麼久，而是預測會發生什麼，並不斷添加胰島素）。 This essentially creates ‘insulin stacking’ that **AAPS** is unaware of. This is especially noticeable at night, if you see negative IOB with no other explanation than the queue of the last bolus.
+如果 DIA 太短，**AAPS** 將過早計算你的上一筆注射已被消耗，若你的**血糖**仍然太高，就會過量注射胰島素。 （實際上，他不會等那麼久，而是預測會發生什麼，並不斷添加胰島素）。 這基本上會造成**AAPS** 無法察覺的「胰島素堆疊」。 在夜間尤其明顯，如果你看到負的 IOB，沒有其他解釋，只有之前注射的排隊影響。
 
-Example of a too-short DIA is a high BG followed by **AAPS** over-correcting and giving a low BG.
+一個過短的 DIA 範例是高血糖隨後被 **AAPS** 過度修正而導致血糖變低。
 
-### How to set it
+### 如何設定
 
-The **figure below** shows an example of how the DIA set in an **AAPS** profile.
+下面**圖示**顯示了如何在 **AAPS** 設定檔中設定 DIA 的範例。
 
 ![DIA](../images/Profile_DIA.png)
 
-這一時間通常設定得太短。 A DIA of 6 or 7 is probably a good place to start. A growing number of people find that a DIA of 8 to 9 hours works good for them. See the additional reading mentioned above.
+這一時間通常設定得太短。 設定為 6 或 7 的 DIA 可能是一個不錯的起點。 越來越多的人發現 8 到 9 小時的 DIA 對他們來說效果不錯。 參閱上述提到的額外閱讀。
 
 (profile-glucose-targets)=
 ## 血糖目標
 
-### Description
+### 描述
 
-你的**血糖目標**是一個核心值，且所有**AAPS**的計算均以此為基礎。 It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations : if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
+你的**血糖目標**是一個核心值，且所有**AAPS**的計算均以此為基礎。 這與你通常希望維持血糖數值的目標範圍不同。 此目標在 **AAPS** 的計算中使用：如果**AAPS** 預測你的 **血糖** 將會超出目標範圍，那麼它將採取行動將你帶回該範圍內。
 
 目標可以在這些邊界內定義：
 
@@ -79,21 +79,21 @@ The **figure below** shows an example of how the DIA set in an **AAPS** profile.
 
 ### 影響
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
+如果你在 **設定檔**中的目標範圍非常寬廣（例如 3 或更多 mmol/l [50 mg/dl 或更多] 寬），你將經常發現 **AAPS** 的行動較少。 這是因為**血糖** 水平預測會落在那個寬範圍內，因此 **AAPS** 不太可能採取臨時基礎率的行動。
 
-### How to set it
+### 如何設定
 
-The **figure below** shows an example of how the target can be set in an **AAPS** profile.
+下面的**圖示**顯示了如何在**AAPS** 口令設置中設定目標範圍的範例。
 
 ![目標](../images/Profile_Target.png)
 
-血糖目標根據你的個人偏好設定。 For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. 如果你希望在早餐前有充足的胰島素儲備，你可以將早上 7 點到 8 點的目標設定為較低的 81 mg/dL（4.5 mmol/L）。
+血糖目標根據你的個人偏好設定。 例如，如果你擔心夜間低血糖，可以將目標稍微提高到晚上 9 點到早上 7 點的 117 mg/dL (6.5 mmol/L)。 如果你希望在早餐前有充足的胰島素儲備，你可以將早上 7 點到 8 點的目標設定為較低的 81 mg/dL（4.5 mmol/L）。
 
-When In [Open Loop](#Preferences-pen-loop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#preferences-closed-loop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+在[開放循環](#Preferences-pen-loop)中，特別是在進行[第一個目標](../SettingUpAaps/CompletingTheObjectives.md)時，使用寬範圍目標是個好選擇，在你學習 **AAPS** 的行為並調整你的**設定檔**時。<br/> 在[封閉循環](#preferences-closed-loop)中（開始於**[目標 6](#objectives-objective6)**），建議減少範圍，直到你為每個時段確定一個單一目標（_低_ 目標 = _高_ 目標），以確保**AAPS**對**血糖**的波動快速做出反應。
 
 ## 基礎率
 
-### Description
+### 描述
 
 你的胰島素基礎率（單位/小時）提供背景胰島素，在沒有食物或運動的情況下保持血糖穩定。
 
@@ -105,63 +105,63 @@ When In [Open Loop](#Preferences-pen-loop), especially when progressing through 
 
 精準的基礎率能讓你在醒來時保持血糖在範圍內，並在一天中可以提前或延後進餐，而不會引起血糖過高或過低。
 
-基礎率過高可能會導致低血糖。 And vice versa.
+基礎率過高可能會導致低血糖。 反之亦然。
 
-**AAPS** ‘baselines’ against the default basal rate. 如果基礎率過高，“零臨時基礎率”將計為比實際更大的負 IOB。 This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
+**AAPS** 以預設基礎率作為「基準」。 如果基礎率過高，“零臨時基礎率”將計為比實際更大的負 IOB。 這會導致**AAPS**進行比應有的更多後續修正，以最終將 IOB 變為零。
 
-So, a basal rate too high will create low **BGs** both with the default rate, but also some hours hence as **AAPS** corrects to target.
+因此，基礎率過高將導致低**血糖**，不僅是依據預設基礎率，還會在幾個小時後因為**AAPS**修正至目標。
 
-Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+相反地，基礎率過低會導致高血糖，並無法將水平下調至目標。
 
-### How to set it
+### 如何設定
 
-The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
+下面的**圖示**顯示了如何在**AAPS** 設定檔中設定基礎率的範例。
 
 ![基礎率](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetic team.
+正確設定你的基礎率需要透過反覆試驗，並且應在與你的糖尿病團隊的諮詢下進行。
 
-There are basal testing methods which usually entails observing your basal rates and insulin needs during an intermittent fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast 3 times for 8 hours.
+有一些基礎測試方法，通常涉及在24小時內觀察你的基礎率和胰島素需求。 雖然你需要測試全天的基礎率，但不建議連續禁食24小時。 因為身體會啟動機制如激素來進行補償。 推薦的方式是禁食3次，每次8小時。
 
-The recommended method is to suspend the loop, which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyse overnight BG lines in order to optimise your basal rates.
+推薦的方法是暫停循環，這樣會恢復到你的預設背景基礎率。 觀察你的**血糖**如何變化：如果它下降，則基礎率過高。 反之亦然。<br/> 另一種替代方法（ might be more tricky）是在循環運行的情況下，查看**IOB**如何變化。 如果**IOB**是負的，則你的基礎率過高。 反之亦然。 請注意，這種方法依賴於**ISF**來修正**血糖**，因此需要其他變數合理設置，這樣才能成功。<br/> 調整基礎率的另一種方法是觀察在夜間的循環行為，當所有 COB 已經降到為止。 這種方法對於兒童特別有用，因為禁食較困難或胰島素需求經常變化。 [Tidepool 的 Saleh Adi 醫生](https://www.youtube.com/watch?v=-fpWnGRhLSo)提供了如何分析夜間 血糖數據線以優化你的基礎率的有用建議。
 
-When taking action on the result of your basal testing, changes in the **Profile** should be done 1 hour before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
+當你對基礎測試的結果採取行動時，對**設定檔**的變更應在升高/下降前1小時進行。 根據需要重複測試，直到你對**基礎率**設定感到滿意。
 
 ## 胰島素敏感度因子（ISF）
 
-### Description
+### 描述
 
 胰島素敏感性係數（有時稱為修正係數）是衡量 1 單位胰島素會降低血糖的程度。
 
-**In mg/dL units:** If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
+**以 mg/dL 單位計算：** 如果你的**ISF**為40，每單位胰島素將使你的血糖降低約40 mg/dL（例如，你的血糖將從140 mg/dL降至100 mg/dL）。
 
-**In mmol/L units:** If you have an **ISF** of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
+**以 mmol/L 單位計算：** 如果你的**ISF**為1.5，每單位胰島素將使你的血糖降低約1.5 mmol/L（例如，從8 mmol/L降至6.5 mmol/L）。
 
-From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dl) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dl) or 1.5 to 1.8 mmol/L) is weakening your **ISF**.
+從這些例子中可以看出，_ISF_值越_小_，你對胰島素的敏感度就越低。 因此，如果你將ISF從40降至35（mg/dL）或1.5降至1.3（mmol/L），這通常被稱為加強你的**ISF**。 相反，將**ISF**值從40提高到45（mg/dL）或1.5提高到1.8（mmol/L），則是在削弱你的**ISF**。
 
 ### 影響
 
-A **lower / stronger ISF** (i.e. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
+較**低/較強的ISF**（即40而不是50）意味著每單位胰島素對你的**血糖**的下降程度較少。 這導致循環更為積極/強效，使用了**更多胰島素**進行修正。 如果你的**ISF**過強（小值），可能導致血糖過低。
 
-A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
+較**高/較弱的ISF**（即45而不是35）意味著每單位胰島素對你的血糖的降低程度較多。 這將導致循環進行較不積極/較弱修正，使用**較少胰島素**。 如果你的**ISF**過弱（大值），可能導致血糖過高。
 
 **範例：**
-* **BG** is 190 mg/dL (10,5 mmol/L) and target is 100 mg/dL (5,6 mmol/L).
-* So, you want a correction of `190 - 110 = 90 mg/dL` or `10,5 - 5,6 = 4.9 mmol/L`
-* If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
-* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 3`: 2 units of insulin
+* **血糖**為190 mg/dL（10.5 mmol/L），目標為100 mg/dL（5.6 mmol/L）。
+* 因此，你希望進行的修正為`190 - 110 = 90 mg/dL`或`10.5 - 5.6 = 4.9 mmol/L`
+* 如果`ISF = 30` -> `90 / 30 = 3`或`ISF = 1.63` -> `4.9 / 1.63 = 3`: 3單位胰島素
+* 如果`ISF = 45` -> `90 / 45 = 2`或`ISF = 2.45` -> `4.9 / 2.45 = 3`: 2單位胰島素
 
-An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
+一個過低的**ISF**（因此更積極，這不常見）可能導致「過度修正」，因為**AAPS**計算出使用者比實際所需的胰島素還需要更多來修正高的**血糖**。 這可能導致「過山車」式的血糖水平（特別是在禁食時），如下圖所示。 在這種情況下，應該提高**ISF**值，以減少**AAPS**的積極程度。 這將確保**AAPS**提供較小的修正劑量，避免對高**血糖**進行過度修正，導致血糖過低。
 
 ![ISF 過低](../images/isf.jpg)
 
-Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
+相反，設置過高的**ISF**可能導致修正不足，意味著你的**血糖**仍然維持在目標之上——這在夜間特別明顯。
 
-### How to set it
+### 如何設定
 
-See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
+請參見**下圖**，了解如何在**AAPS**設定檔中設置ISF值的示例。
 
-![Profile ISF](../images/Profile_ISF.png)
+![設定檔 ISF](../images/Profile_ISF.png)
 
 確定你白天 ISF 的基本起點是基於你的每日總劑量（TDD），使用 1,700（94）規則。 更多詳細內容見於 Gary Scheiner 所著的[“像胰臟一樣思考”](https://amzn.eu/d/iVU0RGe)第 7 章。
 
@@ -169,7 +169,7 @@ See the **figure below** for an example of how ISF values could be set in an **A
     
     範例：TDD = 40 U大約 ISF（mg/dl）= 1700/40 = 43大約 ISF（mmol/L）= 94/40 = 2.4
 
-Assuming correct basal, you can test this by suspending the loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+假設基礎設定正確，你可以通過暫停循環、檢查IOB為零來測試，並吃一些葡萄糖片，以達到一個穩定的「高」水平。
 
 然後根據目前的 1/ISF 估算所需的胰島素量來達到目標血糖值。
 
@@ -177,17 +177,17 @@ Assuming correct basal, you can test this by suspending the loop, checking IOB i
 
 ## 胰島素與碳水化合物的比例（ICR）
 
-### Description
+### 描述
 
 ICR 是衡量每單位胰島素覆蓋多少克碳水化合物的指標。
 
-Some people also use **I:C** as an abbreviation instead of ICR, or talk about carb ratio : **CR.
+有些人還用**I:C**作為ICR的縮寫，或者談論碳水比率：**CR。
 
 例如，1:10 的胰島素與碳水化合物比率表示你每攝入 10 克碳水化合物需要注射 1 單位的胰島素。 一餐包含 25 克碳水化合物需要 2.5 單位的胰島素。
 
-If your ICR is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. 一餐包含 25 克碳水化合物需要 25/20 = 1.25 單位的胰島素。
+如果你的ICR較弱（較高的值），例如1:20，你只需要0.5U的胰島素來覆蓋10克碳水化合物。 一餐包含 25 克碳水化合物需要 25/20 = 1.25 單位的胰島素。
 
-由於荷爾蒙數值和體力活動，ICR 在一天中的不同時間可能會有所不同。 Many people find they have their lowest/strongest ICR around breakfast time. So, for example, one adult user's ICR could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller ICR then.
+由於荷爾蒙數值和體力活動，ICR 在一天中的不同時間可能會有所不同。 許多人發現自己在早餐時擁有最低/最強的ICR。 例如，一位成人用戶的ICR可能是早餐1:8，午餐1:10和晚餐1:10，但這些模式並不普遍，有些人在晚餐時對胰島素的抵抗力較高，因而需要更強/更小的ICR。
 
 > **注意：**
 > 
@@ -199,31 +199,31 @@ If your ICR is weaker (higher value), perhaps 1:20, you would only need 0.5U of 
 > 
 > 範例：
 > 
-> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> 麵包單位因子（BU = 12克碳水化合物）：2.4 U/BU -> 當你吃一個麵包單位時，你需要2.4單位的胰島素。
 > 
-> Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
+> 相應的IC：12g / 2.4 U = 5.0 g/U -> 5.0克碳水化合物可以用一單位胰島素來覆蓋。
 > 
-> BU factor 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
+> BU因子2.4 U / 12g   ===>   IC = 12g / 2.4 U = 5.0 g/U
 > 
 > 線上可找到轉換表，例如[此處](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf)。
 
 ### 影響
 
-A **lower / stronger IC** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. 這也叫做「比較積極」。 If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
+較**低/較強的IC**意味著每單位的食物少，換句話說，對於固定的碳水化合物量，你將獲得更多胰島素。 這也叫做「比較積極」。 如果你的IC過強，你會得到過多的胰島素，這可能導致血糖過低。
 
-A **higher / weaker IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. 這也叫做「比較保守」。 If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
+較**高/較弱的IC**表示每單位的食物多，即對於固定的碳水化合物量，你獲得的胰島素較少。 這也叫做「比較保守」。 如果你的IC過弱，你獲得的胰島素會少於所需，這可能導致血糖過高。
 
-### How to set it
+### 如何設定
 
-The **figure below** shows an example of a user's ICR and how it can be set in an **AAPS Profile**. When entering these values, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+**下圖**顯示了用戶ICR的示例，以及如何在**AAPS設定檔**中設置它。 當輸入這些值時，我們僅輸入比率的最後一部分，因此胰島素與碳水化合物的比率1:3.5僅簡單地輸入為「3.5」。
 
-![Profile ICR](../images/Profile_ICR.png)
+![設定檔 ICR](../images/Profile_ICR.png)
 
-If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are IC is too high / weak. Conversely, if your **BG** is lower than before food, IC is too small / strong.
+如果在餐後食物已消化，且**IOB**已回到零，而你的**血糖**仍高於餐前水平，則可能表示IC過高/過弱。 相反，如果你的**血糖**低於餐前水平，則IC過小/過強。
 
-Assuming correct basal are used, you can test by checking if **IOB** is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food you normally eat at that time of day and count its carbs precisely.
+假設使用正確基礎設定，可以通過檢查**IOB**為零，且你在範圍內，準確地計算碳水化合物的攝入量，並根據當前的胰島素與碳水化合物比率攝取估算的胰島素量來進行測試。 最好是在那個時段食用你通常吃的食物，並精確計算其碳水化合物的量。
 
-## Common questions related to the Profile
+## 與設定檔相關的常見問題
 
 ```{contents} Common questions related to the Profile
 :depth: 1
@@ -234,46 +234,46 @@ Assuming correct basal are used, you can test by checking if **IOB** is zero and
 
 **我為什麼需要正確設置我的個人設定？ 循環不是可以自動處理這些嗎？**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect **Profile** values. 它可以這樣做，例如如果你將要低血糖，它會暫停胰島素的輸送。 However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. 這是**AAPS**使用分階目標從開放式循環推進到混合閉環的原因之一。 此外，還會有需要打開循環的時候（感測器暖機、感測器故障_等_），有時發生在半夜，你希望在這些情況下設定是正確的。
+混合閉環_可以_嘗試進行胰島素供給的調整，以最小化因擁有不正確的**設定檔**值而導致的控制不佳的情況。 它可以這樣做，例如如果你將要低血糖，它會暫停胰島素的輸送。 然而，如果你的**設定檔**設定已盡可能接近你身體的需求，你可以實現更好的血糖控制。 這是**AAPS**使用分階目標從開放式循環推進到混合閉環的原因之一。 此外，還會有需要打開循環的時候（傳感器暖機、傳感器故障_等_），有時發生在半夜，你希望在這些情況下設定是正確的。
 
 如果你是在使用其他開放式或閉環系統後開始使用**AAPS**，那麼你已經對基礎率（BR）、胰島素敏感性因子（ISF）和胰島素與碳水化合物比率（IC 或 ICR）要使用的值有合理的了解。
 
 如果你是從注射（MDI）轉到**AAPS**，那麼最好先了解如何從 MDI 轉移到幫浦，並在與你的糖尿病團隊諮詢後仔細規劃並進行轉換。 ["胰島素輸注"](https://amzn.eu/d/iaCsFa2)由 John Walsh 和 Ruth Roberts 編寫的書籍，及[“像胰臟一樣思考”](https://amzn.eu/d/iVU0RGe)由 Gary Scheiner 編寫的書籍都是非常有用的參考資料。
 
 ### 什麼原因導致循環頻繁將我的血糖降至低血糖數值，且無碳水化合物存在？
-首先，檢查你的基礎率，並進行無碳水化合物的基礎率測試。 如果基礎率正確，那麼這種情況通常是由於 ISF 過低引起的。 A too low ISF typically looks like this:
+首先，檢查你的基礎率，並進行無碳水化合物的基礎率測試。 如果基礎率正確，那麼這種情況通常是由於 ISF 過低引起的。 過低的ISF通常如下所示：
 
 ![ISF 過低](../images/isf.jpg)
 
 ### 什麼原因導致閉環系統中的餐後高峰？
-首先，檢查你的基礎率，並進行無碳水化合物的基礎率測試。 If it is correct and your **BG** is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **IC** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your IC and an appropriate pre-bolus time with your endocrinologist.
+首先，檢查你的基礎率，並進行無碳水化合物的基礎率測試。 如果它是正確的，且當碳水化合物完全吸收後，你的**血糖**降至目標值，則嘗試在餐前某個時刻在**AAPS**中設置「即將進食」的臨時目標，或與你的內分泌醫生探討合適的餐前注射時間。 <br/> 如果你的**血糖**餐後過高，且碳水化合物完全吸收後仍然過高，則考慮與你的內分泌醫生一起降低**IC**。 如果當**COB**時，你的**血糖**過高，且碳水化合物完全吸收後過低，則考慮與你的內分泌醫生一起增加你的**IC**以及合適的餐前注射時間。
 
-### I'm stuck high and the loop does not bring me down
-The possible reasons for **AAPS** not giving enough insulin are:
-* **ISF** is not strong enough
-* Basal might not be strong enough
-* A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
-* Automation has been set up and has overridden **AAPS**.
+### 我現在的血糖很高，循環無法幫我降下來。
+導致 **AAPS** 無法提供足夠胰島素的可能原因有：
+* **ISF** 可能不夠強。
+* 基礎胰島素可能不夠強。
+* 安全設定可能啟動，例如 **maxIOB**。 或者此時 **SMB** 被停用，這取決於你的設定。
+* 自動化已經設置並覆蓋了 **AAPS**。
 
-### I have negative IOB, is this an issue ?
-Negative **IOB** means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the **BG** starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
+### 我有負的 IOB，這是個問題嗎？
+負的 **IOB** 意味著你體內的絕對胰島素量（基礎 + 注射）少於基礎胰島素量。 這會導致 **AAPS** 一旦血糖開始上升，就會發送更多的胰島素，因為它認為胰島素不足，這可能會導致後來的血糖偏低。
 
-Here are some reasons why you may have negative IOB, and what action to take:
-* a too strong basal: tweak your **Profile**
-* too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
-* DIA too short, resulting in insulin stacking: tweak your **Profile**
-* physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
+以下是造成負 IOB 的一些原因，以及應採取的行動：
+* 基礎胰島素過強：調整你的 **設定檔**。
+* 上一次餐點注射過多：調整你的 **設定檔** 或檢查你是否在正確的時間進行注射。
+* DIA 太短，導致胰島素堆疊：調整你的 **設定檔**。
+* 身體活動：下次考慮在活動期間使用較低的 [設定檔百分比](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) 來因應敏感度的提高。
 
-## Manage your profiles
+## 管理你的設定檔
 
 ```{contents} Operations that you can perform on your **Profiles** in **AAPS**
 :depth: 1
 :local: true
 ```
 (your-aaps-profile-create-and-edit-profiles)=
-### Create and edit Profiles
+### 創建和編輯設定檔
 
-The **Profile** tab can be found from the top menu or hamburger menu, depending on your [Config Builder settings](../SettingUpAaps/ConfigBuilder.md).
+**設定檔** 分頁可以從上方選單或漢堡選單找到，具體取決於你的 [組態建置工具設定](../SettingUpAaps/ConfigBuilder.md)。
 
 ![本地設定檔按鈕](../images/LocalProfile_Settings.png)
 
@@ -283,12 +283,12 @@ The **Profile** tab can be found from the top menu or hamburger menu, depending 
 - 紅色 X：刪除
 - 藍色箭頭：複製
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** tab may not always show the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen, it may differ from the profile actually shown in profile tab as there is no connection between these.
+如果你對 **設定檔** 做了任何更改，請確保你正在編輯正確的 **設定檔**。 **設定檔** 分頁不一定會顯示當前正在使用的實際設定，例如，如果你在主畫面使用設定檔分頁進行設定切換，這可能與設定檔分頁中實際顯示的設定不同，因為兩者之間沒有連線。
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
-### Build a Profile from scratch for a kid
+### 為孩子從零開始建立一個設定檔
 
-The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a profile for a child (up to 18 years).
+[設定檔助手](#aaps-screens-profile-helper) 分頁可以幫助你為孩子（最多18歲）創建設定檔。
 
 **重要說明：**
 
@@ -298,37 +298,37 @@ The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a 
 
 ![設定檔助手兒童 1](../images/ProfileHelperKids1.png)
 
-1. Make sure you are in **Profile 1**.
-2. In **Profile type**, make sure you have "Default profile" selected.
+1. 請確保你在 **設定檔 1** 中。
+2. 在 **設定檔類型** 中，請確保選擇「預設設定檔」。
 3. 根據輸入的孩子年齡及總胰島素劑量（TDD）**或**體重，調整預設設定檔（基於醫院資料集）。
-4. Change screen by clicking on **Profile 2** on the right.
-5. Press **Profile type** and select "DPV Default profile".
+4. 按一下右側的 **設定檔 2** 更改螢幕。
+5. 按下 **設定檔類型** 並選擇「DPV 預設設定檔」。
 6. 根據輸入的孩子年齡、基礎速率百分比及總胰島素劑量（TDD）**或**體重，調整「DPV 預設設定檔」（基於另一家醫院資料集）。
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button either from **Profile 1** ou **Profile 2**.
+7. 按下螢幕底部的 **比較設定檔** 按鈕。 將顯示兩個調整後的設定檔的比較（請參見下方截圖）。
+8. 如果你想根據這些建議開始調整你的設定檔，請使用 **複製** 按鈕，無論是在 **設定檔 1** 或 **設定檔 2** 中。
 
 ![設定檔助手兒童 2](../images/ProfileHelperKids2.png)
 
-### Switch Profile
+### 切換設定檔
 
-See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+請參見 [切換設定檔與設定檔百分比](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)。
 
 (your-aaps-profile-clone-profile-switch)=
-### Clone a Profile switch to a new Profile
+### 將設定檔切換複製到新的設定檔
 
 ![設定檔切換](../images/TreatmentsView4.png)
 
-The [Treatments](#aaps-screens-treatments) tab shows all past **Profile Switches**. When going to the **Profile Switch** sub-tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
+該 [治療](#aaps-screens-treatments) 分頁顯示所有過去的 **設定檔切換**。 進入 **設定檔切換** 子分頁後，你可以使用過去的 **設定檔切換** 作為創建新 **設定檔** 的基礎。 在這種情況下，時差和百分比將應用於新的本地個人設置。 使用**複製**按鈕，該按鈕顯示在**1**行。
 
-You can now go to the [Profile tab](#your-aaps-profile-create-and-edit-profiles) to edit the newly created Profile.
+你現在可以轉到[個人設置選項卡](#your-aaps-profile-create-and-edit-profiles)以編輯新創建的個人設置。
 
 (YourAapsProfile_Profile-backup)=
 ### 設定檔備份
 
-Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
+作為你循環系統的核心設定，你的 **設定檔** 非常敏感，這是你不想遺失的東西。
 
-* Your **Profiles** are stored in the **AAPS** database.
-* If enabled, **Profiles** are also uploaded to Nightscout. 這些設定可以在[NSClient 偏好設定 > NSClient > 同步 > 上傳資料至 NS](#Preferences-nsclient)找到。
+* 你的 **設定檔** 儲存在 **AAPS** 數據庫中。
+* 如果啟用，**設定檔** 也會上傳到 Nightscout。 這些設定可以在[NSClient 偏好設定 > NSClient > 同步 > 上傳資料至 NS](#Preferences-nsclient)找到。
 
 ![備份設定檔 Nightscout](../images/LocalProfile_UploadNS_AASP30.png)
 
@@ -338,25 +338,25 @@ Being a core setting of your looping system, your **Profiles** are highly sensit
 
 如果啟用，直接在 Nightscout 進行的個人設定更改可以在**AAPS**中接受。 這些設定可以在[NSClient 偏好設定 > NSClient > 同步 > 接收個人設定儲存](#Preferences-nsclient)找到。
 
-This can be helpful when about to make major changes to a more extensive **Profile**. 透過網頁介面輸入這些設定會更加方便，例如，手動從電子表格複製資料。
+這在對更廣泛的 **設定檔** 進行重大更改之前可能會很有幫助。 透過網頁介面輸入這些設定會更加方便，例如，手動從電子表格複製資料。
 
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). 新的資料庫記錄將標示當前日期。 After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+不過，為此重要的是在 Nightscout 編輯器中複製整個 **數據庫記錄**，其中包含多個設定檔（見下方截圖中的藍色箭頭）。 新的資料庫記錄將標示當前日期。 保存後，更改/新增的 **設定檔** 可以通過常規的 [設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) 在 **AAPS** 中啟用。
 
 ![複製資料庫紀錄](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
-### Compare two Profiles
+### 比較兩個設定檔
 
-You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+你也可以使用 [設定檔助手](#aaps-screens-profile-helper) 分頁來比較不同的設定檔或設定檔切換（在以前的 [設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) 中使用的其中一個設定檔的百分比）。
 
 ![設定檔助手 1](../images/ProfileHelper1.png)
 
-1. Make sure you are in **Profile 1**.
-2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
-3. Choose the **Profile** you want to compare from.
-4. Change screen by clicking on **Profile 2** on the right.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profiles Switched**.
-6. Choose the **Profile Switch** you want to compare to.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+1. 請確保你在 **設定檔 1** 中。
+2. 在 **設定檔類型** 中，選擇「可用設定檔」，以在所有儲存的 **設定檔** 之間進行選擇。
+3. 從中選擇你想要比較的 **設定檔**。
+4. 按一下右側的 **設定檔 2** 更改螢幕。
+5. 在 **設定檔類型** 中，選擇「設定檔切換」，以在所有 **設定檔切換** 的歷史中進行選擇。
+6. 選擇你希望比較的 **設定檔切換**。
+7. 按下螢幕底部的 **比較設定檔** 按鈕。 將顯示兩個調整後的設定檔的比較（請參見下方截圖）。
 
 ![設定檔助手 2](../images/ProfileHelper2.png)
