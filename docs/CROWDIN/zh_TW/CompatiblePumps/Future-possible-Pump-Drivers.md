@@ -86,7 +86,7 @@ orphan: true
 
 ### Medtronic 藍牙
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**評論：** 美敦力 [已撤回](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps)。
 
 ## 幫浦成為可閉環的需求
 
