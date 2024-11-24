@@ -64,25 +64,17 @@ If you have built AAPS before, you don't need to take all the following steps ag
 Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
 ```
 
-The overall steps for building the **AAPS** apk file are as follows:
-
-4.1 [Install Git](#install-git-if-you-dont-have-it)
-
-4.2 [Install Android Studio](#install-android-studio)
-
-4.3 [Download AAPS code](#download-the-aaps-code)
-
-4.4. [Set Git path in Android Studio preferences](#set-git-path-in-android-studio-preferences)
-
-4.5. [Build AAPS "signed" apk](#build-the-aaps-signed-apk)
-
+```{contents} The overall steps for building the **AAPS** apk file
+:depth: 1
+:local: true
+```
 
 In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
 
 Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might be also be minor differences in the steps for the different  platforms.
 
 (Install-Git)=
-### Install Git (if you don't have it)
+### Install Git
 
 ```{admonition} Why Git? 
 :class: dropdown
