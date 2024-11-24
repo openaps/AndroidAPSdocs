@@ -346,7 +346,7 @@ Press the **Reset Alarms** button to reset the alarms and resume normal operatio
 ## Switching phone, export/import settings
 
 Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessaires :
-* [Export settings](ExportImportSettings-export-settings) on your old phone
+* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
 * Transfer settings from old to new phone, and import them into AAPS
 
 The imported settings file has to be of the same patch session that you are currently using, otherwise the patch will not connect.
