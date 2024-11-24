@@ -169,13 +169,11 @@ Projet Open Humans <./SupportingAaps/OpenHumans.md>
 
 ```
 ```{toctree}
-:caption: 11) Ressources
+:caption: 11) Resources
 
-Glossaire <./UsefulLinks/Glossary.md>
-FAQ <./UsefulLinks/FAQ. d>
-Ressources générales pour le diabète et la boucle <./UsefulLinks/BackgroundReading.md>
-Compte Google dédié pour AAPS (facultatif)<. UsefulLinks/DedicatedGoogleAccountForAaps.md>
-Pour les cliniciens (obsolète) <./UsefulLinks/ClinicianGuideToAaps.md>
-Automation avec les applications tierces <./UsefulLinks/AutomationWith3rdPartyApps.md>
-
+Glossary <./UsefulLinks/Glossary.md>
+FAQ <./UsefulLinks/FAQ.md>
+General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
+Dedicated Google account for AAPS (optional)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
+For Clinicians (outdated) <./UsefulLinks/ClinicianGuideToAaps.md>
 ```
