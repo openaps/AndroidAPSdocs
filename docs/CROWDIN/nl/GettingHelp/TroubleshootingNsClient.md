@@ -1,3 +1,9 @@
+* * *
+
+orphan: true
+
+* * *
+
 (Troubleshooting-NSClient-troubleshooting-nsclient)=
 
 # Problemen met NSClient oplossen

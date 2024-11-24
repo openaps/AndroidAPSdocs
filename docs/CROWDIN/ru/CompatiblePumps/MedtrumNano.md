@@ -346,7 +346,7 @@ orphan: true
 ## Switching phone, export/import settings
 
 При переходе на новый телефон требуются следующие действия:
-* [Export settings](ExportImportSettings-export-settings) on your old phone
+* Выполните [Экспорт настроек](../Maintenance/ExportImportSettings.md) на вашем старом телефоне
 * Transfer settings from old to new phone, and import them into AAPS
 
 The imported settings file has to be of the same patch session that you are currently using, otherwise the patch will not connect.

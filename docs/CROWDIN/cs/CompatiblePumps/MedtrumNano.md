@@ -346,7 +346,7 @@ Stiskněte tlačítko **Resetovat alarmy** k resetování alarmů a obnovení no
 ## Switching phone, export/import settings
 
 Pokud měníte telefon za nový, je nezbytné, abyste provedli následující kroky:
-* [Export settings](ExportImportSettings-export-settings) on your old phone
+* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
 * Transfer settings from old to new phone, and import them into AAPS
 
 The imported settings file has to be of the same patch session that you are currently using, otherwise the patch will not connect.

@@ -242,11 +242,6 @@ If you are starting with **AAPS** after using a different open or closed-loop pu
 
 If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
 
-### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
-Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa, bu davranışa genellikle çok düşük bir İDF neden olur. A too low ISF typically looks like this:
-
-![İDF çok düşük](../images/isf.jpg)
-
 ### What causes high postprandial peaks in closed loop?
 Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. If it is correct and your **BG** is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **IC** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your IC and an appropriate pre-bolus time with your endocrinologist.
 
