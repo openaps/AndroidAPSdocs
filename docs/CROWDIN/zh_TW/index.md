@@ -169,13 +169,11 @@ Open Humans 上傳工具 <./SupportingAaps/OpenHumans.md>
 
 ```
 ```{toctree}
-:caption: 11) 資源
+:caption: 11) Resources
 
-術語表 <./UsefulLinks/Glossary.md>
-常見問題 <./UsefulLinks/FAQ.md>
-一般糖尿病及閉環資源 <./UsefulLinks/BackgroundReading.md>
-專用 Google 帳號以供 AAPS 使用（選擇性）<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
-針對臨床醫師（已過時） <./UsefulLinks/ClinicianGuideToAaps.md>
-與第三方應用程式自動化 <./UsefulLinks/AutomationWith3rdPartyApps.md>
-
+Glossary <./UsefulLinks/Glossary.md>
+FAQ <./UsefulLinks/FAQ.md>
+General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
+Dedicated Google account for AAPS (optional)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
+For Clinicians (outdated) <./UsefulLinks/ClinicianGuideToAaps.md>
 ```

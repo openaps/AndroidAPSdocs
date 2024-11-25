@@ -64,25 +64,17 @@
 請直接跳轉到[更新指南](../Maintenance/UpdateToNewVersion.md)!
 ```
 
-建立**AAPS** apk文件的整體步驟如下：
-
-4.1 [安裝Git](#install-git-if-you-dont-have-it)
-
-4.2 [安裝Android Studio](#install-android-studio)
-
-4.3 [下載AAPS代碼](#download-the-aaps-code)
-
-4.4. [在Android Studio偏好設定中設置Git路徑](#set-git-path-in-android-studio-preferences)
-
-4.5. [建立AAPS "已簽署" apk](#build-the-aaps-signed-apk)
-
+```{contents} The overall steps for building the **AAPS** apk file
+:depth: 1
+:local: true
+```
 
 在本指南中，你將找到建置**AAPS** apk文件的_範例_螢幕截圖。 由於**Android Studio** - 我們用來建立**AAPS** apk的軟體 - 定期更新，這些螢幕截圖可能與你的安裝不完全相同，但仍然應該可以遵循。
 
 由於**Android Studio**可以在Windows、Mac OS X和Linux平台上運行，因此不同平台的步驟可能會略有不同。
 
 (Install-Git)=
-### 安裝Git（如果你還沒有安裝）
+### Install Git
 
 ```{admonition} Why Git? 
 :class: dropdown
