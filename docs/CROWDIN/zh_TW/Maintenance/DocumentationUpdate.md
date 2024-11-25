@@ -2,8 +2,8 @@
 
 ## 2024年11月
 
-- Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganisation of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnerat
+- 更新 [你的 AAPS 配置](../SettingUpAaps/YourAapsProfile.md) @emilise
+- 重新整理 [Wear OS 智慧手錶](../WearOS/BuildingAapsWearOS.md) 內容 @psonnerat
 
 ## 2024年10月
 
