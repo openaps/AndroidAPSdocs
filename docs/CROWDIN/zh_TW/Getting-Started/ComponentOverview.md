@@ -4,10 +4,10 @@
 
 ![組件總覽](../images/modules.png)
 
-```{note}
-**重要安全通知**
+```{admonition} IMPORTANT SAFETY NOTICE
+:class: important
 
- **AAPS** 安全功能的基礎建立在用於構建系統的硬體安全功能之上。 對於關閉自動胰島素給藥循環，僅使用經過測試、完全正常運作並由您國家的官方機構批准的胰島素幫浦和 CGM 是至關重要的。 對這些組件進行硬體或軟體修改可能會導致胰島素劑量異常，對使用者造成重大風險。 如果您找到或獲得破損、修改或自製的胰島素幫浦或 CGM 接收器，**請勿使用**這些來建立 **AAPS** 系統。
+The foundation of **AAPS** safety features discussed in this documentation is built on the safety features of the hardware used to build your system. 對於關閉自動胰島素給藥循環，僅使用經過測試、完全正常運作並由您國家的官方機構批准的胰島素幫浦和 CGM 是至關重要的。 對這些組件進行硬體或軟體修改可能會導致胰島素劑量異常，對使用者造成重大風險。 如果您找到或獲得破損、修改或自製的胰島素幫浦或 CGM 接收器，**請勿使用**這些來建立 **AAPS** 系統。
 
 此外，僅使用製造商批准的原裝耗材，例如插入器、套管和胰島素容器，也同樣重要。 使用未經測試或修改的耗材可能會導致 CGM 不準確和胰島素劑量錯誤。 胰島素在劑量錯誤時極具危險 - 請勿透過修改耗材來冒生命危險。
 
