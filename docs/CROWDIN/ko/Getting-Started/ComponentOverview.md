@@ -4,8 +4,8 @@
 
 ![Components overview](../images/modules.png)
 
-```{note}
-**IMPORTANT SAFETY NOTICE**
+```{admonition} IMPORTANT SAFETY NOTICE
+:class: important
 
 The foundation of **AAPS** safety features discussed in this documentation is built on the safety features of the hardware used to build your system. For closing an automated insulin dosing loop, it is critically important that you only use an insulin pump and CGM that are tested, fully functioning and approved by the official instances of your country. 이러한 구성요소에 대한 하드웨어 또는 소프트웨어의 변형은 예기치 않은 인슐린 투약을 야기하여 사용자에게 상당한 위험을 초래할 수 있습니다. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, **do not use** these for creating an **AAPS** system.
 
