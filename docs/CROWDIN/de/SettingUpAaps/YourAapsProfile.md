@@ -105,7 +105,7 @@ Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you
 
 Saubere Basalraten ermöglichen Dir Morgens mit Werten im Zielbereich wachzuwerden, Mahlzeiten auszulassen, früher oder später essen zu können ohne hohe oder niedrige Werte zu bekommen.
 
-Eine zu hohe Basalrate kann zu zu niedrigen BZ-Werten führen. And vice versa.
+Eine zu hohe Basalrate kann zu niedrigen Glukosewerten führen. And vice versa.
 
 **AAPS** ‘baselines’ against the default basal rate. Wenn die Basalrate zu hoch ist, führt ein 'zero temp' (temporäres Abschalten der Basalrate durch AAPS) zu einem höheren negativen IOB (insulin on board - im Körper aktives Insulin) als es sollte. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
 

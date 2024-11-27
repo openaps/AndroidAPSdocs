@@ -73,7 +73,7 @@
 
 由於**Android Studio**可以在Windows、Mac OS X和Linux平台上運行，因此不同平台的步驟可能會略有不同。
 
-(Install-Git)=
+(install-git-if-you-dont-have-it)=
 ### 安裝Git
 
 ```{admonition} Why Git? 
