@@ -73,7 +73,7 @@ In this guide you will find _example_ screenshots of building of **AAPS** apk fi
 
 Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might be also be minor differences in the steps for the different  platforms.
 
-(Установить git)=
+(install-git-if-you-dont-have-it)=
 ### Install Git
 
 ```{admonition} Why Git? 
