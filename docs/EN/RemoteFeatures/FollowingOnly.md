@@ -214,6 +214,18 @@ This CGM hardware monitor benefits from random tone generation audio alerts (whi
 * SugarPixel’s xolour face utilises the entire display to show a single colour representing the BG value. This enables the user to see BG readings at a distance through the window while outside playing in the backyard, patio, or pool.
 * The Big BG face is useful for nightstand users who wear glasses or contact lenses.
 
+### Nightscout Clock on Ulanzi TC001
+
+**Nightscout Clock** is an open source software running on the **Ulanzi TC001** device. It connects with Dexcom servers or Nightscout and displays real time blood sugar readings.
+
+![image](https://private-user-images.githubusercontent.com/1446257/389150931-79cbda6d-5c0b-47fa-b5b4-2a5a10322a7d.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzI3ODE2ODUsIm5iZiI6MTczMjc4MTM4NSwicGF0aCI6Ii8xNDQ2MjU3LzM4OTE1MDkzMS03OWNiZGE2ZC01YzBiLTQ3ZmEtYjViNC0yYTVhMTAzMjJhN2QuanBnP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MTEyOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDExMjhUMDgwOTQ1WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9Y2NjMmM2M2U4OGZhYTA2MWZiYmMxNGNjOWRiYThiMGRkMWUwOGE3YzkyOGNkODhlNzY2MDYyMDIwNGM0MjEzMCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.em2vAc6onzfcuxSp2QK9fWhls4vKEkKtUWCiRa3vSrA)
+
+* The clock supports both mmol/L and mg/dL units, and includes audible alarms.
+* Several display available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
+* Setting up and configuring the device involves just a few simple steps. Once set up, it only requires power and Wi-Fi to function.
+* The Ulanzi TC001 device is significantly cheaper than the SugarPixel to buy.
+* The software along with installation instructions can be found on [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file). 
+* It is developed and maintained by Artiom Kenibasov, offering support on the [Facebook AAPS Users group](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/).
 
 ### PC (TeamViewer)
 Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting.
