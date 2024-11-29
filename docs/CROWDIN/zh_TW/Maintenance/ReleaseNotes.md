@@ -50,8 +50,7 @@
 
 ## WearOS 版本
 
-- AAPS 需要至少 WearOS API 等級 28（Android 9）
-- 僅支援 WearOS 5、API 34（Android 14）及以上版本的複雜功能：由 Google 和三星決定的限制鎖定了大部分現有的錶盤。
+- AAPS requires at least WearOS API level 28 (Android 9)
 
 (版本3300)=
 ## 版本 3.3.0.0
