@@ -339,7 +339,7 @@ Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout
 
 現在我們進入設定嚮導中的一個非常重要的部分。
 
-請在嘗試輸入以下畫面的設定檔案詳細資訊之前閱讀設定檔案的文件。
+Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: 危險
@@ -366,20 +366,20 @@ Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout
 不要用它進行實際循環！
 ```
 
-輸入你的胰島素作用時間（DIA），單位為小時。 然後按“IC”：
+Enter your [Duration of insulin Action (DIA)](#your-aaps-profile-duration-of-insulin-action) in hours. 然後按“IC”：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_142143.png)
 
-輸入你的IC值：
+Enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values:
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_142903.png)
 
-按“ISF”。 輸入你的ISF值：
+按“ISF”。 Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_143009.png)
 
 
-按“基礎速率”。 輸入你的基礎值：
+按“基礎速率”。 Enter your [basal values](#your-aaps-profile-basal-rates):
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_143623.png)
 
@@ -469,7 +469,7 @@ Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout
 
 選擇OpenAPS SMB演算法作為你的APS演算法。 即使有這個名稱，SMB功能在你熟悉 **AAPS** 並完成第一階段目標之前是停用的。 無論如何，OpenAPS SMB 相較於 OpenAPS AMA 更新且通常效果更好。
 
-在初期，你的設定檔案通常不如經驗豐富後好，所以這個功能在初期被停用。 由於在開始時，你的設定檔案通常不如經驗豐富後那麼好，因此該功能在初期被停用。
+在初期，你的設定檔案通常不如經驗豐富後好，所以這個功能在初期被停用。 As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: 資訊
@@ -499,7 +499,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 ### 敏感度偵測
 
-讓“敏感度Oref1”保持為敏感度外掛的標準選項。
+Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
 按“下一步”進入下一個螢幕：
 
