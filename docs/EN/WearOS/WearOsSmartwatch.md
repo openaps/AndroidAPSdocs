@@ -1,10 +1,5 @@
 # Setup AAPS on your Wear OS watch
 
-```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.
-Wear OS 5 changes locked the watchfaces: only complications can be used.
-```
-
 The instructions below apply to the **AAPS Wear** apk that you need to build (see [here](../WearOS/BuildingAapsWearOS.md) if you haven't yet) as you've built the phone **AAPS** apk.
 
 You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk that are directly available in [GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4). Each **Wear** app will communicate with its matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data.
@@ -15,7 +10,7 @@ This section assumes you are totally new to Smartwatches, and gives you basic or
 
 _This guide assumes the Samsung Galaxy watch you are setting up is running Wear OS version 3 or lower._ If you are setting up a watch running Wear OS 4/OneUI 5 or later, you will need to use a new ADB pairing process, this is explained in the Samsung software on your phone and will be updated here in due course.
 
-**Do not to upgrade your watch to One UI Watch 5** (Android 14) that is not currently supported.
+**Do not to upgrade your watch to Wear OS 5** (Android 14) that is not fully supported.
 
 Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0) 
 
