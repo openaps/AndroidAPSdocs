@@ -92,6 +92,8 @@ The **figure below** shows an example of how the target can be set in an **AAPS*
 When In [Open Loop](#Preferences-pen-loop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/>
 When In [Closed Loop](#preferences-closed-loop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
 
+(your-aaps-profile-basal-rates)=
+
 ## Basal rates
 
 ### Description
@@ -129,6 +131,8 @@ An alternative method (may be more tricky) is to keep the loop running, and seei
 Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyse overnight BG lines in order to optimise your basal rates.
 
 When taking action on the result of your basal testing, changes in the **Profile** should be done 1 hour before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
+
+(your-aaps-profile-insulin-sensitivity-factor)=
 
 ## Insulin sensitivity factor (ISF)
 
@@ -171,7 +175,7 @@ See the **figure below** for an example of how ISF values could be set in an **A
 A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
 
     1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.
-
+    
     Example: TDD = 40 U
     Approx ISF (mg/dl) = 1700/40 = 43
     Approx ISF (mmol/L) = 94/40 = 2.4
@@ -182,10 +186,12 @@ Then take an estimated amount of insulin (as per current 1/ISF) to get to your t
 
 Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
 
+(your-aaps-profile-insulin-to-carbs-ratio)=
+
 ## Insulin to Carb ratio (ICR)
 
 ### Description
-  
+
 The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
 
 Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**. 
