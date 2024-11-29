@@ -49,7 +49,6 @@ Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Andr
 ## Versión de WearOS
 
 - AAPS requires at least WearOS API level 28 (Android 9)
-- WearOS 5, API level 34 (Android 14) and above only allow complications: constraints decided by Google and Samsung lock most of existing watchfaces.
 
 (version3300)=
 ## Version 3.3.0.0
