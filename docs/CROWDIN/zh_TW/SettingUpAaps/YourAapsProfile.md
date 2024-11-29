@@ -91,6 +91,8 @@ The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is 
 
 在[開放循環](#Preferences-pen-loop)中，特別是在進行[第一個目標](../SettingUpAaps/CompletingTheObjectives.md)時，使用寬範圍目標是個好選擇，在你學習 **AAPS** 的行為並調整你的**設定檔**時。<br/> 在[封閉循環](#preferences-closed-loop)中（開始於**[目標 6](#objectives-objective6)**），建議減少範圍，直到你為每個時段確定一個單一目標（_低_ 目標 = _高_ 目標），以確保**AAPS**對**血糖**的波動快速做出反應。
 
+(your-aaps-profile-basal-rates)=
+
 ## 基礎率
 
 ### 描述
@@ -126,6 +128,8 @@ The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is 
 推薦的方法是暫停循環，這樣會恢復到你的預設背景基礎率。 觀察你的**血糖**如何變化：如果它下降，則基礎率過高。 反之亦然。<br/> 另一種替代方法（ might be more tricky）是在循環運行的情況下，查看**IOB**如何變化。 如果**IOB**是負的，則你的基礎率過高。 反之亦然。 請注意，這種方法依賴於**ISF**來修正**血糖**，因此需要其他變數合理設置，這樣才能成功。<br/> 調整基礎率的另一種方法是觀察在夜間的循環行為，當所有 COB 已經降到為止。 這種方法對於兒童特別有用，因為禁食較困難或胰島素需求經常變化。 [Tidepool 的 Saleh Adi 醫生](https://www.youtube.com/watch?v=-fpWnGRhLSo)提供了如何分析夜間 血糖數據線以優化你的基礎率的有用建議。
 
 當你對基礎測試的結果採取行動時，對**設定檔**的變更應在升高/下降前1小時進行。 根據需要重複測試，直到你對**基礎率**設定感到滿意。
+
+(your-aaps-profile-insulin-sensitivity-factor)=
 
 ## 胰島素敏感度因子（ISF）
 
@@ -174,6 +178,8 @@ Assuming your basal levels are correct, you can test this by suspending the loop
 然後根據目前的 1/ISF 估算所需的胰島素量來達到目標血糖值。
 
 請小心，這一值通常設置得過低。 過低意味著 1 單位的胰島素會使血糖下降得比預期更快。
+
+(your-aaps-profile-insulin-to-carbs-ratio)=
 
 ## 胰島素與碳水化合物的比例（ICR）
 
