@@ -218,7 +218,7 @@ This CGM hardware monitor benefits from random tone generation audio alerts (whi
 
 **Nightscout Clock** is an open source software running on the **Ulanzi TC001** device. It connects with Dexcom servers or Nightscout and displays real time blood sugar readings.
 
-![image](https://private-user-images.githubusercontent.com/1446257/389150931-79cbda6d-5c0b-47fa-b5b4-2a5a10322a7d.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzI3ODE2ODUsIm5iZiI6MTczMjc4MTM4NSwicGF0aCI6Ii8xNDQ2MjU3LzM4OTE1MDkzMS03OWNiZGE2ZC01YzBiLTQ3ZmEtYjViNC0yYTVhMTAzMjJhN2QuanBnP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MTEyOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDExMjhUMDgwOTQ1WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9Y2NjMmM2M2U4OGZhYTA2MWZiYmMxNGNjOWRiYThiMGRkMWUwOGE3YzkyOGNkODhlNzY2MDYyMDIwNGM0MjEzMCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.em2vAc6onzfcuxSp2QK9fWhls4vKEkKtUWCiRa3vSrA)
+![Following Nightscout Clock](../images/FollowingNightscoutClock.png)
 
 * The clock supports both mmol/L and mg/dL units, and includes audible alarms.
 * Several display available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
