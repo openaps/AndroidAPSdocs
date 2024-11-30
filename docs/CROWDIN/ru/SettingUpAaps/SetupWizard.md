@@ -339,7 +339,7 @@ Go back and press "NEXT" to go to the next screen:
 
 Теперь мы переходим к очень важной части мастера установки.
 
-Прежде чем вводить данные профиля на следующем экране, ознакомьтесь с документацией по профилям.
+Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
@@ -366,20 +366,20 @@ It is not intended to be an accurate profile or something very well optimised, b
 Don't use it for actually looping!
 ```
 
-Введите время действия инсулина (DIA) в часах. Затем нажмите "IC" (углеводный коэффициент):
+Enter your [Duration of insulin Action (DIA)](#your-aaps-profile-duration-of-insulin-action) in hours. Затем нажмите "IC" (углеводный коэффициент):
 
 ![изображение](../images/setup-wizard/Screenshot_20231202_142143.png)
 
-Введите значения вашего углеводного коэффициента IC:
+Enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values:
 
 ![изображение](../images/setup-wizard/Screenshot_20231202_142903.png)
 
-Нажмите "ISF" (фактор чувствительности к инсулину). Введите ваши значения фактора чувствительности к инсулину ISF:
+Нажмите "ISF" (фактор чувствительности к инсулину). Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
 
 ![изображение](../images/setup-wizard/Screenshot_20231202_143009.png)
 
 
-Нажмите "БАЗАЛ". Введите значения базального профиля:
+Нажмите "БАЗАЛ". Enter your [basal values](#your-aaps-profile-basal-rates):
 
 ![изображение](../images/setup-wizard/Screenshot_20231202_143623.png)
 
@@ -469,7 +469,7 @@ Please read the documentation for your [insulin pump](../Getting-Started/Compati
 
 Примените алгоритм OpenAPS SMB. Несмотря на название, функция алгоритма микроболюсов SMB отключена до полного знакомства с AAPS и прохождения первых целей. В любом случае алгоритм OpenAPS SMB новее и лучше по сравнению с OpenAPS AMA.
 
-Причина, по которой SMB отключён в начале, заключается в том, что функция SMB позволяет быстрее реагировать на увеличение сахара в крови через супермикроболюсы, а не повышать базальную скорость. Поскольку на начальном этапе ваш профиль в целом не так хорош, как с приобретением опыта, эта функция сначала отключена.
+Причина, по которой SMB отключён в начале, заключается в том, что функция SMB позволяет быстрее реагировать на увеличение сахара в крови через супермикроболюсы, а не повышать базальную скорость. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: information
@@ -499,7 +499,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ### Определение чувствительности
 
-Выберите "Чувствительность Oref1" в качестве модуля чувствительности.
+Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 

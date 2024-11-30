@@ -51,7 +51,6 @@ Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zw
 ## Wear OS-Version
 
 - AAPS requires at least WearOS API level 28 (Android 9)
-- WearOS 5, API level 34 (Android 14) and above only allow complications: constraints decided by Google and Samsung lock most of existing watchfaces.
 
 (version3300)=
 ## Version 3.3.0.0

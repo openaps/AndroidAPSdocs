@@ -206,6 +206,18 @@ SugarPixel ist ein Gerät, dass als Zweitanzeige für Glukosewerte und Alarme ge
 * SugarPixel’s xolour face utilises the entire display to show a single colour representing the BG value. Damit kann man die Glukosewerte auch auf große Entfernungen durch das Fenster erkennen, während im Hof, qauf der Terrasse oder im Planschbecken oder Pool gespielt wird.
 * The Big BG face is useful for nightstand users who wear glasses or contact lenses.
 
+### Nightscout Clock on Ulanzi TC001
+
+**Nightscout Clock** is an open source software running on the **Ulanzi TC001** device. It connects with Dexcom servers or Nightscout and displays real time blood sugar readings.
+
+![Following Nightscout Clock](../images/FollowingNightscoutClock.png)
+
+* The clock supports both mmol/L and mg/dL units, and includes audible alarms.
+* Several display available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
+* Setting up and configuring the device involves just a few simple steps. Once set up, it only requires power and Wi-Fi to function.
+* The Ulanzi TC001 device is significantly cheaper than the SugarPixel to buy.
+* The software along with installation instructions can be found on [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
+* It is developed and maintained by Artiom Kenibasov, offering support on the [Facebook AAPS Users group](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/).
 
 ### PC (TeamViewer)
 Zur Remote-Fehlerbehebung hat sich für einige Konstellationen ein Fernüberwachungs-Tool wie z. B. [TeamViewer](https://www.teamviewer.com/) bewährt.

@@ -9,7 +9,7 @@
 
 作為 **AAPS** 管理的一部分，用戶應不斷評估和檢查其 **配置** 設定的準確性。 建議按照此處所提供的順序進行設定。 在更改另一個設置之前，請確保先調整好一個設置。 逐步進行調整，而不是一次性做出大幅更改。 記得在每次更改後啟用新配置。 定期 [備份你的 **配置**](#YourAapsProfile_Profile-backup) 設置，通過匯出你的偏好設定。
 
-你的 **配置** 設置之間相互影響—你可能會有「錯誤」設置在某些情況下運作良好，但在其他情況下卻無法正常運作。 例如，若基礎胰島素過高與太高的**CR**同時發生。 這意味著你需要考慮所有的設定，並檢查它們在各種情況下能否協調運作。
+你的 **配置** 設置之間相互影響—你可能會有「錯誤」設置在某些情況下運作良好，但在其他情況下卻無法正常運作。 例如，若基礎胰島素過高與太高的**CR**同時發生。 This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
 
 你可以使用 [Autotune](https://autotuneweb.azurewebsites.net/) 來引導你的思路，但不要盲目遵循：他可能並不適合你或所有情況。
 
@@ -25,7 +25,7 @@
 
 ![基礎胰島素的小時變化](../images/MaxDailyBasal2.png)
 
-下面顯示的**AAPS**截圖為一個_範例_個人設定。 請注意，下面這個範例設定檔顯示了大量的時間點。 當你開始使用**AAPS**時，你的個人設定可能會簡單許多。
+Screenshots from **AAPS** of an _example_ profile are shown below. 請注意，下面這個範例設定檔顯示了大量的時間點。 當你開始使用**AAPS**時，你的個人設定可能會簡單許多。
 
 (your-aaps-profile-duration-of-insulin-action)=
 ## 胰島素作用持續時間（DIA）
@@ -38,7 +38,7 @@
 
 ![範例胰島素設定檔](../images/Screenshot_insulin_profile.png)
 
-結合[胰島素類型](#Config-Builder-insulin)，這將形成上述圖像中所示的[胰島素設定檔](#AapsScreens-insulin-profile)。 需要注意的重要點是衰減具有**長尾巴**。 如果您習慣手動注射，可能已經習慣認為胰島素的衰減大約需要 3.5 小時。 然而，在使用循環系統時，這個長尾變得重要，因為 **AAPS** 演算法的計算非常精確，這些微小的剩餘量在遞迴計算下會逐漸累積。 因此，**AAPS**使用最少 5 小時作為 DIA。
+結合[胰島素類型](#Config-Builder-insulin)，這將形成上述圖像中所示的[胰島素設定檔](#AapsScreens-insulin-profile)。 需要注意的重要點是衰減具有**長尾巴**。 If you have been used to manual pumping, you have probably been used to assuming that insulin decays over a much shorter period i.e. about 3.5 hours. 然而，在使用循環系統時，這個長尾變得重要，因為 **AAPS** 演算法的計算非常精確，這些微小的剩餘量在遞迴計算下會逐漸累積。 Therefore, **AAPS** uses minimum 5h as **DIA**.
 
 關於胰島素作用持續時間及其重要性的額外閱讀：
 * [了解基於指數活動曲線的新 IOB 曲線](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)，可在 OpenAPS 文件中找到。
@@ -49,26 +49,26 @@
 
 ### 影響
 
-DIA 設置過短可能會導致低血糖。 反之亦然。
+Too short **DIA** can lead to low BGs. 反之亦然。
 
-如果 DIA 太短，**AAPS** 將過早計算你的上一筆注射已被消耗，若你的**血糖**仍然太高，就會過量注射胰島素。 （實際上，他不會等那麼久，而是預測會發生什麼，並不斷添加胰島素）。 這基本上會造成**AAPS** 無法察覺的「胰島素堆疊」。 在夜間尤其明顯，如果你看到負的 IOB，沒有其他解釋，只有之前注射的排隊影響。
+If **DIA** is too short, **AAPS** will calculate too early that your previous bolus is all consumed, and if your **BG** is still high, it will over-deliver in insulin. （實際上，他不會等那麼久，而是預測會發生什麼，並不斷添加胰島素）。 這基本上會造成**AAPS** 無法察覺的「胰島素堆疊」。 在夜間尤其明顯，如果你看到負的 IOB，沒有其他解釋，只有之前注射的排隊影響。
 
-一個過短的 DIA 範例是高血糖隨後被 **AAPS** 過度修正而導致血糖變低。
+Example of a too-short **DIA** is a **high BG** followed by **AAPS** over-correcting and giving a **low BG**.
 
 ### 如何設定
 
-下面**圖示**顯示了如何在 **AAPS** 設定檔中設定 DIA 的範例。
+The **figure below** shows an example of how the **DIA** set in an **AAPS** profile.
 
 ![DIA](../images/Profile_DIA.png)
 
-這一時間通常設定得太短。 設定為 6 或 7 的 DIA 可能是一個不錯的起點。 越來越多的人發現 8 到 9 小時的 DIA 對他們來說效果不錯。 參閱上述提到的額外閱讀。
+The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is probably a good place to start. A growing number of people find that a **DIA** of 8 to 9 hours works good for them. 參閱上述提到的額外閱讀。
 
 (profile-glucose-targets)=
 ## 血糖目標
 
 ### 描述
 
-你的**血糖目標**是一個核心值，且所有**AAPS**的計算均以此為基礎。 這與你通常希望維持血糖數值的目標範圍不同。 此目標在 **AAPS** 的計算中使用：如果**AAPS** 預測你的 **血糖** 將會超出目標範圍，那麼它將採取行動將你帶回該範圍內。
+你的**血糖目標**是一個核心值，且所有**AAPS**的計算均以此為基礎。 這與你通常希望維持血糖數值的目標範圍不同。 The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
 
 目標可以在這些邊界內定義：
 
@@ -87,9 +87,11 @@ DIA 設置過短可能會導致低血糖。 反之亦然。
 
 ![目標](../images/Profile_Target.png)
 
-血糖目標根據你的個人偏好設定。 例如，如果你擔心夜間低血糖，可以將目標稍微提高到晚上 9 點到早上 7 點的 117 mg/dL (6.5 mmol/L)。 如果你希望在早餐前有充足的胰島素儲備，你可以將早上 7 點到 8 點的目標設定為較低的 81 mg/dL（4.5 mmol/L）。
+**BG** targets are set according to your personal preferences and requirements. 例如，如果你擔心夜間低血糖，可以將目標稍微提高到晚上 9 點到早上 7 點的 117 mg/dL (6.5 mmol/L)。 如果你希望在早餐前有充足的胰島素儲備，你可以將早上 7 點到 8 點的目標設定為較低的 81 mg/dL（4.5 mmol/L）。
 
 在[開放循環](#Preferences-pen-loop)中，特別是在進行[第一個目標](../SettingUpAaps/CompletingTheObjectives.md)時，使用寬範圍目標是個好選擇，在你學習 **AAPS** 的行為並調整你的**設定檔**時。<br/> 在[封閉循環](#preferences-closed-loop)中（開始於**[目標 6](#objectives-objective6)**），建議減少範圍，直到你為每個時段確定一個單一目標（_低_ 目標 = _高_ 目標），以確保**AAPS**對**血糖**的波動快速做出反應。
+
+(your-aaps-profile-basal-rates)=
 
 ## 基礎率
 
@@ -126,6 +128,8 @@ DIA 設置過短可能會導致低血糖。 反之亦然。
 推薦的方法是暫停循環，這樣會恢復到你的預設背景基礎率。 觀察你的**血糖**如何變化：如果它下降，則基礎率過高。 反之亦然。<br/> 另一種替代方法（ might be more tricky）是在循環運行的情況下，查看**IOB**如何變化。 如果**IOB**是負的，則你的基礎率過高。 反之亦然。 請注意，這種方法依賴於**ISF**來修正**血糖**，因此需要其他變數合理設置，這樣才能成功。<br/> 調整基礎率的另一種方法是觀察在夜間的循環行為，當所有 COB 已經降到為止。 這種方法對於兒童特別有用，因為禁食較困難或胰島素需求經常變化。 [Tidepool 的 Saleh Adi 醫生](https://www.youtube.com/watch?v=-fpWnGRhLSo)提供了如何分析夜間 血糖數據線以優化你的基礎率的有用建議。
 
 當你對基礎測試的結果採取行動時，對**設定檔**的變更應在升高/下降前1小時進行。 根據需要重複測試，直到你對**基礎率**設定感到滿意。
+
+(your-aaps-profile-insulin-sensitivity-factor)=
 
 ## 胰島素敏感度因子（ISF）
 
@@ -169,25 +173,27 @@ DIA 設置過短可能會導致低血糖。 反之亦然。
     
     範例：TDD = 40 U大約 ISF（mg/dl）= 1700/40 = 43大約 ISF（mmol/L）= 94/40 = 2.4
 
-假設基礎設定正確，你可以通過暫停循環、檢查IOB為零來測試，並吃一些葡萄糖片，以達到一個穩定的「高」水平。
+Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
 
 然後根據目前的 1/ISF 估算所需的胰島素量來達到目標血糖值。
 
 請小心，這一值通常設置得過低。 過低意味著 1 單位的胰島素會使血糖下降得比預期更快。
 
+(your-aaps-profile-insulin-to-carbs-ratio)=
+
 ## 胰島素與碳水化合物的比例（ICR）
 
 ### 描述
 
-ICR 是衡量每單位胰島素覆蓋多少克碳水化合物的指標。
+The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
 
-有些人還用**I:C**作為ICR的縮寫，或者談論碳水比率：**CR。
+Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**.
 
 例如，1:10 的胰島素與碳水化合物比率表示你每攝入 10 克碳水化合物需要注射 1 單位的胰島素。 一餐包含 25 克碳水化合物需要 2.5 單位的胰島素。
 
-如果你的ICR較弱（較高的值），例如1:20，你只需要0.5U的胰島素來覆蓋10克碳水化合物。 一餐包含 25 克碳水化合物需要 25/20 = 1.25 單位的胰島素。
+If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. 一餐包含 25 克碳水化合物需要 25/20 = 1.25 單位的胰島素。
 
-由於荷爾蒙數值和體力活動，ICR 在一天中的不同時間可能會有所不同。 許多人發現自己在早餐時擁有最低/最強的ICR。 例如，一位成人用戶的ICR可能是早餐1:8，午餐1:10和晚餐1:10，但這些模式並不普遍，有些人在晚餐時對胰島素的抵抗力較高，因而需要更強/更小的ICR。
+It is common to have different **ICR** at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest **ICR** around breakfast time because they tend to be more insulin resistant. So, for example, one adult user's **ICR** could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller **ICR** then.
 
 > **注意：**
 > 
@@ -195,13 +201,13 @@ ICR 是衡量每單位胰島素覆蓋多少克碳水化合物的指標。
 > 
 > 在這種模式下，碳水化合物量是固定的，胰島素量是可變的。 （“需要多少胰島素來覆蓋一個麵包單位？”）
 > 
-> 使用 IC 時，胰島素量是固定的，碳水化合物量是可變的。 （“一單位胰島素能覆蓋多少克碳水化合物？”）
+> When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. （“一單位胰島素能覆蓋多少克碳水化合物？”）
 > 
 > 範例：
 > 
 > 麵包單位因子（BU = 12克碳水化合物）：2.4 U/BU -> 當你吃一個麵包單位時，你需要2.4單位的胰島素。
 > 
-> 相應的IC：12g / 2.4 U = 5.0 g/U -> 5.0克碳水化合物可以用一單位胰島素來覆蓋。
+> Corresponding **ICR**: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
 > 
 > BU因子2.4 U / 12g   ===>   IC = 12g / 2.4 U = 5.0 g/U
 > 
@@ -209,19 +215,19 @@ ICR 是衡量每單位胰島素覆蓋多少克碳水化合物的指標。
 
 ### 影響
 
-較**低/較強的IC**意味著每單位的食物少，換句話說，對於固定的碳水化合物量，你將獲得更多胰島素。 這也叫做「比較積極」。 如果你的IC過強，你會得到過多的胰島素，這可能導致血糖過低。
+A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. 這也叫做「比較積極」。 如果你的IC過強，你會得到過多的胰島素，這可能導致血糖過低。
 
-較**高/較弱的IC**表示每單位的食物多，即對於固定的碳水化合物量，你獲得的胰島素較少。 這也叫做「比較保守」。 如果你的IC過弱，你獲得的胰島素會少於所需，這可能導致血糖過高。
+A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. 這也叫做「比較保守」。 如果你的IC過弱，你獲得的胰島素會少於所需，這可能導致血糖過高。
 
 ### 如何設定
 
-**下圖**顯示了用戶ICR的示例，以及如何在**AAPS設定檔**中設置它。 當輸入這些值時，我們僅輸入比率的最後一部分，因此胰島素與碳水化合物的比率1:3.5僅簡單地輸入為「3.5」。
+The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. 當輸入這些值時，我們僅輸入比率的最後一部分，因此胰島素與碳水化合物的比率1:3.5僅簡單地輸入為「3.5」。
 
 ![設定檔 ICR](../images/Profile_ICR.png)
 
-如果在餐後食物已消化，且**IOB**已回到零，而你的**血糖**仍高於餐前水平，則可能表示IC過高/過弱。 相反，如果你的**血糖**低於餐前水平，則IC過小/過強。
+If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are your **ICR** is too weak (_i.e._ the number is too high and should be gradually lowered). Conversely, if your **BG** is lower than before food, **ICR** is too strong (_i.e._ the number is too small and should be gradually increased).
 
-假設使用正確基礎設定，可以通過檢查**IOB**為零，且你在範圍內，準確地計算碳水化合物的攝入量，並根據當前的胰島素與碳水化合物比率攝取估算的胰島素量來進行測試。 最好是在那個時段食用你通常吃的食物，並精確計算其碳水化合物的量。
+Assuming your basal rates are correct, you can test by checking if **IOB** is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. 最好是在那個時段食用你通常吃的食物，並精確計算其碳水化合物的量。
 
 ## 與設定檔相關的常見問題
 
@@ -236,12 +242,12 @@ ICR 是衡量每單位胰島素覆蓋多少克碳水化合物的指標。
 
 混合閉環_可以_嘗試進行胰島素供給的調整，以最小化因擁有不正確的**設定檔**值而導致的控制不佳的情況。 它可以這樣做，例如如果你將要低血糖，它會暫停胰島素的輸送。 然而，如果你的**設定檔**設定已盡可能接近你身體的需求，你可以實現更好的血糖控制。 這是**AAPS**使用分階目標從開放式循環推進到混合閉環的原因之一。 此外，還會有需要打開循環的時候（傳感器暖機、傳感器故障_等_），有時發生在半夜，你希望在這些情況下設定是正確的。
 
-如果你是在使用其他開放式或閉環系統後開始使用**AAPS**，那麼你已經對基礎率（BR）、胰島素敏感性因子（ISF）和胰島素與碳水化合物比率（IC 或 ICR）要使用的值有合理的了解。
+If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
 
 如果你是從注射（MDI）轉到**AAPS**，那麼最好先了解如何從 MDI 轉移到幫浦，並在與你的糖尿病團隊諮詢後仔細規劃並進行轉換。 ["胰島素輸注"](https://amzn.eu/d/iaCsFa2)由 John Walsh 和 Ruth Roberts 編寫的書籍，及[“像胰臟一樣思考”](https://amzn.eu/d/iVU0RGe)由 Gary Scheiner 編寫的書籍都是非常有用的參考資料。
 
 ### 什麼原因導致閉環系統中的餐後高峰？
-首先，檢查你的基礎率，並進行無碳水化合物的基礎率測試。 如果它是正確的，且當碳水化合物完全吸收後，你的**血糖**降至目標值，則嘗試在餐前某個時刻在**AAPS**中設置「即將進食」的臨時目標，或與你的內分泌醫生探討合適的餐前注射時間。 <br/> 如果你的**血糖**餐後過高，且碳水化合物完全吸收後仍然過高，則考慮與你的內分泌醫生一起降低**IC**。 如果當**COB**時，你的**血糖**過高，且碳水化合物完全吸收後過低，則考慮與你的內分泌醫生一起增加你的**IC**以及合適的餐前注射時間。
+首先，檢查你的基礎率，並進行無碳水化合物的基礎率測試。 If it is correct and your **BG** is falling to reach your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **ICR** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your **ICR** and an appropriate pre-bolus time with your endocrinologist.
 
 ### 我現在的血糖很高，循環無法幫我降下來。
 導致 **AAPS** 無法提供足夠胰島素的可能原因有：
@@ -259,7 +265,7 @@ ICR 是衡量每單位胰島素覆蓋多少克碳水化合物的指標。
 * DIA 太短，導致胰島素堆疊：調整你的 **設定檔**。
 * 身體活動：下次考慮在活動期間使用較低的 [設定檔百分比](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) 來因應敏感度的提高。
 
-## 管理你的設定檔
+## Manage your Profiles
 
 ```{contents} Operations that you can perform on your **Profiles** in **AAPS**
 :depth: 1
@@ -331,7 +337,7 @@ ICR 是衡量每單位胰島素覆蓋多少克碳水化合物的指標。
 
 ### 從 Nightscout 編輯個人設定
 
-如果啟用，直接在 Nightscout 進行的個人設定更改可以在**AAPS**中接受。 這些設定可以在[NSClient 偏好設定 > NSClient > 同步 > 接收個人設定儲存](#Preferences-nsclient)找到。
+If enabled, **Profile** changes made directly in Nightscout can  be received in **AAPS**. 這些設定可以在[NSClient 偏好設定 > NSClient > 同步 > 接收個人設定儲存](#Preferences-nsclient)找到。
 
 這在對更廣泛的 **設定檔** 進行重大更改之前可能會很有幫助。 透過網頁介面輸入這些設定會更加方便，例如，手動從電子表格複製資料。
 

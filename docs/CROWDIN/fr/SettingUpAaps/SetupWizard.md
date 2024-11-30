@@ -339,7 +339,7 @@ Revenez en arrière et cliquez sur "SUIVANT" pour passer à l'écran suivant :
 
 Nous arrivons maintenant à une partie très importante de l'Assistant de configuration.
 
-Veuillez lire la documentation sur les profils avant d'essayer de saisir les données de votre profil à l'écran suivant.
+Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
@@ -366,20 +366,20 @@ It is not intended to be an accurate profile or something very well optimised, b
 Don't use it for actually looping!
 ```
 
-Entrez votre Durée d'action de l'insuline (DAI) en heures. Ensuite, appuyez sur "G/I":
+Enter your [Duration of insulin Action (DIA)](#your-aaps-profile-duration-of-insulin-action) in hours. Ensuite, appuyez sur "G/I":
 
 ![image](../images/setup-wizard/Screenshot_20231202_142143.png)
 
-Entrez vos valeurs de ratio glucides / insuline :
+Enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values:
 
 ![image](../images/setup-wizard/Screenshot_20231202_142903.png)
 
-Appuyez sur "SI". Entrez vos valeurs de sensibilité à l'insuline :
+Appuyez sur "SI". Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
 
 ![image](../images/setup-wizard/Screenshot_20231202_143009.png)
 
 
-Appuyez sur "BAS". Entrez vos valeurs de débit basal :
+Appuyez sur "BAS". Enter your [basal values](#your-aaps-profile-basal-rates):
 
 ![image](../images/setup-wizard/Screenshot_20231202_143623.png)
 
@@ -469,7 +469,7 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant :
 
 Choisissez l'algorithme SMB OpenAPS comme algorithme APS. Malgré son nom, la fonctionnalité SMB de l'algorithme est désactivée jusqu'à ce que vous soyez familier avec AAPS et ayez déjà travaillé sur les premiers objectifs. L'algorithme OpenAPS SMB est plus récent et de manière générale meilleur par rapport à OpenAPS AMA de toute façon.
 
-La raison pour laquelle le SMB est désactivé au début est que la fonction SMB permet une réaction plus rapide à l'augmentation de la glycémie, en remplaçant une augmentation de la basale par un Super Micro Bolus. Généralement, quand on commence, le profil n'est pas encore suffisamment précis, c'est pourquoi cette fonctionnalité est désactivée au début.
+La raison pour laquelle le SMB est désactivé au début est que la fonction SMB permet une réaction plus rapide à l'augmentation de la glycémie, en remplaçant une augmentation de la basale par un Super Micro Bolus. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: information
@@ -499,7 +499,7 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant :
 
 ### Estimation de Sensibilité
 
-Gardez le plugin standard "Sensibilité Oref1" sélectionné par défaut.
+Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
 Appuyez sur "SUIVANT" pour passer à l'écran suivant :
 

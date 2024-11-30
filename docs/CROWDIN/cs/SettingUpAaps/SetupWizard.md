@@ -339,7 +339,7 @@ Go back and press "NEXT" to go to the next screen:
 
 Teď se dostáváme k velmi důležité části Průvodce nastavením.
 
-Přečtěte si, prosím, část dokumentace o profilech dříve, než se pokusíte na další obrazovce zadat vaše údaje.
+Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
@@ -366,20 +366,20 @@ It is not intended to be an accurate profile or something very well optimised, b
 Don't use it for actually looping!
 ```
 
-Zadejte vaši "Dobu působnosti inzulínu (DIA) v hodinách. Potom klikněte na "IC":
+Enter your [Duration of insulin Action (DIA)](#your-aaps-profile-duration-of-insulin-action) in hours. Potom klikněte na "IC":
 
 ![image](../images/setup-wizard/Screenshot_20231202_142143.png)
 
-Zadejte vaše hodnoty inzulíno-sacharidového poměru (IC):
+Enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values:
 
 ![image](../images/setup-wizard/Screenshot_20231202_142903.png)
 
-Klikněte na "ISF". Zadejte vaše hodnoty Citlivosti na inzulín (ISF):
+Klikněte na "ISF". Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
 
 ![image](../images/setup-wizard/Screenshot_20231202_143009.png)
 
 
-Klikněte na "BAZ". Zadejte hodnoty vašich bazálních dávek inzulínu:
+Klikněte na "BAZ". Enter your [basal values](#your-aaps-profile-basal-rates):
 
 ![image](../images/setup-wizard/Screenshot_20231202_143623.png)
 
@@ -469,7 +469,7 @@ Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 
 Vyberte OpenAPS SMB jako váš APS algoritmus. Bez ohledu na název bude SMB funkce algoritmu vypnutá dokud se s **AAPS** blíže neseznámíte a nepropracujete se počátečními cíli. OpenAPS SMB algoritmus je každopádně novější a obecně lepší než OpenAPS AMA.
 
-Důvodem k vypnutí funkce SMB na začátku je ten, že SMB umožňuje rychlejší reakci na stav cukru v krvi díky využití mikrobolusů namísto zvýšení úrovně bazálu. Jelikož váš profil není na začátku tak dobrý, jako bude po nějakém čase užívání, je tato funkce prozatím vypnuta.
+Důvodem k vypnutí funkce SMB na začátku je ten, že SMB umožňuje rychlejší reakci na stav cukru v krvi díky využití mikrobolusů namísto zvýšení úrovně bazálu. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: information
@@ -499,7 +499,7 @@ Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 
 ### Detekce citlivosti
 
-Jako standardní plugin pro citlivost ponechte vybraný "Sensitivity Oref1".
+Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
 Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 

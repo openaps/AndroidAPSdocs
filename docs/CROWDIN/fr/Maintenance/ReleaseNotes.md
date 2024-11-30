@@ -5,11 +5,15 @@ Please follow the instructions in the [update manual](UpdateToNewVersion). Vous 
 
 Vous recevrez les informations suivantes dès qu'une nouvelle mise à jour sera disponible :
 
-![Update info](../images/AAPS_LoopDisable90days.png)
+![Update info](../images/AAPS_LoopLGS60days.png)
+
+
 
 Ensuite, vous avez 60 jours pour mettre à jour. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
 
 Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à partir de la nouvelle date de sortie), AAPS passe à Boucle Ouverte.
+
+![Update info](../images/AAPS_LoopDisable90days.png)
 
 Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
@@ -21,7 +25,10 @@ La première version de test a déjà commencé en 2015. In 2016 has been the fi
 La chronologie de ces versions n'est pas disponible pour le moment, mais comme cette question est posée plusieurs fois, nous la documenterons ici.
 
 ```
+![AAPS 1.0](../images/update/AAPS1.0.png)
+
 (maintenance-android-version-aaps-version)=
+
 ## Version d'Android et version AAPS
 
 Si votre smartphone utilise une version d'Android antérieure à Android 9, vous ne pourrez pas utiliser AAPS v3 et supérieur car il nécessite au moins Android 9.
@@ -51,7 +58,10 @@ Afin de permettre aux utilisateurs ayant une ancienne version d'Android d'utilis
 ## WearOS version
 
 - AAPS requires at least WearOS API level 28 (Android 9)
-- WearOS 5, API level 34 (Android 14) and above only allow complications: constraints decided by Google and Samsung lock most of existing watchfaces.
+
+```{tip}
+WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
+```
 
 (version3300)=
 ## Version 3.3.0.0

@@ -206,6 +206,18 @@ SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次�
 * SugarPixel 的 xolour 錶盤利用整個顯示屏顯示代表 BG 值的單一顏色。 這使得用戶可以在戶外的後院、露台或游泳池旁，透過窗戶從遠處看到血糖讀取值。
 * 大 BG 錶盤對於戴眼鏡或隱形眼鏡的床頭櫃用戶來說特別有用。
 
+### Nightscout Clock on Ulanzi TC001
+
+**Nightscout Clock** is an open source software running on the **Ulanzi TC001** device. It connects with Dexcom servers or Nightscout and displays real time blood sugar readings.
+
+![Following Nightscout Clock](../images/FollowingNightscoutClock.png)
+
+* The clock supports both mmol/L and mg/dL units, and includes audible alarms.
+* Several display available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
+* Setting up and configuring the device involves just a few simple steps. Once set up, it only requires power and Wi-Fi to function.
+* The Ulanzi TC001 device is significantly cheaper than the SugarPixel to buy.
+* The software along with installation instructions can be found on [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
+* It is developed and maintained by Artiom Kenibasov, offering support on the [Facebook AAPS Users group](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/).
 
 ### PC（TeamViewer）
 一些用戶發現像[TeamViewer](https://www.teamviewer.com/)這樣的完整遠端桌面工具對於進行進階的遠端問題排除非常有幫助。
