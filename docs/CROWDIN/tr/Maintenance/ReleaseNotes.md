@@ -5,11 +5,15 @@ Please follow the instructions in the [update manual](UpdateToNewVersion). Günc
 
 Yeni bir güncelleme çıkar çıkmaz aşağıdaki bilgileri alacaksınız:
 
-![Update info](../images/AAPS_LoopDisable90days.png)
+![Update info](../images/AAPS_LoopLGS60days.png)
+
+
 
 O zaman güncellemek için 60 gününüz var. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
 
 30 gün daha güncelleme yapmazsanız (yeni yayın tarihinden 90 gün sonra) AAPS, Açık Döngüye geçecektir.
+
+![Update info](../images/AAPS_LoopDisable90days.png)
 
 Lütfen bu değişikliğin sizi rahatsız etmeyi amaçlamadığını, ancak güvenlik nedenlerinden kaynaklandığını anlayın. AAPS'nin yeni sürümleri yalnızca yeni özellikler sağlamakla kalmaz, aynı zamanda önemli güvenlik düzeltmeleri de sağlar. Bu nedenle, her kullanıcının mümkün olan en kısa sürede güncelleme yapması gerekir.. Ne yazık ki hala çok eski sürümlerden hata raporları var. Bu nedenle bu uyarı, her bir kullanıcı ve genel DIY topluluğu için güvenliği artırma girişimidir. Anlayışınız için teşekkür ederiz.
 
@@ -21,7 +25,10 @@ Lütfen bu değişikliğin sizi rahatsız etmeyi amaçlamadığını, ancak güv
 Bu yayımların kronolojisi şu anda mevcut değil, ancak bu sorular birçok kez sorulduğu için burada dokümante ediyoruz.
 
 ```
+![AAPS 1.0](../images/update/AAPS1.0.png)
+
 (maintenance-android-version-aaps-version)=
+
 ## Android sürümü ve AAPS sürümü
 
 Akıllı telefonunuz Android 9'dan daha eski bir Android Sürümü kullanıyorsa, en az Android 9 gerektirdiğinden AAPS v3 ve sonraki sürümleri kullanamazsınız.
@@ -51,6 +58,10 @@ Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmas
 ## WearOS versiyonu
 
 - AAPS requires at least WearOS API level 28 (Android 9)
+
+```{tip}
+WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
+```
 
 (version3300)=
 ## Version 3.3.0.0
