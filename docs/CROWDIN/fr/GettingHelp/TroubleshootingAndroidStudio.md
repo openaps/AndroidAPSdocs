@@ -3,23 +3,23 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Fichier de clés perdu
-If you use the same keystore when updating AAPS you do not have to uninstall the previous version on your smartphone. C'est pourquoi il est recommandé de stocker le fichier de clés dans un dossier de sauvegarde sûr.
+Si vous utilisez le même fichier de clés lors de la mise à jour d'AAPS, vous n'avez pas besoin de désinstaller la version précédente sur votre smartphone. C'est pourquoi il est recommandé de stocker le fichier de clés dans un dossier de sauvegarde sûr.
 
 Si vous essayez d'installer l'apk, signé avec un fichier de clés différent de celui d'avant, vous recevrez un message d'erreur indiquant que l'installation a échoué!
 
 Si vous ne trouvez plus votre ancien fichier de clés ou son mot de passe, procédez comme suit :
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) on your phone.
+1. [Exportez les paramètres](../Maintenance/ExportImportSettings.md) sur votre ancien téléphone.
 2. Copiez le fichier de configuration de votre téléphone vers un emplacement externe (par ex. votre ordinateur, un service cloud...).
-4. Generate signed apk of new version as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
-5. Désinstaller la précédente version de AAPS sur votre téléphone.
+4. Générez l'apk signé de la nouvelle version comme décrit dans le [Guide de mise à jour](../Maintenance/UpdateToNewVersion) et transférez-le sur votre téléphone.
+5. Désinstallez la précédente version de AAPS sur votre téléphone.
 6. Installez la nouvelle version de AAPS sur votre téléphone.
-7. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+7. [Importez les paramètres](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) pour restaurer vos objectifs et votre configuration.
 
    Si vous ne pouvez pas les trouver sur votre téléphone, copiez les depuis le stockage externe vers votre téléphone.
 
 8. Vérifiez vos options d'optimisation de la batterie et désactivez-les à nouveau.
-9. Keep on looping.
+9. Continuez à boucler.
 
 ## Gradle Sync en échec
 Gradle Sync peut échouer pour diverses raisons. Quand vous recevez un message indiquant que la synchronisation gradle a échouée, ouvrez l'onglet "Build" (1) en bas d'Android Studio et vérifiez quel message d'erreur (2) est affiché.
@@ -32,7 +32,7 @@ Ci-dessous les échecs courants de synchronisation de gradle :
 * [Incompatible Gradle JVM](#incompatible-gradle-jvm)
 * [Incompatible version of the Android Gradle plugin](#incompatible-version-of-android-gradle-plugin)
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*Important*: Après avoir suivi les instructions pour votre problème spécifique, vous devez déclencher la [synchronisation gradle](#gradle-resync) à nouveau.
 
 (troubleshooting_androidstudio-uncommitted-changes)=
 ### Uncommitted changes
@@ -51,7 +51,7 @@ Si vous recevez un message d'erreur comme ceci
 
     Note : Il y a un espace et deux traits d'union entre git et version !
 
-  * Vous devez recevoir un message indiquant quelle version de git est installée, comme vous pouvez le voir dans la capture d'écran ci-dessus. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
+  * Vous devez recevoir un message indiquant quelle version de git est installée, comme vous pouvez le voir dans la capture d'écran ci-dessus. Dans ce cas, allez à l'[étape 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
   * Dans le cas où vous recevez un message disant
     ```
@@ -87,22 +87,22 @@ Si vous recevez un message d'erreur comme ceci
 
       ![Onglet de commit : Restaurer les modifications](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * Les fichiers sont récupérés à nouveau depuis le serveur Git. If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+    * Les fichiers sont récupérés à nouveau depuis le serveur Git. S'il n'y a pas d'autres changements dans l'onglet commit, allez à l'[étape 3](#gradle-resync).
 
   * Si vous pouvez voir "Unversioned Files", vous pouvez avoir stocké des fichiers dans votre répertoire soure qui devraient être ailleurs, par ex. votre fichier de de clés.
 
     * Utilisez votre explorateur de fichiers habituel sur votre ordinateur pour déplacer ou couper et coller ce(s) fichier(s) à un autre endroit.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AAPS directory anymore.
+    * Retournez à Android Studio et cliquez sur le bouton Refresh (4) dans l'onglet Commit pour vous assurer que le fichier n'est plus stocké dans le répertoire AAPS.
 
-      If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+      S'il n'y a pas d'autres changements dans l'onglet commit, allez à l'[étape 3](#gradle-resync).
 
 
 (troubleshooting_androidstudio-step-3-gradle-resync)=
 
 #### Étape 3 : Resynchroniser Gradle (encore)
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+Suivez les instructions de [Resynchronisation Gradle](#gradle-resync).
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
@@ -123,7 +123,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
 * Close the **Settings** dialog with **OK**.
-* You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](#gradle-resync).
+* You now need to restart the Gradle Sync. Suivez les instructions de [Resynchronisation Gradle](#gradle-resync).
 
 (incompatible-version-of-android-gradle-plugin)=
 ### Incompatible version of Android Gradle plugin
@@ -152,7 +152,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
-  Si vous voyez un message d'erreur ci-dessous, vous utilisez probablement un système Windows 10 32 bits. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about!
+  Si vous voyez un message d'erreur ci-dessous, vous utilisez probablement un système Windows 10 32 bits. Ceci n'est pas pris en charge par Android Studio 3.5.1 et plus et il n'y a malheureusement rien que le développeur d'AAPS ne puisse faire!
 
   There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
@@ -250,4 +250,4 @@ Dans le cas où même construire l'application à partir de rien ne résout pas 
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
+Installez Android Studio à partir de zéro comme c'est décrit [ici](#Building-APK-install-android-studio).
