@@ -339,7 +339,7 @@ Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout
 
 現在我們進入設定嚮導中的一個非常重要的部分。
 
-Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
+在嘗試在下一個畫面中輸入你的個人設置詳細資訊之前，請閱讀關於[個人設置](../SettingUpAaps/YourAapsProfile.md)的文件。
 
 ```{admonition} Working profile required - no exceptions here !
 :class: 危險
@@ -366,20 +366,20 @@ Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.
 不要用它進行實際循環！
 ```
 
-Enter your [Duration of insulin Action (DIA)](#your-aaps-profile-duration-of-insulin-action) in hours. 然後按“IC”：
+請輸入你的[胰島素作用時間 (DIA)](#your-aaps-profile-duration-of-insulin-action)，以小時為單位。 然後按“IC”：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_142143.png)
 
-Enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values:
+請輸入你的[胰島素與碳水化合物比例 (IC)](#your-aaps-profile-insulin-to-carbs-ratio)值：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_142903.png)
 
-按“ISF”。 Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
+按“ISF”。 請輸入你的[胰島素敏感度係數 (ISF)](#your-aaps-profile-insulin-sensitivity-factor)值：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_143009.png)
 
 
-按“基礎速率”。 Enter your [basal values](#your-aaps-profile-basal-rates):
+按“基礎速率”。 請輸入你的[基礎胰島素值](#your-aaps-profile-basal-rates)：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_143623.png)
 
@@ -469,7 +469,7 @@ Enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values:
 
 選擇OpenAPS SMB演算法作為你的APS演算法。 即使有這個名稱，SMB功能在你熟悉 **AAPS** 並完成第一階段目標之前是停用的。 無論如何，OpenAPS SMB 相較於 OpenAPS AMA 更新且通常效果更好。
 
-在初期，你的設定檔案通常不如經驗豐富後好，所以這個功能在初期被停用。 As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
+在初期，你的設定檔案通常不如經驗豐富後好，所以這個功能在初期被停用。 因為一開始系統設定的精準度通常不如使用一段時間後那麼高，因此該功能在初期會預設關閉。
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: 資訊
@@ -499,7 +499,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 ### 敏感度偵測
 
-Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
+讓「敏感度 Oref1」成為所選敏感度外掛的標準。
 
 按“下一步”進入下一個螢幕：
 
