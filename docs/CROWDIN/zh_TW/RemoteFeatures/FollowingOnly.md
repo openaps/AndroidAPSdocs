@@ -206,18 +206,18 @@ SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次�
 * SugarPixel 的 xolour 錶盤利用整個顯示屏顯示代表 BG 值的單一顏色。 這使得用戶可以在戶外的後院、露台或游泳池旁，透過窗戶從遠處看到血糖讀取值。
 * 大 BG 錶盤對於戴眼鏡或隱形眼鏡的床頭櫃用戶來說特別有用。
 
-### Nightscout Clock on Ulanzi TC001
+### Nightscout 錶鐘在 Ulanzi TC001 上
 
-**Nightscout Clock** is an open source software running on the **Ulanzi TC001** device. It connects with Dexcom servers or Nightscout and displays real time blood sugar readings.
+**Nightscout 錶鐘** 是一個開源軟體，運行於**Ulanzi TC001** 裝置上。 它可以連接到 Dexcom 伺服器或 Nightscout，並實時顯示血糖讀數。
 
-![Following Nightscout Clock](../images/FollowingNightscoutClock.png)
+![追蹤 Nightscout 錶鐘](../images/FollowingNightscoutClock.png)
 
-* The clock supports both mmol/L and mg/dL units, and includes audible alarms.
-* Several display available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
-* Setting up and configuring the device involves just a few simple steps. Once set up, it only requires power and Wi-Fi to function.
-* The Ulanzi TC001 device is significantly cheaper than the SugarPixel to buy.
-* The software along with installation instructions can be found on [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
-* It is developed and maintained by Artiom Kenibasov, offering support on the [Facebook AAPS Users group](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/).
+* 這個錶鐘支援 mmol/L 和 mg/dL 單位，並包含可聽到的警報。
+* 提供多種顯示方式，詳見[Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) 以獲取總覽。
+* 設定和配置裝置只需幾個簡單步驟。 一旦設置完成，只需供電和 Wi-Fi 即可運行。
+* Ulanzi TC001 裝置的購買價格顯著低於 SugarPixel。
+* 軟體及安裝說明可以在[Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file)上找到。
+* 它由 Artiom Kenibasov 開發和維護，並在[Facebook AAPS 使用者群組](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/)上提供支援。
 
 ### PC（TeamViewer）
 一些用戶發現像[TeamViewer](https://www.teamviewer.com/)這樣的完整遠端桌面工具對於進行進階的遠端問題排除非常有幫助。
