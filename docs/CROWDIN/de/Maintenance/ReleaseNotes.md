@@ -5,11 +5,15 @@ Please follow the instructions in the [update manual](UpdateToNewVersion). Auf d
 
 Folgende Information wird angezeigt, sobald ein neues Update zur Verfügung steht:
 
-![Update-Info](../images/AAPS_LoopDisable90days.png)
+![Update-Info](../images/AAPS_LoopLGS60days.png)
+
+
 
 Dann hast Du 60 Tage Zeit, das Update durchzuführen. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
 
 Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualisierst, wird AAPS auf Open Loop wechseln.
+
+![Update-Info](../images/AAPS_LoopDisable90days.png)
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AAPS bieten nicht nur neue Funktionen, sondern beheben auch wichtige Sicherheitsprobleme. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
@@ -21,7 +25,10 @@ Die erste Testversion gab es bereits 2015. In 2016 wurde dann das erste Release 
 Da die Releasefolge und deren Veröffenlichungszeitpunkte immer wieder erfragt werden, haben wir diese hier - sofern verfügbar - zusammengetragen.
 
 ```
+![AAPS 1.0](../images/update/AAPS1.0.png)
+
 (maintenance-android-version-aaps-version)=
+
 ## Android Version und AAPS Version
 
 Wenn die Android Version Deines Smartphones älter als 9 ist, kannst Du nicht auf AAPS 3.0.0 updaten, da dieses mindestens Android 9 erfordert.
@@ -51,6 +58,10 @@ Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zw
 ## Wear OS-Version
 
 - AAPS requires at least WearOS API level 28 (Android 9)
+
+```{tip}
+WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
+```
 
 (version3300)=
 ## Version 3.3.0.0
