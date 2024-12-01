@@ -5,11 +5,15 @@
 
 當有新版本可用時，你將收到以下資訊：
 
-![更新資訊](../images/AAPS_LoopDisable90days.png)
+![更新資訊](../images/AAPS_LoopLGS60days.png)
+
+
 
 之後，你有 60 天的時間進行更新。 如果你在這 60 天內沒有更新，AAPS 將會降級到 LGS 模式（低血糖暫停，請參閱[詞彙表](../UsefulLinks/Glossary.md)），如[目標 6](#objectives-objective6)中所述。
 
 如果你在新版本發布後 90 天內未更新，AAPS 將切換到開放循環模式。
+
+![更新資訊](../images/AAPS_LoopDisable90days.png)
 
 請暸解，這一變更不是為了打擾你，而是出於安全原因。 AAPS 的新版本不僅提供了新功能，還包括重要的安全修復。 因此，必須儘快讓每個用戶更新到最新版本。 不幸的是，我們仍然收到來自非常舊版本的錯誤報告，所以這是為了提升每個用戶以及整個 DIY 社群的安全性。 感謝你的暸解。
 
@@ -21,7 +25,10 @@
 目前無法提供這些版本的時間順序紀錄，但由於這個問題被多次詢問，我們將在此紀錄。
 
 ```
+![AAPS 1.0](../images/update/AAPS1.0.png)
+
 (maintenance-android-version-aaps-version)=
+
 ## Android 版本與 AAPS 版本
 
 如果你的手機使用的是 Android 9 以下的版本，你將無法使用 AAPS v3 及以上版本，因為這些版本至少需要 Android 9。
@@ -50,7 +57,11 @@
 
 ## WearOS 版本
 
-- AAPS requires at least WearOS API level 28 (Android 9)
+- AAPS 需要至少 WearOS API 等級 28（Android 9）
+
+```{tip}
+WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
+```
 
 (版本3300)=
 ## 版本 3.3.0.0

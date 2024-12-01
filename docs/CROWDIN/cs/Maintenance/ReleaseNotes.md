@@ -5,11 +5,15 @@ Please follow the instructions in the [update manual](UpdateToNewVersion). Na st
 
 Jakmile bude k dispozici nová aktualizace, obdržíte následující informace:
 
-![Informace o aktualizaci](../images/AAPS_LoopDisable90days.png)
+![Informace o aktualizaci](../images/AAPS_LoopLGS60days.png)
+
+
 
 Pak máte 60 dnů na aktualizaci. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
 
 Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde AAPS na otevřenou smyčku.
+
+![Informace o aktualizaci](../images/AAPS_LoopDisable90days.png)
 
 Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Proto je nezbytně důležité, aby všichni uživatelé aktualizovali AAPS. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
 
@@ -21,7 +25,10 @@ První testovací verze byla spuštěna již v roce 2015. V roce 2016 byla vydá
 Chronologie těchto vydání momentálně není k dispozici, ale protože je tato otázka kladena často, zodpovídáme ji zde.
 
 ```
+![AAPS 1.0](../images/update/AAPS1.0.png)
+
 (maintenance-android-version-aaps-version)=
+
 ## Verze Androidu a verze AAPS
 
 Pokud váš telefon používá verzi Androidu starší než 9, nebudete moct používat AAPS verze 3 a vyšší, protože ty vyžadují minimálně Android 9.
@@ -51,6 +58,10 @@ Aby bylo uživatelům se starším Androidem umožněno používat starší verz
 ## Verze pro WearOS
 
 - AAPS requires at least WearOS API level 28 (Android 9)
+
+```{tip}
+WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
+```
 
 (version3300)=
 ## Version 3.3.0.0

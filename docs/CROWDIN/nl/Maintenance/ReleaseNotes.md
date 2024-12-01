@@ -5,11 +5,15 @@ Please follow the instructions in the [update manual](UpdateToNewVersion). Daar 
 
 Zodra een nieuwe update beschikbaar is zie je de volgende melding:
 
-![Update info](../images/AAPS_LoopDisable90days.png)
+![Update info](../images/AAPS_LoopLGS60days.png)
+
+
 
 Dan heb je 60 dagen om bij te werken. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
 
 Als je daarna nog eens 30 dagen wacht met bijwerken (dus 90 dagen vanaf de datum dat de nieuwe versie beschikbaar kwam) zal AAPS overschakelen naar Open Loop.
+
+![Update info](../images/AAPS_LoopDisable90days.png)
 
 Deze harde beperkingen zijn uiteraard niet bedoeld om je te pesten, maar zijn er om veiligheidsredenen. New versions of AAPS do not only provide new features but also important safety fixes. Therefore it is necessary that every user updates a.s.a.p.. Helaas zijn er nog steeds signalen dat sommige gebruikers een hele oude versie van hun app gebruiken, dus dit is een poging om de veiligheid voor individuele gebruikers en de hele doe-het-zelf loop-gemeenschap te verbeteren.
 
@@ -21,7 +25,10 @@ The first test version started already in 2015. In 2016 has been the first relea
 The chronology of these releases is not available at the moment but as this questions is asked severeal times we document it here.
 
 ```
+![AAPS 1.0](../images/update/AAPS1.0.png)
+
 (maintenance-android-version-aaps-version)=
+
 ## Android version and AAPS version
 
 If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
@@ -51,6 +58,10 @@ In order to allow users with older Android to use older version of AAPS new vers
 ## WearOS version
 
 - AAPS requires at least WearOS API level 28 (Android 9)
+
+```{tip}
+WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
+```
 
 (version3300)=
 ## Version 3.3.0.0
