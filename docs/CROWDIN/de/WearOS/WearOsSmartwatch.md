@@ -4,13 +4,20 @@ The instructions below apply to the **AAPS Wear** apk that you need to build (se
 
 You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk that are directly available in [GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4). Each **Wear** app will communicate with its matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data.
 
+(BuildingAapsWearOs-WearOS5)=
+
+```{admonition} Android Wear OS 5
+:class: warning
+Installing the AAPS Watch Face has to be done with [Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk) after installing the Wear app.<br>
+Accidental change of the Watch Face to another one requires the procedure above to be repeated.<br>
+Changing the dedicated Watch Face parameters like: Dark, Watchdivider, etc. is not possible.
+```
+
 ## How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
 
 This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
 
 _This guide assumes the Samsung Galaxy watch you are setting up is running Wear OS version 3 or lower._ If you are setting up a watch running Wear OS 4/OneUI 5 or later, you will need to use a new ADB pairing process, this is explained in the Samsung software on your phone and will be updated here in due course.
-
-**Do not to upgrade your watch to Wear OS 5** (Android 14) that is not fully supported.
 
 Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
@@ -20,7 +27,7 @@ After basic setup of your watch according to the video above, go to the playstor
 
 There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
 
-https://www.youtube.com/watch?v=tSVkqWNmO2c
+[https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
 The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install a further 3rd app “galaxy watch 4 plugin” from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
 
@@ -46,6 +53,10 @@ You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto th
  ![grafik](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
 Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+
+```{tip}
+For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk).
+```
 
 This provides all the necessary detail (best to open the video on a separate device so you can watch it whilst setting up the phone).
 
