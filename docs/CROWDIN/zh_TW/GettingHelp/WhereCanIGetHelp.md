@@ -10,7 +10,7 @@
 * 第4級：建立一個[問題](https://github.com/nightscout/AndroidAPS/issues)並附上您的[日誌檔案](../GettingHelp/AccessingLogFiles.md)
 * 第五層：發送電子郵件至 *developers@androidaps.org*（僅限涉及個人資料且未能在其他層面解決問題時使用）
 
-對於 CGM 來源的支援，請加入 Facebook 群組或該特定系統的 Discord 頻道（例如[xdrip](https://www.facebook.com/groups/xDripG5/)，[600系列上載器](https://www.facebook.com/groups/NightscoutForMedtronic/)），或對於 Nightscout 的支援，請加入[CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/)，因為那裡的使用者對於不同系統會有更深入的專業知識。
+For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xDrip+](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
 
 ## 務必加入 AndroidAPS 用戶群組 Facebook！
 
@@ -32,28 +32,31 @@
 
 ### 捷克和斯洛伐克
 
-* [DanaR, Insight 和 AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/)：講捷克語的 AndroidAPS 用戶
+* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech-speaking users of AndroidAPS
+
+### France
+
+* [DIY AndroidAPS, parents d'enfants Dt1](https://www.facebook.com/groups/262497886779069) : French support group for AAPS for children
 
 ### 德國
 
 * [開源 Looper 社群](https://de.loopercommunity.org/)：德國開源閉環社群，討論糖尿病、交流、支援和本地聚會
-* [Looper 會議德國、奧地利和瑞士](https://de.loopercommunity.org/c/veranstaltungen/l/calendar)
-* [Freestyle Libre Freaks Facebook 群組](https://www.facebook.com/groups/FreestyleLibreFreaks/)：作為 CGM/FGM 的 Libre
-* [NightscoutDE Facebook 群組](https://www.facebook.com/groups/nightscoutDE/)
+* [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
+* [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
 
-### 荷蘭
+### Netherlands
 
-* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893)：講荷蘭語的 OpenAPS、Loop 和 AndroidAPS 用戶
-* [雲端中的 CGM 荷蘭](https://www.facebook.com/groups/1764754560436596)
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch-speaking users of OpenAPS, Loop and AndroidAPS
+* [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
 
-### 波蘭
+### Poland
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl)：波蘭 AAPS 社群與糖尿病支援群組
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group)
 
-### 瑞典
+### Sweden
 
-* [Looped 瑞典](https://www.facebook.com/groups/661514380864081/)（位於瑞典的 OpenAPS、Loop 和 AndroidAPS 用戶）
+* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
 
-### 英國
+### UK
 
-* [Looped 英國](https://www.facebook.com/groups/LoopedUK/)（位於英國的 OpenAPS、Loop 和 AndroidAPS 用戶）
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
