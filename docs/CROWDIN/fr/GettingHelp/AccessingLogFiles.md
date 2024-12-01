@@ -3,7 +3,7 @@
 # Accès aux fichiers log
 
 * Connecter le téléphone à un ordinateur en mode de transfert de fichiers
-* Locate the log files in the AAPS data directory
+* Localiser les fichiers journaux dans le répertoire de données AAPS
     
     * (2.8.2) Le dossier sera à un emplacement similaire à ***Stockage interne(1) / Android / data / info.nightscout.androidaps / files***
     * (3.0.0) Le dossier sera à un emplacement similaire à ***Stockage interne(1) / AAPS / logs***
