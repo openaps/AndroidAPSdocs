@@ -10,7 +10,7 @@ This project is based on volunteer work so some rules apply to avoid extra work 
 * level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md)
 * 5. úroveň: zašlete email na *developers@androidaps.org* (jedině pokud obsahuje osobní údaje, které by neměly jít na veřejnost, a vaše problémy ještě nebyly vyřešeny v předchozích úrovních)
 
-For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
+For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xDrip+](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
 
 ## Make sure to join the AndroidAPS users group on Facebook!
 
@@ -32,28 +32,31 @@ Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/190019
 
 ### Česko a Slovensko
 
-* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Česky mluvící uživatelé AndroidAPS
+* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech-speaking users of AndroidAPS
+
+### France
+
+* [DIY AndroidAPS, parents d'enfants Dt1](https://www.facebook.com/groups/262497886779069) : French support group for AAPS for children
 
 ### Německo
 
 * [Open Source Looper Community](https://de.loopercommunity.org/): Německá looper komunita pro Open Source Loop, diabetes obecně, komunikaci, podporu a místní setkání
-* [Looper Meetings Germany, Austria & Switzerland](https://de.loopercommunity.org/c/veranstaltungen/l/calendar)
 * [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
-* [NightscoutDE Facebooková skupina](https://www.facebook.com/groups/nightscoutDE/)
+* [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
 
-### Nizozemsko
+### Netherlands
 
-* [Looped-NL](https://www.facebook.com/groups/117102135652893): Holandsky mluvící uživatelé OpenAPS, Loop a AndroidAPS
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch-speaking users of OpenAPS, Loop and AndroidAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
 
 ### Poland
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabates support group)
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group)
 
-### Švédsko
+### Sweden
 
-* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Uživatelé OpenAPS, Loop a AndroidAPS ze Švédska)
+* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
 
-### Velká Británie
+### UK
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (Uživatelé OpenAPS, Loop a AndroidAPS z Británie)
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
