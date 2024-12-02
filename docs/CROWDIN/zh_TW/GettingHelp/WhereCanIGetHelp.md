@@ -42,21 +42,21 @@ For support on CGM sources please use the Facebook groups or discord channels fo
 
 * [開源 Looper 社群](https://de.loopercommunity.org/)：德國開源閉環社群，討論糖尿病、交流、支援和本地聚會
 * [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
-* [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
+* [NightscoutDE Facebook 群組](https://www.facebook.com/groups/nightscoutDE/)
 
-### Netherlands
+### 荷蘭
 
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch-speaking users of OpenAPS, Loop and AndroidAPS
-* [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
+* [雲端 CGM 荷蘭語版](https://www.facebook.com/groups/1764754560436596)
 
-### Poland
+### 波蘭
 
 * [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group)
 
-### Sweden
+### 瑞典
 
-* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
+* [Looped 瑞典](https://www.facebook.com/groups/661514380864081/)（位於瑞典的 OpenAPS、Loop 和 AndroidAPS 用戶）
 
-### UK
+### 英國
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
+* [Looped 英國](https://www.facebook.com/groups/LoopedUK/)（位於英國的 OpenAPS、Loop 和 AndroidAPS 用戶）
