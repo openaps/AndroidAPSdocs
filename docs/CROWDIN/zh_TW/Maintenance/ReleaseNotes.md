@@ -72,7 +72,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 - 在更新前將舊的 ruffy 進行移轉到新的原生 Combo 驅動程式
 - 個人設置切換百分比現在將計入動態敏感度強度中
-- For DynamicISF average ISF of last 24h is calculated and this value is used for bolus wizard a COB calculation. Profile ISF value is not used at all (except fallback when history data is not available)
+- 對於 DynamicISF，過去 24 小時的平均 ISF 被計算出並用於注射嚮導的 COB 計算。 設定檔中的 ISF 值完全未被使用（除非在歷史資料不可用時作為備用）
 
 ### 變更
 
@@ -107,7 +107,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 - 無人值守匯出 @vanelsberg
 - 從自動化操作中檢視功能塊 @Philoul
 - 結合來自 AAPS、AAPSClient 和 AAPSClient2 的手錶錶盤，以監控更多患者 @Philoul @MilosKozak
-- EXTRA: show_user_actions_on_watch_only @MilosKozak
+- 附註：僅在手錶上顯示用戶操作 @MilosKozak
 
 (version3200)=
 ## 3.2.0.0 版本獻給 @Philoul
