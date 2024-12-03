@@ -397,7 +397,7 @@ You need at least start [objective 11 (in later versions objective 10!)](#object
 - [new SMS TOTP authentication](../RemoteFeatures/SMSCommands.md) @dlvoy
 - [new SMS PUMP CONNECT, DISCONNECT](#SMSCommands-commands) commands @Lexsus
 - Bessere Unterstützung niedriger Basalraten bei Dana Pumpen @Mackwe
-- Small Fehlerbehebungen für Insight Pumpen @TebbeUbben @MilosKozak
+- Kleine Fehlerbehebungen für Insight Pumpen @TebbeUbben @MilosKozak
 - ["Default language" option](#Preferences-general) @MilosKozak
 - Vector Icons @Philoul
 - [set neutral temps for MDT pump](#MedtronicPump-configuration-of-the-pump) @Tornado-Tim
