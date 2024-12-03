@@ -108,6 +108,7 @@ Release date: XX-XX-202X
 - Watch tiles from Automation actions @Philoul
 - Combined watchfaces from AAPS, AAPSClient and AAPSClient2 to monitor more patients @Philoul @MilosKozak
 - EXTRA: show_user_actions_on_watch_only @MilosKozak
+- ConfigBuilder layout improvent @MilosKozak
 
 (version3200)=
 ## Verze 3.2.0.0 věnována @Philoul
