@@ -72,6 +72,7 @@ Release date: XX-XX-202X
 
 - migrate to new native Combo driver from ruffy before update
 - profile switch percentage is now taken into a count for dynamic sensitivity strengthness
+- For DynamicISF average ISF of last 24h is calculated and this value is used for bolus wizard a COB calculation. Profile ISF value is not used at all (except fallback when history data is not available)
 
 ### Änderungen
 
@@ -106,6 +107,7 @@ Release date: XX-XX-202X
 - Unattended exports @vanelsberg
 - Watch tiles from Automation actions @Philoul
 - Combined watchfaces from AAPS, AAPSClient and AAPSClient2 to monitor more patients @Philoul @MilosKozak
+- EXTRA: show_user_actions_on_watch_only @MilosKozak
 
 (version3200)=
 ## Version 3.2.0.0 ist @Philoul gewidmet
@@ -395,7 +397,7 @@ You need at least start [objective 11 (in later versions objective 10!)](#object
 - [new SMS TOTP authentication](../RemoteFeatures/SMSCommands.md) @dlvoy
 - [new SMS PUMP CONNECT, DISCONNECT](#SMSCommands-commands) commands @Lexsus
 - Bessere Unterstützung niedriger Basalraten bei Dana Pumpen @Mackwe
-- Small Fehlerbehebungen für Insight Pumpen @TebbeUbben @MilosKozak
+- Kleine Fehlerbehebungen für Insight Pumpen @TebbeUbben @MilosKozak
 - ["Default language" option](#Preferences-general) @MilosKozak
 - Vector Icons @Philoul
 - [set neutral temps for MDT pump](#MedtronicPump-configuration-of-the-pump) @Tornado-Tim

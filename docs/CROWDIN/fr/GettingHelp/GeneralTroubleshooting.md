@@ -2,9 +2,9 @@
 
 Vous pouvez trouver des informations de dépannage sur de nombreuses pages dans le wiki. Cette page est une collection de liens pour vous aider à trouver les informations nécessaires pour résoudre votre problème.
 
-Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
+D'autres informations utiles peuvent également être disponibles dans la [FAQ](../UsefulLinks/FAQ.md).
 
-## AAPS app
+## Application AAPS
 
 ### Génération et mise à jour
 
@@ -106,4 +106,4 @@ Voici des exemples pour les trouver sur des téléphones Android spécifiques.
 
 ## Montres connectées
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
+* [Dépannage de l'application Wear](#Watchfaces-troubleshooting-the-wear-app)
