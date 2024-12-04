@@ -108,6 +108,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 - 從自動化操作中檢視功能塊 @Philoul
 - 結合來自 AAPS、AAPSClient 和 AAPSClient2 的手錶錶盤，以監控更多患者 @Philoul @MilosKozak
 - 附註：僅在手錶上顯示用戶操作 @MilosKozak
+- ConfigBuilder layout improvent @MilosKozak
 
 (version3200)=
 ## 3.2.0.0 版本獻給 @Philoul
