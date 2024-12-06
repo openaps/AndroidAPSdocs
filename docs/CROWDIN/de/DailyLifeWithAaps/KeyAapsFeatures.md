@@ -31,7 +31,7 @@ SMBs are shown on the main graph with blue triangles. Tap on the triangle to see
 1. **Largest single SMB dose**  
     The largest single SMB dose can only be the smallest value of:
     
-    - Wert, der der aktuellen Basalrate (wie sie autosens angepasst haben) für die unter “SMB-Basal-Limit in Minuten” voreingestellte Dauer entspricht, z.B. Basalmenge der kommenden 30 Minuten, oder
+    - Wert, der der aktuellen Basalrate (wie sie Autosens angepasst hat) für die unter „SMB-Basal-Limit in Minuten“ voreingestellte Dauer entspricht, z.B. Basalmenge der kommenden 30 Minuten, oder
     - die Hälfte der aktuell benötigten Insulinmenge oder
     - der verbleibende Anteil deines maxIOB-Wertes in den Einstellungen.
 
@@ -125,7 +125,7 @@ If this setting is enabled, **SMB** will only be enabled with a high temp target
 
 If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). Wenn diese Einstellung aktiviert ist, sind die übrigen Bedingungen ohne Einfluss und werden nicht berücksichtigt. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
 
-Diese Option ist nur für Sensorsysteme, die gut gefilterte (nicht rauschende /springende) Glukosewerte liefert, verfügbar.
+Diese Option ist nur für Sensorsysteme, die gut gefilterte (nicht rauschende/springende) Glukosewerte liefert, verfügbar.
 
 - Currently, it is only available with a Dexcom G5 or G6, if using the [Build your own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “[native mode](#smoothing-xdrip-dexcom-g6)” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value 5 minutes later.
 - For other CGM/FGM like Freestyle Libre, **SMB always** is deactivated until there is a better noise smoothing plugin. 
@@ -143,7 +143,7 @@ Wenn diese Option eingeschaltet ist, werden SMBs bei einem beliebigen gesetzten 
 
 Bei eingeschalter Option, sind SMBs für einen Zeitraum von 6h ab dem Zeitpunkt für den KH angekündigt sind aktiv, auch wenn COB mittlerweile 0 ist (keine aktiven KH mehr vorhanden sind).
 
-Diese Option ist nur für Sensorsysteme, die gut gefilterte (nicht rauschende /springende) Glukosewerte liefert, verfügbar.
+Diese Option ist nur für Sensorsysteme, die gut gefilterte (nicht rauschende/springende) Glukosewerte liefert, verfügbar.
 
 - Currently, it is only available with a Dexcom G5 or G6, if using the [Build your own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “[native mode](#smoothing-xdrip-dexcom-g6)” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value 5 minutes later.
 - For other CGM/FGM like Freestyle Libre, **SMB always** is deactivated until there is a better noise smoothing plugin.

@@ -70,6 +70,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 ### 重要提示
 
+- Android 11 is needed to run this version
 - 在更新前將舊的 ruffy 進行移轉到新的原生 Combo 驅動程式
 - 個人設置切換百分比現在將計入動態敏感度強度中
 - 對於 DynamicISF，過去 24 小時的平均 ISF 被計算出並用於注射嚮導的 COB 計算。 設定檔中的 ISF 值完全未被使用（除非在歷史資料不可用時作為備用）
@@ -79,6 +80,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 - Equil 幫浦驅動程式 @EquilHack
 - Insight 驅動程式重新編寫為 kotlin @Philoul
 - Ottai CGM 來源 @ottai-developer
+- SMB 始終支援 Libre2 和 Libre3（並非所有血糖來源都能正確識別 L2 和 L3）
 - 移除舊的 ruffy 依賴的 Combo 驅動程式
 - 新的內部模組結構 @MilosKozak
 - 將持久性層與主程式碼分離 @MilosKozak

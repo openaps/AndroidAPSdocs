@@ -70,6 +70,7 @@ Release date: XX-XX-202X
 
 ### Wichtige Hinweise
 
+- Android 11 is needed to run this version
 - migrate to new native Combo driver from ruffy before update
 - profile switch percentage is now taken into a count for dynamic sensitivity strengthness
 - For DynamicISF average ISF of last 24h is calculated and this value is used for bolus wizard a COB calculation. Profile ISF value is not used at all (except fallback when history data is not available)
@@ -79,6 +80,7 @@ Release date: XX-XX-202X
 - Equil pump driver @EquilHack
 - Insight driver rewitten to kotlin @Philoul
 - Ottai CGM source @ottai-developer
+- SMB always supported on Libre2 & Libre3 (Not all BG sources can properly identify L2 & L3)
 - removed old ruffy dependent Combo driver
 - new internal modules stucture @MilosKozak
 - split persistence layer from main code @MilosKozak
