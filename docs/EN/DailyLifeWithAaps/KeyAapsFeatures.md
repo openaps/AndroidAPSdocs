@@ -1,4 +1,4 @@
-# OpenAPS features
+# Key AAPS features
 
 (Open-APS-features-autosens)=
 ## Autosens
@@ -113,10 +113,9 @@ If this setting is enabled, **SMB** will only be enabled with a high temp target
 ### Enable SMB always
 If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled. 
 
-For safety reasons, this option is only available for BG sources with a good filtering system for noisy data.
-* Currently, it is only available with a Dexcom G5 or G6, if using the [Build your own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “[native mode](#smoothing-xdrip-dexcom-g6)” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value 5 minutes later.
-* For other CGM/FGM like Freestyle Libre, **SMB always** is deactivated until there is a better noise smoothing plugin. 
-* You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+For safety reasons, this option is not available for FreeStyle Libre 1 due to the risk of infinitely repeating old BG data in case of sensor failure. 
+
+Before enabling this setting, make sure you have a reliable BG source. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Enable SMB with COB
 If this setting is enabled, SMB is enabled when the COB is greater than 0.
@@ -127,10 +126,9 @@ If this setting is enabled, SMB is enabled when there is any temp target set (ea
 ### Enable SMB after carbs
 If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0.
 
-For safety reasons, this option is only available for BG sources with a good filtering system for noisy data.
-* Currently, it is only available with a Dexcom G5 or G6, if using the [Build your own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “[native mode](#smoothing-xdrip-dexcom-g6)” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value 5 minutes later.
-* For other CGM/FGM like Freestyle Libre, **SMB always** is deactivated until there is a better noise smoothing plugin.
-* You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+For safety reasons, this option is not available for FreeStyle Libre 1 due to the risk of infinitely repeating old BG data in case of sensor failure.
+
+Before enabling this setting, make sure you have a reliable BG source. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### How frequently SMBs will be given in min
 This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. 

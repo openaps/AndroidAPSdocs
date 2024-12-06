@@ -195,7 +195,7 @@ The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
 
 Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here.
 
-Long press on the graph to change the timescale. You can choose 6, 12, 18 or 24 hours.
+Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
 
 The green area reflects your target range.
 
@@ -206,10 +206,11 @@ Blue triangles show [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled
 
 On the main graph, you can switch on these optional information:
 * Predictions
+* Treatments
 * Basals
 * Activity - insulin activity curve
 
-To show this information, click the triangle on the right side of the main graph. For the main graph just the three options above the line "------- Graph 1 -------" are available.
+To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph   1 2 3 4" are available.
 
    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
@@ -257,7 +258,7 @@ The **thin yellow** line shows the activity of Insulin.
 It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
 
 (AapsScreens-section-g-additional-graphs)=
-### Section G - additional graphs
+### Section G - Additional graphs
 
 You can activate up to four additional graphs below the main graph.
 
@@ -265,10 +266,10 @@ To open settings for additional graphs click the triangle on the right side of t
 
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
-To add another graph check the box on the left side of its name (i.e. ------- Graph 1 -------).
+To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
 
 Most users find the following configuration of additional graphs to be adequate :
-* Graph 1 with IOB, COB, Sensitivity
+* Graph 1 with IOB, COB, Sensitivity chnge
 * Graph 2 with Deviations and BGI.
 
 #### Absolute insulin
@@ -339,6 +340,8 @@ To give a certain amount of insulin without using the [bolus calculator](#bolus-
 By checking the box **Start eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
 
 If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) check the corresponding box. When checking this box, you get an additional field “Time offset”, that you can use to record an insulin injection made in the past.
+
+The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
 
 You can use the buttons to quickly increase the insulin quantity. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
 

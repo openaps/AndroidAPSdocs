@@ -1,4 +1,4 @@
-# CGMs/FGMs Configuration
+# Compatible CGMs
 
 This section provides a brief overview of all compatible **CGMs/FGMs** with **AAPS**.
 
@@ -20,3 +20,5 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 | [Eversense](../CompatibleCgms/Eversense.md)           | xDrip+ or ESEL/Eversense patched App + MM640g                                |
 | [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md) | xDrip+ or MM640g + 600SeriesAndroidUploader App                              |
 | [PocTech](../CompatibleCgms/PocTech.md)               | PocTech                                                                      |
+| [Ottai](../CompatibleCgms/OttaiM8.md)                 | Ottai                                                                        |
+| [Syai Tag](../CompatibleCgms/SyaiTagX1.md)            | Syai Tag                                                                     |

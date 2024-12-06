@@ -1,5 +1,9 @@
 # Docs updates & changes
 
+## December 2024
+
+- Documentation of [3.3 version](#version3300) @emilise
+
 ## November 2024
 
 - Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
