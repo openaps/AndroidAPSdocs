@@ -64,7 +64,7 @@
 
 
 
-IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
+EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
 - дают значительно **более низкие** **пики** глюкозы, по сравнению с медленными инсулинами
 - **легко переносят** **задержку болюса на пару минут ** при первом приеме пищи, не допуская при этом неприемлемых пиков
@@ -94,9 +94,9 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 #### Гликемический индекс и влияние на глюкозу в крови
 
-Challenge for the UAM mode rises with rising EBG (effect on blood glucose)
+Трудности использования режима непредвиденного приема пищи UAM возрастают с ростом воздействия на ГК
 
-- Start moderate/low, and tune your settings. Inly then, "test" meals with high EBG
+- Начните с умеренного/низкого и подправьте настройки. только затем "испытывайте" на блюдах с высоким влиянием на ГК
 - Consider a < 50% initial bolus if consuming very high EBG
 
 1) **No EBG**: fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**: wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: (sugar-) sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
