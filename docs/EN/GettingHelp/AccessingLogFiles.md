@@ -4,9 +4,10 @@
 * Connect phone to a computer in file transfer mode
 * Locate the log files in the AAPS data directory
 
-   * (2.8.2) The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
-   * (3.0.0) The folder will be at a location similar to ***Internal storage(1) / AAPS / logs***
-   * The naming of the root storage folder (1) may vary a little depending on the phone.
+  * (2.8.2) The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
+  * (3.0.0) The folder will be at a location similar to ***Internal storage(1) / AAPS / logs***
+  * (3.3.0) The folder will be at the location you chose in the [Maintenance tab settings](#preferences-maintenance-settings)
+  * The naming of the root storage folder (1) may vary a little depending on the phone.
 
 ![logs](../images/aapslog.png)
 
