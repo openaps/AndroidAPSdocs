@@ -77,6 +77,7 @@ Release date: XX-XX-202X
 - Equil pump driver @EquilHack
 - Insight driver rewitten to kotlin @Philoul
 - Ottai CGM source @ottai-developer
+- SMB always supported on Libre2 & Libre3 (Not all BG sources can properly identify L2 & L3)
 - removed old ruffy dependent Combo driver
 - new internal modules stucture @MilosKozak
 - split persistence layer from main code @MilosKozak
