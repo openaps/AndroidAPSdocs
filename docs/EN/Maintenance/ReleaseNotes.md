@@ -71,7 +71,7 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
 ### Main features
 
 * Profile switch percentage is now taken into account for dynamic sensitivity strengthness
-* For DynamicISF average ISF of last 24h is calculated and this value is used for bolus wizard a COB calculation. Profile ISF value is not used at all (except fallback when history data is not available)
+* [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB. For DynamicISF average ISF of last 24h is calculated and this value is used for bolus wizard a COB calculation. Profile ISF value is not used at all (except fallback when history data is not available)
 * Enable “SMB always” and “SMB after carbs” for FreeStyle Libre 2 and Libre 3 users
 * New Automation triggers and unattended settings exports
 

@@ -332,11 +332,12 @@ This defines the relative change required to trigger a notification.
 
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
 
-Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between three algorithms:
+Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
-- [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) - released in 2024, available starting at **[Objective 11](#objectives-objective11)**
+
+As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -346,10 +347,6 @@ All the settings for OpenAPS AMA are described in the dedicated section in [Key 
 ### OpenAPS SMB
 
 All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
-
-### Dynamic ISF
-
-All the settings for Dynamic ISF are described in the dedicated section in [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md).
 
 ## Absorption settings
 
@@ -481,22 +478,22 @@ Select which location service shall be used:
 
 Settings should be self-explanatory.
 
-## Data choices
-
-![Data choices](../images/Pref2020_DataChoice.png)
-
-You can help develop **AAPS** further by sending crash reports to the developers.
-
 (preferences-maintenance-settings)=
 ## Maintenance settings
 
 ![Maintenance settings](../images/Pref2020_Maintenance.png)
 
-Standard recipient of logs is <mailto:logs@aaps.app>.
+**Email recipient**: Standard recipient of logs is <mailto:logs@aaps.app>.
 
-![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
+**Data Choices**
+
+![Data choices](../images/Pref2020_DataChoice.png)
+
+You can help develop **AAPS** further by sending crash reports to the developers.
 
 Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
+
+![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
 ## Open Humans
 
