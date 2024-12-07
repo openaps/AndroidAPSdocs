@@ -166,6 +166,8 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 
 ## Action
 
+![Automation Triggers](../images/automation_actions.png)
+
 **Actions:** start **Temp Target**
 
 **Options:** 

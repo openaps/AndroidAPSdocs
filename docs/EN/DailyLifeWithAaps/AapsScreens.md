@@ -139,6 +139,12 @@ Special note for Libre users:
 *Note*:
 Up to 30h hours are taken into accord for **AAPS** calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
+#### Simple mode
+
+An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+
+![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
+
 ### Section D - IOB, COB, BR and AS
 
 ![Section D](../images/Home2020_TBR.png)

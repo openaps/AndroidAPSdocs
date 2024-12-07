@@ -124,6 +124,7 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
   * Check that master password is set and known
 * Random carbs in test mode @MilosKozak
 * Fixed bug in TDD calculation @MilosKozak
+* SMS Commands : allow to [**not** send SMS for profile change](#sms-commands-too-many-messages) coming from NS @MilosKozak
 
 #### Smartwatches
 
