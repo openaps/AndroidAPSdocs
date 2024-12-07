@@ -70,9 +70,9 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
 
 ### Main features
 
-* [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB, along with some changes in its behavior : 
-  * Profile switch percentage is now taken into account for dynamic sensitivity strengthness
-  * The average ISF of last 24h is calculated and this value is used for bolus wizard and COB calculation. Profile ISF value is not used at all (except fallback when history data is not available)
+* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behavior : 
+  * **Profile Switch Percentage** is now taken into account for dynamic sensitivity strengthness
+  * The average ISF of last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
 * Enable “SMB always” and “SMB after carbs” for FreeStyle Libre 2 and Libre 3 users
 * New Automation triggers
 * Unattended settings exports
@@ -81,7 +81,7 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
 
 * Before upgrading: 
   * If you use the “old” Combo driver with ruffy device, migrate to the [native Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) before update
-  * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade : make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
+  * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade: make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
 * After upgrading:
   * Set the new [“AAPS directory” setting](#preferences-maintenance-settings), in the Maintenance tab.
 

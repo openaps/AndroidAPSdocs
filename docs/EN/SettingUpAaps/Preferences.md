@@ -332,7 +332,7 @@ This defines the relative change required to trigger a notification.
 
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
 
-Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+Depending on your settings in [Config builder > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
@@ -388,7 +388,7 @@ Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off bluetoo
 
 ## Pump settings
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](#Config-Builder-pump).  Pair and set your pump up according to the [pump related instructions](../Getting-Started/CompatiblePumps.md).
+The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump).  Pair and set your pump up according to the [pump related instructions](../Getting-Started/CompatiblePumps.md).
 
 ## Tidepool
 

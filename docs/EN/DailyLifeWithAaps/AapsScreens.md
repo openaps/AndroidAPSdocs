@@ -16,7 +16,7 @@ This is the first screen you will come across when you open **AAPS**, and it con
 
 * Navigate between the various **AAPS** modules.
 * Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
 
 ### Section B - Profile & target
 
@@ -519,7 +519,7 @@ Like most of these rules-of-thumb it is of limited real validity. Note: Your dia
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
+This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
 
 The **purple**  line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. 
 
