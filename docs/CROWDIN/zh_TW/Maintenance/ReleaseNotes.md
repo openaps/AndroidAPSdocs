@@ -70,7 +70,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 ### 重要提示
 
-- Android 11 is needed to run this version
+- 需要 Android 11 以上才能執行此版本。
 - 在更新前將舊的 ruffy 進行移轉到新的原生 Combo 驅動程式
 - 個人設置切換百分比現在將計入動態敏感度強度中
 - 對於 DynamicISF，過去 24 小時的平均 ISF 被計算出並用於注射嚮導的 COB 計算。 設定檔中的 ISF 值完全未被使用（除非在歷史資料不可用時作為備用）
