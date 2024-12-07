@@ -95,7 +95,7 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
   * Show reservoir level at start of activation
   * Fix bug where activation returns to start and user cannot finish the activation
   * Feedback for sync status and other clarifications
-* New supported pump : Equil @EquilHack
+* New supported pump : [Equil 5.3](../CompatiblePumps/Equil5.3.md) @EquilHack
 * New supported CGMs : [Ottai](../CompatibleCgms/OttaiM8.md) @ottai-developer and [Syai Tag](../CompatibleCgms/SyaiTagX1.md) @syai-dev
 * Insight driver rewritten to kotlin @Philoul
 * Removed old ruffy dependent Combo driver
