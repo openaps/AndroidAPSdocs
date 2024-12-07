@@ -260,7 +260,7 @@ It is based on the expected drop in BG of the insulin in your system if no other
 (AapsScreens-section-g-additional-graphs)=
 ### Section G - Additional graphs
 
-You can activate up to four additional graphs below the main graph.
+You can activate up to four additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
 
 To open settings for additional graphs click the triangle on the right side of the [main graph](#section-f---main-graph) and scroll down.
 

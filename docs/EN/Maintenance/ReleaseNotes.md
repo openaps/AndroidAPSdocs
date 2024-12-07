@@ -70,10 +70,12 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
 
 ### Main features
 
-* Profile switch percentage is now taken into account for dynamic sensitivity strengthness
-* [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB. For DynamicISF average ISF of last 24h is calculated and this value is used for bolus wizard a COB calculation. Profile ISF value is not used at all (except fallback when history data is not available)
+* [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB, along with some changes in its behavior : 
+  * Profile switch percentage is now taken into account for dynamic sensitivity strengthness
+  * The average ISF of last 24h is calculated and this value is used for bolus wizard and COB calculation. Profile ISF value is not used at all (except fallback when history data is not available)
 * Enable “SMB always” and “SMB after carbs” for FreeStyle Libre 2 and Libre 3 users
-* New Automation triggers and unattended settings exports
+* New Automation triggers
+* Unattended settings exports
 
 ### How to upgrade
 
@@ -83,7 +85,7 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
 * After upgrading:
   * Set the new [“AAPS directory” setting](#preferences-maintenance-settings), in the Maintenance tab.
 
-### Changes
+### Detailed changes
 
 #### CGMs and Pumps
 
@@ -103,24 +105,25 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
 * [Simple mode](#preferences-simple-mode) activated by default on fresh install @MilosKozak
 * New [QuickWizard](#Preferences-quick-wizard) options @radicalb
   * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. You can now use the “carb time” field in QuickWizard  to pre-bolus.
+* New [graph scale menu](#aaps-screens-main-graph); [additional graphs menu](#AapsScreens-activate-optional-information) UI improvements @Philoul
+* [ConfigBuilder layout improvement](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
+  * Sections are now collapsed by default. Use arrow to expand.
 * Variable sensitivity visible in AAPSClient
 * BolusWizard UI improvements @kenzo44
-* Allow for insulin records when pump suspended @jbr77rr
-* New [graph scale menu](#aaps-screens-main-graph); [additional graphs menu](#AapsScreens-activate-optional-information) UI improvements @Philoul
 * Fix text display in pump tabs when using light theme @jbr77rr
-* ConfigBuilder layout improvement @MilosKozak
 
 #### Other functionalities
 
-* Random carbs in test mode @MilosKozak
-* Fixed bug in TDD calculation @MilosKozak
-* Allowing negative carbs entry @MilosKozak
-* New Parameter [“AAPS directory”](#preferences-maintenance-settings) to choose a storage directory different from the default one.
 * Unattended exports @vanelsberg
 * New [Automation triggers](#automations-automation-triggers) @jbr77rr
   * Cannula age, Insulin age, Battery age, Sensor age, Reservoir level, Pump battery level
+* Allowing negative carbs entry @MilosKozak
+* New Parameter [“AAPS directory”](#preferences-maintenance-settings) to choose a storage directory different from the default one.
+* Allow for insulin records when pump suspended @jbr77rr
 * Updated [Objective 2](#objectives-objective2) @MilosKozak
   * Check that master password is set and known
+* Random carbs in test mode @MilosKozak
+* Fixed bug in TDD calculation @MilosKozak
 
 #### Smartwatches
 

@@ -98,6 +98,7 @@ The minimal time to complete this objective: **7 days**. This is a mandatory wai
 - Select Open Loop either from the [Preferences > OpenAPS](#Preferences-aps-mode) menu or by pressing and holding the Loop icon on the top left of the **Overview** screen.
 - Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
 - Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
+- If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objective-3-prove-your-knowledge).
 Additionally, you can change the minimum percentage for recommended basal rate changes. The higher the value, the fewer change notifications you will receive.
