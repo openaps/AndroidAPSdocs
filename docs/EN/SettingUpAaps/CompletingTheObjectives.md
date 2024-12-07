@@ -41,6 +41,7 @@ The **Objectives** will need to be restarted from the beginning should you fail 
 
 Note - *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it.*
 
+(objectives-objective2)=
 ## Objective 2: Learn how to control AAPS
 
 **Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below
@@ -64,6 +65,9 @@ Tasks to complete **Objective 2** are:
 - Display the **Loop** plugin's content.
 - [Scale the BG-Chart](#aaps-screens-main-graph) to be able to look at larger or smaller time frames: toggling between 6h, 12h, 18h 24h of past data.
   - _Hint_: Long press on the chart or use the arrow at the top right.
+- Check that AAPS master password is set and known 
+  - Hint : see [Preferences > Protection](#Preferences-protection).
+
 
 (objectives-objective3)=
 ## Objective 3: Prove your knowledge
@@ -94,6 +98,7 @@ The minimal time to complete this objective: **7 days**. This is a mandatory wai
 - Select Open Loop either from the [Preferences > OpenAPS](#Preferences-aps-mode) menu or by pressing and holding the Loop icon on the top left of the **Overview** screen.
 - Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
 - Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
+- If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objective-3-prove-your-knowledge).
 Additionally, you can change the minimum percentage for recommended basal rate changes. The higher the value, the fewer change notifications you will receive.

@@ -37,55 +37,22 @@
 - In case you want **AAPS** in a different language than your standard phone language, you can choose from a broad variety.
 
 - If you use different languages, you might sometimes see a language mix. This is due to an android issue where overriding the default android language sometimes doesn't work.
+- Setting hidden in [simple mode](#preferences-simple-mode).
+
+(preferences-simple-mode)=
+**Simple mode**
+
+The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
 
 **Patient name**
 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 
-(Preferences-protection)=
-### Protection
-
-![Preferences > General - Protection](../images/Pref2020_General2.png)
-
-(Preferences-master-password)=
-#### Master password
-
-Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
-
-**Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
-
-![Set master password](../images/MasterPW.png)
-
-#### Settings protection
-
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
-
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the preferences.
-
-- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
-
-![Protection](../images/Pref2020_Protection.png)
-
-#### Application protection
-
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
-
-**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
-
-#### Bolus protection
-
-- Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
-
-- In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter thr master password.
-
-![Prompt biometric protection](../images/Pref2020_PW.png)
-
-#### Password and PIN retention
-
-Define how long (in seconds), the preferences or bolus functionalities remain unlocked after you successfully enter the password.
-
 (Preferences-skin)=
 #### Skin
+
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 You can choose from four types of skins:
 
 ![Select skin](../images/Pref2021_SkinWExample.png)
@@ -107,6 +74,48 @@ Difference between the other skins depends on the phone's display orientation:
 
 ![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
+(Preferences-protection)=
+## Protection
+
+![Preferences > General - Protection](../images/Pref2020_General2.png)
+
+(Preferences-master-password)=
+### Master password
+
+Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
+
+**Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+
+![Set master password](../images/MasterPW.png)
+
+### Settings protection
+
+- Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
+
+- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the preferences.
+
+- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
+
+![Protection](../images/Pref2020_Protection.png)
+
+### Application protection
+
+If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
+
+**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
+
+### Bolus protection
+
+- Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
+
+- In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter thr master password.
+
+![Prompt biometric protection](../images/Pref2020_PW.png)
+
+### Password and PIN retention
+
+Define how long (in seconds), the preferences or bolus functionalities remain unlocked after you successfully enter the password.
+
 ## Overview
 
 In the **Overview** section, you can define the preferences for the home screen.
@@ -120,7 +129,8 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 (Preferences-buttons)=
 ### Buttons
 
-- Define which buttons are visible on the bottom of your home screen.
+- Define which buttons are visible on the bottom of your home screen. 
+- Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
 
@@ -149,6 +159,8 @@ The proposal has to be confirmed before insulin is delivered.
 (Preferences-default-temp-targets)=
 ### Default temp targets
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 [Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
 
 Here you can change the target and the duration for each predefined TT. Preset values are:
@@ -163,6 +175,8 @@ Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp
 
 ### Fill/Prime standard insulin amounts
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 If you want to fill the tube or prime cannula through **AAPS** you can do this through the [**Actions** tab](#screens-action-tab).
 
 Pre-set values can be defined in this dialogue. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
@@ -176,6 +190,8 @@ Choose the high and low marks for the BG-graph on **AAPS** overview and smartwat
 
 ### Shorten tab titles
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 Useful to see more tab titles on screen.
 
 For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
@@ -185,12 +201,16 @@ For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc
 (Preferences-show-notes-field-in-treatments-dialogs)=
 ### Show notes field in treatments dialogs
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
 
 ![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
 ### Status lights
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 Status lights give a visual warning for:
 
@@ -222,11 +242,15 @@ In both cases, **AAPS** will compensate for the missing part of the bolus with S
 
 ### Enabled bolus advisor
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 ![Bolus Advisor](../images/BolusAdvisor.png)
 
 When enabled, when you use the bolus wizard as you are in hyperglycemia, you will get a warning, prompting you if you wish to pe-bolus and eat later, when your **BG** gets back in range.
 
 ### Enabled bolus reminder
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 % todo
 
@@ -236,6 +260,8 @@ When enabled, when you use the bolus wizard as you are in hyperglycemia, you wil
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
 #### Superbolus
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 Option to enable superbolus in bolus wizard. 
 
@@ -306,11 +332,12 @@ This defines the relative change required to trigger a notification.
 
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
 
-Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between three algorithms:
+Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
-- [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) - released in 2024, available starting at **[Objective 11](#objectives-objective11)**
+
+As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -321,14 +348,12 @@ All the settings for OpenAPS AMA are described in the dedicated section in [Key 
 
 All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-### Dynamic ISF
-
-All the settings for Dynamic ISF are described in the dedicated section in [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md).
-
 ## Absorption settings
 
 (Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
 
@@ -453,17 +478,22 @@ Select which location service shall be used:
 
 Settings should be self-explanatory.
 
-## Data choices
+(preferences-maintenance-settings)=
+## Maintenance settings
+
+![Maintenance settings](../images/Pref2020_Maintenance.png)
+
+**Email recipient**: Standard recipient of logs is <mailto:logs@aaps.app>.
+
+**Data Choices**
 
 ![Data choices](../images/Pref2020_DataChoice.png)
 
 You can help develop **AAPS** further by sending crash reports to the developers.
 
-## Maintenance settings
+Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
 
-![Maintenance settings](../images/Pref2020_Maintenance.png)
-
-Standard recipient of logs is <mailto:logs@aaps.app>.
+![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
 ## Open Humans
 

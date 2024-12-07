@@ -115,11 +115,14 @@ Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-
 
 It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.  
 
-## Automation Conditions
+(automations-automation-triggers)=
+## Automation Triggers
 
-There are various ‘Conditions’ that can be selected by the user. The list below is non-exhaustive:
+![Automation Triggers](../images/automation_triggers.png)
 
-**Condition:** connect conditions
+There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. The list below is non-exhaustive:
+
+**Trigger:** connect conditions
 
 **Options:** 
 
@@ -128,20 +131,20 @@ Several conditions can be linked with
 * “Or”
 * “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
 
-**Condition:** time vs. recurring time
+**Trigger:** time vs. recurring time
 
 **Options:** 
 
 * time = single time event
 * recurring time = something that happens regularly (i.e. once a week, every working day etc.)
 
-**Condition:** location
+**Trigger:** location
 
 **Options:**
 
 * in the **config builder** (Automation), the user can select their required location service.
 
-**Condition:** location service
+**Trigger:** location service
 
 **Options:**
 
@@ -149,7 +152,21 @@ Several conditions can be linked with
 * Use network location: Location of your Wi-Fi.
 * Use GPS location (Attention! This can cause excessive battery drain!)
 
+**Triggers** : pump and sensor data
+
+* Cannula age trigger: Available for all pumps
+* Insulin age trigger: Available for supported pumps
+* Battery age trigger: Available for supported pumps
+* Sensor age trigger: always available
+
+Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+
+* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+
 ## Action
+
+![Automation Triggers](../images/automation_actions.png)
 
 **Actions:** start **Temp Target**
 

@@ -139,6 +139,14 @@ This setting changes the maximum amount of insulin that can be delivered in one 
 
 Set this to a sensible value for your insulin requirements.
 
+#### Scan on Connection error
+
+***Default: Off.***
+
+Located under **Advanced Settings**.
+
+Only enable if you have connection problems. If enabled the driver scans for the pump again before trying to reconnect to the pump. Make sure you have Location permission set to "Always allow".
+
 ### Step 2b: AAPS Alerts settings
 
 Go to preferences
