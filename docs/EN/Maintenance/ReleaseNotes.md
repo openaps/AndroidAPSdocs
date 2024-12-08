@@ -76,6 +76,7 @@ Release date: XX-XX-202X
 - For DynamicISF average ISF of last 24h is calculated and this value is used for bolus wizard a COB calculation. Profile ISF value is not used at all (except fallback when history data is not available)
 - If you use dynamic sensitivity and you have automation setting profile % in relation to BG turn it off. This is already part of dynamic sensitivity algorithm
 - ***** AGAIN: Turn off all automation setting profile % in relation to BG because it will multiply the effect too much !!!!! *****
+- Do not use non 100% for a long time. If you determine that your profile has changed, create new profile by cloning the one with %
 
 ### Changes
 
