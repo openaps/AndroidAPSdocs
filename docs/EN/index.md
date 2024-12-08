@@ -63,7 +63,8 @@ Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower bl
 ```{toctree}
 :caption: 1) Change language
 
-Change language <./ChangeLanguage/ChangeLanguage.md>
+Change language <./NavigateDoc/ChangeLanguage.md>
+Change version <./NavigateDoc/ChangeVersion.md>
 ```
 ```{toctree}
 :caption: 2) Getting started

@@ -123,7 +123,7 @@ Select the pump you are using. See [Compatible pumps](../Getting-Started/Compati
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
-* Equil 5.3
+* [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * Virtual pump: open loop - **AAPS** suggestions only
   * as you make you first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   * for pump which doesn't have any driver yet

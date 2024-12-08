@@ -70,9 +70,9 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
 
 ### Main features
 
-* [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB, along with some changes in its behavior : 
-  * Profile switch percentage is now taken into account for dynamic sensitivity strengthness
-  * The average ISF of last 24h is calculated and this value is used for bolus wizard and COB calculation. Profile ISF value is not used at all (except fallback when history data is not available)
+* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behavior : 
+  * **Profile Switch Percentage** is now taken into account for dynamic sensitivity strengthness
+  * The average ISF of last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
 * Enable “SMB always” and “SMB after carbs” for FreeStyle Libre 2 and Libre 3 users
 * New Automation triggers
 * Unattended settings exports
@@ -80,8 +80,10 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
 ### How to upgrade
 
 * Before upgrading: 
+  * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
+  * Android Studio version called "Ladybug" or above (JVM 21) is required to build this version.
   * If you use the “old” Combo driver with ruffy device, migrate to the [native Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) before update
-  * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade : make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
+  * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade: make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
 * After upgrading:
   * Set the new [“AAPS directory” setting](#preferences-maintenance-settings), in the Maintenance tab.
 
@@ -95,7 +97,7 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
   * Show reservoir level at start of activation
   * Fix bug where activation returns to start and user cannot finish the activation
   * Feedback for sync status and other clarifications
-* New supported pump : Equil @EquilHack
+* New supported pump : [Equil 5.3](../CompatiblePumps/Equil5.3.md) @EquilHack
 * New supported CGMs : [Ottai](../CompatibleCgms/OttaiM8.md) @ottai-developer and [Syai Tag](../CompatibleCgms/SyaiTagX1.md) @syai-dev
 * Insight driver rewritten to kotlin @Philoul
 * Removed old ruffy dependent Combo driver
@@ -119,7 +121,7 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
   * Cannula age, Insulin age, Battery age, Sensor age, Reservoir level, Pump battery level
 * Allowing negative carbs entry @MilosKozak
 * New Parameter [“AAPS directory”](#preferences-maintenance-settings) to choose a storage directory different from the default one.
-* Allow for insulin records when pump suspended @jbr77rr
+* Allow for [insulin records when pump suspended](#aaps-screens-buttons-insulin) @jbr77rr
 * Updated [Objective 2](#objectives-objective2) @MilosKozak
   * Check that master password is set and known
 * Random carbs in test mode @MilosKozak

@@ -46,7 +46,7 @@ The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ t
 
 ## Where are Automations located in AAPS?
 
-Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
+Depending on your [Config builder > General](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
 
 ## How can I set up an Automation?
 

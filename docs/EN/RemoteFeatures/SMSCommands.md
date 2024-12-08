@@ -68,7 +68,7 @@ Some options may be greyed out, due to needing admin via a family account if the
 
 ### AAPS settings
 
-Now that the phone settings have been checked, in the **AAPS** app itself, use the [Config Builder](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
+Now that the phone settings have been checked, in the **AAPS** app itself, go to [Config Builder > General](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
 
 Go to the Preferences for SMS Communicator.
 
