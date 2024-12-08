@@ -337,6 +337,7 @@ Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-bu
 
 About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
 
+(aaps-screens-buttons-insulin)=
 #### Insulin
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)

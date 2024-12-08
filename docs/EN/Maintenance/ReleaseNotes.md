@@ -121,7 +121,7 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
   * Cannula age, Insulin age, Battery age, Sensor age, Reservoir level, Pump battery level
 * Allowing negative carbs entry @MilosKozak
 * New Parameter [“AAPS directory”](#preferences-maintenance-settings) to choose a storage directory different from the default one.
-* Allow for insulin records when pump suspended @jbr77rr
+* Allow for [insulin records when pump suspended](#aaps-screens-buttons-insulin) @jbr77rr
 * Updated [Objective 2](#objectives-objective2) @MilosKozak
   * Check that master password is set and known
 * Random carbs in test mode @MilosKozak
