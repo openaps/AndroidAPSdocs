@@ -68,7 +68,7 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 
 Version 3.3 is close ! Use the version switcher at the bottom right of your screen to see what's new.
 
-![Open language menu](../images/documentation_language_menu.png)
+![打开语言菜单](../images/documentation_language_menu.png)
 
 (version3200)=
 ## Version 3.2.0.0 dedicated to @Philoul
