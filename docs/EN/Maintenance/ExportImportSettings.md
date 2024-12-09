@@ -1,30 +1,52 @@
 # Creating and restoring back-ups
 
-It is important to keep back-ups of the items listed below. Best practice is to keep a back-up on a local hard drive as well as a cloud location (i.e. Google Drive, box, etc…). Below are the items that it is recommended to keep back-ups of.
+When installing AndroidAPS on your phone it becomes a "medical device" you are depended on. It is recommended to have an
+emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself, "what if? 
+
+To enable restoring your AndroidAPS setup to an existing or new phone, it is important to keep following items in a safe place (read: not on your phone).
+Best practice is to keep backups on a local hard drive, USB stick or (preferred) cloud storage like Google Drive, Microsoft 365 OneDrive.
+By storing your backups in the cloud you'll always have everything needed accessible form your phone to restore anywhere and anytime.
+
+You may consider acquiring a secondary backup phone and practicing restoring AndroidAPS to verify the backup phone works as expected.
+
+To be able to restore, having the following items at hand is important:
+
+- Your Android Studio keystore file and password: Needed for (re)building the AndroidAPS .APK installer file.
+- A recent copy of the AndroidAPS installer .APK
+- A recent settings export file: For restoring important settings (which includes your objectives!).
+- Your **AndroidAPS master password**
+- Backups of additional utilities: Such as BYODA and/or xDrip+.
+- Personal notes on your setup.
+
+Below are the items that are recommended for keeping back-ups.
 
 ## Creating back-ups
 
 ### Keystore file from the computer you used to build the APK
-The keystore is what allows you to install an updated APK on top of the existing application. Maintaining the keystore will greatly reduce the complexity of updating the APK in the future, especially if you need to build the app from a new computer. See the [Updating AAPS](../Maintenance/UpdateToNewVersion.md) section for details on using the keystore when building a new APK. 
+When building your .APK installer file from Android Studio, it uses the **keystore file and password to sign the .APK installer file**. To update your current AndroidAPS installation, it is required to sign the update .APK installer file with the same keystore used for the initial installation. When updating, all settings and the AndroidAPS database will be kept. Note that without this, you are required to first uninstall the current application and then reinstall and reconfigure AndroidAPS.
 
-**When to back-up:** the keystore should be backed up after you first build the **AAPS** apk.
+Maintaining the keystore and associated password will greatly reduce the complexity of updating the APK in the future, especially if you need to build the app from a new computer. See the [Updating AAPS](../Maintenance/UpdateToNewVersion.md) section for details on using the keystore when building a new APK. 
 
-**How to back-up:** locate your keystore path. If you don’t remember it you can find it in Android Studio by selecting **Build > APK > Next**. The path will be listed in “Key store path”. Using your file explorer, navigate to this path and make a copy of your keystore file (ending in file extension `.jks`). Save it to a safe cloud location should your computer become unavailable. Make sure to also record your key store password, key alias and key password.
+**When to back-up:** The keystore should be backed up after you first build the **AAPS** .APK installer file.
+
+**How to back-up:** Locate your keystore path. If you don’t remember it you can find it in Android Studio by selecting **Build > APK > Next**. The path will be listed in “Key store path”. Using your file explorer, navigate to this path and make a copy of your keystore file (ending in file extension `.jks`). Save it to a safe cloud location should your computer become unavailable. Make sure to also record your key store password, key alias and key password.
 
 ### Copies of the most recent APK
-If your main **AAPS** phone is lost or damaged, having a copy of the APK available will allow you to quickly resume using **AAPS** with a new phone (note: you also need your preferences backed up as noted below).
+In case your main **AAPS** phone is lost or damaged, having a copy of the APK available will allow you to quickly resume using **AAPS** with a new phone. Note: you will also need your preferences backed up as noted below.
 
-**When to back-up:** you should maintain a back-up of the most recent APK that you installed on your main **AAPS** phone. You may want to also maintain one earlier version in case you need to roll back to that for any reason. 
+**When to back-up:** You should maintain a back-up of the most recent APK that you installed on your main **AAPS** phone. You may want to also maintain one earlier version in case you need to roll back to that for any reason. 
 
-**How to back-up:** a copy will be maintained on the computer used to build the APK with Android Studio. Additionally, if you use a cloud platform to copy the APK to your phone, that will maintain a copy in the cloud as well. Make sure you know how to find both locations in the event you need them. Consider setting up dedicated folders on your computer and your cloud platform to store these back-ups.
+**How to back-up:** Maintain a copy on the computer used to build the APK with Android Studio. Additionally, it is recommended to use a cloud platform to store a copy of the installer APK. Make sure you know how to locate both backups when needed. Consider setting up dedicated folders to store these backups.
 
 ### AAPS preferences
-**Preferences** are what tailors the stock **AAPS** application to how you have it setup. **Preferences** include details on your config builder settings, status of objectives, third-party communication settings (Nightscout, Tidepool...), automations and profiles. With a copy of the APK (see above) and **Preferences** you can be up and running on a new phone quickly. 
+**Preferences** tailor the stock AAPS application to your specific setup. They include details on your config builder settings, status of objectives, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles. With a copy of the APK (see above) and your **Preferences** file, you can quickly get up and running on a new phone.
 
 **When to back-up:**
-* as **Preferences** store your progress towards completing the objectives, you should back up your **Preferences** each time you complete an objective so that you do not lose your progress. _Without a copy of your **Preferences** you will have to complete all objectives again in the event you need to replace your phone._
-* any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back up your **Preferences** before and after making the changes. This way you have your most recent settings as well as a copy of what they were before the changes in case you need to revert back to them.
-* Tubeless pumps (Omnipod and Medtrum) users only : the **Preferences** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
+* As **Preferences** store your progress towards completing the objectives, you should back up your **Preferences** each time you complete an objective so that you do not lose your progress. _Without a copy of your **Preferences** you will have to complete all objectives again in the event you need to replace your phone._
+
+* Any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back up your **Preferences** before and after making the changes. This way you have your most recent settings as well as a copy of what they were before the changes in case you need to revert back to them.
+
+* Tubeless pumps (Such as Omnipod and Medtrum) users only : the **Preferences** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
 
 **How to back-up:**
 
@@ -36,6 +58,40 @@ If your main **AAPS** phone is lost or damaged, having a copy of the APK availab
 ![AAPS export settings 2](../images/Maintenance/AAPS_ExportSettings2.png)
 
 3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
+
+## Exporting Preference Settings to File ##
+Exporting the AndroidAPS settings to file enables you to restore its configuration to a specific point in time. In addition to all settings, the export
+file also contains the status of your objectives, which you need to restore on reinstalling AndroidAPS. Without this you will be required to redo all
+objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration
+changes. 
+
+It is recommended to do regular settings exports, especially **before an after making configuration changes**. You can choose to do exports
+**manually or (preferred) through automation**. Also, make sure to make a note of your AndroidAPS master password and to backup your settings
+files by copying them off your phone to for instance a cloud storage location.
+
+**Note**: _The exported settings will be encrypted with your AndroidAPS master password: without the master password used for exporting
+you will be unable to import the settings file!_
+
+### Exporting or Importing Settings: ###
+To export or import settings, use the **import or export buttons** in the AndroidAPS **maintenance menu**
+
+![Maintenance menu export/import buttons](../images/Maintenance/maintenance_menu_import_export_400px.png)
+
+### Automating Settings Export: ###
+To enable automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**"
+in the maintenance menu preferences.
+
+By enabling this feature you allow AndroidAPS to execute settings exports without user intervention. For this the master password
+is securely stored on your phone (only) at the next manually export. The stored stored the password will be used for up to 4 weeks.
+After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password needs to be reactivated by
+manually exporting settings from the maintenance menu to prevent expiry.
+
+After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking
+to reenter the password. Automated exports will be logged to the AndroidAPS Careportal and User entry lists under Treatments.
+
+_**Note:** On importing settings to user always needs to enter the AndroidAPS password!_
+
+![Maintenance menu unattended Settings Export](../images/Maintenance/maintenance_menu_preferences_400px.png)
 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
 ## Restoring from your backups on a new phone or fresh installation of AAPS
