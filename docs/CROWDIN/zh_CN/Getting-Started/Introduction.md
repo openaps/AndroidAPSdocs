@@ -27,23 +27,23 @@
 
 用于1型糖尿病患者（T1D）的商业化技术发展的很慢。 2013年，T1D社区发起了#WeAreNotWaiting（我们不想等下去）运动。 他们利用胰岛素泵、血糖仪等目前可用的技术自己开发了各种系统来改进血糖控制方式、增强安全性、提高生活质量。 这些系统被称为DIY（do-it-yourself，自己动手制作）系统，因为它们没有得到过卫生机构（FDA、NHS等）的正式批准。 目前主要有四种 DIY 系统： [OpenAPS](https://openaps.org/what-is-openaps/)、**AAPS**、[Loop](https://loopkit.github.io/loopdocs/#what-is-loop)和[ iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI)。
 
-要想理解 DIY 闭环的基础原理，最好是阅读Dana Lewis的著作《自动胰岛素输注》（Automated Insulin Delivery）。 You can access it [here](https://www.artificialpancreasbook.com/) for free (or buy a hardcopy of the book). If you want to understand more about [OpenAPS](https://openaps.org/what-is-openaps/), which **AAPS** has developed from, the [OpenAPS website](https://openaps.org/what-is-openaps/) is a great resource.
+要想理解 DIY 闭环的基础原理，最好是阅读Dana Lewis的著作《自动胰岛素输注》（Automated Insulin Delivery）。（中文书籍推荐马学毅的《胰岛素泵治疗糖尿病》）。 您可以在[这里](https://www.artificialpancreasbook.com/)免费获取第一本书(或购买该书的印刷版)。 如果您想更多地了解**AAPS**的前身[OpenAPS](https://openaps.org/what-is-openaps/)，[OpenAPS 网站](https://openaps.org/what-is-openaps/)有很多好资源。
 
-Several commercial hybrid closed loop systems have been launched, the most recent of which are [CamAPS FX](https://camdiab.com/) (UK and EU) and [Omnipod 5](https://www.omnipod.com/en-gb/what-is-omnipod/omnipod-5) (USA and EU). These are very different to DIY systems, mainly because they both include a “learning algorithm” which adjusts how much insulin is delivered according to your insulin needs from previous days. Many people in the DIY community have already tried out these commercial systems and compared them with their DIY system. You can find out more about how the different systems compare by asking on the dedicated Facebook groups for these systems, on the [AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/) or on [Discord](https://discord.com/invite/4fQUWHZ4Mw).
+一些商用混合闭环系统已经推出，其中最新的是[CamAPS FX](https://camdiab.com/)（英国和欧盟）和 [Omnipod 5](https://www.omnipod.com/en-gb/what-is-omnipod/omnipod-5)（美国和欧盟）。 这些商业化的系统与 DIY 系统有很大差异，主要因为他们都带有“自学习算法”，可以根据近几天你的胰岛素需求量来调整给药量。 在DIY社区，许多人已经尝试过这些商业系统，并将其与DIY系统进行了比较。 您可以在这些系统的专门 Facebook 群组、[AAPS Facebook](https://www.facebook.com/groups/AndroidAPSUsers/) 群组或 [Discord](https://discord.com/invite/4fQUWHZ4Mw) 上询问，以了解不同系统的比较情况。
 
-## What is Android APS (AAPS)?
+## 什么是 Android APS (AAPS)？
 
 ![image](../images/basic-outline-of-AAPS.png)
 
-**Figure 1**. Basic outline of the Android APS (Artificial Pancreas System), AAPS.
+**图1** Android APS (Artificial Pancreas System，人工胰腺系统)，AAPS的基本构成。
 
-Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System  (APS). It makes its insulin dosing calculations using established [OpenAPS](https://openaps.org/) algorithms (a set of rules) developed by the #WeAreNotWaiting type 1 diabetes community.
+安卓 APS（**AAPS**）是一个混合闭环系统，或称人工胰腺系统（APS）。 它使用 #WeAreNotWaiting 1 型糖尿病社区开发的 [OpenAPS 算法](https://openaps.org/)（一套计算规则）进行胰岛素剂量计算。
 
-Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (which can be used with a wider range of insulin pumps) was developed in 2016 by Milos Kozak, for a family member with type 1 diabetes. Since those early days, **AAPS** has been continually developed and refined by a team of volunteer computer developers and other enthusiasts who have a connection to the type 1 diabetes world. Today, **AAPS** is used by approximately 10,000 people. It is a highly customisable and versatile system, and because it is open-source, it is also readily compatible with many other open-source diabetes softwares and platforms. The fundamental components of the current **AAPS** system are outlined in **Figure 1** above.
+由于 OpenAPS 只与某些较老的胰岛素泵兼容，因此 **AAPS**（可与更广泛的胰岛素泵配合使用）是 Milos Kozak 于 2016 年为一位患有 1 型糖尿病的家庭成员开发的。 自那时起， 很多与1型糖尿病有关的志愿者和技术爱好者加入了进来，不断开发和完善**AAPS** 。 目前， **AAPS** 已经被近万人使用。 这是一个可以高度定制化和多功能的系统，因为开源，所以还很容易兼容其他许多开源糖尿病软件和平台。 现行 **AAPS** 系统的基本组成部分如上**图 1** 所示。
 
 
 
-## What are the basic components of AAPS?
+## AAPS的基本组成部分有哪些？
 
 The “brain” of AAPS is an **app** which you build yourself. There are detailed step-by-step instructions for this. You then install the **AAPS  app** on a [compatible](../Getting-Started/Phones.md) **Android smartphone** (**1**). A number of users prefer their loop on a separate phone to their main phone. So, you don’t necessarily have to be using an Android phone for everything else in your life, just for running your AAPS loop.
 
@@ -260,7 +260,7 @@ Doctors (at least in the UK) are not prohibited from prescribing unlicensed medi
 1. Open-source automated insulin delivery: international consensus statement and practical guidance for health-care professionals [_Lancet Diabetes Endocrinol_, (2022) _10_, 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
 2. [In Silico Trials of an Open-Source Android-Based Artificial Pancreas: A New Paradigm to Test Safety and Efficacy of Do-It-Yourself Systems, 2020](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)
 3. A DIY ‘bionic pancreas’ is changing diabetes care — what's next? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
-4. Prescribing unapproved medical devices? The case of DIY artificial pancreas systems [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
+4. Prescribing unapproved medical devices? 自主搭建人工胰腺系统（APS）案例[_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
 5. [Berlin Institute of Health position statement, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
 6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
 7.  Netherlands (EN/NL) - for clinicians - [how to help people on open source automated insulin delivery systems](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
