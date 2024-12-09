@@ -39,7 +39,15 @@ In case your main **AAPS** phone is lost or damaged, having a copy of the APK av
 **How to back-up:** Maintain a copy on the computer used to build the APK with Android Studio. Additionally, it is recommended to use a cloud platform to store a copy of the installer APK. Make sure you know how to locate both backups when needed. Consider setting up dedicated folders to store these backups.
 
 ### AAPS preferences
-**Preferences** tailor the stock AAPS application to your specific setup. They include details on your config builder settings, status of objectives, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles. With a copy of the APK (see above) and your **Preferences** file, you can quickly get up and running on a new phone.
+With a copy of the APK installer file (see above) and your **Preferences** file, you can quickly get up and running on an existing or new phone.
+
+**Preferences** customize the AAPS application to fit your specific setup. They encompass details such as your config builder settings,
+objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
+
+Exporting the AndroidAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all
+configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AndroidAPS. Without
+this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings
+for undoing any configuration changes.
 
 **When to back-up:**
 * As **Preferences** store your progress towards completing the objectives, you should back up your **Preferences** each time you complete an objective so that you do not lose your progress. _Without a copy of your **Preferences** you will have to complete all objectives again in the event you need to replace your phone._
@@ -48,7 +56,7 @@ In case your main **AAPS** phone is lost or damaged, having a copy of the APK av
 
 * Tubeless pumps (Such as Omnipod and Medtrum) users only : the **Preferences** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
 
-**How to back-up:**
+**How to back-up manually:**
 
 1. If this your first time importing or exporting **Preferences** you will need to set a master password in [Preferences > General > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Preferences** back-ups without this password._
 
@@ -59,11 +67,7 @@ In case your main **AAPS** phone is lost or damaged, having a copy of the APK av
 
 3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
 
-## Exporting Preference Settings to File ##
-Exporting the AndroidAPS settings to file enables you to restore its configuration to a specific point in time. In addition to all settings, the export
-file also contains the status of your objectives, which you need to restore on reinstalling AndroidAPS. Without this you will be required to redo all
-objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration
-changes. 
+## Automated Settings Export ##
 
 It is recommended to do regular settings exports, especially **before an after making configuration changes**. You can choose to do exports
 **manually or (preferred) through automation**. Also, make sure to make a note of your AndroidAPS master password and to backup your settings
@@ -78,16 +82,17 @@ To export or import settings, use the **import or export buttons** in the Androi
 ![Maintenance menu export/import buttons](../images/Maintenance/maintenance_menu_import_export_400px.png)
 
 ### Automating Settings Export: ###
-To enable automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**"
+For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**"
 in the maintenance menu preferences.
 
 By enabling this feature you allow AndroidAPS to execute settings exports without user intervention. For this the master password
-is securely stored on your phone (only) at the next manually export. The stored stored the password will be used for up to 4 weeks.
-After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password needs to be reactivated by
-manually exporting settings from the maintenance menu to prevent expiry.
+is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks.
+After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by
+manually exporting settings from the maintenance menu.
 
 After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking
-to reenter the password. Automated exports will be logged to the AndroidAPS Careportal and User entry lists under Treatments.
+to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged
+to the AndroidAPS Careportal and User entry lists under Treatments.
 
 _**Note:** On importing settings to user always needs to enter the AndroidAPS password!_
 
