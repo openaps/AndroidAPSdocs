@@ -66,54 +66,9 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 (版本3300)=
 ## 版本 3.3.0.0
 
-發佈日期：XX-XX-202X
+Version 3.3 is close ! Use the version switcher at the bottom right of your screen to see what's new.
 
-### 重要提示
-
-- 需要 Android 11 以上才能執行此版本。
-- 在更新前將舊的 ruffy 進行移轉到新的原生 Combo 驅動程式
-- 個人設置切換百分比現在將計入動態敏感度強度中
-- 對於 DynamicISF，過去 24 小時的平均 ISF 被計算出並用於注射嚮導的 COB 計算。 設定檔中的 ISF 值完全未被使用（除非在歷史資料不可用時作為備用）
-- If you use dynamic sensitivity and you have automation setting profile % in relation to BG turn it off. This is already part of dynamic sensitivity algorithm
-- ***** AGAIN: Turn off all automation setting profile % in relation to BG because it will multiply the effect too much !!!!! *****
-- Do not use non 100% for a long time. If you determine that your profile has changed, create new profile by cloning the one with %
-
-### 變更
-
-- Equil 幫浦驅動程式 @EquilHack
-- Insight 驅動程式重新編寫為 kotlin @Philoul
-- Ottai CGM 來源 @ottai-developer
-- SMB 始終支援 Libre2 和 Libre3（並非所有血糖來源都能正確識別 L2 和 L3）
-- 移除舊的 ruffy 依賴的 Combo 驅動程式
-- 新的內部模組結構 @MilosKozak
-- 將持久性層與主程式碼分離 @MilosKozak
-- 新的 QuickWizard 選項 @radicalb
-- 建置檔案重新編寫為 kts @MilosKozak
-- 算法重新編寫為 kotlin 以改善效能 @MilosKozak
-- 大量新的單元測試 @MilosKozak 和其他人
-- 更多的程式碼轉換為 kotlin @MilosKozak
-- 簡易模式 @MilosKozak
-- 新的偏好設定管理，xml -> kotlin @MilosKozak
-- 新的 CI 配置，在自己的伺服器上運行 CI @MilosKozak
-- 穿戴裝置和錶盤的改善 @Philoul @MilosKozak @olorinmaia
-- 測試模式下的隨機碳水化合物 @MilosKozak
-- 函式庫更新至最新版本，toml @MilosKozak
-- 在 AAPS 客戶端中顯示可變敏感度
-- 修正 TDD 計算中的錯誤 @MilosKozak
-- BolusWizard 使用者介面改善 @kenzo44
-- 更新目標 @MilosKozak
-- 在幫浦暫停模式中不同的胰島素按鈕顏色 @jbr77rr
-- 更多顏色主題設計 @jbr77rr
-- 新的自動化觸發 @jbr77rr
-- Medtrum 驅動程式改善 @jbr77rr
-- 新的圖表比例選單 @Philoul
-- 移轉至 kotlin 2.0，java 21 @MilosKozak
-- 允許輸入負碳水化合物 @MilosKozak
-- 無人值守匯出 @vanelsberg
-- 從自動化操作中檢視功能塊 @Philoul
-- 結合來自 AAPS、AAPSClient 和 AAPSClient2 的手錶錶盤，以監控更多患者 @Philoul @MilosKozak
-- 附註：僅在手錶上顯示用戶操作 @MilosKozak
-- 組態建置工具介面改良 @MilosKozak
+![打開語系選單](../images/documentation_language_menu.png)
 
 (version3200)=
 ## 3.2.0.0 版本獻給 @Philoul
@@ -636,7 +591,7 @@ v3 是新的協議。 更加安全和高效
 - G6、Poctech、Tomato、Eversense血糖資料來源支援（Tebbe Ubben 和 Milos Kozak）
 - 修復偏好設置中停用 SMB 的問題（Johannes Mockenhaupt）
 
-### 其他事項
+### Misc
 
 - 如果你使用非預設的 `smbmaxminutes` 值，則必須再次設置此值
 
@@ -688,7 +643,7 @@ v3 是新的協議。 更加安全和高效
 - Dexcom 修補版應用作為血糖資料來源
 - oref1 敏感性外掛
 
-### 其他事項
+### Misc
 
 - 應用現在使用抽屜顯示所有外掛；在組態建置工具中選擇為可見的外掛將顯示為頂部的標籤（收藏夾）
 - 組態建置工具和目標標籤的全面檢查，新增描述

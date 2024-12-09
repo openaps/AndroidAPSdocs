@@ -66,54 +66,9 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 (version3300)=
 ## Version 3.3.0.0
 
-Release date: XX-XX-202X
+Version 3.3 is close ! Use the version switcher at the bottom right of your screen to see what's new.
 
-### Notas importantes
-
-- Android 11 is needed to run this version
-- migrate to new native Combo driver from ruffy before update
-- profile switch percentage is now taken into a count for dynamic sensitivity strengthness
-- For DynamicISF average ISF of last 24h is calculated and this value is used for bolus wizard a COB calculation. Profile ISF value is not used at all (except fallback when history data is not available)
-- If you use dynamic sensitivity and you have automation setting profile % in relation to BG turn it off. This is already part of dynamic sensitivity algorithm
-- ***** AGAIN: Turn off all automation setting profile % in relation to BG because it will multiply the effect too much !!!!! *****
-- Do not use non 100% for a long time. If you determine that your profile has changed, create new profile by cloning the one with %
-
-### Alterações
-
-- Equil pump driver @EquilHack
-- Insight driver rewitten to kotlin @Philoul
-- Ottai CGM source @ottai-developer
-- SMB always supported on Libre2 & Libre3 (Not all BG sources can properly identify L2 & L3)
-- removed old ruffy dependent Combo driver
-- new internal modules stucture @MilosKozak
-- split persistence layer from main code @MilosKozak
-- new QuickWizard options @radicalb
-- build files rewritten to kts @MilosKozak
-- algorithms rewritten to kotlin for better performance @MilosKozak
-- tons of new unit tests @MilosKozak and others
-- more code converted to kotlin @MilosKozak
-- Simple mode @MilosKozak
-- new preferences management, xml -> kotlin @MilosKozak
-- new CI configuration, run CI on own servers @MilosKozak
-- wear and watchfaces improvement @Philoul @MilosKozak @olorinmaia
-- Random carbs in test mode @MilosKozak
-- libraries updated to latest version, toml @MilosKozak
-- variable sensitivity visible in AAPS client
-- fixed bug in TDD calculation @MilosKozak
-- BolusWizard UI improvements @kenzo44
-- updated Objectives @MilosKozak
-- different insulin button colors in pump suspended mode @jbr77rr
-- more color theming @jbr77rr
-- new Automation triggers @jbr77rr
-- Medtrum driver improvements @jbr77rr
-- New graph scale menu @Philoul
-- migration to kotlin 2.0, java 21 @MilosKozak
-- Allowing negative carbs entry  @MilosKozak
-- Unattended exports @vanelsberg
-- Watch tiles from Automation actions @Philoul
-- Combined watchfaces from AAPS, AAPSClient and AAPSClient2 to monitor more patients @Philoul @MilosKozak
-- EXTRA: show_user_actions_on_watch_only @MilosKozak
-- ConfigBuilder layout improvent @MilosKozak
+![Open language menu](../images/documentation_language_menu.png)
 
 (version3200)=
 ## Version 3.2.0.0 dedicated to @Philoul

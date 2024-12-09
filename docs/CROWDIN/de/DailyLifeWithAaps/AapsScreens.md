@@ -115,7 +115,7 @@ The red warning sign is signaling you to get active immediately: You are receivi
 
 ![Rotes BG-Warndreieck](../images/bg_warn_red.png)
 
-Du musst herausfinden, warum du doppelte BG-Daten erhältst:
+Du musst herausfinden, warum Du doppelte Glukosewert-Daten erhältst:
 
 * Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (Details zu heroku [findest Du hier](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
 * Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
