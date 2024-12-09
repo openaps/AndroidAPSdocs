@@ -253,7 +253,7 @@ To show this information, click the triangle on the right side of the main graph
     
     *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
 
-* **Dunkelorange** Linie: aCOB (beschleunigte Kohlenhydratabsorption)
+* **Dunkelorange** Linie: COB (beschleunigte Kohlenhydratabsorption)
     
     Ähnlich wie COB, aber unter Annahme einer festen Kohlenhydrat-Absorptionsrate von 10 mg/dL/5m (-0,555 mmol/l/5m). Veraltet und nur begrenzt nützlich.
     
