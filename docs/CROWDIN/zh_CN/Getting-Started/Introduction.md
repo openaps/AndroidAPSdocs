@@ -1,33 +1,33 @@
-# Introduction to APS and AAPS
+# APS和AAPS简介
 
-## What is an “Artificial Pancreas System”?
+## 什么是“人工胰腺系统”（APS）？
 
-A human pancreas does a lot of things besides regulating blood sugar. However, the term **“Artificial Pancreas System” (APS)** usually refers to a system which works to automatically keep blood sugar levels within healthy limits.
+人的胰腺不仅能调节血糖，还有很多其他功能。 然而，**“人工胰腺系统”（APS）**通常是指能自动地将血糖水平保持在健康限度内的系统。
 
-The most basic way to do this is by detecting **glucose levels**, using these values to do **calculations**, and then delivering the (predicted) right amount of **insulin** to the body. It repeats the calculation, every few minutes, 24/7. It uses **alarms** and **alerts** to inform the user if intervention or attention is needed. This system is typically made up of a **glucose sensor**, an **insulin pump** and an **app** on a phone.
+要实现这样的功能一般来说需要持续检测 **血糖水平**，用检测到的血糖值来 **测算（预测）** 并输注合适计量的**胰岛素**。 每隔几分钟就重复一次这样的过程，7×24小时不停。 在需要人工关注或干预的时候向用户发送 **提醒** 或者 **警告** 。 这样的系统通常由 **血糖仪**、 **胰岛素泵** 和安装在手机上的 **APP** 组成。
 
-You can read more about the different artificial pancreas systems currently in use and in development in this 2022 review article:
+在下面这篇2022年评论文章中，你能了解到更多关于目前在用以及正在研发的人工胰腺系统的情况。
 
-![Frontiers](../images/FRONTIERS_Logo_Grey_RGB.png) [Future Directions in Closed-Loop Technology](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses).
+![Frontiers](../images/FRONTIERS_Logo_Grey_RGB.png) [闭环技术的未来发展方向](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses)
 
-In the near future, some so-called "dual-hormone" systems will also have the ability to infuse glucagon alongside insulin, with the aim of preventing severe hypos and allowing even tighter blood glucose control.
+在不远的将来，既能输注胰岛素也能输注胰高糖素的“双激素”系统，将能够预防严重低血糖，进而实现更加严格的血糖控制。
 
-An artificial pancreas can be thought of as an [“autopilot for your diabetes”](https://www.artificialpancreasbook.com/). What does that mean?
+人工胰腺可被视为[“糖尿病的自动驾驶仪”](https://www.artificialpancreasbook.com/)。 这是什么意思呢？
 
-In an aircraft, an autopilot does not do the complete job of the human pilot, the pilot cannot sleep through the entire flight. The autopilot aids the work of the pilot. It relieves them of the burden of permanently monitoring the aircraft, allowing the pilot to concentrate on wider monitoring from time to time. The autopilot receives signals from various sensors, a computer evaluates them together with the pilot’s specifications and then makes the necessary adjustments, alerting the pilot to any concerns. The pilot no longer has to worry about constantly making decisions.
+飞机的自动驾驶模式不可能完全取代飞行员，要不然飞行员就可以全程睡觉了。 但自动驾驶能给飞行员提供帮助， 让他们不用只盯着飞机的状态，而是可以把注意力放在更广泛的飞行状况管理上。 自动驾驶装置从各种传感器接收信号，按照飞行员的设置来评估这些信号，然后按需调整飞行参数，有需要注意的问题就提醒飞行员。 飞行员就不用事必躬亲了。
 
 ![image](../images/autopilot.png)
 
 (Introduction-what-does-hybrid-closed-loop-mean)=
-## What does hybrid closed loop mean?
+## 什么是混合闭环（hybrid closed loop）？
 
-The best solution for type 1 diabetes would be a “functional cure” (probably an implant of pancreatic cells which are protected from the immune system). While we are waiting for that, a “full closed loop” artificial pancreas is probably the next best thing. This is a tech system that doesn’t need any user input (like bolusing insulin for meals, or announcing exercise), with good regulation of blood glucose levels. At the moment, there are no widely available systems which are “full” closed loop, they all need some user input. The currently available systems are called “hybrid” closed loop, because they use a combination of automated technology and user input.
+1型糖尿病的最佳疗法应该是“恢复功能”（比如移植能受免疫系统保护的胰腺细胞）。 但这种疗法我们还不知道什么时候能实现，那么“全闭环”人工胰腺应该是次优选择。 也就是无需用户输入任何信息就能把血糖水平控的很好的科技系统（像是餐前大剂量胰岛素、计划之内的运动等信息都不用输入）。 目前应用比较广泛的闭环系统都不是真正的“全闭环”，还是需要用户输入一些数据。 这样的系统采用了自动处理和用户输入相结合的方式，所以被称为“混合闭环”。
 
-## How and why did looping start?
+## 闭环的由来？
 
-The development of commercial technology for people with type 1 diabetes (T1D) is very slow. In 2013 the T1D community founded the #WeAreNotWaiting movement. They developed systems themselves using existing approved technology (insulin pumps and sensors) to improve blood glucose control, safety, and quality of life. These are known as DIY (do-it-yourself) systems, because they are not formally approved by health bodies (FDA, NHS etc). There are four main DIY systems available: [OpenAPS](https://openaps.org/what-is-openaps/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI).
+用于1型糖尿病患者（T1D）的商业化技术发展的很慢。 2013年，T1D社区发起了#WeAreNotWaiting（我们不想等下去）运动。 他们利用胰岛素泵、血糖仪等目前可用的技术自己开发了各种系统来改进血糖控制方式、增强安全性、提高生活质量。 这些系统被称为DIY（do-it-yourself，自己动手制作）系统，因为它们没有得到过卫生机构（FDA、NHS等）的正式批准。 目前主要有四种 DIY 系统： [OpenAPS](https://openaps.org/what-is-openaps/)、**AAPS**、[Loop](https://loopkit.github.io/loopdocs/#what-is-loop)和[ iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI)。
 
-A great way to understand the fundamentals of DIY looping is to read Dana Lewis’s book “Automated Insulin Delivery”. You can access it [here](https://www.artificialpancreasbook.com/) for free (or buy a hardcopy of the book). If you want to understand more about [OpenAPS](https://openaps.org/what-is-openaps/), which **AAPS** has developed from, the [OpenAPS website](https://openaps.org/what-is-openaps/) is a great resource.
+要想理解 DIY 闭环的基础原理，最好是阅读Dana Lewis的著作《自动胰岛素输注》（Automated Insulin Delivery）。 You can access it [here](https://www.artificialpancreasbook.com/) for free (or buy a hardcopy of the book). If you want to understand more about [OpenAPS](https://openaps.org/what-is-openaps/), which **AAPS** has developed from, the [OpenAPS website](https://openaps.org/what-is-openaps/) is a great resource.
 
 Several commercial hybrid closed loop systems have been launched, the most recent of which are [CamAPS FX](https://camdiab.com/) (UK and EU) and [Omnipod 5](https://www.omnipod.com/en-gb/what-is-omnipod/omnipod-5) (USA and EU). These are very different to DIY systems, mainly because they both include a “learning algorithm” which adjusts how much insulin is delivered according to your insulin needs from previous days. Many people in the DIY community have already tried out these commercial systems and compared them with their DIY system. You can find out more about how the different systems compare by asking on the dedicated Facebook groups for these systems, on the [AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/) or on [Discord](https://discord.com/invite/4fQUWHZ4Mw).
 
