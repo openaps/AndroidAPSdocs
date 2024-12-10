@@ -102,165 +102,165 @@ AAPS的“核心”是您自己构建的 **应用程序**。 这方面有详细�
 **AAPS** 是完全透明、合理和可预测的，这会让人更容易知道有地方设置错了，并做出相应的调整。 你可以精准地看到系统正在做什么，为什么这么做，然后给它设定操作限制，这能让你始终掌握系统的控制权（还有相应的责任）。 这样用户就能更放心，也能睡个安稳觉。
 
 #### 11) **通过开发（dev）模式获得高级功能（包括全闭环）**
-本 **AAPS** 文档侧重于 **AAPS** 开发项目的** "主 （master）"**分支。 However, research and development is going on all the time. More experienced users may wish to explore the experimental features in the **development** branch. This includes integration of Dexcom G7, and automatically adjusting insulin delivery according to short-term sensitivity changes (DYNISF). The development innovations focus on strategies for full closed looping (not having to bolus for meals _etc._), and generally trying to make life with type 1 diabetes as convenient as possible.
+本 **AAPS** 文档侧重于 **AAPS** 开发项目的** "主 （master）"**分支。 然而，研发工作一直在进行。 更有经验的用户可能希望探索**开发分支**中的实验功能。 这包括集成 Dexcom G7 ，以及根据短期敏感性变化自动调整胰岛素给药量（DYNISF）。 开发创新的重点是全闭环策略（不必在进餐时输注胰岛素_等_），总体而言，就是要尽可能方便 1 型糖尿病患者的生活。
 
-#### 12) **Ability to contribute yourself to further improvements**
-Type 1 diabetes can be highly frustrating and isolating. Having control over your own diabetes tech, with the possibility to “pay it forward” as soon as you are making progress by helping others on their journey can be really rewarding. You can educate yourself, discover the roadblocks and look for, and even contribute, to new developments and the documentation. There will be others in the community with the same quest that you can bounce ideas off and work with. This is the essence of #WeAreNotWaiting.
+#### 12) **为进一步改进做出自己的贡献**
+1 型糖尿病会让人感到非常沮丧和孤独。 当掌控了自己的控糖装备以后，你就有了为其他糖友提供帮助的能力，在“把关怀与支持传递下去”的路途上，哪怕只有些许的效果你都会很有成就感。 你可以自学自教，发现问题并去寻找新的研究进展和文献资料，乃至为问题的解决贡献一份力量。 在社区中，还有其他人有着同样的追求，你可以与他们交流想法，一起合作。 这是#WeAreNotWaiting运动的精髓。
 
-## How does AAPS compare to MDI and open looping?
+## AAPS与MDI（每日多次胰岛素注射）和开环的比较
 
-Multiple daily injections (MDI, (a) in **Figure 2** below) usually involve giving an injection of a long-lasting insulin (_e.g._ Tresiba) once a day, with injections of faster-acting insulin (_e.g._ Novorapid, Fiasp) at mealtimes, or for corrections. Open pumping (b) involves using a pump to deliver basal at pre-programmed rates of rapid-acting insulin, and then boluses through the pump at mealtimes or for corrections. The basics of a looping system are that the looping app uses the sensor glucose data to instruct the pump to stop insulin delivery when it predicts you are heading for a low, and to give you extra insulin if your glucose levels are rising and predicted to go too high (c). Although this figure is oversimplified compared to real-life, it aims to demonstrate the key differences of the approaches. It is possible to achieve exceptionally good glucose control with any of these three approaches.
+每日多次胰岛素注射疗法（MDI，下**图 2** 中的(a)）通常是指每天注射一次长效胰岛素（_如_德谷（Tresiba）），然后在进餐或补针时注射速效胰岛素（_如_诺和锐、Fiasp）。 开环泵 (b) 一般按照预设的基础率持续泵入速效胰岛素，然后饭前或补针时泵入大剂量。 闭环泵一般按照预设的基础率持续泵入速效胰岛素，然后饭前或补针时泵入大剂量，如果您的血糖水平上升并预计会过高，则会给您提供额外的胰岛素 (c)。 虽然与现实生活相比，这张图过于简单，但其目的是展示这两种方法的主要区别。 这三种方法中的任何一种都有可能实现非常好的血糖控制。
 
 ![21-06-23 AAPS glucose MDI etc](../images/basic-overview-mdi-open-and-closed-loop.png)
 
 
-**Figure 2**. Basic overview of (a) MDI, (b) open-loop pumping and (c) hybrid closed loop pumping.
+**图2** (a) MDI、(b) 开环泵和 (c) 混合闭环泵的概览。
 
-## How does AAPS compare to other looping systems?
+## AAPS与其他闭环系统的比较
 
-As of June 25 2023, there are four major open source closed loop systems available: [OpenAPS](https://openaps.readthedocs.io/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI), (formerly FreeAPS X). The features of the different systems are shown in the table below:
-
-
-| Devicestype | Name                                                                | [AAPS](https://wiki.aaps.app)             | [Loop](https://loopkit.github.io/loopdocs/) | [Open APS](https://openaps.readthedocs.io/en/latest/) | [iAPS](https://iaps.readthedocs.io/en/latest/) |
-| ----------- | ------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------------- | ----------------------------------------------------- | ---------------------------------------------- |
-| Phone       | Android                                                             | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| Phone       | iPhone                                                              | ![unavailable](../images/unavailable.png) | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
-| Rig         | tiny computer (1)                                                   | ![unavailable](../images/unavailable.png) | ![unavailable](../images/unavailable.png)   | ![available](../images/available.png)                 | ![unavailable](../images/unavailable.png)      |
-| PUMP        | [Dana I](../CompatiblePumps/DanaRS-Insulin-Pump.md)                 | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| PUMP        | [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)                | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| PUMP        | [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)                  | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| PUMP        | [Omnipod (Dash)](../CompatiblePumps/OmnipodDASH.md) (2)             | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
-| PUMP        | [Omnipod (Eros)](../CompatiblePumps/OmnipodEros.md)                 | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
-| PUMP        | [Diaconn G8](../CompatiblePumps/DiaconnG8.md)                       | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| PUMP        | [EOPatch 2](../CompatiblePumps/EOPatch2.md)                         | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| PUMP        | [Medtrum TouchCare Nano](../CompatiblePumps/MedtrumNano.md)         | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| PUMP        | [Medtrum TouchCare 300U](../CompatiblePumps/MedtrumNano.md)         | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| PUMP        | [Roche Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)           | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| PUMP        | [Roche Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)       | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| PUMP        | [老版美敦力（Medtronic）](../CompatiblePumps/MedtronicPump.md)             | ![available](../images/available.png)     | ![available](../images/available.png)       | ![available](../images/available.png)                 | ![available](../images/available.png)          |
-| CGM         | [Dexcom G7](../CompatibleCgms/DexcomG7.md)                          | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
-| CGM         | [Dexcom One](../CompatibleCgms/DexcomG6.md)                         | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
-| CGM         | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                          | ![available](../images/available.png)     | ![available](../images/available.png)       | ![available](../images/available.png)                 | ![available](../images/available.png)          |
-| CGM         | [Dexcom G5](../CompatibleCgms/DexcomG5.md)                          | ![available](../images/available.png)     | ![available](../images/available.png)       | ![available](../images/available.png)                 | ![available](../images/available.png)          |
-| CGM         | [Libre 3](../CompatibleCgms/Libre3.md)                              | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| CGM         | [Libre 2](../CompatibleCgms/Libre2.md)                              | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
-| CGM         | [Libre 1](../CompatibleCgms/Libre1.md)                              | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
-| CGM         | [Eversense](../CompatibleCgms/Eversense.md)                         | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
-| CGM         | [MM640g/MM630g](../CompatibleCgms/MM640g.md)                        | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
-| CGM         | [PocTech](../CompatibleCgms/PocTech.md)                             | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
-| CGM         | [Nightscout as BG Source](../CompatibleCgms/CgmNightscoutUpload.md) | ![available](../images/available.png)     | ![available](../images/available.png)       | ![available](../images/available.png)                 | ![available](../images/available.png)          |
-
-_Table notes:_
-1. A **rig** is a small computer which you carry around with you, without a monitor. One supported device type is Intel Edison + Explorer Board and the other Raspberry Pi + Explorer HAT or Adafruit RFM69HCW Bonnet. The first APS were based on this setup, as mobile phones were not capable of running the required algorithms. Use of these systems has declined, as the setup on mobile phones has become easier, and phones have a display included. Intel has also stopped selling the Intel Edison. The excellent OpenAPS algorithms **oref0** and **oref1** are now incorporated in AAPS and iAPS.
-2. Omnipod Dash is the successor of Omnipod Eros. It supports bluetooth communication and does not need a rig gateway to communicate between the Omnipod and mobile phone. If you have a choice, we recommend use of the Dash instead of Eros.
+截至 2023 年 6 月 25 日，有四大开源闭环系统可供使用：[OpenAPS](https://openaps.readthedocs.io/)、**AAPS**、[Loop](https://loopkit.github.io/loopdocs/#what-is-loop)和[iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI)（前身为 FreeAPS X）。 不同系统的功能差异见下表：
 
 
-An international peer-reviewed consensus statement containing practical guidance on open source looping was written by and for health-care professionals, and published in a leading medical journal in 2022: [_Lancet Diabetes Endocrinol_, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_). It is well worth a read (including for your diabetes clinic) and summarises the main technical differences between the different open-source hybrid closed loop systems.
+| 设备类型  | 名称                                                             | [AAPS](https://wiki.aaps.app)     | [Loop](https://loopkit.github.io/loopdocs/) | [Open APS](https://openaps.readthedocs.io/en/latest/) | [iAPS](https://iaps.readthedocs.io/en/latest/) |
+| ----- | -------------------------------------------------------------- | --------------------------------- | ------------------------------------------- | ----------------------------------------------------- | ---------------------------------------------- |
+| Phone | 安卓                                                             | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
+| Phone | iPhone                                                         | ![不可用](../images/unavailable.png) | ![可用](../images/available.png)              | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
+| Rig   | 微电脑 (1)                                                        | ![不可用](../images/unavailable.png) | ![不可用](../images/unavailable.png)           | ![可用](../images/available.png)                        | ![不可用](../images/unavailable.png)              |
+| 泵     | [丹纳 I](../CompatiblePumps/DanaRS-Insulin-Pump.md)              | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
+| 泵     | [丹纳 RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)             | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
+| 泵     | [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)             | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
+| 泵     | [Omnipod (Dash)](../CompatiblePumps/OmnipodDASH.md) (2)        | ![可用](../images/available.png)    | ![可用](../images/available.png)              | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
+| 泵     | [Omnipod (Eros)](../CompatiblePumps/OmnipodEros.md)            | ![可用](../images/available.png)    | ![可用](../images/available.png)              | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
+| 泵     | [Diaconn G8](../CompatiblePumps/DiaconnG8.md)                  | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
+| 泵     | [EOPatch 2](../CompatiblePumps/EOPatch2.md)                    | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
+| 泵     | [移宇 TouchCare Nano](../CompatiblePumps/MedtrumNano.md)         | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
+| 泵     | [移宇 TouchCare 300U](../CompatiblePumps/MedtrumNano.md)         | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
+| 泵     | [罗氏 Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)         | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
+| 泵     | [罗氏 Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)     | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
+| 泵     | [Older Medtronic](../CompatiblePumps/MedtronicPump.md)         | ![可用](../images/available.png)    | ![可用](../images/available.png)              | ![可用](../images/available.png)                        | ![可用](../images/available.png)                 |
+| CGM   | [德康 G7](../CompatibleCgms/DexcomG7.md)                         | ![可用](../images/available.png)    | ![可用](../images/available.png)              | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
+| CGM   | [德康 One](../CompatibleCgms/DexcomG6.md)                        | ![可用](../images/available.png)    | ![可用](../images/available.png)              | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
+| CGM   | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                     | ![可用](../images/available.png)    | ![可用](../images/available.png)              | ![可用](../images/available.png)                        | ![可用](../images/available.png)                 |
+| CGM   | [Dexcom G5](../CompatibleCgms/DexcomG5.md)                     | ![可用](../images/available.png)    | ![可用](../images/available.png)              | ![可用](../images/available.png)                        | ![可用](../images/available.png)                 |
+| CGM   | [Libre 3](../CompatibleCgms/Libre3.md)                         | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
+| CGM   | [Libre 2](../CompatibleCgms/Libre2.md)                         | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
+| CGM   | [Libre 1](../CompatibleCgms/Libre1.md)                         | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
+| CGM   | [Eversense](../CompatibleCgms/Eversense.md)                    | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
+| CGM   | [MM640g/MM630g](../CompatibleCgms/MM640g.md)                   | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
+| CGM   | [PocTech](../CompatibleCgms/PocTech.md)                        | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)           | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
+| CGM   | [Nightscout 作为血糖数据源](../CompatibleCgms/CgmNightscoutUpload.md) | ![可用](../images/available.png)    | ![可用](../images/available.png)              | ![可用](../images/available.png)                        | ![可用](../images/available.png)                 |
 
-It is hard to get a “feel” for any system without using it, or talking to others who are using it, so do reach out to others on Facebook/Discord and ask. Most people find that **AAPS** is incredibly sophisticated in comparison to other hybrid closed loop systems (particularly the commercial systems), with a huge number of potentially customisable settings and features,  discussed above. Some people can find this a little overwhelming in the beginning, but there is no rush to investigate all the possibilities at once, you can progress as slowly or as fast as you would like, and there is help available at every step of the way.
+_表格说明：_
+1. **Rig**是一种随身携带的小型计算机，不带显示器。 一种支持的设备类型是英特尔 Edison + Explorer Board，另一种是 Raspberry Pi + Explorer HAT 或 Adafruit RFM69HCW Bonnet。 由于以前的手机无法运行所需的算法，第一批 APS 就是基于这种配置。 这些系统的使用已经减少，因为手机上的设置变得更容易，而且手机还带有显示屏。 英特尔公司也停止了英特尔 Edison 的销售。 优秀的 OpenAPS 算法 **oref0** 和 **oref1** 现已纳入 AAPS 和 iAPS。
+2. Omnipod Dash 是 Omnipod Eros 的后续产品。 它支持蓝牙通信，无需 rig 网关即可在 Omnipod 和手机之间进行通信。 如果可以选择，我们建议使用 Dash 而不是 Eros。
 
 
-## Does AAPS use artificial intelligence or any learning algorithm?
+2022年，多名国际专家共同起草的 《开源自动胰岛素输注系统：国际专家共识与保健专业人员实践指南》（国际专家共识）发表在了[_《柳叶刀：糖尿病与内分泌学》_, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) 上（糖尿病与内分泌学领域最牛X的期刊），其中就包含了开源闭环系统的指南。 不管是对您还是您的糖尿病医生，都很有必要了解和总结不同开源混合闭环系统之间的主要技术差异。
 
-The current master version of **AAPS** (3.1.0.3) does not have any machine learning algorithms, multiple-parameter insulin response models, or artificial intelligence. As such, the system is open and transparent in how it works, and has the ability to be understood not just by experts, but also by clinicians and patients. It also means that if you have a sharply varying schedule (maybe switching from a stressful week at work to a relaxing holiday) and are likely to need a significantly different amount of insulin, you can immediately switch **AAPS** to run a weaker/stronger customised profile. A ‘learning system’ will do this adjustment for you automatically, but is likely to take longer to adjust the insulin delivery.
+百闻不如一见，不管什么系统不实际用一回怎么也不会有真正的体验，所以多去论坛、社群里面跟用过的人交流交流。 大多数人会觉着AAPS比其他的混合闭环系统复杂太多，尤其是跟那些商业化产品项目相比，毕竟光前面就已经介绍了这么多AAPS的个性化设置和功能。 有些人一上来可能就会觉着有点蒙，但不用急着一把掌握所有的用法，想快就快、想慢就慢，而且不管哪里遇到问题都能寻到帮助。
 
-## Which system is right for me or my dependant?
 
-Practically, your choice of system is often restricted by which pump you already have, or can obtain from your medical provider, and your choice of phone (Apple or Android). If you don’t yet have a pump you have the biggest choice of systems. Technology is continually evolving, pumps are being discontinued and new pumps and sensors are being released. Most open-source systems work with the main sensors (Libre and Dexcom) or are quickly adapted to work with new sensors a year or so after they are released (with a bit of time delay for safety and stability testing).
+## AAPS是否使用人工智能或任何机器学习算法？
 
-Most **AAPS** users report more time in range, HbA1c reductions, as well as quality of life improvements from having a system that can auto-adjust basal rates overnight during sleep, and this is true for most hybrid closed loop systems. Some people have a preference for a very simple system which is not very customisable (which means you may prefer a commercial system), and others find this lack of control very frustrating (you may prefer an open-source system). If you (or your dependant) are newly diagnosed, a common route is to get used to using MDI plus a glucose sensor first, then progress to a pump which has the potential for looping, then progress to **AAPS**, but some people (especially small kids) may go straight to a pump.
+目前的 **AAPS** 主版本（3.1.0.3）没有任何机器学习算法、多参数胰岛素反应模型或人工智能。 因此，该系统在运作方式上是公开和透明的，不仅专家能看懂，临床医生和病人也能弄明白。 这也意味着，诸如生活状态转换的时候可能需要大幅增加胰岛素计量(比如从紧张的工作日转到轻松的假期)， 您可以立即把 **AAPS**切换到一个更弱/更强的配置文件。 如果是那些能“自动学习”的系统，类似的调整可以自动执行，但相比之下需要等一段时间才能调整胰岛素剂量（那些系统需要等指标的趋势发生变化才能做出调整）。
 
-It is important to note that the **AAPS** user needs to be proactive to troubleshoot and fix problems themselves, with help from the community. This is a very different mindset to that when using a commercial system. With **AAPS** a user has more control, but also the responsibility, and needs to be comfortable with that.
+## 哪种系统适合我或我的家人？
 
-## Is it safe to use open-source systems like AAPS?
+实际上，选哪种系统往往取决于你在用或者能拿到哪种胰岛素泵，以及你要用哪种手机（苹果还是安卓）。 如果还没有泵，那可选择的范围比较大。 技术正在不断发展，不断有旧型号的泵在下架，也不断有新的泵和动态上市。 大多数开源系统都能支持主流的动态（雅培和德康），新的动态发布一年左右一般也能支持（具体实践取决于安全和稳定性的测试进度）。
 
-### Safety of the AAPS system
-A more accurate question is probably “is it safe **compared** with my current insulin delivery system?” since no method of insulin delivery is without risk. There are many checks and balances in place with **AAPS**. A recent [paper](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375) looked at the use of **AAPS** in a computer simulated set-up, which was an effective way to unobjectively trial how safe and effective the system is. More generally, it is estimated that over 10,000 individuals worldwide are using open-source automated-insulin delivery systems, and uptake continues to increase globally.
+大多数 **AAPS** 用户表示，拥有一个能在夜间睡眠时自动调整基础率的系统后，他们的入框率更高了，糖化HbA1c 降低了，生活质量也得到了改善，而大多数混合闭环系统都是如此。 有些人喜欢用起来比较简单的系统，不想搞太多的个性化配置(这意味着你可能喜欢那种商业产品化的系统)， 而其他人则认为那样缺乏对系统的控制感，用起来不放心(那可能会喜欢开源系统)。 如果您（或您的家人）是新确诊的患者，通常的做法是先习惯使用 MDI 和动态血糖仪，然后逐步过渡到可闭环的泵，再过渡到 **AAPS**，但有些人（尤其是小孩）可能会直接使用泵。
 
-Any device that uses radio communications could be hacked, and this is true for a non-looping insulin pump as well. Currently, we are not aware of anyone attempting to harm individuals by hacking their diabetes-related medical equipment. However, there are multiple ways to protect against such risks:
+关键的一点是 **AAPS** 用户必须积极主动地区查找问题、解决问题，遇到问题需要到相应的社群寻求帮助。 这跟使用商业化产品的思维方式和体验截然不同。 **AAPS** 用户拥有更多的控制权，但责任也更重，这得提前做好心理建设。
 
-1.  In the pump settings, limit both the max bolus allowed and max temporary basal settings to amounts that you believe are safest. These are hard limits that we do not believe any malicious hacker could circumvent.
+## 像AAPS这样的开源系统安全吗？
 
-2.  Set your CGM alarms enabled for both highs and lows.
+### AAPS 系统的安全性
+更准确的问题可能是 "与我目前使用的胰岛素输注系统**相比**，它是否更安全？"因为没有一种胰岛素输送方法是没有风险的。 **AAPS** 有许多制衡机制。 有篇[论文](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)研究了 **AAPS** 在计算机模拟装置中的使用情况，这是主观地检验该系统安全性和有效性的有效方法。 更宏观地来看，全世界有过万人正在使用开源自动胰岛素输注系统，而且这一数量还在全球范围内持续增加。
 
-3.  Monitor your insulin delivery online. Nightscout users can set additional alarms to alert for a wide variety of conditions, including conditions that are much more likely to occur than a malicious attack. In addition to highs and lows, Nightscout can display diagnostic data useful for verifying that the pump is operating as desired, including current IOB, pump temporary basal history, pump bolus history. It can also be configured to proactively alert users to undesirable conditions, such as predicted highs and lows, low insulin reservoir, and low pump battery.
+任何使用无线电通信的电子设备都可能被黑客攻击，非闭环得胰岛素泵也不例外。 目前，我们没有发现有人试图通过入侵糖尿病医疗设备来伤天害理的情况。 然而，有多种方法可以预防这种风险：
 
-If a malicious attack was made on your insulin pump, these strategies would significantly mitigate the risk. Every potential **AAPS** user needs to weigh the risks associated with using **AAPS**, versus the risks of using a different system.
+1.  在胰岛素泵设置里，将大剂量和临时基础率的上限设置为你认为最安全的值。 这是任何黑客都绕不过去的硬性限制。
 
-#### Safety considerations around improving blood glucose control too fast
+2.  把您的 CGM设置成无论过高过低都报警。
 
-A rapid reduction in HbA1c and improved blood glucose control sounds appealing. However, reducing average blood glucose levels _too fast_ by starting any closed loop system can cause permanent damage, including to the eyes, and painful neuropathy that never goes away. This damage can be avoided simply by reducing levels more slowly. If you currently have an elevated HbA1c and are moving to AAPS (or any other closed loop system), please discuss this potential risk with your clinical team before starting, and agree a timeplan with them. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](#preparing-safety-first).
+3.  在线监控您的胰岛素输注情况。 Nightscout用户可以对各种各样的情况设置单独的警报提醒，包括那些比恶意攻击更可能发生的情况。 除了过高过低以外，Nightscout还可以显示很多诊断指标，用来核实胰岛素泵是否按要求运行，包括目前的IOB、临时基础率历史、大剂量输入历史等。 还可以主动提醒用户注意一些特殊情况，比如预计血糖偏高或偏低、储药器存量偏低以及胰岛素泵电量不足等。
 
-#### Medical safety around devices, consumable supplies and other medications
+如果你的胰岛素泵受到恶意攻击，那么这些策略规则将大大降低风险。 每个将要使用 **AAPS** 的用户都需要结合使用其他系统的情况权衡相关风险。
 
-Use a tested, fully functioning FDA or CE approved insulin pump and CGM for an artificial pancreas loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, do not use these for creating an AAPS system.
+#### 对于过快干预血糖控制的安全考虑
 
-Use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer of your pump and CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking your supplies.
+快速降低 HbA1c 和改善血糖控制听起来很有吸引力。 但是，不管用哪种闭环系统，_过快_降低平均血糖水平都可能造成永久性损伤，包括对眼睛的损伤，以及永远无法消除的疼痛性神经病变。 这种损害可以通过缓慢降低血糖水平来避免。 如果您目前的 HbA1c 偏高，并准备改用 AAPS（或任何其他闭环系统），请在开始之前与您的临床团队讨论这一潜在风险，并与他们商定一个时间计划。 有关如何安全降低血糖水平的更多一般信息，包括医学文献链接，请参阅[此处](#preparing-safety-first)的[安全部分。
 
-Do not take SGLT-2 inhibitors (gliflozins) when using **AAPS** as they incalculably lower blood sugar levels. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](#preparing-safety-first).
+#### 关于设备、耗材和其他药物的医疗安全
+
+使用经过测试、功能完备的、经 FDA 或 CE 批准的胰岛素泵和 CGM 来构建人工胰腺闭环。 Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. 如果您发现或得到坏的、改装或自制的胰岛素泵或 CGM 接收器，请勿将其用于创建 AAPS 系统。
+
+请使用胰岛素泵和 CGM 制造商认可的原装耗材，如助针器、管路和储药器。 Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. 剂量不当的胰岛素非常危险，破解设备/擅自改造耗材是拿你的生命开玩笑，别这么干。
+
+使用 **AAPS** 时不要服用 SGLT-2 抑制剂（格列净类），因为它们会不可估量地降低血糖水平。 将这种作用与降低基础率以增加血糖的系统结合起来是很危险的，有关这方面的更多详情，请参阅主要[安全章节](#preparing-safety-first)。
 
 (introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
-## How can I approach discussing AAPS with my clinical team?
+## 如何与我的临床医生团队讨论AAPS？
 
-Users are encouraged to speak with their clinicians about their intention to use **AAPS**. Please do not be afraid to have an honest conversation with your diabetes team if you intend to use **AAPS** (or any other DIY loop, for that matter). Transparency and trust between patient and doctor is paramount.
+我们鼓励用户与临床医生讨论使用 **AAPS** 的意向。 如果您打算使用 **AAPS**（或任何其他 DIY 闭环），请不要害怕与您的糖尿病团队进行坦诚交流。 患者和医生之间的透明度和信任是最重要的。
 
-### Suggested approach:
-Start a conversation with your clinician to determine their familiarity and attitude towards diabetic technology such as CGMs,  pumps, hybrid loops and commercial looping. Your clinician/endocrinologist should be aware of the basic technology and be willing to discuss with you recent advancements with commercial loop products available within their regions.
+### 建议方法：
+与您的临床医生展开对话，确定他们对 CGM、泵、混合闭环和商业闭环等糖尿病治疗技术的熟悉程度和态度。 您的临床医生/内分泌科医生应该了解基本技术，并愿意与您讨论他们所在地区的商业闭环产品的最新进展。
 
-#### Local precedent
+#### 当地先例
 
-Obtain your clinicians/endocrinologists’ views on DIY loop _vs_ commercial looping, and gauge their knowledge in this area. Are they familiar with **AAPS** and can they share with you any helpful experience of working with patients with DIY looping?
+了解临床医生/内分泌专家对 DIY 闭环_与_商业闭环的看法，并了解他们在这方面的知识。 他们是否熟悉 **AAPS**，能否与您分享与使用 DIY 闭环的患者打交道的有益经验？
 
-Ask if your team has any patients under their care who already use DIY looping. Due to patient confidentiality, doctors cannot pass other patient’s details to you without obtaining the individual’s consent. However, if you want to, you **can** ask them to pass **your** contact details to an existing DIY looping patient if there is one the clinician feels you might "click” with, suggesting that you would be happy for the patient to contact you to discuss DIY looping. Clinicians are not obliged to do this, but some are happy to, since they realise the importance of peer-to-peer support in type 1 diabetes management. You may also find it useful to meet local friendly DIY loopers. This is of course up to you, and not entirely necessary.
+询问您的团队中是否有已经使用 DIY 闭环的病人。 出于对患者保密的考虑，医生在未征得患者同意的情况下，不能将其他患者的详细资料透露给您。 然而，如果你愿意的话，你**可以**要求他们将**你的**联系方式转交给一位现有的DIY闭环式胰岛素输注系统的患者（如果临床医生认为你可能会与某位患者相处融洽的话），这表明你很高兴患者能联系你，以便讨论DIY闭环式胰岛素输注系统 临床医生没有义务这样做，但有些医生很乐意这样做，因为他们意识到同伴互助在 1 型糖尿病管理中的重要性。 您还可以结识当地的 DIY 圈友。 当然，这取决于您自己，并非完全必要。
 
-#### National and International Precedent
+#### 国内和国际项目
 
-If you feel unsupported by your team to loop with **AAPS**, the following discussion points may help:
+如果您觉得您的团队不支持您使用 **AAPS** 闭环，以下讨论要点可能会有所帮助：
 
-a) The **AAPS** system has been designed BY patients and their caregivers. It has been designed ultimately for safety, but also drawing on in-depth patient experience. There are currently around **10,000** AAPS users worldwide. There is therefore likely to be other patients using DIY looping in your clinic's patient population (whether they know about it or not).
+a) **AAPS** 系统是由患者及其护理人员设计的。 它的设计最终是为了安全，但也借鉴了病人的经验。 目前全球约有 **10,000** 名 AAPS 用户。 因此，在您诊所的患者群体中，很可能还有其他患者在使用 DIY 闭环（无论他们是否知道）。
 
-b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ has confirmed that DIY loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_ which highlight the progress of the DIY looping commmunity.
+b) 国际权威医学杂志《柳叶刀》（[The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_）最近发表的专家共识指南证实，DIY 闭环在改善糖尿病控制（包括入框时间）方面是**安全****有效**的。 《自然》（[Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_）等权威期刊定期发表文章，重点介绍 DIY 闭环社区的进展情况。
 
-c) Starting with **AAPS** involves a _gradual_ migration from “open” loop pumping, through low-glucose suspend, through to hybrid “closed” looping, by completing a number of objectives. There is therefore a structured programme, requiring the user to demonstrate a level of competence at each stage and fine-tuning their basic settings (basal, ISF and ICR) before they can close the loop.
+c) 从 **AAPS** 开始，需要完成一系列目标，从 "开环 "泵，到低血糖暂停，再到混合 "闭环"，_逐步_过渡到 "闭环" 。 因此，有一个结构化的方案，要求用户在每个阶段都表现出一定的能力，并在启用闭环之前对其基本设置（基础率、ISF 和 ICR）进行调优。
 
-d) Technical support is available to you from the DIY community through GitHub, Discord and Facebook closed groups.
+d) DIY社区通过GitHub、Discord和Facebook私密群组向您提供技术支持。
 
-e) You will be able to provide **both CGM and insulin looping/pumping information** as combined reports at clinic meetings (through Nightscout or Tidepool), either printed out or on-screen (if you bring a laptop/tablet). The streamlining of both CGM and insulin data will allow more effective use of your clinician’s time to review your reports and aid their discussions in assessing your progress.
+e) 在诊所会议中，您将能够提供**持续葡萄糖监测（CGM）和胰岛素闭环/泵送信息**的综合报告（通过Nightscout或Tidepool平台），可以是打印出来的版本，也可以是电子版（如果您携带了笔记本电脑/平板电脑）。 CGM（持续葡萄糖监测）和胰岛素数据的简化，将使得临床医生更有效地利用时间来审阅您的报告，并辅助他们评估您进展的讨论。
 
-f) If there is still strong objection from your team, hand your clinician printouts of the reference articles linked here in the text, and give them the link to the **AAPS** clinicians section: [For Clinicians – A General Introduction and Guide to **AAPS**](../UsefulLinks/ClinicianGuideToAaps.md)
+f）如果您的团队仍然强烈反对，请将本文中提到的参考文章的打印版交给您的临床医生，并给他们提供**AAPS**临床医生部分的链接：[“面向临床医生——**AAPS**的一般介绍和指南”](../UsefulLinks/ClinicianGuideToAaps.md)
 
-#### Support for DIY looping by other clinicians
+#### 其他临床医生对 DIY 闭环系统的支持
 
-The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_)[ (co led by Kings’ and Guy’s and St Thomas’ NHS Foundation Trust, and co lead by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
+发表在[《柳叶刀糖尿病内分泌学》](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) 上的论文[（由国王医院和盖伊圣托马斯国民医疗服务基金会共同领导，由伦敦国王医院的糖尿病顾问和荣誉高级讲师 Sufyan Hussain 博士共同领导）提供了以下内容：
 
-a) **Assurance** for professionals that DIY artificial pancreas systems/ open source as a “safe and effective treatment” option for type 1 diabetes and provides guidance on recommendations, discussions, supports, documentation;
+a) 向专业人士**保证**，DIY人工胰腺系统/开源软件是1型糖尿病的一种“安全有效的治疗方法”选项，并为此提供建议、讨论、支持和文件记录方面的指导；
 
-b) **Recognition** that open-source automated insulin delivery (“AID”) systems can increase time in range (TIR) while reducing variability in blood glucose concentrations and the amount of hypo and hyperglycaemic episodes in various age groups, genders and communities;
+**确认**开源自动化胰岛素输注（“AID”）系统能够在不同年龄组、性别和社群中增加血糖入框时间（TIR），同时减少血糖波动以及低血糖和高血糖事件的发生次数；
 
-c) **Recommendation** that healthcare workers should **support** type 1 patients or their caregivers who choose to manage their diabetes with an open source AID system;
+c) **建议**医疗卫生工作者应该**支持**选择使用开源自动化胰岛素输注（AID）系统管理其1型糖尿病的1型糖尿病患者或其护理人员；
 
-d) Recommendation that healthcare workers should attempt to learn about all treatment options that might benefit patients including available open-source AID systems.  If health care professionals do not have resources to educate themselves, or have legal or regulatory concerns, they should consider **cooperating, or teaming up with other healthcare professionals** who do;
+d) 建议医护人员尝试了解所有可能对患者有益的治疗方案，包括可用的开源 AID 系统。  如果医护人员没有资源进行自我教育，或有法律或监管方面的顾虑，**他们应考虑与其他有资源的医护人员合作或组队**；
 
-e) Emphasis that all users of CGMs should have real-time and open-access to **their own health data** at all times
+e) 强调所有持续葡萄糖监测（CGM）用户应始终能够实时且无障碍地获取**自己的健康数据**
 
-f) Emphasis that these open source systems have not undergone the same regulatory evaluations as commercially available medical technologies, and there is no commercial technical support. However, **extensive community support is available**; and
+f) 强调这些开源系统并未经过与市售医疗技术相同的监管评估，且没有商业技术支持。 不过，**可以获得广泛的社区支持**；以及
 
-g) A recommendation that **regulation and legal frameworks** should be updated to ensure clarity on permitting ethical and effective treatment of such open source systems.
+g) 一项建议是，应更新**监管和法律框架**，以确保明确规定允许对这些开源系统进行合乎道德且有效的治疗。
 
-Another paper in [Medical Law International, 2021](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)(_4_) also highlights the UK General Medical Council’s ‘consent guidance’ places a strong emphasis on doctor and patients making decisions together. The doctor should explain the potential benefits, risks, burdens and side-effects on DIY APS and may recommend a particular option without pressuring the patient.
+另一篇发表在《[国际医疗法，2021](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)》期刊第_4_期上的论文也强调了英国医学总会的“同意指南”非常注重医生和患者共同做出决定。 医生应向患者解释DIY人工胰腺系统（DIY APS）的潜在益处、风险、负担和副作用，并可以在不给患者施加压力的情况下推荐某种特定的选择。
 
-Ultimately it is up to the patient to weigh up these factors, along with any non-clinical issues relevant to them and decide which treatment option, if any, to accept.
+最终，由患者自己权衡这些因素，以及与他们相关的任何非临床问题，并决定是否接受某种治疗方案（如果有的话）。
 
-If a doctor discovers in a clinic that their patient is looping with a DIY system, they are not exempted from their obligations to monitor the patient, simply because they did not prescribe the particular piece of technology the patient is using; clinicians must continue to monitor patients.
+如果医生在临床中发现患者正在使用DIY系统进行闭环操作，仅仅因为医生没有开具患者正在使用的这种特定技术的处方，他们并不能免除对患者的监测义务；临床医生必须继续监测患者。
 
-Doctors (at least in the UK) are not prohibited from prescribing unlicensed medicines and can use their clinical discretion. They should therefore use their clinical judgement to decide if a DIY APS is suitable for a specific patient, and discuss what they consider to be the pros and cons with the patient.
+医生（至少在英国）并没有被禁止开具未获许可的药物处方，并且可以使用他们的临床判断力。 因此，他们应该运用自己的临床判断力来决定DIY人工胰腺系统是否适合特定患者，并与患者讨论他们认为的利弊。
 
-#### The articles referenced above, and other useful links and position statements are listed below:
+#### 上述引用的文章，以及其他有用的链接和立场声明，列于下方：
 
 1. Open-source automated insulin delivery: international consensus statement and practical guidance for health-care professionals [_Lancet Diabetes Endocrinol_, (2022) _10_, 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
 2. [In Silico Trials of an Open-Source Android-Based Artificial Pancreas: A New Paradigm to Test Safety and Efficacy of Do-It-Yourself Systems, 2020](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)
 3. A DIY ‘bionic pancreas’ is changing diabetes care — what's next? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
-4. Prescribing unapproved medical devices? 自主搭建人工胰腺系统（APS）案例[_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
+4. Prescribing unapproved medical devices? The case of DIY artificial pancreas systems [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
 5. [Berlin Institute of Health position statement, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
 6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
 7.  Netherlands (EN/NL) - for clinicians - [how to help people on open source automated insulin delivery systems](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
@@ -270,110 +270,110 @@ Doctors (at least in the UK) are not prohibited from prescribing unlicensed medi
 
 
 
-## Why can’t I just download AAPS and use it straight away?
+## 为什么我不能直接下载 AAPS 并直接使用？
 
-The **AAPS** app is not provided in Google Play - you have to build it from source code by yourself for legal reasons. **AAPS** is unlicensed, meaning that it does not have approval by any regulatory body authority in any country. **AAPS** is deemed to be carrying out a medical experiment on yourself, and is carried out at the user’s own risk.
+本应用没有上架到Google Play - 出于法律要求，你必须通过源代码自行构建安装包。 **AAPS**是未获许可的，这意味着它没有得到任何国家任何监管机构的批准。 **AAPS** 被视为在自己身上进行医学实验，用户需自行承担风险。
 
-Setting up the system requires patience, determination and the gradual development of technical knowledge. All the information and support can be found in these documents, elsewhere online, or from others who have already done it. Over 10,000 people have successfully built and are currently using **AAPS** worldwide.
+构建起这个系统需要足够的耐心、决心和不断丰富的技术知识。 你可以从本处文档、其他在线的渠道或者通过其他那些已经用上了AAPS的人哪里找到你需要的信息和支持。 全球已有 10,000 多人成功建立并正在使用 **AAPS**。
 
-The developers of **AAPS** take safety incredibly seriously, and want others to have a good experience of using **AAPS**. That is why it is essential that every user (or carer, if the user is a child):
+**AAPS** 的开发人员非常重视安全问题，希望其他人在使用 **AAPS** 时有良好的体验。 这就是为什么每个用户（或儿童用户的护理人员）必须遵循以下原则：
 
-- builds the AAPS system themself and works through the **objectives** so that they have reasonably good personalised settings and understand the basics of how **AAPS** works by the time they “close the loop”;
+- 自己建立 AAPS 系统，并完成各项**目标**，以便在 "闭环 "时拥有合理的个性化设置并了解 **AAPS** 的基本工作原理；
 
-- backs up their system by exporting and saving important files (like keystore and settings .json file) somewhere safe, so you can setup again quickly if needed;
+- 通过导出和保存重要文件来备份他们的系统 (例如密钥库和settings.json设置文件)到安全的位置，这样您可以在需要时再次快速设置；
 
-- updates to newer master versions as and when they become available; and
+- 当有新的主版本发布的时候进行更新；以及
 
-- maintains and monitors the system to ensure it is working properly.
+- 维护和监测系统情况，以确保其正常运行。
 
-## What is the connectivity of the AAPS system?
+## AAPS 系统的连接性如何？
 
-**Figure 3 (below)** shows one example of the **AAPS** system for a user who do not require any followers interacting with the system. Additional open-source software and platforms which are not shown can also be integrated.
+**图3（如下）**展示了**AAPS**系统的一个实例，适用于无需其他人与系统交互的用户。 图中未显示的其他开源软件和平台也可以集成进来。
 
 ![21-06-23 AAPS connectivity no followers](../images/AAPS-connectivity-no-followers.png)
 
 
-**Figure 4 (below)** shows the full potential of the **AAPS** system for a user who has followers and requires a monitor and send adjust the system remotely (like a child with type 1 diabetes). Additional open-source software and platforms which are not shown can also be integrated.
+**图 4（下图）**显示了 **AAPS** 系统的全部潜力，适用于有追随者并需要远程监控和发送调整系统的用户（如患有 1 型糖尿病的儿童）。 图中未显示的其他开源软件和平台也可以集成进来。
 
 ![21-06-23 AAPS overview with followers](../images/AAPS-overview-with-followers.png)
 
-## How does AAPS get continually developed and improved?
+## AAPS 如何不断发展和完善？
 
-Most **AAPS** users use the fully tested **master** version of AAPS, which has been tested for bugs and problems, before being released to the community. Behind the scenes, the developers try out new improvements, and test these out in “developer” (**dev**) versions of **AAPS** with a user community who are happy to do bug updates at short notice. If the improvements work well, they are then released as a new “master” version of **AAPS**. Any new master release is announced on the Facebook group, so that the mainstream **AAPS** users can read about and update to the new master version.
+大多数**AAPS**用户使用的是经过全面测试的**主**版本，该版本在向社区发布之前已对错误和问题进行了测试。 在幕后，开发者们尝试新的改进，并在**AAPS**的“开发者”（**dev**）版本中与一群乐于在接到短期通知后立即进行错误更新的用户社区共同测试这些改进。 如果改进效果良好，就会作为**AAPS**的新 "master"版本发布。 任何新的主版本都会在 Facebook 群组上公布，以便**AAPS**的主流用户可以阅读并更新到新的主版本。
 
-Some experienced and confident **AAPS** users conduct experiments with emerging technologies and with dev versions of the **AAPS** app, which can be interesting for the less adventurous users to read about, without having to do it themselves! People tend to share these experiments on the Facebook group too.
+一些经验丰富、信心十足的 **AAPS** 用户使用新兴技术和开发版本的 **AAPS** App 进行实验，这对于不那么喜欢冒险的用户来说，阅读这些实验可能会很有趣，而不必亲自动手！ 人们也会在 Facebook 群组中分享这些实验。
 
-You can read more about some of these experiments and discussion on emerging tech here:
+您可以在这里阅读更多关于新兴技术的实验和讨论：
 
 Tim Street [https://www.diabettech.com/](https://www.diabettech.com/)
 
 David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
-## Who can benefit from AAPS?
+## 哪些人可以从 AAPS 受益？
 
-| User Type                                   |
-| ------------------------------------------- |
-| ✔️ type 1 diabetic                          |
-| ✔️ caregiver or parent of a type 1 diabetic |
-| ✔️ blind users type 1 diabetic              |
-| ✔️ *clincians and healthcare professionals  |
+| 用户类型               |
+| ------------------ |
+| ✔️ 1 型糖尿病患者        |
+| ✔️ 1 型糖尿病患者的照顾者或父母 |
+| ✔️ 1 型糖尿病盲人用户      |
+| ✔️ *临床医生和医疗保健专业人员  |
 
-The above table assumes that the user has access to both continuous gluocse monitor and insulin pump.
+上表假定用户可使用连续血糖监测仪和胰岛素泵。
 
-*All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioural considerations.
+* **AAPS**的所有数据均可通过数据共享平台提供给医护人员，包括提供记录和实时监测CGM数据、胰岛素输送、碳水化合物条目、预测和设置的Nightscout。 Nightscout记录包括日报和周报，这些报告可以为医疗专业人员与1型糖尿病患者讨论血糖控制情况及相关行为因素提供更准确的数据支持。
 
-### Accessibility for users AAPS who are partially or completely blind
+### 为部分或完全失明的 AAPS 用户提供无障碍环境
 
-#### Day to day AAPS use:
-AAPS can be used by blind people. On Android devices, the operating system has a program called TalkBack. This allows screen orientation via voice output as part of the operating system. By using TalkBack you can operate both your smartphone and AAPS without needing to be able to see.
+#### AAPS 的日常使用：
+盲人可以使用 AAPS。 在安卓设备上，操作系统有一个名为 TalkBack 的程序。 作为操作系统的一部分，它允许通过语音输出进行屏幕定位。 通过使用TalkBack功能，您可以在无需视力辅助的情况下操作您的智能手机和AAPS。
 
-#### Building the AAPS app:
-As a user you will build the AAPS app in Android Studio. Many people use Microsoft Windows for this purpose, where there is the Screenreader analogous to TalkBack. Since Android Studio is a Java application, the “Java Access Bridge” component must be enabled in the Control Panel. Otherwise, the screen reader of the PC will not speak in Android Studio.
+#### 构建 AAPS App：
+作为用户，您将在 Android Studio 中构建 AAPS 应用程序。 许多人为此使用 Microsoft Windows，其中有类似 TalkBack 的屏幕阅读器。 由于 Android Studio 是 Java 应用程序，因此必须在控制面板中启用 "Java Access Bridge "组件。 否则，在Android Studio中，电脑的屏幕阅读器将无法发声。
 
-How you do this depends on your operating system, two methods are outlined below:
+具体方法取决于操作系统，下面介绍两种方法：
 
-1) In the Windows Start menu, enter “Control Panel” in the search field, open with Enter. It opens: “All Control Panel Items”.
+1) 在 Windows 开始菜单的搜索栏中输入 "控制面板"，用回车键打开。 它会打开： "所有控制面板项目"。
 
-Open the "Ease of Access Centre".
+打开 "轻松访问中心"。
 
-Then open “Use computer without a display” with Enter.
+然后用回车键打开 "使用无显示屏计算机"。
 
-Under hear text read aloud select "turn on narrator" and "turn on audio display", and click "apply"
+在 "听到文本朗读 "下选择 "打开旁白 "和 "打开音频显示"，然后点击 "应用"。
 
-or:
+或：
 
-2) Press Windows key and enter “Control Panel” in the search field, open with Enter. It opens: “All Control Panel Items”.
+2) 按 Windows 键，在搜索栏中输入 "控制面板"，用回车键打开。 它会打开： "所有控制面板项目"。
 
-Press the letter C to get to “Center for Ease of Use”, open with Enter.
+按字母 C 进入 "Center for Ease of Use"，用回车键打开。
 
-Then open “Use computer without a screen” with Enter.
+然后用回车键打开 "使用无屏幕计算机"。
 
-There, at the bottom, you will find the checkbox “Enable Java Access Bridge”, select it.
+在底部，你会发现 "启用 Java Access Bridge "复选框，选中它。
 
-Done, just close the window! The screen reader should work now.
+完成后，关闭窗口！ 屏幕阅读器现在应该可以工作了。
 
 
 
-## What benefits can I get from AAPS?
+## 我可以从 AAPS 获得哪些好处？
 
-With investment of your time, **AAPS** can potentially lead to:
+投入时间，**AAPS**有可能带来以下好处
 
-- alleviating the stress and burden of managing type 1 diabetes;
+- 减轻管理 1 型糖尿病的压力和负担；
 
-- reducing the multitude of mundane decisions that arise from type 1 diabetes;
+- 减少因 1 型糖尿病而产生的大量琐碎决定；
 
-- the provision of personalised and dynamic insulin dosing based on real-time data which can cut down the need for hypo treatments and reduce hyperglycemia episodes;
+- 根据实时数据提供个性化的动态胰岛素剂量，从而减少对低血糖治疗的需求，减少高血糖的发生；
 
-- an increased knowledge of insulin management and confidence to better fine tune your settings;
+- 增加对胰岛素管理的了解，并增强信心以更好地微调您的设置；
 
-- the ability to create automatic settings (**automations**) that are tailored to fit in with your lifestyle;
+- 能够创建符合您生活方式的自动设置（**自动化**）功能；
 
-- improved sleep quality and overall reduction in the frequency of nighttime interventions;
+- 改善睡眠质量，并总体上减少夜间干预的频率；
 
-- remote monitoring and administration of insulin delivery for caregivers of type 1 diabetics; and
+- 为1型糖尿病患者的看护者提供远程监控和胰岛素输注管理功能；以及
 
-- streamlining of all your portable diabetic equipment (continuous glucose monitor receiver and insulin controlling devices) by using an Android phone controlled by **AAPS**.
+- 通过使用由**AAPS**控制的安卓手机，来优化整合您所有的便携式糖尿病设备（包括动态和胰岛素控制装置）。
 
-Ultimately, **AAPS** can empower individuals to better manage their diabetes, resulting in stable blood sugars and improved long term health outcomes.
+最终，**AAPS** 可以帮助患者更好地控制糖尿病，从而稳定血糖，改善长期健康状况。
 
-Interested in how to get started with setting up AAPS? Take a look at the [preparing](../Getting-Started/PreparingForAaps.md) section.
+对如何开始设置 AAPS 感兴趣？ 请查看[准备](../Getting-Started/PreparingForAaps.md)部分。
