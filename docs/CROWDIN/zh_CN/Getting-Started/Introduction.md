@@ -45,15 +45,15 @@
 
 ## AAPS的基本组成部分有哪些？
 
-The “brain” of AAPS is an **app** which you build yourself. There are detailed step-by-step instructions for this. You then install the **AAPS  app** on a [compatible](../Getting-Started/Phones.md) **Android smartphone** (**1**). A number of users prefer their loop on a separate phone to their main phone. So, you don’t necessarily have to be using an Android phone for everything else in your life, just for running your AAPS loop.
+AAPS的“核心”是您自己构建的 **应用程序**。 这方面有详细的步骤说明。 然后你需要在一部[兼容的](../Getting-Started/Phones.md)**安卓智能手机**上安装**AAPS  应用程序**（**1**）。 有的用户倾向于用一部专门的手机来安装闭环，而非平时用的手机。 这样（尤其是苹果手机用户）就不用非得换到安卓手机上处理日常事务，只是用它来运行AAPS闭环就行。
 
-The **Android smartphone** will also need to have another app installed on it as well as **AAPS**. This is either a modified Dexcom app called build-your-own dexcom app [**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) or [**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/). This additional app receives glucose data from a sensor (**2**) by bluetooth, and then sends the data internally on the phone to the **AAPS app**.
+除了 **AAPS** 之外，**安卓智能手机**还需要安装另一个 App。 [**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0)（一个经过修改的 Dexcom 应用程序，Build-Your-Own Dexcom App）或[**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/)。 这个附加 App 通过蓝牙从传感器 (**2**) 接收葡萄糖数据，然后在手机内部将数据发送到 **AAPS App**。
 
-The **AAPS app** uses a decision making process (**algorithm**) from OpenAPS. Beginners  start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. Which algorithm you use (oref0 or oref1), depends on which suits your specific situation best.  In both cases, the algorithm takes into account multiple factors, and performs rapid calculations every time a new reading comes in from the sensor. The algorithm then sends instructions to the insulin pump (**3**) on how much insulin to deliver by bluetooth. All the information can be sent by mobile data or wifi to the internet (**4**). This data can also be shared with followers if desired, and/or collected for analysis.
+**AAPS** 采用的是 OpenAPS 的决策过程(也就是**算法**)。 初学者最开始用基础的 **oref0** 算法，对AAPS比较熟悉之后可以切换到新的 **oref1** 算法。 使用哪个算法 (oref0或 oref1) 取决于哪个算法最适合你的具体情况。  在这两种情况下，算法都会考虑多种因素，并且每次从动态血糖仪获得新的数据时都进行快速计算。 然后，算法通过蓝牙向胰岛素泵（**3**）发送指令，告诉它需要输送多少胰岛素。 所有信息都可以通过移动数据或无线网络发送到互联网（**4**）上。 如果需要的话，这些数据也可以分享给别人或者收集起来以供分析。
 
-## What are the advantages of the AAPS system?
+## AAPS系统有哪些优势？
 
-The OpenAPS algorithm used by **AAPS** controls blood sugar levels in the absence of user input, according to the users’ defined parameters (important ones being basal rates, insulin sensitivity factors, insulin-to-carb ratios, duration of insulin activity etc.), reacting every 5 minutes to the new sensor data. Some of the reported advantages of using AAPS are extensive fine-tunable options, automations and increased transparency of the system for the patient/caregiver. This can result in better control over your (or your dependant’s) diabetes, which in turn may give improved quality of life and increased peace of mind.
+**AAPS**采用的 OpenAPS算法能在无需用户输入的情况下自动控制血糖水平，会每5分钟根据用户定义的参数（主要是基础率、胰岛素敏感度、碳水系数、活性胰岛素持续时间等）和收到的动态血糖数据做出一次反应。 Some of the reported advantages of using AAPS are extensive fine-tunable options, automations and increased transparency of the system for the patient/caregiver. This can result in better control over your (or your dependant’s) diabetes, which in turn may give improved quality of life and increased peace of mind.
 
 ### **Specific advantages include:**
 
