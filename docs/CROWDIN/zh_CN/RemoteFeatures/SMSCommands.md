@@ -214,7 +214,7 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 | BASAL STOP/CANCEL | Yes  | To stop temp basal               |
 
 
-### Loop
+### 闭环
 
 | Command           | Auth | Function & *Response*                                                                                                                                                                                                                     |
 | ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -239,7 +239,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#screens-action-tab).                          |
 | EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                       |
 
-### Profile
+### 配置文件
 
 | Command        | Auth | Function & *Response*                                                                                                                                        |
 | -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
