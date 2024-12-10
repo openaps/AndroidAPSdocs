@@ -1,10 +1,10 @@
-# Preparing to start with AAPS
+# 准备开始使用AAPS
 
-Welcome. This documentation aims to guide users who are preparing to setup and start using the Android Artificial Pancreas System (**AAPS**).
+欢迎。 这份文档旨在为准备安装并开始使用Android人工胰腺系统（**AAPS**）的用户提供指导。
 
-## Finding your way around the documentation
+## 在文档中查找信息
 
-An **index** and explanation of the documentation structure can be found [here](../index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol.
+您可以在[此处](../index.md)找到文档的**索引**和结构说明，也可以通过点击文档左上角**AAPS**符号来访问。 There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol.
 
 We aim to make it easy to determine both the capabilities and limitations of **AAPS**. It can be disappointing to discover after investing time in reading the documentation that you might not have a compatible insulin pump or CGM, or that **AAPS** offers different functionality than hoped for.
 
