@@ -1,6 +1,6 @@
-# Component Overview
+# 组件概述
 
-**AAPS** is not just a (self-built) application, it is but one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the component documentation.
+**AAPS**不仅仅是一个（自建）应用程序，它只是您闭环系统中的多个模块之一。 在决定使用哪些组件之前，最好先查看一下组件的文档。
 
 ![Components overview](../images/modules.png)
 
