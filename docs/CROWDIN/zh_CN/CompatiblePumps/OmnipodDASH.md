@@ -88,7 +88,7 @@ Please **swipe left** to the **DASH** tab where you will be able to manage all p
 
 (OmnipodDASH-activate-pod)=
 
-### Activate Pod
+### 激活Pod
 
 1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
@@ -147,7 +147,7 @@ It is good practice to export settings AFTER activating the pod. Do this at each
 
 (OmnipodDASH-deactivate-pod)=
 
-### Deactivate Pod
+### 停用Pod
 
 Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
 
@@ -285,7 +285,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 * **Errors:** Displays the last error encountered. Review the [Pod history](#view-pod-history) and log files for past errors and more detailed information.
 *  **Active pod alerts:** Reserved for currently running alerts on the active pod.
 
-### Buttons
+### 按钮
 
 
 ![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication.
@@ -344,7 +344,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 * **SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
 * **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 
-### Alerts
+### 警报
 
 ![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
@@ -357,7 +357,7 @@ Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the de
 * **Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
 * **Number of units:** The number of units at which to trigger the pod low reservoir alert.
 
-### Notifications
+### 通知
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
@@ -380,7 +380,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-### Level
+### 余量水平
 
 **Insulin Level**
 
