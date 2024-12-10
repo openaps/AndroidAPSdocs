@@ -4,59 +4,59 @@
 
 ## 在文档中查找信息
 
-您可以在[此处](../index.md)找到文档的**索引**和结构说明，也可以通过点击文档左上角**AAPS**符号来访问。 There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol.
+您可以在[此处](../index.md)找到文档的**索引**和结构说明，也可以通过点击文档左上角**AAPS**符号来访问。 在那里，您将找到对不同文档部分目的的概述。 您还可以使用本页左侧的标题来浏览文档。 最后，在**AAPS**符号的正下方，有一个实用的搜索功能。
 
-We aim to make it easy to determine both the capabilities and limitations of **AAPS**. It can be disappointing to discover after investing time in reading the documentation that you might not have a compatible insulin pump or CGM, or that **AAPS** offers different functionality than hoped for.
+我们的目标是让您能够轻松了解**AAPS**的功能和局限性。 在投入时间阅读文档后发现，您可能没有兼容的胰岛素泵或连续血糖监测（CGM）设备，或者**AAPS**提供的功能与您的期望不同，这可能会让您感到失望。
 
-Many experience-related details in the **AAPS** documentation make more sense when you are actually using **AAPS** in real-time. Just as it is difficult to learn a sport only by reading the rules, it takes a combination of learning the foundations of the rules for safely operating **AAPS** and then learning how best to apply those rules as you start to use **AAPS**.
+在实时使用**AAPS**时，**AAPS**文档中的许多与体验相关的细节会更有意义。 就像仅仅通过阅读规则很难学会一项运动一样，学习如何安全操作**AAPS**的基础规则，并在开始使用**AAPS**时学习如何最好地应用这些规则，需要两者的结合。
 
 (preparing-safety-first)=
 
 ## Safety First
-“With great power comes great responsibility…”
+“能力越大，责任越大…”
 
-### Technical safety
-**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
+### 技术安全
+**AAPS**拥有一系列广泛的安全特性。 这些限制条件是通过分阶段完成一系列的[目标](../SettingUpAaps/CompletingTheObjectives.md)逐步解除的，这些目标涉及测试特定参数和回答选择题。 随着**AAPS**的各个目标成功完成，其功能也会逐步解锁。 这个过程允许用户分阶段从开环安全过渡到闭环，同时学习**AAPS**的不同功能。
 
-The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimise these issues.
+[目标](../SettingUpAaps/CompletingTheObjectives.md)旨在为用户提供最佳的**AAPS**入门体验，在设计时考虑了**AAPS**开发者观察到的新用户常见的错误和普遍趋势。 错误可能会发生，因为初学者缺乏经验且过于急切地想要开始使用**AAPS**, 或者忽略了关键点。 [目标](../SettingUpAaps/CompletingTheObjectives.md)旨在最大限度地减少这些问题。
 
-### Medical safety
+### 医疗安全
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
-:class: danger
-Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
+:class:危险
+关于血糖控制的迅速改善和糖化血红蛋白（HbA1c）水平的降低，建议谨慎行事 
 ```
 
-An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicans make their patients aware of this issue.
+一个重要的安全考虑是，**对于那些血糖水平已经升高了一段时间的人来说，糖化血红蛋白（HbA1c）的快速降低和血糖控制的改善可能会造成永久性损害**。 许多糖尿病患者并不了解这一点，而且并非所有临床医生都会让患者意识到这个问题。
 
-This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occuring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+这种损害可能包括**视力丧失和永久性神经病变（疼痛）**。 通过更缓慢地降低平均血糖水平，有可能避免这种损害的发生。 如果您目前的 HbA1c 偏高，并准备改用 **AAPS**（或任何其他闭环系统），_请_在开始之前与您的临床团队讨论这一潜在风险，并与他们商定一个时间计划。 在**AAPS**系统中，您可以轻松地先设定较高的血糖目标（目前，您可以选择的最高目标是10.6 mmol/L，但如果需要，您也可以保持一个故意设置得较宽松的控制方案），然后随着月份的推移逐步降低目标。
 
-#### How quickly can I reduce my HbA1c without risking permanent damage?
+#### 在不造成永久性损害的情况下，能多快降低我的糖化血红蛋白（HbA1c）水平？
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the Hba1C dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
+一项包含76名患者的回顾性[研究](https://pubmed.ncbi.nlm.nih.gov/1464975/)报告指出，如果在6个月内糖化血红蛋白（HbA1C）分别下降1%、2%或3%，则视网膜病变进展的风险将分别增加1.6倍、2.4倍和3.8倍。 他们建议，“在任何6个月期间，糖化血红蛋白（HbA1c）的降低幅度应限制在2%以内，以防止视网膜病变的进展......在血糖控制开始时降低过快可能导致视网膜病变的进展严重或暂时加剧。”
 
-N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
+请注意 如果您使用不同的糖化血红蛋白（HbA1c）单位（mmol/mol 而不是 %），请点击[此处](https://www.diabetes.co.uk/hba1c-units-converter.html)获取HbA1c计算器工具。
 
-In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
+在另一项包含954名患者的回顾性[评估](https://academic.oup.com/brain/article/138/1/43/337923)中，研究人员注意到：
 
-**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
+**“在3个月内，糖化血红蛋白（HbA1c）下降2–3%时，糖尿病患者发生治疗诱发性神经病变的绝对风险为20%；而HbA1c在3个月内下降超过>4%时，糖尿病患者发生治疗诱发性神经病变的绝对风险则超过80%。”**
 
-A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
+关于这项工作的[评论](https://academic.oup.com/brain/article/138/1/2/340563)认为，为避免并发症，**目标应该是在3个月内将A1c降低<<2%。**您可以在[此处](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf)和[此处](https://www.mdpi.com/1999-4923/15/7/1791)阅读有关该主题的其他评论。
 
-It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
+人们普遍认为，_新_诊断的1型糖尿病患者（通常在开始胰岛素治疗之前，诊断时HbA1c水平非常高）似乎能够在诊断后立即迅速降低其HbA1c水平，而不会遇到同样程度的这些风险，因为他们没有长时间保持高血糖水平。 然而，这仍然是一个需要你与临床医生讨论的问题。
 
 (PreparingForAaps-no-sglt-2-inhibitors)=
-### No SGLT-2 inhibitors
+### 不要使用SGLT-2抑制剂
 
 ```{admonition} NO SGLT-2 inhibitors
-:class: danger
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
+:class:危险
+SGLT-2抑制剂，也称为格列净类药物，可抑制肾脏对葡萄糖的重吸收。 格列净类药物（Gliflozins）能够极大地降低血糖水平，因此，在使用AAPS等闭环系统时，您绝对不能服用它们！ 这将存在发生酮症酸中毒和/或低血糖的重大风险！ 将这种药物与降低基础率以增加血糖（BG）的系统结合使用尤其危险。 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45g of glucose. The problem is that unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs resulting in your body having too much insulin compared to the absorbed Carbs, resulting in hypoglycemia.
+简而言之：
+- **示例1：低血糖风险**
+>午餐时，您根据摄入了45克葡萄糖，使用 **AAPS** 来计算并输注大剂量。 问题是，AAPS并不知晓SGLT-2抑制剂的作用，这种抑制剂会使身体排出一部分碳水化合物，从而导致身体吸收的碳水化合物与胰岛素的比例失衡，胰岛素相对过多，进而引发低血糖。
 
-- **Example 2: risk of Ketoacidosis**
->The inhibitors eliminate some of the carbs in the background causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake  including basal. Over time this can result  in your  BG remaining below target value to the point where the body does not have enough background insulin to absorb any carbs resulting in Ketoacidosis. Ordinarily, Ketoacidosis  develops in T1D patients because their pump fails which would trigger alerts on their phone and be noticeable due to a high BG value. However, the danger with Gliflozins  is that there would be no AAPS alerts as  the pump remains operational and the BG potentially remains within target.  
+- **示例2：酮症酸中毒的风险。**
+>抑制剂在后台消除了一部分碳水化合物，导致你的血糖水平下降。 **AAPS** 会自动指示胰岛素泵减少胰岛素的摄入量，包括基础胰岛素的输注。 长时间如此，可能会导致你的血糖持续低于目标值，以至于身体没有足够的基础胰岛素来吸收任何碳水化合物，进而引发酮症酸中毒。 通常情况下，1型糖尿病患者发生酮症酸中毒是因为他们的胰岛素泵出现故障，这会在他们的手机上触发警报，并且由于高血糖值而容易被察觉。 然而，格列净类药物（Gliflozins）带来的危险在于，即使胰岛素泵仍在正常工作，且血糖可能仍在目标范围内，也不会有任何AAPS警报。  
 
 Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro, and Xigduo XR, others.
 ```
