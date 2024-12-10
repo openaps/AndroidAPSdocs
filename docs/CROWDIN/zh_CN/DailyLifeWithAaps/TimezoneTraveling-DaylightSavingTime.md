@@ -44,7 +44,7 @@ When get out of plane:
 
 (timezone-traveling-insight)=
 
-## Insight
+## 洞见
 
 The driver automatically adjusts the time of the pump to the time of the phone.
 
