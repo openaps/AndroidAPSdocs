@@ -52,7 +52,7 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 - Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
 - All pumps **AAPS** can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
 
-### BG Source
+### 血糖数据源
 
 See the dedicated page [Compatible CGMs](../Getting-Started/CompatiblesCgms.md).
 
