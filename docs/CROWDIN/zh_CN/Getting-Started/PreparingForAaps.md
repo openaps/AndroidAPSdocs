@@ -215,16 +215,16 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 #### 智能手机型号选择
 您购买的具体型号取决于所需的功能。 您可以在[手机页面](../Getting-Started/Phones.md)上找到关于工作配置的建议和用户反馈。
 
-Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
+鼓励用户保持其手机Android版本的更新，包括安全参数方面。 然而，如果您是**AAPS**的新用户或者不是技术专家，您可能想要在我们的各个论坛上等待其他人更新手机并确认安全后，再进行更新。
 
 ```{admonition} delaying Samsung phones updates
-:class: warning
-Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. To disable these forced updates you need to switch the phone to "developper mode" by:
- go to settings and about then software information, then tap build number u til it confirms you have unlocked developer mode. Got back to main settings menu and you should see a new developer options menu item. Open developer options and scroll to find auto system update and turn it off
+:class:警告
+三星有着不幸的记录，他们强制推送手机更新，而这些更新却导致了蓝牙连接问题。 要禁用这些强制更新，您需要将手机切换到‘开发者模式’，方法是：
+进入设置，然后点击关于手机中的软件信息，接着连续点击版本号，直到系统确认您已解锁开发者模式。 返回到主设置菜单，您应该会看到一个新的‘开发者选项’菜单项。 打开开发者选项，滚动查找‘自动系统更新’并将其关闭。
 ```
 
 ```{admonition} Google Play Protect potential Issue
-:class: warning
-There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. If this happens you will have to go to the google play options and disable “Google Play Protect”. Not all  phone models or all Android versions are affected..
+:class:警告
+有多份报告称，**AAPS**每天早上都会被Google Play Protect任意关闭。 如果发生这种情况，您将需要进入Google Play的选项并禁用‘Google Play Protect’。 并非所有手机型号或所有Android版本都会受到影响。
 ```
 
