@@ -120,6 +120,8 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
 #### Other functionalities
 
 * Unattended exports @vanelsberg
+* New [Automation trigger](#automations-automation-triggers) @vanelsberg
+  * Pod Activation (patch pump only)
 * New [Automation triggers](#automations-automation-triggers) @jbr77rr
   * Cannula age, Insulin age, Battery age, Sensor age, Reservoir level, Pump battery level
 * Allowing negative carbs entry @MilosKozak
