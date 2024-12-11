@@ -38,4 +38,4 @@ Note: the Tidepool organization is also working on bringing the iOS Loop product
 
 -Click on “Connection settings” and set based on your personal preferences
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
+有关如何将数据上传到Tidepool后使用数据的更多帮助，请访问：[https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
