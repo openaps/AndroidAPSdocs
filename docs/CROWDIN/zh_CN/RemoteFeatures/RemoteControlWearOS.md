@@ -24,7 +24,7 @@ Use the Wear Preferences to define which variables should be considered when cal
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![手表设置](../images/ConfBuild_Wear.png)
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
@@ -155,7 +155,7 @@ Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpa
 
 ### Complication related settings
 
-* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
+* **小部件点击动作** (default `Default`): Decides which dialog is opened when user taps complication: 
   * *Default*: action specific to complication type *(see list above)*
   * *Menu*: AAPS main menu
   * *Wizard*: bolus wizard - bolus calculator

@@ -25,7 +25,7 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 (ConfigBuilder_Profile)=
 
-## Profile
+## 配置文件
 
 This module can not be disabled as it is a core part of **AAPS**.
 
@@ -33,7 +33,7 @@ See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic underst
 
 (Config-Builder-insulin)=
 
-## Insulin
+## 胰岛素
 
 ![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
 
@@ -48,7 +48,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 * Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
 * The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
 
-#### Rapid-Acting Oref
+#### 速效 Oref
 
 ![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
 
@@ -56,7 +56,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 * DIA = at least 5.0h
 * Max. peak = 75 minutes after injection (fixed, not adjustable)
 
-#### Ultra-Rapid Oref
+#### 超速效 Oref
 
 ![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
 
@@ -66,7 +66,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 (Config-Builder-lyumjev)=
 
-#### Lyumjev
+#### Lyumjev(超速效赖脯胰岛素)
 
 ![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
 
@@ -84,7 +84,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 (Config-Builder-bg-source)=
 
-## BG Source
+## 血糖数据源
 
 Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
@@ -92,7 +92,7 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
-* [MM640g](../CompatibleCgms/MM640g.md)
+* [美敦力640g](../CompatibleCgms/MM640g.md)
 * [Glimp](#libre1-using-glimp) - only version 4.15.57 and newer are supported
 * [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 * [Poctech](../CompatibleCgms/PocTech.md)
@@ -117,14 +117,14 @@ Select the pump you are using. See [Compatible pumps](../Getting-Started/Compati
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R Korean (for domestic DanaR pump)
 * Dana Rv2 (DanaR pump with unofficial firmware upgrade)
-* [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+* [丹纳-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 * Accu Chek Combo 
   * [Driver using Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
   * [Driver with no additional requirement](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md), added in [AAPS v.3.2](#version3200)
 * Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
 * Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
-* [Medtronic](../CompatiblePumps/MedtronicPump.md)
+* [美敦力](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
@@ -138,7 +138,7 @@ Select the type of sensitivity detection. For more details of different designs 
 
 You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs). You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
-### Absorption settings
+### 碳水吸收率设置
 
 If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
@@ -148,23 +148,23 @@ If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The va
 
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
-* OpenAPS AMA 
+* OpenAPS 自动化管理助手 
   * Advanced Meal Assist: older algorithm not recommended anymore.
   * In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
-* [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb) 
+* [OpenAPS SMB（超级微小大剂量）](#Open-APS-features-super-micro-bolus-smb) 
   * Super Micro Bolus: most recent algorithm recommended for all users.
   * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
   * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
 
 If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Preferences > Sensitivity detection > Sensitivity Oref1 settings](../SettingUpAaps/Preferences.md).
 
-## Loop
+## 闭环
 
 This module should not be disabled as it is a core part of **AAPS**.
 
-## Constraints
+## 约束条件
 
-### Objectives
+### 目标
 
 **AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
@@ -194,7 +194,7 @@ Used to **send** data such as treatments to xDrip+.
 
 See [Open Humans](../SupportingAaps/OpenHumans.md).
 
-### Wear
+### 手表
 
 Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)).
 
@@ -206,21 +206,21 @@ Broadcast data to Samsung's G-Watch Wear App (Tizen OS).
 
 Connection to Garmin device (Fenix, Edge...)
 
-## Treatments
+## 治疗
 
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](#screens-bolus-carbs).
 
-## General
+## 一般
 
-### Overview
+### 首页概览
 
 This is the [main screen](#AapsScreens-the-homescreen) of **AAPS** and can not be disabled.
 
-#### Show notes field in treatment dialogs
+#### 在治疗对话框中显示备注字段
 
 Choose if you want to have a notes field when entering treatments or not.
 
-#### Status lights
+#### 状态指示灯
 
 Choose if you want to have [status lights](#Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
@@ -232,21 +232,21 @@ Choose if you want to have [status lights](#Preferences-status-lights) on overvi
 
 (Config-Builder-actions)=
 
-### Actions
+### 手动操作
 
 A tab offering multiple buttons to take [actions](#screens-action-tab) in **AAPS**.
 
-### Automation
+### 自动操作
 
 A tab for managing your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
 
 (Config-Builder-sms-communicator)=
 
-### SMS Communicator
+### SMS短信通讯器
 
 Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
 
-### Food
+### 食物
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
@@ -254,20 +254,20 @@ Note: Entries cannot be used in the **AAPS** calculator. (View only)
 
 (Config-Builder-wear)=
 
-### Wear
+### 手表
 
 Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![手表设置](../images/ConfBuild_Wear.png)
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
 * Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
 
-### Maintenance
+### 维护
 
 Access this tab to export / import settings.
 

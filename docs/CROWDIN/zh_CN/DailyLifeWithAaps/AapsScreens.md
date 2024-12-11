@@ -352,7 +352,7 @@ Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-bu
 
 About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
 
-#### Insulin
+#### 胰岛素
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
@@ -561,13 +561,13 @@ For more details see [APS section on config builder page](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
-## Profile
+## 配置文件
 
-![Profile](../images/Screenshots_Profile.png)
+![配置文件](../images/Screenshots_Profile.png)
 
 Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
 
-## Automation
+## 自动操作
 
 See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
 
@@ -591,12 +591,12 @@ Shows history of CGM readings and offers option to remove reading in case of fai
 
 (aaps-screens-treatments)=
 
-## Treatments
+## 治疗
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder. In this view, you can view and alter the history of the following treatments:
 
 * Bolus & carbs
-* [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+* [扩展大剂量(方波)](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Temporary basal rate
 * [Temporary target](../DailyLifeWithAaps/TempTargets.md)
 * [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)

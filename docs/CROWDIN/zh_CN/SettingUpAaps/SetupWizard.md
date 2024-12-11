@@ -335,7 +335,7 @@ Go back and press "NEXT" to go to the next screen:
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
 (setup-wizard-profile)=
-### Profile
+### 配置文件
 
 Now we are entering a very important part of the Setup Wizard.
 
@@ -440,7 +440,7 @@ Your profile has now been set:
 ![image](../images/setup-wizard/Screenshot_20231202_143833.png)
 
 
-### Insulin pump
+### 胰岛素泵
 
 
 
@@ -497,7 +497,7 @@ Press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144049.png)
 
-### Sensitivity detection
+### 灵敏度检测
 
 Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 

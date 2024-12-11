@@ -487,13 +487,13 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
 > ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
-- **Activate Pod**
+- **激活Pod**
 
   > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
   > Primes and activates a new pod
 
-- **Deactivate Pod**
+- **停用Pod**
 
   > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
@@ -602,7 +602,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 - **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
 - **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 
-### Alerts
+### 警报
 
 Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
@@ -614,7 +614,7 @@ Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, 
 - **Number of units:** The number of units at which to trigger the pod low reservoir alert.
 - **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
 
-### Notifications
+### 通知
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful.
 

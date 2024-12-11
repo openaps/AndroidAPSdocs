@@ -534,9 +534,9 @@ Wie die meisten Faustregeln gilt, dass dies nicht allgemeingültig ist. Hinweis:
 
 (AapsScreens-insulin-profile)=
 
-## Insulin Profil
+## Insulinprofil
 
-![Insulin Profil](../images/Screenshot_insulin_profile.png)
+![Insulinprofil](../images/Screenshot_insulin_profile.png)
 
 This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
 

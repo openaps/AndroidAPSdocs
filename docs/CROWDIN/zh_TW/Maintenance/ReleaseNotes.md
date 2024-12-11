@@ -66,7 +66,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 (版本3300)=
 ## 版本 3.3.0.0
 
-Version 3.3 is close ! Use the version switcher at the bottom right of your screen to see what's new.
+3.3版即將推出 使用螢幕右下角的版本切換，查看最新內容。
 
 ![打開語系選單](../images/documentation_language_menu.png)
 
@@ -591,7 +591,7 @@ v3 是新的協議。 更加安全和高效
 - G6、Poctech、Tomato、Eversense血糖資料來源支援（Tebbe Ubben 和 Milos Kozak）
 - 修復偏好設置中停用 SMB 的問題（Johannes Mockenhaupt）
 
-### Misc
+### 其他事項
 
 - 如果你使用非預設的 `smbmaxminutes` 值，則必須再次設置此值
 
@@ -643,7 +643,7 @@ v3 是新的協議。 更加安全和高效
 - Dexcom 修補版應用作為血糖資料來源
 - oref1 敏感性外掛
 
-### Misc
+### 其他事項
 
 - 應用現在使用抽屜顯示所有外掛；在組態建置工具中選擇為可見的外掛將顯示為頂部的標籤（收藏夾）
 - 組態建置工具和目標標籤的全面檢查，新增描述

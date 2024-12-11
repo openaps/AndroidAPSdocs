@@ -8,9 +8,9 @@ You retain full control about what happens to your data and what projects you wa
 
 The following data will be uploaded to your Open Humans account:
 
-- Glucose values
+- 血糖值
 - Careportal events (except notes)
-- Extended boluses
+- 扩展大剂量(方波)
 - Profile switches
 - Total daily doses
 - Temporary basals

@@ -66,7 +66,7 @@ Example (for Samsung S23): **Settings > General management > Date and time**: ma
 
 Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterward if it seems to be causing problems (ask for help if needed).
 
-### AAPS settings
+### AAPS设置
 
 Now that the phone settings have been checked, in the **AAPS** app itself, use the [Config Builder](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
 
@@ -199,7 +199,7 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 
 | Command              | Auth | Function & *Response*                                                                                 |
 | -------------------- | ---- | ----------------------------------------------------------------------------------------------------- |
-| PUMP                 | No   | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| 泵                    | No   | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
 | PUMP DISCONNECT *30* | Yes  | To disconnect pump for *30* minutes                                                                   |
 | PUMP CONNECT         | Yes  | Pump reconnected                                                                                      |
 
@@ -214,7 +214,7 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 | BASAL STOP/CANCEL | Yes  | To stop temp basal               |
 
 
-### Loop
+### 闭环
 
 | Command           | Auth | Function & *Response*                                                                                                                                                                                                                     |
 | ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -239,7 +239,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#screens-action-tab).                          |
 | EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                       |
 
-### Profile
+### 配置文件
 
 | Command        | Auth | Function & *Response*                                                                                                                                        |
 | -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |

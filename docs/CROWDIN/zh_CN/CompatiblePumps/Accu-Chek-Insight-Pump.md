@@ -46,7 +46,7 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
     
     ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* Success! Pat yourself on the back for successfully pairing your pump with AAPS.
+* 成功! Pat yourself on the back for successfully pairing your pump with AAPS.
     
     ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
@@ -142,7 +142,7 @@ The Insight pump has a small internal battery to keep essential functions like t
 
 ## Insight specific errors
 
-### Extended bolus
+### 扩展大剂量(方波)
 
 Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
 

@@ -87,7 +87,7 @@ If you are struggling with **AAPS** v3 to accept the 'NS access token' and using
 
 ### Features of AAPSClient include:
 
-| Tab / Hamburger     | Features                                                                                                                                                                                              |
+| Tab / Hamburger     | 功能                                                                                                                                                                                                    |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Action** Tab      | - Profile Switch <br>- Temp Target<br>- BG Check<br>- CGM Sensor Insert<br>- Note<br>- Exercise<br>- Announcement<br>- Question?<br>- History Browser |
 | **Food** Tab        |                                                                                                                                                                                                       |

@@ -1,4 +1,4 @@
-# Automation
+# 自动操作
 
 ## What is an Automation?
 
@@ -65,7 +65,7 @@ To set up an **Automation** create a ‘rule’ with **AAPS** as follows:
 
 * check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
 
-![Automation](../images/automation_2024-10-26_17-48-05.png)
+![自动操作](../images/automation_2024-10-26_17-48-05.png)
 
 
 
