@@ -440,7 +440,7 @@ Your profile has now been set:
 ![image](../images/setup-wizard/Screenshot_20231202_143833.png)
 
 
-### Insulin pump
+### 胰岛素泵
 
 
 
