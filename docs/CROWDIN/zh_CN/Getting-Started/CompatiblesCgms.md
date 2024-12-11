@@ -1,6 +1,6 @@
-# CGMs/FGMs Configuration
+# CGMs（植入式动态）/FGMs（扫描式动态） 配置
 
-This section provides a brief overview of all compatible **CGMs/FGMs** with **AAPS**.
+本节简要概述了所有与**AAPS**兼容的**持续血糖监测系统（CGMs）/扫描式血糖监测系统（FGMs）**。
 
 *Tip*: If you can display your glucose data in xDrip+ app, you can choose xDrip+ as **BG** source in **AAPS**.
 
