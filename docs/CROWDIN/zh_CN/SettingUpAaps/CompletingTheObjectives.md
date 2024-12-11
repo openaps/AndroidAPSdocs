@@ -45,7 +45,7 @@ Exporting your **AAPS** settings is recommended after completing each **Objectiv
 
 **目标2** 需要完成几个“任务”，如下方截图所示。 点击橙色文本“尚未完成”以访问待办事项。 Links will be provided to guide you, in case you are not familiar with a specific action yet.
 
-![Screenshot objective 2](../images/Objective2_V2_5.png)
+![目标 2 截图](../images/Objective2_V2_5.png)
 
 完成**目标2**的任务包括：
 - 将你的**配置文件**设置为90%，持续时间为10分钟。
@@ -95,7 +95,7 @@ For each question, there may be more than one answer that is correct! If an inco
 
 为了减少在开环模式下提出的基础率更改建议的数量，您仍然可以使用 **目标3** 中描述的技巧。 Additionally, you can change the minimum percentage for recommended basal rate changes. The higher the value, the fewer change notifications you will receive.
 
-![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
+![开环最小请求更改](../images/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: Note
@@ -113,7 +113,7 @@ You don't need to action each and every system recommendation!
 
 在您对**AAPS**的计算和设置感到满意之前，您可能会希望将[**配置文件**中的血糖目标值](#profile-glucose-targets)设定得比平时高一些。 您可能会想尝试在您的**个人设置**中将**血糖目标值**调整到一个更严格的范围（比如说，1mmol/l[20mg/dl]或更小的范围），并观察由此产生的行为变化。
 
-![Stop sign](../images/sign_stop.png)
+![停止标志](../images/sign_stop.png)
 
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: 注意
@@ -121,12 +121,12 @@ You don't need to action each and every system recommendation!
 
 ```
 
-![blank](../images/blank.png)
+![空白](../images/blank.png)
 
 (objectives-objective6)=
 ## Objective 6: Starting to close the loop with Low Glucose Suspend
 
-![Warning sign](../images/sign_warning.png)
+![警告标志](../images/sign_warning.png)
 ```{admonition}  Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
 :class: Note
 You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
@@ -149,7 +149,7 @@ You will still need to correct high BG values by yourself (manually with correct
 
 - 如果您的基础 IOB 为负（请参见下方截图），在 **目标6** 中可以触发大于 100% 的临时基础率（TBR）。
 
-![Example negative IOB](../images/Objective6_negIOB.png)
+![负 IOB 示例](../images/Objective6_negIOB.png)
 
 - Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
 - Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon in the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
@@ -168,7 +168,7 @@ You will still need to correct high BG values by yourself (manually with correct
 
 此设置的默认建议是“**平均餐时大剂量 + 3 倍最大每日基础率**”，其中“最大每日基础率”是每天任何时间段内的最大每小时值。
 
-![max daily basal](../images/MaxDailyBasal2.png)
+![最大每日基础率](../images/MaxDailyBasal2.png)
 
 This recommendation should be seen as a starting point. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
 * lower the "Maximum total IOB OpenAPS can’t go over" value;
@@ -236,12 +236,12 @@ Set-up the most basic automation rule; for example trigger an Android notificati
 
 - 确保**SMB**运行正常。
 - 阅读[此处](../DailyLifeWithAaps/DynamicISF.md) 关于 **动态 ISF** 的文档
-- Search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) and [Discord](https://discord.gg/4fQUWHZ4Mw) groups for discussions around **Dynamic ISF** and read about other users' experiences and recommendations.
-- Enable the **DynamicISF plugin** and identify the appropriate calibration for your body's uniqueness. It is advisable to begin with a value lower than 100% for safety reasons.
+- 在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 和 [Discord](https://discord.gg/4fQUWHZ4Mw) 群组中搜索关于 **Dynamic ISF** 的讨论，并阅读其他用户的经验和建议。
+- 启用 **DynamicISF 插件**，并根据您身体的独特性确定适当的校准。 It is advisable to begin with a value lower than 100% for safety reasons.
 
 (CompletingTheObjectives-go-back-in-objectives)=
 ## Go back in objectives
 
-If you wish to go back in the **Objectives** for whatever reason you can do so by clicking at "clear finished".
+如果您出于任何原因想要回到 **目标** 中的早期阶段，可以通过点击“清除已完成”来做到这一点。
 
 ![Go back in objectives](../images/Objective_ClearFinished.png)
