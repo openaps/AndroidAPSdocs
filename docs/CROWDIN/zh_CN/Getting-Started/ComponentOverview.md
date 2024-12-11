@@ -5,13 +5,13 @@
 ![Components overview](../images/modules.png)
 
 ```{admonition} IMPORTANT SAFETY NOTICE
-:class: important
+:class:重要
 
-The foundation of **AAPS** safety features discussed in this documentation is built on the safety features of the hardware used to build your system. For closing an automated insulin dosing loop, it is critically important that you only use an insulin pump and CGM that are tested, fully functioning and approved by the official instances of your country. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, **do not use** these for creating an **AAPS** system.
+本文档中讨论的**AAPS**安全功能的基础建立在用于构建您系统的硬件的安全功能之上。 为了实现自动化胰岛素给药闭环，至关重要的是，您必须仅使用经过测试、功能完备且获得您所在国家官方机构批准的胰岛素泵和持续葡萄糖监测系统（CGM）。 对这些组件进行硬件或软件修改可能会导致胰岛素给药量出现意外，从而给用户带来重大风险。 如果您发现或得到的是损坏的、经过修改的或自制的胰岛素泵或持续葡萄糖监测接收器，**请不要使用**这些设备来创建**AAPS**系统。
 
-Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+此外，只使用原装耗材也同样重要，例如经胰岛素泵和动态血糖仪厂商认证过的助针器、留置针和储药器等。 使用未经测试的或修改过的耗材可能导致动态血糖仪失准和胰岛素计量错误。 剂量不当的胰岛素非常危险，破解设备/擅自改造耗材是拿你的生命开玩笑，别这么干。
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
+最后但同样重要的是，您绝对不能服用SGLT-2抑制剂（格列净类药物），因为它们会不可预测地降低血糖水平。 当与降低基础率以增加血糖的系统结合使用时，SGLT-2抑制剂尤其危险，因为格列净类药物可能导致血糖无法升高，从而引发危险的胰岛素缺乏状态。 [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
 ## Necessary Modules
