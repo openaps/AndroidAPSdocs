@@ -2,7 +2,7 @@
 
 ## What is an Automation?
 
-"**Automation**" is a feature which can automate task for AndroidAPS.
+"**Automation**" is a feature which can automate task for AAPS.
 
 Automations performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a WIFI SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
 
@@ -10,14 +10,17 @@ Automations rules are created and modified from the Automations tab. Each rule i
 
 - One or more conditions or 'triggers' that start an action.
 
-    Think of a certain time schedule, an event or propertie value in AAPS
+    Think of a certain time schedule, an event or properties value in AAPS
 
 - One or more actions to perform.
 
     Such as an alarm or settings a profile percentage or exporting the AAPS settings on Pod change.
 
 
-There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on **Facebook** and **Discord** for Automation examples from other users. 
+There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section.
+You can also search the AAPS user groups on 
+![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and
+![**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users. 
 
 ## How Automation can help
 

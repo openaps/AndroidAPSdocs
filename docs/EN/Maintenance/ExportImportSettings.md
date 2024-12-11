@@ -1,20 +1,22 @@
 # Creating and restoring back-ups
 
-When installing AndroidAPS on your phone it becomes a "medical device" you are depended on. It is recommended to have an
-emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself, "what if? 
+When installing AAPS on your phone it becomes a "medical device" you rely on daily. It is highly recommended to have an
+emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself, "What if? 
 
-To enable restoring your AndroidAPS setup to an existing or new phone, it is important to keep following items in a safe place (read: not on your phone).
-Best practice is to keep backups on a local hard drive, USB stick or (preferred) cloud storage like Google Drive, Microsoft 365 OneDrive.
-By storing your backups in the cloud you'll always have everything needed accessible form your phone to restore anywhere and anytime.
+To restore your AAPS setup to an existing or new phone, it's important to keep following items in a secure location (read: not on your phone).
+Best practice is to keep at least two separate backups: on a local hard drive, USB stick and (preferred) on Cloud storage like Google Drive or
+Microsoft 365 OneDrive. By storing your backups in the cloud you'll always have everything needed accessible from your phone
+to restore your setup anywhere and anytime.
 
-You may consider acquiring a secondary backup phone and practicing restoring AndroidAPS to verify the backup phone works as expected.
+Consider acquiring a secondary backup phone and practicing restoring AAPS to ensure the backup phone works as expected. This step will give
+you confidence that your emergency plan is effective and that you can seamlessly continue using AAPS if your primary phone becomes unavailable.
 
 To be able to restore, having the following items at hand is important:
 
-- Your Android Studio keystore file and password: Needed for (re)building the AndroidAPS .APK installer file.
-- A recent copy of the AndroidAPS installer .APK
-- A recent settings export file: For restoring important settings (which includes your objectives!).
-- Your **AndroidAPS master password**
+- Your **Android Studio keystore file** and associated **password**: Needed for (re)building the AAPS .APK installer file.
+- A recent copy of the **AAPS installer .APK**
+- A recent **settings export** file: For restoring important settings (which includes your objectives!).
+- Your **AAPS master password**
 - Backups of additional utilities: Such as BYODA and/or xDrip+.
 - Personal notes on your setup.
 
@@ -23,7 +25,7 @@ Below are the items that are recommended for keeping back-ups.
 ## Creating back-ups
 
 ### Keystore file from the computer you used to build the APK
-When building your .APK installer file from Android Studio, it uses the **keystore file and password to sign the .APK installer file**. To update your current AndroidAPS installation, it is required to sign the update .APK installer file with the same keystore used for the initial installation. When updating, all settings and the AndroidAPS database will be kept. Note that without this, you are required to first uninstall the current application and then reinstall and reconfigure AndroidAPS.
+When building your .APK installer file from Android Studio, it uses the **keystore file and password to sign the .APK installer file**. To update your current AAPS installation, it is required to sign the update .APK installer file with the same keystore used for the initial installation. When updating, all settings and the AAPS database will be kept. Note that without this, you are required to first uninstall the current application and then reinstall and reconfigure AAPS.
 
 Maintaining the keystore and associated password will greatly reduce the complexity of updating the APK in the future, especially if you need to build the app from a new computer. See the [Updating AAPS](../Maintenance/UpdateToNewVersion.md) section for details on using the keystore when building a new APK. 
 
@@ -38,27 +40,28 @@ In case your main **AAPS** phone is lost or damaged, having a copy of the APK av
 
 **How to back-up:** Maintain a copy on the computer used to build the APK with Android Studio. Additionally, it is recommended to use a cloud platform to store a copy of the installer APK. Make sure you know how to locate both backups when needed. Consider setting up dedicated folders to store these backups.
 
-### AAPS preferences
-With a copy of the APK installer file (see above) and your **Preferences** file, you can quickly get up and running on an existing or new phone.
+### AAPS settings file (also referred to as 'Preferences')
+With a copy of the APK installer file (see above) and your **Settings** file, you can quickly get up and running on an existing or new phone.
 
-**Preferences** customize the AAPS application to fit your specific setup. They encompass details such as your config builder settings,
+The **Settings** file is used t customize the AAPS application to fit your specific setup. They encompass details such as your config builder settings,
 objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
 
-Exporting the AndroidAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all
-configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AndroidAPS. Without
+Exporting the AAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all
+configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AAPS. Without
 this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings
 for undoing any configuration changes.
 
-**When to back-up:**
-* As **Preferences** store your progress towards completing the objectives, you should back up your **Preferences** each time you complete an objective so that you do not lose your progress. _Without a copy of your **Preferences** you will have to complete all objectives again in the event you need to replace your phone._
+**When to back-up AAPS settings:**
+* Each time you complete an objective to prevent losing your progress. _Without a copy of your **Settings** you will have to complete all objectives again 
+in the event you need to re-install AAPS or replace your phone._
 
-* Any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back up your **Preferences** before and after making the changes. This way you have your most recent settings as well as a copy of what they were before the changes in case you need to revert back to them.
+* Any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back up your **Settings** before and after making the changes. This way you have your most recent settings as well as a copy of what they were before the changes in case you need to revert back to them.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only : the **Preferences** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
+* Tubeless pumps (Such as Omnipod and Medtrum) users only : the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
 
 **How to back-up manually:**
 
-1. If this your first time importing or exporting **Preferences** you will need to set a master password in [Preferences > General > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Preferences** back-ups without this password._
+1. If this your first time importing or exporting **Settings** you will need to set a master password in [Preferences > General > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
 
 2. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok
 
@@ -67,17 +70,17 @@ for undoing any configuration changes.
 
 3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
 
-## Automated Settings Export ##
+## Settings Export ##
 
-It is recommended to do regular settings exports, especially **before an after making configuration changes**. You can choose to do exports
-**manually or (preferred) through automation**. Also, make sure to make a note of your AndroidAPS master password and to backup your settings
+It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports
+**manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings
 files by copying them off your phone to for instance a cloud storage location.
 
-**Note**: _The exported settings will be encrypted with your AndroidAPS master password: without the master password used for exporting
+**Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting
 you will be unable to import the settings file!_
 
 ### Exporting or Importing Settings: ###
-To export or import settings, use the **import or export buttons** in the AndroidAPS **maintenance menu**
+To export or import settings, use the **import or export buttons** in the AAPS **maintenance menu**
 
 ![Maintenance menu export/import buttons](../images/Maintenance/maintenance_menu_import_export_400px.png)
 
@@ -85,16 +88,16 @@ To export or import settings, use the **import or export buttons** in the Androi
 For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**"
 in the maintenance menu preferences.
 
-By enabling this feature you allow AndroidAPS to execute settings exports without user intervention. For this the master password
+By enabling this feature you allow AAPS to execute settings exports without user intervention. For this the master password
 is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks.
 After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by
 manually exporting settings from the maintenance menu.
 
 After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking
 to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged
-to the AndroidAPS Careportal and User entry lists under Treatments.
+to the AAPS 'Careportal' and 'User entry' lists under Treatments.
 
-_**Note:** On importing settings to user always needs to enter the AndroidAPS password!_
+_**Note:** On importing settings to user always needs to enter the AAPS password!_
 
 ![Maintenance menu unattended Settings Export](../images/Maintenance/maintenance_menu_preferences_400px.png)
 
