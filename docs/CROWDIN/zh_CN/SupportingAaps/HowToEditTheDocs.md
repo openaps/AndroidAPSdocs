@@ -4,7 +4,7 @@
 
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
 
-## General
+## 一般
 
 For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
 
@@ -100,7 +100,7 @@ We try to avoid further levels of headlines.
     
 
 1. first
-2. second
+2. 第二
 3. third
 
 ### Unordered list
@@ -130,7 +130,7 @@ You can insert lists in lists by indenting the next level with 4 more spaces to 
     
 
 1. first
-2. second
+2. 第二
 3. third 
     1. one element
     2. another element
@@ -200,7 +200,7 @@ You can add notes and warning boxes to documentation.
 
 Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
 
-#### Notes
+#### 备注
 
     ```{admonition} Note headline
     :class: note
@@ -255,7 +255,7 @@ Avoid using tables with long texts as the contents is difficult to set in Markdo
 
 3. Useful references
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![图片](../images/styleguide01.png) 1\. English language writing tips
 
 #### Use language that is appropriate for the reader
 
@@ -345,7 +345,7 @@ For example:
 
 | Verb      | Nominalization |
 | --------- | -------------- |
-| complete  | completion     |
+| 完成        | completion     |
 | introduce | introduction   |
 | provide   | provision      |
 | fail      | failure        |
@@ -386,9 +386,9 @@ A “How-to-guide” style (with minimal explanation) is used for building, conf
 
 A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
 
-![Image](../images/styleguide02.png)
+![图片](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![图片](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
 
 - narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
 
@@ -446,7 +446,7 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
         
         Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
 
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![图片](../images/styleguide05.png) How-To Guides (e.g. a recipe)
 
 A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
 
@@ -492,7 +492,7 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
         
         Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![图片](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
 
 An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
 

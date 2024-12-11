@@ -106,10 +106,10 @@ A ‘time shift’ within a user’s **Profile** feature will move the user’s 
 It is always a question of which hour’s **Profile’s** settings should replace the settings of the current time. This time must be shifted by x hours. So please be mindful of the directions as described in the following example:
 
 - Current time: 12:00
-- **Positive** time shift 
+- **Positive** 时间偏移 
     - 2:00 **+10 h** -> 12:00
     - Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-- **Negative** time shift 
+- **Negative** 时间偏移 
     - 22:00 **-10 h** -> 12:00
     - Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
 

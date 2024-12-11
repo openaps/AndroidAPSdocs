@@ -1,89 +1,89 @@
-# Component Overview
+# 组件概述
 
-**AAPS** is not just a (self-built) application, it is but one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the component documentation.
+**AAPS**不仅仅是一个（自建）应用程序，它只是您闭环系统中的多个模块之一。 在决定使用哪些组件之前，最好先查看一下组件的文档。
 
-![Components overview](../images/modules.png)
+![组件概览](../images/modules.png)
 
 ```{admonition} IMPORTANT SAFETY NOTICE
-:class: important
+:class:重要
 
-The foundation of **AAPS** safety features discussed in this documentation is built on the safety features of the hardware used to build your system. For closing an automated insulin dosing loop, it is critically important that you only use an insulin pump and CGM that are tested, fully functioning and approved by the official instances of your country. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, **do not use** these for creating an **AAPS** system.
+本文档中讨论的**AAPS**安全功能的基础建立在用于构建您系统的硬件的安全功能之上。 为了实现自动化胰岛素给药闭环，至关重要的是，您必须仅使用经过测试、功能完备且获得您所在国家官方机构批准的胰岛素泵和持续葡萄糖监测系统（CGM）。 对这些组件进行硬件或软件修改可能会导致胰岛素给药量出现意外，从而给用户带来重大风险。 如果您发现或得到的是损坏的、经过修改的或自制的胰岛素泵或持续葡萄糖监测接收器，**请不要使用**这些设备来创建**AAPS**系统。
 
-Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+此外，只使用原装耗材也同样重要，例如经胰岛素泵和动态血糖仪厂商认证过的助针器、留置针和储药器等。 使用未经测试的或修改过的耗材可能导致动态血糖仪失准和胰岛素计量错误。 剂量不当的胰岛素非常危险，破解设备/擅自改造耗材是拿你的生命开玩笑，别这么干。
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
+最后但同样重要的是，您绝对不能服用SGLT-2抑制剂（格列净类药物），因为它们会不可预测地降低血糖水平。 当与降低基础率以增加血糖的系统结合使用时，SGLT-2抑制剂尤其危险，因为格列净类药物可能导致血糖无法升高，从而引发危险的胰岛素缺乏状态。 [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
-## Necessary Modules
+## 必要模块
 
-### Good individual dosage algorithm for your diabetes therapy
+### 为您的糖尿病治疗确定一项优质的个体化用药算法。
 
-Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes. Even if you are still missing other modules, you can already verify and adapt your **Profile** in collaboration with your diabetes team.
+尽管这不是可以创造或购买的东西，但这是可能最被低估但实际上至关重要的“模块”。 当您让算法帮助您管理糖尿病时，它需要知道正确的设置，以避免犯下严重的错误。 即使您仍然缺少其他模块，您也可以与您的糖尿病团队一起验证和调整您的**配置文件（Profile）**。
 
-The **Profile** includes:
+**配置文件（Profile）**通常包括：
 
-- BR (Basal rates): provides background insulin;
-- ISF (insulin sensitivity factor): how much your blood glucose level will be reduced by 1 unit of insulin;
-- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin;
-- DIA (duration of insulin action).
+- BR (基础率，Basal rates): 提供基础（背景）胰岛素;
+- ISF（胰岛素敏感系数）：表示注射1单位胰岛素后，您的血糖水平将降低的幅度；
+- CR (碳水系数): 一单位胰岛素所能覆盖的碳水化合物克数；
+- DIA (胰岛素作用时长).
 
-Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+大多数闭环系统使用以24小时为周期的基础率（BR）、胰岛素敏感因子（ISF）和碳水化合物比率（CR），这些参数会根据一天中激素引起的胰岛素敏感性变化而进行调整。
 
-More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
+关于您的**配置文件（Profile）**的更多信息，请[访问专用页面](../SettingUpAaps/YourAapsProfile.md)。
 
-### Phone
+### 手机
 
-See the dedicated page [Phones](../Getting-Started/Phones.md).
+请参阅专题页面[手机](../Getting-Started/Phones.md)。
 
-### Insulin pump
+### 胰岛素泵
 
-See the dedicated page [Compatible Pumps](../Getting-Started/CompatiblePumps.md).
+请参阅专题页面[兼容的胰岛素泵](../Getting-Started/CompatiblePumps.md)。
 
-**Advantages and disadvantages of some pump models**
+**一些泵模型的优缺点**
 
-The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+Combo、Insight以及较旧的Medtronic都是可靠的泵，并且可以实现闭环控制。 Combo泵的优势在于其采用了标准鲁尔接口（Luer-Lock），因此可以选择更多种类的输注装置。 而且它的电池是普通的电池，您可以在任何加油站、24小时便利店买到。如果您真的急需电池，还可以从酒店房间的遥控器里“偷”一个或者“借”一个来用哦 ;-)。
 
-The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
+然而，与Combo泵相比，选择DanaR/RS和Dana-i泵的优势在于：
 
-- The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
-- Initial pairing is simpler with the Dana-i/RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
-- So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
-- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. At nighttime, you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable so that it does neither beep nor vibrate.
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
-- All pumps **AAPS** can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+- Dana泵几乎可以与任何运行Android>= 5.1及以上版本的手机连接，而无需刷入LineageOS。 如果您的手机坏了，您通常可以很容易地找到任何与Dana泵兼容的手机作为快速替代品……但Combo泵就没那么容易了。 （当Android 8.1变得更加普及时，这种情况可能会在未来发生改变）
+- Dana-i/RS的初次配对更为简单。 但您通常只需要做一次配对，所以它只会在您想用不同的泵测试新功能时产生影响。
+- 到目前为止，Combo泵是通过屏幕解析来工作的。 通常这种方法效果很好，但速度较慢。 但对于闭环控制来说，这并不重要，因为所有工作都是在后台完成的。 不过，您仍然需要更多的时间来保持连接，因此蓝牙连接断开的风险也更高，如果您在注射大剂量胰岛素的同时做饭并远离手机，这种情况就不太容易避免。
+- Combo泵会在临时基础率（TBR）结束时震动，而DanaR泵会在进行超微大剂量（SMB）时震动（或发出蜂鸣声）。 在夜间，您可能更频繁地使用临时基础率（TBR），而不是方波大剂量输注（SMB）。  Dana-i/RS泵可以进行配置，使其既不发出蜂鸣声也不震动。
+- 在Dana-i/RS泵上，只需几秒钟就可以读取带碳水化合物的历史数据，这使得在手机离线时也能轻松更换手机，并在获得一些持续葡萄糖监测（CGM）值后继续闭环控制。
+- 所有**AAPS**可以通信的泵在出厂时都具有防水功能。 只有Dana泵还因其密封的电池舱和储液罐填充系统而享有“保修期内的防水”保障。
 
-### BG Source
+### 血糖数据源
 
-See the dedicated page [Compatible CGMs](../Getting-Started/CompatiblesCgms.md).
+请参阅专题页面[兼容的动态血糖仪](../Getting-Started/CompatiblesCgms.md)。
 
-### **AAPS**-.apk file
+### **AAPS**的-.apk文件
 
-The main component of the system. In order to install the app, you have to build the apk-file yourself first. Instructions are [here](../SettingUpAaps/BuildingAaps.md).
+该系统的主要组件。 要安装此应用程序，您必须先自行构建apk文件。 相关说明请见[此处](../SettingUpAaps/BuildingAaps.md)。
 
-### Reporting server
+### 报告服务器
 
-A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS : [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
+报告服务器会显示您的血糖和治疗数据，并生成报告以供详细分析。 目前，与AAPS配合使用的报告服务器有两种：[Nightscout](#SettingUpTheReportingServer-nightscout)和[Tidepool](#SettingUpTheReportingServer-tidepool)。 它们都可以提供方法来直观地展示您的糖尿病数据随时间的变化情况，并提供关于**入框时间**（TIR）和其他指标的统计数据。
 
-The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set up one as it will be required to fulfill [**Objective 1**](#objectives-objective1).
+报告服务器独立于其他模块。 如果您不想使用报告服务器，应该知道它并不是长期运行**AAPS**的必需条件。 但您仍然需要设置一个，因为它是完成[**目标 1**](#objectives-objective1)所必需的。
 
-Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
+有关如何设置报告服务器的更多信息，请见[此处](../SettingUpAaps/SettingUpTheReportingServer.md)。
 
-## Optional Modules
+## 可选模块
 
-### Smartwatch
+### 智能手表
 
-You can choose any smartwatch with Android WearOS 1.x up to 4.x. **Beware, WearOS 5.x is not compatible!**
+您可以选择任何搭载Android WearOS 1.x至4.x版本的智能手表。 **注意，WearOS 5.x版本不兼容！**
 
-Users are creating a [list of tested phones and watches](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
+用户们正在创建一个[经过测试的手机和手表清单](#Phones-list-of-tested-phones)。 有不同的表盘可与**AAPS**配合使用，您可以在[此处](../WearOS/WearOsSmartwatch.md)找到它们。
 
 ### xDrip+
 
-Even if you don't need to have the [xDrip+ App](https://xdrip.readthedocs.io/en/latest/) as **BG Source**, you can still use it for _i.e._ alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../CompatibleCgms/xDrip.md). Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+即使您不需要将[xDrip+应用程序](https://xdrip.readthedocs.io/en/latest/)作为**血糖数据源**，仍然可以使用它来实现_例如_报警或不同的血糖显示等功能。 您可以设置任意数量的报警，指定报警应该激活的时间，是否可以在静音模式下覆盖等。 有关xDrip+的更多信息，请见[此处](../CompatibleCgms/xDrip.md)。 请注意，由于该应用程序的更新速度很快，因此其相关文档可能并不总是最新的。
 
-## What to do while waiting for modules
+## 在等待模块时该做什么
 
-It sometimes takes a while to get all the modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
+有时需要一段时间来准备所有用于闭环控制的模块。 但别担心，在等待期间有很多事情可以做。 检查并（在适当的情况下）调整基础率（BR）、碳水系数（IC）、胰岛素敏感系数（ISF）等是**必要的**。 而且，开环模式可能是一个测试系统并熟悉**AAPS**的好方法。 在使用此模式时，**AAPS**会提供治疗建议，您可以手动执行这些建议。
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../UsefulLinks/BackgroundReading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+您可以继续在这里阅读文档，与其他闭环用户进行线上或线下交流，[阅读](../UsefulLinks/BackgroundReading.md)相关文档或其他闭环用户的心得（当然，您需要注意，并非所有内容都是正确的或适合您去尝试的）。
 
-**Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your hardware.
+**准备好了吗？** 如果您的**AAPS**组件已经全部齐全（恭喜！），或者至少足够您在开环模式下开始使用，那么在进行每个新目标之前，您应该先仔细阅读[目标描述](../SettingUpAaps/CompletingTheObjectives.md)，并设置好您的硬件。

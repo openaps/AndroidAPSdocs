@@ -69,11 +69,11 @@ While setting up AAPS to work with your medtronic pump you need to set following
 - **Medtronic Encoding**: Determines if the medtronic encoding is carried out. Selecting Hardware encoding (i.e. carried out by the Rileylink compatible device) is preferred as this results in less data being sent. Selecting Software encoding (i.e. carried out by AAPS) can help in the event frequent disconnects are seen. This setting will be ignored if you have firmware version 0.x on Rileylink devices.
 - **Battery Type (Power View)**: In order to correctly determine the remaining battery power level you should select the type of AAA battery in use. When a value other than simple view is selected AAPS will display the remaining calculated battery percentage level and volts. The following options are available:
     
-    - Not selected (Simple view)
-    - Alkaline (Extended view)
-    - Lithium (Extended view)
-    - NiZn (Extended view)
-    - NiMH (Extended view)
+    - 未选择 (简单视图)
+    - 碱性电池 (扩展视图)
+    - 锂电池(扩展视图)
+    - 镍锌电池(扩展视图)
+    - 镍氢电池 (扩展视图)
 - **Bolus/Treatments Debugging**: Select On or Off depending on requirements.
 
 - **RileyLink Configuration**: This option allows you to find and pair your Rileylink compatible device. Selecting this will show any nearby Rileylink compatible devices and the signal strength.
@@ -121,7 +121,7 @@ The RL Status dialog has two tabs:
 - **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
 - **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
 
-## Actions
+## 手动操作
 
 When the Medtronic driver is used, two additional actions are added to Actions Tab:
 

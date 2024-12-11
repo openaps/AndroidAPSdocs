@@ -16,17 +16,17 @@ The smallest injectable dose of insulin when using the patch is 0.05 U. The Prof
 
 ![Image1](../images/EOPatch/Bild1.png) ![Image2](../images/EOPatch/Bild2.png)
 
-## Settings
+## 设置
 Select EOPATCH2 at the top of the home screen to go to the EOPATCH2 tab.
 
 Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
 
 The EOPatch2 Preferences menu offers a menu to set 3 types of notifications.
 
-### Low reservoir Alerts
+### 储药器药量低警告
 A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. It can be set from 10 to 50U in 5U increments.
 
-### Patch expiration Reminder
+### 敷贴更换提醒
 This is a reminder to notify you of the time remaining before the current patch expires. It can be set from 1 to 24 hours in 1 hour increments. The initial setting value is 4 hours.
 
 ### Patch buzzer Reminder
@@ -45,7 +45,7 @@ Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH butto
 ### Connecting the patch
 Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
 
-[Warning]
+[警告]
 
 - Do not turn the needle action lever until instructed. It can cause serious problems during injection or safety checks otherwise.
 - The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
@@ -56,7 +56,7 @@ Insert the syringe needle into the insulin inlet on the patch and then slowly pu
 ### patch pairing
 The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
 
-[Warning]
+[警告]
 
 - For pairing, the patch and the smartphone must be located within 30 cm of each other.
 - After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
@@ -73,7 +73,7 @@ After removing the adhesive tape of the patch, check if the needle is sticking o
 ### Patch attachment
 Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
 
-[Warning]
+[警告]
 
 - Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
 - If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
@@ -83,7 +83,7 @@ Insulin should be injected in a spot with subcutaneous fat but few nerves or blo
 ### Safety Check
 When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
 
-[Warning]
+[警告]
 
 - For safe use, do not turn the needle action lever until the safety check has been completed.
 
@@ -121,7 +121,7 @@ Select EOPATCH2 at the top of the home screen and click the RESUME button at the
 
 ## Alarms/Warnings
 
-### Alarm
+### 报警
 
 Alarms are issued for emergency situations of the highest priority and require immediate action. The alarm signal does not disappear or time out until it is acknowledged. An alarm occurs when there is a problem with the patch being used, so there may be cases where the patch in use needs to be discarded and replaced with a new patch. The warning is displayed as a dialog box and switching to another screen is not possible until processing is completed.
 
@@ -129,11 +129,11 @@ Alarms are issued for emergency situations of the highest priority and require i
 
 The different types of alarms are explained below.
 
-| Alarms                     | Explanation                                                                                                                                                                                                         |
+| 报警                         | Explanation                                                                                                                                                                                                         |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
+| 储药器空了                      | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
 | Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| Occlusion                  | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
+| 堵管                         | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
 | Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
 | Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
 | Needle insertion Error     | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
@@ -141,7 +141,7 @@ The different types of alarms are explained below.
 | Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
 | Patch Error                | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
 
-### Warning
+### 警告
 
 A warning occurs in a medium or low-priority situation. When a warning occurs, it is displayed as a notification in the Overview screen.
 

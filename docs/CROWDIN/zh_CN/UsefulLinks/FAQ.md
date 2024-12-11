@@ -1,22 +1,22 @@
-# FAQ for loopers
+# 闭环常见问题（FAQ）
 
 How to add questions to the FAQ: Follow the these [instructions](../SupportingAaps/HowToEditTheDocs.md)
 
-## General
+## 一般
 
-### Can I just download the AAPS installation file?
+### 我可以直接下载AAPS的安装文件吗？
 
-No. There is no downloadable apk file for AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Here's the reason why:
+无法直接下载。 没有可下载的AAPS apk文件。 You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. 原因如下：
 
-AAPS is used to control your pump and give insulin. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+AAPS用于控制您的泵并输注胰岛素。 根据欧洲现行的规定，所有被归类为IIa类或IIb类的系统都是医疗器械，需要获得监管机构的批准（即CE标志），而这需要经过各种研究和审核批准。 发布未经监管认可的设备是违法行为。 全球其他地区也有类似的规定。
 
-This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
+这项规定不仅仅限于销售（以此获利），而是适用于任何发布行为（包括免费赠送）。 自行构建医疗设备是合规使用本APP的唯一方式。
 
-That’s why apks aren’t available.
+这就是不能直接提供APK文件的原因。
 
 (FAQ-how-to-begin)=
 
-### How to begin?
+### 如何开始？
 
 First of all, you have to **get loopable hardware components**:
 

@@ -22,7 +22,7 @@
 ```
 
 (Preferences-general)=
-## General
+## 一般
 
 ![Preferences > General](../images/Pref2020_General.png)
 
@@ -107,7 +107,7 @@ Difference between the other skins depends on the phone's display orientation:
 
 ![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
-## Overview
+## 首页概览
 
 In the **Overview** section, you can define the preferences for the home screen.
 
@@ -118,7 +118,7 @@ In the **Overview** section, you can define the preferences for the home screen.
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
 (Preferences-buttons)=
-### Buttons
+### 按钮
 
 - Define which buttons are visible on the bottom of your home screen.
 
@@ -189,7 +189,7 @@ Gives you the option to add short text notes to your treatments (bolus wizard, c
 ![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
-### Status lights
+### 状态指示灯
 
 Status lights give a visual warning for:
 
@@ -264,7 +264,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 - This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
-## Loop
+## 闭环
 
 (Preferences-aps-mode)=
 ### APS mode
@@ -308,12 +308,12 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 - [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) - released in 2024, available starting at **[Objective 11](#objectives-objective11)**
 
-### OpenAPS AMA
+### OpenAPS 自动化管理助手
 
 All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
 
 (Preferences-openaps-smb-settings)=
-### OpenAPS SMB
+### OpenAPS SMB（超级微小大剂量）
 
 All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
@@ -321,7 +321,7 @@ All the settings for OpenAPS SMB are described in the dedicated section in [Key 
 
 All the settings for Dynamic ISF are described in the dedicated section in [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md).
 
-## Absorption settings
+## 碳水吸收率设置
 
 (Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
@@ -346,7 +346,7 @@ If you often eat high fat or protein meals you will need to increase your meal a
 
 ### Advanced settings - autosens ratio
 
-![Absorption settings](../images/Pref2020_Absorption.png)
+![碳水吸收率设置](../images/Pref2020_Absorption.png)
 
 - Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
 - Normally standard values (max. 1.2 and min. 0.7) should not be changed.
@@ -403,9 +403,9 @@ Synchronization choices will depend on the way you will want to use **AAPS**.
 
 You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
-### Alarm options
+### 报警选项
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
+![报警选项](../images/Pref2024_NSClient_Alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
 - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -431,11 +431,11 @@ You can select which data you want to [upload and download to or from Nightscout
 
 Options in advanced settings are self-explanatory.
 
-## SMS Communicator
+## SMS短信通讯器
 
 More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
 
-## Automation
+## 自动操作
 
 Select which location service shall be used:
 

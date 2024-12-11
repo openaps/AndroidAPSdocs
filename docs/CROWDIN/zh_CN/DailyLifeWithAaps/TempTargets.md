@@ -140,7 +140,7 @@ Or in the **Carbs** button
 
 (TempTargets-hypo-temp-target)=
 
-## Hypo Temp-Target
+## 低血糖临时目标
 
 **Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
 

@@ -24,15 +24,15 @@ That means that:
 
 Open 3-dot-menu on top right of **AAPS** home screen and select **Preferences**
 
-![Use system notifications for alerts and notifications](../images/android_auto_02.png)
+![对警报和通知使用系统通知音](../images/android_auto_02.png)
 
 In **Local Alerts** activate **Use system notifications for alerts and notifications**
 
-![Use system notifications for alerts and notifications](../images/android_auto_03.png)
+![对警报和通知使用系统通知音](../images/android_auto_03.png)
 
 Please check now that you get notifications from **AAPS** on the phone before you walk to your car!
 
-![Use system notifications for alerts and notifications](../images/android_auto_04.png)
+![对警报和通知使用系统通知音](../images/android_auto_04.png)
 
 ## Allow the use of "unknown sources" with Android Auto.
 
@@ -80,6 +80,6 @@ Your CGM data will be shown as follows:
 
 ![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
-## Troubleshooting:
+## 故障排除:
 
 * If you don't see the notification, check if you [allowed AAPS to show notifications](#use-system-notifications-in-aaps-for-alerts-and-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).

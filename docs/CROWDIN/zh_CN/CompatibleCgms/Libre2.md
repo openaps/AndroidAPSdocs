@@ -214,7 +214,7 @@ Once successful please select "Sensor Stop" and "Delete calibration only" in xDr
 
 ![xDrip+ missing data when changing Libre 2 sensor](../images/Libre2_GapNewSensor.png)
 
-#### Calibration
+#### 校准
 
 You can calibrate the Libre2 **with an offset of -40 mg/dl to +20 mg/dL \[-2,2 mmol/l to +1,1 mmol/l\]** (intercept). The slope isn't changeable. Please check by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If the sensor is completely off after a few days, it should then be replaced.
 
