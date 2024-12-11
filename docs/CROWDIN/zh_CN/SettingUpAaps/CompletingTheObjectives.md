@@ -1,6 +1,6 @@
 # Completing the Objectives
 
-**AAPS** has a series of **Objectives** required to be completed to help the user progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **Objectives** aims to ensure you have:
+**AAPS**有一系列必须完成的**目标**，以帮助用户从基础开环控制进步到混合闭环控制，并最终实现**AAPS**的全部功能。 完成**目标**旨在确保您具备：
 
 * Configured everything correctly in your **AAPS** setup;
 * Learned about the essential features of **AAPS**; and
