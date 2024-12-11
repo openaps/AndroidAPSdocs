@@ -193,9 +193,9 @@ _表格说明：_
 
 #### 关于设备、耗材和其他药物的医疗安全
 
-使用经过测试、功能完备的、经 FDA 或 CE 批准的胰岛素泵和 CGM 来构建人工胰腺闭环。 Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. 如果您发现或得到坏的、改装或自制的胰岛素泵或 CGM 接收器，请勿将其用于创建 AAPS 系统。
+使用经过测试、功能完备的、经 FDA 或 CE 批准的胰岛素泵和 CGM 来构建人工胰腺闭环。 对这些组件进行硬件或软件修改可能会导致胰岛素给药量出现意外，从而给用户带来重大风险。 如果您发现或得到坏的、改装或自制的胰岛素泵或 CGM 接收器，请勿将其用于创建 AAPS 系统。
 
-请使用胰岛素泵和 CGM 制造商认可的原装耗材，如助针器、管路和储药器。 Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. 剂量不当的胰岛素非常危险，破解设备/擅自改造耗材是拿你的生命开玩笑，别这么干。
+请使用胰岛素泵和 CGM 制造商认可的原装耗材，如助针器、管路和储药器。 使用未经测试的或修改过的耗材可能导致动态血糖仪失准和胰岛素计量错误。 剂量不当的胰岛素非常危险，破解设备/擅自改造耗材是拿你的生命开玩笑，别这么干。
 
 使用 **AAPS** 时不要服用 SGLT-2 抑制剂（格列净类），因为它们会不可估量地降低血糖水平。 将这种作用与降低基础率以增加血糖的系统结合起来是很危险的，有关这方面的更多详情，请参阅主要[安全章节](#preparing-safety-first)。
 
