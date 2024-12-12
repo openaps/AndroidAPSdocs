@@ -22,14 +22,14 @@ Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md
 
 Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+如果您想通过手表进行大剂量等操作， 那么在“手表设置”中，您需要启用“从手表控制”。
 
 ![手表设置](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+通过手表选项卡或汉堡菜单（如果未显示选项卡，则在屏幕左上角），您可以：
 
-* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* 重新发送所有数据。 Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* 直接从手机打开手表上的设置。
 
 Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
 
