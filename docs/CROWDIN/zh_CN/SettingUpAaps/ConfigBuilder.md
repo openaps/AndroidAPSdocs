@@ -1,22 +1,22 @@
 # 配置生成器
 
-Depending on your settings you can open Config Builder through a tab at the top of **AAPS**' screen or through the hamburger menu.
+根据您的设置，您可以通过**AAPS**屏幕顶部的选项卡或汉堡菜单来打开配置生成器。
 
 ![Open config builder](../images/ConfBuild_Open_AAPS30.png)
 
-The **Config Builder** is the tab where you turn the modular features on and off. In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated, the boxes on the right-hand side (C) allow you to view these as a tab (E) in **AAPS**. In case the right box is not activated, you can reach the function by using the hamburger menu (D) on the top left of the screen. See [Tab or hamburger menu](#tab-or-hamburger-menu) below.
+**Config Builder** 是您打开和关闭模块化功能的选项卡。 在下面的图片中，左侧（A）的复选框允许您选择想要激活的模块，右侧（C）的复选框允许您将这些模块作为选项卡（E）在**AAPS**中查看。 如果右侧复选框未激活，您可以通过屏幕左上角的汉堡菜单（D）访问该功能。 查看下方的[标签或汉堡菜单](#tab-or-hamburger-menu)。
 
-When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+当模块内有其他可用设置时，您可以点击齿轮图标（B），这将带您进入首选项中的具体设置。
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
 (Config-Builder-tab-or-hamburger-menu)=
 
-## Tab or hamburger menu
+## 选项卡或汉堡菜单
 
-With the checkbox under the eye symbol you can decide how to open the corresponding program section.
+通过眼睛符号下的复选框，您可以决定如何打开相应的程序部分。
 
-![Tab or hamburger menu](../images/ConfBuild_TabOrHH_AAPS30.png)
+![选项卡或汉堡菜单](../images/ConfBuild_TabOrHH_AAPS30.png)
 
 ```{contents}
 :backlinks: entry
@@ -27,9 +27,9 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 ## 配置文件
 
-This module can not be disabled as it is a core part of **AAPS**.
+此模块无法禁用，因为它是**AAPS**的核心部分。
 
-See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
+查看[您的AAPS配置文件](../SettingUpAaps/YourAapsProfile.md)，以基本了解您的**配置文件**中包含哪些内容。
 
 (Config-Builder-insulin)=
 
@@ -37,32 +37,32 @@ See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic underst
 
 ![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
 
-Select the type of insulin you are using.
+选择您正在使用的胰岛素类型。
 
-More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
+有关**AAPS**中显示的[胰岛素资料](#AapsScreens-insulin-profile)的更多信息，请<1>点击此处</1>了解。
 
-### Insulin type differences
+### 胰岛素类型差异
 
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape.
-* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
-* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
-* The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
+* “速效Oref”、“超速效Oref”、“Lyumjev”和“Free-Peak Oref”这几个选项都具有指数形状。
+* 对于“速效Rapid-Acting”、“超速效Ultra-Rapid”和“Lyumjev”，DIA（胰岛素作用持续时间）是您唯一可以自行调整的变量，达峰时间则是固定的。 
+* Free-Peak 允许您同时调整DIA和达峰时间，但仅建议高级用户使用，他们应了解这些设置的影响。 
+* [胰岛素曲线图](#AapsScreens-insulin-profile)可帮助您理解不同的曲线。
 
 #### 速效 Oref
 
 ![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
 
-* recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection (fixed, not adjustable)
+* 推荐用于优泌乐（Humalog）、诺和锐（Novolog）和诺和灵（Novorapid）。
+* DIA = 至少5.0小时
+* Max. 最大达峰时间 = 注射后75分钟（固定，不可调整）
 
 #### 超速效 Oref
 
 ![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection (fixed, not adjustable)
+* 推荐用于FIASP
+* DIA = 至少5.0小时
+* Max. 达峰时间 = 注射后55分钟（固定，不可调整）
 
 (Config-Builder-lyumjev)=
 
@@ -70,83 +70,83 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 ![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
 
-* special insulin profile for Lyumjev
-* DIA = at least 5.0h
-* Max. peak = 45 minutes after injection (fixed, not adjustable)
+* Lyumjev的专用胰岛素配置文件
+* DIA = 至少5.0小时
+* Max. 达峰时间 = 注射后45分钟（固定，不可调整）
 
 #### Free Peak Oref
 
 ![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
 
-* With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
-* The DIA is automatically set to 5 hours if it is not specified higher in the profile.
-* This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+* 使用“Free Peak Oref”配置文件，您可以单独输入达峰时间。 要执行此操作，请点击齿轮图标以进入高级设置。
+* 如果在配置文件中未指定更高的DIA，则DIA将自动设置为5小时。
+* 如果使用未经支持的胰岛素或不同胰岛素的混合物，建议使用此配置文件。
 
 (Config-Builder-bg-source)=
 
 ## 血糖数据源
 
-Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+选择您正在使用的血糖数据来源。 有关更多设置信息，请参见[血糖数据来源](../Getting-Started/CompatiblesCgms.md)页面。
 
 ![Config Builder BG source](../images/ConfBuild_BG.png)
 
 * [xDrip+](../CompatibleCgms/xDrip.md)
-* [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+* [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - 仅当您清楚自己在做什么时才选择此项，请参阅[血糖数据来源](../Getting-Started/CompatiblesCgms.md)。
 * [美敦力640g](../CompatibleCgms/MM640g.md)
-* [Glimp](#libre1-using-glimp) - only version 4.15.57 and newer are supported
-* [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+* [Glimp](#libre1-using-glimp) - 仅支持4.15.57及更高版本
+* [自建Dexcom应用程序 Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 * [Poctech](../CompatibleCgms/PocTech.md)
-* [Tomato App](#libre1-using-tomato) for MiaoMiao device
-* [Glunovo App](https://infinovo.com/) for Glunovo CGM system
-* Random BG: Generates random BG data (Demo mode only)
+* 用于MiaoMiao设备的[Tomato App](#libre1-using-tomato)
+* 用于Glunovo CGM系统的[Glunovo App](https://infinovo.com/)
+* Random BG：生成随机BG数据（仅演示模式）
 
 ## Smoothing
 
 ![Smoothing](../images/ConfBuild_Smoothing.png)
 
-See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+请参阅[平滑血糖数据](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
 
 (Config-Builder-pump)=
 
 ## Pump
 
-Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
+选择您正在使用的泵。 有关更多设置信息，请参阅[兼容泵](../Getting-Started/CompatiblePumps.md)页面。
 
 ![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS32.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+* Dana R Korean（用于韩国产DanaR胰岛素泵）
+* Dana Rv2（带有非官方固件升级的DanaR泵）
 * [丹纳-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 * Accu Chek Combo 
-  * [Driver using Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-  * [Driver with no additional requirement](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md), added in [AAPS v.3.2](#version3200)
+  * [使用Ruffy的驱动程序](../CompatiblePumps/Accu-Chek-Combo-Pump.md)（需要安装ruffy）
+  * [无需额外要求的驱动程序](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)，在[AAPS v.3.2](#version3200)中添加
 * Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
 * Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 * [美敦力](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
-* Virtual pump: open loop - **AAPS** suggestions only 
-  * as you make you first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
-  * for pump which doesn't have any driver yet
+* 虚拟泵：开环 - **仅AAPS建议** 
+  * 当您初次使用**AAPS**时，在完成最初的[目标](../SettingUpAaps/CompletingTheObjectives.md)期间
+  * 对于尚未有驱动程序的泵
 
-## Sensitivity Detection
+## 灵敏度检测
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+选择灵敏度检测的类型。 有关不同设计的更多详细信息，请参阅[此处](../DailyLifeWithAaps/SensitivityDetectionAndCob.md)。 这将实时分析历史数据，并且如果它识别到您对胰岛素的反应比平时更敏感（或者相反，更抵抗），就会进行相应的调整。 有关灵敏度算法的更多详细信息，请参阅[OpenAPS文档](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
 
-You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs). You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+您可以在主屏幕上通过[附加图表](#AapsScreens-section-g-additional-graphs)查看您的敏感度。 您可以在主屏幕上通过选择SEN并查看白线来查看灵敏度。 请注意，您需要在[目标8](#objectives-objective8)中才能允许灵敏度检测/[Autosens](#Open-APS-features-autosens)自动调整胰岛素的输送量。 在达到该目标之前，Autosens百分比/图表中的线条仅供信息参考。
 
 ### 碳水吸收率设置
 
-If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+如果您将Oref1与**SMB**一起使用，必须将**min_5m_carbimpact**更改为8。 该值仅在**动态CGM**读数出现间隔或身体活动“消耗掉”所有血糖（否则会导致**AAPS**衰减COB）时使用。 当无法根据您血液的反应动态计算出[碳水化合物吸收率](../DailyLifeWithAaps/CobCalculation.md)时，它会为您的碳水化合物插入一个默认的衰减率。 基本上，它是一个故障保护机制。
 
 (Config-Builder-aps)=
 
-## APS
+## APS算法
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+选择所需的APS算法以进行治疗调整。 You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
 * OpenAPS 自动化管理助手 
   * Advanced Meal Assist: older algorithm not recommended anymore.
