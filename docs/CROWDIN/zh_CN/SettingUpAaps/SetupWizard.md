@@ -121,7 +121,7 @@ Click "OK" and then the "NEXT" button:
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
 
-### Master password
+### 主密码
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
@@ -269,7 +269,7 @@ Go back twice, to the list of plugins and select "NEXT" to go to the next screen
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
-### Patient name
+### 患者名称
 
 Here you can setup your name in **AAPS**.
 
