@@ -591,7 +591,7 @@ Shows history of CGM readings and offers option to remove reading in case of fai
 
 (aaps-screens-treatments)=
 
-## 治疗
+## 治疗动作（Treatments）
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder. In this view, you can view and alter the history of the following treatments:
 
