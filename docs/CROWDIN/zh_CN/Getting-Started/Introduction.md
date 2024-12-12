@@ -8,7 +8,7 @@
 
 在下面这篇2022年评论文章中，你能了解到更多关于目前在用以及正在研发的人工胰腺系统的情况。
 
-![Frontiers](../images/FRONTIERS_Logo_Grey_RGB.png) [闭环技术的未来发展方向](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses)
+![封面](../images/FRONTIERS_Logo_Grey_RGB.png) [闭环技术的未来发展方向](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses)
 
 在不远的将来，既能输注胰岛素也能输注胰高糖素的“双激素”系统，将能够预防严重低血糖，进而实现更加严格的血糖控制。
 
@@ -137,7 +137,7 @@ AAPS的“核心”是您自己构建的 **应用程序**。 这方面有详细�
 | 泵    | [移宇 TouchCare 300U](../CompatiblePumps/MedtrumNano.md)         | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)         | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
 | 泵    | [罗氏 Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)         | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)         | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
 | 泵    | [罗氏 Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)     | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)         | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
-| 泵    | [Older Medtronic](../CompatiblePumps/MedtronicPump.md)         | ![可用](../images/available.png)    | ![可用](../images/available.png)            | ![可用](../images/available.png)                        | ![可用](../images/available.png)                 |
+| 泵    | [老版美敦力（Older Medtronic）](../CompatiblePumps/MedtronicPump.md)  | ![可用](../images/available.png)    | ![可用](../images/available.png)            | ![可用](../images/available.png)                        | ![可用](../images/available.png)                 |
 | CGM  | [德康 G7](../CompatibleCgms/DexcomG7.md)                         | ![可用](../images/available.png)    | ![可用](../images/available.png)            | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
 | CGM  | [德康 One](../CompatibleCgms/DexcomG6.md)                        | ![可用](../images/available.png)    | ![可用](../images/available.png)            | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
 | CGM  | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                     | ![可用](../images/available.png)    | ![可用](../images/available.png)            | ![可用](../images/available.png)                        | ![可用](../images/available.png)                 |
