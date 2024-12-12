@@ -1,18 +1,18 @@
 # Preferences
 
-- **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+- 通过点击主页屏幕右上角的三个点菜单来**打开参数设置**。
 
 ![Open preferences](../images/Pref2020_Open2.png)
 
-- You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
+- 您可以通过打开相应的选项卡（例如，泵选项卡）并点击“插件偏好设置”，直接跳转到该选项卡的偏好设置页面。
 
 ![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
 
-- **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+- 点击子菜单标题下方的三角形可以**打开子菜单**。
 
 ![Open submenu](../images/Pref2020_Submenu2.png)
 
-- With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+- 在偏好设置屏幕的顶部有一个**筛选器**，您可以通过它快速找到并访问特定的偏好设置项。 只需开始输入您要查找的文本的一部分即可。
 
 ![Preferences filter](../images/Pref2021_Filter.png)
 
@@ -26,105 +26,105 @@
 
 ![Preferences > General](../images/Pref2020_General.png)
 
-**Units**
+**单位**
 
-- Set units to mmol/l or mg/dl depending on your preferences.
+- 根据你的偏好设置单位为mmol/l或mg/dl。
 
-**Language**
+**语言**
 
-- New option to use phone's default language (recommended).
+- 新选项：使用手机默认语言（推荐）。
 
-- In case you want **AAPS** in a different language than your standard phone language, you can choose from a broad variety.
+- 如果你想让**AAPS**使用与手机标准语言不同的语言，你可以从多种语言中选择。
 
-- If you use different languages, you might sometimes see a language mix. This is due to an android issue where overriding the default android language sometimes doesn't work.
+- 如果你使用不同的语言，有时可能会看到语言混合的情况。 这是由于Android系统的一个问题，即有时覆盖默认的Android语言设置并不起作用。
 
-**Patient name**
+**患者名称**
 
-- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+- 如果你需要区分多个设置（例如，家中有两个1型糖尿病患者），可以使用此选项。
 
 (Preferences-protection)=
-### Protection
+### 保护（Protection）
 
 ![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-#### Master password
+#### 主密码
 
-Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
+必须设置主密码才能[导出设置](../Maintenance/ExportImportSettings.md)，因为从版本2.7开始，设置是加密的。
 
-**Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+**生物识别保护功能可能在一加手机上无法正常工作。 这是一些一加手机上已知的问题。**
 
 ![Set master password](../images/MasterPW.png)
 
-#### Settings protection
+#### 设置保护
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
+- 使用密码或手机的生物识别身份验证（例如，[孩子正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）来保护你的设置。 如果启用此功能，每次访问任何与参数设置相关的视图时，系统都会提示你进行身份验证。
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the preferences.
+- 如果只想使用主密码来保护[导出的设置](../Maintenance/ExportImportSettings.md)，而使用不同的密码来编辑参数设置，则应使用自定义密码。
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
+- 如果使用自定义密码，请点击“设置密码”这一行，按照[上面](#Preferences-master-password)的说明设置主密码。
 
-![Protection](../images/Pref2020_Protection.png)
+![保护（Protection）](../images/Pref2020_Protection.png)
 
-#### Application protection
+#### 应用保护
 
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
+如果应用受到保护，你必须输入密码或使用手机的生物识别身份验证才能打开**AAPS**。
 
-**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
+如果输入的密码错误，**AAPS**将立即关闭，但如果之前已成功打开，它仍将在后台运行。
 
-#### Bolus protection
+#### 大剂量安全验证
 
-- Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
+- 如果**AAPS**由小孩使用，并且你通过[短信输注大剂量](../RemoteFeatures/SMSCommands.md)，大剂量安全验证可能很有用。
 
-- In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter thr master password.
+- 在下面的示例中，你看到的是生物识别保护的提示。 如果生物识别身份验证不起作用，请点击白色提示上方的空白处并输入主密码。
 
 ![Prompt biometric protection](../images/Pref2020_PW.png)
 
-#### Password and PIN retention
+#### 密码和PIN保留时间
 
-Define how long (in seconds), the preferences or bolus functionalities remain unlocked after you successfully enter the password.
+定义在成功输入密码后，参数设置或大剂量功能保持解锁的时间（以秒为单位）。
 
 (Preferences-skin)=
-#### Skin
-You can choose from four types of skins:
+#### 皮肤
+你可以从四种类型的皮肤中选择：
 
 ![Select skin](../images/Pref2021_SkinWExample.png)
 
-'Low resolution skin' comes with shorter labels and age/level removed to have more available space on a very low resolution screen.
+“低分辨率皮肤”带有较短的标签，并移除了年龄/级别，以便在低分辨率屏幕上获得更多可用空间。
 
-Difference between the other skins depends on the phone's display orientation:
+其他皮肤之间的差异取决于手机的显示方向：
 
-##### Portrait orientation
+##### 竖屏方向
 
-- **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-- **Large Display** has an increased height for all graphs compared to other skins
+- **原始皮肤**和**始终显示在屏幕底部的按钮**是相同的。
+- **大分辨率显示**与其他皮肤相比，所有图形的高度都有所增加。
 
-##### Landscape orientation
+##### 横屏方向
 
-- Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
+- 使用**原始皮肤**和**大分辨率显示**时，你需要向下滚动才能看到屏幕底部的按钮。
 
-- **Large Display** has an increased height for all graphs compared to other skins
+- **大分辨率显示**与其他皮肤相比，所有图形的高度都有所增加。
 
 ![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
-## 首页概览
+## 概览
 
-In the **Overview** section, you can define the preferences for the home screen.
+在**概览**部分，你可以定义主页屏幕的参数设置。
 
 ![Preferences > Overview](../images/Pref2020_OverviewII.png)
 
-### Keep screen on
+### 保持屏幕常亮
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+“保持屏幕常亮”选项将强制Android始终保持屏幕开启。 这对于演示等场景很有用 但它会消耗大量电池电量。 因此，建议将手机连接到充电线。
 
 (Preferences-buttons)=
 ### 按钮
 
-- Define which buttons are visible on the bottom of your home screen.
+- 定义主页屏幕底部显示哪些按钮。
 
 ![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
 
-- The **Increment** options allow you to define the amount for the three buttons in the carb and insulin dialogues, for easy entry.
+- **增量**选项允许你为碳水化合物和胰岛素对话框中的三个按钮定义数量，以便轻松输入。
 
 ![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
 
@@ -133,9 +133,9 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 (Preferences-quick-wizard)=
 ### Quick Wizard
 
-Create customized buttons for certain standard meals or snacks which will be displayed on the home screen. Useful for standard meals frequently eaten.
+为某些标准餐食或零食创建自定义按钮，这些按钮将显示在主页屏幕上。 这对于经常吃的标准餐食很有用。
 
-For each button, you define the carbs and calculation method for the bolus. Then, you define during which time period the button will be visible on your home screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+对于每个按钮，你定义碳水化合物和计算大剂量的方法。 然后，你定义按钮在主页屏幕上显示的时间段——每个时间段只能显示一个按钮。 如果当前时间不在指定的时间范围内，或者你的体内活性胰岛素（IOB）足以覆盖快速向导按钮中定义的碳水化合物，则按钮将不会显示。 If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
 ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
 
@@ -239,7 +239,7 @@ Option to enable superbolus in bolus wizard.
 
 [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. It is different from *super micro bolus*!
 
-Use with caution and do not enable it until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Use with caution and do not enable it until you learn what it really does. 基本上，接下来两小时的基础率会被添加到大剂量中，并激活两小时的零临时基础率。 **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ## Treatment safety
 
@@ -264,7 +264,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 - This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
-## 闭环
+## 闭环（Loop）
 
 (Preferences-aps-mode)=
 ### APS mode
