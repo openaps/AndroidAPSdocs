@@ -298,43 +298,43 @@
 (Preferences-minimal-request-change)=
 ### 最小请求更改（Minimal request change）
 
-When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the minimal request rate. This defines the relative change required to trigger a notification.
+在**开环**模式下，每次**AAPS**建议调整基础率，你都会收到通知。 为了减少通知的数量，您可以要么使用[更宽的血糖目标范围](#profile-glucose-targets)，要么提高最小请求率的百分比。 这定义了触发通知所需的相对变化量（如果建议的基础率变化低于这个值，AAPS会忽略掉，也就不会通知你）。
 
-## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+## 高级膳食助手（AMA）或超级微小大剂量（SMB）
 
-Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between three algorithms:
+根据你在[配置构建器](../SettingUpAaps/ConfigBuilder.md)中的设置，你可以选择三种算法之一：
 
-- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
-- [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) - released in 2024, available starting at **[Objective 11](#objectives-objective11)**
+- [高级膳食助手（OpenAPS AMA）](#Open-APS-features-advanced-meal-assist-ama) - 发布于2017年的算法
+- [超级微小大剂量（OpenAPS SMB）](#Open-APS-features-super-micro-bolus-smb) - 推荐给初学者的最新算法
+- [动态ISF](../DailyLifeWithAaps/DynamicISF.md) - 2024年发布，从**[目标11](#objectives-objective11)**开始可用
 
 ### OpenAPS AMA（高级膳食助手）
 
-All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
+OpenAPS AMA的所有设置均在[AAPS关键功能>高级膳食助手（AMA）](#Open-APS-features-advanced-meal-assist-ama)中有专栏描述。
 
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB（超级微小大剂量）
 
-All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+OpenAPS SMB的所有设置均在[AAPS关键功能>超级微小大剂量（SMB）](#Open-APS-features-super-micro-bolus-smb)中有专栏描述。
 
-### Dynamic ISF
+### 动态ISF（胰岛素敏感系数，Dynamic ISF）
 
-All the settings for Dynamic ISF are described in the dedicated section in [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md).
+动态ISF的所有设置均在[动态ISF](../DailyLifeWithAaps/DynamicISF.md)中有专门描述。
 
 ## 碳水吸收率设置
 
 (Preferences-min_5m_carbimpact)=
-### min_5m_carbimpact
+### 5分钟内的最小碳水影响（min_5m_carbimpact）
 
-The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
+该算法使用BGI（血糖影响）来确定[碳水化合物何时被吸收](../DailyLifeWithAaps/CobCalculation.md)。
 
-At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. 基本上，它是一个故障保护机制。 This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
+有时，基于血糖反应无法动态计算出碳水化合物的吸收情况，**AAPS**会为你的碳水化合物插入一个默认衰减。 基本上，它是一个故障保护机制。 这个值只在两种情况下起效，一是**CGM**读数缺失时，二是运动“消耗了”本该由**AAPS**的COB来覆盖的血糖时。
 
-To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc.
+简而言之：算法“知道”在当前剂量胰岛素等的影响下，你的血糖*应该*如何变化。 每当出现与预期行为的正偏差时，就会吸收/衰减一些碳水化合物（衰减，decay，应该是说AAPS根据算法来减少数值的意思）。 数值越大=吸收越多的碳水化合物。
 
-The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+min_5m_carbimpact定义了每5分钟的默认碳水化合物吸收影响。 有关更多详细信息，请参阅[OpenAPS文档](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact)。
 
-Standard value for AMA is 5, for SMB it's 8.
+min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
