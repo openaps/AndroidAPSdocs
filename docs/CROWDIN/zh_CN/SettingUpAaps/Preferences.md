@@ -139,164 +139,164 @@
 
 ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
 
-如果你点击快速向导按钮，**AAPS**将根据当前比率计算并给出一个大剂量建议（参考已设置的血糖值、体内活性胰岛素）。
+如果你点击快速向导按钮，**AAPS**将根据当前比率计算并给出一个大剂量建议（参考血糖值和设置的活性胰岛素IOB）。
 
-在胰岛素输送之前，必须确认该提议。
+点OK确认之后才会按照建议进行输注。
 
 ![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### 默认临时目标
 
-[Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
+[临时目标（TT）](../DailyLifeWithAaps/TempTargets.md)允许你为特定的时间段更改血糖目标。 设置默认TT时，你可以轻松地更改活动、即将进食等情况下的目标。
 
-Here you can change the target and the duration for each predefined TT. Preset values are:
+在这里，你可以更改每个预定义TT的目标和持续时间。 预设值为：
 
-* Eating soon: target 72 mg/dL / 4.0 mmol/l, duration 45 min
-* Activity: target 140 mg/dL / 7.8 mmol/l, duration 90 min
-* Hypo: target 125 mg/dL / 6.9 mmol/l, duration 45 min
+* 即将进食：目标72 mg/dL / 4.0 mmol/l，持续时间45分钟
+* 活动：目标140 mg/dL / 7.8 mmol/l，持续时间90分钟
+* 低血糖：目标125 mg/dL / 6.9 mmol/l，持续时间45分钟
 
 ![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
 
-Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
+在这里了解如何[启用临时目标](#TempTargets-where-can-i-select-a-temp-target)。
 
-### Fill/Prime standard insulin amounts
+### 输注/充盈标准胰岛素剂量
 
-If you want to fill the tube or prime cannula through **AAPS** you can do this through the [**Actions** tab](#screens-action-tab).
+如果你想通过**AAPS**填充管路，可以通过[**操作**标签页](#screens-action-tab)进行此操作。
 
-Pre-set values can be defined in this dialogue. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+可以在此对话框中定义预设值。 根据你的管路长度，选择“填充/灌注”对话框中三个按钮的默认量。
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### 可视化范围
 
-Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+为**AAPS**概览和智能手表上的血糖图选择高点和低点标记。 这只是可视化，不是你的血糖目标范围。 例如：70 - 180 mg/dl 或 3.9 - 10 mmol/l。
 
 ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
 
-### Shorten tab titles
+### 缩写标签标题
 
-Useful to see more tab titles on screen.
+有助于在屏幕上显示更多的标签页标题。
 
-For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+例如，“OpenAPS AMA”标签页变为“OAPS”，“OBJECTIVES”变为“OBJ”等。
 
 ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes field in treatments dialogs
+### 在治疗（treatments）对话框中显示备注字段
 
-Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+允许您为自己的治疗方案（大剂量向导、碳水、胰岛素...）添加简短的文本备注。
 
 ![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
 ### 状态指示灯
 
-Status lights give a visual warning for:
+状态指示灯为以下情况提供视觉警告：
 
 - Sensor age
-- Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
+- 某些动态传感器的电池电量（详细信息请参阅[屏幕截图页面](#screens-sensor-level-battery)）。
 - Insulin age (days reservoir is used)
 - Reservoir level (units)
 - Cannula age
-- Pump battery age
-- Pump battery level (%)
+- 泵电池使用时间
+- 泵电池电量（%）
 
-If the warning threshold is exceeded, values will be shown in yellow. If the critical threshold is exceeded, values will be shown in red.
+如果超过警告阈值，数值将以黄色显示。 如果超过临界阈值，数值将以红色显示。
 
-The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
+最后一个选项允许您从Nightscout导入那些设置（如果在Nightscout中已定义）。 更多信息请参阅[Nightscout文档](https://nightscout.github.io/nightscout/setup_variables/#age-pills)。
 
 ![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Deliver this part of bolus wizard result
+### 输注大剂量向导计算结果的一部分（Deliver this part of bolus wizard result）
 
-Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
+设置使用大剂量向导计算时使用的[默认百分比](#AapsScreens-section-j)。
 
-Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard. If this setting is 75 % and you had to bolus 10U, the bolus wizard will propose a meal bolus of only 7.5 units.
+默认值为100%：不进行校正。 即使在这里设置了不同的值，你每次使用大剂量向导时仍然可以更改它。 如果这里设置为75%，并且你需要输注10U，大剂量向导将仅建议7.5单位的餐时大剂量。
 
-When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (Unattended Meal Detection) do the rest. Using a value lower than 100% here can be useful:
-* for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
-* to leave more room to **AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate for the missing part of the bolus with SMBs, if/when deemed adequate.
+在使用[SMB](#objectives-objective9)时，许多人不会输注所需胰岛素的100%，而只是其中的一部分（例如75%），并让SMB与UAM（无人值守用餐检测）完成其余部分。 下面这些情况使用低于100%的值可能很有用：
+* 对于消化缓慢的人：提前输送所有大剂量可能会导致低血糖，因为胰岛素的作用比消化快。
+* 为**AAPS**自己处理**血糖升高**留下更多空间。 在这两种情况下，如果认为合适，**AAPS**将通过SMB补偿缺失的部分大剂量。
 
-### Enabled bolus advisor
+### 启用大剂量顾问（bolus advisor）
 
 ![Bolus Advisor](../images/BolusAdvisor.png)
 
-When enabled, when you use the bolus wizard as you are in hyperglycemia, you will get a warning, prompting you if you wish to pe-bolus and eat later, when your **BG** gets back in range.
+启用后，在高血糖状态下使用大剂量向导时，你将收到一个警告，提示你是否希望给个提前大剂量，然后等**血糖**回到范围内时再进食。
 
-### Enabled bolus reminder
+### 启用大剂量提醒
 
 % todo
 
 (Preferences-advanced-settings-overview)=
-### Advanced Settings (Overview)
+### 高级设置（概览）
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
-#### Superbolus
+#### 超级大剂量（Superbolus）
 
-Option to enable superbolus in bolus wizard.
+在大剂量向导中启用超级大剂量选项。
 
-[Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. It is different from *super micro bolus*!
+[超级大剂量](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/)的概念是从未来两小时的基础率中提前“借”过来一部分胰岛素，从而防止血糖飙升。 它与*超级微小大剂量SMB*不同！
 
-Use with caution and do not enable it until you learn what it really does. 基本上，接下来两小时的基础率会被添加到大剂量中，并激活两小时的零临时基础率。 **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+请谨慎使用，并且在了解它真正的作用之前不要启用它。 基本上，接下来两小时的基础率会被添加到大剂量中，并激活两小时的零临时基础率。 **AAPS闭环功能将被禁用——因此请谨慎使用！ **如果您使用SMB，**AAPS的闭环功能将根据您在[“SMB限制基础率的时间上限（分钟）”](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to)中的设置而被禁用；如果您不使用SMB，循环功能将被禁用两个小时。**有关超级大剂量的详细信息，请[点击此处](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)查看。
 
-## Treatment safety
+## 治疗安全
 
 (preferences-patient-type)=
-### Patient type
+### 患者类型
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
+- 安全限制是根据你在这里选择的年龄来设置的。
+- 如果你开始触及这些硬性限制（比如最大剂量），那就是时候更进一步了。
+- 选择高于实际年龄是不明智的，因为如果在胰岛素对话框中输错数值（例如跳过小数点）可能会导致用药过量。
+- 要了解这些硬性安全限制的具体数值，请在[此页面](../DailyLifeWithAaps/KeyAapsFeatures.md)上按您正在使用的算法来找。
 
-### Max allowed bolus
+### 允许的最大大剂量
 
-- Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
+- 定义**AAPS**一次输注所允许的最大胰岛素量（以胰岛素单位计算）。
+- 此设置作为安全限制存在，以防止因意外输入或用户错误而注入大量胰岛素。
+- 建议将此设置为一个合理的数值，该数值大致对应于您一餐或校正剂量所需的最大胰岛素量。
+- 此限制也适用于大剂量计算器的结果。
 
-### Max allowed carbs
+### 最大允许碳水化合物
 
-- Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- 定义**AAPS**大剂量计算器计算结果所允许覆盖的最大碳水化合物量（以克计算）。
+- 此设置作为安全限制存在，以防止因意外输入或用户错误而注入大量胰岛素。
+- 建议将其设置为一个合理的量，大致对应于你一顿饭可能摄入的最大碳水化合物量。
 
 ## 闭环（Loop）
 
 (Preferences-aps-mode)=
-### APS mode
-Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
+### APS模式
+在开环、闭环和低血糖暂停（LGS）之间切换。
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
 (Preferences-pen-loop)=
-#### Open Loop
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
+#### 开环（Open Loop）
+**AAPS**连续评估所有可用数据（IOB、COB、BG...），如有必要，会就如何调整治疗（如临时基础率）提出建议。
 
-The suggestions will not be executed automatically (as in closed loop). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
+建议不会像闭环模式中那样自动执行。 如果使用虚拟泵，用户必须手动将建议输入到泵中，如果**AAPS**连着真实的泵，用户需要通过相应的按钮来执行操作。
 
-This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
+此选项适用于了解**AAPS**的工作原理，或者你使用的是不受支持的泵。 在**[目标5](#objectives-objective5)**结束之前，无论你做出什么选择，你都将处于开环模式。
 
 (preferences-closed-loop)=
-#### Closed Loop
+#### 闭环
 
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (_i.e._ without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
+**AAPS**连续评估所有可用数据（IOB、COB、BG...），并在必要时（_即_无需你进一步干预）自动调整治疗以达到设定的[目标范围或值](#profile-glucose-targets)（大剂量输注、临时基础率、胰岛素关闭以避免低血糖等）。
 
-The Closed Loop works within numerous safety limits, which can be set individually.
+闭环在多个安全限制内工作，这些限制可以单独设置。
 
-Closed Loop is only possible if you are in **[Objective 6](#objectives-objective6)** or higher and use a supported pump.
+闭环仅在达到**[目标6](#objectives-objective6)**或更高，并且使用已经支持的泵时才可用。
 
-#### Low Glucose Suspend (LGS)
+#### 低血糖暂停（LGS）
 
-In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
+在此模式下，[maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)设置为零。
 
-This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+这意味着如果血糖正在下降，**AAPS**可以降低你的基础率。 但如果血糖正在上升，则不会自动进行校正。 您的基础率将保持与您当前**个人设置**中定义的一致。 仅当基础率IOB为负值时（缘于之前的低血糖暂停LGS），才会额外给予胰岛素以降低**血糖（BG）**。
 
 (Preferences-minimal-request-change)=
-### Minimal request change
+### 最小请求更改（Minimal request change）
 
 When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the minimal request rate. This defines the relative change required to trigger a notification.
 
