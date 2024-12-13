@@ -109,7 +109,7 @@
 
 ## 概览
 
-在**概览**部分，你可以定义主页屏幕的参数设置。
+在**概览（Overview）**部分，你可以定义主屏的参数设置。
 
 ![Preferences > Overview](../images/Pref2020_OverviewII.png)
 
@@ -124,7 +124,7 @@
 
 ![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
 
-- **增量**选项允许你为碳水化合物和胰岛素对话框中的三个按钮定义数量，以便轻松输入。
+- **增量**选项允许你为碳水化合物和胰岛素对话框中的三个按钮定义数量，以方便输入。
 
 ![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
 
@@ -133,15 +133,15 @@
 (Preferences-quick-wizard)=
 ### Quick Wizard
 
-为某些标准餐食或零食创建自定义按钮，这些按钮将显示在主页屏幕上。 这对于经常吃的标准餐食很有用。
+为某些标准餐食或零食创建自定义按钮，这些按钮将显示在主页屏幕上。 适用于经常吃的标准餐食。
 
-对于每个按钮，你定义碳水化合物和计算大剂量的方法。 然后，你定义按钮在主页屏幕上显示的时间段——每个时间段只能显示一个按钮。 如果当前时间不在指定的时间范围内，或者你的体内活性胰岛素（IOB）足以覆盖快速向导按钮中定义的碳水化合物，则按钮将不会显示。 If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+对于每个按钮，你定义碳水化合物和计算大剂量的方法。 然后，你定义按钮在主页屏幕上显示的时间段——每个时间段只能显示一个按钮。 如果当前时间不在指定的时间范围内，或者你的体内活性胰岛素（IOB）足以覆盖快速向导按钮中定义的碳水化合物，则按钮将不会显示。 如果你为不同的餐食指定了不同的时间，你将始终根据一天中的时间，在主页屏幕上看到适当的标准餐食按钮。
 
 ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
 
-If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
+如果你点击快速向导按钮，**AAPS**将根据当前比率计算并给出一个大剂量建议（参考已设置的血糖值、体内活性胰岛素）。
 
-The proposal has to be confirmed before insulin is delivered.
+在胰岛素输送之前，必须确认该提议。
 
 ![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
 
