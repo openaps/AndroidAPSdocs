@@ -170,7 +170,7 @@
 
 有关更多信息，请参阅[目标](../SettingUpAaps/CompletingTheObjectives.md)页面。
 
-## Synchronization
+## 同步
 
 在这个部分，您可以选择是否/以及您希望**AAPS**将您的数据发送到哪里。
 
@@ -190,7 +190,7 @@
 
 用于将治疗动作等数据**发送**到xDrip+。
 
-### Open Humans
+### 开源人类项目（Open Humans）
 
 请参阅[Open Humans](../SupportingAaps/OpenHumans.md)。
 
