@@ -1,8 +1,8 @@
-# AAPS Setup Wizard
+# AAPS 设置向导
 
 当您首次启动 **AAPS** 时，**设置向导** 会引导您一次性快速完成应用程序所有的基本配置。 **设置向导** 的目的是为了避免遗漏关键步骤。 例如，**权限设置** 对于正确设置 **AAPS** 至关重要。
 
-然而，在首次使用 **设置向导** 时，并不一定要完全配置所有内容，您可以轻松退出向导并在稍后返回。 在 **设置向导** 之后，有三种方式可以进一步优化/更改配置。 These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+然而，在首次使用 **设置向导** 时，并不一定要完全配置所有内容，您可以轻松退出向导并在稍后返回。 在 **设置向导** 之后，有三种方式可以进一步优化/更改配置。 这些内容将在下一节中进行解释。 所以，如果您在设置向导中跳过了一些步骤，也没关系，您稍后可以轻松地进行配置。
 
 在使用 **设置向导** 期间和之后，您可能发现**AAPS** 没啥明显的变化。 要启用您的 **AAPS** 循环，您必须按照 **目标** 启用各个功能。 您将在 设置向导 结束时开始**目标 1**。 您是 **AAPS** 的主人，别搞反了。
 
@@ -17,78 +17,78 @@
 因此，请花点时间配置您的闭环，运行良好的 **AAPS** 闭环将带来巨大的好处。
 
 ```{admonition} Ask for Help
-:class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+:class: 注意
+如果文档中有错误，或者您有更好的解释方法，您可以按照 [联系其他用户](../GettingHelp/WhereCanIGetHelp.md) 中的说明向社区寻求帮助。
 ```
-## Step-wise guide to the AAPS Setup Wizard
-### Welcome message
+## AAPS 设置向导的逐步指南
+### 欢迎信息
 
-This is just the welcome message which you can skip with the "NEXT" button:
+这只是欢迎信息，您可以点击“NEXT”按钮跳过：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125636.png)
 
-### License agreement
+### 许可协议
 
-在最终用户许可协议中，有关于使用 **AAPS** 的法律方面的重要信息。 Please read it carefully.
+在最终用户许可协议中，有关于使用 **AAPS** 的法律方面的重要信息。 请仔细阅读。
 
 如果您不理解或不能同意最终用户许可协议，请不要使用 **AAPS**！
 
-If you understand and agree, please click the "I UNDERSTAND AND AGREE" button and follow the Setup Wizard:
+如果您理解并同意，请点击“我理解并同意”按钮，并按照设置向导进行操作：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125650.png)
 
-### Required permissions
+### 所需权限
 
 **AAPS**需要满足一些要求才能正常运行。
 
-在接下来的屏幕中，您会被问到几个问题，您必须同意这些问题，才能使 **AAPS** 正常工作。 The Wizard itself explains why it asks for the relevant setting.
+在接下来的屏幕中，您会被问到几个问题，您必须同意这些问题，才能使 **AAPS** 正常工作。 向导本身会解释它为什么要请求相关设置。
 
-In this screen, we aim to give some more background information, translate more technical speak into common language or explain the reason.
+在这一屏幕中，我们旨在提供更多背景信息，将更多技术术语翻译成普通语言或解释原因。
 
-Please click the "NEXT" button:
+请点击“下一步”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125709.png)
 
-Battery consumption on smartphones is still a consideration, as the performance of the batteries is still quite limited. Therefore, the Android operating system on your smartphone is quite restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+智能手机的电池消耗仍然是一个需要考虑的问题，因为电池的性能仍然相当有限。 因此，您智能手机上的 Android 操作系统对允许应用程序运行和消耗 CPU 时间（以及因此消耗电池电量）有相当严格的限制。
 
-然而，**AAPS** 需要定期运行，例如，每几分钟接收一次血糖读数，然后根据您的设定的参数来应用算法，以决定如何调整您的血糖。 Therefore it must be allowed to do so by Android.
+然而，**AAPS** 需要定期运行，例如，每几分钟接收一次血糖读数，然后根据您设定的参数来应用算法，以决定如何调整您的血糖。 因此，Android 必须允许它这样做。
 
-You do this by confirming the setting.
+您通过确认设置来做到这一点。
 
-Please click the "ASK FOR PERMISSION" button:
+请点击“请求权限”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125721.png)
 
-Please select "Allow":
+请选择“允许”：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125750.png)
 
-Android requires special permission for apps if they want to send you notifications.
+如果应用程序想要向您发送通知，Android 需要特殊权限。
 
 虽然禁用社交媒体应用程序等通知是一个很好的功能，但允许 **AAPS** 发送通知至关重要。
 
-Please click the "ASK FOR PERMISSION" button:
+请点击“请求权限”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125813.png)
 
 
-Select the "AAPS" app:
+选择“AAPS”应用程序：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125833.png)
 
-Enable "Allow display over other apps" by sliding the slider to the right:
+通过将滑块向右滑动来启用“在其他应用上层显示”：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125843.png)
 
-The slider should look this way if it is enabled:
+如果已启用，滑块应如下所示：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125851.png)
 
-Android links the use of bluetooth communication to the ability to use location services. Perhaps you have seen it with other apps too. It's common to need location permission if you want to access bluetooth.
+Android 将蓝牙通信的使用与定位服务的使用联系起来。 也许您在其他应用程序中也看到过这一点。 如果要使用蓝牙，通常需要位置权限。
 
-如果您的动态和泵直接由 **AAPS** 控制，而不是由 **AAPS** 使用的另一个应用程序控制，**AAPS** 会使用蓝牙与它们通信。 Details may differ from setup to setup.
+如果您的动态和泵直接由 **AAPS** 控制，而不是由 **AAPS** 使用的另一个应用程序控制，**AAPS** 会使用蓝牙与它们通信。 具体细节可能因设置而异。
 
-Click the "ASK FOR PERMISSION" button:
+请点击“请求权限”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125924.png)
 
@@ -104,7 +104,7 @@ Click the "NEXT" button:
 
 **AAPS** 需要将信息记录到智能手机的永久存储（硬盘的概念，关机不丢数据）中。 Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
 
-Click the "ASK FOR PERMISSION" button:
+请点击“请求权限”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_130012.png)
 
