@@ -125,7 +125,7 @@ Click "OK" and then the "NEXT" button:
 
 由于 **AAPS** 的配置包含一些敏感数据（_例如_，访问您的 Nightscout 服务器的 API_KEY），因此它会被您在此处设置的密码加密。
 
-第二句话非常重要，请**不要丢失您的主密码**。 请把它记好，_例如_放在Google Drive上。 Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+第二句话非常重要，请**不要丢失您的主密码**。 请把它记好，_例如_放在Google Drive上。 Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. 如果您忘记了主密码，以后可能很难恢复您的配置文件和 **目标**完成进度。
 
 After filling in the password twice, please click the "NEXT" button:
 
@@ -164,7 +164,7 @@ Click the "NEXT" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-### Units (mg/dL <-> mmol/L)
+### 单位（mg/dL <-> mmol/L）
 
 Please select if your glucose values are in mg/dl or mmol/L and then please click the "NEXT" button:
 
@@ -176,7 +176,7 @@ Please select if your glucose values are in mg/dl or mmol/L and then please clic
 
 The values you choose only affect the graphical presentation of the diagram, and nothing else.
 
-Your glucose target _e.g._ is configured separately in your profile.
+您的血糖目标（例如）在您的配置文件中单独配置。
 
 Your range to analyze TIR (time in range) is configured separately in your reporting server.
 
@@ -193,16 +193,15 @@ You could do other configurations here too, but for the first run we will just f
 
 If you are not able to set it up at the moment, skip it for now. You can configure it later.
 
-If you select an item here on the left tick box, on the right you can then ticking the visibility (eye) box, which will place this plugin in the upper menu on the **AAPS** home screen. Please select the visibility too if you configure your reporting server at this point.
+如果您在此处左侧选择了一个项目，则可以在右侧勾选可见性（眼睛）框，这会把这个插件放置在 **AAPS** 主屏幕的顶部菜单中。 Please select the visibility too if you configure your reporting server at this point.
 
 In this example we select Nightscout as reporting server, and will configure it.
 
 ```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
-:class: Note
+:class: 注意
+点击 [这里](#version3200) 查看 **AAPS** 3.2.0.0 的发布说明，其中解释了顶部选项 **NSClient**（这是“v1”，尽管没有明确标记）和第二个选项 **NSClient v3** 之间的差异。
 
-Click [here](#version3200) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**.
-
-Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
+Nightscout 用户应选择 **NSClient v3**，除非您想通过 Nightscout 监控或发送远程治疗（例如，作为使用 **AAPS** 的儿童的家长或看护人），在这种情况下，请选择第一个选项“**NSClient**”，直到另行通知。 
 ```
 For Tidepool it is even simpler, as you only need your personal login information.
 
@@ -224,15 +223,15 @@ Please click the "OK" button:
 
 Enter your nightscout access token. This is the access token for your Nightscout server you configured. Without this token, access will not work.
 
-If you don't have it at the moment please check the documentation for setting up the reporting server in the **AAPS** documentation.
+如果您目前看不到它，请查看 **AAPS** 文档中关于设置报告服务器的文档。
 
-After filling in the "**NS access token**" and clicking "OK", please click on the "Synchronization" button:
+在填写“**NS访问令牌（NS access token）**”并点击“OK”后，请点击“同步（Synchronization）”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141131.png)
 
 Please select "Upload data to NS" if you already configured nightscout in the previous steps of the Setup Wizard.
 
-If you have stored profiles on Nightscout and want to download them to **AAPS**, enable "Receive profile store":
+如果您在 Nightscout 上存储了配置文件并希望将它们下载到 **AAPS**，请启用“Receive profile store”：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141219.png)
 
@@ -247,9 +246,9 @@ Go back to the previous screen before and select "Connection settings".
 
 Here you can configure how to transfer your data to the reporting server.
 
-Caregivers must enable "use cellular connection" as otherwise the smartphone which serves the dependant/child can not upload data outside of WiFi range _e.g._ on the way to school.
+看护人必须启用“使用手机流量（use cellular connection）”，否则被看护人的智能手机（例如，孩子的手机）无法在 WiFi 范围外（_例如_，在上学的路上）上传数据。
 
-Other **AAPS** users can disable the tranfer via cellular connection if they want to save data or battery.
+其他 **AAPS** 用户可以禁用通过手机流量的传输以节省流量或电池电量。
 
 If in doubt, just leave all enabled.
 
@@ -259,7 +258,7 @@ Go back to the screen before and select "Advanced Settings".
 
 Enable "Log app start to NS" if you want get this information in the reporting server. It can help you to know remotely if and when the app has been restarted, particularly as a caregiver.
 
-It might be interesting to see if **AAPS** is correctly configured now, but later it is usually not that important to be able to see **AAPS** stopping or starting in Nightscout.
+一开始通过 Nightscout来查看 **AAPS** 停止或启动可能挺好玩，但时间长了一般就没啥必要了。
 
 Enable "Create announcements from errors" and "Create announcements from carbs required alerts".
 
@@ -271,7 +270,7 @@ Go back twice, to the list of plugins and select "NEXT" to go to the next screen
 
 ### 患者名称
 
-Here you can setup your name in **AAPS**.
+在这里，您可以在 **AAPS** 中设置您的姓名。
 
 It can be anything. It's just for differentiating users.
 
@@ -283,9 +282,9 @@ Press "NEXT" to go to the next screen.
 
 ### 患者类型
 
-Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
+在这里，您选择“患者类型”，这很重要，因为 **AAPS** 根据患者的年龄有不同的限制。 This is important for security and safety reasons.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for meal.
+在这里，您还可以配置**餐时大剂量的最大上限**。 That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for meal.
 
 The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
 
@@ -300,8 +299,8 @@ Select the type of insulin being used in the pump.
 The insulin names should be self-explanatory.
 
 ```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
-:class: danger
-For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
+:class: 危险
+对于高级用户或医学研究，可以使用“Free-Peak Oref”定义自定义配置文件，说明胰岛素如何起作用。 除非您是专家，否则请不要使用它，通常预定义的值对每种品牌胰岛素都有效。
 ```
 
 Press "NEXT" to go to the next screen:
@@ -311,7 +310,7 @@ Press "NEXT" to go to the next screen:
 
 ### Blood sugar source
 
-Select the BG source you are using. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+Select the BG source you are using. 请阅读您 [血糖数据源](../Getting-Started/CompatiblesCgms.md) 的文档。
 
 As there are several options available, we don't explain the configuration for all of them here. We are using Dexcom G6 with the BYODA app in our example here:
 
@@ -339,15 +338,14 @@ Go back and press "NEXT" to go to the next screen:
 
 Now we are entering a very important part of the Setup Wizard.
 
-Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
+在接下来的屏幕上输入您的配置文件详细信息之前，请先阅读有关 [配置文件](../SettingUpAaps/YourAapsProfile.md) 的文档。
 
 ```{admonition} Working profile required - no exceptions here !
-:class: danger
-An accurate profile is necessary to control the safe action of **AAPS**
+:class: 危险
+准确的配置文件对于控制 **AAPS** 的安全操作是必要的
+您必须与医生确定并讨论您的配置文件，并且确保基础率、ISF 和 IC已经验证无误。
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
-
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+如果机器人输入错误，它将始终无法正常工作。 **AAPS** 只能根据给定的信息工作。 如果您的配置方案太猛，您可能会面临低血糖的风险；而如果方案太柔，则可能会面临高血糖的风险。 
 ```
 
 Press "NEXT" to go to the next screen. Enter a "profile name":
@@ -358,37 +356,37 @@ Press "NEXT" to go to the next screen. Enter a "profile name":
 You can have several profiles in the long-term if needed. We only create one here.
 
 ```{admonition} Profile only for tutorial - not for your usage
-:class: information
-The example profile here is only to show you how to enter data.
+:class: 信息
+此处的示例配置文件仅用于向您展示如何输入数据。
 
-It is not intended to be an accurate profile or something very well optimised, because each person's needs are so different.
+它不打算作为准确的配置文件或优化得很好的配置文件，因为每个人的需求都大不相同。
 
-Don't use it for actually looping!
+不要用它来实际配置闭环！
 ```
 
-Enter your [Duration of insulin Action (DIA)](#your-aaps-profile-duration-of-insulin-action) in hours. Then press "IC":
+输入您的 [胰岛素作用持续时间（DIA）](#your-aaps-profile-duration-of-insulin-action)（小时）。 Then press "IC":
 
 ![image](../images/setup-wizard/Screenshot_20231202_142143.png)
 
-Enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values:
+输入您的 [IC](#your-aaps-profile-insulin-to-carbs-ratio) 值：
 
 ![image](../images/setup-wizard/Screenshot_20231202_142903.png)
 
-Press "ISF". Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
+Press "ISF". 输入您的[胰岛素敏感系数（ISF）](#your-aaps-profile-insulin-sensitivity-factor)值：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143009.png)
 
 
-Press "BAS". Enter your [basal values](#your-aaps-profile-basal-rates):
+Press "BAS". 输入您的[基础率](#your-aaps-profile-basal-rates)：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143623.png)
 
 
 Press "TARG". Enter your blood sugar target values.
 
-For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
+对于开环，这里的目标范围可以设置得宽一些，否则**AAPS**会不断提示您更改临时基础率或其他设置，有时候可能挺烦人。
 
-Later, for closed looping, you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+Later, for closed looping, you will generally have only one value for top and bottom. 这样，**AAPS**更容易达到目标值，并为您提供更好的糖尿病整体控制。
 
 Enter/confirm the target values:
 
@@ -450,9 +448,9 @@ You get an important warning dialog. Please read it, and press "OK".
 
 If your have already setup your profile in the steps before and you know how to connect your pump, feel free to connect it now.
 
-Otherwise, leave the Setup Wizard, using the arrow in the top left corner and let **AAPS** first show you some blood glucose values. You can come back anytime or use one of the direct configuration options (not using the Wizard).
+否则，使用左上角的箭头退出设置向导，让**AAPS**首先显示一些血糖值。 You can come back anytime or use one of the direct configuration options (not using the Wizard).
 
-Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
+请阅读您的[胰岛素泵](../Getting-Started/CompatiblePumps.md)文档。
 
 Press "NEXT" to go to the next screen.
 
@@ -469,11 +467,11 @@ Press "NEXT" to go to the next screen:
 
 Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
 
-The reason SMB is disabled in the beginning is because the SMB feature enables faster reaction on blood sugar increase through the Super Micro Bolus instead of increasing the basal rate percentage. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
+The reason SMB is disabled in the beginning is because the SMB feature enables faster reaction on blood sugar increase through the Super Micro Bolus instead of increasing the basal rate percentage. 在开始时，您的配置通常不如经过一段时间的使用后那么好，因此一开始禁用了此功能。
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
-:class: information
-OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+:class: 信息
+OpenAPS AMA是最基本的算法，不支持用SMB纠正高血糖。 在某些情况下，使用此算法可能更好，但它不是推荐选项。
 ```
 
 Press the cogwheel to see the details:
@@ -483,7 +481,7 @@ Press the cogwheel to see the details:
 
 Only read the text and change nothing here.
 
-Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
+由于**目标（Objectives）**所带来的限制，您目前反正无法使用“闭环”或“SMB功能”。
 
 Go back and press "NEXT" to go to the next screen:
 
@@ -499,7 +497,7 @@ Press "NEXT" to go to the next screen:
 
 ### 灵敏度检测
 
-Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
+选择“Sensitivity Oref1”作为灵敏度插件的标准选项。
 
 Press "NEXT" to go to the next screen:
 
@@ -507,7 +505,7 @@ Press "NEXT" to go to the next screen:
 
 ### Start Objective 1
 
-You are entering now the Objectives. The qualification for access to further **AAPS** features.
+You are entering now the Objectives. 这是获得进一步**AAPS**功能的资格要求。
 
 Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective.
 
@@ -523,9 +521,9 @@ Press "FINISH" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_144135.png)
 
-You are coming to the home screen of **AAPS**.
+您来到了**AAPS**的主屏幕。
 
-Here you find the information message in **AAPS** that you set your profile.
+在这里，您可以在**AAPS**中找到您设置配置文件时的信息消息。
 
 This was done when we switched to our new profile.
 
