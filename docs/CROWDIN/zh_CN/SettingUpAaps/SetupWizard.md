@@ -1,20 +1,20 @@
 # AAPS Setup Wizard
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
+当您首次启动 **AAPS** 时，**设置向导** 会引导您一次性快速完成应用程序所有的基本配置。 **设置向导** 的目的是为了避免遗漏关键步骤。 例如，**权限设置** 对于正确设置 **AAPS** 至关重要。
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimise/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+然而，在首次使用 **设置向导** 时，并不一定要完全配置所有内容，您可以轻松退出向导并在稍后返回。 在 **设置向导** 之后，有三种方式可以进一步优化/更改配置。 These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
 
-During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
+在使用 **设置向导** 期间和之后，您可能发现**AAPS** 没啥明显的变化。 要启用您的 **AAPS** 循环，您必须按照 **目标** 启用各个功能。 您将在 设置向导 结束时开始**目标 1**。 您是 **AAPS** 的主人，别搞反了。
 
 ```{admonition} Preview Objectives
-:class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) but then come back here to run the Setup Wizard first.
+:class: 注意
+如果您急于了解“目标（Objectives）”都是有哪些，请阅读 [完成目标](../SettingUpAaps/CompletingTheObjectives.md)，但之后请先返回这里运行 设置向导。
 
 ```
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+根据以往经验，我们了解到新用户往往急于尽快设置 **AAPS**，这可能会导致挫败感，因为学习曲线可能很陡峭。
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+因此，请花点时间配置您的闭环，运行良好的 **AAPS** 闭环将带来巨大的好处。
 
 ```{admonition} Ask for Help
 :class: note
@@ -29,9 +29,9 @@ This is just the welcome message which you can skip with the "NEXT" button:
 
 ### License agreement
 
-In the end user license agreement there is important information about the legal aspects of using **AAPS**. Please read it carefully.
+在最终用户许可协议中，有关于使用 **AAPS** 的法律方面的重要信息。 Please read it carefully.
 
-If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
+如果您不理解或不能同意最终用户许可协议，请不要使用 **AAPS**！
 
 If you understand and agree, please click the "I UNDERSTAND AND AGREE" button and follow the Setup Wizard:
 
@@ -39,9 +39,9 @@ If you understand and agree, please click the "I UNDERSTAND AND AGREE" button an
 
 ### Required permissions
 
-**AAPS** needs some requirements to operate correctly.
+**AAPS**需要满足一些要求才能正常运行。
 
-In the following screens you are asked several questions you have to agree to, to get **AAPS** working. The Wizard itself explains why it asks for the relevant setting.
+在接下来的屏幕中，您会被问到几个问题，您必须同意这些问题，才能使 **AAPS** 正常工作。 The Wizard itself explains why it asks for the relevant setting.
 
 In this screen, we aim to give some more background information, translate more technical speak into common language or explain the reason.
 
@@ -51,7 +51,7 @@ Please click the "NEXT" button:
 
 Battery consumption on smartphones is still a consideration, as the performance of the batteries is still quite limited. Therefore, the Android operating system on your smartphone is quite restrictive about allowing applications to run and consume CPU time, and therefore battery power.
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be allowed to do so by Android.
+然而，**AAPS** 需要定期运行，例如，每几分钟接收一次血糖读数，然后根据您的设定的参数来应用算法，以决定如何调整您的血糖。 Therefore it must be allowed to do so by Android.
 
 You do this by confirming the setting.
 
@@ -65,7 +65,7 @@ Please select "Allow":
 
 Android requires special permission for apps if they want to send you notifications.
 
-While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
+虽然禁用社交媒体应用程序等通知是一个很好的功能，但允许 **AAPS** 发送通知至关重要。
 
 Please click the "ASK FOR PERMISSION" button:
 
@@ -86,13 +86,13 @@ The slider should look this way if it is enabled:
 
 Android links the use of bluetooth communication to the ability to use location services. Perhaps you have seen it with other apps too. It's common to need location permission if you want to access bluetooth.
 
-**AAPS** uses bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Details may differ from setup to setup.
+如果您的动态和泵直接由 **AAPS** 控制，而不是由 **AAPS** 使用的另一个应用程序控制，**AAPS** 会使用蓝牙与它们通信。 Details may differ from setup to setup.
 
 Click the "ASK FOR PERMISSION" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_125924.png)
 
-This is important. Otherwise **AAPS** can not work properly at all.
+This is important. 否则，**AAPS** 将根本无法正常工作。
 
 Click "While using the app":
 
@@ -102,7 +102,7 @@ Click the "NEXT" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130002.png)
 
-**AAPS** needs to log information to the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS** 需要将信息记录到智能手机的永久存储（硬盘的概念，关机不丢数据）中。 Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
 
 Click the "ASK FOR PERMISSION" button:
 
@@ -114,7 +114,7 @@ Click "Allow":
 
 You are being informed that you have to reboot your smartphone after this change to take effect.
 
-Please **don't stop the Setup Wizard now**. You can do it after finishing the Setup Wizard.
+**请不要现在停止设置向导**。 You can do it after finishing the Setup Wizard.
 
 Click "OK" and then the "NEXT" button:
 
@@ -123,9 +123,9 @@ Click "OK" and then the "NEXT" button:
 
 ### 主密码
 
-As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
+由于 **AAPS** 的配置包含一些敏感数据（_例如_，访问您的 Nightscout 服务器的 API_KEY），因此它会被您在此处设置的密码加密。
 
-The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD**. Please make a note of it _e.g._ on Google Drive. Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+第二句话非常重要，请**不要丢失您的主密码**。 请把它记好，_例如_放在Google Drive上。 Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
 
 After filling in the password twice, please click the "NEXT" button:
 
