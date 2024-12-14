@@ -2,19 +2,19 @@
 
 - 通过点击主页屏幕右上角的三个点菜单来**打开参数设置**。
 
-![Open preferences](../images/Pref2020_Open2.png)
+![打开参数设置](../images/Pref2020_Open2.png)
 
 - 您可以通过打开相应的选项卡（例如，泵选项卡）并点击“插件偏好设置”，直接跳转到该选项卡的偏好设置页面。
 
-![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
+![打开插件参数设置](../images/Pref2020_OpenPlugin2.png)
 
 - 点击子菜单标题下方的三角形可以**打开子菜单**。
 
-![Open submenu](../images/Pref2020_Submenu2.png)
+![打开子菜单](../images/Pref2020_Submenu2.png)
 
 - 在偏好设置屏幕的顶部有一个**筛选器**，您可以通过它快速找到并访问特定的偏好设置项。 只需开始输入您要查找的文本的一部分即可。
 
-![Preferences filter](../images/Pref2021_Filter.png)
+![参数设置过滤器](../images/Pref2021_Filter.png)
 
 ```{contents}
 :backlinks: entry
@@ -24,7 +24,7 @@
 (Preferences-general)=
 ## 一般
 
-![Preferences > General](../images/Pref2020_General.png)
+![参数设置 > 一般](../images/Pref2020_General.png)
 
 **单位**
 
@@ -45,7 +45,7 @@
 (Preferences-protection)=
 ### 保护（Protection）
 
-![Preferences > General - Protection](../images/Pref2020_General2.png)
+![参数设置 > 一般 - 保护](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
 #### 主密码
@@ -78,7 +78,7 @@
 
 - 在下面的示例中，你看到的是生物识别保护的提示。 如果生物识别身份验证不起作用，请点击白色提示上方的空白处并输入主密码。
 
-![Prompt biometric protection](../images/Pref2020_PW.png)
+![提示生物识别保护](../images/Pref2020_PW.png)
 
 #### 密码和PIN保留时间
 
@@ -88,7 +88,7 @@
 #### 皮肤
 你可以从四种类型的皮肤中选择：
 
-![Select skin](../images/Pref2021_SkinWExample.png)
+![选择皮肤](../images/Pref2021_SkinWExample.png)
 
 “低分辨率皮肤”带有较短的标签，并移除了年龄/级别，以便在低分辨率屏幕上获得更多可用空间。
 
@@ -105,13 +105,13 @@
 
 - **大分辨率显示**与其他皮肤相比，所有图形的高度都有所增加。
 
-![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
+![适配手机显示方向的皮肤](../images/Screenshots_Skins.png)
 
 ## 概览
 
 在**概览（Overview）**部分，你可以定义主屏的参数设置。
 
-![Preferences > Overview](../images/Pref2020_OverviewII.png)
+![参数设置 > 概览](../images/Pref2020_OverviewII.png)
 
 ### 保持屏幕常亮
 
@@ -122,13 +122,13 @@
 
 - 定义主页屏幕底部显示哪些按钮。
 
-![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
+![参数设置 > 按钮](../images/Pref2020_OV_Buttons.png)
 
 - **增量**选项允许你为碳水化合物和胰岛素对话框中的三个按钮定义数量，以方便输入。
 
-![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
+![参数设置 > 按钮 > 胰岛素](../images/Pref2020_OV_Buttons2.png)
 
-![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
+![参数设置 > 按钮 > 碳水化合物](../images/Pref2020_OV_Buttons3.png)
 
 (Preferences-quick-wizard)=
 ### Quick Wizard
@@ -137,13 +137,13 @@
 
 对于每个按钮，你定义碳水化合物和计算大剂量的方法。 然后，你定义按钮在主页屏幕上显示的时间段——每个时间段只能显示一个按钮。 如果当前时间不在指定的时间范围内，或者你的体内活性胰岛素（IOB）足以覆盖快速向导按钮中定义的碳水化合物，则按钮将不会显示。 如果你为不同的餐食指定了不同的时间，你将始终根据一天中的时间，在主页屏幕上看到适当的标准餐食按钮。
 
-![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
+![参数设置 > 快速向导按钮设置](../images/Pref2020_OV_QuickWizard.png)
 
 如果你点击快速向导按钮，**AAPS**将根据当前比率计算并给出一个大剂量建议（参考血糖值和设置的活性胰岛素IOB）。
 
 点OK确认之后才会按照建议进行输注。
 
-![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
+![参数设置 > 快速向导按钮](../images/Pref2020_OV_QuickWizard2.png)
 
 (Preferences-default-temp-targets)=
 ### 默认临时目标
@@ -156,7 +156,7 @@
 * 活动：目标140 mg/dL / 7.8 mmol/l，持续时间90分钟
 * 低血糖：目标125 mg/dL / 6.9 mmol/l，持续时间45分钟
 
-![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
+![参数设置 > 默认临时目标](../images/Pref2020_OV_DefaultTT.png)
 
 在这里了解如何[启用临时目标](#TempTargets-where-can-i-select-a-temp-target)。
 
@@ -171,7 +171,7 @@
 
 为**AAPS**概览和智能手表上的血糖图选择高点和低点标记。 这只是可视化，不是你的血糖目标范围。 例如：70 - 180 mg/dl 或 3.9 - 10 mmol/l。
 
-![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
+![参数设置 > 可视化范围](../images/Pref2020_OV_Range2.png)
 
 ### 缩写标签标题
 
@@ -179,14 +179,14 @@
 
 例如，“OpenAPS AMA”标签页变为“OAPS”，“OBJECTIVES”变为“OBJ”等。
 
-![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
+![参数设置 > 标签页](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
 ### 在治疗（treatments）对话框中显示备注字段
 
 允许您为自己的治疗方案（大剂量向导、碳水、胰岛素...）添加简短的文本备注。
 
-![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
+![参数设置 > 治疗对话框中的备注](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
 ### 状态指示灯
@@ -205,7 +205,7 @@
 
 最后一个选项允许您从Nightscout导入那些设置（如果在Nightscout中已定义）。 更多信息请参阅[Nightscout文档](https://nightscout.github.io/nightscout/setup_variables/#age-pills)。
 
-![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
+![参数设置 > 状态指示灯](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
 ### 输注大剂量向导计算结果的一部分（Deliver this part of bolus wizard result）
@@ -220,7 +220,7 @@
 
 ### 启用大剂量顾问（bolus advisor）
 
-![Bolus Advisor](../images/BolusAdvisor.png)
+![大剂量顾问](../images/BolusAdvisor.png)
 
 启用后，在高血糖状态下使用大剂量向导时，你将收到一个警告，提示你是否希望给个提前大剂量，然后等**血糖**回到范围内时再进食。
 
@@ -231,7 +231,7 @@
 (Preferences-advanced-settings-overview)=
 ### 高级设置（概览）
 
-![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
+![参数设置 > 高级设置](../images/Pref2021_OV_Adv.png)
 
 #### 超级大剂量（Superbolus）
 
@@ -270,7 +270,7 @@
 ### APS模式
 在开环、闭环和低血糖暂停（LGS）之间切换。
 
-![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
+![配置构建器 - 循环模式](../images/ConfigBuilder_LoopLGS.png)
 
 (Preferences-pen-loop)=
 #### 开环（Open Loop）
@@ -338,7 +338,7 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 当使用min_5m_impact时，主页屏幕上的COB图会在顶部放置一个橙色圆圈。
 
-![COB graph](../images/Pref2020_min_5m_carbimpact.png)
+![COB图](../images/Pref2020_min_5m_carbimpact.png)
 
 ### 膳食最大吸收时间
 
@@ -375,96 +375,95 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 - 设置您的*Nightscout网址*（例如<https://yoursitename.yourplaform.dom>）。
 - **确保网址末尾没有 /api/v1/。**
 - *[API密钥](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)*（记录在您的Nightscout变量文件中的一个12字符密码）。
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
+- 这使得数据能够在Nightscout网站和**AAPS**之间读取和写入。
+- 如果您在目标1中遇到了问题，请仔细检查此处是否有拼写错误。
 
 ## NSClientV3
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
+[AAPS 3.2引入的新协议。](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) 更安全、更高效。
 
 ```{admonition} V3 data uploaders
-:class: warning
-
-When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+:class:警告
+当使用NSClientV3时，所有数据上传器都必须使用API V3。 由于大多数上传器目前还不兼容，这意味着**您必须让**AAPS**上传所有数据**（血糖值、治疗方案等）到Nightscout，并禁用所有其他非V3兼容的上传器。
 ```
 
 - 设置您的*Nightscout网址*（例如<https://yoursitename.yourplaform.dom>）。
 - **确保网址末尾没有 /api/v1/。**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **NS access token** (not your API Secret!).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
-- Leave Connect to websockets enabled (recommended).
+- 在Nightscout中，创建一个*[管理员令牌](https://nightscout.github.io/nightscout/security/#create-a-token)*（使用V3 API需要[Nightscout 15](https://nightscout.github.io/update/update/)版本）并将其输入到**NS访问令牌**中（不是您的API密钥！）。
+- 这使得数据能够在Nightscout网站和**AAPS**之间读取和写入。
+- 如果您在目标1中遇到了问题，请仔细检查此处是否有拼写错误。
+- 保持启用Websockets连接（推荐）。
 
-### Synchronization
+### 同步
 
-Synchronization choices will depend on the way you will want to use **AAPS**.
+同步选项将取决于您希望使用**AAPS**的方式。
 
-You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
+您可以选择您想要[从Nightscout上传和下载哪些数据](#Nightscout-aaps-settings)。
 
 ### 报警选项
 
 ![报警选项](../images/Pref2024_NSClient_Alarms.png)
 
-- Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
-- If you have the **CGM** source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
-- Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
-- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
+- “警报选项”允许您选择要通过该应用程序使用的Nightscout警报。 当Nightscout警报触发时，**AAPS**将会发出警报。
+- 为了使警报响起，您需要在您的[Nightscout变量](https://nightscout.github.io/nightscout/setup_variables/#alarms)中设置紧急高血糖、高血糖、低血糖和紧急低血糖警报值。
+- 它们只有在您与Nightscout保持连接时才会起作用，并且是为家长/护理人员设计的。
+- 如果您的手机上有**动态（CGM）**数据应用（如xDrip+或BYODA），则请使用这些警报而不是Nightscout警报。
+- “从Nightscout[公告](https://nightscout.github.io/nightscout/discover/#announcement)创建通知”功能将在**AAPS**通知栏中重复显示Nightscout公告。
+- 当一段时间没有从Nightscout接收到数据时，您可以更改数据超时警报和紧急数据超时警报的阈值。
 
-### Connection settings
+### 连接设置
 
-![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
+![NSClient 连接设置](../images/ConfBuild_ConnectionSettings.png)
 
-- Connection settings define when Nightscout connection will be enabled.
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific Wi-Fi network you can enter its Wi-Fi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+- 连接设置定义了何时启用与Nightscout的连接。
+- 将Nightscout上传限制为仅通过Wi-Fi进行，甚至限制为特定的Wi-Fi SSID。
+- 如果您只想使用特定的Wi-Fi网络，可以输入其Wi-Fi SSID。
+- 多个SSID可以用分号分隔。
+- 要在字段中删除所有SSID，请输入一个空格。
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
+### 高级设置（NSClient）
 
-![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
+![NSClient 高级设置](../images/Pref2024_NSClientAdv.png)
 
-Options in advanced settings are self-explanatory.
+高级设置中的选项都是一看就能明白。
 
 ## SMS短信通讯器
 
-More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+有关更多信息，请访问专门的[SMS命令](../RemoteFeatures/SMSCommands.md)页面。
 
 ## 自动操作
 
-Select which location service shall be used:
+选择要使用的定位服务：
 
-- Use passive location: **AAPS** only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! May cause excessive battery drain!)
+- 使用被动位置：只有当其他应用请求时，**AAPS**才会获取位置信息。
+- 使用网络位置：您的Wi-Fi位置
+- 使用GPS位置（注意！ 可能会导致电池电量飞降！）
 
-## Local alerts
+## 本地警报
 
-![Local alerts](../images/Pref2020_LocalAlerts.png)
+![本地警报](../images/Pref2020_LocalAlerts.png)
 
-Settings should be self-explanatory.
+设置一看就能明白。
 
-## Data choices
+## 数据选择
 
-![Data choices](../images/Pref2020_DataChoice.png)
+![数据选择](../images/Pref2020_DataChoice.png)
 
-You can help develop **AAPS** further by sending crash reports to the developers.
+您可以通过向开发者发送崩溃报告来帮助**AAPS**进一步发展。
 
-## Maintenance settings
+## 维护设置
 
-![Maintenance settings](../images/Pref2020_Maintenance.png)
+![维护设置](../images/Pref2020_Maintenance.png)
 
-Standard recipient of logs is <logs@aaps.app>.
+日志的标准接收者是<logs@aaps.app>。
 
-## Open Humans
+## 开源人类项目（Open Humans）
 
-You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
+You can help the community by donating your data to research projects! 详细信息在[Open Humans页面](../SupportingAaps/OpenHumans.md)上有描述。
 
-In Preferences, you can define when data shall be uploaded
-- only if connected to Wi-Fi
-- only if charging
+在“首选项”中，您可以定义何时上传数据。
+- 仅在连接到Wi-Fi时
+- 仅在充电时
