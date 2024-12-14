@@ -311,20 +311,20 @@ Android要求每个应用都必须被_签名_，以确保它只能在以后从�
 
 ![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Select "APK" instead of "Android App Bundle" and click "Next":
+选择“APK”而不是“Android App Bundle”，然后点击“下一步”：
 
 ![APK instead of bundle](../images/Building-the-App/041_APK.png)
 
-In the next screen, make sure that "Module" is set to "AAPS.app" (1).
+在下一个屏幕中，确保“模块”设置为“AAPS.app”（1）。
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
-:class: information
-If you want to create the apk for your watch, you now need to select AAPS.wear!
+:class: 信息
+如果您要为手表创建APK，现在需要选择AAPS.wear！
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Click "Create new..." (2) to start creating your key store.
+点击“创建新的...” （2）以开始创建您的密钥库。
 
 ```{admonition} INFORMATION!
 :class: information
@@ -332,11 +332,11 @@ Click "Create new..." (2) to start creating your key store.
 如果您之前已经构建过AAPS，请不要创建新的keystore，而是选择您现有的keystore并输入其密码！
 ```
 
-**_注意：_** keystore是一个文件，用于存储签名应用的信息。 It is encrypted, and the information is secured with passwords.
+**_注意：_** keystore是一个文件，用于存储签名应用的信息。 它是加密的，并且信息通过密码保护。
 
 ![Create key store](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* 点击“文件夹”图标（1）以选择您计算机上的一个路径来保存您的密钥库。
 
   **不要**使用存储源代码的目录，而是选择您也会转移到新计算机上的某个目录。
 
@@ -345,50 +345,50 @@ Click "Create new..." (2) to start creating your key store.
 请务必记下您的keystore存储位置。 在构建下一个AndroidAPS更新时，您将需要它！
 ```
 
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
+* 现在选择一个简单的密码（并记下它），在密码框（2）中输入它，并确认密码（2）。
 
-  The passwords for key store and key do not have to be sophisticated. 如果您将来丢失了密码，请参阅[丢失keystore的故障排除](#troubleshooting_androidstudio-lost-keystore)。
+  密钥库和密钥的密码不需要非常复杂。 如果您将来丢失了密码，请参阅[丢失keystore的故障排除](#troubleshooting_androidstudio-lost-keystore)。
 
-* The default alias (3) for your key is "key0", leave this unchanged.
+* 默认的密钥别名（3）是“key0”，请保持不变。
 
-* You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
+* 现在您需要为您的密钥设置一个密码。 为了简单起见，如果您愿意，可以使用与上面设置的密钥库相同的密码。 输入密码（4）并确认它。
 
 ```{admonition} WARNING!
 :class:警告
 记下这些密码！ 在构建下一个AAPS更新时，您将需要它们！
 ```
 
-* The validity is 25 years by default, leave it as it is.
+* 有效期默认为25年，保持不变。
 
-* Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
+* 输入您的名字和姓氏（5）。 其他信息无需填写，但您可以根据需要自行添加（6-7）。
 
-* Click "OK" (8) to continue:
+* 点击“确定”（8）以继续：
 
 
-在**Generate signed App Bundle or APK**页面上，现在将显示您的keystore的路径。 Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
+在**Generate signed App Bundle or APK**页面上，现在将显示您的keystore的路径。 现在重新输入密钥库密码（1）和密钥密码（2），并勾选方框（3）以记住密码，这样您在下次构建APK时（例如，更新到新的AAPS版本时）就不用再次输入这些密码。 点击“下一步”（4）：
 
 ![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 
 
-On the next screen, select build variant "fullRelease" (2) and click "Create" (3). You should remember the directory displayed at (1), as later you will find your built apk file there!
+在下一个屏幕中，选择构建变量“完全版本（fullRelease）”（2），然后点击“创建”（3）。 您应该记住在（1）处显示的目录，因为之后您可以在那里找到构建好的APK文件！
 
    ![Select build variant](../images/Building-the-App/045_BuildPath.png)
 
-Android Studio现在将构建AAPS apk。 It will show "Gradle Build running" (2) at the bottom right. 此过程需要一些时间，具体取决于您的计算机和互联网连接，因此**请耐心等待！**如果您想查看构建进度，请点击Android Studio底部的“build”小锤子图标（1）：
+Android Studio现在将构建AAPS apk。 在右下角会显示“Gradle 构建运行中”（2）。 此过程需要一些时间，具体取决于您的计算机和互联网连接，因此**请耐心等待！**如果您想查看构建进度，请点击Android Studio底部的“build”小锤子图标（1）：
 
 ![Gradle Running](../images/Building-the-App/046_BuildRunning.png)
 
-Now you can watch the building progress:
+现在您可以查看构建进度：
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". 如果您错过了这个通知，请点击通知图标（1），然后在屏幕最底部点击**locate**（2）以打开通知列表：
+构建完成后，Android Studio 将显示“构建成功”的信息。 您可能会看到一个弹出通知，您可以点击它以选择“定位”。 如果您错过了这个通知，请点击通知图标（1），然后在屏幕最底部点击**locate**（2）以打开通知列表：
 
 ![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
 **_如果构建不成功，请参阅[Android Studio故障排除部分](../GettingHelp/TroubleshootingAndroidStudio)。_**
 
-In the Notifications box, click on the blue link "locate":
+在通知框中，点击蓝色链接“定位”：
 
 ![Locate build](../images/Building-the-App/048_BuildFinished.png) 构建成功后，您将收到通知，并可以通过点击通知中的链接来定位您的apk文件。
 
