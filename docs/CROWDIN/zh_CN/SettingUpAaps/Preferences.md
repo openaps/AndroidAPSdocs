@@ -336,45 +336,45 @@ min_5m_carbimpact定义了每5分钟的默认碳水化合物吸收影响。 有�
 
 min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
-The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+当使用min_5m_impact时，主页屏幕上的COB图会在顶部放置一个橙色圆圈。
 
 ![COB graph](../images/Pref2020_min_5m_carbimpact.png)
 
-### Meal max absorption time
+### 膳食最大吸收时间
 
-If you often eat high fat or protein meals you will need to increase your meal absorption time.
+如果你经常吃高脂肪或高蛋白膳食，则需要增加膳食吸收时间。
 
-### Advanced settings - autosens ratio
+### 高级设置 - 自动灵敏度比率（autosens ratio）
 
 ![碳水吸收率设置](../images/Pref2020_Absorption.png)
 
-- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
-- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+- 定义最小和最大[自动灵敏度（autosens）](#Open-APS-features-autosens)比率。
+- 通常，不应更改标准值（最大1.2，最小0.7）。
 
 ## Pump
 
 ### BT Watchdog
 
-Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+如有必要请激活蓝牙看门狗（例如，对于Dana泵）。 如果无法与泵建立连接，它将蓝牙关闭一秒钟。 这可能有助于解决某些手机上的蓝牙卡顿问题。
 
-## Pump settings
+## 泵设置
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](#Config-Builder-pump).  Pair and set your pump up according to the [pump related instructions](../Getting-Started/CompatiblePumps.md).
+这里的选项将根据你在[配置构建器](#Config-Builder-pump)中选择的泵驱动程序而有所不同。  根据[与泵相关的说明](../Getting-Started/CompatiblePumps.md)配对并设置你的泵。
 
 ## Tidepool
 
-More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
+在[Tidepool](../SettingUpAaps/Tidepool.md)页面上有更多信息。
 
 (Preferences-nsclient)=
 ## NSClient
 
 ![NSClient](../images/Pref2020_NSClient.png)
 
-Original communication protocol, can be used with older Nightscout versions.
+原始通信协议，可与老版本的Nightscout配合使用。
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
+- 设置您的*Nightscout网址*（例如<https://yoursitename.yourplaform.dom>）。
+- **确保网址末尾没有 /api/v1/。**
+- *[API密钥](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)*（记录在您的Nightscout变量文件中的一个12字符密码）。
 - This enables data to be read and written between both the Nightscout website and **AAPS**.
 - Double check for typos here if you are stuck in Objective 1.
 
@@ -390,8 +390,8 @@ Original communication protocol, can be used with older Nightscout versions.
 When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+- 设置您的*Nightscout网址*（例如<https://yoursitename.yourplaform.dom>）。
+- **确保网址末尾没有 /api/v1/。**
 - In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **NS access token** (not your API Secret!).
 - This enables data to be read and written between both the Nightscout website and **AAPS**.
 - Double check for typos here if you are stuck in Objective 1.
