@@ -147,7 +147,7 @@ Several conditions can be linked with
 
 * Use passive location: **AAPS** only takes locations when other apps are requesting it.
 * Use network location: Location of your Wi-Fi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+* 使用GPS位置（注意！ This can cause excessive battery drain!)
 
 ## Action
 

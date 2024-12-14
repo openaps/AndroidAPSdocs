@@ -104,11 +104,11 @@
 
 (Watchfaces-garmin)=
 
-## Garmin
+## Garmin（佳明）
 
 在Garmin ConnectIQ商店中，有一些与[AAPS](https://apps.garmin.com/search?keywords=androidaps)集成的Garmin手表表盘。
 
-![Garmin](../images/Garmin.png)
+![Garmin（佳明）](../images/Garmin.png)
 
 [AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1)与**AAPS**实现了直接集成。 它除了显示葡萄糖读数外，还显示闭环状态数据（如活性胰岛素和临时基础率），并将心率读数发送到**AAPS**。 它在ConnectIQ商店中可供下载，但必要的**AAPS**插件仅从**AAPS** 3.2版本开始提供。 ![Screenshot](../images/Garmin_WF-annotated.png)
 

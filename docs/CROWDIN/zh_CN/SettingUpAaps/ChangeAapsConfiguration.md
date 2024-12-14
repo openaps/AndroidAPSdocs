@@ -24,7 +24,7 @@ Here we explain which option is most convenient for each situation:
 
 ## Preferences
 
-![Open preferences](../images/Pref2020_Open2.png)
+![打开参数设置](../images/Pref2020_Open2.png)
 
 **偏好设置**对话框可以通过**AAPS**中任何选项卡的右上角<0>三个点</0>菜单进入。 这允许您**在一个位置更改所有已启用插件的配置**。
 
@@ -34,7 +34,7 @@ Here we explain which option is most convenient for each situation:
 
 ## Plugin preferences
 
-![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
+![打开插件参数设置](../images/Pref2020_OpenPlugin2.png)
 
 **插件偏好设置**对话框可以通过AAPS主页屏幕的右上角**三个点**菜单进入。 它允许您更改**当前屏幕上插件的配置**。
 
