@@ -92,31 +92,31 @@ Android 将蓝牙通信的使用与定位服务的使用联系起来。 也许�
 
 ![image](../images/setup-wizard/Screenshot_20231202_125924.png)
 
-This is important. 否则，**AAPS** 将根本无法正常工作。
+这一点很重要。 否则，**AAPS** 将根本无法正常工作。
 
-Click "While using the app":
+点击“在使用应用时”：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125939.png)
 
-Click the "NEXT" button:
+点击“下一步”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_130002.png)
 
-**AAPS** 需要将信息记录到智能手机的永久存储（硬盘的概念，关机不丢数据）中。 Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS** 需要将信息记录到智能手机的永久存储中。 永久存储意味着即使在重新启动智能手机后，信息仍然可用。（PC硬盘的概念） 其他信息只是丢失了，因为它们没有被保存到永久存储中。
 
 请点击“请求权限”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_130012.png)
 
-Click "Allow":
+点击“允许”：
 
 ![image](../images/setup-wizard/Screenshot_20231202_130022.png)
 
-You are being informed that you have to reboot your smartphone after this change to take effect.
+您会收到通知，告知您需要在更改后重新启动智能手机才能使其生效。
 
-**请不要现在停止设置向导**。 You can do it after finishing the Setup Wizard.
+**请不要现在停止设置向导**。 您可以等完成设置向导之后再说。
 
-Click "OK" and then the "NEXT" button:
+点击“OK”，然后点击“下一步”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
@@ -160,7 +160,7 @@ After filling in your "contact information" click the "OK" button. Contact infor
 
 ![image](../images/setup-wizard/Screenshot_20231202_135748.png)
 
-Click the "NEXT" button:
+点击“下一步”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 
