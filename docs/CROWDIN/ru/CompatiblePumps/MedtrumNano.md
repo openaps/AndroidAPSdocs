@@ -343,17 +343,17 @@ orphan: true
 
 Нажмите кнопку **Убрать оповещения** для сброса оповещений и возобновления нормальной работы.
 
-## Switching phone, export/import settings
+## Смена телефона, экспорт/импорт настроек
 
 При переходе на новый телефон требуются следующие действия:
 * Выполните [Экспорт настроек](../Maintenance/ExportImportSettings.md) на вашем старом телефоне
-* Transfer settings from old to new phone, and import them into AAPS
+* Перенесите настройки со старого телефона на новый, затем импортируйте их в AAPS
 
-The imported settings file has to be of the same patch session that you are currently using, otherwise the patch will not connect.
+Импортированный файл настроек должен быть с данными того же патча, что вы используете в данный момент, иначе патч не подключится.
 
-After a settings import the driver will sync history with the pump, this can take a while depending on the age of the settings file.
+После импорта настроек драйвер синхронизирует историю с помпой, это может занять некоторое время, зависящее от давности экспорта файла настроек.
 
-From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen: ![Sync progress](../images/medtrum/SyncProgress.png)
+С версии AAPS 3.3.0.0, на главном экране отображается процесс синхронизации: ![Прогресс синхронизации](../images/medtrum/SyncProgress.png)
 
 ## Устранение неполадок
 
