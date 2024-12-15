@@ -372,39 +372,39 @@ Nightscout 用户应选择 **NSClient v3**，除非您想通过 Nightscout 监�
 
 ![image](../images/setup-wizard/Screenshot_20231202_142903.png)
 
-Press "ISF". 输入您的[胰岛素敏感系数（ISF）](#your-aaps-profile-insulin-sensitivity-factor)值：
+点击“ISF”。 输入您的[胰岛素敏感系数（ISF）](#your-aaps-profile-insulin-sensitivity-factor)值：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143009.png)
 
 
-Press "BAS". 输入您的[基础率](#your-aaps-profile-basal-rates)：
+点击"BAS". 输入您的[基础率](#your-aaps-profile-basal-rates)：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143623.png)
 
 
-Press "TARG". Enter your blood sugar target values.
+点击 "TARG"。 输入你的目标血糖值。
 
 对于开环，这里的目标范围可以设置得宽一些，否则**AAPS**会不断提示您更改临时基础率或其他设置，有时候可能挺烦人。
 
-Later, for closed looping, you will generally have only one value for top and bottom. 这样，**AAPS**更容易达到目标值，并为您提供更好的糖尿病整体控制。
+之后，对于闭环系统，你通常只会有一个上限值和下限值。 这样，**AAPS**更容易达到目标值，并为您提供更好的糖尿病整体控制。
 
-Enter/confirm the target values:
+输入/确认目标值：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143709.png)
 
-Save the profile by clicking on "SAVE":
+通过点击“保存”来保存配置文件：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143724.png)
 
 
-After saving a new buttom "Activate Profile" occurs.
+保存后，会出现一个新的按钮“激活配置文件”。
 
 ```{admonition} Several defined but only one active profile
-:class: information
-You can have several profiles defined, but only one activated profile running at any given time.
+:class: 信息
+你可以定义多个配置文件，但在任何给定时间只有一个激活的配置文件在运行。
 ```
 
-Press "Activate Profile":
+点击“激活配置文件”：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143741.png)
 
@@ -412,28 +412,28 @@ Press "Activate Profile":
 
 
 
-The profile switch dialogue appears. In this case let it stay as preset.
+出现配置文件切换对话框。 在这种情况下，让它保持为预设值。
 
 ```{admonition} Several defined but only one active profile
-:class: information
-You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile suitable for the circumstances.
+:class: 信息
+稍后您将学习如何使用此通用对话框来处理疾病或运动等情况，在这些情况下，您需要更改适合当前情况的配置。
 ```
 
 
-Press "OK":
+点击“确定”：
 
 
 ![image](../images/setup-wizard/Screenshot_20231202_143808.png)
 
 
 
-A confirmation dialog for the profile switch appears.
+出现配置文件切换的确认对话框。
 
-You can confirm it with pressing "OK". 点击“下一步”转到下一个屏幕：
+你可以通过点击“确定”来确认。 点击“下一步”转到下一个屏幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143822.png)
 
-Your profile has now been set:
+你的配置文件现在已经设置好了：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143833.png)
 
@@ -442,13 +442,13 @@ Your profile has now been set:
 
 
 
-Now you are selecting your insulin pump.
+现在你要选择你的胰岛素泵。
 
-You get an important warning dialog. Please read it, and press "OK".
+你会看到一个重要的警告对话框。 请阅读它，然后点击“确定”。
 
-If your have already setup your profile in the steps before and you know how to connect your pump, feel free to connect it now.
+如果你已经在之前的步骤中设置好了配置文件，并且知道如何连接你的泵，那么现在可以随意连接它。
 
-否则，使用左上角的箭头退出设置向导，让**AAPS**首先显示一些血糖值。 You can come back anytime or use one of the direct configuration options (not using the Wizard).
+否则，使用左上角的箭头退出设置向导，让**AAPS**首先显示一些血糖值。 你可以随时回来，或者使用直接的配置选项（不使用向导）。
 
 请阅读您的[胰岛素泵](../Getting-Started/CompatiblePumps.md)文档。
 
@@ -457,7 +457,7 @@ If your have already setup your profile in the steps before and you know how to 
 ![image](../images/setup-wizard/Screenshot_20231202_143909.png)
 
 
-In this case we select "Virtual Pump".
+在此，我们选择“虚拟泵”。
 
 点击“下一步”转到下一个屏幕：
 
@@ -465,21 +465,21 @@ In this case we select "Virtual Pump".
 
 ### APS algorithm
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
+使用OpenAPS SMB算法作为您的APS算法。 尽管名称中包含SMB，但在您熟悉AAPS并完成第一个目标之前，SMB功能是被禁用的。 与OpenAPS AMA相比，OpenAPS SMB是较新的版本，通常也更好。
 
-The reason SMB is disabled in the beginning is because the SMB feature enables faster reaction on blood sugar increase through the Super Micro Bolus instead of increasing the basal rate percentage. 在开始时，您的配置通常不如经过一段时间的使用后那么好，因此一开始禁用了此功能。
+在开始阶段禁用SMB功能的原因是，SMB功能通过超级微型大剂量来更快地应对血糖升高，而不是增加基础率百分比。 在开始时，您的配置通常不如经过一段时间的使用后那么好，因此一开始禁用了此功能。
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: 信息
 OpenAPS AMA是最基本的算法，不支持用SMB纠正高血糖。 在某些情况下，使用此算法可能更好，但它不是推荐选项。
 ```
 
-Press the cogwheel to see the details:
+点击齿轮图标以查看详细信息：
 
 ![image](../images/setup-wizard/Screenshot_20231202_144014.png)
 
 
-Only read the text and change nothing here.
+只需阅读文本，不要在此处进行任何更改。
 
 由于**目标（Objectives）**所带来的限制，您目前反正无法使用“闭环”或“SMB功能”。
 
@@ -489,7 +489,7 @@ Only read the text and change nothing here.
 
 ### APS模式
 
-Let "Open Loop" remain selected.
+保持“Open Loop（开环）”选中状态。
 
 点击“下一步”转到下一个屏幕：
 
@@ -503,21 +503,21 @@ Let "Open Loop" remain selected.
 
 ![image](../images/setup-wizard/Screenshot_20231202_144101.png)
 
-### Start Objective 1
+### 开始目标1
 
-You are entering now the Objectives. 这是获得进一步**AAPS**功能的资格要求。
+你现在正在进入“目标”设置。 这是获得进一步**AAPS**功能的资格要求。
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective.
+在这里，我们开始目标1，即使目前我们的设置还没有完全准备好成功完成这个目标。
 
-But this is the start.
+但这是开始。
 
-Press the green "START" to to start objective 1:
+点击绿色“开始”开始目标1：
 
 ![image](../images/setup-wizard/Screenshot_20231202_144113.png)
 
-You see that you already made some progress, but other areas are to be done.
+您会看到您已经取得了一些进展，但还有其他领域需要完成。
 
-Press "FINISH" to go to the next screen.
+点击“完成”以进入下一个屏幕。
 
 ![image](../images/setup-wizard/Screenshot_20231202_144135.png)
 
@@ -525,9 +525,9 @@ Press "FINISH" to go to the next screen.
 
 在这里，您可以在**AAPS**中找到您设置配置文件时的信息消息。
 
-This was done when we switched to our new profile.
+这是在我们切换到新配置时完成的。
 
-You can click "SNOOZE" and it will disappear.
+你可以点击“稍后再提醒”，它就会消失。
 
 ![image](../images/setup-wizard/Screenshot_20231202_144156.png)
 
