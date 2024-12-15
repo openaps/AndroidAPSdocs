@@ -1,4 +1,4 @@
-# Completing the Objectives
+# 完成目标
 
 **AAPS**有一系列必须完成的**目标**，以帮助用户从基础开环控制进步到混合闭环控制，并最终实现**AAPS**的全部功能。 完成**目标**旨在确保您具备：
 
@@ -8,16 +8,16 @@
 
 当 **AAPS** 首次安装时，你必须完成每个目标后才能继续下一个。 随着每个**目标**的完成，新的功能将逐渐解锁。
 
-**目标1至8** 将引导你从在智能手机上配置 **AAPS** 开始，直至实现“基础”混合闭环操作。 This will take about 6 weeks to complete. 你可以使用一个虚拟泵（同时采用其他胰岛素输送方式）来完成至 **目标5**。 **目标9至11** 旨在测试更高级的 **AAPS** 功能，以更好地控制你的糖尿病，这将需要长达3个月的时间来完成，甚至可能更长。 关于预计时间分配的更多详细信息，可在此处获取：[需要多长时间？ ](#preparing-how-long-will-it-take)
+**目标1至8** 将引导你从在智能手机上配置 **AAPS** 开始，直至实现“基础”混合闭环操作。 这将需要大约6周的时间来完成。 你可以使用一个虚拟泵（同时采用其他胰岛素输送方式）来完成至 **目标5**。 **目标9至11** 旨在测试更高级的 **AAPS** 功能，以更好地控制你的糖尿病，这将需要长达3个月的时间来完成，甚至可能更长。 关于预计时间分配的更多详细信息，可在此处获取：[需要多长时间？ ](#preparing-how-long-will-it-take)
 
 在逐步完成目标的同时，如果你需要，也可以移除你的进度并[回到早期的目标](#go-back-in-objectives)。
 
-## Backup your settings
+## 备份你的设置
 
 ```{admonition} Note
-:class: note
+:class: 注意
 
-Exporting your **AAPS** settings is recommended after completing each **Objective**!
+建议在完成每个**目标**后导出你的**AAPS**设置！
 ```
 
 强烈建议在完成每个目标后[导出你的设置](../Maintenance/ExportImportSettings.md)，以避免在 **AAPS** 中丢失任何进度。 此导出过程会创建一个**设置文件**（.json），应将其备份在一个或多个安全的位置（例如Google Drive、硬盘、电子邮件附件_等_）。 这可以确保你在 **AAPS** 中的任何进度都被保存。 如果你的手机丢失或你不小心删除了进度，可以使用json文件重新加载到 **AAPS** 中，通过导入最近的设置文件来恢复。 如果需要新的 **AAPS** 智能手机（由于升级、丢失、手机损坏_等_原因），也需要有备份的**设置文件**。
@@ -27,23 +27,23 @@ Exporting your **AAPS** settings is recommended after completing each **Objectiv
 如果您没有备份您的设置，并且您的**AAPS**智能手机发生任何问题，那么您将需要从头开始重新完成**目标**。 完成**目标**需要花费时间，因此，如果因为丢失智能手机等原因而不得不重新完成这些目标，那最好是避免这种情况的发生。
 
 (objectives-objective1)=
-## Objective 1: Setting up visualization and monitoring, analyzing basals and ratios
+## 目标1：设置可视化和监测，分析基础率和比例
 
-**目标1**要求用户在**AAPS**中设置其基本的技术配置。 No progress can be made until this step has been completed.
+**目标1**要求用户在**AAPS**中设置其基本的技术配置。 在完成这一步之前，无法取得任何进展。
 
 - 在[配置构建器](#Config-Builder-bg-source)中选择正确的CGM/FGM。 有关更多信息，请参阅[血糖数据源](../Getting-Started/CompatiblesCgms.md)。
 - 在[配置构建器](../SettingUpAaps/ConfigBuilder.md)中选择正确的泵，以确保你的泵可以与 **AAPS** 通信。 如果你使用的泵型号没有适配 **AAPS** 的驱动程序，或者你想在完成早期**目标**时使用其他胰岛素输送系统，请选择**虚拟泵**。 有关更多信息，请参阅[胰岛素泵](../Getting-Started/CompatiblePumps.md)。
-- If using Nightscout:
+- 如果使用Nightscout：
   - 按照[Nightscout](../SettingUpAaps/Nightscout.md)页面上的说明进行操作，以确保**Nightscout**能够接收并显示**AAPS**的数据。
   - 请注意，**NSClient** 中的URL必须以**“/api/v1/”**结尾 - 参见[首选项 > NSClient](#Preferences-nsclient)。
-- If using Tidepool:
+- 如果使用Tidepool:
   - 按照[Tidepool](../SettingUpAaps/Tidepool.md)页面上的说明进行操作，以确保**Tidepool**能够接收并显示**AAPS**的数据。
 
 *注意*：你可能需要等待下一个传感器葡萄糖读数到达后，**AAPS** 才能识别它。
 
 ## 目标2：学习如何控制AAPS
 
-**目标2** 需要完成几个“任务”，如下方截图所示。 点击橙色文本“尚未完成”以访问待办事项。 Links will be provided to guide you, in case you are not familiar with a specific action yet.
+**目标2** 需要完成几个“任务”，如下方截图所示。 点击橙色文本“尚未完成”以访问待办事项。 如果不熟悉某个具体操作，我们会提供链接来指导你。
 
 ![目标 2 截图](../images/Objective2_V2_5.png)
 
@@ -53,7 +53,7 @@ Exporting your **AAPS** settings is recommended after completing each **Objectiv
   - _注意_：**AAPS** 不接受低于0.05U/hr的基础率。 如果你的**配置文件**包含0.06U/hr或更低的基础率，你需要在完成此任务之前创建一个临时**配置文件**，其中包含更高的基础率。 在完成任务后切换回你的正常**配置文件**。
 - 通过在 **AAPS** 中[断开你的泵](#AapsScreens-section-c-bg-loop-status)来模拟“洗澡”，持续时间为1小时。
   - _提示_：在“概览”屏幕上长按闭环图标以打开闭环对话框。
-- End "taking a shower" by reconnecting your pump.
+- 通过重新连接你的胰岛素泵来结束“淋浴”状态。
   - _提示_：长按“已断开连接”图标以打开闭环对话框。
 - 设置一个自定义的[**临时目标**](../DailyLifeWithAaps/TempTargets.md)，持续时间为10分钟。
   - _提示_：在“概览”屏幕上长按目标栏以打开临时目标对话框。
@@ -70,13 +70,13 @@ Exporting your **AAPS** settings is recommended after completing each **Objectiv
 
 有些用户发现 **目标3** 是最难完成的目标。 请结合 **AAPS** 文档仔细阅读问题。 如果您在研究了 **AAPS** 文档后仍然感到困惑，请在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 或 [Discord](https://discord.gg/4fQUWHZ4Mw) 群组中搜索“目标3”（因为很可能您的问题已经被问过并得到解答了）。 这些群组可以提供友好的提示，或将您重定向到 **AAPS** 文档的相关部分。
 
-In the meantime :
+在此期间：
 - 为了减少在开环模式下需要您做出决定（临时基础率）的次数，请在您的 **Profile** 中设置一个较宽的目标范围，例如 90 - 150 mg/dl 或 5.0 - 8.5 mmol/l。
-- You might want to set a wider upper limit, or even disable Open Loop, at night.
+- 你可能想要在晚上设置一个更宽的上限值，甚至禁用开环模式。
 
-要开始 **目标3**，请点击橙色文本“**尚未完成**”以访问相关问题。 Please read each question carefully and select your answer(s).
+要开始 **目标3**，请点击橙色文本“**尚未完成**”以访问相关问题。 请仔细阅读每个问题，并选择你的答案。
 
-For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+对于每个问题，可能有一个以上的答案是正确的！ 如果选择了错误的答案，该问题将在1小时内被锁定，之后你才能返回去重新回答。 请注意，当你下次再尝试回答时，答案的顺序可能已经改变，这是为了确保你仔细阅读并真正理解了每个答案的有效性（或无效性）。
 
 ```{admonition}  __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: 注意
@@ -87,23 +87,22 @@ For each question, there may be more than one answer that is correct! If an inco
 
 **目标4** 的目的是让您了解 **AAPS** 将如何根据用户的血糖水平评估基础率，并推荐临时基础率调整。 作为此 **目标** 的一部分，您将首次激活开环操作，并接受20个提出的临时基础率更改建议，如果需要，请手动在您的泵上应用这些更改。 您还将观察[**临时目标**](../DailyLifeWithAaps/TempTargets.md)的影响。 如果您还不熟悉如何在 **AAPS** 中设置临时基础率更改，请参考[**操作**选项卡](#screens-action-tab)。
 
-完成此目标的最短时间：**7天**。 This is a mandatory wait time. 即使已经执行了所有基础率更改，也不可能在此之前进入下一个 **目标**。
+完成此目标的最短时间：**7天**。 这是一个强制性的等待时间。 即使已经执行了所有基础率更改，也不可能在此之前进入下一个 **目标**。
 
 - 从 [Preferences > OpenAPS](#Preferences-aps-mode) 菜单或通过长按 **Overview** 屏幕左上角的闭环图标来选择开环。
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. 确保这些基础率调整在**AAPS**和**Nightscout**中都能显示出来。
-- 必要时使用[**临时目标**](../DailyLifeWithAaps/TempTargets.md)。 After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
+- 在7天内，至少手动执行20次临时基础率建议；将它们输入到你的（实体）胰岛素泵中，并在AAPS中确认你已接受这些建议。 确保这些基础率调整在**AAPS**和**Nightscout**中都能显示出来。
+- 必要时使用[**临时目标**](../DailyLifeWithAaps/TempTargets.md)。 在治疗低血糖后，使用预定义的“低血糖临时目标”来防止系统在血糖回升时出现过度校正。
 
-为了减少在开环模式下提出的基础率更改建议的数量，您仍然可以使用 **目标3** 中描述的技巧。 Additionally, you can change the minimum percentage for recommended basal rate changes. The higher the value, the fewer change notifications you will receive.
+为了减少在开环模式下提出的基础率更改建议的数量，您仍然可以使用 **目标3** 中描述的技巧。 此外，你可以更改建议的基础率变化的最小百分比。 值越高，你收到的更改通知就越少。
 
 ![开环最小请求更改](../images/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
-:class: Note
-
-You don't need to action each and every system recommendation!
+:class: 注意
+你不需要对每个系统建议都采取行动！
 ```
 (objectives-objective5)=
-## Objective 5: Understanding your open loop, including its temp basal recommendations
+## 目标5：了解你的开环系统，包括其临时基础率建议。
 
 作为 **目标5** 的一部分，您将开始了解临时基础率建议是如何得出的。 这包括[确定基础率的逻辑](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html)，通过观察 [**AAPS Overview** 中的预测线](#aaps-screens-prediction-lines)（或 Nightscout）以及查看 **OpenAPS** 选项卡上显示的详细计算来分析其影响。
 
@@ -111,7 +110,7 @@ You don't need to action each and every system recommendation!
 
 此 **目标** 要求您确定并设置您的“每小时可设置的临时基础量最大值”（max-basal）值，如 [OpenAPS 功能](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to) 中所述。 此值可以在 **Preferences > OpenAPS** 中设置。 如果您仍在使用虚拟泵，请确保在 **AAPS** 和您的胰岛素泵中都设置了此安全设置。
 
-在您对**AAPS**的计算和设置感到满意之前，您可能会希望将[**配置文件**中的血糖目标值](#profile-glucose-targets)设定得比平时高一些。 您可能会想尝试在您的**个人设置**中将**血糖目标值**调整到一个更严格的范围（比如说，1mmol/l[20mg/dl]或更小的范围），并观察由此产生的行为变化。
+在您对**AAPS**的计算和设置感到满意之前，您可能会希望将[**配置文件**中的血糖目标值](#profile-glucose-targets)设定得比平时高一些。 您可能会想尝试在您的**配置文件**中将**血糖目标值**调整到一个更严格的范围（比如说，1mmol/l[20mg/dl]或更小的范围），并观察由此产生的行为变化。
 
 ![停止标志](../images/sign_stop.png)
 
@@ -124,19 +123,19 @@ You don't need to action each and every system recommendation!
 ![空白](../images/blank.png)
 
 (objectives-objective6)=
-## Objective 6: Starting to close the loop with Low Glucose Suspend
+## 目标6：使用低血糖暂停功能开始闭环操作
 
 ![警告标志](../images/sign_warning.png)
 ```{admonition}  Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
-:class: Note
-You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
+:class: 注意
+你仍然需要自己纠正高血糖值（通过泵或笔手动进行校正）！
 ```
 
-作为**目标6**的一部分，您将关闭闭环系统并激活其**低血糖暂停**（LGS）模式，同时将[最大活性胰岛素](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)（max IOB）设置为零。 您必须保持在低血糖暂停（LGS）模式下5天，以完成这个**目标**。 您应该利用这段时间来检查您的**个人设置**是否准确，以及低血糖暂停（LGS）事件是否没有被过于频繁地触发。
+作为**目标6**的一部分，您将关闭闭环系统并激活其**低血糖暂停**（LGS）模式，同时将[最大活性胰岛素](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)（max IOB）设置为零。 您必须保持在低血糖暂停（LGS）模式下5天，以完成这个**目标**。 您应该利用这段时间来检查您的**配置文件**是否准确，以及低血糖暂停（LGS）事件是否没有被过于频繁地触发。
 
-完成此目标的最短时间：**5天**。 This is a mandatory wait time. 在此之前，您无法进入下一个 **目标**。
+完成此目标的最短时间：**5天**。 这是一个强制性的等待时间。 在此之前，您无法进入下一个 **目标**。
 
-在您将闭环系统置于**低血糖暂停（LGS）**模式之前，至关重要的是您当前的**个人设置**（基础率、胰岛素敏感系数ISF、碳水系数IC）已经过充分测试。 错误的**个人设置**可能会导致您出现低血糖情况，而这些情况需要手动处理。 一个准确的**个人设置**将有助于减少在5天期间对低血糖治疗的需求。
+在您将闭环系统置于**低血糖暂停（LGS）**模式之前，至关重要的是您当前的**个人设置**（基础率、胰岛素敏感系数ISF、碳水系数IC）已经过充分测试。 错误的**个人设置**可能会导致您出现低血糖情况，而这些情况需要手动处理。 一个准确的**配置文件**将有助于减少在5天期间对低血糖治疗的需求。
 
 **如果您仍然观察到频繁或严重的低血糖发作，请考虑调整您的 DIA、基础率、ISF 和碳水系数。 ** 请参阅 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 或 [Discord](https://discord.gg/4fQUWHZ4Mw) 群组，其中有很多关于此问题的讨论。
 
@@ -151,27 +150,27 @@ You will still need to correct high BG values by yourself (manually with correct
 
 ![负 IOB 示例](../images/Objective6_negIOB.png)
 
-- Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
-- Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon in the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
-- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
-- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
+- 将你的目标范围设置得比你通常的目标稍高一些，只是为了安全起见，并增加一个安全缓冲区。
+- 通过在“概览”屏幕的右上角长按Loop图标，并选择Loop - LGS模式图标，来启用“低血糖暂停”（Low Glucose Suspend，LGS）模式。
+- 通过查看“概览”屏幕上的青绿色基础率文本，或作为“概览”图表一部分的青绿色基础率渲染图，来观察活动的临时基础率。
+- 在治疗低血糖后，你可能会暂时出现血糖升高的情况，而此时却无法通过增加基础率来使血糖反弹回落。
 
-## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+## 目标7：调整闭环系统，将最大胰岛素在板（maxIOB）上调至0以上，并逐步降低血糖目标值
 
-要完成 **目标7**，您必须完成闭环并将 [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) 提高到 0 以上。 在**目标6**中，**maxIOB** 被自动设置为零。 This is now reverted. **AAPS** 将开始使用您定义的 maxIOB 值来纠正高血糖值。
+要完成 **目标7**，您必须完成闭环并将 [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) 提高到 0 以上。 在**目标6**中，**maxIOB** 被自动设置为零。 这一点现在已经被改变了。 **AAPS** 将开始使用您定义的 maxIOB 值来纠正高血糖值。
 
-完成此目标的最短时间：**1天**。 This is a mandatory wait time. 在此时间段结束之前，无法继续进行下一个**目标**。
+完成此目标的最短时间：**1天**。 这是一个强制性的等待时间。 在此时间段结束之前，无法继续进行下一个**目标**。
 
 - 从 [Preferences > OpenAPS](../SettingUpAaps/Preferences.md) 或通过长按 **Overview** 屏幕右上角的 Loop 图标来选择**闭环**。 在闭环模式下保持1天。
 
-- Slowly raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- 慢慢地将你的“OpenAPS不能超过的最大总胰岛素在板量”（在OpenAPS中称为“max-iob”）提高到0以上，直到你找到最适合自己的设置。
 
 此设置的默认建议是“**平均餐时大剂量 + 3 倍最大每日基础率**”，其中“最大每日基础率”是每天任何时间段内的最大每小时值。
 
 ![最大每日基础率](../images/MaxDailyBasal2.png)
 
-This recommendation should be seen as a starting point. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
-* lower the "Maximum total IOB OpenAPS can’t go over" value;
+这个建议应该被视为一个起点。 如果你遵循这个规则，但发现AAPS在血糖水平上升时输送了过多的胰岛素，你可能需要：
+* 降低“OpenAPS不能超过的最大IOB”的值；
 * 逐一检查您的**配置文件**，并每次只进行一项调整。
 
 另外，如果您非常胰岛素抵抗，请非常谨慎地提高 **maxIOB** 值。
@@ -179,11 +178,11 @@ This recommendation should be seen as a starting point. If you use this rule but
 一旦您对 **maxIOB** 适合您的闭环模式的程度有信心，就将您的 **血糖目标**降低到所需水平。
 
 (objectives-objective8)=
-## Objective 8: Adjust basals and ratios if needed, and then enable Autosens
+## 目标8：如有需要，调整基础率和比例，然后启用Autosens
 
-作为此**目标**的一部分，您将重新评估您的**个人设置**的性能，并将使用[Autosens](#Open-APS-features-autosens)功能作为错误设置的指示器。
+作为此**目标**的一部分，您将重新评估您的**配置文件**的性能，并将使用[Autosens](#Open-APS-features-autosens)功能作为错误设置的指示器。
 
-完成此目标的最短时间**：7天**。 This is a mandatory wait time. 在此时间段结束之前，无法继续进行下一个**目标**。
+完成此目标的最短时间**：7天**。 这是一个强制性的等待时间。 在此时间段结束之前，无法继续进行下一个**目标**。
 
 在7天内启用 [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md)，并观察 [**Overview** 的图形白线](#AapsScreens-section-g-additional-graphs)，它显示了由于运动或激素等原因您的胰岛素敏感性如何上升或下降。 请留意 OpenAPS 报告选项卡，它显示了 **AAPS** 如何相应地调整敏感性、基础率和目标。
 
@@ -196,7 +195,7 @@ This recommendation should be seen as a starting point. If you use this rule but
 
 在 **目标9** 中，您将解决并使用**“超级微型大剂量（SMB）”**作为核心功能之一。 After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, and why basal is set to zero temporarily after SMBs are given (zero-temping).
 
-完成此目标的最短时间**：28天**。 This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+完成此目标的最短时间**：28天**。 这是一个强制性的等待时间。 You can’t proceed to the next Objective before this time is up.
 
 - 本文档中的[SMB部分](#Open-APS-features-super-micro-bolus-smb)和[openAPS文档中的oref1介绍](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)是理解**SMB**和**零临时基础率**概念的必读内容。
 - 完成后，您可以提高 [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) 以使 **SMB** 更有效地工作。 现在，maxIOB 包括了所有 **IOB**，而不仅仅是累积的基础量。 此阈值将在 IOB 降至此值以下时暂停 **SMB**（_例如_，如果 **maxIOB** 设置为 7U，并且给予 8U 的推注来覆盖一餐：除非 **IOB** 降至 7U 以下，否则将暂停SMB）。 一个良好的起点是将**maxIOB（最大胰岛素在板量）**设置为**平均餐时大剂量 + 3倍最大日基础率**，其中“最大日基础率”是指一天中任何时间段内的最大每小时值。 请参阅 [目标7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) 作为参考。
@@ -207,7 +206,7 @@ This recommendation should be seen as a starting point. If you use this rule but
 
 当**目标10**启动时，**自动化功能**将变得可用。
 
-完成此目标的最短时间**：28天**。 This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+完成此目标的最短时间**：28天**。 这是一个强制性的等待时间。 You can’t proceed to the next Objective before this time is up.
 
 首先阅读文档页面 [Automation](../DailyLifeWithAaps/Automations.md)。
 
@@ -232,7 +231,7 @@ Set-up the most basic automation rule; for example trigger an Android notificati
 (objectives-objective11)=
 ## Objective 11: Enabling additional features for daytime use, such as Dynamic Sensitivity plugin (DynISF).
 
-完成此 **目标** 的最短时间**：28天**。 This is a mandatory wait time. 在此时间段结束之前，无法继续进行下一个**目标**。
+完成此 **目标** 的最短时间**：28天**。 这是一个强制性的等待时间。 在此时间段结束之前，无法继续进行下一个**目标**。
 
 - 确保**SMB**运行正常。
 - 阅读[此处](../DailyLifeWithAaps/DynamicISF.md) 关于 **动态 ISF** 的文档
