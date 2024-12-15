@@ -125,24 +125,24 @@ Android 将蓝牙通信的使用与定位服务的使用联系起来。 也许�
 
 由于 **AAPS** 的配置包含一些敏感数据（_例如_，访问您的 Nightscout 服务器的 API_KEY），因此它会被您在此处设置的密码加密。
 
-第二句话非常重要，请**不要丢失您的主密码**。 请把它记好，_例如_放在Google Drive上。 Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. 如果您忘记了主密码，以后可能很难恢复您的配置文件和 **目标**完成进度。
+第二句话非常重要，请**不要丢失您的主密码**。 请把它记好，_例如_放在Google Drive上。 Google Drive是一个好地方，因为它会由Google为您进行备份。 您的智能手机或电脑可能会崩溃，而您可能没有实际备份。 如果您忘记了主密码，以后可能很难恢复您的配置文件和 **目标**完成进度。
 
-After filling in the password twice, please click the "NEXT" button:
+在两次填写密码后，请点击“NEXT”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_130122.png)
 
 
-### Fabric upload
+### Fabric 上传
 
-Here you can setup the usage of an automated crash and usage reporting service.
+在这里，您可以设置使用自动化崩溃和使用情况报告服务。
 
-It's not mandatory, but it is good practice to use it.
+虽然这不是强制性的，但使用它是一个好习惯。
 
-It helps the developers to better understand your usage of the app, and informs them about crashes which happen.
+它有助于开发人员更好地了解您对应用程序的使用情况，并告知他们发生的崩溃情况。
 
-They get:
+他们获得：
 
-1. The information that the app crashed, which they would not otherwise know since in their own set-up everything works fine and
+1. 应用程序崩溃的信息，这对开发者来说很重要，因为在他们自己的设置中一切正常，所以他们可能不知道应用程序已经崩溃。
 1. In the send data (crash information), there is information about the circumstances under which the crash happened, and what kind of configuration is being used.
 
 So it helps the developers to improve the app.
