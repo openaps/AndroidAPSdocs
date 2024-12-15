@@ -127,7 +127,7 @@ Android 将蓝牙通信的使用与定位服务的使用联系起来。 也许�
 
 第二句话非常重要，请**不要丢失您的主密码**。 请把它记好，_例如_放在Google Drive上。 Google Drive是一个好地方，因为它会由Google为您进行备份。 您的智能手机或电脑可能会崩溃，而您可能没有实际备份。 如果您忘记了主密码，以后可能很难恢复您的配置文件和 **目标**完成进度。
 
-在两次填写密码后，请点击“NEXT”按钮：
+在两次填写密码后，请点击“下一步”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_130122.png)
 
@@ -143,20 +143,20 @@ Android 将蓝牙通信的使用与定位服务的使用联系起来。 也许�
 他们获得：
 
 1. 应用程序崩溃的信息，这对开发者来说很重要，因为在他们自己的设置中一切正常，所以他们可能不知道应用程序已经崩溃。
-1. In the send data (crash information), there is information about the circumstances under which the crash happened, and what kind of configuration is being used.
+1. 在发送的数据（崩溃信息）中，有关于崩溃发生的情况和正在使用的配置类型的信息。
 
-So it helps the developers to improve the app.
+因此，它有助于开发人员改进应用程序。
 
-Please enable the "Fabric Upload" by sliding the slider to the right:
+请通过向右滑动滑块来启用“Fabric 上传”：
 
 
 ![image](../images/setup-wizard/Screenshot_20231202_130136.png)
 
-Furthermore you can identify yourself that just in case the developers want to reach out to you for questions or urgent concerns:
+此外，您可以填写身份信息，以防开发人员想联系您询问问题或紧急情况：
 
 ![image](../images/setup-wizard/Screenshot_20231202_130147.png)
 
-After filling in your "contact information" click the "OK" button. Contact information can be your identification on Facebook, on Discord, ... Just the information you think is helpful to contact you through the best route:
+填写完您的“联系信息”后，点击“确定”按钮。 联系信息可以是您在 Facebook、Discord 上的身份标识，... 只是您认为有助于通过最佳途径联系您的信息：
 
 ![image](../images/setup-wizard/Screenshot_20231202_135748.png)
 
@@ -166,36 +166,36 @@ After filling in your "contact information" click the "OK" button. Contact infor
 
 ### 单位（mg/dL <-> mmol/L）
 
-Please select if your glucose values are in mg/dl or mmol/L and then please click the "NEXT" button:
+请选择您的血糖值是以 mg/dl 还是 mmol/L 为单位，然后点击“下一步”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_135830.png)
 
-### Display settings
+### 显示设置
 
- Here you select the range for the sensor glucose display, which will be shown as "in range" between the values you set. You can leave it as the default values for now, and edit it later.
+ 在这里，您选择传感器血糖显示的范围，该范围将在您设置的值之间显示为“在范围内”。 您可以暂时保留默认值，稍后再进行编辑。
 
-The values you choose only affect the graphical presentation of the diagram, and nothing else.
+您选择的值仅影响图表的图形表示，而不影响其他内容。
 
 您的血糖目标（例如）在您的配置文件中单独配置。
 
-Your range to analyze TIR (time in range) is configured separately in your reporting server.
+用于分析 TIR（入框时间）的范围在您的报告服务器上单独配置。
 
-Please press the "NEXT" button:
+请点击“下一步”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_135853.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-### Synchronization with the reporting server and more
+### 与报告服务器的同步等
 
-Here you are configuring the data upload to your reporting server.
+在这里，您正在配置数据上传到报告服务器。
 
-You could do other configurations here too, but for the first run we will just focus on the reporting server.
+您还可以在此处进行其他配置，但对于首次运行，我们将只关注报告服务器。
 
-If you are not able to set it up at the moment, skip it for now. You can configure it later.
+如果您目前无法设置，请暂时跳过此步骤。 您可以在稍后配置它。
 
-如果您在此处左侧选择了一个项目，则可以在右侧勾选可见性（眼睛）框，这会把这个插件放置在 **AAPS** 主屏幕的顶部菜单中。 Please select the visibility too if you configure your reporting server at this point.
+如果您在此处左侧选择了一个项目，则可以在右侧勾选可见性（眼睛）框，这会把这个插件放置在 **AAPS** 主屏幕的顶部菜单中。 如果您此时配置报告服务器，请也选择可见性。
 
-In this example we select Nightscout as reporting server, and will configure it.
+在此示例中，我们选择 Nightscout 作为报告服务器，并将对其进行配置。
 
 ```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
 :class: 注意
@@ -203,25 +203,25 @@ In this example we select Nightscout as reporting server, and will configure it.
 
 Nightscout 用户应选择 **NSClient v3**，除非您想通过 Nightscout 监控或发送远程治疗（例如，作为使用 **AAPS** 的儿童的家长或看护人），在这种情况下，请选择第一个选项“**NSClient**”，直到另行通知。 
 ```
-For Tidepool it is even simpler, as you only need your personal login information.
+对于 Tidepool 来说更简单，因为您只需要个人登录信息。
 
-After making your selection, please press the cogwheel button next to the item you selected :
+做出选择后，请点击旁边的齿轮按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_140916.png)
 
-Here you are configuring the Nightscout reporting server.
+您正在这里配置 Nightscout 报告服务器。
 
-Please click on "Nightscout URL":
+请点击“Nightscout URL”：
 
 ![image](../images/setup-wizard/Screenshot_20231202_140952.png)
 
-Enter you Nightscout URL which is your personal Nightscout server. It's just an URL you setup yourself, or you were given from your service provider for Nightscout.
+输入您的Nightscout URL，这是您的个人Nightscout服务器。 这只是您自己设置的 URL，或者您的 Nightscout 服务提供商提供给您的 URL。
 
-Please click the "OK" button:
+请点击“OK”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141051.png)
 
-Enter your nightscout access token. This is the access token for your Nightscout server you configured. Without this token, access will not work.
+输入您的 Nightscout 访问令牌。 这是您为 Nightscout 服务器配置的访问令牌。 没有这个令牌，将无法访问。
 
 如果您目前看不到它，请查看 **AAPS** 文档中关于设置报告服务器的文档。
 
@@ -229,42 +229,42 @@ Enter your nightscout access token. This is the access token for your Nightscout
 
 ![image](../images/setup-wizard/Screenshot_20231202_141131.png)
 
-Please select "Upload data to NS" if you already configured nightscout in the previous steps of the Setup Wizard.
+如果您已经在设置向导的先前步骤中配置了 Nightscout，请选择“Upload data to NS”。
 
 如果您在 Nightscout 上存储了配置文件并希望将它们下载到 **AAPS**，请启用“Receive profile store”：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141219.png)
 
 
-Go back to the previous screen and select "Alarm option":
+返回上一屏幕并选择“警报选项”：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141310.png)
 
-For now, leave the switches disabled. We only walked to the screen to make you familar with possible options you might configure in the future. At the moment there is no need to do it.
+现在，请将开关保持禁用状态。 我们之所以走到这一步，只是为了让您熟悉您将来可能会配置的一些可能选项。 目前没有必要进行这些配置。
 
-Go back to the previous screen before and select "Connection settings".
+返回之前的屏幕并选择“连接设置”。
 
-Here you can configure how to transfer your data to the reporting server.
+在这里，您可以配置如何将数据传输到报告服务器。
 
 看护人必须启用“使用手机流量（use cellular connection）”，否则被看护人的智能手机（例如，孩子的手机）无法在 WiFi 范围外（_例如_，在上学的路上）上传数据。
 
 其他 **AAPS** 用户可以禁用通过手机流量的传输以节省流量或电池电量。
 
-If in doubt, just leave all enabled.
+如果有疑问，请将所有选项保持启用状态。
 
-Go back to the screen before and select "Advanced Settings".
+返回之前的屏幕并选择“高级设置”。
 
 ![image](../images/setup-wizard/Screenshot_20231202_141326.png)
 
-Enable "Log app start to NS" if you want get this information in the reporting server. It can help you to know remotely if and when the app has been restarted, particularly as a caregiver.
+如果您想在报告服务器上获取此信息，请启用“Log app start to NS”。 这可以帮助您（特别是作为护理人员）远程了解应用程序是否以及何时被重新启动。
 
 一开始通过 Nightscout来查看 **AAPS** 停止或启动可能挺好玩，但时间长了一般就没啥必要了。
 
-Enable "Create announcements from errors" and "Create announcements from carbs required alerts".
+启用“从错误中创建公告”和“从所需碳水化合物警报中创建公告”。
 
-Leave "Slow down uploads" disabled. You would only use it in unusual circumstances if for example a lot of information is to be transfered to the Nightscout server, and the Nightscout server is being slow in processing this data.
+将“减慢上传速度”保持禁用状态。 您只有在特殊情况下才会使用它，例如，当有大量信息需要传输到Nightscout服务器，而Nightscout服务器处理这些数据时速度较慢时。
 
-Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
+返回两次，在插件列表中选择“下一步”以转到下一个屏幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
@@ -272,71 +272,71 @@ Go back twice, to the list of plugins and select "NEXT" to go to the next screen
 
 在这里，您可以在 **AAPS** 中设置您的姓名。
 
-It can be anything. It's just for differentiating users.
+这可能是任何原因。 这只是为了区分用户。
 
-To keep it simple just enter first name and last name.
+为了简单起见，请输入名字和姓氏。
 
-Press "NEXT" to go to the next screen.
+点击“下一步”转到下一个屏幕。
 
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
 ### 患者类型
 
-在这里，您选择“患者类型”，这很重要，因为 **AAPS** 根据患者的年龄有不同的限制。 This is important for security and safety reasons.
+在这里，您选择“患者类型”，这很重要，因为 **AAPS** 根据患者的年龄有不同的限制。 出于安全和保护隐私的原因，这一点非常重要。
 
-在这里，您还可以配置**餐时大剂量的最大上限**。 That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for meal.
+在这里，您还可以配置**餐时大剂量的最大上限**。 也就是说，这是你需要用来应对日常餐食的最大剂量。 这是一个安全功能，有助于避免输注餐时大剂量的时候意外过量给药。
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+第二个限制在概念上类似，但与您预期的最大碳水化合物摄入量有关。
 
-After setting these values, press "NEXT" to go to the next screen:
+设置这些值后，点击“下一步”转到下一个屏幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141817.png)
 
-### Used insulin
+### 使用的胰岛素
 
-Select the type of insulin being used in the pump.
+选择泵中使用的胰岛素类型。
 
-The insulin names should be self-explanatory.
+胰岛素的名称应该是不言自明的。
 
 ```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: 危险
 对于高级用户或医学研究，可以使用“Free-Peak Oref”定义自定义配置文件，说明胰岛素如何起作用。 除非您是专家，否则请不要使用它，通常预定义的值对每种品牌胰岛素都有效。
 ```
 
-Press "NEXT" to go to the next screen:
+点击“下一步”转到下一个屏幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141840.png)
 
 
-### Blood sugar source
+### 血糖数据来源
 
-Select the BG source you are using. 请阅读您 [血糖数据源](../Getting-Started/CompatiblesCgms.md) 的文档。
+选择您正在使用的 BG 来源。 请阅读您 [血糖数据源](../Getting-Started/CompatiblesCgms.md) 的文档。
 
-As there are several options available, we don't explain the configuration for all of them here. We are using Dexcom G6 with the BYODA app in our example here:
+由于有多个选项可用，我们不会在这里解释所有选项的配置。 我们在此示例中使用 Dexcom G6 和 BYODA 应用程序：
 
 
 ![image](../images/setup-wizard/Screenshot_20231202_141912.png)
 
 
-If you are using Dexcom G6 with BYODA, enable the visibility in the top level menu by clicking the tickbox on the right side.
+如果您使用 Dexcom G6 和 BYODA，请通过点击右侧的复选框在顶层菜单中启用可见性。
 
-After making your selection, press "NEXT" to go to the next screen:
+做出选择后，点击“下一步”转到下一个屏幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141925.png)
 
 
-If you are using Dexcom G6 with BYODA, click on the cogwheel button to access the settings for BYODA.
+如果您使用 Dexcom G6 和 BYODA，请点击齿轮按钮访问 BYODA 的设置。
 
-Enable the "Upload BG data to NS" and "Log sensor change to NS".
+启用“将血糖数据上传到NS”和“将探头更换记录到NS”。
 
-Go back and press "NEXT" to go to the next screen:
+返回并点击“下一步”转到下一个屏幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
 (setup-wizard-profile)=
 ### 配置文件
 
-Now we are entering a very important part of the Setup Wizard.
+现在，我们进入设置向导的一个非常重要的部分。
 
 在接下来的屏幕上输入您的配置文件详细信息之前，请先阅读有关 [配置文件](../SettingUpAaps/YourAapsProfile.md) 的文档。
 
@@ -348,12 +348,12 @@ Now we are entering a very important part of the Setup Wizard.
 如果机器人输入错误，它将始终无法正常工作。 **AAPS** 只能根据给定的信息工作。 如果您的配置方案太猛，您可能会面临低血糖的风险；而如果方案太柔，则可能会面临高血糖的风险。 
 ```
 
-Press "NEXT" to go to the next screen. Enter a "profile name":
+点击“下一步”转到下一个屏幕。 输入一个“配置文件名称”：
 
 ![image](../images/setup-wizard/Screenshot_20231202_142027.png)
 
 
-You can have several profiles in the long-term if needed. We only create one here.
+如果需要，长期来看你可以拥有多个配置文件。 我们在这里只创建一个。
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: 信息
@@ -364,7 +364,7 @@ You can have several profiles in the long-term if needed. We only create one her
 不要用它来实际配置闭环！
 ```
 
-输入您的 [胰岛素作用持续时间（DIA）](#your-aaps-profile-duration-of-insulin-action)（小时）。 Then press "IC":
+输入您的 [胰岛素作用持续时间（DIA）](#your-aaps-profile-duration-of-insulin-action)（小时）。 然后点击“IC”：
 
 ![image](../images/setup-wizard/Screenshot_20231202_142143.png)
 
@@ -429,7 +429,7 @@ Press "OK":
 
 A confirmation dialog for the profile switch appears.
 
-You can confirm it with pressing "OK". Press "NEXT" to go to the next screen:
+You can confirm it with pressing "OK". 点击“下一步”转到下一个屏幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143822.png)
 
@@ -452,14 +452,14 @@ If your have already setup your profile in the steps before and you know how to 
 
 请阅读您的[胰岛素泵](../Getting-Started/CompatiblePumps.md)文档。
 
-Press "NEXT" to go to the next screen.
+点击“下一步”转到下一个屏幕。
 
 ![image](../images/setup-wizard/Screenshot_20231202_143909.png)
 
 
 In this case we select "Virtual Pump".
 
-Press "NEXT" to go to the next screen:
+点击“下一步”转到下一个屏幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
@@ -483,7 +483,7 @@ Only read the text and change nothing here.
 
 由于**目标（Objectives）**所带来的限制，您目前反正无法使用“闭环”或“SMB功能”。
 
-Go back and press "NEXT" to go to the next screen:
+返回并点击“下一步”转到下一个屏幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
@@ -491,7 +491,7 @@ Go back and press "NEXT" to go to the next screen:
 
 Let "Open Loop" remain selected.
 
-Press "NEXT" to go to the next screen:
+点击“下一步”转到下一个屏幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_144049.png)
 
@@ -499,7 +499,7 @@ Press "NEXT" to go to the next screen:
 
 选择“Sensitivity Oref1”作为灵敏度插件的标准选项。
 
-Press "NEXT" to go to the next screen:
+点击“下一步”转到下一个屏幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_144101.png)
 
