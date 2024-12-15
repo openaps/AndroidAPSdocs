@@ -191,11 +191,11 @@
 此外，您可以使用 [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) 作为一次性检查来验证您的基础率是否仍然准确，或者进行传统的基础率测试。
 
 (objectives-objective9)=
-## Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+## 目标9：为日间使用启用oref1的额外功能，如超微大剂量（SMB）
 
-在 **目标9** 中，您将解决并使用**“超级微型大剂量（SMB）”**作为核心功能之一。 After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, and why basal is set to zero temporarily after SMBs are given (zero-temping).
+在 **目标9** 中，您将解决并使用**“超级微型大剂量（SMB）”**作为核心功能之一。 在完成必读书籍的阅读后，你将很好地理解超级微量输注（SMB）是什么，它们是如何工作的，以及为什么在给予SMB后会将基础率暂时设置为零（零临时基础率）。
 
-完成此目标的最短时间**：28天**。 这是一个强制性的等待时间。 You can’t proceed to the next Objective before this time is up.
+完成此目标的最短时间**：28天**。 这是一个强制性的等待时间。 在达到这个时间之前，你不能继续下一个目标。
 
 - 本文档中的[SMB部分](#Open-APS-features-super-micro-bolus-smb)和[openAPS文档中的oref1介绍](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)是理解**SMB**和**零临时基础率**概念的必读内容。
 - 完成后，您可以提高 [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) 以使 **SMB** 更有效地工作。 现在，maxIOB 包括了所有 **IOB**，而不仅仅是累积的基础量。 此阈值将在 IOB 降至此值以下时暂停 **SMB**（_例如_，如果 **maxIOB** 设置为 7U，并且给予 8U 的推注来覆盖一餐：除非 **IOB** 降至 7U 以下，否则将暂停SMB）。 一个良好的起点是将**maxIOB（最大胰岛素在板量）**设置为**平均餐时大剂量 + 3倍最大日基础率**，其中“最大日基础率”是指一天中任何时间段内的最大每小时值。 请参阅 [目标7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) 作为参考。
@@ -206,41 +206,41 @@
 
 当**目标10**启动时，**自动化功能**将变得可用。
 
-完成此目标的最短时间**：28天**。 这是一个强制性的等待时间。 You can’t proceed to the next Objective before this time is up.
+完成此目标的最短时间**：28天**。 这是一个强制性的等待时间。 在达到这个时间之前，你不能继续下一个目标。
 
 首先阅读文档页面 [Automation](../DailyLifeWithAaps/Automations.md)。
 
-Set-up the most basic automation rule; for example trigger an Android notification in a few minutes:
-- Select the notification tab
-- From the top right 3 dots menu, select add rule
-- Give a task name "My first automation notification"
-- "edit"  "condition"
-  - click the "+" symbol to add the first trigger
-  - 选择“时间”并点击“确定”，这将创建一个默认条目 AT TODAY HOUR:MINUTE
-  - click the MINUTE portion to edit the time such that it triggers in a few minutes. Then click ok to close
-  - click "ok"  to close the Triggers screen
-- "ADD" an "Action"
-  - select "Notification", "OK"
-  - click "Notification" to edit the message, enter something like "My first automation"
-- Wait until the time triggers the notification (note that depending on your phone, it can be a few minutes late)
+设置最基本的自动化规则；例如，在几分钟后触发一个Android通知：
+- 选择“通知”选项卡。
+- 从右上角的3个点菜单中，选择“添加规则”
+- 给任务命名为“我的第一个自动化通知”
+- “编辑”“条件”
+  - 点击“+”符号来添加第一个触发器
+  - 选择“时间”并点击“确定”，这将创建一个默认条目 “今天 时:分”
+  - 点击“分钟”部分来编辑时间，以便它在几分钟后触发。 然后点击“确定”来关闭
+  - 点击“确定”来关闭“触发器”屏幕。
+- “添加”一个“动作”
+  - 选择“通知”，“确定”
+  - 点击“通知”来编辑信息，输入类似“我的第一个自动化”的内容
+- 等待时间到达以触发通知（请注意，根据你的手机情况，可能会有几分钟的延迟）
 
 然后，您可以尝试设置更有用的**自动化**。 文档页面给出了几个示例，您还可以在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 群组中搜索“自动化”截图。 [Discord](https://discord.gg/4fQUWHZ4Mw) 社区中也有一个专用频道。
 
-例如，如果您每天早上在上学/上班前都吃同样的早餐，您可以创建一个**自动化**，如“早餐前目标”，以在早餐前30分钟设置一个稍低的**临时目标**。 In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
+例如，如果您每天早上在上学/上班前都吃同样的早餐，您可以创建一个**自动化**，如“早餐前目标”，以在早餐前30分钟设置一个稍低的**临时目标**。 在这种情况下，你的条件可能包括“重复时间”，这包括选择一周中的特定几天（星期一、星期二、星期三、星期四、星期五）和特定时间（早上6:30）。 动作将包括“开始临时目标”，该目标的值低于平常，并持续30分钟。
 
 (objectives-objective11)=
-## Objective 11: Enabling additional features for daytime use, such as Dynamic Sensitivity plugin (DynISF).
+## 目标11：为日间使用启用额外功能，如动态敏感性插件（DynISF）。
 
 完成此 **目标** 的最短时间**：28天**。 这是一个强制性的等待时间。 在此时间段结束之前，无法继续进行下一个**目标**。
 
 - 确保**SMB**运行正常。
 - 阅读[此处](../DailyLifeWithAaps/DynamicISF.md) 关于 **动态 ISF** 的文档
 - 在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 和 [Discord](https://discord.gg/4fQUWHZ4Mw) 群组中搜索关于 **Dynamic ISF** 的讨论，并阅读其他用户的经验和建议。
-- 启用 **DynamicISF 插件**，并根据您身体的独特性确定适当的校准。 It is advisable to begin with a value lower than 100% for safety reasons.
+- 启用 **DynamicISF 插件**，并根据您身体的独特性确定适当的校准。 出于安全考虑，建议从低于100%的值开始。
 
 (CompletingTheObjectives-go-back-in-objectives)=
-## Go back in objectives
+## 回顾目标
 
 如果您出于任何原因想要回到 **目标** 中的早期阶段，可以通过点击“清除已完成”来做到这一点。
 
-![Go back in objectives](../images/Objective_ClearFinished.png)
+![回顾目标](../images/Objective_ClearFinished.png)
