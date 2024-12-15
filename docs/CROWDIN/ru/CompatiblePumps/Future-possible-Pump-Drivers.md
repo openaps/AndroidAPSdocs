@@ -86,7 +86,7 @@ orphan: true
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Комментарии:** Medtronic [отказался](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
 ## Требования к пригодности помп для ИПЖ
 

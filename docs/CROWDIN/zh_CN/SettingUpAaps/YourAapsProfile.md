@@ -1,57 +1,57 @@
-# Your AAPS profile
+# 你的AAPS配置文件
 
-Your **AAPS Profile** is a set of five key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates:
-* [duration of insulin action](#duration-of-insulin-action-dia) (DIA),
-* [glucose targets](#glucose-targets),
-* [basal rates](#basal-rates) (BR),
-* [insulin sensitivity factors](#insulin-sensitivity-factor-isf) (ISF) and
-* [insulin-to-carb ratios](#insulin-to-carb-ratio-icr) (IC or ICR).
+**你的AAPS配置文件**是一组五个关键参数，定义了AAPS如何根据你的传感器血糖水平来输注胰岛素。 这些参数是AAPS运行的基础。 随着你完成各个**目标**，你将解锁额外的可修改参数（如SMB设置），但这些功能的性能依赖于你的底层**配置文件**是否正确。 配置文件包括：
+* [胰岛素作用时间](#duration-of-insulin-action-dia) (DIA),
+* [目标血糖](#glucose-targets)，
+* [基础率](#basal-rates) (BR),
+* [胰岛素敏感因子](#insulin-sensitivity-factor-isf)（ISF）
+* [碳水系数](#insulin-to-carb-ratio-icr)（IC或ICR）
 
-As part of **AAPS**’ management, users should continually assess and scrutinise the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [backup your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your Preferences.
+作为AAPS管理的一部分，用户应不断评估和审查其**配置文件**设置的准确性。 建议按照这里提供的顺序调整设置。 在更改另一个设置之前，确保一个设置正确。 以小步骤进行更改，而不是一次性进行大幅更改。 不要忘记在每次更改后激活新的配置文件。 通过导出你的偏好设置来定期[备份你的**配置文件**](#YourAapsProfile_Profile-backup)设置。
 
-Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
+**配置文件**的设置会相互影响——有时候虽然设置有问题但运行起来没问题，但多数情况下不会这样。 例如，如果基础率过高恰好与碳水化合物比例过高同时发生。 这意味着你需要单独考虑每个设置，并检查它们在各种情况下是否和谐工作。
 
-You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances.
+你可以使用[Autotune](https://autotuneweb.azurewebsites.net/)来指导你的思考，但不应盲目跟随：它可能不适用于你或所有情况。
 
 ```{admonition} Your diabetes may vary
-:class: information
-**Profiles** vary significantly from person-to-person.
+:class: 信息
+**配置文件**因人而异，差异显著。
 
-For basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+对于基础率（BR）、胰岛素敏感因子（ISF）和碳水系数（IC或ICR），胰岛素需求的绝对值和趋势因个人的生物学特征、性别、年龄、健康状况等因素而异，还受到短期因素如疾病和近期运动的影响。 有关此方面的更多指导，Adam Brown的书籍[“亮点与雷区（Brights Spots and Landmines）”](https://diatribe.org/bright-spots-and-landmines/)是一本值得一读的优秀书籍。
 
 ```
 
-The four last parameters (glucose targets, basal rates, insulin sensitivity factors and insulin-to-carb ratios) can be set to different values, changing hourly if required, over a 24-hour period.
+最后四个参数（血糖目标、基础率、胰岛素敏感因子和碳水系数）可以设置为不同的值，如果需要，可以每小时更改一次，持续24小时。
 
 ![Hourly change of basal](../images/MaxDailyBasal2.png)
 
-Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
+以下是AAPS中**示例**配置文件的屏幕截图。 请注意，下面的示例配置文件显示了大量时间点。 当你刚开始使用**AAPS**时，你的配置文件可能非常简单。
 
 (your-aaps-profile-duration-of-insulin-action)=
 ## Duration of insulin action (DIA)
 
-### Description
+### 描述
 
-The length of time that insulin takes to decay to zero.
+胰岛素衰减到零所需的时间长度。
 
-The duration of insulin action is set to a single value in **AAPS**, because your pump will continually infuse the same type of insulin.
+胰岛素作用时间在AAPS中设置为单一值，因为你的泵将持续输注相同类型的胰岛素。
 
 ![Sample insulin Profile](../images/Screenshot_insulin_profile.png)
 
-In combination with the [insulin type](#Config-Builder-insulin), this will result in the [insulin profile](#AapsScreens-insulin-profile), as shown in the image above. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over a much shorter period i.e. about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses minimum 5h as **DIA**.
+结合[胰岛素类型](#Config-Builder-insulin)，这将生成[胰岛素配置文件](#AapsScreens-insulin-profile)，如上图所示。 重要的是要注意，衰减有一个**长尾效应**。 如果你已经习惯了手动泵，你可能已经习惯了认为胰岛素在更短的时间内衰减，即大约3.5小时。 然而，当你在使用闭环系统时，长尾效应就很重要了，因为计算变得更加精确，当这些微小的量受到**AAPS**算法中的递归计算影响时，它们会累积起来。 因此，AAPS使用至少5小时作为DIA。
 
-Additional reading on the topic of duration of insulin action, and why it matters :
-* [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) on OpenAPS documentation.
-* [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
-* [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
-* [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
+关于胰岛素作用时间及其重要性的额外阅读：
+* [基于指数活动曲线的理解新的IOB曲线（Understanding the New IOB Curves Based on Exponential Activity Curves）](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)-OpenAPS文档。
+* [为什么我们经常错误地使用胰岛素作用时间（DIA），以及为什么这很重要…（Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…）](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)-Diabettech。
+* [指数胰岛素曲线+Fiasp（Exponential Insulin Curves + Fiasp）](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)-See My CGM（archive）。
+* [闭环中的修订版Humalog模型（Revised Humalog model in a closed loop）](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/)以及Bionic Wookie上的其他文章，推荐使用9小时的DIA用于Lyumjev、Fiasp、NovoRapid、Humalog。
 
 
-### Impact
+### 影响
 
-Too short **DIA** can lead to low BGs. And vice versa.
+太短的**DIA**可能导致低血糖。 反之亦然。
 
-If **DIA** is too short, **AAPS** will calculate too early that your previous bolus is all consumed, and if your **BG** is still high, it will over-deliver in insulin. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that **AAPS** is unaware of. This is especially noticeable at night, if you see negative IOB with no other explanation than the queue of the last bolus.
+如果**DIA**太短，**AAPS**会过早地计算出你之前注射的胰岛素已经全部被消耗掉，而如果你的**BG**（血糖）仍然很高，它就会过度地输送胰岛素。 （实际上，它并没有等待那么长时间，而是预测会发生什么，并继续添加胰岛素）。 这基本上会造成“胰岛素叠加”，而**AAPS**是无法察觉到的。 这在夜间尤其明显，比如当你看到负IOB数值，但通过最后几次输注情况也得不出合理的解释。
 
 Example of a too-short **DIA** is a **high BG** followed by **AAPS** over-correcting and giving a **low BG**.
 
@@ -66,7 +66,7 @@ The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is 
 (profile-glucose-targets)=
 ## Glucose targets
 
-### Description
+### 描述
 
 Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
 
@@ -77,7 +77,7 @@ The targets can be defined within those boundaries :
 | Minimum | 4 mmol/l or 72 mg/dL   | 5 mmol/l or 90 mg/dL   |
 | Maximum | 10 mmol/l or 180 mg/dL | 15 mmol/l or 225 mg/dL |
 
-### Impact
+### 影响
 
 If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
 
@@ -95,7 +95,7 @@ When In [Open Loop](#Preferences-pen-loop), especially when progressing through 
 
 ## Basal rates
 
-### Description
+### 描述
 
 Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
 
@@ -103,11 +103,11 @@ The insulin pump delivers small amounts of rapid acting insulin every few minute
 
 Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimise your ISF and ICR.
 
-### Impact
+### 影响
 
 Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
 
-Too high basal rate can lead to low BGs. And vice versa.
+Too high basal rate can lead to low BGs. 反之亦然。
 
 **AAPS** ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
@@ -125,7 +125,7 @@ Setting your basal rates right is done by trial and error, and should be done in
 
 There are basal testing methods which usually entails observing your basal rates and insulin needs during an intermittent fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast 3 times for 8 hours.
 
-The recommended method is to suspend the loop, which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyse overnight BG lines in order to optimise your basal rates.
+The recommended method is to suspend the loop, which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. 反之亦然。 Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyse overnight BG lines in order to optimise your basal rates.
 
 When taking action on the result of your basal testing, changes in the **Profile** should be done 1 hour before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
 
@@ -133,7 +133,7 @@ When taking action on the result of your basal testing, changes in the **Profile
 
 ## Insulin sensitivity factor (ISF)
 
-### Description
+### 描述
 
 The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
 
@@ -143,7 +143,7 @@ The insulin sensitivity factor (sometimes called correction factor) is a measure
 
 From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dl) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dl) or 1.5 to 1.8 mmol/L) is weakening your **ISF**.
 
-### Impact
+### 影响
 
 A **lower / stronger ISF** (i.e. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
 
@@ -185,7 +185,7 @@ Be careful as this is quite often set too low. Too low means 1 U will drop BG fa
 
 ## Insulin to Carb ratio (ICR)
 
-### Description
+### 描述
 
 The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
 
@@ -215,7 +215,7 @@ It is common to have different **ICR** at different times of day due to hormone 
 > 
 > Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
-### Impact
+### 影响
 
 A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’. If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
 

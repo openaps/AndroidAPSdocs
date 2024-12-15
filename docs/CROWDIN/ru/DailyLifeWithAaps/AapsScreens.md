@@ -540,9 +540,9 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 Это профиль активности инсулина, который вы выбрали в [конфигураторе](#Config-Builder-insulin). Кривые зависят от продолжительности действия инсулина [DIA](#your-aaps-profile-duration-of-insulin-action) и времени до пика.
 
-The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is.
+**Фиолетовая** линия показывает, сколько инсулина остается после его введения по мере усваивания, а **синяя** линия показывает его активность.
 
-See [Your AAPS Profile > Duration of insulin action](#your-aaps-profile-duration-of-insulin-action) to learn more about what it is and how to set it.
+См. [Ваш профиль AAPS > Продолжительность действия инсулина (DIA)](#your-aaps-profile-duration-of-insulin-action), чтобы узнать больше о том, что это, и как правильно ее настроить.
 
 ## Статус помпы
 
@@ -664,7 +664,7 @@ See [Your AAPS Profile > Duration of insulin action](#your-aaps-profile-duration
 
 Удаление записей влияет только на отчеты в Nightscout и на самом деле никогда не изменяет текущий профиль.
 
-You can use the **Clone** button shown on line **1** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
+Вы можете использовать кнопку **Клонировать** на строке **1** для копирования **смены профиля** в качестве обычного профиля. См. [Ваш профиль AAPS > Управление профилями](#your-aaps-profile-clone-profile-switch).
 
 ### Портал терапии
 
@@ -688,7 +688,7 @@ You can use the **Clone** button shown on line **1** to make a copy of a **Profi
 
 ## Profile Helper
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Помощник профиля. Его невозможно показать в главном меню через Конфигуратор. The Profile Helper can help you:
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Помощник профиля. Его невозможно показать в главном меню через Конфигуратор. Помощник профиля поможет:
 
 * [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
 * [compare two profiles](#your-aaps-profile-compare-profiles)
