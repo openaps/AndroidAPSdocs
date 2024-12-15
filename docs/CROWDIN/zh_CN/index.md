@@ -83,11 +83,11 @@ AAPS简介 <./Getting-Started/Introduction.md>
 构建（Building）AAPS <./SettingUpAaps/BuildingAaps.md>
 传输和安装AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
 安装向导 <./SettingUpAaps/SetupWizard.md>
+完成目标 <./SettingUpAaps/CompletingTheObjectives.md>
 你的AAPS配置文件 <./SettingUpAaps/YourAapsProfile.md>
 调整AAPS参数设置 <./SettingUpAaps/ChangeAapsConfiguration.md>
 - 设置向导 <./SettingUpAaps/ConfigBuilder.md>
 - 首选项 <./SettingUpAaps/Preferences.md>
-完成目标 <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
