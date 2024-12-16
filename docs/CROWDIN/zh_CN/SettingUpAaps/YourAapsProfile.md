@@ -147,27 +147,27 @@ The insulin sensitivity factor (sometimes called correction factor) is a measure
 
 **较低/较强的ISF**（即40而不是50）意味着每单位胰岛素降低的**BG**较少。 这会导致循环进行更激进/更强的纠正，**输注更多胰岛素**。 如果你的ISF过强（值较小），这可能导致低血糖。
 
-A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
+**较高/较弱的ISF**（即45而不是35）意味着每单位胰岛素降低的BG更多。 这会导致循环进行不那么激进/较弱的纠正，**输注较少胰岛素**。 如果你的ISF过弱（值较大），这可能导致高血糖。
 
 **Example:**
-* **BG** is 190 mg/dL (10,5 mmol/L) and target is 100 mg/dL (5,6 mmol/L).
-* So, you want a correction of `190 - 110 = 90 mg/dL` or `10,5 - 5,6 = 4.9 mmol/L`
-* If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
-* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 3`: 2 units of insulin
+* BG为190 mg/dL（10.5 mmol/L），目标为100 mg/dL（5.6 mmol/L）。
+* 因此，你需要纠正`190 - 110 = 90 mg/dL`或`10.5 - 5.6 = 4.9 mmol/L`
+* 如果`ISF = 30` -> `90 / 30 = 3`或`ISF = 1.63` -> `4.9 / 1.63 = 3`：3单位胰岛素
+* 如果`ISF = 45` -> `90 / 45 = 2`或`ISF = 2.45` -> `4.9 / 2.45 = 3`：2单位胰岛素
 
-An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
+**ISF**设置过低（因此更激进，这并不罕见）可能导致“过度纠正”，因为**AAPS**计算出用户需要比实际更多的胰岛素来纠正高血糖。 这可能导致“过山车”式的BG水平（尤其是在禁食时），如下图所示。 在这种情况下，应增加**ISF**值，以使**AAPS**不那么激进。 这将确保**AAPS**输送更小的纠正剂量，并避免过度纠正**高血糖**导致**低血糖**。
 
 ![ISF too low](../images/isf.jpg)
 
-Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
+相反，如果设置的**胰岛素敏感系数（ISF）**过高，可能会导致校正不足，即你的**血糖（BG**）会保持在目标水平之上——尤其在夜间更为明显。
 
 ### 如何设置
 
-See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
+**下图**显示了如何在**AAPS**配置文件中设置ISF值。
 
 ![Profile ISF](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. Gary Scheiner的[“像胰腺一样思考（Think like a Pancreas）”](https://amzn.eu/d/iVU0RGe)第7章提供了更多详细信息。
 
     1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.
     
@@ -175,11 +175,11 @@ A basic starting point for determining your daytime ISF is to base it on your to
     Approx ISF (mg/dl) = 1700/40 = 43
     Approx ISF (mmol/L) = 94/40 = 2.4
 
-Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+假设你的基础率正确，你可以通过暂停循环、检查**IOB**是否为零，并服用一些葡萄糖片来达到稳定的“高血糖”水平来测试这一点。
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+然后服用根据当前1/ISF估算的胰岛素量以达到目标BG。
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+请小心，因为这通常设置得过低。 过低意味着1U将使BG下降得比预期快。
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
@@ -187,39 +187,39 @@ Be careful as this is quite often set too low. Too low means 1 U will drop BG fa
 
 ### 描述
 
-The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
+**ICR**是衡量每单位胰岛素覆盖多少克碳水化合物的指标。
 
-Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**.
+有些人也使用**I:C**作为**ICR**的缩写，或者谈论碳水化合物比例：**CR**。
 
 For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
 
-If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+如果你的**ICR**较弱（值较高），比如1:20，你只需要0.5U胰岛素就可以覆盖10克碳水化合物。 A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
 
-It is common to have different **ICR** at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest **ICR** around breakfast time because they tend to be more insulin resistant. So, for example, one adult user's **ICR** could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller **ICR** then.
+由于激素水平和身体活动，一天中不同时间段的ICR通常不同。 许多人发现他们在早餐时段的ICR最低/最强，因为他们往往更胰岛素抵抗。 因此，例如，一个成年用户的**ICR**可能在早餐时为1:8，午餐和晚餐时为1:10，但这些模式并非普遍，有些人在晚餐时更胰岛素抵抗，并且需要更强/更小的ICR。
 
-> **NOTE:**
+> **注意：**
 > 
-> In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
+> 在一些欧洲国家，使用面包单位（BU）来确定需要多少胰岛素来摄取食物。 最初1个面包单位等于12克碳水化合物，后来一些国家改为10克碳水化合物。
 > 
-> In this model the amount of carbs was fixed and the amount of insulin was variable. ("How much insulin is needed to cover one bread unit?")
+> 在这个模型中，碳水化合物的量是固定的，而胰岛素的量是可变的。 （“需要多少胰岛素来覆盖一个面包单位？”）
 > 
-> When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
+> 在使用**ICR（Insulin to Carb Ratio，胰岛素与碳水比例）**时，胰岛素的量是固定的，而碳水化合物的量是变化的。 （“一单位胰岛素可以覆盖多少克碳水化合物？”）
 > 
 > Example:
 > 
-> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> 面包单位因子（BU = 12g碳水化合物）：2.4 U/BU -> 你吃一个面包单位时需要2.4单位胰岛素。
 > 
-> Corresponding **ICR**: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
+> 相应的**ICR**：12g / 2.4 U = 5.0 g/U -> 5.0克碳水化合物可以用一单位胰岛素覆盖。
 > 
-> BU factor 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
+> BU因子 2.4 U / 12g ===> IC = 12g / 2.4 U = 5.0 g/U
 > 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> 转换表可在网上找到，例如[此处](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf)。
 
 ### 影响
 
-A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’. If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
+**较低/更强的ICR**意味着每单位胰岛素覆盖的碳水化合物更少，即你固定量的碳水化合物获得了较多胰岛素。 也可以称为“更激进”。 如果你的胰岛素敏感系数（IC）过强，就会注射过多的胰岛素，这可能会导致**血糖**过低。
 
-A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’. If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
+一个**较高/更弱的ICR（胰岛素与碳水比例）**意味着每单位胰岛素可以对应更多的食物，即对于固定量的碳水化合物，你所需的胰岛素会更少。 也可以称为“不那么激进”。 如果你的胰岛素敏感系数（IC）过弱，那么你得到的胰岛素就会少于你所需，这可能会导致**血糖**过高。
 
 ### 如何设置
 
