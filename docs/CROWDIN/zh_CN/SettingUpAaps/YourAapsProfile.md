@@ -23,12 +23,12 @@
 
 最后四个参数（血糖目标、基础率、胰岛素敏感因子和碳水系数）可以设置为不同的值，如果需要，可以每小时更改一次，持续24小时。
 
-![Hourly change of basal](../images/MaxDailyBasal2.png)
+![基础率的小时变化](../images/MaxDailyBasal2.png)
 
 以下是AAPS中**示例**配置文件的屏幕截图。 请注意，下面的示例配置文件显示了大量时间点。 当你刚开始使用**AAPS**时，你的配置文件可能非常简单。
 
 (your-aaps-profile-duration-of-insulin-action)=
-## Duration of insulin action (DIA)
+## 胰岛素作用时间（DIA）
 
 ### 描述
 
@@ -36,7 +36,7 @@
 
 胰岛素作用时间在AAPS中设置为单一值，因为你的泵将持续输注相同类型的胰岛素。
 
-![Sample insulin Profile](../images/Screenshot_insulin_profile.png)
+![示例胰岛素配置文件](../images/Screenshot_insulin_profile.png)
 
 结合[胰岛素类型](#Config-Builder-insulin)，这将生成[胰岛素配置文件](#AapsScreens-insulin-profile)，如上图所示。 重要的是要注意，衰减有一个**长尾效应**。 如果你已经习惯了手动泵，你可能已经习惯了认为胰岛素在更短的时间内衰减，即大约3.5小时。 然而，当你在使用闭环系统时，长尾效应就很重要了，因为计算变得更加精确，当这些微小的量受到**AAPS**算法中的递归计算影响时，它们会累积起来。 因此，AAPS使用至少5小时作为DIA。
 
@@ -64,18 +64,18 @@
 新用户经常将**DIA**设置得过短。 将DIA设置为6或7可能是一个不错的起点。 越来越多的人发现8到9小时的**DIA**对他们来说效果很好。 请参阅上面提到的额外阅读内容。
 
 (profile-glucose-targets)=
-## Glucose targets
+## 血糖目标
 
 ### 描述
 
 你的**BG目标**是一个核心参数，AAPS的所有计算都基于它。 这不同于您通常努力使血糖值保持的目标范围。 目标用于**AAPS**计算：如果**AAPS**预测你的**BG**将落在目标范围之外，那么它将采取行动将你带回到该范围内。
 
-The targets can be defined within those boundaries :
+目标可以在以下范围内定义：
 
-|         | _低_目标                  | _高_目标                  |
-| ------- | ---------------------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   | 5 mmol/l or 90 mg/dL   |
-| Maximum | 10 mmol/l or 180 mg/dL | 15 mmol/l or 225 mg/dL |
+|         | _低_目标                 | _高_目标                  |
+| ------- | --------------------- | ---------------------- |
+| Minimum | 4 mmol/l or 72 mg/dL  | 5 mmol/l 或 90 mg/dL    |
+| Maximum | 10 mmol/l 或 180 mg/dL | 15 mmol/l or 225 mg/dL |
 
 ### 影响
 
@@ -87,25 +87,25 @@ The targets can be defined within those boundaries :
 
 ![Target](../images/Profile_Target.png)
 
-**血糖（Blood Glucose，BG）**目标是根据您的个人偏好和需求来设定的。 例如，如果你担心夜间低血糖，你可以在晚上9点至早上7点将目标稍微设置高一些，如117 mg/dL（6.5 mmol/L）。 If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+**血糖（Blood Glucose，BG）**目标是根据您的个人偏好和需求来设定的。 例如，如果你担心夜间低血糖，你可以在晚上9点至早上7点将目标稍微设置高一些，如117 mg/dL（6.5 mmol/L）。 如果你想确保在早上注射早餐前有足够的胰岛素在体内（IOB），你可以在早上7点至8点将目标设置低一些，如81 mg/dL（4.5 mmol/L）。
 
 在[开环](#Preferences-pen-loop)中，尤其是在完成[第一个目标](../SettingUpAaps/CompletingTheObjectives.md)时，使用较宽的目标范围可能是一个不错的选择，同时你可以学习AAPS的行为并调整你的**配置文件**。 <br/>在[闭环](#preferences-closed-loop)（从**[目标6](#objectives-objective6)**开始）中，建议缩小范围，直到你每天为每个时间段设置单个目标（_低_目标 = _高_目标），以确保AAPS迅速对**BG**波动做出反应。
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## 基础率
 
 ### 描述
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
+你的基础胰岛素率（单位/小时）提供背景胰岛素，在没有食物或运动的情况下保持你的血糖水平稳定。
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. 有关更多信息，Gary Scheiner的[“像胰腺一样思考（Think like a Pancreas）”](https://amzn.eu/d/iVU0RGe)第23章非常有用。
+胰岛素泵每隔几分钟就会输送少量的速效胰岛素，以防止肝脏释放过多的葡萄糖，并将葡萄糖转移到体细胞中。 基础胰岛素通常占您每日总剂量（total daily dose，TDD）的40%至50%，具体取决于您的饮食，并且通常遵循昼夜节律，在24小时内胰岛素需求有一个高峰和一个低谷。 有关更多信息，Gary Scheiner的[“像胰腺一样思考（Think like a Pancreas）”](https://amzn.eu/d/iVU0RGe)第23章非常有用。
 
 大多数1型糖尿病教育工作者（和1型糖尿病患者！）都同意，你应该先让基础率正确，然后再尝试优化ISF和ICR。
 
 ### 影响
 
-Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
+准确的基础率可以让你醒来时血糖在范围内，并且可以跳过餐食——或者在一天中更早或更晚进食，而不会升高或降低血糖。
 
 基础率过高可能导致低血糖。 反之亦然。
 
@@ -119,7 +119,7 @@ AAPS以默认基础率为“基线”。 如果基础率设置得太高，那么
 
 **下图**显示了如何在**AAPS**配置文件中设置基础率。
 
-![Basal rates](../images/Profile_BasalRates.png)
+![基础率](../images/Profile_BasalRates.png)
 
 正确设置基础率需要通过反复试验来确定，并且应该与您的糖尿病治疗团队协商进行。
 
@@ -131,11 +131,11 @@ AAPS以默认基础率为“基线”。 如果基础率设置得太高，那么
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## 胰岛素敏感因子（ISF）
 
 ### 描述
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+胰岛素敏感因子（有时称为校正因子）是衡量每单位胰岛素将降低多少血糖水平的指标。
 
 **以mg/dL单位**： 如果你的ISF为40，每单位胰岛素将使你的血糖降低约40 mg/dL（例如，你的血糖将从140 mg/dL降至100 mg/dL）。
 
@@ -157,7 +157,7 @@ The insulin sensitivity factor (sometimes called correction factor) is a measure
 
 **ISF**设置过低（因此更激进，这并不罕见）可能导致“过度纠正”，因为**AAPS**计算出用户需要比实际更多的胰岛素来纠正高血糖。 这可能导致“过山车”式的BG水平（尤其是在禁食时），如下图所示。 在这种情况下，应增加**ISF**值，以使**AAPS**不那么激进。 这将确保**AAPS**输送更小的纠正剂量，并避免过度纠正**高血糖**导致**低血糖**。
 
-![ISF too low](../images/isf.jpg)
+![ISF过低](../images/isf.jpg)
 
 相反，如果设置的**胰岛素敏感系数（ISF）**过高，可能会导致校正不足，即你的**血糖（BG**）会保持在目标水平之上——尤其在夜间更为明显。
 
@@ -165,15 +165,15 @@ The insulin sensitivity factor (sometimes called correction factor) is a measure
 
 **下图**显示了如何在**AAPS**配置文件中设置ISF值。
 
-![Profile ISF](../images/Profile_ISF.png)
+![配置文件ISF](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. Gary Scheiner的[“像胰腺一样思考（Think like a Pancreas）”](https://amzn.eu/d/iVU0RGe)第7章提供了更多详细信息。
+确定日间ISF的一个基本起点是根据你的每日总剂量（TDD）使用1700（94）规则。 Gary Scheiner的[“像胰腺一样思考（Think like a Pancreas）”](https://amzn.eu/d/iVU0RGe)第7章提供了更多详细信息。
 
-    1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.
+    1700（如果以mg/dl测量）或94（mmol/L）/ TDD ≈ ISF。
     
-    Example: TDD = 40 U
-    Approx ISF (mg/dl) = 1700/40 = 43
-    Approx ISF (mmol/L) = 94/40 = 2.4
+    示例：每日总剂量（TDD）= 40 单位
+    大约的胰岛素敏感系数（mg/dl）= 1700/40 = 43
+    大约的胰岛素敏感系数（mmol/L）= 94/40 = 2.4
 
 假设你的基础率正确，你可以通过暂停循环、检查**IOB**是否为零，并服用一些葡萄糖片来达到稳定的“高血糖”水平来测试这一点。
 
@@ -183,7 +183,7 @@ A basic starting point for determining your daytime ISF is to base it on your to
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## 胰岛素与碳水化合物比例（ICR）
 
 ### 描述
 
@@ -191,11 +191,11 @@ A basic starting point for determining your daytime ISF is to base it on your to
 
 有些人也使用**I:C**作为**ICR**的缩写，或者谈论碳水化合物比例：**CR**。
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+例如，1比10（1:10）的胰岛素与碳水化合物比例意味着每吃10克碳水化合物，就需要注射1单位的胰岛素。 一顿含有25克碳水化合物的餐食需要2.5单位的胰岛素。
 
-如果你的**ICR**较弱（值较高），比如1:20，你只需要0.5U胰岛素就可以覆盖10克碳水化合物。 A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+如果你的**ICR**较弱（值较高），比如1:20，你只需要0.5U胰岛素就可以覆盖10克碳水化合物。 一顿含有25克碳水化合物的餐食需要25/20=1.25单位的胰岛素。
 
-由于激素水平和身体活动，一天中不同时间段的ICR通常不同。 许多人发现他们在早餐时段的ICR最低/最强，因为他们往往更胰岛素抵抗。 因此，例如，一个成年用户的**ICR**可能在早餐时为1:8，午餐和晚餐时为1:10，但这些模式并非普遍，有些人在晚餐时更胰岛素抵抗，并且需要更强/更小的ICR。
+由于激素水平和身体活动，一天中不同时间段的**ICR**通常不同。 许多人发现他们在早餐时段的ICR最低/最强，因为他们往往更胰岛素抵抗。 因此，例如，一个成年用户的**ICR**可能在早餐时为1:8，午餐和晚餐时为1:10，但这些模式并非普遍，有些人在晚餐时更胰岛素抵抗，并且需要更强/更小的ICR。
 
 > **注意：**
 > 
@@ -225,7 +225,7 @@ For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of in
 
 **下图**显示了一个用户的**ICR**以及如何在**AAPS配置文件**中设置它。 在输入这些值时，我们只输入比例的最后一部分，因此1:3.5的胰岛素与碳水化合物比例只需输入为“3.5”。
 
-![Profile ICR](../images/Profile_ICR.png)
+![配置文件ICR](../images/Profile_ICR.png)
 
 如果在消化完一顿饭并且IOB已恢复到零后，你的**BG**仍然高于餐前水平，那么你的**ICR**可能太弱（_即_数字太高，应逐渐降低）。 相反，如果你的**BG**低于餐前水平，**ICR**可能太强（_即_数字太小，应逐渐增加）。
 
@@ -238,11 +238,11 @@ For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of in
 :local: true
 ```
 
-### About the importance of getting your profile right
+### 关于正确设置你的配置文件的重要性
 
 **为什么我应该努力调整我的Profile设置？ 闭环系统不能自己处理吗？**
 
-一个混合闭环系统_可以_尝试调整胰岛素输注量，以最大限度地减少因配置文件值不正确而导致的血糖控制不佳。 It can do this, for example, by withholding insulin delivery if you are going to hypo. 然而，如果你的**配置文件**设置已经尽可能接近你的身体需求，你可以实现更好的血糖控制。 这是先进**AAPS**采用分阶段目标，从开环输注向混合闭环系统过渡的原因之一。 此外，有时你需要打开闭环（如传感器预热、传感器故障等），有时甚至在半夜，这时你需要确保你的设置是正确的。
+一个混合闭环系统_可以_尝试调整胰岛素输注量，以最大限度地减少因配置文件值不正确而导致的血糖控制不佳。 它可以通过在你即将出现低血糖时暂停胰岛素输注来实现这一点。 然而，如果你的**配置文件**设置已经尽可能接近你的身体需求，你可以实现更好的血糖控制。 这是先进**AAPS**采用分阶段目标，从开环输注向混合闭环系统过渡的原因之一。 此外，有时你需要打开闭环（如传感器预热、传感器故障等），有时甚至在半夜，这时你需要确保你的设置是正确的。
 
 如果您在使用不同的开环或闭环输注系统后开始使用**AAPS**，那么您对于基础率（**BR**）、胰岛素敏感系数（**ISF**）和胰岛素与碳水比例（**ICR**）等参数的设置值应该已经有了一个合理的认识。
 
@@ -278,7 +278,7 @@ For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of in
 
 “配置文件”选项卡可以从顶部菜单或汉堡菜单中找到，这取决于你的[Config Builder设置](../SettingUpAaps/ConfigBuilder.md)。
 
-![Local Profile buttons](../images/LocalProfile_Settings.png)
+![本地配置文件按钮](../images/LocalProfile_Settings.png)
 
 按钮：
 
@@ -289,7 +289,7 @@ For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of in
 如果你对**配置文件**做了任何更改，请确保你正在编辑正确的**配置文件**。 **配置文件**选项卡显示的可能不是实际正在使用的配置文件，例如，如果你在主屏幕上通过配置文件选项卡进行了配置文件切换，它可能与配置文件选项卡中实际显示的配置文件不同，因为这两者之间没有关联。
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
-### 为孩子从头开始构建Profile
+### 为孩子从头开始构建配置文件
 
 [配置文件助手（Profile Helper）](#aaps-screens-profile-helper)选项卡可能有助于你为儿童（18岁以下）创建配置文件。
 
@@ -328,38 +328,38 @@ For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of in
 (YourAapsProfile_Profile-backup)=
 ### 配置文件备份
 
-Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
+作为您循环系统的核心设置，您的**配置文件**非常敏感，是您绝不想丢失的重要数据。
 
-* Your **Profiles** are stored in the **AAPS** database.
-* If enabled, **Profiles** are also uploaded to Nightscout. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Upload data to NS](#Preferences-nsclient).
+* 你的**配置文件**存储在**AAPS**数据库中。
+* 如果已启用，**配置文件**还会上传到Nightscout。 设置可在[NSClient 首选项 > NSClient > 同步 > 上传数据至 NS](#Preferences-nsclient)中找到。
 
-![Backup Profile Nightscout](../images/LocalProfile_UploadNS_AASP30.png)
+![备份Profile到Nightscout](../images/LocalProfile_UploadNS_AASP30.png)
 
-* They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
+* 它们也是[导出的设置](../Maintenance/ExportImportSettings.md)的一部分。 因此，请确保在安全的地方有备份。
 
-### Editing Profiles from Nightscout
+### 从Nightscout编辑Profile
 
-If enabled, **Profile** changes made directly in Nightscout can  be received in **AAPS**. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Receive profile store](#Preferences-nsclient).
+如果启用，直接在Nightscout中所做的**配置文件**更改可以在**AAPS**中接收。 设置可以在[NSClient 首选项 > NSClient > 同步 > 接收配置文件存储](#Preferences-nsclient)中找到。
 
-This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
+当您要对一个更广泛的**配置文件**进行重大更改时，这可能会很有帮助。 它们可以更容易地通过网页界面输入，_例如_手动从电子表格复制数据。
 
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+然而，要执行此操作，重要的是在Nightscout编辑器中克隆由多个配置文件组成的整个**数据库记录**（见下方截图中的蓝色箭头）。 新的数据库记录将包含当前日期。 保存后，可以在AAPS中通过常规的[配置文件切换](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)激活更改/新的配置文件。
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![克隆数据库记录](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
-### Compare two Profiles
+### 比较两个Profile
 
-You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+您还可以使用[配置文件助手（Profile Helper）](#aaps-screens-profile-helper)选项卡来比较不同的配置文件或配置文件切换（在之前的[配置文件切换](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)中使用的某个配置文件的百分比）。
 
 ![Profile Helper 1](../images/ProfileHelper1.png)
 
 1. 确保你在“Profile 1”中。
-2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
-3. Choose the **Profile** you want to compare from.
+2. 在**配置文件类型（Profile type）**中，选择“可用配置文件（Available profile）”以在所有存储的**配置文件**中进行选择。
+3. 选择您想要进行比较的**配置文件**。
 4. 通过点击右侧的**Profile 2**来切换屏幕。
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profiles Switched**.
-6. Choose the **Profile Switch** you want to compare to.
+5. 在**配置文件类型**中，选择“配置文件切换”以在您所有**已切换的配置文件**历史中进行选择。
+6. 选择您想要与之比较的**配置文件切换**。
 7. 在屏幕底部点击“比较配置文件”按钮。 将显示两个调整后的配置文件的比较（见下方截图）。
 
 ![Profile Helper 2](../images/ProfileHelper2.png)
