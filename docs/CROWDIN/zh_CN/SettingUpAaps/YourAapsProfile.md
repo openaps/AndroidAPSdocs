@@ -53,9 +53,9 @@
 
 如果**DIA**太短，**AAPS**会过早地计算出你之前注射的胰岛素已经全部被消耗掉，而如果你的**BG**（血糖）仍然很高，它就会过度地输送胰岛素。 （实际上，它并没有等待那么长时间，而是预测会发生什么，并继续添加胰岛素）。 这基本上会造成“胰岛素叠加”，而**AAPS**是无法察觉到的。 这在夜间尤其明显，比如当你看到负IOB数值，但通过最后几次输注情况也得不出合理的解释。
 
-Example of a too-short **DIA** is a **high BG** followed by **AAPS** over-correcting and giving a **low BG**.
+**DIA**过短的例子是**高血糖**后跟随**AAPS**过度纠正并导致**低血糖**。
 
-### How to set it
+### 如何设置
 
 The **figure below** shows an example of how the **DIA** set in an **AAPS** profile.
 
@@ -81,7 +81,7 @@ The targets can be defined within those boundaries :
 
 If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
 
-### How to set it
+### 如何设置
 
 The **figure below** shows an example of how the target can be set in an **AAPS** profile.
 
@@ -115,7 +115,7 @@ So, a basal rate too high will create low **BGs** both with the default rate, bu
 
 Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
 
-### How to set it
+### 如何设置
 
 The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
 
@@ -161,7 +161,7 @@ An **ISF** that is too low (and therefore more aggressive, not uncommon) can res
 
 Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
 
-### How to set it
+### 如何设置
 
 See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
 
@@ -221,7 +221,7 @@ A **lower / stronger ICR** means less food per unit, i.e. you are getting more i
 
 A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’. If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
 
-### How to set it
+### 如何设置
 
 The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
 
