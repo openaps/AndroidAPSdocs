@@ -223,15 +223,15 @@ For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of in
 
 ### 如何设置
 
-The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+**下图**显示了一个用户的**ICR**以及如何在**AAPS配置文件**中设置它。 在输入这些值时，我们只输入比例的最后一部分，因此1:3.5的胰岛素与碳水化合物比例只需输入为“3.5”。
 
 ![Profile ICR](../images/Profile_ICR.png)
 
-If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are your **ICR** is too weak (_i.e._ the number is too high and should be gradually lowered). Conversely, if your **BG** is lower than before food, **ICR** is too strong (_i.e._ the number is too small and should be gradually increased).
+如果在消化完一顿饭并且IOB已恢复到零后，你的**BG**仍然高于餐前水平，那么你的**ICR**可能太弱（_即_数字太高，应逐渐降低）。 相反，如果你的**BG**低于餐前水平，**ICR**可能太强（_即_数字太小，应逐渐增加）。
 
-Assuming your basal rates are correct, you can test by checking if **IOB** is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food you normally eat at that time of day and count its carbs precisely.
+假设你的基础率是正确的，你可以通过检查**IOB（活性胰岛素）**是否为零，并且你的血糖处于正常范围内，吃已知确切数量的碳水化合物，并根据当前的胰岛素与碳水比例（IRC）估算所需的胰岛素量来进行测试。 最好是吃你每天那个时间段通常会吃的食物，并精确计算其碳水化合物含量。
 
-## Common questions related to the Profile
+## 与配置文件相关的常见问题
 
 ```{contents} Common questions related to the Profile
 :depth: 1
@@ -240,93 +240,93 @@ Assuming your basal rates are correct, you can test by checking if **IOB** is ze
 
 ### About the importance of getting your profile right
 
-**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+**为什么我应该努力调整我的Profile设置？ 闭环系统不能自己处理吗？**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+一个混合闭环系统_可以_尝试调整胰岛素输注量，以最大限度地减少因配置文件值不正确而导致的血糖控制不佳。 It can do this, for example, by withholding insulin delivery if you are going to hypo. 然而，如果你的**配置文件**设置已经尽可能接近你的身体需求，你可以实现更好的血糖控制。 这是先进**AAPS**采用分阶段目标，从开环输注向混合闭环系统过渡的原因之一。 此外，有时你需要打开闭环（如传感器预热、传感器故障等），有时甚至在半夜，这时你需要确保你的设置是正确的。
 
-If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
+如果您在使用不同的开环或闭环输注系统后开始使用**AAPS**，那么您对于基础率（**BR**）、胰岛素敏感系数（**ISF**）和胰岛素与碳水比例（**ICR**）等参数的设置值应该已经有了一个合理的认识。
 
-If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+如果你从每日多针（MDI）转到AAPS，那么最好先阅读关于如何从MDI转到泵疗的信息，并与你的糖尿病团队仔细计划和进行转换。 John Walsh和Ruth Roberts的《[Pumping insulin（用泵输注胰岛素）](https://amzn.eu/d/iaCsFa2)》&Gary Scheiner的《Think like a Pancreas》都是非常有用的书籍。
 
-### What causes high postprandial peaks in closed loop?
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your **BG** is falling to reach your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **ICR** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your **ICR** and an appropriate pre-bolus time with your endocrinologist.
+### 在闭环系统中，导致餐后高血糖峰值的原因有哪些？
+首先，检查你的基础率，并进行无碳水基础率测试。 如果它是正确的，并且你的**血糖**在碳水完全吸收后下降到目标范围内，尝试在**AAPS**中设置“即将进食”的临时目标，或与内分泌医生讨论合适的等时。 <br/> 如果你的**血糖**在饭后仍然过高，并且在碳水完全吸收后仍然过高，考虑与内分泌医生讨论减少你的**ICR**。 如果你的**血糖**在碳水吸收过程中过高，而在碳水完全吸收后过低，考虑增加你的**ICR**，并与内分泌医生讨论合适的等时。
 
 ### I'm stuck high and the loop does not bring me down
-The possible reasons for **AAPS** not giving enough insulin are:
-* **ISF** is not strong enough
-* Basal might not be strong enough
-* A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
-* Automation has been set up and has overridden **AAPS**.
+**AAPS**没有给予足够胰岛素的可能原因包括：
+* 胰岛素敏感系数（ISF）不够强
+* 基础率可能不够强
+* 安全设置可能启动，如最大IOB限制。 或者根据你的设置，**SMB（超微大剂量）**此时被禁用。
+* 自动化设置已启用并已覆盖**AAPS**。
 
-### I have negative IOB, is this an issue ?
-Negative **IOB** means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the **BG** starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
+### 我有负IOB，这是问题吗？
+负**IOB**意味着你体内的绝对胰岛素量（基础+大剂量）少于基础量。 这会导致**AAPS**在**血糖**开始升高时立即输送更多胰岛素，因为它认为胰岛素不足，这可能会导致后期低**血糖**。
 
-Here are some reasons why you may have negative IOB, and what action to take:
-* a too strong basal: tweak your **Profile**
-* too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
-* DIA too short, resulting in insulin stacking: tweak your **Profile**
-* physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
+以下是你可能出现负IOB的一些原因以及应对措施：
+* 基础率过强：调整你的**配置文件**
+* 上一餐的大剂量过多：调整你的**配置文件**或检查你是否在正确的时间注射。
+* DIA（胰岛素作用持续时间）过短，导致胰岛素堆积：调整你的**配置文件**
+* 体力活动：下次活动时，考虑使用较低的[配置文件百分比](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)来增加敏感度。
 
-## Manage your Profiles
+## 管理你的配置文件
 
 ```{contents} Operations that you can perform on your **Profiles** in **AAPS**
 :depth: 1
 :local: true
 ```
 (your-aaps-profile-create-and-edit-profiles)=
-### Create and edit Profiles
+### 创建和编辑配置文件
 
-The **Profile** tab can be found from the top menu or hamburger menu, depending on your [Config Builder settings](../SettingUpAaps/ConfigBuilder.md).
+“配置文件”选项卡可以从顶部菜单或汉堡菜单中找到，这取决于你的[Config Builder设置](../SettingUpAaps/ConfigBuilder.md)。
 
 ![Local Profile buttons](../images/LocalProfile_Settings.png)
 
-Buttons:
+按钮：
 
-- green plus: add
-- red X: delete
-- blue arrow: duplicate
+- 绿色加号：添加
+- 红色X：删除
+- 蓝色箭头：复制
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** tab may not always show the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen, it may differ from the profile actually shown in profile tab as there is no connection between these.
+如果你对**配置文件**做了任何更改，请确保你正在编辑正确的**配置文件**。 **配置文件**选项卡显示的可能不是实际正在使用的配置文件，例如，如果你在主屏幕上通过配置文件选项卡进行了配置文件切换，它可能与配置文件选项卡中实际显示的配置文件不同，因为这两者之间没有关联。
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
-### Build a Profile from scratch for a kid
+### 为孩子从头开始构建Profile
 
-The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a profile for a child (up to 18 years).
+[配置文件助手（Profile Helper）](#aaps-screens-profile-helper)选项卡可能有助于你为儿童（18岁以下）创建配置文件。
 
-**Important note:**
+**重要提醒：**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**“配置文件助手”旨在帮助你为你的孩子找到初始Profile。 尽管它基于两家不同医院的数据集，但在使用新Profile之前，一定要与你的医疗团队讨论！**
 
-Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+配置文件助手为儿童提供了两家不同医院的数据集，以找到适合你孩子的初始配置文件（18岁以下）。
 
 ![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
 
-1. Make sure you are in **Profile 1**.
-2. In **Profile type**, make sure you have "Default profile" selected.
-3. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
-4. Change screen by clicking on **Profile 2** on the right.
-5. Press **Profile type** and select "DPV Default profile".
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button either from **Profile 1** ou **Profile 2**.
+1. 确保你在“Profile 1”中。
+2. 在“配置文件类型”中，确保已选择“默认配置文件”。
+3. 根据医院数据集调整默认配置文件（输入孩子的年龄和总日剂量**或**体重）。
+4. 通过点击右侧的**Profile 2**来切换屏幕。
+5. 点击“配置文件类型”并选择“DPV Default profile”。
+6. 根据另一家医院的数据集调整DPV默认配置文件（输入孩子的年龄、基础率百分比和总日剂量**或**体重）。
+7. 在屏幕底部点击“比较配置文件”按钮。 将显示两个调整后的配置文件的比较（见下方截图）。
+8. 如果你想基于这些建议之一开始调整你的配置文件，请使用“**克隆（Clone）**”按钮从**Profile 1**或**Profile 2**进行克隆。
 
 ![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
 
-### Switch Profile
+### 配置文件切换
 
-See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+请参阅[Profile切换&Profile百分比](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)。
 
 (your-aaps-profile-clone-profile-switch)=
-### Clone a Profile switch to a new Profile
+### 将一个配置切换到新配置的克隆版本。
 
 ![Profile Switch](../images/TreatmentsView4.png)
 
-The [Treatments](#aaps-screens-treatments) tab shows all past **Profile Switches**. When going to the **Profile Switch** sub-tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
+治疗[Treatments](#aaps-screens-treatments)选项卡显示了所有过去的**配置文件切换记录**。 在转到**配置文件切换**子选项卡时，你可以使用过去的**配置文件切换**作为基础来创建新的**配置文件**。 在这种情况下，时间偏移和百分比将应用于新的本地配置文件。 使用第**1**行显示的**克隆（Clone）**按钮。
 
-You can now go to the [Profile tab](#your-aaps-profile-create-and-edit-profiles) to edit the newly created Profile.
+现在你可以转到[配置文件选项卡](#your-aaps-profile-create-and-edit-profiles)来编辑新创建的配置文件。
 
 (YourAapsProfile_Profile-backup)=
-### Profile backup
+### 配置文件备份
 
 Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
 
@@ -354,12 +354,12 @@ You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compa
 
 ![Profile Helper 1](../images/ProfileHelper1.png)
 
-1. Make sure you are in **Profile 1**.
+1. 确保你在“Profile 1”中。
 2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
 3. Choose the **Profile** you want to compare from.
-4. Change screen by clicking on **Profile 2** on the right.
+4. 通过点击右侧的**Profile 2**来切换屏幕。
 5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profiles Switched**.
 6. Choose the **Profile Switch** you want to compare to.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+7. 在屏幕底部点击“比较配置文件”按钮。 将显示两个调整后的配置文件的比较（见下方截图）。
 
 ![Profile Helper 2](../images/ProfileHelper2.png)
