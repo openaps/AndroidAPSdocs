@@ -686,9 +686,9 @@ Gives you statistics about your Time In Range and Total Daily Dose. See the dedi
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## 配置文件助手
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then Profile Helper. It is not possible to put in the main menu through the Config Builder. The Profile Helper can help you:
 
-* [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
-* [compare two profiles](#your-aaps-profile-compare-profiles)
+* [为孩子从头开始构建配置文件](#your-aaps-profile-profile-from-scratch-for-a-kid)
+* [比较两个配置文件](#your-aaps-profile-compare-profiles)
