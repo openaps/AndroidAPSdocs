@@ -57,39 +57,39 @@
 
 ### 如何设置
 
-The **figure below** shows an example of how the **DIA** set in an **AAPS** profile.
+**下图**显示了在**AAPS**配置文件中设置**DIA**的示例。
 
 ![DIA](../images/Profile_DIA.png)
 
-The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is probably a good place to start. A growing number of people find that a **DIA** of 8 to 9 hours works good for them. See the additional reading mentioned above.
+新用户经常将**DIA**设置得过短。 将DIA设置为6或7可能是一个不错的起点。 越来越多的人发现8到9小时的**DIA**对他们来说效果很好。 请参阅上面提到的额外阅读内容。
 
 (profile-glucose-targets)=
 ## Glucose targets
 
 ### 描述
 
-Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
+你的**BG目标**是一个核心参数，AAPS的所有计算都基于它。 这不同于您通常努力使血糖值保持的目标范围。 目标用于**AAPS**计算：如果**AAPS**预测你的**BG**将落在目标范围之外，那么它将采取行动将你带回到该范围内。
 
 The targets can be defined within those boundaries :
 
-|         | _Low_ target           | _High_ target          |
+|         | _低_目标                  | _高_目标                  |
 | ------- | ---------------------- | ---------------------- |
 | Minimum | 4 mmol/l or 72 mg/dL   | 5 mmol/l or 90 mg/dL   |
 | Maximum | 10 mmol/l or 180 mg/dL | 15 mmol/l or 225 mg/dL |
 
 ### 影响
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
+如果**配置文件**中的目标非常宽（例如，3 mmol/l [50 mg/dl]或更宽），你经常会发现AAPS很少有动作。 这是因为预测**BG**水平将位于该宽范围内，因此**AAPS**不太可能采取临时基础率。
 
 ### 如何设置
 
-The **figure below** shows an example of how the target can be set in an **AAPS** profile.
+**下图**显示了如何在**AAPS**中设置目标的示例。
 
 ![Target](../images/Profile_Target.png)
 
-**BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+**血糖（Blood Glucose，BG）**目标是根据您的个人偏好和需求来设定的。 例如，如果你担心夜间低血糖，你可以在晚上9点至早上7点将目标稍微设置高一些，如117 mg/dL（6.5 mmol/L）。 If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
 
-When In [Open Loop](#Preferences-pen-loop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#preferences-closed-loop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+在[开环](#Preferences-pen-loop)中，尤其是在完成[第一个目标](../SettingUpAaps/CompletingTheObjectives.md)时，使用较宽的目标范围可能是一个不错的选择，同时你可以学习AAPS的行为并调整你的**配置文件**。 <br/>在[闭环](#preferences-closed-loop)（从**[目标6](#objectives-objective6)**开始）中，建议缩小范围，直到你每天为每个时间段设置单个目标（_低_目标 = _高_目标），以确保AAPS迅速对**BG**波动做出反应。
 
 (your-aaps-profile-basal-rates)=
 
@@ -99,35 +99,35 @@ When In [Open Loop](#Preferences-pen-loop), especially when progressing through 
 
 Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 23 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. 有关更多信息，Gary Scheiner的[“像胰腺一样思考（Think like a Pancreas）”](https://amzn.eu/d/iVU0RGe)第23章非常有用。
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimise your ISF and ICR.
+大多数1型糖尿病教育工作者（和1型糖尿病患者！）都同意，你应该先让基础率正确，然后再尝试优化ISF和ICR。
 
 ### 影响
 
 Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
 
-Too high basal rate can lead to low BGs. 反之亦然。
+基础率过高可能导致低血糖。 反之亦然。
 
-**AAPS** ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
+AAPS以默认基础率为“基线”。 如果基础率设置得太高，那么“零临时基础率”状态对活性胰岛素（IOB）数值的减低量会比实际的大。 这将导致AAPS给出更多的后续纠正，以最终将IOB降至零。
 
-So, a basal rate too high will create low **BGs** both with the default rate, but also some hours hence as **AAPS** corrects to target.
+因此，过高的基础率不仅会在使用默认速率时导致**低血糖**，而且在**AAPS**进行目标校正的几个小时内也会导致低血糖。
 
-Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+相反，基础率过低可能导致高血糖，并且无法将血糖水平降低到目标范围内。
 
 ### 如何设置
 
-The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
+**下图**显示了如何在**AAPS**配置文件中设置基础率。
 
 ![Basal rates](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetic team.
+正确设置基础率需要通过反复试验来确定，并且应该与您的糖尿病治疗团队协商进行。
 
-There are basal testing methods which usually entails observing your basal rates and insulin needs during an intermittent fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast 3 times for 8 hours.
+有一些基础率测试方法，通常需要在24小时内的间歇性禁食期间观察您的基础率和胰岛素需求。 虽然你需要测试一整天的基础率，但不建议连续24小时禁食。 这是因为身体会触发激素等机制进行补偿。 一个推荐的方法是在一天中进行三次8小时的禁食。
 
-The recommended method is to suspend the loop, which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. 反之亦然。 Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyse overnight BG lines in order to optimise your basal rates.
+推荐的方法是暂停循环，这将恢复到你的默认基础率。 观察你的**BG**如何变化：如果它在下降，基础率就过高。 反之亦然。<br/> 另一种方法（可能更棘手）是让闭环系统持续运行，并观察**活性胰岛素（IOB）**的变化情况。 如果IOB为负，你的基础率就过高。 反之亦然。 请注意，这种方法依赖于**ISF**来纠正**BG**，因此取决于其他变量设置得是否合理才能成功。 <br/>另一种调整基础率的方法是观察夜间循环操作，当所有碳水化合物都已消耗时。 这种方法对儿童特别有用，当禁食困难或胰岛素需求经常变化时。 [Tidepool的Dr Saleh Adi](https://www.youtube.com/watch?v=-fpWnGRhLSo)提供了有用的方法来分析夜间BG曲线，以优化你的基础率。
 
-When taking action on the result of your basal testing, changes in the **Profile** should be done 1 hour before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
+根据基础测试的结果更改配置文件时，应更改上升/下降情况的前1小时的设置。 根据需要重复测试，直到你对基础率设置感到满意。
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
@@ -137,15 +137,15 @@ When taking action on the result of your basal testing, changes in the **Profile
 
 The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
 
-**In mg/dL units:** If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
+**以mg/dL单位**： 如果你的ISF为40，每单位胰岛素将使你的血糖降低约40 mg/dL（例如，你的血糖将从140 mg/dL降至100 mg/dL）。
 
-**In mmol/L units:** If you have an **ISF** of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
+**以mmol/L单位**： 如果你的ISF为1.5，每单位胰岛素将使你的血糖降低约1.5 mmol/L（例如，从8 mmol/L降至6.5 mmol/L）。
 
-From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dl) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dl) or 1.5 to 1.8 mmol/L) is weakening your **ISF**.
+从这些例子中你可以看出，**ISF**值<1>越小</1>，你对胰岛素的敏感性就越低。 因此，如果你将ISF从40降低到35（mg/dl）或从1.5降低到1.3（mmol/L），这通常被称为增强你的ISF。 相反，将ISF值从40增加到45（mg/dl）或从1.5增加到1.8 mmol/L会削弱你的ISF。
 
 ### 影响
 
-A **lower / stronger ISF** (i.e. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
+**较低/较强的ISF**（即40而不是50）意味着每单位胰岛素降低的**BG**较少。 这会导致循环进行更激进/更强的纠正，**输注更多胰岛素**。 如果你的ISF过强（值较小），这可能导致低血糖。
 
 A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
 
