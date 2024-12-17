@@ -12,7 +12,7 @@
 
 在这里，我们解释一下在每种情况下哪种选择最为方便：
 
-## Config builder
+## 配置构建器
 
 ![打开配置构建器](../images/ConfBuild_Open_AAPS30.png)
 
@@ -32,12 +32,12 @@
 
 有关偏好设置的文档，请[点击此处](/SettingUpAaps/Preferences.md)查阅。
 
-## Plugin preferences
+## 插件选项
 
 ![打开插件参数设置](../images/Pref2020_OpenPlugin2.png)
 
 **插件偏好设置**对话框可以通过AAPS主页屏幕的右上角**三个点**菜单进入。 它允许您更改**当前屏幕上插件的配置**。
 
-例如，如果您知道想要更改BYODA的配置， 那么您需要在**AAPS**顶部菜单上选择“BYODA”选项卡，然后在BYODA页面上，点击右上角的_三个点_菜单，然后选择“插件偏好设置”条目。 You are taken directly to the preferences dialogue specifically for the BYODA plugin.
+例如，如果您知道想要更改BYODA的配置， 那么您需要在**AAPS**顶部菜单上选择“BYODA”选项卡，然后在BYODA页面上，点击右上角的_三个点_菜单，然后选择“插件偏好设置”条目。 您会被直接带到专门用于BYODA插件的偏好设置对话框。
 
 这是进入通用偏好设置对话框的“快捷方式”，有关偏好设置的文档，请[点击此处](../SettingUpAaps/Preferences.md)查阅。
