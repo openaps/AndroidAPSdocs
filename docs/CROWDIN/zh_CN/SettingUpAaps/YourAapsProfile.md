@@ -85,7 +85,7 @@
 
 **下图**显示了如何在**AAPS**中设置目标的示例。
 
-![Target](../images/Profile_Target.png)
+![血糖控制目标值](../images/Profile_Target.png)
 
 **血糖（Blood Glucose，BG）**目标是根据您的个人偏好和需求来设定的。 例如，如果你担心夜间低血糖，你可以在晚上9点至早上7点将目标稍微设置高一些，如117 mg/dL（6.5 mmol/L）。 如果你想确保在早上注射早餐前有足够的胰岛素在体内（IOB），你可以在早上7点至8点将目标设置低一些，如81 mg/dL（4.5 mmol/L）。
 
