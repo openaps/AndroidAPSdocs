@@ -1,4 +1,4 @@
-# AAPS screens
+# AAPS界面
 
 ```{contents}
 :backlinks: entry
@@ -7,320 +7,320 @@
 
 (AapsScreens-the-homescreen)=
 
-## The Homescreen
+## 主界面
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+这是你打开**AAPS**后首先看到的界面，它包含了你日常所需的大部分信息。
 
-### Section A - Tabs
+### A部分 - 标签
 
-* Navigate between the various **AAPS** modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](#Config-Builder-tab-or-hamburger-menu).
+* 在不同的**AAPS**模块之间导航。
+* 你也可以通过左右滑动来切换屏幕。
+* 显示的标签可以在[配置构建器](#Config-Builder-tab-or-hamburger-menu)中选择。
 
-### Section B - Profile & target
+### B部分 - 配置文件&目标
 
-#### Current Profile
+#### 当前配置文件
 
-The current profile is displayed in the left bar.
+左侧栏显示当前配置文件。
 
-Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+短按配置文件栏以查看配置文件详细信息。 长按配置文件栏以[切换不同的配置文件](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)。
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a remaining duration of 59mn.
-3. Profile switch with a specific percentage of 120%.
-4. Profile switch with a specific percentage of 80% and a remaining duration of 59 mn.
-5. Profile switch with a time shift of -1 hour.
-6. Profile switch with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
+1. 使用标准配置文件激活时的常规显示。
+2. 配置切换，剩余时长为59分钟。
+3. 配置切换，特定百分比为120%。
+4. 配置切换，特定百分比为80%，剩余时长为59分钟。
+5. 配置切换，时间偏移为-1小时。
+6. 配置切换，特定百分比为120%，时间偏移为1小时，剩余时长为59分钟。
 
-#### Target
+#### 血糖控制目标值
 
 ![Temp target remaining duration](../images/Home2020_TT.png)
 
-Current target blood glucose level is displayed in the right bar.
+右侧栏显示当前的血糖目标水平。
 
-Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
+短按目标栏以设置**[临时目标](../DailyLifeWithAaps/TempTargets.md)**。
 
-If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
+如果设置了临时目标，栏位将变为黄色，括号内显示剩余时间（分钟）。
 
 (AapsScreens-visualization-of-dynamic-target-adjustment)=
 
-#### Visualization of Dynamic target adjustment
+#### 动态目标调整的可视化
 
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
-When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+当使用[SMB算法](#Config-Builder-aps)和[Autosens](#Open-APS-features-autosens)功能时，**AAPS**可以根据敏感性动态调整目标。
 
-Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](#Preferences-openaps-smb-settings):
+在[偏好设置>OpenAPS SMB设置](#Preferences-openaps-smb-settings)中启用以下选项之一或全部：
 
-* "sensitivity raises target" and/or 
-* "resistance lowers target" 
+* “敏感时提高目标”和/或 
+* “抵抗时降低目标” 
 
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
+如果**AAPS**检测到抗药或敏感，目标将从配置中设置的值更改。 当更改目标血糖时，背景将变为绿色。
 
 (AapsScreens-section-c-bg-loop-status)=
 
-### Section C - BG & loop status
+### C部分 - 血糖与闭环状态
 
-#### Current blood glucose
+#### 当前血糖
 
-The latest blood glucose reading from your CGM is shown on the left side.
+左侧显示来自CGM的最新血糖读数。
 
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
+BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visualization)的关系：
 
-* green = in range
-* red = below range
-* yellow = above range 
+* 绿色 = 在范围内
+* 红色 = 低于范围
+* 黄色 = 高于范围 
 
-The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+中间的灰色块显示自上次读数以来的分钟数以及过去15和40分钟内的变化。
 
 (AapsScreens-loop-status)=
 
-#### Loop status
+#### 闭环状态
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![闭环状态](../images/Home2020_LoopStatus.png)
 
-On the right side, an icon shows the loop status:
+右侧图标显示闭环状态：
 
-1. Green circle = loop running
-2. Green circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
-3. Red circled = loop disabled (not working permanently)
-4. Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-6. Orange circle = super bolus running - remaining time is shown below icon
-7. Blue circle with dotted line = open loop
+1. 绿色圆圈 = 闭环运行
+2. 绿色圆圈带虚线 = [低血糖暂停（LGS）](#objectives-objective6)
+3. 红色圆圈 = 闭环禁用（永久不工作）
+4. 黄色圆圈 = 闭环暂停（暂时停止，但会给予基础胰岛素）- 下方显示剩余时间
+5. 灰色圆圈 = 泵断开（暂时无胰岛素剂量）- 下方显示剩余时间
+6. 橙色圆圈 = 超级大剂量运行- 下方显示剩余时间
+7. 带虚线的蓝色圆圈 = 开环
 
-Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
+短按或长按图标以打开闭环对话框，切换闭环模式（关闭、低血糖暂停、开环或禁用）、暂停/重新启用闭环或断开/重新连接泵。
 
-* If short press on Loop icon, a validation is required after selection in Loop Dialog
+* 如果在闭环对话框中短按，选择后需要进行验证。
     
     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
 (aaps-screens-bg-warning-sign)=
 
-#### BG warning sign
+#### 血糖警告标志
 
-If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
+如果由于任何原因，**AAPS**接收到的血糖读数有问题，你将在主屏幕上的BG数字下方收到警告信号。
 
-##### Red warning sign: Duplicate BG data
+##### 红色警告标志：重复BG数据
 
-The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
+红色警告标志表示你需要立即采取行动：你正在接收**重复的BG数据**，这会阻止闭环正常工作。 因此，你的闭环将被禁用，直到问题解决。
 
-    {admonition} Your loop is not running
+    {admonition} 你的闭环未运行
     :class: note
-    Your loop is not running until you solve this issue !
+    你的闭环未运行，直到你解决此问题！
 
 ![Red BG warning](../images/bg_warn_red.png)
 
-You need to find out why you get duplicate BGs:
+你需要找出为什么会收到重复的BG：
 
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In **AAPS**, go to [Preferences > NSClient](#Preferences-nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
+* 你的Nightscout站点是否启用了Dexcom桥接？ 通过访问你的Nightscout实例的管理面板，编辑“enable”变量并删除“bridge”部分来禁用桥接。 （对于Heroku，[详细信息可在此处找到](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings)。）
+* 是否有多个源将你的BG上传到Nightscout？ 如果你使用BYODA应用，请在**AAPS**中启用上传，但不要在xDrip+中启用。
+* 是否有关注者可能收到你的BG但又将其再次上传到你的Nightscout站点？
+* 最后的手段：在**AAPS**中，转到[偏好设置>NSClient](#Preferences-nsclient)，选择同步设置并禁用“从NS接受CGM数据”选项。
 
-To remove the warning immediately and get to loop running again, you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+要立即移除警告并让闭环再次运行，你需要手动从Dexcom/xDrip+标签中删除一些条目。
 
-However, when there are a lot of duplicates, it might be easier to
+但是，如果有很多重复项，可能更容易：
 
-* [backup your settings](../Maintenance/ExportImportSettings.md),
-* reset your database in the maintenance menu and
-* [import your settings](../Maintenance/ExportImportSettings.md) again
+* [备份你的设置](../Maintenance/ExportImportSettings.md)，
+* 在维护菜单中重置你的数据库，
+* 再次[导入你的设置](../Maintenance/ExportImportSettings.md)。
 
-##### Yellow warning sign
+##### 黄色警告标志
 
-The yellow warning signal is indicating that your BG arrived in irregular time intervals or that some BGs are missing. When pressing the sign, the message indicates “Recalculated data used”.
+黄色警告信号表示你的BG以不规则的时间间隔到达，或者缺少一些BG。 按压标志时，消息显示“使用重新计算的数据”。
 
 ![Yellow BG warning](../images/bg_warn_yellow.png)
 
-Usually you do not have to take any action. The closed loop will continue to work!
+通常你不需要采取任何行动。 闭环系统将继续工作！
 
-As a sensor change is interrupting the constant flow of BG data, a yellow warning sign after sensor change is normal and nothing to worry about.
+传感器更换会中断血糖数据的持续流动，因此传感器更换后出现黄色警告标志是正常的，无需担心。
 
-Special note for Libre users:
+对于Libre用户的特别说明：
 
-* Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
-* Also, jumpy readings interrupt the continuous flow.
-* Therefore, the yellow warning sign will be 'always on' for Libre users.
+* 每几个小时，Libre会滑动一两分钟，这意味着你永远不会得到完美的规则BG间隔。
+* 此外，跳动的读数也会中断连续流动。
+* 因此，Libre用户的黄色警告标志将“始终开启”。
 
-*Note*: Up to 30h hours are taken into accord for **AAPS** calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+*注意*： **AAPS**计算会考虑最多30小时的数据。 因此，即使你解决了原始问题，黄色三角形也可能在最后一次出现不规则间隔后约30小时才会消失。
 
-### Section D - IOB, COB, BR and AS
+### D部分 - IOB, COB, BR和AS
 
 ![Section D](../images/Home2020_TBR.png)
 
-**Syringe**: insulin on board (IOB) - amount of active insulin inside your body
+**注射器**：活性胰岛素（IOB）- 你体内剩余的活性胰岛素量
 
-1. The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
+1. 如果只有标准基础量在运行且没有来自先前大剂量的剩余胰岛素，则体内活性胰岛素数字将为零。
     
-    * IOB may be negative if there have recently been periods of reduced basal.
-    * Press the icon to see the split of bolus and basal insulin
+    * 如果最近有一段时间基础量减少，IOB可能为负数。
+    * 按压图标以查看大剂量和基础胰岛素的分配。
 
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
+2. **谷物**：[体内活性碳水（COB）](../DailyLifeWithAaps/CobCalculation.md)- 你之前摄入的尚未吸收的碳水。如果需要碳水，图标将脉冲为红色（见[下方](#aaps-screens-carbs-required)）。
 
-3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%) 
-    * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-4. **Arrows up & down**: indicating actual [Autosens](#Open-APS-features-autosens) status (enabled or disabled) and value is shown below icon
+3. **紫色线条**：当前基础率。 图标会发生变化，以反映基础率（100%时是直线）的临时变化 
+    * 按压图标以查看基础基础率和任何临时基础率（包括剩余时长）的详细信息。
+4. **上下箭头**：指示[Autosens](#Open-APS-features-autosens)状态（启用或禁用），下方显示值。
 
 (aaps-screens-carbs-required)=
 
-#### Carbs required
+#### 需要碳水
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![需要碳水](../images/Home2020_CarbsRequired.png)
 
-Carbs suggestions are given when the reference design detects that it requires carbs.
+当参考设计检测到需要碳水时，会给出碳水建议。
 
-This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
+这是当oref算法认为它不能通过零临时基础率来拯救你，你需要碳水来修复时。
 
-The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+碳水通知比大剂量计算器的通知更复杂。 你可能会在看到大剂量计算器没有显示缺少碳水时看到碳水建议。
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+如果需要，可以将碳水通知推送到Nightscout，在这种情况下，将显示并广播公告。
 
-### Section E - Status lights
+### E部分 - 状态指示灯
 
 ![Section E](../images/Home2020_StatusLights.png)
 
-Status lights give a visual warning for
+状态指示灯为以下情况提供视觉警告：
 
-* Cannula age
-* Insulin age (days reservoir is used)
-* Reservoir level (units)
-* Sensor age
-* Battery age and level (%)
+* 管路使用时间
+* 胰岛素使用时间（储液器使用天数）
+* 储液器药量（单位）
+* 探头使用时间
+* 电池使用时间和电量（%）
 
-If threshold warning is exceeded, values will be shown in yellow.
+如果超过阈值警告，值将以黄色显示。
 
-If threshold critical is exceeded, values will be shown in red.
+如果超过临界阈值，值将以红色显示。
 
-Settings can be changed in [Preferences > Overview > Status lights](#Preferences-status-lights).
+设置可以在[偏好设置>概览>状态指示灯](#Preferences-status-lights)中更改。
 
-Depending on the pump you use, you may not have all of these icons.
+根据你使用的泵，你可能不会看到所有这些图标。
 
 (aaps-screens-main-graph)=
 
-### Section F - Main graph
+### F部分 - 主图
 
 ![Section F](../images/Home2020_MainGraph.png)
 
-The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
+该图表显示从动态（CGM）读取的血糖（BG）。
 
-Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here.
+在操作标签中输入的备注，如指尖校准和碳水条目，以及配置文件切换，都显示在这里。
 
-Long press on the graph to change the timescale. You can choose 6, 12, 18 or 24 hours.
+长按图表以更改时间刻度。 您可以选择6小时、12小时、18小时或24小时。
 
-The green area reflects your target range.
+绿色区域反映你的目标范围。
 
-Blue triangles show [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings).
+蓝色三角形显示[SMB](#Open-APS-features-super-micro-bolus-smb)- 如果在[偏好设置>OpenAPS SMB](#Preferences-openaps-smb-settings)中启用。
 
 (AapsScreens-activate-optional-information)=
 
-#### Activate optional information
+#### 激活可选信息
 
-On the main graph, you can switch on these optional information:
+在主图上，你可以打开以下可选信息：
 
-* Predictions
-* Basals
-* Activity - insulin activity curve
+* 预测
+* 基础率
+* 活动-胰岛素活动曲线
 
-To show this information, click the triangle on the right side of the main graph. For the main graph just the three options above the line "\---\---- Graph 1 \---\----" are available.
+要显示此信息，请点击主图表右侧的三角形。 对于主图表，只有“\---\---- Graph 1 \---\----”上方的三个选项可用。
 
 ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
 (aaps-screens-prediction-lines)=
 
-#### Prediction lines
+#### 预测线
 
-* **Orange** line: [COB](CobCalculation) (color is used generally to represent COB and carbs)
+* **橙色**线：[COB](CobCalculation)（颜色通常用于表示COB和碳水）
     
-    This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. This line only appears if there are known COB.
+    此预测线显示基于当前**配置文件**设置，假设由于碳水吸收的偏差保持恒定，你的BG（而不是COB本身！）将走向何处。 此线仅在已知COB时出现。
 
-* **Dark blue** line: IOB (color is used generally to represent IOB and insulin)
+* **深蓝色**线：IOB（颜色通常用于表示IOB和胰岛素）
     
-    This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+    这条预测线显示了仅在胰岛素影响下会发生的情况。 例如，如果你注入了一些胰岛素但没有摄入任何碳水化合物。
 
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **浅蓝色**线：零临时基础率（如果设置临时基础率为0%，则预测的BG）
     
-    This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+    此预测线显示如果泵停止所有胰岛素输送（0% TBR），BG轨迹线将如何变化。
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+    *当使用[SMB](#Config-Builder-aps)算法时，此线才会出现。*
 
-* **Dark yellow** line: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (un-announced meals)
+* **深黄色**线：[未宣布的餐食（UAM，un-announced meals）](#SensitivityDetectionAndCob-sensitivity-oref1)
     
-    Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+    未宣布的用餐意味着检测到由于用餐、肾上腺素或其他影响导致的血糖水平显著升高。 预测线类似于**橙色的COB线**，但它假设偏差将以恒定速率逐渐减小（通过延长当前的降低速率）。
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+    *当使用[SMB](#Config-Builder-aps)算法时，此线才会出现。*
 
-* **Dark orange** line: aCOB (accelerated carbohydrate absorption)
+* **深橙色**线：aCOB（加速碳水吸收）
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
+    与COB相似，但假设静态的10 mg/dL/5m（-0.555 mmol/l/5m）碳水吸收率。 已弃用且用途有限。
     
-    *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
+    *当使用较旧的[AMA](#Config-Builder-aps)算法时，此线才会出现。*
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+通常，你的实际血糖曲线会落在这些线的中间，或接近与你的情况最接近的假设线。
 
-#### Basals
+#### 基础率
 
-A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
+**蓝色实线**表示泵的基础输送，并反映实际输注随时间的变化。
 
-The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
+**蓝色虚线**表示如果没有临时基础率调整（TBRs），基础率将是什么。
 
-When the standard basal rate is given, the area under the curve is shown in dark blue. When the basal rate is temporarily adjusted (increased or decreased), the area under the curve is shown in light blue.
+当给予标准基础率时，曲线下方的区域以深蓝色显示。 当基础率临时调整（增加或减少）时，曲线下方的区域以浅蓝色显示。
 
-#### Activity
+#### 活动
 
-The **thin yellow** line shows the activity of Insulin.
+**细黄线**显示胰岛素的活动。
 
-It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+它基于如果没有其他因素（如碳水）存在，你体内的胰岛素预期会使BG下降的程度。
 
 (AapsScreens-section-g-additional-graphs)=
 
-### Section G - additional graphs
+### G部分 - 附加图表
 
-You can activate up to four additional graphs below the main graph.
+您可以在主图表下方激活最多四个附加图表。
 
-To open settings for additional graphs click the triangle on the right side of the [main graph](#section-f---main-graph) and scroll down.
+要打开附加图表的设置，请点击[主图表](#section-f---main-graph)右侧的三角形并向下滚动。
 
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
-To add another graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
+要添加另一个图表，请在其名称（即\---\---- 图1 \---\----）右侧的框中打勾。
 
-Most users find the following configuration of additional graphs to be adequate :
+大多数用户发现以下附加图表配置足够：
 
-* Graph 1 with IOB, COB, Sensitivity
-* Graph 2 with Deviations and BGI.
+* 图1：IOB、COB、灵敏度
+* 图2：偏差和BGI。
 
-#### Absolute insulin
+#### 胰岛素绝对值
 
-Active insulin including boluses **and basal**.
+包括大剂量**和基础量**的活性胰岛素。
 
-#### Insulin on board
+#### 活性胰岛素
 
-Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
+显示您体内已有的胰岛素（= 您体内活跃的胰岛素）。 它包括来自追加量（bolus）和临时基础量（basal）的胰岛素（**但不包括在您的个人档案中设置的基础率**）。
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+如果在胰岛素作用时间（DIA）内没有[SMBs](#Open-APS-features-super-micro-bolus-smb)、没有追加量（boluses）也没有临时基础率（TBR），那么这个值就会是零。
 
-IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
+如果长时间没有大剂量且零/低临时基础量，IOB可能为负数。
 
-Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/YourAapsProfile.md).
+衰减取决于你的[DIA和胰岛素配置文件设置](../SettingUpAaps/YourAapsProfile.md)。
 
-#### Carbs On Board
+#### 活性碳水化合物
 
-Shows the carbs you have on board (= active, not yet decayed carbs in your body).
+显示你体内的碳水（= 体内尚未衰减的碳水）。
 
-Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
+衰减取决于[算法检测到的偏差](../DailyLifeWithAaps/CobCalculation.md)。
 
-If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings).
+如果它检测到比预期更高的碳水吸收率，将给予胰岛素，这将增加IOB（或多或少，取决于你的安全设置）。
 
-#### Sensitivity
+#### 灵敏度
 
-Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
+显示[Autosens](#Open-APS-features-autosens)检测到的灵敏度。
 
-Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+灵敏度计算的是运动、激素等导致的胰岛素敏感性。
 
-请注意，您需要在[目标8](#objectives-objective8)中才能允许灵敏度检测/[Autosens](#Open-APS-features-autosens)自动调整胰岛素的输送量。 Before reaching that objective, the line in your graph is displayed for information only.
+请注意，您需要在[目标8](#objectives-objective8)中才能允许灵敏度检测/[Autosens](#Open-APS-features-autosens)自动调整胰岛素的输送量。 在达到该目标之前，图表中的线条仅用于显示信息。
 
 #### Heart rate
 

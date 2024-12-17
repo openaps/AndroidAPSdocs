@@ -167,7 +167,7 @@ There is a huge amount of information on the status of the **AAPS** system in th
 6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
 7. Press on IOB to see split of basal and bolus insulin
 8. Insulin age in reservoir
-9. Cannula age
+9. 管路使用时间
 10. Battery status of AAPS phone
 11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
 

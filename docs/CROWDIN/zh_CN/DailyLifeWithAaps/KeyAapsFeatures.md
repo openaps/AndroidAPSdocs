@@ -199,7 +199,7 @@ If you have this option enabled, the insulin sensitivity will be decreased while
 
 Minimum grams of carbs to display a carbs suggestion alert. Eating of additional carbs will be suggested when the reference design detects that it requires carbs. In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+如果需要，可以将碳水通知推送到Nightscout，在这种情况下，将显示并广播公告。
 
 In any case, the required carbs will be displayed in the COB section on your home screen.
 
