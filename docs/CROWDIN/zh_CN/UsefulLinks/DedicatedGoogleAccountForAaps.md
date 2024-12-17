@@ -1,147 +1,147 @@
-# A dedicated Google account for AAPS (optional)
+# **为AAPS设置专用谷歌账户（可选）**
 
-Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.
+一些**AAPS**用户倾向于使用他们的主要电子邮件账户作为**AAPS**账户。 另外，一些**AAPS**用户（或其护理人员）会设置一个专用的**AAPS**电子邮件账户——这是可选的，下面我们将举例说明如何操作。
 
-If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](../SettingUpAaps/BuildingAaps.md).
+如果你不想为**AAPS**设置一个专用的Gmail账户，你可以直接跳到下一节，[构建AAPS](../SettingUpAaps/BuildingAaps.md)。
 
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
-- Each version of **AAPS** (and supporting apps like xDrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
-- By harmonizing the setup, it will make online support simpler across users with similar folder structure.
-- Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
-- Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
-- Gmail allows you to register up to 4 accounts under the same phone number.
+专用的Google drive空间意味着你不会因“导出偏好设置”而占用你的个人Google drive限额。
+-**AAPS**（及支持的应用，如xDrip+、BYODA等）的每个版本都将存储在一个与计算机硬件无关的独立位置。 如果你的电脑或手机被盗/丢失/损坏，你仍然可以访问。
+-通过统一设置，它将简化具有相似文件夹结构的用户之间的在线支持。
+- 根据设置（见下文），您将在社区内拥有一个作为别名的独立身份进行通信，这可以保护您的隐私。 
+- 在使用AAPS和需要成人帐户的相关功能时，患有1型糖尿病（T1D）的儿童可以作为未成年人保留他们自己的“日常”电子邮件帐户。
+- Gmail允许你在同一个电话号码下注册最多4个账户。
 ```
 
-## How to set up a dedicated Google account for AAPS
+## **如何为AAPS设置专用谷歌账户**
 
-(⌛About 10 minutes)
+（⌛大约需要10分钟）
 
 ![](../images/Building-the-App/building_0001.png)
 
-Requirements:
+要求：
 
-* You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
-* The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
+* 你拥有一台Windows电脑（Windows 10或更高版本）和一部Android手机（Android 9或更高版本），它们将托管AAPS应用。 这些设备都要安装最新的安全更新，可以访问互联网并具有管理员权限，因为某些步骤需要下载和安装程序。
+* Android手机已经使用你的个人“日常”电子邮件地址（如Gmail账户）进行了设置。
 
 ```{admonition} Things to consider when setting up your new account
 :class: dropdown
-- You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
-- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
-- We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
-- Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
-- If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
-- If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
+出于隐私考虑，你可以使用一个与你的名字不同但与账户相关的名称（如t1dsuperstar）。 然后，你可以在AAPS公共论坛上使用它，同时保持你的真实身份私密。 由于谷歌要求提供恢复电子邮件和电话号码，因此该账户仍然可以追溯。
+- 新的**AAPS**账户将使用与你的“日常”账户相同的电话号码进行验证。 它将使用“日常”电子邮件地址进行验证；
+-我们将设置邮件转发功能，以便任何发送到新的专用AAPS帐户的电子邮件都将转发到主帐户（因此无需检查两个不同的邮箱）；
+-为您的_日常_Gmail帐户和专用的AAPS Gmail帐户使用不同的密码
+-如果您为一个Gmail帐户使用了谷歌的“两步验证”（也称为多因素验证）身份验证，那么最好也为两个Gmail帐户都启用它。
+- 如果你计划使用谷歌“Passkeys”，请确保你注册了多个设备。 这样你就不会把自己锁在外面。 只能在无人能够访问的设备上操作（即不在具有共享账户的其他人可以解锁的电脑上）。
 ```
 
 
 ```{admonition}  Video Walkthrough! 
 :class: Note
-Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
+点击<a href="https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link">此处</a>观看如何设置专用谷歌账户的视频演示。
 ```
 
- These are the steps outlined in the video:
+ 视频中概述的步骤如下：
 
-In this example: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
-- Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
+在此示例中： 
+- 你的现有“日常”谷歌账户是<donald.muck42@gmail.com>； ![](../images/Building-the-App/building_0002.png)
+- 你的新“_AAPS_”Gmail账户将是：<donald.muck42.aaps@gmail.com>； ![](../images/Building-the-App/building_0003.png)
 
 
-### Go to <https://account.google.com> 
+### 转到<https://account.google.com> 
 
- If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png) (2) select “_add another account_”.
+ 如果你已经登录了谷歌，这将直接带你到你的“日常”**我的账户**页面。 （1）点击页面右上角的你的头像（在此例中，为一个简单的![](../images/Building-the-App/building_0002.png)）（2）选择“_添加另一个账户_”。
 
 ![](../images/Building-the-App/building_0005.png)
 
 
-### Enter your NEW dedicated account details: 
+### 输入你的新专用账户详细信息： 
 
-- Enter the new account: 
-- Create Account
-- for my personal use. 
+- 输入新账户： 
+- 创建账户
+- 用于个人使用。 
 
 
-### Enter your persona:
- - Enter firstname
- - lastname
- - birthdate (needs to be an Adult age)
+### 输入你的个人信息：
+ - 输入名字
+ - 姓氏
+ - 出生日期（需要是成年年龄）
 
-### Choose your NEW email address & password
+### 选择你的新电子邮件地址&密码
 
-This example appends “.AAPS” to Donald Muck’s existing one…\
-Set a password
+此示例将“.AAPS”添加到Donald Muck的现有账户后…\
+设置密码
 
-### Enter a phone number which can receive the SMS verification
+### 输入可以接收短信验证的手机号码
 
-Gmail will now send you a unique code to enter for validation.
+Gmail现在会向你发送一个唯一的代码以供输入进行验证。
 
-### Enter the recovery email address
+### 输入恢复电子邮件地址
 
-In this case it will be your existing “_everyday_” email…
+在此例中，它将是你的现有“日常”电子邮件……
 
-### Finish setting up the account
+### 完成账户设置
 
-Gmail will display the account name. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
+Gmail将显示账户名称。它将要求你接受Gmail的条款和条件并确认你的个性化设置。 它将要求你接受Gmail的条款和条件&确认你的个性化设置。
 
-### Customize the new profile display
+### 自定义新个人资料显示
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
+此时，你应该在Gmail的我的账户页面上，显示你的新AAPS专用电子邮件账户。 个人资料图片将默认设置为您的名字的首字母。 为避免混淆，请将其更改为独特的内容……在此例中，Donald.Muck.AAPS已将![](../images/Building-the-App/building_0002.png)替换为 ![](../images/Building-the-App/building_0003.png)
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-### Open the Gmail website on both windows to configure the new account
+### 在两个窗口中打开Gmail网站以配置新账户
 
-So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account\
-This part can be a bit confusing, since you will have to switch back and forth between both accounts. To make it easier, open 2 separate browser windows on top of each other:
+为了让您无需监控一个单独的电子邮件帐户，您可以将来自新的**AAPS**专用帐户的所有电子邮件转发到您的日常帐户\
+。 这部分可能有点令人困惑，因为您将不得不在两个帐户之间来回切换。 为了使其更容易，请在彼此顶部打开两个单独的浏览器窗口：
 
-1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen…
-2. Right click on your Browser logo in your taskbar
-3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
+1. 将你的现有浏览器移到屏幕顶部并调整其大小，使其只占屏幕顶部的一半左右……
+2. 在任务栏中的浏览器图标上右键单击
+3. 从菜单中选择“新窗口”……并调整其大小，使其只占屏幕底部的一半。
 
-Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (if needed you can always switch accounts by clicking on the profile picture and selecting the correct one.
+在两个浏览器窗口中打开<https://gmail.com>。 确保你的个人账户在上面，新的专用**AAPS**账户在下面，并且可以通过右上角的个人资料图片轻松识别。 （如果需要，您可以通过点击个人资料图片并选择正确的帐户来随时切换帐户。
 
 ![](../images/Building-the-App/building_0009.png)
 
-Your Gmail homepages screen should look like this:\
+你的Gmail主页屏幕应如下所示：\
 ![](../images/Building-the-App/building_0010.png)
 
- ### In the new Gmail account (bottom window), open Gmail settings…
+ ### 在新的Gmail账户（底部窗口）中，打开Gmail设置……
 
-- Click on the gear on the left of the profile picture
-- then select “**See all Settings**”
+- 点击个人资料图片左侧的齿轮
+- 然后选择“**查看所有设置**”
 
 ![](../images/Building-the-App/building_0011.png)
 
-### Setup forwarding…
+### 设置转发……
 
-- Click on the “Forwarding and POP/IMAP” Setting tab
-- Click on “add a forwarding address”
-- Add your “everyday” email address
-- Gmail will send a verification code to your “everyday” email address.
-- You will switch back to your everyday profile and click on the link to verify that you accept the forwarding (or get the code from Gmail’s verification email in your “everyday” Gmail window and cut and paste it in your “new AAPS dedicated” Gmail window).
+- 点击“转发和POP/IMAP”设置选项卡
+- 点击“添加转发地址”
+- 添加你的“日常”电子邮件地址
+- Gmail将向你的“日常”电子邮件地址发送一个验证代码。
+- 你将切换回你的日常账户并点击链接以确认你接受转发（或从“日常”Gmail窗口中的Gmail验证电子邮件中获取代码，并将其剪切并粘贴到“新AAPS专用”Gmail窗口中）。
 
-There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts.
+在两个窗口之间来回操作很多，但这将确保当你检查你的“日常”账户电子邮件时，你也将看到从你的AAPS专用账户转发的电子邮件，如Gmail警报。
 
 ![](../images/Building-the-App/building_0012.png)
 
-### Verify the forwarded email address
+### 验证转发的电子邮件地址
 
-- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email.
-- Open it and “click the link to confirm the request”
+- 在“日常”gmail（顶部窗口）中，你将收到“Gmail转发确认”电子邮件。
+- 打开它并点击“点击链接以确认请求”
 
-### Archive forwarded emails in the new dedicated Gmail account (bottom window)
+### 在新的专用Gmail账户（底部窗口）中归档转发的电子邮件
 
 <!---->
 
-1. Refresh the bottom window
-2. Check “forward incoming email”
-3. And archive Gmail’s copy (to keep your new dedicated mailbox clean)
-4. Scroll all the way to the bottom to save your changes\
+1. 刷新底部窗口
+2. 勾选“转发收到的邮件”
+3. 并归档Gmail的副本（以保持你的新专用邮箱整洁）
+4. 滚动到页面底部以保存你的更改 \
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-Congratulations! Now you have created an AAPS-dedicated Google account. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+Congratulations! 恭喜！现在你已经创建了一个AAPS专用谷歌账户。 下一步是[构建AAPS应用](../SettingUpAaps/BuildingAaps.md)。
