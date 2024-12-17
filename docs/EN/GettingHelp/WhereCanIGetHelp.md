@@ -46,6 +46,9 @@ Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/190019
 ### Poland
 * [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group)
 
+### Russia
+* [AndroidApsGroup](https://t.me/androidapsgroup): Russian-speaking AAPS community where you can get support and general info on looping with AAPS
+
 ### Sweden
 *  [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
 
