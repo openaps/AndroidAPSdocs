@@ -193,11 +193,11 @@
 
 状态指示灯为以下情况提供视觉警告：
 
-- Sensor age
+- 探头使用时间
 - 某些动态传感器的电池电量（详细信息请参阅[屏幕截图页面](#screens-sensor-level-battery)）。
-- Insulin age (days reservoir is used)
-- Reservoir level (units)
-- Cannula age
+- 胰岛素使用时间（储液器使用天数）
+- 储液器药量（单位）
+- 管路使用时间
 - 泵电池使用时间
 - 泵电池电量（%）
 
