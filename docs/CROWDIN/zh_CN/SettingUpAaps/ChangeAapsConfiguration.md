@@ -4,13 +4,13 @@
 
 有三种途径可以更改AAPS的配置。 选择哪种途径主要取决于您的便利性或个人偏好，因为每种途径都可以到达相同的配置设置。
 
-These are as follows:
+这些途径如下：
 
-1. Config builder,
+1. 配置文件构建器
 1. 点击右侧的三个点菜单，选择“Preferences（偏好设置）”
 1. 点击右侧的三个点菜单，选择“Plugin preferences（插件偏好设置）”
 
-Here we explain which option is most convenient for each situation:
+在这里，我们解释一下在每种情况下哪种选择最为方便：
 
 ## Config builder
 
