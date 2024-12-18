@@ -66,7 +66,7 @@ Example (for Samsung S23): **Settings > General management > Date and time**: ma
 
 Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterward if it seems to be causing problems (ask for help if needed).
 
-### AAPS settings
+### Настройки AAPS
 
 Now that the phone settings have been checked, in the **AAPS** app itself, use the [Config Builder](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
 
