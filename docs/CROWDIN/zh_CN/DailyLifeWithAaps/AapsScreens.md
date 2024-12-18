@@ -329,128 +329,128 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 #### 偏差
 
 * **灰色**条显示由于碳水引起的偏差。 
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
-* **Yellow** bars show a deviation due to UAM.
-* **Black** bars show small deviations not taken into account for sensitivity
+* **绿色**条显示BG高于算法预期。 绿色条用于在[Autosens](#Open-APS-features-autosens)中增加抗药性。
+* **红色**条显示BG低于算法预期。 红色条用于在[Autosens](#Open-APS-features-autosens)中增加敏感性。
+* **黄色**条显示由于UAM引起的偏差。
+* **黑色**条显示未考虑用于敏感性的小偏差。
 
-#### Blood Glucose Impact
+#### 血糖影响
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+此线显示仅基于胰岛素活动，BG“应该”上升或下降的程度。
 
 ![Homescreen buttons](../images/Screenshots_DEV_BGI.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are greater than the BGI line, indicating that BG is rising. Later, during the hours marked **2**, BGI and DEV are pretty much in line, indicating that BG is stable.
+将BGI线和偏差条一起显示是一个好主意。 它们共享相同的比例尺，但与其他可选数据不同，因此最好将它们显示在不同的图表上，如上图所示。 比较BGI线和偏差条是了解**BG**如何波动的另一种方法。 在这里，在标记为**1**的时间点，偏差条大于BGI线，表明BG正在上升。 稍后，在标记为**2**的小时内，BGI和DEV几乎一致，表明BG稳定。
 
-### Section H - Buttons
+### H部分 - 按钮
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
-Buttons for Insulin, Carbs and Calculator are almost always visible. If the connection to the pump is lost, the insulin button will not be visible.
+胰岛素、碳水和计算器按钮几乎总是可见。 如果与泵的连接丢失，胰岛素按钮将不可见。
 
-Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-buttons).
+其他按钮可以在[偏好设置>概览>按钮](#Preferences-buttons)中设置。
 
-About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
+关于使用胰岛素、碳水和计算器按钮：如果在[偏好设置>概览](#Preferences-show-notes-field-in-treatments-dialogs)中启用，**备注**字段允许你输入将显示在主图上的文本，并可能根据NS客户端的设置上传到Nightscout。
 
 #### 胰岛素
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#bolus-wizard).
+在不使用[大剂量计算器](#bolus-wizard)的情况下给予一定量的胰岛素。
 
-By checking the box **Start eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
+通过选中**即将进食临时目标**框，你可以自动启动你的[即将进食临时目标](#TempTargets-eating-soon-temp-target)。
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) check the corresponding box. When checking this box, you get an additional field “Time offset”, that you can use to record an insulin injection made in the past.
+如果你不想通过泵给予大剂量但想记录胰岛素量（即使用笔给予的胰岛素），请选中相应的框。 选中此框后，你将获得一个附加字段“时间偏移”，你可以使用它来记录过去给予的胰岛素注射。
 
-You can use the buttons to quickly increase the insulin quantity. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+您可以使用按钮快速增加胰岛素的量。 增量值可以在[首选项 > 概述 > 按钮](#Preferences-buttons)中更改。
 
-#### Carbs
+#### 碳水化合物
 
 ![Carbs button](../images/Home2020_ButtonCarbs.png)
 
-To record carbs without bolusing.
+要记录碳水而不给予大剂量。
 
-Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) can be set directly by checking the box.
+可以直接通过选中框来设置某些[预设临时目标](#TempTargets-hypo-temp-target)。
 
-**Time offset**: When will you / have you been eaten carbs (in minutes).
+**时间偏移**：你曾在/你将在何时吃碳水（以分钟为单位）。
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs)
+**持续时间**：用于[“扩展碳水”](ExtendedCarbs)的时间。
 
-You can use the buttons to quickly increase the carb amount. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+你可以使用按钮快速增加碳水量。 增量值可以在[首选项 > 概述 > 按钮](#Preferences-buttons)中更改。
 
-#### Calculator
+#### 计算器
 
-See Bolus Wizard [section below](#bolus-wizard).
+参见大剂量向导[下方部分](#bolus-wizard)。
 
-#### Calibrations
+#### 校准
 
-Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
+向xDrip+发送校准或打开Dexcom校准对话框。
 
-Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
+必须在[偏好设置>概览>按钮](#Preferences-buttons)中激活。
 
 #### CGM
 
-Opens xDrip+.
+打开xDrip+。
 
-Back button returns to **AAPS**.
+返回按钮返回**AAPS**。
 
-Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
+必须在[偏好设置>概览>按钮](#Preferences-buttons)中激活。
 
-#### Quick Wizard
+#### 快速向导
 
-Easily enter amount of carbs and set calculation basics.
+轻松输入碳水量并设置计算基础。
 
-Details are set up in [Preferences > Overview > QuickWizard settings](#Preferences-quick-wizard).
+详细信息在[偏好设置>概览>快速向导设置](#Preferences-quick-wizard)中设置。
 
-## Bolus Wizard
+## 大剂量向导
 
 ![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus, this is where you will normally make it from.
+当你想要给一个餐时大剂量（bolus）时，通常会在这里进行。
 
-### Section I
+### I部分
 
-Shows the calculated bolus.
+显示计算后的大剂量。
 
-If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+如果活性胰岛素量超过了计算后的大剂量，那么它将仅显示仍需的碳水化合物量。
 
 (AapsScreens-section-j)=
 
-### Section J
+### J部分
 
-BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank.
+BG字段通常已经填充了来自您的动态（CGM）的最新读数。 如果您没有正在工作的动态（CGM），则该字段将为空。
 
-In the **Carbs** field, you add your estimate of the amount of carbs - or equivalent - that you want to bolus for.
+在**碳水化合物**字段中，您添加您想要为之注射大剂量的碳水化合物（或等效物）的估计量。
 
-The **Corr** field is if you want to modify the end dosage for some reason.
+**校正**字段用于因某种原因需要修改最终剂量时使用。
 
-The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+**碳水时间**字段用于预先注射大剂量，这样您可以告诉系统，在预期摄入碳水化合物之前会有一段时间的延迟。 如果您是为了之前摄入的碳水化合物而注射大剂量，您可以在此字段中输入负数。
 
-**Eating reminder** : For carbs in the future, the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at the given time, when to eat the carbs you have input into **AAPS**.
+**饮食提醒**：对于未来的碳水化合物摄入，可以选择闹钟复选框（默认情况下，当输入未来时间时会自动选中），以便在指定时间提醒您何时摄入已输入到**AAPS**中的碳水化合物。
 
 ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
-### Section K
+### K部分
 
-**Profile** allows you to select a different profile than the current one, to make the calculation for the insulin required. This profile selection applies only for the current bolus, it is not a profile change.
+**配置文件**允许您选择不同于当前配置文件的另一个配置文件，以便计算所需的胰岛素量。 此配置文件选择仅适用于当前的大剂量注射，并不是更改配置文件。
 
-**Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](#Preferences-advanced-settings-overview). The idea is to deliver the insulin sooner and hopefully reduce spikes.
+**超级大剂量**是指将接下来两小时的基础胰岛素添加到即时大剂量中，并在接下来的两小时内发出零临时基础率（TBR），以收回额外的胰岛素。 该选项仅在[首选项 > 概述 > 高级设置](#Preferences-advanced-settings-overview)中设置了“在向导中启用超级大剂量”时才会显示。 这种做法的目的是更早地输送胰岛素，从而有望减少血糖峰值。
 
-For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
+有关详细信息，请访问[diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/)。
 
-### Section L
+### L部分
 
-Details of the wizard's bolus calculation.
+向导中大剂量计算的详细信息。
 
-You can deselect any that you do not want to include, but you normally wouldn't want to.
+您可以取消选择任何您不想包含的项目，但通常您不会这样做。
 
-For safety reasons the **TT box must be ticked manually**, if you want the bolus wizard to calculate based on an existing temporary target.
+出于安全原因，如果您希望大剂量向导基于现有的临时目标进行计算，则**必须手动勾选TT框**。
 
-#### Combinations of COB and IOB and what they mean
+#### COB和IOB的组合及其含义
 
-* For safety reasons, the IOB box cannot be unticked when COB box is ticked as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
-* If you tick COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
+* 出于安全原因，当选中COB框时，IOB框无法取消选中，因为如果您这样做，可能会因为**AAPS**未考虑已给予的胰岛素而面临胰岛素过量的风险。
+* 如果你同时勾选了COB和IOB，那么未吸收且尚未用胰岛素覆盖的碳水化合物+所有作为TBR或SMB输注的胰岛素都将被考虑在内。
+* 如果你只勾选了IOB而没有勾选COB，**AAPS**会考虑已经输注的胰岛素，但不会将其与任何仍待吸收的碳水化合物相抵消。 这会导致出现“缺少碳水化合物”的通知。
 * If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
 ![BolusWizard with Details](../images/Home2021_BolusWizard_Details.png)
