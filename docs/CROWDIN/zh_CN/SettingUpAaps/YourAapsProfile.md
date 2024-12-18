@@ -319,7 +319,7 @@ AAPS以默认基础率为“基线”。 如果基础率设置得太高，那么
 (your-aaps-profile-clone-profile-switch)=
 ### 将一个配置切换到新配置的克隆版本。
 
-![Profile Switch](../images/TreatmentsView4.png)
+![配置文件切换](../images/TreatmentsView4.png)
 
 治疗[Treatments](#aaps-screens-treatments)选项卡显示了所有过去的**配置文件切换记录**。 在转到**配置文件切换**子选项卡时，你可以使用过去的**配置文件切换**作为基础来创建新的**配置文件**。 在这种情况下，时间偏移和百分比将应用于新的本地配置文件。 使用第**1**行显示的**克隆（Clone）**按钮。
 
