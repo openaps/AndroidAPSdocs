@@ -22,7 +22,7 @@
 
 得益于SMB，对于仅含有“慢速”碳水化合物的餐食，可能只需告知系统计划摄入的碳水化合物量，其余部分交给**AAPS**处理即可。 然而，这可能会导致餐后（用餐后）血糖峰值更高，因为无法进行餐前输注。 或者，如果必要的话，你可以进行餐前输注，给予一个**起始输注量**，这个输注量**仅部分**覆盖碳水化合物（例如，估计量的2/3），并让**SMB**输注剩余的胰岛素。
 
-![SMBs on main graph](../images/SMBs.png)
+![主图上的SMB](../images/SMBs.png)
 
 SMB在主图表上以蓝色三角形显示。 点击三角形可以查看输注了多少胰岛素，或者使用[治疗选项卡](#aaps-screens-treatments)。
 
@@ -179,7 +179,7 @@ OpenAPS SMB的设置如下所述。
 
 如果由于灵敏度检测而修改了目标，它将在你的主屏幕上以绿色背景显示。
 
-![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
+![由Autosens修改的目标](../images/Home2020_DynamicTargetAdjustment.png)
 
 ### 抗药时降低目标
 
@@ -197,108 +197,108 @@ OpenAPS SMB的设置如下所述。
 
 ### 建议所需的最小碳水化合物量
 
-这是显示碳水化合物建议警报所需的最小碳水化合物克数。 Eating of additional carbs will be suggested when the reference design detects that it requires carbs. In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
+这是显示碳水化合物建议警报所需的最小碳水化合物克数。 当检测到需要额外摄入碳水化合物时，会建议您进食。 在这种情况下，您将收到一个通知，该通知可以被设置为5、15或30分钟后再次提醒。
 
 如果需要，可以将碳水通知推送到Nightscout，在这种情况下，将显示并广播公告。
 
-In any case, the required carbs will be displayed in the COB section on your home screen.
+无论如何，所需的碳水化合物量都将在您主屏幕的COB部分中显示。
 
-![Display carbs required on home screen](../images/Pref2020_CarbsRequired.png)
+![主屏上显示的所需碳水](../images/Pref2020_CarbsRequired.png)
 
-### Advanced Settings
+### 高级设置
 
-You can read more here : [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
+您可以在此处阅读更多内容：[OpenAPS文档](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html)。
 
-**Always use short average delta instead of simple data** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to be steadier with noisy data sources like xDrip+ and Libre.
+**始终使用短期平均变化量而非简单数据**：如果您启用此功能，**AAPS**将使用过去15分钟内的短期平均血糖变化量/血糖值，这通常是最后三个值的平均值。 这有助于**AAPS**在处理如xDrip+和Libre等可能产生噪声的数据源时更加稳定。
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump and/or profile. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**每日最大安全乘数**：这是一个重要的安全限制。 默认设置（通常不需要调整）是3。 这意味着**AAPS**永远不会被允许设置超过用户泵和/或配置中编程的最高每小时基础率3倍的临时基础率。 例如：如果您的最高基础率是1.0 U/h，且每日最大安全乘数是3，那么AAPS可以设置的最高临时基础率就是3.0 U/h（= 3 x 1.0 U/h）。
 
-Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
+默认值：3（除非您确实需要并且知道自己在做什么，否则不应更改）
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump and/or profile.
+**当前基础安全乘数**：这是另一个重要的安全限制。 默认设置（同样通常不需要调整）是4。 这意味着**AAPS**永远不会被允许设置超过用户泵和/或配置中当前编程的每小时基础率4倍的临时基础率。
 
-Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
+默认值：4（除非您确实需要并且知道自己在做什么，否则不应更改）
 
 * * *
 
 (Open-APS-features-advanced-meal-assist-ama)=
 
-## Advanced Meal Assist (AMA)
+## 高级进餐助手（AMA）
 
-AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
+AMA，即“advanced meal assist”的缩写，是OpenAPS从2017年（oref0）开始的一项功能。 OpenAPS高级进餐助手（AMA）允许系统在你可靠地输入碳水化合物后更快地增加高临时基础率。
 
-You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+你可以在[OpenAPS文档](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama)中找到更多信息。
 
-### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
+### 临时基础率可以设置的最大U/hr（OpenAPS 最大基础率）
 
-This safety setting helps **AAPS** from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. 建议将其设置为合理的值。 A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+这项安全设置有助于防止**AAPS**给出危险的高基础率，并将临时基础率限制在每小时x单位。 建议将其设置为合理的值。 一个好的建议是将您配置中的最高基础率乘以4，并且至少乘以3。 例如，如果您配置中的最高基础率是1.0 U/h，您可以将其乘以4得到4 U/h，并将4设置为您的安全参数。
 
-You cannot choose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+您不能随意选择任何值：出于安全考虑，存在一个“硬限制”，它取决于患者的年龄。 在AMA模式中，maxIOB的“硬限制”低于SMB。 对于儿童，这个值是最低的，而对于胰岛素抵抗的成年人，这个值则是最大的。
 
-The hardcoded parameters in **AAPS** are:
+**AAPS**中的硬编码参数包括：
 
 - 儿童：2
 - 青少年：5
 - 成人：10
-- Insulin resistant adult: 12
+- 胰岛素抵抗成人：12
 - 孕妇：25
 
 *另请参见[硬编码限制概述](#overview-of-hard-coded-limits)。*
 
-### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
+### OpenAPS可以提供的最大基础IOB [U]（OpenAPS“max-iob”）
 
-This parameter limits the maximum of basal IOB where **AAPS** still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+这个参数限制了AAPS仍能正常工作的最大活性胰岛素量（IOB）。 如果IOB超过这个值，AAPS将停止给予额外的基础胰岛素，直到基础IOB降到限制值以下。
 
-The default value is 2, but you should rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
+默认值设置为2，但您应该缓慢增加这个参数，以观察它对您的影响以及哪个值最适合您。 这个值对每个人来说都是不同的，并且还取决于平均每日总剂量（TDD）。 出于安全考虑，存在一个限制，这个限制取决于患者的年龄。 在AMA模式中，maxIOB的“硬限制”低于SMB。
 
 - 儿童：3
 - 青少年：5
-- Adult: 7
-- Insulin resistant adult: 12
+- 成人：7
+- 胰岛素抵抗成人：12
 - 孕妇：25
 
 *另请参见[硬编码限制概述](#overview-of-hard-coded-limits)。*
 
-### Enable AMA Autosens
+### 启用AMA Autosens
 
-Here, you can choose, if you want to use the [sensitivity detection](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) autosens or not.
+在这里，你可以选择是否要使用[灵敏度检测](../DailyLifeWithAaps/SensitivityDetectionAndCob.md)autosens。
 
-### Autosens adjust temp targets too
+### Autosens也调整临时目标
 
-If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets **AAPS** work more 'aggressive' or not. The actual target might be reached faster with this.
+如果启用了此选项，autosens也可以调整目标（除了基础和ISF之外）。 这可以使**AAPS**工作得更“激进”或更不那么“激进”。 这样可能更快地达到实际目标。
 
-### Advanced Settings
+### 高级设置
 
-- Normally you do not have to change the settings in this dialogue!
-- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
+- 通常你不需要更改此对话框中的设置！
+- 如果你无论如何都要更改它们，请确保阅读[OpenAPS文档](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#)中的详细信息，并了解你在做什么。
 
-**Always use short average delta instead of simple data** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to work more steady with noisy data sources like xDrip+ and Libre.
+**始终使用短期平均变化量而非简单数据**：如果您启用此功能，**AAPS**将使用过去15分钟内的短期平均血糖变化量/血糖值，这通常是最后三个值的平均值。 这有助于**AAPS**在处理xDrip+和Libre等嘈杂数据源时更稳定。
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**每日最大安全乘数**：这是一个重要的安全限制。 默认设置（通常不需要调整）是3。 这意味着**AAPS**永远不会被允许设置超过用户胰岛素泵中编程的最高每小时基础率3倍的临时基础率。 例如：如果您的最高基础率是1.0 U/h，且每日最大安全乘数是3，那么AAPS可以设置的最高临时基础率就是3.0 U/h（= 3 x 1.0 U/h）。
 
-Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
+默认值：3（除非您确实需要并且知道自己在做什么，否则不应更改）
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
+**当前基础安全乘数**：这是另一个重要的安全限制。 默认设置（同样通常不需要调整）是4。 这意味着**AAPS**永远不会被允许设置超过用户胰岛素泵中当前编程的每小时基础率4倍的临时基础率。
 
-Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
+默认值：4（除非您确实需要并且知道自己在做什么，否则不应更改）
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. **AAPS** doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Bolus snooze（餐后暂停）时间除数**： “bolus snooze”功能在餐后大剂量（bolus）之后起作用。 **AAPS**在餐后的一段时间内，即“DIA（作用时间）”除以“bolus snooze”参数所得的时间段内，不会设置较低的临时基础率。 默认值为2。 这意味着，如果DIA为5小时，那么“bolus snooze”的持续时间将是5小时除以2，即2.5小时。
 
-Default value: 2
+默认值：2
 
 * * *
 
 (Open-APS-features-overview-of-hard-coded-limits)=
 
-## Overview of hard-coded limits
+## 硬编码限制概述
 
-|            | Child | Teenager | 成人    | 胰岛素抵抗成人 | Pregnant |
-| ---------- | ----- | -------- | ----- | ------- | -------- |
-| MAXBOLUS   | 5,0   | 10,0     | 17,0  | 25,0    | 60,0     |
-| MINDIA     | 5,0   | 5,0      | 5,0   | 5,0     | 5,0      |
-| MAXDIA     | 9,0   | 9,0      | 9,0   | 9,0     | 10,0     |
-| MINIC      | 2,0   | 2,0      | 2,0   | 2,0     | 0,3      |
-| MAXIC      | 100,0 | 100,0    | 100,0 | 100,0   | 100,0    |
-| MAXIOB_AMA | 3,0   | 5,0      | 7,0   | 12,0    | 25,0     |
-| MAXIOB_SMB | 7,0   | 13,0     | 22,0  | 30,0    | 70,0     |
-| MAXBASAL   | 2,0   | 5,0      | 10,0  | 12,0    | 25,0     |
+|            | 儿童    | 青少年   | 成人    | 胰岛素抵抗的成人 | 孕妇    |
+| ---------- | ----- | ----- | ----- | -------- | ----- |
+| MAXBOLUS   | 5.0   | 10.0  | 17.0  | 25.0     | 60.0  |
+| MINDIA     | 5.0   | 5.0   | 5.0   | 5.0      | 5.0   |
+| MAXDIA     | 9.0   | 9.0   | 9.0   | 9.0      | 10.0  |
+| MINIC      | 2.0   | 2.0   | 2.0   | 2.0      | 0.3   |
+| MAXIC      | 100.0 | 100.0 | 100.0 | 100.0    | 100.0 |
+| MAXIOB_AMA | 3.0   | 5.0   | 7.0   | 12.0     | 25.0  |
+| MAXIOB_SMB | 7.0   | 13.0  | 22.0  | 30.0     | 70.0  |
+| MAXBASAL   | 2.0   | 5.0   | 10.0  | 12.0     | 25.0  |
