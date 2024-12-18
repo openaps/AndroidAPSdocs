@@ -49,7 +49,7 @@ orphan: true
 
 - Autosens is changed to a dynamic switching model which replicates the reference design.
 - Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive.
-- If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+- 如果用户来自oref1，他们可能会注意到系统可能对变化不太敏感，因为敏感性可能在24小时或8小时之间变化。
 
 ## Set Pump Password for Dana RS (if using Dana RS)
 
