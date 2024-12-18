@@ -8,7 +8,7 @@ A glucose target, particularly if it is only short-term (less than 4 hours in du
 
 Temporary targets can be defined within those boundaries :
 
-|         | Temporary target       |
+|         | 临时目标                   |
 | ------- | ---------------------- |
 | Minimum | 4 mmol/l or 72 mg/dL   |
 | Maximum | 15 mmol/l or 225 mg/dL |
