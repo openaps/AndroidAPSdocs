@@ -322,13 +322,13 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 
 请注意，您需要在[目标8](#objectives-objective8)中才能允许灵敏度检测/[Autosens](#Open-APS-features-autosens)自动调整胰岛素的输送量。 在达到该目标之前，图表中的线条仅用于显示信息。
 
-#### Heart rate
+#### 心率
 
-This data may be available when using a [Garmin smartwatch](#Watchfaces-garmin).
+使用[Garmin智能手表](#Watchfaces-garmin)时，此数据可能可用。
 
-#### Deviations
+#### 偏差
 
-* **Grey** bars show a deviation due to carbs. 
+* **灰色**条显示由于碳水引起的偏差。 
 * **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
 * **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
 * **Yellow** bars show a deviation due to UAM.
