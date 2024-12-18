@@ -25,7 +25,7 @@ AAPS работает с целым рядом инсулиновых помп. 
 (CompatiblePumps-additional-communication-device)=
 ## Additional communication device
 
-Если необходимость дополнительного устройства связи не отмечена, то связь между помпой и **AAPS** основывается на встроенном стеке Bluetooth ОС Android, не требуя дополнительных устройств для "перевода" протокола связи.
+Если не указано дополнительное устройство, то связь между помпой и **AAPS** основывается на встроенном стеке Bluetooth ОС Android, не требуя дополнительных устройств для "перевода" протокола связи.
 
 For old Medtronic pumps and Omnipod Eros, an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
