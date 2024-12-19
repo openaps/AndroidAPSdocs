@@ -2,7 +2,7 @@
 
 ** AAPS ** может отправлять информацию о ваших текущих данных в виде сообщения непосредственно в Android Auto в автомобиле.
 
-```{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
+```{admonition} версия информация о изменениях :class: выпадающий дата редактирования: 07/05/2023
 
 версии, используемые для документации:
 
@@ -82,4 +82,4 @@
 
 ## Устранение неполадок:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#use-system-notifications-in-aaps-for-alerts-and-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
+* Если вы не видите уведомления, проверьте, [разрешили ли вы AAPS показывать уведомления](#use-system-notifications-in-aaps-for-alerts-and-notifications) в Android и имеет ли [Android Auto права доступа к уведомлениям](#allow-the-use-of-unknown-sources-with-android-auto).
