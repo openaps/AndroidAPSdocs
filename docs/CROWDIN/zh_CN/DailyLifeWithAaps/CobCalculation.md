@@ -28,65 +28,65 @@
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
-![Screenshot 2024-10-05 161009](../images/cob_oref0_orange_I.png)
+![截图 2024-10-05 161009](../images/cob_oref0_orange_I.png)
 
 
 ## 碳水化合物敏感性 - 加权平均（WeightedAverage）
 
 吸收计算使得在指定时间后COB = 0：
 
-![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
+![AAPS, 加权平均](../images/cob_aaps2_orange_II.png)
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
+如果采用最小碳水化合物吸收（min_5m_carbimpact）而非根据**血糖（BG）**偏差计算得出的值，那么在**活性碳水（COB）**图上会出现一个橙色的点。
 
 (CobCalculation-detection-of-wrong-cob-values)=
-## Detection of wrong COB values
+## COB错值检测
 
-**AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
+如果算法检测到当前的**活性碳水（COB）**计算不正确，**AAPS**会在用户即将根据上一餐的**COB**进行大剂量注射时发出警告。 在这种情况下，它将在使用校正注射向导后的确认屏幕上为用户提供额外的提示。
 
-### How does AAPS detect wrong COB values?
+### AAPS如何检测错误的COB值
 
-Ordinarily __AAPS__ detects carb absorption through **BG** deviations. Incase the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
+通常，__AAPS__通过**BG</0>偏差来检测碳水化合物的吸收情况。 如果用户输入了碳水化合物，但**AAPS**无法通过**BG**偏差检测到其估计的吸收情况，它将使用[min_5m_carbimpact](#Preferences-min_5m_carbimpact)方法（即“备选方案”）来计算吸收量。 由于这种方法只计算最小碳水化合物吸收量，而不考虑**BG**偏差，因此可能会导致错误的COB值。</p>
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![关于错误的碳水化合物吸收量（COB）值的提示](../images/Calculator_SlowCarbAbsorption.png)
 
-In the screenshot above, 41% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
+在上述截图中，有41%的时间碳水化合物吸收是通过min_5m_carbimpact计算的，而不是通过偏差检测得出的值。 这表明用户实际的**活性碳水**可能比算法计算的要少。
 
-### How to deal with this warning?
+### 如何应对此警告
 
-- Consider cancelling the treatment - press ‘Cancel’ instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
-- If you need a correction bolus, enter it manually.
-- Be careful not to overdose or insulin stacking!
-
-
-### Why does the algorithm not detect COB correctly?
-
-This could be because:
-- Potentially the user overestimated carbs when entering them.
-- Activity / exercise after your previous meal.
-- I:C needs adjustment.
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
+- 考虑取消注射——按“取消”而不是“确定”。
+- 使用大剂量注射重新计算下一餐的注射量，同时不勾选**COB**。
+- 如果您需要补针，请手动输入。
+- 注意避免过量注射或重复输注！
 
 
-## Manual correction of carbs entered
+### 为什么算法不能正确检测COB？
 
-If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](#screens-bolus-carbs).
+这可能是因为：
+- 用户可能在输入时高估了碳水化合物量。
+- 上一餐后进行了活动/锻炼。
+- 碳水系数需要调整了
+- min_5m_carbimpact的值设置错误（建议使用SMB时为8，使用AMA时为3）。
 
 
-## Carb correction - how to delete a Carb entry from Treatments
+## 手动校正输入的碳水化合物
+
+如果碳水化合物被高估或低估，可以通过“治疗”选项卡和“操作”选项卡/菜单进行校正，具体方法见[这里](#screens-bolus-carbs)。
 
 
-The ‘Treatments’ tab can be used to correct a faulty carb entry by deleting the entry in Treatments. This may be because the user over or underestimated the carb entry:
+## 碳水修正 - 如何删除治疗中的碳水化合物条目
 
-![COB_Screenshot 2024-10-05 170124](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
-1. Check and remember actual **COB** and **IOB** on the **AAPS'** homescreen.
-2. Depending on the pump, the carbs in the Treatments tab might show together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry by firstly 'ticking' the waste bin on the top right corner (see above photo, step 1). Then 'tick' the faulty carb amount (see above photo, step 2). Then 'tick' the ‘waste bin’ on the top right corner (step 1 again).
-4. Make sure carbs are removed successfully by checking **COB** on **AAPS’** homescreen again.
-5. Do the same for **IOB** if there is just one line in the Treatment tab including carbs and insulin.
-6. If carbs are not removed as intended and additional carbs are added as explained in this section, the **COB** entry will be too high and this could lead to **AAPS** delivering too much insulin.
-7. Enter correct carbs amount through carbs button on **AAPS’** homescreen and set the correct event time.
-8. If there is just one line in Treatment tab including carbs and insulin the user should add also the amount of insulin. Make sure to set the correct event time and check **IOB** on homescreen after confirming the new entry.
+“治疗方案”标签可用于通过删除该标签中的条目来纠正错误的碳水化合物输入。 这可能是因为用户高估或低估了碳水化合物的摄入量：
+
+![COB_截屏 2024-10-05 170124](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+
+1. 在**AAPS**的主屏幕上检查并记住实际的**活性碳水（COB）**和**活性胰岛素（IOB）**。
+2. 根据泵的不同，治疗方案标签中的碳水化合物可能会与胰岛素一起显示在一行中，或者作为单独的条目显示（如Dana RS）。
+3. 要删除条目，请首先点击右上角的垃圾桶图标（参见上图的步骤1）。 然后勾选错误的碳水化合物数量（参见上图的步骤2）。 最后再次点击右上角的“垃圾桶”图标（重复步骤1）。
+4. 确保通过再次检查**AAPS’**主屏幕上的碳水化合物吸收量（**COB**）来确认碳水化合物已成功移除。
+5. 如果治疗方案标签中只有一行包含碳水化合物和胰岛素，那么对于活性胰岛素（IOB）的处理也应如此。
+6. 如果碳水化合物没有按预期移除，并且如本节所述添加了额外的碳水化合物，那么活性碳水（**COB**）的输入将会过高，这可能导致**AAPS**输送过多的胰岛素。
+7. 在**AAPS’**主屏幕上通过碳水化合物按钮输入正确的碳水化合物量，并设置正确的事件时间。
+8. 如果治疗方案标签中只有一行同时包含碳水化合物和胰岛素，用户还应添加胰岛素的剂量。 确保设置正确的事件时间，并在确认新条目后检查主屏幕上的IOB。
 
