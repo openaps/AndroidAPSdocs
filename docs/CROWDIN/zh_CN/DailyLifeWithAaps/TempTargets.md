@@ -1,140 +1,140 @@
-# Temp-Targets
+# 临时目标
 
-## What are Temp-Targets and where can I set and configure them?
+## 什么是临时目标，以及在哪里设置和配置它们？
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+**临时目标**（或简称**TT**）是**AAPS**的一个功能，允许用户为计划中的活动更改其[**BG**（血糖）目标范围](#profile-glucose-targets)。 这是通过**AAPS**调整用户的胰岛素使用量来实现的。
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+一个血糖目标，特别是如果它是短期的（持续时间少于4小时），并不需要是您期望或希望达到的实际血糖水平值，而是一个告诉**AAPS**在保持血糖水平在范围内的同时，更加或更少地积极调节的好方法。
 
-Temporary targets can be defined within those boundaries :
+临时目标可以在以下范围内定义：
 
-|         | 临时目标                   |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   |
-| Maximum | 15 mmol/l or 225 mg/dL |
+|     | 临时目标                  |
+| --- | --------------------- |
+| 最小值 | 4 mmol/l 或 72 mg/dL   |
+| 最大值 | 15 mmol/l 或 225 mg/dL |
 
-**AAPS** provides for three **Temp-Target** options suitable for exercise (**Temp-Target- Activity**), meals (**Temp-Target- Eating soon**) and predicted hypoglycemia (**Temp-Target-Hypo**). **Temp-Targets** are located under the **Actions tab**.
+**AAPS**提供了三种适合不同情境的**临时目标**选项：运动（**临时目标-运动**）、用餐（**临时目标-即将用餐**）和预测低血糖（**临时目标-低血糖**）。 这些**临时目标**位于**“操作”选项卡**下。
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+用户应对在**AAPS**中选择**临时目标**时能取得的结果有合理的期望。 达到期望的**BG**目标的成功程度取决于多种因素，包括：用户**AAPS**设置的可靠性、整体**BG**控制、**IOB**、胰岛素敏感性、胰岛素抵抗、运动期间的体力消耗程度等。
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+**临时目标**大约需要30分钟或更长时间才能达到期望的**BG**目标。 **AAPS**无法实现立即达到**BG**目标的效果，用户在选择**临时目标**时应考虑到这一点。
 
-The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
+下表总结了**临时目标-运动**、**临时目标-即将用餐**和**临时目标-低血糖**的功能特点。
 
-### TT - Activity
+### TT - 活动
 
 ![TT Activity](../images/TempTarget2.png)
 
-**BG Target (depending on users' settings)**
+**BG目标（根据用户设置）**
 
-AAPS will aim to reach 8mmol/l or 144mg/dl for 40 minutes
+AAPS将努力在40分钟内达到8mmol/l或144mg/dl。
 
-**Other considerations users may wish to factor in when selecting**:
+**用户在选择时可能需要考虑的其他因素**：
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+根据**BG**水平，**AAPS**将“减少”胰岛素使用量以达到**BG**目标。 如果**BG**目标不在范围内（即高于用户**配置文件**中选择的**BG**目标），则**AAPS**可能会保持基础率不变。
 
-In closed loop mode, **SMB**:
+在闭环模式下，**SMB**：
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *可能*会被停用（下文进一步讨论）；和/或
+- 基础率可能被停用，如果**AAPS**处于负**IOB**或 <0.
 
-Users may also wish to consider:
+用户可能还希望考虑：
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary peerson to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise as reduced **IOB** as some users experience a rapid rise in **BG **post exercise.
+- 在计划运动前*选择*此**TT** 1-2小时，以确保减少IOB（此TT的正确时机因人而异）；
+- 在计划活动的持续时间内*选择*一个临时配置文件（降低）以确保减少**IOB**；
+- *确保***TT**在运动前*被停用*，因为减少**IOB**后，一些用户可能在运动后会出现**BG**快速上升的情况。
 
-### TT - Eating soon
+### TT - 即将进食
 
 ![TT Activity](../images/TempTarget1.png)
 
-**BG Target (depending on users' settings)**
+**BG目标（根据用户设置）**
 
-AAPS will aim to reach 5mmol/l or 90mg/dl for 30 minutes
+AAPS将努力在30分钟内达到5mmol/l或90mg/dl。
 
-**Other considerations users may wish to factor in when selecting**:
+**用户在选择时可能需要考虑的其他因素**：
 
-In closed loop mode, **SMB**:
+在闭环模式下，**SMB**：
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- 将保持激活状态；和/或
+- 根据用户的**配置文件**设置，基础率也可能被激活。
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+根据**BG**水平，**AAPS**将在用户**AAPS**设置参数的范围内“增加”胰岛素使用量以达到期望的**BG**目标。
 
-### TT - Hypo
+### TT - 低血糖
 
 ![TT Activity](../images/TempTarget3.png)
 
-**BG Target (depending on users' settings)**
+**BG目标（根据用户设置）**
 
-AAPS will aim to reach 7mmol/l or 126mg/dl for 30 minutes
+AAPS将努力在30分钟内达到7mmol/l或126mg/dl。
 
-**Other considerations users may wish to factor in when selecting**:
+**用户在选择时可能需要考虑的其他因素**：
 
-In closed loop mode, **SMB**:
+在闭环模式下，**SMB**：
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *可能*会被停用（下文进一步讨论）；和/或
+- 基础率可能被停用，如果**AAPS**处于负**IOB**或 <0.
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## 我可以在哪里选择临时目标？
 
-In the **Actions** tab in **AAPS**.
+在**AAPS**的**操作**标签下。
 
-1. select **Temporary Target** button; and then
-2. select desired **Temp-Target**
+1. 选择**临时目标**按钮；然后
+2. 选择所需的**临时目标**
 
 ![Carbs TT](../images/TempTarget4a.png)
 
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+或者点击位于**AAPS**右上角**BG目标**。
 
 ![Carbs TT](../images/TempTarget6.png)
 
-- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+- 长按主页右上角的目标或使用底部橙色“碳水化合物”按钮中的快捷方式。
 
 ![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## 我如何更改默认的临时目标并用自己的偏好覆盖它？
 
-To reconfigure the ‘BG target range’ and ‘duration’ allocated to the user’s default **Temp-Target** settings, go to the menu in **AAPS** on the top right hand corner and
+要重新配置分配给用户的默认**临时目标**设置的“BG目标范围”和“持续时间”，请转到**AAPS**菜单的右上角，并
 
-1. select **Preferences** 
-2. scroll down to 'Overview’ 
-3. select ‘Default Temp-Targets’
-4. step 4 indicates (below) where to change **TT- Eating soon** time period
-5. step 5 indicates (below) where to change **TT - Eating soon** **BG** target range (and the same steps can be repeated for **TT -Activity** and **TT - Hypo**.
+1. 选择**首选项**； 
+2. 向下滚动到“概览”； 
+3. 选择“默认临时目标”；
+4. 步骤4指示（如下）更改**TT - 即将进食**的时间段；
+5. 步骤5指示（如下）更改**TT - 即将进食**的**BG**目标范围（并且可以对**TT - 活动**和**TT - 低血糖**重复相同步骤）。
 
 ![Custom TT](../images/TempTarget7.png)
 
-## How do I cancel a Temp-Target?
+## 我如何取消一个正在运行的临时目标？
 
-To cancel a **Temp-Target** running:
+要取消正在运行的**临时目标**：
 
-Select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
+在**操作**标签下的**临时目标**中选择“取消”按钮，如下所示。
 
 ![Custom TT](../images/TempTarget8.png)
 
-Or short-click on the ‘BG Target’ in the yellow/green box located in the top right corner of **AAPS**, and select ‘cancel’ as shown below:
+或者短按位于**AAPS**右上角黄色/绿色框中的“BG目标”，然后选择“取消”，如下所示：
 
 ![Actions TT](../images/TempTarget9.png)
 
-## How do I select a “Default-Temp-Targets”
+## 我如何选择“默认临时目标”
 
-In the **Actions** tab in **AAPS**.
+在**AAPS**的**操作**标签下。
 
-1. select **Temporary Target** button; and then
-2. select desired **Temp-Target**
+1. 选择**临时目标**按钮；然后
+2. 选择所需的**临时目标**
 
 ![Actions TT](../images/TempTarget4.png)
 
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+或者点击位于**AAPS**右上角**BG目标**。
 
 ![BG TT](../images/TempTarget6.png)
 
-Or in the **Carbs** button
+或者，在**碳水化合物（Carbs）**按钮中。
 
-1. selecting the desired **Temp-Target** in the shortcuts
+1. 在快捷方式中选择所需的**临时目标**
 
 ![Carbs TT](../images/TempTarget5.png)
 
@@ -142,41 +142,41 @@ Or in the **Carbs** button
 
 ## 低血糖临时目标
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+**临时目标-低血糖**允许**AAPS**通过减少胰岛素摄入量来防止用户经历低血糖。 如果用户预测他们的**BG**将会下降：通常，**AAPS**应该能够处理，但这很大程度上取决于用户**AAPS**设置的稳定性。 **临时目标-低血糖**使用户能够提前预测低血糖并更新**AAPS**以减少胰岛素。
 
-Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
+有时，当食用低血糖治疗的碳水化合物时，用户的**BG**可能会迅速上升，**AAPS**将通过启用**SMB**来纠正快速上升的**BG**。
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high Temp-Target'* in **Preferences** (see further below):
+一些用户希望在**临时目标-低血糖**期间避免给予**SMB**。 这可以通过在**首选项**中停用“*启用高临时目标的SMB*”来实现（见下文）：
 
-- In (Advanced, objective 9): the user can enable *“High Temp-Targets raises sensitivity”* for **Temp-Targets** of 100mg/dl or 5.5mmol/l or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- 在（高级，目标9）中：用户可以启用“*高临时目标提高敏感性*”，对于100mg/dl或5.5mmol/l或更高的**Temp-Target**，在OpenAPS SMB模式下，**AAPS**将更加敏感。
 
-- In (Advanced, objective 9): the user can deactivate *“SMB with high temp target”*, so that even if **AAPS** has COB > 0, “SMB with Temp-Target” or “SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- 在（高级，目标9）中：用户可以停用“*高临时目标时的SMB*”，这样，即使**AAPS**的COB> 0，“带临时目标的SMB”或“始终SMB”已启用，且OpenAPS SMB处于活动状态，**AAPS**也不会在高临时目标活动期间给予SMB。
 
-Note: if the user enters carbs with the carb button and your blood glucose is less than 72mg/dl or 4mmol/l, **Temp-Target Hypo** is automatically enabled by **AAPS**.
+注意：如果用户通过碳水化合物按钮输入碳水化合物，且血糖低于72mg/dl或4mmol/l，**AAPS**将自动启用**临时目标-低血糖**。
 
 (TempTargets-activity-temp-target)=
 
-## Activity Temp-Target
+## 临时目标-活动
 
-Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
+在运动前和运动期间，用户可能需要一个更高的目标来防止活动期间出现低血糖。
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+为了简化**临时目标-活动**，用户可以配置默认的**临时目标-活动**，通过减少胰岛素使用量来提高**BG**水平，以减缓**BG**下降并避免低血糖。
 
-New users to **AAPS** may need to experiment and personalise their **Temp-Target Activity** default settings in order to optimise this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports). in FAQ.
+**AAPS**的新用户可能需要实验并个性化他们的**临时目标-活动**默认设置，以便优化此功能以使其最适合他们。 每个人在运动期间达到稳定BG控制的能力都是不同的。 另请参阅[FAQ中的运动部分](#FAQ-sports)。 
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduced insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on.
+一些用户还喜欢在启用**临时目标-活动**之前和期间激活**配置文件切换**（即配置文件减少至<100%，以减少**AAPS**的胰岛素输送）。
 
-Advanced, objective 9: users can enable *'High Temp-Targets raises sensitivity'* for **Temp-Targets** higher or equal 100mg/dl or 5.5mmol/L in OpenAPS **SMB**. Then **AAPS** is more sensitive.
+高级，目标9：用户可以启用“*高临时目标提高敏感性*”，对于等于或高于100mg/dl或5.5mmol/L的**临时目标**，在OpenAPS SMB模式下，**AAPS**将更加敏感。 那么 **AAPS** 会更加敏感。
 
-Additionally, if *'SMB with high Temp-Target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'SMB with Temp-Target-* or *'SMB always'* enabled and OpenAPS **SMB** active.
+此外，如果“*高临时目标时的SMB*”被停用，即使COB > 0，*“带临时目标的SMB”*或*“始终SMB”*已启用，且OpenAPS **SMB**处于活动状态，**AAPS**也不会给予**SMB**。
 
 (TempTargets-eating-soon-temp-target)=
 
-## Eating soon Temp-Target
+## 临时目标-即将进食
 
-**Temp-Target -Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**临时目标-即将进食**可以帮助实现**BG**的温和下降，并确保在进食前有足够的**IOB**。
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyjumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target -Eating soon** and this is particularly so, if eating a high carb diet.
+这对于那些不提前注射的用户来说可能是一个重要的工具，但**临时目标-即将进食**的有效性将取决于多种因素，包括：用户的设置、是否食用低碳水化合物饮食以及是否使用超速效胰岛素（如Fiasp或Lyjumjev）来消除提前注射的需要。 通常，在用户使用**AAPS**有经验之前，他们应该预期在使用**临时目标-即将进食**时需要提前注射，特别是如果食用高碳水化合物饮食的话。
 
 You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
 
