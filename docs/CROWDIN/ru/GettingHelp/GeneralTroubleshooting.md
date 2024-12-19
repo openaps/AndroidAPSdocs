@@ -2,7 +2,7 @@
 
 Много информации об устранении неполадок можно найти на страницах этого документа. На этой странице собраны ссылки, которые помогут найти решения вашей проблемы.
 
-Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
+Дополнительную полезную информацию можно найти в разделе [Часто задаваемые вопросы](../UsefulLinks/FAQ.md).
 
 ## Приложение AAPS
 
@@ -106,4 +106,4 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 
 ## Смарт-часы
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
+* [Устранение неполадок в приложении Wear](#Watchfaces-troubleshooting-the-wear-app)

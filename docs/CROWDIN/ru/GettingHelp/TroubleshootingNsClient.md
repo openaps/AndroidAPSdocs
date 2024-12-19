@@ -48,4 +48,4 @@ Android может перевести телефон в спящий режим.
 
 Проверьте размер вашей базы данных в MongoDB (или через плагин размера базы данных в NS). Если вы используете бесплатный платежный план в MongoDB, то 496MB означает, что база заполнена и ее следует очистить. [Следуйте этим инструкциям Nightscout для проверки размера вашей базы данных и удаления данных](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
 
-Перед очисткой данных из базы данных и подумайте о передаче своих данных AAPS в проект Open Humans (для исследований). The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
+Перед очисткой данных из базы данных и подумайте о передаче своих данных AAPS в проект Open Humans (для исследований). Инструкции находятся на странице конфигурации [OpenHumans](../SupportingAaps/OpenHumans.md).

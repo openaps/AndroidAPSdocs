@@ -131,7 +131,7 @@
 ![参数设置 > 按钮 > 碳水化合物](../images/Pref2020_OV_Buttons3.png)
 
 (Preferences-quick-wizard)=
-### Quick Wizard
+### 快速向导
 
 为某些标准餐食或零食创建自定义按钮，这些按钮将显示在主页屏幕上。 适用于经常吃的标准餐食。
 
