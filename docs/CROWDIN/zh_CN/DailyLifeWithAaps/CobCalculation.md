@@ -1,39 +1,39 @@
-# COB calculation
+# 活性碳水（COB）计算
 
-## How does AAPS calculate the COB value?
+## AAPS如何计算COB值
 
-When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**’CSF**”). This is not a feature within the user’s **Profile**  but is calculated by **AAPS** according to **ISF/I:C** set up, and is determined by how many mg/dl 1g of carbs will raise the user’s **BG**.
+当用户作为餐食记录或碳水化合物校正的一部分输入碳水化合物时，**AAPS**会将此输入添加到当前的活性碳水（**COB**）中。 **AAPS**然后根据观察到的用户**BG**（血糖）值的偏差来计算用户碳水化合物的吸收情况。 吸收速率取决于碳水化合物的敏感系数（**CSF**）。 这不是用户**配置文件**中的一个功能，而是由**AAPS**根据设置的**ISF/I:C**来计算得出的，并由1克碳水化合物会使用户的**BG**上升多少毫克/分升来决定。
 
-## Carb Sensitivity Factor
+## 碳水化合物敏感系数（Carb Sensitivity Factor，CSF）
 
-The formula adopted by **AAPS** is:
+**AAPS**采用的公式是：
 
-- absorbed_carbs = deviation * ic / isf.
+- 吸收的碳水 = 血糖变化 * ic / isf。
 
-The effect on the user’s **Profile** will:
+对用户**配置文件**的影响包括：
 
-- _increase_ **IC**- by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- 增加<1>IC</strong>——通过增加每5分钟吸收的碳水化合物量来缩短总吸收时间；
 
-- _increase_ **ISF** - by decreasing the carbs absorbed every 5 minutes thus prolong total time of absorption; and
+- 增加<1>ISF</strong>——通过减少每5分钟吸收的碳水化合物量来延长总吸收时间；
 
-- _change_ **Profile Percentage** -  increase/decrease both values thus has no impact on carbs absorption time.
+- 改变<1>配置文件百分比</strong>——百分比的改变会同时增加/减少这两个值，这对碳水化合物吸收时间没有影响。
 
-For example, if the user’s  **Profile**  **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dl the user’ **BG** goes up and 1g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS**  predicts the user’s **BG** to go down by 20 mg/dl because of **IOB** and it instead stayed flat, **AAPS**  would also calculate 1g of carbs as absorbed.
+例如，如果用户的**配置文件**中的**ISF**是100，**I:C**是5，那么用户的碳水化合物敏感系数将是20。 每当用户的**BG**上升20毫克/分升时，**AAPS**就会计算出有1克碳水化合物被吸收。 正的**IOB**也会影响**COB**的计算。 因此，如果**AAPS**预测用户的**BG**会因为**IOB**而下降20毫克/分升，但实际上却保持不变，**AAPS**也会计算出有1克碳水化合物被吸收。
 
-Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
+根据用户在**AAPS**中选择的敏感性算法，碳水化合物也会通过以下描述的方法被吸收。
 
-## Carbs Sensitivity - Oref1
+## 碳水化合物敏感性 - Oref1
 
-Unabsorbed carbs are cut off after specified time:
+指定时间后，未吸收的碳水化合物将被切断：
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
 ![Screenshot 2024-10-05 161009](../images/cob_oref0_orange_I.png)
 
 
-## Carbs Sensitivity - WeightedAverage
+## 碳水化合物敏感性 - 加权平均（WeightedAverage）
 
-Absorption is calculated to have COB = 0 after specified time:
+吸收计算使得在指定时间后COB = 0：
 
 ![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
 
