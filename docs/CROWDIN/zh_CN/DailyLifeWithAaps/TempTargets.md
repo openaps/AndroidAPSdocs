@@ -23,7 +23,7 @@
 
 ### TT - 活动
 
-![TT Activity](../images/TempTarget2.png)
+![临时目标-活动](../images/TempTarget2.png)
 
 **BG目标（根据用户设置）**
 
@@ -46,7 +46,7 @@ AAPS将努力在40分钟内达到8mmol/l或144mg/dl。
 
 ### TT - 即将进食
 
-![TT Activity](../images/TempTarget1.png)
+![临时目标-活动](../images/TempTarget1.png)
 
 **BG目标（根据用户设置）**
 
@@ -63,7 +63,7 @@ AAPS将努力在30分钟内达到5mmol/l或90mg/dl。
 
 ### TT - 低血糖
 
-![TT Activity](../images/TempTarget3.png)
+![临时目标-活动](../images/TempTarget3.png)
 
 **BG目标（根据用户设置）**
 
@@ -85,15 +85,15 @@ AAPS将努力在30分钟内达到7mmol/l或126mg/dl。
 1. 选择**临时目标**按钮；然后
 2. 选择所需的**临时目标**
 
-![Carbs TT](../images/TempTarget4a.png)
+![碳水临时目标](../images/TempTarget4a.png)
 
 或者点击位于**AAPS**右上角**BG目标**。
 
-![Carbs TT](../images/TempTarget6.png)
+![碳水临时目标](../images/TempTarget6.png)
 
 - 长按主页右上角的目标或使用底部橙色“碳水化合物”按钮中的快捷方式。
 
-![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
+![首选项 > 使用默认临时目标](../images/Pref2020_OV_DefaultTT2.png)
 
 ## 我如何更改默认的临时目标并用自己的偏好覆盖它？
 
@@ -105,7 +105,7 @@ AAPS将努力在30分钟内达到7mmol/l或126mg/dl。
 4. 步骤4指示（如下）更改**TT - 即将进食**的时间段；
 5. 步骤5指示（如下）更改**TT - 即将进食**的**BG**目标范围（并且可以对**TT - 活动**和**TT - 低血糖**重复相同步骤）。
 
-![Custom TT](../images/TempTarget7.png)
+![自定义 TT](../images/TempTarget7.png)
 
 ## 我如何取消一个正在运行的临时目标？
 
@@ -113,11 +113,11 @@ AAPS将努力在30分钟内达到7mmol/l或126mg/dl。
 
 在**操作**标签下的**临时目标**中选择“取消”按钮，如下所示。
 
-![Custom TT](../images/TempTarget8.png)
+![自定义 TT](../images/TempTarget8.png)
 
 或者短按位于**AAPS**右上角黄色/绿色框中的“BG目标”，然后选择“取消”，如下所示：
 
-![Actions TT](../images/TempTarget9.png)
+![执行 TT](../images/TempTarget9.png)
 
 ## 我如何选择“默认临时目标”
 
@@ -126,17 +126,17 @@ AAPS将努力在30分钟内达到7mmol/l或126mg/dl。
 1. 选择**临时目标**按钮；然后
 2. 选择所需的**临时目标**
 
-![Actions TT](../images/TempTarget4.png)
+![执行 TT](../images/TempTarget4.png)
 
 或者点击位于**AAPS**右上角**BG目标**。
 
-![BG TT](../images/TempTarget6.png)
+![血糖 TT](../images/TempTarget6.png)
 
 或者，在**碳水化合物（Carbs）**按钮中。
 
 1. 在快捷方式中选择所需的**临时目标**
 
-![Carbs TT](../images/TempTarget5.png)
+![碳水临时目标](../images/TempTarget5.png)
 
 (TempTargets-hypo-temp-target)=
 
@@ -178,14 +178,14 @@ AAPS将努力在30分钟内达到7mmol/l或126mg/dl。
 
 这对于那些不提前注射的用户来说可能是一个重要的工具，但**临时目标-即将进食**的有效性将取决于多种因素，包括：用户的设置、是否食用低碳水化合物饮食以及是否使用超速效胰岛素（如Fiasp或Lyjumjev）来消除提前注射的需要。 通常，在用户使用**AAPS**有经验之前，他们应该预期在使用**临时目标-即将进食**时需要提前注射，特别是如果食用高碳水化合物饮食的话。
 
-You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+您可以在文章['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/)或[此处](https://diyps.org/tag/eating-soon-mode/)了解更多关于“即将进食模式”的信息。
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be less than 100mg/dl or 5.5mmol/l.
+高级，[目标9](#objectives-objective9)：如果您使用OpenAPS SMB并启用了“*低临时目标降低敏感性*”，**AAPS**将稍微更积极地工作。 对于此选项，要求**临时目标**小于100mg/dl或5.5mmol/l。
 
-## How do I turn off SMB during Temp-Targets?
+## 我如何在临时目标期间关闭SMB？
 
-To action this select in **Preferences** > and deactivate *'Enable SMB with high Temp-Target'*.
+要在**首选项**> 中选择并停用“*启用高临时目标的SMB*”。
 
-![Carbs TT](../images/TempTargetSMB.png)
+![碳水临时目标](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'SMB with Temp-Target'* or *'SMB always'* enabled and OpenAPS SMB active.
+这将确保即使COB > 0，“带临时目标的SMB”或“始终SMB”已启用，且OpenAPS SMB处于活动状态，**AAPS**也不会给予SMB。
