@@ -13,27 +13,27 @@ eCarbs是指分散在几个小时内的碳水化合物。 对于标准餐食，�
 
 ## 使用eCarbs的机制
 
-To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+要输入eCarbs，请在概览标签页的*“碳水化合物”*对话框中设置持续时间、总碳水化合物量，并可选择时间偏移（*下面的数字只是示例，您需要根据自己的情况尝试不同的值，以获得满意的血糖响应*）：
 
 ![Enter carbs](../images/eCarbs_Dialog.png)
 
-The eCarbs on the overview tab, note the carbs in brackets at the COB field, which shows the carbs in the future:
+概览标签页上的eCarbs，注意COB字段中的括号内碳水化合物，显示的是未来的碳水化合物：
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
 ______________________________________________________________________
 
-A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
+这里介绍了一种使用该功能处理脂肪和蛋白质的方法：[https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
 
 ______________________________________________________________________
 
-## Recommended setup, example scenario, and important notes
+## 推荐设置、示例场景和重要注意事项
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
+推荐设置是使用OpenAPS SMB APS插件，启用SMBs以及*启用带有COB的SMB*偏好设置。
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+一个示例场景，比如吃披萨，可能是先通过*“计算器”*给予（部分）输注，然后使用*“碳水化合物”*按钮为接下来的4-6小时输入剩余的碳水化合物，从1或2小时后开始。
 
-**Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above). When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
+**重要注意事项**：当然，您需要尝试并确定哪些具体值对您有效。 您可能还需要仔细调整*“限制SMB的基础分钟数”*设置，以使算法更激进或更保守。 对于低碳水化合物、高脂肪/蛋白质的餐食，可能只使用eCarbs而无需手动输注就足够了（请参阅上面的博客文章）。 当生成eCarbs时，还会创建一个Careportal备注来记录所有输入，以便更容易地迭代和改进输入。
 
 (Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Extended bolus and why they won't work in closed-loop environment?
