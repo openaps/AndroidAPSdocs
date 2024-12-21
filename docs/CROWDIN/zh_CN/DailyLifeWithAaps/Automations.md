@@ -6,33 +6,33 @@
 
 一个**自动操作**指示**AAPS**在满足一个或多个条件或触发因素时“自动”执行特定操作。 这可以是针对不规律的事件，如**低血糖或高血糖**、一定量的负**活性胰岛素（IOB）**。 它也可以是针对重复发生的事件，例如每天特定时间的用餐或运动，或者当用户位于某个GPS位置或WIFI SSID区域附近时。
 
-There are a wide range of **Automation** options, and users are encouraged to study these within the **AAPS** app, in the **Automation** section. You can also search the **AAPS** user groups on **Facebook** and **Discord** for **Automation** examples from other users.
+有多种**自动化**选项可供选择，建议用户在**AAPS**应用的**自动化**部分中详细研究这些选项。 您还可以在**Facebook**和**Discord**上的**AAPS**用户群组中搜索其他用户分享的**自动化**示例。
 
-## How Automation can help
+## 自动操作如何帮助我们
 
-1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
+1. **减少决策疲劳**：**自动操作**的主要好处是减轻用户需要手动干预**AAPS**的负担。 研究估计，患有1型糖尿病的人平均每天需要做出额外的180个决策。 **自动化**可以减轻心理负担，让用户能够将精力投入到生活的其他方面。
 
-1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**.
+1. **可能改善血糖控制**：例如，**自动操作**可以确保在需要时始终设置**临时目标**，即使在忙碌或健忘的情况下也是如此。 例如，如果一个患有糖尿病的孩子在学校每周二上午10点和周四下午2点有体育活动，并且需要在活动前30分钟设置高血糖临时目标（TT），那么可以通过自动操作来实现。
 
-1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
+1. **使AAPS高度可定制**：根据用户的偏好，在特定情况下可以更加或不太激进。 例如，如果在半夜出现负**IOB**，表明当前**配置文件**可能过强，可以触发一段时间内的临时降低**配置文件**百分比。
 
-The example below illustrates how an **Automation** can enable steps to be eliminated.
+下面的例子说明了如何通过**自动化**来省略某些步骤。
 
-User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
+用户每天早上6点锻炼：他需要在锻炼前，即早上5点，手动在AAPS中设置“TT-活动”。
 
 ![Alt text](../images/automation_2024-02-12_20-54-50.png)
 
-The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
+用户设置了一个**自动操作**，在早上5点触发“TT-活动”，以确保他们的**血糖**和**IOB**在准备6点锻炼时处于最佳状态：
 
 ![Alt text](../images/automation_2024-02-12_20-54-49.png)
 
-## Key considerations before starting with Automations
+## 开始使用自动操作前的关键考虑
 
-1. Before setting up an **Automation**, you should have reasonable **BG** control with **AAPS**. **Automations** should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
+1. 在设置**自动操作**之前，你应该使用**AAPS**合理地控制**血糖**。 **自动操作**不应用于补偿不理想的基础率、**胰岛素敏感因子（ISF）**或**碳水化合物比率（CR）**设置。 避免设置自动化**配置文件切换**来补偿由于食物等原因导致的**血糖**升高，这些情况最好通过其他策略（如SMBs等）来处理。
 
-1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
+1. 与所有技术一样，**持续葡萄糖监测系统（CGMs）**、**胰岛素泵**和手机都有可能出现故障：技术问题或传感器错误可能会中断**自动化操作**，这时可能需要进行手动干预。
 
-1. **Requirements for **Automations** are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need a Automation set up for school sports or daily exercise, or need to adjust the timings.
+1. 随着日常活动的变化，**自动操作的需求**也可能发生变化。 在工作/学校/假期之间切换时，请在日历中设置提醒，以审查当前活跃的**自动操作**（它们很容易激活和停用）。 例如，如果你去度假，不再需要为学校体育或日常锻炼设置的自动操作，或者需要调整时间。
 
 1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
 
