@@ -14,123 +14,123 @@
 
 ### 选项1：保持家乡时间并使用时间偏移配置文件
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
-* Phone must keep your standard time as at home for the whole travel period.
-* Time-shift your profile according to time difference between home time and destination time.
+* 在手机设置中关闭“自动日期和时间”（手动更改时区）。
+* 手机在整个旅行期间必须保持家乡的标准时间。
+* 根据家乡时间和目的地时间之间的时差，调整你的配置文件。
    
-   * Long-press profile name (middle of top section on homescreen)
-   * Select 'Profile Switch'
-   * Set 'Time shift' according to your destination.
+   * 长按配置文件名称（主屏幕顶部中间位置）
+   * 选择“切换配置文件”
+   * 根据目的地设置“时间偏移”。
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![带时间偏移的配置文件切换](../images/ProfileSwitchTimeShift2.png)
    
-   * i.e. Vienna -> New York: profile switch +6 hours
-   * i.e. Vienna -> Sydney: profile switch -8 hours
-* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
+   * 例如，维也纳到纽约：配置文件切换+6小时；
+   * 维也纳到悉尼：配置文件切换-8小时。
+* 如果使用[打了补丁的LibreLink应用](#libre2-patched-librelink-app-with-xdrip)，则可能无法使用此选项，因为必须设置自动时区才能启动新的Libre 2传感器。
 
 ### 选项2：删除泵的历史记录
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+* 在手机设置中关闭“自动日期和时间”（手动更改时区）。
 
-When get out of plane:
+下飞机后：
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
-* change time in pump
-* turn on phone
-* let phone connect to the pump and fine-tune time
+* 关闭泵。
+* 更改手机时区。
+* 关闭手机，打开泵。
+* 清除泵中的历史记录。
+* 更改泵的时间。
+* 打开手机。
+* 让手机连接到泵并微调时间。
 
 (timezone-traveling-insight)=
 
-## 洞见
+## Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+驱动程序会自动将泵的时间调整为手机的时间。
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
+Insight还会记录历史条目，记录时间更改的时刻以及从（旧）时间到（新）时间的更改。 因此，尽管时间发生了更改，AAPS仍然可以确定正确的时间。
 
-It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
+它可能会导致TDD（每日总剂量）出现不准确的情况。 但这应该不成问题。
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+因此，Insight用户无需担心时区变化和时间变化。 但这一规则有一个例外：Insight泵配有一个小型的内部电池， 用于在更换“真实”电池时供电以保持时间等设置。 如果更换电池的时间过长，这个内部电池就会耗尽能量，时钟会重置，并且在插入新电池后会要求您输入时间和日期。 在这种情况下，由于无法正确识别正确的时间，AAPS（先进自动泵送系统）在计算时会跳过电池更换之前的所有记录。
 
 ## Accu-Chek Combo
 
-The [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the new driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+[新的Combo驱动程序](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)会自动将泵的时间调整为手机的时间。 Combo只能存储本地时间，不能存储时区，而这正是新驱动程序精确编程到泵中的内容。 此外，它还在AAPS的本地偏好设置中存储时区，以便能够将泵的本地时间转换为具有时区偏移的完整时间戳。 用户无需执行任何操作；如果Combo的时间与手机的当前时间相差太大，泵的时间会自动调整。
 
-Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
+请注意，这需要一些时间，因为它只能在远程终端模式下进行，而该模式通常较慢。 这是Combo（组合设备）的一个限制，无法克服。
 
-The old, Ruffy-based driver does not adjust the time automatically. The user has to do that manually. See below for the steps necessary to do that safely in case the timezone / daylight savings is the reason for the change.
+旧的基于Ruffy的驱动程序不会自动调整时间。 用户必须手动执行此操作。 如果更改时区/夏令时是更改时间的原因，请按照以下步骤安全地执行此操作。
 
-## Medtrum
+## 移宇
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+驱动程序会自动将泵的时间调整为手机的时间。
 
-Timezone changes keep the history in tact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and IOB. If you change time manually double check the IOB.
+时区更改会保持历史记录的完整性，但可能会影响总每日剂量（TDD）。 手动更改手机上的时间可能会导致历史记录和胰岛素在体内存留量（IOB）出现问题。 如果手动更改时间，请仔细检查IOB。
 
-When the timezone or time changes running TBR's are stopped.
+当时区或时间发生变化时，正在运行的TBR（临时基础率）会被停止。
 
 (time-adjustment-daylight-savings-time-dst)=
 
-## Time adjustment daylight savings time (DST)
+## 夏令时时间调整
 
-Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
+根据泵和连续血糖监测仪（CGM）的设置，时间的跳跃可能会导致问题。 例如，对于Combo来说，泵的历史记录会被再次读取，这会导致重复条目。 因此，请在清醒时进行调整，而不要在夜间进行。
 
-If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+如果使用计算器注射大剂量，请不要使用碳水化合物吸收量（COB）和IOB，除非你确保它们绝对正确——最好在夏令时切换后的几个小时内不要使用它们。
 
 ### Accu-Chek Combo
 
-**NOTE**: As mentioned above, this secton is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
+**注意**：如上所述，本节内容仅适用于基于旧版Ruffy的驱动程序。 新版驱动程序会自动调整日期、时间和夏令时。
 
-AAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
+如果泵和手机之间的时间相差太大，AAPS会发出警报。 在夏令时调整时间的情况下，这会在午夜发生。 为防止这种情况发生并确保你的睡眠，请按照以下步骤操作，以便在方便的时候强制更改时间：
 
-#### Actions to take before the clock change
+#### 夏令时更改前的操作
 
-1. Switch OFF any setting that automatically sets the timezone, so you can force the time change when you want to. How you can do this will depend on your smartphone and Android version.
+1. 关闭任何自动设置时区的设置，以便你可以按需强制更改时间。 具体操作取决于你的智能手机和Android版本。
    
-   * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
-   * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * 有些手机有两个设置，一个用于自动设置时间（最好保持开启），另一个用于自动设置时区（必须关闭）。
+   * 不幸的是，一些Android版本只有一个开关来启用时间和时区的自动设置。 现在你必须将其关闭。
 
-2. Find a time zone that has the same time as your current location but doesn't use DST.
+2. 找到一个与你当前位置时间相同但不使用夏令时的时区。
    
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+   * 可以在[https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)找到这些国家的列表。
+   * 对于中欧时间（CET），可以是“布拉柴维尔”（刚果）。 将手机的时区更改为刚果。
 
-3. In AAPS refresh your pump.
+3. 在AAPS中刷新泵。
 
-4. Check the Treatments tab... If you see any duplicate treatments:
+4. 检查“治疗”选项卡…… 如果你看到任何重复的治疗：
    
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * 不要按“删除未来的治疗”，
+   * 而是点击所有未来治疗和重复治疗上的“删除”。 这应该会使治疗无效，而不是删除它们，因此它们将不再用于计算IOB。
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. 如果IOB/COB的情况不清楚，为了安全起见，请至少禁用闭环一个胰岛素分布时间（DIA）和最大碳水时间（Max-Carb-Time），以时间较长者为准。
 
-#### Actions to take after the clock change
+#### 夏令时更改后的操作
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
+进行这种切换的一个好时机是在活性胰岛素（IOB）较低的时候。 例如，在早餐等餐前一小时（泵历史记录中的任何最近一次大剂量注射都应该是小的SMB校正。 你的COB和IOB都应该接近零。）
 
-1. Change the Android timezone back to your current location and re-enable automatic timezone.
-2. AAPS will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
-3. On the AAPS “Combo” screen, press Refresh.
-4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
+1. 将Android时区改回当前位置，并重新启用自动时区。
+2. AAPS很快就会开始提醒你Combo的时钟不匹配。 因此，通过泵的屏幕和按钮手动更新泵的时钟。
+3. 在AAPS的“Combo”屏幕上，点击刷新。
+4. 然后转到“治疗”屏幕，查找任何未来的事件。 不应该有很多。
    
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * 不要按“删除未来的治疗”，
+   * 而是点击所有未来治疗和重复治疗上的“删除”。 这应该会使治疗无效，而不是删除它们，因此它们将不再用于计算IOB。
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. 如果IOB/COB的情况不清楚，为了安全起见，请至少禁用闭环一个胰岛素分布时间（DIA）和最大碳水时间（Max-Carb-Time），以时间较长者为准。
 
-6. Continue as normal.
+6. 继续正常操作。
 
 ### Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* 夏令时的更改会自动进行。 无需任何操作。
 
-### Medtrum
+### 移宇
 
-* Change to DST is done automatically. No action required.
+* 夏令时的更改会自动进行。 无需任何操作。
 
-### Other pumps
+### 其他泵
 
-* This feature is available since AAPS version 2.2.
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* 此功能自AAPS 2.2版本起可用。
+* 为防止出现问题，在夏令时切换之后，Loop（闭环系统）将自动关闭3小时。 这是出于安全考虑（由于夏令时切换前重复的大剂量记录导致IOB过高）。
+* 在夏令时更改之前，您将在主屏幕上收到一条通知，告知循环将暂时禁用。 此消息将无声、无振动地出现。
