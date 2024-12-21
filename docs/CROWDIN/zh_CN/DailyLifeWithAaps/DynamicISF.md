@@ -1,37 +1,37 @@
 (Open-APS-features-DynamicISF)=
-# DynamicISF (DynISF)
-**Dynamic ISF** was added in **AAPS** version 3.2 and requires Objective 11 to be started before **Dynamic ISF** can be activated. Select **Dynamic ISF** in the Config Builder > **AAPS** to activate. **Dynamic ISF** is recommended only for advanced users that have a good handle on their **AAPS'** controls and monitoring.
+# 动态胰岛素敏感系数（DynamicISF）
+**动态胰岛素敏感因子（ISF）**功能于**AAPS**3.2版本中推出，并要求在启用**动态ISF**之前完成Objective 11。 在配置构建器中选择**动态ISF** > **AAPS**以激活。 该功能仅推荐给那些已经熟练掌握**AAPS**控制和监测的高级用户。
 
-To use **Dynamic ISF** effectively, **AAPS'** database requires a minimum of five (5) days of the user's **AAPS** data.
+为了有效使用**动态ISF**，**AAPS'**数据库需要至少五（5）天的用户**AAPS**数据。
 
-**Dynamic ISF** adapts the user's insulin sensitivity factor (**ISF**) dynamically based on the user's:
+**动态ISF**根据用户的以下情况动态调整用户的胰岛素敏感系数（**ISF**）：
 
-- Total Daily Dose of insulin (**TDD**); and
-- current and predicted blood glucose values.
+- 每日胰岛素总剂量（TDD）；
+- 当前和预测的血糖值。
 
-**Dynamic ISF** uses Chris Wilson’s model to determine **ISF** instead of a user's static **Profile's** settings for **ISF**.
+**动态ISF**使用Chris Wilson的模型来确定**ISF**，而不是用户静态**配置文件**中设置的**ISF**值。
 
-The **Dynamic ISF**  equation implemented is: ISF = 1800 / (TDD * Ln (( glucose / insulin divisor) +1 ))
+**动态ISF**的公式为：ISF = 1800 / (TDD * Ln ((血糖 / 胰岛素除数) +1 ))
 
-SMB/AMA - an example of a user's **Profile** with static **ISF** as set by the user and utilized by **SMB** and **AMA**.
+SMB/AMA——示例显示了用户**配置文件**中由用户设置的静态**ISF**，并由SMB和AMA使用。
 
 ![Static ISF](../images/DynISF1.png)
 
-Dynamic ISF - an example of a user's **ISF** subject to change as determined by **Dynamic ISF**.
+动态ISF - 用户**ISF**根据**动态ISF**的判定而发生变化的一个示例。
 
 ![Dyn ISF](../images/DynISF2.png)
 
-The implementation uses the above equation to calculate current **ISF** and in the oref1 predictions for **IOB**, **ZT** and **UAM**. It is not used for **COB**.  Further discussion can be found here: https://www.youtube.com/watch?v=oL49FhOts3c.
+实施中使用了上述公式来计算当前**ISF**，并在oref1预测中用于**IOB**（活性胰岛素）、**ZT**（零临时胰岛素）和**UAM**（未宣布餐时）的计算。 它不适用于**COB**的计算。  进一步的讨论可以在这里找到：https://www.youtube.com/watch?v=oL49FhOts3c
 
-## TDD (Total Daily Dose)
-TDD will use a combination of the following values:
-1.  7 day average **TDD**;
-2.  the previous day’s **TDD**; and
-3.  a weighted average of the last eight (8) hours of insulin use extrapolated out for 24 hours.
+## 总日剂量（TDD）
+TDD将使用以下值的组合：
+1.  7天平均**TDD**；
+2.  前一天的**TDD**；
+3.  过去八小时胰岛素使用量的加权平均值，并推算出24小时的值。
 
-The **TDD** used in the above equation is weighted one third to each of the above values.
+上述公式中使用的**TDD**是上述三个值各占三分之一的加权值。
 
-## Insulin Divisor
+## 胰岛素除数
 The insulin divisor depends on the peak of the insulin used and is inversely proportional to the peak time. For Lyumjev this value is 75, for Fiasp, 65 and regular rapid insulin, 55.
 
 ## Dynamic ISF Adjustment Factor
