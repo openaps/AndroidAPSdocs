@@ -68,7 +68,7 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 
 AAPS 簡介 <./Getting-Started/Introduction.md>
 準備 AAPS <./Getting-Started/PreparingForAaps.md>
-組件概覽 <./Getting-Started/ComponentOverview.md>
+組件總覽 <./Getting-Started/ComponentOverview.md>
 - 相容的幫浦 <./Getting-Started/CompatiblePumps.md>
 - 相容的 CGMs <./Getting-Started/CompatiblesCgms.md>
 - 相容的手機 <./Getting-Started/Phones.md>
@@ -147,11 +147,11 @@ AAPS 發佈說明 <./Maintenance/ReleaseNotes.md>
 我可以在哪裡獲得 AAPS 的幫助 <./GettingHelp/WhereCanIGetHelp.md>
 一般故障排除 <./GettingHelp/GeneralTroubleshooting.md>
 故障排除 Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-訪問日誌檔案 <./GettingHelp/AccessingLogFiles.md>
+讀取日誌檔案 <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}
-:caption: 9) 高級 AAPS 選項
+:caption: 9) 進階 AAPS 選項
 
 完全閉環 <./AdvancedOptions/FullClosedLoop.md>
 開發分支 <./AdvancedOptions/DevBranch.md>

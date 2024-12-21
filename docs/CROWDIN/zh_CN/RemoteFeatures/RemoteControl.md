@@ -1,48 +1,48 @@
-# Remote control of AAPS
-There are four highly effective tools for remotely managing **AAPS**:
+# 远程控制AAPS
+有四种高度有效的工具可用于远程管理**AAPS**：
 
-1) [SMS commands](RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](RemoteControl_aapsclient) (follower phone is Android) 3) [Nightscout](RemoteControl_nightscout) (Android, iOS or other computer/device).  
-4) [Smartwatches](RemoteControl_smartwatches) (Android)
+1) [短信命令](RemoteControl_SMS-Commands)（跟随者手机可以是Android或iOS）， 2) [AAPSClient](RemoteControl_aapsclient)（跟随者手机是Android）， 3) [Nightscout](RemoteControl_nightscout)（Android、iOS或其他计算机/设备），  
+4) [智能手表](RemoteControl_smartwatches)（Android）。
 
-The first three are mostly appropriate for caregivers/parents, but smartwatches are very useful for caregivers/parents **and** for adults with diabetes themselves.
+前三种大多适用于护理人员/家长，但智能手表对护理人员/家长以及成人糖尿病患者本身都非常有用。
 
 ![image](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
 (RemoteControl_SMS-Commands)=
 
-## 1) SMS Commands
+## 1) 短信命令
 
-See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+请参见专门的[短信命令](../RemoteFeatures/SMSCommands.md)页面。
 
 (RemoteControl_aapsclient)=
 ## 2) AAPSClient
 
-_Note that **NSClient** has been replaced by **AAPSClient** for AAPS version 3.2 and higher, check the version release notes for more information._
+_注意：对于AAPS 3.2及更高版本，**NSClient**已被**AAPSClient**替代，请查看版本发布说明以获取更多信息。_
 
-For versions of **AAPS** which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) apk. **AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**:
+对于**AAPS** 3.2之前的版本，如果您有护理人员/家长的Android手机，可以直接下载并安装[**<0>AAPSClien**](https://github.com/nightscout/AndroidAPS/releases/)apk。 **AAPSClient**在外观上非常类似于**AAPS**本身，为护理人员提供了远程操作AAPS命令的标签：
 
 ![NSCLIENT_ 2024-05-17 134512](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
 
 
-There are 2 versions of the apk that can be [downloaded from here](https://github.com/nightscout/AndroidAPS/releases/),  **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
+有两个版本的apk可以从[此处下载](https://github.com/nightscout/AndroidAPS/releases/)，**AAPSClient**&**AAPSClient2**，它们之间有一个细微但重要的区别，如下所述。
 
-**AAPSClient** can be installed on a single phone or multiple follower phones (i.e. parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
+**AAPSClient**可以安装在单个手机或多个跟随者手机上（即家长1的跟随者手机和家长2的跟随者手机），以便两位护理人员都能获得访问权限并远程控制患者的**AAPS**手机。
 
-Should a caregiver require a second copy of **AAPSClient** to remote control an additional patient with a Nightscout account, they should install **AAPSClient2** in addition to **AAPSClient**. **AAPSClient 2** allows a single caregiver to install the **AAPSClient** apk twice on the same follower phone in order to be given simultaneous access and remote control to two different patients.
+如果护理人员需要第二个**AAPSClient**副本来远程控制另一个使用Nightscout账户的患者，他们应该在安装**AAPSClient**之外再安装**AAPSClient2**。 **AAPSClient 2**允许单个护理人员在同一跟随者手机上两次安装**AAPSClient** apk，以便能够同时访问并远程控制两名不同的患者。
 
-To download **AAPSClient**, navigate to [here](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+要下载**AAPSClient**，请导航至[此处](https://github.com/nightscout/AndroidAPS/releases/)并点击资源**“app-AAPSClient-release_x.x.x.x”**（它可能是比下方截图中显示的更新版本）：
 
 ![image](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-Then go to  _downloads_ on your computer. On Windows, -downloads_ will show the right hand ribbon:
+然后转到计算机上的_downloads_。 在Windows上，-downloads_将显示右侧功能区：
 
 ![image](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
-Once downloaded, click _show in folder_ to locate the file.
+下载完成后，点击_在文件夹中显示_以定位文件。
 
-The **AAPSClient** apk can now be either:
+**AAPSClient** apk现在可以通过以下方式传输：
 
-Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
+通过USB数据线传输到跟随者手机上；或者， 拖动到Google Drive文件夹中，然后点击“app-AAPSClient-release”文件将其添加到跟随者手机。
 
 ### Synchronization- AAPSClient and AAPS set up (for Version 3.2.0.0 above)
 
@@ -101,7 +101,7 @@ Remote control through **AAPSClient** is only recommended if your synchronizatio
 
 ### AAPSClient with smartwatch options
 
-A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the parents phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app. You can read more about Smartwatches [here](#4-smartwatches).
+A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the parents phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. 这将显示当前的血糖值、Loop（闭环系统）状态和允许碳水化合物输入、临时目标设定以及配置更改。 但它不允许通过WearOS应用进行大剂量胰岛素注射。 You can read more about Smartwatches [here](#4-smartwatches).
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout

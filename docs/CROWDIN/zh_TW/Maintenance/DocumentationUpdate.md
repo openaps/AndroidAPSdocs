@@ -8,7 +8,7 @@
 ## 2024年10月
 
 - 多個頁面的更新：
-  - [需要多長時間](#preparing-how-long-will-it-take)、[成分概覽](../DailyLifeWithAaps/CobCalculation.md)、[完成目標](../SettingUpAaps/CompletingTheObjectives.md)、[你的 AAPS 個人檔案](../SettingUpAaps/YourAapsProfile.md)、[組態建置工具](../SettingUpAaps/ConfigBuilder.md)及[偏好設定](../SettingUpAaps/Preferences.md)、[AAPS螢幕](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [需要多長時間](#preparing-how-long-will-it-take)、[組件總覽](../DailyLifeWithAaps/CobCalculation.md)、[完成目標](../SettingUpAaps/CompletingTheObjectives.md)、[你的 AAPS 個人檔案](../SettingUpAaps/YourAapsProfile.md)、[組態建置工具](../SettingUpAaps/ConfigBuilder.md)及[偏好設定](../SettingUpAaps/Preferences.md)、[AAPS螢幕](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [COB計算](../DailyLifeWithAaps/CobCalculation.md)、[動態ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Android Studio Ladybug的建立指導](../SettingUpAaps/BuildingAaps.md) @tanja
 - 技術工作（文件的部署過程、檔案組織…） @psonnerat & @emilise

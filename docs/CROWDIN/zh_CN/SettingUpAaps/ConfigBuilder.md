@@ -127,7 +127,7 @@
 * [美敦力](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
-* [Medtrum](../CompatiblePumps/MedtrumNano.md)
+* [移宇](../CompatiblePumps/MedtrumNano.md)
 * 虚拟泵：开环 - **仅AAPS建议** 
   * 当您初次使用**AAPS**时，在完成最初的[目标](../SettingUpAaps/CompletingTheObjectives.md)期间
   * 对于尚未有驱动程序的泵
