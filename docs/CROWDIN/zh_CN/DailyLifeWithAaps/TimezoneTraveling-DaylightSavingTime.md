@@ -1,18 +1,18 @@
-# Timezone traveling with pumps
+# 带泵进行跨时区旅行
 
-## DanaR, Korean DanaR
+## DanaR，韩国DanaR
 
-There is no issue with changing timezone in phone because pump doesn't use history
+手机更改时区没有问题，因为泵不使用历史记录。
 
 (timezone-traveling-danarv2-danars)=
 
-## DanaRv2, DanaRS
+## DanaRv2，DanaRS
 
-These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+这些泵需要特别注意，因为AAPS正在使用泵中的历史记录，但泵中的记录没有时区标记。 **这意味着，如果你简单地更改手机中的时区，记录将用不同的时区读取，并且会被重复计算。**
 
-To avoid this there are two possibilities:
+为避免这种情况，有两种可能的方法：
 
-### Option 1: Keep home time and timeshift profile
+### 选项1：保持家乡时间并使用时间偏移配置文件
 
 * Turn off 'Automatic date and time' in your phone settings (manual time zone change).
 * Phone must keep your standard time as at home for the whole travel period.
@@ -28,7 +28,7 @@ To avoid this there are two possibilities:
    * i.e. Vienna -> Sydney: profile switch -8 hours
 * Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
-### Option 2: Delete pump history
+### 选项2：删除泵的历史记录
 
 * Turn off 'Automatic date and time' in your phone settings (manual time zone change)
 
