@@ -1,27 +1,27 @@
-# Daily Life - Pumps
-## Changing infusion sets: insulin reservoirs and cannulas
+# 日常生活-泵
+## 更换输注套装：胰岛素储药器和输注管路
 
-The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. This procedure is sometimes referred to as a “set change”, with a “full” set change including the insulin reservoir and cannula, and a “partial” set change referring to a change of cannula only.
+以下描述的步骤仅适用于管路泵，不适用于类似Omnipod、Medtrum Nano、Accu-Chek Solo等贴片泵。 该步骤有时被称为"更换输注套装"，完整的更换输注套装包括更换胰岛素储药器和输注管路，部分更换输注套装指的是仅更换输注管路。
 
-Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be carried out via the pump directly. These need to be logged in **AAPS** manually, once completed.
+通过**AAPS**无法进行物理储药器的更换，必须通过泵本身直接进行。 These need to be logged in **AAPS** manually, once completed.
 
-### Guide for changing both the pump reservoir and cannula
+### 更换胰岛素储药器和输注管路的指引
 
-1)  In **AAPS**, disconnect the pump: Long press “Open Loop”/”Closed Loop” icon on the **AAPS** Home Screen and select ‘Disconnect pump - 1 hour”. The pump icon will change to a grey icon, indicating that the pump is disconnected.
+1)  In **AAPS**, disconnect the pump: Long press “Open Loop”/”Closed Loop” icon on the **AAPS** Home Screen and select ‘Disconnect pump - 1 hour”. 泵图标将变为灰色图标，表示泵已断开连接。
 
 2)  Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
 
-3)  Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
+3)  Prime/fill the tubing and cannula: this can be done directly on the pump. 请务必消除管路中的任何气泡。
 
-4)  Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: select the PRIME/FILL button in the **AAPS** actions tab and tick “Pump site change” and/or “Insulin Cartridge Change” as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select “OK”. Read the summary message, and confirm to execute the priming by tapping “OK”.
+4)  Attach the new cannula to the body. 一旦插入管路并拔出针头后，连接的套管现在会有一个小的气泡，这个气泡也需要进行排气处理。 To announce this in **AAPS** and prime the site: select the PRIME/FILL button in the **AAPS** actions tab and tick “Pump site change” and/or “Insulin Cartridge Change” as appropriate to record the change. 现在按下默认的胰岛素留置针的充盈剂量（通常约为0.3 U，但请检查该数值是否匹配您的留置针），如果不匹配，请进行修改，然后选择“确定”。 阅读摘要消息，并通过点击“OK”来确认执行留置针充盈。
 
 5)  Reconnect the pump in **AAPS**: Press the grey disconnected pump symbol and select ‘Reconnect pump’ to continue looping.
 
-### Useful information concerning insulin/cannula changes
+### 有关胰岛素/管路更换的有用信息
 
 ●   Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** Home screen.
 
-●   You can set/adjust the default prime amount in Preferences > Overview > Fill/Prime standard insulin amounts. See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
+●   You can set/adjust the default prime amount in Preferences > Overview > Fill/Prime standard insulin amounts. 查看您的管路盒中的使用手册，了解应该为您的管路和留置针充盈多少单位（取决于针长和管长）。
 
 ●   Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the **AAPS** treatments menu as “Prime”.
 
