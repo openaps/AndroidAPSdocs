@@ -15,11 +15,11 @@
 
 SMB/AMA——示例显示了用户**配置文件**中由用户设置的静态**ISF**，并由SMB和AMA使用。
 
-![Static ISF](../images/DynISF1.png)
+![静态ISF](../images/DynISF1.png)
 
 动态ISF - 用户**ISF**根据**动态ISF**的判定而发生变化的一个示例。
 
-![Dyn ISF](../images/DynISF2.png)
+![动态ISF](../images/DynISF2.png)
 
 实施中使用了上述公式来计算当前**ISF**，并在oref1预测中用于**IOB**（活性胰岛素）、**ZT**（零临时胰岛素）和**UAM**（未宣布餐时）的计算。 它不适用于**COB**的计算。  进一步的讨论可以在这里找到：https://www.youtube.com/watch?v=oL49FhOts3c
 
@@ -32,31 +32,31 @@ TDD将使用以下值的组合：
 上述公式中使用的**TDD**是上述三个值各占三分之一的加权值。
 
 ## 胰岛素除数
-The insulin divisor depends on the peak of the insulin used and is inversely proportional to the peak time. For Lyumjev this value is 75, for Fiasp, 65 and regular rapid insulin, 55.
+胰岛素除数取决于所使用的胰岛素的峰值，并且与峰值时间成反比。 对于Lyumjev，此值为75；对于Fiasp，为65；对于常规速效胰岛素，为55。
 
-## Dynamic ISF Adjustment Factor
-The Adjustment Factor allows the user to specify a value between 1% and 300%. This acts as a multiplier on the **TDD** value and results in the **ISF** values becoming *smaller* (i.e. more insulin required to move glucose levels a small amount) as the value is increased above 100% and *larger* (i.e. less insulin required to move glucose levels a small amount) as the value is decreased below 100%.
+## 动态ISF调整因子
+调整因子允许用户指定1%至300%之间的值。 这作为**TDD**值的乘数，并且当值增加到100%以上时，**ISF**值会变小（即需要更多胰岛素才能使血糖水平小幅移动）；当值降低到100%以下时，<0>ISF</0>值会变大（即需要更少胰岛素才能使血糖水平小幅移动）。
 
-The Adjustment Factor can be located in ‘Preferences’ > **AAPS**:
+调整因子可以在“Preferences”（偏好设置）>**“AAPS”**下找到：
 
-![Factor ISF](../images/DynISF3.png)
+![ISF因子](../images/DynISF3.png)
 
 
-## Future ISF
+## 未来ISF
 
-Future **ISF** is used in the dosing decisions that oref1 makes.  Future **ISF** uses the same **TDD** value as generated above, taking the Adjustment Factor (discussed above) into account. It then uses different glucose values dependent on the case:
+未来**ISF**用于oref1做出的剂量决策中。  未来**ISF**使用与上面生成的相同的**TDD**值，并考虑调整因子（如上所述）。 然后，它根据不同的血糖值使用：
 
-* If levels are flat, within +/- 3 mg/dl, and predicted **BG** is above target, a combination of 50% minimum predicted **BG** and 50% current **BG** is used.
+* 如果血糖水平平稳，在±3毫克/分升以内，且预测的**BG**高于目标值，则使用预测的最低**BG**的50%和当前**BG**的50%的组合。
 
-* If eventual **BG** is above target and glucose levels are increasing, or eventual **BG** is above current **BG**, current **BG** is used.
+* 如果最终**BG**高于目标值且血糖水平正在上升，或者最终**BG**高于当前**BG**，则使用当前**BG**。
 
-Otherwise, minimum predicted **BG** is used.
+否则，使用预测的最低**BG**。
 
-## Enable TDD based sensitivity ratio for basal and glucose target modification
+## 启用基于TDD的敏感性比率以调整基础率和血糖目标
 
-This setting replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. Unlike Autosens, this option does not adjust **ISF** values.
+此设置替换了Autosens，并使用过去24小时**TDD**与7天**TDD**的比率作为基础来增加或减少基础率，这与标准Autosens的方式相同。 如果启用了根据敏感性调整目标的选项，则此计算值也用于调整目标。 与Autosens不同，此选项不会调整**ISF**值。
 
-## CAUTION - Automations or Profile Percentage Increase
-**Automations** should always be used with care. This is particularly so with **Dynamic ISF**.
+## 警告 - 自动化或档案百分比增加
+使用自动化工具时应始终谨慎。 在使用**动态ISF**时尤其如此。
 
-If **Dynamic ISF** is in operation, users should reconsider enabling any temporary **Profile** increase as an **Automation** rule or similarly activating a **Profile Percentage** which may create **Dynamic ISF** to be overly aggressive in correction bolusing and could cause hypoglycemia.
+如果**动态ISF**正在运行，用户应重新考虑是否启用任何作为自动化规则的临时**配置文件**增加，或类似地激活可能使**动态ISF**在校正注射时过于激进并可能导致低血糖的**配置文件百分比**。
