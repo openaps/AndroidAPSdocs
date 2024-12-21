@@ -50,18 +50,18 @@
 
 ## 如何设置自动操作？
 
-要设置自动操作，请在**AAPS**中创建一个“规则”如下：
+要设置**自动操作**，请在**AAPS**中创建一个“规则”如下：
 
-![Automation create](../images/automation_create.png)
+![创建自动操作](../images/automation_create.png)
 
 * 为你的“规则”命名；
 * 选择至少一个“条件”；
 
-![Automation condition](../images/automation_condition.png)
+![自动操作条件](../images/automation_condition.png)
 
 * 选择一个“操作”；
 
-![Automation action](../images/automation_action.png)
+![自动操作](../images/automation_action.png)
 
 * 勾选**自动化**事件右侧的方框以激活**自动化**：
 
@@ -227,56 +227,56 @@
 并且当用户连接到家庭wifi网络时（3）。
 
 
-It will then set a **Temp Target**  of 75mg/dl for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is travelling on vacation for instance.
+然后，它将设置30分钟的75 mg/dl**临时目标**（4）。 包含位置的一个优点是，如果用户在度假旅行，它将不会触发。
 
 ![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
 
-Here is the screenshot detailing the **Automation** triggers:
+以下是详细**自动操作**触发器的截图：
 
-1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
-1) WIFI SSID = My_Home_WiFi_Name
+1)在主要的“并且”（两个条件都需要满足才能触发）条件下： 1)重复时间为周一、周二、周三、周四、周五的早上5:30  
+1)WIFI名称（SSID）为“My_Home_WiFi_Name”
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
-## Automation Logs
+## 自动操作日志
 
-**AAPS** has a log of the most recent **Automation** triggered at the bottom of the screen under the **Automation** tab.
+**AAPS**在**自动操作**选项卡底部的屏幕上记录了最近触发的**自动操作**日志。
 
-In the example below the logs indicate:
+在下面的示例中，日志显示：
 
-(1) at 01:58 am, the “Low BG triggers temp hypo profile” is activated
-* glucose value is less than 75mg/dl;
-* delta is negative (ie: the BG is going down);
-* time is within 01:00 am and 06:00 am.
+(1) 在01:58 am，“低血糖触发临时低血糖配置文件”被激活
+* 血糖值小于75 mg/dl；
+* 增量为负（即：血糖正在下降）；
+* 时间在01:00 am和06:00 am之间。
 
-The **Automation** will:
-* set a **Temp Target** to 110mg/dl for 40 minutes;
-* start a temporary **Profile** at 50% for 40 minutes.
+**自动化**将会：
+* 设置40分钟的110 mg/dl**临时目标**；
+* 启动40分钟的50%临时**配置文件**。
 
-(2) at 03:38 am,  the “High carb after low at night” is triggered
-* time is between 01:05 am and 06:00 am;
-* glucose value is greater than 110mg/dl.
+(2) 在03:38 am，“夜间低血糖后高碳水”被触发
+* 时间在01:05 am和06:00 am之间；
+* 血糖值大于110 mg/dl。
 
-The **Automation** will:
-* change **Profile** to LocalProfile1 (ie: cancel the temporary profile if any)
-* stop **Temp Target** (if any)
+**自动化**将会：
+* 更改**配置文件**为LocalProfile1（即：取消任何临时配置文件）
+* 停止**临时目标**（如果有的话）。
 
 ![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
 
 ## Troubleshooting
 
-* Problem: __My automations are not being triggered by AAPS?__
+* 问题：__我的自动化没有由AAPS触发？__
 
-Check the box to the right of **Automation** event is ‘ticked’ to ensure the rule is activated.
+勾选右侧的框以激活自动操作事件：
 
 ## Troubleshooting
 
 ![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
 
-* Problem: __My automations are being triggered in the wrong order.__
+* 问题：__我的自动化触发顺序不正确。__
 
-Check your rule prioritisation order as discussed above here.
+检查如上所述的规则优先级顺序。
 
-## Alternatives to Automations
+## 自动操作的替代方案
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. 
+对于高级用户，还有其他方法可以使用IFTTT或第三方Android应用（如Automate）来自动化任务。 
