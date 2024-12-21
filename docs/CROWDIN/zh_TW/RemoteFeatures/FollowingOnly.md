@@ -2,7 +2,7 @@
 
 除了可用於遠端控制_及_追蹤**AAPS**的各種可能性外，社群還開發了幾個其他應用和裝置，可以簡單地追蹤數據（血糖水平和其他資訊），而無需與**AAPS**進行互動。
 
-有關追蹤**AAPS**的廣泛選擇的好概覽在[Nightscout追蹤器](https://nightscout.github.io/nightscout/downloaders/#)網頁上。
+對於追蹤 **AAPS** 提供的廣泛選項，一個很好的總覽可以在 [Nightscout 追蹤者](https://nightscout.github.io/nightscout/downloaders/#) 網頁上找到。
 
 ```{contents} Table of contents
 :depth: 1
