@@ -42,23 +42,23 @@
 
 ## 断开泵进行淋浴或活动
 
-If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. The pump can be disconnected using the Loop Status icon on the **AAPS** Home Screen.
+如果您为了淋浴、洗澡、游泳、接触性运动或其他活动而取下泵，您必须让**AAPS**知道没有输送胰岛素，以保持IOB的正确性。 可以使用**AAPS**主屏幕上的循环状态图标来断开泵。
 
-由于泵断开时您没有接收到任何胰岛素，因此您应该每两小时重新连接一次，以补充缺失的基础胰岛素。 You can do this by connecting, bolusing the missing basal amounts (_e.g._ of the last two hours) before disconnecting again. 这有助于避免胰岛素严重缺乏，从而可能导致糖尿病酮症酸中毒（DKA）。 If it is inconvenient to reconnect the pump during activity (cannula site is covered by wearing a wetsuit _etc._), consider a pen injection instead. This manual injection can be logged in **AAPS**, and doesn’t have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.
+由于泵断开时您没有接收到任何胰岛素，因此您应该每两小时重新连接一次，以补充缺失的基础胰岛素。 您可以通过连接、输送缺失的基础胰岛素量（例如，过去两小时的量），然后再断开连接来实现这一点。 这有助于避免胰岛素严重缺乏，从而可能导致糖尿病酮症酸中毒（DKA）。 如果活动期间重新连接泵不方便（例如，输注针部位被潜水衣覆盖等），可以考虑使用笔式注射器进行注射。 这种手动注射可以在**AAPS**中记录，并且不必在注射时立即记录（只需记下注射时间），因为您可以在重新连接泵时宣布胰岛素，并回溯胰岛素实际给予的时间。
 
 ## 在不实际输送胰岛素的情况下宣布已输送胰岛素
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections to **AAPS**: select the “insulin” tab, enter the amount in units and select “do not bolus, record only”. 选择此选项后，将出现“时间偏移”选项卡。 You can ignore this if the injection was given recently, but if the bolus was given some time ago, you can add a minus sign in front of the time (_e.g._ - 30 min) to record the actual time of the bolus. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
+要向**AAPS**宣布从泵中输送的胰岛素（无论是在**AAPS**断开连接时输送的，还是通过笔式注射器注射的）：选择“胰岛素”选项卡，输入单位量，并选择“不追加给药，仅记录”。 选择此选项后，将出现“时间偏移”选项卡。 如果注射是最近进行的，可以忽略它，但如果追加给药是在很久以前进行的，您可以在时间前添加减号（例如，-30分钟）以记录追加给药的实际时间。 然后，**AAPS**将考虑胰岛素作用持续时间，并相应地计算系统中剩余的胰岛素量。
 
-If you are using **AAPS** as a careiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as “pump disconnect 120” and “pump connect 120”. 远程断开的持续时间范围为1-120分钟（在此示例中为120分钟）。 This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
+如果您作为照顾者使用**AAPS**，您可以通过[短信命令](../RemoteFeatures/SMSCommands.md)（如“pump disconnect 120”和“pump connect 120”）非常轻松地远程断开（和重新连接）泵。 远程断开的持续时间范围为1-120分钟（在此示例中为120分钟）。 如果**AAPS**手机对您来说不方便访问（例如，被埋在正在跑向游泳综合体的孩子的泵带中，或被青少年紧密守护或正在使用），这将非常有用。
 
 ## 活动后重新连接泵
 
-After a long disconnection (1 - 2 hours) it is fairly common for **AAPS** to calculate that you now have negative IOB. 当您重新连接泵时，根据偏好/当前血糖水平/计划的食物或后续活动，您可以：
+长时间断开连接（1-2小时）后，**AAPS**计算出您现在IOB为负值是很常见的。 当您重新连接泵时，根据偏好/当前血糖水平/计划的食物或后续活动，您可以：
 
-a) Just reconnect the pump in **AAPS** (grey-to-green, for closed loop) and leave it up to **AAPS** to start to deliver insulin again
+a) 只需在**AAPS**中重新连接泵（灰色变为绿色，表示闭环），并让**AAPS**重新开始输送胰岛素
 
-_or_
+_或_
 
 b) 如果您想采取更积极的措施（例如，您正朝着高血糖发展），您可以导航到计算器，并为零碳水化合物输送胰岛素大剂量，以立即以大剂量形式输送计算出的缺失胰岛素。
 
