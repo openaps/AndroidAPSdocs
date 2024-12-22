@@ -81,70 +81,70 @@ _注意：对于AAPS 3.2及更高版本，**NSClient**已被**AAPSClient**替代
 
 ### 故障排除“NS访问令牌”配置问题
 
-The precise 'NS access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not.
+精确的“NS访问令牌”配置可能因您的Nightscout提供商是付费托管站点还是非付费托管站点而有所不同。
 
-If you are struggling with **AAPS** v3 to accept the 'NS access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'NS access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
+如果您在使用**AAPS** v3时遇到“NS访问令牌”接受问题，并且使用的是付费托管的Nightscout站点，您可能需要首先与您的Nightscout提供商联系，以了解如何解决“NS访问令牌”问题。 否则，请联系**AAPS**小组，但在这样做之前，请仔细检查您是否已正确按照[此处](https://nightscout.github.io/nightscout/security/#create-a-token)的说明操作。
 
-### Features of AAPSClient include:
+### AAPSClient的功能包括：
 
-| Tab / Hamburger     | 功能                                                                                                                                                                                                    |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Action** Tab      | - Profile Switch <br>- Temp Target<br>- BG Check<br>- CGM Sensor Insert<br>- Note<br>- Exercise<br>- Announcement<br>- Question?<br>- History Browser |
-| **Food** Tab        |                                                                                                                                                                                                       |
-| **Treatments** Tab  | - Check Treatments delivered including bolus and carbs entered                                                                                                                                        |
-| **Maintenance** Tab | - Export and Import Settings                                                                                                                                                                          |
-| **Profile** Tab     | - Creating new profile<br>- Profile switch                                                                                                                                                      |
+| 标签/汉堡菜单           | 功能                                                                                                                                   |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **操作（Action）** 标签 | - 配置文件切换<br>- 临时目标<br>- 血糖检查<br>- 动态探头插入<br>- 备注<br>- 锻炼<br>- 宣布<br>- 问题?<br>- 历史浏览器 |
+| **食物** 标签         |                                                                                                                                      |
+| **治疗** 标签         | - 检查已执行完毕的治疗，包括推注和输入的碳水化合物                                                                                                           |
+| **运维** 标签         | - 导出和导入设置                                                                                                                            |
+| **配置文件** 标签       | - 创建新配置文件<br>- 配置文件切换                                                                                                          |
 
-**AAPSClient** allows the caregiver to make many of the adjustments that are allowed directly in **AAPS** (excluding insulin boluses) remotely, via the mobile or internet network. The main benefits of **AAPSClient** are the speed and ease with which caregivers/parents can use it to remotely control **APPS**. __AAPSClient__ _can_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Commands entered on **AAPSClient** are uploaded onto Nightscout.
+**AAPSClient**允许护理人员通过移动或互联网网络远程进行许多在**AAPS**中允许的调整（不包括胰岛素推注）。 **AAPSClient**的主要优点是护理人员/家长可以快速、轻松地使用它来远程控制**AAPS**。 __AAPSClient__在发送需要认证的命令时，_可以_比输入SMS命令快得多。 在**AAPSClient**上输入的命令会上传到Nightscout。
 
-Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](#important-hints-2-8-1-1) for further details.
+只有同步功能运行良好（_即_您没有看到不需要的数据更改，如TT、TBR等的自我修改），才建议通过**AAPSClient**进行远程控制。 请参阅[2.8.1.1版本的发布说明](#important-hints-2-8-1-1)以获取更多详细信息。
 
-### AAPSClient with smartwatch options
+### AAPSClient与智能手表选项
 
-A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the parents phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. 这将显示当前的血糖值、Loop（闭环系统）状态和允许碳水化合物输入、临时目标设定以及配置更改。 但它不允许通过WearOS应用进行大剂量胰岛素注射。 You can read more about Smartwatches [here](#4-smartwatches).
+智能手表是帮助管理孩子**AAPS**的非常有用的工具。 有几种不同的配置可选。 如果在父母的手机上安装了**AAPSClient**，则可以在与父母的手机连接的兼容智能手表上安装[**AAPSClient WearOS**应用程序](https://github.com/nightscout/AndroidAPS/releases/)。 这将显示当前的血糖值、Loop（闭环系统）状态和允许碳水化合物输入、临时目标设定以及配置更改。 但它不允许通过WearOS应用进行大剂量胰岛素注射。 您可以阅读有关智能手表的更多信息[此处](#4-smartwatches)。
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#2-aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
+Nightscout不仅是“云”中的服务器，还有专用的**Nightscout**应用，可以直接从iPhone的App Store下载。 如果您有Android跟随者手机，则没有专用的Nightscout应用，最好使用[**AAPSClient**](#2-aapsclient)，或者，如果您只想跟随而不发送治疗，可以从Playstore下载并安装[Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch)应用。
 
-Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_e.g._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app:
+在iPhone上安装**Nightscout**应用后，打开应用并按照设置提示操作，输入您的Nightscout地址（见下方左侧）。 此形式可能因您的Nightscout托管方式而异。 （_例如_ http://youraddresshere.herokuapp.com） 然后输入您的Nightscout API密钥（见下方右侧）。 如果没有提示您输入API密码，则需要点击应用顶部的挂锁来输入：
 
 ![image](../images/remote-control-24.png)
 
-More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
+有关设置的更多信息可直接从[Nightscout](https://nightscout.github.io/nightscout/discover/)获取
 
-When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
+首次登录时，您将看到一个非常简单的显示。 通过选择右上角的“汉堡菜单”并向下滚动来自定义显示选项：
 
 ![image](../images/remote-control-25.png)
 
-Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up.
+向下滚动到“设置”。 您可能希望将“刻度”更改为“线性”，因为BG显示的坐标轴默认值刻度是对数刻度，并在“使用基础率”下选择“default”，以便显示泵基础量。
 
 ![image](../images/remote-control-25b.png)
 
-Select your desired options. Uncheck alarms if you use an alternative app for alarms.
+选择您所需的选项。 如果您使用其他应用进行警报，请取消选中警报。
 
 ![image](../images/remote-control-26.png)
 
-Continue to scroll down until you get to “show plugins”.
+继续向下滚动，直到到达“显示插件。
 
-You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS).
+您需要确保选中了“护理面板（careportal）”，并且还可以选择各种其他指标（最有用的是：IOB、care portal、pump、cannula age、insulin age、basal profile和OpenAPS）。
 
-Importantly, you now need to click “save” at the bottom for these changes to take effect.
+重要的是，您现在需要点击底部的“保存”以使这些更改生效。
 
 ![image](../images/remote-control-27.png)
 
-After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
+点击“保存”后，应用将返回您的主Nightscout屏幕，看起来像这样：
 
-1. Current glucose value
-2. Information on AAPS system status - touch the individual tabs on the screen to display more detail. Add or remove these display options using hamburger menu.
-3. Recent glucose trace with treatments (carbs, boluses) displayed
-4. Longer-term glucose trace
-5. "Hamburger" menu for setting display options, generating reports, editing profiles and Nightscout admin tools
-6. "**+**" menu for entering treatments to send to AAPS.
-7. Select different time period to display
-8. Basal insulin profile
-9. Green line = historical glucose Blue lines = predicted glucose
+1. 当前血糖值
+2. AAPS系统状态信息- 点击屏幕上的各个选项卡以显示更多详细信息。 使用汉堡菜单添加或删除这些显示选项。
+3. 最近的血糖轨迹，显示治疗情况（碳水化合物、推注）
+4. 较长期的血糖轨迹
+5. “汉堡菜单”用于设置显示选项、生成报告、编辑配置文件和Nightscout管理工具
+6. “+”菜单用于输入要发送到AAPS的治疗
+7. 选择不同的时间段进行显示
+8. 基础胰岛素配置文件
+9. 绿色线=历史血糖 蓝色线=预测血糖
 
 ![image](../images/remote-control-28.png)
 
