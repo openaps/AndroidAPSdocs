@@ -148,7 +148,7 @@ Nightscout不仅是“云”中的服务器，还有专用的**Nightscout**应�
 
 ![image](../images/remote-control-28.png)
 
-Looking in more detail at the top left menu of the Nightscout app:
+详细查看Nightscout应用右上角的菜单：
 
 1. Careportal retrospective edit
 2. Turn on/off alarms
