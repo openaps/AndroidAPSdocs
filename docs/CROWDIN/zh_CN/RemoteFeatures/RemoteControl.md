@@ -150,42 +150,42 @@ Nightscout不仅是“云”中的服务器，还有专用的**Nightscout**应�
 
 详细查看Nightscout应用右上角的菜单：
 
-1. Careportal retrospective edit
-2. Turn on/off alarms
-3. Hamburger - for setting preferences
-4. Careportal - Log treatment - to send changes to AAPS
+1. Careportal回顾性编辑？
+2. 打开/关闭警报
+3. 汉堡菜单-用于设置首选项
+4. Careportal-记录治疗-发送更改到AAPS
 
 ![nightscout top bar](../images/remote-control-29.png)
 
-There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
+灰色选项卡（如果您点击选项卡，则会显示更多信息）上的屏幕上有大量关于**AAPS**系统状态的信息：
 
-1. 5min glucose trend
-2. Bolus wizard preview
-3. Press on Basal to see your current profile and basal information
-4. Time since latest CGM reading in AAPS
-5. **Pump**: insulin, battery % and when AAPS last connected to it
-6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
-7. Press on IOB to see split of basal and bolus insulin
-8. Insulin age in reservoir
+1. 5分钟血糖趋势
+2. 大剂量向导预览
+3. 点击“基础率”查看当前配置文件和基础信息
+4. 距离AAPS最新一次CGM读数的时间
+5. **泵**：胰岛素、电池电量和AAPS最后一次连接到它的时间
+6. AAPS最后一次刷新时间- 如果超过5分钟，可能表明AAPS手机与泵/CGM之间的连接存在问题
+7. 点击“IOB”查看基础和推注胰岛素的分配
+8. 储液器中的胰岛素使用时长
 9. 管路使用时间
-10. Battery status of AAPS phone
-11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+10. AAPS手机的电池状态
+11. 数据库大小。 如果它变得太大（仅限DIY Nightscout-托管服务会忽略），您可能会开始遇到连接问题。 您可以通过汉堡菜单中的管理工具菜单删除数据来清理数据库。
 
 ![image](../images/remote-control-30.png)
 
 ![image](../images/remote-control-31.png)
 
-Press "refresh" at the bottom of the page to close the popup.
+点击页面底部的“刷新”以关闭弹出窗口。
 
-### Sending treatments through the Nightscout app to AAPS
+### 通过Nightscout应用向AAPS发送治疗
 
-To set-up sending treatments from the **Nightscout** app to **AAPS**, on the main AAPS phone, go into the **AAPSClient** tab in the **AAPS** app. Open the right-hand dot menu, and open AAPSClientpreferences – synchronisation and select the relevant options in this menu. Set it to receive the different commands (temporary targets, etc) and also to synchronise profiles. If things don’t seem to be synchronised, go back to the AAPSClient tab and select “full synchronisation” and wait a few minutes.
+要通过**Nightscout**应用向**AAPS**发送治疗，请在主要的AAPS手机上，进入**AAPS**应用中的**AAPSClient**标签。 打开右侧的点菜单，然后打开AAPSClient选项–同步，并在此菜单中选择相关选项。 将其设置为接收不同的命令（临时目标等），并同步配置文件。 如果似乎没有同步，请返回AAPSClient标签并选择“全量同步”并等待几分钟。
 
-Nightscout on your iPhone has all the same functions as Nightscout on your PC. It allows you to send many commands to **AAPS**, but it does not allow you to send insulin boluses.
+iPhone上的Nightscout具有与PC上相同的所有功能。 它允许您向**AAPS**发送许多命令，但不允许您发送胰岛素推注。
 
-### Cancelling negative insulin to avoid repeat hypos
+### 取消负胰岛素以避免重复低血糖
 
-Although you cannot actually bolus insulin, you can however “announce” insulin through Nightscout as a “correction bolus”, although it is not delivered. Because AAPS now takes that fake insulin bolus into account, announcing insulin actually works to make AAPS _less aggressive_, and can be useful for cancelling negative insulin and preventing lows in the event that your profile has been too strong (for example due to prior exercise). You will want to check this for yourself in the presence of the **AAPS** phone, in case your **Nightscout** setup differs.
+虽然您实际上不能推注胰岛素，但您可以通过Nightscout“宣布”胰岛素作为“校正推注”，尽管它不会被输送。 Because AAPS now takes that fake insulin bolus into account, announcing insulin actually works to make AAPS _less aggressive_, and can be useful for cancelling negative insulin and preventing lows in the event that your profile has been too strong (for example due to prior exercise). You will want to check this for yourself in the presence of the **AAPS** phone, in case your **Nightscout** setup differs.
 
 ![24-10-23, cancel negative insulin NS](../images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
 
