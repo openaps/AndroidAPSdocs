@@ -119,19 +119,19 @@ PIN码要求：
 示例：
 * 身份验证器应用程序的令牌是457051
 * 您的强制PIN码是2401
-* Code to check: 4570512401
+* 要检查的代码是4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
+如果输入正确，红色的“错误的PIN码”文本将自动更改为绿色的“正确”。 **没有按钮可以按！ **流程现已完成，输入代码后没有“确定”按钮需要按：
 
 ![image](../images/remote-control-14.png)
 
-You should now be set up with SMS commands.
+现在您应该已设置好短信指令。
 
-Use button "Authenticator setup > Reset Authenticators" if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
+如果您想移除已配置的身份验证器，请使用按钮“身份验证器设置 > 重置身份验证器”。 （通过重置身份验证器，您将使所有已配置的身份验证器无效。 您需要重新设置它们。）
 
-## SMS commands usage
+## 设置短信指令
 
-### First steps using SMS commands
+### 使用短信指令的第一步
 
 1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
 
