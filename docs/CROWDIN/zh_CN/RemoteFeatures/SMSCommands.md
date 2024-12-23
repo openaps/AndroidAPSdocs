@@ -1,137 +1,137 @@
-# SMS Commands
+# 短信指令
 
 ```{contents} Table of contents
 :depth: 2
 ```
 
-Most of the adjustments of temp targets, following **AAPS** etc. can be done on [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection. Boluses, however, can't be given through **AAPSClient**, but you can use SMS commands. If you use an iPhone as a follower and therefore cannot use **AAPSClient** app, there are additional SMS commands available.
+大多数临时目标的调整、跟踪**AAPS**等操作都可以通过Android手机上的[**AAPSClient**应用程序](../RemoteFeatures/RemoteMonitoring.md)在互联网连接下进行。 然而，大剂量注射（boluses）不能通过**AAPSClient**进行，但您可以使用短信指令。 如果您使用的是iPhone作为跟随者设备，因此无法使用**AAPSClient**应用程序，则可以使用额外的短信指令。
 
-**SMS commands are really useful:**
-1. For routine remote control
+**SMS命令真的很有用：**
+1. 用于日常远程控制
 
-2. If you want to remotely bolus insulin
+2. 如果您想通过远程方式注射胰岛素
 
-3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
+3. 在互联网接收不良的区域，文本消息能够传输，但数据/互联网电话接收受限。 这在前往偏远地区（如露营、滑雪）时非常有用。
 
-4. If your other methods of remote control (Nightscout/AAPSClient) are temporarily not working
+4. 如果您的其他远程控制方法（Nightscout/AAPSClient）暂时无法工作
 
-## Safety First
+## 安全第一
 
-If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to export **AAPS** settings).
+如果您在**AAPS**中启用了**短信通信器**，请考虑到用于发送远程指令的手机可能会被盗，或者被其他人使用。 请始终至少使用PIN码锁定您的手机。 强烈推荐使用强密码和/或生物识别锁定，并确保这与APK主密码（导出**AAPS**设置所需的密码）不同。
 
-Additionally, it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. This way, you can use the second number to [disable](#SMSCommands-other) SMS communicator in case your main remote phone gets compromised.
+此外，建议允许[第二个电话号码](#SMSCommands-authorized-phone-numbers)用于短信指令。 这样，如果您的主远程手机被盗，您可以使用第二个号码[禁用](#SMSCommands-other)短信通信器。
 
-The default minimum time delay between bolus commands is 15 minutes. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
+默认的两次大剂量注射之间的最小时间间隔为15分钟。 出于安全考虑，您必须至少添加两个授权电话号码才能将此时间间隔缩短。 如果您在上次大剂量注射后的15分钟内再次尝试远程大剂量注射，您将收到响应“远程大剂量注射不可用。 请稍后再试”。
 
-AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+AAPS还会通过短信通知您，远程指令（如大剂量注射或配置切换）是否已执行。 建议至少设置两个不同的电话号码来接收确认短信，以防其中一个接收手机被盗。
 
-**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient, Nightscout...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
+**如果您通过短信指令进行大剂量注射，您必须单独输入碳水化合物（第二条短信、AAPSClient、Nightscout等）！**如果你未能这样做，那么IOB正确但COB比实际要低，这样**AAPS**会认为你有太多IOB，超出阈值的IOB会导致AAPS不执行你的修正大剂量。
 
-For the sensitive commands, an authenticator app with a time-based one-time password must be used to increase safety.
+对于敏感指令，必须使用带有基于时间的一次性密码的身份验证器应用程序来提高安全性。
 
-If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “[Reset Authenticators](#sms-commands-authenticator-setup)” in **AAPS** or send the SMS command “[SMS stop](#SMSCommands-other)”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
+如果您想移除某个照护者手机发送短信指令的能力，请在**AAPS**中使用紧急按钮“[重置身份验证器](#sms-commands-authenticator-setup)”或发送短信指令“[SMS停止](#SMSCommands-other)”。 通过重置身份验证器，您将使所有照护者的手机无效。 您需要重新设置它们。
 
-## Setup SMS commands
+## 短信指令使用
 
 ```{contents} The overall process is as follows
 :depth: 1
 :local: true
 ```
 
-### Authenticator setup
+### 身份验证器设置
 
-Two-factor authentication is used to improve safety.
+使用双重身份验证来提高安全性。
 
-On the caregiver phone, download (from the App store or Google play) and install an Authenticator app. Popular free apps are:
+在护理人员手机上，从应用商店（App store）或谷歌商店（Google play）下载并安装一个身份验证器应用程序。 流行的免费应用程序包括：
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
+这些身份验证器应用程序会生成一个有时间限制的、一次性的6位密码，类似于手机银行或电商APP。 您可以使用其他身份验证器应用程序，只要它支持RFC 6238 TOTP令牌。 Microsoft Authenticator不适用。
 
-### Check phone settings
+### 检查手机设置
 
-On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phone** are allowed.
+在手机上，转到**应用程序 > AAPS > 权限**。 确保**短信**和**电话**权限已允许。
 
 ![image](../images/remote-control-08.png)
 
-### Date and time synching
+### 日期和时间同步
 
-The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+两台手机的时间必须同步。 最佳做法是从网络自动设置。 时间差异可能会导致身份验证问题。
 
-On both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific device, you may need to try out different settings.
+在**AAPS**手机和照护者手机上，检查日期和时间是否同步。 具体如何操作取决于您的设备，您可能需要尝试不同的设置。
 
-Example (for Samsung S23): **Settings > General management > Date and time**: make sure that **Automatic date and time** is checked.
+示例（对于Samsung S23）：**设置 > 常规管理 > 日期和时间**：确保已勾选**自动日期和时间**。
 
-Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterward if it seems to be causing problems (ask for help if needed).
+如果手机设置为儿童帐户，某些选项可能因需要管理员通过家庭帐户而呈灰色。 在照护者/父母iPhone上，此日期和时间设置称为“自动设置”。 如果您不确定是否已同步手机，请不用担心，您可以设置短信指令并在之后进行故障排除（如有需要，请寻求帮助）。
 
 ### AAPS设置
 
-Now that the phone settings have been checked, in the **AAPS** app itself, use the [Config Builder](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
+现在已检查手机设置，在**AAPS**应用程序本身中，使用[配置构建器](../SettingUpAaps/ConfigBuilder.md)启用**短信通信器**模块。
 
-Go to the Preferences for SMS Communicator.
+转到短信通信器的首选项。
 
-Enable “allow remote commands via SMS”:
+启用“允许通过短信远程指令”：
 
 ![image](../images/remote-control-11.png)
 
 (SMSCommands-authorized-phone-numbers)=
-#### Allowed phone numbers
+#### 允许的手机号码
 
-Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
-* UK phone number: +447976304596
-* US phone number: +11234567890
-* FR phone number:  +33612344567
-* _etc._
+输入照护者手机号码。 包括国家代码，并排除手机号码前的第一个“0”，如下所示：
+* 中国手机号码：+18612345678
+* 美国手机号码：+11234567890
+* 法国手机号码：+33612344567
+* _等等。_
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format in the SMS Communicator tab.
+请注意，基于您的位置，号码前的“+”可能需要或不需要。 要确定这一点，请发送一个示例文本，这将在短信通信器标签中显示接收到的格式。
 
-If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select “OK”:
+如果您要添加多个手机号码，请用分号分隔它们，**号码之间不要有空格**（这很重要！）。 选择“确定”：
 
 ![image](../images/remote-control-12.png)
 
-#### Minutes between bolus commands
+#### 大剂量命令之间的时间间隔
 
-- You can define the minimum delay between two boluses issued via SMS.
-- For safety reasons you have to add at least two authorized phone numbers to edit this value.
+- 您可以定义通过短信发送的两次大剂量注射之间的最小延迟。
+- 出于安全考虑，您必须至少添加两个授权电话号码才能编辑此值。
 
-#### Additional mandatory PIN at token end
+#### 验证码末尾强制附加的PIN码
 
-For safety reasons, the reply code must be followed by a PIN. Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+出于安全考虑，回复代码后必须附加一个PIN码。 选择一个您（和其他照护者）在发送短信指令时在身份验证器代码后使用的PIN码。
 
-PIN requirements are:
+PIN码要求：
 
-* 3 to 6 digits
-* not the same digits (_i.e._ 1111 or 1224)
-* not sequential numbers (_i.e._ 1234)
+* 3到6位数字
+* 不是相同的数字（例如1111或1224）
+* 不是连续数字（例如1234）
 
 ![image](../images/remote-control-13.png)
 
 (sms-commands-authenticator-setup)=
-#### Authenticator setup
+#### 身份验证器设置
 
-* Follow the step-by-step instructions on the screen.
-* Open your installed authenticator app on the _caregiver’s phone_, set up a new connection and
-* Use the caregiver phone to scan the QR code provided by **AAPS**, when prompted.
-* Test the one-time passcode from the authenticator app on the caregiver phone followed by your PIN:
+* 遵循屏幕上的逐步说明。
+* 在_照护者手机_上打开已安装的身份验证器应用程序，设置新连接，
+* 并使用照护者手机扫描**AAPS**提供的QR码。
+* 测试从身份验证器应用程序获得的一次性密码，后面附上您的PIN码：
 
-Example:
-* The token from the authenticator app is 457051
-* Your mandatory PIN is 2401
-* Code to check: 4570512401
+示例：
+* 身份验证器应用程序的令牌是457051
+* 您的强制PIN码是2401
+* 要检查的代码是4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
+如果输入正确，红色的“错误的PIN码”文本将自动更改为绿色的“正确”。 **没有按钮可以按！ **流程现已完成，输入代码后没有“确定”按钮需要按：
 
 ![image](../images/remote-control-14.png)
 
-You should now be set up with SMS commands.
+现在您应该已设置好短信指令。
 
-Use button "Authenticator setup > Reset Authenticators" if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
+如果您想移除已配置的身份验证器，请使用按钮“身份验证器设置 > 重置身份验证器”。 （通过重置身份验证器，您将使所有已配置的身份验证器无效。 您需要重新设置它们。）
 
-## SMS commands usage
+## 设置短信指令
 
-### First steps using SMS commands
+### 使用短信指令的第一步
 
 1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
 

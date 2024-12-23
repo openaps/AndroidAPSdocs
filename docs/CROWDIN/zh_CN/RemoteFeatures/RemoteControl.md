@@ -150,151 +150,151 @@ Nightscout不仅是“云”中的服务器，还有专用的**Nightscout**应�
 
 详细查看Nightscout应用右上角的菜单：
 
-1. Careportal retrospective edit
-2. Turn on/off alarms
-3. Hamburger - for setting preferences
-4. Careportal - Log treatment - to send changes to AAPS
+1. Careportal回顾性编辑？
+2. 打开/关闭警报
+3. 汉堡菜单-用于设置首选项
+4. Careportal-记录治疗-发送更改到AAPS
 
 ![nightscout top bar](../images/remote-control-29.png)
 
-There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
+灰色选项卡（如果您点击选项卡，则会显示更多信息）上的屏幕上有大量关于**AAPS**系统状态的信息：
 
-1. 5min glucose trend
-2. Bolus wizard preview
-3. Press on Basal to see your current profile and basal information
-4. Time since latest CGM reading in AAPS
-5. **Pump**: insulin, battery % and when AAPS last connected to it
-6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
-7. Press on IOB to see split of basal and bolus insulin
-8. Insulin age in reservoir
+1. 5分钟血糖趋势
+2. 大剂量向导预览
+3. 点击“基础率”查看当前配置文件和基础信息
+4. 距离AAPS最新一次CGM读数的时间
+5. **泵**：胰岛素、电池电量和AAPS最后一次连接到它的时间
+6. AAPS最后一次刷新时间- 如果超过5分钟，可能表明AAPS手机与泵/CGM之间的连接存在问题
+7. 点击“IOB”查看基础和推注胰岛素的分配
+8. 储液器中的胰岛素使用时长
 9. 管路使用时间
-10. Battery status of AAPS phone
-11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+10. AAPS手机的电池状态
+11. 数据库大小。 如果它变得太大（仅限DIY Nightscout-托管服务会忽略），您可能会开始遇到连接问题。 您可以通过汉堡菜单中的管理工具菜单删除数据来清理数据库。
 
 ![image](../images/remote-control-30.png)
 
 ![image](../images/remote-control-31.png)
 
-Press "refresh" at the bottom of the page to close the popup.
+点击页面底部的“刷新”以关闭弹出窗口。
 
-### Sending treatments through the Nightscout app to AAPS
+### 通过Nightscout应用向AAPS发送治疗
 
-To set-up sending treatments from the **Nightscout** app to **AAPS**, on the main AAPS phone, go into the **AAPSClient** tab in the **AAPS** app. Open the right-hand dot menu, and open AAPSClientpreferences – synchronisation and select the relevant options in this menu. Set it to receive the different commands (temporary targets, etc) and also to synchronise profiles. If things don’t seem to be synchronised, go back to the AAPSClient tab and select “full synchronisation” and wait a few minutes.
+要通过**Nightscout**应用向**AAPS**发送治疗，请在主要的AAPS手机上，进入**AAPS**应用中的**AAPSClient**标签。 打开右侧的点菜单，然后打开AAPSClient选项–同步，并在此菜单中选择相关选项。 将其设置为接收不同的命令（临时目标等），并同步配置文件。 如果似乎没有同步，请返回AAPSClient标签并选择“全量同步”并等待几分钟。
 
-Nightscout on your iPhone has all the same functions as Nightscout on your PC. It allows you to send many commands to **AAPS**, but it does not allow you to send insulin boluses.
+iPhone上的Nightscout具有与PC上相同的所有功能。 它允许您向**AAPS**发送许多命令，但不允许您发送胰岛素推注。
 
-### Cancelling negative insulin to avoid repeat hypos
+### 取消负胰岛素以避免重复低血糖
 
-Although you cannot actually bolus insulin, you can however “announce” insulin through Nightscout as a “correction bolus”, although it is not delivered. Because AAPS now takes that fake insulin bolus into account, announcing insulin actually works to make AAPS _less aggressive_, and can be useful for cancelling negative insulin and preventing lows in the event that your profile has been too strong (for example due to prior exercise). You will want to check this for yourself in the presence of the **AAPS** phone, in case your **Nightscout** setup differs.
+虽然您实际上不能推注胰岛素，但您可以通过Nightscout“宣布”胰岛素作为“校正推注”，尽管它不会被输送。 由于AAPS现在会考虑那个假的胰岛素推注，宣布胰岛素实际上会使AAPS变得不那么激进，并且可以在配置文件过强（例如，由于先前的运动）的情况下用于取消负胰岛素并防止低血糖。 您需要在**AAPS**手机在场的情况下自行检查这一点，以防您的**Nightscout**设置有所不同。
 
 ![24-10-23, cancel negative insulin NS](../images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
 
 
-Some of the most useful **Nightscout** commands are described in the table below.
+一些最常用的**Nightscout**命令如下表所示。
 
-#### Nightscout command table
+#### Nightscout命令表
 
-| Most commonly used treatments                             | Function, example of when command is useful                                                                                                                                                                                                               |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Correction bolus**                                      | Allows you to announce **but <u>not</u> bolus** insulin.<br>Very useful for cancelling negative insulin to prevent a hypo,<br>for example in the middle of the night, if the profile has been too strong.                                     |
-| **Carb correction**                                       | Announce carbs now                                                                                                                                                                                                                                        |
-| **Temporary Target**<br>**Temporary Target cancel** | Allows temp targets to be set and cancelled.<br>Note that cancelling does not always work,<br>in this instance you can set a new target for a short time period (2 min)<br>which will then revert back to the normal target afterwards. |
-| **配置文件切换**                                                | Allows you to check the current profile which is running,<br>and switch to another profile, either permanently,<br>or for a defined length of time (mins).                                                                                    |
+| 最常用的治疗                       | 功能，命令何时有用的示例                                                                                    |
+| ---------------------------- | ----------------------------------------------------------------------------------------------- |
+| **校正大剂量**                    | 允许您“宣布”**但<u>不</u>推注**胰岛素。 <br>在夜间等情况下非常有用，用于取消负胰岛素以防止低血糖，<br>例如，如果配置文件过强。          |
+| **碳水化合物校正**                  | 宣布现在的碳水化合物                                                                                      |
+| **临时目标**<br>**取消临时目标** | 允许设置和取消临时目标。<br>请注意，取消并不总是有效，<br>在这种情况下，您可以为短时间段（2分钟）设置一个新目标，<br>之后它将恢复为正常目标。 |
+| **配置文件切换**                   | 允许您检查当前正在运行的配置文件，<br>并切换到另一个配置文件，可以是永久性的，<br>或者是定义的时间段（分钟）。                         |
 
 
 
-| Less widely used commands                                                                                                           | Function, example of when command is useful                                                                                                                              |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **BG check**                                                                                                                        | Send a BG check to AAPS.                                                                                                                                                 |
-| **Snack bolus**<br>**Meal bolus**<br>**Combo bolus**                                                                    | Can announce carbs (plus proteins and fat)<br> from 60 min in the past to 60 min in the future.<br>Combo bolus allows insulin announcement at the same time. |
-| **Announcement**<br>**Note**<br>**Question**<br>**Exercise**<br>**Open APS offline**<br>**DAD alert** | Add these info notes (DAD = diabetic dog alert).                                                                                                                         |
-| **Pump site change**<br>**Battery change**<br>**Insulin cartridge change**                                              | Announces these pump changes.                                                                                                                                            |
-| **CGM sensor start**<br>**CGM sensor insert**<br>**CGM sensor stop**                                                    | Announces these CGM changes.                                                                                                                                             |
-| **Temp basal start**<br>**Temp basal end**                                                                                    | Most useful in open looping.                                                                                                                                             |
+| 使用较少的命令                                                                                           | 功能，命令何时有用的示例                                                  |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| **BG检查**                                                                                          | 向AAPS发送BG检查。                                                  |
+| **小零食推注**<br>**餐食推注**<br>**组合推注**                                                     | 可以宣布碳水化合物（加上蛋白质和脂肪）<br>从过去60分钟到未来60分钟。组合大剂量允许同时宣告胰岛素用量。 |
+| **公告**<br>**笔记**<br>**问题**<br>**运动**<br>**Open APS离线**<br>**DAD警报** | 添加这些信息备注（DAD=diabetic dog alert（糖尿病狗警报？））。                    |
+| **输注部位更换**<br>**电池更换**<br>**储药器更换**                                                   | 宣布这些泵更换。                                                      |
+| **CGM传感器启动**<br>**CGM传感器植入**<br>**CGM传感器停止**                                          | 宣布这些CGM更改。                                                    |
+| **临时基础开始**<br>**临时基础结束**                                                                    | 在开环中最有用。                                                      |
 
-Read more about **Nightscout** options [here](https://nightscout.github.io/)
+阅读[此处](https://nightscout.github.io/)有关**Nightscout**选项的更多信息
 
-### Tips for getting the most out of the Nightscout app
+### 充分利用Nightscout应用的技巧
 
-1). If you get “stuck” on a page and want to be able to see the main screen again, just click “refresh” (bottom middle) and this will take you back to the **Nightscout** homepage with the BG graph.
+1). 如果您停留在某个页面并希望再次看到主屏幕，只需点击“refresh”（底部中间），这将带您回到显示BG图的**Nightscout**主页。
 
-To see the current profile which is running on the phone, press the various icons on the screen above the graph. More info (current carb ratio, sensitivity and timezone etc.) can be seen by pressing “basal” and “OpenAPS” gives info about the profile and current target etc. Both the phone battery% and the pump battery % can also be monitored. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
+要查看当前在手机上运行的配置文件，请点击屏幕上方图表上的各种图标。 通过点击“basal”可以查看更多信息（当前的碳水化合物比例、敏感性和时区等）。 “OpenAPS”提供了有关配置文件和当前目标等信息。 还可以监控手机和泵的电池。 BWP提供了有关算法根据IOB和COB对未来情况的看法的信息。
 
-#### Other icons in the menu: what does the pencil (edit) mean?
+#### 菜单中的其他图标：铅笔（编辑）是什么意思？
 
-You can (technically) use the edit pencil to move or delete bolus or correction treatments from the last 48h.
+您可以使用编辑铅笔（从技术上讲）来移动或删除过去48小时内的大剂量或校正治疗。
 
-More about this [here](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
+有关此功能的更多信息请见[此处](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
 
-Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with **AAPS** and we recommend making changes like this via the **AAPS** app directly.
+虽然这在删除宣布的（但未推注的）碳水化合物时可能很有用，但实际上它与**AAPS**配合得并不好，我们建议您直接通过**AAPS**应用进行此类更改。
 
 (RemoteControl_smartwatches)=
-## 4) Smartwatches
+## 4) 智能手表
 
-### Option 1) Controlling AAPS from a Wear OS Watch
+### 选项1) 从Wear OS手表控制AAPS
 
 ![Wear Remote 1](../images/Wear_Remote1.png)
 
-Once you have [setup **AAPS** on your watch](../WearOS/BuildingAapsWearOS.md), extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+一旦您在手表上[设置了**AAPS**](../WearOS/BuildingAapsWearOS.md)，您可以在[智能手表上操作Wear AAPS的详细信息](../WearOS/WearOsSmartwatch.md)中找到有关智能手表表盘及其功能的广泛信息。
 
-As a brief overview, the following functions can be triggered from the smartwatch:
+简而言之，可以从智能手表触发以下功能：
 
-* set a temporary target
+* 设置临时目标
 
-* use the bolus calculator (calculation variables can be defined in settings on the phone)
+* 使用大剂量计算器（计算变量可以在手机设置中定义）
 
-* administer eCarbs
+* 管理eCarbs
 
-* administer a bolus (insulin + carbs)
+* 管理大剂量（胰岛素+碳水化合物）
 
-* watch settings
+* 手表设置
 
-* status
+* 状态
 
-* check pump status
+* 检查泵状态
 
-* check loop status
+* 检查闭环状态
 
-* check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+* 检查和更改配置文件、CPP（Circadian Percentage Profile=时间偏移+百分比）
 
-* show TDD (Total daily dose = bolus + basal per day)
+* 显示TDD（每日总剂量=推注+每日基础量）
 
-* Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to the network)
+* 远程推注，其中护理人员和1型糖尿病儿童位于不同位置（如果手表和手机都连接到网络，这对于AAPS手表和AAPS手机是可能的）
 
-#### Communication from caregivers to the watch using other apps (like WhatsApp)
+#### 使用其他应用（如WhatsApp）从护理人员到手表的通信
 
-It is possible to add additional apps to the watch, like WhatsApp, for messaging (for example) between caregivers and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
+可以在手表上添加其他应用，如WhatsApp，用于（例如）护理人员和孩子之间的消息通信。 重要的是，手机只能关联一个Google账户，否则手表将无法传输这些数据。 您需要年满13岁才能拥有Samsung账户，并且这需要在与Android手机相同的电子邮件地址中设置。
 
-A video explaining getting WhatsApp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of WhatsApp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+一个视频展示了如何在Galaxy 4手表上设置WhatsApp进行消息传递（你无法获得WhatsApp的全部功能），[点击此处](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)查看。
 
-Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for WhatsApp messages to announce with a slight vibration, and also for the WhatsApp message to display over the existing watchface.
+通过在手机上的**Galaxy 可穿戴**应用和手表上进行调整，可以实现WhatsApp消息以轻微震动提醒，并可在当前表盘上显示WhatsApp消息。
 
-### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
+### 选项2）手表上的**AAPS**，用于远程控制手机上的**AAPS**
 
-Similarly to using a follower phone with either AAPSClient, Nightscout or SMS commands (link to sections) a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via bluetooth and does not require an authenticator code. As a side-note, if both smartwatch and **AAPS** phone linked by bluetooth are also on a Wi-Fi/Cellular data network, the watch will also interact with the **AAPS** phone, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations and which can useful in circumstances where the T1D child is in school.
+与使用AAPSClient、Nightscout或SMS命令的关注者手机类似（链接到相关部分），智能手表也可以用于远程控制**AAPS**并提供完整的个人档案数据。 与使用关注者手机的一个关键区别在于，智能手表与**AAPS**手机之间的连接是通过蓝牙实现的，不需要验证码。 作为补充说明，如果通过蓝牙连接的智能手表和**AAPS**手机同时也在Wi-Fi/蜂窝数据网络上，手表也可以与**AAPS**手机进行交互，从而实现更远的通信范围。 这包括在**AAPS**手表佩戴者（如看护者）和T1D儿童（携带**AAPS**手机）处于不同位置时进行远程给药，这在T1D儿童上学时等情况下特别有用。
 
-A remote control smartwatch is therefore often useful in any situation where:
+因此，遥控智能手表在以下任何情况下通常都很有用：
 
-a)  **AAPSClient**/Nightscout/**SMS** commands cannot work; or
+a) **AAPSClient**/Nightscout/**SMS**命令无法工作时；或
 
-b)  The user wishes to avoid the need for authenticator code (as required for the follower phone with inputting data, selecting TT or entering carbs).
+b) 用户希望避免使用验证码（如随从手机在输入数据、选择治疗方案或输入碳水化合物时需要验证码）。
 
-A smartwatch needs to have **Android wear** software (ideally 10 or higher) to be able to control **AAPS**. Please check the technical specifications of the watch, and check the [Phones page](../Getting-Started/Phones.md). Search, or ask in the **AAPS**  Facebook/Discord groups if unsure.
+智能手表需要拥有**Android wear**软件（理想版本为10或更高）才能控制**AAPS**。 请检查手表的技术规格，并查阅[手机页面](../Getting-Started/Phones.md)。 如果不确定，请在**AAPS**的Facebook/Discord群组中搜索或询问。
 
-Specific How-to guides for setting up **AAPS** on the popular [Samsung Galaxy Watch 4 (40mm) is given below. The [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) watch is also a popular choice. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
+关于在流行的[Samsung Galaxy Watch 4（40mm）上设置**AAPS**的具体操作指南见下文。 [佳明（Garmin）](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)手表也是一个受欢迎的选择。 如果您有设置其他智能手表的经验，并且认为这对其他人有帮助，请将这些信息添加到这些页面中[编辑文档](../SupportingAaps/HowToEditTheDocs.md)，以便与更广泛的**AAPS**社区分享您的发现。
 
-### Option 3) AAPSClient on a watch for remote control of **AAPS** on a phone
+### 选项3）手表上的AAPSClient用于远程控制手机上的**AAPS**
 
 ![Wear Remote 2](../images/Wear_Remote2.png)
 
-The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [Github](https://github.com/nightscout/AndroidAPS/releases/).
+手表的软件，即**AAPSClient** Wear apk，可以直接从[Github](https://github.com/nightscout/AndroidAPS/releases/)下载。
 
-To download the software, click on the required app (in this screenshot, either **wear-aapsclient-release_3.2.0.1** or **wear-aapsclient2-release_3.2.0.1** would work, there are two versions in case you need a copy for a second caregiver watch):
+要下载软件，请点击所需的应用（在此屏幕截图中，**wear-aapsclient-release_3.2.0.1**或**wear-aapsclient2-release_3.2.0.1**均可使用，有两个版本可供选择，以防您需要为第二个看护者手表准备一份副本）：
 
 ![image](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 
 
-Then "save as" and save the file to a convenient location on your computer:
+然后点击“另存为”，并将文件保存到计算机上的方便位置：
 
 
 ![image](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
@@ -304,7 +304,7 @@ Then "save as" and save the file to a convenient location on your computer:
 
 
 
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
+**AAPSClient** wear apk可以通过与**AAPS** Wear应用相同的方式传输到您的手机并传输到手表上，具体操作详见[将手机上的AAPS Wear应用传输到您的AAPS手机](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)。  
 
 
 
