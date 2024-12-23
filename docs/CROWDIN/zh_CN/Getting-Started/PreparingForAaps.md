@@ -12,7 +12,7 @@
 
 (preparing-safety-first)=
 
-## Safety First
+## 安全第一
 “能力越大，责任越大…”
 
 ### 技术安全
