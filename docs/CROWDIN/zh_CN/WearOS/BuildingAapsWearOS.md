@@ -34,4 +34,4 @@ Wear apk的构建过程与“完整”手机apk的构建过程相似。
 
 `C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
 
-将不需要的.json文件从文件夹中删除或移出。 然后再次尝试构建**AAPS** Wear应用。 If that doesn't work, the more detailed [troubleshooting guide](../GettingHelp/TroubleshootingAndroidStudio.md) will help you to identify the specific file causing the issue, which could also be your keystore file. 
+将不需要的.json文件从文件夹中删除或移出。 然后再次尝试构建**AAPS** Wear应用。 如果这不起作用，更详细的[故障排除指南](../GettingHelp/TroubleshootingAndroidStudio.md)将帮助您确定导致问题的具体文件，这也可能是您的keystore文件。 
