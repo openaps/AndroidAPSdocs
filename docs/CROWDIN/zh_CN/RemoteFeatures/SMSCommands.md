@@ -133,27 +133,27 @@ PIN码要求：
 
 ### 使用短信指令的第一步
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
+1) 为了检查是否已正确设置所有内容，请通过照护者手机向**AAPS**手机发送“bg”作为短信测试连接。 您应该收到类似以下内容的回复：
 
 ![image](../images/remote-control-15.png)
 
-If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
+如果您没有收到任何响应，请按照下面的[故障排除](#SMSCommands-troubleshooting)部分检查一下。
 
-2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
+2) 现在尝试一个需要身份验证的短信指令，_例如_“target hypo”。 照护者手机将收到一条文本回复，提示您输入身份验证器中的**六位身份验证密码**，后面附上只有照护者/跟随者知道的附加**PIN码**（假设您的PIN码只有4位数字，则总共为10位数字）。
 
-When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
+当您首次尝试发送短信指令时，请在**AAPS**手机旁尝试，以查看其工作方式：
 
 ![image](../images/remote-control-16.png)
 
-The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
+照护者手机将收到来自**AAPS**的短信回复，确认远程短信指令是否已成功执行。
 
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message. See [Troubleshooting](#SMSCommands-troubleshooting) below for common errors.
+如果您的指令成功，您将收到确认回复。 如果出现问题，您将收到错提示误消息。 有关常见错误，请参阅下面的[故障排除](#SMSCommands-troubleshooting)。
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**提示**：如果您的手机（每部使用的手机）估计会发送大量短信，则无限制短信套餐可能很有用。
 
-### Delivering mealtime boluses through SMS commands
+### 通过短信发送餐时大剂量注射命令
 
-Remote bolusing of insulin can _only_ be done via **SMS Commands**, it cannot be actioned through NightScout or AAPSClient. Carbs however, can be announced through any of the three methods. It is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+胰岛素的远程大剂量注射**只能**通过<1>短信指令</1>进行，不能通过Nightscout或AAPSClient执行。 然而，碳水化合物可以通过这三种方法中的任何一种宣布。 It is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
 
 1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to using the “syringe” icon in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to using the “carbs” tab in **AAPS**.
 
