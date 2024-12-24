@@ -171,7 +171,7 @@ PIN码要求：
 
 指令必须以英文发送，如果回复字符串已翻译，则回复将以您的本地语言显示。 指令不区分大小写，您可以使用小写或大写。
 
-![SMS Commands Example](../images/SMSCommands.png)
+![短信命令示例](../images/SMSCommands.png)
 
 下面的**短信指令表**显示了所有可能的短信指令。 _示例值_旨在帮助理解。 指令具有与**AAPS**应用程序本身允许的相同范围的可能值（目标、百分比配置等）。
 
@@ -184,7 +184,7 @@ PIN码要求：
 
 需要更多安全性的指令需要输入密码，例如：
 
-![SMS authenticated for markdown-smaller](../images/remote-control-07.png)
+![为markdown缩小的短信已验证](../images/remote-control-07.png)
 
 下面表格中的*Auth*列指示每个指令是否需要这样的强身份验证。
 
@@ -298,12 +298,12 @@ AAPS只会执行最新的命令。 因此，如果您输入了“bolus 1.5”，
 ### SMS命令完全没有回复
 
 在护理者手机和/或**AAPS**手机上，尝试禁用以下选项：
-* **作为聊天消息发送** ![Disable SMS as chat message](../images/SMSdisableChat.png)
+* **作为聊天消息发送** ![禁用SMS作为聊天消息](../images/SMSdisableChat.png)
 * 如果使用Android Messages应用或Google Messages应用，禁用RCS消息：
   - 打开Messages中的特定SMS对话
   - 选择右上角的点状选项
   - 选择“详细信息”
-  - 激活“仅发送SMS和MMS消息” ![Disable RCS as chat message](../images/SMSdisableRCS.png)
+  - 激活“仅发送SMS和MMS消息” ![禁用RCS作为聊天消息](../images/SMSdisableRCS.png)
 
 ### 执行命令时出错
 
@@ -322,16 +322,16 @@ AAPS只会执行最新的命令。 因此，如果您输入了“bolus 1.5”，
 
 ### 一旦命令经过身份验证，我可以停止它吗？
 
-您不能。 但是，您可以在**AAPS**手机上快速通过取消输注弹窗来取消通过SMS发送的输注。 Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
+您不能。 但是，您可以在**AAPS**手机上快速通过取消输注弹窗来取消通过SMS发送的输注。 许多SMS命令（除了输注和碳水化合物输入）都可以轻松反转，或者在出现错误时采取措施减轻意外影响。
 
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
+对于输注和碳水化合物输入中的错误，您仍然可以采取行动。 例如，如果您宣布了20克碳水化合物，但您的孩子只吃了10克，并且您（或现场的护理者）无法直接在**AAPS**手机上删除该治疗，您可以设置一个高的临时目标，或设置降低的模式，以使**AAPS**不那么激进。
 
-### Multiple SMS
+### 多条SMS
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip+, for example. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
+如果您反复收到相同的消息（例如，模式切换），则可能是您意外地与其他应用程序设置了循环条件。 这可能是xDrip+等应用程序。 如果是这样，请确保xDrip+（或任何其他应用程序）不上传治疗到NightScout。
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+如果其他应用程序安装在多部手机上，请确保在所有手机上都停用上传。
 
-### I am getting far too many text messages from SMS Commands. Can I reduce the frequency, or make them stop?
+### 我从SMS命令中收到了太多短信。 我可以减少频率或让它们停止吗？
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
+使用SMS命令可能会从**AAPS**手机向护理者的手机生成大量自动消息。 如果您在**AAPS**中设置了自动化，您还会收到消息，例如“泵中的基础模式已更新”。 如果您的AAPS手机计划（以及每个护理者手机）拥有无限短信额度会很有用，并且要在所有手机上停用短信通知、警报或振动。 如果要使用SMS命令，就不可能不收到这些更新。 因此，您可能需要一种与孩子直接沟通的替代方式（如果他们年龄足够大），而不是使用SMS。 **AAPS**护理者常用的替代通信应用程序包括Whatsapp、Lime、Telegram和Facebook Messenger。
