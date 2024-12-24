@@ -184,7 +184,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 一旦您全面使用**AAPS**系统，您仍然需要定期微调您的设置，以改善您的整体糖尿病管理。
 
-## Requirements
+## 要求
 
 ### 医疗考虑
 
