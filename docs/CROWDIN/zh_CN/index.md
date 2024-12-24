@@ -97,7 +97,7 @@ AAPS 界面 <./DailyLifeWithAaps/AapsScreens.md>
 AAPS关键特性 <./DailyLifeWithAaps/KeyAapsFeatures.md>
 COB计算 <./DailyLifeWithAaps/CobCalculation.md>
 敏感性检测 <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-切换配置文件 & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+切换配置文件 & 配置文件百分比 <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
 临时目标 <./DailyLifeWithAaps/TempTargets.md>
 扩展碳水 <./DailyLifeWithAaps/ExtendedCarbs.md>
 自动化 <./DailyLifeWithAaps/Automations.md>
@@ -115,13 +115,13 @@ COB计算 <./DailyLifeWithAaps/CobCalculation.md>
 远程控制 <./RemoteFeatures/RemoteControl.md>
 手机短信命令 <./RemoteFeatures/SMSCommands.md>
 仅跟踪 <./RemoteFeatures/FollowingOnly.md>
-安卓自动化 <./RemoteFeatures/AndroidAuto.md>
+Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
 ```{toctree}
 :caption: 6) Wear OS 智能手表
 
-适用于Wear OS的AAPS <./WearOS/BuildingAapsWearOS.md>
+构建AAPS Wear OS应用 <./WearOS/BuildingAapsWearOS.md>
 使用智能手表 <./WearOS/WearOsSmartwatch.md>
 远程控制 <./RemoteFeatures/RemoteControlWearOS.md>
 自定义表盘参数 <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
