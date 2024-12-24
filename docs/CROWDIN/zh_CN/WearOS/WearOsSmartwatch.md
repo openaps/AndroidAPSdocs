@@ -1,45 +1,45 @@
-# Setup AAPS on your Wear OS watch
+# 在您的Wear OS手表上安装AAPS
 
-The instructions below apply to the **AAPS Wear** apk that you need to build (see [here](../WearOS/BuildingAapsWearOS.md) if you haven't yet) as you've built the phone **AAPS** apk.
+下面的说明适用于您需要构建的AAPS Wear apk（如果您尚未构建，请参阅[此处](../WearOS/BuildingAapsWearOS.md)），就像您已经构建了手机AAPS apk一样。
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk that are directly available in [GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4). Each **Wear** app will communicate with its matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data.
+您还可以使用一些信息，这些信息适用于直接在[GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)上可用的**AAPSClient**和**PumpControl** **Wear** apk。 每个Wear应用都将与其匹配的手机应用进行通信。 例如：AAPSClient Wear应用可用于显示AAPSClient数据，而不是AAPS数据。
 
 (BuildingAapsWearOs-WearOS5)=
 
 ```{admonition} Android Wear OS 5
 :class: warning
-Installing the AAPS Watch Face has to be done with [Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk) after installing the Wear app.<br>
-Accidental change of the Watch Face to another one requires the procedure above to be repeated.<br>
-Changing the dedicated Watch Face parameters like: Dark, Watchdivider, etc. is not possible.
+安装AAPS表盘必须通过[Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk)，在安装Wear应用之后进行。 <br>
+如果意外更改了表盘为其他表盘，则需要重复上述过程。 <br>
+更改专用表盘参数，如：暗色模式、表盘分隔符等，是不可行的。
 ```
 
-## How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
+## 如何在Samsung Galaxy 4智能手表上设置AAPS
 
-This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
+本节假设您完全不了解智能手表，并为您提供有关热门手表**Galaxy Watch 4**的基本指导，随后是逐步在手表上安装**AAPS**的指南。
 
-_This guide assumes the Samsung Galaxy watch you are setting up is running Wear OS version 3 or lower._ If you are setting up a watch running Wear OS 4/OneUI 5 or later, you will need to use a new ADB pairing process, this is explained in the Samsung software on your phone and will be updated here in due course.
+_本指南假设您要设置的Samsung Galaxy手表运行的是Wear OS版本3或更低版本。 _ 如果您要设置运行Wear OS 4/OneUI 5或更高版本的手表，您需要使用新的ADB配对过程，这将在您手机上的Samsung软件中解释，并将在适当时候在此处更新。
 
-Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+这里是针对[Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU)和[Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)的基本设置指南。
 
-## Basic smartwatch familiarity
+## 智能手表基本操作
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable" “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+在根据上面的视频完成手表的基本设置后，请转到手机上的Play商店并下载以下应用：“Galaxy Wearable”、“Samsung”以及“Easy Fire tools”或“Wear Installer 2”。
 
-There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
+YouTube上有许多第三方视频可以帮助您熟悉新智能手表，例如：
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install a further 3rd app “galaxy watch 4 plugin” from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+“Galaxy Wearable”应用中也包含有说明手册部分。 在手机上打开Galaxy Wearable，搜索手表，尝试将手表与手机配对。 根据您的版本，这可能会提示您从Play商店安装进一步的第三方应用“galaxy watch 4 plugin”（下载需要一些时间）。 在手机上安装此应用，然后再次尝试在Wearable应用中配对手表和手机。 完成一系列菜单并勾选各种偏好设置。
 
-## Setting up a Samsung account
+## 设置Samsung账户
 
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 363 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+您需要确保用于设置Samsung账户的电子邮件账户的出生日期表明用户年满13岁，否则Samsung权限将非常难以批准。 如果您为未满13岁的孩子提供了一个Gmail账户，并且正在使用该电子邮件地址，则不能简单地将其更改为成人账户。 一种解决方法是修改当前出生日期，使其当前年龄为12岁363天。 第二天，账户将转换为成人账户，您可以继续设置Samsung账户。
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
-## Transferring the **AAPS** Wear app onto your **AAPS** phone
+## 将**AAPS** Wear应用传输到您的**AAPS**手机上。
 
-Loading the Wear.apk from Android Studio to your phone can be done either by:
+您可以通过以下方式之一将Wear.apk从Android Studio加载到手机上：
 
 a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
 
