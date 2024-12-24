@@ -122,7 +122,7 @@ Android Auto <./RemoteFeatures/AndroidAuto.md>
 :caption: 6) Wear OS 智能手表
 
 构建AAPS Wear OS应用 <./WearOS/BuildingAapsWearOS.md>
-使用智能手表 <./WearOS/WearOsSmartwatch.md>
+在您的Wear OS手表上安装AAPS <./WearOS/WearOsSmartwatch.md>
 远程控制 <./RemoteFeatures/RemoteControlWearOS.md>
 自定义表盘参数 <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
 切换自定义表盘 <./ExchangeSiteCustomWatchfaces/index.md>
