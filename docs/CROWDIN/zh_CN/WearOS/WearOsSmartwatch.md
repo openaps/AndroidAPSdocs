@@ -77,104 +77,93 @@ Wear Installer 2由[Malcolm Bryant](https://www.youtube.com/@Freepoc)开发，�
 在“开发者选项”中，打开“ADB调试”和“无线调试”。 后者选项将显示手表的IP地址，该地址的最后两位数字每次手表与新手机配对时都会更改。 它看起来会像这样：**167.177.0.20.** 5555（忽略最后4位数字）。 请注意，此地址的最后两位数字（此处为“20”）在每次您为AAPS更换新手机时都会更改。  
 
 ![24-10-23, watch ADB debug pic](../images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
-
-STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Then click the plug socket icon on the top right.  
+3) 将IP地址（例如**167.177.0.20**）输入到手机上的Easy Fire tools中（进入左侧的汉堡菜单，设置并输入IP地址）。 然后点击右上角的插头插座图标。  
 
 ![image](../images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
-
-
 ![image](../images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
-
-
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
-
-Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch: 
-
+4) 按照[此处](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true)的说明，使用Easy Fire tools将Wear.apk侧载（即传输）到智能手表上
+点击应用中右上角的的“插头”图标，以便将Wear OS.apk上传到智能手表：
 ![image](../images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
-
-
- Next step > accept the authorisation request on the smartwatch
-
-
+下一步>在智能手表上接受授权请求
 ![image](../images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
 
 ```
 
 
-## Setting up the connection between the watch and the phone from **AAPS**
+## 从**AAPS**设置手表与手机的连接
 
-The final step is to configure **AAPS** on the phone to interact with **AAPS** Wear” on the watch. To do this, enable the Wear plugin in Config Builder:
+最后一步是在手机上配置**AAPS**以与手表上的**AAPS** Wear进行交互。 为此，请在配置构建器中启用Wear插件：
 
-* Go to the **AAPS** app on the phone
+* 打开手机上的**AAPS**
 
-* Select > Config Builder in the left-hand Hamburger tab
+* 在左侧的汉堡菜单中选择>配置构建器
 
-* Tick for Wear selection under General
+* 在“常规”下勾选Wear选项
 
 ![Wear OS](../images/WearOS.png)
 
-To change to a different **AAPS**  watchface, press on the home screen of the watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces.
+要更改为不同的**AAPS**表盘，请按手表的主屏幕，它将转到“自定义”。 然后向右滑动，直到您看到所有**AAPS**表盘。
 
-If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
+如果已成功将**AAPS** Wear.apk侧载到智能手表上，它将如下所示：
 
 
 ![24-10-23, successful galaxy watch photo](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
-### Troubleshooting the **AAPS** watch- **AAPS** phone communication
+### 排查**AAPS**手表与**AAPS**手机之间的通信问题
 
-1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
-2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
-3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
-4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
-5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** apk version onto the watch. If your AAPS wear.apk version is listed as any of the following: a) “wear-AAPSClient-release’; b) ‘wear-full-release.aab’; or c) the word ‘debug’ appears in the title, you have not selected the correct Wear OS apk version during the build.
-6.  Check that your router is not isolating the devices from one another.
+1.  如果EasyFire tools无法连接或您收到“授权失败”>检查IP地址是否正确输入。
+2.  检查智能手表是否已连接到互联网（而不仅仅是通过蓝牙连接到手机）。
+3.  检查**AAPS**手机和智能手表是否已在Samsung应用中配对或链接。
+4.  重启手机和智能手表（即关闭并重新打开）也可能有所帮助。
+5.  假设您已成功将Wear.apk下载到手机上，但未收到任何BG数据，_请检查_您是否已将正确的**AAPS** apk版本侧载到手表上。 如果您的AAPS wear.apk版本列为以下任一项： a)“wear-AAPSClient-release”； b)‘wear-full-release.aab’；或 c)标题中出现“debug”， 则您在构建过程中未选择正确的Wear OS apk版本。
+6.  检查您的路由器是否将设备彼此隔离。
 
-More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+更多故障排除提示可在此处找到[here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
 (WearOS_changing-to-AAPS-watchface)=
 
-## Changing to an AAPS Watchface on your WearOS watch
+## 在您的WearOS手表上更改为AAPS表盘
 
-There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
+在标准构建的AAPS Wear OS APK中有多个表盘可供选择。 一旦您在手表上安装了AAPS Wear APK，它们将可用。 以下是选择表盘的步骤：
 
-1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
+1. 在您的手表上（假设是WearOS），长按当前表盘以调出表盘选择器屏幕，并一直向右滚动，直到您看到“添加表盘”按钮并选择它
 
 ![Screenshot_20231123_124657_sysui](../images/efd4268f-0536-4a31-9ba1-f98108f32483.png)
 
-2. Scroll to the bottom of the list until you see the "Downloaded" section and find "AAPS (Custom)" and click the middle of the image to add it to your shortlist of current watchfaces. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
+2. 滚动到列表底部，直到您看到“已下载”部分，找到“AAPS（自定义）”并点击图像中间部分将其添加到当前表盘的短列表中。 不用担心“AAPS（自定义）”表盘的当前外观，我们将在下一步中选择您喜欢的皮肤。
 
 ![Screenshot_20231123_124619_sysui](../images/036dc7c4-6672-46c8-b604-8810a16a2eb3.png)
 
-3. Now open AAPS on your phone and go to the Wear plugin (enable it in Config Builder (under Synchronization) if you don't see it in your current plugins along the top).
+3. 现在，在手机上打开AAPS，并转到Wear插件（如果您在当前的插件中看不到它，请在配置构建器（在“同步”下）中启用它）。
 
 ![Screenshot_20231123_090941_AAPS](../images/5df23fa3-791b-4c9a-999a-251391a82835.png)
 
-4. Click on the "Load Watchface" button and select the watchface that you like
+4. 点击“加载表盘”按钮，并选择你喜欢的表盘。
 
 ![Screenshot_20231123_130410_AAPS](../images/adde2eca-1df7-4382-b9ab-346819c35d9d.png)
 
-5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
+5. 检查您的手表，“AAPS（自定义）”表盘现在应该显示您选择的皮肤。 给它几秒钟刷新。 您现在可以通过长按表盘，然后点击表盘图像上的“自定义”按钮来自定义小部件等。
 
-## AAPSv2 watchface - Legend
+## APSv2 watchface - Legend
 
 ![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - 上次闭环运行以来的时间
 
-B - CGM reading
+B - 持续葡萄糖监测（CGM）读数
 
-C - minutes since last CGM reading
+C - 自上次CGM读数以来的分钟数
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - 与上次CGM读数相比的变化（以mmol或mg/dl为单位）
 
-E - average change CGM reading last 15 minutes
+E - 过去15分钟内CGM读数的平均变化
 
-F - phone battery
+F - 手机电量
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - 基础率（标准速率期间以U/h显示，临时基础率（TBR）期间以%显示）
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - 血糖互动（BGI）-> 仅基于胰岛素活性，血糖“应该”上升或下降的程度。
 
-I - carbs (carbs on board | e-carbs in the future)
+I - 碳水化合物（活性碳水化合物|未来的e-carbs）
 
-J - insulin on board (from bolus | from basal)
+J - 活性胰岛素（来自大剂量|来自基础量）
