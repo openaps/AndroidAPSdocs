@@ -69,7 +69,13 @@ The color of the BG value reflects the status to the defined [range](#Preference
    * red = below range
    * yellow = above range 
 
-The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+![Deltas](../images/Home_Delta.png)
+
+The blocks in the middle shows:
+
+1.  how many minutes since last **CGM** reading
+2.  differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
+   Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
 
 (AapsScreens-loop-status)=
 #### Loop status
