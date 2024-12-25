@@ -1,114 +1,113 @@
-# Following AAPS (no interaction with the AAPS system)
+# 仅跟踪AAPS（不与AAPS系统交互）
 
-In addition to the range of possibilities available for remotely controlling _and_ following **AAPS** which are described at [remote control](../RemoteFeatures/RemoteControl.md), there are several additional apps and devices which the community has developed, to simply follow numbers (glucose levels and other information), without interacting with **AAPS**.
+除了远程控制**AAPS**和跟踪其数据的各种可能性（如[远程控制](../RemoteFeatures/RemoteControl.md)所述）之外，社区还开发了多种应用程序和设备，用于仅跟踪数字（如血糖水平和其他信息），而无需与**AAPS**进行交互。
 
-A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage.
+关于跟踪**AAPS**的广泛选项，可以访问[Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#)网页以获取概览。
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-The most common strategies used in combination with **AAPS** are explained in more detail below.
+下面详细解释了与**AAPS**结合使用的最常见策略。
 
-## Smartphone apps
+## 智能手机应用程序
 
 ```{contents} These are some of the main “follower” apps used by **AAPS** users. All of these apps are “free”: 
 :depth: 1
 :local: true
 ```
 
-### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) and [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
+### Dexcom Follow（[Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) 和 [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080)）
 
 ![image](../images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
-* Dexcom Follow is compatible with a wide range of handsets (both Android and iPhone). Dexcom Follow can be used even if you are not using the official Dexcom app to receive sensor data.
+* Dexcom Follow与多种手机（Android和iPhone）兼容。 即使您不使用官方Dexcom应用程序接收传感器数据，也可以使用Dexcom Follow。
 
-* Many caregivers are familiar with Dexcom Follow, preferring its clear interface over something more complicated.
+* 许多护理人员熟悉Dexcom Follow，并更喜欢其简洁的界面。
 
-* Dexcom Follow is very good for teachers/grandparents and people who know very little about diabetes and sugar levels. It has customisable alerts (BG level, what sound to play etc.). Alarms can be completely switched off if needed, which is very useful if you have a sensor which is still settling down and creating multiple fake lows.
+* Dexcom Follow非常适合教师/老人和对糖尿病和血糖水平了解很少的人。 它具有可定制的警报（血糖水平、警报音等）。 如果需要，可以完全关闭警报，这对于仍在适应中并产生多个假低值的传感器非常有用。
 
-#### Setting up Dexcom Follow: how-to-guide
+#### 设置Dexcom Follow：操作指南
 
-If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app. You should also be able to send invitations to Dexcom Follow from xDrip+ (settings - Cloud upload - Dexcom share server upload, see instructions here:
+如果您使用非官方的Dexcom应用程序BYODA接收传感器数据，您可能能够从BYODA应用程序内发送邀请给跟踪者。 您还可以从xDrip+发送邀请到Dexcom Follow（设置-云上传-Dexcom Share服务器上传，具体说明请参考：
 
 https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
-You cannot send invite emails to Dexcom followers anymore from these third-party apps. In xDrip+ the invite request will just result in the message “invite not sent”.
+从第三方应用程序中不能再向Dexcom跟踪者发送邀请电子邮件。 在xDrip+中，邀请请求只会显示“邀请未发送”的消息。
 
-You must install the official Dexcom app, send the invite, and then uninstall the official app.
+您必须安装官方“Dexcom”应用程序，发送邀请，然后卸载官方应用程序。
 
-The steps to do this are as follows:
+执行此操作的步骤如下：
 
-1)  Install the official “Dexcom” app on _any_ smartphone (Android/iPhone), this can be the Follower phone, if it is more convenient. 2)  Log in with your Dexcom username and password, this is the same login details you would use for Dexcom Clarity, if you are already a current Dexcom/Clarity customer. If you don’t have a Dexcom login, there is the option to create a new login at this point.   
-3)  Swipe through the introduction menus. 4)  Add “no code” for the sensor code. 5)  Under Transmitter SN select “enter manually” and enter any valid transmitter code (use one of your expired transmitter codes, if you know one, so it doesn’t interfere with the running of your current transmitter, they follow a specific format of certain numbers and letters: “NLNNNL” and only use certain combinations, so it’s easiest to use one you already know is valid). 6)  Once the app is trying to find the transmitter and sensor, you will be able to invite followers: select the small three dots in the top left of the app, and add new follower. You can also use this if one of your followers has changed their handset and needs a fresh invite, here you can delete them from the follower list and resend a new invite email for them to use on their new handset. 7)  On the Follower phone, install Dexcom Follow by downloading it from the App Store (iPhone) or Play (Android). Set up the Dexcom Follow app, and you will be prompted to open your email to find the invite to be a Follower.    
-8)  You can now delete the official Dexcom G6 app.
+在_任何_智能手机（Android/iPhone）上安装官方的“Dexcom”应用程序，如果更方便，这可以是关注者的手机。 2）使用您的Dexcom用户名和密码登录，这与您用于Dexcom Clarity的登录详细信息相同（如果您已经是Dexcom/Clarity客户）。 如果您没有Dexcom登录信息，此时可以选择创建一个新登录。 3）滑动浏览介绍菜单 4) 在传感器代码处添加“无代码”。 5) 在“发射器序列号 (Transmitter SN)”下选择“手动输入 (enter manually)”，并输入任何有效的发射器代码（如果您知道，可以使用您已过期的发射器代码之一，这样就不会干扰您当前发射器的运行，它们遵循特定格式的数字和字母组合：“NLNNNL”，并且只使用某些特定组合，因此使用您已知的有效代码是最简单的）。 6)  一旦应用程序正在尝试查找发射器和传感器，您将能够邀请跟踪者：选择应用程序左上角的三个小点，并添加新跟踪者。 如果其中一个跟踪者更换了手机并需要新的邀请，您也可以在此处从跟踪者列表中删除他们，并为他们发送新的邀请电子邮件以在新手机上使用。 在跟踪者手机上，从App Store（iPhone）或Play（Android）下载并安装Dexcom Follow。 安装Dexcom Follow应用程序，系统会提示您打开电子邮件以找到成为跟踪者的邀请。    
+8) 现在你可以删掉官方的 Dexcom G6 应用。
 
-For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip+, depending on which app you are using.
+对于Dexcom Follow，传感器数据将从**AAPS**手机导出，直接从BYODA或通过xDrip+，具体取决于您使用的应用程序。
 
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
 ![image](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
 
-Pros (as reported by users):
+优点（用户报告）：
 
-* Available in the [app store](https://apps.apple.com/us/app/nightguard/id1116430352), simple, user-friendly interface.
+* 在[App Store](https://apps.apple.com/us/app/nightguard/id1116430352)上可用，界面简洁、用户友好。
 
-* Swipe button or shake phone to snooze alarms at different intervals ranging from 5 min to 24 hours
+* 通过滑动按钮或摇晃手机，可以在5分钟到24小时的不同间隔内延迟警报。
 
-* Customize alarms (high, low alerts, missed readings when no data for 15-45 minutes).
+* 可定制警报（高低警报、15-45分钟内无数据时的缺失读数）。
 
-* Fast rise/drop over 2-5 consecutive readings (you choose). Can also choose the delta between two individual readings
+* 快速上升/下降（连续2-5次读数，您可选择）。 还可以选择两次单独读数之间的差值。
 
-* Smart snooze so doesn't alert if levels are moving in right direction
+* 智能延迟，如果水平朝正确方向移动则不会发出警报。
 
-* There is a Care tab which appears to enable you to set a new temp target for a certain duration, delete the temp target or enter carbs.
+* 有一个“Care”选项卡，似乎允许您为特定持续时间设置新的临时目标、删除临时目标或输入碳水化合物。
 
-Cons (as reported by users)
+缺点（用户报告）：
 
-* Only available for iOS
+* 仅适用于iOS。
 
-* The TT shows as 5 mmol regardless of which TT level is set
+* 无论设置哪个TT级别，TT都显示为5 mmol。
 
-* Never shows Temp Basal rate even though it shows TB
+* 从不显示临时基础率，尽管它显示TB。
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
 ![image](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
 
 
-* Nightwatch markets itself as a Nightscout client and monitors the user’s Nightscout glucose levels on either Android phone or tablet.
+* Nightwatch自称是Nightscout客户端，可在Android手机或平板电脑上监控用户的Nightscout血糖水平。
 
-* The app can be downloaded from [Google play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) and displays BG data in real time.
+* 该应用程序可从[Google Play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch)下载，并实时显示血糖数据。
 
-* The user can be alerted with customised noisy low and high alarms set.
+* 用户可以设置自定义的低血糖和高血糖警报声音。
 
-* BG data can be viewed in either mmol/L or mg/dL.
+* 血糖数据可以以mmol/L或mg/dL为单位查看。
 
-* It requires Android 5.0 and up.
+* 需要Android 5.0及以上版本。
 
-* It has a dark Ul, large readings and buttons, designed for usage at night.
+* 具有深色Ul、大号读数和按钮，专为夜间使用而设计。
 
 ### [xDrip+](https://xdrip.readthedocs.io/en/latest/) (Android)
 
-You can use xDrip+ as a follower.
+您可以使用xDrip+作为跟踪器。
 
-#### With Nightscout
+#### 与Nightscout一起使用
 
-Set xDrip+ as a Nightscout Follower. You will receive BG and treatments, not basal.
+将xDrip+设置为Nightscout跟踪器。 您将收到血糖和治疗信息，但不包括基础率。
 
 ![image](../images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
-#### Without Nightscout - xDrip+ BG data source
+#### 不使用Nightscout - xDrip+血糖数据源
 
-If your **AAPS** data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+如果您的**AAPS**数据源是xDrip+（或者如果xDrip+也可以从其他应用程序（如BYODA、Juggluco等）接收血糖数据），则可以从主手机使用它来与xDrip+跟踪器共享数据，显示血糖、治疗和基础率。
 
 ![image](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
-#### Without Nightscout - xDrip+ BG companion app
+#### 不使用Nightscout - xDrip+血糖伴侣应用程序
 
-If your **AAPS** data source is not xDrip+ but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+如果您的**AAPS**数据源不是xDrip+，但您可以从伴侣应用程序数据源显示血糖数据，则可以从主手机使用它与xDrip+跟踪器共享数据，显示血糖、治疗和基础率。
 
 ![image](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
@@ -116,40 +115,37 @@ If your **AAPS** data source is not xDrip+ but you can display BG data from the 
 
 ![image](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved to "xDrip for iOS" written **xDrip4iOS** .
+xDripSwift是从将原始xDrip应用程序移植到iOS发展而来的，后来演变为“xDrip for iOS”，即**xDrip4iOS**。
 
-A version of **xDrip4iOS** is available in the Apple Store under the name of **Shuggah**.
+**xDrip4iOS**的一个版本在Apple Store上以**Shuggah**的名称可用。
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). However, it is difficult to actually _get_ the **xDrip4iOS** app for your phone. 
+[xDrip4iOS Facebook群组](https://www.facebook.com/groups/853994615056838/announcements)是xDrip4iOS和Shuggah的主要社区支持。 **xDrip4iOS**可以连接到许多不同的CGM系统和发射器，并显示血糖值、图表和统计数据，同时提供警报。 它还可以上传到Nightscout或作为[Nightscout的跟踪器应用程序](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/)使用。 但是，实际上很难将**xDrip4iOS**应用程序获取到您的手机上。 
 
-"How can I get **xDrip4iOS** on my iPhone?"
-There are two options:
-
-1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by following the instructions below:
-
+怎样才能在我的iPhone上获取xDrip4iOS？
+有两种可选的方式
+1. 如果您有Mac和Apple开发者帐户（每年99欧元/美元），您可以按照以下说明构建自己的xDrip4iOS：
 https://xdrip4ios.readthedocs.io/en/latest/install/build/
-
-If you want, you can then become a "releaser" and share a Personal Testflight xDrip4iOS with up to 100 other people to help them:
+如果您愿意，之后您还可以成为“发布者”，并与最多100名其他人共享个人Testflight xDrip4iOS，以帮助他们：
 https://xdrip4ios.readthedocs.io/.../personal_testflight/
 
-2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and monitor the posts… wait for somebody to offer an invitation to their Personal Testflight releases in the group. **You should not ask for an invitation to the app** (read the group rules). 
+2. 您加入[xDrip4iOS Facebook群组](https://www.facebook.com/groups/853994615056838/announcements)并监控帖子……等待有人在群组中提供他们的个人Testflight发布的邀请。 **您不应该请求应用程序的邀请**（请阅读群组规则）。 
 
-An easier solution is therefore to download the **Shuggah** app. 
+一个更简单的解决方案是下载**Shuggah**应用程序。 
 ```
 
 #### [Shuggah](https://apps.apple.com/sa/app/shuggah/id1586789452)
 
-App:
+应用程序界面：
 
 ![image](../images/03fc0c6a-067a-40ea-8be3-c66d4ce8b5d9.png)
 
 ![image](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
-"What is Shuggah?" A group of Ukrainian developers copied the project code for xDrip4iOS (which is shared publicly on GitHub) and released it on the App Store under a business account (the app is free, and their intentions are good). The app had to be slightly modified to add a privacy statement and disclaimer to get past the review, but the rest of the app should be the same as xDrip4iOS. The Shuggah release is not managed by the xDrip4iOS developers so it cannot be guaranteed that it will function in the same way as xDrip4iOS, that it will be updated at the same time, or that Apple won't remove it from the App Store at some point.
+Shuggah是什么？ 一群乌克兰开发人员复制了xDrip4iOS项目代码（该项目代码在GitHub上公开共享），并在商业帐户下将其发布到App Store（该应用程序是免费的，他们的意图是好的）。 为了通过审核，该应用程序必须稍作修改以添加隐私声明和免责声明，但其余部分应该与xDrip4iOS相同。 Shuggah发布不由xDrip4iOS开发人员管理，因此无法保证它会以与xDrip4iOS相同的方式运行，会同时更新，或者Apple不会在某个时候将其从App Store中移除。
 
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) supports xDrip4iOS, Shuggah, and the matching Apple Watch apps.
+[xDrip4iOS Facebook群组](https://www.facebook.com/groups/853994615056838/announcements)支持xDrip4iOS、Shuggah以及匹配的Apple Watch应用程序。
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
@@ -158,28 +154,28 @@ The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/a
 ![image](../images/21b83c41-85c6-4619-a702-a65450768855.png)
 
 
-[Sugarmate](https://sugarmate.io/) is available to download onto iPhones from the App store. Sugarmate is compatible with:
-* Apple iPhone (Requires software version 13.0 or later)
-* Apple iPad (Requires software version 13.0 or later)
-* Google Android (Save web app to your homescreen)
+[Sugarmate](https://sugarmate.io/)可从App Store下载到iPhone上。 Sugarmate与以下设备兼容：
+* Apple iPhone（需要软件版本13.0或更高版本）
+* Apple iPad（需要软件版本13.0或更高版本）
+* Google Android（将Web应用程序保存到主屏幕）
 
-It has been reported by users of Sugarmate that it can be used with Apple CarPlay in the USA to display glucose readings when driving. It is not yet established if this is possible in countries outside the USA. If you know more about this, please add details in here to the documentation by completing a pull-request (link) which is quick and easy to do.
+据Sugarmate用户报告，它可以在美国与Apple CarPlay一起使用，在驾驶时显示血糖读数。 目前尚不清楚在美国以外的国家是否可能实现这一点。 如果您了解更多信息，请通过完成拉取请求（链接）将此信息添加到文档中，这既快速又简单。
 
 
 ### [Spike](https://spike-app.com/) (iOS)
 
 ![image](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
-Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more.
+Spike可以用作主接收器或跟踪器应用程序，提供血糖、警报和IOB等信息。
 
-The website and app are no longer developed. Support can be found on [Facebook](https://www.facebook.com/groups/1973791946274873) and [Gitter](https://gitter.im/SpikeiOS/Lobby).
+该网站和应用程序已不再开发。 可以在[Facebook](https://www.facebook.com/groups/1973791946274873)和[Gitter](https://gitter.im/SpikeiOS/Lobby)上找到支持。
 
-## Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
+## 用于监测在手机上运行的**AAPS**（全数据档案或仅葡萄糖数据）的智能手表。
 
-See [here](../Getting-Started/Watches.md).
+请参考[此处](../Getting-Started/Watches.md)获取更多信息。
 
 
-## Devices for following AAPS
+## 跟踪AAPS的设备
 
 ```{contents} Devices include:
 :depth: 1
@@ -190,34 +186,34 @@ See [here](../Getting-Started/Watches.md).
 
 ![image](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
-The M5Stack is a small box which can be programmed for many applications, Martin's project [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) is displaying sensor glucose values and trends, IOB and COB. It is in a plastic box, equipped with a colour display, micro SD card slot, 3 buttons, speaker and internal battery. It is a great blood sugar monitor and is relatively easy to set up if you have a Nightscout account. Users typically run it on their home Wi-Fi, but some users report using it as a display when motorbiking, by running it off a phone Wi-Fi hotspot.
+M5Stack是一个小盒子，可用于多种应用程序编程。 Martin的项目[M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki)可以显示传感器血糖值和趋势、IOB和COB。 它装在一个塑料盒子里，配备彩色显示屏、micro SD卡插槽、3个按钮、扬声器和内置电池。 它是一个很棒的血糖监测器，如果您有Nightscout帐户，设置起来也相对容易。 用户通常在家中的Wi-Fi上运行它，但一些用户报告说，通过运行手机Wi-Fi热点，可以在骑摩托车时使用它作为显示屏。
 
 ### Sugarpixel
 
-SugarPixel is a device for secondary glucose display alert system for continuous glucose monitoring that connects with Dexcom app or Nightscout app on the user’s smartphone. The device displays real time blood sugar readings. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customisable display options and native multi-user following.
+SugarPixel是一种用于连续血糖监测的备选葡萄糖显示警报系统的设备，可与Dexcom应用程序或Nightscout应用程序连接在用户的智能手机上。 该设备实时显示血糖读数。 这款CGM硬件监测器具有随机音调生成音频警报（非常响亮）、振动警报（适用于听力障碍者）、可自定义的显示选项和原生多用户跟踪功能。
 
 ![image](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
 ![image](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-* SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with colour-coded glucose values.
-* The standard face displays BG, Trend Arrow, and Delta. Delta is the change + or - from the last reading.
-* SugarPixel can be customised for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
-* SugarPixel’s xolour face utilises the entire display to show a single colour representing the BG value. This enables the user to see BG readings at a distance through the window while outside playing in the backyard, patio, or pool.
-* The Big BG face is useful for nightstand users who wear glasses or contact lenses.
+* SugarPixel具有多种显示选项，包括mg/dL和mmol/L，以满足用户需求，并具有颜色编码的血糖值。
+* 标准界面显示血糖值、趋势箭头和变化量。 变化量是指与上一次读数相比的增加或减少量。
+* SugarPixel可以定制为在低亮度下使用，具有BG和时间界面，以便用户在床头柜上看到血糖读数和当前时间。
+* SugarPixel的彩色界面利用整个显示屏显示单一颜色，代表血糖值。 这样用户就可以在户外玩耍时，在后院、露台或游泳池通过窗口远距离查看血糖读数。
+* 大号BG界面适用于床头柜用户，尤其是戴眼镜或隐形眼镜的用户。
 
-### Nightscout Clock on Ulanzi TC001
+### Ulanzi TC001上的Nightscout Clock
 
-**Nightscout Clock** is an open source software running on the **Ulanzi TC001** device. It connects with Dexcom servers or Nightscout and displays real time blood sugar readings.
+**Nightscout Clock**是在**Ulanzi TC001**设备上运行的开源软件。 它与Dexcom服务器或Nightscout连接，并实时显示血糖读数。
 
 ![Following Nightscout Clock](../images/FollowingNightscoutClock.png)
 
-* The clock supports both mmol/L and mg/dL units, and includes audible alarms.
-* Several display available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
-* Setting up and configuring the device involves just a few simple steps. Once set up, it only requires power and Wi-Fi to function.
-* The Ulanzi TC001 device is significantly cheaper than the SugarPixel to buy.
-* The software along with installation instructions can be found on [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
-* It is developed and maintained by Artiom Kenibasov, offering support on the [Facebook AAPS Users group](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/).
+* 该时钟支持mmol/L和mg/dL单位，并包括声音警报。
+* 有多个显示选项，请参考[Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it)以获取概览。
+* 设置和配置设备只需几个简单步骤。 一旦设置完成，它只需要电源和Wi-Fi即可工作。
+* Ulanzi TC001设备的购买成本显著低于SugarPixel。
+* 软件及安装说明可在[Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file)上找到。
+* 它由Artiom Kenibasov开发和维护，在[Facebook AAPS Users群组](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/)中提供支持。
 
 ### PC (TeamViewer)
-Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting.
+一些用户发现使用完整的远程访问工具（如[TeamViewer](https://www.teamviewer.com/)）有助于高级远程故障排除。
