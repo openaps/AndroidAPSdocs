@@ -1,26 +1,26 @@
-# Operation of AAPS via your Wear OS smartwatch
+# 通过您的Wear OS智能手表操作AAPS
 
 (Watchfaces-aaps-watchfaces)=
 
-## AAPS Watchfaces
+## AAPS表盘
 
 ```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.
-Wear OS 5 changes locked the watchfaces: only complications can be used.
+AAPS表盘适用于API级别为28至33的Wear OS智能手表。
+Wear OS 5的更改锁定了表盘：仅可使用小工具。
 ```
 
-There are several watchfaces to choose from that are included in the base build of the AAPS Wear APK. These watchfaces include average delta, IOB, currently active temp basal rate and basal profiles and a CGM readings graph.
+在AAPS Wear APK的基本构建中，包含了几种可供选择的表盘。 这些表盘包括平均变化量、IOB、当前活跃的临时基础率、基础率配置文件以及持续葡萄糖监测（CGM）读数图表。
 
-Some available actions on the watchfaces are:
+表盘上的一些可用操作包括：
 
-* Double tap on the BG to get to the AAPS menu
-* Double tap on the BG graph to change the graph's time scale
+* 双击血糖值进入AAPS菜单
+* 双击血糖图表更改图表的时间尺度
 
-## Configuration
+## 配置
 
-Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md).
+在[配置构建器](../SettingUpAaps/ConfigBuilder.md)中启用Wear模块。
 
-Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+使用Wear Preferences定义在计算通过手表给予的剂量时应考虑的变量（例如，15分钟趋势、COB...）。
 
 如果您想通过手表进行大剂量等操作， 那么在“手表设置”中，您需要启用“从手表控制”。
 
@@ -28,47 +28,47 @@ Use the Wear Preferences to define which variables should be considered when cal
 
 通过手表选项卡或汉堡菜单（如果未显示选项卡，则在屏幕左上角），您可以：
 
-* 重新发送所有数据。 Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* 重新发送所有数据。 如果手表有一段时间未连接，并且您想将信息推送到手表，这可能很有帮助。
 * 直接从手机打开手表上的设置。
 
-Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
+确保AAPS的通知在手表上未被阻止。 操作的确认（例如，剂量、临时目标）会通过通知发送，您需要滑动并点击确认。
 
-## Accessing main menu of AAPS
+## 访问AAPS主菜单
 
-To access main menu of AAPS you can use on of following options:
+要访问AAPS主菜单，您可以使用以下选项之一：
 
-* double tap on your BG value
-* select AAPS icon in watch applications menu
-* tap on AAPS complication (if configured for menu)
+* 双击你的BG值
+* 在手表应用程序菜单中选择AAPS图标
+* 点击AAPS小工具（如果已配置为菜单）
 
-## Settings (in wear watch)
+## 设置（在Wear手表上）
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+要访问表盘设置，请进入AAPS主菜单，向上滑动并选择“设置”。
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+实心星号表示启用状态（**开**），空心星号表示设置已禁用（**关**）：
 
 ![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### AAPS伴侣参数
 
-* **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* **剂量时震动**（默认`开`）：
+* **操作单位**（默认为`mg/dl`）：如果**开启**，动作单位为`mg/dl`；如果**关闭**，单位为`mmol/l`。 在设置目标时间（TT）时使用。
 
 (Watchfaces-watchface-settings)=
 
-### Watchface settings
+### 表盘设置
 
-* **Show Date** (default `Off`): note, date is not available on all watchfaces
-* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
-* **Show COB** (default `On`): Display or not COB value
-* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
-* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
-* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
-* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
-* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
-* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
-* **Show BG** (default `On`): Display or not last BG value
-* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
+* **显示日期**（默认`关`）：请注意，并非所有表盘都显示日期。
+* **显示IOB**（默认`开`）：显示或不显示IOB值（详细值设置在AAPS Wear参数中）。
+* **显示COB**（默认`开`）：显示或不显示COB值。
+* **显示变化量**（默认`开`）：显示或不显示过去5分钟的血糖变化量。
+* **显示平均变化量**（默认`开`）：显示或不显示过去15分钟的平均血糖变化量。
+* **显示手机电池**（默认`开`）：手机电池百分比。 低于30%时显示为红色。
+* **显示Rig电池**（默认`关`）：Rig电池是手机电池、泵电池和传感器电池的综合（通常为三者中的最低值）。
+* **显示基础率**（默认`开`）：显示或不显示当前基础率（单位为U/h，如果是TBR单位为%）。
+* **显示闭环状态**（默认`开`）：显示自上次闭环运行以来的分钟数（如果超过15分钟，值周围的箭头会变红）。
+* **显示血糖**（默认`开`）：显示或不显示最后的血糖值。
+* **显示趋势箭头**（默认`开`）：显示或不显示血糖趋势箭头。
 * **Show Ago** (default `On`): show how many minutes since last reading.
 * **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
 * **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
