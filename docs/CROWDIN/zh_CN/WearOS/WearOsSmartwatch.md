@@ -41,44 +41,40 @@ YouTube上有许多第三方视频可以帮助您熟悉新智能手表，例如�
 
 您可以通过以下方式之一将Wear.apk从Android Studio加载到手机上：
 
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
+a) 使用USB电缆将AAPS Wear apk文件放到手机上，然后“侧载”到手表上。 将Wear.apk通过USB传输到手机的下载文件夹中；或
 
-b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
+b) 将Wear.apk从Android Studio剪切并粘贴到您的Gdrive上。
 
 
-You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto the watch. Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained.
+您可以使用Wear Installer 2或Easy Fire tools将AAPS侧载到手表上。 在这里，我们推荐使用Wear Installer 2，因为后面视频中的说明和过程非常清晰易懂。
 
-## Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+## 使用Wear Installer 2将手机上的**AAPS** Wear侧载到手表上
 
  ![image](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+Wear Installer 2由[Malcolm Bryant](https://www.youtube.com/@Freepoc)开发，可以从Google Play下载到您的手机上，并可用于将AAPS Wear应用侧载到手表上。 该应用包含一个方便的“如何侧载”的[视频](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)。
 
 ```{tip}
-For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk).
+对于Wear OS 5手表，请参考[此视频](https://www.youtube.com/watch?v=yef_qGvcCnk)。
 ```
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it whilst setting up the phone).
+这提供了所有必要的详细信息（最好在单独的设备上打开视频，以便在设置手机的同时观看）。
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+如视频中所述，完成后，请关闭手表上的ADB调试，以避免耗尽智能手表的电池。
 
-Alternatively, you can:
+或者，您也可以：
 
 ```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
 :class: dropdown
-
-1)   Download _Easy Fire Tools_ from playstore onto phone 
-
+1) 从Play商店在手机上下载_Easy Fire Tools_
 ![image](../images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
+2) 开启手表的开发者模式（一旦设置并连接到手机）：
+转到设置>关于手表（底部选项）>-软件信息>软件版本。 
 
-2)  Make yourself a developer in the watch (once set up and connected to phone): 
+快速点击“软件版本”，直到出现通知，表明手表现在处于“开发者模式”。 返回到设置菜单的顶部，滚动到底部，
+并在“关于手表”下方看到“开发者选项”。 
 
-Go to settings >about watch (bottom option) >- software info > software version. 
-
-Rapidly tap on “ software version” until a notification appears that the watch is now in "developer mode". Return to the top of settings menu, scroll to the bottom
- and see “developer options” below “about watch”. 
-
-In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.  
+在“开发者选项”中，打开“ADB调试”和“无线调试”。 后者选项将显示手表的IP地址，该地址的最后两位数字每次手表与新手机配对时都会更改。 它看起来会像这样：**167.177.0.20.** 5555（忽略最后4位数字）。 请注意，此地址的最后两位数字（此处为“20”）在每次您为AAPS更换新手机时都会更改。  
 
 ![24-10-23, watch ADB debug pic](../images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
