@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://androidaps.readthedocs.io/en/latest/sitemap.xml
+Sitemap: https://androidaps.readthedocs.io/en/latest/_static/sitemap.xml
