@@ -38,3 +38,27 @@ templates_path = ['../_templates']
 # directly to the root of the documentation.
 html_extra_path = ["_html"]
 
+language = "en"
+myst_html_meta = {
+  'title': 'AAPS Documentation',
+  'subtitle': 'AndroidAPS Documentation',
+  'short_title': 'AAPS Documentation',
+  'description': 'Android APS (AAPS) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones.',
+  'github': 'openaps/AndroidAPSdocs',
+  'keywords': 'Android, DIY, APS, Insulin, CGM, Pump',
+  'thumbnail': '../androidaps-logo.png',
+  'property=og:locale':  'en_US',
+#<!-- Facebook Meta Tags -->
+  'og:url': 'https://androidaps.readthedocs.io',
+  'og:type': 'website',
+  'og:title': 'Welcome to the AAPS Documentation — AndroidAPS Documentation',
+  'og:description': 'Android APS (AAPS) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones.',
+  'og:image': '../androidaps-logo.png',
+#<!-- Twitter Meta Tags -->
+  'twitter:card':'summary_large_image',
+  'twitter:domain': 'androidaps.readthedocs.io',
+  'twitter:url': 'https://androidaps.readthedocs.io',
+  'twitter:title': 'Welcome to the AAPS documentation — AndroidAPS Documentation',
+  'twitter:description':'Android APS (AAPS) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones.',
+  'twitter:image': '../androidaps-logo.png',
+}
