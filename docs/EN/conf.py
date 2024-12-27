@@ -32,3 +32,9 @@ html_static_path = ['../_static']
 # A list of paths that contain extra templates (or templates that overwrite builtin/theme-specific templates). Relative paths
 # are taken as relative to the configuration directory.
 templates_path = ['../_templates']
+
+# Add any extra paths that contain custom files (such as robots.txt or
+# .htaccess) here, relative to this directory. These files are copied
+# directly to the root of the documentation.
+html_extra_path = ["_html"]
+
