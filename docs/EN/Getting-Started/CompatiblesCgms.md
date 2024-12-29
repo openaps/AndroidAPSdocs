@@ -11,11 +11,11 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 
 | CGM                                                   | Available [BG Sources](../SettingUpAaps/ConfigBuilder.md#bg-source)          |
 |-------------------------------------------------------|------------------------------------------------------------------------------|
-| [Dexcom G7 and ONE+](../CompatibleCgms/DexcomG7.md)   | xDrip+ or DiaKEM app (select BYODA)                                          |
+| [Dexcom G7 and ONE+](../CompatibleCgms/DexcomG7.md)   | xDrip+, DiaKEM app (select BYODA) or Juggluco                                |
 | [Dexcom G6 and ONE](../CompatibleCgms/DexcomG6.md)    | xDrip+ or BYODA                                                              |
 | [Dexcom G5](../CompatibleCgms/DexcomG5.md)            | xDrip+                                                                       |
-| [Libre 3](../CompatibleCgms/Libre3.md)                | xDrip+ (no transmitter needed)                                               |
-| [Libre 2](../CompatibleCgms/Libre2.md)                | xDrip+ (no transmitter needed)                                               |
+| [Libre 3](../CompatibleCgms/Libre3.md)                | xDrip+ (no transmitter needed) or Juggluco                                   |
+| [Libre 2](../CompatibleCgms/Libre2.md)                | xDrip+ (no transmitter needed) or Juggluco                                   |
 | [Libre 1](../CompatibleCgms/Libre1.md)                | xDrip+, Glimp, Tomato or Diabox. Need a transmitter like Bluecon or MiaoMiao |
 | [Eversense](../CompatibleCgms/Eversense.md)           | xDrip+ or ESEL/Eversense patched App + MM640g                                |
 | [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md) | xDrip+ or MM640g + 600SeriesAndroidUploader App                              |
