@@ -124,7 +124,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-* At **Version** (1), select the one required for you **AAPS** version (the one you made a note of at the first step). Then select the **JetBrains Runtime** from the **Vendor** (2) options. Do not change the **Location** (3).
+* At **Version** (1), select the one required for your **AAPS** version (the one you made a note of at the first step). Then select the **JetBrains Runtime** from the **Vendor** (2) options. Do not change the **Location** (3).
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
