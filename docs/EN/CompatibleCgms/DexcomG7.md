@@ -9,11 +9,10 @@ orphan: true
 
 Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
+Picture is outdated!!!
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
 ```{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)
-:class: warning
-**Average Smoothing or Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
 ```
 
 ## 1. xDrip+ (direct connection to G7 or ONE+)
@@ -33,7 +32,7 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 - Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
-- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases) or [here](https://github.com/emmatovar27/dexcom-g7-apk-patcher/releases).
+- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
 
 - Enter sensor code in the patched app.
 
@@ -53,4 +52,17 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 - As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
 -   Select  xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
--   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md) 
+-   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+
+## 4. Juggluco (starting with version 9.0+)
+- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+  
+- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+  
+- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+
+- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+
+- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+ 
+- Exception: Wear OS watches can bond without pressing an agree button.
