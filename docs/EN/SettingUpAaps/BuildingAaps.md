@@ -19,7 +19,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 | [3.3](#version3300) | Ladybug (2024.2.1)                       |                                                                                             | 8.9    | 21  |
 
 The "preferred version" is packaged with the appropriate Gradle and JVM version. If using a different version, you may encounter issues related to wrong Gradle and/or JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues.
-If you current Android Studio version is not listed in the table, you must update it first.
+If your current Android Studio version is not listed in the table, you must update it first.
 
 * [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.  
 
