@@ -66,7 +66,7 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 (version3300)=
 ## Version 3.3.0.0
 
-Release date: XX-XX-202X - currently available as [beta](https://github.com/nightscout/AndroidAPS/branches).
+Release date: 29-12-2024
 
 ### Main features
 
