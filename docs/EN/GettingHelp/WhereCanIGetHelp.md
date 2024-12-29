@@ -32,6 +32,7 @@ Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/190019
 * [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech-speaking users of AndroidAPS
 
 ### France
+* [AndroidAPS France (Toutes Pompes)](https://www.facebook.com/groups/268922660715266)
 * [DIY AndroidAPS, parents d'enfants Dt1](https://www.facebook.com/groups/262497886779069) : French support group for AAPS for children
 
 ### Germany
