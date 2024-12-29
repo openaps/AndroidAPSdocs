@@ -84,7 +84,7 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
 
 * Before upgrading: 
   * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
-  * Android Studio version called "Ladybug" or above (JVM 21) is required to build this version.
+  * [Android Studio version called "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above (JVM 21) is required to build this version.
   * If you use the “old” Combo driver with ruffy device, migrate to the [native Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) before update
   * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade: make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
 * After upgrading:
