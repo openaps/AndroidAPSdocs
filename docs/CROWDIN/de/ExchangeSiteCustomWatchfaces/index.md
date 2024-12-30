@@ -1,10 +1,10 @@
 # Austausch-Plattform für eigene Zifferblätter (custom watchfaces)
 
-Here you can download Zip-Files with custom watchfaces users have prepared and want to share with you.
+Hier kannst Du die Zip-Dateien für eigene Zifferblätter, die andere Nutzende erstellt haben und teilen wollen, herunterladen.
 
-The Zip-Files can be uploaded in the folder "**[_static/ExchangeSiteCustomWatchfaces](https://github.com/openaps/AndroidAPSdocs/tree/master/docs/_static/ExchangeSiteCustomWatchfaces)**" via a Pull Request into GitHub as usual.
+Die Zip-Dateien können im Ordner "**[_static/ExchangeSiteCustomWatchfaces](https://github.com/openaps/AndroidAPSdocs/tree/master/docs/_static/ExchangeSiteCustomWatchfaces)**" über einen Pull Request in GitHub wie üblich hochgeladen werden.
 
-During merge of the pull request the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file, and add it to the list below.
+Beim Zusammenführen (Merge) der Pull-Requests wird das Dokumentationsteam die CustomWatchface.png extrahieren, dem Dateinamen der Zip-Datei einen Prefix voranstellen, und die Datei zur Liste unten hinzufügen.
 
 
 
@@ -18,5 +18,5 @@ During merge of the pull request the documentation team will extract the CustomW
 |    [![Robby watchface](../images/ExchangeSiteCustomWatchfaces/Robby_watchface-CustomWatchface.png) <br>**Robby watchface**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/Robby_watchface.zip)    | [![SimpleDigital](../images/ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3-CustomWatchface.png) <br>**SimpleDigital**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3.zip) |            [![SteamPunk](../images/ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png) <br>**AAPS (SteamPunk)**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/SteamPunk.zip)            |
 |               [![SteamPunk](../images/ExchangeSiteCustomWatchfaces/Blue_Ring-CustomWatchface.jpg) <br/>**Blue Ring**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/Blue_Ring.zip)                |                                                                                                                                                                                                                                                                 |                                                                                                                                                                                                                                                                    |
 
-*Requires Custom WatchFace V2 or above installed within Wear Watch (AAPS V3.3.0 or above)
+*Benötigt „Custom Watchface V2“ oder höher auf der Wear Watch (AAPS V3.3.0 oder höher)
 
