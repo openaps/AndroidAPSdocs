@@ -22,7 +22,7 @@
 ```
 
 (Preferences-general)=
-## General
+## Allgemein
 
 ![Preferences > General](../images/Pref2020_General.png)
 
@@ -43,7 +43,7 @@
 
 The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
 
-**Patient name**
+**Name des Patienten**
 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 
