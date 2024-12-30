@@ -39,7 +39,7 @@ Only Libre 2 and 2+ **EU** models.
 - [Diese Anleitung](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) beschreibt, wie Du xDrip+ konfigurierst. Wichtig ist, dass Du die [neueste OOP2-Version](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) herunterlädst und nutzt, da die in der Dokumentation referenzierte Version veraltete ist.
 - Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 
--   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
 
 ## 3. Diabox nutzen
 
@@ -47,7 +47,7 @@ Only Libre 2 and 2+ **EU** models.
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
 
 ## 4. Juggluco nutzen
 
@@ -57,7 +57,7 @@ Only Libre 2 and 2+ **EU** models.
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
 
 ```{admonition} Use with xDrip+
 :class: note
