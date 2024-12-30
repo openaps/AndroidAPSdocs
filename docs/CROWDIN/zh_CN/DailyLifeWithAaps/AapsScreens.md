@@ -17,7 +17,7 @@
 
 * 在不同的**AAPS**模块之间导航。
 * 你也可以通过左右滑动来切换屏幕。
-* 显示的标签可以在[配置构建器](#Config-Builder-tab-or-hamburger-menu)中选择。
+* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
 
 ### B部分 - 配置文件&目标
 
@@ -75,7 +75,13 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 * 红色 = 低于范围
 * 黄色 = 高于范围 
 
-中间的灰色块显示自上次读数以来的分钟数以及过去15和40分钟内的变化。
+![Deltas](../images/Home_Delta.png)
+
+The blocks in the middle shows:
+
+1. how many minutes since last **CGM** reading
+2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
+    Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
 
 (AapsScreens-loop-status)=
 
@@ -148,6 +154,12 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 
 *注意*： **AAPS**计算会考虑最多30小时的数据。 因此，即使你解决了原始问题，黄色三角形也可能在最后一次出现不规则间隔后约30小时才会消失。
 
+#### Simple mode
+
+An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+
+![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
+
 ### D部分 - IOB, COB, BR和AS
 
 ![部分D](../images/Home2020_TBR.png)
@@ -209,7 +221,7 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 
 在操作标签中输入的备注，如指尖校准和碳水条目，以及配置文件切换，都显示在这里。
 
-长按图表以更改时间刻度。 您可以选择6小时、12小时、18小时或24小时。
+Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
 
 绿色区域反映你的目标范围。
 
@@ -222,10 +234,11 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 在主图上，你可以打开以下可选信息：
 
 * 预测
+* 治疗动作（Treatments）
 * 基础率
 * 活动-胰岛素活动曲线
 
-要显示此信息，请点击主图表右侧的三角形。 对于主图表，只有“\---\---- Graph 1 \---\----”上方的三个选项可用。
+要显示此信息，请点击主图表右侧的三角形。 For the main graph just the four options above the line "Graph 1 2 3 4" are available.
 
 ![主图设置](../images/Home2020_MainGraphSetting.png)
 
@@ -277,19 +290,19 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 
 (AapsScreens-section-g-additional-graphs)=
 
-### G部分 - 附加图表
+### Section G - Additional graphs
 
-您可以在主图表下方激活最多四个附加图表。
+您可以在主图表下方激活最多四个附加图表。 When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
 
 要打开附加图表的设置，请点击[主图表](#section-f---main-graph)右侧的三角形并向下滚动。
 
 ![附加图表设置](../images/Home2020_AdditionalGraphSetting.png)
 
-要添加另一个图表，请在其名称（即\---\---- 图1 \---\----）右侧的框中打勾。
+To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
 
 大多数用户发现以下附加图表配置足够：
 
-* 图1：IOB、COB、灵敏度
+* Graph 1 with IOB, COB, Sensitivity chnge
 * 图2：偏差和BGI。
 
 #### 胰岛素绝对值
@@ -352,6 +365,8 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 
 关于使用胰岛素、碳水和计算器按钮：如果在[偏好设置>概览](#Preferences-show-notes-field-in-treatments-dialogs)中启用，**备注**字段允许你输入将显示在主图上的文本，并可能根据NS客户端的设置上传到Nightscout。
 
+(aaps-screens-buttons-insulin)=
+
 #### 胰岛素
 
 ![胰岛素按钮](../images/Home2020_ButtonInsulin.png)
@@ -363,6 +378,10 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 如果你不想通过泵给予大剂量但想记录胰岛素量（即使用笔给予的胰岛素），请选中相应的框。 选中此框后，你将获得一个附加字段“时间偏移”，你可以使用它来记录过去给予的胰岛素注射。
 
 您可以使用按钮快速增加胰岛素的量。 增量值可以在[首选项 > 概述 > 按钮](#Preferences-buttons)中更改。
+
+The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+
+![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
 
 #### 碳水化合物
 
@@ -538,7 +557,7 @@ BG字段通常已经填充了来自您的动态（CGM）的最新读数。 如�
 
 ![胰岛素配置文件](../images/Screenshot_insulin_profile.png)
 
-这显示了你在[配置构建器](#Config-Builder-insulin)中选择的胰岛素的活动配置文件。 曲线将根据[DIA](#your-aaps-profile-duration-of-insulin-action)和达峰时间而有所不同。
+This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). 曲线将根据[DIA](#your-aaps-profile-duration-of-insulin-action)和达峰时间而有所不同。
 
 **紫色**线显示了注射后胰岛素的剩余量，它随时间衰减，而**蓝色**线显示了其活性。
 
