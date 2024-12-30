@@ -10,7 +10,7 @@ Some CGM systems have internal algorithms to detect the noise level in the readi
 
 ## Smoothing data within AAPS
 
-As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in the [Config Builder](../SettingUpAaps/ConfigBuilder.md).
+As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
 
 ![Smoothing](../images/ConfBuild_Smoothing.png)
 
@@ -49,5 +49,5 @@ The noise-level data is not shared with AAPS using this method. Therefore, 'Enab
 
 ### Freestyle Libre sensors
 
-#### xDrip+ with FreeStyle Libre
-None of the FreeStyle Libre systems (FSL1, FSL2, or FSL3) broadcast any information about the level of noise detected in the readings, and therefore 'Enable SMB always' and 'Enable SMB after carbs' are disabled for all setups using the FreeStyle Libre. In addition, many people have reported the FreeStyle Libre often produces noisy data.
+#### xDrip+ with FreeStyle Libre1
+The FreeStyle Libre 1 does not broadcast any information about the level of noise detected in the readings, and therefore 'Enable SMB always' and 'Enable SMB after carbs' are disabled when using this CGM. In addition, many people have reported the FreeStyle Libre 1 often produces noisy data.
