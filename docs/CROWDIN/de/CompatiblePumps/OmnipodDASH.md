@@ -27,9 +27,9 @@ Hier finden sich die Spezifikationen für den **Omnipod DASH** und die Unterschi
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
 * **Kompatibles Android Smartphone** mit Bluetooth-Verbindung (Bluetooth Low Energy, BLE)
-   -  Nicht alle Telefone und Android-Versionen werden sicher funktionieren. Please check [**DASH Tested phones**](#Phones-list-of-tested-phones) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
+   -  Nicht alle Telefone und Android-Versionen werden sicher funktionieren. Schau in der [**Liste der getesteten Smartphones**](#Phones-list-of-tested-phones) nach oder probiere es einfach mit Deinem Smartphone aus. Teile das Ergebnis (Smartphone-Modell, Region, Android-Version, funktioniert / es gab Probleme / funktioniert nicht) mit uns.
    - **Wichtiger Hinweis: Es gab mehrere Fälle von dauerhaften, nicht wiederherstellbaren Verbindungsverlusten bei der Verwendung älterer Pods mit Firmware Version 3.XX.X. Nutze diesen alten Pods mit AAPS bitte mit Vorsicht. Insbesondere dann, wenn Dein Smartphone mit anderen Bluetooth-Geräten gekoppelt ist!** Der AAPS Omnipod DASH-Treiber baut bei jedem Senden eines Befehls eine Bluetooth-Verbindung zum DASH Pod via Bluetooth auf und beendet diese Verbindung unmittelbar danach wieder. Die Bluetooth-Verbindungen können durch andere Geräte gestört werden, die mit dem Telefon verbunden sind, auf dem AAPS läuft, wie Earbuds etc... (was in seltenen Fällen zu Verbindungsproblemen oder Pod-Fehlern bei der Aktivierung oder danach bei einigen Telefonmodellen führen kann).
-   -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions.
+   -  **AAPS Version 3.0. oder neuer erstellt und installiert** mit der Anleitung aus dem Abschnitt [**AAPS erstellen**](../SettingUpAaps/BuildingAaps.md).
 * [**Kontinuierliche Glukosemessung (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
 Diese Anleitung geht davon aus, dass Du einen neuen DASH Pod startest. Falls dies nicht der Fall ist, habe bitte Geduld und beginne diesen Prozess erst bei Deinem nächsten Starten eines neuen Pods.
@@ -68,7 +68,7 @@ Bei einer vorhandenen Installation von AAPS kannst Du **DASH** als Pumpe unter "
 
 Wenn Du das ** Kontrollkästchen (4)** neben dem ** Einstellungsrädchen (3)** wählst, wird das DASH-Menü als Registerkarte im AAPS-Interface mit dem Titel **DASH** als eigener Tab angezeigt. Wenn Du dieses Kästchen aktivierst, wird der Zugriff auf die DASH-Befehle bei der Verwendung von AAPS erleichtert.
 
-**NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
+**HINWEIS:** Eine schnellere Möglichkeit, zu den [**DASH-Einstellungen**](#dash-settings) zu gelangen, findest Du im Abschnitt DASH-Einstellungen weiter unten in diesem Dokument.
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -136,13 +136,13 @@ Stelle sicher, dass der neue Pod und das Smartphone, auf dem AAPS läuft, in der
 
     Klicke auf den Zurück-Knopf auf deinem Smartphone, um zum Tab-Bildschirm **DASH** zurückzukehren, auf dem jetzt Informationen zu deiner aktiven Pod-Sitzung angezeigt werden, einschließlich der aktuellen Basalrate, Pod Reservoir Level, abgegebenem Insulin, Pod Fehlern und Warnungen.
 
-    For more details on the information displayed go to the [**DASH Tab**](#dash-tab) section of this document.
+    Weitere Details zu den angezeigten Informationen findest Du im [**DASH-Tab**](#dash-tab)-Abschnitt dieses Dokuments.
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
 
 ​    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-Es ist zu empfehlen, NACH der Aktivierung des Pods die Einstellungen zu exportieren. Dies solltest Du nach jedem Podwechsel und einmal monatlich tun. Kopiere die Exportdatei an einen sicheren Ort (z. B. in der Cloud). see [**Export settings Doc**](../Maintenance/ExportImportSettings.md).
+Es ist zu empfehlen, NACH der Aktivierung des Pods die Einstellungen zu exportieren. Dies solltest Du nach jedem Podwechsel und einmal monatlich tun. Kopiere die Exportdatei an einen sicheren Ort (z. B. in der Cloud). Details hierzu findest Du in [**Erstellen und Wiederherstellen von Backups**](../Maintenance/ExportImportSettings.md).
 
 
 (OmnipodDASH-deactivate-pod)=
@@ -185,7 +185,7 @@ Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der 
 
 ### Insulinabgabe fortsetzen
 
-**Hinweis**: Während eines Profilwechsels muss der DASH die Insulinabgabe unterbrechen, bevor das neue Basal-Profil gesetzt wird. Wenn die Kommunikation zwischen den beiden Befehlen fehlschlägt, kann die Insulinabgabe unterbrochen werden. Read [**Delivery suspended**](#delivery-suspended) in the troubleshooting section for more details.
+**Hinweis**: Während eines Profilwechsels muss der DASH die Insulinabgabe unterbrechen, bevor das neue Basal-Profil gesetzt wird. Wenn die Kommunikation zwischen den beiden Befehlen fehlschlägt, kann die Insulinabgabe unterbrochen werden. Lies [**Insulinabgabe unterbrochen**](#delivery-suspended) im Abschnitt Problembehandlung für weitere Details.
 
 Benutze diesen Befehl, um den aktiven, derzeit pausierten Pod anzuweisen, die Insulinabgabe fortzusetzen. Nachdem der Befehl erfolgreich verarbeitet wurde, wird die normale Insulinabgabe mit der aktuellen Basalrate fortgesetzt. Grundlage dafür ist das aktive Basalprofil zur aktuellen Uhrzeit. Der Pod akzeptiert wieder Befehle für Bolus, TBR und SMB.
 
@@ -282,7 +282,7 @@ Im Folgenden werden die Anordnung und die Bedeutung der Symbole und Statusfelder
 
 * **Reservoir:** Zeigt 50+ IE übrig an, wenn mehr als 50 Einheiten im Reservoir vorhanden sind. Unter 50 IE werden die exakten Einheiten angezeigt.
 * **Insgesamt abgegeben:** Zeigt die Gesamtzahl der aus dem Reservoir abgegebenen Insulineinheiten an. Dies schließt Insulin ein, das zum Aktivieren und Befüllen verwendet wurde.
-* **Fehler:** Zeigt den letzten Fehler an. Review the [Pod history](#view-pod-history) and log files for past errors and more detailed information.
+* **Fehler:** Zeigt den letzten Fehler an. Prüfe die [Pod Historie](#view-pod-history) und die Protokolldateien („log files“) auf vorhandene Fehlermeldungen und detailliertere Informationen.
 *  **Aktive Pod-Warnungen:** Zeigt jeweils aktuelle Warnungen auf dem aktiven Pod.
 
 ### Schaltflächen
@@ -304,16 +304,16 @@ Im Folgenden werden die Anordnung und die Bedeutung der Symbole und Statusfelder
 
 ### Pod Management Menu
 
-Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (1)** button from the **DASH** tab.
+Im Folgenden ist die Bedeutung der Symbole im **Pod Management**-Bildschirm zu sehen, die Du durch Drücken des **POD MGMT (1)** Buttons in der Registerkarte **DASH** erreichst.
 
 ![DASH_Tab_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
 
  ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 2 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
-* 3 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
-* 4 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
-* 5 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
+* 2 - [**Pod aktivieren**](#activate-pod) : Füllt und aktiviert einen neuen Pod.
+* 3 - [**Pod deaktivieren**](#deactivate-pod) : Deaktiviert den derzeit aktiven Pod.
+* 4 - **Testton abspielen**: Spielt einen einzelnen Test Piep auf dem Pod ab.
+* 5 - [**Pod Historie**](#view-pod-history) : Zeigt den Aktivitätsverlauf des aktiven Pods an.
 
 (DanaRS-Insulin-Pump-dash-settings)=
 
@@ -393,7 +393,7 @@ Sonstiges
   * **SMS** - Aus dem Pod übernommener Wert oder 50+ IE für SMS-Antworten
   * **Nightscout** - Lädt den Wert 50 hoch, wenn mehr als 50 Einheiten angezeigt werden (Nightscout Version 14.07 und älter).  Neuere Versionen melden einen Wert von 50+, wenn sich mehr als 50 Einheiten im Reservoir befinden.
 
-## Troubleshooting
+## Problembehandlung
 
 (OmnipodDASH-delivery-suspended)=
 
@@ -405,7 +405,7 @@ Sonstiges
      - Es kann eine Benachrichtigung geben, dass einer der Befehle unbestätigt blieb: Dies hängt davon ab, wann der Fehler aufgetreten ist.
      - AAPS wird alle 15 Minuten versuchen, das neue Basalprofil zu setzen.
      - AAPS wird alle 15 Minuten eine Benachrichtigung anzeigen, dass die Insulinabgabe unterbrochen ist, wenn die Abgabe weiterhin unterbrochen ist (Insulinabgabe konnte nicht gestartet werden).
-     - The [**Resume delivery**](#resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
+     - Die [**Insulin fortsetzen**](#resuming-insulin-delivery) Schaltfläche wird aktiv, wenn die Lieferung manuell fortgesetzt werden soll.
      - Wenn AAPS die Abgabe nicht alleine fortsetzen kann (dies geschieht, wenn der Pod nicht erreichbar ist, der Ton stumm geschaltet ist, etc.), beginnt der Pod für 3 Minuten jede Minute viermal zu piepen, dies wird alle 15 Minuten wiederholt, wenn die Abgabe mehr als 20 Minuten ausgesetzt ist.
   * Für unbestätigte Befehle sollte "Aktualisieren" des Podstatus diese bestätigen oder ablehnen.
 
@@ -498,5 +498,5 @@ Die gesamte Entwicklungsarbeit für den Omnipod-Treiber wird von der Community a
 
 -  **Level 0:** Lies den entsprechenden Abschnitt dieser Dokumentation um sicherzustellen, dass du verstehst, wie die Funktion, mit der Du Schwierigkeiten hast, funktionieren soll.
 -  **Level 1:** Wenn Du immer noch Probleme, die Du mit diesem Dokument nicht lösen kannst, haben solltest, gehe **Discord-**Kanal *#AAPS*. Nutze dazu [diesen Einladungslink <https://discord.gg/4fQUWHZ4Mw>](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
+-  **Level 2:** Durchsuche bereits bestehende 'Issues', um zu sehen, ob Dein Problem bereits in den [Issues](https://github.com/nightscout/AndroidAPS/issues) gemeldet wurde. Falls es bereits vorhanden ist, bestätige/kommentiere/ergänze bitte Informationen zu Deinem Problem. Wenn nicht, erstelle bitte ein [neues Issue](https://github.com/nightscout/AndroidAPS/issues) und füge [Deine Protokolldateien](../GettingHelp/AccessingLogFiles.md) (Logs) hinzu.
 -  **Sei geduldig - die meisten Mitglieder unserer Community sind gutmütige Freiwillige und die Lösung von Problemen erfordert oft Zeit und Geduld von Nutzern und Entwicklern.**
