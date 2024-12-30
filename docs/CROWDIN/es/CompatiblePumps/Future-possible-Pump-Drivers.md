@@ -24,14 +24,6 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 **Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
-### Equil (pump from Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
-
-**Loop status:** Is a Loop candidate.
-
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-**Comment:** Some people started looking into supporting pump in AAPS, but this is still in beginning phases. You can find more information on our discord in channel "equil".
-
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
 **Loop status:** Is a Loop candidate.
