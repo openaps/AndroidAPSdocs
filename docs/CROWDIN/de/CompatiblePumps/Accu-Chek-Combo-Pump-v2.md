@@ -4,8 +4,6 @@ orphan: true
 
 # Accu-Chek Combo
 
-Diese Anweisungen sind zum Einrichten der Accu-Chek Combo Pumpe mit dem neuen Combo-Treiber, der als Teil von AAPS ab Version 3.2 verfügbar ist. Dieser Treiber ist völlig unabhängig vom alten Treiber.
-
 **Die Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Das System wird Dir nicht alle Schwierigkeiten Deiner Diabetestherapie abnehmen, aber wenn Du willens bist, die nötige Zeit zu investieren, dann kann es die Ergebnisse Deiner Therapie verbessern und die Lebensqualität erhöhen. Überstürze nichts. Nimm dir Zeit zum Lernen. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
 
 ## Hard- und Softwareanforderungen
@@ -98,7 +96,7 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
 ## Aktivierung des Treibers und Kopplung mit der Combo
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **Wichtig**: Es ist auch der alte Treiber, genannt "Accu-Chek Combo (Ruffy)", in dieser Liste. Wähle diesen _nicht_ aus.
+* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Wichtig**: Es ist auch der alte Treiber, genannt "Accu-Chek Combo (Ruffy)", in dieser Liste. Wähle diesen _nicht_ aus.
 
   ![Screenshot der Konfiguration Combo](../images/combo/combov2-config-builder.png)
 
@@ -112,9 +110,9 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
   ![Screenshot Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png)
 
-  ![Screenshot Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
+  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
 
-  ![Screenshot Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
 
 * Wenn der 10-stellige PIN, der auf der Combo angezeigt wird, falsch eingegeben wurde, erscheint folgende Fehlermeldung: ![Screenshot Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
