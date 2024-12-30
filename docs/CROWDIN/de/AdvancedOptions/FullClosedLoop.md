@@ -94,12 +94,12 @@ Fette oder proteinreiche Ernährung oder langsame Verdauung/Gastroparese machen 
 
 #### Glykämischer Index und Wirkung auf den Blutzucker
 
-Challenge for the UAM mode rises with rising EBG (effect on blood glucose)
+Die Herausforderung für den UAM-Modus steigt mit steigendem EBG (effect on blood glucose; dt. Effekt auf Blutzucker)
 
-- Start moderate/low, and tune your settings. Inly then, "test" meals with high EBG
-- Consider a < 50% initial bolus if consuming very high EBG
+- Beginne moderat/tief und passe Deine Einstellungen an. „Teste“ erst danach Mahlzeiten mit hohem EBG
+- Denke darüber nach < 50% als ersten Bolus abzugeben, wenn Du Nahrungsmittel mit sehr hohem EBG isst
 
-1) **No EBG**: fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**: wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: (sugar-) sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
+1) **Kein EBG**: frisches Fleisch, Fisch, Eier, Speck, Öle, Käse. 2) **Geringer EBG**: frisches Gemüse und Beeren, Pilze, Nüsse, Milch, Joghurt, Hüttenkäse. 3) **Mäßiger EBG**: Vollkornbrot/Nudeln, Kartoffeln, Wildreis, Hafer, getrocknete Früchte. 4) **Hoher EBG**: Weizenbrot, Baguette, Toast, Waffeln, Kekse, Kartoffeln, Nudeln, Reis. 5) **Sehr hoher EBG**: gezuckerte Getränke, Fruchtsäfte, Cornflakes, Süßigkeiten, Kartoffelchips, Salzstangen.
 
 ![Glykämischer Index und Wirkung auf den Blutzucker](../images/fullClosedLoop01.png)
 
