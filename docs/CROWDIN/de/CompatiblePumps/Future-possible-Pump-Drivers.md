@@ -78,7 +78,7 @@ Sie planen zuerst die t:Mobi (vorher t:sport genannt) Ende 2022 oder 2023 auf de
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Anmerkungen:** Von Medtronic [zurückgezogen](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
 ## Anforderungen an Pumpen, um loopbar zu sein
 
