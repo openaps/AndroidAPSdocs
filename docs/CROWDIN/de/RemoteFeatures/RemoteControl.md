@@ -1,10 +1,10 @@
 # AAPS remote steuern
 Es gibt vier sehr wirkungsvolle Wege, **AAPS** remote zu steuern:
 
-1) [SMS commands](RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](RemoteControl_aapsclient) (follower phone is Android) 3) [Nightscout](RemoteControl_nightscout) (Android, iOS or other computer/device).  
+1) [SMS-Befehle](RemoteControl_SMS-Commands) (das Follower-Smartphone kann entweder Android oder iOS nutzen), 2) [AAPSClient](RemoteControl_aapsclient) (das Follower-Smartphone nutzt Android) 3) [Nightscout](RemoteControl_nightscout) (Android, iOS oder ein anderes Gerät/Computer).  
 4) [Smartwatches](RemoteControl_smartwatches) (Android)
 
-The first three are mostly appropriate for caregivers/parents, but smartwatches are very useful for caregivers/parents **and** for adults with diabetes themselves.
+Die ersten drei sind meist für Pflegende/Eltern geeignet und Smartwatches sind **zusätzlich** für Erwachsene mit Diabetes sehr hilfreich.
 
 ![grafik](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
@@ -12,7 +12,7 @@ The first three are mostly appropriate for caregivers/parents, but smartwatches 
 
 ## 1) SMS-Befehle
 
-See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Hierzu gibt es die gesonderte Seite [SMS-Befehle](../RemoteFeatures/SMSCommands.md).
 
 (RemoteControl_aapsclient)=
 ## 2) AAPSClient
@@ -46,13 +46,13 @@ Mit einem USB-Kabel auf das Follower-Smartphone übertragen werden, oder in eine
 
 ### Synchronisierung - AAPSClient und AAPS einrichten (für Version 3.2.0.0 und höher)
 
-Once __AAPSClient__ apk is installed on the follower phone, the user must ensure their ‘Preferences’ in Config Builder are correctly set up and aligned with __AAPS__ for Nightscout 15 (see Release Notes [here](../Maintenance/UpdateToNewVersion)). Das folgende Beispiel bietet Hilfestellung bei den Synchronisierungs-Einstellungen für NSClient und NSClientV3 im Zusammenspiel mit Nightscout 15. Es gibt daneben auch noch andere __AAPS__-Optionen (z.B. xDrip+).
+Sobald die __AAPSClient__-APK auf dem Follower-Smartphone installiert ist, muss dafür gesorgt werden, dass die „Einstellungen“ in der KONFIGURATION mit denen für __AAPS__ mit Nightscout 15 abgeglichen sind (siehe Versionshinweise [hier](../Maintenance/UpdateToNewVersion)). Das folgende Beispiel bietet Hilfestellung bei den Synchronisierungs-Einstellungen für NSClient und NSClientV3 im Zusammenspiel mit Nightscout 15. Es gibt daneben auch noch andere __AAPS__-Optionen (z.B. xDrip+).
 
 Innerhalb des Abschnitts 'Synchronisierung' in der 'KONFIGURATION' kannst Du Dich für verschiedene Synchronisierungsoptionen sowohl für __AAPS__ als auch das Follower-Smartphone entscheiden:
 
-- Option 1: NSClient (also known as ‘v1’) - which synchronizes the user’s data with Nightscout; or
+- Option 1: Nightscout-Client (auch unter 'v1' bekannt) - der die Daten des Benutzenden mit Nightscout synchronisiert; oder
 
-- Option 2: NSClientV3 (also referred to as ‘v3’).- which synchronizes the user’s data with Nightscout using v3 API.
+- Option 2: NSClientV3 (auch als „v3“ bezeichnet) - das die Daten mithilfe der v3-API mit Nightscout synchronisiert.
 
 ![AAPS1_Screenshot 2024-05-17 133502](../images/4bdfed7e-3b2f-4fe8-b6db-6fcf0e5c7d98.png)
 
@@ -87,26 +87,26 @@ Wenn Du Probleme mit **AAPS** v3 hast ('NS Access Token' wird nicht akzeptiert) 
 
 ### AAPSClient-Funktionen sind unter anderem:
 
-| Tab / Hamburger     | Funktionalitäten                                                                                                                                                                                      |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Action** Tab      | - Profile Switch <br>- Temp Target<br>- BG Check<br>- CGM Sensor Insert<br>- Note<br>- Exercise<br>- Announcement<br>- Question?<br>- History Browser |
-| **Food** Tab        |                                                                                                                                                                                                       |
-| **Treatments** Tab  | - Check Treatments delivered including bolus and carbs entered                                                                                                                                        |
-| **Maintenance** Tab | - Export and Import Settings                                                                                                                                                                          |
-| **Profile** Tab     | - Creating new profile<br>- Profile switch                                                                                                                                                      |
+| Tab / Hamburger      | Funktionalitäten                                                                                                                                                                               |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Aktionen**-Tab     | - Profilwechsel <br>- Temporäres Ziel<br>- BZ-Test<br>- CGM-Sensor gesetzt<br>- Notiz<br>- Bewegung<br>- Ankündigung<br>- Frage?<br>- Historie |
+| **Nahrung**-Tab      |                                                                                                                                                                                                |
+| **Behandlungen**-Tab | - Prüfen der durchgeführten Behandlungen inkl. des Insulins und der eingegebenen Kohlenhydrate                                                                                                 |
+| **Wartung**-Tab      | - Einstellungen ex- und importieren                                                                                                                                                            |
+| **Profil**-Tab       | - Neues Profil erstellen<br>- Profilwechsel                                                                                                                                              |
 
 Mit dem **AAPSClient** kann das Elternteil/Betreuende einen Großteil der Anpassungen direkt in **AAPS** (Ausnahme: Bolusabgabe) über das Mobilfunknetz oder Internet remote vornehmen. Die wichtigsten Vorteile des **AAPSClient** sind die Geschwindigkeit und Einfachheit mit der Eltern/Betreuende **AAPS** remote steuern können. Der __AAPSClient__ _kann_ deutlich schneller als die Eingabe von zu authentifizierenden SMS-Befehlen sein. Befehle, die im **AAPSClient** eingegeben werden, werden nach Nightscout hochgeladen.
 
-Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](#important-hints-2-8-1-1) for further details.
+Eine Remote-Steuerung über die **AAPSClient**-App wird nur dann empfohlen, wenn Deine Synchronisation gut funktioniert (_d. h._ Du hast keine unerwünschten Datenänderungen wie z. B. eigenständige Änderungen von TT, TBR usw.) siehe [Versionshinweise für Version 2.8.1.1](#important-hints-2-8-1-1) für weitere Details.
 
 ### AAPSClient mit Smartwatch-Optionen
 
-Eine Smartwatch kann sehr nützlich sein, um bei Kindern **AAPS** zu managen. Es sind einige verschiedene Konfigurationen möglich. Auf einer kompatiblen Smartwatch kann die [AAPSClient WearOS App](https://github.com/nightscout/AndroidAPS/releases/) installiert werden, die mit der AAPSClient-App auf dem Eltern-Smartphone verbunden wird. Damit können der aktuelle Glukosewert und der Loop-Status angezeigt werden. Zusätzlich können dann KH-Einträge vorgenommen werden und auch temporäre Ziele und Profiländerungen aktiviert werden. Die Abgabe eines Bolus ist NICHT über die WearOS App möglich. You can read more about Smartwatches [here](#4-smartwatches).
+Eine Smartwatch kann sehr nützlich sein, um bei Kindern **AAPS** zu managen. Es sind einige verschiedene Konfigurationen möglich. Auf einer kompatiblen Smartwatch kann die [AAPSClient WearOS App](https://github.com/nightscout/AndroidAPS/releases/) installiert werden, die mit der AAPSClient-App auf dem Eltern-Smartphone verbunden wird. Damit können der aktuelle Glukosewert und der Loop-Status angezeigt werden. Zusätzlich können dann KH-Einträge vorgenommen werden und auch temporäre Ziele und Profiländerungen aktiviert werden. Die Abgabe eines Bolus ist NICHT über die WearOS App möglich. [Hier](#4-smartwatches) kannst Du mehr über Smartwatches erfahren.
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-Genauso wie es Nightscout als einen Server "in der Cloud" gibt, gibt es auch eine dedizierte **Nightscout**-App, die über den App Store direkt auf Dein iPhone heruntergeladen werden kann. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#2-aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
+Genauso wie es Nightscout als einen Server "in der Cloud" gibt, gibt es auch eine dedizierte **Nightscout**-App, die über den App Store direkt auf Dein iPhone heruntergeladen werden kann. Wenn Du ein Android-Follower-Smartphone hast es gibt keine spezielle Nightscout-App. Du nutzt in diesem Fall am Besten den [**AAPSClient**](#2-aapsclient). Wenn Du nur folgen möchtest und keine Behandlungen eingeben musst, kannst Du auch die [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch)-App aus dem Play Store herunterladen und installieren.
 
 Sobald Du die **Nightscout**-App auf Deinem iPhone installiert hast, öffne die App, folge den Anweisungen für die Einrichtung und gib Deine Nightscout-Adresse (siehe links unten) ein. Je nach Anbieter bei dem Deine Nightscout-Seite läuft, kann es etwas anders aussehen. (_z. B._ http://deineadresse.herokuapp.com). Gib dann Dein Nightscout API secret (Passwort) ein (siehe rechts unten). Wenn Du nicht nach Deinem API-Passwort gefragt wirst, klickst Du oben in der App auf das Schloss-Symbol und gibst es dann ein:
 
@@ -114,7 +114,7 @@ Sobald Du die **Nightscout**-App auf Deinem iPhone installiert hast, öffne die 
 
 Weitere Informationen zur Einrichtung findest Du direkt bei [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
-When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
+Wenn Du Dich das erste Mal einloggst, wirst Du noch eine sehr einfach gestaltete Ansicht sehen. Passe die Anzeige an, indem Du das „Hamburger“-Menü oben rechts auswählst und nach unten scrollst:
 
 ![grafik](../images/remote-control-25.png)
 
@@ -122,7 +122,7 @@ Scrolle bis zu den „Einstellungen“ herunter. Die Darstellung der Glukosewert
 
 ![grafik](../images/remote-control-25b.png)
 
-Select your desired options. Uncheck alarms if you use an alternative app for alarms.
+Wähle Deine gewünschten Optionen aus. Deaktiviere die Alarme, wenn Du für die Alarmierung andere Apps nutzt.
 
 ![grafik](../images/remote-control-26.png)
 
@@ -136,40 +136,40 @@ Wichtig ist, dass Du nach Deinen Änderungen unten auf "Speichern“ klickst, da
 
 Nach dem Drücken von „Speichern“ wird die App zum Hauptbildschirm der Nightscout-App zurückkehren. Es sollte ungefähr so aussehen:
 
-1. Current glucose value
-2. Information on AAPS system status - touch the individual tabs on the screen to display more detail. Add or remove these display options using hamburger menu.
-3. Recent glucose trace with treatments (carbs, boluses) displayed
-4. Longer-term glucose trace
-5. "Hamburger" menu for setting display options, generating reports, editing profiles and Nightscout admin tools
-6. "**+**" menu for entering treatments to send to AAPS.
-7. Select different time period to display
-8. Basal insulin profile
-9. Green line = historical glucose Blue lines = predicted glucose
+1. Aktueller Glukosewert
+2. Informationen zum AAPS-Systemstatus - Tippe auf die einzelnen Registerkarten des Bildschirms, um mehr Details anzuzeigen. Lösche bzw. füge mit dem Hamburger-Menü die anzuzeigenden Informationen hinzu.
+3. Glukoseverlauf mit den entsprechenden Behandlungen (Kohlenhydrate, Boli) wird angezeigt
+4. Längerfristiger Glukoseverlauf
+5. „Hamburger“-Menü zum Einstellen der Anzeigeoptionen, Erstellung von Berichten, Bearbeitung von Profilen und den Nightscout Admin-Tools
+6. „**+**“-Menü für die Eingabe von Behandlungen und Übertragung an AAPS.
+7. Ändern des Anzeige-Zeitraums
+8. Basalrate (basales Insulinprofil)
+9. Grüne Linie = historische Glukosewerte Blaue Linien = prognostizierte Glukosewerte
 
 ![grafik](../images/remote-control-28.png)
 
 Schauen wir uns das obere linke Menü der Nightscout-App etwas genauer an:
 
-1. Careportal retrospective edit
-2. Turn on/off alarms
-3. Hamburger - for setting preferences
-4. Careportal - Log treatment - to send changes to AAPS
+1. Behandlungen rückwirkend ändern
+2. Alarme ein-/ausschalten
+3. Hamburger - für Einstellungen
+4. Behandlungen - Behandlung eingeben - zum Übertragen der Änderungen an AAPS
 
 ![nightscout top bar](../images/remote-control-29.png)
 
 Es gibt auf diesem Bildschirm eine Vielzahl an Statusinformationen des **AAPS**-Systems in den grauen Tabs (und noch mehr Informationen werden angezeigt, wenn Du auf die Tabs tippst):
 
-1. 5min glucose trend
-2. Bolus wizard preview
-3. Press on Basal to see your current profile and basal information
-4. Time since latest CGM reading in AAPS
-5. **Pump**: insulin, battery % and when AAPS last connected to it
-6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
-7. Press on IOB to see split of basal and bolus insulin
-8. Insulin age in reservoir
+1. 5 Minuten Glukosetrend
+2. Bolus-Assistenten-Vorschau (BWP)
+3. Tippe auf „Basal“, um Dein aktuelles Profil und Deine Basal-Informationen zu sehen
+4. Zeit seit dem letzten CGM-Messwert in AAPS
+5. **Pumpe**: Insulin, Batterie % und wann sie sich das letzte Mal mit AAPS verbunden hat
+6. Zeit seit der letzten Aktualisierung von AAPS - wenn es länger als 5 Minuten her ist, kann es auf ein Verbindungsproblem zwischen dem AAPS-Smartphone und der Pumpe/CGM hindeuten
+7. Drücke auf IOB, um die Verteilung zwischen von Basal- und Bolusinsulin zu sehen
+8. Alter des Insulins im Reservoir
 9. Kanülenalter
-10. Battery status of AAPS phone
-11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+10. Akkustand des AAPS-Smartphones
+11. Größe Deiner Datenbank. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
 
 ![grafik](../images/remote-control-30.png)
 
