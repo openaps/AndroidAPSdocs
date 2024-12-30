@@ -66,7 +66,7 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 (version3300)=
 ## Version 3.3.0.0
 
-Release date: XX-XX-202X - currently available as [beta](https://github.com/nightscout/AndroidAPS/branches).
+Release date: 29/12/2024
 
 ### Main features
 
@@ -84,9 +84,10 @@ Release date: XX-XX-202X - currently available as [beta](https://github.com/nigh
 
 * Before upgrading: 
   * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
-  * [Android Studio version called "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already have an older version of Android Studio installed, you may need to configure the JVM version to 21. See [Troubleshooting Android Studio > Incompatible Gradle JVM](#incompatible-gradle-jvm).
+  * [Android Studio version called "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already have an older version of Android Studio installed, you may need to <span style="color:red">configure the JVM version to 21</span>. See [Troubleshooting Android Studio > Incompatible Gradle JVM](#incompatible-gradle-jvm).
   * If you use the “old” Combo driver with ruffy device, migrate to the [native Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) before update
   * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade: make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
+* Update instructions: follow the [Update to a new version](../Maintenance/UpdateToNewVersion.md) guide.
 * After upgrading:
   * Set the new [“AAPS directory” setting](#preferences-maintenance-settings), in the Maintenance tab.
 
