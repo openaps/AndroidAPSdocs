@@ -6,16 +6,10 @@ orphan: true
 
 # Accu-Chek Combo Tipps zum Einstieg
 
-**NOTE:** Starting with AAPS version 3.2, a [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (referred to as "combov2" sometimes) has been added. Der alte Treiber wird auch 'Ruffy-based driver' genannt. Einige Teile dieses Dokuments gelten nur für den alten Treiber. Diese Abschnitte werden entsprechend gekennzeichnet.
-
 ## Wie man einen reibungslosen Betrieb gewährleistet
 
 * **Hab immer dein Smartphone dabei**, lege es in der Nacht neben dein Bett. Da du während des Schlafens auf der Pumpe liegen könntest, funktioniert eine höhere Position (auf einem Regal oder Brett) am besten.
 * Sorge dafür, dass die Batterie der Pumpe immer so voll wie möglich ist. Im Abschnitt Batterie findest du Tipps bezüglich der Batterie.
-
-* Nur für den alten Treiber gültig: **Die App 'ruffy' sollte nicht aufgerufen werden**, solange das System läuft. Wenn diese App erneut gestartet wird, kann die Verbindung zur Pumpe verloren gehen. Wenn die Pumpe mit ruffy verbunden ist, gibt es keine Notwendigkeit, die Verbindung erneut herzustellen. Selbst nach einem Neustart des Smartphones wird die Verbindung automatisch wieder hergestellt. Verschiebe die App wenn möglich auf einen unbenutzten Bildschirm oder in ein Verzeichnis auf dem Smartphone, damit du sie nicht aus Versehen aufrufst.
-
-* Nur für den alten Treiber gültig: Solltest Du während der Loop läuft, versehentlich die App gestartet haben, hilft es das Smartphone neu zu starten.
 * Nutze die Pumpe nach Möglichkeit nur über AAPS. Aktiviere daher die Tastensperre an der Pumpe mit **PUMPEN-EINSTELLUNGEN / TASTENSPERRE / EIN**. Es ist lediglich dann notwendig, die Tasten der Pumpe zu benutzen, wenn das Reservoir oder die Batterie ausgewechselt werden müssen. 
 
 ![Tastensperre](../images/combo/combo-tips-keylock.png)
@@ -83,18 +77,9 @@ Die typische Lebensdauer für verschiedene Batterien ist wie folgt:
 
 Wenn die Lebensdauer der Batterie wesentlich kürzer ist, als die oben angegebenen Bereiche, überprüfe bitte folgende mögliche Ursachen:
 
-* Nur für den alten Treiber gültig: Neuere Versionen (ab März 2018) der [ruffy-App](https://github.com/MilosKozak/ruffy) führen zu einer deutlich längeren Lebensdauer der Batterie. Falls Du Probleme mit der Lebensdauer der Batterie haben solltest, wechsle auf die neueste Version.
 * Es gibt verschiedene Varianten der Batterie Abdeckung bei der Combo Pumpe, die teilweise einen Kurzschluss bei der Batterie verursachen und sie schnell entladen. Die Abdeckungen ohne dieses Problem kann man an den goldenen Metallkontakten erkennen.
 * Wenn die Uhr in der Pumpe einen kurzen Batteriewechsel nicht "überlebt", kann es sein, dass der Kondensator kaputt ist, der die Uhr nach einem kurzen Energieverlust weiter laufen lässt. In diesem Fall hilft nur ein Austausch der Pumpe durch Roche, was während der Garantiezeit kein Problem ist. 
 * Die Hardware des Smartphones und die Software (Android Betriebssystem und Bluetooth Protokoll) beeinflussen ebenfalls die Lebensdauer der Batterie in der Pumpe, wobei die genauen Faktoren bisher noch nicht bekannt sind. Wenn du die Möglichkeit hast, versuche es mit einem anderen Smartphone und vergleiche die Lebensdauer der Batterie.
-
-## Zeitumstellung (Sommer- / Winterzeit)
-
-**HINWEIS**: Der neue Treiber setzt Datum und Uhrzeit automatisch und macht die Anpassungen bei einer Zeitumstellung selbständig. Die folgenden Schritte gelten nur für den alten Treiber.
-
-* Zum aktuellen Zeitpunkt unterstützt der Combo-Treiber keine automatische Anpassung der Zeit in der Pumpe.
-* Während der Nacht der Zeitumstellung wird die Zeit des Smartphones aktualisiert, aber die Zeit in der Pumpe bleibt unverändert. Das löst gegen 3 Uhr morgens einen Alarm aus, weil die Zeiten der Systeme ab dann voneinander abweichen.
-* Wenn du in der Nacht nicht geweckt werden willst, **deaktiviere die automatische Zeitanpassung auf dem Smartphone** am Abend bevor die Zeitumstellung erfolgt und passe die Zeit am nächsten Morgen manuell an. Ein guter Weg, um mit Zeitumstellungen umzugehen ist, in eine Zeitzone zu wechseln, die sich auf dem gleichen Längengrad befindet, auf dem Du Dich befindest, aber näher am Äquator liegt (in der es keine Sommer-/Winterzeitumstellung gibt). Beispiel: Wenn Du in der Sommerzeit in Mitteleuropa bist (CEST/GMT+2), wechselst Du in der Nacht vor der Umstellung auf Winterzeit die Zeitzone Deines Smartphones in der Nacht vor der Umstellung auf Winterzeit in die Zeitzone Landes Zimbabwe (CAT). Am darauf folgenden Morgen änderst Du die Zeitzone Deines Smartphones auf Mitteleuropäische Zeit (CET/GMT+1). Gleichzeitig änderst Du die Uhreinstellungen Deiner Pumpe auf die Winterzeit-Uhrzeit. The other way around, switch to the time zone of Nigeria while on Winter Time CET/GMT+1 and go back to Central European Summer Time (CEST/GMT+2) the morning after the switch to summer time and change the pump time accordingly. Unter https://www.timeanddate.com/time/map/ kannst Du ein passendes Land und die Zeitzone auswählen.
 
 ## Erweiterter Bolus, Multiwave Bolus
 
