@@ -18,7 +18,7 @@ Wear OS 5的更改锁定了表盘：仅可使用小工具。
 
 ## 配置
 
-Enable the Wear module in the [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
+在[配置构建器 > 同步](../SettingUpAaps/ConfigBuilder.md)中启用穿戴设备模块。
 
 使用Wear Preferences定义在计算通过手表给予的剂量时应考虑的变量（例如，15分钟趋势、COB...）。
 
@@ -47,7 +47,7 @@ Enable the Wear module in the [Config Builder > Synchronization](../SettingUpAap
 
 实心星号表示启用状态（**开**），空心星号表示设置已禁用（**关**）：
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![设置开/关](../images/Watchface_Settings_On_Off.png)
 
 ### AAPS伴侣参数
 
@@ -79,7 +79,7 @@ Enable the Wear module in the [Config Builder > Synchronization](../SettingUpAap
 
 * **输入设计**：使用此参数，您可以选择在输入AAPS命令（临时目标、胰岛素、碳水化合物...）时“+”和“-”按钮的位置。
 
-![Input design options](../images/Watchface_InputDesign.png)
+![输入设计选项](../images/Watchface_InputDesign.png)
 
 ### 特定表盘参数
 
@@ -87,7 +87,7 @@ Enable the Wear module in the [Config Builder > Synchronization](../SettingUpAap
 
 * **变化量粒度**（默认`中等`）
 
-![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
+![Steampunk仪表](../images/Watchface_Steampunk_Gauge.png)
 
 #### Circle WF
 
@@ -181,7 +181,7 @@ Tiles 可与任何表盘“并排”使用。 要访问已启用的 Tile，只�
 
 在使用Tiles之前，您必须在Android APS的“Wear OS”设置中切换“从手表控制”。
 
-![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
+![启用Wear手机偏好设置](../images/wear_phone_preferences.jpg)
 
 根据您的Wear OS版本、品牌以及智能手机，有两种启用Tiles的方式：
 
@@ -214,95 +214,95 @@ Tiles的内容可以通过长按tile并点击“编辑”或“齿轮图标”�
 
 ### AAPS（临时目标）Tile
 
-The Temp Target Tile can request a temporary target based on AAPS phone presets. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](#Preferences-default-temp-targets) and set the duration and targets for each preset. Configure the visible actions on the tile through the tile settings. Long press the tile to show the configuration options and select 1 to 4 options:
+临时目标磁贴可以根据AAPS手机预设请求临时目标。 通过手机应用设置中的“偏好设置”、“概览”、[“默认临时目标”](#Preferences-default-temp-targets)来配置预设时间和目标，为每个预设设置持续时间和目标。 通过磁贴设置配置磁贴上可见的操作。 长按磁贴以显示配置选项，并选择选项1到4：
 
-* **Activity**; for sport
-* **Hypo**; to raise the target during hypo treatment
-* **Eating soon**; to lower the target to raise the insulin on board
-* **Manual**; set a custom temporary target and duration
-* **Cancel**; to stop the current temporary target
+* **活动**；用于运动。
+* **低血糖**；在低血糖治疗期间提高目标
+* **即将进食**；降低目标以增加活性胰岛素。
+* **手动**；设置自定义临时目标和持续时间。
+* **取消**；停止当前的临时目标。
 
-![Wear actions tile edit](../images/wear_tile_tempt_edit.png)
+![编辑Wear操作图块](../images/wear_tile_tempt_edit.png)
 
-### AAPS(QuickWizard)Tile
+### AAPS（快速向导）磁贴
 
-The QuickWizard tile can hold 1 to 4 quick wizard action buttons, defined with the phone app[2]. See [QuickWizard](#Preferences-quick-wizard). You can set standard meals (carbs and calculation method for the bolus) to be displayed on the tile depending on the time of the day. Ideal for the most common meals/snacks you eat during the day. You can specify if the quick wizard buttons will show on the phone, watch, or both. Please note that the phone can show only one quick wizard button at a time. The quick wizard setup also can specify a custom percentage of the insulin for the bolus. The custom percentage enables you to vary, for example, snack at 120%, slow absorbing breakfast 80% and hypo treatment sugar snack at 0%
+快速向导磁贴可以容纳1到4个快速向导操作按钮，这些按钮通过手机应用[2]定义。 请参阅[快速向导](#Preferences-quick-wizard)。 您可以设置标准餐食（碳水化合物和大剂量计算方法），以便根据一天中的时间显示在磁贴上。 非常适合您一天中最常吃的餐食/零食。 您可以指定快速向导按钮是显示在手机上、手表上，还是两者都显示。 请注意，手机一次只能显示一个快速向导按钮。 快速向导设置还可以指定推注胰岛素的自定义百分比。 自定义百分比使您能够调整，例如，零食为120%、慢吸收早餐为80%，低血糖治疗时的含糖零食为0%。
 
 ![Wear actions tile and phone configuration](../images/quickwizard_watch_phone.png)
 
-[2] Wear OS limits tiles update frequency to only once every 30 seconds. When you notice that the changes on your phone are not reflected on the tile, consider; waiting 30 seconds, using the "Resend all data" button from the Wear OS section of AAPS, or removing the tile and adding it again. To change the order of the QuickWizard buttons dragging an item up or down.
+[2] Wear OS 将磁贴更新频率限制为每30秒仅更新一次。 当您注意到手机上的更改未反映在图块上时，请考虑等待30秒、使用AAPS中的“重新发送所有数据”按钮或删除图块并重新添加。 通过拖放更改快速向导按钮的顺序。
 
-## Always on
+## 屏幕常亮
 
-Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
+Android Wear OS智能手表的长电池寿命是一个挑战。 一些智能手表在充电前可使用长达30小时。 为优化电源节省，在不使用时应关闭显示屏。 大多数手表支持“常亮”显示。
 
-Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lightening fewer pixels to save power on OLED displays.
+自AAPS版本3起，我们可以在常亮模式下使用“简化用户界面（Simplify UI）”。 该界面仅包含血糖值、趋势方向和时间。 此用户界面经过功耗优化，更新频率较低，显示的信息更少，点亮的像素也更少，以在OLED显示屏上节省电量。
 
-The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “Always on” or “Always on and charging”.
+简化用户界面模式适用于以下表盘：AAPS、AAPS V2、Home Big, Digital Style, Steampunk, and Cockpit.。 简化用户界面是可选的，可通过表盘设置进行配置。 （长按表盘并点击“编辑”或齿轮图标）选择“简化用户界面”配置，并将其设置为“始终开启”或“充电时始终开启”。
 
-### Night-time mode
+### 夜间模式
 
-While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
+在充电时，如果显示屏能够保持“始终开启”并在夜间显示您的血糖值，那将非常有帮助。 然而，标准表盘的亮度过高，信息过多，而且细节在困倦的眼睛看来很难阅读。 因此，我们添加了一个选项，让表盘仅在充电时（如果在配置中设置）简化用户界面。
 
-The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “During charging” or “Always on and charging”
+简化用户界面模式适用于以下表盘：AAPS、AAPS V2、Home Big, Digital Style, Steampunk, and Cockpit.。 简化用户界面是可选的，可通过表盘设置进行配置。 （长按表盘并点击“编辑”或齿轮图标）选择“简化用户界面”配置，并将其设置为“充电时”或“始终开启且充电时”。
 
-The Android developer options enable your watch to stay awake during charging. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options”.
+Android开发者选项使您的手表能够在充电时保持唤醒状态。 要使开发者选项可用，请参阅[官方文档](https://developer.android.com/training/wearables/get-started/debugging)。 在开发者选项中将“充电时保持唤醒”设置为“开”。
 
-Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
+注意：并非所有显示屏都能很好地处理常亮状态。 它可能会导致屏幕烧屏，尤其是在较旧的OLED显示屏上。 手表通常会调暗显示屏以防止烧屏；请查阅您的用户手册、制造商网站或互联网以获取建议。
 
 ![Watchface Nightstand](../images/Watchface_nightstand.jpg)
 
-![Simplified UI](../images/Watchface_simplified_ui.png)
+![简化UI](../images/Watchface_simplified_ui.png)
 
-## Snooze Alert shortcut
+## 暂停警报快捷方式
 
-It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note; you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+可以创建快捷方式以暂停AAPS的警报/提醒。 通过手表静音声音既方便又快捷，无需伸手拿手机。 请注意，您仍然需要在手机上查看警报消息并相应处理，但您可以稍后再查看。 如果您的手表有两个按钮，您可以将一个键分配给`AAPS暂停警报`程序。
 
-To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
+要将按钮链接到Samsung Watch 4，请转到`设置 > 高级功能 > 自定义按钮 > 双击 > AAPS暂停警报`
 
-### Snooze xDrip
+### 暂停xDrip警报
 
-When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm.
+如果您使用xDrip并在手表上安装了xDrip，则“AAPS暂停警报”快捷方式也将暂停任何xDrip警报。
 
-## Performance and battery life tips
+## 性能和电池寿命提示
 
-Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+Wear OS手表是电源受限的设备。 手表表壳的大小限制了内置电池的容量。 尽管在硬件和软件方面取得了最近的进步，Wear OS手表仍然需要每天充电。
 
-If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
+如果实际电池续航时间短于一天（从日落到日出），以下是一些故障排除提示：
 
-Main battery-demanding areas are:
+主要耗电区域包括：
 
-* Active display with a backlight on (for LED) or in full intensity mode (for OLED)
-* Rendering on screen
-* Radio communication over Bluetooth
+* 带有背光的活动显示屏（对于LED）或全亮度模式（对于OLED）。
+* 屏幕渲染。
+* 通过蓝牙的无线电通信。
 
-Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
+由于我们无法在通信方面妥协（我们需要最新数据）并且希望渲染最新数据，因此大多数优化都可以在*显示时间*区域进行：
 
-* Stock watchfaces are usually better optimized than custom one, downloaded from the store.
-* It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
-* Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-* Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
-* Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
-* Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
-* Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-* Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
-* **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+* 系统自带的表盘通常比从商店下载的自定义表盘优化得更好。
+* 建议使用在非活跃/暗屏模式下限制渲染数据量的表盘。
+* 请注意，当混合使用其他小工具（如第三方天气小工具或其他利用外部数据源的小工具）时的情况。
+* 从简单的表盘开始。 一次添加一个复杂功能，并观察它们对电池寿命的影响。
+* 尝试为AAPS表盘使用**深色**主题和[**匹配分隔符**](#watchface-settings)。 在OLED设备上，这将限制点亮的像素数量并限制烧屏。
+* 检查在您的手表上使用AAPS标准表盘还是带有AAPS小工具的其他表盘效果更好。
+* 在不同的活动配置文件下，观察几天。 大多数手表会在瞥视、移动和其他使用相关触发条件下激活显示屏。
+* 检查影响性能的全局系统设置：通知、背光/活动显示超时、何时激活GPS。
+* 检查[已测试手机和手表列表](#Phones-list-of-tested-phones)并[向社区寻求帮助](../GettingHelp/WhereCanIGetHelp.md)以获取其他用户的经验和报告的电池续航时间。
+* **我们无法保证表盘或复杂功能上显示的数据是最新的**。 最终，何时更新表盘或复杂功能由Wear OS决定。 即使AAPS应用请求更新，系统也可能会为了节省电量而决定推迟或忽略更新。 当手表电量不足且有疑问时，请务必通过手机上的主AAPS应用进行再次确认。
 
 (Watchfaces-troubleshooting-the-wear-app)=
 
-## Troubleshooting the wear app:
+## 排查穿戴应用的故障
 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
-* If Complications does not update data - check first if AAPS watchfaces work at all.
+* 有时重新同步应用到手表很有帮助，因为手表自己同步可能会有点慢：Android Wear > 齿轮图标 > 手表名称 > 重新同步应用。
+* 在开发者选项（在手表上）中启用ADB调试，通过USB连接手表，并在Android Studio中启动Wear应用。
+* 如果小工具不更新数据，请首先检查AAPS表盘是否正常工作。
 
-## Additional AAPS custom watchfaces are also available
+## 还有其他AAPS自定义表盘可供选择
 
-[Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+[在这里](../ExchangeSiteCustomWatchfaces/index.md)您可以下载由其他用户制作的自定义表盘ZIP文件。
 
-## Build your own watchface
+## 构建您自己的表盘
 
-If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
+如果您想构建自己的表盘，请遵循[此指南](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md)。
 
-Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+一旦构建了自定义表盘，您可以与其他人共享自己的**AAPS**自定义表盘，可以通过向Github提交拉取请求将ZIP文件上传到“ExchangeSiteCustomWatchfaces”文件夹中。 在合并拉取请求期间，文档团队将提取CustomWatchface.png文件，并使用ZIP文件的文件名。
