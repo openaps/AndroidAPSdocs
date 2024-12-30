@@ -73,7 +73,7 @@ Du kannst es mit Tape fixieren. Es gibt mehrere vorperforierte 'Overpatches' fü
 
 Du kannst es fixieren. Sie können auch Oberarm - Armbänder kaufen, die das CGM/FGM mit einer Band fixieren (Suche bei Google, eBay oder Amazon).
 
-## APS algorithm
+## Der APS Algorithmus
 
 ### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
 
@@ -83,7 +83,7 @@ Im AMA bedeutet "dia" nicht "Insulinwirkungsdauer". Vielmehr ist "dia" ein Param
 
 ## Andere Einstellungen
 
-### Nightscout settings
+### Nightscout Einstellungen
 
 #### AAPSClient says 'not allowed' and does not upload data. What can I do?
 
@@ -95,7 +95,7 @@ Im AMA bedeutet "dia" nicht "Insulinwirkungsdauer". Vielmehr ist "dia" ein Param
 
 Wenn Du ein anderes CGM/FGM als den Dexcom G5 oder G6 im 'xDrip native mode' verwendest, wirst Du diesen Hinweis im AAPS OpenAPS-Tab bekommen. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
 
-### Pump
+### Pumpe
 
 #### Where to place the pump?
 
