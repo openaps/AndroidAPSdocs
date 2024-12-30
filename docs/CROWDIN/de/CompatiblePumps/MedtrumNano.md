@@ -59,7 +59,7 @@ Falls Du Dir nicht sicher bist, kannst Du auch zunächst die „Virtuelle Pumpe�
 
 #### Option 2: Der Konfigurations-Generator
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](#Config-Builder-pump):
+On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
 
 Das **Hamburger-Menü** in der oberen linken Ecke antippen und **Konfiguration**\ ➜\ **Pumpe**\ ➜\ **Medtrum**\ durch **Aktivieren** des Optionsfelds vor dem Namen **Medtrum** auswählen.
 
@@ -131,6 +131,14 @@ Setze den Wert auf eine für Deine speziellen Insulin-Anforderungen vernünftige
 Diese Einstellung begrenzt die maximal an einem Tag abzugebende Insulinmenge. Beim Überschreiten des Limits, wird der Patch die Insulinlieferung unterbrechen und einen Alarm auslösen. Der Alarm kann durch das Drücken der Reset-Taste im Übersichtsmenü zurückgesetzt werden (siehe [Alarme zurücksetzen](#reset-alarms)).
 
 Setze den Wert auf eine für Deine speziellen Insulin-Anforderungen vernünftigen Wert.
+
+#### Scan on Connection error
+
+***Default: Off.***
+
+Located under **Advanced Settings**.
+
+Only enable if you have connection problems. If enabled the driver scans for the pump again before trying to reconnect to the pump. Make sure you have Location permission set to "Always allow".
 
 ### Schritt 2b: AAPS Alarm-Einstellungen
 
