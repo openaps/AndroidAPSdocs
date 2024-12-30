@@ -43,7 +43,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
 
 **0U/h profile basal rates are NOT supported in AAPS** While the Medtrum pump does support a zero basal rate, AAPS uses multiples of the profile basal rate to determine automated treatment and therefore cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
 
-## Instellen
+## Pomp koppelen
 
 CAUTION: When activating a patch with AAPS you **MUST** disable all other devices that can talk to the Medtrum pumpbase. e.g. active PDM and Medtrum app. Make sure you have your pumpbase and pumpbase SN ready for activation of a new patch.
 
@@ -59,7 +59,7 @@ If in doubt you can also select “Virtual Pump” and select “Medtrum” late
 
 #### Optie 2: De Configurator
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](#Config-Builder-pump):
+On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
 
 On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**.
 
@@ -131,6 +131,14 @@ Set this to a sensible value for your insulin requirements.
 This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#reset-alarms).
 
 Set this to a sensible value for your insulin requirements.
+
+#### Scan on Connection error
+
+***Default: Off.***
+
+Located under **Advanced Settings**.
+
+Only enable if you have connection problems. If enabled the driver scans for the pump again before trying to reconnect to the pump. Make sure you have Location permission set to "Always allow".
 
 ### Step 2b: AAPS Alerts settings
 
