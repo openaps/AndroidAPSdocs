@@ -1,4 +1,4 @@
-# Troubleshooting
+# Problembehandlung
 
 Informationen zur Behebung von Problemen findest Du auf vielen Seiten im Wiki. Auf dieser Seite sind Links zu den entsprechenden Abschnitten zusammengetragen, so dass Du schneller eine Lösung für Dein Problem finden kannst.
 
@@ -12,7 +12,7 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 * [Fehlerbehebung Android Studio](TroubleshootingAndroidStudio)
 
 ### Einstellungen
-* Profile
+* Profil
 
   !['Fehler: Basal ist nicht auf Stunden ausgerichtet'](../images/Screen_DifferentPump.png)
 
