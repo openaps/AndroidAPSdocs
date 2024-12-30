@@ -31,8 +31,8 @@
 
 **目标1**要求用户在**AAPS**中设置其基本的技术配置。 在完成这一步之前，无法取得任何进展。
 
-- 在[配置构建器](#Config-Builder-bg-source)中选择正确的CGM/FGM。 有关更多信息，请参阅[血糖数据源](../Getting-Started/CompatiblesCgms.md)。
-- 在[配置构建器](../SettingUpAaps/ConfigBuilder.md)中选择正确的泵，以确保你的泵可以与 **AAPS** 通信。 如果你使用的泵型号没有适配 **AAPS** 的驱动程序，或者你想在完成早期**目标**时使用其他胰岛素输送系统，请选择**虚拟泵**。 有关更多信息，请参阅[胰岛素泵](../Getting-Started/CompatiblePumps.md)。
+- Select the correct CGM/FGM in [Config Builder > BG Source](#Config-Builder-bg-source). 有关更多信息，请参阅[血糖数据源](../Getting-Started/CompatiblesCgms.md)。
+- Select the correct Pump in [Config Builder > Pump](../SettingUpAaps/ConfigBuilder.md) to ensure your pump can communicate with **AAPS**. 如果你使用的泵型号没有适配 **AAPS** 的驱动程序，或者你想在完成早期**目标**时使用其他胰岛素输送系统，请选择**虚拟泵**。 有关更多信息，请参阅[胰岛素泵](../Getting-Started/CompatiblePumps.md)。
 - 如果使用Nightscout：
   - 按照[Nightscout](../SettingUpAaps/Nightscout.md)页面上的说明进行操作，以确保**Nightscout**能够接收并显示**AAPS**的数据。
   - 请注意，**NSClient** 中的URL必须以**“/api/v1/”**结尾 - 参见[首选项 > NSClient](#Preferences-nsclient)。
@@ -41,6 +41,7 @@
 
 *注意*：你可能需要等待下一个传感器葡萄糖读数到达后，**AAPS** 才能识别它。
 
+(objectives-objective2)=
 ## 目标2：学习如何控制AAPS
 
 **目标2** 需要完成几个“任务”，如下方截图所示。 点击橙色文本“尚未完成”以访问待办事项。 如果不熟悉某个具体操作，我们会提供链接来指导你。
@@ -62,6 +63,9 @@
 - 展示**闭环**插件的内容。
 - [缩放BG图表](#aaps-screens-main-graph)以便能够查看更大或更小的时间框架：在6小时、12小时、18小时、24小时的历史数据之间切换。
   - _提示_：长按图表或使用右上角的箭头。
+- Check that AAPS master password is set and known
+  - Hint : see [Preferences > Protection](#Preferences-protection).
+
 
 (objectives-objective3)=
 ## 目标3：证明您的知识
@@ -92,6 +96,7 @@
 - 从 [Preferences > OpenAPS](#Preferences-aps-mode) 菜单或通过长按 **Overview** 屏幕左上角的闭环图标来选择开环。
 - 在7天内，至少手动执行20次临时基础率建议；将它们输入到你的（实体）胰岛素泵中，并在AAPS中确认你已接受这些建议。 确保这些基础率调整在**AAPS**和**Nightscout**中都能显示出来。
 - 必要时使用[**临时目标**](../DailyLifeWithAaps/TempTargets.md)。 在治疗低血糖后，使用预定义的“低血糖临时目标”来防止系统在血糖回升时出现过度校正。
+- If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
 
 为了减少在开环模式下提出的基础率更改建议的数量，您仍然可以使用 **目标3** 中描述的技巧。 此外，你可以更改建议的基础率变化的最小百分比。 值越高，你收到的更改通知就越少。
 
