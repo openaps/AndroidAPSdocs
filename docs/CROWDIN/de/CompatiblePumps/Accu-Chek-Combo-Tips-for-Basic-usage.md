@@ -26,7 +26,7 @@ orphan: true
 * Wenn AAPS einen **Pumpe nicht erreichbar**-Alarm auslöst, hebe zuerst die Tastensperre auf und **drücke irgendeine Taste an der Pumpe** (z.B. den "Runter" Button). Sobald das Display der Pumpe sich ausgeschaltet hat, drücke **AKTUALISIEREN** auf dem **Reiter 'Combo'** in AAPS. Meistens funktioniert die Verbindung dann wieder.
 * Wenn das nicht hilft, starte dein Smartphone neu. Nach dem Neustart wird AAPS ebenfalls neu gestartet und es wird eine neue Verbindung zur Pumpe aufgebaut. Solltest Du den alten Treiber verwenden wird 'ruffy' ebenfalls neu gestartet.
 
-* Die Tests haben gezeigt, dass bestimmte Smartphones den Fehler "Pumpe nicht erreichbar" öfter auslösen als andere. See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones.
+* Die Tests haben gezeigt, dass bestimmte Smartphones den Fehler "Pumpe nicht erreichbar" öfter auslösen als andere. Schaue in der [Liste von getesteten Smartphones](#Phones-list-of-tested-phones) nach erfolgreich getesteten Smartphones.
 
 ### Ursachen und Folgen von häufigen Kommunikationsfehlern
 
@@ -85,8 +85,8 @@ Wenn die Lebensdauer der Batterie wesentlich kürzer ist, als die oben angegeben
 
 Ein gleichzeitiger erweiterter Bolus und Multiwave Bolus wird nicht vom OpenAPS-Algorithmus unterstützt. Aber ein ähnlicher Effekt kann durch folgende Alternativen erreicht werden:
 
-* Nutze **e-Carbs**, wenn Du Kohlenhydrate direkt oder über den Rechner eingibst indem Du die volle Mahlzeit eingibst und unter 'Dauer' bzw. 'KH-Zeit' die Zeitspanne eingibst, in der die KH voraussichtlich verstoffwechselt werden. Das System wird dann die KH-Menge auf gleichmäßig auf kleinere Mengen aufteilen und diese über die angegebene Zeit verteilen. Das hilft dem Algorithmus beim regelmäßigen Prüfen der Glukosewertänderungen die entsprechende Insulindosis abzugeben. For a multiwave bolus approach, you can also combine a smaller immediate bolus with e-carbs. 
-* Setze vor dem Essen auf der **Registerkarte AKTIONEN** in AAPS unter Temporäres Ziel ein **Bald essen** Ziel mit einem Zielwert von 80 für ein paar Stunden. Die Dauer sollte dem Intervall entsprechen, das du für einen erweiterten Bolus verwenden würdest. This will keep your target lower than usual and therefore increase the amount of insulin delivered.
+* Nutze **e-Carbs**, wenn Du Kohlenhydrate direkt oder über den Rechner eingibst indem Du die volle Mahlzeit eingibst und unter 'Dauer' bzw. 'KH-Zeit' die Zeitspanne eingibst, in der die KH voraussichtlich verstoffwechselt werden. Das System wird dann die KH-Menge auf gleichmäßig auf kleinere Mengen aufteilen und diese über die angegebene Zeit verteilen. Das hilft dem Algorithmus beim regelmäßigen Prüfen der Glukosewertänderungen die entsprechende Insulindosis abzugeben. Um eine Art Multi-Wave-Bolus nachzuahmen, kannst Du auch einen kleinen Einzelbolus mit e-carbs (verzögerte Kohlenhydrate) kombinieren. 
+* Setze vor dem Essen auf der **Registerkarte AKTIONEN** in AAPS unter Temporäres Ziel ein **Bald essen** Ziel mit einem Zielwert von 80 für ein paar Stunden. Die Dauer sollte dem Intervall entsprechen, das du für einen erweiterten Bolus verwenden würdest. Dadurch wird Dein Zielwert niedriger als üblich gehalten und somit die (benötigte) Insulinmenge erhöht werden.
 * Verwende dann **RECHNER** auf dem Startbildschirm, um die Kohlenhydrate der Mahlzeit einzugeben, aber wende den Wert nicht direkt an, der Dir vom Bolusrechner vorgeschlagen wird. Korrigiere die Insulindosis nach unten, wenn ein Multi-Wave-Bolus abgegeben werden soll. Der Algorithmus muss nun, abhängig von der Mahlzeit, zusätzliche Mikroboli (SMB) abgeben oder eine sehr hohe temporäre Basalrate setzen, um der Steigerung des Glukosewertes entgegenzuwirken. An dieser Stelle sollte mit der Sicherheitsgrenze für die Basalrate (Max IE / h, Maximum basal IOB) sehr vorsichtig experimentiert und falls notwendig temporär geändert werden.
 
 * Wenn Du unbedingt den erweiterten oder Multiwave-Bolus direkt an der Pumpe eingeben willst, wird AAPS Dich damit bestrafen, dass es den Closed Loop für die nächsten 6 Stunden aussetzt, um zu gewährleisten, dass nicht zu viel Insulin berechnet und abgegeben wird.
@@ -95,7 +95,7 @@ Ein gleichzeitiger erweiterter Bolus und Multiwave Bolus wird nicht vom OpenAPS-
 
 ## Alarme bei Bolusabgabe
 
-* Wenn AAPS bemerkt, dass ein identischer Bolus erfolgreich in der gleichen Minute abgegeben wurde, wird eine Bolusabgabe mit gleicher Insulinmenge verhindert. If your really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
+* Wenn AAPS bemerkt, dass ein identischer Bolus erfolgreich in der gleichen Minute abgegeben wurde, wird eine Bolusabgabe mit gleicher Insulinmenge verhindert. Wenn Du tatsächlich die gleiche Bolusmenge kurz hintereinander abgeben möchtest, warte weitere zwei Minuten und gib sie dann ab. Wenn der erste Bolus unterbrochen wurde oder aus anderen Gründen nicht abgegeben wurde, kannst Du den Bolus seit AAPS 2.0 direkt wieder abgeben.
 * Hintergrund für dieses Verhalten ist ein Sicherheitsmechanismus, der die Bolus-Historie der Pumpe liest, bevor ein neuer Bolus abgegeben wird, um das Insulin On Board (IOB) auch dann korrekt zu berechnen, wenn direkt an der Pumpe ein Bolus abgegeben wurde. An dieser Stelle müssen nicht zu unterscheidende Einträge verhindert werden.
 
 ![Doppelter Bolus](../images/combo/combo-tips-doppelbolus.png)
