@@ -20,14 +20,13 @@ So, please take your time in configuring your loop, the benefits of a well-runni
 :class: note
 If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Guide pas à pas de l'assistant de configuration AAPS
-### Message de bienvenue
+## Message de bienvenue
 
 Il s'agit juste d'un message de bienvenue que vous pouvez passer avec le bouton "SUIVANT" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_125636.png)
 
-### Contrat de licence
+## Contrat de licence
 
 In the end user license agreement there is important information about the legal aspects of using **AAPS**. Veuillez le lire attentivement.
 
@@ -37,7 +36,7 @@ Si vous comprenez et êtes d'accord, veuillez cliquer sur le bouton "JE COMPREND
 
 ![image](../images/setup-wizard/Screenshot_20231202_125650.png)
 
-### Autorisations requises
+## Autorisations requises
 
 **AAPS** needs some requirements to operate correctly.
 
@@ -49,28 +48,15 @@ Cliquez sur le bouton "SUIVANT" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_125709.png)
 
-La consommation de la batterie sur les smartphones reste une problématique, car la performance des batteries est encore assez limitée. Par conséquent, le système d'exploitation Android de votre smartphone restreint par défaut les applications qui consomment du temps processeur, et donc de la batterie.
-
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Par conséquent, nous devons l'autoriser à le faire, au niveau d'Android.
-
-Vous le ferez en donnant cette autorisation.
-
-Cliquez sur le bouton "DEMANDE D'AUTORISATION" :
-
-![image](../images/setup-wizard/Screenshot_20231202_125721.png)
-
-Cliquez "Autoriser" :
-
-![image](../images/setup-wizard/Screenshot_20231202_125750.png)
+### Notification and battery optimization
 
 Android définit une autorisation spéciale pour les applications qui souhaitent vous envoyer des notifications.
 
 While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
 
-Cliquez sur le bouton "DEMANDE D'AUTORISATION" :
+Please click the first "ASK FOR PERMISSION" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_125813.png)
-
+![image](../images/setup-wizard/Screenshot_20231202_125721.png)
 
 Sélectionnez l'application "AAPS" :
 
@@ -84,11 +70,27 @@ Le curseur doit ressembler à ceci une fois activé :
 
 ![image](../images/setup-wizard/Screenshot_20231202_125851.png)
 
+La consommation de la batterie sur les smartphones reste une problématique, car la performance des batteries est encore assez limitée. Par conséquent, le système d'exploitation Android de votre smartphone restreint par défaut les applications qui consomment du temps processeur, et donc de la batterie.
+
+However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Par conséquent, nous devons l'autoriser à le faire, au niveau d'Android.
+
+Vous le ferez en donnant cette autorisation.
+
+Click the second "ASK FOR PERMISSION" button. Cliquez "Autoriser" :
+
+![image](../images/setup-wizard/Screenshot_20231202_125750.png)
+
+Cliquez sur le bouton "SUIVANT" :
+
+![Screenshot_20241207-161454.png](../images/setup-wizard/Screenshot_20241207-161454.png)
+
+### Location
+
 Dans Android, l'utilisation du Bluetooth est liée à la capacité d'utiliser les services de localisation. Peut-être l'avez-vous vu aussi dans d'autres applications. Il est courant d'avoir besoin d'une autorisation de localisation si vous voulez utiliser le bluetooth.
 
 **AAPS** uses bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Les détails peuvent différer d'une configuration à l'autre.
 
-Cliquez sur le bouton "DEMANDE D'AUTORISATION" :
+Click the first "ASK FOR PERMISSION" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_125924.png)
 
@@ -98,13 +100,21 @@ Cliquez sur "Lorsque vous utilisez l'appli" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_125939.png)
 
+Click the second "ASK FOR PERMISSION" button:
+
+![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
+
+Select "Allow all the time".
+
 Cliquez sur le bouton "SUIVANT" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_130002.png)
 
+### Storage permission
+
 **AAPS** needs to log information to the permanent storage of your smartphone. Ce stockage permanent sur la mémoire interne signifie que les fichiers seront toujours disponibles, même après le redémarrage de votre smartphone. D'autres données sont simplement perdues, car elles ne sont pas enregistrées sur la mémoire interne.
 
-Cliquez sur le bouton "DEMANDE D'AUTORISATION" :
+Click the first "ASK FOR PERMISSION" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130012.png)
 
@@ -112,16 +122,19 @@ Cliquez sur "Autoriser" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_130022.png)
 
-Vous êtes informé que vous devez redémarrer votre smartphone après ce changement pour qu'il prenne effet.
+Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information. The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
 
-Please **don't stop the Setup Wizard now**. Vous pourrez le faire après avoir terminé l'Assistant de Configuration.
+![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
 
-Cliquez sur "OK" puis sur le bouton "SUIVANT" :
+Confirm that you wish to grant access to **AAPS** to the selected directory:
+
+![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
+
+Cliquez sur le bouton "SUIVANT" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-
-### Mot de passe principal
+## Mot de passe principal
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
@@ -132,7 +145,7 @@ Après avoir saisi le mot de passe deux fois, veuillez cliquer sur le bouton "SU
 ![image](../images/setup-wizard/Screenshot_20231202_130122.png)
 
 
-### Téléchargement Fabric
+## Téléchargement Fabric
 
 Ici vous pouvez autoriser l'envoi automatique des rapports d'erreur en cas de plantage, ainsi que de données sur l'utilisation de l'appli.
 
@@ -164,13 +177,13 @@ Cliquez sur le bouton "SUIVANT" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-### Units (mg/dL <-> mmol/L)
+## Units (mg/dL <-> mmol/L)
 
 Veuillez sélectionner si vos glycémies sont en mg/dL ou mmol/L, puis cliquez sur le bouton "SUIVANT" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_135830.png)
 
-### Paramètres d'affichage
+## Paramètres d'affichage
 
  Ici, vous pouvez définir les valeurs entre lesquelles la glycémie sera considérée comme "dans la cible". Vous pouvez le laisser tel quel pour l'instant et le modifier plus tard.
 
@@ -185,7 +198,7 @@ Cliquez sur le bouton "SUIVANT" :
 ![image](../images/setup-wizard/Screenshot_20231202_135853.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-### Synchronisation avec le serveur de reporting, etc
+## Synchronisation avec le serveur de reporting, etc
 
 Ici, vous configurez le téléchargement des données vers votre serveur de reporting.
 
@@ -269,7 +282,7 @@ Revenez deux fois en arrière, jusqu'à la liste des plugins et sélectionnez "S
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
-### Patient name
+## Patient name
 
 Here you can setup your name in **AAPS**.
 
@@ -281,7 +294,7 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-### Type de patient
+## Type de patient
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. C'est important pour des raisons de sécurité et de sûreté.
 
@@ -293,7 +306,7 @@ Après avoir défini ces valeurs, appuyez sur "SUIVANT" pour passer à l'écran 
 
 ![image](../images/setup-wizard/Screenshot_20231202_141817.png)
 
-### Insuline utilisée
+## Insuline utilisée
 
 Sélectionnez le type d'insuline utilisée dans la pompe.
 
@@ -309,7 +322,7 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant :
 ![image](../images/setup-wizard/Screenshot_20231202_141840.png)
 
 
-### Source des glycémies
+## Source des glycémies
 
 Sélectionnez d'où vous allez recevoir les glycémies. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
@@ -335,7 +348,7 @@ Revenez en arrière et cliquez sur "SUIVANT" pour passer à l'écran suivant :
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
 (setup-wizard-profile)=
-### Profil
+## Profil
 
 Nous arrivons maintenant à une partie très importante de l'Assistant de configuration.
 
@@ -440,7 +453,7 @@ Votre profil a bien été défini :
 ![image](../images/setup-wizard/Screenshot_20231202_143833.png)
 
 
-### Pompe à insuline
+## Pompe à insuline
 
 
 
@@ -465,7 +478,7 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant :
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-### APS algorithm
+## APS algorithm
 
 Choisissez l'algorithme SMB OpenAPS comme algorithme APS. Malgré son nom, la fonctionnalité SMB de l'algorithme est désactivée jusqu'à ce que vous soyez familier avec AAPS et ayez déjà travaillé sur les premiers objectifs. L'algorithme OpenAPS SMB est plus récent et de manière générale meilleur par rapport à OpenAPS AMA de toute façon.
 
@@ -489,7 +502,7 @@ Revenez en arrière et cliquez sur "SUIVANT" pour passer à l'écran suivant :
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-### Mode APS
+## Mode APS
 
 Laissez "Boucle ouverte" sélectionné.
 
@@ -497,7 +510,7 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant :
 
 ![image](../images/setup-wizard/Screenshot_20231202_144049.png)
 
-### Estimation de Sensibilité
+## Estimation de Sensibilité
 
 Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
@@ -505,7 +518,7 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant :
 
 ![image](../images/setup-wizard/Screenshot_20231202_144101.png)
 
-### Commencer l'objectif 1
+## Commencer l'objectif 1
 
 Vous entrez maintenant les Objectifs. The qualification for access to further **AAPS** features.
 
