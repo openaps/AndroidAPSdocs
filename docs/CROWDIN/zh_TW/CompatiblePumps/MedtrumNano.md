@@ -59,7 +59,7 @@ orphan: true
 
 #### 選項 2：組態建置工具
 
-在現有安裝中，您可以在[組態建置工具](#Config-Builder-pump)中選擇**Medtrum** 幫浦：
+On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
 
 在左上角的**漢堡選單**中選擇**組態建置工具**\ ➜\ **幫浦**\ ➜\ **Medtrum**，選擇**啟用按鈕**標題為**Medtrum**。
 
@@ -131,6 +131,14 @@ orphan: true
 此設置更改每日最多輸送的胰島素量。 如果此限制被超過，修補版將暫停並發出警報。 可以透過點擊總覽選單中的重置按鈕來重置此警報，請參閱[重置警報](#reset-alarms)。
 
 根據你的胰島素需求，設置一個合適的值。
+
+#### Scan on Connection error
+
+***Default: Off.***
+
+Located under **Advanced Settings**.
+
+Only enable if you have connection problems. If enabled the driver scans for the pump again before trying to reconnect to the pump. Make sure you have Location permission set to "Always allow".
 
 ### 步驟2b：AAPS警報設置
 
