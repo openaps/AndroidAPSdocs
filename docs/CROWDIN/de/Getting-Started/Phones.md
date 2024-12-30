@@ -9,13 +9,13 @@ Users are strongly encouraged to keep their build of **AAPS** up to date for saf
 
 (Phones-list-of-tested-phones)=
 
-## List of tested Phones
+## Liste der getesteten Smartphones
 
 We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true).
 
 This list provides user feedback on the usage of a phone along with **AAPS** and a given pump and CGM. It can help you check if your phone / pump / CGM has been used successfully by other users.
 
-The document is read-only. With CRTL-F, you can search in the text of the Google sheet.
+Das Dokument ist schreibgeschützt. Mit STRG-F kannst Du im Text der Google-Tabelle suchen.
 
 To record your test of a hardware setup, please fill in this [form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). After you fill in the form data, the sheet is updated automatically every 5 minutes
 
