@@ -17,7 +17,7 @@
 
 * Позволяют выполнять переход между различными модулями **AAPS**.
 * Между экранами также можно переходить свайпом влево или вправо.
-* Видимые вкладки можно выбрать в [Конфигураторе](#Config-Builder-tab-or-hamburger-menu).
+* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
 
 ### Раздел B - Профиль & Цель
 
@@ -75,7 +75,13 @@
 * красный = ниже заданного диапазона
 * желтый = выше заданного диапазона 
 
-Серый блок по центру экрана отображает изменение текущего уровня ГК относительно предыдущего показания и изменение за последние 15 и 40 минут.
+![Deltas](../images/Home_Delta.png)
+
+The blocks in the middle shows:
+
+1. how many minutes since last **CGM** reading
+2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
+    Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
 
 (AapsScreens-loop-status)=
 
@@ -148,6 +154,12 @@
 
 *Примечание*: В своих расчетах.**AAPS** учитывает данные за 30 часов. Поэтому даже после устранения проблемы нерегулярной передачи данных, может потребоваться до 30 часов, чтобы исчез желтый треугольник.
 
+#### Simple mode
+
+An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+
+![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
+
 ### Раздел D - АктИнс, АктУгл, БС и AS
 
 ![Раздел D](../images/Home2020_TBR.png)
@@ -209,7 +221,7 @@
 
 Здесь показаны заметки, введенные на вкладке действия, такие как калибровка с глюкометра и записи углеводов, а также переключения профиля.
 
-Длительное нажатие на графике изменит его масштаб. Можно выбрать отображение последних 6, 8, 12, 18 или 24 часов.
+Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
 
 Зеленая область отражает ваш целевой диапазон.
 
@@ -222,10 +234,11 @@
 На главном графике можно включить следующую дополнительную информацию:
 
 * Прогнозирование
+* Терапия
 * Базал
 * Нагрузка - кривая действия инсулина
 
-Чтобы показать эту информацию, нажмите на маленький треугольник справа от основного графика. Для главного графика доступны три варианта выше строки "\---\---- График 1 \---\----".
+Чтобы показать эту информацию, нажмите на маленький треугольник справа от основного графика. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
 
 ![Настройка главного графика](../images/Home2020_MainGraphSetting.png)
 
@@ -277,19 +290,19 @@
 
 (AapsScreens-section-g-additional-graphs)=
 
-### Раздел G - Дополнительные графики
+### Section G - Additional graphs
 
-Можно активировать до четырех дополнительных графиков ниже главного графика.
+Можно активировать до четырех дополнительных графиков ниже главного графика. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
 
 Чтобы настроить дополнительные графики щелкните по маленькомутреугольнику справа от [главного](#section-f---main-graph) и прокрутите вниз.
 
 ![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
 
-Для добавления дополнительного графика установите флажок с левой стороны его названия (например, \---\---- График 1 \---\----).
+To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
 
 Большинство пользователей считают достаточной следующую конфигурацию дополнительных графиков:
 
-* График 1 с IOB, COB, чувствительностью
+* Graph 1 with IOB, COB, Sensitivity chnge
 * Диаграмма 2 с отклонениями и влиянием ГК
 
 #### Абсолютный инсулин
@@ -352,6 +365,8 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 Что касается использовании кнопок Insulin, Carbs и Калькулятора : При включении в [Настройках > Обзор](#Preferences-show-notes-field-in-treatments-dialogs), поле **Примечания** позволяет ввести текст, который будет отображаться на главном графике, и может быть загружен в Nightscout - в зависимости от ваших настроек для клиента NS.
 
+(aaps-screens-buttons-insulin)=
+
 #### Инсулин
 
 ![Кнопка инсулина](../images/Home2020_ButtonInsulin.png)
@@ -363,6 +378,10 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 Если не хотите подавать болюс с помпы, а только сделать запись о введенном инсулине (например, поданного шприц-ручкой), поставьте флажок рядом с соответствующей опцией. При установке этого флажка, появится дополнительное поле "Смещение по времени", которое можно использовать для записи об инъекциях, сделанных в прошлом.
 
 Можно использовать кнопки для быстрого приращения количества инсулина. Величину приращения можно изменить в [Настройках > Общие > Кнопки](#Preferences-buttons).
+
+The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+
+![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
 
 #### Углеводы
 
@@ -538,7 +557,7 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 ![Профиль инсулина](../images/Screenshot_insulin_profile.png)
 
-Это профиль активности инсулина, который вы выбрали в [конфигураторе](#Config-Builder-insulin). Кривые зависят от продолжительности действия инсулина [DIA](#your-aaps-profile-duration-of-insulin-action) и времени до пика.
+This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). Кривые зависят от продолжительности действия инсулина [DIA](#your-aaps-profile-duration-of-insulin-action) и времени до пика.
 
 **Фиолетовая** линия показывает, сколько инсулина остается после его введения по мере усваивания, а **синяя** линия показывает его активность.
 
