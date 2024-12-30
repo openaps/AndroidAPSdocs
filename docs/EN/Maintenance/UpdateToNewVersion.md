@@ -69,10 +69,22 @@ If you update from versions prior to 2.8.x, please follow the instructions to do
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
+### Check JVM and Gradle versions
+
+These checks are particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+
+Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required versions for JVM and Gradle, matching the **AAPS** version you are now building.
+
+For Gradle, go to **File > Project Structure** (1). In the **Project** tab (2), check that **Gradle version** (3) is the appropriate one. If you don't find the required version, you are using an outdated Android Studio version (check previous step about minimal Android Studio version).
+
+![Check Gradle version](../images/studioTroubleshooting/gradle_version.png)
+
+For the JVM version, follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+
 (Update-to-new-version-build-the-signed-apk)=
 ### Build the Signed APK
 
-Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
 
 (Update-to-new-version-transfer-and-install)=
 
