@@ -27,7 +27,7 @@ Poznámka: AAPS vždy zapíše data do **prvního bazálního profilu v pumpě**
     
     ![Snímek obrazovky odebrání glukometru z pumpy Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* In [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md), select Accu-Chek Insight.
     
     ![Snímek obrazovky nastavení pumpy Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
