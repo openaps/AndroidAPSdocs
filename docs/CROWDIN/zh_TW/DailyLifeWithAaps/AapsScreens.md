@@ -17,7 +17,7 @@
 
 * 在各個**AAPS**模組之間進行導覽。
 * 你還可以透過向左或向右滑動來更換螢幕。
-* 顯示的標籤可以在[組態建構工具](#Config-Builder-tab-or-hamburger-menu)中選擇。
+* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
 
 ### B 區 - 設定檔 & 目標
 
@@ -75,7 +75,13 @@
 * 紅色 = 低於範圍
 * 黃色 = 高於範圍 
 
-中間的灰色區塊顯示自上次讀取以來的分鐘數以及過去 15 和 40 分鐘內的變化。
+![Deltas](../images/Home_Delta.png)
+
+The blocks in the middle shows:
+
+1. how many minutes since last **CGM** reading
+2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
+    Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
 
 (AapsScreens-loop-status)=
 
@@ -148,6 +154,12 @@ Libre 使用者的特殊注意事項：
 
 *注意*: 在 **AAPS** 計算中，最多讀取近 30 小時的資料。 因此，即使你解決了問題，黃三角標誌可能會在最後一次不規則間隔發生後大約 30 小時內消失。
 
+#### Simple mode
+
+An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+
+![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
+
 ### D 區 - 胰島素、碳水化合物、基礎率與自動敏感性
 
 ![D 區](../images/Home2020_TBR.png)
@@ -209,7 +221,7 @@ Libre 使用者的特殊注意事項：
 
 在操作標籤中輸入的筆記（如手指校準和碳水化合物輸入）以及設定檔切換也會顯示在此處。
 
-長按圖表可更改時間尺度。 你可以選擇 6、12、18 或 24 小時。
+Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
 
 綠色區域反應你的目標範圍。
 
@@ -222,10 +234,11 @@ Libre 使用者的特殊注意事項：
 在主圖表上，你可以開啟這些線圖資訊：
 
 * 預測
+* 治療
 * 基礎率
 * 活動 - 胰島素活動曲線
 
-要顯示這些資訊，請點擊主圖表右側的三角形。 對於主圖表，只有位於 "\---\---- 圖表 1 \---\----" 以上的三個選項可用。
+要顯示這些資訊，請點擊主圖表右側的三角形。 For the main graph just the four options above the line "Graph 1 2 3 4" are available.
 
 ![主圖表設置](../images/Home2020_MainGraphSetting.png)
 
@@ -277,19 +290,19 @@ Libre 使用者的特殊注意事項：
 
 (AapsScreens-section-g-additional-graphs)=
 
-### G 區 - 其他圖表
+### Section G - Additional graphs
 
-你可以在主圖表下啟用最多四個其他圖表。
+你可以在主圖表下啟用最多四個其他圖表。 When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
 
 要開啟額外圖表的設定，點擊[主圖表](#section-f---main-graph)右側的三角形並向下滾動。
 
 ![其他圖表設置](../images/Home2020_AdditionalGraphSetting.png)
 
-要添加另一個圖表，請勾選其名稱左側的方框（例如：\---\---- 圖表 1 \---\----）。
+To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
 
 大多數使用者發現以下附加圖表配置足夠：
 
-* 圖表 1 包含 IOB、COB、敏感度
+* Graph 1 with IOB, COB, Sensitivity chnge
 * 圖表 2 包含偏差和 BGI。
 
 #### 絕對胰島素(Absolute insulin)
@@ -352,6 +365,8 @@ Libre 使用者的特殊注意事項：
 
 關於使用胰島素、碳水化合物和計算機按鈕：如果在 [偏好設定 > 首頁總覽](#Preferences-show-notes-field-in-treatments-dialogs) 中啟用，**註記**欄位允許你輸入將顯示在主圖表上的文本，並可能根據你的 NS 客戶端設定上傳到 Nightscout。
 
+(aaps-screens-buttons-insulin)=
+
 #### 胰島素
 
 ![注射按鈕](../images/Home2020_ButtonInsulin.png)
@@ -363,6 +378,10 @@ Libre 使用者的特殊注意事項：
 如果你不想透過幫浦注射，但想紀錄一次胰島素注射（例如：使用筆注射的胰島素），請勾選「不注射，僅紀錄」的方框。 勾選此方框時，你將獲得一個額外欄位「時間偏移」，可用來紀錄過去進行的胰島素注射。
 
 您可以使用按鈕快速增加胰島素的量。 每個按鈕的值可以在 [偏好設定 > 首頁總覽 > 按鈕](#Preferences-buttons) 中更改。
+
+The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+
+![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
 
 #### 碳水化合物
 
@@ -538,7 +557,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ![胰島素設定檔](../images/Screenshot_insulin_profile.png)
 
-這顯示您在[組態建置工具](#Config-Builder-insulin)中選擇的胰島素的活動曲線。 曲線將根據[DIA](#your-aaps-profile-duration-of-insulin-action) 和達到高峰的時間而有所不同。
+This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). 曲線將根據[DIA](#your-aaps-profile-duration-of-insulin-action) 和達到高峰的時間而有所不同。
 
 **紫色** 線顯示在注射後胰島素量隨時間衰減的情況，**藍色**線顯示其活性狀態。
 

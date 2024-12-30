@@ -1,8 +1,8 @@
 # Profilwechsel & Prozentuale Profilanpassung
 
-This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn about how to create a **Profile** at [Config Builder - profile](#setup-wizard-profile).
+Dieser Abschnitt erklärt was ein **Profilwechsel** und eine **prozentuale Anpassung des Profils** sind. You can learn about how to create a **Profile** at [Config Builder > Profile](#setup-wizard-profile).
 
-When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. Die Funktionen **Profilwechsel** oder **Prozentsatz des Profils** (anteiliges Profil) können Dir in den folgenden Situationen das Leben einfacher machen:
+Zu Beginn Deiner **AAPS**-Reise, musst Du ein **Profil** erstellen, verstehen, wie Du einen **Profilwechsel** durchführst und die Auswirkungen eines **Prozentsatzes im Profil** innerhalb von **AAPS** verstehen lernen. Die Funktionen **Profilwechsel** oder **Prozentsatz des Profils** (anteiliges Profil) können Dir in den folgenden Situationen das Leben einfacher machen:
 
 - Der Menstruationszyklus - eine prozentuale Anpassung innerhalb eines **Profils** kann im Reiter **Automatisierung** eingerichtet werden. Damit erhält **AAPS** die Möglichkeit sich an die verschiedene Phasen des Hormonzyklus und an die vorhergesagte Insulinresistenz anpassen.
 
@@ -67,31 +67,31 @@ Hab' im Hinterkopf, das eine Abschwächung des **ISF** oder des **IC** heißt, d
 
 Nach der Auswahl passt **AAPS** die Basalrate entsprechend an, und wird von da an sowohl im Closed Loop als auch im Open Loop mit der neu berechneten Basalrate des prozentual erhöhten **Profils** arbeiten.
 
-The effect of a **Profile** Percentage is summarized in the table below:
+Die Wirkung einer prozentualen **Profil**anpassung wird in der unten stehenden Tabelle zusammengefasst:
 
-| Profile Switch  
-Percentage |    Effect    |    I:C  
-g/UI     | example  
+| Profilwechsel  
+Prozentsatz |    Effekt    |    I:C  
+g/IE     | Beispiel  
 15g |         ISF  
-mmol/l/UI  
-mg/dl/UI         | UI to lower  
+mmol/l/IE  
+mg/dl/IE         | IE um  
 2mmol/l  
-40mg/dl |
-|:---------------------------:|:------------:|:-----------------:|:-------------:|:------------------------------------------:|:-------------------------------:|
-|             90%             |    Weaker    | 5/0.9  
-=**5.55** |    2.7 UI     | 2.2/0.9  
-=**2.4**  
+40mg/dl zu senken |
+|:---------------------------:|:------------:|:-----------------:|:--------------:|:------------------------------------------:|:-----------------------------------:|
+|            90 %             |  Schwächer   | 5/0,9  
+=**5,55** |     2,7 IE     | 2,2/0,9  
+=**2,4**  
   
-40/0.9  
-=**44.4** |             0.8 UI              |
-|          **100%**           | **Standard** |       **5**       |   **3 UI**    |                **2.2  
-40**                |           **0.9** UI            |
-|            130%             |   Stronger   | 5/1.3  
-=**3.85** |    3.9 UI     | 2.2/1.3  
-=**1.7**  
+40/0,9  
+=**44,4** |               0,8 IE                |
+|          **100%**           | **Standard** |       **5**       |    **3 IE**    |                **2,2  
+40**                |             **0,9** IE              |
+|            130%             |   Stärker    | 5/1,3  
+=**3,85** |     3,9 IE     | 2,2/1,3  
+=**1,7**  
   
-40/1.3  
-=**30.8** |             1.2 UI              |
+40/1,3  
+=**30,8** |               1,2 IE                |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
@@ -117,8 +117,8 @@ Es geht immer um die Frage, die **Profil**einstellungen welcher Uhrzeit sollen d
 
 Dadurch, dass eine Momentaufnahme des **Profil**s gemacht wird, kann eine sehr viel präzisere Berechnung der Vergangenheit gemacht werden und es können die Änderungen am **Profil** nachverfolgt werden.
 
-## Keep a profile switch for later use
+## Speichere den Profilwechsel, falls Du ihn später nutzen willst
 
-Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
+Wenn Du einen prozentualen Profilwechsel und/oder einen Profilwechsel mit Zeitverschiebung durchgeführt hast, kannst Du eine Kopie dieses temporären Profils als ein neues Profil erstellen.
 
-To do this, go to the tab [Treatments > Profile Switch](#your-aaps-profile-clone-profile-switch).
+Gehe dazu in den Reiter [Behandlungen > Profilwechsel](#your-aaps-profile-clone-profile-switch).

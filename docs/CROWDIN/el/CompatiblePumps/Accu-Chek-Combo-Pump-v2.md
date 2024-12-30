@@ -4,8 +4,6 @@ orphan: true
 
 # Αντλία Accu Chek Combo
 
-These instructions are for setting up the Accu-Chek Combo pump using the new combov2 driver, which is available as part of AndroidAPS as of version 3.2. This driver is entirely separate from the old one.
-
 **Αυτό το λογισμικό αποτελεί μέρος μιας DIY (Φτιάξε το Μόνος Σου) λύσης και δεν είναι ένα προϊόν, αλλά απαιτεί από ΕΣΑΣ να διαβάσετε, να μάθετε και να κατανοήσετε το σύστημα συμπεριλαμβανομένου του τρόπου χρήσης του. Δεν είναι κάτι που αναλαμβάνει τη διαχείριση του διαβήτη σας για σας, αλλά σας επιτρέπει να βελτιώσετε το διαβήτη σας και την ποιότητα της ζωής σας αν είστε διατεθειμένοι να αφιερώσετε το χρόνο που χρειάζεται. Μη βιαστείτε, αλλά αντίθετα δώστε στον εαυτό σας χρόνο για να μάθετε. Εσείς και μόνο είστε υπεύθυνοι για οτιδήποτε κάνετε με αυτό.**
 
 ## Απαιτήσεις υλικού και λογισμικού
@@ -98,7 +96,7 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
 ## Activating the driver and pairing it with the Combo
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
+* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
 
   ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
 

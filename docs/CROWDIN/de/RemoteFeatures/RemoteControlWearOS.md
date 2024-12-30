@@ -5,8 +5,8 @@
 ## AAPS Watchfaces
 
 ```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.
-Wear OS 5 changes locked the watchfaces: only complications can be used.
+AAPS-Zifferblätter sind für Wear OS Smartwatches mit API Level 28 bis 33 verfügbar.
+Wear OS 5 Anpassungen haben das Zifferblatt einfrieren lassen: Nur „complications“ können verwendet werden.
 ```
 
 In der Basisversion der AAPS Wear APK sind bereits einige Zifferblätter enthalten, aus denen Du auswählen kannst. Diese Zifferblätter zeigen u. a. das durchschnittliche Delta, das IOB, die derzeit aktive temporäre Basalrate, das Basalprofil und den Glukoseverlauf aus den CGM-Werten.
@@ -16,20 +16,20 @@ Einige der über die Smartwatch möglichen Aktionen sind:
 * Doppelt auf den Glukosewert tippen, um zum AAPS-Menü zu gelangen
 * Doppelt auf den Gluoseverlauf tippen, um die Zeitskala des Graphen zu ändern
 
-## Configuration
+## Konfiguration
 
-Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md).
+Enable the Wear module in the [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
 
-Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+In den Wear-Einstellungen kannst Du die Variablen festlegen, die bei der Berechnung eines über die Smartwatch gegebenen Bolus berücksichtigt werden sollen (z.B. 15'-Trend, COB...).
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+Wenn Du Deinen Loop von der Uhr aus steuern willst (z.B. Bolus abgeben), aktiviere "Steuerung durch die Uhr".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Wear-Einstellungen](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Über den Wear Tab oder das Hamburger Menü (oben links, falls der Wear Tab nicht angezeigt wird) kannst du
 
-* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* Alle Daten erneut senden. Diese Funktion kann helfen, wenn die Smartwatch längere Zeit außer Reichweite war und Du die Informationen an die Smartwatch pushen willst.
+* Über das Smartphone die Einstellungen auf der Uhr öffnen.
 
 Stelle sicher, dass Benachrichtigungen von AAPS nicht auf der Uhr blockiert sind. Die Eingaben werden aktiviert, indem Du über die Benachrichtigung wischst und sie bestätigst.
 
@@ -185,14 +185,14 @@ Bevor die Kacheln verwendet werden können, musst du "Control from Watch" in den
 
 Abhängig von Deiner Wear-OS-Version, Marke und Smartphone gibt es zwei Möglichkeiten die Kacheln zu aktivieren:
 
-1. On your watch, from your watch face; 
-  * Swipe right to left till you reach the "+ Add tiles" 
-  * Select one of the tiles.
+1. Auf Deiner Uhr von Deinem Watchface; 
+  * Wische so oft von rechts nach links, bis du "+ Kacheln hinzufügen" erreichst 
+  * Wähle eine der Kacheln aus.
 2. Öffne auf deinem Smartphone die Begleit-App für Ihre Uhr. 
-  * For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
+  * Für Samsung öffne "Galaxy Wearable" oder für andere Marken "Wear OS"
   * Mit dem Klick auf den Abschnitt "Kacheln", gefolgt von "+ Hinzufügen" Button
-  * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
-  * The order of the tiles can be changed by dragging and dropping
+  * Entscheide Dich für die Kachel, die Du hinzufügen möchtest und wähle sie aus. ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
+  * Die Reihenfolge der Kacheln kann durch Ziehen und Ablegen geändert werden
 
 Der Inhalt der Kacheln kann angepasst werden, indem Du lange auf eine Kachel drückst und auf den Button "Bearbeiten" oder "gear icon" tippst.
 
@@ -210,11 +210,11 @@ Aktionen aus der Aktions-Kachel können folgendes aus der AAPS-Telefon-App anfor
 
 ![Wear Aktions-Kachel, Beispielrechner](../images/wear_actions.png)
 
-[1] Über das Wear-OS-Menü, setze die Option "Rechner Prozentsatz" auf "AN", um die prozentuale Eingabe im Bolus-Rechner anzuzeigen. The default percentage is based on the phone settings in the "Overview" section ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result) When the user does not provide a percentage, the default value from the phone is used. Konfiguriere die anderen Parameter für den Bolus-Rechner in der Smartphone-App über "Einstellungen" "Assistenteneinstellungen".
+[1] Über das Wear-OS-Menü, setze die Option "Rechner Prozentsatz" auf "AN", um die prozentuale Eingabe im Bolus-Rechner anzuzeigen. Der voreingestellte Prozentsatz basiert auf den Einstellungen des Smartphones im Abschnitt "Übersicht" [„Abgabe von [%] des Ergebnisses des Bolus-Rechners“](#Preferences-deliver-this-part-of-bolus-wizard-result). Wenn kein Prozentsatz angegeben wird, wird der Standardwert des Smartphones verwendet. Konfiguriere die anderen Parameter für den Bolus-Rechner in der Smartphone-App über "Einstellungen" "Assistenteneinstellungen".
 
 ### AAPS (Temp Target) Kachel
 
-Die Temp Target Kachel kann ein temporäres Ziel basierend auf AAPS-Smartphone-Voreinstellungen anfordern. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](#Preferences-default-temp-targets) and set the duration and targets for each preset. Konfiguriere die sichtbaren Aktionen auf der Kachel durch die Kachel-Einstellungen. Um die Konfigurationsoptionen anzuzeigen, halte die Kachel lange gedrückt und wähle dann 1 bis 4 Optionen:
+Die Temp Target Kachel kann ein temporäres Ziel basierend auf AAPS-Smartphone-Voreinstellungen anfordern. Konfiguriere die voreingestellte Zeit und Ziele über die Telefon-App-Einstellungen, indem Du zu "Einstellungen", "Überblick" gehen ["Standard Temp-Targets"](#Preferences-default-temp-targets) und die Dauer und Ziele für jede Voreinstellung festlegst. Konfiguriere die sichtbaren Aktionen auf der Kachel durch die Kachel-Einstellungen. Um die Konfigurationsoptionen anzuzeigen, halte die Kachel lange gedrückt und wähle dann 1 bis 4 Optionen:
 
 * **Aktivität**; für Sport
 * **Hypo**; um das Ziel während der Hypo Behandlung zu erhöhen
@@ -226,7 +226,7 @@ Die Temp Target Kachel kann ein temporäres Ziel basierend auf AAPS-Smartphone-V
 
 ### AAPS (QuickWizard) Kachel
 
-Die QuickWizard-Kachel kann 1 bis 4 Schnellassistenten-Aktionstasten halten, die in der Smartphone-App[2] definiert sind. See [QuickWizard](#Preferences-quick-wizard). Du kannst Standard-Mahlzeiten (Kohlenhydrate und Berechnung für den Bolus) setzen, die Du abhängig von der Tageszeit auf der Uhr anzeigen lassen kannst. Ideal für die gängigsten Mahlzeiten/Snacks, die Du tagsüber isst. Du kannst angeben, ob die Schnell-Assistenten-Tasten auf dem Smartphone, Uhr oder auf beiden angezeigt werden sollen. Hinweis: Das Smartphone kann immer nur eine Schnellassistenten-Aktionstaste gleichzeitig anzeigen. In den Einstellungen des Schnellassistenten kannst Du auch festlegen, wie viel Prozent des berechneten Bolus abgegeben werden soll. Mit der Einstellung kannst Du bestimmen, dass z.B. für einen Snack 120%, für langsame aufgenommenes Frühstück 80% und für Hypo-Behandlungen mit schnellen Kohlenhydraten 0% des Insulins abgegeben werden soll.
+Die QuickWizard-Kachel kann 1 bis 4 Schnellassistenten-Aktionstasten halten, die in der Smartphone-App[2] definiert sind. Siehe [QuickWizard](#Preferences-quick-wizard). Du kannst Standard-Mahlzeiten (Kohlenhydrate und Berechnung für den Bolus) setzen, die Du abhängig von der Tageszeit auf der Uhr anzeigen lassen kannst. Ideal für die gängigsten Mahlzeiten/Snacks, die Du tagsüber isst. Du kannst angeben, ob die Schnell-Assistenten-Tasten auf dem Smartphone, Uhr oder auf beiden angezeigt werden sollen. Hinweis: Das Smartphone kann immer nur eine Schnellassistenten-Aktionstaste gleichzeitig anzeigen. In den Einstellungen des Schnellassistenten kannst Du auch festlegen, wie viel Prozent des berechneten Bolus abgegeben werden soll. Mit der Einstellung kannst Du bestimmen, dass z.B. für einen Snack 120%, für langsame aufgenommenes Frühstück 80% und für Hypo-Behandlungen mit schnellen Kohlenhydraten 0% des Insulins abgegeben werden soll.
 
 ![Wear Aktionskachel und Smartphone-Einstellungen](../images/quickwizard_watch_phone.png)
 
@@ -282,11 +282,11 @@ Da wir bei der Kommunikation keine Kompromisse eingehen können (wir brauchen ak
 * Es ist besser, Watchfaces zu nutzen, die die Menge der angezeigten Daten im gedimmten / inaktiven Modus reduzieren.
 * Sei vorsichtig, wenn Du zusätzlich weitere Komplikationen, die externe Daten nutzen (z.B. Wetterdaten), verwendest.
 * Beginne mit einem einfachen Watchface. Füge immer nur eine Komplikation hinzu und beobachte, wie sich diese auf die Akku-Laufzeit auswirkt.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). Auf OLED-Geräten wird die Anzahl der Pixel, die beleuchtet werden, begrenzt und der Burnout begrenzt.
+* Nutze **Dunkel** Theme für AAPS Ziffernblätter und [**Querbalken farbgleich**](#watchface-settings). Auf OLED-Geräten wird die Anzahl der Pixel, die beleuchtet werden, begrenzt und der Burnout begrenzt.
 * Prüfe, was auf Deiner Uhr besser funktioniert: Das Standard AAPS Watchface oder ein anderes Watchface mit Komplikationen.
 * Beobachte über mehrere Tage mit verschiedenen Aktivitätsprofilen. Die meisten Uhren aktivieren die Anzeige beim Draufschauen, bei Bewegung und anderen nutzungsbezogenen Auslösern.
 * Überprüfe die globalen Systemeinstellungen, die sich auf die Leistung auswirken: Benachrichtigungen, das Zeitlimit für eine Hintergrundanzeige oder das aktive Anzeigezeitlimit, wenn Ortungsdienste aktiviert sind.
-* Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
+* Um von den Erfahrungen anderer Anwender (auch zur Batterlielaufzeit) zu lernen, schau' Dir die [Liste der geprüften Telefone und Uhren](#Phones-list-of-tested-phones) an oder [ frage die Community](../GettingHelp/WhereCanIGetHelp.md).
 * **Es kann nicht garantiert werden, dass die auf dem Watchface angezeigten Daten aktuell sind!** Am Ende entscheidet Wear OS, wann ein Watchface oder eine Komplikation neue Daten erhält. Selbst wenn die AAPS-App die Aktualisierung anstößt, kann das System die Aktualisierung verschieben oder ignorieren, um die Akku-Laufzeit zu erhöhen. Im Zweifel und vor allem bei niedrigem Akku-Ladestand der Uhr solltest Du die Werte immer mit einem Blick auf AAPS auf Deinem Smartphone gegenprüfen.
 
 (Watchfaces-troubleshooting-the-wear-app)=
@@ -299,10 +299,10 @@ Da wir bei der Kommunikation keine Kompromisse eingehen können (wir brauchen ak
 
 ## Es gibt weitere benutzerdefinierte AAPS Watchfaces
 
-[Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+[Hier](../ExchangeSiteCustomWatchfaces/index.md) kannst Du ZIP-Dateien mit von anderen erstellen Watchfaces herunterladen.
 
-## Build your own watchface
+## Erstelle Deine eigenen Zifferblätter (engl. watchfaces)
 
-If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
+Um Dein eigenes Watchface zu erstellen, findest Du [hier](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md) eine <0>Anleitung</0>.
 
 Sobald Du Dein eigenes **AAPS**-Watchface erstellt hast, kannst Du es mit anderen teilen. Die ZIP-Datei kann über einen Pull-Request in Github in den Ordner "ExchangeSiteCustomWatchfaces" hochgeladen werden. Beim Zusammenführen (Merge) des Pull Requests wird das Dokumentationsteam die Datei CustomWatchface.png extrahieren und dann den Dateinamen der ZIP-Datei voranstellen.

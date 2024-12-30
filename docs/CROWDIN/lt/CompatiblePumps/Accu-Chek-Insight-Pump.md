@@ -27,7 +27,7 @@ Pastaba: AAPS visada duomenis įrašys į **pirmąjį pompos bazės profilį**.
     
     ![Ekrano vaizdas, kaip pašalinti gliukometrą iš Insight pompos](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* In [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md), select Accu-Chek Insight.
     
     ![Insight pompos konfigūratoriaus ekrano vaizdas](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 

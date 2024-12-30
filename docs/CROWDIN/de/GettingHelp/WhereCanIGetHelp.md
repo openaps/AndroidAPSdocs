@@ -1,22 +1,22 @@
-# Where can I get help ?
+# Wo kann ich Hilfe erhalten?
 
-## I'm getting stuck; What do I do? Who can I ask?
+## Ich stecke fest; Was kann ich tun? Wen kann ich fragen?
 
-This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:
+Dieses Projekt basiert auf ehrenamtlicher Arbeit, weshalb einige Regeln existieren, um zusätzliche Arbeit für diejenigen zu vermeiden, die so freundlich sind, ihre Zeit und ihre Fähigkeiten zur Verfügung zu stellen:
 
 * Stufe 1: Lies das Wiki - wir haben jetzt eine Suchfunktion, die dir hilft!
 * Stufe 2: Durchsuche die Facebook-Gruppe; wenn deine Frage dort nicht schon beantwortet wurde, dann stelle sie in der [AndroidAPS users Facebook-Gruppe](https://www.facebook.com/groups/1900195340201874/).
 * Stufe 3: Wenn Facebook keine Lösung bringt, frage in [discord](https://discord.gg/4fQUWHZ4Mw). Duplizierte Beiträge werden auf beiden Kanälen ignoriert/gelöscht, um doppelte Antworten zu vermeiden. Denke bitte daran, dass die Mehrheit der Entwickler sich in Eurpoa befinden, so dass sie zur Beantwortung nicht rund um die Uhr verfügbar sind; bitte gib ihnen besonders an Wochenenden und in der Urlaubszeit ein paar Stunden Zeit.
-* level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md)
+* Stufe 4: Erstelle ein [Fehlerticket](https://github.com/nightscout/AndroidAPS/issues) und hänge die [Protokolldateien](../GettingHelp/AccessingLogFiles.md) (engl. log files) an.
 * Stufe 5: Schreibe eine E-Mail an *developers@androidaps.org* (nur dann, wenn persönliche Daten benötigt werden, die nicht auf einem öffentlichen Kanal verbreitet werden sollten und wenn dein Problem nicht auf einer anderen Stufe gelöst wurde)
 
-For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xDrip+](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
+Für Unterstützung zu CGM-Quellen nutze bitte die Facebook-Gruppen oder Discord-Kanäle für das jeweilige System (z. B. [xDrip+](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)). Bei Unterstützungsbedarf zu Nightscout nutze [CGM in der Cloud](https://www.facebook.com/groups/cgminthecloud/), da die Mitglieder dort Spezialwissen haben, das Leute in den verschiedenen Systemgruppen nicht in der Tiefe besitzen.
 
-## Make sure to join the AndroidAPS users group on Facebook!
+## Schließe dich der AndroidAPS users Gruppe auf Facebook an!
 
-Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
+Tritt der zentralen [AndroidAPS Facebook-Gruppe](https://www.facebook.com/groups/1900195340201874/) bei. Du kannst dort alle Fragen zum Algorithmus stellen, alle Setup-Probleme posten, die du mit Android Studio und der Erstellung der APK hast, alle Fragen zur Verwendung der App anbringen und auch Tipps bekommen, wie du die App optimal nutzen kannst. Es gibt auch eine Gruppe für die Combo Insulinpumpe [AAPSCombo](https://www.facebook.com/groups/127507891261169/), die ein etwas spezifischeres Setup hat.
 
-## Other resources in English
+## Weitere Informationsquellen in englischer Sprache
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): deckt alle DIY Closed Loop Systeme ab (OpenAPS, Loop und AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
@@ -24,7 +24,7 @@ Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/190019
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM im Allgemeinen
 * [AndroidAPS bei Discord](https://discord.gg/4fQUWHZ4Mw)
 
-## Country / language specific resources
+## Länder- bzw. sprachspezifische Informationsquellen
 
 ### Australien
 
@@ -32,31 +32,37 @@ Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/190019
 
 ### Tschechien und Slowakei
 
-* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech-speaking users of AndroidAPS
+* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): tschechischsprachige AAPS-Nutzende
 
-### France
+### Frankreich
 
-* [DIY AndroidAPS, parents d'enfants Dt1](https://www.facebook.com/groups/262497886779069) : French support group for AAPS for children
+* [AndroidAPS France (Toutes Pompes)](https://www.facebook.com/groups/268922660715266)
+* [DIY AndroidAPS, parents d'enfants Dt1](https://www.facebook.com/groups/262497886779069) : Französische Supportgruppe für Eltern AAPS-nutzender Kinder
 
 ### Deutschland
 
 * [Open Source Looper Community](https://de.loopercommunity.org/): Deutsche Looper-Community für Open Source Loop, Diabetes im Allgemeinen, Austausch, Hilfe und lokale Treffen
-* [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
-* [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
+* [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre als CGM/FGM
+* [NightscoutDE Facebook Gruppe](https://www.facebook.com/groups/nightscoutDE/)
+* [Looped-DE](https://www.facebook.com/groups/loopedDE/)
 
-### Netherlands
+### Niederlande
 
-* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch-speaking users of OpenAPS, Loop and AndroidAPS
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): niederländischsprachige Nutzende von OpenAPS, Loop und AAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
 
-### Poland
+### Norway
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group)
+* [Looped Norge](https://www.facebook.com/groups/loopednorge/)
 
-### Sweden
+### Polen
 
-* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polnische AAPS Community und Diabetes-Support Gruppe)
 
-### UK
+### Schweden
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
+* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (In Schweden lebende Nutzende von OpenAPS, Loop und AAPS)
+
+### Großbritannien
+
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (In Großbritannien lebende Nutzende von OpenAPS, Loop und AAPS)

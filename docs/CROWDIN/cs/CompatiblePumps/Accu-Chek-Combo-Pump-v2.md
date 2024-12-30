@@ -4,8 +4,6 @@ orphan: true
 
 # Pumpa Accu-Chek Combo
 
-Tyto pokyny jsou pro nastavení pumpy Accu-Chek Combo pomocí nového ovladače combov2, který je k dispozici jako součást AndroidAPS ve verzi 3.2. Tento ovladač je zcela nezávislý od starší verze.
-
 **Tento software je součástí DIY řešení a není to produkt, ale vyžaduje po vás, abyste si přečetli, naučili se a porozuměli systému včetně toho, jak ho používat. Není to něco, co by za vás spravovalo veškerou vaši cukrovku, ale umožňuje vám zlepšit vaši cukrovku a kvalitu života, pokud jste ochotni věnovat potřebný čas. Nespěchejte do toho, ale dopřejte si čas na učení. Jste jediní, kdo nese odpovědnost za to, co s tím uděláte.**
 
 ## Hardwarové a softwarové požadavky
@@ -98,7 +96,7 @@ Je velmi důležité zajistit, aby byly vypnuty optimalizace baterie (úspora en
 
 ## Aktivace driveru a párování s pumpou Combo
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **Důležité**: V seznamu je také starý ovladač nazvaný "Accu-Chek Combo (Ruffy)". Tento _nevybírejte_.
+* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Důležité**: V seznamu je také starý ovladač nazvaný "Accu-Chek Combo (Ruffy)". Tento _nevybírejte_.
 
   ![Screenshot Combo config builderu](../images/combo/combov2-config-builder.png)
 
@@ -112,9 +110,9 @@ Je velmi důležité zajistit, aby byly vypnuty optimalizace baterie (úspora en
 
   ![Screenshot rozhraní párování Combo 3](../images/combo/combov2-pairing-screen-3.png)
 
-  ![Screenshot rozhraní párování Combo 4](../images/combo/combov2-pairing-screen-4.png)
+  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
 
-  ![Screenshot rozhraní párování Combo 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
 
 * Pokud driver požádá o zadání PIN kódu zobrazeného na Combu a kód je zadán nesprávně, zobrazí se toto: ![Screenshot rozhraní párování Combo 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 

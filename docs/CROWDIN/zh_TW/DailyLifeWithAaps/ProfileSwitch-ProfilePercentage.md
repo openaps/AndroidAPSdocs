@@ -1,6 +1,6 @@
 # 設定檔切換及設定檔百分比
 
-本節將解釋什麼是**設定檔切換**和**設定檔百分比**。 您可以在[組態建置工具 - 設定檔](#setup-wizard-profile)了解如何創建**設定檔**。
+本節將解釋什麼是**設定檔切換**和**設定檔百分比**。 You can learn about how to create a **Profile** at [Config Builder > Profile](#setup-wizard-profile).
 
 在開始您的**AAPS**之旅時，您需要創建一個**設定檔**，了解如何執行**設定檔切換**，並學習**AAPS**中**設定檔百分比**的影響。 **設定檔切換**或**設定檔百分比**的功能對於以下情況特別有益：
 

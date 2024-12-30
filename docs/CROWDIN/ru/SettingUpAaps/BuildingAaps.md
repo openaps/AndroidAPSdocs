@@ -11,7 +11,15 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 (Рекомендуемые спецификации компьютеров для сборки файла apk)=
 ## Технические характеристики компьютера и программного обеспечения для построения AAPS
 
-* Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, Koala or Ladybug](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first!
+* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
+
+| AAPS Version        | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version                                                              | Gradle | JVM |
+| ------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
+| [3.2](#version3200) | Hedgehog (2023.1.1)                                  | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
+| [3.3](#version3300) | Ladybug (2024.2.1)                                   |                                                                                                                     | 8.9    | 21  |
+
+The "preferred version" is packaged with the appropriate Gradle and JVM version. If using a different version, you may encounter issues related to wrong Gradle and/or JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+
 * [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
 
 <table class="tg">
@@ -52,7 +60,6 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 ## Помощь и поддержка в процессе сборки
 
 If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio) section, please consult that first.
-
 
 If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
@@ -117,12 +124,12 @@ Android Studio is a program which runs on your computer. It allows you to downlo
 
 One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
 
-Any version of Android Studio like version Hedgehog or any newer is suitable. With version Ladybug, you might need to do one extra step, but it's doable!
-
 ```{admonition} Different UI
 :class: warning
 Import note: Android Studio changed its UI during the last releases. This guide will show you the steps with the *new UI* in "Ladybug". If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](NewUI).
 ```
+
+The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
 
 Download the [current version of Android Studio](https://developer.android.com/studio) or an older version from the [**Archives**](https://developer.android.com/studio/archive) and accept the download agreements.
 

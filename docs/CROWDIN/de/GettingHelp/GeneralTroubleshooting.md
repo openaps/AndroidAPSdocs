@@ -1,8 +1,8 @@
-# Troubleshooting
+# Problembehandlung
 
 Informationen zur Behebung von Problemen findest Du auf vielen Seiten im Wiki. Auf dieser Seite sind Links zu den entsprechenden Abschnitten zusammengetragen, so dass Du schneller eine Lösung für Dein Problem finden kannst.
 
-Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
+Weitere nützliche Informationen können auch im [FAQ](../UsefulLinks/FAQ.md) stehen.
 
 ## AAPS-App
 
@@ -12,7 +12,7 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 * [Fehlerbehebung Android Studio](TroubleshootingAndroidStudio)
 
 ### Einstellungen
-* Profile
+* Profil
 
   !['Fehler: Basal ist nicht auf Stunden ausgerichtet'](../images/Screen_DifferentPump.png)
 
@@ -84,7 +84,7 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 
 ## CGM
 
-* [General](#general-cgm-troubleshooting)
+* [Allgemein](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
 * [Libre 2](#Libre2-experiences-and-troubleshooting)
@@ -106,4 +106,4 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 
 ## Smartwatches
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
+* [Fehlerbehebung der Wear App](#Watchfaces-troubleshooting-the-wear-app)

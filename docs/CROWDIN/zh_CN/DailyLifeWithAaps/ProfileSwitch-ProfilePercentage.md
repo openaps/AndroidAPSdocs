@@ -1,6 +1,6 @@
 # 配置文件切换与配置文件百分比
 
-本节将解释什么是**配置文件切换（Profile Switch）**和**配置文件百分比（Profile Percentage）**。 您可以在[配置文件构建器 - 配置文件](#setup-wizard-profile)了解如何创建**配置文件（Profile）**。
+本节将解释什么是**配置文件切换（Profile Switch）**和**配置文件百分比（Profile Percentage）**。 You can learn about how to create a **Profile** at [Config Builder > Profile](#setup-wizard-profile).
 
 当您初次开始使用**AAPS**时，您需要创建一个**配置文件**，了解如何进行**配置文件切换**，并学习配置文件百分比在AAPS中的影响。 **配置文件切换**或**配置文件百分比**的功能可以带来以下特别好处：
 

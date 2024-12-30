@@ -1,89 +1,89 @@
 # Übersicht der Komponenten
 
-**AAPS** is not just a (self-built) application, it is but one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the component documentation.
+**AAPS ist** nicht einfach eine (selbst erstellte) App, es ist aber eine von mehreren Modulen Deines Closed Loop Systems. Bevor Du Dich für die einzelnen Komponenten entscheidest, solltest Du einen Blick auf die Dokumention zu den Komponenten, werfen.
 
-![Components overview](../images/modules.png)
+![Übersicht der Komponenten](../images/modules.png)
 
 ```{admonition} IMPORTANT SAFETY NOTICE
 :class: important
 
-The foundation of **AAPS** safety features discussed in this documentation is built on the safety features of the hardware used to build your system. For closing an automated insulin dosing loop, it is critically important that you only use an insulin pump and CGM that are tested, fully functioning and approved by the official instances of your country. Veränderungen an Hard- oder Software dieser Komponenten können zu unerwarteter Insulinabgabe und damit zu erheblichen Risiken für den Anwender führen. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, **do not use** these for creating an **AAPS** system.
+Die Grundlage der **AAPS** Sicherheitsfunktionen, die in dieser Dokumentation diskutiert werden, basiert auf den Sicherheitsmerkmalen der Hardware, die zum Erstellen Deines Systems verwendet wird. Um einen Loop zur automatisierten Insulinabgabe schließen zu können, ist es extrem wichtig nur getestete, voll funktionsfähige und von den offiziellen Behörden Deines Landes freigegebene Insulinpumpen und Sensoren (CGM) zu nutzen. Veränderungen an Hard- oder Software dieser Komponenten können zu unerwarteter Insulinabgabe und damit zu erheblichen Risiken für den Anwender führen. **Verwende keine** defekten, modifizierten oder selbstgebauten Insulinpumpen oder CGM-Empfänger, zum Erestellen eines **AAPS**-Systems.
 
 Außerdem ist es ebenso wichtig, nur Originalzubehör zu verwenden. Setzhilfen, Kanülen und Reservoire müssen vom Hersteller für den Einsatz mit deiner Pumpe bzw. deinem CGM zugelassen sein. Die Verwendung von nicht geprüftem oder modifiziertem Zubehör kann zu Ungenauigkeiten des CGM-Systems und Insulinabgabefehlern führen. Insulin ist sehr gefährlich, wenn es falsch dosiert wird. Spiele nicht mit deinem Leben, indem du ungeprüftes oder modifiziertes Zubehör verwendest.
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. Die Kombination mit einem Closed Loop System, das die basalen Raten senkt, um den BZ zu erhöhen ist besonders gefährlich, da durch die Gliflozin dieser BZ-Anstieg verhindert wird und ein gefährlicher Zustand durch Insulinmangel auftreten kann. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
+Nicht zuletzt darfst Du keine SGLT-2-Hemmer (Gliflozins) einnehmen, da sie den Blutzuckerspiegel unberechenbar senken. Die Kombination mit einem Closed Loop System, das die basalen Raten senkt, um den BZ zu erhöhen ist besonders gefährlich, da durch die Gliflozin dieser BZ-Anstieg verhindert wird und ein gefährlicher Zustand durch Insulinmangel auftreten kann. [Weitere Informationen gibt es hier](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
 ## Erforderliche Komponenten
 
 ### Gute individuelle Profileinstellungen für Deine Diabetes-Therapie
 
-Obwohl Du es weder kaufen noch einfach erstellen kannst, ist dies wahrscheinlich das Modul, das am meisten unterschätzt wird, obwohl es für einen funktionieren Loop absolut wesentlich ist. Wenn Dich der Algorithmus bei Deinem Diabetes-Management unterstützen soll, benötigt dieser die korrekten Einstellungen um keine schwerwiegenden Fehlentscheidungen zu treffen. Even if you are still missing other modules, you can already verify and adapt your **Profile** in collaboration with your diabetes team.
+Obwohl Du es weder kaufen noch einfach erstellen kannst, ist dies wahrscheinlich das Modul, das am meisten unterschätzt wird, obwohl es für einen funktionieren Loop absolut wesentlich ist. Wenn Dich der Algorithmus bei Deinem Diabetes-Management unterstützen soll, benötigt dieser die korrekten Einstellungen um keine schwerwiegenden Fehlentscheidungen zu treffen. Auch wenn Dir andere Module noch fehlen, kannst Du Dein bestehendes **Profil** gemeinsam mit Deinem Diabetes-Team prüfen und anpassen.
 
-The **Profile** includes:
+Das **Profil** enthält:
 
-- BR (Basal rates): provides background insulin;
-- ISF (insulin sensitivity factor): how much your blood glucose level will be reduced by 1 unit of insulin;
-- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin;
-- DIA (duration of insulin action).
+- BR (Basalrate); liefert das Basalinsulin;
+- ISF (Insulin Sensitivity Factor; dt. Korrekturfaktor): Um wie viel Einheiten sinkt Dein Glukosewert durch eine Einheit Insulin;
+- CR (Carb Ratio; dt. Mahlzeitfaktor): Wie viele Gramm Kohlenhydrate werden von einer Insulineinheit abgedeckt;
+- DIA (Duration of Insulin Action; dt. Insulinwirkdauer).
 
 Die meisten Looper verwenden eine sogenannte zirkadiane Basalrate, Korrektur- und KH-Faktoren die sich an der hormonellen Insulinempfindlichkeit im Tagesverlauf orientieren.
 
-More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
+Weitere Informationen zu Deinem **Profil** findest Du [auf der gesonderten Seite](../SettingUpAaps/YourAapsProfile.md).
 
 ### Smartphone
 
-See the dedicated page [Phones](../Getting-Started/Phones.md).
+Siehe die eigene Seite zu [Smartphones](../Getting-Started/Phones.md).
 
 ### Insulinpumpe
 
-See the dedicated page [Compatible Pumps](../Getting-Started/CompatiblePumps.md).
+Siehe die dedizierte Seite zu [Kompatiblen Pumpen](../Getting-Started/CompatiblePumps.md).
 
-**Advantages and disadvantages of some pump models**
+**Vorteile und Nachteile einiger Pumpenmodelle**
 
-The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+Die Combo, die Insight und die älteren Medtronic Pumpen sind solide und „loopfähig“. Die Combo hat wegen des Standard Luer-Lock-Anschlusses auch den Vorteil, dass die Auswahl an Kathetern groß ist. Und sie verwendet Standard-Batterien, die rund um die Uhr an jeder Tankstelle erhältlich sind. Im Notfall kannst Du sie sogar aus der Fernbedienung in Deinem Hotelzimmer „ausleihen“ ;-).
 
 Die Vorteile der DanaR/RS und Dana-i vs. der Combo sind aber:
 
 - Die Dana Pumpen können sich mit fast jedem Smartphone verbinden, auf dem das Betriebssystem Google Android >= 5.1 installiert ist. Ein Austausch der werksseitigen Smartphone-Software (z. B. durch das Lineage Betriebssystem) ist nicht nötig. Wenn Dein Smartphone kaputt geht oder gestohlen wird, kannst Du auf einem anderen / neuen Smartphone sehr schnell die Pumpe wieder steuern... Mit der Combo ist das nicht so einfach.  jedenfalls nicht solange Android 8.1 nur auf wenigen Smartphones installiert ist.
 - Das erste Einrichten der Verbindung zwischen der Dana-i/RS und dem Smartphone ist einfacher. Allerdings ist dieser Schritt normalerweise nur bei der Ersteinrichtung erforderlich.
-- Bislang arbeitet die Combo mit screen parsing. Grundsätzlich funktioniert das gut, aber es ist leider langsam. Beim Loopen ist das nicht so schlimm, denn das läuft alles im Hintergrund ab. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
-- Die Combo virbiert am Ende jeder TBR, die DanaR vibriert (oder piept) bei Abgabe eines SMB. At nighttime, you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable so that it does neither beep nor vibrate.
+- Bislang arbeitet die Combo mit screen parsing. Grundsätzlich funktioniert das gut, aber es ist leider langsam. Beim Loopen ist das nicht so schlimm, denn das läuft alles im Hintergrund ab. Das führt aber dazu, dass eine bestehende Bluetooth-Verbindung leichter abgebrochen wird. Das kann zu Problemen führen, wenn Du Dich während eines Bolus-Prozesses zu weit vom Smartphone entfernst (z. B. beim Kochen).
+- Die Combo virbiert am Ende jeder TBR, die DanaR vibriert (oder piept) bei Abgabe eines SMB. In der Nacht wird der Loop meistens eher TBR setzen statt SMB.  Die Dana-i/RS kann so konfiguriert werden, dass sie weder bei TBR, noch bei SMB vibriert oder piept.
 - Die History kann auf der Dana-i/RS in wenigen Sekunden mit COB ausgelesen werden. Deshalb können die Smartphones offline leicht ausgewechselt werden. Sobald einige CGM-Daten verfügbar sind, kann das Loopen fortgesetzt werden.
-- All pumps **AAPS** can talk with are waterproof on delivery. Nur die DanaR/Rs garantiert auch während der Nutzung Wasserdichtigkeit durch das abgedichtete Batteriefach und das Reservoir-System.
+- Alle Pumpen, die **AAPS** unterstützt, sind (zumindest bei Auslieferung) wasserdicht. Nur die DanaR/Rs garantiert auch während der Nutzung Wasserdichtigkeit durch das abgedichtete Batteriefach und das Reservoir-System.
 
 ### BZ-Quelle
 
-See the dedicated page [Compatible CGMs](../Getting-Started/CompatiblesCgms.md).
+Siehe die eigene Seite über [Kompatiblen Pumpen](../Getting-Started/CompatiblesCgms.md).
 
-### **AAPS**-.apk file
+### **AAPS**-.apk Datei
 
-The main component of the system. In order to install the app, you have to build the apk-file yourself first. Instructions are [here](../SettingUpAaps/BuildingAaps.md).
+Die Haupt-Komponente des Systems. Bevor Du die App installieren kannst, musst Du die apk-Datei vorher selbst erstellen. Die Anleitung ist [hier](../SettingUpAaps/BuildingAaps.md).
 
-### Reporting server
+### Server für Berichte und Auswertungen
 
-A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS : [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
+Ein Berichts-Server zeigt Deine Glukose- und Behandlungsdaten an und erstellt Berichte zur detaillierten Analyse. Derzeit gibt es zwei Berichts-Server, die mit AAPS genutzt werden können: [Nightscout](#SettingUpTheReportingServer-nightscout) und [Tidepool](#SettingUpTheReportingServer-tidepool). Beide bieten Möglichkeiten Deine Diabetes-Daten im Zeitverlauf zu visualisieren, liefern Statistiken über die **Zeit im Zielbereich** (TIR) und andere Messgrößen.
 
-The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set up one as it will be required to fulfill [**Objective 1**](#objectives-objective1).
+Der Berichts-Server ist von den anderen Modulen unabhängig. Wenn Du keinen Berichts-Server nutzen möchtest, sollten Du wissen, dass er für den langfristigen Betrieb von **AAPS** nicht zwingend ist. Zum Abschließen des [**Ziel 1**](#objectives-objective1) ist es aber dennoch notwendig ihn einzurichten.
 
-Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
+Zusätzliche Informationen zum Einrichten Deines Berichts-Servers findest Du [hier](../SettingUpAaps/SettingUpTheReportingServer.md).
 
 ## Optionale Komponenten
 
 ### Smartwatch
 
-You can choose any smartwatch with Android WearOS 1.x up to 4.x. **Beware, WearOS 5.x is not compatible!**
+Du kannst jede Smartwatch mit Android WearOS 1.x bis 4.x nutzen. **Achtung, WearOS 5.x ist nicht kompatibel!**
 
-Users are creating a [list of tested phones and watches](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
+Die Community hat eine [Liste mit getesteten Samrtphones und Smartwatches](#Phones-list-of-tested-phones) zusammengetragen. Es gibt verschiedene Zifferblätter, die Du mit **AAPS** nutzen kannst. Weitere Informationen findest Du [hier](../WearOS/WearOsSmartwatch.md).
 
 ### xDrip+
 
-Even if you don't need to have the [xDrip+ App](https://xdrip.readthedocs.io/en/latest/) as **BG Source**, you can still use it for _i.e._ alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../CompatibleCgms/xDrip.md). Beachte bitte, dass die Entwicklung von xDrip+ sehr agil ist und die Dokumentation damit teilweise nicht Schritt halten und entsprechend nicht immer aktuell sein kann.
+Auch wenn Du die [xDrip+-App](https://xdrip.readthedocs.io/en/latest/) nicht als **BZ-Quelle** benötigst, kannst Du sie dennoch _z. B._ für Alarme oder als alternative Anzeige Deiner Glukosewerte nutzen. Du kannst in xDrip+ beliebig viele Alarme einrichten, festlegen zu welchen Zeiten diese aktiv sein sollen, ob sie die Stummschaltung des Smartphones überschreiben können etc. Einige xDrip+ Informationen können [hier](../CompatibleCgms/xDrip.md) gefunden werden. Beachte bitte, dass die Entwicklung von xDrip+ sehr agil ist und die Dokumentation damit teilweise nicht Schritt halten und entsprechend nicht immer aktuell sein kann.
 
 ## Wartezeit überbrücken
 
-It sometimes takes a while to get all the modules for closing the loop. Aber keine Sorge, es gibt viele Dinge, die Du in der Zwischenzeit machen kannst. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
+Manchmal dauert es eine Weile, alle Module für den Closed Loop zusammenzubekommen. Aber keine Sorge, es gibt viele Dinge, die Du in der Zwischenzeit machen kannst. Es ist **absolut wichtig**, Deine Basalrate (BR), die KH-Faktoren (IC), Korrekturfaktoren (ISF) etc. intensiv zu prüfen und ggf. anzupassen. Der Open Loop ist zudem eine sehr gute Möglichkeit, das System kennenzulernen und mit **AAPS** vertraut zu werden. In diesem Modus gibt **AAPS** Behandlungsempfehlungen, die Du manuell ausführen kannst.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../UsefulLinks/BackgroundReading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Du kannst Dich weiter durch das Wiki arbeiten, online und offline mit anderen Loopern in Kontakt treten, weitere [Hintergrundinfos](../UsefulLinks/BackgroundReading.md) oder Berichte von anderen Loopern lesen. Sei aber vorsichtig, nicht alle Anwenderberichte müssen richtig oder für Deinen Fall zutreffend sein.
 
-**Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your hardware.
+**Fertig?** Wenn Du alle Komponenten für **AAPS** zusammen hast (Glückwunsch!) - oder zumindest genug, um mit dem Open Loop zu beginnen - solltest Du zuerst die [Beschreibung der Objectives (Ziele)](../SettingUpAaps/CompletingTheObjectives.md) vor dem jedem neuen Ziel lesen und Deine Hardware entsprechend vorbereiten.

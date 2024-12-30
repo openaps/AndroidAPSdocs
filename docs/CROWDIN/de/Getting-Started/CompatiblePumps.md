@@ -1,33 +1,31 @@
-# Kompatible Pumpen
-
-## Compatible Pumps
+# Compatible Pumps
 
 AAPS funktioniert mit einer Reihe von Insulinpumpen.  The following list shows the currently supported devices and indicates if AAPS communicates with the pump using your phone's native Bluetooth function or if it requires a Rileylink Compatible device in brackets.
 
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)  (Bluetooth; old driver that uses the additional Ruffy app - see also [Accu-Chek Combo Tips for Basic usage](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; new driver, available starting with [AndroidAPS v.3.2](#version3200) - see also [Accu-Chek Combo Tips for Basic usage](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; see also [Accu-Chek Combo Tips for Basic usage](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
 - [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
 - [Diaconn G8 ](../CompatiblePumps/DiaconnG8.md)  (Bluetooth)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md) (Bluetooth)
-- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  ([additional communication device](#additional-communication-device) needed)
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  ([zusätzliches Kommunikationsgerät](#additional-communication-device) benötigt)
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)  (Bluetooth)
 - [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
-- Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#additional-communication-device) needed)
+- [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)
+- Bestimmte ältere [Medtronic](../CompatiblePumps/MedtronicPump.md)-Pumpen ([zusätzliches Kommunikationsgerät](#additional-communication-device) benötigt)
 
 ## My pump is not listed
 
-Details of the status of other pumps that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md) page.
+Informationen über weitere Pumpen, die möglicherweise in Zukunft mit AAPS funktionieren, findest Du auf der Seite [Zukünftig ggf. loopbare Pumpen](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
-## Additional communication device
+## Zusätzliches Kommunikationsgerät
 
-If no additional communication device is mentioned, the communication between insulin pump and **AAPS** is based on the integrated bluetooth stack of Android, without the need of an additional communication device to translate the communication protocol.
+Wenn kein zusätzliches Kommunikationsgerät erwähnt wird, kommuniziert die Insulinpumpe mit **AAPS** direkt über Bluetooth (ohne dass ein zwischengeschaltetes Gerät noch etwas umwandeln muss).
 
-For old Medtronic pumps and Omnipod Eros, an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+For old Medtronic pumps and Omnipod Eros, an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Wähle die richtige Variante des Kommunikationsgeräts aus, je nach dem welche Pumpe Du nutzt.
 
 - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
 - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)

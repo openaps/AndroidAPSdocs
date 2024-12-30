@@ -1,5 +1,9 @@
 # Docs updates & changes
 
+## December 2024
+
+- Documentation of [3.3 version](#version3300) @emilise
+
 ## November 2024
 
 - Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
@@ -71,7 +75,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 ## February 2021
 
-- New navigation bar and [language switch](../ChangeLanguage/ChangeLanguage.md)
+- New navigation bar and [language switch](../NavigateDoc/ChangeLanguage.md)
 
 ## January 2021
 

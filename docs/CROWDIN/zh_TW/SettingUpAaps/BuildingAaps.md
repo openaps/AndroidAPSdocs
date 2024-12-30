@@ -11,7 +11,15 @@
 (建置APK推薦的電腦規格)=
 ## 建置AAPS所需的電腦和軟體規格
 
-* 請使用**[至少為Hedgehog的Android Studio版本（2023.1.1）或更新的版本，如Iguana、Jellyfish、Koala或Ladybug](https://developer.android.com/studio/)**來建立apk。 舊版本的Android Studio需要先更新！
+* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
+
+| AAPS Version        | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version                                                              | Gradle | JVM |
+| ------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
+| [3.2](#version3200) | Hedgehog (2023.1.1)                                  | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
+| [3.3](#version3300) | Ladybug (2024.2.1)                                   |                                                                                                                     | 8.9    | 21  |
+
+The "preferred version" is packaged with the appropriate Gradle and JVM version. If using a different version, you may encounter issues related to wrong Gradle and/or JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+
 * [Windows 32位系統](#troubleshooting_androidstudio-unable-to-start-daemon-process)不支援Android Studio。 請記住**64位中央處理器和64位作業系統是必要條件。** 如果你的系統不符合此條件，你必須更換受影響的硬體或軟體，或整個系統。
 
 <table class="tg">
@@ -52,7 +60,6 @@
 ## 建置過程中的幫助與支援
 
 如果在建置**AAPS**應用的過程中遇到困難，請參考專門的[**Android Studio問題排除**](../GettingHelp/TroubleshootingAndroidStudio)部分。
-
 
 如果你認為建置說明中的內容有錯誤、缺失或令人困惑，或仍然感到困難，請與其他**AAPS**用戶群聯繫，群組可在[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)上找到。 如果你想自行更改某些內容（更新螢幕截圖_等_），請提交[拉取請求（PR）](../SupportingAaps/HowToEditTheDocs.md)。
 
@@ -117,12 +124,12 @@ Android Studio是一個在你的電腦上運行的程式。 它允許你從網�
 
 安裝Android Studio時最重要的事情之一是**請耐心等候！**在安裝和設置過程中，Android Studio正在下載大量內容，這將需要時間。
 
-任何版本的 Android Studio，如 Hedgehog 或任何更新的版本都是合適的。 使用 Ladybug 版本時，您可能需要多執行一步，但這是可以完成的！
-
 ```{admonition} Different UI
 :class: warning
 匯入注意：在最近的更新中，Android Studio改變了其使用者介面。 本指南將向你展示在“Ladybug”中的*新介面*的步驟。 如果你仍在使用舊的介面，你可能需要先根據[這些指示](NewUI)將Android Studio切換到新的介面。
 ```
+
+The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
 
 下載[當前版本的Android Studio](https://developer.android.com/studio)或從[**檔案庫**](https://developer.android.com/studio/archive)下載較舊版本，並接受下載協議。
 

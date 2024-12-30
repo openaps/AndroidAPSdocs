@@ -24,14 +24,6 @@ orphan: true
 
 **AAPS 硬體需求：**可能沒有。 他支援藍牙。
 
-### Equil（Aidex/GlucoRx/MicroTechMD 的幫浦）([官網](https://www.glucorx.ie/glucorx-equil/))
-
-**閉環狀態：**是一個閉環候選者。
-
-**AAPS 硬體需求：**無。 看起來他支援藍牙。
-
-**評論：**一些人已經開始嘗試在 AAPS 中支援此幫浦，但這仍處於初步階段。 更多資訊請參閱我們在 Discord 的 “equil” 頻道。
-
 ### Accu-Chek Solo ([官網](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
 **閉環狀態：**是一個閉環候選者。

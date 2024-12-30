@@ -210,7 +210,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 #### AAPS与Android版本
 
-当前版本的**AAPS**（3.2版）需要一部搭载谷歌**Android 9.0或更高版本**的Android智能手机。 下一个**AAPS**版本（3.3版）将要求**Android 11.0或更高版本**。 如果您正在考虑购买新手机（截至2024年7月），建议选择Android 13。<br/>截至2024年11月，部分用户报告了Android 15与蓝牙连接存在兼容性问题。 您可能希望推迟更新到Android 15，特别是如果您正在使用Omnipod Dash或Dexcom G7的话。 请查看[Facebook或Discord](../GettingHelp/WhereCanIGetHelp.md)以获取此主题的最新更新。<br/> 出于安全考虑，强烈建议用户保持其**AAPS**构建的更新。 然而，对于无法使用Android 11.0或更高版本设备的用户，仍然可以使用与旧版Android兼容的**AAPS**早期版本，请参阅：[发行说明](#maintenance-android-version-aaps-version)。
+The current version of **AAPS** (3.3) requires an Android smartphone with Google **Android 11.0 or above**. If you are considering buying a new phone, (as of December 2024), Android 14 is preferred.<br/> As of November 2024, several users have reported issues with Android 15 and Bluetooth connection. 您可能希望推迟更新到Android 15，特别是如果您正在使用Omnipod Dash或Dexcom G7的话。 请查看[Facebook或Discord](../GettingHelp/WhereCanIGetHelp.md)以获取此主题的最新更新。<br/> 出于安全考虑，强烈建议用户保持其**AAPS**构建的更新。 然而，对于无法使用Android 11.0或更高版本设备的用户，仍然可以使用与旧版Android兼容的**AAPS**早期版本，请参阅：[发行说明](#maintenance-android-version-aaps-version)。
 
 #### 智能手机型号选择
 您购买的具体型号取决于所需的功能。 您可以在[手机页面](../Getting-Started/Phones.md)上找到关于工作配置的建议和用户反馈。

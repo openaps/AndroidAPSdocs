@@ -20,14 +20,13 @@ So, please take your time in configuring your loop, the benefits of a well-runni
 :class: note
 If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Průvodce nastavením AAPS krok za krokem
-### Uvítací zpráva
+## Uvítací zpráva
 
 Toto je pouze uvítací zpráva kterou můžete přeskočit kliknutím na tlačítko "Další":
 
 ![image](../images/setup-wizard/Screenshot_20231202_125636.png)
 
-### Licenční ujednání
+## Licenční ujednání
 
 In the end user license agreement there is important information about the legal aspects of using **AAPS**. Přečtěte si ji prosím pozorně.
 
@@ -37,7 +36,7 @@ Pokud rozumíte a souhlasíte, klikněte na tlačítko "ROZUMÍM A SOUHLASÍM" a
 
 ![image](../images/setup-wizard/Screenshot_20231202_125650.png)
 
-### Vyžadovaná oprávnění
+## Vyžadovaná oprávnění
 
 **AAPS** needs some requirements to operate correctly.
 
@@ -49,28 +48,15 @@ Klikněte prosím na tlačítko "DALŠÍ":
 
 ![image](../images/setup-wizard/Screenshot_20231202_125709.png)
 
-U chytrých telefonů je pořád důležité brát ohled na spotřebu energie, protože kapacita baterií je stále docela omezená. Z toho důvodu je operační systém Android na vašem telefonu docela restriktivní ohledně povolení aplikacím fungovat a spotřebovávat čas procesoru a tedy i energii baterie.
-
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Proto AAPS potřebuje povolení v systému Android.
-
-Toho dosáhnete potvrzením požadovaných nastavení.
-
-Klikněte prosím na tlačítko "VYŽÁDAT OPRÁVNĚNÍ":
-
-![image](../images/setup-wizard/Screenshot_20231202_125721.png)
-
-Vyberte prosím "Povolit":
-
-![image](../images/setup-wizard/Screenshot_20231202_125750.png)
+### Notification and battery optimization
 
 Android vyžaduje zvláštní oprávnění pro aplikace, které potřebují posílat uživateli upozornění.
 
 While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
 
-Klikněte prosím na tlačítko "VYŽÁDAT OPRÁVNĚNÍ":
+Please click the first "ASK FOR PERMISSION" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_125813.png)
-
+![image](../images/setup-wizard/Screenshot_20231202_125721.png)
 
 Vyberte aplikaci "AAPS":
 
@@ -84,11 +70,27 @@ Přepínač v povoleném stavu by měl vypadat takto:
 
 ![image](../images/setup-wizard/Screenshot_20231202_125851.png)
 
+U chytrých telefonů je pořád důležité brát ohled na spotřebu energie, protože kapacita baterií je stále docela omezená. Z toho důvodu je operační systém Android na vašem telefonu docela restriktivní ohledně povolení aplikacím fungovat a spotřebovávat čas procesoru a tedy i energii baterie.
+
+However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Proto AAPS potřebuje povolení v systému Android.
+
+Toho dosáhnete potvrzením požadovaných nastavení.
+
+Click the second "ASK FOR PERMISSION" button. Vyberte prosím "Povolit":
+
+![image](../images/setup-wizard/Screenshot_20231202_125750.png)
+
+Kliněte na tlačítko "DALŠÍ":
+
+![Screenshot_20241207-161454.png](../images/setup-wizard/Screenshot_20241207-161454.png)
+
+### Location
+
 Android propojuje využití Bluetooth komunikace s funkcemi určení polohy. Možná už jste na to narazili i u jiných aplikací. Běžně je nutné povolit služby určování polohy, pokud potřebujete přístup k Bluetooth.
 
 **AAPS** uses bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Detaily se mohou lišit u různých konfigurací.
 
-Klikněte prosím na tlačítko "VYŽÁDAT OPRÁVNĚNÍ":
+Click the first "ASK FOR PERMISSION" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_125924.png)
 
@@ -98,13 +100,21 @@ Klikněte na "Během používání aplikace":
 
 ![image](../images/setup-wizard/Screenshot_20231202_125939.png)
 
+Click the second "ASK FOR PERMISSION" button:
+
+![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
+
+Select "Allow all the time".
+
 Kliněte na tlačítko "DALŠÍ":
 
 ![image](../images/setup-wizard/Screenshot_20231202_130002.png)
 
+### Storage permission
+
 **AAPS** needs to log information to the permanent storage of your smartphone. Trvalá paměť znamená, že data budou k dispozici i po restartu vašeho telefonu. Informace uložené pouze v operační paměti a nikoli v paměti trvalé mohou být ztracené.
 
-Klikněte prosím na tlačítko "VYŽÁDAT OPRÁVNĚNÍ":
+Click the first "ASK FOR PERMISSION" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130012.png)
 
@@ -112,16 +122,19 @@ Klikněte na "Povolit":
 
 ![image](../images/setup-wizard/Screenshot_20231202_130022.png)
 
-Budete informováni o tom, že po této změně musíte váš telefon restartovat.
+Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information. The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
 
-Please **don't stop the Setup Wizard now**. Můžete to udělat po dokončení Průvodce nastavením.
+![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
 
-Klikněte na "OK" a potom na tlačítko "DALŠÍ":
+Confirm that you wish to grant access to **AAPS** to the selected directory:
+
+![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
+
+Kliněte na tlačítko "DALŠÍ":
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-
-### Hlavní heslo
+## Hlavní heslo
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
@@ -132,7 +145,7 @@ Po dvojím zadání hesla klikněte na tlačítko "DALŠÍ":
 ![image](../images/setup-wizard/Screenshot_20231202_130122.png)
 
 
-### Odesílání do Fabric
+## Odesílání do Fabric
 
 Tady můžete nastavit využití automatického reportování pádů aplikace a jejího využití.
 
@@ -164,13 +177,13 @@ Kliněte na tlačítko "DALŠÍ":
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-### Units (mg/dL <-> mmol/L)
+## Units (mg/dL <-> mmol/L)
 
 Vyberte prosím, jestli vaše hodnoty glykémie jsou v mg/dl nebo mmol/L a klikněte na tlačítko "DALŠÍ":
 
 ![image](../images/setup-wizard/Screenshot_20231202_135830.png)
 
-### Přehled
+## Přehled
 
  Tady nastavíte hodnoty glykémie, které budou zobrazovány jako "v rozsahu". V tuto chvíli můžete ponechat výchozí hodnoty a k nastavení se vrátit později.
 
@@ -185,7 +198,7 @@ Klikněte prosím na tlačítko "DALŠÍ":
 ![image](../images/setup-wizard/Screenshot_20231202_135853.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-### Synchronizace dat s reportovacím serverem a další
+## Synchronizace dat s reportovacím serverem a další
 
 Zde nastavujete nahrávání dat na reportovací server.
 
@@ -269,7 +282,7 @@ Go back twice, to the list of plugins and select "NEXT" to go to the next screen
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
-### Patient name
+## Patient name
 
 Here you can setup your name in **AAPS**.
 
@@ -281,7 +294,7 @@ Klikněte na tlačítko "DALŠÍ" a přejdete k další obrazovce.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-### Typ pacienta
+## Typ pacienta
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. Nastavení je důležité z bezpečnostních důvodů.
 
@@ -293,7 +306,7 @@ Po zadání potřebných hodnot klikněte na "DALŠÍ":
 
 ![image](../images/setup-wizard/Screenshot_20231202_141817.png)
 
-### Používaný inzulín
+## Používaný inzulín
 
 Vyberte typ inzulínu, který používáte v pumpě.
 
@@ -309,7 +322,7 @@ Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 ![image](../images/setup-wizard/Screenshot_20231202_141840.png)
 
 
-### Zdroj informací o glykémii
+## Zdroj informací o glykémii
 
 Vyberte zdroj dat o glykémii, který používáte. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
@@ -335,7 +348,7 @@ Go back and press "NEXT" to go to the next screen:
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
 (setup-wizard-profile)=
-### Profile
+## Profile
 
 Teď se dostáváme k velmi důležité části Průvodce nastavením.
 
@@ -440,7 +453,7 @@ Váš profil byl nyní nastaven:
 ![image](../images/setup-wizard/Screenshot_20231202_143833.png)
 
 
-### Inzulinová pumpa
+## Inzulinová pumpa
 
 
 
@@ -465,7 +478,7 @@ Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-### APS algorithm
+## APS algorithm
 
 Vyberte OpenAPS SMB jako váš APS algoritmus. Bez ohledu na název bude SMB funkce algoritmu vypnutá dokud se s **AAPS** blíže neseznámíte a nepropracujete se počátečními cíli. OpenAPS SMB algoritmus je každopádně novější a obecně lepší než OpenAPS AMA.
 
@@ -489,7 +502,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-### Typ smyčky
+## Typ smyčky
 
 Ponechte vybranou možnost "Otevřená smyčka".
 
@@ -497,7 +510,7 @@ Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144049.png)
 
-### Detekce citlivosti
+## Detekce citlivosti
 
 Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
@@ -505,7 +518,7 @@ Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144101.png)
 
-### Začněte Cíl 1
+## Začněte Cíl 1
 
 Nyní vstupujete do Cílů. The qualification for access to further **AAPS** features.
 

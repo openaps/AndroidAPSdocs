@@ -37,55 +37,21 @@
 - 如果你希望**AAPS**使用不同於標準手機語言的語言，你可以從廣泛的選擇中選擇。
 
 - 如果你使用不同的語言，有時可能會看到語言混合的情況。 這是由於 Android 的問題，覆蓋預設的 Android 語言有時不起作用。
+- Setting hidden in [simple mode](#preferences-simple-mode).
+
+(preferences-simple-mode)= **Simple mode**
+
+The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
 
 **患者名稱**
 
 - 如果你需要區分多個設置（例如家中有兩個 T1D 小孩），可以使用此功能。
 
-(Preferences-protection)=
-### 保護
-
-![偏好設定 > 一般 - 保護](../images/Pref2020_General2.png)
-
-(Preferences-master-password)=
-#### 主密碼
-
-出於安全要求，通常必須能夠[匯出設定](../Maintenance/ExportImportSettings.md)，因為從版本 2.7 開始它們是加密的。
-
-**生物識別保護可能在 OnePlus 手機上無法運作。 這是部分 OnePlus 手機的已知問題。**
-
-![設置主密碼](../images/MasterPW.png)
-
-#### 設定保護
-
-- 用密碼或手機的生物識別身份驗證來保護你的設定（例如：[小孩正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）。 如果你啟用此功能，每次你想要進入任何偏好設置相關視圖時，系統都會提示你進行身份驗證。
-
-- 如果你希望使用主密碼僅用於保護[匯出設定](../Maintenance/ExportImportSettings.md)，則應使用自定義密碼，並為編輯偏好設置使用不同的密碼。
-
-- 如果你使用自定密碼，請點擊「設定密碼」來設置密碼，如上文[所述](#Preferences-master-password)。
-
-![保護](../images/Pref2020_Protection.png)
-
-#### 應用程式保護
-
-如果應用程式受到保護，則必須輸入密碼或使用手機的生物識別身份驗證才能打開**AAPS**。
-
-**AAPS**如果輸入錯誤密碼將立即關閉，但如果先前成功打開，將仍會在背景運行。
-
-#### 注射保護
-
-- 如果**AAPS**被小孩使用，則注射保護可能會很有用，並且你可通過[SMS 進行注射](../RemoteFeatures/SMSCommands.md)。
-
-- 在下圖示例中，你會看到生物辨識保護提示。 如果生物識別身份驗證無法運作，請在白色提示的上方點擊空白處並輸入主密碼。
-
-![提示生物辨識保護](../images/Pref2020_PW.png)
-
-#### 密碼和 PIN 保留
-
-定義在你成功輸入密碼後，偏好設置或注射功能保持解鎖的時間（以秒為單位）。
-
 (Preferences-skin)=
 #### 外觀
+
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 你可以從四種類型的外觀中選擇：
 
 ![選擇外觀](../images/Pref2021_SkinWExample.png)
@@ -107,6 +73,48 @@
 
 ![外觀取決於手機螢幕方向](../images/Screenshots_Skins.png)
 
+(Preferences-protection)=
+## 保護
+
+![偏好設定 > 一般 - 保護](../images/Pref2020_General2.png)
+
+(Preferences-master-password)=
+### 主密碼
+
+出於安全要求，通常必須能夠[匯出設定](../Maintenance/ExportImportSettings.md)，因為從版本 2.7 開始它們是加密的。
+
+**生物識別保護可能在 OnePlus 手機上無法運作。 這是部分 OnePlus 手機的已知問題。**
+
+![設置主密碼](../images/MasterPW.png)
+
+### 設定保護
+
+- 用密碼或手機的生物識別身份驗證來保護你的設定（例如：[小孩正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）。 如果你啟用此功能，每次你想要進入任何偏好設置相關視圖時，系統都會提示你進行身份驗證。
+
+- 如果你希望使用主密碼僅用於保護[匯出設定](../Maintenance/ExportImportSettings.md)，則應使用自定義密碼，並為編輯偏好設置使用不同的密碼。
+
+- 如果你使用自定密碼，請點擊「設定密碼」來設置密碼，如上文[所述](#Preferences-master-password)。
+
+![保護](../images/Pref2020_Protection.png)
+
+### 應用程式保護
+
+如果應用程式受到保護，則必須輸入密碼或使用手機的生物識別身份驗證才能打開**AAPS**。
+
+**AAPS**如果輸入錯誤密碼將立即關閉，但如果先前成功打開，將仍會在背景運行。
+
+### 注射保護
+
+- 如果**AAPS**被小孩使用，則注射保護可能會很有用，並且你可通過[SMS 進行注射](../RemoteFeatures/SMSCommands.md)。
+
+- 在下圖示例中，你會看到生物辨識保護提示。 如果生物識別身份驗證無法運作，請在白色提示的上方點擊空白處並輸入主密碼。
+
+![提示生物辨識保護](../images/Pref2020_PW.png)
+
+### 密碼和 PIN 保留
+
+定義在你成功輸入密碼後，偏好設置或注射功能保持解鎖的時間（以秒為單位）。
+
 ## 首頁總覽
 
 在**總覽**區域中，你可以定義首頁的偏好設定。
@@ -121,6 +129,7 @@
 ### 按鈕
 
 - 定義哪些按鈕在主螢幕底部可顯示。
+- Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![偏好設定 > 按鈕](../images/Pref2020_OV_Buttons.png)
 
@@ -148,6 +157,8 @@
 (Preferences-default-temp-targets)=
 ### 預設臨時目標
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 [臨時目標（TT）](../DailyLifeWithAaps/TempTargets.md)允許你在特定時間範圍內更改你的血糖目標。 設置預設TT時，你可以輕鬆更改活動、即將用餐等的目標。
 
 在此，你可以為每個預設的TT更改目標和持續時間。 預設值為：
@@ -162,6 +173,8 @@
 
 ### 填充/啟動標準胰島素量
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 如果你想透過**AAPS**填充管路或引導導管，你可以透過[**手動操作**標籤](#screens-action-tab)執行此操作。
 
 可以在此對話框中定義預設值。 根據你的導管長度選擇填充/啟動對話框中的三個按鈕的預設量。
@@ -175,6 +188,8 @@
 
 ### 縮短標籤標題
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 方便在螢幕上顯示更多的標籤名稱。
 
 例如，“OpenAPS AMA”標籤變為“OAPS”，“OBJECTIVES”變為“OBJ”等。
@@ -184,12 +199,16 @@
 (Preferences-show-notes-field-in-treatments-dialogs)=
 ### 在治療對話框中顯示備註欄
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 給你一個在治療（追加注射嚮導、碳水化合物、胰島素等）中添加簡短文字備註的選項。
 
 ![偏好設定 > 治療對話框中的備註](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
 ### 狀態燈
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 狀態指示燈為以下情況提供視覺警告：:
 
@@ -220,11 +239,15 @@
 
 ### 啟用的注射顧問
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 ![注射顧問](../images/BolusAdvisor.png)
 
 啟用後，當你在高血糖狀態使用注射嚮導時，你將獲得警告，提示你是否想要預先注射，並在你的**BG**回到正常範圍時再進食。
 
 ### 啟用的注射提醒
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 %待辦事項
 
@@ -234,6 +257,8 @@
 ![偏好設定 > 進階設置](../images/Pref2021_OV_Adv.png)
 
 #### 超級注射
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 選擇在注射嚮導中啟用超級注射的選項。
 
@@ -302,11 +327,12 @@
 
 ## 進階餐前注射助手（AMA）或超微量注射（SMB）
 
-根據你在[組態建置工具](../SettingUpAaps/ConfigBuilder.md)中的設置，你可以在三個演算法之間選擇：
+Depending on your settings in [Config builder > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
 - [進階餐前注射助手（OpenAPS AMA）](#Open-APS-features-advanced-meal-assist-ama) - 2017年的算法狀態
 - [超微量注射（OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - 最推薦給初學者的最新算法
-- [動態ISF](../DailyLifeWithAaps/DynamicISF.md) - 於2024年釋出，從**[目標11](#objectives-objective11)**開始可用
+
+As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -317,14 +343,12 @@
 
 所有針對OpenAPS SMB的設置都在[關鍵AAPS功能 > 超微量注射(SMB)](#Open-APS-features-super-micro-bolus-smb)中詳細描述。
 
-### 動態ISF
-
-所有針對動態ISF的設置都在[動態ISF](../DailyLifeWithAaps/DynamicISF.md)中詳細描述。
-
 ## 吸收設定
 
 (Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 該演算法使用BGI（血糖影響）來確定[碳水化合物的吸收](../DailyLifeWithAaps/CobCalculation.md)時間。
 
@@ -359,7 +383,7 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 
 ## 幫浦設定
 
-此處的選項會根據你在[組態建置工具](#Config-Builder-pump)中選擇的幫浦驅動程式而有所不同。  根據[幫浦相關說明](../Getting-Started/CompatiblePumps.md)配對並設置你的幫浦。
+The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump).  根據[幫浦相關說明](../Getting-Started/CompatiblePumps.md)配對並設置你的幫浦。
 
 ## Tidepool
 
@@ -449,17 +473,22 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 
 設定應該是簡單明瞭的。
 
-## 資料選項
+(preferences-maintenance-settings)=
+## 維護設置
+
+![維護設置](../images/Pref2020_Maintenance.png)
+
+**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+
+**Data Choices**
 
 ![資料選項](../images/Pref2020_DataChoice.png)
 
 你可以通過向開發者發送崩潰報告來幫助進一步開發**AAPS**。
 
-## 維護設置
+Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
 
-![維護設置](../images/Pref2020_Maintenance.png)
-
-日誌的標準收件人是 <logs@aaps.app>。
+![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
 ## Open Humans
 

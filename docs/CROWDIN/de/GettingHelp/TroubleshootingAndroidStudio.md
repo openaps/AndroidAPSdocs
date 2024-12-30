@@ -9,12 +9,12 @@ Wenn Du versuchst das apk zu installieren und es mit einem anderen keystore sign
 
 Falls Du deinen alten keystore oder das dazugehörige Passwort nicht mehr wiederfindest, kannst Du wie folgt vorgehen:
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) on your phone.
+1. [Exportiere die Einstellungen](../Maintenance/ExportImportSettings.md) von Deinem Smartphone.
 2. Kopiere die Datei mit den Einstellungen von deinem Smartphone auf ein externes Gerät (d.h. dein Computer, externe Festplatte) oder lade sie in deinen Cloudspeicher hoch.
-4. Generate signed apk of new version as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
+4. Erstelle, so wie es in der [Update-Anleitung](../Maintenance/UpdateToNewVersion) beschrieben ist, aus der neuen Version eine signierte APK und übertrage sie auf Dein Smartphone.
 5. Deinstallieren die Vorgängerversion von AAPS auf Deinem Smartphone.
 6. Installiere die neue AAPS-Version auf Deinem Smartphone.
-7. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+7. [Importiere die Einstellungen](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps), um sowohl Deinen Fortschritt bei den Zielen (Objectives), als auch Deine Konfiguration wieder herzustellen.
 
    Falls du die Einstellungen nicht findest, kopiere sie von deinem externen Speicher auf dein Smartphone.
 
@@ -51,7 +51,7 @@ Falls Du eine Fehlermeldung bekommst, die so aussieht
 
     Hinweis: Es ist ein Leerzeichen und zwei Bindestriche zwischen git und version!
 
-  * Im Terminal sollte ein Hinweis erscheinen, der übermittelt welche git Version installiert ist (siehe Screenshot oberhalb). In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
+  * Im Terminal sollte ein Hinweis erscheinen, der übermittelt welche git Version installiert ist (siehe Screenshot oberhalb). In diesem Fall, mache mit [Schritt 2](#troubleshooting-android-studio-check-for-uncommitted-changes) weiter.
 
   * Falls du einen Hinweis wie diesen bekommst
     ```
@@ -87,7 +87,7 @@ Falls Du eine Fehlermeldung bekommst, die so aussieht
 
       ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * Diese Dateien werden erneut vom Git Server gezogen. If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+    * Diese Dateien werden erneut vom Git Server gezogen. Wenn es keine weiteren Änderungen im Commit-Tab gibt, mache mit [Schritt 3](#gradle-resync) weiter.
 
   * Falls du "Unversioned Files" sehen kannst, hast du wahrscheinlich Dateien im Sourcecode Projekt abgelegt, die dort nicht hingehören (z.B: deine keystore Datei).
 
@@ -95,35 +95,37 @@ Falls Du eine Fehlermeldung bekommst, die so aussieht
 
     * Gehe zurück zu Android Studio und klicke den Refresh Button (4) im Commit Tab, um sicherzustellen, dass die Datei nicht mehr im AAPS-Ordner liegt.
 
-      If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+      Wenn es keine weiteren Änderungen im Commit-Tab gibt, mache mit [Schritt 3](#gradle-resync) weiter.
 
 
 (troubleshooting_androidstudio-step-3-gradle-resync)=
 
 #### Schritt 3: Resync Gradle (erneut)
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+Folge der Anleitung unter [Gradle Resync](#gradle-resync).
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 (incompatible-gradle-jvm)=
 ### Incompatible Gradle JVM
 
-![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) If you experience the following error message, you need to download a correct JVM version before you can try again:
-* Open the gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal probieren kannst, eine korrekte JVM-Version herunterladen:
+* Check in the [requirement table](#Building-APK-recommended-specification-of-computer-for-building-apk-file) which JVM version you need for the **AAPS** version you are building, and make a note of it.
+
+* Öffne die Gradle-Ansicht, in dem Du auf der rechten Seite im Android Studio auf den Elefanten (1) klickst, und öffne dann die Einstellungen (2) und wähle dort die **Gradle Settings** (3) aus:
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-* Open the **Gradle JDK** options, then select **Download JDK...**
+* Öffnen die Optionen des **Gradle JDK** und wähle dann **Download JDK...**
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-* At **Version** (1), you need to select **17**. Then select the **JetBrains Runtime** from the **Vendor** (2) options. Do not change the **Location** (3).
+* At **Version** (1), select the one required for your **AAPS** version (the one you made a note of at the first step). Wähle jetzt **JetBrains Runtime** in den **Vendor**-Optinen(2) aus. Ändere nichts unter **Location** (3).
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
-* Close the **Settings** dialog with **OK**.
-* You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](#gradle-resync).
+* Schließe die **Settings** (dt. Einstellungen) mit **OK**.
+* Jetzt musst Du den Gradle Sync neu starten. Folge der Anleitung unter [Gradle Resync](#gradle-resync).
 
 (incompatible-version-of-android-gradle-plugin)=
 ### Inkompatibilität der Android Gradle Plugin Version
@@ -147,12 +149,12 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
     ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * Starte jetzt einen [Gradle Resync](#gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
-  Wenn Du eine Fehlermeldung wie die unten siehst, verwendest Du wahrscheinlich ein Windows 10 32-Bit-Betriebssystem. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about!
+  Wenn Du eine Fehlermeldung wie die unten siehst, verwendest Du wahrscheinlich ein Windows 10 32-Bit-Betriebssystem. Dies wird von Android Studio Version 3.5.1 und höher nicht unterstützt und daran können die AAPS Entwickler leider nichts ändern!
 
   Es gibt im Internet eine Reihe von Anleitungen (wie z.B. [diese](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)), die beschreiben, wie Du herausfindest, ob Du ein 32-Bit oder 64-Bit Betriebssystem hast.
 
@@ -180,7 +182,7 @@ Wenn Du die Apk generierst, bekommst Du möglicherweise den Hinweis, dass das Ge
 
 ![APK mit 0 Build-Varianten erstellt](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-Diese Warnung ist falsch. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
+Diese Warnung ist falsch. Prüfe das Verzeichnis, dass Du als „Destination Folder“ für die Erstellung angegeben hast (Schritt [Signierte AAPS APK erstellen](#Building-APK-generate-signed-apk)). Dort wirst Du die signierte APK finden!
 
 
 ## App was created with compiler/kotlin warnings
@@ -203,9 +205,9 @@ Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Wind
 
 ## AAPS empfängt keine CGM-Daten
 
-* Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
+* Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Nutze an deren Stelle die [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)-App instead.
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](#xdrip-identify-receiver).
+* Falls Du xDrip+ verwendest: Identifiziere den Empfänger (engl. identify receiver) wie in den [xDrip+ Einstellungen](#xdrip-identify-receiver) beschrieben.
 
 
 ## App not installed
@@ -215,7 +217,7 @@ Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Wind
 * Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
 * Falls "App not installed" auf dem Smartphone angezeigt wird, gehe wie folgt vor:
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
+1. [Exportiere die Einstellungen](../Maintenance/ExportImportSettings.md), der AAPS-Version, die bereits auf Deinem Smartphone installiert ist.
 2. Deinstalliere AAPS auf Deinem Smartphone.
 3. Aktiviere den Flugmodus & schalte Bluetooth aus.
 4. Installiere die neue Version ("app-full-release.apk").
@@ -224,22 +226,22 @@ Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Wind
 
 ## App installiert, aber weiter die alte Version auf dem Smartphone
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast, jedoch weiter die alte Versionsnummer angezeigt wird, hast Du wahrscheinlich versäumt, Deine [lokale Kopie zu aktualisieren](#Update-to-new-version-update-your-local-copy).
 
 ## Keiner der oben genannten Löungsvorschläge funktioniert
 
 Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, die App von Grund auf neu zu erstellen.
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
+1. [Exportiere die Einstellungen](../Maintenance/ExportImportSettings.md), der AAPS-Version, die bereits auf Deinem Smartphone installiert ist.
 
 2. Halte Dein key Passwort und Dein key store Passwort bereit. Falls du Passwörter vergessen hast, kannst du versuchen sie in Projekt Dateien wiederzufinden [wie hier beschrieben](https://youtu.be/nS3wxnLgZOo).
 
     Oder verwende einfach einen neuen keystore.
 
-3. Build app from scratch as described [here](#Building-APK-download-AAPS-code).
+3. Erstelle die App komplett von vorne, so wie es [hier](#Building-APK-download-AAPS-code) beschrieben ist.
 
 4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
-5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
+5. [Importiere die Einstellungen](../Maintenance/ExportImportSettings.md) noch einmal, damit die Ziele und Einstellungen wieder hergestellt werden.
 6. Überprüfe deine Einstellungen und deaktiviere den Energiesparmodus erneut.
 
 ## Worst case scenario
@@ -250,4 +252,4 @@ Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, kö
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
+Installiere Android Studio von Grund auf neu (Neuinstallation), wie es [hier](#Building-APK-install-android-studio) beschrieben ist.

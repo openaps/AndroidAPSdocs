@@ -4,8 +4,6 @@ orphan: true
 
 # Accu Chek Combo Pompa
 
-Bu talimatlar, 3.2 sürümünden itibaren AndroidAPS'in bir parçası olan yeni combov2 sürücüsünü kullanarak Accu-Chek Combo pompasını kurmak içindir. Bu sürücü eskisinden tamamen ayrıdır.
-
 **Bu yazılım bir DIY (Kendin Yap) çözümünün parçasıdır ve bir ürün değildir, ancak nasıl kullanılacağı da dahil olmak üzere sistemi okumanızı, öğrenmenizi ve anlamanızı gerektirir. Tüm diyabet yönetimini sizin için yapan bir şey değildir, ancak gerekli zamanı ayırmaya istekliyseniz diyabetinizi ve yaşam kalitenizi iyileştirmenize izin verir. Acele etmeyin, ancak öğrenmek için kendinize zaman tanıyın. Yazılımla yaptıklarınızdan yalnızca siz sorumlusunuz.**
 
 ## Donanım ve yazılım gereksinimleri
@@ -98,7 +96,7 @@ Pil optimizasyonlarının kapalı olduğundan emin olmak çok önemlidir. AAPS, 
 
 ## Sürücüyü etkinleştirme ve Combo ile eşleştirme
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **Önemli**: Listede "Accu-Chek Combo (Ruffy)" adlı eski sürücü de mevcuttur. Bunu _seçmeyin_.
+* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Önemli**: Listede "Accu-Chek Combo (Ruffy)" adlı eski sürücü de mevcuttur. Bunu _seçmeyin_.
 
   ![Combo'nun Konfigürasyon ayaraları ekran görüntüsü](../images/combo/combov2-config-builder.png)
 
@@ -112,9 +110,9 @@ Pil optimizasyonlarının kapalı olduğundan emin olmak çok önemlidir. AAPS, 
 
   ![Combo Eşleştirme UI 3 ekran görüntüsü](../images/combo/combov2-pairing-screen-3.png)
 
-  ![Combo Eşleştirme UI 4 ekran görüntüsü](../images/combo/combov2-pairing-screen-4.png)
+  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
 
-  ![Combo Eşleştirme UI 4 ekran görüntüsü](../images/combo/combov2-pairing-screen-5.png)
+  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
 
 * Sürücü Combo'da gösterilen 10 haneli PIN'i istediğinde ve kod yanlış girildiğinde şu gösterilir: ![Combo Eşleştirme UI 3 ekran görüntüsü](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 

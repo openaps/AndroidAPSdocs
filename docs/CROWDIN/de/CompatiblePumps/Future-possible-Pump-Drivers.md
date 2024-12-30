@@ -24,14 +24,6 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert. Die Pumpe kommuniziert über Bluetooth.
 
-### Equil (Pumpe von Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
-
-**Loop-status** Ist ein Loop-Kandidat.
-
-**Hardware Voraussetzungen für AAPS:** Keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
-
-**Kommentar:** Einige Entwickler haben begonnen zu prüfen, ob die Pumpe in AAPS unterstützt werden kann, aber dies ist noch in der Anfangsphase. Du kannst mehr Informationen in unserem Discord Channel "equil" finden.
-
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
 **Loop-status** Ist ein Loop-Kandidat.
@@ -86,7 +78,7 @@ Sie planen zuerst die t:Mobi (vorher t:sport genannt) Ende 2022 oder 2023 auf de
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Anmerkungen:** Von Medtronic [zurückgezogen](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
 ## Anforderungen an Pumpen, um loopbar zu sein
 

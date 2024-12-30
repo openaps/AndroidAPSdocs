@@ -1,22 +1,24 @@
-# CGMs/FGMs Configuration
+# Compatible CGMs
 
-This section provides a brief overview of all compatible **CGMs/FGMs** with **AAPS**.
+Dieser Abschnitt gibt einen kurzen Überblick über alle mit **AAPS** kompatiblen Sensoren (**CGMs/FGMs**).
 
-*Tip*: If you can display your glucose data in xDrip+ app, you can choose xDrip+ as **BG** source in **AAPS**.
+*Tipp*: Wenn Du Deine Glukosewerte in der xDrip+-App anzeigen kannst, kannst Du in **AAPS** xDip+ als **BZ**-Quelle auswählen.
 
-* [General recommendations](../CompatibleCgms/GeneralCGMRecommendation.md)
-* [Data Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md)
-* [xDrip+Settings](../CompatibleCgms/xDrip.md)
-* [Nightscout as BG Source](../CompatibleCgms/CgmNightscoutUpload.md): While it's possible to use Nightscout as a BG source for closed-loop insulin delivery, **this method is not recommended** due to its reliance on stable mobile data or Wi-Fi connectivity. This means your **CGM** data would only be received by **AAPS** when you have an online connection to your Nightscout site. For a more reliable set up, using a CGM with local broadcast from the receiver (as listed below) to **AAPS**, is a much better option.
+* [Allgemeine CGM-Empfehlungen](../CompatibleCgms/GeneralCGMRecommendation.md)
+* [Datenglättung](../CompatibleCgms/SmoothingBloodGlucoseData.md)
+* [xDrip+Einstellungen](../CompatibleCgms/xDrip.md)
+* [Nightscout als BZ-Quelle](../CompatibleCgms/CgmNightscoutUpload.md): Auch wenn Nightscout als BZ-Quelle für die Insulinabgabe im Closed-Loop genutzt werden kann, **wird diese Methode nicht empfohlen**, da sie zwingend auf eine stabile (mobile) Datenverbindung oder eine WLAN-Verbindung angewiesen ist. Das bedeutet, dass Deine **CGM**-Daten nur dann von **AAPS** empfangen werden, wenn Du eine Online-Verbindung zu Deiner Nightscout-Website hast. Für ein zuverlässigeres Setup ist der einsatz eines CGM mit lokaler Übertragung vom Receiver an **AAPS** die bessere Option.
 
-| CGM                                                   | Available [BG Sources](../SettingUpAaps/ConfigBuilder.md#bg-source)          |
-| ----------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [Dexcom G7 und ONE+](../CompatibleCgms/DexcomG7.md)   | xDrip+ or DiaKEM app (select BYODA)                                          |
-| [Dexcom G6 und ONE](../CompatibleCgms/DexcomG6.md)    | xDrip+ or BYODA                                                              |
-| [Dexcom G5](../CompatibleCgms/DexcomG5.md)            | xDrip+                                                                       |
-| [Libre 3](../CompatibleCgms/Libre3.md)                | xDrip+ (no transmitter needed)                                               |
-| [Libre 2](../CompatibleCgms/Libre2.md)                | xDrip+ (no transmitter needed)                                               |
-| [Libre 1](../CompatibleCgms/Libre1.md)                | xDrip+, Glimp, Tomato or Diabox. Need a transmitter like Bluecon or MiaoMiao |
-| [Eversense](../CompatibleCgms/Eversense.md)           | xDrip+ or ESEL/Eversense patched App + MM640g                                |
-| [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md) | xDrip+ or MM640g + 600SeriesAndroidUploader App                              |
-| [PocTech](../CompatibleCgms/PocTech.md)               | PocTech                                                                      |
+| CGM                                                   | Verfügbare [BZ-Quellen](../SettingUpAaps/ConfigBuilder.md#bg-source) |
+| ----------------------------------------------------- | -------------------------------------------------------------------- |
+| [Dexcom G7 und ONE+](../CompatibleCgms/DexcomG7.md)   | xDrip+ oder DiaKEM App (wähle BYODA aus)                             |
+| [Dexcom G6 und ONE](../CompatibleCgms/DexcomG6.md)    | xDrip+ oder BYODA                                                    |
+| [Dexcom G5](../CompatibleCgms/DexcomG5.md)            | xDrip+                                                               |
+| [Libre 3](../CompatibleCgms/Libre3.md)                | xDrip+ (kein Transmitter erforderlich)                               |
+| [Libre 2](../CompatibleCgms/Libre2.md)                | xDrip+ (kein Transmitter erforderlich)                               |
+| [Libre 1](../CompatibleCgms/Libre1.md)                | xDrip+, Glimp, Tomato oder Diabox. Needs an additional transmitter   |
+| [Eversense](../CompatibleCgms/Eversense.md)           | xDrip+ oder ESEL/Eversense patched App + MM640g                      |
+| [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md) | xDrip+ oder MM640g + 600SeriesAndroidUploader-App                    |
+| [PocTech](../CompatibleCgms/PocTech.md)               | PocTech                                                              |
+| [Ottai](../CompatibleCgms/OttaiM8.md)                 | Ottai                                                                |
+| [Syai Tag](../CompatibleCgms/SyaiTagX1.md)            | Syai Tag                                                             |

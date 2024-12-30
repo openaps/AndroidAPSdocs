@@ -17,7 +17,7 @@ This is the first screen you will come across when you open **AAPS**, and it con
 
 * Navigate between the various **AAPS** modules.
 * Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
 
 ### Section B - Profile & target
 
@@ -75,7 +75,13 @@ The color of the BG value reflects the status to the defined [range](#Preference
 * red = below range
 * yellow = above range 
 
-The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+![Deltas](../images/Home_Delta.png)
+
+The blocks in the middle shows:
+
+1. how many minutes since last **CGM** reading
+2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
+    Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
 
 (AapsScreens-loop-status)=
 
@@ -148,6 +154,12 @@ Special note for Libre users:
 
 *Note*: Up to 30h hours are taken into accord for **AAPS** calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
+#### Simple mode
+
+An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+
+![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
+
 ### Secţiunea D - IOB, COB, BR și AS
 
 ![Section D](../images/Home2020_TBR.png)
@@ -209,7 +221,7 @@ The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
 
 Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here.
 
-Long press on the graph to change the timescale. You can choose 6, 12, 18 or 24 hours.
+Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
 
 The green area reflects your target range.
 
@@ -222,10 +234,11 @@ Blue triangles show [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled
 On the main graph, you can switch on these optional information:
 
 * Predicții
+* Tratamente
 * Basals
 * Activity - insulin activity curve
 
-To show this information, click the triangle on the right side of the main graph. For the main graph just the three options above the line "\---\---- Graph 1 \---\----" are available.
+To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
 
 ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
@@ -277,19 +290,19 @@ It is based on the expected drop in BG of the insulin in your system if no other
 
 (AapsScreens-section-g-additional-graphs)=
 
-### Secţiunea G - grafice suplimentare
+### Section G - Additional graphs
 
-You can activate up to four additional graphs below the main graph.
+You can activate up to four additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
 
 To open settings for additional graphs click the triangle on the right side of the [main graph](#section-f---main-graph) and scroll down.
 
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
-To add another graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
+To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
 
 Most users find the following configuration of additional graphs to be adequate :
 
-* Graph 1 with IOB, COB, Sensitivity
+* Graph 1 with IOB, COB, Sensitivity chnge
 * Graph 2 with Deviations and BGI.
 
 #### Absolute insulin
@@ -352,6 +365,8 @@ Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-bu
 
 About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
 
+(aaps-screens-buttons-insulin)=
+
 #### Insulină
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
@@ -363,6 +378,10 @@ By checking the box **Start eating soon TT**, you can automatically start your [
 If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) check the corresponding box. When checking this box, you get an additional field “Time offset”, that you can use to record an insulin injection made in the past.
 
 You can use the buttons to quickly increase the insulin quantity. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+
+The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+
+![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
 
 #### CH
 
@@ -538,7 +557,7 @@ Like most of these rules-of-thumb it is of limited real validity. Note: Your dia
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
+This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
 
 The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is.
 

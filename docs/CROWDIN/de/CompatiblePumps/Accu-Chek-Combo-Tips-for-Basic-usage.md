@@ -6,16 +6,10 @@ orphan: true
 
 # Accu-Chek Combo Tipps zum Einstieg
 
-**NOTE:** Starting with AAPS version 3.2, a [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (referred to as "combov2" sometimes) has been added. Der alte Treiber wird auch 'Ruffy-based driver' genannt. Einige Teile dieses Dokuments gelten nur für den alten Treiber. Diese Abschnitte werden entsprechend gekennzeichnet.
-
 ## Wie man einen reibungslosen Betrieb gewährleistet
 
 * **Hab immer dein Smartphone dabei**, lege es in der Nacht neben dein Bett. Da du während des Schlafens auf der Pumpe liegen könntest, funktioniert eine höhere Position (auf einem Regal oder Brett) am besten.
 * Sorge dafür, dass die Batterie der Pumpe immer so voll wie möglich ist. Im Abschnitt Batterie findest du Tipps bezüglich der Batterie.
-
-* Nur für den alten Treiber gültig: **Die App 'ruffy' sollte nicht aufgerufen werden**, solange das System läuft. Wenn diese App erneut gestartet wird, kann die Verbindung zur Pumpe verloren gehen. Wenn die Pumpe mit ruffy verbunden ist, gibt es keine Notwendigkeit, die Verbindung erneut herzustellen. Selbst nach einem Neustart des Smartphones wird die Verbindung automatisch wieder hergestellt. Verschiebe die App wenn möglich auf einen unbenutzten Bildschirm oder in ein Verzeichnis auf dem Smartphone, damit du sie nicht aus Versehen aufrufst.
-
-* Nur für den alten Treiber gültig: Solltest Du während der Loop läuft, versehentlich die App gestartet haben, hilft es das Smartphone neu zu starten.
 * Nutze die Pumpe nach Möglichkeit nur über AAPS. Aktiviere daher die Tastensperre an der Pumpe mit **PUMPEN-EINSTELLUNGEN / TASTENSPERRE / EIN**. Es ist lediglich dann notwendig, die Tasten der Pumpe zu benutzen, wenn das Reservoir oder die Batterie ausgewechselt werden müssen. 
 
 ![Tastensperre](../images/combo/combo-tips-keylock.png)
@@ -32,7 +26,7 @@ orphan: true
 * Wenn AAPS einen **Pumpe nicht erreichbar**-Alarm auslöst, hebe zuerst die Tastensperre auf und **drücke irgendeine Taste an der Pumpe** (z.B. den "Runter" Button). Sobald das Display der Pumpe sich ausgeschaltet hat, drücke **AKTUALISIEREN** auf dem **Reiter 'Combo'** in AAPS. Meistens funktioniert die Verbindung dann wieder.
 * Wenn das nicht hilft, starte dein Smartphone neu. Nach dem Neustart wird AAPS ebenfalls neu gestartet und es wird eine neue Verbindung zur Pumpe aufgebaut. Solltest Du den alten Treiber verwenden wird 'ruffy' ebenfalls neu gestartet.
 
-* Die Tests haben gezeigt, dass bestimmte Smartphones den Fehler "Pumpe nicht erreichbar" öfter auslösen als andere. See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones.
+* Die Tests haben gezeigt, dass bestimmte Smartphones den Fehler "Pumpe nicht erreichbar" öfter auslösen als andere. Schaue in der [Liste von getesteten Smartphones](#Phones-list-of-tested-phones) nach erfolgreich getesteten Smartphones.
 
 ### Ursachen und Folgen von häufigen Kommunikationsfehlern
 
@@ -83,25 +77,16 @@ Die typische Lebensdauer für verschiedene Batterien ist wie folgt:
 
 Wenn die Lebensdauer der Batterie wesentlich kürzer ist, als die oben angegebenen Bereiche, überprüfe bitte folgende mögliche Ursachen:
 
-* Nur für den alten Treiber gültig: Neuere Versionen (ab März 2018) der [ruffy-App](https://github.com/MilosKozak/ruffy) führen zu einer deutlich längeren Lebensdauer der Batterie. Falls Du Probleme mit der Lebensdauer der Batterie haben solltest, wechsle auf die neueste Version.
 * Es gibt verschiedene Varianten der Batterie Abdeckung bei der Combo Pumpe, die teilweise einen Kurzschluss bei der Batterie verursachen und sie schnell entladen. Die Abdeckungen ohne dieses Problem kann man an den goldenen Metallkontakten erkennen.
 * Wenn die Uhr in der Pumpe einen kurzen Batteriewechsel nicht "überlebt", kann es sein, dass der Kondensator kaputt ist, der die Uhr nach einem kurzen Energieverlust weiter laufen lässt. In diesem Fall hilft nur ein Austausch der Pumpe durch Roche, was während der Garantiezeit kein Problem ist. 
 * Die Hardware des Smartphones und die Software (Android Betriebssystem und Bluetooth Protokoll) beeinflussen ebenfalls die Lebensdauer der Batterie in der Pumpe, wobei die genauen Faktoren bisher noch nicht bekannt sind. Wenn du die Möglichkeit hast, versuche es mit einem anderen Smartphone und vergleiche die Lebensdauer der Batterie.
-
-## Zeitumstellung (Sommer- / Winterzeit)
-
-**HINWEIS**: Der neue Treiber setzt Datum und Uhrzeit automatisch und macht die Anpassungen bei einer Zeitumstellung selbständig. Die folgenden Schritte gelten nur für den alten Treiber.
-
-* Zum aktuellen Zeitpunkt unterstützt der Combo-Treiber keine automatische Anpassung der Zeit in der Pumpe.
-* Während der Nacht der Zeitumstellung wird die Zeit des Smartphones aktualisiert, aber die Zeit in der Pumpe bleibt unverändert. Das löst gegen 3 Uhr morgens einen Alarm aus, weil die Zeiten der Systeme ab dann voneinander abweichen.
-* Wenn du in der Nacht nicht geweckt werden willst, **deaktiviere die automatische Zeitanpassung auf dem Smartphone** am Abend bevor die Zeitumstellung erfolgt und passe die Zeit am nächsten Morgen manuell an. Ein guter Weg, um mit Zeitumstellungen umzugehen ist, in eine Zeitzone zu wechseln, die sich auf dem gleichen Längengrad befindet, auf dem Du Dich befindest, aber näher am Äquator liegt (in der es keine Sommer-/Winterzeitumstellung gibt). Beispiel: Wenn Du in der Sommerzeit in Mitteleuropa bist (CEST/GMT+2), wechselst Du in der Nacht vor der Umstellung auf Winterzeit die Zeitzone Deines Smartphones in der Nacht vor der Umstellung auf Winterzeit in die Zeitzone Landes Zimbabwe (CAT). Am darauf folgenden Morgen änderst Du die Zeitzone Deines Smartphones auf Mitteleuropäische Zeit (CET/GMT+1). Gleichzeitig änderst Du die Uhreinstellungen Deiner Pumpe auf die Winterzeit-Uhrzeit. The other way around, switch to the time zone of Nigeria while on Winter Time CET/GMT+1 and go back to Central European Summer Time (CEST/GMT+2) the morning after the switch to summer time and change the pump time accordingly. Unter https://www.timeanddate.com/time/map/ kannst Du ein passendes Land und die Zeitzone auswählen.
 
 ## Erweiterter Bolus, Multiwave Bolus
 
 Ein gleichzeitiger erweiterter Bolus und Multiwave Bolus wird nicht vom OpenAPS-Algorithmus unterstützt. Aber ein ähnlicher Effekt kann durch folgende Alternativen erreicht werden:
 
-* Nutze **e-Carbs**, wenn Du Kohlenhydrate direkt oder über den Rechner eingibst indem Du die volle Mahlzeit eingibst und unter 'Dauer' bzw. 'KH-Zeit' die Zeitspanne eingibst, in der die KH voraussichtlich verstoffwechselt werden. Das System wird dann die KH-Menge auf gleichmäßig auf kleinere Mengen aufteilen und diese über die angegebene Zeit verteilen. Das hilft dem Algorithmus beim regelmäßigen Prüfen der Glukosewertänderungen die entsprechende Insulindosis abzugeben. For a multiwave bolus approach, you can also combine a smaller immediate bolus with e-carbs. 
-* Setze vor dem Essen auf der **Registerkarte AKTIONEN** in AAPS unter Temporäres Ziel ein **Bald essen** Ziel mit einem Zielwert von 80 für ein paar Stunden. Die Dauer sollte dem Intervall entsprechen, das du für einen erweiterten Bolus verwenden würdest. This will keep your target lower than usual and therefore increase the amount of insulin delivered.
+* Nutze **e-Carbs**, wenn Du Kohlenhydrate direkt oder über den Rechner eingibst indem Du die volle Mahlzeit eingibst und unter 'Dauer' bzw. 'KH-Zeit' die Zeitspanne eingibst, in der die KH voraussichtlich verstoffwechselt werden. Das System wird dann die KH-Menge auf gleichmäßig auf kleinere Mengen aufteilen und diese über die angegebene Zeit verteilen. Das hilft dem Algorithmus beim regelmäßigen Prüfen der Glukosewertänderungen die entsprechende Insulindosis abzugeben. Um eine Art Multi-Wave-Bolus nachzuahmen, kannst Du auch einen kleinen Einzelbolus mit e-carbs (verzögerte Kohlenhydrate) kombinieren. 
+* Setze vor dem Essen auf der **Registerkarte AKTIONEN** in AAPS unter Temporäres Ziel ein **Bald essen** Ziel mit einem Zielwert von 80 für ein paar Stunden. Die Dauer sollte dem Intervall entsprechen, das du für einen erweiterten Bolus verwenden würdest. Dadurch wird Dein Zielwert niedriger als üblich gehalten und somit die (benötigte) Insulinmenge erhöht werden.
 * Verwende dann **RECHNER** auf dem Startbildschirm, um die Kohlenhydrate der Mahlzeit einzugeben, aber wende den Wert nicht direkt an, der Dir vom Bolusrechner vorgeschlagen wird. Korrigiere die Insulindosis nach unten, wenn ein Multi-Wave-Bolus abgegeben werden soll. Der Algorithmus muss nun, abhängig von der Mahlzeit, zusätzliche Mikroboli (SMB) abgeben oder eine sehr hohe temporäre Basalrate setzen, um der Steigerung des Glukosewertes entgegenzuwirken. An dieser Stelle sollte mit der Sicherheitsgrenze für die Basalrate (Max IE / h, Maximum basal IOB) sehr vorsichtig experimentiert und falls notwendig temporär geändert werden.
 
 * Wenn Du unbedingt den erweiterten oder Multiwave-Bolus direkt an der Pumpe eingeben willst, wird AAPS Dich damit bestrafen, dass es den Closed Loop für die nächsten 6 Stunden aussetzt, um zu gewährleisten, dass nicht zu viel Insulin berechnet und abgegeben wird.
@@ -110,7 +95,7 @@ Ein gleichzeitiger erweiterter Bolus und Multiwave Bolus wird nicht vom OpenAPS-
 
 ## Alarme bei Bolusabgabe
 
-* Wenn AAPS bemerkt, dass ein identischer Bolus erfolgreich in der gleichen Minute abgegeben wurde, wird eine Bolusabgabe mit gleicher Insulinmenge verhindert. If your really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
+* Wenn AAPS bemerkt, dass ein identischer Bolus erfolgreich in der gleichen Minute abgegeben wurde, wird eine Bolusabgabe mit gleicher Insulinmenge verhindert. Wenn Du tatsächlich die gleiche Bolusmenge kurz hintereinander abgeben möchtest, warte weitere zwei Minuten und gib sie dann ab. Wenn der erste Bolus unterbrochen wurde oder aus anderen Gründen nicht abgegeben wurde, kannst Du den Bolus seit AAPS 2.0 direkt wieder abgeben.
 * Hintergrund für dieses Verhalten ist ein Sicherheitsmechanismus, der die Bolus-Historie der Pumpe liest, bevor ein neuer Bolus abgegeben wird, um das Insulin On Board (IOB) auch dann korrekt zu berechnen, wenn direkt an der Pumpe ein Bolus abgegeben wurde. An dieser Stelle müssen nicht zu unterscheidende Einträge verhindert werden.
 
 ![Doppelter Bolus](../images/combo/combo-tips-doppelbolus.png)

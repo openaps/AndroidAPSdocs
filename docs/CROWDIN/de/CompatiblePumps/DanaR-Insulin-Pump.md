@@ -6,7 +6,7 @@ orphan: true
 
 # DanaR Insulinpumpe
 
-*Diese Anleitung beschreibt die Konfiguration der App und deiner Pumpe, wenn du die DanaR nutzt. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*
+*Diese Anleitung beschreibt die Konfiguration der App und deiner Pumpe, wenn du die DanaR nutzt. Falls Du die DanaRS (Markteinführung 2017) verwendest, gehe auf die Informationen zur [DanaRS Insulinpumpe](./DanaRS-Insulin-Pump.md).*
 
 * Gehe in der Pumpe zum Hauptmenü -> Einstellen -> Anwendermenü
 * Gehe zu “8. V Bolus”
@@ -29,4 +29,4 @@ orphan: true
 
 ## Mit der Dana R Pumpe über Zeitzonen hinweg reisen
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+Für allgemeine Informationen zum Reisen über Zeitzonen hinweg siehe [Mit der Pumpe über Zeitzonen hinweg reisen](#timezone-traveling-danarv2-danars).

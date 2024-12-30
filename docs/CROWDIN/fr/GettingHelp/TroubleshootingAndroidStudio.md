@@ -110,6 +110,8 @@ Suivez les instructions de [Resynchronisation Gradle](#gradle-resync).
 ### Incompatible Gradle JVM
 
 ![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) If you experience the following error message, you need to download a correct JVM version before you can try again:
+* Check in the [requirement table](#Building-APK-recommended-specification-of-computer-for-building-apk-file) which JVM version you need for the **AAPS** version you are building, and make a note of it.
+
 * Open the gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
@@ -118,7 +120,7 @@ Suivez les instructions de [Resynchronisation Gradle](#gradle-resync).
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-* At **Version** (1), you need to select **17**. Then select the **JetBrains Runtime** from the **Vendor** (2) options. Do not change the **Location** (3).
+* At **Version** (1), select the one required for your **AAPS** version (the one you made a note of at the first step). Then select the **JetBrains Runtime** from the **Vendor** (2) options. Do not change the **Location** (3).
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 

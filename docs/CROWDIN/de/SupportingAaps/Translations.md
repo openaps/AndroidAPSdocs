@@ -9,49 +9,49 @@
 
 Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stellen wir keine SLAs zur Verfügung, aber im Allgemeinen erfolgt die Genehmigung in < 1 Tag. Falls nicht, kontaktiere bitte das Doc Team über Facebook oder Discord.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* Wenn wir Dich aufnehmen, klicke auf die Flagge
+       ![Wenn wir Dich aufnehmen, klicke auf die Flagge](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## Übersetzung der App
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### Zeichenketten für die AAPS-App übersetzen
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. Es zeigt Dir direkt die Zeichenketten, die übersetzt werden müssen.
+    * Wenn Du keine von Dir speziell ausgewählten Zeichenketten übersetzen willst, wähle einfach die Schaltfläche „Translate All“, um zu starten. Es zeigt Dir direkt die Zeichenketten, die übersetzt werden müssen.
     
        ![Click translate all](../images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Wenn Du eine einzelne Datei übersetzen möchtest, suche bitte die Datei über den Suchdialog oder die Baumstruktur und klicke auf den Dateinamen, um die Übersetzungsarbeit an den Zeichenketten in dieser Datei zu starten.
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![Click strings.xml](./images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Übersetze Sätze auf der linken Seite durch die Eingabe einer eigenen neuen Übersetzung oder bearbeite einen Übersetzungsvorschlag 
     
        ![Translation app](../images/translations-translate.png)
     
     
-    ### Proofread strings for AAPS app
+    ### Strings (Zeichenketten) der AAPS-App korrekturlesen
     
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
+    * Korrekturlesende starten das Korrekturlesen, indem Sie auf dem Startschirm des Projekts „Proofread“ aufrufen.
     
        ![Proofreading mode app](../images/translations-proofreading-mode.png) 
     
     
-      and approve translated texts 
+      und genehmige übersetzte Texte 
     
        ![approve text](../images/translations-proofreading.png)
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+    Wenn ein Korrekturlesender eine Übersetzung genehmigt, wird diese zur nächsten AAPS-Version hinzugefügt.
     
     (translations-translation-of-the-documentation)=
-    ## Translation of the documentation
+    ## Übersetzung der Dokumentation
     
-    * Click the name of the docs page you want to translate
+    * Klicke zum Start der Übersetzung auf den Namen der Seite der Dokumentation, die Du übersetzen willst
     
     ![Click docs page](../images/translation_WikiPage.png)
     
     
-    * Translate sentences by sentence
+    * Übersetze Satz für Satz
     
         1. Der gelbe Text ist der Text, an dem Du gerade arbeitest.
     
@@ -66,7 +66,7 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
     ![Translation docs](../images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * Eine übersetzte Seite wird nicht veröffentlicht, bevor 
     
         1. für die Übersetzung ein Proofread (Korrekturlesen) durchgeführt wurde
     

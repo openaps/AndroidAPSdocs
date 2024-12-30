@@ -22,10 +22,10 @@
 
 Секретная или конфиденциальная информация, такая как URL-адрес Nightscout или API secret, не загружается.
 
-## Настройки
+## Setup
 
 1. Если это еще не сделано, создайте свой аккаунт на [Open Humans](https://www.openhumans.org). Можете для этого использовать существующие учетные записи Google или Facebook, если хотите.
-2. Включите плагин “Open Humans” в [Конфигуратор](../SettingUpAaps/ConfigBuilder.md).
+2. Enable the “Open Humans” plugin in [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
 3. При помощи значка шестеренки откройте его настройки. Вы можете ограничить загрузку когда телефон использует Wi-Fi и/или заряжается.
 4. Откройте модуль Open Humans (в меню через вкладку OH или через выпадающее меню и нажмите - "ВОЙТИ").
 

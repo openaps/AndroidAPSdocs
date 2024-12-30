@@ -68,7 +68,7 @@
 
 ### AAPS 設置
 
-確認手機設定無誤後，在 **AAPS** 應用程式內，使用 [組態建置工具](../SettingUpAaps/ConfigBuilder.md) 啟用 **簡訊通訊模組**。
+Now that the phone settings have been checked, in the **AAPS** app itself, go to [Config Builder > General](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
 
 前往簡訊通訊的偏好設定。
 
@@ -262,7 +262,7 @@ PIN 碼要求如下：
 | 指令                 | 驗證 | 功能 & *回應*                                                                                       |
 | ------------------ | -- | ----------------------------------------------------------------------------------------------- |
 | TREATMENTS REFRESH | 否  | 從 NS 重新整理治療                                                                                     |
-| NSCLIENT RESTART   | 否  | 如果你注意到與 Nightscout 或 **AAPSClient** 的通訊問題，這將很有幫助。                                               |
+| AAPSCLIENT RESTART | 否  | 如果你注意到與 Nightscout 或 **AAPSClient** 的通訊問題，這將很有幫助。                                               |
 | SMS DISABLE/STOP   | 否  | 要停用 SMS 遠端服務，請回覆代碼 Any。<br/>請注意，你可以直接從 **AAPS** 主智慧型手機重新啟用該服務。                            |
 | HELP               | 否  | 返回所有可查詢的功能：<br/>BG、循環、治療等。<br/>發送進一步的 ***協助 ***功能****** 命令以列出<br/>此區域內所有可用選項。 |
 | HELP BOLUS         |    | *注射 1.2<br/>注射 1.2 餐前*                                                                    |
@@ -332,6 +332,9 @@ PIN 碼要求如下：
 
 如果其他應用程式安裝在多部手機上，請確保在所有手機上停用上傳功能。
 
+(sms-commands-too-many-messages)=
 ### 我收到的 SMS 命令過多。 我可以減少頻率或停止這些簡訊嗎？
 
 使用 SMS 命令可能會產生大量來自 **AAPS** 手機發送到看護者手機的自動訊息。 例如，如果你在 **AAPS** 中設置了自動化，你也會收到“幫浦中的基礎率設定已更新”這類訊息。 如果要發送大量 SMS，擁有不限次數的 SMS 配額可能會很有用，並且對所有手機停用 SMS 通知、警報或震動。 使用 SMS 指令時，無法避免接收到這些更新。 因此，你可能需要另一種與孩子直接溝通的方式（如果他們年齡夠大），而不是使用 SMS。 常見的 **AAPS** 照護者會使用的替代通訊應用程式包括 Whatsapp、Lime、Telegram 和 Facebook Messenger。
+
+It is possible do disabled the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.

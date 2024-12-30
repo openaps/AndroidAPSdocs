@@ -11,7 +11,7 @@ We got some problems with scaling on different devices and wanted to check how w
 
 This image width is in original 400px.
 
-## standard markdown
+##
 
 ![testimage](../images/setup-wizard/Screenshot_20231202_141912.png)
 

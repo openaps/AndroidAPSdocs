@@ -1,5 +1,9 @@
 # 文件更新與變更
 
+## December 2024
+
+- Documentation of [3.3 version](#version3300) @emilise
+
 ## 2024年11月
 
 - 更新 [你的 AAPS 配置](../SettingUpAaps/YourAapsProfile.md) @emilise
@@ -71,7 +75,7 @@ AAPS 3.1 文檔可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2021年2月
 
-- 新的導覽列和[語系切換](../ChangeLanguage/ChangeLanguage.md)
+- New navigation bar and [language switch](../NavigateDoc/ChangeLanguage.md)
 
 ## 2021年1月
 

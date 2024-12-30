@@ -18,7 +18,7 @@ AAPS Wear APK 的基礎版本中包含多種手錶外觀供選擇。 這些手�
 
 ## 設定
 
-在[組態建置工具](../SettingUpAaps/ConfigBuilder.md)中啟用 Wear 模組。
+Enable the Wear module in the [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
 
 使用 Wear 偏好設定定義在透過手錶計算注射時應考慮的變數（例如 15 分鐘趨勢、COB...）。
 

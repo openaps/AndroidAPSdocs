@@ -78,7 +78,7 @@ Schalte "Audio importieren" aus, damit Du nicht bei jeder Basalraten-Änderung o
 
 - Der Dexcom G6-Transmitter kann gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Handy verbunden werden.
 - Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
-- If you need Clarity and want to profit from xDrip+ features, use the [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+, or use xDrip+ as a Companion app receiving notifications from the official Dexcom app.
+- Möchtest Du Clarity nutzen und gleichzeitig von den xDrip+ Funktionalitäten profitieren, kannst Du die [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) mit einem lokalen Broadcast zu xDrip+ nutzen. Alternativ kannst Du xDrip+ als Companion-App, die die Benachrichtigungen der offiziellen Dexcom App erhält, verwenden.
 
 ### xDrip+ Version abhängig von der G6 Transmitter Seriennummer
 
@@ -111,7 +111,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 ### G6 Transmitter das erste Mal verbinden
 
-**For second and following transmitters see [Extend transmitter life](#xdrip-extend-transmitter-life) below.**
+**Für den zweiten und alle weiteren Transmitter siehe [Transmitterlaufzeit verlängern](#xdrip-extend-transmitter-life) weiter unten.**
 
 Nutze [diese Anleitung](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
@@ -206,7 +206,7 @@ Nutze [diese Anleitung](https://navid200.github.io/xDrip/docs/Dexcom/SensorFaile
 ### Batteriestand Libre Smart Reader
 
 - Der Batteriestand von Bluethooth-Bridges (wie z.B. MiaoMiao oder Bubble) kann in AAPS angezeigt werden (nicht möglich beim BluCon).
-- Details can be found on [screenshots page](#screens-sensor-level-battery).
+- Details findest Du auf der [Screenshots-Seite](#screens-sensor-level-battery).
 
 ### Libre Transmitter verbinden und Sensor starten
 

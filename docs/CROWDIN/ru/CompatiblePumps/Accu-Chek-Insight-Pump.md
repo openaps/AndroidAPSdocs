@@ -21,13 +21,13 @@ orphan: true
 * Телефон на Android- (Вообще каждая версия Android будет работать с Insight, но проверьте на странице [ Module ](../Getting-Started/ComponentOverview), какая версия Android требуется для запуска AAPS.)
 * Приложение AAPS на вашем телефоне
 
-## Настройки
+## Setup
 
 * Помпа Insight должна быть единовременно подключена только к одному устройству. Если вы ранее уже подсоединяли пульт дистанционного управления (глюкометр) Insight, то его необходимо удалить из списка сопряженных устройств помпы: Меню > Настройки > Связь > Удалить устройство
     
     ![Снимок экрана удаления глюкометра из помпы Insight](../images/Insight_RemoveMeter.png)
 
-* В [Конфигураторе](../SettingUpAaps/ConfigBuilder.md) приложения AAPS выберите Accu-Chek Insight в разделе помп
+* In [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md), select Accu-Chek Insight.
     
     ![Снимок экрана конфигуратора Config Builder помпы Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 

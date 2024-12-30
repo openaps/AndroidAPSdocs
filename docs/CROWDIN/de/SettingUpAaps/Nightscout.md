@@ -8,7 +8,7 @@ Neben der Erstellung von Berichten, kann Nightscout auch genutzt werden, um Andr
 
 Handle mit größter Vorsicht, wenn Du mit Nightscout als Datenquelle für Dein AAPS verwendest.
 
-### Nightscout settings
+### Nightscout Einstellungen
 
 Du kannst den öffentlichen Zugang zu Deinen Nightscout-Daten verweigern, indem Du [authentication roles](https://nightscout.github.io/nightscout/security) (Authentifizierungsrollen) verwendest: stelle sicher, dass Du Deinen URL mit einem `readable` (nur lesen) Token zur Verfügung stellst und niemals mit einem `admin` (Administrator) Token.
 
@@ -16,7 +16,7 @@ Das Nightscout `API_SECRET` ist das Hauptpasswort für Deinen Nightscout-Server,
 
 (Nightscout-aaps-settings)=
 
-### AAPS settings
+### AAPS-Einstellungen
 
 Du kannst AAPS so einstellen, dass Nightscout-Befehle akzeptiert werden (Profiländerungen, Behandlungsparameter, ...) oder dies vollständig ausschalten.
 
@@ -42,7 +42,7 @@ Insulineingaben werden nur zu Kalkulationszwecken (wie auch bei "Bolus nur erfas
 
 ### Weitere Sicherheitseinstellungen
 
-Keep your phone up to date as described in [safety first](#preparing-safety-first).
+Halte Dein Smartphone, wie in den [Sicherheitshinweise](#preparing-safety-first)n beschrieben, auf dem neuesten Stand.
 
 (Nightscout-manual-nightscout-setup)=
 

@@ -7,6 +7,7 @@
     
     * (2.8.2) Klasör, ***Internal storage(1) / Android / data / info.nightscout.androidaps / files*** konumuna benzer bir konumda olacaktır
     * (3.0.0) Klasör, ***Internal storage(1) / AAPS / logs*** konumuna benzer bir konumda olacaktır
+    * (3.3.0) The folder will be at the location you chose in the [Maintenance tab settings](#preferences-maintenance-settings)
     * Kök depolama klasörünün (1) adlandırılması, telefona bağlı olarak biraz değişebilir.
 
 ![logs](../images/aapslog.png)

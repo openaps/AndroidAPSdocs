@@ -4,7 +4,7 @@
 
 ![打开 配置生成器](../images/ConfBuild_Open_AAPS30.png)
 
-**Config Builder** 是您打开和关闭模块化功能的选项卡。 在下面的图片中，左侧（A）的复选框允许您选择想要激活的模块，右侧（C）的复选框允许您将这些模块作为选项卡（E）在**AAPS**中查看。 如果右侧复选框未激活，您可以通过屏幕左上角的汉堡菜单（D）访问该功能。 查看下方的[标签或汉堡菜单](#tab-or-hamburger-menu)。
+**Config Builder** 是您打开和关闭模块化功能的选项卡。 In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated. By default, when opening the Config Builder, sections are collapsed to only show the active plugins. Click on the arrow (G) to show all available options. The boxes on the right-hand side (C) allow you to view the active modules as a tab (E) in **AAPS**. 如果右侧复选框未激活，您可以通过屏幕左上角的汉堡菜单（D）访问该功能。 查看下方的[标签或汉堡菜单](#tab-or-hamburger-menu)。
 
 当模块内有其他可用设置时，您可以点击齿轮图标（B），这将带您进入首选项中的具体设置。
 
@@ -98,6 +98,8 @@
 * [Poctech](../CompatibleCgms/PocTech.md)
 * 用于MiaoMiao设备的[Tomato App](#libre1-using-tomato)
 * 用于Glunovo CGM系统的[Glunovo App](https://infinovo.com/)
+* [Ottai](../CompatibleCgms/OttaiM8.md)
+* [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
 * 随机 Random BG：生成随机BG数据（仅演示模式）
 
 ## Smoothing
@@ -112,22 +114,21 @@
 
 选择您正在使用的泵。 有关更多设置信息，请参阅[兼容泵](../Getting-Started/CompatiblePumps.md)页面。
 
-![Config Builder 泵选择](../images/ConfBuild_Pump_AAPS32.png)
+![Config Builder 泵选择](../images/ConfBuild_Pump_AAPS33.png) ![Config Builder 泵选择](../images/ConfBuild_Pump_AAPS33-2.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R Korean（用于韩国产DanaR胰岛素泵）
 * Dana Rv2（带有非官方固件升级的DanaR泵）
 * [丹纳-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
-* Accu Chek Combo 
-  * [使用Ruffy的驱动程序](../CompatiblePumps/Accu-Chek-Combo-Pump.md)（需要安装ruffy）
-  * [无需额外要求的驱动程序](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)，在[AAPS v.3.2](#version3200)中添加
+* [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
 * Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
 * Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 * [美敦力](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [移宇](../CompatiblePumps/MedtrumNano.md)
+* [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * 虚拟泵：开环 - **仅AAPS建议** 
   * 当您初次使用**AAPS**时，在完成最初的[目标](../SettingUpAaps/CompletingTheObjectives.md)期间
   * 对于尚未有驱动程序的泵

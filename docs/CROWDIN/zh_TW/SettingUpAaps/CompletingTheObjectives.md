@@ -31,8 +31,8 @@
 
 **目標 1**要求用戶在**AAPS**中設置基本技術配置。 在完成此步驟之前無法取得進展。
 
-- 在[組態建置工具](#Config-Builder-bg-source)中選擇正確的 CGM/FGM。 詳情請見[BG來源](../Getting-Started/CompatiblesCgms.md)。
-- 在[組態建置工具](../SettingUpAaps/ConfigBuilder.md)中選擇正確的幫浦，以確保你的幫浦能與**AAPS**通訊。 如果你使用的幫浦模型沒有**AAPS**的循環驅動程式，或如果你想在使用其他胰島素給藥系統的同時完成早期**目標**，則選擇**虛擬幫浦**。 詳情請見[胰島素幫浦](../Getting-Started/CompatiblePumps.md)。
+- Select the correct CGM/FGM in [Config Builder > BG Source](#Config-Builder-bg-source). 詳情請見[BG來源](../Getting-Started/CompatiblesCgms.md)。
+- Select the correct Pump in [Config Builder > Pump](../SettingUpAaps/ConfigBuilder.md) to ensure your pump can communicate with **AAPS**. 如果你使用的幫浦模型沒有**AAPS**的循環驅動程式，或如果你想在使用其他胰島素給藥系統的同時完成早期**目標**，則選擇**虛擬幫浦**。 詳情請見[胰島素幫浦](../Getting-Started/CompatiblePumps.md)。
 - 如果使用 Nightscout：
   - 請遵循[Nightscout](../SettingUpAaps/Nightscout.md)頁面中的說明，以確保**Nightscout**能接收和顯示**AAPS**資料。
   - 請注意，**NSClient**中的 URL 必須**_沒有_ "/api/v1/"**在末尾 - 請見[偏好設定 > NSClient](#Preferences-nsclient)。
@@ -41,6 +41,7 @@
 
 注意 - *你可能需要等待下一個傳感器的血糖讀數到達，才能讓**AAPS**辨識它。*
 
+(objectives-objective2)=
 ## 目標 2：學習如何控制 AAPS
 
 **目標 2**要求執行幾個“任務”，如下圖所示 點擊橙色文本"尚未完成"以進入待辦事項。 將提供鏈接以指導你，若你對某個操作不熟悉。
@@ -62,6 +63,9 @@
 - 顯示**循環**外掛的內容。
 - [調整血糖圖表的比例](#aaps-screens-main-graph)，以便檢視更大或更小的時間範圍：切換過去6小時、12小時、18小時和24小時的資料。
   - _提示_：長按圖表或使用右上角的箭頭。
+- Check that AAPS master password is set and known
+  - Hint : see [Preferences > Protection](#Preferences-protection).
+
 
 (objectives-objective3)=
 ## 目標 3：證明你的知識
@@ -92,6 +96,7 @@
 - 從[選單中的偏好設定 > OpenAPS](#Preferences-aps-mode)或按住**首頁總覽**螢幕左上角的循環圖示來選擇開放循環。
 - 在 7 天內手動執行至少 20 次臨時基礎率建議；將他們輸入到你的（實體）幫浦中，並在 AAPS 中確認你已接受他們。 確保這些基礎率調整顯示在**AAPS**和**Nightscout**中。
 - 在必要時使用[**臨時目標**](../DailyLifeWithAaps/TempTargets.md)。 在治療低血糖後，使用預定的「低血糖臨時目標」以防止系統過度修正回升。
+- If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
 
 為減少在開放循環中所提出的基礎率變更數，你仍可以使用[**目標 3**](#objective-3-prove-your-knowledge)中所述的技巧。 另外，您可以更改推薦的基礎率變更的最小百分比。 數值越高，您會收到的變更通知就越少。
 

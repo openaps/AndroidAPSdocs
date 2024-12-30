@@ -24,14 +24,6 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Hardwarové požadavky pro AAPS:** Zřejmě žádné. Podporuje bluetooth.
 
-### Equil (pump from Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
-
-**Stav smyčky:** Je kandidátem na smyčku.
-
-**Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
-
-**Comment:** Some people started looking into supporting pump in AAPS, but this is still in beginning phases. You can find more information on our discord in channel "equil".
-
 ### Accu-Chek Solo ([Domovská stránka](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
 **Stav smyčky:** Je kandidátem na smyčku.
