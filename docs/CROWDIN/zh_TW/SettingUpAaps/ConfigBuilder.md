@@ -4,7 +4,7 @@
 
 ![開啟組態建置工具](../images/ConfBuild_Open_AAPS30.png)
 
-強調**組態建置工具**是用來開啟和關閉模組功能的選項卡。 在下面的圖片中，左側的方框 (A) 允許你選擇你想要啟動的模組，右側的方框 (C) 允許你將其作為**AAPS**中的一個選項卡 (E) 查看。 如果右側的方框未被啟動，你可以使用螢幕左上方的漢堡選單 (D) 來進入該功能。 請參閱下面的[選項卡或漢堡選單](#tab-or-hamburger-menu)。
+強調**組態建置工具**是用來開啟和關閉模組功能的選項卡。 In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated. By default, when opening the Config Builder, sections are collapsed to only show the active plugins. Click on the arrow (G) to show all available options. The boxes on the right-hand side (C) allow you to view the active modules as a tab (E) in **AAPS**. 如果右側的方框未被啟動，你可以使用螢幕左上方的漢堡選單 (D) 來進入該功能。 請參閱下面的[選項卡或漢堡選單](#tab-or-hamburger-menu)。
 
 當模組內有額外設定可用時，你可以點擊齒輪圖示 (B)，這將帶你進入偏好設定中的具體設定。
 
@@ -98,6 +98,8 @@
 * [Poctech](../CompatibleCgms/PocTech.md)
 * [Tomato 應用程式](#libre1-using-tomato)，用於 MiaoMiao 裝置
 * [Glunovo 應用程式](https://infinovo.com/) 用於 Glunovo CGM 系統
+* [Ottai](../CompatibleCgms/OttaiM8.md)
+* [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
 * 隨機血糖：生成隨機血糖資料（僅限演示模式）
 
 ## 平滑
@@ -112,22 +114,21 @@
 
 選擇你正在使用的幫浦。 請參閱[相容的幫浦](../Getting-Started/CompatiblePumps.md)頁面以獲取更多設置資訊。
 
-![組態建置工具幫浦選擇](../images/ConfBuild_Pump_AAPS32.png)
+![組態建置工具幫浦選擇](../images/ConfBuild_Pump_AAPS33.png) ![組態建置工具幫浦選擇](../images/ConfBuild_Pump_AAPS33-2.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R Korean（適用於國內 DanaR 幫浦）
 * Dana Rv2（升級了非官方韌體的 DanaR 幫浦）
 * [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
-* Accu Chek Combo 
-  * [使用 Ruffy 的驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump.md)（需要安裝 ruffy）
-  * [無額外需求的驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)，在[AAPS v.3.2](#version3200)中新增
+* [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
 * Omnipod 用於[Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
 * Dash 用於[Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 * [Medtronic](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
+* [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * 虛擬幫浦：開放循環 - 僅限**AAPS**建議 
   * 當你開始使用**AAPS**時，在首次[完成目標](../SettingUpAaps/CompletingTheObjectives.md)的過程中
   * 針對尚未擁有驅動程式的幫浦
