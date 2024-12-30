@@ -2,7 +2,7 @@
 
 ## Kein Download möglich - APK muss selbst erstellt werden
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. Es ist zulässig, die App für den eigenen Gebrauch zu erstellen, aber du darfst keine Kopie an andere weitergeben!**
+**Die AAPS-App (eine apk-Datei) ist aufgrund der Vorschriften rund um medizinische Geräte nicht zum Download verfügbar. Es ist zulässig, die App für den eigenen Gebrauch zu erstellen, aber du darfst keine Kopie an andere weitergeben!**
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
@@ -13,14 +13,14 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 * A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
 
-| AAPS Version        | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version                                                              | Gradle | JVM |
+| AAPS-Version        | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version                                                              | Gradle | JVM |
 | ------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
 | [3.2](#version3200) | Hedgehog (2023.1.1)                                  | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
 | [3.3](#version3300) | Ladybug (2024.2.1)                                   |                                                                                                                     | 8.9    | 21  |
 
 The "preferred version" is packaged with the appropriate Gradle and JVM version. If using a different version, you may encounter issues related to wrong Gradle and/or JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* Android Studio unterstützt keine [Windows 32-Bit-Systeme](#troubleshooting_androidstudio-unable-to-start-daemon-process). Bitte beachte, dass sowohl eine **64-Bit-CPU als auch ein 64-Bit-Betriebssystem zwingend erforderlich sind**. Wenn Dein System diese Bedingung nicht erfüllt, musst Du die entsprechende Hardware, Software oder das ganze System ersetzen.
 
 <table class="tg">
 <tbody>
@@ -46,7 +46,7 @@ The "preferred version" is packaged with the appropriate Gradle and JVM version.
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Bildschirmauflösung</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">min. 1280 x 800<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
@@ -55,20 +55,20 @@ The "preferred version" is packaged with the appropriate Gradle and JVM version.
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. Wenn du dies tust, kann es lange dauern, bis der Bau der App abgeschlossen ist, aber sobald er begonnen hat, kann man ihn unbeaufsichtigt lassen.
+**Es wird dringend empfohlen eine SSD (Solid State Disk) anstelle einer HDD (Hard Disk Drive) zu verwenden, da damit weniger Zeit benötigt wird, um die AAPS-apk-Datei zu erstellen**. Es ist aber auch möglich eine Festplatte (HDD) zum Erstellen der **AAPS**-apk-Datei zu nutzen. Wenn du dies tust, kann es lange dauern, bis der Bau der App abgeschlossen ist, aber sobald er begonnen hat, kann man ihn unbeaufsichtigt lassen.
 
 ## Hilfe und Unterstützung während des Erstellungsprozesses
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio) section, please consult that first.
+Solltest Du Probleme beim Erstellen der **AAPS**-App haben, kannst Du im Abschnitt [**Fehlerbehebung für Android Studio**](../GettingHelp/TroubleshootingAndroidStudio) einiges an Hilfestellung finden.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Wenn Du den Eindruck hast, dass in der Anleitung Schritte falsch, fehlend oder missverständlich sind, oder Du trotzdem noch Probleme hast, wende Dich über [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) oder [Discord](https://discord.gg/4fQUWHZ4Mw) an andere **AAPS**-Nutzende. Wenn Du selbst etwas ändern möchtest (z.B. Screenshots aktualisieren _etc_), erstelle einen entsprechenden [Pull-Request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
 ## Schritt-für-Schritt Anleitung zum Erstellen der AndroidAPS.wear apk
 
 ```{admonition} WARNING
 :class: warning
-If you have built AAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
+Wenn Du AAPS in der Vergangenheit bereits einmal erstellt hast, musst Du nicht alle der folgenden Schritte noch einmal durchlaufen.
+Bitte springe direkt zur [Update-Anleitung](../Maintenance/UpdateToNewVersion.md)!
 ```
 
 ```{contents} The overall steps for building the **AAPS** apk file
