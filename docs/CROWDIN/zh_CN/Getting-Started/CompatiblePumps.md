@@ -1,11 +1,8 @@
-# 胰岛素泵的选择
-
-## 兼容的胰岛素泵
+# 兼容的胰岛素泵
 
 AAPS可与多种胰岛素泵配合使用。  以下列表显示了当前支持的设备，并注明了AAPS是通过您手机的原生蓝牙功能与胰岛素泵通信，还是需要括号中类似Rileylink的兼容设备。
 
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)（蓝牙；使用旧版驱动程序，还需要Ruffy应用程序 - 另见[Accu-Chek Combo基础使用技巧](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)）
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)（蓝牙连接；新驱动程序，自[AndroidAPS v.3.2](#version3200)版本起可用 - 另见[Accu-Chek Combo基础使用指南](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)）
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; see also [Accu-Chek Combo Tips for Basic usage](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (蓝牙)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (蓝牙)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (蓝牙)
@@ -16,6 +13,7 @@ AAPS可与多种胰岛素泵配合使用。  以下列表显示了当前支持�
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)  (蓝牙)
 - [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)  (蓝牙)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)  (蓝牙)
+- [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)
 - 某些较旧的[美敦力](../CompatiblePumps/MedtronicPump.md)设备（需要[额外的通信设备](#additional-communication-device)）
 
 ## 我的胰岛素泵未列出。
