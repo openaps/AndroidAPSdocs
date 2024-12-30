@@ -48,13 +48,13 @@ Bitte klicke auf "WEITER":
 
 ![grafik](../images/setup-wizard/Screenshot_20231202_125709.png)
 
-### Notification and battery optimization
+### Benachrichtigungen und Akku-Optimierung
 
 Wenn Apps Benachrichtigungen senden möchten, benötigt Android hierfür eine besondere Berechtigung.
 
 Obwohl es grundsätzlich gut ist. Benachrichtigungen _z.B._ von Social Media-Apps zu deaktivieren, ist es zwingend notwendig, dass Du **AAPS** erlaubst, Dir Benachrichtigungen zu senden.
 
-Please click the first "ASK FOR PERMISSION" button:
+Bitte klicke auf das erste "NACH BERECHTIGUNG FRAGEN":
 
 ![grafik](../images/setup-wizard/Screenshot_20231202_125721.png)
 
@@ -76,7 +76,7 @@ Der Akkuverbrauch ist bei Smartphones immer noch ein Thema, da die Akku-Kapazit�
 
 Das tust Du, indem Du die Einstellung bestätigst.
 
-Click the second "ASK FOR PERMISSION" button. Bitte tippe auf "Zulassen":
+Bitte klicke auf die zweite "NACH BERECHTIGUNG FRAGEN"-Schaltfläche. Bitte tippe auf "Zulassen":
 
 ![grafik](../images/setup-wizard/Screenshot_20231202_125750.png)
 
@@ -90,7 +90,7 @@ Android verknüpft die Nutzung der Bluetooth-Kommunikation mit der Möglichkeit,
 
 **AAPS** nutzt für die direkte Kommunikation mit Deinem CGM und der Steuerung der Insulinpumpe Bluetooth (alternativ kann **AAPS** auch mit anderen Apps kommunizieren). Die Details können je nach Setup variieren.
 
-Click the first "ASK FOR PERMISSION" button:
+Bitte klicke auf die erste "NACH BERECHTIGUNG FRAGEN"-Schaltfläche:
 
 ![grafik](../images/setup-wizard/Screenshot_20231202_125924.png)
 
@@ -100,21 +100,21 @@ Klicke auf "Bei Nutzung der App":
 
 ![grafik](../images/setup-wizard/Screenshot_20231202_125939.png)
 
-Click the second "ASK FOR PERMISSION" button:
+Bitte klicke auf die zweite "NACH BERECHTIGUNG FRAGEN"-Schaltfläche:
 
 ![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
 
-Select "Allow all the time".
+Wähle "Immer zulassen".
 
 Klicke auf "WEITER":
 
 ![grafik](../images/setup-wizard/Screenshot_20231202_130002.png)
 
-### Storage permission
+### Speicherberechtigung
 
 Um Log-Dateien zu sichern und Einstellungen exportieren zu können, benötigt **AAPS** Zugriff auf den permanenten Speicher Deines Smartphones. Permanenter Speicher bedeutet, dass es auch nach dem Neustarten Deines Smartphones verfügbar sein wird. Andere Informationen gehen einfach verloren, da sie nicht im permanenten Speicher abgelegt sind.
 
-Click the first "ASK FOR PERMISSION" button:
+Bitte klicke auf die erste "NACH BERECHTIGUNG FRAGEN"-Schaltfläche:
 
 ![grafik](../images/setup-wizard/Screenshot_20231202_130012.png)
 
@@ -122,11 +122,11 @@ Klicke auf "Zulassen":
 
 ![grafik](../images/setup-wizard/Screenshot_20231202_130022.png)
 
-Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information. The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
+Klicke auf "AAPS Verzeichnis". Dadurch wird das Dateisystem auf Deinem Smartphone geöffnet und Du kannst wählen, wo AAPS seine Informationen speichern soll. Das Standardverzeichnis ist **AAPS**, aber Du kannst jedes beliebige Verzeichnis nutzen. Erstelle das Verzeichnis, falls erforderlich, rufe es auf und wähle "Diesen Ordner verwenden":
 
 ![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
 
-Confirm that you wish to grant access to **AAPS** to the selected directory:
+Bestätige, dass Du **AAPS** den Zugriff auf das ausgewählte Verzeichnis gewähren willst:
 
 ![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
 
