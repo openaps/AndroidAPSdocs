@@ -27,7 +27,7 @@ Nota: AAPS escribirá los datos siempre en **primer perfil de tasa basal en la b
     
     ![Pantallazo de quitar el medidor Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* In [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md), select Accu-Chek Insight.
     
     ![Pantallazo de Configuración de Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
