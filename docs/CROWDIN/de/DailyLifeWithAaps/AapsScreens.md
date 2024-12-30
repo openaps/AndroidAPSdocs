@@ -17,7 +17,7 @@ Wenn Du **AAPS** öffnest, ist dies die erste Ansicht. Sie enthält die meisten 
 
 * Wechsele zwischen den verschiedenen **AAPS**-Modulen.
 * Alternativ kannst Du die Bildschirme wechseln, indem Du nach links oder rechts wischst.
-* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Die anzuzeigenden Reiter können in der [Konfiguration](#Config-Builder-tab-or-hamburger-menu) ausgewählt werden.
 
 ### Abschnitt B - Profil & Ziel
 
@@ -77,11 +77,11 @@ Die Farbe des Glukosewertes zeigt wie sich der Wert zum definierten [Zielbereich
 
 ![Deltas](../images/Home_Delta.png)
 
-The blocks in the middle shows:
+Der Abschnitt in der Mitte zeigt:
 
-1. how many minutes since last **CGM** reading
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-    Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
+1. wie alt der letzte Sensorwert (**CGM**-Wert) in Minuten ist
+2. Änderungen zum letzten Sensorwert: Δ, und dem Durchschnitt der letzten 15 und 40 Minuten (Δ15 und Δ40).  
+    "Lange Deltas" sind der Durchschnitt der vergangenen Deltas und zeigen wie die durchschnittliche Änderung war.
 
 (AapsScreens-loop-status)=
 
@@ -156,7 +156,7 @@ Spezieller Hinweis für Libre-Nutzende:
 
 #### Einfacher Modus
 
-An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+Ein Symbol mit einem Kindergesicht oben rechts in diesem Abschnitt zeigt, dass Du im [Einfachen Modus](#preferences-simple-mode) bist.
 
 ![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
 
