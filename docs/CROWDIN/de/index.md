@@ -5,7 +5,7 @@
 ```{admonition} Version 3.3
 :class: note
 
-29/12/2024 : Version 3.3 is out. Check the [Release Notes](#version3300) to see what's new and get update instructions.
+29/12/2024: Version 3.3 ist nun verfügbar. Schau Dir die [Release Notes](#version3300) an, in denen Du erfährst welche Neuerungen es gibt und was es bei einem Update zu beachten gibt.
 
 ```
 
@@ -66,10 +66,10 @@ Solltest Du SGLT-2-Hemmer (Gliflozine) nehmen, kannst Du **AAPS** aufgrund der G
 ## AAPS Dokumenten-Index
 
 ```{toctree}
-:caption: 1) Change language
+:caption: 1) Sprache
 
-Change language <./NavigateDoc/ChangeLanguage.md>
-Change version <./NavigateDoc/ChangeVersion.md>
+Sprache ändern <./NavigateDoc/ChangeLanguage.md>
+Version ändern <./NavigateDoc/ChangeVersion.md>
 ```
 ```{toctree}
 :caption: 2) Erste Schritte
