@@ -2,6 +2,13 @@
 
 ![grafik](./images/basic-outline-of-AAPS.png)
 
+```{admonition} Version 3.3
+:class: note
+
+29/12/2024 : Version 3.3 is out. Check the [Release Notes](#version3300) to see what's new and get update instructions.
+
+```
+
 Android APS (**AAPS**) ist eine Open-Source-App für Menschen mit insulinabhängigem Diabetes. Es handelt sich dabei um ein künstliches Bauchspeicheldrüsen-System (APS), das auf Android-Smartphones läuft. **AAPS** uses an OpenAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** a FDA/CE approved insulin pump. Optionally you will need cloud services **(4)** to remote control **AAPS**, share your data and store them in a reporting server, then also **(5)** a smartwatch.
 
 Diese Dokumentation erklärt, wie Du **AAPS** einrichtest und nutzt. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy "**Search docs**" function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
@@ -61,7 +68,8 @@ Solltest Du SGLT-2-Hemmer (Gliflozine) nehmen, kannst Du **AAPS** aufgrund der G
 ```{toctree}
 :caption: 1) Change language
 
-Change language <./ChangeLanguage/ChangeLanguage.md>
+Change language <./NavigateDoc/ChangeLanguage.md>
+Change version <./NavigateDoc/ChangeVersion.md>
 ```
 ```{toctree}
 :caption: 2) Getting started
