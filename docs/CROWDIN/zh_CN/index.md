@@ -5,7 +5,7 @@
 ```{admonition} Version 3.3
 :class: note
 
-29/12/2024 : Version 3.3 is out. Check the [Release Notes](#version3300) to see what's new and get update instructions.
+29/12/2024 : 3.3版本发布. 查看[发行说明](#version3300)以了解新功能并获取更新说明。
 
 ```
 
@@ -65,10 +65,10 @@ SGLT-2 抑制剂（格列吡嗪）能降糖，如果服用这种药的话就不�
 ## AAPS文档索引
 
 ```{toctree}
-:caption: 1) Change language
+:caption: 1) 切换语言
 
-Change language <./NavigateDoc/ChangeLanguage.md>
-Change version <./NavigateDoc/ChangeVersion.md>
+切换语言 <./NavigateDoc/ChangeLanguage.md>
+切换版本 <./NavigateDoc/ChangeVersion.md>
 ```
 ```{toctree}
 :caption: 2) 入门
@@ -133,7 +133,7 @@ Android Auto <./RemoteFeatures/AndroidAuto.md>
 在您的Wear OS手表上安装AAPS <./WearOS/WearOsSmartwatch.md>
 远程控制 <./RemoteFeatures/RemoteControlWearOS.md>
 自定义表盘参数 <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-切换自定义表盘 <./ExchangeSiteCustomWatchfaces/index.md>
+自定义表盘交换网站 <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
