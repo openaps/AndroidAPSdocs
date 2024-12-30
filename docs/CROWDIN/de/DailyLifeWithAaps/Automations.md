@@ -2,13 +2,26 @@
 
 ## Was ist eine Automatisierung?
 
-"**Automation**" is a feature within **AAPS** which can simplify a user’s diabetes management by making automatic changes to insulin delivery in order to fit within the individual's lifestyle needs.
+"**Automation**" is a feature which can automate task for AAPS.
 
-An **Automation** instructs **AAPS** to carry out a specific action 'automatically' as a result of one or more conditions or triggers. This can be for irregular episodic events, like low or high **BG**, a set amount of negative **IOB**. It can also be for reoccurring events, for example a meal or exercise at a certain time of day, or when the user is located within a certain distance of GPS location or WIFI SSID area.
+Automations performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a WIFI SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
 
-There are a wide range of **Automation** options, and users are encouraged to study these within the **AAPS** app, in the **Automation** section. You can also search the **AAPS** user groups on **Facebook** and **Discord** for **Automation** examples from other users.
+Automations rules are created and modified from the Automations tab. Each rule is defined by two properties:
+
+- One or more conditions or 'triggers' that start an action.
+
+    Think of a certain time schedule, an event or properties value in AAPS
+
+- One or more actions to perform.
+
+    Such as an alarm or settings a profile percentage or exporting the AAPS settings on Pod change.
+
+
+There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on ![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and ![**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
 
 ## Wie Automatisierung helfen kann
+
+1. **Automate reoccurring tasks:** Automatically executing programmed actions without user interaction.
 
 1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. Die [Forschung](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) schätzt, dass Menschen mit Diabetes Typ 1 täglich durchschnittlich 180 zusätzliche Entscheidungen treffen müssen. **Automatisierungen** können diese mentale Belastung verringern und so Freiräume für andere Dinge des Lebens schaffen können.
 
@@ -28,7 +41,7 @@ The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ t
 
 ## Wichtige Vorüberlegungen, bevor mit Automatisierung gestartet wird
 
-1. Before setting up an **Automation**, you should have reasonable **BG** control with **AAPS**. **Automations** should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
+1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automations should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
 
 1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
 
@@ -46,7 +59,7 @@ The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ t
 
 ## Wo finden sich die Automatisierungen in AAPS?
 
-Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
+Depending on your [Config builder > General](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
 
 ## Wie kann ich eine Automatisierung einrichten?
 
@@ -115,11 +128,14 @@ Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-
 
 Bei der Auswahl Deiner **Automatisierung** und der Wahl der Bedingungen und Werte, ist es wichtig genau zu wissen, welches Ziel damit erreicht werden soll.
 
-## Bedingungen in einer Automatisierung
+(automations-automation-triggers)=
+## Automation Triggers
 
-Es gibt eine Reihe von „Bedingungen“, die ausgewählt werden können. Die folgende Liste ist nicht vollständig:
+![Automation Triggers](../images/automation_triggers.png)
 
-**Bedingung:** verknüpfe Bedingungen
+There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. Die folgende Liste ist nicht vollständig:
+
+**Trigger:** connect conditions
 
 **Optionen:**
 
@@ -128,20 +144,20 @@ Mit den folgenden Auslösern können mehrer Bedinungen miteinander verknüpft we
 * “Oder”
 * "Entweder oder" (d.h. eine (und nur eine) der Bedingungen muss zutreffen, damit die Aktion ausgeführt wird)
 
-**Bedingung:** Zeit vs. Wiederholungszeit
+**Trigger:** time vs. recurring time
 
 **Optionen:**
 
 * Zeit = einmaliges Ereignis
 * Wiederkehrende Zeit = etwas, das regelmäßig passiert (z.B.  einmal pro Woche, jeden Werktag etc.)
 
-**Bedingung:** Standort
+**Trigger:** location
 
 **Optionen:**
 
 * In den **Einstellungen** der Automatisierungen, kann der gewünschte Standortdienst ausgewählt werden.
 
-**Bedingung:** Standortdienste
+**Trigger:** location service
 
 **Optionen:**
 
@@ -149,7 +165,22 @@ Mit den folgenden Auslösern können mehrer Bedinungen miteinander verknüpft we
 * Use network location: Location of your Wi-Fi.
 * GPS-Standort (Achtung! Kann zu übermäßigem Akkuverbrauch führen!)
 
+**Triggers** : pump and sensor data
+
+* Cannula age trigger: Available for all pumps
+* Insulin age trigger: Available for supported pumps
+* Battery age trigger: Available for supported pumps
+* Sensor age trigger: always available
+* Pod Activation trigger: Available for patch pumps
+
+Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+
+* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+
 ## Aktion
+
+![Automation Triggers](../images/automation_actions.png)
 
 **Aktion:** **Temporäres Ziel** (TT) starten
 
@@ -192,7 +223,7 @@ Klicke auf das Papierkorbsymbol, um eine **Automatisierungsregel** zu löschen.
 
 ![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
-## Beispiele für Automatisierungen
+# Beispiele für Automatisierungen
 
 Es folgen nun einige Beispiele für **Automatisierungen**. Weiterführende und tiefere Diskussionen über **Automatisierungen** im allgemeinen und einige Praxisbeispiele findest Du entweder in den Facebook-Gruppen oder auf Discord. Die folgenden Beispiele sollten nicht blind übernommenen werden. Wichtig ist, die genaue Funktionsweise der jeweiligen </strong>Automatisierung** zu verstehen, bevor sie genutzt wird.</p>
 
@@ -239,7 +270,30 @@ Here is the screenshot detailing the **Automation** triggers:
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
-## Automatisierungsprotokolle (Logs)
+# Automating Preference Settings Export
+
+### Unattended Exports: scheduled (daily)
+
+Screenshots detailing the Automation triggers:
+
+1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+
+![Scheduled exports](../images/Automations/automation_settingsexport_scheduled_400px.png)
+
+Note: Export execution will be logged on Careportal
+
+### Unattended Exports: Pod Activation (patch pump only)
+
+Screenshots detailing the Automation triggers:
+
+1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+
+![Export on Pod activation](../images/Automations/automation_settingsexport_podactivation_400px.png)
+
+Note: Export execution will be logged on Careportal
+
+
+# Automatisierungsprotokolle (Logs)
 
 Es gibt unten am Rand des Reiters eine **AAPS**Protokollierung der zuletzt ausgelösten **Automatisierung**.
 
