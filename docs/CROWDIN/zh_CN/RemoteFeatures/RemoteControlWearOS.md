@@ -18,7 +18,7 @@ Wear OS 5的更改锁定了表盘：仅可使用小工具。
 
 ## 配置
 
-在[配置构建器](../SettingUpAaps/ConfigBuilder.md)中启用Wear模块。
+Enable the Wear module in the [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
 
 使用Wear Preferences定义在计算通过手表给予的剂量时应考虑的变量（例如，15分钟趋势、COB...）。
 
