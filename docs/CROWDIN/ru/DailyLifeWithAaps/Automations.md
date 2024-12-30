@@ -2,13 +2,26 @@
 
 ## Что такое автоматизация?
 
-"**Автоматизация**" - это функция **AAPS**, способная упростить управление диабетом пользователя посредством автоматических изменений доставки инсулина с целью удовлетворения нужд образа жизни человека.
+"**Automation**" is a feature which can automate task for AAPS.
 
-**Автоматизация** говорит **AAPS** сделать определенное действие "автоматически" в качестве результата одного или нескольких условий. Ими могут быть нерегулярные эпизодичные события, по типу низкого или высокого **СК**, предустановленного отрицательного активного инсулина **(IOB)**. Так же ими могут быть периодичные события - или прием пищи, упражнение в определенное время суток, или нахождение пользователя на определенном расстоянии от геопозиции, или в зоне действия Wi-Fi сети.
+Automations performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a WIFI SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
 
-Существует широкий спектр опций **автоматизации**, и пользователям рекомендуется их изучать в приложении **AAPS**, в секции **Автоматизация**. Вы так же можете поискать примеры **автоматизаций** в группах пользователей **AAPS** на **Facebook**, **Discord** и <0>Telegram</0>.
+Automations rules are created and modified from the Automations tab. Each rule is defined by two properties:
+
+- One or more conditions or 'triggers' that start an action.
+
+    Think of a certain time schedule, an event or properties value in AAPS
+
+- One or more actions to perform.
+
+    Such as an alarm or settings a profile percentage or exporting the AAPS settings on Pod change.
+
+
+There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on ![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and ![**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
 
 ## Как может помочь автоматизация
+
+1. **Automate reoccurring tasks:** Automatically executing programmed actions without user interaction.
 
 1. **Уменьшить стресс при принятии решений:** Основное преимущество **автоматизаций** заключается в освобождении пользователя от необходимости ручной корректировки работы **AAPS**. [Исследования](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) показывают, что людям с сахарным диабетом 1 типа, приходится принимать в среднем 180 дополнительных решений в день. **Автоматизация** может уменьшить эту нагрузку, высвобождая умственную энергию пользователя для других аспектов жизни.
 
@@ -28,7 +41,7 @@
 
 ## Основные соображения перед началом применения автоматизации
 
-1. Перед настройкой **автоматизации**, необходимо иметь надлежащий контроль **ГК** при помощи **AAPS**. <**Автоматизация** не должна применяться для компенсации неоптимизированной базы, коэффициента чувствительности **ISF** или углеводного коэффициента **IC** (обсуждается ниже). Избегайте автоматизации **смены профиля** для компенсации вылетов **ГК** вследствие, _например_, приема пищи, для этого лучше использовать другие методы (микроболюсы SMB и т.д.).
+1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automations should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Избегайте автоматизации **смены профиля** для компенсации вылетов **ГК** вследствие, _например_, приема пищи, для этого лучше использовать другие методы (микроболюсы SMB и т.д.).
 
 1. Как и любая другая техника, **НМГ**, **помпы** и телефоны не безупречны: Технические проблемы или ошибки сенсоров могут нарушать работу **автоматизаций**, требуя возможного ручного вмешательства.
 
@@ -46,7 +59,7 @@
 
 ## Где находятся настройки автоматизации в AAPS?
 
-В зависимости от настроек [Конфигуратора](../SettingUpAaps/ConfigBuilder.md), **Автоматизация** находится либо в выпадающем сэндвич-меню, либо в виде вкладки с **AAPS**.
+Depending on your [Config builder > General](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
 
 ## Как настроить автоматизацию?
 
@@ -115,11 +128,14 @@
 
 Важно тщательно учитывать точное назначение **автоматизации** при выборе этих условий и значений.
 
-## Условия Автоматизации
+(automations-automation-triggers)=
+## Automation Triggers
 
-Существуют различные «Условия», которые могут быть выбраны пользователем. Приводимый ниже перечень не исчерпывающий:
+![Automation Triggers](../images/automation_triggers.png)
 
-**Условие** связка условий
+There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. Приводимый ниже перечень не исчерпывающий:
+
+**Trigger:** connect conditions
 
 **Варианты:**
 
@@ -128,20 +144,20 @@
 * “Или”
 * * "Исключительно либо" (что означает, что если применяется одно - и только одно из этих условий, то действие (действия) произойдет
 
-**Условие:** время и время повторения
+**Trigger:** time vs. recurring time
 
 **Варианты:**
 
 * время = одно событие времени
 * периодическое время = то, что происходит регулярно (т.е. раз в неделю, каждый рабочий день и т. д.)
 
-**Условие:** место
+**Trigger:** location
 
 **Варианты:**
 
 * в **конфигураторе** (Автоматизация) пользователь может выбрать необходимую ему службу определения местоположения.
 
-**Условие:** служба определения местоположения
+**Trigger:** location service
 
 **Варианты:**
 
@@ -149,7 +165,22 @@
 * Использовать сетевую геолокацию: расположение вашего Wi-Fi.
 * Используйте локатор GPS (Внимание! Может привести к чрезмерной разрядке аккумулятора!)
 
+**Triggers** : pump and sensor data
+
+* Cannula age trigger: Available for all pumps
+* Insulin age trigger: Available for supported pumps
+* Battery age trigger: Available for supported pumps
+* Sensor age trigger: always available
+* Pod Activation trigger: Available for patch pumps
+
+Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+
+* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+
 ## Действие
+
+![Automation Triggers](../images/automation_actions.png)
 
 **Действия:** начать **Временную цель**
 
@@ -192,7 +223,7 @@
 
 ![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
-## Примеры Автоматизации
+# Примеры Автоматизации
 
 Ниже приведены примеры **Автоматизаций**. Обсуждение **Автоматизаций** и того, как пользователи индивидуализировали свою  **Automation** можно найти в группах Facebook или в Discord. Приведенные ниже примеры не следует воспроизводить без хорошего понимания пользователем того, как будет работать **Автоматизация**.
 
@@ -240,7 +271,30 @@
 
 ![Альтернативный текст (alt text)](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
-## Журналы автоматизации
+# Automating Preference Settings Export
+
+### Unattended Exports: scheduled (daily)
+
+Screenshots detailing the Automation triggers:
+
+1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+
+![Scheduled exports](../images/Automations/automation_settingsexport_scheduled_400px.png)
+
+Note: Export execution will be logged on Careportal
+
+### Unattended Exports: Pod Activation (patch pump only)
+
+Screenshots detailing the Automation triggers:
+
+1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+
+![Export on Pod activation](../images/Automations/automation_settingsexport_podactivation_400px.png)
+
+Note: Export execution will be logged on Careportal
+
+
+# Журналы автоматизации
 
 В <**AAPS** ведется журнал недавно сработавших **автоматизаций** в нижней части экрана на вкладке **Автоматизация**.
 
