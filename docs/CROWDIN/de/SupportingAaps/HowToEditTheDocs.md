@@ -2,9 +2,9 @@
 
 **An dieser Stelle wird nur die Bearbeitung der englischen Dokumentation erläutert. Alle neuen Informationen müssen zuerst in Englisch eingegeben werden. Falls du diese in eine andere Sprache übersetzen willst (Danke dafür!), nutze bitte [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
+Hinweise zum Formatieren von Texten (Überschriften, fett...) und zum Setzen von Links findest Du weiter unten auf dieser Seite im Bereich ["Code-Syntax"](./make-a-PR#code-syntax).
 
-## General
+## Allgemein
 
 Bei Fragen, Feedback oder neuen Ideen für die Dokumentation erreichst Du das Dokumentations-Team über [Discord](https://discord.gg/4fQUWHZ4Mw).
 
@@ -24,17 +24,17 @@ In unserem Beispiel nehmen wir nun eine Änderung an der AndroidAPS-Dokumentatio
 
 ![Fork repo](../images/PR0.png)
 
-2. Wechsle zu einer beliebigen Seite und navigiere zu der Seite, die du bearbeiten möchtest. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Wechsle zu einer beliebigen Seite und navigiere zu der Seite, die du bearbeiten möchtest. Du kannst oben rechts in der Ecke auf den „Edit in GitHub"-Link klicken. Das ausschließlich für die englisch-sprachigen (Original-) Seiten möglich. 
 
 ![edit doc](../images/PR1.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. Du musst in Deinem GitHub-Konto angemeldet sein, um dies zu tun (falls Du noch keines hast, kannst Du es problemlos einrichten).
+Oder klicke auf das Stift-Symbol, das in der oberen Leiste der zu bearbeitenden Seiteninhalte erscheint. Du musst in Deinem GitHub-Konto angemeldet sein, um dies zu tun (falls Du noch keines hast, kannst Du es problemlos einrichten).
 
 ![RTD io](../images/PR2.png)
 
 3. Beide Optionen in Schritt 2 führen dazu, dass ein neuer Branch in DEINEM kopierten Repository erstellt wird, wo die Änderungen gespeichert werden sollen. Editiere die Datei.
 
-Wir verwenden Markdown für die Dokumentation. Die Datei hat das Suffix ".md". Die Markdown-Spezifikation ist nicht fixiert und wir verwenden im Moment den myst_parser für unsere Markdown-Dateien. Take care to use the correct syntax as [described below](#code-syntax).
+Wir verwenden Markdown für die Dokumentation. Die Datei hat das Suffix ".md". Die Markdown-Spezifikation ist nicht fixiert und wir verwenden im Moment den myst_parser für unsere Markdown-Dateien. Achte auf die [unten](#code-syntax) beschriebene richtige Syntax.
 
 ![Edit branch](../images/PR3.png)
 
@@ -154,13 +154,13 @@ Bildnamen sollten einer der folgenden Namenskonventionen folgen. Im Beispiel ben
 
 Bilder befinden sich im 'images'-Ordner der englischen Dokumentation und werden von Crowdin automatisch in die anderen Sprachen überführt. Du musst hier nichts tun!
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+Derzeit übersetzen wir keine Bilder und Grafiken: Bilder sollten **so wenig Text wie möglich** enthalten, um die Inhalte damit auch nicht englischsprachigen Menschen zugänglich zu machen.
 
 (make-a-PR-image-size)= Verwende eine sinnvolle Bildauflösung, die auf PC, Tablet und Mobiltelefonen lesbar ist.
 
 - Screenshots von Webseiten sollten bis zu **1050 Pixel breit** sein.
 - Prozessdiagramme sollten bis zu **1050 Pixel breit** sein.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
+- Screenshots aus der App sollten bis zu **500 Pixel breit** sein. Platziere sie nicht nebeneinander, wenn es nicht unbedingt notwendig ist.
 
 ### Links
 
@@ -420,31 +420,31 @@ Ein Tutorial hilft dem Schüler grundlegende Kompetenzen zu erwerben. Der Benutz
 
 - Fazit (Level 2 Überschrift)
     
-    - **The Language of Tutorials**
+    - **Die Sprache in Tutorials**
         
-        *In this tutorial, you will…*
+        *In diesem Tutorial wirst Du …*
         
-        Describe what the learner will accomplish (note - not: “you will learn…”).
+        Beschreibe, was der Lernende am Ende erreichen wird (Anmerkung - nicht: „Du wirst lernen …“).
         
-        *First, do x. Now, do y. Now that you have done y, do z.*
+        *Mache als erstes X. Jetzt mache y. Jetzt, wo y erledigt ist, mache z.*
         
-        No room for ambiguity or doubt.
+        Lasse keinen Raum für Mehrdeutigkeit oder Zweifel.
         
-        *We must always do x before we do y because… (see Explanation for more details).*
+        *Wir müssen immer x tun, bevor wir y tun, weil… (siehe Erklärung für weitere Details).*
         
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        Gib eine sehr kurze Erklärung der Aktionen in der einfachst möglichen Sprache. Verlinke auf detailliertere Erklärungen.
         
-        *The output should look something like this…*
+        *Das Ergebnis sollte in etwas so aussehen ...*
         
-        Give your learner clear expectations.
+        Vermittle den Lernenden eine klare Erwartung.
         
-        *Notice that… Remember that…*
+        *Beachte, dass… Denke daran, dass…*
         
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        Gib den Lernenden viele Hinweise, aus denen sie erkennen können, dass sie auf dem richtigen Weg sind und sich selbst orientieren können.
         
-        *You have built a secure, three-layer hylomorphic stasis engine…*
+        *Du hast eine sichere, dreischichtige hylomorphe Stasis-Engine… gebaut*
         
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
+        Beschreibe (und wertschätze in einer vorsichtigen Form), was Deine Lernenden erreicht haben (beachte - nicht: „Du hast ... gelernt“)
 
 ##### ![Grafik](../images/styleguide05.png) Anleitungen (z.B. Rezepte)
 
@@ -478,19 +478,19 @@ Eine Anleitung soll dem bereits kompetenten Anwender helfen, eine bestimmte Aufg
 
 - Zusammenfassender Abschnitt
     
-    - **The Language of How-To Guides**
+    - **Die Sprache in Anleitungen**
         
-        *This guide shows you how to…*
+        *Diese Anleitung zeigt Dir, wie ...*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        Benenne das mit der Anleitung zu lösende Problem oder die Aufgabe sehr klar
         
-        *If you want x, do y. To achieve w, do z.*
+        *Wenn Du x erreichen möchtest, mache y. Um w zu erreichen, tue z.*
         
-        Use conditional imperatives.
+        Verwende konditionale Imperative.
         
-        *Refer to the x reference guide for a full list of options.*
+        *Eine vollständige Liste aller Optionen findest Du Referenzen--Anleitung.*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        Halte Deine praktische Anleitung frei von allen möglichen Dingen, die der Benutzer im Zusammenhang mit X machen könnte.
 
 ##### ![Grafik](../images/styleguide07.png) Erklärung (z. B. wissenschaftlicher Hintergrund, warum Eiweiß beim Schlagen steif wird)
 
@@ -518,27 +518,27 @@ Eine Erklärung klärt, vertieft und erweitert das Verständnis des Lesenden fü
 
 - Fazit (Level 2 Überschrift)
     
-    - **The Language of Explanation**
+    - **Die Sprache in Erklärungen**
     
-    *The reason for x is because historically, y…*
+    *Der Grund für x ist historisch, y…*
     
-    Explain.
+    Erkläre.
     
-    *W is better than z, because…*
+    *W ist besser als z, weil…*
     
-    Offer judgements and even opinions where appropriate..
+    Biete Einschätzungen oder sogar Meinungen an, wo sie sinnvoll erscheinen.
     
-    *An x in system y is analogous to a w in system z. However…*
+    *Ein x in System y ist analog zu einem w in System z. Allerdings…*
     
-    Provide context that helps the reader.
+    Gib den Kontext, der dem Lesenden hilft, mit.
     
-    *Some users prefer w (because z). This can be a good approach, but…*
+    *Einige Benutzende bevorzugen w (weil z). Dies kann ein guter Ansatz sein, aber…*
     
-    Weigh up alternatives.
+    Wäge die Alternativen ab.
     
-    *An x interacts with a y as follows:…*
+    *Ein x interagiert mit einem y wie folgt:…*
     
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    Lege die inneren Geheimnisse der Maschine offen, um zu verstehen, warum etwas tut, was es tut.
 
 ### 2\. AAPS-spezifische Schreib- und Aktualisierungshinweise
 
