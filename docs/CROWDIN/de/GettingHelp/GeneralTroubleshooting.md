@@ -2,7 +2,7 @@
 
 Informationen zur Behebung von Problemen findest Du auf vielen Seiten im Wiki. Auf dieser Seite sind Links zu den entsprechenden Abschnitten zusammengetragen, so dass Du schneller eine Lösung für Dein Problem finden kannst.
 
-Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
+Weitere nützliche Informationen können auch im [FAQ](../UsefulLinks/FAQ.md) stehen.
 
 ## AAPS-App
 
@@ -106,4 +106,4 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 
 ## Smartwatches
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
+* [Fehlerbehebung der Wear App](#Watchfaces-troubleshooting-the-wear-app)
