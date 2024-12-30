@@ -100,9 +100,9 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 * [Glunovo App](https://infinovo.com/) for Glunovo CGM system
 * Random BG: Generates random BG data (Demo mode only)
 
-## Smoothing
+## Сглаживание
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Сглаживание](../images/ConfBuild_Smoothing.png)
 
 See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 

@@ -1,284 +1,282 @@
-# Automation
+# 自动操作
 
-## What is an Automation?
+## 什么是自动操作？
 
-"**Automation**" is a feature within **AAPS** which can simplify a user’s diabetes management by making automatic changes to insulin delivery in order to fit within the individual's lifestyle needs.
+“**自动操作**”是**AAPS**中的一个功能，可以通过自动调整胰岛素输注来简化用户的糖尿病管理，以适应个人的生活方式需求。
 
-An **Automation** instructs **AAPS** to carry out a specific action 'automatically' as a result of one or more conditions or triggers. This can be for irregular episodic events, like low or high **BG**, a set amount of negative **IOB**. It can also be for reoccurring events, for example a meal or exercise at a certain time of day, or when the user is located within a certain distance of GPS location or WIFI SSID area.
+一个**自动操作**指示**AAPS**在满足一个或多个条件或触发因素时“自动”执行特定操作。 这可以是针对不规律的事件，如**低血糖或高血糖**、一定量的负**活性胰岛素（IOB）**。 它也可以是针对重复发生的事件，例如每天特定时间的用餐或运动，或者当用户位于某个GPS位置或WIFI SSID区域附近时。
 
-There are a wide range of **Automation** options, and users are encouraged to study these within the **AAPS** app, in the **Automation** section. You can also search the **AAPS** user groups on **Facebook** and **Discord** for **Automation** examples from other users.
+有多种**自动化**选项可供选择，建议用户在**AAPS**应用的**自动化**部分中详细研究这些选项。 您还可以在**Facebook**和**Discord**上的**AAPS**用户群组中搜索其他用户分享的**自动化**示例。
 
-## How Automation can help
+## 自动操作如何帮助我们
 
-1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
+1. **减少决策疲劳**：**自动操作**的主要好处是减轻用户需要手动干预**AAPS**的负担。 研究估计，患有1型糖尿病的人平均每天需要做出额外的180个决策。 **自动化**可以减轻心理负担，让用户能够将精力投入到生活的其他方面。
 
-1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**.
+1. **可能改善血糖控制**：例如，**自动操作**可以确保在需要时始终设置**临时目标**，即使在忙碌或健忘的情况下也是如此。 例如，如果一个患有糖尿病的孩子在学校每周二上午10点和周四下午2点有体育活动，并且需要在活动前30分钟设置高血糖临时目标（TT），那么可以通过自动操作来实现。
 
-1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
+1. **使AAPS高度可定制**：根据用户的偏好，在特定情况下可以更加或不太激进。 例如，如果在半夜出现负**IOB**，表明当前**配置文件**可能过强，可以触发一段时间内的临时降低**配置文件**百分比。
 
-The example below illustrates how an **Automation** can enable steps to be eliminated.
+下面的例子说明了如何通过**自动化**来省略某些步骤。
 
-User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
+用户每天早上6点锻炼：他需要在锻炼前，即早上5点，手动在AAPS中设置“TT-活动”。
 
 ![Alt text](../images/automation_2024-02-12_20-54-50.png)
 
-The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
+用户设置了一个**自动操作**，在早上5点触发“TT-活动”，以确保他们的**血糖**和**IOB**在准备6点锻炼时处于最佳状态：
 
 ![Alt text](../images/automation_2024-02-12_20-54-49.png)
 
-## Key considerations before starting with Automations
+## 开始使用自动操作前的关键考虑
 
-1. Before setting up an **Automation**, you should have reasonable **BG** control with **AAPS**. **Automations** should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
+1. 在设置**自动操作**之前，你应该使用**AAPS**合理地控制**血糖**。 **自动操作**不应用于补偿不理想的基础率、**胰岛素敏感因子（ISF）**或**碳水化合物比率（CR）**设置。 避免设置自动化**配置文件切换**来补偿由于食物等原因导致的**血糖**升高，这些情况最好通过其他策略（如SMBs等）来处理。
 
-1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
+1. 与所有技术一样，**持续葡萄糖监测系统（CGMs）**、**胰岛素泵**和手机都有可能出现故障：技术问题或传感器错误可能会中断**自动化操作**，这时可能需要进行手动干预。
 
-1. **Requirements for **Automations** are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need a Automation set up for school sports or daily exercise, or need to adjust the timings.
+1. 随着日常活动的变化，**自动操作的需求**也可能发生变化。 在工作/学校/假期之间切换时，请在日历中设置提醒，以审查当前活跃的**自动操作**（它们很容易激活和停用）。 例如，如果你去度假，不再需要为学校体育或日常锻炼设置的自动操作，或者需要调整时间。
 
-1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
+1. **自动操作**可能会相互冲突，因此最好在安全环境中仔细审查任何新的**自动操作**设置，并了解为什么**自动操作**可能未按预期触发。
 
-1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
+1. 如果使用Autosens功能，请尽量使用**临时目标（Temp Targets）**而不是**配置切换（Profile Switches）**。 **临时目标**不会将Autosens重置为0， 而配置切换会重置Autosens。
 
-1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/l for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/l for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
+1. 大多数**自动操作**应仅设置**有限的时间段**，之后**AAPS**可以重新评估并根据需要重复自动操作（如果条件仍然满足）。 例如，“启动7.0 mmol/l的临时目标持续30分钟”或“启动110%的**配置文件**持续10分钟”_以及_“启动5.0 mmol/l的临时目标持续10分钟”。 使用**自动操作**创建永久更改（例如，更改为更强的配置文件百分比）可能会导致低血糖。
 
-## When can I start using Automation?
+## 我什么时候可以开始使用自动操作？
 
-**Automations** can be started in **objective 10**.
+可以在**目标10**中开始使用**自动操作**。
 
-## Where are Automations located in AAPS?
+## 自动操作在AAPS中的位置
 
-Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
+根据你的[配置构建器](../SettingUpAaps/ConfigBuilder.md)设置，**自动操作**位于“汉堡”菜单中或作为**AAPS**的一个选项卡。
 
-## How can I set up an Automation?
+## 如何设置自动操作？
 
-To set up an **Automation** create a ‘rule’ with **AAPS** as follows:
+要设置**自动操作**，请在**AAPS**中创建一个“规则”如下：
 
-![Automation create](../images/automation_create.png)
+![创建自动操作](../images/automation_create.png)
 
-* give your ‘rule’ a title;
-* select at least one ‘Condition’;
+* 为你的“规则”命名；
+* 选择至少一个“条件”；
 
-![Automation condition](../images/automation_condition.png)
+![自动操作条件](../images/automation_condition.png)
 
-* select one ‘Action’;
+* 选择一个“操作”；
 
-![Automation action](../images/automation_action.png)
+![自动操作](../images/automation_action.png)
 
-* check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
+* 勾选**自动化**事件右侧的方框以激活**自动化**：
 
-![Automation](../images/automation_2024-10-26_17-48-05.png)
+![自动操作](../images/automation_2024-10-26_17-48-05.png)
 
 
 
-To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** entitled ‘Low Glucose TT’ as either activated (‘ticked') or deactivated (‘unticked’).
+要停用**自动操作**规则，请取消勾选规则名称左侧的框。 下面的示例显示了一个名为“低血糖TT”的**自动操作**，它可以被激活（勾选）或停用（未勾选）。
 
 ![Alt text](../images/automation_2024-02-12_20-56-08.png)
 
 
-When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
+在设置**自动化**时，您可以首先通过激活“操作”下的“通知”选项来测试它。 这会触发**AAPS**首先显示通知，而不是实际自动化操作。 当您确认通知已在正确的时间/条件下触发后，可以更新**自动化**规则，将“通知”替换为“操作”。
 
 ![Alt text](../images/automation_2024-02-12_20-55-05.png)
 
 ```{admonition} Important note
 :class: note
-
-**Automations** are still active when the Loop is disabled!
+**自动操作**在闭环禁用时仍然有效！
 ```
 
 
-## Safety limits
+## 安全限制
 
-There are safety limits set for **Automations**:
+对**自动操作**设置了安全限制：
 
-* The **glucose** value has to be between 72 and 270 mg/dl (or 4 and 15 mmol/l).
-* The **Profile Percentage** has to be between 70% and 130%.
-* There is a 5 minute time limit between executions of  **Automation** (and first execution).
+* **血糖**值必须在72 mg/dl和270 mg/dl（或4 mmol/l和15 mmol/l）之间。
+* “**配置文件百分比**”必须在70%到130%之间。
+* **自动操作**执行（及首次执行）之间有5分钟的时间限制。
 
-## Correct use of negative values
+## 正确使用负值
 
 ```{admonition} Warning
 :class: warning
-
-Please be careful when selecting a negative value in **Automation**
+在选择**自动操作**中的负值时请小心。
 ```
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
+在选择“条件”中的负值（如“小于”）时需要谨慎。 For example:
 
 ![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
+**示例1**：创建条件**“小于”**-0.1 mmol/l（或-2 mg/dl）将：
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/l (-2 mg/dl)" _would_ include -0.1 mmol/l or -2 mg/dl).
+当任何**严格小于**-0.1（-2）的数字时触发**自动操作**。 这包括-0.2、-0.3、-0.4（-4、-6、-8）等数字。 请记住，-0.1（-2）本身**不**包括在此条件中。 （条件“等于或小于”-0.1 mmol/l或-2 mg/dl_将_包括-0.1 mmol/l或-2 mg/dl）。
 
-**Example 2:** Creating a Condition "is greater than" -0.1mmol/l (-2mg/dl) will:
+**示例2**：创建条件“大于”-0.1 mmol/l（-2 mg/dl）将：
 
-Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-2mg/dl). This includes numbers like 0, 0.2, 0.4mmol/l, (0, 4, 8mg/dl) and any other positive number.
+当任何**大于**-0.1 mmol/l（-2 mg/dl）的数字时触发**自动操作**。 这包括0、0.2、0.4 mmol/l（0、4、8 mg/dl）等任何正数。
 
-It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.
+在选择这些条件和值时，必须仔细考虑**自动操作**的确切意图。
 
-## Automation Conditions
+## 自动操作条件
 
-There are various ‘Conditions’ that can be selected by the user. The list below is non-exhaustive:
+用户可以选择各种“条件”。 以下列表并不详尽：
 
-**Condition:** connect conditions
+**条件**：连接条件
 
-**Options:**
+**选项：**
 
-Several conditions can be linked with
-* “And”
-* “Or”
-* “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+可以使用多个条件链接
+* “和”
+* “或”
+* “异或”（即如果仅当且仅当一个条件适用时，才会执行操作）
 
-**Condition:** time vs. recurring time
+**条件**：时间 vs. 循环时间
 
-**Options:**
+**选项：**
 
-* time = single time event
-* recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+* 时间 = 单次事件时间
+* 循环时间 = 循环发生的事件（例如，每周一次，每个工作日等）
 
-**Condition:** location
+**条件**：地点
 
-**Options:**
+**选项：**
 
-* in the **config builder** (Automation), the user can select their required location service.
+* 在**配置构建器**（自动化）中，用户可以选择所需的位置服务。
 
-**Condition:** location service
+**条件**：位置服务
 
-**Options:**
+**选项：**
 
-* Use passive location: **AAPS** only takes locations when other apps are requesting it.
-* Use network location: Location of your Wi-Fi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+* 使用被动位置：**AAPS**仅在其他应用请求位置时获取位置。
+* 使用网络位置：你的Wi-Fi位置。
+* 使用GPS位置（注意！ 这可能会导致电池过度消耗！）
 
-## Action
+## 操作
 
-**Actions:** start **Temp Target**
+**操作**：启动**临时目标**
 
-**Options:**
+**选项：**
 
-* **BG** must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-* **TT** works only if there is no previous Temp Target
+* **血糖**必须在72 mg/dl和270 mg/dl（4 mmol/l和15 mmol/l）之间
+* **临时目标（TT）**仅在之前没有临时目标时有效
 
-**Actions:** stop **Temp Target**
+**操作**：停用**临时目标**
 
-**Options:**
+**选项：**
 
-none
+无
 
-**Actions:** **Profile Percentage**
+**操作**：**配置文件百分比（Profile Percentage）**
 
-**Options:**
+**选项：**
 
-* **Profile** must be between 70% and 130%
-* works only if the previous Percentage is 100%
+* **配置文件**必须在70%和130%之间
+* 仅当之前的百分比为100%时才有效
 
-Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
+添加“操作”后，必须点击并调整默认值以更改为所需的数字。
 
 ![Alt text](../images/automation_2024-02-12_20-57-07.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
-## The order of the **Automations** in the list matters
- **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+## **自动操作**列表中的顺序很重要
+ **AAPS**将按照偏好顺序自动执行创建的规则，从**自动操作**列表的顶部开始。 例如，如果“低血糖”**自动操作**是所有规则中最重要的，那么它应该出现在用户**自动操作**列表的顶部，如下所示：
 
 
 ![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
 
-To reprioritize the **Automation** rules, click and hold the four-lines-button on the right side of the screen. Reorder the  **Automations** by moving the rules up or down.
+要重新排列**自动化**规则的优先级，请点击并按住屏幕右侧的四个线条按钮。 通过上下移动规则来重新排列**自动化**的顺序。
 
 ![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
 
-## How to delete Automation rules
+## 如何删除自动操作规则
 
-To delete an **Automation** rule click on the trash icon.
+要删除一个**自动化**规则，请点击垃圾桶图标。
 
 ![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
-## Examples of Automations
+## 自动操作示例
 
-Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their  **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
+以下是**自动操作**的示例。 关于**自动操作**以及用户如何个性化**自动操作**的进一步讨论，可以在Facebook讨论组或Discord上找到。 下面的示例不应在用户未充分理解**自动操作**将如何工作的情况下复制。
 
-### Low Glucose Temp Target
+### 低血糖临时目标
 
-This **Automation**  triggers an automatic ‘Temp Target Hypo’ when low **BG** is at a certain threshold.
+这个**自动化**功能在血糖（**BG**）低于某个阈值时会自动触发“临时目标-低血糖”。
 
 ![Alt text](../images/automation_2024-02-12_21-04-01.png-500x.png)
 
-### Lunch Time Temp Target (with ‘Location’)
+### 午餐时间临时目标（带“位置”）
 
 ![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
 
-This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will be activated.
+此**自动操作**为在工作日中午左右吃午餐的用户创建，但仅在用户位于设定“位置”时才触发。  因此，如果用户有一天不在工作，此**自动操作**将不会激活。
 
-This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive ‘BG, to 90mg (or 5 mmol/l) in preparation for lunch.
+此**自动操作**将在13:00设置低**临时目标-即将用餐**以将血糖驱动至90 mg/dl（或5 mmol/l）为午餐做准备。
 
-The ‘Trigger’ location is set by inputting the latitude and longitude GPS coordinates as below:
+“触发”位置通过设置纬度和经度GPS坐标来设置，如下所示：
 
 ![Alt text](../images/automation_2024-02-12_21-04-40.png-500x.png)
 
-Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
+由于“和”连接，**自动操作**仅在“选定时间”且用户在选定位置时才发生。
 
-The **Automation** will not be triggered on any other time at this location or on this time outside of 50 meters set GPS coordinates.
+**自动操作**不会在其他时间在此位置或在此时间之外50米设定的GPS坐标内触发。
 
-### WIFI SSID Location Automation
+### WIFI SSID位置自动操作
 
-Using WIFI SSID is a good option to trigger an **Automation** while within range of a specific wifi network (than compared with GPS), it is fairly precise, uses less battery and works in enclosed spaces where GPS and other location services might not be available.
+使用WIFI SSID是触发**自动操作**的好方法，当用户在特定wifi网络范围内时（与GPS相比），它相当精确，使用电池较少，并且在GPS和其他位置服务可能无法使用的封闭空间内也能工作。
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast(1).
-
-
-The **Automation** will trigger at 05:30am only on Monday-Friday(2)  
-and while being connected to a home wifi network (3).
+下面是另一个示例，设置工作日前早餐前的**临时目标**（1）。
 
 
-It will then set a **Temp Target**  of 75mg/dl for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is travelling on vacation for instance.
+**自动操作**将在周一至周五的05:30am触发（2）  
+并且当用户连接到家庭wifi网络时（3）。
+
+
+然后，它将设置30分钟的75 mg/dl**临时目标**（4）。 包含位置的一个优点是，如果用户在度假旅行，它将不会触发。
 
 ![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
 
-Here is the screenshot detailing the **Automation** triggers:
+以下是详细**自动操作**触发器的截图：
 
-1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
-1) WIFI SSID = My_Home_WiFi_Name
+1)在主要的“并且”（两个条件都需要满足才能触发）条件下： 1)重复时间为周一、周二、周三、周四、周五的早上5:30  
+1)WIFI名称（SSID）为“My_Home_WiFi_Name”
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
-## Automation Logs
+## 自动操作日志
 
-**AAPS** has a log of the most recent **Automation** triggered at the bottom of the screen under the **Automation** tab.
+**AAPS**在**自动操作**选项卡底部的屏幕上记录了最近触发的**自动操作**日志。
 
-In the example below the logs indicate:
+在下面的示例中，日志显示：
 
-(1) at 01:58 am, the “Low BG triggers temp hypo profile” is activated
-* glucose value is less than 75mg/dl;
-* delta is negative (ie: the BG is going down);
-* time is within 01:00 am and 06:00 am.
+(1) 在01:58 am，“低血糖触发临时低血糖配置文件”被激活
+* 血糖值小于75 mg/dl；
+* 增量为负（即：血糖正在下降）；
+* 时间在01:00 am和06:00 am之间。
 
-The **Automation** will:
-* set a **Temp Target** to 110mg/dl for 40 minutes;
-* start a temporary **Profile** at 50% for 40 minutes.
+**自动化**将会：
+* 设置40分钟的110 mg/dl**临时目标**；
+* 启动40分钟的50%临时**配置文件**。
 
-(2) at 03:38 am,  the “High carb after low at night” is triggered
-* time is between 01:05 am and 06:00 am;
-* glucose value is greater than 110mg/dl.
+(2) 在03:38 am，“夜间低血糖后高碳水”被触发
+* 时间在01:05 am和06:00 am之间；
+* 血糖值大于110 mg/dl。
 
-The **Automation** will:
-* change **Profile** to LocalProfile1 (ie: cancel the temporary profile if any)
-* stop **Temp Target** (if any)
+**自动化**将会：
+* 更改**配置文件**为LocalProfile1（即：取消任何临时配置文件）
+* 停止**临时目标**（如果有的话）。
 
 ![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
 
 ## Troubleshooting
 
-* Problem: __My automations are not being triggered by AAPS?__
+* 问题：__我的自动化没有由AAPS触发？__
 
-Check the box to the right of **Automation** event is ‘ticked’ to ensure the rule is activated.
+勾选右侧的框以激活自动操作事件：
 
 ## Troubleshooting
 
 ![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
 
-* Problem: __My automations are being triggered in the wrong order.__
+* 问题：__我的自动化触发顺序不正确。__
 
-Check your rule prioritisation order as discussed above here.
+检查如上所述的规则优先级顺序。
 
-## Alternatives to Automations
+## 自动操作的替代方案
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. 
+对于高级用户，还有其他方法可以使用IFTTT或第三方Android应用（如Automate）来自动化任务。 

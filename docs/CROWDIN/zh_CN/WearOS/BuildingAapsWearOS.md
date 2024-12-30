@@ -1,37 +1,37 @@
-# Building the Wear AAPS app
+# 构建AAPS Wear OS应用
 
-The Wear OS App of **AAPS**  (“Wear OS apk”) required for the smartwatch has been separated from the "full" **AAPS** build for the Android phone. Therefore you have to generate a second installation file, or apk, to install **AAPS** wear onto the watch (which is done by side-loading it from the phone). It is strongly recommended that the **AAPS** Wear apk file is built immediately after first building the full **AAPS** apk for the phone. Not only is this very quick to do if you are [building **AAPS** for the first time](../SettingUpAaps/BuildingAaps.md), but it will avoid any potential compatibility issues when you try to set up the watch-phone communication. The **AAPS** Wear apk on the watch is unlikely to be compatible with the **AAPS** phone apk if they have been built in different versions of Android Studio, or if months have past since the initial **AAPS** build.
+**AAPS**所需的Wear OS应用（即“Wear OS apk”）已从适用于Android手机的“完整”AAPS构建中分离出来。 因此，您需要生成第二个安装文件（或apk），以便将**AAPS** Wear安装到手表上（这是通过手机侧载完成的）。 强烈建议立即在首次为手机构建完整的**AAPS** apk之后构建**AAPS** Wear apk文件。 这不仅在您[首次构建**AAPS**](../SettingUpAaps/BuildingAaps.md)时非常快速，而且在尝试设置手表与手机通信时还可以避免任何潜在的兼容性问题。 如果手表上的**AAPS** Wear apk与手机上的**AAPS** apk版本不同，或者自初始**AAPS**构建以来已经过去了数月，则它们可能不兼容。
 
-If you are already using **AAPS** on a phone and you did not build both the phone and watch (wear) **AAPS** apks at the same time, to ensure success it is therefore best to do a fresh build of both apk files at the same time. Build the AAPS phone and watch apks at the same time, using the same **keystore file**.
+如果您已经在手机上使用了**AAPS**，并且没有同时构建手机和手表（Wear）的**AAPS** apk文件，为确保成功，最好同时重新构建这两个apk文件。 使用相同的**keystore文件**同时构建AAPS手机和手表apk。
 
-## Supported Wear OS versions
+## 支持的Wear OS版本
 
-AAPS requires at least Wear OS API level 28 (Android 9).
+AAPS至少需要Wear OS API级别28（Android 9）。
 
 ```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.<br>
-Wear OS 5 has [limitations](BuildingAapsWearOs-WearOS5).
+AAPS表盘适用于API级别28至33的Wear OS智能手表。 <br>
+Wear OS 5有[限制](BuildingAapsWearOs-WearOS5)。
 ```
 
-## Building the **AAPS** Wear apk
+## 构建**AAPS** Wear apk文件
 
-The build process for the Wear apk is similar to that for the "full" phone apk.
+Wear apk的构建过程与“完整”手机apk的构建过程相似。
 
-- Follow the instructions for [Building AAPS](../SettingUpAaps/BuildingAaps.md).
-- When you reach [module selection](#Building-APK-wearapk) in "Build the AAPS signed apk", make sure to select **`AndroidAPS.wear`**.
+- 按照[构建AAPS](../SettingUpAaps/BuildingAaps.md)的说明操作。
+- 当您到达“构建AAPS签名apk”中的[模块选择](#Building-APK-wearapk)时，请确保选择**`AndroidAPS.wear`**。
 
 ![Wear module](../images/Building-the-App/wear_build1.png)
 
-Select "**fullRelease**" to generate the **AAPS** Wear apk file.
+选择“**fullRelease**”以生成**AAPS** Wear apk文件。
 
 ![Wear module](../images/Building-the-App/wear_build2.png)
 
-If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
+如果你愿意，你可以从下拉菜单中选择构建**“pumpcontrolRelease”**，这样你就可以远程控制胰岛素泵，但没法闭环。
 
 ## Troubleshooting
 
-In the process of building the 3.2 full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
+在构建3.2版完整的**AAPS**应用（以及任何签名应用）时，Android Studio会在同一文件夹中生成一个.json文件。 然后，当您尝试构建下一个签名应用（如**AAPS** Wear应用）时，这会导致[未提交的更改](#troubleshooting_androidstudio-uncommitted-changes)错误。 解决这个问题的最快方法是导航到已构建完整AAPS应用程序的文件夹，您的文件夹可能类似于：
 
 `C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
 
-Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](../GettingHelp/TroubleshootingAndroidStudio.md) will help you to identify the specific file causing the issue, which could also be your keystore file. 
+将不需要的.json文件从文件夹中删除或移出。 然后再次尝试构建**AAPS** Wear应用。 如果这不起作用，更详细的[故障排除指南](../GettingHelp/TroubleshootingAndroidStudio.md)将帮助您确定导致问题的具体文件，这也可能是您的keystore文件。 

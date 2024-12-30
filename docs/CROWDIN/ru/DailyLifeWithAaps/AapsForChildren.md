@@ -6,22 +6,22 @@
 
 ### Исходный профиль
 
-Установка правильного [**профиля**](../SettingUpAaps/YourAapsProfile.md) (базал, DIA, ISF.) может оказаться трудной для детей, особенно с гормонами роста. Не торопитесь, убедитесь в том, что вы довольны базой, I:C, DIA и ISF ребенка,. Test them in real life with your kid next to you before starting remote monitoring and remote treatment. Weekends or school holidays might be a good time for that.<br/>
+Установка правильного [**профиля**](../SettingUpAaps/YourAapsProfile.md) (базал, DIA, ISF.) может оказаться трудной для детей, особенно с гормонами роста. Не торопитесь, убедитесь в том, что вы довольны базой, I:C, DIA и ISF ребенка,. Проверьте их в реальных условиях рядом с ребенком перед тем, как начать удаленный мониторинг и управление. Выходные или школьные каникулы могут быть хорошим временем для этого.<br/>
 
-### Monitor and adjust your child’s Profile where necessary
+### Отслеживайте и подстраивайте профиль вашего ребенка при необходимости
 
-As the child grows, **Profile** adjustments will be necessary in order to account for your child’s body’s demands and needs. However this issue exists for all type 1 children including those who are on other pumps or injections.
+По мере роста ребенка, будет необходима подстройка **профиля** с учетом нужд и потребностей его тела. Однако эта проблема существует для всех детей с первым типом диабета, включая тех, кто использует другие помпы или инъекции.
 
-### Keeping the phone in range
+### Постоянное наличие телефона рядом
 
-Think about how you will keep the child’s phone in range of their pump and **CGM**. Это еще то испытание с маленькими детьми, которые пока не несут ответственность за свой телефон. An **AAPS** phone with a good bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Many solutions exist, like insulin pump belts that also have space for a phone, or a harness to carry like a backpack.
+Подумайте о том, каким образом вы обеспечите нахождение телефона ребенка в зоне доступа его помпы и **НМГ**. Это еще то испытание с маленькими детьми, которые пока не несут ответственность за свой телефон. Выбирайте телефон для **AAPS** с хорошим Bluetooth соединением, также найдите комфортный для ребенка способ носки помпы и телефона. Есть множество решений этого вопроса, таких, как пояса для инсулиновых помп с кармашком для телефона или упряжки для носки по аналогии с рюкзаком.
 
-### How to protect your child’s AAPS from being misused?
+### Как защитить AAPS ребенка от неправильного использования?
 
-There are several protection settings available with **AAPS** to avoid the child or a stranger misuse of **AAPS**. See [Preferences > General > Protection](#Preferences-protection) to add password or biometric protection to boluses, settings changes, or even **AAPS** itself.
+В **AAPS** есть несколько настроек безопасности для предотвращения его неправильного использования как самим ребенком, так и незнакомцем. См. [Настройки > Основные > Защита](#Preferences-protection) для добавления пароля или биометрической защиты от болюсов, изменения настроек или даже доступа к самому **AAPS**.
 
-## Remote monitoring and remote control
+## Удаленный мониторинг и управление
 
-Remote monitoring is an essential functionality when using **AAPS** for children. See the dedicated section [Remote Monitoring](../RemoteFeatures/RemoteMonitoring.md) to explore possible options.
+Удаленный мониторинг - одна из важнейших функций при использовании **AAPS** для детей. См. раздел [Remote Monitoring](../RemoteFeatures/RemoteMonitoring.md) для изучения возможных вариантов.
 
-Remote monitoring and treatment can be hugely beneficial for parents of a type 1 child and this is particularly so when the child attends kindergarten and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan.<br/> Work out how adding in remote control is going to work with/enhance the existing plan. Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher “follow” phone.<br/> Examples for school care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook. 
+Удаленный мониторинг и управление могут быть довольно полезными для родителей детей с диабетом первого типа, особенно, когда ребенок посещает детский сад или начальную школу. Но стоит убедиться, что учителя и воспитатели в курсе терапии вашего ребенка.<br/> Выясните, как удаленное управление повлияет на имеющийся план терапии или улучшит его. Многие родители считают полезным наличие дополнительного канала связи с учителями, например, наличие у них маленького дешевого телефона для мониторинга.<br/> Примеры подобных услуг можно найти в [разделе файлов пользователей AAPS](https://www.facebook.com/groups/AndroidAPSUsers/files/) на Facebook. 

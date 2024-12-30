@@ -6,27 +6,27 @@
 
 **AAPS** history can be reviewed using the ‘History’ browser, from the Overview menu.
 
-![History Browser](../images/Maintenance/historybrowser.png)
+![历史浏览器](../images/Maintenance/historybrowser.png)
 
 Select the date you want to review.
 
-![History Browser](../images/Maintenance/historybrowser2.png)
+![历史浏览器](../images/Maintenance/historybrowser2.png)
 
 Display options are available like in the Overview main graph.
 
-![History Browser](../images/Maintenance/historybrowser3.png)
+![历史浏览器](../images/Maintenance/historybrowser3.png)
 
 The ‘history browser’ menu allows the selection of the time periods to be displayed in the following intervals: 6, 12, 18 or 24 hours.
 
-![History Browser](../images/Maintenance/historybrowser4.png)
+![历史浏览器](../images/Maintenance/historybrowser4.png)
 
 The ‘history browser’ can be shifted forward and backwards by selecting the arrows display as per the desired time intervals (as indicated below).
 
-![History Browser](../images/Maintenance/historybrowser5.png)
+![历史浏览器](../images/Maintenance/historybrowser5.png)
 
 To return to real time select this button:
 
-![History Browser](../images/Maintenance/historybrowser6.png)
+![历史浏览器](../images/Maintenance/historybrowser6.png)
 
 (reviewing-statistics)=
 ## **AAPS Statistics**

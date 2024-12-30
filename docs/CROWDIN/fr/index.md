@@ -64,31 +64,31 @@ Toutes les informations et le code décrits ici le sont à des fins d'informatio
 Changer la langue <./ChangeLanguage/ChangeLanguage.md>
 ```
 ```{toctree}
-:caption: 2) Getting started
+:caption: 2) Démarrage
 
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
-Component Overview <./Getting-Started/ComponentOverview.md>
-- Compatible pumps <./Getting-Started/CompatiblePumps.md>
-- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
-- Compatible phones  <./Getting-Started/Phones.md>
-- Compatible watches  <./Getting-Started/Watches.md>
+Introduction aux APS et à AAPS <./Getting-Started/Introduction.md>
+Se préparer à AAPS <./Getting-Started/PreparingForAaps.md>
+Les différents composants <./Getting-Started/ComponentOverview.md>
+- Pompes compatibles <./Getting-Started/CompatiblePumps.md>
+- MGCs compatibles <./Getting-Started/CompatiblesCgms.md>
+- Téléphones compatibles <./Getting-Started/Phones.md>
+- Montres compatibles  <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
-:caption: 3) Setting up AAPS
+:caption: 3) Installation d'AAPS
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Serveur de reporting <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+Compilation d'AAPS <./SettingUpAaps/BuildingAaps.md>
+Transfert et Installation d'AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Assistant de configuration <./SettingUpAaps/SetupWizard.md>
+Votre Profil AAPS <./SettingUpAaps/YourAapsProfile.md>
+Modifier la configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Configuration <./SettingUpAaps/ConfigBuilder.md>
+- Préférences <./SettingUpAaps/Preferences.md>
+Compléter les objectifs <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -110,23 +110,23 @@ Changement de fuseau horaire & Heure d'été <./DailyLifeWithAaps/TimezoneTravel
 ```
 
 ```{toctree}
-:caption: 5) Remote AAPS features
+:caption: 5) AAPS à distance
 
-Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
-Remote control <./RemoteFeatures/RemoteControl.md>
-SMS Commands <./RemoteFeatures/SMSCommands.md>
-Following Only <./RemoteFeatures/FollowingOnly.md>
+Surveillance à distance <./RemoteFeatures/RemoteMonitoring.md>
+Contrôle à distance <./RemoteFeatures/RemoteControl.md>
+Commandes SMS <./RemoteFeatures/SMSCommands.md>
+Suivi simple <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
 ```{toctree}
-:caption: 6) Wear OS Smartwatches
+:caption: 6) Montres connectées Wear OS
 
-AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
-Use the smartwatch <./WearOS/WearOsSmartwatch.md>
-Remote control <./RemoteFeatures/RemoteControlWearOS.md>
-Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
+AAPS pour Wear OS <./WearOS/BuildingAapsWearOS.md>
+Utilisation de la montre <./WearOS/WearOsSmartwatch.md>
+Contrôle à distance <./RemoteFeatures/RemoteControlWearOS.md>
+Document de référence Cadrans Personnalisés <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
+Site d'échange des cadrans personnalisés <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
@@ -142,12 +142,12 @@ Mise à jour vers une nouvelle version d'AAPS <./Maintenance/UpdateToNewVersion.
 ```
 
 ```{toctree}
-:caption: 8) Getting Help
+:caption: 8) Trouver de l'aide
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
-Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
+Où trouver de l'aide <./GettingHelp/WhereCanIGetHelp.md>
+Problèmes fréquents<./GettingHelp/GeneralTroubleshooting.md>
+Problèmes Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+Accès aux fichiers journaux <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}
@@ -169,11 +169,11 @@ Projet Open Humans <./SupportingAaps/OpenHumans.md>
 
 ```
 ```{toctree}
-:caption: 11) Resources
+:caption: 11) Ressources
 
-Glossary <./UsefulLinks/Glossary.md>
-FAQ <./UsefulLinks/FAQ.md>
-General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
-Dedicated Google account for AAPS (optional)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
-For Clinicians (outdated) <./UsefulLinks/ClinicianGuideToAaps.md>
+Glossaire <./UsefulLinks/Glossary.md>
+FAQ <./UsefulLinks/FAQ. d>
+Ressources générales pour le diabète et la boucle <./UsefulLinks/BackgroundReading.md>
+Compte Google dédié pour AAPS (facultatif)<. UsefulLinks/DedicatedGoogleAccountForAaps.md>
+Pour les cliniciens (obsolète) <./UsefulLinks/ClinicianGuideToAaps.md>
 ```

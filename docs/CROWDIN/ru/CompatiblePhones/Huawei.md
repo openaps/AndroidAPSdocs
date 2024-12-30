@@ -33,9 +33,9 @@ orphan: true
     
     ![Huawei - блокировка приложения](../images/Huawei_LockApp.png)
 
-For xDrip+, you must enable persistent notifications (within xDrip+ app):
+Для xDrip+ требуется включение постоянных уведомлений (в самом xDrip+):
 
-* Settings / less common settings / other misc options / Run Collector in foreground
+* Настройки / Менее распространенные настройки / Другие разные настройки / Приоритет службы сбора данных
   
   ![Настройки xdrip+ - коллектор на переднем плане](../images/xdrip_collector_foreground.png)
 

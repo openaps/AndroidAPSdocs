@@ -150,7 +150,7 @@ html_context = {
   'github_version': 'master/docs/',
 }
 
-html_theme_options = {
+#html_theme_options = {
   #'analytics_id': 'G-XXXXXXXXXX',  #  Provided by Google in your dashboard
   #'analytics_anonymize_ip': False,
   #'logo_only': False,
@@ -159,15 +159,15 @@ html_theme_options = {
   #'vcs_pageview_mode': '',
   #'style_nav_header_background': 'white',
   #'flyout_display': 'hidden',
-  'version_selector': False,
-  'language_selector': False,
+  #'version_selector': False,
+  #'language_selector': False,
   # Toc options
   #'collapse_navigation': True,
   #'sticky_navigation': True,
   #'navigation_depth': 4,
   #'includehidden': True,
   #'titles_only': False
-}
+#}
 
 """
 html_theme = 'default'
@@ -212,7 +212,7 @@ html_static_path = ['../../_static'] # path relative to languages conf.py
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
-#html_extra_path = []
+#html_extra_path = ["_html"]
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.

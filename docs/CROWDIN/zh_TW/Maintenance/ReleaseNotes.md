@@ -66,46 +66,9 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 (版本3300)=
 ## 版本 3.3.0.0
 
-發佈日期：XX-XX-202X
+3.3版即將推出 使用螢幕右下角的版本切換，查看最新內容。
 
-### 重要提示
-
-- 在更新前將舊的 ruffy 進行移轉到新的原生 Combo 驅動程式
-- 個人設置切換百分比現在將計入動態敏感度強度中
-
-### 變更
-
-- Equil 幫浦驅動程式 @EquilHack
-- Insight 驅動程式重新編寫為 kotlin @Philoul
-- Ottai CGM 來源 @ottai-developer
-- 移除舊的 ruffy 依賴的 Combo 驅動程式
-- 新的內部模組結構 @MilosKozak
-- 將持久性層與主程式碼分離 @MilosKozak
-- 新的 QuickWizard 選項 @radicalb
-- 建置檔案重新編寫為 kts @MilosKozak
-- 算法重新編寫為 kotlin 以改善效能 @MilosKozak
-- 大量新的單元測試 @MilosKozak 和其他人
-- 更多的程式碼轉換為 kotlin @MilosKozak
-- 簡易模式 @MilosKozak
-- 新的偏好設定管理，xml -> kotlin @MilosKozak
-- 新的 CI 配置，在自己的伺服器上運行 CI @MilosKozak
-- 穿戴裝置和錶盤的改善 @Philoul @MilosKozak @olorinmaia
-- 測試模式下的隨機碳水化合物 @MilosKozak
-- 函式庫更新至最新版本，toml @MilosKozak
-- 在 AAPS 客戶端中顯示可變敏感度
-- 修正 TDD 計算中的錯誤 @MilosKozak
-- BolusWizard 使用者介面改善 @kenzo44
-- 更新目標 @MilosKozak
-- 在幫浦暫停模式中不同的胰島素按鈕顏色 @jbr77rr
-- 更多顏色主題設計 @jbr77rr
-- 新的自動化觸發 @jbr77rr
-- Medtrum 驅動程式改善 @jbr77rr
-- 新的圖表比例選單 @Philoul
-- 移轉至 kotlin 2.0，java 21 @MilosKozak
-- 允許輸入負碳水化合物 @MilosKozak
-- 無人值守匯出 @vanelsberg
-- 從自動化操作中檢視功能塊 @Philoul
-- 結合來自 AAPS、AAPSClient 和 AAPSClient2 的手錶錶盤，以監控更多患者 @Philoul @MilosKozak
+![打開語系選單](../images/documentation_language_menu.png)
 
 (version3200)=
 ## 3.2.0.0 版本獻給 @Philoul

@@ -1,218 +1,218 @@
-# Operation of AAPS via your Wear OS smartwatch
+# 通过您的Wear OS智能手表操作AAPS
 
 (Watchfaces-aaps-watchfaces)=
 
-## AAPS Watchfaces
+## AAPS表盘
 
 ```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.
-Wear OS 5 changes locked the watchfaces: only complications can be used.
+AAPS表盘适用于API级别为28至33的Wear OS智能手表。
+Wear OS 5的更改锁定了表盘：仅可使用小工具。
 ```
 
-There are several watchfaces to choose from that are included in the base build of the AAPS Wear APK. These watchfaces include average delta, IOB, currently active temp basal rate and basal profiles and a CGM readings graph.
+在AAPS Wear APK的基本构建中，包含了几种可供选择的表盘。 这些表盘包括平均变化量、IOB、当前活跃的临时基础率、基础率配置文件以及持续葡萄糖监测（CGM）读数图表。
 
-Some available actions on the watchfaces are:
+表盘上的一些可用操作包括：
 
-* Double tap on the BG to get to the AAPS menu
-* Double tap on the BG graph to change the graph's time scale
+* 双击血糖值进入AAPS菜单
+* 双击血糖图表更改图表的时间尺度
 
-## Configuration
+## 配置
 
-Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md).
+在[配置构建器](../SettingUpAaps/ConfigBuilder.md)中启用Wear模块。
 
-Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+使用Wear Preferences定义在计算通过手表给予的剂量时应考虑的变量（例如，15分钟趋势、COB...）。
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+如果您想通过手表进行大剂量等操作， 那么在“手表设置”中，您需要启用“从手表控制”。
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![手表设置](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+通过手表选项卡或汉堡菜单（如果未显示选项卡，则在屏幕左上角），您可以：
 
-* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* 重新发送所有数据。 如果手表有一段时间未连接，并且您想将信息推送到手表，这可能很有帮助。
+* 直接从手机打开手表上的设置。
 
-Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
+确保AAPS的通知在手表上未被阻止。 操作的确认（例如，剂量、临时目标）会通过通知发送，您需要滑动并点击确认。
 
-## Accessing main menu of AAPS
+## 访问AAPS主菜单
 
-To access main menu of AAPS you can use on of following options:
+要访问AAPS主菜单，您可以使用以下选项之一：
 
-* double tap on your BG value
-* select AAPS icon in watch applications menu
-* tap on AAPS complication (if configured for menu)
+* 双击你的BG值
+* 在手表应用程序菜单中选择AAPS图标
+* 点击AAPS小工具（如果已配置为菜单）
 
-## Settings (in wear watch)
+## 设置（在Wear手表上）
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+要访问表盘设置，请进入AAPS主菜单，向上滑动并选择“设置”。
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+实心星号表示启用状态（**开**），空心星号表示设置已禁用（**关**）：
 
 ![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### AAPS伴侣参数
 
-* **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* **剂量时震动**（默认`开`）：
+* **操作单位**（默认为`mg/dl`）：如果**开启**，动作单位为`mg/dl`；如果**关闭**，单位为`mmol/l`。 在设置目标时间（TT）时使用。
 
 (Watchfaces-watchface-settings)=
 
-### Watchface settings
+### 表盘设置
 
-* **Show Date** (default `Off`): note, date is not available on all watchfaces
-* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
-* **Show COB** (default `On`): Display or not COB value
-* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
-* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
-* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
-* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
-* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
-* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
-* **Show BG** (default `On`): Display or not last BG value
-* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
-* **Show Ago** (default `On`): show how many minutes since last reading.
-* **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
-* **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
-* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
-* **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
+* **显示日期**（默认`关`）：请注意，并非所有表盘都显示日期。
+* **显示IOB**（默认`开`）：显示或不显示IOB值（详细值设置在AAPS Wear参数中）。
+* **显示COB**（默认`开`）：显示或不显示COB值。
+* **显示变化量**（默认`开`）：显示或不显示过去5分钟的血糖变化量。
+* **显示平均变化量**（默认`开`）：显示或不显示过去15分钟的平均血糖变化量。
+* **显示手机电池**（默认`开`）：手机电池百分比。 低于30%时显示为红色。
+* **显示Rig电池**（默认`关`）：Rig电池是手机电池、泵电池和传感器电池的综合（通常为三者中的最低值）。
+* **显示基础率**（默认`开`）：显示或不显示当前基础率（单位为U/h，如果是TBR单位为%）。
+* **显示闭环状态**（默认`开`）：显示自上次闭环运行以来的分钟数（如果超过15分钟，值周围的箭头会变红）。
+* **显示血糖**（默认`开`）：显示或不显示最后的血糖值。
+* **显示趋势箭头**（默认`开`）：显示或不显示血糖趋势箭头。
+* **显示Ago**（默认`开`）：显示最后一次读数的时间。
+* **深色模式**（默认`开`）：您可以在黑色背景和白色背景之间切换（Cockpit和Steampunk表盘除外）。
+* **高亮基础率**（默认`关`）：提高基础率和临时基础率的可见性。
+* **匹配分隔符**（默认`关`）：对于AAPS、AAPSv2和AAPS（大号）表盘，显示对比背景的分隔符（**关**）或与背景颜色匹配的分隔符（**开**）。
+* **图表时间范围**（默认`3小时`）：您可以在子菜单中选择图表的最大时间范围，介于1小时和5小时之间。
 
-### User Interface setting
+### 用户界面设置
 
-* **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
+* **输入设计**：使用此参数，您可以选择在输入AAPS命令（临时目标、胰岛素、碳水化合物...）时“+”和“-”按钮的位置。
 
 ![Input design options](../images/Watchface_InputDesign.png)
 
-### Specific watchface parameters
+### 特定表盘参数
 
-#### Steampunk watchface
+#### Steampunk表盘
 
-* **Delta Granularity** (default `Medium`)
+* **变化量粒度**（默认`中等`）
 
 ![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Circle WF
 
-* **Big Numbers** (default `Off`): Increase text size to improve visibility
-* **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
-* **Light Ring History** (default `On`): Ring history more discreet with a darker gray
-* **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
+* **大号数字**（默认`关`）：增大文本大小以提高可见性。
+* **环形历史**（默认`关`）：以绿色环内的灰色环图形显示血糖历史。
+* **浅色环形历史**（默认`开`）：环形历史更不显眼，使用更深的灰色。
+* **动画**（默认`开`）：启用时，在受支持的手表且不在省电低分辨率模式下，表盘圆形将动画显示。
 
-### Commands settings
+### 命令设置
 
-* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
-* **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
-* **Single Target** (default `On`):
+* **菜单中的向导**（默认`开`）：允许在主菜单中使用向导界面输入碳水化合物并设置剂量。
+* **菜单中的填充**（默认`关`）：允许从手表执行填充/灌注操作。
+* **单一目标**（默认`开启`）
   
-  * `On`: you set a single value for TT
-  * `Off`: you set Low target and high target for TT
+  * `开`：您设置一个单一的临时目标值。
+  * `关`：您设置低目标和高目标作为临时目标。
 
-* **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
+* **向导百分比**（默认`关闭`）：允许根据向导进行大剂量校正（在确认通知前输入的百分比值）。
 
 (Watchfaces-complications)=
 
-## Complications
+## 小部件
 
-*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+*小部件*一词源自传统制表业，用于描述在主表盘上增加的额外功能——如另一个小窗口或子表盘（显示日期、星期几、月相等）。 Wear OS 2.0沿用了这一比喻，允许将自定义数据提供商（如天气、通知、健身计数器等）添加到任何支持小部件的表盘上。
 
-AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+AAPS Wear OS应用自版本`2.6`起支持小工具，并允许任何支持小工具的第三方表盘配置为显示与AAPS相关的数据（如血糖及其趋势、IOB、COB等）。
 
-Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+小部件还可以作为访问AAPS功能的**快捷方式**。 通过点击它们，您可以打开与AAPS相关的菜单和对话框（具体取决于小部件类型和配置）。
 
 ![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
-### Complication Types
+### 小部件类型
 
-AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+AAPS Wear OS应用仅提供原始数据，根据预定义格式。 第三方表盘决定在哪里以及如何呈现小工具，包括其布局、边框、颜色和字体。 在许多可用的Wear OS小工具类型中，AAPS使用：
 
-* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
-* `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
-* `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
-* `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
+* `短文本` - 包含两行文字，每行7个字符，有时分别称为值和标签。 通常呈现为一个圆圈或小型药丸形状内，一行位于另一行下方，或者并排显示。 这是一种空间非常有限的小部件。 AAPS会尝试删除不必要的字符以适应这种限制：例如，通过四舍五入值、删除值前后的零等。
+* `长文本` - 包含两行文本，每行约20个字符。 通常渲染在矩形或长药丸形状内——一行在另一行下方。 它用于更多细节和文本状态。
+* `范围值` - 用于预定义范围内的值，如百分比。 它包含图标、标签，通常渲染为圆形进度表盘。
+* `大图片` - 当受表盘支持时，可用作背景的自定义背景图像。
 
-### Complication Setup
+### 小部件设置
 
-To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+要将小部件添加到表盘上，请长按并点击下方的齿轮图标进行配置。 具体配置方式取决于表盘的设计——您可以点击占位符，或者进入表盘的小部件设置菜单。 AAPS的小部件在AAPS菜单项下分组显示。
 
-When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+在表盘上配置小部件时，Wear OS会展示并筛选能够适配表盘所选小部件位置的小部件列表。 如果在列表中找不到特定的小部件，很可能是因为其类型不适用于该位置。
 
-### Complications provided by AAPS
+### AAPS提供的小部件
 
-AAPS provides following complications:
+AAPS提供以下小部件：
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
-* **BR, CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Basal Rate* on the first line and *Carbs on Board* and *Insulin on Board* on the second line.
-* **Blood Glucose** (`SHORT TEXT`, opens *Menu*): Displays *Blood Glucose* value and *trend* arrow on the first line and *measurement age* and *BG delta* on the second line.
-* **CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Carbs on Board* on the first line and *Insulin on Board* on the second line.
-* **CoB Detailed** (`SHORT TEXT`, opens *Wizard*): Displays current active *Carbs on Board* on the first line and planned (future, eCarbs) Carbs on the second line.
-* **CoB Icon** (`SHORT TEXT`, opens *Wizard*): Displays *Carbs on Board* value with a static icon.
-* **Full Status** (`LONG TEXT`, opens *Menu*): Shows most of the data at once: *Blood Glucose* value and *trend* arrow, *BG delta* and *measurement age* on the first line. On the second line *Carbs on Board*, *Insulin on Board* and *Basal Rate*.
-* **Full Status (flipped)** (`LONG TEXT`, opens *Menu*): Same data as for standard *Full Status*, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
-* **IoB Detailed** (`SHORT TEXT`, opens *Bolus*): Displays total *Insulin on Board* on the first line and split of *IoB* for *Bolus* and *Basal* part on the second line.
-* **IoB Icon** (`SHORT TEXT`, opens *Bolus*): Displays *Insulin on Board* value with a static icon.
-* **Uploader/Phone Battery** (`RANGED VALUE`, opens *Status*): Displays battery percentage of AAPS phone (uploader), as reported by AAPS. Displayed as percentage gauge with a battery icon that reflects reported value. It may be not updated in real-time, but when other important AAPS data changes (usually: every ~5 minutes with new *Blood Glucose* measurement).
+* **基础率、COB&IOB**（`短文本`，打开*菜单*）：第一行显示*基础率*，第二行显示*COB*和*IOB*。
+* **血糖值**（`短文本`，打开*菜单*）：第一行显示*血糖值*和*趋势*箭头，第二行显示*测量时间*和*血糖变化量*。
+* **COB&IOB**（`短文本`，打开*菜单*）：第一行显示*COB*，第二行显示*IOB*。
+* **详细COB**（`短文本`，打开*向导*）：第一行显示当前活跃的*COB*，第二行显示计划的（未来的，预估碳水）碳水。
+* **COB图标**（`短文本`，打开*向导*）：以静态图标显示*COB*的值。
+* **完整状态**（`长文本`，打开*菜单*）：一次性显示大部分数据：第一行显示*血糖*值、*趋势*箭头、*血糖变化量*和*测量时间*。 第二行显示*COB*、*IOB*和*基础率*。
+* **翻转完整状态**（`长文本`，打开*菜单*）：与标准*完整状态*显示相同的数据，但两行内容互换。 适用于只显示`长文本`中一行内容的表盘。
+* **详细COB**（`短文本`，打开*大剂量*）：第一行显示总*COB*，第二行显示*大剂量*和*基础部分*在*IOB*中的占比。
+* **IOB图标**（`短文本`，打开*大剂量*）：以静态图标显示*IOB*的值。
+* **上传器/手机电量**（`范围值`，打开*状态*）：显示AAPS手机（上传器）的电池百分比，由AAPS报告。 以百分比指示器和反映报告值的电池图标显示。 可能不是实时更新，而是在其他重要AAPS数据变化时更新（通常约为每5分钟一次，随新的*血糖*测量值更新）。
 
-Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
+此外，还有三种`大图像`类型的小部件：**深色壁纸**、**灰色壁纸**和**浅色壁纸**，它们显示静态的AAPS壁纸。
 
-### Complication related settings
+### 与小部件相关的设置
 
-* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
-  * *Default*: action specific to complication type *(see list above)*
-  * *Menu*: AAPS main menu
-  * *Wizard*: bolus wizard - bolus calculator
-  * *Bolus*: direct bolus value entry
-  * *eCarb*: eCarb configuration dialog
-  * *Status*: status sub-menu
-  * *None*: Disables tap action on AAPS complications
-* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
+* **小部件点击动作** （默认`默认`）：决定用户点击小工具时打开的对话框： 
+  * *默认*：特定于小工具类型的操作（见上表）。
+  * *菜单*：AAPS主菜单。
+  * *向导*：大剂量向导-大剂量计算器
+  * *大剂量*：直接剂量值输入。
+  * *eCarb*：eCarb配置对话框。
+  * *状态*：状态子菜单。
+  * *无*：禁用AAPS小工具的点击操作。
+* **小工具中的Unicode**（默认`开`）：当`开`时，小工具将使用Unicode字符表示符号，如`Δ`（Delta）、`⁞`（垂直点分隔符）或`⎍`（基础率符号）。 它们的渲染取决于字体，这可能非常依赖于表盘。 此选项允许在需要时切换Unicode符号`关`——如果自定义表盘使用的字体不支持这些符号——以避免图形故障。
 
 (WearOsSmartwatch-wear-os-tiles)=
 
-## Wear OS Tiles
+## Wear OS功能块（Tiles）
 
-Wear OS Tiles provide easy access to users' information and actions to get things done. The tiles are only available on Android smartwatches running on Wear Os version 2.0 and higher.
+Wear OS Tiles 可让用户轻松访问信息和执行操作以完成任务。 该功能仅适用于运行 Wear OS 2.0 及更高版本的 Android 智能手表。
 
-Tiles allow you to quickly access actions on the AAPS application without going through the watch face menu. The tiles are optional and can be added and configured by the user.
+Tiles 功能让您无需通过表盘菜单即可快速访问 AAPS 应用程序中的操作。 Tiles 是可选的，用户可以根据需要进行添加和配置。
 
-The tiles are used "next to" any watch face. To access a tile, when enabled, swipe right to left on your watch face to show them.
+Tiles 可与任何表盘“并排”使用。 要访问已启用的 Tile，只需在表盘上从右向左滑动即可显示。
 
-Please note; that the tiles do not hold the actual state of the AAPS phone app and will only make a request, which has to be confirmed on the watch before it is applied.
+请注意，图块不会保存AAPS手机应用的实际状态，并且仅会发出请求，该请求需要在手表上确认后才能应用。
 
-## How to add Tiles
+## 如何添加Tiles
 
-Before using the tiles, you have to switch on "Control from Watch" in the "Wear OS" settings of Android APS.
+在使用Tiles之前，您必须在Android APS的“Wear OS”设置中切换“从手表控制”。
 
 ![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
 
-Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
+根据您的Wear OS版本、品牌以及智能手机，有两种启用Tiles的方式：
 
-1. On your watch, from your watch face; 
-  * Swipe right to left till you reach the "+ Add tiles" 
-  * Select one of the tiles.
-2. On your phone open the companion app for your watch. 
-  * For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
-  * In the click on the section "Tiles", followed by "+ Add" button
-  * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
-  * The order of the tiles can be changed by dragging and dropping
+1. 在您的手表上，从表盘开始； 
+  * 向左滑动直到到达“+ 添加tiles”。 
+  * 选择一个tiles。
+2. 在您的手机上打开手表的配套应用。 
+  * 对于三星，打开“Galaxy Wearable”；对于其他品牌，打开“Wear OS”。
+  * 点击“Tiles”部分，然后点击“+ 添加”按钮。
+  * 通过选择它来找到您想添加的AAPS Tiles。 ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
+  * 可以通过拖放更改tiles的顺序。
 
-The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
+Tiles的内容可以通过长按tile并点击“编辑”或“齿轮图标”按钮进行自定义。
 
-### APS(Actions) Tile
+### APS（操作）Tile
 
-The action tile can hold 1 to 4 user-defined action buttons. To configure, long-press the tile, which will show the configuration options. Similar actions are also available through the standard watch menu.
+操作Tiles可以容纳1到4个用户定义的操作按钮。 要进行配置，请长按该Tiles，这将显示配置选项。 类似的操作也可以通过标准的手表菜单来完成。
 
-Actions supported in the Action tile can request the AAPS phone app for:
+"操作"tile中支持的操作可以请求AAPS手机应用执行以下操作：
 
-* **Calc**; do a bolus calculation, based on carb input and optional a percentage [1]
-* **Insulin**; request insulin delivery by entering the unit of insulin
-* **Treatment**; request both insulin delivery and add carbs
-* **Carbs**; add (extended) carbs
-* **TempT**; set a custom temporary target and duration
+* **计算**；基于碳水化合物输入和可选百分比执行剂量计算[1]。
+* **胰岛素**；通过输入胰岛素单位请求胰岛素输送”
+* **治疗**；请求给予胰岛素并添加碳水化合物。
+* **碳水化合物**；添加（延长）碳水化合物。
+* **TempT**；设置自定义的临时目标值和持续时间
 
 ![Wear action tile, sample calculator](../images/wear_actions.png)
 
-[1] Via, the Wear OS menu, set the "Calculator Percentage" option to "ON" to show the percentage input in the bolus calculator. The default percentage is based on the phone settings in the "Overview" section ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result) When the user does not provide a percentage, the default value from the phone is used. Configure the other parameters for the bolus calculator in the phone app via "Preferences" "Wizard Settings".
+[1] 通过Wear OS菜单，将“计算器百分比”选项设置为“开启”，以在大剂量计算器中显示百分比输入。 默认百分比基于“概览”部分中[“输送大剂量向导结果的一部分%”](#Preferences-deliver-this-part-of-bolus-wizard-result)的手机设置。当用户未提供百分比时，将使用手机中的默认值。 请通过手机应用中的“偏好设置”-“向导设置”来配置大剂量计算器的其他参数。
 
-### AAPS(Temp Target) Tile
+### AAPS（临时目标）Tile
 
 The Temp Target Tile can request a temporary target based on AAPS phone presets. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](#Preferences-default-temp-targets) and set the duration and targets for each preset. Configure the visible actions on the tile through the tile settings. Long press the tile to show the configuration options and select 1 to 4 options:
 

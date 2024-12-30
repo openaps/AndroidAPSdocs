@@ -115,7 +115,7 @@ The red warning sign is signaling you to get active immediately: You are receivi
 
 ![Rotes BG-Warndreieck](../images/bg_warn_red.png)
 
-Du musst herausfinden, warum du doppelte BG-Daten erhältst:
+Du musst herausfinden, warum Du doppelte Glukosewert-Daten erhältst:
 
 * Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (Details zu heroku [findest Du hier](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
 * Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
@@ -253,7 +253,7 @@ To show this information, click the triangle on the right side of the main graph
     
     *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
 
-* **Dunkelorange** Linie: aCOB (beschleunigte Kohlenhydratabsorption)
+* **Dunkelorange** Linie: COB (beschleunigte Kohlenhydratabsorption)
     
     Ähnlich wie COB, aber unter Annahme einer festen Kohlenhydrat-Absorptionsrate von 10 mg/dL/5m (-0,555 mmol/l/5m). Veraltet und nur begrenzt nützlich.
     
@@ -534,9 +534,9 @@ Wie die meisten Faustregeln gilt, dass dies nicht allgemeingültig ist. Hinweis:
 
 (AapsScreens-insulin-profile)=
 
-## Insulin Profil
+## Insulinprofil
 
-![Insulin Profil](../images/Screenshot_insulin_profile.png)
+![Insulinprofil](../images/Screenshot_insulin_profile.png)
 
 This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
 

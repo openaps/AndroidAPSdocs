@@ -262,7 +262,7 @@ Press **Next** to continue the activation process. Press **Discard** to discard 
 
 The driver will try to determine the current status of the patch activation. If this was successful it will go into the activation progress at the current step.
 
-## Overview
+## 概览
 
 The overview contains the current status of the Medtrum patch. It also contains buttons to change the patch, reset alarms and refresh the status.
 
