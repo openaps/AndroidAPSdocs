@@ -87,7 +87,7 @@ Wenn Du Probleme mit **AAPS** v3 hast ('NS Access Token' wird nicht akzeptiert) 
 
 ### AAPSClient-Funktionen sind unter anderem:
 
-| Tab / Hamburger     | Features                                                                                                                                                                                              |
+| Tab / Hamburger     | Funktionalitäten                                                                                                                                                                                      |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Action** Tab      | - Profile Switch <br>- Temp Target<br>- BG Check<br>- CGM Sensor Insert<br>- Note<br>- Exercise<br>- Announcement<br>- Question?<br>- History Browser |
 | **Food** Tab        |                                                                                                                                                                                                       |
