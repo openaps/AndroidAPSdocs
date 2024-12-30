@@ -24,9 +24,9 @@ Diese Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein k
         - Medtrum TouchCare Nano mit Pumpenbasis Ref.: **MD0201** und **MD8201**.
         - Medtrum TouchCare 300U mit Pumpenbasis Ref.: **MD8301**.
         - Wenn Du ein bisher nicht unterstütztes Modell hast und bereit bist es zu spenden oder Du beim Testen helfen möchtest, kontaktiere uns über den Discord-Kanal [hier](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
+* **AAPS Version 3.2.0.0 oder neuer erstellt und installiert** nach den [AAPS erstellen](../SettingUpAaps/BuildingAaps.md)-Anweisungen.
 * **Kompatibles Android Smartphone** mit Bluetooth-Verbindung (Bluetooth Low Energy, BLE)
-    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
+    - Siehe dazu auch die AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
 * [**Kontinuierliche Glukosemessung (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
 ## Bevor du startest
@@ -99,7 +99,7 @@ Diese Einstellungen ändern die Art und Weise, wie AAPS Benachrichtigung bei nic
     - Reservoir fast leer (20 IE)
     - Patch-Ablaufwarnung
 
-In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
+In jedem Fall werden diese Warnungen auch auf der Medtrum-Übersichtsseite unter [Aktive Alarme](#medtrum-active-alarms) angezeigt.
 
 (medtrum-patch-expiration)=
 #### Patch Ablaufdatum
@@ -114,7 +114,7 @@ Wenn diese Einstellung deaktiviert ist, wird der Patch keine Warnung abgeben und
 
 ***Voreingestellt: 72 Stunden.***
 
-This setting changes the time of the expiration warning, when [Patch Expiration](#medtrum-patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
+Diese Einstellung ändert, wenn das [Patch Ablaufdatum](#medtrum-patch-expiration) aktiviert ist, den Zeitpunkt (in Stunden nach der Aktivierung) zu dem AAPS eine Benachrichtigung anzeigen wird.
 
 #### Stündliches Maximum Insulin
 
@@ -184,7 +184,7 @@ Diese Einstellung kann für eine Medtrum-Pumpe geändert werden. Aus Sicherheits
 
 **Bevor Du weiter machst:**
 - Habe Deine Medtrum Nano Pumpenbasis und ein Reservoir-Patch zur Hand.
-- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+- Stell sicher, dass AAPS korrekt eingerichtet und ein [Profil aktiviert ist](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 - Andere Geräte, die sich mit der Medtrum-Pumpe verbinden könnten, sind deaktiviert (PDM und Medtrum-App)
 
 #### Patch über den Medtrum Übersichts-Reiter aktivieren
@@ -341,7 +341,7 @@ Diese Schaltfläche aktualisiert den Patch-Status.
 
 ### Wechsele Patch:
 
-Diese Schaltfläche startet den Prozess zum Wechseln des Patches. See [Activate patch](#medtrum-activate-patch) for more information.
+Diese Schaltfläche startet den Prozess zum Wechseln des Patches. Weitere Informationen findest Du unter [Patch aktivieren](#medtrum-activate-patch).
 
 ### Alarme zurücksetzen
 
@@ -351,19 +351,19 @@ Die Alarmtaste wird auf der Übersicht angezeigt, wenn es einen aktiven Alarm, d
 
 Tippe auf **Alarme zurücksetzen**, um die Alarme zurückzusetzen und den normalen Betrieb fortzusetzen.
 
-## Switching phone, export/import settings
+## Smartphone wechseln, Export/Import-Einstellungen
 
 Falls Du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
-* Transfer settings from old to new phone, and import them into AAPS
+* [Exportiere die Einstellungen](../Maintenance/ExportImportSettings.md) auf Deinem alten Smartphone
+* Übertrage die Einstellungen vom alten auf das neue Smartphone und importiere sie in AAPS
 
-The imported settings file has to be of the same patch session that you are currently using, otherwise the patch will not connect.
+Die importierte Einstellungsdatei muss in der gleichen Patch-Session, die aktuell aktiv ist, exportiert worden sein. Ist dem nichts so, wird sich der Patch nicht verbinden lassen.
 
-After a settings import the driver will sync history with the pump, this can take a while depending on the age of the settings file.
+Nach dem Import der Einstellungen erfolgt eine Synchronisierung der Pumpenhistorie. Je nach Alter der Einstellungsdatei kann das eine Weile dauern.
 
-From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen: ![Sync progress](../images/medtrum/SyncProgress.png)
+Ab AAPS Version 3.3.0.0 wird der Synchronisations-Fortschritt auf dem Startbildschirm angezeigt: ![Synchronisationsfortschritt](../images/medtrum/SyncProgress.png)
 
-## Troubleshooting
+## Problembehandlung
 
 ### Verbindungsprobleme
 
@@ -386,5 +386,5 @@ Die gesamte Entwicklungsarbeit rund um das Medtrum-Modul wird von der Community 
 
 -  **Level 0:** Lies den entsprechenden Abschnitt dieser Dokumentation um sicherzustellen, dass du verstehst, wie die Funktion, mit der Du Schwierigkeiten hast, funktionieren soll.
 -  **Level 1:** Solltest Du trotz dieses Dokuments ein Problem nicht lösen können, tritt dem *#Medtrum* **Discord**-Channel bei, indem Du auf diesen [Einladungs-Link](https://discord.gg/4fQUWHZ4Mw) klickst.
--  **Level 2:** Vorhandene 'Issues' durchsuchen um zu sehen, ob Dein Problem bereits in den [Issues](https://github.com/nightscout/AAPS/issues) gemeldet wurde. Falls vorhanden, bitte bestätige/kommentiere/ergänze Informationen zu Deinem Problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
+-  **Level 2:** Vorhandene 'Issues' durchsuchen um zu sehen, ob Dein Problem bereits in den [Issues](https://github.com/nightscout/AAPS/issues) gemeldet wurde. Falls vorhanden, bitte bestätige/kommentiere/ergänze Informationen zu Deinem Problem. Wenn nicht, erstelle bitte ein [neues Issue](https://github.com/nightscout/AndroidAPS/issues) und füge [Deine Protokolldateien](../GettingHelp/AccessingLogFiles.md) (Logs) hinzu.
 -  **Sei geduldig - die meisten Mitglieder unserer Community sind gutmütige Freiwillige und die Lösung von Problemen erfordert oft Zeit und Geduld von Nutzern und Entwicklern.**
