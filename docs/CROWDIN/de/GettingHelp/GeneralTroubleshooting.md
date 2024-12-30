@@ -84,7 +84,7 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 
 ## CGM
 
-* [General](#general-cgm-troubleshooting)
+* [Allgemein](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
 * [Libre 2](#Libre2-experiences-and-troubleshooting)
