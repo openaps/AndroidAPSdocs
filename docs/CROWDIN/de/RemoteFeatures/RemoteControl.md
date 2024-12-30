@@ -169,13 +169,13 @@ Es gibt auf diesem Bildschirm eine Vielzahl an Statusinformationen des **AAPS**-
 8. Alter des Insulins im Reservoir
 9. Kanülenalter
 10. Akkustand des AAPS-Smartphones
-11. Größe Deiner Datenbank. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+11. Größe Deiner Datenbank. Wenn diese zu voll wird (nur DIY Nightscout - bei gehosteten Diensten einfach ignorieren), können Verbindungsprobleme auftreten. Du kannst die Größe durch Datenlöschungen im Admin-Tool-Menü reduzieren (über das Hamburger-Menü).
 
 ![grafik](../images/remote-control-30.png)
 
 ![grafik](../images/remote-control-31.png)
 
-Press "refresh" at the bottom of the page to close the popup.
+Tippe auf „Aktualisieren“ am unteren Ende der Seite, um das Popup zu schließen.
 
 ### Behandlungen über die Nightscout-App an AAPS senden
 
@@ -194,23 +194,23 @@ Einige der hilfreichsten **Nightscout**-Befehle sind in der unten stehenden Tabe
 
 #### Nightscout Befehls-Tabelle
 
-| Most commonly used treatments                             | Function, example of when command is useful                                                                                                                                                                                                               |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Correction bolus**                                      | Allows you to announce **but <u>not</u> bolus** insulin.<br>Very useful for cancelling negative insulin to prevent a hypo,<br>for example in the middle of the night, if the profile has been too strong.                                     |
-| **Kohlenhydrat-Korrektur**                                | Announce carbs now                                                                                                                                                                                                                                        |
-| **Temporary Target**<br>**Temporary Target cancel** | Allows temp targets to be set and cancelled.<br>Note that cancelling does not always work,<br>in this instance you can set a new target for a short time period (2 min)<br>which will then revert back to the normal target afterwards. |
-| **Profilwechsel**                                         | Allows you to check the current profile which is running,<br>and switch to another profile, either permanently,<br>or for a defined length of time (mins).                                                                                    |
+| Häufig verwendete Behandlungen                             | Funktion und Anwendungsbeispiel                                                                                                                                                                                                                                           |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Korrektur-Bolus**                                        | Hiermit kannst Du Insulin ankündigen, **aber <u>keinen Bolus</u>** abgeben. <br>Das hilft beim Ausgleichen negativen IOBs, um eine Hypo, <br>z. B. aufgrund eines zu starken Profils mitten in der Nacht, zu vermeiden.                                       |
+| **Kohlenhydrat-Korrektur**                                 | Kohlenhydrate sofort ankündigen                                                                                                                                                                                                                                           |
+| **Temporäres Ziel**<br>**Temporäres Ziel abbrechen** | Erlaubt das Setzen und Abbrechen von temporären Zielen.<br>Beachte, dass das Abbrechen nicht immer funktioniert<br>. In diesem Fall kannst Du für einen kurzen Zeitraum (2 Min.) ein neues Ziel setzen, das danach wieder auf das normale Ziel „zurückfällt“. |
+| **Profilwechsel**                                          | Ermöglicht Dir, das aktive Profil zu überprüfen <br>und auf ein anderes Profil zu wechseln, entweder permanent <br>oder für eine definierte Zeitspanne (in Minuten).                                                                                          |
 
 
 
-| Less widely used commands                                                                                                           | Function, example of when command is useful                                                                                                                              |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **BG check**                                                                                                                        | Send a BG check to AAPS.                                                                                                                                                 |
-| **Snack bolus**<br>**Meal bolus**<br>**Combo bolus**                                                                    | Can announce carbs (plus proteins and fat)<br> from 60 min in the past to 60 min in the future.<br>Combo bolus allows insulin announcement at the same time. |
-| **Announcement**<br>**Note**<br>**Question**<br>**Exercise**<br>**Open APS offline**<br>**DAD alert** | Add these info notes (DAD = diabetic dog alert).                                                                                                                         |
-| **Pump site change**<br>**Battery change**<br>**Insulin cartridge change**                                              | Announces these pump changes.                                                                                                                                            |
-| **CGM sensor start**<br>**CGM sensor insert**<br>**CGM sensor stop**                                                    | Announces these CGM changes.                                                                                                                                             |
-| **Temp basal start**<br>**Temp basal end**                                                                                    | Most useful in open looping.                                                                                                                                             |
+| Seltener verwendete Befehle                                                                                                          | Funktion und Anwendungsbeispiel                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **BG-Messung**                                                                                                                       | Sendet einen BZ-Test an AAPS.                                                                                                                                                                             |
+| **Snack-Bolus**<br>**Mahlzeiten-Bolus**<br>**Verzögerter Bolus**                                                         | Kann Kohlenhydrate (plus Proteine und Fette)<br> von 60 Minuten in der Vergangenheit bis 60 Minuten in der Zukunft ankündigen.<br>Combo-Bolus erlaubt gleichzeitig auch Insulin anzukündigen. |
+| **Ankündigung**<br>**Bemerkung**<br>**Frage**<br>**Bewegung**<br>**Open APS Offline**<br>**DAD Alarm** | Fügt die entsprechenden Informationen hinzu.                                                                                                                                                              |
+| **Pumpen-Katheter-Wechsel**<br>**Pumpenbatterie wechseln**<br>**Insulin-Ampullenwechsel**                                | Vermerkt diese Pumpen-Änderungen.                                                                                                                                                                         |
+| **CGM Sensor Start**<br>**CGM Sensor Wechsel**<br>**CGM Sensor Stopp**                                                   | Vermerkt diese Sensor-Änderungen.                                                                                                                                                                         |
+| **Start temporäre Basalrate**<br>**Ende temporäre Basalrate**                                                                  | Am nützlichsten im Open Loop.                                                                                                                                                                             |
 
 Mehr zu den **Nightscout**-Optionen kannst Du [hier](https://nightscout.github.io/) nachlesen
 
@@ -231,47 +231,47 @@ Obwohl dies potenziell nützlich sein könnte, um angekündigte (aber nicht gebo
 (RemoteControl_smartwatches)=
 ## 4) Smartwatches
 
-### Option 1) Controlling AAPS from a Wear OS Watch
+### Option 1) AAPS von einer Wear-OS-Smartwatch aus steuern
 
 ![Wear Remote 1](../images/Wear_Remote1.png)
 
-Once you have [setup **AAPS** on your watch](../WearOS/BuildingAapsWearOS.md), extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+Sobald Du [**AAPS** auf Deiner Smartwatch fertig eingerichtet hast](../WearOS/BuildingAapsWearOS.md), findest Du ausführliche Informationen zu den Smartwatch-Zifferblättern und den jeweiligen Funktionen in [Wear AAPS auf einer Smartwatch nutzen](../WearOS/WearOsSmartwatch.md).
 
 Als kurze Übersicht: Die folgenden Funktionen können von der Smartwatch aus gestartet werden:
 
-* set a temporary target
+* temporäres Ziel setzen
 
-* use the bolus calculator (calculation variables can be defined in settings on the phone)
+* Bolusrechner verwenden (Welche Variablen bei der Berechnung berücksichtigt werden, lässt sich in den Einstellungen auf dem Smartphone festlegen.)
 
-* administer eCarbs
+* eCarbs eintragen
 
-* administer a bolus (insulin + carbs)
+* Bolus (Insulin + Kohlenhydrate) abgeben
 
-* watch settings
+* Uhreinstellungen
 
-* status
+* Status
 
-* check pump status
+* Pumpenstatus überprüfen
 
-* check loop status
+* Loop-Status überprüfen
 
-* check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+* Profil prüfen und ändern, CPP (Circadian Percentage Profile = Zeitverschiebung + Prozentsatz)
 
-* show TDD (Total daily dose = bolus + basal per day)
+* TDD (Total daily dose = Bolus + Basal pro Tag) anzeigen
 
-* Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to the network)
+* Remote-Bolus, wenn das Kind und die betreuende Person an verschiedenen Orten sind (dies ist möglich, wenn die **AAPS**-Smartwatch und das **AAPS**-Smartphone mit dem WLAN verbunden sind)
 
-#### Communication from caregivers to the watch using other apps (like WhatsApp)
+#### Kommunikation eines Betreuenden zur Smartwatch über andere Apps (wie WhatsApp)
 
-It is possible to add additional apps to the watch, like WhatsApp, for messaging (for example) between caregivers and kids. Es ist wichtig, dass dem Smartphone nur EIN Google-Konto zugeordnet ist, da die Smartwatch sonst die Daten nicht rüberbringen kann. Du musst 13 oder älter sein, um ein Samsung-Konto zu haben. Das Geburtsdatum muss in der eMail-Adresse hinterlegt sein, die auf dem Android-Smartphone verwendet wird.
+Es können zusätzliche Apps (z. B. WhatsApp) für den Nachrichtenaustausch zwischen Eltern und Kindern auf der Smartwatch installiert werden. Es ist wichtig, dass dem Smartphone nur EIN Google-Konto zugeordnet ist, da die Smartwatch sonst die Daten nicht rüberbringen kann. Du musst 13 oder älter sein, um ein Samsung-Konto zu haben. Das Geburtsdatum muss in der eMail-Adresse hinterlegt sein, die auf dem Android-Smartphone verwendet wird.
 
-A video explaining getting WhatsApp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of WhatsApp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+Ein Video, das das WhatsApp-Setup für das Senden von Nachrichten auf der Galaxy 4 Smartwatch zeigt, findest Du [hier](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/). Über WhatsApp kannst Du nicht den vollen Funktionsumfang nutzen.
 
-Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for WhatsApp messages to announce with a slight vibration, and also for the WhatsApp message to display over the existing watchface.
+Durch Anpassungen sowohl in der **Galaxy Wearable**-App auf dem **AAPS**-Smartphone als auch auf der Smartwatch, können WhatsApp-Nachrichten mit einem leichten Vibrieren signalisiert und auf dem bestehenden Zifferblatt gezeigt werden.
 
 ### Option 2) **AAPS** auf der Smartwatch steuert **AAPS** auf dem Smartphone
 
-Ähnlich wie mit einem Follower-Smartphone auf dem der AAPSClient, Nightscout oder SMS-Befehle laufen (Link zu Abschnitten) kann eine Smartwatch genutzt werden, um **AAPS** remote zu steuern und vollständige Profildaten bereitzustellen. Ein entscheidender Unterschied liegt darin, dass die Smartwatch sich mit dem **AAPS**-Smartphone über Bluetooth verbindet und keinen Authentifizierungscode benötigt. As a side-note, if both smartwatch and **AAPS** phone linked by bluetooth are also on a Wi-Fi/Cellular data network, the watch will also interact with the **AAPS** phone, giving a longer range of communication. Hier reden wir von einer Remote-Bolusabgabe in einer Situation in der die betreuende Person mit der **AAPS**-Smartwatch und das Kind (mit dem **AAPS**-Smartphone) an verschiedenen Orten sind. Das hilft z.B., wenn das Kind in der Schule ist.
+Ähnlich wie mit einem Follower-Smartphone auf dem der AAPSClient, Nightscout oder SMS-Befehle laufen (Link zu Abschnitten) kann eine Smartwatch genutzt werden, um **AAPS** remote zu steuern und vollständige Profildaten bereitzustellen. Ein entscheidender Unterschied liegt darin, dass die Smartwatch sich mit dem **AAPS**-Smartphone über Bluetooth verbindet und keinen Authentifizierungscode benötigt. Eine Nebenbemerkung: Wenn sowohl die Smartwatch als auch das **AAPS**-Smartphone über Bluetooth verbunden sind und sich auch in einem WLAN/Mobilfunknetz befinden, wird die Smartwatch auch mit dem **AAPS**-Smartphone kommunizieren. Das erweitert die Kommunikationsmöglichkeiten. Hier reden wir von einer Remote-Bolusabgabe in einer Situation in der die betreuende Person mit der **AAPS**-Smartwatch und das Kind (mit dem **AAPS**-Smartphone) an verschiedenen Orten sind. Das hilft z.B., wenn das Kind in der Schule ist.
 
 Eine Smartwatch zur Remote-Steuerung ist verschiedensten Situationen komfortabel:
 
@@ -279,9 +279,9 @@ a)  **AAPSClient**/Nightscout/**SMS**-Befehle funktionieren nicht oder
 
 b) der Nutzende möchte die Eingabe eines Authentifizierungscode vermeiden (wie es bei der Dateneingabe, dem Setzen eines temporären Ziels oder der Kohlenhydrateingabe über das Follower-Smartphone notwendig ist).
 
-Um **AAPS** steuern zu können, muss auf der Smartwatch **Android Wear** Software (idealerweise 10 oder höher) laufen. Please check the technical specifications of the watch, and check the [Phones page](../Getting-Started/Phones.md). Wenn Du Dir nicht sicher sein solltest, frage einfach in den **AAPS**  Facobook/Discord Gruppen nach.
+Um **AAPS** steuern zu können, muss auf der Smartwatch **Android Wear** Software (idealerweise 10 oder höher) laufen. Bitte prüfe die technischen Spezifikationen der Smartwatch und schau Dir auch die Seite [Smartphones](../Getting-Started/Phones.md) dazu an. Wenn Du Dir nicht sicher sein solltest, frage einfach in den **AAPS**  Facobook/Discord Gruppen nach.
 
-Eine detaillierte Schritt-für-Schritt Anleitung für die **AAPS**-Einrichtung auf der Samsung Galaxy Watch 4 (40mm) findest Du weiter unten. Die [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)-Smartwatch ist ebenfalls gerne gewählt. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
+Eine detaillierte Schritt-für-Schritt Anleitung für die **AAPS**-Einrichtung auf der Samsung Galaxy Watch 4 (40mm) findest Du weiter unten. Die [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)-Smartwatch ist ebenfalls gerne gewählt. Füge gerne andere Smartwatches und Deine damit gemachten Kompatibilitäts-Erfahrungen in der Dokumentation und [verbessere die Dokumentation](../SupportingAaps/HowToEditTheDocs.md), damit die gesamte **AAPS**-Community davon profitieren kann.
 
 ### Option 3) **AAPS** auf dem Smartphone wird über AAPS auf der Smartwatch gesteuert
 
@@ -304,7 +304,7 @@ Dann "Speichern unter" und speichere die Datei an einem Ort Deiner Wahl auf Dein
 
 
 
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
+Die **AAPSClient** Wear APK wird genauso auf die Smartwatch gebracht (übertragen und sideloading), wie es im Abschnitt [Übertragen der Wear-App auf Dein AAPS Smartphone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone) für die die **AAPS** Wear App beschrieben ist.  
 
 
 
