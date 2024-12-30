@@ -81,7 +81,7 @@ Du kannst es fixieren. Sie können auch Oberarm - Armbänder kaufen, die das CGM
 
 Im AMA bedeutet "dia" nicht "Insulinwirkungsdauer". Vielmehr ist "dia" ein Parameter, welcher mit DIA in Zusammenhang steht Es bedeutet wann die Korrekturdosis aufhören soll zu wirken. Und hat nichts mit mit der Berrechnung vom IOB zu tun. Im OpenAPS SMB wird dieser Parameter nicht mehr verwendet.
 
-## Other settings
+## Andere Einstellungen
 
 ### Nightscout settings
 
