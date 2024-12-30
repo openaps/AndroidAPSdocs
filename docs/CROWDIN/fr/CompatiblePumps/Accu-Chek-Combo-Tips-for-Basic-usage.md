@@ -6,16 +6,10 @@ orphan: true
 
 # Accu-Chek Combo conseils pour une utilisation de base
 
-**NOTE:** Starting with AAPS version 3.2, a [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (referred to as "combov2" sometimes) has been added. L'ancien pilote est également appelé le "pilote avec Ruffy". Certaines parties de ce document ne s'appliquent qu'à l'ancien pilote. Celles-ci seront annotées en conséquence.
-
 ## Comment assurer les opérations en douceur
 
 * Toujours **porter le smartphone avec vous**, laissez-le à côté de votre lit la nuit. Comme votre pompe peut se poser derrière vous ou sous votre corps pendant que vous dormez, une position plus élevée (sur une tablette ou une étagère) fonctionne mieux.
 * Always make sure that the pump battery is as full as possible. See the battery section for tipps regarding the battery.
-
-* (Only applies to the old driver) It is best to **not touch the app ruffy** while the system is running. If the app is started again, the connection to the pump can break off. Once the pump is connected to ruffy, there is no need to re-connect. Even after a restart of the phone, the connection is automatically re-established. If possible, move the app to an unused screen or in a folder on your smartphone so you do not accidentally open it.
-
-* (S'applique uniquement à l'ancien pilote) Si vous ouvrez involontairement l'application Ruffy pendant le bouclage, il est préférable de redémarrer le smartphone immédiatement.
 * Whenever possible, only operate the pump via the AAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Ce n'est que lorsque vous changez la pile ou la cartouche qu'il est nécessaire d'utiliser les touches de la pompe. 
 
 ![Keylock](../images/combo/combo-tips-keylock.png)
@@ -83,18 +77,9 @@ Ranges for typical life time of the different battery types are as follows:
 
 If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
 
-* (S'applique uniquement à l'ancien pilote) Les versions de [l'application Ruffy](https://github.com/MilosKozak/ruffy) après mars 2018 ont significativement améliorées la durée de vie de la pile de la pompe. Assurez-vous que vous êtes sur une version plus récente si vous avez des problèmes de durée de vie de la pile.
 * Il y a quelques variantes du capuchon de pile de la pompe Combo, qui court-circuite partiellement les piles et les vide rapidement. Les capuchons sans ce problème sont reconnaissables par les contacts dorés.
 * Si l'horloge interne de la pompe ne "survie" pas un changement de pile court, il est probable que le condensateur qui maintient l'horloge en marche soit cassé. Dans ce cas, un remplacement de la pompe par Roche vous aidera, ce qui n'est pas un problème pendant la période de garantie. 
 * Le hardwre et le software du smartphone (version de l'OS Android et de la puce bluetooth) ont aussi un impact sur la durée de vie de la pile de la pompe, même si les raisons exactes ne sont pas encore complètement connues actuellement. Si vous en avez l'occasion, essayez un autre smartphone et comparez la durée de vie de la pile.
-
-## Changement d'heure (été ou hiver)
-
-**NOTE**: The new driver automatically sets date and time and handles daylight saving time changes on its own. The steps below all only apply to the old driver.
-
-* Actuellement, le pilote combo ne prend pas en charge l'ajustement automatique de l'heure de la pompe.
-* Pendant la nuit d'un changement d'heure, l'heure du smartphone est mise à jour, mais l'heure de la pompe reste inchangé. Cela conduit à une alarme en raison du décalage des heures entre les systèmes à 3 heures du matin.
-* Si vous ne souhaitez pas être réveillé la nuit, **désactivez Date et heure automatiques sur le téléphone mobile** dans la soirée avant le changement d'heure et ajustez-vous les heures manuellement le lendemain matin. Une bonne façon de gérer les changements d'heure est de passer à un autre fuseau horaire situé sur la même longitude que celle où vous êtes situé mais plus proche de l'équateur, où il n'y a généralement pas de changement d'heure. Exemple : Pour l'Europe centrale en période d'été (GMT+2), vous pouvez passer au fuseau horaire du Zimbabwe la nuit précédant le passage à l'heure d'hiver et ensuite revenir à l'heure d'Europe centrale GMT+1 le lendemain matin tout en changeant l'heure sur votre pompe en même temps. The other way around, switch to the time zone of Nigeria while on Winter Time CET/GMT+1 and go back to Central European Summer Time (CEST/GMT+2) the morning after the switch to summer time and change the pump time accordingly. Consultez https://www.timeanddate.com/time/map/ pour trouver un pays approprié.
 
 ## Bolus étendus, bolus mixtes
 
