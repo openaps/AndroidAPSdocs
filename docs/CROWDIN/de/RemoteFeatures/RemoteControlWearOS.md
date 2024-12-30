@@ -18,7 +18,7 @@ Einige der über die Smartwatch möglichen Aktionen sind:
 
 ## Configuration
 
-Enable the Wear module in the [Config Builder](../SettingUpAaps/ConfigBuilder.md).
+Enable the Wear module in the [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
 
 Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
