@@ -2,17 +2,17 @@
 orphan: true
 - - -
 
-# Freestyle Libre 2 and 2+
+# Freestyle Libre 2 und 2+
 
 Der Freestyle Libre 2 Sensor ist mittlerweile (auch mit der offiziellen App) ein echtes CGM. Dennoch kann LibreLink auch weiterhin keine Daten an AAPS senden. Es gibt aber verschiedene Lösungen für den Einsatz mit AAPS.
 
 ## 1. Verwende einen Bluetooth-Transmitter und OOP
 
-Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an [out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](./Libre1.md).
+Bluetooth-Transmitter können mit dem Libre 2 (EU) oder 2+ (EU) und einer [Out of Process Algorithmus](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)-App verwendet werden. Glukosewerte können - wie beim [Libre 1](./Libre1.md) - alle 5 Minuten empfangen werden.
 
 Prüfe im Vorfeld, ob der Bluetooth-Transmitter und die notwendige App, sowohl mit Deinem Sensor als auch mit xDrip+ kompatibel ist (ältere und auch aktuelle Blucons sind nicht kompatibel, Miaomiao 1 benötigt Firmwareversion 39 und Miaomiao 2 Firmwareversion 7).
 
-Die Libre2 OOP gibt die gleichen BZ-Messwerte aus wie das Lesegerät oder die LibreLink-App über einen NFC-Scan. AAPS glättet Libre2 Daten über 10-25 Minuten, um Sprünge zu vermeiden. See below [Value smoothing & raw values](#libre2-value-smoothing-raw-values).  OOP übergibt alle fünf Minuten einen Wert. Dieser entspricht dem Durchschnitt der letzten fünf Minuten. Daher sind die BZ-Werte nicht so glatt, stimmen aber mit dem Lesegerät überein und folgen den "echten" BZ-Entwicklungen schneller. Wenn Du mit OOP loppen möchtest, aktiviere alle Glättungseinstellungen in xDrip+.
+Die Libre2 OOP gibt die gleichen BZ-Messwerte aus wie das Lesegerät oder die LibreLink-App über einen NFC-Scan. AAPS glättet Libre2 Daten über 10-25 Minuten, um Sprünge zu vermeiden. Mehr Details findest Du im Abschnitt [Glättung der Werte & Rohdaten](#libre2-value-smoothing-raw-values).  OOP übergibt alle fünf Minuten einen Wert. Dieser entspricht dem Durchschnitt der letzten fünf Minuten. Daher sind die BZ-Werte nicht so glatt, stimmen aber mit dem Lesegerät überein und folgen den "echten" BZ-Entwicklungen schneller. Wenn Du mit OOP loppen möchtest, aktiviere alle Glättungseinstellungen in xDrip+.
 
 Es psricht viel dafür einen Bluetooth-Transmitter zu nutzen:
 
@@ -32,18 +32,18 @@ Bemerkung: Der Transmitter kann parallel zur LibreLink-App verwendet werden.
 
 ```{admonition} Libre 2 EU only
 :class: warning
-xDrip+ doesn't support direct connection to Libre 2 US and AUS.
-Only Libre 2 and 2+ **EU** models.
+xDrip+ unterstützt keine direkte Verbindung zum Libre 2 US und AUS.
+Nur Libre 2 und 2+ **EU** Modelle.
 ```
 
 - [Diese Anleitung](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) beschreibt, wie Du xDrip+ konfigurierst. Wichtig ist, dass Du die [neueste OOP2-Version](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) herunterlädst und nutzt, da die in der Dokumentation referenzierte Version veraltete ist.
-- Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+- Folge den Anweisungen zum Einrichten auf der [xDrip+-Einstellungen Seite](../CompatibleCgms/xDrip.md).
 
 -   Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
 
 ## 3. Diabox nutzen
 
-- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, enable Share data with other apps.
+- Installiere [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In den Einstellungen, Integration, aktiviere Sie Datenfreigabe für andere Apps.
 
 ![Diabox](../images/Diabox.png)
 
@@ -53,7 +53,7 @@ Only Libre 2 and 2+ **EU** models.
 
 - Lade die Juggluco-App [hier](https://www.juggluco.nl/Juggluco/download.html) herunter und installiere sie.
 - Folge [dieser](https://www.juggluco.nl/Juggluco/index.html) Anleitung
-- In Settings, enable xDrip+ broadcast (which doesn't send data to xDrip+ but to AAPS).
+- Aktiviere in den Einstellungen den xDrip+ Broadcast (der Daten an AAPS, aber nicht an xDrip+ sendet).
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
@@ -61,38 +61,38 @@ Only Libre 2 and 2+ **EU** models.
 
 ```{admonition} Use with xDrip+
 :class: note
-You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
-![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
-You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
+Du kannst Juggluco so einstellen, dass Werte direkt an xDrip+ übertragen (broadcast) werden. In diesem Fall sollte der xDrip+ Broadcast ausgeschaltet werden. Auf diese Weise kannst Du kalibrieren (siehe hier) und vermeiden, dass minütlich Werte an AAPS gesendet werden.  
+![Juggluco Broadcast an xDrip+](../images/Juggluco_xDrip.png)  
+Um Daten von Juggluco empfangen zu können, muss in xDrip+ die Datenquelle auf 'Libre (patched App)' umgestellt werden.  
 ```
 
 (libre2-patched-librelink-app-with-xdrip)=
-## 5. Use the patched LibreLink app with xDrip+
+## 5. Nutze xDrip+ mit der gepatchten LibreLink-App
 
 ```{admonition} Libre 2 EU only
 :class: warning
-The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
+Die gepatchte App ist eine alte Version (22.4.2019) und ist möglicherweise nicht mit den neuesten Android Releases kompatibel.  
 ```
 
-### Step 1: Build the patched app
+### Schritt 1: Erstelle die gepatchte App
 
-For legal reasons, "patching" has to be done by yourself. Verwende Suchmaschinen, um die entsprechenden Links zu finden. There are two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView.
+Aus rechtlichen Gründen muss das sogenannte "Patchen" von Dir selbst erledigt werden. Verwende Suchmaschinen, um die entsprechenden Links zu finden. Es gibt im Wesentlichen zwei Varianten: Die empfohlene originale gepatchte App blockiert sämtlichen Internet-Traffic, um Tracking zu verhindern. Die andere Variante unterstützt LibreView.
 
 Die gepatchte App muss anstelle der ursprünglichen App installiert werden. Der nächste Sensor wird die aktuellen BG-Werte an die xDrip+ App übermitteln, die über Bluetooth auf Deinem Smartphone läuft.
 
 Wichtig: Um mögliche Probleme zu vermeiden, kann es hilfreich sein, zuerst die original LibreLink App auf einem Smartphone, das NFC beherrscht, zu installieren und dann wieder zu deinstallieren. NFC muss eingeschaltet sein. Das verbraucht keine zusätzliche Energie. Erst dann die gepatchte App installieren.
 
-Die gepatchte App kann durch die Vordergrund-Autorisierung Benachrichtigung identifiziert werden. The foreground authorization service improves the connection stability compared to the original app which does not use this service.
+Die gepatchte App kann durch die Vordergrund-Autorisierung Benachrichtigung identifiziert werden. Die Vordergrund-Berechtigung verbessert die Verbindungsstabilität gegenüber der Original-App, die diese Berechtigung nicht nutzt, deutlich.
 
 ![LibreLink Foreground Service](../images/Libre2_ForegroundServiceNotification.png)
 
-Other indications could be the Linux penguin logo in the three dot menu -> Info or the font of the patched app (2) different from the original app (1). Diese Kriterien sind optional und abhängig von der gewünschten App-Quelle.
+Weitere Hinweise könnten das Linux Pinguin Logo im Drei-Punkte-Menü -> Info oder die Schriftart der gepatchten App sein (2), die sich von der originalen App (1) unterscheidet. Diese Kriterien sind optional und abhängig von der gewünschten App-Quelle.
 
 ![LibreLink Font Check](../images/LibreLinkPatchedCheck.png)
 
 Stelle sicher, dass NFC aktiviert ist, erlaube den Zugriff auf Speicher und Standort für die gepatchte App, aktiviere die automatische Zeiteinstellung und den automatischen Zeitzonenwechsel und stelle mindestens einen Alarm in der gepatchten App ein.
 
-### Step 2: Start the sensor with the patched app
+### Schritt 2: Starte den Sensor mit der gepatchten App
 
 Starte nun den Libre2 Sensor, in dem Du ihn einfach mit der gepatchten App scannst. Stelle sicher, dass alle Einstellungen festgelegt wurden.
 
@@ -110,18 +110,18 @@ Beachte bitte, dass der Standortdienst ein zentraler Baustein ist. Dies ist nich
 
 ![automatic time and time zone + alarm settings](../images/Libre2_DateTimeAlarms.png)
 
-Once the sensor started with the patched app, you won't be able to connect it to another app/phone. If you uninstall the patched app, you will lose alarms and continuous BG readings.
+Sobald der Sensor mit der gepatchten App gestartet wurde, kann er nicht mit einer anderen App/einem anderen Smartphone verbunden werden. Wenn Du die gepatchte App deinstallierst, verlierst Du Alarme und die kontinuierliche Messung der Glukosewerte.
 
-Der erste Verbindungsaufbau ist wichtig. Die LibreLink App versucht alle 30 Sekunden eine drahtlose Verbindung zum Sensor aufzubauen. Falls eine oder mehrere der erforderlichen Einstellungen falsch gesetzt sind, müssen diese angepasst werden. Dafür gibt es keine Zeitbeschränkung. Der Sensor versucht ständig, die Verbindung aufzubauen. Auch falls es einige Stunden dauert. Be patient and try different settings before even thinking of changing the sensor.
+Der erste Verbindungsaufbau ist wichtig. Die LibreLink App versucht alle 30 Sekunden eine drahtlose Verbindung zum Sensor aufzubauen. Falls eine oder mehrere der erforderlichen Einstellungen falsch gesetzt sind, müssen diese angepasst werden. Dafür gibt es keine Zeitbeschränkung. Der Sensor versucht ständig, die Verbindung aufzubauen. Auch falls es einige Stunden dauert. Sei geduldig und probiere verschiedene Einstellungen aus, bevor Du auch nur daran denkst, den Sensor zu wechseln.
 
-Solange du ein rotes Ausrufezeichen siehst ("!") on the upper left corner of the LibreLink start screen there is no connection or some other setting blocks LibreLink to signal alarms. Überprüfe, ob der Ton eingeschaltet ist und die Blockierung aller Arten von Benachrichtigungen von Apps deaktiviert sind. Erst wenn das Ausrufezeichen weg ist, steht die Verbindung und Blutzuckerwerte werden an das Smartphone gesendet. Das sollte nach maximal 5 Minuten passiert sein.
+Solange du ein rotes Ausrufezeichen siehst ("!") Solange Du ein rotes Ausrufezeichen („!“) in der oberen linken Ecke des LibreLink-Startbildschirms siehst, besteht keine Verbindung oder eine andere Einstellung blockiert LibreLink, um Alarme zu melden. Überprüfe, ob der Ton eingeschaltet ist und die Blockierung aller Arten von Benachrichtigungen von Apps deaktiviert sind. Erst wenn das Ausrufezeichen weg ist, steht die Verbindung und Blutzuckerwerte werden an das Smartphone gesendet. Das sollte nach maximal 5 Minuten passiert sein.
 
 ![LibreLink no connection](../images/Libre2_ExclamationMark.png)
 
 Wenn das Ausrufezeichen bleibt oder Du eine Fehlermeldung erhältst, kann dies mehrere Gründe haben:
 
--   Android location service is not granted - please enable it in system settings
--   automatic time and time zone not set - please change settings accordingly
+-   Die Android-Standortfreigabe ist nicht erteilt - bitte in den Systemeinstellungen erteilen
+-   Automatische Zeitzone und Uhrzeit nicht gesetzt - bitte entsprechend die Einstellungen ändern
 -   Alarme einschalten - mindestens einer der drei Alarme muss aktiviert sein
 -   Bluetooth ist ausgeschaltet - bitte einschalten
 -   Töne sind blockiert
@@ -132,7 +132,7 @@ Ein Handyneustart kann helfen, muss ggf. mehrmals gemacht werden. Sobald die Ver
 
 ![LibreLink Verbindung hergestellt](../images/Libre2_Connected.png)
 
-In seltenen Fällen kann es helfen den Bluetooth-Cache zu leeren und/oder alle Netzwerkverbindungen über das Systemmenü zurückzusetzen. Dadurch werden alle verbundenen Bluetooth-Geräte entfernt und dies kann helfen die Bluetooth-Verbindung zum Libre sauber herzustellen. That procedure is safe as the started sensor is remembered by the patched LibreLink app. Hier muss nichts mehr zusätzlich getan werden. Warte bis sich die gepatchte App mit dem Sensor verbindet.
+In seltenen Fällen kann es helfen den Bluetooth-Cache zu leeren und/oder alle Netzwerkverbindungen über das Systemmenü zurückzusetzen. Dadurch werden alle verbundenen Bluetooth-Geräte entfernt und dies kann helfen die Bluetooth-Verbindung zum Libre sauber herzustellen. Das ist ein sicheres Vorgehen, da der gestartete Sensor von der gepatchten LibreLink-App gespeichert und wiedererkannt wird. Hier muss nichts mehr zusätzlich getan werden. Warte bis sich die gepatchte App mit dem Sensor verbindet.
 
 Nachdem die Verbindung erfolgreich gestartet wurde, kannst Du die Einstellungen des Smartphones bei Bedarf wieder ändern. Dies wird zwar nicht empfohlen, aber ggf. möchtest Du Akkuleistung sparen. Standortfreigabe (GPS) kann ausgeschaltet werden, Lautstärke kann auf Null gesetzt werden oder auch die Alarme können wieder abgeschaltet werden. Die Blutzuckerwerte werden trotzdem übertragen.
 
@@ -144,49 +144,49 @@ Während der 14 Tage kannst Du parallel ein oder mehrere NFC-fähige Smartphones
 
 Beachte bitte, dass die originale gepatchte App **keine Internet-Verbindung** hat, um Tracking zu verhindern.
 
-Es gibt jedoch eine Variante der gepatchten App, die LibreView mit aktivierter Internetverbindung unterstützt. In diesem Fall werden Deine Daten in die Abbott Cloud übertragen. But your endo team reporting is fully supported then. Mit dieser Variante ist es auch möglich, die Alarme eines bereits laufenden Sensors auf ein anderes Endgerät, mit dem der Sensor nicht gestartet wurde, zu übertragen. Anleitungen findest Du in deutschen Diabetes-Foren.
+Es gibt jedoch eine Variante der gepatchten App, die LibreView mit aktivierter Internetverbindung unterstützt. In diesem Fall werden Deine Daten in die Abbott Cloud übertragen. Das ermöglicht, dass Dein Diabetes-Team auf die Daten und Berichte zugreifen kann. Mit dieser Variante ist es auch möglich, die Alarme eines bereits laufenden Sensors auf ein anderes Endgerät, mit dem der Sensor nicht gestartet wurde, zu übertragen. Anleitungen findest Du in deutschen Diabetes-Foren.
 
 ### Schritt 3: Installieren und konfigurieren der xDrip+ App
 
 Die Blutzuckerwerte werden von der xDrip + App auf dem Smartphone empfangen.
 
--   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
--   Set xDrip+ with the [patched app data source](#xdrip-libre2-patched-app).
--   Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+-   Du kannst die [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) einfach herunterladen, es sei denn, Du benötigst aktuelle Funktionen, in diesem Fall solltest Du den neuesten [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases) verwenden.
+-   Wähle in xDrip+ [Libre (patched app) als Datenquelle](#xdrip-libre2-patched-app) aus.
+-   Folge den Anweisungen zum Einrichten auf der [xDrip+-Einstellungen Seite](../CompatibleCgms/xDrip.md).
 
 ### Schritt 4: Sensor starten
 
-- → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Answer "Not Today" (4).
+- → Hamburger-Menü (1) → Sensor starten (2) → Sensor starten (3) → Antwort "Nicht heute" (4).
 
 ![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
-This will not physically start any Libre2 sensor or interact with them in any case. Damit soll xDrip+ einfach nur mitgeteilt werden, dass ein neuer Sensor Blutzuckerwerte liefert. Wenn verfügbar, gib zwei blutige Messwerte für die Anfangskalibrierung ein. Nun sollten die Blutzuckerwerte alle 5 Minuten in xDrip+ angezeigt werden. Übersprungene Werte, weil Du zum Beispiel zu weit von Deinem Telefon entfernt warst, werden nicht nachgefüllt.
+Damit wird der Libre2 Sensor nicht gestartet und wird auch kein Datenaustausch möglich. Damit soll xDrip+ einfach nur mitgeteilt werden, dass ein neuer Sensor Blutzuckerwerte liefert. Wenn verfügbar, gib zwei blutige Messwerte für die Anfangskalibrierung ein. Nun sollten die Blutzuckerwerte alle 5 Minuten in xDrip+ angezeigt werden. Übersprungene Werte, weil Du zum Beispiel zu weit von Deinem Telefon entfernt warst, werden nicht nachgefüllt.
 
-Nach einem Sensorwechsel erkennt xDrip+ den neuen Sensor automatisch und löscht alle Kalibrierungsdaten. You may check you blood glucose after activation and make a new initial calibration.
+Nach einem Sensorwechsel erkennt xDrip+ den neuen Sensor automatisch und löscht alle Kalibrierungsdaten. Du kannst nach der Aktivierung blutig messen und eine neue erste Kalibrierung hinzufügen.
 
 ### Schritt 5: AAPS konfigurieren
 
 -   Öffne in AAPS die KONFIGURATION > BZ-Quelle und aktiviere "xDrip+ BZ".
 
-![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+![xDrip+ BZ Quelle](../images/ConfBuild_BG_xDrip.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](#xdrip-identify-receiver).
+-   Falls AAPS im Flugmodus keine Glukosewerte bekommt, nutze "Identify receiver" wie auf der [Seite xDrip+ Einstellungen](#xdrip-identify-receiver) beschrieben.
 
-Wenn Du den Libre 2 als BZ-Quelle nutzt, stehen die Funktionen 'Enable SMB always' und 'Enable SMB after carbs' mit dem SMB Algorithmus nicht zur Verfügung. Die BZ-Werte des Libre 2 sind für einen sicheren Einsatz dieser Funktionen nicht glatt genug. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
+Wenn Du den Libre 2 als BZ-Quelle nutzt, stehen die Funktionen 'Enable SMB always' und 'Enable SMB after carbs' mit dem SMB Algorithmus nicht zur Verfügung. Die BZ-Werte des Libre 2 sind für einen sicheren Einsatz dieser Funktionen nicht glatt genug. In [Glättung der Blut-Glukose-Daten](../CompatibleCgms/SmoothingBloodGlucoseData.md) findest Du weitergehende Informationen.
 
 (Libre2-experiences-and-troubleshooting)=
 ### Erfahrungen und Troubleshooting
 
 #### Verbindung
 
-The connectivity is good with most phones, with the exception of Huawei mobile phones. Die Verbindung kann durchaus einmal abreißen, wenn sich der Sensor auf der einen Körperseite, das Handy auf der anderen in der Hosentasche befindet oder wenn man im Freien unterwegs ist. Wear your phone on the sensor side of your body. In Räumen, wo sich Bluetooth über Reflektionen ausbreitet, sollten keine Probleme auftreten. Bei Verbindungsproblemen bitte ein anderes Telefon testen. Es kann auch helfen, den Sensor so zu setzen, dass die interne Bluetooth-Antenne nach unten zeigt. Der Schlitz auf dem Applikator muss beim Setzen des Sensors nach unten zeigen.
+Die Konnektivität ist für die meisten Smartphones (mit Ausnahme von Huawei) gut. Die Verbindung kann durchaus einmal abreißen, wenn sich der Sensor auf der einen Körperseite, das Handy auf der anderen in der Hosentasche befindet oder wenn man im Freien unterwegs ist. Trage Dein Smartphone auf der Sensorseite Deines Körpers. In Räumen, wo sich Bluetooth über Reflektionen ausbreitet, sollten keine Probleme auftreten. Bei Verbindungsproblemen bitte ein anderes Telefon testen. Es kann auch helfen, den Sensor so zu setzen, dass die interne Bluetooth-Antenne nach unten zeigt. Der Schlitz auf dem Applikator muss beim Setzen des Sensors nach unten zeigen.
 
 (libre2-value-smoothing-raw-values)=
 #### Glättung der Werte & Rohdaten
 
-Technisch wird alle Minute der aktuelle Blutzucker-Wert an xDrip+ übertragen. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+Technisch wird alle Minute der aktuelle Blutzucker-Wert an xDrip+ übertragen. Daraus wird standardmäßig mit einem gewichteten Mittel über die letzten 25 Minuten ein geglätteter Wert errechnet. Du kannst die Zeitspanne im NFC-Scan-Funktionen-Menü ändern.
 
-→ Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+→ Hamburger-Menü → Einstellungen → NFC-Scan-Funktionen → Libre3-Daten glätten, wenn Methode xxx verwendet wird
 
 ![xDrip+ advanced settings Libre 2 & Rohdaten](../images/xDrip_Libre3_Smooth.png)
 
@@ -194,13 +194,13 @@ Dies ist zwingend erforderlich um damit zu loopen. Die Kurven sehen glatt aus un
 
 Die Rohwerte sind sehr hilfreich, wenn sich der Blutzuckerwert schnell ändert. Auch wenn die einzelnen Punkte viel mehr springen, wirst Du die Tendenz deutlich besser erkennen als bei der geglätteten Linie und kannst so bessere Therapieentscheidungen treffen.
 
-→ Hamburger menu → Settings → Less common settings → Advanced settings for Libre 2
+→ Hamburger-Menü → Einstellungen → Erweiterte Einstellungen → Erweiterte Einstellungen für Libre 2
 
 ![xDrip+ advanced settings Libre 2 & Rohdaten](../images/Libre2_RawValues.png)
 
 #### Sensorlaufzeit
 
-Die Sensorlaufzeit ist fix 14 Tage. Die 12 extra Stunden des Libre1 existieren nicht mehr. xDrip+ shows additional sensor information after enabling Advanced Settings for Libre2 → "show Sensors Infos" in the system menu like the starting time. Die verbleibende Zeit des Sensors ist auch in der gepatchten LibreLink-App zu sehen. Either in the main screen as remaining days display or as the sensor start time in the three-point menu → Help → Event log under "New sensor found".
+Die Sensorlaufzeit ist fix 14 Tage. Die 12 extra Stunden des Libre1 existieren nicht mehr. Aktiviert man in den Erweiterten Einstellungen für Libre 2 → Sensorinformationen im Status anzeigen, werden zusätzliche Informationen (u. a. die Sensorstartzeit) angezeigt. Die verbleibende Zeit des Sensors ist auch in der gepatchten LibreLink-App zu sehen. Das wird entweder auf dem Startbildschirm als verbleibende Tage angezeigt oder als Sensor-Startzeit im Drei-Punkt-Menü → Hilfe → Event Log unter "Neuer Sensor gefunden" angezeigt.
 
 ![Libre 2 Startzeit](../images/Libre2_Starttime.png)
 
@@ -216,14 +216,14 @@ Nach erfolgreicher Verbindung musst Du in xDrip "Sensor Stop" und "Delete calibr
 
 #### Kalibrierung
 
-You can calibrate the Libre2 **with an offset of -40 mg/dl to +20 mg/dL \[-2,2 mmol/l to +1,1 mmol/l\]** (intercept). The slope isn't changeable. Please check by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If the sensor is completely off after a few days, it should then be replaced.
+Der Libre2-Sensor kann **im Bereich von -40 mg/dl bis +20 mg/dl\[-2,2 mmol/l bis +1,1 mmol/l\]** (intercept) kalibriert werden. Die Neigung (slope) kann nicht geändert. Bitte überprüfe die Werte mit einem Fingerpiks nach dem Setzen eines neuen Sensors. Bitte berücksichtige, dass die Werte in den ersten 12 Stunden nach dem Setzen möglicherweise noch nicht genau sind. Da es große Unterschiede bei den blutigen Messungen geben kann, prüfe den Wert alle 24 Stunden und kalibriere bei Bedarf. Wenn der Sensor nach ein paar Tagen völlig daneben liegt, sollte er ersetzt werden.
 
 ### Plausibilitätsprüfungen
 
-Die Libre2 Sensoren enthalten Plausibilitätsprüfungen, um schlechte Sensorwerte zu erkennen. Sobald sich der Sensor am Arm bewegt oder leicht angehoben wird, können die Werte anfangen zu schwanken. Der Libre2 Sensor schaltet sich dann aus Sicherheitsgründen ab. Leider erfolgen beim Scannen mit der App weitere Prüfungen. Die App kann ebenfalls den Sensor deaktivieren, was zu einem frühen Ausfall führen kann, obwohl der Sensor in Ordnung ist. Derzeit ist der interne Test zu streng. Avoid scanning the sensor with another phone to reduce the risk of unexpected sensor shutdown.
+Die Libre2 Sensoren enthalten Plausibilitätsprüfungen, um schlechte Sensorwerte zu erkennen. Sobald sich der Sensor am Arm bewegt oder leicht angehoben wird, können die Werte anfangen zu schwanken. Der Libre2 Sensor schaltet sich dann aus Sicherheitsgründen ab. Leider erfolgen beim Scannen mit der App weitere Prüfungen. Die App kann ebenfalls den Sensor deaktivieren, was zu einem frühen Ausfall führen kann, obwohl der Sensor in Ordnung ist. Derzeit ist der interne Test zu streng. Vermeide es den Sensor mit einem anderen Smartphone zu scannen, um so das Risiko eines unerwarteten Sensor-Shutdowns zu reduzieren.
 
 (Libre2-best-practices-for-calibrating-a-libre-2-sensor)=
-# Best practices for calibrating a Libre 2 sensor
+# Best Practices für die Kalibrierung eines Libre 2 Sensors
 
 Um die besten Ergebnisse bei der Kalibrierung des Libre 2 zu erzielen, gibt es einige „Regeln“, denen Du folgen solltest. Sie gelten unabhängig von der Kombination von Software (z.B. gepatchte Libre-app, oop2, …), die verwendet wird, um die Libre 2 Werte zu handhaben.
 
@@ -231,6 +231,6 @@ Um die besten Ergebnisse bei der Kalibrierung des Libre 2 zu erzielen, gibt es e
 2.  Eigentlich wird dies automatisch berücksichtigt, wenn Du Regel 1 befolgst, aber um auf Nummer sicher zu gehen: Wenn Du Vergleichsmessungen durchführst, sollte Dein Blutzuckerspiegel auch für etwa 15 Minuten flach sein. Vergleiche nicht, wenn der Wert steigt oder fällt. Vergleichen Sie nicht, wenn der Blutzucker steigt oder fällt. Wichtig: Du sollst weiterhin Blutzuckermessungen durchführen, wann immer Du möchtest. Verwende die Ergebnisse jedoch nicht zur Kalibrierung, wenn sie steigen oder fallen!
 3.  Da die Kalibrierung des Sensors in flachen Bereichen ein sehr guter Ausgangspunkt ist, wird auch dringend empfohlen, den Sensor nur in dem von Dir gewünschten Zielbereich zu kalibrieren, z. B. 70 mg/dl bis 160 mg/dl. Der Libre 2 ist nicht dafür optimiert, über einen großen Bereich wie 50 mg/dl bis 350 mg/dl zu arbeiten (zumindest nicht auf geradlinige Weise). Versuche also nur innerhalb des gewünschten Bereichs zu kalibrieren. -> Akzeptiere einfach, dass die Werte außerhalb deines Kalibrierungsbereichs nicht perfekt mit den Blutzuckerwerten übereinstimmen werden.
 4.  Kalibriere nicht zu häufig. Eine sehr häufige Kalibrierung des Sensors führt meist zu schlechteren Ergebnissen. Wenn der Sensor unter flachen Bedingungen gute Ergebnisse liefert, füge einfach keine neue Kalibrierung hinzu, da sie keine nützliche Wirkung hat. Es sollte ausreichen, den Status alle 3-5 Tage zu überprüfen (natürlich auch in niedrigen BZ-Bereichen).
-5.  Vermeide die Kalibrierung, wenn sie nicht erforderlich ist. This might sound silly but it is not recommended to add a new calibration if the blood glucose to flesh glucose level difference is only ±10 mg/dl (e.g. blood glucose level: 95, Libre sensor 100 -> do NOT add the 95, blood glucose level: 95, Libre sensor 115 -> add the 95 to be taken into account for the calibration)
+5.  Vermeide die Kalibrierung, wenn sie nicht erforderlich ist. Es mag dumm klingen, aber eine Kalbrierung wird nicht empfohlenm wenn der Blutzuckerspiegel gemessen im Blut nur ±10 mg/dl abweicht (z.B. Blutzucker: 95, Libre Sensor 100 -> kalibriere NICHT 95, Blutzucker: 95, Libre Sensor 115 -> kalibriere mit 95)
 
 Nach der Aktivierung eines neuen Sensors und am Ende der Lebensdauer des Sensors ist es sinnvoll, Vergleichsmessungen häufiger als nach 3-5 Tagen durchzuführen, wie in Regel Nr. 4 angegeben. Bei neuen und alten Sensoren ist es wahrscheinlicher, dass sich die Rohwerte ändern und eine Neukalibrierung erforderlich ist. Von Zeit zu Zeit kommt es vor, dass ein Sensor keine gültigen Werte liefert. Wahrscheinlich ist der Sensorwert im Vergleich zum aktuellen Blutzuckerspiegel (z. B. Sensor: 50 mg/dl, BG: 130 mg/dl) viel zu niedrig auch nach der Kalibrierung. Wenn dies der Fall ist, kann der Sensor nicht kalibriert werden, um brauchbare Ergebnisse zu liefern. z.B. bei Verwendung der gepatchten Libre-App kann man einen Korrekturwert von maximal +20 mg/dl hinzufügen. Wenn es Dir passiert, dass der Sensor viel zu niedrige Werte liefert, zögere nicht, ihn auszutauschen, da er nicht besser werden wird. Auch wenn es sich um einen defekten Sensor handeln könnte, solltest Du bei Sensoren, die sehr oft viel zu niedrige Werte liefern, versuchen, verschiedene Stellen für die Platzierung des Sensors verwenden. Selbst im offiziellen Bereich (Oberarm) kann es einige Stellen geben, an denen die Sensoren einfach keine gültigen Werte liefern. Hier musst Du schlichtweg verschiedene Bereiche ausprobieren, bis es wie gewünscht funktioniert.
