@@ -85,7 +85,7 @@ If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl 
 
 The **figure below** shows an example of how the target can be set in an **AAPS** profile.
 
-![Target](../images/Profile_Target.png)
+![Ziel](../images/Profile_Target.png)
 
 **BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. Wenn Du erreichen möchtest, dass Du vor dem Frühstücksbolus am Morgen bereits genügend aktives Insulin (IOB) im Körper hast, könntest Du für die Zeit von 07.00 - 08.00 Uhr ein niedrigeres Ziel von 81 mg/dl (4,5 mmol/dl) setzen.
 
@@ -319,7 +319,7 @@ See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-Pro
 (your-aaps-profile-clone-profile-switch)=
 ### Clone a Profile switch to a new Profile
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profilwechsel](../images/TreatmentsView4.png)
 
 The [Treatments](#aaps-screens-treatments) tab shows all past **Profile Switches**. When going to the **Profile Switch** sub-tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
 
