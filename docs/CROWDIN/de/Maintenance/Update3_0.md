@@ -7,11 +7,11 @@ orphan: true
 * **Minimale Android-Version ist 9.0 jetzt.**
 * **Daten werden nicht in die neue Datenbankstruktur überführt.**
 
-  Die Änderungen der Struktur sind so weitreichend, dass eine Übernahme nicht möglich ist. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. You have to create new [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) and start with zero IOB and COB.
+  Die Änderungen der Struktur sind so weitreichend, dass eine Übernahme nicht möglich ist. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein.
 
   Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
 
-* Please see the [Release Notes](../Maintenance/ReleaseNotes.md) for details on new and changed features.
+* In den [Release Notes](../Maintenance/ReleaseNotes.md) findest Du Details zu allen neuen und verbesserten Funktionen.
 
 
 ## Automatisierungen prüfen
@@ -53,11 +53,11 @@ Beginnend mit Android 3.0 erhälst Du möglicherweise ein dreieckiges Warnsignal
 
   ![Gelbes BG-Warndreieck](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](#aaps-screens-bg-warning-sign)
+Weitere Informationen findest Du auf den Seiten zu den [AAPS-Bildschirmen](#aaps-screens-bg-warning-sign).
 
 (update30-failure-message-data-from-different-pump)=
 ## Fehlermeldung: Daten aus verschiedenen Pumpen
 
    ![Fehlermeldung: Daten aus verschiedenen Pumpen](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](#Config-Builder-pump). Wechsel die Pumpe zu einer virtuellen Pumpe und zurück zu Deiner aktuellen Pumpe. Dadurch wird der Pumpenzustand zurückgesetzt.
+Um das zu beheben, gehe in die [Konfiguration](#Config-Builder-pump). Wechsel die Pumpe zu einer virtuellen Pumpe und zurück zu Deiner aktuellen Pumpe. Dadurch wird der Pumpenzustand zurückgesetzt.
