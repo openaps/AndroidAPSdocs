@@ -96,7 +96,7 @@ Nachdem Du die neue APK-Datei installiert hast, kannst Du auf dem Smartphone die
 
 Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
 
-## Troubleshooting
+## Problembehandlung
 
 Keine Panik, wenn irgendetwas schiefläuft.
 
