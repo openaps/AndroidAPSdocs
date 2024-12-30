@@ -9,21 +9,21 @@ AAPS funktioniert mit einer Reihe von Insulinpumpen.  The following list shows t
 - [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
 - [Diaconn G8 ](../CompatiblePumps/DiaconnG8.md)  (Bluetooth)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md) (Bluetooth)
-- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  ([additional communication device](#additional-communication-device) needed)
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  ([zusätzliches Kommunikationsgerät](#additional-communication-device) benötigt)
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)  (Bluetooth)
 - [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)
-- Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#additional-communication-device) needed)
+- Bestimmte ältere [Medtronic](../CompatiblePumps/MedtronicPump.md)-Pumpen ([zusätzliches Kommunikationsgerät](#additional-communication-device) benötigt)
 
 ## My pump is not listed
 
-Details of the status of other pumps that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md) page.
+Informationen über weitere Pumpen, die möglicherweise in Zukunft mit AAPS funktionieren, findest Du auf der Seite [Zukünftig ggf. loopbare Pumpen](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
 ## Zusätzliches Kommunikationsgerät
 
-If no additional communication device is mentioned, the communication between insulin pump and **AAPS** is based on the integrated bluetooth stack of Android, without the need of an additional communication device to translate the communication protocol.
+Wenn kein zusätzliches Kommunikationsgerät erwähnt wird, kommuniziert die Insulinpumpe mit **AAPS** direkt über Bluetooth (ohne dass ein zwischengeschaltetes Gerät noch etwas umwandeln muss).
 
 For old Medtronic pumps and Omnipod Eros, an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Wähle die richtige Variante des Kommunikationsgeräts aus, je nach dem welche Pumpe Du nutzt.
 
