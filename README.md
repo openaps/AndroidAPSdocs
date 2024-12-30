@@ -20,149 +20,149 @@ Detail of broken links in the doc can be found in the build logs. Select a build
 
 ### 1) Change language
 
-[Change language](https://androidaps.readthedocs.io/en/latest/ChangeLanguage/ChangeLanguage.md)
+[Change language](https://androidaps.readthedocs.io/en/latest/ChangeLanguage/ChangeLanguage.html)
 
 ### 2) Getting started
 
-[Introduction to AAPS](https://androidaps.readthedocs.io/en/latest/Getting-Started/Introduction.md)
+[Introduction to AAPS](https://androidaps.readthedocs.io/en/latest/Getting-Started/Introduction.html)
 
-[Preparing for AAPS](https://androidaps.readthedocs.io/en/latest/Getting-Started/PreparingForAaps.md)
+[Preparing for AAPS](https://androidaps.readthedocs.io/en/latest/Getting-Started/PreparingForAaps.html)
 
-[Component Overview](https://androidaps.readthedocs.io/en/latest/Getting-Started/ComponentOverview.md)
+[Component Overview](https://androidaps.readthedocs.io/en/latest/Getting-Started/ComponentOverview.html)
 
-- [Compatible pumps](https://androidaps.readthedocs.io/en/latest/Getting-Started/CompatiblePumps.md)
+- [Compatible pumps](https://androidaps.readthedocs.io/en/latest/Getting-Started/CompatiblePumps.html)
 
-- [Compatible CGMs](https://androidaps.readthedocs.io/en/latest/Getting-Started/CompatiblesCgms.md)
+- [Compatible CGMs](https://androidaps.readthedocs.io/en/latest/Getting-Started/CompatiblesCgms.html)
 
-- [Compatible phones ](https://androidaps.readthedocs.io/en/latest/Getting-Started/Phones.md)
+- [Compatible phones ](https://androidaps.readthedocs.io/en/latest/Getting-Started/Phones.html)
 
-- [Compatible watches ](https://androidaps.readthedocs.io/en/latest/Getting-Started/Watches.md)
+- [Compatible watches ](https://androidaps.readthedocs.io/en/latest/Getting-Started/Watches.html)
 
 
 ### 3) Setting up AAPS
 
-[Setting up the reporting server](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/SettingUpTheReportingServer.md)
+[Setting up the reporting server](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/SettingUpTheReportingServer.html)
 
-- [Nightscout](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/Nightscout.md)
+- [Nightscout](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/Nightscout.html)
 
-- [Tidepool](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/Tidepool.md)
+- [Tidepool](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/Tidepool.html)
 
-[Building AAPS](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/BuildingAaps.md)
+[Building AAPS](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/BuildingAaps.html)
 
-[Transferring and Installing AAPS](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/TransferringAndInstallingAaps.md)
+[Transferring and Installing AAPS](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/TransferringAndInstallingAaps.html)
 
-[Setup Wizard](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/SetupWizard.md)
+[Setup Wizard](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/SetupWizard.html)
 
-[Your AAPS Profile](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md)
+[Your AAPS Profile](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.html)
 
-[Change AAPS configuration](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/ChangeAapsConfiguration.md)
+[Change AAPS configuration](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/ChangeAapsConfiguration.html)
 
-- [Config Builder](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/ConfigBuilder.md)
+- [Config Builder](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/ConfigBuilder.html)
 
-- [Preferences](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/Preferences.md)
+- [Preferences](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/Preferences.html)
 
-[Completing the objectives](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/CompletingTheObjectives.md)
+[Completing the objectives](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/CompletingTheObjectives.html)
 
 ### 4) Daily Life with AAPS
 
-[AAPS Screens](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/AapsScreens.md)
+[AAPS Screens](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/AapsScreens.html)
 
-[Key AAPS Features](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/KeyAapsFeatures.md)
+[Key AAPS Features](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/KeyAapsFeatures.html)
 
-[COB calculation](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/CobCalculation.md)
+[COB calculation](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/CobCalculation.html)
 
-[Sensitivity detection](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/SensitivityDetectionAndCob.md)
+[Sensitivity detection](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/SensitivityDetectionAndCob.html)
 
-[Profile Switch & Profile Percentage](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
+[Profile Switch & Profile Percentage](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.html)
 
-[Temp-Targets](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/TempTargets.md)
+[Temp-Targets](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/TempTargets.html)
 
-[Extended carbs](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/ExtendedCarbs.md)
+[Extended carbs](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/ExtendedCarbs.html)
 
-[Automations](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/Automations.md)
+[Automations](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/Automations.html)
 
-[Dynamic ISF](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/DynamicISF.md)
+[Dynamic ISF](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/DynamicISF.html)
 
-[AAPS for children](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/AapsForChildren.md)
+[AAPS for children](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/AapsForChildren.html)
 
-[Pumps and cannulas](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/PumpsAndCannulas.md)
+[Pumps and cannulas](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/PumpsAndCannulas.html)
 
-[Timezone traveling & Daylight Saving Time](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md)
+[Timezone traveling & Daylight Saving Time](https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.html)
 
 ### 5) Remote AAPS features
 
-[Remote monitoring](https://androidaps.readthedocs.io/en/latest/RemoteFeatures/RemoteMonitoring.md)
+[Remote monitoring](https://androidaps.readthedocs.io/en/latest/RemoteFeatures/RemoteMonitoring.html)
 
-[Remote control](https://androidaps.readthedocs.io/en/latest/RemoteFeatures/RemoteControl.md)
+[Remote control](https://androidaps.readthedocs.io/en/latest/RemoteFeatures/RemoteControl.html)
 
-[SMS Commands](https://androidaps.readthedocs.io/en/latest/RemoteFeatures/SMSCommands.md)
+[SMS Commands](https://androidaps.readthedocs.io/en/latest/RemoteFeatures/SMSCommands.html)
 
-[Following Only](https://androidaps.readthedocs.io/en/latest/RemoteFeatures/FollowingOnly.md)
+[Following Only](https://androidaps.readthedocs.io/en/latest/RemoteFeatures/FollowingOnly.html)
 
-[Android Auto](https://androidaps.readthedocs.io/en/latest/RemoteFeatures/AndroidAuto.md)
+[Android Auto](https://androidaps.readthedocs.io/en/latest/RemoteFeatures/AndroidAuto.html)
 
 ### 6) Wear OS Smartwatches
 
-[AAPS for Wear OS](https://androidaps.readthedocs.io/en/latest/WearOS/BuildingAapsWearOS.md)
+[AAPS for Wear OS](https://androidaps.readthedocs.io/en/latest/WearOS/BuildingAapsWearOS.html)
 
-[Use the smartwatch](https://androidaps.readthedocs.io/en/latest/WearOS/WearOsSmartwatch.md)
+[Use the smartwatch](https://androidaps.readthedocs.io/en/latest/WearOS/WearOsSmartwatch.html)
 
-[Remote control](https://androidaps.readthedocs.io/en/latest/RemoteFeatures/RemoteControlWearOS.md)
+[Remote control](https://androidaps.readthedocs.io/en/latest/RemoteFeatures/RemoteControlWearOS.html)
 
-[Custom watchfaces reference](https://androidaps.readthedocs.io/en/latest/ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md)
+[Custom watchfaces reference](https://androidaps.readthedocs.io/en/latest/ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.html)
 
-[Exchange site custom watchfaces](https://androidaps.readthedocs.io/en/latest/ExchangeSiteCustomWatchfaces/index.md)
+[Exchange site custom watchfaces](https://androidaps.readthedocs.io/en/latest/ExchangeSiteCustomWatchfaces/index.html)
 
 ### 7) Maintenance of AAPS
 
-[Export/Import Settings](https://androidaps.readthedocs.io/en/latest/Maintenance/ExportImportSettings.md)
+[Export/Import Settings](https://androidaps.readthedocs.io/en/latest/Maintenance/ExportImportSettings.html)
 
-[Reviewing your data](https://androidaps.readthedocs.io/en/latest/Maintenance/Reviewing.md)
+[Reviewing your data](https://androidaps.readthedocs.io/en/latest/Maintenance/Reviewing.html)
 
-[AAPS Release Notes](https://androidaps.readthedocs.io/en/latest/Maintenance/ReleaseNotes.md)
+[AAPS Release Notes](https://androidaps.readthedocs.io/en/latest/Maintenance/ReleaseNotes.html)
 
-[Documentation updates](https://androidaps.readthedocs.io/en/latest/Maintenance/DocumentationUpdate.md)
+[Documentation updates](https://androidaps.readthedocs.io/en/latest/Maintenance/DocumentationUpdate.html)
 
-[Updating to a new version of AAPS](https://androidaps.readthedocs.io/en/latest/Maintenance/UpdateToNewVersion.md)
+[Updating to a new version of AAPS](https://androidaps.readthedocs.io/en/latest/Maintenance/UpdateToNewVersion.html)
 
 ### 8) Getting Help
 
-[Where can I get help with AAPS](https://androidaps.readthedocs.io/en/latest/GettingHelp/WhereCanIGetHelp.md)
+[Where can I get help with AAPS](https://androidaps.readthedocs.io/en/latest/GettingHelp/WhereCanIGetHelp.html)
 
-[General troubleshooting](https://androidaps.readthedocs.io/en/latest/GettingHelp/GeneralTroubleshooting.md)
+[General troubleshooting](https://androidaps.readthedocs.io/en/latest/GettingHelp/GeneralTroubleshooting.html)
 
-[Troubleshooting Android Studio](https://androidaps.readthedocs.io/en/latest/GettingHelp/TroubleshootingAndroidStudio.md)
+[Troubleshooting Android Studio](https://androidaps.readthedocs.io/en/latest/GettingHelp/TroubleshootingAndroidStudio.html)
 
-[Accessing logfiles](https://androidaps.readthedocs.io/en/latest/GettingHelp/AccessingLogFiles.md)
+[Accessing logfiles](https://androidaps.readthedocs.io/en/latest/GettingHelp/AccessingLogFiles.html)
 
 ### 9) Advanced AAPS options
 
-[Full Closed Loop](https://androidaps.readthedocs.io/en/latest/AdvancedOptions/FullClosedLoop.md)
+[Full Closed Loop](https://androidaps.readthedocs.io/en/latest/AdvancedOptions/FullClosedLoop.html)
 
-[Dev branch](https://androidaps.readthedocs.io/en/latest/AdvancedOptions/DevBranch.md)
+[Dev branch](https://androidaps.readthedocs.io/en/latest/AdvancedOptions/DevBranch.html)
 
-[Autotune](https://androidaps.readthedocs.io/en/latest/AdvancedOptions/Autotune.md)
+[Autotune](https://androidaps.readthedocs.io/en/latest/AdvancedOptions/Autotune.html)
 
 ### 10) How to support AAPS
 
-[How to help](https://androidaps.readthedocs.io/en/latest/SupportingAaps/HowCanIHelp.md)
+[How to help](https://androidaps.readthedocs.io/en/latest/SupportingAaps/HowCanIHelp.html)
 
-[Editing the docs](https://androidaps.readthedocs.io/en/latest/SupportingAaps/HowToEditTheDocs.md)
+[Editing the docs](https://androidaps.readthedocs.io/en/latest/SupportingAaps/HowToEditTheDocs.html)
 
-[Translating the app and docs](https://androidaps.readthedocs.io/en/latest/SupportingAaps/Translations.md)
+[Translating the app and docs](https://androidaps.readthedocs.io/en/latest/SupportingAaps/Translations.html)
 
-[State of translations](https://androidaps.readthedocs.io/en/latest/SupportingAaps/StateOfTranslations.md)
+[State of translations](https://androidaps.readthedocs.io/en/latest/SupportingAaps/StateOfTranslations.html)
 
-[Open Humans Uploader](https://androidaps.readthedocs.io/en/latest/SupportingAaps/OpenHumans.md)
+[Open Humans Uploader](https://androidaps.readthedocs.io/en/latest/SupportingAaps/OpenHumans.html)
 
 ### 11) Resources
 
-[Glossary](https://androidaps.readthedocs.io/en/latest/UsefulLinks/Glossary.md)
+[Glossary](https://androidaps.readthedocs.io/en/latest/UsefulLinks/Glossary.html)
 
-[FAQ](https://androidaps.readthedocs.io/en/latest/UsefulLinks/FAQ.md)
+[FAQ](https://androidaps.readthedocs.io/en/latest/UsefulLinks/FAQ.html)
 
-[General diabetes and looping resources](https://androidaps.readthedocs.io/en/latest/UsefulLinks/BackgroundReading.md)
+[General diabetes and looping resources](https://androidaps.readthedocs.io/en/latest/UsefulLinks/BackgroundReading.html)
 
-[Dedicated Google account for AAPS (optional)](https://androidaps.readthedocs.io/en/latest/UsefulLinks/DedicatedGoogleAccountForAaps.md)
+[Dedicated Google account for AAPS (optional)](https://androidaps.readthedocs.io/en/latest/UsefulLinks/DedicatedGoogleAccountForAaps.html)
 
-[For Clinicians (outdated)](https://androidaps.readthedocs.io/en/latest/UsefulLinks/ClinicianGuideToAaps.md)
+[For Clinicians (outdated)](https://androidaps.readthedocs.io/en/latest/UsefulLinks/ClinicianGuideToAaps.html)
