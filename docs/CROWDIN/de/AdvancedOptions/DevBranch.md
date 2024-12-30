@@ -1,4 +1,4 @@
-# Development branch
+# Entwickler-Version (dev branch)
 
 <font color="#FF0000"><strong>Achtung:</strong></font>
 Der 'Dev Branch' dient ausschließlich der Weiterentwicklung von AAPS. Er darf nur auf einem separaten Smartphone zu Testzwecken, <font color="#FF0000"><strong>nicht für das tatsächliche Loopen</strong></font> verwendet werden.
@@ -9,6 +9,6 @@ Achtung: Die Entwicklungsversion (Dev Branch) von AAPS ist für Entwickler sowie
 
 Im Dev branch sieht man, welche Funktionen gerade getestet werden. Damit können Fehler ausgebügelt und Feedback darüber gegeben werden, wie die neuen Funktionen in der Praxis funktionieren. Meist wird die Entwickler-Version auf einem alten Telefon mit einer separaten Pumpe getestet bis es stabil läuft. Jede Benutzung des dev branch erfolgt auf eigene Gefahr! Wenn Du neue Funktionen ausprobierst mache Dir immer bewusst, dass Du Funktionen verwendest, die sich noch in Entwicklung befinden und nicht final freigegeben sind. Tue dies auf eigene Gefahr und mit der gebotenen Sorgfalt, um Deine eigene Sicherheit zu gewährleisten.
 
-Wenn du einen Fehler gefunden hast oder glaubst, dass etwas falsch berechnet wurde, dann sehe im [issues tab](https://github.com/nightscout/AndroidAPS/issues) nach, um zu sehen, ob schon jemand diesen Fehler bemerkt hat, falls nicht, kannst du einen neuen Issue öffnen. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md). Die neuen Funktionen können auch auf [discord](https://discord.gg/4fQUWHZ4Mw) diskutiert werden.
+Wenn Du einen Fehler gefunden hast oder glaubst, dass etwas falsch berechnet wurde, dann sehe im [issues tab](https://github.com/nightscout/AndroidAPS/issues) nach, um zu sehen, ob schon jemand diesen Fehler bemerkt hat, falls nicht, kannst Du einen neuen Issue öffnen. Je mehr Informationen Du dabei mitlieferst, desto besser/schneller kann der Fehler reproduziert und behoben werden. Vergiss nicht, die [Protokolldateien](../GettingHelp/AccessingLogFiles.md) anzufügen. Die neuen Funktionen können auch auf [discord](https://discord.gg/4fQUWHZ4Mw) diskutiert werden.
 
 Eine Entwickler-Version hat ein Ablaufdatum. Das scheint unpraktisch, wenn es zufriedenstellend genutzt wird, aber es dient einem Zweck. Wenn eine einzelne Dev-Version die Runden macht, ist es einfacher, Fehler zu verfolgen, die Leute melden. Die Entwickler wollen nicht in einer Position sein, in der es drei Versionen von dev im Umlauf sind, in denen Fehler behoben werden müssen und Testuser Fehler, die schon behoben wurden in der aktuellsten Dev-Version, in guter Absicht nochmals melden.
