@@ -2,7 +2,7 @@
 
 How to add questions to the FAQ: Follow the these [instructions](../SupportingAaps/HowToEditTheDocs.md)
 
-## General
+## Allgemein
 
 ### Can I just download the AAPS installation file?
 
