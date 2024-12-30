@@ -1,4 +1,4 @@
-# OpenAPS功能
+# Key AAPS features
 
 (Open-APS-features-autosens)=
 
@@ -103,75 +103,25 @@ OpenAPS SMB的设置如下所述。
 
 另请参见[OpenAPS的SMB文档](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb)。
 
-### 启用Autosens
+### Enable dynamic sensitivity
 
-[Autosens](#autosens)观察血糖偏差（正/负/中性）。 它将尝试根据这些偏差来确定你对胰岛素的敏感或抵抗程度，并根据这些偏差调整基础率和ISF。
+This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page.
 
-### 启用超微大剂量（SMB）
+#### 高临时目标提高敏感性
 
-启用此功能以使用SMB功能。 如果禁用此功能，将不会给予任何**SMB**。
+如果您启用了此选项，那么在设置临时目标高于100 mg/dl（或5.6 mmol/l）时，胰岛素敏感性将会增加。 这意味着，ISF将会上升，而IC和基础率将会减少。 这将有效地使**AAPS**在您设置高临时目标时变得不那么激进。
 
-(Open-APS-features-enable-smb-with-high-temp-targets)=
+#### 低临时目标降低敏感性
 
-### 启用具有高临时目标的 SMB
+如果您启用了此选项，那么在设置临时目标低于100 mg/dl（或5.6 mmol/l）时，胰岛素敏感性将会降低。 这意味着，ISF将会下降，而IC和基础率将会增加。 这将有效地使**AAPS**在您设置低临时目标时变得更加积极。
 
-如果启用了此设置，即使用户选择了高**临时目标**（定义为高于100mg/dL或5.6mmol/l，无论**配置文件**目标如何），也会给予**SMB**。 此选项旨在通过禁用设置来禁用SMB。 例如，如果禁用了此选项，则通过将**临时目标**设置为高于100mg/dL或5.6mmol/l可以禁用**SMB**。 无论其他什么条件试图启用SMB，此选项都将禁用**SMB**。
+### Enable Autosens feature
 
-如果启用了此设置，则仅当也启用了**启用带有临时目标的SMB**时，SMB才会在高临时目标下启用。
+This is the [Autosens](#autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
-(Open-APS-features-enable-smb-always)=
+Autosens looks at blood glucose deviations (positive/negative/neutral). 它将尝试根据这些偏差来确定你对胰岛素的敏感或抵抗程度，并根据这些偏差调整基础率和ISF。
 
-### 始终启用 SMB
-
-如果启用了此设置，那么SMB将始终启用（与COB、临时目标或餐时胰岛素无关）。 如果启用了此设置，那么下面其他的启用设置将无效。 然而，如果禁用了**启用高临时目标的SMB**，并且设置了一个高临时目标，那么SMB将被禁用。
-
-出于安全原因，此选项仅适用于具有良好噪声数据过滤系统的血糖数据来源。
-
-- 目前，仅当使用[构建你自己的Dexcom应用程序](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)或xDrip+中的“[原生模式](#smoothing-xdrip-dexcom-g6)”时，此选项才适用于Dexcom G5或G6。 如果BG值的偏差太大，G5/G6将不会发送它，并等待5分钟后的下一个值。
-- 对于其他CGM/FGM（如Freestyle Libre），在出现更好的噪声平滑插件之前，**SMB始终**处于禁用状态。 
-- 你可以在[这里](../CompatibleCgms/SmoothingBloodGlucoseData.md)找到更多信息。
-
-### 启用带活性碳水化合物(COB)的SMB
-
-如果启用了此设置，当COB大于0时，SMB将被启用。
-
-### 启用带有临时目标的SMB
-
-如果启用了此设置，那么当设置了任何临时目标（如即将进食、活动、低血糖、自定义）时，SMB将被启用。 如果启用了此设置但禁用了**启用具有高临时目标的SMB**，则在设置低临时目标（低于100mg/dL或5.6mmol/l）时SMB将启用，但在设置高临时目标时将禁用。
-
-### 在输入碳水化合物后启用SMB
-
-如果启用了此设置，则在宣布碳水化合物后的6小时内，SMB将启用，即使COB已达到0。
-
-出于安全原因，此选项仅适用于具有良好噪声数据过滤系统的血糖数据来源。
-
-- 目前，仅当使用[构建你自己的Dexcom应用程序](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)或xDrip+中的“[原生模式](#smoothing-xdrip-dexcom-g6)”时，此选项才适用于Dexcom G5或G6。 如果BG值的偏差太大，G5/G6将不会发送它，并等待5分钟后的下一个值。
-- 对于其他CGM/FGM（如Freestyle Libre），在出现更好的噪声平滑插件之前，**SMB始终**处于禁用状态。
-- 你可以在[这里](../CompatibleCgms/SmoothingBloodGlucoseData.md)找到更多信息。
-
-### 以分钟为单位设置SMB的频率是多少
-
-此功能限制了SMB的频率。 这个值决定了SMB之间的最小时间间隔。 请注意，每当收到血糖值时（通常为每5分钟一次），闭环系统就会运行一次。 减去2分钟，以便为闭环系统完成操作提供额外时间。 例如，如果您希望每次闭环运行时都发送SMB，请将此设置为3分钟。
-
-默认值：3分钟。
-
-(Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
-
-### 限制SMB可调整的最大基础率分钟数
-
-这是一个重要的安全设置。 此值决定了在给定时间内，当被COB覆盖时，基于基础胰岛素的量，可以给予多少SMB。
-
-将此值设置得更大可以使SMB更加激进。 您应该从默认值30分钟开始。 在积累了一些经验后，以15分钟为增量增加该值，并观察多餐后的效果。
-
-建议不要将此值设置为高于90分钟，因为这可能导致算法无法在基础胰岛素为0U/h（'零临时'）的情况下适应血糖下降。 您还应该设置警报，尤其是在您仍在测试新设置时，这将能在低血糖发生前很久就提醒您。
-
-默认值：30分钟。
-
-### 启用 UAM
-
-启用此选项后，SMB算法可以识别未提前通知的进餐。 如果您忘记告诉**AAPS**您的碳水化合物摄入量，或者错误地估计了碳水化合物摄入量，导致输入的碳水化合物量不准确，或者如果一顿含有大量脂肪和蛋白质的餐食持续时间比预期更长，那么此功能将非常有用。 在没有任何碳水化合物输入的情况下，UAM可以识别由碳水化合物、肾上腺素等引起的血糖快速升高，并尝试通过SMBs进行调整。 这同样适用于相反的情况：如果血糖快速下降，它可以更早地停止SMBs。
-
-**因此，在使用SMB时应当始终激活UAM。**
+When enabled, new settings become available.
 
 ### 敏感时提高目标
 
@@ -181,17 +131,88 @@ OpenAPS SMB的设置如下所述。
 
 ![由Autosens修改的目标](../images/Home2020_DynamicTargetAdjustment.png)
 
+This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
+
 ### 抗药时降低目标
 
 如果启用了此选项，当检测到抗药性（高于100%）时，灵敏度检测（autosens）可以降低目标。 在这种情况下，你的目标将根据检测到的抗药性的百分比降低。
 
-### 高临时目标提高敏感性
+This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
 
-如果您启用了此选项，那么在设置临时目标高于100 mg/dl（或5.6 mmol/l）时，胰岛素敏感性将会增加。 这意味着，ISF将会上升，而IC和基础率将会减少。 这将有效地使**AAPS**在您设置高临时目标时变得不那么激进。
+### 启用超微大剂量（SMB）
 
-### 低临时目标降低敏感性
+启用此功能以使用SMB功能。 如果禁用此功能，将不会给予任何**SMB**。
 
-如果您启用了此选项，那么在设置临时目标低于100 mg/dl（或5.6 mmol/l）时，胰岛素敏感性将会降低。 这意味着，ISF将会下降，而IC和基础率将会增加。 这将有效地使**AAPS**在您设置低临时目标时变得更加积极。
+When enabled, new settings become available.
+
+(Open-APS-features-enable-smb-with-high-temp-targets)=
+
+#### 启用具有高临时目标的 SMB
+
+如果启用了此设置，即使用户选择了高**临时目标**（定义为高于100mg/dL或5.6mmol/l，无论**配置文件**目标如何），也会给予**SMB**。 此选项旨在通过禁用设置来禁用SMB。 例如，如果禁用了此选项，则通过将**临时目标**设置为高于100mg/dL或5.6mmol/l可以禁用**SMB**。 无论其他什么条件试图启用SMB，此选项都将禁用**SMB**。
+
+如果启用了此设置，则仅当也启用了**启用带有临时目标的SMB**时，SMB才会在高临时目标下启用。
+
+(Open-APS-features-enable-smb-always)=
+
+#### 始终启用 SMB
+
+如果启用了此设置，那么SMB将始终启用（与COB、临时目标或餐时胰岛素无关）。 如果启用了此设置，那么下面其他的启用设置将无效。 然而，如果禁用了**启用高临时目标的SMB**，并且设置了一个高临时目标，那么SMB将被禁用。
+
+This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+
+#### 启用带活性碳水化合物(COB)的SMB
+
+如果启用了此设置，当COB大于0时，SMB将被启用。
+
+This setting is not visible if "Enable SMB always" is switched on.
+
+#### 启用带有临时目标的SMB
+
+如果启用了此设置，那么当设置了任何临时目标（如即将进食、活动、低血糖、自定义）时，SMB将被启用。 如果启用了此设置但禁用了**启用具有高临时目标的SMB**，则在设置低临时目标（低于100mg/dL或5.6mmol/l）时SMB将启用，但在设置高临时目标时将禁用。
+
+This setting is not visible if "Enable SMB always" is switched on.
+
+#### 在输入碳水化合物后启用SMB
+
+如果启用了此设置，则在宣布碳水化合物后的6小时内，SMB将启用，即使COB已达到0。
+
+For safety reasons, this setting is only available if **AAPS** detects that you are using a reliable BG source. It is not visible if "Enable SMB always" is switched on.
+
+This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
+This setting is not visible if "Enable SMB always" is switched on.
+
+#### 以分钟为单位设置SMB的频率是多少
+
+此功能限制了SMB的频率。 这个值决定了SMB之间的最小时间间隔。 请注意，每当收到血糖值时（通常为每5分钟一次），闭环系统就会运行一次。 减去2分钟，以便为闭环系统完成操作提供额外时间。 例如，如果您希望每次闭环运行时都发送SMB，请将此设置为3分钟。
+
+默认值：3分钟。
+
+(Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
+
+#### 限制SMB可调整的最大基础率分钟数
+
+这是一个重要的安全设置。 此值决定了在给定时间内，当被COB覆盖时，基于基础胰岛素的量，可以给予多少SMB。
+
+将此值设置得更大可以使SMB更加激进。 您应该从默认值30分钟开始。 在积累了一些经验后，以15分钟为增量增加该值，并观察多餐后的效果。
+
+建议不要将此值设置为高于90分钟，因为这可能导致算法无法在基础胰岛素为0U/h（'零临时'）的情况下适应血糖下降。 您还应该设置警报，尤其是在您仍在测试新设置时，这将能在低血糖发生前很久就提醒您。
+
+默认值：30分钟。
+
+#### Max minutes of basal to limit SMB to for UAM
+
+This setting allows to adjust the strength of SMB during UAM, when there are no more carbs.
+
+Default value : the same as **Max minutes of basal to limit SMB to**.
+
+This setting is only visible if "Enable SMB" and "Enable UAM " are switched on.
+
+### 启用 UAM
+
+启用此选项后，SMB算法可以识别未提前通知的进餐。 如果您忘记告诉**AAPS**您的碳水化合物摄入量，或者错误地估计了碳水化合物摄入量，导致输入的碳水化合物量不准确，或者如果一顿含有大量脂肪和蛋白质的餐食持续时间比预期更长，那么此功能将非常有用。 在没有任何碳水化合物输入的情况下，UAM可以识别由碳水化合物、肾上腺素等引起的血糖快速升高，并尝试通过SMBs进行调整。 这同样适用于相反的情况：如果血糖快速下降，它可以更早地停止SMBs。
+
+**因此，在使用SMB时应当始终激活UAM。**
 
 (key-aaps-features-minimal-carbs-required-for-suggestion)=
 
