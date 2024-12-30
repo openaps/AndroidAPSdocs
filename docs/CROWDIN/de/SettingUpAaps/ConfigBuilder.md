@@ -25,7 +25,7 @@ Mit der Checkbox unter dem Augensymbol entscheidest Du, wie Du den entsprechende
 
 (ConfigBuilder_Profile)=
 
-## Profile
+## Profil
 
 This module can not be disabled as it is a core part of **AAPS**.
 
@@ -102,9 +102,9 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
 * Random BG: Generates random BG data (Demo mode only)
 
-## Smoothing
+## Glättung
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Glättung](../images/ConfBuild_Smoothing.png)
 
 See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
@@ -137,7 +137,7 @@ Select the pump you are using. See [Compatible pumps](../Getting-Started/Compati
 
 Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs). You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs). You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Hinweis: Du musst im [Ziel 8](#objectives-objective8) sein, um durch die Empfindlichkeitserkennung [Autosens](#Open-APS-features-autosens) die abzugebende Insulinmenge automatisch anpassen zu lassen. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
 ### Resorptions-Einstellungen
 
