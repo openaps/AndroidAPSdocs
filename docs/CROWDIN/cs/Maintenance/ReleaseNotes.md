@@ -66,9 +66,93 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 (version3300)=
 ## Version 3.3.0.0
 
-Version 3.3 is close ! Use the version switcher at the bottom right of your screen to see what's new.
+Release date: 29-12-2024
 
-![Open language menu](../images/documentation_language_menu.png)
+### Main features
+
+* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behavior :
+  * **Profile Switch Percentage** is now taken into account for dynamic sensitivity strengthness
+  * The average ISF of last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
+  * If you use dynamic sensitivity and you have automation setting profile % in relation to BG turn it off. This is already part of dynamic sensitivity algorithm
+  * ***** AGAIN: Turn off all automation setting profile % in relation to BG because it will multiply the effect too much !!!!! *****
+  * Do not use non 100% for a long time. If you determine that your profile has changed, create new profile by cloning the one with %
+* Enable “SMB always” and “SMB after carbs” for FreeStyle Libre 2 and Libre 3 users
+* New Automation triggers
+* Unattended settings exports
+
+### How to upgrade
+
+* Before upgrading:
+  * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
+  * [Android Studio version called "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already have an older version of Android Studio installed, you may need to <span style="color:red">configure the JVM version to 21</span>. See [Troubleshooting Android Studio > Incompatible Gradle JVM](#incompatible-gradle-jvm).
+  * If you use the “old” Combo driver with ruffy device, migrate to the [native Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) before update
+  * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade: make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
+* Update instructions: follow the [Update to a new version](../Maintenance/UpdateToNewVersion.md) guide.
+* After upgrading:
+  * Set the new [“AAPS directory” setting](#preferences-maintenance-settings), in the Maintenance tab.
+
+### Detailed changes
+
+#### CGMs and Pumps
+
+* [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users @MilosKozak
+* [Medtrum driver](../CompatiblePumps/MedtrumNano.md) improvements @jbr77rr
+  * Communication improvements, including new setting to workaround problems on some smartphones
+  * Show reservoir level at start of activation
+  * Fix bug where activation returns to start and user cannot finish the activation
+  * Feedback for sync status and other clarifications
+* New supported pump : [Equil 5.3](../CompatiblePumps/Equil5.3.md) @EquilHack
+* New supported CGMs : [Ottai](../CompatibleCgms/OttaiM8.md) @ottai-developer and [Syai Tag](../CompatibleCgms/SyaiTagX1.md) @syai-dev
+* Insight driver rewritten to kotlin @Philoul
+* Removed old ruffy dependent Combo driver
+
+#### UI changes
+
+* [Simple mode](#preferences-simple-mode) activated by default on fresh install @MilosKozak
+* New [QuickWizard](#Preferences-quick-wizard) options @radicalb
+  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. You can now use the “carb time” field in QuickWizard  to pre-bolus.
+* New [graph scale menu](#aaps-screens-main-graph); [additional graphs menu](#AapsScreens-activate-optional-information) UI improvements @Philoul
+* [ConfigBuilder layout improvement](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
+  * Sections are now collapsed by default. Use arrow to expand.
+* Variable sensitivity visible in AAPSClient
+* BolusWizard UI improvements @kenzo44
+* Fix text display in pump tabs when using light theme @jbr77rr
+
+#### Other functionalities
+
+* Unattended exports @vanelsberg
+* New [Automation trigger](#automations-automation-triggers) @vanelsberg
+  * Pod Activation (patch pump only)
+* New [Automation triggers](#automations-automation-triggers) @jbr77rr
+  * Cannula age, Insulin age, Battery age, Sensor age, Reservoir level, Pump battery level
+* Allowing negative carbs entry @MilosKozak
+* New Parameter [“AAPS directory”](#preferences-maintenance-settings) to choose a storage directory different from the default one.
+* Allow for [insulin records when pump suspended](#aaps-screens-buttons-insulin) @jbr77rr
+* Updated [Objective 2](#objectives-objective2) @MilosKozak
+  * Check that master password is set and known
+* Random carbs in test mode @MilosKozak
+* Fixed bug in TDD calculation @MilosKozak
+* SMS Commands : allow to [**not** send SMS for profile change](#sms-commands-too-many-messages) coming from NS @MilosKozak
+
+#### Chytré hodinky
+
+* wear and watchfaces improvement @Philoul @MilosKozak @olorinmaia
+* Watch tiles from Automation actions @Philoul
+* Combined watchfaces from AAPS, AAPSClient and AAPSClient2 to monitor more patients @Philoul @MilosKozak
+* EXTRA: show\_user\_actions\_on\_watch\_only @MilosKozak
+
+#### Technical changes
+
+* new internal modules structure @MilosKozak
+* split persistence layer from main code @MilosKozak
+* build files rewritten to kts @MilosKozak
+* algorithms rewritten to kotlin for better performance @MilosKozak
+* tons of new unit tests @MilosKozak and others
+* more code converted to kotlin @MilosKozak
+* new preferences management, xml \-\> kotlin @MilosKozak
+* new CI configuration, run CI on own servers @MilosKozak
+* libraries updated to latest version, toml @MilosKozak
+* migration to kotlin 2.0, java 21 @MilosKozak
 
 (version3200)=
 ## Verze 3.2.0.0 věnována @Philoul
@@ -602,7 +686,7 @@ Datum vydání: 03. 11. 2018
 ### Hlavní nové funkce
 
 - oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
-- [\_Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md) pump support
+- Accu-Chek Combo pump support
 - Setup wizard: guides you through the process of setting up AAPS
 
 (Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=
