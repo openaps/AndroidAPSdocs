@@ -300,7 +300,7 @@ Es können Probleme mit sich überschneidenden Definitionen bei Automationen auf
 
 Genauso schnell und einfach kannst Du Auslöser oder Aktionen binnen weniger Sekunden auf Deinem AAPS-Smartphone anpassen; wenn Du beispielsweise an einem besonderen Essens-Event teilnimmst. (Aber vergiss nicht, sie für den nächsten Tag wieder auf "normal" zu setzen).
 
-## Troubleshooting
+## Problembehandlung
 
 ### Wie man wieder in den Hybrid Closed Loop zurückkehrt
 
