@@ -35,7 +35,7 @@ To return to real time select this button:
 
 Most values are referenced by ADA 2023 [recommendations](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
 
-![Statistics](../images/Maintenance/statistics.png)
+![Statistiken](../images/Maintenance/statistics.png)
 
 ### Total Daily Dose
 
@@ -49,7 +49,7 @@ Most values are referenced by ADA 2023 [recommendations](https://diabetesjournal
 
 TDD section is calculated on the go when you display the page, and takes a few seconds to compute.
 
-![Statistics](../images/Maintenance/statistics2.png)
+![Statistiken](../images/Maintenance/statistics2.png)
 
 ### Time in Range
 
@@ -63,7 +63,7 @@ Time In Tight Range (TITR) 70-140 mg/dl or 3.9-7.8 mmol/l statistics are availab
 
 Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress .
 
-![Statistics](../images/Maintenance/statistics3.png)
+![Statistiken](../images/Maintenance/statistics3.png)
 
 Detailed 14 days **TIR** statistics.
 
@@ -71,13 +71,13 @@ Detailed 14 days **TIR** statistics.
 
 HbA1c: the estimate of the resulting glycated hemoglobin, based on the average of CGM measurements. This is an indicative value that might not match blood HbA1c tests.
 
-![Statistics](../images/Maintenance/statistics4.png)
+![Statistiken](../images/Maintenance/statistics4.png)
 
 ### Activity monitor
 
 Activity monitor captures the time spent on each **AAPS** activity.
 
-![Statistics](../images/Maintenance/statistics5.png)
+![Statistiken](../images/Maintenance/statistics5.png)
 
 ------
 
