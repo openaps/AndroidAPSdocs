@@ -68,7 +68,7 @@ AAPS还会通过短信通知您，远程指令（如大剂量注射或配置切�
 
 ### AAPS设置
 
-现在已检查手机设置，在**AAPS**应用程序本身中，使用[配置构建器](../SettingUpAaps/ConfigBuilder.md)启用**短信通信器**模块。
+Now that the phone settings have been checked, in the **AAPS** app itself, go to [Config Builder > General](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
 
 转到短信通信器的首选项。
 
@@ -262,7 +262,7 @@ PIN码要求：
 | 指令                 | 身份验证 | 功能与*回复*                                                                                                                          |
 | ------------------ | ---- | -------------------------------------------------------------------------------------------------------------------------------- |
 | TREATMENTS REFRESH | 否    | 从Nightscout刷新治疗数据                                                                                                                |
-| NSCLIENT RESTART   | 否    | 如果发现<br/>与Nightscout或**AAPSClient**的通信问题，则很有用                                                                              |
+| AAPSCLIENT RESTART | 否    | 如果发现<br/>与Nightscout或**AAPSClient**的通信问题，则很有用                                                                              |
 | SMS DISABLE/STOP   | 否    | 禁用短信远程服务，回复代码Any。 <br/>请记住，您只能从**AAPS**主智能手机直接重新激活它。                                                                       |
 | HELP               | 否    | 返回所有可用于查询的功能：<br/>BG, LOOP, TREATMENTS, ....<br/>发送进一步的***HELP ***FUNCTION****** 指令以列出<br/>该部分的所有可用选项。 |
 | HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                             |
@@ -332,6 +332,9 @@ AAPS只会执行最新的命令。 因此，如果您输入了“bolus 1.5”，
 
 如果其他应用程序安装在多部手机上，请确保在所有手机上都停用上传。
 
+(sms-commands-too-many-messages)=
 ### 我从SMS命令中收到了太多短信。 我可以减少频率或让它们停止吗？
 
 使用SMS命令可能会从**AAPS**手机向护理者的手机生成大量自动消息。 如果您在**AAPS**中设置了自动化，您还会收到消息，例如“泵中的基础模式已更新”。 如果您的AAPS手机计划（以及每个护理者手机）拥有无限短信额度会很有用，并且要在所有手机上停用短信通知、警报或振动。 如果要使用SMS命令，就不可能不收到这些更新。 因此，您可能需要一种与孩子直接沟通的替代方式（如果他们年龄足够大），而不是使用SMS。 **AAPS**护理者常用的替代通信应用程序包括Whatsapp、Lime、Telegram和Facebook Messenger。
+
+It is possible do disabled the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
