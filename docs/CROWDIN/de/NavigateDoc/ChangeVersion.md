@@ -1,8 +1,8 @@
-# Change version
+# Version ändern
 
-The documentation you are currently reading is specific to a given version of **AAPS**.
+Die von Dir gerade gelesene Dokumentation, wurde passend zu einer spezifischen **AAPS**-Version erstellt.
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version.
+Die aktuelle Version wird rechts unten auf dem Bildschirm angezeigt. Um zu einer anderen Version zu wechseln, klicke auf die aktuelle Version.
 
 ![Sprachauswahl öffnen](../images/documentation_language_menu.png)
 
