@@ -28,7 +28,7 @@ The four last parameters (glucose targets, basal rates, insulin sensitivity fact
 Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
 
 (your-aaps-profile-duration-of-insulin-action)=
-## Duration of insulin action (DIA)
+## Insulinwirkdauer (DIA)
 
 ### Description
 
@@ -64,7 +64,7 @@ The **figure below** shows an example of how the **DIA** set in an **AAPS** prof
 The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is probably a good place to start. A growing number of people find that a **DIA** of 8 to 9 hours works good for them. See the additional reading mentioned above.
 
 (profile-glucose-targets)=
-## Glucose targets
+## Glukoseziele
 
 ### Description
 
@@ -72,10 +72,10 @@ Your **BG target** is a core value and all of **AAPS** calculations are based on
 
 The targets can be defined within those boundaries :
 
-|         | _Low_ target           | _High_ target          |
-| ------- | ---------------------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   | 5 mmol/l or 90 mg/dL   |
-| Maximum | 10 mmol/l or 180 mg/dL | 15 mmol/l or 225 mg/dL |
+|         | _Low_ target           | _High_ target            |
+| ------- | ---------------------- | ------------------------ |
+| Minimum | 4 mmol/l oder 72 mg/dl | 5 mmol/l or 90 mg/dL     |
+| Maximum | 10 mmol/l or 180 mg/dL | 15 mmol/l oder 225 mg/dl |
 
 ### Impact
 
@@ -93,7 +93,7 @@ When In [Open Loop](#Preferences-pen-loop), especially when progressing through 
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## Basalraten
 
 ### Description
 
@@ -119,7 +119,7 @@ Conversely, a basal rate too low can lead to high BGs, and a failure to bring le
 
 The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![Basalraten](../images/Profile_BasalRates.png)
 
 Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetic team.
 
@@ -131,7 +131,7 @@ When taking action on the result of your basal testing, changes in the **Profile
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## Insulinempfindlichkeitsfaktor ("Korrekturfaktor")
 
 ### Description
 
@@ -183,7 +183,7 @@ Sei vorsichtig, da die Korrektur oftmals zu aggressiv eingestellt ist. D.h. eine
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## Insulin-Kohlenhydrat-Verhältnis (insulin to carb ratio - ICR)
 
 ### Description
 
