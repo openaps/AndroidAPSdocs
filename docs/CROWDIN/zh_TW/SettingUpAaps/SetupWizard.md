@@ -20,14 +20,13 @@
 :class: note
 如果文件中有錯誤或您對如何解釋某些內容有更好的想法，您可以按照[與其他用戶聯繫](../GettingHelp/WhereCanIGetHelp.md)的說明向社區尋求幫助。
 ```
-## AAPS設定嚮導逐步指南
-### 歡迎訊息
+## 歡迎訊息
 
 這只是歡迎訊息，你可以透過點擊“下一步”按鈕跳過：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_125636.png)
 
-### 許可協議
+## 許可協議
 
 在最終用戶授權協議中，有關於使用**AAPS**的法律事宜的重要訊息。 請仔細閱讀。
 
@@ -37,7 +36,7 @@
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_125650.png)
 
-### 必要的權限
+## 必要的權限
 
 **AAPS** 需要一些權限才能正常運行。
 
@@ -49,28 +48,15 @@
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_125709.png)
 
-智慧型手機的電池消耗仍然是需要考慮的因素，因為電池性能仍然相當有限。 因此，智慧型手機上的Android操作系統在允許應用程式運作和消耗CPU時間（因此消耗電池電量）方面有嚴格的限制。
-
-然而，**AAPS** 需要定期運行，_例如_每幾分鐘接收血糖讀值，然後根據你的規範應用算法來決定如何處理你的血糖水平。 因此，必須讓Android允許一些權限。
-
-你可以透過確認設置來完成這一操作。
-
-請點擊“請求許可”按鈕：
-
-![圖像](../images/setup-wizard/Screenshot_20231202_125721.png)
-
-請選擇“允許”：
-
-![圖像](../images/setup-wizard/Screenshot_20231202_125750.png)
+### Notification and battery optimization
 
 如果應用程式希望向你發送通知，Android需要特殊的許可。
 
 雖然停用通知很方便_例如_來自社群媒體應用程式的通知，但你必須允許**AAPS**向你發送通知。
 
-請點擊“請求許可”按鈕：
+Please click the first "ASK FOR PERMISSION" button:
 
-![圖像](../images/setup-wizard/Screenshot_20231202_125813.png)
-
+![圖像](../images/setup-wizard/Screenshot_20231202_125721.png)
 
 選擇“AAPS”應用程式：
 
@@ -84,11 +70,27 @@
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_125851.png)
 
+智慧型手機的電池消耗仍然是需要考慮的因素，因為電池性能仍然相當有限。 因此，智慧型手機上的Android操作系統在允許應用程式運作和消耗CPU時間（因此消耗電池電量）方面有嚴格的限制。
+
+然而，**AAPS** 需要定期運行，_例如_每幾分鐘接收血糖讀值，然後根據你的規範應用算法來決定如何處理你的血糖水平。 因此，必須讓Android允許一些權限。
+
+你可以透過確認設置來完成這一操作。
+
+Click the second "ASK FOR PERMISSION" button. 請選擇“允許”：
+
+![圖像](../images/setup-wizard/Screenshot_20231202_125750.png)
+
+點擊“下一步”按鈕：
+
+![Screenshot_20241207-161454.png](../images/setup-wizard/Screenshot_20241207-161454.png)
+
+### Location
+
 Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可能在其他應用程式中也見過這一點。 如果你想查看藍牙，通常需要位置權限。
 
 **AAPS** 使用藍牙與你的 CGM 和胰島素幫浦通信，如果這些設備是直接由**AAPS** 控制，而不是其他應用程式所使用的。 具體細節可能因設置而異。
 
-請點擊“請求許可”按鈕：
+Click the first "ASK FOR PERMISSION" button:
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_125924.png)
 
@@ -98,13 +100,21 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_125939.png)
 
+Click the second "ASK FOR PERMISSION" button:
+
+![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
+
+Select "Allow all the time".
+
 點擊“下一步”按鈕：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_130002.png)
 
+### Storage permission
+
 **AAPS** 需要將訊息記錄到你的智慧型手機的永久儲存中。 永久儲存意味著即使重啟智慧型手機後，他仍然可用。 其他訊息則會遺失，因為他們沒有儲存到永久儲存中。
 
-請點擊“請求許可”按鈕：
+Click the first "ASK FOR PERMISSION" button:
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_130012.png)
 
@@ -112,16 +122,19 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_130022.png)
 
-你將被告知需要重新啟動智慧型手機以使更改生效。
+Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information. The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
 
-請**不要現在停止設定嚮導**。 你可以在完成設定嚮導後再進行。
+![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
 
-點擊“確定”然後點擊“下一步”按鈕：
+Confirm that you wish to grant access to **AAPS** to the selected directory:
+
+![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
+
+點擊“下一步”按鈕：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-
-### 主密碼
+## 主密碼
 
 由於**AAPS**的配置包含一些敏感資料（_例如_進入你的 Nightscout 伺服器的 API_KEY），因此這些資料會通過你在此設置的密碼進行加密。
 
@@ -132,7 +145,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 ![圖像](../images/setup-wizard/Screenshot_20231202_130122.png)
 
 
-### Fabric上傳
+## Fabric上傳
 
 在這裡，你可以設置自動崩潰和使用報告服務的使用。
 
@@ -164,13 +177,13 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-### 單位 (mg/dL <-> mmol/L)
+## 單位 (mg/dL <-> mmol/L)
 
 請選擇你的血糖值是以 mg/dl 還是 mmol/L 為單位，然後點擊“下一步”按鈕：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_135830.png)
 
-### 顯示設置
+## 顯示設置
 
  在這裡，你可以選擇傳感器顯示的血糖範圍，這將顯示在你設置的範圍內的“範圍內”數值。 你可以暫時保留預設值，稍後再進行編輯。
 
@@ -185,7 +198,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 ![圖像](../images/setup-wizard/Screenshot_20231202_135853.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-### 與報告伺服器同步及更多設置
+## 與報告伺服器同步及更多設置
 
 在這裡，你可以配置資料上傳到你的報告伺服器。
 
@@ -269,7 +282,7 @@ Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_141351.png)
 
-### 患者名稱
+## 患者名稱
 
 在這裡你可以在**AAPS**中設置你的姓名。
 
@@ -281,7 +294,7 @@ Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-### 病人類型
+## 病人類型
 
 在這裡你選擇你的「患者類型」，這點很重要，因為**AAPS**軟體根據患者的年齡有不同的限制。 這對安全至關重要。
 
@@ -293,7 +306,7 @@ Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_141817.png)
 
-### 使用的胰島素
+## 使用的胰島素
 
 選擇在幫浦中使用的胰島素類型。
 
@@ -309,7 +322,7 @@ Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout
 ![圖像](../images/setup-wizard/Screenshot_20231202_141840.png)
 
 
-### 血糖來源
+## 血糖來源
 
 選擇你使用的血糖來源。 請閱讀你的[血糖資料來源](../Getting-Started/CompatiblesCgms.md)的文件。
 
@@ -335,7 +348,7 @@ Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout
 ![圖像](../images/setup-wizard/Screenshot_20231202_141958.png)
 
 (setup-wizard-profile)=
-### 設定檔
+## 設定檔
 
 現在我們進入設定嚮導中的一個非常重要的部分。
 
@@ -440,7 +453,7 @@ Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout
 ![圖像](../images/setup-wizard/Screenshot_20231202_143833.png)
 
 
-### 胰島素幫浦
+## 胰島素幫浦
 
 
 
@@ -465,7 +478,7 @@ Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-### APS 演算法
+## APS 演算法
 
 選擇OpenAPS SMB演算法作為你的APS演算法。 即使有這個名稱，SMB功能在你熟悉 **AAPS** 並完成第一階段目標之前是停用的。 無論如何，OpenAPS SMB 相較於 OpenAPS AMA 更新且通常效果更好。
 
@@ -489,7 +502,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-### APS模式
+## APS模式
 
 讓“開放循環”保持選中狀態。
 
@@ -497,7 +510,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_144049.png)
 
-### 敏感度偵測
+## 敏感度偵測
 
 讓「敏感度 Oref1」成為所選敏感度外掛的標準。
 
@@ -505,7 +518,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_144101.png)
 
-### 開始目標1
+## 開始目標1
 
 你現在進入目標。 獲取更進階**AAPS**功能的資格。
 
