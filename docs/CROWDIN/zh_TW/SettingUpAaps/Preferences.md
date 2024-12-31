@@ -37,11 +37,11 @@
 - 如果你希望**AAPS**使用不同於標準手機語言的語言，你可以從廣泛的選擇中選擇。
 
 - 如果你使用不同的語言，有時可能會看到語言混合的情況。 這是由於 Android 的問題，覆蓋預設的 Android 語言有時不起作用。
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
-(preferences-simple-mode)= **Simple mode**
+(preferences-simple-mode)= **簡易模式**
 
-The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
+在首次安裝**AAPS**時，將預設啟用**簡易模式**。 在**簡易模式**中，大量設定將被隱藏，偏好設定將被預定義的數值取代。 [首頁上的額外圖表](#AapsScreens-section-g-additional-graphs)也為你預定義。 一旦你熟悉**AAPS**的用戶介面和設定，應該關閉簡易模式。
 
 **患者名稱**
 
@@ -50,7 +50,7 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 (Preferences-skin)=
 #### 外觀
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 你可以從四種類型的外觀中選擇：
 
@@ -129,7 +129,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 ### 按鈕
 
 - 定義哪些按鈕在主螢幕底部可顯示。
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 ![偏好設定 > 按鈕](../images/Pref2020_OV_Buttons.png)
 
@@ -157,7 +157,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 (Preferences-default-temp-targets)=
 ### 預設臨時目標
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 [臨時目標（TT）](../DailyLifeWithAaps/TempTargets.md)允許你在特定時間範圍內更改你的血糖目標。 設置預設TT時，你可以輕鬆更改活動、即將用餐等的目標。
 
@@ -173,7 +173,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 ### 填充/啟動標準胰島素量
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 如果你想透過**AAPS**填充管路或引導導管，你可以透過[**手動操作**標籤](#screens-action-tab)執行此操作。
 
@@ -182,13 +182,13 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 (Preferences-range-for-visualization)=
 ### 可視化範圍
 
-選擇**AAPS**總覽和智慧手錶上血糖圖表的高低標記。 這僅限於視覺化顯示，並非血糖的目標範圍。 範例：70 - 180 mg/dl 或 3.9 - 10 mmol/l
+選擇**AAPS**總覽和智慧型手錶上血糖圖表的高低標記。 這僅限於視覺化顯示，並非血糖的目標範圍。 範例：70 - 180 mg/dl 或 3.9 - 10 mmol/l
 
 ![偏好設定 > 可視化範圍](../images/Pref2020_OV_Range2.png)
 
 ### 縮短標籤標題
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 方便在螢幕上顯示更多的標籤名稱。
 
@@ -199,7 +199,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 (Preferences-show-notes-field-in-treatments-dialogs)=
 ### 在治療對話框中顯示備註欄
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 給你一個在治療（追加注射嚮導、碳水化合物、胰島素等）中添加簡短文字備註的選項。
 
@@ -208,7 +208,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 (Preferences-status-lights)=
 ### 狀態燈
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 狀態指示燈為以下情況提供視覺警告：:
 
@@ -239,7 +239,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 ### 啟用的注射顧問
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 ![注射顧問](../images/BolusAdvisor.png)
 
@@ -247,7 +247,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 ### 啟用的注射提醒
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 %待辦事項
 
@@ -258,7 +258,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 #### 超級注射
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 選擇在注射嚮導中啟用超級注射的選項。
 
@@ -327,12 +327,12 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 ## 進階餐前注射助手（AMA）或超微量注射（SMB）
 
-Depending on your settings in [Config builder > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+根據你在[組態建置工具 > APS](../SettingUpAaps/ConfigBuilder.md)中的設定，你可以選擇兩種算法：
 
 - [進階餐前注射助手（OpenAPS AMA）](#Open-APS-features-advanced-meal-assist-ama) - 2017年的算法狀態
 - [超微量注射（OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - 最推薦給初學者的最新算法
 
-As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
+自[**AAPS**版本 3.3](#version3300)起，[動態 ISF](../DailyLifeWithAaps/DynamicISF.md)功能已移至 OpenAPS 微量注射的一部分。
 
 ### OpenAPS AMA
 
@@ -348,7 +348,7 @@ As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/D
 (Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 該演算法使用BGI（血糖影響）來確定[碳水化合物的吸收](../DailyLifeWithAaps/CobCalculation.md)時間。
 
@@ -383,7 +383,7 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 
 ## 幫浦設定
 
-The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump).  根據[幫浦相關說明](../Getting-Started/CompatiblePumps.md)配對並設置你的幫浦。
+此處的選項將根據你在[組態建置工具 > 幫浦](#Config-Builder-pump)中選擇的幫浦驅動程式而有所不同。  根據[幫浦相關說明](../Getting-Started/CompatiblePumps.md)配對並設置你的幫浦。
 
 ## Tidepool
 
@@ -478,15 +478,15 @@ The options here will vary depending on which pump driver you have selected in [
 
 ![維護設置](../images/Pref2020_Maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+**電子郵件收件人**：日誌的標準收件人是<logs@aaps.app>。
 
-**Data Choices**
+**資料選擇**
 
 ![資料選項](../images/Pref2020_DataChoice.png)
 
 你可以通過向開發者發送崩潰報告來幫助進一步開發**AAPS**。
 
-Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
+維護設定還包括**AAPS**目錄，可以直接在維護標籤下找到。 此設定允許用戶選擇電話上的一個目錄，**AAPS**將在該目錄中儲存偏好設定、日誌及其他檔案。
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
