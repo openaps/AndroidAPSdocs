@@ -17,7 +17,7 @@
 
 * 在各個**AAPS**模組之間進行導覽。
 * 你還可以透過向左或向右滑動來更換螢幕。
-* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
+* 顯示的選項卡可以在 [組態建置工具](#Config-Builder-tab-or-hamburger-menu) 中選擇。
 
 ### B 區 - 設定檔 & 目標
 
@@ -75,13 +75,13 @@
 * 紅色 = 低於範圍
 * 黃色 = 高於範圍 
 
-![Deltas](../images/Home_Delta.png)
+![變化量](../images/Home_Delta.png)
 
-The blocks in the middle shows:
+中間的區塊顯示：
 
-1. how many minutes since last **CGM** reading
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-    Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
+1. 距上一次 **CGM** 讀取的分鐘數
+2. 與最後讀取的差異：Δ，以及與最後 15 和 40 分鐘的平均值 (Δ15 和 Δ40)。  
+    長期變化量是過去的變化量的平均值，顯示平均變化情況。
 
 (AapsScreens-loop-status)=
 
@@ -154,9 +154,9 @@ Libre 使用者的特殊注意事項：
 
 *注意*: 在 **AAPS** 計算中，最多讀取近 30 小時的資料。 因此，即使你解決了問題，黃三角標誌可能會在最後一次不規則間隔發生後大約 30 小時內消失。
 
-#### Simple mode
+#### 簡易模式
 
-An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+右上角有一個兒童面孔的圖示表示你正在使用 [簡單模式](#preferences-simple-mode)。
 
 ![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
 
@@ -221,7 +221,7 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 在操作標籤中輸入的筆記（如手指校準和碳水化合物輸入）以及設定檔切換也會顯示在此處。
 
-Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
+使用圖表左上方的選單或在圖表上長按任意位置以更改時間尺度。 你可以選擇 6、12、18 或 24 小時。
 
 綠色區域反應你的目標範圍。
 
@@ -238,7 +238,7 @@ Use the menu on top left of the graph or long press anywhere on the graph to cha
 * 基礎率
 * 活動 - 胰島素活動曲線
 
-要顯示這些資訊，請點擊主圖表右側的三角形。 For the main graph just the four options above the line "Graph 1 2 3 4" are available.
+要顯示這些資訊，請點擊主圖表右側的三角形。 對於主圖表，只有 "Graph 1 2 3 4" 以上的四個選項可用。
 
 ![主圖表設置](../images/Home2020_MainGraphSetting.png)
 
@@ -290,19 +290,19 @@ Use the menu on top left of the graph or long press anywhere on the graph to cha
 
 (AapsScreens-section-g-additional-graphs)=
 
-### Section G - Additional graphs
+### 區域 G - 額外圖表
 
-你可以在主圖表下啟用最多四個其他圖表。 When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+你可以在主圖表下啟用最多四個其他圖表。 當在 [簡單模式](#preferences-simple-mode) 時，額外圖表是預設的，無法更改。 如果要設定自己的額外圖表組態，請關閉 **簡單模式**。
 
 要開啟額外圖表的設定，點擊[主圖表](#section-f---main-graph)右側的三角形並向下滾動。
 
 ![其他圖表設置](../images/Home2020_AdditionalGraphSetting.png)
 
-To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
+要配置額外圖表，請勾選你希望在每個圖表上查看的資料對應的方框。
 
 大多數使用者發現以下附加圖表配置足夠：
 
-* Graph 1 with IOB, COB, Sensitivity chnge
+* 圖表 1 顯示 IOB、COB、敏感度變化
 * 圖表 2 包含偏差和 BGI。
 
 #### 絕對胰島素(Absolute insulin)
@@ -337,7 +337,7 @@ To configure additional graphs, check the boxes corresponding to the data you wa
 
 #### 心率(Heart rate)
 
-使用 [Garmin 智慧手錶](#Watchfaces-garmin) 時，該資料可能可用。
+使用 [Garmin 智慧型手錶](#Watchfaces-garmin) 時，該資料可能可用。
 
 #### 偏差(Deviations)
 
@@ -379,7 +379,7 @@ To configure additional graphs, check the boxes corresponding to the data you wa
 
 您可以使用按鈕快速增加胰島素的量。 每個按鈕的值可以在 [偏好設定 > 首頁總覽 > 按鈕](#Preferences-buttons) 中更改。
 
-The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+當幫浦處於暫停狀態時也可以使用胰島素按鈕，即用於記錄用筆注射的胰島素。 在此情況下，標題將顯示為黃色，復選框“請勿注射，只記錄”將無法取消勾選。
 
 ![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
 
@@ -557,7 +557,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ![胰島素設定檔](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). 曲線將根據[DIA](#your-aaps-profile-duration-of-insulin-action) 和達到高峰的時間而有所不同。
+這顯示你在 [組態建置工具 > 胰島素](#Config-Builder-insulin) 中選擇的胰島素的活動檔案。 曲線將根據[DIA](#your-aaps-profile-duration-of-insulin-action) 和達到高峰的時間而有所不同。
 
 **紫色** 線顯示在注射後胰島素量隨時間衰減的情況，**藍色**線顯示其活性狀態。
 
