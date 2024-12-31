@@ -10,7 +10,7 @@ orphan: true
 
 ## 在 AAPS 中平滑資料
 
-自 **AAPS** 版本 3.2 起，**AAPS** 提供了在 **AAPS** 中平滑資料的選項，而不是在 CGM 應用程式中。 There are three options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
+自 **AAPS** 版本 3.2 起，**AAPS** 提供了在 **AAPS** 中平滑資料的選項，而不是在 CGM 應用程式中。 在 [設定檔設置工具 > 平滑](../SettingUpAaps/ConfigBuilder.md) 中有三個選項可用。
 
 ![平滑](../images/ConfBuild_Smoothing.png)
 
@@ -49,5 +49,5 @@ orphan: true
 
 ### Freestyle Libre 傳感器
 
-#### xDrip+ with FreeStyle Libre1
-The FreeStyle Libre 1 does not broadcast any information about the level of noise detected in the readings, and therefore 'Enable SMB always' and 'Enable SMB after carbs' are disabled when using this CGM. In addition, many people have reported the FreeStyle Libre 1 often produces noisy data.
+#### xDrip+ 與 FreeStyle Libre1
+FreeStyle Libre 1 不會廣播有關讀數中檢測到的噪聲水平的任何資訊，因此使用此 CGM 時“始終啟用 SMB”和“碳水化合物後啟用 SMB”都將被停用。 此外，許多人報告 FreeStyle Libre 1 常常會產生干擾的資料。
