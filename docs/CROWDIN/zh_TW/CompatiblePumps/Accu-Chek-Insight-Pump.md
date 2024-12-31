@@ -27,7 +27,7 @@ orphan: true
     
     ![移除血糖機 Insight 的螢幕截圖](../images/Insight_RemoveMeter.png)
 
-* In [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md), select Accu-Chek Insight.
+* 在[組態建置工具 > 幫浦](../SettingUpAaps/ConfigBuilder.md)中，選擇 Accu-Chek Insight。
     
     ![組態建置工具 Insight 的螢幕截圖](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
