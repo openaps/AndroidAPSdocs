@@ -96,7 +96,7 @@ orphan: true
 
 ## 註冊驅動並將其與 Combo 配對
 
-* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **重要提示**：名單中也有舊驅動，稱為 "Accu-Chek Combo (Ruffy)"。 請 _不要_ 選擇那個。
+* 在[組態建置工具 > 幫浦](../SettingUpAaps/ConfigBuilder.md)中選擇 "Accu-Chek Combo" 驅動程式。 **重要提示**：名單中也有舊驅動，稱為 "Accu-Chek Combo (Ruffy)"。 請 _不要_ 選擇那個。
 
   ![組態建置工具 Combo 截圖](../images/combo/combov2-config-builder.png)
 
@@ -110,9 +110,9 @@ orphan: true
 
   ![Combo 配對 UI 3 的截圖](../images/combo/combov2-pairing-screen-3.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
+  ![Combo 配對 UI 4 的截圖](../images/combo/combov2-pairing-screen-4.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Combo 配對 UI 4 的截圖](../images/combo/combov2-pairing-screen-5.png)
 
 * 當驅動請求 Combo 上顯示的 10 位 PIN，並且代碼輸入錯誤時，會顯示如下： ![Combo 配對 UI 3 的截圖](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
@@ -176,8 +176,8 @@ Combo 可以在 _遠端終端_ 模式或 _指令_ 模式下透過藍牙操作。
 1. _與幫浦配對_：這是一個可以按下的按鈕，用於與 Combo 配對。 如果已經配對了幫浦，他將無法使用。
 2. _取消幫浦配對_：取消配對已配對的 Combo；與項目1相反。 如果沒有已配對的幫浦，他將無法使用。
 3. _發現持續時間（以秒為單位）_：配對時，驅動會使手機對幫浦可見。 這控制了這種可見性持續多久。 預設選擇最大值（300 秒 = 5 分鐘）。 Android 不允許可見性無限期持續，因此必須選擇一個持續時間。
-4. _自動偵測並自動輸入胰島素儲存庫變更_：如果啟用，通常透過 Action 標籤中的 "注射/填充" 按鈕由用戶完成的 "儲存庫變更" 操作。 This is explained [in further detail below](#autodetecting-and-automatically-entering-battery-and-reservoir-changes).
-5. _自動偵測並自動輸入電池更換_：如果啟用，通常由用戶透過 Action 標籤中的 "幫浦電池變更" 按鈕完成的 "電池更換" 操作。 This is explained [in further detail below](#autodetecting-and-automatically-entering-battery-and-reservoir-changes).
+4. _自動偵測並自動輸入胰島素儲存庫變更_：如果啟用，通常透過 Action 標籤中的 "注射/填充" 按鈕由用戶完成的 "儲存庫變更" 操作。 這在[下面進一步詳細說明](#autodetecting-and-automatically-entering-battery-and-reservoir-changes)。
+5. _自動偵測並自動輸入電池更換_：如果啟用，通常由用戶透過 Action 標籤中的 "幫浦電池變更" 按鈕完成的 "電池更換" 操作。 這在[下面進一步詳細說明](#autodetecting-and-automatically-entering-battery-and-reservoir-changes)。
 6. _啟用詳細 Combo 日誌紀錄_：這大大擴展了驅動紀錄的日誌數量。 **注意**：除非開發人員要求，否則不要啟用此功能。 否則，這會增加大量的噪音到 AndroidAPS 日誌中，減少他們的實用性。
 
 大多數用戶只使用頂部兩個項目，即 _與幫浦配對_ 和 _取消幫浦配對_ 按鈕。
