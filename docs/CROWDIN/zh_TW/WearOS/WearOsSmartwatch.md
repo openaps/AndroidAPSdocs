@@ -55,7 +55,7 @@ b) 從 Android Studio 將 Wear.apk 剪切並粘貼到你的 Gdrive 中。
 Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發，你可以從 Google Play 將其下載到手機上，並用來將 AAPS wear 應用程式側載到手錶上。 該應用程式包含一個便捷的“如何側載”[視頻](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)。
 
 ```{tip}
-對於 Wear OS 5 智慧手錶，請參閱[此影片](https://www.youtube.com/watch?v=yef_qGvcCnk)。
+對於 Wear OS 5 智慧型手錶，請參閱[此影片](https://www.youtube.com/watch?v=yef_qGvcCnk)。
 ```
 
 該視頻提供了所有必要的細節（最好在單獨的設備上打開視頻，以便在設置手機時觀看）。
