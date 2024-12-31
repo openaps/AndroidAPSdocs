@@ -1,57 +1,57 @@
 # 建立和恢復備份
 
-When installing AAPS on your phone it becomes a "medical device" you rely on daily. It is highly recommended to have an emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself, "What if?
+當你在手機上安裝 AAPS 時，它將成為你每日依賴的「醫療設備」。 強烈建議針對手機故障、被盜或遺失時有一個緊急備份計畫。 因此，事先準備是必要的，問自己：「如果...怎麼辦？」
 
-To restore your AAPS setup to an existing or new phone, it's important to keep following items in a secure location (read: not on your phone). Best practice is to keep at least two separate backups: on a local hard drive, USB stick and (preferred) on Cloud storage like Google Drive or Microsoft 365 OneDrive. By storing your backups in the cloud you'll always have everything needed accessible from your phone to restore your setup anywhere and anytime.
+要將你的 AAPS 設定恢復到現有或新手機，重要的是將以下項目保存在安全的地方（也就是說：不能放在你的手機上）。 最佳實踐是至少保留兩個獨立的備份：在本地硬碟、USB 隨身碟上，以及（較佳選擇）在雲端儲存服務上，如 Google Drive 或 Microsoft 365 OneDrive。 將備份儲存在雲端，你能隨時隨地從手機取得一切所需，以恢復你的設定。
 
-Consider acquiring a secondary backup phone and practicing restoring AAPS to ensure the backup phone works as expected. This step will give you confidence that your emergency plan is effective and that you can seamlessly continue using AAPS if your primary phone becomes unavailable.
+考慮獲得一部備用手機並練習恢復 AAPS，以確保備用手機正常運作。 這一步將給你信心，相信你的緊急計畫是有效的，如果你的主手機無法使用，你依然可以順利使用 AAPS。
 
-To be able to restore, having the following items at hand is important:
+為了能夠恢復，準備以下項目是很重要的：
 
-- Your **Android Studio keystore file** and associated **password**: Needed for (re)building the AAPS .APK installer file.
-- A recent copy of the **AAPS installer .APK**
-- A recent **settings export** file: For restoring important settings (which includes your objectives!).
-- Your **AAPS master password**
-- Backups of additional utilities: Such as BYODA and/or xDrip+.
-- Personal notes on your setup.
+- 你的 **Android Studio 憑證檔案** 和相關的 **密碼**：用於（重新）建立 AAPS .APK 安裝檔。
+- 最近的 **AAPS 安裝檔 .APK** 副本
+- 最近的 **設定匯出** 檔案：用於恢復重要的設定（包括你的目標！）。
+- 你的 **AAPS 主密碼**
+- 額外工具的備份：如 BYODA 和/或 xDrip+。
+- 針對你設定的個人筆記。
 
-Below are the items that are recommended for keeping back-ups.
+以下是建議的備份項目。
 
 ## 建立備份
 
 ### 從構置 APK 時使用的電腦匯出的金鑰存儲檔案
-When building your .APK installer file from Android Studio, it uses the **keystore file and password to sign the .APK installer file**. To update your current AAPS installation, it is required to sign the update .APK installer file with the same keystore used for the initial installation. When updating, all settings and the AAPS database will be kept. Note that without this, you are required to first uninstall the current application and then reinstall and reconfigure AAPS.
+當你從 Android Studio 構建 .APK 安裝檔時，會使用 **憑證檔案和密碼來簽署 .APK 安裝檔**。 若要更新當前的 AAPS 安裝，必須用與首次安裝相同的憑證簽署更新的 .APK 安裝檔。 在更新時，所有的設定和 AAPS 資料庫都將被保留。 沒有這個，你必須先卸載當前應用，然後重新安裝並重新配置 AAPS。
 
-Maintaining the keystore and associated password will greatly reduce the complexity of updating the APK in the future, especially if you need to build the app from a new computer. 請參閱 [更新 AAPS](../Maintenance/UpdateToNewVersion.md) 部分，了解在構置新 APK 時如何使用金鑰存儲檔案的詳細資訊。
+維持憑證和相關密碼將大大減少未來更新 APK 的複雜性，特別是如果你需要從新電腦構建應用時。 請參閱 [更新 AAPS](../Maintenance/UpdateToNewVersion.md) 部分，了解在構置新 APK 時如何使用金鑰存儲檔案的詳細資訊。
 
-**When to back-up:** The keystore should be backed up after you first build the **AAPS** .APK installer file.
+**何時備份：** 憑證應在你首次構建 **AAPS** .APK 安裝檔後進行備份。
 
-**How to back-up:** Locate your keystore path. 如果您不記得，可以在 Android Studio 中選擇 **建置 > APK > 下一步** 找到它。 路徑將列在「金鑰庫路徑」中。 使用您的檔案總管，導航至此路徑並複製您的金鑰庫檔案（以`.jks`為檔案副檔名結尾）。 將他儲存到一個安全的雲端位置，以防你的電腦無法使用。 確保也紀錄下你的金鑰庫密碼、金鑰別名和金鑰密碼。
+**如何備份：** 找到你的憑證路徑。 如果您不記得，可以在 Android Studio 中選擇 **建置 > APK > 下一步** 找到它。 路徑將列在「金鑰庫路徑」中。 使用您的檔案總管，導航至此路徑並複製您的金鑰庫檔案（以`.jks`為檔案副檔名結尾）。 將他儲存到一個安全的雲端位置，以防你的電腦無法使用。 確保也紀錄下你的金鑰庫密碼、金鑰別名和金鑰密碼。
 
 ### 最新的 APK 副本
-In case your main **AAPS** phone is lost or damaged, having a copy of the APK available will allow you to quickly resume using **AAPS** with a new phone. Note: you will also need your preferences backed up as noted below.
+若你的主要 **AAPS** 手機遺失或損壞，擁有一個 APK 副本將允許你迅速在新手機上恢復使用 **AAPS**。 注意：你還需要如下所述的備份你的偏好設定。
 
-**When to back-up:** You should maintain a back-up of the most recent APK that you installed on your main **AAPS** phone. 您可能還想保留一個舊版本，以防出於任何原因需要退回到該版本。
+**何時備份：** 你應保持最近安裝在主 **AAPS** 手機上的 APK 的備份。 您可能還想保留一個舊版本，以防出於任何原因需要退回到該版本。
 
-**How to back-up:** Maintain a copy on the computer used to build the APK with Android Studio. Additionally, it is recommended to use a cloud platform to store a copy of the installer APK. Make sure you know how to locate both backups when needed. Consider setting up dedicated folders to store these backups.
+**如何備份：** 在用 Android Studio 構建 APK 的電腦上保持一份副本。 此外，建議使用雲端平台儲存安裝檔 APK 的副本。 確保你知道如何在需要時找到這兩個備份。 考慮設置專用資料夾來存放這些備份。
 
-### AAPS settings file (also referred to as 'Preferences')
-With a copy of the APK installer file (see above) and your **Settings** file, you can quickly get up and running on an existing or new phone.
+### AAPS 設定檔案（也稱為「偏好設定」）
+擁有 APK 安裝檔的副本（見上文）和你的 **設定** 檔後，你可以迅速在現有或新手機上啟動。
 
-The **Settings** file is used t customize the AAPS application to fit your specific setup. They encompass details such as your config builder settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
+此 **設定** 檔用於自訂 AAPS 應用以符合你的特定設定。 它們包括你的組態建置工具設定、 目標狀態、第三方通訊設定（例如，Nightscout、Tidepool）、自動化和個人檔案。
 
-Exporting the AAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AAPS. Without this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration changes.
+將 AAPS 設定匯出為檔案使你能夠將其配置恢復到特定的時間點。 如前所述，除了所有 配置設定外，匯出檔案還包含你目標的狀態，當 **(重新)安裝** AAPS 時你需要恢復此狀態。 如果沒有 這個，你將需要從頭開始重新設置所有目標才能啟用封閉迴路。 設定檔也能讓你恢復「最後已知的良好」設定 以撤銷任何配置變更。
 
-**When to back-up AAPS settings:**
-* Each time you complete an objective to prevent losing your progress. _Without a copy of your **Settings** you will have to complete all objectives again in the event you need to re-install AAPS or replace your phone._
+**何時備份 AAPS 設定：**
+* 每次完成一個目標時，為了避免進度遺失。 _如果沒有你的 **設定** 副本，在需要重新安裝 AAPS 或更換手機時，你將不得不再次完成所有目標。_
 
-* Any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back up your **Settings** before and after making the changes. 這樣你就可以保留最新的設定副本以及變更前的設定副本，萬一需要回滾時可以使用。
+* 每當你計畫對你的設定進行重大更改（更改 SMB 設定、更改胰島素類型、更改幫浦、對自動化進行更改）時，應在進行更改之前和之後備份你的**設定**。 這樣你就可以保留最新的設定副本以及變更前的設定副本，萬一需要回滾時可以使用。
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only : the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. 如果你在開始使用目前幫浦後未匯出偏好設定的副本，當需要更換手機時，將需要重新啟動一個新的幫浦。
+* 無幫浦用戶（如 Omnipod 和 Medtrum）僅適用：**設定**檔案包含你當前 pod 的連線細節，可用於使用新手機恢復與該 pod 的連線。 如果你在開始使用目前幫浦後未匯出偏好設定的副本，當需要更換手機時，將需要重新啟動一個新的幫浦。
 
-**How to back-up manually:**
+**如何手動備份：**
 
-1. If this your first time importing or exporting **Settings** you will need to set a master password in [Preferences > General > Protection](#Preferences-master-password). 設置密碼並將其紀錄在安全的地方。 _You will be unable to access your **Settings** back-ups without this password._
+1. 如果你是第一次匯入或匯出**設定**，你需要在[偏好設定 > 一般 > 保護](#Preferences-master-password)中設置主密碼。 設置密碼並將其紀錄在安全的地方。 _若沒有此密碼，你將無法訪問你的**設定**備份。_
 
 2. 在**AAPS**主畫面，選擇左上角的三條線（漢堡）選單 > 維護 > 匯出設定 > 輸入上述設定的主密碼 > 確定
 
@@ -59,27 +59,27 @@ Exporting the AAPS settings to file enables you to restore its configuration to 
 
 3. 使用您的手機檔案總管（通常稱為「檔案」或「我的檔案」），導航至內部儲存 > AAPS > 偏好設定。 在這裡你可以看到所有匯出的偏好設定檔案副本。 檔案名稱應為`YYYY-MM-DD_Time_appname.json`。 將此檔案上傳到你選擇的雲端平台。 然後從雲端平台下載一份副本到你的本地電腦。
 
-## Settings Export
+## 設定匯出
 
-It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports **manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings files by copying them off your phone to for instance a cloud storage location.
+建議定期執行設定匯出，特別是在進行設定更改之前和之後。 你可以選擇手動執行匯出 **或通過自動化進行（較佳選擇）**。 確保記下你的 AAPS 主密碼，並將你的設定 檔案備份，通過將其從手機複製到雲端儲存位置等方式。
 
-**Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting you will be unable to import the settings file!_
+**注意**：_匯出的設定將使用你的 AAPS 主密碼進行加密：若沒有用於匯出的主密碼， 你將無法匯入設定檔！_
 
-### Exporting or Importing Settings:
-To export or import settings, use the **import or export buttons** in the AAPS **maintenance menu**
+### 匯出或匯入設定：
+要匯出或匯入設定，請使用 AAPS**維護選單中的匯入或匯出按鈕**
 
-![Maintenance menu export/import buttons](../images/Maintenance/maintenance_menu_import_export_400px.png)
+![維護選單匯出/匯入按鈕](../images/Maintenance/maintenance_menu_import_export_400px.png)
 
-### Automating Settings Export:
-For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**" in the maintenance menu preferences.
+### 自動化設定匯出：
+要進行自動化設定匯出，請[(**參見自動化**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)啟用選項"**無人操作設定匯出**" 在維護選單的偏好設定中。
 
-By enabling this feature you allow AAPS to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+透過啟用此功能，你允許 AAPS 在無需人為干預的情況下執行設定匯出。 為此，主密碼 安全地存儲在你的手機中（僅限於下次手動匯出時）。 存儲的密碼將在最多 4 週內有效。 4 週後，你將收到通知，提示密碼即將過期。 在為期 1 週的寬限期內，可以透過 從維護選單手動匯出設定來刷新密碼。
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the AAPS 'Careportal' and 'User entry' lists under Treatments.
+在寬限期過期的 1 週後，存儲的密碼將過期，任何自動化設定匯出將中止，同時通知用戶，要求 重新輸入密碼。  [(**自動化設定匯出**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)將被記錄在 AAPS 的「照護入口」和「用戶輸入」列表下的治療項目中。
 
-_**Note:** On importing settings to user always needs to enter the AAPS password!_
+_**注意：**在匯入設定時，用戶始終需要輸入 AAPS 密碼！_
 
-![Maintenance menu unattended Settings Export](../images/Maintenance/maintenance_menu_preferences_400px.png)
+![維護選單無人操作設定匯出](../images/Maintenance/maintenance_menu_preferences_400px.png)
 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
 ## 從備份中恢復至新手機或重新安裝 AAPS
