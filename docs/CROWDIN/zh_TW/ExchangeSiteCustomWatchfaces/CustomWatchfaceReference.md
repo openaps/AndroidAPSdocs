@@ -536,7 +536,7 @@ DynData 是你想要根據一些內部資料（如血糖值、血糖數值、del
 
 (cwf-reference-dynamic-rotation-management)=
 
-**freetext2 to freetext4**
+**freetext2 到 freetext4**
 
 對於這些視圖，我們將結合之前解釋過的動態圖片和旋轉功能：
 
@@ -935,17 +935,17 @@ DynData 是你想要根據一些內部資料（如血糖值、血糖數值、del
 
 如果你使用包含 CustomWatchface V1 的 zip "v2"，則你將在錶盤上缺少資訊或內容錯誤。
 
-CustomWatchface V2 includes these new features:
+CustomWatchface V2 包含這些新功能：
 
-- [New Status view](cwf-reference-new-status-feature)
-- [New TempTarget view](cwf-reference-new-temp-target-feature)
-- [New Reservoir Level view](cwf-reference-new-reservoir-level-feature)
-- [New Formating Feature](cwf-reference-new-formating-feature)
-- [Show External datas for Follower](cwf-reference-show-external-datas) (up to 3 set of datas within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
+- [新的狀態視圖](cwf-reference-new-status-feature)
+- [新的臨時目標視圖](cwf-reference-new-temp-target-feature)
+- [新的儲存槽水位視圖](cwf-reference-new-reservoir-level-feature)
+- [新的格式化功能](cwf-reference-new-formating-feature)
+- [顯示連接者的外部資料](cwf-reference-show-external-datas)（在單個錶盤中最多顯示 3 組資料，用於 AAPS、AAPSCLIENT 和 AAPSCLIENT2）
 
 (cwf-reference-new-status-feature)=
 
-#### New Status view
+#### 新的狀態視圖
 
 該視圖的鍵是 `"status"`，相應的區塊自動包含在從 wear apk "Custom Watchface V2"（基於 AAPS 3.3.0 版本或以上版本）導出的模板中
 
@@ -963,49 +963,49 @@ CustomWatchface V2 includes these new features:
 
 (cwf-reference-new-temp-target-feature)=
 
-#### New TempTarget view
+#### 新的臨時目標視圖
 
-The key of this view is `"tempTarget"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above).
+此視圖的關鍵是`"tempTarget"`，並且相關區塊會自動包含在從 Wear APK "Custom Watchface V2" 匯出的模板中（自 AAPS 3.3.0 版本或更高版本構建）。
 
-It shows within watchface:
+它顯示在錶盤內:
 
-- Profile target (single value or min-max target values) (default color in white)
-- Loop adjusted target (default color in Green)
-- Temp Target defined by user (default color in Yellow)
+- 個人設定目標（單一數值或最小-最大目標數值）（預設顏色為白色）
+- 循環調整目標（預設顏色為綠色）
+- 使用者定義的臨時目標（預設顏色為黃色）
 
-This `"tempTarget"` view is associated with `"key_show_temp_target"` key (within dynPref) to manage visibility.
+這個 `"tempTarget"` 視圖與 `"key_show_temp_target"` 鍵（在 dynPref 內）相關聯，以管理是否顯示。
 
-The DynData Key (associated with color information) is `"tempTarget"` (default DynData key associated with TempTarget View)
+DynData 鍵（與顏色資訊相關聯）為 `"tempTarget"`（預設 DynData 鍵與 TempTarget 視圖相關聯）
 
-DynData value equals:
+DynData 值等於:
 
-- 0 (Profile Target),
-- 1 (Loop Target) or
-- 2 (User Temp Target)
+- 0（個人設定目標），
+- 1（循環目標）或
+- 2（使用者臨時目標）
 
-Note that this view is also available for external data (see [below](cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
+請注意，這個視圖也可以顯示外部資料（請參閱 [下方](cwf-reference-show-external-datas)），使用 `"tempTarget_Ext1"` 和 `"tempTarget_Ext2"` 鍵（視圖和 DynData）
 
 (cwf-reference-new-reservoir-level-feature)=
 
-#### New Reservoir Level view
+#### 新的儲存槽水位視圖
 
-The key of this view is `"reservoir"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above).
+這個視圖的鍵為 `"reservoir"`，相關聯的區塊會自動包含在從 wear apk "自訂錶盤 V2" 匯出的模板中（由 AAPS 3.3.0 版或以上版本建置）。
 
-This view show Reservoir level (in `U`) with a White default color, Yellow if Warning Level, Red if Urgent Level
+這個視圖顯示藥量水準（以 `U` 表示），預設顏色為白色，當 Warnning Level時為黃色，當 Urgent Level 時為紅色
 
-This `"reservoir"` view is associated with `"key_show_reservoir_level"` key (within dynPref) to manage visibility.
+這個 `"reservoir"` 視圖與 `"key_show_reservoir_level"` 鍵（在 dynPref 內）相關聯，以管理是否顯示。
 
-The DynData Keys associated with Reservoir Level are:
+與藥量水準相關的 DynData 鍵為:
 
--  `"reservoir"`  (Default DynData Key associated with Reservoir Level view) associated with level in insulin `U`
-  - Min Value is 0.0 U
-  - Max Value is 500.0 U
+-  `"reservoir"`（預設 DynData 鍵與藥量水準視圖相關聯），與胰島素水準 `U` 相關聯
+  - 最小值為 0.0 U
+  - 最大值為 500.0 U
 -  `"reservoirLevel"`
-  - 0 (Standard Level, White Color by default)
-  - 1 (Warning Level, Yellow color by default)
-  - 2 (Urgent Level, Red color by default)
+  - 0（標準水準，預設為白色）
+  - 1（警告水準，預設為黃色）
+  - 2（緊急水準，預設為紅色）
 
-Note that this view is also available for external data (see [below](cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
+請注意，這個視圖也可以顯示外部資料（請參閱 [下方](cwf-reference-show-external-datas)），使用 `"reservoir_Ext1"`、`"reservoir_Ext2"`、`"reservoirLevel_Ext1"` 和 `"reservoirLevel_Ext2"` 鍵（視圖和 DynData）。
 
 (cwf-reference-new-formating-feature)=
 
@@ -1153,19 +1153,19 @@ Note that this view is also available for external data (see [below](cwf-referen
 
 (cwf-reference-show-external-datas)=
 
-#### Show External datas for Follower
+#### 顯示追隨者的外部資料
 
-Custom Watchface is now able to display on the same watchface up to 3 set of data: AAPS, AAPSCLIENT and AAPSCLIENT2
+自訂錶盤現在能夠在同一錶盤上顯示多達三組資料：AAPS、AAPSCLIENT 和 AAPSCLIENT2
 
-To use this feature, you need to:
+要使用此功能，你需要:
 
-- have at leat 2 of the 3 following apps installed in phone (AAPS, AAPSCLIENT, AAPSCLIENT2)
-- enable Broadcast data in AAPSCLIENT and/or AAPSCLIENT2 to broadcast data to the main app used to sync with CustomWatchface (AAPS or AAPSCLIENT)
-- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](cwf-reference-key-and-keyvalue-reference) below)
+- 在手機中安裝至少 3 個應用程式（AAPS、AAPSCLIENT、AAPSCLIENT2）
+- 在 AAPSCLIENT 和/或 AAPSCLIENT2 中啟用廣播資料，以廣播資料到主要應用程式，該應用程式用於與自訂錶盤同步（AAPS 或 AAPSCLIENT）
+- 使用實現包含 `_Ext1` 或 `_Ext2` 鍵的視圖的自訂錶盤（請參閱 [鍵和鍵值參考](cwf-reference-key-and-keyvalue-reference)）
 
-Note that if main app in phone is AAPSCLIENT and secondary app which broadcast data is AAPSCLIENT2, you will have to enable `Switch external datas in watchface` parameter within Custom Watchface dedicated parameter if you use a watchface which use standard views and Ext1 additional views (Ext1 is linked to AAPSCLIENT and Ext2 is linked to AAPSCLIENT2)
+請注意，如果手機中的主要應用程式為 AAPSCLIENT，並且廣播資料的二級應用程式為 AAPSCLIENT2，則如果你使用的錶盤使用標準視圖和 Ext1 附加視圖（Ext1 連結到 AAPSCLIENT 和 Ext2 連結到 AAPSCLIENT2），需要在自訂錶盤相對應的參數內啟用 `在錶盤中切換外部資料` 參數
 
-Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"patient_name_Ext2"` *) has been added to be able to automatically include patient name (set within AAPS preferences) within watchface (see example below)
+此外，增加了三個新視圖（`"patient_name"`、`"patient_name_Ext1"` 和 `"patient_name_Ext2"` *），以便能夠自動在錶盤中包含患者姓名（設定於 AAPS 偏好設定中）（見下方範例）
 
 ![CustomWatchface_7](../images/CustomWatchface_7.png)
 
@@ -1194,7 +1194,7 @@ Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"pa
 
 #### 偏好設定鍵
 
-| Key                           | Default value and Comment                                                                                                                                 |
+| Key                           | 預設值和註解                                                                                                                                                    |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"key_show_detailed_iob"`     | 如果為 true，將會在 `iob2` 視圖中鎖定詳細的 IOB 資料，然後 `iob1`（如果可見且未被圖示取代）將顯示 iob 總量。<br />如果為 false，則在 `iob2` 視圖中鎖定 iob 總量。 如果 `iob2` 的寬度太小，無法正確顯示詳細的 iob 資料，則可以使用 |
 | `"key_show_detailed_delta"`   | false（僅當設計與 `delta` 和 `avg_delta` 視圖的詳細 delta 寬度不相容時）                                                                                                     |
@@ -1203,8 +1203,8 @@ Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"pa
 | `"key_show_cob"`              | 如果你的設計需要 `cob1` 或 `cob2` 視圖，則為 true                                                                                                                       |
 | `"key_show_delta"`            | 如果你的設計需要 `delta` 資訊，則為 true                                                                                                                               |
 | `"key_show_avg_delta"`        | 如果你的設計需要 `avg_delta` 資訊，則為 true                                                                                                                           |
-| `"key_show_temp_target"`      | true if your design requires `tempTarget` information                                                                                                     |
-| `"key_show_reservoir_level"`  | true if your design requires `reservoir` information                                                                                                      |
+| `"key_show_temp_target"`      | 如果你的設計需要 `tempTarget` 資訊，則為 true                                                                                                                          |
+| `"key_show_reservoir_level"`  | 如果你的設計需要 `reservoir` 資訊，則為 true                                                                                                                           |
 | `"key_show_uploader_battery"` | 如果你的設計需要 `uploader_battery`（電話電池）資訊，則為 true                                                                                                               |
 | `"key_show_rig_battery"`      | 如果你的設計需要 `rig_battery` 資訊，則為 true                                                                                                                         |
 | `"key_show_temp_basal"`       | 如果你的設計需要 `basalRate` 資訊，則為 true                                                                                                                           |
@@ -1271,51 +1271,51 @@ Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"pa
 
 ### 視圖鍵清單
 
-This list is sorted from background to foreground this is very important when you organize your watchface to know this order because some image or text can be hidden by other images.
+此清單從背景到前景排序，這在你組織錶盤時非常重要，因為某些圖像或文字可能會被其他圖像遮住.
 
-Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for multi users Watchfaces.
+注意：所有結尾包含 `_Ext1` 或 `_Ext2` 的鍵都是新的，並專為多使用者錶盤而設計。
 
-| Key                                                                                    | 視圖類型   | 相關資料                                                 | DynData 鍵                                                                                                                                        |
-| -------------------------------------------------------------------------------------- | ------ | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `"background"`                                                                         | 圖像視圖   |                                                      |                                                                                                                                                  |
-| `"chart"`                                                                              | 專用圖表視圖 | 圖形曲線                                                 |                                                                                                                                                  |
-| `"cover_chart"`                                                                        | 圖像視圖   |                                                      |                                                                                                                                                  |
-| `"freetext1"`                                                                          | 文字視圖   |                                                      |                                                                                                                                                  |
-| `"freetext2"`                                                                          | 文字視圖   |                                                      |                                                                                                                                                  |
-| `"freetext3"`                                                                          | 文字視圖   |                                                      |                                                                                                                                                  |
-| `"freetext4"`                                                                          | 文字視圖   |                                                      |                                                                                                                                                  |
-| `"patient_name"` *<br/>`"patient_name_Ext1"` *<br/>`"patient_name_Ext2"` * | 文字視圖   | Patient Name                                         |                                                                                                                                                  |
-| `"iob1"`<br/>`"iob1_Ext1"` *<br/>`"iob1_Ext2"` *                           | 文字視圖   | IOB 標籤或 IOB 總量                                       |                                                                                                                                                  |
-| `"iob2"`<br/>`"iob2_Ext1"` *<br/>`"iob2_Ext2"` *                           | 文字視圖   | IOB 總量或 IOB 詳細資訊                                     |                                                                                                                                                  |
-| `"cob1"`<br/>`"cob1_Ext1"` *<br/>`"cob1_Ext2"` *                           | 文字視圖   | 碳水化合物標籤                                              |                                                                                                                                                  |
-| `"cob2"`<br/>`"cob2_Ext1"` *<br/>`"cob2_Ext2"` *                           | 文字視圖   | COB 值                                                |                                                                                                                                                  |
-| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                        | 文字視圖   | 短期 delta（5 分鐘）                                       | delta  
-delta_Ext1<br/>delta_Ext2                                                                                                          |
-| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *            | 文字視圖   | 平均 Delta（15 分鐘）                                      | avg_delta<br/>avg_delta_Ext1<br/>avg_delta_Ext2                                                                                  |
-| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *        | 文字視圖   | BG Target (single value or min - max targets values) | tempTarget<br/>tempTarget_Ext1<br/>tempTarget_Ext2                                                                                   |
-| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *           | 文字視圖   | Reservoir level                                      | reservoir<br/>reservoirLevel<br/>reservoir_Ext1<br/>reservoirLevel_Ext1<br/>reservoir_Ext2<br/>reservoirLevel_Ext2 |
-| `"uploader_battery"`                                                                   | 文字視圖   | 電話電池電量（百分比）                                          | uploader_battery                                                                                                                                 |
-| `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *      | 文字視圖   | rig 電池電量（百分比）                                        | rig_battery<br/>rig_battery_Ext1<br/>rig_battery_Ext2                                                                            |
-| `"basalRate"`<br/>`"basalRate_Ext1"` *<br/>`"basalRate_Ext2"` *            | 文字視圖   | 百分比或絕對值                                              |                                                                                                                                                  |
-| `"bgi"`<br/>`"bgi_Ext1"` *<br/>`"bgi2_Ext2"` *                             | 文字視圖   | mg/dL/(5 分鐘) 或 mmol/(5 分鐘)                           |                                                                                                                                                  |
-| `"status"` *<br/>`"status_Ext1"` *<br/>`"status_Ext2"` *                   | 文字視圖   | IOB的合成（根據手錶中的IOB設定），詳細的IOB（根據手錶中的設定和BGI（根據手錶中的設定））   |                                                                                                                                                  |
-| `"time"`                                                                               | 文字視圖   | HH:MM 或 HH:MM:SS                                     |                                                                                                                                                  |
-| `"hour"`                                                                               | 文字視圖   | HH                                                   |                                                                                                                                                  |
-| `"minute"`                                                                             | 文字視圖   | MM                                                   |                                                                                                                                                  |
-| `"second"`                                                                             | 文字視圖   | SS                                                   |                                                                                                                                                  |
-| `"timePeriod"`                                                                         | 文字視圖   | 上午或下午                                                |                                                                                                                                                  |
-| `""day_name""`                                                                         | 文字視圖   | 星期幾名稱（參考 dayNameFormat）                              | 星期名稱                                                                                                                                             |
-| `"day"`                                                                                | 文字視圖   | DD 日期                                                | 日期                                                                                                                                               |
-| `"week_number"`                                                                        | 文字視圖   | （WW）週數                                               | 週數                                                                                                                                               |
-| `"month"`                                                                              | 文字視圖   | 月份名稱（參考 monthFormat）                                 |                                                                                                                                                  |
-| `"loop"`<br/>`"loop_Ext1"` *<br/>`"loop_Ext2"` *                           | 文字視圖   | 自上次執行後的分鐘數和狀態（背景中的彩色箭頭），可以使用 DynData 調整彩色箭頭          | 循環                                                                                                                                               |
-| `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` *            | 圖像視圖   | 趨勢箭頭                                                 | 趨勢方向                                                                                                                                             |
-| `"timestamp"`<br/>`"timestamp_Ext1"` *<br/>`"timestamp_Ext2"` *            | 文字視圖   | 整數（自上次接收資料後的分鐘數）                                     | 時間戳                                                                                                                                              |
-| `"sgv"`<br/>`"sgv_Ext1"` *<br/>`"sgv_Ext2"` *                              | 文字視圖   | sgv 值（mg/dL 或 mmol）                                  | sgv<br />sgvLevel<br/>sgv_Ext1<br />sgvLevel_Ext1<br/>sgv_Ext2<br />sgvLevel_Ext2                                  |
-| `"cover_plate"`                                                                        | 圖像視圖   |                                                      |                                                                                                                                                  |
-| `"hour_hand"`                                                                          | 圖像視圖   |                                                      |                                                                                                                                                  |
-| `"minute_hand"`                                                                        | 圖像視圖   |                                                      |                                                                                                                                                  |
-| `"second_hand"`                                                                        | 圖像視圖   |                                                      |                                                                                                                                                  |
+| Key                                                                                    | 視圖類型   | 相關資料                                               | DynData 鍵                                                                                              |
+| -------------------------------------------------------------------------------------- | ------ | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `"background"`                                                                         | 圖像視圖   |                                                    |                                                                                                        |
+| `"chart"`                                                                              | 專用圖表視圖 | 圖形曲線                                               |                                                                                                        |
+| `"cover_chart"`                                                                        | 圖像視圖   |                                                    |                                                                                                        |
+| `"freetext1"`                                                                          | 文字視圖   |                                                    |                                                                                                        |
+| `"freetext2"`                                                                          | 文字視圖   |                                                    |                                                                                                        |
+| `"freetext3"`                                                                          | 文字視圖   |                                                    |                                                                                                        |
+| `"freetext4"`                                                                          | 文字視圖   |                                                    |                                                                                                        |
+| `"patient_name"` *<br/>`"patient_name_Ext1"` *<br/>`"patient_name_Ext2"` * | 文字視圖   | 患者姓名                                               |                                                                                                        |
+| `"iob1"`<br/>`"iob1_Ext1"` *<br/>`"iob1_Ext2"` *                           | 文字視圖   | IOB 標籤或 IOB 總量                                     |                                                                                                        |
+| `"iob2"`<br/>`"iob2_Ext1"` *<br/>`"iob2_Ext2"` *                           | 文字視圖   | IOB 總量或 IOB 詳細資訊                                   |                                                                                                        |
+| `"cob1"`<br/>`"cob1_Ext1"` *<br/>`"cob1_Ext2"` *                           | 文字視圖   | 碳水化合物標籤                                            |                                                                                                        |
+| `"cob2"`<br/>`"cob2_Ext1"` *<br/>`"cob2_Ext2"` *                           | 文字視圖   | COB 值                                              |                                                                                                        |
+| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                        | 文字視圖   | 短期 delta（5 分鐘）                                     | delta  
+delta_Ext1<br/>delta_Ext2                                                                |
+| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *            | 文字視圖   | 平均 Delta（15 分鐘）                                    | avg_delta<br/>avg_delta_Ext1<br/>avg_delta_Ext2                                        |
+| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *        | 文字視圖   | 血糖目標（單一數值或最小 - 最大目標值）                              | 臨時目標<br/>臨時目標_Ext1<br/>臨時目標_Ext2                                                           |
+| `"藥量"`*<br/>`"藥量_Ext1"` *<br/>`"藥量_Ext2"` *                                | 文字視圖   | 儲液槽液面                                              | 藥量<br/>藥量水平<br/>藥量_Ext1<br/>藥量水平_Ext1<br/>藥量_Ext2<br/>藥量水平_Ext2          |
+| `"uploader_battery"`                                                                   | 文字視圖   | 電話電池電量（百分比）                                        | uploader_battery                                                                                       |
+| `"機械電池"`<br/>`"機械電池_Ext1"` *<br/>`"機械電池_Ext2"` *                           | 文字視圖   | rig 電池電量（百分比）                                      | 機械電池<br/>機械電池_Ext1<br/>機械電池_Ext2                                                           |
+| `"基礎率"`<br/>`"基礎率_Ext1"` *<br/>`"基礎率_Ext2"` *                              | 文字視圖   | 百分比或絕對值                                            |                                                                                                        |
+| `"bgi"`<br/>`"bgi_Ext1"` *<br/>`"bgi2_Ext2"` *                             | 文字視圖   | mg/dL/(5 分鐘) 或 mmol/(5 分鐘)                         |                                                                                                        |
+| `"狀態"` *<br/>`"狀態_Ext1"` *<br/>`"狀態_Ext2"` *                               | 文字視圖   | IOB的合成（根據手錶中的IOB設定），詳細的IOB（根據手錶中的設定和BGI（根據手錶中的設定）） |                                                                                                        |
+| `"time"`                                                                               | 文字視圖   | HH:MM 或 HH:MM:SS                                   |                                                                                                        |
+| `"hour"`                                                                               | 文字視圖   | HH                                                 |                                                                                                        |
+| `"minute"`                                                                             | 文字視圖   | MM                                                 |                                                                                                        |
+| `"second"`                                                                             | 文字視圖   | SS                                                 |                                                                                                        |
+| `"timePeriod"`                                                                         | 文字視圖   | 上午或下午                                              |                                                                                                        |
+| `""day_name""`                                                                         | 文字視圖   | 星期幾名稱（參考 dayNameFormat）                            | 星期名稱                                                                                                   |
+| `"day"`                                                                                | 文字視圖   | DD 日期                                              | 日期                                                                                                     |
+| `"week_number"`                                                                        | 文字視圖   | （WW）週數                                             | 週數                                                                                                     |
+| `"month"`                                                                              | 文字視圖   | 月份名稱（參考 monthFormat）                               |                                                                                                        |
+| `"循環"`<br/>`"循環_Ext1"` *<br/>`"循環_Ext2"` *                                 | 文字視圖   | 自上次執行後的分鐘數和狀態（背景中的彩色箭頭），可以使用 DynData 調整彩色箭頭        | 循環                                                                                                     |
+| `"方向"`<br/>`"方向_Ext1"` *<br/>`"方向_Ext2"` *                                 | 圖像視圖   | 趨勢箭頭                                               | 趨勢方向                                                                                                   |
+| `"時間戳"`<br/>`"時間戳_Ext1"` *<br/>`"時間戳_Ext2"` *                              | 文字視圖   | 整數（自上次接收資料後的分鐘數）                                   | 時間戳                                                                                                    |
+| `"sgv"`<br/>`"sgv_Ext1"` *<br/>`"sgv_Ext2"` *                              | 文字視圖   | sgv 值（mg/dL 或 mmol）                                | sgv<br />sgv水平<br/>sgv_Ext1<br />sgv水平_Ext1<br/>sgv_Ext2<br />sgv水平_Ext2 |
+| `"cover_plate"`                                                                        | 圖像視圖   |                                                    |                                                                                                        |
+| `"hour_hand"`                                                                          | 圖像視圖   |                                                    |                                                                                                        |
+| `"minute_hand"`                                                                        | 圖像視圖   |                                                    |                                                                                                        |
+| `"second_hand"`                                                                        | 圖像視圖   |                                                    |                                                                                                        |
 
 **自Custom Watchface V2.0或以上版本中新增的視圖（可用於AAPS 3.3.0穿戴apk或以上版本）*
 
@@ -1434,7 +1434,7 @@ delta_Ext1<br/>delta_Ext2                                                       
 | `"invalidTextSize"`       | 整數 | 如果資料無效，管理文字大小的步驟                                                                                                                                                                                                                                                          |
 | textsize*1_to_n*        | 整數 | 管理文字大小，用於 minData（或接近 minData）與 `"textsize1"` 以及 maxData（或接近 maxData）與 textsize*n* 之間的步驟                                                                                                                                                                                  |
 | `"invalidLeftOffset"`     | 整數 | 如果資料無效，管理 leftOffset 的步驟                                                                                                                                                                                                                                                  |
-| leftOffset*1_to_n*      | 整數 | Manage leftOffset to use for each step between minData (or close to minData) with `"leftOffset1"` and maxData (or close to maxData) with leftOffset*n*<br />Note, can be used with dynPref to shift a view when another is hidden...                                |
+| 左偏移*1_to_n*             | 整數 | 管理左偏移以用於每個步驟，介於最小資料（或接近最小資料）與`"leftOffset1"`及最大資料（或接近最大資料）與leftOffset*n*<br />注意，可以與dynPref一起使用，當另一個隱藏時來移動視圖...                                                                                                                                                     |
 | `"invalidTopOffset"`      | 整數 | 如果資料無效，管理 topOffset 的步驟                                                                                                                                                                                                                                                   |
 | topOffset*1_to_n*       | 整數 | 管理每個步驟要使用的 topOffset，從 minData（或接近 minData）開始為 topOffset1，maxData（或接近 maxData）為 topOffset*n*<br />請注意，可以與 dynPref 一起使用，當另一個視圖被隱藏時移動視圖...                                                                                                                            |
 | `"invalidRotationOffset"` | 整數 | 如果資料無效，管理 rotationOffset 的步驟                                                                                                                                                                                                                                              |
@@ -1448,24 +1448,24 @@ delta_Ext1<br/>delta_Ext2                                                       
 
 ### DynData 鍵值
 
-| 鍵值                                                                                          | 鍵        | 註解                                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"sgv"`<br/>`"sgv_Ext1"` *<br>`"sgv_Ext2"` *                                    | valueKey | 預設 minData = 39 mg/dL<br />預設 maxData = 400 mg/dL<br />- 請注意，實際的 maxData 與你的傳感器相關，內部值的單位始終為 mg/dL                                                                 |
-| `"sgvLevel"`<br/>`"sgvLevel_Ext1"` *<br/>`"sgvLevel_Ext2"` *                    | valueKey | 預設 minData = -1（低血糖）<br />預設 maxData = 1（高血糖）<br />如果血糖在範圍內 = 0                                                                                                   |
-| `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` *                 | valueKey | 預設 minData = 1（雙箭頭向下）<br />預設 maxValue = 7（雙箭頭向上）<br />數值箭頭資料 = 4<br />錯誤或遺失資料 = 0（??）                                                                      |
-| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                             | valueKey | 預設 minData = -25 mg/dL<br />預設 maxData = 25 mg/dL<br />- 請注意，實際的 minData 和 maxData 可能會超出上述範圍，內部值的單位始終為 mg/dL                                                      |
-| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *                 | valueKey | 預設 minData = -25 mg/dL<br />預設 maxData = 25 mg/dL<br />- 請注意，實際的 minData 和 maxData 可能會超出上述範圍，內部值的單位始終為 mg/dL                                                      |
-| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *             | valueKey | default minData = 0 (Profile Target)<br />default maxData = 2 (Temp Target)<br />Target is adjusted byt the loop = 1<br/>Default or missing information = 0 |
-| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *                | valueKey | default minData = 0 U<br />default maxData = 500 U                                                                                                                      |
-| `"reservoirLevel"`*<br/>`"reservoirLevel_Ext1"` *<br/>`"reservoirLevel_Ext2"` * | valueKey | default minData = 0 (Standard Color)<br/>default maxData = 2 (Urgent Color)<br/>Warning Color = 1                                                                 |
-| `"uploader_battery"`                                                                        | valueKey | 預設 minData = 0%<br />預設 maxData = 100%                                                                                                                                  |
-| `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *           | valueKey | 預設 minData = 0%<br />預設 maxData = 100%                                                                                                                                  |
-| `"timestamp"`<br/>`"timestamp_Ext1"` *<br/>`"timestamp_Ext2"` *                 | valueKey | 預設 minData = 0 分鐘<br />預設 maxData = 60 分鐘                                                                                                                               |
-| `"loop"`<br/>`"loop_Ext1"` *<br/>`"loop_Ext2"` *                                | valueKey | 預設 minData = 0 分鐘<br />預設 maxData = 28 分鐘<br />- 請注意，狀態箭頭在 14 分鐘以下顯示為綠色，14 分鐘以上顯示為紅色，因此如果你放置兩個圖像，可以使用預設的 minData 和 maxData 來替換狀態背景為自訂圖像。                          |
-| `"day"`                                                                                     | valueKey | 預設 minData = 1<br />預設 maxData = 31                                                                                                                                     |
-| `""day_name""`                                                                              | valueKey | 預設 minData = 1<br />預設 maxData = 7                                                                                                                                      |
-| `"month"`                                                                                   | valueKey | 預設 minData = 1<br />預設 maxData = 12                                                                                                                                     |
-| `"week_number"`                                                                             | valueKey | 預設 minData = 1<br />預設 maxData = 53                                                                                                                                     |
+| 鍵值                                                                              | 鍵        | 註解                                                                                                                                                   |
+| ------------------------------------------------------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"sgv"`<br/>`"sgv_Ext1"` *<br>`"sgv_Ext2"` *                        | valueKey | 預設 minData = 39 mg/dL<br />預設 maxData = 400 mg/dL<br />- 請注意，實際的 maxData 與你的傳感器相關，內部值的單位始終為 mg/dL                                        |
+| `"sgv水平"`<br/>`"sgv水平_Ext1"` *<br/>`"sgv水平_Ext2"` *                 | valueKey | 預設 minData = -1（低血糖）<br />預設 maxData = 1（高血糖）<br />如果血糖在範圍內 = 0                                                                          |
+| `"方向"`<br/>`"方向_Ext1"` *<br/>`"方向_Ext2"` *                          | valueKey | 預設 minData = 1（雙箭頭向下）<br />預設 maxValue = 7（雙箭頭向上）<br />數值箭頭資料 = 4<br />錯誤或遺失資料 = 0（??）                                             |
+| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                 | valueKey | 預設 minData = -25 mg/dL<br />預設 maxData = 25 mg/dL<br />- 請注意，實際的 minData 和 maxData 可能會超出上述範圍，內部值的單位始終為 mg/dL                             |
+| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *     | valueKey | 預設 minData = -25 mg/dL<br />預設 maxData = 25 mg/dL<br />- 請注意，實際的 minData 和 maxData 可能會超出上述範圍，內部值的單位始終為 mg/dL                             |
+| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` * | valueKey | 預設最小資料 = 0（個人設定目標）<br />預設最大資料 = 2（臨時目標）<br />目標通過循環調整 = 1<br/>預設或缺失資訊 = 0                                                         |
+| `"藥量"`*<br/>`"藥量_Ext1"` *<br/>`"藥量_Ext2"` *                         | valueKey | 預設最小資料 = 0 U<br />預設最大資料 = 500 U                                                                                                               |
+| `"藥量水平"`*<br/>`"藥量水平_Ext1"` *<br/>`"藥量水平_Ext2"` *                   | valueKey | 預設最小資料 = 0（標準顏色）<br/>預設最大資料 = 2（緊急顏色）<br/>警告顏色 = 1                                                                                       |
+| `"uploader_battery"`                                                            | valueKey | 預設 minData = 0%<br />預設 maxData = 100%                                                                                                         |
+| `"機械電池"`<br/>`"機械電池_Ext1"` *<br/>`"機械電池_Ext2"` *                    | valueKey | 預設 minData = 0%<br />預設 maxData = 100%                                                                                                         |
+| `"時間戳"`<br/>`"時間戳_Ext1"` *<br/>`"時間戳_Ext2"` *                       | valueKey | 預設 minData = 0 分鐘<br />預設 maxData = 60 分鐘                                                                                                      |
+| `"循環"`<br/>`"循環_Ext1"` *<br/>`"循環_Ext2"` *                          | valueKey | 預設 minData = 0 分鐘<br />預設 maxData = 28 分鐘<br />- 請注意，狀態箭頭在 14 分鐘以下顯示為綠色，14 分鐘以上顯示為紅色，因此如果你放置兩個圖像，可以使用預設的 minData 和 maxData 來替換狀態背景為自訂圖像。 |
+| `"day"`                                                                         | valueKey | 預設 minData = 1<br />預設 maxData = 31                                                                                                            |
+| `""day_name""`                                                                  | valueKey | 預設 minData = 1<br />預設 maxData = 7                                                                                                             |
+| `"month"`                                                                       | valueKey | 預設 minData = 1<br />預設 maxData = 12                                                                                                            |
+| `"week_number"`                                                                 | valueKey | 預設 minData = 1<br />預設 maxData = 53                                                                                                            |
 
 **自Custom Watchface V2.0或以上版本中新增的鍵（可用於AAPS 3.3.0穿戴apk或以上版本）*
 
