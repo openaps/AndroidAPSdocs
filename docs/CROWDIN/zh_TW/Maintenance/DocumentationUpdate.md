@@ -1,13 +1,13 @@
 # 文件更新與變更
 
-## December 2024
+## 2024年12月
 
-- Documentation of [3.3 version](#version3300) @emilise
+- 文檔 [3.3版](#version3300) @emilise
 
 ## 2024年11月
 
 - 更新 [你的 AAPS 配置](../SettingUpAaps/YourAapsProfile.md) @emilise
-- 重新整理 [Wear OS 智慧手錶](../WearOS/BuildingAapsWearOS.md) 內容 @psonnerat
+- 重新整理 [Wear OS 智慧型手錶](../WearOS/BuildingAapsWearOS.md) 內容 @psonnerat
 
 ## 2024年10月
 
@@ -75,7 +75,7 @@ AAPS 3.1 文檔可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2021年2月
 
-- New navigation bar and [language switch](../NavigateDoc/ChangeLanguage.md)
+- 新的導覽列和[語系切換](../NavigateDoc/ChangeLanguage.md)
 
 ## 2021年1月
 
