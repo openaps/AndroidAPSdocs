@@ -5,7 +5,7 @@
 ```{admonition} Version 3.3
 :class: note
 
-29/12/2024 : Version 3.3 is out. Check the [Release Notes](#version3300) to see what's new and get update instructions.
+29/12/2024 : 版本 3.3 已發布。 檢查[發行說明](#version3300)以查看新功能並獲取更新說明。
 
 ```
 
@@ -66,10 +66,10 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 ## AAPS文件索引
 
 ```{toctree}
-:caption: 1) Change language
+:caption: 1）更改語言
 
-Change language <./NavigateDoc/ChangeLanguage.md>
-Change version <./NavigateDoc/ChangeVersion.md>
+更改語言 <./NavigateDoc/ChangeLanguage.md>
+更改版本 <./NavigateDoc/ChangeVersion.md>
 ```
 ```{toctree}
 :caption: 2) 開始使用
