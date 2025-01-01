@@ -68,7 +68,7 @@
 
 ### AAPS 設置
 
-Now that the phone settings have been checked, in the **AAPS** app itself, go to [Config Builder > General](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
+現在檢查完手機的設定後，在**AAPS**應用程式中，前往[組態建置工具 > 一般](../SettingUpAaps/ConfigBuilder.md)以啟用**SMS 通訊模塊**。
 
 前往簡訊通訊的偏好設定。
 
@@ -83,7 +83,7 @@ Now that the phone settings have been checked, in the **AAPS** app itself, go to
 * 英國電話號碼：+447976304596
 * 美國電話號碼：+11234567890
 * 法國電話號碼：+33612344567
-* _等。_
+* _台灣電話號碼: 09xxxxxxxx_
 
 請注意，依據你所在的位置，電話號碼前的「+」號可能需要或不需要。 為了確定這一點，你可以傳送範例簡訊，以顯示在 SMS 通訊標籤中的接收格式。
 
@@ -262,7 +262,7 @@ PIN 碼要求如下：
 | 指令                 | 驗證 | 功能 & *回應*                                                                                       |
 | ------------------ | -- | ----------------------------------------------------------------------------------------------- |
 | TREATMENTS REFRESH | 否  | 從 NS 重新整理治療                                                                                     |
-| AAPSCLIENT RESTART | 否  | 如果你注意到與 Nightscout 或 **AAPSClient** 的通訊問題，這將很有幫助。                                               |
+| AAPSCLIENT 重啟      | 否  | 如果你注意到與 Nightscout 或 **AAPSClient** 的通訊問題，這將很有幫助。                                               |
 | SMS DISABLE/STOP   | 否  | 要停用 SMS 遠端服務，請回覆代碼 Any。<br/>請注意，你可以直接從 **AAPS** 主智慧型手機重新啟用該服務。                            |
 | HELP               | 否  | 返回所有可查詢的功能：<br/>BG、循環、治療等。<br/>發送進一步的 ***協助 ***功能****** 命令以列出<br/>此區域內所有可用選項。 |
 | HELP BOLUS         |    | *注射 1.2<br/>注射 1.2 餐前*                                                                    |
@@ -337,4 +337,4 @@ PIN 碼要求如下：
 
 使用 SMS 命令可能會產生大量來自 **AAPS** 手機發送到看護者手機的自動訊息。 例如，如果你在 **AAPS** 中設置了自動化，你也會收到“幫浦中的基礎率設定已更新”這類訊息。 如果要發送大量 SMS，擁有不限次數的 SMS 配額可能會很有用，並且對所有手機停用 SMS 通知、警報或震動。 使用 SMS 指令時，無法避免接收到這些更新。 因此，你可能需要另一種與孩子直接溝通的方式（如果他們年齡夠大），而不是使用 SMS。 常見的 **AAPS** 照護者會使用的替代通訊應用程式包括 Whatsapp、Lime、Telegram 和 Facebook Messenger。
 
-It is possible do disabled the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+當配置變更源自 Nightscout 時，可以停用 "配置變更" 短信。 要做到這一點，請在 AAPS 目錄的`extra`目錄中創建名為**exactly** `do_not_send_sms_on_profile_change`的檔案。

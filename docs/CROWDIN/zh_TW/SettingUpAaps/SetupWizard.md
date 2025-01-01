@@ -48,13 +48,13 @@
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_125709.png)
 
-### Notification and battery optimization
+### 通知和電池優化
 
 如果應用程式希望向你發送通知，Android需要特殊的許可。
 
 雖然停用通知很方便_例如_來自社群媒體應用程式的通知，但你必須允許**AAPS**向你發送通知。
 
-Please click the first "ASK FOR PERMISSION" button:
+請點擊第一個「請求權限」按鈕：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_125721.png)
 
@@ -76,7 +76,7 @@ Please click the first "ASK FOR PERMISSION" button:
 
 你可以透過確認設置來完成這一操作。
 
-Click the second "ASK FOR PERMISSION" button. 請選擇“允許”：
+點擊第二個「請求權限」按鈕。 請選擇“允許”：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_125750.png)
 
@@ -84,13 +84,13 @@ Click the second "ASK FOR PERMISSION" button. 請選擇“允許”：
 
 ![Screenshot_20241207-161454.png](../images/setup-wizard/Screenshot_20241207-161454.png)
 
-### Location
+### 位置
 
 Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可能在其他應用程式中也見過這一點。 如果你想查看藍牙，通常需要位置權限。
 
 **AAPS** 使用藍牙與你的 CGM 和胰島素幫浦通信，如果這些設備是直接由**AAPS** 控制，而不是其他應用程式所使用的。 具體細節可能因設置而異。
 
-Click the first "ASK FOR PERMISSION" button:
+請點擊第一個「請求權限」按鈕：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_125924.png)
 
@@ -100,21 +100,21 @@ Click the first "ASK FOR PERMISSION" button:
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_125939.png)
 
-Click the second "ASK FOR PERMISSION" button:
+點擊第二個「請求權限」按鈕：
 
 ![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
 
-Select "Allow all the time".
+選擇「始終允許」。
 
 點擊“下一步”按鈕：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_130002.png)
 
-### Storage permission
+### 儲存權限
 
 **AAPS** 需要將訊息記錄到你的智慧型手機的永久儲存中。 永久儲存意味著即使重啟智慧型手機後，他仍然可用。 其他訊息則會遺失，因為他們沒有儲存到永久儲存中。
 
-Click the first "ASK FOR PERMISSION" button:
+請點擊第一個「請求權限」按鈕：
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_130012.png)
 
@@ -122,11 +122,11 @@ Click the first "ASK FOR PERMISSION" button:
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_130022.png)
 
-Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information. The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
+點擊「AAPS 目錄」。 這將開啟你手機上的檔案系統，讓你選擇希望 AAPS 儲存資訊的地方。 預設目錄是 **AAPS**，但你可以使用任何慣用的目錄。 如有必要，創建目錄，進入該目錄，並選擇「使用此資料夾」：
 
 ![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
 
-Confirm that you wish to grant access to **AAPS** to the selected directory:
+確認你希望授予 **AAPS** 存取所選目錄的權限：
 
 ![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
 

@@ -304,7 +304,7 @@ AAPS 沒有運作在 "開發者模式"。 AAPS 顯示以下訊息："運作開�
 
 可以透過 AAPSClient 應用程式遠端監控和控制 AAPS，並且可選地透過運作在 Android Wear 手錶上的 Wear 應用程式。 請注意，AAPSClient（遠端）應用程式與 AAPS 中的 NSClient 設置不同，AAPSClient（遠端）Wear 應用程式也與 AAPS Wear 應用程式不同——為了清楚起見，遠端應用程式將稱為 "AAPSClient 遠端" 和 "AAPS 遠端 Wear" 應用程式。
 
-要啟用 AAPSClient 遠端功能，你必須： 1）安裝 AAPSClient 遠端應用程式（版本應與使用的 AAPS 版本匹配） 2）運作 AAPSClient 遠端應用程式，並按照設置嚮導的指示授予所需的權限並配置對 Nightscout 網站的查看。 3）此時，你可能希望停用一些警報選項，和/或停用啟動 AAPSClient 遠端應用程式時紀錄到你的 Nightscout 網站的進階設置。 完成此操作後，AAPSClient 遠端將從你的 Nightscout 網站下載設定檔資料，"首頁總覽"標籤將顯示 CGM 資料和部分 AAPS 資料，但可能不會顯示圖表資料，並會顯示未設置設定檔的提示。 4）要啟用設定檔：
+要啟用 AAPSClient 遠端功能，你必須： 1）安裝 AAPSClient 遠端應用程式（版本應與使用的 AAPS 版本一致） 2）運作 AAPSClient 遠端應用程式，並按照設置嚮導的指示授予所需的權限並配置對 Nightscout 網站的查看。 3）此時，你可能希望停用一些警報選項，和/或停用啟動 AAPSClient 遠端應用程式時紀錄到你的 Nightscout 網站的進階設置。 完成此操作後，AAPSClient 遠端將從你的 Nightscout 網站下載設定檔資料，"首頁總覽"標籤將顯示 CGM 資料和部分 AAPS 資料，但可能不會顯示圖表資料，並會顯示未設置設定檔的提示。 4）要啟用設定檔：
 
 - 在 AAPS > NSClient > 選項中啟用遠端設定檔同步
 - 在 NSClient 遠端中啟用設定檔 > 設定檔啟用後，設定檔將會生效，AAPSClient 遠端應顯示來自 AAPS 的所有資料。 提示：如果圖表仍然缺失，請嘗試更改圖表設置以觸發更新。 5）要啟用 AAPSClient 的遠端控制功能，請選擇啟用 AAPS 中的功能（設定檔更改、臨時目標、碳水化合物等），這樣你就可以透過 AAPS > NSClient > 選項遠端控制 AAPS。 完成這些更改後，你將能夠透過 Nightscout 或 AAPSClient 遠端控制 AAPS。
@@ -325,7 +325,7 @@ AAPS 沒有運作在 "開發者模式"。 AAPS 顯示以下訊息："運作開�
 
 這是可行的。 請注意，由於移動是“未支援的”和“未經測試的”，因此涉及一定的風險。 最佳做法是在 Pod 即將到期時嘗試此過程，以便出現問題時，降低損失。
 
-關鍵是 AAPS 中的幫浦狀態（包括其 MAC 位址）與 DASH 在重新連線時匹配。
+關鍵是 AAPS 中的幫浦狀態（包括其 MAC 位址）與 DASH 在重新連線時一致。
 
 ### 我通常會這樣操作：
 

@@ -1,6 +1,6 @@
 (Open-APS-features-DynamicISF)=
 # 動態胰島素敏感因子 (DynISF)
-**Dynamic ISF** was added in **AAPS** version 3.2 and requires **[Objective 11](#objectives-objective11)** to be started before **Dynamic ISF** can be activated. Check **Enable dynamic sensitivity** in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings) to activate. **動態 ISF** 只建議給**AAPS** 控制及監控有良好掌握的進階使用者。
+**動態 ISF** 在 **AAPS** 版本 3.2 中新增，需要在啟動 **[目標 11](#objectives-objective11)** 之前才能啟用 **動態 ISF**。 在 [偏好設定 > OpenAPS SMB](#Preferences-openaps-smb-settings) 中勾選 **啟用動態敏感度** 以啟用。 **動態 ISF** 只建議給**AAPS** 控制及監控有良好掌握的進階使用者。
 
 要有效使用**動態 ISF**，**AAPS** 資料庫需要至少五天的 **AAPS** 資料。
 
@@ -11,7 +11,7 @@
 
 **動態 ISF** 使用 Chris Wilson 的模型來決定**ISF**，而不是用戶的靜態**設定檔**中的**ISF** 設定。
 
-The **Dynamic ISF** equation implemented is: `ISF = 1800 / (TDD * Ln (( glucose / insulin divisor) +1 ))`
+所實施的 **動態 ISF** 方程式為： `ISF = 1800 / (TDD * Ln (( 葡萄糖 / 胰島素除數) +1 ))`
 
 SMB/AMA - 用戶的**個人設定**示例，其中包含用戶設置的靜態**胰島素敏感性因子(ISF)**，並由**SMB** 和 **AMA** 使用。
 
@@ -21,7 +21,7 @@ SMB/AMA - 用戶的**個人設定**示例，其中包含用戶設置的靜態**�
 
 ![實作使用上述方程計算當前<strong x-id="1">ISF</strong>，並在 oref1 預測中用於<strong x-id="1">體內胰島素</strong>、<strong x-id="1">ZT</strong> 和 <strong x-id="1">UAM</strong>。](../images/DynISF2.png)
 
-該實作使用上述公式來計算當前的 **ISF**，並應用於 **IOB**、**ZT** 和 **UAM** 的oref1 預測中。 It is also used for **COB** and in the bolus wizard. Further discussion can be found here: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
+該實作使用上述公式來計算當前的 **ISF**，並應用於 **IOB**、**ZT** 和 **UAM** 的oref1 預測中。 這也用於 **COB** 和注射嚮導中。 更詳細的討論可以在此找到： [Chris Wilson 談胰島素敏感度（校正因子）與循環與學習，2022 年 2 月 6 日](https://www.youtube.com/watch?v=oL49FhOts3c)。
 
 ## TDD（每日總胰島素劑量）
 TDD 將使用以下數值的組合：
@@ -46,16 +46,16 @@ TDD 將使用以下數值的組合：
 
 ## 偏好設定
 
-Check **Enable dynamic sensitivity** in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings) to activate. New settings become available once checked.
+在 [偏好設定 > OpenAPS SMB](#Preferences-openaps-smb-settings) 中勾選 **啟用動態敏感度** 以啟用。 勾選後將有新設置可用。
 
-![Dynamic ISF settings](../images/Pref2020_DynISF.png)
+![動態 ISF 設定](../images/Pref2020_DynISF.png)
 
 ### 動態胰島素敏感因子調整係數
 調整因子允許用戶指定一個介於 1% 和 300% 之間的值。 這作為**TDD**值的乘數，導致**ISF**值變得*更小*（即需要更多胰島素以小幅度改變血糖數值），當該值超過 100% 時，以及*更大*（即需要較少的胰島素以小幅度改變血糖數值），當該值低於 100% 時。
 
-### BG level below which low glucose suspend occurs
+### 低於此血糖數值時，會啟動低血糖暫停功能
 
-BG value below which insulin is suspended. Default value uses standard target model. User can set value between 60mg/dl (3.3mmol/l) and 100mg/dl(5.5mmol/l). Values below 65/3.6 result in use of default model.
+血糖值低於此值時，胰島素將被暫停。 預設值使用標準目標模型。 使用者可以設定值在 60mg/dl（3.3mmol/l）和 100mg/dl（5.5mmol/l）之間。 低於 65/3.6 的值將使用預設模型。
 
 ### 啟用基於 TDD 的敏感性比率來調整基礎胰島素和血糖目標
 
@@ -64,4 +64,4 @@ BG value below which insulin is suspended. Default value uses standard target mo
 ## 小心 - 自動化或設定檔百分比增加
 **自動化**應始終謹慎使用。 這對於**動態 ISF**尤其如此。
 
-如果**動態 ISF**正在運作，用戶應重新考慮啟用任何臨時**設定檔**的增加作為**自動化**規則，或同樣啟動**設定檔百分比**，這可能使**動態 ISF**在校正注射上過於激烈，並可能導致低血糖。
+如果**動態 ISF**正在運作，用戶應重新考慮啟用任何臨時**設定檔**的增加作為**自動化**規則，或同樣啟動**設定檔百分比**，這可能使**動態 ISF**在校正注射上過量，並可能導致低血糖。

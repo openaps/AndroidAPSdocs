@@ -2,26 +2,26 @@
 
 ## 什麼是自動化？
 
-"**Automation**" is a feature which can automate task for AAPS.
+"**自動化**" 是可自動執行 AAPS 任務的功能。
 
-Automations performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a WIFI SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+自動化根據一個或多個條件或觸發執行特定操作。 觸發可以包括不規則事件，如低或高血糖 (BG) 水準，或設定的負胰島素量 (IOB)。 自動化也可以處理定期事件，如某些時間的用餐或運動，或當使用者在特定 GPS 位置或 WIFI SSID 區域的特定距離內。 自動化可以根據時間表或每次 Pod 變更執行 AAPS 設定備份。
 
-Automations rules are created and modified from the Automations tab. Each rule is defined by two properties:
+自動化規則可從自動化標籤中建立和修改。 每個規則由兩個屬性定義：
 
-- One or more conditions or 'triggers' that start an action.
+- 一個或多個開始行動的條件或“觸發”。
 
-    Think of a certain time schedule, an event or properties value in AAPS
+    思考某個時間表、一個事件或 AAPS 中的屬性值
 
-- One or more actions to perform.
+- 一個或多個要執行的動作。
 
-    Such as an alarm or settings a profile percentage or exporting the AAPS settings on Pod change.
+    例如鬧鐘、設定設定檔百分比或在 Pod 變更時匯出 AAPS 設定。
 
 
-There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on ![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and ![**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
+有各種各樣的自動化選項，鼓勵用戶在 AAPS 應用中的自動化進行研究。 你還可以在 ![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) 和 ![**Discord**](https://discord.gg/4fQUWHZ4Mw) 上搜尋 AAPS 使用者群組，以獲得其他用戶的自動化範例。
 
 ## 自動化如何幫助你
 
-1. **Automate reoccurring tasks:** Automatically executing programmed actions without user interaction.
+1. **自動化定期任務：** 無需使用者互動自動執行程式化動作。
 
 1. **減少決策疲勞：****自動化**的主要好處是使用戶免於在 **AAPS** 中進行手動干預的負擔。 [研究](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4)估計，1型糖尿病患者每天需要做出額外的180個決策。 **自動化**可以減輕心理負擔，釋放使用者的精神能量來處理生活中的其他事務。
 
@@ -43,7 +43,7 @@ There are a wide range of Automation options, and users are encouraged to study 
 
 ## 開始使用自動化前的關鍵考慮因素
 
-1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automations should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). 避免設置自動**設定檔切換**來補償， _例如_ 食物引起的**血糖**升高，這些應透過其他策略處理（如 SMBs 等）。
+1. 在設置某些自動化之前，你應該對**BG**擁有合理的控制。 自動化不應用於彌補不理想的基礎胰島素量、**ISF** 或 **CR** 設置（稍後將進一步討論）。 避免設置自動**設定檔切換**來補償， _例如_ 食物引起的**血糖**升高，這些應透過其他策略處理（如 SMBs 等）。
 
 1. 與任何技術一樣，**CGM**'s、**幫浦** 和手機都可能故障：技術問題或傳感器錯誤可能會干擾 **自動化** 動作，並可能需要手動干預。
 
@@ -61,7 +61,7 @@ There are a wide range of Automation options, and users are encouraged to study 
 
 ## AAPS 中的自動化在哪裡？
 
-Depending on your [Config builder > General](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
+根據你的[組態建置工具 > 一般](../SettingUpAaps/ConfigBuilder.md)設置，**自動化**位於“漢堡”選單中或作為**AAPS**的標籤。
 
 ## 如何設置自動化？
 
@@ -131,13 +131,13 @@ Depending on your [Config builder > General](../SettingUpAaps/ConfigBuilder.md) 
 在選擇這些條件和數值時，仔細考慮你的**自動化**的具體意圖非常重要。
 
 (automations-automation-triggers)=
-## Automation Triggers
+## 自動化觸發器
 
-![Automation Triggers](../images/automation_triggers.png)
+![自動化觸發器](../images/automation_triggers.png)
 
-There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. 以下列表並不完整：
+用戶可以選擇各種“觸發”。 觸發是執行自動化所必須滿足的條件。 以下列表並不完整：
 
-**Trigger:** connect conditions
+**觸發：** 連接條件
 
 **選項：**
 
@@ -146,20 +146,20 @@ There are various ‘Triggers’ that can be selected by the user. Triggers are 
 * “或”
 * “互斥或”（這意味著如果只有一個條件成立，動作將會發生）
 
-**Trigger:** time vs. recurring time
+**觸發：** 時間 vs. 重複時間
 
 **選項：**
 
 * 時間 = 單次事件
 * 循環時間 = 經常發生的事件（例如每週一次、每個工作日等）
 
-**Trigger:** location
+**觸發：** 位置
 
 **選項：**
 
 * 在**組態建置工具**（自動化）中，使用者可以選擇所需的位置服務。
 
-**Trigger:** location service
+**觸發：** 位置服務
 
 **選項：**
 
@@ -167,22 +167,22 @@ There are various ‘Triggers’ that can be selected by the user. Triggers are 
 * 使用網路位置：您的 Wi-Fi 位置。
 * 使用 GPS 定位（注意！ 這可能會導致過多的電池消耗！
 
-**Triggers** : pump and sensor data
+**觸發器：** 幫浦和傳感器資料
 
-* Cannula age trigger: Available for all pumps
-* Insulin age trigger: Available for supported pumps
-* Battery age trigger: Available for supported pumps
-* Sensor age trigger: always available
-* Pod Activation trigger: Available for patch pumps
+* 插管時間觸發：所有幫浦均可用
+* 胰島素時間觸發：支援幫浦可用
+* 電池時間觸發：支援幫浦可用
+* 傳感器時間觸發：始終可用
+* Pod 註冊觸發：僅限貼片幫浦可用
 
-Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+請注意，對於所有與時間相關的觸發，平等比較不太可能觸發，因此在這種情況下需要兩個觸發來創建範圍
 
-* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
-* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* 儲備液位觸發：所有幫浦均可用，且比較 "NOT\_AVAILABLE" 不適用於此觸發，因為值始終填入**AAPS**
+* 幫浦電池電量觸發：支援幫浦可用，且比較 "NOT\_AVAILABLE" 不適用於此觸發，因為值始終填入**AAPS**
 
 ## 動作
 
-![Automation Triggers](../images/automation_actions.png)
+![自動化觸發器](../images/automation_actions.png)
 
 **動作：**啟動**臨時目標**
 
@@ -273,27 +273,27 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 
 ![替代文字](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
-# Automating Preference Settings Export
+# 自動化偏好設定匯出
 
-### Unattended Exports: scheduled (daily)
+### 不需人員監控的匯出：排程（每日）
 
-Screenshots detailing the Automation triggers:
+顯示自動化觸發條件的截圖：
 
-1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+1) 條件：重複時間 = 週一、週二、週三、週四、週五 上午 8:00 1) 操作：設定匯出（在「治療中的文字」中輸入「每日」）
 
-![Scheduled exports](../images/Automations/automation_settingsexport_scheduled_400px.png)
+![排程匯出](../images/Automations/automation_settingsexport_scheduled_400px.png)
 
-Note: Export execution will be logged on Careportal
+注意：匯出執行將記錄在照護入口上
 
-### Unattended Exports: Pod Activation (patch pump only)
+### 不需人員監控的匯出：Pod 註冊（僅限補丁幫浦）
 
-Screenshots detailing the Automation triggers:
+顯示自動化觸發條件的截圖：
 
-1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+1) 條件：Pod 註冊 1) 操作：設定匯出（在「治療中的文字」中輸入「Pod 註冊：設定匯出」）
 
-![Export on Pod activation](../images/Automations/automation_settingsexport_podactivation_400px.png)
+![在 Pod 註冊時匯出](../images/Automations/automation_settingsexport_podactivation_400px.png)
 
-Note: Export execution will be logged on Careportal
+注意：匯出執行將記錄在照護入口上
 
 
 # 自動化日誌

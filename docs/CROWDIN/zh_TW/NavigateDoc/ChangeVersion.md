@@ -1,8 +1,8 @@
-# Change version
+# 更改版本
 
-The documentation you are currently reading is specific to a given version of **AAPS**.
+你目前閱讀的文件專門針對某一版本的 **AAPS**。
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version.
+當前版本顯示在螢幕的右下角。 要切換到不同版本，請點擊當前版本。
 
 ![打開語系選單](../images/documentation_language_menu.png)
 

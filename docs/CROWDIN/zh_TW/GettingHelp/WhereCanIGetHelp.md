@@ -36,7 +36,7 @@
 
 ### 法國
 
-* [AndroidAPS France (Toutes Pompes)](https://www.facebook.com/groups/268922660715266)
+* [AndroidAPS 法國（所有幫浦）](https://www.facebook.com/groups/268922660715266)
 * [DIY AndroidAPS, parents d'enfants Dt1](https://www.facebook.com/groups/262497886779069)：法語的 AAPS 支援小組，專為兒童設計
 
 ### 德國
@@ -44,16 +44,16 @@
 * [開源 Looper 社群](https://de.loopercommunity.org/)：德國開源閉環社群，討論糖尿病、交流、支援和本地聚會
 * [Freestyle Libre Freaks Facebook 群組](https://www.facebook.com/groups/FreestyleLibreFreaks/)：Libre 作為 CGM/FGM
 * [NightscoutDE Facebook 群組](https://www.facebook.com/groups/nightscoutDE/)
-* [Looped-DE](https://www.facebook.com/groups/loopedDE/)
+* [循環-DE](https://www.facebook.com/groups/loopedDE/)
 
 ### 荷蘭
 
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893)：使用 OpenAPS、Loop 和 AndroidAPS 的荷蘭語使用者
 * [雲端 CGM 荷蘭語版](https://www.facebook.com/groups/1764754560436596)
 
-### Norway
+### 挪威
 
-* [Looped Norge](https://www.facebook.com/groups/loopednorge/)
+* [循環 Norge](https://www.facebook.com/groups/loopednorge/)
 
 ### 波蘭
 

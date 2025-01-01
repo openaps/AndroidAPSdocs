@@ -59,7 +59,7 @@ orphan: true
 
 #### 選項 2：組態建置工具
 
-On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
+在現有安裝中，可以在[組態建置工具 > 幫浦](#Config-Builder-pump)中選擇**Medtrum**幫浦：
 
 在左上角的**漢堡選單**中選擇**組態建置工具**\ ➜\ **幫浦**\ ➜\ **Medtrum**，選擇**啟用按鈕**標題為**Medtrum**。
 
@@ -132,13 +132,13 @@ On an existing installation you can select the **Medtrum** pump in [Config Build
 
 根據你的胰島素需求，設置一個合適的值。
 
-#### Scan on Connection error
+#### 連線錯誤時掃描
 
-***Default: Off.***
+***預設：關閉。***
 
-Located under **Advanced Settings**.
+位於**進階設定**下。
 
-Only enable if you have connection problems. If enabled the driver scans for the pump again before trying to reconnect to the pump. Make sure you have Location permission set to "Always allow".
+僅在有連線問題時啟用。 如果啟用，驅動程式在嘗試重新連線到幫浦之前，會再次掃描幫浦。 確保你的位置權限設置為「始終允許」。
 
 ### 步驟2b：AAPS警報設置
 

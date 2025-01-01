@@ -1,7 +1,7 @@
 # 更改語系
 
 ```{note}
-The language selection can be found bottom right of the screen. 請點擊底部欄位，打開語系選單。
+語言選擇位於螢幕的右下角。 請點擊底部欄位，打開語系選單。
 ```
 
 ![打開語系選單](../images/documentation_language_menu.png)

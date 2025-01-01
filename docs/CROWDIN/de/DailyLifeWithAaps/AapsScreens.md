@@ -213,7 +213,7 @@ Abhängig von der verwendeten Pumpe, kann es sein, dass Du nicht alle diese Symb
 
 (aaps-screens-main-graph)=
 
-### Abschnitt F - Hauptgrafik
+### Abschnitt F - Hauptdiagramm
 
 ![Abschnitt F](../images/Home2020_MainGraph.png)
 
