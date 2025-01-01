@@ -49,7 +49,7 @@ AAPS 3.1 文檔可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 - 校正 [Libre 2 傳感器](#Libre2-best-practices-for-calibrating-a-libre-2-sensor) 的最佳方法
 - [ISF](../UsefulLinks/FAQ.md) 影響的重新表述
-- 更新[Android Studio故障排除](../GettingHelp/TroubleshootingAndroidStudio)
+- 更新[Android Studio問題排除](../GettingHelp/TroubleshootingAndroidStudio)
 - 移除已修補的[Dexcom](../CompatibleCgms/DexcomG6.md)應用程式，因為它已過時
 
 ## 2021年10月
