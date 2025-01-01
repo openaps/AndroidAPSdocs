@@ -63,7 +63,7 @@ This prompt is important, should not be ignored and is not intended to bug you. 
 WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
-(版本3300)=
+(version3300)=
 ## 版本 3.3.0.0
 
 發布日期：2024-29-12
