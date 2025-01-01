@@ -1,7 +1,7 @@
-(Releasenotes-release-notes)=
+
 # Σημειώσεις έκδοσης
 
-Please follow the instructions in the [update manual](UpdateToNewVersion). Μπορείτε επίσης να βρείτε μια ενότητα αντιμετώπισης προβλημάτων που αντιμετωπίζει τις πιο συνήθεις δυσκολίες κατά την ενημέρωση στη σελίδα του εγχειριδίου ενημέρωσης.
+Please follow the instructions in the [update manual](UpdateToNewVersion). The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
 
 You will receive the following information as soon as a new update is available:
 
@@ -9,15 +9,15 @@ You will receive the following information as soon as a new update is available:
 
 
 
-Τότε έχετε 60 ημέρες για να ενημερώσετε. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
+Then you have 60 days to update **AAPS**. If you do not update within the 60 day time period **AAPS** will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
 
-Αν δεν ενημερώσετε για άλλες 30 ημέρες (90 ημέρες από την ημερομηνία νέας κυκλοφορίας), το AAPS θα μεταβεί σε ανοιχτό κύκλωμα.
+If you do not update for another 30 days (90 days from new release date) **AAPS** will switch to Open Loop.
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-Σας παρακαλούμε να καταλάβετε ότι αυτή η αλλαγή δεν έχει σκοπό να σας δυσκολέψει, αλλά γίνετε για λόγους ασφαλείας. New versions of AAPS do not only provide new features but also important safety fixes. Therefore it is necessary that every user updates a.s.a.p.. Δυστυχώς υπάρχουν ακόμα αναφορές σφαλμάτων από πολύ παλιές εκδόσεις, γι 'αυτό προσπαθείστε να βελτιώσετε την ασφάλεια για κάθε χρήστη και ολόκληρη την κοινότητα του DIY. Ευχαριστώ για την κατανόηση.
+This prompt is important, should not be ignored and is not intended to bug you. New versions of **AAPS** do not only provide new features but also important safety fixes. Therefore it is necessary that every **AAPS** user updates to the latest version a.s.a.p.. Unfortunately there are still bug reports from very old versions so this an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
 
-```{admonition} First version of AAPS
+```{admonition} First version of **AAPS**
 :class: note
 
 The first test version started already in 2015. In 2016 has been the first released version.
@@ -70,14 +70,14 @@ Release date: 29-12-2024
 
 ### Main features
 
-* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behavior :
-  * **Profile Switch Percentage** is now taken into account for dynamic sensitivity strengthness
-  * The average ISF of last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
-  * If you use dynamic sensitivity and you have automation setting profile % in relation to BG turn it off. This is already part of dynamic sensitivity algorithm
-  * ***** AGAIN: Turn off all automation setting profile % in relation to BG because it will multiply the effect too much !!!!! *****
-  * Do not use non 100% for a long time. If you determine that your profile has changed, create new profile by cloning the one with %
+* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behaviour:
+  * **Profile Switch** and **Profile Percentage** is now taken into account for **Dynamic ISF** in respect of dynamic sensitivity strengthness
+  * The average **ISF** of the last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
+  * If you use **DynamicISF** and you have **Automation** set for a **Profile %** in relation to **BG**: Turn It Off. This is already part of dynamic sensitivity algorithm
+  * *** AGAIN: Turn off all **Automations** which activates a **Profile %** in relation to **BG** because it will be too aggressive and may over deliver in insulin! *****
+  * Do not use a **Profile %** increase of greater than 100% for a long time. If you determine that your **Profile** has changed, create a new **Profile** with your revised values in order to replicate the **Profile** with %
 * Enable “SMB always” and “SMB after carbs” for FreeStyle Libre 2 and Libre 3 users
-* New Automation triggers
+* New **Automation** triggers
 * Unattended settings exports
 
 ### How to upgrade
@@ -87,6 +87,8 @@ Release date: 29-12-2024
   * [Android Studio version called "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already have an older version of Android Studio installed, you may need to <span style="color:red">configure the JVM version to 21</span>. See [Troubleshooting Android Studio > Incompatible Gradle JVM](#incompatible-gradle-jvm).
   * If you use the “old” Combo driver with ruffy device, migrate to the [native Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) before update
   * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade: make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
+  * The [Bluetooth connectivity issues some people encounter on Android 15](../Getting-Started/Phones.md) are **NOT** solved by this release (this is an Android issue, not **AAPS**).
+  * The BYODA button on the homescreen is no longer available due to Android limitations. There is no known workaround.
 * Update instructions: follow the [Update to a new version](../Maintenance/UpdateToNewVersion.md) guide.
 * After upgrading:
   * Set the new [“AAPS directory” setting](#preferences-maintenance-settings), in the Maintenance tab.
