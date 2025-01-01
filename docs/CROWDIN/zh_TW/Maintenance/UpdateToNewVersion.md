@@ -15,7 +15,7 @@
 
 ```{contents} 更新到新版本 AAPS 的步驟 :depth: 1 :local: true
 
-    <br />如果遇到問題，請參閱針對 [Android Studio 的故障排除](../GettingHelp/TroubleshootingAndroidStudio) 的單獨頁面。
+    <br />如果遇到問題，請參閱針對 [Android Studio 的問題排除](../GettingHelp/TroubleshootingAndroidStudio) 的單獨頁面。
     
     ### 匯出你的設定
     
