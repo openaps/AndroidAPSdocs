@@ -153,8 +153,8 @@ AAPS 發佈說明 <./Maintenance/ReleaseNotes.md>
 :caption: 8) 獲取幫助
 
 我可以在哪裡獲得 AAPS 的幫助 <./GettingHelp/WhereCanIGetHelp.md>
-一般故障排除 <./GettingHelp/GeneralTroubleshooting.md>
-故障排除 Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+一般問題排除 <./GettingHelp/GeneralTroubleshooting.md>
+問題排除 Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
 讀取日誌檔案 <./GettingHelp/AccessingLogFiles.md>
 ```
 
