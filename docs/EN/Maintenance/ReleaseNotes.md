@@ -87,6 +87,8 @@ Release date: 29-12-2024
   * [Android Studio version called "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already have an older version of Android Studio installed, you may need to <span style="color:red">configure the JVM version to 21</span>. See [Troubleshooting Android Studio > Incompatible Gradle JVM](#incompatible-gradle-jvm).
   * If you use the “old” Combo driver with ruffy device, migrate to the [native Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) before update
   * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade: make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
+  * The [Bluetooth connectivity issues some people encounter on Android 15](../Getting-Started/Phones.md) are **NOT** solved by this release (this is an Android issue, not **AAPS**).
+  * The BYODA button on the homescreen is no longer available due to Android limitations. There is no known workaround.
 * Update instructions: follow the [Update to a new version](../Maintenance/UpdateToNewVersion.md) guide.
 * After upgrading:
   * Set the new [“AAPS directory” setting](#preferences-maintenance-settings), in the Maintenance tab.
