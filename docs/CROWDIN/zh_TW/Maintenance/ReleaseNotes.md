@@ -1,7 +1,7 @@
 
 # 版本更新說明
 
-請遵循[更新手冊](UpdateToNewVersion)中的指示。 The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
+請遵循[更新手冊](UpdateToNewVersion)中的指示。 問題排除部分也更新手冊頁面上說明了，包含升級**AAPS**時最常遇到的問題。
 
 當有新版本可用時，你將收到以下資訊：
 
@@ -9,13 +9,13 @@
 
 
 
-Then you have 60 days to update **AAPS**. If you do not update within the 60 day time period **AAPS** will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
+之後你有 60 天的時間來更新 **AAPS**。 如果您在 60 天內未完成更新，**AAPS** 將退回到 LGS（低血糖暫停 - 請參閱 [詞彙表](../UsefulLinks/Glossary.md)），如同 [目標 6](#objectives-objective6) 中所描述。
 
-If you do not update for another 30 days (90 days from new release date) **AAPS** will switch to Open Loop.
+如果您再延遲 30 天未更新（自新版本發佈日起共計 90 天），**AAPS** 將切換為開環模式。
 
 ![更新資訊](../images/AAPS_LoopDisable90days.png)
 
-This prompt is important, should not be ignored and is not intended to bug you. New versions of **AAPS** do not only provide new features but also important safety fixes. Therefore it is necessary that every **AAPS** user updates to the latest version a.s.a.p.. Unfortunately there are still bug reports from very old versions so this an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
+此提示非常重要，不應忽視，並非為了打擾你。 新版的 **AAPS** 不僅提供新功能，還包含重要的安全修復。 因此，每位 **AAPS** 使用者都需要儘快更新至最新版本。 遺憾的是，仍然有來自非常舊版本的錯誤回報，因此這是一項為了提升每位 **AAPS** 使用者及 DIY 社群安全性的努力。 感謝你的諒解。
 
 ```{admonition} First version of **AAPS**
 :class: note
@@ -70,14 +70,14 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 ### 主要功能
 
-* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behaviour:
-  * **Profile Switch** and **Profile Percentage** is now taken into account for **Dynamic ISF** in respect of dynamic sensitivity strengthness
-  * The average **ISF** of the last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **設定檔 ISF** 值完全不會被使用（僅在歷史資料無法使用時作為備用）
-  * If you use **DynamicISF** and you have **Automation** set for a **Profile %** in relation to **BG**: Turn It Off. 這已經是動態敏感度演算法的一部分
-  * *** AGAIN: Turn off all **Automations** which activates a **Profile %** in relation to **BG** because it will be too aggressive and may over deliver in insulin! *****
-  * Do not use a **Profile %** increase of greater than 100% for a long time. If you determine that your **Profile** has changed, create a new **Profile** with your revised values in order to replicate the **Profile** with %
+* **[動態 ISF](../DailyLifeWithAaps/DynamicISF.md)** 功能不再是獨立的外掛，而是現在作為 [OpenAPS SMB](#Config-Builder-aps) 外掛的一個選項，並伴隨一些行為上的變更：
+  * 在動態敏感度強度方面，**動態 ISF** 現在會考慮 **配置切換** 和 **配置百分比** 的影響。
+  * 過去 24 小時的平均 **ISF** 將被計算，該數值將用於注射嚮導和 **COB** 的計算。 **設定檔 ISF** 值完全不會被使用（僅在歷史資料無法使用時作為備用）
+  * 如果您使用 **動態 ISF** 並將 **自動化** 設定為依據 **血糖** 的 **配置百分比**：請將其關閉。 這已經是動態敏感度演算法的一部分
+  * *** 再次強調：請關閉所有依據 **血糖** 啟用 **的設定檔百分比** 的 **自動化**，因為這將可能導致胰島素過量！ *****
+  * 請勿長時間使用超過 100% 的 **設定檔百分比** 增加值。 如果您發現您的 **設定檔**需要更改，請建立一個新的 **設定檔**，並使用修訂後的數值來取代原有的百分比調整。
 * 為使用 FreeStyle Libre 2 和 Libre 3 的用戶啟用「始終啟用 SMB」與「碳水後啟用 SMB」選項。
-* New **Automation** triggers
+* 新增的 **自動化**觸發條件
 * 無人操作的設定匯出
 
 ### 如何升級
@@ -87,8 +87,8 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
   * [需要稱為"Ladybug"的Android Studio版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高來建立此版本。 如果你已安裝舊版Android Studio，可能需要<span style="color:red">將JVM版本配置為21</span>。 請參閱[Android Studio問題排除 > 非相容的Gradle JVM](#incompatible-gradle-jvm)。
   * 如果你使用配合ruffy設備的“舊”Combo驅動程式，請在更新之前移轉至[原生Combo驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
   * 在升級過程中，你將失去[主畫面上的附加圖表](#AapsScreens-section-g-additional-graphs)：如有需要，請手動記錄當前配置，以便在升級後重新創建。
-  * The [Bluetooth connectivity issues some people encounter on Android 15](../Getting-Started/Phones.md) are **NOT** solved by this release (this is an Android issue, not **AAPS**).
-  * The BYODA button on the homescreen is no longer available due to Android limitations. There is no known workaround.
+  * 針對某些人在 Android 15 上遇到的 [藍牙連線問題](../Getting-Started/Phones.md)，本版本並未解決（這是 Android 的問題，而非 **AAPS** 的問題）。
+  * 由於 Android 的限制，主畫面上的 BYODA 按鈕已不再提供。 目前尚無已知的解決方法。
 * 更新指示：遵循[更新到新版本](../Maintenance/UpdateToNewVersion.md)的指南。
 * 升級後：
   * 在維護標籤中設置新的[“AAPS目錄”設定](#preferences-maintenance-settings)。
@@ -202,9 +202,9 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 - 遷移到 kts 建置系統 @MilosKozak
 - 改進的 CI 集成 @MilosKozak @buessow
 - 測試清理 @ryanhaining @MilosKozak
-- 新增 110,000 行代碼，修改 240,000 行代碼，修改 6,884 個文件
+- 新增 110,000 行程式碼，修改 240,000 程式碼，修改 6,884 份文件
 
-(使用 v3 與 v1 API 進行 Nightscout 和 AAPS 資料交換的重要說明)=
+(Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
 ### 使用 v3 與 v1 API 進行 Nightscout 和 AAPS 資料交換的重要說明
 
 v1 是用於在 NS 網站和 NS 伺服器之間交換資料的舊協議。 他有許多限制
