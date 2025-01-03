@@ -11,14 +11,15 @@
 
 | CGM /  НМГ                                            | Доступные [Источники ГК](../SettingUpAaps/ConfigBuilder.md#bg-source) |
 | ----------------------------------------------------- | --------------------------------------------------------------------- |
-| [Dexcom G7 и ONE+](../CompatibleCgms/DexcomG7.md)     | xDrip+ или приложение DiaKEM (выберите BYODA)                         |
-| [Dexcom G6 и ONE](../CompatibleCgms/DexcomG6.md)      | xDrip+ или BYODA                                                      |
+| [Dexcom G7 и ONE+](../CompatibleCgms/DexcomG7.md)     | xDrip+, DiaKEM app or Juggluco                                        |
+| [Dexcom G6 и ONE](../CompatibleCgms/DexcomG6.md)      | xDrip+ or BYODA (only G6)                                             |
 | [Работа с Dexcom G5](../CompatibleCgms/DexcomG5.md)   | xDrip +                                                               |
-| [Libre 3](../CompatibleCgms/Libre3.md)                | xDrip+ (трансмиттер не требуется)                                     |
-| [Libre 2](../CompatibleCgms/Libre2.md)                | xDrip+ (трансмиттер не требуется)                                     |
-| [Libre 1](../CompatibleCgms/Libre1.md)                | xDrip+, Glimp, Tomato или Diabox. Needs an additional transmitter     |
-| [Eversense](../CompatibleCgms/Eversense.md)           | xDrip+ или модифицированное приложение ESEL/Eversense + MM640g        |
+| [Libre 3](../CompatibleCgms/Libre3.md)                | xDrip+ (no transmitter) or Juggluco                                   |
+| [Libre 2](../CompatibleCgms/Libre2.md)                | xDrip+ (no transmitter) or Juggluco                                   |
+| [Libre 1](../CompatibleCgms/Libre1.md)                | xDrip+, Glimp, Tomato или Diabox. Need a transmitter                  |
+| [Eversense](../CompatibleCgms/Eversense.md)           | xDrip+ or ESEL/Eversense patched App                                  |
 | [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md) | xDrip+ или MM640g + приложение 600SeriesAndroidUploader               |
 | [Poctech](../CompatibleCgms/PocTech.md)               | Poctech                                                               |
 | [Ottai](../CompatibleCgms/OttaiM8.md)                 | Ottai                                                                 |
 | [Syai Tag](../CompatibleCgms/SyaiTagX1.md)            | Syai Tag                                                              |
+| Sibionics CGM                                         | Juggluco                                                              |

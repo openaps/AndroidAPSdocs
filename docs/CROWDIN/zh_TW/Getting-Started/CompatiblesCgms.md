@@ -11,14 +11,15 @@
 
 | CGM                                                  | 可用的[BG 資料來源](../SettingUpAaps/ConfigBuilder.md#bg-source) |
 | ---------------------------------------------------- | --------------------------------------------------------- |
-| [Dexcom G7 和 ONE+](../CompatibleCgms/DexcomG7.md)    | xDrip+ 或 DiaKEM 應用程式（選擇 BYODA）                            |
-| [Dexcom G6 和 ONE](../CompatibleCgms/DexcomG6.md)     | xDrip+ 或 BYODA                                            |
+| [Dexcom G7 和 ONE+](../CompatibleCgms/DexcomG7.md)    | xDrip+, DiaKEM app or Juggluco                            |
+| [Dexcom G6 和 ONE](../CompatibleCgms/DexcomG6.md)     | xDrip+ or BYODA (only G6)                                 |
 | [Dexcom G5](../CompatibleCgms/DexcomG5.md)           | xDrip+                                                    |
-| [Libre 3](../CompatibleCgms/Libre3.md)               | xDrip+（不需要發射器）                                            |
-| [Libre 2](../CompatibleCgms/Libre2.md)               | xDrip+（不需要發射器）                                            |
-| [Libre 1](../CompatibleCgms/Libre1.md)               | xDrip+、Glimp、Tomato 或 Diabox。 需要額外的發射器                    |
-| [Eversense](../CompatibleCgms/Eversense.md)          | xDrip+ 或 ESEL/Eversense 補丁應用程式 + MM640g                   |
+| [Libre 3](../CompatibleCgms/Libre3.md)               | xDrip+ (no transmitter) or Juggluco                       |
+| [Libre 2](../CompatibleCgms/Libre2.md)               | xDrip+ (no transmitter) or Juggluco                       |
+| [Libre 1](../CompatibleCgms/Libre1.md)               | xDrip+、Glimp、Tomato 或 Diabox。 Need a transmitter          |
+| [Eversense](../CompatibleCgms/Eversense.md)          | xDrip+ or ESEL/Eversense patched App                      |
 | [Enlite（MM640G/MM630G）](../CompatibleCgms/MM640g.md) | xDrip+ 或 MM640g + 600系列 Android 上傳程式                      |
 | [PocTech](../CompatibleCgms/PocTech.md)              | PocTech                                                   |
 | [歐泰(Ottai)](../CompatibleCgms/OttaiM8.md)            | 歐泰(Ottai)                                                 |
 | [Syai Tag](../CompatibleCgms/SyaiTagX1.md)           | Syai Tag                                                  |
+| Sibionics CGM                                        | Juggluco                                                  |

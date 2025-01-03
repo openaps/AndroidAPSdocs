@@ -77,6 +77,7 @@ Erscheinungsdatum: 29.12.2024
   * *** AGAIN: Turn off all **Automations** which activates a **Profile %** in relation to **BG** because it will be too aggressive and may over deliver in insulin! *****
   * Do not use a **Profile %** increase of greater than 100% for a long time. If you determine that your **Profile** has changed, create a new **Profile** with your revised values in order to replicate the **Profile** with %
 * Enable “SMB always” and “SMB after carbs” for FreeStyle Libre 2 and Libre 3 users
+  * Note : Although the limitation was removed on **AAPS** side, this functionality is not fully operational yet, since **AAPS** needs to receive proper identification of the CGM used. See the [bug opened on xDrip+ project](https://github.com/NightscoutFoundation/xDrip/issues/3841).
 * New **Automation** triggers
 * Unattended settings exports
 
@@ -91,7 +92,7 @@ Erscheinungsdatum: 29.12.2024
   * The BYODA button on the homescreen is no longer available due to Android limitations. There is no known workaround.
 * Update instructions: follow the [Update to a new version](../Maintenance/UpdateToNewVersion.md) guide.
 * After upgrading:
-  * Set the new [“AAPS directory” setting](#preferences-maintenance-settings), in the Maintenance tab.
+  * Set the new [“AAPS directory” setting](#preferences-maintenance-logdirectory), in the Maintenance tab.
 
 ### Detailed changes
 
