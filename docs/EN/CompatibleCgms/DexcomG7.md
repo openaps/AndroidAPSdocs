@@ -17,7 +17,7 @@ Picture is outdated!!!
 
 ## 1. xDrip+ (direct connection to G7 or ONE+)
 
-- Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Follow the instructions here: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
 - Select  xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 - Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
@@ -54,7 +54,10 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 -   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
 
-## 4. Juggluco (starting with version 9.0+)
+## 4. Juggluco
+
+Version 9.0+ required
+
 - Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
   
 - Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
