@@ -4,18 +4,16 @@ orphan: true
 
 # Accu-Chek Combo
 
-Diese Anweisungen sind zum Einrichten der Accu-Chek Combo Pumpe mit dem neuen Combo-Treiber, der als Teil von AAPS ab Version 3.2 verfügbar ist. Dieser Treiber ist völlig unabhängig vom alten Treiber.
-
 **Die Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Das System wird Dir nicht alle Schwierigkeiten Deiner Diabetestherapie abnehmen, aber wenn Du willens bist, die nötige Zeit zu investieren, dann kann es die Ergebnisse Deiner Therapie verbessern und die Lebensqualität erhöhen. Überstürze nichts. Nimm dir Zeit zum Lernen. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
 
 ## Hard- und Softwareanforderungen
 
 * Eine Roche Accu-Chek Combo (jede Firmware funktioniert).
 * Einen Smartpix oder Realtyme Adapter und die Accu-Chek 360°-Konfigurationssoftware um die Pumpe zu konfigurieren. (Kunden von Roche können die Software beim Kundendienst anfordern.)
-* Ein kompatibles Telefon. Android 9 (Pie) oder neuer ist ein Muss. Bei Verwendung von LineageOS ist die minimale unterstützte Version 16.1. See [release notes](#maintenance-android-version-aaps-version) for details.
+* Ein kompatibles Telefon. Android 9 (Pie) oder neuer ist ein Muss. Bei Verwendung von LineageOS ist die minimale unterstützte Version 16.1. Details findest Du in den [Release Notes](#maintenance-android-version-aaps-version).
 * AndroidAPS muss auf Deinem Smartphone installiert sein.
 
-Einige Telefone funktionieren vielleicht besser als andere je nach Qualität der Bluetooth-Unterstützung und ob sie eine zusätzliche, sehr aggressive Energiesparlogik haben oder nicht. A list of phones can be found in the [AAPS Phones](#Phones-list-of-tested-phones) document. Die Liste ist nicht abschließend und spiegelt nur die persönliche Erfahrung der Benutzer wieder. Bitte trage Deine Erfahrung in die Liste ein und hilf damit anderen. Die ganzen DIY-Projekte funktionieren nur, wenn jeder etwas zurückgibt.
+Einige Telefone funktionieren vielleicht besser als andere je nach Qualität der Bluetooth-Unterstützung und ob sie eine zusätzliche, sehr aggressive Energiesparlogik haben oder nicht. Eine Liste mit Smartphones findest Du im Abschnitt [Smartphones](#Phones-list-of-tested-phones). Die Liste ist nicht abschließend und spiegelt nur die persönliche Erfahrung der Benutzer wieder. Bitte trage Deine Erfahrung in die Liste ein und hilf damit anderen. Die ganzen DIY-Projekte funktionieren nur, wenn jeder etwas zurückgibt.
 
 (combov2-before-you-begin)=
 ## Bevor du startest
@@ -24,7 +22,7 @@ Einige Telefone funktionieren vielleicht besser als andere je nach Qualität der
 
 Beachte folgende Einschränkungen:
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
+* Verzögerter Bolus und Multiwave-Bolus werden nicht unterstützt. (Als Alternative schau Dir [Verzögerte Kohlenhydrate](../DailyLifeWithAaps/ExtendedCarbs.md) an.)
 * Nur ein basales Profil (das erste Profil) wird unterstützt.
 * Der Loop ist deaktiviert, wenn das aktuell aktive Profil der Pumpe nicht Profil Nr. 1 ist. Dies geht bis das Profilnr. 1 aktiviert wird; wenn das erledigt ist, wird beim nächsten Verbindungsaufbau von AAPS (entweder allein nach einer Weile oder weil der Benutzer den Refresh Button in der Combov2 Benutzeroberfläche drückt), erkennen, dass Profil Nr. 1 das aktuell ist und den Loop wieder aktivieren.
 * Wenn der Loop eine laufende Basalrate abbrechen will, wird stattdessen die Basalrate für 15 min. auf 90% oder 110% gesetzt. Das liegt daran, dass das Abbrechen eines TBR eine Warnung auf die Pumpe verursacht, die viele Vibrationen verursacht, und diese Vibrationen können nicht deaktiviert werden.
@@ -98,7 +96,7 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
 ## Aktivierung des Treibers und Kopplung mit der Combo
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **Wichtig**: Es ist auch der alte Treiber, genannt "Accu-Chek Combo (Ruffy)", in dieser Liste. Wähle diesen _nicht_ aus.
+* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Wichtig**: Es ist auch der alte Treiber, genannt "Accu-Chek Combo (Ruffy)", in dieser Liste. Wähle diesen _nicht_ aus.
 
   ![Screenshot der Konfiguration Combo](../images/combo/combov2-config-builder.png)
 
@@ -112,9 +110,9 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
   ![Screenshot Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png)
 
-  ![Screenshot Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
+  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
 
-  ![Screenshot Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
 
 * Wenn der 10-stellige PIN, der auf der Combo angezeigt wird, falsch eingegeben wurde, erscheint folgende Fehlermeldung: ![Screenshot Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
@@ -167,7 +165,7 @@ Die Combo kann über Bluetooth im _Remote-Terminal_-Modus oder im _Befehls_-Modu
 
 (Du kannst das nicht beeinflussen. Der Treiber entscheidet selbständig über den zu verwendenden Modus. Das ist eine Erklärung, warum manchmal 'Combo-Frames' in diesem Feld zu sehen sein können.)
 
-Ganz unten befindet sich der Button AKTUALISIEREN. Damit wird sofort der aktuelle Pumpenstatus abgefragt. It also is used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#alerts-warnings-and-errors-and-how-they-are-handled)).
+Ganz unten befindet sich der Button AKTUALISIEREN. Damit wird sofort der aktuelle Pumpenstatus abgefragt. Es wird auch verwendet, um AAPS wissen zu lassen, dass ein zuvor entdeckter Fehler nun behoben wurde und dass AAPS erneut überprüfen kann, ob alles in Ordnung ist (mehr dazu unter [der Abschnitt über Warnungen und Fehler](#alerts-warnings-and-errors-and-how-they-are-handled)).
 
 ## Einstellungen
 
@@ -204,7 +202,7 @@ Bestimmte Warnungen werden automatisch vom Treiber verworfen. Diese sind:
 - W2 "Batterie fast leer": der Treiber macht daraus eine "low battery"-Warnung, die auf dem AAPS-Startbildschirm angezeigt wird
 - W3, W6, W7, W8: Sind alle rein informativ, daher ist es OK, dass der Treiber diese Meldungen automatisch verwirft/bestätigt
 
-Andere Warnungen werden _nicht automatisch_ verworfen/bestätigt. Fehlermeldungen werden ebenfalls _niemals automatisch_ verworfen/bestätigt. Beide werden gleich behandelt: Sie führen dazu, dass der Treiber einen Warndialog auf der AAPS-Oberfläche anzeigt und der laufende Befehl abgebrochen wird. The driver then switches to the "error" state (see [the Accu-Chek Combo tab contents description above](#accu-chek-combo-tab-contents)). In diesem Zustand können keine weiteren Befehle ausgeführt werden. Du musst den Fehler auf der Pumpe lösen (z.B. kann ein Verstopfungs-Fehler einen Kanülenwechsel erfordern). Sobald der Fehler korrigiert wurde, kann der normale Betrieb wieder aufgenommen werden. Tippe dazu auf den Button 'Aktualisieren' auf dem Tab 'Accu-Chek Combo'. Der Treiber verbindet sich dann mit der Combo und aktualisiert den Status und prüft, ob noch andere Fehler bestehen. Der Treiber aktualisiert den Pumpenstatus in regelmäßigen Abständen automatisch. Ein manuelles Aktualisieren ist also nicht unbedingt erforderlich.
+Andere Warnungen werden _nicht automatisch_ verworfen/bestätigt. Fehlermeldungen werden ebenfalls _niemals automatisch_ verworfen/bestätigt. Beide werden gleich behandelt: Sie führen dazu, dass der Treiber einen Warndialog auf der AAPS-Oberfläche anzeigt und der laufende Befehl abgebrochen wird. Der Treiber schaltet dann in einen "Fehler"-Status (vgl. dazu auch den Abschnitt [Accu-Chek Combo-Tab Inhalt](#accu-chek-combo-tab-contents)) oben. In diesem Zustand können keine weiteren Befehle ausgeführt werden. Du musst den Fehler auf der Pumpe lösen (z.B. kann ein Verstopfungs-Fehler einen Kanülenwechsel erfordern). Sobald der Fehler korrigiert wurde, kann der normale Betrieb wieder aufgenommen werden. Tippe dazu auf den Button 'Aktualisieren' auf dem Tab 'Accu-Chek Combo'. Der Treiber verbindet sich dann mit der Combo und aktualisiert den Status und prüft, ob noch andere Fehler bestehen. Der Treiber aktualisiert den Pumpenstatus in regelmäßigen Abständen automatisch. Ein manuelles Aktualisieren ist also nicht unbedingt erforderlich.
 
 Einen Bolus abzugeben ist ein Sonderfall. Dies wird über den Befehlsmodus, der während der Bolusabgabe keine Alarme bzw. Fehlermeldungen weitergibt, umgesetzt. Deshalb kann der Treiber Warnungen während der Bolusabgabe _nicht automatisch_ verwerfen bzw. bestätigen. Leider bedeutet das, dass die Combo in dieser Situation bis zum Ende des Bolus piepen wird. Der Alarm, der am häufigsten während einer Bolusabgabe auftritt, ist W1 'Ampulle fast leer'. Bestätige während eines laufenden Bolus **auf keinen Fall** Warnungen händisch direkt auf der Combo. Du riskierst sonst, den Bolus zu unterbrechen. Der Treiber wird sich um die Warnungen kümmern, sobald der Bolus durchgelaufen ist.
 
@@ -217,8 +215,8 @@ Alarme, die auftreten, während der Treiber nicht mit der Combo verbunden ist, k
 * Beachten Sie, dass dies kein 'Produkt' ist. Besonders am Anfang musst Du das System überwachen und verstehen wo seine Grenzen sind und es versagen kann. Es wird dringend empfohlen, dieses System NICHT zu verwenden, wenn die Person, die es benutzt, nicht in der Lage ist, es vollständig zu verstehen.
 * Aufgrund der Art wie die Fernbedienung der Combo funktioniert, sind einige Aktionen im Vergleich zu anderen Pumpen (insbesondere das Setzen eines Basalprofils) langsam. Leider ist das eine Beschränkung der Combo, die nicht überwunden werden kann.
 * Gib keine TBR an der Pumpe ein und lösche dort auch keine. Der Loop übernimmt die Verwaltung der TBR. Sollte manuell eingegriffen werden, kann der Loop z.B. die Startzeit einer TBR nicht ermitteln und wird somit nicht zuverlässig funktionieren können.
-* Drücke keine Tasten an der Pumpe während AAPS mit der Pumpe kommuniziert (erkennbar am Bluetooth Logo, das auf dem Display der Pumpe angezeigt wird). Durch einen Knopfdruck wird die Bluetooth-Verbindung unterbrochen. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](#before-you-begin)).
-* Drücke keine Tasten während eines laufenden Bolus. Versuche insbesondere nicht, Alarme durch Drücken von Tasten zu verwerfen/bestätigen. See [the section about alerts](#alerts-warnings-and-errors-and-how-they-are-handled) for a more detailed explanation why.
+* Drücke keine Tasten an der Pumpe während AAPS mit der Pumpe kommuniziert (erkennbar am Bluetooth Logo, das auf dem Display der Pumpe angezeigt wird). Durch einen Knopfdruck wird die Bluetooth-Verbindung unterbrochen. Tue das nur, wenn es Probleme beim Verbindungsaufbau gibt (siehe Abschnitt ["Bevor Du startest"](#before-you-begin) oben).
+* Drücke keine Tasten während eines laufenden Bolus. Versuche insbesondere nicht, Alarme durch Drücken von Tasten zu verwerfen/bestätigen. Eine detailliertere Beschreibung zu den Hintergründen findest Du im Abschnitt [Alarme (Warnungen und Fehler)](#alerts-warnings-and-errors-and-how-they-are-handled).
 
 ## Checkliste für den Fall, dass keine Verbindung mit der Combo hergestellt werden kann
 

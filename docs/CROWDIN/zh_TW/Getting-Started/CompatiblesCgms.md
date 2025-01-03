@@ -1,4 +1,4 @@
-# CGMs/FGMs 配置
+# 相容的 CGM
 
 本節提供所有與**AAPS**相容的**CGMs/FGMs**的簡要概述。
 
@@ -16,7 +16,9 @@
 | [Dexcom G5](../CompatibleCgms/DexcomG5.md)           | xDrip+                                                    |
 | [Libre 3](../CompatibleCgms/Libre3.md)               | xDrip+（不需要發射器）                                            |
 | [Libre 2](../CompatibleCgms/Libre2.md)               | xDrip+（不需要發射器）                                            |
-| [Libre 1](../CompatibleCgms/Libre1.md)               | xDrip+、Glimp、Tomato 或 Diabox。 需要像 Bluecon 或 MiaoMiao 的發射器 |
+| [Libre 1](../CompatibleCgms/Libre1.md)               | xDrip+、Glimp、Tomato 或 Diabox。 需要額外的發射器                    |
 | [Eversense](../CompatibleCgms/Eversense.md)          | xDrip+ 或 ESEL/Eversense 補丁應用程式 + MM640g                   |
 | [Enlite（MM640G/MM630G）](../CompatibleCgms/MM640g.md) | xDrip+ 或 MM640g + 600系列 Android 上傳程式                      |
 | [PocTech](../CompatibleCgms/PocTech.md)              | PocTech                                                   |
+| [歐泰(Ottai)](../CompatibleCgms/OttaiM8.md)            | 歐泰(Ottai)                                                 |
+| [Syai Tag](../CompatibleCgms/SyaiTagX1.md)           | Syai Tag                                                  |

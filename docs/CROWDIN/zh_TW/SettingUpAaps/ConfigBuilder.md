@@ -4,7 +4,7 @@
 
 ![開啟組態建置工具](../images/ConfBuild_Open_AAPS30.png)
 
-強調**組態建置工具**是用來開啟和關閉模組功能的選項卡。 在下面的圖片中，左側的方框 (A) 允許你選擇你想要啟動的模組，右側的方框 (C) 允許你將其作為**AAPS**中的一個選項卡 (E) 查看。 如果右側的方框未被啟動，你可以使用螢幕左上方的漢堡選單 (D) 來進入該功能。 請參閱下面的[選項卡或漢堡選單](#tab-or-hamburger-menu)。
+強調**組態建置工具**是用來開啟和關閉模組功能的選項卡。 在下方圖片中，左側的方框 (A) 讓你選擇想要啟用的模組。 預設情況下，開啟組態建置工具時，區塊會收起來，只顯示活動中的外掛。 點擊箭頭 (G) 來顯示所有可用選項。 右側的方框 (C) 讓你將活動中的模組以選項卡 (E) 的方式顯示在 **AAPS** 中。 如果右側的方框未被啟動，你可以使用螢幕左上方的漢堡選單 (D) 來進入該功能。 請參閱下面的[選項卡或漢堡選單](#tab-or-hamburger-menu)。
 
 當模組內有額外設定可用時，你可以點擊齒輪圖示 (B)，這將帶你進入偏好設定中的具體設定。
 
@@ -98,6 +98,8 @@
 * [Poctech](../CompatibleCgms/PocTech.md)
 * [Tomato 應用程式](#libre1-using-tomato)，用於 MiaoMiao 裝置
 * [Glunovo 應用程式](https://infinovo.com/) 用於 Glunovo CGM 系統
+* [歐泰(Ottai)](../CompatibleCgms/OttaiM8.md)
+* [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
 * 隨機血糖：生成隨機血糖資料（僅限演示模式）
 
 ## 平滑
@@ -112,22 +114,21 @@
 
 選擇你正在使用的幫浦。 請參閱[相容的幫浦](../Getting-Started/CompatiblePumps.md)頁面以獲取更多設置資訊。
 
-![組態建置工具幫浦選擇](../images/ConfBuild_Pump_AAPS32.png)
+![組態建置工具幫浦選擇](../images/ConfBuild_Pump_AAPS33.png) ![組態建置工具幫浦選擇](../images/ConfBuild_Pump_AAPS33-2.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R Korean（適用於國內 DanaR 幫浦）
 * Dana Rv2（升級了非官方韌體的 DanaR 幫浦）
 * [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
-* Accu Chek Combo 
-  * [使用 Ruffy 的驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump.md)（需要安裝 ruffy）
-  * [無額外需求的驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)，在[AAPS v.3.2](#version3200)中新增
+* [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
 * Omnipod 用於[Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
 * Dash 用於[Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 * [Medtronic](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
+* [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * 虛擬幫浦：開放循環 - 僅限**AAPS**建議 
   * 當你開始使用**AAPS**時，在首次[完成目標](../SettingUpAaps/CompletingTheObjectives.md)的過程中
   * 針對尚未擁有驅動程式的幫浦
@@ -226,7 +227,7 @@
 
 #### 進階設定
 
-**交付此部分注射嚮導結果：**使用 SMB 時，許多人不會進行 100% 的餐前注射，而只注射一部分（例如 75%），其餘部分由 SMB 和 UAM（無人值守餐點偵測）處理。 在這個設定中，您可以為注射嚮導計算的百分比選擇一個預設值。 如果此設置為 75%，而你需要注射 10 單位，注射嚮導將建議餐前注射 7.5 單位。
+**交付此部分注射嚮導結果：**使用 SMB 時，許多人不會進行 100% 的餐前注射，而只注射一部分（例如 75%），其餘部分由 SMB 和 UAM（無人操作餐點偵測）處理。 在這個設定中，您可以為注射嚮導計算的百分比選擇一個預設值。 如果此設置為 75%，而你需要注射 10 單位，注射嚮導將建議餐前注射 7.5 單位。
 
 **在嚮導中啟用超級注射功能**（與*超微量注射*不同！）：請謹慎使用，在瞭解其真正作用之前不要啟用。 基本上，接下來兩個小時的基礎率將加到注射中，並啟用兩小時的0基礎率。 **AAPS 的循環功能將停用——請小心使用！** 如果您使用 SMB，根據您在[“限制 SMB 的最大基礎分鐘數”](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to)的設定，AAPS 循環功能將被停用；如果您不使用 SMB，則循環功能將在兩小時內被停用。詳細的超注射資訊可以在[這裡](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)找到。
 

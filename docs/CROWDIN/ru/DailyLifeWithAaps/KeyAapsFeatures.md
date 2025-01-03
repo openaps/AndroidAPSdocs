@@ -1,4 +1,4 @@
-# Функции OpenAPS
+# Key AAPS features
 
 (Open-APS-features-autosens)=
 
@@ -103,75 +103,25 @@ Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA
 
 См. также [документацию OpenAPS по SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
-### Enable Autosens
+### Enable dynamic sensitivity
 
-[Autosens](#autosens) looks at blood glucose deviations (positive/negative/neutral). На основе отклонений он пытается выяснить, насколько вы чувствительны/резистентны к инсулину и корректирует базальную скорость и коэффициент чувствительности к инсулину ISF.
+This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page.
 
-### Включить супер микро болюс SMB
+#### Высокая врем. цель temptarget повышает чувствительность
 
-Включите, чтобы использовать функционал SMB. If disabled, no **SMBs** will be given.
+Если эта опция включена, то чувствительность инсулина будет увеличена при временной цели более 100 мг/дл или 5.6 ммол/л. Это означает, что чувствительность к инсулину ISF возрастет, в то время как углеводный коэффициент IC и базал уменьшатся. This will effectively make **AAPS** less aggressive when you set a high temp target.
 
-(Open-APS-features-enable-smb-with-high-temp-targets)=
+#### Низкая временная цель temptarget снижает чувствительность
 
-### Включить супер микро болюс SMB с высокими значениями временных целей
+Если эта опция включена, то параметр чувствительность инсулина будет снижен при временной цели ниже 100 мг/дл или 5.6 ммол/л. Это означает, что чувствительность к инсулину ISF снизится, в то время как IC и базал увеличатся. This will effectively make **AAPS** more aggressive when you set a low temp target.
 
-If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l, regardless of **Profile** target). Эта опция нужна для отключения микроболюсов SMB, когда параметр отключен. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
+### Enable Autosens feature
 
-If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled.
+This is the [Autosens](#autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
-(Open-APS-функции-включать-микроболюсы-всегда)=
+Autosens looks at blood glucose deviations (positive/negative/neutral). На основе отклонений он пытается выяснить, насколько вы чувствительны/резистентны к инсулину и корректирует базальную скорость и коэффициент чувствительности к инсулину ISF.
 
-### Всегда включать супер микро болюс SMB
-
-If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). Если этот параметр включен, остальные параметры включения не будут иметь эффекта. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
-
-По соображениям безопасности, эта опция возможна только для источников ГК с хорошей системой фильтрации зашумленных данных.
-
-- Currently, it is only available with a Dexcom G5 or G6, if using the [Build your own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “[native mode](#smoothing-xdrip-dexcom-g6)” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value 5 minutes later.
-- For other CGM/FGM like Freestyle Libre, **SMB always** is deactivated until there is a better noise smoothing plugin. 
-- You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
-
-### Включать супер микро болюсы при активных углеводах COB
-
-Если этот параметр включен, SMB включаются при активных углеводах COB больше 0.
-
-### Включать супер микро болюс SMB с временными целями
-
-Если включена эта настройка, то SMB включаются при наличии любой временной цели (ожидаемый прием пищи, нагрузка, гипо, пользовательский). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100mg/dL or 5.6mmol/l) but disabled when a high temp target is set.
-
-### Активировать супер микро болюс SMB после углеводов
-
-Если это включено, то микроболюсы SMB работают в течение 6 часов после внесения углеводов, даже если значение COB достигло 0.
-
-По соображениям безопасности, эта опция возможна только для источников ГК с хорошей системой фильтрации зашумленных данных.
-
-- Currently, it is only available with a Dexcom G5 or G6, if using the [Build your own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “[native mode](#smoothing-xdrip-dexcom-g6)” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value 5 minutes later.
-- For other CGM/FGM like Freestyle Libre, **SMB always** is deactivated until there is a better noise smoothing plugin.
-- You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
-
-### How frequently SMBs will be given in min
-
-This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
-
-Default value: 3 min.
-
-(Open-APS-функции-макс-минут-базала-для-ограничения)=
-
-### Верхний лимит минут базала при SMB
-
-Это важный элемент в настройках безопасности. Это значение определяет, сколько микроболюсов SMB может быть подано на основе количества базального инсулина за данное время, когда оно обеспечено активными углеводами COB.
-
-Увеличение этого значения позволяет микроболюсам SMB вести себя более агрессивно. Начать следует со значения по умолчанию в 30 минут. После некоторого опыта, увеличивайте это значение приращениями по 15 минут и наблюдайте за эффектом при многократном приеме пищи.
-
-Рекомендуется не устанавливать это значение выше 90 минут, так как существует вероятность достижения точки, после которой алгоритм не сможет контролировать снижающуюся гликемию при нулевом временном базале 0 ед/ч ('zero-temp'). Следует также установить оповещения о низкой ГК, особенно если вы только тестируете новые настройки.
-
-Значение по умолчанию: 30 мин.
-
-### Включить непредвиденный прием пищи UAM
-
-При включении этой опции алгоритм SMB может распознать непредвиденный прием пищи. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. И наоборот: если гликемия падает быстро, то настройка поможет остановить SMB раньше времени.
-
-**Поэтому при использовании микроболюсов SMB всегда следует активировать непредвиденный прием пищи UAM.**
+When enabled, new settings become available.
 
 ### Sensitivity raises target
 
@@ -181,17 +131,88 @@ If the target is modified due to sensitivity detection, it will be displayed wit
 
 ![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
 
+This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
+
 ### Resistance lowers target
 
 If this option is enabled, the sensitivity detection (autosens) can lower the target when resistance is detected (above 100%). In this case your target will be lowered by the percentage of the detected resistance.
 
-### Высокая врем. цель temptarget повышает чувствительность
+This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
 
-Если эта опция включена, то чувствительность инсулина будет увеличена при временной цели более 100 мг/дл или 5.6 ммол/л. Это означает, что чувствительность к инсулину ISF возрастет, в то время как углеводный коэффициент IC и базал уменьшатся. This will effectively make **AAPS** less aggressive when you set a high temp target.
+### Включить супер микро болюс SMB
 
-### Низкая временная цель temptarget снижает чувствительность
+Включите, чтобы использовать функционал SMB. If disabled, no **SMBs** will be given.
 
-Если эта опция включена, то параметр чувствительность инсулина будет снижен при временной цели ниже 100 мг/дл или 5.6 ммол/л. Это означает, что чувствительность к инсулину ISF снизится, в то время как IC и базал увеличатся. This will effectively make **AAPS** more aggressive when you set a low temp target.
+When enabled, new settings become available.
+
+(Open-APS-features-enable-smb-with-high-temp-targets)=
+
+#### Включить супер микро болюс SMB с высокими значениями временных целей
+
+If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l, regardless of **Profile** target). Эта опция нужна для отключения микроболюсов SMB, когда параметр отключен. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
+
+If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled.
+
+(Open-APS-функции-включать-микроболюсы-всегда)=
+
+#### Всегда включать супер микро болюс SMB
+
+If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). Если этот параметр включен, остальные параметры включения не будут иметь эффекта. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
+
+This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+
+#### Включать супер микро болюсы при активных углеводах COB
+
+Если этот параметр включен, SMB включаются при активных углеводах COB больше 0.
+
+This setting is not visible if "Enable SMB always" is switched on.
+
+#### Включать супер микро болюс SMB с временными целями
+
+Если включена эта настройка, то SMB включаются при наличии любой временной цели (ожидаемый прием пищи, нагрузка, гипо, пользовательский). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100mg/dL or 5.6mmol/l) but disabled when a high temp target is set.
+
+This setting is not visible if "Enable SMB always" is switched on.
+
+#### Активировать супер микро болюс SMB после углеводов
+
+Если это включено, то микроболюсы SMB работают в течение 6 часов после внесения углеводов, даже если значение COB достигло 0.
+
+For safety reasons, this setting is only available if **AAPS** detects that you are using a reliable BG source. It is not visible if "Enable SMB always" is switched on.
+
+This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
+This setting is not visible if "Enable SMB always" is switched on.
+
+#### How frequently SMBs will be given in min
+
+This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
+
+Default value: 3 min.
+
+(Open-APS-функции-макс-минут-базала-для-ограничения)=
+
+#### Верхний лимит минут базала при SMB
+
+Это важный элемент в настройках безопасности. Это значение определяет, сколько микроболюсов SMB может быть подано на основе количества базального инсулина за данное время, когда оно обеспечено активными углеводами COB.
+
+Увеличение этого значения позволяет микроболюсам SMB вести себя более агрессивно. Начать следует со значения по умолчанию в 30 минут. После некоторого опыта, увеличивайте это значение приращениями по 15 минут и наблюдайте за эффектом при многократном приеме пищи.
+
+Рекомендуется не устанавливать это значение выше 90 минут, так как существует вероятность достижения точки, после которой алгоритм не сможет контролировать снижающуюся гликемию при нулевом временном базале 0 ед/ч ('zero-temp'). Следует также установить оповещения о низкой ГК, особенно если вы только тестируете новые настройки.
+
+Значение по умолчанию: 30 мин.
+
+#### Max minutes of basal to limit SMB to for UAM
+
+This setting allows to adjust the strength of SMB during UAM, when there are no more carbs.
+
+Default value : the same as **Max minutes of basal to limit SMB to**.
+
+This setting is only visible if "Enable SMB" and "Enable UAM " are switched on.
+
+### Включить непредвиденный прием пищи UAM
+
+При включении этой опции алгоритм SMB может распознать непредвиденный прием пищи. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. И наоборот: если гликемия падает быстро, то настройка поможет остановить SMB раньше времени.
+
+**Поэтому при использовании микроболюсов SMB всегда следует активировать непредвиденный прием пищи UAM.**
 
 (key-aaps-features-minimal-carbs-required-for-suggestion)=
 

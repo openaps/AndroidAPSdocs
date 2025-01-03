@@ -1,9 +1,13 @@
 # 文件更新與變更
 
+## 2024年12月
+
+- 文檔 [3.3版](#version3300) @emilise
+
 ## 2024年11月
 
 - 更新 [你的 AAPS 配置](../SettingUpAaps/YourAapsProfile.md) @emilise
-- 重新整理 [Wear OS 智慧手錶](../WearOS/BuildingAapsWearOS.md) 內容 @psonnerat
+- 重新整理 [Wear OS 智慧型手錶](../WearOS/BuildingAapsWearOS.md) 內容 @psonnerat
 
 ## 2024年10月
 
@@ -45,7 +49,7 @@ AAPS 3.1 文檔可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 - 校正 [Libre 2 傳感器](#Libre2-best-practices-for-calibrating-a-libre-2-sensor) 的最佳方法
 - [ISF](../UsefulLinks/FAQ.md) 影響的重新表述
-- 更新[Android Studio故障排除](../GettingHelp/TroubleshootingAndroidStudio)
+- 更新[Android Studio問題排除](../GettingHelp/TroubleshootingAndroidStudio)
 - 移除已修補的[Dexcom](../CompatibleCgms/DexcomG6.md)應用程式，因為它已過時
 
 ## 2021年10月
@@ -71,7 +75,7 @@ AAPS 3.1 文檔可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2021年2月
 
-- 新的導覽列和[語系切換](../ChangeLanguage/ChangeLanguage.md)
+- 新的導覽列和[語系切換](../NavigateDoc/ChangeLanguage.md)
 
 ## 2021年1月
 

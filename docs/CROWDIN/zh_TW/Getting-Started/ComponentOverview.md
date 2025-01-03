@@ -72,7 +72,7 @@ Combo、Insight 及舊版 Medtronic 是穩定的幫浦，且可以迴路使用�
 
 ### 智慧型手錶
 
-您可以選擇任何搭載 Android WearOS 1.x 至 4.x 的智慧手錶。 **請注意，WearOS 5.x 不相容！**
+您可以選擇任何搭載 Android WearOS 1.x 至 4.x 的智慧型手錶。 **請注意，WearOS 5.x 不相容！**
 
 用戶正在建立一個[已測試的手機和手錶清單](#Phones-list-of-tested-phones)。 有不同的錶盤可供 **AAPS** 使用，您可以在 [這裡](../WearOS/WearOsSmartwatch.md)找到。
 

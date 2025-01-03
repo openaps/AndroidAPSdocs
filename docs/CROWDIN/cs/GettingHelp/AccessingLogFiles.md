@@ -7,6 +7,7 @@
     
     * (2.8.2) Adresář bude na místě jako je toto ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
     * (3.0.0) Adresář bude na místě jako je toto ***Internal storage(1) / AAPS / logs***
+    * (3.3.0) The folder will be at the location you chose in the [Maintenance tab settings](#preferences-maintenance-settings)
     * Pojmenování kořenového adresáře (1) úložiště se může lišit v závislosti na telefonu.
 
 ![logy](../images/aapslog.png)

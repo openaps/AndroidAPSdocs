@@ -4,8 +4,6 @@ orphan: true
 
 # Accu Chek Combo 幫浦
 
-這些說明是關於使用 AndroidAPS 3.2 版本中新增的 combov2 驅動程式設置 Accu-Chek Combo 幫浦。 該驅動程式與舊版完全分開。
-
 **這個軟體是 DIY 解決方案的一部分，並不是一個產品，因此需要你自己閱讀、學習並暸解系統以及如何使用他。 他不是一個能為你完全管理糖尿病的工具，但如果你願意投入時間，他可以幫助你改善糖尿病並提高生活品質。 不要急著使用，先給自己學習的時間。 你需要對自己使用的結果負完全責任。**
 
 ## 硬體和軟體需求
@@ -98,7 +96,7 @@ orphan: true
 
 ## 註冊驅動並將其與 Combo 配對
 
-* 在[組態建置工具](../SettingUpAaps/ConfigBuilder.md)中選擇 "Accu-Chek Combo" 驅動程序。 **重要提示**：名單中也有舊驅動，稱為 "Accu-Chek Combo (Ruffy)"。 請 _不要_ 選擇那個。
+* 在[組態建置工具 > 幫浦](../SettingUpAaps/ConfigBuilder.md)中選擇 "Accu-Chek Combo" 驅動程式。 **重要提示**：名單中也有舊驅動，稱為 "Accu-Chek Combo (Ruffy)"。 請 _不要_ 選擇那個。
 
   ![組態建置工具 Combo 截圖](../images/combo/combov2-config-builder.png)
 

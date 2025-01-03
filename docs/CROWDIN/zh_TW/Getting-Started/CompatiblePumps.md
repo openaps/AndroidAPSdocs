@@ -1,11 +1,8 @@
-# 幫浦選擇
-
-## 相容幫浦
+# 相容幫浦
 
 AAPS 支援多種胰島素幫浦。  以下列表顯示目前支援的設備，並指示**AAPS**是使用你的手機的本地藍牙功能與幫浦通訊，還是需要括號中的Rileylink相容設備。
 
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)（藍牙；舊驅動程式使用附加的 Ruffy 應用程序 - 參見 [Accu-Chek Combo 基本用法提示](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)）
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (藍牙; 新驅動程式，從[AndroidAPS v.3.2](#version3200) 開始可用 - 另請參閱[Accu-Chek Combo 基本使用提示](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)（藍牙；詳見 [Accu-Chek Combo 基本使用提示](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)）
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (藍牙)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (藍牙)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (藍牙)
@@ -16,6 +13,7 @@ AAPS 支援多種胰島素幫浦。  以下列表顯示目前支援的設備，�
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)  (藍牙)
 - [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)  (藍牙)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)  (藍牙)
+- [Equil 5.3](../CompatiblePumps/Equil5.3.md)（藍牙）
 - 某些舊款[Medtronic](../CompatiblePumps/MedtronicPump.md) (需要額外通訊裝置)
 
 ## 我的幫浦不在列表中

@@ -7,6 +7,7 @@
     
     * (2.8.2) 資料夾位置類似於 ***內部儲存(1) / Android / data / info.nightscout.androidaps / files***
     * (3.0.0) 資料夾位置類似於 ***內部儲存(1) / AAPS / logs***
+    * (3.3.0) 資料夾將位於你在[維護標籤設定](#preferences-maintenance-settings)中選擇的位置。
     * 根目錄資料夾的名稱 (1) 可能會根據手機稍有不同。
 
 ![日誌](../images/aapslog.png)

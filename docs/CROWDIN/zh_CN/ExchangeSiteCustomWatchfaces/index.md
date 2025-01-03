@@ -1,10 +1,10 @@
-# Exchange site for custom watchfaces
+# 自定义表盘交换网站
 
-Here you can download Zip-Files with custom watchfaces users have prepared and want to share with you.
+在这里，您可以下载用户制作并希望与您分享的自定义表盘的Zip文件。
 
-The Zip-Files can be uploaded in the folder "**[_static/ExchangeSiteCustomWatchfaces](https://github.com/openaps/AndroidAPSdocs/tree/master/docs/_static/ExchangeSiteCustomWatchfaces)**" via a Pull Request into GitHub as usual.
+这些Zip文件可以通过拉取请求（Pull Request）像往常一样上传到GitHub上的"**[_static/ExchangeSiteCustomWatchfaces](https://github.com/openaps/AndroidAPSdocs/tree/master/docs/_static/ExchangeSiteCustomWatchfaces)**”文件夹中。
 
-During merge of the pull request the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file, and add it to the list below.
+在合并拉取请求时，文档团队将提取CustomWatchface.png文件，并在其文件名前加上Zip文件的文件名，然后将其添加到下面的列表中。
 
 
 
@@ -18,5 +18,5 @@ During merge of the pull request the documentation team will extract the CustomW
 |    [![Robby watchface](../images/ExchangeSiteCustomWatchfaces/Robby_watchface-CustomWatchface.png) <br>**Robby watchface**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/Robby_watchface.zip)    | [![SimpleDigital](../images/ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3-CustomWatchface.png) <br>**SimpleDigital**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3.zip) |            [![SteamPunk](../images/ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png) <br>**AAPS (SteamPunk)**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/SteamPunk.zip)            |
 |               [![SteamPunk](../images/ExchangeSiteCustomWatchfaces/Blue_Ring-CustomWatchface.jpg) <br/>**Blue Ring**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/Blue_Ring.zip)                |                                                                                                                                                                                                                                                                 |                                                                                                                                                                                                                                                                    |
 
-*Requires Custom WatchFace V2 or above installed within Wear Watch (AAPS V3.3.0 or above)
+*需在穿戴手表上安装自定义表盘V2或更高版本（AAPS V3.3.0或更高版本）。
 

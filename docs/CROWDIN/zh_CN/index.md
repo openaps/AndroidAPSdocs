@@ -2,6 +2,13 @@
 
 ![image](./images/basic-outline-of-AAPS.png)
 
+```{admonition} Version 3.3
+:class: note
+
+29/12/2024 : 3.3版本发布. 查看[发行说明](#version3300)以了解新功能并获取更新说明。
+
+```
+
 Android APS (**AAPS**) 是一个开放源码的安卓应用程序，适用于糖尿病依赖型（I型）糖尿病患者。 是一款可以在安卓智能手机上运行的人工胰腺控制软件。 其主要功能是通过运用OpenAPS算法来模拟正常的胰腺功能：通过自动胰岛素输注（Automated Insulin Dosing，AID）将血糖水平保持在正常限度内。 使用**AAPS**要用到**3种**设备：**(1)**一部安卓手机，**(2)**动态血糖仪（CGM），**(3)**经过FDA/CE认证的胰岛素泵。 另外，如果你希望远程控制AAPS、远程存储查看相关数据，你还需要**(4)**相应的云服务器，以及**(5)**一块智能手表。
 
 本文档解释了如何设置和使用 **AAPS**。 您可以通过左侧的菜单浏览 **AAPS** 文档(以及方便的"**搜索文档**"功能)， 或者使用此页面底部的 [索引](#index-aaps-documentation-index)。
@@ -58,9 +65,10 @@ SGLT-2 抑制剂（格列吡嗪）能降糖，如果服用这种药的话就不�
 ## AAPS文档索引
 
 ```{toctree}
-:caption: 1）更换语言
+:caption: 1) 切换语言
 
-更换语言 <./ChangeLanguage/ChangeLanguage.md>
+切换语言 <./NavigateDoc/ChangeLanguage.md>
+切换版本 <./NavigateDoc/ChangeVersion.md>
 ```
 ```{toctree}
 :caption: 2) 入门
@@ -125,7 +133,7 @@ Android Auto <./RemoteFeatures/AndroidAuto.md>
 在您的Wear OS手表上安装AAPS <./WearOS/WearOsSmartwatch.md>
 远程控制 <./RemoteFeatures/RemoteControlWearOS.md>
 自定义表盘参数 <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-切换自定义表盘 <./ExchangeSiteCustomWatchfaces/index.md>
+自定义表盘交换网站 <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 

@@ -1,7 +1,7 @@
-(Releasenotes-release-notes)=
+
 # 版本更新說明
 
-請遵循[更新手冊](UpdateToNewVersion)中的指示。 你還可以在更新手冊頁面找到關於常見更新問題的問題排除部分。
+請遵循[更新手冊](UpdateToNewVersion)中的指示。 問題排除部分也更新手冊頁面上說明了，包含升級**AAPS**時最常遇到的問題。
 
 當有新版本可用時，你將收到以下資訊：
 
@@ -9,15 +9,15 @@
 
 
 
-之後，你有 60 天的時間進行更新。 如果你在這 60 天內沒有更新，AAPS 將會降級到 LGS 模式（低血糖暫停，請參閱[詞彙表](../UsefulLinks/Glossary.md)），如[目標 6](#objectives-objective6)中所述。
+之後你有 60 天的時間來更新 **AAPS**。 如果您在 60 天內未完成更新，**AAPS** 將退回到 LGS（低血糖暫停 - 請參閱 [詞彙表](../UsefulLinks/Glossary.md)），如同 [目標 6](#objectives-objective6) 中所描述。
 
-如果你在新版本發布後 90 天內未更新，AAPS 將切換到開放循環模式。
+如果您再延遲 30 天未更新（自新版本發佈日起共計 90 天），**AAPS** 將切換為開環模式。
 
 ![更新資訊](../images/AAPS_LoopDisable90days.png)
 
-請暸解，這一變更不是為了打擾你，而是出於安全原因。 AAPS 的新版本不僅提供了新功能，還包括重要的安全修復。 因此，必須儘快讓每個用戶更新到最新版本。 不幸的是，我們仍然收到來自非常舊版本的錯誤報告，所以這是為了提升每個用戶以及整個 DIY 社群的安全性。 感謝你的暸解。
+此提示非常重要，不應忽視，並非為了打擾你。 新版的 **AAPS** 不僅提供新功能，還包含重要的安全修復。 因此，每位 **AAPS** 使用者都需要儘快更新至最新版本。 遺憾的是，仍然有來自非常舊版本的錯誤回報，因此這是一項為了提升每位 **AAPS** 使用者及 DIY 社群安全性的努力。 感謝你的諒解。
 
-```{admonition} First version of AAPS
+```{admonition} First version of **AAPS**
 :class: note
 
 首個測試版本早在 2015 年就已經開始。 2016 年發布了第一個正式版本。
@@ -63,12 +63,98 @@
 WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
-(版本3300)=
+(version3300)=
 ## 版本 3.3.0.0
 
-3.3版即將推出 使用螢幕右下角的版本切換，查看最新內容。
+發布日期：2024-29-12
 
-![打開語系選單](../images/documentation_language_menu.png)
+### 主要功能
+
+* **[動態 ISF](../DailyLifeWithAaps/DynamicISF.md)** 功能不再是獨立的外掛，而是現在作為 [OpenAPS SMB](#Config-Builder-aps) 外掛的一個選項，並伴隨一些行為上的變更：
+  * 在動態敏感度強度方面，**動態 ISF** 現在會考慮 **設定檔切換** 和 **設定檔百分比** 的影響。
+  * 將使用過去 24 小時的平均 **ISF** 計算，該數值將用於注射嚮導和 **COB** 的計算。 **設定檔中的 ISF** 值完全不會被使用（僅在歷史資料無法使用時作為備用）
+  * 如果您使用**動態 ISF**，請勿在**自動化**設定任何以**血糖**為條件的**設定檔百分比**， 因為這已經是動態敏感度演算法的一部分。
+  * *** 再次提醒：請關閉所有**自動化**中與**血糖** 相關的 **設定檔 %**，因為這可能會導致胰島素劑量過多！ *****
+  * 請勿長時間使用超過 100% 的 **設定檔百分比** 增加值。 如果你的**設定檔**已有變更，請在「治療頁籤」中的**設定檔**切換，複製帶有% 的**設定檔**來建立新的設定檔。
+* 為使用 FreeStyle Libre 2 和 Libre 3 的用戶啟用「始終啟用 SMB」與「碳水後啟用 SMB」選項。
+* 新增的 **自動化**觸發條件
+* 無人操作的設定匯出
+
+### 如何升級
+
+* 在升級之前：
+  * **<span style="color:red">此版本需要 Google Android 11.0 或更高版本</span>**。 在嘗試更新之前請檢查你的手機版本。
+  * [需要稱為"Ladybug"的Android Studio版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高來建立此版本。 如果你已安裝舊版Android Studio，可能需要<span style="color:red">將JVM版本配置為21</span>。 請參閱[Android Studio問題排除 > 非相容的Gradle JVM](#incompatible-gradle-jvm)。
+  * 如果你使用配合ruffy設備的“舊”Combo驅動程式，請在更新之前移轉至[原生Combo驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
+  * 在升級過程中，你將失去[主畫面上的附加圖表](#AapsScreens-section-g-additional-graphs)：如有需要，請手動記錄當前配置，以便在升級後重新創建。
+  * 針對某些人在 Android 15 上遇到的 [藍牙連線問題](../Getting-Started/Phones.md)，本版本並未解決（這是 Android 的問題，而非 **AAPS** 的問題）。
+  * 由於 Android 的限制，主畫面上的 BYODA 按鈕已不再提供。 目前尚無已知的解決方法。
+* 更新指示：遵循[更新到新版本](../Maintenance/UpdateToNewVersion.md)的指南。
+* 升級後：
+  * 在維護標籤中設置新的[“AAPS目錄”設定](#preferences-maintenance-settings)。
+
+### 詳細變更
+
+#### CGM和幫浦
+
+* [為FreeStyle Libre 2和Libre 3用戶啟用“SMB始終啟用”和“餐後SMB”](#Open-APS-features-enable-smb-always) @MilosKozak
+* [Medtrum驅動程式](../CompatiblePumps/MedtrumNano.md)改進 @jbr77rr
+  * 通訊改進，包括新的設定以解決某些智慧型手機的問題
+  * 在啟動時顯示儲水器的水位
+  * 修正啟動返回起始位置且用戶無法完成啟動的錯誤
+  * 同步狀態和其他說明的反饋
+* 新增支援的幫浦：[Equil 5.3](../CompatiblePumps/Equil5.3.md) @EquilHack
+* 新增支援的CGM：[Ottai](../CompatibleCgms/OttaiM8.md) @ottai-developer 和 [Syai Tag](../CompatibleCgms/SyaiTagX1.md) @syai-dev
+* Insight驅動程式重寫為kotlin @Philoul
+* 移除舊的 ruffy 依賴的 Combo 驅動程式
+
+#### 用戶介面變更
+
+* [簡易模式](#preferences-simple-mode) 在全新安裝時預設啟用 @MilosKozak
+* 新的[快速嚮導](#Preferences-quick-wizard)選項 @radicalb
+  * 快速嚮導現在使用與計算機相同的邏輯來進行注射計算和顯示。 你現在可以在快速嚮導中的“碳水化合物時間”欄位預先注射。
+* 新的[圖表比例選單](#aaps-screens-main-graph)；[附加圖表選單](#AapsScreens-activate-optional-information)用戶介面改善 @Philoul
+* [ConfigBuilder佈局改善](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
+  * 各區域現在預設為摺疊狀態。 使用箭頭展開。
+* 變數敏感度在 AAPSClient 中顯示
+* BolusWizard 使用者介面改善 @kenzo44
+* 修正使用淺色主題時幫浦標籤中的文字顯示 @jbr77rr
+
+#### 其他功能
+
+* 無人操作匯出 @vanelsberg
+* 新增[自動化觸發](#automations-automation-triggers) @vanelsberg
+  * Pod 註冊（僅限貼片幫浦）
+* 新增[自動化觸發](#automations-automation-triggers) @jbr77rr
+  * 插管時間、胰島素時間、電池時間、傳感器時間、儲備液位、幫浦電池電量
+* 允許輸入負碳水化合物 @MilosKozak
+* 新增參數[“AAPS 目錄”](#preferences-maintenance-settings)以選擇與預設不同的儲存目錄。
+* 允許[在幫浦暫停時記錄胰島素](#aaps-screens-buttons-insulin) @jbr77rr
+* 更新[目標 2](#objectives-objective2) @MilosKozak
+  * 檢查主密碼是否已設定且已知
+* 測試模式下的隨機碳水化合物 @MilosKozak
+* 修正 TDD 計算中的錯誤 @MilosKozak
+* 簡訊指令：允許[**不**發送來自 NS 的簡訊以更改設定檔](#sms-commands-too-many-messages) @MilosKozak
+
+#### 智慧型手錶
+
+* 穿戴裝置和錶盤的改善 @Philoul @MilosKozak @olorinmaia
+* 從自動化操作中檢視功能塊 @Philoul
+* 結合來自 AAPS、AAPSClient 和 AAPSClient2 的手錶錶盤，以監控更多患者 @Philoul @MilosKozak
+* 額外：僅在手錶上顯示_用戶_操作 @MilosKozak
+
+#### 技術變更
+
+* 新的內部模組結構 @MilosKozak
+* 將持久性層與主程式碼分離 @MilosKozak
+* 建置檔案重新編寫為 kts @MilosKozak
+* 算法重新編寫為 kotlin 以改善效能 @MilosKozak
+* 大量新的單元測試 @MilosKozak 和其他人
+* 更多的程式碼轉換為 kotlin @MilosKozak
+* 新的偏好設定管理，xml -> kotlin @MilosKozak
+* 新的 CI 配置，在自己的伺服器上運行 CI @MilosKozak
+* 函式庫更新至最新版本，toml @MilosKozak
+* 移轉至 kotlin 2.0，java 21 @MilosKozak
 
 (version3200)=
 ## 3.2.0.0 版本獻給 @Philoul
@@ -116,9 +202,9 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 - 遷移到 kts 建置系統 @MilosKozak
 - 改進的 CI 集成 @MilosKozak @buessow
 - 測試清理 @ryanhaining @MilosKozak
-- 新增 110,000 行代碼，修改 240,000 行代碼，修改 6,884 個文件
+- 新增 110,000 行程式碼，修改 240,000 程式碼，修改 6,884 份文件
 
-(使用 v3 與 v1 API 進行 Nightscout 和 AAPS 資料交換的重要說明)=
+(Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
 ### 使用 v3 與 v1 API 進行 Nightscout 和 AAPS 資料交換的重要說明
 
 v1 是用於在 NS 網站和 NS 伺服器之間交換資料的舊協議。 他有許多限制
@@ -602,7 +688,7 @@ v3 是新的協議。 更加安全和高效
 ### 主要新功能
 
 - oref1/SMB 支援（[oref1 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)）務必閱讀文件，以了解對 SMB 的預期，了解其行為方式、可以實現的功能以及如何使用，以便平穩運作。
-- [_Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md) 幫浦支援
+- 支援 Accu-Chek Combo 幫浦
 - 設定嚮導：引導你完成 AAPS 的設定過程
 
 (Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=

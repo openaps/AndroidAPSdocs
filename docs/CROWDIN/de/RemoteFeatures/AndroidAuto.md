@@ -82,4 +82,4 @@ Die CGM-Werte werden wie folgt angezeigt:
 
 ## Problembehandlung:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#use-system-notifications-in-aaps-for-alerts-and-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
+* Falls keine Benachrichtigungen angezeigt werden: prüfe, ob Du in den Android-Einstellungen die [Benachrichtigungsanzeige für AAPS aktiviert](#use-system-notifications-in-aaps-for-alerts-and-notifications) hast und ob [Android Auto Zugriffsrechte für die Benachrichtigungen hat](#allow-the-use-of-unknown-sources-with-android-auto).

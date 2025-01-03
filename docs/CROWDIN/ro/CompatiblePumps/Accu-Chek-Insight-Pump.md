@@ -27,7 +27,7 @@ Atentie: AAPS va scrie întotdeauna date în **primul profil al ratei bazale din
     
     ![Captura de ecran Insight Eliminare glucometru](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* In [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md), select Accu-Chek Insight.
     
     ![Captura de ecran Insight ConfigBuilder](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 

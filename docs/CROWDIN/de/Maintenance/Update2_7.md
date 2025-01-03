@@ -6,13 +6,13 @@ orphan: true
 
 - Der Programmcode wurde bei der Umstellung auf AAPS 2.7 deutlich verändert.
 - Daher ist es wichtig, dass Du einige Änderungen vornimmst bzw. die Einstellungen nach der Aktualisierung überprüfst.
-- Please see [release notes](#Releasenotes-version-2-7-0) for details on new and extended features.
+- In den [Release Notes](#Releasenotes-version-2-7-0) findest Du Details zu allen neuen und verbesserten Funktionen.
 
 ## Prüfe die BZ-Quelle
 
 - Prüfe, ob Deine BZ-Quelle nach dem Update noch richtig eingestellt ist.
-- Especially when using [xDrip+](../CompatibleCgms/xDrip.md) it might happen, that BG source is changed to Dexcom app (patched).
-- Open [Config builder](#Config-Builder-bg-source) (hamburger menu on top left side of home screen)
+- Wenn Du z.B. [xDrip+](../CompatibleCgms/xDrip.md) nutzt, kann es passieren, dass die BZ-Quelle auf die gepatchte Dexcom App geändert wird.
+- Öffne die [Konfiguration](#Config-Builder-bg-source) (Hamburger-Menü oben links)
 - Scrolle nach unten zu "BZ-Quelle".
 - Ändere bei Bedarf die BZ-Quelle.
 
@@ -20,14 +20,14 @@ orphan: true
 
 ## Prüfung abschließen
 
-- AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for [automation](../DailyLifeWithAaps/Automations.md).
-- You have to finish exam ([objective 3 and 4](#objectives-objective3)) in order to complete [objective 11](#objectives-objective11).
-- If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start [objective 11](#objectives-objective11).
+- AAPS 2.7 enthält ein neues Ziel 11 (in neueren Versionen dann in Ziel 10 umbenannt!) für [Automation](../DailyLifeWithAaps/Automations.md).
+- Die Prüfungen zu [Ziel 3 und 4](#objectives-objective3) müssen abgeschlossen, um [Ziel 11](#objectives-objective11) abschließen zu können.
+- Falls Du beispielsweise den Test in [Ziel 3](#objectives-objective3) noch nicht abgeschlossen hast, musst Du das tun, bevor Du das [Ziel 11](#objectives-objective11) starten kannst.
 - Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 ## Master-Passwort festlegen
 
-- Necessary to be able to [export settings](ExportImportSettings.md) as they are encrypted as of version 2.7.
+- Da ab Version 2.7 die Einstellungen verschlüsselt sind, wird ein Passwort benötigt, um die [Einstellungen exportieren](ExportImportSettings.md) zu können.
 - Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 - Klicke das Dreieck neben "Allgemein".
 - Klicke auf "Master-Passwort".
@@ -38,12 +38,12 @@ orphan: true
 ## Exportiere die Einstellungen
 
 - AAPS 2.7 verwendet ein neues verschlüsseltes Backup-Format.
-- You must [export your settings](ExportImportSettings.md) after updating to version 2.7.
+- Nach dem Update auf Version 2.7 musst Du [Deine Einstellungen exportieren](ExportImportSettings.md).
 - Einstellungsdateien aus früheren Versionen können in AAPS 2.7 nur importiert werden. Der Export wird im neuen Format erfolgen.
 - Speichere Deine exportierten Einstellungen nicht nur auf Deinem Smartphone, sondern auch an mindestens einem sicheren Ort (PC, Cloud-Speicher ...).
 - Wenn Du die AAPS 2.7 APK mit dem gleichen Keystore wie in früheren Versionen erstellst, kannst Du die neue Version installieren, ohne die vorherige Version zu deinstallieren.
 - Alle Einstellungen sowie abgeschlossenen Objectives (Ziele) bleiben so, wie sie in der Vorgängerversion waren.
-- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](#troubleshooting_androidstudio-lost-keystore).
+- Falls Du Deinen Keystore verloren hast, erstelle die Version 2.7 mit einem neuen Keystore und importiere Deine Einstellungen aus der Vorgängerversion so wie es auf der Seite [Problembehebung](#troubleshooting_androidstudio-lost-keystore) beschrieben ist.
 
 ## Autosens (Hinweis - keine Maßnahmen erforderlich)
 
@@ -53,12 +53,12 @@ orphan: true
 
 ## Pumpen-Passwort für Dana RS setzen (wenn Dana RS verwendet wird)
 
-- Pump password for [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) was not checked in previous versions.
+- Das Pumpen-Passwort der [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) wurde in früheren Versionen nicht geprüft.
 - Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 - Scrolle nach unten und klicke das Dreieck neben "Dana RS".
 - Klicke auf "Pumpen-Passwort (nur v1)".
-- Enter pump password ([Default password](#DanaRS-Insulin-Pump-default-password) is different depending on firmware version) and click OK.
+- Gib das Passwort der Pumpe ein (das [Standard-Passwort](#DanaRS-Insulin-Pump-default-password) unterscheidet sich je nach Firmware-Version) und klicke auf OK.
 
-![Set Dana RS password](../images/DanaRSPW.png)
+![Dana RS Passwort setzen](../images/DanaRSPW.png)
 
-To change password on Dana RS follow instructions on [DanaRS page](#DanaRS-Insulin-Pump-change-password-on-pump).
+Die Anleitung zum Ändern des Passworts der Dana RS findest Du auf der [DanaRS-Seite](#DanaRS-Insulin-Pump-change-password-on-pump).

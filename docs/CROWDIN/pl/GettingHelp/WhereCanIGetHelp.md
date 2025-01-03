@@ -36,6 +36,7 @@ Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/190019
 
 ### France
 
+* [AndroidAPS France (Toutes Pompes)](https://www.facebook.com/groups/268922660715266)
 * [DIY AndroidAPS, parents d'enfants Dt1](https://www.facebook.com/groups/262497886779069) : French support group for AAPS for children
 
 ### Germany
@@ -43,11 +44,16 @@ Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/190019
 * [Open Source Looper Community](https://de.loopercommunity.org/): German looper community for Open Source Loop, diabetes in general, communication, support and local meet-up
 * [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
 * [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
+* [Looped-DE](https://www.facebook.com/groups/loopedDE/)
 
 ### Netherlands
 
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch-speaking users of OpenAPS, Loop and AndroidAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
+
+### Norway
+
+* [Looped Norge](https://www.facebook.com/groups/loopednorge/)
 
 ### Poland
 

@@ -4,8 +4,6 @@ orphan: true
 
 # 罗氏Accu-Chek Combo胰岛素泵
 
-These instructions are for setting up the Accu-Chek Combo pump using the new combov2 driver, which is available as part of AndroidAPS as of version 3.2. This driver is entirely separate from the old one.
-
 **本软件是DIY解决方案的一部分而非完整的产品，需要您仔细研学包括使用方法在内的系统知识。 它无法为您全权处理糖尿病治疗的全部，但如果你愿意投入必要的时间，它将有助于改善病情并提高生活质量。 不要想着一蹴而就，请给自己足够的学习时间。 只有你才能对自己的行为负责。**
 
 ## Hardware and software requirements
@@ -98,7 +96,7 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
 ## Activating the driver and pairing it with the Combo
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
+* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
 
   ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
 

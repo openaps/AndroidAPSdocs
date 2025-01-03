@@ -1,10 +1,5 @@
 # Update to a new version or branch
 
-## Notes for specific versions
-
-- [Update to AAPS 2.7](../Maintenance/Update2_7.md)
-- [Update to AAPS 3.0](../Maintenance/Update3_0.md)
-
 ## Build yourself instead of download
 
 **AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
@@ -14,25 +9,28 @@
 * When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
 * The new version will also be announced on Facebook at the time of release.
 * Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-* You need to use version **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, Koala or Ladybug](https://developer.android.com/studio/)** of Android Studio. If your version is older, please update first Android Studio first! 
 
 ## Overview for updating to a new version of AAPS
 
-1. [Export your settings](ExportImportSettings.md) from the existing **AAPS** version on your phone.
-You might not need it, but better be safe than sorry.
-2. [Update local copy](Update-to-new-version-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
-3. [Build signed APK](Update-to-new-version-build-the-signed-apk)
-4. [Transfer the built apk](Update-to-new-version-transfer-and-install) to your phone and install it
-5. [Check the version](Update-to-new-version-check-aaps-version-on-phone) in AAPS
-6. Depending on your [BG source](../Getting-Started/CompatiblesCgms.md) make sure to [identify receiver](#xdrip-identify-receiver) in xDrip or use the ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+```{contents} Steps for updating to a new version of AAPS
+:depth: 1
+:local: true
+```
 
 In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
 
-## 1. Export your settings
+### Export your settings
+
+Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+
 See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
 
+### Check your Android Studio version
+
+The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+
 (Update-to-new-version-update-your-local-copy)=
-## 2. Update your local copy
+### Update your local copy
 
 ```{admonition} WARNING
 :class: warning
@@ -71,14 +69,26 @@ If you update from versions prior to 2.8.x, please follow the instructions to do
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-(Update-to-new-version-build-the-signed-apk)=
-## 3. Build the Signed APK
+### Check JVM and Gradle versions
 
-Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+These checks are particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+
+Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required versions for JVM and Gradle, matching the **AAPS** version you are now building.
+
+For Gradle, go to **File > Project Structure** (1). In the **Project** tab (2), check that **Gradle version** (3) is the appropriate one. If you don't find the required version, you are using an outdated Android Studio version (check previous step about minimal Android Studio version).
+
+![Check Gradle version](../images/studioTroubleshooting/gradle_version.png)
+
+For the JVM version, follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+
+(Update-to-new-version-build-the-signed-apk)=
+### Build the Signed APK
+
+Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
 
 (Update-to-new-version-transfer-and-install)=
 
-## 4. Transfer and install the apk
+### Transfer and install the apk
 You need to transfer the apk to your phone so you can install it.
 
 ```{note}
@@ -89,12 +99,13 @@ For other scenarios such as establishing a new key store in Android Studio for y
 See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 (Update-to-new-version-check-aaps-version-on-phone)=
-## 5. Check AAPS version on phone
+### Check AAPS version on phone
 
 After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
 
 ![AAPS version installed](../images/Update_VersionCheck320.png)
 
+Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
 
 ## Troubleshooting
 

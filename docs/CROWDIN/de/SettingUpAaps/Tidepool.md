@@ -38,4 +38,4 @@ Hinweis: Die Tidepool-Organisation arbeitet auch daran, den iOS Loop als Produkt
 
 - Klicke auf "Verbindungs-Einstellungen" und aktiviere je nach Bedarf die entsprechenden Optionen
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
+Für weitere Hilfe dazu, wie Du Deine Daten, sobald sie nach Tidepool hochgeladen wurden, nutzen kannst, gehe bitte auf [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 

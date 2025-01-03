@@ -3,7 +3,7 @@
 
 ## Was sind eCarbs und wann sind sie nützlich?
 
-Im Rahmen einer normalen Pumpen-Therapie sind verzögerte Boli ein guter Weg, um mit fettigen oder sonstigen langsam absorbierenden Mahlzeiten zurecht zu kommen, die die Glukosewerte im Blut länger erhöhen als das Insulin wirkt. Im Zusammenhang mit dem Loopen sind jedoch verzögerte Boli wenig sinnvoll (und werfen technische Schwierigkeiten auf), da sie im Grunde eine feste hohe temporäre Basalrate darstellen, was der normalen Funktionsweise des Loops - der die Basalraten dynamisch anpasst - widerspricht. For details see [extended bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) below.
+Im Rahmen einer normalen Pumpen-Therapie sind verzögerte Boli ein guter Weg, um mit fettigen oder sonstigen langsam absorbierenden Mahlzeiten zurecht zu kommen, die die Glukosewerte im Blut länger erhöhen als das Insulin wirkt. Im Zusammenhang mit dem Loopen sind jedoch verzögerte Boli wenig sinnvoll (und werfen technische Schwierigkeiten auf), da sie im Grunde eine feste hohe temporäre Basalrate darstellen, was der normalen Funktionsweise des Loops - der die Basalraten dynamisch anpasst - widerspricht. Details zum [verzögerten Bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) findest Du unten.
 
 Es gibt aber trotzdem das Bedürfnis, mit solchen Mahlzeiten umzugehen. Deshalb unterstützt AAPS seit Version 2.0 sogenannte erweiterte/verlängerte Kohlenhydrate oder eCarbs.
 
@@ -38,7 +38,7 @@ für eine Pizza wäre, einen anfänglichen (Teil-)Bolus über den *Rechner* zu g
 (Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Verzögerter Bolus und warum dieser nicht mit Closed Loop funktioniert?
 
-Wie oben bereits erwähnt sind verzögerte oder sog. Multi-Wave-Boli beim Loopen nicht sinnvoll. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
+Wie oben bereits erwähnt sind verzögerte oder sog. Multi-Wave-Boli beim Loopen nicht sinnvoll. Details [findest Du unten](#why-extended-boluses-wont-work-in-a-closed-loop-environment).
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Verzögerter Bolus und Wechsel zum Open Loop - nur für Dana- und Insight-Pumpe
@@ -49,7 +49,7 @@ Daher gibt es ab Version 2.6 für Nutzer der Dana- und Insight-Pumpe eine Option
 
 - Der Closed Loop wird automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt.
 - Die Einheiten des verzögerten Bolus, die verbleibende und die Gesamtzeit werden auf der Startseite angezeigt.
-- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+- Bei Insight Pumpen der verzögerte (eng. extended) Bolus *nicht verfügbar*, wenn die [TBR-Emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) verwendet wird.
 
 ![Verzögerter Bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 

@@ -1,38 +1,38 @@
 # Smartphones
 
-The current version of **AAPS** (3.2) requires an Android smartphone with Google **Android 9.0 or above**. The next **AAPS** version (3.3) will require **Android 11.0 or above**. If you are considering buying a new phone, (as of July 2024), Android 13 is preferred.  
-As of November 2024, several users have reported issues with Android 15 and Bluetooth connection. You may wish to delay the update to Android 15, especially if you are using Omnipod Dash or Dexcom G7. Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.  
-Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 11.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+Die aktuelle **AAPS**-Version (3.3) setzt ein Android Smartphone mit Google **Android 11.0 oder höher** voraus. If you are considering buying a new phone, (as of December 2024), Android 14 is preferred.  
+As of November 2024, several users have reported issues with Android 15 and Bluetooth connection. Eventuell macht es Sinn, das Update auf Android 15 zu verschieben, insbesondere dann, wenn Du den Omnipod Dash oder den Dexcom G7 nutzt. Die neuesten Informationen zu diesem Thema findest Du auf [Facebook oder Discord](../GettingHelp/WhereCanIGetHelp.md).  
+Aus Sicherheitsgründen wird Dir dringend ans Herz gelegt, Dein **AAPS** auf dem neuesten Stand zu halten. Für Menschen, die kein Gerät mit Android 11 (oder neuer) nutzen können, stehen weiterhin ältere **AAPS**-Versionen für ältere Android-Versionen zur Verfügung, siehe dazu auch die [Release Notes](#maintenance-android-version-aaps-version).
 
 - [Jelly Pro Einstellungen](../CompatiblePhones/Jelly.md)
 - [Huawei Einstellungen](../CompatiblePhones/Huawei.md)
 
 (Phones-list-of-tested-phones)=
 
-## List of tested Phones
+## Liste der getesteten Smartphones
 
-We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true).
+Wir pflegen eine Liste mit [getesteten Hardware-Kombinationen](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true).
 
-This list provides user feedback on the usage of a phone along with **AAPS** and a given pump and CGM. It can help you check if your phone / pump / CGM has been used successfully by other users.
+Diese Liste enthält die Rückmeldungen zu Smartphones mit **AAPS** und dem Zusammenspiel mit einer gegebenen Pumpe und Sensor (CGM). Es kann helfen, zu prüfen, ob Dein Smartphone, Deine Insulinpumpe und Dein Sensor von anderen Benutzenden bereits erfolgreich genutzt wurden.
 
-The document is read-only. With CRTL-F, you can search in the text of the Google sheet.
+Das Dokument ist schreibgeschützt. Mit STRG-F kannst Du im Text der Google-Tabelle suchen.
 
-To record your test of a hardware setup, please fill in this [form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). After you fill in the form data, the sheet is updated automatically every 5 minutes
+Um die von Dir getestete Hardware-Kombination in die Liste aufzunehmen, fülle bitte das [Formular](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) aus. Nachdem Du das Formular vervollständigt hast, wird das Arbeitsblatt alle 5 Minuten automatisch aktualisiert.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the [Where can I get help? page](../GettingHelp/WhereCanIGetHelp.md).
+Sollte es Probleme mit dem Arbeitsblatt geben, kontaktiere bitte *@theodoor5137* auf Discord oder schlage auf der [Wo wird mir geholfen? Seite](../GettingHelp/WhereCanIGetHelp.md) nach.
 
-## I didn't find my phone
+## Mein Smartphone ist nicht in der Liste
 
-If you have questions regarding a specific phone model, please search or ask in our [Facebook or Discord community](../GettingHelp/WhereCanIGetHelp.md).
+Wenn Du konkrete Fragen zu einem bestimmten Smartphone-Modell hast, suche in unserer [Facebook- oder Discord-Community](../GettingHelp/WhereCanIGetHelp.md) danach oder stelle dort die entsprechende Frage.
 
 Falls Du Smartphones oder Smartwatch-Modelle für Tests spenden möchtest, sende eine E-Mail an <donations@androidaps.org>.
 
 (Phones-phone-wallpaper)=
 
-## Phone Wallpaper
+## Smartphone-Hintergrundbilder
 
-If you want to decorate your phone with more **AAPS**, you can download your background image [here](../images/bg_phone.jpg)!
+Du kannst [hier](../images/bg_phone.jpg) **AAPS**-Hintergundbilder herunterladen, mit denen Du Dein Smartphone verschönern kannst.
 
-![phone background](../images/bg_phone_thump.jpg)
+![Handy Hintergrundbild](../images/bg_phone_thump.jpg)
 
 Design: Thiago :)

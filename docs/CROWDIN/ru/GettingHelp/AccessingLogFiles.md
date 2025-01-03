@@ -7,6 +7,7 @@
     
     * (2.8.2)Папка будет находиться где-то в районе ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
     * (3.0.0) Папка будет находиться где-то в районе ***Internal storage(1) / AAPS / logs***
+    * (3.3.0) The folder will be at the location you chose in the [Maintenance tab settings](#preferences-maintenance-settings)
     * Имя корневой папки (1) может немного отличаться в зависимости от телефона.
 
 ![журнал событий](../images/aapslog.png)

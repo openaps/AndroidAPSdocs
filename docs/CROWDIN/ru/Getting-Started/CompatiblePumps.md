@@ -1,11 +1,8 @@
-# Выбор помпы
-
-## Compatible Pumps
+# Compatible Pumps
 
 AAPS работает с целым рядом инсулиновых помп.  The following list shows the currently supported devices and indicates if AAPS communicates with the pump using your phone's native Bluetooth function or if it requires a Rileylink Compatible device in brackets.
 
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)  (Bluetooth; старый драйвер, использующий дополнительное приложение Ruffy - см. [Советы по использованию Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; новый драйвер, доступен с [AndroidAPS v3.2](#version3200) - см. [Советы по использованию Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; see also [Accu-Chek Combo Tips for Basic usage](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
@@ -16,6 +13,7 @@ AAPS работает с целым рядом инсулиновых помп. 
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)  (Bluetooth)
 - [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
+- [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)
 - Некоторые старые [Medtronic](../CompatiblePumps/MedtronicPump.md) (необходимо [дополнительное устройство для связи](#additional-communication-device))
 
 ## My pump is not listed

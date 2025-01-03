@@ -2,7 +2,7 @@
 
 下面的說明適用於您需要建置的**AAPS Wear** apk（如果尚未建置，請參閱[這裡](../WearOS/BuildingAapsWearOS.md)），因為您已經建置了手機的**AAPS** apk。
 
-您還可以使用一些信息用於**AAPSClient**和**PumpControl**的**Wear** apk，這些信息可以直接在[GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)中找到。 每個**Wear**應用都將與其匹配的手機應用進行通信。 例如：**AAPSClient Wear**應用可用於顯示**AAPSClient**資料，而不是**AAPS**資料。
+您還可以使用一些信息用於**AAPSClient**和**PumpControl**的**Wear** apk，這些信息可以直接在[GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)中找到。 每個**Wear**應用都將與其一致的手機應用進行通信。 例如：**AAPSClient Wear**應用可用於顯示**AAPSClient**資料，而不是**AAPS**資料。
 
 (BuildingAapsWearOs-WearOS5)=
 
@@ -55,7 +55,7 @@ b) 從 Android Studio 將 Wear.apk 剪切並粘貼到你的 Gdrive 中。
 Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發，你可以從 Google Play 將其下載到手機上，並用來將 AAPS wear 應用程式側載到手錶上。 該應用程式包含一個便捷的“如何側載”[視頻](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)。
 
 ```{tip}
-對於 Wear OS 5 智慧手錶，請參閱[此影片](https://www.youtube.com/watch?v=yef_qGvcCnk)。
+對於 Wear OS 5 智慧型手錶，請參閱[此影片](https://www.youtube.com/watch?v=yef_qGvcCnk)。
 ```
 
 該視頻提供了所有必要的細節（最好在單獨的設備上打開視頻，以便在設置手機時觀看）。

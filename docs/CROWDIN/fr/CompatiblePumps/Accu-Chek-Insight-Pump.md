@@ -27,7 +27,7 @@ Remarque : AAPS écrira toujours les données dans le **premier profil débit de
     
     ![Copie d'écran de suppression du lecteur Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* In [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md), select Accu-Chek Insight.
     
     ![Copie d'écran de Génération de configuration Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 

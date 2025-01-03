@@ -4,33 +4,33 @@ orphan: true
 
 # Dexcom G5
 
-## If using G5 with xDrip+
+## Dexcom G5 mit xDrip+
 
--   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you want specific newly developed features.
--   Setup xDrip+ with G5 following [these instructions](https://navid200.github.io/xDrip/docs/G5-Recommended-Settings.html).
--   Setup xDrip+ reading the [xDrip+ settings page](../CompatibleCgms/xDrip.md) .
--   Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Du kannst einfach die [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)-Version herunterladen, es sei denn Du benötigst eine spezifische neue Funktionalität.
+-   Richte xDrip+ mit dem G5 nach [diesen Anweisungen](https://navid200.github.io/xDrip/docs/G5-Recommended-Settings.html) ein.
+-   Richte xDrip+ nach den Vorgaben auf der [xDrip+ Einstellungsseite](../CompatibleCgms/xDrip.md) ein.
+-   Wähle xDrip+ unter [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
 
 ## G5 mit der gepatchten Dexcom App
 
 ```{admonition} Legacy apps
 :class: warning
-These apps are not compatible with recent Android versions.  
+Diese Apps sind nicht mit den aktuellen Android-Versionen kompatibel.  
 ```
 
--   Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5).
+-   Lade die APK von <https://github.com/dexcomapp/dexcomapp> herunter und wähle die benötigte Version (entweder mg/dl oder mmol/l, G5) aus.
 
-    -   Folder 2.4 was for users of AAPS 2.5 and above.
-    -   Open <https://play.google.com/store/search?q=dexcom%20g5> on your computer. Die Region wird in der URL angezeigt.
+    -   Ordner 2.4 war für Benutzer von AAPS 2.5 und höher.
+    -   Öffne <https://play.google.com/store/search?q=dexcom%20g5> auf Deinem Computer. Die Region wird in der URL angezeigt.
 
     ![Region in Dexcom G5 URL](../images/DexcomG5regionURL.PNG)
 
--   Force stop and uninstall the original Dexcom app, if not already done.
+-   Stoppe und deinstalliere die originale Dexcom App, falls noch nicht geschehen.
 
 -   Installiere die heruntergeladene APK
 
 -   Starte den Sensor
 
-- Select Dexcom App (patched) in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Wähle 'Dexcom App (patched)' in der [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
 
--   If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
+-   xDrip+ Alarme kannst Du über den lokalen Broadcast nutzen: In xDrip+ Hamburger Menü > Einstellungen > Datenquelle > 640G / EverSense.

@@ -59,7 +59,7 @@ Pokud máte pochybnosti, můžete také vybrat možnost „Virtuální pumpa“ 
 
 #### Option 2: The Config Builder
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](#Config-Builder-pump):
+On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
 
 V levém horním rohu klepněte na **hamburger menu**, vyberte **Konfigurace**\ ➜\ **Pumpa**\ ➜\ **Medtrum**\ klepnutím na **přepínač** s názvem **Medtrum**.
 
@@ -131,6 +131,14 @@ Nastavte na rozumnou hodnotu dle svých potřeb.
 Tímto nastavením se mění maximální množství inzulinu, které může být dodáno během jednoho dne. Pokud je tento limit překročen, patch bude pozastaven a spustí se alarm. Alarm lze resetovat stisknutím tlačítka reset na obrazovce s přehledem, viz [Reset alarmů](#reset-alarms).
 
 Nastavte na rozumnou hodnotu dle svých potřeb.
+
+#### Scan on Connection error
+
+***Default: Off.***
+
+Located under **Advanced Settings**.
+
+Only enable if you have connection problems. If enabled the driver scans for the pump again before trying to reconnect to the pump. Make sure you have Location permission set to "Always allow".
 
 ### Krok 2b: Nastavení výstrah AAPS
 

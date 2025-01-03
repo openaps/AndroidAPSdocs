@@ -4,8 +4,6 @@ orphan: true
 
 # Pompe Accu-Chek Combo
 
-Ces instructions sont pour configurer la pompe Accu-Chek Combo à l'aide du nouveau pilote combov2, qui est disponible dans le cadre d'AAPS depuis la version 3.2. Ce driver est entièrement séparé de l'ancien.
-
 **Ce logiciel est un système "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Ce logiciel ne fait pas toute la gestion de votre diabète pour vous, mais il peut améliorer votre diabète et votre qualité de vie si vous êtes prêt à y consacrer le temps nécessaire. Ne vous précipitez pas, mais laissez vous le temps d’apprendre. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
 ## Configuration matérielle et logicielle requise
@@ -98,7 +96,7 @@ Il est très important de s'assurer que les optimisations de batterie sont désa
 
 ## Activation du pilote et appairage avec la Combo
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **Important**: Il y a l'ancien pilote, appelé "Accu-Chek Combo (Ruffy)", dans cette liste également. Ne _pas_ sélectionner celui-ci.
+* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Important**: Il y a l'ancien pilote, appelé "Accu-Chek Combo (Ruffy)", dans cette liste également. Ne _pas_ sélectionner celui-ci.
 
   ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
 

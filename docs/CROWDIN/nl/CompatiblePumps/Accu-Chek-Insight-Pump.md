@@ -27,7 +27,7 @@ Opmerking: AAPS zal informatie altijd opslaan in het **eerste basaal profiel in 
     
     ![Screenshot van Insight Verwijderen Meter](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* In [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md), select Accu-Chek Insight.
     
     ![Screenshot van Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 

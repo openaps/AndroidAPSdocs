@@ -37,55 +37,21 @@
 - 如果你想让**AAPS**使用与手机标准语言不同的语言，你可以从多种语言中选择。
 
 - 如果你使用不同的语言，有时可能会看到语言混合的情况。 这是由于Android系统的一个问题，即有时覆盖默认的Android语言设置并不起作用。
+- Setting hidden in [simple mode](#preferences-simple-mode).
+
+(preferences-simple-mode)= **Simple mode**
+
+The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
 
 **患者名称**
 
 - 如果你需要区分多个设置（例如，家中有两个1型糖尿病患者），可以使用此选项。
 
-(Preferences-protection)=
-### 保护（Protection）
-
-![参数设置 > 一般 - 保护](../images/Pref2020_General2.png)
-
-(Preferences-master-password)=
-#### 主密码
-
-必须设置主密码才能[导出设置](../Maintenance/ExportImportSettings.md)，因为从版本2.7开始，设置是加密的。
-
-**生物识别保护功能可能在一加手机上无法正常工作。 这是一些一加手机上已知的问题。**
-
-![Set master password](../images/MasterPW.png)
-
-#### 设置保护
-
-- 使用密码或手机的生物识别身份验证（例如，[孩子正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）来保护你的设置。 如果启用此功能，每次访问任何与参数设置相关的视图时，系统都会提示你进行身份验证。
-
-- 如果只想使用主密码来保护[导出的设置](../Maintenance/ExportImportSettings.md)，而使用不同的密码来编辑参数设置，则应使用自定义密码。
-
-- 如果使用自定义密码，请点击“设置密码”这一行，按照[上面](#Preferences-master-password)的说明设置主密码。
-
-![保护（Protection）](../images/Pref2020_Protection.png)
-
-#### 应用保护
-
-如果应用受到保护，你必须输入密码或使用手机的生物识别身份验证才能打开**AAPS**。
-
-如果输入的密码错误，**AAPS**将立即关闭，但如果之前已成功打开，它仍将在后台运行。
-
-#### 大剂量安全验证
-
-- 如果**AAPS**由小孩使用，并且你通过[短信输注大剂量](../RemoteFeatures/SMSCommands.md)，大剂量安全验证可能很有用。
-
-- 在下面的示例中，你看到的是生物识别保护的提示。 如果生物识别身份验证不起作用，请点击白色提示上方的空白处并输入主密码。
-
-![提示生物识别保护](../images/Pref2020_PW.png)
-
-#### 密码和PIN保留时间
-
-定义在成功输入密码后，参数设置或大剂量功能保持解锁的时间（以秒为单位）。
-
 (Preferences-skin)=
 #### 皮肤
+
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 你可以从四种类型的皮肤中选择：
 
 ![选择皮肤](../images/Pref2021_SkinWExample.png)
@@ -107,6 +73,48 @@
 
 ![适配手机显示方向的皮肤](../images/Screenshots_Skins.png)
 
+(Preferences-protection)=
+## 保护（Protection）
+
+![参数设置 > 一般 - 保护](../images/Pref2020_General2.png)
+
+(Preferences-master-password)=
+### 主密码
+
+必须设置主密码才能[导出设置](../Maintenance/ExportImportSettings.md)，因为从版本2.7开始，设置是加密的。
+
+**生物识别保护功能可能在一加手机上无法正常工作。 这是一些一加手机上已知的问题。**
+
+![Set master password](../images/MasterPW.png)
+
+### 设置保护
+
+- 使用密码或手机的生物识别身份验证（例如，[孩子正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）来保护你的设置。 如果启用此功能，每次访问任何与参数设置相关的视图时，系统都会提示你进行身份验证。
+
+- 如果只想使用主密码来保护[导出的设置](../Maintenance/ExportImportSettings.md)，而使用不同的密码来编辑参数设置，则应使用自定义密码。
+
+- 如果使用自定义密码，请点击“设置密码”这一行，按照[上面](#Preferences-master-password)的说明设置主密码。
+
+![保护（Protection）](../images/Pref2020_Protection.png)
+
+### 应用保护
+
+如果应用受到保护，你必须输入密码或使用手机的生物识别身份验证才能打开**AAPS**。
+
+如果输入的密码错误，**AAPS**将立即关闭，但如果之前已成功打开，它仍将在后台运行。
+
+### 大剂量安全验证
+
+- 如果**AAPS**由小孩使用，并且你通过[短信输注大剂量](../RemoteFeatures/SMSCommands.md)，大剂量安全验证可能很有用。
+
+- 在下面的示例中，你看到的是生物识别保护的提示。 如果生物识别身份验证不起作用，请点击白色提示上方的空白处并输入主密码。
+
+![提示生物识别保护](../images/Pref2020_PW.png)
+
+### 密码和PIN保留时间
+
+定义在成功输入密码后，参数设置或大剂量功能保持解锁的时间（以秒为单位）。
+
 ## 概览
 
 在**概览（Overview）**部分，你可以定义主屏的参数设置。
@@ -121,6 +129,7 @@
 ### 按钮
 
 - 定义主页屏幕底部显示哪些按钮。
+- Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![参数设置 > 按钮](../images/Pref2020_OV_Buttons.png)
 
@@ -148,6 +157,8 @@
 (Preferences-default-temp-targets)=
 ### 默认临时目标
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 [临时目标（TT）](../DailyLifeWithAaps/TempTargets.md)允许你为特定的时间段更改血糖目标。 设置默认TT时，你可以轻松地更改活动、即将进食等情况下的目标。
 
 在这里，你可以更改每个预定义TT的目标和持续时间。 预设值为：
@@ -162,6 +173,8 @@
 
 ### 输注/充盈标准胰岛素剂量
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 如果你想通过**AAPS**填充管路，可以通过[**操作**标签页](#screens-action-tab)进行此操作。
 
 可以在此对话框中定义预设值。 根据你的管路长度，选择“填充/灌注”对话框中三个按钮的默认量。
@@ -175,6 +188,8 @@
 
 ### 缩写标签标题
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 有助于在屏幕上显示更多的标签页标题。
 
 例如，“OpenAPS AMA”标签页变为“OAPS”，“OBJECTIVES”变为“OBJ”等。
@@ -184,12 +199,16 @@
 (Preferences-show-notes-field-in-treatments-dialogs)=
 ### 在治疗（treatments）对话框中显示备注字段
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 允许您为自己的治疗方案（大剂量向导、碳水、胰岛素...）添加简短的文本备注。
 
 ![参数设置 > 治疗对话框中的备注](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
 ### 状态指示灯
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 状态指示灯为以下情况提供视觉警告：
 
@@ -220,11 +239,15 @@
 
 ### 启用大剂量顾问（bolus advisor）
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 ![大剂量顾问](../images/BolusAdvisor.png)
 
 启用后，在高血糖状态下使用大剂量向导时，你将收到一个警告，提示你是否希望给个提前大剂量，然后等**血糖**回到范围内时再进食。
 
 ### 启用大剂量提醒
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 % todo
 
@@ -234,6 +257,8 @@
 ![参数设置 > 高级设置](../images/Pref2021_OV_Adv.png)
 
 #### 超级大剂量（Superbolus）
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 在大剂量向导中启用超级大剂量选项。
 
@@ -302,11 +327,12 @@
 
 ## 高级膳食助手（AMA）或超级微小大剂量（SMB）
 
-根据你在[配置构建器](../SettingUpAaps/ConfigBuilder.md)中的设置，你可以选择三种算法之一：
+Depending on your settings in [Config builder > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
 - [高级膳食助手（OpenAPS AMA）](#Open-APS-features-advanced-meal-assist-ama) - 发布于2017年的算法
 - [超级微小大剂量（OpenAPS SMB）](#Open-APS-features-super-micro-bolus-smb) - 推荐给初学者的最新算法
-- [动态ISF](../DailyLifeWithAaps/DynamicISF.md) - 2024年发布，从**[目标11](#objectives-objective11)**开始可用
+
+As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
 
 ### OpenAPS AMA（高级膳食助手）
 
@@ -317,14 +343,12 @@ OpenAPS AMA的所有设置均在[AAPS关键功能>高级膳食助手（AMA）](#
 
 OpenAPS SMB的所有设置均在[AAPS关键功能>超级微小大剂量（SMB）](#Open-APS-features-super-micro-bolus-smb)中有专栏描述。
 
-### 动态ISF（胰岛素敏感系数，Dynamic ISF）
-
-动态ISF的所有设置均在[动态ISF](../DailyLifeWithAaps/DynamicISF.md)中有专门描述。
-
 ## 碳水吸收率设置
 
 (Preferences-min_5m_carbimpact)=
 ### 5分钟内的最小碳水影响（min_5m_carbimpact）
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 该算法使用BGI（血糖影响）来确定[碳水化合物何时被吸收](../DailyLifeWithAaps/CobCalculation.md)。
 
@@ -359,7 +383,7 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 ## 泵设置
 
-这里的选项将根据你在[配置构建器](#Config-Builder-pump)中选择的泵驱动程序而有所不同。  根据[与泵相关的说明](../Getting-Started/CompatiblePumps.md)配对并设置你的泵。
+The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump).  根据[与泵相关的说明](../Getting-Started/CompatiblePumps.md)配对并设置你的泵。
 
 ## Tidepool
 
@@ -448,17 +472,22 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 设置一看就能明白。
 
-## 数据选择
+(preferences-maintenance-settings)=
+## 维护设置
+
+![维护设置](../images/Pref2020_Maintenance.png)
+
+**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+
+**Data Choices**
 
 ![数据选择](../images/Pref2020_DataChoice.png)
 
 您可以通过向开发者发送崩溃报告来帮助**AAPS**进一步发展。
 
-## 维护设置
+Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
 
-![维护设置](../images/Pref2020_Maintenance.png)
-
-日志的标准接收者是<logs@aaps.app>。
+![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
 ## 开源人类项目（Open Humans）
 

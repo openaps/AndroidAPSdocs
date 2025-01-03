@@ -1,4 +1,4 @@
-# Fonctions OpenAPS
+# Key AAPS features
 
 (Open-APS-features-autosens)=
 
@@ -103,75 +103,25 @@ Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA
 
 Voir aussi la [documentation OpenAPS pour SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
-### Enable Autosens
+### Enable dynamic sensitivity
 
-[Autosens](#autosens) looks at blood glucose deviations (positive/negative/neutral). Il essaiera de comprendre à quel point vous êtes sensible/résistant en fonction de ces écarts et ajustera le débit basal et la SI en fonction de ces écarts.
+This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page.
 
-### Activer SMB
+#### Cible temp. haute élève la sensibilité
 
-Activer cette option pour utiliser la fonctionnalité SMB. If disabled, no **SMBs** will be given.
+Si vous activez cette option, la sensibilité à l'insuline sera augmentée avec une cible temporaire supérieure à 100 mg/dl ou 5,6 mmol/l. Cela signifie que la SI et le G/I augmenteront et les débits de base diminueront. This will effectively make **AAPS** less aggressive when you set a high temp target.
 
-(Open-APS-features-enable-smb-with-high-temp-targets)=
+#### Cible temp. basse abaisse la sensibilité
 
-### Activer les SMB avec cibles temp hautes
+Si vous activez cette option, la sensibilité à l'insuline sera diminuée avec une cible temp inférieure à 100 mg/dl ou 5,6 mmol/l. Cela signifie que la SI et le G/I diminueront alors que les débits de base augmenteront. This will effectively make **AAPS** more aggressive when you set a low temp target.
 
-If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l, regardless of **Profile** target). Grâce à cette option, vous pouvez désactiver les SMB lorsque le paramètre est désactivé. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
+### Enable Autosens feature
 
-If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled.
+This is the [Autosens](#autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
-(Open-APS-features-enable-smb-always)=
+Autosens looks at blood glucose deviations (positive/negative/neutral). Il essaiera de comprendre à quel point vous êtes sensible/résistant en fonction de ces écarts et ajustera le débit basal et la SI en fonction de ces écarts.
 
-### Activer en permanence les SMB
-
-If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). Quand ce paramètre est activé, les autres paramètres d'activation ci-dessous sont ignorés. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
-
-Pour des raisons de sécurité, cette option n'est utilisable que pour les sources de glycémie ayant un bon filtrage des données bruitées ou erratiques.
-
-- Currently, it is only available with a Dexcom G5 or G6, if using the [Build your own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “[native mode](#smoothing-xdrip-dexcom-g6)” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value 5 minutes later.
-- For other CGM/FGM like Freestyle Libre, **SMB always** is deactivated until there is a better noise smoothing plugin. 
-- You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
-
-### Activer les SMB avec les GA
-
-Quand ce paramètre est activé, les SMB sont activés lorsque la valeur de GA est supérieure à 0.
-
-### Activer les SMB avec les cibles temporaires
-
-Quand ce paramètre est activé, les SMB sont activés lorsqu'une cible temporaire est définie (repas imminent, activité, hypo, personnalisé). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100mg/dL or 5.6mmol/l) but disabled when a high temp target is set.
-
-### Activer SMB après ingestion de glucides
-
-Quand ce paramètre est activé, les SMB sont activés pendant 6h après l'annonce des glucides, même si les GA sont revenus à 0.
-
-Pour des raisons de sécurité, cette option n'est utilisable que pour les sources de glycémie ayant un bon filtrage des données bruitées ou erratiques.
-
-- Currently, it is only available with a Dexcom G5 or G6, if using the [Build your own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “[native mode](#smoothing-xdrip-dexcom-g6)” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value 5 minutes later.
-- For other CGM/FGM like Freestyle Libre, **SMB always** is deactivated until there is a better noise smoothing plugin.
-- You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
-
-### Fréquence des SMB en min
-
-Ce paramètre limite la fréquence des SMB. Cette valeur détermine le temps minimum entre chaque SMB. Notez que la boucle s'exécute à chaque fois qu'une valeur de glycémie arrive (généralement toutes les 5 minutes). Enlevez à cela 2 minutes pour donner à la boucle suffisamment de temps pour s'exécuter. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
-
-Valeur par défaut : 3 min.
-
-(Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
-
-### Max. minutes de basal pour limiter le SMB
-
-C'est un paramètre de sécurité important. La quantité d'insuline qui peut être administrée par SMB est déterminée par la quantité d'insuline basale pour une durée donnée, lorsqu'elle est couverte par des GA.
-
-En augmentant cette valeur, les SMB deviennent plus agressifs. Vous devriez commencer avec la valeur par défaut de 30 minutes. Après un certain temps, augmentez la valeur par incréments de 15 minutes et observez les effets sur plusieurs repas.
-
-Il est recommandé de ne pas dépasser 90 minutes, car c'est la limite au-delà de laquelle l'algorithme peut ne plus pouvoir compenser une baisse de glycémie par un débit basal de 0 U/h ('zéro-temp'). Vous devriez également configurer des alertes, particulièrement si vous êtes en cours de test de nouveaux paramètres, pour bien vous alerter avant d'être en hypo.
-
-Valeur par défaut : 30 min.
-
-### Activer RNS
-
-Avec cette option activée, l'algorithme SMB peut détecter des repas non signalés. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. Cela fonctionne aussi dans l'autre sens : s'il y a une forte baisse de la glycémie, cela va arrêter les SMB plus tôt.
-
-**Par conséquent, les RNS devraient toujours être activés lorsque les SMB le sont aussi.**
+When enabled, new settings become available.
 
 ### Sensibilité augmente la cible
 
@@ -181,17 +131,88 @@ If the target is modified due to sensitivity detection, it will be displayed wit
 
 ![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
 
+This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
+
 ### Résistance diminue la cible
 
 Si cette option est activée, la détection de sensibilité (autosens) peut baisser la cible lorsqu'une résistance est détectée (valeur supérieure à 100%). Dans ce cas, la cible sera diminuée du pourcentage de la résistance détectée.
 
-### Cible temp. haute élève la sensibilité
+This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
 
-Si vous activez cette option, la sensibilité à l'insuline sera augmentée avec une cible temporaire supérieure à 100 mg/dl ou 5,6 mmol/l. Cela signifie que la SI et le G/I augmenteront et les débits de base diminueront. This will effectively make **AAPS** less aggressive when you set a high temp target.
+### Activer SMB
 
-### Cible temp. basse abaisse la sensibilité
+Activer cette option pour utiliser la fonctionnalité SMB. If disabled, no **SMBs** will be given.
 
-Si vous activez cette option, la sensibilité à l'insuline sera diminuée avec une cible temp inférieure à 100 mg/dl ou 5,6 mmol/l. Cela signifie que la SI et le G/I diminueront alors que les débits de base augmenteront. This will effectively make **AAPS** more aggressive when you set a low temp target.
+When enabled, new settings become available.
+
+(Open-APS-features-enable-smb-with-high-temp-targets)=
+
+#### Activer les SMB avec cibles temp hautes
+
+If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l, regardless of **Profile** target). Grâce à cette option, vous pouvez désactiver les SMB lorsque le paramètre est désactivé. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
+
+If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled.
+
+(Open-APS-features-enable-smb-always)=
+
+#### Activer en permanence les SMB
+
+If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). Quand ce paramètre est activé, les autres paramètres d'activation ci-dessous sont ignorés. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
+
+This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+
+#### Activer les SMB avec les GA
+
+Quand ce paramètre est activé, les SMB sont activés lorsque la valeur de GA est supérieure à 0.
+
+This setting is not visible if "Enable SMB always" is switched on.
+
+#### Activer les SMB avec les cibles temporaires
+
+Quand ce paramètre est activé, les SMB sont activés lorsqu'une cible temporaire est définie (repas imminent, activité, hypo, personnalisé). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100mg/dL or 5.6mmol/l) but disabled when a high temp target is set.
+
+This setting is not visible if "Enable SMB always" is switched on.
+
+#### Activer SMB après ingestion de glucides
+
+Quand ce paramètre est activé, les SMB sont activés pendant 6h après l'annonce des glucides, même si les GA sont revenus à 0.
+
+For safety reasons, this setting is only available if **AAPS** detects that you are using a reliable BG source. It is not visible if "Enable SMB always" is switched on.
+
+This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
+This setting is not visible if "Enable SMB always" is switched on.
+
+#### Fréquence des SMB en min
+
+Ce paramètre limite la fréquence des SMB. Cette valeur détermine le temps minimum entre chaque SMB. Notez que la boucle s'exécute à chaque fois qu'une valeur de glycémie arrive (généralement toutes les 5 minutes). Enlevez à cela 2 minutes pour donner à la boucle suffisamment de temps pour s'exécuter. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
+
+Valeur par défaut : 3 min.
+
+(Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
+
+#### Max. minutes de basal pour limiter le SMB
+
+C'est un paramètre de sécurité important. La quantité d'insuline qui peut être administrée par SMB est déterminée par la quantité d'insuline basale pour une durée donnée, lorsqu'elle est couverte par des GA.
+
+En augmentant cette valeur, les SMB deviennent plus agressifs. Vous devriez commencer avec la valeur par défaut de 30 minutes. Après un certain temps, augmentez la valeur par incréments de 15 minutes et observez les effets sur plusieurs repas.
+
+Il est recommandé de ne pas dépasser 90 minutes, car c'est la limite au-delà de laquelle l'algorithme peut ne plus pouvoir compenser une baisse de glycémie par un débit basal de 0 U/h ('zéro-temp'). Vous devriez également configurer des alertes, particulièrement si vous êtes en cours de test de nouveaux paramètres, pour bien vous alerter avant d'être en hypo.
+
+Valeur par défaut : 30 min.
+
+#### Max minutes of basal to limit SMB to for UAM
+
+This setting allows to adjust the strength of SMB during UAM, when there are no more carbs.
+
+Default value : the same as **Max minutes of basal to limit SMB to**.
+
+This setting is only visible if "Enable SMB" and "Enable UAM " are switched on.
+
+### Activer RNS
+
+Avec cette option activée, l'algorithme SMB peut détecter des repas non signalés. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. Cela fonctionne aussi dans l'autre sens : s'il y a une forte baisse de la glycémie, cela va arrêter les SMB plus tôt.
+
+**Par conséquent, les RNS devraient toujours être activés lorsque les SMB le sont aussi.**
 
 (key-aaps-features-minimal-carbs-required-for-suggestion)=
 

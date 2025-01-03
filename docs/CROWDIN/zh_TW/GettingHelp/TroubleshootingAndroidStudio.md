@@ -110,6 +110,8 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 ### 不相容的 Gradle JVM
 
 ![不相容的 Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) 如果您遇到以下錯誤訊息，您需要下載正確的JVM版本後再重新嘗試：
+* 檢查[需求表](#Building-APK-recommended-specification-of-computer-for-building-apk-file)以確定你需要的**AAPS**版本的 JVM 版本，並做好記錄。
+
 * 點擊Android Studio右側的大象圖示 (1) 來打開Gradle視圖，然後打開設定 (2)，並選擇**Gradle設定** (3)：
 
 ![開啟Gradle設定](../images/studioTroubleshooting/161_GradleSettings.png)
@@ -118,7 +120,7 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
 ![選擇下載JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-* 在**版本** (1) 中，您需要選擇**17**。 然後從**供應商** (2) 選項中選擇**JetBrains Runtime**。 不要更改**位置** (3)。
+* 在**版本** (1) 中，選擇你所需的**AAPS**版本（即你在第一步中做的記錄）。 然後從**供應商** (2) 選項中選擇**JetBrains Runtime**。 不要更改**位置** (3)。
 
 ![選擇JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
