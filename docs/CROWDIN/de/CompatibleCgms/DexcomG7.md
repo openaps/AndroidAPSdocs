@@ -9,16 +9,12 @@ orphan: true
 
 Der G7 und ONE+ glätten die Glukosewerte weder in der (Dexcom-) App noch im Lesegerät. Dies ist anders als es beim G6 war. Mehr Details dazu findest Du [hier](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
-![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
-
-```{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)
-:class: warning
-**Durchschnittliche Glättung oder exponentielle Glättung** **MÜSSEN** aktiviert sein, um die Werte des G7 / ONE+ sinnvoll verwenden zu können.  
-```
+Picture is outdated!!! ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+`{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
 
 ## 1. xDrip+ (direkte Verbindung zum G7 oder ONE+)
 
-- Folge den Anweisungen: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Follow the instructions here: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
 - Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus
 
 - Passe die Einstellungen in xDrip+ so an, wie es unter  [xDrip+ Einstellungen](../CompatibleCgms/xDrip.md) beschrieben ist
@@ -33,7 +29,7 @@ This is not the BYODA app as this app can not receive G7 data at the moment. A p
 
 - Wenn Du bisher die originale Dexcom-App genutzt hast, musst Du diese im ersten Schritt nun deinstallieren. Wenn Du den Sensor-Kopplungscode noch kennst, kannst Du eine laufende Sensorsitzung weiterführen. Bitte merke ihn Dir daher, bevor Du die originale G7-App deinstallierst.
 
-- Lade die „patched.apk“ [hier](https://github.com/authorgambel/g7/releases) oder [hier](https://github.com/emmatovar27/dexcom-g7-apk-patcher/releases) heruner und installiere sie.
+- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
 
 - Gebe den Sensor Code (Kopplungscode) in der gepatchten App ein.
 
@@ -53,4 +49,20 @@ This is not the BYODA app as this app can not receive G7 data at the moment. A p
 - Wähle in xDrip+ "Companion App" als Datenquelle aus. Zusätzlich muss in den Bluetootheinstellungen (Einstellungen > Erweiterte Einstellungen > Bluetootheinstellungen) "Companion Bluetooth" aktiviert werden.
 -   Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
 
--   Passe die Einstellungen in xDrip+ so an, wie es unter  [xDrip+ Einstellungen](../CompatibleCgms/xDrip.md) beschrieben ist 
+-   Passe die Einstellungen in xDrip+ so an, wie es unter  [xDrip+ Einstellungen](../CompatibleCgms/xDrip.md) beschrieben ist
+
+## 4. Juggluco
+
+Version 9.0+ required
+
+- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+
+- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+
+- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+
+- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+
+- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+
+- Exception: Wear OS watches can bond without pressing an agree button.
