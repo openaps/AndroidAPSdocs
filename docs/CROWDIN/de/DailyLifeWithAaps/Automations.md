@@ -67,12 +67,12 @@ Um eine **Automatisierung** einzurichten, erstelle in **AAPS** eine 'Regel/Aufga
 
 ![Automation create](../images/automation_create.png)
 
-* vergebe einen Namen für die Aufgabe (Regel);
+* Vergebe einen Namen für die Aufgabe (Regel);
 * Wähle mindestens eine „Bedingung“ oder einen „Auslöser“ aus; und
 
 ![Automation condition](../images/automation_condition.png)
 
-* wähle eine ‘Aktion’;
+* Wähle eine „Aktion“;
 
 ![Automation action](../images/automation_action.png)
 
@@ -139,17 +139,17 @@ There are various ‘Triggers’ that can be selected by the user. Triggers are 
 
 **Optionen:**
 
-Mit den folgenden Auslösern können mehrer Bedinungen miteinander verknüpft werden
-* “Und”
-* “Oder”
-* "Entweder oder" (d.h. eine (und nur eine) der Bedingungen muss zutreffen, damit die Aktion ausgeführt wird)
+Mehrere Auslöser können mit den folgenden Bedingungen miteinander verknüpft werden
+* „Und“
+* „Oder“
+* „Entweder oder“ (d. h. eine (und nur eine) der Bedingungen muss zutreffen, damit die Aktion ausgeführt wird)
 
 **Trigger:** time vs. recurring time
 
 **Optionen:**
 
 * Zeit = einmaliges Ereignis
-* Wiederkehrende Zeit = etwas, das regelmäßig passiert (z.B.  einmal pro Woche, jeden Werktag etc.)
+* Wiederholungszeit = etwas, das regelmäßig passiert (z. B. einmal pro Woche, jeden Werktag etc.)
 
 **Trigger:** location
 

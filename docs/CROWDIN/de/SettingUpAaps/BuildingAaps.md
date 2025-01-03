@@ -66,7 +66,7 @@ Wenn Du den Eindruck hast, dass in der Anleitung Schritte falsch, fehlend oder m
 ## Schritt-für-Schritt Anleitung zum Erstellen der AndroidAPS.wear apk
 
 ```{admonition} WARNING
-:class: warning
+:class: warnung
 Wenn Du AAPS in der Vergangenheit bereits einmal erstellt hast, musst Du nicht alle der folgenden Schritte noch einmal durchlaufen.
 Bitte springe direkt zur [Update-Anleitung](../Maintenance/UpdateToNewVersion.md)!
 ```
