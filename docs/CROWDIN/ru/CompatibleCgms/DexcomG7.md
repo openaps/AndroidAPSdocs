@@ -9,16 +9,12 @@ orphan: true
 
 Следует отметить, что системы G7 и ONE+, в отличие от G6, не сглаживают значения ГК ни в самом приложении, ни в считывателе. Подробнее об этом [здесь](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
-![G7 английский](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
-
-```{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)
-:class: предупреждение
-**Среднее сглаживание или экспоненциальное сглаживание** **ДОЛЖНО быть включено для получения корректных значений G7 / ONE+.  
-```
+Picture is outdated!!! ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+`{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
 
 ## 1. xDrip+ (прямое соединение с G7 или ONE+)
 
-- Следуйте инструкциям здесь: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Follow the instructions here: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
 - В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
 
 - Отрегулируйте параметры xDrip+ в соответствии с пояснениями на странице настроек xDrip+  [настройки xDrip+](../CompatibleCgms/xDrip.md)
@@ -33,7 +29,7 @@ orphan: true
 
 - Удалите оригинальное приложение Dexcom, если вы его использовали прежде (Рабочая сессия сенсора может продолжаться - запишите код сенсора перед удалением приложения!)
 
-- Скачайте и установите установочный файл модифицированного приложения [здесь](https://github.com/authorgambel/g7/releases) или [здесь](https://github.com/emmatovar27/dexcom-g7-apk-patcher/releases).
+- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
 
 - Введите код сенсора в модифицированном приложении.
 
@@ -53,4 +49,20 @@ orphan: true
 - В качестве источника данных в Xdrip должен быть выбран "Companion App" в разделе Менее распространенные настройки > Настройки Bluetooth > поставьте галочку рядом с "Companion Bluetooth".
 -   В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
 
--   Отрегулируйте параметры xDrip+ в соответствии с пояснениями на странице настроек xDrip+  [настройки xDrip+](../CompatibleCgms/xDrip.md) 
+-   Отрегулируйте параметры xDrip+ в соответствии с пояснениями на странице настроек xDrip+  [настройки xDrip+](../CompatibleCgms/xDrip.md)
+
+## 4. Juggluco
+
+Version 9.0+ required
+
+- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+
+- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+
+- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+
+- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+
+- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+
+- Exception: Wear OS watches can bond without pressing an agree button.
