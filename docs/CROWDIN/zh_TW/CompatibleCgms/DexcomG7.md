@@ -9,16 +9,12 @@ orphan: true
 
 值得注意的是，與 G6 相比，G7 和 ONE+ 系統在應用程式和讀取器中都不會平滑值。 更多詳細資訊請參閱 [這裡](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
 
-![G7 英文](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
-
-```{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)
-:class: warning
-**平均平滑或指數平滑** **必須** 開啟，才能有效使用 G7 / ONE+ 的數值。  
-```
+Picture is outdated!!! ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+`{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
 
 ## 1. xDrip+（直接連接至 G7 或 ONE+）
 
-- 請參閱這裡的說明：[Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Follow the instructions here: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
 - 在 [組態建置工具 的血糖來源](#Config-Builder-bg-source) 中選擇 xDrip+。
 
 - 根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../CompatibleCgms/xDrip.md)
@@ -33,7 +29,7 @@ orphan: true
 
 - 如果之前有使用過原Dexcom應用程式，請將其解除安裝（如果傳感器正在運作，可以繼續使用傳感器，請在移除應用程式前記下傳感器代碼！）
 
-- 從 [這裡](https://github.com/authorgambel/g7/releases)或[這裡](https://github.com/emmatovar27/dexcom-g7-apk-patcher/releases)下載並安裝修補版.apk。
+- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
 
 - 在修補版應用程式中輸入傳感器代碼。
 
@@ -53,4 +49,20 @@ orphan: true
 - 在 xDrip+ 中必須選擇「夥伴應用程式」作為資料來源，並在進階設定 > 藍牙設定 > 啟用「夥伴藍牙」。
 -   在 [組態建置工具的血糖來源](#Config-Builder-bg-source) 中選擇 xDrip+。
 
--   根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../CompatibleCgms/xDrip.md) 
+-   根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../CompatibleCgms/xDrip.md)
+
+## 4. Juggluco
+
+Version 9.0+ required
+
+- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+
+- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+
+- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+
+- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+
+- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+
+- Exception: Wear OS watches can bond without pressing an agree button.
