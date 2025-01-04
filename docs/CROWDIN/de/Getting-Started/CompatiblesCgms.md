@@ -7,7 +7,7 @@ Dieser Abschnitt gibt einen kurzen Überblick über alle mit **AAPS** kompatible
 * [Allgemeine CGM-Empfehlungen](../CompatibleCgms/GeneralCGMRecommendation.md)
 * [Datenglättung](../CompatibleCgms/SmoothingBloodGlucoseData.md)
 * [xDrip+Einstellungen](../CompatibleCgms/xDrip.md)
-* [Nightscout als BZ-Quelle](../CompatibleCgms/CgmNightscoutUpload.md): Auch wenn Nightscout als BZ-Quelle für die Insulinabgabe im Closed-Loop genutzt werden kann, **wird diese Methode nicht empfohlen**, da sie zwingend auf eine stabile (mobile) Datenverbindung oder eine WLAN-Verbindung angewiesen ist. Das bedeutet, dass Deine **CGM**-Daten nur dann von **AAPS** empfangen werden, wenn Du eine Online-Verbindung zu Deiner Nightscout-Website hast. Für ein zuverlässigeres Setup ist der einsatz eines CGM mit lokaler Übertragung vom Receiver an **AAPS** die bessere Option.
+* [Nightscout als BZ-Quelle](../CompatibleCgms/CgmNightscoutUpload.md): Auch wenn Nightscout als BZ-Quelle für die Insulinabgabe im Closed-Loop genutzt werden kann, **wird diese Methode nicht empfohlen**, da sie zwingend auf eine stabile (mobile) Datenverbindung oder eine WLAN-Verbindung angewiesen ist. Das bedeutet, dass Deine **CGM**-Daten nur dann von **AAPS** empfangen werden, wenn Du eine Online-Verbindung zu Deiner Nightscout-Website hast. Für ein zuverlässigeres Setup ist der Einsatz eines CGM mit lokaler Übertragung vom Receiver an **AAPS** die bessere Option.
 
 | CGM                                                   | Verfügbare [BZ-Quellen](../SettingUpAaps/ConfigBuilder.md#bg-source) |
 | ----------------------------------------------------- | -------------------------------------------------------------------- |
