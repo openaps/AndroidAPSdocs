@@ -11,13 +11,13 @@
 
 | CGM                                                  | 可用的[BG 資料來源](../SettingUpAaps/ConfigBuilder.md#bg-source) |
 | ---------------------------------------------------- | --------------------------------------------------------- |
-| [Dexcom G7 和 ONE+](../CompatibleCgms/DexcomG7.md)    | xDrip+, DiaKEM app or Juggluco                            |
-| [Dexcom G6 和 ONE](../CompatibleCgms/DexcomG6.md)     | xDrip+ or BYODA (only G6)                                 |
+| [Dexcom G7 和 ONE+](../CompatibleCgms/DexcomG7.md)    | xDrip+、DiaKEM 應用程式或 Juggluco                              |
+| [Dexcom G6 和 ONE](../CompatibleCgms/DexcomG6.md)     | xDrip+ 或 BYODA（僅限 G6）                                     |
 | [Dexcom G5](../CompatibleCgms/DexcomG5.md)           | xDrip+                                                    |
-| [Libre 3](../CompatibleCgms/Libre3.md)               | xDrip+ (no transmitter) or Juggluco                       |
-| [Libre 2](../CompatibleCgms/Libre2.md)               | xDrip+ (no transmitter) or Juggluco                       |
-| [Libre 1](../CompatibleCgms/Libre1.md)               | xDrip+、Glimp、Tomato 或 Diabox。 Need a transmitter          |
-| [Eversense](../CompatibleCgms/Eversense.md)          | xDrip+ or ESEL/Eversense patched App                      |
+| [Libre 3](../CompatibleCgms/Libre3.md)               | xDrip+（無發射器）或 Juggluco                                    |
+| [Libre 2](../CompatibleCgms/Libre2.md)               | xDrip+（無發射器）或 Juggluco                                    |
+| [Libre 1](../CompatibleCgms/Libre1.md)               | xDrip+、Glimp、Tomato 或 Diabox。 需要發射器                       |
+| [Eversense](../CompatibleCgms/Eversense.md)          | xDrip+ 或 ESEL/Eversense 修補的應用程式                           |
 | [Enlite（MM640G/MM630G）](../CompatibleCgms/MM640g.md) | xDrip+ 或 MM640g + 600系列 Android 上傳程式                      |
 | [PocTech](../CompatibleCgms/PocTech.md)              | PocTech                                                   |
 | [歐泰(Ottai)](../CompatibleCgms/OttaiM8.md)            | 歐泰(Ottai)                                                 |

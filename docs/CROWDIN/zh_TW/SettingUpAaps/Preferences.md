@@ -486,7 +486,7 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 
 你可以通過向開發者發送崩潰報告來幫助進一步開發**AAPS**。
 
-(preferences-maintenance-logdirectory)= Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. 此設定允許用戶選擇電話上的一個目錄，**AAPS**將在該目錄中儲存偏好設定、日誌及其他檔案。
+(preferences-maintenance-logdirectory)= 維護設定還包括**AAPS** 目錄，該目錄可以直接在維護選單中找到。 此設定允許用戶選擇電話上的一個目錄，**AAPS**將在該目錄中儲存偏好設定、日誌及其他檔案。
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
