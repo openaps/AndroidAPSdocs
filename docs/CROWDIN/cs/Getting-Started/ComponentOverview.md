@@ -45,7 +45,6 @@ The Combo, the Insight and the older Medtronic are solid pumps, and loopable. Th
 
 Další informace o konfiguraci Nightscoutu pro použití s AndroidAPS najdete [zde](../Installing-AndroidAPS/Nightscout.md).
 
-- The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... not so easy with the Combo. (To se může v budoucnu změnit, až Android 8.1 bude více oblíbený)
 - Initial pairing is simpler with the Dana-i/RS. Ale to obvykle děláte pouze jednou, takže to ovlivňuje pouze situace, pokud chcete testovat nové funkce s různými pumpami.
 - Combo zatím pracuje s převodem obrazu do strojově čitelné podoby. Obecně to funguje skvěle, ale je to pomalé. Pro smyčku to tolik nevadí, vše pracuje na pozadí. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
 - The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. At nighttime, you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable so that it does neither beep nor vibrate.
