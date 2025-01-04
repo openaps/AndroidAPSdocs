@@ -45,7 +45,6 @@ The Combo, the Insight and the older Medtronic are solid pumps, and loopable. Th
 
 Bununla birlikte, tercih edilen pompa olarak DanaR/RS ve Dana-i'nin Combo'ya karşı avantajları şunlardır:
 
-- Dana pompaları, Android >= 5.1 sürümüne sahip hemen hemen her telefona flash lineage gerekmeden bağlanır. Telefonunuz bozulursa, genellikle Dana pompalarıyla çalışan herhangi bir telefonu kolayca hızlı bir şekilde değiştirebilirsiniz... Bu Combo ile o kadar kolay değil. (Bu, Android 8.1 daha popüler hale geldiğinde değişebilir)
 - Dana-i/RS ile ilk eşleştirme daha kolaydır. Ancak bunu genellikle yalnızca bir kez yaparsınız, bu nedenle yalnızca yeni bir özelliği farklı pompalarla test etmek istediğinizde etki eder.
 - Şimdiye kadar Combo, ekran ayrıştırma ile çalışıyor. Genel olarak harika çalışıyor ama yavaş. Döngü için bu çok önemli değil çünkü her şey arka planda çalışıyor. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
 - Combo, GBO'larin sonunda titrer, DanaR, SMB'de titrer (veya bip sesi çıkarır). At nighttime, you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable so that it does neither beep nor vibrate.
