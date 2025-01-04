@@ -48,7 +48,7 @@ Combo、Insight以及较旧的Medtronic都是可靠的泵，并且可以实现�
 - Dana-i/RS的初次配对更为简单。 但您通常只需要做一次配对，所以它只会在您想用不同的泵测试新功能时产生影响。
 - 到目前为止，Combo泵是通过屏幕解析来工作的。 通常这种方法效果很好，但速度较慢。 但对于闭环控制来说，这并不重要，因为所有工作都是在后台完成的。 不过，您仍然需要更多的时间来保持连接，因此蓝牙连接断开的风险也更高，如果您在注射大剂量胰岛素的同时做饭并远离手机，这种情况就不太容易避免。
 - Combo泵会在临时基础率（TBR）结束时震动，而DanaR泵会在进行超微大剂量（SMB）时震动（或发出蜂鸣声）。 在夜间，您可能更频繁地使用临时基础率（TBR），而不是方波大剂量输注（SMB）。  Dana-i/RS泵可以进行配置，使其既不发出蜂鸣声也不震动。
-- 在Dana-i/RS泵上，只需几秒钟就可以读取带碳水化合物的历史数据，这使得在手机离线时也能轻松更换手机，并在获得一些持续葡萄糖监测（CGM）值后继续闭环控制。
+- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon as some CGM values are in.
 - 所有**AAPS**可以通信的泵在出厂时都具有防水功能。 只有Dana泵还因其密封的电池舱和储液罐填充系统而享有“保修期内的防水”保障。
 
 ### 血糖数据源
@@ -71,7 +71,7 @@ Combo、Insight以及较旧的Medtronic都是可靠的泵，并且可以实现�
 
 ### 智能手表
 
-您可以选择任何搭载Android WearOS 1.x至4.x版本的智能手表。 **注意，WearOS 5.x版本不兼容！**
+You can choose any smartwatch with Android WearOS 2.x up to 4.x. **Beware, WearOS 5.x is not always compatible!**
 
 用户们正在创建一个[经过测试的手机和手表清单](#Phones-list-of-tested-phones)。 有不同的表盘可与**AAPS**配合使用，您可以在[此处](../WearOS/WearOsSmartwatch.md)找到它们。
 
