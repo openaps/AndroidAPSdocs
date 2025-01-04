@@ -76,8 +76,8 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
   * 如果您使用**動態 ISF**，請勿在**自動化**設定任何以**血糖**為條件的**設定檔百分比**， 因為這已經是動態敏感度演算法的一部分。
   * *** 再次提醒：請關閉所有**自動化**中與**血糖** 相關的 **設定檔 %**，因為這可能會導致胰島素劑量過多！ *****
   * 請勿長時間使用超過 100% 的 **設定檔百分比** 增加值。 如果你的**設定檔**已有變更，請在「治療頁籤」中的**設定檔**切換，複製帶有% 的**設定檔**來建立新的設定檔。
-* Enable “SMB always” and “SMB after carbs” for FreeStyle Libre 2 and Libre 3 users
-  * Note : Although the limitation was removed on **AAPS** side, this functionality is not fully operational yet, since **AAPS** needs to receive proper identification of the CGM used. See the [bug opened on xDrip+ project](https://github.com/NightscoutFoundation/xDrip/issues/3841).
+* 為使用 FreeStyle Libre 2 和 Libre 3 的用戶啟用「始終啟用 SMB」與「碳水後啟用 SMB」選項。
+  * 注意：儘管在**AAPS** 端已移除限制，但此功能尚未完全運作，因為**AAPS** 需要接收所使用的 CGM 的正確認證。 請參閱[xDrip+ 專案中開啟的錯誤](https://github.com/NightscoutFoundation/xDrip/issues/3841)。
 * 新增的 **自動化**觸發條件
 * 無人操作的設定匯出
 
@@ -92,7 +92,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
   * 由於 Android 的限制，主畫面上的 BYODA 按鈕已不再提供。 目前尚無已知的解決方法。
 * 更新指示：遵循[更新到新版本](../Maintenance/UpdateToNewVersion.md)的指南。
 * 升級後：
-  * Set the new [“AAPS directory” setting](#preferences-maintenance-logdirectory), in the Maintenance tab.
+  * 在維護標籤中設置新的[“AAPS目錄”設定](#preferences-maintenance-logdirectory)。
 
 ### 詳細變更
 
