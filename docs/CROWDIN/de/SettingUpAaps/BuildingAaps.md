@@ -63,7 +63,7 @@ Solltest Du Probleme beim Erstellen der **AAPS**-App haben, kannst Du im Abschni
 
 Wenn Du den Eindruck hast, dass in der Anleitung Schritte falsch, fehlend oder missverständlich sind, oder Du trotzdem noch Probleme hast, wende Dich über [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) oder [Discord](https://discord.gg/4fQUWHZ4Mw) an andere **AAPS**-Nutzende. Wenn Du selbst etwas ändern möchtest (z.B. Screenshots aktualisieren _etc_), erstelle einen entsprechenden [Pull-Request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
-## Schritt-für-Schritt Anleitung zum Erstellen der AndroidAPS.wear apk
+## Schritt-für-Schritt Anleitung zum Erstellen der AAPS-App
 
 ```{admonition} WARNING
 :class: warnung

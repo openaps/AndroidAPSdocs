@@ -17,7 +17,7 @@ Die meisten Anpassungen der temporären Ziele, **AAPS** folgen etc. können übe
 
 ## Sicherheitshinweise
 
-Wenn Du **SMS-Befehle** in **AAPS**freischaltest, behalte im Kopf, dass das Smartphone, dass SMS-Befehle versenden soll auch gestohlen werden kann und/oder von jemand anderem verwendet werden kann. Sichere Dein Smartphone mindestens mit einer PIN. Ein starkes Passwort und/oder eine biometrische Sicherung werden dringend empfohlen. Wichtig ist, dass das Smartphone-Passwort sich vom APK-Master-Passwort (das Passwort, das benötigt wird, um die **AAPS** Einstellungen zu ändern) unterscheidet.
+Wenn Du **SMS-Befehle** in **AAPS** freischaltest, behalte im Kopf, dass das Smartphone, dass SMS-Befehle versenden soll auch gestohlen werden kann und/oder von jemand anderem verwendet werden kann. Sichere Dein Smartphone mindestens mit einer PIN. Ein starkes Passwort und/oder eine biometrische Sicherung werden dringend empfohlen. Wichtig ist, dass das Smartphone-Passwort sich vom APK-Master-Passwort (das Passwort, das benötigt wird, um die **AAPS** Einstellungen zu ändern) unterscheidet.
 
 Außerdem ist es empfehlenswert, eine [zweite Telefonnummer](#SMSCommands-authorized-phone-numbers) für SMS-Kommandos einzurichten. Mit der zweiten Rufnummer hast Du, für den Fall, dass Dein eigentliches Remote-Smartphone manipuliert wurde, dann die Möglichkeit die SMS-Kommunikation zu [deaktivieren](#SMSCommands-other).
 
