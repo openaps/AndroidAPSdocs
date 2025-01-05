@@ -21,6 +21,8 @@ SMB/AMA——示例显示了用户**配置文件**中由用户设置的静态**I
 
 ![动态ISF](../images/DynISF2.png)
 
+The section circled in red shows: <br/> Alg:`DynamicISF value (based on TDD)`<br/> `profile ISF` -> `ISF as calculated by DynISF (used in SMB algorithm)` (`ISF used for COB calculations and bolus wizard`)
+
 实施中使用了上述公式来计算当前**ISF**，并在oref1预测中用于**IOB**（活性胰岛素）、**ZT**（零临时胰岛素）和**UAM**（未宣布餐时）的计算。 It is also used for **COB** and in the bolus wizard. Further discussion can be found here: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
 ## 总日剂量（TDD）
