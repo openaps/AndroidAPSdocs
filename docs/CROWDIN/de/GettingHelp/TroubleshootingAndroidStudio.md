@@ -32,7 +32,7 @@ The common reasons for gradle sync failures are:
 * [Incompatible Gradle JVM](#incompatible-gradle-jvm)
 * [Incompatible version of the Android Gradle plugin](#incompatible-version-of-android-gradle-plugin)
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*Wichtig*: Nachdem Du die Anleitung zum Beheben Deines Problems befolgt hast, ist es notwendig den [Gradle Sync](#gradle-resync) erneut anzustoßen.
 
 
 ### Uncommitted changes
@@ -41,7 +41,7 @@ If you receive a failure message this this one:
 
 ![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
-#### Schritt 1 - Überprüfe deine Git Installation
+#### Schritt 1 - Überprüfe Deine Git Installation
   * Öffne den Terminal Reiter (1) im unteren Bereich von Android Studio und kopiere den folgenden Text, oder tippe ihn ins Terminal ein.
     ```
     git --version
@@ -59,7 +59,7 @@ If you receive a failure message this this one:
     ```
     ist deine git Installation fehlerhaft.
 
-  * [Prüfe die git Installation](#BuildingAaps-steps-for-installing-git)
+  * [Prüfe die Git-Installation](#BuildingAaps-steps-for-installing-git)
 
   * if on Windows and the Git was just installed, you should restart your computer to make Git globally available after the installation
 
