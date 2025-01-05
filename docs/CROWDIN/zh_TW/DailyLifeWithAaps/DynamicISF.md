@@ -21,6 +21,8 @@ SMB/AMA - 用戶的**個人設定**示例，其中包含用戶設置的靜態**�
 
 ![實作使用上述方程計算當前<strong x-id="1">ISF</strong>，並在 oref1 預測中用於<strong x-id="1">體內胰島素</strong>、<strong x-id="1">ZT</strong> 和 <strong x-id="1">UAM</strong>。](../images/DynISF2.png)
 
+The section circled in red shows: <br/> Alg:`DynamicISF value (based on TDD)`<br/> `profile ISF` -> `ISF as calculated by DynISF (used in SMB algorithm)` (`ISF used for COB calculations and bolus wizard`)
+
 該實作使用上述公式來計算當前的 **ISF**，並應用於 **IOB**、**ZT** 和 **UAM** 的oref1 預測中。 這也用於 **COB** 和注射嚮導中。 更詳細的討論可以在此找到： [Chris Wilson 談胰島素敏感度（校正因子）與循環與學習，2022 年 2 月 6 日](https://www.youtube.com/watch?v=oL49FhOts3c)。
 
 ## TDD（每日總胰島素劑量）
