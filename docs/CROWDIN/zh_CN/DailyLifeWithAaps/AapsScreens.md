@@ -164,9 +164,8 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 ![部分D](../images/Home2020_TBR.png)
 
-**注射器**：活性胰岛素（IOB）- 你体内剩余的活性胰岛素量
-
-1. 如果只有标准基础量在运行且没有来自先前大剂量的剩余胰岛素，则体内活性胰岛素数字将为零。
+1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
+    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
     
     * 如果最近有一段时间基础量减少，IOB可能为负数。
     * 按压图标以查看大剂量和基础胰岛素的分配。
@@ -175,7 +174,9 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 3. **紫色线条**：当前基础率。 图标会发生变化，以反映基础率（100%时是直线）的临时变化 
     * 按压图标以查看基础基础率和任何临时基础率（包括剩余时长）的详细信息。
-4. **上下箭头**：指示[Autosens](#Open-APS-features-autosens)状态（启用或禁用），下方显示值。
+4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
+    * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
+    * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
 
 (aaps-screens-carbs-required)=
 
@@ -693,13 +694,13 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 
 ## 历史浏览器
 
-可以通过点击菜单右侧的3个点，然后选择“历史记录”来访问此视图。 通过Config Builder无法将项目添加到主菜单中。 也可以通过[操作选项卡](#action-tab)底部的按钮来访问它。
+可以通过点击菜单右侧的3个点，然后选择“历史记录”来访问此视图。 It is not possible to put in the main menu through the Config Builder. 也可以通过[操作选项卡](#action-tab)底部的按钮来访问它。
 
 允许您在**AAPS**历史记录中回溯。 请参阅专门页面[查看您的数据>历史记录浏览器](../Maintenance/Reviewing.md)。
 
 ## Statistics
 
-可以通过点击菜单右侧的3个点，然后选择“统计”来访问此视图。 通过Config Builder无法将项目添加到主菜单中。
+可以通过点击菜单右侧的3个点，然后选择“统计”来访问此视图。 It is not possible to put in the main menu through the Config Builder.
 
 为您提供关于您的TIR（入框时间）和TDD（每日总剂量）的统计数据。 请参阅专用页面[查看您的数据>统计信息](#reviewing-statistics)。
 
@@ -707,7 +708,7 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 
 ## 配置文件助手
 
-可以通过点击菜单右侧的3个点，然后选择“Profile Helper（配置文件助手）”来访问此视图。 通过Config Builder无法将项目添加到主菜单中。 “配置文件助手”可以帮助您：
+可以通过点击菜单右侧的3个点，然后选择“Profile Helper（配置文件助手）”来访问此视图。 It is not possible to put in the main menu through the Config Builder. “配置文件助手”可以帮助您：
 
 * [为孩子从头开始构建配置文件](#your-aaps-profile-profile-from-scratch-for-a-kid)
 * [比较两个配置文件](#your-aaps-profile-compare-profiles)
