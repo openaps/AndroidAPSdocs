@@ -55,7 +55,7 @@ Die Vorteile der DanaR/RS und Dana-i vs. der Combo sind aber:
 
 Siehe die eigene Seite über [Kompatiblen Pumpen](../Getting-Started/CompatiblesCgms.md).
 
-### **AAPS**-.apk Datei
+### **AAPS**.apk-Datei
 
 Die Haupt-Komponente des Systems. Bevor Du die App installieren kannst, musst Du die apk-Datei vorher selbst erstellen. Die Anleitung ist [hier](../SettingUpAaps/BuildingAaps.md).
 
