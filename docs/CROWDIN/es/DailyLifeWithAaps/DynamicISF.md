@@ -21,6 +21,8 @@ Dynamic ISF - an example of a user's **ISF** subject to change as determined by 
 
 ![Dyn ISF](../images/DynISF2.png)
 
+The section circled in red shows: <br/> Alg:`DynamicISF value (based on TDD)`<br/> `profile ISF` -> `ISF as calculated by DynISF (used in SMB algorithm)` (`ISF used for COB calculations and bolus wizard`)
+
 The implementation uses the above equation to calculate current **ISF** and in the oref1 predictions for **IOB**, **ZT** and **UAM**. It is also used for **COB** and in the bolus wizard. Further discussion can be found here: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
 ## TDD (Total Daily Dose)
