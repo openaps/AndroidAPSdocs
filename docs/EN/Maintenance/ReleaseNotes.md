@@ -64,25 +64,22 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 ```
 
 (version3300)=
-
 ## Version 3.3.1.0
 
 Release date: 06-01-2025
 
-### Detailed changes
-
-#### UI changes
+### UI changes
 
 * Added colors to differentiate between AAPSClient and AAPSClient2 @MilosKozak
+* Improved Users actions layout and icons
 
-#### Other functionalities
+### Other functionalities
 
 * New automation trigger : steps count @Roman Rihter
 * Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR) @MilosKozak
 * NSClient v3 : make Annoucement work (_i.e._ from AAPSClient to AAPS) @MilosKozak
-* Improved Users actions layout and icons
 
-#### Technical changes & bug fixes
+### Technical changes & bug fixes
 
 * Fix Insight crash @philoul
 * Fix creation of extra-numerous deviceStatus entries in Nightscout @MilosKozak
