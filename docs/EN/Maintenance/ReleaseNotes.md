@@ -75,9 +75,9 @@ Release date: 06-01-2025
 
 ### Other functionalities
 
-* New automation trigger : steps count @Roman Rihter
+* New automation trigger : [steps count](#screen-heart-rate-steps) @Roman Rihter
 * Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR) @MilosKozak
-* NSClient v3 : make Annoucement work (_i.e._ from AAPSClient to AAPS) @MilosKozak
+* NSClient v3 : make Announcement work (_i.e._ from AAPSClient to AAPS) @MilosKozak
 
 ### Technical changes & bug fixes
 
