@@ -70,7 +70,7 @@ Release date: 06-01-2025
 
 ### UI changes
 
-* Added colors to differentiate between AAPSClient and AAPSClient2 @MilosKozak
+* [Added colors to differentiate between AAPSClient and AAPSClient2](#RemoteControl_aapsclient) @MilosKozak
 * Improved Users actions layout and icons
 
 ### Other functionalities
