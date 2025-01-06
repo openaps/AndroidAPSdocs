@@ -291,7 +291,7 @@ Screenshots detailing the Automation triggers:
 
 ![Export on Pod activation](../images/Automations/automation_settingsexport_podactivation_400px.png)
 
-Note: Export execution will be logged on Careportal
+Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Preferences > Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
 
 
 # Automation Logs
