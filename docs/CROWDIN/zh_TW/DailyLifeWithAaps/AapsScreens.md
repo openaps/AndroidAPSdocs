@@ -164,9 +164,8 @@ Libre 使用者的特殊注意事項：
 
 ![D 區](../images/Home2020_TBR.png)
 
-**針筒**: 體內的胰島素量 (IOB) - 你身體內活性胰島素的數量
-
-1. 如果僅運作標準基礎率，且沒有先前注射的胰島素剩餘量，則 IOB 為零。
+1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
+    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
     
     * 如果最近有減少的基礎率，IOB 可能為負值。
     * 按圖示可查看注射胰島素與基礎胰島素的分配情況。
@@ -175,7 +174,9 @@ Libre 使用者的特殊注意事項：
 
 3. **紫色線**: 當前的基礎率。 圖示會根據基礎率的臨時變化而改變（維持在 100%） 
     * 按圖示可查看基礎基礎率和任何臨時基礎率的詳細資訊(包括剩餘時間)。
-4. **上下箭頭**: 表示實際的 [自動敏感度調整](#Open-APS-features-autosens) 狀態（啟用或停用），數值顯示在圖示下方
+4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
+    * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
+    * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
 
 (aaps-screens-carbs-required)=
 
@@ -693,13 +694,13 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ## 歷史瀏覽器
 
-可以通過按下選單右側的 3 個點然後選擇「歷史」來讀取此視圖。 無法通過組態建置工具在主選單中放入它。 還可以通過[手動操作標籤](#action-tab)底部的一個按鈕讀取。
+可以通過按下選單右側的 3 個點然後選擇「歷史」來讀取此視圖。 It is not possible to put in the main menu through the Config Builder. 還可以通過[手動操作標籤](#action-tab)底部的一個按鈕讀取。
 
 允許您查詢在 **AAPS** 中的歷史紀錄。 請參閱專門頁面 [檢視您的資料 > 歷史瀏覽器](../Maintenance/Reviewing.md)。
 
 ## 統計資料
 
-這個視圖可通過點擊選單右側的三個點來進入，然後選擇統計資料。 無法通過組態建置工具在主選單中放入它。
+這個視圖可通過點擊選單右側的三個點來進入，然後選擇統計資料。 It is not possible to put in the main menu through the Config Builder.
 
 提供您有關您在範圍內的時間和每日總劑量的統計資料。 請參閱專門頁面 [檢視您的資料 > 統計資料](#reviewing-statistics)。
 
@@ -707,7 +708,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ## 設定檔助手
 
-此視圖可以通過按下選單右側的 3 個點然後選擇「設定檔助手」來讀取。 無法通過組態建置工具在主選單中放入它。 設定檔助手 可以幫助您：
+此視圖可以通過按下選單右側的 3 個點然後選擇「設定檔助手」來讀取。 It is not possible to put in the main menu through the Config Builder. 設定檔助手 可以幫助您：
 
 * [從零開始為小孩建立設定檔](#your-aaps-profile-profile-from-scratch-for-a-kid)
 * [比較兩個設定檔](#your-aaps-profile-compare-profiles)

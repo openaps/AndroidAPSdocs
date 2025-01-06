@@ -24,6 +24,8 @@
 
 灵敏度是根据过去8小时的数据或上次更换输注部位以来的数据（如果少于8小时）来计算的。 如果碳水化合物未被吸收，则会在偏好设置中指定的时间后被削减。 只有Oref1算法支持未宣布的餐食（UAM）。 这意味着检测到UAM的时间段会被排除在灵敏度计算之外。 因此，如果您在使用带有UAM功能的闭环胰岛素输注系统（SMB），您必须选择Oref1算法才能正常工作。 有关更多信息，请阅读[OpenAPS Oref1文档](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)。
 
+Oref1 is the recommended option : it is the only one that can detect UAM and work with [OpenAps SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+
 ## 同时摄入的碳水化合物
 
 在使用AAPS时，WeightedAverage与Oref1之间存在显著差异。 Oref插件期望一次只有一餐在衰减。 这意味着第二餐要在第一餐完全衰减后才开始衰减。 而AAPS+WeightedAverage则会在您输入碳水化合物后立即开始衰减。 如果同时有多餐在体内，最小碳水化合物衰减会根据餐食大小和最大吸收时间进行调整。 因此，与Oref插件相比，最小吸收量会相应更高。

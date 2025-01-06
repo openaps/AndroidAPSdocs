@@ -164,9 +164,8 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 ![Раздел D](../images/Home2020_TBR.png)
 
-**Пиктограмма шприца**: инсулин "на борту" (IOB, АктИнс) - количество активного инсулина в организме
-
-1. Значение активного инсулина IOB будет равно нулю, если активна только база текущего профиля и нет остаточного инсулина от предыдущих болюсов.
+1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
+    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
     
     * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
     * Нажмите на иконку (только короткое нажатие), чтобы увидеть как IOB распределяется между базой и болюсом.
@@ -175,7 +174,9 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 3. **Фиолетовая линия**: текущая скорость базала. Пиктограмма меняется, отражая временные изменения в базальной скорости (плоская при 100%) 
     * Кратко нажмите на иконку, чтобы увидеть подробности базала (значение текущего базала, время начала, остаток/общая продолжительность в минутах)
-4. **Пиктограмма со стрелками вверх & вниз**: отображает актуальный статус [Autosens](#Open-APS-features-autosens) (включен или отключен) и под ней его текущий расчет
+4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
+    * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
+    * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
 
 (aaps-screens-carbs-requirement)=
 
@@ -693,13 +694,13 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 
 ## Просмотр журнала
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Просмотр журнала. Его невозможно показать в главном меню через Конфигуратор. Доступ к нему также можно получить через кнопку в нижней части вкладки [Действия](#action-tab).
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Просмотр журнала. It is not possible to put in the main menu through the Config Builder. Доступ к нему также можно получить через кнопку в нижней части вкладки [Действия](#action-tab).
 
 Позволяет перемещаться по журналу **AAPS**. См соответствующую страницу - [ Просмотр данных > Журнал истории](../Maintenance/Reviewing.md).
 
 ## Statistics
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Статистика. Его невозможно показать в главном меню через Конфигуратор.
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Статистика. It is not possible to put in the main menu through the Config Builder.
 
 Дает статистику о времени в целевом диапазоне и суммарной суточной дозе инсулина TDD. См соответствующую страницу - [Просмотр данных > Статистика](#reviewing-statistics).
 
@@ -707,7 +708,7 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 
 ## Profile Helper
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Помощник профиля. Его невозможно показать в главном меню через Конфигуратор. Помощник профиля поможет:
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Помощник профиля. It is not possible to put in the main menu through the Config Builder. Помощник профиля поможет:
 
 * [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
 * [compare two profiles](#your-aaps-profile-compare-profiles)

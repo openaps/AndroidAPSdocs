@@ -164,9 +164,8 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 ![Section D](../images/Home2020_TBR.png)
 
-**Syringe**: insulin on board (IOB) - amount of active insulin inside your body
-
-1. La insulina a bordo de la imagen sería cero si la basal estándar estuviera en funcionamiento y no hubiera ninguna insulina restante de bolos previos.
+1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
+    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
     
     * El IOB puede ser negativo si recientemente han habido períodos de reducción basal.
     * Pulsa el icono para ver la división de los bolos y de la insulina basal.
@@ -175,7 +174,9 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%) 
     * Pulsa sobre el icono para ver la tasa basal base y los detalles de cualquier basal temporal (incluida la duración restante)
-4. **Arrows up & down**: indicating actual [Autosens](#Open-APS-features-autosens) status (enabled or disabled) and value is shown below icon
+4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
+    * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
+    * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
 
 (aaps-screens-carbs-required)=
 

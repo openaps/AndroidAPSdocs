@@ -164,9 +164,8 @@ Ein Symbol mit einem Kindergesicht oben rechts in diesem Abschnitt zeigt, dass D
 
 ![Abschnitt D](../images/Home2020_TBR.png)
 
-**Spritze**: Insulin on Bord (IOB) - Menge des aktiven Insulins im Körper
-
-1. Das Insulin on Board wäre Null, wenn nur deine Standardbasalrate liefe und kein Insulin aus einem früheren Bolus mehr wirken würde.
+1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
+    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
     
     * IOB kann negativ sein, wenn zuvor die Basalrate reduziert worden ist.
     * Ein Klick auf das Symbol zeigt die Aufteilung von Bolus und Basal-Insulin.
@@ -175,7 +174,9 @@ Ein Symbol mit einem Kindergesicht oben rechts in diesem Abschnitt zeigt, dass D
 
 3. **Lila Linie**: current basal rate. Das Symbol verändert sich, um eine temporäre Basalrate zu zeigen (Standard ist 100%) 
     * Klicke auf das Icon um Details zur Basalrate und einer eventuellen temporären Basalrate (inkl. verbleibende Dauer) angezeigt zu bekommen.
-4. **Pfeile nach oben & unten**: zeigen den aktuellen [Autosens](#Open-APS-features-autosens)-Status (aktiviert oder deaktiviert) an. Der Wert wird unterhalb des Symbols angezeigt.
+4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
+    * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
+    * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
 
 (aaps-screens-carbs-required)=
 
@@ -693,13 +694,13 @@ Auf dieser Registerkarte werden alle Notizen und Alarme angezeigt, die von Night
 
 ## Historie
 
-Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl der Historie aufgerufen werden. Es kann nicht über die Konfiguration im Hauptmenü sichtbar gemacht werden. Du kommst auch über eine Schaltfläche am unteren Rand des [Aktionen-Reiters](#action-tab) dort hin.
+Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl der Historie aufgerufen werden. It is not possible to put in the main menu through the Config Builder. Du kommst auch über eine Schaltfläche am unteren Rand des [Aktionen-Reiters](#action-tab) dort hin.
 
 Zeigt die **AAPS**-Historie (d. h. die historischen Verläufe) an. Siehe dazu auch [Deine Daten reviewen > AAPS-Historie](../Maintenance/Reviewing.md).
 
 ## Statistiken
 
-Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl der Statistiken aufgerufen werden. Es kann nicht über die Konfiguration im Hauptmenü sichtbar gemacht werden.
+Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl der Statistiken aufgerufen werden. It is not possible to put in the main menu through the Config Builder.
 
 Stellt Dir Statistiken über „Time in Range“ (dt. Zeit im Zielbereich) und „Total Daily Dose“ (dt. täglicher Gesamtinsulinbedarf) zur Verfügung. Siehe dazu auch [Deine Daten reviewen > AAPS-Statistiken](#reviewing-statistics).
 
@@ -707,7 +708,7 @@ Stellt Dir Statistiken über „Time in Range“ (dt. Zeit im Zielbereich) und �
 
 ## Profile Helper
 
-Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl des Profil-Helfers aufgerufen werden. Es kann nicht über die Konfiguration im Hauptmenü sichtbar gemacht werden. Der Profil-Helfer kann Dir dabei helfen:
+Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl des Profil-Helfers aufgerufen werden. It is not possible to put in the main menu through the Config Builder. Der Profil-Helfer kann Dir dabei helfen:
 
 * [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
 * [vergleiche zwei Profile](#your-aaps-profile-compare-profiles)
