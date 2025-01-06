@@ -293,7 +293,7 @@
 
 ![在 Pod 註冊時匯出](../images/Automations/automation_settingsexport_podactivation_400px.png)
 
-注意：匯出執行將記錄在照護入口上
+Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Preferences > Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
 
 
 # 自動化日誌
