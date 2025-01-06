@@ -214,7 +214,7 @@ In diesem Beispiel wählen wir Nightscout als Auswertungsserver aus und konfigur
 :class: Note
 Klicke [hier](#version3200), um zu den **AAPS** 3.2.0.0 Release Notes zu gelangen, die die Unterschiede zwischen der obersten Option **NSClient** (das ist die „v1“, auch wenn es nicht daneben steht) und der zweiten Option **NSClient v3** erläutern.
 
-Nightscout-Nutzende sollten **NSClientV3** wählen, es sei denn, Du willst über Nightscout die Werte überwachen und remote Behandlungen eingeben(_z.B._ als Elternteil oder Betreuer, das **AAPS** für ein Kind verwendet). In diesem Fall Fall wähle (bis auf weiteres) die erste Option "**Nightscout-Client**". 
+Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout web interface, in which case, choose the first option "**NSClient**" until further notice. 
 ```
 Für Tidepool ist es sogar noch einfacher, da Du nur Deine persönlichen Login-Daten benötigst.
 
