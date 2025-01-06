@@ -67,6 +67,8 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 
 ## Version 3.3.0.1
 
+06/01 12h
+
 ### Detailed changes
 
 #### CGMs and Pumps
@@ -77,10 +79,16 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 
 #### Other functionalities
 
+* New automation trigger : steps count
+* Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR)
+
 #### Smartwatches
 
 #### Technical changes & bug fixes
 
+* Fix Insight crash @philoul
+* Fix creation of extra-numerous deviceStatus entries in Nightscout
+* Fix carbs absorption
 
 ## Version 3.3.0.0
 
