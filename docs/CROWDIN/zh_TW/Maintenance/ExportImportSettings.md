@@ -65,17 +65,17 @@
 
 **注意**：_匯出的設定將使用你的 AAPS 主密碼進行加密：若沒有用於匯出的主密碼， 你將無法匯入設定檔！_
 
-### 匯出或匯入設定：
+### Exporting or Importing Settings
 要匯出或匯入設定，請使用 AAPS**維護選單中的匯入或匯出按鈕**
 
 ![維護選單匯出/匯入按鈕](../images/Maintenance/maintenance_menu_import_export_400px.png)
 
-### 自動化設定匯出：
-要進行自動化設定匯出，請[(**參見自動化**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)啟用選項"**無人操作設定匯出**" 在維護選單的偏好設定中。
+(ExportImportSettings-Automating-Settings-Export)=
+### Automating Settings Export
 
-透過啟用此功能，你允許 AAPS 在無需人為干預的情況下執行設定匯出。 為此，主密碼 安全地存儲在你的手機中（僅限於下次手動匯出時）。 存儲的密碼將在最多 4 週內有效。 4 週後，你將收到通知，提示密碼即將過期。 在為期 1 週的寬限期內，可以透過 從維護選單手動匯出設定來刷新密碼。
+For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**" in [Preferences > Maintenance](#preferences-maintenance-settings).
 
-在寬限期過期的 1 週後，存儲的密碼將過期，任何自動化設定匯出將中止，同時通知用戶，要求 重新輸入密碼。  [(**自動化設定匯出**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)將被記錄在 AAPS 的「照護入口」和「用戶輸入」列表下的治療項目中。
+You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
 
 _**注意：**在匯入設定時，用戶始終需要輸入 AAPS 密碼！_
 
