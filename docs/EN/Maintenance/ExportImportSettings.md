@@ -79,23 +79,17 @@ files by copying them off your phone to for instance a cloud storage location.
 **Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting
 you will be unable to import the settings file!_
 
-### Exporting or Importing Settings: ###
+### Exporting or Importing Settings ###
 To export or import settings, use the **import or export buttons** in the AAPS **maintenance menu**
 
 ![Maintenance menu export/import buttons](../images/Maintenance/maintenance_menu_import_export_400px.png)
 
-### Automating Settings Export: ###
-For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**"
-in the maintenance menu preferences.
+(ExportImportSettings-Automating-Settings-Export)=
+### Automating Settings Export ###
 
-By enabling this feature you allow AAPS to execute settings exports without user intervention. For this the master password
-is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks.
-After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by
-manually exporting settings from the maintenance menu.
+For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**" in [Preferences > Maintenance](#preferences-maintenance-settings).
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking
-to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged
-to the AAPS 'Careportal' and 'User entry' lists under Treatments.
+You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
 
 _**Note:** On importing settings to user always needs to enter the AAPS password!_
 

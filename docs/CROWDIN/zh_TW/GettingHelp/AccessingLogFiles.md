@@ -3,8 +3,10 @@
 # 讀取日誌檔案
 
 * 將手機連線到電腦，並選擇檔案傳輸模式
-* 找到 AAPS 資料目錄中的日誌檔案，位於您在[維護選單](#preferences-maintenance-logdirectory)中選擇的位置。  
-    根存儲資料夾的命名可能會根據手機略有不同。
+* Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  
+    The naming of the root storage folder may vary a little depending on the phone.
+* The location is `Android\data\info.nightscout.aapsclient\files` for [AAPSClient](#RemoteControl_aapsclient).
+* Note : log location has changed in **AAPS 3.3**. See the previous versions' documentation if needed.
 
 ![日誌](../images/aapslog.png)
 

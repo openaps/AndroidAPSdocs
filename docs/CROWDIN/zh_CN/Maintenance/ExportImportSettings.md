@@ -65,17 +65,17 @@
 
 **注意**：_导出的设置将使用您的AAPS主密码进行加密：如果没有用于导出的主密码，您将无法导入设置文件！_
 
-### 导出或导入设置：
+### Exporting or Importing Settings
 要导出或导入设置，请使用AAPS**维护菜单**中的**导入或导出按钮**。
 
 ![Maintenance menu export/import buttons](../images/Maintenance/maintenance_menu_import_export_400px.png)
 
-### 自动化设置导出：
-要进行自动化设置导出[（**请参阅自动化部分**）](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)，请在维护菜单偏好设置中启用“**无人值守设置导出**”选项。
+(ExportImportSettings-Automating-Settings-Export)=
+### Automating Settings Export
 
-启用此功能后，您允许AAPS在没有用户干预的情况下执行设置导出。 为此，主密码将在下次手动导出时安全地存储在您的手机上（仅限于此）。 存储的密码将有效期长达4周。 4周后，您将收到密码即将到期的通知。 在为期1周的宽限期内，您可以通过从维护菜单手动导出设置来刷新密码。
+For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**" in [Preferences > Maintenance](#preferences-maintenance-settings).
 
-1周的宽限期过后，存储的密码将过期，任何自动化设置导出都将中止，并通知用户重新输入密码。  [（**自动化设置导出**）](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)将记录在AAPS的“Careportal”和“用户输入”列表下的“治疗”部分。
+You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
 
 _**注意**：在将设置导入用户时，总是需要输入AAPS密码！_
 

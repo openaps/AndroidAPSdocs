@@ -215,7 +215,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 點擊 [這裡](#version3200) 查看 **AAPS** 3.2.0.0 的發布說明，其中解釋了第一選項 **NSClient**（這是「v1」，雖然未明確標記）和第二選項 **NSClient v3** 之間的差異。
 
-Nightscout 使用者應該選擇 **NSClient v3**，除非你想通過 Nightscout 監控或發送遠端治療（例如，作為孩子的父母或照顧者使用 **AAPS**），這種情況下請選擇第一個選項「**NSClient**」，直至另行通知。 
+Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout web interface, in which case, choose the first option "**NSClient**" until further notice. 
 ```
 對於Tidepool來說，這更簡單，因為你只需要你的個人登錄訊息。
 

@@ -10,6 +10,10 @@
 * The new version will also be announced on Facebook at the time of release.
 * Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
 
+  ```{note}
+  In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+  ```
+
 ## Overview for updating to a new version of AAPS
 
 ```{contents} Steps for updating to a new version of AAPS
@@ -69,17 +73,12 @@ If you update from versions prior to 2.8.x, please follow the instructions to do
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM and Gradle versions
+### Check JVM version
 
-These checks are particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required versions for JVM and Gradle, matching the **AAPS** version you are now building.
-
-For Gradle, go to **File > Project Structure** (1). In the **Project** tab (2), check that **Gradle version** (3) is the appropriate one. If you don't find the required version, you are using an outdated Android Studio version (check previous step about minimal Android Studio version).
-
-![Check Gradle version](../images/studioTroubleshooting/gradle_version.png)
-
-For the JVM version, follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building.
+Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
 
 (Update-to-new-version-build-the-signed-apk)=
 ### Build the Signed APK

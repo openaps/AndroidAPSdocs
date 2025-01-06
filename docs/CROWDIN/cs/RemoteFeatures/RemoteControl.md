@@ -17,20 +17,19 @@ See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
 (RemoteControl_aapsclient)=
 ## 2) AAPSClient
 
-_Všimněte si, že **NSClient** byl nahrazen **AAPSClient** pro AAPS verze 3.2 a vyšší. Pro více informací zkontrolujte poznámky k verzi._
-
-Pro verze **AAPS**, které jsou starší než AAPS 3.2, pokud máte Android telefon pečovatele/rodiče, můžete si aplikaci [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) přímo stáhnout a nainstalovat. **AAPSClient** vypadá velmi podobně jako samotná aplikace **AAPS** a poskytuje tak pečovateli nástroj na vzdálené ovládání **AAPS**.
+**AAPSClient** vypadá velmi podobně jako samotná aplikace **AAPS** a poskytuje tak pečovateli nástroj na vzdálené ovládání **AAPS**.
 
 ![NSCLIENT_ 2024-05-17 134512](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
 
-
-Existují 2 verze apk, které lze stáhnout [zde](https://github.com/nightscout/AndroidAPS/releases/), **AAPSClient** & **AAPSClient2**, mezi kterými je drobný, ale důležitý rozdíl, jak je vysvětleno níže.
+### Download and installation
 
 **AAPSClient** můžete nainstalovat do jednoho telefonu nebo do více telefonů sledujících osob (např. telefonu sledujícího rodiče 1 a telefonu sledujícího rodiče 2), aby měli oba pečovatelé přístup a vzdálené ovládání telefonu pacienta **AAPS**.
 
+There are 2 versions of the apk that can be [downloaded from the GitHUb repository](https://github.com/nightscout/AndroidAPS/releases/),  **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
+
 Pokud pečovatel potřebuje druhou kopii **AAPSClient** ke vzdálenému ovládání dalšího pacienta s Nightscout účtem, může kromě **AAPSClient** nainstalovat navíc **AAPSClient2**. **AAPSClient 2** umožňuje jedinému poskytovateli péče nainstalovat aplikaci **AAPSClient** dvakrát na stejný telefon pečovatele, aby měl současný přístup a ovládání k dvěma různým pacientům.
 
-Chcete-li stáhnout **AAPSClient**, přejděte na [tuto stránku](https://github.com/nightscout/AndroidAPS/releases/) a klepněte na soubor **“app-AAPSClient-release_x.x.x.x”** (může to být novější verze než ta zobrazená na snímku níže):
+To download **AAPSClient**, navigate to the [GitHUb repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
 
 ![image](../images/remote_control_and_following/AAPSClient_download_02.png)
 
@@ -43,6 +42,8 @@ Po stažení klikněte na _zobrazit ve složce_, abyste nalezli soubor.
 **AAPSClient** apk může být buď:
 
 Zkopírován do telefonu pečovatele pomocí USB kabelu nebo přetáhnut do adresáře Google drive, připojeného do telefonu pečovatele. Následně klikněte na soubor "app_AAPSClient-release. apk".
+
+Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the Github repository as described above. The reason is that you can't install both **AAPS** and **AAPSClient** on the same phone, signed by a different key. <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). On the **Generate signed App Bundle or APK** page, select **aapsclientRelease** instead of **fullRelease**.
 
 ### Nastavení synchronizace - AAPSClient a AAPS (pro verzi 3.2.0.0 a vyšší)
 

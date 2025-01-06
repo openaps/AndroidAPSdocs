@@ -1,5 +1,9 @@
 # Обновления и изменения в документации
 
+## January 2025
+
+- Quick wizard [long press feature](#Preferences-quick-wizard) @emilise
+
 ## December 2024
 
 - Documentation of [3.3 version](#version3300) @emilise
