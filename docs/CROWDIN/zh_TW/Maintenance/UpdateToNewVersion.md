@@ -9,7 +9,11 @@
 * 請在有新版本發布後儘快更新到最新版本的 **AAPS**。
 * 當有新版本發布時，你將在 **AAPS** 應用中收到關於新版本的訊息橫幅。
 * 新版本也會在發布時於 Facebook 上公佈。
-* 發布後，請詳細閱讀[發布說明](ReleaseNotes.md)，如有任何疑問，請在Facebook或Discord社群中澄清後再進行更新。
+* Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+    
+    ```{note}
+    In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+    ```
 
 ## 更新到新版本 AAPS 的概述
 
