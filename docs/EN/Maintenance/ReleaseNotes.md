@@ -64,6 +64,24 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 ```
 
 (version3300)=
+
+## Version 3.3.0.1
+
+### Detailed changes
+
+#### CGMs and Pumps
+
+#### UI changes
+
+* Background of AAPSClient and AAPSClient2 widgets are now of a different color to make it easier to differentiate.
+
+#### Other functionalities
+
+#### Smartwatches
+
+#### Technical changes & bug fixes
+
+
 ## Version 3.3.0.0
 
 Release date: 29-12-2024
