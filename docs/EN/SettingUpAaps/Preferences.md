@@ -47,6 +47,7 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 **Patient name**
 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
 #### Skin
