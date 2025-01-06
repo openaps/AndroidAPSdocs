@@ -18,7 +18,9 @@ Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 | [3.2](#version3200) | Hedgehog (2023.1.1)                                  | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
 | [3.3](#version3300) | Ladybug (2024.2.1)                                   |                                                                                                                     | 8.9    | 21  |
 
-The "preferred version" is packaged with the appropriate Gradle and JVM version. If using a different version, you may encounter issues related to wrong Gradle and/or JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+The "preferred version" is packaged with the appropriate JVM version. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+
+The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
 
 * Android Studio unterstützt keine [Windows 32-Bit-Systeme](#troubleshooting_androidstudio-unable-to-start-daemon-process). Bitte beachte, dass sowohl eine **64-Bit-CPU als auch ein 64-Bit-Betriebssystem zwingend erforderlich sind**. Wenn Dein System diese Bedingung nicht erfüllt, musst Du die entsprechende Hardware, Software oder das ganze System ersetzen.
 
