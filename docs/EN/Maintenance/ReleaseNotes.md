@@ -67,28 +67,23 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 
 ## Version 3.3.0.1
 
-06/01 12h
-
 ### Detailed changes
-
-#### CGMs and Pumps
 
 #### UI changes
 
-* Background of AAPSClient and AAPSClient2 widgets are now of a different color to make it easier to differentiate.
+* Background of AAPSClient and AAPSClient2 widgets are now of a different color to make it easier to differentiate. @MilosKozak
 
 #### Other functionalities
 
-* New automation trigger : steps count
-* Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR)
-
-#### Smartwatches
+* New automation trigger : steps count @Roman Rihter
+* Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR) @MilosKozak
+* NSClient v3 : make Annoucement work (_i.e._ from AAPSClient to AAPS) @MilosKozak
 
 #### Technical changes & bug fixes
 
 * Fix Insight crash @philoul
-* Fix creation of extra-numerous deviceStatus entries in Nightscout
-* Fix carbs absorption
+* Fix creation of extra-numerous deviceStatus entries in Nightscout @MilosKozak
+* Fix carbs absorption @MilosKozak
 
 ## Version 3.3.0.0
 
