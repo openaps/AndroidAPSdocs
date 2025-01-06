@@ -123,7 +123,7 @@ Release date: 29-12-2024
 
 #### Other functionalities
 
-* [Unattended settings exports]() @vanelsberg
+* [Unattended settings exports](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
 * New [Automation trigger](#automations-automation-triggers) @vanelsberg
   * Pod Activation (patch pump only)
 * New [Automation triggers](#automations-automation-triggers) @jbr77rr
