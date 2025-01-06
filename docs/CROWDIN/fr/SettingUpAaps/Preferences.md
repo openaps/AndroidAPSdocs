@@ -46,6 +46,7 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 **Patient name**
 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
 #### Thème
@@ -153,6 +154,8 @@ If you click the quick wizard button **AAPS** will calculate and propose a bolus
 La proposition doit être confirmée avant l'injection de l'insuline.
 
 ![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
+
+Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
 
 (Preferences-default-temp-targets)=
 ### Cibles Temporaires par défaut
@@ -485,6 +488,12 @@ Les paramètres doivent être explicites.
 ![Choix de données](../images/Pref2020_DataChoice.png)
 
 You can help develop **AAPS** further by sending crash reports to the developers.
+
+**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+
+After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the AAPS 'Careportal' and 'User entry' lists under Treatments.
+
+After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
 
 (preferences-maintenance-logdirectory)= Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
 

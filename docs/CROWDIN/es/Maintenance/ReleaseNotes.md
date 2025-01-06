@@ -71,8 +71,8 @@ Release date: 29-12-2024
 * **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behaviour:
   * **Profile Switch** and **Profile Percentage** is now taken into account for **Dynamic ISF** in respect of dynamic sensitivity strengthness
   * The average **ISF** of the last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
-  * If you use **DynamicISF** and you have **Automation** set for a **Profile %** in relation to **BG**: Turn It Off. This is already part of dynamic sensitivity algorithm
-  * *** AGAIN: Turn off all **Automations** which activates a **Profile %** in relation to **BG** because it will be too aggressive and may over deliver in insulin! *****
+  * Reminder: If you use **DynamicISF** and you have **Automation** set for a **Profile %** in relation to **BG**: Turn It Off. This is already part of dynamic sensitivity algorithm
+  * *** AGAIN: When using DynamicISF, turn off all **Automations** which activates a **Profile %** in relation to **BG** because it will be too aggressive and may over deliver in insulin! *****
   * Do not use a **Profile %** increase of greater than 100% for a long time. If you determine that your **Profile** has changed, create a new **Profile** with your revised values in order to replicate the **Profile** with %
 * Enable “SMB always” and “SMB after carbs” for FreeStyle Libre 2 and Libre 3 users
   * Note : Although the limitation was removed on **AAPS** side, this functionality is not fully operational yet, since **AAPS** needs to receive proper identification of the CGM used. See the [bug opened on xDrip+ project](https://github.com/NightscoutFoundation/xDrip/issues/3841).
@@ -121,7 +121,7 @@ Release date: 29-12-2024
 
 #### Other functionalities
 
-* Unattended exports @vanelsberg
+* [Unattended settings exports](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
 * New [Automation trigger](#automations-automation-triggers) @vanelsberg
   * Pod Activation (patch pump only)
 * New [Automation triggers](#automations-automation-triggers) @jbr77rr
@@ -144,6 +144,7 @@ Release date: 29-12-2024
 
 #### Technical changes
 
+* [log files location change](#Accessing-logfiles-accessing-logfiles)
 * new internal modules structure @MilosKozak
 * split persistence layer from main code @MilosKozak
 * build files rewritten to kts @MilosKozak

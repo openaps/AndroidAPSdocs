@@ -10,6 +10,10 @@
 * When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
 * The new version will also be announced on Facebook at the time of release.
 * Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+    
+    ```{note}
+    In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+    ```
 
 ## Overview for updating to a new version of AAPS
 

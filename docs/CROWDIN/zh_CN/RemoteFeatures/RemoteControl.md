@@ -17,20 +17,19 @@
 (RemoteControl_aapsclient)=
 ## 2) AAPSClient
 
-_注意：对于AAPS 3.2及更高版本，**NSClient**已被**AAPSClient**替代，请查看版本发布说明以获取更多信息。_
-
-对于**AAPS** 3.2之前的版本，如果您有护理人员/家长的Android手机，可以直接下载并安装[**<0>AAPSClien**](https://github.com/nightscout/AndroidAPS/releases/)apk。 **AAPSClient**在外观上非常类似于**AAPS**本身，为护理人员提供了远程操作AAPS命令的标签：
+**AAPSClient**在外观上非常类似于**AAPS**本身，为护理人员提供了远程操作AAPS命令的标签：
 
 ![NSCLIENT_ 2024-05-17 134512](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
 
-
-有两个版本的apk可以从[此处下载](https://github.com/nightscout/AndroidAPS/releases/)，**AAPSClient**&**AAPSClient2**，它们之间有一个细微但重要的区别，如下所述。
+### Download and installation
 
 **AAPSClient**可以安装在单个手机或多个跟随者手机上（即家长1的跟随者手机和家长2的跟随者手机），以便两位护理人员都能获得访问权限并远程控制患者的**AAPS**手机。
 
+There are 2 versions of the apk that can be [downloaded from the GitHUb repository](https://github.com/nightscout/AndroidAPS/releases/),  **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
+
 如果护理人员需要第二个**AAPSClient**副本来远程控制另一个使用Nightscout账户的患者，他们应该在安装**AAPSClient**之外再安装**AAPSClient2**。 **AAPSClient 2**允许单个护理人员在同一跟随者手机上两次安装**AAPSClient** apk，以便能够同时访问并远程控制两名不同的患者。
 
-要下载**AAPSClient**，请导航至[此处](https://github.com/nightscout/AndroidAPS/releases/)并点击资源**“app-AAPSClient-release_x.x.x.x”**（它可能是比下方截图中显示的更新版本）：
+To download **AAPSClient**, navigate to the [GitHUb repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
 
 ![image](../images/remote_control_and_following/AAPSClient_download_02.png)
 
@@ -43,6 +42,8 @@ _注意：对于AAPS 3.2及更高版本，**NSClient**已被**AAPSClient**替代
 **AAPSClient** apk现在可以通过以下方式传输：
 
 通过USB数据线传输到跟随者手机上；或者， 拖动到Google Drive文件夹中，然后点击“app-AAPSClient-release”文件将其添加到跟随者手机。
+
+Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the Github repository as described above. The reason is that you can't install both **AAPS** and **AAPSClient** on the same phone, signed by a different key. <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). On the **Generate signed App Bundle or APK** page, select **aapsclientRelease** instead of **fullRelease**.
 
 ### 同步-AAPSClient和AAPS的设置（适用于3.2.0.0及以上版本）
 

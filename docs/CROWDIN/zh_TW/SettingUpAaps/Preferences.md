@@ -45,7 +45,8 @@
 
 **患者名稱**
 
-- 如果你需要區分多個設置（例如家中有兩個 T1D 小孩），可以使用此功能。
+- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
 #### 外觀
@@ -153,6 +154,8 @@
 該建議需要確認後才會注射胰島素。
 
 ![偏好設定 > 快速嚮導按鈕](../images/Pref2020_OV_QuickWizard2.png)
+
+Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
 
 (Preferences-default-temp-targets)=
 ### 預設臨時目標
@@ -485,6 +488,12 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 ![資料選項](../images/Pref2020_DataChoice.png)
 
 你可以通過向開發者發送崩潰報告來幫助進一步開發**AAPS**。
+
+**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+
+After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the AAPS 'Careportal' and 'User entry' lists under Treatments.
+
+After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
 
 (preferences-maintenance-logdirectory)= 維護設定還包括**AAPS** 目錄，該目錄可以直接在維護選單中找到。 此設定允許用戶選擇電話上的一個目錄，**AAPS**將在該目錄中儲存偏好設定、日誌及其他檔案。
 

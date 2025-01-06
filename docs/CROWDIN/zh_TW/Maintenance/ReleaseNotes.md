@@ -73,8 +73,8 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 * **[動態 ISF](../DailyLifeWithAaps/DynamicISF.md)** 功能不再是獨立的外掛，而是現在作為 [OpenAPS SMB](#Config-Builder-aps) 外掛的一個選項，並伴隨一些行為上的變更：
   * 在動態敏感度強度方面，**動態 ISF** 現在會考慮 **設定檔切換** 和 **設定檔百分比** 的影響。
   * 將使用過去 24 小時的平均 **ISF** 計算，該數值將用於注射嚮導和 **COB** 的計算。 **設定檔中的 ISF** 值完全不會被使用（僅在歷史資料無法使用時作為備用）
-  * 如果您使用**動態 ISF**，請勿在**自動化**設定任何以**血糖**為條件的**設定檔百分比**， 因為這已經是動態敏感度演算法的一部分。
-  * *** 再次提醒：請關閉所有**自動化**中與**血糖** 相關的 **設定檔 %**，因為這可能會導致胰島素劑量過多！ *****
+  * Reminder: If you use **DynamicISF** and you have **Automation** set for a **Profile %** in relation to **BG**: Turn It Off. 因為這已經是動態敏感度演算法的一部分。
+  * *** AGAIN: When using DynamicISF, turn off all **Automations** which activates a **Profile %** in relation to **BG** because it will be too aggressive and may over deliver in insulin! *****
   * 請勿長時間使用超過 100% 的 **設定檔百分比** 增加值。 如果你的**設定檔**已有變更，請在「治療頁籤」中的**設定檔**切換，複製帶有% 的**設定檔**來建立新的設定檔。
 * 為使用 FreeStyle Libre 2 和 Libre 3 的用戶啟用「始終啟用 SMB」與「碳水後啟用 SMB」選項。
   * 注意：儘管在**AAPS** 端已移除限制，但此功能尚未完全運作，因為**AAPS** 需要接收所使用的 CGM 的正確認證。 請參閱[xDrip+ 專案中開啟的錯誤](https://github.com/NightscoutFoundation/xDrip/issues/3841)。
@@ -123,7 +123,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 #### 其他功能
 
-* 無人操作匯出 @vanelsberg
+* [Unattended settings exports](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
 * 新增[自動化觸發](#automations-automation-triggers) @vanelsberg
   * Pod 註冊（僅限貼片幫浦）
 * 新增[自動化觸發](#automations-automation-triggers) @jbr77rr
@@ -146,6 +146,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 #### 技術變更
 
+* [log files location change](#Accessing-logfiles-accessing-logfiles)
 * 新的內部模組結構 @MilosKozak
 * 將持久性層與主程式碼分離 @MilosKozak
 * 建置檔案重新編寫為 kts @MilosKozak
