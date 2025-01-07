@@ -1,8 +1,8 @@
 # 文件更新與變更
 
-## January 2025
+## 2025年1月
 
-- Quick wizard [long press feature](#Preferences-quick-wizard) @emilise
+- 快速嚮導[長按功能](#Preferences-quick-wizard) @emilise
 
 ## 2024年12月
 
