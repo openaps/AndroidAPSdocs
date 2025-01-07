@@ -164,8 +164,8 @@ Libre 使用者的特殊注意事項：
 
 ![D 區](../images/Home2020_TBR.png)
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
+1. **針筒**：體內的胰島素量（IOB） - 你體內活性胰島素的數量  
+    如果僅有標準的基礎胰島素在運行，且沒有來自之前注射的胰島素剩餘，則體內的胰島素量為零。
     
     * 如果最近有減少的基礎率，IOB 可能為負值。
     * 按圖示可查看注射胰島素與基礎胰島素的分配情況。
@@ -174,9 +174,9 @@ Libre 使用者的特殊注意事項：
 
 3. **紫色線**: 當前的基礎率。 圖示會根據基礎率的臨時變化而改變（維持在 100%） 
     * 按圖示可查看基礎基礎率和任何臨時基礎率的詳細資訊(包括剩餘時間)。
-4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
-    * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
-    * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
+4. **上下箭頭**：顯示動態敏感度特徵狀態（[Autosens](#Open-APS-features-autosens) 或 [DynamicISF](#Open-APS-features-DynamicISF)）：啟用或停用。 本部分可能顯示幾個值： 
+    * AS：Autosens 值。 即使在 Autosens 停用時也會顯示（僅供參考）。 當 DynISF 啟用時也會顯示，儘管它並不會產生影響。
+    * Alg：DynamicISF 值（基於 TDD）。 有關最後一行的更多資訊，請參見[DynamicISF](#Open-APS-features-DynamicISF) 頁面。
 
 (aaps-screens-carbs-required)=
 
@@ -338,9 +338,9 @@ Libre 使用者的特殊注意事項：
 
 (screen-heart-rate-steps)=
 
-#### Heart rate & Steps
+#### 心率＆步數
 
-This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
+當使用 [Wear 智慧型手錶](../WearOS/WearOsSmartwatch.md) 時，這些資料可能會可以顯示。 可在**AAPS** Wear 應用程式中啟用它們並授權健康資料。
 
 #### 偏差(Deviations)
 
@@ -696,13 +696,13 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ## 歷史瀏覽器
 
-可以通過按下選單右側的 3 個點然後選擇「歷史」來讀取此視圖。 It is not possible to put in the main menu through the Config Builder. 還可以通過[手動操作標籤](#action-tab)底部的一個按鈕讀取。
+可以通過按下選單右側的 3 個點然後選擇「歷史」來讀取此視圖。 無法通過組態建置工具在主選單中放入它。 還可以通過[手動操作標籤](#action-tab)底部的一個按鈕讀取。
 
 允許您查詢在 **AAPS** 中的歷史紀錄。 請參閱專門頁面 [檢視您的資料 > 歷史瀏覽器](../Maintenance/Reviewing.md)。
 
 ## 統計資料
 
-這個視圖可通過點擊選單右側的三個點來進入，然後選擇統計資料。 It is not possible to put in the main menu through the Config Builder.
+這個視圖可通過點擊選單右側的三個點來進入，然後選擇統計資料。 無法通過組態建置工具在主選單中放入它。
 
 提供您有關您在範圍內的時間和每日總劑量的統計資料。 請參閱專門頁面 [檢視您的資料 > 統計資料](#reviewing-statistics)。
 
@@ -710,7 +710,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ## 設定檔助手
 
-此視圖可以通過按下選單右側的 3 個點然後選擇「設定檔助手」來讀取。 It is not possible to put in the main menu through the Config Builder. 設定檔助手 可以幫助您：
+此視圖可以通過按下選單右側的 3 個點然後選擇「設定檔助手」來讀取。 無法通過組態建置工具在主選單中放入它。 設定檔助手 可以幫助您：
 
 * [從零開始為小孩建立設定檔](#your-aaps-profile-profile-from-scratch-for-a-kid)
 * [比較兩個設定檔](#your-aaps-profile-compare-profiles)
