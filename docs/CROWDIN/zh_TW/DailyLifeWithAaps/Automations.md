@@ -285,7 +285,7 @@
 
 注意：匯出執行將記錄在照護入口上
 
-### 不需人員監控的匯出：Pod 註冊（僅限補丁幫浦）
+### 不需人員監控的匯出：Pod 註冊（僅限修補版幫浦）
 
 顯示自動化觸發條件的截圖：
 
@@ -293,7 +293,7 @@
 
 ![在 Pod 註冊時匯出](../images/Automations/automation_settingsexport_podactivation_400px.png)
 
-Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Preferences > Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+注意：匯出執行將記錄在照護入口上. 注意：如果您在此之前未執行手動設定匯出，自動化將**完全不會**觸發。 請參見[偏好設定 > 維護](#preferences-maintenance-settings)以正確啟用自動設定匯出。
 
 
 # 自動化日誌

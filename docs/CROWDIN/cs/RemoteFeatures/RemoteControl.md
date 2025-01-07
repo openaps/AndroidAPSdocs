@@ -21,13 +21,19 @@ See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
 
 ![NSCLIENT_ 2024-05-17 134512](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
 
+### About AAPSClient and AAPSClient2
+
+There are 2 versions of the apk that can be installed, **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
+
+Pokud pečovatel potřebuje druhou kopii **AAPSClient** ke vzdálenému ovládání dalšího pacienta s Nightscout účtem, může kromě **AAPSClient** nainstalovat navíc **AAPSClient2**. **AAPSClient 2** umožňuje jedinému poskytovateli péče nainstalovat aplikaci **AAPSClient** dvakrát na stejný telefon pečovatele, aby měl současný přístup a ovládání k dvěma různým pacientům.
+
+To differentiate between the two apps, some elements have a different background color: yellow for **AAPSClient**, blue for **AAPSClient2**. Those elements are the app icon, the widget, and the **AAPS** status section in the app itself. <br/> Note : opacity of the widget background is customizable.
+
+![AAPSClient_and_AAPSClient2.png](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
+
 ### Download and installation
 
 **AAPSClient** můžete nainstalovat do jednoho telefonu nebo do více telefonů sledujících osob (např. telefonu sledujícího rodiče 1 a telefonu sledujícího rodiče 2), aby měli oba pečovatelé přístup a vzdálené ovládání telefonu pacienta **AAPS**.
-
-There are 2 versions of the apk that can be [downloaded from the GitHUb repository](https://github.com/nightscout/AndroidAPS/releases/),  **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
-
-Pokud pečovatel potřebuje druhou kopii **AAPSClient** ke vzdálenému ovládání dalšího pacienta s Nightscout účtem, může kromě **AAPSClient** nainstalovat navíc **AAPSClient2**. **AAPSClient 2** umožňuje jedinému poskytovateli péče nainstalovat aplikaci **AAPSClient** dvakrát na stejný telefon pečovatele, aby měl současný přístup a ovládání k dvěma různým pacientům.
 
 To download **AAPSClient**, navigate to the [GitHUb repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
 

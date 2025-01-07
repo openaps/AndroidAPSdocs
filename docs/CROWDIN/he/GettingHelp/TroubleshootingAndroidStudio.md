@@ -26,7 +26,7 @@ Gradle Sync can fail for various reasons. When you receive a message saying that
 
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-The common reasons for gradle sync failures are:
+Likely reasons for gradle sync failures are:
 * [שינויים שלא הוגשו](#uncommitted-changes)
 * [אין גרסה שמור של ... זמינה](#could-not-resolveno-cached-version)
 * [Incompatible Gradle JVM](#incompatible-gradle-jvm)
@@ -37,7 +37,7 @@ The common reasons for gradle sync failures are:
 
 ### שינויים שלא הוגשו
 
-If you receive a failure message this this one:
+If you receive a failure message like this one:
 
 ![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
@@ -67,7 +67,7 @@ If you receive a failure message this this one:
 
   * חפשו במחשבכם את הקובץ "git.exe".
 
-    זכרו באיזו ספרייה הקובץ נמצא.
+    Note for yourself, which directory it is saved in.
 
   * עברו אל Environment variables (משתני הסביבה) בחלונות, בחרו את המשתנה "PATH" ולחצו על ערוך. Add the directory where you have found your Git installation.
 
@@ -89,7 +89,7 @@ If you receive a failure message this this one:
 
     * הקבצים נשלפים שוב משרת ה-Git. If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
 
-  * אם אתם יכולים לראות "Unversioned Files", ייתכן שאחסנתם קבצים בספריית sourecode שלך שצריכה להיות במקומות אחרים, למשל קובץ מאגר המפתחות שלך.
+  * If you can see "Unversioned Files", you might have stored files in your source code directory by mistake. Maybe they are important files: like your keystore file, that should be moved elsewhere. If you don't know what those files are and you have not created them yourself, you can delete them.
 
     * Use your regular file explorer on your computer to move or cut and paste that file to a safe place.
 
@@ -116,11 +116,12 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  Open the **Gradle JDK** options, then select **Download JDK...**
+3.  **In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select 'Download JDK'.
+
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. At tab (1), select the JDK version required for your **AAPS** version (the one you made a note of at the first step). Then select the **JetBrains Runtime** from the **Vendor** at tab (2). Do not change the **Location** at tab (3).
+4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select 'JetBrains Runtime'. Location (3): do not change.
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -156,7 +157,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately there is nothing that the **AAPS** developers can do about this!
 
-  There  is information on the internet about how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  There is information on the internet about how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 
@@ -230,7 +231,7 @@ If you built the app successfully, transferred it to your phone and installed it
 
 ## אף אחת מהאפשרויות לא עזרה
 
-If non of the above tips helped you might consider building the apk from scratch:
+If none of the above tips helped you might consider building the apk from scratch:
 
 1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
 
@@ -240,13 +241,13 @@ If non of the above tips helped you might consider building the apk from scratch
 
 3. Build the apk from scratch as described [here](#Building-APK-download-AAPS-code).
 
-4. When you have built the apk successfully delete the exiting apk on your phone, transfer the new apk to your phone and install.
+4. When you have built the apk successfully delete the existing apk on your phone, transfer the new apk to your phone and install.
 5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
 6. בדקו את אפשרויות אופטימיזציית הסוללה שלכם והשביתו אותן שוב.
 
 ## במקרה הגרוע ביותר
 
-If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scractch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scratch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 

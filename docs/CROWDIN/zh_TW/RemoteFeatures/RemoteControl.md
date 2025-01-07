@@ -21,15 +21,21 @@
 
 ![NSCLIENT_ 2024-05-17 134512](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
 
-### Download and installation
+### 關於AAPSClient和AAPSClient2
 
-**AAPSClient** 可以安裝在一部或多部追蹤者手機上（例如父母一的追蹤者手機和父母二的追蹤者手機），以便兩位照護者都能夠獲得權限並遠端控制患者的 **AAPS** 手機。
-
-There are 2 versions of the apk that can be [downloaded from the GitHUb repository](https://github.com/nightscout/AndroidAPS/releases/),  **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
+可以安裝兩個版本的apk，**AAPSClient**和**AAPSClient2**，它們有一個微妙但重要的差異，如下所述。
 
 如果某位照護者需要第二個副本來遠端控制另一位患者，且該患者有 Nightscout 帳號，他們應該安裝 **AAPSClient2** 以外加 **AAPSClient**。 **AAPSClient2** 允許單一照護者在同一台追蹤者手機上安裝 **AAPSClient** apk 兩次，以便同時遠端控制兩位不同的患者。
 
-To download **AAPSClient**, navigate to the [GitHUb repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+為了區分這兩個應用程式，一些元素有不同的背景顏色：**AAPSClient**是黃色，**AAPSClient2**是藍色。 這些元素包括應用程式圖示、小工具和應用程式內的**AAPS**狀態區域。 <br/> 注意：小工具背景的不透明度是可自訂的。
+
+![AAPSClient_and_AAPSClient2.png](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
+
+### 下載與安裝
+
+**AAPSClient** 可以安裝在一部或多部追蹤者手機上（例如父母一的追蹤者手機和父母二的追蹤者手機），以便兩位照護者都能夠獲得權限並遠端控制患者的 **AAPS** 手機。
+
+要下載**AAPSClient**，請前往[GitHUb儲存庫](https://github.com/nightscout/AndroidAPS/releases/)並點選資源**“app-AAPSClient-release_x.x.x.x”**（可能是比下面截圖中顯示的版本更新的版本）：
 
 ![圖像](../images/remote_control_and_following/AAPSClient_download_02.png)
 
@@ -43,7 +49,7 @@ To download **AAPSClient**, navigate to the [GitHUb repository](https://github.c
 
 透過 USB 傳輸線傳輸到追蹤者手機；或拖放至 Google 雲端硬碟資料夾，然後透過點擊“app-AAPSClient-release”檔案將其安裝到追蹤者手機。
 
-Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the Github repository as described above. The reason is that you can't install both **AAPS** and **AAPSClient** on the same phone, signed by a different key. <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). On the **Generate signed App Bundle or APK** page, select **aapsclientRelease** instead of **fullRelease**.
+如果您需要**AAPS**供自己使用，而需要**AAPSClient**來監控他人，則需要自行建置**AAPSClient**，而不是從上述GitHub儲存庫下載。 原因是您無法在同一部手機上安裝**AAPS**和**AAPSClient**，因為它們是由不同的金鑰簽署的。 <br/> 要自行建置**AAPSClient**，請遵循[常見AAPS建置](../SettingUpAaps/BuildingAaps.md)的相同步驟。 在**生成簽名的App Bundle或APK**頁面上，選擇**aapsclientRelease**，而不是**fullRelease**。
 
 ### 同步設置 - AAPSClient 和 AAPS 配置（適用於 3.2.0.0 版本以上）
 

@@ -21,7 +21,7 @@ SMB/AMA - 用戶的**個人設定**示例，其中包含用戶設置的靜態**�
 
 ![實作使用上述方程計算當前<strong x-id="1">ISF</strong>，並在 oref1 預測中用於<strong x-id="1">體內胰島素</strong>、<strong x-id="1">ZT</strong> 和 <strong x-id="1">UAM</strong>。](../images/DynISF2.png)
 
-The section circled in red shows: <br/> Alg:`DynamicISF value (based on TDD)`<br/> `profile ISF` -> `ISF as calculated by DynISF (used in SMB algorithm)` (`ISF used for COB calculations and bolus wizard`)
+紅色圓圈圈起的部分顯示：<br/> Alg:`DynamicISF值（基於TDD）`<br/> `profile ISF` -> `ISF由DynISF計算（用於SMB算法）`（`ISF用於COB計算和注射嚮導`）
 
 該實作使用上述公式來計算當前的 **ISF**，並應用於 **IOB**、**ZT** 和 **UAM** 的oref1 預測中。 這也用於 **COB** 和注射嚮導中。 更詳細的討論可以在此找到： [Chris Wilson 談胰島素敏感度（校正因子）與循環與學習，2022 年 2 月 6 日](https://www.youtube.com/watch?v=oL49FhOts3c)。
 
@@ -40,11 +40,11 @@ TDD 將使用以下數值的組合：
 
 未來**ISF** 將用於 oref1 制定的劑量決策。  未來的**ISF**使用與上述生成的相同**TDD**值，並考慮調整因子（如上所述）。 接著依據不同情況使用不同的血糖值：
 
-* 如果血糖值穩定，在 +/- 3 mg/dl 之內，且預測的**BG**高於目標，則使用預測**BG**和當前**BG**的 50% 組合。
+* 如果血糖值穩定，在 +/- 3 mg/dl 之內，且預測的**血糖**高於目標，則使用預測**血糖**和當前**血糖**的 50% 組合。
 
-* 如果最終**BG**高於目標且血糖數值正在上升，或者最終**BG**高於當前**BG**，則使用當前**BG**。
+* 如果最終**血糖**高於目標且血糖數值正在上升，或者最終**血糖**高於當前**血糖**，則使用當前**血糖**。
 
-否則，將使用最低預測的**BG**。
+否則，將使用最低預測的**血糖**。
 
 ## 偏好設定
 

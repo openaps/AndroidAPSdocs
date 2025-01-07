@@ -9,12 +9,12 @@ orphan: true
 
 Следует отметить, что системы G7 и ONE+, в отличие от G6, не сглаживают значения ГК ни в самом приложении, ни в считывателе. Подробнее об этом [здесь](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
-Picture is outdated!!! ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
-`{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
+Изображение устарело!!! ![G7 английский](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+`{admonition} [метод сглаживания](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
 
 ## 1. xDrip+ (прямое соединение с G7 или ONE+)
 
-- Follow the instructions here: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Следуйте инструкциям отсюда: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
 - В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
 
 - Отрегулируйте параметры xDrip+ в соответствии с пояснениями на странице настроек xDrip+  [настройки xDrip+](../CompatibleCgms/xDrip.md)
@@ -29,7 +29,7 @@ Picture is outdated!!! ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341
 
 - Удалите оригинальное приложение Dexcom, если вы его использовали прежде (Рабочая сессия сенсора может продолжаться - запишите код сенсора перед удалением приложения!)
 
-- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+- Скачайте и установите модифицированное приложение (patched.apk) [по ссылке](https://github.com/authorgambel/g7/releases).
 
 - Введите код сенсора в модифицированном приложении.
 
@@ -53,16 +53,16 @@ Picture is outdated!!! ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341
 
 ## 4. Juggluco
 
-Version 9.0+ required
+Требуется версия 9.0 и выше
 
-- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+- Отключите приложение, ранее подключенное к датчику: удалите приложение или выполните «Остановить принудительно» Отключите разрешение для"Устройств поблизости" в настройках приложения. Ограничьте использование батареи в приложении.
 
-- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+- Забудьте датчик в настройках Bluetooth: в настройках Android найдите датчик в прикрепленных устройствах и выберите "Forget." Названия датчиков Dexcom G7 начинаются с DXCM.
 
-- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+- Избегайте вмешательства других датчиков: Держите старые сенсоры Dexcom вне диапазона Bluetooth.
 
-- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+- Подключите датчик G7 к Juggluco: Откройте Juggluco → Левое меню → Фото. Сканируйте матрицу штрих-кода на аппликаторе сенсора G7. Дайте Juggluco до 5 минут, чтобы найти сенсор.
 
-- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+- Требования к сопряжению: Согласитесь с подключением датчика к Juggluco. Убедитесь, что экран не заблокирован во время подключения. Если сопряжение не удалось, подождите 5 минут и повторите попытку.
 
-- Exception: Wear OS watches can bond without pressing an agree button.
+- Исключение: Часы на Wear OS могут сопрягаться без нажатия кнопки подтверждения.

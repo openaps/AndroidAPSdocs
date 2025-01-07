@@ -48,7 +48,7 @@ Combo、Insight 及舊版 Medtronic 是穩定的幫浦，且可以迴路使用�
 - Dana-i/RS 的初始配對比較簡單。 但通常這只需要做一次，所以他僅在你想使用不同幫浦測試新功能時才有影響。
 - 目前，Combo 使用螢幕解析進行工作。 總的來說，這效果不錯，但速度較慢。 對於閉環系統來說，這並不太重要，因為所有操作都在背景中進行。 不過，您需要連線的時間仍然相對較長，因此在進行注射和烹飪時，藍牙連線可能會斷開，這並不容易。
 - Combo 在暫時性基礎率（TBR）結束時會震動，DanaR 在 SMB 時會震動（或發出嗶聲）。 在夜間，您可能會比小量注射（SMB）使用更多的臨時基礎率（TBR）。  Dana-i/RS 可配置為不會發出嗶聲或震動。
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon as some CGM values are in.
+- 使用Dana-i/RS在幾秒鐘內讀取碳水化合物歷史，讓您可以在離線時輕鬆切換手機，並在某些CGM值出現後立即開始循環。
 - 所有與 **AAPS** 相容的幫浦在交貨時都是防水的。 只有 Dana 幫浦因其密封的電池艙和儲液槽填充系統在保固範圍內也具備防水性能。
 
 ### 血糖來源
@@ -71,7 +71,7 @@ Combo、Insight 及舊版 Medtronic 是穩定的幫浦，且可以迴路使用�
 
 ### 智慧型手錶
 
-You can choose any smartwatch with Android WearOS 2.x up to 4.x. **Beware, WearOS 5.x is not always compatible!**
+您可以選擇任何搭載 Android WearOS 2.x 至 4.x 的智慧型手錶。 **注意，WearOS 5.x不一定相容！**
 
 用戶正在建立一個[已測試的手機和手錶清單](#Phones-list-of-tested-phones)。 有不同的錶盤可供 **AAPS** 使用，您可以在 [這裡](../WearOS/WearOsSmartwatch.md)找到。
 

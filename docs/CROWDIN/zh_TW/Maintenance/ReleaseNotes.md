@@ -64,6 +64,31 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
 (version3300)=
+## 版本 3.3.1.0
+
+發布日期：2025-01-06
+
+### 用戶介面變更
+
+* [新增顏色以區別AAPSClient和AAPSClient2](#RemoteControl_aapsclient) @MilosKozak
+* 改善用戶操作的佈局和圖示
+
+### 其他功能
+
+* 新增自動化觸發器：[步數計數](#screen-heart-rate-steps) @Roman Rihter
+* 允許在NSCv3完全同步時接收所有內容（包括以前未同步的資料，如TBR） @MilosKozak
+* NSClient v3：讓公告功能正常運作（_例如_從AAPSClient到AAPS） @MilosKozak
+
+### 技術變更與錯誤修正
+
+* 修復Insight崩潰的問題 @philoul
+* 修正Nightscout中設備狀態條目的過多創建 @MilosKozak
+* 修正碳水化合物吸收處理 @MilosKozak
+* 修正單選按鈕和核取方塊的顏色 @MilosKozak
+* 修正DynISF百分比遷移中的錯誤 @MilosKozak
+* 解決DynISF通知位置錯誤的問題 @MilosKozak
+* 修正錶盤中的錯誤 @philoul
+
 ## 版本 3.3.0.0
 
 發布日期：2024-29-12
@@ -73,8 +98,8 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 * **[動態 ISF](../DailyLifeWithAaps/DynamicISF.md)** 功能不再是獨立的外掛，而是現在作為 [OpenAPS SMB](#Config-Builder-aps) 外掛的一個選項，並伴隨一些行為上的變更：
   * 在動態敏感度強度方面，**動態 ISF** 現在會考慮 **設定檔切換** 和 **設定檔百分比** 的影響。
   * 將使用過去 24 小時的平均 **ISF** 計算，該數值將用於注射嚮導和 **COB** 的計算。 **設定檔中的 ISF** 值完全不會被使用（僅在歷史資料無法使用時作為備用）
-  * Reminder: If you use **DynamicISF** and you have **Automation** set for a **Profile %** in relation to **BG**: Turn It Off. 因為這已經是動態敏感度演算法的一部分。
-  * *** AGAIN: When using DynamicISF, turn off all **Automations** which activates a **Profile %** in relation to **BG** because it will be too aggressive and may over deliver in insulin! *****
+  * 提醒：如果您使用**DynamicISF**並已為**設定檔 %**設定了**自動化**與**血糖**有關：請關閉此功能。 因為這已經是動態敏感度演算法的一部分。
+  * *** 再次提醒：使用DynamicISF時，請關閉所有啟動與**血糖**相關的**自動化**，因為這樣有可能造成胰島素過量！ *****
   * 請勿長時間使用超過 100% 的 **設定檔百分比** 增加值。 如果你的**設定檔**已有變更，請在「治療頁籤」中的**設定檔**切換，複製帶有% 的**設定檔**來建立新的設定檔。
 * 為使用 FreeStyle Libre 2 和 Libre 3 的用戶啟用「始終啟用 SMB」與「碳水後啟用 SMB」選項。
   * 注意：儘管在**AAPS** 端已移除限制，但此功能尚未完全運作，因為**AAPS** 需要接收所使用的 CGM 的正確認證。 請參閱[xDrip+ 專案中開啟的錯誤](https://github.com/NightscoutFoundation/xDrip/issues/3841)。
@@ -91,6 +116,8 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
   * 針對某些人在 Android 15 上遇到的 [藍牙連線問題](../Getting-Started/Phones.md)，本版本並未解決（這是 Android 的問題，而非 **AAPS** 的問題）。
   * 由於 Android 的限制，主畫面上的 BYODA 按鈕已不再提供。 目前尚無已知的解決方法。
 * 更新指示：遵循[更新到新版本](../Maintenance/UpdateToNewVersion.md)的指南。
+* 提示 - 如果您不想失去**AAPS**的歷史紀錄，請務必進行更新，而非卸載/安裝。 作為預防措施，備份您目前的**AAPS**設定和舊的APK，以防在出現問題時可以恢復到舊版本。
+* 如果使用Omnipod dash，將偏好設定匯入**AAPS**會中斷任何當前的pod。
 * 升級後：
   * 在維護標籤中設置新的[“AAPS目錄”設定](#preferences-maintenance-logdirectory)。
 
@@ -123,7 +150,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 #### 其他功能
 
-* [Unattended settings exports](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
+* [自動設定匯出](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
 * 新增[自動化觸發](#automations-automation-triggers) @vanelsberg
   * Pod 註冊（僅限貼片幫浦）
 * 新增[自動化觸發](#automations-automation-triggers) @jbr77rr
@@ -146,7 +173,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 #### 技術變更
 
-* [log files location change](#Accessing-logfiles-accessing-logfiles)
+* [日誌文件位置變更](#Accessing-logfiles-accessing-logfiles)
 * 新的內部模組結構 @MilosKozak
 * 將持久性層與主程式碼分離 @MilosKozak
 * 建置檔案重新編寫為 kts @MilosKozak

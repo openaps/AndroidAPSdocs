@@ -2,7 +2,7 @@
 
 ## 自行建置，而不是下載
 
-**AAPS應用（apk文件）因醫療設備相關法規而無法下載。 自行建置應用程式以供個人使用是合法的，但你不得將副本提供給他人！**
+**AAPS 應用程式（apk檔案）因醫療設備相關法規而無法下載。 自行建置應用程式以供個人使用是合法的，但你不得將副本提供給他人！**
 
 詳細資訊請參閱 [FAQ 頁面](../UsefulLinks/FAQ.md)。
 
@@ -18,9 +18,9 @@
 | [3.2](#version3200) | Hedgehog（2023.1.1）                       | Iguana（2023.2.1）<br/>Jellyfish（2023.3.1）<br/>Koala（2024.1.1）<br/>Ladybug（2024.2.1）<br/> | 8.2    | 19  |
 | [3.3](#version3300) | Ladybug (2024.2.1)                       |                                                                                                                 | 8.9    | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. If using a different version, you may encounter issues related to JVM version. 請參閱 [Android Studio 問題排除](#troubleshooting_androidstudio-uncommitted-changes) 頁面以協助解決這些問題。 如果你當前的 Android Studio 版本未在表格中列出，你必須先更新它。
+"首選版本"已打包與適當的JVM版本。 如果使用不同的版本，您可能會遇到與JVM版本相關的問題。 請參閱 [Android Studio 問題排除](#troubleshooting_androidstudio-uncommitted-changes) 頁面以協助解決這些問題。 如果你當前的 Android Studio 版本未在表格中列出，你必須先更新它。
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Gradle版本與源代碼相連結，下載/更新源代碼時，您將始終獲得正確的Gradle版本。 此處僅供參考，您不必採取行動。
 
 * [Windows 32位系統](#troubleshooting_androidstudio-unable-to-start-daemon-process)不支援Android Studio。 請記住**64位中央處理器和64位作業系統是必要條件。** 如果你的系統不符合此條件，你必須更換受影響的硬體或軟體，或整個系統。
 
