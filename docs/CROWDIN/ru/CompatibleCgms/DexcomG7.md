@@ -9,7 +9,7 @@ orphan: true
 
 Следует отметить, что системы G7 и ONE+, в отличие от G6, не сглаживают значения ГК ни в самом приложении, ни в считывателе. Подробнее об этом [здесь](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
-Изображение устарело!!! ![G7 английский](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 `{admonition} [метод сглаживания](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
 
 ## 1. xDrip+ (прямое соединение с G7 или ONE+)
