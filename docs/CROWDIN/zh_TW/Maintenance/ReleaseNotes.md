@@ -64,6 +64,31 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
 (version3300)=
+## Version 3.3.1.0
+
+Release date: 06-01-2025
+
+### 用戶介面變更
+
+* [Added colors to differentiate between AAPSClient and AAPSClient2](#RemoteControl_aapsclient) @MilosKozak
+* Improved Users actions layout and icons
+
+### 其他功能
+
+* New automation trigger : [steps count](#screen-heart-rate-steps) @Roman Rihter
+* Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR) @MilosKozak
+* NSClient v3 : make Announcement work (_i.e._ from AAPSClient to AAPS) @MilosKozak
+
+### Technical changes & bug fixes
+
+* Fix Insight crash @philoul
+* Fix creation of extra-numerous deviceStatus entries in Nightscout @MilosKozak
+* Fix carbs absorption @MilosKozak
+* Fixed color of RadioButtons & CheckBoxes @MilosKozak
+* Fixed bug in DynISF percentage migration @MilosKozak
+* Resolved misplaced DynISF notification @MilosKozak
+* Fixed bug in watchfaces @philoul
+
 ## 版本 3.3.0.0
 
 發布日期：2024-29-12
@@ -91,6 +116,8 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
   * 針對某些人在 Android 15 上遇到的 [藍牙連線問題](../Getting-Started/Phones.md)，本版本並未解決（這是 Android 的問題，而非 **AAPS** 的問題）。
   * 由於 Android 的限制，主畫面上的 BYODA 按鈕已不再提供。 目前尚無已知的解決方法。
 * 更新指示：遵循[更新到新版本](../Maintenance/UpdateToNewVersion.md)的指南。
+* Tip - if you do not want to lose your **AAPS** history ALWAYS do an UPDATE and NOT an UNINSTALL/INSTALL. As a precaution, back up your current **AAPS** settings and old APK to revert to an old version should anything go wrong.
+* If using Omnipod dash any importing of Preferneces to **AAPS** will cancel any current pods.
 * 升級後：
   * 在維護標籤中設置新的[“AAPS目錄”設定](#preferences-maintenance-logdirectory)。
 
