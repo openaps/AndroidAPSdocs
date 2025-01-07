@@ -336,9 +336,11 @@ To configure additional graphs, check the boxes corresponding to the data you wa
 
 Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. До достижения этой цели линия Autosens на диаграмме отображается только для информации.
 
-#### Частота сердцебиения
+(screen-heart-rate-steps)=
 
-Эти данные могут быть доступны при использовании [смарт-часов Garmin](#Watchfaces-garmin).
+#### Heart rate & Steps
+
+This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
 
 #### Отклонения
 
