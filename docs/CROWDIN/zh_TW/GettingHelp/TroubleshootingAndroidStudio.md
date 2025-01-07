@@ -26,7 +26,7 @@ Gradle Sync can fail for various reasons. When you receive a message saying that
 
   ![Gradle 失敗](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-The common reasons for gradle sync failures are:
+Likely reasons for gradle sync failures are:
 * [未提交的更改](#uncommitted-changes)
 * [無法使用 ... 的緩存版本](#could-not-resolveno-cached-version)
 * [不相容的 Gradle JVM](#incompatible-gradle-jvm)
@@ -37,7 +37,7 @@ The common reasons for gradle sync failures are:
 
 ### 未提交的更改
 
-If you receive a failure message this this one:
+If you receive a failure message like this one:
 
 ![Gradle 未提交的更改](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
@@ -67,7 +67,7 @@ If you receive a failure message this this one:
 
   * 在計算機上搜索文件“git.exe”。
 
-    請記下他所在的目錄。
+    Note for yourself, which directory it is saved in.
 
   * 轉到 Windows 中的環境變數，選擇變數“PATH”，然後點擊編輯。 Add the directory where you have found your Git installation.
 
@@ -89,7 +89,7 @@ If you receive a failure message this this one:
 
     * 文件將再次從 Git 服務器中獲取。 如果在提交標籤中沒有其他更改，請轉到[第3步](#gradle-resync)。
 
-  * 如果你看到“未版本化文件”，你可能將文件存儲在源碼目錄中，應將其移到其他地方，例如你的密鑰庫文件。
+  * If you can see "Unversioned Files", you might have stored files in your source code directory by mistake. Maybe they are important files: like your keystore file, that should be moved elsewhere. If you don't know what those files are and you have not created them yourself, you can delete them.
 
     * Use your regular file explorer on your computer to move or cut and paste that file to a safe place.
 
@@ -116,11 +116,12 @@ If you receive a failure message this this one:
 
 ![開啟Gradle設定](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  打開**Gradle JDK**選項，然後選擇**下載JDK...**
+3.  **In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select 'Download JDK'.
+
 
 ![選擇下載JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. At tab (1), select the JDK version required for your **AAPS** version (the one you made a note of at the first step). Then select the **JetBrains Runtime** from the **Vendor** at tab (2). Do not change the **Location** at tab (3).
+4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select 'JetBrains Runtime'. Location (3): do not change.
 
 ![選擇JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -156,7 +157,7 @@ If you receive a failure message this this one:
 
   如果你看到如下所示的錯誤訊息，你可能使用的是 Windows 10 32 位系統。 This is not supported by Android Studio 3.5.1 and above and unfortunately there is nothing that the **AAPS** developers can do about this!
 
-  There  is information on the internet about how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  There is information on the internet about how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![無法啟動守護進程的截圖](../images/AndroidStudioWin10_32bitError.png)
 
@@ -230,7 +231,7 @@ When creating a new keystore for building the signed apk, on Windows the followi
 
 ## 上述方法均無效
 
-If non of the above tips helped you might consider building the apk from scratch:
+If none of the above tips helped you might consider building the apk from scratch:
 
 1. [匯出設定](../Maintenance/ExportImportSettings.md)（在已安裝於您手機上的 AAPS 版本中）
 
@@ -240,13 +241,13 @@ If non of the above tips helped you might consider building the apk from scratch
 
 3. Build the apk from scratch as described [here](#Building-APK-download-AAPS-code).
 
-4. When you have built the apk successfully delete the exiting apk on your phone, transfer the new apk to your phone and install.
+4. When you have built the apk successfully delete the existing apk on your phone, transfer the new apk to your phone and install.
 5. [再次匯入設定](../Maintenance/ExportImportSettings.md)以恢復您的目標和設定。
 6. 你應該檢查你的電池優化選項並再次停用他們。
 
 ## 最壞的情況
 
-If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scractch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). 可以在網際網路上找到完整卸載指南，例如
+If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scratch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). 可以在網際網路上找到完整卸載指南，例如
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10)。
 
