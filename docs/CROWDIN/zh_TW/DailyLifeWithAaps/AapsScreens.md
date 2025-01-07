@@ -336,9 +336,11 @@ Libre 使用者的特殊注意事項：
 
 請注意，您需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。 在達到該目標之前，你的圖表中的線條僅顯示為資訊。
 
-#### 心率(Heart rate)
+(screen-heart-rate-steps)=
 
-使用 [Garmin 智慧型手錶](#Watchfaces-garmin) 時，該資料可能可用。
+#### Heart rate & Steps
+
+This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
 
 #### 偏差(Deviations)
 
