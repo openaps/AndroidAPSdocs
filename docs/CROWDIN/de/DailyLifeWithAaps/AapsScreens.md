@@ -336,9 +336,11 @@ Die Sensitivität ist die Berechnung der Insulinempfindlichkeit, die auf Grund v
 
 Hinweis: Du musst im [Ziel 8](#objectives-objective8) sein, um durch die Empfindlichkeitserkennung [Autosens](#Open-APS-features-autosens) die abzugebende Insulinmenge automatisch anpassen zu lassen. Vor dem Erreichen dieses Ziels wird die Linie in Deiner Diagramm nur zur Information angezeigt.
 
-#### Herzfrequenz
+(screen-heart-rate-steps)=
 
-Diese Informationen sind möglicherweise dann verfügbar, wenn Du eine [Garmin Smartwatch](#Watchfaces-garmin) verwendest.
+#### Heart rate & Steps
+
+This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
 
 #### Abweichungen
 
