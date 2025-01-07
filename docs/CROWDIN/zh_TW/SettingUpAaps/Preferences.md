@@ -45,8 +45,8 @@
 
 **患者名稱**
 
-- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
-- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
+- 如果你需要區分多個設置（例如家中有兩個 T1D 小孩），可以使用此功能。
+- 在 [雙錶面](../WearOS/WearOsSmartwatch.md) 中顯示。
 
 (Preferences-skin)=
 #### 外觀
@@ -155,7 +155,7 @@
 
 ![偏好設定 > 快速嚮導按鈕](../images/Pref2020_OV_QuickWizard2.png)
 
-Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
+同一時間只能顯示一個快速嚮導按鈕。 如果你想執行不同的選項：長按當前顯示的快速嚮導按鈕。 這將帶你到所有快速嚮導選項的列表。 要執行某個選項，請長按它。 在執行之前，你必須確認。
 
 (Preferences-default-temp-targets)=
 ### 預設臨時目標
@@ -489,11 +489,11 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 
 你可以通過向開發者發送崩潰報告來幫助進一步開發**AAPS**。
 
-**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+**自動設定匯出**<br/>啟用此功能後，您允許**AAPS**自動執行設定匯出，而無需用戶介入。 為此，主密碼 安全地存儲在你的手機中（僅限於下次手動匯出時）。 存儲的密碼將在最多 4 週內有效。 4 週後，你將收到通知，提示密碼即將過期。 在為期 1 週的寬限期內，可以透過 從維護選單手動匯出設定來刷新密碼。
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the AAPS 'Careportal' and 'User entry' lists under Treatments.
+在寬限期過期的 1 週後，存儲的密碼將過期，任何自動化設定匯出將中止，同時通知用戶，要求 重新輸入密碼。  [(**自動化設定匯出**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)將被記錄在 AAPS 的「照護入口」和「用戶輸入」列表下的治療項目中。
 
-After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
+啟用此選項後，請確保執行一次手動設定匯出，屆時系統會要求您輸入密碼，以便**AAPS**能夠儲存它。
 
 (preferences-maintenance-logdirectory)= 維護設定還包括**AAPS** 目錄，該目錄可以直接在維護選單中找到。 此設定允許用戶選擇電話上的一個目錄，**AAPS**將在該目錄中儲存偏好設定、日誌及其他檔案。
 
