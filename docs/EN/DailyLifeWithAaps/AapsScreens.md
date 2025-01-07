@@ -316,9 +316,11 @@ Sensitivity is a calculation of sensitivity to insulin as a result of exercise, 
 
 Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
 
-#### Heart rate
+(screen-heart-rate-steps)=
+#### Heart rate & Steps
 
-This data may be available when using a [Garmin smartwatch](#Watchfaces-garmin).
+This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md).
+Enable them on **AAPS** Wear app and give permission for health data.
 
 #### Deviations
 * **Grey** bars show a deviation due to carbs. 
