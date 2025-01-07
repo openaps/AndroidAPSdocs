@@ -336,9 +336,11 @@ To configure additional graphs, check the boxes corresponding to the data you wa
 
 请注意，您需要在[目标8](#objectives-objective8)中才能允许灵敏度检测/[Autosens](#Open-APS-features-autosens)自动调整胰岛素的输送量。 在达到该目标之前，图表中的线条仅用于显示信息。
 
-#### 心率
+(screen-heart-rate-steps)=
 
-使用[Garmin智能手表](#Watchfaces-garmin)时，此数据可能可用。
+#### Heart rate & Steps
+
+This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
 
 #### 偏差
 
