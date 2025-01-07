@@ -1,47 +1,47 @@
 # Обзор компонентов
 
-**AAPS** is not just a (self-built) application, it is but one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the component documentation.
+**AAPS** - это не просто (самостоятельно собранное) приложение, это один из нескольких модулей системы замкнутого цикла. Перед выбором компонентов, следует просмотреть их документацию.
 
 ![Components overview](../images/modules.png)
 
 ```{admonition} IMPORTANT SAFETY NOTICE
 :class: important
 
-The foundation of **AAPS** safety features discussed in this documentation is built on the safety features of the hardware used to build your system. For closing an automated insulin dosing loop, it is critically important that you only use an insulin pump and CGM that are tested, fully functioning and approved by the official instances of your country. Внесение аппаратных или программных технических изменений в это оборудование может стать причиной неконтролируемого введения инсулина, что может повлечь опасные последствия для пациента. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, **do not use** these for creating an **AAPS** system.
+Основа функций безопасности **AAPS**, описанных в данной документации, построена на базе функций безопасности ваших устройств, использованных для сборки системы. Для закрытия автоматизированного цикла подачи инсулина чрезвычайно важно использовать только протестированные, полностью рабочие и одобренные медицинскими регуляторами вашей страны системы НМГ и инсулиновые помпы. Внесение аппаратных или программных технических изменений в это оборудование может стать причиной неконтролируемого введения инсулина, что может повлечь опасные последствия для пациента. Если вы найдете или вам предложат сломанные, модифицированные или самодельные инсулиновые помпы или трансмиттеры НМГ, **не используйте их** для создания системы на базе **AAPS**.
 
 Допустимо использовать только оригинальные, сертифицированные производителем расходные материалы, такие как инсулиновые картриджи, инфузионные наборы, пристреливатели к ним и т. п. Использование непроверенных или модифицированных материалов может вызвать неточность мониторинга и ошибки дозировки инсулина. Инсулин опасен при неверной дозировке - не рискуйте жизнью, пользуясь неумело переделанными компонентами.
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. Сочетание с системой, которая снижает базальную скорость для повышения ГК является особенно опасным, поскольку из-за глифлозинов этот подъем ГК может не произойти и возникнет нехватка инсулина. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
+Наконец, что не менее важно, запрещается принимать SGLT-2 ингибиторы (глифлозины), поскольку они непредсказуемо снижают уровень СК. Сочетание с системой, которая снижает базальную скорость для повышения ГК является особенно опасным, поскольку из-за глифлозинов этот подъем ГК может не произойти и возникнет нехватка инсулина. [Подробнее](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
 ## Необходимые модули
 
 ### Хорошо подобранные дозы и коэффициенты для компенсации
 
-Хотя его нельзя сконструировать или купить, это, вероятно, самый недооцениваемый "модуль", существенно важный для системы. Когда алгоритму доверяется управлять диабетом, следует знать правильные настройки, чтобы не допустить серьезных ошибок. Even if you are still missing other modules, you can already verify and adapt your **Profile** in collaboration with your diabetes team.
+Хотя его нельзя сконструировать или купить, это, вероятно, самый недооцениваемый "модуль", существенно важный для системы. Когда алгоритму доверяется управлять диабетом, следует знать правильные настройки, чтобы не допустить серьезных ошибок. Даже если у вас все еще нет других модулей, можно проверить и отредактировать свой **профиль** вместе с эндокринологом.
 
-The **Profile** includes:
+**Профиль** включает в себя:
 
-- BR (Basal rates): provides background insulin;
-- ISF (insulin sensitivity factor): how much your blood glucose level will be reduced by 1 unit of insulin;
-- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin;
-- DIA (duration of insulin action).
+- BR (уровни базала): обеспечивают фоновый (базальный) инсулин;
+- ISF (рус: ФЧИ, фактор чувствительности к инсулину): насколько ваш уровень ГК понижается от 1 единицы инсулина;
+- CR (рус: УК, углеводный коэффициент): кол-во грамм углеводов, покрываемых 1 единицей инсулина;
+- DIA (продолжительность действия инсулина).
 
 Большинство пользователей систем ИПЖ используют циклические суточные величины скорости базала (BR), гормональную чувствительность к инсулину ISF и углеводный коэффициент CR.
 
-More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
+Узнать больше о **профиле** можно на [отведенной ему странице](../SettingUpAaps/YourAapsProfile.md).
 
 ### Телефон
 
-See the dedicated page [Phones](../Getting-Started/Phones.md).
+См. на отдельной странице - [Телефоны](../Getting-Started/Phones.md).
 
 ### Инсулиновая помпа
 
-See the dedicated page [Compatible Pumps](../Getting-Started/CompatiblePumps.md).
+См. на отдельной странице - [Совместимые помпы](../Getting-Started/CompatiblePumps.md).
 
-**Advantages and disadvantages of some pump models**
+**Преимущества и недостатки различных помп**
 
-The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+Combo, Insight и старые Medtronic – это надежные помпы, которые можно использовать в системах замкнутого цикла. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
 
 Однако преимущества помп Dana R/ RS и Dana-i по сравнению с Combo следующие:
 
