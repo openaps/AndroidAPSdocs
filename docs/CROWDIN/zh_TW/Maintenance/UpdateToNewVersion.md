@@ -9,10 +9,10 @@
 * 請在有新版本發布後儘快更新到最新版本的 **AAPS**。
 * 當有新版本發布時，你將在 **AAPS** 應用中收到關於新版本的訊息橫幅。
 * 新版本也會在發布時於 Facebook 上公佈。
-* Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+* 發布後，請詳細閱讀[發布說明](ReleaseNotes.md)，如有任何疑問，請在Facebook或Discord社群中澄清後再進行更新。
     
     ```{note}
-    In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+    如果你想在新電腦上建立 **AAPS**：請將你的備份金鑰存檔複製到新電腦上。 然後按照 [初始建置 **AAPS** 程序](../SettingUpAaps/BuildingAaps.md) 的步驟，而不是這個指導。 唯一的不同之處在於，你可以選擇你在新電腦上複製的金鑰存檔，而不必建立新的金鑰存檔。
     ```
 
 ## 更新到新版本 AAPS 的概述
@@ -71,11 +71,11 @@
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### 檢查 JVM 版本
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+如果你已經在同一台電腦上建立了 **AAPS** 的先前版本，特別建議進行此檢查。
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+請在 [建置指示](#Building-APK-recommended-specification-of-computer-for-building-apk-file) 中檢查與你現在要建置的 **AAPS** 版本對應的 JVM 所需版本。 然後按照在 [不相容的 Gradle JVM](#incompatible-gradle-jvm) 中描述的步驟，以確保你當前使用的是正確的版本。
 
 (更新至新版本-建立簽署的 APK)=
 
