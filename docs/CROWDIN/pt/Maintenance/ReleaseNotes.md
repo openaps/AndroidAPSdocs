@@ -64,6 +64,31 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 ```
 
 (version3300)=
+## Version 3.3.1.0
+
+Release date: 06-01-2025
+
+### UI changes
+
+* [Added colors to differentiate between AAPSClient and AAPSClient2](#RemoteControl_aapsclient) @MilosKozak
+* Improved Users actions layout and icons
+
+### Other functionalities
+
+* New automation trigger : [steps count](#screen-heart-rate-steps) @Roman Rihter
+* Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR) @MilosKozak
+* NSClient v3 : make Announcement work (_i.e._ from AAPSClient to AAPS) @MilosKozak
+
+### Technical changes & bug fixes
+
+* Fix Insight crash @philoul
+* Fix creation of extra-numerous deviceStatus entries in Nightscout @MilosKozak
+* Fix carbs absorption @MilosKozak
+* Fixed color of RadioButtons & CheckBoxes @MilosKozak
+* Fixed bug in DynISF percentage migration @MilosKozak
+* Resolved misplaced DynISF notification @MilosKozak
+* Fixed bug in watchfaces @philoul
+
 ## Version 3.3.0.0
 
 Release date: 29-12-2024
@@ -91,6 +116,8 @@ Release date: 29-12-2024
   * The [Bluetooth connectivity issues some people encounter on Android 15](../Getting-Started/Phones.md) are **NOT** solved by this release (this is an Android issue, not **AAPS**).
   * The BYODA button on the homescreen is no longer available due to Android limitations. There is no known workaround.
 * Update instructions: follow the [Update to a new version](../Maintenance/UpdateToNewVersion.md) guide.
+* Tip - if you do not want to lose your **AAPS** history ALWAYS do an UPDATE and NOT an UNINSTALL/INSTALL. As a precaution, back up your current **AAPS** settings and old APK to revert to an old version should anything go wrong.
+* If using Omnipod dash any importing of Preferneces to **AAPS** will cancel any current pods.
 * After upgrading:
   * Set the new [“AAPS directory” setting](#preferences-maintenance-logdirectory), in the Maintenance tab.
 
