@@ -17,7 +17,7 @@
 
 * Позволяют выполнять переход между различными модулями **AAPS**.
 * Между экранами также можно переходить свайпом влево или вправо.
-* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Видимые вкладки можно выбрать в [Конфигураторе](#Config-Builder-tab-or-hamburger-menu).
 
 ### Раздел B - Профиль & Цель
 
@@ -75,11 +75,11 @@
 * красный = ниже заданного диапазона
 * желтый = выше заданного диапазона 
 
-![Deltas](../images/Home_Delta.png)
+![Дельта](../images/Home_Delta.png)
 
-The blocks in the middle shows:
+Блоки в середине показывают:
 
-1. how many minutes since last **CGM** reading
+1. минуты с предыдущего показания **мониторинга**
 2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
     Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
 
@@ -154,7 +154,7 @@ The blocks in the middle shows:
 
 *Примечание*: В своих расчетах.**AAPS** учитывает данные за 30 часов. Поэтому даже после устранения проблемы нерегулярной передачи данных, может потребоваться до 30 часов, чтобы исчез желтый треугольник.
 
-#### Simple mode
+#### Простой режим
 
 An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
 
@@ -696,13 +696,13 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 
 ## Просмотр журнала
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Просмотр журнала. It is not possible to put in the main menu through the Config Builder. Доступ к нему также можно получить через кнопку в нижней части вкладки [Действия](#action-tab).
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Просмотр журнала. Его невозможно показать в главном меню через Конфигуратор. Доступ к нему также можно получить через кнопку в нижней части вкладки [Действия](#action-tab).
 
 Позволяет перемещаться по журналу **AAPS**. См соответствующую страницу - [ Просмотр данных > Журнал истории](../Maintenance/Reviewing.md).
 
 ## Statistics
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Статистика. It is not possible to put in the main menu through the Config Builder.
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Статистика. Его невозможно показать в главном меню через Конфигуратор.
 
 Дает статистику о времени в целевом диапазоне и суммарной суточной дозе инсулина TDD. См соответствующую страницу - [Просмотр данных > Статистика](#reviewing-statistics).
 
@@ -710,7 +710,7 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 
 ## Profile Helper
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Помощник профиля. It is not possible to put in the main menu through the Config Builder. Помощник профиля поможет:
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Помощник профиля. Его невозможно показать в главном меню через Конфигуратор. Помощник профиля поможет:
 
 * [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
 * [compare two profiles](#your-aaps-profile-compare-profiles)
