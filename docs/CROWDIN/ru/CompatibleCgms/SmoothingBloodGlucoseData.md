@@ -10,7 +10,7 @@ orphan: true
 
 ## Smoothing data within AAPS
 
-Начиная с версии 3.2, **AAPS** предлагает опцию сглаживания данных СК внутри самого **AAPS** вместо приложения НМГ. There are three options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
+Начиная с версии 3.2, **AAPS** предлагает опцию сглаживания данных СК внутри самого **AAPS** вместо приложения НМГ. В [Конфигураторе > Сглаживание](../SettingUpAaps/ConfigBuilder.md) есть три опции.
 
 ![Сглаживание](../images/ConfBuild_Smoothing.png)
 
@@ -49,5 +49,5 @@ The noise-level data is not shared with AAPS using this method. Therefore, 'Enab
 
 ### Freestyle Libre sensors
 
-#### xDrip+ with FreeStyle Libre1
-The FreeStyle Libre 1 does not broadcast any information about the level of noise detected in the readings, and therefore 'Enable SMB always' and 'Enable SMB after carbs' are disabled when using this CGM. In addition, many people have reported the FreeStyle Libre 1 often produces noisy data.
+#### xDrip+ с FreeStyle Libre1
+FreeStyle Libre 1 не транслирует никакой информации об уровне шума, обнаруженного при передаче данных, и, следовательно, опции "Включать SMB всегда" и "Включать SMB после углеводов" отключены при использовании этой системы мониторинга. Кроме того, многие пользователи жаловались на зашумленность данных FreeStyle Libre 1.
