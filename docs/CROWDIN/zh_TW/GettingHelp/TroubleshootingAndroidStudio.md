@@ -55,7 +55,7 @@ gradle 同步失敗的可能原因包括：
 
   * 如果你收到訊息提示
     ```
-    Git：找不到指令
+    Git: command not found
     ```
     你的 Git 安裝不正確。
 
