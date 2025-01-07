@@ -77,7 +77,7 @@
 
 請在 [建置指示](#Building-APK-recommended-specification-of-computer-for-building-apk-file) 中檢查與你現在要建置的 **AAPS** 版本對應的 JVM 所需版本。 然後按照在 [不相容的 Gradle JVM](#incompatible-gradle-jvm) 中描述的步驟，以確保你當前使用的是正確的版本。
 
-(更新至新版本-建立簽署的 APK)=
+Update-to-new-version-build-the-signed-apk)=
 
 ### 建置簽章 APK
 
