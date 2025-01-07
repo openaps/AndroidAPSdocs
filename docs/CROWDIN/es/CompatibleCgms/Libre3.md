@@ -28,7 +28,7 @@ Este método utiliza Juggluco para recibir datos brutos con intervalos de 1 minu
 ### Paso 1: Configurar Juggluco
 Descarga e instala la aplicación Juggluco desde [aquí](https://www.juggluco.nl/Juggluco/download.html). Sigue las instrucciones [aquí](https://www.juggluco.nl/Juggluco/libre3/)
 
-Make sure you send the glucose values to Xdrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip+
+Make sure you send the glucose values to xDrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip+
 
 ![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)
 
@@ -63,7 +63,7 @@ Después de un cambio de sensor, xDrip+ detectará automáticamente el nuevo sen
 - Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 - If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
-- Desactiva el suavizado (ya activado en xDrip+)
+- Turn of Smoothing (done in xDrip+ already)
 
 Hasta el momento, al usar Libre 3 como fuente de glucosa, las opciones "Habilitar SMB siempre" y "Habilitar SMB con carbohidratos" no pueden activarse con el algoritmo de SMB. Los valores de glucosa de Libre 3 no son lo suficientemente suaves como para usarlos de manera segura.
 
