@@ -65,17 +65,17 @@
 
 **注意**：_匯出的設定將使用你的 AAPS 主密碼進行加密：若沒有用於匯出的主密碼， 你將無法匯入設定檔！_
 
-### Exporting or Importing Settings
+### 匯出或匯入設定
 要匯出或匯入設定，請使用 AAPS**維護選單中的匯入或匯出按鈕**
 
 ![維護選單匯出/匯入按鈕](../images/Maintenance/maintenance_menu_import_export_400px.png)
 
-(ExportImportSettings-Automating-Settings-Export)=
-### Automating Settings Export
+(匯出匯入設定-自動設定匯出)=
+### 自動設定匯出
 
-For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**" in [Preferences > Maintenance](#preferences-maintenance-settings).
+要進行自動設定匯出，請在[（**參見自動化**）](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)中啟用選項"**自動設定匯出**"，在[偏好設定 > 維護](#preferences-maintenance-settings)中。
 
-You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
+您現在可以將[自動化](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)配置為定期匯出設定（_例如_每週），或在pod變更後進行匯出。
 
 _**注意：**在匯入設定時，用戶始終需要輸入 AAPS 密碼！_
 
