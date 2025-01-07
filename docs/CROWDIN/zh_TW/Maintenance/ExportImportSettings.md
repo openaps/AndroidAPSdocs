@@ -70,7 +70,7 @@
 
 ![維護選單匯出/匯入按鈕](../images/Maintenance/maintenance_menu_import_export_400px.png)
 
-(匯出匯入設定-自動設定匯出)=
+(ExportImportSettings-Automating-Settings-Export)=
 ### 自動設定匯出
 
 要進行自動設定匯出，請在[（**參見自動化**）](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)中啟用選項"**自動設定匯出**"，在[偏好設定 > 維護](#preferences-maintenance-settings)中。
