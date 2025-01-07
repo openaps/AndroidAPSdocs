@@ -28,7 +28,7 @@ AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理�
 ### 步驟 1：設定 Juggluco
 從[此處](https://www.juggluco.nl/Juggluco/download.html)下載並安裝 Juggluco 應用程式。 按照[此處](https://www.juggluco.nl/Juggluco/libre3/)的指示操作。
 
-確保將葡萄糖值傳送至 xDrip+：你可以在 Juggluco 的設定中配置 Juggluco 將葡萄糖值傳送至其他應用程式。 Juggluco 可以發送三種類型的廣播：**修補版 Libre 廣播** 最初由修補版 Librelink 應用程式使用，並可用於將葡萄糖值傳送至 xDrip+。
+Make sure you send the glucose values to xDrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco 可以發送三種類型的廣播：**修補版 Libre 廣播** 最初由修補版 Librelink 應用程式使用，並可用於將葡萄糖值傳送至 xDrip+。
 
 ![Juggluco 廣播至 xDrip+](../images/Juggluco_xDrip.png)
 
@@ -63,7 +63,7 @@ AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理�
 - 在[ConfigBuilder 的血糖來源](#Config-Builder-bg-source)中選擇 xDrip+。
 
 - 如果 AndroidAPS 在手機處於飛行模式時無法接收血糖值，請使用「識別接收器」。
-- 關閉平滑處理（已在 Xdrip+ 中完成）。
+- Turn of Smoothing (done in xDrip+ already)
 
 目前，當使用 Libre 3 作為血糖來源時，無法在 SMB 演算法中啟用「始終啟用 SMB」和「碳水後啟用 SMB」選項。 Libre 3 的血糖值不夠平滑，無法安全使用。
 
