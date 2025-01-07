@@ -71,17 +71,11 @@
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### 檢查 JVM 和 Gradle 版本
+### Check JVM version
 
-如果你已在同一臺電腦上構建過先前版本的 **AAPS**，則特別建議進行這些檢查。
+This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
 
-請參考 [建立指導](#Building-APK-recommended-specification-of-computer-for-building-apk-file) 中所需的 JVM 和 Gradle 版本，與你正在構建的 **AAPS** 版本相對應。
-
-對於 Gradle，請前往 **檔案 > 專案結構** (1)。 在**專案**標籤 (2) 中，確認**Gradle 版本** (3) 是合適的版本。 如果找不到所需的版本，則表示你正在使用過時的 Android Studio 版本（請參閱前一步關於最低 Android Studio 版本的說明）。
-
-![檢查 Gradle 版本](../images/studioTroubleshooting/gradle_version.png)
-
-對於 JVM 版本，請按照[不相容的 Gradle JVM](#incompatible-gradle-jvm) 中描述的步驟檢查以確保你當前使用的版本正確。
+Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
 
 (更新至新版本-建立簽署的 APK)=
 
