@@ -102,7 +102,7 @@ See the instructions for [transferring and installing AAPS](../SettingUpAaps/Tra
 
 После установки нового приложения, проверьте версию AAPS, нажав на выпадающее меню вверху справа "о приложении". Вы увидете текущую версию.
 
-![Установленная версия AAPS](../images/Update_VersionCheck320.png)
+![Установленная версия AAPS](../images/Update_VersionCheck.png)
 
 Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
 
