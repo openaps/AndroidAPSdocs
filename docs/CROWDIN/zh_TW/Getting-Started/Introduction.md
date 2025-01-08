@@ -47,7 +47,7 @@ Android APS（**AAPS**）是一個混合閉環系統，或稱人工胰臟系統�
 
 AAPS 的“核心”是一個你自己建置的**應用程式**。 這裡有詳細的步驟說明。 然後你可以將**AAPS** 應用程式安裝在[相容](../Getting-Started/Phones.md)的**Android 智慧型手機** (**1**) 上。 很多人喜歡將他們的 AAPS 循環放在另一隻獨立的手機上，而不是主要的手機 因此，你不必在日常生活中使用 Android 手機，只需用於運作你的 AAPS 循環即可。
 
-**安卓智慧型手機**也需要安裝另一個應用程式，以及 **AAPS**。 This is either a modified Dexcom app called build-your-own dexcom app [**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) or [**xDrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/). 這個附加應用程序透過藍牙從傳感器(**2**) 接收葡萄糖資料，然後將資料內部發送到手機上的 **AAPS 應用程序**。
+**安卓智慧型手機**也需要安裝另一個應用程式，以及 **AAPS**。 這是修改過的 Dexcom 應用程式，稱為自行構建 Dexcom 應用程式 [**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) 或 [**xDrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/)。 這個附加應用程序透過藍牙從傳感器(**2**) 接收葡萄糖資料，然後將資料內部發送到手機上的 **AAPS 應用程序**。
 
 **AAPS 應用程式**使用來自 OpenAPS 的決策過程（**演算法**）。 初學者開始使用基本的 **oref0** 演算法，但隨著你在AAPS上的目標進度，可以切換到使用較新的 **oref1** 演算法。 你使用哪個演算法（oref0或oref1），取決於哪個最適合你的特定情況。  在兩種情況下，演算法考慮多個因素，每次從傳感器傳入新讀取值時進行快速計算。 演算法然後透過藍牙將指令發送到胰島素幫浦（**3**），指示其提供多少胰島素。 所有訊息可以透過手機資料或wifi發送到網際網路（**4**） 如果需要，這些資料也可以與追蹤者分享，並且/或收集用於分析。
 
@@ -81,13 +81,13 @@ AAPS 的“核心”是一個你自己建置的**應用程式**。 這裡有詳�
 這些都是一些範例，完整的功能範圍提供了極大的靈活性來應對日常生活中的各種狀況，包括運動、疾病、荷爾蒙周期、_其他_等。 最後，這些彈性功能該怎麼用，全看使用者自己決定，因為沒有一套通用的自動化規則適合每個人。
 
 #### 4) **遠端監控**
-There are multiple possible monitoring channels (Sugarmate, Dexcom Follow, xDrip+, Android Auto _etc._) which are useful for parents/carers and adults in certain scenarios (sleeping/driving) who need customisable alerts. In some apps (xDrip+) you can also turn alarms off totally, which is great if you have a new sensor “soaking” or settling down that you don’t want to loop with yet.
+有多種可用的監測管道（如 Sugarmate、Dexcom Follow、xDrip+、Android Auto _等_），這些對於父母/照護者以及在某些情境下（睡眠/駕駛）需要自訂警報的成人非常實用。 在某些應用程式（如 xDrip+）中，您也可以完全關閉警報，這對於新的傳感器正在「浸潤期」或穩定時非常實用，特別是當您尚未想進行循環時。
 
 #### 5) **遠端控制**
 **AAPS** 相對於商業系統的一個重大優勢是，關注者可以透過認證的簡訊（SMS）指令或應用程式（如 [Nightscout](https://nightscout.github.io/) 或 AAPSClient）向 **AAPS** 系統發送多種指令。 第1型糖尿病兒童的父母們廣泛使用AAPS。 例如，在遊樂場時，你可以透過自己的手機為孩子的點心提前注射，而孩子則繼續玩耍。 系統可透過不同裝置（_如_ Fitbit）進行監控，發送基本指令（_如_ Samsung Galaxy watch 4），甚至可以使用高階智慧型手錶(**5**（_如_ LEMFO LEM14）運作整個 AAPS 系統。 在這種情況下，你不需要使用手機運作AAPS。 隨著手錶的電池壽命提高和技術變得更加穩定，這最後一個選項可能會變得越來越具吸引力。
 
 #### 6) **開放的應用程式介面，無商業限制**
-除了使用開源方法外，允許隨時查看**AAPS**的程式碼，提供開放的程式介面這一做法，也讓其他開發者有機會貢獻新想法。 **AAPS** 與 Nightscout 緊密整合。 這加快了發展，讓用戶可以添加功能，使得與糖尿病的生活更加方便。 Good examples for such integrations are [Nightscout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), [xDrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/), [M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) etc. 開源開發者與商業系統開發者之間的對話持續進行。 許多 DIY 創新逐漸被商業系統採用，儘管開發速度較慢，這在一定程度上是因為不同公司的系統（如幫浦、應用程式、傳感器等）之間的介面需要謹慎協商和授權。 這也可能減緩創新，這些創新對患者（或一小部分特定需求的患者）很方便，因為這些創新無法帶來顯著的利潤。
+除了使用開源方法外，允許隨時查看**AAPS**的程式碼，提供開放的程式介面這一做法，也讓其他開發者有機會貢獻新想法。 **AAPS** 與 Nightscout 緊密整合。 這加快了發展，讓用戶可以添加功能，使得與糖尿病的生活更加方便。 這類整合良好例子包括 [Nightscout](https://nightscout.github.io/)、[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)、[xDrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/)、[M5 Stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) 等。 開源開發者與商業系統開發者之間的對話持續進行。 許多 DIY 創新逐漸被商業系統採用，儘管開發速度較慢，這在一定程度上是因為不同公司的系統（如幫浦、應用程式、傳感器等）之間的介面需要謹慎協商和授權。 這也可能減緩創新，這些創新對患者（或一小部分特定需求的患者）很方便，因為這些創新無法帶來顯著的利潤。
 
 #### 7) **詳細的應用程式介面**
 透過 **AAPS**，你可以輕鬆追蹤幫浦胰島素數值、套管使用時間、傳感器時間、幫浦電池時間、活性胰島素量_等等_。 許多操作可以直接在 **AAPS** 應用中完成（如幫浦注射、幫浦中斷等），無需在幫浦本身上操作，這樣幫浦可以一直放在你的口袋或腰帶上。

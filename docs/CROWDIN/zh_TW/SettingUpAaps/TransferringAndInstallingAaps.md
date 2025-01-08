@@ -2,7 +2,7 @@
 
 在上一部分[建立**AAPS**](../SettingUpAaps/BuildingAaps.md)中，你在電腦上建立了**AAPS**應用程式（這是一個.apk檔案）。
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip+ or another CGM reciever app) to your Android smartphone, and then **install** the app(s).
+接下來的步驟是將 **AAPS** APK 檔案（以及您可能需要的其他應用程式，如 BYODA、xDrip+ 或其他 CGM 接收應用程式）傳送到您的 Android 智慧型手機，然後**安裝**這些應用程式。
 
 在智慧型手機上安裝**AAPS**後，你將能夠進行[**AAPS 循環的配置**](../SettingUpAaps/SetupWizard.md)。
 

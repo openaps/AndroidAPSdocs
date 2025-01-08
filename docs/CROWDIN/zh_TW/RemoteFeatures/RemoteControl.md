@@ -1,7 +1,7 @@
 # 遠端控制 AAPS
 有四種非常有效的工具可以遠端管理 **AAPS**：
 
-1) [簡訊指令](RemoteControl_SMS-Commands) (關注者的手機可以是 Android 或 iOS)， 2) [AAPSClient](RemoteControl_aapsclient) (關注者的手機是 Android) 3) [Nightscout](RemoteControl_nightscout) (Android、iOS 或其他計算機/設備)。  
+1) [簡訊指令](RemoteControl_SMS-Commands) (關注者的手機可以是 Android 或 iOS) 2) [AAPSClient](RemoteControl_aapsclient) (關注者的手機是 Android) 3) [Nightscout](RemoteControl_nightscout) (Android、iOS 或其他計算機/設備)。  
 4) [智慧型手錶](RemoteControl_smartwatches) (Android)
 
 前三個主要適合於照護者/父母，但智慧型手錶對照護者/父母**和**糖尿病患者本身都非常有用。
