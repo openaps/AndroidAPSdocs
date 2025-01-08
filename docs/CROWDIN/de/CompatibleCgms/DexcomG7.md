@@ -9,7 +9,7 @@ orphan: true
 
 Der G7 und ONE+ glätten die Glukosewerte weder in der (Dexcom-) App noch im Lesegerät. Dies ist anders als es beim G6 war. Mehr Details dazu findest Du [hier](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
-Picture is outdated!!! ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 `{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
 
 ## 1. xDrip+ (direkte Verbindung zum G7 oder ONE+)

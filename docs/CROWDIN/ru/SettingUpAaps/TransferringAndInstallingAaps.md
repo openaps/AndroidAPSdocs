@@ -2,7 +2,7 @@
 
 In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), you built the **AAPS** app (which is an .apk file) on a computer.
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, Xdrip+ or another CGM reciever app) to your Android smartphone, and then **install** the app(s).
+The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip+ or another CGM reciever app) to your Android smartphone, and then **install** the app(s).
 
 Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
 

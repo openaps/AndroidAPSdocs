@@ -2,7 +2,7 @@
 
 在之前的部分，[构建AAPS](../SettingUpAaps/BuildingAaps.md)中，您已经在计算机上构建了AAPS应用程序（这是一个.apk文件）。
 
-接下来的步骤是将**AAPS** APK文件（以及您可能需要的其他应用程序，如BYODA、Xdrip+或其他CGM接收器应用程序）**传输**到您的Android智能手机上，然后**安装**这些应用程序。
+The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip+ or another CGM reciever app) to your Android smartphone, and then **install** the app(s).
 
 在智能手机上安装**AAPS**之后，您就可以继续进行[**配置AAPS闭环**](../SettingUpAaps/SetupWizard.md)了。
 
