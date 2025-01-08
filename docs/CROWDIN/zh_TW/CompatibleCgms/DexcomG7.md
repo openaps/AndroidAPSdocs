@@ -9,7 +9,7 @@ orphan: true
 
 值得注意的是，與 G6 相比，G7 和 ONE+ 系統在應用程式和讀取器中都不會平滑值。 更多詳細資訊請參閱 [這裡](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
 
-圖片已過時！！！ ![G7 英文](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 `{admonition} [平滑方法](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
 
 ## 1. xDrip+（直接連接至 G7 或 ONE+）
