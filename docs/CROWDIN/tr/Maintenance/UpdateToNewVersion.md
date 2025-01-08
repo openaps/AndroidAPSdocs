@@ -102,7 +102,7 @@ See the instructions for [transferring and installing AAPS](../SettingUpAaps/Tra
 
 Yeni apk'yı yükledikten sonra, sağ üstteki üç nokta menüsüne ve ardından Hakkında'ya tıklayarak telefonunuzdaki AAPS sürümünü kontrol edebilirsiniz. Mevcut sürümü görmelisiniz.
 
-![Yüklü AAPS sürümü](../images/Update_VersionCheck320.png)
+![Yüklü AAPS sürümü](../images/Update_VersionCheck.png)
 
 Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
 
