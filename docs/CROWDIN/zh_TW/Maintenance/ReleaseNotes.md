@@ -101,8 +101,8 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
   * 提醒：如果您使用**DynamicISF**並已為**設定檔 %**設定了**自動化**與**血糖**有關：請關閉此功能。 因為這已經是動態敏感度演算法的一部分。
   * *** 再次提醒：使用DynamicISF時，請關閉所有啟動與**血糖**相關的**自動化**，因為這樣有可能造成胰島素過量！ *****
   * 請勿長時間使用超過 100% 的 **設定檔百分比** 增加值。 如果你的**設定檔**已有變更，請在「治療頁籤」中的**設定檔**切換，複製帶有% 的**設定檔**來建立新的設定檔。
-* 為使用 FreeStyle Libre 2 和 Libre 3 的用戶啟用「始終啟用 SMB」與「碳水後啟用 SMB」選項。
-  * 注意：儘管在**AAPS** 端已移除限制，但此功能尚未完全運作，因為**AAPS** 需要接收所使用的 CGM 的正確認證。 請參閱[xDrip+ 專案中開啟的錯誤](https://github.com/NightscoutFoundation/xDrip/issues/3841)。
+* [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users
+  * Note : Requires latest version of xDrip+ or Juggluco.
 * 新增的 **自動化**觸發條件
 * 無人操作的設定匯出
 
@@ -110,14 +110,13 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 * 在升級之前：
   * **<span style="color:red">此版本需要 Google Android 11.0 或更高版本</span>**。 在嘗試更新之前請檢查你的手機版本。
-  * [需要稱為"Ladybug"的Android Studio版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高來建立此版本。 如果你已安裝舊版Android Studio，可能需要<span style="color:red">將JVM版本配置為21</span>。 請參閱[Android Studio問題排除 > 非相容的Gradle JVM](#incompatible-gradle-jvm)。
   * 如果你使用配合ruffy設備的“舊”Combo驅動程式，請在更新之前移轉至[原生Combo驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
   * 在升級過程中，你將失去[主畫面上的附加圖表](#AapsScreens-section-g-additional-graphs)：如有需要，請手動記錄當前配置，以便在升級後重新創建。
   * 針對某些人在 Android 15 上遇到的 [藍牙連線問題](../Getting-Started/Phones.md)，本版本並未解決（這是 Android 的問題，而非 **AAPS** 的問題）。
   * 由於 Android 的限制，主畫面上的 BYODA 按鈕已不再提供。 目前尚無已知的解決方法。
 * 更新指示：遵循[更新到新版本](../Maintenance/UpdateToNewVersion.md)的指南。
-* 提示 - 如果您不想失去**AAPS**的歷史紀錄，請務必進行更新，而非卸載/安裝。 作為預防措施，備份您目前的**AAPS**設定和舊的APK，以防在出現問題時可以恢復到舊版本。
-* 如果使用Omnipod dash，將偏好設定匯入**AAPS**會中斷任何當前的pod。
+  * [需要稱為"Ladybug"的Android Studio版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高來建立此版本。 如果你已安裝舊版Android Studio，可能需要<span style="color:red">將JVM版本配置為21</span>。 請參閱[Android Studio問題排除 > 非相容的Gradle JVM](#incompatible-gradle-jvm)。
+  * Tip - if you do not want to lose your **AAPS** history ALWAYS do an UPDATE and NOT an UNINSTALL/INSTALL. As a precaution, back up your current **AAPS** settings and old APK to revert to an old version should anything go wrong.
 * 升級後：
   * 在維護標籤中設置新的[“AAPS目錄”設定](#preferences-maintenance-logdirectory)。
 
