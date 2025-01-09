@@ -1,6 +1,6 @@
 (Accessing-logfiles-accessing-logfiles)=
 
-# Logdateien erhalten
+# Auf die Protokolldateien zugreifen
 
 * Verbinde das Smartphone mit dem Computer im Dateiübertragungsmodus
 * Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  
