@@ -102,7 +102,7 @@ Update-to-new-version-build-the-signed-apk)=
 
 安裝新 apk 後，你可以點擊右上角的三點選單，然後選擇 "關於"，以檢查手機上的 AAPS 版本。 你應該能看到目前版本。
 
-![已安裝的 AAPS 版本](../images/Update_VersionCheck320.png)
+![已安裝的 AAPS 版本](../images/Update_VersionCheck.png)
 
 檢查[發佈說明](../Maintenance/ReleaseNotes.md)以了解更新後是否有任何特定的指示。
 

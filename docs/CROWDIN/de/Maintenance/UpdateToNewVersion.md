@@ -102,7 +102,7 @@ Nutze die Anleitung [AAPS auf Dein Smartphone übertragen und installieren](../S
 
 Nachdem Du die neue APK-Datei installiert hast, kannst Du auf dem Smartphone die Version prüfen. Gehe dazu oben rechts auf die drei Punkte und wähle dann "Über". Du solltest die aktuelle Version angezeigt bekommen.
 
-![Installierte AAPS Version](../images/Update_VersionCheck320.png)
+![Installierte AAPS Version](../images/Update_VersionCheck.png)
 
 Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
 

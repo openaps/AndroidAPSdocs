@@ -102,7 +102,7 @@ See the instructions for [transferring and installing AAPS](../SettingUpAaps/Tra
 
 Après avoir installer le nouvel apk, vous pouvez vérifier la version AAPS sur votre téléphone en cliquant sur le menu 3 points en haut à droite puis sur "à propos". Vous devriez voir la version actuelle en résultat.
 
-![Version installée d'AAPS](../images/Update_VersionCheck320.png)
+![Version installée d'AAPS](../images/Update_VersionCheck.png)
 
 Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
 
