@@ -96,7 +96,7 @@ orphan: true
 
 ## Активация драйвера и сопряжение с Combo
 
-* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Важно**: В списке драйверов помпытакже есть старый драйвер под названием "Accu-Chek Combo (Ruffy)". Его _не_ выбирайте.
+* Выберите драйвер "Accu-Chek Combo" в [Конфигураторе > Pump](../SettingUpAaps/ConfigBuilder.md). **Важно**: В списке драйверов помпытакже есть старый драйвер под названием "Accu-Chek Combo (Ruffy)". Его _не_ выбирайте.
 
   ![Снимок экрана конфигуратора Config Builder помпы Combo](../images/combo/combov2-config-builder.png)
 
