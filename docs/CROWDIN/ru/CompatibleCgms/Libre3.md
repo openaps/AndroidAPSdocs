@@ -28,7 +28,7 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 ### Шаг 1: Настройка Juggluco
 Скачайте и установите приложение Juggluco [отсюда](https://www.juggluco.nl/Juggluco/download.html). Следуйте [этой](https://www.juggluco.nl/Juggluco/libre3/) инструкции
 
-Make sure you send the glucose values to xDrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco может отправить три типа трансляций: Трансляция **Librelink** изначально использовалась модифицированным приложением Librelink и может отправлять значения Гк в xDrip+
+Убедитесь, что данные ГК отправляются в Xdrip+: В настройках Juggluco можно выбрать отправку значений глюкозы другим приложениям. Juggluco может отправить три типа трансляций: Трансляция **Librelink** изначально использовалась модифицированным приложением Librelink и может отправлять значения Гк в xDrip+
 
 ![Трансляция Juggluco в xDrip+](../images/Juggluco_xDrip.png)
 
@@ -63,7 +63,7 @@ Make sure you send the glucose values to xDrip+: In Juggluco's settings you can 
 - В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
 
 - Если AndroidAPS не получает значения BG, когда телефон находится в режиме авиаперелета, проверьте, заполнено ли поле «Идентифицировать приемник»
-- Turn of Smoothing (done in xDrip+ already)
+- Выключите сглаживание (уже сделано в Xdrip+)
 
 На данный момент при использовании Libre 3 в качестве источника ГК в алгоритме SMB невозможно включить опцию "Всегда включать SMB" и "Включать SMB после углеводов". Значения ГК Libre 3 недостаточно сглажены для безопасного пользования.
 

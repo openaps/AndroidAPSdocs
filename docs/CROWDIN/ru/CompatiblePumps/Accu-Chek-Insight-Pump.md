@@ -27,7 +27,7 @@ orphan: true
     
     ![Снимок экрана удаления глюкометра из помпы Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md), select Accu-Chek Insight.
+* В [Конфигураторе >Помпа](../SettingUpAaps/ConfigBuilder.md)выберите Accu-Chek Insight.
     
     ![Снимок экрана конфигуратора Config Builder помпы Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
