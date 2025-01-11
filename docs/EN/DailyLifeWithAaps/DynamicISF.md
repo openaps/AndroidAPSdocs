@@ -74,13 +74,10 @@ This is made to prevent dosing too much insulin when BG is low or predicted to g
 **Future ISF** uses the same formula as described above, except that it may use minimum predicted BG instead of current BG. Minimum predicted BG, [as calculated in oref1](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), is the minimum value your BG is predicted to go during all the course of the predictions.
 
 * If the current BG is above target  <br/> 
-  **and** if levels are flat, within +/- 3 mg/dL:<br/>  
-  BG used in formula: `average(minimum predicted BG, current BG)`.
+  **and** if levels are flat, within +/- 3 mg/dL:<br/>BG used in formula: `average(minimum predicted BG, current BG)`.
 * If eventual **BG** is above target and glucose levels are increasing,<br/>  
-  **or** eventual **BG** is above current **BG**:<br/>  
-  BG used in formula: `current BG`.
-* Otherwise:<br/>  
-  BG used in formula: `minimum predicted BG`.
+  **or** eventual **BG** is above current **BG**:<br/>BG used in formula: `current BG`.
+* Otherwise:<br/>BG used in formula: `minimum predicted BG`.
 
 For (simplified) illustration purposes, see on this screenshot, which situation applies. Orange dots use **predicted BG**, purple dots use **average(predicted BG, current BG)**, and blue dots use **current BG**.
 
@@ -141,4 +138,4 @@ This setting replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the 
   * Variable lifestyle (inconsistent eating or physical activity patterns)
   * Inconsistent TDD or sensitivity from day to day.
 * There is no guide to set the initial value of the adjustment factor. If you see that **DynamicISF** is too aggressive, lower the value, and vice versa.
-* Even though DynISF does not use **profile ISF** at all, if you notice that your sensitivity is very far from what you have stored in your **Profile**, you should consider keeping it up-to-date: in case you lose your **AAPS** data (_i.e._ new phone, new AAPS version…), **Profile ISF** will be used as fallback for 7 days.
+* Even though **DynISF** does not use **profile ISF** at all, if you notice that your sensitivity is very far from what you have stored in your **Profile**, you should consider keeping it up-to-date: in case you lose your **AAPS** data (_i.e._ new phone, new **AAPS** version…), **Profile ISF** will be used as fallback for 7 days.
