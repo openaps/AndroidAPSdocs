@@ -6,8 +6,7 @@ Up until now, the **ISF** could only vary based on the hour of the day, in the *
 **Dynamic ISF** (also called **DynISF**) was added in **AAPS** version 3.2 and requires **[Objective 11](#objectives-objective11)** to be started before it can be activated. Read the [Things to consider when activating DynamicISF](#dyn-isf-things-to-consider-when-activating-dynamicisf) below before trying it out.
 
 ```{admonition} CAUTION - Automations or Profile Percentage Increase
-
-:class: note
+:class: warning
 
 **Automations** should always be used with care. This is particularly so with **Dynamic ISF**.
 
