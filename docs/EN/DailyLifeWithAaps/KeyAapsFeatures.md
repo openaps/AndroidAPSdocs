@@ -97,7 +97,7 @@ See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/lates
 
 ### Enable dynamic sensitivity
 
-This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page.
+This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
 
 #### High temp-target raises sensitivity
 If you have this option enabled, the insulin sensitivity will be increased while having a temporary target above 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease. This will effectively make **AAPS** less aggressive when you set a high temp target.
