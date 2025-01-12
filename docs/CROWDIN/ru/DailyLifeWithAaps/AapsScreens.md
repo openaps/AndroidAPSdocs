@@ -80,8 +80,8 @@
 Блоки в середине показывают:
 
 1. минуты с предыдущего показания **мониторинга**
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-    Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
+2. разница с последним значением: Δ, и с последними средними значениями 15 и 40 минут (Δ15 и Δ40).  
+    Большая дельта рассчитываются как среднее значение предществующих изменений.
 
 (AapsScreens-loop-status)=
 
@@ -156,16 +156,16 @@
 
 #### Простой режим
 
-An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+Значок с изображением лица ребенка в правом верхнем углу этого раздела указывает на то, что вы находитесь в [ простом режиме](#preferences-simple-mode).
 
-![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
+![Начальный экран2020_ПростойРежим.png](../images/Home2020_SimpleMode.png)
 
 ### Раздел D - АктИнс, АктУгл, БС и AS
 
 ![Раздел D](../images/Home2020_TBR.png)
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
+1. **Шприц**: активный инсулин (IOB) - количество активного инсулина в организме  
+    Активный инсулин равен нулю, если работает стандартная база и нет инсулина, оставшегося от предыдущих болюсов.
     
     * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
     * Нажмите на иконку (только короткое нажатие), чтобы увидеть как IOB распределяется между базой и болюсом.
