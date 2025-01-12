@@ -1,7 +1,7 @@
 (Open-APS-features-DynamicISF)=
 # DynamicISF (DynISF)
 
-Up until now, the **ISF** could only vary based on the hour of the day, in the **Profile**. But in reality, a person’s ISF also varies depending on their **BG** level: when at a high **BG** level, you need more insulin to bring you down 50mg/dL / 3mmol/L than you would if you were at a lower **BG**. **DynamicISF** is meant to address this issue.
+Up until now, with **AMA** and **SMB**,  **AAPS** could only vary **ISF** based on the constraints of the **ISF value** set for the  relevant time period  within the user’s **Profile**. But in reality, a person’s **ISF** also varies depending on their **BG** level: when at a high BG level, the user will need more insulin to bring their **BG** down 50mg/dL / 3mmol/L than compared to a lower  **BG**. DynamicISF is meant to address this issue.
 
 **Dynamic ISF** (also called **DynISF**) was added in **AAPS** version 3.2 and requires **[Objective 11](#objectives-objective11)** to be started before it can be activated. Read the [Things to consider when activating DynamicISF](#dyn-isf-things-to-consider-when-activating-dynamicisf) below before trying it out.
 
@@ -10,7 +10,7 @@ Up until now, the **ISF** could only vary based on the hour of the day, in the *
 
 **Automations** should always be used with care. This is particularly so with **Dynamic ISF**.
 
-When using **Dynamic ISF**, disable any temporary **Profile** increase as an **Automation** rule, because it would cause **Dynamic ISF** to be overly aggressive in correction bolusing and could cause hypoglycemia. This is exactly what **Dynamic ISF** algorithm does for you.
+When using **Dynamic ISF**, disable any temporary **Profile** increase as an **Automation** rule, because it would cause **Dynamic ISF** to be overly aggressive in correction bolusing and result in hypoglycemia. This is exactly what **Dynamic ISF** algorithm does for you.
 
 ```
 
@@ -25,7 +25,7 @@ To use **Dynamic ISF**, **AAPS'** database requires a minimum of 7 days of the u
 
 When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation  of the app).
 
-**SMB/AMA** - an example of a user's **Profile** with static **ISF** as set by the user and utilized by **SMB** and **AMA**.
+**SMB/AMA** - an example of a user's **Profile** with static **ISF** as set by the user and utilised by **SMB** and **AMA**.
 
 ![Static ISF](../images/DynamicISF/DynISF1.png)
 
@@ -137,5 +137,5 @@ This setting replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the 
 * **DynamicISF** may not work for everyone. Specifically, you may see unexpected results if one of these situations apply to you:
   * Variable lifestyle (inconsistent eating or physical activity patterns)
   * Inconsistent TDD or sensitivity from day to day.
-* There is no guide to set the initial value of the adjustment factor. If you see that **DynamicISF** is too aggressive, lower the value, and vice versa.
+* There is no precise guide to set the initial value of the adjustment factor. As a starting point: assuming your **Profile** was correct, when you are in range and levels are flat, the **DynISF** value should be about the same as the one you had in your **Profile** before.<br/>If you see that **DynamicISF** is too aggressive, lower the adjustment factor, and vice-versa.
 * Even though **DynISF** does not use **profile ISF** at all, if you notice that your sensitivity is very far from what you have stored in your **Profile**, you should consider keeping it up-to-date: in case you lose your **AAPS** data (_i.e._ new phone, new **AAPS** version…), **Profile ISF** will be used as fallback for 7 days.
