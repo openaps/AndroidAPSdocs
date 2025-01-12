@@ -138,7 +138,7 @@ orphan: true
 
 Расположено в разделе **Дополнительные настройки**.
 
-Only enable if you have connection problems. If enabled the driver scans for the pump again before trying to reconnect to the pump. Make sure you have Location permission set to "Always allow".
+Включите только при наличии проблем с подключением. При включении драйвер заново сканирует и пытается подключиться к помпе. Make sure you have Location permission set to "Always allow".
 
 ### Шаг 2b: Настройки оповещений AAPS
 
