@@ -182,6 +182,6 @@ Open Humans 上傳工具 <./SupportingAaps/OpenHumans.md>
 詞彙表<./UsefulLinks/Glossary.md>
 常見問題<./UsefulLinks/FAQ.md>
 一般糖尿病和循環資源<./UsefulLinks/BackgroundReading.md>
-Dedicated Google account for AAPS（可選）<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
+為 AAPS 建立專用的 Google 帳戶（可選）<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
 對臨床醫生（過時）<./UsefulLinks/ClinicianGuideToAaps.md>
 ```
