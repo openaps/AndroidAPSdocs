@@ -174,9 +174,9 @@
 
 3. **Фиолетовая линия**: текущая скорость базала. Пиктограмма меняется, отражая временные изменения в базальной скорости (плоская при 100%) 
     * Кратко нажмите на иконку, чтобы увидеть подробности базала (значение текущего базала, время начала, остаток/общая продолжительность в минутах)
-4. **Стрелки вверх & вниз**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
-    * AS: Значение Autosens. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
-    * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
+4. **Стрелки вверх & вниз**: указывает состояние динамической чувствительности ([Autosens](#Open-APS-features-autosens) или [DynamicISF](#Open-APS-features-DynamicISF)): включено или отключено. В этом разделе: может быть показано несколько значений: 
+    * AS: Значение Autosens. Показывается даже если Autosens отключен (только для информации). Также показывается, когда DynISF активирован, хотя и не оказывает никакого воздействия.
+    * Alg: значение DynamicISF (на основе суточной дозировки TDD). Подробнее о последней строке см. на странице [DynamicISF](#Open-APS-features-DynamicISF).
 
 (aaps-screens-carbs-requirement)=
 
