@@ -37,7 +37,7 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 :depth: 1
 :local: true
 ```
-
+(sms-commands-authenticator-setup)=
 ### Configuration de l'Authentificateur
 
 L'authentification à deux facteurs est utilisée pour améliorer la sécurité.
