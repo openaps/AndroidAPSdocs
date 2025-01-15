@@ -12,9 +12,11 @@
 
 如需有關 CGM 來源的支援，請使用 Facebook 群組或該特定系統的 Discord 聊天頻道（例如：[xDrip+](https://www.facebook.com/groups/xDripG5/)、[600 系列上傳器](https://www.facebook.com/groups/NightscoutForMedtronic/)），或對於 Nightscout 的支援請參考 [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/)，因為那裡的使用者對這些系統的專業知識會比這裡的使用者更高，這裡的使用者都使用不同的系統。
 
-## 務必加入 AndroidAPS 用戶群組 Facebook！
+## Make sure to join the AndroidAPS users group on Facebook or Discord!
 
-加入主要的[AndroidAPS Facebook 群組](https://www.facebook.com/groups/1900195340201874/)。 你可以在這裡提問有關算法的問題、關於 Android Studio 設置和建置 APK 的問題、以及有關應用使用的任何疑問，還有如何充分利用他的提示。 對於 Combo 幫浦使用者，還有一個[AAPSCombo](https://www.facebook.com/groups/127507891261169/)群組，這有著稍微更具體的設置。
+Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and/or [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw). 你可以在這裡提問有關算法的問題、關於 Android Studio 設置和建置 APK 的問題、以及有關應用使用的任何疑問，還有如何充分利用他的提示。 對於 Combo 幫浦使用者，還有一個[AAPSCombo](https://www.facebook.com/groups/127507891261169/)群組，這有著稍微更具體的設置。
+
+Please note that Facebook has recently removed external links shared within the AAPS Facebook group and this includes current and historic posts which contain external links to the AAPS Notes / Read the docs. For new users who are working through the Objectives and reviewing historic AAPS Facebook posts please search key terms as discussed wthin the AAPS notes for further assistance.
 
 ## 其他英文資源
 
