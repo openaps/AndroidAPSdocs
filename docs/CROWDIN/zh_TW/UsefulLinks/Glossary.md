@@ -8,6 +8,11 @@
 
 **AMA** = 進階餐食輔助。 一種演算法，允許 **AAPS** 在餐後注射胰島素後更積極地增加用戶的基礎胰島素。 進一步資訊 → Wiki - 「AMA」。
 
+**Adjustment Factor** = used within **DynamicISF** and is a value set within a user's **Preferences** between 1% and 300%. This acts as a multiplier on the **TDD** value.
+
+- increasing the **Adjustment Factor** value above 100 % makes **DynamicISF** more aggressive: the **ISF** values become smaller (i.e. more insulin required to decrease **BG** levels a small amount)
+- lowering the **Adjustment Factor** value under 100% makes **DynamicISF** less aggressive: the **ISF** values become larger (i.e. less insulin required to decrease **BG** levels a small amount).
+
 **Android Auto** = 一個系統，用於在車輛顯示螢幕中託管 Android 智慧型手機的某些功能，包括 **AAPS**。 進一步資訊 → Wiki - 「android auto」。
 
 **APK** = Android 應用程式包。是一個軟體安裝文件。 一個軟體安裝檔案。 進一步資訊 → Wiki - 「Building APK」。
@@ -46,6 +51,11 @@
 
 **DST** = 夏令時間 Wiki DST。
 
+**Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s:
+
+- Total Daily Dose of insulin (**TDD**); and
+- current and predicted **BG** values.
+
 **eCarbs** = 延長碳水化合物。 碳水化合物分散在數小時內以適應蛋白質，並允許 **AAPS** 提供延長的胰島素注射。 進一步資訊 → Wiki - 「eCarbs」、「eCarbs use」。
 
 **FGM** = 由 Freestyle Libre 製造的即時血糖監測儀。 進一步資訊 → Wiki - 「BG source」，另見「CGM」。
@@ -81,8 +91,6 @@
 **NSClient**（或 **‘AAPSClient’**）= 請參閱 **AAPSClient**。
 
 **OpenAPS** = 開放式人工胰臟系統。
-
-**AAPS** 運作在小型電腦（例如 Raspberry Pi）上，並使用了一些 OpenAPS 功能。OpenAPS 文件。
 
 **Open Loop system** = **AAPS** 的一項功能，將建議調整，必須由用戶在 **AAPS** 上手動執行。 進一步資訊 → Wiki - 「組態建置工具」。
 
