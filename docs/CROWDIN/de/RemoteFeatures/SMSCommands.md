@@ -37,7 +37,7 @@ Wenn Du die Möglichkeit SMS-Befehle vom Smartphone der betreuenden Person aus s
 :depth: 1
 :local: true
 ```
-
+(sms-commands-authenticator-setup)=
 ### Konfiguration der Authenticator App
 
 Zwei-Faktor-Authentifizierung wird zur Verbesserung der Sicherheit verwendet.
