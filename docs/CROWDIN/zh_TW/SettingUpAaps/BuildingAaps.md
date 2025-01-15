@@ -13,12 +13,13 @@
 
 * 可能需要特定版本的 **[Android Studio](https://developer.android.com/studio/)** 來建立 apk。 見下表：
 
-| AAPS版本              | 首選<br/>Android Studio<br/>版本 | 替代<br/>Android Studio<br/>版本                                                                        | Gradle | JVM |
-| ------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------ |:--- |
-| [3.2](#version3200) | Hedgehog（2023.1.1）                       | Iguana（2023.2.1）<br/>Jellyfish（2023.3.1）<br/>Koala（2024.1.1）<br/>Ladybug（2024.2.1）<br/> | 8.2    | 19  |
-| [3.3](#version3300) | Ladybug (2024.2.1)                       |                                                                                                                 | 8.9    | 21  |
+| AAPS版本                  | 首選<br/>Android Studio<br/>版本 | 替代<br/>Android Studio<br/>版本                                                                        | Gradle | JVM |
+| ----------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------ |:--- |
+| [3.2](#version3200)     | Hedgehog（2023.1.1）                       | Iguana（2023.2.1）<br/>Jellyfish（2023.3.1）<br/>Koala（2024.1.1）<br/>Ladybug（2024.2.1）<br/> | 8.2    | 19  |
+| [3.3](#version3300)     | Ladybug (2024.2.1)                       |                                                                                                                 | 8.9    | 21  |
+| [3.3.1.2](#version3300) | Ladybug Feature Drop (2024.2.2)          |                                                                                                                 | 8.10   | 21  |
 
-"首選版本"已打包與適當的JVM版本。 如果使用不同的版本，您可能會遇到與JVM版本相關的問題。 請參閱 [Android Studio 問題排除](#troubleshooting_androidstudio-uncommitted-changes) 頁面以協助解決這些問題。 如果你當前的 Android Studio 版本未在表格中列出，你必須先更新它。
+"首選版本"已打包與適當的JVM版本。 The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. 如果使用不同的版本，您可能會遇到與JVM版本相關的問題。 請參閱 [Android Studio 問題排除](#troubleshooting_androidstudio-uncommitted-changes) 頁面以協助解決這些問題。 如果你當前的 Android Studio 版本未在表格中列出，你必須先更新它。
 
 Gradle版本與源代碼相連結，下載/更新源代碼時，您將始終獲得正確的Gradle版本。 此處僅供參考，您不必採取行動。
 
