@@ -222,7 +222,7 @@
 
 Здесь показаны заметки, введенные на вкладке действия, такие как калибровка с глюкометра и записи углеводов, а также переключения профиля.
 
-Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
+Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. Можно выбрать между 6, 12, 18 или 24 часами.
 
 Зеленая область отражает ваш целевой диапазон.
 
