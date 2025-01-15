@@ -37,7 +37,7 @@
 :depth: 1
 :local: true
 ```
-
+(sms-commands-authenticator-setup)=
 ### 身份驗證器設置
 
 使用雙因素身份驗證來提高安全性。
