@@ -7,8 +7,6 @@
 
 ![更新資訊](../images/AAPS_LoopLGS60days.png)
 
-
-
 之後你有 60 天的時間來更新 **AAPS**。 如果您在 60 天內未完成更新，**AAPS** 將退回到 LGS（低血糖暫停 - 請參閱 [詞彙表](../UsefulLinks/Glossary.md)），如同 [目標 6](#objectives-objective6) 中所描述。
 
 如果您再延遲 30 天未更新（自新版本發佈日起共計 90 天），**AAPS** 將切換為開環模式。
@@ -64,6 +62,26 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
 (version3300)=
+## Version 3.3.1.2
+
+Release date: 15-01-2025
+
+### 如何升級
+
+* [Android Studio version called "Ladybug Feature Drop"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
+
+### Bug fixes
+
+* Dash: use bonding on Android 15+
+* Restored Dexcom button on Overview
+* Equil: allowed remove non working pump
+* Warn when DynISF factor is zero
+* NSCv3: resolve websocket communication on phones with slightly different time
+* SMS Commands: fix OneTimePassword. **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
+* Fix issue where some preferences could not be edited anymore.
+* Fix reset of master password with virtual pump.
+* Fixed import of large settings backup files.
+
 ## 版本 3.3.1.0
 
 發布日期：2025-01-06
@@ -112,8 +130,8 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
   * **<span style="color:red">此版本需要 Google Android 11.0 或更高版本</span>**。 在嘗試更新之前請檢查你的手機版本。
   * 如果你使用配合ruffy設備的“舊”Combo驅動程式，請在更新之前移轉至[原生Combo驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
   * 在升級過程中，你將失去[主畫面上的附加圖表](#AapsScreens-section-g-additional-graphs)：如有需要，請手動記錄當前配置，以便在升級後重新創建。
-  * 針對某些人在 Android 15 上遇到的 [藍牙連線問題](../Getting-Started/Phones.md)，本版本並未解決（這是 Android 的問題，而非 **AAPS** 的問題）。
-  * 由於 Android 的限制，主畫面上的 BYODA 按鈕已不再提供。 目前尚無已知的解決方法。
+  * 針對某些人在 Android 15 上遇到的 [藍牙連線問題](../Getting-Started/Phones.md)，本版本並未解決（這是 Android 的問題，而非 **AAPS** 的問題）。 A fix is available in 3.3.1.2.
+  * 由於 Android 的限制，主畫面上的 BYODA 按鈕已不再提供。 This is fixed in 3.3.1.2.
 * 更新指示：遵循[更新到新版本](../Maintenance/UpdateToNewVersion.md)的指南。
   * [需要稱為"Ladybug"的Android Studio版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高來建立此版本。 如果你已安裝舊版Android Studio，可能需要<span style="color:red">將JVM版本配置為21</span>。 請參閱[Android Studio問題排除 > 非相容的Gradle JVM](#incompatible-gradle-jvm)。
   * 提示 - 如果您不想失去**AAPS**的歷史紀錄，請務必進行更新，不要用卸載後重新安裝。 作為預防措施，備份您目前的**AAPS**設定和舊的APK，以防在出現問題時可以恢復到舊版本。
