@@ -37,7 +37,7 @@ AAPS还会通过短信通知您，远程指令（如大剂量注射或配置切�
 :depth: 1
 :local: true
 ```
-
+(sms-commands-authenticator-setup)=
 ### 身份验证器设置
 
 使用双重身份验证来提高安全性。
