@@ -328,13 +328,17 @@ Der Abbau hängt davon ab, was der [Algorithmus anhand der Glukosewert-Abweichun
 
 Falls der Kohlenhydratabbau höher ausfällt als erwartet, wird Insulin abgegeben und dies erhöht Dein IOB (je nach Deinen Sicherheitseinstellungen mehr oder weniger).
 
-#### Sensitivität
+#### Sensitivity change
 
 Zeigt die Empfindlichkeit (Sensitivität) an, die [Autosens](#Open-APS-features-autosens) erkannt hat.
 
 Die Sensitivität ist die Berechnung der Insulinempfindlichkeit, die auf Grund von Bewegung, Hormonen etc. schwankt.
 
 Hinweis: Du musst im [Ziel 8](#objectives-objective8) sein, um durch die Empfindlichkeitserkennung [Autosens](#Open-APS-features-autosens) die abzugebende Insulinmenge automatisch anpassen zu lassen. Vor dem Erreichen dieses Ziels wird die Linie in Deiner Diagramm nur zur Information angezeigt.
+
+### Variable sensitivity
+
+Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
 
 (screen-heart-rate-steps)=
 
@@ -423,6 +427,8 @@ Muss in [Einstellungen > Übersicht > Schaltflächen](#Preferences-buttons) akti
 Einfache Eingabe von Kohlenhydraten und deren Berechnungsgrundlage.
 
 Details werden in [Einstellungen > Übersicht > QuickWizard-Einstellungen](#Preferences-quick-wizard) konfiguriert.
+
+(aaps-screens-bolus-wizard)=
 
 ## Bolus-Rechner
 
