@@ -328,13 +328,17 @@ Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/
 
 אם הוא מזהה ספיגת פחמימות גבוהה מהצפוי, ינתן אינסולין וזה יגדיל את IOB (פחות או יותר, תלוי בהגדרות הבטיחות שלכם).
 
-#### רגישות
+#### Sensitivity change
 
 Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
 
 חישוב רגישות לאינסולין כתוצאה מפעילות גופנית, תגובות הורמונליות וכו'.
 
 Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+
+### Variable sensitivity
+
+Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
 
 (screen-heart-rate-steps)=
 
@@ -423,6 +427,8 @@ Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
 הזנה בקלות של כמות הפחמימות והגדרת נתוני החישוב.
 
 Details are set up in [Preferences > Overview > QuickWizard settings](#Preferences-quick-wizard).
+
+(aaps-screens-bolus-wizard)=
 
 ## אשף הבולוס
 
