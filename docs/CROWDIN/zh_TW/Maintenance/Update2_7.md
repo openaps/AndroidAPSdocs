@@ -21,8 +21,8 @@ orphan: true
 ## 完成考試
 
 - AAPS 2.7 包含新的目標 11（在以後的版本中重新編號為目標 10！）針對[自動化](../DailyLifeWithAaps/Automations.md).
-- 您必須完成考試（[目標 3 和 4](#objectives-objective3)），才能完成 [目標 11](#objectives-objective11)。
-- 例如，如果您尚未完成 [目標 3](#objectives-objective3) 的考試，則在開始 [目標 11](#objectives-objective11) 之前，您必須先完成考試。
+- 你必須完成考試（[目標 3 和 4](#objectives-objective3)），才能完成 [目標 11](#objectives-objective11)。
+- 例如，如果你尚未完成 [目標 3](#objectives-objective3) 的考試，則在開始 [目標 11](#objectives-objective11) 之前，你必須先完成考試。
 - 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
 
 ## 設置主密碼
@@ -38,12 +38,12 @@ orphan: true
 ## 匯出設定
 
 - AAPS 2.7 使用了新的加密備份格式。
-- 您必須在更新到 2.7 版本後[匯出您的設定](ExportImportSettings.md).
+- 你必須在更新到 2.7 版本後[匯出你的設定](ExportImportSettings.md).
 - 來自以前版本的設定檔只能在 AAPS 2.7 中匯入。 匯出將以新格式進行。
 - 確保將匯出的設定不僅存儲在你的手機上，還應至少存儲在一個安全的地方（你的電腦、雲端存儲等）。
 - 如果你使用與先前版本相同的密鑰庫來建置 AAPS 2.7 apk，則可以安裝新版本而無需刪除舊版本。
 - 所有設定以及已完成的目標將保持與之前版本相同。
-- 如果您遺失了金鑰庫，請使用新金鑰庫編譯 2.7 版本，並根據[問題排除部分](#troubleshooting_androidstudio-lost-keystore)中所述從以前的版本匯入設定。
+- 如果你遺失了金鑰庫，請使用新金鑰庫編譯 2.7 版本，並根據[問題排除部分](#troubleshooting_androidstudio-lost-keystore)中所述從以前的版本匯入設定。
 
 ## 自動敏感度調整（提示 - 無需操作）
 
