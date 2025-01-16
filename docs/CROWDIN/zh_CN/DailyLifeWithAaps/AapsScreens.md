@@ -328,13 +328,17 @@ To configure additional graphs, check the boxes corresponding to the data you wa
 
 如果它检测到比预期更高的碳水吸收率，将给予胰岛素，这将增加IOB（或多或少，取决于你的安全设置）。
 
-#### 灵敏度
+#### Sensitivity change
 
 显示[Autosens](#Open-APS-features-autosens)检测到的灵敏度。
 
 灵敏度计算的是运动、激素等导致的胰岛素敏感性。
 
 请注意，您需要在[目标8](#objectives-objective8)中才能允许灵敏度检测/[Autosens](#Open-APS-features-autosens)自动调整胰岛素的输送量。 在达到该目标之前，图表中的线条仅用于显示信息。
+
+### Variable sensitivity
+
+Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
 
 (screen-heart-rate-steps)=
 
@@ -423,6 +427,8 @@ The insulin button can be used when the pump is suspended as well, i.e. to recor
 轻松输入碳水量并设置计算基础。
 
 详细信息在[偏好设置>概览>快速向导设置](#Preferences-quick-wizard)中设置。
+
+(aaps-screens-bolus-wizard)=
 
 ## 大剂量向导
 
