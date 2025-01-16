@@ -75,7 +75,7 @@ Release date: 15-01-2025
 * Dash: use bonding on Android 15+
 * Restored Dexcom button on Overview
 * Equil: allowed remove non working pump
-* Warn when DynISF factor is zero
+* Warn when DynISF Adjustment Factor is zero
 * NSCv3: resolve websocket communication on phones with slightly different time
 * SMS Commands: fix OneTimePassword. **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
 * Fix issue where some preferences could not be edited anymore.
@@ -116,9 +116,7 @@ Release date: 29-12-2024
 * **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behaviour:
   * **Profile Switch** and **Profile Percentage** is now taken into account for **Dynamic ISF** in respect of dynamic sensitivity strengthness
   * The average **ISF** of the last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
-  * Reminder: If you use **DynamicISF** and you have **Automation** set for a **Profile %** in relation to **BG**: Turn It Off. This is already part of dynamic sensitivity algorithm
-  * *** AGAIN: When using DynamicISF, turn off all **Automations** which activates a **Profile %** in relation to **BG** because it will be too aggressive and may over deliver in insulin! *****
-  * Do not use a **Profile %** increase of greater than 100% for a long time. If you determine that your **Profile** has changed, create a new **Profile** with your revised values in order to replicate the **Profile** with %
+  * DynamicISF documentation page has been rewritten. Please read the important section [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf).
 * [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users
   * Note : Requires latest version of xDrip+ or Juggluco.
 * New **Automation** triggers
@@ -470,7 +468,7 @@ Release date: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** [here](../Maintenance/Update2_7.md).
 
-You need at least start [objective 11 (in later versions objective 10!)](#objectives-objective10) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start [objective 11](#objectives-objective11). This will not effect other objectives you have already finished. You will keep all finished objectives!
+You need at least start [objective 11 (in later versions objective 10!)](#objectives-objective10) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11. This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 ### Major new features
 
