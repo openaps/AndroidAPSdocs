@@ -7,9 +7,9 @@
 
 ![更新資訊](../images/AAPS_LoopLGS60days.png)
 
-之後你有 60 天的時間來更新 **AAPS**。 如果您在 60 天內未完成更新，**AAPS** 將退回到 LGS（低血糖暫停 - 請參閱 [詞彙表](../UsefulLinks/Glossary.md)），如同 [目標 6](#objectives-objective6) 中所描述。
+之後你有 60 天的時間來更新 **AAPS**。 如果你在 60 天內未完成更新，**AAPS** 將退回到 LGS（低血糖暫停 - 請參閱 [詞彙表](../UsefulLinks/Glossary.md)），如同 [目標 6](#objectives-objective6) 中所描述。
 
-如果您再延遲 30 天未更新（自新版本發佈日起共計 90 天），**AAPS** 將切換為開環模式。
+如果你再延遲 30 天未更新（自新版本發佈日起共計 90 天），**AAPS** 將切換為開環模式。
 
 ![更新資訊](../images/AAPS_LoopDisable90days.png)
 
@@ -62,25 +62,25 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
 (version3300)=
-## Version 3.3.1.2
+## 版本 3.3.1.2
 
-Release date: 15-01-2025
+發布日期：2025-01-15
 
 ### 如何升級
 
-* [Android Studio version called "Ladybug Feature Drop"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* [需要Android Studio版本叫"Ladybug功能更新"](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高版本來建立這個版本。 **這與一般的"Ladybug"不同。**如果你已經建立了3.3.x版本，你需要再次升級Android Studio。
 
-### Bug fixes
+### 錯誤修正
 
-* Dash: use bonding on Android 15+
-* Restored Dexcom button on Overview
-* Equil: allowed remove non working pump
-* Warn when DynISF factor is zero
-* NSCv3: resolve websocket communication on phones with slightly different time
-* SMS Commands: fix OneTimePassword. **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
-* Fix issue where some preferences could not be edited anymore.
-* Fix reset of master password with virtual pump.
-* Fixed import of large settings backup files.
+* Dash：在Android 15+上使用綁定。
+* 恢復首頁總覽中的Dexcom按鈕。
+* Equil：允許移除無效的幫浦。
+* 當DynISF為零時發出警告。
+* NSCv3：解決在時間略有不同的手機上的WebSocket通訊問題。
+* SMS命令：修正一次性密碼。 **可能需要新的[身份驗證器設置](#sms-commands-authenticator-setup)。**
+* 修復某些偏好設定無法再編輯的問題。
+* 修復虛擬幫浦的主密碼重設問題。
+* 修復大型設置備份文件的匯入問題。
 
 ## 版本 3.3.1.0
 
@@ -116,7 +116,7 @@ Release date: 15-01-2025
 * **[動態 ISF](../DailyLifeWithAaps/DynamicISF.md)** 功能不再是獨立的外掛，而是現在作為 [OpenAPS SMB](#Config-Builder-aps) 外掛的一個選項，並伴隨一些行為上的變更：
   * 在動態敏感度強度方面，**動態 ISF** 現在會考慮 **設定檔切換** 和 **設定檔百分比** 的影響。
   * 將使用過去 24 小時的平均 **ISF** 計算，該數值將用於注射嚮導和 **COB** 的計算。 **設定檔中的 ISF** 值完全不會被使用（僅在歷史資料無法使用時作為備用）
-  * 提醒：如果您使用**DynamicISF**並已為**設定檔 %**設定了**自動化**與**血糖**有關：請關閉此功能。 因為這已經是動態敏感度演算法的一部分。
+  * 提醒：如果你使用**DynamicISF**並已為**設定檔 %**設定了**自動化**與**血糖**有關：請關閉此功能。 因為這已經是動態敏感度演算法的一部分。
   * *** 再次提醒：使用DynamicISF時，請關閉所有啟動與**血糖**相關的**自動化**，因為這樣有可能造成胰島素過量！ *****
   * 請勿長時間使用超過 100% 的 **設定檔百分比** 增加值。 如果你的**設定檔**已有變更，請在「治療頁籤」中的**設定檔**切換，複製帶有% 的**設定檔**來建立新的設定檔。
 * 為使用 FreeStyle Libre 2 和 Libre 3 的用戶[啟用「始終啟用 SMB」與「碳水後啟用 SMB」](#Open-APS-features-enable-smb-always)
@@ -130,11 +130,11 @@ Release date: 15-01-2025
   * **<span style="color:red">此版本需要 Google Android 11.0 或更高版本</span>**。 在嘗試更新之前請檢查你的手機版本。
   * 如果你使用配合ruffy設備的“舊”Combo驅動程式，請在更新之前移轉至[原生Combo驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
   * 在升級過程中，你將失去[主畫面上的附加圖表](#AapsScreens-section-g-additional-graphs)：如有需要，請手動記錄當前配置，以便在升級後重新創建。
-  * 針對某些人在 Android 15 上遇到的 [藍牙連線問題](../Getting-Started/Phones.md)，本版本並未解決（這是 Android 的問題，而非 **AAPS** 的問題）。 A fix is available in 3.3.1.2.
-  * 由於 Android 的限制，主畫面上的 BYODA 按鈕已不再提供。 This is fixed in 3.3.1.2.
+  * 針對某些人在 Android 15 上遇到的 [藍牙連線問題](../Getting-Started/Phones.md)，本版本並未解決（這是 Android 的問題，而非 **AAPS** 的問題）。 在3.3.1.2中有修正可用。
+  * 由於 Android 的限制，主畫面上的 BYODA 按鈕已不再提供。 這在3.3.1.2中已修正。
 * 更新指示：遵循[更新到新版本](../Maintenance/UpdateToNewVersion.md)的指南。
   * [需要稱為"Ladybug"的Android Studio版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高來建立此版本。 如果你已安裝舊版Android Studio，可能需要<span style="color:red">將JVM版本配置為21</span>。 請參閱[Android Studio問題排除 > 非相容的Gradle JVM](#incompatible-gradle-jvm)。
-  * 提示 - 如果您不想失去**AAPS**的歷史紀錄，請務必進行更新，不要用卸載後重新安裝。 作為預防措施，備份您目前的**AAPS**設定和舊的APK，以防在出現問題時可以恢復到舊版本。
+  * 提示 - 如果你不想失去**AAPS**的歷史紀錄，請務必進行更新，不要用卸載後重新安裝。 作為預防措施，備份你目前的**AAPS**設定和舊的APK，以防在出現問題時可以恢復到舊版本。
 * 升級後：
   * 在維護標籤中設置新的[“AAPS目錄”設定](#preferences-maintenance-logdirectory)。
 
@@ -211,7 +211,7 @@ Release date: 15-01-2025
 
 - 需要 NS 15 版本
 - 在使用 NS v3 外掛時，透過 NS UI 輸入的治療（+ 按鈕）和使用 v1 API 的其他應用程式不會發送到 AAPS。 這將在未來的 NS 版本中修復。 在 NS 完全內部切換到 v3 之前，請始終在 AAPS 和 AAPSClient 中使用相同的客戶端（v1 或 v3）。 對於 AAPS 和 AAPSClient 本身也是如此。
-- v3 外掛中的 Websockets 與 v1 外掛的工作方式相似。 停用 websockets 後，AAPS 會定期下載 NS 的資料，這應該會降低電量消耗，因為 NS 不會長時間保持連線。 但另一方面，這意味著資料交換會有延遲。 在您使用之前，請先閱讀[這裡](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)的開發團隊重要意見！
+- v3 外掛中的 Websockets 與 v1 外掛的工作方式相似。 停用 websockets 後，AAPS 會定期下載 NS 的資料，這應該會降低電量消耗，因為 NS 不會長時間保持連線。 但另一方面，這意味著資料交換會有延遲。 在你使用之前，請先閱讀[這裡](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)的開發團隊重要意見！
 - 如果你使用 xdrip 作為 CGM 資料來源，則需要在更新後重新選擇他，因為內部已進行了更改。
 - Tidepool 可作為 NS 的替代品，以透過第一個目標。
 - 如果你選擇發送到 xDrip+，則必須配置 xDrip 同步外掛。 為了從 AAPS 接收血糖資料，必須將 “xDrip+ Sync Follower” 選為資料來源。
@@ -314,7 +314,7 @@ v3 是新的協議。 更加安全和高效
 ### 重要提示
 
 - **最低 Android 版本現在為 9.0。**
-- **資料未遷移到新資料庫。** 請勿抱怨，這是非常大的變更，因此無法遷移。 因此，更新後 IOB、COB、治療等資料將被清除。 您必須建立新的[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)並從零 IOB 和 COB 開始。 請謹慎規劃更新！！！ 最好在無活動胰島素和碳水化合物的情況下進行更新。
+- **資料未遷移到新資料庫。** 請勿抱怨，這是非常大的變更，因此無法遷移。 因此，更新後 IOB、COB、治療等資料將被清除。 你必須建立新的[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)並從零 IOB 和 COB 開始。 請謹慎規劃更新！！！ 最好在無活動胰島素和碳水化合物的情況下進行更新。
 - 請使用相同版本的 AAPS 和 NSClient
 
 **請確保在更新至 3.0 後檢查並調整設置，如 [此處](../Maintenance/Update3_0.md) 所述。**
@@ -442,7 +442,7 @@ v3 是新的協議。 更加安全和高效
 
 - **最低 Android 版本現在為 8.0。** 對於較舊的 Android 版本，你仍然可以使用舊倉庫中的 2.6.1.4 版本。
 - [目標已更改。](#objectives-objective3)**請完成尚未完成的目標後再更新。**
-- 儲存庫位置仍在 <https://github.com/nightscout/AndroidAPS> 。 如果您不熟悉 git，更新的最簡單方法是刪除包含 AAPS 的目錄，然後執行[新複製](../SettingUpAaps/BuildingAaps.md)。
+- 儲存庫位置仍在 <https://github.com/nightscout/AndroidAPS> 。 如果你不熟悉 git，更新的最簡單方法是刪除包含 AAPS 的目錄，然後執行[新複製](../SettingUpAaps/BuildingAaps.md)。
 - 請使用 [Android Studio 4.1.1](https://developer.android.com/studio/) 或更新版本來建置 apk。
 
 ### 主要新功能
@@ -470,7 +470,7 @@ v3 是新的協議。 更加安全和高效
 
 **請確保在更新至 2.7 後檢查並調整設置，如 [此處](../Maintenance/Update2_7.md) 所述。**
 
-你至少需要開始 [目標 11（在後續版本中為目標 10）](#objectives-objective10) 才能繼續使用 [自動化功能](../DailyLifeWithAaps/Automations.md)（所有之前的目標必須完成，否則無法開始目標 11）。 例如，如果您尚未完成 [目標 3](#objectives-objective3) 的考試，則在開始 [目標 11](#objectives-objective11) 之前，您必須先完成考試。 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
+你至少需要開始 [目標 11（在後續版本中為目標 10）](#objectives-objective10) 才能繼續使用 [自動化功能](../DailyLifeWithAaps/Automations.md)（所有之前的目標必須完成，否則無法開始目標 11）。 例如，如果你尚未完成 [目標 3](#objectives-objective3) 的考試，則在開始 [目標 11](#objectives-objective11) 之前，你必須先完成考試。 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
 
 ### 主要新功能
 
@@ -641,7 +641,7 @@ v3 是新的協議。 更加安全和高效
 ### 重要提示
 
 - 請使用 [Android Studio 3.5.1 版本](https://developer.android.com/studio/) 或更新的版本來 [編譯 apk](../SettingUpAaps/BuildingAaps.md) 或 [更新](UpdateToNewVersion).
-- 如果您使用 xDrip，必須設置 [識別接收器](#xdrip-identify-receiver).
+- 如果你使用 xDrip，必須設置 [識別接收器](#xdrip-identify-receiver).
 - 如果你使用帶有修補版的 Dexcom G6 應用，你將需要 [2.4 資料夾](https://github.com/dexcomapp/dexcomapp/tree/master/2.4)中的版本。
 - Glimp 支援版本 4.15.57 及更新版本。
 
