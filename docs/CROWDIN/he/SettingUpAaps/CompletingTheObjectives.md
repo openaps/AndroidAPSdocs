@@ -235,16 +235,6 @@ You can then experiment with setting up a more useful **Automation**. The docume
 
 For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. במקרה כזה, סביר להניח שהתנאי שלכם יכלול "זמן חוזרני" המורכב מבחירת ימים ספציפיים בשבוע (לדוגמה: ראשון, שני, שלישי, רביעי, חמישי) ושעה מסוימת (06:30 בבוקר). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
 
-(objectives-objective11)=
-## Objective 11: Enabling additional features for daytime use, such as Dynamic Sensitivity plugin (DynISF).
-
-Minimal time to complete this **Objective**: **28 days**. חובה להמתין את זמן זה. It is not possible to proceed to the next **Objective** until this period of time has expired.
-
-- Ensure that **SMB** is functioning properly
-- Read the documentation concerning **Dynamic ISF** [here](../DailyLifeWithAaps/DynamicISF.md)
-- Search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) and [Discord](https://discord.gg/4fQUWHZ4Mw) groups for discussions around **Dynamic ISF** and read about other users' experiences and recommendations.
-- Enable the **DynamicISF plugin** and identify the appropriate calibration for your body's uniqueness. רצוי להתחיל עם ערך נמוך מ-100% מטעמי בטיחות.
-
 (CompletingTheObjectives-go-back-in-objectives)=
 ## חזרה על משימות
 
