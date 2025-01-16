@@ -21,8 +21,8 @@ orphan: true
 ## Finish exam
 
 - AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for [automation](../DailyLifeWithAaps/Automations.md).
-- You have to finish exam ([objective 3 and 4](#objectives-objective3)) in order to complete [objective 11](#objectives-objective11).
-- If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start [objective 11](#objectives-objective11).
+- You have to finish exam ([objective 3 and 4](#objectives-objective3)) in order to complete objective 11.
+- If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11.
 - This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 ## Set master password
