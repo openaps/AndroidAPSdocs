@@ -105,7 +105,7 @@ Siehe auch [OpenAPS-Dokumentation zu SMB](https://openaps.readthedocs.io/en/late
 
 ### Dynamische Empfindlichkeit aktivieren
 
-This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page.
+This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
 
 #### Hohe temporäre Ziele erhöhen die Sensitivität
 
