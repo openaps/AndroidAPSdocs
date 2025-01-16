@@ -69,7 +69,7 @@ orphan: true
 
 按下 **下一步** 按鈕繼續完成其餘的 **設定嚮導。** 選擇 RileyLink 後，初始化可能需時達一分鐘，此時 **下一步** 按鈕會變為可點擊狀態。
 
-有關如何設置您的藥囊通訊設備的詳細步驟列示於[RileyLink 設置部分](#rileylink-setup)。
+有關如何設置你的藥囊通訊設備的詳細步驟列示於[RileyLink 設置部分](#rileylink-setup)。
 
 **或者**
 
@@ -109,7 +109,7 @@ orphan: true
 
 2. 選擇 Omnipod 驅動程式後，從 **組態建置工具 (1)** ➜**幫浦** ➜**Omnipod** ➜**齒輪圖示（設定）(2)** ➜**RileyLink 配置 (3)** 中，按下 **未設定** 或 **MAC 地址（如存在）** 文字來選擇你的 RileyLink。
 
-   > 確保您的 RileyLink 電池充滿電，並且它[放置在靠近](#optimal-omnipod-and-rileylink-positioning) (~30 公分以內) 您的手機附近，以便 AAPS 通過其 MAC 地址識別它。 選擇後，你可以進行你的第一個幫浦會話的啟動。 使用手機上的返回按鈕回到主 AAPS 界面。
+   > 確保你的 RileyLink 電池充滿電，並且它[放置在靠近](#optimal-omnipod-and-rileylink-positioning) (~30 公分以內) 你的手機附近，以便 AAPS 通過其 MAC 地址識別它。 選擇後，你可以進行你的第一個幫浦會話的啟動。 使用手機上的返回按鈕回到主 AAPS 界面。
    > 
    > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
@@ -131,7 +131,7 @@ orphan: true
 
 在你可以啟動幫浦之前，請確保你已正確配置並連線你的 RileyLink 在 Omnipod 設定中
 
-*提醒：幫浦的配對通訊範圍有限，是由於安全保護措施所致。 配對前幫浦無線電信號較弱，但在成功配對後他將以全信號功率運作。 在這些步驟中，請確保您的藥囊[位於靠近](#optimal-omnipod-and-rileylink-positioning) (~30 公分以內) 的範圍內，但不要放在 RileyLink 的上面或緊鄰其旁邊。\*</p>
+*提醒：幫浦的配對通訊範圍有限，是由於安全保護措施所致。 配對前幫浦無線電信號較弱，但在成功配對後他將以全信號功率運作。 在這些步驟中，請確保你的藥囊[位於靠近](#optimal-omnipod-and-rileylink-positioning) (~30 公分以內) 的範圍內，但不要放在 RileyLink 的上面或緊鄰其旁邊。\*</p>
 
 01. 導航到 **Omnipod (POD)** 標籤，點擊 **幫浦管理 (1)** 按鈕，然後點擊 **啟動幫浦 (2)**。
 
@@ -793,5 +793,5 @@ RileyLink上用來與Omnipod通訊的天線是一個433 MHz的螺旋天線。 �
 
 - **等級 0：** 閱讀此文件的相關部分，以確保你了解遇到困難的功能應如何工作。
 - **第一層：**如果你仍遇到無法解決的問題，請前往**Discord**上的*#androidaps*頻道，使用[此邀請連結](https://discord.gg/4fQUWHZ4Mw)。
-- **等級 2:** 搜尋現有問題，以查看您的問題是否已經報告；如果沒有，請建立新的[問題](https://github.com/nightscout/AndroidAPS/issues)並附上[您的日誌文件](../GettingHelp/AccessingLogFiles.md)。
+- **等級 2:** 搜尋現有問題，以查看你的問題是否已經報告；如果沒有，請建立新的[問題](https://github.com/nightscout/AndroidAPS/issues)並附上[你的日誌文件](../GettingHelp/AccessingLogFiles.md)。
 - **保持耐心——我們社群中的大多數成員都是善良的志願者，解決問題通常需要使用者和開發者雙方的時間和耐心。**

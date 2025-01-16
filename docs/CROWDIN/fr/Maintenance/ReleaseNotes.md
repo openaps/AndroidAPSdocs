@@ -7,8 +7,6 @@ Vous recevrez les informations suivantes dès qu'une nouvelle mise à jour sera 
 
 ![Update info](../images/AAPS_LoopLGS60days.png)
 
-
-
 Then you have 60 days to update **AAPS**. If you do not update within the 60 day time period **AAPS** will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
 
 If you do not update for another 30 days (90 days from new release date) **AAPS** will switch to Open Loop.
@@ -64,6 +62,26 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 ```
 
 (version3300)=
+## Version 3.3.1.2
+
+Release date: 15-01-2025
+
+### How to upgrade
+
+* [Android Studio version called "Ladybug Feature Drop"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
+
+### Bug fixes
+
+* Dash: use bonding on Android 15+
+* Restored Dexcom button on Overview
+* Equil: allowed remove non working pump
+* Warn when DynISF factor is zero
+* NSCv3: resolve websocket communication on phones with slightly different time
+* SMS Commands: fix OneTimePassword. **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
+* Fix issue where some preferences could not be edited anymore.
+* Fix reset of master password with virtual pump.
+* Fixed import of large settings backup files.
+
 ## Version 3.3.1.0
 
 Release date: 06-01-2025
@@ -112,8 +130,8 @@ Release date: 29-12-2024
   * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
   * If you use the “old” Combo driver with ruffy device, migrate to the [native Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) before update
   * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade: make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
-  * The [Bluetooth connectivity issues some people encounter on Android 15](../Getting-Started/Phones.md) are **NOT** solved by this release (this is an Android issue, not **AAPS**).
-  * The BYODA button on the homescreen is no longer available due to Android limitations. There is no known workaround.
+  * The [Bluetooth connectivity issues some people encounter on Android 15](../Getting-Started/Phones.md) are **NOT** solved by this release (this is an Android issue, not **AAPS**). A fix is available in 3.3.1.2.
+  * The BYODA button on the homescreen is no longer available due to Android limitations. This is fixed in 3.3.1.2.
 * Update instructions: follow the [Update to a new version](../Maintenance/UpdateToNewVersion.md) guide.
   * [Android Studio version called "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already have an older version of Android Studio installed, you may need to <span style="color:red">configure the JVM version to 21</span>. See [Troubleshooting Android Studio > Incompatible Gradle JVM](#incompatible-gradle-jvm).
   * Tip - if you do not want to lose your **AAPS** history ALWAYS do an UPDATE and NOT an UNINSTALL/INSTALL. As a precaution, back up your current **AAPS** settings and old APK to revert to an old version should anything go wrong.

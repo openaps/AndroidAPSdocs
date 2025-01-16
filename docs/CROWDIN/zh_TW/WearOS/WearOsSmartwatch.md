@@ -1,8 +1,8 @@
-# 在您的 Wear OS 手錶上設置 AAPS
+# 在你的 Wear OS 手錶上設置 AAPS
 
-下面的說明適用於您需要建置的**AAPS Wear** apk（如果尚未建置，請參閱[這裡](../WearOS/BuildingAapsWearOS.md)），因為您已經建置了手機的**AAPS** apk。
+下面的說明適用於你需要建置的**AAPS Wear** apk（如果尚未建置，請參閱[這裡](../WearOS/BuildingAapsWearOS.md)），因為你已經建置了手機的**AAPS** apk。
 
-您還可以使用一些信息用於**AAPSClient**和**PumpControl**的**Wear** apk，這些信息可以直接在[GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)中找到。 每個**Wear**應用都將與其一致的手機應用進行通信。 例如：**AAPSClient Wear**應用可用於顯示**AAPSClient**資料，而不是**AAPS**資料。
+你還可以使用一些信息用於**AAPSClient**和**PumpControl**的**Wear** apk，這些信息可以直接在[GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)中找到。 每個**Wear**應用都將與其一致的手機應用進行通信。 例如：**AAPSClient Wear**應用可用於顯示**AAPSClient**資料，而不是**AAPS**資料。
 
 (BuildingAapsWearOs-WearOS5)=
 
@@ -37,7 +37,7 @@ _本指南假設你正在設置運作 Wear OS 3 或更低版本的 Samsung Galax
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
-## 將**AAPS** Wear應用傳輸到您的**AAPS**手機
+## 將**AAPS** Wear應用傳輸到你的**AAPS**手機
 
 從 Android Studio 將 Wear.apk 載入到你的手機，可以透過以下方式進行：
 
@@ -67,7 +67,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 ```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
 :class: dropdown
 
-1)   從 Play 商店下載 _Easy Fire Tools_ 到您的手機 
+1)   從 Play 商店下載 _Easy Fire Tools_ 到你的手機 
 
 ![image](../images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
 
@@ -129,7 +129,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 2.  檢查智慧型手錶是否已連線到網際網路（而不僅僅是透過藍牙與手機連線）。
 3.  檢查 **AAPS** 手機和智慧型手錶是否已在 Samsung 應用程式中配對或連線。
 4.  也可能需要對手機和智慧型手錶進行硬重啟（即關閉並重新啟動手機）。
-5.  假設你已經成功下載 Wear.apk 到手機，但未收到任何血糖資料，_請檢查_ 你是否已將正確的 **AAPS** apk 版本側載到手錶上。 如果您的 AAPS wear.apk 版本列為以下任一項： a) “wear-AAPSClient-release”； b) ‘wear-full-release.aab’; 或 c) 標題中出現“debug”字樣， 則表明您在建置過程中未選擇正確的 Wear OS apk 版本。
+5.  假設你已經成功下載 Wear.apk 到手機，但未收到任何血糖資料，_請檢查_ 你是否已將正確的 **AAPS** apk 版本側載到手錶上。 如果你的 AAPS wear.apk 版本列為以下任一項： a) “wear-AAPSClient-release”； b) ‘wear-full-release.aab’; 或 c) 標題中出現“debug”字樣， 則表明你在建置過程中未選擇正確的 Wear OS apk 版本。
 6.  檢查路由器是否未將設備相互隔離。
 
 更多問題排除提示請參閱[這裡](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
@@ -156,7 +156,7 @@ AAPS Wear OS APK 的標準版本中提供了多種手錶外觀。 當你在手�
 
 ![Screenshot_20231123_130410_AAPS](../images/adde2eca-1df7-4382-b9ab-346819c35d9d.png)
 
-5. 查看你的手錶，現在應該顯示你選擇的「AAPS（自訂）」手錶外觀。 等待幾秒鐘讓他重新整理。 您現在可以透過長按錶面，然後在錶面圖像上按“自訂”按鈕來自訂錶面等項目。
+5. 查看你的手錶，現在應該顯示你選擇的「AAPS（自訂）」手錶外觀。 等待幾秒鐘讓他重新整理。 你現在可以透過長按錶面，然後在錶面圖像上按“自訂”按鈕來自訂錶面等項目。
 
 ## AAPSv2 手錶外觀 - 圖例
 

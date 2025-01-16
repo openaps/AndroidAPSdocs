@@ -60,7 +60,7 @@ orphan: true
 
 ## AAPS 設定
 
-**注意：現在可以（僅在 AAPS v2.7.0 及以上版本）使用「始終使用基礎絕對值」，如果您想使用 Autotune 與 Insight 幫浦，即使在 Nightscout 中啟用同步。**（在 AAPS 中轉到[偏好設定 > NSClient > 進階設定](#Preferences-advanced-settings-nsclient)）。
+**注意：現在可以（僅在 AAPS v2.7.0 及以上版本）使用「始終使用基礎絕對值」，如果你想使用 Autotune 與 Insight 幫浦，即使在 Nightscout 中啟用同步。**（在 AAPS 中轉到[偏好設定 > NSClient > 進階設定](#Preferences-advanced-settings-nsclient)）。
 
 ![Insight 設定的螢幕截圖](../images/Insight_settings.png)
 

@@ -18,7 +18,7 @@
 
 ```{admonition} Ask for Help
 :class: note
-如果文件中有錯誤或您對如何解釋某些內容有更好的想法，您可以按照[與其他用戶聯繫](../GettingHelp/WhereCanIGetHelp.md)的說明向社區尋求幫助。
+如果文件中有錯誤或你對如何解釋某些內容有更好的想法，你可以按照[與其他用戶聯繫](../GettingHelp/WhereCanIGetHelp.md)的說明向社區尋求幫助。
 ```
 ## 歡迎訊息
 
@@ -215,7 +215,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 點擊 [這裡](#version3200) 查看 **AAPS** 3.2.0.0 的發布說明，其中解釋了第一選項 **NSClient**（這是「v1」，雖然未明確標記）和第二選項 **NSClient v3** 之間的差異。
 
-Nightscout用戶應選擇**NSClient v3**，除非您想透過Nightscout網頁介面監控或發送遠端療程（例如，作為使用**AAPS**的父母或護理人監控子女），在這種情況下，請選擇第一個選項“**NSClient**”直至另行通知。 
+Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介面監控或發送遠端療程（例如，作為使用**AAPS**的父母或護理人監控子女），在這種情況下，請選擇第一個選項“**NSClient**”直至另行通知。 
 ```
 對於Tidepool來說，這更簡單，因為你只需要你的個人登錄訊息。
 

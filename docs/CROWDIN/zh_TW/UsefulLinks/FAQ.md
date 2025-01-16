@@ -6,7 +6,7 @@
 
 ### 我可以直接下載 AAPS 的安裝檔嗎？
 
-不行。 AAPS 沒有可下載的 apk 檔案。 您必須[自己建立](../SettingUpAaps/BuildingAaps.md)它。 原因如下：
+不行。 AAPS 沒有可下載的 apk 檔案。 你必須[自己建立](../SettingUpAaps/BuildingAaps.md)它。 原因如下：
 
 AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，所有歸類為 IIa 或 IIb 類的系統都是需要法規批准的醫療設備（需要 CE 標誌），這需要各種研究和簽字確認。 分發未經批准的設備是非法的。 在世界其他地區也有類似的法規。
 
@@ -21,12 +21,12 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 首先，你需要**獲取可循環的硬體元件**：
 
 - 一個[支援的胰島素幫浦](../Getting-Started/CompatiblePumps.md)， 
-- 一部[Android 智慧型手機](../Getting-Started/Phones.md)（Apple iOS 未被 AAPS 支援 - 您可以查看[iOS Loop](https://loopkit.github.io/loopdocs/)）以及
+- 一部[Android 智慧型手機](../Getting-Started/Phones.md)（Apple iOS 未被 AAPS 支援 - 你可以查看[iOS Loop](https://loopkit.github.io/loopdocs/)）以及
 - 一個[持續監測血糖系統](../Getting-Started/CompatiblesCgms.md)。 
 
-接著，您需要**設置您的軟體組件**：[AAPS](../SettingUpAaps/BuildingAaps.md)、[CGM/FGM 資源](../Getting-Started/CompatiblesCgms.md)和[報告伺服器](../SettingUpAaps/SettingUpTheReportingServer.md)。
+接著，你需要**設置你的軟體組件**：[AAPS](../SettingUpAaps/BuildingAaps.md)、[CGM/FGM 資源](../Getting-Started/CompatiblesCgms.md)和[報告伺服器](../SettingUpAaps/SettingUpTheReportingServer.md)。
 
-第三，您需要學習並**了解 OpenAPS 參考設計，以檢查您的治療因素**。 閉環循環的基本原則是您的[基礎率和碳水化合物比例](../SettingUpAaps/YourAapsProfile.md)是正確的。 所有建議都假設你的基礎需求已得到滿足，任何峰值或谷底的變化是由其他因素引起的，因此需要一些一次性的調整（如運動、壓力等）。 閉環系統為安全所做的調整是有限的（請參閱[OpenAPS 參考設計](https://openaps.org/reference-design/)中的允許最大臨時基礎率），這意味著你不希望浪費這些劑量來修正錯誤的基礎率。 例如，如果你經常在用餐前臨時降低基礎率，那麼很可能需要調整你的基礎率。 您可以使用[自動調整](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig)來考慮大量資料，以建議基礎率和/或 ISF 是否需要調整，以及碳水化合物比例是否需要改變。 或者您可以以[傳統方式](https://integrateddiabetes.com/basal-testing/)測試並設置您的基礎率。
+第三，你需要學習並**了解 OpenAPS 參考設計，以檢查你的治療因素**。 閉環循環的基本原則是你的[基礎率和碳水化合物比例](../SettingUpAaps/YourAapsProfile.md)是正確的。 所有建議都假設你的基礎需求已得到滿足，任何峰值或谷底的變化是由其他因素引起的，因此需要一些一次性的調整（如運動、壓力等）。 閉環系統為安全所做的調整是有限的（請參閱[OpenAPS 參考設計](https://openaps.org/reference-design/)中的允許最大臨時基礎率），這意味著你不希望浪費這些劑量來修正錯誤的基礎率。 例如，如果你經常在用餐前臨時降低基礎率，那麼很可能需要調整你的基礎率。 你可以使用[自動調整](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig)來考慮大量資料，以建議基礎率和/或 ISF 是否需要調整，以及碳水化合物比例是否需要改變。 或者你可以以[傳統方式](https://integrateddiabetes.com/basal-testing/)測試並設置你的基礎率。
 
 ### 我有哪些實際的循環考量？
 
@@ -65,7 +65,7 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 
 - 用於為智慧型手機、手錶和（如有需要）BT 閱讀器或 Link 設備充電的行動電源和充電線
 - 幫浦電池
-- 當前[apk](../SettingUpAaps/BuildingAaps.md)和[偏好設定檔](../Maintenance/ExportImportSettings.md)用於 AAPS 和您使用的任何其他應用程式（例如 xDrip+、BYO Dexcom），包括本地和雲端（Dropbox、Google Drive）。
+- 當前[apk](../SettingUpAaps/BuildingAaps.md)和[偏好設定檔](../Maintenance/ExportImportSettings.md)用於 AAPS 和你使用的任何其他應用程式（例如 xDrip+、BYO Dexcom），包括本地和雲端（Dropbox、Google Drive）。
 
 ### 如何安全、牢固地安裝 CGM/FGM？
 
@@ -137,7 +137,7 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 
 ### 桌布
 
-您可以在 [手機頁面](#Phones-phone-wallpaper) 找到適合您手機的 AAPS 桌布。
+你可以在 [手機頁面](#Phones-phone-wallpaper) 找到適合你手機的 AAPS 桌布。
 
 ### 日常使用
 
@@ -149,7 +149,7 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 
 #### 工作
 
-根據你的工作，你可能會選擇在工作日使用不同的治療因素。 作為循環使用者，您應該考慮在您的典型工作日進行[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)。 例如，如果你的工作要求較低（例如坐在辦公桌前），你可以切換到高於 100% 的設定檔；如果你一整天都在活動，可以切換到低於 100% 的設定檔。 如果你經常工作時間比正常時間早或晚，或者輪班工作，你也可以考慮設置高或低臨時目標，或進行[設定檔的時間調整](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)。 你也可以建立第二個設定檔（例如“家庭”和“工作日”），並每天切換到你實際需要的設定檔。
+根據你的工作，你可能會選擇在工作日使用不同的治療因素。 作為循環使用者，你應該考慮在你的典型工作日進行[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)。 例如，如果你的工作要求較低（例如坐在辦公桌前），你可以切換到高於 100% 的設定檔；如果你一整天都在活動，可以切換到低於 100% 的設定檔。 如果你經常工作時間比正常時間早或晚，或者輪班工作，你也可以考慮設置高或低臨時目標，或進行[設定檔的時間調整](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)。 你也可以建立第二個設定檔（例如“家庭”和“工作日”），並每天切換到你實際需要的設定檔。
 
 ### 休閒活動
 
@@ -164,8 +164,8 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 進行循環時，你應該嘗試以下步驟：
 
 - 進行一個[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) < 100%。
-- 設置一個[活動臨時目標](#TempTargets-activity-temp-target)高於您的標準目標。
-- 如果您正在使用 SMB，請確保[“啟用高臨時目標的 SMB”](#Open-APS-features-enable-smb-with-high-temp-targets)和[“始終啟用 SMB”](#Open-APS-features-enable-smb-always)已停用。
+- 設置一個[活動臨時目標](#TempTargets-activity-temp-target)高於你的標準目標。
+- 如果你正在使用 SMB，請確保[“啟用高臨時目標的 SMB”](#Open-APS-features-enable-smb-with-high-temp-targets)和[“始終啟用 SMB”](#Open-APS-features-enable-smb-always)已停用。
 
 這些設置的預處理和後處理非常重要。 在運動前及時進行更改，並考慮肌肉補充能量後的影響。
 
@@ -260,7 +260,7 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 
 ### 如何在 AAPS v3.x 中重置密碼？
 
-您可以在[這裡](#Update3_0-reset-master-password)找到文件。
+你可以在[這裡](#Update3_0-reset-master-password)找到文件。
 
 ### 我的 Link/幫浦/Pod 沒有反應（RL/OL/EmaLink...）
 

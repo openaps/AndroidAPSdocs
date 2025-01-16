@@ -8,6 +8,11 @@
 
 **AMA** = Advanced Meal Assist. An algorithm which allows **AAPS** to increase the user’s basal more aggressively after a meal bolus. Further info → Wiki - 'AMA'.
 
+**Adjustment Factor** = used within **DynamicISF** and is a value set within a user's **Preferences** between 1% and 300%. This acts as a multiplier on the **TDD** value.
+
+- increasing the **Adjustment Factor** value above 100 % makes **DynamicISF** more aggressive: the **ISF** values become smaller (i.e. more insulin required to decrease **BG** levels a small amount)
+- lowering the **Adjustment Factor** value under 100% makes **DynamicISF** less aggressive: the **ISF** values become larger (i.e. less insulin required to decrease **BG** levels a small amount).
+
 **Android Auto** = a system used to host certain functions of an Android smartphone’s features, including **AAPS**, within a car's display. Further info → Wiki - 'android auto'.
 
 **APK** = Android application Package. A software installation file. Further info → Wiki - 'Building APK'.
@@ -46,6 +51,11 @@
 
 **DST** = Daylight Savings Time Wiki DST.
 
+**Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s:
+
+- Total Daily Dose of insulin (**TDD**); and
+- current and predicted **BG** values.
+
 **eCarbs** = extended Carbs. Carbs split up over several hours to accommodate/protein and permits **AAPS** to deliver extended boluses. Further info → Wiki - 'eCarbs', 'eCarbs use'.
 
 **FGM** = Flash Glucose Monitor manufactured by Freestyle Libre. Further info → Wiki - 'BG source' and see also 'CGM'.
@@ -81,8 +91,6 @@
 **NSClient** ( or **‘AAPSClient’)** = see **AAPSClient**.
 
 **OpenAPS** = Open Artificial Pancreas System.
-
-**AAPS** operating on small computers (i.e. Raspberry Pi).and uses some of the OpenAPS features OpenAPS docs.
 
 **Open Loop system** = an **AAPS** feature that will recommend adjustments and which must be performed manually by the user on **AAPS**. Further info → Wiki - 'config builder'.
 

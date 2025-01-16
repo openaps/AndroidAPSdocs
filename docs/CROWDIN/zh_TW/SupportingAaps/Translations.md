@@ -9,19 +9,19 @@
 
 審閱是一個手動步驟。 作為非營利組織，我們不提供 SLA，但一般情況下審閱會在 1 天內完成。 如果沒有，請透過 Facebook 或 Discord 聯繫文件團隊。
 
-    <br />* 當我們批准您後，請點擊旗幟
-       ![當我們批准您後，請點擊旗幟](../images/translation_flags.png)
+    <br />* 當我們批准你後，請點擊旗幟
+       ![當我們批准你後，請點擊旗幟](../images/translation_flags.png)
     
     ## 應用程式的翻譯
     
     (translations-translate-strings-for-AAPS-app)=
     ### 翻譯 AAPS 應用程式的文字
     
-    * 如果您對翻譯的文字沒有特別偏好，只需選擇「翻譯全部」按鈕即可開始。 他會顯示需要翻譯的文字。
+    * 如果你對翻譯的文字沒有特別偏好，只需選擇「翻譯全部」按鈕即可開始。 他會顯示需要翻譯的文字。
     
        ![點擊翻譯全部](../images/translations-click-translate-all.png)
     
-    * 如果您想翻譯個別檔案，請透過搜索對話框或樹狀結構搜尋該檔案，然後點擊檔名以開始對該檔案中的文字進行翻譯工作。
+    * 如果你想翻譯個別檔案，請透過搜索對話框或樹狀結構搜尋該檔案，然後點擊檔名以開始對該檔案中的文字進行翻譯工作。
     
        ![點擊 strings.xml](../images/translations-click-strings.png)
     
@@ -46,7 +46,7 @@
     (translations-translation-of-the-documentation)=
     ## 文件的翻譯
     
-    * 點擊您想翻譯的文件頁面名稱
+    * 點擊你想翻譯的文件頁面名稱
     
     ![點擊文件頁面](../images/translation_WikiPage.png)
     

@@ -155,7 +155,7 @@ AAPS 3.1 文檔可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 - [Accu-Chek Insight 與自動調整](#Accu-Chek-Insight-Pump-settings-in-aaps) - 使用的替代方案
 - [Glimp](#Config-Builder-bg-source) - 支援版本 4.15.57 及更新版本
 - [錶盤](../WearOS/WearOsSmartwatch.md) - 重大的更新，更多詳細資訊
-- [錶盤小工具](#Watchfaces-complications) - 使用您最喜愛的錶盤與 AAPS 資料
+- [錶盤小工具](#Watchfaces-complications) - 使用你最喜愛的錶盤與 AAPS 資料
 
 ## 2019年11月
 

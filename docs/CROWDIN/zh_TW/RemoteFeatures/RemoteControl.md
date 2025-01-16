@@ -49,7 +49,7 @@
 
 透過 USB 傳輸線傳輸到追蹤者手機；或拖放至 Google 雲端硬碟資料夾，然後透過點擊“app-AAPSClient-release”檔案將其安裝到追蹤者手機。
 
-如果您需要**AAPS**供自己使用，而需要**AAPSClient**來監控他人，則需要自行建置**AAPSClient**，而不是從上述GitHub儲存庫下載。 原因是您無法在同一部手機上安裝**AAPS**和**AAPSClient**，因為它們是由不同的金鑰簽署的。 <br/> 要自行建置**AAPSClient**，請遵循[常見AAPS建置](../SettingUpAaps/BuildingAaps.md)的相同步驟。 在**生成簽名的App Bundle或APK**頁面上，選擇**aapsclientRelease**，而不是**fullRelease**。
+如果你需要**AAPS**供自己使用，而需要**AAPSClient**來監控他人，則需要自行建置**AAPSClient**，而不是從上述GitHub儲存庫下載。 原因是你無法在同一部手機上安裝**AAPS**和**AAPSClient**，因為它們是由不同的金鑰簽署的。 <br/> 要自行建置**AAPSClient**，請遵循[常見AAPS建置](../SettingUpAaps/BuildingAaps.md)的相同步驟。 在**生成簽名的App Bundle或APK**頁面上，選擇**aapsclientRelease**，而不是**fullRelease**。
 
 ### 同步設置 - AAPSClient 和 AAPS 配置（適用於 3.2.0.0 版本以上）
 
@@ -121,7 +121,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 更多設置資訊可直接從 [Nightscout](https://nightscout.github.io/nightscout/discover/) 獲得
 
-當您第一次登入時，顯示非常簡單。 透過選擇右上角的「漢堡選單」並向下捲動來自訂顯示選項：
+當你第一次登入時，顯示非常簡單。 透過選擇右上角的「漢堡選單」並向下捲動來自訂顯示選項：
 
 ![圖像](../images/remote-control-25.png)
 
@@ -129,7 +129,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 ![圖像](../images/remote-control-25b.png)
 
-選擇您想要的選項。 如果您使用其他應用程式來發出警報，請取消勾選警報。
+選擇你想要的選項。 如果你使用其他應用程式來發出警報，請取消勾選警報。
 
 ![圖像](../images/remote-control-26.png)
 
@@ -168,7 +168,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 1. 5分鐘血糖趨勢
 2. 注射嚮導預覽
-3. 按一下基礎來查看您目前的設定檔和基礎資訊
+3. 按一下基礎來查看你目前的設定檔和基礎資訊
 4. 自上次 AAPS 讀取 CGM 的時間
 5. **幫浦**: 胰島素、電池百分比及上次 AAPS 何時與其連線
 6. 上次 AAPS 重新整理 - 如果這超過 5 分鐘，則可能 AAPS 手機與幫浦/CGM 之間有連線問題
@@ -176,7 +176,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 8. 儲存槽中的胰島素時間
 9. 針頭的使用時間
 10. AAPS 手機的電池狀態
-11. 您的資料庫大小。 如果它變得過於滿載（僅限 DIY Nightscout - 托管服務會忽略這一點），您可能會開始遇到連線問題。 您可以通過管理工具選單（透過漢堡選單）刪除資料以減少資料庫大小。
+11. 你的資料庫大小。 如果它變得過於滿載（僅限 DIY Nightscout - 托管服務會忽略這一點），你可能會開始遇到連線問題。 你可以通過管理工具選單（透過漢堡選單）刪除資料以減少資料庫大小。
 
 ![圖像](../images/remote-control-30.png)
 
@@ -203,10 +203,10 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 | 最常使用的治療                      | 功能，指令有用的例子                                                                                    |
 | ---------------------------- | --------------------------------------------------------------------------------------------- |
-| **修正注射**                     | 允許您發出**<u>不注射</u>**胰島素的聲明。<br>對於取消負面胰島素以防止低血糖非常有用，<br>例如在夜間，如果設定檔過於強烈。            |
+| **修正注射**                     | 允許你發出**<u>不注射</u>**胰島素的聲明。<br>對於取消負面胰島素以防止低血糖非常有用，<br>例如在夜間，如果設定檔過於強烈。            |
 | **碳水化合物修正**                  | 現在宣告碳水化合物                                                                                     |
-| **臨時目標**<br>**取消臨時目標** | 允許設置和取消臨時目標。<br>請注意，取消不一定有效，<br>在此情況下，您可以設置一個新的臨時目標（2 分鐘），<br>然後會自動恢復至正常目標。 |
-| **設定檔切換**                    | 允許您檢查目前正在運行的設定檔，<br>並切換到另一個設定檔，可以是永久性，<br>或者定義的時間長度（分鐘）。                          |
+| **臨時目標**<br>**取消臨時目標** | 允許設置和取消臨時目標。<br>請注意，取消不一定有效，<br>在此情況下，你可以設置一個新的臨時目標（2 分鐘），<br>然後會自動恢復至正常目標。 |
+| **設定檔切換**                    | 允許你檢查目前正在運行的設定檔，<br>並切換到另一個設定檔，可以是永久性，<br>或者定義的時間長度（分鐘）。                          |
 
 
 
@@ -242,7 +242,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 ![穿戴遠端 1](../images/Wear_Remote1.png)
 
-一旦您[在您的手錶上設置**AAPS**](../WearOS/BuildingAapsWearOS.md)，有關智慧型手錶錶盤及其功能的詳細資訊可以在[智慧型手錶上操作 AAPS](../WearOS/WearOsSmartwatch.md)中找到。
+一旦你[在你的手錶上設置**AAPS**](../WearOS/BuildingAapsWearOS.md)，有關智慧型手錶錶盤及其功能的詳細資訊可以在[智慧型手錶上操作 AAPS](../WearOS/WearOsSmartwatch.md)中找到。
 
 簡要概述，以下功能可以從智慧型手錶觸發：
 
@@ -272,7 +272,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 可以在手錶上新增額外的應用程式，如 WhatsApp，用於照顧者與孩子之間的訊息交流（例如）。 重要的是，手機上只應關聯一個 Google 帳戶，否則手錶無法同步這些資料。 你需要年滿 13 歲才能擁有 Samsung 帳戶，並且此帳戶需要使用與 Android 手機相同的電子郵件地址設置。
 
-一段解釋如何在 Galaxy 4 手錶上設定 WhatsApp 進行訊息的影片（您無法獲得 WhatsApp 的完整功能）見 [這裡](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+一段解釋如何在 Galaxy 4 手錶上設定 WhatsApp 進行訊息的影片（你無法獲得 WhatsApp 的完整功能）見 [這裡](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
 
 在 **AAPS** 手機和手錶的 **Galaxy wearable** 應用中進行調整，讓 WhatsApp 訊息以輕微震動的方式宣告，並且 WhatsApp 訊息可以顯示在現有的錶盤上。
 
@@ -311,7 +311,7 @@ b) 使用者希望避免輸入驗證碼（追蹤者手機需要在輸入資料�
 
 
 
-您可以以與**AAPS** Wear 應用相同的方式，將**AAPSClient**穿戴 apk 傳輸到手機並側載到手錶上，如[將 Wear 應用傳輸到您的 AAPS 手機](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)中詳細說明。  
+你可以以與**AAPS** Wear 應用相同的方式，將**AAPSClient**穿戴 apk 傳輸到手機並側載到手錶上，如[將 Wear 應用傳輸到你的 AAPS 手機](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)中詳細說明。  
 
 
 

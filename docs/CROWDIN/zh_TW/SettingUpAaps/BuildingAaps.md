@@ -13,14 +13,15 @@
 
 * 可能需要特定版本的 **[Android Studio](https://developer.android.com/studio/)** 來建立 apk。 見下表：
 
-| AAPS版本              | 首選<br/>Android Studio<br/>版本 | 替代<br/>Android Studio<br/>版本                                                                        | Gradle | JVM |
-| ------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------ |:--- |
-| [3.2](#version3200) | Hedgehog（2023.1.1）                       | Iguana（2023.2.1）<br/>Jellyfish（2023.3.1）<br/>Koala（2024.1.1）<br/>Ladybug（2024.2.1）<br/> | 8.2    | 19  |
-| [3.3](#version3300) | Ladybug (2024.2.1)                       |                                                                                                                 | 8.9    | 21  |
+| AAPS版本                  | 首選<br/>Android Studio<br/>版本 | 替代<br/>Android Studio<br/>版本                                                                        | Gradle | JVM |
+| ----------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------ |:--- |
+| [3.2](#version3200)     | Hedgehog（2023.1.1）                       | Iguana（2023.2.1）<br/>Jellyfish（2023.3.1）<br/>Koala（2024.1.1）<br/>Ladybug（2024.2.1）<br/> | 8.2    | 19  |
+| [3.3](#version3300)     | Ladybug (2024.2.1)                       |                                                                                                                 | 8.9    | 21  |
+| [3.3.1.2](#version3300) | Ladybug功能更新（2024.2.2）                    |                                                                                                                 | 8.10   | 21  |
 
-"首選版本"已打包與適當的JVM版本。 如果使用不同的版本，您可能會遇到與JVM版本相關的問題。 請參閱 [Android Studio 問題排除](#troubleshooting_androidstudio-uncommitted-changes) 頁面以協助解決這些問題。 如果你當前的 Android Studio 版本未在表格中列出，你必須先更新它。
+"首選版本"已打包與適當的JVM版本。 首選版本也是你可以用來建立**AAPS**的最小版本。 你**無法**在比"首選"版本更舊的版本上建立。 如果使用不同的版本，你可能會遇到與JVM版本相關的問題。 請參閱 [Android Studio 問題排除](#troubleshooting_androidstudio-uncommitted-changes) 頁面以協助解決這些問題。 如果你當前的 Android Studio 版本未在表格中列出，你必須先更新它。
 
-Gradle版本與源代碼相連結，下載/更新源代碼時，您將始終獲得正確的Gradle版本。 此處僅供參考，您不必採取行動。
+Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲得正確的Gradle版本。 此處僅供參考，你不必採取行動。
 
 * [Windows 32位系統](#troubleshooting_androidstudio-unable-to-start-daemon-process)不支援Android Studio。 請記住**64位中央處理器和64位作業系統是必要條件。** 如果你的系統不符合此條件，你必須更換受影響的硬體或軟體，或整個系統。
 
@@ -137,7 +138,7 @@ Android Studio 版本非常重要。 請參閱 [上面的指示](#Building-APK-r
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
-下載完成後，啟動下載的應用程序以在您的計算機上安裝它。 您可能需要接受/確認一些有關從 Windows 下載的應用程序的警告！
+下載完成後，啟動下載的應用程序以在你的計算機上安裝它。 你可能需要接受/確認一些有關從 Windows 下載的應用程序的警告！
 
 透過點擊「下一步」來安裝 Android Studio，如以下屏幕截圖所示。 你**不**需要更改任何設定！
 
@@ -159,11 +160,11 @@ Android Studio 版本非常重要。 請參閱 [上面的指示](#Building-APK-r
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
-系統將詢問您是否希望幫助改善 Android Studio。 根據自己的喜好選擇選項，這不會影響接下來的步驟。
+系統將詢問你是否希望幫助改善 Android Studio。 根據自己的喜好選擇選項，這不會影響接下來的步驟。
 
 ![Help_improve_Android_Studio](../images/Building-the-App/020_ImproveAS.png)
 
-歡迎畫面歡迎您安裝 Android Studio。 按「下一步」。
+歡迎畫面歡迎你安裝 Android Studio。 按「下一步」。
 
 ![歡迎](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
@@ -175,7 +176,7 @@ Android Studio 版本非常重要。 請參閱 [上面的指示](#Building-APK-r
 
 ![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
-現在您需要接受許可協議。 左側有兩個區域（1 + 3），您需要逐一選擇並在右側各選擇「接受」（2 + 4）。
+現在你需要接受許可協議。 左側有兩個區域（1 + 3），你需要逐一選擇並在右側各選擇「接受」（2 + 4）。
 
 然後可以點擊「完成」(5) 按鈕。
 
@@ -183,11 +184,11 @@ Android Studio 版本非常重要。 請參閱 [上面的指示](#Building-APK-r
 
 某些 Android 套件現在將被下載和安裝。 請耐心等待。
 
-當這一切完成後，您將看到以下畫面，可以再次選擇「完成」。
+當這一切完成後，你將看到以下畫面，可以再次選擇「完成」。
 
 ![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
 
-您現在將看到 Android Studio 的歡迎畫面。
+你現在將看到 Android Studio 的歡迎畫面。
 
 ![歡迎來到Android Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
@@ -221,7 +222,7 @@ Android Studio 版本非常重要。 請參閱 [上面的指示](#Building-APK-r
     ```
     然後將其粘貼到URL文本框中（3）。
 
-* 檢查保存複製代碼的（預設）目錄在您的計算機上存在，並且該目錄尚未存在（4）。 您可以將其更改為某個目錄，但請記得您放置的位置!
+* 檢查保存複製代碼的（預設）目錄在你的計算機上存在，並且該目錄尚未存在（4）。 你可以將其更改為某個目錄，但請記得你放置的位置!
 * 現在點擊“複製”按鈕（5）。
 
 ```{admonition} INFORMATION
@@ -233,7 +234,7 @@ Android Studio 版本非常重要。 請參閱 [上面的指示](#Building-APK-r
 
 ![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
 
-在某個時候，Android Studio 將關閉並重新啟動。 系統可能會詢問您是否希望信任該專案。 點擊“信任專案”：
+在某個時候，Android Studio 將關閉並重新啟動。 系統可能會詢問你是否希望信任該專案。 點擊“信任專案”：
 
   ![信任專案](../images/Building-the-App/035_TrustProject.png)
 
@@ -259,7 +260,7 @@ Android Studio最近改變了其UI。 新的Android Studio安裝預設使用新�
 
 當 Android Studio 開啟時，請耐心等待（這可能需要幾分鐘），尤其是，**請不要**按照彈出視窗中的建議更新專案。
 
-Android Studio 將自動開始進行 "Gradle 專案同步"，這將需要幾分鐘才能完成。 您可以看到它（仍然）在運行：
+Android Studio 將自動開始進行 "Gradle 專案同步"，這將需要幾分鐘才能完成。 你可以看到它（仍然）在運行：
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
@@ -274,7 +275,7 @@ Android Studio 可能會建議更新 gradle 系統。 **切勿更新 gradle！**
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-您可以讓 Gradle 同步運行，同時已經可以追蹤下一步。
+你可以讓 Gradle 同步運行，同時已經可以追蹤下一步。
 
 (Building-APK-set-git-path-in-preferences)=
 ### 在 Android Studio 偏好設定中設置 Git 路徑
@@ -332,7 +333,7 @@ Android 要求每個應用程式必須被 _簽署_，以確保它只能從同一
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
 :class: information
-如果您想為您的手錶建立 APK，您現在需要選擇 AAPS.wear！
+如果你想為你的手錶建立 APK，你現在需要選擇 AAPS.wear！
 ```
 ![創建金鑰庫](../images/Building-the-App/042_CreateNewKey.png)
 
@@ -348,7 +349,7 @@ Android 要求每個應用程式必須被 _簽署_，以確保它只能從同一
 
 ![創建金鑰庫](../images/Building-the-App/043_Keystore.png)
 
-* 點擊 "文件夾" 符號（1）以選擇您電腦上金鑰庫的路徑。
+* 點擊 "文件夾" 符號（1）以選擇你電腦上金鑰庫的路徑。
 
   請**不要**使用你儲存原始碼的目錄，而使用一些你也會轉移到新電腦的目錄。
 
@@ -372,17 +373,17 @@ Android 要求每個應用程式必須被 _簽署_，以確保它只能從同一
 
 * 預設有效期為 25 年，可以保持原樣。
 
-* 輸入您的名字和姓氏（5）。 不需要添加其他任何資訊，但您可以自由地補充（6-7）。
+* 輸入你的名字和姓氏（5）。 不需要添加其他任何資訊，但你可以自由地補充（6-7）。
 
 * 點擊“確定”（8）繼續：
 
 
-在**生成簽署的應用包或 APK**頁面上，現在將顯示金鑰庫的路徑。 現在重新輸入金鑰庫密碼（1）和密鑰密碼（2），並勾選方框（3）以記住密碼，這樣您在下次建構 APK 時（即升級到新的 AAPS 版本時）就不需要再次輸入。 點擊“下一步”（4）：
+在**生成簽署的應用包或 APK**頁面上，現在將顯示金鑰庫的路徑。 現在重新輸入金鑰庫密碼（1）和密鑰密碼（2），並勾選方框（3）以記住密碼，這樣你在下次建構 APK 時（即升級到新的 AAPS 版本時）就不需要再次輸入。 點擊“下一步”（4）：
 
 ![記住密碼](../images/Building-the-App/044_RememberPwd.png)
 
 
-在下一個螢幕上，選擇建構變體 "fullRelease"（2），然後點擊 "建立"（3）。 您應該記住在（1）顯示的目錄，因為稍後您會在那裡找到生成的 APK 檔案！
+在下一個螢幕上，選擇建構變體 "fullRelease"（2），然後點擊 "建立"（3）。 你應該記住在（1）顯示的目錄，因為稍後你會在那裡找到生成的 APK 檔案！
 
    ![選擇建置變體](../images/Building-the-App/045_BuildPath.png)
 
@@ -409,7 +410,7 @@ Android Studio在建置完成後將顯示“BUILD SUCCESSFUL”的訊息。 你�
 恭喜！ 現在你已經建置了**AAPS** apk 檔案，接下來你將把此檔案傳送到你的智慧型手機。
 
 ```{tip}
-如果您認為未來可能想使用 Android Wear 智慧型手錶，現在正是建立 AAPS Wear apk 的最佳時機，以確保它與您的 AAPS apk 同步。
+如果你認為未來可能想使用 Android Wear 智慧型手錶，現在正是建立 AAPS Wear apk 的最佳時機，以確保它與你的 AAPS apk 同步。
 ```
 
 移動到[傳送和安裝**AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md)的下一個階段。

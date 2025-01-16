@@ -28,7 +28,7 @@ AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理�
 ### 步驟 1：設定 Juggluco
 從[此處](https://www.juggluco.nl/Juggluco/download.html)下載並安裝 Juggluco 應用程式。 按照[此處](https://www.juggluco.nl/Juggluco/libre3/)的指示操作。
 
-確保將血糖值傳送到 xDrip+：在 Juggluco 的設定中，您可以配置 Juggluco 將其血糖值傳送到其他應用程式。 Juggluco 可以發送三種類型的廣播：**修補版 Libre 廣播** 最初由修補版 Librelink 應用程式使用，並可用於將葡萄糖值傳送至 xDrip+。
+確保將血糖值傳送到 xDrip+：在 Juggluco 的設定中，你可以配置 Juggluco 將其血糖值傳送到其他應用程式。 Juggluco 可以發送三種類型的廣播：**修補版 Libre 廣播** 最初由修補版 Librelink 應用程式使用，並可用於將葡萄糖值傳送至 xDrip+。
 
 ![Juggluco 廣播至 xDrip+](../images/Juggluco_xDrip.png)
 

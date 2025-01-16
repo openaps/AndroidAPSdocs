@@ -8,6 +8,11 @@
 
 **AMA** = Advanced Meal Assist (dt. fortgeschrittener Mahlzeitenassistent). Ein Algorithmus, der es **AAPS** ermöglicht, die Basalrate nach einem Mahlzeitenbolus zu erhöhen (aggressiver zu machen). Weitere Informationen → Wiki - 'Erweiterter Mahlzeit-Assistent (AMA)'.
 
+**Adjustment Factor** = used within **DynamicISF** and is a value set within a user's **Preferences** between 1% and 300%. This acts as a multiplier on the **TDD** value.
+
+- increasing the **Adjustment Factor** value above 100 % makes **DynamicISF** more aggressive: the **ISF** values become smaller (i.e. more insulin required to decrease **BG** levels a small amount)
+- lowering the **Adjustment Factor** value under 100% makes **DynamicISF** less aggressive: the **ISF** values become larger (i.e. less insulin required to decrease **BG** levels a small amount).
+
 **Android Auto** = ein System, das bestimmte Funktionen eines Android-Smartphones, einschließlich **AAPS**, auf dem Display eines Autos zur Verfügung stellt. Weitere Informationen → Wiki - 'Android Auto'.
 
 **APK** = Android Application Package. Eine Installationsdatei. Weitere Informationen → Wiki - 'App erstellen'.
@@ -46,6 +51,11 @@
 
 **DST** = Daylight Savings Time (dt. Sommerzeit (MESZ)) → Wiki DST.
 
+**Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s:
+
+- Total Daily Dose of insulin (**TDD**); and
+- current and predicted **BG** values.
+
 **eCarbs** = extended Carbs (dt. verzögerte Kohlenhydrate). Kohlenhydrate werden über mehrere Stunden aufgeteilt, um Protein zu berücksichtigen und **AAPS** zu ermöglichen verlängerte Bolusdosen abzugeben. Weitere Informationen → Wiki - 'Verzögerte Kohlenhydrate / eCarbs', 'eCarbs nutzen'.
 
 **FGM** = Flash Glucose Monitor von Freestyle Libre hergestellt. Weitere Informationen → Wiki - 'BZ-Quelle' und vgl. auch 'CGM'.
@@ -81,8 +91,6 @@
 **NSClient** ( oder **‘AAPSClient’)** = siehe **AAPSClient**.
 
 **OpenAPS** = Open Artificial Pancreas System (dt. offenes System einer künstlichen Bauchspeicheldrüse).
-
-**AAPS** wird auf Kleinstrechnern (z.B. Raspberry Pi) ausgeführt und nutzt einige der OpenAPS-Funktionen OpenAPS Docs.
 
 **Open Loop System** = eine **AAPS** Funktion, die Anpassungen empfiehlt, die durch Dich manuell in **AAPS** eingegeben werden muss. Further info → Wiki - 'config builder'.
 
