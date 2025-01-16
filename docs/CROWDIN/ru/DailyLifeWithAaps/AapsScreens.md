@@ -80,8 +80,8 @@
 Блоки в середине показывают:
 
 1. минуты с предыдущего показания **мониторинга**
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-    Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
+2. разница с последним значением: Δ, и с последними средними значениями 15 и 40 минут (Δ15 и Δ40).  
+    Большая дельта рассчитываются как среднее значение предществующих изменений.
 
 (AapsScreens-loop-status)=
 
@@ -156,16 +156,16 @@
 
 #### Простой режим
 
-An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+Значок с изображением лица ребенка в правом верхнем углу этого раздела указывает на то, что вы находитесь в [ простом режиме](#preferences-simple-mode).
 
-![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
+![Начальный экран2020_ПростойРежим.png](../images/Home2020_SimpleMode.png)
 
 ### Раздел D - АктИнс, АктУгл, БС и AS
 
 ![Раздел D](../images/Home2020_TBR.png)
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
+1. **Шприц**: активный инсулин (IOB) - количество активного инсулина в организме  
+    Активный инсулин равен нулю, если работает стандартная база и нет инсулина, оставшегося от предыдущих болюсов.
     
     * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
     * Нажмите на иконку (только короткое нажатие), чтобы увидеть как IOB распределяется между базой и болюсом.
@@ -174,9 +174,9 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 3. **Фиолетовая линия**: текущая скорость базала. Пиктограмма меняется, отражая временные изменения в базальной скорости (плоская при 100%) 
     * Кратко нажмите на иконку, чтобы увидеть подробности базала (значение текущего базала, время начала, остаток/общая продолжительность в минутах)
-4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
-    * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
-    * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
+4. **Стрелки вверх & вниз**: указывает состояние динамической чувствительности ([Autosens](#Open-APS-features-autosens) или [DynamicISF](#Open-APS-features-DynamicISF)): включено или отключено. В этом разделе: может быть показано несколько значений: 
+    * AS: Значение Autosens. Показывается даже если Autosens отключен (только для информации). Также показывается, когда DynISF активирован, хотя и не оказывает никакого воздействия.
+    * Alg: значение DynamicISF (на основе суточной дозировки TDD). Подробнее о последней строке см. на странице [DynamicISF](#Open-APS-features-DynamicISF).
 
 (aaps-screens-carbs-requirement)=
 
@@ -222,7 +222,7 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 Здесь показаны заметки, введенные на вкладке действия, такие как калибровка с глюкометра и записи углеводов, а также переключения профиля.
 
-Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
+Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. Можно выбрать между 6, 12, 18 или 24 часами.
 
 Зеленая область отражает ваш целевой диапазон.
 
