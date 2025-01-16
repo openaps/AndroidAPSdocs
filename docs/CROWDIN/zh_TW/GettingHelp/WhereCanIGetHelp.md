@@ -7,16 +7,16 @@
 * 第一層：閱讀 Wiki - 我們現在有搜索功能可以幫助你！
 * 第二層：搜索 Facebook 群組，如果沒有已經回答的問題，請在 [AndroidAPS 用戶 Facebook 群組](https://www.facebook.com/groups/1900195340201874/)中提問
 * 第三層：如果 Facebook 沒有結果，請在 [Discord](https://discord.gg/4fQUWHZ4Mw) 上提問。 為避免重複回答，同一個問題跨頻道貼文將會被忽略或刪除。 不要忘記，大多數開發者都在歐洲，所以回覆可能不是 24 小時不間斷的；你可能需要等待幾個小時，尤其是週末和假期。
-* 第4級：建立一個[問題](https://github.com/nightscout/AndroidAPS/issues)並附上您的[日誌檔案](../GettingHelp/AccessingLogFiles.md)
+* 第4級：建立一個[問題](https://github.com/nightscout/AndroidAPS/issues)並附上你的[日誌檔案](../GettingHelp/AccessingLogFiles.md)
 * 第五層：發送電子郵件至 *developers@androidaps.org*（僅限涉及個人資料且未能在其他層面解決問題時使用）
 
 如需有關 CGM 來源的支援，請使用 Facebook 群組或該特定系統的 Discord 聊天頻道（例如：[xDrip+](https://www.facebook.com/groups/xDripG5/)、[600 系列上傳器](https://www.facebook.com/groups/NightscoutForMedtronic/)），或對於 Nightscout 的支援請參考 [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/)，因為那裡的使用者對這些系統的專業知識會比這裡的使用者更高，這裡的使用者都使用不同的系統。
 
-## Make sure to join the AndroidAPS users group on Facebook or Discord!
+## 確保加入AndroidAPS使用者群組於Facebook或Discord上！
 
-Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and/or [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw). 你可以在這裡提問有關算法的問題、關於 Android Studio 設置和建置 APK 的問題、以及有關應用使用的任何疑問，還有如何充分利用他的提示。 對於 Combo 幫浦使用者，還有一個[AAPSCombo](https://www.facebook.com/groups/127507891261169/)群組，這有著稍微更具體的設置。
+加入主要的[AndroidAPS Facebook群組](https://www.facebook.com/groups/1900195340201874/)和/或[AndroidAPS在Discord上](https://discord.gg/4fQUWHZ4Mw)。 你可以在這裡提問有關算法的問題、關於 Android Studio 設置和建置 APK 的問題、以及有關應用使用的任何疑問，還有如何充分利用他的提示。 對於 Combo 幫浦使用者，還有一個[AAPSCombo](https://www.facebook.com/groups/127507891261169/)群組，這有著稍微更具體的設置。
 
-Please note that Facebook has recently removed external links shared within the AAPS Facebook group and this includes current and historic posts which contain external links to the AAPS Notes / Read the docs. For new users who are working through the Objectives and reviewing historic AAPS Facebook posts please search key terms as discussed wthin the AAPS notes for further assistance.
+請注意，Facebook最近已經移除了在AAPS Facebook群組中共享的外部連結，包括目前和歷史的帖子，這些帖子包含指向AAPS說明文件/閱讀文件的外部連結。 對於正在完成目標並檢視歷史AAPS Facebook帖子的新人，請搜索在AAPS說明中討論的關鍵詞以獲取進一步幫助。
 
 ## 其他英文資源
 
