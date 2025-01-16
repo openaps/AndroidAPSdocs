@@ -328,13 +328,17 @@ Libre 使用者的特殊注意事項：
 
 如果他偵測到碳水化合物吸收率高於預期，將注射胰島素，這將增加 IOB（多或少，取決於你的安全設置）。
 
-#### 敏感度 (Sensitivity)
+#### Sensitivity change
 
 顯示[自動敏感度調整](#Open-APS-features-autosens)檢測到的敏感度。
 
 敏感度是運動、荷爾蒙等導致的對胰島素的敏感度計算結果。
 
 請注意，你需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。 在達到該目標之前，你的圖表中的線條僅顯示為資訊。
+
+### Variable sensitivity
+
+Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
 
 (screen-heart-rate-steps)=
 
@@ -423,6 +427,8 @@ Libre 使用者的特殊注意事項：
 輕鬆輸入碳水化合物數量並設置計算基礎。
 
 詳細訊息在 [偏好設定 > 首頁總覽 > 快速嚮導設定](#Preferences-quick-wizard) 中設置。
+
+(aaps-screens-bolus-wizard)=
 
 ## 注射嚮導
 
