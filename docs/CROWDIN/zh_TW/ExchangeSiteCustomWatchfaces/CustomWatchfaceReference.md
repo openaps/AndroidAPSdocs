@@ -11,7 +11,7 @@
 錶盤檔案是一個簡單的 zip 檔案，但要被識別為錶盤檔案，該 zip 檔案必須包含以下檔案：
 
 - 一個名為 CustomWatchface 的圖片檔案（可以是點陣圖檔案 `CustomWatchface.jpg`、`CustomWatchface.png` 或向量檔案 `CustomWatchface.svg`）。 此檔案是用於在你點選「載入錶盤」按鈕時選擇錶盤的圖示，也是在 AAPS Wear 外掛中可見的圖像。
-- 一個名為`CustomWatchface.json`的檔案（見下方[JSON 結構](#cwf-reference-json-structure)）。 這個第二個檔案是核心檔案，將包含設計錶盤所需的所有資訊。 這個 json 檔案必須是有效的（當用文字編輯器手動編輯這個檔案時，這可能是最棘手的地方，因為缺少或多出一個逗號就會破壞 json 格式）。 此 JSON 檔案還必須包含一個 `"metadata"` 區塊，內含 `"name"` 鍵，且其值不能為空。 這將是您的自定義手錶錶盤的名稱（見下方[Metadata設定](#cwf-reference-metadata-settings)）
+- 一個名為`CustomWatchface.json`的檔案（見下方[JSON 結構](#cwf-reference-json-structure)）。 這個第二個檔案是核心檔案，將包含設計錶盤所需的所有資訊。 這個 json 檔案必須是有效的（當用文字編輯器手動編輯這個檔案時，這可能是最棘手的地方，因為缺少或多出一個逗號就會破壞 json 格式）。 此 JSON 檔案還必須包含一個 `"metadata"` 區塊，內含 `"name"` 鍵，且其值不能為空。 這將是你的自定義手錶錶盤的名稱（見下方[Metadata設定](#cwf-reference-metadata-settings)）
 - 此 zip 檔案的大小應盡可能小（不超過約 500KB）。 如果檔案太大，將會被阻擋，無法傳送到手錶。
 
 該 zip 檔案還可以包含一些額外的資源檔案：
@@ -1097,14 +1097,14 @@ DynData 值等於:
 格式化字符串包含在 `"textvalue1"` 鍵內（`"textvalue1"`、`"textvalue2"` 等鍵與可包含在 `view` 區塊的 `"textvalue"` 鍵連結）
 
 - `"textvalue"` 鍵可以在視圖區塊中與格式化資訊一起使用（在這種情況下，格式將是靜態的，不論值或設定如何）
-- 如果您想根據設定或值修改格式化資訊，則可以應用所有 dynData 功能，專用的鍵有 `"invalidTextValue"` 鍵（不帶 "格式化資訊"，因為值無效）以及 `"textvalue1"`、`"textvalue2"`...（以及您想管理的最小資料與最大資料之間的任何值）
+- 如果你想根據設定或值修改格式化資訊，則可以應用所有 dynData 功能，專用的鍵有 `"invalidTextValue"` 鍵（不帶 "格式化資訊"，因為值無效）以及 `"textvalue1"`、`"textvalue2"`...（以及你想管理的最小資料與最大資料之間的任何值）
 - 額外的 `"dynPref"` 鍵用於根據可見視圖、暗黑和分隔線設定定義其他區塊以改變位置和顏色
 
 關於格式化字串，語法如下：`%[flags][width][.precision]f`
 
 - `%` 是格式化的開始，`f` 是結尾，應用於 Double 值轉換。
-  - 請注意，如果您想在字串中使用 `%` 字元，您必須使用 `%%` 來指定它不是格式化字串，而是百分比字元。
-- `[flag]` 是可選的，主要可以是 `+`，如果您始終想在數字前添加符號，或者 `(` 如果您想將負值用括號括起來
+  - 請注意，如果你想在字串中使用 `%` 字元，你必須使用 `%%` 來指定它不是格式化字串，而是百分比字元。
+- `[flag]` 是可選的，主要可以是 `+`，如果你始終想在數字前添加符號，或者 `(` 如果你想將負值用括號括起來
 - `[width]` 是可選的，定義輸出中要寫入的最小字元數
 - `[.precision]` 用於定義小數點後的位數。
   - 請注意，值為 Double，因此最好總是設定精度（以避免因 Kotlin 精度導致的小數點後出現過多字元）
@@ -1145,11 +1145,11 @@ DynData 值等於:
 **有關格式化功能的補充說明**
 
 - 請記住，唯一可用的動態值是這裡列出的[這裡](#cwf-reference-dyndata-key-values)
-- 所有`血糖`值均為 mgdl 單位，如果您想使用格式化功能以 mmol 單位顯示值，則必須管理 mgdl 到 mmol 的轉換。 在 `dynData` 或 `dynPref` 區塊中，用於命名將包含 `"minValue"` 和 `"maxValue"` 用於值轉換的區塊的鍵應命名為 `"dynValue": { ...  }`。 (參見 [Dyn Data Keys](#cwf-reference-dyndata-keys))
+- 所有`血糖`值均為 mgdl 單位，如果你想使用格式化功能以 mmol 單位顯示值，則必須管理 mgdl 到 mmol 的轉換。 在 `dynData` 或 `dynPref` 區塊中，用於命名將包含 `"minValue"` 和 `"maxValue"` 用於值轉換的區塊的鍵應命名為 `"dynValue": { ...  }`。 (參見 [Dyn Data Keys](#cwf-reference-dyndata-keys))
 - 如果在視圖中要使用靜態格式化字串，使用 `"textvalue"` 鍵來定義格式，並使用 `"dynValue"` 鍵來定義動態值的使用，則還必須使用 `"dynData"` 或 `"dynPref"` 區塊（即使是空的），以能夠使用格式化功能。
 - `"textvalue1"`、`"textvalue2"` 到 `textvalue<em x-id="3">n</em>` 可以不使用格式化功能來替換 Double 值步驟，並以專用文字標籤取代（例如使用 `"day_name"` 鍵值和七個步驟來定義自訂名稱的星期幾...）
 
-- 完整文件您可以查看[Class Formatter](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)
+- 完整文件你可以查看[Class Formatter](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)
 
 (cwf-reference-show-external-datas)=
 
@@ -1360,9 +1360,9 @@ delta_Ext1<br/>delta_Ext2                                                       
 | `"allCaps"`    | 布林值 | 如果希望文字為大寫（主要用於星期名稱或月份名稱），請設為 true                                                                                                                                                                                                                                                                                                                                                                |
 | `"background"` | 文字  | `resource_filename` 你可以包含資源圖像作為文字視圖的背景（資源檔案將被調整大小以適應文字視圖的高度和寬度，但保持圖像比例）。 文字將顯示在背景圖像前面。<br />- 請注意，此鍵也可用於 `chart` 視圖中為圖表設置自訂背景，在背景圖像前面顯示                                                                                                                                                                                                                                                    |
 | `"color"`      | 文字  | 管理視圖背景顏色或調整圖像顏色（僅限點陣圖）<br />`"#RRVVBB"`：RVB 格式的顏色代碼，十六進制值 #FF0000 為紅色<br />`"#AARRVVBB"`：AA 包含 Alpha 資訊（透明度），00 為透明，FF 為不透明<br />`"bgColor"`：鍵值 bgColor 是根據血糖值使用 highColor、midColor 或 lowColor 的簡便方法<br />- 對於預設嵌入的圖像（指針、錶盤），將直接應用顏色，對於點陣圖圖像（jpg 或 png），這將在圖像上應用飽和度漸變濾鏡<br />- 對於 svg，此參數將無效（無法修改 svg 文件的顏色）<br />- 請注意，此鍵也可用於 `chart` 視圖中為圖表設置自訂背景，在背景圖像前顯示 |
-| `"textvalue"`  | 文字  | 此鍵特定於佈局中包含的四個自由文字視圖（從freetext1到freetext4），這允許您設定要包含的文字（可以是標籤，或只是`:`以便在小時視圖和分鐘視圖之間添加分隔符...）  
+| `"textvalue"`  | 文字  | 此鍵特定於佈局中包含的四個自由文字視圖（從freetext1到freetext4），這允許你設定要包含的文字（可以是標籤，或只是`:`以便在小時視圖和分鐘視圖之間添加分隔符...）  
 從Custom Watchface外掛v2（AAPS 3.3）開始，textvalue可用於包括其他文字視圖的格式字串（可與`dynValue`鍵和`dynData`或`dynPref`一起使用）。 例如                                                                                                                                                                                              |
-| `"dynValue"`*  | 布林值 | 如果您希望在（double）中包含原始值則為真。 與`textvalue`鍵搭配使用時非常有用，如果您希望有特定的格式顯示值                                                                                                                                                                                                                                                                                                                                   |
+| `"dynValue"`*  | 布林值 | 如果你希望在（double）中包含原始值則為真。 與`textvalue`鍵搭配使用時非常有用，如果你希望有特定的格式顯示值                                                                                                                                                                                                                                                                                                                                   |
 
 **自Custom Watchface V2.0或以上版本中新增的鍵（可用於AAPS 3.3.0穿戴apk或以上版本）*
 
@@ -1426,7 +1426,7 @@ delta_Ext1<br/>delta_Ext2                                                       
 | `"maxValue"`              | 整數 | 要應用於視圖的結果值（此鍵僅適用於 leftOffset、topOffset 或 rotationOffset 區塊內）                                                                                                                                                                                                              |
 | `"invalidValue"`          | 整數 | 如果資料無效，則要應用於視圖的結果值（此鍵僅適用於 leftOffset、topOffset 或 rotationOffset 區塊內）                                                                                                                                                                                                      |
 | `"invalidImage"`          | 文字 | 如果資料無效，則用於 ImageView 或背景 TextView 的 `resource_filename`                                                                                                                                                                                                                   |
-| image*1_to_n*           | 文字 | `resource_filename` 圖片用於每個步驟在 minData（或接近 minData）與 `"image1"` 和 maxData（或接近 maxData）之間的影像*n*<br />例如，如果您放了 5 張圖片（從 image1 到 image5），則 minData 和 maxData 之間的範圍將被分為 5 個步驟，根據資料值，將顯示相應的圖片                                                                             |
+| image*1_to_n*           | 文字 | `resource_filename` 圖片用於每個步驟在 minData（或接近 minData）與 `"image1"` 和 maxData（或接近 maxData）之間的影像*n*<br />例如，如果你放了 5 張圖片（從 image1 到 image5），則 minData 和 maxData 之間的範圍將被分為 5 個步驟，根據資料值，將顯示相應的圖片                                                                             |
 | `"invalidFontColor"`      | 文字 | 如果資料無效，管理字體顏色的步驟<br />`"#RRVVBB"` 或 `"#AARRVVBB"`：如果接收到無效資料，則使用的顏色（如果 AA=00，則可以透明）                                                                                                                                                                                  |
 | fontColor*1_to_n*       | 文字 | 管理字型顏色步驟<br />`"#RRVVBB"` 或 `"#AARRVVBB"`: 用於 minData（或接近 minData）與 `"fontColor1"` 以及 maxData（或接近 maxData）與 fontColor*n* 之間的步驟顏色                                                                                                                                    |
 | `"invalidColor"`          | 文字 | 如果資料無效，管理背景顏色或圖像顏色的步驟<br />`"#RRVVBB"` 或 `"#AARRVVBB"`：如果接收到無效資料，則使用的顏色（如果 AA=00，則可以透明）                                                                                                                                                                             |
