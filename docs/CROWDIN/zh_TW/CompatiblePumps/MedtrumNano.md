@@ -357,7 +357,7 @@ orphan: true
 * [在舊手機上匯出設定](../Maintenance/ExportImportSettings.md)
 * 將設定從舊手機轉移到新手機，並匯入到 AAPS 中
 
-匯入的設定檔必須與您目前使用的修補版本相同，否則無法連線。
+匯入的設定檔必須與你目前使用的修補版本相同，否則無法連線。
 
 在完成設置匯入後，驅動程式會與幫浦同步歷史資料，這可能會根據設置的檔案需要一些時間。
 
@@ -386,5 +386,5 @@ orphan: true
 
 -  **等級 0：** 閱讀此文件的相關部分，以確保你了解遇到困難的功能應如何工作。
 -  **第一層：**如果你仍遇到無法透過此文件解決的問題，請前往**Discord**上的*#Medtrum*頻道，使用[此邀請連結](https://discord.gg/4fQUWHZ4Mw)。
--  **第二層：**搜尋現有問題，看看你的問題是否已在[問題頁面](https://github.com/nightscout/AAPS/issues)中報告 如果存在，請確認/評論/添加你的問題資訊。 如果沒有，請建立一個[新問題](https://github.com/nightscout/AndroidAPS/issues)並附上[您的日誌文件](../GettingHelp/AccessingLogFiles.md)。
+-  **第二層：**搜尋現有問題，看看你的問題是否已在[問題頁面](https://github.com/nightscout/AAPS/issues)中報告 如果存在，請確認/評論/添加你的問題資訊。 如果沒有，請建立一個[新問題](https://github.com/nightscout/AndroidAPS/issues)並附上[你的日誌文件](../GettingHelp/AccessingLogFiles.md)。
 -  **保持耐心——我們社群中的大多數成員都是善良的志願者，解決問題通常需要使用者和開發者雙方的時間和耐心。**
