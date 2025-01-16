@@ -4,7 +4,7 @@
 
 讓智慧型手錶直接控制 **AAPS**（幫浦和傳感器）需要使用完整的 Android 手錶（被視為小型 [智慧型手機](./Phones.md)）。
 
-某些智慧型手錶可以讓您輸入治療方案或更多，但手機本身仍然管理 **AAPS**。
+某些智慧型手錶可以讓你輸入治療方案或更多，但手機本身仍然管理 **AAPS**。
 
 智慧型手錶越來越多地與 **AAPS** 結合使用，_無論是_ 對於患有糖尿病的成年人還是兒童的照護者/父母。
 
@@ -39,7 +39,7 @@
 
 你購買的智慧型手錶具體型號取決於你所需的功能。 你可能會在 [手機頁面](#Phones-list-of-tested-phones) 上找到有用的信息，包括一份測試過的手機列表，還包含一些智慧型手錶。
 
-受歡迎的手錶品牌包括三星 Galaxy、Garmin、Fossil、米動手環和 Fitbit。 上面表格中不同選項的摘要將在下面詳細說明，幫助您決定哪款智慧型手錶最適合您的情況。
+受歡迎的手錶品牌包括三星 Galaxy、Garmin、Fossil、米動手環和 Fitbit。 上面表格中不同選項的摘要將在下面詳細說明，幫助你決定哪款智慧型手錶最適合你的情況。
 
 如果你打算將智慧型手錶與**AAPS** 手機結合使用並遠端操作**AAPS**，你還需要考慮這兩個設備是否相容，尤其是如果你的手機較舊或比較特殊。
 
@@ -69,7 +69,7 @@
 
 ![Wear OS](../images/WearOS.png)
 
-驗證您的智慧型手錶是否滿足 **AAPS** [前置條件](#maintenance-android-version-aaps-version)。
+驗證你的智慧型手錶是否滿足 **AAPS** [前置條件](#maintenance-android-version-aaps-version)。
 
 ### 什麼是 _Wear OS_？
 
@@ -77,16 +77,16 @@
 
 **Wear OS** 是運作在部分現代 Android 智慧型手錶上的作業系統。 在 [2018年](https://en.wikipedia.org/wiki/Wear_OS)，Google 將 _Android Wear 1.x_ 更名為 **Wear OS**，版本為 2.x。 因此，如果某款設備標示為“_Android Wear_”而不是 **Wear OS**，這可能表示該設備運作的是較舊版本。 如果智慧型手錶的描述僅指示與 Android 和 iOS 相容，則並不意味著他運作的是 **Wear OS**。 他可能運作的是其他供應商專用的作業系統，這些系統不與 **AAPS** 相容。 要支援安裝和使用任何版本的 **AAPS** 或 **AAPSClient**，智慧型手錶必須運作 **Wear OS**，且最好是 Android 10 或更新版本。 作為指引，截至 2023 年 10 月，**Wear OS** 的最新版本是基於 Android 13 的 4.0 版本。
 
-如果您在 **Wear OS** 手錶上安裝 **AAPS** wear.apk，將可以選擇不同的自訂 **AAPS** 錶盤。 或者，你可以使用標準的智慧型手機錶盤，並在錶盤上包含稱為“小工具”的小方塊，顯示你的 **AAPS** 資訊。 複雜功能是指除了時間之外，顯示在錶盤上的任何功能。 像這樣的小工具需要 Wear OS 2.0 或更新版本才能正常運作。
+如果你在 **Wear OS** 手錶上安裝 **AAPS** wear.apk，將可以選擇不同的自訂 **AAPS** 錶盤。 或者，你可以使用標準的智慧型手機錶盤，並在錶盤上包含稱為“小工具”的小方塊，顯示你的 **AAPS** 資訊。 複雜功能是指除了時間之外，顯示在錶盤上的任何功能。 像這樣的小工具需要 Wear OS 2.0 或更新版本才能正常運作。
 
 
 ### 我的智慧型手錶會長什麼樣子？
 
-在 [安裝 **AAPS** 到您的手錶後](../WearOS/WearOsSmartwatch.md)，您將自動能選擇您喜歡的錶盤，這些都是專為 **AAPS** 設計的錶盤。 在大多數手錶上，您只需長按主畫面，直到畫面縮小，然後向右滑動以選擇另一個畫面：
+在 [安裝 **AAPS** 到你的手錶後](../WearOS/WearOsSmartwatch.md)，你將自動能選擇你喜歡的錶盤，這些都是專為 **AAPS** 設計的錶盤。 在大多數手錶上，你只需長按主畫面，直到畫面縮小，然後向右滑動以選擇另一個畫面：
 
 ![圖像](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
-這些是嵌入在 **AAPS** 中的基本畫面，還有[更多的錶盤](#WearOS_changing-to-AAPS-watchface)，並且您也可以使用[複雜功能](#Watchfaces-complications)。
+這些是嵌入在 **AAPS** 中的基本畫面，還有[更多的錶盤](#WearOS_changing-to-AAPS-watchface)，並且你也可以使用[複雜功能](#Watchfaces-complications)。
 
 ### 如何在日常操作中使用 Wear OS 手錶？
 
@@ -117,7 +117,7 @@
 ## Fitbit
 
 ```{Warning}
-Google 正在逐步淘汰 Fitbit 產品。 自訂錶盤在歐洲不再可用（您需要使用 VPN）。 現在不建議購買 Fitbit。
+Google 正在逐步淘汰 Fitbit 產品。 自訂錶盤在歐洲不再可用（你需要使用 VPN）。 現在不建議購買 Fitbit。
 ```
 
 **AAPS** 支援將資料傳送到[Sentinel](http://ryanwchen.com/sentinel.html) 錶盤。
@@ -170,7 +170,7 @@ Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）�
 
 這些是獨特的技術產品，可以直接從 Dexcom 發射器接收血糖資料。 Dexcom G6/G7 發射器實際上是透過兩個獨立的頻道傳播當前的血糖資料，分別是電話頻道和醫療頻道，這一點並不為廣泛知曉。 Bluejay 手錶可以設置為接收任一頻道上的血糖資料，因此如果 **AAPS** 使用電話頻道，則 Bluejay 手錶可以使用醫療頻道。
 
-其主要優點是他目前是唯一完全獨立於手機和循環系統的手錶。 例如，如果您在海灘或水上樂園中將幫浦和 **AAPS** 手機斷開連線，並且超出 **AAPS** 手機的範圍，您仍然可以將 Dexcom 的讀數直接發送到 Bluejay 手錶。
+其主要優點是他目前是唯一完全獨立於手機和循環系統的手錶。 例如，如果你在海灘或水上樂園中將幫浦和 **AAPS** 手機斷開連線，並且超出 **AAPS** 手機的範圍，你仍然可以將 Dexcom 的讀數直接發送到 Bluejay 手錶。
 
 報告的缺點包括它不一定每 5 分鐘都能讀取一個資料，且電池不可更換。 Bluejay GTS 手錶運行的是修改過的 xDrip+ 軟體，而 Bluejay U1 則運行完整的 xDrip+。
 
