@@ -3,6 +3,7 @@
 ## January 2025
 
 - Quick wizard [long press feature](#Preferences-quick-wizard) @emilise
+- [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page rewritten @emilise
 
 ## Dezember 2024
 
