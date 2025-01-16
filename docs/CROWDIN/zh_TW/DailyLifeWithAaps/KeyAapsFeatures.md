@@ -105,7 +105,7 @@ OpenAPS SMB 的設定如下。
 
 ### 啟用動態靈敏度
 
-這是[動態 ISF](../DailyLifeWithAaps/DynamicISF.md) 功能。 當啟用時，將提供新的設定。 設定說明請參見[動態 ISF](../DailyLifeWithAaps/DynamicISF.md)頁面。
+這是[動態 ISF](../DailyLifeWithAaps/DynamicISF.md) 功能。 當啟用時，將提供新的設定。 Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
 
 #### 高臨時目標提升敏感度
 
