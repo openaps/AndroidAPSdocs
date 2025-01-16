@@ -68,14 +68,14 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 ### 如何升級
 
-* [需要Android Studio版本叫"Ladybug功能更新"](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高版本來建立這個版本。 **這與一般的"Ladybug"不同。**如果你已經建立了3.3.x版本，你需要再次升級Android Studio。
+* [需要Android Studio版本叫「Ladybug功能更新」](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高版本來建立這個版本。 **這與一般的「Ladybug」不同。**如果你已經建立了3.3.x版本，你需要再次升級Android Studio。
 
 ### 錯誤修正
 
 * Dash：在Android 15+上使用綁定。
 * 恢復首頁總覽中的Dexcom按鈕。
 * Equil：允許移除無效的幫浦。
-* 當DynISF為零時發出警告。
+* Warn when DynISF Adjustment Factor is zero
 * NSCv3：解決在時間略有不同的手機上的WebSocket通訊問題。
 * SMS命令：修正一次性密碼。 **可能需要新的[身份驗證器設置](#sms-commands-authenticator-setup)。**
 * 修復某些偏好設定無法再編輯的問題。
@@ -116,9 +116,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 * **[動態 ISF](../DailyLifeWithAaps/DynamicISF.md)** 功能不再是獨立的外掛，而是現在作為 [OpenAPS SMB](#Config-Builder-aps) 外掛的一個選項，並伴隨一些行為上的變更：
   * 在動態敏感度強度方面，**動態 ISF** 現在會考慮 **設定檔切換** 和 **設定檔百分比** 的影響。
   * 將使用過去 24 小時的平均 **ISF** 計算，該數值將用於注射嚮導和 **COB** 的計算。 **設定檔中的 ISF** 值完全不會被使用（僅在歷史資料無法使用時作為備用）
-  * 提醒：如果你使用**DynamicISF**並已為**設定檔 %**設定了**自動化**與**血糖**有關：請關閉此功能。 因為這已經是動態敏感度演算法的一部分。
-  * *** 再次提醒：使用DynamicISF時，請關閉所有啟動與**血糖**相關的**自動化**，因為這樣有可能造成胰島素過量！ *****
-  * 請勿長時間使用超過 100% 的 **設定檔百分比** 增加值。 如果你的**設定檔**已有變更，請在「治療頁籤」中的**設定檔**切換，複製帶有% 的**設定檔**來建立新的設定檔。
+  * DynamicISF documentation page has been rewritten. Please read the important section [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf).
 * 為使用 FreeStyle Libre 2 和 Libre 3 的用戶[啟用「始終啟用 SMB」與「碳水後啟用 SMB」](#Open-APS-features-enable-smb-always)
   * 注意：需要最新版本的 xDrip+ 或 Juggluco。
 * 新增的 **自動化**觸發條件
@@ -470,7 +468,7 @@ v3 是新的協議。 更加安全和高效
 
 **請確保在更新至 2.7 後檢查並調整設置，如 [此處](../Maintenance/Update2_7.md) 所述。**
 
-你至少需要開始 [目標 11（在後續版本中為目標 10）](#objectives-objective10) 才能繼續使用 [自動化功能](../DailyLifeWithAaps/Automations.md)（所有之前的目標必須完成，否則無法開始目標 11）。 例如，如果你尚未完成 [目標 3](#objectives-objective3) 的考試，則在開始 [目標 11](#objectives-objective11) 之前，你必須先完成考試。 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
+你至少需要開始 [目標 11（在後續版本中為目標 10）](#objectives-objective10) 才能繼續使用 [自動化功能](../DailyLifeWithAaps/Automations.md)（所有之前的目標必須完成，否則無法開始目標 11）。 If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11. 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
 
 ### 主要新功能
 
