@@ -8,10 +8,10 @@
 
 **AMA** = 進階餐食輔助。 一種演算法，允許 **AAPS** 在餐後注射胰島素後更積極地增加用戶的基礎胰島素。 進一步資訊 → Wiki - 「AMA」。
 
-**Adjustment Factor** = used within **DynamicISF** and is a value set within a user's **Preferences** between 1% and 300%. This acts as a multiplier on the **TDD** value.
+**調整參數** = 在**動態ISF**中使用，是用戶**偏好設定**中設定的值，範圍是1%到300%。 這作為**TDD**值的乘數。
 
-- increasing the **Adjustment Factor** value above 100 % makes **DynamicISF** more aggressive: the **ISF** values become smaller (i.e. more insulin required to decrease **BG** levels a small amount)
-- lowering the **Adjustment Factor** value under 100% makes **DynamicISF** less aggressive: the **ISF** values become larger (i.e. less insulin required to decrease **BG** levels a small amount).
+- 將**調整參數**的值提高到100%以上會使得**動態ISF**變得更積極：**ISF**值變得更小（即需要更多的胰島素來使**血糖**值下降少量）。
+- 將**調整參數**的值降低到100%以下會使得**動態ISF**變得不那麼具積極：**ISF**值變得更大（即需要更少的胰島素來使**血糖**值下降少量）。
 
 **Android Auto** = 一個系統，用於在車輛顯示螢幕中託管 Android 智慧型手機的某些功能，包括 **AAPS**。 進一步資訊 → Wiki - 「android auto」。
 
@@ -51,10 +51,10 @@
 
 **DST** = 夏令時間 Wiki DST。
 
-**Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s:
+**動態ISF** = 在**AAPS**中的一個功能，根據用戶的：
 
-- Total Daily Dose of insulin (**TDD**); and
-- current and predicted **BG** values.
+- 每日胰島素總量（**TDD**）；以及
+- 當前和預測的**血糖**值動態調整胰島素敏感度因子（**ISF**）。
 
 **eCarbs** = 延長碳水化合物。 碳水化合物分散在數小時內以適應蛋白質，並允許 **AAPS** 提供延長的胰島素注射。 進一步資訊 → Wiki - 「eCarbs」、「eCarbs use」。
 
