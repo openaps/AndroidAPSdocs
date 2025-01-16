@@ -303,6 +303,6 @@ Wear OS 手錶是非常耗電且又受限的裝置。 手錶機殼的尺寸限�
 
 ## 自己製作錶盤
 
-如果您想建立自己的手錶面，請遵循[這裡的指導](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md)。
+如果你想建立自己的手錶面，請遵循[這裡的指導](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md)。
 
 建立自訂錶盤後，你可以與其他人分享自己的**AAPS**自訂錶盤，將 zip 檔上傳至“ExchangeSiteCustomWatchfaces”資料夾，並透過 Pull Request 上傳到 Github。 在合併 Pull Request 時，文件團隊會提取 CustomWatchface.png 檔案，並在檔名前加上 Zip 檔案名稱作為前綴。
