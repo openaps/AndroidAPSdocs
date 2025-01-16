@@ -37,8 +37,8 @@ orphan: true
 
 ### Dexcom 傳感器
 
-#### 自己動手打造您的 Dexcom 應用程式
-當使用 [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) 時，你的血糖資料是平滑且一致的。 此外，您可以利用 Dexcom 的回彈平滑功能。 使用 SMBs 並沒有任何限制，因為噪音級別資料會與 AAPS 共享。
+#### 自己動手打造你的 Dexcom 應用程式
+當使用 [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) 時，你的血糖資料是平滑且一致的。 此外，你可以利用 Dexcom 的回彈平滑功能。 使用 SMBs 並沒有任何限制，因為噪音級別資料會與 AAPS 共享。
 
 (smoothing-xdrip-dexcom-g6)=
 #### xDrip+ 與 Dexcom G6 或 Dexcom ONE 配合使用
