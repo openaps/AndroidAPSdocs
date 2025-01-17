@@ -328,13 +328,17 @@ To configure additional graphs, check the boxes corresponding to the data you wa
 
 Если обнаружится более быстрое усвоение углеводов, чем ожидалось, будет подан инсулин, и это увеличит количество активного инсулина IOB (с учетом настроек безопасности).
 
-#### Чувствительность
+#### Sensitivity change
 
 Показывает чувствительность, обнаруженную алгоритмом [Autosens](#Open-APS-features-autosens).
 
 Чувствительность - это расчет чувствительности к инсулину в результате нагрузки, гормонов и т.д.
 
 Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. До достижения этой цели линия Autosens на диаграмме отображается только для информации.
+
+### Variable sensitivity
+
+Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
 
 (screen-heart-rate-steps)=
 
@@ -423,6 +427,8 @@ The insulin button can be used when the pump is suspended as well, i.e. to recor
 Быстрый ввод заранее заданного количества углеводов с предварительно настроенными параметрами расчета дозы.
 
 Детали настраиваются в [Настройках > Общее > БыстрыйБолюс настройки](#Preferences-quick-wizard).
+
+(aaps-screens-bolus-wizard)=
 
 ## Мастер Болюса
 

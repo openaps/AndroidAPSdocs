@@ -105,7 +105,7 @@ Ayrıca [SMB için OpenAPS dokümantasyonuna](https://openaps.readthedocs.io/en/
 
 ### Enable dynamic sensitivity
 
-This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page.
+This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
 
 #### Yüksek geçici hedefler duyarlılığı artırır
 

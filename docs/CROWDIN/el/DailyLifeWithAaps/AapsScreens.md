@@ -328,13 +328,17 @@ Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/
 
 If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings).
 
-#### Ευαισθησία
+#### Sensitivity change
 
 Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
 
 Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
 Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+
+### Variable sensitivity
+
+Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
 
 (screen-heart-rate-steps)=
 
@@ -423,6 +427,8 @@ Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
 Easily enter amount of carbs and set calculation basics.
 
 Details are set up in [Preferences > Overview > QuickWizard settings](#Preferences-quick-wizard).
+
+(aaps-screens-bolus-wizard)=
 
 ## Bolus Wizard
 

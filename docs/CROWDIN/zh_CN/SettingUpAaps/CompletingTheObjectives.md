@@ -233,16 +233,6 @@
 
 例如，如果您每天早上在上学/上班前都吃同样的早餐，您可以创建一个**自动化**，如“早餐前目标”，以在早餐前30分钟设置一个稍低的**临时目标**。 在这种情况下，你的条件可能包括“重复时间”，这包括选择一周中的特定几天（星期一、星期二、星期三、星期四、星期五）和特定时间（早上6:30）。 动作将包括“开始临时目标”，该目标的值低于平常，并持续30分钟。
 
-(objectives-objective11)=
-## 目标11：为日间使用启用额外功能，如动态敏感性插件（DynISF）。
-
-完成此 **目标** 的最短时间**：28天**。 这是一个强制性的等待时间。 在此时间段结束之前，无法继续进行下一个**目标**。
-
-- 确保**SMB**运行正常。
-- 阅读[此处](../DailyLifeWithAaps/DynamicISF.md) 关于 **动态 ISF** 的文档
-- 在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 和 [Discord](https://discord.gg/4fQUWHZ4Mw) 群组中搜索关于 **Dynamic ISF** 的讨论，并阅读其他用户的经验和建议。
-- 启用 **DynamicISF 插件**，并根据您身体的独特性确定适当的校准。 出于安全考虑，建议从低于100%的值开始。
-
 (CompletingTheObjectives-go-back-in-objectives)=
 ## 回顾目标
 

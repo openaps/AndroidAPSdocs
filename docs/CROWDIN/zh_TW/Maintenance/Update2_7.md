@@ -21,8 +21,8 @@ orphan: true
 ## 完成考試
 
 - AAPS 2.7 包含新的目標 11（在以後的版本中重新編號為目標 10！）針對[自動化](../DailyLifeWithAaps/Automations.md).
-- 你必須完成考試（[目標 3 和 4](#objectives-objective3)），才能完成 [目標 11](#objectives-objective11)。
-- 例如，如果你尚未完成 [目標 3](#objectives-objective3) 的考試，則在開始 [目標 11](#objectives-objective11) 之前，你必須先完成考試。
+- You have to finish exam ([objective 3 and 4](#objectives-objective3)) in order to complete objective 11.
+- If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11.
 - 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
 
 ## 設置主密碼

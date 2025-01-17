@@ -328,13 +328,17 @@ Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/
 
 S'il détecte une absorption plus élevée de glucides que prévu, de l'insuline sera injectée, ce qui augmentera l'IA (plus ou moins, selon vos paramètres de sécurité).
 
-#### Sensibilité
+#### Sensitivity change
 
 Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
 
 C'est le résultat d'un calcul de la sensibilité à l'insuline suite à de l'exercice, aux hormones, etc.
 
 Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+
+### Variable sensitivity
+
+Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
 
 (screen-heart-rate-steps)=
 
@@ -423,6 +427,8 @@ Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
 Entrez facilement la quantité de glucides et définissez les paramètres de calcul.
 
 Details are set up in [Preferences > Overview > QuickWizard settings](#Preferences-quick-wizard).
+
+(aaps-screens-bolus-wizard)=
 
 ## Assistant bolus
 

@@ -235,16 +235,6 @@ Du kannst ein wenig damit herumexperimentieren sinnvollere **Automationen** zu e
 
 Wenn Du beispielsweise jeden Morgen vor der Arbeit/Schule das Gleiche isst, kannst Du eine **Automation** (z.B. mit dem Namen „Ziel vor dem Frühstück“) erstellen, die ein etwas niedrigeres **Temporäres Ziel** 30 Minuten vor dem Frühstück setzt. In einem solchen Fall besteht Deine Bedingung wahrscheinlich aus der Auswahl bestimmter Wochentage (Montag, Dienstag, Mittwoch, Donnerstag, Freitag) und einer bestimmten Uhrzeit (06:30 Uhr). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
 
-(objectives-objective11)=
-## Objective 11: Enabling additional features for daytime use, such as Dynamic Sensitivity plugin (DynISF).
-
-Das **Ziel** kann frühestens nach **28 Tagen** abgeschlossen werden. Das ist eine Pflichtwartezeit. Das nächste **Ziel** kann erst dann gestartet werden, wenn die Wartezeit abgelaufen ist.
-
-- Stelle sicher, dass **SMB** wie gewünscht funktionieren
-- Lies im Abschnitt „**Dynamischen ISF**“ in der Dokumention [hier](../DailyLifeWithAaps/DynamicISF.md) nach
-- Suche in den [Facebook](https://www.facebook.com/groups/AndroidAPSUsers)- und [Discord](https://discord.gg/4fQUWHZ4Mw)-Gruppen nach Beiträgen zu **Dynamic ISF** und lies über die Erfahrungen und Empfehlungen der Anderen.
-- Aktiviere das **DynamicISF-Modul** und passe es auf den individuellen Bedarf Deines Körpers an. Aus Sicherheitsgründen ist es ratsam, mit einem Wert unter 100% zu beginnen.
-
 (CompletingTheObjectives-go-back-in-objectives)=
 ## Objective (Ziel) neu starten
 

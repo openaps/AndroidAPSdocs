@@ -105,7 +105,7 @@ Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA
 
 ### Enable dynamic sensitivity
 
-This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page.
+This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
 
 #### Высокая врем. цель temptarget повышает чувствительность
 
