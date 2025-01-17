@@ -3,7 +3,7 @@
 ## 2025年1月
 
 - 快速嚮導[長按功能](#Preferences-quick-wizard) @emilise
-- [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page rewritten @emilise
+- [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) 頁面改寫 @emilise
 
 ## 2024年12月
 
