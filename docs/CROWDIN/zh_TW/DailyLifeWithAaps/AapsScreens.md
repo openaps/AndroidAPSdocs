@@ -338,7 +338,7 @@ Libre 使用者的特殊注意事項：
 
 ### 可變敏感度
 
-Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+顯示由 [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) 計算出的敏感度。 僅在您使用此功能時填入。
 
 (screen-heart-rate-steps)=
 

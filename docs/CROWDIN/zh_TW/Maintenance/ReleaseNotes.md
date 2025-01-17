@@ -75,7 +75,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 * Dash：在Android 15+上使用綁定。
 * 恢復首頁總覽中的Dexcom按鈕。
 * Equil：允許移除無效的幫浦。
-* Warn when DynISF Adjustment Factor is zero
+* 當 DynISF 調整因子為零時發出警告
 * NSCv3：解決在時間略有不同的手機上的WebSocket通訊問題。
 * SMS命令：修正一次性密碼。 **可能需要新的[身份驗證器設置](#sms-commands-authenticator-setup)。**
 * 修復某些偏好設定無法再編輯的問題。
@@ -116,7 +116,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 * **[動態 ISF](../DailyLifeWithAaps/DynamicISF.md)** 功能不再是獨立的外掛，而是現在作為 [OpenAPS SMB](#Config-Builder-aps) 外掛的一個選項，並伴隨一些行為上的變更：
   * 在動態敏感度強度方面，**動態 ISF** 現在會考慮 **設定檔切換** 和 **設定檔百分比** 的影響。
   * 將使用過去 24 小時的平均 **ISF** 計算，該數值將用於注射嚮導和 **COB** 的計算。 **設定檔中的 ISF** 值完全不會被使用（僅在歷史資料無法使用時作為備用）
-  * DynamicISF documentation page has been rewritten. Please read the important section [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf).
+  * DynamicISF 文件頁面已重新編寫。 請閱讀重要部分 [啟動 Dynamic ISF 時需考慮的事項](#dyn-isf-things-to-consider-when-activating-dynamicisf)。
 * 為使用 FreeStyle Libre 2 和 Libre 3 的用戶[啟用「始終啟用 SMB」與「碳水後啟用 SMB」](#Open-APS-features-enable-smb-always)
   * 注意：需要最新版本的 xDrip+ 或 Juggluco。
 * 新增的 **自動化**觸發條件
@@ -468,7 +468,7 @@ v3 是新的協議。 更加安全和高效
 
 **請確保在更新至 2.7 後檢查並調整設置，如 [此處](../Maintenance/Update2_7.md) 所述。**
 
-你至少需要開始 [目標 11（在後續版本中為目標 10）](#objectives-objective10) 才能繼續使用 [自動化功能](../DailyLifeWithAaps/Automations.md)（所有之前的目標必須完成，否則無法開始目標 11）。 If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11. 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
+你至少需要開始 [目標 11（在後續版本中為目標 10）](#objectives-objective10) 才能繼續使用 [自動化功能](../DailyLifeWithAaps/Automations.md)（所有之前的目標必須完成，否則無法開始目標 11）。 例如，如果您尚未完成 [目標 3](#objectives-objective3) 的考試，則必須先完成考試才能開始目標 11。 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
 
 ### 主要新功能
 

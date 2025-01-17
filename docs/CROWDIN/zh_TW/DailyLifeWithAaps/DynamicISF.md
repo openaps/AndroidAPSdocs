@@ -1,137 +1,137 @@
 (Open-APS-features-DynamicISF)=
-# Dynamic ISF (DynISF)
+# 動態 ISF (DynISF)
 
-Up until now, with **AMA** and **SMB**, **ISF** was defined in the **Profile** and was static for each defined period in the day. But in reality, a person’s **ISF** is not that static and varies depending on their **BG** level: when at a high BG level, the user will need more insulin to bring their **BG** down 50mg/dL / 3mmol/L than compared to a lower  **BG**. [Autosens](#Open-APS-features-autosens) was the first algorithm to try and address this issue, by adjusting **ISF** outside of mealtimes.
+到目前為止，使用 **AMA** 和 **SMB**，**ISF** 在 **個人設置** 中定義，並且在一天中的每個定義時間段內是靜態的。 但實際上，一個人的 **ISF** 並不是那麼靜態，而是根據他們的 **血糖** 水平而變化：當 **血糖** 水平很高時，使用者需要更多的胰島素來將其 **血糖** 降低 50mg/dL / 3mmol/L，這比在較低的 **血糖** 時更需要。 [Autosens](#Open-APS-features-autosens) 是第一個嘗試解決此問題的演算法，通過在用餐時間以外調整 **ISF**。
 
-**Dynamic ISF** (also called **DynISF**) serves the same purpose but is more advanced as it can be used at all times. It is recommended only for advanced users that have a good handle on their **AAPS**’ controls and monitoring. Read the [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf) below before trying it out.
+**Dynamic ISF**（也稱為 **DynISF**）具有相同的目的，但更為先進，因為它可以在任何時間使用。 建議僅供具有良好控管和監控 **AAPS** 的進階使用者使用。 在嘗試之前，請閱讀以下 [啟動 Dynamic ISF 時需考慮的事項](#dyn-isf-things-to-consider-when-activating-dynamicisf)。
 
 ```{admonition} CAUTION - Automations or Profile Percentage change
 :class: warning
 
-**Automations** should always be used with care. This is particularly so with **Dynamic ISF**.
+**自動化** 應始終小心使用。 這在使用 **Dynamic ISF** 時尤其如此。
 
-When using **Dynamic ISF**, disable any temporary **Profile** change as an **Automation** rule, because it would cause **Dynamic ISF** to be overly aggressive in correction bolusing and result in hypoglycemia. This is the exact purpose of **Dynamic ISF** and so there is no need for **AAPS** to be told to provide additional insulin by way of Automation in the event of high **BGs**.
+使用 **Dynamic ISF** 時，請停用任何臨時 **個人設置** 更改作為 **自動化** 規則，因為這將導致 **Dynamic ISF** 在注射修正時過於激進，導致低血糖。 這正是 **Dynamic ISF** 的目的，因此在高 **血糖** 的情況下無需通過自動化告訴 **AAPS** 提供額外的胰島素。
 
 ```
 
-To use **Dynamic ISF**, **AAPS'** database requires a minimum of 7 days of the user's **AAPS** data.
+使用 **Dynamic ISF** 時，**AAPS'** 資料庫需要至少 7 天的使用者 **AAPS** 資料。
 
-## What does Dynamic ISF do ?
+## Dynamic ISF 的功能是什麼？
 
-**Dynamic ISF** adapts the insulin sensitivity factor (**ISF**) dynamically based on the user's:
+**Dynamic ISF** 根據使用者的以下因素動態調整胰島素敏感度因子（**ISF**）：
 
 - 每日胰島素總量（**TDD**）；以及
 - 目前和預測的血糖值。
 
-When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation  of the app).
+使用 **Dynamic ISF** 時，**個人設置** 中輸入的 **ISF** 值不再使用，除非在 **AAPS** 資料庫中沒有足夠的 TDD 資料作為後備（例如 *即* 應用的全新重新安裝）。
 
-**SMB/AMA** - an example of a user's **Profile** with static **ISF** as set by the user and utilised by **SMB** and **AMA**.
+**SMB/AMA** - 使用者的 **個人設置** 示例，其中的靜態 **ISF** 由使用者設置，並由 **SMB** 和 **AMA** 使用。
 
 ![靜態 ISF](../images/DynamicISF/DynISF1.png)
 
-**Dynamic ISF** - an example of a user's **ISF** subject to change as determined by **Dynamic ISF**.
+**Dynamic ISF** - 使用者的 **ISF** 的示例，會根據 **Dynamic ISF** 的規定而變化。
 
 ![實作使用上述方程計算當前<strong x-id="1">ISF</strong>，並在 oref1 預測中用於<strong x-id="1">體內胰島素</strong>、<strong x-id="1">ZT</strong> 和 <strong x-id="1">UAM</strong>。](../images/DynamicISF/DynISF2.png)
 
-The section circled in red shows: `profile ISF` -> `ISF as calculated by DynISF`. <br/> Taping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+紅色圈起的部分顯示： `設定檔 ISF` -> `根據 DynISF 計算的 ISF`。 <br/> 點擊此部分顯示對話框，提供更多資訊，例如計算器和碳水化合物吸收所使用的 **ISF**（請參見 [ISF 的其他用途](#dynisf-other-usages-of-isf)）。
 
-The **DynISF** value can also be shown in an additional graph, enabling “Variable sensitivity” data. It shows as a white line (see red arrow on the image above).
+**DynISF** 值也可以在附加圖表中顯示，以提供“可變敏感度”的資料。 它顯示為白色線條（請參見上圖中的紅色箭頭）。
 
-## How is Dynamic ISF calculated ?
+## Dynamic ISF 是如何計算的？
 
-**Dynamic ISF** uses Chris Wilson’s model to determine **ISF** instead of the user's static **ISF** value as set within the **Profile**. A detailed explanation can be found here: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
+**Dynamic ISF** 使用 Chris Wilson 的模型來確定**ISF**，而不是使用者在**個人設置** 中設定的靜態**ISF** 值。 詳細解釋可以在此找到： [Chris Wilson 談論 Loop 和 Learn 的胰島素敏感度（修正因子），2022 年 2 月 6 日](https://www.youtube.com/watch?v=oL49FhOts3c)。
 
-The **Dynamic ISF** equation implemented is: `ISF = 1800 / ((TDD * DynISF Adjust Factor) * Ln (( current BG / insulin divisor) + 1 ))`
+實施的**Dynamic ISF**方程式為： `ISF = 1800 / ((TDD * DynISF 調整因子) * Ln (( 當前血糖 / 胰島素除數) + 1 ))`
 
-The variables used in this equation are detailed below.<br/> Note : `Ln` stands for natural logarithm, a mathematical function.
+此方程中使用的變數詳細說明如下。<br/> 注意 : `Ln` 代表自然對數，一種數學函數。
 
-The implementation uses the above equation to calculate current **ISF** and in the oref1 [predictions for **IOB**, **ZT** (zero-temping) and **UAM**](#aaps-screens-prediction-lines). It is also used for **COB** and in the bolus wizard (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+該實施使用上述方程計算當前**ISF**，並在 oref1 [對於**IOB**、**ZT**（零溫度）以及**UAM**](#aaps-screens-prediction-lines)的預測中使用。 它也用於**COB**，以及在注射嚮導中（請參見[ISF的其他用途](#dynisf-other-usages-of-isf)）。
 
 ### TDD（每日總胰島素劑量）
 TDD 將使用以下數值的組合：
-1.  7 day's average **TDD**;
+1.  7天平均**TDD**；
 2.  前一天的**TDD**; 和
 3.  最近八（8）小時的胰島素使用的加權平均值，推算為 24 小時。
 
-The **TDD** used in the above equation is weighted one third of each of the above values.
+上面方程中使用的**TDD**是上述每個值的三分之一加權值。
 
 ### 動態胰島素敏感因子調整係數
 
-This is set within the user’s **Preferences** and is used to make **Dynamic ISF** more or less aggressive. See the [Preferences](#dyn-isf-preferences) section below.
+這是在使用者的**偏好設定**中設置的，用以使**Dynamic ISF** 更加或 least aggressively. 請參見下文的[偏好設定](#dyn-isf-preferences)部分。
 
 ### 胰島素除數
 胰島素除數取決於所使用胰島素的峰值，且與峰值時間成反比。 對於 Lyumjev，該值為 75；對於 Fiasp 為 65；對於普通速效胰島素則為 55。
 
-### ISF based on predicted BG for dosing decisions
+### 根據預測的血糖進行劑量決策的ISF
 
-Dynamic sensitivity is computed with the **current BG** value, and displayed as your current ISF in **AAPS**. But when doing dosing calculations, the oref1 algorithm computes and uses **Future ISF** instead.
+動態敏感度是根據**當前血糖** 值計算的，並顯示為您當前在**AAPS**中的**ISF**。 但是在進行劑量計算時，oref1 演算法計算並使用 **未來 ISF**。
 
-This is done to prevent dosing too much insulin when **BG** is low or predicted to go low.
+這樣做是為了防止在 **血糖** 較低或預測會下降時，劑量過多的胰島素。
 
-**Future ISF** uses the same formula as described above, except that it may use **minimum predicted BG** instead of **current BG**. **Minimum predicted BG**, [as calculated in oref1](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), is the minimum value your BG is predicted to go during all the course of the predictions.
+**未來 ISF** 使用與上面描述的相同公式，不同的是，它可能使用 **最低預測血糖** 來替代 **目前血糖**。 **最低預測血糖**，[如 oref1 計算](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html)，是預測所有預測過程中血糖 將下降的最小值。
 
-* If the current **BG** is above target  <br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
-* If eventual **BG** is above target and glucose levels are increasing,<br/>  
-  **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
-* Otherwise:<br/>BG is used in the formula as follows: `minimum predicted BG`.
+* 如果目前 **血糖** 高於目標<br/> **且** 如果 **血糖** 水平穩定，在 +/- 3 mg/dL 內：<br/>血糖在公式中的使用如下：`平均值（預測最低血糖，當前血糖）`。
+* 如果最終 **血糖** 高於目標，且葡萄糖水平正在上升，<br/>  
+  **或** 最終 **血糖** 高於目前 **血糖**：<br/>血糖在公式中的使用如下：`目前血糖`。
+* 否則：<br/>血糖在公式中的使用如下：`最低預測血糖`。
 
-For a simplified explanation, refer to the screenshot below, which illustrates the above situation. Orange dots use **predicted BG**, purple dots use **average(predicted BG, current BG)**, and blue dots use **current BG**.
+想要更簡單的解釋，請參見下面的截圖，該截圖說明了上述情況。 橙色點使用 **預測血糖**，紫色點使用 **平均值（預測血糖，目前血糖）**，藍色點使用 **目前血糖**。
 
 ![DynISF_BGValue.png](../images/DynamicISF/DynISF_BGValue.png)
 
 (dynisf-other-usages-of-isf)=
-## Other usages of ISF
+## ISF 的其他用途
 
-### ISF and COB absorption
+### ISF 和 COB 吸收
 
-As described in the [COB Calculation](../DailyLifeWithAaps/CobCalculation.md) page, usually, the absorption of COB is calculated with this formula :   
+如 [COB 計算](../DailyLifeWithAaps/CobCalculation.md) 頁面所述，通常，COB 的吸收使用以下公式計算：   
 `absorbed_carbs = deviation * ic / isf`  
-When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dynamic ISF values.
+在使用 **動態 ISF** 時，這裡使用的 **ISF** 是過去 24 小時動態 ISF 的平均值。
 
-### ISF in Bolus Wizard
+### 在劑量嚮導中的 ISF
 
-When using the [Bolus wizard](#aaps-screens-bolus-wizard), **ISF** is used if **BG** is above target to add a correction.
+當使用 [劑量嚮導](#aaps-screens-bolus-wizard) 時，如果 **血糖** 高於目標，則會使用 **ISF** 來添加校正。
 
-When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dynamic ISF values.
+當使用 **動態 ISF** 時，這裡使用的 **ISF** 是過去 24 小時動態 ISF 的平均值。
 
 (dyn-isf-preferences)=
 ## 偏好設定
 
-在 [偏好設定 > OpenAPS SMB](#Preferences-openaps-smb-settings) 中勾選 **啟用動態敏感度** 以啟用。 New settings become available once selected.
+在 [偏好設定 > OpenAPS SMB](#Preferences-openaps-smb-settings) 中勾選 **啟用動態敏感度** 以啟用。 選擇後會提供新的設定。
 
 ![動態 ISF 設定](../images/Pref2020_DynISF.png)
 
 (dyn-isf-adjustment-factor)=
 ### 動態胰島素敏感因子調整係數
-**Dynamic ISF** works based on a single rule which is supposed to apply to everyone, implying that people having the same **TDD** would have the same sensitivity. As each user has their own personal sensitivity, the **Adjustment Factor** allows the user to define whether they are more or less sensitive to insulin than the "standard" person.
+**動態 ISF** 基於一條應適用於每個人的單一規則運作，這意味著具有相同 **TDD** 的人將具有相同的敏感性。 由於每個用戶都有其個人敏感性，因此 **調整因子** 允許用戶定義他們對胰島素的敏感性是比“標準”人更高還是更低。
 
-The **Adjustment Factor** is a value between 1% and 300%. 這作為**TDD**值的乘數。
+**調整因子** 是一個介於 1% 和 300% 之間的值。 這作為**TDD**值的乘數。
 
-* Increasing this value above 100 % makes **DynISF** more aggressive: the **ISF** values become *smaller* (_i.e._ more insulin required to decrease **BG** levels a small amount)
-* Lowering this value under 100% makes **DynISF** less aggressive: the **ISF** values become larger (_i.e._ less insulin required to decrease **BG** levels a small amount).
+* 將該值提高到 100% 以上使 **動態 ISF** 更積極：**ISF** 值變得 *更小* (_即_ 需要更多的胰島素來略微降低 **血糖** 水平)
+* 將該值降低到 100% 以下使 **動態 ISF** 較不積極：**ISF** 值變得更大 (_即_ 需要更少的胰島素來略微降低 **血糖** 水平)。
 
-The **Adjustment Factor** is also altered when activating a [**Profile Switch** with percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). A lower **Profile Percentage** will lower the **Adjustment Factor**, and vice versa in respect of higher **Profile Percentage**.
+當啟用 [**百分比設定檔切換**](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) 時，**調整因子** 也會改變。 較低的 **設定檔百分比** 將降低 **調整因子**，反之亦然，較高的 **設定檔百分比** 則會提高 **調整因子**。
 
-For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned , the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
+例如，如果你的 **調整因子** 是 80%，並且 **設定檔切換** 到 80% 被啟動，則最終 **調整因子** 將為 `0.8*0.8=0.64`。
 
-This means that, when using **DynISF**, you can use **Profile Percentage** to temporarily fine tune your sensitivity manually. This can be useful for physical activity (lower percentage), illness (higher percentage), etc.
+這意味著，當使用 **動態 ISF** 時，你可以使用 **設定檔百分比** 來手動暫時微調你的敏感性。 這對於體能活動（較低百分比）、感冒（較高百分比）等情況將會很有用。
 
 ### 低於此血糖數值時，會啟動低血糖暫停功能
 
-**BG** value below which insulin is suspended. Default value uses the standard target model. A user can set this value between 60mg/dl (3.3mmol/l) and 100mg/dl(5.5mmol/l). Values below 65/3.6 result in use of the default model.
+**血糖** 值低於此值時會暫停胰島素。 預設值使用標準目標模型。 用戶可以將此值設定在 60mg/dl (3.3mmol/l) 到 100mg/dl(5.5mmol/l) 之間。 低於 65/3.6 的值會使用預設模型。
 
 ### 啟用基於 TDD 的敏感性比率來調整基礎胰島素和血糖目標
 
 此設定取代 Autosens，並使用過去 24 小時**TDD** / 7D **TDD** 作為增加和減少基礎率的依據，與標準 Autosens 的做法相同。 若選項中啟用根據敏感性調整目標，則此計算值也會用來調整目標值。 與 Autosens 不同，此選項不調整**ISF**值。
 
 (dyn-isf-things-to-consider-when-activating-dynamicisf)=
-## Things to consider when activating Dynamic ISF
+## 啟用動態 ISF 時需考慮的事項
 
-* **動態 ISF** 只建議給**AAPS** 控制及監控有良好掌握的進階使用者。 Users should ideally have attained good control with **SMB** before moving onto **Dynamic ISF**.
-* As mentioned above, turn off all [**Automations**](../DailyLifeWithAaps/Automations.md) which activate a **Profile Percentage** in relation to **BG** because it will be too aggressive and may over deliver in insulin! This is already part of the **Dynamic ISF** algorithm.
-* [Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) is taken into account for the Dynamic ISF calculation (see [Dynamic ISF Adjustment Factor](#dyn-isf-adjustment-factor) above). It is bad practice to use a **Profile Percentage** other than 100% for a long time. If you determine that your **Profile** has changed, create a new **Profile** with your revised values in order to replicate the **Profile** with a specific percentage.
-* **Dynamic ISF** may not work for everyone. Specifically, you may see unexpected results if one of these situations apply to you:
-  * Variable lifestyle (inconsistent eating or physical activity patterns)
-  * Inconsistent TDD or sensitivity from day to day.
-* There is no precise guide to set the initial value of the **Adjustment Factor**. However, as a starting point: assuming your **Profile** values are correct, when you are in range and **BG** levels are flat, the **DynISF** value should be about the same as the one you had in your **Profile** before.<br/>If you see that **Dynamic ISF** is too aggressive, lower the **Adjustment Factor**, and vice-versa.
-* Even though **DynISF** does not use **Profile ISF** at all, if you notice that your sensitivity is very different from what was previously stored in your **Profile**, you should consider keeping it up-to-date. This may be useful in case you loose your **AAPS** data (_i.e._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
+* **動態 ISF** 只建議給**AAPS** 控制及監控有良好掌握的進階使用者。 用戶在轉向 **動態 ISF** 之前，理想情況下應已經達到對 **SMB** 的良好控制。
+* 如上所提，請關閉所有會啟動與 **血糖** 相關的 [**自動化**](../DailyLifeWithAaps/Automations.md)，因為這將過於積極，可能會過度輸送胰島素！ 這已經是 **動態 ISF** 演算法的一部分。
+* [設定檔百分比](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) 將考慮在動態 ISF 計算中（請參見上面的 [動態 ISF 調整因子](#dyn-isf-adjustment-factor)）。 長期使用 100% 以外的 **設定檔百分比** 不是一個好的做法。 如果你發現你的 **設定檔** 已經改變，請建立一個新的 **設定檔**，以反映修訂後的數值來重新建立具有特定百分比的 **設定檔**。
+* **動態 ISF** 可能不適用於每個人。 具體而言，如果以下情況適用於你，你可能會看到意外的結果：
+  * 生活方式變化（飲食或身體活動模式不一致）
+  * 每日的 TDD 或敏感性不一致。
+* 沒有準確的指導來設定 **調整因子** 的初始值。 然而，作為起點：假設你的 **設定檔** 數值正確，當你處於範圍內且 **血糖** 水平穩定時，**動態 ISF** 值應該與你之前在 **設定檔** 中的值大致相同。<br/>如果你發現 **動態 ISF** 太積極，請降低 **調整因子**，反之亦然。
+* 儘管 **動態 ISF** 完全不使用 **設定檔 ISF**，如果你注意到你的敏感性與你之前存儲的 **設定檔** 上的數值相差很大，你應該考慮將其保持最新。 這在你遺失 **AAPS** 資料（例如：新手機、新版 **AAPS** 等）時可能會很有用，因為你的 **設定檔 ISF** 將在未來 7 天內作為備用使用。
