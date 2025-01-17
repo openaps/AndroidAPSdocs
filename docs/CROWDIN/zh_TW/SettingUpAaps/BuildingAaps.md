@@ -8,7 +8,7 @@
 
 
 
-(建置APK推薦的電腦規格)=
+(Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 ## 建置AAPS所需的電腦和軟體規格
 
 * 可能需要特定版本的 **[Android Studio](https://developer.android.com/studio/)** 來建立 apk。 見下表：
