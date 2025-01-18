@@ -107,6 +107,23 @@ If you receive a failure message like this one:
 
 Follow the instructions at [Gradle Resync](#gradle-resync).
 
+### Git Pull Failed - Please tell me who you are
+
+If you see this message, Git needs you to identify yourself.
+
+![Git identification](../images/studioTroubleshooting/164_Git_Identify.png)
+
+Open the terminal and type the following two commands, one after the other.
+
+```
+git config --global user.name "Your name here"
+git config --global user.email your.email@here.com
+```
+
+Your name needs to be written between quotation marks.
+
+![Git identification fix](../images/studioTroubleshooting/164_Git_Identify2.png)
+
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 (incompatible-gradle-jvm)=
@@ -114,6 +131,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
   If you experience the above error message, you need to download a correct JVM version before you can try rebuild again:
+
 1.  Check in the [requirement table](#Building-APK-recommended-specification-of-computer-for-building-apk-file) which JVM version you need for the **AAPS** version you are building, and make a note of it.
 
 2. Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
