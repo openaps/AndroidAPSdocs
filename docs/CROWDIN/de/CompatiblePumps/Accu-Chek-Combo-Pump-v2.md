@@ -96,7 +96,7 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
 ## Aktivierung des Treibers und Kopplung mit der Combo
 
-* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Wichtig**: Es ist auch der alte Treiber, genannt "Accu-Chek Combo (Ruffy)", in dieser Liste. Wähle diesen _nicht_ aus.
+* Wähle unter [Konfiguration > Pumpe](../SettingUpAaps/ConfigBuilder.md) die "Accu-Chek Combo" aus. **Wichtig**: Es ist auch der alte Treiber, genannt "Accu-Chek Combo (Ruffy)", in dieser Liste. Wähle diesen _nicht_ aus.
 
   ![Screenshot der Konfiguration Combo](../images/combo/combov2-config-builder.png)
 
@@ -110,9 +110,9 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
   ![Screenshot Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
+  ![Screenshot Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Screenshot Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
 
 * Wenn der 10-stellige PIN, der auf der Combo angezeigt wird, falsch eingegeben wurde, erscheint folgende Fehlermeldung: ![Screenshot Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
@@ -176,8 +176,8 @@ Diese Einstellungen sind für den Combotreiber verfügbar (Elemente sind von obe
 1. _Pumpe koppeln_: Dieser Button wird genutzt, um die Koppelung mit der Combo zu starten. Es ist deaktiviert, wenn bereits eine Pumpe gekoppelt ist.
 2. _Pumpe entkoppeln_: Hebt die Koppelung mit der Combo auf. Es ist das genaue Gegenteil zur ersten Option (1). Es ist deaktiviert, wenn noch keine Pumpe gekoppelt ist.
 3. _Sichtbarkeit (in Sekunden)_: Während des Koppelungsvorgangs macht der Treiber das Smartphone für die Pumpe sichtbar. Dies beinflusst die Dauer der Sichtbarkeit. Das Maximum (300 Sekunden = 5 Minuten) ist voreingestellt. Android erlaubt keine permanente Sichtbarkeit, sodass eine Dauer ausgewählt werden muss.
-4. _Ampullenwechsel automatisch erkennen und eintragen_: Vermerkt den Ampullenwechsel, der normalerweise händisch über den Tab AKTIONEN > Katheterwechsel > Insulinreservoir-Wechsel eingetragen wird. This is explained [in further detail below](#autodetecting-and-automatically-entering-battery-and-reservoir-changes).
-5. _Batteriewechsel automatisch erkennen und eintragen_: Vermerkt den Batteriewechsel, der normalerweise händisch auf dem AKTIONEN Tab über den Button 'Pumpenbatterie-Wechsel' eingetragen wird. This is explained [in further detail below](#autodetecting-and-automatically-entering-battery-and-reservoir-changes).
+4. _Ampullenwechsel automatisch erkennen und eintragen_: Vermerkt den Ampullenwechsel, der normalerweise händisch über den Tab AKTIONEN > Katheterwechsel > Insulinreservoir-Wechsel eingetragen wird. Dies wird [weiter unten](#autodetecting-and-automatically-entering-battery-and-reservoir-changes) genauer beschrieben.
+5. _Batteriewechsel automatisch erkennen und eintragen_: Vermerkt den Batteriewechsel, der normalerweise händisch auf dem AKTIONEN Tab über den Button 'Pumpenbatterie-Wechsel' eingetragen wird. Dies wird [weiter unten](#autodetecting-and-automatically-entering-battery-and-reservoir-changes) genauer beschrieben.
 6. _Aktiviere erweitertes Combo-Logging_: Dies erhöht die Anzahl der Log-Einträge durch den Treiber. **ACHTUNG**: Aktiviere diese Option nur, wenn Du von einem Entwickler oder einer Entwicklerin dazu aufgefordert wirst. Ansonsten kann dies die AAPS-Logs überfluten und sie unübersichtlich machen und den Nutzen reduzieren.
 
 Die meisten Benutzer nutzen nur die beiden ersten Elemente: die _Pumpe koppeln_ und _Pumpe entkoppeln_ Buttons.
