@@ -9,34 +9,34 @@ Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als
 * Aktualisiere so bald wie möglich auf die neueste **AAPS**-Version, nachdem sie verfügbar ist.
 * Sobald eine neue Version verfügbar ist, wird Dir in der **AAPS**-App ein Hinweis darüber angezeigt.
 * Wenn eine neue Version verfügbar ist, wird darüber auch auf Facebook informiert.
-* Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+* Nach der Veröffentlichung lies bitte die [Versionshinweise](ReleaseNotes.md) (Release Notes) genau durch, und kläre mögliche Fragen in der Community auf Facebook oder Discord, bevor Du mit dem Update weiter machst.
     
     ```{note}
-    In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+    Falls Du **AAPS** auf einem neuen Computer erstellen möchtest: Kopiere das Backup Deiner Keystore-Datei auf den neuen Computer. Folge dann dem [Prozess für die erstmalige **AAPS**-Erstellung](../SettingUpAaps/BuildingAaps.md) und nicht dieser Anleitung. Der einzige Unterschied besteht darin, dass Du anstelle einen neuen Keystore zu erstellen, den Keystore auswählst, den Du auf den neuen Computer kopiert hast.
     ```
 
 ## Übersicht zum Aktualisieren auf eine neue AAPS Version
 
-```{contents} Steps for updating to a new version of AAPS :depth: 1 :local: true
+```{contents} Schritte, um auf eine neue AAPS-Version zu aktualisieren :depth: 1 :local: true
 
-    <br />In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+    <br />Falls Probleme auftreten, schaue auf der eigenen Seite für [Fehlerbehebung des Android Studio](../GettingHelp/TroubleshootingAndroidStudio) nach einer Lösung.
     
-    ### Export your settings
+    ### Exportiere Deine Einstellungen
     
-    Export your settings from the existing **AAPS** version on your phone. Vielleicht brauchst Du sie nicht, aber sicher ist sicher.
+    Exportiere Deine Einstellungen aus der auf Deinem Smartphone existierenden **AAPS**-Version. Vielleicht brauchst Du sie nicht, aber sicher ist sicher.
     
-    See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+    Wenn Du nicht mehr genau weißt, wie das geht, lies es auf der Seite [Ex- & Importieren der Einstellungen](ExportImportSettings.md) nach.
     
-    ### Check your Android Studio version
+    ### Überprüfe Deine Android Studio Version
     
-    The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+    Die benötigte Minimalversion ist im Abschnitt [AAPS erstellen](#Building-APK-recommended-specification-of-computer-for-building-apk-file) beschrieben. Sollte Deine Version älter sein, [aktualisiere zuerst das Android Studio](#Building-APK-install-android-studio)!
     
     (Update-to-new-version-update-your-local-copy)=
-    ### Update your local copy
+    ### Aktualisiere Deine lokale Kopie
     
     ```{admonition} WARNING
     :class: warning
-    If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/building-AAPS), as this guide will not work for you!
+    Wenn Du von einer Version vor 2.8.x aktualisierst, erstelle - wie in der Anleitung beschrieben - einen [neuen Clone](../Installing-AndroidAPS/building-AAPS). Der hier beschriebene Weg wird für Dich nicht funktionieren!
     
 
 * Öffne Dein bestehendes AAPS-Projekt mit Android Studio. Möglicherweise musst Du Dein Projekt wählen. Klicke (doppelt) auf das AAPS-Projekt.
@@ -62,30 +62,30 @@ Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als
 * Warte ab, während der Download läuft. Du siehst dazu einen Hinweis in der Fußzeile. Eine Erfolgsmeldung wird angezeigt, so bald erfolgreich heruntergeladen wurde.
     
     ```{note}
-    The files that were updated may vary! Dies ist kein Hinweis auf einen Download-Fehler.
+    Die Anzahl der aktualisierten Dateien kann unterschiedlich sein! Dies ist kein Hinweis auf einen Download-Fehler.
     ```
     
     ![Android Studio - Pull erfolgreich](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Warte, bis es fertig ist.
+* Gradle Sync wird ausgeführt, um einige Abhängigkeiten herunterzuladen. Warte, bis es fertig ist.
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### JVM-Version prüfen
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+Diese Prüfung ist besonders dann notwendig, wenn Du bereits eine frühere **AAPS**-Version auf demselben Computer erstellt hast.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+Schaue im Abschnitt [AAPS erstellen](#Building-APK-recommended-specification-of-computer-for-building-apk-file) nach, welche JVM-Version zur **AAPS**-Version, die Du erstellen möchtest, passt. Um sicherzustellen, dass Du die korrekte JVM-Version verwendest, befolge die Schritte, die im Abschnitt [Incompatible Gradle JVM](#incompatible-gradle-jvm) beschriebenen sind.
 
 (Update-to-new-version-build-the-signed-apk)=
 
 ### Erstelle die signierte APK
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Dein Quellcode entspricht jetzt der zuletzt freigegebenen Version und alle Voraussetzungen sind geprüft. Es ist an der Zeit, die signierte APK wie im Abschnitt[Signierte AAPS APK erstellen](#Building-APK-generate-signed-apk) beschrieben zu erstellen (bauen).
 
 (Update-to-new-version-transfer-and-install)=
 
-### Transfer and install the apk
+### Übertrage und installiere die APK
 
 Du musst die APK-Datei auf Dein Smartphone übertragen, um sie dort installieren zu können.
 
@@ -104,7 +104,7 @@ Nachdem Du die neue APK-Datei installiert hast, kannst Du auf dem Smartphone die
 
 ![Installierte AAPS Version](../images/Update_VersionCheck.png)
 
-Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+Schaue in den [Release Notes](../Maintenance/ReleaseNotes.md) nach, ob es nach dem Update besondere Dinge zu beachten gibt.
 
 ## Problembehandlung
 
