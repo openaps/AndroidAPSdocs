@@ -24,7 +24,7 @@ Die Empfindlichkeit wird als gewichtetes Mittel der Schwankungen berechnet. Du k
 
 Die Sensitivität wird auf Basis der Daten der vergangenen 8 Stunden oder seit dem letzten Katheterwechsel berechnet, falls er weniger als 8 Stunden her ist Kohlenhydrate (falls noch nicht absorbiert) werden nach der in den Einstellungen festgelegten Zeit abgeschnitten. Nur der Oref1 Algorithmus unterstützt unannounced Meals (UAM). Das heißt, Zeiten mit erkannten UAM werden bei der Sensitivitätsberechnung nicht berücksichtigt. Wenn du also SMB mit UAM verwendest, dann musst du den Oref1 Algorithmus auswählen, damit es gut läuft. Für weitere Informationen lies die [OpenAPS Oref1 Dokumentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
 
-Oref1 is the recommended option : it is the only one that can detect UAM and work with [OpenAps SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Die empfohlene Option ist „Oref1“: Sie ist die einzige, die UAM erkennen und mit [OpenAps SMB](#Open-APS-features-super-micro-bolus-smb) (dem neuesten Algorithmus) funktioniert.
 
 ## Mehrere Mahlzeiten gleichzeitig
 
