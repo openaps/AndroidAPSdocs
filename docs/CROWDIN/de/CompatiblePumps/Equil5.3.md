@@ -4,22 +4,22 @@ orphan: true
 
 # Equil 5.3
 
-These instructions are for configuring the Equil insulin pump.
+Diese Anleitung führt Dich durch die Konfiguration der Equil-Insulinpumpe.
 
 ## Funktionalitäten bei der Nutzung mit AAPS
 
 §todo
 
 ## Hardware- und Software-Anforderungen
-* **Compatible Equil hardware**
+* **Kompatible Equil-Hardware**
 
 §todo
 
-* [Version 3.3.0.0](#version3300) or newer of AAPS
+* AAPS-[Version 3.3.0.0](#version3300) oder neuer
 
-### Select Equil pump
+### Equil-Insulinpumpe auswählen
 
-In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
+Wähle in [Konfiguration > Pumpe](#Config-Builder-pump), **Equil 5.3** aus.
 
 ### Einstellungen
 
@@ -27,7 +27,7 @@ In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
 
 ### Patch aktivieren
 
-Navigate to the [Equil Tab](#overview) and press **Pair Equil Patch Pump**.
+Navigiere zum [Equil-Reiter](#overview) und drücke **Kopple Equil Patch Pumpe**.
 
 ![overview.png](../images/Equil/overview.png)
 
