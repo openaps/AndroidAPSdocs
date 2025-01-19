@@ -270,27 +270,27 @@ Der Screenshot zeigt die detaillierten Auslöser der **Automatisierung**:
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
-# Automating Preference Settings Export
+# Automatischer Export der Einstellungen
 
-### Unattended Exports: scheduled (daily)
+### Täglicher automatischer Export der Einstellungen
 
-Screenshots detailing the Automation triggers:
+Screenshots, die die Auslöser für diese Automatisierung im Detail zeigen:
 
-1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+1) Bedingung: Wiederholungszeit = Mo, Di, Mi, Do, Fr um 8:00 Uhr 1) Aktion: Einstellungen exportieren (Für „Text in Behandlungen“ gib „Täglich“ ein)
 
-![Scheduled exports](../images/Automations/automation_settingsexport_scheduled_400px.png)
+![Geplante Exporte](../images/Automations/automation_settingsexport_scheduled_400px.png)
 
-Note: Export execution will be logged on Careportal
+Hinweis: Der Export wird im Careportal protokolliert
 
-### Unattended Exports: Pod Activation (patch pump only)
+### Automatischer Export der Einstellungen bei Pod-Aktivierung (nur für Patchpumpen)
 
-Screenshots detailing the Automation triggers:
+Screenshots, die die Auslöser für diese Automatisierung im Detail zeigen:
 
-1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+1) Bedingung: Pod-Aktivierung 1) Aktion: Export der Einstellungen (Als „Text in Behandlungen" gib "Pod-Aktivierung: Einstellungen exportieren" ein)
 
-![Export on Pod activation](../images/Automations/automation_settingsexport_podactivation_400px.png)
+![Bei Pod-Aktivierung exportieren](../images/Automations/automation_settingsexport_podactivation_400px.png)
 
-Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Preferences > Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+Hinweis: Der Export wird im Careportal protokolliert. Hinweis: Automatisierungen werden **nur dann** ausgeführt, wenn Du vorher einen manuellen Export der Einstellungen gemacht hast. Siehe [Einstellungen > Wartung](#preferences-maintenance-settings) zur richtigen Aktivierung des automatischen Exports der Einstellungen.
 
 
 # Automatisierungsprotokolle (Logs)
