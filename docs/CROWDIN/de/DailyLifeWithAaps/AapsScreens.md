@@ -164,8 +164,8 @@ Ein Symbol mit einem Kindergesicht oben rechts in diesem Abschnitt zeigt, dass D
 
 ![Abschnitt D](../images/Home2020_TBR.png)
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
+1. **Spritze**: Insulin an Bord (IOB) - Menge an aktivem Insulin im Körper  
+    Das Insulin on Board wäre Null, wenn nur Deine Standardbasalrate liefe und kein Insulin mehr aus einem früheren Bolus wirken würde.
     
     * IOB kann negativ sein, wenn zuvor die Basalrate reduziert worden ist.
     * Ein Klick auf das Symbol zeigt die Aufteilung von Bolus und Basal-Insulin.
@@ -174,9 +174,9 @@ Ein Symbol mit einem Kindergesicht oben rechts in diesem Abschnitt zeigt, dass D
 
 3. **Lila Linie**: current basal rate. Das Symbol verändert sich, um eine temporäre Basalrate zu zeigen (Standard ist 100%) 
     * Klicke auf das Icon um Details zur Basalrate und einer eventuellen temporären Basalrate (inkl. verbleibende Dauer) angezeigt zu bekommen.
-4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
-    * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
-    * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
+4. **Pfeile nach oben & unten**: zeigen den aktuellen [Autosens](#Open-APS-features-autosens)-Status bzw. den Status des [dynamischen ISF](#Open-APS-features-DynamicISF) (aktiviert oder deaktiviert) an. In diesem Abschnitt können mehrere Werte angezeigt werden: 
+    * AS: Autosens-Wert. Wird auch dann angezeigt, wenn Autosens deaktiviert ist (rein informatorisch). Wird auch angezeigt, wenn DynISF aktiviert ist und ohne Wirkung ist.
+    * Alg: Wert des dynamischen ISF (basierend auf TDD). Mehr Informationen dazu gibt es in den letzten Zeilen der [Dynamischer ISF (DynISF)](#Open-APS-features-DynamicISF)-Seite.
 
 (aaps-screens-carbs-required)=
 
@@ -222,7 +222,7 @@ Die Grafik zeigt Deinen Blutzucker (BZ), so wie er von Deinem Sensor (CGM) gemes
 
 Notizen, die auf der Registerkarte "Aktion" eingegeben werden, wie z. B. die Kalibrierungen nach Messung am Finger, die Kohlenhydrat Einträge sowie die Profilwechsel werden hier angezeigt.
 
-Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
+Nutze das Menü oben links im Diagramm oder drücke lange irgendwo im Diagramm, um den dargestellten Zeitraum zu ändern. Du kannst zwischen 6, 12, 18 oder 24 Stunden auswählen.
 
 Der grüne Bereich spiegelt den Zielbereich wider.
 
@@ -239,7 +239,7 @@ Im Hauptdiagramm kannst Du einige optionale Informationen anschalten:
 * Basal
 * Aktivität - Insulin Aktivitätskurve
 
-Um diese Informationen anzuzeigen, klicke auf der rechten Seite des Hauptdiagramms auf das Dreieck. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
+Um diese Informationen anzuzeigen, klicke auf der rechten Seite des Hauptdiagramms auf das Dreieck. Für das Haupt-Diagramm gibt es nur die vier Optionen oberhalb der Zeile "Diagramm 1 2 3 4".
 
 ![Einstellungen des Hauptdiagramms](../images/Home2020_MainGraphSetting.png)
 
@@ -291,19 +291,19 @@ Sie basiert auf dem erwarteten Rückgang des BZ gemäß aktivem Insulin. Weitere
 
 (AapsScreens-section-g-additional-graphs)=
 
-### Section G - Additional graphs
+### Abschnitt G - zusätzliche Diagramme
 
-Sie können bis zu vier zusätzliche Grafiken unterhalb der Hauptgrafik aktivieren. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+Sie können bis zu vier zusätzliche Grafiken unterhalb der Hauptgrafik aktivieren. Wenn [Einfacher Modus](#preferences-simple-mode) aktiviert ist, sind zusätzliche Diagramme voreingestellt und können nicht verändert werden. Wenn Du eine eigene Konfiguration in den zusätzlichen Diagrammen nutzen möchtest, deaktiviere zuerst den **Einfachen Modus**.
 
 Um die Einstellungen für weitere Diagramme zu öffnen, klicke auf der rechten Seite des [Hauptdiagramms](#section-f---main-graph) auf das Dreieck und scrolle nach unten.
 
 ![Einstellung weiterer Diagramme](../images/Home2020_AdditionalGraphSetting.png)
 
-To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
+Um zusätzliche Diagramme zu konfigurieren, aktiviere die zu den von Dir auf dem jeweiligen Diagramm gewünschten Daten gehörende Kontrollkästchen.
 
 Viele kommen mit der folgenden Konfiguration zusätzlicher Diagramme gut zurecht:
 
-* Graph 1 with IOB, COB, Sensitivity chnge
+* Diagramm 1 mit „Aktives Insulin“, „Aktive Kohlenhydrate“, „Sensitivität“
 * Diagramm 2 mit „Abweichungen“ und „Blutzuckerwirkung“.
 
 #### Gesamtinsulin
@@ -328,7 +328,7 @@ Der Abbau hängt davon ab, was der [Algorithmus anhand der Glukosewert-Abweichun
 
 Falls der Kohlenhydratabbau höher ausfällt als erwartet, wird Insulin abgegeben und dies erhöht Dein IOB (je nach Deinen Sicherheitseinstellungen mehr oder weniger).
 
-#### Sensitivity change
+#### Empfindlichkeitsänderung
 
 Zeigt die Empfindlichkeit (Sensitivität) an, die [Autosens](#Open-APS-features-autosens) erkannt hat.
 
@@ -336,15 +336,15 @@ Die Sensitivität ist die Berechnung der Insulinempfindlichkeit, die auf Grund v
 
 Hinweis: Du musst im [Ziel 8](#objectives-objective8) sein, um durch die Empfindlichkeitserkennung [Autosens](#Open-APS-features-autosens) die abzugebende Insulinmenge automatisch anpassen zu lassen. Vor dem Erreichen dieses Ziels wird die Linie in Deiner Diagramm nur zur Information angezeigt.
 
-### Variable sensitivity
+### Variable Empfindlichkeit
 
-Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+Zeigt die Empfindlichkeit an, so wie sie der [dynamische ISF](../DailyLifeWithAaps/DynamicISF.md) berechnet hat. Sie wird nur angezeigt, wenn diese Funktion genutzt wird.
 
 (screen-heart-rate-steps)=
 
-#### Heart rate & Steps
+#### Herzfrequenz & Schritte
 
-This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
+Diese Informationen sind möglicherweise dann verfügbar, wenn Du eine [Wear Smartwatch](../WearOS/WearOsSmartwatch.md) verwendest. Aktiviere sie in der **AAPS**-Wear-App und erteile die Berechtigung für den Zugriff auf die Gesundheitsdaten.
 
 #### Abweichungen
 
@@ -386,7 +386,7 @@ Wenn das Insulin nicht durch die Pumpe abgegeben werden soll, sondern Du die Ins
 
 Du kannst die Buttons benutzen, um schnell die Insulinmengen zu erhöhen. Die Schrittweite kann in den [Einstellungen > Übersicht > Schaltflächen](#Preferences-buttons) geändert werden.
 
-The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+Die Insulinschaltfläche kann auch verwendet werden, wenn die Pumpe getrennt ist, um z. B. Insulingaben mit einem Pen zu protokollieren. In diesem Fall wird die Kopfzeile gelb angezeigt und das Kontrollkästchen „Bolus wird nur aufgezeichnet (Die Pumpe gibt kein Insulin ab!)“ kann nicht deaktiviert werden.
 
 ![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
 
@@ -566,7 +566,7 @@ Wie die meisten Faustregeln gilt, dass dies nicht allgemeingültig ist. Hinweis:
 
 ![Insulinprofil](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). Diese Kurven variieren basierend auf der [DIA](#your-aaps-profile-duration-of-insulin-action) (Insulinwirkdauer) und dem zeitlichen Abstand zum Wirkmaximum.
+Hier wird das Wirkprofil des Insulins angezeigt, das Du in der [Konfiguration > Insulin](#Config-Builder-insulin) ausgewählt hast. Diese Kurven variieren basierend auf der [DIA](#your-aaps-profile-duration-of-insulin-action) (Insulinwirkdauer) und dem zeitlichen Abstand zum Wirkmaximum.
 
 Die **lila** Linie zeigt, wie viel Insulin seit der Injektion noch übrig ist (es baut sich mit der Zeit ab) und die **blaue** Linie zeigt, wie aktiv es ist.
 
@@ -702,13 +702,13 @@ Auf dieser Registerkarte werden alle Notizen und Alarme angezeigt, die von Night
 
 ## Historie
 
-Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl der Historie aufgerufen werden. It is not possible to put in the main menu through the Config Builder. Du kommst auch über eine Schaltfläche am unteren Rand des [Aktionen-Reiters](#action-tab) dort hin.
+Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl der Historie aufgerufen werden. Es kann nicht über die Konfiguration im Hauptmenü sichtbar gemacht werden. Du kommst auch über eine Schaltfläche am unteren Rand des [Aktionen-Reiters](#action-tab) dort hin.
 
 Zeigt die **AAPS**-Historie (d. h. die historischen Verläufe) an. Siehe dazu auch [Deine Daten reviewen > AAPS-Historie](../Maintenance/Reviewing.md).
 
 ## Statistiken
 
-Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl der Statistiken aufgerufen werden. It is not possible to put in the main menu through the Config Builder.
+Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl der Statistiken aufgerufen werden. Es kann nicht über die Konfiguration im Hauptmenü sichtbar gemacht werden.
 
 Stellt Dir Statistiken über „Time in Range“ (dt. Zeit im Zielbereich) und „Total Daily Dose“ (dt. täglicher Gesamtinsulinbedarf) zur Verfügung. Siehe dazu auch [Deine Daten reviewen > AAPS-Statistiken](#reviewing-statistics).
 
@@ -716,7 +716,7 @@ Stellt Dir Statistiken über „Time in Range“ (dt. Zeit im Zielbereich) und �
 
 ## Profile Helper
 
-Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl des Profil-Helfers aufgerufen werden. It is not possible to put in the main menu through the Config Builder. Der Profil-Helfer kann Dir dabei helfen:
+Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl des Profil-Helfers aufgerufen werden. Es kann nicht über die Konfiguration im Hauptmenü sichtbar gemacht werden. Der Profil-Helfer kann Dir dabei helfen:
 
 * [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
 * [vergleiche zwei Profile](#your-aaps-profile-compare-profiles)

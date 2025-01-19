@@ -10,7 +10,7 @@ Einige CGM-Systeme haben interne Algorithmen, um die Qualität der Messwerte zu 
 
 ## Daten innerhalb AAPS glätten
 
-Seit **AAPS**-Version 3.2 gibt es die Möglichkeit, die Daten anstatt in der CGM-App von **AAPS** zu glätten. There are three options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
+Seit **AAPS**-Version 3.2 gibt es die Möglichkeit, die Daten anstatt in der CGM-App von **AAPS** zu glätten. In [Konfiguration > Glättung](../SettingUpAaps/ConfigBuilder.md) gibt es drei Optionen.
 
 ![Glättung](../images/ConfBuild_Smoothing.png)
 
@@ -49,5 +49,5 @@ Die Qualität der Messwerte wird nicht an AAPS übermittelt. Deswegen sind die F
 
 ### Freestyle Libre Sensoren
 
-#### xDrip+ with FreeStyle Libre1
-The FreeStyle Libre 1 does not broadcast any information about the level of noise detected in the readings, and therefore 'Enable SMB always' and 'Enable SMB after carbs' are disabled when using this CGM. In addition, many people have reported the FreeStyle Libre 1 often produces noisy data.
+#### xDrip+ mit FreeStyle Libre1
+Der FreeStyle Libre 1 übermittelt keine Informationen zur Qualität der Messwerte (sog. Noise Level). Aus diesem Grund werden die Optionen "SMB immer aktivieren" und "Aktiviere SMB während aktiver Kohlenhydrate" bei diesem CCGM deaktiviert. Darüber hinaus haben viele Leute berichtet, dass der FreeStyle Libre 1 oft verrauschte (springende) Werte erzeugt.

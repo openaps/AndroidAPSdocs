@@ -104,12 +104,30 @@ gradle 同步失敗的可能原因包括：
 
 請按照[Gradle Resync](#gradle-resync)上的指示進行操作。
 
+### Git Pull Failed - Please tell me who you are
+
+如果您看到此訊息，Git 需要您進行身份確認。
+
+![Git 身份確認](../images/studioTroubleshooting/164_Git_Identify.png)
+
+打開命令列視窗，依序輸入以下兩條指令：
+
+```
+git config --global user.name "你的名稱"
+git config --global user.email 你的email@xxx.com
+```
+
+您的名稱需要用引號括起來。
+
+![Git 身份確認修復](../images/studioTroubleshooting/164_Git_Identify2.png)
+
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 (incompatible-gradle-jvm)=
 ### 不相容的 Gradle JVM
 
 ![不相容的 Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) 如果你遇到以上錯誤訊息，則在重新構建之前需要下載正確的 JVM 版本：
+
 1.  檢查[需求表](#Building-APK-recommended-specification-of-computer-for-building-apk-file)以確定你需要的**AAPS**版本的 JVM 版本，並做好記錄。
 
 2. 通過單擊 Android Studio 右側的“大象圖示” (1) 打開 Gradle 視圖，並打開設定 (2)，然後選擇 **Gradle 設定** (3)：

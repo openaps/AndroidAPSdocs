@@ -2,26 +2,26 @@
 
 ## Was ist eine Automatisierung?
 
-"**Automation**" is a feature which can automate task for AAPS.
+„**Automatisierung**“ ist eine Funktionalität, mit der in AAPS-Aufgaben automatisiert werden können.
 
-Automations performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a WIFI SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+Automatisierungen führen definierte Aktionen basierend auf einer oder mehreren Bedingungen oder Auslösern aus. Auslöser können weniger häufige Situationen wie niedrige oder hohe Glukosewerte (BZ) oder eine bestimmte Menge negativen aktiven Insulins (Insulin on Bord - IOB) beinhalten. Automatisierungen können auch mit wiederkehrenden Ereignissen wie Mahlzeiten oder Sport zu bestimmten Tageszeiten umgehen oder wenn Du Dich innerhalb einer bestimmten Entfernung von einem GPS-Standort oder einem WLAN SSID Bereich befindest. Eine Automatisierung kann die Sicherung der AAPS-Einstellungen nach einem bestimmten Zeitplan oder mit jedem Pod-Wechsel ausführen.
 
-Automations rules are created and modified from the Automations tab. Each rule is defined by two properties:
+Automatisierungsregeln werden über Reiter Automatisierung erstellt und geändert. Jede Regel wird durch zwei Eigenschaften definiert:
 
-- One or more conditions or 'triggers' that start an action.
+- Eine oder mehrere Bedingungen oder „Auslöser“, die eine Aktion starten.
 
-    Think of a certain time schedule, an event or properties value in AAPS
+    Denke dabei an einen bestimmten Zeitplan, ein Ereignis oder den Wert einer AAPS-Variable
 
-- One or more actions to perform.
+- Eine oder mehrere durchzuführende Aktionen.
 
-    Such as an alarm or settings a profile percentage or exporting the AAPS settings on Pod change.
+    So wie z. B. ein Alarm oder das Setzen eines prozentualen Profils oder den Export der AAPS-Einstellungen bei einem Pod-Wechsel.
 
 
-Es gibt eine Vielzahl von Automatisierungsmöglichkeiten und Du solltest Dich mit ihnen in der AAPS-App im Abschnitt „Automatisierung“ vertraut machen. You can also search the AAPS user groups on ![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and ![**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
+Es gibt eine Vielzahl von Automatisierungsmöglichkeiten und Du solltest Dich mit ihnen in der AAPS-App im Abschnitt „Automatisierung“ vertraut machen. Du kannst auch die AAPS Gruppen auf ![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) und ![**Discord**](https://discord.gg/4fQUWHZ4Mw) für Automatisierungs-Beispiele anderer Nutzenden durchsuchen.
 
 ## Wie Automatisierung helfen kann
 
-1. **Automate reoccurring tasks:** Automatically executing programmed actions without user interaction.
+1. **Automatisierung sich wiederholender Aufgaben:** Automatisches Ausführen programmierter Aktionen ohne manuellen Eingriff.
 
 1. **Entscheidungsmüdigkeit verringern:** Der Hauptvorteil von **Automatisierungen** ist, den Nutzenden von der Last manueller **AAPS**-Eingriffe zu befreien. Die [Forschung](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) schätzt, dass Menschen mit Diabetes Typ 1 täglich durchschnittlich 180 zusätzliche Entscheidungen treffen müssen. **Automatisierungen** können diese mentale Belastung verringern und so Freiräume für andere Dinge des Lebens schaffen können.
 
@@ -41,7 +41,7 @@ Du hast eine **Automatisierung** erstellt, die um 5.00 Uhr am Morgen ein „temp
 
 ## Wichtige Vorüberlegungen, bevor mit Automatisierung gestartet wird
 
-1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automatisierungen sollten nicht dazu verwendet werden schiefe/schlechte Einstellungen (Basalraten, Korrekturfaktoren (**ISF**) oder Mahlzeitenfaktoren (**CR**)) auszugleichen (wird in Tiefe weiter unten beschrieben). Vermeide automatisierte **Profilwechsel**, um einen **Glukosewert**-Anstieg durch _z.B._ Mahlzeiten abzufangen. Diese Anstiege sind durch bestehende AAPS-Funktionen (SMBs etc.) besser abgedeckt.
+1. Bevor Du mit Automatisierungen beginnst, solltest Du bereits eine gute und stabile **Blutzucker**-Kontrolle mit **AAPS** haben. Automatisierungen sollten nicht dazu verwendet werden schiefe/schlechte Einstellungen (Basalraten, Korrekturfaktoren (**ISF**) oder Mahlzeitenfaktoren (**CR**)) auszugleichen (wird in Tiefe weiter unten beschrieben). Vermeide automatisierte **Profilwechsel**, um einen **Glukosewert**-Anstieg durch _z.B._ Mahlzeiten abzufangen. Diese Anstiege sind durch bestehende AAPS-Funktionen (SMBs etc.) besser abgedeckt.
 
 1. So wie bei jeder Technik: **CGMs**, **Pumpen** und Smartphones können versagen: Technische Probleme oder Sensorfehler können eine laufende **Automatisierung** stören und müssen eventuell durch manuelles Eingreifen behoben werden.
 
@@ -59,7 +59,7 @@ Du hast eine **Automatisierung** erstellt, die um 5.00 Uhr am Morgen ein „temp
 
 ## Wo finden sich die Automatisierungen in AAPS?
 
-Depending on your [Config builder > General](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
+Abhängig von Deinen Einstellungen unter [Konfiguration > Allgemein](../SettingUpAaps/ConfigBuilder.md), erreichst Du die **Automatisierungen** in **AAPS** entweder über das „Hamburger Menü“ oder über den eigenen Reiter.
 
 ## Wie kann ich eine Automatisierung einrichten?
 
@@ -129,13 +129,13 @@ Eine **Automatisierung** für jeden Wert, der **größer als** -0.1 mmol/l (-2mg
 Bei der Auswahl Deiner **Automatisierung** und der Wahl der Bedingungen und Werte, ist es wichtig genau zu wissen, welches Ziel damit erreicht werden soll.
 
 (automations-automation-triggers)=
-## Automation Triggers
+## Automatisierungsauslöser
 
-![Automation Triggers](../images/automation_triggers.png)
+![Automatisierungsauslöser](../images/automation_triggers.png)
 
-There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. Die folgende Liste ist nicht vollständig:
+Es gibt eine Reihe von „Bedingungen“, die ausgewählt werden können. Auslöser sind die Bedingungen, die erfüllt werden müssen, damit die Automatisierung ausgeführt wird. Die folgende Liste ist nicht vollständig:
 
-**Trigger:** connect conditions
+**Auslöser:** Verbindungsbedingungen (Letzte Verbindung zur Pumpe)
 
 **Optionen:**
 
@@ -144,20 +144,20 @@ Mehrere Auslöser können mit den folgenden Bedingungen miteinander verknüpft w
 * „Oder“
 * „Entweder oder“ (d. h. eine (und nur eine) der Bedingungen muss zutreffen, damit die Aktion ausgeführt wird)
 
-**Trigger:** time vs. recurring time
+**Auslöser:** Zeit vs. Wiederholungszeit
 
 **Optionen:**
 
 * Zeit = einmaliges Ereignis
 * Wiederholungszeit = etwas, das regelmäßig passiert (z. B. einmal pro Woche, jeden Werktag etc.)
 
-**Trigger:** location
+**Bedingung:** Standort
 
 **Optionen:**
 
 * In den **Einstellungen** der Automatisierungen, kann der gewünschte Standortdienst ausgewählt werden.
 
-**Trigger:** location service
+**Bedingung:** Standortdienst
 
 **Optionen:**
 
@@ -165,22 +165,22 @@ Mehrere Auslöser können mit den folgenden Bedingungen miteinander verknüpft w
 * Netzwerkstandort: Standort Ihres Wi-Fi.
 * GPS-Standort (Achtung! Kann zu übermäßigem Akkuverbrauch führen!)
 
-**Triggers** : pump and sensor data
+**Bedingung**: Pumpen- und Sensordaten
 
-* Cannula age trigger: Available for all pumps
-* Insulin age trigger: Available for supported pumps
-* Battery age trigger: Available for supported pumps
-* Sensor age trigger: always available
-* Pod Activation trigger: Available for patch pumps
+* Kanülenalter: Für alle Pumpen verfügbar
+* Insulinalter: Für alle unterstützten Pumpen verfügbar
+* Batteriealter: Für alle unterstützten Pumpen verfügbar
+* Sensoralter: Immer verfügbar
+* Pod-Aktivierung: Für Patchpumpen verfügbar
 
-Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+Beachte, dass für alle altersbezogenen Bedingungen der Vergleich auf Gleichheit sehr unwahrscheinlich zum Auslösen führt. In diesem Fall werden zwei Bedingungen benötigt, um damit einen Bereich zu definieren
 
-* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
-* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* Reservoirstand: Für alle Pumpen verfügbar, der Vergleich „NOT\_AVAILABLE“ funktioniert für diesen Auslöser nicht, da der Wert in **AAPS** immer gefüllt ist
+* Pumpenbatterie-Stand: Für alle unterstützen Pumpen verfügbar, der Vergleich „NOT\_AVAILABLE“ funktioniert für diesen Auslöser nicht, da der Wert in **AAPS** immer gefüllt ist
 
 ## Aktion
 
-![Automation Triggers](../images/automation_actions.png)
+![Automatisierungsauslöser](../images/automation_actions.png)
 
 **Aktion:** **Temporäres Ziel** (TT) starten
 

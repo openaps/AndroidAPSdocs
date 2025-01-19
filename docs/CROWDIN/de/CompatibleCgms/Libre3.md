@@ -28,7 +28,7 @@ Juggluco wird dabei genutzt, die minütlich vorliegenden Sensorrohdaten an xDrip
 ### Schritt 1: Juggluco einrichten
 Lade die Juggluco-App [hier](https://www.juggluco.nl/Juggluco/download.html) herunter und installiere sie. Befolge die [Anweisungen](https://www.juggluco.nl/Juggluco/libre3/)
 
-Make sure you send the glucose values to xDrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco kann auf drei Arten Werte weiterreichen: Der **gepatchte Libre Broadcast** wurde ursprünglich von der gepatchten Librelink App verwendet und kann genutzt werden, um Glukosewerte an xDrip+ zu senden
+Stelle sicher, dass die Glukosewerte an xDrip+ gesendet werden: In den Juggluco Einstellungen, kannst Du Juggluco so konfigurieren, dass Glukosewerte an andere Apps weitergereicht werden. Juggluco kann auf drei Arten Werte weiterreichen: Der **gepatchte Libre Broadcast** wurde ursprünglich von der gepatchten Librelink App verwendet und kann genutzt werden, um Glukosewerte an xDrip+ zu senden
 
 ![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)
 
@@ -63,7 +63,7 @@ Nach einem Sensorwechsel erkennt xDrip+ den neuen Sensor automatisch und löscht
 - Wähle xDrip+ unter [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
 
 - Wenn sich das Smartphone im Flugmodus befindet und AAPS keine Glukosewerte erhält, verwende "Empfänger identifizieren"
-- Turn of Smoothing (done in xDrip+ already)
+- Glättung deaktivieren (in xDrip+ bereits erfolgt)
 
 Wenn Du einen Libre 3 als Datenquelle auswählst, sind die Optionen "Immer SMB" und "SMB bei Kohlenhydraten aktivieren" nicht nutzbar und werden im SMB-Algorithmus nicht berücksichtigt. Die durch den Libre 3 übermittelten Glukosewerte sind für einen sicheren Einsatz dieser Funktionen nicht ausreichend geglättet.
 
