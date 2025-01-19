@@ -11,17 +11,17 @@ Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 ## Computer- und Software-Spezifikationen für das "Bauen" von AAPS
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
+* Um die APK zu erstellen ist möglicherweise eine bestimmte **[Android Studio](https://developer.android.com/studio/)**-Version erforderlich. Siehe Tabelle unten:
 
-| AAPS-Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version                                                              | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
-| [3.2](#version3200)     | Hedgehog (2023.1.1)                                  | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
-| [3.3](#version3300)     | Ladybug (2024.2.1)                                   |                                                                                                                     | 8.9    | 21  |
-| [3.3.1.2](#version3300) | Ladybug Feature Drop (2024.2.2)                      |                                                                                                                     | 8.10   | 21  |
+| AAPS-Version            | Empfohlene <br/>Android Studio<br/> Version | Alternative <br/>Android Studio<br/> Version                                                            | Gradle | JVM |
+| ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
+| [3.2](#version3200)     | Hedgehog (2023.1.1)                                     | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
+| [3.3](#version3300)     | Ladybug (2024.2.1)                                      |                                                                                                                     | 8.9    | 21  |
+| [3.3.1.2](#version3300) | Ladybug Feature Drop (2024.2.2)                         |                                                                                                                     | 8.10   | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+Die „empfohlene Version“ enthält im Paket bereits die entsprechende JVM-Version. Die empfohlene Version ist gleichzeitig auch die Mindestversion, die Du zum Erstellen von **AAPS** nutzen kannst. Mit einer älteren Version als der, die unter „empfohlen“ aufgeführt ist, wirst Du **NICHT** in der Lage sein, AAPS zu erstellen. Solltest Du eine andere Version verwenden, kann es aufgrund der JVM-Version zu Problemen kommen. Schaue auf den Seiten zur [Fehlerbehebung für Android Studio](#troubleshooting_androidstudio-uncommitted-changes) nach, um diese Probleme zu lösen. Wenn Deine aktuelle Android Studio Version nicht in der Tabelle aufgeführt ist, musst Du sie zuerst aktualisieren.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Die Gradle-Version ist mit dem Quellcode verknüpft. Wenn Du den Quellcode herunterlädst oder aktualisierst, bekommst Du automatisch die richtige Gradle-Version. Das wird hier rein zu Deiner Information erwähnt. Du brauchst nichts machen.
 
 * Android Studio unterstützt keine [Windows 32-Bit-Systeme](#troubleshooting_androidstudio-unable-to-start-daemon-process). Bitte beachte, dass sowohl eine **64-Bit-CPU als auch ein 64-Bit-Betriebssystem zwingend erforderlich sind**. Wenn Dein System diese Bedingung nicht erfüllt, musst Du die entsprechende Hardware, Software oder das ganze System ersetzen.
 
@@ -132,7 +132,7 @@ Einer der wichtigsten Punkte bei der Installation von Android Studio ist: **Gedu
 Wichtige Anmerkung: Android Studio hat seine Benutzeroberfläche (UI) seit den letzten Versionen geändert. Diese Anleitung zeigt Dir die Schritte in dem *neuen UI* „Ladybug“. Nutzt Du noch eine ältere Version der Benutzeroberfläche, dann solltest Du Android Studio als Erstes auf das neue Design umstellen. Wie das funktioniert ist [hier beschrieben](NewUI).
 ```
 
-The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
+Die Android-Studio-Version ist sehr wichtig. Schaue Dir die [Anleitung oben](#Building-APK-recommended-specification-of-computer-for-building-apk-file) an, um die richtige Android Studio Version auszuwählen.
 
 Lade Dir die [aktuelle Version des Android Studio](https://developer.android.com/studio) oder eine ältere Version aus dem [**Archiv**](https://developer.android.com/studio/archive) herunter und akzeptiere dabei die Download-Vereinbarungen.
 
