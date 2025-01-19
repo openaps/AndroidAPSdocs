@@ -123,7 +123,7 @@ AAPS 重要功能 <./DailyLifeWithAaps/KeyAapsFeatures.md>
 遠端監控 <./RemoteFeatures/RemoteMonitoring.md>
 遠端控制 <./RemoteFeatures/RemoteControl.md>
 簡訊指令 <./RemoteFeatures/SMSCommands.md>
-僅追蹤 <./RemoteFeatures/FollowingOnly.md>
+追蹤 AAPS  <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
@@ -170,7 +170,7 @@ AAPS 發佈說明 <./Maintenance/ReleaseNotes.md>
 :caption: 10) 如何支援 AAPS
 
 如何幫助 <./SupportingAaps/HowCanIHelp.md>
-編輯文檔 <./SupportingAaps/HowToEditTheDocs.md>
+編輯文件 <./SupportingAaps/HowToEditTheDocs.md>
 翻譯應用程式和文件 <./SupportingAaps/Translations.md>
 翻譯狀態 <./SupportingAaps/StateOfTranslations.md>
 Open Humans 上傳工具 <./SupportingAaps/OpenHumans.md>
