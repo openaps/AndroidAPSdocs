@@ -68,7 +68,7 @@ Einige Optionen können ausgegraut sein, wenn das Smartphone als Kinder-Smartpho
 
 ### AAPS-Einstellungen
 
-Now that the phone settings have been checked, in the **AAPS** app itself, go to [Config Builder > General](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
+Jetzt, wo die Smartphone-Einstellungen geprüft sind, aktiviere direkt in der **AAPS**-App in der [Konfiguration > Allgemein](../SettingUpAaps/ConfigBuilder.md), das Modul **SMS-Kommunikator**.
 
 Gehe in die Einstellungen des SMS-Kommunikators.
 
@@ -337,4 +337,4 @@ Wenn die andere App auf mehreren Smartphones installiert ist, musst Du den Uploa
 
 Die Nutzung der SMS-Befehle kann viele automatisierte Nachrichten vom **AAPS**-Smartphone auf das Smartphone der Eltern/Betreuenden auslösen. Du wirst auch Nachrichten für aktive **AAPS**-Automatisierungen (z. B. “Basal-Profil in der Pumpe aktualisiert”) erhalten. Eine SMS-Flat für den Mobilfunktvertrag des **AAPS**-Smartphones und des Eltern-/Betreuenden-Smartphones wird sehr empfohlen, wenn viele SMS verschickt werden. Es kann auch hilfreich sein, SMS-Benachrichtigungen, Alarme und Vibrationen auf allen Smartphones zu deaktivieren. SMS-Befehle können nur mit den entsprechenden bestätigenden SMS genutzt werden. Falls Du direkt mit Deinem Kind (wenn es alt genug ist) kommunizieren möchtest, solltest Du etwas anderes als SMS dazu nutzen. **AAPS**-Elterrn/Betreuende nutzen daher häufig andere Kommunikations-Apps wie WhatsApp, Lime, Telegram und den Facebook-Messenger.
 
-It is possible do disabled the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+Es ist möglich, die SMS „Profil erfolgreich gesetzt“ zu deaktivieren, wenn die Profiländerung über Nightscout erfolgt. Um das zu erreichen, erstelle eine Datei mit **genau** dem Namen `do_not_send_sms_on_profile_change` im Verzeichnis `extra` Deines AAPS-Ordners.
