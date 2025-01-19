@@ -1,19 +1,19 @@
 
 # Release Notes
 
-Gehe durch Schritte der [Update-Anleitung](UpdateToNewVersion). The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
+Gehe durch Schritte der [Update-Anleitung](UpdateToNewVersion). Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
 
 Folgende Information wird angezeigt, sobald ein neues Update zur Verfügung steht:
 
 ![Update-Info](../images/AAPS_LoopLGS60days.png)
 
-Then you have 60 days to update **AAPS**. If you do not update within the 60 day time period **AAPS** will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
+Du hast dann 60 Tage Zeit **AAPS** zu aktualisieren. Wenn Du nicht innerhalb des 60 Tage-Zeitraums aktualisierst, wird **AAPS** wie in [Ziel 6](#objectives-objective6) auf LGS zurückfallen (Low Glucose Suspend) - siehe [Glossar](../UsefulLinks/Glossary.md)).
 
-If you do not update for another 30 days (90 days from new release date) **AAPS** will switch to Open Loop.
+Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualisierst, wird **AAPS** auf Open Loop wechseln.
 
 ![Update-Info](../images/AAPS_LoopDisable90days.png)
 
-This prompt is important, should not be ignored and is not intended to bug you. New versions of **AAPS** do not only provide new features but also important safety fixes. Therefore it is necessary that every **AAPS** user updates to the latest version a.s.a.p.. Unfortunately there are still bug reports from very old versions so this an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
+Diese Eingabeaufforderung ist wichtig, und sollte nicht ignoriert werden. Sie ist nicht dazu gedacht Dich zu nerven. Neue **AAPS**-Versionen bieten nicht nur neue Funktionen, sondern beheben auch wichtige Sicherheitsprobleme. Daher ist es notwendig, dass jeder, der **AAPS** nutzt so bald wie möglich auf die neueste Version aktualisiert. Leider werden noch immer Fehler aus sehr alten Versionen gemeldet. Es entsteht ein sehr großer Aufwand darin, die Sicherheit für jeden **AAPS**-Benutzer und die DIY-Community zu verbessern. Vielen Dank für Dein Verständnis.
 
 ```{admonition} First version of **AAPS**
 :class: note
@@ -64,120 +64,120 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 (version3300)=
 ## Version 3.3.1.2
 
-Release date: 15-01-2025
+Erscheinungsdatum: 15.01.2025
 
-### How to upgrade
+### So wird aktualisiert
 
-* [Android Studio version called "Ladybug Feature Drop"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* Um diese Version zu erstellen, benötigst Du die [Android Studio Version „Ladybug Feature Drop“](#Building-APK-recommended-specification-of-computer-for-building-apk-file) oder höher. **Dies ist eine andere Version als die Standardverion „Ladybug“.** Wenn Du schon eine AAPS 3.3.x-Version erstellt hast, musst Du Android Studio erneut aktualisieren.
 
-### Bug fixes
+### Behobene Fehler
 
-* Dash: use bonding on Android 15+
-* Restored Dexcom button on Overview
-* Equil: allowed remove non working pump
-* Warn when DynISF Adjustment Factor is zero
-* NSCv3: resolve websocket communication on phones with slightly different time
-* SMS Commands: fix OneTimePassword. **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
-* Fix issue where some preferences could not be edited anymore.
-* Fix reset of master password with virtual pump.
-* Fixed import of large settings backup files.
+* Dash: „Bonding“ in Android 15+ verwenden
+* Dexcom-Button in der Übersicht wieder verfügbar gemacht
+* Equil: Löschen einer defekten Pumpe ermöglicht
+* Warnung, wenn der DynISF-Anpassungsfaktor Null ist, hinzugfefügt
+* NSCv3: Websocket-Kommunikation auf Smartphones mit leicht unterschiedlichen Zeiten behoben
+* SMS-Befehle: OneTimePassword behoben. **[Neueinrichtung des Authentifikators](#sms-commands-authenticator-setup) kann erforderlich sein.**
+* Fehler, bei dem einige Einstellungen nicht mehr bearbeitet werden konnten, behoben.
+* Zurücksetzen des Master-Passworts bei virtueller Pumpe behoben.
+* Import von großen Sicherungsdateien der Einstellungen.
 
 ## Version 3.3.1.0
 
-Release date: 06-01-2025
+Erscheinungsdatum: 06.01.2025
 
-### UI changes
+### UI-Änderungen (Benutzeroberfläche)
 
-* [Added colors to differentiate between AAPSClient and AAPSClient2](#RemoteControl_aapsclient) @MilosKozak
-* Improved Users actions layout and icons
+* [Farben zur Unterscheidung von AAPSClient und AAPSClient2](#RemoteControl_aapsclient) hinzugefügt @MilosKozak
+* Layout für Benutzerinteraktionen und Icons verbessert
 
-### Other functionalities
+### Sonstige Funktionen
 
-* New automation trigger : [steps count](#screen-heart-rate-steps) @Roman Rihter
-* Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR) @MilosKozak
-* NSClient v3 : make Announcement work (_i.e._ from AAPSClient to AAPS) @MilosKozak
+* Neuer Automatisierungsauslöser: [Schrittanzahl](#screen-heart-rate-steps) @Roman Rihter
+* NSCv3 Vollsynchronisation (einschließlich bisher nicht synchronisierter Daten wie TBR) ermöglicht @MilosKozak
+* NSClient v3 : Fehler bei „Ankündigungen“ behoben (_d. h._ vom AAPSClient zu AAPS) @MilosKozak
 
-### Technical changes & bug fixes
+### Technische Änderungen & Fehlerkorrekturen
 
-* Fix Insight crash @philoul
-* Fix creation of extra-numerous deviceStatus entries in Nightscout @MilosKozak
-* Fix carbs absorption @MilosKozak
-* Fixed color of RadioButtons & CheckBoxes @MilosKozak
-* Fixed bug in DynISF percentage migration @MilosKozak
-* Resolved misplaced DynISF notification @MilosKozak
-* Fixed bug in watchfaces @philoul
+* Insight-Abstürze behoben @philoul
+* Erstellen überzähliger deviceStatus-Einträge in Nightscout behoben @MilosKozak
+* Kohlenhydrat-Absorbtion korrigiert @MilosKozak
+* Farbe von Radio-Buttons & Check-Boxen korrigiert @MilosKozak
+* Fehler in der Migration des DynISF-Prozentsatzes behoben @MilosKozak
+* Position der DynISF-Benachrichtigung korrigiert @MilosKozak
+* Fehler in den Zifferblättern behoben @philoul
 
 ## Version 3.3.0.0
 
 Erscheinungsdatum: 29.12.2024
 
-### Main features
+### Wesentliche Funktionalitäten
 
-* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behaviour:
-  * **Profile Switch** and **Profile Percentage** is now taken into account for **Dynamic ISF** in respect of dynamic sensitivity strengthness
-  * The average **ISF** of the last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
-  * DynamicISF documentation page has been rewritten. Please read the important section [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf).
-* [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users
-  * Note : Requires latest version of xDrip+ or Juggluco.
-* New **Automation** triggers
-* Unattended settings exports
+* Die Funktion **[Dynamischer ISF](../DailyLifeWithAaps/DynamicISF.md)** ist nun kein eigenes Modul mehr, sondern gehört jetzt als Option zum Modul [OpenAPS SMB](#Config-Builder-aps). Gleichzeitig wurde das Verhalten in einigen Punkten angepasst:
+  * **Profilwechsel** und **Profil-Prozentsatz** wird nun für die Stärke der dynamischen Empfindlichkeit des **dynamischen ISF** berücksichtigt
+  * Der durchschnittliche **ISF** der letzten 24h wird berechnet. Dieser Wert wird für die Berechnungen im Bolus-Rechner und auch bei der **COB**-Ermittlung genutzt. Der **ISF-Profilwert** wird nicht verwendet (außer im Fallback-Fall, wenn die historischen Daten nicht verfügbar sind)
+  * Die Dokumentationsseite zum dynamischen ISF wurde vollständig überarbeitet. Bitte lies den wichtigen Abschnitt [Dinge, die bei der Aktivierung des dynamischen ISF zu beachten sind](#dyn-isf-things-to-consider-when-activating-dynamicisf).
+* [„SMB immer aktivieren“ und „Aktiviere SMB während aktiver Kohlenhydrate“](#Open-APS-features-enable-smb-always) werden für Nutzende des FreeStyle Libre 2 und Libre 3 aktiviert
+  * Hinweis: Dafür wird die neueste Version von xDrip+ oder Juggluco benötigt.
+* Neue **Automatisierungs**-Auslöser
+* Export der Einstellungen im Hintergrund (unattended export)
 
-### How to upgrade
+### So wird aktualisiert
 
-* Before upgrading:
-  * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
-  * If you use the “old” Combo driver with ruffy device, migrate to the [native Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) before update
-  * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade: make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
-  * The [Bluetooth connectivity issues some people encounter on Android 15](../Getting-Started/Phones.md) are **NOT** solved by this release (this is an Android issue, not **AAPS**). A fix is available in 3.3.1.2.
-  * The BYODA button on the homescreen is no longer available due to Android limitations. This is fixed in 3.3.1.2.
-* Update instructions: follow the [Update to a new version](../Maintenance/UpdateToNewVersion.md) guide.
-  * [Android Studio version called "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already have an older version of Android Studio installed, you may need to <span style="color:red">configure the JVM version to 21</span>. See [Troubleshooting Android Studio > Incompatible Gradle JVM](#incompatible-gradle-jvm).
-  * Tip - if you do not want to lose your **AAPS** history ALWAYS do an UPDATE and NOT an UNINSTALL/INSTALL. As a precaution, back up your current **AAPS** settings and old APK to revert to an old version should anything go wrong.
-* After upgrading:
-  * Set the new [“AAPS directory” setting](#preferences-maintenance-logdirectory), in the Maintenance tab.
+* Vor dem Aktualisieren:
+  * **<span style="color:red">Diese Version benötigt Google Android 11.0 oder höher</span>**. Prüfe vor der Aktualisierung die Smartphone-Version.
+  * Wenn Du die "alte" Combo-Unterstützung mit einem Ruffy als Zusatzgerät nutzt, stelle bitte vor Aktualisierung auf die [native Combo-Unterstützung](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) um
+  * Während des Upgrades verlierst Du auf der Übersicht Deine [zusätzlichen Diagramme](#AapsScreens-section-g-additional-graphs): Wenn erforderlich, notiere Dir Deine aktuelle Konfiguration, so dass Du sie nach dem Upgrade wiederherstellen kannst.
+  * Die [Bluetooth-Verbindungsprobleme, auf die einige Leute bei Android 15](../Getting-Started/Phones.md) stoßen, sind **NICHT** durch diese Version gelöst (dies ist ein Android-Problem und kein **AAPS**-Problem). Der Fehler ist in 3.3.1.2 behoben.
+  * Die BYODA-Schaltfläche auf dem Startbildschirm ist aufgrund von Android-Einschränkungen nicht mehr verfügbar. Der Fehler ist in Version 3.3.1.2 behoben.
+* Update-Anweisungen: Folge den Schritten der Anleitung [Update auf eine neue Version](../Maintenance/UpdateToNewVersion.md).
+  * Um diese Version zu erstellen, benötigst Du die [Android Studio Version "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) oder höher. Solltest Du bereits eine ältere Version des Android Studios installiert haben, musst Du <span style="color:red">die JVM-Version auf Version 21 bringen</span>. Siehe [Fehlerbehebung für Android Studio > Inkompatibles Gradle JVM](#incompatible-gradle-jvm).
+  * Tipp - wenn Du Deinen **AAPS**-Verlauf (engl. history) nicht verlieren möchtest, mache ein UPDATE und KEINE DEINSTALLATION/NEUINSTALLATION. Als Vorsichtmaßnahme sichere Deine aktuellen **AAPS**-Einstellungen und die alte APK, um - falls etwas schiefgehen sollte - zu einer alten Version zurückkehren zu können.
+* Nach dem Aktualisieren:
+  * Definiere die neue Einstellung für das [“AAPS Verzeichnis”](#preferences-maintenance-logdirectory). Du findest sie auf dem Wartungs-Reiter.
 
-### Detailed changes
+### Die Änderungen im Detail
 
-#### CGMs and Pumps
+#### CGMs und Pumpen
 
-* [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users @MilosKozak
-* [Medtrum driver](../CompatiblePumps/MedtrumNano.md) improvements @jbr77rr
-  * Communication improvements, including new setting to workaround problems on some smartphones
-  * Show reservoir level at start of activation
-  * Fix bug where activation returns to start and user cannot finish the activation
-  * Feedback for sync status and other clarifications
-* New supported pump : [Equil 5.3](../CompatiblePumps/Equil5.3.md) @EquilHack
-* New supported CGMs : [Ottai](../CompatibleCgms/OttaiM8.md) @ottai-developer and [Syai Tag](../CompatibleCgms/SyaiTagX1.md) @syai-dev
-* Insight driver rewritten to kotlin @Philoul
+* ["SMB immer aktivieren" und "Aktiviere SMB während aktiver Kohlenhydrate"](#Open-APS-features-enable-smb-always) für FreeStyle Libre 2 und Libre 3 Nutzende @MilosKozak
+* Verbesserte [Medtrum-Unterstützung](../CompatiblePumps/MedtrumNano.md) @jbr77rr
+  * Verbesserungen der Kommunikation, einschließlich neuer Einstellungen zur Problemumgehung auf einigen Smartphones
+  * Reservoir-Level beim Start der Aktivierung anzeigen
+  * Fehler behoben, bei dem die Aktivierung erneut startet und der Nutzende die Aktivierung nicht abschließen kann
+  * Rückmeldung zum Sync-Status und andere Klarstellungen
+* Neu unterstützte Pumpe: [Equil 5.3](../CompatiblePumps/Equil5.3.md) @EquilHack
+* Neu unterstütztes CGM: [Ottai](../CompatibleCgms/OttaiM8.md) @ottai-developer und [Syai Tag](../CompatibleCgms/SyaiTagX1.md) @syai-dev
+* Insight-Unterstützung auf Kotlin umgeschrieben @Philoul
 * Alte, von ruffy abhängige, Combo-Unterstützung entfernt
 
-#### UI changes
+#### UI-Änderungen (Benutzeroberfläche)
 
-* [Simple mode](#preferences-simple-mode) activated by default on fresh install @MilosKozak
-* New [QuickWizard](#Preferences-quick-wizard) options @radicalb
-  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. You can now use the “carb time” field in QuickWizard  to pre-bolus.
-* New [graph scale menu](#aaps-screens-main-graph); [additional graphs menu](#AapsScreens-activate-optional-information) UI improvements @Philoul
-* [ConfigBuilder layout improvement](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
-  * Sections are now collapsed by default. Use arrow to expand.
-* Variable sensitivity visible in AAPSClient
+* [Einfacher Modus](#preferences-simple-mode) standardmäßig bei Neuinstallation aktiviert @MilosKozak
+* Neue [Quick Wizard](#Preferences-quick-wizard)-Optionen @radicalb
+  * Der Quick Wizard verwendet nun die gleiche Logik zur Bolus-Berechnung und -Anzeige wie der Bolus-Rechner. Für einen Vorab-Bolus kannst Du jetzt das Feld “KH-Zeit” im  Quick Wizard nutzen.
+* Neues [Diagramm-Skalen-Menü](#aaps-screens-main-graph); [zusätzliches Diagramm-Menü](#AapsScreens-activate-optional-information) UI-Verbesserungen @Philoul
+* [Layoutverbesserungen in der Konfiguration](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
+  * Abschnitte sind nun standardmäßig eingeklappt. Pfeil zum Aufklappen verwenden.
+* Variable Sensitivität im AAPS-Client sichtbar
 * UI-Verbesserungen im Bolus-Rechner @kenzo44
-* Fix text display in pump tabs when using light theme @jbr77rr
+* Fehlerbehebung der Textdarstellung in Pumpen-Tabs bei Verwendung des hellen Designs @jbr77rr
 
-#### Other functionalities
+#### Sonstige Funktionen
 
-* [Unattended settings exports](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
-* New [Automation trigger](#automations-automation-triggers) @vanelsberg
-  * Pod Activation (patch pump only)
-* New [Automation triggers](#automations-automation-triggers) @jbr77rr
-  * Cannula age, Insulin age, Battery age, Sensor age, Reservoir level, Pump battery level
-* Allowing negative carbs entry @MilosKozak
-* New Parameter [“AAPS directory”](#preferences-maintenance-settings) to choose a storage directory different from the default one.
-* Allow for [insulin records when pump suspended](#aaps-screens-buttons-insulin) @jbr77rr
-* Updated [Objective 2](#objectives-objective2) @MilosKozak
-  * Check that master password is set and known
+* [Automatischer Export der Einstellungen](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
+* Neuer [Automatisierungs](#automations-automation-triggers)-Auslöser @vanelsberg
+  * Pod-Aktivierung (nur Patchpumpen)
+* Neue [Automatisierungs](#automations-automation-triggers)-Auslöser @jbr77rr
+  * Kanülenalter, Insulinalter, Batteriealter, Sensoralter, Reservoir-Level, Pumpen-Batteriestand
+* Eingabe negativer Kohlenhydrate zulassen @MilosKozak
+* Neuer Parameter [“AAPS Verzeichnis”](#preferences-maintenance-settings), um ein anderes Speicherverzeichnis als das Standardverzeichnis auszuwählen.
+* [Protokollierung von Insulingaben bei getrennter Pumpe](#aaps-screens-buttons-insulin) zulassen @jbr77rr
+* [Ziel 2](#objectives-objective2) aktualisiert @MilosKozak
+  * Überprüfe, ob AAPS Master-Passwort gesetzt und bekannt ist
 * Zufalls-Kohlenhydrate im Test-Modus @MilosKozak
 * Fehler in der TDD-Berechnung behoben @MilosKozak
-* SMS Commands : allow to [**not** send SMS for profile change](#sms-commands-too-many-messages) coming from NS @MilosKozak
+* SMS-Befehle: Erlaubt es, [**keine** SMS bei Profilwechseln durch NS zu senden](#sms-commands-too-many-messages) @MilosKozak
 
 #### Smartwatches
 
@@ -186,16 +186,16 @@ Erscheinungsdatum: 29.12.2024
 * Kombiniertes Zifferblatt aus AAPS, AAPSClient und AAPSClient2 zur Überwachung weiterer Patienten @Philoul @MilosKozak
 * EXTRA: show\_user\_actions\_on\_watch\_only @MilosKozak
 
-#### Technical changes
+#### Technische Änderungen
 
-* [log files location change](#Accessing-logfiles-accessing-logfiles)
-* new internal modules structure @MilosKozak
+* [Speicherort der Protokolldateien geändert](#Accessing-logfiles-accessing-logfiles)
+* Neue interne Modulstruktur @MilosKozak
 * Persistenz-Ebene vom Hauptcode getrennt @MilosKozak
 * Build-Dateien auf kts umgescrieben @MilosKozak
 * Algorithmen zur Performanceverbesserung auf Kotlin umgeschrieben @MilosKozak
 * Tonnen neuer Unit Tests @MilosKozak and others
 * Mehr Code auf Kotlin gebracht @MilosKozak
-* new preferences management, xml \-\> kotlin @MilosKozak
+* Neues Management der Einstellungen, XML \-\> Kotlin @MilosKozak
 * Neue CI-Konfiguration, CI auf eigenen Servern laufen lassen @MilosKozak
 * Bibliotheken auf die neueste Version aktualisiert, toml @MilosKozak
 * Migration auf Kotlin 2.0, Java 21 @MilosKozak
@@ -468,7 +468,7 @@ Erscheinungsdatum: 24.09.2020
 
 **Achte nach dem Update auf 2.7 darauf, die Einstellungen zu überprüfen und anzupassen, so wie es [ hier](../Maintenance/Update2_7.md) beschrieben ist**.
 
-Du musst [Ziel 11](#objectives-objective10) (in späteren Version Ziel 10!) zumindest gestartet haben, um die [Automation](../DailyLifeWithAaps/Automations.md) weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Ziel 11 nicht gestartet werden. If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
+Du musst [Ziel 11](#objectives-objective10) (in späteren Version Ziel 10!) zumindest gestartet haben, um die [Automation](../DailyLifeWithAaps/Automations.md) weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Ziel 11 nicht gestartet werden. Falls Du beispielsweise den Test in [Ziel 3](#objectives-objective3) noch nicht abgeschlossen hast, musst Du das tun, bevor Du das Ziel 11 starten kannst. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 ### Wichtige neue Funktionen
 
@@ -732,7 +732,7 @@ Erscheinungsdatum: 03.11.2018
 ### Wichtige neue Funktionen
 
 - Oref1/SMB wird unterstützt ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)). Bitte lies zuerst die Dokumentation, damit Du weißt was du davon erwarten kannst, wie es funktioniert, was der SMB erreichen kann und wie er zu benutzen ist, damit er gut arbeitet.
-- Accu-Chek Combo pump support
+- Unterstützung für Accu-Chek Combo
 - Einrichtungs-Assistent: Der neue Assistent führt Dich durch die Einrichtung von AAPS.
 
 (Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=
