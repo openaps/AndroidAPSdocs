@@ -21,8 +21,8 @@ orphan: true
 ## Prüfung abschließen
 
 - AAPS 2.7 enthält ein neues Ziel 11 (in neueren Versionen dann in Ziel 10 umbenannt!) für [Automation](../DailyLifeWithAaps/Automations.md).
-- You have to finish exam ([objective 3 and 4](#objectives-objective3)) in order to complete objective 11.
-- If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11.
+- Die Tests zu [Ziel 3 und 4](#objectives-objective3) müssen abgeschlossen, um Ziel 11 abschließen zu können.
+- Falls Du beispielsweise den Test in [Ziel 3](#objectives-objective3) noch nicht abgeschlossen hast, musst Du das tun, bevor Du das Ziel 11 starten kannst.
 - Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 ## Master-Passwort festlegen

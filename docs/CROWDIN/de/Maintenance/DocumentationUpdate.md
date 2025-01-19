@@ -1,13 +1,13 @@
 # Docs Updates & Änderungen
 
-## January 2025
+## Januar 2025
 
-- Quick wizard [long press feature](#Preferences-quick-wizard) @emilise
-- [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page rewritten @emilise
+- Quick Wizard [langes Drücken als Funktion](#Preferences-quick-wizard) @emilise
+- Inhalte zum [Dynamischen ISF](../DailyLifeWithAaps/DynamicISF.md) vollständig überarbeitet @emilise
 
 ## Dezember 2024
 
-- Documentation of [3.3 version](#version3300) @emilise
+- Dokumentation der [Version 3.3](#version3300) @emilise
 
 ## November 2024
 

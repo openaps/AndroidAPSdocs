@@ -1,6 +1,6 @@
 # Profilwechsel & Prozentuale Profilanpassung
 
-Dieser Abschnitt erklärt was ein **Profilwechsel** und eine **prozentuale Anpassung des Profils** sind. You can learn about how to create a **Profile** at [Config Builder > Profile](#setup-wizard-profile).
+Dieser Abschnitt erklärt was ein **Profilwechsel** und eine **prozentuale Anpassung des Profils** sind. Du erfährst wie Du ein **Profil** über den Reiter <0>KONFIGURATION - Profil</a> erstellst.
 
 Zu Beginn Deiner **AAPS**-Reise, musst Du ein **Profil** erstellen, verstehen, wie Du einen **Profilwechsel** durchführst und die Auswirkungen eines **Prozentsatzes im Profil** innerhalb von **AAPS** verstehen lernen. Die Funktionen **Profilwechsel** oder **Prozentsatz des Profils** (anteiliges Profil) können Dir in den folgenden Situationen das Leben einfacher machen:
 

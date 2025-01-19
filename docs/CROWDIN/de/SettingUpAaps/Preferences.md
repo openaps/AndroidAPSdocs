@@ -37,21 +37,21 @@
 - Falls Du **AAPS** in einer anderen Sprache als der Standardsprache Deines Smartphones nutzen möchtest, kannst Du zwischen vielen verschiedenen Sprachen wählen.
 
 - Falls sich die Systemsprache Deines Smartphones und die ausgewählte Sprache für AAPS unterscheiden, kann dies manchmal zu einem Sprachmix führen. Dies ist auf ein Android-Problem zurückzuführen, bei dem das Überschreiben der App-Standardsprache manchmal nicht korrekt funktioniert.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
-(preferences-simple-mode)= **Simple mode**
+(preferences-simple-mode)= **Einfacher Modus**
 
-The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
+Wenn Du **AAPS** zum ersten Mal installierst, wird standardmäßig der **Einfache Modus** aktiviert. Im **einfachen Modus** werden viele Einstellungen versteckt und die Einstellungen durch vordefinierte Werte ersetzt. [Zusätzliche Diagramme](#AapsScreens-section-g-additional-graphs) auf der Übersicht sind auch für Dich vordefiniert. Sobald Du Dich mit der **AAPS**-Benutzeroberfläche und den Einstellungen vertraut gemacht hast, solltest Du den einfachen Modus deaktivieren.
 
 **Name des Patienten**
 
-- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
-- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
+- Kann verwendet werden, wenn Du zwischen verschiedenen Installationen unterscheiden musst (z.B. zwei Kinder mit Typ 1 in Deiner Familie).
+- Wird auf dem [Dual Watchface](../WearOS/WearOsSmartwatch.md) angezeigt.
 
 (Preferences-skin)=
 #### Erscheinungsbild
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 Du kannst zwischen vier Darstellungsarten wählen:
 
@@ -130,7 +130,7 @@ Die Option "Bildschirm aktiv lassen" hindert Android daran, den Bildschirm abzus
 ### Schaltflächen
 
 - Lege fest welche Schaltflächen am unteren Rand des Homescreens sichtbar sind.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 ![Einstellungen > Buttons](../images/Pref2020_OV_Buttons.png)
 
@@ -155,12 +155,12 @@ Der Vorschlag muss bestätigt werden, bevor Insulin abgegeben wird.
 
 ![Einstellungen > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
 
-Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
+Es wird nur eine Quick Wizard-Schaltfläche angezeigt. Wenn Du eine andere ausführen möchtest: Drücke lange auf die gerade angezeigte Quick Wizard-Schaltfläche. Damit werden dann alle verfügbaren Quick Wizard-Optionen aufgelistet. Um eine davon auszuführen, drücke lange darauf. Vor der Ausführung musst Du sie bestätigen.
 
 (Preferences-default-temp-targets)=
 ### Vordefinierte temporäre Ziele
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 [Temporäre Ziele](../DailyLifeWithAaps/TempTargets.md) (sog. Temp Targets (TT)) erlauben es Dir, Dein Glukoseziel für einen bestimmten Zeitraum zu ändern. Mit dem Setzen eines Standard-TT kannst Du Dein Ziel für Aktivität, Bald essen usw. einfach verändern.
 
@@ -176,7 +176,7 @@ Lerne [hier, wie Du temporäre Ziele aktivierst](#TempTargets-where-can-i-select
 
 ### Füll-/Vorfüll-Standardmengen
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 Wenn Du den Schlauch oder die Kanüle über **AAPS** füllen möchtest, machst Du das in der Regel über den [**AKTIONEN**-Tab](#screens-action-tab).
 
@@ -191,7 +191,7 @@ Wähle die Ober- und Untergrenze des grün hinterlegten Zielbereichs für das Di
 
 ### Kurze Tab-Überschriften
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 Hilft dabei mehr Tab-Titel auf einem Bildschirm zu sehen.
 
@@ -202,7 +202,7 @@ Zum Beispiel wird die 'OpenAPS AMA' -Registerkarte zu 'OAPS', 'Objectives (Ziele
 (Preferences-show-notes-field-in-treatments-dialogs)=
 ### Möglichkeit zur Erfassung von Notizen in Behandlungsdialogen
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 Gibt dir die Möglichkeit, kurze Textnotizen zu Deinen Behandlungen hinzuzufügen (z.B. im Bolus-Rechner, den Buttons für Insulin und Kohlenhydrate etc.)
 
@@ -211,7 +211,7 @@ Gibt dir die Möglichkeit, kurze Textnotizen zu Deinen Behandlungen hinzuzufüge
 (Preferences-status-lights)=
 ### Statusanzeige
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 Status Anzeigen geben eine optische Warnung für:
 
@@ -242,7 +242,7 @@ Bei der Verwendung von [SMB](#objectives-objective9) geben viele Menschen nicht 
 
 ### Bolus-Berater aktivieren
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 ![Bolus-Rechner](../images/BolusAdvisor.png)
 
@@ -250,7 +250,7 @@ Wenn der Bolus-Berater aktiviert ist und Du ihn in einer Hyperglykämie aufrufst
 
 ### Bolus-Erinnerung aktivieren
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 - Abschnitt wird aktuell überarbeitet -
 
@@ -261,7 +261,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 #### Superbolus
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 Option zur Aktivierung des Superbolus im Bolus-Rechner.
 
@@ -330,12 +330,12 @@ Wenn Du im **Open Loop** bist, erhältst Du jedes Mal, wenn **AAPS** eine Basalr
 
 ## Advanced Meal Assist (AMA) oder Super Micro Bolus (SMB)
 
-Depending on your settings in [Config builder > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+Abhängig von Deinen Einstellungen in [Konfiguration > APS](../SettingUpAaps/ConfigBuilder.md) kannst Du zwischen zwei Algorithmen wählen:
 
 - [Advanced Meal Assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - Stand des Algorithmus in 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - der neueste für Anfänger empfohlene Algorithmus
 
-As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
+Ab [**AAPS** Version 3.3](#version3300) wurde [Dynamischer ISF](../DailyLifeWithAaps/DynamicISF.md) in den Abschnitt OpenAPS SMB verschoben.
 
 ### OpenAPS AMA
 
@@ -351,7 +351,7 @@ Alle OpenAPS AMA-Einstellungen sind im eigenen Abschnitt in [OpenAPS Funktionen 
 (Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 Der Algorithmus verwendet die Auswirkungen auf den Blutzuckerspiegel (BGI - blood glucose impact), um zu bestimmen, wann [Kohlenhydrate absorbiert werden](../DailyLifeWithAaps/CobCalculation.md).
 
@@ -386,7 +386,7 @@ Bei Bedarf aktiviere BT Watchdog (z.B. bei Dana Pumpen). Er deaktiviert Bluetoot
 
 ## Pumpen-Einstellungen
 
-The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump).  Kopple Deine Pumpe und richte sie entsprechend der [pumpenspezifischen Beschreibung](../Getting-Started/CompatiblePumps.md) ein.
+Die Einstellungen hier sind je nach Pumpenmodell, das Du in der [Konfiguration > Pumpe](#Config-Builder-pump) gewählt hast, unterschiedlich.  Kopple Deine Pumpe und richte sie entsprechend der [pumpenspezifischen Beschreibung](../Getting-Started/CompatiblePumps.md) ein.
 
 ## Tidepool
 
@@ -481,7 +481,7 @@ Einstellungen sollten selbsterklärend sein.
 
 ![Wartungseinstellungen](../images/Pref2020_Maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+**E-Mail-Empfänger**: Standardempfänger für Protokolldateien (sog. Logs) ist <logs@aaps.app>.
 
 **Datenübermittlung**
 
@@ -489,13 +489,13 @@ Einstellungen sollten selbsterklärend sein.
 
 Du kannst bei der Weiterentwicklung von **AAPS** unterstützen, indem Du Absturzberichte an die Entwickler sendest.
 
-**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+**Automatischer Export der Einstellungen**<br/> Durch Aktivieren dieser Funktion lässt Du zu, dass **AAPS** Deine Einstellungen ohne manuellen Eingriff exportiert. Dazu wird das Master-Passwort beim nächsten manuellen Export sicher auf Deinem Smartphone (und nur dort) gespeichert. Das gespeicherte Passwort wird für bis zu 4 Wochen verwendet. Nach 4 Wochen erhältst Du eine Information, dass das Passwort bald ablaufen wird. Während einer einwöchigen Übergangsfrist kann das Passwort dann aktualisiert werden, indem die Einstellungen manuell über das Wartungsmenü exportiert werden.
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the AAPS 'Careportal' and 'User entry' lists under Treatments.
+Nach Ablauf der einwöchigen Übergangsfrist, läuft das gespeicherte Passwort ab und alle automatisierten Exporte der Einstellungen werden gestoppt. Du wirst darüber informiert und aufgefordert das Passwort erneut einzugeben.  [(**Einstellungen automatisiert exportiert**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) wird in AAPS 'Behandlungen' und 'Benutzereintrag' geloggt.
 
-After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
+Nach dem Aktivieren dieser Option exportiere die Einstellungen manuell, sodass Du zur Passworteingabe aufgefordert wirst und **AAPS** es dann speichern kann.
 
-(preferences-maintenance-logdirectory)= Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
+(preferences-maintenance-logdirectory)= Der Abschnitt Einstellungen enthält auch das **AAPS**-Verzeichnis, welches Du direkt auf dem Reiter „Wartung“ findest. Diese Einstellung erlaubt es Dir, ein Verzeichnis auf Deinem Smartphone auszuwählen, in dem **AAPS** Einstellungen, Logs und andere Dateien speichert.
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 

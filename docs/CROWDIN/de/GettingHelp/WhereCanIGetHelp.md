@@ -12,11 +12,11 @@ Dieses Projekt basiert auf ehrenamtlicher Arbeit, weshalb einige Regeln existier
 
 Für Unterstützung zu CGM-Quellen nutze bitte die Facebook-Gruppen oder Discord-Kanäle für das jeweilige System (z. B. [xDrip+](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)). Bei Unterstützungsbedarf zu Nightscout nutze [CGM in der Cloud](https://www.facebook.com/groups/cgminthecloud/), da die Mitglieder dort Spezialwissen haben, das Leute in den verschiedenen Systemgruppen nicht in der Tiefe besitzen.
 
-## Make sure to join the AndroidAPS users group on Facebook or Discord!
+## Achte darauf, der AndroidAPS-Gruppe auf Facebook oder Discord beizutreten!
 
-Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and/or [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw). Du kannst dort alle Fragen zum Algorithmus stellen, alle Setup-Probleme posten, die du mit Android Studio und der Erstellung der APK hast, alle Fragen zur Verwendung der App anbringen und auch Tipps bekommen, wie du die App optimal nutzen kannst. Es gibt auch eine Gruppe für die Combo Insulinpumpe [AAPSCombo](https://www.facebook.com/groups/127507891261169/), die ein etwas spezifischeres Setup hat.
+Trete der [AndroidAPS Facebook-Gruppe](https://www.facebook.com/groups/1900195340201874/) und/oder [AndroidAPS auf Discord](https://discord.gg/4fQUWHZ4Mw) bei. Du kannst dort alle Fragen zum Algorithmus stellen, alle Setup-Probleme posten, die du mit Android Studio und der Erstellung der APK hast, alle Fragen zur Verwendung der App anbringen und auch Tipps bekommen, wie du die App optimal nutzen kannst. Es gibt auch eine Gruppe für die Combo Insulinpumpe [AAPSCombo](https://www.facebook.com/groups/127507891261169/), die ein etwas spezifischeres Setup hat.
 
-Please note that Facebook has recently removed external links shared within the AAPS Facebook group and this includes current and historic posts which contain external links to the AAPS Notes / Read the docs. For new users who are working through the Objectives and reviewing historic AAPS Facebook posts please search key terms as discussed wthin the AAPS notes for further assistance.
+Bitte beachte, dass Facebook kürzlich innerhalb der AAPS Facebook-Gruppe geteilte externe Links entfernt hat. Dies betrifft sowohl aktuelle als auch ältere Beiträge mit externen Links zu den AAPS-Notizen bzw. zur AAPS Dokumentation („read the docs“). Als Neuling, der sich gerade durch die Ziele arbeitet und auf der Suche nach Hilfe historische AAPS Facebook-Beiträge prüfen möchte, suche mit den Suchbegriffen wie sie in den AAPS-Notizen diskutiert werden.
 
 ## Weitere Informationsquellen in englischer Sprache
 
@@ -53,7 +53,7 @@ Please note that Facebook has recently removed external links shared within the 
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): niederländischsprachige Nutzende von OpenAPS, Loop und AAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
 
-### Norway
+### Norwegen
 
 * [Looped Norge](https://www.facebook.com/groups/loopednorge/)
 
