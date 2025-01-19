@@ -4,7 +4,7 @@ Abhängig von Deinen Einstellungen kannst Du die Konfiguration (engl. Config Bui
 
 ![Konfigurations-Generator öffnen](../images/ConfBuild_Open_AAPS30.png)
 
-Im **Konfiguration**-Tab kannst Du modular einzelne Funktionen ein- und ausschalten. In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated. By default, when opening the Config Builder, sections are collapsed to only show the active plugins. Click on the arrow (G) to show all available options. The boxes on the right-hand side (C) allow you to view the active modules as a tab (E) in **AAPS**. Falls die rechte Box nicht aktiviert ist, sind die Funktionen über das Hamburger-Menü (D) oben links am Bildschirm erreichbar. Mehr dazu findest Du im Abschnitt [Tab oder Hamburger-Menü](#tab-or-hamburger-menu) unten.
+Im **Konfiguration**-Tab kannst Du modular einzelne Funktionen ein- und ausschalten. Im Bild unten kannst Du mit den Kästchen auf der linken Seite (A) auswählen, welche Module Du aktivieren möchtest. Standardmäßig werden beim Öffnen der Konfiguration nur die aktiven Module angezeigt. Klicke auf den Pfeil (G), um alle verfügbaren Optionen anzuzeigen. Mit den Kästchen auf der rechten Seite (C) kannst Du die aktiven Module als Tab (E) in **AAPS** ansehen. Falls die rechte Box nicht aktiviert ist, sind die Funktionen über das Hamburger-Menü (D) oben links am Bildschirm erreichbar. Mehr dazu findest Du im Abschnitt [Tab oder Hamburger-Menü](#tab-or-hamburger-menu) unten.
 
 Falls es innerhalb einer Funktion zusätzliche Einstellmöglichkeiten geben sollte, können diese über das Zahnrad (B) aufgerufen werden.
 
