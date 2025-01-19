@@ -1,4 +1,4 @@
-# Key AAPS features
+# Wichtigste AAPS-Funktionalitäten
 
 (Open-APS-features-autosens)=
 
@@ -105,7 +105,7 @@ Siehe auch [OpenAPS-Dokumentation zu SMB](https://openaps.readthedocs.io/en/late
 
 ### Dynamische Empfindlichkeit aktivieren
 
-This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
+Dies ist die Funktion [Dynamischer ISF](../DailyLifeWithAaps/DynamicISF.md). Mit der Aktivierung werden neue Einstellungsoptionen verfügbar. Die Einstellungen werden auf der Seite zum [Dynamischen ISF](#dyn-isf-preferences) beschrieben.
 
 #### Hohe temporäre Ziele erhöhen die Sensitivität
 
@@ -115,13 +115,13 @@ Wenn Du diese Option aktivierst, wird die Insulinempfindlichkeit bei einem geset
 
 Wenn du diese Option aktivierst, dann wird die Insulinempfindlichkeit verringert, wenn du ein temporäres Ziel unter 100 mg/dl bzw. 5,6 mmol/l setzt. Das bedeutet, der Insulinsensibilitäts-Faktor (ISF) wird gesenkt während der Kohlenhydrate-Faktor (IC) und die Basalrate erhöht werden. Wenn ein niedriges temporäres Ziel aktiv ist, macht diese Option **AAPS** aggressiver.
 
-### Enable Autosens feature
+### Nutze Autosens
 
-This is the [Autosens](#autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
+Das ist die [Autosens](#autosens)-Funktion. Autosens kann nicht gleichzeitig mit dem dynamischen ISF genutzt werden. Der Grund dafür ist, dass die beiden unterschiedlichen Algorithmen die gleichen Variablen zur Empfindlichkeit verändern würden.
 
 Autosens analysiert Deine Glukosewert-Abweichungen (positiv/negativ/neutral). Dabei wird anhand dieser Abweichungen ermittelt, wie empfindlich / resistent Du auf Insulin reagierst und Deine Basalrate und den ISF entsprechend angepasst.
 
-When enabled, new settings become available.
+Mit der Aktivierung werden neue Einstellungsoptionen verfügbar.
 
 ### Empfindlichkeit erhöht den Zielwert
 
@@ -131,19 +131,19 @@ Wenn das Ziel aufgrund der Empfindlichkeitserkennung geändert wird, wird es mit
 
 ![Von Autosens angepasster Zielwert](../images/Home2020_DynamicTargetAdjustment.png)
 
-This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
+Diese Einstellung ist verfügbar, wenn eine der Funktionen "Dynamische Empfindlichkeit aktivieren" oder "Autosens aktivieren" aktiviert sind.
 
 ### Resistenz senkt den Zielwert
 
 Wenn diese Option aktiviert ist, kann die Empfindlichkeitserkennung (Autosens) das Ziel absenken, wenn eine Insulinresistenz erkannt wird (über 100%). In diesem Fall wird Dein Ziel um den Prozentsatz der erkannten Resistenz reduziert.
 
-This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
+Diese Einstellung ist verfügbar, wenn eine der Funktionen "Dynamische Empfindlichkeit aktivieren" oder "Autosens aktivieren" aktiviert sind.
 
 ### Aktiviere SMB
 
 Aktiviere diese Option, um die SMB-Funktionalität zu nutzen. Ist sie deaktiviert, werden keine **SMBs** abgegeben.
 
-When enabled, new settings become available.
+Mit der Aktivierung werden neue Einstellungsoptionen verfügbar.
 
 (Open-APS-features-enable-smb-with-high-temp-targets)=
 
@@ -159,28 +159,28 @@ Wenn diese Option aktiviert ist, werden **SMB** bei einem hohen temporären Ziel
 
 Wenn diese Option aktiviert ist, sind SMB immer aktiviert (unabhängig von COB, temporären Zielen oder Boli). Wenn diese Einstellung aktiviert ist, sind die übrigen Bedingungen ohne Einfluss und werden nicht berücksichtigt. Wenn jedoch **Aktiviere SMB bei hohem temporären Ziel** ausgeschaltet ist und ein hohes temporäres Ziel aktiv ist, werden SMBs nicht abgegeben.
 
-This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Diese Einstellung ist nur dann verfügbar, wenn **AAPS** erkennt, dass Du eine zuverlässige BZ-Quelle mit erweiterter Filterung verwendest. Der FreeStyle Libre 1 wird nicht als zuverlässige Quelle eingestuft, da bei einem Sensorausfall die Gefahr besteht, dass der letzte (und über die Zeit damit falsche) Glukosewert unendlich oft gesendet wird. Verrauschte (d. h. springende) Werte könnten **AAPS** annehmen lassen, dass der Glukosespiegel wirklich schnell steigt und mit unnötigen SMBs ausgeglichen wird. Weitere Informationen über verrauschte Werte und deren Glättung findest Du [hier](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 #### Aktiviere SMB während aktiver Kohlenhydrate.
 
 Wenn diese Einstellung aktiviert ist, werden SMB aktiviert, wenn der COB größer als 0 (z.B. nach Mahlzeiten) ist.
 
-This setting is not visible if "Enable SMB always" is switched on.
+Wenn „SMB immer aktivieren“ eingeschaltet ist, ist diese Einstellung nicht verfügbar.
 
 #### Aktiviere SMB bei aktiven temporären Zielen
 
 Wenn diese Option eingeschaltet ist, werden SMBs bei einem beliebigen gesetzten temporären Ziel (Bald essen, Aktivität, Hypo oder Individuell) abgegeben. Sollte diese Option eingeschaltet sein und **Aktiviere SMB bei hohem temporären Ziel** ist gleichzeritg ausgeschaltet, werden SMBs nur bei einem gesetzten niedrigen Ziel (unter 100 mg/dl) abgegeben, nicht aber bei einem hohen Ziel.
 
-This setting is not visible if "Enable SMB always" is switched on.
+Wenn „SMB immer aktivieren“ eingeschaltet ist, ist diese Einstellung nicht verfügbar.
 
 #### Aktiviere SMB nach Mahlzeiten
 
 Bei eingeschalter Option, sind SMBs für einen Zeitraum von 6h ab dem Zeitpunkt für den KH angekündigt sind aktiv, auch wenn COB mittlerweile 0 ist (keine aktiven KH mehr vorhanden sind).
 
-For safety reasons, this setting is only available if **AAPS** detects that you are using a reliable BG source. It is not visible if "Enable SMB always" is switched on.
+Aus Sicherheitsgründen ist diese Einstellung nur dann verfügbar, wenn **AAPS** erkennt, dass Du eine zuverlässige BZ-Quelle verwendest. Es wird nicht angezeigt, wenn „SMB immer aktivieren“ eingeschaltet ist.
 
-This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
-This setting is not visible if "Enable SMB always" is switched on.
+Diese Einstellung ist nur dann verfügbar, wenn **AAPS** erkennt, dass Du eine zuverlässige BZ-Quelle mit erweiterter Filterung verwendest. Der FreeStyle Libre 1 wird nicht als zuverlässige Quelle eingestuft, da bei einem Sensorausfall die Gefahr besteht, dass der letzte (und über die Zeit damit falsche) Glukosewert unendlich oft gesendet wird. Verrauschte (d. h. springende) Werte könnten **AAPS** annehmen lassen, dass der Glukosespiegel wirklich schnell steigt und mit unnötigen SMBs ausgeglichen wird. Weitere Informationen über verrauschte Werte und Datenglättung findest Du [hier](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
+Diese Einstellung wird nicht angezeigt, wenn "SMB immer aktivieren" eingeschaltet ist.
 
 #### Wie häufig SMBs abgegeben werden (in Min.)
 
@@ -202,11 +202,11 @@ Standardwert: 30 Min.
 
 #### SMB Basal-Limit in Minuten für UAM
 
-This setting allows to adjust the strength of SMB during UAM, when there are no more carbs.
+Wenn es keine weiteren Kohlenhydrate mehr gibt, wird mit dieser Einstellung die SMB-Stärke während UAM angepasst.
 
-Default value : the same as **Max minutes of basal to limit SMB to**.
+Standardwert: Der Wert, der unter **SMB-Basal-Limit in Minuten** hinterlegt ist.
 
-This setting is only visible if "Enable SMB" and "Enable UAM " are switched on.
+Diese Einstellung wird nur angezeigt, wenn „Aktiviere SMB“ und „Aktiviere UAM“ eingeschaltet sind.
 
 ### Aktiviere UAM
 
