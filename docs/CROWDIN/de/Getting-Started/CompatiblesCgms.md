@@ -1,4 +1,4 @@
-# Compatible CGMs
+# Kompatible Sensoren (CGMs)
 
 Dieser Abschnitt gibt einen kurzen Überblick über alle mit **AAPS** kompatiblen Sensoren (**CGMs/FGMs**).
 
@@ -11,13 +11,13 @@ Dieser Abschnitt gibt einen kurzen Überblick über alle mit **AAPS** kompatible
 
 | CGM                                                   | Verfügbare [BZ-Quellen](../SettingUpAaps/ConfigBuilder.md#bg-source) |
 | ----------------------------------------------------- | -------------------------------------------------------------------- |
-| [Dexcom G7 und ONE+](../CompatibleCgms/DexcomG7.md)   | xDrip+, DiaKEM app or Juggluco                                       |
-| [Dexcom G6 und ONE](../CompatibleCgms/DexcomG6.md)    | xDrip+ or BYODA (only G6)                                            |
+| [Dexcom G7 und ONE+](../CompatibleCgms/DexcomG7.md)   | xDrip+, DiaKEM App oder Juggluco                                     |
+| [Dexcom G6 und ONE](../CompatibleCgms/DexcomG6.md)    | xDrip+ oder BYODA (nur G6)                                           |
 | [Dexcom G5](../CompatibleCgms/DexcomG5.md)            | xDrip+                                                               |
-| [Libre 3](../CompatibleCgms/Libre3.md)                | xDrip+ (no transmitter) or Juggluco                                  |
-| [Libre 2](../CompatibleCgms/Libre2.md)                | xDrip+ (no transmitter) or Juggluco                                  |
-| [Libre 1](../CompatibleCgms/Libre1.md)                | xDrip+, Glimp, Tomato oder Diabox. Need a transmitter                |
-| [Eversense](../CompatibleCgms/Eversense.md)           | xDrip+ or ESEL/Eversense patched App                                 |
+| [Libre 3](../CompatibleCgms/Libre3.md)                | xDrip+ (ohne Transmitter) oder Juggluco                              |
+| [Libre 2](../CompatibleCgms/Libre2.md)                | xDrip+ (ohne Transmitter) oder Juggluco                              |
+| [Libre 1](../CompatibleCgms/Libre1.md)                | xDrip+, Glimp, Tomato oder Diabox. Transmitter erforderlich          |
+| [Eversense](../CompatibleCgms/Eversense.md)           | xDrip+ oder ESEL/Eversense patched App                               |
 | [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md) | xDrip+ oder MM640g + 600SeriesAndroidUploader-App                    |
 | [PocTech](../CompatibleCgms/PocTech.md)               | PocTech                                                              |
 | [Ottai](../CompatibleCgms/OttaiM8.md)                 | Ottai                                                                |
