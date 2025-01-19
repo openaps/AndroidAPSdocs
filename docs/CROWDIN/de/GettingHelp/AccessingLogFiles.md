@@ -3,10 +3,10 @@
 # Auf die Protokolldateien zugreifen
 
 * Verbinde das Smartphone mit dem Computer im Dateiübertragungsmodus
-* Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  
-    The naming of the root storage folder may vary a little depending on the phone.
-* The location is `Android\data\info.nightscout.aapsclient\files` for [AAPSClient](#RemoteControl_aapsclient).
-* Note : log location has changed in **AAPS 3.3**. See the previous versions' documentation if needed.
+* Suche im AAPS-Datenverzeichnis `Android\data\info.nightscout.androidaps\files` nach den Protokolldateien.  
+    Die Benennung des Root-Speicher-Ordners kann je nach Smartphone etwas variieren.
+* Für den [AAPSClient](#RemoteControl_aapsclient) ist es `Android\data\info.nightscout.aapsclient\files`.
+* Hinweis: In **AAPS 3.3** hat sich der Speicherort für die Protokolldatei geändert. Wenn notwendig, schaue in der Dokumentation der Vorgängerversion nach.
 
 ![Logdateien](../images/aapslog.png)
 
