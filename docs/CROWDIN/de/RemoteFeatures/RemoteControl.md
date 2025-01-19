@@ -21,21 +21,21 @@ Der **AAPSClient** sieht **AAPS** sehr ähnlich, und stellt den Eltern/Betreuend
 
 ![NSCLIENT_ 2024-05-17 134512](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
 
-### About AAPSClient and AAPSClient2
+### Über den AAPSClient und AAPSClient2
 
-There are 2 versions of the apk that can be installed, **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
+Es gibt 2 Versionen der APK, die installiert werden können: **AAPSClient** & **AAPSClient2**. Der kleine aber feine Unterschied zwischen den Versionen wird unten erklärt.
 
 Sollte die Notwendigkeit bestehen, ein weiteres AAPS-Smartphone (eines anderen Patienten mit einem Nightscout-Konto) zu steuern, ist eine weitere Kopie des **AAPSClient** notwendig. Hierzu muss dann der **AAPSClient2** zusätzlich zum **AAPSClient** installiert werden. Durch den **AAPSClient 2** ist es möglich, dass eine betreuende Person die **AAPSClient** apk zweimal auf dem Follower-Smartphone installieren kann und so den Daten von zwei Patienten gleichzeitig folgen kann.
 
-To differentiate between the two apps, some elements have a different background color: yellow for **AAPSClient**, blue for **AAPSClient2**. Those elements are the app icon, the widget, and the **AAPS** status section in the app itself. <br/> Note : opacity of the widget background is customizable.
+Um die beiden Apps unterscheiden zu können, haben einige Elemente der App andere Hintergrundfarben: gelb für **AAPSClient**, blau für **AAPSClient2**. Die sich unterscheidenden Elemente sind das App-Symbol, das Widget und der **AAPS**-Statusbereich in der App selbst. <br/> Hinweis : Die Transparenz des Widget-Hintergrunds ist anpassbar.
 
 ![AAPSClient_and_AAPSClient2.png](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
 
-### Download and installation
+### Herunterladen und Installieren
 
 **AAPSClient** kann auf einem einzigen Smartphone oder mehreren Follower-Smartphones installiert werden (z.B. auf das Follower-Smartphone des ersten Elternteils und des zweiten Elternteils), um so beiden die Möglichkeit zu geben das zugehörige **AAPS**-Master-Smartphone remote zu steuern.
 
-To download **AAPSClient**, navigate to the [GitHUb repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+Um den **AAPSClient** herunterzuladen, navigiere zum [GitHub-Repository](https://github.com/nightscout/AndroidAPS/releases/) und klicke auf das Element **„app-AAPSClient-release_x.x.x.x“** (die im Screenshot unten gezeigte Version kann eventuell älter sein):
 
 ![grafik](../images/remote_control_and_following/AAPSClient_download_02.png)
 
@@ -49,7 +49,7 @@ Die **AAPSClient** apk kann nun entweder:
 
 Mit einem USB-Kabel auf das Follower-Smartphone übertragen werden, oder in einen Google-Drive Ordner gezogen werden und dann auf das Follower-Smartphone durch klicken auf app-"AAPSClient-release-"-Datei gebracht werden.
 
-Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the Github repository as described above. The reason is that you can't install both **AAPS** and **AAPSClient** on the same phone, signed by a different key. <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). On the **Generate signed App Bundle or APK** page, select **aapsclientRelease** instead of **fullRelease**.
+Sollten Du **AAPS** für Dich selbst und den **AAPSClient** zum Folgen anderer Personen benötigen, musst Du den **AAPSClient** selbst erstellen und kannst ihn nicht, wie oben beschrieben, aus dem Github-Repository herunterzuladen. Der Grund dafür ist, dass mit unterschiedlichen Schlüsseln signierte Apps (**AAPS** und **AAPSClient**) nicht auf dem gleichen Smartphone installiert werden können. <br/> Um den **AAPSClient** selbst zu erstellen, folge dem Prozess eines [herkömmlichen AAPS Builds](../SettingUpAaps/BuildingAaps.md). An der Stelle **Generate signed App Bundle or APK**, wählst Du anstelle von **fullRelease** in diesem Fall **aapsclientRelease** aus.
 
 ### Synchronisierung - AAPSClient und AAPS einrichten (für Version 3.2.0.0 und höher)
 
