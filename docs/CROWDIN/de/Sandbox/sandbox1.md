@@ -2,7 +2,7 @@
 orphan: true
 - - -
 
-# internal sandbox file 1 for testing our sprint
+# Interne Sandbox Datei 1 zum Testen unseres Sprints
 
 ```{admonition} no need to translate this
 :class: note
@@ -26,13 +26,13 @@ Dies ist eine interne Sandbox-Datei für das Dokumentationsteam zum Testen
     1. CROWDIN Übersetzung und
     2. Read The Docs Deployment.
 
-You can directly jump from here to the second label in this file - ["Jump"](#this-is-another-test) or [tag jump](#sandbox1-this-is-another-test).
+Du kannst direkt von hier zum zweiten Label in dieser Datei springen - ["Jump"](#this-is-another-test) oder [tag jump](#sandbox1-this-is-another-test).
 
-And you can jump to the first label too - ["Jump"](#this-is-a-test) or [tag jump](#sandbox1-this-is-a-test).
+Und Du kannst zum ersten Label springen - ["Jump"](#this-is-a-test) oder [tag springen](#sandbox1-this-is-a-test).
 
-Here you can jump to the second sandbox file - ["Jump"](./MoveTest/sandbox2.md)  or [tag jump](#sandbox2-this-is-a-test).
+Hier kannst Du zur zweiten Sandbox-Datei springen - ["Jump"](./MoveTest/sandbox2.md) oder [tag jump](#sandbox2-this-is-a-test).
 
-You can directly jump from here to the first label in the sandbox2.md file - ["Jump"](./MoveTest/sandbox2.md#this-is-a-test).
+Du kannst direkt von hier zum ersten Label in der sandbox2.md-Datei springen - ["Jump"](./MoveTest/sandbox2.md#this-is-a-test).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -56,14 +56,14 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-Label in the middle of [nowhere](#sandbox1-in-the-middle-of-nowhere) This instead is the label to [](#sandbox1-this-is-another-test) and it should display its name
+Label im [Nichts](#sandbox1-in-the-middle-of-nowhere) Dies ist stattdessen die Bezeichnung für [](#sandbox1-this-is-another-test) und sollte den Namen anzeigen
 
-Links with anchor :
-- [how long will it take?](#preparing-how-long-will-it-take)
+Links mit Anker:
+- [wie lange wird das dauern?](#preparing-how-long-will-it-take)
 - [NSClient settings in Preferences](#Preferences-nsclient).
 - [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4
 - [Screenshots](../DailyLifeWithAaps/AapsScreens.md)
-- [Screenshot main graph](#aaps-screens-main-graph) to header level 3
-- [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
+- [Screenshot-Hauptdiagramm](#aaps-screens-main-graph) für Header Level 3
+- [OpenAPS Funktionen](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
 - [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
-- [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb)
+- [SMB-Abschnitt in dieser Dokumentation](#Open-APS-features-super-micro-bolus-smb)
