@@ -72,7 +72,7 @@
 
 **目標 3**要求使用者通過一個多選考試，該考試旨在測試你的**AAPS**知識。
 
-有些使用者覺得**目標 3**是最難完成的目標。 請閱讀**AAPS**文檔以了解題目。 如果你在研究**AAPS**文檔後仍然感到困惑，請在[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)群組中搜尋「目標 3」（因為你的問題很可能已經被提問並得到回覆）。 這些群組可以提供友善的提示，或指引你查閱**AAPS**文檔的相關部分。
+有些使用者覺得**目標 3**是最難完成的目標。 請閱讀**AAPS**文件以了解題目。 如果你在研究**AAPS**文件後仍然感到困惑，請在[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)群組中搜尋「目標 3」（因為你的問題很可能已經被提問並得到回覆）。 這些群組可以提供友善的提示，或指引你查閱**AAPS**文件的相關部分。
 
 同時：
 - 為減少在開放循環中要求你做出的通知/決策數量（臨時基礎率），請在你的**設定檔**中設置一個寬廣的目標範圍_例如_90 - 150 mg/dl或5.0 - 8.5 mmol/l。
@@ -149,7 +149,7 @@
 
 在**目標 6**期間，**AAPS**將最大IOB設定重置為零。 **此覆蓋設定將在進入目標 7 時結束。**
 
-這意味著當你在**目標 6**時，如果感應器的血糖水平下降，**AAPS**將為你減少基礎胰島素的供應。 但是，如果感應器的血糖水平上升，**AAPS**將僅在**基礎IOB**因之前的**LGS**而為負時，才會將基礎速率提高到超過你的**設定檔**值。 否則，**AAPS**不會將基礎提升到超過你當前的個人設定，即使血糖水平上升。 這樣的警告是為了避免低血糖，因為你正在學習使用**AAPS**。
+這意味著當你在**目標 6**時，如果傳感器的血糖水平下降，**AAPS**將為你減少基礎胰島素的供應。 但是，如果傳感器的血糖水平上升，**AAPS**將僅在**基礎IOB**因之前的**LGS**而為負時，才會將基礎速率提高到超過你的**設定檔**值。 否則，**AAPS**不會將基礎提升到超過你當前的個人設定，即使血糖水平上升。 這樣的警告是為了避免低血糖，因為你正在學習使用**AAPS**。
 
 **因此，你必須用手動的胰島素注射來處理高血糖值。**
 
@@ -204,8 +204,8 @@
 
 完成此目標的最短時間為**28天**。 這是一個強制的等待時間。 在這段時間內你無法進入下一個目標。
 
-- 本文件中的[SMB部分](#Open-APS-features-super-micro-bolus-smb)和[openAPS文檔中的oref1覆蓋](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)是理解**SMB**及**零溫度設定**的必讀內容。
-- 一旦完成，你可以[提升最大IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)以更有效地使用**SMB**。 最大IOB現在包含所有**IOB**，而不僅僅是累積的基礎。 此閾值暫停**SMB**，直到IOB降至此值以下（_例如_，**最大IOB**設為7U，而為了覆蓋一餐注射8U：在IOB降到7U以下之前，SMBs將被暫停，並不會發放）。 建議的初始設定為將**maxIOB**設為**平均餐後追加劑量 + 3 倍的每日最高基礎速率**，其中「每日最高基礎速率」指一天中任意時段的每小時最大值。 請參考[目標 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets)。
+- 本文件中的[SMB部分](#Open-APS-features-super-micro-bolus-smb)和[openAPS文件中的oref1覆蓋](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)是理解**SMB**及**零溫度設定**的必讀內容。
+- 一旦完成，你可以[提升最大IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)以更有效地使用**SMB**。 最大IOB現在包含所有**IOB**，而不僅僅是累積的基礎。 此門檻值暫停**SMB**，直到IOB降至此值以下（_例如_，**最大IOB**設為7U，而為了覆蓋一餐注射8U：在IOB降到7U以下之前，SMBs將被暫停，並不會發放）。 建議的初始設定為將**maxIOB**設為**平均餐後追加劑量 + 3 倍的每日最高基礎速率**，其中「每日最高基礎速率」指一天中任意時段的每小時最大值。 請參考[目標 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets)。
 - 評估你的碳水化合物吸收率，並考慮如果覺得速度太慢或太快，改變[偏好設定 > 吸收設定 > min_5m_carbimpact](#Preferences-min_5m_carbimpact)中的“min_5m_carbimpact”參數。
 
 (objectives-objective10)=
@@ -215,7 +215,7 @@
 
 完成此目標的最短時間為**28天**。 這是一個強制的等待時間。 在這段時間內你無法進入下一個目標。
 
-首先閱讀文檔頁面[自動化](../DailyLifeWithAaps/Automations.md)。
+首先閱讀文件頁面[自動化](../DailyLifeWithAaps/Automations.md)。
 
 設置最基本的自動化規則；例如在幾分鐘內觸發一個 Android 通知：
 - 選擇通知頁籤
@@ -231,7 +231,7 @@
   - 點擊“通知”以編輯消息，輸入類似“我的第一個自動化”的內容
 - 等到時間觸發通知（根據你的手機，可能會有幾分鐘的延遲）
 
-接下來，你可以嘗試設置更有用的**自動化**。 文檔頁面提供了一些範例，你也可以在[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)群組中搜尋“自動化”截圖。 在[Discord](https://discord.gg/4fQUWHZ4Mw)社群中也有一個專屬頻道。
+接下來，你可以嘗試設置更有用的**自動化**。 文件頁面提供了一些範例，你也可以在[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)群組中搜尋“自動化”截圖。 在[Discord](https://discord.gg/4fQUWHZ4Mw)社群中也有一個專屬頻道。
 
 例如，如果你每天早上在上學/上班前的同一時間吃相同的早餐，你可以建立一個**自動化**，比如“早餐前目標”，以在早餐前30分鐘將**臨時目標**設置為稍微降低的值。 在這種情況下，你的條件可能會包括 "定期時間"，選擇一週中的特定日子（星期一、星期二、星期三、星期四、星期五）和特定時間（上午 06:30）。 該行動將包含“開始臨時目標”，搭配一個低於平常目標值的設定，並持續 30 分鐘。
 
