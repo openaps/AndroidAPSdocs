@@ -13,3 +13,11 @@ orphan: true
 
 - 在 [組態建置工具，BG 資料來源](#Config-Builder-bg-source) 中選擇 Ottai。
 
+Enable broadcast in the Ottai app:
+
+1. Select Profile
+2. Ottai hub
+3. Tap Share with AAPS, accept the third party data transfer agreement
+4. Enable Share glucose data with AAPS
+
+![歐泰(Ottai)](../images/Ottai.png)
