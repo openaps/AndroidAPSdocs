@@ -352,7 +352,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 現在我們進入設定嚮導中的一個非常重要的部分。
 
-在嘗試在下一個畫面中輸入你的個人設置詳細資訊之前，請閱讀關於[個人設置](../SettingUpAaps/YourAapsProfile.md)的文件。
+在嘗試在下一個畫面中輸入你的設定檔詳細資訊之前，請閱讀關於[設定檔](../SettingUpAaps/YourAapsProfile.md)的文件。
 
 ```{admonition} Working profile required - no exceptions here !
 :class: 危險
