@@ -3,7 +3,7 @@
 
 請遵循[更新手冊](UpdateToNewVersion)中的指示。 問題排除部分也更新手冊頁面上說明了，包含升級**AAPS**時最常遇到的問題。
 
-You will receive the information as soon as a new update is available. If you do not update until expiration date **AAPS** will switch to Open Loop.
+一旦有新的更新可用，您將立即收到相關資訊。 如果您未在到期日之前更新，**AAPS** 將切換至開環模式。
 
 ![更新資訊](../images/AAPS_LoopDisable90days.png)
 
