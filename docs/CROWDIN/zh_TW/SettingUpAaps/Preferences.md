@@ -225,7 +225,7 @@
 
 如果超出警告門檻值，數值將顯示為黃色。 如果超出危急門檻值，數值將顯示為紅色。
 
-最後一個選項允許你從Nightscout匯入那些設定（如果在那裡定義）。 詳情請參考[Nightscout文檔](https://nightscout.github.io/nightscout/setup_variables/#age-pills)。
+最後一個選項允許你從Nightscout匯入那些設定（如果在那裡定義）。 詳情請參考[Nightscout文件](https://nightscout.github.io/nightscout/setup_variables/#age-pills)。
 
 ![偏好設定 > 狀態燈](../images/Pref2020_OV_StatusLights2.png)
 
@@ -321,7 +321,7 @@
 
 在此模式中，[maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) 設定為零。
 
-這意味著如果血糖下降，**AAPS** 可以為你減少基礎胰島素。 但是，如果血糖上升，則不會進行自動校正。 你的基礎率將保持在你當前**個人設置**中定義的值。 僅當基礎IOB為負值（來自先前的低血糖暫停）時，才會額外給予胰島素以降低**BG**。
+這意味著如果血糖下降，**AAPS** 可以為你減少基礎胰島素。 但是，如果血糖上升，則不會進行自動校正。 你的基礎率將保持在你當前**設定檔**中定義的值。 僅當基礎IOB為負值（來自先前的低血糖暫停）時，才會額外給予胰島素以降低**BG**。
 
 (Preferences-minimal-request-change)=
 ### 最小請求變更
