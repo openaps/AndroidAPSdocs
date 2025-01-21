@@ -62,7 +62,7 @@ Erscheinungsdatum: 15.01.2025
 
 ### So wird aktualisiert
 
-* Um diese Version zu erstellen, benötigst Du die [Android Studio Version „Ladybug Feature Drop“](#Building-APK-recommended-specification-of-computer-for-building-apk-file) oder höher. **Dies ist eine andere Version als die Standardverion „Ladybug“.** Wenn Du schon eine AAPS 3.3.x-Version erstellt hast, musst Du Android Studio erneut aktualisieren.
+* Um diese Version zu erstellen, benötigst Du die [Android Studio Version „Ladybug Feature Drop“](#Building-APK-recommended-specification-of-computer-for-building-apk-file) oder höher. **Dies ist eine andere Version als die Standardversion „Ladybug“.** Wenn Du schon eine AAPS 3.3.x-Version erstellt hast, musst Du Android Studio erneut aktualisieren.
 
 ### Behobene Fehler
 
