@@ -3,13 +3,7 @@
 
 Gehe durch Schritte der [Update-Anleitung](UpdateToNewVersion). Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
 
-Folgende Information wird angezeigt, sobald ein neues Update zur Verfügung steht:
-
-![Update-Info](../images/AAPS_LoopLGS60days.png)
-
-Du hast dann 60 Tage Zeit **AAPS** zu aktualisieren. Wenn Du nicht innerhalb des 60 Tage-Zeitraums aktualisierst, wird **AAPS** wie in [Ziel 6](#objectives-objective6) auf LGS zurückfallen (Low Glucose Suspend) - siehe [Glossar](../UsefulLinks/Glossary.md)).
-
-Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualisierst, wird **AAPS** auf Open Loop wechseln.
+You will receive the information as soon as a new update is available. If you do not update until expiration date **AAPS** will switch to Open Loop.
 
 ![Update-Info](../images/AAPS_LoopDisable90days.png)
 
