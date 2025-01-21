@@ -174,7 +174,7 @@ Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報�
 
 該網站和應用程式已不再開發。 支援可以在 [Facebook](https://www.facebook.com/groups/1973791946274873) 和 [Gitter](https://gitter.im/SpikeiOS/Lobby) 上找到。
 
-## 智慧型手錶用於**監控 AAPS**（完整個人設置資料或僅限血糖），其中**AAPS**在手機上運行。
+## 智慧型手錶用於**監控 AAPS**（完整設定檔資料或僅限血糖），其中**AAPS**在手機上運行。
 
 請參閱 [這裡](../Getting-Started/Watches.md).
 

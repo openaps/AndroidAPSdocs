@@ -3,13 +3,7 @@
 
 請遵循[更新手冊](UpdateToNewVersion)中的指示。 問題排除部分也更新手冊頁面上說明了，包含升級**AAPS**時最常遇到的問題。
 
-當有新版本可用時，你將收到以下資訊：
-
-![更新資訊](../images/AAPS_LoopLGS60days.png)
-
-之後你有 60 天的時間來更新 **AAPS**。 如果你在 60 天內未完成更新，**AAPS** 將退回到 LGS（低血糖暫停 - 請參閱 [詞彙表](../UsefulLinks/Glossary.md)），如同 [目標 6](#objectives-objective6) 中所描述。
-
-如果你再延遲 30 天未更新（自新版本發佈日起共計 90 天），**AAPS** 將切換為開環模式。
+一旦有新的更新可用，您將立即收到相關資訊。 如果您未在到期日之前更新，**AAPS** 將切換至開環模式。
 
 ![更新資訊](../images/AAPS_LoopDisable90days.png)
 

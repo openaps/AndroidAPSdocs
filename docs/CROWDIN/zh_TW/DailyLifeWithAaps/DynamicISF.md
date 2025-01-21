@@ -1,7 +1,7 @@
 (Open-APS-features-DynamicISF)=
 # 動態 ISF (DynISF)
 
-到目前為止，使用 **AMA** 和 **SMB**，**ISF** 在 **個人設置** 中定義，並且在一天中的每個定義時間段內是靜態的。 但實際上，一個人的 **ISF** 並不是那麼靜態，而是根據他們的 **血糖** 水平而變化：當 **血糖** 水平很高時，使用者需要更多的胰島素來將其 **血糖** 降低 50mg/dL / 3mmol/L，這比在較低的 **血糖** 時更需要。 [Autosens](#Open-APS-features-autosens) 是第一個嘗試解決此問題的演算法，通過在用餐時間以外調整 **ISF**。
+到目前為止，使用 **AMA** 和 **SMB**，**ISF** 在 **設定檔** 中定義，並且在一天中的每個定義時間段內是靜態的。 但實際上，一個人的 **ISF** 並不是那麼靜態，而是根據他們的 **血糖** 水平而變化：當 **血糖** 水平很高時，使用者需要更多的胰島素來將其 **血糖** 降低 50mg/dL / 3mmol/L，這比在較低的 **血糖** 時更需要。 [Autosens](#Open-APS-features-autosens) 是第一個嘗試解決此問題的演算法，通過在用餐時間以外調整 **ISF**。
 
 **Dynamic ISF**（也稱為 **DynISF**）具有相同的目的，但更為先進，因為它可以在任何時間使用。 建議僅供具有良好控管和監控 **AAPS** 的進階使用者使用。 在嘗試之前，請閱讀以下 [啟動 Dynamic ISF 時需考慮的事項](#dyn-isf-things-to-consider-when-activating-dynamicisf)。
 
@@ -10,7 +10,7 @@
 
 **自動化** 應始終小心使用。 這在使用 **Dynamic ISF** 時尤其如此。
 
-使用 **Dynamic ISF** 時，請停用任何臨時 **個人設置** 更改作為 **自動化** 規則，因為這將導致 **Dynamic ISF** 在注射修正時過於激進，導致低血糖。 這正是 **Dynamic ISF** 的目的，因此在高 **血糖** 的情況下無需通過自動化告訴 **AAPS** 提供額外的胰島素。
+使用 **Dynamic ISF** 時，請停用任何臨時 **設定檔** 更改作為 **自動化** 規則，因為這將導致 **Dynamic ISF** 在注射修正時過於激進，導致低血糖。 這正是 **Dynamic ISF** 的目的，因此在高 **血糖** 的情況下無需通過自動化告訴 **AAPS** 提供額外的胰島素。
 
 ```
 
@@ -23,9 +23,9 @@
 - 每日胰島素總量（**TDD**）；以及
 - 目前和預測的血糖值。
 
-使用 **Dynamic ISF** 時，**個人設置** 中輸入的 **ISF** 值不再使用，除非在 **AAPS** 資料庫中沒有足夠的 TDD 資料作為後備（例如 *即* 應用的全新重新安裝）。
+使用 **Dynamic ISF** 時，**設定檔** 中輸入的 **ISF** 值不再使用，除非在 **AAPS** 資料庫中沒有足夠的 TDD 資料作為後備（例如 *即* 應用的全新重新安裝）。
 
-**SMB/AMA** - 使用者的 **個人設置** 示例，其中的靜態 **ISF** 由使用者設置，並由 **SMB** 和 **AMA** 使用。
+**SMB/AMA** - 使用者的 **設定檔** 示例，其中的靜態 **ISF** 由使用者設置，並由 **SMB** 和 **AMA** 使用。
 
 ![靜態 ISF](../images/DynamicISF/DynISF1.png)
 
@@ -39,7 +39,7 @@
 
 ## Dynamic ISF 是如何計算的？
 
-**Dynamic ISF** 使用 Chris Wilson 的模型來確定**ISF**，而不是使用者在**個人設置** 中設定的靜態**ISF** 值。 詳細解釋可以在此找到： [Chris Wilson 談論 Loop 和 Learn 的胰島素敏感度（修正因子），2022 年 2 月 6 日](https://www.youtube.com/watch?v=oL49FhOts3c)。
+**Dynamic ISF** 使用 Chris Wilson 的模型來確定**ISF**，而不是使用者在**設定檔** 中設定的靜態**ISF** 值。 詳細解釋可以在此找到： [Chris Wilson 談論 Loop 和 Learn 的胰島素敏感度（修正因子），2022 年 2 月 6 日](https://www.youtube.com/watch?v=oL49FhOts3c)。
 
 實施的**Dynamic ISF**方程式為： `ISF = 1800 / ((TDD * DynISF 調整因子) * Ln (( 當前血糖 / 胰島素除數) + 1 ))`
 

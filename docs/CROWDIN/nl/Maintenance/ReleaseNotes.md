@@ -3,13 +3,7 @@
 
 Please follow the instructions in the [update manual](UpdateToNewVersion). The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
 
-Zodra een nieuwe update beschikbaar is zie je de volgende melding:
-
-![Update info](../images/AAPS_LoopLGS60days.png)
-
-Then you have 60 days to update **AAPS**. If you do not update within the 60 day time period **AAPS** will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
-
-If you do not update for another 30 days (90 days from new release date) **AAPS** will switch to Open Loop.
+You will receive the information as soon as a new update is available. If you do not update until expiration date **AAPS** will switch to Open Loop.
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 

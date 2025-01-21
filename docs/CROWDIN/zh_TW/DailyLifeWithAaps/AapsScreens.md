@@ -593,7 +593,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ![設定檔](../images/Screenshots_Profile.png)
 
-個人設置包含你個別糖尿病設定的資訊，請參閱詳細的**[個人設置](../SettingUpAaps/YourAapsProfile.md)**頁面以獲取更多資訊。
+設定檔包含你個別糖尿病設定的資訊，請參閱詳細的**[設定檔](../SettingUpAaps/YourAapsProfile.md)**頁面以獲取更多資訊。
 
 ## 自動化
 

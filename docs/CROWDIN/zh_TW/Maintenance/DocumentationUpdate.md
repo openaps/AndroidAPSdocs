@@ -7,7 +7,7 @@
 
 ## 2024年12月
 
-- 文檔 [3.3版](#version3300) @emilise
+- 文件 [3.3版](#version3300) @emilise
 
 ## 2024年11月
 
@@ -26,9 +26,9 @@
 
 2022年3月到2024年9月的歷史紀錄遺失
 
-隨著 3.2 的重製，一些過時的信息已被移除。 你可以在之前的文檔版本中找到它：
+隨著 3.2 的重製，一些過時的信息已被移除。 你可以在之前的文件版本中找到它：
 
-AAPS 3.1 文檔可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.html) 獲得。
+AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.html) 獲得。
 
 ***
 
