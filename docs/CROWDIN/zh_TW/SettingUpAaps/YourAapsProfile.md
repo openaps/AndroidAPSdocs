@@ -319,9 +319,9 @@
 
 ![設定檔切換](../images/TreatmentsView4.png)
 
-該 [治療](#aaps-screens-treatments) 分頁顯示所有過去的 **設定檔切換**。 進入 **設定檔切換** 子分頁後，你可以使用過去的 **設定檔切換** 作為創建新 **設定檔** 的基礎。 在這種情況下，時差和百分比將應用於新的本地個人設置。 使用**複製**按鈕，該按鈕顯示在**1**行。
+該 [治療](#aaps-screens-treatments) 分頁顯示所有過去的 **設定檔切換**。 進入 **設定檔切換** 子分頁後，你可以使用過去的 **設定檔切換** 作為創建新 **設定檔** 的基礎。 在這種情況下，時差和百分比將應用於新的本地設定檔。 使用**複製**按鈕，該按鈕顯示在**1**行。
 
-你現在可以轉到[個人設置選項卡](#your-aaps-profile-create-and-edit-profiles)以編輯新創建的個人設置。
+你現在可以轉到[設定檔選項卡](#your-aaps-profile-create-and-edit-profiles)以編輯新創建的設定檔。
 
 (YourAapsProfile_Profile-backup)=
 ### 設定檔備份
