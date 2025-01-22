@@ -56,6 +56,19 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 ```
 
 (version3300)=
+## Version 3.3.1.3
+
+Release date: 21-01-2025
+
+### Behobene Fehler
+
+* Dash: bonding is optional (default off) @MilosKozak
+* Equil: fixed bolud 10+U, alarm improvements @EquilHack
+* Garmin: watch improvents @swissalpine
+* Watch improvements @olorinmaia
+* Control loop status from watch @tdrkDev
+* Stability improvements
+
 ## Version 3.3.1.2
 
 Erscheinungsdatum: 15.01.2025
