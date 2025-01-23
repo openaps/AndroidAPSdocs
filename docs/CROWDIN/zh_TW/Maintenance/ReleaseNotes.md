@@ -56,18 +56,18 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
 (version3300)=
-## Version 3.3.1.3
+## 版本 3.3.1.3
 
-Release date: 21-01-2025
+發布日期：2025-01-21
 
 ### 錯誤修正
 
-* Dash: bonding is optional (default off) @MilosKozak
-* Equil: fixed bolud 10+U, alarm improvements @EquilHack
-* Garmin: watch improvents @swissalpine
-* Watch improvements @olorinmaia
-* Control loop status from watch @tdrkDev
-* Stability improvements
+* Dash: 連線是可選的（預設為關閉） @MilosKozak
+* Equil: 修正了注射 10+U，警報改進 @EquilHack
+* Garmin: 手錶改進 @swissalpine
+* 手錶改進 @olorinmaia
+* 從手錶控制循環狀態 @tdrkDev
+* 穩定性改進
 
 ## 版本 3.3.1.2
 
