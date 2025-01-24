@@ -17,7 +17,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 | ----------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
 | [3.2](#version3200)     | Hedgehog (2023.1.1)                                  | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
 | [3.3](#version3300)     | Ladybug (2024.2.1)                                   |                                                                                                                     | 8.9    | 21  |
-| [3.3.1.2](#version3300) | Ladybug Feature Drop (2024.2.2)                      |                                                                                                                     | 8.10   | 21  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      |                                                                                                                     | 8.10   | 21  |
 
 The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
 
@@ -224,7 +224,7 @@ Context | Edit Context
     ```
     и вставьте его в текстовое поле URL (3).
 
-* Check the (default) directory for saving the cloned code exists on your computer and doesn't already exists (4). You can change it to some directory, but please remember where you stored it!
+* Check the (default) directory for saving the cloned code does not already exist on your computer (4). You can change it to some directory, but please remember where you stored it!
 * Теперь нажмите кнопку "Клонировать" (5).
 
 ```{admonition} INFORMATION
