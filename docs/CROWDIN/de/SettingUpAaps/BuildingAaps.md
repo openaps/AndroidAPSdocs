@@ -17,7 +17,7 @@ Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 | ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
 | [3.2](#version3200)     | Hedgehog (2023.1.1)                                     | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
 | [3.3](#version3300)     | Ladybug (2024.2.1)                                      |                                                                                                                     | 8.9    | 21  |
-| [3.3.1.2](#version3300) | Ladybug Feature Drop (2024.2.2)                         |                                                                                                                     | 8.10   | 21  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                         |                                                                                                                     | 8.10   | 21  |
 
 Die „empfohlene Version“ enthält im Paket bereits die entsprechende JVM-Version. Die empfohlene Version ist gleichzeitig auch die Mindestversion, die Du zum Erstellen von **AAPS** nutzen kannst. Mit einer älteren Version als der, die unter „empfohlen“ aufgeführt ist, wirst Du **NICHT** in der Lage sein, AAPS zu erstellen. Solltest Du eine andere Version verwenden, kann es aufgrund der JVM-Version zu Problemen kommen. Schaue auf den Seiten zur [Fehlerbehebung für Android Studio](#troubleshooting_androidstudio-uncommitted-changes) nach, um diese Probleme zu lösen. Wenn Deine aktuelle Android Studio Version nicht in der Tabelle aufgeführt ist, musst Du sie zuerst aktualisieren.
 
@@ -222,7 +222,7 @@ Wir werden Android Studio nun sagen, wo es den Code herunterladen soll:
     ```
     und füge sie in das URL-Textfeld (3) ein.
 
-* Überprüfe ob das (Standard)-Verzeichnis zum Speichern des geklonten Codes auf Deinem Computer nicht bereits existiert (4). You can change it to some directory, but please remember where you stored it!
+* Check the (default) directory for saving the cloned code does not already exist on your computer (4). You can change it to some directory, but please remember where you stored it!
 * Klicke nun auf "Clone" (5).
 
 ```{admonition} INFORMATION
