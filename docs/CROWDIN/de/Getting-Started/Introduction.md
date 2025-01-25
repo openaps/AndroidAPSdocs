@@ -2,7 +2,7 @@
 
 ## Was ist eine "künstliche Bauchspeicheldrüse” (artifical pancreas system)?
 
-Eine menschliche Bauchspeicheldrüse übernimmt neben der Regulierung des Blutzuckers noch viele andere Dinge im Körper. Der Begriff **“künstliche Bausspeicheldrüse” (APS)** beschreibt überlicherweise ein System, dass den Blutzuckerspiegel automatisiert im gesunden Bereich hält.
+Eine menschliche Bauchspeicheldrüse übernimmt neben der Regulierung des Blutzuckers noch viele andere Dinge im Körper. Der Begriff **„künstliche Bausspeicheldrüse“ (APS)** beschreibt üblicherweise ein System, dass den Blutzuckerspiegel automatisiert im gesunden Bereich hält.
 
 Die einfachste Art dies zu tun ist, den **Glukosewert** zu nutzen, um damit **Berechnungen** vorzunehmen und dann eine vorberechnete **Insulin**menge in den Körper abzugeben. Diese Berechnung wird alle paar Minuten wiederholt, Tag und Nacht (24/7). Es nutzt **Alarme** und **Benachrichtigungen**, um die Benutzenden auf notwendige Eingriffe oder Besonderheiten hinzuweisen. Dieses System besteht normalerweise aus einem **Glukose-Sensor**, einer **Insulinpumpe** und einer **App** auf einem Smartphone.
 
@@ -12,14 +12,14 @@ Dieser in 2022 veröffentlichte Artikel, gibt einen Überblick über die derzeit
 
 In naher Zukunft werden einige sogenannte Dual-Hormon-Systeme neben Insulin auch Glucagon zuführen können. Das Ziel dabei ist es, schwere Hypos zu verhindern und eine noch engere Blutzuckerkontrolle zu ermöglichen.
 
-Eine künstliche Bauchspeicheldrüse kann man sich als ["Autopiloten für Deinen Diabetes"](https://www.artificialpancreasbook.com/) vorstellen. Was soll das heißen?
+Eine künstliche Bauchspeicheldrüse kann man sich als [„Autopiloten für Deinen Diabetes“](https://www.artificialpancreasbook.com/) vorstellen. Was soll das heißen?
 
 In einem Flugzeug erledigt ein Autopilot einen Teil der Arbeit des menschlichen Piloten, der Pilot kann nicht durch den gesamten Flug schlafen. Der Autopilot unterstützt die Arbeit des Piloten. Er entlastet ihn von der permanenten Überwachung des Flugzeugs, sodass sich der Pilot von Zeit zu Zeit auf eine umfassendere Überwachung konzentrieren kann. Der Autopilot bekommt Informationen von verschiedenen Sensoren, ein Computer wertet diese aus und vergleicht sie mit den vom Piloten vorgegeben Grenzen und nimmt dann die notwendigen Anpassungen vor. Der Pilot muss damit nicht ständig Entscheidungen treffen und wird auf diese Weise entlastet.
 
 ![grafik](../images/autopilot.png)
 
 (Introduction-what-does-hybrid-closed-loop-mean)=
-## Was bedeutet "Hybrid-Closed-Loop"?
+## Was bedeutet „Hybrid-Closed-Loop“?
 
 Die beste Lösung für Typ-1-Diabetes wäre eine „funktionale Heilung“ (wahrscheinlich die Implantierung von Bauchspeicheldrüsenzellen, die vor der Immunabwehr geschützt sind). Während wir darauf warten, ist eine „full closed Loop" künstliche Bauchspeicheldrüse wahrscheinlich das nächstbeste. Dies ist ein Technologiesystem, das keine Benutzereingabe benötigt (wie z. B. Mahlzeitenbolus abgeben oder körperliche Aktivität "ankündigen"), um eine gute Blutzucker-Kontrolle zu erreichen. Derzeit gibt es noch keine für die Allgemeinheit verfügbaren Systeme, die „full closed loop" sind. Alle benötigen noch Benutzereingaben. Die aktuell verfügbaren Systeme werden als "hybrid closed loop" bezeichnet, da sie eine Kombination aus automatisierter Technik und Benutzereingaben nutzen.
 
@@ -68,7 +68,7 @@ Um Dich über die Sicherheitsfunktionen der Algorithmen, bekannt als oref0 und o
 
 Benutzer können einfach Module oder Funktionen hinzufügen oder entfernen und **AAPS** kann sowohl im Modus Open Loop, als auch im Modus Closed Loop verwendet werden. Hier einige Beispiele für die Möglichkeiten mit dem **AAPS** System:
 
- a) Die Möglichkeit, vor dem Essen ein niedrigeres BZ-Ziel für 30 min zu setzen; Du kannst das Ziel auf 72 mg/dL (4,0 mmol/L) festlegen.
+ a) Die Möglichkeit, vor dem Essen ein niedrigeres BZ-Ziel für 30 min zu setzen; Du kannst das Ziel auf 72 mg/dl (4,0 mmol/l) festlegen.
 
  b) Wenn Du z.B. aufgrund von Insulinresistenz hohe Glukosewerte hast, kannst Du in **AAPS** eine **Automatisierung** erstellen und aktivieren, die bei einem Glukosewert über 144 mg/dl (8 mmol/dl) einen Profilwechsel auf 120 % vornimmt (das führt zu einer Erhöhung der Basalrate um 20 % und einer 20 prozentigen Verstärkung der der anderen Faktoren verglichen mit dem Ausgangs**profil**). Die Automatisierung bleibt für den von Dir angegebenen Zeitraum aktiv. Eine solche Automatisierung kann auch nur in Abhängigkeit von bestimmten Wochentagen, Tageszeiten und sogar vom aktuellen Standort aktiviert werden.
 
@@ -76,7 +76,7 @@ Benutzer können einfach Module oder Funktionen hinzufügen oder entfernen und *
 
  d) Wurde eine Schlauch-Pumpe beispielsweise zum Schwimmen abgekoppelt und wird nun wieder verbunden, berechnet **AAPS** das fehlende Basalinsulin und holt die Basalgabe je nach BZ-Wert vorsichtig nach. Jedes nicht benötigte Insulin kann manuell überschrieben werden, indem man das verpasste Basal einfach „annulliert“.
 
- e) **AAPS** kann mit mehreren Profilen für unterschiedliche Situationen umgehen und zwischen diesen einfach wechseln. Zum Beispiel kann man Funktionen, die den Algorithmus beschleunigen, um erhöhte BZ-Werte zu senken (wie Supermikro-Bolus "(**SMB**”), unangekündigte Mahlzeiten (“**UAM**“)), nur tagsüber funktionieren lassen, wenn man sich Sorgen um Nachthypos macht.
+ e) **AAPS** kann mit mehreren Profilen für unterschiedliche Situationen umgehen und zwischen diesen einfach wechseln. Zum Beispiel kann man Funktionen, die den Algorithmus beschleunigen, um erhöhte BZ-Werte zu senken (wie Supermikro-Bolus („**SMB**“), unangekündigte Mahlzeiten („**UAM**“), nur tagsüber funktionieren lassen, wenn man sich Sorgen um nächtliche Hypos macht.
 
 Dies alles sind Beispiele, das volle Leistungsspektrum bietet große Flexibilität für den Alltag einschließlich Sport, Krankheit, Hormonzyklen _etc_. Es gibt keine Standardlösung für eine solche Automation, sodass es am Ende immer eine individuelle Nutzer*innen-Entscheidung bleibt, wie diese Flexibilität genutzt wird.
 
