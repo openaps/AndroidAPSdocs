@@ -41,14 +41,14 @@ Stelle sicher, dass in dem eMail-Konto, das Du zur Einrichtung des Samsung-Konto
 
 Die wear.apk kann über mehrere Wege aus dem Android Studio auf Dein Smartphone übertragen werden:
 
-a) Mit einem USB-Kabel, um die **AAPS** wear apk Datei auf das Smartphone zu bringen und sie dann über "Sideloading" auf die Smartwatch zu laden. Übertrage die Wear.apk auf das Smartphone über USB in den "Downloads"-Ordner oder
+a) Mit einem USB-Kabel, um die **AAPS** wear apk Datei auf das Smartphone zu bringen und sie dann über "Sideloading" auf die Smartwatch zu laden. Übertrage die Wear.apk auf das Smartphone über USB in den „Downloads“-Ordner oder
 
 b) Schneide die Wear.apk aus Android Studio aus und füge sie in Dein Google Drive Laufwerk ein.
 
 
 Um AAPS per "sideloading" auf die Smartwatch zu bringen, kannst Du entweder Wear Installer 2 oder Easy Fire Tools nutzen. Wir empfehlen den Wear Installer 2 zu nutzen, da die Anleitung und der Prozess im Video klar und verständlich erklärt wird.
 
-## Wear Installer 2 zum "Sideloading" von AAPS Wear vom Smartphone auf die Smartwatch nutzen
+## Wear Installer 2 zum „Sideloading“ von **AAPS** Wear vom Smartphone auf die Smartwatch nutzen
 
  ![grafik](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
@@ -129,7 +129,7 @@ Wenn das Sideloading der **AAPS** Wear.apk auf die Smartwatch erfolgreich war, s
 1.  Wenn Easy Fire Tools sich nicht verbindet oder Du die Meldung "authorisation failed" erhälst > Überprüfe, ob die IP-Adresse korrekt eingegeben wurde.
 2.  Überprüfe, ob die Smartwatch mit dem Internet (und nicht nur über Bluetooth mit dem Smartphone) verbunden ist.
 3.  Überprüfe, ob das **AAPS** Smartphone und die Smartwatch in der Samsung App miteinander gekoppelt bzw. verbunden sind.
-4.  Es kann auch helfen, einen harten Neustart von Smartphone und Smartwatch durchzuführen (d.h. Samartphone aus- und wieder einschalten)
+4.  Es kann auch helfen, einen harten Neustart von Smartphone und Smartwatch durchzuführen (d. h. Smartphone aus- und wieder einschalten)
 5.  Angenommen Du hast die Wear.apk auf Dein Smartphone herunterladen können, bekommst allerdings keine Glukosewerte angezeigt, _überprüfe_, ob Du die richtige **AAPS** apk Version per Sideloading auf die Smartwatch übertragen hast. Wenn Deine AAPS Wear.apk Version in der folgenden Liste enthalten ist a) „wear-AAPSClient-release“; b) „wear-full-release.aab“; oder c) das Wort „debug“ im Namen hat, dann hast Du im Erstellprozess (build) die falsche Wear OS apk Version ausgewählt.
 6.  Überprüfe, dass Dein Router die Geräte nicht voneinander isoliert (IP Isolation).
 
