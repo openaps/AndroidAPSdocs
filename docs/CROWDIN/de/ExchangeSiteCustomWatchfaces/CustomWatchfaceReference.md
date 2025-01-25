@@ -169,7 +169,7 @@ Zwei zusätzliche Parameter, die Du für die Diagrammansicht (ChartView) hinzuf�
 
 (cwf-reference-how-to-build-watchface)=
 
-## Wie Du Dein erstes Zifferblatt entwirfst/ertellst
+## Wie Du Dein erstes Zifferblatt entwirfst/erstellst
 
 ### Benötigte Werkzeuge
 
