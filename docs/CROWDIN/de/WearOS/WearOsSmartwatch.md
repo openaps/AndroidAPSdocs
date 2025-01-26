@@ -145,7 +145,7 @@ In der Basisversion der AAPS Wear OS APK sind schon eine Vielzahl von Zifferblä
 
 ![Screenshot_20231123_124657_sysui](../images/efd4268f-0536-4a31-9ba1-f98108f32483.png)
 
-2. Wische an das Ende der Liste, bis Du die heruntergeladen Zifferblätter "AAPS (Custom)" siehst. Klicke in die Mitte des Bildes, um es in Deine Zifferblatt-Auswahl zu übernehmen. Keine Angst, das Aussehen des "AAPS (Custom)" Zifferblattes kannst Du im nächsten Schritt noch anpassen.
+2. Wische an das Ende der Liste, bis Du die heruntergeladen Zifferblätter „AAPS (Custom)“ siehst. Klicke in die Mitte des Bildes, um es in Deine Zifferblatt-Auswahl zu übernehmen. Keine Angst, das Aussehen des „AAPS (Custom)“-Zifferblattes kannst Du im nächsten Schritt noch anpassen.
 
 ![Screenshot_20231123_124619_sysui](../images/036dc7c4-6672-46c8-b604-8810a16a2eb3.png)
 
@@ -153,11 +153,11 @@ In der Basisversion der AAPS Wear OS APK sind schon eine Vielzahl von Zifferblä
 
 ![Screenshot_20231123_090941_AAPS](../images/5df23fa3-791b-4c9a-999a-251391a82835.png)
 
-4. Klicke auf "Watchface laden" und wähle das gewünschte Zifferblatt aus.
+4. Klicke auf „Watchface laden“ und wähle das gewünschte Zifferblatt aus.
 
 ![Screenshot_20231123_130410_AAPS](../images/adde2eca-1df7-4382-b9ab-346819c35d9d.png)
 
-5. Das ""AAPS (Custom)"-Zifferblatt sollte im ausgewählten Design auf Deiner Smartwatch angezeigt werden. Das Laden kann einige Sekunden dauern. Du kannst jetzt die „Complications“ anpassen, in dem Du lange auf das Zifferblatt drückst und dann auf „Anpassen“ tippst.
+5. Das „AAPS (Custom)“-Zifferblatt sollte im ausgewählten Design auf Deiner Smartwatch angezeigt werden. Das Laden kann einige Sekunden dauern. Du kannst jetzt die „Complications“ anpassen, in dem Du lange auf das Zifferblatt drückst und dann auf „Anpassen“ tippst.
 
 ## AAPSv2 Watchface - Legende
 
