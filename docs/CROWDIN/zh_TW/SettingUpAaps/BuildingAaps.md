@@ -222,7 +222,7 @@ Android Studio 版本非常重要。 請參閱 [上面的指示](#Building-APK-r
     ```
     然後將其粘貼到URL文本框中（3）。
 
-* Check the (default) directory for saving the cloned code does not already exist on your computer (4). 你可以將其更改為某個目錄，但請記得你放置的位置!
+* 檢查用於儲存複製程式碼的（預設）目錄是否已經存在於您的電腦上 (4)。 你可以將其更改為某個目錄，但請記得你放置的位置!
 * 現在點擊“複製”按鈕（5）。
 
 ```{admonition} INFORMATION

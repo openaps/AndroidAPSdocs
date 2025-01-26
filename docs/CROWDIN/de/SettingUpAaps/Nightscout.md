@@ -22,8 +22,8 @@ Du kannst AAPS so einstellen, dass Nightscout-Befehle akzeptiert werden (ProfilÃ
 
 * Zugriff auf die Einstellungen (settings) des NSClient bzw. des NSClientV3-Plugins: 1) Startseite -> Config Builder -> Synchronization -> NSClient Zahnrad-Symbol 2) NSCLIENT Registerkarte -> Dreipunkte-MenÃ¼ -> Plugin preferences
 * Aktiviere das Hochladen aller Daten in Nightscout (3), da dies jetzt die Standardmethode ist, es sei denn, Deine BZ-Datenquelle ist Nightscout.  
-  Wenn Nightscout Deine BZ-Datenquelle ist, dann stelle den Upload der BZ-Daten zu NS **nicht** ein(3).
-* Stelle nicht "Receive/backfill data" (4) ein, es sei denn, Nightscout ist Deine BT-Datenquelle.
+  Wenn Nightscout Deine BZ-Datenquelle ist, dann stelle den Upload der BZ-Daten zu NS **nicht** ein (3).
+* Stelle nicht "Receive/backfill data" (4) ein, es sei denn, Nightscout ist Deine BZ-Datenquelle.
 
 ![Nightscout nur Daten hochladen](../images/NSsafety.png)
 
@@ -42,7 +42,7 @@ Insulineingaben werden nur zu Kalkulationszwecken (wie auch bei "Bolus nur erfas
 
 ### Weitere Sicherheitseinstellungen
 
-Halte Dein Smartphone, wie in den [Sicherheitshinweise](#preparing-safety-first)n beschrieben, auf dem neuesten Stand.
+Halte Dein Smartphone, wie in den [Sicherheitshinweisen](#preparing-safety-first) beschrieben, auf dem neuesten Stand.
 
 (Nightscout-manual-nightscout-setup)=
 
