@@ -140,8 +140,8 @@ Dexcom 傳感器的自動延長（`預防性重啟`）不建議使用，因為�
 - 關閉原始 Dexcom 接收器（如果已使用）。
 - [停止傳感器](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)（僅在更換傳感器時）。
 
-- 在 xDrip+ 系統狀態和手機的藍牙設定中忘記裝置（將顯示為 Dexcom?? 而 ?? 是傳輸器序列號的最後兩位數字）  
-    → 漢堡選單 (1) → 系統狀態 (2) → 如果你處於經典狀態頁面 (3) 向右滑動螢幕 (4) 到達 → G5/G6/G7 狀態頁面 → 忘記裝置 (5)。
+- 在 xDrip+ 系統狀態和手機的藍牙設定中忘記裝置（將顯示為 Dexcom?? 而 ?? are the last two digits of the transmitter serial no.)  
+    → Hamburger Menu (1) → System Status (2) → If you are not on the Classic Status Page (3) swipe the screen (4) to reach it → then tap Forget Device (5).
 
 ![xDrip+ 系統狀態](../images/xDrip_Dexcom_StopSensor.png)
 
