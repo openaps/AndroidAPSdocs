@@ -138,8 +138,8 @@ orphan: true
 - Выключите оригинальный ресивер Dexcom (если используете).
 - Нажмите на [Остановить сенсор](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (только при замене сенсора).
 
-- Забудьте устройство в системном состоянии XDrip и в настройках BT смартфона (показывается как Dexcom?? где ?? являются последними двумя цифрами серийного номера трансмиттера)  
-    → Сэндвич - меню (1) → Состояние системы (2) → На классической странице состояния (3) сдвиньте экран влево (4), чтобы перейти к → Экрану состояния G5/G6 /G7 → Забыть устройство (5).
+- Забудьте устройство в системном состоянии XDrip и в настройках BT смартфона (показывается как Dexcom?? где ?? are the last two digits of the transmitter serial no.)  
+    → Hamburger Menu (1) → System Status (2) → If you are not on the Classic Status Page (3) swipe the screen (4) to reach it → then tap Forget Device (5).
 
 ![состояние системы xDrip+](../images/xDrip_Dexcom_StopSensor.png)
 
