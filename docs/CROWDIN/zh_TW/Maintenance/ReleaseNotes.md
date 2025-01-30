@@ -498,7 +498,7 @@ v3 是新的協議。 更加安全和高效
 - 小型 Insight 修復 @TebbeUbben @MilosKozak
 - ["預設語系" 選項](#Preferences-general) @MilosKozak
 - 矢量圖示 @Philoul
-- [為 MDT 幫浦設定中性溫度](#MedtronicPump-configuration-of-the-pump) @Tornado-Tim
+- [為 MDT 幫浦設定中性臨時基礎率](#MedtronicPump-configuration-of-the-pump) @Tornado-Tim
 - 歷史瀏覽器改進 @MilosKozak
 - 移除了 OpenAPS MA 算法 @Tornado-Tim
 - 移除了 Oref0 敏感度 @Tornado-Tim
