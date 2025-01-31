@@ -222,7 +222,7 @@
 
 Здесь показаны заметки, введенные на вкладке действия, такие как калибровка с глюкометра и записи углеводов, а также переключения профиля.
 
-Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. Можно выбрать между 6, 12, 18 или 24 часами.
+Чтобы изменить шкалу времени выберите меню сверху слева от графика или удерживайте в любом месте графика. Можно выбрать между 6, 12, 18 или 24 часами.
 
 Зеленая область отражает ваш целевой диапазон.
 
@@ -239,7 +239,7 @@ Use the menu on top left of the graph or long press anywhere on the graph to cha
 * Базал
 * Нагрузка - кривая действия инсулина
 
-Чтобы показать эту информацию, нажмите на маленький треугольник справа от основного графика. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
+Чтобы показать эту информацию, нажмите на маленький треугольник справа от основного графика. Для главного графа доступны только четыре варианта выше линии "Диаграмма 1 2 3 4".
 
 ![Настройка главного графика](../images/Home2020_MainGraphSetting.png)
 
@@ -291,19 +291,19 @@ Use the menu on top left of the graph or long press anywhere on the graph to cha
 
 (AapsScreens-section-g-additional-graphs)=
 
-### Section G - Additional graphs
+### Раздел G - Дополнительные графики
 
-Можно активировать до четырех дополнительных графиков ниже главного графика. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+Можно активировать до четырех дополнительных графиков ниже главного графика. В [Простом режиме](#preferences-simple-mode)дополнительные графики предустановлены и не могут быть изменены. Выключите **Простой режим**, если хотите установить собственную конфигурацию дополнительных графиков.
 
 Чтобы настроить дополнительные графики щелкните по маленькомутреугольнику справа от [главного](#section-f---main-graph) и прокрутите вниз.
 
 ![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
 
-To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
+Чтобы настроить дополнительные графики, установите флажки соответствующие данным на каждом графике.
 
 Большинство пользователей считают достаточной следующую конфигурацию дополнительных графиков:
 
-* Graph 1 with IOB, COB, Sensitivity chnge
+* График 1 с IOB, COB, изменениями Чувствительности
 * Диаграмма 2 с отклонениями и влиянием ГК
 
 #### Абсолютный инсулин
@@ -328,7 +328,7 @@ To configure additional graphs, check the boxes corresponding to the data you wa
 
 Если обнаружится более быстрое усвоение углеводов, чем ожидалось, будет подан инсулин, и это увеличит количество активного инсулина IOB (с учетом настроек безопасности).
 
-#### Sensitivity change
+#### Изменение чувствительности
 
 Показывает чувствительность, обнаруженную алгоритмом [Autosens](#Open-APS-features-autosens).
 
@@ -336,15 +336,15 @@ To configure additional graphs, check the boxes corresponding to the data you wa
 
 Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. До достижения этой цели линия Autosens на диаграмме отображается только для информации.
 
-### Variable sensitivity
+### Переменная чувствительность
 
-Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+Показывает чувствительность, рассчитанную при помощи [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Заполняется только если используется эта функция.
 
 (screen-heart-rate-steps)=
 
-#### Heart rate & Steps
+#### Сердечный ритм & Шаги
 
-This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
+Эти данные доступны при использовании [смарт-часов на Wear](../WearOS/WearOsSmartwatch.md). Включите их в приложении **AAPS** Wear и предоставьте доступ к данным о здоровье.
 
 #### Отклонения
 
