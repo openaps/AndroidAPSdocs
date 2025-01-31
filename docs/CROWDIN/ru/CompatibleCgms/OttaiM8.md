@@ -13,11 +13,11 @@ orphan: true
 
 - В [Конфигураторе в качестве источника ГК](#Config-Builder-bg-source) выберите Ottai.
 
-Enable broadcast in the Ottai app:
+Включить передачу данных в приложении Ottai:
 
-1. Select Profile
-2. Ottai hub
-3. Tap Share with AAPS, accept the third party data transfer agreement
-4. Enable Share glucose data with AAPS
+1. Выберите профиль
+2. Терминал Ottai
+3. Нажмите Делиться данными с AAPS, согласитесь с соглашением о передаче данных третьей стороны
+4. Включите передачу данных о ГК в AAPS
 
 ![Ottai](../images/Ottai.png)

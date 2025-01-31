@@ -45,7 +45,7 @@
 
 此方程中使用的變數詳細說明如下。<br/> 注意 : `Ln` 代表自然對數，一種數學函數。
 
-該實施使用上述方程計算當前**ISF**，並在 oref1 [對於**IOB**、**ZT**（零溫度）以及**UAM**](#aaps-screens-prediction-lines)的預測中使用。 它也用於**COB**，以及在注射嚮導中（請參見[ISF的其他用途](#dynisf-other-usages-of-isf)）。
+該實施使用上述方程計算當前**ISF**，並在 oref1 [對於**IOB**、**ZT**（無基礎胰島素輸送）以及**UAM**](#aaps-screens-prediction-lines)的預測中使用。 它也用於**COB**，以及在注射嚮導中（請參見[ISF的其他用途](#dynisf-other-usages-of-isf)）。
 
 ### TDD（每日總胰島素劑量）
 TDD 將使用以下數值的組合：

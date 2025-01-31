@@ -204,7 +204,7 @@
 
 完成此目標的最短時間為**28天**。 這是一個強制的等待時間。 在這段時間內你無法進入下一個目標。
 
-- 本文件中的[SMB部分](#Open-APS-features-super-micro-bolus-smb)和[openAPS文件中的oref1覆蓋](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)是理解**SMB**及**零溫度設定**的必讀內容。
+- 本文件中的[SMB部分](#Open-APS-features-super-micro-bolus-smb)和[openAPS文件中的oref1覆蓋](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)是理解**SMB**及**無基礎胰島素輸送**的必讀內容。
 - 一旦完成，你可以[提升最大IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)以更有效地使用**SMB**。 最大IOB現在包含所有**IOB**，而不僅僅是累積的基礎。 此門檻值暫停**SMB**，直到IOB降至此值以下（_例如_，**最大IOB**設為7U，而為了覆蓋一餐注射8U：在IOB降到7U以下之前，SMBs將被暫停，並不會發放）。 建議的初始設定為將**maxIOB**設為**平均餐後追加劑量 + 3 倍的每日最高基礎速率**，其中「每日最高基礎速率」指一天中任意時段的每小時最大值。 請參考[目標 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets)。
 - 評估你的碳水化合物吸收率，並考慮如果覺得速度太慢或太快，改變[偏好設定 > 吸收設定 > min_5m_carbimpact](#Preferences-min_5m_carbimpact)中的“min_5m_carbimpact”參數。
 
