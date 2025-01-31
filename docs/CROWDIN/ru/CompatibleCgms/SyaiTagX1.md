@@ -13,11 +13,11 @@ orphan: true
 
 - Выберите Syai Tag в [Конфигураторе, Источник ГК](#Config-Builder-bg-source).
 
-Enable broadcast in the Syai app:
+Включить передачу данных в приложении Syai:
 
-1. Select Profile
-2. Syai Health Ecosystem
-3. Tap Connect Now with AAPS, accept the third party data transfer agreement
-4. Enable share data with AAPS
+1. Выберите профиль
+2. Экосистема Здоровья Syai
+3. Нажмите Связаться с AAPS, примите соглашение о передаче данных третьей стороны
+4. Включить обмен данными с AAPS
 
 ![Syai](../images/Syai.png)
