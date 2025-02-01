@@ -20,6 +20,6 @@
 | [Eversense](../CompatibleCgms/Eversense.md)          | xDrip+ 或 ESEL/Eversense 修補的應用程式                           |
 | [Enlite（MM640G/MM630G）](../CompatibleCgms/MM640g.md) | xDrip+ 或 MM640g + 600系列 Android 上傳程式                      |
 | [PocTech](../CompatibleCgms/PocTech.md)              | PocTech                                                   |
-| [歐泰(Ottai)](../CompatibleCgms/OttaiM8.md)            | 歐泰(Ottai)                                                 |
+| [歐態（Ottai）](../CompatibleCgms/OttaiM8.md)            | 歐態（Ottai）                                                 |
 | [Syai Tag](../CompatibleCgms/SyaiTagX1.md)           | Syai Tag                                                  |
 | Sibionics CGM                                        | Juggluco                                                  |
