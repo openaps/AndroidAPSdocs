@@ -310,7 +310,7 @@ orphan: true
 
  ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 2 - [**激活 Pod**](#activate-pod)：對新的 Pod 進行灌注並激活。
+* 2 - [**啟動 Pod**](#activate-pod)：對新的 Pod 進行灌注並啟動。
 * 3 - [**停用 Pod**](#deactivate-pod)：停用目前啟用的 Pod。
 * 4 - **播放測試嗶聲** ：按下時播放 Pod 的單次測試嗶聲。
 * 5 - [**Pod 歷史**](#view-pod-history)：顯示當前 Pod 的活動歷史紀錄。
