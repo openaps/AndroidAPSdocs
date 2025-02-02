@@ -25,7 +25,7 @@ _本指南假設你正在設置運作 Wear OS 3 或更低版本的 Samsung Galax
 
 根據上方影片進行手錶的基本設置後，前往手機上的 Play 商店並下載以下應用程式：“Galaxy Wearable”、“Samsung”和“Easy Fire tools”或“Wear Installer 2”。
 
-有許多第三方 YouTube 視頻可幫助你熟悉新手錶，例如：
+有許多第三方 YouTube 影片可幫助你熟悉新手錶，例如：
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
@@ -46,21 +46,21 @@ a) 使用 USB 傳輸線將 **AAPS** wear apk 檔案放入手機，然後將其�
 b) 從 Android Studio 將 Wear.apk 剪切並粘貼到你的 Gdrive 中。
 
 
-你可以使用 Wear Installer 2 或 Easy Fire tools 將 AAPS 側載到手錶上。 這裡我們推薦使用 Wear Installer 2，因為視頻中的說明和過程非常清晰且解釋得很好。
+你可以使用 Wear Installer 2 或 Easy Fire tools 將 AAPS 側載到手錶上。 這裡我們推薦使用 Wear Installer 2，因為影片中的說明和過程非常清晰且解釋得很好。
 
 ## 使用 Wear Installer 2 將 **AAPS** Wear 從手機側載到手錶上
 
  ![圖像](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
-Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發，你可以從 Google Play 將其下載到手機上，並用來將 AAPS wear 應用程式側載到手錶上。 該應用程式包含一個便捷的“如何側載”[視頻](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)。
+Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發，你可以從 Google Play 將其下載到手機上，並用來將 AAPS wear 應用程式側載到手錶上。 該應用程式包含一個便捷的“如何側載”[影片](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)。
 
 ```{tip}
 對於 Wear OS 5 智慧型手錶，請參閱[此影片](https://www.youtube.com/watch?v=yef_qGvcCnk)。
 ```
 
-該視頻提供了所有必要的細節（最好在單獨的設備上打開視頻，以便在設置手機時觀看）。
+該視頻提供了所有必要的細節（最好在單獨的設備上打開影片，以便在設置手機時觀看）。
 
-如視頻中所述，完成後，請關閉手錶上的 ADB 調試，以避免消耗智慧型手錶的電池。
+如影片中所述，完成後，請關閉手錶上的 ADB 調試，以避免消耗智慧型手錶的電池。
 
 或者，你可以：
 
