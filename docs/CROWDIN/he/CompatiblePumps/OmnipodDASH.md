@@ -4,61 +4,58 @@ orphan: true
 
 # Omnipod DASH
 
-הוראות אלה מיועדות להגדרת משאבת  **Omnipod DASH** ** החדשה (לא Omnipod Eros)**. מנהל ההתקן של Omnipod זמין כחלק מ-AndroidAPS החל מגרסה 3.0.
-
-**תוכנה זו היא חלק מפתרון לבלב מלאכותי DIY ואינו מוצר אך דורש ממכם לקרוא, ללמוד ולהבין את המערכת, כולל את אופן השימוש בה. האחריות על השימוש במערכת היא עליכם בלבד.**
+These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**, available as part of **AAPS** version 3.0.
 
 ## מפרט Omnipod DASH
 
-זהו המפרט של **Omnipod DASH** ומה מבדיל אותה מ-**Omnipod EROS**:
+These are the specifications of the **Omnipod DASH** ('DASH') and what differentiates it from the **Omnipod EROS** ('EROS'):
 
-* פודי DASH ניתנים לזיהוי באמצעות מכסה מחט כחול (ל-EROS יש מכסה מחט שקוף). מעבר לכך הפודים זהים בחינת הממדים הפיזיים
-* אין צורך במכשיר גישור בין Omnipod לבלוטות' (אין צורך ב-RileyLink, OrangeLink או EmaLink).
-* חיבור הבלוטות' נוצר רק בעת הצורך, הלופ מתחבר לפוד כדי לשלוח פקודה ומתנתק מיד לאחר מכן!
-* לא עוד שגיאות "אין חיבור לריילינק \ פוד"
-* AAPS ימתין לנגישות לפוד כדי לשלוח פקודות
-* בהפעלת פוד, AAPS יחפש ויחבר פוד DASH חדש.
+* פודי DASH ניתנים לזיהוי באמצעות מכסה מחט כחול (ל-EROS יש מכסה מחט שקוף). The pods are otherwise identical in terms of physical dimensions.
+*  DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
+* The DASH's bluetooth connection is used only when needed, and connects to send command and disconnects right after!
+* No more "no connection to link device / pod" errors with DASH.
+* **AAPS** will wait for pod's accessibility to send commands.
+* On pod activation, **AAPS** will find and connect to a new DASH pod.
 * טווח צפוי: 5-10 מטרים (בערך)
 
 ## דרישות חומרה ותוכנה
 
-* **Omnipod DASH Pod** חדש (מזוהה באמצעות מכסה מחט כחול)
+* DASH is identified by blue needle cap.
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-* **טלפון Android תואם** עם חיבור בלוטות' (BLE)
-   -  לא כל דגמי הטלפון וגרסאות האנדרואיד מובטחות לעבוד כהלכה. Please check [**DASH Tested phones**](#Phones-list-of-tested-phones) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
-   - **הערה חשובה: היו מספר מקרים של איבודי חיבור קבועים שאינם ניתנים לשחזור בעת שימוש בפודים ישנים יותר עם גירסת קושחה 3X.XX  היזהרו בעת שימוש בפודים הישנים האלה עם AndroidAPS, במיוחד עם התקני בלוטות' מחוברים אחרים!** שימו לב שמנהל ההתקן של AAPS עם Omnipod Dash מתחבר לפוד באמצעות בלוטות' בכל פעם שהוא שולח פקודה ואז מתנתק מיד לאחר מכן. חיבורי הבלוטות' עלולים להיות מופרעים על ידי מכשירים אחרים המקושרים לטלפון המפעיל את AAPS כגון אוזניות וכו'... (מה שעלול לגרום, במקרים נדירים, לבעיית חיבור או לשגיאות\אובדן פוד בהפעלה או לאחר מכן בחלק מדגמי הטלפון).
+* **Compatible Android phone** with a BLE Bluetooth connection  
+  Be aware that **AAPS** Omnipod Dash driver connects with the DASH via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connection can be disturbed by other bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.
    -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions.
 * [**חיישן סוכר רציף (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-הוראות אלה מניחות כי אתם מתחילים שימוש בפוד חדש; אם זה לא כך, אנא התאזרו בסבלנות ונסו להתחיל בתהליך זה לקראת החלפת הפוד הבא.
+The instructions below explain how to activate a new pod session. Wait to close to expiry of a current pod session before trying to connect **AAPS** with a new pod. Once a pod is is cancelled it cannot reused and the disconnection will be final.
 
 ## לפני שמתחילים
 
-**בטיחות קודמת לכול** - אל תנסו לבצע את תהליך זה בסביבה שבה לא תוכלו להתאושש משגיאה (פודים נוספים, אינסולין ומכשיר הטלפון הם חובה).
+**SAFETY FIRST** - you should not try to connect **AAPS** to a pod for the first time without having access to extra pods, insulin, and phone devices are a must have.
 
-**ה-Omnipod Dash PDM (השלט המקורי) לא יעבוד עוד לאחר שמנהל ההתקן של AAPS ל-Dash יפעיל את הפוד.** בעבר השתמשתם ב-Dash PDM כדי לשלוח פקודות לפוד. פוד מסוגל לקבל פקודות רק ממכשיר אחד. המכשיר שמפעיל את הפוד הוא המכשיר היחיד שמורשה לתקשר איתו מאותה נקודה ואילך. משמעות הדבר היא שברגע שיופעל פוד עם טלפון האנדרואיד דרך מנהל התקן ה-Dash, **לא ניתן יהיה להשתמש ב-PDM עם הפוד הזה**. מנהל ההתקן של AAPS ל-Dash בטלפון האנדרואיד הוא עכשיו ה-PDM בפועל.
+**Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.** Previously a user may have operated a PDM to send commands to your DASH. A DASH will only faciiliate a single device to send commands to communicate with it. המכשיר שמפעיל את הפוד הוא המכשיר היחיד שמורשה לתקשר איתו מאותה נקודה ואילך. This means that once you activate a DASH with your Android phone through the **AAPS**, **you will no longer be able to use your PDM with that pod**. The **AAPS** Dash driver in your Android phone is now your acting PDM.
 
 *זה לא אומר שצריך לזרוק את ה-PDM, מומלץ לשמור אותו בסביבה כגיבוי למקרי חירום, למשל כאשר הטלפון הולך לאיבוד או AAPS אינו פועל כהלכה.*
 
-**הפוד לא יפסיק לספק אינסולין אם הוא מאבד חיבור ל-AndroidAPS**. מינוני הבזאלי המוגדרים כברירת מחדל מתוכנתים על הפוד בזמן הפעלתו כפי שהוגדר בפרופיל הפעיל הנוכחי. כל עוד AndroidAPS פעיל הוא ישלח פקודות של מינונים בזאליים זמניים שיפעלו לכל היותר 120 דקות. כאשר מסיבה כלשהי הפוד אינו מקבל פקודות חדשות (למשל בגלל שהתקשורת אבדה עקב מרחק גדול מהטלפון) הפוד יחזור אוטומטית למינוני הבזאלי המוגדרים כברירת מחדל.
+**הפוד לא יפסיק לספק אינסולין אם הוא מאבד חיבור ל-AndroidAPS**. Default basal rates are programmed on the pod on activation as defined in the current active **Profile**. As long as **AAPS** is operational it will send basal rate commands that run for a maximum of 120 minutes. כאשר מסיבה כלשהי הפוד אינו מקבל פקודות חדשות (למשל בגלל שהתקשורת אבדה עקב מרחק גדול מהטלפון) הפוד יחזור אוטומטית למינוני הבזאלי המוגדרים כברירת מחדל.
 
-**פרופילי בזאלי המתחילים בשעות לא עגולות אינם נתמכים ב-AndroidAPS.** **פרופיל ברירת המחדל ב-AndroidAPS אינו תומך במסגרת זמן של מינון בזאלי של 30 דקות** אם אתם חדשים ב-AndroidAPS ואתם מגדירים את הפרופיל הבזאלי הבסיסי שלך בפעם הראשונה, חשוב לשים לב שמינונים שמתחילים בשעה לא עגולה אינם נתמכים, ותצטרכו להתאים את פרופיל הבזאלי שלך כך שמינון יתחיל בשעה עגולה. לדוגמה, אם יש מינון בזאלי של למשל 1.1 יחידות שמתחיל בשעה 09:30 ויש לו משך של שעתיים ומסתיים בשעה 11:30, זה לא יעבוד. יהיה עליכם לעדכן את המינון של 1.1 יחידות לטווח זמן של 09:00-11:00 או 10:00-12:00. למרות שהחומרה של Omnipod Dash עצמה תומכת במרווחי פרופיל המינון הבזאלי של 30 דקות, AndroidAPS לא מסוגל לקחת אותם בחשבון עם האלגוריתמים שלה כרגע.
+**AAPS Profile does not support a 30 minute basal rate time frame** If you are new to **AAPS** and are setting up your basal rate **Profile** for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and programmes on an hourly basis. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this im **AAPS**. יהיה עליכם לעדכן את המינון של 1.1 יחידות לטווח זמן של 09:00-11:00 או 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does support this feature.
 
-**0U/h profile basal rates are NOT supported in AAPS** While the DASH pods do support a zero basal rate, since AAPS uses multiples of the profile basal rate to determine automated treatment it cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
+**0U/h profile basal rates are NOT supported in AAPS** While the DASH does support a zero basal rate, since **AAPS** uses multiples of the user's **Profile** basal rate to determine automated treatment; it cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate. The lowest basal rate allowed in **AAPS** is 0.05U/h.
 
-## הפעלת מנהל התקן ה-Dash ב-AAPS
+## Selecting Dash in AAPS
 
-אפשר לאפשר את מנהל ההתקן של Dash בשני **אופנים**:
+There are **two ways**:
 
 ### אפשרות 1: התקנות חדשות
 
-כשמתקינים AndroidAPS לראשונה, **אשף ההתקנה** ילווה אתכם לאורך ההתקנה וההגדרה. בחרו "DASH" כשתגיעו לחלק של בחירת המשאבה.
+When installing **AAPS** for the first time, the **Setup Wizard** will guide new users through key features and installation requirements for **AAPS**. בחרו "DASH" כשתגיעו לחלק של בחירת המשאבה.
 
 ![Enable_Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
 
-אם אתם לא בטוחים במעשיכם, בחרו "משאבה וירטואלית" ותוכלו לבחור ב-"DASH" מאוחר יותר, לאחר שהגדרתם את AndroidAPS (ראו אפשרות 2).
+When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up **AAPS** (see option 2).
 
 ### אפשרות 2: בונה התצורה
 
@@ -66,15 +63,15 @@ orphan: true
 
 בפינה הימנית-עליונה **בתפריט ההמבורגר (☰)** בחרו **בונה התצורה (1)** ← **משאבה** ← **Dash** ← **בחירת הכפתור העגול ("כפתור רדיו") (2) ← גלגל שיניים (3)**.
 
-בסימון **V (4)** בתיבה ליד **גלגל השיניים (3)** אתם תאפשרו לתפריט Dash להופיע כלשונית בממשק AAPS תחת השם **DASH**. סימון ה-V יקל על הגישה אל הפקודות של DASH בעת השימוש ב-AAPS.
+Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the DASH menu to be displayed as a tab in the **AAPS** interface titled **DASH**. Checking this box will facilitate your access to the DASH commands when using **AAPS**.
 
-**NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
+**NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the DASH settings section of this document.
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
 ### אימות בחירת מנהל התקן Omnipod
 
-כדי לוודא שהפעלת את מנהל ההתקן של Dash ב-AAPS, אם סימנתם את התיבה (4), **החליקו ימינה** מהלשונית **סקירה כללית**, שם תראו כעת לשונית **DASH**. אם לא סימנתם את התיבה, תמצאו את הלשונית DASH בתפריט ההמבורגר מימין למעלה.
+To verify that you have selected the DASH in **AAPS**, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab on **AAPS**. If this box is left unchecked, you’ll find the DASH tab in the hamburger menu upper left.
 
 ![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
@@ -82,11 +79,10 @@ orphan: true
 
 אנא **החליקו שמאלה** ללשונית **DASH** בה תוכלו לנהל את כל פונקציות הפוד (חלק מהפונקציות הללו אינן מופעלות או גלויות ללא פוד פעיל):
 
-![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) רעננו את הקישור והסטטוס של הפוד, תוכלו להשתיק אזעקות פוד כאשר הוא מצפצף
+![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) 'Refresh' pod connectivity and status, be able to silence pod alarms when the pod beeps
 
-![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) ניהול פוד (הפעלה, השבתה, השמעת צפצוף בדיקה והיסטוריית פוד)
+![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) 'Pod Management' (Activate, Deactivate, Play test beep, and Pod history)
 
-(OmnipodDASH-activate-pod)=
 
 ### Activate Pod
 
@@ -100,9 +96,9 @@ orphan: true
 
 ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-ודאו שהפוד החדש והטלפון שבו פועל AAPS נמצאים בסמיכות זה לזה ולחצו על **הבא**.
+Ensure that the new pod and the phone running **AAPS** are within close proximity of each other and click the **Next** button.
 
-**הערה**: למקרה שתקבלו את הודעת השגיאה שלהלן (זה יכול לקרות), נא לא להיבהל. לחצו על **נסה שוב**. ברוב המצבים ההפעלה תימשך בהצלחה.
+**NOTE**: if the  error message below pops up _'Could not find an available pod for activation'_ (this can happen), do not panic. לחצו על **נסה שוב**. ברוב המצבים ההפעלה תימשך בהצלחה.
 
 ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
@@ -110,7 +106,7 @@ orphan: true
 
 ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-4. לאחר מכן, הכינו את אתר ההדבקה של הפוד החדש. הסירו את מכסה המחט של הפוד. אם אתם רואים משהו שבולט מהפוד, בטלו את התהליך והתחילו מההתחלה עם פוד חדש. אם הכל נראה תקין, הסירו את כיסוי הנייר הלבן מהדבק והניחו את הפוד על המקום הנבחר על גופכם. לסיום, לחצו על **הבא**.
+4. Next, prepare the infusion site ready to receive the new pod. Wash hands to avoid any risk of infection. Clean the infusion site by either using soap and water or an alcohol wipe to disinfect and let the skin air dry completely before proceeding. Remove the pod's blue plastic needle cap. If you see something that sticks out of the pod or unusual, cancel the process and start with a new pod. If everything looks OK, proceed to take off the white paper backing from the adhesive and apply the pod to the selected site on your body. לסיום, לחצו על **הבא**.
 
 ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
@@ -118,7 +114,7 @@ orphan: true
 
 ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
-6. לאחר לחיצה על **אישור**, ייתכן שיחלוף זמן מה עד שהאומניפוד יגיב ויחדיר את הקנולה (עד 1-2 דקות), אנא שמרו על סבלנות.
+6. After pressing **OK**, it may take some time before the DASH responds and inserts the cannula (1-2 minutes maximum). Be patient.
 
  *הערה: לפני החדרת הקנולה, מומלץ לצבוט את העור בסביבת נקודת ההחדרה. זה מבטיח החדרה חלקה של המחט ומפחית את הסיכויים לפתח חסימות.*
 
@@ -128,7 +124,7 @@ orphan: true
 
 ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-9. מסך **הפוד הופעל** מוצג. לחצו על **סיום**. מזל טוב! הפעלתם את הפוד.
+9. מסך **הפוד הופעל** מוצג. לחצו על **סיום**. מזל טוב! You have now started a new pod session.
 
 ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
@@ -142,7 +138,7 @@ orphan: true
 
 ​    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-מומלץ לייצא הגדרות לאחר הפעלת הפוד. עשו זאת בכל החלפת פוד ופעם בחודש, העתיקו את הקובץ המיוצא לגיבוי בענן שלכם. see [**Export settings Doc**](../Maintenance/ExportImportSettings.md).
+מומלץ לייצא הגדרות לאחר הפעלת הפוד. Export settings should be done at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](../Maintenance/ExportImportSettings.md).
 
 
 (OmnipodDASH-deactivate-pod)=
@@ -166,7 +162,6 @@ orphan: true
  ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
 
-
 3. סימון ירוק יופיע לאחר השבתה מוצלחת. לחצו על **הבא** כדי לעבור אל המסך "הפוד הושבת". כעת תוכלו להסיר את הפוד כיוון שפעילותו הושבתה.
 
 ![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
@@ -181,13 +176,11 @@ orphan: true
 
  ![Deactivate_Pod_8](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
-(OmnipodDASH-resuming-insulin-delivery)=
-
 ### חידוש הזרקת האינסולין
 
-**הערה**: במהלך החלפת פרופיל, Dash חייב להשעות את ההזרקה לפני הגדרת הפרופיל הבזאלי החדש. אם התקשורת נכשלת בין שתי הפקודות, אז ניתן להשהות את ההזרקה. Read [**Delivery suspended**](#delivery-suspended) in the troubleshooting section for more details.
+**Note**: During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile** as delivery can be suspended. Read [**Delivery suspended**](#delivery-suspended) in the troubleshooting section for more details.
 
-השתמשו בפקודה זו כדי להנחות את הפוד הפעיל כעת לחדש את אספקת האינסולין. לאחר עיבוד הפקודה, מתן האינסולין יחודש לפי המינון הבזאלי הנוכחי בהתאם להגדרתו בפרופיל. הפוד יקבל שוב פקודות עבור בולוס, מינון בזאלי זמני ו-SMB.
+השתמשו בפקודה זו כדי להנחות את הפוד הפעיל כעת לחדש את אספקת האינסולין. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal **Profile**. The pod will again accept commands for bolus, **TBR**, and **SMB**.
 
 1. נווטו אל הלשונית **DASH** וודאו שהשדה **סטטוס הפוד (1)** מציג את **מופסק**, לאחר מכן הקישו על **חידוש הזרקה (2)** כדי להתחיל בתהליך הוראה לפוד הנוכחי לחדש את הזרקת האינסולין. ההודעה **חידוש הזרקה** תוצג בשדה **סטטוס הפוד (3)**.
 
@@ -211,7 +204,7 @@ orphan: true
 
 ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
-2. נווטו לכרטיסייה **DASH** ולחצו על **השתקת התראות (2)**. AAPS ישלח את הפקודה לפוד כדי לבטל את צפצופי אזהרת התפוגה והשדה **סטטוס הפוד (1)** יעודכן ל**אישור התראות**.
+2. נווטו לכרטיסייה **DASH** ולחצו על **השתקת התראות (2)**. **AAPS** sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
 
 ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
@@ -226,7 +219,7 @@ orphan: true
 
 ### הצגת היסטוריית הפוד
 
-פרק זה מתאר כיצד לבדוק את היסטוריית הפודים ולסנן לפי קטגוריות פעולה שונות. כלי היסטוריית הפוד מאפשר לצפות בפעולות והתוצאותיהן שנעשו בעת השימוש בפוד במהלך השימוש בו (72 - 80 שעות).
+This section explains how to review your active pod history and filter by different action categories. כלי היסטוריית הפוד מאפשר לצפות בפעולות והתוצאותיהן שנעשו בעת השימוש בפוד במהלך השימוש בו (72 - 80 שעות).
 
 תכונה זו מועילה לאימות בולוסים, בזאלים זמניים ופקודות בזאליות שנשלחו לפוד. הקטגוריות הנותרות שימושיות באופן כללי לפתרון בעיות וקביעת סדר האירועים שהתרחשו עד לכשל.
 
@@ -242,7 +235,7 @@ orphan: true
 
 
 
-2. במסך **היסטוריית הפוד**, קטגוריית ברירת המחדל של **הכל (1)** מוצגת ומציגה את **התאריך והשעה (2)** של כל **פעולות (3)** הפוד ו**תוצאות (4)** בסדר כרונולוגי הפוך. השתמשו ב**לחצן 'הקודם' של הטלפון פעמיים** כדי לחזור ללשונית **DASH** בממשק הראשי של AAPS.
+2. במסך **היסטוריית הפוד**, קטגוריית ברירת המחדל של **הכל (1)** מוצגת ומציגה את **התאריך והשעה (2)** של כל **פעולות (3)** הפוד ו**תוצאות (4)** בסדר כרונולוגי הפוך. Use your phone’s **back button 2 times** to return to the **DASH** tab in the main **AAPS** interface.
 
 
 ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
@@ -319,7 +312,7 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 ## הגדרות Dash
 
-בפינה הימנית-עליונה **בתפריט ההמבורגר (☰)** בחרו **בונה התצורה (1)** ← **משאבה** ← **Dash** ← **בחירת הכפתור העגול ("כפתור רדיו") (2) ← גלגל שיניים (3)**. בסימון **V (4)** בתיבה ליד **גלגל השיניים (3)** אתם תאפשרו לתפריט Dash להופיע כלשונית בממשק AAPS תחת השם **DASH**.
+בפינה הימנית-עליונה **בתפריט ההמבורגר (☰)** בחרו **בונה התצורה (1)** ← **משאבה** ← **Dash** ← **בחירת הכפתור העגול ("כפתור רדיו") (2) ← גלגל שיניים (3)**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the **AAPS** interface titled **DASH**.
 
 ![Dash_settings_1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -348,7 +341,7 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 ![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
-מספק התראות של AAPS על תוקף הפוד, כיבויים, מכל נמוך על פי ספים מוגדרים.
+Provides **AAPS** alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
 *שימו לב כי הודעת AAPS תינתן תמיד לכל התראה לאחר התקשורת הראשונית עם הפוד מאז הופעלה ההתראה. דחיית ההודעה לא תבטל את ההתראה, אלא אם כן מופעל אישור התראות פוד אוטומטי. כדי לבטל את ההתראה באופן ידני, יש לבקר בלשונית **DASH** וללחוץ על **השתקת התראות**.*
 
@@ -361,22 +354,22 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
-מספק התראות AAPS והתראות קוליות כאשר לא בטוח אם אירועי בזאלי זמני, SMB או בולוס הצליחו.
+The Notification section allows the user to so select their preferred notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus, and delivery suspended events were successful.
 
 *הערה: אלה הן התראות בלבד, לא מתבצעות התראות מסוג צפצופים.*
 
-* **התראת צליל של בזאלי זמני לא ברור מאופשרת:** הפעילו או השביתו הגדרה זו כדי להפעיל התראה קולית והתראה חזותית כאשר AAPS לא בטוח אם מינון בזאלי זמני הוגדר בהצלחה.
-* **התראת צליל של SMB לא ברור מאופשרת:** הפעילו או השבחתו הגדרה זו כדי להפעיל התראה קולית והתראה חזותית כאשר AAPS אינו בטוח אם SMB הוזרק בהצלחה.
-* **התראת צליל של בולוס לא ברור מאופשרת:** הפעילו או השביתו הגדרה זו כדי להפעיל התראה קולית והתראה חזותית כאשר AAPS אינו בטוח אם בולוס הוזרק בהצלחה.
+* **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a TBR was successfully set.
+* **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when **AAPS**is uncertain if an SMB was successfully delivered.
+* **Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when **AAPS**is uncertain if a bolus was successfully delivered.
 * **השמע כשהתראת הפסקת ההזרקה מאופשרת:** הפעילו או השביתו הגדרה זו כדי להפעיל התראה קולית והתראה חזותית כאשר AAPS מעביר בהצלחה פקודת הפסקת הזרקה.
 
 ## לשונית פעולות (ACT)
 
-לשונית זו נסקרה היטב בתיעוד הראשי של AAPS אך ישנם בלשונית זו מספר פריטים שמשתנים בשימוש באומניפוד לעומת משאבות מבוססות צינוריות, במיוחד תהליכי תיחול פודים חדשים.
+This tab is well documented in the main**AAPS**documentation but there are a few items on this tab that are specific to how the DASH differs from tube based pumps, especially after the processes of applying a new pod.
 
-1. עברו ללשונית **פעולות (ACT)** מהמסך הראשי של AAPS.
+1. Go to the **Actions (ACT)** tab in the main **AAPS**interface.
 
-2. תחת השורה **פורטל הטיפולים (1)**, השדות **אינסולין** ו**צינורית** ** יאופסו** ל-0 ימים ו-0 שעות **לאחר כל החלפת פוד**. זה נעשה בגלל האופן שבו משאבת אומניפוד בנויה ופועלת. מכיוון שהפוד מחדיר את הצינורית ישירות לעור באתר הדבקתו, אין שימוש בצינור מסורתי במשאבות אומניפוד. *לכן לאחר החלפת פוד, הגיל של כל אחד מהערכים הללו יתאפס אוטומטית.* **גיל סוללת המשאבה** אינו מדווח מכיוון שהסוללה בפוד תמיד תהיה יותר מאורך חיי הפוד (80 שעות לכל היותר). **סוללת המשאבה** ו**יתרת האינסולין** נמצאים בעצמם בתוך כל פוד.
+2. Under the **Careportal (1)** section the **Insulin** and **Cannula** fields will have their **age reset** to 0 days and 0 hours **after each pod change**. זה נעשה בגלל האופן שבו משאבת אומניפוד בנויה ופועלת. מכיוון שהפוד מחדיר את הצינורית ישירות לעור באתר הדבקתו, אין שימוש בצינור מסורתי במשאבות אומניפוד. *לכן לאחר החלפת פוד, הגיל של כל אחד מהערכים הללו יתאפס אוטומטית.* **גיל סוללת המשאבה** אינו מדווח מכיוון שהסוללה בפוד תמיד תהיה יותר מאורך חיי הפוד (80 שעות לכל היותר). **סוללת המשאבה** ו**יתרת האינסולין** נמצאים בעצמם בתוך כל פוד.
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
@@ -384,9 +377,9 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 **יתרת אינסולין**
 
-יתרת האינסולין המוצגת מדווחת ע"י הפוד. עם זאת, הוא מדווח רק על יתרת אינסולין מדוייקת רק כאשר היא מתחת ל-50 יחידות. עד אז יוצג "מעל 50 יחידות". הכמות המדווחת אינה מדויקת: כאשר הפוד מדווח על 'ריק' ברוב המקרים עדיין יישארו מספר יחידות אינסולין נוספות. לשונית הסקירה הכללית של DASH תוצג כמתואר להלן:
+Insulin level displayed is the amount reported by DASH. עם זאת, הוא מדווח רק על יתרת אינסולין מדוייקת רק כאשר היא מתחת ל-50 יחידות. עד אז יוצג "מעל 50 יחידות". הכמות המדווחת אינה מדויקת: כאשר הפוד מדווח על 'ריק' ברוב המקרים עדיין יישארו מספר יחידות אינסולין נוספות. The DASH overview tab will display as described the below:
 
-  * **מעל 50 יחידות** - הפוד מדווח על יותר מ-50 יחידות שנמצאות כעת במכל.
+  * **Above 50 Units** - The pod reports more than 50 units currently in the reservoir.
   * **מתחת ל-50 יחידות** - כמות האינסולין שנותרה במכל כפי שדווח על ידי הפוד.
 
 הערות נוספות:
@@ -395,18 +388,16 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 ## Troubleshooting
 
-(OmnipodDASH-delivery-suspended)=
-
 ### הפסקת הזרקה
 
-  * אין יותר כפתור של הפסקת הזרקה. אם ברצונכם "להשהות" את הפוד, אפשר להגדיר מינון בזאלי זמני 0% למשך x דקות.
-  * במהלך החלפת פרופיל, Dash חייב להשעות את ההזרקה לפני הגדרת הפרופיל הבזאלי החדש. אם התקשורת נכשלת בין שתי הפקודות, אז ניתן להשהות את ההזרקה. כשזה קורה:
+  * אין יותר כפתור של הפסקת הזרקה. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes.
+  * During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile**. אם התקשורת נכשלת בין שתי הפקודות, אז ניתן להשהות את ההזרקה. כשזה קורה:
      - לא יהיה מתן אינסולין, כולל בזאלי, SMB, בולוס ידני וכו'.
      - ייתכן שתהיה הודעה על כך שאחת הפקודות אינה מאושרת: זה תלוי במועד התרחשות הכשל.
-     - AAPS ינסה להגדיר את הפרופיל הבזאלי החדש כל 15 דקות.
-     - AAPS יציג הודעה המודיעה שההזרקה הופסקה כל 15 דקות, אם ההזרקה עדיין מופסקת (חידוש ההזרקה נכשל).
+     - **AAPS** will try to set the new basal profile every 15 minutes.
+     - **AAPS** will show a notification informing that the delivery is suspended every 15 minutes, if the delivery is still suspended (resume delivery failed).
      - The [**Resume delivery**](#resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
-     - אם AAPS לא מצליח לחדש את ההזרקה בעצמו (זה קורה אם הפוד אינו נגיש, הצליל מושתק וכו'), הפוד יתחיל לצפצף 4 פעמים בכל דקה למשך 3 דקות ולאחר מכן יחזור על עצמו כל 15 דקות אם ההזרקה עדיין מופסקת למשך יותר מ-20 דקות.
+     - If **AAPS** fails to resume delivery on its own (this happens if the pod is unreachable, sound is muted, etc), the pod will start beeping 4 times every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20 minutes.
   * עבור פקודות לא ודאיות, "רענון סטטוס הפוד" אמור לאשר\לדחות אותן.
 
 **הערה:** כאשר שומעים צפצופים מהפוד, אל תניחו שההזרקה תימשך מבלי לבדוק את הטלפון, ההזרקה עלולה להישאר מופסקת **ולכן עליכם לוודא!**
@@ -425,11 +416,11 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 ### ייצוא הגדרות
 
-ייצוא הגדרות AndroidAPS מאפשר לשחזר את כל ההגדרות שלכם ואולי חשוב מכך, את כל המשימות שהשלמתם. ייתכן שיהיה עליכם לשחזר את ההגדרות ל"מצב העובד הידוע האחרון" או לאחר הסרה\התקנה מחדש של AndroidAPS או במקרה של אובדן טלפון, התקנה מחדש בטלפון החדש.
+Exporting **AAPS** settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling **AAPS** or in case of phone loss, reinstalling on the new phone.
 
-הערה: מידע הפוד הפעיל כלול בהגדרות המיוצאות. אם אתה תייבאו קובץ מיוצא "ישן", הפוד הנוכחי "ימות". אין אלטרנטיבה אחרת. במקרים מסוימים (כמו שינוי טלפון _מתוכנת_), ייתכן שיהיה עליכם להשתמש בקובץ המיוצא כדי לשחזר את הגדרות AndroisAPS **תוך שמירה על הפוד הפעיל הנוכחי**. במקרה זה חשוב להשתמש רק בקובץ ההגדרות שיוצא לאחרונה המכיל את הפוד הפעיל כעת.
+הערה: מידע הפוד הפעיל כלול בהגדרות המיוצאות. אם אתה תייבאו קובץ מיוצא "ישן", הפוד הנוכחי "ימות". אין אלטרנטיבה אחרת. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore **AAPS'** settings **while keeping the current active Pod**. במקרה זה חשוב להשתמש רק בקובץ ההגדרות שיוצא לאחרונה המכיל את הפוד הפעיל כעת.
 
-**מומלץ לבצע ייצוא מיד לאחר הפעלת פוד**. כך תמיד תוכלו לשחזר את החיבור אל הפוד הנוכחי במקרה של בעיה. למשל במקרה של מעבר לטלפון רזרבי.
+**מומלץ לבצע ייצוא מיד לאחר הפעלת פוד**. This way you will always be able to restore the current active pod in case of a problem. למשל במקרה של מעבר לטלפון רזרבי.
 
 העתיקו באופן קבוע את ההגדרות המיוצאות למקום בטוח (לדוגמה לכונן ענן) שניתן לגשת אליו בכל טלפון בעת הצורך (למשל במקרה של אובדן טלפון או איפוס להגדרות היצרן של הטלפון).
 
@@ -442,8 +433,8 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 **ייבוא תוך כדי פוד פעיל:** (אתם מסתכנים באיבוד הפוד!)
 
 1. ודאו שאתם מייבאים הגדרות שיוצאו לאחרונה עם הפוד הפעיל כעת.
-2. ייבוא הגדרות
-3. בדיקת על ההגדרות
+2. ייבאו את ההגדרות.
+3. בדיקת על ההגדרות.
 
 **ייבוא (ללא פוד פעיל)**
 
@@ -456,45 +447,45 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 בעת ייבוא הגדרות המכילות נתונים עבור פוד שכבר אינו פעיל, AndroidAPS ינסה להתחבר אליו, מה שכמובן ייכשל. אין באפשרותכם להפעיל פוד חדש במצב זה.
 
-כדי להסיר את הפוד הישן "נסו" לכבות את הפוד. הכיבוי ייכשל. בחרו "נסה שוב". לאחר הניסיון השני או השלישי תקבלו את האפשרות להסיר את הפוד. כשהפוד הישן כבוי תוכלו להפעיל אחד חדש.
+To remove the old pod session “try” to de-activate the Pod. הכיבוי ייכשל. בחרו "נסה שוב". לאחר הניסיון השני או השלישי תקבלו את האפשרות להסיר את הפוד. Once the old pod is removed you will be able to activate a new pod.
 
 ### התקנה מחדש של AndroidAPS
 
-בעת הסרת AndroidAPS תאבדו את כל ההגדרות, ההתקדמות במשימות וההפעלה הנוכחית של הפוד. ע"מ לשחזר אותם ודאו שיש לכם קובץ הגדרות שיוצא לאחרונה זמין!
+When uninstalling**AAPS** you will lose all your settings, objectives and the current Pod session. ע"מ לשחזר אותם ודאו שיש לכם קובץ הגדרות שיוצא לאחרונה זמין!
 
-כאשר אתם עם פוד פעיל, ודאו גם שיש לכם קובץ שיוצא עם הפוד הנוכחי, אחרת תאבדו את הפוד הפעיל בעת ייבוא הגדרות ישנות יותר.
+When on an active Pod, make sure that you have an export for the current pod session or you will lose the currently active pod when importing older settings.
 
 1. ייצאו את ההגדרות שלך ושמרו עותק במקום בטוח.
-2. הסירו את התקנת AndroidAPS והפעילו מחדש את הטלפון.
-3. התקינו גרסה חדשה של AndroidAPS.
-4. ייבוא הגדרות
-5. וודאו את כל ההעדפות (אפשר לייבא שוב הגדרות)
-6. הפעילו פוד חדש
-7. לבסוף: ייצאו קובץ הגדרות
+2. Uninstall **AAPS** and restart your phone.
+3. Install the new version of **AAPS**.
+4. ייבאו את ההגדרות.
+5. Verify all preferences (optionally import settings again).
+6. Activate a new pod.
+7. לבסוף: ייצאו קובץ הגדרות.
 
 ### עדכון AndroidAPS לגרסה חדשה יותר
 
 ברוב המקרים אין צורך להסיר את ההתקנה. ניתן לבצע התקנה "דורסת" על ידי התחלת ההתקנה של הגרסה החדשה. זה אפשרי גם עם פוד פעיל.
 
 1. ייבאו את ההגדרות.
-2. התקינו את גרסת AndroidAPS החדשה.
+2. Install the new **AAPS** version.
 3. ודאו שההתקנה הצליחה
-4. המשיכו את השימוש בפוד הקיים או הפעילו פוד חדש.
+4. RESUME the Pod or activate a new pod.
 5. לבסוף: ייצאו קובץ הגדרות.
 
 ### התראות פוד
 
 לידיעתכם, מנהל ההתקן של Dash מציג מגוון התראות ייחודיות בלשונית **סקירה כללית**, רובן אינפורמטיביות וניתנות לביטול בעוד שחלקן מספקות למשתמש פעולה לבצע על מנת לפתור את הסיבה להתראה המופעלת. להלן סיכום של ההתראות העיקריות בהן אתם עשויים להיתקל:
 
-* אין פוד פעיל לא נמצא פוד פעיל. ניתן לבטל התראה זו זמנית על ידי לחיצה על **השתקה** אך היא תמשיך לפעול כל עוד לא הופעל פוד חדש. לאחר הפעלת פוד, ההתראה הזו מושתקת אוטומטית.
-* התראה אינפורמטיבית כי פוד הושהה.
-* הגדרת הפרופיל הבזאלי נכשלה: ההזרקה עלולה להפסק! נא לרענן ידנית את סטטוס הפוד בלשונית Omnipod ולחדש את ההזרקה במידת הצורך. התראה אינפורמטיבית על כך שהגדרת הפרופיל הבזאלי של פוד נכשלה, ויהיה עליכם ללחוץ על *רענן* בלשונית DASH.
-* לא ניתן לאמת אם בולוס SMB הצליח. אם אתם בטוחים שהבולוס לא הצליח, עליכם למחוק את ערך SMB באופן ידני מטיפולים. התראה כי לא ניתן לאמת את הצלחת בולוס ה-SMB, יהיה עליכם לאמת את השדה *בולוס אחרון* בלשונית DASH כדי לראות האם ה-SMB הצליח ואם לא, להסיר את הערך מהלשונית טיפולים.
+* No active Pod session detected. ניתן לבטל התראה זו זמנית על ידי לחיצה על **השתקה** אך היא תמשיך לפעול כל עוד לא הופעל פוד חדש. Once activated this alert is automatically silenced.
+* Pod suspended Informational alert that pod has been suspended.
+* Setting basal **Profile** failed : Delivery might be suspended! נא לרענן ידנית את סטטוס הפוד בלשונית Omnipod ולחדש את ההזרקה במידת הצורך. Informational alert that the Pod basal **Profile** setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
+* Unable to verify whether **SMB** bolus succeeded. אם אתם בטוחים שהבולוס לא הצליח, עליכם למחוק את ערך SMB באופן ידני מטיפולים. Alert that the **SMB** bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if **SMB** bolus succeeded and if not remove the entry from the Treatments tab.
 * לא בטוח אם "בולוס/בזאלי זמני/SMB" הושלם, אנא ודאו ידנית אם הוא הצליח.
 
-## היכן ניתן לקבל עזרה בשימוש במנהל התקן DASH
+## Where to get help for DASH
 
-כל עבודות פיתוח מנהל התקן האומניפוד נעשות על ידי הקהילה **בהתנדבות**; אנו מבקשים מכם להתחשב ולהשתמש בהנחיות הבאות בעת בקשת עזרה:
+All of the development work for the DASH is done by the community on a **volunteer** basis; please keep this in mind and use the following guidelines before requesting assistance:
 
 -  **רמה 0** קראו את הסעיף הרלוונטי בתיעוד זה כדי להבטיח שאתם מבינים כיצד להשתמש במה שאתם מתקשים איתו.
 -  **רמה 1:** אם אתם עדיין נתקלים בבעיות שאתם לא מצליחים לפתור באמצעות מסמך זה, אנא עברו לערוץ *#androidaps* ב-**Discord** באמצעות [קישור ההזמנה](https://discord.gg/4fQUWHZ4Mw).
