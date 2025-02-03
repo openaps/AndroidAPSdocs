@@ -7,14 +7,14 @@ You will receive the information as soon as a new update is available. If you do
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-This prompt is important, should not be ignored and is not intended to bug you. New versions of **AAPS** do not only provide new features but also important safety fixes. Therefore it is necessary that every **AAPS** user updates to the latest version a.s.a.p.. Unfortunately there are still bug reports from very old versions so this an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
+This prompt is important, should not be ignored and is not intended to bug you. New versions of **AAPS** do not only provide new features but also important safety fixes. Therefore it is necessary that every **AAPS** user updates to the latest version a.s.a.p. Unfortunately there are still bug reports from very old versions so this an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
 
 ```{admonition} First version of **AAPS**
 :class: note
 
 The first test version started already in 2015. In 2016 has been the first released version.
 
-The chronology of these releases is not available at the moment but as this questions is asked severeal times we document it here.
+The chronology of these releases is not available at the moment but as this question is asked several times we document it here.
 
 ```
 ![AAPS 1.0](../images/update/AAPS1.0.png)
@@ -68,6 +68,8 @@ Release date: 21-01-2025
 * Watch improvements @olorinmaia
 * Control loop status from watch @tdrkDev
 * Stability improvements
+
+*  **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
 
 ## Version 3.3.1.2
 
