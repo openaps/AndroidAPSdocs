@@ -67,7 +67,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 * Garmin: 手錶改進 @swissalpine
 * 手錶改進 @olorinmaia
 * 從手錶控制循環狀態 @tdrkDev
-* Stability improvements
+* 穩定度改善
 
 *  **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
 
