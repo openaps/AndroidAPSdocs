@@ -4,61 +4,58 @@ orphan: true
 
 # Omnipod DASH
 
-這些說明適用於配置 **Omnipod DASH** 世代幫浦**（不包括 Omnipod Eros）**。 Omnipod 驅動程式可在 AAPS 3.0 版中使用。
-
-**此軟體是 DIY 人工胰臟解決方案的一部分，並非產品，你需要閱讀、學習並了解系統，包括如何使用他。 你需要對自己使用的結果負完全責任。**
+These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**, available as part of **AAPS** version 3.0.
 
 ## Omnipod DASH 規格
 
-以下是 **Omnipod DASH** 與 **Omnipod EROS** 的區別：
+These are the specifications of the **Omnipod DASH** ('DASH') and what differentiates it from the **Omnipod EROS** ('EROS'):
 
-* DASH Pods 具有藍色針蓋（EROS 則有透明針蓋）。 Pod 在物理尺寸上是相同的。
-* 不需要單獨的 Omnipod 到 BLE 連線/橋接裝置（不需要 RileyLink、OrangeLink 或 EmaLink）。
-* 僅在需要時進行藍牙連線，發送指令後即中斷連線！
-* 不再出現“無法連線到連線裝置/Pod”的錯誤
-* AAPS 會等到幫浦可用後再發送指令。
-* 在啟動時，AAPS 將尋找並連線新的 DASH Pod。
+* DASH Pods 具有藍色針蓋（EROS 則有透明針蓋）。 The pods are otherwise identical in terms of physical dimensions.
+*  DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
+* The DASH's bluetooth connection is used only when needed, and connects to send command and disconnects right after!
+* No more "no connection to link device / pod" errors with DASH.
+* **AAPS** will wait for pod's accessibility to send commands.
+* On pod activation, **AAPS** will find and connect to a new DASH pod.
 * 預期範圍：5-10 公尺（實際效果可能有所不同）
 
 ## 硬體/軟體要求
 
-* 一個新的 **Omnipod DASH Pod**（以藍色針蓋為標識）
+* DASH is identified by blue needle cap.
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-* **相容的 Android 手機** 需具備 BLE 藍牙連線
-   -  並非所有手機硬體和 Android 版本都能保證工作。 請查看 [**DASH 測試手機**](#Phones-list-of-tested-phones)，或者直接試試你的手機並告訴我們結果（手機型號及地區、Android 版本、運作良好/有些困難/無法使用）。
-   - **重要提示：使用舊版韌體 3.XX.X 的 Pod 時，曾有多起永久、不可恢復的連線損失案例。 使用這些舊 Pod 時請小心，尤其是當其他藍牙裝置連線到你的手機時！** 請注意，AAPS Omnipod Dash 驅動程式每次發送指令時都會透過藍牙連線到 Dash POD，並在隨後立即中斷連線。 藍牙連線可能會受到連線到運作 AAPS 手機的其他裝置（例如耳機等）的干擾（在某些手機型號中，這可能會導致連線問題或 Pod 註冊期間或之後的錯誤/遺失），或者被他們干擾。
+* **Compatible Android phone** with a BLE Bluetooth connection  
+  Be aware that **AAPS** Omnipod Dash driver connects with the DASH via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connection can be disturbed by other bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.
    -  **使用[**Build APK**](../SettingUpAaps/BuildingAaps.md)指示構建和安裝的 AAPS 版本 3.0 或更高版本**。
 * [**連續血糖監測儀（CGM）**](../Getting-Started/CompatiblesCgms.md)
 
-這些說明假設你正在開始新的幫浦使用。如果不是這樣，請耐心等待，並在下一次更換幫浦時再進行。
+The instructions below explain how to activate a new pod session. Wait to close to expiry of a current pod session before trying to connect **AAPS** with a new pod. Once a pod is is cancelled it cannot reused and the disconnection will be final.
 
 ## 在你開始之前
 
-**安全第一** - 請勿在無法從錯誤中恢復的環境中嘗試此過程（必須準備額外的 Pod、胰島素和手機裝置）。
+**SAFETY FIRST** - you should not try to connect **AAPS** to a pod for the first time without having access to extra pods, insulin, and phone devices are a must have.
 
-**你的 Omnipod Dash PDM 在 AAPS Dash 驅動程式啟動 Pod 後將無法再使用。** 以前，你使用 Dash PDM 對 Dash Pod 發送指令。 Dash Pod 只允許一個裝置發送指令與其通訊。 從那時起，成功啟動 Pod 的裝置將是唯一能夠與其通訊的裝置。 這意味著，你透過 AAPS Dash 驅動程式在 Android 手機上啟動了一個 Dash Pod，**你將無法再使用 PDM 與該 Pod 進行通訊**。 你 Android 手機上的 AAPS Dash 驅動程式現在是你的 PDM。
+**Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.** Previously a user may have operated a PDM to send commands to your DASH. A DASH will only faciiliate a single device to send commands to communicate with it. 從那時起，成功啟動 Pod 的裝置將是唯一能夠與其通訊的裝置。 This means that once you activate a DASH with your Android phone through the **AAPS**, **you will no longer be able to use your PDM with that pod**. The **AAPS** Dash driver in your Android phone is now your acting PDM.
 
 *這並不意味著你應該丟棄 PDM，建議將其留作備用和應急使用，例如手機遺失或 AAPS 無法正常工作時。*
 
-**當 Pod 未連線到 AAPS 時，Pod 不會停止輸送胰島素**。 預設的基礎速率會在 Pod 啟用時，根據目前啟用的設定檔寫入 Pod 中 只要 AAPS 正常運作，他將發送持續時間最多為 120 分鐘的基礎率指令。 當因某些原因 Pod 未接收到任何新指令（例如，因 Pod 與手機的距離過遠而失去連線）時，Pod 會自動恢復為預設基礎率。
+**當 Pod 未連線到 AAPS 時，Pod 不會停止輸送胰島素**。 Default basal rates are programmed on the pod on activation as defined in the current active **Profile**. As long as **AAPS** is operational it will send basal rate commands that run for a maximum of 120 minutes. 當因某些原因 Pod 未接收到任何新指令（例如，因 Pod 與手機的距離過遠而失去連線）時，Pod 會自動恢復為預設基礎率。
 
-**AAPS 不支援 30 分鐘基礎率設定檔。** **AAPS 設定檔不支援 30 分鐘的基礎率時間框架** 如果你是 AAPS 新手並首次設置基礎率設定檔，請注意，基礎率從半小時開始的設定不被支援，你需要調整你的基礎率設定檔以從整點開始。 例如，如果你的基礎率為 1.1 單位，並於 09:30 開始，持續時間為 2 小時，於 11:30 結束，這將無法正常工作。 你需要將此 1.1 單位的基礎率更改為 9:00-11:00 或 10:00-12:00 的時間範圍。 儘管 Omnipod Dash 硬體本身支援 30 分鐘基礎率設定檔，但 AAPS 的演算法目前無法考慮這些增量。
+**AAPS Profile does not support a 30 minute basal rate time frame** If you are new to **AAPS** and are setting up your basal rate **Profile** for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and programmes on an hourly basis. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this im **AAPS**. 你需要將此 1.1 單位的基礎率更改為 9:00-11:00 或 10:00-12:00 的時間範圍。 Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does support this feature.
 
-**AAPS 不支援 0 單位/小時的設定檔基礎率** 雖然 DASH Pods 支援 0 單位基礎率，但由於 AAPS 使用基礎率設定檔的倍數來確定自動治療，因此無法處理 0 單位基礎率。 可以透過“中斷幫浦”功能或停用循環/臨時基礎率或暫停循環/臨時基礎率的組合來實現臨時的 0 單位基礎率。
+**0U/h profile basal rates are NOT supported in AAPS** While the DASH does support a zero basal rate, since **AAPS** uses multiples of the user's **Profile** basal rate to determine automated treatment; it cannot function with a zero basal rate. 可以透過“中斷幫浦”功能或停用循環/臨時基礎率或暫停循環/臨時基礎率的組合來實現臨時的 0 單位基礎率。 The lowest basal rate allowed in **AAPS** is 0.05U/h.
 
-## 在 AAPS 中啟用 Dash 驅動程式
+## Selecting Dash in AAPS
 
-你可以透過**兩種方式**在 AAPS 中啟用 Dash 驅動程式：
+There are **two ways**:
 
 ### 選項 1：新安裝
 
-當你首次安裝 AAPS 時，**設置嚮導**將引導你完成 AAPS 的安裝。 當達到幫浦選擇時，選擇“DASH”。
+When installing **AAPS** for the first time, the **Setup Wizard** will guide new users through key features and installation requirements for **AAPS**. 當達到幫浦選擇時，選擇“DASH”。
 
 ![Enable_Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
 
-如有疑問，你還可以選擇“虛擬幫浦”，並在設置 AAPS 後選擇“DASH”（參見選項 2）。
+When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up **AAPS** (see option 2).
 
 ### 選項 2：組態建置工具
 
@@ -66,15 +63,15 @@ orphan: true
 
 在左上角的**漢堡選單**中，選擇**組態建置工具（1）**\ ➜\ **幫浦**\ ➜\ **Dash**\ ➜\ 選擇**Dash**的**設置齒輪（3）**旁的**選項按鈕（2）**。
 
-選擇**設置齒輪（3）**旁的**複選框（4）**，將允許 DASH 選單作為 AAPS 介面中的一個標籤顯示，標題為**DASH**。 勾選此框將有助於你在使用 AAPS 時查看 DASH 指令。
+Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the DASH menu to be displayed as a tab in the **AAPS** interface titled **DASH**. Checking this box will facilitate your access to the DASH commands when using **AAPS**.
 
-**注意：**可以在本文件的 Dash 設定部分找到更快速讀取[**Dash 設定**](#dash-settings)的方法。
+**NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the DASH settings section of this document.
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
 ### 驗證 Omnipod 驅動程式選擇
 
-要驗證你是否已在 AAPS 中啟用了 Dash 驅動程式，勾選該框（4）後，**從** **首頁首頁總覽**標籤**向左滑動**，你將看到一個**DASH**標籤。 如果你沒有勾選該框，你會在左上角的漢堡選單中找到 DASH 標籤。
+To verify that you have selected the DASH in **AAPS**, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab on **AAPS**. If this box is left unchecked, you’ll find the DASH tab in the hamburger menu upper left.
 
 ![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
@@ -82,11 +79,10 @@ orphan: true
 
 請**向左滑動**到**DASH**標籤，在那裡你將能管理所有 Pod 功能（在沒有註冊 Pod 會話的情況下，某些功能將不可用或不可見）：
 
-![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) 重新整理 Pod 連線和狀態，能夠在 Pod 發出嗶聲時靜音 Pod 警報
+![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) 'Refresh' pod connectivity and status, be able to silence pod alarms when the pod beeps
 
-![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod 管理（註冊、停用、播放測試嗶聲和 Pod 歷史紀錄）
+![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) 'Pod Management' (Activate, Deactivate, Play test beep, and Pod history)
 
-(OmnipodDASH-activate-pod)=
 
 ### 註冊 Pod
 
@@ -100,9 +96,9 @@ orphan: true
 
 ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-確保新 Pod 和要運作 AAPS 的手機兩者在附近，然後點擊**下一步**按鈕。
+Ensure that the new pod and the phone running **AAPS** are within close proximity of each other and click the **Next** button.
 
-**注意**：如果出現以下錯誤訊息，不要驚慌，這是可能發生的。 點擊 **重試** 按鈕。 在大多數情況下，註冊將繼續成功進行。
+**NOTE**: if the  error message below pops up _'Could not find an available pod for activation'_ (this can happen), do not panic. 點擊 **重試** 按鈕。 在大多數情況下，註冊將繼續成功進行。
 
 ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
@@ -110,7 +106,7 @@ orphan: true
 
 ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-4. 接下來，準備新 Pod 的注射部位。 移除 Pod 的塑膠針蓋。 如果你看到 Pod 有突出的部分，請取消流程並從新的 Pod 開始。 如果一切正常，撕下黏貼物的白色襯紙，並將 Pod 貼在你選定的身體部位。 完成後，點擊 **下一步** 按鈕。
+4. Next, prepare the infusion site ready to receive the new pod. Wash hands to avoid any risk of infection. Clean the infusion site by either using soap and water or an alcohol wipe to disinfect and let the skin air dry completely before proceeding. Remove the pod's blue plastic needle cap. If you see something that sticks out of the pod or unusual, cancel the process and start with a new pod. If everything looks OK, proceed to take off the white paper backing from the adhesive and apply the pod to the selected site on your body. 完成後，點擊 **下一步** 按鈕。
 
 ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
@@ -118,7 +114,7 @@ orphan: true
 
 ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
-6. 按下 **OK** 後，可能需要一些時間，Dash Pod 才會回應並插入針管（最多 1-2 分鐘），請耐心等待。
+6. After pressing **OK**, it may take some time before the DASH responds and inserts the cannula (1-2 minutes maximum). Be patient.
 
  *注意：在插入針管之前，最好輕捏針管插入點附近的皮膚。 這有助於針頭順利插入，並減少堵塞的機會。*
 
@@ -128,7 +124,7 @@ orphan: true
 
 ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-9. 顯示 **Pod 已註冊** 畫面。 點擊綠色 **完成** 按鈕。 恭喜！ 你已經開始了新的 Pod 使用階段。
+9. 顯示 **Pod 已註冊** 畫面。 點擊綠色 **完成** 按鈕。 恭喜！ You have now started a new pod session.
 
 ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
@@ -142,7 +138,7 @@ orphan: true
 
 ​![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-在註冊 Pod 後匯出設置是一個好習慣。 每次更換 Pod 時都應執行此操作，每月一次，將匯出的文件複製到你的網路磁碟。 請見[**匯出設定文件**](../Maintenance/ExportImportSettings.md)。
+在註冊 Pod 後匯出設置是一個好習慣。 Export settings should be done at each pod change and once a month, copy the exported file to your internet drive. 請見[**匯出設定文件**](../Maintenance/ExportImportSettings.md)。
 
 
 (OmnipodDASH-deactivate-pod)=
@@ -166,7 +162,6 @@ orphan: true
  ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
 
-
 3. 停用成功後會顯示綠色勾號。 點擊 **下一步** 按鈕以顯示 Pod 停用畫面。 你現在可以移除 Pod，因為該使用階段已停用。
 
 ![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
@@ -181,13 +176,11 @@ orphan: true
 
  ![Deactivate_Pod_8](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
-(OmnipodDASH-resuming-insulin-delivery)=
-
 ### 恢復胰島素輸送
 
-**注意**：在切換設定檔期間，Dash 必須暫停輸送，然後設置新的基礎率設定檔。 如果兩個指令之間的通訊失敗，則可能會暫停輸送。 在問題排除部分閱讀[**暫停交付**](#delivery-suspended)以獲取更多詳細資訊。
+**Note**: During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile** as delivery can be suspended. 在問題排除部分閱讀[**暫停交付**](#delivery-suspended)以獲取更多詳細資訊。
 
-使用此指令指示目前暫停的活動 Pod 恢復胰島素輸送。 指令成功處理後，胰島素將根據目前時間並使用活動基礎率設定檔恢復正常輸送。 Pod 將再次接受注射、TBR 和 SMB 的指令。
+使用此指令指示目前暫停的活動 Pod 恢復胰島素輸送。 After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal **Profile**. The pod will again accept commands for bolus, **TBR**, and **SMB**.
 
 1. 進入 **DASH** 標籤，確認 **Pod 狀態 (1)** 欄位顯示 **已暫停**，然後按下 **恢復輸送 (2)** 按鈕以開始流程，指示目前的 Pod 恢復正常的胰島素輸送。 訊息 **恢復輸送** 將顯示在 **Pod 狀態 (3)** 欄位中。
 
@@ -211,7 +204,7 @@ orphan: true
 
 ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
-2. 進入 **DASH** 標籤並按下 **靜音警報 (2)** 按鈕。 AAPS 會向 Pod 發送指令以停用 Pod 過期警告嗶聲，並將 **Pod 狀態 (1)** 欄位更新為 **確認警報**。
+2. 進入 **DASH** 標籤並按下 **靜音警報 (2)** 按鈕。 **AAPS** sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
 
 ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
@@ -226,7 +219,7 @@ orphan: true
 
 ### 查看 Pod 歷史紀錄
 
-本節將向你展示如何查看你的活動 Pod 歷史紀錄，並根據不同的操作類別進行篩選。 Pod 歷史工具允許你查看在其三天（72 - 80 小時）使用壽命期間提交到目前活動 Pod 的操作和結果。
+This section explains how to review your active pod history and filter by different action categories. Pod 歷史工具允許你查看在其三天（72 - 80 小時）使用壽命期間提交到目前活動 Pod 的操作和結果。
 
 此功能有助於驗證發送到 Pod 的注射劑量、臨時基礎率和基礎指令。 其餘類別對於排除故障和確定發生失敗前的事件順序很有幫助。
 
@@ -242,7 +235,7 @@ orphan: true
 
 
 
-2. 在 **Pod 歷史紀錄** 畫面中，顯示預設類別 **全部 (1)**，以逆序顯示所有 Pod **操作 (3)** 和 **結果 (4)** 的 **日期和時間 (2)**。 使用手機的 **返回按鈕按兩次** 以返回主 AAPS 介面中的 **DASH** 標籤。
+2. 在 **Pod 歷史紀錄** 畫面中，顯示預設類別 **全部 (1)**，以逆序顯示所有 Pod **操作 (3)** 和 **結果 (4)** 的 **日期和時間 (2)**。 Use your phone’s **back button 2 times** to return to the **DASH** tab in the main **AAPS** interface.
 
 
 ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
@@ -319,7 +312,7 @@ orphan: true
 
 ## Dash 設定
 
-你可以從左上角 **漢堡選單** 下的 **組態建置工具 (1)**\ ➜\ **幫浦**\ ➜\ **Dash**\ ➜\ **設定齒輪 (3)** 中進行 Dash 驅動設定，方法是選擇標題為 **Dash** 的 **單選按鈕 (2)**。 選擇**設置齒輪（3）**旁的**複選框（4）**，將允許 DASH 選單作為 AAPS 介面中的一個標籤顯示，標題為**DASH**。
+你可以從左上角 **漢堡選單** 下的 **組態建置工具 (1)**\ ➜\ **幫浦**\ ➜\ **Dash**\ ➜\ **設定齒輪 (3)** 中進行 Dash 驅動設定，方法是選擇標題為 **Dash** 的 **單選按鈕 (2)**。 Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the **AAPS** interface titled **DASH**.
 
 ![Dash_settings_1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -348,7 +341,7 @@ orphan: true
 
 ![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
-提供 AAPS 警報，包括 Pod 到期、關閉、儲液量低，根據定義的門檻值單位觸發。
+Provides **AAPS** alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
 *請注意，Pod 觸發警報後，AAPS 通知將始終發出。 解除通知不會取消警報，除非啟用了自動確認 Pod 警報功能。 若要手動解除警報，你必須進入 **DASH** 標籤，並按下 **靜音警報按鈕**。*
 
@@ -361,22 +354,22 @@ orphan: true
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
-提供 AAPS 通知和手機提示音，當 TBR、SMB 或注射的事件是否成功無法確定時發出。
+The Notification section allows the user to so select their preferred notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus, and delivery suspended events were successful.
 
 *注意：這些僅是通知，沒有嗶聲警報。*
 
-* **啟用不確定 TBR 通知音效：** 啟用或停用此設定，以在 AAPS 不確定 TBR 是否成功設置時觸發提示音和視覺通知。
-* **啟用不確定 SMB 通知音效：** 啟用或停用此設定，以在 AAPS 不確定 SMB 是否成功送達時觸發提示音和視覺通知。
-* **啟用不確定注射通知音效：** 啟用或停用此設定，以在 AAPS 不確定注射是否成功送達時觸發提示音和視覺通知。
+* **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a TBR was successfully set.
+* **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when **AAPS**is uncertain if an SMB was successfully delivered.
+* **Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when **AAPS**is uncertain if a bolus was successfully delivered.
 * **啟用暫停輸送通知音效：** 啟用或停用此設定，以在暫停輸送成功送達時觸發提示音和視覺通知。
 
 ## 手動操作 (ACT) 標籤
 
-此標籤已在主 AAPS 文件中有詳細說明，但此處有一些 Omnipod Dash Pod 與管路幫浦的差異，特別是在應用新 Pod 的過程後。
+This tab is well documented in the main**AAPS**documentation but there are a few items on this tab that are specific to how the DASH differs from tube based pumps, especially after the processes of applying a new pod.
 
-1. 進入主 AAPS 介面中的 **手動操作 (ACT)** 標籤。
+1. Go to the **Actions (ACT)** tab in the main **AAPS**interface.
 
-2. 在 **照護入口(Careportal) (1)** 部分下，**胰島素** 和 **套管** 欄位會在每次更換 Pod 後自動重置為 0 天和 0 小時。 這是根據 Omnipod 幫浦的設計和運作方式所設。 由於 Pod 直接將套管插入應用 Pod 的皮膚上，因此 Omnipod 幫浦不使用傳統的管路。 *因此，在更換 Pod 後，這些數值的時間將自動重置為零。* **幫浦電池時間** 不會被報告，因為 Pod 中的電池壽命始終比 Pod 的最大壽命（80 小時）長。 每個 Pod 內都包含 **幫浦電池** 和 **胰島素儲液器**。
+2. Under the **Careportal (1)** section the **Insulin** and **Cannula** fields will have their **age reset** to 0 days and 0 hours **after each pod change**. 這是根據 Omnipod 幫浦的設計和運作方式所設。 由於 Pod 直接將套管插入應用 Pod 的皮膚上，因此 Omnipod 幫浦不使用傳統的管路。 *因此，在更換 Pod 後，這些數值的時間將自動重置為零。* **幫浦電池時間** 不會被報告，因為 Pod 中的電池壽命始終比 Pod 的最大壽命（80 小時）長。 每個 Pod 內都包含 **幫浦電池** 和 **胰島素儲液器**。
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
@@ -384,9 +377,9 @@ orphan: true
 
 **胰島素等級**
 
-顯示的胰島素等級是 Omnipod DASH 回報的數量。 然而，Pod 僅在儲液器低於 50 單位時報告實際的胰島素儲液量。 在此之前，會顯示「超過 50 單位」。 報告的數量並不精準：當 Pod 報告「空」時，大多數情況下儲液器仍有一些剩餘的胰島素單位。 Omnipod DASH 首頁總覽標籤將顯示如下所述：
+Insulin level displayed is the amount reported by DASH. 然而，Pod 僅在儲液器低於 50 單位時報告實際的胰島素儲液量。 在此之前，會顯示「超過 50 單位」。 報告的數量並不精準：當 Pod 報告「空」時，大多數情況下儲液器仍有一些剩餘的胰島素單位。 The DASH overview tab will display as described the below:
 
-  * **超過 50 單位** - Pod 報告儲液器中還有超過 50 單位。
+  * **Above 50 Units** - The pod reports more than 50 units currently in the reservoir.
   * **少於 50 單位** - Pod 報告的儲液器中剩餘的胰島素量。
 
 附加說明：
@@ -395,18 +388,16 @@ orphan: true
 
 ## 問題排除
 
-(OmnipodDASH-delivery-suspended)=
-
 ### 輸送暫停
 
-  * 現在已無暫停按鈕。 如果你想「暫停」 Pod，你可以設置0U/h臨時基礎率(TBR) 數分鐘。
-  * 在設定檔切換期間，Dash 必須在設置新的基礎率設定檔之前暫停輸送。 如果兩個指令之間的通訊失敗，則輸送可能會保持暫停。 當這種情況發生時：
+  * 現在已無暫停按鈕。 If you want to "suspend" the pod, you can set a zero **TBR** for x minutes.
+  * During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile**. 如果兩個指令之間的通訊失敗，則輸送可能會保持暫停。 當這種情況發生時：
      - 將不會有胰島素輸送，包括基礎率、SMB、手動注射等。
      - 可能會通知某個指令未確認：這取決於失敗發生的時間。
-     - AAPS 將每 15 分鐘嘗試設置新的基礎率設定檔。
-     - 如果輸送仍然暫停（恢復輸送失敗），AAPS 將每 15 分鐘發送通知，通知輸送已暫停。
+     - **AAPS** will try to set the new basal profile every 15 minutes.
+     - **AAPS** will show a notification informing that the delivery is suspended every 15 minutes, if the delivery is still suspended (resume delivery failed).
      - 如果使用者選擇手動重新開始給藥，[**重新開始給藥**](#resuming-insulin-delivery)按鈕將會啟用。
-     - 如果 AAPS 自行恢復輸送失敗（這發生在 Pod 無法到達、聲音靜音等情況下），Pod 將每分鐘發出 4 次嗶聲，持續 3 分鐘，然後在輸送暫停超過 20 分鐘後每 15 分鐘重複一次。
+     - If **AAPS** fails to resume delivery on its own (this happens if the pod is unreachable, sound is muted, etc), the pod will start beeping 4 times every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20 minutes.
   * 對於未確認的指令，「重新整理 Pod 狀態」應能確認/否認他們。
 
 <**注意：** 當你聽到 Pod 發出嗶聲時，不要假設胰島素會繼續注射而不檢查手機，注射可能已暫停，**所以一定要檢查！**
@@ -425,11 +416,11 @@ Pod 會因多種問題偶爾發生故障，包括 Pod 本身的硬體問題。 �
 
 ### 匯出設定
 
-匯出 AAPS 設定使你能夠恢復所有設定，更重要的是，恢復所有目標。 你可能需要在卸載/重新安裝 AAPS 後或手機遺失後，在新手機上重新安裝時恢復設定為「最後一次的工作狀態」。
+Exporting **AAPS** settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling **AAPS** or in case of phone loss, reinstalling on the new phone.
 
-注意：匯出的設定中包含啟用的 Pod 資訊。 如果你匯入了「舊」的匯出檔案，你的目前 Pod 會「失效」。 沒有其他選擇。 在某些情況下（例如 _計劃中的_ 換手機），你可能需要使用匯出的檔案來恢復 AndroisAPS 設定**，同時保持目前啟用的 Pod**。 在這種情況下，重要的是需要包含目前啟用 Pod 的最新匯出設定檔案。
+注意：匯出的設定中包含啟用的 Pod 資訊。 如果你匯入了「舊」的匯出檔案，你的目前 Pod 會「失效」。 沒有其他選擇。 In some cases (like a _programmed_ phone change), you may need to use the exported file to restore **AAPS'** settings **while keeping the current active Pod**. 在這種情況下，重要的是需要包含目前啟用 Pod 的最新匯出設定檔案。
 
-**啟動 Pod 後立即匯出是一種好習慣**。 這樣，你在遇到問題時，隨時都可以恢復目前啟用的 Pod。 例如，當你更換備用手機時。
+**啟動 Pod 後立即匯出是一種好習慣**。 This way you will always be able to restore the current active pod in case of a problem. 例如，當你更換備用手機時。
 
 定期將匯出的設定檔案複製到安全的地方（例如雲端硬碟），這樣在需要時，任何手機都能存取（例如手機遺失或實際手機的出廠重置情況下）。
 
@@ -456,20 +447,20 @@ Pod 會因多種問題偶爾發生故障，包括 Pod 本身的硬體問題。 �
 
 當匯入包含已不再啟用的 Pod 資料時，AAPS 將嘗試與其連線，這顯然會失敗。 在這種情況下，你無法啟動新 Pod。
 
-若要移除舊的 Pod 會話，請「嘗試」停用該 Pod。 停用將失敗。 選擇「重試」。 在第二次或第三次重試後，你將獲得移除 Pod 的選項。 移除舊的 Pod，你將能夠啟動新 Pod。
+To remove the old pod session “try” to de-activate the Pod. 停用將失敗。 選擇「重試」。 在第二次或第三次重試後，你將獲得移除 Pod 的選項。 Once the old pod is removed you will be able to activate a new pod.
 
 ### 重新安裝 AAPS
 
-當卸載 AAPS 時，你將失去所有設定、目標和目前的 Pod 連線。 為了恢復他們，請確保有一個最近匯出的設定檔案可用！
+When uninstalling**AAPS** you will lose all your settings, objectives and the current Pod session. 為了恢復他們，請確保有一個最近匯出的設定檔案可用！
 
-當有活動 Pod 時，請務必確保你有目前 Pod 會話的匯出，否則在匯入舊設定時，你將失去目前啟用的 Pod。
+When on an active Pod, make sure that you have an export for the current pod session or you will lose the currently active pod when importing older settings.
 
 1. 匯出你的設定並將副本存儲在安全的地方。
-2. 卸載 AAPS 並重新啟動手機。
-3. 安裝新版本的 AAPS。
+2. Uninstall **AAPS** and restart your phone.
+3. Install the new version of **AAPS**.
 4. 匯入你的設定。
-5. 驗證所有偏好設定（可選地再次匯入設定）。
-6. 啟動新 Pod。
+5. Verify all preferences (optionally import settings again).
+6. Activate a new pod.
 7. 完成後：匯出目前設定。
 
 ### 更新 AAPS 至新版本
@@ -477,24 +468,24 @@ Pod 會因多種問題偶爾發生故障，包括 Pod 本身的硬體問題。 �
 在大多數情況下，無需卸載。 你可以透過啟動新版本的安裝進行「就地」安裝。 這在啟用 Pod 在使用期間也是可以的。
 
 1. 匯出你的設定。
-2. 安裝新版本的 AAPS。
+2. Install the new **AAPS** version.
 3. 驗證安裝是否成功。
-4. 繼續使用 Pod 或啟動新 Pod。
+4. RESUME the Pod or activate a new pod.
 5. 完成後：匯出目前設定。
 
 ### Omnipod 驅動程式警報
 
 請注意，Omnipod Dash 驅動程式會在**首頁總覽標籤**中顯示各種獨特的警報，其中大多數是資訊性的，可以忽略，而有些會提供使用者解決觸發警報原因的操作。 你可能會遇到的主要警報總結如下：
 
-* 沒有啟用的 Pod 未偵測到啟用的 Pod 使用。 按下**稍後提醒**可以暫時忽略此警報，但只要未啟動新 Pod，他就會持續觸發。 當此警報啟動後，會自動靜音。
-* Pod 暫停 Pod 已暫停的資訊性警報。
-* 設定基礎率設定檔失敗：輸送可能已暫停！ 請手動從 Omnipod 標籤中重新整理 Pod 狀態並在需要時恢復輸送。 Pod 基礎率設定失敗的資訊性警報，你需要按下 Omnipod 標籤上的*重新整理*按鈕。
-* 無法確認 SMB 注射是否成功。 如果你確定注射未成功，應手動從治療中刪除 SMB 項目。 警報提示無法確認 SMB 注射指令的成功，你需要檢查 DASH 標籤上的*最後一次注射*欄位以查看 SMB 注射是否成功，如果未成功，則從治療標籤中刪除該項目。
+* 未偵測到啟動的幫浦會話。 按下**稍後提醒**可以暫時忽略此警報，但只要未啟動新 Pod，他就會持續觸發。 當此警報啟動後，會自動靜音。
+* Pod suspended Informational alert that pod has been suspended.
+* Setting basal **Profile** failed : Delivery might be suspended! 請手動從 Omnipod 標籤中重新整理 Pod 狀態並在需要時恢復輸送。 Informational alert that the Pod basal **Profile** setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
+* Unable to verify whether **SMB** bolus succeeded. 如果你確定注射未成功，應手動從治療中刪除 SMB 項目。 Alert that the **SMB** bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if **SMB** bolus succeeded and if not remove the entry from the Treatments tab.
 * 不確定「任務注射/TBR/SMB」是否完成，請手動確認是否成功。
 
-## 在哪裡尋求 Omnipod DASH 驅動程式的幫助
+## Where to get help for DASH
 
-Omnipod DASH 驅動程式的所有開發工作都是由社群志願者完成的；我們請你記住這一點，並在尋求幫助前遵循以下指南：
+All of the development work for the DASH is done by the community on a **volunteer** basis; please keep this in mind and use the following guidelines before requesting assistance:
 
 -  **等級 0：** 閱讀此文件的相關部分，以確保你了解遇到困難的功能應如何工作。
 -  **等級 1：** 如果你仍然遇到無法解決的問題，請使用[此邀請鏈接](https://discord.gg/4fQUWHZ4Mw)進入**Discord**的*#AAPS* 頻道。

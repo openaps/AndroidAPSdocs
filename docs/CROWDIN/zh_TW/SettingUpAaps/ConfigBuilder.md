@@ -98,7 +98,7 @@
 * [Poctech](../CompatibleCgms/PocTech.md)
 * [Tomato 應用程式](#libre1-using-tomato)，用於 MiaoMiao 裝置
 * [Glunovo 應用程式](https://infinovo.com/) 用於 Glunovo CGM 系統
-* [歐泰(Ottai)](../CompatibleCgms/OttaiM8.md)
+* [歐態（Ottai）](../CompatibleCgms/OttaiM8.md)
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
 * 隨機血糖：生成隨機血糖資料（僅限演示模式）
 
