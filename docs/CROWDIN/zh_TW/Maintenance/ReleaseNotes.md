@@ -7,14 +7,14 @@
 
 ![更新資訊](../images/AAPS_LoopDisable90days.png)
 
-此提示非常重要，不應忽視，並非為了打擾你。 新版的 **AAPS** 不僅提供新功能，還包含重要的安全修復。 Therefore it is necessary that every **AAPS** user updates to the latest version a.s.a.p. 遺憾的是，仍然有來自非常舊版本的錯誤回報，因此這是一項為了提升每位 **AAPS** 使用者及 DIY 社群安全性的努力。 感謝你的諒解。
+此提示非常重要，不應忽視，並非為了打擾你。 新版的 **AAPS** 不僅提供新功能，還包含重要的安全修復。 因此，每位**AAPS**用戶都有必要儘快更新至最新版本。 遺憾的是，仍然有來自非常舊版本的錯誤回報，因此這是一項為了提升每位 **AAPS** 使用者及 DIY 社群安全性的努力。 感謝你的諒解。
 
 ```{admonition} First version of **AAPS**
 :class: note
 
 首個測試版本早在 2015 年就已經開始。 2016 年發布了第一個正式版本。
 
-The chronology of these releases is not available at the moment but as this question is asked several times we document it here.
+這些版本的時間表目前無法獲得，但由於這個問題被多次詢問，我們在此進行記錄。
 
 ```
 ![AAPS 1.0](../images/update/AAPS1.0.png)
@@ -69,7 +69,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 * 從手錶控制循環狀態 @tdrkDev
 * 穩定度改善
 
-*  **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
+*  **可能需要新的[認證器設置](#sms-commands-authenticator-setup)。**
 
 ## 版本 3.3.1.2
 
