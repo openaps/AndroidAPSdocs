@@ -31,7 +31,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 
 The instructions below explain how to activate a new pod session. Wait to close to expiry of a current pod session before trying to connect **AAPS** with a new pod. Once a pod is is cancelled it cannot reused and the disconnection will be final.
 
-## Bevor du anfängst
+## Bevor Du anfängst
 
 **SAFETY FIRST** - you should not try to connect **AAPS** to a pod for the first time without having access to extra pods, insulin, and phone devices are a must have.
 
