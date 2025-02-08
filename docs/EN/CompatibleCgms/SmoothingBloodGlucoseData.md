@@ -16,7 +16,7 @@ As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within
 
 ### Exponential smoothing
 
-This is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value.
+In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations. 
 
 ### Average smoothing
 
@@ -28,12 +28,12 @@ Use this option only if your CGM data is being properly smoothed by your collect
 
 ## Suggestions to use smoothing
 
-|                           | Exponential | Average  |    None     |
-|---------------------------|:-----------:|:--------:|:-----------:|
-| G5 and G6                 | If noisy    |          | Recommended |
-| G7                        | If noisy    | If stable|             |
-| Libre 1 or Juggluco       | Recommended |          |             |
-| Libre 2 and 3 from xDrip+ |             |          | Recommended |
+|                                      | Exponential | Average     |    None     |
+|--------------------------------------|:-----------:|:-----------:|:-----------:|
+| G5 and G6                            | If noisy    |             | Recommended |
+| G7                                   | If noisy    | If stable   |             |
+| Libre 2 and 3 from Juggluco & Libre 1|             | Recommended |             |
+| Libre 2 and 3 from xDrip+            |             |             | Recommended |
 
 ### Dexcom sensors
 
