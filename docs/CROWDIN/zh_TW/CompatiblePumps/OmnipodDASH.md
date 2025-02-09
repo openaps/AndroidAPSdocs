@@ -16,7 +16,9 @@ orphan: true
 * 使用DASH時再也不會出現「無法連線到連結設備/ Pod 」的錯誤。
 * **AAPS**將等候 Pod 的可讀取性以發送指令。
 * Pod 啟動時，**AAPS**將尋找並連接到新的DASH Pod 。
-* 預期範圍：5-10 公尺（實際效果可能有所不同）
+* Expected range: 5-10 meters (YMMV).
+
+WARNING: There are currently reported Bluetooth connection issues with the following combination of **AAPS** / DASH / Android 15. **AAPS** should not be  in combination with Android 15 and DASH unless the user has checked the following [**List**](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) and verified their phone is not known reported issue. **AAPS** is currently working to resolve this issue.
 
 ## 硬體/軟體要求
 
