@@ -140,7 +140,7 @@ Alternatively, but not for Wear OS 5, you can:
 - Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
 - Make sure to be near your main router, then restart both phone and watch.
 
-**Pairing :**
+**配對中 :**
 
 - Watch: Wireless Debugging: note the IP address.
 - Wear Installer: Enter the IP on the in Wear Installer app.
