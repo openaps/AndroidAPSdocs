@@ -65,10 +65,6 @@ Después de un cambio de sensor, xDrip+ detectará automáticamente el nuevo sen
 - If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
 - Turn of Smoothing (done in xDrip+ already)
 
-Hasta el momento, al usar Libre 3 como fuente de glucosa, las opciones "Habilitar SMB siempre" y "Habilitar SMB con carbohidratos" no pueden activarse con el algoritmo de SMB. Los valores de glucosa de Libre 3 no son lo suficientemente suaves como para usarlos de manera segura.
-
-
-
 ## Cambios posteriores del sensor
 
 1. Abre Juggluco y toma nota del número de serie del sensor existente
@@ -77,7 +73,7 @@ Hasta el momento, al usar Libre 3 como fuente de glucosa, las opciones "Habilita
 
 2. Ahora simplemente escanea tu nuevo sensor con el lector NFC de tu teléfono. Juggluco mostrará una notificación si el proceso se ha iniciado con éxito.
 3. Cuando estés listo para desactivar el antiguo sensor, abre el menú de Juggluco haciendo clic en cualquier lugar en el espacio vacío en la esquina superior izquierda de la pantalla.
-4. Selecciona el sensor caducado y pulsa sobre "Finalizar"
+4. Select the expired sensor and tap "Terminate"
 
 ![Terminate sensor](../images/libre3/step_14.jpg)
 
