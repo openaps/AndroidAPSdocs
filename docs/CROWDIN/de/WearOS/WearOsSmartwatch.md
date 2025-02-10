@@ -86,7 +86,7 @@ See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
 
 Es zeigt alle notwendigen Einzelschritte. Am besten schaust Du das Video auf einem separaten Gerät an, sodass Du es während der Smartphone-Einrichtung ansehen kannst.
 
-Um die Akkulaufzeit zu verlängern, schalte - wie auch Video gezeigt - auf der Smartwatch das ADB Debugging aus.
+Um die Akkulaufzeit zu verlängern, schalte - wie auch im Video gezeigt - auf der Smartwatch das ADB Debugging aus.
 
 Alternatively, but not for Wear OS 5, you can:
 
