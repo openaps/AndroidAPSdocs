@@ -159,7 +159,9 @@ If this setting is enabled, **SMB** will only be enabled with a high temp target
 
 If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
 
-This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+
+Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 #### Enable SMB with COB
 
@@ -179,7 +181,9 @@ If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB
 
 For safety reasons, this setting is only available if **AAPS** detects that you are using a reliable BG source. It is not visible if "Enable SMB always" is switched on.
 
-This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
+This setting is only available if **AAPS** detects that you are using a [reliable BG source,](#GettingStarted-TrustedBGSource) with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+
+Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
 This setting is not visible if "Enable SMB always" is switched on.
 
 #### How frequently SMBs will be given in min
@@ -218,7 +222,7 @@ With this option enabled, the SMB algorithm can recognize unannounced meals. Thi
 
 ### Minimal carbs required for suggestion
 
-Minimum grams of carbs to display a carbs suggestion alert. Referans tasarım karbonhidrat gerektirdiğini tespit ettiğinde ek karbonhidrat önerilecektir. Bu durumda 5, 15 veya 30 dakika ertelenebilecek bir bildirim alacaksınız.
+Minimum grams of carbs to display a carbs suggestion alert. Eating of additional carbs will be suggested when the reference design detects that it requires carbs. In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
 
 İstenirse karbonhidrat ihtiyacı bildirimleri Nightscout'a iletilebilir, bu durumda bir anons gösterilir ve yayınlanır.
 
@@ -268,9 +272,9 @@ The hardcoded parameters in **AAPS** are:
 
 ### OpenAPS'in gönderebileceği maksimum bazal AİNS \[U\] (OpenAPS "maks-AİNS")
 
-This parameter limits the maximum of basal IOB where **AAPS** still works. Aktif insülin yüksekse, maks aktif insülin limitin altına düşene kadar ek bazal insülin vermeyi durdurur.
+This parameter limits the maximum of basal IOB where **AAPS** still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-The default value is 2, but you should rise this parameter slowly to see how much it affects you and which value fits best. Bu ayarlar herkes için farklıdır ve ayrıca ortalama günlük toplam doza (GTD) bağlıdır. Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir sınır vardır. The 'hard limit' for maxIOB is lower in AMA than in SMB.
+The default value is 2, but you should rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 - Çocuk: 3
 - Genç: 5
@@ -286,7 +290,7 @@ Here, you can choose, if you want to use the [sensitivity detection](../DailyLif
 
 ### Otoduyarlılık geçici hedefleri de ayarlar
 
-Bu seçeneği etkinleştirdiyseniz, otoduyarlılık hedefleri de ayarlayabilir (bazal ve İDF'nin yanında). This lets **AAPS** work more 'aggressive' or not. Bununla asıl KŞ hedefine daha hızlı ulaşılabilir.
+If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets **AAPS** work more 'aggressive' or not. The actual target might be reached faster with this.
 
 ### Gelişmiş Ayarlar
 
@@ -303,9 +307,9 @@ Default value: 3 (shouldn’t be changed unless you really need to and know what
 
 Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
 
-**Bolus erteleme ies böleni** Bolus erteleme özelliği, yemek bolusaundan sonra çalışır. **AAPS** doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. Varsayılan değer 2'dir. Bu, 5 saatlik bir İES ile "bolus ertelemenin" 5s : 2 = 2.5s uzunluğunda olacağı anlamına gelir.
+**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. **AAPS** doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
-Varsayılan değer: 2
+Default value: 2
 
 * * *
 
