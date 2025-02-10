@@ -14,7 +14,7 @@ orphan: true
 
 ### 指數平滑
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+一般來說，這是最建議的選項，因為它在解決噪音方面最具侵略性，並且會重新寫入最近的數值。 然而，請參閱下表以獲取其他具體建議。
 
 ### 平均平滑
 
@@ -28,15 +28,15 @@ In general, this is the recommended option to start with, as it is most aggressi
 
 ## 平滑處理建議
 
-|               | 指數平滑  |   平均平滑    | 無平滑處理 |
-| ------------- |:-----:|:---------:|:-----:|
-| G5/G6/ONE     | 如果有干擾 |           | 建議使用  |
-| G7/ONE+/Stelo | 如果有干擾 | If stable |       |
+|               | 指數平滑  |  平均平滑  | 無平滑處理 |
+| ------------- |:-----:|:------:|:-----:|
+| G5/G6/ONE     | 如果有干擾 |        | 建議使用  |
+| G7/ONE+/Stelo | 如果有干擾 | 如果穩定的話 |       |
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the [patched app data source](https://xdrip.readthedocs.io/en/latest/install/libre2patch/) (receiving from another app, Juggluco included), smoothing is already done [inside the app](https://xdrip.readthedocs.io/en/latest/use/NFC/#smooth-libre-3-data-when-using-xxx-method).
+Libre 感測器的噪音較大，可能需要平滑處理。 在使用 xDrip+ 直接連線或[修補應用程式資料來源](https://xdrip.readthedocs.io/en/latest/install/libre2patch/)（接收來自其他應用程式的資料，包括 Juggluco）時，平滑處理已在[程式內完成](https://xdrip.readthedocs.io/en/latest/use/NFC/#smooth-libre-3-data-when-using-xxx-method)。
 
-| Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
-| -------------------- |:--------:|:-------------:|:-------------:|:------------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.      |     平均平滑      |        N.A.        |
-| Libre 2/2+ (EU)      |   平均平滑   |     無平滑處理     |     平均平滑      |       無平滑處理        |
-| Libre 2/2+/3/3+      |   平均平滑   |     N.A.      |     N.A.      |       無平滑處理        |
+| 感測器 / 資料來源      | Juggluco | xDrip+ 直接 | xDrip+ 橋接 | xDrip+ 修補應用程式 |
+| --------------- |:--------:|:---------:|:---------:|:-------------:|
+| Libre 1/14天/專業版 |   N.A.   |   N.A.    |   平均平滑    |     N.A.      |
+| Libre 2/2+ (歐盟) |   平均平滑   |   無平滑處理   |   平均平滑    |     無平滑處理     |
+| Libre 2/2+/3/3+ |   平均平滑   |   N.A.    |   N.A.    |     無平滑處理     |
