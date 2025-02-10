@@ -159,46 +159,50 @@ If this setting is enabled, **SMB** will only be enabled with a high temp target
 
 If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). בהפעלת הגדרה זו, שאר הגדרות ההפעלה שלהלן לא ישפיעו. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
 
-This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+
+Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 #### הפעלת SMB עם פחמ' פעילות
 
-אם הגדרה זו מופעלת, SMB מופעל כאשר ערך הפחמימות הפעילות גדול מ-0.
+If this setting is enabled, SMB is enabled when the COB is greater than 0.
 
 This setting is not visible if "Enable SMB always" is switched on.
 
 #### הפעלת SMB עם ערכי מטרה זמניים
 
-אם הגדרה זו מופעלת, SMB מופעל כאשר מוגדר ערך מטרה זמני כלשהו (אכילה בקרוב, פעילות, היפו, מותאם אישית). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100mg/dL or 5.6mmol/l) but disabled when a high temp target is set.
+If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100mg/dL or 5.6mmol/l) but disabled when a high temp target is set.
 
 This setting is not visible if "Enable SMB always" is switched on.
 
 #### הפעלת SMB אחרי פחמימות
 
-אם מופעל, SMB יישאר פעיל במשך 6 שעות לאחר שהוכרזו פחמימות, אפילו אם הפחמימות הפעילות ירדו ל-0.
+If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0.
 
 For safety reasons, this setting is only available if **AAPS** detects that you are using a reliable BG source. It is not visible if "Enable SMB always" is switched on.
 
-This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
+This setting is only available if **AAPS** detects that you are using a [reliable BG source,](#GettingStarted-TrustedBGSource) with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+
+Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
 This setting is not visible if "Enable SMB always" is switched on.
 
 #### תדירות מתן SMB (דקות)
 
-אפשרות זו מגבילה את תדירות ה-SMB. ערך זה קובע את הזמן המינימלי בין SMB. שימו לב שהחישוב של הלולאה קורה בכל פעם שמתקבל ערך סוכר (בדרך כלל כל 5 דקות). יש להחסיר 2 דקות כדי לתת ללולאה זמן נוסף להשלמה. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
+This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
 
-ערך ברירת המחדל: 3 דקות.
+Default value: 3 min.
 
 (Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
 
 #### מקסימום הדקות של בזאלי אליו SMB מוגבל
 
-זוהי מגבלה בטיחותית חשובה. ערך זה קובע כמה SMB ניתן לתת בהתבסס על כמות האינסולין הבזאלי בזמן נתון, כאשר הוא מכוסה על ידי פחמימות פעילות.
+This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
 Making this value larger allows the SMB to be more aggressive. You should start with the default value of 30 minutes. After some experience, increase the value in 15 minutes increments and observe the effects over multiple meals.
 
 It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to accommodate a decreasing BG with 0 U/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which will warn you well before a hypo.
 
-ערך ברירת המחדל: 30 דקות.
+Default value: 30 min.
 
 #### Max minutes of basal to limit SMB to for UAM
 
@@ -210,9 +214,9 @@ This setting is only visible if "Enable SMB" and "Enable UAM " are switched on.
 
 ### הפעלת UAM
 
-עם אפשרות זו מופעלת, אלגוריתם ה-SMB יכול לזהות ארוחות לא מוצהרות. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. זה עובד גם במקרה ההפוך: אם יש ירידה מהירה בסוכר, UAM יכול לעצור SMB מוקדם.
+With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
 
-**לכן, UAM תמיד צריך להיות מופעל בעת שימוש ב-SMB.**
+**Therefore, UAM should always be activated when using SMB.**
 
 (key-aaps-features-minimal-carbs-required-for-suggestion)=
 
@@ -232,13 +236,13 @@ You can read more here : [OpenAPS docs](https://openaps.readthedocs.io/en/latest
 
 **Always use short average delta instead of simple data** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to be steadier with noisy data sources like xDrip+ and Libre.
 
-**מכפלת בטיחות בזאלי יומי מרבי/0> היא מגבלת בטיחות חשובה. הגדרת ברירת המחדל (שלא סביר שתצטרכו לשנות) היא 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump and/or profile. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).</p> 
+**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump and/or profile. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
 
-ערך ברירת המחדל: 3 (לא צריך לשנות אלא אם כן אתם באמת צריכים ויודעים מה אתם עושים)
+Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
 
-**מכפלת בטיחות בזאלי נוכחי/0> היא מגבלת בטיחות חשובה. הגדרת ברירת המחדל (שלא סביר שתצטרכו לשנות) היא 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump and/or profile.</p> 
+**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump and/or profile.
 
-ערך ברירת המחדל: 4 (לא צריך לשנות אלא אם כן אתם באמת צריכים ויודעים מה אתם עושים)
+Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
 
 * * *
 
@@ -246,15 +250,15 @@ You can read more here : [OpenAPS docs](https://openaps.readthedocs.io/en/latest
 
 ## סיוע ארוחה מתקדם (AMA)
 
-AMA - "סיוע ארוחה מתקדם" היא תכונת OpenAPS משנת 2017 (oref0). המערכת יכולה להפעיל מינון בזאלי זמני גבוה מהר לאחר בולוס ארוחה אם מזינים פחמימות בצורה אמינה.
+AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
 
-תוכלו למצוא מידע נוסף ב[תיעוד OpenAPS](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### ניתן להגדיר יח'\שעה מקסימלי של בזאלי זמני (OpenAPS max-basal)
 
-This safety setting helps **AAPS** from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. מומלץ להגדיר ערך סביר. ההמלצה היא לבחור את המינון הבזאלי הגבוה ביותר שיש בפרופיל בשעה כלשהי ביממה ולהכפיל אותו ב-4 ולכל הפחות ב-3. כך שלדוגמה, אם המינון הבזאלי הגבוה ביותר בפרופיל שלך הוא 1.0 יח'\שעה, אפשר להכפילו ב-4 כדי לקבל ערך של 4 יח'\שעה ולהגדיר את המכפלה כ-4.
+This safety setting helps **AAPS** from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. מומלץ להגדיר ערך סביר. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
 
-You cannot choose any value: For safety reason, there is a 'hard limit', which depends on the patient age. 'המגבלה הקשיחה' של maxIOB נמוכה יותר ב-AMA מאשר ב-SMB. עבור ילדים, הערך הוא הנמוך ביותר ואילו עבור מבוגרים עם תנגודת גבוהה לאינסולין, הוא הגדול ביותר.
+You cannot choose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
 
 The hardcoded parameters in **AAPS** are:
 
@@ -268,9 +272,9 @@ The hardcoded parameters in **AAPS** are:
 
 ### מינון אינסולין פעיל מרבי ממנו OpenAPS לא יחרוג (maxIOB)
 
-This parameter limits the maximum of basal IOB where **AAPS** still works. אם האינסולין הפעיל גבוה יותר, הלופ מפסיק להזריק אינסולין בזאלי נוסף עד שהאינסולין הפעיל נמצא מתחת למגבלה.
+This parameter limits the maximum of basal IOB where **AAPS** still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-The default value is 2, but you should rise this parameter slowly to see how much it affects you and which value fits best. ה-Max-IOB שונה עבור כל אחד ותלוי גם במינון היומי הממוצע (TDD). מטעמי בטיחות, קיימת מגבלה שתלויה בקטגוריית גיל המטופל. 'המגבלה הקשיחה' של maxIOB נמוכה יותר ב-AMA מאשר ב-SMB.
+The default value is 2, but you should rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 - ילד\ה: 3
 - מתבגר\ת: 5
@@ -286,7 +290,7 @@ Here, you can choose, if you want to use the [sensitivity detection](../DailyLif
 
 ### וויסות ערכי מטרה ע"י Autosens
 
-אם אפשרות זו מופעלת, autosens יכול להתאים גם ערכי מטרה (לצד הבזאלי וה-ISF). This lets **AAPS** work more 'aggressive' or not. ערך המטרה האמיתי עשוי להיות מושג מהר יותר תוך שימוש ב-Autosens.
+If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets **AAPS** work more 'aggressive' or not. The actual target might be reached faster with this.
 
 ### הגדרות מתקדמות
 
@@ -295,17 +299,17 @@ Here, you can choose, if you want to use the [sensitivity detection](../DailyLif
 
 **Always use short average delta instead of simple data** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to work more steady with noisy data sources like xDrip+ and Libre.
 
-**מכפלת בטיחות בזאלי יומי מרבי/0> היא מגבלת בטיחות חשובה. הגדרת ברירת המחדל (שלא סביר שתצטרכו לשנות) היא 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).</p> 
+**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
 
-ערך ברירת המחדל: 3 (לא צריך לשנות אלא אם כן אתם באמת צריכים ויודעים מה אתם עושים)
+Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
 
-**מכפלת בטיחות בזאלי נוכחי/0> היא מגבלת בטיחות חשובה. הגדרת ברירת המחדל (שלא סביר שתצטרכו לשנות) היא 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.</p> 
+**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
 
-ערך ברירת המחדל: 4 (לא צריך לשנות אלא אם כן אתם באמת צריכים ויודעים מה אתם עושים)
+Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
 
-**נמנום בולוס** התכונה "נמנום בולוס" פועלת לאחר בולוס ארוחה. **AAPS** doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. ערך ברירת המחדל הוא 2. כלומר עם DIA של 5 שעות, "נודניק הבולוס" יהיה באורך של 2.5 שעות (=5/2).
+**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. **AAPS** doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
-ערך ברירת מחדל: 2
+Default value: 2
 
 * * *
 
