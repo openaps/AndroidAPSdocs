@@ -1,4 +1,7 @@
+
+
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
+
 # Fehlerbehebung für Android Studio
 
 (troubleshooting_androidstudio-lost-keystore)=
@@ -24,7 +27,7 @@ Falls Du Deinen alten Keystore oder das dazugehörige Passwort nicht mehr wieder
 ## Gradle Sync schlägt fehl
 Der Gradle Sync kann aus verschiedenen Gründen fehlschlagen. Falls Du einen Hinweis bekommst, dass der Gradle Sync fehlgeschlagen ist („gradle sync failed“), öffne den „Build“-Reiter (1) im unteren Bereich des Android Studios und überprüfe welche Fehlermeldung (2) Du angezeigt bekommst.
 
-  ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 Wahrscheinliche Gründe für Gradle-Synchronisierungsfehler sind:
 * [Uncommitted changes](#uncommitted-changes)
@@ -40,6 +43,13 @@ Wahrscheinliche Gründe für Gradle-Synchronisierungsfehler sind:
 Falls Du eine Fehlermeldung bekommst, die so aussieht:
 
 ![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+
+```
+Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
+
+There are uncommitted changes.
+Clone sources again as described in wiki and do not allow gradle update
+```
 
 #### Schritt 1 - Überprüfe Deine Git Installation
   * Öffne den Terminal Reiter (1) im unteren Bereich von Android Studio und kopiere den folgenden Text, oder tippe ihn ins Terminal ein.
@@ -98,8 +108,6 @@ Falls Du eine Fehlermeldung bekommst, die so aussieht:
       Wenn es keine weiteren Änderungen im „Commit“-Tab gibt, mache mit [Schritt 3](#gradle-resync) weiter.
 
 
-
-
 #### Schritt 3: Resync Gradle (erneut)
 
 Folge der Anleitung unter [Gradle Resync](#gradle-resync).
@@ -126,7 +134,26 @@ Your name needs to be written between quotation marks.
 (incompatible-gradle-jvm)=
 ### Incompatible Gradle JVM
 
-![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal probieren kannst, eine korrekte JVM-Version herunterladen:
+![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
+
+```
+Your build is currently configured to use incompatible Java 21.0.3 and Gradle 8.2.
+Cannot sync the project.
+
+We recommend upgrading to Gradle version 8.9.
+
+The minimum compatible Gradle version is 8.5.
+
+The maximum compatible Gradle JVM version is 19.
+```
+
+Or:
+
+```
+Cause: error: invalid source release: 21
+```
+
+Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal probieren kannst, eine korrekte JVM-Version herunterladen:
 
 1.  Prüfe in der [Anforderungstabelle](#Building-APK-recommended-specification-of-computer-for-building-apk-file), welche JVM-Version Du für die **AAPS** Version, die Du erstellen möchtest, benötigst und notiere sie.
 
@@ -134,7 +161,7 @@ Your name needs to be written between quotation marks.
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  Prüfe im ****Gradle JDK**-Feld, ob die richtige Version ausgewählt ist (1). Wenn nicht, klicke auf das Feld und schaue, ob es schon in der Liste zu sehen ist. Im Beispiel unten ist JVM 21 als „jbr-21“ benannt. Wenn Du es findest, wähle es einfach aus und Du bist damit fertig. Falls es nicht verfügbar ist, wähle „Download JDK“ aus.
+3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. Im Beispiel unten ist JVM 21 als „jbr-21“ benannt. Wenn Du es findest, wähle es einfach aus und Du bist damit fertig. Falls es nicht verfügbar ist, wähle „Download JDK“ aus.
 
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
@@ -211,15 +238,6 @@ Falls Dein Build erfolgreich durchgelaufen ist, Du aber Warnungen vom Compiler o
  ![Gradle mit Warnungen beendet](../images/studioTroubleshooting/13_BuildWithWarnings.png)
 
 Deine App wurde erfolgreich gebaut und kann auf das Smartphone übertragen werden!
-
-
-## Key was created with errors
-
-Beim Erstellen eines neuen Keystores zum Erstellen der signierten APK wird unter Windows möglicherweise die folgende Fehlermeldung angezeigt:
-
-![Key was created with errors](../images/AndroidStudio35SigningKeys.png)
-
-Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Windows zu sein. Der Schlüssel wird korrekt erstellt, aber eine Empfehlung wird fälschlicherweise als Fehler angezeigt. Dies kann momentan ignoriert werden.
 
 
 ## AAPS empfängt keine CGM-Daten
