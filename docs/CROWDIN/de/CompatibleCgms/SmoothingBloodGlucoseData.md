@@ -6,8 +6,6 @@ orphan: true
 
 Wenn die **Glukosewerte** Sprünge haben oder verrauscht sind, kann es dazu kommen, dass **AAPS** das Insulin falsch dosiert. Das kann zu Unter- und Überzuckerungen führen. Wenn Du Fehler in den CGM-Daten erkennst ist es wichtig, bis das Problem behoben ist, den Loop auszuschalten. Abhängig vom verwendeten Sensor können die Probleme in der CGM-Konfiguration in **AAPS** (wie unten beschrieben) liegen oder auf ein Problem mit der Sensorsetzstelle (so dass er eventuell ersetzt werden muss) hindeuten.
 
-Einige CGM-Systeme haben interne Algorithmen, um die Qualität der Messwerte zu erkennen. **AAPS** kann diese Informationen nutzen und (bei unzuverlässigen Werten) SMBs aussetzen. Für die CGMs, die diese Informationen nicht übermitteln, werden die Funktionen 'Aktiviere SMB immer' und 'Aktiviere SMB nach Mahlzeiten' aus Sicherheitsgründen deaktiviert.
-
 ## Daten innerhalb AAPS glätten
 
 Seit **AAPS**-Version 3.2 gibt es die Möglichkeit, die Daten anstatt in der CGM-App von **AAPS** zu glätten. In [Konfiguration > Glättung](../SettingUpAaps/ConfigBuilder.md) gibt es drei Optionen.
@@ -16,7 +14,7 @@ Seit **AAPS**-Version 3.2 gibt es die Möglichkeit, die Daten anstatt in der CGM
 
 ### Exponentielle Glättung
 
-Diese Methode ist die aggressivste und gleichzeitig empfohlene Methode, um das Rauschen zu beheben. Sie schreibt den aktuellen (letzten) Glukosewert erneut.
+In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
 
 ### Durchschnittliche Glättung
 
@@ -26,28 +24,19 @@ Diese Option funktioniert ähnlich wie die Rückwärtsglättung, wie sie auf ein
 
 Verwende diese Option nur dann, wenn Deine CGM-Daten bereits (in einer Collector-App) geglättet werden, bevor sie an **AAPS** übertragen werden.
 
+(smoothing-xdrip-dexcom-g6)=
+
 ## Vorschläge zur Verwendung des Glättens
 
-|                          |  Exponentiell   | Durchschnitt |   Keine   |
-| ------------------------ |:---------------:|:------------:|:---------:|
-| G5 und G6                | Wenn verrauscht |              | Empfohlen |
-| G7                       | Wenn verrauscht | Falls stabil |           |
-| Libre 1 oder Juggluco    |    Empfohlen    |              |           |
-| Libre 2 und 3 von xDrip+ |                 |              | Empfohlen |
+|               |  Exponentiell   | Durchschnitt |   Keine   |
+| ------------- |:---------------:|:------------:|:---------:|
+| G5/G6/ONE     | Wenn verrauscht |              | Empfohlen |
+| G7/ONE+/Stelo | Wenn verrauscht |  If stable   |           |
 
-### Dexcom-Sensoren
+Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the [patched app data source](https://xdrip.readthedocs.io/en/latest/install/libre2patch/) (receiving from another app, Juggluco included), smoothing is already done [inside the app](https://xdrip.readthedocs.io/en/latest/use/NFC/#smooth-libre-3-data-when-using-xxx-method).
 
-#### Build your own Dexcom App
-Wenn Du [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) nutzt, sind Deine Glukosedaten bereits geglättet und konsistent. Außerdem kannst Du die rückwirkende Glättung von Dexcom nutzen. Da die Qualität der Messwerte an AAPS übermittelt wird, können SMBs ohne Einschränkungen genutzt werden.
-
-(smoothing-xdrip-dexcom-g6)=
-#### xDrip+ mit Dexcom G6 oder Dexcom ONE
-Die Qualität der Messwerte und die geglätteten Glukosewert-Daten werden nur mit AAPS ausgetauscht, wenn Du den [nativen Modus](https://navid200.github.io/xDrip/docs/Native-Algorithm) von xDrip+ nutzt. Im nativen Modus können SMBs ohne Einschränkungen genutzt werden.
-
-#### Dexcom G6 oder Dexcom ONE mit xDrip+ Companion App
-Die Qualität der Messwerte wird nicht an AAPS übermittelt. Deswegen sind die Funktionen „Aktiviere SMB immer“ und „Aktiviere SMB nach Mahlzeiten“ deaktiviert.
-
-### Freestyle Libre Sensoren
-
-#### xDrip+ mit FreeStyle Libre1
-Der FreeStyle Libre 1 übermittelt keine Informationen zur Qualität der Messwerte (sog. Noise Level). Aus diesem Grund werden die Optionen "SMB immer aktivieren" und "Aktiviere SMB während aktiver Kohlenhydrate" bei diesem CCGM deaktiviert. Darüber hinaus haben viele Leute berichtet, dass der FreeStyle Libre 1 oft verrauschte (springende) Werte erzeugt.
+| Sensor / Data source |   Juggluco   | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
+| -------------------- |:------------:|:-------------:|:-------------:|:------------------:|
+| Libre 1/14 days/Pro  |     N.A.     |     N.A.      | Durchschnitt  |        N.A.        |
+| Libre 2/2+ (EU)      | Durchschnitt |     Keine     | Durchschnitt  |       Keine        |
+| Libre 2/2+/3/3+      | Durchschnitt |     N.A.      |     N.A.      |       Keine        |
