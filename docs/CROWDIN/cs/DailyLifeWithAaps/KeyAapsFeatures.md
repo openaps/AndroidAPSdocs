@@ -159,7 +159,9 @@ If this setting is enabled, **SMB** will only be enabled with a high temp target
 
 If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
 
-This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+
+Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 #### Povolit SMB se sacharidy
 
@@ -179,26 +181,28 @@ If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB
 
 For safety reasons, this setting is only available if **AAPS** detects that you are using a reliable BG source. It is not visible if "Enable SMB always" is switched on.
 
-This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
+This setting is only available if **AAPS** detects that you are using a [reliable BG source,](#GettingStarted-TrustedBGSource) with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+
+Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
 This setting is not visible if "Enable SMB always" is switched on.
 
 #### Jak často budou SMB podávány v minutách
 
 This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
 
-Výchozí hodnota: 3 min.
+Default value: 3 min.
 
 (Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
 
 #### Maximální počet minut bazálu, ke kterým se limituje SMB
 
-Jedná se o důležité bezpečnostní nastavení. Tato hodnota určuje, kolik SMB může být vydáno na základě aktuálního bazálu, když nejsou pokryty sacharidy.
+This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
 Making this value larger allows the SMB to be more aggressive. You should start with the default value of 30 minutes. After some experience, increase the value in 15 minutes increments and observe the effects over multiple meals.
 
 It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to accommodate a decreasing BG with 0 U/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which will warn you well before a hypo.
 
-Výchozí hodnota: 30 min.
+Default value: 30 min.
 
 #### Max minutes of basal to limit SMB to for UAM
 
@@ -210,21 +214,21 @@ This setting is only visible if "Enable SMB" and "Enable UAM " are switched on.
 
 ### Povolit UAM
 
-Je-li tato možnost povolena, algoritmus SMB dokáže rozpoznat neoznámená jídla. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
+With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
 
-**Proto by měla být při používání SMB funkce UAM vždy povolena.**
+**Therefore, UAM should always be activated when using SMB.**
 
 (key-aaps-features-minimal-carbs-required-for-suggestion)=
 
 ### Minimal carbs required for suggestion
 
-Minimum grams of carbs to display a carbs suggestion alert. V případě že referenční design detekuje potřebu sacharidů, navrhe konzumaci dalších sacharidů. V tomto případě obdržíte oznámení, které může být odloženo na 5, 15 nebo 30 minut.
+Minimum grams of carbs to display a carbs suggestion alert. Eating of additional carbs will be suggested when the reference design detects that it requires carbs. In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
 
 V případě potřeby může být notifikace vyžadovaných sacharidů odeslána do Nightscoutu. Notifikace se pak zobrazí v Nightscoutu a bude vysílána.
 
 In any case, the required carbs will be displayed in the COB section on your home screen.
 
-![Zobrazení požadovaných sacharidů na domovské obrazovce](../images/Pref2020_CarbsRequired.png)
+![Display carbs required on home screen](../images/Pref2020_CarbsRequired.png)
 
 ### Rozšířená nastavení
 
@@ -232,11 +236,11 @@ You can read more here : [OpenAPS docs](https://openaps.readthedocs.io/en/latest
 
 **Always use short average delta instead of simple data** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to be steadier with noisy data sources like xDrip+ and Libre.
 
-**Max. násobitel denního nejvyššího bazálu** Toto je důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně nebude potřeba upravovat) je 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump and/or profile. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump and/or profile. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
 
 Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
 
-**Max. násobitel současného bazálu** Toto je další důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně také nebude potřeba upravovat) je 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump and/or profile.
+**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump and/or profile.
 
 Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
 
@@ -246,15 +250,15 @@ Default value: 4 (shouldn’t be changed unless you really need to and know what
 
 ## Advanced Meal Assist (AMA)
 
-AMA je zkratka pro "advanced meal assist" (pokročilý pomocník s jídly), což je funkce OpenAPS od roku 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně.
+AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
 
 You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Max. povolený bazál U/h (OpenAPS "max-basal")
 
-This safety setting helps **AAPS** from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. Doporučuje se nastavit toto na rozumnou hodnotu. Doporučuje se vzít z vašeho profilu nejvyšší hodnotu bazálu, a vynásobit ji 4 a alespoň 3. Například: máte-li ve svém profilu nejvyšší hodnotu bazálu 1,0 U/h, dostanete po vynásobení 4 hodnotu 4 U/h. Nastavte tedy 4 jako svůj bezpečnostní parametr.
+This safety setting helps **AAPS** from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. Doporučuje se nastavit toto na rozumnou hodnotu. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
 
-You cannot choose any value: For safety reason, there is a 'hard limit', which depends on the patient age. 'Pevný limit' pro maxIOB jev algoritmu AMA nižší než v SMB. Pro děti je hodnota nejnižší, zatímco pro dospělé pacienty s rezistencí na inzulin je největší.
+You cannot choose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
 
 The hardcoded parameters in **AAPS** are:
 
@@ -268,9 +272,9 @@ The hardcoded parameters in **AAPS** are:
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
 
-This parameter limits the maximum of basal IOB where **AAPS** still works. Pokud je IOB vyšší, zastaví se výdej dalšího bazálního inzulínu, dokud je IOB z bazálu pod limitem.
+This parameter limits the maximum of basal IOB where **AAPS** still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-The default value is 2, but you should rise this parameter slowly to see how much it affects you and which value fits best. Nastavení je individuální a mj. vychází i z výše celkové denní dávky inzulínu. Z bezpečnostních důvodů jsou nastaveny limity vycházející z věku pacientů. 'Pevný limit' pro maxIOB jev algoritmu AMA nižší než v SMB.
+The default value is 2, but you should rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 - Děti: 3
 - Dospívající: 5
@@ -286,7 +290,7 @@ Here, you can choose, if you want to use the [sensitivity detection](../DailyLif
 
 ### Autosense upravuje také cílovou glykémii
 
-If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets **AAPS** work more 'aggressive' or not. Aktuálně nastaveného cíle lze s touto funkcí dosáhnout rychleji.
+If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets **AAPS** work more 'aggressive' or not. The actual target might be reached faster with this.
 
 ### Rozšířená nastavení
 
@@ -295,17 +299,17 @@ If you have this option enabled, autosens can adjust targets (next to basal and 
 
 **Always use short average delta instead of simple data** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to work more steady with noisy data sources like xDrip+ and Libre.
 
-**Max. násobitel denního nejvyššího bazálu** Toto je důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně nebude potřeba upravovat) je 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
 
 Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
 
-**Max. násobitel současného bazálu** Toto je další důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně také nebude potřeba upravovat) je 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
+**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
 
 Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
 
-**Dělitel bolus snooze** Funkce “bolus snooze” funguje po bolusu na jídlo. **AAPS** doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. Výchozí hodnota je 2. To znamená, že s DIA 5 h by trvání parametru „bolus snooze“ bylo 5 h : 2 = 2,5 h.
+**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. **AAPS** doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
-Výchozí hodnota: 2
+Default value: 2
 
 * * *
 
