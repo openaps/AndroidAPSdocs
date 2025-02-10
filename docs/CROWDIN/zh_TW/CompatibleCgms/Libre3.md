@@ -73,7 +73,7 @@ AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理�
 
 2. 現在，只需使用手機的 NFC 閱讀器掃描你的新傳感器。 如果過程成功開始，Juggluco 會顯示通知。
 3. 當你準備停用舊傳感器時，請點擊螢幕左上角的空白區域打開 Juggluco 選單。
-4. Select the expired sensor and tap "Terminate"
+4. 選擇過期的感測器並點擊「終止」
 
 ![終止傳感器](../images/libre3/step_14.jpg)
 
