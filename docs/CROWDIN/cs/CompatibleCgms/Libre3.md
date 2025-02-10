@@ -65,10 +65,6 @@ After a sensor change xDrip+ will automatically detect the new sensor and will d
 - In xDrip+ select "Libre2 (patched App)" as data source
 - Turn of Smoothing (done in xDrip+ already)
 
-As of now, when using Libre 3 as a BG source, the "Always enable SMB" and "Enable SMB by Carbs" options cannot be enabled in the SMB algorithm. The BG values from Libre 3 are not smooth enough to use safely.
-
-
-
 ## Subsequent sensor changes
 
 1. Open Juggluco and note the serial number of the existing sensor
@@ -77,7 +73,7 @@ As of now, when using Libre 3 as a BG source, the "Always enable SMB" and "Enabl
 
 2. Now simply scan your new sensor with your phone’s NFC reader. Juggluco will display a notice if the process had been started successfully.
 3. When you are ready to deactivate the old sensor, then open the Juggluco menu by clicking anywhere in the empty space in the upper left hand corner of the screen.
-4. Select the exired sensor and tap "Terminate"
+4. Select the expired sensor and tap "Terminate"
 
 ![Terminate sensor](../images/libre3/step_14.jpg)
 

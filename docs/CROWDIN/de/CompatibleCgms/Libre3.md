@@ -65,10 +65,6 @@ Nach einem Sensorwechsel erkennt xDrip+ den neuen Sensor automatisch und löscht
 - Wenn sich das Smartphone im Flugmodus befindet und AAPS keine Glukosewerte erhält, verwende "Empfänger identifizieren"
 - Glättung deaktivieren (in xDrip+ bereits erfolgt)
 
-Wenn Du einen Libre 3 als Datenquelle auswählst, sind die Optionen "Immer SMB" und "SMB bei Kohlenhydraten aktivieren" nicht nutzbar und werden im SMB-Algorithmus nicht berücksichtigt. Die durch den Libre 3 übermittelten Glukosewerte sind für einen sicheren Einsatz dieser Funktionen nicht ausreichend geglättet.
-
-
-
 ## Sensorwechsel
 
 1. Öffne Juggluco und notiere Dir die Seriennummer des laufenden Sensors.
@@ -77,7 +73,7 @@ Wenn Du einen Libre 3 als Datenquelle auswählst, sind die Optionen "Immer SMB" 
 
 2. Scanne jetzt Deinen neuen Sensor per NFC Deines Smartphones. Juggluco zeigt eine Benachrichtigung an, wenn der Prozess erfolgreich gestartet wurde.
 3. Wenn Du den alten Sensor deaktivieren möchtest, öffne das Juggluco-Menü, indem Du in der oberen linken Ecke des Bildschirms in den leeren Bereich tippst.
-4. Wähle den abgelaufenen Sensor aus und tippe auf "Beenden"
+4. Select the expired sensor and tap "Terminate"
 
 ![Sensorsitzung beenden](../images/libre3/step_14.jpg)
 

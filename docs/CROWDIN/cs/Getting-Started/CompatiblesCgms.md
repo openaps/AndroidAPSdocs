@@ -23,3 +23,23 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 | [Ottai](../CompatibleCgms/OttaiM8.md)                 | Ottai                                                               |
 | [Syai Tag](../CompatibleCgms/SyaiTagX1.md)            | Syai Tag                                                            |
 | Sibionics CGM                                         | Juggluco                                                            |
+
+(GettingStarted-TrustedBGSource=)
+
+## Trusted BG data sources
+
+Regulatory approved **CGM**s for commercial hybrid closed loop systems are considered trusted **BG** data sources.
+
+In order for **AAPS** to correctly identify them, the app sending **BG** readings must be able to provide sensor information.
+
+Trusted data sources allow **SMB** delivery, all the time.
+
+| Sensor                |             CGM app             |
+| --------------------- |:-------------------------------:|
+| Dexcom G5/G6          | BYODA, xDrip+ (Direct, Native)  |
+| Dexcom G7             | DiaKEM, xDrip+ (Direct, Native) |
+| Dexcom ONE/ONE+/Stelo |     xDrip+ (Direct, Native)     |
+| Libre 2/2+ (EU)       |    Juggluco, xDrip+ (Direct)    |
+| Libre 2/2+/3/3+       |            Juggluco             |
+
+Note: xDrip+ Companion app and Followers are not trusted data sources.

@@ -172,8 +172,6 @@ Nach einem Sensorwechsel erkennt xDrip+ den neuen Sensor automatisch und löscht
 
 -   Falls AAPS im Flugmodus keine Glukosewerte bekommt, nutze "Identify receiver" wie auf der [Seite xDrip+ Einstellungen](#xdrip-identify-receiver) beschrieben.
 
-Wenn Du den Libre 2 als BZ-Quelle nutzt, stehen die Funktionen 'Enable SMB always' und 'Enable SMB after carbs' mit dem SMB Algorithmus nicht zur Verfügung. Die BZ-Werte des Libre 2 sind für einen sicheren Einsatz dieser Funktionen nicht glatt genug. In [Glättung der Blut-Glukose-Daten](../CompatibleCgms/SmoothingBloodGlucoseData.md) findest Du weitergehende Informationen.
-
 (Libre2-experiences-and-troubleshooting)=
 ### Erfahrungen und Troubleshooting
 

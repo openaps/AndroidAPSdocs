@@ -9,17 +9,37 @@
 * [xDrip+設定](../CompatibleCgms/xDrip.md)
 * [Nightscout 作為 BG 資料來源](../CompatibleCgms/CgmNightscoutUpload.md): 儘管可以使用 Nightscout 作為閉環胰島素給藥的 BG 資料來源，但**這種方法不推薦**，因為其依賴穩定的行動網路或 Wi-Fi 連接。 這意味著你的**CGM**資料只有在與你的 Nightscout 網站保持在線連接時，才會被**AAPS**接收。 為了更加穩定的設置，使用具有接收器的本地廣播的 CGM（如下所列）到**AAPS**，是一個更好的選擇。
 
-| CGM                                                  | 可用的[BG 資料來源](../SettingUpAaps/ConfigBuilder.md#bg-source) |
-| ---------------------------------------------------- | --------------------------------------------------------- |
-| [Dexcom G7 和 ONE+](../CompatibleCgms/DexcomG7.md)    | xDrip+、DiaKEM 應用程式或 Juggluco                              |
-| [Dexcom G6 和 ONE](../CompatibleCgms/DexcomG6.md)     | xDrip+ 或 BYODA（僅限 G6）                                     |
-| [Dexcom G5](../CompatibleCgms/DexcomG5.md)           | xDrip+                                                    |
-| [Libre 3](../CompatibleCgms/Libre3.md)               | xDrip+（無發射器）或 Juggluco                                    |
-| [Libre 2](../CompatibleCgms/Libre2.md)               | xDrip+（無發射器）或 Juggluco                                    |
-| [Libre 1](../CompatibleCgms/Libre1.md)               | xDrip+、Glimp、Tomato 或 Diabox。 需要發射器                       |
-| [Eversense](../CompatibleCgms/Eversense.md)          | xDrip+ 或 ESEL/Eversense 修補的應用程式                           |
-| [Enlite（MM640G/MM630G）](../CompatibleCgms/MM640g.md) | xDrip+ 或 MM640g + 600系列 Android 上傳程式                      |
-| [PocTech](../CompatibleCgms/PocTech.md)              | PocTech                                                   |
-| [歐態（Ottai）](../CompatibleCgms/OttaiM8.md)            | 歐態（Ottai）                                                 |
-| [Syai Tag](../CompatibleCgms/SyaiTagX1.md)           | Syai Tag                                                  |
-| Sibionics CGM                                        | Juggluco                                                  |
+| CGM                                                  | 可用的[血糖資料來源](../SettingUpAaps/ConfigBuilder.md#bg-source) |
+| ---------------------------------------------------- | -------------------------------------------------------- |
+| [Dexcom G7 和 ONE+](../CompatibleCgms/DexcomG7.md)    | xDrip+、DiaKEM 應用程式或 Juggluco                             |
+| [Dexcom G6 和 ONE](../CompatibleCgms/DexcomG6.md)     | xDrip+ 或 BYODA（僅限 G6）                                    |
+| [Dexcom G5](../CompatibleCgms/DexcomG5.md)           | xDrip+                                                   |
+| [Libre 3](../CompatibleCgms/Libre3.md)               | xDrip+（無發射器）或 Juggluco                                   |
+| [Libre 2](../CompatibleCgms/Libre2.md)               | xDrip+（無發射器）或 Juggluco                                   |
+| [Libre 1](../CompatibleCgms/Libre1.md)               | xDrip+、Glimp、Tomato 或 Diabox。 需要發射器                      |
+| [Eversense](../CompatibleCgms/Eversense.md)          | xDrip+ 或 ESEL/Eversense 修補的應用程式                          |
+| [Enlite（MM640G/MM630G）](../CompatibleCgms/MM640g.md) | xDrip+ 或 MM640g + 600系列 Android 上傳程式                     |
+| [PocTech](../CompatibleCgms/PocTech.md)              | PocTech                                                  |
+| [歐態（Ottai）](../CompatibleCgms/OttaiM8.md)            | 歐態（Ottai）                                                |
+| [Syai Tag](../CompatibleCgms/SyaiTagX1.md)           | Syai Tag                                                 |
+| Sibionics CGM                                        | Juggluco                                                 |
+
+(入門指南-可信 BG 資料來源=)
+
+## 可信的 BG 資料來源
+
+獲得監管批准的**CGM**用於商業混合閉環系統，視為可信的**BG**資料來源。
+
+為了讓**AAPS**正確識別它們，發送**BG**讀數的應用程式必須能提供感測器資訊。
+
+可信的資料來源允許**SMB**隨時傳送。
+
+| 傳感器                   |        CGM 應用程式         |
+| --------------------- |:-----------------------:|
+| Dexcom G5/G6          | BYODA, xDrip+ (直接, 原生)  |
+| Dexcom G7             | DiaKEM, xDrip+ (直接, 原生) |
+| Dexcom ONE/ONE+/Stelo |     xDrip+ (直接, 原生)     |
+| Libre 2/2+ (歐盟)       |  Juggluco, xDrip+ (直接)  |
+| Libre 2/2+/3/3+       |        Juggluco         |
+
+注意：xDrip+ 陪伴應用程式和追蹤者不是可信的資料來源。

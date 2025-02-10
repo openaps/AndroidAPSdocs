@@ -4,25 +4,25 @@
 
 你還可以使用一些信息用於**AAPSClient**和**PumpControl**的**Wear** apk，這些信息可以直接在[GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)中找到。 每個**Wear**應用都將與其一致的手機應用進行通信。 例如：**AAPSClient Wear**應用可用於顯示**AAPSClient**資料，而不是**AAPS**資料。
 
-## Wear OS Versions and compatibility
+## Wear OS 版本和相容性
 
 ### Wear OS 3
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (described below) or ADB.  
-No limitation in **AAPS Wear** operations.
+使用[Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)、Easy Fire Tools（稍後說明）或 ADB 安裝**AAPS Wear** apk。  
+在**AAPS Wear**操作上沒有限制。
 
 (BuildingAapsWearOs-WearOS5)=
 
-### Wear OS 4 and Galaxy watch updated to Wear OS 5
+### Wear OS 4 和 Galaxy 手錶更新至 Wear OS 5
 
-Example: GW4, GW5, GW6
+範例：GW4、GW5、GW6
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV).  
-No limitation in **AAPS Wear** operations.
+使用[Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)安裝**AAPS Wear** apk。  
+在**AAPS Wear**操作上沒有限制。
 
-### Galaxy watch with factory installed Wear OS 5
+### 工廠預裝 Wear OS 5 的 Galaxy 手錶
 
- Example: GW7, GW Ultra
+ 範例：GW7、GW Ultra
 
 ```{admonition} Android Wear OS 5
 :class: warning
@@ -31,12 +31,12 @@ No limitation in **AAPS Wear** operations.
 無法更改專用錶面參數，如：深色、錶面分隔等。
 ```
 
-Consider alternatively [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication.
+考慮使用[GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler)並加上複雜度。
 
-### Pixel watch with Wear OS 5
+### 配備 Wear OS 5 的 Pixel 手錶
 
-Not compatible with the AAPS watchface.  
-Consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication.
+不與 AAPS 錶面相容。  
+考慮使用[GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler)並加上複雜度。
 
 ## 如何設置 Samsung Galaxy 4 智慧型手錶與 **AAPS** 搭配使用
 
@@ -81,14 +81,14 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ```{tip}
 對於 Wear OS 5 智慧型手錶，請參閱[此影片](https://www.youtube.com/watch?v=yef_qGvcCnk)。
-See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
+參見故障排除提示[如下](#BuildingAapsWearOs-WearOS5-TShoot)。
 ```
 
 該視頻提供了所有必要的細節（最好在單獨的設備上打開影片，以便在設置手機時觀看）。
 
 如影片中所述，完成後，請關閉手錶上的 ADB 調試，以避免消耗智慧型手錶的電池。
 
-Alternatively, but not for Wear OS 5, you can:
+或者，但不適用於 Wear OS 5，你可以：
 
 ```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
 :class: dropdown
@@ -131,28 +131,28 @@ Alternatively, but not for Wear OS 5, you can:
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-#### General troubleshooting recommendations for Wear OS 5
+#### Wear OS 5的一般故障排除建議
 
-- Do not use Wi-Fi Tethering. That wont work.
-- You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
-- Make sure you are connecting to your local network where phone and watch can see each other (do not use your Wi-Fi guest network to connect).
-- For GW7 you need to install using Wear Installer as it gives you the option to select the AAPS(Custom) watchface on installation.
-- Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
-- Make sure to be near your main router, then restart both phone and watch.
+- 請勿使用 Wi-Fi 分享。 這將無法運作。
+- 不需要在手機上啟用 ADB 調試（僅在手錶上）。 在手機上停用 ADB 調試。
+- 確保你連接到手機和手錶可以彼此看到的本地網路（不要使用 Wi-Fi 客用網路連接）。
+- 對於 GW7，需使用 Wear Installer安裝，因為它在安裝時提供選擇**AAPS（自訂）**錶面的選項。
+- 確保手錶和手機在同一網路和 Wi-Fi 設備上。 特別是 Wi-Fi 重複器或接取點可能會產生問題。
+- 確保靠近你的主要路由器，然後重啟手機和手錶。
 
 **配對中 :**
 
-- Watch: Wireless Debugging: note the IP address.
-- Wear Installer: Enter the IP on the in Wear Installer app.
-- Select Pair new, note the pairing code and port number displayed.
-- Wear Installer: enter the paring code + space + port number.
-- Wear installer should report pairing was successful. If it does not, exit the Wear Installer, then try again.
+- 手錶：無線調試：記下 IP 地址。
+- Wear Installer：在 Wear Installer 應用程式中輸入 IP 地址。
+- 選擇配對新設備，記下顯示的配對碼和埠號。
+- Wear Installer：輸入配對碼 + 空格 + 埠號。
+- Wear Installer 應該報告配對成功。 如果沒有，請退出 Wear Installer，然後重試。
 
-Once paired you should be able to install the AAPS wear apk:
+一旦配對成功，你應該能安裝 AAPS Wear apk：
 
-- Exit/close, then restart Wear Installer.
-- On wireless debug, note the IP and Port number and make sure you check/enter the IP and port number in Wear Installer.
-- Note: the port number is different from the one used for pairing!
+- 退出/關閉，然後重啟 Wear Installer。
+- 在無線調試中，記下 IP 和埠號，並確保在 Wear Installer 中檢查/輸入 IP 和埠號。
+- 注意：埠號與配對時使用的不同！
 
 ## 設置 **AAPS** 手機與手錶的連線
 
