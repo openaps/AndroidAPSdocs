@@ -20,4 +20,4 @@ orphan: true
 3. 輕觸與 AAPS 共享，接受第三方資料轉移協議
 4. 啟用與 AAPS 共享血糖資料
 
-![Ottai](../images/Ottai.png)
+![歐態（Ottai）](../images/Ottai.png)
