@@ -11,6 +11,14 @@ D'autres informations utiles peuvent également être disponibles dans la [FAQ](
 * [Fichier de clés perdu](#troubleshooting_androidstudio-lost-keystore)
 * [Dépannage AndroidStudio](TroubleshootingAndroidStudio)
 
+### Installing
+
+You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
+
+Ignore it: More details, Install anyway.
+
+![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+
 ### Paramètres
 * Profil
 
