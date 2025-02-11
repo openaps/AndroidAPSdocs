@@ -147,7 +147,7 @@ The minimum compatible Gradle version is 8.5.
 The maximum compatible Gradle JVM version is 19.
 ```
 
-Or:
+或:
 
 ```
 Cause: error: invalid source release: 21
