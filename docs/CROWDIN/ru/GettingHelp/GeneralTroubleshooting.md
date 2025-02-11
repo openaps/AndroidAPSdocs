@@ -11,6 +11,14 @@
 * [Потеряно хранилище ключей](#troubleshooting_androidstudio-lost-keystore)
 * [Устранение неполадок Android Studio](TroubleshootingAndroidStudio)
 
+### Installing
+
+You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
+
+Ignore it: More details, Install anyway.
+
+![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+
 ### Настройки
 * Profile
 
