@@ -1,4 +1,7 @@
+
+
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
+
 # Устранение неполадок Android Studio
 
 (troubleshooting_androidstudio-lost-keystore)=
@@ -24,7 +27,7 @@ In the event that you cannot trace your old keystore or password, proceed as fol
 ## Ошибка синхронизации Gradle
 Gradle Sync can fail for various reasons. When you receive a message saying that 'gradle sync failed', open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
 
-  ![Отказ Gradle](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+![Отказ Gradle](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 Likely reasons for gradle sync failures are:
 * [Непринятые изменения](#uncommitted-changes)
@@ -40,6 +43,13 @@ Likely reasons for gradle sync failures are:
 If you receive a failure message like this one:
 
 ![Незафиксированные изменения Gradle](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+
+```
+Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
+
+There are uncommitted changes.
+Clone sources again as described in wiki and do not allow gradle update
+```
 
 #### Шаг 1 - Проверьте установку git
   * Откройте вкладку терминала (1) в нижней части Android Studio и скопируйте следующий текст и вставьте или введите в терминал.
@@ -98,8 +108,6 @@ If you receive a failure message like this one:
       If there are no other changes in the Commit tab, go to [Step 3](#gradle-resync).
 
 
-
-
 #### Шаг 3: Пересинхронизация Gradle (повторно)
 
 Follow the instructions at [Gradle Resync](#gradle-resync).
@@ -126,7 +134,26 @@ Your name needs to be written between quotation marks.
 (incompatible-gradle-jvm)=
 ### Incompatible Gradle JVM
 
-![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) If you experience the above error message, you need to download a correct JVM version before you can try rebuild again:
+![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
+
+```
+Your build is currently configured to use incompatible Java 21.0.3 and Gradle 8.2.
+Cannot sync the project.
+
+We recommend upgrading to Gradle version 8.9.
+
+The minimum compatible Gradle version is 8.5.
+
+The maximum compatible Gradle JVM version is 19.
+```
+
+Or:
+
+```
+Cause: error: invalid source release: 21
+```
+
+If you experience the above error message, you need to download a correct JVM version before you can try rebuild again:
 
 1.  Check in the [requirement table](#Building-APK-recommended-specification-of-computer-for-building-apk-file) which JVM version you need for the **AAPS** version you are building, and make a note of it.
 
@@ -134,7 +161,7 @@ Your name needs to be written between quotation marks.
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  **In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select 'Download JDK'.
+3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select 'Download JDK'.
 
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
@@ -211,15 +238,6 @@ When you generate the signed apk, you might get the notification that generation
  ![Gradle завершен с предупреждениями](../images/studioTroubleshooting/13_BuildWithWarnings.png)
 
 Your apk was built successfully and can be transferred to your phone!
-
-
-## Key was created with errors
-
-When creating a new keystore for building the signed apk, on Windows the following error message might appear
-
-![Key was created with errors](../images/AndroidStudio35SigningKeys.png)
-
-Это, кажется, ошибка в Android Studio 3.5.1 и в среде Java в Windows. Ключ создается правильно, но рекомендация выводится как ошибка. В настоящее время это можно игнорировать.
 
 
 ## AAPS не получает данные мониторинга CGM
