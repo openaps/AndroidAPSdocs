@@ -1,4 +1,7 @@
+
+
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
+
 # 問題排除 Android Studio
 
 (troubleshooting_androidstudio-lost-keystore)=
@@ -24,7 +27,7 @@
 ## Gradle 同步失敗
 Gradle 同步可能因多種原因失敗。 當你收到“gradle 同步失敗”的訊息時，請打開 Android Studio 底部的“建置”選項卡 (1)，檢查顯示的錯誤訊息 (2)。
 
-  ![Gradle 失敗](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+![Gradle 失敗](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 gradle 同步失敗的可能原因包括：
 * [未提交的更改](#uncommitted-changes)
@@ -40,6 +43,13 @@ gradle 同步失敗的可能原因包括：
 如果你收到像這樣的失敗訊息：
 
 ![Gradle 未提交的更改](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+
+```
+Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
+
+There are uncommitted changes.
+Clone sources again as described in wiki and do not allow gradle update
+```
 
 #### 步驟 1 - 檢查 git 安裝
   * 打開 Android Studio 底部的終端選項卡 (1)，複製以下文字並粘貼或輸入到終端中。
@@ -98,8 +108,6 @@ gradle 同步失敗的可能原因包括：
       如果提交選項卡中沒有其他更改，請轉到 [步驟 3](#gradle-resync)。
 
 
-
-
 #### 步驟 3：再次同步 Gradle
 
 請按照[Gradle Resync](#gradle-resync)上的指示進行操作。
@@ -126,7 +134,26 @@ git config --global user.email 你的email@xxx.com
 (incompatible-gradle-jvm)=
 ### 不相容的 Gradle JVM
 
-![不相容的 Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) 如果你遇到以上錯誤訊息，則在重新構建之前需要下載正確的 JVM 版本：
+![不相容的 Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
+
+```
+Your build is currently configured to use incompatible Java 21.0.3 and Gradle 8.2.
+Cannot sync the project.
+
+We recommend upgrading to Gradle version 8.9.
+
+The minimum compatible Gradle version is 8.5.
+
+The maximum compatible Gradle JVM version is 19.
+```
+
+Or:
+
+```
+Cause: error: invalid source release: 21
+```
+
+如果你遇到以上錯誤訊息，則在重新構建之前需要下載正確的 JVM 版本：
 
 1.  檢查[需求表](#Building-APK-recommended-specification-of-computer-for-building-apk-file)以確定你需要的**AAPS**版本的 JVM 版本，並做好記錄。
 
@@ -134,7 +161,7 @@ git config --global user.email 你的email@xxx.com
 
 ![開啟Gradle設定](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  **在 **Gradle JDK** 欄位中，檢查是否選擇了適當的版本 (1)。如果沒有，請點選該欄位，查看列表中是否已有。 下面的範例顯示 JVM 21 標示為“jbr-21”。 如果你找到了，請選擇它，就完成了。 如果不可用，則選擇“下載 JDK”。
+3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. 下面的範例顯示 JVM 21 標示為“jbr-21”。 如果你找到了，請選擇它，就完成了。 如果不可用，則選擇“下載 JDK”。
 
 
 ![選擇下載JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
@@ -211,15 +238,6 @@ git config --global user.email 你的email@xxx.com
  ![Gradle 完成但有警告](../images/studioTroubleshooting/13_BuildWithWarnings.png)
 
 你的 apk 已成功建立，可以轉移到你的手機上！
-
-
-## 密鑰生成時出現錯誤
-
-在為生成簽名 apk 創建新的金鑰存儲時，在 Windows 上可能會出現以下錯誤訊息。
-
-![密鑰生成時出現錯誤](../images/AndroidStudio35SigningKeys.png)
-
-這似乎是 Android Studio 3.5.1 及其在 Windows 中捆綁的 Java 環境中的一個錯誤。 密鑰已正確建立，但建議錯誤顯示為錯誤。 目前可以忽略此問題。
 
 
 ## AAPS 未接收 CGM 資料
