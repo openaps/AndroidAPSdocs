@@ -1,5 +1,3 @@
-
-
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
 
 # 問題排除 Android Studio
