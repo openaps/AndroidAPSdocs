@@ -11,6 +11,14 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 * [Keystore (digitale handtekening) kwijt](#troubleshooting_androidstudio-lost-keystore)
 * [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
 
+### Installing
+
+You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
+
+Ignore it: More details, Install anyway.
+
+![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+
 ### Verdere instellingen
 * Profile
 
