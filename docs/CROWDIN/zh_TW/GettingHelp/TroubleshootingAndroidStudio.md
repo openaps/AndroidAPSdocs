@@ -43,10 +43,10 @@ gradle 同步失敗的可能原因包括：
 ![Gradle 未提交的更改](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 ```
-Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
+建立檔案 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' 行: 243
 
-There are uncommitted changes.
-Clone sources again as described in wiki and do not allow gradle update
+存在未提交的變更。
+請重新複製來源，如wiki中所述，並且不要允許 Gradle 更新。
 ```
 
 #### 步驟 1 - 檢查 git 安裝
@@ -135,20 +135,20 @@ git config --global user.email 你的email@xxx.com
 ![不相容的 Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
 
 ```
-Your build is currently configured to use incompatible Java 21.0.3 and Gradle 8.2.
-Cannot sync the project.
+你的建置目前配置為使用不相容的 Java 21.0.3 和 Gradle 8.2。
+無法同步專案。
 
-We recommend upgrading to Gradle version 8.9.
+我們建議升級到 Gradle 版本 8.9。
 
-The minimum compatible Gradle version is 8.5.
+最低相容的 Gradle 版本為 8.5。
 
-The maximum compatible Gradle JVM version is 19.
+最大相容的 Gradle JVM 版本為 19。
 ```
 
 或:
 
 ```
-Cause: error: invalid source release: 21
+原因: 錯誤: 無效的來源釋出: 21
 ```
 
 如果你遇到以上錯誤訊息，則在重新構建之前需要下載正確的 JVM 版本：
@@ -159,7 +159,7 @@ Cause: error: invalid source release: 21
 
 ![開啟Gradle設定](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. 下面的範例顯示 JVM 21 標示為“jbr-21”。 如果你找到了，請選擇它，就完成了。 如果不可用，則選擇“下載 JDK”。
+3.  在 **Gradle JDK** 欄位中，檢查是否選擇了適當的版本（1）如果沒有，請點選該欄位，並查看它是否已經在列表中可用。 下面的範例顯示 JVM 21 標示為“jbr-21”。 如果你找到了，請選擇它，就完成了。 如果不可用，則選擇“下載 JDK”。
 
 
 ![選擇下載JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
