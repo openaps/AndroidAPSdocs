@@ -11,13 +11,13 @@
 * [遺失的密鑰庫](#troubleshooting_androidstudio-lost-keystore)
 * [問題排除 AndroidStudio](TroubleshootingAndroidStudio)
 
-### Installing
+### 安裝中
 
-You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
+你可能會看到一個 Google Play Protect 警告，表示該應用程式不安全，是為了舊版 Android 而建置，並且不包含最新的隱私防護。
 
-Ignore it: More details, Install anyway.
+忽略：更多詳細資訊，仍然安裝。
 
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+![Google Play Protect 警告](../images/troubleshooting/InstallGPP.png)
 
 ### 設定
 * 設定檔
