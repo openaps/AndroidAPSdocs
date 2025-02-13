@@ -1,5 +1,3 @@
-
-
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
 
 # Dépannage d'Android Studio
