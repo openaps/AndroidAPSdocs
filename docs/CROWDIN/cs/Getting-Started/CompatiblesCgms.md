@@ -36,12 +36,12 @@ In order for **AAPS** to correctly identify them, the app sending **BG** reading
 
 Trusted data sources allow **SMB** delivery, all the time.
 
-| Sensor                |             CGM app             |
-| --------------------- |:-------------------------------:|
-| Dexcom G5/G6          | BYODA, xDrip+ (Direct, Native)  |
-| Dexcom G7             | DiaKEM, xDrip+ (Direct, Native) |
-| Dexcom ONE/ONE+/Stelo |     xDrip+ (Direct, Native)     |
-| Libre 2/2+ (EU)       |    Juggluco, xDrip+ (Direct)    |
-| Libre 2/2+/3/3+       |            Juggluco             |
+| Sensor                |                CGM app                 |
+| --------------------- |:--------------------------------------:|
+| Dexcom G5/G6          |     BYODA, xDrip+ (Direct, Native)     |
+| Dexcom G7             |    DiaKEM, xDrip+ (Direct, Native)     |
+| Dexcom ONE/ONE+/Stelo |        xDrip+ (Direct, Native)         |
+| Libre 2/2+ (EU)       | Juggluco, xDrip+ (Direct, Patched app) |
+| Libre 2/2+/3/3+       |     Juggluco, xDrip+ (Patched app)     |
 
 Note: xDrip+ Companion app and Followers are not trusted data sources.
