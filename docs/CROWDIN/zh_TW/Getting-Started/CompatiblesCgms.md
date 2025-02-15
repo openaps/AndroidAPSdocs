@@ -36,12 +36,12 @@
 
 可信的資料來源允許**SMB**隨時傳送。
 
-| 傳感器                   |                CGM 應用程式                |
-| --------------------- |:--------------------------------------:|
-| Dexcom G5/G6          |         BYODA, xDrip+ (直接, 原生)         |
-| Dexcom G7             |        DiaKEM, xDrip+ (直接, 原生)         |
-| Dexcom ONE/ONE+/Stelo |            xDrip+ (直接, 原生)             |
-| Libre 2/2+ (歐盟)       | Juggluco, xDrip+ (Direct, Patched app) |
-| Libre 2/2+/3/3+       |     Juggluco, xDrip+ (Patched app)     |
+| 傳感器                   |          CGM 應用程式           |
+| --------------------- |:---------------------------:|
+| Dexcom G5/G6          |   BYODA, xDrip+ (直接, 原生)    |
+| Dexcom G7             |   DiaKEM, xDrip+ (直接, 原生)   |
+| Dexcom ONE/ONE+/Stelo |       xDrip+ (直接, 原生)       |
+| Libre 2/2+ (歐盟)       | Juggluco、xDrip+（直連、修改版應用程式） |
+| Libre 2/2+/3/3+       |  Juggluco、xDrip+（修改版應用程式）   |
 
 注意：xDrip+ 配套應用程式(Companion app)和追蹤者不是可信的資料來源。
