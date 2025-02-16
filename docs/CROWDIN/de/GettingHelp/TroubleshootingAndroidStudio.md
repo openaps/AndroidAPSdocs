@@ -46,7 +46,7 @@ Falls Du eine Fehlermeldung bekommst, die so aussieht:
 Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
 There are uncommitted changes.
-Clone sources again as described in wiki and do not allow gradle update
+Klone den Quellcode noch einmal so wie es in der Dokumentation beschrieben ist und und mache dabei keinen Gradle Update
 ```
 
 #### Schritt 1 - Überprüfe Deine Git Installation
@@ -112,18 +112,18 @@ Folge der Anleitung unter [Gradle Resync](#gradle-resync).
 
 ### Git Pull Failed - Please tell me who you are
 
-If you see this message, Git needs you to identify yourself.
+Wenn Du diese Mitteilung erhälst, möchte Git, dass Du Dich identifizierst.
 
 ![Git identification](../images/studioTroubleshooting/164_Git_Identify.png)
 
-Open the terminal and type the following two commands, one after the other.
+Öffne das Terminal und gib die folgenden zwei Befehle nacheinander ein.
 
 ```
-git config --global user.name "Your name here"
-git config --global user.email your.email@here.com
+git config --global user.name "Deine Name hier"
+git config --global user.email deine.email@hier.com
 ```
 
-Your name needs to be written between quotation marks.
+Dein Name muss zwischen die Anführungszeichen geschrieben werden.
 
 ![Git identification fix](../images/studioTroubleshooting/164_Git_Identify2.png)
 
@@ -145,7 +145,7 @@ The minimum compatible Gradle version is 8.5.
 The maximum compatible Gradle JVM version is 19.
 ```
 
-Or:
+Oder:
 
 ```
 Cause: error: invalid source release: 21
@@ -159,7 +159,7 @@ Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal 
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. Im Beispiel unten ist JVM 21 als „jbr-21“ benannt. Wenn Du es findest, wähle es einfach aus und Du bist damit fertig. Falls es nicht verfügbar ist, wähle „Download JDK“ aus.
+3.  Prüfe im **Gradle JDK**-Feld, ob die richtige Version ausgewählt ist (1). Wenn nicht, klicke auf das Feld und schaue, ob es schon in der Liste zu sehen ist. Im Beispiel unten ist JVM 21 als „jbr-21“ benannt. Wenn Du es findest, wähle es einfach aus und Du bist damit fertig. Falls es nicht verfügbar ist, wähle „Download JDK“ aus.
 
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
