@@ -164,7 +164,7 @@ Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal 
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), wähle das JDK aus, das zur **AAPS**-Version passt (das ist die von Dir notierte Version aus der Anforderungstabelle). Bei Vendor (2) wähle „JetBrains Runtime“ aus. Location (3): Ändere nichts.
+4. In Version (1), wähle das JDK aus, das zur **AAPS**-Version passt (das ist die von Dir notierte Version aus der Anforderungstabelle). In Vendor (2) select any Vendor. Location (3): Ändere nichts.
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
