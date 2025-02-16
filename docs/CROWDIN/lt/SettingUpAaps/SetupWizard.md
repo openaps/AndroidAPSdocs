@@ -356,7 +356,7 @@ Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-An accurate profile is necessary to control the safe action of **AAPS**
+An accurate profile is necessary to control the safe action of **AAPS**.
 
 It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
 
