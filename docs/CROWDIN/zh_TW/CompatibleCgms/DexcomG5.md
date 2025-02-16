@@ -31,6 +31,6 @@ orphan: true
 
 -   啟動傳感器
 
-- 在[ConfigBuilder 的血糖來源](#Config-Builder-bg-source)中選擇 Dexcom App（修改版）。
+- 在[ConfigBuilder 的血糖來源](#Config-Builder-bg-source)中選擇 Dexcom App（修補版）。
 
 -   如果你想通過本地廣播使用 xDrip+ 鬧鐘：在 xDrip+ 漢堡選單  > 設定 > 硬體資料來源 > 640G / EverSense.

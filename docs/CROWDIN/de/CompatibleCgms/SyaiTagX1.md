@@ -13,11 +13,11 @@ orphan: true
 
 - Wähle Syai Tag unter [Konfigurations-Generator, BZ-Quelle](#Config-Builder-bg-source) aus.
 
-Enable broadcast in the Syai app:
+Aktiviere „Broadcast“ in der Syai-App:
 
-1. Select Profile
+1. Wähle „Profil“ aus
 2. Syai Health Ecosystem
-3. Tap Connect Now with AAPS, accept the third party data transfer agreement
-4. Enable share data with AAPS
+3. Tippe auf „Connect now with AAPS“, akzeptiere das „Third party data transfer agreement“
+4. Aktiviere „Enable share data with AAPS“
 
 ![Syai](../images/Syai.png)

@@ -47,7 +47,7 @@
 
 AAPS的“核心”是您自己构建的 **应用程序**。 这方面有详细的步骤说明。 然后你需要在一部[兼容的](../Getting-Started/Phones.md)**安卓智能手机**上安装**AAPS  应用程序**（**1**）。 有的用户倾向于用一部专门的手机来安装闭环，而非平时用的手机。 这样（尤其是苹果手机用户）就不用非得换到安卓手机上处理日常事务，只是用它来运行AAPS闭环就行。
 
-除了 **AAPS** 之外，**安卓智能手机**还需要安装另一个 App。 This is either a modified Dexcom app called build-your-own dexcom app [**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) or [**xDrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/). 这个附加 App 通过蓝牙从传感器 (**2**) 接收葡萄糖数据，然后在手机内部将数据发送到 **AAPS App**。
+除了 **AAPS** 之外，**安卓智能手机**还需要安装另一个 App。 This [additional app](./CompatibleCgms.md) receives glucose data from a sensor (**2**) by bluetooth, and then sends the data internally on the phone to the **AAPS app**.
 
 **AAPS** 采用的是 OpenAPS 的决策过程(也就是**算法**)。 初学者最开始用基础的 **oref0** 算法，对AAPS比较熟悉之后可以切换到新的 **oref1** 算法。 使用哪个算法 (oref0或 oref1) 取决于哪个算法最适合你的具体情况。  在这两种情况下，算法都会考虑多种因素，并且每次从动态血糖仪获得新的数据时都进行快速计算。 然后，算法通过蓝牙向胰岛素泵（**3**）发送指令，告诉它需要输送多少胰岛素。 所有信息都可以通过移动数据或无线网络发送到互联网（**4**）上。 如果需要的话，这些数据也可以分享给别人或者收集起来以供分析。
 
@@ -84,7 +84,7 @@ AAPS的“核心”是您自己构建的 **应用程序**。 这方面有详细�
 There are multiple possible monitoring channels (Sugarmate, Dexcom Follow, xDrip+, Android Auto _etc._) which are useful for parents/carers and adults in certain scenarios (sleeping/driving) who need customisable alerts. In some apps (xDrip+) you can also turn alarms off totally, which is great if you have a new sensor “soaking” or settling down that you don’t want to loop with yet.
 
 #### 5) **远程控制**
-与商业系统相比，**AAPS** 的一个显著优势是，监护人尤其是糖宝家长可以使用经过验证的文本（短信）命令或通过 App（[Nightscout](https://nightscout.github.io/) 或 AAPSClient）向 **AAPS** 系统发回各种命令。 这个功能1型糖宝的父母用的比较多。 例如，孩子在操场上忙着玩，一会要吃点小零食，这时你就可以用手机给个提前大剂量。 通过智能手表，我们可以监控AAPS的运行（_如_Fitbit），发送基本命令（_如_三星 Galaxy watch 4），在高配智能手表 (**5**)（_如_ LEMFO LEM14）上甚至可以运行整个 AAPS 系统。 最后这种情况下，你就可以抛开手机运行AAPS。 随着手表电池续航时间的延长和技术的日益稳定，最后一种选择可能会变得越来越有吸引力。
+与商业系统相比，**AAPS** 的一个显著优势是，监护人尤其是糖宝家长可以使用经过验证的文本（短信）命令或通过 App（[Nightscout](https://nightscout.github.io/) 或 AAPSClient）向 **AAPS** 系统发回各种命令。 这个功能1型糖宝的父母用的比较多。 例如，孩子在操场上忙着玩，一会要吃点小零食，这时你就可以用手机给个提前大剂量。 It is possible to monitor the system (_e.g._ Fitbit), send basic commands (_e.g._ Samsung Galaxy watch 4), or even run the entire AAPS system from a high-spec smartwatch (**5**) (_e.g._ LEMFO). 最后这种情况下，你就可以抛开手机运行AAPS。 随着手表电池续航时间的延长和技术的日益稳定，最后一种选择可能会变得越来越有吸引力。
 
 #### 6) **得益于应用程序的开源，不受商业限制**
 除了采用开放源代码的方法，允许随时查看 **AAPS** 的源代码之外，提供标准开放式编程接口也给其他开发人员提供了贡献新想法的机会。 **AAPS** 与 Nightscout 紧密集成。 这加快了开发速度，并允许用户添加功能，使糖尿病患者的生活更加方便。 Good examples for such integrations are [Nightscout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), [xDrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/), [M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) etc. 开源开发者和商业系统开发者之间一直在进行对话。 许多 DIY 创新逐渐被商业系统采用，而商业系统的开发速度较慢是可以理解的，部分原因是不同公司的系统（泵、App、传感器_等_）之间的接口需要仔细协商并获得许可。 这也会延缓那些方便患者（或有特殊需求的小部分患者）但不能产生可观利润的创新。
@@ -93,7 +93,7 @@ There are multiple possible monitoring channels (Sugarmate, Dexcom Follow, xDrip
 使用 **AAPS** 可以方便地跟踪以下信息：泵内胰岛素量、管路使用时长、传感器使用时长、泵电池使用时长、活性胰岛素_等_。 许多操作都可以通过 **AAPS** 应用程序完成（给泵补药、断开泵连接_等_），而不是通过泵本身来操作，这意味着泵可以放在您（或您的家属）的口袋或腰带里。
 
 #### 8) **用得上，用得起**
-**AAPS** 为目前没有能力自筹资金或没有资金/保险的人提供了世界一流的混合闭环系统，该系统在开发理念上领先商业系统多年。 目前，您需要有一个 Nightscout 帐户才能设置 **AAPS**，但 **AAPS** 闭环的日常运行并不会用到 Nightscout 帐户。 许多人一直在使用 Nightscout 收集数据和进行远程控制。 虽然 **AAPS** 本身是免费的，但通过一些第三方平台来搭建 Nightscout 可能会产生费用（0 - 12 欧元），费用高低取决于您需要何种级别的支持（见对照表），以及设置后是否要继续使用 Nightscout。 **AAPS** 可与多种价格低廉（约 150 欧元起）的安卓手机配合使用。 针对特定地点和语言也有不同的版本，[盲人](#accessibility-for-users-aaps-who-are-partially-or-completely-blind)也可以使用 AAPS。
+**AAPS** 为目前没有能力自筹资金或没有资金/保险的人提供了世界一流的混合闭环系统，该系统在开发理念上领先商业系统多年。 目前，您需要有一个 Nightscout 帐户才能设置 **AAPS**，但 **AAPS** 闭环的日常运行并不会用到 Nightscout 帐户。 许多人一直在使用 Nightscout 收集数据和进行远程控制。 虽然 **AAPS** 本身是免费的，但通过一些第三方平台来搭建 Nightscout 可能会产生费用（0 - 12 欧元），费用高低取决于您需要何种级别的支持（见对照表），以及设置后是否要继续使用 Nightscout。 **AAPS** works with a wide range of affordable (starting from approx €150) [Android phones](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true). 针对特定地点和语言也有不同的版本，[盲人](#accessibility-for-users-aaps-who-are-partially-or-completely-blind)也可以使用 AAPS。
 
 #### 9) **支持**
 没有完美无缺的胰岛素自动给药系统。 不管是商业化产品还是开源系统都会在通信和临时硬件故障等方面遇到许多同类型的问题。 Facebook、Discord 和 Github 上有很多来自世界各地的AAPS用户，他们很多人参与了AAPS的设计和开发，而且也是**AAPS**的使用者，你可以在这些线上社区里得到所需要的支持。 此外，还有 Facebook 支持小组和诊所/商业公司为商用 APS 系统提供的帮助，毕竟与这些系统的用户或前用户交谈，可以获得有关常见故障、教育计划质量和持续支持水平的反馈。
@@ -165,7 +165,7 @@ _表格说明：_
 
 ## AAPS是否使用人工智能或任何机器学习算法？
 
-目前的 **AAPS** 主版本（3.1.0.3）没有任何机器学习算法、多参数胰岛素反应模型或人工智能。 因此，该系统在运作方式上是公开和透明的，不仅专家能看懂，临床医生和病人也能弄明白。 这也意味着，诸如生活状态转换的时候可能需要大幅增加胰岛素计量(比如从紧张的工作日转到轻松的假期)， 您可以立即把 **AAPS**切换到一个更弱/更强的配置文件。 如果是那些能“自动学习”的系统，类似的调整可以自动执行，但相比之下需要等一段时间才能调整胰岛素剂量（那些系统需要等指标的趋势发生变化才能做出调整）。
+The current master version of **AAPS** (3.3.1.3) does not have any machine learning algorithms, multiple-parameter insulin response models, or artificial intelligence. 因此，该系统在运作方式上是公开和透明的，不仅专家能看懂，临床医生和病人也能弄明白。 这也意味着，诸如生活状态转换的时候可能需要大幅增加胰岛素计量(比如从紧张的工作日转到轻松的假期)， 您可以立即把 **AAPS**切换到一个更弱/更强的配置文件。 如果是那些能“自动学习”的系统，类似的调整可以自动执行，但相比之下需要等一段时间才能调整胰岛素剂量（那些系统需要等指标的趋势发生变化才能做出调整）。
 
 ## 哪种系统适合我或我的家人？
 
@@ -376,6 +376,7 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 - 为1型糖尿病患者的看护者提供远程监控和胰岛素输注管理功能；以及
 
 - 通过使用由**AAPS**控制的安卓手机，来优化整合您所有的便携式糖尿病设备（包括动态和胰岛素控制装置）。
+
 
 最终，**AAPS** 可以帮助患者更好地控制糖尿病，从而稳定血糖，改善长期健康状况。
 

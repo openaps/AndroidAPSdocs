@@ -13,11 +13,11 @@ orphan: true
 
 - Wähle Ottai in [Konfigurations-Generator, BZ-Quelle](#Config-Builder-bg-source) aus.
 
-Enable broadcast in the Ottai app:
+Aktiviere „Broadcast“ in der Ottai-App:
 
-1. Select Profile
-2. Ottai hub
-3. Tap Share with AAPS, accept the third party data transfer agreement
-4. Enable Share glucose data with AAPS
+1. Wähle „Profil“ aus
+2. Ottai-Hub
+3. Tippe auf „Share with AAPS“, akzeptiere das „Third party data transfer agreement“
+4. Aktiviere „Share glucose data with AAPS“
 
 ![Ottai](../images/Ottai.png)

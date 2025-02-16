@@ -73,7 +73,7 @@ Nach einem Sensorwechsel erkennt xDrip+ den neuen Sensor automatisch und löscht
 
 2. Scanne jetzt Deinen neuen Sensor per NFC Deines Smartphones. Juggluco zeigt eine Benachrichtigung an, wenn der Prozess erfolgreich gestartet wurde.
 3. Wenn Du den alten Sensor deaktivieren möchtest, öffne das Juggluco-Menü, indem Du in der oberen linken Ecke des Bildschirms in den leeren Bereich tippst.
-4. Select the expired sensor and tap "Terminate"
+4. Wähle den abgelaufenen Sensor aus und tippe auf „Beenden“
 
 ![Sensorsitzung beenden](../images/libre3/step_14.jpg)
 
