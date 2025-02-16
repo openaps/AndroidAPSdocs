@@ -139,7 +139,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 ### 2) 报告服务器：NightScout（Tidepool*）
 
-为了充分利用**AAPS**，您需要设置一个Nightscout服务器。 您可以自行完成这一设置（链接到教程），或者选择支付少量费用，让他人为您设置托管的Nightscout服务（链接到 T1Pal、10.be 等）。 Nightscout用于随时间收集来自**AAPS**的数据，并能够生成将连续葡萄糖监测（CGM）和胰岛素模式相关联的详细报告。 护理人员也可以使用Nightscout与**AAPS**应用程序进行远程通信，以监督其孩子的糖尿病管理。 这种远程通信功能包括实时监测血糖和胰岛素水平、远程注射胰岛素（通过短信）以及录入碳水。 试图单独分析连续葡萄糖监测（CGM）数据而不结合泵数据来评估你的糖尿病管理效果，就像是一个司机在开车时看不见前方，而只能依靠乘客来描述路况一样。  对于AAPS 3.2及更高版本，Tidepool可以作为Nightscout的替代方案。
+为了充分利用**AAPS**，您需要设置一个Nightscout服务器。 You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout用于随时间收集来自**AAPS**的数据，并能够生成将连续葡萄糖监测（CGM）和胰岛素模式相关联的详细报告。 护理人员也可以使用Nightscout与**AAPS**应用程序进行远程通信，以监督其孩子的糖尿病管理。 这种远程通信功能包括实时监测血糖和胰岛素水平、远程注射胰岛素（通过短信）以及录入碳水。 试图单独分析连续葡萄糖监测（CGM）数据而不结合泵数据来评估你的糖尿病管理效果，就像是一个司机在开车时看不见前方，而只能依靠乘客来描述路况一样。  对于AAPS 3.2及更高版本，Tidepool可以作为Nightscout的替代方案。
 
 ### 3）CGM传感器应用
 
