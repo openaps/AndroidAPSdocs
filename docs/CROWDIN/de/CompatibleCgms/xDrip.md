@@ -140,8 +140,8 @@ Nutze [diese Anleitung](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 - Schalte den Original Dexcom Empfänger aus (falls Du diesen verwendet).
 - [Sensor stoppen](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (nur wenn der Sensor ersetzt wird).
 
-- Gerät in den Bluetooth-Einstellungen von xDrip+ UND des Smartphones löschen (wird als Dexcom?? angezeigt, dabei steht ?? are the last two digits of the transmitter serial no.)  
-    → Hamburger Menu (1) → System Status (2) → If you are not on the Classic Status Page (3) swipe the screen (4) to reach it → then tap Forget Device (5).
+- Gerät in den Bluetooth-Einstellungen von xDrip+ UND des Smartphones löschen (wird als Dexcom?? angezeigt, dabei steht ?? für die letzten beiden Ziffern der Seriennummer des Transmitters  
+    → Hamburger Menü (1) → Systemstatus (2) → Bist Du nicht in der „Classic Status Page“-Ansicht (3) wische zur Seite (4), um zur richtigen Ansicht zu wechseln → tippe dann auf „Gerät löschen“ (5).
 
 ![xDrip+ System status](../images/xDrip_Dexcom_StopSensor.png)
 
