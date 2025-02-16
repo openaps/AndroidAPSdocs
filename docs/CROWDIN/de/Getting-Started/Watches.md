@@ -49,11 +49,11 @@ Der beste Weg, eine Smartwatch auszusuchen, ist in den entsprechenden **AAPS** D
 
 ## Full Android
 
-Klingt attraktiv, oder? Wie dem auch sei, momentan experimentieren nur wenige Enthusiasten mit **AAPS**  auf einer Standalone Smartwatch. Es gibt nur wenige Smartwatches mit einer vernünftigen Bedienoberfläche, die auch gut mit **AAPS** und Deiner CGM App funktionieren. Beliebte Modelle sind u. a. die LEMFO LEM 14, 15 und 16. Du musst die vollständige **AAPS** APK (die Apk, die normalerweise auf einem Smartphone installiert wird) anstelle der **AAPS** "wear" apk auf die Smartwatch laden.
+Klingt attraktiv, oder? Wie dem auch sei, momentan experimentieren nur wenige Enthusiasten mit **AAPS**  auf einer Standalone Smartwatch. Es gibt nur wenige Smartwatches mit einer vernünftigen Bedienoberfläche, die auch gut mit **AAPS** und Deiner CGM App funktionieren. Popular models include the LEMFO LEM. Du musst die vollständige **AAPS** APK (die Apk, die normalerweise auf einem Smartphone installiert wird) anstelle der **AAPS** "wear" apk auf die Smartwatch laden.
 
 Auch wenn es derzeit keinen eindeutigen Spezifikationen gibt, die erkennen lassen, ob eine Smartwatch als Standalone **AAPS** nutzbar ist, gibt es einige Parameter, die gute Indikatoren sind:
 
-1) Android 10 oder höher. 2)  Die Möglichkeit zu haben das Zifferblatt aus dem "Square-Modus" zu holen, um Text zum einfacheren Lesen zu vergrößern. 3) Sehr gute Akkulaufzeit. 4) Gute Bluetooth-Reichweite.
+1)  Android 11 or newer. 2)  Die Möglichkeit zu haben das Zifferblatt aus dem "Square-Modus" zu holen, um Text zum einfacheren Lesen zu vergrößern. 3) Sehr gute Akkulaufzeit. 4) Gute Bluetooth-Reichweite.
 
 Die meisten Frustrationen mit Standalone **AAPS**-Smartwatches entstehen aus der Interaktion mit einem winzigen Bildschirm, und der Tatsache, dass die aktuelle AAPS-Voll-App-Benutzeroberfläche nicht für eine Smartwatch konzipiert wurde. Durch das sehr eingeschränkte Display und kann ein Stift beim Editieren der **AAPS**-Einstellungen helfen. Einige der AAPS-Tasten sind möglicherweise auf dem Zifferblatt nicht sichtbar.
 
@@ -75,9 +75,9 @@ Wenn Du eine Standalone Smartwatch aufsetzen möchtest und Zusatzinformationen b
 
 Die ersten drei Smartwatch-Optionen setzen **Wear OS** als Betriebssystem voraus.
 
-**Wear OS** ist das Betriebssystem, das auf einigen modernen Android Smartwatches läuft. In [2018](https://en.wikipedia.org/wiki/Wear_OS) hat Google _Android Wear 1.x in Wear OS_ ab Version 2.x umbenannt. Wenn also ein Gerät mit “_Android Wear_” anstatt mit **Wear OS** gekennzeichnet ist, kann das auf eine ältere Version hinweisen. Wenn die Smartwatch nur als _kompatibel_ mit Android und iOS beschrieben wird, bedeutet das nicht, dass sie Wear OS verwendet. Möglicherweise handelt es sich dann dabei um ein anderes Betriebssystem, das nicht mit **AAPS** kompatibel ist. Eine Smartwatch sollte **WearOS** und idealerweise Android 10 (oder neuer) nutzen, um die verschiedenen Versionen von **AAPS** oder dem **AAPSClient** voll nutzen zu können. Im Oktober 2023 war die aktuelle **WearOS**-Version WearOS 4.0 (mit Android 13 als Basis).
+**Wear OS** ist das Betriebssystem, das auf einigen modernen Android Smartwatches läuft. Wenn die Smartwatch nur als _kompatibel_ mit Android und iOS beschrieben wird, bedeutet das nicht, dass sie Wear OS verwendet. Möglicherweise handelt es sich dann dabei um ein anderes Betriebssystem, das nicht mit **AAPS** kompatibel ist. To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch will need to be running **Wear OS**, and be Android 11 or newer. As a guide, as of October 2024, the latest release of **Wear OS** is version 5.0 (based on Android 13).
 
-Wenn Du die **AAPS** wear.apk auf Deiner **Wear OS**-Smartwatch installierst, kannst Du aus einer Vielzahl verschiedener **AAPS**-Ziffernblätter auswählen. Alternativ kannst Du auch das Standard-Ziffernblatt Deiner Smartwatch mit **AAPS** Informationen erweitern (sog. "complications"). Eine Komplikation ist jede Funktionalität, die zusätzlich zur Uhrzeit hinaus auf dem Zifferblatt angezeigt wird. Komplikationen sind ab Wear OS Version 2.0 oder höher verfügbar.
+Wenn Du die **AAPS** wear.apk auf Deiner **Wear OS**-Smartwatch installierst, kannst Du aus einer Vielzahl verschiedener **AAPS**-Ziffernblätter auswählen. Alternativ kannst Du auch das Standard-Ziffernblatt Deiner Smartwatch mit **AAPS** Informationen erweitern (sog. "complications"). Eine Komplikation ist jede Funktionalität, die zusätzlich zur Uhrzeit hinaus auf dem Zifferblatt angezeigt wird.
 
 
 ### Wie könnte meine Smartwatch aussehen?
