@@ -42,15 +42,15 @@ orphan: true
 -   此應用程式允許你將 Dexcom G6 與任何 Android 智慧型手機一起使用。
 -   如果你之前使用過原版或修改過的 Dexcom 應用程式，請卸載他們（**不要停止**目前運作的傳感器）。
 -   安裝下載的 apk
--   在修改版應用程式中輸入傳感器代碼和傳輸器序列號。
+-   在修補版應用程式中輸入傳感器代碼和傳輸器序列號。
 -   在手機設定中，前往應用程式 > Dexcom G6 > 權限 > 其他權限並按下「存取 Dexcom 應用程式」。
 -   短時間後，BYODA 應該會收到傳輸器訊號。
 
 ### AAPS 設定
 
--   在[ConfigBuilder 的血糖來源](#Config-Builder-bg-source)中選擇「Dexcom App（修改版）」。
+-   在[ConfigBuilder 的血糖來源](#Config-Builder-bg-source)中選擇「Dexcom App（修補版）」。
 
--   如果你未收到任何數值，請選擇其他資料來源，然後重新選擇「Dexcom App（修改版）」以觸發 AAPS 和 BYODA 廣播之間連線所需的權限請求。
+-   如果你未收到任何數值，請選擇其他資料來源，然後重新選擇「Dexcom App（修補版）」以觸發 AAPS 和 BYODA 廣播之間連線所需的權限請求。
 
 ### xDrip+ 設定
 
