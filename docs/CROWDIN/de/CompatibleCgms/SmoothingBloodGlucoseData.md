@@ -14,7 +14,7 @@ Seit **AAPS**-Version 3.2 gibt es die Möglichkeit, die Daten anstatt in der CGM
 
 ### Exponentielle Glättung
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+Diese Methode ist die aggressivste und gleichzeitig die zunächst empfohlene Methode, um das Rauschen zu beheben. Sie schreibt den aktuellen (letzten) Glukosewert noch einmal. In der unten dargestellten Tabelle finden sich auch andere spezifische Empfehlungen.
 
 ### Durchschnittliche Glättung
 
@@ -31,12 +31,12 @@ Verwende diese Option nur dann, wenn Deine CGM-Daten bereits (in einer Collector
 |               |  Exponentiell   | Durchschnitt |   Keine   |
 | ------------- |:---------------:|:------------:|:---------:|
 | G5/G6/ONE     | Wenn verrauscht |              | Empfohlen |
-| G7/ONE+/Stelo | Wenn verrauscht |  If stable   |           |
+| G7/ONE+/Stelo | Wenn verrauscht | Falls stabil |           |
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the [patched app data source](https://xdrip.readthedocs.io/en/latest/install/libre2patch/) (receiving from another app, Juggluco included), smoothing is already done [inside the app](https://xdrip.readthedocs.io/en/latest/use/NFC/#smooth-libre-3-data-when-using-xxx-method).
+Die Werte der Libre Sensoren sind verrauscht und müssen geglättet werden. Wenn Du eine xDrip+-Direktverbindung oder die [gepatchte App als Datenquelle-Datenquelle](https://xdrip.readthedocs.io/en/latest/install/libre2patch/) nutzt (Empfang von einer anderen App, bei Juggluco enthalten), ist die Glättung bereits [innerhalb der App](https://xdrip.readthedocs.io/en/latest/use/NFC/#smooth-libre-3-data-when-using-xxx-method) erledigt worden.
 
-| Sensor / Data source |   Juggluco   | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
-| -------------------- |:------------:|:-------------:|:-------------:|:------------------:|
-| Libre 1/14 days/Pro  |     N.A.     |     N.A.      | Durchschnitt  |        N.A.        |
-| Libre 2/2+ (EU)      | Durchschnitt |     Keine     | Durchschnitt  |       Keine        |
-| Libre 2/2+/3/3+      | Durchschnitt |     N.A.      |     N.A.      |       Keine        |
+| Sensor / Datenquelle |   Juggluco   | xDrip+ Direkt | xDrip+ Bridge | xDrip+ gepatchte App |
+| -------------------- |:------------:|:-------------:|:-------------:|:--------------------:|
+| Libre 1/14 Tage/Pro  |     N.A.     |     N.A.      | Durchschnitt  |         N.A.         |
+| Libre 2/2+ (EU)      | Durchschnitt |     Keine     | Durchschnitt  |        Keine         |
+| Libre 2/2+/3/3+      | Durchschnitt |     N.A.      |     N.A.      |        Keine         |
