@@ -293,7 +293,6 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## Dépannage de l'application wear :
 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
 * Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 * If Complications does not update data - check first if AAPS watchfaces work at all.
 
