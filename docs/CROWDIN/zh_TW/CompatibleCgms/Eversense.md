@@ -7,7 +7,7 @@ orphan: true
 有三種不同的方法來存取 Eversense 的讀取值：
 
 - ESEL 配套模式
-- ESEL 修改版模式
+- ESEL 修補版模式
 - xDrip+ 配套應用程式
 
 ## ESEL
@@ -28,24 +28,24 @@ orphan: true
    - 選擇性的操作，但若需回填則必須：登錄你的 Eversense 帳號
    - 在同步中，啟用自動同步功能
 2. ESEL 設定：
-   - 停用「從修改版 Eversense 應用程式獲取資料」設置
+   - 停用「從修補版 Eversense 應用程式獲取資料」設置
    - 若需回填：啟用「從 eversensedms.com 填補遺漏資料」
    - 輸入你的 Eversense 登錄資料作為電子郵件地址和密碼
 3. 在[ConfigBuilder 的血糖來源](#Config-Builder-bg-source)中將「MM640g」設為血糖來源。
 
-### 修改版 Eversense 應用程式
+### 修補版 Eversense 應用程式
 
- 需要修改版的 Eversense 應用程式（完全離線運作，包括回填）。
+ 需要修補版的 Eversense 應用程式（完全離線運作，包括回填）。
 
 1. 卸載 Eversense 應用程式（警告：你將丟失超過 1 週的本地歷史資料！）
 
-2. 安裝[修改版 Eversense 應用程式](https://cr4ck3d3v3r53n53.club)並按照供應商的描述進行使用。
+2. 安裝[修補版 Eversense 應用程式](https://cr4ck3d3v3r53n53.club)並按照供應商的描述進行使用。
 
    - 啟動 Eversense 應用程式，登錄，連線到你的傳輸器，並像使用正常應用程式一樣使用他。
 
 3. ESEL 設定：
 
-   - 啟用「從修改版 Eversense 應用程式獲取資料」設置
+   - 啟用「從修補版 Eversense 應用程式獲取資料」設置
 
 
 
