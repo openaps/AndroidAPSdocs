@@ -355,10 +355,10 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 在嘗試在下一個畫面中輸入你的設定檔詳細資訊之前，請閱讀關於[設定檔](../SettingUpAaps/YourAapsProfile.md)的文件。
 
 ```{admonition} Working profile required - no exceptions here !
-:class: 危險
-準確的個人設定對於控制 **AAPS** 的安全作用至關重要
+:class: danger
+An accurate profile is necessary to control the safe action of **AAPS**.
 
-需要你已經確定並與醫生討論你的個人設定，並且這一設定已成功通過基礎速率、ISF 和 IC 測試驗證有效！
+It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
 
 如果一個機器人有錯誤的輸入，它將不斷失敗。 **AAPS** 只能使用所提供的訊息。 如果你的個人設定過強，則可能會面臨低血糖風險；如果過弱，則可能會面臨高血糖風險。 
 ```
