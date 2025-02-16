@@ -8,10 +8,10 @@
 
 **AMA** = Advanced Meal Assist (dt. fortgeschrittener Mahlzeitenassistent). Ein Algorithmus, der es **AAPS** ermöglicht, die Basalrate nach einem Mahlzeitenbolus zu erhöhen (aggressiver zu machen). Weitere Informationen → Wiki - 'Erweiterter Mahlzeit-Assistent (AMA)'.
 
-**Adjustment Factor** = used within **DynamicISF** and is a value set within a user's **Preferences** between 1% and 300%. This acts as a multiplier on the **TDD** value.
+**Anpassungsfaktor** = wird beim **dynamschen ISF** genutzt. Er ist ein Wert, der zwischen 1% und 300% liegen kann und in den **Einstellungen** gesetzt wird. Dies wirkt als Multiplikator auf den **TDD**-Wert.
 
-- increasing the **Adjustment Factor** value above 100 % makes **DynamicISF** more aggressive: the **ISF** values become smaller (i.e. more insulin required to decrease **BG** levels a small amount)
-- lowering the **Adjustment Factor** value under 100% makes **DynamicISF** less aggressive: the **ISF** values become larger (i.e. less insulin required to decrease **BG** levels a small amount).
+- die Erhöhung des **Anpassungsfaktors** über 100% macht den **dynamischen ISF** aggressiver: die **ISF**-Werte werden kleiner (d. h. es wird mehr Insulin benötigt, um den **Glukosespiegel** zu senken)
+- Das Absenken des **Anpassungsfaktors** Wert unter 100% macht den **dynamischen ISF** weniger aggressiv: die **ISF**-Werte werden größer (d. h. es wird weniger Insulin benötigt um den **Glukosespiegel** zu senken).
 
 **Android Auto** = ein System, das bestimmte Funktionen eines Android-Smartphones, einschließlich **AAPS**, auf dem Display eines Autos zur Verfügung stellt. Weitere Informationen → Wiki - 'Android Auto'.
 
@@ -51,10 +51,10 @@
 
 **DST** = Daylight Savings Time (dt. Sommerzeit (MESZ)) → Wiki DST.
 
-**Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s:
+**Dynamic ISF (oder DynISF)** = eine Funktion innerhalb von **AAPS**, die den Insulinempfindlichkeits-Faktor (bzw. Korrekturfaktor) (**ISF**) dynamisch anpasst und dabei berücksichtigt:
 
-- Total Daily Dose of insulin (**TDD**); and
-- current and predicted **BG** values.
+- Den Tages-Gesamtinsulinbedarf (**TDD**); und
+- aktuelle und prognostizierte **Glukosewerte**.
 
 **eCarbs** = extended Carbs (dt. verzögerte Kohlenhydrate). Kohlenhydrate werden über mehrere Stunden aufgeteilt, um Protein zu berücksichtigen und **AAPS** zu ermöglichen verlängerte Bolusdosen abzugeben. Weitere Informationen → Wiki - 'Verzögerte Kohlenhydrate / eCarbs', 'eCarbs nutzen'.
 
