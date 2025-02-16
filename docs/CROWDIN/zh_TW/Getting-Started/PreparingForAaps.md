@@ -139,7 +139,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 ### 2) 報告伺服器：NightScout（或 Tidepool）
 
-為了充分利用**AAPS**，你需要設置 Nightscout 伺服器。 你可以自己設置（連線至指導），或者支付小額費用讓人幫你設置受管的 Nightscout 服務（鏈接至 T1 Pal 10.be 等）。 Nightscout 用於收集**AAPS**隨時間推移的資料，並能夠生成詳細的報告，以關聯 CGM 和胰島素模式。 照護者還可以使用 Nightscout 遠端與**AAPS**應用程式通訊，以監控其孩子的糖尿病管理。 這些遠端通訊功能包括即時監控血糖和胰島素數值、遠端注射胰島素（透過發送訊息）以及餐點通知。 試圖將 CGM 資料與幫浦資料分開進行分析，就像駕駛時司機是盲人，乘客在旁描述場景一樣。  從 AAPS 3.2 版開始，也可以使用 Tidepool 作為 Nightscout 的替代方案。
+為了充分利用**AAPS**，你需要設置 Nightscout 伺服器。 You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout 用於收集**AAPS**隨時間推移的資料，並能夠生成詳細的報告，以關聯 CGM 和胰島素模式。 照護者還可以使用 Nightscout 遠端與**AAPS**應用程式通訊，以監控其孩子的糖尿病管理。 這些遠端通訊功能包括即時監控血糖和胰島素數值、遠端注射胰島素（透過發送訊息）以及餐點通知。 試圖將 CGM 資料與幫浦資料分開進行分析，就像駕駛時司機是盲人，乘客在旁描述場景一樣。  從 AAPS 3.2 版開始，也可以使用 Tidepool 作為 Nightscout 的替代方案。
 
 ### 3) CGM 傳感器應用程式
 
