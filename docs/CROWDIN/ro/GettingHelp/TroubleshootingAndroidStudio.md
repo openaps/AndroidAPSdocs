@@ -164,7 +164,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select 'JetBrains Runtime'. Location (3): do not change.
+4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change.
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
