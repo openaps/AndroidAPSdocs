@@ -47,7 +47,7 @@ Android APS（**AAPS**）是一個混合閉環系統，或稱人工胰臟系統�
 
 AAPS 的“核心”是一個你自己建置的**應用程式**。 這裡有詳細的步驟說明。 然後你可以將**AAPS** 應用程式安裝在[相容](../Getting-Started/Phones.md)的**Android 智慧型手機** (**1**) 上。 很多人喜歡將他們的 AAPS 循環放在另一隻獨立的手機上，而不是主要的手機 因此，你不必在日常生活中使用 Android 手機，只需用於運作你的 AAPS 循環即可。
 
-**安卓智慧型手機**也需要安裝另一個應用程式，以及 **AAPS**。 This [additional app](./CompatibleCgms.md) receives glucose data from a sensor (**2**) by bluetooth, and then sends the data internally on the phone to the **AAPS app**.
+**安卓智慧型手機**也需要安裝另一個應用程式，以及 **AAPS**。 這個[附加應用程式](./CompatibleCgms.md)透過藍牙從感測器（**2**）接收葡萄糖資料，然後將資料在手機內部傳送到**AAPS應用程式**。
 
 **AAPS 應用程式**使用來自 OpenAPS 的決策過程（**演算法**）。 初學者開始使用基本的 **oref0** 演算法，但隨著你在AAPS上的目標進度，可以切換到使用較新的 **oref1** 演算法。 你使用哪個演算法（oref0或oref1），取決於哪個最適合你的特定情況。  在兩種情況下，演算法考慮多個因素，每次從傳感器傳入新讀取值時進行快速計算。 演算法然後透過藍牙將指令發送到胰島素幫浦（**3**），指示其提供多少胰島素。 所有訊息可以透過手機資料或wifi發送到網際網路（**4**） 如果需要，這些資料也可以與追蹤者分享，並且/或收集用於分析。
 
@@ -84,7 +84,7 @@ AAPS 的“核心”是一個你自己建置的**應用程式**。 這裡有詳�
 有多種可用的監測管道（如 Sugarmate、Dexcom Follow、xDrip+、Android Auto _等_），這些對於父母/照護者以及在某些情境下（睡眠/駕駛）需要自訂警報的成人非常實用。 在某些應用程式（如 xDrip+）中，你也可以完全關閉警報，這對於新的傳感器正在「浸潤期」或穩定時非常實用，特別是當你尚未想進行循環時。
 
 #### 5) **遠端控制**
-**AAPS** 相對於商業系統的一個重大優勢是，關注者可以透過認證的簡訊（SMS）指令或應用程式（如 [Nightscout](https://nightscout.github.io/) 或 AAPSClient）向 **AAPS** 系統發送多種指令。 第1型糖尿病兒童的父母們廣泛使用AAPS。 例如，在遊樂場時，你可以透過自己的手機為孩子的點心提前注射，而孩子則繼續玩耍。 It is possible to monitor the system (_e.g._ Fitbit), send basic commands (_e.g._ Samsung Galaxy watch 4), or even run the entire AAPS system from a high-spec smartwatch (**5**) (_e.g._ LEMFO). 在這種情況下，你不需要使用手機運作AAPS。 隨著手錶的電池壽命提高和技術變得更加穩定，這最後一個選項可能會變得越來越具吸引力。
+**AAPS** 相對於商業系統的一個重大優勢是，關注者可以透過認證的簡訊（SMS）指令或應用程式（如 [Nightscout](https://nightscout.github.io/) 或 AAPSClient）向 **AAPS** 系統發送多種指令。 第1型糖尿病兒童的父母們廣泛使用AAPS。 例如，在遊樂場時，你可以透過自己的手機為孩子的點心提前注射，而孩子則繼續玩耍。 可以監控系統（_例如_ Fitbit）、傳送基本指令（_例如_ Samsung Galaxy 手錶4），甚至可以從高規格的智慧手錶（**5**）(_例如_ LEMFO) 運行整個AAPS系統。 在這種情況下，你不需要使用手機運作AAPS。 隨著手錶的電池壽命提高和技術變得更加穩定，這最後一個選項可能會變得越來越具吸引力。
 
 #### 6) **開放的應用程式介面，無商業限制**
 除了使用開源方法外，允許隨時查看**AAPS**的程式碼，提供開放的程式介面這一做法，也讓其他開發者有機會貢獻新想法。 **AAPS** 與 Nightscout 緊密整合。 這加快了發展，讓用戶可以添加功能，使得與糖尿病的生活更加方便。 這類整合良好例子包括 [Nightscout](https://nightscout.github.io/)、[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)、[xDrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/)、[M5 Stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) 等。 開源開發者與商業系統開發者之間的對話持續進行。 許多 DIY 創新逐漸被商業系統採用，儘管開發速度較慢，這在一定程度上是因為不同公司的系統（如幫浦、應用程式、傳感器等）之間的介面需要謹慎協商和授權。 這也可能減緩創新，這些創新對患者（或一小部分特定需求的患者）很方便，因為這些創新無法帶來顯著的利潤。
@@ -93,7 +93,7 @@ AAPS 的“核心”是一個你自己建置的**應用程式**。 這裡有詳�
 透過 **AAPS**，你可以輕鬆追蹤幫浦胰島素數值、套管使用時間、傳感器時間、幫浦電池時間、活性胰島素量_等等_。 許多操作可以直接在 **AAPS** 應用中完成（如幫浦注射、幫浦中斷等），無需在幫浦本身上操作，這樣幫浦可以一直放在你的口袋或腰帶上。
 
 #### 8) **便利性和負擔能力**
-**AAPS**為那些目前無法自費或沒有經費/保險的人提供了一個世界級的混合閉環系統，其開發概念比市售系統領先了數年。 目前你需要擁有Nightscout帳號才能設置**AAPS**，但Nightscout帳號並不是每天運作 **AAPS**循環所必須的。 許多人繼續使用Nightscout來收集資料並進行遠端控制。 雖然**AAPS**本身是免費的，但透過不同的平台設置Nightscout可能會產生費用（新台幣$0 -$425），這取決於你需要的支援程度以及你是否要在設置後繼續使用Nightscout（請參閱比較表）。 **AAPS** works with a wide range of affordable (starting from approx €150) [Android phones](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true). 不同版本適用於特定地區和語系，AAPS還可以供[視障人士](#accessibility-for-users-aaps-who-are-partially-or-completely-blind)使用。
+**AAPS**為那些目前無法自費或沒有經費/保險的人提供了一個世界級的混合閉環系統，其開發概念比市售系統領先了數年。 目前你需要擁有Nightscout帳號才能設置**AAPS**，但Nightscout帳號並不是每天運作 **AAPS**循環所必須的。 許多人繼續使用Nightscout來收集資料並進行遠端控制。 雖然**AAPS**本身是免費的，但透過不同的平台設置Nightscout可能會產生費用（新台幣$0 -$425），這取決於你需要的支援程度以及你是否要在設置後繼續使用Nightscout（請參閱比較表）。 **AAPS**與各種價格合理的(*起價約150歐元*) [Android手機](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)相容。 不同版本適用於特定地區和語系，AAPS還可以供[視障人士](#accessibility-for-users-aaps-who-are-partially-or-completely-blind)使用。
 
 #### 9) **支援**
 沒有任何自動胰島素輸送系統是完美的。 市售和開源系統在通訊和臨時硬體故障方面存在許多共同的問題。 AAPS 的用戶社群遍佈全球，他們在 Facebook、Discord 和 GitHub 上提供支援，這些用戶不僅設計和開發了 **AAPS**，同時也正在使用他。 市售APS系統還有Facebook支援群組，並可以從診所或商業公司獲得幫助——值得與這些系統的用戶或前用戶交流，了解常見問題、教育計劃的品質以及提供的持續支援。
