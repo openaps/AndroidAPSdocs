@@ -49,7 +49,7 @@
 
 ## 完整簽章
 
-這聽起來像是一個很有吸引力的選項，對嗎？ 然而，目前只有少數愛好者正在嘗試在獨立手錶上運作 **AAPS**。 能夠與 **AAPS** 和你的 CGM 應用程式一起良好運作的獨立手錶界面目前數量有限。 Popular models include the LEMFO LEM. 你需要在手錶上載入 **AAPS** 的“完整” apk（通常安裝在智慧型手機上的 apk），而不是 **AAPS** 的“wear” apk。
+這聽起來像是一個很有吸引力的選項，對嗎？ 然而，目前只有少數愛好者正在嘗試在獨立手錶上運作 **AAPS**。 能夠與 **AAPS** 和你的 CGM 應用程式一起良好運作的獨立手錶界面目前數量有限。 熱門型號包括LEMFO LEM。 你需要在手錶上載入 **AAPS** 的“完整” apk（通常安裝在智慧型手機上的 apk），而不是 **AAPS** 的“wear” apk。
 
 雖然目前沒有明確的規範告訴你哪款手錶適合獨立使用 **AAPS**，但以下參數會有所幫助：
 
@@ -75,7 +75,7 @@
 
 前三個智慧型手錶選項要求智慧型手錶安裝 **Wear OS**。
 
-**Wear OS** 是運作在部分現代 Android 智慧型手錶上的作業系統。 如果智慧型手錶的描述僅指示與 Android 和 iOS 相容，則並不意味著他運作的是 **Wear OS**。 他可能運作的是其他供應商專用的作業系統，這些系統不與 **AAPS** 相容。 To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch will need to be running **Wear OS**, and be Android 11 or newer. 作為參考，截至 2024 年 10 月，**Wear OS** 的最新版本是基於 Android 13 的 5.0 版本。
+**Wear OS** 是運作在部分現代 Android 智慧型手錶上的作業系統。 如果智慧型手錶的描述僅指示與 Android 和 iOS 相容，則並不意味著他運作的是 **Wear OS**。 他可能運作的是其他供應商專用的作業系統，這些系統不與 **AAPS** 相容。 要支援任何版本的**AAPS**或**AAPSClient**的安裝和使用，智慧手錶必須運行**Wear OS**並且是Android 11或更新版本。 作為參考，截至 2024 年 10 月，**Wear OS** 的最新版本是基於 Android 13 的 5.0 版本。
 
 如果你在 **Wear OS** 手錶上安裝 **AAPS** wear.apk，將可以選擇不同的自訂 **AAPS** 錶盤。 或者，你可以使用標準的智慧型手機錶盤，並在錶盤上包含稱為“小工具”的小方塊，顯示你的 **AAPS** 資訊。 複雜功能是指除了時間之外，顯示在錶盤上的任何功能。
 
