@@ -12,7 +12,7 @@ orphan: true
 
 ### Kaleido ([官網](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**循環狀態：**幫浦是循環候選，但目前不知道協議。 廠商對開放原始碼不感興趣。
 
 **AAPS 硬體需求：**無。 看起來已啟用藍牙 (BT)。
 
@@ -28,7 +28,7 @@ orphan: true
 
 **閉環狀態：** 這三款幫浦都將是閉環候選者。
 
-Awaiting release in Europe.
+等待在歐洲上市。
 
 **AAPS 硬體需求：**無。 看起來已啟用藍牙 (BT)。
 
@@ -50,7 +50,7 @@ Awaiting release in Europe.
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**註解：**支援將於2025年3月結束。
 
 ## 不可閉環的幫浦
 
@@ -60,11 +60,11 @@ Awaiting release in Europe.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**註解：**與Solo幫浦的溝通在社群中沒有成功案例。
 
-### Ypsomed Pump
+### Ypsomed幫浦
 
-**Comments:** Ypso added very heavy 3rd party encryption.
+**註解：**Ypso增加了非常繁重的第三方加密。
 
 ## 幫浦成為可閉環的需求
 
