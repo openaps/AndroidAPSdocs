@@ -356,7 +356,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-An accurate profile is necessary to control the safe action of **AAPS**.
+準確的設定檔對於控制**AAPS**的安全操作是必要的。
 
 您必須與醫生討論並確定您的配置檔案，並透過成功的基礎率、ISF 和 IC 測試證明其有效！
 
