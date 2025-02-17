@@ -355,7 +355,9 @@ Bitte lies die Dokumentation zu den [Profilen](../SettingUpAaps/YourAapsProfile.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-Für den sicheren Betrieb von **AAPS** ist ein richtiges und präzises Profil Grundvoraussetzung. Das Profil soll mit Deinem Diabetes-Team besprochen und erstellt und sich durch einen Basalratentest, ISF- und IC-Faktortest bestätigt worden sein!
+An accurate profile is necessary to control the safe action of **AAPS**.
+
+It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
 
 Wenn ein Roboter eine falsche Eingabe bekommt, wird er versagen - immer wieder. **AAPS** kann nur mit den zur Verfügung gestellten Informationen arbeiten. Wenn Dein Profil zu stark ist, riskierst Du Hypoglykämien, und wenn es zu schwach ist, riskierst Du Hyperglykämien. 
 ```

@@ -354,9 +354,10 @@ Nightscout users should choose **NSClient v3**, unless you want to monitor or se
 在接下来的屏幕上输入您的配置文件详细信息之前，请先阅读有关 [配置文件](../SettingUpAaps/YourAapsProfile.md) 的文档。
 
 ```{admonition} Working profile required - no exceptions here !
-:class: 危险
-准确的配置文件对于控制 **AAPS** 的安全操作是必要的
-您必须与医生确定并讨论您的配置文件，并且确保基础率、ISF 和 IC已经验证无误。
+:class: danger
+An accurate profile is necessary to control the safe action of **AAPS**.
+
+It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
 
 如果机器人输入错误，它将始终无法正常工作。 **AAPS** 只能根据给定的信息工作。 如果您的配置方案太猛，您可能会面临低血糖的风险；而如果方案太柔，则可能会面临高血糖的风险。 
 ```

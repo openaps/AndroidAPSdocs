@@ -10,7 +10,7 @@ Bisher, mit **AMA** und **SMB**, wurde der **ISF** im **Profil** definiert und w
 
 **Automatisierungen** sollten immer mit besonderer Vorsicht eingesetzt werden. Das gilt insbesondere für den **dynamischen ISF**.
 
-Wenn Du den **dynamischen ISF** einsetzt, deaktiviere alle **Automatisierungsregeln, die eine temporäre **Profiländerung** vornehmen. Dadurch verhinderst Du, dass der **dynamische ISF** zu starke Korrekturboli abgibt, die zu einer Hypoglykämie führen könnten. This is the exact purpose of **Dynamic ISF** and so there is no need for **AAPS** to be told to provide additional insulin by way of Automation in the event of high **BGs**.
+Wenn Du den **dynamischen ISF** einsetzt, deaktiviere alle **Automatisierungsregeln, die eine temporäre **Profiländerung** vornehmen. Dadurch verhinderst Du, dass der **dynamische ISF** zu starke Korrekturboli abgibt, die zu einer Hypoglykämie führen könnten. Genau dafür ist der **dynamische ISF** gedacht und daher ist es auch nicht mehr nötig, **AAPS** bei hohen **Glukosewerten** durch Automatisierungen dazu zu bringen zusätzliches Insulin zur Korrektur abzugeben.
 
 ```
 
@@ -90,35 +90,35 @@ Bei Verwendung des **dynamischen ISF**, ist der dort verwendete **ISF** der Durc
 
 ### ISF im Bolus-Rechner
 
-When using the [Bolus wizard](#aaps-screens-bolus-wizard), **ISF** is used if **BG** is above target to add a correction.
+Im [Bolus-Rechner](#aaps-screens-bolus-wizard) wird der **ISF** genutzt, um bei einem hohen **Glukosewert**, (über dem Ziel), die Korrektur zu berechnen.
 
-When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dynamic ISF values.
+Bei aktiviertem **dynamischen ISF**, ist der hier genutzte **ISF** der Durchschnittswert der ISF-Werte der letzten 24 Stunden.
 
 (dyn-isf-preferences)=
 ## Einstellungen
 
-**Aktiviere dynamische Empfindlichkeit** in [Einstellungen > OpenAPS SMB](#Preferences-openaps-smb-settings). New settings become available once selected.
+**Aktiviere dynamische Empfindlichkeit** in [Einstellungen > OpenAPS SMB](#Preferences-openaps-smb-settings). Mit der Aktivierung werden neue Einstellungsoptionen verfügbar.
 
 ![Dynamic ISF settings](../images/Pref2020_DynISF.png)
 
 (dyn-isf-adjustment-factor)=
 ### Dynamischer ISF Anpassungsfaktor
-**Dynamic ISF** works based on a single rule which is supposed to apply to everyone, implying that people having the same **TDD** would have the same sensitivity. As each user has their own personal sensitivity, the **Adjustment Factor** allows the user to define whether they are more or less sensitive to insulin than the "standard" person.
+Der **dynamische ISF** geht von der Grundidee aus, dass Personen, die den gleichen **TDD** haben auch die gleiche Empfindlichkeit haben. Da die Empfindlichkeiten in der Realität aber tatsächlich verschieden sind, kann mit dem **Anpassungsfaktor** eine Anpassung an die eigene Situation vorgenommen werden. Der Faktor legt fest, ob Du empfindlicher oder weniger empfindlich auf Insulin reagierst, als es die „Standard"-Person tut.
 
-The **Adjustment Factor** is a value between 1% and 300%. This acts as a multiplier on the **TDD** value.
+Der **Anpassungsfaktor** kann zwischen 1% und 300% liegen. Er wirkt als Multiplikator für den **TDD**-Wert.
 
-* Increasing this value above 100 % makes **DynISF** more aggressive: the **ISF** values become *smaller* (_i.e._ more insulin required to decrease **BG** levels a small amount)
-* Lowering this value under 100% makes **DynISF** less aggressive: the **ISF** values become larger (_i.e._ less insulin required to decrease **BG** levels a small amount).
+* Eine Erhöhung des Wertes über 100% macht **DynISF** aggressiver: Die **ISF**-Werte werden *kleiner* (_d. h._ es wird mehr Insulin benötigt, um die **Glukosewerte** zu senken)
+* Eine Absenkung des Wertes unter 100% macht **DynISF** weniger aggressiv: Die **ISF**-Werte werden größer (_d. h. _ es wird weniger Insulin benötigt, um die **Glukosewerte** zu senken).
 
-The **Adjustment Factor** is also altered when activating a [**Profile Switch** with percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). A lower **Profile Percentage** will lower the **Adjustment Factor**, and vice versa in respect of higher **Profile Percentage**.
+Der **Anpassungsfaktor** wird auch bei der Aktivierung eines [**prozentualen Profilwechsels**](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) verändert. Ein niedrigerer **Profil-Prozentsatz** senkt den **Anpassungsfaktor** und ein höherer **Profil-Prozentsatz** hebt in.
 
-For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned , the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
+Wenn beispielsweise der **Anpassungsfaktor** 80% ist, und es wird ein **Profilwechsel** auf 80% ausgelöst, dann ist der dann entstehende **Anpassungsfaktor** `0,8*0,8=0,64`.
 
-This means that, when using **DynISF**, you can use **Profile Percentage** to temporarily fine tune your sensitivity manually. This can be useful for physical activity (lower percentage), illness (higher percentage), etc.
+Das bedeutet, dass Du bei aktiviertem **dynamischen ISF**, einen **prozentualen Profilwechsel** nutzen kannst, um Deine Empfindlichkeit manuell zu „finetunen“. Dies kann für körperliche Aktivität (niedrigerer Prozentwert), Krankheit (höherer Prozentwert), etc. sehr helfen.
 
 ### BG-Pegel, unterhalb dessen die Aussetzung wegen niedriger Glukoseaussetzung eintritt
 
-**BG** value below which insulin is suspended. Default value uses the standard target model. A user can set this value between 60mg/dl (3.3mmol/l) and 100mg/dl(5.5mmol/l). Values below 65/3.6 result in use of the default model.
+**Glukosewert**, unterhalb dessen die Insulinzufuhr ausgesetzt wird. Der Standardwert verwendet das Standard-Ziel-Modell. Du kannst den Wert zwischen 60 mg/dl (3,3 mmol/l) und 100 mg/dl (5,5 mmol/l) einstellen. Werte unterhalb von 65 bzw. 3,6 führen dazu, dass das Standard-Modell genutzt wird.
 
 ### Aktivieren des TDD-basierten Empfindlichkeitsverhältnises für Basal und Glukose-Zielwertanpassungen
 
@@ -127,11 +127,11 @@ Diese Einstellung ersetzt Autosens, und nutzt die letzten 24h **TDD**/7D **TDD**
 (dyn-isf-things-to-consider-when-activating-dynamicisf)=
 ## Dinge, die bei der Aktivierung des dynamischen ISF zu beachten sind
 
-* **Dynamischer ISF** wird nur erfahrenen Loopern, die sich gut mit der **AAPS**-Steuerungen und -Überwachung auskennen, empfohlen. Users should ideally have attained good control with **SMB** before moving onto **Dynamic ISF**.
-* As mentioned above, turn off all [**Automations**](../DailyLifeWithAaps/Automations.md) which activate a **Profile Percentage** in relation to **BG** because it will be too aggressive and may over deliver in insulin! This is already part of the **Dynamic ISF** algorithm.
-* [Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) is taken into account for the Dynamic ISF calculation (see [Dynamic ISF Adjustment Factor](#dyn-isf-adjustment-factor) above). It is bad practice to use a **Profile Percentage** other than 100% for a long time. If you determine that your **Profile** has changed, create a new **Profile** with your revised values in order to replicate the **Profile** with a specific percentage.
-* **Dynamic ISF** may not work for everyone. Specifically, you may see unexpected results if one of these situations apply to you:
-  * Variable lifestyle (inconsistent eating or physical activity patterns)
-  * Inconsistent TDD or sensitivity from day to day.
-* There is no precise guide to set the initial value of the **Adjustment Factor**. However, as a starting point: assuming your **Profile** values are correct, when you are in range and **BG** levels are flat, the **DynISF** value should be about the same as the one you had in your **Profile** before.<br/>If you see that **Dynamic ISF** is too aggressive, lower the **Adjustment Factor**, and vice-versa.
-* Even though **DynISF** does not use **Profile ISF** at all, if you notice that your sensitivity is very different from what was previously stored in your **Profile**, you should consider keeping it up-to-date. This may be useful in case you loose your **AAPS** data (_i.e._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
+* **Dynamischer ISF** wird nur erfahrenen Loopern, die sich gut mit der **AAPS**-Steuerungen und -Überwachung auskennen, empfohlen. Du hast idealerweise bereits mit **SMB** eine gute Glukosespiegel-Einstellung erreicht, bevor Du auf den **dynamischen ISF** umsteigst.
+* Wie oben schon erwähnt, schalte alle [**Automatisierungen**](../DailyLifeWithAaps/Automations.md), die ein **prozentuales Profil** in Abhängigkeit vom **Glukosewert** aktivieren, aus. Es kann sonst sein, dass zu aggressiv reagiert und zu viel Insulin abgegeben wird! Das ist schon im Algorithmus des **dynamischen ISF** berücksichtigt.
+* Ein [prozentuales Proflil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) wird bei der Berechnung des dynamischen ISF berücksichtigt (siehe [Dynamischer ISF Anpassungsfaktor](#dyn-isf-adjustment-factor) oben). Es ist schlecht ein **prozentuales Profil**, das nicht 100% entspricht, über einen längeren Zeitraum zu nutzen. Wenn Du erkennst, dass sich Dein **Profil** geändert hat, erstelle ein neues **Profil** mit Deinen überarbeiteten Werten, um das **Profil** mit dem entsprechenden Prozentwert nachzubilden.
+* **Dynamischer ISF** funktioniert möglicherweise nicht bei jedem. In den folgenden Situationen kann es ganz konkret sein, dass Du überraschende Ergebnisse erhältst:
+  * Variabler Lebensstil (unregelmäßiges Essen oder unregelmäßige körperliche Aktivitäten)
+  * Starke Unterschiede im Gesamtinsulinbedarf des Tages (TDD) oder hohe Schwankungen in der täglichen Insulin-Empfindlichkeit.
+* Es gibt keine genaue Anleitung, wie der Wert des **Anpassungsfaktors** erstmalig gesetzt werden sollte. Als Ausgangspunkt: Unter der Annahme, dass Deine **Profil**werte korrekt sind, Du im Zielbereich bist und der **Glukosewert**-Verlauf stabil ist, entspricht der **DynISF**-Wert ungefähr dem Wert, den Du vorher in Deinem **Profil** hattest.<br/>Wenn Du erkennst, dass der **dynamische ISF** zu aggressiv ist, senke den **Anpassungsfaktor** und umgekehrt.
+* Auch wenn **DynISF** nicht den **Profil-ISF** verwendet, solltest Du, sofern Du erkennst, dass sich Deine Empfindlichkeit stark von dem unterscheidet, was zuvor in Deinem **Profil** gespeichert wurde, Dein Profil mit den geänderten Werten aktualisieren und aktuell halten. Das kann dann zum Tragen kommen, wenn Du Deine **AAPS**-Daten verlierst (_z. B. _ neues Smartphone, neue **AAPS**-Version…), da der **Profil-ISF** als Fallback für 7 Tage verwendet wird.

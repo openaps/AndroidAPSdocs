@@ -164,7 +164,7 @@ git config --global user.email 你的email@xxx.com
 
 ![選擇下載JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. 在版本 (1) 中，選擇你的 **AAPS** 版本所需的 JDK（當你檢查需求表時做的註記）。 In Vendor (2) select any Vendor. 位置 (3)：請勿更改。
+4. 在版本 (1) 中，選擇你的 **AAPS** 版本所需的 JDK（當你檢查需求表時做的註記）。 在廠商（2）中選擇任何廠商。 位置 (3)：請勿更改。
 
 ![選擇JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 

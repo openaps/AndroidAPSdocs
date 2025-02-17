@@ -3,18 +3,18 @@
 
 Gehe durch Schritte der [Update-Anleitung](UpdateToNewVersion). Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
 
-You will receive the information as soon as a new update is available. If you do not update until expiration date **AAPS** will switch to Open Loop.
+Sobald ein neues Update zur Verfügung steht, wirst Du darüber informiert. Solltest Du bis zum Fälligkeitsdatum das Update nicht durchgeführt haben, wird **AAPS** in den „Open Loop“ wechseln.
 
 ![Update-Info](../images/AAPS_LoopDisable90days.png)
 
-Diese Eingabeaufforderung ist wichtig, und sollte nicht ignoriert werden. Sie ist nicht dazu gedacht Dich zu nerven. Neue **AAPS**-Versionen bieten nicht nur neue Funktionen, sondern beheben auch wichtige Sicherheitsprobleme. Therefore it is necessary that every **AAPS** user updates to the latest version a.s.a.p. Leider werden noch immer Fehler aus sehr alten Versionen gemeldet. Es entsteht ein sehr großer Aufwand darin, die Sicherheit für jeden **AAPS**-Benutzer und die DIY-Community zu verbessern. Vielen Dank für Dein Verständnis.
+Diese Eingabeaufforderung ist wichtig, und sollte nicht ignoriert werden. Sie ist nicht dazu gedacht Dich zu nerven. Neue **AAPS**-Versionen bieten nicht nur neue Funktionen, sondern beheben auch wichtige Sicherheitsprobleme. Daher ist es notwendig, dass jeder, der **AAPS** nutzt, so bald wie möglich auf die neueste Version aktualisiert. Leider werden noch immer Fehler aus sehr alten Versionen gemeldet. Es entsteht ein sehr großer Aufwand darin, die Sicherheit für jeden **AAPS**-Benutzer und die DIY-Community zu verbessern. Vielen Dank für Dein Verständnis.
 
 ```{admonition} First version of **AAPS**
 :class: note
 
 Die erste Testversion gab es bereits 2015. In 2016 wurde dann das erste Release veröffentlicht.
 
-The chronology of these releases is not available at the moment but as this question is asked several times we document it here.
+Da die Releasefolge und deren Veröffenlichungszeitpunkte immer wieder erfragt werden, haben wir diese hier - sofern verfügbar - zusammengetragen.
 
 ```
 ![AAPS 1.0](../images/update/AAPS1.0.png)
@@ -58,18 +58,18 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 (version3300)=
 ## Version 3.3.1.3
 
-Release date: 21-01-2025
+Erscheinungsdatum: 21.01.2025
 
 ### Behobene Fehler
 
-* Dash: bonding is optional (default off) @MilosKozak
-* Equil: fixed bolud 10+U, alarm improvements @EquilHack
-* Garmin: watch improvents @swissalpine
-* Watch improvements @olorinmaia
-* Control loop status from watch @tdrkDev
-* Stability improvements
+* Dash: Bonding ist optional (standardmäßig ausgeschaltet) @MilosKozak
+* Equil: Bolus 10+U Fehler behoben, Alarmverbesserungen @EquilHack
+* Garmin: Smartwatch-Verbesserungen @swissalpine
+* Smartwatch-Verbesserungen @olorinmaia
+* Loop-Status von der Smartwatch steuern @tdrkDev
+* Stabilitätsverbesserungen
 
-*  **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
+*  **[Authenticator muss möglicherweise neu eingerichtet werden](#sms-commands-authenticator-setup).**
 
 ## Version 3.3.1.2
 

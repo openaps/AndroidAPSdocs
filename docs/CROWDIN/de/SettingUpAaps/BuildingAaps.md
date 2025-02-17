@@ -222,7 +222,7 @@ Wir werden Android Studio nun sagen, wo es den Code herunterladen soll:
     ```
     und füge sie in das URL-Textfeld (3) ein.
 
-* Check the (default) directory for saving the cloned code does not already exist on your computer (4). You can change it to some directory, but please remember where you stored it!
+* Prüfe, ob das (Standard)-Verzeichnis zum Speichern des geklonten Codes nicht bereits auf Deinem Computer existiert (4). You can change it to some directory, but please remember where you stored it!
 * Klicke nun auf "Clone" (5).
 
 ```{admonition} INFORMATION
