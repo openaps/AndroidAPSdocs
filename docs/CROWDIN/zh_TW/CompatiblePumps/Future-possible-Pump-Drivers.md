@@ -14,7 +14,7 @@ orphan: true
 
 **Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
 
-**AAPS 硬體需求：**無。 It seems to be BT enabled.
+**AAPS 硬體需求：**無。 看起來已啟用藍牙 (BT)。
 
 ### Tandem: t:slim X2 ([官網](https://www.tandemdiabetes.com/))
 
@@ -22,7 +22,7 @@ orphan: true
 
 雖然該公司過去決定不允許外部設備控制其幫浦，但最近幾年形勢似乎發生了變化。 公司決定升級他們的 t:slim X2 幫浦，使其能夠透過 t:connect 應用程式進行遠端控制，這意味著我們可能有機會在未來透過 AAPS 控制幫浦。 計劃中的新幫浦韌體預計很快發布（今年或明年，在無管幫浦 t:sport 推出之前）。 目前還沒有具體的細節，尚不清楚 t:connect 能夠進行哪些操作（注射肯定可以，其他未知）。
 
-**AAPS 硬體需求：**無。 It seems to be BT enabled.
+**AAPS 硬體需求：**無。 看起來已啟用藍牙 (BT)。
 
 ### Tandem: t:Mobi、t:slim X3 和 t:Mobi 無管 ([官網](https://www.tandemdiabetes.com/about-us/pipeline))
 
@@ -30,13 +30,13 @@ orphan: true
 
 Awaiting release in Europe.
 
-**AAPS 硬體需求：**無。 It seems to be BT enabled.
+**AAPS 硬體需求：**無。 看起來已啟用藍牙 (BT)。
 
 ### Willcare 胰島素幫浦 ([官網](http://shinmyungmedi.com/en/))
 
 **閉環狀態：** 目前尚未是閉環候選者，但他們的員工已與我們聯繫，表示有興趣將幫浦擴展為可閉環（目前我認為他只缺少設定/取得設定檔的指令）。
 
-**AAPS 硬體需求：**無。 It seems to be BT enabled.
+**AAPS 硬體需求：**無。 看起來已啟用藍牙 (BT)。
 
 **評論：**由於公司對與 AAPS 整合感興趣，他們可能會自行實施該功能。
 
