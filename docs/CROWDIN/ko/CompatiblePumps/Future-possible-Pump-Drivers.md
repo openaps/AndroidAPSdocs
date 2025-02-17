@@ -10,27 +10,11 @@ orphan: true
 
 ## Pumps that are Loopable
 
-### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
-
-**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
-
-**Hardware requirement for AAPS:** None. It's BT enabled.
-
-**Comments:** Dose version of pump had very heavy encryption added, so there is big probababilty that this pump won't be supported by AAPS in near future (or ever). We had developer working with Ypsomed and helping with medical trials, so maybe his version of driver will be alowed to be released, but this is just small possibility of that. You can find more information on our discord in channel "ypsopump-talk".
-
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
-
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
-
-### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
-
-**Loop status:** Is a Loop candidate.
+**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-**Comments:** There are some developers looking into decoding the protocol, but so far this is only in preliminary phases.
 
 ### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
 
@@ -44,7 +28,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 **Loop status:** All 3 pumps will be Loop candidates.
 
-They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).
+Awaiting release in Europe.
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
@@ -58,27 +42,29 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 ## Pumps no longer sold (companies no longer operating)
 
-### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
-
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
-
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
-
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
-
-## Pumps that aren't Loopable
-
 ### Animas Vibe
-
-**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
 
 ### Animas Ping
 
-**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
+### Cellnovo
+
+### Accu-Chek Insight
+
+**Comments:** End of support March 2025.
+
+## Pumps that aren't Loopable
 
 ### Medtronic Bluetooth
 
 **Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+
+### Accu-Chek Solo
+
+**Comments:** No community success in communicating with the Solo pump.
+
+### Ypsomed Pump
+
+**Comments:** Ypso added very heavy 3rd party encryption.
 
 ## Requirements for pumps being loopable
 
