@@ -358,7 +358,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 :class: danger
 An accurate profile is necessary to control the safe action of **AAPS**.
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+您必須與醫生討論並確定您的配置檔案，並透過成功的基礎率、ISF 和 IC 測試證明其有效！
 
 如果一個機器人有錯誤的輸入，它將不斷失敗。 **AAPS** 只能使用所提供的訊息。 如果你的個人設定過強，則可能會面臨低血糖風險；如果過弱，則可能會面臨高血糖風險。 
 ```
