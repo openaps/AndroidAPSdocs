@@ -204,7 +204,7 @@ The Android studio version is very important. See the [instructions above](#Buil
 
 在Android Studio的欢迎屏幕上，检查左侧是否已高亮显示“**项目**”(1)。
 
-然后点击右侧的“**从版本控制系统获取**”(2)：
+Then click "**Clone Repository**" (2) on the right:
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
