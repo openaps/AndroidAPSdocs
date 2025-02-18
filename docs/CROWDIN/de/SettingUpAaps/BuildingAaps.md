@@ -206,7 +206,7 @@ Android Studio wird dann mit **Gradle** (einem Entwicklungswerkzeug für Android
 
 Überprüfe auf dem Begrüßungsbildschirm von Android Studio, ob „**Projects**“ (1) auf der linken Seite hervorgehoben ist.
 
-Klicke dann auf „**Get from VCS**“ (2) auf der rechten Seite:
+Then click "**Clone Repository**" (2) on the right:
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
