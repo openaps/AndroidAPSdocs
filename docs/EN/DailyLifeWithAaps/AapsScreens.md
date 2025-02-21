@@ -345,7 +345,7 @@ It is a good combination to display this line along with the Deviation bars. The
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
-Buttons for Insulin, Carbs and Calculator are almost always visible. If the connection to the pump is lost, the insulin button will not be visible.
+Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
 
 Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-buttons).
 
