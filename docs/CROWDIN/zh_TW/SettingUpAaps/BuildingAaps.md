@@ -206,7 +206,7 @@ Android Studio 版本非常重要。 請參閱 [上面的指示](#Building-APK-r
 
 在Android Studio的歡迎畫面上，檢查左側的“**專案**” (1)是否高亮顯示。
 
-Then click "**Clone Repository**" (2) on the right:
+點一下右側的"**Clone Repository**" (2)
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
