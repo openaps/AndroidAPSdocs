@@ -366,7 +366,7 @@ This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartw
 
 ![主界面按钮](../images/Home2020_Buttons.png)
 
-胰岛素、碳水和计算器按钮几乎总是可见。 如果与泵的连接丢失，胰岛素按钮将不可见。
+Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
 
 其他按钮可以在[偏好设置>概览>按钮](#Preferences-buttons)中设置。
 
