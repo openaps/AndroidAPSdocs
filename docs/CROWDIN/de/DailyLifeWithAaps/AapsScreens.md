@@ -366,7 +366,7 @@ Es ergibt eine gute Kombination diese Linie zusammen mit den Balken für Abweich
 
 ![Buttons für den Homescreen](../images/Home2020_Buttons.png)
 
-Die Schaltflächen für Insulin, Kohlenhydrate und Bolus-Rechner sind fast immer sichtbar. Wenn die Verbindung zur Pumpe unterbrochen ist, ist die Schaltfläche „Insulin“ nicht sichtbar.
+Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
 
 Andere Schaltflächen können unter [Einstellungen > Übersicht > Schaltflächen](#Preferences-buttons) eingerichtet werden.
 
