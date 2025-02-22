@@ -366,7 +366,7 @@ Libre 使用者的特殊注意事項：
 
 ![主畫面按鈕](../images/Home2020_Buttons.png)
 
-胰島素、碳水化合物和計算機的按鈕幾乎總是可見的。 如果與幫浦的連線中斷，胰島素按鈕將不會顯示。
+Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
 
 其他按鈕可以在 [偏好設定 > 首頁總覽 > 按鈕](#Preferences-buttons) 中設定。
 
