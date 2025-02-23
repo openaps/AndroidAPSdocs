@@ -1,8 +1,8 @@
 # Comment utiliser le plugin Autotune (dev uniquement)
 
-La documentation sur l'algorythme Autotune peut être trouvée dans [la documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
+Documentation about Autotune algorithm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
-Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans AAPS.
+Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
 **Actuellement, le plugin Autotune n'est disponible que dans la [branche dev](../AdvancedOptions/DevBranch.md) et avec le mode Ingénierie.**
 
@@ -18,7 +18,7 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
   - Remarque : chaque fois que vous changez le paramètre Nb jours, les résultats précédents seront supprimés
 - Dernier run affiche la date du dernier calcul et permet d'afficher votre dernier calcul valide. Si vous n'avez pas lancé Autotune le jour en cours, ou si les résultats précédents ont été supprimés avec une modification du paramètre de calcul ci-dessus, vous pouvez alors récupérer les paramètres et les résultats de la dernière exécution réussie.
 - L'avertissement vous montre par exemple des informations sur le profil sélectionné (si vous avez plusieurs valeurs G/I ou plusieurs valeurs SI)
-  - Remarque : Le calcul Autotune fonctionne avec une seule valeur de G/I et une seule valeur de SI. Il n'existe actuellement aucun algorythme Autotune pour ajuster un G/I circadien ou une SI circadienne. Si votre profil d'entrée a plusieurs valeurs, vous pouvez voir dans la section Avertissement la valeur moyenne prise en compte pour calculer votre profil.
+  - Remarque : Le calcul Autotune fonctionne avec une seule valeur de G/I et une seule valeur de SI. There is currently no existing Autotune algorithm to tune a circadian IC or circadian ISF. Si votre profil d'entrée a plusieurs valeurs, vous pouvez voir dans la section Avertissement la valeur moyenne prise en compte pour calculer votre profil.
 - Le bouton Vérifiez Profil d'entrée permet d'ouvrir la Visionneuse de Profil pour vous permettre de faire une vérification rapide de votre profil (unités, DAI, G/I, SI, basal et cible)
   - Remarque : Autotune ne réglera que le G/I (valeur unique), la SI (valeur unique) et les débits de basal (avec variation circadienne). Les unités, la DAI et les cibles resteront inchangées dans le profil de sortie.
 
@@ -178,7 +178,7 @@ Always use Autotune several days manually to check results before applying them.
 
 Il est également important d'analyser les résultats d'Autotune pour comprendre (ou essayer de comprendre) pourquoi Autotune propose ces modifications
 
-- vous pouvez avoir une augmentation ou une diminution de la globalité du profil (par exemple une augmentation du débit de basal total associé à la diminution des valeurs de la SI et du G/I). il pourrait être associé à plusieurs jours successifs avec correction autosens supérieure à 100% (plus d'agressivité requise) ou inférieure à 100% (vous êtes plus sensible)
+- vous pouvez avoir une augmentation ou une diminution de la globalité du profil (par exemple une augmentation du débit de basal total associé à la diminution des valeurs de la SI et du G/I). it could be associated to several following days with autosens correction above 100% (more aggressivity required) or below 100% (you are more sensitive)
 - Parfois, Autotune propose un équilibre différent entre les taux de basal et la SI et G/I (ex basal inférieur et SI / G/I plus agressifs)
 
 Nous recommandons de ne pas utiliser Autotune dans les cas suivants :
