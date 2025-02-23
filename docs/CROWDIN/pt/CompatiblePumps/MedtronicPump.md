@@ -22,14 +22,14 @@ You can find out how to check the firmware on the pumps at [OpenAPS docs](https:
 ## Requisitos de hardware e software
 
 - **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary. For example, some phones will handle enabling/disabling Bluetooth differently. This can impact the user experience when AAPS needs to reconnect to your Rileylink type device.**
-- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a seperate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection. The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.
+- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a separate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection. The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.
     
     - Rileylink available at [getrileylink.org](https://getrileylink.org/product/rileylink916)
     - Orangelink available at [getrileylink.org](https://getrileylink.org/product/orangelink)
     - Emalink (multiple model options) available at [github.com](https://github.com/sks01/EmaLink)
     - Gnarl (some additional DIY required) details available at [github.com](https://github.com/ecc1/gnarl)
 
-A comparision chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+A comparison chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
 (MedtronicPump-configuration-of-the-pump)=
 
@@ -52,13 +52,13 @@ The following settings should be configured on the pump in order for AAPS to rem
 1. Using the setup wizard as part of a fresh install
 2. By selecting the cog icon beside the Medtronic selection in the pump selection option in Config Builder
 
-When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot succesfully connect to the pump). Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
+When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot successfully connect to the pump). Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
 
 ![Medtronic Settings](../images/Medtronic01a.png)
 
 While setting up AAPS to work with your medtronic pump you need to set following items: (see picture above)
 
-- **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alpabetic characters (e.g. 123456).
+- **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
 - **Pump Type**: The model pump you are using (e.g. 522). 
 - **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](#faq) if you are unsure which option to select): 
     - for US & Canada, frequency used is 916 Mhz
@@ -79,7 +79,7 @@ While setting up AAPS to work with your medtronic pump you need to set following
 - **RileyLink Configuration**: This option allows you to find and pair your Rileylink compatible device. Selecting this will show any nearby Rileylink compatible devices and the signal strength.
 - **Use Scanning** Activates Bluetooth scanning before connecting with your Rileylink Compatible devices. This should improve the reliability of your connection to the device.
 - **Show battery level reported by OrangeLink/EmaLink/DiaLink** This feature is only supported on newer link devices such as the EmaLink or OrangeLink. Values will be shown in the Medtronic tab in AnroidAPS. 
-- **Set neutral temp basals** By default Medtronic pumps beep on the hour when a temporary basal rate is active. Enabling this option can help reduce the number of beeps heard by interupting a temporary basal at the hour change in order to supress the beep.
+- **Set neutral temp basals** By default Medtronic pumps beep on the hour when a temporary basal rate is active. Enabling this option can help reduce the number of beeps heard by interrupting a temporary basal at the hour change in order to suppress the beep.
 
 ## Separador MEDTRONIC (MDT)
 
@@ -89,8 +89,8 @@ While setting up AAPS to work with your medtronic pump you need to set following
 - **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Dependent on selecting "Show battery level reported by OrangeLink/EmaLink/DiaLink device" in the Medtronic Pump Configuration menu.
 - **Pump Status**: The current status of the pump connection. As the pump will not be constantly connected this will primarily show the sleep icon. There are a number of possible other status including "Waking Up" when AAPS is trying to issue a command or other possible pump commands such as "Get Time", "Set TBR", etc.
 - **Battery**: Shows battery status based on the value chosen for Battery Type (Power View) in the Medtronic Pump Configuration menu. 
-- **Last connection**: How long ago the last succesful pump connection happened.
-- **Last Bolus**: How long ago the last succesful bolus was delivered.
+- **Last connection**: How long ago the last successful pump connection happened.
+- **Last Bolus**: How long ago the last successful bolus was delivered.
 - **Base Basal Rate**: This is the base basal rate that runs on pump at this hour in your active Profile.
 - **Temp basal**: Temp basal currently being delivered which can be 0 units per hour.
 - **Reservoir**: How much insulin is in reservoir (updated at least every hour).
@@ -108,7 +108,7 @@ At the bottom of the screen there are three buttons:
 
 ![Pump History Dialog](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AAPS and will not inlcude a configuration function that has no relevance.
+Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. The allows for a convenient way to see pump behaviour should that be required. The only items stored are those relevenant to AAPS and will not include a configuration function that has no relevance.
 
 (MedtronicPump-rl-status-rileylink-status)=
 
@@ -125,7 +125,7 @@ The RL Status dialog has two tabs:
 
 When the Medtronic driver is used, two additional actions are added to Actions Tab:
 
-- **Wake and Tune Up** - In the event that AAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. This will try to contact your pump, by searching all of the possible radio frequencies used by your pump. In the event a succesful connection is made the succesful frequency will be set as the default.
+- **Wake and Tune Up** - In the event that AAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. This will try to contact your pump, by searching all of the possible radio frequencies used by your pump. In the event a successful connection is made the successful frequency will be set as the default.
 - **Reset RileyLink Config** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
 
 ## Notas importantes
@@ -140,7 +140,7 @@ OpenAPS users should note that AAPS with Medtronic uses a completely different a
 
 ### Logging
 
-In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintainance and Log Settings. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
+In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintenance and Log Settings. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
 
 ### Medtronic CGM
 
@@ -158,9 +158,9 @@ Travelling east means you are going to be adding hours to the current time (ex. 
 
 The issues seen when travelling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
 
-### Is a GNARL a fully compatible Rileylink combatible device?
+### Is a GNARL a fully compatible Rileylink compatible device?
 
-The GNARL code fully supports all of the functions used by the Medtronic driver in AAPS which means it is fully compatible. It is important to note that this will require addtional work as you will have to source compatible hardware and then load the GNARL code on to the device.
+The GNARL code fully supports all of the functions used by the Medtronic driver in AAPS which means it is fully compatible. It is important to note that this will require additional work as you will have to source compatible hardware and then load the GNARL code on to the device.
 
 **Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
