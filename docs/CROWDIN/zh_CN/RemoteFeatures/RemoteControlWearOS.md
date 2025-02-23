@@ -93,7 +93,7 @@ Wear OS 5的更改锁定了表盘：仅可使用小工具。
 
 * **大号数字**（默认`关`）：增大文本大小以提高可见性。
 * **环形历史**（默认`关`）：以绿色环内的灰色环图形显示血糖历史。
-* **浅色环形历史**（默认`开`）：环形历史更不显眼，使用更深的灰色。
+* **Light Ring History** (default `On`): Ring history more discrete with a darker gray
 * **动画**（默认`开`）：启用时，在受支持的手表且不在省电低分辨率模式下，表盘圆形将动画显示。
 
 ### 命令设置
@@ -236,7 +236,7 @@ Tiles的内容可以通过长按tile并点击“编辑”或“齿轮图标”�
 
 Android Wear OS智能手表的长电池寿命是一个挑战。 一些智能手表在充电前可使用长达30小时。 为优化电源节省，在不使用时应关闭显示屏。 大多数手表支持“常亮”显示。
 
-自AAPS版本3起，我们可以在常亮模式下使用“简化用户界面（Simplify UI）”。 该界面仅包含血糖值、趋势方向和时间。 此用户界面经过功耗优化，更新频率较低，显示的信息更少，点亮的像素也更少，以在OLED显示屏上节省电量。
+自AAPS版本3起，我们可以在常亮模式下使用“简化用户界面（Simplify UI）”。 该界面仅包含血糖值、趋势方向和时间。 This UI is power-optimized with less frequent updates, showing less information and lighting up fewer pixels to save power on OLED displays.
 
 简化用户界面模式适用于以下表盘：AAPS、AAPS V2、Home Big, Digital Style, Steampunk, and Cockpit.。 简化用户界面是可选的，可通过表盘设置进行配置。 （长按表盘并点击“编辑”或齿轮图标）选择“简化用户界面”配置，并将其设置为“始终开启”或“充电时始终开启”。
 
