@@ -2,7 +2,7 @@
 
 # Gevoeligheids detectie (Autosens)
 
-## Gevoeligheids-algoritme
+## Sensitivity algorithm
 
 Currently we have 3 sensitivity detection models:
 
