@@ -283,7 +283,7 @@ To open settings for additional graphs click the triangle on the right side of t
 To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
 
 Most users find the following configuration of additional graphs to be adequate :
-* Graph 1 with IOB, COB, Sensitivity chnge
+* Graph 1 with IOB, COB, Sensitivity change
 * Graph 2 with Deviations and BGI.
 
 #### Absolute insulin

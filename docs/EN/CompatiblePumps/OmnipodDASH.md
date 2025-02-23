@@ -416,7 +416,7 @@ Pods fail occasionally due to a variety of issues, including hardware issues wit
 
 ### Preventing error 49 pod failures
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a build-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod.
+This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a built-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod.
 The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
 
 ### Pump Unreachable Alerts
@@ -451,7 +451,7 @@ When importing settings with an active Pod, make sure the export was done with t
 1. Importing any recent export should work (see above)
 2. Import your settings.
 3. Check all preferences.
-4. You may need to **Deactivate** the "non exixting" pod if the imported settings included any active pod data. 
+4. You may need to **Deactivate** the "non existing" pod if the imported settings included any active pod data. 
 
 ### Importing settings that contain Pod state from an inactive Pod
 
