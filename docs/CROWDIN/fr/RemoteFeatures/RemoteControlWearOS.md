@@ -93,7 +93,7 @@ L'étoile remplie est pour l'état activé (**On**), et l'étoile vide indique q
 
 * **Gros chiffres** (par défaut `Off`) : Augmenter la taille du texte pour améliorer la visibilité
 * **Historique** (par défaut `Off`) : Afficher graphiquement l'historique des Gly avec des cercles gris à l'intérieur de l'anneau vert de l'heure
-* **Historique Léger** (par défaut `On`) : cercles plus discrets avec un gris foncé
+* **Light Ring History** (default `On`): Ring history more discrete with a darker gray
 * **Animations** (par défaut `On`) : Si activé, sur les montres supportée et hors mode économie d'énergie basse résolution, le cercle du cadran est animé
 
 ### Paramètres des commandes
@@ -236,7 +236,7 @@ La tuile Assistant rapide peut contenir 1 à 4 boutons d'action de l'assistant, 
 
 Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
 
-Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lightening fewer pixels to save power on OLED displays.
+Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lighting up fewer pixels to save power on OLED displays.
 
 The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “Always on” or “Always on and charging”.
 
