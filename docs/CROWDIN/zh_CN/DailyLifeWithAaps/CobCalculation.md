@@ -46,7 +46,7 @@
 
 ### AAPS如何检测错误的COB值
 
-通常，__AAPS__通过**BG</0>偏差来检测碳水化合物的吸收情况。 如果用户输入了碳水化合物，但**AAPS**无法通过**BG**偏差检测到其估计的吸收情况，它将使用[min_5m_carbimpact](#Preferences-min_5m_carbimpact)方法（即“备选方案”）来计算吸收量。 由于这种方法只计算最小碳水化合物吸收量，而不考虑**BG**偏差，因此可能会导致错误的COB值。</p>
+通常，__AAPS__通过**BG</0>偏差来检测碳水化合物的吸收情况。 In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). 由于这种方法只计算最小碳水化合物吸收量，而不考虑**BG**偏差，因此可能会导致错误的COB值。</p>
 
 ![关于错误的碳水化合物吸收量（COB）值的提示](../images/Calculator_SlowCarbAbsorption.png)
 
