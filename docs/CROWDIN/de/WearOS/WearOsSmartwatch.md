@@ -134,7 +134,7 @@ Tippe side "plug-in" socket in der App, um die WearOS.apk auf Dein Smartwatch ho
 
 #### Allgemeine Empfehlungen zur Fehlerbehebung bei Wear OS 5
 
-- WLAN Tethering nicht verwenden. Das funktioniert nicht.
+- WLAN Tethering nicht verwenden. That won't work.
 - ADB-Debugging muss nicht auf dem Smartphone aktiviert werden (nur auf der Smartwatch). Deaktiviere das ADB Debugging auf dem Smartphone.
 - Achte darauf, dass Du Dich mit Deinem lokalen Netzwerk verbindest, in dem sich das Smartphone und die Smartwatch gegenseitig „sehen“ können (verwende nicht Dein WLAN-Gästenetzwerk).
 - Für die Galaxy Watch 7 musst Du den Wear Installer verwenden, da dieser Dir die Möglichkeit gibt das „AAPS(Custom)“-Zifferblatt bei der Installation auszuwählen.
