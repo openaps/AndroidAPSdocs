@@ -298,7 +298,7 @@ Your phone may be suspending AAPS services or even Bluetooth causing it to loose
 
 ### Where can I delete treatments in AAPS v3 ?
 
-3 dots menu, select treatements, then 3 dots menu again and you have different options available.
+3 dots menu, select treatments, then 3 dots menu again and you have different options available.
 
 ### Configuring and Using the AAPSClient remote app
 
