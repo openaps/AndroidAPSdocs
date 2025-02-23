@@ -130,7 +130,7 @@ Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessair
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](#pairing-pump).
+* Start pairing procedure as described [above](#pairing-pump).
 * Il est parfois nécessaire d'effacer les informations d'appairage dans AAPS en faisant un clic long sur l'icône BT dans l'onglet Dana-i/RS.
 
 ## Voyager avec différents fuseaux horaires avec la pompe DanaR
