@@ -253,7 +253,7 @@ Nightscout users should choose **NSClient v3**, unless you want to monitor or se
 
 ![image](../images/setup-wizard/Screenshot_20231202_141310.png)
 
-现在，请将开关保持禁用状态。 我们之所以走到这一步，只是为了让您熟悉您将来可能会配置的一些可能选项。 目前没有必要进行这些配置。
+现在，请将开关保持禁用状态。 We only walked to the screen to make you familiar with possible options you might configure in the future. 目前没有必要进行这些配置。
 
 返回之前的屏幕并选择“连接设置”。
 
@@ -261,7 +261,7 @@ Nightscout users should choose **NSClient v3**, unless you want to monitor or se
 
 看护人必须启用“使用手机流量（use cellular connection）”，否则被看护人的智能手机（例如，孩子的手机）无法在 WiFi 范围外（_例如_，在上学的路上）上传数据。
 
-其他 **AAPS** 用户可以禁用通过手机流量的传输以节省流量或电池电量。
+Other **AAPS** users can disable the transfer via cellular connection if they want to save data or battery.
 
 如果有疑问，请将所有选项保持启用状态。
 
@@ -275,7 +275,7 @@ Nightscout users should choose **NSClient v3**, unless you want to monitor or se
 
 启用“从错误中创建公告”和“从所需碳水化合物警报中创建公告”。
 
-将“减慢上传速度”保持禁用状态。 您只有在特殊情况下才会使用它，例如，当有大量信息需要传输到Nightscout服务器，而Nightscout服务器处理这些数据时速度较慢时。
+将“减慢上传速度”保持禁用状态。 You would only use it in unusual circumstances if for example a lot of information is to be transferred to the Nightscout server, and the Nightscout server is being slow in processing this data.
 
 返回两次，在插件列表中选择“下一步”以转到下一个屏幕：
 
@@ -411,7 +411,7 @@ It's required that you have determined and discussed your profile with your doct
 ![image](../images/setup-wizard/Screenshot_20231202_143724.png)
 
 
-保存后，会出现一个新的按钮“激活配置文件”。
+After saving, a new button "Activate Profile" appears.
 
 ```{admonition} Several defined but only one active profile
 :class: 信息
@@ -479,7 +479,7 @@ It's required that you have determined and discussed your profile with your doct
 
 ## APS algorithm
 
-使用OpenAPS SMB算法作为您的APS算法。 尽管名称中包含SMB，但在您熟悉AAPS并完成第一个目标之前，SMB功能是被禁用的。 与OpenAPS AMA相比，OpenAPS SMB是较新的版本，通常也更好。
+使用OpenAPS SMB算法作为您的APS算法。 Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. 与OpenAPS AMA相比，OpenAPS SMB是较新的版本，通常也更好。
 
 在开始阶段禁用SMB功能的原因是，SMB功能通过超级微型大剂量来更快地应对血糖升高，而不是增加基础率百分比。 在开始时，您的配置通常不如经过一段时间的使用后那么好，因此一开始禁用了此功能。
 
