@@ -64,7 +64,7 @@ Release date: 21-01-2025
 
 * Dash: bonding is optional (default off) @MilosKozak
 * Equil: fixed bolud 10+U, alarm improvements @EquilHack
-* Garmin: watch improvents @swissalpine
+* Garmin: watch improvements @swissalpine
 * Watch improvements @olorinmaia
 * Control loop status from watch @tdrkDev
 * Stability improvements
@@ -217,8 +217,8 @@ Release date: 23-10-2023
 ### Conseils importants
 
 - NS 15 is required
-- Lors de l'utilisation de websockets dans le plugin NS v3, les traitements entrés par l'interface utilisateur NS (bouton plus) et d'autres applications utilisant l'API v1 ne sont pas envoyées à AAPS. Cela sera corrigé dans la prochaine version de NS. Toujours utiliser le même client (v1 ou v3) dans AAPS et AAPSClient jusqu'à ce que NS passe entièrement à v3 en interne. Il en va de même pour AAPS et AAPSClient.
-- Les Websockets avec le plugin v3 fonctionnent de manière similiaire au plugin v1. Sans websockets activés,  AAPS télécharge régulièrement à partir de NS, ce qui devrait réduire la consommation d'énergie parce que NS n'est pas connecté de façon permanente. D'un autre côté, cela signifie des retards dans l'échange de données. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
+- Lors de l'utilisation de websockets dans le plugin NS v3, les traitements entrés par l'interface utilisateur NS (bouton plus) et d'autres applications utilisant l'API v1 ne sont pas envoyées à AAPS. Cela sera corrigé dans la prochaine version de NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internally. Il en va de même pour AAPS et AAPSClient.
+- Websockets in v3 plugin work in a similar manner as v1 plugin. Sans websockets activés,  AAPS télécharge régulièrement à partir de NS, ce qui devrait réduire la consommation d'énergie parce que NS n'est pas connecté de façon permanente. On the opposite side it means delays in exchanging data. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
 - Si vous utilisez xdrip comme source MGC, vous devez le sélectionner à nouveau après la mise à jour en raison de changements internes
 - Tidepool peut être utilisé à la place de NS pour passer le premier objectif
 - Si vous envoyez à xDrip+, vous devez configurer le plugin de synchronisation xDrip. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
@@ -254,7 +254,7 @@ Release date: 23-10-2023
 - Change in BolusWizard. Si la MGC n'est pas disponible, le pourcentage est ignoré (100% est utilisé)
 - migration to kts build system @MilosKozak
 - improved CI integration @MilosKozak @buessow
-- tests cleaup @ryanhaining @MilosKozak
+- tests cleanup @ryanhaining @MilosKozak
 - new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
@@ -277,11 +277,11 @@ LIMITATIONS
 - NS 15 must be used with AAPS 3.2
 - v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
 - in opposite because of old uneffective method of tracking changes v1 see changes done by v3
-- remember NS still uses v1 internaly so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
+- remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
 
 RECOMMENDED SETTING
 - because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
-- v3 is preffered because of efficiency
+- v3 is preferred because of efficiency
 - using websockets or not using with v3 depends on your preference
 - it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
 
@@ -433,7 +433,7 @@ Date de sortie : 12-01-2021
 - correction pour SMB & appli. Dexcom
 - Correctif Cadran wear
 - rapport de plantage amélioré
-- gradle restauré pour permettre l'installation directe des cadrans de montres
+- gradle reverted to allow direct watchface installation
 - corrections de l'automatisation
 - amélioration du driver RS
 - divers plantages corrigés
@@ -459,10 +459,10 @@ Date de sortie : 01-01-2021
 - New watchface @rICTx-T1D
 - Améliorations de la connexion Dana RS @MilosKozak
 - Suppression de "Valeurs MGC inchangées" pour les SMB pour l'application native Dexcom
-- New [Low Ressolution Skin](#Preferences-skin)
+- New [Low Resolution Skin](#Preferences-skin)
 - New ["Pregnant" patient type](#Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
 - Nouvelle présentation tablette de NSClient @MilosKozak
-- NSClient transfert des paramètres insuline, sensibilité et les paramètres d'affichage directement à partir de l'écran principal AAPS @MilosKozak
+- NSClient transfer insulin, sensitivity and display settings directly from main AAPS @MilosKozak
 - [Preferences filter](../SettingUpAaps/Preferences.md) @Brian Quinion
 - Nouvelles icônes de pompe @Rig22 @teleriddler @osodebailar
 - New [insulin type Lyumjev](#Config-Builder-lyumjev)
@@ -592,7 +592,7 @@ Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une ve
   - Les profils peuvent être dupliqués et modifiés
   - Possibilité de télécharger les profils vers NS
   - Les anciens changements de profil peuvent être dupliqués veres un nouveau profil local (décalage horaire et pourcentage appliqués)
-  - Sélecteur pour les cibles temps
+  - Vertical NumberPicker for targets
 
 - Le Profil Simple est supprimé
 
@@ -724,7 +724,7 @@ Date de sortie : 03-03-2019
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
 - Voyants d'état sur l'écran principal (Nico Schmitz)
 - Aide sur les changements d'heure (Roumen Georgiev)
-- Correctif des nom de profil venant de NS (Johannes Mockenhaupt)
+- Fix processing profile names coming from NS (Johannes Mockenhaupt)
 - Correctifs Interface utilisateur (Johannes Mockenhaupt)
 - Support de la mise à jour G5 (Tebbe Ubben et Milos Kozak)
 - Support des sources de GLY G6, Poctech, Tomato, Eversense (Tebbe Ubben et Milos Kozak)
