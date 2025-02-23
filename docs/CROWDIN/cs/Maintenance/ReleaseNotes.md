@@ -64,7 +64,7 @@ Release date: 21-01-2025
 
 * Dash: bonding is optional (default off) @MilosKozak
 * Equil: fixed bolud 10+U, alarm improvements @EquilHack
-* Garmin: watch improvents @swissalpine
+* Garmin: watch improvements @swissalpine
 * Watch improvements @olorinmaia
 * Control loop status from watch @tdrkDev
 * Stability improvements
@@ -217,8 +217,8 @@ Release date: 23-10-2023
 ### Důležitá poznámky
 
 - Je vyžadován NS verze 15
-- Při používání websocketů v Nighscout pluginu v3, ošetření zadaná prostřednictvím NS (tlačítko +) a dalšími aplikacemi využívajícími API v. 1 nejsou do AAPS odeslána. To bude opraveno v některé následující verzi NS. Dokud NS vnitřně plně nepřejde na verzi 3, musíte vždy používat AAPS a AAPSClient pod stejnou verzí protokolu (v1 nebo v3). To samé platí i pro AAPS a samotný AAPSClient.
-- Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
+- Při používání websocketů v Nighscout pluginu v3, ošetření zadaná prostřednictvím NS (tlačítko +) a dalšími aplikacemi využívajícími API v. 1 nejsou do AAPS odeslána. To bude opraveno v některé následující verzi NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internally. To samé platí i pro AAPS a samotný AAPSClient.
+- Websockets in v3 plugin work in a similar manner as v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the opposite side it means delays in exchanging data. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
 - If you are using xdrip as cgm source you must select it again after update due to internal changes
 - Tidepool can be used as a replacement of NS to pass first objective
 - If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
@@ -254,7 +254,7 @@ Release date: 23-10-2023
 - Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
 - migration to kts build system @MilosKozak
 - improved CI integration @MilosKozak @buessow
-- tests cleaup @ryanhaining @MilosKozak
+- tests cleanup @ryanhaining @MilosKozak
 - new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
@@ -277,11 +277,11 @@ LIMITATIONS
 - NS 15 must be used with AAPS 3.2
 - v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
 - in opposite because of old uneffective method of tracking changes v1 see changes done by v3
-- remember NS still uses v1 internaly so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
+- remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
 
 RECOMMENDED SETTING
 - because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
-- v3 is preffered because of efficiency
+- v3 is preferred because of efficiency
 - using websockets or not using with v3 depends on your preference
 - it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
 
@@ -433,7 +433,7 @@ Release date: 12-01-2021
 - fix for SMB & Dexcom app
 - watchface fixes
 - crash reporting improved
-- gradle reverted to allow direct watchface instalation
+- gradle reverted to allow direct watchface installation
 - automation fixes
 - RS driver improvement
 - various crashes fixed
@@ -459,10 +459,10 @@ Datum vydání: 01. 01. 2021
 - New watchface @rICTx-T1D
 - Vylepšení připojení Dana RS @MilosKozak
 - Odstraněno chování "Nezměněné hodnoty CGM" v SMB pro nativní aplikaci Dexcom
-- New [Low Ressolution Skin](#Preferences-skin)
+- New [Low Resolution Skin](#Preferences-skin)
 - New ["Pregnant" patient type](#Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
 - Nové rozložení NSClient pro tablety @MilosKozak
-- NSClient přenáší nastavení inzulinu, senzitivity a zobrazení přímo z hlavní AAPS @MilosKozak
+- NSClient transfer insulin, sensitivity and display settings directly from main AAPS @MilosKozak
 - [Preferences filter](../SettingUpAaps/Preferences.md) @Brian Quinion
 - Nové ikony <mailto:pumpy@Rig22> @@teleriddler @osodebailar
 - New [insulin type Lyumjev](#Config-Builder-lyumjev)
@@ -592,7 +592,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
   - Profily lze kopírovat a upravovat
   - Možnost nahrát profily do NS
   - Stará přepnutí profilu lze kopírovat do nového profilu v Místním profilu (včetně posunu času a procentuální změny)
-  - Vertikální výběr hodnot pro cíle
+  - Vertical NumberPicker for targets
 
 - Odstraněn Jednoduchý profil
 
@@ -724,7 +724,7 @@ Podpora Accu-Chek <0>Insight</0> (od Tebbe Ubben a JamOrHam)
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
 - Stavové indikátory na obrazovce přehledu (Nico Schmitz)
 - Pomoc při přechodu na letní čas (Roumen Georgiev)
-- Oprava zpracování názvů profilů z NS (Johannes Mockenhaupt)
+- Fix processing profile names coming from NS (Johannes Mockenhaupt)
 - Oprava blokování UI (Johannes Mockenhaupt)
 - Podpora aktualizované upravené aplikace pro G5 (Tebbe Ubben a Milos Kozak)
 - Podpora zdrojů glykémie G6, Poctech, Tomato, Eversense (Tebbe Ubben a Milos Kozak)
