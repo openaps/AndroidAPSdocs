@@ -303,7 +303,7 @@ Libre 使用者的特殊注意事項：
 
 大多數使用者發現以下附加圖表配置足夠：
 
-* 圖表 1 顯示 IOB、COB、敏感度變化
+* Graph 1 with IOB, COB, Sensitivity change
 * 圖表 2 包含偏差和 BGI。
 
 #### 絕對胰島素(Absolute insulin)
