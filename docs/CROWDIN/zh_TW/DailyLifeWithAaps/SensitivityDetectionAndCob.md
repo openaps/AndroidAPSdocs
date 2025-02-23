@@ -2,7 +2,7 @@
 
 # 敏感度偵測
 
-## 敏感度算法
+## Sensitivity algorithm
 
 目前我們有三種敏感度偵測模型：
 
