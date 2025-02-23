@@ -56,7 +56,7 @@ On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phon
 
 ![image](../images/remote-control-08.png)
 
-### Date and time synching
+### Date and time syncing
 
 Η ώρα και στα δύο τηλέφωνα πρέπει να είναι συγχρονισμένη. Η καλύτερη λύση είναι να ορίζεται αυτόματα από το διαδίκτυο. Οι διαφορές ώρας μπορεί να οδηγήσουν σε προβλήματα επαλήθευσης ταυτότητας.
 
