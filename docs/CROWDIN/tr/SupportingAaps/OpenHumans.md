@@ -27,7 +27,7 @@ Nightscout URL'niz veya API secret şifreniz gibi gizli veya özel bilgileriniz 
 1. Henüz yapmadıysanız, hesabınızı [Open Humans](https://www.openhumans.org) üzerinde oluşturun. Dilerseniz mevcut Google veya Facebook hesaplarınızı yeniden kullanabilirsiniz.
 2. Enable the “Open Humans” plugin in [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
 3. Dişli çark düğmesini kullanarak ayarını açın. Yüklemeyi telefonun Wi-Fi kullandığı ve/veya şarj olduğu zamanlara sınırlayabilirsiniz.
-4. Open Humans eklentisini açın (OH sekmesinden veya hamburger menüsünden) ve 'GİRİŞ'e tıklayın.
+4. Open the Open Humans Plugin (either through OH tab or hamburger menu) and click 'LOGIN'.
 
 ![Open Humans Config Builder](../images/OHUploader1.png)
 
