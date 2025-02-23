@@ -28,7 +28,7 @@
 
 一個重要的安全考量是，對於長期血糖升高的人來說，**HbA1c 的快速降低和血糖控制的改善可能會導致永久性損害**。 許多糖尿病患者並不知道這一點，而且並非所有臨床醫生都會提醒患者這個問題。
 
-這種損害可能包括**視力喪失和永久性神經病變（疼痛）**。 透過逐步降低平均血糖數值，可以避免這些損害的發生。 如果你目前的 HbA1c 升高並打算使用**AAPS**（或任何其他閉環系統），_請_在開始之前與你的醫療團隊討論這一潛在風險，並與他們協商逐步降低安全血糖目標的時間表。 你可以在**AAPS**中設置較高的血糖目標（目前，你可以選擇的最高目標是 10.6 mmol/L，你也可以維持一個相對較弱的設定），隨著時間的推移逐漸降低目標。
+這種損害可能包括**視力喪失和永久性神經病變（疼痛）**。 It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. 如果你目前的 HbA1c 升高並打算使用**AAPS**（或任何其他閉環系統），_請_在開始之前與你的醫療團隊討論這一潛在風險，並與他們協商逐步降低安全血糖目標的時間表。 你可以在**AAPS**中設置較高的血糖目標（目前，你可以選擇的最高目標是 10.6 mmol/L，你也可以維持一個相對較弱的設定），隨著時間的推移逐漸降低目標。
 
 #### 我可以多快降低 HbA1c 而不會冒永久性損害的風險？
 
@@ -122,7 +122,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 #### [臨床醫師專區](../UsefulLinks/ClinicianGuideToAaps.md)
 
-這是一個[專為臨床醫師設立的專區](../UsefulLinks/ClinicianGuideToAaps.md)，希望了解更多關於 AAPS 及開源人工胰臟技術。 在簡介中還提供了[如何與你的臨床團隊討論 AAPS](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)的指南。
+This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. 在簡介中還提供了[如何與你的臨床團隊討論 AAPS](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)的指南。
 
 ## 我們要建置和安裝什麼？
 
@@ -219,7 +219,8 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 ```{admonition} delaying Samsung phones updates
 :class: warning
-三星有迫使更新其手機的糟糕紀錄，這會導致藍牙連線問題。 要停用這些強制更新，你需要將手機切換到“開發者模式”，具體步驟如下：進入設置並點擊“關於”，然後點擊軟體資訊，連續點擊版本號直到確認你已解鎖開發者模式。 返回設置主選單，你應該會看到一個新的“開發者選項”選單項。 打開開發者選項並向下滾動以找到自動系統更新並關閉他
+三星有迫使更新其手機的糟糕紀錄，這會導致藍牙連線問題。 To disable these forced updates you need to switch the phone to "developer mode" by:
+ go to settings and about then software information, then tap build number u til it confirms you have unlocked developer mode. 返回設置主選單，你應該會看到一個新的“開發者選項”選單項。 打開開發者選項並向下滾動以找到自動系統更新並關閉他
 ```
 
 ```{admonition} Google Play Protect potential Issue
