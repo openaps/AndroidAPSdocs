@@ -1,7 +1,7 @@
 (Sensitivity-detection-and-COB-sensitivity-detection)=
 # Sensitivity detection
 
-## Sensitvity algorithm
+## Sensitivity algorithm
 Currently we have 3 sensitivity detection models:
 
 * Sensitivity AAPS

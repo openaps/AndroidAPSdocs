@@ -76,7 +76,7 @@ If you bolus with the calculator please don't use COB and IOB unless you made su
 
 ### Accu-Chek Combo
 
-**NOTE**: As mentioned above, this secton is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
+**NOTE**: As mentioned above, this section is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
 
 AAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
 
