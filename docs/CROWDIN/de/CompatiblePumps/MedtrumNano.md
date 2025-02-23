@@ -94,7 +94,7 @@ Hinweis: Im Stumm-Modus gibt AAPS je nach Lautstärkeeinstellungen Deines Smartp
 
 ***Voreingestellt: Aktiviert.***
 
-Diese Einstellungen ändern die Art und Weise, wie AAPS Benachrichtigung bei nicht kritischen Pumpenwarnungen anzeigt. Wenn die Option aktiviert ist, wird beim Auftreten einer Pumpenwarnung eine Benachrichtigung auf dem Smartphone angezeigt. Das betrifft auch:
+This settings changes the way AAPS will show notification on non critical pump warnings. Wenn die Option aktiviert ist, wird beim Auftreten einer Pumpenwarnung eine Benachrichtigung auf dem Smartphone angezeigt. Das betrifft auch:
     - Niedriger Akkustand
     - Reservoir fast leer (20 IE)
     - Patch-Ablaufwarnung
@@ -248,7 +248,7 @@ Um einen aktuell aktiven Patch zu deaktivieren, gehe zum [Medtrum-Reiter](#overv
 
 ![Patch deaktivieren](../images/medtrum/activation/DeactivatePatch.png)
 
-Du wirst gebeten zu bestätigen, dass Du den aktuellen Patch deaktivieren möchtest. **Bitte beachte, dass diese Aktion nicht rückgängig gemacht werden kann.** Wenn die Deaktivierung abgeschlossen ist, kannst Du auf **Weiter** tippen, um einen neuen Patch zu aktivieren. Wenn Du nicht bereit bist, einen neuen Patch zu aktivieren, tippe auf **Abbrechen**, um zum Hauptbildschirm zurückzukehren.
+Du wirst gebeten zu bestätigen, dass Du den aktuellen Patch deaktivieren möchtest. **Please note that this action is not reversible.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. Wenn Du nicht bereit bist, einen neuen Patch zu aktivieren, tippe auf **Abbrechen**, um zum Hauptbildschirm zurückzukehren.
 
 ![Deaktivierungs-Fortschritt](../images/medtrum/activation/DeactivateProgress.png)
 
