@@ -119,7 +119,7 @@ Alternatively, but not for Wear OS 5, you can:
 
 #### General troubleshooting recommendations for Wear OS 5
 
-- Do not use Wi-Fi Tethering. That wont work.
+- Do not use Wi-Fi Tethering. That won't work.
 - You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
 - Make sure you are connecting to your local network where phone and watch can see each other (do not use your Wi-Fi guest network to connect).
 - For GW7 you need to install using Wear Installer as it gives you the option to select the AAPS(Custom) watchface on installation.
