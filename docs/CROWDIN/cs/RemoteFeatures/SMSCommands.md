@@ -56,7 +56,7 @@ On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phon
 
 ![image](../images/remote-control-08.png)
 
-### Date and time synching
+### Date and time syncing
 
 Na obou telefonech musí být synchronizovaný čas. Nejlepší způsob je synchronizovat čas automaticky prostřednictvím sítě. Časové rozdíly mohou vést k problémům s ověřováním.
 
