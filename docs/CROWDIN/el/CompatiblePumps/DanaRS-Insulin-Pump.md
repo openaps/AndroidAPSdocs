@@ -130,7 +130,7 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](#pairing-pump).
+* Start pairing procedure as described [above](#pairing-pump).
 * Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
 
 ## Ταξιδεύοντας σε διαφορετικές ζώνες ώρας με την Dana Rs
