@@ -254,7 +254,7 @@ If you have stored profiles on Nightscout and want to download them to **AAPS**,
 
 ![изображение](../images/setup-wizard/Screenshot_20231202_141310.png)
 
-Пока что оставьте переключатели неактивными. Мы зашли на этот экран только чтобы показать параметры, которые можно настроить в будущем. В настоящий момент такой необходимости нет.
+Пока что оставьте переключатели неактивными. We only walked to the screen to make you familiar with possible options you might configure in the future. В настоящий момент такой необходимости нет.
 
 Вернитесь на предыдущий экран и выберите "Параметры подключения".
 
@@ -262,7 +262,7 @@ If you have stored profiles on Nightscout and want to download them to **AAPS**,
 
 Caregivers must enable "use cellular connection" as otherwise the smartphone which serves the dependant/child can not upload data outside of WiFi range _e.g._ on the way to school.
 
-Other **AAPS** users can disable the tranfer via cellular connection if they want to save data or battery.
+Other **AAPS** users can disable the transfer via cellular connection if they want to save data or battery.
 
 Если сомневаетесь, просто оставьте все включенным.
 
@@ -276,7 +276,7 @@ It might be interesting to see if **AAPS** is correctly configured now, but late
 
 Включите "Создавать оповещение на основе названия ошибки" и "Создавать оповещения из напоминаний о необходимых углеводах".
 
-Оставьте "Замедлить выгрузку" невключенным. Эта функция может пригодиться только в необычных обстоятельствах, если, например, на сервер Nightscout необходимо передать много информации, а Nightscout медленно обрабатывает данные.
+Оставьте "Замедлить выгрузку" невключенным. You would only use it in unusual circumstances if for example a lot of information is to be transferred to the Nightscout server, and the Nightscout server is being slow in processing this data.
 
 Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
@@ -412,7 +412,7 @@ For open looping this target can be a wider range, as otherwise **AAPS** notifie
 ![изображение](../images/setup-wizard/Screenshot_20231202_143724.png)
 
 
-После сохранения профиля появляется новая кнопка "Активировать профиль".
+After saving, a new button "Activate Profile" appears.
 
 ```{admonition} Several defined but only one active profile
 :class: информация
@@ -480,7 +480,7 @@ Please read the documentation for your [insulin pump](../Getting-Started/Compati
 
 ## APS algorithm
 
-Примените алгоритм OpenAPS SMB. Несмотря на название, функция алгоритма микроболюсов SMB отключена до полного знакомства с AAPS и прохождения первых целей. В любом случае алгоритм OpenAPS SMB новее и лучше по сравнению с OpenAPS AMA.
+Примените алгоритм OpenAPS SMB. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. В любом случае алгоритм OpenAPS SMB новее и лучше по сравнению с OpenAPS AMA.
 
 Причина, по которой SMB отключён в начале, заключается в том, что функция SMB позволяет быстрее реагировать на увеличение сахара в крови через супермикроболюсы, а не повышать базальную скорость. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
 
