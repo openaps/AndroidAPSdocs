@@ -28,7 +28,7 @@ Attention à l'amélioration rapide du contrôle de la glycémie et à la réduc
 
 Il est très important de prendre en considération qu'une **baisse rapide de l'HbA1c et un meilleur contrôle de la glycémie chez ceux qui ont eu des taux de glucose élevés pendant un certain temps peuvent causer des dommages permanents**. De nombreuses personnes atteintes de diabète n'ont pas connaissance de ça, et tous les professionnels de santé ne parlent pas de ce problème à leurs patients.
 
-Parmi ces atteintes, on trouve la **perte de vue et neuropathie permanente (douleur)**. Il est possible d'éviter que ces atteintes ne se produisent en faisant baisser plus lentement les niveaux de glycémie moyens. Si vous avez actuellement un taux élevé d'HbA1c et que vous passez à **AAPS**(ou n'importe quel autre système en boucle fermée), _veuillez discuter_ de ce risque potentiel avec votre équipe médicale avant de commencer, et convenez d'un plan de mise en place avec elle. Vous pouvez simplement commencer avec une cible de glycémie élevée dans **AAPS** (actuellement, la cible la plus élevée que vous pouvez sélectionner est de 200md/dL (ou 10,6 mmol/L), mais vous pouvez également utiliser un profil délibérément faible si nécessaire), puis réduire la cible au fur et à mesure des mois qui passent.
+Parmi ces atteintes, on trouve la **perte de vue et neuropathie permanente (douleur)**. It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. Si vous avez actuellement un taux élevé d'HbA1c et que vous passez à **AAPS**(ou n'importe quel autre système en boucle fermée), _veuillez discuter_ de ce risque potentiel avec votre équipe médicale avant de commencer, et convenez d'un plan de mise en place avec elle. Vous pouvez simplement commencer avec une cible de glycémie élevée dans **AAPS** (actuellement, la cible la plus élevée que vous pouvez sélectionner est de 200md/dL (ou 10,6 mmol/L), mais vous pouvez également utiliser un profil délibérément faible si nécessaire), puis réduire la cible au fur et à mesure des mois qui passent.
 
 #### À quelle vitesse puis-je réduire mon HbA1c sans risquer des dommages permanents ?
 
@@ -122,7 +122,7 @@ Cette section a pour but de fournir aux nouveaux utilisateurs des liens vers des
 
 #### [Pour les professionnels de santé](../UsefulLinks/ClinicianGuideToAaps.md)
 
-This is a [section specificially for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
 
 ## Que va-t-on compiler et installer?
 
@@ -219,8 +219,8 @@ Les utilisateurs sont encouragés à faire les mises à jour de version Android 
 
 ```{admonition} delaying Samsung phones updates
 :class: warning
-Samsung est malheureusement connu pour forcer les mises à jour sur leurs téléphones, ce qui cause des problèmes de connectivité bluetooth. Pour désactiver ces mises à jour forcées, vous devez passer le téléphone en "mode développeur" en :
- accédant aux paramètres, puis "à propos", puis en tapant sur "Numéro de version" jusqu'à ce qu'il confirme que vous avez déverrouillé le mode développeur. Retournez au menu principal des paramètres, ici ou dans "Système", vous trouverez un nouvel élément de menu "Options pour les développeurs". Ouvrez ce menu et faites défiler jusqu'à trouver l'option de mise à jour automatique du système et désactivez-la
+Samsung est malheureusement connu pour forcer les mises à jour sur leurs téléphones, ce qui cause des problèmes de connectivité bluetooth. To disable these forced updates you need to switch the phone to "developer mode" by:
+ go to settings and about then software information, then tap build number u til it confirms you have unlocked developer mode. Retournez au menu principal des paramètres, ici ou dans "Système", vous trouverez un nouvel élément de menu "Options pour les développeurs". Ouvrez ce menu et faites défiler jusqu'à trouver l'option de mise à jour automatique du système et désactivez-la
 ```
 
 ```{admonition} Google Play Protect potential Issue
