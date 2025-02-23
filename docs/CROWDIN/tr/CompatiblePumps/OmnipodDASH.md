@@ -410,7 +410,7 @@ Pod'larda, kendisiyle ilgili donanım sorunları da dahil olmak üzere çeşitli
 
 ### 49 numaralı Pod hatasını önleme
 
-Bu hata bir komut için yanlış bir pod durumu veya bir insülin iletim komutu sırasındaki bir hata ile ilgilidir. Bu, sürücü ve Pod'un gerçek durum üzerinde anlaşamadığı zaman meydana gelir. Pod (yerleşik bir güvenlik önlemi dışında), daha sonra kurtarılamaz bir 49 (0x31) hata koduyla tepki verir ve sonunda "çığlık atan" olarak bilinen bir hatayla sonuçlanır: yalnızca pod'un arkasındaki uygun yerde bir delik açılarak durdurulabilen uzun rahatsız edici bir bip sesi. "49 pod arızasının" kesin kök nedenini izlemek çoğu zaman zordur. Bu hatanın meydana gelmesinde şüphelenilen durumlar, örneğin uygulama çökmeleri, bir geliştirme sürümünün çalıştırılması veya yeniden kurulumdur.
+Bu hata bir komut için yanlış bir pod durumu veya bir insülin iletim komutu sırasındaki bir hata ile ilgilidir. Bu, sürücü ve Pod'un gerçek durum üzerinde anlaşamadığı zaman meydana gelir. The Pod (out of a built-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. "49 pod arızasının" kesin kök nedenini izlemek çoğu zaman zordur. Bu hatanın meydana gelmesinde şüphelenilen durumlar, örneğin uygulama çökmeleri, bir geliştirme sürümünün çalıştırılması veya yeniden kurulumdur.
 
 ### Pompaya Ulaşılamıyor Uyarıları
 
@@ -443,7 +443,7 @@ When importing settings with an active Pod, make sure the export was done with t
 1. Yakın zamanda dışa aktarılan bir dosyanın içe aktarılması işe yarayacaktır (yukarıya bakın)
 2. Ayarlarınızı içe aktarın.
 3. Tüm tercihleri kontrol edin.
-4. İçe aktarma ayarları herhangi bir etkin pod verisi içeriyorsa, "mevcut olmayan" pod'u **devre dışı bırakmanız** gerekebilir.
+4. You may need to **Deactivate** the "non existing" pod if the imported settings included any active pod data.
 
 ### Etkin olmayan bir pod durumunu içeren ayarları içe aktarma
 
