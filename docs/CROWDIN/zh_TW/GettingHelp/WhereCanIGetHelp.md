@@ -16,7 +16,7 @@
 
 加入主要的[AndroidAPS Facebook群組](https://www.facebook.com/groups/1900195340201874/)和/或[AndroidAPS在Discord上](https://discord.gg/4fQUWHZ4Mw)。 你可以在這裡提問有關算法的問題、關於 Android Studio 設置和建置 APK 的問題、以及有關應用使用的任何疑問，還有如何充分利用他的提示。 對於 Combo 幫浦使用者，還有一個[AAPSCombo](https://www.facebook.com/groups/127507891261169/)群組，這有著稍微更具體的設置。
 
-請注意，Facebook最近已經移除了在AAPS Facebook群組中共享的外部連結，包括目前和歷史的帖子，這些帖子包含指向AAPS說明文件/閱讀文件的外部連結。 對於正在完成目標並檢視歷史AAPS Facebook帖子的新人，請搜索在AAPS說明中討論的關鍵詞以獲取進一步幫助。
+請注意，Facebook最近已經移除了在AAPS Facebook群組中共享的外部連結，包括目前和歷史的帖子，這些帖子包含指向AAPS說明文件/閱讀文件的外部連結。 For new users who are working through the Objectives and reviewing historic AAPS Facebook posts please search key terms as discussed within the AAPS notes for further assistance.
 
 ## 其他英文資源
 
