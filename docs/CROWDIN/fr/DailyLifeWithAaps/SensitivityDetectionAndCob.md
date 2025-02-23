@@ -2,7 +2,7 @@
 
 # Estimation de Sensibilité
 
-## Algorithme de sensibilité
+## Sensitivity algorithm
 
 Actuellement, nous avons 3 modèles de détection de sensibilité:
 
