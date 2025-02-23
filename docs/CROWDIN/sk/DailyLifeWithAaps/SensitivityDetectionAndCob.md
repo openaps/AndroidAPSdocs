@@ -2,7 +2,7 @@
 
 # Sensitivity detection
 
-## Sensitvity algorithm
+## Sensitivity algorithm
 
 Currently we have 3 sensitivity detection models:
 
