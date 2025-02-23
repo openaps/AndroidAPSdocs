@@ -303,7 +303,7 @@ To configure additional graphs, check the boxes corresponding to the data you wa
 
 大多数用户发现以下附加图表配置足够：
 
-* Graph 1 with IOB, COB, Sensitivity chnge
+* Graph 1 with IOB, COB, Sensitivity change
 * 图2：偏差和BGI。
 
 #### 胰岛素绝对值
