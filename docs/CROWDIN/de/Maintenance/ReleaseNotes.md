@@ -64,7 +64,7 @@ Erscheinungsdatum: 21.01.2025
 
 * Dash: Bonding ist optional (standardmäßig ausgeschaltet) @MilosKozak
 * Equil: Bolus 10+U Fehler behoben, Alarmverbesserungen @EquilHack
-* Garmin: Smartwatch-Verbesserungen @swissalpine
+* Garmin: watch improvements @swissalpine
 * Smartwatch-Verbesserungen @olorinmaia
 * Loop-Status von der Smartwatch steuern @tdrkDev
 * Stabilitätsverbesserungen
@@ -217,8 +217,8 @@ Erscheinungsdatum: 23.10.2023
 ### Wichtige Hinweise
 
 - Nightscout Version 15 ist zwingend erforderlich
-- Wenn Websockets in NS v3 genutzt werden, werden Behandlungen, die über die NS Oberfläche (Plus-Button) oder andere Anwendungen, die die V1 API nutzen, eingegeben werden, nicht an AAPS gesendet. Dies wird in einer der kommenden NS-Versionen behoben werden. Verwende immer den gleichen Client (v1 oder v3) in AAPS und AAPSClient, bis NS intern auf v3 umgestellt ist. Das Gleiche gilt für AAPS und den AAPSClient selbst.
-- Websockets funktionieren im v3 Plugin ähnlich zum v1 Plugin. Mit deaktivierten Websockets plant AAPS regelmäßige NS-Downloads ein. Da NS damit dann nicht mehr permanent verbunden ist, wird so der Stromverbrauch reduziert. Das bedeutet allerdings auch, dass Daten seltener ausgetauscht werden (Datenaktualität). Bitte lies [diese](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) wichtigen Kommentare des Entwicklerteams, bevor Du es nutzt!
+- Wenn Websockets in NS v3 genutzt werden, werden Behandlungen, die über die NS Oberfläche (Plus-Button) oder andere Anwendungen, die die V1 API nutzen, eingegeben werden, nicht an AAPS gesendet. Dies wird in einer der kommenden NS-Versionen behoben werden. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internally. Das Gleiche gilt für AAPS und den AAPSClient selbst.
+- Websockets in v3 plugin work in a similar manner as v1 plugin. Mit deaktivierten Websockets plant AAPS regelmäßige NS-Downloads ein. Da NS damit dann nicht mehr permanent verbunden ist, wird so der Stromverbrauch reduziert. On the opposite side it means delays in exchanging data. Bitte lies [diese](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) wichtigen Kommentare des Entwicklerteams, bevor Du es nutzt!
 - Wenn xDrip als BZ-Quelle genutzt wird, muss diese nach dem Update noch einmal neu eingestellt werden (bedingt durch interne Anpassungen).
 - Um das erste Objective (Ziel) zu erreichen, kann anstelle von Nightscout nun auch Tidepool genutzt werden.
 - Wenn Daten an xDrip+ gesendet werden sollen, muss xDrip- Synchronisierungs-Plugin konfiguriert werden. Um Glukosewerte von AAPS in xDrip zu erhalten, muss "xDrip+ Sync Follower" als Quelle ausgewählt sein
@@ -254,7 +254,7 @@ Erscheinungsdatum: 23.10.2023
 - Änderung im Bolus-Rechner: Wenn CGM-Daten fehlen, wird der Prozentsatz ignoriert (d.h. 100% wird genutzt)
 - Umstellung auf das KTS Build System @MilosKozak
 - Verbesserung der CI-Integration @MilosKozak @buessow
-- Bereinigung der Tests @ryanhaining @MilosKozak
+- tests cleanup @ryanhaining @MilosKozak
 - Mehr als 110.000 neue Codezeilen, 240.000 Zeilen geändert, 6.884 Dateien angepasst
 
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
@@ -277,11 +277,11 @@ EINSCHRÄNKUNGEN
 - NS 15 muss mit AAPS 3.2 verwendet werden
 - V3 erkennt keine Updates, die durch das V1 Protokoll vorgenommen wurden. Das wird vermutlich in einer der kommenden Nightscout-Versionen behoben sein
 - Im umgekehrten Fall erkennt V1, durch die wenig effiziente Art Änderungen nachzuverfolgen, Änderungen, die durch V3 vorgenommen wurden
-- Bitte habe im Kopf, dass Nighscout intern immer noch V1 nutzt, und es deswegen nicht möglich ist Daten über die Nightscout-Weboberfläche einzugeben, sofern Du V3 verwendest. Um die Daten remote einzugeben, musst Du SMS über den AAPSClient nutzen
+- remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. Um die Daten remote einzugeben, musst Du SMS über den AAPSClient nutzen
 
 EMPFOHLENE EINSTELLUNGEN
 - Aus den oben beschriebenen Gründen solltest Du auf allen Deinen Geräten die gleiche Methode verwenden (Hinweis: zum Redaktionsschluss nutzen alle Uploader derzeit noch V1). Wenn Du Dich für V3 entscheidest, wähle in AAPS und allen AAPSClients V3
-- Aus Effizienzgründen wird V3 bevorzugt
+- v3 is preferred because of efficiency
 - Der Einsatz von Websockets mit V3 oder nicht ist Geschmackssache
 - Es wird DRINGEND empfohlen AAPS die Daten sammeln zu lassen und dann zentral als einziger Uploader an Nightscout übertragen lassen. Alle anderen Geräte und Anwendungen sollten Daten von Nightscout lediglich auslesen. Dadurch vermeidest Du Synchronisierungsfehler und -konflikte. Dies gilt auch für die Übermittlung der Glukosewerte an Nightscout mit dem Dexcom Share Connector o. ä. Tools
 
@@ -433,7 +433,7 @@ Erscheinungsdatum: 12.01.2021
 - Fehlerbehebung für SMB & Dexcom App
 - Watchface Korrekturen
 - Verbesserte Crash-Reports
-- Gradle zurückgesetzt, um direkte Installation des Watchfaces zu ermöglichen
+- gradle reverted to allow direct watchface installation
 - Fehlerbehebung bei Automatisierungen
 - Verbesserung Dana RS Treiber
 - Verschiedene Absturzursachen behoben
@@ -459,10 +459,10 @@ Erscheinungsdatum: 01.01.2021
 - Neues Watchface @rICTx-T1D
 - Verbesserung der Verbindung zur Dana RS @MilosKozak
 - Verhalten "Unveränderte CGM Werte" für SMB für Dexcom-nativer App entfernt
-- Neue [niedrig auflösende Oberfläche](#Preferences-skin)
+- New [Low Resolution Skin](#Preferences-skin)
 - Neuer Patiententyp [„Schwangere“](#Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
 - Neues NSClient-Layout für Tablets @MilosKozak
-- NSClient überträgt Insulin, Senstivität und Anzeige-Einstellungen direkt von AAPS @MilosKozak
+- NSClient transfer insulin, sensitivity and display settings directly from main AAPS @MilosKozak
 - [Filter für Einstellungen](../SettingUpAaps/Preferences.md) @Brian Quinion
 - Neue Pumpensymbole @Rig22 @@teleriddler @osodebailar
 - Neuer [Insulintyp Lyumjev](#Config-Builder-lyumjev)
@@ -592,7 +592,7 @@ Nutze bitte [Android Studio 3.6.1](https://developer.android.com/studio/) oder n
   - Profile können geklont und bearbeitet werden.
   - Lokale Profile können zu Nightscout hochgeladen werden.
   - Profilwechsel können in ein neues lokales Profil geklont werden (Zeitverschiebung und Prozentsatz werden berücksichtigt).
-  - Neue Eingabemöglichkeit für Zielwerte
+  - Vertical NumberPicker for targets
 
 - Einfaches Profil wurde entfernt.
 
@@ -724,7 +724,7 @@ Erscheinungsdatum: 03.03.2019
 - Unterstützung für [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (von Tebbe Ubben und JamOrHam)
 - Statusanzeige auf dem Hauptbildschirm (Nico Schmitz)
 - Assistent für die Zeitumstellung (Sommer-/Winterzeit - Roumen Georgiev)
-- Korrektur der Verarbeitung von Profilnamen, die von Nightscout übertragen werden (Johannes Mockenhaupt)
+- Fix processing profile names coming from NS (Johannes Mockenhaupt)
 - Sperre des User Interface behoben (Johannes Mockenhaupt)
 - Unterstützung für die aktualisierte G5-App (Tebbe Ubben und Milos Kozak)
 - G6, Poctech, Tomato, Eversense als BZ-Quelle (Tebbe Ubben und Milos Kozak)
