@@ -16,7 +16,7 @@ Für Unterstützung zu CGM-Quellen nutze bitte die Facebook-Gruppen oder Discord
 
 Trete der [AndroidAPS Facebook-Gruppe](https://www.facebook.com/groups/1900195340201874/) und/oder [AndroidAPS auf Discord](https://discord.gg/4fQUWHZ4Mw) bei. Du kannst dort alle Fragen zum Algorithmus stellen, alle Setup-Probleme posten, die du mit Android Studio und der Erstellung der APK hast, alle Fragen zur Verwendung der App anbringen und auch Tipps bekommen, wie du die App optimal nutzen kannst. Es gibt auch eine Gruppe für die Combo Insulinpumpe [AAPSCombo](https://www.facebook.com/groups/127507891261169/), die ein etwas spezifischeres Setup hat.
 
-Bitte beachte, dass Facebook kürzlich innerhalb der AAPS Facebook-Gruppe geteilte externe Links entfernt hat. Dies betrifft sowohl aktuelle als auch ältere Beiträge mit externen Links zu den AAPS-Notizen bzw. zur AAPS Dokumentation („read the docs“). Als Neuling, der sich gerade durch die Ziele arbeitet und auf der Suche nach Hilfe historische AAPS Facebook-Beiträge prüfen möchte, suche mit den Suchbegriffen wie sie in den AAPS-Notizen diskutiert werden.
+Bitte beachte, dass Facebook kürzlich innerhalb der AAPS Facebook-Gruppe geteilte externe Links entfernt hat. Dies betrifft sowohl aktuelle als auch ältere Beiträge mit externen Links zu den AAPS-Notizen bzw. zur AAPS Dokumentation („read the docs“). For new users who are working through the Objectives and reviewing historic AAPS Facebook posts please search key terms as discussed within the AAPS notes for further assistance.
 
 ## Weitere Informationsquellen in englischer Sprache
 
