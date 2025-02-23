@@ -80,7 +80,7 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 ### Accu-Chek Combo
 
-**注意**：如上所述，本節僅適用於舊的基於 Ruffy 的驅動程式。 新的驅動程式會自動調整日期和時間以及 DST。
+**NOTE**: As mentioned above, this section is only valid for the old, Ruffy-based driver. 新的驅動程式會自動調整日期和時間以及 DST。
 
 如果幫浦與手機的時間相差太大，AAPS 會發出警報。 在 DST 時間調整的情況下，這通常會發生在夜間。 為了避免這種情況，並讓你可以安穩睡覺，請遵循以下步驟，以便你能夠在方便的時間強制更改時間：
 
