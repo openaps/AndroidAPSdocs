@@ -38,7 +38,7 @@ Nous utilisons markdown pour les pages de documentation. Le fichier a obtenu le 
 
 ![Éditer la branche](../images/PR3.png)
 
-4. Vous avez travaillé dans l'onglet "<>Edit file". Sélectionnez l'onglet "Preview changes" pour afficher une prévisualisation de votre page et vérifier que tous vos changements sont comme vous le vouliez. Si vous voyez que c'est perfectible, revenez à l'onglet d'édition pour faire vos améliorations. 
+4. Vous avez travaillé dans l'onglet "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typos sic.). Si vous voyez que c'est perfectible, revenez à l'onglet d'édition pour faire vos améliorations. 
 
 ![mode de prévisualisation](../images/PR5.png)
 
@@ -62,7 +62,7 @@ PS : Votre fork et votre branche seront toujours dans votre propre compte GitHub
 
 We are using markdown for the documentation pages. Les fichiers ont le suffixe « .md ».
 
-Markdown est un langage de formatage de texte très simple qui sépare le contenu du texte du format.
+Markdown is a very simple text formatting language which separates text content from text formatting.
 
 The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
 
@@ -176,9 +176,9 @@ Les liens internes vers les pages sont des liens vers le début d'un fichier md 
 
 - lien interne vers une page .md : `[texte alternatif](../folder/file.md)`
 
-#### Liens internes vers une ligne spécifique d'un fichier
+#### Internal links to named inline references
 
-Les liens internes vers une ligne spécifique sont des liens vers n'importe quel point dans un fichier md qui est hébergé sur notre propre serveur et où une référence a été définie pour être liée.
+Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
 
 Ajouter une référence nommée à l'emplacement dans le fichier md cible vers lequel vous voulez vous diriger.
 
@@ -190,9 +190,9 @@ C'est donc une bonne pratique de commencer par le nom du fichier, puis le nom de
 
 Utilisez uniquement des lettres minuscules et séparez les mots par un trait d'union.
 
-Ensuite, liez cette référence dans le texte que vous écrivez avec le type de lien suivant.
+Then link this reference in the text you are writing with the following kind of link.
 
-- Lien interne vers une référence nommée : `[texte alternatif](nom-de-mon-fichier-ceci-est-ma-reference-specifique)`
+- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
 ### Notes, Avertissements, Réduction des Notes
 
