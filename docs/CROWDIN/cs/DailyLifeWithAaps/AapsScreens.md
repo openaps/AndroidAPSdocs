@@ -303,7 +303,7 @@ To configure additional graphs, check the boxes corresponding to the data you wa
 
 Most users find the following configuration of additional graphs to be adequate :
 
-* Graph 1 with IOB, COB, Sensitivity chnge
+* Graph 1 with IOB, COB, Sensitivity change
 * Graph 2 with Deviations and BGI.
 
 #### Absolutní inzulin
