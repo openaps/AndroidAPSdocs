@@ -57,7 +57,7 @@ orphan: true
 ![Bluetooth enabled](../images/combo/combo-tips-compo.png)
 
 * Pompa üzerindeki tuş kilidini serbest bırakın, pompayı durdurma moduna getirin, muhtemelen iptal edilmiş bir geçici bazal oranı onaylayın ve pili hızlı bir şekilde değiştirin.
-* Eski sürücüyü kullanırken, pompanın üzerindeki saat, pil değişiminden sonra sıfırlandıysa, pompadaki tarih ve saati, AAPS çalıştıran telefonunuzdaki tarih/saat ile aynı olacak şekilde ayarlayın. (Yeni sürücü, pompanın tarihini ve saatini otomatik olarak günceller.)
+* When using the old driver, if the clock on the pump did not survive the battery change, re-set the date and time on the pump to exactly the date/time on your phone running AAPS. (Yeni sürücü, pompanın tarihini ve saatini otomatik olarak günceller.)
 * Ardından ana ekranda **Askıya Alınan Döngü** simgesine basarken pompayı tekrar çalışma moduna getirin **Devam et** öğesini seçin.
 * AAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value.
 
@@ -72,7 +72,7 @@ orphan: true
 Ranges for typical life time of the different battery types are as follows:
 
 * **Energizer Ultimate Lithium**: 4 ila 7 hafta
-* Hizmet paketinden **Power One Alkaline** (Varta): 2 ila 4 hafta
+* **Power One Alkaline** (Varta) from the service pack: 2 to 4 weeks
 * **Eneloop şarj edilebilir** piller (BK-3MCCE): 1 ila 3 hafta
 
 If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
@@ -86,7 +86,7 @@ If your battery life is significantly shorter than the ranges given above, pleas
 The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
 
 * Karbonhidrat girerken veya tam öğünün karbonhidratlarını ve karbonhidratların kanınıza glikoz olarak gelmesini beklediğiniz süreyi girerek Hesap Makinesini kullanırken **y-Karb** kullanın. Sistem daha sonra, tüm süre boyunca eşit olarak dağıtılan küçük karbonhidratları hesaplayacak ve bu da, algoritmanın eşdeğer insülin dozunu sağlamasına ve aynı zamanda kan şekeri seviyesinin genel yükselişini/düşüşünü sürekli olarak kontrol etmesine neden olacaktır. For a multiwave bolus approach, you can also combine a smaller immediate bolus with e-carbs. 
-* Before eating, on the **Actions tab** in AAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. Süre, yayılmış bir bolus için seçmeniz gereken aralığa dayalı olmalıdır. This will keep your target lower than usual and therefore increase the amount of insulin delivered.
+* Before eating, on the **Actions tab** in AAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. The duration should be based on the interval you would choose for an extended bolus. This will keep your target lower than usual and therefore increase the amount of insulin delivered.
 * Ardından öğünün tam karbonhidratını girmek için **HESAP MAKİNESİ**'ni kullanın, ancak bolus hesaplayıcı tarafından önerilen değerleri doğrudan uygulamayın. Çoklu dalga benzeri bir bolus verilecekse, insülin dozunu azaltın. Yemeğe bağlı olarak, algoritmanın artık kan şekerindeki artışı önlemek için ek SMB'ler veya daha yüksek geçici bazal oranlar sağlaması gerekiyor. Burada, bazal oranın (Max IE/h, Maximum bazal IOB) güvenlik sınırlaması ile çok dikkatli bir şekilde denenmeli ve gerekirse geçici olarak değiştirilmelidir.
 
 * If you are tempted to just use the extended or multiwave bolus directly on the pump, AAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
@@ -95,7 +95,7 @@ The OpenAPS algorithm does not support a parallel extended bolus or multiwave bo
 
 ## Bolus iletiminde uyarılar
 
-* If AAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. If your really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
+* If AAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical number of insulin units. If your really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
 * Alarm, bir bolus doğrudan pompadan iletilse bile, aktif insülini (AİNS) doğru bir şekilde hesaplamak için yeni bir bolus göndermeden önce pompanın bolus geçmişini okuyan bir güvenlik mekanizmasıdır. Burada ayırt edilemeyen girişler engellenmelidir.
 
 ![Double bolus](../images/combo/combo-tips-doppelbolus.png)
