@@ -26,7 +26,7 @@ AAPS为儿童提供多种远程监控选项，并且还可以发送远程指令�
 智能手表在帮助儿童管理AAPS方面是一个非常有用的工具。 可以实现几种不同的配置：
 
 - 如果在父母的手机上安装了AAPSClient，则可以在与父母的手机连接的兼容智能手表上安装[AAPSClient WearOS应用程序](https://github.com/nightscout/AndroidAPS/releases/)。 这将显示当前的血糖值、Loop（闭环系统）状态和允许碳水化合物输入、临时目标设定以及配置更改。 但它不允许通过WearOS应用进行大剂量胰岛素注射。
-- 或者，可以在与孩子的手机连接但由父母佩戴的兼容智能手表上构建并安装[AAPS WearOS应用程序](../WearOS/WearOsSmartwatch.md)。 这包括上面列出的所有功能，以及大剂量注射胰岛素的能力。 这样，父母就可以在不需要从孩子身上取下手机的情况下为孩子注射胰岛素。
+- 或者，可以在与孩子的手机连接但由父母佩戴的兼容智能手表上构建并安装[AAPS WearOS应用程序](../WearOS/WearOsSmartwatch.md)。 这包括上面列出的所有功能，以及大剂量注射胰岛素的能力。 This allows the parent to administer insulin without needing to remove the kid's phone from however it is kept on them.
 
 ## 需要考虑的事项
 
