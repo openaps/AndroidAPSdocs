@@ -38,7 +38,7 @@
 
 ![編輯分支](../images/PR3.png)
 
-4. 你正在“<>編輯文件”標籤中工作。 選擇“預覽更改”標籤，檢查所有更改是否按預期呈現。 如果你看到需要改進的地方，請返回編輯標籤進行更多改進。 
+4. 你正在“<>編輯文件”標籤中工作。 Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typos sic.). 如果你看到需要改進的地方，請返回編輯標籤進行更多改進。 
 
 ![預覽模式](../images/PR5.png)
 
@@ -62,7 +62,7 @@
 
 我們使用Markdown來編寫文件頁面。 文件的後綴為“.md”。
 
-Markdown是一種非常簡單的文本格式語系，他將文本內容與文本格式分開。
+Markdown is a very simple text formatting language which separates text content from text formatting.
 
 編寫者只需標記標題為一級標題，Markdown處理器會在處理期間生成必要的HTML代碼，以在HTML中呈現標題。
 
@@ -176,9 +176,9 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 - 內部連結到.md文件：`[替代文字](../folder/file.md)`
 
-#### 指向內聯引用名稱的內部連結
+#### Internal links to named inline references
 
-指向內聯引用名稱的內部連結是指向我們自己服務器上託管的任何.md文件中的某個位置，並設置引用以連結到該位置。
+Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
 
 在目標.md文件中要跳轉的位置添加命名引用。
 
@@ -190,9 +190,9 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 僅使用小寫字母並將單詞用連字符連線。
 
-然後，使用以下類型的連結在你編寫的文本中連結此引用。
+Then link this reference in the text you are writing with the following kind of link.
 
-- 指向內聯引用名稱的內部連結：`[替代文字](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
 ### 註釋、警告、折疊註釋
 
