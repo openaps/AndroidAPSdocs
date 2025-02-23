@@ -130,7 +130,7 @@ Yeni bir telefona geçerken aşağıdaki adımları yapmanız gerekir:
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](#pairing-pump).
+* Start pairing procedure as described [above](#pairing-pump).
 * Bazen, Dana-i/RS sekmesindeki BT simgesine uzun tıklayarak AAPS'deki eşleştirme bilgilerinin temizlenmesi gerekebilir.
 
 ## Dana RS pompasıyla seyahat edenler için saat dilimi
