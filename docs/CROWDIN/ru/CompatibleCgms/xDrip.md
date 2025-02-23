@@ -81,7 +81,7 @@ orphan: true
 ### Версия xDrip+ в зависимости от серии трансмиттера G6.
 
 - Все трансмиттеры G6, изготовленные после осени/конца 2018 называют "Firefly" (светлячок). Они не позволяют перезапустить сенсор без [ извлечения трансмиттера](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), они не отправляют необработанные данные. Рекомендуется использовать самые свежие [Ночные сборки](https://github.com/NightscoutFoundation/xDrip/releases) xDrip+.
-- Трансмиттеры с замененными старыми батареями и модифицированные трансмиттеры позволяют продлить срок службы сенсора и перезапускать его, они также отправляют необработанные данные. В этом случае можно пользоваться [свежей стабильной версией APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
+- Old rebatteried transmitters and modified transmitters allow sensor life extension and restarts, they also send raw data. В этом случае можно пользоваться [свежей стабильной версией APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
 
 ### Настройки для работы с Dexcom
 
