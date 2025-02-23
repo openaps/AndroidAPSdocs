@@ -2,7 +2,7 @@
 
 # 민감도 감지
 
-## 민감도 알고리즘
+## Sensitivity algorithm
 
 Currently we have 3 sensitivity detection models:
 
