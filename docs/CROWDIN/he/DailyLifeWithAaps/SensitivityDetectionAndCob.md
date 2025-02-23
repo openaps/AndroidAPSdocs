@@ -2,7 +2,7 @@
 
 # זיהוי רגישות
 
-## אלגוריתם רגישות
+## Sensitivity algorithm
 
 Currently we have 3 sensitivity detection models:
 
