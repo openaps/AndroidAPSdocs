@@ -22,14 +22,14 @@ orphan: true
 ## 硬體和軟體需求
 
 - **手機：**此美敦力驅動程式應適用於所有支援藍牙連線的 Android 手機。 **重要提示：手機製造商的藍牙實作可能會有所不同，因此每個手機型號的行為可能會不同。 例如，一些手機在啟用/停用藍牙時的處理方式可能不同。 這可能會影響 AAPS 需要重新連線到你的 Rileylink 類型裝置時的使用體驗。**
-- **RileyLink 相容裝置：**Android 手機無法直接與美敦力幫浦連線，必須使用一個額外的裝置來處理通訊。 此裝置將透過藍牙與你的手機連線，並透過相容的無線電連線與幫浦連線。 第一個此類裝置稱為 RileyLink，但現在已推出許多其他選項，提供更多功能。
+- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a separate device to handle communications. 此裝置將透過藍牙與你的手機連線，並透過相容的無線電連線與幫浦連線。 第一個此類裝置稱為 RileyLink，但現在已推出許多其他選項，提供更多功能。
     
     - RileyLink 可於[getrileylink.org](https://getrileylink.org/product/rileylink916)購買
     - Orangelink 可於[getrileylink.org](https://getrileylink.org/product/orangelink)購買
     - Emalink（多種型號可選）可於[github.com](https://github.com/sks01/EmaLink)購買
     - Gnarl（需要一些額外 DIY）詳情可見[github.com](https://github.com/ecc1/gnarl)
 
-各種 Rileylink 相容裝置的比較圖表可見[getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+A comparison chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
 (MedtronicPump-configuration-of-the-pump)=
 
@@ -52,13 +52,13 @@ orphan: true
 1. 使用全新安裝時的設置嚮導
 2. 在組態建置工具中的幫浦選項旁選擇齒輪圖示以選擇美敦力選項
 
-在使用設置嚮導配置美敦力幫浦時，你可能會因藍牙問題而無法完成設置（例如無法成功連線到幫浦）。 如果發生這種情況，你應該選擇虛擬幫浦選項來完成配置，並使用選項 2 進行進一步問題排除。
+When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot successfully connect to the pump). 如果發生這種情況，你應該選擇虛擬幫浦選項來完成配置，並使用選項 2 進行進一步問題排除。
 
 ![美敦力設定](../images/Medtronic01a.png)
 
 在設置 AAPS 與你的美敦力幫浦協作時，你需要設置以下項目：（請參閱上方圖片）
 
-- **幫浦序列號**：顯示在幫浦背面，以 SN 開頭。 你應該僅輸入顯示的6個數字，且不包含字母字符（例如 123456）。
+- **幫浦序列號**：顯示在幫浦背面，以 SN 開頭。 You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
 - **幫浦型號**：你使用的幫浦型號（例如 522）。 
 - **幫浦頻率**：有兩個選項，根據你的幫浦最初發行的地區。 如果你不確定選擇哪個選項，請檢查[常見問題解答](#faq)： 
     - 美國和加拿大使用的頻率為 916 Mhz
@@ -79,7 +79,7 @@ orphan: true
 - **RileyLink 配置**：此選項允許你找到並配對你的 Rileylink 相容裝置。 選擇此選項將顯示附近的所有 Rileylink 相容裝置及其訊號強度。
 - **使用掃描**：在連線 Rileylink 相容裝置之前啟用藍牙掃描。 這應能提高與裝置連線的可靠性。
 - **顯示 OrangeLink/EmaLink/DiaLink 回報的電池電量**：此功能僅支援較新型的連線裝置，如 EmaLink 或 OrangeLink。 數值將顯示在 AnroidAPS 的美敦力標籤頁中。 
-- **設置中性臨時基礎率**：預設情況下，美敦力幫浦在有臨時基礎率時，每小時會發出嗶聲。 啟用此選項可以透過在整點更改臨時基礎率來減少聽到的嗶聲次數，以抑制嗶聲。
+- **設置中性臨時基礎率**：預設情況下，美敦力幫浦在有臨時基礎率時，每小時會發出嗶聲。 Enabling this option can help reduce the number of beeps heard by interrupting a temporary basal at the hour change in order to suppress the beep.
 
 ## 美敦力（MDT）標籤
 
@@ -89,8 +89,8 @@ orphan: true
 - **RileyLink 電池**：顯示 EmaLink 或 OrangeLink 裝置的目前電池電量。 取決於是否在美敦力幫浦配置選單中選擇了“顯示 OrangeLink/EmaLink/DiaLink 裝置回報的電池電量”。
 - **幫浦狀態**：幫浦連線的目前狀態。 由於幫浦不會始終保持連線，主要會顯示睡眠圖示。 還有許多其他可能的狀態，例如當 AAPS 嘗試發送指令時顯示“正在喚醒”，或其他可能的幫浦指令，如“獲取時間”、“設置 TBR”等。
 - **電池**：根據在美敦力幫浦配置選單中選擇的電池類型（電力檢視）顯示電池狀態。 
-- **最後連線**：顯示上次成功連線幫浦的時間。
-- **最後一次注射**：顯示上次成功注射的時間。
+- **Last connection**: How long ago the last successful pump connection happened.
+- **Last Bolus**: How long ago the last successful bolus was delivered.
 - **基礎基礎率**：這是目前小時內幫浦運作的基礎基礎率，根據你的活動設定檔設定。
 - **臨時基礎率**：目前正在輸送的臨時基礎率，可以為每小時 0 單位。
 - **儲液筒**：顯示儲液筒中的胰島素量（至少每小時更新一次）。
@@ -108,7 +108,7 @@ orphan: true
 
 ![幫浦歷史紀錄對話框](../images/Medtronic03.png)
 
-幫浦歷史紀錄每 5 分鐘檢索一次並存儲在本地。 僅存儲過去 24 小時的歷史紀錄。 這提供了一種方便的方法來查看幫浦的行為，如果需要的話。 僅存儲與 AAPS 相關的項目，且不包含無關的配置功能。
+幫浦歷史紀錄每 5 分鐘檢索一次並存儲在本地。 僅存儲過去 24 小時的歷史紀錄。 The allows for a convenient way to see pump behaviour should that be required. The only items stored are those relevenant to AAPS and will not include a configuration function that has no relevance.
 
 (MedtronicPump-rl-status-rileylink-status)=
 
@@ -125,7 +125,7 @@ RL 狀態對話框有兩個標籤：
 
 當使用美敦力驅動程式時，操作標籤中會添加兩個額外操作：
 
-- **喚醒並調整**：如果 AAPS 長時間未能連線到你的幫浦（應每 5 分鐘連線一次），你可以強制進行調整。 這將嘗試透過搜尋幫浦使用的所有可能無線電頻率來聯繫幫浦。 如果成功建立連線，將會將成功的頻率設置為預設值。
+- **喚醒並調整**：如果 AAPS 長時間未能連線到你的幫浦（應每 5 分鐘連線一次），你可以強制進行調整。 這將嘗試透過搜尋幫浦使用的所有可能無線電頻率來聯繫幫浦。 In the event a successful connection is made the successful frequency will be set as the default.
 - **重置 RileyLink 配置**：如果你重置了 Rileylink 相容裝置，則可能需要使用此操作，以便可以重新配置裝置（設置頻率、設置頻率類型、配置編碼）。
 
 ## 重要提示
@@ -140,7 +140,7 @@ OpenAPS 用戶應注意，AAPS 與美敦力的使用方式與 OpenAPS 完全不�
 
 ### 日誌紀錄
 
-如果你需要對美敦力幫浦功能進行問題排除，請在螢幕左上角選擇選單圖示，選擇維護和日誌設定。 要對美敦力問題進行問題排除，應檢查幫浦、PumpComm、PumpBTComm。
+In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintenance and Log Settings. 要對美敦力問題進行問題排除，應檢查幫浦、PumpComm、PumpBTComm。
 
 ### 美敦力 CGM
 
@@ -158,9 +158,9 @@ OpenAPS 用戶應注意，AAPS 與美敦力的使用方式與 OpenAPS 完全不�
 
 請參閱 https://github.com/andyrozman/RileyLinkAAPS/issues/145 了解更多細節。 目前，請注意此問題可能會發生，並在更改時區時仔細監控。 目前請注意，這個問題可能會發生，並在更改時區時仔細監控。
 
-### GNARL 是完全相容的 Rileylink 裝置嗎？
+### Is a GNARL a fully compatible Rileylink compatible device?
 
-GNARL 代碼完全支援 AAPS 美敦力驅動程式使用的所有功能，這意味著他是完全相容的。 需要注意的是，這將需要額外的工作，因為你將需要採購相容的硬體，然後將 GNARL 代碼載入裝置。
+GNARL 代碼完全支援 AAPS 美敦力驅動程式使用的所有功能，這意味著他是完全相容的。 It is important to note that this will require additional work as you will have to source compatible hardware and then load the GNARL code on to the device.
 
 **作者提醒：**請注意，GNARL 軟體仍處於實驗階段，測試較少，不應被視為與 RileyLink 一樣安全。
 
