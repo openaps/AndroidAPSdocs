@@ -1,8 +1,8 @@
 # 如何使用 Autotune 外掛（僅限開發者）
 
-Documentation about Autotune algorithm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
+有關 Autotune 算法的文檔可以在 [OpenAPS 文檔](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) 中找到。
 
-Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
+Autotune 外掛是在 AAPS 中實作的 OpenAPS 自動調整算法。
 
 **目前 Autotune 外掛僅在[dev 分支](../AdvancedOptions/DevBranch.md)和工程模式下可用。**
 
@@ -18,7 +18,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
   - 注意：每次變更調整天數參數時，先前的結果將被移除。
 - 「最後運作」是一個鏈接，可恢復你最後一次有效的計算結果。 如果你當天尚未啟動自動調整，或者如果以前的結果由於上面的計算參數修改而被刪除，則你可以恢復最新成功運行的參數和結果。
 - 警告範例顯示有關選定設定檔的一些資訊（例如你有多個 IC 值或 ISF 值）。
-  - 注意：Autotune 計算僅適用於單一的 IC 和單一的 ISF 值。 There is currently no existing Autotune algorithm to tune a circadian IC or circadian ISF. 如果你的輸入設定檔有多個數值，你可以在警告區看到調整設定檔時考慮的平均值。
+  - 注意：Autotune 計算僅適用於單一的 IC 和單一的 ISF 值。 目前沒有現有的 Autotune 算法來調整生理週期 IC 或生理週期 ISF。 如果你的輸入設定檔有多個數值，你可以在警告區看到調整設定檔時考慮的平均值。
 - 「檢查輸入設定檔」按鈕可打開設定檔檢視器，讓你快速驗證設定檔（單位、DIA、IC、ISF、基礎率和目標）。
   - 注意：Autotune 只會調整你的 IC（單一數值）、ISF（單一數值）以及有日夜變化的基礎率。 單位、DIA 和目標將在輸出設定檔中保持不變。
 
@@ -178,7 +178,7 @@ Autotune 只是輔助工具，重要的是定期檢查你是否同意計算出�
 
 分析 Autotune 結果以暸解（或嘗試暸解）Autotune 為何提出這些修改也是很重要的。
 
-- 你可能會發現設定檔的強度整體增加或減少（例如總基礎率增加，與 ISF 和 IC 值的減少相關聯）。 it could be associated to several following days with autosens correction above 100% (more aggressivity required) or below 100% (you are more sensitive)
+- 你可能會發現設定檔的強度整體增加或減少（例如總基礎率增加，與 ISF 和 IC 值的減少相關聯）。 這可能與隨後幾天的自動敏感度修正超過 100%（需要更激進的調整）或低於 100%（您更敏感）有關。
 - 有時 Autotune 提出不同的基礎率與 IC/ISF 的平衡（例如較低的基礎率和更積極的 IC/ISF）。
 
 我們建議在以下情況下不要使用 Autotune：
