@@ -133,7 +133,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 #### Wear OS 5的一般故障排除建議
 
-- 請勿使用 Wi-Fi 分享。 That won't work.
+- 請勿使用 Wi-Fi 分享。 這樣做是行不通的。
 - 不需要在手機上啟用 ADB 調試（僅在手錶上）。 在手機上停用 ADB 調試。
 - 確保你連接到手機和手錶可以彼此看到的本地網路（不要使用 Wi-Fi 客用網路連接）。
 - 對於 GW7，需使用 Wear Installer安裝，因為它在安裝時提供選擇**AAPS（自訂）**錶面的選項。
