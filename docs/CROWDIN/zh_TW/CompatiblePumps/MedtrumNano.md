@@ -94,7 +94,7 @@ orphan: true
 
 ***預設：已啟用。***
 
-This settings changes the way AAPS will show notification on non critical pump warnings. 啟用後，當幫浦出現警告時，手機上會顯示通知，包括：
+這個設定改變了 AAPS 對非關鍵幫浦警告的通知顯示方式。 啟用後，當幫浦出現警告時，手機上會顯示通知，包括：
     - 電池電量低
     - 儲液瓶電量低（20單位）
     - 修補版即將過期警告
@@ -248,7 +248,7 @@ This settings changes the way AAPS will show notification on non critical pump w
 
 ![停用修補版](../images/medtrum/activation/DeactivatePatch.png)
 
-系統將提示你確認是否希望停用目前的修補版。 **Please note that this action is not reversible.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. 如果你尚未準備好啟動新修補版，請按下**取消**返回主畫面。
+系統將提示你確認是否希望停用目前的修補版。 **請注意，這個操作是不可逆的。** 當停用完成後，您可以按**下一步**來繼續激活新補丁的過程。 如果你尚未準備好啟動新修補版，請按下**取消**返回主畫面。
 
 ![停用進度](../images/medtrum/activation/DeactivateProgress.png)
 
