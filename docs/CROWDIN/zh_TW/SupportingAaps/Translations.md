@@ -85,7 +85,7 @@
     
     
 
-你正在翻譯代表鏈接的文本。 Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+你正在翻譯代表鏈接的文本。 請務必小心**不要**刪除由一對`<0></0>`標籤表示的連結，或者如果在同一段落中有多個標籤，還有其他編號。
 
 這是校對者需要特別注意的事項！
 
