@@ -64,7 +64,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 * Dash: 連線是可選的（預設為關閉） @MilosKozak
 * Equil: 修正了注射 10+U，警報改進 @EquilHack
-* Garmin: watch improvements @swissalpine
+* Garmin：手錶改進 @swissalpine
 * 手錶改進 @olorinmaia
 * 從手錶控制循環狀態 @tdrkDev
 * 穩定度改善
@@ -217,8 +217,8 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ### 重要提示
 
 - 需要 NS 15 版本
-- 在使用 NS v3 外掛時，透過 NS UI 輸入的治療（+ 按鈕）和使用 v1 API 的其他應用程式不會發送到 AAPS。 這將在未來的 NS 版本中修復。 Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internally. 對於 AAPS 和 AAPSClient 本身也是如此。
-- Websockets in v3 plugin work in a similar manner as v1 plugin. 停用 websockets 後，AAPS 會定期下載 NS 的資料，這應該會降低電量消耗，因為 NS 不會長時間保持連線。 On the opposite side it means delays in exchanging data. 在你使用之前，請先閱讀[這裡](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)的開發團隊重要意見！
+- 在使用 NS v3 外掛時，透過 NS UI 輸入的治療（+ 按鈕）和使用 v1 API 的其他應用程式不會發送到 AAPS。 這將在未來的 NS 版本中修復。 在 AAPS 和 AAPSClient 中，始終使用相同的客戶端（v1 或 v3），直到 NS 完全切換到 v3 為止。 對於 AAPS 和 AAPSClient 本身也是如此。
+- v3 插件中的 Websockets 像 v1 插件一樣運作。 停用 websockets 後，AAPS 會定期下載 NS 的資料，這應該會降低電量消耗，因為 NS 不會長時間保持連線。 相反地，這意味著數據交換有延遲。 在你使用之前，請先閱讀[這裡](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)的開發團隊重要意見！
 - 如果你使用 xdrip 作為 CGM 資料來源，則需要在更新後重新選擇他，因為內部已進行了更改。
 - Tidepool 可作為 NS 的替代品，以透過第一個目標。
 - 如果你選擇發送到 xDrip+，則必須配置 xDrip 同步外掛。 為了從 AAPS 接收血糖資料，必須將 “xDrip+ Sync Follower” 選為資料來源。
@@ -254,7 +254,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 - BolusWizard 的更改。 如果 CGM 不可用，則忽略百分比（即使用 100%）
 - 遷移到 kts 建置系統 @MilosKozak
 - 改進的 CI 集成 @MilosKozak @buessow
-- tests cleanup @ryanhaining @MilosKozak
+- 測試清理 @ryanhaining @MilosKozak
 - 新增 110,000 行程式碼，修改 240,000 程式碼，修改 6,884 份文件
 
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
@@ -277,11 +277,11 @@ v3 是新的協議。 更加安全和高效
 - NS 15 必須與 AAPS 3.2 一起使用
 - v3 不會看到由 v1 協議完成的更新（可能會在未來的 NS 版本中解決）
 - 反過來，因為追蹤變更的方法效率低下，v1 能看到由 v3 完成的變更
-- remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. 如果你想遠端輸入資料，必須使用 AAPSClient 的 SMS 功能
+- 請記住，NS 迄今仍然在內部使用 v1，因此如果您使用 v3，則無法通過 NS 網頁 UI 輸入資料。 如果你想遠端輸入資料，必須使用 AAPSClient 的 SMS 功能
 
 推薦設置
 - 基於以上所有原因，你應選擇一種方法並在所有設備上使用他（記住，撰寫本文時，所有其他上傳器都在使用 v1）。 如果你決定使用 v3，請在 AAPS 和所有 AAPSClients 中選擇 v3
-- v3 is preferred because of efficiency
+- v3 更受推崇，因為效率更高。
 - 使用或不使用 v3 中的 websockets 取決於你的偏好
 - 強烈建議讓 AAPS 收集所有資料，然後將其作為單一上傳器上傳到 NS。 所有其他設備/應用程式應僅從 NS 讀取資料。 這樣可以防止衝突和同步錯誤。 這對於使用 Dexcom Share 連線器等將血糖資料上傳到 NS 也適用。
 
@@ -433,7 +433,7 @@ v3 是新的協議。 更加安全和高效
 - SMB 和 Dexcom 應用的修復
 - 手錶錶面修復
 - 崩潰報告改進
-- gradle reverted to allow direct watchface installation
+- gradle 被還原以允許直接安裝錶盤。
 - 自動化修復
 - RS 驅動改進
 - 修復了各種崩潰
@@ -459,10 +459,10 @@ v3 是新的協議。 更加安全和高效
 - 新錶盤 @rICTx-T1D
 - Dana RS 連線改進 @MilosKozak
 - 移除了 Dexcom 原生應用中 SMB 的「未變更 CGM 值」行為
-- New [Low Resolution Skin](#Preferences-skin)
+- 新 [低解析度皮膚](#Preferences-skin)
 - 新增["孕婦" 患者類型](#Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
 - 新的 NSClient 平板佈局 @MilosKozak
-- NSClient transfer insulin, sensitivity and display settings directly from main AAPS @MilosKozak
+- NSClient 從主 AAPS 中直接傳輸胰島素、敏感度和顯示設定 @MilosKozak
 - [偏好設定篩選](../SettingUpAaps/Preferences.md) @Brian Quinion
 - 新幫浦圖示 @Rig22 @teleriddler @osodebailar
 - 新增[胰島素類型 Lyumjev](#Config-Builder-lyumjev)
@@ -592,7 +592,7 @@ v3 是新的協議。 更加安全和高效
   - 設定檔可以被複製和編輯
   - 能夠將設定檔上傳到 NS
   - 舊的設定檔切換可以複製到新的本地設定檔中（應用時間移動和百分比）
-  - Vertical NumberPicker for targets
+  - 目標的垂直數字選擇器
 
 - 移除了 SimpleProfile
 
@@ -724,7 +724,7 @@ v3 是新的協議。 更加安全和高效
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) 支援 (由 Tebbe Ubben 和 JamOrHam 提供)
 - 主螢幕上的狀態燈（Nico Schmitz）
 - 夏令時幫助器（Roumen Georgiev）
-- Fix processing profile names coming from NS (Johannes Mockenhaupt)
+- 修正從 NS 來的設定檔名稱處理（Johannes Mockenhaupt）
 - 修復 UI 阻塞（Johannes Mockenhaupt）
 - 支援更新的 G5 應用（Tebbe Ubben 和 Milos Kozak）
 - G6、Poctech、Tomato、Eversense血糖資料來源支援（Tebbe Ubben 和 Milos Kozak）
