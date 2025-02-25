@@ -2,7 +2,7 @@
 
 在上一部分[建立**AAPS**](../SettingUpAaps/BuildingAaps.md)中，你在電腦上建立了**AAPS**應用程式（這是一個.apk檔案）。
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip+ or another CGM receiver app) to your Android smartphone, and then **install** the app(s).
+接下來的步驟是 **傳輸** AAPS 的 APK 檔（以及你可能需要的其他應用程序，例如 BYODA、xDrip+ 或其他 CGM 接收器應用）至你的 Android 智慧型手機，然後 **安裝** 應用。
 
 在智慧型手機上安裝**AAPS**後，你將能夠進行[**AAPS 循環的配置**](../SettingUpAaps/SetupWizard.md)。
 
@@ -49,8 +49,8 @@ APK 檔案應該已經上傳到 Google 雲端硬碟。
 你應該能看到**AAPS**圖示並能夠打開應用程式。
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Did you remember to disallow the installation from Google Drive?
+**重要安全通知**
+你是否記得禁止從 Google Drive 安裝？
 ```
 
 請繼續[設定 AAPS 循環](../SettingUpAaps/SetupWizard.md)。
