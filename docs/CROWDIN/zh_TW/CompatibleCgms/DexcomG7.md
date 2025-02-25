@@ -24,11 +24,11 @@ Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggesti
 
 ## 2.  修補版 Dexcom G7 應用程式 (DiaKEM)
 
-**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
+**注意：需要 AAPS 3.2.0.0 或更高版本！ 不適用於 ONE+。**
 
 ### 安裝新的修補版 G7 應用程式並啟動傳感器
 
-A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+修補版 Dexcom G7 應用程式 (DiaKEM) 可查看 Dexcom G7 資料。 這不是 BYODA 應用程式，因為該應用程式目前無法接收 G7 資料。
 
 - 如果之前有使用過原Dexcom應用程式，請將其解除安裝（如果傳感器正在運作，可以繼續使用傳感器，請在移除應用程式前記下傳感器代碼！）
 
@@ -56,7 +56,7 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 ## 4. Juggluco
 
-Version 9.0+ required
+需要版本 9.0 以上
 
 - 停用之前連接到傳感器的應用程式：卸載應用程式或使用「強制停止」。 在應用程式設定中停用「附近設備」權限。 限制應用程式的電池使用。
 
