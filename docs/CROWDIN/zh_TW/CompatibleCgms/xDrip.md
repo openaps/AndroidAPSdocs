@@ -83,7 +83,7 @@ orphan: true
 ### G6 傳輸器序列號決定的 xDrip+ 版本
 
 - 2018 年秋季/年底後製造的所有 G6 傳輸器稱為“Firefly”。 他們不允許在不[移除傳輸器](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)的情況下重新啟動傳感器，也不發送原始資料。 建議使用最新的[Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases)。
-- Old rebatteried transmitters and modified transmitters allow sensor life extension and restarts, they also send raw data. 你可以使用[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)。
+- 舊的重新更換電池的傳輸器和改裝過的傳輸器允許延長感測器的使用壽命和重啟，並且它們還會發送原始資料。 你可以使用[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)。
 
 ### Dexcom 特定設定
 
