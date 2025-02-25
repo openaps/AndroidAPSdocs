@@ -298,7 +298,7 @@ AAPS 沒有運作在 "開發者模式"。 AAPS 顯示以下訊息："運作開�
 
 ### 在 AAPS v3 中，在哪裡可以刪除治療？
 
-3 dots menu, select treatments, then 3 dots menu again and you have different options available.
+三級選單，選擇治療，然後再次選擇三級選單，您將擁有不同的選項可供選擇。
 
 ### 配置和使用 AAPSClient 遠端應用程式
 
