@@ -18,9 +18,9 @@ orphan: true
     1. CROWDIN 翻譯和
     2. Read The Docs 部署。
 
-You can directly jump from here to the first label in the sandbox1.md file - ["Jump"](../sandbox1.md#this-is-a-test).
+您可以直接從這裡跳到 sandbox1.md 檔案中的第一個標籤 - [「跳轉」](../sandbox1.md#this-is-a-test)。
 
-You can directly jump from here to the second label in this file - ["Jump"](../sandbox1.md#this-is-another-test).
+您可以直接從這裡跳到此檔案中的第二個標籤 - [「跳轉」](../sandbox1.md#this-is-another-test)。
 
 這裡可以跳轉到第一個沙盒文件 - [「跳轉」](../sandbox1.md)。
 
