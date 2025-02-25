@@ -56,7 +56,7 @@
 
 ![圖像](../images/remote-control-08.png)
 
-### Date and time syncing
+### 日期和時間同步
 
 兩部手機上的時間必須同步。 最佳做法是從網路自動設置。 時間差可能會導致身份驗證問題。
 
