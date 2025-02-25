@@ -410,7 +410,7 @@ Pod 會因多種問題偶爾發生故障，包括 Pod 本身的硬體問題。 �
 
 ### 防止 49 號錯誤 Pod 故障
 
-此故障與指令的 Pod 狀態不正確或胰島素輸送指令中的錯誤有關。 這是當驅動程式和 Pod 對實際狀態存在分歧時發生的情況。 The Pod (out of a built-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. 「49 Pod 故障」的確切原因通常難以追溯。 在某些情況下，這種故障可能發生（例如應用程式崩潰、運作開發版本或重新安裝）。
+此故障與指令的 Pod 狀態不正確或胰島素輸送指令中的錯誤有關。 這是當驅動程式和 Pod 對實際狀態存在分歧時發生的情況。 Pod（出於內建安全措施）隨後對不可恢復的錯誤代碼 49（0x31）作出反應，最終產生所謂的「尖叫聲」：那聲長且令人惱怒的嗶聲，只有在在 Pod 背面適當位置打個洞才能停止。 「49 Pod 故障」的確切原因通常難以追溯。 在某些情況下，這種故障可能發生（例如應用程式崩潰、運作開發版本或重新安裝）。
 
 ### 幫浦無法連線警報
 
@@ -443,7 +443,7 @@ Pod 會因多種問題偶爾發生故障，包括 Pod 本身的硬體問題。 �
 1. 匯入任何最近的匯出應該可以工作（見上文）。
 2. 匯入你的設定。
 3. 檢查所有偏好設定。
-4. You may need to **Deactivate** the "non existing" pod if the imported settings included any active pod data.
+4. 如果匯入的設定包含任何活動的 Pod 資料，您可能需要**停用**「不存在」的 Pod。
 
 ### 匯入包含非活動 Pod 狀態的設定
 
