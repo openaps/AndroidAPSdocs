@@ -130,7 +130,7 @@ orphan: true
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure as described [above](#pairing-pump).
+* 開始配對程序，如上所述[以上](#pairing-pump)。
 * 有時可能需要透過長按 Dana-i/RS 標籤上的藍牙圖示來清除 AAPS 中的配對資訊。
 
 ## Dana RS 幫浦跨時區旅行
