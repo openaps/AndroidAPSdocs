@@ -40,7 +40,7 @@ gradle 同步失敗的可能原因包括：
 
 如果你收到像這樣的失敗訊息：
 
-![Gradle Uncommitted Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Gradle 未提交的變更](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 ```
 建立檔案 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' 行: 243
@@ -200,7 +200,7 @@ git config --global user.email 你的email@xxx.com
 
   如果你看到如下所示的錯誤訊息，你可能使用的是 Windows 10 32 位系統。 這在 Android Studio 3.5.1 及以上版本中不受支援，很遺憾 **AAPS** 開發者無法對此做出任何改變！
 
-  There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  網路上有關於如何判斷您是否擁有 32 位或 64 位作業系統的資訊 - 例如 [這個](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)。
 
   ![無法啟動守護進程的截圖](../images/AndroidStudioWin10_32bitError.png)
 
