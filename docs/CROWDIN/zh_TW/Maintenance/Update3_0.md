@@ -20,11 +20,11 @@ orphan: true
 * 如果某個條件缺失，你需要重新添加。
 * 紅色自動化包含無效的操作，請編輯他們並重置為有效值。
 
-  Example: A profile change to 140% was allowed earlier but is now restricted to 130%.
+  示例：將設定檔更改為 140% 之前是允許的，但現在限制為 130%。
 
 ## 檢查你的 nsclient 設定並設置同步複雜性
 
-* The implementation of the nsclient plugin has changed completely.
+* nsclient 外掛的實作已完全改變。
 * 進入 nsclient 標籤，並在右側選單中打開設定。 現在提供了一個新的偏好 "同步"。
 * 你現在可以詳細選擇應與你的 Nightscout 網站同步的項目。
 
@@ -34,12 +34,12 @@ orphan: true
 * 要將目前的 Nightscout 檔案複製到本地檔案，請前往治療頁面（現在可從右側選單打開）。
 * 搜索 100% 的個人檔案切換，然後按下複製。
 * 會新增一個從目前日期起生效的新本地檔案。
-* 要從 NS 端更新檔案，請使用 "Clone"（紀錄!!，不是檔案）並儲存更改。 You should see "Profile valid from:" set to current date.
+* 要從 NS 端更新檔案，請使用 "Clone"（紀錄!!，不是檔案）並儲存更改。 您應該看到「設定檔有效日期從：」設置為當前日期。
 
 (Update3_0-reset-master-password)=
 ## 重置主密碼
 * 如果你忘記了主密碼，現在可以進行重置。
-* You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones filesystem.
+* 您需要在手機的檔案系統中的 `/AAPS/extra` 目錄中添加一個名為 `PasswordReset` 的檔案。
 * 重新啟動 AAPS。
 * 新密碼將是你正在使用的幫浦的序列號。
 * 對於 Dash：序列號始終為 4241。
