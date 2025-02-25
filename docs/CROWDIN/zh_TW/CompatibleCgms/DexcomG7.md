@@ -12,7 +12,7 @@ orphan: true
 ![G7 英文](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
 ```{admonition} Smoothing method 
-Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+請閱讀 [平滑方法](../CompatibleCgms/SmoothingBloodGlucoseData.md) 建議，以用於 Dexcom G7/ONE+/Stelo
 ```
 
 ## 1. xDrip+（直接連接至 G7 或 ONE+）
