@@ -254,7 +254,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_141310.png)
 
-現在先不要啟用這些開關。 We only walked to the screen to make you familiar with possible options you might configure in the future. 目前還不需要設置他們。
+現在先不要啟用這些開關。 我們僅僅是走到螢幕前，讓你熟悉將來可能配置的選項。 目前還不需要設置他們。
 
 返回上一個螢幕並選擇“連線設置”。
 
@@ -262,7 +262,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 照顧者必須啟用「使用手機網路連線」，否則提供依賴者/孩子的智慧型手機無法在 WiFi 範圍外上傳資料_例如：_在上學的路上。
 
-Other **AAPS** users can disable the transfer via cellular connection if they want to save data or battery.
+其他 **AAPS** 使用者可以禁用透過行動數據傳輸，以節省數據或電池。
 
 如果不確定，建議保持所有選項啟用。
 
@@ -276,7 +276,7 @@ Other **AAPS** users can disable the transfer via cellular connection if they wa
 
 啟用“從錯誤中建立公告”和“從需要碳水化合物警報中建立公告”。
 
-保持“減慢上傳”為停用狀態。 You would only use it in unusual circumstances if for example a lot of information is to be transferred to the Nightscout server, and the Nightscout server is being slow in processing this data.
+保持“減慢上傳”為停用狀態。 只有在不尋常的情況下你才會使用它，例如當需要將大量信息傳輸到 Nightscout 伺服器時，而 Nightscout 伺服器處理這些數據的速度很慢。
 
 返回兩次，回到外掛列表，然後選擇 "下一步" 以進入下一個螢幕：
 
@@ -412,7 +412,7 @@ Other **AAPS** users can disable the transfer via cellular connection if they wa
 ![圖像](../images/setup-wizard/Screenshot_20231202_143724.png)
 
 
-After saving, a new button "Activate Profile" appears.
+保存後，將顯示一個新按鈕「啟用設定檔」。
 
 ```{admonition} Several defined but only one active profile
 :class: information
@@ -480,7 +480,7 @@ After saving, a new button "Activate Profile" appears.
 
 ## APS 演算法
 
-選擇OpenAPS SMB演算法作為你的APS演算法。 Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. 無論如何，OpenAPS SMB 相較於 OpenAPS AMA 更新且通常效果更好。
+選擇OpenAPS SMB演算法作為你的APS演算法。 儘管名稱如此，算法的 SMB 功能在你熟悉 AAPS 並已完成第一個目標之前是禁用的。 無論如何，OpenAPS SMB 相較於 OpenAPS AMA 更新且通常效果更好。
 
 在初期，你的設定檔案通常不如經驗豐富後好，所以這個功能在初期被停用。 因為一開始系統設定的精準度通常不如使用一段時間後那麼高，因此該功能在初期會預設關閉。
 
