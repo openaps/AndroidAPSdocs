@@ -10,7 +10,10 @@ orphan: true
 Der G7 und ONE+ glätten die Glukosewerte weder in der (Dexcom-) App noch im Lesegerät. Dies ist anders als es beim G6 war. Mehr Details dazu findest Du [hier](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ![G7 Englisch](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
-`{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
+
+```{admonition} Smoothing method 
+Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+```
 
 ## 1. xDrip+ (direkte Verbindung zum G7 oder ONE+)
 
@@ -21,11 +24,11 @@ Der G7 und ONE+ glätten die Glukosewerte weder in der (Dexcom-) App noch im Les
 
 ## 2.  Gepatchte Dexcom G7 App (DiaKEM)
 
-**Hinweis: AAPS 3.2.0.0 oder höher ist erforderlich! Nicht für ONE+ verfügbar.**
+**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
 ### Installiere eine neue gepatchte (!) G7-App und starte den Sensor
 
-This is not the BYODA app as this app can not receive G7 data at the moment. A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data.
+A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
 - Wenn Du bisher die originale Dexcom-App genutzt hast, musst Du diese im ersten Schritt nun deinstallieren. Wenn Du den Sensor-Kopplungscode noch kennst, kannst Du eine laufende Sensorsitzung weiterführen. Bitte merke ihn Dir daher, bevor Du die originale G7-App deinstallierst.
 
@@ -53,7 +56,7 @@ This is not the BYODA app as this app can not receive G7 data at the moment. A p
 
 ## 4. Juggluco
 
-Version 9.0+ ist erforderlich
+Version 9.0+ required
 
 - Deaktiviere die App, die zuvor mit dem Sensor verbunden war: Deinstalliere die App oder nutze „Stopp erzwingen“ Deaktiviere in den App-Einstellungen die Berechtigung „Geräte in der Nähe“. Schränke den Akkuverbrauch der App ein.
 

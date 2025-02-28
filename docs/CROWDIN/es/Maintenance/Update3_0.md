@@ -20,11 +20,11 @@ orphan: true
 * Si se ha perdido alguna de las condiciones, es necesario que la añadas de nuevo.
 * Las automatizaciones que aparecen en rojo contienen acciones inválidas. Edítalas y establece valores válidos.
 
-  Ejemplo: Un cambio de perfil al 140% antes se permitía, pero ahora está restringido al 130%.
+  Example: A profile change to 140% was allowed earlier but is now restricted to 130%.
 
 ## Revisa la configuración de NSClient y configura las complicaciones de sincronización
 
-* La implementación del plugin de NSClient ha cambiado completamente.
+* The implementation of the nsclient plugin has changed completely.
 * Dirígete a la pestaña NSClient y abre la configuración en el menú de la derecha. Una nueva preferencia "Sincronización" está ahora disponible.
 * Ahora puedes realizar una selección detallada sobre qué elementos se sincronizarán con tu página de Nightscout.
 
@@ -34,12 +34,12 @@ orphan: true
 * Para copiar tu perfil actual de Nightscout a un perfil local, dirígete a la página de tratamientos (se abrirá en el menú de la derecha).
 * Busca el selector de perfil con un 100% y pulsa sobre la opción clonar.
 * Se añade un nuevo perfil local, válido desde la fecha actual.
-* Para actualizar el perfil desde Nightscout usa la opción "Clonar" (registro, no perfil) y guarda los cambios. Deberías ver "Perfil válido desde:" con la fecha actual.
+* Para actualizar el perfil desde Nightscout usa la opción "Clonar" (registro, no perfil) y guarda los cambios. You should see "Profile valid from:" set to current date.
 
 (Update3_0-reset-master-password)=
 ## Restablecer contraseña maestra
 * Ahora es posible restablecer la contraseña maestra, en caso de que se nos haya olvidado.
-* Es necesario añadir un fichero llamado `PasswordReset` en el directorio `/AAPS/extra` de tu teléfono.
+* You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones filesystem.
 * Reiniciar AAPS.
 * La nueva contraseña será el número de serie de la bomba de insulina que esté activa.
 * Para Dash: El número de serie siempre es 4241.

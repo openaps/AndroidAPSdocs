@@ -130,7 +130,7 @@ Pokud měníte telefon za nový, je nezbytné, abyste provedli následující kr
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](#pairing-pump).
+* Start pairing procedure as described [above](#pairing-pump).
 * Někdy může být nutné vymazat informace o párování v AAPS delším podržením ikony BT na kartě Dana-i/RS.
 
 ## Cestování mezi časovými pásmy s pumpou Dana RS

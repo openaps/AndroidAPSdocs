@@ -2,7 +2,7 @@
 
 # Detekcja wrażliwości (sensitivity)
 
-## Algorytmy detekcji wrażliwości na insulinę
+## Sensitivity algorithm
 
 Currently we have 3 sensitivity detection models:
 

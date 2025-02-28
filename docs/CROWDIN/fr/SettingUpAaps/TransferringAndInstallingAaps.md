@@ -2,7 +2,7 @@
 
 In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), you built the **AAPS** app (which is an .apk file) on a computer.
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip+ or another CGM reciever app) to your Android smartphone, and then **install** the app(s).
+The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip+ or another CGM receiver app) to your Android smartphone, and then **install** the app(s).
 
 Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
 
@@ -49,8 +49,8 @@ Une fois l'installation terminée, vous en avez terminé pour cette étape.
 you should see the **AAPS** icon and be able to open the app.
 
 ```{warning}
-**AVIS DE SÉCURITÉ IMPORTANT**
-Avez-vous pensé à désactiver l'autorisation d'installation depuis Google Drive ?
+**IMPORTANT SAFETY NOTICE**
+Did you remember to disallow the installation from Google Drive?
 ```
 
 Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).

@@ -87,7 +87,7 @@ L'approbation est une étape manuelle. En tant qu’organisation à but non lucr
     
     
 
-Vous traduisez le texte qui représente le lien. S'il vous plaît vous devez être prudent de ne **pas** supprimer le lien qui est représenté par une paire de balises `<0></0>` ou représentées par une aure nombre s'il y en a plusieurs dans un même paragraphe.
+Vous traduisez le texte qui représente le lien. Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
 
 C'est le travail des correcteurs pour avoir un regard spécial sur ça !
 

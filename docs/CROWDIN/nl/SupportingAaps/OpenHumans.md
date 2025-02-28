@@ -27,7 +27,7 @@ Geheime of persoonlijke informatie zoals je Nightscout URL of API-secret zal nie
 1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. Je kunt je bestaande Google of Facebook account gebruiken als je wilt.
 2. Enable the “Open Humans” plugin in [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
 3. Open de instellingen door op het tandwiel icoontje te tikken. Je kunt uploaden beperken tot momenten wanneer jouw telefoon gebruik maakt van Wi-Fi en/of wordt opgeladen.
-4. Open de Open Humans Plugin (via het menu OH-tabblad of hamburger menu) en klik op 'LOGIN'.
+4. Open the Open Humans Plugin (either through OH tab or hamburger menu) and click 'LOGIN'.
 
 ![Open Humans Config Builder](../images/OHUploader1.png)
 

@@ -303,7 +303,7 @@ Libre 使用者的特殊注意事項：
 
 大多數使用者發現以下附加圖表配置足夠：
 
-* 圖表 1 顯示 IOB、COB、敏感度變化
+* 圖表 1 包含 IOB、COB、敏感度變更
 * 圖表 2 包含偏差和 BGI。
 
 #### 絕對胰島素(Absolute insulin)
@@ -366,7 +366,7 @@ Libre 使用者的特殊注意事項：
 
 ![主畫面按鈕](../images/Home2020_Buttons.png)
 
-Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
+胰島素和碳水化合物的按鈕通常一直顯示。 如果與幫浦的連線中斷，計算機按鈕將不會顯示。
 
 其他按鈕可以在 [偏好設定 > 首頁總覽 > 按鈕](#Preferences-buttons) 中設定。
 

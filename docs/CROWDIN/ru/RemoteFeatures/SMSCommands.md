@@ -56,7 +56,7 @@ On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phon
 
 ![изображение](../images/remote-control-08.png)
 
-### Date and time synching
+### Date and time syncing
 
 Время на обоих телефонах должно быть синхронизировано. Оптимальный вариант - установить на автоматическую настройку из сети. Различия во времени могут привести к проблемам аутентификации.
 

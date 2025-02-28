@@ -254,7 +254,7 @@ Go back to the previous screen and select "Alarm option":
 
 ![image](../images/setup-wizard/Screenshot_20231202_141310.png)
 
-For now, leave the switches disabled. We only walked to the screen to make you familar with possible options you might configure in the future. At the moment there is no need to do it.
+For now, leave the switches disabled. We only walked to the screen to make you familiar with possible options you might configure in the future. At the moment there is no need to do it.
 
 Go back to the previous screen before and select "Connection settings".
 
@@ -262,7 +262,7 @@ Here you can configure how to transfer your data to the reporting server.
 
 Caregivers must enable "use cellular connection" as otherwise the smartphone which serves the dependant/child can not upload data outside of WiFi range _e.g._ on the way to school.
 
-Other **AAPS** users can disable the tranfer via cellular connection if they want to save data or battery.
+Other **AAPS** users can disable the transfer via cellular connection if they want to save data or battery.
 
 If in doubt, just leave all enabled.
 
@@ -276,7 +276,7 @@ It might be interesting to see if **AAPS** is correctly configured now, but late
 
 Enable "Create announcements from errors" and "Create announcements from carbs required alerts".
 
-Leave "Slow down uploads" disabled. You would only use it in unusual circumstances if for example a lot of information is to be transfered to the Nightscout server, and the Nightscout server is being slow in processing this data.
+Leave "Slow down uploads" disabled. You would only use it in unusual circumstances if for example a lot of information is to be transferred to the Nightscout server, and the Nightscout server is being slow in processing this data.
 
 Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
@@ -412,7 +412,7 @@ Save the profile by clicking on "SAVE":
 ![image](../images/setup-wizard/Screenshot_20231202_143724.png)
 
 
-After saving a new buttom "Activate Profile" occurs.
+After saving, a new button "Activate Profile" appears.
 
 ```{admonition} Several defined but only one active profile
 :class: information
@@ -480,7 +480,7 @@ Press "NEXT" to go to the next screen:
 
 ## APS algorithm
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
+Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
 
 The reason SMB is disabled in the beginning is because the SMB feature enables faster reaction on blood sugar increase through the Super Micro Bolus instead of increasing the basal rate percentage. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
 

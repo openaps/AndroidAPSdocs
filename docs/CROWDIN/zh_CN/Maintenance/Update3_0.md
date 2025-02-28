@@ -20,11 +20,11 @@ orphan: true
 * If one of the conditions is missing, you need to add it again.
 * Red automations contain invalid actions, go and edit them and reset to valid values
 
-  Example: A profile change to 140% was allowed earlier but is now restriced to 130%.
+  Example: A profile change to 140% was allowed earlier but is now restricted to 130%.
 
 ## Check your nsclient settings and set the synchronization complications
 
-* The implementation of the nsclient plugin has changed completly.
+* The implementation of the nsclient plugin has changed completely.
 * Go to the nsclient tab and open the settings in the right-hand menu. A new preference "Synchronization" is available now.
 * You can now make a detailed selection about which items shall be synchronized with your Nightscout site.
 
@@ -34,12 +34,12 @@ orphan: true
 * To copy your current nightscout profile into a local profile, go to the treatments page (now to be opened in the right-hand menu).
 * Search for a profile switch with 100% and press clone.
 * A new local profile is added, valid from the current date.
-* To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date.
+* To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to current date.
 
 (Update3_0-reset-master-password)=
 ## Reset master password
 * You can now reset your master password in case you have forgotten it.
-* You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones fileystem.
+* You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones filesystem.
 * Restart AAPS.
 * The new password will be the serial number of your active pump.
 * For Dash: The serial number is always 4241.

@@ -10,7 +10,10 @@ orphan: true
 Следует отметить, что системы G7 и ONE+, в отличие от G6, не сглаживают значения ГК ни в самом приложении, ни в считывателе. Подробнее об этом [здесь](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ![G7 английский](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
-`{admonition} [метод сглаживания](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
+
+```{admonition} Smoothing method 
+Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+```
 
 ## 1. xDrip+ (прямое соединение с G7 или ONE+)
 
@@ -21,11 +24,11 @@ orphan: true
 
 ## 2.  Модифицированное приложение Dexcom G7 (DiAKEM)
 
-**Примечание: Требуется AAPS 3.2.0.0 или выше! Недоступно для ONE+.**
+**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
 ### Установите новое модифицированное (!) приложение G7 и запустите сенсор
 
-Модифицированное приложение Dexcom G7 (DiAKEM) обеспечивает доступ к данным Dexcom G7. Это приложение отличается от самостоятельно собранного приложения Dexcom BYODA; BYODA не может получать данные G7.
+A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
 - Удалите оригинальное приложение Dexcom, если вы его использовали прежде (Рабочая сессия сенсора может продолжаться - запишите код сенсора перед удалением приложения!)
 
@@ -53,7 +56,7 @@ orphan: true
 
 ## 4. Juggluco
 
-Требуется версия 9.0 и выше
+Version 9.0+ required
 
 - Отключите приложение, ранее подключенное к датчику: удалите приложение или выполните «Остановить принудительно» Отключите разрешение для"Устройств поблизости" в настройках приложения. Ограничьте использование батареи в приложении.
 

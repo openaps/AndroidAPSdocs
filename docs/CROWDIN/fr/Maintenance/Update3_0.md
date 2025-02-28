@@ -20,11 +20,11 @@ orphan: true
 * Si l'une des conditions est manquante, vous devez l'ajouter à nouveau.
 * Les automatisations en rouge contiennent des actions invalides, modifiez les et réinitialisez avec des valeurs valides
 
-  Exemple : Un changement de profil à 140% était autorisé avant, mais il est maintenant restreint à 130%.
+  Example: A profile change to 140% was allowed earlier but is now restricted to 130%.
 
 ## Vérification de vos paramètres NSClient et des options de synchronisation
 
-* L'implémentation du plugin NSClient a complètement changé.
+* The implementation of the nsclient plugin has changed completely.
 * Allez dans l'onglet NSClient et ouvrez les paramètres dans le menu de droite. Une nouvelle option "Synchronisation" est maintenant disponible.
 * Vous pouvez maintenant choisir en détail quels éléments seront synchronisés avec votre site Nightscout.
 
@@ -34,12 +34,12 @@ orphan: true
 * Pour copier votre profil Nightscout actuel dans un profil local, allez sur la page Traitements (maintenant accessible dans le menu de droite).
 * Recherchez un changement de profil avec 100% et appuyez sur "dupliquer".
 * Un nouveau profil local est ajouté, valable à partir de la date actuelle.
-* Pour mettre à jour le profil du côté NS, utilisez "Clone" (enregistrement!!, pas profil) et enregistrez les modifications. Vous devriez voir "Profil valide à partir de :" et la date actuelle.
+* Pour mettre à jour le profil du côté NS, utilisez "Clone" (enregistrement!!, pas profil) et enregistrez les modifications. You should see "Profile valid from:" set to current date.
 
 (Update3_0-reset-master-password)=
 ## Réinitialiser le mot de passe principal
 * Vous pouvez maintenant réinitialiser votre mot de passe principal au cas où vous l'auriez oublié.
-* Vous devez ajouter un fichier nommé `PasswordReset` dans le répertoire `/AAPS/extra` du système de fichiers de votre téléphone.
+* You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones filesystem.
 * Redémarrez AAPS.
 * Le nouveau mot de passe sera le numéro de série de votre pompe active.
 * Pour Dash: Le numéro de série est toujours 4241.

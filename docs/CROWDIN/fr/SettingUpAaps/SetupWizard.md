@@ -254,7 +254,7 @@ Retournez à l'écran précédent et cliquez sur "Option d'alarme" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_141310.png)
 
-Pour l'instant, laissez ces options désactivées. Nous vous avons simplement amenés sur cet écran pour vous montrer les différentes options que vous pourriez utiliser à l'avenir. Pour le moment, vous n'en avez pas besoin.
+Pour l'instant, laissez ces options désactivées. We only walked to the screen to make you familiar with possible options you might configure in the future. Pour le moment, vous n'en avez pas besoin.
 
 Retournez à l'écran précédent et sélectionnez "Paramètres de connexion".
 
@@ -262,7 +262,7 @@ Ici vous pouvez affiner les conditions de téléchargement vers le serveur de re
 
 Caregivers must enable "use cellular connection" as otherwise the smartphone which serves the dependant/child can not upload data outside of WiFi range _e.g._ on the way to school.
 
-Other **AAPS** users can disable the tranfer via cellular connection if they want to save data or battery.
+Other **AAPS** users can disable the transfer via cellular connection if they want to save data or battery.
 
 Si vous ne savez pas trop, laissez simplement tout coché.
 
@@ -276,7 +276,7 @@ It might be interesting to see if **AAPS** is correctly configured now, but late
 
 Activer "Créer des messages d'erreur" et "Créer des annonces à partir des alertes Glucides requis".
 
-Laissez la fonction "Ralentir les téléversements" désactivée. Cette option n'est utile que dans un contexte particulier, si par exemple vous avez beaucoup de données à envoyer au serveur Nightscout, et que ce serveur est lent à traiter les données.
+Laissez la fonction "Ralentir les téléversements" désactivée. You would only use it in unusual circumstances if for example a lot of information is to be transferred to the Nightscout server, and the Nightscout server is being slow in processing this data.
 
 Revenez deux fois en arrière, jusqu'à la liste des plugins et sélectionnez "SUIVANT" pour passer à la suite :
 
@@ -412,7 +412,7 @@ Enregistrez le profil en cliquant sur "ENREGISTRER" :
 ![image](../images/setup-wizard/Screenshot_20231202_143724.png)
 
 
-Après avoir enregistré, un nouveau bouton "Activer le Profil" apparaît.
+After saving, a new button "Activate Profile" appears.
 
 ```{admonition} Several defined but only one active profile
 :class: information
@@ -480,7 +480,7 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant :
 
 ## APS algorithm
 
-Choisissez l'algorithme SMB OpenAPS comme algorithme APS. Malgré son nom, la fonctionnalité SMB de l'algorithme est désactivée jusqu'à ce que vous soyez familier avec AAPS et ayez déjà travaillé sur les premiers objectifs. L'algorithme OpenAPS SMB est plus récent et de manière générale meilleur par rapport à OpenAPS AMA de toute façon.
+Choisissez l'algorithme SMB OpenAPS comme algorithme APS. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. L'algorithme OpenAPS SMB est plus récent et de manière générale meilleur par rapport à OpenAPS AMA de toute façon.
 
 La raison pour laquelle le SMB est désactivé au début est que la fonction SMB permet une réaction plus rapide à l'augmentation de la glycémie, en remplaçant une augmentation de la basale par un Super Micro Bolus. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
 

@@ -39,7 +39,7 @@ Vzniklo také několik komerčních systémů s hybridní uzavřenou smyčkou, p
 
 Android APS (**AAPS**) je systém hybridní uzavřené smyčky nebo také systém umělé slinivky (APS). Vypočítává dávkování inzulínu pomocí zavedených [OpenAPS](https://openaps.org/) algoritmů (souboru pravidel), vyvinutých komunitou pacientů s diabetem I. typu #WeAreNotWaiting.
 
-Zatímco OpenAPS je kompatibilní pouze s určitými staršími inzulinovými pumpami, **AAPS** (který je možné využít s širší paletou inzulínových pump) byl vyvinut v roce 2016 Milošem Kozákem pro člena rodiny, který byl diagnostikován diabetem I. typu. Od těchto prvních dnů byl **AAPS** neustále vyvíjen a vylepšován týmem dobrovolných aplikačních vývojářů a dalšími nadšenci, kteří jsou ve spojení se světem diabetu I. typu. Dnes **AAPS** využívá přibližně 10 000 lidí. Je to vysoce přizpůsobitelný a univerzální open-source systém, který je zároveň kompatibilní s mnoha jinými open-source softwary a platformami zaměřenými na diabetes. Základní komponenty současné verze **AAPS** systému jsou znázorněny na **obrázku 1** výše.
+Zatímco OpenAPS je kompatibilní pouze s určitými staršími inzulinovými pumpami, **AAPS** (který je možné využít s širší paletou inzulínových pump) byl vyvinut v roce 2016 Milošem Kozákem pro člena rodiny, který byl diagnostikován diabetem I. typu. Od těchto prvních dnů byl **AAPS** neustále vyvíjen a vylepšován týmem dobrovolných aplikačních vývojářů a dalšími nadšenci, kteří jsou ve spojení se světem diabetu I. typu. Dnes **AAPS** využívá přibližně 10 000 lidí. It is a highly customisable and versatile system, and because it is open-source, it is also readily compatible with many other open-source diabetes software and platforms. Základní komponenty současné verze **AAPS** systému jsou znázorněny na **obrázku 1** výše.
 
 
 
@@ -222,7 +222,7 @@ Pokud váš lékařský tým nepodporuje smyčku s **AAPS**, mohou pomoci násle
 
 a) Systém **AAPS** byl navržen pacienty a jejich pečovateli. Byl koneckonců navržen s ohledem na bezpečnost, ale také na základě důkladných zkušeností pacientů. V současné době je kolem **10,000** uživatelů AAPS po celém světě. Je proto pravděpodobné, že mezi pacienty vašeho lékažského zařízení jsou uživatelé DIY smyčky (ať už o tom lékaři vědí nebo ne).
 
-b) Nedávno zveřejněné pokyny v předním mezinárodním lékařském periodiku [Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ potvrdily, že DIY symčky jsou **bezpečné** a **účinné při zlepšování kontroly diabetu** včetně času v rozsahu. V předních časopisech, jako je [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_, se objevují pravidelné články, které zdůrazňují pokrok DIY komunity.
+b) Nedávno zveřejněné pokyny v předním mezinárodním lékařském periodiku [Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ potvrdily, že DIY symčky jsou **bezpečné** a **účinné při zlepšování kontroly diabetu** včetně času v rozsahu. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_ which highlight the progress of the DIY looping community.
 
 c) Rozběh používání **AAPS** vyžaduje _zvolna postupovat_ od "otevřené" smyčky, přes vypnutí při nízké glykémii až po hybridní "uzavřenou" smyčku, a to postupným plněním množství cílů. Existuje tedy strukturovaný postup vyžadující, aby uživatel prokázal úroveň své odborné způsobilosti v každém stadiu a doladil své základní nastavení (bazály, ISF a ICR) dříve, než může smyčku "uzavřít".
 

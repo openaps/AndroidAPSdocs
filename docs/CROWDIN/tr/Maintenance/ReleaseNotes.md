@@ -64,7 +64,7 @@ Release date: 21-01-2025
 
 * Dash: bonding is optional (default off) @MilosKozak
 * Equil: fixed bolud 10+U, alarm improvements @EquilHack
-* Garmin: watch improvents @swissalpine
+* Garmin: watch improvements @swissalpine
 * Watch improvements @olorinmaia
 * Control loop status from watch @tdrkDev
 * Stability improvements
@@ -217,8 +217,8 @@ Release date: 23-10-2023
 ### Önemli ipuçları
 
 - NS 15 is required
-- NS v3 eklentisinde websockets kullanırken, NS UI (artı düğmesi) aracılığıyla girilen işlemler ve v1 API kullanan diğer uygulamalar AAPS'e gönderilmez. Bu, NS'nin gelecekteki sürümünde düzeltilecektir. NS tamamen dahili olarak v3'e geçene kadar AAPS ve AAPSClient'te her zaman aynı istemciyi (v1 veya v3) kullanın. Aynısı AAPS ve AAPSClient'in kendisi için de geçerlidir.
-- v3 eklentisindeki websockets, v1 eklentisine benzer şekilde çalışır. AAPS, etkinleştirilmiş web yuvaları olmadan, NS'den düzenli olarak indirmeleri planlar ve bu, NS kalıcı olarak bağlı olmadığı için daha düşük güç tüketir. Bu da karşı tarafta, veri alışverişinde gecikmeler anlamına gelir. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
+- NS v3 eklentisinde websockets kullanırken, NS UI (artı düğmesi) aracılığıyla girilen işlemler ve v1 API kullanan diğer uygulamalar AAPS'e gönderilmez. Bu, NS'nin gelecekteki sürümünde düzeltilecektir. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internally. Aynısı AAPS ve AAPSClient'in kendisi için de geçerlidir.
+- Websockets in v3 plugin work in a similar manner as v1 plugin. AAPS, etkinleştirilmiş web yuvaları olmadan, NS'den düzenli olarak indirmeleri planlar ve bu, NS kalıcı olarak bağlı olmadığı için daha düşük güç tüketir. On the opposite side it means delays in exchanging data. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
 - Cgm kaynağı olarak xdrip kullanıyorsanız, dahili değişiklikler nedeniyle güncellemeden sonra tekrar seçmelisiniz.
 - Tidepool, ilk görevi geçmek için NS yerine kullanılabilir
 - xDrip+'a gönderirseniz, xDrip senkronizasyon eklentisini yapılandırmanız gerekir. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
@@ -254,7 +254,7 @@ Release date: 23-10-2023
 - Bolus sihirbazında değişiklik. CGM mevcut değilse, yüzde göz ardı edilir (yani %100 kullanılır)
 - migration to kts build system @MilosKozak
 - improved CI integration @MilosKozak @buessow
-- tests cleaup @ryanhaining @MilosKozak
+- tests cleanup @ryanhaining @MilosKozak
 - new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
@@ -277,11 +277,11 @@ LIMITATIONS
 - NS 15 must be used with AAPS 3.2
 - v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
 - in opposite because of old uneffective method of tracking changes v1 see changes done by v3
-- remember NS still uses v1 internaly so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
+- remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
 
 RECOMMENDED SETTING
 - because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
-- v3 is preffered because of efficiency
+- v3 is preferred because of efficiency
 - using websockets or not using with v3 depends on your preference
 - it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
 
@@ -433,7 +433,7 @@ Yayınlanma tarihi: 12-01-2021
 - SMB & Dexcom uyg. için düzeltmeler
 - saat arayüzü düzeltmeleri
 - kilitlenme raporlaması iyileştirildi
-- doğrudan saat yüzü kurulumuna izin vermek için gradle geri alındı
+- gradle reverted to allow direct watchface installation
 - otomasyon düzeltmeleri
 - RS sürücüsü iyileştirmesi
 - çeşitli çökme düzelmeleri
@@ -459,10 +459,10 @@ Yayınlanma tarihi: 01-01-2021
 - New watchface @rICTx-T1D
 - Dana RS bağlantı iyileştirmeleri @MilosKozak
 - Dexcom yerel uygulaması için SMB'deki "Değiştirilmemiş CGM değerleri" davranışı kaldırıldı
-- New [Low Ressolution Skin](#Preferences-skin)
+- New [Low Resolution Skin](#Preferences-skin)
 - New ["Pregnant" patient type](#Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
 - Yeni NSClient tablet düzeni @MilosKozak
-- NSClient insülin, hassasiyet ve ekran ayarlarını doğrudan ana AAPS'den aktarır @MilosKozak
+- NSClient transfer insulin, sensitivity and display settings directly from main AAPS @MilosKozak
 - [Preferences filter](../SettingUpAaps/Preferences.md) @Brian Quinion
 - Yeni pompa simgeleri @Rig22 @@teleriddler @osodebailar
 - New [insulin type Lyumjev](#Config-Builder-lyumjev)
@@ -592,7 +592,7 @@ Apk'yi oluşturmak için lütfen [Android Studio sürüm 3.6.1](https://develope
   - Profiller klonlanabilir ve düzenlenebilir
   - NS'ye profil yükleme yeteneği
   - Eski profil değişimleri Yerel Profil'de yeni profile kopyalanabilir (zaman kaydırma ve yüzde uygulanır)
-  - Hedefler için Dikey NumberPicker
+  - Vertical NumberPicker for targets
 
 - Basit profil kaldırıldı
 
@@ -724,7 +724,7 @@ Yayınlanma tarihi: 03-03-2019
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
 - Ana ekranda durum ışıkları (Nico Schmitz)
 - Yaz saati uygulaması yardımcısı (Roumen Georgiev)
-- NS'den gelen profili adları düzeltmesi (Johannes Mockenhaupt)
+- Fix processing profile names coming from NS (Johannes Mockenhaupt)
 - Kullanıcı arayüzü blokaj düzeltmesi (Johannes Mockenhaupt)
 - Güncellenmiş G5 uygulaması desteği (Tebbe Ubben ve Milos Kozak)
 - G6, Poctech, Tomato, Eversense KŞ kaynağı desteği (Tebbe Ubben ve Milos Kozak)

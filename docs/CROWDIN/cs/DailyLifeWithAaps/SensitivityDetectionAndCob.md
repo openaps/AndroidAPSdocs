@@ -2,7 +2,7 @@
 
 # Detekce citlivosti
 
-## Algoritmus citlivosti
+## Sensitivity algorithm
 
 V současnosti máme 3 modely detekce citlivosti:
 

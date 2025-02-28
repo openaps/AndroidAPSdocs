@@ -2,7 +2,7 @@
 
 在之前的部分，[构建AAPS](../SettingUpAaps/BuildingAaps.md)中，您已经在计算机上构建了AAPS应用程序（这是一个.apk文件）。
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip+ or another CGM reciever app) to your Android smartphone, and then **install** the app(s).
+The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip+ or another CGM receiver app) to your Android smartphone, and then **install** the app(s).
 
 在智能手机上安装**AAPS**之后，您就可以继续进行[**配置AAPS闭环**](../SettingUpAaps/SetupWizard.md)了。
 
@@ -49,8 +49,8 @@ The next steps are to **transfer** the **AAPS** APK file (as well as other apps 
 您应该能够看到**AAPS**图标，并能够打开应用程序。
 
 ```{warning}
-重要安全提示
-您是否记得禁止从Google Drive安装应用？
+**IMPORTANT SAFETY NOTICE**
+Did you remember to disallow the installation from Google Drive?
 ```
 
 请继续[配置AAPS闭环](../SettingUpAaps/SetupWizard.md)。

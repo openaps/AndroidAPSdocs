@@ -85,7 +85,7 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
     
 
-Wenn Du einen Text mit einem Link übersetzt, achte darauf den Link **nicht** zu entfernen, der durch ein Paar `<0></0>` Tags dargestellt wird oder mit einer anderen Zahl, falls mehrere Links in einem Absatz enthalten sind.
+Wenn Du einen Text mit einem Link übersetzt, Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
 
 Es ist die Aufgabe des Proofreaders, einen besonderen Blick darauf zu haben!
 

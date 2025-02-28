@@ -28,7 +28,7 @@
 
 一个重要的安全考虑是，**对于那些血糖水平已经升高了一段时间的人来说，糖化血红蛋白（HbA1c）的快速降低和血糖控制的改善可能会造成永久性损害**。 许多糖尿病患者并不了解这一点，而且并非所有临床医生都会让患者意识到这个问题。
 
-这种损害可能包括**视力丧失和永久性神经病变（疼痛）**。 通过更缓慢地降低平均血糖水平，有可能避免这种损害的发生。 如果您目前的 HbA1c 偏高，并准备改用 **AAPS**（或任何其他闭环系统），_请_在开始之前与您的临床团队讨论这一潜在风险，并与他们商定一个时间计划。 在**AAPS**系统中，您可以轻松地先设定较高的血糖目标（目前，您可以选择的最高目标是10.6 mmol/L，但如果需要，您也可以保持一个故意设置得较宽松的控制方案），然后随着月份的推移逐步降低目标。
+这种损害可能包括**视力丧失和永久性神经病变（疼痛）**。 It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. 如果您目前的 HbA1c 偏高，并准备改用 **AAPS**（或任何其他闭环系统），_请_在开始之前与您的临床团队讨论这一潜在风险，并与他们商定一个时间计划。 在**AAPS**系统中，您可以轻松地先设定较高的血糖目标（目前，您可以选择的最高目标是10.6 mmol/L，但如果需要，您也可以保持一个故意设置得较宽松的控制方案），然后随着月份的推移逐步降低目标。
 
 #### 在不造成永久性损害的情况下，能多快降低我的糖化血红蛋白（HbA1c）水平？
 
@@ -122,7 +122,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 #### [临床医生部分](../UsefulLinks/ClinicianGuideToAaps.md)
 
-这是一个[专门为临床医生设置的章节](../UsefulLinks/ClinicianGuideToAaps.md)，旨在为那些想要了解更多关于AAPS（AndroidAPS）和开源人工胰腺技术的人提供信息。 在引言部分还提供了[如何与你的临床团队沟通](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)的指导。
+This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. 在引言部分还提供了[如何与你的临床团队沟通](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)的指导。
 
 ## 我们要构建和安装什么？
 
@@ -219,8 +219,8 @@ The current version of **AAPS** (3.3) requires an Android smartphone with Google
 
 ```{admonition} delaying Samsung phones updates
 :class:警告
-三星有着不幸的记录，他们强制推送手机更新，而这些更新却导致了蓝牙连接问题。 要禁用这些强制更新，您需要将手机切换到‘开发者模式’，方法是：
-进入设置，然后点击关于手机中的软件信息，接着连续点击版本号，直到系统确认您已解锁开发者模式。 返回到主设置菜单，您应该会看到一个新的‘开发者选项’菜单项。 打开开发者选项，滚动查找‘自动系统更新’并将其关闭。
+三星有着不幸的记录，他们强制推送手机更新，而这些更新却导致了蓝牙连接问题。 To disable these forced updates you need to switch the phone to "developer mode" by:
+ go to settings and about then software information, then tap build number u til it confirms you have unlocked developer mode. 返回到主设置菜单，您应该会看到一个新的‘开发者选项’菜单项。 打开开发者选项，滚动查找‘自动系统更新’并将其关闭。
 ```
 
 ```{admonition} Google Play Protect potential Issue

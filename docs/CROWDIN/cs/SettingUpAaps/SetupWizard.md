@@ -254,7 +254,7 @@ Vraťte se na předchozí obrazovku a vyberte "Nastavení alarmů":
 
 ![image](../images/setup-wizard/Screenshot_20231202_141310.png)
 
-Prozatím ponechte přepínače vypnuté. Na obrazovku jsme se vrátili pouze proto, abyste se seznámili s možnostmi, které možná budete v budoucnu konfigurovat. V tuto chvíli to není třeba dělat.
+Prozatím ponechte přepínače vypnuté. We only walked to the screen to make you familiar with possible options you might configure in the future. V tuto chvíli to není třeba dělat.
 
 Vraťte se na předchozí obrazovku a vyberte "Nastavení připojení".
 
@@ -262,7 +262,7 @@ Zde je možné nastavit jak se budou přenášet data na váš reportovací serv
 
 Caregivers must enable "use cellular connection" as otherwise the smartphone which serves the dependant/child can not upload data outside of WiFi range _e.g._ on the way to school.
 
-Other **AAPS** users can disable the tranfer via cellular connection if they want to save data or battery.
+Other **AAPS** users can disable the transfer via cellular connection if they want to save data or battery.
 
 Pokud máte pochybnosti, ponechte vše povoleno.
 
@@ -276,7 +276,7 @@ It might be interesting to see if **AAPS** is correctly configured now, but late
 
 Povolte "Vytvořit oznámení z chyb" a "Vytvořit oznámení z návrhu sacharidů".
 
-Položku "Zpomalit odesílání" ponechte vypnutou. Použijete ji pouze v neobvyklých případech, jako například pokud potřebujete přenést velké množství informací a Nightscout server zpracovává tato data pomalu.
+Položku "Zpomalit odesílání" ponechte vypnutou. You would only use it in unusual circumstances if for example a lot of information is to be transferred to the Nightscout server, and the Nightscout server is being slow in processing this data.
 
 Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
@@ -412,7 +412,7 @@ Uložte profil kliknutím na tlačítko "ULOŽIT":
 ![image](../images/setup-wizard/Screenshot_20231202_143724.png)
 
 
-Po uložení profilu se objeví nové tlačítko "AKTIVOVAT PROFIL".
+After saving, a new button "Activate Profile" appears.
 
 ```{admonition} Several defined but only one active profile
 :class: information
@@ -480,7 +480,7 @@ Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 
 ## APS algorithm
 
-Vyberte OpenAPS SMB jako váš APS algoritmus. Bez ohledu na název bude SMB funkce algoritmu vypnutá dokud se s **AAPS** blíže neseznámíte a nepropracujete se počátečními cíli. OpenAPS SMB algoritmus je každopádně novější a obecně lepší než OpenAPS AMA.
+Vyberte OpenAPS SMB jako váš APS algoritmus. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. OpenAPS SMB algoritmus je každopádně novější a obecně lepší než OpenAPS AMA.
 
 Důvodem k vypnutí funkce SMB na začátku je ten, že SMB umožňuje rychlejší reakci na stav cukru v krvi díky využití mikrobolusů namísto zvýšení úrovně bazálu. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
 

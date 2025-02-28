@@ -2,7 +2,7 @@
 
 # Duyarlılık algılama
 
-## Duyarlılık algoritması
+## Sensitivity algorithm
 
 Şu anda 3 duyarlılık algılama modelimiz var:
 

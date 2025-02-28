@@ -130,7 +130,7 @@ Falls Du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
 ### DanaRS v3, Dana-i
 
-* Starte den Kopplungsprozess wie [oben](#pairing-pump) beschrieben.
+* Start pairing procedure as described [above](#pairing-pump).
 * In Einzelfällen muss die Koppelung im alten Smartphone zunächst gelöscht werden. Um die Koppelung in AAPS zu löschen, drückst Du in der Dana-i/RS-Registerkarte lange auf das Bluetooth-Symbol.
 
 ## Mit der Dana RS Pumpe über Zeitzonen hinweg reisen

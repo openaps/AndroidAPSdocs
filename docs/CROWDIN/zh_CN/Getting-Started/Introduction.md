@@ -39,7 +39,7 @@
 
 安卓 APS（**AAPS**）是一个混合闭环系统，或称人工胰腺系统（APS）。 它使用 #WeAreNotWaiting 1 型糖尿病社区开发的 [OpenAPS 算法](https://openaps.org/)（一套计算规则）进行胰岛素剂量计算。
 
-由于 OpenAPS 只与某些较老的胰岛素泵兼容，因此 **AAPS**（可与更广泛的胰岛素泵配合使用）是 Milos Kozak 于 2016 年为一位患有 1 型糖尿病的家庭成员开发的。 自那时起， 很多与1型糖尿病有关的志愿者和技术爱好者加入了进来，不断开发和完善**AAPS** 。 目前， **AAPS** 已经被近万人使用。 这是一个可以高度定制化和多功能的系统，因为开源，所以还很容易兼容其他许多开源糖尿病软件和平台。 现行 **AAPS** 系统的基本组成部分如上**图 1** 所示。
+由于 OpenAPS 只与某些较老的胰岛素泵兼容，因此 **AAPS**（可与更广泛的胰岛素泵配合使用）是 Milos Kozak 于 2016 年为一位患有 1 型糖尿病的家庭成员开发的。 自那时起， 很多与1型糖尿病有关的志愿者和技术爱好者加入了进来，不断开发和完善**AAPS** 。 目前， **AAPS** 已经被近万人使用。 It is a highly customisable and versatile system, and because it is open-source, it is also readily compatible with many other open-source diabetes software and platforms. 现行 **AAPS** 系统的基本组成部分如上**图 1** 所示。
 
 
 
@@ -222,7 +222,7 @@ The current master version of **AAPS** (3.3.1.3) does not have any machine learn
 
 a) **AAPS** 系统是由患者及其护理人员设计的。 它的设计最终是为了安全，但也借鉴了病人的经验。 目前全球约有 **10,000** 名 AAPS 用户。 因此，在您诊所的患者群体中，很可能还有其他患者在使用 DIY 闭环（无论他们是否知道）。
 
-b) 国际权威医学杂志《柳叶刀》（[The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_）最近发表的专家共识指南证实，DIY 闭环在改善糖尿病控制（包括入框时间）方面是**安全****有效**的。 《自然》（[Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_）等权威期刊定期发表文章，重点介绍 DIY 闭环社区的进展情况。
+b) 国际权威医学杂志《柳叶刀》（[The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_）最近发表的专家共识指南证实，DIY 闭环在改善糖尿病控制（包括入框时间）方面是**安全****有效**的。 There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_ which highlight the progress of the DIY looping community.
 
 c) 从 **AAPS** 开始，需要完成一系列目标，从 "开环 "泵，到低血糖暂停，再到混合 "闭环"，_逐步_过渡到 "闭环" 。 因此，有一个结构化的方案，要求用户在每个阶段都表现出一定的能力，并在启用闭环之前对其基本设置（基础率、ISF 和 ICR）进行调优。
 

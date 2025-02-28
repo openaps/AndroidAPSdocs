@@ -94,7 +94,7 @@ Poznámka: V tichém režimu se stále spustí alarm v AAPS v závislosti na nas
 
 ***Výchozí: Povoleno.***
 
-Toto nastavení mění způsob, jakým AAPS zobrazí upozornění na nekritická varování pumpy. Když je povoleno, na telefonu se zobrazí oznámení, když dojde k varování pumpy, včetně:
+This settings changes the way AAPS will show notification on non critical pump warnings. Když je povoleno, na telefonu se zobrazí oznámení, když dojde k varování pumpy, včetně:
     - Slabá baterie
     - Nízký stav zásobníku (20 U)
     - Připomenutí expirace patche
@@ -248,7 +248,7 @@ Chcete-li deaktivovat aktuálně aktivní patch, přejděte na [kartu Medtrum](#
 
 ![Deaktivace patche](../images/medtrum/activation/DeactivatePatch.png)
 
-Budete požádáni o potvrzení, že chcete deaktivovat aktuální patch. **Upozornění: Tuto akci nelze vrátit zpět.** Po dokončení deaktivace můžete stisknout tlačítko **Další** a pokračovat v procesu aktivace nového patche. Pokud nejste připraveni aktivovat nový patch, stiskněte **Zrušit** pro návrat na hlavní obrazovku.
+Budete požádáni o potvrzení, že chcete deaktivovat aktuální patch. **Please note that this action is not reversible.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. Pokud nejste připraveni aktivovat nový patch, stiskněte **Zrušit** pro návrat na hlavní obrazovku.
 
 ![Průběh deaktivace](../images/medtrum/activation/DeactivateProgress.png)
 

@@ -10,7 +10,10 @@ orphan: true
 Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. Bununla ilgili daha fazla ayrıntıya [buradan](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app) ulaşabilirsiniz.
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
-`{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
+
+```{admonition} Smoothing method 
+Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+```
 
 ## 1. xDrip+ (direct connection to G7 or ONE+)
 

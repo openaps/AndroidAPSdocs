@@ -80,7 +80,7 @@ Insight还会记录历史条目，记录时间更改的时刻以及从（旧）�
 
 ### Accu-Chek Combo
 
-**注意**：如上所述，本节内容仅适用于基于旧版Ruffy的驱动程序。 新版驱动程序会自动调整日期、时间和夏令时。
+**NOTE**: As mentioned above, this section is only valid for the old, Ruffy-based driver. 新版驱动程序会自动调整日期、时间和夏令时。
 
 如果泵和手机之间的时间相差太大，AAPS会发出警报。 在夏令时调整时间的情况下，这会在午夜发生。 为防止这种情况发生并确保你的睡眠，请按照以下步骤操作，以便在方便的时候强制更改时间：
 

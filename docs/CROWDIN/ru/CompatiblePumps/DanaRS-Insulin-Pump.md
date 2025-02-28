@@ -130,7 +130,7 @@ orphan: true
 
 ### DanaRS v3, Dana-i
 
-* Начните процедуру сопряжения как описано [выше](#pairing-pump).
+* Start pairing procedure as described [above](#pairing-pump).
 * Иногда необходимо очистить информацию о сопряжении в AAPS - долгое нажатие на иконке BT на вкладке Dana-i/RS.
 
 ## Пересечение часовых поясов с помпой Dana RS

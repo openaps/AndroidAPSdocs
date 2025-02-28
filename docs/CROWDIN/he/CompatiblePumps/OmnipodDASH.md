@@ -410,7 +410,7 @@ Insulin level displayed is the amount reported by DASH. עם זאת, הוא מד
 
 ### מניעת שגיאה 49 - כישלונות פוד
 
-כשל זה קשור למצב פוד שגוי עבור פקודה או שגיאה במהלך פקודת אספקת אינסולין. זה קורה כאשר מנהל ההתקן והפוד אינם מסכימים על המצב בפועל. הפוד (כאמצעי בטיחות מובנה) מגיב עם קוד שגיאה 49 סופני (0x31) והפוד, בסופו של דבר, הופך למה שמכונה פוד "צרחן": צפצוף ארוך ומרגיז שניתן לעצור רק על ידי ניקוב חור במיקום מתאים בחלק האחורי של הפוד. לעתים קרובות קשה לברר את המקור המדויק של "כשל פוד 49". מצבים שיש חשד לכישלון זה (למשל בקריסות אפליקציה, הפעלת גרסת פיתוח או התקנה מחדש).
+כשל זה קשור למצב פוד שגוי עבור פקודה או שגיאה במהלך פקודת אספקת אינסולין. זה קורה כאשר מנהל ההתקן והפוד אינם מסכימים על המצב בפועל. The Pod (out of a built-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. לעתים קרובות קשה לברר את המקור המדויק של "כשל פוד 49". מצבים שיש חשד לכישלון זה (למשל בקריסות אפליקציה, הפעלת גרסת פיתוח או התקנה מחדש).
 
 ### התראות המשאבה אינה נגישה
 
@@ -443,7 +443,7 @@ Exporting **AAPS** settings enables you to restore all your settings, and maybe 
 1. ייבוא כל קובץ מיוצא עדכני אמור לעבוד (ראה למעלה)
 2. ייבאו את ההגדרות.
 3. בדיקת על ההגדרות.
-4. ייתכן שיהיה עליכם **לבטל** את הפוד "הלא קיים" אם הגדרות הייבוא כוללות נתוני פוד פעילים כלשהם.
+4. You may need to **Deactivate** the "non existing" pod if the imported settings included any active pod data.
 
 ### ייבוא הגדרות המכילות מצב פוד מפוד לא פעיל
 

@@ -94,7 +94,7 @@ Note: In silent mode AAPS will still sound the alarm depending on your phone's v
 
 ***Default: Enabled.***
 
-This settings changes the way AAPS will show notification on non ciritical pump warnings. When enabled a Notification will be shown on the phone when a pump warning occurs, including:
+This settings changes the way AAPS will show notification on non critical pump warnings. When enabled a Notification will be shown on the phone when a pump warning occurs, including:
     - Low battery
     - Low reservoir (20 Units)
     - Patch expiration warning
@@ -248,7 +248,7 @@ To deactivate a currently active patch, go to the [Medtrum TAB](#overview) in th
 
 ![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
 
-You will be asked to confirm that you wish to deactivate the current patch. **Please note that this action is not reversable.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
+You will be asked to confirm that you wish to deactivate the current patch. **Please note that this action is not reversible.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
 
 ![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
 
