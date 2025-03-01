@@ -36,7 +36,7 @@ orphan: true
 
 ### 跳動的數值
 
-你可以嘗試更改 xDrip+ 中的噪音阻擋設置（設定 - 應用間設定 - 噪音阻擋），例如「阻擋非常高的噪音及更糟的情況」。 另請參見 [平滑血糖資料](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
+你可以嘗試更改 xDrip+ 中的干擾阻擋設置（設定 - 應用間設定 - 干擾阻擋），例如「阻擋非常高的干擾及更糟的情況」。 另請參見 [平滑血糖資料](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
 
 ### 負傳感器時間
 
