@@ -37,6 +37,7 @@ Wenn Du die Möglichkeit SMS-Befehle vom Smartphone der betreuenden Person aus s
 :depth: 1
 :local: true
 ```
+
 (sms-commands-authenticator-setup)=
 ### Konfiguration der Authenticator App
 
@@ -108,7 +109,6 @@ Anforderungen an die PIN sind:
 
 ![grafik](../images/remote-control-13.png)
 
-(sms-commands-authenticator-setup)=
 #### Konfiguration der Authenticator App
 
 * Folge den Anweisungen auf dem Bildschirm.
