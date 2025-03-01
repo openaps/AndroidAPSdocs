@@ -37,6 +37,7 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 :depth: 1
 :local: true
 ```
+
 (sms-commands-authenticator-setup)=
 ### Configuración de la aplicación de autenticación
 
@@ -108,7 +109,6 @@ PIN requirements are:
 
 ![imagen](../images/remote-control-13.png)
 
-(sms-commands-authenticator-setup)=
 #### Configuración de la aplicación de autenticación
 
 * Follow the step-by-step instructions on the screen.
