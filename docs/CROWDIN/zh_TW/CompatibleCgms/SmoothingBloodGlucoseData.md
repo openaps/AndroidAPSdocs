@@ -14,7 +14,7 @@ orphan: true
 
 ### 指數平滑
 
-一般來說，這是最建議的選項，因為它在解決噪音方面最具侵略性，並且會重新寫入最近的數值。 然而，請參閱下表以獲取其他具體建議。
+一般來說，這是最建議的選項，因為它在解決干擾方面最具侵略性，並且會重新寫入最近的數值。 然而，請參閱下表以獲取其他具體建議。
 
 ### 平均平滑
 
@@ -33,7 +33,7 @@ orphan: true
 | G5/G6/ONE     | 如果有干擾 |        | 建議使用  |
 | G7/ONE+/Stelo | 如果有干擾 | 如果穩定的話 |       |
 
-Libre 感測器的噪音較大，可能需要平滑處理。 在使用 xDrip+ 直接連線或[修補應用程式資料來源](https://xdrip.readthedocs.io/en/latest/install/libre2patch/)（接收來自其他應用程式的資料，包括 Juggluco）時，平滑處理已在[程式內完成](https://xdrip.readthedocs.io/en/latest/use/NFC/#smooth-libre-3-data-when-using-xxx-method)。
+Libre 感測器的干擾較大，可能需要平滑處理。 在使用 xDrip+ 直接連線或[修補應用程式資料來源](https://xdrip.readthedocs.io/en/latest/install/libre2patch/)（接收來自其他應用程式的資料，包括 Juggluco）時，平滑處理已在[程式內完成](https://xdrip.readthedocs.io/en/latest/use/NFC/#smooth-libre-3-data-when-using-xxx-method)。
 
 | 感測器 / 資料來源      | Juggluco | xDrip+ 直接 | xDrip+ 橋接 | xDrip+ 修補應用程式 |
 | --------------- |:--------:|:---------:|:---------:|:-------------:|

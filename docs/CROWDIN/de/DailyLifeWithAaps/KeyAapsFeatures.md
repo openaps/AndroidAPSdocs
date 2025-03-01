@@ -317,13 +317,13 @@ Standardwert: 2
 
 ## Übersicht der fest programmierten Limits
 
-|            | Kind  | Jugendlicher | Erwachsener | Insulinresistenter Erwachsener | Schwangere |
-| ---------- | ----- | ------------ | ----------- | ------------------------------ | ---------- |
-| MAXBOLUS   | 5,0   | 10,0         | 17,0        | 25,0                           | 60,0       |
-| MINDIA     | 5,0   | 5,0          | 5,0         | 5,0                            | 5,0        |
-| MAXDIA     | 9,0   | 9,0          | 9,0         | 9,0                            | 10,0       |
-| MINIC      | 2,0   | 2,0          | 2,0         | 2,0                            | 0,3        |
-| MAXIC      | 100,0 | 100,0        | 100,0       | 100,0                          | 100,0      |
-| MAXIOB_AMA | 3,0   | 5,0          | 7,0         | 12,0                           | 25,0       |
-| MAXIOB_SMB | 7,0   | 13,0         | 22,0        | 30,0                           | 70,0       |
-| MAXBASAL   | 2,0   | 5,0          | 10,0        | 12,0                           | 25,0       |
+|            | Kind | Jugendlicher | Erwachsener | Insulinresistenter Erwachsener | Schwangere |
+| ---------- | ---- | ------------ | ----------- | ------------------------------ | ---------- |
+| MAXBOLUS   | 5    | 10           | 17          | 25                             | 60         |
+| MINDIA     | 5    | 5            | 5           | 5                              | 5          |
+| MAXDIA     | 9    | 9            | 9           | 9                              | 10         |
+| MINIC      | 2    | 2            | 2           | 2                              | 0.3        |
+| MAXIC      | 100  | 100          | 100         | 100                            | 100        |
+| MAXIOB_AMA | 3    | 5            | 7           | 12                             | 25         |
+| MAXIOB_SMB | 7    | 13           | 22          | 30                             | 70         |
+| MAXBASAL   | 2    | 5            | 10          | 12                             | 25         |
