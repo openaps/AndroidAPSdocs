@@ -37,6 +37,7 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 :depth: 1
 :local: true
 ```
+
 (sms-commands-authenticator-setup)=
 ### Authenticator setup
 
@@ -108,7 +109,6 @@ PIN requirements are:
 
 ![image](../images/remote-control-13.png)
 
-(sms-commands-authenticator-setup)=
 #### Authenticator setup
 
 * Follow the step-by-step instructions on the screen.
@@ -309,7 +309,7 @@ On the caregiver phone and/or **AAPS** phone, try disabling the following option
   - Select the options ellipsis in the top right corner
   - select "Details"
   - Activate "Only send SMS and MMS messages"
-![Disable RCS as chat message](../images/SMSdisableRCS.png)
+  ![Disable RCS as chat message](../images/SMSdisableRCS.png)
 
 ### Errors carrying out commands
 
