@@ -16,7 +16,7 @@ orphan: true
 
 - 啟用「發送至 AAPS 和 xDrip」
 - **停用**「發送至 Nightscout」
-- 由於 Eversense 的血糖資料可能會產生噪音，建議在 ESEL 中啟用「平滑資料」功能。
+- 由於 Eversense 的血糖資料可能會產生干擾，建議在 ESEL 中啟用「平滑資料」功能。
 
 ![ESEL 廣播](../images/ESEL.png)
 
