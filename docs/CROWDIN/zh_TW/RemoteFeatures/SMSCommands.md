@@ -37,6 +37,7 @@
 :depth: 1
 :local: true
 ```
+
 (sms-commands-authenticator-setup)=
 ### 身份驗證器設置
 
@@ -108,7 +109,6 @@ PIN 碼要求如下：
 
 ![圖像](../images/remote-control-13.png)
 
-(sms-commands-authenticator-setup)=
 #### 身份驗證器設置
 
 * 遵循螢幕上的逐步說明。
