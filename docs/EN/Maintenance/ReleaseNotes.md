@@ -86,6 +86,7 @@ Release date: XX-03-2025
 * Radiobuttons UI improvements @olorinmaia
 * Automation: position choosing from map @MilosKozak
 * Version visible on main screens @MilosKozak
+* Compilation with existing git system in enforced (no zip downloads)
 
 ### Bug fixes
 
