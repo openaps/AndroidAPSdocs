@@ -57,6 +57,43 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 ```
 
 (version3300)=
+## Version 3.3.2.0
+
+Compile with: Ladybg Feature Drop 2024.2.2
+Release date: XX-03-2025
+
+### Starting this version notification and version enforcement has been simplified and softed and works following way:
+*  No expirataion when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
+*  After expiration LGS mode is enforced
+*  You'll receive warning/notifications less often:
+   - 28+ days remaining: every 7 days
+   - 27-14 days remaining: every 3 days
+   - then once a day
+   - Notification will be generated after noon to not bother you during nights
+* There are only 2 kinds of notification
+   - New version available (has no effect on AAPS)
+   - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
+
+
+### News
+
+* SMS RESTART command @MilosKozak
+* Watch Profile switch parameters @olorinmaia
+* Dark mode AAPS V2 watchface @olorinmaia
+* G7 data exchange improvements @olorinmaia
+* Widget configuration @MilosKozak
+* Radiobuttons UI improvements @olorinmaia
+* Automation: position choosing from map @MilosKozak
+* Version visible on main screens @MilosKozak
+
+### Bug fixes
+
+* Dash unbodning fix @Andreas
+* Garmin fixes @robertbuessow @suside
+* Fix of IOB displaying in dialogs @olorinmaia
+* Objectives spelling and validation improvements @MilosKozak
+* Fixed rendering of emulated TBRs @MilosKozak
+
 ## Version 3.3.1.3
 
 Release date: 21-01-2025
