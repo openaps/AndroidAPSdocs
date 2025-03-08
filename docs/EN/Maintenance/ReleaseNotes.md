@@ -63,7 +63,7 @@ Compile with: Ladybg Feature Drop 2024.2.2
 
 Release date: XX-03-2025
 
-### Starting this version notification and version enforcement has been simplified and softed and works following way:
+### Starting this version, notification and version enforcement has been simplified and softed and works following way:
 *  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
 *  After expiration LGS mode is enforced
 *  You'll receive warning/notifications less often:
