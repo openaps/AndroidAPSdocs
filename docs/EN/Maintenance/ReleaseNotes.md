@@ -60,6 +60,7 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 ## Version 3.3.2.0
 
 Compile with: Ladybg Feature Drop 2024.2.2
+
 Release date: XX-03-2025
 
 ### Starting this version notification and version enforcement has been simplified and softed and works following way:
