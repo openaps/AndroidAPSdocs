@@ -2,7 +2,7 @@
 
 # Troubleshooting Android Studio
 
-```{contents} List of common errors
+```{contents} List of common issues
 :depth: 2
 :local: true
 ```
