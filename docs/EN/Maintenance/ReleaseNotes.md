@@ -59,9 +59,11 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 (version3300)=
 ## Version 3.3.2.0
 
-Compile with: Ladybg Feature Drop 2024.2.2
-
 Release date: XX-03-2025
+
+### How to upgrade
+
+* [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
 
 ### Starting this version, notification and version enforcement has been simplified and softed and works following way:
 *  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
@@ -74,7 +76,6 @@ Release date: XX-03-2025
 * There are only 2 kinds of notification
    - New version available (has no effect on AAPS)
    - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
-
 
 ### News
 
@@ -90,7 +91,7 @@ Release date: XX-03-2025
 
 ### Bug fixes
 
-* Dash unbodning fix @Andreas
+* Dash unbonding fix @Andreas
 * Garmin fixes @robertbuessow @suside
 * Fix of IOB displaying in dialogs @olorinmaia
 * Objectives spelling and validation improvements @MilosKozak

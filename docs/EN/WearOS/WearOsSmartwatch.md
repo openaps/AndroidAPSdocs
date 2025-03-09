@@ -133,7 +133,7 @@ Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the 
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-#### General troubleshooting recommendations for Wear OS 5
+### General troubleshooting recommendations for Wear OS 5
 
 - Do not use Wi-Fi Tethering. That won't work.
 - You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
