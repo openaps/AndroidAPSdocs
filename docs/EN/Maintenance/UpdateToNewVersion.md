@@ -38,7 +38,7 @@ The minimal version required is described in the [Building Instructions](#Buildi
 
 ```{admonition} WARNING
 :class: warning
-If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/building-AAPS), as this guide will not work for you!
+If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../SettingUpAaps/BuildingAaps.md), as this guide will not work for you!
 ```
 
 * Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.

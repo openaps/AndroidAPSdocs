@@ -50,7 +50,7 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 - Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-#### Skin
+### Skin
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -62,12 +62,12 @@ You can choose from four types of skins:
 
 Difference between the other skins depends on the phone's display orientation:
 
-##### Portrait orientation
+#### Portrait orientation
 
 - **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
 - **Large Display** has an increased height for all graphs compared to other skins
 
-##### Landscape orientation
+#### Landscape orientation
 
 - Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
 
