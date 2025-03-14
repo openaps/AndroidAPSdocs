@@ -96,6 +96,7 @@ Release date: XX-03-2025
 * Fix of IOB displaying in dialogs @olorinmaia
 * Objectives spelling and validation improvements @MilosKozak
 * Fixed rendering of emulated TBRs @MilosKozak
+* Fixed bypassing security @tdrkDev
 
 ## Version 3.3.1.3
 
