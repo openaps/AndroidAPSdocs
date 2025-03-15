@@ -123,10 +123,9 @@ xDripSwift是从将原始xDrip应用程序移植到iOS发展而来的，后来�
 
 怎样才能在我的iPhone上获取xDrip4iOS？
 有两种可选的方式
-1. 如果您有Mac和Apple开发者帐户（每年99欧元/美元），您可以按照以下说明构建自己的xDrip4iOS：
-https://xdrip4ios.readthedocs.io/en/latest/install/build/
-如果您愿意，之后您还可以成为“发布者”，并与最多100名其他人共享个人Testflight xDrip4iOS，以帮助他们：
-https://xdrip4ios.readthedocs.io/.../personal_testflight/
+1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by [following the instructions](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
+
+If you want, you can then become a "releaser" and [share a Personal Testflight xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) with up to 100 other people to help them.
 
 2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and read the pinned posts for current methods to get the app. **您不应该请求应用程序的邀请**（请阅读群组规则）。
 ```
