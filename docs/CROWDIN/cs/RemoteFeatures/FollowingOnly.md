@@ -125,12 +125,9 @@ The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/a
 "How can I get **xDrip4iOS** on my iPhone?"
 There are two options:
 
-1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by following the instructions below:
+1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by [following the instructions](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
 
-https://xdrip4ios.readthedocs.io/en/latest/install/build/
-
-If you want, you can then become a "releaser" and share a Personal Testflight xDrip4iOS with up to 100 other people to help them:
-https://xdrip4ios.readthedocs.io/.../personal_testflight/
+If you want, you can then become a "releaser" and [share a Personal Testflight xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) with up to 100 other people to help them.
 
 2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and read the pinned posts for current methods to get the app. **You should not ask for an invitation to the app** (read the group rules).
 ```
