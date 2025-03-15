@@ -112,17 +112,15 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 ![圖像](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
-### xDrip4iOS/Shuggah （iOS）
+### xDrip4iOS (iOS)
 
 ![圖像](../images/remote_control_and_following/xdrip4ios.jpg)
 
 xDripSwift 是從最初的 xDrip 應用程式移植到 iOS 並發展成"xDrip for iOS"，稱為**xDrip4iOS**。
 
-版本 **xDrip4iOS**可在 Apple Store 上以**Shuggah**的名稱獲得。
-
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
- [xDrip4iOS Facebook 群組](https://www.facebook.com/groups/853994615056838/announcements) 是 xDrip4iOS 和 Shuggah 的主要社群支援。 **xDrip4iOS** 可以連接許多不同的 CGM 系統和傳輸器，並顯示血糖值、圖表和統計資訊，還可以提供警報。 他還可以上傳到 Nightscout，或作為 [Nightscout 的追蹤應用程式](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/)。 然而，實際上要在你的手機上獲取 **xDrip4iOS** 應用程式是很困難的。 
+ [xDrip4iOS Facebook 群組](https://www.facebook.com/groups/853994615056838/announcements) 是 xDrip4iOS 和 Shuggah 的主要社群支援。 **xDrip4iOS** 可以連接許多不同的 CGM 系統和傳輸器，並顯示血糖值、圖表和統計資訊，還可以提供警報。 他還可以上傳到 Nightscout，或作為 [Nightscout 的追蹤應用程式](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/)。 
 
 "我怎麼能在我的 iPhone 上獲得 **xDrip4iOS**？"
 有兩個選擇：
@@ -134,22 +132,16 @@ https://xdrip4ios.readthedocs.io/en/latest/install/build/
 如果你願意，你可以成為一個 "發佈者"，並與多達 100 其他人分享一個個人測試飛行 xDrip4iOS，來幫助他們：
 https://xdrip4ios.readthedocs.io/.../personal_testflight/
 
-2. 你加入 [xDrip4iOS Facebook 群組](https://www.facebook.com/groups/853994615056838/announcements) 並監控帖子……等著有人在群組中提供邀請進入他們的個人測試飛行發佈。 **你不應該要求應用程式的邀請**（請閱讀團體規則）。 
-
-因此，更簡單的解決方案是下載 **Shuggah** 應用程式。 
+2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and read the pinned posts for current methods to get the app. **你不應該要求應用程式的邀請**（請閱讀團體規則）。
 ```
 
-#### [Shuggah](https://apps.apple.com/sa/app/shuggah/id1586789452)
 
-應用程式：
-
-![圖像](../images/03fc0c6a-067a-40ea-8be3-c66d4ce8b5d9.png)
 
 ![圖像](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
-“什麼是 Shuggah？” 一群烏克蘭開發者複製了 GitHub 上公開分享的 xDrip4iOS 項目代碼，並在 Apple Store 上以商業帳戶發佈該應用程式（該應用程式是免費的，他們的初衷是好的）。 該應用程式必須稍作修改以添加隱私聲明和免責聲明才能透過審核，但其餘部分應與 xDrip4iOS 相同。 Shuggah 發佈版不是由 xDrip4iOS 開發者管理的，因此不能保證他的功能與 xDrip4iOS 相同，也不能保證他會與 xDrip4iOS 同時更新，或者 Apple 不會在某個時間點將其從 App Store 中移除。
+"What is **Shuggah**?" A group of Ukrainian developers copied the project code for xDrip4iOS (which is shared publicly on GitHub) and released it on the App Store under a business account. The Shuggah release is in no way managed by the xDrip4iOS developers.
 
-xDrip4iOS Facebook 群組支援 xDrip4iOS、Shuggah 以及相應的 Apple Watch 應用程式。
+The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) supports xDrip4iOS, and the matching Apple Watch apps.
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108)（iOS）
 
