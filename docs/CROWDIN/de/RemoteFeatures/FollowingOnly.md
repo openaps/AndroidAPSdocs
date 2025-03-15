@@ -112,44 +112,33 @@ Wenn Deine **AAPS**-Datenquelle nicht xDrip+ sein sollte, kannst Du die Glukosew
 
 ![grafik](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
-### xDrip4iOS/Shuggah (iOS)
+### xDrip4iOS (iOS)
 
 ![grafik](../images/remote_control_and_following/xdrip4ios.jpg)
 
 xDripSwift stammt von der ursprünglichen xDrip-App ab, wurde auf iOS portiert und entwickelte sich dann weiter zu "xDrip for iOS" (**xDrip4iOS** ).
 
-Eine Version von **xDrip4iOS** ist im Apple Store unter dem Namen **Shuggah** verfügbar.
-
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
-Die [xDrip4iOS Facebook-Gruppe](https://www.facebook.com/groups/853994615056838/announcements) ist die wichtigste Community-Unterstützung für xDrip4iOS und Shuggah. **xDrip4iOS** kann sich mit vielen verschiedenen CGM-Systemen und -Transmittern verbinden und Glukosewerte, Diagramme und Statistiken anzeigen und Alarme auslösen. Es kann auch zu Nightscout hochladen oder als [Follower-App für Nightscout](https://xdrip4ios.readthedocs.io/de/latest/connect/follower/) fungieren. Die Schwierigkeit besteht allerdings darin, die **xDrip4iOS**-App für Dein Smartphone zu bekommen. 
+Die [xDrip4iOS Facebook-Gruppe](https://www.facebook.com/groups/853994615056838/announcements) ist die wichtigste Community-Unterstützung für xDrip4iOS und Shuggah. **xDrip4iOS** kann sich mit vielen verschiedenen CGM-Systemen und -Transmittern verbinden und Glukosewerte, Diagramme und Statistiken anzeigen und Alarme auslösen. Es kann auch zu Nightscout hochladen oder als [Follower-App für Nightscout](https://xdrip4ios.readthedocs.io/de/latest/connect/follower/) fungieren. 
 
 "Wie bekomme ich **xDrip4iOS** für mein iPhone?"
 Es gibt zwei Möglichkeiten:
 
-1. Wenn Du einen Mac und einen Apple Developer Account (99 EUR/USD pro Jahr) hast, kannst Du Dein eigenes xDrip4iOS erstellen, indem Du den folgenden Anweisungen folgst:
+1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by [following the instructions](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
 
-https://xdrip4ios. eadthedocs. o/de/latest/install/build/
+If you want, you can then become a "releaser" and [share a Personal Testflight xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) with up to 100 other people to help them.
 
-Wenn Du möchtest, kannst Du dann zu einem Herausgeber ("releaser") werden, einen persönlichen Testflight xDrip4iOS mit bis zu 100 anderen Personen teilen, um ihnen damit zu helfen:
-https://xdrip4ios. eadthedocs.io/.../personal_testflight/
-
-2. Du bist der [xDrip4iOS Facebook-Gruppe](https://www.facebook. om/groups/853994615056838/announcements) beigetreten und verfolgst die Beiträge… warte darauf, dass jemand eine Einladung zu seinem eigenen Testflight-Release in der Gruppe anbietet. **Du solltest nicht um eine Einladung zur App** bitten (lies die Gruppenregeln). 
-
-Einfacher ist es deswegen, die **Shuggah**-App herunterzuladen. 
+2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and read the pinned posts for current methods to get the app. **Du solltest nicht um eine Einladung zur App** bitten (lies die Gruppenregeln).
 ```
 
-#### [Shuggah](https://apps.apple.com/sa/app/shuggah/id1586789452)
 
-App:
-
-![grafik](../images/03fc0c6a-067a-40ea-8be3-c66d4ce8b5d9.png)
 
 ![grafik](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
-"Was ist Shuggah?" Eine Gruppe ukrainischer Entwickler nahm den xDrip4iOS Projektcode (der öffentlich auf Github verfügbar ist) und veröffentlichte ihn unter einem Firmenkonto im App Store (die App ist kostenlos, und die Absichten sind gut). Die App musste leicht angepasst werden, um eine Datenschutzerklärung und einen Haftungsausschluss hinzuzufügen, und so durch die Überprüfung zu kommen. Der Rest der App sollte identisch zu xDrip4iOS sein. Das Shuggah-Release wird nicht von den xDrip4iOS Entwicklern verwaltet, daher kann nicht garantiert werden, dass es wie xDrip4iOS funktionieren wird, dass es zum gleichen Zeitpunkt aktualisiert wird oder dass Apple es nicht irgendwann aus dem App Store entfernen wird.
+"What is **Shuggah**?" A group of Ukrainian developers copied the project code for xDrip4iOS (which is shared publicly on GitHub) and released it on the App Store under a business account. The Shuggah release is in no way managed by the xDrip4iOS developers.
 
-Die [xDrip4iOS Facebook-Gruppe](https://www.facebook.com/groups/853994615056838/announcements) unterstützt xDrip4iOS, Shuggah und die zugehörige Apple Watch App.
+The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) supports xDrip4iOS, and the matching Apple Watch apps.
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
