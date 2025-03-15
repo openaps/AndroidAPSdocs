@@ -125,23 +125,20 @@ xDripSwift 是從最初的 xDrip 應用程式移植到 iOS 並發展成"xDrip fo
 "我怎麼能在我的 iPhone 上獲得 **xDrip4iOS**？"
 有兩個選擇：
 
-1. 如果你擁有 Mac 和 Apple 開發者帳號（每年 99 歐元/美元），你可以按照以下說明建置自己的 xDrip4iOS：
+1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by [following the instructions](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
 
-https://xdrip4ios.readthedocs.io/en/latest/install/build/
+If you want, you can then become a "releaser" and [share a Personal Testflight xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) with up to 100 other people to help them.
 
-如果你願意，你可以成為一個 "發佈者"，並與多達 100 其他人分享一個個人測試飛行 xDrip4iOS，來幫助他們：
-https://xdrip4ios.readthedocs.io/.../personal_testflight/
-
-2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and read the pinned posts for current methods to get the app. **你不應該要求應用程式的邀請**（請閱讀團體規則）。
+2. <source>你可以加入 <a href="https://www.facebook.com/groups/853994615056838/announcements">xDrip4iOS Facebook 群組</a>，並閱讀置頂貼文，以獲取最新的應用程式下載方式。</source> **你不應該要求應用程式的邀請**（請閱讀團體規則）。
 ```
 
 
 
 ![圖像](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
-"What is **Shuggah**?" A group of Ukrainian developers copied the project code for xDrip4iOS (which is shared publicly on GitHub) and released it on the App Store under a business account. The Shuggah release is in no way managed by the xDrip4iOS developers.
+什麼是 **Shuggah**？ 一些烏克蘭開發者複製了 xDrip4iOS 的專案程式碼（該程式碼已在 GitHub 上公開分享），並透過商業帳號將其發布到 App Store。 Shuggah 的發布完全不受 xDrip4iOS 開發者管理。
 
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) supports xDrip4iOS, and the matching Apple Watch apps.
+[xDrip4iOS Facebook 群組](https://www.facebook.com/groups/853994615056838/announcements) 支援 xDrip4iOS 及相應的 Apple Watch 應用程式。
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108)（iOS）
 
