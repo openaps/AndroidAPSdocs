@@ -125,9 +125,9 @@ xDripSwift 是從最初的 xDrip 應用程式移植到 iOS 並發展成"xDrip fo
 "我怎麼能在我的 iPhone 上獲得 **xDrip4iOS**？"
 有兩個選擇：
 
-1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by [following the instructions](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
+1. 如果你擁有 Mac 並且有 Apple 開發者帳號（每年 99 歐元/美元），你可以按照<a href="https://xdrip4ios.readthedocs.io/en/latest/install/build/">這些指引</a>自行建置 xDrip4iOS。
 
-If you want, you can then become a "releaser" and [share a Personal Testflight xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) with up to 100 other people to help them.
+如果你願意，你可以成為「發布者」，並且<a href="https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/">分享個人 TestFlight 版 xDrip4iOS</a>給最多 100 位使用者，幫助他們。
 
 2. <source>你可以加入 <a href="https://www.facebook.com/groups/853994615056838/announcements">xDrip4iOS Facebook 群組</a>，並閱讀置頂貼文，以獲取最新的應用程式下載方式。</source> **你不應該要求應用程式的邀請**（請閱讀團體規則）。
 ```
