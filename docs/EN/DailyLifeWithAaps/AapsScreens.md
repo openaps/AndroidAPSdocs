@@ -85,8 +85,8 @@ The blocks in the middle shows:
 On the right side, an icon shows the loop status:
 1. Green circle = loop running
 2. Green circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
-3. Red circled = loop disabled (not working permanently)
-4. Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
+3. Red circle = loop disabled (not working permanently)
+4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
 5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
 6. Orange circle = super bolus running - remaining time is shown below icon
 7. Blue circle with dotted line = open loop
