@@ -93,8 +93,8 @@
 
 1. 綠色圓圈 = 循環運作中
 2. 綠色圓圈帶虛線 = [低血糖暫停 (LGS)](#objectives-objective6)
-3. Red circle = loop disabled (not working permanently)
-4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
+3. 紅色圓圈 = 循環已停用（永久無法運作）
+4. 紅色圓圈 = 循環已暫停（暫時暫停，但基礎胰島素仍會輸送）- 剩餘時間顯示於圖示下方
 5. 灰色圓圈 = 幫浦中斷連線（暫時不給予任何胰島素劑量） - 剩餘時間顯示在圖示下方
 6. 橙色圓圈 = 超級注射進行中 - 圖示下方顯示剩餘時間
 7. 藍色圓圈帶虛線 = 開放循環
