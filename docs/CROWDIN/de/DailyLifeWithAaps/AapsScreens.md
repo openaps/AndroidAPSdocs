@@ -93,8 +93,8 @@ Auf der rechten Seite zeigt ein Symbol den Loop-Status an:
 
 1. Grüner Kreis = Loop läuft
 2. Grüner Kreis mit gepunkteter Linie = [Low Glucose Suspend (LGS)](#objectives-objective6) (dt. Abschalten vor Niedrig)
-3. Roter Kreis = Loop deaktiviert (dauerhaft)
-4. Gelber Kreis = Loop ausgesetzt (vorübergehend pausiert, aber Basalinsulin wird weiter abgegeben) - verbleibende Zeit wird unter dem Symbol angezeigt
+3. Red circle = loop disabled (not working permanently)
+4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
 5. Grauer Kreis = Pumpe getrennt (vorübergehend gar keine Insulinabgabe) - verbleibende Zeit wird unter dem Symbol angezeigt
 6. orangener Kreis = Superbolus läuft - verbleibende Zeit wird unterhalb des Symbols angezeigt
 7. Blauer Kreis mit gepunkteten Linien = Open Loop

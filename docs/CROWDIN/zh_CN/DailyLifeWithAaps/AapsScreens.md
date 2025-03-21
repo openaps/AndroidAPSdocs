@@ -93,8 +93,8 @@ The blocks in the middle shows:
 
 1. 绿色圆圈 = 闭环运行
 2. 绿色圆圈带虚线 = [低血糖暂停（LGS）](#objectives-objective6)
-3. 红色圆圈 = 闭环禁用（永久不工作）
-4. 黄色圆圈 = 闭环暂停（暂时停止，但会给予基础胰岛素）- 下方显示剩余时间
+3. Red circle = loop disabled (not working permanently)
+4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
 5. 灰色圆圈 = 泵断开（暂时无胰岛素剂量）- 下方显示剩余时间
 6. 橙色圆圈 = 超级大剂量运行- 下方显示剩余时间
 7. 带虚线的蓝色圆圈 = 开环
