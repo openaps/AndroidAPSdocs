@@ -2,6 +2,11 @@
 
 # Dépannage d'Android Studio
 
+```{contents} List of common issues
+:depth: 2
+:local: true
+```
+
 (troubleshooting_androidstudio-lost-keystore)=
 ## Fichier de clés perdu
 If you use the same keystore when updating **AAPS** you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a safe place.
@@ -27,15 +32,14 @@ Gradle Sync can fail for various reasons. When you receive a message saying that
 
 ![Échec de Gradle](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-Likely reasons for gradle sync failures are:
-* [Uncommitted changes](#uncommitted-changes)
-* [No cached version of ... available](#could-not-resolveno-cached-version)
-* [Incompatible Gradle JVM](#incompatible-gradle-jvm)
-* [Incompatible version of the Android Gradle plugin](#incompatible-version-of-android-gradle-plugin)
+```{contents} Likely reasons for gradle sync failures are:
+:depth: 1
+:local: true
+```
 
 *Important*: Après avoir suivi les instructions pour votre problème spécifique, vous devez déclencher la [synchronisation gradle](#gradle-resync) à nouveau.
 
-
+(troubleshooting_androidstudio-uncommitted-changes)=
 ### Uncommitted changes
 
 If you receive a failure message like this one:
@@ -83,7 +87,7 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * Redémarrer Android Studio.
 
-
+(troubleshooting-android-studio-check-for-uncommitted-changes)=
 #### Étape 2 : Vérifier les modifications non commitées.
 
   * In Android Studio, open the 'Commit' tab (1) on the left-hand side. ![Onglet de commit : changements non commités](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
@@ -175,6 +179,8 @@ If you experience the above error message, you need to download a correct JVM ve
 ### Incompatible version of Android Gradle plugin
 
   If you experience the following error message
+
+`The project is using an incompatible version (AGP x.x.x) of the Android Gradle plugin. Latest supported version is AGP x.x.x`
 
   ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
