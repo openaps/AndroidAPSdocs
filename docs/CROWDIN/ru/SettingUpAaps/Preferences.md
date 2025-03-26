@@ -49,7 +49,7 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 - Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-#### Тема оформления
+### Skin
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -61,12 +61,12 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 Difference between the other skins depends on the phone's display orientation:
 
-##### Портретная ориентация
+#### Portrait orientation
 
 - Темы **Исходная тема оформления** и **Кнопки всегда в нижней части экрана** идентичны
 - **Large Display** has an increased height for all graphs compared to other skins
 
-##### Альбомная ориентация
+#### Landscape orientation
 
 - При использовании **Исходной темы оформления** и темы **Большой экран**придется прокручивать экран вниз, чтобы увидеть кнопки в нижней части экрана
 
@@ -80,7 +80,7 @@ Difference between the other skins depends on the phone's display orientation:
 ![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-### Главный пароль
+### Master password
 
 Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
 
@@ -88,7 +88,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Установите главный пароль](../images/MasterPW.png)
 
-### Защита настроек
+### Settings protection
 
 - Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
 
@@ -98,13 +98,13 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Защита](../images/Pref2020_Protection.png)
 
-### Защита приложения
+### Application protection
 
 If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
 
 **AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
 
-### Защита болюсов
+### Bolus protection
 
 - Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
@@ -122,7 +122,7 @@ In the **Overview** section, you can define the preferences for the home screen.
 
 ![Preferences > Overview](../images/Pref2020_OverviewII.png)
 
-### Не отключать экран
+### Keep screen on
 
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
@@ -158,7 +158,7 @@ If you click the quick wizard button **AAPS** will calculate and propose a bolus
 Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
 
 (Preferences-default-temp-targets)=
-### Временные цели по умолчанию
+### Default temp targets
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -174,7 +174,7 @@ Here you can change the target and the duration for each predefined TT. Preset v
 
 Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
 
-### Заполнить стандартное количество инсулина
+### Fill/Prime standard insulin amounts
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -183,13 +183,13 @@ If you want to fill the tube or prime cannula through **AAPS** you can do this t
 В этом диалоге можно задать предустановленные значения. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
 
 (Preferences-range-for-visualization)=
-### Диапазон визуализации
+### Range for visualization
 
 Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
 ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
 
-### сокращенные имена табул
+### Shorten tab titles
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -200,7 +200,7 @@ Useful to see more tab titles on screen.
 ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Показывать поле примечаний в диалогах терапии
+### Show notes field in treatments dialogs
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -255,11 +255,11 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 % todo
 
 (Preferences-advanced-settings-overview)=
-### Расширенные настройки (обзор)
+### Advanced Settings (Overview)
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
-#### Суперболюс
+#### Superbolus
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -272,7 +272,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 ## Безопасность терапии
 
 (preferences-patient-type)=
-### Тип пациента
+### Patient type
 
 - Ограничения безопасности устанавливаются на основе возраста, который вы выбираете в этом параметре.
 - Если вы начинаете достигать верхних ограничений (как например максимальный болюс) пора подняться на один шаг вверх (например, от ребенка перейти к подростку - прим. перев.).
@@ -295,7 +295,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 ## Замкнутый цикл
 
 (Preferences-aps-mode)=
-### Режим APS
+### APS mode
 Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
@@ -371,7 +371,7 @@ At times when carb absorption can’t be dynamically worked out based on your bl
 
 Если вы часто едите блюда с высоким содержанием жиров или белка, вам следует увеличить время усвоения пищи.
 
-### Расширенные настройки - коэффициент autosens
+### Advanced settings - autosens ratio
 
 ![Настройки усваиваемости](../images/Pref2020_Absorption.png)
 
@@ -424,15 +424,15 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 - Если вы застряли на Цели 1, еще раз проверьте поля с адресом и паролем на наличие опечаток.
 - Оставьте Подключение к websocket включенным (рекомендуется).
 
-### Синхронизация
+### Synchronization
 
 Synchronization choices will depend on the way you will want to use **AAPS**.
 
 You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
-### Опции оповещения
+### Alarm options
 
-![Опции оповещения](../images/Pref2024_NSClient_Alarms.png)
+![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
 - Опции звуковых оповещений позволяют выбрать оповещения Nightscout по умолчанию для использования через приложение. **AAPS** will alarm when a Nightscout alarm triggers.
 - Для того, чтобы работали оповещения, следует настроить значения переменных для Чрезвычайно Высокой, Высокой, Низкой и Чрезвычайно Низкой ГК в переменных [Nightscout](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -441,7 +441,7 @@ You can select which data you want to [upload and download to or from Nightscout
 - Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
 - Вы можете изменять порог срабатывания оповещений при отсутствии данных от Nightscout в течение определенного времени.
 
-### Параметры подключения
+### Connection settings
 
 ![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
@@ -452,7 +452,7 @@ You can select which data you want to [upload and download to or from Nightscout
 - Чтобы удалить все SSID оставьте поле пустым.
 
 (Preferences-advanced-settings-nsclient)=
-### Расширенные настройки (Клиент NS)
+### Advanced settings (NSClient)
 
 ![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
