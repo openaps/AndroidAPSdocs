@@ -47,7 +47,7 @@ Android APS（**AAPS**）是一個混合閉環系統，或稱人工胰臟系統�
 
 AAPS 的“核心”是一個你自己建置的**應用程式**。 這裡有詳細的步驟說明。 然後你可以將**AAPS** 應用程式安裝在[相容](../Getting-Started/Phones.md)的**Android 智慧型手機** (**1**) 上。 很多人喜歡將他們的 AAPS 循環放在另一隻獨立的手機上，而不是主要的手機 因此，你不必在日常生活中使用 Android 手機，只需用於運作你的 AAPS 循環即可。
 
-**安卓智慧型手機**也需要安裝另一個應用程式，以及 **AAPS**。 這個[附加應用程式](./CompatibleCgms.md)透過藍牙從感測器（**2**）接收葡萄糖資料，然後將資料在手機內部傳送到**AAPS應用程式**。
+**安卓智慧型手機**也需要安裝另一個應用程式，以及 **AAPS**。 This [additional app](../Getting-Started/CompatiblesCgms.md) receives glucose data from a sensor (**2**) by bluetooth, and then sends the data internally on the phone to the **AAPS app**.
 
 **AAPS 應用程式**使用來自 OpenAPS 的決策過程（**演算法**）。 初學者開始使用基本的 **oref0** 演算法，但隨著你在AAPS上的目標進度，可以切換到使用較新的 **oref1** 演算法。 你使用哪個演算法（oref0或oref1），取決於哪個最適合你的特定情況。  在兩種情況下，演算法考慮多個因素，每次從傳感器傳入新讀取值時進行快速計算。 演算法然後透過藍牙將指令發送到胰島素幫浦（**3**），指示其提供多少胰島素。 所有訊息可以透過手機資料或wifi發送到網際網路（**4**） 如果需要，這些資料也可以與追蹤者分享，並且/或收集用於分析。
 
