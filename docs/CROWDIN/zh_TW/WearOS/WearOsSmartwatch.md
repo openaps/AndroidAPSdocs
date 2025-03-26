@@ -131,7 +131,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-#### Wear OS 5的一般故障排除建議
+### General troubleshooting recommendations for Wear OS 5
 
 - 請勿使用 Wi-Fi 分享。 這樣做是行不通的。
 - 不需要在手機上啟用 ADB 調試（僅在手錶上）。 在手機上停用 ADB 調試。
@@ -173,7 +173,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ![24-10-23，成功的 Galaxy 手錶照片](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
-### 排除 **AAPS** 手錶與 **AAPS** 手機通訊的問題
+### Troubleshooting the **AAPS** watch- **AAPS** phone communication
 
 1.  如果 EasyFire tools 無法連線，或者你收到“授權失敗”訊息 > 請檢查 IP 地址是否正確輸入。
 2.  檢查智慧型手錶是否已連線到網際網路（而不僅僅是透過藍牙與手機連線）。
