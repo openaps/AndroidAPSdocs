@@ -134,7 +134,7 @@ Klicke auf "WEITER":
 
 ![grafik](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-## Master-Passwort
+## Master password
 
 Da die **AAPS**-Konfiguration einige sensible Daten enthält (_z.B._ den API_KEY zum Zugriff auf Deinen Nightscout-Server), wird sie durch ein Passwort, das Du selbst festlegen kannst, verschlüsselt.
 
@@ -293,7 +293,7 @@ Drücke auf "WEITER", um zur nächsten Seite zu kommen.
 
 ![grafik](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-## Patiententyp
+## Patient type
 
 Hier legst Du den „Patiententyp“ fest, der dazu führt, dass die **AAPS**-Software je nach Alter des Patienten unterschiedliche Grenzwerte berücksichtigt. Dies ist aus Sicherheits- und Schutzgründen wichtig.
 
@@ -501,7 +501,7 @@ Gehe zurück und tippe auf "WEITER", um zum nächsten Bildschirm zu kommen:
 
 ![grafik](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-## APS-Modus
+## APS mode
 
 Lass "Open Loop" ausgewählt.
 
