@@ -49,7 +49,7 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 - Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-#### Tema
+### Skin
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -61,12 +61,12 @@ You can choose from four types of skins:
 
 Difference between the other skins depends on the phone's display orientation:
 
-##### Portrait orientation
+#### Portrait orientation
 
 - **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
 - **Large Display** has an increased height for all graphs compared to other skins
 
-##### Landscape orientation
+#### Landscape orientation
 
 - Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
 
@@ -80,7 +80,7 @@ Difference between the other skins depends on the phone's display orientation:
 ![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-### Contraseña maestra
+### Master password
 
 Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
 
@@ -88,7 +88,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Set master password](../images/MasterPW.png)
 
-### Protección de ajustes
+### Settings protection
 
 - Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
 
@@ -98,13 +98,13 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Protección](../images/Pref2020_Protection.png)
 
-### Protección de aplicación
+### Application protection
 
 If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
 
 **AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
 
-### Protección de bolo
+### Bolus protection
 
 - Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
@@ -122,7 +122,7 @@ In the **Overview** section, you can define the preferences for the home screen.
 
 ![Preferences > Overview](../images/Pref2020_OverviewII.png)
 
-### Mantener pantalla activa
+### Keep screen on
 
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
@@ -174,7 +174,7 @@ Here you can change the target and the duration for each predefined TT. Preset v
 
 Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
 
-### Llenar/Rellenar cantidad de insulina estándar
+### Fill/Prime standard insulin amounts
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -189,7 +189,7 @@ Choose the high and low marks for the BG-graph on **AAPS** overview and smartwat
 
 ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
 
-### Título corto en pestaña
+### Shorten tab titles
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -259,7 +259,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
-#### Superbolo
+#### Superbolus
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -430,9 +430,9 @@ Synchronization choices will depend on the way you will want to use **AAPS**.
 
 You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
-### Opciones de alarma
+### Alarm options
 
-![Opciones de alarma](../images/Pref2024_NSClient_Alarms.png)
+![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
 - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -441,7 +441,7 @@ You can select which data you want to [upload and download to or from Nightscout
 - Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
 - You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 
-### Ajustes conexión
+### Connection settings
 
 ![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
