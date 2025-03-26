@@ -59,7 +59,7 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 (version3300)=
 ## Version 3.3.2.0
 
-Release date: XX-03-2025
+Release date: 27-03-2025
 
 ### How to upgrade
 
@@ -88,6 +88,8 @@ Release date: XX-03-2025
 * Automation: position choosing from map @MilosKozak
 * Version visible on main screens @MilosKozak
 * Compilation with existing git system in enforced (no zip downloads)
+* Show version on main screen @MilosKozak
+* Tidepool upload improvements @ConstantinMatheis
 
 ### Bug fixes
 
