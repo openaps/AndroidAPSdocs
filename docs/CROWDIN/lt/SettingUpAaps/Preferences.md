@@ -49,7 +49,7 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 - Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-#### Skin
+### Skin
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -61,12 +61,12 @@ You can choose from four types of skins:
 
 Difference between the other skins depends on the phone's display orientation:
 
-##### Portrait orientation
+#### Portrait orientation
 
 - **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
 - **Large Display** has an increased height for all graphs compared to other skins
 
-##### Landscape orientation
+#### Landscape orientation
 
 - Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
 
@@ -122,7 +122,7 @@ In the **Overview** section, you can define the preferences for the home screen.
 
 ![Preferences > Overview](../images/Pref2020_OverviewII.png)
 
-### Laikyti ekraną įjungtą
+### Keep screen on
 
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
@@ -174,7 +174,7 @@ Here you can change the target and the duration for each predefined TT. Preset v
 
 Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
 
-### Standartiniai insulino kiekiai kateterio/kaniulės užpildymui
+### Fill/Prime standard insulin amounts
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -189,7 +189,7 @@ Choose the high and low marks for the BG-graph on **AAPS** overview and smartwat
 
 ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
 
-### Naudoti sutrumpintus skirtukų pavadinimus
+### Shorten tab titles
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -349,7 +349,7 @@ All the settings for OpenAPS SMB are described in the dedicated section in [Key 
 ## Angliavandenių įsisavinimo parametrai
 
 (Preferences-min_5m_carbimpact)=
-### min_5m_AV_įtaka
+### min_5m_carbimpact
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
