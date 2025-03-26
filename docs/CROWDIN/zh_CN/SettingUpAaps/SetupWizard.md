@@ -134,7 +134,7 @@ Confirm that you wish to grant access to **AAPS** to the selected directory:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-## 主密码
+## Master password
 
 由于 **AAPS** 的配置包含一些敏感数据（_例如_，访问您的 Nightscout 服务器的 API_KEY），因此它会被您在此处设置的密码加密。
 
@@ -293,7 +293,7 @@ Other **AAPS** users can disable the transfer via cellular connection if they wa
 
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-## 患者类型
+## Patient type
 
 在这里，您选择“患者类型”，这很重要，因为 **AAPS** 根据患者的年龄有不同的限制。 出于安全和保护隐私的原因，这一点非常重要。
 
@@ -501,7 +501,7 @@ OpenAPS AMA是最基本的算法，不支持用SMB纠正高血糖。 在某些�
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-## APS模式
+## APS mode
 
 保持“Open Loop（开环）”选中状态。
 
