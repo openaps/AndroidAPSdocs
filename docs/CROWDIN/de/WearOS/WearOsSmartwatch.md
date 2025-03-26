@@ -132,7 +132,7 @@ Tippe side "plug-in" socket in der App, um die WearOS.apk auf Dein Smartwatch ho
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-#### Allgemeine Empfehlungen zur Fehlerbehebung bei Wear OS 5
+### General troubleshooting recommendations for Wear OS 5
 
 - WLAN Tethering nicht verwenden. That won't work.
 - ADB-Debugging muss nicht auf dem Smartphone aktiviert werden (nur auf der Smartwatch). Deaktiviere das ADB Debugging auf dem Smartphone.
@@ -174,7 +174,7 @@ Wenn das Sideloading der **AAPS** Wear.apk auf die Smartwatch erfolgreich war, s
 
 ![24-10-23, successful galaxy watch photo](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
-### Verbindungsprobleme zwischen **AAPS** Smartwatch und **AAPS** Smartphone beheben
+### Troubleshooting the **AAPS** watch- **AAPS** phone communication
 
 1.  Wenn Easy Fire Tools sich nicht verbindet oder Du die Meldung "authorisation failed" erhälst > Überprüfe, ob die IP-Adresse korrekt eingegeben wurde.
 2.  Überprüfe, ob die Smartwatch mit dem Internet (und nicht nur über Bluetooth mit dem Smartphone) verbunden ist.
