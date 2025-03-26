@@ -49,7 +49,7 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 - Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-#### סקין
+### Skin
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -61,12 +61,12 @@ You can choose from four types of skins:
 
 Difference between the other skins depends on the phone's display orientation:
 
-##### אוריינטציית פורטרט (עומד)
+#### Portrait orientation
 
 - **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
 - **Large Display** has an increased height for all graphs compared to other skins
 
-##### אוריינטציה אופקית
+#### Landscape orientation
 
 - Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
 
@@ -80,7 +80,7 @@ Difference between the other skins depends on the phone's display orientation:
 ![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-### סיסמה ראשית
+### Master password
 
 Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
 
@@ -88,7 +88,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Set master password](../images/MasterPW.png)
 
-### Settings protection (הגנה על הגדרות)
+### Settings protection
 
 - Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
 
@@ -98,13 +98,13 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Protection (הגנה בסיסמאות)](../images/Pref2020_Protection.png)
 
-### Application protection (הגנת האפליקציה)
+### Application protection
 
 If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
 
 **AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
 
-### Bolus protection (הגנת בולוס)
+### Bolus protection
 
 - Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
@@ -122,7 +122,7 @@ In the **Overview** section, you can define the preferences for the home screen.
 
 ![Preferences > Overview](../images/Pref2020_OverviewII.png)
 
-### השאר את המסך דולק
+### Keep screen on
 
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
@@ -158,7 +158,7 @@ The proposal has to be confirmed before insulin is delivered.
 Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
 
 (Preferences-default-temp-targets)=
-### ברירות מחדל ערכי מטרה
+### Default temp targets
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -174,7 +174,7 @@ Here you can change the target and the duration for each predefined TT. Preset v
 
 Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
 
-### מילוי\תיחול כמויות סטנדרטיות של אינסולין
+### Fill/Prime standard insulin amounts
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -183,13 +183,13 @@ If you want to fill the tube or prime cannula through **AAPS** you can do this t
 Pre-set values can be defined in this dialogue. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
 
 (Preferences-range-for-visualization)=
-### טווח הצגה
+### Range for visualization
 
 Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
 ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
 
-### קצר את כותרות הלשוניות
+### Shorten tab titles
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -200,7 +200,7 @@ For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc
 ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### הצגת שדות הערות בתיבות דו-שיח של טיפול
+### Show notes field in treatments dialogs
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -255,11 +255,11 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 % todo
 
 (Preferences-advanced-settings-overview)=
-### הגדרות מתקדמות (סקירה כללית)
+### Advanced Settings (Overview)
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
-#### סופר בולוס
+#### Superbolus
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -295,7 +295,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 ## לולאה
 
 (Preferences-aps-mode)=
-### מצב APS
+### APS mode
 Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
@@ -349,7 +349,7 @@ All the settings for OpenAPS SMB are described in the dedicated section in [Key 
 ## הגדרות ספיגה
 
 (Preferences-min_5m_carbimpact)=
-### min_5m_carbimpact (השפעת פחמימות מינימלית ב-5 דקות)
+### min_5m_carbimpact
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -371,7 +371,7 @@ The COB graph on the home screen indicates when min_5m_impact is being used by p
 
 If you often eat high fat or protein meals you will need to increase your meal absorption time.
 
-### הגדרות מתקדמות - יחס Autosens
+### Advanced settings - autosens ratio
 
 ![הגדרות ספיגה](../images/Pref2020_Absorption.png)
 
@@ -430,9 +430,9 @@ Synchronization choices will depend on the way you will want to use **AAPS**.
 
 You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
-### אפשרויות התראה
+### Alarm options
 
-![אפשרויות התראה](../images/Pref2024_NSClient_Alarms.png)
+![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
 - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -441,7 +441,7 @@ You can select which data you want to [upload and download to or from Nightscout
 - Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
 - You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 
-### הגדרות חיבור
+### Connection settings
 
 ![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
@@ -452,7 +452,7 @@ You can select which data you want to [upload and download to or from Nightscout
 - To delete all SSIDs enter a blank space in the field.
 
 (Preferences-advanced-settings-nsclient)=
-### הגדרות מתקדמות (NSClient)
+### Advanced settings (NSClient)
 
 ![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
