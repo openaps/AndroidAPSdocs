@@ -134,7 +134,7 @@ Click the "NEXT" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-## Parola principală
+## Master password
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
@@ -502,7 +502,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-## Mod APS
+## APS mode
 
 Let "Open Loop" remain selected.
 
