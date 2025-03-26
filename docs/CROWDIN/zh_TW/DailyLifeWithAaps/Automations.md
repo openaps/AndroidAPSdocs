@@ -225,7 +225,7 @@
 
 ![替代文字](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
-# 自動化範例
+## Examples of Automations
 
 以下是**自動化**範例。 在 Facebook 討論群組或 Discord 上，可以找到更多有關**自動化**的討論，以及用戶如何個性化他們的**自動化**。 以下範例不應被複製，除非使用者對**自動化**的運作方式有充分暸解。
 
@@ -273,7 +273,7 @@
 
 ![替代文字](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
-# 自動化偏好設定匯出
+## Automating Preference Settings Export
 
 ### 不需人員監控的匯出：排程（每日）
 
@@ -296,7 +296,7 @@
 注意：匯出執行將記錄在照護入口上. 注意：如果你在此之前未執行手動設定匯出，自動化將**完全不會**觸發。 請參見[偏好設定 > 維護](#preferences-maintenance-settings)以正確啟用自動設定匯出。
 
 
-# 自動化日誌
+## Automation Logs
 
 **AAPS**會在螢幕底部的**自動化**標籤下顯示最近觸發的**自動化**日誌。
 
@@ -335,6 +335,6 @@
 
 檢查你的規則優先順序，如上所述。
 
-## 自動化的替代方案
+## Alternatives to Automations
 
 對於進階使用者，還有其他選擇，例如使用 IFTTT 或第三方 Android 應用程式 Automate 來自動化任務。 
