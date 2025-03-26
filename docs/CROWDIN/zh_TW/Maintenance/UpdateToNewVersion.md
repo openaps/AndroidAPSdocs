@@ -32,11 +32,11 @@
     所需的最小版本已在 [建立指導](#Building-APK-recommended-specification-of-computer-for-building-apk-file) 中說明。 如果你的版本較舊，請 [先更新 Android Studio](#Building-APK-install-android-studio)！
     
     (Update-to-new-version-update-your-local-copy)=
-    ### 更新你的本地副本
+    ### Update your local copy
     
-    ```{admonition} 警告
+    ```{admonition} WARNING
     :class: warning
-    如果你是從 2.8.x 之前的版本更新，請遵循指示進行 [新複製](../Installing-AndroidAPS/building-AAPS)，因為本指南對你無效！
+    If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../SettingUpAaps/BuildingAaps.md), as this guide will not work for you!
     
 
 * 使用 Android Studio 開啟你現有的 AAPS 項目。 你可能需要選擇你的項目。 (雙擊) 點擊 AAPS 項目。
