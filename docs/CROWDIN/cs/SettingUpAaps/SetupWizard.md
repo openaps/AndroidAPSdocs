@@ -134,7 +134,7 @@ Kliněte na tlačítko "DALŠÍ":
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-## Hlavní heslo
+## Master password
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
@@ -294,7 +294,7 @@ Klikněte na tlačítko "DALŠÍ" a přejdete k další obrazovce.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-## Typ pacienta
+## Patient type
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. Nastavení je důležité z bezpečnostních důvodů.
 
@@ -502,7 +502,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-## Typ smyčky
+## APS mode
 
 Ponechte vybranou možnost "Otevřená smyčka".
 
