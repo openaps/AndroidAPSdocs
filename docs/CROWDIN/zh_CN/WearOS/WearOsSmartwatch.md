@@ -117,7 +117,7 @@ Alternatively, but not for Wear OS 5, you can:
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-#### General troubleshooting recommendations for Wear OS 5
+### General troubleshooting recommendations for Wear OS 5
 
 - Do not use Wi-Fi Tethering. That won't work.
 - You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
@@ -159,7 +159,7 @@ Once paired you should be able to install the AAPS wear apk:
 
 ![24-10-23, successful galaxy watch photo](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
-### 排查**AAPS**手表与**AAPS**手机之间的通信问题
+### Troubleshooting the **AAPS** watch- **AAPS** phone communication
 
 1.  如果EasyFire tools无法连接或您收到“授权失败”>检查IP地址是否正确输入。
 2.  检查智能手表是否已连接到互联网（而不仅仅是通过蓝牙连接到手机）。
