@@ -1,60 +1,48 @@
 # 全自動循環（Full Closed Loop）
 
-## 全自動循環 vs. 混合自動循環（FCL, HCL）
 
-### 定義
+The main attraction of Full Closed Looping **FCL** is that it has the potential to mimic an artificial pancreas and make daily management easier without having the need to bolus for meals.
 
-在**混合自動循環**中，你在進餐前至少注射了一次胰島素。 這會將你的循環系統推向臨時關閉（暫時停止基礎率），並在胰島素仍然啟動時進行共同管理。
+Whilst **hybrid closed loop** ('HCL') is algorithm based, it still requires the user to manually deliver boluses prior to meals. As a result, the loop may go into a temporary shut-off (temporary zero basal) to prevent over delivery of insulin.
 
-此外，每次進餐前，你會輸入碳水化合物、脂肪和蛋白質的攝取量，並提供估計的碳水化合物吸收時間的提示（通常在設定中，並與每天的每頓餐相關）。
-
-AAPS 還允許在不輸入任何胰島素和碳水化合物的情況下進行**全自動循環（UAM，未註明餐點模式）**。
-
-- 請注意，**UAM** 也可以在混合自動循環中啟用，此時意味著演算法能更好地容忍錯誤的碳水化合物輸入。
-
-- 針對高碳水化合物餐點或某些用餐習慣或敏感度變動較大的人，是否需要提前小劑量的注射，目前仍存在爭議。 這實際上是一種混合自動循環，沒有碳水化合物資訊，因而是一種 HCL 的變體。 我們將 FCL 定義為**完全不需要使用者注射胰島素**，當你調整好 FCL後，甚至可以移除 AAPS 主畫面底部所有「無用」的按鈕。
+In **FCL** mealsize-related bolus are no longer required: leave it to the algorithm!  **AAPS** may allow without the user giving any bolus, and without making carb inputs, in a mode called ‘un-announced meals’ **(‘UAM’)**. **UAM** allows **AAPS** to better tolerate incorrect carb inputs by being more aggressive.
 
 ### 應該期待什麼？
 
-在 2022/23 年進行並發表的首個醫學研究表明，患者使用 AAPS 在簡單的 FCL 模式中可以獲得相當好的結果：
-
-> 16 位糖尿病青少年（HbA1c 範圍 43-75），糖尿病病史為 9-15 年，參加了三個不同的為期三天的營地生活期間，使用了修改和鎖定的 AAPS 3.1.0.3 版本**結果：** 在研究期間，該系統控制了 95% 的血糖時間，且在整個研究期間，低於 3.9 mmol/L 的時間比例沒有超過 1%（0.72%）。 HCL 情景中低於 3 mmol/L 的時間百分比顯著較高（HCL 1.05% vs. MA 0.0% vs. FCL 0.0%；P = 0.05） **在 3.9 到 10 mmol/L 的時間百分比上沒有觀察到顯著差異**（HCL 83.3% vs. MA 79.85% vs. **FCL 81.03%**，P = 0.58），對應的平均血糖值為（HCL 6.65 mmol/L vs. MA 7.34 mmol/L vs. FCL 7.05 mmol/L，P = 0.28）。 在每日胰島素劑量或每日碳水化合物攝取量上沒有觀察到差異。 在研究期間沒有發生嚴重的不良事件。 **結論：** 我們的試驗研究表明，**FCL 可能是 1 型糖尿病患者的現實治療模式**。
-
-來源：
+There are many published studies on the favourable results **FCL** can achieve. For further reading refer to the following:
 
 1) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ![PubMed](../images/US-NLM-PubMed-Logo.png) 美國國家醫學圖書館，PubMed [首例使用開源自動胰島素遞送 AndroidAPS 在全自動循環場景：Pancreas4ALL 隨機試點研究](https://pubmed.ncbi.nlm.nih.gov/36826996/)；
 
 2) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) 臨床試驗註冊 ClinicalTrials.gov 美國國家醫學圖書館，臨床試驗 [Pancreas4ALL（ASAP）自動胰島素遞送閉環系統的可行性和安全性研究](https://www.clinicaltrials.gov/study/NCT04835350?term=Feasibility%20and%20Safety%20Study%20of%20the%20Automated%20Insulin%20Delivery%20Closed%20Loop%20System%20Pancreas4ALL%20(ASAP)&rank=1)
 
-要享受減輕日常負擔的好處，你必須：
+Success for **FCL** requires the user to:
 
-- 檢查是否具備全自動循環的所有先決條件
-- 設置一些自動化程式
-- 經歷一個學習和調整階段，你需要調整你的設定，特別是那些自動化中的設定。 以下建議將指導你完成這個過程。
+- check whether they met the **FCL** requisites;
+- set up **Automations** that are tailored for  their daily management’s needs; and
+- fine tune and adjust the **AAPS** settings (notably **Automations**).
 
-### 為什麼（或不）從混合模式轉換到全自動循環的考量
 
-全自動循環系統**並不適合每個人**：
+### General considerations why (not to) move from HCL to FCL
 
-- 雖然一些使用自動化的全自動循環使用者達到了大約 90% 的 TIR（70-180），HbA1c 低於 6%，但你可能會更喜歡更嚴格的控制。 特別是**在快速碳水化合物飲食中將血糖值維持在 140 mg/dl 以下**可能需要提前注射。
-- 你是否準備好以知情且謹慎的方式，對系統進行高度個性化的校準？ 這種**個性化調整**可能會**充滿挑戰**。 如果你已經對設定基礎率和 ISF 感到不堪重負，這可能不適合你。 但要權衡一下，與你每天不用再計算碳水化合物相比，你能獲得什麼。 您可能還會重視通過分析和調整您的循環對餐點的反應所獲得的更深層次的知識。
-- 雖然進餐管理變得非常簡單，但**活動**管理可能會變得更加困難，特別是考慮到大多數人可能會限制運動零食，試圖控制體重。
-- 不幸的是，對於兒童來說，建立全自動循環系統會有額外的困難（見下一節，先決條件）。
+**FCL** is not for everyone:
 
-## 全自動循環的先決條件
+- Some **FCL** users achieve TIR (70-180) around 90% and HbA1c under 6%, however other users prefer tighter control. Notably, minimising values over 140 mg/dl at diets with rapid carbs probably requires pre-bolusing.
+- **AAPS** tuning can be challenging. It is not for those users who feel overwhelmed AAPS.  You will need to dedicate a few weeks in order to adjust and fine tune your **FCL**. Investing such time can yield better results and **BG** control.
+- Meal management may become easier, however exercise can still be challenging in **FCL**. Most of us like to limit sports snacks in an attempt to control body weight.
+- Difficulties still remain to establish a **FCL** for kids (discussed below).
 
-全自動循環的主要吸引力在於，你可以接近人工胰臟的夢想。 他確實承諾非常簡單的日常使用。 **「只需吃飯！」**
 
 ### 良好調整的混合自動循環
 
-在考慮轉換到全自動循環之前，建議先建立一個良好調整的混合自動循環。 這有兩個重要原因：
+It is advisable to first establish a well-tuned **HC**L before considering the transition to **FCL**.  Success with **FCL** requires a highly personalised individualised tuning of the user’s setting so that **AAPS** can give insulin to closely mimic YOUR successful hybrid closed loop mode.
 
-- 全自動循環需要高度個性化的（個人）設定調整，因此循環系統會模擬你成功的混合自動循環模式提供胰島素。
-- 全自動循環引入了新的參數（在你的自動化程式中）需要設定和調整。 在基本設定正確之前就設定和調整這些額外參數**會引發問題**。 錯誤可以輕易地被其他錯誤平衡。 這在單一情況下可以運作，但會造成高度不穩定的系統，後續很難重新校準。 此外，根據許多早期測試者以及上述研究，你應該預期在**FCL** 模式下達到與你在**HCL** 中相似的 TIR 比例。 轉換並不是關於性能，而是關於方便性，經過一些不方便的過程後：**FCL 方法的核心是你需要自行建立的自動化程式，分析*你的資料*，包括從你的*成功 HCL* 和最初 FCL 調整經驗中學到的知識。** 這不是一種現成的自我調整奇蹟產品！ 軟體的開發者和此維基的撰寫者不承擔任何責任。 你必須自行決定是否以及如何使用這些工具，並探討可能的使用方式。
+**FCL** requires the user to set up and tune their **Automations**. However the user must have a confident understanding of their insulin management needs before embarking on **FCL**. Errors can be masked with counter-errors. This can create an unstable **FCL** system, and make it hard to later correct. You should expect to reach a comparable %TIR with your FCL as you see today in your **HCL**.
+
+**FCL is a DIY set up of Automations determined by the user by analysing their data from both their successful HCL and  initial FCL experience when tuning your settings.**
 
 ### 快速胰島素（Lyumjev, Fiasp）
 
-如果使用者不為進餐注射胰島素，顯然需要非常快速的胰島素，這樣當餐後血糖開始上升時，循環系統才有可能將血糖控制在範圍內（一般定義為低於 180 mg/dl（10 mmol/L））。
+**FCL** requires fast insulin.  This is so that at the start of meal-related **BG** rise, **FCL** is able to keep **BG** in range (by common definition, under 180 mg/dl (10 mmol/l)).
 
 一項模型研究（詳情請參閱 LINK FullLoop V2/March2023；第 2.2 節）可以從定量角度顯示出*更快的胰島素*
 
@@ -66,141 +54,134 @@ AAPS 還允許在不輸入任何胰島素和碳水化合物的情況下進行**�
 
 IEEE 控制系統雜誌，ResearchGate [人工胰臟與餐點控制：1型糖尿病餐後血糖調節概述](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
-- 會顯著降低血糖**峰值**，相比較慢的胰島素。
-- **延遲幾分鐘的餐前注射**對血糖峰值的影響會被最小化，而不會造成不可接受的峰值高度。
-- **將不同的**碳水化合物負荷（**餐量**）對血糖峰值的影響最小化。
+- will result in significantly lower *BG** peaks than slower insulins;
+- tolerate a couple of minutes delayed first meal bolus while not incurring unacceptable height of peaks; and
+- minimise the effect on **BG** peak from different carb loads (meal sizes).
 
-總結來說，除非你採取的是低碳水化合物飲食，否則不要嘗試使用非 Lyumjev 或 Fiasp 的胰島素進行 FCL。
+**FCL** is unlikely to be effective with insulin other than Lyumjev or Fiasp, unless the user is on a very moderate to low carb diet.
 
-許多使用 Fiasp 或 Lyumjev 的用戶觀察到頻繁的**堵塞**，即使在優化了針頭長度或 SMB 的輸送速度後。 對於使用**導管（或夾具）**的時間要特別注意（許多人發現**48 小時**是**極限**），並觀察是否發生難以解釋的血糖上升。
+However, Fiasp or Lyumjev can result in frequent pump occlusions, even after optimising things like needle length. It is important to have an eye on the cannula or pod time. Many users find 48 hours to be the efficacy insulin limit before resulting in cannula/pod failure.
 
-一份事件報告（LINK，第 2.2 節）闡明了這個問題，顯示每發生*一次*堵塞，你當天輕易失去 25% 的 TIR，當週損失 5% TIR，當月仍然會損失 1% TIR。
+### Prerequisites
 
-### 優質 CGM
+**BG** values and stable bluetooth connectivity are required to ensure **AAPS** can optimally perform without losing valuable time. **FCL** requires a 24/7 technically stable system:
 
-你不用再為餐飲注射胰島素，所有的胰島素分配任務都交給了演算法！ 由於血糖數值是最基本的依據，請**詳細了解**你的**CGM**的 1）基本性能，2）這是否以及如何取決於資料流和你使用的中間應用，或者在傳感器使用天數之間是否有所不同，3）具體來說，在哪裡進行了平滑處理，這對於調整的影響，特別是在定義餐後血糖上升的時候，該如何定義真實的增量變化。
+- your **CGM’s performance. Your CGM should not produce jumpy **BG** values that could be misinterpreted by **FCL** as a sign of a starting meal. Similarly, **CGM** calibrations can produce jumpy results.
+- how and where any **CGM** smoothing is done, and what this might imply for your tuning. Notably how delta is defined, and AAPS recognising this as being sign of a starting meal.
+- bluetooth stability for the pump and CGM  pump;
+- avoiding (or at least early recognition of) pump occlusion;
+- data flow and your phone's apps used and difference between days of sensor usage;
+- keeping all **AAPS** components well charged and in spare parts close proximity; and
+- actioning cannula (or pod) changes always early enough to lower the risk of occlusion;
 
-在用餐期間，穩定的藍牙連接絕對至關重要，以便 CGM、循環和幫浦可以正常工作，而不會浪費更多寶貴的時間。
-
-但更重要的是，在其他時間（白天和夜晚），CGM 不應產生任何偽資料（跳動的數值），否則循環系統會**誤解**為餐後信號。 請注意，校準也可能產生跳動。
-
-目前，最佳選擇是使用 Dexcom G5 或**G6**，並確保透過右臂和左臂傳感器和發射器的**重疊**使用，始終能提供循環系統使用的優質數值。 其他方法也是可行的，但需要大量的監控工作（透過手錶），並偶爾會讓循環系統暫時失效。
+The above will vary depending on your **AAPS** component system and your lifestyle.
 
 ### 進餐相關的限制
 
-對於飲食主要不由對血糖有快速影響的成分構成，且進餐模式不會每天大幅變動的人來說，設置全自動循環系統相對容易。 他們不一定需要是低碳水化合物飲食。
+- Setting up a **FCL** may be easier for people whose diets do not consist of food components with a rapid high effect on **BG**, and meal patterns that do not wildly vary day-to-day. This does not necessarily mean low carb.
 
-富含脂肪或蛋白質的飲食，或者消化緩慢/胃輕癱，反而使全自動循環系統更加簡單，因為晚期碳水化合物可以很好地彌補胰島素作用高峰期的“尾巴”。
+- Fat or protein rich diets, or slow digestion/gastroparesis, make things easier rather than harder for **FCL**  because late carbs nicely cover for inevitable “tails” of late action from bolus needed around peak time.
 
-#### 血糖指數與血糖影響
+#### Glycemic index and effect on blood glucose
 
-UAM 模式的挑戰隨著 EBG（對血糖的影響）的上升而增加
+The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose ('EBG')
 
-- 從適度/低開始，然後調整你的設置。 只有在這樣的情況下，才可進行「測試」餐點與高 EBG。
-- 若進食非常高 EBG 的食物，請考慮 < 50% 的初始注射
+- Start moderate/low, and tune your **Profile's** settings. Only then, "test" meals with high **EBG**.
+- Consider a < 50% initial bolus if consuming very high **EBG**.
 
-1) **無 EBG**：新鮮肉類、魚類、蛋、培根、油、起司。 2) **低 EBG**：新鮮蔬菜和漿果、蘑菇、堅果、牛奶、優格、嫩酪。 3) **中等 EBG**：全麥麵包/麵條、馬鈴薯、野米、燕麥、乾果。 4) **高 EBG**：小麥麵包、法國長棍、土司、鬆餅、餅乾、馬鈴薯泥、麵條、米飯。 5) **非常高 EBG**：（糖）甜飲料、水果汁、玉米片、糖果、點心、洋芋片、鹹椒脆條。
+1) **No EBG**: e.g. fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: e.g. fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: e.g. whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**:e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: e.g. sugar, sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
 
-![血糖指數與血糖影響](../images/fullClosedLoop01.png)
+![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
 
-最難處理的餐點是那些完全由高和非常高 EBG 成分組成的餐點（請參閱圖片中的紅色）：這些餐點不僅會迅速升高血糖，而且沒有多少脂肪/蛋白質/纖維成分來平衡早期胰島素作用不可避免的“尾巴”。
+The most difficult meals for **FCL** are those foods exclusively very high and high **EBG** components (see red in the picture): Not only does **BG** shoot up rapidly, but also there is little fat/protein/fibre component to balance the inevitable “tail” of insulin activity that would come with attempts to control the high glucose earlier on.
 
-**隨機食用零食和甜飲料**，這些飲料充滿了快速吸收的碳水化合物，是一個問題。
+Erratic consumption of snacks and sweet drinks that are loaded with fast absorbing carbs is problematic for **FCL**.
 
-
-### 生活方式相關的限制
-
-#### 技術穩定的系統
-
-全自動循環需要 24/7 技術穩定的系統，特別是在 CGM 信號的穩定性方面，以及幫浦的**藍牙穩定性**，並避免（或至少及早發現）堵塞。 這可能需要注意細節，例如保持所有組件充滿電並且距離靠近；及時更換導管（或夾具），以降低堵塞風險；隨身攜帶可能需要的部件。 **根據你的系統、使用經驗，還有你的接受度和一般生活方式，這些方面可能會限制你，也可能不會。**
 
 #### 運動/活動準備
 
-為運動/活動/鍛煉做準備，正常的幫浦或**混合**自動循環協議是採取減少活性胰島素的措施。
+When exercising or being active, with a pump or hybrid closed loop it is recommended that the user reduces **IOB** prior to exercise.
 
-使用**全自動循環**時，演算法會調整以偵測餐後並自動為你提供胰島素，以抵抗血糖上升。 設置高臨時目標和降低百分比設定檔（在進餐開始時已經生效）會產生問題。 立即設置目標並降低%設定檔（在進餐開始時生效）會產生問題。
+With **FCL**, the algorithm is tuned to detect **UAM** and automatically deliver insulin to counter **BG** rises.  A high **Temp Target** and lower **Profile Percentage** (effective already around meal start) should be set well in advance of any activity.
 
-因此，非尋常的活動數值可能需要**嚴格的準備**（特別是**如果你希望在運動時保持少量的零食需求**）。 在一天活動後的夜晚，保持較低的%設定檔是明智的，並在晚餐完全消化後的幾個小時內設置較高的（>100 mg/dl）血糖目標，並在 AAPS 偏好設定中選擇「不在較高目標時使用 SMB」。
+Unusual or erratic exercise activity levels present difficulties for **FCL**. Planning ahead is required for exercise (especially if you want to reduce the need for rescue carbs/snacks during sports low). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dl) **BG**  target, with “no **SMBs** at elevated target” selected in **AAPS*** preferences.
 
 #### 兒童的挑戰
 
-為兒童建立並維護全自動循環會帶來一些額外的挑戰，特別是如果：
+**FCL** can present extra challenges for children and these include:
 
-- Lyumjev 不可用或不耐受
-- 每小時的基礎率非常低，無法為大量的 SMB 提供良好的基礎。
-- 飲食中富含甜食成分。 由於兒童的血容量較低，這會強烈導致非常高的血糖尖峰！
-- 胰島素敏感性或日夜節律的顯著變化使得維持適當調整的全自動循環變得困難。
+- Lyumjev or Fiasp may not available or well tolerated.
+- Hourly basal rate may very low, providing a poor basis for big **SMBs**.
+- Diet may be rich in sweet components. With the typical low blood volume of a small body, strong tendency towards very high **BG** spikes.
+- Growth hormones and going through marked changes of insulin sensitivity makes it difficult to keep the **FCL** accurately tuned.
 
-有一些家長和孩子在這個領域進行了開創性的嘗試。 本文強調了需要一些最低合規性的領域；最後的問題是，取得的結果是否至少與他們平時在混合自動循環中的情況相當。
 
-#### 設定所需的時間
+## Enabling boosted SMBs: safety
 
-最後，在享受功能正常的全自動循環之前，你需要經歷數週的空閒時間和「空閒心態」來完成設置。 問題實際上是你願意投入的時間是否能讓你達到認為「足夠好」的結果。 這取決於你的「習慣」，以及你願意做出的妥協（例如更頻繁地更換導管/夾具，避免在血糖過高時開始進餐等）。 ）這些妥協能否讓你不再需要管理每次進餐和注射。
+In **HCL** safety restrictions are implemented regarding bolus sizes that can be automatically given by the loop.
 
-## 啟用強化的 SMB；安全性
+**FCL** loopers no longer need to give a sizable bolus around meal start. The impact of this means that restrictions in size limits for **SMBs** must be widened to make the loop capable of delivering large enough **SMBs**.
 
-在混合自動循環中，系統會實施關於自動注射劑量的強大安全限制。
+If you are operating with **AAPS** in the Master release, it is suggested **AAPS**' Preferences are set up with the maximum allowed **SMB** size so that **FCL** can give (maxUAMSMBBasalMinutes=120, i.e. 2 hours worth of basal at that daytime).
 
-然而，在全自動循環中，使用者不再在進餐開始時進行大劑量注射。 因此，SMB 的大小限制必須放寬，以使循環系統能夠給予足夠大的 SMB。
+If your basal rate is very low, the resulting **SMB** limits might be too low to allow sufficient control to tackle postprandial **BG** rises. One possible solution is to avoid diets that cause strong **BG** spikes and later switches to a **AAPS** dev variant that offers a new parameter in **SMB** delivery settings: smb_max_range_extension. This will expand the standard maximum of 2 hours worth of basal by a factor of >1. (Additionally, the default 50% **SMB** delivery ratio might be elevated in dev. variants).
 
-由於你正在使用 AAPS Master 版本，建議你在 AAPS 偏好設定中設置最大允許 SMB 尺寸的最大設定（maxUAMSMBBasalMinutes=120，即相當於該時間段內 2 小時的基礎率）。
+**Follow the instructions to enable AAPS to mimic your bolussing via a couple of SMBs**.
 
-> 如果你的基礎率非常低，則結果 SMB 限制可能太低，無法有效控制餐後血糖的上升。 在這種情況下，解決方案可能是避免引起強烈血糖波動的飲食，並改用 AAPS 開發版本，該版本在 SMB 交付設定中提供了一個新參數：smb_max_range_extension。 這個參數可以將標準的 2 小時基礎率的上限擴展超過 1 倍。 （此外，在開發版本中，預設的 50% SMB 交付比例可能會提高）。
-
-將 AAPS Master 版本中的 SMB 大小設置為最大不會使全自動循環模式本身變得不安全。 相反，你將大劑量注射拆分為幾個小劑量注射，這樣即使有幾分鐘的延遲，循環系統也能為你提供所需的注射。 這幾乎可以消除進餐後 1-2 小時內低血糖的風險。 在第 3 小時及之後，應該不會有太大區別，因為在 HCL 和 FCL 模式中，循環系統都是使用相同的演算法。
-
-**請遵循指示**以啟用 AAPS **模擬您的注射通過幾個微量注射**。
-
-不時檢查 SMB 標籤，看看你的 SMB 是否足夠大，以滿足進餐開始時全自動循環所需的胰島素需求。
+Check the **SMB** tab periodicallu to see whether your **SMBs** are allowed to be sufficient enough to deliver the required insulin needed for the loop around meal starts.
 
 如果不是，你的調整努力有時可能會毫無成果！
 
-```{admonition} Boosting ISF can become dangerous
+
+```{admonition} Boosting **ISF** can become dangerous
 :class: danger
 
-仔細觀察/分析在餐點開始不久後，因你的設定而產生的 SMB 大小。 逐步調整，並且一次不要更改超過 1 或 2 個參數。
+Carefully observe/analyse the **SMB** sizes shortly after your meal commences. 逐步調整，並且一次不要更改超過 1 或 2 個參數。
 
-設定必須對於你不同的飲食種類足夠有效。
+Your **AAPS'** setting must be sufficiently set up to cope with your (!) variety of meals.
 ```
 
 ## 餐點偵測/自動化升強
 
-成功進行完全閉環循環，ISF 是調整的關鍵參數。 當使用 AAPS Master + 自動化時，**當餐點被識別時（透過血糖變化），必須自動觸發超過 100% 的設定變更**，並提供強化的 ISF。
+For successful **FCL**, **ISF** is the key tuning parameter. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
 
-AAPS Master 允許最高 130% 的臨時設定。 在混合閉環模式中的設定。 升強 ISF 的三個步驟：
+**AAPS** Master allows up to 130% temporary **Profile** in **HCL** p mode. Boosting the **ISF** is done in 3 steps:
 
-- 第一步是在設定中查找適用於這個餐點時間的 ISF，並檢查例如 Autosens 是否建議進行修改以反應目前身體（最近幾小時）的胰島素敏感性狀況。
-- 第二步是應用一個因子（1/設定百分比，根據你的自動化設定）來升強 ISF。
-- 第三步是檢查建議的 ISF 是否落在預設的安全範圍內。
+- Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body..
+- Step 2 - apply a factor (1/Profile%, as set in **Automation**) to boost **ISF**.
+- Step 3 - check that the suggested **ISF** falls within set safety limits.
 
-### 完全閉環自動化模板
+### FCL's Automation templates
 
-在頂部勾選框：你始終有以下選項：
+Boxes to tick at the top. You have the option:
 
-- 在所有自動化列表中，你可以勾選取消（位於每個欄位的左側）=> 這將停用該自動化。  例如，你可以對與早餐相關的所有完全閉環自動化進行此操作，以進入混合閉環早餐模式。
-- 在每個自動化事件模板中，你可以勾選**用戶操作**=>這樣當條件適用時，定義的動作不會自動執行。 相反，當完全閉環自動化將自動執行 SMB 時，AAPS 主畫面會提醒你。 屆時你可以選擇是否執行。 這在**調整階段中極其有用**。                                                                                                                        
-  這個功能在日常使用中也非常有價值。 例如，當你看到「腳離地症狀」（起床時血糖突然上升），但希望防止自動「早餐開始」的回應時。
+- In your **Automation** list, you can tick the check-mark (to the left of each field) OFF => This de-activates that **Automation**. For instance you can do this for all breakfast related **FCL** **Automations** to go to **HCL** for breakfast(s).
 
-以下部分詳細展示了如何將一系列條件組合起來，以描述 AAPS 循環應增加（或減少）胰島素輸送的情況。                                                                                                                                      由於 ISF 無法直接調整，將設定百分比提高到超過 100% 對我們的目的是相同的。
+- For each **Automation** rule you can tick the box for User action => then the defined Actions will not automatically be executed when Conditions apply. Rather, the **AAPS** main screen will alert you whenever your **FCL** would automatically give a **SMB**. You have the opportunity then to say ‘yes’ or ‘no’. This is extremely useful in your tuning phase.
+
+This feature can be useful for certain situations like “foot to floor” syndrome whher there is a sudden rise in **BG** when getting up in the morning, but the user wants to prevent a fully automatic “breakfast started” response.
+
+The section below provides guidance how to bundle **Automation’s** Conditions and how to tackle situations in which the **AAPS** should increase (or decrease) insulin delivery. As **ISF** cannot directly be tuned, raising **Profile Percentage** over 100% will do the same for our purposes.
 
 ### 當血糖上升時自動執行大劑量的 SMB
 
-完全閉環循環成功的關鍵：**在餐後血糖開始上升時，循環系統必須盡快自動注射大劑量的胰島素（SMBs），以「趕上」所需的活性胰島素。** （與你在混合閉環模式下相似餐點的注射劑量進行比較！）
+The key to successful **FCL** **at the beginning of BG increases from meals, very large automatic SMBS must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in h**HCL**!)
 
-首先，你需要查看**個人資料**（從你在混合閉環模式下的時間）以確定哪些**變化**不是與餐點相關的，而哪些肯定是的。
+To achieve this, data from your **HCL** should be analysed to determine which **deltas** might be not meal –related and those delta which might be.
 
-- 由於你可以將自動化設定為僅在預定的時間範圍內工作，因此只需分析那段時間。
-- 如果你吃的餐點差異很大（例如高碳水化合物的早餐，但低碳水化合物的午餐），你可以選擇為每個時間段設置兩個不同的自動化。
+- As you can define the **Automation** within a pre-defined time-window, you need only to analyse there.
+- If you do very different kinds of meals (e.g. a rather high carb breakfast, but low carb lunch) you can choose to do two different (sets of) **Automations** for each of the time slots.
 - 如果你在晚上看到偶爾因壓迫而產生的低血糖，請排除夜晚的自動化。
 - 通常，使用過去 5 分鐘內的變化資料就足夠了。
-- 但你也可以使用其中一個平均變化資料。 透過比較你的自動化條件中的變化資料，你甚至可以根據血糖上升的速度來定義不同激進程度的動作。
+- 但你也可以使用其中一個平均變化資料。 By comparing the deltas in the conditions of your **Automations** you could even define actions of different aggressiveness depending on whether the **BG** rises in an accelerated way or not.
 
-> （變化 – 短期平均變化）>n 是可以用來偵測加速上升的術語，以在血糖剛開始上升的早期觸發第一個 SMB。 - 注意：不適用於 CGM 資料不佳或過度平滑的情況！
+> ( delta – short avg delta )>n   is a term that could be used for acceleration detection , to trigger first **SMB** at earliest sign of rising **BG**. -                                                                             
+> Caution: not possible to use with poor or highly smoothened **CGM-values!
 
-一個有很多散布的 CGM 會讓您處於困境中，因為為了安全起見，您需要「土堆」您的定義，因為變化率肯定是用餐開始的指標。 這意味著：
+A **CGM** with patchy data puts the user in a bad spot because, to be on the safe side,  you need to „sandbag“ your definition which delta is surely a sign of a started meal. This means:
 
-- 你的完全閉環系統將失去更多時間，導致更高的血糖峰值和較低的 TIR 百分比。
-- 因為你無法使用更早或更小的變化資料來觸發 SMB，這些 SMB 本應彌補用戶在完全閉環模式下的注射。
+- **FCL** loses additional time, resulting in higher **BG** peaks and lower %**TIR**;
+- you cannot use an earlier or smaller delta which could trigger, also without a meal, the **SMBs** that are supposed to make up for a user bolus in **FCL**.
 
 此外，餐後的最初血糖上升特點是**活性胰島素**較低。 考慮到這一點，針對晚餐的自動化(#1) 可能如下所示：
 
@@ -208,55 +189,55 @@ AAPS Master 允許最高 130% 的臨時設定。 在混合閉環模式中的設�
 
 自動化 #1
 
-如果條件適用，循環系統將在接下來的 12 分鐘內給予 1 或 2 次 SMB，根據設定的提高百分比（例如 30% 的胰島素需求提升）。 只要這些條件適用，自動化規則將延長 12 分鐘。 低碳水化合物餐點的血糖上升可能較慢。 他將受益於另一個自動化 (#2)，該自動化在更小的變化資料下啟動，並給予較弱的胰島素提升。
+If Conditions apply, **AAPS** would give 1 or 2 **SMBs** in the next 12 minutes, using a boosted **ISF** according to the set elevated **Profile Percentage** (in the example, a 30% boost of insulinReq). As long as these Conditions apply, the **Automation**  rule extends by another 12 minutes. A low carb meal might have slower **BG** rise characteristics. 他將受益於另一個自動化 (#2)，該自動化在更小的變化資料下啟動，並給予較弱的胰島素提升。
 
 ![>=5mg 上升 115% 胰島素，4 小時內完成<5.5](../images/fullClosedLoop03.png)
 
-同樣的自動化也可能在高碳水化合物餐點中啟動，當自動化 #1 定義的急劇上升結束後。
+The same **Automation** probably will kick in also in higher carb meals, once the steep rise as defined in Automation#1 is over.
 
-您需要「分階段」這兩個（+ 可能還有第三個）自動化，以適應您在餐餐（多樣性）中看到的內容 => 設定適當的跳躍大小、IOB 標準和增幅將是一個反覆調整的過程。  此外，如果你在條件中包括適當的時間段，你可以輕鬆地為不同的日常餐點時間設置不同的自動化（早餐、午餐、晚餐）。
+You need to “stage” these two (+ maybe a third) **Automations** to fit with what you see in your meal (variety) => Setting appropriate jump sizes, **iob** criteria, and amplifications will be an iterative tuning process.  此外，如果你在條件中包括適當的時間段，你可以輕鬆地為不同的日常餐點時間設置不同的自動化（早餐、午餐、晚餐）。
 
-請注意，在上升階段（！）中，必須阻止「活性胰島素」的「過剩」，以避免後期（3-5 小時後）胰島素的尾部效果超過循環系統透過零基礎速率的控制能力（停止基礎速率，降低低血糖風險）。
+Note that, still in the rise phase (!), the "overflow" of **iob** must be blocked so that the late effects of the **insulin** (the "**tail**" after 3-5 hours) will not exceed the braking capacity of the loop through zero-temping (“taking away” basal, to reduce hypo risk).
 
 對於大餐，有時會出現**第二次上升**。 到那時，活性胰島素通常已經下降了一些，更積極的自動化再次生效。 （檢查你的自動化 #2 中的活性胰島素條件，設定是否過低以至於這種情況不會發生）。
 
-在給予幾個初始微量注射後不久，來到一個**平衡階段**，此時應該適度添加胰島素以應對吸收的額外碳水化合物。 （除了低碳水化合物餐點，這種情況下循環系統可能會看到血糖上升太弱，立即進入零基礎速率的狀態）。
+Soon after a few initial **SMBs** are given comes a **balanced phase** where moderate delivery of insulin should cover the additional carbs absorbed. (Except in low carb meals, where the loop might see too weak of a**BG** rise, and go into zero-temping right away already now).
 
-AAPS 主畫面（在完全閉環自動模式下，你總是會看到 cob=0）在此階段可能會要求更多碳水化合物。 在完全閉環模式下，這意味著你可以進行一個大致的合理性檢查：這些碳水化合物量是否可能在你的體內，來自大約一個小時前未完全吸收的餐點（你未向循環系統提供該資訊）？
+The **AAPS** main screen (where you see cob=0 in **UAM** full loop) might in this phase ask for more carbs required. In **UAM** mode that simply means, you could make a very rough plausibility check: Is that amount of carbs likely in your body, un-absorbed from your meal just about an hour ago (about which you gave your loop no info)?
 
 
 ### 活性胰島素門檻值
 
-通常，自動化 #1 和/或 #2 會使活性胰島素上升到足以應對你的餐點的高度。 為了進行個性化調整，請查看您的混合閉環數據中發生在妥善管理的餐點（通常是您的餐前注射）中的最大 IOB 值，以及在此之前會發生低血糖（或需要額外碳水化合物）的數值。
+Often, **Automations** #1 and/or #2 make iob rise to heights that typically are enough for **your** meals. For personalised tuning, look in your **HCL** data at the max iob values that occur with well-managed meals (often: your meal bolus), and above which magnitude a hypo (or requirement for extra carbs) occurred at the end.
 
-合理的**活性胰島素門檻值**，應在循環系統降低積極性的時間點設定，不同餐點可能有所不同。 但特別是在餐後的第一小時，這對於完全閉環模式非常關鍵，這些資料對我來說變化不大：每小時大約吸收 30g，並且可以定義一個與具體餐點無關的合理活性胰島素。
+合理的**活性胰島素門檻值**，應在循環系統降低積極性的時間點設定，不同餐點可能有所不同。 But especially in the first hour after the start of a meal, which is very crucial in the **UAM** mode. It will defer to for each user. For some users just about 30g/hour get absorbed, and to define a meaningful **iob** independent of the exact meal can be possible.
 
-對於特別的餐點，或在餐後有運動的情況下，你可以快速調整自動化中的活性胰島素門檻值。
+For exceptional meals, or to lower it if sports follow, the **iob** threshold can rapidly be set differently in your **Automation**.
 
-自動化 (#3)，“達到活性胰島素門檻值 => 關閉 SMB”，是用來結束（或暫停，直到下一波碳水化合物相關上升）積極的 SMB 促進劑的。
+Automation(#3),”iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
 
 ![活性胰島素 >5.5...111 TT = 關閉 SMB 16 分鐘](../images/fullClosedLoop04.png)
 
 自動化 #3
 
-他告訴循環系統在你設定的**活性胰島素門檻值**以上最好不再使用任何 SMB。
+It tells the loop that above your set **iob threshold** it's better not to use any more **SMBs**
 
-- 給定的示例透過設定 TT=111（這是任意的；選擇一個大於 100 的數字，你可以輕鬆識別為自動關閉 SMB 的數字）來實現此目的。
-- 在 AAPS 偏好設定/SMB 設定中，通常不允許在提高的目標值下進行 SMB。                                                                                                                   
-  胰島素需求將需要更加謹慎地透過 TBRs 的瓶頸來提供。
+- The given example does that by setting TT=111 (which is kind of arbitrary; pick a number>100 that you easy recognise as your automated **SMB** shut-off)
+- In **AAPS' Preferences/ SMB** Settings generally do not allow **SMB** at elevated target).                                                                                                                   
+  The insulin required will then have to be delivered with much more caution through the bottleneck of **TBRs**
 
 **注意：自動化 #3 僅在沒有啟動 TT 時有效。** 因此，如果你使用了即將用餐 TT，必須在那段時間結束，通常應在餐後 30-40 分鐘結束。
 
-一個自動化的想法是根據條件在活性胰島素超過 65% * 活性胰島素門檻值時，自動結束即將用餐 TT。
-> 使用即將用餐 TT 的方式 一些使用者會設置（透過按下 TT 按鈕，或透過降低設定的目標血糖值，如果用餐時間較為固定）即將用餐 TT 大約在餐前一小時或更早開始，以保證一個低的起始血糖和少量正向活性胰島素。 但假設完全閉環系統始終在目標範圍內，這可能並無太大作用，你可能更願意定義一個自動化，在餐點開始時（透過血糖變化，或加速度 = 變化資料 > 平均變化資料）設定即將用餐 TT。 在這個階段，低 TT 很重要，因為你的循環系統會透過 (預測的血糖減去 TT)/敏感性來計算任何 SMB，所以較小的 TT 會使胰島素需求更大。
+One way to do this is to set up an **Automation** Condition that ends an eventually running EatingSoonTT under the Condition **iob**>65% * iobTH.
+> Ways to work with EatingSoonTT Some loopers set (by pressing the TT button, or automated via a lowered **Profile** **BG** target if eating time slots are fairly fixed) an EatingSoonTT roughly an hour or more before meal start, just to guarantee a low starting **BG** and slightly increased  **iob**. But, assuming the **FCL** is always en route towards target, this might not yield much and you may prefere to define an **Automation** that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). A low **TT** is important in this stage because any **SMB** is calculated by your loop using (predicted glucose minus TT)/sens, so a small TT makes the resulting insulinReq bigger.
 
-在給予最初的加強 SMB 後，你設定的活性胰島素門檻值和自動化 #3 應該能達到控制血糖峰值的平衡，但也不會導致餐後低血糖。
+After the first boosted **SMB**s were given, your set iobTH and *Automation** #3 should strike a good balance of limiting the glucose peak, but also not leading to a hypo after the meal.
 
-例如，如果你的早餐完全不同於你的晚餐，碳水化合物含量差異很大，你可以透過定義適用於不同時間段的自動化來受益，並設置不同的活性胰島素門檻值（可能也不同的變化資料和不同的設定百分比）。 你和你的循環系統必須接受某些血糖峰值高度，以降低 SMB 胰島素作用時間尾部結束時的低血糖風險。
+If your breakfast substantially deviates in carb content from your average dinner, you may benefit from defining **Automations** that apply in the respective times of day, and have different **iobTH** (possibly also different deltas, and different **Percentage Profile** set). Both, you with defining your meal spectrum and settings (notably, **iobTH**), and the loop managing the unfolding **BG** curve, must accept certain peak heights for reducing hypo danger towards the end of the **DIAs** from **SMBs**.
 
 ### 高血糖停滯
 
-如果在「豐富」的餐點後看到長期的**高血糖**停滯，則自動化 #6（下圖左側），「餐後高血糖」，有助於應對脂肪酸抗性：在多道菜餐點、大份油膩披薩、奶酪晚餐後，血糖曲線可能形成兩個波峰或更常見的是延長的高平臺。
+In case, after a “rich” meal, a long-lasting stagnation with **high BG** value is seen, **Automation** #6 (below, left),"post-meal High”, helps deal with fatty acid resistance: After multi-course meals, large greasy pizza, raclette evening, the glucose curve can form two humps or, very often, an elongated high plateau.
 
 ![活性胰島素 >5.5...111 TT = 關閉 SMB 16 分鐘](../images/fullClosedLoop05.png)
 
@@ -272,22 +253,22 @@ AAPS 主畫面（在完全閉環自動模式下，你總是會看到 cob=0）在
 
 ### 防止低血糖
 
-核心問題在於完全閉環自動模式（無碳水化合物輸入）下**無法知道還有多少克碳水化合物尚未吸收**，並可能在你進入低血糖前耗盡「尾部」胰島素。
+The core problem is that the **UAM** **FCL** (without carb inputs) can have **no idea how many g of carbs are still available** for absorption, and might use up that “tail” insulin, without you going into a hypo from it.
 
-透過加強的 SMB，循環系統「追上了」我們以前用餐點注射所做的事情。 但是，在**胰島素作用的「尾部」階段，防止低血糖可能成為一個嚴重的問題**。
+Using boosted **SMBs**, the **FCL** “caught up” with what we formerly did with a meal bolus. 但是，在**胰島素作用的「尾部」階段，防止低血糖可能成為一個嚴重的問題**。
 
-為了準備你的完全閉環自動化，你因此必須仔細查看**活性胰島素的時間過程**，並判斷**何時會過多，並如何透過調整你的自動化來捕捉這一點**。 這是完全可能的，因為我們有幾個調整的機制。 然而，要「準確」地設置，讓他合理地適用於你多樣化的餐點可能有點棘手。
+In preparation for **FCL**, the user must take a closer look at the **time course of iob** for typical meals, and judge **when it becomes too much, and how you can catch that by tuning your Automations**. That is possible because we have several adjusting screws. It can be a challenge to get this right
 
 通常來說，針對一種餐點不斷優化設定並沒有意義。 當你找到一個還不錯的設定，比如針對你常吃的一種午餐，試試看這個設定在其他午餐上效果如何，並想想你可以怎麼「調整」。
 
 為了防止餐後 3-5 小時內發生低血糖，請在活性胰島素過多之前減少其積極性。 具體方法：
 
-- 在血糖上升期間逐步減弱 ISF，就像自動化範例 #1 和 #2 所述。
-- 定義活性胰島素門檻值，從此門檻值開始，循環系統將變得顯著更謹慎（參見上述自動化 #3）。 請注意，這個活性胰島素門檻值可能會被最後一個 SMB 超過，因為他在作用前就進入了效果；隨後，如果循環系統偵測到胰島素需求，碳水化合物被吸收會對活性胰島素提供反向作用，降低活性胰島素。
-- 活性胰島素門檻值可以根據餐點進行區分：透過複製自動化，你可以輕鬆區分早餐、午餐和晚餐時段（甚至可以根據地理位置區分，例如公司餐廳或丈母娘家等）。  
-  >你還可以透過設定不同的 TT 值（低碳水與快速碳水），進一步區分這些時間段內的餐點類型，並為他們呼叫專門調整的自動化。（除非你的飲食習慣變化很大，否則這可能不必要）。
+- Become milder and milder with the **ISF** already during the glucose rise, as in Automation examples #1 and #2 given.
+- Define the iob threshold, from which **AAPS** is made significantly more cautious (Automation #3, above). Note this **iob** can be exceeded, by the last **SMB** before it went into effect; and then further by TBRs if the loop sees insulinReq Carbs getting absorbed will provide a counter-movement towards lower iob.
+- The iob threshold could be differentiated according to meals: By cloning the automations, you could easily differentiate for breakfast, lunch, and dinner time slots (or even for geo-locations, like company cafeteria, or at mother-in-law etc)
+> You could differentiate within these time slots even further by setting different TTs for low carb vs. fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with **Automations** specially tuned for them. This is probably not necessary, unless your diet habits do vary a lot.
 
-在面對特別餐點挑戰之前，你可以提高活性胰島素門檻值，或在 5 秒內快速修改自動化中的任何設置，直接在 AAPS 主畫面進行（點擊左上方的漢堡選單，或依據你的 AAPS 設置，在自動化選項卡中）。
+Before a special meal challenge, you can raise your **iob** threshold, or make another change in any of your Automations within under 5 seconds, right from your AAPS main screen (burger top left; or **Automations** tab, depending how you configured your **AAPS**).
 
 餐後數小時內低血糖的風險主要取決於你的餐點組成是否導致**為應對大量碳水所產生的胰島素尾部**會被**「延長碳水」所消耗**（過量/延遲的碳水化合物吸收/蛋白質/脂肪/纖維）。
 
@@ -295,8 +276,8 @@ AAPS 主畫面（在完全閉環自動模式下，你總是會看到 cob=0）在
 
 ### 自動化程式的順序
 
-自動化定義重疊時可能會產生問題。 範例：問題在於 delta >8 也是 delta >5，這意味著可能有兩個競爭的自動化。 那麼循環系統會怎麼做呢？ 它總是根據您在查看漢堡選單 / AdAPS 主畫面時，自動化的出現順序來決定。  範例：delta > +8 規則必須先執行（如果所有條件都適用，將啟動最強的升強）；然後檢查 delta >5（並做出較溫和的回應）。 如果順序相反，則 delta>8 規則永遠不會生效，因為 delta>5 已經適用，結果已定。
-> 自動化「清理」的提示：更改順序非常簡單。 如果你在 AAPS/自動化中按下列表項目，你可以將所選的自動化移至另一個位置。 這樣你可以快速重新安排。
+Problems can arise with overlapping definitions in **Automations**. Example: The problem is that delta >8 is also delta >5, i.e. there may be two competing **Automations** What does the loop do then? It always decides according to the sequence in which your **Automations** appear when looking into the burger menu / AdAPS main screen.  範例：delta > +8 規則必須先執行（如果所有條件都適用，將啟動最強的升強）；然後檢查 delta >5（並做出較溫和的回應）。 如果順序相反，則 delta>8 規則永遠不會生效，因為 delta>5 已經適用，結果已定。
+> Tip for Automations: Order changes are very easy to make. Press on a list entry in **AAPS/Automations** and the user rearrange the **Automations** in question to another position.
 
 此外，隨時快速調整任何條件或動作也非常容易，直接在你的 AAPS 手機上進行，例如在參加特別的用餐活動時。 （但不要忘記在第二天將其恢復為正常狀態）。
 
@@ -304,53 +285,54 @@ AAPS 主畫面（在完全閉環自動模式下，你總是會看到 cob=0）在
 
 ### 如何回到混合閉環模式
 
-你可以取消勾選與完全閉環自動化相關的頂部框，然後回到用餐注射和再次輸入碳水化合物的狀態。  你可能需要進入 AAPS 偏好設定/首頁總覽/按鈕，並將「胰島素、計算機...」等按鈕  恢復到你的 AAPS 混合閉環主畫面。 請注意，現在再次由你負責為餐點注射。
+You can un-click the top boxes in the **Automations** related to your **FCL**, and go back to bolusing for meals and make carb inputs again. You may have to go to **AAPS** Preferences/Overview/Buttons and get your Buttons “Insulin, Calculator…” back for your **AAPS** main screen. Be aware that now it is again up to you to bolus for meals.
 
-僅在自動化已完全定義且勾選的用餐時段執行完全閉環可能也是明智的，並在你想要執行混合閉環時取消勾選其他餐點時段的自動化（或在過渡期間尚未定義）。
+It may be wise to do **FCL** only for meals (time slots) where **Automations** are fully defined and clicked on, and un-click only those for the other meal times when you like to do **HCL** (or have none defined yet, in your transition period).
 
-例如，在為晚餐時段定義自動化後，完全可以在不做任何額外步驟的情況下，僅對晚餐進行完全閉環，而早餐和午餐則按照你習慣的方式使用混合閉環。
+For instance, it is perfectly possible, without any extra steps after **Automations** for dinner time slots are defined, to do **FCL** only for dinners, while breakfast and lunch are done in a **HCL** as you are used to.
+
 
 
 ### 完全閉環的前提條件是否仍然成立？
 
-- 基本設定檔是否仍然正確？
-- CGM 資料品質是否惡化
-- 等等（請參閱先決條件部分）。
+- Is the basic **Profile** still correct?
+- Has the **CGM** quality deteriorated
+- Refer to pre-requisites (above).
 
 ### 血糖過高
 
 - 餐點未能及時被識別
     - 檢查藍牙連線（不）穩定性
-    - 檢查是否可以設定更小的變化值來觸發第一個 SMB。
+    - Check whether you could set smaller deltas to trigger first **SMB**
     - 在餐前幾分鐘內嘗試喝點開胃酒或湯。
 - SMBs 劑量過小
-    - 檢查自動化順序（例如：大變化在小變化之前）。
-    - 檢查在 SMB 標籤中的即時資料，是否每小時的基礎設定和設置的時間（最多 120 分鐘）限制了允許的 SMB 劑量。
-    - 檢查在 SMB 標籤中的即時資料，是否需要將設定百分比調大。
+    - Check order of **Automations** (e.g.: big delta before small delta)
+    - Check (real-time) in **SMB** tab whether hourly profile basal and set minutes (max 120) limit allowed SMB size
+    - Check (real-time) in**SMB** tab whether %profile must  be set bigger
 - 如果你的所有設定都達到了極限，你可能需要接受暫時的高血糖，或調整飲食。
-> 如果你準備使用 AAPS 開發版本，你也可以使用允許進一步擴展 SMB 劑量的版本。 有些使用者也會在他們的「完全閉環」中使用小劑量的預注射。 然而，這會影響血糖曲線及因此觸發 SMB 的偵測，難以確保整體效益。
+> 如果你準備使用 AAPS 開發版本，你也可以使用允許進一步擴展 SMB 劑量的版本。 有些使用者也會在他們的「完全閉環」中使用小劑量的預注射。 However, this interferes with how glucose curve and hence detection of rises and triggered **SMBs** behave, and is therefore not easy to implement with convincing overall benefit.
 - 試點使用者的一個重要觀察結果是，你的血糖和活性胰島素曲線如何接近餐點開始的方式對於碳水化合物峰值有很大影響： 向下（例如接近設定的即將用餐 TT），建立一些活性胰島素，並朝強勁的正加速度曲線發展似乎對保持低峰值非常有幫助。
 
 ### 血糖過低
 
 - 餐點被錯誤識別
-    - 檢查是否可以設定更大的變化值來觸發第一個 SMB。
+    - Check whether you could set bigger deltas to trigger first **SMB**
     - 點選相關自動化中的「用戶操作」，這樣在未與餐點相關時，你可以隨時阻止該自動化的執行。
-    - 為防止零食觸發 SMB，像對待運動和抗低血糖零食一樣，設定 TT>100。
+    - To prevent snacks from triggering **SMBs** as for a meal, set a TT>100 when snacking (as you would do in sports and for anti-hypo snacks, anyways)
 - SMBs 總是輸送過多的胰島素。
-    - 請在微量注射選項卡中檢查（即時）是否需要將微量注射範圍擴展設置得更小。
-    - 檢查在 SMB 標籤中的即時資料，是否需要將設定百分比調小。
-    - SMB 輸送比例可能需要調小。 注意在這種情況下，它在所有微量注射（所有時間區段）中都是有效的，
+    - Check (real-time) in **SMB** tab whether **SMB** range extension must be set smaller
+    - Check (real-time) in **SMB**tab whether **Percentage Profile** must  be set smaller
+    - SMB 輸送比例可能需要調小。 Note in this case, it works across the board for all **SMBs** (all time slots),
 - 餐後胰島素「尾部」問題
     - 你可能需要吃零食（如果預測低血糖）或服用葡萄糖片（如果已經處於低血糖區域）。 但請注意，循環系統告訴你的所需碳水化合物量很可能被誇大，因為循環系統完全不知道你攝入了多少碳水化合物（而你可能能夠猜測還有多少碳水化合物，來自脂肪和蛋白質，仍在等待吸收）。
     - 一個有價值的信息是問題是否主要源於血糖上升階段。 此時，設定一個較低的活性胰島素門檻值可能是一個簡單的解決方案。
-    - 如果經常需要額外的碳水化合物，記下所需的碳水化合物克數（不包括你最終攝入過多的部分，因為這需要額外的胰島素）。  然後使用你的設定 IC 值來估算 SMB 應輸送的少量胰島素，並根據這些資訊進行調整（關於自動化中的設定百分比，或者你的活性胰島素門檻值）。 這可能與在血糖高時給予的 SMB 相關，也可能延長至血糖上升期間的 SMB。
-    - 很可能你必須接受較高的血糖峰值，以避免低血糖。 或者，將飲食改為含較低碳水化合物和較高蛋白質及脂肪的食物。
+    - 如果經常需要額外的碳水化合物，記下所需的碳水化合物克數（不包括你最終攝入過多的部分，因為這需要額外的胰島素）。  Then use your profile IC value to estimate how much insulin less the **SMB** should have delivered, and go with this info into your tuning (regarding the **Percentage Profile** in **Automations**, or maybe also your set iobTH). This may relate to the**SMBs** given when glucose was high, or also extending regarding also the **SMBs** during the **BG** rise.
+    - It could well be that you simply have to accept higher **BG** peaks for not going low. 或者，將飲食改為含較低碳水化合物和較高蛋白質及脂肪的食物。
 
 
 ### 更多資訊
 
-請確保與其他完全閉環使用者保持聯繫。
+Make sure you stay in touch with other **FCL** users.
 
 討論完全閉環自動化：
 
