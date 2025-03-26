@@ -223,7 +223,7 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 
 ![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
-# Примеры Автоматизации
+## Examples of Automations
 
 Ниже приведены примеры **Автоматизаций**. Обсуждение **Автоматизаций** и того, как пользователи индивидуализировали свою  **Automation** можно найти в группах Facebook или в Discord. Приведенные ниже примеры не следует воспроизводить без хорошего понимания пользователем того, как будет работать **Автоматизация**.
 
@@ -271,7 +271,7 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 
 ![Альтернативный текст (alt text)](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
-# Automating Preference Settings Export
+## Automating Preference Settings Export
 
 ### Unattended Exports: scheduled (daily)
 
@@ -294,7 +294,7 @@ Screenshots detailing the Automation triggers:
 Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Preferences > Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
 
 
-# Журналы автоматизации
+## Automation Logs
 
 В <**AAPS** ведется журнал недавно сработавших **автоматизаций** в нижней части экрана на вкладке **Автоматизация**.
 
@@ -333,6 +333,6 @@ Note: Export execution will be logged on Careportal. Note : Automation will not 
 
 Проверьте порядок расстановки приоритетов правил, как описано ранее.
 
-## Альтернативы автоматизации
+## Alternatives to Automations
 
 Для опытных пользователей есть и другие возможности автоматизации задач с помощью IFTTT или приложения других разработчиков Android под названием Automate. 
