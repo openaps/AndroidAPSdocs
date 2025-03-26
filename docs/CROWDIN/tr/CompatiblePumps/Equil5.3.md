@@ -27,7 +27,7 @@ In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
 
 ### Activate patch
 
-Navigate to the [Equil Tab](#overview) and press **Pair Equil Patch Pump**.
+Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
 
 ![overview.png](../images/Equil/overview.png)
 
