@@ -26,7 +26,7 @@
 | [Syai Tag](../CompatibleCgms/SyaiTagX1.md)           | Syai Tag                                                 |
 | Sibionics CGM                                        | Juggluco                                                 |
 
-(GettingStarted-TrustedBGSource=)
+(GettingStarted-TrustedBGSource)=
 
 ## 可信的血糖來源
 
