@@ -49,7 +49,7 @@
 - 在 [雙錶面](../WearOS/WearOsSmartwatch.md) 中顯示。
 
 (Preferences-skin)=
-### Skin
+### 外觀
 
 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
@@ -61,12 +61,12 @@
 
 其他外觀之間的差異取決於手機的顯示方向：
 
-#### Portrait orientation
+#### 直向顯示
 
 - **原始外觀**與**按鈕始終顯示在螢幕底部**相同
 - **大型顯示**在所有圖表中高度增加，與其他介面相比較
 
-#### Landscape orientation
+#### 橫向顯示
 
 - 使用**原始外觀**與**大顯示**時，你需要向下捲動才能看到螢幕底部的按鈕
 
@@ -80,7 +80,7 @@
 ![偏好設定 > 一般 - 保護](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-### Master password
+### 主密碼
 
 出於安全要求，通常必須能夠[匯出設定](../Maintenance/ExportImportSettings.md)，因為從版本 2.7 開始它們是加密的。
 
@@ -88,7 +88,7 @@
 
 ![設置主密碼](../images/MasterPW.png)
 
-### Settings protection
+### 設定保護
 
 - 用密碼或手機的生物識別身份驗證來保護你的設定（例如：[小孩正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）。 如果你啟用此功能，每次你想要進入任何偏好設置相關視圖時，系統都會提示你進行身份驗證。
 
@@ -98,13 +98,13 @@
 
 ![保護](../images/Pref2020_Protection.png)
 
-### Application protection
+### 應用程式保護
 
 如果應用程式受到保護，則必須輸入密碼或使用手機的生物識別身份驗證才能打開**AAPS**。
 
 **AAPS**如果輸入錯誤密碼將立即關閉，但如果先前成功打開，將仍會在背景運行。
 
-### Bolus protection
+### 注射保護
 
 - 如果**AAPS**被小孩使用，則注射保護可能會很有用，並且你可通過[SMS 進行注射](../RemoteFeatures/SMSCommands.md)。
 
@@ -112,7 +112,7 @@
 
 ![提示生物辨識保護](../images/Pref2020_PW.png)
 
-### Password and PIN retention
+### 密碼和 PIN 保留
 
 定義在你成功輸入密碼後，偏好設置或注射功能保持解鎖的時間（以秒為單位）。
 
@@ -122,7 +122,7 @@
 
 ![偏好設定 > 首頁總覽](../images/Pref2020_OverviewII.png)
 
-### Keep screen on
+### 保持螢幕常亮
 
 選項「保持螢幕常亮」將強制 Android 隨時保持螢幕亮起。 這對於演示等場合很有用。 但他會消耗大量電池電量。 因此，建議將智慧型手機連線到充電線。
 
@@ -158,7 +158,7 @@
 同一時間只能顯示一個快速嚮導按鈕。 如果你想執行不同的選項：長按當前顯示的快速嚮導按鈕。 這將帶你到所有快速嚮導選項的列表。 要執行某個選項，請長按它。 在執行之前，你必須確認。
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### 預設臨時目標
 
 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
@@ -174,7 +174,7 @@
 
 了解如何在這裡[啟用臨時目標](#TempTargets-where-can-i-select-a-temp-target)。
 
-### Fill/Prime standard insulin amounts
+### 填充/啟動標準胰島素量
 
 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
@@ -183,13 +183,13 @@
 可以在此對話框中定義預設值。 根據你的導管長度選擇填充/啟動對話框中的三個按鈕的預設量。
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### 可視化範圍
 
 選擇**AAPS**總覽和智慧型手錶上血糖圖表的高低標記。 這僅限於視覺化顯示，並非血糖的目標範圍。 範例：70 - 180 mg/dl 或 3.9 - 10 mmol/l
 
 ![偏好設定 > 可視化範圍](../images/Pref2020_OV_Range2.png)
 
-### Shorten tab titles
+### 縮短標籤標題
 
 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
@@ -200,7 +200,7 @@
 ![偏好設定 > 標籤](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes field in treatments dialogs
+### 在治療對話框中顯示備註欄
 
 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
@@ -230,7 +230,7 @@
 ![偏好設定 > 狀態燈](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Deliver this part of bolus wizard result
+### 傳送一部分的注射嚮導結果
 
 設置使用注射嚮導時計算的注射的[預設百分比](#AapsScreens-section-j)。
 
@@ -240,7 +240,7 @@
 * 對於消化緩慢的人來說：一次傳送所有的注射劑量可能會引起低血糖，因為胰島素的作用速度比消化快。
 * 以便給**AAPS**留出更多空間自行處理**血糖上升**。 在這兩種情況下，**AAPS**將在需要時透過SMB來補償缺失的注射部分。
 
-### Enabled bolus advisor
+### 啟用的注射顧問
 
 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
@@ -248,18 +248,18 @@
 
 啟用後，當你在高血糖狀態使用注射嚮導時，你將獲得警告，提示你是否想要預先注射，並在你的**BG**回到正常範圍時再進食。
 
-### Enabled bolus reminder
+### 啟用的注射提醒
 
 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 %待辦事項
 
 (Preferences-advanced-settings-overview)=
-### Advanced Settings (Overview)
+### 進階設置（首頁總覽）
 
 ![偏好設定 > 進階設置](../images/Pref2021_OV_Adv.png)
 
-#### Superbolus
+#### 超級注射
 
 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
@@ -272,21 +272,21 @@
 ## 治療安全
 
 (preferences-patient-type)=
-### Patient type
+### 病人類型
 
 - 安全限制是根據你在此設置中選擇的年齡設定的。
 - 如果你開始觸及這些嚴格的限制（如最大注射量），那麼是時候提升一步了。
 - 選擇高於實際年齡是一個不好的主意，因為這可能會因在胰島素對話框中輸入錯誤的數值（例如，跳過小數點）而導致過量。
 - 如果你想知道這些硬編碼的安全限制的實際數字，請滾動到你在[這個頁面](../DailyLifeWithAaps/KeyAapsFeatures.md)上使用的算法功能。
 
-### Max allowed bolus
+### 允許的最大注射量
 
 - 定義**AAPS**一次允許輸送的最大胰島素注射量（以胰島素單位計算）。
 - 此設置作為安全限制，防止因意外輸入或用戶錯誤而導致大量注射。
 - 建議將此設置為合理的數量，大致對應於你可能在一餐或校正劑量中需要的最大注射胰島素量。
 - 這個限制也適用於注射計算機的結果。
 
-### Max allowed carbs
+### 允許的最大碳水化合物量
 
 - 定義**AAPS**注射計算器允許劑量的最大碳水化合物量（以克計算）。
 - 此設置作為安全限制，防止因意外輸入或用戶錯誤而導致大量注射。
@@ -295,13 +295,13 @@
 ## 循環
 
 (Preferences-aps-mode)=
-### APS mode
+### APS模式
 在開放循環、閉合循環和低血糖暫停 (LGS) 之間切換。
 
 ![組態建置工具 - 循環模式](../images/ConfigBuilder_LoopLGS.png)
 
 (Preferences-pen-loop)=
-#### Open Loop
+#### 開放循環
 **AAPS**持續評估所有可用資料（IOB、COB、BG...）並在必要時提供治療建議（臨時基礎率），告訴你如何調整治療。
 
 這些建議不會自動執行（如封閉迴路）。 建議必須由使用者手動輸入到幫浦中（如果使用虛擬幫浦）或透過按鈕輸入，如果**AAPS**連接到真實幫浦。
@@ -309,7 +309,7 @@
 此選項是用於了解**AAPS**的運作方式或如果你使用不支援的幫浦。 無論你在這裡做出什麼選擇，直到**[目標5](#objectives-objective5)**結束之前，你都將處於開放迴路中。
 
 (preferences-closed-loop)=
-#### Closed Loop
+#### 閉合循環
 
 **AAPS** 持續評估所有可用的資料（IOB、COB、血糖……）並在必要時自動調整治療（_即_ 無需你進一步干預）以達到設定的 [目標範圍或數值](#profile-glucose-targets) （注射給藥、臨時基礎率、停用胰島素以避免低血糖等）。
 
@@ -317,14 +317,14 @@
 
 閉環系統僅在你達到 **[目標 6](#objectives-objective6)** 或更高時，並使用支援的幫浦時才能使用。
 
-#### Low Glucose Suspend (LGS)
+#### 低血糖暫停 (LGS)
 
 在此模式中，[maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) 設定為零。
 
 這意味著如果血糖下降，**AAPS** 可以為你減少基礎胰島素。 但是，如果血糖上升，則不會進行自動校正。 你的基礎率將保持在你當前**設定檔**中定義的值。 僅當基礎IOB為負值（來自先前的低血糖暫停）時，才會額外給予胰島素以降低**血糖**。
 
 (Preferences-minimal-request-change)=
-### Minimal request change
+### 最小請求變更
 
 使用 **開放環路** 時，你將在每次**AAPS** 建議調整基礎率時收到通知。 為了減少通知數量，你可以使用[更寬的血糖目標範圍](#profile-glucose-targets) 或增加最小請求率的百分比。 這定義了觸發通知所需的相對變更。
 
@@ -367,11 +367,11 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 
 ![COB 圖表](../images/Pref2020_min_5m_carbimpact.png)
 
-### Meal max absorption time
+### 餐點最大吸收時間
 
 如果你經常進食高脂肪或高蛋白質餐點，你需要增加餐點吸收時間。
 
-### Advanced settings - autosens ratio
+### 進階設定 - autosens 比例
 
 ![吸收設定](../images/Pref2020_Absorption.png)
 
@@ -424,15 +424,15 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 - 如果你在目標 1 中遇到困難，請再次檢查是否有拼寫錯誤。
 - 保持啟用與 websockets 的連線（推薦）。
 
-### Synchronization
+### 同步選項
 
 同步選擇將取決於你希望如何使用**AAPS**。
 
 你可以選擇[上傳和下載至 Nightscout 的資料](#Nightscout-aaps-settings)。
 
-### Alarm options
+### 警報選項
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
+![警報選項](../images/Pref2024_NSClient_Alarms.png)
 
 - 警報選項允許你選擇透過應用程式使用哪些 Nightscout 警報。 **AAPS** 將在觸發Nightscout警報時發出警告。
 - 要使警報發出聲音，你需要在[Nightscout 變數](https://nightscout.github.io/nightscout/setup_variables/#alarms)中設置緊急高、高、低和緊急低的警報值。
@@ -441,7 +441,7 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 - 從Nightscout創建的通知[公告](https://nightscout.github.io/nightscout/discover/#announcement)將在**AAPS**的通知欄中回顯Nightscout公告。
 - 當在一定時間內未從 Nightscout 收到資料時，你可以更改過時資料和緊急過時資料警報的門檻值。
 
-### Connection settings
+### 連線設定
 
 ![NSClient 連線設定](../images/ConfBuild_ConnectionSettings.png)
 
@@ -452,7 +452,7 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 - 若要刪除所有 SSID，請在該欄位中輸入空格。
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
+### 進階設定（NSClient）
 
 ![NS Client 進階設定](../images/Pref2024_NSClientAdv.png)
 
