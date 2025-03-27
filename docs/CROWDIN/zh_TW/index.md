@@ -161,8 +161,9 @@ AAPS 發佈說明 <./Maintenance/ReleaseNotes.md>
 ```{toctree}
 :caption: 9) 進階 AAPS 選項
 
-全閉環 <./AdvancedOptions/FullClosedLoop.md>
-開發分支 <./AdvancedOptions/DevBranch.md>
+全閉環(FCL) <./AdvancedOptions/FullClosedLoop.md>
+dev 分支 <./AdvancedOptions/DevBranch.md>
+xDrip 工程模式 <./AdvancedOptions/EnablingEngineeringModeInXdrip.md>
 自動調整 <./AdvancedOptions/Autotune.md>
 
 ```
