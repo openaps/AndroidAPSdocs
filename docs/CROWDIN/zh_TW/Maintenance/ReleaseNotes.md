@@ -56,48 +56,48 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
 (version3300)=
-## Version 3.3.2.0
+## 版本 3.3.2.0
 
-Release date: 27-03-2025
+發布日期：2025-27-03
 
 ### 如何升級
 
-* [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* [需要 Android Studio 版本為 "Meerkat" 或以上版本才能建置此版本。](#Building-APK-recommended-specification-of-computer-for-building-apk-file) 如果你已經建置了 3.3.x 版本，你需要再次升級 Android Studio。
 
-### Starting this version, notification and version enforcement has been simplified and softed and works following way:
-*  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
-*  After expiration LGS mode is enforced
-*  You'll receive warning/notifications less often:
-   - 28+ days remaining: every 7 days
-   - 27-14 days remaining: every 3 days
-   - then once a day
-   - Notification will be generated after noon to not bother you during nights
-* There are only 2 kinds of notification
-   - New version available (has no effect on AAPS)
-   - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
+### 從這個版本開始，通知和版本強制執行變得簡化並放寬，並以以下方式運作：
+*  當設備離線時不會過期（如果沒有網路連線）。 這意味著不再有 60 天和 90 天的寬限期。
+*  過期後將強制進入 LGS 模式
+*  你將會收到警告/通知的頻率會降低：
+   - 剩餘 28+ 天：每 7 天一次
+   - 剩餘 27-14 天：每 3 天一次
+   - 然後每天一次
+   - 通知將在中午後產生，以免在晚上打擾你
+* 只有 2 種通知類型
+   - 新版本可用（對 AAPS 沒有影響）
+   - 應用程式在未來的某個日期到期（對 AAPS 仍然沒有影響）/ 已經過期（AAPS 會轉為 LGS 模式）
 
-### News
+### 新聞
 
-* SMS RESTART command @MilosKozak
-* Watch Profile switch parameters @olorinmaia
-* Dark mode AAPS V2 watchface @olorinmaia
-* G7 data exchange improvements @olorinmaia
-* Widget configuration @MilosKozak
-* Radiobuttons UI improvements @olorinmaia
-* Automation: position choosing from map @MilosKozak
-* Version visible on main screens @MilosKozak
-* Compilation with existing git system in enforced (no zip downloads)
-* Show version on main screen @MilosKozak
-* Tidepool upload improvements @ConstantinMatheis
+* SMS RESTART 命令 @MilosKozak
+* 手錶個人設置切換參數 @olorinmaia
+* AAPS V2 手錶面板的暗色模式 @olorinmaia
+* G7 資料交換的改善 @olorinmaia
+* 小工具配置 @MilosKozak
+* 單選按鈕 UI 改進 @olorinmaia
+* 自動化：從地圖選擇位置 @MilosKozak
+* 主畫面上可見版本 @MilosKozak
+* 強制執行現有 git 系統的編譯（不支援 ZIP 下載）
+* 在主畫面上顯示版本 @MilosKozak
+* Tidepool 上傳改善 @ConstantinMatheis
 
 ### 錯誤修正
 
-* Dash unbonding fix @Andreas
-* Garmin fixes @robertbuessow @suside
-* Fix of IOB displaying in dialogs @olorinmaia
-* Objectives spelling and validation improvements @MilosKozak
-* Fixed rendering of emulated TBRs @MilosKozak
-* Fixed bypassing security @tdrkDev
+* Dash 解除綁定修正 @Andreas
+* Garmin 修正 @robertbuessow @suside
+* 修正對話框中的 IOB 顯示 @olorinmaia
+* 目標拼寫與驗證改善 @MilosKozak
+* 修正模擬 TBR 的顯示問題 @MilosKozak
+* 修正繞過安全性 @tdrkDev
 
 ## 版本 3.3.1.3
 
