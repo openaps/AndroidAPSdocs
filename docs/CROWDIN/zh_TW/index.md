@@ -34,7 +34,7 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 
 第**8)**節[尋求幫助](GettingHelp/WhereCanIGetHelp.md)</strong>應該能幫助你找到有關**AAPS**的最佳幫助資源。 這非常重要，讓你能夠快速與其他用戶取得聯繫，澄清問題並解決常見的困難。 很多人已成功使用 **AAPS**，但每個人都有自己無法獨立解決的問題。 由於用戶眾多，問題的回應時間通常非常快，通常僅需幾個小時。 不要擔心尋求幫助，更不用擔心愚蠢的問題！ 我們鼓勵任何新手/老手用戶提出他們認為有必要的所有問題，以幫助他們安全啟動並運作。 本節還包含 **AAPS** 和 **AAPSClient**（追蹤應用程式）的一般問題排除指南，如果你認為 **AAPS** 出現技術問題需要處理，本節也說明了如何將你的 **AAPS** 資料（日誌文件）發送給開發者進行調查，。
 
-第**9)**節涵蓋**進階AAPS選項**，例如如何從使用**AAPS**進行混合閉環（餐前注射等）進展到完全閉環（無需注射），並詳細說明開發和工程模式。 大多數使用者只需使用主要或"Master" **AAPS**版本即可正常操作，無須查看這些選項；本節給那些已經控制良好並希望進一步改善其設置的使用者。
+第**9)**節涵蓋**進階AAPS選項**，例如如何從使用**AAPS**進行混合閉環（餐前注射等）進展到全閉環（無需注射），並詳細說明開發和工程模式。 大多數使用者只需使用主要或"Master" **AAPS**版本即可正常操作，無須查看這些選項；本節給那些已經控制良好並希望進一步改善其設置的使用者。
 
 在第**10)**節[如何支援AAPS](SupportingAaps/HowToEditTheDocs.md)</strong>我們提供資訊，讓你能夠支持這個項目。 你可以捐錢、設備或專業知識。 你可以建議/自行更改文件，幫助 [翻譯文件](SupportingAaps/Translations)，並透過 Open Humans 項目提供你的資料。
 
@@ -161,7 +161,7 @@ AAPS 發佈說明 <./Maintenance/ReleaseNotes.md>
 ```{toctree}
 :caption: 9) 進階 AAPS 選項
 
-完全閉環 <./AdvancedOptions/FullClosedLoop.md>
+全閉環 <./AdvancedOptions/FullClosedLoop.md>
 開發分支 <./AdvancedOptions/DevBranch.md>
 自動調整 <./AdvancedOptions/Autotune.md>
 
