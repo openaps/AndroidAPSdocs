@@ -134,7 +134,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-## Master password
+## 主密碼
 
 由於**AAPS**的配置包含一些敏感資料（_例如_進入你的 Nightscout 伺服器的 API_KEY），因此這些資料會通過你在此設置的密碼進行加密。
 
@@ -294,7 +294,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-## Patient type
+## 病人類型
 
 在這裡你選擇你的「患者類型」，這點很重要，因為**AAPS**軟體根據患者的年齡有不同的限制。 這對安全至關重要。
 
@@ -502,7 +502,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 ![圖像](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-## APS mode
+## APS模式
 
 讓“開放循環”保持選中狀態。
 
