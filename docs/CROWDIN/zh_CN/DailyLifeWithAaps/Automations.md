@@ -221,7 +221,7 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 
 ![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
-# 自动操作示例
+## Examples of Automations
 
 以下是**自动操作**的示例。 关于**自动操作**以及用户如何个性化**自动操作**的进一步讨论，可以在Facebook讨论组或Discord上找到。 下面的示例不应在用户未充分理解**自动操作**将如何工作的情况下复制。
 
@@ -269,7 +269,7 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
-# Automating Preference Settings Export
+## Automating Preference Settings Export
 
 ### Unattended Exports: scheduled (daily)
 
@@ -292,7 +292,7 @@ Screenshots detailing the Automation triggers:
 Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Preferences > Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
 
 
-# 自动操作日志
+## Automation Logs
 
 **AAPS**在**自动操作**选项卡底部的屏幕上记录了最近触发的**自动操作**日志。
 
@@ -331,6 +331,6 @@ Note: Export execution will be logged on Careportal. Note : Automation will not 
 
 检查如上所述的规则优先级顺序。
 
-## 自动操作的替代方案
+## Alternatives to Automations
 
 对于高级用户，还有其他方法可以使用IFTTT或第三方Android应用（如Automate）来自动化任务。 

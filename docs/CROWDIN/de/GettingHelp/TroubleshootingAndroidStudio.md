@@ -2,6 +2,11 @@
 
 # Fehlerbehebung für Android Studio
 
+```{contents} List of common issues
+:depth: 2
+:local: true
+```
+
 (troubleshooting_androidstudio-lost-keystore)=
 ## Verlorener Keystore
 Wenn Du beim Update von **AAPS** denselben „Keystore“ verwendest, musst Du die Vorgängerversion von AAPS auf Deinem Smartphone nicht deinstallieren. Daher wird empfohlen, den Keystore an einem sicheren Platz zu speichern.
@@ -27,15 +32,14 @@ Der Gradle Sync kann aus verschiedenen Gründen fehlschlagen. Falls Du einen Hin
 
 ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-Wahrscheinliche Gründe für Gradle-Synchronisierungsfehler sind:
-* [Uncommitted changes](#uncommitted-changes)
-* [No cached version of ... available](#could-not-resolveno-cached-version)
-* [Incompatible Gradle JVM](#incompatible-gradle-jvm)
-* [Incompatible version of the Android Gradle plugin](#incompatible-version-of-android-gradle-plugin)
+```{contents} Likely reasons for gradle sync failures are:
+:depth: 1
+:local: true
+```
 
 *Wichtig*: Nachdem Du die Anleitung zum Beheben Deines Problems befolgt hast, ist es notwendig den [Gradle Sync](#gradle-resync) erneut anzustoßen.
 
-
+(troubleshooting_androidstudio-uncommitted-changes)=
 ### Uncommitted changes
 
 Falls Du eine Fehlermeldung bekommst, die so aussieht:
@@ -83,7 +87,7 @@ Klone den Quellcode noch einmal so wie es in der Dokumentation beschrieben ist u
 
   * Starte Android Studio neu.
 
-
+(troubleshooting-android-studio-check-for-uncommitted-changes)=
 #### Schritt 2: Prüfe, ob es uncommitted changes gibt.
 
   * In Android Studio: Öffne den „Commit“-Tab (1) auf der linken Seite. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
@@ -175,6 +179,8 @@ Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal 
 ### Inkompatibilität der Android Gradle Plugin Version
 
   Wenn Du die folgende Fehlermeldung erhältst,
+
+`The project is using an incompatible version (AGP x.x.x) of the Android Gradle plugin. Latest supported version is AGP x.x.x`
 
   ![Inkompatibilität der Android Gradle Plugin Version](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 

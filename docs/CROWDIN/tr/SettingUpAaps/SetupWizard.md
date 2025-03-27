@@ -134,7 +134,7 @@ Click the "NEXT" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-## Ana parola
+## Master password
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
@@ -294,7 +294,7 @@ Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-## Hasta tipi
+## Patient type
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
 
@@ -502,7 +502,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-## APS modu
+## APS mode
 
 Let "Open Loop" remain selected.
 

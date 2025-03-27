@@ -223,7 +223,7 @@ To delete an **Automation** rule click on the trash icon.
 
 ![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
-# Examples of Automations
+## Examples of Automations
 
 Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their  **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
 
@@ -271,7 +271,7 @@ Here is the screenshot detailing the **Automation** triggers:
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
-# Automating Preference Settings Export
+## Automating Preference Settings Export
 
 ### Unattended Exports: scheduled (daily)
 
@@ -294,7 +294,7 @@ Screenshots detailing the Automation triggers:
 Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Preferences > Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
 
 
-# Automation Logs
+## Automation Logs
 
 **AAPS** has a log of the most recent **Automation** triggered at the bottom of the screen under the **Automation** tab.
 

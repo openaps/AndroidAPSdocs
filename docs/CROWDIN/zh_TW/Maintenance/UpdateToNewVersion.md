@@ -36,7 +36,7 @@
     
     ```{admonition} 警告
     :class: warning
-    如果你是從 2.8.x 之前的版本更新，請遵循指示進行 [新複製](../Installing-AndroidAPS/building-AAPS)，因為本指南對你無效！
+    如果你是從 2.8.x 之前的版本更新，請遵循指示進行 [新複製](../SettingUpAaps/BuildingAaps.md)，因為本指南對你無效！
     
 
 * 使用 Android Studio 開啟你現有的 AAPS 項目。 你可能需要選擇你的項目。 (雙擊) 點擊 AAPS 項目。

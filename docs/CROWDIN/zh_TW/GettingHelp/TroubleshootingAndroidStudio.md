@@ -2,6 +2,11 @@
 
 # 問題排除 Android Studio
 
+```{contents} List of common issues
+:depth: 2
+:local: true
+```
+
 (troubleshooting_androidstudio-lost-keystore)=
 ## 遺失的密鑰庫
 如果在更新**AAPS**時使用相同的金鑰存檔，你就不必在智慧型手機上卸載先前的版本。 因此建議將金鑰存檔儲存在安全的地方。
@@ -27,15 +32,14 @@ Gradle 同步可能因多種原因失敗。 當你收到“gradle 同步失敗�
 
 ![Gradle 失敗](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-gradle 同步失敗的可能原因包括：
-* [未提交的更改](#uncommitted-changes)
-* [無法使用 ... 的緩存版本](#could-not-resolveno-cached-version)
-* [不相容的 Gradle JVM](#incompatible-gradle-jvm)
-* [Android Gradle 外掛程式版本不相容](#incompatible-version-of-android-gradle-plugin)
+```{contents} Likely reasons for gradle sync failures are:
+:depth: 1
+:local: true
+```
 
 *重要*: 在你遵循針對具體問題的指示後，你需要再次觸發[gradle 同步](#gradle-resync)。
 
-
+(troubleshooting_androidstudio-uncommitted-changes)=
 ### 未提交的更改
 
 如果你收到像這樣的失敗訊息：
@@ -83,7 +87,7 @@ gradle 同步失敗的可能原因包括：
 
   * 重新啟動 Android Studio。
 
-
+(問題排除-檢查 Android Studio 是否有未提交的更改)=
 #### 步驟 2：檢查未提交的更改。
 
   * 在 Android Studio 中，打開左側的“提交”選項卡 (1)。 ![提交標籤：未提交的更改](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
@@ -175,6 +179,8 @@ git config --global user.email 你的email@xxx.com
 ### 不相容的 Android Gradle 外掛版本
 
   如果你遇到以下錯誤訊息
+
+`專案使用了不相容版本 (AGP x.x.x) 的 Android Gradle 外掛。 最新支援的版本為 AGP x.x.x`
 
   ![不相容的 Android Gradle 外掛版本](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 

@@ -26,7 +26,7 @@ Dieser Abschnitt gibt einen kurzen Überblick über alle mit **AAPS** kompatible
 | [Syai Tag](../CompatibleCgms/SyaiTagX1.md)             | Syai Tag                                                             |
 | Sibionics CGM                                          | Juggluco                                                             |
 
-(GettingStarted-TrustedBGSource=)
+(GettingStarted-TrustedBGSource)=
 
 ## Vertrauenswürdige BZ-Datenquellen
 

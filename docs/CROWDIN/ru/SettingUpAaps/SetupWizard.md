@@ -134,7 +134,7 @@ Confirm that you wish to grant access to **AAPS** to the selected directory:
 
 ![изображение](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-## Главный пароль
+## Master password
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
@@ -294,7 +294,7 @@ Here you can setup your name in **AAPS**.
 
 ![изображение](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-## Тип пациента
+## Patient type
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. Это важно по соображениям безопасности и как мера предосторожности.
 
@@ -502,7 +502,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![изображение](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-## Режим APS
+## APS mode
 
 Оставьте выбранным "Открытый цикл".
 

@@ -171,7 +171,7 @@ This module should not be disabled as it is a core part of **AAPS**.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 
-## Synchronizace
+## Synchronization
 
 In this section, you can choose if/where you want **AAPS** to send your data to.
 

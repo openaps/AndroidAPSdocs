@@ -49,7 +49,7 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 - Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-#### Thème
+### Skin
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -61,12 +61,12 @@ Vous pouvez choisir parmi quatre thèmes :
 
 Difference between the other skins depends on the phone's display orientation:
 
-##### Orientation portrait
+#### Portrait orientation
 
 - **Thème d'origine** et **Les boutons sont toujours affichés en bas de l'écran** sont identiques
 - **Large Display** has an increased height for all graphs compared to other skins
 
-##### Orientation paysage
+#### Landscape orientation
 
 - En utilisant **Thème d'origine** et **Grand écran**, vous devez défiler vers le bas pour voir les boutons en bas de l'écran
 
@@ -80,7 +80,7 @@ Difference between the other skins depends on the phone's display orientation:
 ![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-### Mot de passe principal
+### Master password
 
 Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
 
@@ -88,7 +88,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Définir le mot de passe principal](../images/MasterPW.png)
 
-### Protection des paramètres
+### Settings protection
 
 - Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
 
@@ -98,13 +98,13 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Protection](../images/Pref2020_Protection.png)
 
-### Protection de l'Application
+### Application protection
 
 If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
 
 **AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
 
-### Protection des bolus
+### Bolus protection
 
 - Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
@@ -122,7 +122,7 @@ In the **Overview** section, you can define the preferences for the home screen.
 
 ![Preferences > Overview](../images/Pref2020_OverviewII.png)
 
-### Garder l'écran allumé
+### Keep screen on
 
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
@@ -158,7 +158,7 @@ La proposition doit être confirmée avant l'injection de l'insuline.
 Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
 
 (Preferences-default-temp-targets)=
-### Cibles Temporaires par défaut
+### Default temp targets
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -174,7 +174,7 @@ Here you can change the target and the duration for each predefined TT. Preset v
 
 Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
 
-### Insuline par défaut pour Amorcer/Remplir
+### Fill/Prime standard insulin amounts
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -183,13 +183,13 @@ If you want to fill the tube or prime cannula through **AAPS** you can do this t
 Les valeurs prédéfinies peuvent être configurées dans cette boite de dialogue. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
 
 (Preferences-range-for-visualization)=
-### Fourchette de visualisation
+### Range for visualization
 
 Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
 ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
 
-### Raccourcir les titres des onglets
+### Shorten tab titles
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -200,7 +200,7 @@ Par exemple, l'onglet "OpenAPS AMA" devient "OAPS", "Objectifs" devient "OBJ" et
 ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Afficher les notes dans les boîtes de dialogue
+### Show notes field in treatments dialogs
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -255,7 +255,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 % todo
 
 (Preferences-advanced-settings-overview)=
-### Paramètres avancés (Aperçu)
+### Advanced Settings (Overview)
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
@@ -272,7 +272,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 ## Traitements de sécurité
 
 (preferences-patient-type)=
-### Type de patient
+### Patient type
 
 - Les limites de sécurité sont établies en fonction de l'âge sélectionné dans ce paramètre.
 - Si vous commencez à atteindre ces limites restrictives (comme le Maximum Bolus), il est temps de changer d’un cran.
@@ -295,7 +295,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 ## Boucle
 
 (Preferences-aps-mode)=
-### Mode APS
+### APS mode
 Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
@@ -371,7 +371,7 @@ Le graphique GA sur l'écran d'accueil indique quand min_5m_impact est utilisé 
 
 Si vous mangez souvent des repas riches en matières grasses ou en protéines, vous devrez augmenter votre temps d'absorption des repas.
 
-### Paramètres avancés - Ratio autosens
+### Advanced settings - autosens ratio
 
 ![Paramètres d’absorption](../images/Pref2020_Absorption.png)
 
@@ -430,9 +430,9 @@ Synchronization choices will depend on the way you will want to use **AAPS**.
 
 You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
-### Options d'alarme
+### Alarm options
 
-![Options d'alarme](../images/Pref2024_NSClient_Alarms.png)
+![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
 - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -441,7 +441,7 @@ You can select which data you want to [upload and download to or from Nightscout
 - Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
 - You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 
-### Paramètres de connexion
+### Connection settings
 
 ![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
@@ -452,7 +452,7 @@ You can select which data you want to [upload and download to or from Nightscout
 - Pour supprimer tous les SSID, entrez un espace dans la zone.
 
 (Preferences-advanced-settings-nsclient)=
-### Paramètres avancés (NSClient)
+### Advanced settings (NSClient)
 
 ![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 

@@ -171,7 +171,7 @@
 
 有关更多信息，请参阅[目标](../SettingUpAaps/CompletingTheObjectives.md)页面。
 
-## 同步
+## Synchronization
 
 在这个部分，您可以选择是否/以及您希望**AAPS**将您的数据发送到哪里。
 

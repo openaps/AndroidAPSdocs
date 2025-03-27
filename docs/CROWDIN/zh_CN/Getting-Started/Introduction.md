@@ -47,7 +47,7 @@
 
 AAPS的“核心”是您自己构建的 **应用程序**。 这方面有详细的步骤说明。 然后你需要在一部[兼容的](../Getting-Started/Phones.md)**安卓智能手机**上安装**AAPS  应用程序**（**1**）。 有的用户倾向于用一部专门的手机来安装闭环，而非平时用的手机。 这样（尤其是苹果手机用户）就不用非得换到安卓手机上处理日常事务，只是用它来运行AAPS闭环就行。
 
-除了 **AAPS** 之外，**安卓智能手机**还需要安装另一个 App。 This [additional app](./CompatibleCgms.md) receives glucose data from a sensor (**2**) by bluetooth, and then sends the data internally on the phone to the **AAPS app**.
+除了 **AAPS** 之外，**安卓智能手机**还需要安装另一个 App。 This [additional app](../Getting-Started/CompatiblesCgms.md) receives glucose data from a sensor (**2**) by bluetooth, and then sends the data internally on the phone to the **AAPS app**.
 
 **AAPS** 采用的是 OpenAPS 的决策过程(也就是**算法**)。 初学者最开始用基础的 **oref0** 算法，对AAPS比较熟悉之后可以切换到新的 **oref1** 算法。 使用哪个算法 (oref0或 oref1) 取决于哪个算法最适合你的具体情况。  在这两种情况下，算法都会考虑多种因素，并且每次从动态血糖仪获得新的数据时都进行快速计算。 然后，算法通过蓝牙向胰岛素泵（**3**）发送指令，告诉它需要输送多少胰岛素。 所有信息都可以通过移动数据或无线网络发送到互联网（**4**）上。 如果需要的话，这些数据也可以分享给别人或者收集起来以供分析。
 

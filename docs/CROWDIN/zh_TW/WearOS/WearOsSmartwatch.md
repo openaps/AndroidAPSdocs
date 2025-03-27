@@ -31,12 +31,12 @@
 無法更改專用錶面參數，如：深色、錶面分隔等。
 ```
 
-考慮使用[GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler)並加上複雜度。
+或者考慮改用 [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) 搭配錶面小工具。
 
 ### 配備 Wear OS 5 的 Pixel 手錶
 
-不與 AAPS 錶面相容。  
-考慮使用[GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler)並加上複雜度。
+不相容於 AAPS 錶面。  
+建議改用 [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) 搭配錶面小工具。
 
 ## 如何設置 Samsung Galaxy 4 智慧型手錶與 **AAPS** 搭配使用
 
@@ -131,7 +131,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-#### Wear OS 5的一般故障排除建議
+### Wear OS 5的一般故障排除建議
 
 - 請勿使用 Wi-Fi 分享。 這樣做是行不通的。
 - 不需要在手機上啟用 ADB 調試（僅在手錶上）。 在手機上停用 ADB 調試。

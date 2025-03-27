@@ -49,7 +49,7 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 - Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-#### Vzhled
+### Skin
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -61,12 +61,12 @@ Můžete si vybrat ze čtyř typů vzhledů:
 
 Difference between the other skins depends on the phone's display orientation:
 
-##### Na výšku
+#### Portrait orientation
 
 - \*\* Původní vzhled\*\* a **Tlačítka jsou vždy zobrazena na spodní části obrazovky** jsou stejné
 - **Large Display** has an increased height for all graphs compared to other skins
 
-##### Na šířku
+#### Landscape orientation
 
 - Při použití **Původní vzhled** a **Velký displej**, musíte posouvat dolů, abyste zobrazili tlačítka v dolní části obrazovky
 
@@ -80,7 +80,7 @@ Difference between the other skins depends on the phone's display orientation:
 ![Nastavení > Obecné - Ochrana](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-### Hlavní heslo
+### Master password
 
 Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
 
@@ -88,7 +88,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Nastavit hlavní heslo](../images/MasterPW.png)
 
-### Ochrana nastavení
+### Settings protection
 
 - Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
 
@@ -98,13 +98,13 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Ochrana](../images/Pref2020_Protection.png)
 
-### Ochrana aplikace
+### Application protection
 
 If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
 
 **AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
 
-### Ochrana bolusu
+### Bolus protection
 
 - Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
@@ -122,7 +122,7 @@ In the **Overview** section, you can define the preferences for the home screen.
 
 ![Předvolby > Přehled](../images/Pref2020_OverviewII.png)
 
-### Nechat obrazovku zapnutou
+### Keep screen on
 
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
@@ -158,7 +158,7 @@ Navržený bolus musí být potvrzen, aby byl následně vydán.
 Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
 
 (Preferences-default-temp-targets)=
-### Výchozí nastavení dočasných cílů
+### Default temp targets
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -174,7 +174,7 @@ Here you can change the target and the duration for each predefined TT. Preset v
 
 Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
 
-### Standardní množství inzulinu pro Plnění/Doplňování
+### Fill/Prime standard insulin amounts
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -183,13 +183,13 @@ If you want to fill the tube or prime cannula through **AAPS** you can do this t
 Přednastavené hodnoty se dají měnit v tomto dialogu. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
 
 (Preferences-range-for-visualization)=
-### Rozsah zobrazování
+### Range for visualization
 
 Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
 ![Předvolby > Rozsah vizualizace](../images/Pref2020_OV_Range2.png)
 
-### Krátké názvy modulů
+### Shorten tab titles
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -200,7 +200,7 @@ Například název "OpenAPS AMA" bude zobrazen jako "OAPS" a "NS CLIENT" jako "N
 ![Předvolby > Záložky](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Zobrazovat kolonku poznámky v dialozích ošetření
+### Show notes field in treatments dialogs
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -255,7 +255,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 % todo
 
 (Preferences-advanced-settings-overview)=
-### Rozšířená nastavení (přehled)
+### Advanced Settings (Overview)
 
 ![Nastavení > Pokročilé nastavení](../images/Pref2021_OV_Adv.png)
 
@@ -272,7 +272,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 ## Bezpečnostní omezení ošetření
 
 (preferences-patient-type)=
-### Typ pacienta
+### Patient type
 
 - Bezpečnostní limity jsou nastaveny na základě věku, který jste zvolili v tomto nastavení.
 - Pokud začnete narážet na pevně nastavené limity (jako například na maximální bolus), je čas posunout se o stupeň výš.
@@ -295,7 +295,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 ## Smyčka
 
 (Preferences-aps-mode)=
-### Typ smyčky
+### APS mode
 Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
@@ -371,7 +371,7 @@ Graf COB na domovské obrazovce označuje kdy se používá min_5m_impact tím, 
 
 Pokud často jíte jídla s vysokým obsahem tuků nebo bílkovin, budete si muset nastavit delší čas absorpce jídla.
 
-### Pokročilé nastavení - autosens ratio
+### Advanced settings - autosens ratio
 
 ![Nastavení absorpce sacharidů](../images/Pref2020_Absorption.png)
 
@@ -424,15 +424,15 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 - Větší množství SSID lze oddělit středníkem.
 - Ponechte připojení k websocketům povolené (doporučeno).
 
-### Synchronizace
+### Synchronization
 
 Synchronization choices will depend on the way you will want to use **AAPS**.
 
 You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
-### Nastavení alarmů
+### Alarm options
 
-![Nastavení alarmů](../images/Pref2024_NSClient_Alarms.png)
+![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
 - Nastavení alarmů umožňují vybrat, jaké alarmy Nightscoutu se mají v aplikaci používat. **AAPS** will alarm when a Nightscout alarm triggers.
 - Aby alarmy fungovaly, je třeba nastavit v [Nightscoutu variables](https://nightscout.github.io/nightscout/setup_variables/#alarms) hodnoty glykémie pro Urgentní, Vysokou, Nízkou a Urgentní nízkou glykémii.
@@ -441,7 +441,7 @@ You can select which data you want to [upload and download to or from Nightscout
 - Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
 - Můžete nastavit Mezní hodnotu pro zastaralá data a Urgentní mezní hodnotu pro zastaralá data. Tato nastavení spustí alarm pokud po určenou dobu nejsou přijata žádná data z Nightscoutu.
 
-### Nastavení připojení
+### Connection settings
 
 ![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
@@ -452,7 +452,7 @@ You can select which data you want to [upload and download to or from Nightscout
 - Chcete-li smazat všechna SSID, nechejte pole prázdné.
 
 (Preferences-advanced-settings-nsclient)=
-### Rozšířená nastavení (NSClient)
+### Advanced settings (NSClient)
 
 ![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 

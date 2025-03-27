@@ -134,7 +134,7 @@ Cliquez sur le bouton "SUIVANT" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-## Mot de passe principal
+## Master password
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
@@ -294,7 +294,7 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-## Type de patient
+## Patient type
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. C'est important pour des raisons de sécurité et de sûreté.
 
@@ -502,7 +502,7 @@ Revenez en arrière et cliquez sur "SUIVANT" pour passer à l'écran suivant :
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-## Mode APS
+## APS mode
 
 Laissez "Boucle ouverte" sélectionné.
 
