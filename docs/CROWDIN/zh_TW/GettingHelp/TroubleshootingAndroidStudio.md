@@ -87,7 +87,7 @@ Gradle 同步可能因多種原因失敗。 當你收到“gradle 同步失敗�
 
   * 重新啟動 Android Studio。
 
-(troubleshooting-android-studio-check-for-uncommitted-changes)=
+(問題排除-檢查 Android Studio 是否有未提交的更改)=
 #### 步驟 2：檢查未提交的更改。
 
   * 在 Android Studio 中，打開左側的“提交”選項卡 (1)。 ![提交標籤：未提交的更改](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
@@ -180,7 +180,7 @@ git config --global user.email 你的email@xxx.com
 
   如果你遇到以下錯誤訊息
 
-`The project is using an incompatible version (AGP x.x.x) of the Android Gradle plugin. Latest supported version is AGP x.x.x`
+`專案使用了不相容版本 (AGP x.x.x) 的 Android Gradle 外掛。 最新支援的版本為 AGP x.x.x`
 
   ![不相容的 Android Gradle 外掛版本](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
