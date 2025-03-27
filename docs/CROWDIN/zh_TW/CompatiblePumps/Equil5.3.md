@@ -27,7 +27,7 @@ orphan: true
 
 ### 啟動修補版
 
-Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
+前往 Equil 標籤並按下 **配對 Equil 貼片幫浦**。
 
 ![overview.png](../images/Equil/overview.png)
 
