@@ -76,7 +76,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
    - 新版本可用（對 AAPS 沒有影響）
    - 應用程式在未來的某個日期到期（對 AAPS 仍然沒有影響）/ 已經過期（AAPS 會轉為 LGS 模式）
 
-### 新聞
+### 新功能
 
 * SMS RESTART 命令 @MilosKozak
 * 手錶個人設置切換參數 @olorinmaia
