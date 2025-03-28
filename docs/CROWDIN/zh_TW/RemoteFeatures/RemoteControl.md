@@ -244,7 +244,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 一旦你[在你的手錶上設置**AAPS**](../WearOS/BuildingAapsWearOS.md)，有關智慧型手錶錶盤及其功能的詳細資訊可以在[智慧型手錶上操作 AAPS](../WearOS/WearOsSmartwatch.md)中找到。
 
-簡要概述，以下功能可以從智慧型手錶觸發：
+簡要總覽，以下功能可以從智慧型手錶觸發：
 
 * 設置一個臨時目標
 

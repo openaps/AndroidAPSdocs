@@ -35,7 +35,7 @@
 
 ![圖片](../images/basic-outline-of-AAPS.png)
 
-**圖1**。 Android APS (人工胰臟系統，AAPS) 的基本概述。
+**圖1**。 Android APS (人工胰臟系統，AAPS) 的基本架構。
 
 Android APS（**AAPS**）是一個混合閉環系統，或稱人工胰臟系統（APS）。 他使用 [OpenAPS](https://openaps.org/) 社群所開發的演算法（即一套規則）來進行胰島素劑量計算，這些演算法是由#WeAreNotWaiting的1型糖尿病社群所開發。
 
@@ -114,7 +114,7 @@ AAPS 的“核心”是一個你自己建置的**應用程式**。 這裡有詳�
 ![21-06-23 AAPS 血糖 MDI 等等](../images/basic-overview-mdi-open-and-closed-loop.png)
 
 
-**圖2**。 簡單概述了（a）MDI，（b）開環幫浦和（c）混合閉環幫浦。
+**圖2**。 簡單總覽了（a）MDI，（b）開環幫浦和（c）混合閉環幫浦。
 
 ## AAPS與其他閉環系統相比如何？
 

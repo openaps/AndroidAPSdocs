@@ -52,7 +52,7 @@ Full Closed Looping **全閉環(FCL)** 的主要吸引力在於它具有模擬�
 
 
 
-IEEE 控制系統雜誌，ResearchGate [人工胰臟與餐點控制：1型糖尿病餐後血糖調節概述](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
+IEEE 控制系統雜誌，ResearchGate [人工胰臟與餐點控制：1型糖尿病餐後血糖調節總覽](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
 - 將會導致顯著降低的**血糖**峰值，與較慢的胰島素相比；
 - 能容忍第一餐注射延遲幾分鐘的情況，同時不會導致血糖峰值過高；並且
