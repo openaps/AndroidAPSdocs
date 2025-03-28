@@ -42,7 +42,7 @@
 點擊[這裡](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>)觀看如何設置專用Google帳戶的影片說明。
 ```
 
- 影片中概述的步驟如下：
+ 影片中列出的步驟如下：
 
 在此示例中： 
 - 你現有的“_日常_”Google帳號是<donald.muck42@gmail.com>； ![](../images/Building-the-App/building_0002.png)
