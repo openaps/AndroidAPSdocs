@@ -140,7 +140,7 @@ FitBit 手錶還有一些僅限於監控的選項。 這包括[Glance](https://g
 
 這些智慧型手錶會顯示一些**AAPS** 的資訊，其中一些需要其他應用程式。
 
-還有各種經濟實惠的智慧型手錶可供顯示資料使用。 如果你使用 Nightscout，那麼這裡有關所有選項的一個不錯的概述 [這裡](https://nightscout.github.io/nightscout/wearable/#)
+還有各種經濟實惠的智慧型手錶可供顯示資料使用。 如果你使用 Nightscout，那麼這裡有關所有選項的一個不錯的總覽 [這裡](https://nightscout.github.io/nightscout/wearable/#)
 
 以下是一些受到 **AAPS** 用戶喜愛的僅跟隨手錶選項：
 
