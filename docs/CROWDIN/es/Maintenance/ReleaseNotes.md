@@ -21,7 +21,7 @@ The chronology of these releases is not available at the moment but as this ques
 
 ## Versión de Android y versión de AAPS
 
-Si tu smartphone utiliza una versión de Android anterior a Android 9, no podrás utilizar AAPS v3 y posteriores, ya que requiere al menos Android 9.
+If your smartphone uses an Android Version older than Android 11 you will not be able to use AAPS v3.3 and up as it requires at least Android 11.
 
 Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Android del teléfono, para permitir a los usuarios instalar versiones anteriores de AAPS en teléfonos con versiones de Android inferiores a Android 9. No se incluyen otras mejoras.
 
