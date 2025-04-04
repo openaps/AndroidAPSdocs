@@ -23,7 +23,7 @@ The chronology of these releases is not available at the moment but as this ques
 
 ## Verze Androidu a verze AAPS
 
-Pokud váš telefon používá verzi Androidu starší než 9, nebudete moct používat AAPS verze 3 a vyšší, protože ty vyžadují minimálně Android 9.
+If your smartphone uses an Android Version older than Android 11 you will not be able to use AAPS v3.3 and up as it requires at least Android 11.
 
 Aby bylo uživatelům se starším Androidem umožněno používat starší verzi AAPS, byla upravena pouze kontrola verzí. Jiné změny neobsahuje.
 
