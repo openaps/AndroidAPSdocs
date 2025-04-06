@@ -30,11 +30,9 @@ Die häufigsten Strategien im Zusammenhang mit **AAPS** werden weiter unten erl�
 
 #### Dexcom Follow konfigurieren: Schritt-für-Schritt-Anleitung
 
-Wenn Du die inoffizielle Dexcom App BYODA für das Auslesen der Sensorwerte nutzt, kannst Du weitere Follower aus der BYODA App heraus einladen. Es können Einladungen an Dexcom Follow auch aus xDrip+ heraus gesendet werden (Einstellungen - Cloud-Upload - Dexcom Share Server Upload). Siehe Anleitung:
+If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app.
 
-https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
-
-Mittlerweile können aus Drittanbieter-Apps keine Einladungs-Emails mehr an Dexcom-Follower verschickt werden. In xDrip+ wird die Einladungsanfrage nur zu einer „Einladung nicht gesendet“-Nachricht führen.
+You cannot send invite emails to Dexcom followers anymore from third-party apps. In xDrip+ wird die Einladungsanfrage nur zu einer „Einladung nicht gesendet“-Nachricht führen.
 
 Du musst die offizielle Dexcom-App installieren, die Einladung senden und dann die offizielle App wieder deinstallieren.
 
