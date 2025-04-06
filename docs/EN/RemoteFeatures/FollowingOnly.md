@@ -30,11 +30,9 @@ The most common strategies used in combination with **AAPS** are explained in mo
 
 #### Setting up Dexcom Follow: how-to-guide
 
-If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app. You should also be able to send invitations to Dexcom Follow from xDrip+ (settings - Cloud upload - Dexcom share server upload, see instructions here: 
+If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app. 
 
-https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
-
-You cannot send invite emails to Dexcom followers anymore from these third-party apps. In xDrip+ the invite request will just result in the message “invite not sent”. 
+You cannot send invite emails to Dexcom followers anymore from third-party apps. In xDrip+ the invite request will just result in the message “invite not sent”. 
 
 You must install the official Dexcom app, send the invite, and then uninstall the official app. 
 
