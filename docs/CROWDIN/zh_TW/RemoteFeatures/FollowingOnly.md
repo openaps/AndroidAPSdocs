@@ -30,11 +30,9 @@
 
 #### 設置 Dexcom Follow：操作指南
 
-如果你使用的是非官方的 Dexcom 應用程式 BYODA 來接收傳感器資料，你可能可以從 BYODA 應用程式內向追蹤者發送邀請。 你應該也可以從 xDrip+ 中發送 Dexcom Follow 的邀請（設置 - 雲上傳 - Dexcom 分享伺服器上傳，請參閱這裡的指示：
+If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app.
 
-https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
-
-你無法再透過這些第三方應用程式向 Dexcom 追蹤者發送邀請郵件。 在 xDrip+ 中，邀請請求只會顯示訊息“未發送邀請”。
+You cannot send invite emails to Dexcom followers anymore from third-party apps. 在 xDrip+ 中，邀請請求只會顯示訊息“未發送邀請”。
 
 你必須安裝官方的 Dexcom 應用程式，發送邀請，然後卸載官方應用程式。
 

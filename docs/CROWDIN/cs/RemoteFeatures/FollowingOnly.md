@@ -30,11 +30,9 @@ Nejběžnější strategie používané ve spojení s **AAPS** jsou podrobněji 
 
 #### Nastavení Dexcom Follow: průvodce
 
-Pokud používáte neoficiální aplikaci Dexcom BYODA pro příjem dat ze senzoru, pravděpodobně z ní můžete odeslat pozvánky následovníkům. Měli byste také být schopni odeslat pozvánky na Dexcom Follow z xDrip+ (nastavení - Cloud upload - Dexcom share server upload), viz návod zde:
+If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app.
 
-https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
-
-Z těchto aplikací třetích stran již nemůžete posílat pozvánky Dexcom uživatelům. V xDrip+ bude výsledkem žádosti o pozvání pouze zpráva „pozvánka nebyla odeslána“.
+You cannot send invite emails to Dexcom followers anymore from third-party apps. V xDrip+ bude výsledkem žádosti o pozvání pouze zpráva „pozvánka nebyla odeslána“.
 
 Musíte nainstalovat oficiální aplikaci Dexcom, odeslat pozvánku a poté ji můžete opět odinstalovat.
 

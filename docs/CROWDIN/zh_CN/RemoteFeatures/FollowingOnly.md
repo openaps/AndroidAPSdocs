@@ -30,11 +30,9 @@
 
 #### 设置Dexcom Follow：操作指南
 
-如果您使用非官方的Dexcom应用程序BYODA接收传感器数据，您可能能够从BYODA应用程序内发送邀请给跟踪者。 您还可以从xDrip+发送邀请到Dexcom Follow（设置-云上传-Dexcom Share服务器上传，具体说明请参考：
+If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app.
 
-https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
-
-从第三方应用程序中不能再向Dexcom跟踪者发送邀请电子邮件。 在xDrip+中，邀请请求只会显示“邀请未发送”的消息。
+You cannot send invite emails to Dexcom followers anymore from third-party apps. 在xDrip+中，邀请请求只会显示“邀请未发送”的消息。
 
 您必须安装官方“Dexcom”应用程序，发送邀请，然后卸载官方应用程序。
 
