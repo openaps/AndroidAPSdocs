@@ -1,7 +1,7 @@
 # 更改语言
 
 ```{note}
-The language selection can be found bottom right of the screen. 点击底部栏打开语言选择菜单。
+语言选择选项位于屏幕的右下角。 点击底部栏打开语言选择菜单。
 ```
 
 ![打开语言菜单](../images/documentation_language_menu.png)
