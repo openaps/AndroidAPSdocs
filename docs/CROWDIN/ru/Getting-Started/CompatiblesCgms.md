@@ -9,22 +9,22 @@
 * [Настройки xDrip+](../CompatibleCgms/xDrip.md)
 * [Nightscout как источник СК](../CompatibleCgms/CgmNightscoutUpload.md): Хотя использовать Nightscout в качестве источника СК для замкнутого цикла возможно, **этот метод использовать не рекомендуется** из-за того, что он полагается на стабильность мобильного интернета или Wi-Fi. Это означает, что данные с вашего **НМГ** будут приниматься **AAPS** только лишь при наличии соединения с вашим сайтом Nightscout. В качестве более надежной конфигурации рекомендуется использовать НМГ с локальной трансляцией в **AAPS** из источников, описанных ниже.
 
-| CGM /  НМГ                                             | Available [BG Sources](../SettingUpAaps/ConfigBuilder.md#bg-source)                        |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| [Dexcom G7](../CompatibleCgms/DexcomG7.md)             | xDrip+, DiaKEM app or [Juggluco](https://www.juggluco.nl/Jugglucohelp/introhelp.html)      |
-| [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md) | xDrip +                                                                                    |
-| [Dexcom G6](../CompatibleCgms/DexcomG6.md)             | xDrip+ or BYODA                                                                            |
-| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)            | xDrip +                                                                                    |
-| [Работа с Dexcom G5](../CompatibleCgms/DexcomG5.md)    | xDrip +                                                                                    |
-| [Libre 3/3+](../CompatibleCgms/Libre3.md)              | xDrip+ (no transmitter) or [Juggluco](https://www.juggluco.nl/Juggluco/libre3/)            |
-| [Libre 2/2+](../CompatibleCgms/Libre2.md)              | xDrip+ (no transmitter) or [Juggluco](https://www.juggluco.nl/Jugglucohelp/introhelp.html) |
-| [Libre 1](../CompatibleCgms/Libre1.md)                 | xDrip+, Glimp, Tomato or Diabox. Need a transmitter                                        |
-| [Eversense](../CompatibleCgms/Eversense.md)            | xDrip+ or ESEL/Eversense patched App                                                       |
-| [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)  | xDrip+ or MM640g + 600SeriesAndroidUploader App                                            |
-| [Poctech](../CompatibleCgms/PocTech.md)                | Poctech                                                                                    |
-| [Ottai](../CompatibleCgms/OttaiM8.md)                  | Ottai                                                                                      |
-| [Syai Tag](../CompatibleCgms/SyaiTagX1.md)             | Syai Tag                                                                                   |
-| Sibionics CGM                                          | [Juggluco](https://www.juggluco.nl/Jugglucohelp/introhelp.html)                            |
+| CGM /  НМГ                                             | Available [BG Sources](../SettingUpAaps/ConfigBuilder.md#bg-source)                                          |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| [Dexcom G7](../CompatibleCgms/DexcomG7.md)             | xDrip+, DiaKEM app or [Juggluco](https://www.juggluco.nl/Jugglucohelp/introhelp.html)                        |
+| [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md) | xDrip +                                                                                                      |
+| [Dexcom G6](../CompatibleCgms/DexcomG6.md)             | xDrip+ or BYODA                                                                                              |
+| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)            | xDrip +                                                                                                      |
+| [Работа с Dexcom G5](../CompatibleCgms/DexcomG5.md)    | xDrip +                                                                                                      |
+| [Libre 3/3+](../CompatibleCgms/Libre3.md)              | [Juggluco](https://www.juggluco.nl/Juggluco/libre3/) (with or without xDrip+)                                |
+| [Libre 2/2+](../CompatibleCgms/Libre2.md)              | xDrip+ (EU only) or [Juggluco](https://www.juggluco.nl/Jugglucohelp/introhelp.html) (with or without xDrip+) |
+| [Libre 1](../CompatibleCgms/Libre1.md)                 | xDrip+, Glimp, Tomato or Diabox. Need a transmitter                                                          |
+| [Eversense](../CompatibleCgms/Eversense.md)            | xDrip+ or ESEL/Eversense patched App                                                                         |
+| [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)  | xDrip+ or MM640g + 600SeriesAndroidUploader App                                                              |
+| [Poctech](../CompatibleCgms/PocTech.md)                | Poctech                                                                                                      |
+| [Ottai](../CompatibleCgms/OttaiM8.md)                  | Ottai                                                                                                        |
+| [Syai Tag](../CompatibleCgms/SyaiTagX1.md)             | Syai Tag                                                                                                     |
+| Sibionics CGM                                          | [Juggluco](https://www.juggluco.nl/Jugglucohelp/introhelp.html)                                              |
 
 (GettingStarted-TrustedBGSource)=
 
@@ -36,12 +36,12 @@ In order for **AAPS** to correctly identify them, the app sending **BG** reading
 
 Trusted data sources allow **SMB** delivery, all the time.
 
-| Sensor                |                CGM app                 |
-| --------------------- |:--------------------------------------:|
-| Dexcom G5/G6          |     BYODA, xDrip+ (Direct, Native)     |
-| Dexcom G7             |    DiaKEM, xDrip+ (Direct, Native)     |
-| Dexcom ONE/ONE+/Stelo |        xDrip+ (Direct, Native)         |
-| Libre 2/2+ (EU)       | Juggluco, xDrip+ (Direct, Patched app) |
-| Libre 2/2+/3/3+       |     Juggluco, xDrip+ (Patched app)     |
+| Sensor                |                  CGM app                  |
+| --------------------- |:-----------------------------------------:|
+| Dexcom G5/G6          |      BYODA, xDrip+ (Direct, Native)       |
+| Dexcom G7             | DiaKEM, xDrip+ (Direct, Native), Juggluco |
+| Dexcom ONE/ONE+/Stelo |          xDrip+ (Direct, Native)          |
+| Libre 2/2+ (EU)       | xDrip+, Juggluco (with or without xDrip+) |
+| Libre 2/2+/3/3+       |     Juggluco (with or without xDrip+)     |
 
 Note: xDrip+ Companion app and Followers are not trusted data sources.
