@@ -9,22 +9,22 @@
 * [xDrip+設定](../CompatibleCgms/xDrip.md)
 * [Nightscout 作為血糖資料來源](../CompatibleCgms/CgmNightscoutUpload.md): 儘管可以使用 Nightscout 作為閉環胰島素給藥的血糖資料來源，但**這種方法不推薦**，因為其依賴穩定的行動網路或 Wi-Fi 連接。 這意味著你的**CGM**資料只有在與你的 Nightscout 網站保持在線連接時，才會被**AAPS**接收。 為了更加穩定的設置，使用具有接收器的本地廣播的 CGM（如下所列）到**AAPS**，是一個更好的選擇。
 
-| CGM                                                  | 可用的[血糖資料來源](../SettingUpAaps/ConfigBuilder.md#bg-source)                            |
-| ---------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Dexcom G7](../CompatibleCgms/DexcomG7.md)           | xDrip+、DiaKEM App 或 [Juggluco](https://www.juggluco.nl/Jugglucohelp/introhelp.html) |
-| [Dexcom ONE+ 和 Stelo](../CompatibleCgms/DexcomG7.md) | xDrip+                                                                              |
-| [Dexcom G6](../CompatibleCgms/DexcomG6.md)           | xDrip+ 或 BYODA                                                                      |
-| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)          | xDrip+                                                                              |
-| [Dexcom G5](../CompatibleCgms/DexcomG5.md)           | xDrip+                                                                              |
-| [Libre 3/3+](../CompatibleCgms/Libre3.md)            | xDrip+（無發射器）或 [Juggluco](https://www.juggluco.nl/Juggluco/libre3/)                  |
-| [Libre 2/2+](../CompatibleCgms/Libre2.md)            | xDrip+（無發射器）或 [Juggluco](https://www.juggluco.nl/Jugglucohelp/introhelp.html)       |
-| [Libre 1](../CompatibleCgms/Libre1.md)               | xDrip+、Glimp、Tomato 或 Diabox。 需要發射器                                                 |
-| [Eversense](../CompatibleCgms/Eversense.md)          | xDrip+ 或 ESEL/Eversense 修補的應用程式                                                     |
-| [Enlite（MM640G/MM630G）](../CompatibleCgms/MM640g.md) | xDrip+ 或 MM640g + 600系列 Android 上傳程式                                                |
-| [PocTech](../CompatibleCgms/PocTech.md)              | PocTech                                                                             |
-| [歐態（Ottai）](../CompatibleCgms/OttaiM8.md)            | 歐態（Ottai）                                                                           |
-| [Syai Tag](../CompatibleCgms/SyaiTagX1.md)           | Syai Tag                                                                            |
-| Sibionics CGM                                        | [Juggluco](https://www.juggluco.nl/Jugglucohelp/introhelp.html)                     |
+| CGM                                                  | 可用的[血糖資料來源](../SettingUpAaps/ConfigBuilder.md#bg-source)                                                     |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| [Dexcom G7](../CompatibleCgms/DexcomG7.md)           | xDrip+、DiaKEM App 或 [Juggluco](https://www.juggluco.nl/Jugglucohelp/introhelp.html)                          |
+| [Dexcom ONE+ 和 Stelo](../CompatibleCgms/DexcomG7.md) | xDrip+                                                                                                       |
+| [Dexcom G6](../CompatibleCgms/DexcomG6.md)           | xDrip+ 或 BYODA                                                                                               |
+| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)          | xDrip+                                                                                                       |
+| [Dexcom G5](../CompatibleCgms/DexcomG5.md)           | xDrip+                                                                                                       |
+| [Libre 3/3+](../CompatibleCgms/Libre3.md)            | [Juggluco](https://www.juggluco.nl/Juggluco/libre3/) (with or without xDrip+)                                |
+| [Libre 2/2+](../CompatibleCgms/Libre2.md)            | xDrip+ (EU only) or [Juggluco](https://www.juggluco.nl/Jugglucohelp/introhelp.html) (with or without xDrip+) |
+| [Libre 1](../CompatibleCgms/Libre1.md)               | xDrip+、Glimp、Tomato 或 Diabox。 需要發射器                                                                          |
+| [Eversense](../CompatibleCgms/Eversense.md)          | xDrip+ 或 ESEL/Eversense 修補的應用程式                                                                              |
+| [Enlite（MM640G/MM630G）](../CompatibleCgms/MM640g.md) | xDrip+ 或 MM640g + 600系列 Android 上傳程式                                                                         |
+| [PocTech](../CompatibleCgms/PocTech.md)              | PocTech                                                                                                      |
+| [歐態（Ottai）](../CompatibleCgms/OttaiM8.md)            | 歐態（Ottai）                                                                                                    |
+| [Syai Tag](../CompatibleCgms/SyaiTagX1.md)           | Syai Tag                                                                                                     |
+| Sibionics CGM                                        | [Juggluco](https://www.juggluco.nl/Jugglucohelp/introhelp.html)                                              |
 
 (GettingStarted-TrustedBGSource)=
 
@@ -36,12 +36,12 @@
 
 可信的資料來源允許**SMB**隨時傳送。
 
-| 傳感器                   |          CGM 應用程式           |
-| --------------------- |:---------------------------:|
-| Dexcom G5/G6          |   BYODA, xDrip+ (直接, 原生)    |
-| Dexcom G7             |   DiaKEM, xDrip+ (直接, 原生)   |
-| Dexcom ONE/ONE+/Stelo |       xDrip+ (直接, 原生)       |
-| Libre 2/2+ (歐盟)       | Juggluco、xDrip+（直連、修補版應用程式） |
-| Libre 2/2+/3/3+       |  Juggluco、xDrip+（修補版應用程式）   |
+| 傳感器                   |                 CGM 應用程式                  |
+| --------------------- |:-----------------------------------------:|
+| Dexcom G5/G6          |          BYODA, xDrip+ (直接, 原生)           |
+| Dexcom G7             | DiaKEM, xDrip+ (Direct, Native), Juggluco |
+| Dexcom ONE/ONE+/Stelo |              xDrip+ (直接, 原生)              |
+| Libre 2/2+ (歐盟)       | xDrip+, Juggluco (with or without xDrip+) |
+| Libre 2/2+/3/3+       |     Juggluco (with or without xDrip+)     |
 
 注意：xDrip+ 配套應用程式(Companion app)和追蹤者不是可信的資料來源。
