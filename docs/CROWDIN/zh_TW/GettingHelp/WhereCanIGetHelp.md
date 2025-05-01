@@ -8,7 +8,7 @@
 * 第二層：搜索 Facebook 群組，如果沒有已經回答的問題，請在 [AndroidAPS 用戶 Facebook 群組](https://www.facebook.com/groups/1900195340201874/)中提問
 * 第三層：如果 Facebook 沒有結果，請在 [Discord](https://discord.gg/4fQUWHZ4Mw) 上提問。 為避免重複回答，同一個問題跨頻道貼文將會被忽略或刪除。 不要忘記，大多數開發者都在歐洲，所以回覆可能不是 24 小時不間斷的；你可能需要等待幾個小時，尤其是週末和假期。
 * 第4級：建立一個[問題](https://github.com/nightscout/AndroidAPS/issues)並附上你的[日誌檔案](../GettingHelp/AccessingLogFiles.md)
-* 第五層：發送電子郵件至 *developers@androidaps.org*（僅限涉及個人資料且未能在其他層面解決問題時使用）
+* 第 5 級：寄送電子郵件至 *developers@aaps.app*（僅限涉及個人資料且不適合公開討論，並且您的問題在其他層級皆未獲解決時使用）
 
 如需有關 CGM 來源的支援，請使用 Facebook 群組或該特定系統的 Discord 聊天頻道（例如：[xDrip+](https://www.facebook.com/groups/xDripG5/)、[600 系列上傳器](https://www.facebook.com/groups/NightscoutForMedtronic/)），或對於 Nightscout 的支援請參考 [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/)，因為那裡的使用者對這些系統的專業知識會比這裡的使用者更高，這裡的使用者都使用不同的系統。
 

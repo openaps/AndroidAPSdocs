@@ -8,7 +8,7 @@ This project is based on volunteer work so some rules apply to avoid extra work 
 * 2. úroveň: Hledejte ve facebookové skupině, pokud tam už není existující odpověď, pak se zeptejte na facebookové skupině [AndroidAPS Users](https://www.facebook.com/groups/1900195340201874/)
 * 3. úroveň: Pokud jste na Facebooku nebyli úspěšní, pak se zkuste zeptat v [discord](https://discord.gg/4fQUWHZ4Mw). Položení znovu stejné otázky bude ignorované/smazané na obou kanálech, aby se předešlo duplicitnímu odpovídání. Nezapomeňte, že většina vývojářů žije v Evropě, proto odpovědi nemusí být 24/7; můžete čekat několik hodin obzvlášť přes víkendy a svátky.
 * level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md)
-* 5. úroveň: zašlete email na *developers@androidaps.org* (jedině pokud obsahuje osobní údaje, které by neměly jít na veřejnost, a vaše problémy ještě nebyly vyřešeny v předchozích úrovních)
+* level 5: email *developers@aaps.app* (only if personal data is involved that should not go in a public channel and your problems have not been resolved in the other levels)
 
 For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xDrip+](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
 
