@@ -141,7 +141,7 @@ Carefully observe/analyse the **SMB** sizes shortly after your meal commences. V
 Your **AAPS'** setting must be sufficiently set up to cope with your (!) variety of meals.
 ```
 
-## Mahlzeitserkennung / Deine Automationen zum Boosten
+## Mahlzeiterkennung / Deine Automationen zum Boosten
 
 For successful **FCL**, **ISF** is the key tuning parameter. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
 
