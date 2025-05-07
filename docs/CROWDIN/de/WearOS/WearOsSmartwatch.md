@@ -20,15 +20,21 @@ Beispiele: GW4, GW5, GW6
 Installiere die **AAPS Wear-**-APK mit [Wear-Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV).  
 Keine Einschränkung in den **AAPS Wear-** Operationen.
 
+```{admonition} Android Wear OS 5
+:class: warning
+**FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
+```
+
 ### Galaxy Watch mit vorinstalliertem Wear OS 5
 
  Beispiele: GW7, GW Ultra
 
 ```{admonition} Android Wear OS 5
 :class: warning
-Die Installation des AAPS Zifferblatts muss mit dem [Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk) nach der Installation der Wear App erfolgen.<br>
-Ein versehnentliches Ändern des Zifferblattes auf eins anderes Zifferblatt, hat zur Folge, dass die oben beschriebene Prozedur wiederholt werden muss<br>
-Ändern spezieller Zifferblatt-Parameter wie: Dark, Watchdivider, etc. ist nicht möglich.
+Installing the AAPS Watch Face has to be done with [Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk) after installing the Wear app.<br>
+Accidental change of the Watch Face to another one requires the procedure above to be repeated.<br>
+Changing the dedicated Watch Face parameters like: Dark, Watchdivider, etc. is not possible.<br><br>
+**FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
 ```
 
 Eine Alternative kann der [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) mit einer Komplikation sein.
