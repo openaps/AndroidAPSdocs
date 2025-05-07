@@ -20,15 +20,21 @@
 使用[Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)安裝**AAPS Wear** apk。  
 在**AAPS Wear**操作上沒有限制。
 
+```{admonition} Android Wear OS 5
+:class: warning
+**FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
+```
+
 ### 工廠預裝 Wear OS 5 的 Galaxy 手錶
 
  範例：GW7、GW Ultra
 
 ```{admonition} Android Wear OS 5
 :class: warning
-安裝 AAPS 錶面必須在安裝 Wear 應用後使用[Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk)完成。<br>
-意外更改錶面為其他錶面需要重複上面的過程。<br>
-無法更改專用錶面參數，如：深色、錶面分隔等。
+Installing the AAPS Watch Face has to be done with [Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk) after installing the Wear app.<br>
+Accidental change of the Watch Face to another one requires the procedure above to be repeated.<br>
+Changing the dedicated Watch Face parameters like: Dark, Watchdivider, etc. is not possible.<br><br>
+**FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
 ```
 
 或者考慮改用 [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) 搭配錶面小工具。
