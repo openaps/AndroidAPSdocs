@@ -1,6 +1,6 @@
 # 配置文件切换与配置文件百分比
 
-本节将解释什么是**配置文件切换（Profile Switch）**和**配置文件百分比（Profile Percentage）**。 You can learn about how to create a **Profile** at [Config Builder > Profile](#setup-wizard-profile).
+本节将解释什么是**配置文件切换（Profile Switch）**和**配置文件百分比（Profile Percentage）**。 您可通过[配置编辑器 > 配置文件](#setup-wizard-profile)路径查阅**配置文件（Profile）**创建指南。
 
 当您初次开始使用**AAPS**时，您需要创建一个**配置文件**，了解如何进行**配置文件切换**，并学习配置文件百分比在AAPS中的影响。 **配置文件切换**或**配置文件百分比**的功能可以带来以下特别好处：
 
@@ -16,7 +16,7 @@
 
 用户每次选**择配置文件**后，都需要进行“配置文件切换”。 为此，用户应在“Local Profile（本地配置文件）”选项卡中编辑其**配置文件**或设置新的**配置文件**。 应用所需设置后，用户应保存更改并通过选择“Activate Profile（激活配置文件）”来激活**配置文件**，如下所示：
 
-![BB1_截屏 2024-06-22 234905](../images/ProfileSwitch1.png)
+![BB1_Screenshot 2024-06-22 234905](../images/ProfileSwitch1.png)
 
 创建并保存新的**配置文件**后，**AAPS**将保存用户生成的**配置文件**库。
 
@@ -30,9 +30,9 @@ A. 要使用此功能，用户必须在**AAPS**中保存多于一个**配置文�
 2. 选择所需的**配置文件**；
 3. 然后按“确定”。
 
-![BB2_截屏 2024-06-22 235345](../images/ProfileSwitch2.png)
+![BB2_Screenshot 2024-06-22 235345](../images/ProfileSwitch2.png)
 
-![BB3_截屏 2024-06-22 235456](../images/ProfileSwitch3.png)
+![BB3_Screenshot 2024-06-22 235456](../images/ProfileSwitch3.png)
 
 ## 如何执行配置文件“百分比”操作：
 
@@ -43,9 +43,9 @@ B. 要激活**配置文件百分比**：
     - 保留为“零”，则该**配置文件**将无限期地保持活动状态。 直到用户选择并切换到新的“配置文件切换”为止，**配置文件**将保持活动状态。
     - 输入[x]分钟，这将是**配置文件**的所需时间段。 在选定时间段到期后，标准**配置文件**将恢复为**AAPS**中的设置。
 
-![BB4_截屏 2024-06-23 000029](../images/ProfileSwitch4.png)
+![BB4_Screenshot 2024-06-23 000029](../images/ProfileSwitch4.png)
 
-如何将**配置文件** ‘百分比’付诸行动：
+**在配置文件切换中激活配置文件百分比**：
 
 2. 输入“持续时间”字段。
 
