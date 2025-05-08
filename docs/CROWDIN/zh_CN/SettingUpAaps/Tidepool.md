@@ -9,7 +9,7 @@ Tidepool是一个第三方工具，用于收集血糖、胰岛素和碳水化合
 
 ## 第一步 - 设立Tidepool账户
 
--Navigate to [tidepool.org](https://www.tidepool.org/)
+-前往 [tidepool.org](https://www.tidepool.org/)
 
 -选择“个人注册”或“注册”
 
