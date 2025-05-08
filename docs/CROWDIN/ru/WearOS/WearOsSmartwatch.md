@@ -20,6 +20,11 @@ Example: GW4, GW5, GW6
 Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV).  
 No limitation in **AAPS Wear** operations.
 
+```{admonition} Android Wear OS 5
+:class: warning
+**FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
+```
+
 ### Galaxy watch with factory installed Wear OS 5
 
  Example: GW7, GW Ultra
@@ -28,7 +33,8 @@ No limitation in **AAPS Wear** operations.
 :class: warning
 Installing the AAPS Watch Face has to be done with [Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk) after installing the Wear app.<br>
 Accidental change of the Watch Face to another one requires the procedure above to be repeated.<br>
-Changing the dedicated Watch Face parameters like: Dark, Watchdivider, etc. is not possible.
+Changing the dedicated Watch Face parameters like: Dark, Watchdivider, etc. is not possible.<br><br>
+**FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
 ```
 
 Consider alternatively [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication.

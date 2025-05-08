@@ -20,15 +20,20 @@
 使用[Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)安裝**AAPS Wear** apk。  
 在**AAPS Wear**操作上沒有限制。
 
+```{admonition} Android Wear OS 5
+翻譯為臺灣常用的繁體中文如下：
+
+:class: warning
+**韌體更新極可能會破壞 AAPS 錶面：請停止錶面更新功能**。
+```
+
 ### 工廠預裝 Wear OS 5 的 Galaxy 手錶
 
  範例：GW7、GW Ultra
 
 ```{admonition} Android Wear OS 5
 :class: warning
-安裝 AAPS 錶面必須在安裝 Wear 應用後使用[Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk)完成。<br>
-意外更改錶面為其他錶面需要重複上面的過程。<br>
-無法更改專用錶面參數，如：深色、錶面分隔等。
+安裝 AAPS 錶面必須在安裝 Wear 應用程式後，使用 [Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk) 完成。<br> 若不小心將錶面切換為其他樣式，則需重複上述安裝程序。<br> 無法變更專用錶面的參數，例如：深色模式、錶面分隔線等。<br><br> **韌體更新極可能會破壞 AAPS 錶面：請停用錶面更新功能**。
 ```
 
 或者考慮改用 [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) 搭配錶面小工具。

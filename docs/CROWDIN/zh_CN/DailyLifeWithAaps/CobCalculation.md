@@ -2,7 +2,7 @@
 
 ## AAPS如何计算COB值
 
-当用户作为餐食记录或碳水化合物校正的一部分输入碳水化合物时，**AAPS**会将此输入添加到当前的活性碳水（**COB**）中。 **AAPS**然后根据观察到的用户**BG**（血糖）值的偏差来计算用户碳水化合物的吸收情况。 吸收速率取决于碳水化合物的敏感系数（**CSF**）。 这不是用户**配置文件**中的一个功能，而是由**AAPS**根据设置的**ISF/I:C**来计算得出的，并由1克碳水化合物会使用户的**BG**上升多少毫克/分升来决定。
+当用户以饮食记录或碳水化合物校正方式输入碳水化合物时，**AAPS**将把该计算结果纳入当前活性碳水化合物（**COB**）。​ **AAPS**然后根据观察到的用户**BG**（血糖）值的偏差来计算用户碳水化合物的吸收情况。 吸收速率取决于碳水化合物的敏感系数（**CSF**）。 这不是用户**配置文件**中的一个功能，而是由**AAPS**根据设置的**ISF/I:C**来计算得出的，并由1克碳水化合物会使用户的**BG**上升多少毫克/分升来决定。
 
 ## 碳水化合物敏感系数（Carb Sensitivity Factor，CSF）
 
@@ -46,7 +46,7 @@
 
 ### AAPS如何检测错误的COB值
 
-通常，__AAPS__通过**BG</0>偏差来检测碳水化合物的吸收情况。 In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). 由于这种方法只计算最小碳水化合物吸收量，而不考虑**BG**偏差，因此可能会导致错误的COB值。</p>
+通常，__AAPS__通过**BG</0>偏差来检测碳水化合物的吸收情况。 若用户已输入碳水化合物但**AAPS**无法通过**BG**偏差检测其预估吸收量，系统将采用[min_5m_carbimpact](#Preferences-min_5m_carbimpact)方法进行吸收量计算（即所谓的"回退机制"）。​ 由于这种方法只计算最小碳水化合物吸收量，而不考虑**BG**偏差，因此可能会导致错误的COB值。</p>
 
 ![关于错误的碳水化合物吸收量（COB）值的提示](../images/Calculator_SlowCarbAbsorption.png)
 
@@ -55,7 +55,7 @@
 ### 如何应对此警告
 
 - 考虑取消注射——按“取消”而不是“确定”。
-- 使用大剂量注射重新计算下一餐的注射量，同时不勾选**COB**。
+- 使用胰岛素向导重新计算即将摄入餐食，保持**COB**处于未勾选状态。​
 - 如果您需要补针，请手动输入。
 - 注意避免过量注射或重复输注！
 

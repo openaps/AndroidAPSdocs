@@ -4,7 +4,7 @@
 
 ![打开 配置生成器](../images/ConfBuild_Open_AAPS30.png)
 
-**Config Builder** 是您打开和关闭模块化功能的选项卡。 In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated. By default, when opening the Config Builder, sections are collapsed to only show the active plugins. Click on the arrow (G) to show all available options. The boxes on the right-hand side (C) allow you to view the active modules as a tab (E) in **AAPS**. 如果右侧复选框未激活，您可以通过屏幕左上角的汉堡菜单（D）访问该功能。 查看下方的[标签或汉堡菜单](#tab-or-hamburger-menu)。
+**Config Builder** 是您打开和关闭模块化功能的选项卡。 在下图中，左侧 (A) 的方框允许您选择要激活的模块。 默认情况下，打开配置生成器时，各部分会折叠，只显示激活的插件。 单击箭头 (G) 显示所有可用选项。 通过右侧的方框（C），您可以在 <0>AAPS</0> 中以选项卡（E）的形式查看活动模块。 如果右侧复选框未激活，您可以通过屏幕左上角的汉堡菜单（D）访问该功能。 查看下方的[标签或汉堡菜单](#tab-or-hamburger-menu)。
 
 当模块内有其他可用设置时，您可以点击齿轮图标（B），这将带您进入首选项中的具体设置。
 
@@ -171,7 +171,7 @@
 
 有关更多信息，请参阅[目标](../SettingUpAaps/CompletingTheObjectives.md)页面。
 
-## Synchronization
+## 同步
 
 在这个部分，您可以选择是否/以及您希望**AAPS**将您的数据发送到哪里。
 

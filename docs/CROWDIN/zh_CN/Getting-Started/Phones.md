@@ -1,7 +1,7 @@
 # Phones
 
-The current version of **AAPS** (3.3) requires an Android smartphone with Google **Android 11.0 or above**. If you are considering buying a new phone, (as of December 2024), Android 14 is preferred.  
-As of November 2024, several users have reported issues with Android 15 and Bluetooth connection. 您可能希望推迟更新到Android 15，特别是如果您正在使用Omnipod Dash或Dexcom G7的话。 有关此问题的最新更新，请查阅[Facebook或Discord](../GettingHelp/WhereCanIGetHelp.md)。  
+当前版本的**AAPS**（3.3）需要搭载**谷歌Android 11.0或更高版本**的Android智能手机。 如果你正在考虑购买新手机，（截至2024年12月），建议选择Android 14。  
+截至2024年11月，一些用户报告了Android 15和蓝牙连接的问题。 您可能希望推迟更新到Android 15，特别是如果您正在使用Omnipod Dash或Dexcom G7的话。 有关此问题的最新更新，请查阅[Facebook或Discord](../GettingHelp/WhereCanIGetHelp.md)。  
 出于安全原因，强烈建议用户保持其**AAPS**构建的更新状态。 但是，对于无法使用Android 11.0或更高版本设备的用户，仍然可以使用与旧版Android兼容的**AAPS**早期版本，请参阅：[发行说明](#maintenance-android-version-aaps-version)。
 
 - [Jelly Pro 设置](../CompatiblePhones/Jelly.md)

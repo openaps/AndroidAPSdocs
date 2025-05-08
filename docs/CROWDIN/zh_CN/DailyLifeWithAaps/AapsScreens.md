@@ -17,7 +17,7 @@
 
 * 在不同的**AAPS**模块之间导航。
 * 你也可以通过左右滑动来切换屏幕。
-* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
+* 在[config builder](#Config-Builder-tab-or-hamburger-menu)中可以选择显示的标签。
 
 ### B部分 - 配置文件&目标
 
@@ -75,13 +75,13 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 * 红色 = 低于范围
 * 黄色 = 高于范围 
 
-![Deltas](../images/Home_Delta.png)
+![变化值](../images/Home_Delta.png)
 
-The blocks in the middle shows:
+中间的区块显示：
 
-1. how many minutes since last **CGM** reading
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-    Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
+1. 自上次**CGM**读取以来的分钟数
+2. 与最近读数的差值：Δ，与过去15分钟和40分钟平均值的差值（Δ15与Δ40）。  
+    长期差值为历史差值的平均值计算，反映平均变化情况。
 
 (AapsScreens-loop-status)=
 
@@ -93,8 +93,8 @@ The blocks in the middle shows:
 
 1. 绿色圆圈 = 闭环运行
 2. 绿色圆圈带虚线 = [低血糖暂停（LGS）](#objectives-objective6)
-3. Red circle = loop disabled (not working permanently)
-4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
+3. 红色圆圈 = 闭环禁用（永久不工作）
+4. 红色圆圈 = 闭环暂停（暂时停止，但会给予基础胰岛素）- 下方显示剩余时间
 5. 灰色圆圈 = 泵断开（暂时无胰岛素剂量）- 下方显示剩余时间
 6. 橙色圆圈 = 超级大剂量运行- 下方显示剩余时间
 7. 带虚线的蓝色圆圈 = 开环
@@ -154,9 +154,9 @@ The blocks in the middle shows:
 
 *注意*： **AAPS**计算会考虑最多30小时的数据。 因此，即使你解决了原始问题，黄色三角形也可能在最后一次出现不规则间隔后约30小时才会消失。
 
-#### Simple mode
+#### 简单模式
 
-An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+在本节右上角有一个孩子脸图标，表示您处于[简单模式](#preferences-simple-mode)。
 
 ![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
 
@@ -164,8 +164,8 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 ![部分D](../images/Home2020_TBR.png)
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
+1. **注射器**：活性胰岛素（IOB）——体内活性胰岛素总量  
+    当且仅当运行标准基础率且无先前推注的胰岛素残留时，IOB数值才会为零。
     
     * 如果最近有一段时间基础量减少，IOB可能为负数。
     * 按压图标以查看大剂量和基础胰岛素的分配。
@@ -174,9 +174,9 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 3. **紫色线条**：当前基础率。 图标会发生变化，以反映基础率（100%时是直线）的临时变化 
     * 按压图标以查看基础基础率和任何临时基础率（包括剩余时长）的详细信息。
-4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
-    * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
-    * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
+4. **箭头向上&向下**：指示动态敏感功能状态（[Autosens/自动敏感度调整](#Open-APS-features-autosens) 或 [DynamicISF/动态胰岛素敏感系数](#Open-APS-features-DynamicISF)）的启用/禁用状态。 本区域可能显示以下数值： 
+    * AS：Autosens数值。 即使禁用Autosens仍会显示（仅作参考）。 激活DynISF时也会显示，但该数值不生效。
+    * Alg：DynamicISF数值（基于总日剂量TDD）。 详见[DynamicISF](#Open-APS-features-DynamicISF)页面末行的技术说明。
 
 (aaps-screens-carbs-required)=
 
@@ -222,7 +222,7 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 在操作标签中输入的备注，如指尖校准和碳水条目，以及配置文件切换，都显示在这里。
 
-Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
+点击图表左上角的菜单或长按图表任意区域，即可调整显示的时间范围。 您可以选择6、12、18或24小时。
 
 绿色区域反映你的目标范围。
 
@@ -239,7 +239,7 @@ Use the menu on top left of the graph or long press anywhere on the graph to cha
 * 基础率
 * 活动-胰岛素活动曲线
 
-要显示此信息，请点击主图表右侧的三角形。 For the main graph just the four options above the line "Graph 1 2 3 4" are available.
+要显示此信息，请点击主图表右侧的三角形。 对于主图表，仅提供“图表 1 2 3 4”上方的四个选项。
 
 ![主图设置](../images/Home2020_MainGraphSetting.png)
 
@@ -291,19 +291,19 @@ Use the menu on top left of the graph or long press anywhere on the graph to cha
 
 (AapsScreens-section-g-additional-graphs)=
 
-### Section G - Additional graphs
+### 第G节 - 附加图表。
 
-您可以在主图表下方激活最多四个附加图表。 When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+您可以在主图表下方激活最多四个附加图表。 在[简单模式](#preferences-simple-mode)下，附加图表是预设的，无法更改。 如果希望设置自己的附加图表配置，请关闭**简单模式**。
 
 要打开附加图表的设置，请点击[主图表](#section-f---main-graph)右侧的三角形并向下滚动。
 
 ![附加图表设置](../images/Home2020_AdditionalGraphSetting.png)
 
-To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
+要配置附加图表，请勾选每个图表对应数据的复选框。
 
 大多数用户发现以下附加图表配置足够：
 
-* Graph 1 with IOB, COB, Sensitivity change
+* 图表1：活性胰岛素（IOB）、活性碳水（COB）、敏感度动态调整（Autosens/DynamicISF）​
 * 图2：偏差和BGI。
 
 #### 胰岛素绝对值
@@ -328,7 +328,7 @@ To configure additional graphs, check the boxes corresponding to the data you wa
 
 如果它检测到比预期更高的碳水吸收率，将给予胰岛素，这将增加IOB（或多或少，取决于你的安全设置）。
 
-#### Sensitivity change
+#### 敏感度调整
 
 显示[Autosens](#Open-APS-features-autosens)检测到的灵敏度。
 
@@ -336,15 +336,15 @@ To configure additional graphs, check the boxes corresponding to the data you wa
 
 请注意，您需要在[目标8](#objectives-objective8)中才能允许灵敏度检测/[Autosens](#Open-APS-features-autosens)自动调整胰岛素的输送量。 在达到该目标之前，图表中的线条仅用于显示信息。
 
-### Variable sensitivity
+### 动态敏感度
 
-Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+显示由[DynamicISF](../DailyLifeWithAaps/DynamicISF.md)算法计算的敏感度参数。 仅在使用此功能时显示数据。
 
 (screen-heart-rate-steps)=
 
-#### Heart rate & Steps
+#### 心率&步数
 
-This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
+使用[Wear智能手表](../WearOS/WearOsSmartwatch.md)时可能获取此类数据。 需在**AAPS** Wear应用中启用这些功能并授予健康数据权限。
 
 #### 偏差
 
@@ -366,7 +366,7 @@ This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartw
 
 ![主界面按钮](../images/Home2020_Buttons.png)
 
-Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
+胰岛素与碳水按钮几乎始终保持可见。 若与胰岛素泵的连接中断，​计算器按钮将隐藏不可见。
 
 其他按钮可以在[偏好设置>概览>按钮](#Preferences-buttons)中设置。
 
@@ -386,7 +386,7 @@ Buttons for Insulin and Carbs are almost always visible. If the connection to th
 
 您可以使用按钮快速增加胰岛素的量。 增量值可以在[首选项 > 概述 > 按钮](#Preferences-buttons)中更改。
 
-The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+胰岛素按钮可在泵暂停时使用，例如记录使用注射笔注射的胰岛素。 在这种情况下，标题将显示为黄色，且“仅记录，不注射”复选框无法取消勾选。
 
 ![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
 
@@ -566,7 +566,7 @@ BG字段通常已经填充了来自您的动态（CGM）的最新读数。 如�
 
 ![胰岛素配置文件](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). 曲线将根据[DIA](#your-aaps-profile-duration-of-insulin-action)和达峰时间而有所不同。
+这显示了您在[配置生成器 > 胰岛素](#Config-Builder-insulin)中选择的胰岛素活动曲线。 曲线将根据[DIA](#your-aaps-profile-duration-of-insulin-action)和达峰时间而有所不同。
 
 **紫色**线显示了注射后胰岛素的剩余量，它随时间衰减，而**蓝色**线显示了其活性。
 
@@ -702,13 +702,13 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 
 ## 历史浏览器
 
-可以通过点击菜单右侧的3个点，然后选择“历史记录”来访问此视图。 It is not possible to put in the main menu through the Config Builder. 也可以通过[操作选项卡](#action-tab)底部的按钮来访问它。
+可以通过点击菜单右侧的3个点，然后选择“历史记录”来访问此视图。 通过Config Builder无法将项目添加到主菜单中。 也可以通过[操作选项卡](#action-tab)底部的按钮来访问它。
 
 允许您在**AAPS**历史记录中回溯。 请参阅专门页面[查看您的数据>历史记录浏览器](../Maintenance/Reviewing.md)。
 
 ## Statistics
 
-可以通过点击菜单右侧的3个点，然后选择“统计”来访问此视图。 It is not possible to put in the main menu through the Config Builder.
+可以通过点击菜单右侧的3个点，然后选择“统计”来访问此视图。 通过Config Builder无法将项目添加到主菜单中。
 
 为您提供关于您的TIR（入框时间）和TDD（每日总剂量）的统计数据。 请参阅专用页面[查看您的数据>统计信息](#reviewing-statistics)。
 
@@ -716,7 +716,7 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 
 ## 配置文件助手
 
-可以通过点击菜单右侧的3个点，然后选择“Profile Helper（配置文件助手）”来访问此视图。 It is not possible to put in the main menu through the Config Builder. “配置文件助手”可以帮助您：
+可以通过点击菜单右侧的3个点，然后选择“Profile Helper（配置文件助手）”来访问此视图。 通过Config Builder无法将项目添加到主菜单中。 “配置文件助手”可以帮助您：
 
 * [为孩子从头开始构建配置文件](#your-aaps-profile-profile-from-scratch-for-a-kid)
 * [比较两个配置文件](#your-aaps-profile-compare-profiles)
