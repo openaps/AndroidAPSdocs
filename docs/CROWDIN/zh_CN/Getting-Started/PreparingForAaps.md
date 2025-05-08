@@ -28,7 +28,7 @@
 
 一个重要的安全考虑是，**对于那些血糖水平已经升高了一段时间的人来说，糖化血红蛋白（HbA1c）的快速降低和血糖控制的改善可能会造成永久性损害**。 许多糖尿病患者并不了解这一点，而且并非所有临床医生都会让患者意识到这个问题。
 
-这种损害可能包括**视力丧失和永久性神经病变（疼痛）**。 It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. 如果您目前的 HbA1c 偏高，并准备改用 **AAPS**（或任何其他闭环系统），_请_在开始之前与您的临床团队讨论这一潜在风险，并与他们商定一个时间计划。 在**AAPS**系统中，您可以轻松地先设定较高的血糖目标（目前，您可以选择的最高目标是10.6 mmol/L，但如果需要，您也可以保持一个故意设置得较宽松的控制方案），然后随着月份的推移逐步降低目标。
+这种损害可能包括**视力丧失和永久性神经病变（疼痛）**。 通过更缓慢地降低平均血糖水平，可以避免这种损害发生。 如果您目前的 HbA1c 偏高，并准备改用 **AAPS**（或任何其他闭环系统），_请_在开始之前与您的临床团队讨论这一潜在风险，并与他们商定一个时间计划。 在**AAPS**系统中，您可以轻松地先设定较高的血糖目标（目前，您可以选择的最高目标是10.6 mmol/L，但如果需要，您也可以保持一个故意设置得较宽松的控制方案），然后随着月份的推移逐步降低目标。
 
 #### 在不造成永久性损害的情况下，能多快降低我的糖化血红蛋白（HbA1c）水平？
 
@@ -122,7 +122,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 #### [临床医生部分](../UsefulLinks/ClinicianGuideToAaps.md)
 
-This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. 在引言部分还提供了[如何与你的临床团队沟通](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)的指导。
+此处为[专为临床医生设计的章节](../UsefulLinks/ClinicianGuideToAaps.md)，旨在帮助其深入了解AAPS（Android人工胰腺系统）及开源人工胰腺技术。 在引言部分还提供了[如何与你的临床团队沟通](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)的指导。
 
 ## 我们要构建和安装什么？
 
@@ -139,7 +139,7 @@ This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToA
 
 ### 2) 报告服务器：NightScout（Tidepool*）
 
-为了充分利用**AAPS**，您需要设置一个Nightscout服务器。 You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout用于随时间收集来自**AAPS**的数据，并能够生成将连续葡萄糖监测（CGM）和胰岛素模式相关联的详细报告。 护理人员也可以使用Nightscout与**AAPS**应用程序进行远程通信，以监督其孩子的糖尿病管理。 这种远程通信功能包括实时监测血糖和胰岛素水平、远程注射胰岛素（通过短信）以及录入碳水。 试图单独分析连续葡萄糖监测（CGM）数据而不结合泵数据来评估你的糖尿病管理效果，就像是一个司机在开车时看不见前方，而只能依靠乘客来描述路况一样。  对于AAPS 3.2及更高版本，Tidepool可以作为Nightscout的替代方案。
+为了充分利用**AAPS**，您需要设置一个Nightscout服务器。 您可[自行操作](https://nightscout.github.io/nightscout/new_user/#free-diy)，或选择支付少量费用使用[托管式Nightscout服务](https://nightscout.github.io/#nightscout-as-a-service)代您完成配置。 Nightscout用于随时间收集来自**AAPS**的数据，并能够生成将连续葡萄糖监测（CGM）和胰岛素模式相关联的详细报告。 护理人员也可以使用Nightscout与**AAPS**应用程序进行远程通信，以监督其孩子的糖尿病管理。 这种远程通信功能包括实时监测血糖和胰岛素水平、远程注射胰岛素（通过短信）以及录入碳水。 试图单独分析连续葡萄糖监测（CGM）数据而不结合泵数据来评估你的糖尿病管理效果，就像是一个司机在开车时看不见前方，而只能依靠乘客来描述路况一样。  对于AAPS 3.2及更高版本，Tidepool可以作为Nightscout的替代方案。
 
 ### 3）CGM传感器应用
 
@@ -210,7 +210,7 @@ This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToA
 
 #### AAPS与Android版本
 
-The current version of **AAPS** (3.3) requires an Android smartphone with Google **Android 11.0 or above**. If you are considering buying a new phone, (as of December 2024), Android 14 is preferred.<br/> As of November 2024, several users have reported issues with Android 15 and Bluetooth connection. 您可能希望推迟更新到Android 15，特别是如果您正在使用Omnipod Dash或Dexcom G7的话。 请查看[Facebook或Discord](../GettingHelp/WhereCanIGetHelp.md)以获取此主题的最新更新。<br/> 出于安全考虑，强烈建议用户保持其**AAPS**构建的更新。 然而，对于无法使用Android 11.0或更高版本设备的用户，仍然可以使用与旧版Android兼容的**AAPS**早期版本，请参阅：[发行说明](#maintenance-android-version-aaps-version)。
+当前版本的**AAPS**（3.3）需要搭载**谷歌Android 11.0或更高版本**的Android智能手机。 If you are considering buying a new phone, (as of December 2024), Android 14 is preferred.<br/> As of November 2024, several users have reported issues with Android 15 and Bluetooth connection. 您可能希望推迟更新到Android 15，特别是如果您正在使用Omnipod Dash或Dexcom G7的话。 请查看[Facebook或Discord](../GettingHelp/WhereCanIGetHelp.md)以获取此主题的最新更新。<br/> 出于安全考虑，强烈建议用户保持其**AAPS**构建的更新。 然而，对于无法使用Android 11.0或更高版本设备的用户，仍然可以使用与旧版Android兼容的**AAPS**早期版本，请参阅：[发行说明](#maintenance-android-version-aaps-version)。
 
 #### 智能手机型号选择
 您购买的具体型号取决于所需的功能。 您可以在[手机页面](../Getting-Started/Phones.md)上找到关于工作配置的建议和用户反馈。
@@ -219,8 +219,8 @@ The current version of **AAPS** (3.3) requires an Android smartphone with Google
 
 ```{admonition} delaying Samsung phones updates
 :class:警告
-三星有着不幸的记录，他们强制推送手机更新，而这些更新却导致了蓝牙连接问题。 To disable these forced updates you need to switch the phone to "developer mode" by:
- go to settings and about then software information, then tap build number u til it confirms you have unlocked developer mode. 返回到主设置菜单，您应该会看到一个新的‘开发者选项’菜单项。 打开开发者选项，滚动查找‘自动系统更新’并将其关闭。
+三星有着不幸的记录，他们强制推送手机更新，而这些更新却导致了蓝牙连接问题。 要禁用强制更新功能，需通过以下步骤启用手机的"开发者模式"：
+前往设置 → 进入「关于手机」 → 选择「软件信息」 → 连续点击「版本号」直至系统提示已开启开发者模式。 返回到主设置菜单，您应该会看到一个新的‘开发者选项’菜单项。 打开开发者选项，滚动查找‘自动系统更新’并将其关闭。
 ```
 
 ```{admonition} Google Play Protect potential Issue
