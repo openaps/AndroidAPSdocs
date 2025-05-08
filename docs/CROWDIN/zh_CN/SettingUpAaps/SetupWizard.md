@@ -48,13 +48,13 @@
 
 ![image](../images/setup-wizard/Screenshot_20231202_125709.png)
 
-### Notification and battery optimization
+### 通知与电池优化
 
 如果应用程序想要向您发送通知，Android 需要特殊权限。
 
 虽然禁用社交媒体应用程序等通知是一个很好的功能，但允许 **AAPS** 发送通知至关重要。
 
-Please click the first "ASK FOR PERMISSION" button:
+请点击第一个“申请权限”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125721.png)
 
@@ -76,7 +76,7 @@ Please click the first "ASK FOR PERMISSION" button:
 
 您通过确认设置来做到这一点。
 
-Click the second "ASK FOR PERMISSION" button. 请选择“允许”：
+请点击第二个“申请权限”按钮。 请选择“允许”：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125750.png)
 
@@ -84,13 +84,13 @@ Click the second "ASK FOR PERMISSION" button. 请选择“允许”：
 
 ![Screenshot_20241207-161454.png](../images/setup-wizard/Screenshot_20241207-161454.png)
 
-### Location
+### 位置
 
 Android 将蓝牙通信的使用与定位服务的使用联系起来。 也许您在其他应用程序中也看到过这一点。 如果要使用蓝牙，通常需要位置权限。
 
 如果您的动态和泵直接由 **AAPS** 控制，而不是由 **AAPS** 使用的另一个应用程序控制，**AAPS** 会使用蓝牙与它们通信。 具体细节可能因设置而异。
 
-Click the first "ASK FOR PERMISSION" button:
+请点击第一个“申请权限”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125924.png)
 
@@ -100,21 +100,21 @@ Click the first "ASK FOR PERMISSION" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_125939.png)
 
-Click the second "ASK FOR PERMISSION" button:
+请点击第二个“申请权限”按钮：
 
 ![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
 
-Select "Allow all the time".
+选择“始终允许”。
 
 点击“下一步”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_130002.png)
 
-### Storage permission
+### 存储权限
 
 **AAPS** 需要将信息记录到智能手机的永久存储中。 永久存储意味着即使在重新启动智能手机后，信息仍然可用。（PC硬盘的概念） 其他信息只是丢失了，因为它们没有被保存到永久存储中。
 
-Click the first "ASK FOR PERMISSION" button:
+请点击第一个“申请权限”按钮：
 
 ![image](../images/setup-wizard/Screenshot_20231202_130012.png)
 
@@ -122,11 +122,11 @@ Click the first "ASK FOR PERMISSION" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130022.png)
 
-Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information. The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
+点击“AAPS目录”。 这将打开手机文件系统，您可选择AAPS存储数据的位置。 默认目录为**AAPS**，但您可使用任意专用目录。 如需可新建目录，进入后选择“使用此文件夹”：
 
 ![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
 
-Confirm that you wish to grant access to **AAPS** to the selected directory:
+确认您要授予**AAPS**访问所选目录的权限：
 
 ![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
 
@@ -134,7 +134,7 @@ Confirm that you wish to grant access to **AAPS** to the selected directory:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-## Master password
+## 主密码
 
 由于 **AAPS** 的配置包含一些敏感数据（_例如_，访问您的 Nightscout 服务器的 API_KEY），因此它会被您在此处设置的密码加密。
 
@@ -214,7 +214,7 @@ Confirm that you wish to grant access to **AAPS** to the selected directory:
 :class: 注意
 点击 [这里](#version3200) 查看 **AAPS** 3.2.0.0 的发布说明，其中解释了顶部选项 **NSClient**（这是“v1”，尽管没有明确标记）和第二个选项 **NSClient v3** 之间的差异。
 
-Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout web interface, in which case, choose the first option "**NSClient**" until further notice. 
+Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页界面进行远程治疗监控或发送（例如作为父母或护理人员通过**AAPS**管理儿童治疗）。若存在此类需求，请暂选择第一项"**NSClient**"直至另行通知前。 
 ```
 对于 Tidepool 来说更简单，因为您只需要个人登录信息。
 
@@ -253,7 +253,7 @@ Nightscout users should choose **NSClient v3**, unless you want to monitor or se
 
 ![image](../images/setup-wizard/Screenshot_20231202_141310.png)
 
-现在，请将开关保持禁用状态。 We only walked to the screen to make you familiar with possible options you might configure in the future. 目前没有必要进行这些配置。
+现在，请将开关保持禁用状态。 我们带您浏览此界面，是为了让您熟悉未来可能需要配置的选项。 目前没有必要进行这些配置。
 
 返回之前的屏幕并选择“连接设置”。
 
@@ -261,7 +261,7 @@ Nightscout users should choose **NSClient v3**, unless you want to monitor or se
 
 看护人必须启用“使用手机流量（use cellular connection）”，否则被看护人的智能手机（例如，孩子的手机）无法在 WiFi 范围外（_例如_，在上学的路上）上传数据。
 
-Other **AAPS** users can disable the transfer via cellular connection if they want to save data or battery.
+其他**AAPS**用户若希望节省流量或电量，可禁用手机流量。
 
 如果有疑问，请将所有选项保持启用状态。
 
@@ -275,7 +275,7 @@ Other **AAPS** users can disable the transfer via cellular connection if they wa
 
 启用“从错误中创建公告”和“从所需碳水化合物警报中创建公告”。
 
-将“减慢上传速度”保持禁用状态。 You would only use it in unusual circumstances if for example a lot of information is to be transferred to the Nightscout server, and the Nightscout server is being slow in processing this data.
+将“减慢上传速度”保持禁用状态。 仅在特殊情况下使用此功能，例如需向Nightscout服务器传输大量数据，且该服务器处理速度较慢时。
 
 返回两次，在插件列表中选择“下一步”以转到下一个屏幕：
 
@@ -293,7 +293,7 @@ Other **AAPS** users can disable the transfer via cellular connection if they wa
 
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-## Patient type
+## 患者类型
 
 在这里，您选择“患者类型”，这很重要，因为 **AAPS** 根据患者的年龄有不同的限制。 出于安全和保护隐私的原因，这一点非常重要。
 
@@ -354,10 +354,10 @@ Other **AAPS** users can disable the transfer via cellular connection if they wa
 在接下来的屏幕上输入您的配置文件详细信息之前，请先阅读有关 [配置文件](../SettingUpAaps/YourAapsProfile.md) 的文档。
 
 ```{admonition} Working profile required - no exceptions here !
-:class: danger
-An accurate profile is necessary to control the safe action of **AAPS**.
+:class: 危险
+准确的配置文件是确保**AAPS**安全运行的必要条件。
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+您必须与医生共同制定并讨论您的治疗方案，且通过基础率、胰岛素敏感系数（ISF）及碳水化合物比率（IC）测试验证其有效性！
 
 如果机器人输入错误，它将始终无法正常工作。 **AAPS** 只能根据给定的信息工作。 如果您的配置方案太猛，您可能会面临低血糖的风险；而如果方案太柔，则可能会面临高血糖的风险。 
 ```
@@ -411,7 +411,7 @@ It's required that you have determined and discussed your profile with your doct
 ![image](../images/setup-wizard/Screenshot_20231202_143724.png)
 
 
-After saving, a new button "Activate Profile" appears.
+保存后，新的"激活配置文件"按钮将出现。
 
 ```{admonition} Several defined but only one active profile
 :class: 信息
@@ -479,7 +479,7 @@ After saving, a new button "Activate Profile" appears.
 
 ## APS algorithm
 
-使用OpenAPS SMB算法作为您的APS算法。 Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. 与OpenAPS AMA相比，OpenAPS SMB是较新的版本，通常也更好。
+使用OpenAPS SMB算法作为您的APS算法。 尽管功能名称包含"SMB"，但该算法功能将保持禁用状态，直至您完成以下前提条件：​熟悉AAPS操作且通过初始目标考核。 与OpenAPS AMA相比，OpenAPS SMB是较新的版本，通常也更好。
 
 在开始阶段禁用SMB功能的原因是，SMB功能通过超级微型大剂量来更快地应对血糖升高，而不是增加基础率百分比。 在开始时，您的配置通常不如经过一段时间的使用后那么好，因此一开始禁用了此功能。
 
@@ -501,7 +501,7 @@ OpenAPS AMA是最基本的算法，不支持用SMB纠正高血糖。 在某些�
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-## APS mode
+## APS模式
 
 保持“Open Loop（开环）”选中状态。
 
