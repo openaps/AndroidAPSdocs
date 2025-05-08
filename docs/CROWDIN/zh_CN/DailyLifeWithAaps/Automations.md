@@ -1,27 +1,27 @@
 # 自动操作
 
-## 什么是自动操作？
+## 什么是自动化（Automation）？
 
-"**Automation**" is a feature which can automate task for AAPS.
+"**自动化**"是AAPS系统中可自动执行任务的功能模块。
 
-Automations performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a WIFI SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+自动化功能通过一个或多个条件/触发机制执行特定操作。 触发条件可包含血糖水平异常（偏高或偏低）、体内存在设定阈值的活性胰岛素（IOB）等非规律性事件； 也可处理每日固定时段用餐/运动、用户进入GPS定位点或WIFI SSID区域等周期性事件。 该功能还支持按计划周期或每次Pod更换时自动执行AAPS设置备份。
 
-Automations rules are created and modified from the Automations tab. Each rule is defined by two properties:
+用户可通过自动化标签页创建和修改规则， 每条规则由两个核心要素构成：
 
-- One or more conditions or 'triggers' that start an action.
+- 一个或多个启动动作的条件或"触发器"。
 
-    Think of a certain time schedule, an event or properties value in AAPS
+    例如：特定时间安排、系统事件或参数数值变化
 
-- One or more actions to perform.
+- 需执行的一个或多个操作。
 
-    Such as an alarm or settings a profile percentage or exporting the AAPS settings on Pod change.
+    例如：触发警报；调整基础率百分比；Pod更换时导出AAPS设置。
 
 
-There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on ![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and ![**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
+有多种自动化选项可供选择，建议用户在AAPS应用的自动化部分中详细研究这些选项。 您可访问 ![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) 与 ![**Discord**](https://discord.gg/4fQUWHZ4Mw) 搜索AAPS用户群组，参考其他用户的自动化设置案例。
 
 ## 自动操作如何帮助我们
 
-1. **Automate reoccurring tasks:** Automatically executing programmed actions without user interaction.
+1. **自动化周期性任务：**通过自动执行预设操作实现无人值守运行。
 
 1. **减少决策疲劳**：**自动操作**的主要好处是减轻用户需要手动干预**AAPS**的负担。 研究估计，患有1型糖尿病的人平均每天需要做出额外的180个决策。 **自动化**可以减轻心理负担，让用户能够将精力投入到生活的其他方面。
 
@@ -41,7 +41,7 @@ There are a wide range of Automation options, and users are encouraged to study 
 
 ## 开始使用自动操作前的关键考虑
 
-1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automations should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). 避免设置自动化**配置文件切换**来补偿由于食物等原因导致的**血糖**升高，这些情况最好通过其他策略（如SMBs等）来处理。
+1. 启用特定自动化功能前，建议确保已通过**AAPS**实现稳定的控制**血糖**。 自动化功能不应作为基础率、**ISF**或**CR**参数设置欠佳的补偿手段（详见下文论述）。 避免设置自动化**配置文件切换**来补偿由于食物等原因导致的**血糖**升高，这些情况最好通过其他策略（如SMBs等）来处理。
 
 1. 与所有技术一样，**持续葡萄糖监测系统（CGMs）**、**胰岛素泵**和手机都有可能出现故障：技术问题或传感器错误可能会中断**自动化操作**，这时可能需要进行手动干预。
 
@@ -59,7 +59,7 @@ There are a wide range of Automation options, and users are encouraged to study 
 
 ## 自动操作在AAPS中的位置
 
-Depending on your [Config builder > General](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
+根据[配置构建器>常规](../SettingUpAaps/ConfigBuilder.md)设置的不同，**自动化功能**可能位于「汉堡菜单」内，或作为与**AAPS**并存的标签页显示。
 
 ## 如何设置自动操作？
 
@@ -127,13 +127,13 @@ Depending on your [Config builder > General](../SettingUpAaps/ConfigBuilder.md) 
 在选择这些条件和值时，必须仔细考虑**自动操作**的确切意图。
 
 (automations-automation-triggers)=
-## Automation Triggers
+## 自动化触发器
 
-![Automation Triggers](../images/automation_triggers.png)
+![自动化触发器](../images/automation_triggers.png)
 
-There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. 以下列表并不详尽：
+系统提供多种「触发器」类型供用户自定义选择。 触发器即自动化执行所需满足的必要条件。 以下列表并不详尽：
 
-**Trigger:** connect conditions
+**触发类型**：链接条件
 
 **选项：**
 
@@ -142,20 +142,20 @@ There are various ‘Triggers’ that can be selected by the user. Triggers are 
 * “或”
 * “异或”（即如果仅当且仅当一个条件适用时，才会执行操作）
 
-**Trigger:** time vs. recurring time
+**触发类型：**即时触发与周期性触发
 
 **选项：**
 
 * 时间 = 单次事件时间
 * 循环时间 = 循环发生的事件（例如，每周一次，每个工作日等）
 
-**Trigger:** location
+**触发类型：** 位置
 
 **选项：**
 
 * 在**配置构建器**（自动化）中，用户可以选择所需的位置服务。
 
-**Trigger:** location service
+**触发类型：** 定位服务
 
 **选项：**
 
@@ -163,22 +163,22 @@ There are various ‘Triggers’ that can be selected by the user. Triggers are 
 * 使用网络位置：你的Wi-Fi位置。
 * 使用GPS位置（注意！ 这可能会导致电池过度消耗！）
 
-**Triggers** : pump and sensor data
+**触发类型：**​​ 泵体与传感器数据
 
-* Cannula age trigger: Available for all pumps
-* Insulin age trigger: Available for supported pumps
-* Battery age trigger: Available for supported pumps
-* Sensor age trigger: always available
-* Pod Activation trigger: Available for patch pumps
+* 管路使用时长触发器​：适用于所有胰岛素泵型号
+* 胰岛素使用时长触发器​：仅限兼容泵型可用
+* 电池使用时长触发器​：仅限兼容泵型可用
+* 传感器使用时长触发器​：全平台支持
+* Pod激活触发器​：贴敷式胰岛素泵专用
 
-Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+对所有时长类触发器来说，不要使用等值比较，由于系统原因很可能无法有效激活，需配置两个触发器构建一个阈值范围（如：导管使用≥72小时且≤96小时）。
 
-* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
-* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* 储药器液位触发器​：全泵型兼容，"NOT_AVAILABLE"比较运算符无效（**AAPS**系统持续更新液位数据）
+* 泵体电池电量触发器​：仅限兼容泵型可用，"NOT_AVAILABLE"比较运算符无效（**AAPS**系统持续记录电量值）。
 
 ## 操作
 
-![Automation Triggers](../images/automation_actions.png)
+![自动化触发器](../images/automation_actions.png)
 
 **操作**：启动**临时目标**
 
@@ -221,7 +221,7 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 
 ![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
-## Examples of Automations
+## 自动化示例
 
 以下是**自动操作**的示例。 关于**自动操作**以及用户如何个性化**自动操作**的进一步讨论，可以在Facebook讨论组或Discord上找到。 下面的示例不应在用户未充分理解**自动操作**将如何工作的情况下复制。
 
@@ -269,30 +269,30 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
-## Automating Preference Settings Export
+## 自动化参数设置导出
 
-### Unattended Exports: scheduled (daily)
+### 无人值守导出模式：定时导出​（每日执行）
 
-Screenshots detailing the Automation triggers:
+自动化触发配置截图说明​：
 
-1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+条件1：周期性时间 = 周一、周二、周三、周四、周五 上午8:00 操作1：设置导出（"治疗记录文本"输入"每日"）
 
 ![Scheduled exports](../images/Automations/automation_settingsexport_scheduled_400px.png)
 
-Note: Export execution will be logged on Careportal
+注：所有导出操作均记录于Careportal模块
 
-### Unattended Exports: Pod Activation (patch pump only)
+### 无人值守导出模式：Pod激活触发导出​（仅限贴敷式胰岛素泵）
 
-Screenshots detailing the Automation triggers:
+自动化触发配置截图说明​：
 
-1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+条件1：Pod激活事件 操作1：设置导出（"治疗记录文本"输入"Pod激活：设置导出"）
 
 ![Export on Pod activation](../images/Automations/automation_settingsexport_podactivation_400px.png)
 
-Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Preferences > Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+注：导出操作将被记录在Careportal系统。 重要提示：如果您之前未执行过手动设置导出，自动化功能将**完全**不会触发。 请通过["偏好设置 > 维护"](#preferences-maintenance-settings)菜单正确激活无人值守设置导出功能。
 
 
-## Automation Logs
+## 自动化的日志
 
 **AAPS**在**自动操作**选项卡底部的屏幕上记录了最近触发的**自动操作**日志。
 
@@ -331,6 +331,6 @@ Note: Export execution will be logged on Careportal. Note : Automation will not 
 
 检查如上所述的规则优先级顺序。
 
-## Alternatives to Automations
+## 自动化的替代方案
 
 对于高级用户，还有其他方法可以使用IFTTT或第三方Android应用（如Automate）来自动化任务。 
