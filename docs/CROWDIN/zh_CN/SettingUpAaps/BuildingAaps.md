@@ -11,21 +11,21 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 ## 构建AAPS所需的计算机和软件规格。
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
+* 构建APK可能需要特定版本的**[Android Studio](https://developer.android.com/studio/)**。 请参考下方表格：
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                |                                                        | 5.6    | 11  |
-| 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1    | 13  |
-| 3.1.0.3                 | 2020.3.1                                             | up to Meerkat                                          | 7.3    | 17  |
-| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                  | up to Meerkat                                          | 8.2    | 19  |
-| [3.3](#version3300)     | Ladybug (2024.2.1)                                   | up to Meerkat                                          | 8.9    | 21  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | up to Meerkat                                          | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   |                                                        | 8.11   | 21  |
+| AAPS 版本                 | 推荐<br/>Android Studio<br/>版本 | 备选<br/>Android Studio<br/>版本 | Gradle | JVM |
+| ----------------------- | ---------------------------------------- | ---------------------------------------- | ------ |:--- |
+| 2.6.2                   | 3.6.1                                    |                                          | 5.6    | 11  |
+| 2.8.2.1                 | 4.1.1                                    |                                          | 6.1    | 13  |
+| 3.1.0.3                 | 2020.3.1                                 | 最高支持至Meerkat版本                           | 7.3    | 17  |
+| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                      | 最高支持至Meerkat版本                           | 8.2    | 19  |
+| [3.3](#version3300)     | Ladybug (2024.2.1)                       | 最高支持至Meerkat版本                           | 8.9    | 21  |
+| [3.3.1.3](#version3300) | Ladybug 功能更新包 (2024.2.2)                 | 最高支持至Meerkat版本                           | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                       |                                          | 8.11   | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+推荐版本是已内置适配的JVM版本。 推荐版本同时也是构建**AAPS**的最低可用版本。 若使用低于"推荐"的版本将**无法**完成构建。 若选用其他版本，可能遭遇与JVM版本相关的兼容性问题。 请参考[Android Studio问题排查指南](#troubleshooting_androidstudio-uncommitted-changes)解决。 若您当前的Android Studio版本未在下表中列出，则需先升级至支持版本。
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取正确版本。 此处列出仅作参考，无需手动干预。
 
 * Android Studio 不支持 [Windows 32位系统](#troubleshooting_androidstudio-unable-to-start-daemon-process)。 请牢记，**64位CPU和64位操作系统是必要条件**。 如果您的系统不满足这一条件，您需要更换相应的硬件、软件或整个系统。
 
@@ -135,7 +135,7 @@ Android Studio 是一个运行在计算机上的程序。 Android Studio允许�
 重要提示：Android Studio在最近的版本中更改了其用户界面。 本指南将向您展示在“Ladybug”中的新用户界面下执行这些步骤的方法。 如果您仍在使用旧的用户界面，您可能想先按照[这些说明]将Android Studio更改为新的用户界面。
 ```
 
-The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
+Android Studio版本至关重要。 请参考[前文说明](#Building-APK-recommended-specification-of-computer-for-building-apk-file)选择合适的Android Studio版本。
 
 下载[当前版本的Android Studio](https://developer.android.com/studio)，或者从[**存档**](https://developer.android.com/studio/archive)下载旧版本，并接受下载协议。
 
@@ -208,7 +208,7 @@ The Android studio version is very important. See the [instructions above](#Buil
 
 在Android Studio的欢迎屏幕上，检查左侧是否已高亮显示“**项目**”(1)。
 
-Then click "**Clone Repository**" (2) on the right:
+接着在右侧点击**克隆仓库**按钮（2）：
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
@@ -224,7 +224,7 @@ Then click "**Clone Repository**" (2) on the right:
     ```
     并将其粘贴到URL文本框（3）中。
 
-* Check the (default) directory for saving the cloned code does not already exist on your computer (4). 您可以将其更改为某个目录，但请记住您存储的位置！
+* 确认保存克隆代码的（默认）目录在计算机上尚未存在（4）。 您可以将其更改为某个目录，但请记住您存储的位置！
 * 现在点击“克隆”按钮（5）。
 
 ```{admonition} INFORMATION
