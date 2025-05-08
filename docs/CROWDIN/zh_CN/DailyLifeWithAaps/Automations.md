@@ -63,7 +63,7 @@
 
 ## 如何设置自动操作？
 
-要设置**自动操作**，请在**AAPS**中创建一个“规则”如下：
+要设置一个**自动化**动作，请在**AAPS**中创建一个“规则”如下：
 
 ![创建自动操作](../images/automation_create.png)
 
@@ -277,7 +277,7 @@
 
 条件1：周期性时间 = 周一、周二、周三、周四、周五 上午8:00 操作1：设置导出（"治疗记录文本"输入"每日"）
 
-![Scheduled exports](../images/Automations/automation_settingsexport_scheduled_400px.png)
+![预定导出](../images/Automations/automation_settingsexport_scheduled_400px.png)
 
 注：所有导出操作均记录于Careportal模块
 
@@ -287,7 +287,7 @@
 
 条件1：Pod激活事件 操作1：设置导出（"治疗记录文本"输入"Pod激活：设置导出"）
 
-![Export on Pod activation](../images/Automations/automation_settingsexport_podactivation_400px.png)
+![Pod激活时导出](../images/Automations/automation_settingsexport_podactivation_400px.png)
 
 注：导出操作将被记录在Careportal系统。 重要提示：如果您之前未执行过手动设置导出，自动化功能将**完全**不会触发。 请通过["偏好设置 > 维护"](#preferences-maintenance-settings)菜单正确激活无人值守设置导出功能。
 
