@@ -2,7 +2,7 @@
 
 # 灵敏度检测
 
-## Sensitivity algorithm
+## 灵敏度检测算法
 
 目前我们有三种灵敏度检测模型：
 
@@ -24,7 +24,7 @@
 
 灵敏度是根据过去8小时的数据或上次更换输注部位以来的数据（如果少于8小时）来计算的。 如果碳水化合物未被吸收，则会在偏好设置中指定的时间后被削减。 只有Oref1算法支持未宣布的餐食（UAM）。 这意味着检测到UAM的时间段会被排除在灵敏度计算之外。 因此，如果您在使用带有UAM功能的闭环胰岛素输注系统（SMB），您必须选择Oref1算法才能正常工作。 有关更多信息，请阅读[OpenAPS Oref1文档](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)。
 
-Oref1 is the recommended option : it is the only one that can detect UAM and work with [OpenAps SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Oref1为推荐算法：作为唯一支持检测未声明餐食（UAM）且兼容[OpenAps超微大剂量（SMB）](#Open-APS-features-super-micro-bolus-smb)协议的版本，代表当前最新一代闭环控制算法。
 
 ## 同时摄入的碳水化合物
 
