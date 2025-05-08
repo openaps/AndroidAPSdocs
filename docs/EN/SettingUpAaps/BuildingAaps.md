@@ -6,7 +6,181 @@
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
+There are two ways to build the APK, suitable for [General Users](general-users) and [Advanced Users](advanced-users) respectively.
 
+(general-users)=
+# 1. General Users
+
+This section is designed for general users. If this is your first time, please complete the [preparation step](aaps-ci-preparation) first.
+
+For the download links mentioned in the tutorial videos, please use the following site:  
+Support Website: [aaps-ci-preparation](https://github.com/Angus-repo/aaps-ci-preparation/releases/latest)
+
+If you have any questions during the process, please refer to [AAPS-CI Troubleshooting](aaps-ci-troubleshooting) first.
+
+(aaps-ci-preparation)=
+## Preparation Steps
+- Option1: If this is your first-time users (or you don't have a JKS), please follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
+- Option2: If you prefer to use your own JKS (Java KeyStore), and you know its password and alias, please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
+- Once you complete either of the two steps above, you can google drive [start auth](aaps-ci-google-drive-auth).
+
+(aaps-ci-option1)=
+### AAPS-CI Option 1 – Generate JKS
+ - Suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+
+ Compatible with Android
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/t1VlnCpm-A4"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
+- As described in the video, please copy it to the corresponding field.
+
+![aaps_ci_pr_ci](../images/Building-the-App/aaps_ci_option1.png)
+
+(aaps-ci-option2)=
+### AAPS-CI Option 2 – Upload Existing JKS
+ - Suitable for users who already have a JKS and know the JKS password and alias.
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/L5L3XtnszMQ?cc_load_policy=1"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
+- As described in the video, please copy it to the corresponding field.
+
+![aaps_ci_option2](../images/Building-the-App/aaps_ci_option2.png)
+
+- For KEYSTORE_PASSWORD, KEY_ALIAS, and KEY_PASSWORD, please enter your actual password and alias in GitHub.
+
+![aaps_ci_option2_2](../images/Building-the-App/aaps_ci_option2_2.png)
+
+![aaps_ci_option2_3](../images/Building-the-App/aaps_ci_option2_3.png)
+
+![aaps_ci_option2_4](../images/Building-the-App/aaps_ci_option2_4.png)
+
+(aaps-ci-google-drive-auth)= 
+### AAPS-CI Google Drive Auth
+- Click Start Auth to begin the authorization process, and set the obtained token in GitHub after authorization.
+
+![aaps_ci_gdrive_auth](../images/Building-the-App/aaps_ci_gdrive_auth.png)
+
+(github-build-apk)=
+## AAPS-CI GitHub Actions to Build the AAPS APK
+ - Suitable for general users.
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/amfEBwpTtQI"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+  - In GitHub, go to Actions, select AAPS-CI, and click Run workflow to start building the APK.
+
+  ![aaps_ci_github_build_apk](../images/Building-the-App/aaps_ci_github_build_apk.png)
+
+  - variant:
+    - Please refer to [variant](variant)
+
+(github-pr-test)=
+## If you want to test the items in a pull request
+ - Suitable for testers or those helping with testing.
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/REQ7RqzoUkM"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
+![aaps_ci_pr_ci](../images/Building-the-App/aaps_ci_pr_ci.png)
+
+- PR number: Please enter the PR number that you want to test.
+
+- PR reference types: PR reference types include two options:
+  - head:
+    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
+    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+
+  - merge:
+    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
+    - This is a virtual merge commit automatically created by GitHub.
+    - This commit only exists when the PR has no conflicts and is mergeable.
+
+  - variant:
+    - Please refer to [variant](variant)
+
+  (variant)=
+  ### variant
+    - Select the variant you need:
+      - fullRelease: For regular pump usage with full functionality.
+      - [aapsclient、aapsclient2](../RemoteFeatures/RemoteControl.md#aapsclient) For caregivers (requires [NightScout](../SettingUpAaps/Nightscout.md))。
+      - pumpcontrol
+      - Text ending with “Debug” indicates that the APK will be built in debug mode, which is useful for troubleshooting.
+
+(github-cherry-pick)=
+## If you want to add a specific commit to your branch, please use cherry-pick.
+  ![aaps_cherry-pick_ci](../images/Building-the-App/aaps_cherry_pick_ci.png)
+
+  - Use workflow from Branch: Please enter the branch name you want to cherry-pick to.
+  - Upstream Repository: Please enter the repository name you want to cherry-pick from.
+  - Commit SHA: Please enter the commit SHA you want to cherry-pick.(like git commit hash)
+  - Select Build Variant: [variant](variant)
+    
+
+(aaps-ci-troubleshooting)=
+## AAPS-CI Troubleshooting
+
+  (aaps-ci-preparation)=
+  ### aaps-ci-preparation web page
+  - When you open aaps-ci-preparation.html using a file manager, it will start a temporary local server on your phone to display the webpage and receive the Google refresh token.
+  - If you see the screen below, it means you have been inactive for a while, and the file manager has already shut down the local server.
+  - Please reopen aaps-ci-preparation.html using the file manager app and complete the remaining steps.
+
+  ![aaps_ci_html_not_found](../images/Building-the-App/aaps_ci_html_not_found.png)
+
+
+(advanced-users)=
+# 2. Advanced Users
+
+This section is intended for users who want to build the APK using Android Studio.
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 ## Computer and software specifications for building AAPS
