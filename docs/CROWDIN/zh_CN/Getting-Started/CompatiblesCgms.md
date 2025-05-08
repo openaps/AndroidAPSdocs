@@ -1,4 +1,4 @@
-# Compatible CGMs
+# 兼容的CGM设备
 
 本节简要概述了所有与**AAPS**兼容的**持续血糖监测系统（CGMs）/扫描式血糖监测系统（FGMs）**。
 
@@ -36,12 +36,12 @@
 
 可信数据源支持**SMB**全天候输注。
 
-| 传感器                   |                  CGM 应用                   |
-| --------------------- |:-----------------------------------------:|
-| Dexcom G5/G6          |         BYODA, xDrip+ (直连, 原生支持)          |
-| 德康 G7                 | DiaKEM, xDrip+ (Direct, Native), Juggluco |
-| Dexcom ONE/ONE+/Stelo |          xDrip+ (Direct, Native)          |
-| Libre 2/2+ (EU)       | xDrip+, Juggluco (with or without xDrip+) |
-| Libre 2/2+/3/3+       |     Juggluco (with or without xDrip+)     |
+| 传感器                   |               CGM 应用                |
+| --------------------- |:-----------------------------------:|
+| Dexcom G5/G6          |      BYODA, xDrip+ (直连, 原生支持)       |
+| 德康 G7                 | DiaKEM, xDrip+ (直连, 原生支持), Juggluco |
+| Dexcom ONE/ONE+/Stelo |          xDrip+ (直连, 原生支持)          |
+| Libre 2/2+ (EU)       |   xDrip+, Juggluco (搭配/不搭配xDrip+)   |
+| Libre 2/2+/3/3+       |      Juggluco (搭配/不搭配 xDrip+)       |
 
-Note: xDrip+ Companion app and Followers are not trusted data sources.
+注：xDrip+配套应用及关注者模式不被视为可信数据源。
