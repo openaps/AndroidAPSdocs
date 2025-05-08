@@ -75,7 +75,7 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 * 红色 = 低于范围
 * 黄色 = 高于范围 
 
-![Deltas](../images/Home_Delta.png)
+![变化值](../images/Home_Delta.png)
 
 中间的区块显示：
 
@@ -702,13 +702,13 @@ BG字段通常已经填充了来自您的动态（CGM）的最新读数。 如�
 
 ## 历史浏览器
 
-可以通过点击菜单右侧的3个点，然后选择“历史记录”来访问此视图。 It is not possible to put in the main menu through the Config Builder. 也可以通过[操作选项卡](#action-tab)底部的按钮来访问它。
+可以通过点击菜单右侧的3个点，然后选择“历史记录”来访问此视图。 通过Config Builder无法将项目添加到主菜单中。 也可以通过[操作选项卡](#action-tab)底部的按钮来访问它。
 
 允许您在**AAPS**历史记录中回溯。 请参阅专门页面[查看您的数据>历史记录浏览器](../Maintenance/Reviewing.md)。
 
 ## Statistics
 
-可以通过点击菜单右侧的3个点，然后选择“统计”来访问此视图。 It is not possible to put in the main menu through the Config Builder.
+可以通过点击菜单右侧的3个点，然后选择“统计”来访问此视图。 通过Config Builder无法将项目添加到主菜单中。
 
 为您提供关于您的TIR（入框时间）和TDD（每日总剂量）的统计数据。 请参阅专用页面[查看您的数据>统计信息](#reviewing-statistics)。
 
@@ -716,7 +716,7 @@ BG字段通常已经填充了来自您的动态（CGM）的最新读数。 如�
 
 ## 配置文件助手
 
-可以通过点击菜单右侧的3个点，然后选择“Profile Helper（配置文件助手）”来访问此视图。 It is not possible to put in the main menu through the Config Builder. “配置文件助手”可以帮助您：
+可以通过点击菜单右侧的3个点，然后选择“Profile Helper（配置文件助手）”来访问此视图。 通过Config Builder无法将项目添加到主菜单中。 “配置文件助手”可以帮助您：
 
 * [为孩子从头开始构建配置文件](#your-aaps-profile-profile-from-scratch-for-a-kid)
 * [比较两个配置文件](#your-aaps-profile-compare-profiles)
