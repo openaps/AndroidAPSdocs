@@ -37,21 +37,21 @@
 - 如果你想让**AAPS**使用与手机标准语言不同的语言，你可以从多种语言中选择。
 
 - 如果你使用不同的语言，有时可能会看到语言混合的情况。 这是由于Android系统的一个问题，即有时覆盖默认的Android语言设置并不起作用。
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- 该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
-(preferences-simple-mode)= **Simple mode**
+(preferences-simple-mode)= **简单模式**
 
-The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
+**简单模式**在首次安装**AAPS**时默认启用。 在**简单模式**下，大量设置项将被隐藏，用户偏好配置将替换为预设值。 主页的[附加图表区域](#AapsScreens-section-g-additional-graphs)也将采用预定义布局。 当您熟悉**AAPS**界面及设置后，应关闭简单模式。
 
 **患者名称**
 
-- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
-- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
+- 如果你需要区分多个设置（例如，家中有两个1型糖尿病患者），可以使用此选项。
+- 显示于[双表盘](../WearOS/WearOsSmartwatch.md)界面。
 
 (Preferences-skin)=
-### Skin
+### 皮肤
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
 你可以从四种类型的皮肤中选择：
 
@@ -61,12 +61,12 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 其他皮肤之间的差异取决于手机的显示方向：
 
-#### Portrait orientation
+#### 竖屏方向
 
 - **原始皮肤**和**始终显示在屏幕底部的按钮**是相同的。
 - **大分辨率显示**与其他皮肤相比，所有图形的高度都有所增加。
 
-#### Landscape orientation
+#### 横屏方向
 
 - 使用**原始皮肤**和**大分辨率显示**时，你需要向下滚动才能看到屏幕底部的按钮。
 
@@ -80,7 +80,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 ![参数设置 > 一般 - 保护](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-### Master password
+### 主密码
 
 必须设置主密码才能[导出设置](../Maintenance/ExportImportSettings.md)，因为从版本2.7开始，设置是加密的。
 
@@ -88,7 +88,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![Set master password](../images/MasterPW.png)
 
-### Settings protection
+### 设置保护
 
 - 使用密码或手机的生物识别身份验证（例如，[孩子正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）来保护你的设置。 如果启用此功能，每次访问任何与参数设置相关的视图时，系统都会提示你进行身份验证。
 
@@ -98,13 +98,13 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![保护（Protection）](../images/Pref2020_Protection.png)
 
-### Application protection
+### 应用保护
 
 如果应用受到保护，你必须输入密码或使用手机的生物识别身份验证才能打开**AAPS**。
 
 如果输入的密码错误，**AAPS**将立即关闭，但如果之前已成功打开，它仍将在后台运行。
 
-### Bolus protection
+### 大剂量安全验证
 
 - 如果**AAPS**由小孩使用，并且你通过[短信输注大剂量](../RemoteFeatures/SMSCommands.md)，大剂量安全验证可能很有用。
 
@@ -112,7 +112,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![提示生物识别保护](../images/Pref2020_PW.png)
 
-### Password and PIN retention
+### 密码和PIN保留时间
 
 定义在成功输入密码后，参数设置或大剂量功能保持解锁的时间（以秒为单位）。
 
@@ -122,7 +122,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![参数设置 > 概览](../images/Pref2020_OverviewII.png)
 
-### Keep screen on
+### 保持屏幕常亮
 
 “保持屏幕常亮”选项将强制Android始终保持屏幕开启。 这对于演示等场景很有用 但它会消耗大量电池电量。 因此，建议将手机连接到充电线。
 
@@ -130,7 +130,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 ### 按钮
 
 - 定义主页屏幕底部显示哪些按钮。
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- 该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
 ![参数设置 > 按钮](../images/Pref2020_OV_Buttons.png)
 
@@ -155,12 +155,12 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![参数设置 > 快速向导按钮](../images/Pref2020_OV_QuickWizard2.png)
 
-Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
+同一时间仅显示一个快捷向导按钮。 如需执行其他操作：长按当前显示的快捷向导按钮， 将跳转至所有快捷选项列表。 选择目标项后再次长按即可执行， 操作前需二次确认。
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### 默认临时目标
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
 [临时目标（TT）](../DailyLifeWithAaps/TempTargets.md)允许你为特定的时间段更改血糖目标。 设置默认TT时，你可以轻松地更改活动、即将进食等情况下的目标。
 
@@ -174,24 +174,24 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 在这里了解如何[启用临时目标](#TempTargets-where-can-i-select-a-temp-target)。
 
-### Fill/Prime standard insulin amounts
+### 输注/充盈标准胰岛素剂量
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
 如果你想通过**AAPS**填充管路，可以通过[**操作**标签页](#screens-action-tab)进行此操作。
 
 可以在此对话框中定义预设值。 根据你的管路长度，选择“填充/灌注”对话框中三个按钮的默认量。
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### 可视化范围
 
 为**AAPS**概览和智能手表上的血糖图选择高点和低点标记。 这只是可视化，不是你的血糖目标范围。 例如：70 - 180 mg/dl 或 3.9 - 10 mmol/l。
 
 ![参数设置 > 可视化范围](../images/Pref2020_OV_Range2.png)
 
-### Shorten tab titles
+### 缩写选项卡标题
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
 有助于在屏幕上显示更多的标签页标题。
 
@@ -200,9 +200,9 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 ![参数设置 > 标签页](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes field in treatments dialogs
+### 在治疗（treatments）对话框中显示备注字段
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
 允许您为自己的治疗方案（大剂量向导、碳水、胰岛素...）添加简短的文本备注。
 
@@ -211,7 +211,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 (Preferences-status-lights)=
 ### 状态指示灯
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
 状态指示灯为以下情况提供视觉警告：
 
@@ -230,7 +230,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 ![参数设置 > 状态指示灯](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Deliver this part of bolus wizard result
+### 执行大剂量向导计算结果中的此部分
 
 设置使用大剂量向导计算时使用的[默认百分比](#AapsScreens-section-j)。
 
@@ -240,28 +240,28 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 * 对于消化缓慢的人：提前输送所有大剂量可能会导致低血糖，因为胰岛素的作用比消化快。
 * 为**AAPS**自己处理**血糖升高**留下更多空间。 在这两种情况下，如果认为合适，**AAPS**将通过SMB补偿缺失的部分大剂量。
 
-### Enabled bolus advisor
+### 启用大剂量顾问（bolus advisor）
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
 ![大剂量顾问](../images/BolusAdvisor.png)
 
 启用后，在高血糖状态下使用大剂量向导时，你将收到一个警告，提示你是否希望给个提前大剂量，然后等**血糖**回到范围内时再进食。
 
-### Enabled bolus reminder
+### 启用大剂量提醒
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
 % todo
 
 (Preferences-advanced-settings-overview)=
-### Advanced Settings (Overview)
+### 高级设置（概览）
 
 ![参数设置 > 高级设置](../images/Pref2021_OV_Adv.png)
 
-#### Superbolus
+#### 超级大剂量Superbolus
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
 在大剂量向导中启用超级大剂量选项。
 
@@ -272,21 +272,21 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 ## 治疗安全
 
 (preferences-patient-type)=
-### Patient type
+### 患者类型
 
 - 安全限制是根据你在这里选择的年龄来设置的。
 - 如果你开始触及这些硬性限制（比如最大剂量），那就是时候更进一步了。
 - 选择高于实际年龄是不明智的，因为如果在胰岛素对话框中输错数值（例如跳过小数点）可能会导致用药过量。
 - 要了解这些硬性安全限制的具体数值，请在[此页面](../DailyLifeWithAaps/KeyAapsFeatures.md)上按您正在使用的算法来找。
 
-### Max allowed bolus
+### 允许的最大大剂量
 
 - 定义**AAPS**一次输注所允许的最大胰岛素量（以胰岛素单位计算）。
 - 此设置作为安全限制存在，以防止因意外输入或用户错误而注入大量胰岛素。
 - 建议将此设置为一个合理的数值，该数值大致对应于您一餐或校正剂量所需的最大胰岛素量。
 - 此限制也适用于大剂量计算器的结果。
 
-### Max allowed carbs
+### 最大允许碳水量
 
 - 定义**AAPS**大剂量计算器计算结果所允许覆盖的最大碳水化合物量（以克计算）。
 - 此设置作为安全限制存在，以防止因意外输入或用户错误而注入大量胰岛素。
@@ -295,13 +295,13 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 ## 闭环（Loop）
 
 (Preferences-aps-mode)=
-### APS mode
+### APS模式
 在开环、闭环和低血糖暂停（LGS）之间切换。
 
 ![配置构建器 - 循环模式](../images/ConfigBuilder_LoopLGS.png)
 
 (Preferences-pen-loop)=
-#### Open Loop
+#### 开环
 **AAPS**连续评估所有可用数据（IOB、COB、BG...），如有必要，会就如何调整治疗（如临时基础率）提出建议。
 
 建议不会像闭环模式中那样自动执行。 如果使用虚拟泵，用户必须手动将建议输入到泵中，如果**AAPS**连着真实的泵，用户需要通过相应的按钮来执行操作。
@@ -309,7 +309,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 此选项适用于了解**AAPS**的工作原理，或者你使用的是不受支持的泵。 在**[目标5](#objectives-objective5)**结束之前，无论你做出什么选择，你都将处于开环模式。
 
 (preferences-closed-loop)=
-#### Closed Loop
+#### 闭环
 
 **AAPS**连续评估所有可用数据（IOB、COB、BG...），并在必要时（_即_无需你进一步干预）自动调整治疗以达到设定的[目标范围或值](#profile-glucose-targets)（大剂量输注、临时基础率、胰岛素关闭以避免低血糖等）。
 
@@ -317,25 +317,25 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 闭环仅在达到**[目标6](#objectives-objective6)**或更高，并且使用已经支持的泵时才可用。
 
-#### Low Glucose Suspend (LGS)
+#### 低血糖暂停（LGS）
 
 在此模式下，[maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)设置为零。
 
 这意味着如果血糖正在下降，**AAPS**可以降低你的基础率。 但如果血糖正在上升，则不会自动进行校正。 您的基础率将保持与您当前**个人设置**中定义的一致。 仅当基础率IOB为负值时（缘于之前的低血糖暂停LGS），才会额外给予胰岛素以降低**血糖（BG）**。
 
 (Preferences-minimal-request-change)=
-### Minimal request change
+### 最小请求更改（Minimal request change）
 
 在**开环**模式下，每次**AAPS**建议调整基础率，你都会收到通知。 为了减少通知的数量，您可以要么使用[更宽的血糖目标范围](#profile-glucose-targets)，要么提高最小请求率的百分比。 这定义了触发通知所需的相对变化量（如果建议的基础率变化低于这个值，AAPS会忽略掉，也就不会通知你）。
 
 ## 高级膳食助手（AMA）或超级微小大剂量（SMB）
 
-Depending on your settings in [Config builder > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+根据您在[配置构建器 > APS](../SettingUpAaps/ConfigBuilder.md)中的设置，可在两种算法间选择：
 
 - [高级膳食助手（OpenAPS AMA）](#Open-APS-features-advanced-meal-assist-ama) - 发布于2017年的算法
 - [超级微小大剂量（OpenAPS SMB）](#Open-APS-features-super-micro-bolus-smb) - 推荐给初学者的最新算法
 
-As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
+自[**AAPS** 3.3版本起](#version3300)，[动态ISF](../DailyLifeWithAaps/DynamicISF.md)功能已作为OpenAPS SMB的组成部分整合。
 
 ### OpenAPS AMA（高级膳食助手）
 
@@ -351,7 +351,7 @@ OpenAPS SMB的所有设置均在[AAPS关键功能>超级微小大剂量（SMB）
 (Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
 该算法使用BGI（血糖影响）来确定[碳水化合物何时被吸收](../DailyLifeWithAaps/CobCalculation.md)。
 
@@ -367,11 +367,11 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 ![COB图](../images/Pref2020_min_5m_carbimpact.png)
 
-### Meal max absorption time
+### 膳食最大吸收时间
 
 如果你经常吃高脂肪或高蛋白膳食，则需要增加膳食吸收时间。
 
-### Advanced settings - autosens ratio
+### 高级设置 - 自动灵敏度比率（autosens ratio）
 
 ![碳水吸收率设置](../images/Pref2020_Absorption.png)
 
@@ -386,7 +386,7 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 ## 泵设置
 
-The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump).  根据[与泵相关的说明](../Getting-Started/CompatiblePumps.md)配对并设置你的泵。
+在[配置构建器 > 泵](#Config-Builder-pump)中选择的泵驱动将决定此处显示的配置选项。  根据[与泵相关的说明](../Getting-Started/CompatiblePumps.md)配对并设置你的泵。
 
 ## Tidepool
 
@@ -423,15 +423,15 @@ The options here will vary depending on which pump driver you have selected in [
 - 如果您在目标1中遇到了问题，请仔细检查此处是否有拼写错误。
 - 保持启用Websockets连接（推荐）。
 
-### Synchronization
+### 同步
 
 同步选项将取决于您希望使用**AAPS**的方式。
 
 您可以选择您想要[从Nightscout上传和下载哪些数据](#Nightscout-aaps-settings)。
 
-### Alarm options
+### 报警选项
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
+![报警选项](../images/Pref2024_NSClient_Alarms.png)
 
 - “警报选项”允许您选择要通过该应用程序使用的Nightscout警报。 当Nightscout警报触发时，**AAPS**将会发出警报。
 - 为了使警报响起，您需要在您的[Nightscout变量](https://nightscout.github.io/nightscout/setup_variables/#alarms)中设置紧急高血糖、高血糖、低血糖和紧急低血糖警报值。
@@ -440,7 +440,7 @@ The options here will vary depending on which pump driver you have selected in [
 - “从Nightscout[公告](https://nightscout.github.io/nightscout/discover/#announcement)创建通知”功能将在**AAPS**通知栏中重复显示Nightscout公告。
 - 当一段时间没有从Nightscout接收到数据时，您可以更改数据超时警报和紧急数据超时警报的阈值。
 
-### Connection settings
+### 连接设置
 
 ![NSClient 连接设置](../images/ConfBuild_ConnectionSettings.png)
 
@@ -451,7 +451,7 @@ The options here will vary depending on which pump driver you have selected in [
 - 要在字段中删除所有SSID，请输入一个空格。
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
+### 高级设置（NSClient）
 
 ![NSClient 高级设置](../images/Pref2024_NSClientAdv.png)
 
@@ -480,21 +480,21 @@ The options here will vary depending on which pump driver you have selected in [
 
 ![维护设置](../images/Pref2020_Maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+**邮件接收地址**：日志的标准接收地址为<logs@aaps.app>。
 
-**Data Choices**
+**数据选择**
 
 ![数据选择](../images/Pref2020_DataChoice.png)
 
 您可以通过向开发者发送崩溃报告来帮助**AAPS**进一步发展。
 
-**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+**无人值守设置导出**<br/> 启用此功能后，您将允许**AAPS**自动执行设置导出操作，无需用户手动干预。 为此，主密码将在下次手动导出时安全地存储在您的手机上（仅限于此）。 存储的密码将有效期长达4周。 4周后，您将收到密码即将到期的通知。 在为期1周的宽限期内，您可以通过从维护菜单手动导出设置来刷新密码。
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the AAPS 'Careportal' and 'User entry' lists under Treatments.
+1周的宽限期过后，存储的密码将过期，任何自动化设置导出都将中止，并通知用户重新输入密码。  [（**自动化设置导出**）](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)将记录在AAPS的“Careportal”和“用户输入”列表下的“治疗”部分。
 
-After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
+启用此功能后，需立即执行一次手动设置导出操作。此时系统将要求您输入密码，**AAPS**会加密存储该密码以实现后续自动导出。
 
-(preferences-maintenance-logdirectory)= Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
+(preferences-maintenance-logdirectory)= 维护设置还包含**AAPS目录**，该目录可直接在维护选项卡下找到。 此设置允许用户在手机上选择一个目录，供**AAPS**存储偏好设置、日志及其他文件。
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
