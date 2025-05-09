@@ -187,7 +187,7 @@ Zudem werden schon kleine Anstiege nach einer Mahlzeit durch **wenig IOB** erkan
 
 ![8mg jump 130% ioby4](../images/fullClosedLoop02.png)
 
-Automation #1
+Automatisierung #1
 
 If Conditions apply, **AAPS** would give 1 or 2 **SMBs** in the next 12 minutes, using a boosted **ISF** according to the set elevated **Profile Percentage** (in the example, a 30% boost of insulinReq). As long as these Conditions apply, the **Automation**  rule extends by another 12 minutes. A low carb meal might have slower **BG** rise characteristics. Dieser würde von einer weiteren Automation (#2) profitieren, die bei einem niedrigeren Delta einsetzt und einen schwächeren Insulin-Boost gibt.
 
@@ -218,7 +218,7 @@ Automation(#3),”iobTH reached => **SMBs** off”, is defined to end (or pause,
 
 ![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop04.png)
 
-Automation #3
+Automatisierung #3
 
 It tells the loop that above your set **iob threshold** it's better not to use any more **SMBs**
 
@@ -226,7 +226,7 @@ It tells the loop that above your set **iob threshold** it's better not to use a
 - In **AAPS' Preferences/ SMB** Settings generally do not allow **SMB** at elevated target).                                                                                                                   
   The insulin required will then have to be delivered with much more caution through the bottleneck of **TBRs**
 
-**Achtung: Automation #3 funktioniert nur, wenn kein aktives TT gesetzt ist.** Falls Du also mit einem temporären Ziel "Bald Essen" gearbeitet hast, muss dieses bis zum Start der Automation beendet sein (d. h. normalerweise 30-40 Minuten nach Beginn der Mahlzeit).
+**Achtung: Automatisierung #3 funktioniert nur, wenn kein aktives TT gesetzt ist.** Falls Du also mit einem temporären Ziel „Bald Essen“ gearbeitet hast, muss dieses bis zum Start der Automatisierung beendet sein (d. h. normalerweise 30-40 Minuten nach Beginn der Mahlzeit).
 
 One way to do this is to set up an **Automation** Condition that ends an eventually running EatingSoonTT under the Condition **iob**>65% * iobTH.
 > Ways to work with EatingSoonTT Some loopers set (by pressing the TT button, or automated via a lowered **Profile** **BG** target if eating time slots are fairly fixed) an EatingSoonTT roughly an hour or more before meal start, just to guarantee a low starting **BG** and slightly increased  **iob**. But, assuming the **FCL** is always en route towards target, this might not yield much and you may prefere to define an **Automation** that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). A low **TT** is important in this stage because any **SMB** is calculated by your loop using (predicted glucose minus TT)/sens, so a small TT makes the resulting insulinReq bigger.
