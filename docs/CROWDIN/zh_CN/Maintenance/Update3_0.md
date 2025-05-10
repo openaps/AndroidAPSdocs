@@ -2,62 +2,62 @@
 orphan: true
 - - -
 
-# Necessary checks after update to AAPS 3.0
+# 升级到 AAPS 3.0 后的必要检查
 
-* **Minimum Android version is 9.0 now.**
-* **Data is not migrated to new database.**
+* **最低支持Android 9.0。**
+* **数据不会迁移至新数据库。**
 
-  Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) and start with zero IOB and COB.
+  由于数据库结构变动过大，无法进行数据迁移。 升级后，IOB、COB、治疗记录等数据将被清空。 升级后IOB、COB等数据清零，需新建[配置文件切换](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 
-  Plan the update carefully!!! Best in situation without active insulin and carbs
+  请谨慎规划升级时间！ ！ 建议在无活性胰岛素和碳水时进行升级
 
-* Please see the [Release Notes](../Maintenance/ReleaseNotes.md) for details on new and changed features.
+* 新功能及变更详情请参阅[版本说明](../Maintenance/ReleaseNotes.md)。
 
 
-## Check automations
+## 检查自动化规则
 
-* New restrictions were introduced. Check your automations, especially if your conditions are still valid.
-* If one of the conditions is missing, you need to add it again.
-* Red automations contain invalid actions, go and edit them and reset to valid values
+* 新增了限制条件。 请检查所有自动化规则，确保条件仍有效。
+* 若条件缺失，需重新添加。
+* 红色标记的自动化规则包含无效操作，需编辑并重置为有效值。
 
-  Example: A profile change to 140% was allowed earlier but is now restricted to 130%.
+  示例：此前允许切换至140%的配置文件，现限制为130%。
 
-## Check your nsclient settings and set the synchronization complications
+## 检查 NSClient 设置并配置同步项
 
-* The implementation of the nsclient plugin has changed completely.
-* Go to the nsclient tab and open the settings in the right-hand menu. A new preference "Synchronization" is available now.
-* You can now make a detailed selection about which items shall be synchronized with your Nightscout site.
+* NSClient 插件实现已完全重构。
+* 进入 NSClient 标签页，通过右侧菜单打开设置。 新增“同步”选项。
+* 现在可详细选择与 Nightscout 同步的数据项。
 
 (Update3_0-nightscout-profile-cannot-be-pushed)=
-## Nightscout profile cannot be pushed
-* The nightscout profile is gone, rest in peace!
-* To copy your current nightscout profile into a local profile, go to the treatments page (now to be opened in the right-hand menu).
-* Search for a profile switch with 100% and press clone.
-* A new local profile is added, valid from the current date.
-* To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to current date.
+## Nightscout 配置文件无法推送
+* Nightscout 配置文件功能已移除！
+* 若需将当前 Nightscout 配置文件复制为本地配置文件，进入治疗页面（现通过右侧菜单打开）
+* 查找 100% 的配置文件切换记录，点击“克隆”
+* 将添加新的本地配置文件，有效期从当前日期开始
+* 若需更新 Nightscout 端的配置文件：使用“克隆”功能（需选择记录，而非配置文件）， 保存更改后可见“配置文件生效于:”更新为当前日期。
 
 (Update3_0-reset-master-password)=
-## Reset master password
-* You can now reset your master password in case you have forgotten it.
-* You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones filesystem.
-* Restart AAPS.
-* The new password will be the serial number of your active pump.
-* For Dash: The serial number is always 4241.
-* For EROS it is also listed on the POD tab as "Sequence Number"
+## 重置主密码
+* 现支持忘记主密码时进行重置
+* 在手机文件系统的 `/AAPS/extra` 目录下创建名为 `PasswordReset` 的空文件
+* 重启 AAPS
+* 新密码将变为当前使用泵的序列号
+* Dash 泵：序列号固定为 4241
+* EROS 泵：序列号显示在 POD 标签页的“Sequence Number”中
 
-## Warning signal beneath BG
+## BG 值下方的警告信号
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+从 AndroidAPS 3.0 开始，主界面 BG 数值下方可能出现警告标识：
 
-  ![Red BG warning](../images/bg_warn_red.png)
+  ![红色 BG 警告](../images/bg_warn_red.png)
 
-  ![Yellow BG warning](../images/bg_warn_yellow.png)
+  ![黄色 BG 警告](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](#aaps-screens-bg-warning-sign)
+详细信息请参阅 [AAPS 界面说明](#aaps-screens-bg-warning-sign)
 
 (update30-failure-message-data-from-different-pump)=
-## Failure message: Data from different pump
+## 错误提示：来自其他泵的数据
 
-   ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
+   ![错误提示：来自其他泵的数据](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](#Config-Builder-pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+解决方法：进入[配置构建器](#Config-Builder-pump)， 将泵类型切换为“虚拟泵”，重新切换回实际使用的泵类型， 此操作将重置泵状态。
