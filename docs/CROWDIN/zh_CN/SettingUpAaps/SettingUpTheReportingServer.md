@@ -2,7 +2,7 @@
 
 目前有两种报告服务器可与**AAPS**一起使用：
 
-- [Nightscout](https://nightscout.github.io/)
+- [Nightscout设置](https://nightscout.github.io/)
 - [Tidepool](https://www.tidepool.org/)
 
 ![Reporting Servers](../images/Building-the-App/ReportingServer.png)
@@ -10,7 +10,7 @@
 我们建议使用Nightscout。
 
 (SettingUpTheReportingServer-nightscout)=
-## Nightscout
+## Nightscout设置
 
 Nightscout是一个网络应用程序，可以记录和显示您的CGM数据和**AAPS**数据，并生成报告。 它是一个功能强大的平台，已经与**AAPS**集成多年。 它使用户和护理人员能够近乎实时地跟踪患者的糖尿病数据（如果所有相关组件之间的互联网连接足够稳定，数据接收和数据提供之间可能只相隔几秒钟）。 它还允许护理人员向**AAPS**发送远程命令。
 
