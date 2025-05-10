@@ -252,7 +252,23 @@ Release date: 29-12-2024
 * libraries updated to latest version, toml @MilosKozak
 * migration to kotlin 2.0, java 21 @MilosKozak
 
+(version3204)=
+
+## [Version 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
+
+Release date: 27-02-2024
+
+This version is the last one supporting Android 10. If you cannot upgrade to Android 11, [update AAPS to 3.2.0.4](#update-aaps-3204).
+
+### Değişiklikler
+
+- xDrip G7 support
+- Medtrum fixes
+- Automation icon fix
+- Passing objective 1 fix
+
 (version3200)=
+
 ## Version 3.2.0.0 dedicated to @Philoul
 
 Release date: 23-10-2023
