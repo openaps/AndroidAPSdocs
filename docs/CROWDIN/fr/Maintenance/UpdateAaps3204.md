@@ -1,5 +1,7 @@
 # Updating to AAPS 3.2.0.4
 
+(update-aaps-3204)=
+
 ## Construire vous-même au lieu de télécharger
 
 **The AAPS app (an apk file) is not available for download, due to regulations around medical devices. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes !**

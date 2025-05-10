@@ -317,13 +317,13 @@
 
 ![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
 
-## Troubleshooting
+## 故障排除
 
 * 问题：__我的自动化没有由AAPS触发？__
 
 勾选右侧的框以激活自动操作事件：
 
-## Troubleshooting
+## 故障排除
 
 ![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
 

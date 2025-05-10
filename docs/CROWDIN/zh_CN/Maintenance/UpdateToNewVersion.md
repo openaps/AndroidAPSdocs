@@ -1,117 +1,116 @@
-# Update to a new version or branch
+# 更新到新版本或分支
 
-## Build yourself instead of download
+## 自行构建而非下载
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+由于医疗设备相关的法规，**AAPS**无法下载。 构建该应用供自己使用是合法的，但不得将副本提供给他人 详情请参阅[常见问题页面](../UsefulLinks/FAQ.md)。
 
 ## Important notes
 
-* Please update to the new version of **AAPS** as soon as possible after a new release is available.
-* When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-* The new version will also be announced on Facebook at the time of release.
-* Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+* 当有新版本发布时，请尽快更新至最新版本的 **AAPS**。
+* 当有新版本可用时，**AAPS** 应用内会显示新版本的信息横幅。
+* 新版本发布时也会在 Facebook 上同步公告。
+* 更新前请仔细阅读 [版本说明](ReleaseNotes.md)，并通过 Facebook 或 Discord 与社区确认所有疑问。
     
     ```{note}
-    In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+    如果您想在新电脑上构建 **AAPS**：请将备份的密钥库文件复制到新电脑。 然后按照 [首次构建 **AAPS** 流程](../SettingUpAaps/BuildingAaps.md) 操作，而非本指南。 唯一区别在于您可以选择已复制的密钥库文件而无需新建。
     ```
 
-## Overview for updating to a new version of AAPS
+## 更新至新版本 AAPS 的概览
 
-```{contents} Steps for updating to a new version of AAPS :depth: 1 :local: true
+```{contents} 更新至新版本 AAPS 的步骤 :depth: 1 :local: true
 
-    <br />In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+    <br />如果遇到问题，请参阅[Android Studio故障排除]的单独页面(../GettingHelp/TroubleshootingAndroidStudio).
     
-    ### Export your settings
+    ###导出您的设置
     
-    Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+    从手机上的现有 **AAPS** 版本导出您的设置。 您可能用不到它，但以防万一最好保存。
     
-    See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+    如果您不记得如何操作，请参阅[导出和导入设置](ExportImportSettings.md) 页面。
     
-    ### Check your Android Studio version
+    ###检查您的Android Studio版本
     
-    The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+    最低版本要求请参阅  [构建说明](#Building-APK-recommended-specification-of-computer-for-building-apk-file). 如果您的版本较旧，请先 [更新Android Studio](#Building-APK-install-android-studio)!
     
     (Update-to-new-version-update-your-local-copy)=
-    ### Update your local copy
-    
-    ```{admonition} WARNING
-    :class: warning
-    If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../SettingUpAaps/BuildingAaps.md), as this guide will not work for you!
+    ###更新您的本地副本
+    ```{admonition}警告
+    :class: 警告
+    如果您从2.8.x之前的版本更新，请按照[新克隆](../SettingUpAaps/BuildingAaps.md)的说明进行操作，因为本指南不适用于您！
     
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* 在 Android Studio 中打开现有的 AAPS 项目。 可能需要选择您的项目。 （双击）AAPS项目。
     
-    ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+    ![Android Studio - 选择项目](../images/update/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* 在 Android Studio 菜单栏选择 Git -> Fetch
     
-    ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+    ![Android Studio 菜单 - Git - Fetch](../images/update/02_GitFetch.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* 右下角会显示 Fetch 成功的消息。
     
-    ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+    ![Android Studio 菜单 - Git - Fetch 成功](../images/update/03_GitFetchSuccessful.png)
 
-* In the menu bar, now select Git -> Pull
+* 在菜单栏选择 Git -> Pull
     
-    ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+    ![Android Studio 菜单 - Git - Pull](../images/update/04_GitPull.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* 保持所有选项默认（origin/master）并点击 Pull
     
-    ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+    ![Android Studio - Git - Pull 对话框](../images/update/05_GitPullOptions.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* 等待下载完成，底部状态栏会显示进度。 完成后，会显示成功消息。
     
     ```{note}
-    The files that were updated may vary! This is not an indication
+    更新的文件可能不同！ 这并不意味着有问题。
     ```
     
-    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+    ![Android Studio - Pull 成功](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Gradle Sync 会自动运行以下载依赖项。 请等待它完成。
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### 检查 JVM 版本
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+若您曾在同一台电脑上构建过旧版 **AAPS**，此步骤尤为重要。
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+在 [构建说明](#Building-APK-recommended-specification-of-computer-for-building-apk-file) 中核对当前构建的 **AAPS** 版本所需的 JVM 版本。 然后按照[不兼容的 Gradle JVM](#incompatible-gradle-jvm)中的步骤确保当前使用正确版本。
 
 (Update-to-new-version-build-the-signed-apk)=
 
-### Build the Signed APK
+### 构建签名 APK
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+您的源代码现在是当前发布的版本，并且已检查所有前提条件。 请按 [构建签名 APK 章节](#Building-APK-generate-signed-apk) 的描述构建签名 APK。
 
 (Update-to-new-version-transfer-and-install)=
 
-### Transfer and install the apk
+### 传输并安装 APK
 
-You need to transfer the apk to your phone so you can install it.
+需将 APK 传输至手机后进行安装。
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+若您使用 Android Studio 中已有的密钥库完成构建，则无需删除手机上的现有应用。 安装APK时，按照提示安装更新。
+对于其他场景，例如在Android Studio中为您的签名APK建立新的密钥库，您需要在安装APK之前删除旧的应用程序。 **确保导出您的设置！**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
+具体操作请参考 [传输与安装 AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md) 说明。
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-### Check AAPS version on phone
+### 检查手机上的 AAPS 版本
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+安装新的APK后，您可以通过点击右上角的三个点菜单，然后点击“关于”来检查手机上的AAPS版本。 您应该看到当前版本。
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![已安装的 AAPS 版本](../images/Update_VersionCheck.png)
 
-Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+请查阅 [版本说明](../Maintenance/ReleaseNotes.md) 确认是否有更新后的特别注意事项。
 
-## Troubleshooting
+## 故障排除
 
-If anything goes wrong, don't panic.
+如果出现问题，请不要惊慌。
 
-Take a breath!
+深呼吸！
 
-Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) if your problem is already documented!
+若您的问题已有记录，请参考 [Android Studio 故障排除](../GettingHelp/TroubleshootingAndroidStudio) 页面！
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+如需更多帮助，请通过 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 或 [Discord](https://discord.gg/4fQUWHZ4Mw) 联系其他 **AAPS** 用户。

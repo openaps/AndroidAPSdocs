@@ -1,4 +1,4 @@
-# Phones
+# 手机
 
 当前版本的**AAPS**（3.3）需要搭载**谷歌Android 11.0或更高版本**的Android智能手机。 如果你正在考虑购买新手机，（截至2024年12月），建议选择Android 14。  
 截至2024年11月，一些用户报告了Android 15和蓝牙连接的问题。 您可能希望推迟更新到Android 15，特别是如果您正在使用Omnipod Dash或Dexcom G7的话。 有关此问题的最新更新，请查阅[Facebook或Discord](../GettingHelp/WhereCanIGetHelp.md)。  

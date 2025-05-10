@@ -252,7 +252,23 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 * 函式庫更新至最新版本，toml @MilosKozak
 * 移轉至 kotlin 2.0，java 21 @MilosKozak
 
+(version3204)=
+
+## [Version 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
+
+Release date: 27-02-2024
+
+This version is the last one supporting Android 10. If you cannot upgrade to Android 11, [update AAPS to 3.2.0.4](#update-aaps-3204).
+
+### 變更
+
+- xDrip G7 support
+- Medtrum fixes
+- Automation icon fix
+- Passing objective 1 fix
+
 (version3200)=
+
 ## 3.2.0.0 版本獻給 @Philoul
 
 發布日期：2023-10-23

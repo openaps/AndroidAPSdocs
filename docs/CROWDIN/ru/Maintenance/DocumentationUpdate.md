@@ -1,5 +1,9 @@
 # Обновления и изменения в документации
 
+## May 2025
+
+- Added [3.2.0.4 upgrade page](#update-aaps-3204) @psonnera
+
 ## January 2025
 
 - Quick wizard [long press feature](#Preferences-quick-wizard) @emilise

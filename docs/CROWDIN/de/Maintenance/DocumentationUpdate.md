@@ -1,5 +1,9 @@
 # Docs Updates & Änderungen
 
+## May 2025
+
+- Added [3.2.0.4 upgrade page](#update-aaps-3204) @psonnera
+
 ## Januar 2025
 
 - Quick Wizard [langes Drücken als Funktion](#Preferences-quick-wizard) @emilise

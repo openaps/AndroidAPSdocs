@@ -1,5 +1,9 @@
 # 文档更新与变更
 
+## 2025年5月
+
+- 添加 [3.2.0.4 升级页面](#update-aaps-3204) @psonnera
+
 ## 2025年1月
 
 - 快速向导[长按功能](#Preferences-quick-wizard) 由@emilise添加
@@ -170,7 +174,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 - [新型Freestyle Libre 2 教程](../CompatibleCgms/Libre2.md)
 - [按百分比切换配置文件 - 示例](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [SMS命令更新](../RemoteFeatures/SMSCommands.md)
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
+- [Android Studio 故障排除](../GettingHelp/TroubleshootingAndroidStudio)
 - [故障排除 - 链接集合](../GettingHelp/GeneralTroubleshooting.md)
 - 更新 - 经验丰富的用户快速指南
 - 文档 - 更新[编辑](#edit-the-docs-code-syntax)和[翻译](#translations-translation-of-the-documentation)。

@@ -230,7 +230,7 @@ WearOS 5（API级别34，基于Android 14）存在[限制](#BuildingAapsWearOs-W
 * 修复TDD计算错误 @MilosKozak
 * SMS命令：允许[**禁用**NS触发的配置切换通知短信](#sms-commands-too-many-messages) @MilosKozak
 
-#### Smartwatches
+#### 智能手表
 
 * Wear与表盘功能改进 @Philoul @MilosKozak @olorinmaia
 * 自动化操作手表磁贴 @Philoul
@@ -251,12 +251,28 @@ WearOS 5（API级别34，基于Android 14）存在[限制](#BuildingAapsWearOs-W
 * 库更新至最新版，toml配置 @MilosKozak
 * 迁移至Kotlin 2.0，Java 21 @MilosKozak
 
+(version3204)=
+
+## [版本 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
+
+发布日期：2024年02月27日
+
+这是最后一个支持Android 10的版本。 如果如法升级到Android 11, [请将 AAPS 升级到 3.2.0.4](#update-aaps-3204).
+
+### 变更内容
+
+- 支持xDrip G7
+- 修复美敦力
+- 修复自动化图标
+- 修复绕过目标1
+
 (version3200)=
+
 ## 版本 3.2.0.0 致敬 @Philoul
 
 发布日期：2023年10月23日
 
-### Important hints
+### 重要提示
 
 - 需要NS 15
 - 使用NS v3插件时，通过NS界面（+按钮）或其他v1 API应用输入的治疗不会同步至AAPS。 这将在NS的未来版本中得到修复。 在NS全面转用v3前，请确保AAPS与AAPSClient使用相同客户端（v1或v3） 同样适用于AAPS和AAPSClient本身。
@@ -311,526 +327,526 @@ v1是用于在NS网站和NS服务器之间交换数据的旧协议， 它有许�
 v3为新协议， 更加安全高效
 - 在使用令牌时，您可以更好地定义访问权限
 - 协议在双方（AAPS和NS）都更高效
-- It can read up to 3 months of data from NS
-- you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power compsumption, but slower updates ie. minutes)
-- NSClient is not paused on disconnections
+- 可以从NS读取最多3个月的数据
+- 每个设备均可独立选择是否启用WebSocket​​（启用即实时更新更快；不启用虽降低功耗，但数据同步会延迟，例如数分钟）。
+- NSClient在断开连接时不会暂停
 
-LIMITATIONS
-- NS 15 must be used with AAPS 3.2
-- v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
-- in opposite because of old uneffective method of tracking changes v1 see changes done by v3
-- remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
+限制：
+- AAPS 3.2需搭配NS 15使用
+- v3无法读取v1数据（未来NS版本可能解决）
+- 反之，由于v1接口追踪数据变化的方法老旧低效，可能导致v1无法及时识别v3接口所做的更改。​
+- 请留意：目前Nightscout内部仍采用v1接口，因此若你使用v3接口，将无法通过Nightscout网页界面手动输入数据。​ 若需远程输入数据，必须通过短信使用AAPS客户端。​
 
-RECOMMENDED SETTING
-- because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
-- v3 is preferred because of efficiency
-- using websockets or not using with v3 depends on your preference
-- it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
+推荐设置：
+- 基于上述原因，你应在所有设备上统一选择并仅使用一种接口方案（请注意，目前其他数据上传工具均仍在使用v1接口）。 如果您决定使用v3，请在AAPS和所有AAPSClient中选择v3
+- 优先选择v3以提高效率
+- 是否在v3中使用Websockets取决于您的偏好
+- 强烈建议仅由AAPS统一收集所有数据，并作为唯一上传者将数据推送至Nightscout。​ 其他所有设备及应用应仅从NS读取数据，禁止写入。 遵循此方案可有效避免数据冲突与同步错误。​ 这也适用于使用Dexcom Share连接器将数据获取到NS的BG数据。
 
-## Version 3.1.0
+## 版本 3.1.0
 
-Release date: 19-07-2022
+发布日期：2022年7月19日
 
 (Releasenotes-important-hints-3-1-0)=
-### Important hints
+### 重要提示
 
-- after update uninstall Wear app and install new version
-- Omnipod users: update on pod change !!!
+- 更新完成后，请卸载Wear版应用并重新安装新版本。
+- Omnipod用户请在更换储药器时更新！
 
 ### 变更内容
 
-- fixed issues from 3.0 version
-- fix application freezing @MilosKozak
-- fixed DASH driver @avereha
-- fixed Dana drivers @MilosKozak
-- huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
-- widget @MilosKozak
-- Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
-- Watch [Wear OS tiles](#WearOsSmartwatch-wear-os-tiles), translations @Andries-Smit
-- Wear code refactored. Not backward compatible anymore @MilosKozak
-- a11y improvements @Andries-Smit
-- new protection option PIN @Andries-Smit
-- allow graph scale from menu @MilosKozak
-- more statistics available @MilosKozak
-- MDI plugin removed in favor of VirtualPump
-- new automation action: StopProcessing (following rules)
+- 修复3.0版本问题
+- 修复应用冻结 @MilosKozak
+- DASH驱动修复 @avereha
+- Dana驱动修复 @MilosKozak
+- 大量UI优化，Material Design迁移，新图标 @Andries-Smit等 @Andries-Smit @MilosKozak @osodebailar @Philoul
+- 小部件 @MilosKozak
+- Aidex CGM支持 @andyrozman @markvader（仅限泵控制）
+- 手表、[Wear OS小组件](#WearOsSmartwatch-wear-os-tiles)，翻译 @Andries-Smit
+- Wear代码重构。 不再向后兼容 @MilosKozak
+- a11y改进 @Andries-Smit
+- 新增PIN保护 @Andries-Smit
+- 图形比例菜单设置 @MilosKozak
+- 统计信息增强 @MilosKozak
+- 移除MDI插件，以VirtualPump为主
+- 新增自动化操作：停止处理
 
-## Version 3.0.0
+## 版本 3.0.0
 
-Release date: 31-01-2022
+发布日期：2022年1月31日
 
 (Releasenotes-important-hints-3-0-0)=
-### Important hints
+### 重要提示
 
-- **Minimum Android version is 9.0 now.**
-- **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
-- Use the same version of AAPS and NSClient
+- **最低支持Android 9.0。**
+- **数据不会迁移到新数据库。 **不要抱怨，这是一个巨大的变化，所以简单来说是不可能的。 升级后，IOB、COB、治疗记录等数据将被清空。 升级后IOB、COB等数据清零，需新建[配置文件切换](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) 请谨慎规划升级时间！ ！ 建议在无活性胰岛素和碳水时进行升级
+- AAPS与NSClient需版本一致
 
-**Make sure to check and adjust settings after updating to 3.0 as described** [here](../Maintenance/Update3_0.md).
+确保在更新到3.0后按照[此处](../Maintenance/Update3_0.md)所述检查和调整设置。
 
-### Preparation steps
+### 准备步骤
 
-**At least two days before update:**
+**升级前至少两天：**
 
-- disable Dexcom bridge in Nightscout
-- if you are using G5/G6 and xDrip as a collector, you have to update xDrip to a nightly version newer than 14th January 2022
-- if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
+- 禁用Nightscout的Dexcom桥接
+- 如果您使用G5/G6和xDrip作为收集器，则必须更新xDrip到2022年1月14日之后的新版本
+- 建议G5/G6用户转用BYODA收集器以利用反向平滑（你仍可将xDrip用于其他用途，因其可通过BYODA接收数据）。
 
 ### 变更内容
 
-- 100k lines changed, 105k new lines of code
+- 代码重构（10万行新增，10.5万行修改）
 
-- [Omnipod DASH support](../CompatiblePumps/OmnipodDASH.md) @AdrianLxM @avereha @bartsopers @vanelsberg
+- [Omnipod DASH支持](../CompatiblePumps/OmnipodDASH.md) @AdrianLxM等
 
-- [Dana-i support](../CompatiblePumps/DanaRS-Insulin-Pump.md) @MilosKozak
+- [Dana-i支持](../CompatiblePumps/DanaRS-Insulin-Pump.md) @MilosKozak
 
-- [DiaconnG8 support](../CompatiblePumps/DiaconnG8.md)
+- [DiaconnG8支持](../CompatiblePumps/DiaconnG8.md)
 
-- Glunovo support
+- Glunovo支持
 
-- Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+- 数据库升级至Room @MilosKozak等
 
-- Lot of code rewritten to Kotlin @MilosKozak
+- 大量代码转为Kotlin @MilosKozak
 
-- New internal interface for pump drivers
+- 新泵驱动接口
 
-- NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+- NSClient重写以优化同步 @MilosKozak
 
-  - Record deletion from NS is not allowed (only invalidation through NSClient)
-  - Record modification from NS is not allowed
-  - Sync setting available without engineering mode (for parents)
-  - Ability to resync data
+  - 禁止从NS删除记录（仅失效）
+  - 禁止修改NS记录
+  - 无需工程模式即可同步
+  - 支持数据重同步
 
-- Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
+- 配置文件切换行为更改。 现在区分配置文件切换*（用户想要的东西）*和配置文件更改*（由泵执行的更改）*@MilosKozak @Tebbe
 
-- You can start activity temporary target during creation of profile switch @MilosKozak
+- 配置文件切换可启动临时目标 @MilosKozak
 
-- NSProfile is gone, just local profile can be used. Local profile can be [synced to NS](#Update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak.
+- NSProfile已弃用，仅可使用本地配置文件。 可[同步至NS](#Update3_0-nightscout-profile-cannot-be-pushed) @MilosKozak
 
-- Forgotten [master password reset procedure](#Update3_0-reset-master-password) @MilosKozak
+- [主密码重置流程](#Update3_0-reset-master-password) @MilosKozak
 
-- User actions tracing @Philoul
+- 用户操作追踪 @Philoul
 
-- New automation TempTargetValue trigger @Philoul
+- 新增自动化临时目标值触发 @Philoul
 
-- New automation Careportal action @Philoul
+- 新增自动化Careportal操作 @Philoul
 
-- Add Bolus reminder in Carbs Dialog @Philoul
+- 碳水对话框添加推注提醒 @Philoul
 
-- Bolus Wizard improvement
+- Bolus 向导改进
 
-- UI improvements @MilosKozak
+- UI优化 @MilosKozak
 
-- New user buttons for automations @MilosKozak
+- 新增用户自动化按钮 @MilosKozak
 
-- New automation layout @MilosKozak
+- 自动化布局更新 @MilosKozak
 
-- History browser updated and fixed @MilosKozak
+- 历史浏览器修复 @MilosKozak
 
-- Objective9 removed @MilosKozak
+- 移除目标9 @MilosKozak
 
-- Fixed bug associated to unstable CGM data @MilosKozak
+- 修复CGM数据不稳定相关错误 @MilosKozak
 
-- DanaR and DanaRS communication improvement @MilosKozak
+- DanaR/RS通信改进 @MilosKozak
 
-- CircleCI integration @MilosKozak
+- CircleCI集成 @MilosKozak
 
-- Files location change:
+- 文件位置更改：
 
-  - /AAPS/extra (engineering mode)
+  - /AAPS/extra（工程模式）
   - /AAPS/logs /AAPS/exports
   - /AAPS/preferences
 
-## Version 2.8.2
+## 版本 2.8.2
 
-Release date: 23-01-2021
+发布日期：2021年1月23日
 
-- Please see also [important hints for version 2.8.1.1](#version-2811) below.
+- 另见[版本2.8.1.1的重要提示](#version-2811)
 
 ### 变更内容
 
-- stability improvements
-- more tweaking for Android 8+
-- improved icons
-- watch improvements
-- NSClient fixes
-- Bolus advisor now works with Pumpcontrol and NSClient
+- 稳定性提升
+- Android 8+适配优化
+- 图标改进
+- 手表功能优化
+- NSClient修复
+- 推注顾问支持Pumpcontrol与NSClient
 
-## Version 2.8.1.1
+## 版本 2.8.1.1
 
-Release date: 12-01-2021
+发布日期：2021年1月12日
 
 (important-hints-2-8-1-1)=
-### Important hints
+### 重要提示
 
-- Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
-- If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
-- ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
-- NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
+- 强制启用**NS_UPLOAD_ONLY**选项
+- 如果您使用NSClient输入临时目标、碳水化合物或配置文件切换，则必须在AAPS中将其关闭，**但仅在您的同步工作正常的情况下**（即，您没有看到不想要的数据更改，如自我修改临时目标、临时基础率等）。
+- 注意：若其他应用（如xDrip的广播/上传/同步功能）正在处理治疗数据，请勿进行此操作。​
+- 仅工程模式可关闭NS_UPLOAD_ONLY
 
-### Major changes
+### 主要变更
 
-- RileyLink, Omnipod and MDT pump improvements and fixes
-- forced NS_UPLOAD_ONLY
-- fix for SMB & Dexcom app
-- watchface fixes
-- crash reporting improved
-- gradle reverted to allow direct watchface installation
-- automation fixes
-- RS driver improvement
-- various crashes fixed
-- UI fixes and improvements
-- new translations
+- RileyLink、Omnipod和MDT泵改进和修复
+- 强制NS_UPLOAD_ONLY
+- 修复SMB与Dexcom应用
+- 表盘修复
+- 崩溃报告优化
+- gradle回退以支持直接安装表盘
+- 自动化修复
+- RS驱动改进
+- 多崩溃修复
+- UI优化
+- 新翻译
 
 (Releasenotes-version-2-8-0)=
-## Version 2.8.0
+## 版本 2.8.0
 
-Release date: 01-01-2021
+发布日期：2021年1月1日
 
-### Important hints
+### 重要提示
 
-- **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
-- [Objectives have changed.](#objectives-objective3) **Finish not completed objectives before update.**
-- Repository location still on <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../SettingUpAaps/BuildingAaps.md).
-- Please use [Android Studio 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
+- **最低Android版本8.0**，旧版请使用仓库中的2.6.1.4
+- [目标调整](#objectives-objective3)，**升级前完成未完成目标**
+- 仓库仍为<https://github.com/nightscout/AndroidAPS> 如果您不熟悉git，最简单的更新方法是删除AAPS目录并进行[新克隆](../SettingUpAaps/BuildingAaps.md)。
+- 使用[Android Studio 4.1.1](https://developer.android.com/studio/)或更高构建
 
-### Major new features
+### 主要新功能
 
-- [Omnipod Eros support](../CompatiblePumps/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
-- [bolus advisor](#Preferences-quick-wizard) & [eating reminder](#AapsScreens-section-j) @MilosKozak
-- New watchface @rICTx-T1D
-- Dana RS connection improvements @MilosKozak
-- Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
-- New [Low Resolution Skin](#Preferences-skin)
-- New ["Pregnant" patient type](#Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
-- New NSClient tablet layout @MilosKozak
-- NSClient transfer insulin, sensitivity and display settings directly from main AAPS @MilosKozak
-- [Preferences filter](../SettingUpAaps/Preferences.md) @Brian Quinion
-- New pump icons @Rig22 @@teleriddler @osodebailar
-- New [insulin type Lyumjev](#Config-Builder-lyumjev)
-- SetupWizard improvements @MilosKozak
-- Security improvements @dlvoy
-- Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
+- [Omnipod Eros支持](../CompatiblePumps/OmnipodEros.md) @bartsopers等
+- [推注顾问](#Preferences-quick-wizard)与[进食提醒](#AapsScreens-section-j) @MilosKozak
+- 新表盘 @rICTx-T1D
+- Dana RS连接优化 @MilosKozak
+- 移除Dexcom原生应用的SMB“未变化CGM值”限制
+- 新增[低分辨率皮肤](#Preferences-skin)
+- 新增[“孕妇”患者类型](#Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
+- NSClient平板布局 @MilosKozak
+- NSClient同步胰岛素、敏感度与显示设置 @MilosKozak
+- [偏好设置过滤器](../SettingUpAaps/Preferences.md) @Brian Quinion
+- 新泵图标 @Rig22等
+- 支持[Lyumjev胰岛素](#Config-Builder-lyumjev)
+- SetupWizard优化 @MilosKozak
+- 安全增强 @dlvoy
+- 各种改进和修复 @AdrianLxM @Philoul @swissalpine @MilosKozak @Brian Quinion
 
 (Releasenotes-version-2-7-0)=
-## Version 2.7.0
+## 版本 2.7.0
 
-Release date: 24-09-2020
+发布日期：2020年9月24日
 
-**Make sure to check and adjust settings after updating to 2.7 as described** [here](../Maintenance/Update2_7.md).
+升级后请按[此指南](../Maintenance/Update2_7.md)检查设置。
 
-You need at least start [objective 11 (in later versions objective 10!)](#objectives-objective10) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11. This will not effect other objectives you have already finished. You will keep all finished objectives!
+需完成[目标11](#objectives-objective10)以继续使用[自动化](../DailyLifeWithAaps/Automations.md)功能（所有前置目标需完成）。 例如，若你尚未完成[目标3](#objectives-objective3)中的考核，则必须先完成该考核才能开始目标11。 这不会影响您已经完成的其他目标。 您已完成的目标将保留！
 
-### Major new features
+### 主要新功能
 
-- internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
-- using modules for Dana pumps @MilosKozak
-- [new layout, layout selection](../DailyLifeWithAaps/AapsScreens.md) @MilosKozak
-- new [status lights layout](#Preferences-status-lights) @MilosKozak
-- [multiple graphs support](#AapsScreens-activate-optional-information) @MilosKozak
-- [Profile helper](../SettingUpAaps/YourAapsProfile.md) @MilosKozak
-- visualization of [dynamic target adjustment](#AapsScreens-visualization-of-dynamic-target-adjustment) @Tornado-Tim
-- new [preferences layout](../SettingUpAaps/Preferences.md) @MilosKozak
-- SMB algorithm update @Tornado-Tim
-- [Low glucose suspend mode](#Preferences-aps-mode) @Tornado-Tim
-- [carbs required notifications](#key-aaps-features-minimal-carbs-required-for-suggestion) @twain47 @Tornado-Tim
-- removed Careportal (moved to Actions) @MilosKozak
-- [new encrypted backup format](ExportImportSettings.md) @dlvoy
-- [new SMS TOTP authentication](../RemoteFeatures/SMSCommands.md) @dlvoy
-- [new SMS PUMP CONNECT, DISCONNECT](#SMSCommands-commands) commands @Lexsus
-- better support for tiny basals on Dana pumps @Mackwe
-- small Insight fixes @TebbeUbben @MilosKozak
-- ["Default language" option](#Preferences-general) @MilosKozak
-- vector icons @Philoul
-- [set neutral temps for MDT pump](#MedtronicPump-configuration-of-the-pump) @Tornado-Tim
-- History browser improvements @MilosKozak
-- removed OpenAPS MA algorithm @Tornado-Tim
-- removed Oref0 sensitivity @Tornado-Tim
-- [Biometric or password protection](#Preferences-protection) for settings, bolus @MilosKozak
-- [new automation trigger](../DailyLifeWithAaps/Automations.md) @PoweRGbg
-- [Open Humans uploader](../SupportingAaps/OpenHumans.md) @TebbeUbben @AdrianLxM
-- New documentation @Achim
+- 依赖注入，库更新，代码转Kotlin @MilosKozak等
+- Dana泵模块 @MilosKozak
+- [新布局选择](../DailyLifeWithAaps/AapsScreens.md) @MilosKozak
+- 新[状态灯布局](#Preferences-status-lights) @MilosKozak
+- [多图表支持](#AapsScreens-activate-optional-information) @MilosKozak
+- [配置助手](../SettingUpAaps/YourAapsProfile.md) @MilosKozak
+- [动态目标可视化](#AapsScreens-visualization-of-dynamic-target-adjustment) @Tornado-Tim
+- 新[偏好设置布局](../SettingUpAaps/Preferences.md) @MilosKozak
+- SMB算法更新 @Tornado-Tim
+- [低血糖暂停模式](#Preferences-aps-mode) @Tornado-Tim
+- [最低碳水需求通知](#key-aaps-features-minimal-carbs-required-for-suggestion) @twain47 @Tornado-Tim
+- 移除Careportal（移至Actions） @MilosKozak
+- 新加密备份格式 @dlvoy
+- 新SMS TOTP验证 @dlvoy
+- [新SMS命令PUMP CONNECT/DISCONNECT](#SMSCommands-commands) @Lexsus
+- Dana泵基础率优化 @Mackwe
+- Insight修复 @TebbeUbben @MilosKozak
+- [默认语言设置](#Preferences-general) @MilosKozak
+- 矢量图标 @Philoul
+- [MDT泵中性临时基础率设置](#MedtronicPump-configuration-of-the-pump) @Tornado-Tim
+- 历史记录优化 @MilosKozak
+- 移除OpenAPS MA算法 @Tornado-Tim
+- 移除Oref0敏感度 @Tornado-Tim
+- [生物识别/密码保护设置](#Preferences-protection) @MilosKozak
+- [新自动化触发条件](../DailyLifeWithAaps/Automations.md) @PoweRGbg
+- [Open Humans上传](../SupportingAaps/OpenHumans.md) @TebbeUbben @AdrianLxM
+- 新文档 @Achim
 
 (Releasenotes-version-2-6-1-4)=
-## Version 2.6.1.4
+## 版本 2.6.1.4
 
-Release date: 04-05-2020
+发布日期：2020年4月5日
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+请使用[Android Studio 3.6.1](https://developer.android.com/studio/)或更高版本构建APK。
 
-### Major new features
+### 主要新功能
 
-- Insight: Disable vibration on bolus for firmware version 3 - second attempt
-- Otherwise is equal to 2.6.1.3. Update is optional.
+- Insight：针对固件版本3禁用大剂量振动（第二次尝试）
+- 其他功能与2.6.1.3相同。 更新是可选的。
 
-## Version 2.6.1.3
+## 版本 2.6.1.3
 
-Release date: 03-05-2020
+发布日期：2020年3月5日
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+请使用[Android Studio 3.6.1](https://developer.android.com/studio/)或更高版本构建APK。
 
-### Major new features
+### 主要新功能
 
-- Insight: Disable vibration on bolus for firmware version 3
-- Otherwise is equal to 2.6.1.2. Update is optional.
+- Insight：针对固件版本3禁用大剂量振动
+- 其他功能与2.6.1.2相同。 更新是可选的。
 
-## Version 2.6.1.2
+## 版本 2.6.1.2
 
-Release date: 19-04-2020
+发布日期：2020年4月19日
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+请使用[Android Studio 3.6.1](https://developer.android.com/studio/)或更高版本构建APK。
 
-### Major new features
+### 主要新功能
 
-- Fix crashing in Insight service
-- Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
+- 修复Insight服务中的崩溃问题
+- 其他功能与2.6.1.1相同。 如果未受此错误影响，则无需升级。
 
-## Version 2.6.1.1
+## 版本 2.6.1.1
 
-Release date: 06-04-2020
+发布日期：2020年4月6日
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+请使用[Android Studio 3.6.1](https://developer.android.com/studio/)或更高版本构建APK。
 
-### Major new features
+### 主要新功能
 
-- Resolves SMS CARBS command issue while using Combo pump
-- Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
+- 解决使用Combo泵时SMS CARBS命令的问题
+- 其他功能与2.6.1相同。 如果未受此错误影响，则无需升级。
 
-## Version 2.6.1
+## 版本 2.6.1
 
-Release date: 21-03-2020
+发布日期：2020年3月21日
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+请使用[Android Studio 3.6.1](https://developer.android.com/studio/)或更高版本构建APK。
 
-### Major new features
+### 主要新功能
 
-- Allow to enter only `https://` in NSClient settings
-- Fixed [BGI](../UsefulLinks/Glossary.md) displaying bug on watches
-- Fixed small UI bugs
-- Fixed Insight crashes
-- Fixed future carbs with Combo pump
-- Fixed LocalProfile -> NS sync
-- Insight alerts improvements
-- Improved detection of boluses from pump history
-- Fixed NSClient connection settings (wifi, charging)
-- Fixed sending of calibrations to xDrip
+- 允许在NSClient设置中仅输入`https://`
+- 修复了手表端[BGI](../UsefulLinks/Glossary.md)显示异常的问题。​
+- 修复小UI错误
+- 修复Insight崩溃问题
+- 修复Combo泵的未来碳水化合物输入
+- 修复LocalProfile到NS的同步
+- Insight警报改进
+- 改进从泵历史记录中检测大剂量
+- 修复NSClient连接设置（wifi、充电）
+- 修复向xDrip发送修正
 
 (Releasenotes-version-2-6-0)=
-## Version 2.6.0
+## 版本 2.6.0
 
-Release date: 29-02-2020
+发布日期：2020年2月29日
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+请使用[Android Studio 3.6.1](https://developer.android.com/studio/)或更高版本构建APK。
 
-### Major new features
+### 主要新功能
 
-- Small design changes (startpage...)
+- 小幅设计更改（主页…）
 
-- Careportal tab / menu removed
+- 移除Careportal选项卡/菜单
 
-- New Local Profile plugin
+- 新本地配置文件插件
 
-  - Local profile can hold more than 1 profile
-  - Profiles can be cloned and edited
-  - Ability of upload profiles to NS
-  - Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
-  - Vertical NumberPicker for targets
+  - 本地配置文件可以保存多个配置文件
+  - 可以克隆和编辑配置文件
+  - 可以将配置文件上传到NS
+  - 可以将旧配置文件开关克隆到新配置文件（应用时间偏移和百分比）
+  - 用于目标设置的垂直数字选择器​
 
-- SimpleProfile is removed
+- 移除SimpleProfile
 
 - [扩展大剂量](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)功能 - 闭环将被禁用
 
-- MDT plugin: Fixed bug with duplicated entries
+- MDT插件：修复重复条目错误
 
-- Units are not specified in profile but it's global setting
+- 配置文件中未指定单位，但它是全局设置
 
-- Added new settings to startup wizard
+- 向启动向导添加新设置
 
-- Different UI and internal improvements
+- 不同的UI和内部改进
 
 - [穿戴设备的小部件](../WearOS/WearOsSmartwatch.md)
 
-- New [SMS commands](../RemoteFeatures/SMSCommands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+- 新[SMS命令](../RemoteFeatures/SMSCommands.md) BOLUS-MEAL、SMS、CARBS、TARGET、HELP
 
-- Fixed language support
+- 修复语言支持
 
-- Objectives: [Allow to go back](#CompletingTheObjectives-go-back-in-objectives), Time fetching dialog
+- 目标：[允许回溯](#CompletingTheObjectives-go-back-in-objectives)，时间获取对话框
 
-- Automation: [allow sorting](#Automations-the-order-of-the-automations-in-the-list-matters)
+- 自动化：[允许排序](#Automations-the-order-of-the-automations-in-the-list-matters)
 
-- Automation: fixed bug when automation was running with disabled loop
+- 自动化：修复自动化在禁用循环时运行的错误
 
-- New status line for Combo
+- Combo的新状态行
 
-- GlucoseStatus improvement
+- GlucoseStatus改进
 
-- Fixed TempTarget NS sync
+- 修复TempTarget NS同步
 
-- New statistics activity
+- 新统计活动
 
-- Allow Extended bolus in open loop mode
+- 允许在开环模式下进行扩展大剂量
 
-- Android 10 alarm support
+- Android 10闹钟支持
 
-- Tons on new translations
+- 大量新翻译
 
-## Version 2.5.1
+## 版本 2.5.1
 
-Release date: 31-10-2019
+发布日期：2019年10月31日
 
-Please note the [important notes](#Releasenotes-version-2-5-0) and [limitations](#Releasenotes-is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](#Releasenotes-version-2-5-0). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
+请注意[版本2.5.0](#Releasenotes-version-2-5-0)中列出的[重要说明](#Releasenotes-version-2-5-0)和[限制](#Releasenotes-is-this-update-for-me-currently-is-not-supported)。 \*修复了网络状态接收器中的一个错误，该错误导致多次崩溃（虽然不严重，但会浪费大量能量进行重新计算）。 \*新版本控制将允许进行小更新而不会触发更新通知。
 
 (Releasenotes-version-2-5-0)=
-## Version 2.5.0
+## 版本 2.5.0
 
-Release date: 26-10-2019
+发布日期：2019年10月26日
 
 (Releasenotes-important-notes-2-5-0)=
 
 ### Important notes
 
-- Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../SettingUpAaps/BuildingAaps.md) or [update](UpdateToNewVersion).
-- If you are using xDrip [identify receiver](#xdrip-identify-receiver) must be set.
-- If you are using Dexcom G6 with the patched Dexcom app you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
-- Glimp is supported from version 4.15.57 and newer.
+- 请使用[Android Studio版本3.5.1](https://developer.android.com/studio/)或更高版本来[构建APK](../SettingUpAaps/BuildingAaps.md)或[更新](UpdateToNewVersion)。
+- 如果您使用xDrip，[识别接收器](#xdrip-identify-receiver)必须设置。
+- 如果您使用Dexcom G6和打过补丁的Dexcom应用程序，则需要[2.4文件夹](https://github.com/dexcomapp/dexcomapp/tree/master/2.4)中的版本。
+- Glimp从版本4.15.57及更高版本受支持。
 
 (Releasenotes-is-this-update-for-me-currently-is-not-supported)=
-### Is this update for me? Currently is NOT supported
+### 这个更新适合我吗？ 目前不支持
 
-- Android 5 and lower
+- Android 5及以下版本
 - Poctech
 - 600SeriesUploader
-- Patched Dexcom from 2.3 directory
+- 2.3目录中的打过补丁的Dexcom
 
-### Major new features
+### 主要新功能
 
-- Internal change of targetSDK to 28 (Android 9), jetpack support
-- RxJava2, Okhttp3, Retrofit support
-- Old [Medtronic pumps](../CompatiblePumps/MedtronicPump.md) support (RileyLink need)
-- New [Automation plugin](../DailyLifeWithAaps/Automations.md)
-- Allow to [bolus only part](#Preferences-advanced-settings-overview) from bolus wizard calculation
-- Rendering insulin activity
-- Adjusting IOB predictions by autosens result
-- New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
-- Signature verifier
-- Allow to bypass objectives for OpenAPS users
-- New [objectives](../SettingUpAaps/CompletingTheObjectives.md) - exam, application handling (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
-- Fixed bug in Dana\* drivers where false time difference was reported
-- Fixed bug in [SMS communicator](../RemoteFeatures/SMSCommands.md)
+- 目标SDK内部更改为28（Android 9），支持Jetpack
+- 支持RxJava2、Okhttp3、Retrofit
+- 支持旧款[美敦力泵](../CompatiblePumps/MedtronicPump.md)（需要RileyLink）
+- 新增[自动化插件](../DailyLifeWithAaps/Automations.md)
+- 允许[仅注射部分剂量](#Preferences-advanced-settings-overview)（基于推注向导计算结果）。​
+- 渲染胰岛素活性
+- 根据autosens结果调整IOB预测
+- 支持新的Dexcom修补版APK（[2.4文件夹](https://github.com/dexcomapp/dexcomapp/tree/master/2.4)）
+- 验证签名
+- 允许OpenAPS用户绕过目标
+- 新增[目标](../SettingUpAaps/CompletingTheObjectives.md) - 考试、应用操作（如果您在以前的版本中至少开始了“开放循环入门”目标，则考试是可选的。）
+- 修复了Dana\*驱动程序中报告错误时间差的问题
+- 修复了[SMS通信器](../RemoteFeatures/SMSCommands.md)中的错误
 
-## Version 2.3
+## 版本 2.3
 
-Release date: 25-04-2019
+发布日期：2019年4月25日
 
-### Major new features
+### 主要新功能
 
-- Important safety fix for Insight (really important if you use Insight!)
-- Fix History-Browser
-- Fix delta calculations
-- Language updates
-- Check for GIT and warn on gradle upgrade
-- More automatic testing
-- Fixing potential crash in AlarmSound Service (thanks @lee-b !)
-- Fix broadcast of BG data (works independently of SMS permission now!)
-- New Version-Checker
+- Insight的重要安全修复（如果您使用Insight，这非常重要！）
+- 修复历史浏览器
+- 修复增量计算
+- 语言更新
+- 检查GIT并在Gradle升级时发出警告
+- 更多自动化测试
+- 修复AlarmSound服务中的潜在崩溃（感谢@lee-b！）
+- 修复BG数据广播（现在独立于SMS权限工作！）
+- 新增版本检查器
 
-## Version 2.2.2
+## 版本 2.2.2
 
-Release date: 07-04-2019
+发布日期：2019年4月7日
 
-### Major new features
+### 主要新功能
 
-- Autosens fix: deactivate TT raises/lowers target
-- New translations
-- Insight driver fixes
-- SMS plugin fix
+- Autosens修复：停用TT提高/降低目标
+- 新增翻译
+- Insight驱动程序修复
+- SMS插件修复
 
-## Version 2.2
+## 版本 2.2
 
-Release date: 29-03-2019
+发布日期：2019年3月29日
 
-### Major new features
+### 主要新功能
 
-- [DST fix](#time-adjustment-daylight-savings-time-dst)
-- Wear Update
-- [SMS plugin](../RemoteFeatures/SMSCommands.md) update
-- Go back in objectives.
-- Stop loop if phone disk is full
+- [DST修复](#time-adjustment-daylight-savings-time-dst)
+- Wear更新
+- [SMS插件](../RemoteFeatures/SMSCommands.md)更新
+- 目标回溯。
+- 如果手机磁盘已满，则停止循环
 
-## Version 2.1
+## 版本 2.1
 
-Release date: 03-03-2019
+发布日期：2019年3月3日
 
-### Major new features
+### 主要新功能
 
-- [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
-- Status lights on main screen (Nico Schmitz)
-- Daylight saving time helper (Roumen Georgiev)
+- [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)支持（由Tebbe Ubben和JamOrHam提供）
+- 主屏幕上的状态灯（Nico Schmitz）
+- 夏令时助手（Roumen Georgiev）
 - Fix processing profile names coming from NS (Johannes Mockenhaupt)
-- Fix UI blocking (Johannes Mockenhaupt)
-- Support for updated G5 app (Tebbe Ubben and Milos Kozak)
-- G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
-- Fixed disabling SMB from preferences (Johannes Mockenhaupt)
+- 修复UI阻塞（Johannes Mockenhaupt）
+- 支持更新的G5应用（Tebbe Ubben和Milos Kozak）
+- 支持G6、Poctech、Tomato、Eversense BG源（Tebbe Ubben和Milos Kozak）
+- 修复了从首选项中禁用SMB的问题（Johannes Mockenhaupt）
 
-### Misc
+### 杂项
 
-- If you are using non default `smbmaxminutes` value you have to setup this value again
+- 如果您使用的是非默认`smbmaxminutes`值，则需要重新设置此值
 
-## Version 2.0
+## 版本 2.0
 
-Release date: 03-11-2018
+发布日期：2018年11月3日
 
-### Major new features
+### 主要新功能
 
-- oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
-- Accu-Chek Combo pump support
-- Setup wizard: guides you through the process of setting up AAPS
+- oref1/SMB支持（[oref1文档](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)）请务必阅读文档，了解SMB的预期功能、行为、能实现什么以及如何使用它以确保其顺畅运行。
+- 支持Accu-Chek Combo泵
+- 设置向导：引导您完成AAPS的设置过程
 
 (Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=
-### Settings to adjust when switching from AMA to SMB
+### 从AMA切换到SMB时需要调整的设置
 
-- Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
+- 必须启动目标10才能启用SMB（SMB标签通常会显示适用的限制）
 
-- maxIOB now includes \_all\_ IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
+- maxIOB现在包括_所有_IOB，而不仅仅是添加的基础量。 也就是说，如果为一餐给予8U的推注，而maxIOB为7U，则在IOB降至7U以下之前，不会给予SMB。
 
-- min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually
+- 从AMA切换到SMB时，min_5m_carbimpact的默认值从3更改为8。 如果您是从AMA升级到SMB，则需要手动更改它
 
-- Note when building AAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:
+- 注意：在构建AAPS 2.0 APK时：当前版本的Android Gradle插件不支持按需配置！ 如果构建失败并出现与“按需配置”相关的错误，您可以执行以下操作：
 
-  - Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-  - In the left pane, click Build, Execution, Deployment > Compiler.
-  - Uncheck the Configure on demand checkbox.
-  - Click Apply or OK.
+  - 点击文件>设置（在Mac上，点击Android Studio>首选项）打开首选项窗口。
+  - 在左侧窗格中，点击构建、执行、部署>编译器。
+  - 取消选中按需配置复选框。
+  - 点击应用或确定。
 
 (Releasenotes-overview-tab)=
-### Overview tab
+### 概述标签
 
-- Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). TTs use defaults set in preferences. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
-- Treatment buttons: old treatment button still available, but hidden by default. Visibility of buttons can now be configured. New insulin button, new carbs button (including [eCarbs/extended carbs](../DailyLifeWithAaps/ExtendedCarbs.md))
-- [Colored prediction lines](#aaps-screens-prediction-lines)
-- Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
-- Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
+- 顶部功能区提供访问暂停/禁用循环、查看/调整配置文件以及启动/停止临时目标（TT）的权限。 TT使用首选项中设置的默认值。 新的Hypo TT选项是一个高临时TT，以防止循环过于激进地纠正救援碳水化合物。
+- 治疗按钮：旧的治疗按钮仍然可用，但默认隐藏。 现在可以配置按钮的可见性。 新增胰岛素按钮、新增碳水化合物按钮（包括[eCarbs/扩展碳水化合物](../DailyLifeWithAaps/ExtendedCarbs.md)）
+- [彩色预测线](#aaps-screens-prediction-lines)
+- 在胰岛素/碳水化合物/计算器/填充对话框中显示备注字段的选项，这些字段会上传到NS
+- 更新的填充对话框允许填充和创建用于更换输注部位和更换药筒的Careportal条目
 
-### Watch
+### 手表
 
-- Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
-- Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
-- confirmations and info dialogs now work on wear 2.0 as well
-- Added eCarbs menu entry
+- 单独的构建变体已弃用，现在包含在常规完整构建中。 要从手表使用推注控制，请在手机上启用此设置
+- 向导现在只询问碳水化合物（如果在手表设置中启用了百分比，则还会询问百分比）。 哪些参数包含在计算中可以在手机上的设置中配置
+- 确认和信息对话框现在也可以在Wear 2.0上工作
+- 添加了eCarbs菜单条目
 
-### New plugins
+### 新插件
 
-- PocTech app as BG source
-- Dexcom patched app as BG source
-- oref1 sensitivity plugin
+- PocTech应用作为BG源
+- Dexcom修补版应用作为BG源
+- oref1灵敏度插件
 
-### Misc
+### 杂项
 
-- App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
-- Overhaul for config builder and objectives tabs, adding descriptions
-- New app icon
-- Lots of improvements and bugfixes
-- Nightscout-independent alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
-- Option to keep screen on
-- Option to show notification as Android notification
-- Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
+- 应用现在使用抽屉来显示所有插件；在配置构建器中选为可见的插件将作为顶部的标签（收藏夹）显示
+- 对配置构建器和目标标签进行了大修，添加了描述
+- 新应用图标
+- 大量改进和错误修复
+- 如果泵长时间无法访问（例如，泵电池耗尽）或错过BG读数，则发出与Nightscout无关的警报（请参阅设置中的*本地警报*）
+- 保持屏幕开启的选项
+- 显示Android通知作为通知的选项
+- 高级过滤（允许始终启用SMB和餐后6小时）支持使用修补版Dexcom应用或xDrip与G5原生模式作为BG源。

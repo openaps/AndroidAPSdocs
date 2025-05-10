@@ -1,4 +1,4 @@
-# Nightscout
+# Nightscout设置
 
 (Nightscout-security-considerations)=
 
