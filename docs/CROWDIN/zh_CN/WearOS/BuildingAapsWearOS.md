@@ -28,7 +28,7 @@ Wear apk的构建过程与“完整”手机apk的构建过程相似。
 
 如果你愿意，你可以从下拉菜单中选择构建**“pumpcontrolRelease”**，这样你就可以远程控制胰岛素泵，但没法闭环。
 
-## Troubleshooting
+## 故障排除
 
 在构建3.2版完整的**AAPS**应用（以及任何签名应用）时，Android Studio会在同一文件夹中生成一个.json文件。 然后，当您尝试构建下一个签名应用（如**AAPS** Wear应用）时，这会导致[未提交的更改](#troubleshooting_androidstudio-uncommitted-changes)错误。 解决这个问题的最快方法是导航到已构建完整AAPS应用程序的文件夹，您的文件夹可能类似于：
 
