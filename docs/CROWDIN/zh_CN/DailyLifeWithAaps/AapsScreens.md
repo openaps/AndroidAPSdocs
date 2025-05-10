@@ -119,7 +119,7 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
     :class: note
     你的闭环未运行，直到你解决此问题！
 
-![Red BG warning](../images/bg_warn_red.png)
+![红色 BG 警告](../images/bg_warn_red.png)
 
 你需要找出为什么会收到重复的BG：
 
@@ -140,7 +140,7 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 
 黄色警告信号表示你的BG以不规则的时间间隔到达，或者缺少一些BG。 按压标志时，消息显示“使用重新计算的数据”。
 
-![Yellow BG warning](../images/bg_warn_yellow.png)
+![黄色 BG 警告](../images/bg_warn_yellow.png)
 
 通常你不需要采取任何行动。 闭环系统将继续工作！
 
@@ -706,7 +706,7 @@ BG字段通常已经填充了来自您的动态（CGM）的最新读数。 如�
 
 允许您在**AAPS**历史记录中回溯。 请参阅专门页面[查看您的数据>历史记录浏览器](../Maintenance/Reviewing.md)。
 
-## Statistics
+## 统计数据
 
 可以通过点击菜单右侧的3个点，然后选择“统计”来访问此视图。 通过Config Builder无法将项目添加到主菜单中。
 
