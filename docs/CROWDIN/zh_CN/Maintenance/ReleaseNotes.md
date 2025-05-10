@@ -119,198 +119,198 @@ WearOS 5（API级别34，基于Android 14）存在[限制](#BuildingAapsWearOs-W
 
 ### 如何升级
 
-* 构建此版本需要[Android Studio "Ladybug Feature Drop"版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高。 **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* 构建此版本需要[Android Studio "Ladybug Feature Drop"版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高。 **这与普通的“Ladybug”版本不同。** 如果您已构建过3.3.x版本，需要再次升级Android Studio。
 
 ### 问题修复
 
-* Dash: use bonding on Android 15+
-* Restored Dexcom button on Overview
-* Equil: allowed remove non working pump
-* Warn when DynISF Adjustment Factor is zero
-* NSCv3: resolve websocket communication on phones with slightly different time
-* SMS Commands: fix OneTimePassword. **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
-* Fix issue where some preferences could not be edited anymore.
-* Fix reset of master password with virtual pump.
-* Fixed import of large settings backup files.
+* Dash：在Android 15+使用绑定
+* 恢复Overview的Dexcom按钮
+* Equil：允许移除故障泵
+* 当DynISF调整因子为零时提示
+* NSCv3：解决时间不同步设备的Websocket通信
+* SMS命令：修复一次性密码。 **可能需要重新设置[认证器](#sms-commands-authenticator-setup)。 **
+* 修复部分偏好设置无法编辑的问题
+* 修复虚拟泵的主密码重置
+* 修复大设置备份文件的导入
 
-## Version 3.3.1.0
+## 版本 3.3.1.0
 
-Release date: 06-01-2025
+发布日期：2025年1月6日
 
-### UI changes
+### UI变更
 
-* [Added colors to differentiate between AAPSClient and AAPSClient2](#RemoteControl_aapsclient) @MilosKozak
-* Improved Users actions layout and icons
+* [为AAPSClient和AAPSClient2添加区分颜色](#RemoteControl_aapsclient) @MilosKozak
+* 优化用户操作布局与图标
 
-### Other functionalities
+### 其他功能
 
-* New automation trigger : [steps count](#screen-heart-rate-steps) @Roman Rihter
-* Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR) @MilosKozak
-* NSClient v3 : make Announcement work (_i.e._ from AAPSClient to AAPS) @MilosKozak
+* 新增自动化触发条件：[步数统计](#screen-heart-rate-steps) @Roman Rihter
+* NSCv3全量同步支持（包括TBR等此前未同步的数据）@MilosKozak
+* NSClient v3：实现公告功能（_如_从AAPSClient到AAPS）@MilosKozak
 
-### Technical changes & bug fixes
+### 技术调整与修复
 
-* Fix Insight crash @philoul
-* Fix creation of extra-numerous deviceStatus entries in Nightscout @MilosKozak
-* Fix carbs absorption @MilosKozak
-* Fixed color of RadioButtons & CheckBoxes @MilosKozak
-* Fixed bug in DynISF percentage migration @MilosKozak
-* Resolved misplaced DynISF notification @MilosKozak
-* Fixed bug in watchfaces @philoul
+* 修复Insight崩溃 @philoul
+* 修复Nightscout中过多deviceStatus条目生成 @MilosKozak
+* 修复碳水吸收计算 @MilosKozak
+* 修复单选按钮与复选框颜色 @MilosKozak
+* 修复DynISF百分比迁移错误 @MilosKozak
+* 解决DynISF通知错位问题 @MilosKozak
+* 修复表盘显示问题 @philoul
 
-## Version 3.3.0.0
+## 版本 3.3.0.0
 
-Release date: 29-12-2024
+发布日期：2024年12月29日
 
-### Main features
+### 主要功能
 
-* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behaviour:
-  * **Profile Switch** and **Profile Percentage** is now taken into account for **Dynamic ISF** in respect of dynamic sensitivity strengthness
-  * The average **ISF** of the last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
-  * DynamicISF documentation page has been rewritten. Please read the important section [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf).
-* [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users
-  * Note : Requires latest version of xDrip+ or Juggluco.
-* New **Automation** triggers
-* Unattended settings exports
+* **[动态ISF](../DailyLifeWithAaps/DynamicISF.md)**不再作为独立插件，现整合至[OpenAPS SMB](#Config-Builder-aps)插件，并调整行为：
+  * **配置文件切换**和**配置文件百分比**现已被纳入**动态ISF**的计算中，用于调整动态敏感度的应用强度。
+  * 使用过去24小时的平均**ISF**值进行推注向导和**COB**计算， 不再使用**配置文件ISF**（历史数据缺失时除外）
+  * 动态ISF文档已重写， 请务必阅读[启用动态ISF的注意事项](#dyn-isf-things-to-consider-when-activating-dynamicisf)。
+* 为FreeStyle Libre 2/3用户启用[“始终SMB”和“碳水后SMB”](#Open-APS-features-enable-smb-always)
+  * 注：需使用最新版xDrip+或Juggluco
+* 新增**自动化**触发条件
+* 无人值守设置导出
 
 ### 如何升级
 
-* Before upgrading:
-  * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
-  * If you use the “old” Combo driver with ruffy device, migrate to the [native Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) before update
-  * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade: make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
-  * The [Bluetooth connectivity issues some people encounter on Android 15](../Getting-Started/Phones.md) are **NOT** solved by this release (this is an Android issue, not **AAPS**). A fix is available in 3.3.1.2.
-  * The BYODA button on the homescreen is no longer available due to Android limitations. This is fixed in 3.3.1.2.
-* Update instructions: follow the [Update to a new version](../Maintenance/UpdateToNewVersion.md) guide.
-  * [Android Studio version called "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already have an older version of Android Studio installed, you may need to <span style="color:red">configure the JVM version to 21</span>. See [Troubleshooting Android Studio > Incompatible Gradle JVM](#incompatible-gradle-jvm).
-  * Tip - if you do not want to lose your **AAPS** history ALWAYS do an UPDATE and NOT an UNINSTALL/INSTALL. As a precaution, back up your current **AAPS** settings and old APK to revert to an old version should anything go wrong.
-* After upgrading:
-  * Set the new [“AAPS directory” setting](#preferences-maintenance-logdirectory), in the Maintenance tab.
+* 升级前：
+  * **<span style="color:red">要求Android 11及以上系统</span>**， 请先确认手机版本
+  * 若使用旧版Combo驱动（依赖ruffy设备），请先迁移至[原生Combo驱动](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
+  * 升级后将丢失[主屏幕附加图表](#AapsScreens-section-g-additional-graphs)，建议手动记录当前配置以便恢复
+  * [Android 15的蓝牙连接问题](../Getting-Started/Phones.md)（非**AAPS**问题）， 需等待3.3.1.2修复
+  * 主屏幕BYODA按钮因Android限制暂时移除， （3.3.1.2恢复）
+* 升级步骤：遵循[更新指南](../Maintenance/UpdateToNewVersion.md)
+  * 需使用[Android Studio "Ladybug"版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高， 旧版本需<span style="color:red">配置JVM 21</span> （参见[Android Studio疑难解答 > JVM不兼容](#incompatible-gradle-jvm)）
+  * 重要提示：如果不想丢失**AAPS**历史数据，升级时选择“更新”而非“卸载/重装”， 备份当前设置及旧版APK以防万一
+* 升级后：
+  * 在维护选项卡中设置新的[“AAPS目录”](#preferences-maintenance-logdirectory)
 
-### Detailed changes
+### 详细变更
 
-#### CGMs and Pumps
+#### CGM与泵驱动
 
-* [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users @MilosKozak
-* [Medtrum driver](../CompatiblePumps/MedtrumNano.md) improvements @jbr77rr
-  * Communication improvements, including new setting to workaround problems on some smartphones
-  * Show reservoir level at start of activation
-  * Fix bug where activation returns to start and user cannot finish the activation
-  * Feedback for sync status and other clarifications
-* New supported pump : [Equil 5.3](../CompatiblePumps/Equil5.3.md) @EquilHack
-* New supported CGMs : [Ottai](../CompatibleCgms/OttaiM8.md) @ottai-developer and [Syai Tag](../CompatibleCgms/SyaiTagX1.md) @syai-dev
-* Insight driver rewritten to kotlin @Philoul
-* Removed old ruffy dependent Combo driver
+* 为FreeStyle Libre 2/3用户[启用“始终SMB”和“碳水后SMB”](#Open-APS-features-enable-smb-always) @MilosKozak
+* [Medtrum驱动](../CompatiblePumps/MedtrumNano.md)改进 @jbr77rr
+  * 通信优化，新增兼容性设置
+  * 激活时显示储药量
+  * 修复激活流程错误
+  * 同步状态反馈优化
+* 新增支持泵型：[Equil 5.3](../CompatiblePumps/Equil5.3.md) @EquilHack
+* 新增支持CGM：[Ottai](../CompatibleCgms/OttaiM8.md) @ottai-developer 和 [Syai Tag](../CompatibleCgms/SyaiTagX1.md) @syai-dev
+* Insight驱动重写为Kotlin @Philoul
+* 移除旧版依赖ruffy的Combo驱动
 
-#### UI changes
+#### UI变更
 
-* [Simple mode](#preferences-simple-mode) activated by default on fresh install @MilosKozak
-* New [QuickWizard](#Preferences-quick-wizard) options @radicalb
-  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. You can now use the “carb time” field in QuickWizard  to pre-bolus.
-* New [graph scale menu](#aaps-screens-main-graph); [additional graphs menu](#AapsScreens-activate-optional-information) UI improvements @Philoul
-* [ConfigBuilder layout improvement](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
-  * Sections are now collapsed by default. Use arrow to expand.
-* Variable sensitivity visible in AAPSClient
-* BolusWizard UI improvements @kenzo44
-* Fix text display in pump tabs when using light theme @jbr77rr
+* 新安装默认启用[简易模式](#preferences-simple-mode) @MilosKozak
+* [快捷向导](#Preferences-quick-wizard)新增选项 @radicalb
+  * 使用与计算器相同的推注逻辑， 支持“碳水时间”预推注
+* [图表比例菜单](#aaps-screens-main-graph)与[附加图表菜单](#AapsScreens-activate-optional-information)优化 @Philoul
+* [配置构建器布局](../SettingUpAaps/ConfigBuilder.md)改进 @MilosKozak
+  * 默认折叠区块， 点击箭头展开
+* AAPSClient中显示动态敏感度
+* 推注向导UI优化 @kenzo44
+* 浅色主题下泵选项卡文本显示修复 @jbr77rr
 
-#### Other functionalities
+#### 其他功能
 
-* [Unattended settings exports](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
-* New [Automation trigger](#automations-automation-triggers) @vanelsberg
-  * Pod Activation (patch pump only)
-* New [Automation triggers](#automations-automation-triggers) @jbr77rr
-  * Cannula age, Insulin age, Battery age, Sensor age, Reservoir level, Pump battery level
-* Allowing negative carbs entry @MilosKozak
-* New Parameter [“AAPS directory”](#preferences-maintenance-settings) to choose a storage directory different from the default one.
-* Allow for [insulin records when pump suspended](#aaps-screens-buttons-insulin) @jbr77rr
-* Updated [Objective 2](#objectives-objective2) @MilosKozak
-  * Check that master password is set and known
-* Random carbs in test mode @MilosKozak
-* Fixed bug in TDD calculation @MilosKozak
-* SMS Commands : allow to [**not** send SMS for profile change](#sms-commands-too-many-messages) coming from NS @MilosKozak
+* [无人值守设置导出](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
+* 新增[自动化触发条件](#automations-automation-triggers) @vanelsberg
+  * 储药器激活（仅限贴敷泵）
+* 新增[自动化触发条件](#automations-automation-triggers) @jbr77rr
+  * 管路、胰岛素、电池、传感器、储药器使用时间，泵电池电量
+* 允许输入负碳水 @MilosKozak
+* 新增[“AAPS目录”](#preferences-maintenance-settings)参数，可自定义存储路径
+* 泵暂停时允许[胰岛素记录](#aaps-screens-buttons-insulin) @jbr77rr
+* 更新[目标2](#objectives-objective2) @MilosKozak
+  * 验证主密码设置
+* 测试模式支持随机碳水 @MilosKozak
+* 修复TDD计算错误 @MilosKozak
+* SMS命令：允许[**禁用**NS触发的配置切换通知短信](#sms-commands-too-many-messages) @MilosKozak
 
 #### Smartwatches
 
-* wear and watchfaces improvement @Philoul @MilosKozak @olorinmaia
-* Watch tiles from Automation actions @Philoul
-* Combined watchfaces from AAPS, AAPSClient and AAPSClient2 to monitor more patients @Philoul @MilosKozak
-* EXTRA: show\_user\_actions\_on\_watch\_only @MilosKozak
+* Wear与表盘功能改进 @Philoul @MilosKozak @olorinmaia
+* 自动化操作手表磁贴 @Philoul
+* 整合AAPS、AAPSClient、AAPSClient2表盘以监控多患者 @Philoul @MilosKozak
+* 额外功能：仅手表显示用户操作 @MilosKozak
 
-#### Technical changes
+#### 技术调整
 
-* [log files location change](#Accessing-logfiles-accessing-logfiles)
-* new internal modules structure @MilosKozak
-* split persistence layer from main code @MilosKozak
-* build files rewritten to kts @MilosKozak
-* algorithms rewritten to kotlin for better performance @MilosKozak
-* tons of new unit tests @MilosKozak and others
-* more code converted to kotlin @MilosKozak
-* new preferences management, xml \-\> kotlin @MilosKozak
-* new CI configuration, run CI on own servers @MilosKozak
-* libraries updated to latest version, toml @MilosKozak
-* migration to kotlin 2.0, java 21 @MilosKozak
+* [日志路径变更](#Accessing-logfiles-accessing-logfiles)
+* 新模块结构 @MilosKozak
+* 分离持久层与主代码 @MilosKozak
+* 构建文件转用kts格式 @MilosKozak
+* 算法转用Kotlin提升性能 @MilosKozak
+* 新增大量单元测试 @MilosKozak等
+* 更多代码转为Kotlin @MilosKozak
+* 新偏好设置管理（XML→Kotlin）@MilosKozak
+* 新CI配置，自有服务器运行 @MilosKozak
+* 库更新至最新版，toml配置 @MilosKozak
+* 迁移至Kotlin 2.0，Java 21 @MilosKozak
 
 (version3200)=
-## Version 3.2.0.0 dedicated to @Philoul
+## 版本 3.2.0.0 致敬 @Philoul
 
-Release date: 23-10-2023
+发布日期：2023年10月23日
 
 ### Important hints
 
-- NS 15 is required
-- While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internally. The same is valid for AAPS and AAPSClient itself.
-- Websockets in v3 plugin work in a similar manner as v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the opposite side it means delays in exchanging data. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
-- If you are using xdrip as cgm source you must select it again after update due to internal changes
-- Tidepool can be used as a replacement of NS to pass first objective
-- If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
-- If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
-- In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
+- 需要NS 15
+- 使用NS v3插件时，通过NS界面（+按钮）或其他v1 API应用输入的治疗不会同步至AAPS。 这将在NS的未来版本中得到修复。 在NS全面转用v3前，请确保AAPS与AAPSClient使用相同客户端（v1或v3） 同样适用于AAPS和AAPSClient本身。
+- v3插件的Websocket工作方式类似v1。 未启用WebSocket时，AAPS会定期从NS调度下载数据，这应该会降低功耗，因为NS不需要保持永久连接。 反之，这会导致数据交换出现延迟。 使用前请阅读[开发团队重要说明](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)！
+- 使用xDrip作为CGM源需重新选择
+- Tidepool可用作NS替代完成首目标
+- 发送数据至xDrip+需配置xDrip同步插件。 为了从AAPS接收BGs，必须选择“xDrip+ Sync Follower”作为源
+- 切换至ComboV2驱动需卸载Ruffy并重新配对泵
+- 启用DynISF需完成目标11（所有前置目标需完成）
 
 
-### Changes
+### 变更内容
 
-- EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
-- ComboV2 pump driver (no need of Ruffy) @dv1
-- Medtrum Nano driver @jbr7rr
-- Korean DanaI support @MilosKozak
-- Glunovo CGM support @christinadamianou
-- G7 support @MilosKozak @rICTx-T1D @khskekec
-- NSClient v3 plugin @MilosKozak
-- Tidepool support @MilosKozak
-- Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
-- DynamicISF plugin @Chris Wilson, @tim2000s
-- Garmin watchface & HeartRate support @buessow
-- New logo @thiagomsoares
-- New watchface @Philoul
-- fixed tons of issues from 3.1 version
-- allow add notes on more places @Sergey Zorchenko
-- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
-- new SMS commands LOOP LGS/CLOSED @pzadroga
-- wear translations @Andries-Smit
-- xdrip communication moved to separate module @MilosKozak
-- internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
-- Diaconn driver fixes @miyeongkim
-- more database maintenance options @MilosKozak
-- AAPSClient provides info if main phone is plugged in electricity @MilosKozak
-- Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
-- migration to kts build system @MilosKozak
-- improved CI integration @MilosKozak @buessow
-- tests cleanup @ryanhaining @MilosKozak
-- new 110k+ lines of code, changed 240k lines, 6884 changed files
+- EOPatch2/GlucomenDay泵驱动 @jungsomyeonggithub @MilosKozak
+- ComboV2驱动（无需Ruffy）@dv1
+- Medtrum Nano驱动 @jbr7rr
+- 韩国版DanaI支持 @MilosKozak
+- Glunovo CGM支持 @christinadamianou
+- G7支持 @MilosKozak @rICTx-T1D @khskekec
+- NSClient v3插件 @MilosKozak
+- Tidepool支持 @MilosKozak
+- 平滑插件 @MilosKozak, @justmara, 指数平滑@nichi (Tsunami)，平均平滑@jbr7rr
+- DynamicISF插件 @Chris Wilson @tim2000s
+- Garmin表盘与心率支持 @buessow
+- 新徽标 @thiagomsoares
+- 新表盘 @Philoul
+- 修复3.1版本大量问题
+- 更多位置支持添加备注 @Sergey Zorchenko
+- UI修复 @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
+- 新增SMS命令LOOP LGS/CLOSED @pzadroga
+- Wear翻译 @Andries-Smit
+- xDrip通信模块分离 @MilosKozak
+- 内部调整：库更新，Rx3迁移，模块结构调整 @MilosKozak
+- Diaconn驱动修复 @miyeongkim
+- 数据库维护选项扩展 @MilosKozak
+- AAPSClient提供信息，如果主手机已接通电源 @MilosKozak
+- 推注向导调整： CGM不可用时忽略百分比（默认100%）
+- 迁移至kts构建系统 @MilosKozak
+- CI集成改进 @MilosKozak @buessow
+- 测试清理 @ryanhaining @MilosKozak
+- 新增11万行代码，修改24万行，涉及6884个文件
 
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
-### Important comments on using v3 versus v1 API for Nightscout with AAPS
+### 关于AAPS使用Nightscout v3与v1接口的重要注意事项
 
-v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
-- v1 sends only 2 days of data
-- v1 send all 2 days data on every reconnection
-- using websockets is mandatory = permanent connection, more battery compsumption
-- during frequent disconnects to NS connection is paused for 15 minutes to prevent high data usage
+v1是用于在NS网站和NS服务器之间交换数据的旧协议， 它有许多限制
+- v1仅发送2天的数据
+- 每次重新连接时都会发送所有2天的数据
+- 必须使用WebSocket = 需保持持久连接，导致更高的电池消耗。
+- 当与Nightscout频繁断连时，连接将暂停15分钟以防止数据用量过高。
 
-v3 is new protocol. More safe and efficient
-- while using tokens you can better define access rights
-- protocol is more efficient on both sides (AAPS & NS)
+v3为新协议， 更加安全高效
+- 在使用令牌时，您可以更好地定义访问权限
+- 协议在双方（AAPS和NS）都更高效
 - It can read up to 3 months of data from NS
 - you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power compsumption, but slower updates ie. minutes)
 - NSClient is not paused on disconnections
@@ -337,7 +337,7 @@ Release date: 19-07-2022
 - after update uninstall Wear app and install new version
 - Omnipod users: update on pod change !!!
 
-### Changes
+### 变更内容
 
 - fixed issues from 3.0 version
 - fix application freezing @MilosKozak
@@ -376,7 +376,7 @@ Release date: 31-01-2022
 - if you are using G5/G6 and xDrip as a collector, you have to update xDrip to a nightly version newer than 14th January 2022
 - if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
 
-### Changes
+### 变更内容
 
 - 100k lines changed, 105k new lines of code
 
@@ -447,7 +447,7 @@ Release date: 23-01-2021
 
 - Please see also [important hints for version 2.8.1.1](#version-2811) below.
 
-### Changes
+### 变更内容
 
 - stability improvements
 - more tweaking for Android 8+
