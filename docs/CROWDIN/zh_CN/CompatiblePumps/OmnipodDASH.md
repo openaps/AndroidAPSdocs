@@ -388,7 +388,7 @@ Additional note:
   * **SMS** - Returns value or 50+U for SMS responses
   * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
 
-## Troubleshooting
+## 故障排除
 
 ### Delivery suspended
 
