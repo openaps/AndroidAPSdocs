@@ -76,48 +76,48 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 
 ## 2021年3月
 
-- Dev communication moved from gitter to [discord](https://discord.gg/4fQUWHZ4Mw)
+- 开发团队沟通平台从gitter迁移至[discord](https://discord.gg/4fQUWHZ4Mw)
 
-## February 2021
+## 2021年2月
 
-- New navigation bar and [language switch](../NavigateDoc/ChangeLanguage.md)
+- 新导航栏和[语言切换](../NavigateDoc/ChangeLanguage.md)
 
-## January 2021
+## 2021年1月
 
-- [Action tab](#screens-action-tab) - more details on page 'AAPS screens'
-- Dexcom G6 with [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
-- Libre smart reader [battery level](#screens-sensor-level-battery)
-- [Objectives](#objectives-objective3) - new questions
-- Other [new AAPS 2.8.0 functions](#Releasenotes-version-2-8-0)
+- [操作选项卡](#screens-action-tab) - 在“AAPS屏幕”页面上提供更多细节
+- Dexcom G6与[自建Dexcom应用](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
+- Libre智能阅读器的[电池电量](#screens-sensor-level-battery)
+- [目标](#objectives-objective3) - 新增问题
+- 其他[AAPS 2.8.0新功能](#Releasenotes-version-2-8-0)
 
-## December 2020
+## 2020年12月
 
-- [Libre 2](../CompatibleCgms/Libre2.md) - patched app does not work with US sensors
-- [OpenAPS hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits)
-- Sony Smartwatch 3 Manual Installation of Google Play Service
+- [Libre 2](../CompatibleCgms/Libre2.md) - 补丁应用不适用于美国传感器
+- [OpenAPS硬编码限制](#Open-APS-features-overview-of-hard-coded-limits)
+- Sony Smartwatch 3手动安装Google Play服务
 
-## October 2020
+## 2020年10月
 
-- Accu-Chek Combo - update [time adjustment daylight savings time](#time-adjustment-daylight-savings-time-dst)
-- Accu-Chek Insight - Option to [upload absolute values](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- Logs - more details about [folder location](../GettingHelp/AccessingLogFiles.md)
-- Omnipod Eros - status update
-- [SMS commands - time sync](../RemoteFeatures/SMSCommands.md)
+- Accu-Chek Combo - 更新[夏令时时间调整](#time-adjustment-daylight-savings-time-dst)
+- Accu-Chek Insight - 可[上传绝对值](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- 日志 - 提供更多关于[文件夹位置](../GettingHelp/AccessingLogFiles.md)的详细信息
+- Omnipod Eros - 状态更新
+- [SMS命令 - 时间同步](../RemoteFeatures/SMSCommands.md)
 
-## September 2020
+## 2020年9月
 
-- Major update for new AAPS version 2.7
-- For details see `release notes <Releasenotes-version-2-7-0>`
+- AAPS新版本2.7的重大更新
+- 详细信息见`发行说明 <Releasenotes-version-2-7-0>`
 
-## June 2020
+## 2020年6月
 
-- [Libre 2](../CompatibleCgms/Libre2.md) - more details patched Libre Link app & use of bluetooth transmitters
-- [Time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) with Libre 2
+- [Libre 2](../CompatibleCgms/Libre2.md) - 更多关于补丁Libre Link应用和蓝牙发射器使用的细节
+- [跨时区旅行](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) 使用Libre 2注意事项
 
-## May 2020
+## 2020年5月
 
-- [Extended bolus only for Dana + Insight pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Insight deactivate vibration](#Accu-Chek-Insight-Pump-vibration) (firmware 3.x only)
+- [仅Dana和Insight泵可用的扩展输注](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Insight停用振动](#Accu-Chek-Insight-Pump-vibration)（仅适用于固件3.x）
 - [Minimal request rate](#Preferences-minimal-request-change) to reduce number of notifications in open loop mode
 - [Patched Libre Link app](#libre2-patched-librelink-app-with-xdrip) - check if correctly patched
 - [Prediction lines](#aaps-screens-prediction-lines) - more details
