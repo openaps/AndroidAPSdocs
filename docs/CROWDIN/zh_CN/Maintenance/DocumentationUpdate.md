@@ -55,7 +55,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 - [Libre 2传感器](#Libre2-best-practices-for-calibrating-a-libre-2-sensor)的最佳校准实践
 - [ISF](../UsefulLinks/FAQ.md)影响表述的修改
 - 更新[Android Studio故障排除](../GettingHelp/TroubleshootingAndroidStudio)
-- 移除已废弃的Dexcom补丁应用
+- 移除已废弃的[Dexcom](../CompatibleCgms/DexcomG6.md)补丁应用
 
 ## 2021年10月
 
@@ -118,88 +118,88 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 
 - [仅Dana和Insight泵可用的扩展输注](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [Insight停用振动](#Accu-Chek-Insight-Pump-vibration)（仅适用于固件3.x）
-- [Minimal request rate](#Preferences-minimal-request-change) to reduce number of notifications in open loop mode
-- [Patched Libre Link app](#libre2-patched-librelink-app-with-xdrip) - check if correctly patched
-- [Prediction lines](#aaps-screens-prediction-lines) - more details
+- [最小请求速率](#Preferences-minimal-request-change)以减少开环模式下的通知次数
+- [Libre Link补丁应用](#libre2-patched-librelink-app-with-xdrip) - 检查是否正确补丁
+- [预测线](#aaps-screens-prediction-lines) - 更多详细信息
 
-## April 2020
+## 2020年4月
 
-- Backdate insulin (i.e. given by syringe)
-- Android 6 support will be discontinued in next master version
+- 回溯胰岛素（即通过注射器给予的胰岛素）
+- 将在下一个主版本中停止支持Android 6
 
-## March 2020
+## 2020年3月
 
-- [Build apk with Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
-- [DanaRS with firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
-- [Extended bolus and switch to open loop](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Update apk with Android Studio 3.6.1](../Maintenance/UpdateToNewVersion)
+- [使用Android Studio 3.6.1构建APK](../SettingUpAaps/BuildingAaps.md)
+- [DanaRS（固件v3）](../CompatiblePumps/DanaRS-Insulin-Pump.md)**目前不能与AAPS一起使用！ **
+- [扩展大剂量和切换到开环](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [使用Android Studio 3.6.1更新APK](../Maintenance/UpdateToNewVersion)
 
-## February 2020
+## 2020年2月
 
-- Automation caveats
-- [Autosens](#Open-APS-features-autosens) - short explanation
-- Careportal alternatives
-- [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
-- New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md)
-- Sample Setup - update Dexcom G6
-- [Version 2.6.0](#Releasenotes-version-2-6-0) - major new features
-- [Wear complications](../WearOS/WearOsSmartwatch.md)
+- 自动化注意事项
+- [Autosens](#Open-APS-features-autosens) - 简短说明
+- Careportal替代方案
+- [扩展大剂量](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)功能 - 闭环将被禁用
+- 新的[本地配置文件插件](../SettingUpAaps/ConfigBuilder.md)
+- 示例设置 - 更新Dexcom G6
+- [版本2.6.0](#Releasenotes-version-2-6-0) - 重大新功能
+- [穿戴设备的小部件](../WearOS/WearOsSmartwatch.md)
 
-## January 2020
+## 2020年1月
 
-- [Manual carb correction](#screens-bolus-carbs) for faulty carb entries
-- [Image size](../SupportingAaps/HowToEditTheDocs.md) when editing docs
+- [手动碳水化合物校正](#screens-bolus-carbs)以修正错误的碳水化合物输入
+- 编辑文档时的[图片大小](../SupportingAaps/HowToEditTheDocs.md)
 
-## December 2019
+## 2019年12月
 
-- [Android auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
-- [Accu-Chek Insight & Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) - workaround for usage
-- [Glimp](#Config-Builder-bg-source) - version 4.15.57 and newer supported
-- [Watchfaces](../WearOS/WearOsSmartwatch.md) - major update, way more details
-- [Watchface complications](#Watchfaces-complications) - use your favorite watchface with AAPS data
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - 设置步骤及截图
+- [Accu-Chek Insight与Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) - 使用方法
+- [Glimp](#Config-Builder-bg-source) - 支持版本4.15.57及更高版本
+- [智能手表表盘](../WearOS/WearOsSmartwatch.md) - 重大更新，提供更多详细信息
+- [智能手表表盘小工具](#Watchfaces-complications) - 使用您喜爱的表盘与AAPS数据
 
-## November 2019
+## 2019年11月
 
-- [Automation - deactivate when disabling loop](../DailyLifeWithAaps/Automations.md)
-- [Dexcom G6 replace transmitter update](#xdrip-replace-transmitter)
-- [Extended bolus - why they do not work in a loop context](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [FAQ - sports](#FAQ-sports)
-- [Homescreen - lines on graph](#aaps-screens-main-graph)
-- [Insight - Disable absolute values in NS Client](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- [Medtronic pump - possible double entries](../CompatiblePumps/MedtronicPump.md)
-- [New Freestyle Libre 2 tutorial](../CompatibleCgms/Libre2.md)
-- [Profile switch with percentage - example](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-- [SMS commands update](../RemoteFeatures/SMSCommands.md)
+- [自动化 - 禁用闭环时停用](../DailyLifeWithAaps/Automations.md)
+- [Dexcom G6更换发射器更新](#xdrip-replace-transmitter)
+- [扩展大剂量在闭环系统中无法运作的原因](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [常见问题解答 - 运动](#FAQ-sports)
+- [主页 - 图表上的线条](#aaps-screens-main-graph)
+- [Insight - 在NS客户端中禁用绝对值](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [美敦力泵 - 可能的重复输入](../CompatiblePumps/MedtronicPump.md)
+- [新型Freestyle Libre 2 教程](../CompatibleCgms/Libre2.md)
+- [按百分比切换配置文件 - 示例](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
+- [SMS命令更新](../RemoteFeatures/SMSCommands.md)
 - [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
-- [Troubleshooting - link collection](../GettingHelp/GeneralTroubleshooting.md)
-- Update - quick walk-through for experienced users
-- Docs - update [edit](#edit-the-docs-code-syntax) and [translation](#translations-translation-of-the-documentation).
+- [故障排除 - 链接集合](../GettingHelp/GeneralTroubleshooting.md)
+- 更新 - 经验丰富的用户快速指南
+- 文档 - 更新[编辑](#edit-the-docs-code-syntax)和[翻译](#translations-translation-of-the-documentation)。
 
-## October 2019
+## 2019年10月
 
-- [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [AccuChek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- [COB calculation on separate page](../DailyLifeWithAaps/CobCalculation.md)
-- [COB - wrong COB value detection](#CobCalculation-detection-of-wrong-cob-values)
-- [Dexcom G6 specific troubleshooting](#DexcomG6-troubleshooting-g6)
-- [Objectives update version 2.5](../SettingUpAaps/CompletingTheObjectives.md)
-- [Preferences update](../SettingUpAaps/Preferences.md)
-- [SGLT-2 inhibitors - do not use when looping](#PreparingForAaps-no-sglt-2-inhibitors)
-- [SMS Commands Troubleshooting](#SMSCommands-troubleshooting)
-- [xDrip - update G6 transmitter replacement](#xdrip-replace-transmitter)
+- [AAPS版本2.5](#Releasenotes-version-2-5-0)更新（特别是[更新页面](../Maintenance/UpdateToNewVersion.md)）
+- [AccuChek Insight - 日志选项](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [COB计算单独页面](../DailyLifeWithAaps/CobCalculation.md)
+- [COB - 错误COB值检测](#CobCalculation-detection-of-wrong-cob-values)
+- [Dexcom G6特定故障排除](#DexcomG6-troubleshooting-g6)
+- [目标更新版本2.5](../SettingUpAaps/CompletingTheObjectives.md)
+- [偏好设置更新](../SettingUpAaps/Preferences.md)
+- [SGLT-2抑制剂 - 循环时请勿使用](#PreparingForAaps-no-sglt-2-inhibitors)
+- [SMS命令故障排除](#SMSCommands-troubleshooting)
+- [xDrip - G6发射器更换更新](#xdrip-replace-transmitter)
 
-## September 2019
+## 2019年9月
 
-- [Automate](../DailyLifeWithAaps/Automations.md)
-- [Bolus calculator](#AapsScreens-wrong-cob-detection) - slow carb absorption
-- [Nightscout security](#Nightscout-security-considerations)
-- [Profile timeshift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) (more details)
-- [Remote monitoring](../RemoteFeatures/RemoteMonitoring.md)
-- [What is a closed loop system?](#Introduction-what-does-hybrid-closed-loop-mean)
+- [自动化](../DailyLifeWithAaps/Automations.md)
+- [大剂量计算器](#AapsScreens-wrong-cob-detection) - 缓慢吸收的碳水化合物
+- [Nightscout安全性](#Nightscout-security-considerations)
+- [配置文件时间偏移](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)（更多详细信息）
+- [远程监控](../RemoteFeatures/RemoteMonitoring.md)
+- [什么是闭环系统？](#Introduction-what-does-hybrid-closed-loop-mean)
 
-## August 2019
+## 2019年8月
 
-- Dexcom G6 patched app region
-- [Dexcom G6 new transmitter](#xdrip-connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
-- What do I need? - new structure & additional information
-- New structure
+- Dexcom G6修补应用程序区域
+- [Dexcom G6新发射器](#xdrip-connect-g6-transmitter-for-the-first-time)（“firefly” / 8G...）
+- 我需要准备什么？ - 新结构和附加信息
+- 新结构
