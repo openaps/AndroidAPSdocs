@@ -1,80 +1,80 @@
-# Docs updates & changes
+# 文档更新与变更
 
-## January 2025
+## 2025年1月
 
-- Quick wizard [long press feature](#Preferences-quick-wizard) @emilise
-- [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page rewritten @emilise
+- 快速向导[长按功能](#Preferences-quick-wizard) 由@emilise添加
+- [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)页面已由@emilise重构
 
-## December 2024
+## 2024年12月
 
-- Documentation of [3.3 version](#version3300) @emilise
+- [3.3 版本](#version3300)的文档 @emilise
 
-## November 2024
+## 2024年11月
 
-- Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganisation of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnerat
+- [您的AAPS个人资料](../SettingUpAaps/YourAapsProfile.md)更新 @emilise
+- [Wear OS智能手表](../WearOS/BuildingAapsWearOS.md)内容重组 @psonnerat
 
-## October 2024
+## 2024年10月
 
-- Update of several pages:
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../DailyLifeWithAaps/CobCalculation.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
-  - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
-- [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technical work (deployment process for the documentation, files organisation...) @psonnerat & @emilise
-
-***
-
-Missing history from March 2022 to September 2024
-
-With 3.2 rework, some obsolete information was removed. You can find it in the previous documentation version:
-
-AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/3.1/index.html).
+- 多个页面更新：
+  - [需要多长时间](#preparing-how-long-will-it-take)、[组件概览](../DailyLifeWithAaps/CobCalculation.md)、[完成目标](../SettingUpAaps/CompletingTheObjectives.md)、[您的AAPS个人资料](../SettingUpAaps/YourAapsProfile.md)、[配置构建器](../SettingUpAaps/ConfigBuilder.md)与[偏好设置](../SettingUpAaps/Preferences.md)、[AAPS屏幕](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [活性碳水化合物计算](../DailyLifeWithAaps/CobCalculation.md)、[动态ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+- [Android Studio Ladybug的构建说明](../SettingUpAaps/BuildingAaps.md) @tanja
+- 技术工作（文档部署流程、文件组织等）@psonnerat & @emilise
 
 ***
 
-## February 2022
+（注：缺失2022年3月至2024年9月的历史记录）
 
-- [BG quality warning sign](#aaps-screens-bg-warning-sign) @tanja
-- [Medtronic pump update](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
-- [Necessary checks after update to AAPS 3.0](Update3_0.md) @tanja
+伴随3.2版本的重新设计，一些过时信息已被移除。 您可以在旧版文档中找到这些信息：
+
+AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html)可查阅。
+
+***
+
+## 2022年2月
+
+- [血糖质量警告标志](#aaps-screens-bg-warning-sign) @tanja
+- [美敦力泵更新](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
+- [更新至AAPS 3.0后的必要检查](Update3_0.md) @tanja
 - [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
-- Update docs for AAPS 3.0 (partly) @xJoe
-- [Wear OS for AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
+- AAPS 3.0文档部分更新 @xJoe
+- [AAPS 3.0的Wear OS智能手表](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
-## January 2022
+## 2022年1月
 
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) - update @tanja
+- [Android Studio故障排除](../GettingHelp/TroubleshootingAndroidStudio)更新 @tanja
 
-## December 2021
+## 2021年12月
 
-- [Building the APK](../SettingUpAaps/BuildingAaps.md) - update Android Studio Arctic Fox | 2020.3.1 @tanja
-- [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) information added @MilosKozak
+- [构建APK](../SettingUpAaps/BuildingAaps.md)更新：Android Studio Arctic Fox | 2020.3.1 @tanja
+- [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md)信息添加 @MilosKozak
 
-## November 2021
+## 2021年11月
 
-- Best practices for calibrating a [libre 2 sensor](#Libre2-best-practices-for-calibrating-a-libre-2-sensor)
-- [ISF](../UsefulLinks/FAQ.md) reformulation of impact
-- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio)
-- Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
+- [Libre 2传感器](#Libre2-best-practices-for-calibrating-a-libre-2-sensor)的最佳校准实践
+- [ISF](../UsefulLinks/FAQ.md)影响表述的修改
+- 更新[Android Studio故障排除](../GettingHelp/TroubleshootingAndroidStudio)
+- 移除已废弃的Dexcom补丁应用
 
-## October 2021
+## 2021年10月
 
-- [Release notes](ReleaseNotes.md) AAPS 3.0 beta
+- [发行说明](ReleaseNotes.md)AAPS 3.0 beta版
 
-## September 2021
+## 2021年9月
 
-- Recommended computer specification to [build AAPS app](#Building-APK-recommended-specification-of-computer-for-building-apk-file)
+- [构建AAPS应用](#Building-APK-recommended-specification-of-computer-for-building-apk-file)的推荐电脑配置
 
-## June 2021
+## 2021年6月
 
-- [Watchface sideload](../WearOS/WearOsSmartwatch.md)
+- [智能手表表盘侧载](../WearOS/WearOsSmartwatch.md)
 
-## April 2021
+## 2021年4月
 
-- List of [communication devices](#CompatiblePumps-additional-communication-device) for Omnipod and Medtronic pumps
-- AAPS predictions in [Nightscout](#Nightscout-manual-nightscout-setup)
+- Omnipod和Medtronic泵的[通讯设备](#CompatiblePumps-additional-communication-device)列表
+- AAPS在[Nightscout](#Nightscout-manual-nightscout-setup)中的预测
 
-## March 2021
+## 2021年3月
 
 - Dev communication moved from gitter to [discord](https://discord.gg/4fQUWHZ4Mw)
 
