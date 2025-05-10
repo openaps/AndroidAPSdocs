@@ -19,7 +19,7 @@
 
 **AAPSClient**在外观上非常类似于**AAPS**本身，为护理人员提供了远程操作AAPS命令的标签：
 
-![NSCLIENT_ 2024-05-17 134512](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
+![NSCLIENT_ 2024-05-17 134512 ](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
 
 ### 关于AAPSClient与AAPSClient2
 
@@ -194,7 +194,7 @@ iPhone上的Nightscout具有与PC上相同的所有功能。 它允许您向**AA
 
 虽然您实际上不能推注胰岛素，但您可以通过Nightscout“宣布”胰岛素作为“校正推注”，尽管它不会被输送。 由于AAPS现在会考虑那个假的胰岛素推注，宣布胰岛素实际上会使AAPS变得不那么激进，并且可以在配置文件过强（例如，由于先前的运动）的情况下用于取消负胰岛素并防止低血糖。 您需要在**AAPS**手机在场的情况下自行检查这一点，以防您的**Nightscout**设置有所不同。
 
-![24-10-23, cancel negative insulin NS](../images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
+![24-10-23, cancel negative insulin NS ](../images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
 
 
 一些最常用的**Nightscout**命令如下表所示。
