@@ -57,7 +57,7 @@ AAPS还会通过短信通知您，远程指令（如大剂量注射或配置切�
 
 ![image](../images/remote-control-08.png)
 
-### Date and time syncing
+### 日期时间同步
 
 两台手机的时间必须同步。 最佳做法是从网络自动设置。 时间差异可能会导致身份验证问题。
 
@@ -69,7 +69,7 @@ AAPS还会通过短信通知您，远程指令（如大剂量注射或配置切�
 
 ### AAPS设置
 
-Now that the phone settings have been checked, in the **AAPS** app itself, go to [Config Builder > General](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
+完成手机端设置验证后，请进入**AAPS**主程序，依次进入[Config Builder > General](../SettingUpAaps/ConfigBuilder.md)菜单项，启用**SMS通信**模块。
 
 转到短信通信器的首选项。
 
@@ -171,20 +171,20 @@ PIN码要求：
 
 指令必须以英文发送，如果回复字符串已翻译，则回复将以您的本地语言显示。 指令不区分大小写，您可以使用小写或大写。
 
-![短信命令示例](../images/SMSCommands.png)
+![SMS Commands Example](../images/SMSCommands.png)
 
 下面的**短信指令表**显示了所有可能的短信指令。 _示例值_旨在帮助理解。 指令具有与**AAPS**应用程序本身允许的相同范围的可能值（目标、百分比配置等）。
 
 (authentication-or-not)=
 ### 是否需要身份验证？
 
-一些短信指令会立即响应，而一些短信指令则需要通过身份验证器进行强**身份验证**。 像“**BG**”（请求当前血糖值）这样的简单查询输入快速，不需要身份验证，并返回以下**AAPS**状态信息：
+一些短信指令会立即回复，而一些短信指令则需要通过身份验证器进行强**身份验证**。 像“**BG**”（请求当前血糖值）这样的简单查询输入快速，不需要身份验证，并返回以下**AAPS**状态信息：
 
 ![image](../images/remote-control-06.png)
 
 需要更多安全性的指令需要输入密码，例如：
 
-![为markdown缩小的短信已验证](../images/remote-control-07.png)
+![SMS authenticated for markdown-smaller](../images/remote-control-07.png)
 
 下面表格中的*Auth*列指示每个指令是否需要这样的强身份验证。
 
@@ -279,7 +279,7 @@ PIN码要求：
 
 1) **您不能设置_临时_配置文件切换**（例如，将模式设置为“运动”持续60分钟），尽管您可以永久切换到“运动”模式。 临时模式切换可以通过Nightscout或AAPSClient来设置。
 
-2) **您不能取消自动化**或**设置用户自定义目标**，但有一些近似解决方案：例如，假设正常模式的目标血糖是5.5。 您在AAPS中设置了一个自动化，以在下午2:30至3:30之间始终将目标设为7.0，因为学校有体育课，并且该自动化的一个条件是“不存在临时目标”。 但这周，您临时接到通知说体育课取消了，改为吃披萨，但孩子已经带着AAPS手机去学校了。 如果自动化启动了7.0的高临时目标，并且您（在AAPS手机上或远程）取消了它，自动化的条件仍然满足，AAPS会在一分钟后再次设置高目标。
+2) **您不能取消自动化**或**设置用户自定义目标**，但有一些近似解决方案：例如，假设正常模式的目标血糖是5.5。 您在AAPS中设置了一个自动化，以在下午2:30至3:30之间始终将目标设为7.0，因为学校有体育课，并且该自动化的一个条件是“不存在临时目标”。 但这周，您临时接到通知说体育课取消了，改为吃披萨，但孩子已经带着**AAPS**手机去学校了。 如果自动化启动了7.0的高临时目标，并且您（在AAPS手机上或远程）取消了它，自动化的条件仍然满足，AAPS会在一分钟后再次设置高目标。
 
 **如果您可以访问AAPS手机**，您可以取消勾选/修改自动化，或者，如果您不想这么做，您只需在操作选项卡或通过点击目标选项卡设置一个新的5.6的临时目标持续60分钟。 这将阻止自动化设置7.0的高目标。
 
@@ -337,4 +337,4 @@ AAPS只会执行最新的命令。 因此，如果您输入了“bolus 1.5”，
 
 使用SMS命令可能会从**AAPS**手机向护理者的手机生成大量自动消息。 如果您在**AAPS**中设置了自动化，您还会收到消息，例如“泵中的基础模式已更新”。 如果您的AAPS手机计划（以及每个护理者手机）拥有无限短信额度会很有用，并且要在所有手机上停用短信通知、警报或振动。 如果要使用SMS命令，就不可能不收到这些更新。 因此，您可能需要一种与孩子直接沟通的替代方式（如果他们年龄足够大），而不是使用SMS。 **AAPS**护理者常用的替代通信应用程序包括Whatsapp、Lime、Telegram和Facebook Messenger。
 
-It is possible do disabled the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+若需禁用源自Nightscout的<0>Profile changed</0>短信通知， 可在AAPS主目录下的`extra`子目录中创建**严格**命名为`do_not_send_sms_on_profile_change`的空文件。

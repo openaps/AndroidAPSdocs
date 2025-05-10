@@ -47,7 +47,7 @@ Wear OS 5的更改锁定了表盘：仅可使用小工具。
 
 实心星号表示启用状态（**开**），空心星号表示设置已禁用（**关**）：
 
-![设置开/关](../images/Watchface_Settings_On_Off.png)
+![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
 ### AAPS伴侣参数
 
@@ -87,13 +87,13 @@ Wear OS 5的更改锁定了表盘：仅可使用小工具。
 
 * **变化量粒度**（默认`中等`）
 
-![Steampunk仪表](../images/Watchface_Steampunk_Gauge.png)
+![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Circle WF
 
 * **大号数字**（默认`关`）：增大文本大小以提高可见性。
 * **环形历史**（默认`关`）：以绿色环内的灰色环图形显示血糖历史。
-* **Light Ring History** (default `On`): Ring history more discrete with a darker gray
+* **环形记录浅色模式**（默认`启用`）：切换为深灰色可使环形记录显示更加低调
 * **动画**（默认`开`）：启用时，在受支持的手表且不在省电低分辨率模式下，表盘圆形将动画显示。
 
 ### 命令设置
@@ -117,7 +117,7 @@ AAPS Wear OS应用自版本`2.6`起支持小工具，并允许任何支持小工
 
 小部件还可以作为访问AAPS功能的**快捷方式**。 通过点击它们，您可以打开与AAPS相关的菜单和对话框（具体取决于小部件类型和配置）。
 
-![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
+![Complications_On_Watchfaces ](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### 小部件类型
 
@@ -138,7 +138,7 @@ AAPS Wear OS应用仅提供原始数据，根据预定义格式。 第三方表�
 
 AAPS提供以下小部件：
 
-![AAPS_Complications_List](../images/Watchface_Complications_List.png)
+![AAPS_Complications_List ](../images/Watchface_Complications_List.png)
 
 * **基础率、COB&IOB**（`短文本`，打开*菜单*）：第一行显示*基础率*，第二行显示*COB*和*IOB*。
 * **血糖值**（`短文本`，打开*菜单*）：第一行显示*血糖值*和*趋势*箭头，第二行显示*测量时间*和*血糖变化量*。
@@ -191,7 +191,7 @@ Tiles 可与任何表盘“并排”使用。 要访问已启用的 Tile，只�
 2. 在您的手机上打开手表的配套应用。 
   * 对于三星，打开“Galaxy Wearable”；对于其他品牌，打开“Wear OS”。
   * 点击“Tiles”部分，然后点击“+ 添加”按钮。
-  * 通过选择它来找到您想添加的AAPS Tiles。 ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
+  * 通过选择它来找到您想添加的AAPS Tiles。 ![Wear phone add tile ](../images/wear_companion_app_add_tile.png)
   * 可以通过拖放更改tiles的顺序。
 
 Tiles的内容可以通过长按tile并点击“编辑”或“齿轮图标”按钮进行自定义。
@@ -208,7 +208,7 @@ Tiles的内容可以通过长按tile并点击“编辑”或“齿轮图标”�
 * **碳水化合物**；添加（延长）碳水化合物。
 * **TempT**；设置自定义的临时目标值和持续时间
 
-![Wear action tile, sample calculator](../images/wear_actions.png)
+![Wear action tile, sample calculator ](../images/wear_actions.png)
 
 [1] 通过Wear OS菜单，将“计算器百分比”选项设置为“开启”，以在大剂量计算器中显示百分比输入。 默认百分比基于“概览”部分中[“输送大剂量向导结果的一部分%”](#Preferences-deliver-this-part-of-bolus-wizard-result)的手机设置。当用户未提供百分比时，将使用手机中的默认值。 请通过手机应用中的“偏好设置”-“向导设置”来配置大剂量计算器的其他参数。
 
@@ -222,7 +222,7 @@ Tiles的内容可以通过长按tile并点击“编辑”或“齿轮图标”�
 * **手动**；设置自定义临时目标和持续时间。
 * **取消**；停止当前的临时目标。
 
-![编辑Wear操作图块](../images/wear_tile_tempt_edit.png)
+![Wear actions tile edit](../images/wear_tile_tempt_edit.png)
 
 ### AAPS（快速向导）磁贴
 
@@ -236,7 +236,7 @@ Tiles的内容可以通过长按tile并点击“编辑”或“齿轮图标”�
 
 Android Wear OS智能手表的长电池寿命是一个挑战。 一些智能手表在充电前可使用长达30小时。 为优化电源节省，在不使用时应关闭显示屏。 大多数手表支持“常亮”显示。
 
-自AAPS版本3起，我们可以在常亮模式下使用“简化用户界面（Simplify UI）”。 该界面仅包含血糖值、趋势方向和时间。 This UI is power-optimized with less frequent updates, showing less information and lighting up fewer pixels to save power on OLED displays.
+自AAPS版本3起，我们可以在常亮模式下使用“简化用户界面（Simplify UI）”。 该界面仅包含血糖值、趋势方向和时间。 此界面经过功耗优化，通过降低刷新频率、精简信息显示及减少OLED屏幕像素激活量，实现显示屏能耗节省。
 
 简化用户界面模式适用于以下表盘：AAPS、AAPS V2、Home Big, Digital Style, Steampunk, and Cockpit.。 简化用户界面是可选的，可通过表盘设置进行配置。 （长按表盘并点击“编辑”或齿轮图标）选择“简化用户界面”配置，并将其设置为“始终开启”或“充电时始终开启”。
 

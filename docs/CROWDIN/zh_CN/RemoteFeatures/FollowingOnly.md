@@ -30,9 +30,9 @@
 
 #### 设置Dexcom Follow：操作指南
 
-If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app.
+如果您使用非官方的Dexcom应用程序BYODA接收传感器数据，您可能能够从BYODA应用程序内发送邀请给跟踪者。
 
-You cannot send invite emails to Dexcom followers anymore from third-party apps. 在xDrip+中，邀请请求只会显示“邀请未发送”的消息。
+您无法再通过第三方应用向Dexcom关注者发送邀请邮件了。 在xDrip+中，邀请请求只会显示“邀请未发送”的消息。
 
 您必须安装官方“Dexcom”应用程序，发送邀请，然后卸载官方应用程序。
 
@@ -121,20 +121,20 @@ xDripSwift是从将原始xDrip应用程序移植到iOS发展而来的，后来�
 
 怎样才能在我的iPhone上获取xDrip4iOS？
 有两种可选的方式
-1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by [following the instructions](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
+1. 如果您拥有 Mac 设备和 Apple Developer 开发者账号（年费 99 欧元/美元），可[按照指引](https://xdrip4ios.readthedocs.io/en/latest/install/build/)自行构建 xDrip4iOS 应用。
 
-If you want, you can then become a "releaser" and [share a Personal Testflight xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) with up to 100 other people to help them.
+若您愿意，可成为“发布者（releaser）​”并通过[个人TestFlight链接](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) 将xDrip4iOS分享给最多100人，帮助他们使用该应用。
 
-2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and read the pinned posts for current methods to get the app. **您不应该请求应用程序的邀请**（请阅读群组规则）。
+2. 请加入 [xDrip4iOS Facebook 群组](https://www.facebook.com/groups/853994615056838/announcements) 并查阅置顶帖，获取当前可用的应用安装方法。 **您不应该请求应用程序的邀请**（请阅读群组规则）。
 ```
 
 
 
 ![image](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
-"What is **Shuggah**?" A group of Ukrainian developers copied the project code for xDrip4iOS (which is shared publicly on GitHub) and released it on the App Store under a business account. The Shuggah release is in no way managed by the xDrip4iOS developers.
+**Shuggah**是什么？ 乌克兰某开发团队复制了xDrip4iOS（其代码在GitHub上公开共享）的项目代码，并通过企业账户在App Store上发布。 Shuggah版本完全不受xDrip4iOS原开发团队管理。
 
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) supports xDrip4iOS, and the matching Apple Watch apps.
+[xDrip4iOS Facebook群组](https://www.facebook.com/groups/853994615056838/announcements)仅支持官方xDrip4iOS应用及配套的Apple Watch应用。
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 

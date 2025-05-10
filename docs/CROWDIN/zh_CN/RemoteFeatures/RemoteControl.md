@@ -19,23 +19,23 @@
 
 **AAPSClient**在外观上非常类似于**AAPS**本身，为护理人员提供了远程操作AAPS命令的标签：
 
-![NSCLIENT_ 2024-05-17 134512](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
+![NSCLIENT_ 2024-05-17 134512 ](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
 
-### About AAPSClient and AAPSClient2
+### 关于AAPSClient与AAPSClient2
 
-There are 2 versions of the apk that can be installed, **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
+目前有两个可安装的APK版本：**​AAPSClient**​ 和 ​**AAPSClient2**，两者存在细微但重要的区别，具体说明如下。
 
 如果护理人员需要第二个**AAPSClient**副本来远程控制另一个使用Nightscout账户的患者，他们应该在安装**AAPSClient**之外再安装**AAPSClient2**。 **AAPSClient 2**允许单个护理人员在同一跟随者手机上两次安装**AAPSClient** apk，以便能够同时访问并远程控制两名不同的患者。
 
-To differentiate between the two apps, some elements have a different background color: yellow for **AAPSClient**, blue for **AAPSClient2**. Those elements are the app icon, the widget, and the **AAPS** status section in the app itself. <br/> Note : opacity of the widget background is customizable.
+为了区分两个应用，部分元素的背景颜色不同：**AAPSClient**采用黄色，**AAPSClient2**采用蓝色。 这些元素包括应用图标、桌面小部件以及应用内显示**AAPS**状态的功能区域。 <br/>注：小部件背景的不透明度支持自定义调节。
 
 ![AAPSClient_and_AAPSClient2.png](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
 
-### Download and installation
+### 下载与安装
 
 **AAPSClient**可以安装在单个手机或多个跟随者手机上（即家长1的跟随者手机和家长2的跟随者手机），以便两位护理人员都能获得访问权限并远程控制患者的**AAPS**手机。
 
-To download **AAPSClient**, navigate to the [GitHUb repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+要下载**AAPSClient**，请前往[GitHub代码仓库](https://github.com/nightscout/AndroidAPS/releases/)，点击名为**"app-AAPSClient-release_x.x.x.x"**的资源文件（实际版本可能比下图所示版本更新）：
 
 ![image](../images/remote_control_and_following/AAPSClient_download_02.png)
 
@@ -49,7 +49,7 @@ To download **AAPSClient**, navigate to the [GitHUb repository](https://github.c
 
 通过USB数据线传输到跟随者手机上；或者， 拖动到Google Drive文件夹中，然后点击“app-AAPSClient-release”文件将其添加到跟随者手机。
 
-Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the Github repository as described above. The reason is that you can't install both **AAPS** and **AAPSClient** on the same phone, signed by a different key. <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). On the **Generate signed App Bundle or APK** page, select **aapsclientRelease** instead of **fullRelease**.
+若您需自行使用**AAPS**，并需通过**AAPSClient**监测他人，必须自行构建**AAPSClient**而非按前述方式从GitHub仓库下载。 原因是您无法在同一部手机上安装由不同密钥签名的**AAPS**与**AAPSClient**应用。 <br/>自行构建**AAPSClient**时，请遵循与[常规AAPS构建](../SettingUpAaps/BuildingAaps.md)相同的流程。 在**生成已签名的应用捆绑包或APK**页面时，请选择**aapsclientRelease**而非**fullRelease**。
 
 ### 同步-AAPSClient和AAPS的设置（适用于3.2.0.0及以上版本）
 
@@ -194,7 +194,7 @@ iPhone上的Nightscout具有与PC上相同的所有功能。 它允许您向**AA
 
 虽然您实际上不能推注胰岛素，但您可以通过Nightscout“宣布”胰岛素作为“校正推注”，尽管它不会被输送。 由于AAPS现在会考虑那个假的胰岛素推注，宣布胰岛素实际上会使AAPS变得不那么激进，并且可以在配置文件过强（例如，由于先前的运动）的情况下用于取消负胰岛素并防止低血糖。 您需要在**AAPS**手机在场的情况下自行检查这一点，以防您的**Nightscout**设置有所不同。
 
-![24-10-23, cancel negative insulin NS](../images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
+![24-10-23, cancel negative insulin NS ](../images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
 
 
 一些最常用的**Nightscout**命令如下表所示。
