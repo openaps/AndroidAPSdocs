@@ -1,128 +1,127 @@
 
-# Release notes
+# 发布说明
 
-Please follow the instructions in the [update manual](UpdateToNewVersion). The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
+请按照[更新手册](UpdateToNewVersion)中的说明进行操作。 故障排除部分也涵盖了在**AAPS**更新手册页面上更新时遇到的最常见问题。
 
-You will receive the information as soon as a new update is available. If you do not update until expiration date **AAPS** will switch to Open Loop.
+当有新版本可用时，您将立即收到通知。 如果在到期日之前未更新，**AAPS**将切换至开环模式。
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-This prompt is important, should not be ignored and is not intended to bug you. New versions of **AAPS** do not only provide new features but also important safety fixes. Therefore it is necessary that every **AAPS** user updates to the latest version a.s.a.p. Unfortunately there are still bug reports from very old versions so this an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
+此提示非常重要，请勿忽略且无意打扰您。 **AAPS**的新版本不仅提供新功能，还包括重要的安全修复。 因此，每位**AAPS**用户都应尽快更新至最新版本。 遗憾的是，仍有来自非常旧版本的错误报告，因此这是为提高每位**AAPS**用户及DIY社区安全性所做的努力。 感谢您的理解。
 
 ```{admonition} First version of **AAPS**
 :class: note
+首个测试版本于2015年发布。 2016年推出了首个正式版本。
 
-The first test version started already in 2015. In 2016 has been the first released version.
-
-The chronology of these releases is not available at the moment but as this question is asked several times we document it here.
+目前这些版本的编年记录暂不可用，但由于多次被问及，我们在此进行说明。
 
 ```
 ![AAPS 1.0](../images/update/AAPS1.0.png)
 
 (maintenance-android-version-aaps-version)=
 
-## Android version and AAPS version
+## Android版本与AAPS版本
 
-If your smartphone uses an Android Version older than Android 11 you will not be able to use AAPS v3.3 and up as it requires at least Android 11.
+如果您的手机使用低于Android 11的系统，将无法使用AAPS v3.3及更高版本，因为最低要求为Android 11。
 
-In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
+为允许旧版Android用户继续使用旧版AAPS，我们推送了仅修改版本验证的新版本，不包含其他改进。 不包含其他改进。
 
-### Android 11 and up
+### Android 11及以上
 
-- Use latest AAPS version
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS>
+- 使用最新AAPS版本
+- 从<https://github.com/nightscout/AndroidAPS>下载AAPS代码
 
 ### Android 9,10
 
-- Use AAPS version **3.2.0.4**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 3.2.0.4
+- 使用AAPS版本**3.2.0.4**
+- 从<https://github.com/nightscout/AndroidAPS>的3.2.0.4分支下载代码
 
 ### Android 8
 
-- Use AAPS version **2.8.2.1**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.8.2.1
+- 使用AAPS版本**2.8.2.1**
+- 从<https://github.com/nightscout/AndroidAPS>的2.8.2.1分支下载代码
 
 ### Android 7
 
-- Use AAPS version **2.6.2**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
+- 使用AAPS版本**2.6.2**
+- 从<https://github.com/nightscout/AndroidAPS>的2.6.2分支下载代码
 
-## WearOS version
+## WearOS版本
 
-- AAPS requires at least WearOS API level 28 (Android 9)
+- AAPS需要WearOS API级别28（Android 9）或更高
 
 ```{tip}
-WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
+WearOS 5（API级别34，基于Android 14）存在[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
 (version3300)=
-## Version 3.3.2.0
+## 版本 3.3.2.0
 
-Release date: 27-03-2025
+发布日期：2025年3月27日
 
-### How to upgrade
+### 如何升级
 
-* [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* 需使用[Android Studio "Meerkat"版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高。 若已构建过3.3.x版本，需升级Android Studio。
 
-### Starting this version, notification and version enforcement has been simplified and softed and works following way:
-*  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
-*  After expiration LGS mode is enforced
-*  You'll receive warning/notifications less often:
-   - 28+ days remaining: every 7 days
-   - 27-14 days remaining: every 3 days
-   - then once a day
-   - Notification will be generated after noon to not bother you during nights
-* There are only 2 kinds of notification
-   - New version available (has no effect on AAPS)
-   - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
+### 从此版本起，通知和版本强制机制已简化并调整如下：
+*  设备离线时（无网络连接）不会过期， 即取消60天和90天的宽限期。
+*  过期后强制进入LGS模式
+*  减少通知频率：
+   - 剩余28天以上：每7天提醒
+   - 剩余14-27天：每3天提醒
+   - 剩余不足14天：每天提醒
+   - 通知将在中午后生成，避免夜间打扰
+* 仅保留两种通知类型：
+   - 新版本可用（不影响AAPS运行）
+   - 应用即将/已过期（未过期时不影响AAPS运行，过期后进入LGS模式）
 
-### News
+### 新功能
 
-* SMS RESTART command @MilosKozak
-* Watch Profile switch parameters @olorinmaia
-* Dark mode AAPS V2 watchface @olorinmaia
-* G7 data exchange improvements @olorinmaia
-* Widget configuration @MilosKozak
-* Radiobuttons UI improvements @olorinmaia
-* Automation: position choosing from map @MilosKozak
-* Version visible on main screens @MilosKozak
-* Compilation with existing git system in enforced (no zip downloads)
-* Show version on main screen @MilosKozak
-* Tidepool upload improvements @ConstantinMatheis
+* SMS RESTART命令 @MilosKozak
+* 手表配置切换参数 @olorinmaia
+* AAPS V2表盘暗色模式 @olorinmaia
+* G7数据传输改进 @olorinmaia
+* 小部件配置 @MilosKozak
+* 单选按钮UI优化 @olorinmaia
+* 自动化：通过地图选择位置 @MilosKozak
+* 主屏幕显示版本号 @MilosKozak
+* 强制使用现有git系统编译（禁用zip下载）
+* 主界面显示版本 @MilosKozak
+* Tidepool上传优化 @ConstantinMatheis
 
-### Bug fixes
+### 问题修复
 
-* Dash unbonding fix @Andreas
-* Garmin fixes @robertbuessow @suside
-* Fix of IOB displaying in dialogs @olorinmaia
-* Objectives spelling and validation improvements @MilosKozak
-* Fixed rendering of emulated TBRs @MilosKozak
-* Fixed bypassing security @tdrkDev
+* Dash解绑修复 @Andreas
+* Garmin修复 @robertbuessow @suside
+* 对话框IOB显示修复 @olorinmaia
+* 目标拼写与验证改进 @MilosKozak
+* 模拟TBR渲染修复 @MilosKozak
+* 安全绕过修复 @tdrkDev
 
-## Version 3.3.1.3
+## 版本 3.3.1.3
 
-Release date: 21-01-2025
+发布日期：2025年1月21日
 
-### Bug fixes
+### 问题修复
 
-* Dash: bonding is optional (default off) @MilosKozak
-* Equil: fixed bolud 10+U, alarm improvements @EquilHack
-* Garmin: watch improvements @swissalpine
-* Watch improvements @olorinmaia
-* Control loop status from watch @tdrkDev
-* Stability improvements
+* Dash：绑定改为可选（默认关闭）@MilosKozak
+* Equil：修复10+U大剂量，报警优化 @EquilHack
+* Garmin：手表功能改进 @swissalpine
+* 手表功能优化 @olorinmaia
+* 通过手表控制闭环状态 @tdrkDev
+* 稳定性提升
 
-*  **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
+*  **可能需要重新设置[认证器](#sms-commands-authenticator-setup)。**
 
-## Version 3.3.1.2
+## 版本 3.3.1.2
 
-Release date: 15-01-2025
+发布日期：2025年1月15日
 
-### How to upgrade
+### 如何升级
 
-* [Android Studio version called "Ladybug Feature Drop"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* 构建此版本需要[Android Studio "Ladybug Feature Drop"版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高。 **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
 
-### Bug fixes
+### 问题修复
 
 * Dash: use bonding on Android 15+
 * Restored Dexcom button on Overview
@@ -174,7 +173,7 @@ Release date: 29-12-2024
 * New **Automation** triggers
 * Unattended settings exports
 
-### How to upgrade
+### 如何升级
 
 * Before upgrading:
   * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
@@ -639,7 +638,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - SimpleProfile is removed
 
-- [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
+- [扩展大剂量](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)功能 - 闭环将被禁用
 
 - MDT plugin: Fixed bug with duplicated entries
 
@@ -649,7 +648,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Different UI and internal improvements
 
-- [Wear complications](../WearOS/WearOsSmartwatch.md)
+- [穿戴设备的小部件](../WearOS/WearOsSmartwatch.md)
 
 - New [SMS commands](../RemoteFeatures/SMSCommands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 
