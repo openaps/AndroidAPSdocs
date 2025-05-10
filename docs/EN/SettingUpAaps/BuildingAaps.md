@@ -18,7 +18,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 | 2.6.2                   | 3.6.1                                    |                                            | 5.6    | 11   |
 | 2.8.2.1                 | 4.1.1                                    |                                            | 6.1    | 13   |
 | 3.1.0.3                 | 2020.3.1                                 | up to Meerkat                              | 7.3    | 17   |
-| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                      | up to Meerkat                              | 8.2    | 17   |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                      | up to Meerkat                              | 8.2    | 17   |
 | [3.3](#version3300)     | Ladybug (2024.2.1)                       | up to Meerkat                              | 8.9    | 21   |
 | [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)          | up to Meerkat                              | 8.10   | 21   |
 | [3.3.2](#version3300)   | Meerkat (2024.3.1)                       |                                            | 8.11   | 21   |
