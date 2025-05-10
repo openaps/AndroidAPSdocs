@@ -1,5 +1,9 @@
 # 文件更新與變更
 
+## May 2025
+
+- Added [3.2.0.4 upgrade page](#update-aaps-3204) @psonnera
+
 ## 2025年1月
 
 - 快速嚮導[長按功能](#Preferences-quick-wizard) @emilise
