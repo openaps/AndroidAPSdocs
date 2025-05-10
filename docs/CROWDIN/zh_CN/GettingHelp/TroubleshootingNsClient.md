@@ -6,46 +6,46 @@ orphan: true
 
 (Troubleshooting-NSClient-troubleshooting-nsclient)=
 
-# Troubleshooting NSClient
+# NSClient故障排除
 
-NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.
+NSClient依赖与Nightscout的稳定通信。 不稳定的连接会导致同步错误和高数据使用量。
 
-If nobody is following you on Nightscout you can choose to pause NSClient to save battery life or you can choose to setup NSClient so that it only connects when on Wi-Fi and/or during charging.
+如果没有人通过Nightscout关注你，可以选择暂停NSClient以节省电量，或设置NSClient仅在Wi-Fi连接和/或充电时连接。
 
-* How to detect an unstable connection?
+* 如何检测连接不稳定？
 
-Go to NSClient tab in AAPS and watch the log. The expected behavior is to receive a PING every ~30s and almost no reconnection messages. If you see many reconnections, then there is a problem.
+进入AAPS的NSClient选项卡并查看日志。 预期行为是每约30秒收到一次PING且几乎没有重连消息。 如果看到多次重连，则存在问题。
 
-Since AAPS version 2.0, when such behavior is detected, NSClient is paused for 15 minutes and the message "NSClient malfunction" is displayed on the main Overview screen.
+自AAPS 2.0版本起，当检测到此行为时，NSClient会暂停15分钟，并在主界面显示"NSClient故障"消息。
 
 * 重新启动
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+第一步应尝试重启：先重启Nightscout，再重启手机以确认问题是否持续
 
-If your Nightscout is hosted on Heroku, you can restart Nightscout by: Logging into Heroku, click on your nightscout app name, click on the 'More' menu, then 'Restart all dynos'.
+如果Nightscout托管在Heroku上，可通过以下方式重启：登录Heroku，点击你的nightscout应用名称，点击"More"菜单，选择"Restart all dynos"。
 
-For other hosts, please follow your hosts guidance documentation.
+其他主机请遵循对应服务商的操作指南。
 
-* Phone issues
+* 手机问题
 
-Android may put your phone into a sleep mode. Check if you have an exception for AAPS in your phones power options to allow it to run in the background all the time.
+Android可能会将手机置于睡眠模式。 检查你的手机电源选项中是否有针对AAPS的例外，以允许它始终在后台运行。
 
-Check the NSClient again when in strong network signal location.
+在强网络信号区域再次检查NSClient。
 
-Try another phone.
+尝试更换其他手机。
 
-* Nightscout
+* Nightscout设置
 
-If your site is hosted on Azure, many people have found that connection issues have improved since moving to Heroku.
+如果使用Azure托管站点，许多用户发现迁移到Heroku后连接问题有所改善。
 
-A workaround to connection issues in Azure is to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+针对Azure连接问题的临时解决方案：在应用设置中将HTTP协议设为2.0，并启用Websockets
 
-* No BG reading from Nightscout
+* Nightscout中无血糖读数
 
-If AAPS connects to Nightscout correctly but does BG displays as N/A. Go to NSCLIENT tab, press the 3 dot menu top right, Click NSClient Preferences -> Synchronization turn on "Receive/backfill CGM data".
+如果AAPS已正确连接Nightscout但血糖显示为N/A， 请进入NSClient选项卡，点击右上角三点菜单，选择"NSClient首选项"→"同步"，启用"接收/回填CGM数据"。
 
-* If you still get an error...
+* 如果仍然出现错误...
 
-Check the size of your database in MongoDB (or via the database size plugin in nightscout). If you are using the free tier in MongoDB, 496MB means it is full and needs to be cleaned up. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+检查MongoDB数据库大小（或通过Nightscout的数据库大小插件）。 如果使用MongoDB免费版，496MB表示数据库已满需要清理。 [遵循Nightscout说明检查数据库大小并清理数据](https://nightscout.github.io/troubleshoot/troublehoot/#database-full)。
 
-Before clearing data from your database and if you haven't already set it up, you should consider donating your AAPS data to the Open Humans project (for research). The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
+清理数据库前，如果尚未配置，建议将AAPS数据捐赠给Open Humans项目（用于研究）。 配置说明参见[OpenHumans配置页面](../SupportingAaps/OpenHumans.md)。
