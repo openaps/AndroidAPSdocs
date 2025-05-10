@@ -29,7 +29,7 @@
 **如何备份**：找到您的密钥库路径。 如果不记得，可以在Android Studio中选择**Build > APK > Next**来查找。 路径将列在“Key store path”中。 使用文件资源管理器导航到此路径，并复制您的密钥库文件（文件扩展名为`.jks`）。 将其保存到安全的云位置，以防计算机无法使用。 同时，务必记录下您的密钥库密码、密钥别名和密钥密码。
 
 ### 最新的APK副本
-如果您的主**AAPS**手机丢失或损坏，拥有APK的副本将允许您快速使用新手机继续**AAPS** 注意：您还需要备份偏好设置，如下所述。
+如果您的主**AAPS**手机丢失或损坏，拥有APK的副本将允许您快速使用新手机继续**AAPS**。 注意：您还需要备份偏好设置，如下所述。
 
 **何时备份**：您应该保留安装在**AAPS**主手机上的最新APK的备份。 您可能还想保留一个更早的版本，以防出于某种原因需要回滚到该版本。
 
@@ -55,7 +55,7 @@
 
 2. 在**AAPS**主屏幕，选择左上角的三条线（汉堡）菜单 > Maintenance（维护）> Export settings（导出设置）> 输入上面设置的主密码 > Ok（确定）。
 
-![AAPS导出设置1](../images/Maintenance/AAPS_ExportSettings1.png) ![AAPS导出设置2](../images/Maintenance/AAPS_ExportSettings2.png)
+![AAPS export settings 1](../images/Maintenance/AAPS_ExportSettings1.png) ![AAPS export settings 2](../images/Maintenance/AAPS_ExportSettings2.png)
 
 3. 使用手机上的文件资源管理器（通常称为“Files”或“My Files”）导航至Internal Storage > AAPS > preferences。 在这里，您将看到所有导出的偏好设置文件的副本。 文件名应为`YYYY-MM-DD_Time_appname.json`。 将此文件上传到您选择的云平台。 然后，从云平台下载一份副本到您的本地计算机。
 
@@ -65,17 +65,17 @@
 
 **注意**：_导出的设置将使用您的AAPS主密码进行加密：如果没有用于导出的主密码，您将无法导入设置文件！_
 
-### Exporting or Importing Settings
+### 导入导出设置
 要导出或导入设置，请使用AAPS**维护菜单**中的**导入或导出按钮**。
 
 ![Maintenance menu export/import buttons](../images/Maintenance/maintenance_menu_import_export_400px.png)
 
 (ExportImportSettings-Automating-Settings-Export)=
-### Automating Settings Export
+### 自动化设置导出
 
-For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**" in [Preferences > Maintenance](#preferences-maintenance-settings).
+要实现自动化设置导出[（**参见自动化功能**）](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)，需在[首选项 > 维护](#preferences-maintenance-settings)中启用"**无人值守设置导出**"选项。
 
-You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
+此后可通过[自动化](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)功能配置定期（_如_每周）或pod更换后的设置导出。
 
 _**注意**：在将设置导入用户时，总是需要输入AAPS密码！_
 
