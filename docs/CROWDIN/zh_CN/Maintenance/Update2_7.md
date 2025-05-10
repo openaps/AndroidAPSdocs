@@ -2,63 +2,63 @@
 orphan: true
 - - -
 
-# Necessary checks after update coming from AAPS 2.6
+# 从AAPS 2.6升级后的必要检查
 
-- The program code was changed significantly when switching to AAPS 2.7.
-- Therefore it is important that you make some changes or check settings after the update.
-- Please see [release notes](#Releasenotes-version-2-7-0) for details on new and extended features.
+- 升级至AAPS 2.7时程序代码进行了重大调整。
+- 因此更新后您必须进行一些设置检查或修改。
+- 新功能与增强功能的详细信息请参阅[发布说明](#Releasenotes-version-2-7-0)。
 
-## Check BG source
+## 检查血糖数据源
 
-- Check if BG source is correct after update.
-- Especially when using [xDrip+](../CompatibleCgms/xDrip.md) it might happen, that BG source is changed to Dexcom app (patched).
-- Open [Config builder](#Config-Builder-bg-source) (hamburger menu on top left side of home screen)
-- Scroll down to "BG source".
-- Select correct BG source if changes are necessary.
+- 升级后检查血糖数据源是否正确。
+- 特别是使用[xDrip+](../CompatibleCgms/xDrip.md)时，血糖来源可能被更改为"Dexcom app (patched)"。
+- 打开[配置生成器](#Config-Builder-bg-source)（主界面左上角汉堡菜单）
+- 滚动至"BG source"选项。
+- 如需更改则选择正确的血糖数据源。
 
 ![BG source](../images/ConfBuild_BG.png)
 
-## Finish exam
+## 完成考核目标
 
-- AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for [automation](../DailyLifeWithAaps/Automations.md).
-- You have to finish exam ([objective 3 and 4](#objectives-objective3)) in order to complete objective 11.
-- If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11.
-- This will not effect other objectives you have already finished. You will keep all finished objectives!
+- AAPS 2.7新增了针对[自动化功能](../DailyLifeWithAaps/Automations.md)的目标11（后续版本已重编号为目标10！）。
+- 您需要先完成[目标3和4](#objectives-objective3)的考核才能解锁目标11。
+- 例如，若你尚未完成[目标3](#objectives-objective3)中的考核，则必须先完成该考核才能开始目标11。
+- 这不会影响您已经完成的其他目标。 您已完成的目标将保留！
 
-## Set master password
+## 设置主密码
 
-- Necessary to be able to [export settings](ExportImportSettings.md) as they are encrypted as of version 2.7.
-- Open Preferences (three-dot-menu on top right of home screen)
-- Click triangle below "General"
-- Click "Master-Password"
-- Enter password, confirm password and click ok.
+- 自2.7版本起，[导出设置](ExportImportSettings.md)需要加密保护。
+- 打开偏好设置（主界面右上角三点菜单）
+- 点击"常规"下方的三角符号
+- 选择"主密码"
+- 输入密码并确认，点击确定。
 
-![Set master password](../images/MasterPW.png)
+![设置主密码](../images/MasterPW.png)
 
-## Export settings
+## 导出配置文件
 
-- AAPS 2.7 uses a new encrypted backup format.
-- You must [export your settings](ExportImportSettings.md) after updating to version 2.7.
-- Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
-- Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
-- If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version.
-- All settings as well as finished objectives will remain as they were in the previous version.
-- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](#troubleshooting_androidstudio-lost-keystore).
+- AAPS 2.7采用新的加密备份格式。
+- 升级至2.7版本后必须[导出设置](ExportImportSettings.md)。
+- 旧版本配置文件仅能导入至AAPS 2.7，导出时将自动转为新格式。 导出时会采用新格式。
+- 建议将配置文件同时备份至手机外其他安全位置（如电脑、云存储等）。
+- 若使用相同密钥库构建AAPS 2.7 apk，可直接覆盖安装无需卸载旧版。
+- 所有设置及已完成目标均会保留。
+- 若密钥库丢失，需使用新密钥库构建2.7版本，并按照[故障排除指南](#troubleshooting_androidstudio-lost-keystore)导入旧版设置。
 
-## Autosens (Hint - no action necessary)
+## 自动灵敏度调整（提示 - 无需操作）
 
-- Autosens is changed to a dynamic switching model which replicates the reference design.
-- Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive.
+- 自动灵敏度算法升级为动态切换模型，符合参考设计标准。
+- 算法将在24小时和8小时窗口间动态选择 敏感性更高的计算结果。
 - 如果用户来自oref1，他们可能会注意到系统可能对变化不太敏感，因为敏感性可能在24小时或8小时之间变化。
 
-## Set Pump Password for Dana RS (if using Dana RS)
+## 设置Dana RS胰岛素泵密码（如使用该型号）
 
-- Pump password for [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) was not checked in previous versions.
-- Open Preferences (three-dot-menu on top right of screen)
-- Scroll down and click triangle next to "Dana RS".
-- Click "Pump password (v1 only)"
-- Enter pump password ([Default password](#DanaRS-Insulin-Pump-default-password) is different depending on firmware version) and click OK.
+- 旧版本未对[Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)的泵密码进行验证。
+- 打开偏好设置（界面右上角三点菜单）
+- 滚动至"Dana RS"并点击三角符号
+- 选择"泵密码（仅v1）"
+- 输入泵密码（[默认密码](#DanaRS-Insulin-Pump-default-password)因固件版本而异）后确认。
 
-![Set Dana RS password](../images/DanaRSPW.png)
+![设置Dana RS密码](../images/DanaRSPW.png)
 
-To change password on Dana RS follow instructions on [DanaRS page](#DanaRS-Insulin-Pump-change-password-on-pump).
+修改Dana RS泵密码请参照[DanaRS页面](#DanaRS-Insulin-Pump-change-password-on-pump)说明操作。
