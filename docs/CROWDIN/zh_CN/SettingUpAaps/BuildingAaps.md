@@ -1,10 +1,10 @@
 # 构建（Building）AAPS
 
-## Build yourself instead of download
+## 自行构建而非下载
 
-**由于医疗器械相关法规的限制，AAPS应用（一个apk文件）无法提供下载。 It is legal to build the app for your own use, but you must not give a copy to others!**
+**由于医疗器械相关法规的限制，AAPS应用（一个apk文件）无法提供下载。 构建该应用供自己使用是合法的，但不得将副本提供给他人**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+详情请参阅[常见问题页面](../UsefulLinks/FAQ.md)。
 
 
 
