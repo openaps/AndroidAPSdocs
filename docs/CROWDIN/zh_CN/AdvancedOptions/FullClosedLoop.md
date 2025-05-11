@@ -1,52 +1,52 @@
-# Full Closed Loop
+# 全闭环
 
 
-The main attraction of Full Closed Looping **FCL** is that it has the potential to mimic an artificial pancreas and make daily management easier without having the need to bolus for meals.
+全闭环（**FCL**）的主要吸引力在于它有潜力模拟人工胰腺，使日常管理更轻松，无需为进餐推注胰岛素。
 
-Whilst **hybrid closed loop** ('HCL') is algorithm based, it still requires the user to manually deliver boluses prior to meals. As a result, the loop may go into a temporary shut-off (temporary zero basal) to prevent over delivery of insulin.
+虽然**混合闭环**（“HCL”）是基于算法的，但它仍然需要用户在餐前手动进行餐前大剂量注射。 因此，环路可能会进入临时关闭状态（临时零基础率）以防止胰岛素输送过多。
 
-In **FCL** mealsize-related bolus are no longer required: leave it to the algorithm!  **AAPS** may allow without the user giving any bolus, and without making carb inputs, in a mode called ‘un-announced meals’ **(‘UAM’)**. **UAM** allows **AAPS** to better tolerate incorrect carb inputs by being more aggressive.
+在**FCL**中，不再需要根据餐量推注胰岛素：将工作交给算法！  **AAPS** 可能允许用户不进行任何餐前大剂量注射，也不输入碳水化合物，这在一种称为“未声明膳食”（**‘UAM’**）的模式下进行。 **UAM** 通过更积极的方式，使 **AAPS** 能够更好地容忍不正确的碳水化合物输入。
 
-### What to expect?
+### 期望什么？
 
-There are many published studies on the favourable results **FCL** can achieve. For further reading refer to the following:
+已有许多关于**FCL**积极效果的研究发表。 如需进一步阅读，请参阅以下内容：
 
-1) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ![PubMed](../images/US-NLM-PubMed-Logo.png) National Library of Medicine, PubMed [First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study](https://pubmed.ncbi.nlm.nih.gov/36826996/);
+1) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png)![PubMed](../images/US-NLM-PubMed-Logo.png)美国国家医学图书，PubMed[开源自动胰岛素输送系统AndroidAPS在全闭环场景中的首次应用：Pancreas4ALL随机试点研究](https://pubmed.ncbi.nlm.nih.gov/36826996/)；
 
-2) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ClinicalTrials.gov National Library of Medicine, Clinical Trial [Feasibility and Safety Study of the Automated Insulin Delivery Closed Loop System Pancreas4ALL (ASAP)](https://www.clinicaltrials.gov/study/NCT04835350?term=Feasibility%20and%20Safety%20Study%20of%20the%20Automated%20Insulin%20Delivery%20Closed%20Loop%20System%20Pancreas4ALL%20(ASAP)&rank=1)
+2)![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png)美国国家医学图书馆，临床试验 [全闭环胰岛素输送系统Pancreas4ALL（ASAP）的可行性和安全性研究](https://www.clinicaltrials.gov/study/NCT04835350?term=Feasibility%20and%20Safety%20Study%20of%20the%20Automated%20Insulin%20Delivery%20Closed%20Loop%20System%20Pancreas4ALL%20(ASAP)&rank=1)
 
-Success for **FCL** requires the user to:
+**FCL** 的成功需要用户：
 
-- check whether they met the **FCL** requisites;
-- set up **Automations** that are tailored for  their daily management’s needs; and
-- fine tune and adjust the **AAPS** settings (notably **Automations**).
-
-
-### General considerations why (not to) move from HCL to FCL
-
-**FCL** is not for everyone:
-
-- Some **FCL** users achieve TIR (70-180) around 90% and HbA1c under 6%, however other users prefer tighter control. Notably, minimising values over 140 mg/dl at diets with rapid carbs probably requires pre-bolusing.
-- **AAPS** tuning can be challenging. It is not for those users who feel overwhelmed AAPS.  You will need to dedicate a few weeks in order to adjust and fine tune your **FCL**. Investing such time can yield better results and **BG** control.
-- Meal management may become easier, however exercise can still be challenging in **FCL**. Most of us like to limit sports snacks in an attempt to control body weight.
-- Difficulties still remain to establish a **FCL** for kids (discussed below).
+- 检查他们是否满足 **FCL** 的先决条件；
+- 设置适合日常管理需求的**自动化规则**；
+- 微调**AAPS**设置（特别是**自动化规则**）。
 
 
-### Well-tuned hybrid closed loop
+### 从HCL转向FCL的总体考量
 
-It is advisable to first establish a well-tuned **HC**L before considering the transition to **FCL**.  Success with **FCL** requires a highly personalised individualised tuning of the user’s setting so that **AAPS** can give insulin to closely mimic YOUR successful hybrid closed loop mode.
+**FCL**并不适合所有人：
 
-**FCL** requires the user to set up and tune their **Automations**. However the user must have a confident understanding of their insulin management needs before embarking on **FCL**. Errors can be masked with counter-errors. This can create an unstable **FCL** system, and make it hard to later correct. You should expect to reach a comparable %TIR with your FCL as you see today in your **HCL**.
+- 部分**FCL**用户可实现TIR（70-180）约90%和HbA1c低于6%，但其他用户可能希望更严格控制。 值得注意的是，在食用快速碳水化合物的饮食中，将数值控制在 140 mg/dl 以下可能需要预先注射。
+- **AAPS**调校具有挑战性。 它不适合那些对 AAPS 感到不知所措的用户。  您需要花费几周时间来调整和微调您的 **FCL**。 投入这些时间可以产生更好的结果和 **BG** 控制。
+- 进餐管理可能更轻松，但**FCL**中的运动管理仍具挑战性。 多数人希望通过限制运动零食来控制体重。
+- 为儿童建立 **FCL** 仍然存在困难（下文讨论）。
 
-**FCL is a DIY set up of Automations determined by the user by analysing their data from both their successful HCL and  initial FCL experience when tuning your settings.**
 
-### Fast insulin (Lyumjev, Fiasp)
+### 良好调校的混合闭环
 
-**FCL** requires fast insulin.  This is so that at the start of meal-related **BG** rise, **FCL** is able to keep **BG** in range (by common definition, under 180 mg/dl (10 mmol/l)).
+在考虑转向**FCL**前，建议先建立良好调校的**HCL**。  **FCL**成功需要高度个性化的设置调校，使**AAPS**能通过胰岛素输送精确模拟您成功的混合闭环模式。
 
-A modelling study (details see LINK FullLoop V2/March2023; there section 2.2) can show in quantitative terms that *faster insulins*
+**FCL**需要用户设置和调校**自动化规则**。 但用户必须充分理解自身胰岛素管理需求后才能开始**FCL**。 错误可能会被反向错误所掩盖， 导致**FCL**系统不稳定，后期难以纠正。 您应预期FCL的%TIR与当前**HCL**水平相当。
 
-Source:
+**FCL是通过分析用户成功的HCL数据和初始FCL体验，自行设置自动化规则的过程。**
+
+### 速效胰岛素 (Lyumjev, Fiasp)
+
+**FCL**需要速效胰岛素。  这是为了在进餐相关**血糖**上升初期，**FCL**能通过常规定义（低于180 mg/dl（10 mmol/l））保持**血糖**在范围内。
+
+一项建模研究（详情参见链接 FullLoop V2/March2023；其中第 2.2 节）可以定量地表明*更快的胰岛素*
+
+来源：
 
 ![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
 
@@ -54,71 +54,71 @@ Source:
 
 IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
-- will result in significantly lower *BG** peaks than slower insulins;
-- tolerate a couple of minutes delayed first meal bolus while not incurring unacceptable height of peaks; and
-- minimise the effect on **BG** peak from different carb loads (meal sizes).
+- 与较慢的胰岛素相比，会导致 *BG** 峰值显著降低；
+- 能容忍首次餐时推注延迟数分钟，同时不产生不可接受的高峰值；
+- 最大限度地减少不同碳水化合物负荷（膳食大小）对 **BG** 峰值的影响。
 
-**FCL** is unlikely to be effective with insulin other than Lyumjev or Fiasp, unless the user is on a very moderate to low carb diet.
+除非用户采用非常温和至低碳水化合物饮食，否则使用Lyumjev或Fiasp以外的胰岛素，**FCL**可能难以有效。
 
-However, Fiasp or Lyumjev can result in frequent pump occlusions, even after optimising things like needle length. It is important to have an eye on the cannula or pod time. Many users find 48 hours to be the efficacy insulin limit before resulting in cannula/pod failure.
+然而，即使在优化了诸如针头长度之类的事情之后，Fiasp 或 Lyumjev 仍可能导致频繁的泵阻塞。 密切关注套管或储药器的时间非常重要。 许多用户发现 48 小时是胰岛素在导致套管/储药器故障之前的有效极限。
 
-### Prerequisites
+### 先决条件
 
-**BG** values and stable bluetooth connectivity are required to ensure **AAPS** can optimally perform without losing valuable time. **FCL** requires a 24/7 technically stable system:
+需要稳定的血糖值和蓝牙连接确保**AAPS**最佳性能，避免损失宝贵时间。 **FCL**需要24/7技术稳定系统：
 
-- your **CGM’s performance. Your CGM should not produce jumpy **BG** values that could be misinterpreted by **FCL** as a sign of a starting meal. Similarly, **CGM** calibrations can produce jumpy results.
-- how and where any **CGM** smoothing is done, and what this might imply for your tuning. Notably how delta is defined, and AAPS recognising this as being sign of a starting meal.
-- bluetooth stability for the pump and CGM  pump;
-- avoiding (or at least early recognition of) pump occlusion;
-- data flow and your phone's apps used and difference between days of sensor usage;
-- keeping all **AAPS** components well charged and in spare parts close proximity; and
-- actioning cannula (or pod) changes always early enough to lower the risk of occlusion;
+- **CGM性能 您的CGM不应产生跳跃式**血糖**值，以免被**FCL**误判为进餐开始信号。 同样，**CGM** 校准可能会产生跳跃的结果。
+- 任何 **CGM** 平滑的处理方式和位置，以及这对您的调整可能意味着什么。 特别是delta定义方式，以及AAPS是否识别为进餐开始信号。
+- 泵和 CGM 泵的蓝牙稳定性；
+- 避免（或至少及早识别）泵阻塞；
+- 数据流和您手机上使用的应用程序以及传感器使用天数之间的差异；
+- 保持所有**AAPS**组件充足电量并备有备用件；
+- 始终及时更换管路（或敷贴）以降低堵塞风险；
 
-The above will vary depending on your **AAPS** component system and your lifestyle.
+以上内容会因您的 **AAPS** 组件系统和您的生活方式而异。
 
-### Meal-related limitations
+### 与膳食相关的限制
 
-- Setting up a **FCL** may be easier for people whose diets do not consist of food components with a rapid high effect on **BG**, and meal patterns that do not wildly vary day-to-day. This does not necessarily mean low carb.
+- 对饮食中不含快速影响**血糖**成分且每日餐型变化不大的用户，设置**FCL**可能更容易。 这并不一定意味着低碳水化合物。
 
-- Fat or protein rich diets, or slow digestion/gastroparesis, make things easier rather than harder for **FCL**  because late carbs nicely cover for inevitable “tails” of late action from bolus needed around peak time.
+- 高脂肪或高蛋白饮食，或慢消化/胃轻瘫，反而使**FCL**更容易实施，因为后期碳水化合物能很好覆盖推注胰岛素不可避免的"尾部"效应。
 
 #### Glycemic index and effect on blood glucose
 
-The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose ('EBG')
+**UAM**模式的挑战随着"对血糖影响（EBG）"增加而增加：
 
-- Start moderate/low, and tune your **Profile's** settings. Only then, "test" meals with high **EBG**.
-- Consider a < 50% initial bolus if consuming very high **EBG**.
+- 从中/低EBG开始，调校**配置文件**设置。 然后"测试"高**EBG**餐食。
+- 如果摄入极高**EBG**，考虑初始推注量<50%。
 
-1) **No EBG**: e.g. fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: e.g. fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: e.g. whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**:e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: e.g. sugar, sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
+1) **无EBG**：如新鲜肉类、鱼类、鸡蛋、培根、油类、奶酪。 2) **低EBG**：如新鲜蔬菜和浆果、蘑菇、坚果、牛奶、酸奶、奶酪。 3) **中EBG**：如全麦面包/面条、土豆、野米、燕麦、干果。 4) **高EBG**：如小麦面包、法棍、吐司、华夫饼、饼干、土豆泥、面条、米饭。 5) **极高EBG**：如糖、甜饮、果汁、玉米片、糖果、薯片、咸脆棒。
 
 ![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
 
-The most difficult meals for **FCL** are those foods exclusively very high and high **EBG** components (see red in the picture): Not only does **BG** shoot up rapidly, but also there is little fat/protein/fibre component to balance the inevitable “tail” of insulin activity that would come with attempts to control the high glucose earlier on.
+对**FCL**最具挑战性的餐食是仅含极高和高**EBG**成分的食物（图中红色部分）：不仅**血糖**迅速飙升，且缺乏脂肪/蛋白质/纤维成分来平衡控制高血糖早期所需的胰岛素"尾部"效应。
 
-Erratic consumption of snacks and sweet drinks that are loaded with fast absorbing carbs is problematic for **FCL**.
-
-
-#### Preparing for activity/sports
-
-When exercising or being active, with a pump or hybrid closed loop it is recommended that the user reduces **IOB** prior to exercise.
-
-With **FCL**, the algorithm is tuned to detect **UAM** and automatically deliver insulin to counter **BG** rises.  A high **Temp Target** and lower **Profile Percentage** (effective already around meal start) should be set well in advance of any activity.
-
-Unusual or erratic exercise activity levels present difficulties for **FCL**. Planning ahead is required for exercise (especially if you want to reduce the need for rescue carbs/snacks during sports low). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dl) **BG**  target, with “no **SMBs** at elevated target” selected in **AAPS*** preferences.
-
-#### Hurdles for kids
-
-**FCL** can present extra challenges for children and these include:
-
-- Lyumjev or Fiasp may not available or well tolerated.
-- Hourly basal rate may very low, providing a poor basis for big **SMBs**.
-- Diet may be rich in sweet components. With the typical low blood volume of a small body, strong tendency towards very high **BG** spikes.
-- Growth hormones and going through marked changes of insulin sensitivity makes it difficult to keep the **FCL** accurately tuned.
+随意摄入富含快速吸收碳水化合物的零食和甜饮会给**FCL**带来问题。
 
 
-## Enabling boosted SMBs: safety
+#### 为活动/运动做准备
 
-In **HCL** safety restrictions are implemented regarding bolus sizes that can be automatically given by the loop.
+在使用泵或混合闭环进行锻炼或活动时，建议用户在锻炼前减少 **IOB**。
+
+在**FCL**中，算法被调校为检测**UAM**并自动输送胰岛素对抗**血糖**上升。  应在任何活动开始前尽早设置较高的**临时目标**和较低的**配置文件百分比**（在用餐开始时左右已生效）。
+
+异常或不定期的运动水平会给**FCL**带来困难。 锻炼需要提前计划（特别是如果您想减少运动期间低血糖时对急救碳水化合物/零食的需求）。 在活动一天后，建议在晚餐完全消化后为夜间设置较低的**百分比配置文件**：在**自动化**中设置一个升高（>100 mg/dl）的**BG** 目标，并在 ***AAPS*** 首选项中选择“在升高目标时不使用 **SMB**”。
+
+#### 孩子们的障碍
+
+**FCL** 可能给儿童带来额外的挑战，其中包括：
+
+- Lyumjev 或 Fiasp 可能无法获得或耐受性不佳。
+- 小时基础率可能极低，难以为大剂量**SMB**提供基础。
+- 饮食可能富含甜食。 由于儿童身体通常血容量较低，因此很容易出现非常高的 **BG** 峰值。
+- 生长激素和胰岛素敏感性显著变化使**FCL**难以准确调校。
+
+
+## 启用增强型 SMB：安全性
+
+在**HCL**中实施了关于闭环自动推注量的安全限制。
 
 **FCL** loopers no longer need to give a sizable bolus around meal start. The impact of this means that restrictions in size limits for **SMBs** must be widened to make the loop capable of delivering large enough **SMBs**.
 
