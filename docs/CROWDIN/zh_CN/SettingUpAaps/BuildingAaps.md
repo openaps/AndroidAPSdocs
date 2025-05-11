@@ -1,10 +1,10 @@
 # 构建（Building）AAPS
 
-## Build yourself instead of download
+## 自行构建而非下载
 
-**由于医疗器械相关法规的限制，AAPS应用（一个apk文件）无法提供下载。 It is legal to build the app for your own use, but you must not give a copy to others!**
+**由于医疗器械相关法规的限制，AAPS应用（一个apk文件）无法提供下载。 构建该应用供自己使用是合法的，但不得将副本提供给他人**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+详情请参阅[常见问题页面](../UsefulLinks/FAQ.md)。
 
 
 
@@ -18,7 +18,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 | 2.6.2                   | 3.6.1                                    |                                          | 5.6    | 11  |
 | 2.8.2.1                 | 4.1.1                                    |                                          | 6.1    | 13  |
 | 3.1.0.3                 | 2020.3.1                                 | 最高支持至Meerkat版本                           | 7.3    | 17  |
-| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                      | 最高支持至Meerkat版本                           | 8.2    | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                      | 最高支持至Meerkat版本                           | 8.2    | 17  |
 | [3.3](#version3300)     | Ladybug (2024.2.1)                       | 最高支持至Meerkat版本                           | 8.9    | 21  |
 | [3.3.1.3](#version3300) | Ladybug 功能更新包 (2024.2.2)                 | 最高支持至Meerkat版本                           | 8.10   | 21  |
 | [3.3.2](#version3300)   | Meerkat (2024.3.1)                       |                                          | 8.11   | 21  |

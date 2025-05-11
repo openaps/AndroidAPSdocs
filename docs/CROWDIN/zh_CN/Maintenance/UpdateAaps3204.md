@@ -1,12 +1,14 @@
-# Updating to AAPS 3.2.0.4
+# 更新至AAPS 3.2.0.4
 
-## Build yourself instead of download
+(update-aaps-3204)=
 
-**由于医疗器械相关法规的限制，AAPS应用（一个apk文件）无法提供下载。 It is legal to build the app for your own use, but you must not give a copy to others!**
+## 自行构建而非下载
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**由于医疗器械相关法规的限制，AAPS应用（一个apk文件）无法提供下载。 构建该应用供自己使用是合法的，但不得将副本提供给他人**
 
-## Computer and software specifications for building AAPS 3.2.0.4
+详情请参阅[常见问题页面](../UsefulLinks/FAQ.md)。
+
+## 构建AAPS 3.2.0.4的计算机及软件要求
 
 * 构建APK可能需要特定版本的**[Android Studio](https://developer.android.com/studio/)**。
 
@@ -55,85 +57,85 @@ Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取�
 
 **强烈建议（非强制）使用固态硬盘（SSD）而非机械硬盘（HDD），因为这将减少你构建AAPS apk文件所需的时间。**不过，在构建**AAPS** apk文件时，你仍然可以使用机械硬盘。 如果使用机械硬盘，构建过程可能会需要很长时间才能完成，但是一旦开始，你就可以让它无人值守地运行。
 
-## Help and support during 3.2.0.4 building process
+## 3.2.0.4构建过程中的帮助与支持
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html) section, please consult that first.
+若在构建**AAPS**应用时遇到困难，请先查阅专用[Android Studio故障排除](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html)章节。
 
 如果你认为构建说明中有错误、遗漏或令人困惑的地方，或者你仍然在努力解决问题，请联系[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)上的其他**AAPS**用户组。 如果你想自己更改某些内容（如更新截图_等_），请提交一个[拉取请求（PR）](../SupportingAaps/HowToEditTheDocs.md)。
 
 ```{note}
-This page provides both example pictures for the **New** and old (**Classic**) Android Studio user interfaces.
+本页面同时展示了新版和经典版Android Studio用户界面的示例图片。
 ```
 
-## Overview for updating 3.2.0.x to 3.2.0.4
+## 3.2.0.x至3.2.0.4更新概览
 
 ```{contents} Steps for updating to 3.2.0.4
 :depth: 1
 :local: true
 ```
 
-### Export your current settings
+### 导出当前设置
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+从手机现有**AAPS**版本导出设置。 您可能用不到它，但以防万一最好保存。
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+若忘记操作方法，请参阅[导出与导入设置](ExportImportSettings.md)。
 
-### Update your local AAPS copy
+### 更新本地AAPS副本
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* 在 Android Studio 中打开现有的 AAPS 项目。 可能需要选择您的项目。 （双击）AAPS项目。
 
-![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
-
-<br>
-
-![Android Studio - Select Project](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
-
-* In the menu bar of Android Studio, select Git -> Fetch
-
-![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+![Android Studio - 选择项目](../images/update/01_ProjectSelection.png)
 
 <br>
 
-![Android Studio Menu - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
+![Android Studio - 选择项目](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* 在Android Studio菜单栏选择Git -> Fetch
 
-![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
-
-<br>
-
-![Android Studio Menu - Git - Fetch successful](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
-
-* In the menu bar, now select Git -> Pull
-
-![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+![Android Studio 菜单 - Git - Fetch](../images/update/02_GitFetch.png)
 
 <br>
 
-![Android Studio Menu - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
+![Android Studio 菜单 - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* 右下角会显示 Fetch 成功的消息。
 
-![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+![Android Studio 菜单 - Git - Fetch 成功](../images/update/03_GitFetchSuccessful.png)
 
 <br>
 
-![Android Studio - Git - Pull dialog](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
+![Android Studio 菜单 - Git - Fetch 成功](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* 在菜单栏选择Git -> Pull
+
+![Android Studio 菜单 - Git - Pull](../images/update/04_GitPull.png)
+
+<br>
+
+![Android Studio 菜单 - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
+
+* 保持所有选项默认（origin/master）并点击 Pull
+
+![Android Studio - Git - Pull 对话框](../images/update/05_GitPullOptions.png)
+
+<br>
+
+![Android Studio - Git - Pull 对话框](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
+
+* 等待下载完成，底部状态栏会显示进度。 完成后，会显示成功消息。
 
   ```{note}
-  The files that were updated may vary! This is not an indication
+  更新的文件可能不同！ 这并不意味着有问题。
   ```
 
 
-![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+![Android Studio - Pull 成功](../images/update/06_GitPullSuccess.png)
 
 <br>
 
-![Android Studio - Pull successful](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
+![Android Studio - Pull 成功](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Gradle Sync 会自动运行以下载依赖项。 请等待它完成。
 
 ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
@@ -141,69 +143,69 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Gradle Sync](https://androidaps.readthedocs.io/en/3.1/_images/40_BackgroundTasks.png)
 
-### Select JVM version 17
+### 选择JVM 17版本
 
-- Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+- 点击右侧大象图标(1)打开 Gradle 视图，进入设置(2)选择 **Gradle Settings**(3)：
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
+![打开 Gradle 设置](../images/studioTroubleshooting/161_GradleSettings.png)
 
 <br>
 
-![Open Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
+![打开 Gradle 设置](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- In **Gradle JDK** field, check if the appropriate version: **jbr-17** is selected (1) If not, click on the field, and see if it is already available in the list.
+- 在**Gradle JDK**字段检查是否已选择**jbr-17**（1）。 若未选择，点击字段查看是否已存在列表中。
 
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+![选择 JDK 17](../images/studioTroubleshooting/162_DownloadJDK.png)
 
 
 
-- In Version (1), select **17**. In Vendor (2) select JetBrains Runtime or any Vendor. Location (3): do not change.
+- 在版本（1）中选择**17**， 供应商（2）选择JetBrains Runtime或其他供应商。 位置(3)保持默认。
 
 ![Select JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
 
-- Close the **Settings** dialog with **OK**.
+- 点击 **OK** 关闭**设置**
 
-### Select the AAPS 3.2.0.4 branch
+### 选择AAPS 3.2.0.4分支
 
-- At the bottom left, select the Git symbol, right-click on 3.2.0.4 and Checkout.
+- 左下角点击Git符号，右键3.2.0.4分支并选择Checkout。
 
-![Select Download JDK](../images/studioTroubleshooting/17_Checkout.png)
+![选择 JDK 17](../images/studioTroubleshooting/17_Checkout.png)
 
 <br>
 
-![Select Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
+![选择 JDK 17](../images/studioTroubleshooting/17_CheckoutOld.png)
 
-### Sync project with Gradle
+### 同步Gradle项目
 
 ```{admonition} WARNING!
 :class: warning
-**Never update Gradle.** Always sync it with the project.
+**切勿更新Gradle。 ** 始终与项目同步。
 ```
 
-Use the elephant icon and Sync Project with Gradle Files (or follow [this](#gradle-resync)) for the new UI.
+新版界面使用大象图标选择Sync Project with Gradle Files（或参考[此处](#gradle-resync)）。
 
-![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephant.png)
+![同步Gradle项目](../images/studioTroubleshooting/06_GradleResyncElephant.png)
 
-Or ([this](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) for the classic UI.
+经典界面参考[此处](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)。
 
-![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephantOld.png)
+![同步Gradle项目](../images/studioTroubleshooting/06_GradleResyncElephantOld.png)
 
-### Build the Signed 3.2.0.4 APK
+### 构建签名版3.2.0.4 APK
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+您的源代码现在是当前发布的版本，并且已检查所有前提条件。 请按 [构建签名 APK 章节](#Building-APK-generate-signed-apk) 的描述构建签名 APK。
 
-### Transfer and install the 3.2.0.4 APK
+### 传输并安装3.2.0.4 APK
 
-You need to transfer the apk to your phone so you can install it.
+需将 APK 传输至手机后进行安装。
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+若您使用 Android Studio 中已有的密钥库完成构建，则无需删除手机上的现有应用。 安装APK时，按照提示安装更新。
+对于其他场景，例如在Android Studio中为您的签名APK建立新的密钥库，您需要在安装APK之前删除旧的应用程序。 **确保导出您的设置！**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
+具体操作请参考 [传输与安装 AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md) 说明。
 
-### Check AAPS version 3.2.0.4 on phone
+### 验证手机上的AAPS 3.2.0.4版本
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+安装新的APK后，您可以通过点击右上角的三个点菜单，然后点击“关于”来检查手机上的AAPS版本。 您应该看到当前版本。
 

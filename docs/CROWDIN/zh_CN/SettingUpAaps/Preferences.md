@@ -86,7 +86,7 @@
 
 **生物识别保护功能可能在一加手机上无法正常工作。 这是一些一加手机上已知的问题。**
 
-![Set master password](../images/MasterPW.png)
+![设置主密码](../images/MasterPW.png)
 
 ### 设置保护
 

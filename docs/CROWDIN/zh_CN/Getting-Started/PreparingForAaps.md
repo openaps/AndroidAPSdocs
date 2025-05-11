@@ -104,7 +104,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 此外，**AAPS**提供了[导出所有配置设置](../Maintenance/ExportImportSettings.md)的功能。 这确保了你可以在更换手机、升级/重新安装应用程序时，以最小的干扰安全地恢复你的系统。 
 
-#### Troubleshooting
+#### 故障排除
 
 如果你有任何不确定的地方，请随时联系AAPS社区——没有问题是愚蠢的！ 我们鼓励所有不同经验水平的用户提问。 由于**AAPS**用户众多，通常问题的回复速度很快。
 
