@@ -233,21 +233,21 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 在给予最初的增强型 **SMB** 后，您设置的 iobTH 和*自动化** #3 应该在限制葡萄糖峰值和餐后不导致低血糖之间取得良好平衡。
 
-If your breakfast substantially deviates in carb content from your average dinner, you may benefit from defining **Automations** that apply in the respective times of day, and have different **iobTH** (possibly also different deltas, and different **Percentage Profile** set). Both, you with defining your meal spectrum and settings (notably, **iobTH**), and the loop managing the unfolding **BG** curve, must accept certain peak heights for reducing hypo danger towards the end of the **DIAs** from **SMBs**.
+如果您的早餐碳水化合物含量与您的平均晚餐有很大差异，您可能会受益于定义适用于一天中相应时间的**自动化**，并具有不同的 **iobTH**（可能还有不同的增量和不同的**百分比配置文件**设置）。 您通过定义餐谱和设置（特别是IOB阈值）与闭环共同管理**血糖**曲线，必须接受某些峰值高度以减少DIA末期的低血糖风险。
 
-### Stagnation at high bg values
+### 高血糖值的停滞状态
 
-In case, after a “rich” meal, a long-lasting stagnation with **high BG** value is seen, **Automation** #6 (below, left),"post-meal High”, helps deal with fatty acid resistance: After multi-course meals, large greasy pizza, raclette evening, the glucose curve can form two humps or, very often, an elongated high plateau.
+在"丰盛"餐后出现长期高血糖平台时，规则#6（下图左）"餐后高血糖"有助于应对脂肪酸抵抗：多道餐、油腻披萨、奶酪火锅后，血糖曲线可能形成双峰或长平台。
 
 ![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop05.png)
 
-Automation #4
+自动化 #4
 
 ![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop06.png)
 
-Automation #5
+自动化 #5
 
-Automation #4, “post-meal High”, is also suitable in hybrid closed loop.
+自动化#4“餐后高血糖”也适用于混合闭环。
 
 In addition, a termination-Automation #5, “Stop pmH”, is needed, so that the aggressiveness of the insulin administration is reduced, as soon as the glucose value is falling. (However, often the loop will limit more insulin anyways for hypo prevention because predicted glucose runs low already).
 
