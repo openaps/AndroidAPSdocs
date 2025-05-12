@@ -120,17 +120,17 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 在**HCL**中实施了关于闭环自动推注量的安全限制。
 
-**FCL** loopers no longer need to give a sizable bolus around meal start. The impact of this means that restrictions in size limits for **SMBs** must be widened to make the loop capable of delivering large enough **SMBs**.
+**FCL**用户不再需要在餐时给予大剂量推注。 这意味着必须放宽**SMB**量限制，使闭环能输送足够大的**SMB**。
 
-If you are operating with **AAPS** in the Master release, it is suggested **AAPS**' Preferences are set up with the maximum allowed **SMB** size so that **FCL** can give (maxUAMSMBBasalMinutes=120, i.e. 2 hours worth of basal at that daytime).
+如果使用**AAPS**主版本，建议**AAPS**偏好设置允许最大**SMB**量（maxUAMSMBBasalMinutes=120，即日间2小时基础量）。
 
-If your basal rate is very low, the resulting **SMB** limits might be too low to allow sufficient control to tackle postprandial **BG** rises. One possible solution is to avoid diets that cause strong **BG** spikes and later switches to a **AAPS** dev variant that offers a new parameter in **SMB** delivery settings: smb_max_range_extension. This will expand the standard maximum of 2 hours worth of basal by a factor of >1. (Additionally, the default 50% **SMB** delivery ratio might be elevated in dev. variants).
+如果基础率非常低，生成的**SMB**限制可能不足以控制餐后**血糖**上升。 一个解决方案是避免导致强烈**血糖**飙升的饮食，然后切换到提供新**SMB**输送参数的**AAPS**开发版：smb_max_range_extension。 这将使标准的最大 2 小时基础胰岛素量扩大 >1 倍。 （此外，默认的 50% **SMB** 输送率可能会在开发变体中提高） 。
 
-**Follow the instructions to enable AAPS to mimic your bolussing via a couple of SMBs**.
+**按照说明使AAPS通过若干SMB模拟您的推注**。
 
-Check the **SMB** tab periodicallu to see whether your **SMBs** are allowed to be sufficient enough to deliver the required insulin needed for the loop around meal starts.
+定期检查 **SMB** 选项卡，查看您的 **SMB** 是否被允许足够大，以在用餐开始时提供循环所需的胰岛素。
 
-If not, your tuning efforts will sometimes come to nothing!
+否则，您的调校努力有时会白费！
 
 
 ```{admonition} Boosting **ISF** can become dangerous
