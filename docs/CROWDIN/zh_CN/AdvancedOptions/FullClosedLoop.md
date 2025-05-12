@@ -120,82 +120,82 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 在**HCL**中实施了关于闭环自动推注量的安全限制。
 
-**FCL** loopers no longer need to give a sizable bolus around meal start. The impact of this means that restrictions in size limits for **SMBs** must be widened to make the loop capable of delivering large enough **SMBs**.
+**FCL**用户不再需要在餐时给予大剂量推注。 这意味着必须放宽**SMB**量限制，使闭环能输送足够大的**SMB**。
 
-If you are operating with **AAPS** in the Master release, it is suggested **AAPS**' Preferences are set up with the maximum allowed **SMB** size so that **FCL** can give (maxUAMSMBBasalMinutes=120, i.e. 2 hours worth of basal at that daytime).
+如果使用**AAPS**主版本，建议**AAPS**偏好设置允许最大**SMB**量（maxUAMSMBBasalMinutes=120，即日间2小时基础量）。
 
-If your basal rate is very low, the resulting **SMB** limits might be too low to allow sufficient control to tackle postprandial **BG** rises. One possible solution is to avoid diets that cause strong **BG** spikes and later switches to a **AAPS** dev variant that offers a new parameter in **SMB** delivery settings: smb_max_range_extension. This will expand the standard maximum of 2 hours worth of basal by a factor of >1. (Additionally, the default 50% **SMB** delivery ratio might be elevated in dev. variants).
+如果基础率非常低，生成的**SMB**限制可能不足以控制餐后**血糖**上升。 一个解决方案是避免导致强烈**血糖**飙升的饮食，然后切换到提供新**SMB**输送参数的**AAPS**开发版：smb_max_range_extension。 这将使标准的最大 2 小时基础胰岛素量扩大 >1 倍。 （此外，默认的 50% **SMB** 输送率可能会在开发变体中提高） 。
 
-**Follow the instructions to enable AAPS to mimic your bolussing via a couple of SMBs**.
+**按照说明使AAPS通过若干SMB模拟您的推注**。
 
-Check the **SMB** tab periodicallu to see whether your **SMBs** are allowed to be sufficient enough to deliver the required insulin needed for the loop around meal starts.
+定期检查 **SMB** 选项卡，查看您的 **SMB** 是否被允许足够大，以在用餐开始时提供循环所需的胰岛素。
 
-If not, your tuning efforts will sometimes come to nothing!
+否则，您的调校努力有时会白费！
 
 
 ```{admonition} Boosting **ISF** can become dangerous
 :class: danger
 
-Carefully observe/analyse the **SMB** sizes shortly after your meal commences. Tune in steps, and do not vary more than 1 or 2 parameters at a time.
+密切观察/分析餐后**SMB**量。 逐步调校，每次最多调整1-2个参数。
 
-Your **AAPS'** setting must be sufficiently set up to cope with your (!) variety of meals.
+您的**AAPS**设置必须充分适应您的各种餐食。
 ```
 
-## Meal detection/your Automations for boosting
+## 进餐检测/您的增强自动化规则
 
-For successful **FCL**, **ISF** is the key tuning parameter. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
+**FCL**成功的关键调校参数是**ISF**。 当使用 **AAPS** Master + **自动化**时，**必须在识别到膳食时（通过葡萄糖增量）自动触发 > 100% 的配置文件更改**，并提供强化的 **ISF**。
 
-**AAPS** Master allows up to 130% temporary **Profile** in **HCL** p mode. Boosting the **ISF** is done in 3 steps:
+**AAPS** Master 在 **HCL** p 模式下允许高达 130% 的临时**配置文件**。 提升 **ISF** 分 3 个步骤完成：
 
-- Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body..
-- Step 2 - apply a factor (1/Profile%, as set in **Automation**) to boost **ISF**.
-- Step 3 - check that the suggested **ISF** falls within set safety limits.
+- 第1步 - 查看**配置文件**中当前餐时适用的**ISF**，例如Autosens是否建议考虑身体当前（过去几小时）胰岛素敏感性状态的调整。
+- 第2步 - 应用系数（1/配置文件%，在**自动化规则**中设置）增强**ISF**。
+- 步骤 3 - 检查建议的 **ISF** 是否在设定的安全限制范围内。
 
-### FCL's Automation templates
+### FCL 的自动化模板
 
-Boxes to tick at the top. You have the option:
+顶部的复选框。 您可以选择：
 
-- In your **Automation** list, you can tick the check-mark (to the left of each field) OFF => This de-activates that **Automation**. For instance you can do this for all breakfast related **FCL** **Automations** to go to **HCL** for breakfast(s).
+- 在**自动化规则**列表中，可取消左侧复选框>停用该规则。 例如，您可以对所有与早餐相关的 **FCL** **自动化**执行此操作，以便在早餐时切换到 **HCL**。
 
-- For each **Automation** rule you can tick the box for User action => then the defined Actions will not automatically be executed when Conditions apply. Rather, the **AAPS** main screen will alert you whenever your **FCL** would automatically give a **SMB**. You have the opportunity then to say ‘yes’ or ‘no’. This is extremely useful in your tuning phase.
+- 对于每个**自动化**规则，您可以勾选用户操作框 =\> 那么当条件适用时，定义的操作将不会自动执行。 相反，当您的 **FCL** 会自动给出 **SMB** 时，**AAPS** 主屏幕会提醒您。 然后您有机会说“是”或“否”。 这在调校阶段非常有用。
 
-This feature can be useful for certain situations like “foot to floor” syndrome whher there is a sudden rise in **BG** when getting up in the morning, but the user wants to prevent a fully automatic “breakfast started” response.
+该功能可用于某些场景，如早晨起床时"脚踏实地"综合征（血糖突然上升），但用户希望阻止全自动"早餐开始"响应。
 
-The section below provides guidance how to bundle **Automation’s** Conditions and how to tackle situations in which the **AAPS** should increase (or decrease) insulin delivery. As **ISF** cannot directly be tuned, raising **Profile Percentage** over 100% will do the same for our purposes.
+下文指导如何组合**自动化规则**条件，以及如何处理**AAPS**需要增加/减少胰岛素输送的情况。 由于 **ISF** 不能直接调整，因此将**配置文件百分比**提高到 100% 以上将达到我们的目的。
 
-### Automated big SMBs at bg rise
+### 在血糖上升时自动进行大剂量SMB。
 
-The key to successful **FCL** **at the beginning of BG increases from meals, very large automatic SMBS must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in h**HCL**!)
+**FCL**成功的关键在于：**在餐后血糖开始上升时，闭环必须尽快给予非常大的自动SMB**"追赶"所需**IOB**（与您在**HCL**中对类似餐食的典型推注量比较！）
 
-To achieve this, data from your **HCL** should be analysed to determine which **deltas** might be not meal –related and those delta which might be.
+为此，需分析**HCL**数据以确定哪些变化率（delta）可能与进餐无关，哪些相关。
 
-- As you can define the **Automation** within a pre-defined time-window, you need only to analyse there.
-- If you do very different kinds of meals (e.g. a rather high carb breakfast, but low carb lunch) you can choose to do two different (sets of) **Automations** for each of the time slots.
-- Exclude the nights if you see occasional jumps from a compression lows
-- Usually, just using the delta of the past 5 minutes suffices.
-- But you can also make use one of the average deltas. By comparing the deltas in the conditions of your **Automations** you could even define actions of different aggressiveness depending on whether the **BG** rises in an accelerated way or not.
+- 由于您可以在预定义的时间窗口内定义**自动化**，因此您只需要在该时间窗口内进行分析。
+- 如果餐型差异大（如高碳早餐、低碳午餐），可为不同时段设置不同**规则集**。
+- 如果在夜间看到偶尔的跳变，请排除夜间
+- 通常仅使用过去5分钟的delta足够。
+- 也可使用平均delta。 通过比较规则条件中的delta，甚至可根据血糖上升加速度定义不同积极程度的操作。
 
-> ( delta – short avg delta )>n   is a term that could be used for acceleration detection , to trigger first **SMB** at earliest sign of rising **BG**. -                                                                             
-> Caution: not possible to use with poor or highly smoothened **CGM-values!
+> (delta - 短期平均delta)>n 可作为加速度检测项，在血糖上升最早迹象时触发首个**SMB**。 -                                                                             
+> 注意：在CGM数据质量差或过度平滑时不适用！
 
-A **CGM** with patchy data puts the user in a bad spot because, to be on the safe side,  you need to „sandbag“ your definition which delta is surely a sign of a started meal. This means:
+数据不稳定的 **CGM** 会让用户处于不利地位，因为为了安全起见，您需要“保守”地定义哪个增量肯定是开始进餐的迹象。 这意味着：
 
-- **FCL** loses additional time, resulting in higher **BG** peaks and lower %**TIR**;
-- you cannot use an earlier or smaller delta which could trigger, also without a meal, the **SMBs** that are supposed to make up for a user bolus in **FCL**.
+- **FCL** 会损失额外的时间，导致更高的 **BG** 峰值和更低的 %**TIR**；
+- 无法使用更早/更小的delta触发非进餐情况下的**SMB**（本应用于模拟**FCL**中的用户推注）。
 
-Furthermore, first rises after a meal are characterized by **low iob** present. With that in mind, an Automation(#1) for a dinner might look like this:
+此外，餐后首次血糖升高通常伴随着**低 IOB**。 基于此，晚餐的自动化规则（#1）可能如下：
 
 ![8mg jump 130% ioby4](../images/fullClosedLoop02.png)
 
-Automation #1
+自动化规则 #1
 
-If Conditions apply, **AAPS** would give 1 or 2 **SMBs** in the next 12 minutes, using a boosted **ISF** according to the set elevated **Profile Percentage** (in the example, a 30% boost of insulinReq). As long as these Conditions apply, the **Automation**  rule extends by another 12 minutes. A low carb meal might have slower **BG** rise characteristics. It would benefit from another Automation (#2) that kicks in at lower delta, and gives a weaker insulin boost.
+条件满足时，**AAPS**将在接下来12分钟内给予1-2次**SMB**，使用提升的**ISF**（示例中胰岛素需求提升30%）。 只要这些条件适用，**自动化**规则将再延长 12 分钟。 低碳餐可能有更慢的**血糖**上升特征， 它将受益于另一个在较低增量时启动并提供较弱胰岛素增强的自动化 (#2)。
 
 ![>=5mg jump 115%, iob<5.5](../images/fullClosedLoop03.png)
 
-The same **Automation** probably will kick in also in higher carb meals, once the steep rise as defined in Automation#1 is over.
+一旦自动化#1中定义的急剧上升结束，同样的**自动化**可能也会在碳水化合物含量较高的膳食中启动。
 
-You need to “stage” these two (+ maybe a third) **Automations** to fit with what you see in your meal (variety) => Setting appropriate jump sizes, **iob** criteria, and amplifications will be an iterative tuning process.  Also, if you include appropriate time slots in the Conditions, you can easy do different Automations for your different daily meals times (breakfast, lunch, dinner).
+您需要“分阶段”安排这两个（或许还有第三个）**自动化**，以适应您所见的膳食（种类）=> 设置适当的跳跃幅度、**iob** 标准和放大倍数将是一个需要反复调试的过程。  此外，如果您在条件中包含适当的时间段，您可以轻松地为不同的每日用餐时间（早餐、午餐、晚餐）设置不同的自动化。
 
 Note that, still in the rise phase (!), the "overflow" of **iob** must be blocked so that the late effects of the **insulin** (the "**tail**" after 3-5 hours) will not exceed the braking capacity of the loop through zero-temping (“taking away” basal, to reduce hypo risk).
 
