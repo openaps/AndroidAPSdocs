@@ -59,7 +59,7 @@ Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲�
 
 ## Help and support during 3.2.0.4 building process
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html) section, please consult that first.
+如果在建置**AAPS**應用的過程中遇到困難，請參考專門的[**Android Studio問題排除**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html)部分。
 
 如果你認為建置說明中的內容有錯誤、缺失或令人困惑，或仍然感到困難，請與其他**AAPS**用戶群聯繫，群組可在[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)上找到。 如果你想自行更改某些內容（更新螢幕截圖_等_），請提交[拉取請求（PR）](../SupportingAaps/HowToEditTheDocs.md)。
 
@@ -78,7 +78,7 @@ This page provides both example pictures for the **New** and old (**Classic**) A
 
 Export your settings from the existing **AAPS** version on your phone. 你可能不需要這樣做，但防患於未然更好。
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+如果您忘記如何做，請參見[匯出與匯入設定](ExportImportSettings.md)頁面。
 
 ### Update your local AAPS copy
 
