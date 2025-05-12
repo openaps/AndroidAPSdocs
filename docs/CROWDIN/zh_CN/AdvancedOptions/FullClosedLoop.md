@@ -197,9 +197,9 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 您需要“分阶段”安排这两个（或许还有第三个）**自动化**，以适应您所见的膳食（种类）=> 设置适当的跳跃幅度、**iob** 标准和放大倍数将是一个需要反复调试的过程。  此外，如果您在条件中包含适当的时间段，您可以轻松地为不同的每日用餐时间（早餐、午餐、晚餐）设置不同的自动化。
 
-Note that, still in the rise phase (!), the "overflow" of **iob** must be blocked so that the late effects of the **insulin** (the "**tail**" after 3-5 hours) will not exceed the braking capacity of the loop through zero-temping (“taking away” basal, to reduce hypo risk).
+注意，在上升阶段仍需阻止"溢出"的**IOB**，以免胰岛素后期效应（3-5小时后的"尾部"）超过闭环通过零基础率（减少低血糖风险）的制动能力。
 
-With large meals there is **sometimes a second increase**. By then, usually also the iob has dropped a bit, and the more aggressive Automations take effect again. (Check that your iob condition in Automation #2 is not set too low to for this to happen).
+对于大餐，**有时会出现第二次升高**。 此时IOB通常已下降，更积极的规则再次生效。 （检查自动化 #2 中的 iob 条件是否设置得太低而不会发生这种情况）。
 
 Soon after a few initial **SMBs** are given comes a **balanced phase** where moderate delivery of insulin should cover the additional carbs absorbed. (Except in low carb meals, where the loop might see too weak of a**BG** rise, and go into zero-temping right away already now).
 
