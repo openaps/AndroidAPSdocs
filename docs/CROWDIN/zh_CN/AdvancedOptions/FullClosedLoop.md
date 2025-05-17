@@ -323,8 +323,8 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
     - 请在**超级微剂量(SMB)**标签页中实时检查是否需要缩小**SMB**剂量范围扩展设置。
     - 请实时在**超级微剂量(SMB)**标签页中检查是否需要调低**配置文件百分比(Percentage Profile)**的设置值。
     - SMB 输送率可能可以设置得更小。 请注意：在此情况下，该设置将全局生效，适用于所有时间段的**超级微剂量(SMB)**。
-- Problems with insulin “tail” after meals
-    - You may need to take a snack (seeing hypo prediction) or glucose tablets (if already in hypo zone). But note that the carbs required the loop might tell you at some point are very likely exaggerated as the loop has absolutely zero info on your carb intake (while you may be able to guess how much more, incl. from fats and proteins) is still waiting to be absorbed.
+- 餐后胰岛素“拖尾”问题
+    - 您可能需要吃点零食（看到低血糖预测）或葡萄糖片（如果已经处于低血糖区）。 但需注意：闭环系统在某个时间点提示您所需的碳水化合物量很可能被高估，因为系统完全无法获取您的实际碳水摄入数据（尽管您可能自行估算包括脂肪和蛋白质在内的待吸收营养总量）。
     - A valuable information would be whether the problem originates mostly in the bg rise phase already. Then setting a lower iobTH might be an easy remedy.
     - If the need for additional carbs happens frequently, note down how many grams were needed (not counting what you eventually took too much and required extra insulin again).  Then use your profile IC value to estimate how much insulin less the **SMB** should have delivered, and go with this info into your tuning (regarding the **Percentage Profile** in **Automations**, or maybe also your set iobTH). This may relate to the**SMBs** given when glucose was high, or also extending regarding also the **SMBs** during the **BG** rise.
     - It could well be that you simply have to accept higher **BG** peaks for not going low. Or change diet to something with lower amounts of carbs, and higher amount of proteien and fats.
