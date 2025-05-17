@@ -255,28 +255,28 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 核心问题是**UAM** **FCL**（无碳水输入）无法知道还有多少克碳水待吸收，可能用完"尾部"胰岛素导致低血糖。
 
-Using boosted **SMBs**, the **FCL** “caught up” with what we formerly did with a meal bolus. But, **at the “tail” end of insulin activity, hypo prevention can become a serious topic**.
+**FCL**通过使用增强**SMB**"追赶"餐时推注。 但是，**在胰岛素作用的“尾效”阶段，低血糖预防可能成为一个严重的问题**。
 
-In preparation for **FCL**, the user must take a closer look at the **time course of iob** for typical meals, and judge **when it becomes too much, and how you can catch that by tuning your Automations**. That is possible because we have several adjusting screws. It can be a challenge to get this right
+准备**FCL**时，用户需仔细查看典型餐食的**IOB时程**，判断何时过量，以及如何通过调校规则解决。 这是可能的，因为我们有好几个可调节项。 要正确设置可能是一个挑战。
 
-Generally, it makes no sense to keep optimising settings for one kind of meal. Once you have a good-enough setting e.g. for one kind of lunch you frequently have, test how this works with other kinds, and how you would “compromise”.
+通常为单一餐型优化设置没有意义。 当获得对某常见午餐的良好设置后，需测试其对其他餐型的适用性，进行"折衷"。
 
-In order to prevent hypo in post-meal hours 3 – 5, reduce the aggressiveness before too much iob comes together. Specific approaches:
+为了防止餐后 3-5 小时发生低血糖，在 iob 聚集过多之前降低激进程度。 具体方法：
 
-- Become milder and milder with the **ISF** already during the glucose rise, as in Automation examples #1 and #2 given.
-- Define the iob threshold, from which **AAPS** is made significantly more cautious (Automation #3, above). Note this **iob** can be exceeded, by the last **SMB** before it went into effect; and then further by TBRs if the loop sees insulinReq Carbs getting absorbed will provide a counter-movement towards lower iob.
-- The iob threshold could be differentiated according to meals: By cloning the automations, you could easily differentiate for breakfast, lunch, and dinner time slots (or even for geo-locations, like company cafeteria, or at mother-in-law etc)
-> You could differentiate within these time slots even further by setting different TTs for low carb vs. fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with **Automations** specially tuned for them. This is probably not necessary, unless your diet habits do vary a lot.
+- 在血糖升高期间即开始逐渐减缓**ISF**，如提供的自动化示例#1和#2所示。
+- 定义使**AAPS**明显更谨慎的IOB阈值（规则#3）。 需注意：在生效前最后一次**SMB**可能使**IOB**超出此值；若闭环系统检测到胰岛素需求，临时基础率（TBRs）会进一步增加该值。碳水化合物吸收过程将产生降低胰岛素在体量的反向作用。
+- IOB阈值可根据餐次进行差异化设置：通过克隆自动化规则，可轻松为早餐、午餐和晚餐时段分别设定不同阈值（甚至可根据地理位置差异，如公司食堂或岳母家等场景进行个性化配置）。
+> 可在此时段内进一步细分：通过为低碳水化合物与快速碳水化合物等不同类型餐食设定不同临时目标（TTs），从而预置该时段可能出现的不同餐类配置，并通过专门调校的**自动化规则**进行调用。 除非饮食习惯差异大，否则可能无需此操作。
 
-Before a special meal challenge, you can raise your **iob** threshold, or make another change in any of your Automations within under 5 seconds, right from your AAPS main screen (burger top left; or **Automations** tab, depending how you configured your **AAPS**).
+在进行特殊饮食挑战前，您可直接通过AAPS主界面（左上角汉堡菜单或**自动化规则**标签页，具体取决于您的**AAPS**配置），在5秒内提升**胰岛素在体量**阈值或修改任意自动化规则参数。
 
-The hypo danger some hours after the meal is essentially a question of whether your meal composition was such, that the **insulin tails from fighting the bulk of carbs** will be **consumed by “extended carbs”** (excessive/delayed carb absorption/protein/fat/fibre).
+餐后低血糖风险本质是餐食成分是否使对抗主要碳水的胰岛素"尾部"能被"延伸碳水"（过量/延迟吸收的碳水/蛋白质/脂肪/纤维）消耗。
 
-Over time you will learn patterns, tune your Automations – maybe even adjust your eating habits a bit, e.g. just enjoy the occasional late little(!) snack that may help maintain a good **balance of insulin activity and carb absorption** for the **entire** meal (digestion, absorption) time, and thus make life for your loop (and for yourself) easier.
+随时间推移，您将学习模式、调校规则——甚至调整饮食习惯，例如偶尔享用帮助维持胰岛素活性和碳水吸收平衡的后期小零食，使闭环（和您自己）更轻松。
 
-### Order of programmed Automations
+### 自动化规则顺序
 
-Problems can arise with overlapping definitions in **Automations**. Example: The problem is that delta >8 is also delta >5, i.e. there may be two competing **Automations** What does the loop do then? It always decides according to the sequence in which your **Automations** appear when looking into the burger menu / AdAPS main screen.  Example: The delta > +8 rule must come first (and launch the strongest boost if all conditions apply); then comes the check for delta >5 (and a milder response). If done the other way round, the delta>8 rule would never come into effect because the delta>5 already applies, case closed.
+当**自动化规则**中存在定义重叠时，可能引发系统逻辑冲突。 示例：当Δ值>8mmol/L同时满足Δ值>5mmol/L时（即两条相互冲突的**自动化规则**同时被触发），闭环系统将如何执行？ 闭环系统始终依据**自动化规则**在汉堡菜单/AAPS主界面中的显示顺序执行决策。  Example: The delta > +8 rule must come first (and launch the strongest boost if all conditions apply); then comes the check for delta >5 (and a milder response). If done the other way round, the delta>8 rule would never come into effect because the delta>5 already applies, case closed.
 > Tip for Automations: Order changes are very easy to make. Press on a list entry in **AAPS/Automations** and the user rearrange the **Automations** in question to another position.
 
 Also it is very easy and quick to adjust any conditions or actions at any time, within seconds, just on your AAPS smartphone; for instance if you head into a very special eating event. (But don’t forget to set it back to normal on/for the next day).
