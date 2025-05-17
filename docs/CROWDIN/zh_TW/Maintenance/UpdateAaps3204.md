@@ -1,4 +1,4 @@
-# Updating to AAPS 3.2.0.4
+# 更新至 AAPS 3.2.0.4
 
 (update-aaps-3204)=
 
@@ -8,7 +8,7 @@
 
 詳細資訊請參閱 [FAQ 頁面](../UsefulLinks/FAQ.md)。
 
-## Computer and software specifications for building AAPS 3.2.0.4
+## 建立 AAPS 3.2.0.4 的電腦及軟體規格
 
 * 可能需要特定版本的 **[Android Studio](https://developer.android.com/studio/)** 來建立 apk。
 
@@ -57,30 +57,30 @@ Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲�
 
 **強烈建議（不是強制）使用SSD（固態硬碟）而非HDD（硬碟）因為在建置AAPS apk文件時將需要更少時間。** 在建置**AAPS** apk文件時仍可以使用HDD。 如果這樣做，建置過程可能需要很長時間才能完成，但開始後，你可以讓他無需監控地執行。
 
-## Help and support during 3.2.0.4 building process
+## 在 3.2.0.4 建立過程中的協助與支援
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html) section, please consult that first.
+如果在建置**AAPS**應用的過程中遇到困難，請參考專門的[**Android Studio問題排除**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html)部分。
 
 如果你認為建置說明中的內容有錯誤、缺失或令人困惑，或仍然感到困難，請與其他**AAPS**用戶群聯繫，群組可在[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)上找到。 如果你想自行更改某些內容（更新螢幕截圖_等_），請提交[拉取請求（PR）](../SupportingAaps/HowToEditTheDocs.md)。
 
 ```{note}
-This page provides both example pictures for the **New** and old (**Classic**) Android Studio user interfaces.
+此頁面提供 **新** 與舊 (**Classic**) Android Studio 使用者介面的範例圖片。
 ```
 
-## Overview for updating 3.2.0.x to 3.2.0.4
+## 更新 3.2.0.x 至 3.2.0.4 的概覽
 
 ```{contents} Steps for updating to 3.2.0.4
 :depth: 1
 :local: true
 ```
 
-### Export your current settings
+### 匯出您目前的設定
 
-Export your settings from the existing **AAPS** version on your phone. 你可能不需要這樣做，但防患於未然更好。
+從您手機上現有的 **AAPS** 版本匯出您的設定。 你可能不需要這樣做，但防患於未然更好。
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+如果您忘記如何做，請參見[匯出與匯入設定](ExportImportSettings.md)頁面。
 
-### Update your local AAPS copy
+### 更新您本地的 AAPS 複本
 
 * 使用 Android Studio 開啟你現有的 AAPS 項目。 你可能需要選擇你的項目。 (雙擊) 點擊 AAPS 項目。
 
@@ -90,7 +90,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - 選擇項目](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* 在 Android Studio 的選單列中，選擇 Git -> 取回
 
 ![Android Studio 選單 - Git - Fetch](../images/update/02_GitFetch.png)
 
@@ -106,7 +106,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio 選單 - Git - Fetch 成功](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
 
-* In the menu bar, now select Git -> Pull
+* 在選單列中，現在選擇 Git -> 拉取
 
 ![Android Studio 選單 - Git - Pull](../images/update/04_GitPull.png)
 
@@ -143,7 +143,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Gradle Sync](https://androidaps.readthedocs.io/en/3.1/_images/40_BackgroundTasks.png)
 
-### Select JVM version 17
+### 選擇 JVM 版本 17
 
 - 通過單擊 Android Studio 右側的“大象圖示” (1) 打開 Gradle 視圖，並打開設定 (2)，然後選擇 **Gradle 設定** (3)：
 
@@ -153,21 +153,21 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![開啟Gradle設定](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- In **Gradle JDK** field, check if the appropriate version: **jbr-17** is selected (1) If not, click on the field, and see if it is already available in the list.
+- 在 **Gradle JDK** 欄位中，檢查是否選擇了適當的版本：**jbr-17** (1) 如果沒有，請點擊該欄位，查看是否已經在列表中可選擇。
 
 ![選擇下載JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
 
 
-- In Version (1), select **17**. In Vendor (2) select JetBrains Runtime or any Vendor. 位置 (3)：請勿更改。
+- 在版本 (1) 中，選擇 **17**。 在供應商 (2) 中選擇 JetBrains Runtime 或其他任何供應商。 位置 (3)：請勿更改。
 
 ![選擇JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
 
 - 用**OK**關閉**設定**對話框。
 
-### Select the AAPS 3.2.0.4 branch
+### 選擇 AAPS 3.2.0.4 分支
 
-- At the bottom left, select the Git symbol, right-click on 3.2.0.4 and Checkout.
+- 在左下角，選擇 Git 圖示，右鍵點擊 3.2.0.4 並檢出。
 
 ![選擇下載JDK](../images/studioTroubleshooting/17_Checkout.png)
 
@@ -175,26 +175,26 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![選擇下載JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
 
-### Sync project with Gradle
+### 與 Gradle 同步專案
 
 ```{admonition} WARNING!
 :class: warning
-**Never update Gradle.** Always sync it with the project.
+**切勿更新 Gradle。** 請始終與專案同步。
 ```
 
-Use the elephant icon and Sync Project with Gradle Files (or follow [this](#gradle-resync)) for the new UI.
+使用大象圖示和與 Gradle 檔案同步專案（或參考 [這個](#gradle-resync)）以便於新 UI。
 
-![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephant.png)
+![與 Gradle 檔案同步專案](../images/studioTroubleshooting/06_GradleResyncElephant.png)
 
-Or ([this](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) for the classic UI.
+或（[這裡](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)）對於經典 UI。
 
-![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephantOld.png)
+![與 Gradle 檔案同步專案](../images/studioTroubleshooting/06_GradleResyncElephantOld.png)
 
-### Build the Signed 3.2.0.4 APK
+### 建立簽名的 3.2.0.4 APK
 
 你的原始碼現在是當前已發佈的版本，並且所有前置條件已經檢查過。 現在是時候按照[建立簽署的 APK 部分](#Building-APK-generate-signed-apk)中的說明來建立簽署的 APK。
 
-### Transfer and install the 3.2.0.4 APK
+### 傳輸並安裝 3.2.0.4 APK
 
 你需要將 apk 傳送到手機以便你安裝他。
 
@@ -205,7 +205,7 @@ Or ([this](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingA
 
 請參閱有關[傳送和安裝 AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)的說明。
 
-### Check AAPS version 3.2.0.4 on phone
+### 檢查手機上的 AAPS 版本 3.2.0.4
 
 安裝新 apk 後，你可以點擊右上角的三點選單，然後選擇 "關於"，以檢查手機上的 AAPS 版本。 你應該能看到目前版本。
 
