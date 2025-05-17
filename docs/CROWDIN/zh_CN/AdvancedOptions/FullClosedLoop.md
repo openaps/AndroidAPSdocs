@@ -249,11 +249,11 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 自动化#4“餐后高血糖”也适用于混合闭环。
 
-In addition, a termination-Automation #5, “Stop pmH”, is needed, so that the aggressiveness of the insulin administration is reduced, as soon as the glucose value is falling. (However, often the loop will limit more insulin anyways for hypo prevention because predicted glucose runs low already).
+此外，还需要一个终止自动化 #5，“停止 pmH”，以便在血糖值下降时降低胰岛素给药的激进程度。 （但闭环通常因预测血糖走低而限制更多胰岛素）。
 
-### Hypo prevention
+### 低血糖预防
 
-The core problem is that the **UAM** **FCL** (without carb inputs) can have **no idea how many g of carbs are still available** for absorption, and might use up that “tail” insulin, without you going into a hypo from it.
+核心问题是**UAM** **FCL**（无碳水输入）无法知道还有多少克碳水待吸收，可能用完"尾部"胰岛素导致低血糖。
 
 Using boosted **SMBs**, the **FCL** “caught up” with what we formerly did with a meal bolus. But, **at the “tail” end of insulin activity, hypo prevention can become a serious topic**.
 
