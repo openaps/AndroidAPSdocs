@@ -1,12 +1,12 @@
 # 闭环常见问题（FAQ）
 
-How to add questions to the FAQ: Follow the these [instructions](../SupportingAaps/HowToEditTheDocs.md)
+如何向FAQ添加问题：请按照以下[说明](../SupportingAaps/HowToEditTheDocs.md)操作
 
-## 一般
+## 常规
 
 ### 我可以直接下载AAPS的安装文件吗？
 
-无法直接下载。 没有可下载的AAPS apk文件。 You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. 原因如下：
+无法直接下载。 没有可下载的AAPS apk文件。 你必须自己[构建](../SettingUpAaps/BuildingAaps.md)它。 原因如下：
 
 AAPS用于控制您的泵并输注胰岛素。 根据欧洲现行的规定，所有被归类为IIa类或IIb类的系统都是医疗器械，需要获得监管机构的批准（即CE标志），而这需要经过各种研究和审核批准。 发布未经监管认可的设备是违法行为。 全球其他地区也有类似的规定。
 
@@ -18,132 +18,132 @@ AAPS用于控制您的泵并输注胰岛素。 根据欧洲现行的规定，所
 
 ### 如何开始？
 
-First of all, you have to **get loopable hardware components**:
+首先，您需要**获取可闭环的硬件组件**：
 
-- A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
-- an [Android smartphone](../Getting-Started/Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
-- a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
+- 一台[受支持的胰岛素泵](../Getting-Started/CompatiblePumps.md)， 
+- 一部[安卓智能手机](../Getting-Started/Phones.md)（AAPS不支持Apple iOS系统——您可查阅[iOS Loop](https://loopkit.github.io/loopdocs/)方案）
+- 一个[持续葡萄糖监测系统（动态，CGM）](../Getting-Started/CompatiblesCgms.md) 
 
-Secondly, you have to **setup your software components**: [AAPS](../SettingUpAaps/BuildingAaps.md), [CGM/FGM source](../Getting-Started/CompatiblesCgms.md) and a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+其次，您需要**配置以下软件组件**：[AAPS系统](../SettingUpAaps/BuildingAaps.md)、[持续/闪速血糖监测数据源](../Getting-Started/CompatiblesCgms.md)以及[报告服务器](../SettingUpAaps/SettingUpTheReportingServer.md)。
 
-Thirdly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your [basal rate and carb ratio](../SettingUpAaps/YourAapsProfile.md) are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old-fashioned way](https://integrateddiabetes.com/basal-testing/).
+第三，您需要学习并**理解OpenAPS参考设计，以核验您的治疗参数**。 闭环治疗的基本原则是确保您的[基础率和碳水系数](../SettingUpAaps/YourAapsProfile.md)准确无误。 所有建议均基于您的基础率需求已得到满足这一前提，若观测到血糖波峰或波谷，应视为其他因素（如运动、压力等）所致，因此仅需进行一次性调整。 闭环系统为保障安全所能进行的调整存在严格限制（参见[OpenAPS参考设计](https://openaps.org/reference-design/)中允许的最大临时基础率），这意味着您不应将有限的剂量调整额度浪费在纠正错误的基础率上。 例如，若您经常在临近用餐时出现低血糖而需要临时调低基础率，则很可能需要重新调整您的基础率设置。 您可以使用[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig)分析大量数据，从而判断是否需要调整基础率和/或胰岛素敏感系数（ISF）以及如何调整，同时评估碳水比率是否需要修改。 或者，您也可以采用[传统方法](https://integrateddiabetes.com/basal-testing/)测试和设置基础代谢率。
 
-### What practicalities of looping do I have?
+### 闭环有哪些实际应用要点？
 
-#### Password protection
+#### 密码保护
 
-If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
+如果您不希望偏好设置被轻易更改，可以在偏好设置菜单中选择​“为设置添加密码”​，然后输入您设定的密码，即可对偏好设置菜单进行密码保护。 下次进入偏好设置菜单时，系统将要求输入该密码，验证通过后方可继续操作。 若之后想取消密码保护功能，请进入​“设置密码”​选项并清空文本框内容。
 
-#### Android Wear Smartwatches
+#### Android Wear智能手表
 
-If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AAPS are not blocked. Confirmation of action comes via notification.
+如果您计划通过 Android Wear 应用进行推注或更改设置，请确保未屏蔽来自 AAPS 的通知。 操作确认将通过通知发送。
 
 (FAQ-disconnect-pump)=
 
-#### Disconnect pump
+#### 断开泵连接
 
-If you take your pump off for showering, bathing, swimming, sports or other activities you must let AAPS know that no insulin is delivered to keep IOB correct.
+若因淋浴、沐浴、游泳、运动或其他活动需摘除胰岛素泵，必须告知 AAPS 系统停止输注，以保持活性胰岛素（IOB）计算准确。
 
-The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](#AapsScreens-loop-status).
+您可通过[AAPS 主屏幕](#AapsScreens-loop-status)上的<1>循环状态图标</1>断开胰岛素泵连接。
 
-#### Recommendations not only based on one single CGM reading
+#### 建议不仅基于单次CGM读数
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AAPS kicks in looping again.
+出于安全考虑，系统建议并非基于单次CGM读数，而是基于平均变化率（delta）。 因此，若出现监测数据缺失，恢复数据后AAPS可能需要一定时间才能重新启动循环功能。
 
-#### Further readings
+#### 进一步阅读
 
-There are several blogs with good tips to help you understand the practicalities of looping:
+以下精选博客提供实用技巧，助您掌握闭环系统的操作要点：
 
-- [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-- [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
-- [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-- [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+- [微调设置](https://seemycgm.com/2017/10/29/fine-tuning-settings/) - See my CGM
+- [为什么DIA很重要](https://seemycgm.com/2017/08/09/why-dia-matters/) - See my CGM
+- [限制餐后血糖飙升](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) - #DIYPS
+- [激素和autosens](https://seemycgm.com/2017/06/06/hormones-2/) - See my CGM
 
-### What emergency equipment is recommended to take with me?
+### 推荐携带的急救设备有哪些？
 
-You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
+你必须和其他所有使用胰岛素泵治疗的1型糖尿病患者一样，随身携带相同的应急装备。 在使用AAPS闭环系统时，强烈建议随身或在附近备有以下额外设备：
 
-- Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
-- Pump batteries
-- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Maintenance/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- 备用电源及充电线（用于智能手机、智能手表，以及蓝牙血糖仪/Link设备等需充电配件）
+- 胰岛素泵电池
+- 当前版本的 [AAPS安装包](../SettingUpAaps/BuildingAaps.md) 和 [配置文件](../Maintenance/ExportImportSettings.md)（包括其他相关应用如xDrip+、BYO Dexcom等），需在本地和云端（Dropbox、Google Drive）双重备份。
 
-### How can I safely and securely attach the CGM/FGM?
+### 如何安全牢固地附着CGM/FGM？
 
-You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
+你可以用胶带粘起来。 市场上有多种针对常见CGM系统的预穿孔"加固贴片"可供选择（可通过Google、eBay或Amazon搜索购买）。 部分闭环系统使用者会选用更经济的标准肌效贴或RockTape品牌产品。
 
-You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
+你可以搞定它。 您还可以购买通过绑带固定CGM/FGM传感器的上臂护套（可通过Google、eBay或Amazon搜索选购）。
 
-## APS algorithm
+## APS算法
 
-### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+### 为什么我的个人资料中设置了不同的DIA值，但"OPENAPS AMA"标签页仍显示"dia:3"？
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter any longer.
+在AMA算法中，DIA实际上并不表示"胰岛素作用时长"。 这是一个参数，过去曾与DIA相关联。 现在，它表示"应在多长时间内完成校正"。 该参数与活性胰岛素（IOB）的计算完全无关。 在OpenAPS的SMB模式中，此参数已不再需要。
 
-## Other settings
+## 其他设置
 
-### Nightscout settings
+### Nightscout设置
 
-#### AAPSClient says 'not allowed' and does not upload data. What can I do?
+#### AAPS客户端显示"未获授权"并停止数据上传。 我能做些什么？
 
-In AAPSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
+在 AAPSClient 中检查 "连接设置"。 也许你实际上并不在允许的WLAN中，或者你已经激活了“仅当充电时”，而你的充电电缆没有连接。
 
-### CGM settings
+### CGM设置
 
-#### Why does AAPS say 'BG source doesn't support advanced filtering'?
+#### 为什么AAPS说“BG源不支持高级过滤”？
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AAPS OpenAPS-tab. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
+如果你使用的是xDrip原生模式下的非Dexcom G5或G6 CGM/FGM，你会在AAPS的OpenAPS标签中看到这个警告。 请参阅[平滑血糖数据](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
 
-### Pump
+### 胰岛素泵
 
-#### Where to place the pump?
+#### 泵放在哪里？
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
+放置泵的位置有无数种可能。 是否使用闭环并不重要。
 
-#### Batteries
+#### 电池
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
+闭环系统运行会加速胰岛素泵电池消耗（相比手动操作模式），因为系统通过蓝牙的交互频率远高于人工操作。 建议在电池电量剩余25%时更换，因电量过低会导致通信稳定性下降。 您可以通过在Nightscout网站中设置PUMP_WARN_BATT_P参数来启用胰岛素泵电池低电量预警警报。 增加电池寿命的技巧包括：
 
-- reduce the length of time the LCD stays on (within pump settings menu)
-- reduce the length of time the backlight stays on (within pump settings menu)
-- select notification settings to a beep rather than vibrate (within pump settings menu)
-- only press the buttons on the pump to reload, use AAPS to view all history, battery level and reservoir volume.
-- AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, whitelist AAPS app in the phone battery settings to stop the app power monitor closing it down.
+- 缩短LCD屏幕持续亮屏时间（需在胰岛素泵设置菜单内调整）
+- 请通过胰岛素泵设置菜单缩短背光持续时间
+- 请将胰岛素泵的通知设置从震动模式调整为蜂鸣提示（需在泵体设置菜单内操作）。
+- 请仅通过胰岛素泵按键执行重新加载操作，所有历史数据、电池电量和储药器余量均需通过AAPS查看。
+- 为节省电量或释放手机内存，有的手机会频繁关闭AAPS应用。 每次启动时，AAPS都会重新初始化并与胰岛素泵建立蓝牙连接，同时重新读取当前基础率及大剂量历史记录。 这会消耗电量。 要确认是否发生此情况，请前往【设置】>【NS客户端】并启用"记录应用启动至Nightscout"功能。 每次AAPS重启时，Nightscout都会接收到相应事件记录，便于追踪该问题。 为避免此情况发生，请在手机电池设置中将AAPS应用加入白名单，以防止系统电源管理强制关闭该应用。
     
-    For example, to whitelist on a Samsung phone running Android Pie:
+    例如，在运行Android Pie系统的三星手机上设置白名单的操作步骤如下：
     
-    - Go to Settings -> Device Care -> Battery 
-    - Scroll until you find AAPS and select it
-    - De-select "Put app to sleep"
-    - ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
-    - Scroll to AAPS and make sure it is de-selected.
+    - 转到“设置”->“设备护理”->“电池” 
+    - 滚动直到找到AAPS并选择它
+    - 取消选中“使应用进入休眠状态”
+    - 还要转到“设置”->“应用”->（屏幕右上角的三个圆圈符号）选择“特殊访问”->“优化电池使用”
+    - 滚动到AAPS并确保它被取消选中。
 
-- clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
+- 使用酒精棉片清洁电池触点，确保去除所有出厂残留的蜡质/油脂。
 
-- for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-- see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+- 对于[Dana R/RS胰岛素泵](../CompatiblePumps/DanaRS-Insulin-Pump.md)，其启动程序会施加高电流以刻意击穿电池钝化膜（该膜用于防止存储期间能量损耗），但这一过程并不总能实现100%的完全击穿。 请反复取出并重新插入电池2-3次，直至屏幕显示100%电量；或使用电池钥匙在安装前瞬间短接电池两极（接触时间不超过0.5秒）。
+- 另请参阅针对[特定电池类型](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)的更多使用技巧。
 
-#### Changing reservoirs and cannulas
+#### 更换储药器与输注管路
 
-The change of cartridge cannot be done via AAPS but must be carried out as before directly via the pump.
+更换储药器操作无法通过AAPS完成，仍需像往常一样直接在胰岛素泵上执行。
 
-- Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
-- Now nnect the pump and change the reservoir as per pump instructions.
-- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](#screens-action-tab) in the actions tab just to record the change.
-- Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+- 在AAPS的「首页」选项卡中长按"开环"/"闭环"按钮，选择「暂停闭环1小时」。
+- 现在断开泵的连接，并按照泵的说明更换储药器。
+- 此外，管路与输注套管的预充操作也可直接在胰岛素泵上完成。 这种情况下，请使用操作选项卡中的[PRIME/FILL按钮](#screens-action-tab)仅用于记录更换操作。
+- 重新连接胰岛素泵后，长按"已暂停（剩余X分钟）"按钮即可恢复闭环运行。
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](#screens-action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+然而，更换输注管路时并不使用胰岛素泵自带的"充盈管路"功能，而是通过大剂量注射（该操作不会出现在大剂量历史记录中）来完成管路和/或套管的填充。 这意味着该操作不会中断当前正在运行的临时基础率。 在操作（Act）选项卡中，使用[PRIME/FILL按钮](#screens-action-tab)设置充盈输注管路所需的胰岛素量并启动预充程序。 若剂量不足，请重复执行充盈操作。 您可以在【设置】>【其他】>【充盈/预充标准胰岛素量】中配置默认剂量快捷按钮。 请参阅输注套管包装内的说明书，根据针头长度和管路长度确定所需预充胰岛素单位数。
 
-### Wallpaper
+### 壁纸
 
-You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phone-wallpaper).
+您可以在[手机页面](#Phones-phone-wallpaper)上找到适用于您手机的AAPS壁纸。
 
-### Daily usage
+### 日常使用
 
-#### Hygiene
+#### 卫生
 
-##### What to do when taking a shower or bath?
+##### 淋浴或泡澡时需要注意什么？​
 
 You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
 
