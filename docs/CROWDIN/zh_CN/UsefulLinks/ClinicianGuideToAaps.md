@@ -98,4 +98,4 @@ AAPS使用与OpenAPS相同的核心算法和功能集。 算法会做出多个�
 * [完整的AAPS文档](../index.md)
 * [OpenAPS参考设计](https://OpenAPS.org/reference-design/)（该文档阐述了OpenAPS如何实现安全性设计）：https://openaps.org/reference-design/
 * [完整的OpenAPS文档](https://openaps.readthedocs.io/en/latest/index.html) 
-  * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+  * [关于OpenAPS计算的更多详情](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
