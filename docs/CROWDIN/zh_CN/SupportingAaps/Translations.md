@@ -1,13 +1,13 @@
-# How to translate strings for the AAPS app or the documentation
+# AAPS应用及文档翻译指南
 
-* For the the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* 如需翻译应用内字符串，请访问<https://crowdin.com/project/androidaps> 并使用您的GitHub 账户登录。
+* 文档翻译请访问<https://crowdin.com/project/androidapsdocs> 并使用您的GitHub 账户登录。
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* 请发送加入文档团队的申请。 操作步骤：点击目标语言国旗图标 → 在下一页右上角点击"加入"按钮。 请注明语言、提供您的个人简介及AAPS使用经验，并说明申请译者或校对员（需具备翻译技能+AAPS高级用户资质）。
 
-```{admonition} Time for Approval :class: note
+```{admonition} 审批时间 :class: note
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+审批为人工操作流程。 作为非营利组织，我们虽不提供SLA服务协议，但通常会在1个工作日内完成审批。 如未收到，请通过Facebook或Discord联系文档团队。
 
     <br />* When we approve you, click the flag
        ![When we approve you, click the flag](../images/translation_flags.png)
