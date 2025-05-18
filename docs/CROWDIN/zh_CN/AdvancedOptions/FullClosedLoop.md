@@ -1,7 +1,7 @@
 # 全闭环
 
 
-全闭环（**FCL**）的主要吸引力在于它有潜力模拟人工胰腺，使日常管理更轻松，无需为进餐推注胰岛素。
+全闭环系统（**FCL**）的主要优势在于其能够模拟人工胰腺功能，无需餐前注射大剂量胰岛素即可简化日常血糖管理。
 
 虽然**混合闭环**（“HCL”）是基于算法的，但它仍然需要用户在餐前手动进行餐前大剂量注射。 因此，环路可能会进入临时关闭状态（临时零基础率）以防止胰岛素输送过多。
 
@@ -48,7 +48,7 @@
 
 来源：
 
-![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
+![IEEE控制系统杂志](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
 
 
 
@@ -82,7 +82,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 - 高脂肪或高蛋白饮食，或慢消化/胃轻瘫，反而使**FCL**更容易实施，因为后期碳水化合物能很好覆盖推注胰岛素不可避免的"尾部"效应。
 
-#### Glycemic index and effect on blood glucose
+#### 升糖指数与血糖影响
 
 **UAM**模式的挑战随着"对血糖影响（EBG）"增加而增加：
 
@@ -91,7 +91,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 1) **无EBG**：如新鲜肉类、鱼类、鸡蛋、培根、油类、奶酪。 2) **低EBG**：如新鲜蔬菜和浆果、蘑菇、坚果、牛奶、酸奶、奶酪。 3) **中EBG**：如全麦面包/面条、土豆、野米、燕麦、干果。 4) **高EBG**：如小麦面包、法棍、吐司、华夫饼、饼干、土豆泥、面条、米饭。 5) **极高EBG**：如糖、甜饮、果汁、玉米片、糖果、薯片、咸脆棒。
 
-![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
+![升糖指数与血糖影响](../images/fullClosedLoop01.png)
 
 对**FCL**最具挑战性的餐食是仅含极高和高**EBG**成分的食物（图中红色部分）：不仅**血糖**迅速飙升，且缺乏脂肪/蛋白质/纤维成分来平衡控制高血糖早期所需的胰岛素"尾部"效应。
 
@@ -126,7 +126,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 如果基础率非常低，生成的**SMB**限制可能不足以控制餐后**血糖**上升。 一个解决方案是避免导致强烈**血糖**飙升的饮食，然后切换到提供新**SMB**输送参数的**AAPS**开发版：smb_max_range_extension。 这将使标准的最大 2 小时基础胰岛素量扩大 >1 倍。 （此外，默认的 50% **SMB** 输送率可能会在开发变体中提高） 。
 
-**按照说明使AAPS通过若干SMB模拟您的推注**。
+**按照说明操作，使AAPS能够通过若干次超级微剂量（SMB）模拟您的餐前大剂量注射**。
 
 定期检查 **SMB** 选项卡，查看您的 **SMB** 是否被允许足够大，以在用餐开始时提供循环所需的胰岛素。
 
@@ -134,9 +134,9 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 
 ```{admonition} Boosting **ISF** can become dangerous
-:class: danger
+:class: 危险
 
-密切观察/分析餐后**SMB**量。 逐步调校，每次最多调整1-2个参数。
+请密切观察/分析**超级微剂量(SMB)​**在餐后初期的给药量。 逐步调校，每次最多调整1-2个参数。
 
 您的**AAPS**设置必须充分适应您的各种餐食。
 ```
@@ -325,17 +325,17 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
     - SMB 输送率可能可以设置得更小。 请注意：在此情况下，该设置将全局生效，适用于所有时间段的**超级微剂量(SMB)**。
 - 餐后胰岛素“拖尾”问题
     - 您可能需要吃点零食（看到低血糖预测）或葡萄糖片（如果已经处于低血糖区）。 但需注意：闭环系统在某个时间点提示您所需的碳水化合物量很可能被高估，因为系统完全无法获取您的实际碳水摄入数据（尽管您可能自行估算包括脂肪和蛋白质在内的待吸收营养总量）。
-    - A valuable information would be whether the problem originates mostly in the bg rise phase already. Then setting a lower iobTH might be an easy remedy.
-    - If the need for additional carbs happens frequently, note down how many grams were needed (not counting what you eventually took too much and required extra insulin again).  Then use your profile IC value to estimate how much insulin less the **SMB** should have delivered, and go with this info into your tuning (regarding the **Percentage Profile** in **Automations**, or maybe also your set iobTH). This may relate to the**SMBs** given when glucose was high, or also extending regarding also the **SMBs** during the **BG** rise.
-    - It could well be that you simply have to accept higher **BG** peaks for not going low. Or change diet to something with lower amounts of carbs, and higher amount of proteien and fats.
+    - 关键信息在于：问题是否主要源于血糖上升阶段初期。 那么，将胰岛素活性阈值（iobTH）设低可能是个简单的解决方案。
+    - 若频繁需要额外补充碳水化合物，请记录所需克数（不包括因过量摄入而需再次追加胰岛素的部分）。  随后，根据您的胰岛素敏感系数（IC值）估算**超级微剂量（SMB）**应减少的胰岛素量，并将该数据用于参数调整（涉及**自动化**中的**百分比配置文件**，或可能包括您设定的胰岛素活性阈值iobTH）。 这可能与高血糖期间给予的**SMB**有关，或需进一步考量**血糖**上升阶段的**SMB**设置。
+    - 这可能意味着您需要接受更高的**血糖**峰值以避免低血糖。 或者调整饮食结构——减少碳水化合物摄入，同时增加蛋白质和脂肪的比例。
 
 
-### More info
+### 更多信息
 
-Make sure you stay in touch with other **FCL** users.
+建议保持与其他**FCL**用户交流。
 
-Discussion Full Closed Loop using Automations:
+讨论利用自动化技术实现全闭环：
 
-- English:   [Discord Channel](https://discord.gg/ChXj8BaKwA)
+- 英语：[Discord 频道](https://discord.gg/ChXj8BaKwA)
 
-- German:  [German Looper Community](https://de.loopercommunity.org/t/ueber-die-kategorie-full-loop/10107)
+- 德语：[德国 Looper 社区](https://de.loopercommunity.org/t/ueber-die-kategorie-full-loop/10107)
