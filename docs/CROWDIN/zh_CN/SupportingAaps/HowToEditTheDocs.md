@@ -1,76 +1,76 @@
-# How to edit the docs
+# 如何编辑文档
 
-**This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**本说明仅适用于英文文档的编辑工作。​ 所有新增内容须优先以英文版本提交。​ 如需翻译为其他语言（感谢您的贡献），请使用[Crowdin](https://crowdin.com/project/androidapsdocs)平台。**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
+关于文本格式（标题、加粗等）及链接设置的提示，请参阅本页[“代码语法”](#code-syntax)部分。​
 
 ## 一般
 
-For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
+如有任何疑问、反馈或新想法，您可通过[Discord](https://discord.gg/4fQUWHZ4Mw)联系文档团队。​
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+在适当阶段，您需提交Pull Request（PR）——这是将文档变更实际部署至AAPS网页（存储于GitHub）的正式流程。​ 提交PR（Pull Request）其实并不复杂，这是参与项目贡献的绝佳方式。​ 您此刻能查阅这份文档，正是源于与您一样的贡献者提交的PR（Pull Request）。​ 无需担心操作失误或误改文档。​ 您的修改在合并至AAPS正式文档库前，均会经过严格审核。​ 在操作过程中，任何意外都不会损坏原始文档。​ 标准流程如下：​
 
-- Make edits and improvements to code or documentation by editing the existing content.
-- Double-check that your edits look good to you.
-- Make a few notes of what's changed so people may understand the edits.
-- Create a pull request, which asks the administrators to use your changes.
-- They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+- 通过修改现有内容，对代码或文档进行编辑与改进。​
+- 请仔细核查您的修改内容，确保无误。​
+- 简要记录变更内容，便于他人理解修改意图。​
+- 创建一个拉取请求，向管理员申请使用你的更改。
+- 他们将进行审核，并选择：(1)合并你的更改，(2)就你的更改给你回复意见，或(3)用你的更改创建新文档。
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+（附注：如果你是视觉学习者，[这里](https://youtu.be/4b6tsL0_kzg)有一个YouTube视频展示了拉取请求的工作流程。）
 
-For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+在我们的示例中，我们将对AndroidAPS文档进行编辑。 这可以在任何Windows电脑、Mac等设备上完成。 （任何可以上网的电脑都能操作）。
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. 访问 <https://github.com/openaps/AndroidAPSdocs> 并点击右上角的「Fork」按钮，创建该代码库的您个人副本。
 
 ![Fork repo](../images/PR0.png)
 
-2. Go to any page and navigate to the page you want to edit. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. 访问任意页面，然后导航至您需要编辑的目标页面。 您可以点击右上角的「在 GitHub 上编辑」链接。 此功能仅适用于英文页面。 
 
 ![edit doc](../images/PR1.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+或者点击页面内容顶部工具栏中的铅笔图标进行编辑。 执行此操作需已登录您的GitHub账户（若尚未注册，创建流程非常简单）。
 
 ![RTD io](../images/PR2.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. 执行步骤2中的任一操作，都将在您的代码库中创建一个新分支，用于保存您的编辑内容。 对文件进行编辑修改。
 
-We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
+我们的文档页面使用Markdown格式。 这些文件使用".md"后缀。目前我们采用myst_parser解析器来处理Markdown文件（注：Markdown规范并非固定不变）。 请注意使用[下文所述](#code-syntax)的正确语法格式。
 
 ![Edit branch](../images/PR3.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. 您当前处于「编辑文件」标签页中进行操作。 请选择「预览更改」标签页进行最终检查，确保所有修改内容符合预期（包括检查拼写错误）。 若发现需要改进之处，请返回编辑标签页继续完善。 
 
 ![preview mode](../images/PR5.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. 完成编辑后，请滚动至页面底部。 在页面底部的文本框中，于显示「添加可选扩展描述...」的输入框内填写您的备注说明。 默认标题会显示文件名。 请尽量包含一句说明**修改原因**的描述。 说明修改原因有助于审核者理解您在该PR中的意图。
 
 ![commit comments](../images/PR4.png)
 
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
+6. 点击绿色的「Propose file changes」或「Commit changes」按钮。 在跳转页面中点击「Create Pull Request」按钮，然后在下一页再次点击「Create Pull Request」。
 
 ![create pull request](../images/PR6.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. 至此已完成拉取请求（PR）的创建流程。 GitHub会为PR分配一个编号，显示在标题和井号(#)之后。 您可以返回该页面查看反馈（若已设置GitHub邮件通知，相关PR动态将通过邮件提醒您）。 您的编辑现已加入待审PR列表，团队将在合并到AAPS主文档前进行审核并可能提供反馈！ 要查看PR进度，请点击您GitHub账户右上角的铃铛图标，即可查看所有PR状态。
 
 ![PR tracking](../images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+注：您的fork仓库和分支仍会保留在您个人的GitHub账户中。 当收到PR已合并的通知后，如已完成操作，您可以删除分支（步骤8的通知区域会在分支关闭或合并后提供删除链接）。 今后编辑时，只要遵循此流程，您的修改将始终基于最新版的AndroidAPSdocs代码库开始。 若选择其他方式发起PR请求（例如：从您fork仓库的master分支开始编辑），需先执行「compare」操作确保代码库最新，并合并fork后所有更新内容。 鉴于用户常忘记更新代码库，我们建议先采用上述PR流程，待熟悉「compare」操作后再调整。
 
 (edit-the-docs-code-syntax)=
 
-## Code syntax
+## 代码语法规范
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+我们的文档页面采用Markdown格式编写。 文件使用".md"作为后缀名。
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown是一种非常简单的文本格式化语言，它能将文本内容与格式设置分离。
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+作者仅需将标题标记为一级标题（例如），Markdown处理器就会在渲染过程中自动生成对应的HTML代码来呈现该标题。
 
-The idea behind this is that
+其核心理念在于
 
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Windows and
-- you can generate several output formats from one markdown file.
+- 作者应优先考虑文本内容，而非格式设置。
+- Markdown文本可在不同工具间自由交换，无需依赖Microsoft Word等专有软件。
+- 单个Markdown文件可生成多种输出格式。
 
 Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
 
