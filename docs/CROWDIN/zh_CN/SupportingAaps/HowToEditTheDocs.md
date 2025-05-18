@@ -72,307 +72,308 @@ Markdown是一种非常简单的文本格式化语言，它能将文本内容与
 - Markdown文本可在不同工具间自由交换，无需依赖Microsoft Word等专有软件。
 - 单个Markdown文件可生成多种输出格式。
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+Markdown并非完全固化的标准规范，我们力求最大程度遵循该标准，以便：
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- 保持灵活性以便在Markdown工具及SaaS服务的持续创新中，能根据需要或形势要求更换工具。
+- 使我们能够利用翻译服务将英文内容转换为法语、德语等目标语言。 这些工具虽可处理Markdown格式，却无法应对复杂排版代码，因其无法区分内容与版式——这一缺陷可能导致严重后果。
 
-### Headlines
+### 目录
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
-- Headline 4: `#### headline`
+- 一级标题：`# 标题文字`
+- 二级标题：`## 标题文字`
+- 三级标题：`### 标题内容`
+- 四级标题：`#### 标题内容`
 
-We try to avoid further levels of headlines.
+我们尽量避免使用更深层级的标题。
 
-### Text format
+### 文本格式
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **加粗**：`**文本**`
+- *斜体*：`*文本*`
+- ***加粗斜体***：`***文本***`
 
-### Ordered list
+### 有序列表
 
-    1. first
-    1. second
-    1. third
+    1. 第一个
+    2. 第二个
+    3. 第三个
     
 
-1. first
-2. 第二
-3. third
+1. 第一个
+2. 第二个
+3. 第三个
 
-### Unordered list
+### 无序列表
 
-    - one element
-    - another element
-    - and another element
+    - 一个元素
+    - 另一个元素
+    - 再一个元素
     
 
-- one element
-- another element
-- and another element
+- 一个元素
+- 另一个元素
+- 再一个元素
 
-### Multi level list
+### 多级列表
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+您可以通过向右缩进4个额外空格的方式，在列表中嵌套子列表。
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
+    1. 第一个
+    2. 第二个
+    3. 第三个
+    1. 一个元素
+    1. 另一个元素
+      1. 再一个元素
+      1. 第四个
+      1. 第五个
+    1. 第六个
     
 
-1. first
-2. 第二
-3. third 
-    1. one element
-    2. another element
-    3. and another element
-4. four
-5. five
-6. six
+1. 第一个
+2. 第二个
+3. 第三个 
+    1. 一个元素
+    2. 另一个元素
+    3. 再一个元素
+4. 第四个
+5. 第五个
+6. 第六个
 
-### Images
+### 图片
 
-To include images you use this markdown syntax.
+要插入图片，请使用以下Markdown语法：
 
-- images: `![alt text](../images/file.png)`
+- 图片: `![文本说明](../images/file.png)`
 
-The type of image should be PNG or JPEG.
+图片的类型应为 PNG 或 JPEG。
 
-Images names should confirm to one of following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+图片名称需符合下列命名规则之一： 示例中我使用.png作为文件后缀名。 如果您使用 JPEG，请改用 jpeg 作为后缀。
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
+- `文件名-图片-xx.png`（其中xx为此文件中图片的唯一两位数字编号）
+- `文件名-图片-xx.png`（其中xx代表该md文件作者的有意义命名）
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+图片统一存放在英文版的images文件夹中，并通过Crowdin自动同步至其他语言版本。 您无需对此进行任何操作！
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+我们目前不翻译图片：图片应包含**尽可能少的文字**，以确保非英语读者也能理解。
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= 请为图片选择合适尺寸，确保在电脑、平板和手机上都能清晰显示。
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
+- 网页截图类图片的宽度应控制在**1050像素**以内。
+- 流程图类图示的宽度应不超过**1050像素**。
+- 应用界面截图的宽度应限制在**500像素**以内。 如非必要，请勿将图片并排排列。
 
-### Links
+### 链接
 
-#### External links
+#### 外部链接
 
-External links are links to external web sites.
+外部链接是指向第三方网站的链接。
 
-- external link: `[alt text](www.url.tld)`
+- 外部链接: `[文本说明](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### 内部链接是指向md文件起始位置的链接。
 
-Internal links to pages are links to the start of a md file which is hosted on our own server.
+内部页面链接是指向我们自有服务器上存放的md文件起始位置的链接。
 
-- internal link to .md page: `[alt text](../folder/file.md)`
+- 指向 .md 页面的内部链接：`[文本说明](../folder/file.md)`
 
-#### Internal links to named inline references
+#### 指向命名内联引用的内部链接
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+指向命名锚点的内部链接是指向我们自有服务器上存放的md文件中任何已设置引用标记位置的链接。
 
-Add a named reference at the location in the target md file you want to jump to.
+在目标md文件中需要跳转的位置添加命名锚点。
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+命名锚点在整个AndroidAPSDocs的md文件集合中必须保持唯一性，而不仅限于其所在的单个md文件！
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+因此，最佳实践是在命名锚点时以文件名开头，再添加您自定义的引用名称。
 
-Use only lowercase letters and hyphenate words.
+请仅使用小写字母，并用连字符连接单词。
 
-Then link this reference in the text you are writing with the following kind of link.
+然后在您撰写的文本中，通过以下链接格式引用该锚点：
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- 指向命名内联引用的内部链接：`[文本说明](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### 注释、警告、可折叠注释
 
-You can add notes and warning boxes to documentation.
+您可以在文档中添加注释框和警告框。
 
-Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
+此外，您可添加可折叠的注释框来包含详细信息，避免不关注细节的用户被迫阅读全部内容。 请谨慎使用这些功能，因为文档应尽可能保持易读性。
 
 #### 备注
 
-    ```{admonition} Note headline
+    ```{admonition} 注释标题
     :class: note
-    This is a note.
+    这是一个注释。
+    ```
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} 注释标题 :class: note 这是一个注释。 ```
 
-    <br />#### Warnings
+    <br />#### 警告
     
     ````
-    ```{admonition} Warning
+    ```{admonition} 警告
     :class: warning
-    This is a warning.
+    这是一个警告。
     
 
-    ```{admonition} Warning headline 
+    ```{admonition} 警告标题
     :class: warning
-    This is a warning.
+    这是一个警告。
     ```
     
-    #### Collapsing Notes
+    #### 可折叠注释
     
     
 
-    {admonition} further detailed readings for interested readers
+    {admonition} 为感兴趣的读者提供的延伸阅读材料
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    该折叠式提示框已收起，
+    意味着您可以在此添加详细内容，
+    而不会占用页面过多空间。
     
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} 为感兴趣的读者提供的延伸阅读材料 :class: dropdown 该折叠式提示框已收起， 意味着您可以在此添加详细内容， 而不会占用页面过多空间。
 
 ```
 
-## Tables
+## 表格
 
-Avoid using tables with long texts as the contents is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+请避免使用包含长文本的表格，因为Markdown格式难以精确控制表格内容排版，通常无法适配手机屏幕宽度，翻译后可能出现显示异常。
 
-## Style Guide
+## 风格指南
 
-### Contents
+### 内容
 
-1. English language writing tips
+1. 英语写作技巧
 
-2. AAPS-specific writing notes
+2. AAPS特定写作规范说明
 
-3. Useful references
+3. 实用参考资料
 
-### ![图片](../images/styleguide01.png) 1\. English language writing tips
+### ![图片](../images/styleguide01.png) 1\. 英语写作技巧
 
-#### Use language that is appropriate for the reader
+#### 使用适合读者群体的语言
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+尽可能使用简明英语. 这既有助于非英语母语读者理解，也方便将AAPS文档翻译成其他语言。 请采用与用户对话式的写作风格，想象您正面对面为您要服务的对象撰写内容。 请注意：大多数AAPS用户并不具备编程背景。 糖尿病领域本身也存在大量专业术语和缩写。 请谨记：部分读者可能是刚确诊的患者，糖尿病经验可能不如您丰富，或接受过不同的糖尿病培训方案。 若使用简称或缩写，首次出现时应完整拼写，并在括号内直接标注缩写形式，例如："超微大剂量（Super Micro Bolus，SMB）"。 同时，请附上术语表链接。 对于读者可能不熟悉的技术术语，也可在括号内补充说明。
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?"*
+避免的说法：*"闭环系统中餐后血糖峰值升高的原因是什么？"*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
+建议的说法：*"闭环系统中**午餐后**（postprandial）出现高血糖峰值的原因是什么？"*
 
-##### Use plain words that everyone can understand
+##### 使用通俗易懂的词汇，确保所有人都能理解。
 
-Find an A-Z of alternative words to make your writing easier to understand here:
+您可以在此处查阅A-Z替代词表，让您的写作更易懂：
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### 隐私/许可问题：
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+特别提醒​：若需录制视频或截图，请务必避免泄露您的隐私信息（如API密钥、密码等）。 请确保YouTube内容不公开列出，且必须通过文档中的链接才能访问。 请避免提及可能侵权的版权材料（如BYODA等）。
 
-#### Keep sentences short, get to the point
+#### 保持句子简短，直击要点。​
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- 清晰的写作应保持15-20个单词的平均句长。​
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- 这并不意味着每句话都必须保持相同长度。​ 要简洁有力。​ 通过混合短句（如前句）与长句（如本句）来变化写作风格。​
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- 每句话应围绕一个核心观点展开，最多可附带一个相关要点。​
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- 您可能仍会偶尔写出较长的句子，尤其是在解释复杂观点时。​ 但大多数长句都可以通过某种方式拆分。​
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- 删除弱势表达："you can"、"there is/are/were"、"in order to"。​
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- 将关键词置于标题、句子和段落的开头位置。​
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- 善用视觉化表达！​ 在可行的情况下，尽量提供简图、截图或视频说明。​
 
-#### Don't be afraid to give instructions
+#### 无需回避直接给出操作指引
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+命令式是最快捷的指令表达方式，但撰写者往往顾虑使用命令语气，常以"您应执行此操作"替代简洁的"执行此操作"。​ 或许人们担心命令式语气显得过于生硬。​ 通常只需在句首添加"请"字即可解决此问题。​ 但若某项操作必须执行，则不宜使用"请"字，以免让读者误以为可选择拒绝。​
 
-Instead of: *“You should just think of it as a complete statement."*
+避免的说法：*"应将其视为完整声明。"*
 
-Use: *“Think of it as a complete statement.”*
+请使用：*"将其视为完整声明。"*
 
-#### Mostly use active verbs, rather than passive verbs
+#### 应优先使用主动语态动词，而非被动语态。​
 
-Example of an **active verb**:
+**主动语态动词**示例：
 
-- *“The pump (subject) delivers (verb) the insulin (object).”*
+- *"泵（主语）输送（动词）胰岛素（宾语）。"*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+"delivers"在此处为主动语态动词。 该句子先说明执行输送动作的主体，再说明被输送的对象。​
 
-Example of a **passive verb**:
+**被动语态动词**示例：
 
-- *“The insulin (subject) is delivered (verb) by the pump (object)”*
+- *"胰岛素（主语）由泵（宾语）输送（动词）"*
 
-*“delivered”* a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*"delivered"*在此处为被动语态动词。 与主动语态句子相比，主语和宾语的位置互换了。 我们不得不通过添加"is"和"by the"使句子变长。​ 亦可考虑以主动语态动词开头。​
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+避免的说法：​*“通过AAPS泵菜单将泵与手机连接，可选多种兼容泵型号。”*
 
-Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
+建议的说法：*"通过AAPS泵菜单将所需泵设备连接至手机。"*
 
-Passive verbs can cause problems:
+被动语态动词可能导致问题：
 
-- They can be confusing.
+- 它们可能会令人困惑。
 
-- They often make writing more long-winded.
+- 它们通常会使写作更加冗长。
 
-- They make writing less lively.
+- 它们会使写作不那么生动。
 
-##### Good uses of passives
+##### 被动语态动词的良好用法
 
-There are times when it might be appropriate to use a passive.
+某些情况下使用被动语态可能更为合适。
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- 使用被动语态可缓和语气——"账单未付"（被动式）比"您未支付账单"（主动式）更委婉。
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- 使用被动语态可规避归责——"操作中出现失误"（被动式）比"您操作失误"（主动式）更显中立。
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- 当动作执行者未知时——"英格兰队已选定"（被动式）。
 
-- If it simply sounds better.
+- 若被动语态的表达效果更佳时。
 
-#### Avoid nominalisations
+#### 避免名词化结构
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+名词化（nominalisation）指对非实体事物（如过程、技术或情感）的命名形式。 名词化结构由动词派生而成。
 
 For example:
 
-| Verb      | Nominalization |
-| --------- | -------------- |
-| 完成        | completion     |
-| introduce | introduction   |
-| provide   | provision      |
-| fail      | failure        |
+| 动词        | 名词化          |
+| --------- | ------------ |
+| complete  | completion   |
+| introduce | introduction |
+| provide   | provision    |
+| fail      | failure      |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+名词化结构常**替代**其源动词使用，但会导致表述缺乏动态感。 过度使用名词化会使文风沉闷艰涩。
 
-Instead of: *“The implementation of the method has been done by a team.”*
+避免的说法：*"The implementation of the method has been done by a team。"*
 
-Use: *“A team has implemented the method.”*
+建议的说法：*"A team has implemented the method.”"*
 
-#### Use lists where appropriate
+#### 在适当的地方使用列表
 
-Lists are excellent for splitting information up. There are two main types of list:
+列表能有效拆分信息，提升可读性。 列表主要有两种类型：
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- 一种连续句式，在句首、句中或句末标注多个列举项。
 
-- Separate bullet points with an introductory statement.
+- 使用引导性陈述分隔项目符号列表。
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+在上述项目符号列表中，每个条目均为完整句子，因此需首字母大写并以句号结尾。 建议使用项目符号（而非数字或字母），因其能突显每个要点，且不会增加额外信息负担。
 
-#### Mythbusting
+#### 破除迷思
 
-- You can start a sentence with **and, but, because, so or however**.
+- 句子可以**以"而且"、"但是"、"因为"、"所以"或"然而"**开头。
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- 可以使用分裂不定式。 所以您可以说 **“to boldly go”**。
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- 句子可以用介词结尾。 事实上，这正是**我们应当支持**的做法。
 
 - And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
 
