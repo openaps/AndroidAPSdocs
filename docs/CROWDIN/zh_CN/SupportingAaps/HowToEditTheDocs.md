@@ -256,7 +256,7 @@ Markdown并非完全固化的标准规范，我们力求最大程度遵循该标
 
 3. 实用参考资料
 
-### ![图片](../images/styleguide01.png) 1\. 英语写作技巧
+### ![Image](../images/styleguide01.png) 1\. 英语写作技巧
 
 #### 使用适合读者群体的语言
 
@@ -375,191 +375,191 @@ For example:
 
 - 句子可以用介词结尾。 事实上，这正是**我们应当支持**的做法。
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- 若**你**找不到更合适的**词**，**你**完全可以在句中重复使用同一个**词**。
 
-#### Optimizing writing style by purpose
+#### 基于写作目的优化写作风格
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+为确保文档简洁清晰，我们采用差异化风格撰写不同章节。
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+在引言、背景和知识发展部分采用"解释性"写作风格。
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+在构建、配置AAPS以及部分故障排除章节中，采用"操作指南"式写作风格（仅提供必要说明）。
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+教程帮助学习者掌握基础能力。 用户将通过**实践学习**掌握技能。
 
-![图片](../images/styleguide02.png)
+![Image](../images/styleguide02.png)
 
-##### ![图片](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Image](../images/styleguide03.png) 教程类内容（例如教孩子打发蛋白）
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- 叙述者直接与读者对话："本教程中**您**将..."（少数情况下可用"我们"体现共同参与感）
 
-- Future Tense -> to show the final target
+- 将来时态 → 用于表示最终目标
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- 祈使语气 → 用于执行任务 → 具体步骤 - 避免抽象概念
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- 过去时态 → 用于展示已完成任务 → 快速可见的成果
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- 最少解释 → 仅保留完成任务所需的必要说明 → **操作事项及原因**
 
-- Ignore options/alternatives/…. No ambiguity
+- 忽略选项/替代方案/... 无歧义
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- 步骤过渡：通过逻辑递进语句衔接步骤，当前步骤收尾句需自然引导至下一步。 示例： *您已完成Let's Encrypt客户端安装，但在获取证书前，需确保所有必要端口均已开放。 为此，您将在下一步更新防火墙设置。*
 
-- **Tutorial** Title (Level 1 heading)
+- **教程** 标题（一级标题）
 
-- Introduction (no heading)
+- 简介（无标题）
 
-- Prerequisites (Level 2 heading)
+- 先决条件（2 级标题）
 
-- Steps:
+- 步骤：
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- 步骤 1 — 做第一件事（2 级标题）
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- 步骤 2 — 做下一件事（2 级标题）
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- 步骤 n — 做最后一件事（2 级标题）
 
-- Conclusion (Level 2 heading)
+- 结论（2 级标题）
     
-    - **The Language of Tutorials**
+    - **教程的语言**
         
-        *In this tutorial, you will…*
+        *在本教程中，您将...*
         
-        Describe what the learner will accomplish (note - not: “you will learn…”).
+        描述学习者将完成什么（注意 - 而不是：“您将学习...”）。
         
-        *First, do x. Now, do y. Now that you have done y, do z.*
+        *首先，做 x。 现在，做 y。 既然您已经做了 y，就做 z。*
         
-        No room for ambiguity or doubt.
+        不留任何含糊或怀疑的余地。
         
-        *We must always do x before we do y because… (see Explanation for more details).*
+        *我们必须总是在做 y 之前做 x，因为...（有关更多详细信息，请参见解释）。*
         
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        用最基础的语言简要说明操作步骤。 查看详细说明的链接。
         
-        *The output should look something like this…*
+        *输出结果应类似如下形式...*
         
-        Give your learner clear expectations.
+        为学习者设定明确预期。
         
-        *Notice that… Remember that…*
+        *注意... 记住...*
         
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        为学习者提供充分线索，帮助其确认进展正确并自主定位。
         
-        *You have built a secure, three-layer hylomorphic stasis engine…*
+        *您已成功构建一个安全的三层同态静滞引擎...*
         
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
+        描述（并适度赞赏）学习者已完成的成果（注：避免使用"你已学会…"表述）
 
-##### ![图片](../images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![Image](../images/styleguide05.png) 操作指南（如食谱类教程）
 
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
+操作指南的核心用途，是帮助已具备基础能力的用户正确完成特定任务。
 
-- HOW-to
+- 如何操作（HOW-to）
 
-- narrator directly talks to the reader: In this tutorial **you** will
+- 叙述者直接与读者对话：在本教程中，**您**将
 
-- Future Tense -> to show the final target
+- 将来时态 → 用于表示最终目标
 
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
+- 条件祈使式 → 要获取X需执行Y → 具体步骤（避免抽象概念）
 
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
+- 最少解释 → 仅限完成任务的关键说明 → **操作事项及原因**
 
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
+- 忽略选项/替代方案/... 表述必须明确，但可链接至参考条目或解释条目
 
-- **How-to**: Title (Level 1 heading)
+- **操作指南**：标题（1 级标题）
 
-- Introduction paragraph
+- 引言段落
 
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- 可选先决条件（若多于一项则设为二级标题）
 
-- Steps:
+- 步骤：
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- 步骤 1 — 做第一件事（2 级标题）
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- 步骤 2 — 做下一件事（2 级标题）
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- 步骤 n — 做最后一件事（2 级标题）
 
-- Conclusion paragraph
+- 结论段落
     
-    - **The Language of How-To Guides**
+    - **操作指南的语言规范**
         
-        *This guide shows you how to…*
+        *本指南向您展示如何...*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        清晰描述该指南要帮助用户解决的问题或任务.
         
-        *If you want x, do y. To achieve w, do z.*
+        *如果您想要 x，请执行 y。 要实现 w，请执行 z。*
         
-        Use conditional imperatives.
+        使用条件祈使句。
         
-        *Refer to the x reference guide for a full list of options.*
+        *完整选项列表请参阅《X参考指南》。*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        避免在实用操作指南中混杂所有与X相关的可能操作。
 
-##### ![图片](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Image](../images/styleguide07.png) 原理解释（例：蛋清打发变硬的科学原理）
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+原理解释旨在阐明、深化并拓宽读者对主题的认知。
 
-- WHY
+- 为什么
 
-- Start with **About**
+- 以**关于**开头
 
-- Provide context, link ALL relevant references
+- 提供背景说明，并链接所有相关参考文献。
 
-- Discuss options/alternatives
+- 讨论备选方案/替代方案
 
-- Don’t instruct or provide reference (link to them)
+- 请勿直接指导或提供参考（仅链接至相关内容）
 
-- State the unknown/moving targets etc…
+- 声明未知变量/动态目标等...
 
-- **About** Title (Level 1 heading)
+- **关于**标题（1 级标题）
 
-- Introduction (no heading)
+- 简介（无标题）
 
-- Optional Prerequisites (Level 2 heading)
+- 可选先决条件（2 级标题）
 
-- Subtopic 1 (level 2 heading)
+- 副主题 1（2 级标题）
 
-- Conclusion (Level 2 heading)
+- 结论（2 级标题）
     
-    - **The Language of Explanation**
+    - **解释性语言的表达体系**
     
-    *The reason for x is because historically, y…*
+    *X的成因可追溯至历史上Y...*
     
-    Explain.
+    解释。
     
-    *W is better than z, because…*
+    *W 比 z 好，因为...*
     
-    Offer judgements and even opinions where appropriate..
+    在适当情况下提供判断乃至观点…
     
-    *An x in system y is analogous to a w in system z. However…*
+    *Y系统中的X组件，其功能类似于Z系统中的W组件。 然而...*
     
-    Provide context that helps the reader.
+    提供有助于读者理解的背景信息。
     
-    *Some users prefer w (because z). This can be a good approach, but…*
+    *部分用户更倾向选择W方案（原因：Z）。 此方案虽具可行性，但需注意...*
     
-    Weigh up alternatives.
+    权衡备选方案。
     
-    *An x interacts with a y as follows:…*
+    *X与Y的交互机制如下：...*
     
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    揭示系统内部机制，帮助理解其运作原理。
 
-### 2\. AAPS-specific writing/updating notes
+### 2\. AAPS专用写作/更新说明
 
-#### Author & Editor
+#### 作者与编辑
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+在撰写/更新AAPS文档时，建议将流程分为两个阶段。 可由同一人在不同时间点执行，也可由多人协作完成。
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+**作者（例如您！）**以简洁对话体撰写/编辑文档章节，完成后移交编辑。
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+**编辑（例如AAPS其他用户，或接收Pull Request的人员）**负责审核是否符合格式规范，优化章节的清晰度和可读性，并尽可能精简文字（特别是教程/操作指南类内容）。 朗读文本可能有助于发现问题。
 
-#### General AAPS points
+#### AAPS通用要点
 
-- For glucose values, state both mg/dl and mmol/l in each occurrence (also consider this for screenshots, if possible).
+- 血糖值需同时标注毫克/分升（mg/dl）和毫摩尔/升（mmol/l）（如有可能，截图也应遵循此规则）。
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- 为保持统一性，请使用"AAPS"而非"Android APS"。
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- 请明确标注编写所针对的Android Studio/AAPS版本号，或注明截图来源版本。
 
-### 3\. Useful References
+### 3\. 实用参考文献
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 
