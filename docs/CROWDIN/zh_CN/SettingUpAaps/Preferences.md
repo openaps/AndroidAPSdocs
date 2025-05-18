@@ -22,7 +22,7 @@
 ```
 
 (Preferences-general)=
-## 一般
+## 常规
 
 ![参数设置 > 一般](../images/Pref2020_General.png)
 
@@ -378,7 +378,7 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 - 定义最小和最大[自动灵敏度（autosens）](#Open-APS-features-autosens)比率。
 - 通常，不应更改标准值（最大1.2，最小0.7）。
 
-## Pump
+## 胰岛素泵
 
 ### BT Watchdog
 
