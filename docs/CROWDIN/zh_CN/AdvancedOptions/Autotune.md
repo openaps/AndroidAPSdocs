@@ -94,7 +94,7 @@ Autotune插件是OpenAPS自动调节算法在AAPS中的具体实现。
 - 数据采集天数（默认5天）：您可通过此设置定义默认值范围。 每当在Autotune插件中选择新配置文件时，"优化天数"参数将自动重置为此默认值。
 - 昼夜节律IC/ISF均值应用功能（默认关闭）：详见下方[昼夜节律IC/ISF配置文件](#circadian-ic-or-isf-profile)说明。
 
-### Other settings
+### 其他设置
 
 - Autotune算法还将通过最大自动灵敏度比率（Max autosens ratio）和最小自动灵敏度比率（Min autosens ratio）限制调整幅度。 您可通过 配置构建器 > 灵敏度检测插件 > 设置 > 高级设置 查看并调整这些参数值。
 
