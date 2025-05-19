@@ -169,85 +169,85 @@ orphan: true
 
 ### Dexcom G5/G6与xDrip+故障排除
 
-#### Problem connecting transmitter
+#### 发射器连接问题
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html).
+请按照[这些说明](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)进行操作。
 
-#### Problem when starting new sensor
+#### 启动新传感器时出现问题
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html).
+请按照[这些说明](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)进行操作。
 
 ## Libre 1
 
-- Setup your NFC to Bluetooth bridge in xDrip+
+- 在 xDrip+ 中设置您的 NFC 到蓝牙桥接器
     
-    → Hamburger Menu (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
+    → 汉堡菜单 (1) → 设置 (2) → 较不常见的设置 (3) → 蓝牙设置 (4)
 
-- In Bluetooth Settings set the checkboxes exactly as in the screenshots below (5)
+- 在蓝牙设置中，完全按照以下屏幕截图中的方式设置复选框 (5)
     
-    - Disable watchdogs as they will reset the phone Bluetooth and interrupt your pump connection.
+    - 禁用看门狗功能，因为它们会重置手机蓝牙并中断您的泵连接。
     
     ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
 
-- You can try to enable the following settings (7)
+- 您可以尝试启用以下设置（7）
     
-    - Use scanning
-    - Trust Auto-Connect
-    - Use Background Scans
+    - 使用扫描
+    - 信任自动连接
+    - 使用后台扫描
 
-- If you easily lose connection to the bridge or have difficulties recovering connection, **DISABLE THEM** (8).
+- 若您频繁断开网桥连接或难以恢复连接，**请禁用这些设置**（8）。
     
     ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
 
-- Leave all other options disabled unless you know why you want to enable them.
+- 除非您明确知道启用原因，否则请保持其他所有选项处于禁用状态。
     
     ![xDrip+ Libre Bluetooth Settings 3](../images/xDrip_Libre_BTSettings3.png)
 
-### Libre smart reader battery level
+### Libre智能读卡器电池电量
 
-- Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
-- Details can be found on [screenshots page](#screens-sensor-level-battery).
+- MiaoMiao和Bubble等网桥设备的电池电量可在AAPS中显示（Blucon除外）。
+- 详情请参阅[截图页面](#screens-sensor-level-battery)。
 
-### Connect Libre Transmitter & start sensor
+### 连接Libre发射器并启动传感器
 
-- If your sensor requires it (Libre 2 EU and Libre 1 US) install the [latest out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
+- 若您的传感器需要（欧盟版Libre 2和美国版Libre 1），请安装[最新独立处理算法](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)。
 
-- Your sensor must be already started using the vendor app or the reader (xDrip+ cannot start or stop Libre sensors).
+- 您的传感器必须已通过厂商应用程序或读卡器启动（xDrip+无法启动或停止Libre传感器）。
 
-- Set the data source to Libre Bluetooth.
+- 将数据源设置为Libre蓝牙。
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre Bluetooth in Hardware Data source (3)
+    → 汉堡菜单 (1) → 设置 (2) → 在硬件数据源中选择 Libre 蓝牙 (3)
     
     ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
-- Scan Bluetooth and connect the bridge.
+- 扫描蓝牙并连接桥接器。
     
-    → Hamburger Menu (1) → Scan Bluetooth (2) → Scan (3)
+    → 汉堡菜单 (1) → 扫描蓝牙 (2) → 扫描 (3)
     
-    - If xDrip+ can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
+    - 如果xDrip+无法找到网桥设备，请确保其未连接至厂商应用程序。将其充电并重置。
     
     ![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
-- Start the sensor in xDrip+.
+- 在xDrip+中启动传感器。
     
-        {admonition} Safety warning
+        {admonition} 安全警告
         :class: warning
-        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
+        传感器预热一小时结束前请勿使用其数据：此时数值可能极高，会导致AAPS做出错误决策。
     
-    → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
+    → 点击汉堡菜单(1) → 选择"启动传感器"(2) → 点击"启动传感器"(3) → 设置您使用读卡器或厂商应用启动传感器的准确时间。若非今日启动，请选择"不是今天"(4)。
 
 ![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
 (xdrip-libre2-patched-app)=
 
-## Libre 2 patched app
+## Libre 2 修补版应用程序
 
-- Set the data source to Libre patched app.
+- 将数据源设置为 Libre 修补版应用程序。
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
+    → 汉堡菜单 (1) → 设置 (2) → 在硬件数据源中选择 Libre（修补版应用程序）(3)
     
     ![xDrip+ Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
 
-- You can add `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
+- 您可以在"较少使用的设置"→"额外日志设置"→"日志记录附加标签"下添加`BgReading:d,xdrip libre_receiver:v`。 这将记录额外的错误信息以便故障排除。
 
 ![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
