@@ -2,13 +2,13 @@
 orphan: true
 - - -
 
-# For users of other CGM uploaded to Nightscout
+# 对于上传至Nightscout的其他连续血糖监测(CGM)设备用户
 
-If you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
+如果您的其他连续血糖监测(CGM)设备设置**仅能**将血糖数据发送至[Nightscout](https://nightscout.github.io/)。
 
 ```{important}
-This data source will not work when you are offline, when you experience network issues or when your Nightscout site is down. Use with caution.
+当您处于离线状态、遇到网络问题或Nightscout站点不可用时，此数据源将无法工作。 请谨慎使用。
 ```
 
--   Setup NSClient with your Nightscout site information.
--   Select NSClient BG in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   使用您的Nightscout站点信息配置NSClient。
+-   在[ConfigBuilder, BG Source](#Config-Builder-bg-source)中选择NSClient BG。
