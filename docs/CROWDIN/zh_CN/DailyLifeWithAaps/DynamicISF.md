@@ -95,7 +95,7 @@ TDD将使用以下值的组合：
 启用 ​**动态 ISF​ 时**，此处 **​ISF​** 为过去 24 小时动态 ISF 的平均值。
 
 (dyn-isf-preferences)=
-## Preferences
+## 偏好设置
 
 在 [偏好设置 > OpenAPS SMB](#Preferences-openaps-smb-settings) 中勾选 **启用动态敏感度** 以激活功能。 启用后将显示新设置项。
 

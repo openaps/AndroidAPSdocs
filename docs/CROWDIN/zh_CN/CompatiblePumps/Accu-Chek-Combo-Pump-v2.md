@@ -167,7 +167,7 @@ The Combo can be operated through Bluetooth in the _remote-terminal_ mode or in 
 
 At the very bottom, there is the "Refresh" button. This triggers an immediate pump status update. It also is used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#alerts-warnings-and-errors-and-how-they-are-handled)).
 
-## Preferences
+## 偏好设置
 
 These preferences are available for the combo driver (items are listed from top to bottom):
 

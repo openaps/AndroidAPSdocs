@@ -2,12 +2,12 @@
 orphan: true
 - - -
 
-# internal sandbox file 2 for testing
+# 内部沙盒测试文件2
 
 ```{admonition} no need to translate this
 :class: note
 
-No need to translate this.
+无需翻译。
 ```
 
 This is an internal sandbox file for the documentation team to test

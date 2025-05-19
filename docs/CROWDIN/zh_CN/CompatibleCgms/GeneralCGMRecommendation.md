@@ -2,44 +2,44 @@
 orphan: true
 - - -
 
-# General CGM recommendations
+# 常规CGM使用建议
 
-## CGM hygiene
+## CGM 卫生
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+无论您使用何种CGM系统，若需进行基于血糖仪的校准，则必须遵循以下明确规则——此要求适用于DIY CGM软件和官方应用程序的所有用户。
 
--   Make sure hands and kit are clean.
--   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
--   Avoid calibrating when glucose levels are moving up or down.
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
--   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
--   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+-   确保手和设备清洁。
+-   建议在血糖趋势箭头呈水平状态时进行校准（通常15-30分钟即可）。
+-   避免在血糖水平上升或下降时进行校准。
+-   请进行"充分"校准——在官方应用程序中，系统会提示您每天检查一至两次。 对于DIY系统可能无校准提示，需谨慎对待长期未校准的情况。
+-   对于无需或无法校准的传感器，请至少每日检测一次真实血糖值。 AAPS系统的安全性与您传感器读数的可靠性直接相关。
+-   如有可能，建议分别在较低范围（4-5mmol/l或72-90mg/dl）和稍高范围（7-9mmol/l或126-160mg/dl）内选取读数进行校准，此举可为点斜式校准提供更优的数据范围。
 
-## Setting sensor (G6)
+## 设置传感器 (G6)
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor contacts should not come into contact with blood.
+安装传感器时，建议不要用力按压植入器，以免造成出血。 传感器触点不得接触血液。
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+安装传感器后，可将发射器卡入传感器底板。 注意！ 请先将方形侧卡入，再按压圆形侧。
 
 (general-cgm-troubleshooting)=
 ## 故障排除
 
-### Connection problems
+### 连接问题
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip+ does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
+蓝牙连接可能受到附近其他蓝牙设备的干扰，例如血糖仪、耳机、平板电脑，或微波炉、电磁炉等厨房电器。 若出现此情况，xDrip+将不会显示任何血糖值。 当蓝牙连接恢复时，系统将自动回填数据。
 
-### Sensor Errors
+### 传感器错误
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor contacts should not come into contact with blood.
+如频繁出现传感器错误，建议尝试选择其他身体部位安装传感器。 传感器触点不得接触血液。
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+"传感器错误"通常可通过立即饮水和按摩传感器周围区域来纠正！
 
-### Jumpy values
+### 跳点
 
-You might try to change settings for noise blocking in xDrip+ (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+您可以尝试在xDrip+中调整噪声阻断设置（设置 - 应用间设置 - 噪声阻断），例如选择"阻断极高噪声及更差信号"。 另请参阅[血糖数据平滑处理](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
 
-### Negative Sensor Age
+### 传感器负向使用时长
 
 ![Negative sensor age](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](#screens-action-tab) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
+当[操作选项卡/菜单](#screens-action-tab)中出现重复的"CGM传感器植入"记录，或传感器植入日期错误时，即会出现此情况。 请前往治疗记录选项卡 > careportal删除错误条目。

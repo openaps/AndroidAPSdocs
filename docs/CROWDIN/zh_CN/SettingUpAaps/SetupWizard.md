@@ -477,7 +477,7 @@ Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-## APS algorithm
+## APS算法
 
 使用OpenAPS SMB算法作为您的APS算法。 尽管功能名称包含"SMB"，但该算法功能将保持禁用状态，直至您完成以下前提条件：​熟悉AAPS操作且通过初始目标考核。 与OpenAPS AMA相比，OpenAPS SMB是较新的版本，通常也更好。
 

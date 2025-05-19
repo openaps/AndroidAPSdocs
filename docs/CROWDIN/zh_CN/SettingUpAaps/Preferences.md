@@ -1,4 +1,4 @@
-# Preferences
+# 偏好设置
 
 - 通过点击主页屏幕右上角的三个点菜单来**打开参数设置**。
 
@@ -22,7 +22,7 @@
 ```
 
 (Preferences-general)=
-## 一般
+## 常规
 
 ![参数设置 > 一般](../images/Pref2020_General.png)
 
@@ -378,7 +378,7 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 - 定义最小和最大[自动灵敏度（autosens）](#Open-APS-features-autosens)比率。
 - 通常，不应更改标准值（最大1.2，最小0.7）。
 
-## Pump
+## 胰岛素泵
 
 ### BT Watchdog
 
@@ -500,7 +500,7 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 ## 开源人类项目（Open Humans）
 
-You can help the community by donating your data to research projects! 详细信息在[Open Humans页面](../SupportingAaps/OpenHumans.md)上有描述。
+您可通过向研究项目捐献数据来助力科研社区！ 详细信息在[Open Humans页面](../SupportingAaps/OpenHumans.md)上有描述。
 
 在“首选项”中，您可以定义何时上传数据。
 - 仅在连接到Wi-Fi时

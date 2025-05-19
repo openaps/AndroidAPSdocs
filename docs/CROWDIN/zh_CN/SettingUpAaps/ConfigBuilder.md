@@ -102,15 +102,15 @@
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
 * 随机 Random BG：生成随机BG数据（仅演示模式）
 
-## Smoothing
+## 平滑
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![平滑](../images/ConfBuild_Smoothing.png)
 
 请参阅[平滑血糖数据](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
 
 (Config-Builder-pump)=
 
-## Pump
+## 胰岛素泵
 
 选择您正在使用的泵。 有关更多设置信息，请参阅[兼容泵](../Getting-Started/CompatiblePumps.md)页面。
 
@@ -211,7 +211,7 @@
 
 如果您查看“治疗（Treat）”选项卡，您可以看到已上传到nightscout的治疗动作数据。 如果您希望编辑或删除条目（例如，您摄入的碳水比预期少），请选择“删除”并通过[主页屏幕上的碳水按钮](#screens-bolus-carbs)输入新值（必要时更改时间）。
 
-## 一般
+## 常规
 
 ### 概览
 

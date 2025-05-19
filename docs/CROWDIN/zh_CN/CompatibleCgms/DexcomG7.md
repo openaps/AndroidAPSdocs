@@ -2,70 +2,70 @@
 orphan: true
 - - -
 
-# Dexcom G7 and ONE+
+# Dexcom G7 和 ONE+
 
 
-## Fundamental in advance
+## 提前做好准备至关重要
 
-Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+值得注意的是，与G6相比，G7和ONE+系统无论在应用程序还是读取器中都不会对数值进行平滑处理。 更多详情请参见[此处](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
 ```{admonition} Smoothing method 
-Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+请参阅[Dexcom G7/ONE+/Stelo适用的平滑方法建议](../CompatibleCgms/SmoothingBloodGlucoseData.md)
 ```
 
-## 1. xDrip+ (direct connection to G7 or ONE+)
+## 1. xDrip+（直接连接到 G7 或 ONE+）
 
-- Follow the instructions here: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Select  xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- 请按照此处的说明操作：[xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- 在 [ConfigBuilder, BG Source](#Config-Builder-bg-source) 中选择 xDrip+。
 
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+- 请根据[xDrip+设置页面](../CompatibleCgms/xDrip.md)上的说明调整xDrip+设置
 
-## 2.  Patched Dexcom G7 App (DiaKEM)
+## 2.  修补版 Dexcom G7 应用程序 (DiaKEM)
 
-**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
+**注意：需要 AAPS 3.2.0.0 或更高版本！ 不适用于 ONE+。**
 
-### Install a new patched (!) G7 app and start the sensor
+### 安装新的修补版 (\!) G7 应用程序并启动传感器
 
-A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+修补版 Dexcom G7 应用程序 (DiaKEM) 可访问 Dexcom G7 数据。 这不是 BYODA 应用程序，因为此应用程序目前无法接收 G7 数据。
 
-- Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
+- 若您先前使用过原版Dexcom应用，请将其卸载（正在进行的传感器会话可继续使用——注意：卸载应用前请记录传感器代码！）
 
-- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+- 在[此处](https://github.com/authorgambel/g7/releases)下载并安装 patched.apk。
 
-- Enter sensor code in the patched app.
+- 在修补的应用程序中输入传感器代码。
 
-- Follow the general recommendations for CGM hygiene and sensor placement found [here](../CompatibleCgms/GeneralCGMRecommendation.md).
+- 请遵循[此处](../CompatibleCgms/GeneralCGMRecommendation.md)所列的CGM卫生与传感器放置通用建议。
 
-- After the warm-up phase, the values are displayed as usual in the G7 app.
+- 预热阶段结束后，数值将照常在G7应用程序中显示。
 
-### Configuration in AAPS
+### AAPS 中的配置
 
-- Select 'BYODA' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source) - even if it is not the BYODA app!
+- 在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择「BYODA」——即使您使用的并非BYODA应用！
 
-- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
+- 若AAPS未接收到任何数值，请先切换至其他血糖数据源，然后重新选择「BYODA」以触发AAPS与BYODA之间的数据交换授权请求。
 
-## 3. xDrip+ (companion mode)
+## 3. xDrip+（伴侣模式）
 
--   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
--   Select  xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   下载并安装 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
+- 在xDrip+中必须选择"伴侣应用"作为数据源，并在高级设置 > 蓝牙设置中启用"伴侣蓝牙"功能。
+-   在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。
 
--   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+-   请根据[xDrip+设置页面](../CompatibleCgms/xDrip.md)上的说明调整xDrip+设置
 
 ## 4. Juggluco
 
-Version 9.0+ required
+需要 9.0+ 版本
 
-- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+- 请禁用先前连接传感器的应用：卸载该应用或使用"强制停止"功能。 在应用设置中禁用"附近设备"权限。 限制应用程序的电池使用量。
 
-- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+- 在蓝牙设置中移除传感器：进入安卓设置，在已配对设备中找到该传感器并选择"忘记"。 Dexcom G7 传感器名称以 DXCM 开头。
 
-- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+- 避免其他传感器干扰：请将旧款Dexcom传感器移出蓝牙覆盖范围。
 
-- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+- 将G7传感器连接至Juggluco：打开Juggluco → 左侧菜单 → 照片选项。 扫描G7传感器注射器上的二维码。 请等待最多5分钟，让Juggluco查找传感器。
 
-- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+- 配对要求：需同意将传感器与Juggluco进行配对。 请确保配对过程中屏幕保持解锁状态。 若配对失败，请等待5分钟后再重试。
 
-- Exception: Wear OS watches can bond without pressing an agree button.
+- 例外情况：Wear OS智能手表无需点击同意按钮即可完成绑定。

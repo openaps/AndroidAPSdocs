@@ -1,14 +1,13 @@
-# Development branch
+# 开发分支
 
-<font color="#FF0000"><strong>Attention:</strong></font>
-Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000"><strong>not for actual looping!</strong></font>
+<font color="#FF0000"><strong>注意</strong></font>： 开发分支（Dev branch）仅用于AAPS的后续开发。 该版本应在备用手机上作测试用途，<font color="#FF0000"><strong>切勿用于实际闭环治疗！</strong></font>
 
-The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+AAPS最稳定的版本是[主分支（Master branch）版本](https://github.com/nightscout/AndroidAPS/tree/master)。 建议在实际闭环治疗中持续使用主分支版本。
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Enabling the engineering mode might break the loop entirely.
+AAPS开发版（dev version）仅适用于能够熟练处理堆栈跟踪（stacktraces）、查阅日志文件，并能启动调试器（debugger）生成有效开发者错误报告的人员——简言之，即无需协助即能独立操作的资深开发者与测试人员。 因此，诸多未完成功能已被禁用。 要启用这些功能，需通过在/AAPS/extra目录下创建名为`engineering_mode`的文件来进入**工程模式**。 启用工程模式可能导致整个闭环系统完全失效。
 
-However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+不过，开发分支（Dev branch）是了解正在测试中的功能、协助修复漏洞以及反馈新功能实际运行情况的理想平台。 用户常会在备用手机上测试开发分支（Dev branch），并通过泵注试验直至确认其稳定性——但任何使用行为均需自行承担风险。 在测试任何新功能时，请谨记您所测试的仍是处于开发阶段的功能。 请自行承担风险，并采取充分的安全防护措施。
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+若在使用开发分支（Dev branch）时发现程序漏洞或异常情况，请查看[问题标签页（issues tab）](https://github.com/nightscout/AndroidAPS/issues)确认是否已有其他用户提交相同问题；若无相关记录，请自行提交问题报告。 请尽可能详细地在此提供信息（切记可能需要分享您的[日志文件（log files）](../GettingHelp/AccessingLogFiles.md)），信息越详尽越好。 新功能的相关讨论也可在[Discord平台](https://discord.gg/4fQUWHZ4Mw)进行。
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+开发版（dev version）设有有效期限制。 这在使用满意时看似不便，但实为有特定设计目的。 如果只有一个开发版本，就更容易跟踪人们报告的错误。 开发者不希望出现三种不同版本的开发模式同时存在的情况，其中某些版本修复了漏洞，而其他版本没有修复，导致人们仍然报告已经修复的问题。

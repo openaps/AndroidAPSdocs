@@ -1,12 +1,12 @@
 # 闭环常见问题（FAQ）
 
-How to add questions to the FAQ: Follow the these [instructions](../SupportingAaps/HowToEditTheDocs.md)
+如何向FAQ添加问题：请按照以下[说明](../SupportingAaps/HowToEditTheDocs.md)操作
 
-## 一般
+## 常规
 
 ### 我可以直接下载AAPS的安装文件吗？
 
-无法直接下载。 没有可下载的AAPS apk文件。 You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. 原因如下：
+无法直接下载。 没有可下载的AAPS apk文件。 你必须自己[构建](../SettingUpAaps/BuildingAaps.md)它。 原因如下：
 
 AAPS用于控制您的泵并输注胰岛素。 根据欧洲现行的规定，所有被归类为IIa类或IIb类的系统都是医疗器械，需要获得监管机构的批准（即CE标志），而这需要经过各种研究和审核批准。 发布未经监管认可的设备是违法行为。 全球其他地区也有类似的规定。
 
@@ -18,331 +18,331 @@ AAPS用于控制您的泵并输注胰岛素。 根据欧洲现行的规定，所
 
 ### 如何开始？
 
-First of all, you have to **get loopable hardware components**:
+首先，您需要**获取可闭环的硬件组件**：
 
-- A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
-- an [Android smartphone](../Getting-Started/Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
-- a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
+- 一台[受支持的胰岛素泵](../Getting-Started/CompatiblePumps.md)， 
+- 一部[安卓智能手机](../Getting-Started/Phones.md)（AAPS不支持Apple iOS系统——您可查阅[iOS Loop](https://loopkit.github.io/loopdocs/)方案）
+- 一个[持续葡萄糖监测系统（动态，CGM）](../Getting-Started/CompatiblesCgms.md) 
 
-Secondly, you have to **setup your software components**: [AAPS](../SettingUpAaps/BuildingAaps.md), [CGM/FGM source](../Getting-Started/CompatiblesCgms.md) and a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+其次，您需要**配置以下软件组件**：[AAPS系统](../SettingUpAaps/BuildingAaps.md)、[持续/闪速血糖监测数据源](../Getting-Started/CompatiblesCgms.md)以及[报告服务器](../SettingUpAaps/SettingUpTheReportingServer.md)。
 
-Thirdly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your [basal rate and carb ratio](../SettingUpAaps/YourAapsProfile.md) are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old-fashioned way](https://integrateddiabetes.com/basal-testing/).
+第三，您需要学习并**理解OpenAPS参考设计，以核验您的治疗参数**。 闭环治疗的基本原则是确保您的[基础率和碳水系数](../SettingUpAaps/YourAapsProfile.md)准确无误。 所有建议均基于您的基础率需求已得到满足这一前提，若观测到血糖波峰或波谷，应视为其他因素（如运动、压力等）所致，因此仅需进行一次性调整。 闭环系统为保障安全所能进行的调整存在严格限制（参见[OpenAPS参考设计](https://openaps.org/reference-design/)中允许的最大临时基础率），这意味着您不应将有限的剂量调整额度浪费在纠正错误的基础率上。 例如，若您经常在临近用餐时出现低血糖而需要临时调低基础率，则很可能需要重新调整您的基础率设置。 您可以使用[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig)分析大量数据，从而判断是否需要调整基础率和/或胰岛素敏感系数（ISF）以及如何调整，同时评估碳水比率是否需要修改。 或者，您也可以采用[传统方法](https://integrateddiabetes.com/basal-testing/)测试和设置基础代谢率。
 
-### What practicalities of looping do I have?
+### 闭环有哪些实际应用要点？
 
-#### Password protection
+#### 密码保护
 
-If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
+如果您不希望偏好设置被轻易更改，可以在偏好设置菜单中选择​“为设置添加密码”​，然后输入您设定的密码，即可对偏好设置菜单进行密码保护。 下次进入偏好设置菜单时，系统将要求输入该密码，验证通过后方可继续操作。 若之后想取消密码保护功能，请进入​“设置密码”​选项并清空文本框内容。
 
-#### Android Wear Smartwatches
+#### Android Wear智能手表
 
-If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AAPS are not blocked. Confirmation of action comes via notification.
+如果您计划通过 Android Wear 应用进行推注或更改设置，请确保未屏蔽来自 AAPS 的通知。 操作确认将通过通知发送。
 
 (FAQ-disconnect-pump)=
 
-#### Disconnect pump
+#### 断开泵连接
 
-If you take your pump off for showering, bathing, swimming, sports or other activities you must let AAPS know that no insulin is delivered to keep IOB correct.
+若因淋浴、沐浴、游泳、运动或其他活动需摘除胰岛素泵，必须告知 AAPS 系统停止输注，以保持活性胰岛素（IOB）计算准确。
 
-The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](#AapsScreens-loop-status).
+您可通过[AAPS 主屏幕](#AapsScreens-loop-status)上的<1>循环状态图标</1>断开胰岛素泵连接。
 
-#### Recommendations not only based on one single CGM reading
+#### 建议不仅基于单次CGM读数
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AAPS kicks in looping again.
+出于安全考虑，系统建议并非基于单次CGM读数，而是基于平均变化率（delta）。 因此，若出现监测数据缺失，恢复数据后AAPS可能需要一定时间才能重新启动循环功能。
 
-#### Further readings
+#### 进一步阅读
 
-There are several blogs with good tips to help you understand the practicalities of looping:
+以下精选博客提供实用技巧，助您掌握闭环系统的操作要点：
 
-- [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-- [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
-- [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-- [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+- [微调设置](https://seemycgm.com/2017/10/29/fine-tuning-settings/) - See my CGM
+- [为什么DIA很重要](https://seemycgm.com/2017/08/09/why-dia-matters/) - See my CGM
+- [限制餐后血糖飙升](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) - #DIYPS
+- [激素和autosens](https://seemycgm.com/2017/06/06/hormones-2/) - See my CGM
 
-### What emergency equipment is recommended to take with me?
+### 推荐携带的急救设备有哪些？
 
-You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
+你必须和其他所有使用胰岛素泵治疗的1型糖尿病患者一样，随身携带相同的应急装备。 在使用AAPS闭环系统时，强烈建议随身或在附近备有以下额外设备：
 
-- Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
-- Pump batteries
-- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Maintenance/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- 备用电源及充电线（用于智能手机、智能手表，以及蓝牙血糖仪/Link设备等需充电配件）
+- 胰岛素泵电池
+- 当前版本的 [AAPS安装包](../SettingUpAaps/BuildingAaps.md) 和 [配置文件](../Maintenance/ExportImportSettings.md)（包括其他相关应用如xDrip+、BYO Dexcom等），需在本地和云端（Dropbox、Google Drive）双重备份。
 
-### How can I safely and securely attach the CGM/FGM?
+### 如何安全牢固地附着CGM/FGM？
 
-You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
+你可以用胶带粘起来。 市场上有多种针对常见CGM系统的预穿孔"加固贴片"可供选择（可通过Google、eBay或Amazon搜索购买）。 部分闭环系统使用者会选用更经济的标准肌效贴或RockTape品牌产品。
 
-You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
+你可以搞定它。 您还可以购买通过绑带固定CGM/FGM传感器的上臂护套（可通过Google、eBay或Amazon搜索选购）。
 
-## APS algorithm
+## APS算法
 
-### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+### 为什么我的个人资料中设置了不同的DIA值，但"OPENAPS AMA"标签页仍显示"dia:3"？
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter any longer.
+在AMA算法中，DIA实际上并不表示"胰岛素作用时长"。 这是一个参数，过去曾与DIA相关联。 现在，它表示"应在多长时间内完成校正"。 该参数与活性胰岛素（IOB）的计算完全无关。 在OpenAPS的SMB模式中，此参数已不再需要。
 
-## Other settings
+## 其他设置
 
-### Nightscout settings
+### Nightscout设置
 
-#### AAPSClient says 'not allowed' and does not upload data. What can I do?
+#### AAPS客户端显示"未获授权"并停止数据上传。 我能做些什么？
 
-In AAPSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
+在 AAPSClient 中检查 "连接设置"。 也许你实际上并不在允许的WLAN中，或者你已经激活了“仅当充电时”，而你的充电电缆没有连接。
 
-### CGM settings
+### CGM设置
 
-#### Why does AAPS say 'BG source doesn't support advanced filtering'?
+#### 为什么AAPS说“BG源不支持高级过滤”？
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AAPS OpenAPS-tab. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
+如果你使用的是xDrip原生模式下的非Dexcom G5或G6 CGM/FGM，你会在AAPS的OpenAPS标签中看到这个警告。 请参阅[平滑血糖数据](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
 
-### Pump
+### 胰岛素泵
 
-#### Where to place the pump?
+#### 泵放在哪里？
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
+放置泵的位置有无数种可能。 是否使用闭环并不重要。
 
-#### Batteries
+#### 电池
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
+闭环系统运行会加速胰岛素泵电池消耗（相比手动操作模式），因为系统通过蓝牙的交互频率远高于人工操作。 建议在电池电量剩余25%时更换，因电量过低会导致通信稳定性下降。 您可以通过在Nightscout网站中设置PUMP_WARN_BATT_P参数来启用胰岛素泵电池低电量预警警报。 增加电池寿命的技巧包括：
 
-- reduce the length of time the LCD stays on (within pump settings menu)
-- reduce the length of time the backlight stays on (within pump settings menu)
-- select notification settings to a beep rather than vibrate (within pump settings menu)
-- only press the buttons on the pump to reload, use AAPS to view all history, battery level and reservoir volume.
-- AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, whitelist AAPS app in the phone battery settings to stop the app power monitor closing it down.
+- 缩短LCD屏幕持续亮屏时间（需在胰岛素泵设置菜单内调整）
+- 请通过胰岛素泵设置菜单缩短背光持续时间
+- 请将胰岛素泵的通知设置从震动模式调整为蜂鸣提示（需在泵体设置菜单内操作）。
+- 请仅通过胰岛素泵按键执行重新加载操作，所有历史数据、电池电量和储药器余量均需通过AAPS查看。
+- 为节省电量或释放手机内存，有的手机会频繁关闭AAPS应用。 每次启动时，AAPS都会重新初始化并与胰岛素泵建立蓝牙连接，同时重新读取当前基础率及大剂量历史记录。 这会消耗电量。 要确认是否发生此情况，请前往【设置】>【NS客户端】并启用"记录应用启动至Nightscout"功能。 每次AAPS重启时，Nightscout都会接收到相应事件记录，便于追踪该问题。 为避免此情况发生，请在手机电池设置中将AAPS应用加入白名单，以防止系统电源管理强制关闭该应用。
     
-    For example, to whitelist on a Samsung phone running Android Pie:
+    例如，在运行Android Pie系统的三星手机上设置白名单的操作步骤如下：
     
-    - Go to Settings -> Device Care -> Battery 
-    - Scroll until you find AAPS and select it
-    - De-select "Put app to sleep"
-    - ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
-    - Scroll to AAPS and make sure it is de-selected.
+    - 转到“设置”->“设备护理”->“电池” 
+    - 滚动直到找到AAPS并选择它
+    - 取消选中“使应用进入休眠状态”
+    - 还要转到“设置”->“应用”->（屏幕右上角的三个圆圈符号）选择“特殊访问”->“优化电池使用”
+    - 滚动到AAPS并确保它被取消选中。
 
-- clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
+- 使用酒精棉片清洁电池触点，确保去除所有出厂残留的蜡质/油脂。
 
-- for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-- see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+- 对于[Dana R/RS胰岛素泵](../CompatiblePumps/DanaRS-Insulin-Pump.md)，其启动程序会施加高电流以刻意击穿电池钝化膜（该膜用于防止存储期间能量损耗），但这一过程并不总能实现100%的完全击穿。 请反复取出并重新插入电池2-3次，直至屏幕显示100%电量；或使用电池钥匙在安装前瞬间短接电池两极（接触时间不超过0.5秒）。
+- 另请参阅针对[特定电池类型](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)的更多使用技巧。
 
-#### Changing reservoirs and cannulas
+#### 更换储药器与输注管路
 
-The change of cartridge cannot be done via AAPS but must be carried out as before directly via the pump.
+更换储药器操作无法通过AAPS完成，仍需像往常一样直接在胰岛素泵上执行。
 
-- Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
-- Now nnect the pump and change the reservoir as per pump instructions.
-- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](#screens-action-tab) in the actions tab just to record the change.
-- Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+- 在AAPS的「首页」选项卡中长按"开环"/"闭环"按钮，选择「暂停闭环1小时」。
+- 现在断开泵的连接，并按照泵的说明更换储药器。
+- 此外，管路与输注套管的预充操作也可直接在胰岛素泵上完成。 这种情况下，请使用操作选项卡中的[PRIME/FILL按钮](#screens-action-tab)仅用于记录更换操作。
+- 重新连接胰岛素泵后，长按"已暂停（剩余X分钟）"按钮即可恢复闭环运行。
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](#screens-action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+然而，更换输注管路时并不使用胰岛素泵自带的"充盈管路"功能，而是通过大剂量注射（该操作不会出现在大剂量历史记录中）来完成管路和/或套管的填充。 这意味着该操作不会中断当前正在运行的临时基础率。 在操作（Act）选项卡中，使用[PRIME/FILL按钮](#screens-action-tab)设置充盈输注管路所需的胰岛素量并启动预充程序。 若剂量不足，请重复执行充盈操作。 您可以在【设置】>【其他】>【充盈/预充标准胰岛素量】中配置默认剂量快捷按钮。 请参阅输注套管包装内的说明书，根据针头长度和管路长度确定所需预充胰岛素单位数。
 
-### Wallpaper
+### 壁纸
 
-You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phone-wallpaper).
+您可以在[手机页面](#Phones-phone-wallpaper)上找到适用于您手机的AAPS壁纸。
 
-### Daily usage
+### 日常使用
 
-#### Hygiene
+#### 卫生
 
-##### What to do when taking a shower or bath?
+##### 淋浴或泡澡时需要注意什么？​
 
-You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
+您可以在淋浴或洗澡时取下泵。 在这短时间内，您可能不需要它，但您应告知 AAPS 您已断开连接，以便 IOB 计算正确无误。 见<0>上面的描述</0>。
 
-#### Work
+#### 工作
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+根据您的工作，您可以选择在工作日使用不同的胰岛素系数。 作为闭环用户，您应该为典型的工作日考虑一个 <0>配置切换</0>。 例如，如果您的工作强度较低（如坐在办公桌前），您可以切换到高于 100% 的配置；如果您整天活动且站立，则可以切换到低于 100% 的配置。 您还可以考虑设置较高或较低的临时目标，或在工作时间比平时早很多或晚很多时，或轮班工作时，进行 [配置时间调整](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)。 您还可以创建第二个配置（例如“家庭”和“工作日”），并根据需要每天切换到实际需要的配置。
 
-### Leisure activities
+### 休闲活动
 
 (FAQ-sports)=
 
-#### Sports
+#### 运动
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+您需要重新调整闭环前的旧运动习惯。 如果您像以前一样简单地摄入一份或多份运动碳水，闭环系统会识别并相应地进行校正。
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+因此，你的体内会有更多碳水化合物储备，但同时闭环系统会进行抵消并释放胰岛素。
 
-When looping you should try these steps:
+当使用循环时，您可以尝试以下步骤：
 
-- Make a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) < 100%.
-- Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target.
-- If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
+- 将[配置文件切换](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)设置为小于100%。
+- 将[活动临时目标](#TempTargets-activity-temp-target)设置为高于你的标准目标。
+- 如果使用SMB，请确保禁用["在高临时目标时启用SMB"](#Open-APS-features-enable-smb-with-high-temp-targets)和["始终启用SMB"](#Open-APS-features-enable-smb-always)选项。
 
-Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+这些设置的前后处理非常重要。 请在运动前及时进行调整，并考虑肌肉充血的影响。
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../DailyLifeWithAaps/Automations.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+如果您定期在相同时间进行运动（例如健身房的体育课），可以考虑使用 [自动化](../DailyLifeWithAaps/Automations.md) 来切换配置和 TT。 基于位置的自动化也是一种选择，但会使预处理变得更加困难。
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+配置文件切换的百分比、活动临时目标值以及最佳调整时间都是因人而异的。 如果您在寻找适合自己的数值，请从安全范围开始（先使用较低百分比和较高临时目标）。
 
-#### Sex
+#### 性生活
 
-You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
+您可以摘除胰岛素泵以获得"自由"，但应告知AAPS以确保活性胰岛素(IOB)计算准确。 见<0>上面的描述</0>。
 
-#### Drinking alcohol
+#### 饮酒
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AAPS:
+在闭环模式下饮酒存在风险，因为算法无法准确预测酒精对血糖的影响。 您需要通过AAPS的以下功能来探索适合自己的处理方法：
 
-- Deactivating closed loop mode and treating the diabetes manually or
-- setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-- do a profile switch to noticeably less than 100% 
+- 停用闭环模式并手动控制糖尿病
+- 设置较高的临时目标并停用未标记餐食(UAM)功能，以防止闭环系统因未记录的餐食而增加活性胰岛素(IOB)
+- 将配置文件切换至明显低于100%的比例 
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+饮酒时，您必须始终关注连续血糖监测仪(CGM)，以便通过摄入碳水化合物来手动预防低血糖。
 
-#### Sleeping
+#### 睡眠
 
-##### How can I loop during the night without mobile and WIFI radiation?
+##### 如何在夜间运行闭环时避免手机和WiFi辐射？
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+许多用户会在夜间将手机切换至飞行模式。 如果您希望闭环系统在睡眠时继续工作，请按以下步骤操作（此方法仅适用于使用本地血糖数据源的情况，如xDrip+或['自建Dexcom应用'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)，若通过Nightscout获取血糖读数则无法使用）：
 
-1. Turn on airplane mode in your mobile.
-2. Wait until the airplane mode is active.
-3. Turn on Bluetooth.
+1. 将您的手机设置为飞行模式。
+2. 等待直至飞行模式生效。
+3. 打开蓝牙。
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+您现在既无法接听电话，也无法连接互联网。 但闭环仍在运行。
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+一些用户发现，当手机处于飞行模式时会出现本地广播问题（AAPS无法接收来自xDrip+的血糖值数据）。 进入设置 > 应用间设置 > 识别接收器，输入 `info.nightscout.androidaps`。
 
 ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-#### Travelling
+#### 旅行
 
-##### How to deal with time zone changes?
+##### 如何应对时区变化？
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+使用 Dana R 和 Dana R Korean 无需进行任何操作。 对于其他泵，请参阅 [时区旅行](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) 页面了解更多详情。
 
-### Medical topics
+### 医疗话题
 
-#### Hospitalization
+#### 住院
 
-If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
+如果您想与临床医生分享有关AAPS和DIY闭环系统的一些信息，可以打印[AAPS临床医生指南](../UsefulLinks/ClinicianGuideToAaps.md)。
 
-#### Medical appointment with your endocrinologist
+#### 内分泌科医生的医疗预约
 
-##### Reporting
+##### 报告
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+您可以选择展示您的Nightscout报告(https://YOUR-NS-SITE.com/report)，或者查看[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)。
 
-## Frequent questions on Discord and their answers...
+## Discord上的常见问题及其解答...
 
-### My problem is not listed here.
+### 我的问题不在此列。
 
-[Information to get help.](../GettingHelp/WhereCanIGetHelp.md)
+[获取帮助的相关信息。](../GettingHelp/WhereCanIGetHelp.md)
 
-### My problem is not listed here but I found the solution
+### 我的问题不在列表中，但我已找到解决方法
 
-[Information to get help.](../GettingHelp/WhereCanIGetHelp.md)
+[获取帮助的相关信息。](../GettingHelp/WhereCanIGetHelp.md)
 
-**Remind us to add your solution to this list!**
+**提醒我们将您的解决方案添加到此列表中！**
 
-### AAPS stops everyday around the same time.
+### AAPS每天大约在同一时间停止运行。
 
-Stop Google Play Protect. Check for "cleaning" apps (ie CCleaner etc) and uninstall them. AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
+停止 Google Play Protect。 检查“清理”应用程序（例如 CCleaner 等）并卸载它们。 AAPS / 三点菜单 / 关于 / 点击"保持应用在后台运行"链接以关闭所有电池优化设置。
 
-### How to organize my backups ?
+### 如何整理我的备份？
 
-Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+请定期导出设置：每次更换Pod后、修改个人配置后、完成目标验证后，或是更换胰岛素泵时...即使没有任何改动，也请每月至少导出一次。 保留多份旧的导出文件。
 
-Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
+请将以下文件备份至网络云盘（如Dropbox、Google等）：您手机上用于安装应用程序的所有apk文件（包括AAPS、xDrip、BYODA、Patched LibreLink等），以及从所有应用程序导出的设置文件。
 
-### I have problems, errors building the app.
+### 我在构建应用程序时遇到问题和错误。
 
-Please
+请
 
-- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) for typical errors and
-- the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
+- 请查看[Android Studio故障排除](../GettingHelp/TroubleshootingAndroidStudio)以了解典型错误及其解决方案。
+- 以及[逐步操作指南](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po)中的提示。
 
-### I'm stuck on an objective and need help.
+### 我被卡在一个目标上，需要帮助。
 
-Screen capture the question and answers. Post-it on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+截屏问题和答案。 将其发布到 Discord 的 AAPS 频道。 别忘了说明您选择的选项（或未选择的）以及原因。 您会得到提示和帮助，但您需要自己找到答案。
 
-### How to reset the password in AAPS v2.8.x ?
+### 如何在AAPS v2.8.x中重置密码？
 
-Open the hamburger menu, start the Configuration wizard and enter new password when asked. You can quit the wizard after the password phase.
+打开汉堡菜单，启动配置向导并在提示时输入新密码。 您可以在密码阶段之后退出向导。
 
-### How to reset the password in AAPS v3.x
+### 如何在AAPS v3.x中重置密码？
 
-You find the documentation [here](#Update3_0-reset-master-password).
+你可以在[这里](#Update3_0-reset-master-password)找到文档。
 
-### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+### 我的连接/胰岛素泵/Pod无响应（RL/OL/EmaLink等设备）
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaL...).
+对于某些手机，蓝牙可能会断开与链接（RL/OL/EmaL 等）的连接。
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
+部分用户还会遇到链接无响应的情况（AAPS显示设备已连接，但链接无法访问或控制胰岛素泵）。
 
-The easiest way to get all these parts working together is : 1/ Delete Link from AAPS 2/ Power off Link 3/ AAPS 3 dot menu, quit AAPS 4/ Long press AAPS icon, Android menu, info on app AAPS, Force stop AAPS and then Delete cache memory (Do not delete main memory !) 4bis/ Rarely some phones may need a reboot here. You can try without reboot. 5/Power on Link 6/Start AAPS 7/Pod tab, 3 dot menu, search and connect Link
+让所有部件恢复正常工作的最简单方法是： 1/ 在AAPS中删除Link连接 2/ 关闭Link设备电源 3/ 通过AAPS三点菜单退出AAPS应用 4/ 长按AAPS图标→进入Android应用信息→强制停止AAPS→清除缓存（切勿清除主存储！） 4之补充/ 少数手机可能需要在此步骤重启。 您可以尝试不重启。 5/ 开启Link设备电源 6/ 启动AAPS应用 7/ 进入Pod标签页→三点菜单→搜索并连接Link设备
 
-### Build error: file name too long
+### 构建错误：文件名太长
 
-While trying to build I get an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
+尝试构建时出现文件名过长的错误。 可能的解决方案： 将您的源代码移至更靠近驱动器根目录的目录（例如 "c:\src\AndroidAPS-EROS"）。
 
-From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+在Android Studio中： 请确保在打开项目并从GitHub拉取代码后，"Gradle"已完成同步和索引工作。 在重新构建项目之前执行 Build->Clean Project。 执行 文件→使缓存无效并重启Android Studio。
 
-### Alert: Running dev version. Closed loop is disabled
+### 警告：正在运行开发版本。 闭环已禁用。
 
-AAPS is not running in "developer mode". AAPS shows the following message: "running dev version. Closed loop is disabled".
+AAPS 未在"开发者模式"下运行。 AAPS 显示以下消息：“运行开发版本， 闭环已禁用。”
 
-Make sure AAPS is running in "developer mode": Place a file named "engineering_mode" at the location "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AAPS for it to find the file and go into "developer mode".
+请确保 AAPS 在"开发者模式"下运行： 在 "AAPS/extra" 目录下放置一个名为 "engineering_mode" 的文件。 任何文件都可以，只要命名正确。 确保重新启动 AAPS，以便找到文件并进入“开发者模式”。
 
-Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
+提示：复制一份现有的日志文件，并将其重命名为"engineering_mode"（注意：不要有文件扩展名！）。
 
-### Where can I find settings files?
+### 在哪里可以找到设置文件？
 
-Settings files will be stored on your phone's internal storage in the directory "/AAPS/preferences". WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+设置文件将存储在您手机的内部存储中，位于"/AAPS/preferences"目录下。 警告：请务必保管好您的密码，否则将无法导入加密的设置文件！
 
-### How to configure battery savings?
+### 如何配置电池节能设置？
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+正确配置电源管理非常重要，可防止手机在闲置时系统自动挂起AAPS及相关应用和服务。 这将导致AAPS无法正常工作，且传感器与Rileylink(RL)的蓝牙连接可能中断，从而触发"胰岛素泵断开"警报并引发通信错误。 在手机上进入 设置 -> 应用，并为以下应用禁用电池优化： AAPS、xDrip 或 BYODA/Dexcom 应用、蓝牙系统应用（可能需要先选择显示系统应用），或者直接完全关闭手机上的所有电池优化功能。 因此，您的电池可能会消耗得更快，但这是判断电池优化是否导致问题的有效方法。 电池节能功能的实现方式很大程度上取决于手机品牌、型号和/或操作系统版本。 由于这个原因，几乎不可能为您的具体配置提供正确设置电池优化的指导说明。 尝试调整设置，找到最适合您的配置方案。 更多信息，请参阅"Don't kill my app"。
 
-### Pump unreachable alerts several times a day or at night.
+### 胰岛素泵无法连接警报每天或夜间多次出现。
 
-Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings) Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
+您的手机可能正在暂停AAPS服务甚至蓝牙功能，导致与RL的连接中断（请参阅电池优化设置部分）。 建议通过右上角三点菜单进入 偏好设置→本地警报→胰岛素泵不可达阈值[分钟]，将该值配置为120分钟。
 
-### Where can I delete treatments in AAPS v3 ?
+### 我可以在AAPS v3中删除治疗记录吗？
 
-3 dots menu, select treatments, then 3 dots menu again and you have different options available.
+点击右上角三点菜单 → 选择"治疗记录" → 再次点击三点菜单 → 即可看到可用的不同操作选项。
 
-### Configuring and Using the AAPSClient remote app
+### 配置和使用AAPSClient远程应用程序
 
-AAPS can be monitored and controlled remotely via the AAPSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the AAPSClient (remote) app is distinct from the NSClient configuration in AAPS, and the AAPSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'AAPSClient remote' and 'AAPS remote Wear' apps.
+AAPS可以通过AAPSClient应用程序进行远程监控和操作，同时也可选择通过运行在Android Wear智能手表上的配套Wear应用来实现这一功能。 请注意，AAPSClient（远程）应用程序与AAPS中的NSClient配置不同，且AAPSClient（远程）Wear应用程序也不同于AAPS Wear应用程序——为明确起见，远程应用程序将被称为“AAPSClient远程”和“AAPS远程Wear”应用程序。
 
-To enable AAPSClient remote functionality you must: 1) Install the AAPSClient remote app (the version should match the version of AAPS being used) 2) Run the AAPSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site. 3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the AAPSClient remote app to your Nightscout site. Once this is done, AAPSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set. 4) To activate the profile:
+要启用AAPSClient远程功能，您必须： 1）安装AAPSClient远程应用程序（版本需与使用的AAPS版本匹配）。 2）运行AAPSClient远程应用程序，按照配置向导完成必要权限授予及Nightscout站点访问配置。 3）此时您可能需要禁用部分警报选项，和/或关闭将AAPSClient远程应用启动记录到Nightscout站点的高级设置。 完成此操作后，AAPSClient远程应用将从您的Nightscout站点下载配置文件数据。"概览"选项卡将显示CGM数据和部分AAPS数据，但可能不会显示图表数据，并会提示尚未设置配置文件。 4) 激活配置：
 
-- Enable remote profile synchronization in AAPS > NSClient > Options
-- Activate the profile in NSClient remote > Profile After doing so, the profile will be set, and AAPSClient remote should display all data from AAPS. Hint: If the graph is still missing, try changing the graph settings to trigger an update. 5) To enable remote control by the AAPSClient, selectively enable the aspects of AAPS (Profile changes, Temp Targets, Carbs, etc.) that you would like to be able to control remotely via AAPS > NSClient > Options . Once these changes are made, you'll be able to remotely control AAPS via either Nightscout or AAPSClient remote.
+- 在 AAPS > NSClient > 选项中启用远程配置同步
+- 在NSClient远程端 > 配置文件中激活该配置文件 完成此操作后，配置文件即被设定，AAPSClient远程端将显示来自AAPS的所有数据 提示：如果图表仍然缺失，尝试更改图表设置以触发更新。 5) 要通过 AAPSClient 启用远程控制，请选择性启用 AAPS 的相关功能（配置更改、临时目标、碳水等），路径为 AAPS > NSClient > 选项。 完成这些更改后，您将能够通过 Nightscout 或 AAPSClient 远程控制 AAPS。
 
-If you'd like to monitor/control AAPS via the AAPSClient remote Wear App, you'll need both AAPSClient remote and the associated Wear app to be installed. To compile the AAPSClient remote Wear app, follow the standard instructions for installing/configuring the AAPS wear app, except when compiling it, choose the AAPSClient variant.
+如需通过AAPSClient远程Wear应用监控/控制AAPS，需同时安装AAPSClient远程主应用及其配套的Wear应用。 编译AAPSClient远程Wear应用时，请遵循安装/配置AAPS穿戴应用的标准说明，但在编译环节需选择AAPSClient变体版本。
 
-### I have a red triangle / AAPS won't enable closed loop / Loops stays in LGS / I have a yellow triangle
+### 我出现红色三角形警告 / AAPS无法启用闭环模式 / 循环始终处于LGS状态 / 我出现黄色三角形警告
 
-The red and yellow triangles are a security feature in AAPS v3.
+红色和黄色三角形是AAPS v3版本中的安全警示功能。
 
-Red triangle means that you have duplicate BGs and AAPS can't calculate precisely the deltas. You can't close the loop. You need to delete one BG of each duplicated value in order to clear the red triangle. Go to BYODA or xDRIP tab, long press one line you want to delete, check one of each lines that are doubled (or via 3 dots menu and Delete, depending on your AAPS version). You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
+红色三角形表示存在重复的血糖值（BGs），导致AAPS无法准确计算血糖变化率（deltas）。 无法启用闭环模式。 您需要删除每组重复血糖值中的一条记录，才能消除红色三角形警告。 进入BYODA或xDrip选项卡，长按要删除的某行数据，在重复出现的每组数据中勾选其中一条（或通过三点菜单选择删除，具体操作取决于您的AAPS版本）。 如果存在过多重复血糖值，您可能需要重置AAPS数据库。 在这种情况下，您还将丢失统计数据、活性胰岛素(IOB)、活性碳水化合物(COB)以及当前选定的配置文件。
 
-Possible origin of the problem: xDrip and/or NS backfilling BGs.
+问题可能源于：xDrip和/或Nightscout(NS)的血糖数据回填功能。
 
-The yellow triangle means unstable delay between each BG reading. You don't receive BGs every 5 min regularly or missing BGs. It is often a Libre problem. It also happens when you change G6 transmitter. If the yellow triangle is related to the G6 tansmitter change, it will go away by itself after several hours (around 24h). In case of Libre, the yellow triangle will stay. The loop can be closed and works correctly.
+黄色三角形表示各次血糖读数间存在不稳定的时间延迟。 您的血糖数据未规律性地每5分钟更新一次，或存在数据缺失。 这通常是Libre传感器的问题。 更换G6发射器时也会出现此问题。 若黄色三角警告与更换G6发射器有关，该警告将在数小时后（约24小时）自动消失。 若是Libre传感器，黄色三角警告将持续存在。 闭环功能可以正常启用并运行。
 
-### Can I move an active DASH Pod to other hardware?
+### 能否将运行中的DASH Pod迁移到其他硬件？
 
-This is possible. Note that as moving is "unsupported" and "untested" there is some risk involved. Best to try the procedure when your Pod is about to expire so when things go wrong not much is lost.
+这是可行的。 请注意，由于迁移操作属于"不受支持"且"未经测试"的行为，存在一定风险。 建议在Pod即将到期时尝试此操作，这样即使出现问题，损失也较小。
 
-Critical is that pump "state" (which includes it's MAC address) in AAPS and DASH match on reconnecting
+关键在于重新连接时，AAPS中的泵"状态"（包括其MAC地址）必须与DASH完全匹配。
 
-### Procedure I follow in this:
+### 我在此过程中遵循的操作流程如下：
 
-1) Suspend the DASH pump. This makes sure there are no running or queued commands active when DASH loses connection 2) Put the phone into airplane mode to disable BT (as well as WiFi and Mobile data). This way it is guaranteed AAPS and DASH can not communicate. 3) Export settings (which includes the DASH state) 4) Copy the settings file just exported from the phone (as it is in airplane mode and we do not want to change that, easiest way is using USB cable) 5) Copy the settings file to the alternate phone. 6) Import settings on the alternate phones AAPS. 7) Check the DASH tab to verify it is seeing the Pod. 8) Un-suspend the Pod. 9) Check the DASH tab and confirm it is communicating with the Pod (use the refresh button)
+1) 暂停 DASH 泵 这能确保当DASH断开连接时，系统不会执行任何正在运行或排队的指令 2）将手机切换至飞行模式以禁用蓝牙（同时关闭WiFi和移动数据） 这样就能确保AAPS和DASH无法通信。 3）导出设置（包含DASH状态）。 4）将刚导出的设置文件从手机复制出来（由于手机处于飞行模式且我们不想改变该状态，最简单的方法是使用USB数据线）。 5）将设置文件复制到备用手机上。 6) 在备用手机的 AAPS 中导入设置。 7) 检查 DASH 选项卡以验证它是否能看到 Pod。 8）取消暂停 Pod。 9）检查 DASH 选项卡并确认它是否正在与 Pod 通信（使用刷新按钮）。
 
-Congratulations: you did it!
+恭喜：完成了！
 
-*Wait!* You still have the main phone thinking it can reconnect to the same DASH:
+*等等！* 您的主手机仍然认为它可以重新连接到相同的 DASH：
 
-1) On the main phone choose "deactivate". This is safe because the phone has no way of communicating with DASH to actually deactivated the Pod (it is still in airplane mode) 2) Deactivation will result in a communications error - this is expected. 3) Just hit "retry" a couple of times until AAPS offers the option to "Discard" the Pod.
+1）在主手机上选择“停用”。 这很安全，因为手机无法与DASH通信来实际停用Pod（仍处于飞行模式） 2）停用操作会导致通信错误——这是预期情况。 3）只需重试几次，直到 AAPS 提供“丢弃” Pod 的选项。
 
-When Discarded, verify AAPS is reporting "No Active Pod". You can now safely disable airplane mode again.
+当丢弃后，验证 AAPS 是否报告“无活动 Pod”。 现在您可以安全地禁用飞行模式了。
 
-### How do I import settings from earlier versions of AAPS into AAPS v3 ?
+### 如何将早期版本的AAPS设置导入到AAPS v3中？
 
-You can only import settings (in AAPS v3) that were exported using AAPS v2.8x or v3.x. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install AAPS v3 and import v2.8 settings in v3.
+您只能导入通过AAPS v2.8x或v3.x版本导出的设置（在AAPS v3中）。如果您之前使用的AAPS版本低于v2.8x，或者需要使用v2.8x之前的设置导出文件，则需要先安装AAPS v2.8版本。 在 v2.x 中导入旧设置到 v2.8。检查一切正常后，可以从 v2.8 导出设置。安装 AAPS v3，并在 v3 中导入 v2.8 设置。
 
-If you use the same key to build v2.8 and v3, you won't even have to import settings. You can install v3 over v2.8.
+如果您使用相同的密钥构建 v2.8 和 v3，则甚至不需要导入设置。 您可以直接在 v2.8 上安装 v3。
 
-There were some new objectives added. You'll need to validate them.
+添加了一些新的目标。 您需要验证它们。

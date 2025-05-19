@@ -2,69 +2,69 @@
 orphan: true
 - - -
 
-# For users of Eversense
+# Eversense 用户须知
 
-There are three different methods to access the readings from Eversense:
+获取Eversense读数有以下三种方法：
 
-- ESEL companion mode
-- ESEL patched mode
-- xDrip+ companion app
+- ESEL 伴侣模式
+- ESEL 修补模式
+- xDrip+ 伴侣应用程序
 
 ## ESEL
 
-Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+请按照[说明](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel)获取并安装[ESEL应用](https://github.com/BernhardRo/Esel/tree/master/apk)。
 
-- Enable "Send to AAPS and xDrip"
-- **Disable** "Send to Nightscout"
-- As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
+- 启用“发送到 AAPS 和 xDrip”
+- **禁用**“发送到 Nightscout”
+- 由于来自 Eversense 的血糖数据可能存在噪点，建议在 ESEL 中启用“平滑数据”。
 
 ![ESEL Broadcast](../images/ESEL.png)
 
-### Companion Mode
+### 伴侣模式
 
-Reads the data from the Eversense app notifications (works with the standard Eversense App, available since ESEL version 3.0.1).
+从 Eversense 应用程序通知中读取数据（适用于自 ESEL 3.0.1 版本起提供的标准 Eversense 应用程序）。
 
-1. Use the official Eversense App from the Google Play Store
-   - Optional, but required for backfilling: Login to your Eversense account
-   - In Sync, enable Auto synchronization
-2. Configuration of ESEL:
-   - Disable the setting "Get data from patched Eversense App"
-   - For backfilling: Enable "Fill missing data from eversensedms.com"
-   - Provide as Email address and password your Eversense login data
-3. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+1. 使用来自 Google Play 商店的官方 Eversense 应用程序
+   - 可选，但回填需要：登录您的 Eversense 帐户
+   - 在“同步”中，启用“自动同步”
+2. ESEL 的配置：
+   - 禁用设置“从修补的 Eversense 应用程序获取数据”
+   - 如需数据回填：请启用"从eversensedms.com填充缺失数据"功能
+   - 请输入您的Eversense登录邮箱地址和密码
+3. 在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中将"MM640g"设为血糖数据源。
 
-### Patched Eversense App
+### 已破解的Eversense应用
 
- Requires a patched version of the Eversense App (works completely offline, including backfilling).
+ 需要使用已破解版的Eversense应用（可完全离线运行，包括数据回填功能）。
 
-1. Uninstall the Eversense App (Warning: your local historical data (older than 1 week) will be lost!)
+1. 卸载Eversense应用（警告：您本地的历史数据（超过1周）将会丢失！）
 
-2. Install the [patched Eversense app](https://cr4ck3d3v3r53n53.club) and use it as described by the vendor
+2. 安装[破解版Eversense应用](https://cr4ck3d3v3r53n53.club)并按照供应商说明使用
 
-   - Start the Eversense App, login, connect to your transmitter and use it just like the normal app.
+   - 启动Eversense应用，登录后连接您的发射器，其使用方式与原版应用完全相同。
 
-3. Configuration of ESEL:
+3. ESEL 的配置：
 
-   - Enable the setting "Get data from patched Eversense App"
+   - 启用"从破解版Eversense应用获取数据"设置
 
 
 
 ![ESEL Broadcast](../images/ESELpatch.png)
 
-​       If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
+若您首次在全新安装的Eversense环境下运行ESEL，可能需要等待长达15分钟才能在xDrip中看到首批数据！
 
-4. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+4. 在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中将"MM640g"设为血糖数据源。
 
 ## xDrip+
 
-xDrip+ can read notifications from the vendor app, like ESEL does. No backfilling available.
+xDrip+ 可以像 ESEL 一样读取厂商应用的通知。 没有回填功能。
 
-- Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ “Companion App” must be selected.
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../CompatibleCgms/xDrip.md).
-- Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
+- 下载并安装 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
+- 在xDrip+中必须选择"伴侣应用"作为数据源。
+- 在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。
+- 请按照[xDrip+设置页面](../CompatibleCgms/xDrip.md)的说明调整xDrip+参数。
+- 在AAPS中启用[指数平滑功能](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
 
 ```{warning}
-BG values reading frequency is not always 5 minutes and duplicates can occur.
+血糖值读取频率并非始终为5分钟，且可能出现重复数据。
 ```

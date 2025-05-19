@@ -8,29 +8,29 @@ orphan: true
 
 ## Jelly 2
 
-Do not confuse with Jelly Star.
+不要与 Jelly Star 混淆。
 
-**Advantages**
+**优点**
 
-* It's really small.
-* Android 11.
-* Even if you tell people, they might not consider it as a normal smartphone and will except it easier as a exception when phones are normally not allowed.
+* 真的很小。
+* Android 11。
+* 即使你告诉人们，他们也可能不会把它当作普通的智能手机，当通常不允许使用手机时，更容易把它当作例外接受。
 
-**Disadvantages**
+**缺点**
 
-* Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
-* Can only be used as LooperPhone. It's better to have a normal smartphone in your pocket. 
+* 仅推荐有经验的闭环使用者使用（部分设置不可识别，需通过大屏Android AAPS手机的操作经验来了解各项功能的位置及使用方法。 某些AAPS按钮需要细腻的触控操作，粗短手指可能难以准确点击）。
+* 只能用作 LooperPhone。 最好口袋里还有一部普通的智能手机。 
 
-### Battery life optimization
+### 电池寿命优化
 
-The Jelly 2 comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip+, OOP2, Juggluco, etc...).
+Jelly 2 配备了强大的优化功能，**必须**为 AAPS（以及其他 DIY 应用程序，如 BYODA、xDrip+、OOP2、Juggluco 等）禁用这些功能。
 
 ![](../images/Jelly_Settings1.png)
 
-You can leave Intelligent assistance enabled, but it **must be disabled for DIY apps**.
+你可以启用智能辅助，但**必须为 DIY 应用程序禁用它**。
 
 ![](../images/Jelly_Settings2.png)
 
-You can enable NFC for Libre sensors.
+你可以为 Libre 传感器启用 NFC。
 
 ![](../images/Jelly_Settings3.png)
