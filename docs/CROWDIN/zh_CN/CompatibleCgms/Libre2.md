@@ -51,7 +51,7 @@ xDrip+ 不支持直接连接到 Libre 2 US 和 AUS。
 
 ## 4. 使用 Juggluco
 
-- Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html).
+- 从[此处](https://www.juggluco.nl/Juggluco/download.html)下载并安装 Juggluco 应用程序。
 - 按照[此处](https://www.juggluco.nl/Juggluco/index.html)的说明进行操作
 - 在“设置”中，启用 xDrip+ 广播（不会将数据发送到 xDrip+，而是发送到 AAPS）。
 
@@ -231,4 +231,4 @@ Libre2传感器内置合理性校验机制，可识别异常数据。 一旦传�
 4.  请勿频繁校准。 频繁校准传感器通常会导致监测结果恶化。 当传感器在血糖稳定状态下表现良好时，请勿新增校准，此举不会产生任何实际效益。 建议每3-5天（当然也需在血糖稳定状态下）复查校准状态即可。
 5.  非必要请勿校准。 虽然听起来有些多余，但当血糖与组织液葡萄糖值差异仅为±10 mg/dl时（例如：血糖值95，Libre传感器显示100 → 无需输入95；血糖值95，Libre传感器显示115 → 需输入95参与校准），不建议新增校准。
 
-通用说明：根据第4条准则，在启用新传感器及传感器临近使用寿命时，需将比对测量频率提高至3-5天以内。 对于新旧传感器而言，原始数值更易发生变化，往往需要重新校准。 偶尔会出现传感器无法提供有效数值的情况。 Most likely the sensor value is way to low compared to the actual blood glucose level (e.g. sensor: 50 mg/dl, bg: 130 mg/dl) even after calibrating. If this is the case the sensor cannot be calibrated to report useful results. E.g. when using the patched libre app one can add an offset of maximal +20 mg/dl. When it happens to you that the sensor does provides way too low values, don’t hesitate to replace it as it will not get better. Even if it might be a defective sensor, when seeing sensors that do provide way too low values very often, try to use different areas to place your sensor. Even in the official area (upper arm) there might be some locations where the sensors just do not provide valid values. This is some kind of trial end error to find areas that work for you.
+通用说明：根据第4条准则，在启用新传感器及传感器临近使用寿命时，需将比对测量频率提高至3-5天以内。 对于新旧传感器而言，原始数值更易发生变化，往往需要重新校准。 偶尔会出现传感器无法提供有效数值的情况。 很可能传感器数值与实际血糖水平相比过低（例如传感器：50 mg/dl，实际血糖：130 mg/dl），即便在校准后也是如此。 如果是这种情况，传感器将无法通过校准来提供有用的读数。 例如 ，在使用破解版Libre应用时，用户最多可以添加+20 mg/dl的偏移值。 若您遇到传感器持续显示数值严重偏低的情况，请立即更换，因为该问题无法自行改善。 即使可能是传感器故障，若频繁遇到数值严重偏低的情况，请尝试更换传感器佩戴部位。 即使在官方建议的佩戴区域（上臂），某些位置也可能无法提供有效读数。 这需要通过反复试验来找到适合您的佩戴位置。
