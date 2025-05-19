@@ -102,9 +102,9 @@
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
 * 随机 Random BG：生成随机BG数据（仅演示模式）
 
-## Smoothing
+## 平滑
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![平滑](../images/ConfBuild_Smoothing.png)
 
 请参阅[平滑血糖数据](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
 
