@@ -345,7 +345,7 @@ This button will start the process to change the patch. See [Activate patch](#me
 
 ### Reset alarms
 
-The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. E.g. when suspended due to a maximum daily insulin delivery alarm.
+The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. 例如 when suspended due to a maximum daily insulin delivery alarm.
 
 ![Reset alarms](../images/medtrum/ResetAlarms.png)
 
