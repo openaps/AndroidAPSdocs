@@ -5,11 +5,11 @@ orphan: true
 # Syai X1
 
 
-## Using X1 And Syai Tag app
+## 使用X1与Syai Tag应用
 
 -   Install the apk from <https://play.google.com/store/apps/details?id=com.syai.tag>.
 
--   Start X1 sensor
+-   启动X1传感器
 
 - Select Syai Tag in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
