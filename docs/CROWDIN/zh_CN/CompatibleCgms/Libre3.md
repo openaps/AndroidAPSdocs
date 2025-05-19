@@ -60,7 +60,7 @@ After a sensor change xDrip+ will automatically detect the new sensor and will d
 
 ### Step 4: Configure AndroidAPS
 
-- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- 在[ConfigBuilder, BG Source](#Config-Builder-bg-source)中选择xDrip+。
 
 - If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
 - Turn of Smoothing (done in xDrip+ already)
