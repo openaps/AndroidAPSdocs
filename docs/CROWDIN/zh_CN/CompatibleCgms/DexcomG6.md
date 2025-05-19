@@ -14,7 +14,7 @@ orphan: true
 
 - 如需重启传感器，请确保已准备好校准并密切监测数值波动。
 
-- 对出厂校准的G6/ONE传感器进行预热可能导致检测结果出现波动。 If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
+- 对出厂校准的G6/ONE传感器进行预热可能导致检测结果出现波动。 若进行预热操作，为获得最佳效果，您很可能需要对传感器进行校准。
 
 更多详情请阅读Tim Street发表在[http://www.diabettech.com](https://www.diabettech.com)上的[文章](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/)。
 
