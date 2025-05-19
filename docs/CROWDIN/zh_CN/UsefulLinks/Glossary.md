@@ -1,62 +1,62 @@
-# Glossary
+# 术语表
 
-**AAPS** = AndroidAPS is the name of the Android app.
+**AAPS** = AndroidAPS 是 Android 应用程序的名称。
 
-**AAPSClient** (or **NSClient**) = a remote control feature that can be used by caregivers via a follower phone to follow a user’s **AAPS** by connecting to the user’s **Nightscout's** site. Further info → Wiki - 'NS Client'. Objectives learning program within **AAPS** provides step by step guidance. Further info → Wiki - 'objectives'.
+**AAPSClient**（或 **NSClient**） = 远程控制功能，护理人员可以通过跟随手机连接到用户的 **Nightscout** 网站来跟踪用户的 **AAPS**。 更多信息 → 维基 - 'NS Client'。 在 **AAPS** 中的目标学习程序提供逐步指导。 更多信息 → 维基 - '目标'。
 
-**APS** = Artificial Pancreas System.
+**APS** = 人工胰腺系统，Artificial Pancreas System。
 
-**AMA** = Advanced Meal Assist. An algorithm which allows **AAPS** to increase the user’s basal more aggressively after a meal bolus. Further info → Wiki - 'AMA'.
+**AMA** = 高级膳食助理。 一种算法，允许**AAPS**在餐后大剂量注射后更积极地增加用户的基础率。 更多信息 → 维基 - 'AMA'。
 
-**Adjustment Factor** = used within **DynamicISF** and is a value set within a user's **Preferences** between 1% and 300%. This acts as a multiplier on the **TDD** value.
+**调整系数** = 用于**动态胰岛素敏感系数**功能，是用户在**偏好设置**中设定的1%至300%之间的数值。 这相当于对**总日剂量(TDD)**值设置了一个乘数因子。
 
-- increasing the **Adjustment Factor** value above 100 % makes **DynamicISF** more aggressive: the **ISF** values become smaller (i.e. more insulin required to decrease **BG** levels a small amount)
-- lowering the **Adjustment Factor** value under 100% makes **DynamicISF** less aggressive: the **ISF** values become larger (i.e. less insulin required to decrease **BG** levels a small amount).
+- 将**调整系数**提高到100%以上会使**动态胰岛素敏感系数**更激进：**胰岛素敏感系数(ISF)**值会变小（即需要更多胰岛素来少量降低**血糖(BG)**水平）
+- 将**调整系数**降至100%以下会使**动态胰岛素敏感系数**趋于保守：**胰岛素敏感系数(ISF)**值会增大（即需要更少胰岛素即可少量降低**血糖(BG)**水平）。
 
-**Android Auto** = a system used to host certain functions of an Android smartphone’s features, including **AAPS**, within a car's display. Further info → Wiki - 'android auto'.
+**Android Auto** = 一种车载系统，可在汽车显示屏上运行Android智能手机的特定功能（包括**AAPS**）。 更多信息 → 维基 - 'android auto'。
 
-**APK** = Android application Package. A software installation file. Further info → Wiki - 'Building APK'.
+**APK** = Android 应用程序包。 一个软件安装文件。 更多信息 → 维基 - '构建 APK'。
 
-**Autosens** = calculation of sensitivity to insulin between a period of a 24 and 8 hour window etc. Further info → DIABETTECH - **Autosens**.
+**Autosens** = 计算 24 小时到 8 小时窗口之间的胰岛素敏感性等。 更多信息 → DIABETTECH - **Autosens**。
 
-**Azure** = cloud computing platform to host **Nightscout** web app Azure → see also **Nightscout**.
+**Azure** = 云计算平台，用于托管 **Nightscout** 网页应用程序 Azure → 参见 **Nightscout**。
 
-**BAT** = status light low battery on **AAPS’** home screen **Preferences**, Screenshots → see also **CAN** / **RES** / **SEN**.
+**BAT** = 在 **AAPS** 的主屏幕上显示低电量状态灯 **偏好设置**，截图 → 参见 **CAN** / **RES** / **SEN**。
 
-**BG** = blood glucose.
+**BG** = 血糖。
 
-**BGI** = blood glucose impact. The degree to which **BG** 'should' rise or fall based on insulin activity alone.
+**BGI** = 血糖影响。 **血糖(BG)**仅基于胰岛素作用"应当"升高或降低的程度。
 
-**BG source** = the source of the user’s **BG** values derived from either **CGM** or **FGM** through a system integration software like **BYODA**, **xDrip+** etc. Further info → Wiki - 'BG source'
+**血糖数据源** = 用户**血糖(BG)**值的来源，通过**BYODA**、**xDrip+**等系统集成软件从**连续血糖监测(CGM)**或**闪速葡萄糖监测(FGM)**设备获取。 更多信息 → 维基 - 'BG 来源'
 
-**Bridge** = an additional device transforming **FGM** to **CGM**.
+**桥接** = 一个额外的设备，将 **FGM** 转换为 **CGM**。
 
-**BR** = Basal Rate. The amount of insulin in a given time block to maintain **BG** at a stable level. → see also **IC** / **ISF**.
+**BR** = 基础率。 基础率 = 在特定时间段内维持**血糖(BG)**稳定水平所需的胰岛素量。 → 参见 **IC** / **ISF**。
 
-**BYODA** = Build Your Own Dexcom App. A way to generate the user’s own Dexcom App for reading out the sensor data Dexcom G6.
+**BYODA** = 构建您自己的 Dexcom 应用。 一种生成用户自有 Dexcom 应用程序的方式，用于读取 Dexcom G6 的传感器数据。
 
-**CAGE** = Cannula AGE. Displayed on **AAPS’** homescreen and Nightscout providing the user’s information entered in the Actions tab / menu → see also **Nightscout**.
+**CAGE** = 导管年龄。 在 **AAPS** 的主屏幕和 Nightscout 上显示，提供用户在操作标签/菜单中输入的信息 → 参见 **Nightscout**。
 
-**CAN** = status light overdue cannula change on the **AAPS’** homescreen **Preferences'** → see also **BAT** / **RES** / **SEN**.
+**CAN** = **AAPS**主屏幕上的"管路更换超期"状态指示灯（位于**偏好设置**中）→ 另请参阅**BAT**(电池)/**RES**(储药器)/**SEN**(传感器)状态指示。
 
-**CGM** = Continuous Glucose Monitor → see also **FGM**.
+**CGM** = 连续血糖监测器 → 参见 **FGM**。
 
-**Closed Loop** = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an **AAPS’s** algorithm and the user’s **Profile** settings without requiring the user’s-approval. Further info → Wiki - 'closed loop'.
+**闭环** = 一个闭环系统，根据 **AAPS** 的算法和用户的 **配置文件** 设置，自动调整用户的基础胰岛素输送，无需用户批准。 更多信息 → 维基 - '闭环'。
 
-**COB** = Carbs On Board. This is the amount of carbohydrates currently available for the user's digestion → see also IOB.
+**COB** = 活性碳水化合物量。 这是用户当前可供消化的碳水化合物量 → 参见 IOB。
 
-**CSF** =Carbs Sensitivity Factor. i.e. how much does the user’s **BG** increase for 1g of carbs absorbed.
+**CSF** = 碳水系数。 即：用户的 **BG** 在吸收 1 克碳水化合物后会增加多少。
 
-**DIA** = Duration of Insulin Action. Further info → Wiki - 'insulin types' and see also → DIABETTECH - 'DIA'.
+**DIA** = 胰岛素作用持续时间 更多信息 → 维基 - '胰岛素类型'，另见 → DIABETTECH - 'DIA'.
 
-**DST** = Daylight Savings Time Wiki DST.
+**DST** = 夏令时 维基 DST。
 
-**Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s:
+**动态胰岛素敏感系数（Dynamic ISF或DynISF）** = **AAPS**中的一项功能，可根据用户的以下因素动态调整胰岛素敏感系数(**ISF**)：
 
-- Total Daily Dose of insulin (**TDD**); and
-- current and predicted **BG** values.
+- **每日胰岛素总剂量（Total Daily Dose of insulin, TDD）**
+- 当前及预测的**血糖(BG)**值。
 
-**eCarbs** = extended Carbs. Carbs split up over several hours to accommodate/protein and permits **AAPS** to deliver extended boluses. Further info → Wiki - 'eCarbs', 'eCarbs use'.
+**缓释碳水化合物(eCarbs)** = 延时释放的碳水化合物(extended Carbs)。 将碳水化合物分配至数小时摄入，用以匹配蛋白质吸收，并允许**AAPS**进行缓释大剂量输注。 Further info → Wiki - 'eCarbs', 'eCarbs use'.
 
 **FGM** = Flash Glucose Monitor manufactured by Freestyle Libre. Further info → Wiki - 'BG source' and see also 'CGM'.
 
