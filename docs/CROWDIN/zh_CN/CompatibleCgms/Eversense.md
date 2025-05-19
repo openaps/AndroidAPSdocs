@@ -2,29 +2,29 @@
 orphan: true
 - - -
 
-# For users of Eversense
+# Eversense 用户须知
 
-There are three different methods to access the readings from Eversense:
+获取Eversense读数有以下三种方法：
 
-- ESEL companion mode
-- ESEL patched mode
-- xDrip+ companion app
+- ESEL 伴侣模式
+- ESEL 修补模式
+- xDrip+ 伴侣应用程序
 
 ## ESEL
 
-Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+请按照[说明](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel)获取并安装[ESEL应用](https://github.com/BernhardRo/Esel/tree/master/apk)。
 
-- Enable "Send to AAPS and xDrip"
-- **Disable** "Send to Nightscout"
-- As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
+- 启用“发送到 AAPS 和 xDrip”
+- **禁用**“发送到 Nightscout”
+- 由于来自 Eversense 的血糖数据可能存在噪点，建议在 ESEL 中启用“平滑数据”。
 
 ![ESEL Broadcast](../images/ESEL.png)
 
-### Companion Mode
+### 伴侣模式
 
-Reads the data from the Eversense app notifications (works with the standard Eversense App, available since ESEL version 3.0.1).
+从 Eversense 应用程序通知中读取数据（适用于自 ESEL 3.0.1 版本起提供的标准 Eversense 应用程序）。
 
-1. Use the official Eversense App from the Google Play Store
+1. 使用来自 Google Play 商店的官方 Eversense 应用程序
    - Optional, but required for backfilling: Login to your Eversense account
    - In Sync, enable Auto synchronization
 2. Configuration of ESEL:
@@ -59,9 +59,9 @@ Reads the data from the Eversense app notifications (works with the standard Eve
 
 xDrip+ can read notifications from the vendor app, like ESEL does. No backfilling available.
 
-- Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- 下载并安装 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
 - As data source in xDrip+ “Companion App” must be selected.
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- 在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。
 - Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../CompatibleCgms/xDrip.md).
 - Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
 
