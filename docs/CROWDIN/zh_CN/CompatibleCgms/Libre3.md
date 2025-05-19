@@ -42,9 +42,9 @@ The blood glucose values are received by the xDrip+ app on the smartphone.
 
 ![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
 
-- Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+- 从技术上讲，当前血糖值每分钟都会传输至xDrip+。 默认情况下，加权平均滤波器会基于过去25分钟的数据计算平滑值。 您可通过NFC扫描功能菜单调整该时段参数。
 
-  → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+  → 汉堡菜单 → 设置 → NFC 扫描功能 → 使用 xxx 方法时平滑 libre 3 数据
 
   ![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
 
@@ -92,7 +92,7 @@ If the sensor has been started with a Libreview account logged in, it is also po
 In order to switch from the Libre 3 app to Juggluco, you need to force-stop Libre 3 app via Android settings and proceed with Step 1 & 2.
 
 (libre3-experiences-and-troubleshooting)=
-## Experiences and Troubleshooting
+## 经验和故障排除
 
 ### Troubleshooting Libre3 -> Juggluco Connection
 
