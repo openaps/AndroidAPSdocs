@@ -5,7 +5,7 @@ orphan: true
 # Ottai M8
 
 
-## Using M8 with Ottai app
+## 搭配Ottai应用程序使用M8
 
 -   Download and Install the apk from <https://play.google.com/store/apps/details?id=com.ottai.seas>.
 
