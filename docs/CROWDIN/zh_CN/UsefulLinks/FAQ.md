@@ -145,79 +145,79 @@ AAPS用于控制您的泵并输注胰岛素。 根据欧洲现行的规定，所
 
 ##### 淋浴或泡澡时需要注意什么？​
 
-You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
+您可以在淋浴或洗澡时取下泵。 在这短时间内，您可能不需要它，但您应告知 AAPS 您已断开连接，以便 IOB 计算正确无误。 见<0>上面的描述</0>。
 
-#### Work
+#### 工作
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+根据您的工作，您可以选择在工作日使用不同的胰岛素系数。 作为闭环用户，您应该为典型的工作日考虑一个 <0>配置切换</0>。 例如，如果您的工作强度较低（如坐在办公桌前），您可以切换到高于 100% 的配置；如果您整天活动且站立，则可以切换到低于 100% 的配置。 您还可以考虑设置较高或较低的临时目标，或在工作时间比平时早很多或晚很多时，或轮班工作时，进行 [配置时间调整](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)。 您还可以创建第二个配置（例如“家庭”和“工作日”），并根据需要每天切换到实际需要的配置。
 
-### Leisure activities
+### 休闲活动
 
 (FAQ-sports)=
 
-#### Sports
+#### 运动
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+您需要重新调整闭环前的旧运动习惯。 如果您像以前一样简单地摄入一份或多份运动碳水，闭环系统会识别并相应地进行校正。
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+因此，你的体内会有更多碳水化合物储备，但同时闭环系统会进行抵消并释放胰岛素。
 
-When looping you should try these steps:
+当使用循环时，您可以尝试以下步骤：
 
-- Make a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) < 100%.
-- Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target.
-- If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
+- 将[配置文件切换](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)设置为小于100%。
+- 将[活动临时目标](#TempTargets-activity-temp-target)设置为高于你的标准目标。
+- 如果使用SMB，请确保禁用["在高临时目标时启用SMB"](#Open-APS-features-enable-smb-with-high-temp-targets)和["始终启用SMB"](#Open-APS-features-enable-smb-always)选项。
 
-Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+这些设置的前后处理非常重要。 请在运动前及时进行调整，并考虑肌肉充血的影响。
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../DailyLifeWithAaps/Automations.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+如果您定期在相同时间进行运动（例如健身房的体育课），可以考虑使用 [自动化](../DailyLifeWithAaps/Automations.md) 来切换配置和 TT。 基于位置的自动化也是一种选择，但会使预处理变得更加困难。
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+配置文件切换的百分比、活动临时目标值以及最佳调整时间都是因人而异的。 如果您在寻找适合自己的数值，请从安全范围开始（先使用较低百分比和较高临时目标）。
 
-#### Sex
+#### 性生活
 
-You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
+您可以摘除胰岛素泵以获得"自由"，但应告知AAPS以确保活性胰岛素(IOB)计算准确。 见<0>上面的描述</0>。
 
-#### Drinking alcohol
+#### 饮酒
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AAPS:
+在闭环模式下饮酒存在风险，因为算法无法准确预测酒精对血糖的影响。 您需要通过AAPS的以下功能来探索适合自己的处理方法：
 
-- Deactivating closed loop mode and treating the diabetes manually or
-- setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-- do a profile switch to noticeably less than 100% 
+- 停用闭环模式并手动控制糖尿病
+- 设置较高的临时目标并停用未标记餐食(UAM)功能，以防止闭环系统因未记录的餐食而增加活性胰岛素(IOB)
+- 将配置文件切换至明显低于100%的比例 
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+饮酒时，您必须始终关注连续血糖监测仪(CGM)，以便通过摄入碳水化合物来手动预防低血糖。
 
-#### Sleeping
+#### 睡眠
 
-##### How can I loop during the night without mobile and WIFI radiation?
+##### 如何在夜间运行闭环时避免手机和WiFi辐射？
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+许多用户会在夜间将手机切换至飞行模式。 如果您希望闭环系统在睡眠时继续工作，请按以下步骤操作（此方法仅适用于使用本地血糖数据源的情况，如xDrip+或['自建Dexcom应用'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)，若通过Nightscout获取血糖读数则无法使用）：
 
-1. Turn on airplane mode in your mobile.
-2. Wait until the airplane mode is active.
-3. Turn on Bluetooth.
+1. 将您的手机设置为飞行模式。
+2. 等待直至飞行模式生效。
+3. 打开蓝牙。
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+您现在既无法接听电话，也无法连接互联网。 但闭环仍在运行。
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+一些用户发现，当手机处于飞行模式时会出现本地广播问题（AAPS无法接收来自xDrip+的血糖值数据）。 进入设置 > 应用间设置 > 识别接收器，输入 `info.nightscout.androidaps`。
 
 ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-#### Travelling
+#### 旅行
 
-##### How to deal with time zone changes?
+##### 如何应对时区变化？
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+使用 Dana R 和 Dana R Korean 无需进行任何操作。 对于其他泵，请参阅 [时区旅行](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) 页面了解更多详情。
 
-### Medical topics
+### 医疗话题
 
-#### Hospitalization
+#### 住院
 
-If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
+如果您想与临床医生分享有关AAPS和DIY闭环系统的一些信息，可以打印[AAPS临床医生指南](../UsefulLinks/ClinicianGuideToAaps.md)。
 
-#### Medical appointment with your endocrinologist
+#### 内分泌科医生的医疗预约
 
-##### Reporting
+##### 报告
 
 You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
