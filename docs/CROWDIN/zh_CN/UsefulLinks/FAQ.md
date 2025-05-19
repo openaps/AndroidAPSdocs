@@ -219,130 +219,130 @@ AAPS用于控制您的泵并输注胰岛素。 根据欧洲现行的规定，所
 
 ##### 报告
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+您可以选择展示您的Nightscout报告(https://YOUR-NS-SITE.com/report)，或者查看[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)。
 
-## Frequent questions on Discord and their answers...
+## Discord上的常见问题及其解答...
 
-### My problem is not listed here.
+### 我的问题不在此列。
 
-[Information to get help.](../GettingHelp/WhereCanIGetHelp.md)
+[获取帮助的相关信息。](../GettingHelp/WhereCanIGetHelp.md)
 
-### My problem is not listed here but I found the solution
+### 我的问题不在列表中，但我已找到解决方法
 
-[Information to get help.](../GettingHelp/WhereCanIGetHelp.md)
+[获取帮助的相关信息。](../GettingHelp/WhereCanIGetHelp.md)
 
-**Remind us to add your solution to this list!**
+**提醒我们将您的解决方案添加到此列表中！**
 
-### AAPS stops everyday around the same time.
+### AAPS每天大约在同一时间停止运行。
 
-Stop Google Play Protect. Check for "cleaning" apps (ie CCleaner etc) and uninstall them. AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
+停止 Google Play Protect。 检查“清理”应用程序（例如 CCleaner 等）并卸载它们。 AAPS / 三点菜单 / 关于 / 点击"保持应用在后台运行"链接以关闭所有电池优化设置。
 
-### How to organize my backups ?
+### 如何整理我的备份？
 
-Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+请定期导出设置：每次更换Pod后、修改个人配置后、完成目标验证后，或是更换胰岛素泵时...即使没有任何改动，也请每月至少导出一次。 保留多份旧的导出文件。
 
-Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
+请将以下文件备份至网络云盘（如Dropbox、Google等）：您手机上用于安装应用程序的所有apk文件（包括AAPS、xDrip、BYODA、Patched LibreLink等），以及从所有应用程序导出的设置文件。
 
-### I have problems, errors building the app.
+### 我在构建应用程序时遇到问题和错误。
 
-Please
+请
 
-- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) for typical errors and
-- the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
+- 请查看[Android Studio故障排除](../GettingHelp/TroubleshootingAndroidStudio)以了解典型错误及其解决方案。
+- 以及[逐步操作指南](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po)中的提示。
 
-### I'm stuck on an objective and need help.
+### 我被卡在一个目标上，需要帮助。
 
-Screen capture the question and answers. Post-it on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+截屏问题和答案。 将其发布到 Discord 的 AAPS 频道。 别忘了说明您选择的选项（或未选择的）以及原因。 您会得到提示和帮助，但您需要自己找到答案。
 
-### How to reset the password in AAPS v2.8.x ?
+### 如何在AAPS v2.8.x中重置密码？
 
-Open the hamburger menu, start the Configuration wizard and enter new password when asked. You can quit the wizard after the password phase.
+打开汉堡菜单，启动配置向导并在提示时输入新密码。 您可以在密码阶段之后退出向导。
 
-### How to reset the password in AAPS v3.x
+### 如何在AAPS v3.x中重置密码？
 
-You find the documentation [here](#Update3_0-reset-master-password).
+你可以在[这里](#Update3_0-reset-master-password)找到文档。
 
-### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+### 我的连接/胰岛素泵/Pod无响应（RL/OL/EmaLink等设备）
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaL...).
+对于某些手机，蓝牙可能会断开与链接（RL/OL/EmaL 等）的连接。
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
+部分用户还会遇到链接无响应的情况（AAPS显示设备已连接，但链接无法访问或控制胰岛素泵）。
 
-The easiest way to get all these parts working together is : 1/ Delete Link from AAPS 2/ Power off Link 3/ AAPS 3 dot menu, quit AAPS 4/ Long press AAPS icon, Android menu, info on app AAPS, Force stop AAPS and then Delete cache memory (Do not delete main memory !) 4bis/ Rarely some phones may need a reboot here. You can try without reboot. 5/Power on Link 6/Start AAPS 7/Pod tab, 3 dot menu, search and connect Link
+让所有部件恢复正常工作的最简单方法是： 1/ 在AAPS中删除Link连接 2/ 关闭Link设备电源 3/ 通过AAPS三点菜单退出AAPS应用 4/ 长按AAPS图标→进入Android应用信息→强制停止AAPS→清除缓存（切勿清除主存储！） 4之补充/ 少数手机可能需要在此步骤重启。 您可以尝试不重启。 5/ 开启Link设备电源 6/ 启动AAPS应用 7/ 进入Pod标签页→三点菜单→搜索并连接Link设备
 
-### Build error: file name too long
+### 构建错误：文件名太长
 
-While trying to build I get an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
+尝试构建时出现文件名过长的错误。 可能的解决方案： 将您的源代码移至更靠近驱动器根目录的目录（例如 "c:\src\AndroidAPS-EROS"）。
 
-From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+在Android Studio中： 请确保在打开项目并从GitHub拉取代码后，"Gradle"已完成同步和索引工作。 在重新构建项目之前执行 Build->Clean Project。 执行 文件→使缓存无效并重启Android Studio。
 
-### Alert: Running dev version. Closed loop is disabled
+### 警告：正在运行开发版本。 闭环已禁用。
 
-AAPS is not running in "developer mode". AAPS shows the following message: "running dev version. Closed loop is disabled".
+AAPS 未在"开发者模式"下运行。 AAPS 显示以下消息：“运行开发版本， 闭环已禁用。”
 
-Make sure AAPS is running in "developer mode": Place a file named "engineering_mode" at the location "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AAPS for it to find the file and go into "developer mode".
+请确保 AAPS 在"开发者模式"下运行： 在 "AAPS/extra" 目录下放置一个名为 "engineering_mode" 的文件。 任何文件都可以，只要命名正确。 确保重新启动 AAPS，以便找到文件并进入“开发者模式”。
 
-Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
+提示：复制一份现有的日志文件，并将其重命名为"engineering_mode"（注意：不要有文件扩展名！）。
 
-### Where can I find settings files?
+### 在哪里可以找到设置文件？
 
-Settings files will be stored on your phone's internal storage in the directory "/AAPS/preferences". WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+设置文件将存储在您手机的内部存储中，位于"/AAPS/preferences"目录下。 警告：请务必保管好您的密码，否则将无法导入加密的设置文件！
 
-### How to configure battery savings?
+### 如何配置电池节能设置？
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+正确配置电源管理非常重要，可防止手机在闲置时系统自动挂起AAPS及相关应用和服务。 这将导致AAPS无法正常工作，且传感器与Rileylink(RL)的蓝牙连接可能中断，从而触发"胰岛素泵断开"警报并引发通信错误。 在手机上进入 设置 -> 应用，并为以下应用禁用电池优化： AAPS、xDrip 或 BYODA/Dexcom 应用、蓝牙系统应用（可能需要先选择显示系统应用），或者直接完全关闭手机上的所有电池优化功能。 因此，您的电池可能会消耗得更快，但这是判断电池优化是否导致问题的有效方法。 电池节能功能的实现方式很大程度上取决于手机品牌、型号和/或操作系统版本。 由于这个原因，几乎不可能为您的具体配置提供正确设置电池优化的指导说明。 尝试调整设置，找到最适合您的配置方案。 更多信息，请参阅"Don't kill my app"。
 
-### Pump unreachable alerts several times a day or at night.
+### 胰岛素泵无法连接警报每天或夜间多次出现。
 
-Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings) Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
+您的手机可能正在暂停AAPS服务甚至蓝牙功能，导致与RL的连接中断（请参阅电池优化设置部分）。 建议通过右上角三点菜单进入 偏好设置→本地警报→胰岛素泵不可达阈值[分钟]，将该值配置为120分钟。
 
-### Where can I delete treatments in AAPS v3 ?
+### 我可以在AAPS v3中删除治疗记录吗？
 
-3 dots menu, select treatments, then 3 dots menu again and you have different options available.
+点击右上角三点菜单 → 选择"治疗记录" → 再次点击三点菜单 → 即可看到可用的不同操作选项。
 
-### Configuring and Using the AAPSClient remote app
+### 配置和使用AAPSClient远程应用程序
 
-AAPS can be monitored and controlled remotely via the AAPSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the AAPSClient (remote) app is distinct from the NSClient configuration in AAPS, and the AAPSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'AAPSClient remote' and 'AAPS remote Wear' apps.
+AAPS可以通过AAPSClient应用程序进行远程监控和操作，同时也可选择通过运行在Android Wear智能手表上的配套Wear应用来实现这一功能。 请注意，AAPSClient（远程）应用程序与AAPS中的NSClient配置不同，且AAPSClient（远程）Wear应用程序也不同于AAPS Wear应用程序——为明确起见，远程应用程序将被称为“AAPSClient远程”和“AAPS远程Wear”应用程序。
 
-To enable AAPSClient remote functionality you must: 1) Install the AAPSClient remote app (the version should match the version of AAPS being used) 2) Run the AAPSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site. 3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the AAPSClient remote app to your Nightscout site. Once this is done, AAPSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set. 4) To activate the profile:
+要启用AAPSClient远程功能，您必须： 1）安装AAPSClient远程应用程序（版本需与使用的AAPS版本匹配）。 2）运行AAPSClient远程应用程序，按照配置向导完成必要权限授予及Nightscout站点访问配置。 3）此时您可能需要禁用部分警报选项，和/或关闭将AAPSClient远程应用启动记录到Nightscout站点的高级设置。 完成此操作后，AAPSClient远程应用将从您的Nightscout站点下载配置文件数据。"概览"选项卡将显示CGM数据和部分AAPS数据，但可能不会显示图表数据，并会提示尚未设置配置文件。 4) 激活配置：
 
-- Enable remote profile synchronization in AAPS > NSClient > Options
-- Activate the profile in NSClient remote > Profile After doing so, the profile will be set, and AAPSClient remote should display all data from AAPS. Hint: If the graph is still missing, try changing the graph settings to trigger an update. 5) To enable remote control by the AAPSClient, selectively enable the aspects of AAPS (Profile changes, Temp Targets, Carbs, etc.) that you would like to be able to control remotely via AAPS > NSClient > Options . Once these changes are made, you'll be able to remotely control AAPS via either Nightscout or AAPSClient remote.
+- 在 AAPS > NSClient > 选项中启用远程配置同步
+- 在NSClient远程端 > 配置文件中激活该配置文件 完成此操作后，配置文件即被设定，AAPSClient远程端将显示来自AAPS的所有数据 提示：如果图表仍然缺失，尝试更改图表设置以触发更新。 5) 要通过 AAPSClient 启用远程控制，请选择性启用 AAPS 的相关功能（配置更改、临时目标、碳水等），路径为 AAPS > NSClient > 选项。 完成这些更改后，您将能够通过 Nightscout 或 AAPSClient 远程控制 AAPS。
 
-If you'd like to monitor/control AAPS via the AAPSClient remote Wear App, you'll need both AAPSClient remote and the associated Wear app to be installed. To compile the AAPSClient remote Wear app, follow the standard instructions for installing/configuring the AAPS wear app, except when compiling it, choose the AAPSClient variant.
+如需通过AAPSClient远程Wear应用监控/控制AAPS，需同时安装AAPSClient远程主应用及其配套的Wear应用。 编译AAPSClient远程Wear应用时，请遵循安装/配置AAPS穿戴应用的标准说明，但在编译环节需选择AAPSClient变体版本。
 
-### I have a red triangle / AAPS won't enable closed loop / Loops stays in LGS / I have a yellow triangle
+### 我出现红色三角形警告 / AAPS无法启用闭环模式 / 循环始终处于LGS状态 / 我出现黄色三角形警告
 
-The red and yellow triangles are a security feature in AAPS v3.
+红色和黄色三角形是AAPS v3版本中的安全警示功能。
 
-Red triangle means that you have duplicate BGs and AAPS can't calculate precisely the deltas. You can't close the loop. You need to delete one BG of each duplicated value in order to clear the red triangle. Go to BYODA or xDRIP tab, long press one line you want to delete, check one of each lines that are doubled (or via 3 dots menu and Delete, depending on your AAPS version). You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
+红色三角形表示存在重复的血糖值（BGs），导致AAPS无法准确计算血糖变化率（deltas）。 无法启用闭环模式。 您需要删除每组重复血糖值中的一条记录，才能消除红色三角形警告。 进入BYODA或xDrip选项卡，长按要删除的某行数据，在重复出现的每组数据中勾选其中一条（或通过三点菜单选择删除，具体操作取决于您的AAPS版本）。 如果存在过多重复血糖值，您可能需要重置AAPS数据库。 在这种情况下，您还将丢失统计数据、活性胰岛素(IOB)、活性碳水化合物(COB)以及当前选定的配置文件。
 
-Possible origin of the problem: xDrip and/or NS backfilling BGs.
+问题可能源于：xDrip和/或Nightscout(NS)的血糖数据回填功能。
 
-The yellow triangle means unstable delay between each BG reading. You don't receive BGs every 5 min regularly or missing BGs. It is often a Libre problem. It also happens when you change G6 transmitter. If the yellow triangle is related to the G6 tansmitter change, it will go away by itself after several hours (around 24h). In case of Libre, the yellow triangle will stay. The loop can be closed and works correctly.
+黄色三角形表示各次血糖读数间存在不稳定的时间延迟。 您的血糖数据未规律性地每5分钟更新一次，或存在数据缺失。 这通常是Libre传感器的问题。 更换G6发射器时也会出现此问题。 若黄色三角警告与更换G6发射器有关，该警告将在数小时后（约24小时）自动消失。 若是Libre传感器，黄色三角警告将持续存在。 闭环功能可以正常启用并运行。
 
-### Can I move an active DASH Pod to other hardware?
+### 能否将运行中的DASH Pod迁移到其他硬件？
 
-This is possible. Note that as moving is "unsupported" and "untested" there is some risk involved. Best to try the procedure when your Pod is about to expire so when things go wrong not much is lost.
+这是可行的。 请注意，由于迁移操作属于"不受支持"且"未经测试"的行为，存在一定风险。 建议在Pod即将到期时尝试此操作，这样即使出现问题，损失也较小。
 
-Critical is that pump "state" (which includes it's MAC address) in AAPS and DASH match on reconnecting
+关键在于重新连接时，AAPS中的泵"状态"（包括其MAC地址）必须与DASH完全匹配。
 
-### Procedure I follow in this:
+### 我在此过程中遵循的操作流程如下：
 
-1) Suspend the DASH pump. This makes sure there are no running or queued commands active when DASH loses connection 2) Put the phone into airplane mode to disable BT (as well as WiFi and Mobile data). This way it is guaranteed AAPS and DASH can not communicate. 3) Export settings (which includes the DASH state) 4) Copy the settings file just exported from the phone (as it is in airplane mode and we do not want to change that, easiest way is using USB cable) 5) Copy the settings file to the alternate phone. 6) Import settings on the alternate phones AAPS. 7) Check the DASH tab to verify it is seeing the Pod. 8) Un-suspend the Pod. 9) Check the DASH tab and confirm it is communicating with the Pod (use the refresh button)
+1) 暂停 DASH 泵 这能确保当DASH断开连接时，系统不会执行任何正在运行或排队的指令 2）将手机切换至飞行模式以禁用蓝牙（同时关闭WiFi和移动数据） 这样就能确保AAPS和DASH无法通信。 3）导出设置（包含DASH状态）。 4）将刚导出的设置文件从手机复制出来（由于手机处于飞行模式且我们不想改变该状态，最简单的方法是使用USB数据线）。 5）将设置文件复制到备用手机上。 6) 在备用手机的 AAPS 中导入设置。 7) 检查 DASH 选项卡以验证它是否能看到 Pod。 8）取消暂停 Pod。 9）检查 DASH 选项卡并确认它是否正在与 Pod 通信（使用刷新按钮）。
 
-Congratulations: you did it!
+恭喜：完成了！
 
-*Wait!* You still have the main phone thinking it can reconnect to the same DASH:
+*等等！* 您的主手机仍然认为它可以重新连接到相同的 DASH：
 
-1) On the main phone choose "deactivate". This is safe because the phone has no way of communicating with DASH to actually deactivated the Pod (it is still in airplane mode) 2) Deactivation will result in a communications error - this is expected. 3) Just hit "retry" a couple of times until AAPS offers the option to "Discard" the Pod.
+1）在主手机上选择“停用”。 这很安全，因为手机无法与DASH通信来实际停用Pod（仍处于飞行模式） 2）停用操作会导致通信错误——这是预期情况。 3）只需重试几次，直到 AAPS 提供“丢弃” Pod 的选项。
 
-When Discarded, verify AAPS is reporting "No Active Pod". You can now safely disable airplane mode again.
+当丢弃后，验证 AAPS 是否报告“无活动 Pod”。 现在您可以安全地禁用飞行模式了。
 
-### How do I import settings from earlier versions of AAPS into AAPS v3 ?
+### 如何将早期版本的AAPS设置导入到AAPS v3中？
 
-You can only import settings (in AAPS v3) that were exported using AAPS v2.8x or v3.x. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install AAPS v3 and import v2.8 settings in v3.
+您只能导入通过AAPS v2.8x或v3.x版本导出的设置（在AAPS v3中）。如果您之前使用的AAPS版本低于v2.8x，或者需要使用v2.8x之前的设置导出文件，则需要先安装AAPS v2.8版本。 在 v2.x 中导入旧设置到 v2.8。检查一切正常后，可以从 v2.8 导出设置。安装 AAPS v3，并在 v3 中导入 v2.8 设置。
 
-If you use the same key to build v2.8 and v3, you won't even have to import settings. You can install v3 over v2.8.
+如果您使用相同的密钥构建 v2.8 和 v3，则甚至不需要导入设置。 您可以直接在 v2.8 上安装 v3。
 
-There were some new objectives added. You'll need to validate them.
+添加了一些新的目标。 您需要验证它们。
