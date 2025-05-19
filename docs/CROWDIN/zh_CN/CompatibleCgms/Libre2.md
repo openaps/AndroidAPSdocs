@@ -2,58 +2,58 @@
 orphan: true
 - - -
 
-# Freestyle Libre 2 and 2+
+# Freestyle Libre 2 和 2+
 
-The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
+FreeStyle Libre 2传感器现已成为真正的CGM设备，即使使用官方应用亦可实现。 然而，LibreLink仍无法向AAPS传输数据。 现有多种方案可实现其与AAPS的协同使用。
 
-## 1. Use a Bluetooth bridge and OOP
+## 1. 使用蓝牙桥接器和 OOP
 
-Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an [out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](./Libre1.md).
+蓝牙发射器可与Libre 2（欧版）或2+（欧版）配合使用，但需搭配[外部处理算法](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)应用程序。 您可以像使用[Libre 1](./Libre1.md)一样，每5分钟接收一次血糖读数。
 
-Check the bridge and app you want to use are compatible with your sensor and xDrip+ (older Blucon and recent ones won't work, Miaomiao 1 needs firmware 39 and Miaomiao 2 firmware 7).
+请确认您选用的桥接器及应用程序与传感器和xDrip+兼容（旧版Blucon及近期版本不可用，喵喵1需固件39版，喵喵2需固件7版）。
 
-The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre 2 do a 10 to 25 minutes smoothing to avoid certain jumps. See below [Value smoothing & raw values](#libre2-value-smoothing-raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
+Libre2 OOP算法生成的血糖读数与原始读取器或LibreLink应用通过NFC扫描获取的结果完全一致。 AAPS系统配合Libre 2使用时，会进行10至25分钟的数据平滑处理，以避免跳点。 请参阅下方[数值平滑处理与原始数据](#libre2-value-smoothing-raw-values)部分。 OOP算法每5分钟生成一次读数，该数值为过去5分钟的平均值。 因此，血糖读数虽不够平滑，但与原始读取设备数据吻合，且能更快追踪"真实"血糖值变化。 若使用OOP算法进行闭环控制，请务必在xDrip+中启用所有平滑处理设置。
 
-There are some good reasons to use a Bluetooth transmitter:
+使用蓝牙发射器存在若干重要优势：
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the the readers like values with "calibrate based on glucose".  
-  Make sure to leave OOP1 disabled (2).
+-   您可选择多种OOP2校准策略（1）：采用"无校准"模式直接使用读取器数值，或像Libre 1那样通过"基于原始值校准"模式处理传感器数据，亦可最终采用"基于血糖值校准"模式对读取器数值进行校准。  
+  请确保禁用OOP1功能（2）。
 
-    → Hamburger Menu → Settings → Less common settings → Other misc. options
+    → 汉堡菜单 → 设置 → 较少使用的设置 → 其他杂项 选项
 
 ![OOP2 Calibration](../images/Libre2_OOP2Calibration.png)
 
--   The Libre 2 sensor can be used 14.5 days as the Libre 1
--   8 hours backfilling is fully supported
+-   Libre 2 传感器可以像 Libre 1 一样使用 14.5 天
+-   完全支持 8 小时回填
 
-Remark: The transmitter can be used in parallel to the LibreLink app without interfering with it.
+备注：该发射器可与LibreLink应用并行使用，且不会对其造成干扰。
 
-## 2. Use xDrip+ direct connection
+## 2. 使用 xDrip+ 直接连接
 
 ```{admonition} Libre 2 EU only
 :class: warning
-xDrip+ doesn't support direct connection to Libre 2 US and AUS.
-Only Libre 2 and 2+ **EU** models.
+xDrip+ 不支持直接连接到 Libre 2 US 和 AUS。
+仅限 Libre 2 和 2+ **EU** 型号。
 ```
 
-- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [this latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
-- Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+- 请按照[此说明](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip)配置xDrip+，但务必下载[最新版OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)，因文档中的版本已过时。
+- 请按照[xDrip+设置页面](../CompatibleCgms/xDrip.md)上的安装说明进行操作。
 
 -   在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。
 
-## 3. Use Diabox
+## 3. 使用 Diabox
 
-- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, enable Share data with other apps.
+- 安装[Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf)。 在“设置”、“集成”中，启用“与其他应用程序共享数据”。
 
 ![Diabox](../images/Diabox.png)
 
 - 在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。
 
-## 4. Use Juggluco
+## 4. 使用 Juggluco
 
 - Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html).
-- Follow the instructions [here](https://www.juggluco.nl/Juggluco/index.html)
-- In Settings, enable xDrip+ broadcast (which doesn't send data to xDrip+ but to AAPS).
+- 按照[此处](https://www.juggluco.nl/Juggluco/index.html)的说明进行操作
+- 在“设置”中，启用 xDrip+ 广播（不会将数据发送到 xDrip+，而是发送到 AAPS）。
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
@@ -61,71 +61,71 @@ Only Libre 2 and 2+ **EU** models.
 
 ```{admonition} Use with xDrip+
 :class: note
-You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
-![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
-You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
+您可将Juggluco设置为通过"Patched Libre Broadcast"向xDrip+传输数据（此时应禁用xDrip+的广播功能），以便进行校准（参见此处说明）并避免将1分钟间隔的读数发送至AAPS。  
+![Juggluco广播至xDrip+](../images/Juggluco_xDrip.png)  
+随后需将xDrip+数据源设为"Libre 2 Patched App"以接收来自Juggluco的数据。  
 ```
 
 (libre2-patched-librelink-app-with-xdrip)=
-## 5. Use the patched LibreLink app with xDrip+
+## 5. 请使用经过修改的LibreLink应用配合xDrip+。
 
 ```{admonition} Libre 2 EU only
 :class: warning
-The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
+该修改版应用为旧版本（2019年4月22日），可能与新版Android系统不兼容。  
 ```
 
-### Step 1: Build the patched app
+### 步骤 1：构建修补的应用程序
 
-For legal reasons, "patching" has to be done by yourself. Use search engines to find the corresponding links. There are two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView.
+出于法律原因，"修改补丁"需由您自行完成。 请通过搜索引擎查找相应链接。 存在两种版本：推荐使用的原始修改版应用会拦截所有网络流量以避免追踪。 另一种变体支持 LibreView。
 
-The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via Bluetooth.
+必须安装修改版应用以替代原版应用。 随后启动的传感器将通过蓝牙，将当前血糖值传输至您智能手机上运行的xDrip+应用。
 
-Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Then install the patched app.
+重要提示：为避免潜在问题，建议先在支持NFC的智能手机上安装并卸载原版应用。 必须启用 NFC。 这不会消耗额外的电量。 然后安装修补的应用程序。
 
-The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which does not use this service.
+修改版应用可通过前台授权通知进行识别。 该前台授权服务相较于未采用此服务的原版应用，显著提升了连接稳定性。
 
 ![LibreLink Foreground Service](../images/Libre2_ForegroundServiceNotification.png)
 
-Other indications could be the Linux penguin logo in the three dot menu -> Info or the font of the patched app (2) different from the original app (1). These criteria are optional depending on the app source you choose.
+其他识别特征可能包括：三点菜单中的Linux企鹅标志（路径：-> 信息），或修改版应用(2)与原版应用(1)不同的字体样式。 这些识别标准为可选项目，具体取决于您选择的应用程序来源。
 
 ![LibreLink Font Check](../images/LibreLinkPatchedCheck.png)
 
-Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and time zone and set at least one alarm in the patched app.
+请确保开启NFC功能，为修改版应用启用存储和定位权限，启用自动时区和时间设置，并在该应用中至少设置一个闹钟。
 
-### Step 2: Start the sensor with the patched app
+### 步骤 2：使用修补的应用程序启动传感器
 
-Now start the Libre2 sensor with the patched app by simply scanning the sensor. Ensure to have set all settings done.
+现在只需扫描传感器，即可通过修改版应用启动Libre2传感器。 请确保已完成所有设置。
 
-Mandatory settings for successful sensor start:
+成功启动传感器的必备设置：
 
--   NFC enabled / BT enabled
--   memory and location permission enabled
--   location service enabled
--   automatic time and time zone setting
--   set at least one alarm in the patched app
+-   NFC 已启用 / 蓝牙已启用
+-   内存和位置权限已启用
+-   位置服务已启用
+-   自动时间和时区设置
+-   在修补的应用程序中设置至少一个闹钟
 
-Please note that the location service is a central setting. This is not the app location permission which has to be set also!
+请注意：定位服务是一项核心设置。 这并非应用程序的定位权限设置——该权限也需另行配置！
 
 ![LibreLink permissions memory & location](../images/Libre2_AppPermissionsAndLocation.png)
 
 ![automatic time and time zone + alarm settings](../images/Libre2_DateTimeAlarms.png)
 
-Once the sensor started with the patched app, you won't be able to connect it to another app/phone. If you uninstall the patched app, you will lose alarms and continuous BG readings.
+一旦使用修改版应用启动传感器，将无法再将其连接至其他应用/手机。 若卸载修改版应用，将导致警报功能及持续血糖读数中断。
 
-The first connection setup to the sensor is critical. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. If one or more mandatory settings are missing they have to be adjusted. You have no time limit to do that. The sensor is constantly trying to setup the connection. Even if is last some hours. Be patient and try different settings before even thinking of changing the sensor.
+首次连接传感器的设置至关重要。 LibreLink应用会每隔30秒尝试与传感器建立无线连接。 如果缺少一个或多个强制性设置，则必须对其进行调整。 您可随时进行此操作，无时间限制。 传感器会持续尝试建立连接。 即使此过程持续数小时。 请保持耐心，在考虑更换传感器之前，先尝试不同的设置。
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
+当LibreLink启动画面左上角出现红色感叹号（"!"）时， 表明连接未建立或其他设置阻碍了LibreLink的警报功能。 请检查是否已启用声音提示，并确保禁用所有可能拦截应用通知的功能。 当感叹号消失时，即表示连接已建立，血糖数据将传输至智能手机。 此过程最多应在5分钟内完成。
 
 ![LibreLink no connection](../images/Libre2_ExclamationMark.png)
 
-If the exclamation mark remains or you get an error message, this can have several reasons:
+若感叹号持续存在或出现错误提示，可能由以下原因导致：
 
--   Android location service is not granted - please enable it in system settings
--   automatic time and time zone not set - please change settings accordingly
--   activate alarms - at least one of the three alarms must be activated in LibreLink
--   Bluetooth is switched off - please switch on
--   sound is blocked
--   app notifications are blocked
+-   未授予 Android 位置服务 - 请在系统设置中启用它
+-   未设置自动时间和时区 - 请相应地更改设置
+-   激活闹钟 - 必须在 LibreLink 中激活三个闹钟中的至少一个
+-   蓝牙已关闭 - 请打开
+-   声音被阻止
+-   应用程序通知被阻止
 -   idle screen notifications are blocked
 
 Restarting the phone can help, you may have to do it several times. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. It may happen that depending on system settings the exclamation mark remains but you still get readings. In both cases you are fine. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
@@ -150,9 +150,9 @@ However there is a variant of the patched app supporting LibreView with enabled 
 
 The blood sugar values are received on the smartphone by the xDrip+ App.
 
--   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+-   您可安全下载[最新稳定版APK](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)；若需最新功能，则应使用[每日快照版](https://github.com/NightscoutFoundation/xDrip/releases)。
 -   Set xDrip+ with the [patched app data source](#xdrip-libre2-patched-app).
--   Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+-   请按照[xDrip+设置页面](../CompatibleCgms/xDrip.md)上的安装说明进行操作。
 
 ### Step 4: Start sensor
 
