@@ -39,7 +39,7 @@ Only Libre 2 and 2+ **EU** models.
 - Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [this latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
 - Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 
--   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。
 
 ## 3. Use Diabox
 
@@ -47,7 +47,7 @@ Only Libre 2 and 2+ **EU** models.
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- 在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。
 
 ## 4. Use Juggluco
 
@@ -57,7 +57,7 @@ Only Libre 2 and 2+ **EU** models.
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- 在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。
 
 ```{admonition} Use with xDrip+
 :class: note
