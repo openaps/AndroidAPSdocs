@@ -10,7 +10,7 @@ These instructions are for configuring the Equil insulin pump.
 
 §todo
 
-## Hardware and Software Requirements
+## 硬件和软件要求
 * **Compatible Equil hardware**
 
 §todo
