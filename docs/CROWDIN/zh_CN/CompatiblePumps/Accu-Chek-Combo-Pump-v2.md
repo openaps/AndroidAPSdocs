@@ -40,51 +40,51 @@ orphan: true
 * 西班牙语
 * 法语
 * 意大利语
-* Russian
-* Turkish
-* Polish
-* Czech
-* Hungarian
-* Slovak
-* Romanian
-* Croatian
-* Dutch
-* Greek
-* Finnish
-* Norwegian
-* Portuguese
-* Swedish
-* Danish
-* German
-* Slovenian
-* Lithuanian
+* 俄语
+* 土耳其语
+* 波兰语
+* 捷克语
+* 匈牙利语
+* 斯洛伐克语
+* 罗马尼亚语
+* 克罗地亚语
+* 荷兰语
+* 希腊语
+* 芬兰语
+* 挪威语
+* 葡萄牙语
+* 瑞典语
+* 丹麦语
+* 德语
+* 斯洛文尼亚语
+* 立陶宛语
 
-**Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
+**重要提示**：若您的泵体语言设置不在本列表范围内，请联系开发人员，并将泵体语言切换至列表内选项。 否则该驱动将无法正常运行。
 
-## Phone setup
+## 手机设置
 
-It is very important to make sure that battery optimizations are turned off. AAPS already auto-detects when it is subject to these optimizations, and requests in its UI that these be turned off. But, on modern Android phones, Bluetooth _itself_ is an app (a system app). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. As a result, Bluetooth can refuse to respond when the phone aims to save power because it kills off the Bluetooth app. This means that in that Bluetooth system app's settings, battery optimizations must be turned off as well. Unfortunately, how one can find that Bluetooth system app differs between phones. In stock Android, go to Settings -> Apps -> See all N apps (N = the number of apps on your phone). Then, open the menu to the top right corner, tap on "Show system" or "Show system apps" or "All apps". Now, in the newly expanded list of apps, look for a "Bluetooth" app. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
+务必确保已关闭电池优化功能。 AAPS已自动检测是否受电池优化影响，并在界面中提示要求关闭该功能。 但在现代安卓手机上，蓝牙_本身_就是一个应用（系统应用）。 通常，该"蓝牙应用"_默认启用电池优化功能_。 这将导致手机为省电终止蓝牙应用时，蓝牙功能可能停止响应。 这意味着必须在蓝牙系统应用的设置中同时关闭电池优化功能。 遗憾的是，不同手机查找该蓝牙系统应用的方式各不相同。 在原生安卓系统中，请前往设置 -> 应用 -> 查看全部N个应用（N代表您手机上的应用总数）。 然后点击右上角菜单，选择"显示系统应用"或"全部应用"。 现在，在展开的应用列表中查找"蓝牙"应用。 选择该应用后，在其"应用信息"界面点击"电池"选项。 在此界面关闭电池优化功能（有时称为"电池用量"）。
 
-## Combo setup
+## Combo 设置
 
-* Configure the pump using the Accu-Chek 360 Configuration Software. If you do not have the software, please contact your Accu-Chek hotline. They usually send registered users a CD with the "360° Pump Configuration Software" and a SmartPix USB-infrared connection device (the Realtyme device also works if you have that).
+* 请使用Accu-Chek 360配置软件设置泵体参数。 若未获取该软件，请联系Accu-Chek服务热线。 客服通常会给注册用户寄送含"360°泵体配置软件"的光盘及SmartPix USB红外连接设备（若持有Realtyme设备亦可使用）。
 
-  - **Required settings** (marked green in screenshots):
+  - **必要设置**（截图中绿色标记部分）：
 
-     * Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
-     * Verify the _Quick Info Text_ is set to "QUICK INFO" (without the quotes, found under _Insulin Pump Options_).
-     * Set TBR _Maximum Adjustment_ to 500%
-     * Disable _Signal End of Temporary Basal Rate_
-     * Set TBR _Duration increment_ to 15 min
-     * Enable Bluetooth
+     * 将/保持菜单配置设为"标准模式"，该设置将仅显示泵体支持的菜单/操作，并隐藏不受支持的功能（扩展/多波大剂量、多段基础率）。使用非支持功能会导致闭环功能受限，因其无法以安全方式运行闭环系统。
+     * 确认_快速信息文本_设置为"QUICK INFO"（不带引号，位于_胰岛素泵选项_下）。
+     * 将临时基础率_最大调节幅度_设为500%
+     * 禁用_临时基础率结束提示_
+     * 将临时基础率_持续时间增量_设为15分钟
+     * 启用蓝牙
 
-  - **Recommended settings** (marked blue in screenshots)
+  - **推荐设置**（截图中蓝色标记部分）
 
-     * Set low cartridge alarm to your liking
-     * Configure a max bolus suited for your therapy to protect against bugs in the software
-     * Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-     * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
-     * Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+     * 请按需设置药筒低量警报
+     * 请根据治疗方案设置最大单次大剂量值，以防软件漏洞风险
+     * 同理，请设置临时基础率最长持续时间作为安全防护。 请至少允许3小时，因为"断开泵体3小时"的选项会设置3小时0%输注率。
+     * 启用泵体按键锁功能以防止通过泵体直接输注大剂量，特别是当泵体之前使用过且用户已养成快速输注习惯时。
+     * 将屏幕超时和菜单超时分别设为最小值5.5和5。 这能让AAPS更快从错误状态恢复，并减少此类错误发生时可能产生的振动次数。
 
   ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
@@ -94,15 +94,15 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
   ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
-## Activating the driver and pairing it with the Combo
+## 激活驱动程序并与Combo配对
 
-* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
+* 在[配置生成器 > 泵体](../SettingUpAaps/ConfigBuilder.md)中选择"Accu-Chek Combo"驱动程序。 **重要提示**：该列表中同时存在旧版驱动程序"Accu-Chek Combo (Ruffy)"。 请_勿_选择该选项。
 
   ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
 
-* Tap the cog-wheel to open the driver settings.
+* 点击齿轮图标打开驱动程序设置。
 
-* In the settings user interface, tap on the button 'Pair with pump' at the top of the screen. This opens the Combo pairing user interface. Follow the instructions shown on screen to start pairing. When Android asks for permission to make the phone visible to other Bluetooth devices, press "allow". Eventually, the Combo will show a custom 10-digit pairing PIN on its screen, and the driver will request it. Enter that PIN in the corresponding field.
+* 在设置界面中，点击屏幕顶部的"与泵体配对"按钮。 这将打开Combo配对界面。 请按照屏幕提示开始配对操作。 当Android系统请求允许手机对其他蓝牙设备可见时，请点击"允许"。 最终，Combo将在屏幕上显示10位自定义配对PIN码，驱动程序将要求输入该码。 在对应字段中输入该PIN码。
 
   ![Screenshot of Combo Pairing UI 1](../images/combo/combov2-pairing-screen-1.png)
 
@@ -114,19 +114,19 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
   ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
 
-* When the driver asks for the 10-digit PIN that is shown on the Combo, and the code is entered incorrectly, this is shown: ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+* 当驱动程序要求输入Combo显示的10位PIN码且输入错误时，将显示如下提示：![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
-* Once pairing is done, the pairing user interface is closed by pressing the OK button in the screen that states that pairing succeeded. After it is closed, you return to the driver settings user interface. The 'Pair with pump' button should now be greyed out and disabled.
+* 配对完成后，在显示"配对成功"的界面点击OK按钮即可关闭配对界面。 关闭后将返回驱动程序设置界面。 此时"与泵体配对"按钮应显示为灰色不可用状态。
 
-  The Accu-Chek Combo tab looks like this after successfully pairing:
+  成功配对后，Accu-Chek Combo标签页显示如下：
 
   ![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
 
-  if however there is no pairing with the Combo, the tab looks like this instead:
+  若未与Combo配对成功，标签页将显示如下：
 
   ![Screenshot of Accu-Chek Combo tab without pairing](../images/combo/combov2-tab-without-pairing.png)
 
-* To verify your setup (with the pump **disconnected** from any cannula to be safe!) use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+* 为验证设置（为确保安全，请将泵体**断开**与任何输注管路连接），使用AAPS设置500%的临时基础率持续15分钟并执行一次大剂量输注。 此时泵体应显示临时基础率正在运行，且历史记录中可见大剂量输注信息。 AAPS也应显示当前运行的临时基础率及已输注的大剂量。
 
 * On the Combo, it is recommended to enable the key lock to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit.
 
