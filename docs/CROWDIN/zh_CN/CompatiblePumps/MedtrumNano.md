@@ -6,7 +6,7 @@ orphan: true
 
 本说明用于配置移宇（Medtrum）胰岛素泵。
 
-This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. 使用后果由您自行承担。
+本软件属于人工胰腺系统的DIY解决方案，并非商业产品，需要用户自行研习并全面掌握系统操作原理。 使用后果由您自行承担。
 
 ```{contents} Table of contents
 :depth: 1
@@ -18,7 +18,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
 * 自动处理夏令时（DST）及时区
 * AAPS驱动程序不支持扩展大剂量功能
 
-## Hardware and Software Requirements
+## 硬件和软件要求
 * **兼容的移宇(Medtrum)泵底板与储药器贴片**
     - 当前支持：
         - 移宇TouchCare Nano胰岛素泵（配套泵基座型号：**MD0201**及**MD8201**）
@@ -384,7 +384,7 @@ When switching to a new phone the following steps are necessary:
 
 移宇驱动器的所有开发工作均由社区**志愿者**完成；请您在寻求帮助前谨记这一事实并遵循以下准则：
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
+-  **第0级：**查阅本文档相关章节，确保您已理解遇到问题的功能模块的正确运作方式。
 -  **第一级：**若您遇到的问题无法通过本文档解决，请通过[此邀请链接](https://discord.gg/4fQUWHZ4Mw)加入**Discord**平台的*#Medtrum*频道寻求帮助。
 -  **第二级：**请在[问题追踪](https://github.com/nightscout/AAPS/issues)中搜索现有问题，查看您的问题是否已被上报。若存在相关记录，请确认/评论/补充您的问题信息。 如果没有，请创建一个[新问题](https://github.com/nightscout/AndroidAPS/issues)并附上[您的日志文件](../GettingHelp/AccessingLogFiles.md)。
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+-  **请保持耐心——我们社区成员多为热心志愿者，问题的解决往往需要用户和开发者双方投入时间与耐心。**
