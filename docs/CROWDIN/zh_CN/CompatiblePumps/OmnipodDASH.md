@@ -4,30 +4,30 @@ orphan: true
 
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**, available as part of **AAPS** version 3.0.
+本说明适用于配置**Omnipod DASH**代泵**(非Omnipod Eros)**，该功能作为**AAPS** 3.0版本的一部分提供。
 
-## Omnipod DASH specifications
+## Omnipod DASH 规格说明
 
-These are the specifications of the **Omnipod DASH** ('DASH') and what differentiates it from the **Omnipod EROS** ('EROS'):
+以下是**Omnipod DASH**（简称"DASH"）的规格说明及其与**Omnipod EROS**（简称"EROS"）的主要区别：
 
-* The DASH pods are identified by a blue needle cap (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
-*  DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-* The DASH's bluetooth connection is used only when needed, and connects to send command and disconnects right after!
-* No more "no connection to link device / pod" errors with DASH.
-* **AAPS** will wait for pod's accessibility to send commands.
-* On pod activation, **AAPS** will find and connect to a new DASH pod.
-* Expected range: 5-10 meters (YMMV).
+* DASH 储药器采用蓝色针头帽标识（EROS 使用透明针头帽）。 除标识外，两种储药器的物理尺寸完全一致。
+*  DASH 无需蓝牙连接/桥接设备（不需要 RileyLink、OrangeLink 或 EmaLink）。
+* DASH 的蓝牙连接仅在需要时启用，完成指令传输后立即断开！
+* DASH 彻底消除了"无法连接桥接设备/储药器"的报错。
+* **AAPS** 将等待储药器可连接状态时发送指令。
+* 在储药器激活时，**AAPS** 将自动搜寻并连接新的 DASH 储药器。
+* 预期连接范围：5-10米（实际效果可能因环境而异）。
 
-WARNING: There are currently reported Bluetooth connection issues with the following combination of **AAPS** / DASH / Android 15. **AAPS** should not be used in combination with Android 15 and DASH unless the user has checked the following [**List**](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) and verified that their phone is not a known reported issue. **AAPS** is currently working to resolve this issue.
+警告：目前收到关于以下组合的蓝牙连接问题报告：**AAPS** / DASH / Android 15。 除非用户已查阅以下[**列表**](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)并确认其手机不在已知问题报告范围内，否则不应将**AAPS**与Android 15和DASH组合使用。 **AAPS**目前正在努力解决该问题。
 
-## Hardware/Software Requirements
+## 硬件/软件要求
 
-* DASH is identified by blue needle cap.
+* DASH 以蓝色针头帽为标识。
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-* **Compatible Android phone** with a BLE Bluetooth connection  
-  Be aware that **AAPS** Omnipod Dash driver connects with the DASH via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connection can be disturbed by other bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.
+* **兼容的安卓手机**需具备BLE蓝牙连接功能  
+  请注意，**AAPS**的Omnipod Dash驱动每次发送指令时都会通过蓝牙与DASH连接，并在完成后立即断开。 The Bluetooth connection can be disturbed by other bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.
    -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions.
 * [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
@@ -491,5 +491,5 @@ All of the development work for the DASH is done by the community on a **volunte
 
 -  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#AAPS* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. 如果没有，请创建一个[新问题](https://github.com/nightscout/AndroidAPS/issues)并附上[您的日志文件](../GettingHelp/AccessingLogFiles.md)。
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
