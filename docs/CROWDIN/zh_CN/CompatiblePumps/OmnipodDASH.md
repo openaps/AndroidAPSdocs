@@ -412,84 +412,84 @@ DASH驱动程序设置可通过左上角**汉堡菜单**中的**配置构建器(
 
 该故障与指令对应的储药器状态错误或胰岛素输注指令执行出错有关。 此时驱动程序和储药器对实际状态的判断出现分歧。 出于内置安全机制，储药器会触发不可恢复的49号错误代码(0x31)，导致俗称"尖叫器"的状态——这种持续恼人的蜂鸣声只能通过在储药器背面指定位置打孔来停止。 "49号储药器故障"的具体成因通常难以追溯。 在怀疑可能发生此类故障的情况下（例如应用程序崩溃、运行开发版本或重新安装时）。
 
-### Pump Unreachable Alerts
+### 泵体失联警报
 
-When no communication can be established with the pod for a preconfigured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]**. Recommended value is alerting after **120** minutes.
+当超过预设时间仍无法与储药器建立通信时，系统将触发"泵体不可达"警报。 可通过右上角三点菜单配置泵体失联警报：选择**偏好设置**→**本地警报**→**泵体失联阈值[分钟]**进行设置。 建议将警报阈值设置为**120**分钟后触发。
 
-### Export  Settings
+### 导出设置
 
-Exporting **AAPS** settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling **AAPS** or in case of phone loss, reinstalling on the new phone.
+导出**AAPS**设置可让您恢复所有配置参数，更重要的是能完整保留所有目标进度状态。 当需要恢复到"最后已知的正常状态"、或卸载重装**AAPS**后、以及手机丢失需在新设备上重新安装时，均可通过该功能还原设置。
 
-Note: The active pod information is included in the exported settings. If you import an "old" exported file, your actual pod will "die". There is no other alternative. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore **AAPS'** settings **while keeping the current active Pod**. In this case it is important to only use the recently exported settings file containing the pod currently active.
+注：当前使用中的储药器信息也会包含在导出设置中。 若导入"旧版"导出文件，您当前使用的储药器将"失效"。 别无他法。 在某些情况下（例如_计划性_更换手机时），您可能需要使用导出文件来恢复**AAPS**设置，**同时保留当前正在使用的储药器**。 在这种情况下，必须使用最近导出的、包含当前使用中储药器信息的设置文件。
 
-**It is good practice to do an export immediately after activating a pod**. This way you will always be able to restore the current active pod in case of a problem. For instance when moving to another backup phone.
+**最佳做法是在激活储药器后立即进行设置导出**。 如此可在出现问题时随时恢复当前使用中的储药器状态。 例如在切换到备用手机时。
 
-Regularly copy your exported settings to a safe place (as a cloud drive) that can be accessible by any phone when needed (e.g. in case of a phone loss or factory reset of the actual phone).
+请定期将导出的设置文件备份至云端等安全位置，确保任何手机在需要时（如设备丢失或恢复出厂设置时）都能随时获取。
 
-### Import Settings
+### 导入设置
 
-**WARNING** Please note that importing settings will possibly import an outdated Pod status. As a result, there is a risk of losing the active Pod! (see **Exporting Settings**). It is better to only try it when no other options are available.
+**警告** 请注意：导入设置可能会引入过期的储药器状态数据。 这将导致当前使用中的储药器存在失效风险！ （参见**导出设置**章节）。 建议仅在无其他解决方案时尝试此操作。
 
-When importing settings with an active Pod, make sure the export was done with the currently active pod.
+导入含激活状态储药器的设置时，请确认该导出文件包含当前使用中的储药器信息。
 
-**Importing while on an active Pod:** (you risk losing the Pod!)
+**在储药器激活状态下导入：**（可能导致储药器失效！）
 
-1. Make sure you are importing settings that were recently exported with the currently active Pod.
-2. Import your settings.
-3. Check all preferences.
+1. 请确保导入的是最近导出且包含当前使用中储药器信息的设置文件。
+2. 导入您的设置文件。
+3. 请核对所有偏好设置项。
 
-**Importing (no active Pod session)**
+**导入设置（无激活状态的储药器会话）**
 
-1. Importing any recent export should work (see above)
-2. Import your settings.
-3. Check all preferences.
-4. You may need to **Deactivate** the "non existing" pod if the imported settings included any active pod data.
+1. 导入任何近期导出的文件均可生效（参见上文说明）
+2. 导入您的设置文件。
+3. 请核对所有偏好设置项。
+4. 若导入的设置包含任何激活状态的储药器数据，您可能需要**停用**这个"不存在"的储药器。
 
-### Importing settings that contain Pod state from an inactive Pod
+### 导入包含非活跃状态储药器数据的设置文件
 
-When importing settings containing data for a Pod that is no longer active, AAPS will try to connect with it, which will obviously fail. You can not activate a new Pod in this situation.
+当导入包含已停用储药器数据的设置时，AAPS将尝试与其建立连接，这显然会导致失败。 在此情况下您将无法激活新储药器。
 
-To remove the old pod session “try” to de-activate the Pod. The de-activation will fail. Select “Retry”. After the second or third retry you will get the option to remove the pod. Once the old pod is removed you will be able to activate a new pod.
+要清除旧储药器会话，请"尝试"执行停用操作。 停用操作将会失败。 选择"重试"。 经过两到三次重试后，系统将提供移除储药器的选项。 待旧储药器移除后，即可激活新储药器。
 
-### Reinstalling AAPS
+### 重新安装AAPS
 
-When uninstalling**AAPS** you will lose all your settings, objectives and the current Pod session. To restore them make sure you have a recent exported settings file available!
+卸载**AAPS**时，所有设置、目标进度及当前储药器会话都将丢失。 请确保已备份最新导出的设置文件以便恢复！
 
-When on an active Pod, make sure that you have an export for the current pod session or you will lose the currently active pod when importing older settings.
+当使用激活状态的储药器时，请确保已备份当前储药器会话的导出文件，否则导入旧版设置将导致当前使用中的储药器失效。
 
-1. Export your settings and store a copy in a safe place.
-2. Uninstall **AAPS** and restart your phone.
-3. Install the new version of **AAPS**.
-4. Import your settings.
-5. Verify all preferences (optionally import settings again).
-6. Activate a new pod.
-7. When done: Export current settings.
+1. 请导出您的设置文件并妥善保存副本。
+2. 卸载**AAPS**并重启您的手机。
+3. 安装新版本的**AAPS**。
+4. 导入您的设置文件。
+5. 请核对所有偏好设置（可选择重新导入设置文件）。
+6. 激活新储药器。
+7. 操作完成后：请导出当前设置文件。
 
-### Updating AAPS to a newer version
+### 升级AAPS至新版本
 
-In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod  session.
+多数情况下无需卸载旧版本。 您可直接安装新版本进行"就地升级"。 该操作在储药器激活状态下同样适用。
 
-1. Export your settings.
-2. Install the new **AAPS** version.
-3. Verify the installation was successful
-4. RESUME the Pod or activate a new pod.
-5. When done: Export current settings.
+1. 请导出您的设置文件。
+2. 安装新版**AAPS**。
+3. 请确认安装是否成功
+4. 恢复原储药器使用或激活新储药器。
+5. 操作完成后：请导出当前设置文件。
 
-### Omnipod driver alerts
+### Omnipod驱动警报
 
-Please note that the Omnipod Dash driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
+请注意：Omnipod Dash驱动会在**概览页**显示多种特有警报，多数为提示性信息可手动关闭，部分警报会要求用户执行操作以消除触发警报的原因。 以下是您可能会遇到的主要警报摘要：
 
-* No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
-* Pod suspended Informational alert that pod has been suspended.
-* Setting basal **Profile** failed : Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed.. Informational alert that the Pod basal **Profile** setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
-* Unable to verify whether **SMB** bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments. Alert that the **SMB** bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if **SMB** bolus succeeded and if not remove the entry from the Treatments tab.
-* Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
+* No active Pod session detected. 该警报可通过点击**暂缓**临时关闭，但在新储药器激活前将持续触发。 Once activated this alert is automatically silenced.
+* 储药器已暂停 提示性警报，表明储药器处于暂停状态。
+* 设置基础**配置文件**失败：输注可能已暂停！ 请从Omnipod标签页手动刷新储药器状态，必要时恢复输注。 提示性警报：储药器基础**配置文件**设置失败，需点击Omnipod标签页的*刷新*按钮。
+* 无法确认**超微大剂量**输注是否成功。 若确认大剂量未成功输注，请手动从治疗记录中删除该条超微大剂量记录。 警报提示：**超微大剂量**输注命令的成功状态无法验证，您需要检查DASH标签页的*最后大剂量*字段确认输注是否成功，若失败则需从治疗记录页删除该条目。
+* 无法确认"任务大剂量/临时基础率/超微大剂量"是否完成，请人工核验操作结果。
 
-## Where to get help for DASH
+## DASH系统求助渠道
 
-All of the development work for the DASH is done by the community on a **volunteer** basis; please keep this in mind and use the following guidelines before requesting assistance:
+DASH系统的所有开发工作均由社区**志愿者**无偿完成；在请求协助前，请谨记以下准则：
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#AAPS* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. 如果没有，请创建一个[新问题](https://github.com/nightscout/AndroidAPS/issues)并附上[您的日志文件](../GettingHelp/AccessingLogFiles.md)。
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+-  **第0级：**查阅本文档相关章节，确保您已理解遇到问题的功能模块的正确运作方式。
+-  **第1级：**若参照本文档仍无法解决问题，请通过[此邀请链接](https://discord.gg/4fQUWHZ4Mw)加入**Discord**平台的*#AAPS*频道寻求帮助。
+-  **第2级：**在[问题追踪](https://github.com/nightscout/AndroidAPS/issues)页面搜索现有问题报告，确认您的问题是否已被记录。若存在相关报告，请补充说明您的情况。 如果没有，请创建一个[新问题](https://github.com/nightscout/AndroidAPS/issues)并附上[您的日志文件](../GettingHelp/AccessingLogFiles.md)。
+-  **请保持耐心——我们社区成员多为热心志愿者，问题的解决往往需要用户和开发者双方投入时间与耐心。**
