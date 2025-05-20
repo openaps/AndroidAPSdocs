@@ -6,7 +6,7 @@ orphan: true
 
 These instructions are for configuring the Equil insulin pump.
 
-## Pump capabilities with AAPS
+## AAPS支持的胰岛素泵功能
 
 §todo
 
