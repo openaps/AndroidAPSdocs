@@ -27,7 +27,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
 * **已构建并安装AAPS 3.2.0.0或更高版本**，请参照[构建APK](../SettingUpAaps/BuildingAaps.md)说明进行操作。
 * **兼容的Android手机**（需具备BLE蓝牙连接功能）
     - 请参阅AAPS[版本说明](../Maintenance/ReleaseNotes.md)
-* [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+* [**持续血糖监测仪（CGM）**](../Getting-Started/CompatiblesCgms.md)
 
 ## 在您开始前
 
@@ -39,9 +39,9 @@ This software is part of a DIY artificial pancreas solution and is not a product
 
 **当未连接AAPS时，您的胰岛素泵不会停止输注胰岛素** 胰岛素泵将按照当前使用方案中设定的基础率持续输注。 只要AAPS处于运行状态，就会发送最长持续120分钟的临时基础率指令。 若因某些原因（如因胰岛素泵与手机距离过远导致通信中断）泵体未能接收到新指令，临时基础率结束后将自动恢复为泵体预设的基础率。
 
-**AAPS不支持30分钟基础率方案。****AAPS配置方案不支持30分钟基础率时间间隔。**若您初次使用AAPS并首次设置基础率方案，请注意系统不支持半点起始的基础率设置，您需要将基础率方案调整为整点起始。 例如，若您设置了09:30开始、持续2小时至11:30结束的1.1单位基础率，该设置将无法生效。 You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. 尽管移宇胰岛素泵硬件本身支持30分钟基础率间隔设置，但AAPS当前算法尚无法兼容此类设置。
+**AAPS不支持30分钟基础率方案。****AAPS配置方案不支持30分钟基础率时间间隔。**若您初次使用AAPS并首次设置基础率方案，请注意系统不支持半点起始的基础率设置，您需要将基础率方案调整为整点起始。 例如，若您设置了09:30开始、持续2小时至11:30结束的1.1单位基础率，该设置将无法生效。 您需要将这个1.1单位的基础率时间段调整为9:00-11:00或10:00-12:00。 尽管移宇胰岛素泵硬件本身支持30分钟基础率间隔设置，但AAPS当前算法尚无法兼容此类设置。
 
-**AAPS不支持0U/h基础率方案设置**。虽然移宇胰岛素泵确实支持零基础率，但AAPS需基于基础率倍数进行自动化治疗计算，因此无法兼容零基础率设置。 A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
+**AAPS不支持0U/h基础率方案设置**。虽然移宇胰岛素泵确实支持零基础率，但AAPS需基于基础率倍数进行自动化治疗计算，因此无法兼容零基础率设置。 可通过"断开泵连接"功能，或结合停用循环/临时基础率与暂停循环/临时基础率功能，实现临时零基础率设置。
 
 ## 设置
 
@@ -49,7 +49,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
 
 ### 步骤1：选择移宇胰岛素泵
 
-#### Option 1: New installations
+#### 方式一：全新安装
 
 若您首次安装AAPS，**设置向导**将引导您完成安装流程。 当进入泵体选择界面时，请选择"移宇"。
 
@@ -57,7 +57,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
 
 ![设置向导](../images/medtrum/SetupWizard.png)
 
-#### Option 2: The Config Builder
+#### 选项2：配置构建器
 
 在现有安装中，您可通过[配置生成器 > 泵](#Config-Builder-pump)选择**移宇**胰岛素泵：
 
