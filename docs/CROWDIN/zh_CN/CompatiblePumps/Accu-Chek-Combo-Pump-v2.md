@@ -4,13 +4,13 @@ orphan: true
 
 # 罗氏Accu-Chek Combo胰岛素泵
 
-**本软件是DIY解决方案的一部分而非完整的产品，需要您仔细研学包括使用方法在内的系统知识。 它无法为您全权处理糖尿病治疗的全部，但如果你愿意投入必要的时间，它将有助于改善病情并提高生活质量。 不要想着一蹴而就，请给自己足够的学习时间。 只有你才能对自己的行为负责。**
+**该软件是DIY解决方案的一部分，并非成品，但需要您阅读、学习并理解系统，包括其使用方法。 该工具并非全自动糖尿病管理系统，但如果您愿意投入必要时间，它能帮助您改善糖尿病状况并提高生活质量。 切勿操之过急，给自己留出学习的时间。 使用后果由您自行承担。**
 
 ## Hardware and software requirements
 
-* A Roche Accu-Chek Combo (any firmware, they all work).
-* A Smartpix or Realtyme device together with the 360 Configuration Software to configure the pump. (Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.)
-* A compatible phone. Android 9 (Pie) or newer is a must. If using LineageOS, the minimum supported version is 16.1. See [release notes](#maintenance-android-version-aaps-version) for details.
+* Roche Accu-Chek Combo 泵（任何固件版本均可）。
+* 需使用Smartpix或Realtyme设备配合360配置软件来设置胰岛素泵。 （罗氏公司应客户要求可免费提供Smartpix设备及配置软件。）
+* 一部兼容的手机。 必须是 Android 9 (Pie) 或更新版本。 如使用LineageOS，最低支持版本为16.1。 详情请参阅[版本说明](#maintenance-android-version-aaps-version)。
 * The AndroidAPS app installed on your phone.
 
 Some phones may work better than others, depending on their quality of Bluetooth support and whether or not they have additional, very aggressive power saving logic. A list of phones can be found in the [AAPS Phones](#Phones-list-of-tested-phones) document. Please be aware that this is not complete list and reflects personal user experience. You are encouraged to also enter your experience and thereby help others (these projects are all about paying it forward).
