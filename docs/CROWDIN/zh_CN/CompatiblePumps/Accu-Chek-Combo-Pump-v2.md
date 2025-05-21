@@ -128,13 +128,13 @@ orphan: true
 
 * 为验证设置（为确保安全，请将泵体**断开**与任何输注管路连接），使用AAPS设置500%的临时基础率持续15分钟并执行一次大剂量输注。 此时泵体应显示临时基础率正在运行，且历史记录中可见大剂量输注信息。 AAPS也应显示当前运行的临时基础率及已输注的大剂量。
 
-* On the Combo, it is recommended to enable the key lock to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit.
+* 建议在Combo上启用按键锁功能以防止通过泵体直接输注大剂量，特别是当泵体之前使用过且用户已养成使用"快速大剂量"功能的习惯时。
 
-## Notes about pairing
+## 关于配对的注意事项
 
-The Accu-Chek Combo was developed before Bluetooth 4.0 was released, and just one year after the very first Android version was released. This is why its way of pairing with other devices is not 100% compatible with how it is done in Android today. To fully overcome this, AAPS would need system level permissions, which are only available for system apps. These are installed by the phone makers into the phone - users cannot install system apps.
+Accu-Chek Combo的开发时间早于蓝牙4.0发布，距离首个Android版本问世仅一年。 因此其设备配对方式与现行Android系统的标准配对流程并非完全兼容。 要彻底解决此问题，AAPS需获取系统级权限，而该权限仅对系统应用开放。 这些系统应用由手机制造商预装——用户无法自行安装系统级应用。
 
-The consequence of this is that pairing will never be 100% without problems, though it is greatly improved in this new driver. In particular, during pairing, Android's Bluetooth PIN dialog can briefly show up and automatically go away. But sometimes, it stays on screen, and asks for a 4-digit PIN. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
+其结果是配对过程永远无法完全避免问题，尽管新版驱动程序已大幅改善此状况。 特别说明：配对过程中，Android系统的蓝牙PIN码对话框可能会短暂闪现后自动消失。 但有时该对话框会持续显示，并要求输入4位PIN码。 （请注意：这与Combo要求的10位配对PIN码不同） 无需输入任何内容，直接点击取消即可。 If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
 
 (combov2-tab-contents)=
 ## Accu-Chek Combo tab contents
