@@ -129,32 +129,32 @@ EOPatch2偏好设置菜单提供3种通知类型设定选项。
 
 各类警报说明如下。
 
-| 报警                         | 说明                                                                                                                                                                                                                  |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 储药器空了                      | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
-| Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| 堵管                         | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
-| Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
-| Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| Needle insertion Error     | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
-| Patch battery Error        | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
-| Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
-| Patch Error                | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
+| 报警      | 说明                                                         |
+| ------- | ---------------------------------------------------------- |
+| 储药器空了   | 当贴片泵储药器内胰岛素耗尽时触发。                                          |
+| 贴片泵过期   | 当贴片泵使用期限届满且无法继续输注胰岛素时触发。                                   |
+| 堵管      | 当检测到贴片泵胰岛素入口堵塞时触发。                                         |
+| 上电自检失败  | 当贴片泵在启动后自检过程中发现意外错误时触发。                                    |
+| 温度异常    | 当贴片泵在佩戴使用期间超出正常工作温度范围时触发。 处理此警报需将贴片泵移至适宜工作温度环境（4.4至37摄氏度）。 |
+| 针头插入错误  | 当贴片泵佩戴过程中针头插入异常时触发。 请检查贴片泵针头插入端与针头启动按钮是否保持直线对齐。            |
+| 贴片泵电池故障 | 当贴片泵内置电池即将耗尽并关机前触发。                                        |
+| 贴片泵启动故障 | 当贴片泵启动后60分钟内应用程序未能完成佩戴流程时触发。                               |
+| 贴片泵故障   | 当贴片泵在佩戴使用过程中遭遇意外错误时触发。                                     |
 
 ### 警告
 
-A warning occurs in a medium or low-priority situation. When a warning occurs, it is displayed as a notification in the Overview screen.
+在中等或低优先级情况下会发出警告。 警告触发时，将以通知形式显示在总览界面。
 
 ![Image24](../images/EOPatch/Bild24.png)
 
-The different types of warnings are explained below.
+各类警告说明如下。
 
-| Warnings                     | 说明                                                                                                                                    |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | Occurs when the time set by the user has elapsed after the insulin infusion suspension has been completed.                            |
-| Low reservoir                | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
-| Patch operating life expired | Occurs when the patch usage period is over.                                                                                           |
-| Patch will expire soon       | Occurs 1 hour before the patch must be discarded.                                                                                     |
-| Incomplete Patch activation  | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed. |
-| Patch battery low            | Occurs when the patch's battery is low.                                                                                               |
+| 警告        | 说明                             |
+| --------- | ------------------------------ |
+| 胰岛素暂停结束   | 当用户设定的胰岛素输注暂停时间届满时触发。          |
+| 储药量低      | 当贴片泵内剩余胰岛素低于设定量时触发。            |
+| 贴片泵使用期限届满 | 当贴片泵使用期限届满时触发。                 |
+| 贴片泵即将到期   | 当贴片泵达到必须废弃时间前1小时触发。            |
+| 贴片泵启动未完成  | 当贴片泵完成配对后的佩戴阶段因中断导致耗时超过3分钟时触发。 |
+| 贴片泵电量不足   | 当贴片泵电池电量不足时触发。                 |
 
