@@ -62,7 +62,7 @@ orphan: true
 
 **注：现可通过AAPS v2.7.0及以上版本使用"始终采用基础率绝对值"功能（即使Nightscout同步已启用），以配合Insight泵实现Autotune。**（路径：AAPS [偏好设置 > NS客户端 > 高级设置](#Preferences-advanced-settings-nsclient)）
 
-![Screenshot of Insight Settings](../images/Insight_settings.png)
+![Screenshot of Insight Pairing Information](../images/Insight_settings.png)
 
 在AAPS的Insight设置中可启用以下选项：
 
@@ -136,24 +136,24 @@ orphan: true
 
 闭环模式下Insight电池续航为10至14天，最长为 20 天。 该数据由使用劲量锂电池的用户提供。
 
-Insight泵体内置微型电池，可在更换可拆卸电池时维持时钟等核心功能运行。 If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+Insight泵体内置微型电池，可在更换可拆卸电池时维持时钟等核心功能运行。 若更换电池耗时过长导致内置电池耗尽，时钟将重置，插入新电池后需重新输入时间日期。 若发生此情况，因时间戳无法正确识别，电池更换前所有AAPS记录将不再参与计算。
 
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 
-## Insight specific errors
+## Insight专属错误代码
 
 ### 扩展大剂量(方波)
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+请勿同时设置多个延长大剂量，单次仅允许一个延长大剂量运行，否则可能引发错误。
 
-### Time out
+### 超时
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+偶发情况下，Insight泵可能在建立连接时无响应。 此时AAPS将显示："握手超时 - 重置蓝牙"。
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+遇到此情况，请同时关闭泵体与智能手机的蓝牙功能约10秒后重新启用。
 
-## Crossing time zones with Insight pump
+## 携带Insight泵跨时区注意事项
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-insight).
+跨时区操作指南请参阅[泵体时区切换](#timezone-traveling-insight)章节。
