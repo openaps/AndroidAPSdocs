@@ -221,7 +221,7 @@ orphan: true
 
    > ![Deactivate_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Deactivate_Pod_10](../images/omnipod/Deactivate_Pod_10.png)
 
-### Suspending and Resuming Insulin Delivery
+### 暂停和恢复胰岛素输注
 
 以下流程将向您展示如何暂停和恢复胰岛素泵的输注。
 
