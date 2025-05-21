@@ -353,8 +353,8 @@ orphan: true
 
 ## 切换手机，导出/导入设置
 
-When switching to a new phone the following steps are necessary:
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
+更换新手机时必须执行以下步骤：
+* 在旧手机[导出设置](../Maintenance/ExportImportSettings.md)
 * 将设置从旧手机传输至新手机，并导入至AAPS
 
 导入的设置文件必须与当前使用的贴片会话相同，否则贴片将无法连接。
