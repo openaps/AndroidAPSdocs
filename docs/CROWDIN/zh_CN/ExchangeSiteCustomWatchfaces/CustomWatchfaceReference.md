@@ -970,66 +970,66 @@ AAPS 3.3.0版本中已移除这些旧表盘，替换为3款全新自定义表盘
 表盘将显示以下内容：
 
 - 配置文件目标值（单值或最小-最大目标范围）（默认白色显示）
-- Loop adjusted target (default color in Green)
-- Temp Target defined by user (default color in Yellow)
+- 闭环调整后的目标值（默认绿色显示）
+- 用户设定的临时目标值（默认黄色显示）
 
-This `"tempTarget"` view is associated with `"key_show_temp_target"` key (within dynPref) to manage visibility.
+该`"tempTarget"`视图通过`"key_show_temp_target"`键（位于dynPref内）关联，用于管理可见性。
 
-The DynData Key (associated with color information) is `"tempTarget"` (default DynData key associated with TempTarget View)
+动态数据键（关联颜色信息）为`"tempTarget"`（TempTarget视图默认关联的动态数据键）
 
-DynData value equals:
+动态数据值对应情况：
 
-- 0 (Profile Target),
-- 1 (Loop Target) or
-- 2 (User Temp Target)
+- 0（配置文件目标）
+- 1（闭环目标）或
+- 2（用户临时目标）
 
-Note that this view is also available for external data (see [below](cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
+请注意，该视图也适用于外部数据（参见[下方](cwf-reference-show-external-datas)），使用`"tempTarget_Ext1"`和`"tempTarget_Ext2"`键（视图及动态数据）。
 
 (cwf-reference-new-reservoir-level-feature)=
 
 #### 全新储药器余量视图
 
-The key of this view is `"reservoir"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above).
+该视图的键为`"reservoir"`，其关联区块已自动包含在由wear apk"自定义表盘V2"（基于AAPS 3.3.0及以上版本构建）导出的模板中。
 
-This view show Reservoir level (in `U`) with a White default color, Yellow if Warning Level, Red if Urgent Level
+该视图以白色（默认）显示储药器余量（单位`U`），警告级别为黄色，紧急级别为红色。
 
-This `"reservoir"` view is associated with `"key_show_reservoir_level"` key (within dynPref) to manage visibility.
+该`"reservoir"`视图通过`"key_show_reservoir_level"`键（位于dynPref内）关联，用于管理可见性。
 
-The DynData Keys associated with Reservoir Level are:
+储药器余量关联的动态数据键为：
 
--  `"reservoir"`  (Default DynData Key associated with Reservoir Level view) associated with level in insulin `U`
-  - Min Value is 0.0 U
-  - Max Value is 500.0 U
--  `"reservoirLevel"`
-  - 0 (Standard Level, White Color by default)
-  - 1 (Warning Level, Yellow color by default)
-  - 2 (Urgent Level, Red color by default)
+-  `"reservoir"`（储药器余量视图默认动态数据键）关联胰岛素余量`U`
+  - 最小值为0.0单位
+  - 最大值为500.0单位
+-  `"储药器余量"`
+  - 0（标准余量，默认白色显示）
+  - 1（警告余量，默认黄色显示）
+  - 2（紧急余量，默认红色显示）
 
-Note that this view is also available for external data (see [below](cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
+请注意，该视图也支持外部数据（参见[下方](cwf-reference-show-external-datas)），可通过`"reservoir_Ext1"`、`"reservoir_Ext2"`、`"reservoirLevel_Ext1"`和`"reservoirLevel_Ext2"`键（视图及动态数据）实现。
 
 (cwf-reference-new-formating-feature)=
 
-#### New Formatting feature for DynData or DynPref
+#### 动态数据或动态偏好的新格式化功能
 
-You can now manage a custom formatting of raw values received by the watch and included in [dyndata key value table](#cwf-reference-dyndata-key-values) below.
+现在您可对手表接收的原始值进行自定义格式化，这些值已包含在下方的[动态数据键值表](#cwf-reference-dyndata-key-values)中。
 
-To illustrate how this feature works, lets take as an example AAPS (Large) watchface and look at the results according to "time ago value" and the new "status" view visible or not:
+为说明该功能运作方式，现以AAPS（大号）表盘为例，根据"时间间隔值"及"status"视图显示状态展示效果：
 
 ![AAPS (Large)](../images/CustomWatchface_6.jpg)
 
-- In first screenshot in the left, status view is visible (with IOB, detailed IOB and BGI), so only 1/3 of the line is available to show timestamp (very compact information with `1'`, and for uploader battery information `U: 55%`)
-- In second screenshot, now `status`view has been hidden in watch parameter, so you have a lot of place available to show full label for timestamp information and uploader battery (`1 minute ago` and `Uploader : 55%`)
-- In the third screenshot in the right, you have exactly the same setting within watch, but now timestamp has changed and is above "1". now the custom watchface is able to show the label updated with plural management (`2 minutes ago`)
+- 左侧首张截图中status视图可见（含IOB、详细IOB及BGI），故仅1/3行空间显示时间戳（极简格式如`1'`，上传器电量显示为`U:55%`）
+- 右侧截图中`status`视图已通过手表参数隐藏，因此有充足空间完整显示时间戳及上传器电量信息（`1分钟前`和`上传器：55%`）
+- 最右侧截图中手表设置完全相同，但时间戳数值已超过"1"。 此时自定义表盘可显示经复数处理的更新标签（`2分钟前`）
 
-I will not explain below how the whole views are managed within zip file (positioning of each view according to different settings), but I will only focus on the way we manage formatting feature and associated dynamic value within AAPS (Large) watchface.
+下文将不赘述zip文件中视图的整体管理逻辑（不同设置下各视图的定位方式），仅重点解析AAPS（大号）表盘中格式化功能与关联动态值的实现方法。
 
 
 
-**This feature requires "dynamic block"** (it can be either a `dynData` block or a `dynPref` block)
+**该功能需配合"动态区块"使用**（可以是`dynData`区块或`dynPref`区块）
 
-- For AAPS (Large) Watchface, we wanted to have the format tuned according to parameters (short or long format according to `status` view visibility) so we used a `dynPref` block for that.
+- 在AAPS（大号）表盘中，我们需根据参数（如`status`视图显隐状态）切换短/长格式，因此采用了`dynPref`区块实现。
 
-First lets start by the views:
+首先从视图结构讲起：
 
 ```json
 "uploader_battery": {
@@ -1064,16 +1064,16 @@ First lets start by the views:
     "fontColor": "#FFFFFF"
 },
 ```
-here the most important key is `"dynValue"`: Having this key information will enable dynamic management of raw value. the boolean behind (true or false) will define if value should be "converted or not"
+此处最关键的是`"dynValue"`键：通过该键信息可实现原始值的动态管理。 后方布尔值（true/false）决定是否对数值进行"转换"
 
-- `false`: raw value will be use as it is without any limitation or conversion
-- `true`: raw value will be converted (using `minData` and `maxData` keys in dynData block and using `minValue` and `maxValue` defined in dynData)
+- `false`：直接使用原始值，不做任何限制或转换
+- `true`：原始值将根据dynData区块中的`minData`和`maxData`键，以及dynData中定义的`minValue`和`maxValue`进行转换
 
-For this watchface, raw values are used without any conversion, so for both views, `"dynValue"` key as been set to `false`.
+该表盘直接使用原始值未作转换，故两个视图的`"dynValue"`键均设为`false`。
 
 
 
-Now we will take a look on `"uploader"` block defined within `"dynPref"`:
+现在查看`"dynPref"`中定义的`"uploader"`区块：
 
 ```json
 "uploader": {
@@ -1090,30 +1090,30 @@ Now we will take a look on `"uploader"` block defined within `"dynPref"`:
     }
 },
 ```
-By default  `"uploader_battery"` view is linked to `"uploader_battery"` , so no need to add an explicit line with
+默认情况下`"uploader_battery"`视图已关联`"uploader_battery"`键，无需额外声明关联关系
 
-`"valueKey": "uploader_battery"` (min value 0, max value 100, and raw value is percentage of phone battery)
+`"valueKey": "uploader_battery"`（最小值0，最大值100，原始值为手机电量百分比）
 
-The formatting string is included into `"textvalue1"` key (`"textvalue1"`, `"textvalue2"`, etc keys are linked to `"textvalue"` key that could be included into `view` block)
+格式化字符串包含在`"textvalue1"`键中（`"textvalue1"`、`"textvalue2"`等键与可置于`view`区块的`"textvalue"`键关联）
 
-- `"textvalue"`  key can be used with formatting information within the view block (in this situation format will be static, whatever the value or the settings)
-- If you want to modify formatting information according to settings or values, thenall dynData feature can be applied, and the dedicated keys are `"invalidTextValue"` key (without "formatting information" because value is not valid) and `"textvalue1"`, `"textvalue2"`... (and as many values that you want to manage steps between minData and maxData)
-- the additional `"dynPref"` keys are used to define other blocks for positioning variation and color variation depending on visible views, dark and matchDivider settings
+- `"textvalue"`键可在视图区块中使用格式化信息（此时格式为静态，不受数值或设置影响）
+- 若需根据设置或数值调整格式，可应用全部dynData功能，专用键为`"invalidTextValue"`（不含"格式化信息"因数值无效）及`"textvalue1"`、`"textvalue2"`...（可添加任意数量键值以管理minData与maxData间的分段）
+- 额外`"dynPref"`键用于定义其他区块，以根据视图显隐、暗色模式及分界器设置调整定位与色彩
 
-Concerning now the formatting string, syntax is the following: `%[flags][width][.precision]f`
+关于格式化字符串的语法规则如下：`%[flags][width][.precision]f`
 
-- `%` is the beginning of a formatting, `f` is the end and should be used for Double value conversion.
-  - Note that if you want to use `%` character within your string, you will have to use `%%` to specify that it's not a formatting string but percentage character.
-- `[flag]` is optional, mainly can be `+` if you always want a sign before the number, or `(` if you want negative values in parentheses
-- `[width]`  is optional, define the minimum number of characters to be written to the output
-- `[.precision]` used to define number of digits after radix point.
-  - Note that values are Double so it's wise to always set a precision (to avoid a lot of characters after radix point due to kotlin precision)
+- `%`是格式化的起始符，`f`为结束符（专用于双精度浮点数转换）。
+  - 注意：若需在字符串中使用`%`字符，必须写成`%%`以表明此处为百分号而非格式化起始符。
+- `[flag]`为可选参数，常用`+`强制显示正负号，或用`(`使负值显示在括号内
+- `[width]`为可选参数，定义输出结果的最小字符数
+- `[.precision]`用于定义小数点后的位数。
+  - 注意：由于数值为双精度浮点型，建议始终设置精度（避免Kotlin精度导致小数点后出现过多字符）
 
-So in the above example `%.0f` will show Double value as an integer
+因此上例中`%.0f`会将双精度值显示为整数
 
 
 
-Let's now take a look on timestamp dynPref block to manage plural:
+现在查看管理复数形式的timestamp动态参数区块：
 
 ```json
 "timestamp": {
@@ -1133,149 +1133,149 @@ Let's now take a look on timestamp dynPref block to manage plural:
     }
 },
 ```
-- here if `status` view is visible (so  `"key_show_loop_satus"` key is `true`), a single format is used (`"textvalue1"`), with `'`  as "unit"
-- if  `status` view is hidden, you have 2 different format used one for 0 or 1 with singular, and another format for values above 2 with plural
-  - `"minData"` and `"maxData"` are used to define the range and be sure the switch from singular to plural will be done between 1 and 2 values
-  - Note that `"maxData"` (integer) has been set to 3 and not 2, just because Double data managed into the system is not integer, so a value a bit above or a bit lower 1 may have singular or plural format even if after rounding to integer, the value equals 1.
+- 当`status`视图可见时（即`"key_show_loop_satus"`键为`true`），采用单一格式（`"textvalue1"`），以`'`作为单位符号
+- 若`status`视图隐藏，则采用两种格式：0或1时使用单数形式，大于2时使用复数形式
+  - `"minData"`和`"maxData"`用于定义数值范围，确保单复数切换在1和2之间生效
+  - 注意：`"maxData"`（整数值）设为3而非2，因系统处理的双精度数据并非整数，故略高于或低于1的值经四舍五入后可能仍为1，但需按单复数格式区分显示。
 
-- For `timestamp` view, it's important to set `"dynValue"` key to `false`,  otherwise because of formatting (singular/plural), all values above 3 will be limited to `3 minutes ago` with conversion using `maxData`...
+- 对于`timestamp`视图，必须将`"dynValue"`键设为`false`，否则因单复数格式化处理，所有大于3的值都会通过`maxData`转换被限制显示为`3分钟前`...
 
 
 
-**Additional comment concerning formatting feature**
+**关于格式化功能的补充说明**
 
-- keep in mind that the only dynamic values available are the one listed [here](#cwf-reference-dyndata-key-values)
-- All `BG` values are in mgdl unit, if you want to use formatting feature to show values in mmol units, you will have to manage mgdl to mmol conversion. Within a `dynData` or `dynPref` block, the key that should be used to name the block that will include `"minValue"`and `"maxValue"` for value conversion should be named `"dynValue": { ...  }`. (see [Dyn Data Keys](#cwf-reference-dyndata-keys))
-- If within a view you want to use a static formatting string, with `"textvalue"` key to define format, and `"dynValue"` key to define usage of dynamic value, then you will have to also use a `"dynData"` or a `"dynPref"`block (even if empty), to be able to use formatting feature.
-- `"textvalue1"`, `"textvalue2"` to textvalue*n* can be used without formatting feature to replace double value step by a dedicated text label (for example with `"day_name"` key value and  seven steps to define custom name of the dayx of the week, ... )
+- 请谨记：唯一可用的动态值仅为[此处](#cwf-reference-dyndata-key-values)列出的参数
+- 所有`血糖`值均以mg/dL为单位，若需通过格式化功能显示mmol/L单位，必须自行处理mg/dL与mmol/L的换算。 在`dynData`或`dynPref`区块中，用于定义包含数值转换`"minValue"`和`"maxValue"`的子区块必须命名为`"dynValue": { ... }`。 （参见[动态数据键](#cwf-reference-dyndata-keys)）
+- 若需在视图中使用静态格式化字符串（通过`"textvalue"`键定义格式，`"dynValue"`键启用动态值），则必须同时声明`"dynData"`或`"dynPref"`区块（即使留空）以激活格式化功能。
+- `"textvalue1"`、`"textvalue2"`至textvalue*n*可不启用格式化功能，用于将数值分段替换为特定文本标签（例如配合`"day_name"`键值，通过七个分段定义星期几的自定义名称等）。
 
-- For full documentation you can see [Class Formatter](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)
+- 完整文档请参阅[Formatter类](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)
 
 (cwf-reference-show-external-datas)=
 
-#### Show External data for Follower
+#### 显示跟随者的外部数据
 
-Custom Watchface is now able to display on the same watchface up to 3 set of data: AAPS, AAPSCLIENT and AAPSCLIENT2
+自定义表盘现在可同时显示最多3组数据：AAPS、AAPSCLIENT和AAPSCLIENT2
 
-To use this feature, you need to:
+要使用此功能，您需要：
 
-- have at least 2 of the 3 following apps installed in phone (AAPS, AAPSCLIENT, AAPSCLIENT2)
-- enable Broadcast data in AAPSCLIENT and/or AAPSCLIENT2 to broadcast data to the main app used to sync with CustomWatchface (AAPS or AAPSCLIENT)
-- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](cwf-reference-key-and-keyvalue-reference) below)
+- 手机上需安装以下3个应用中的至少2个（AAPS、AAPSCLIENT、AAPSCLIENT2）
+- 在AAPSCLIENT和/或AAPSCLIENT2中启用数据广播功能，将数据广播至用于与CustomWatchface同步的主应用（AAPS或AAPSCLIENT）
+- 使用支持`_Ext1`或`_Ext2`键视图的CustomWatchface（参见下文[键与键值对照表](cwf-reference-key-and-keyvalue-reference)）
 
-Note that if main app in phone is AAPSCLIENT and secondary app which broadcast data is AAPSCLIENT2, you will have to enable `Switch external data in watchface` parameter within Custom Watchface dedicated parameter if you use a watchface which use standard views and Ext1 additional views (Ext1 is linked to AAPSCLIENT and Ext2 is linked to AAPSCLIENT2)
+请注意：若手机主应用为AAPSCLIENT且广播数据的次级应用为AAPSCLIENT2，当使用含标准视图及Ext1附加视图（Ext1关联AAPSCLIENT，Ext2关联AAPSCLIENT2）的表盘时，需在CustomWatchface专属参数中启用`切换表盘外部数据`选项。
 
-Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"patient_name_Ext2"` *) has been added to be able to automatically include patient name (set within AAPS preferences) within watchface (see example below)
+新增三个视图（`"patient_name"`、`"patient_name_Ext1"`及`"patient_name_Ext2"`*），用于在表盘中自动显示患者姓名（通过AAPS偏好设置配置，参见下方示例）。
 
 ![CustomWatchface_7](../images/CustomWatchface_7.png)
 
 (cwf-reference-key-and-keyvalue-reference)=
 
-## Key and KeyValue reference
+## 键与键值对照表
 
 (cwf-reference-list-of-metadata-keys)=
 
-### List of Metadata keys
+### 元数据键列表
 
 (cwf-reference-list-of-standard-metadata-keys)=
 
-#### List of Standard information metadata keys
+#### 标准信息元数据键列表
 
-| Key                | Comment                                                                                                        |
-| ------------------ | -------------------------------------------------------------------------------------------------------------- |
-| `"name"`           | Name of custom watchface                                                                                       |
-| `"author"`         | Name or pseudo of the author(s)                                                                                |
-| `"created_at"`     | Creation (or update) date, be careful `/` is a special character, so if you use it for the date put `\`before |
-| `"cwf_version"`    | Watchface plugin compatible with the design of your watchface                                                  |
-| `"author_version"` | The author can specify here the version of his watchface                                                       |
-| `"comment"`        | Free text that can be used to give some information or limitation of current watchface                         |
+| 键                  | 备注                                       |
+| ------------------ | ---------------------------------------- |
+| `"name"`           | 自定义表盘名称                                  |
+| `"author"`         | 作者名称或笔名                                  |
+| `"created_at"`     | 创建（或更新）日期，注意：`/`是特殊字符，若用于日期显示需在前添加`\`转义 |
+| `"cwf_version"`    | 与您表盘设计兼容的表盘插件                            |
+| `"author_version"` | 作者可在此指定其表盘的版本号                           |
+| `"comment"`        | 自由文本字段，用于说明当前表盘的功能信息或使用限制                |
 
 (cwf-reference-preference-keys)=
 
-#### Preference keys
+#### 偏好设置键
 
-| Key                           | Default value and Comment                                                                                                                                                                                                                                    |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `"key_show_detailed_iob"`     | true will lock detailed IOB data on view `iob2`, then `iob1` (if visible and not replaced by an icon) will show iob total.<br />false will lock total iob on `iob2`view. can be used if the width of `iob2`is too small to show correctly detailed iob |
-| `"key_show_detailed_delta"`   | false (only if design is not compatible with the width of detailed delta for `delta`and `avg_delta` views)                                                                                                                                                   |
-| `"key_show_bgi"`              | true if your design requires `bgi` information                                                                                                                                                                                                               |
-| `"key_show_iob"`              | true if your design requires `iob1` or `iob2`views                                                                                                                                                                                                           |
-| `"key_show_cob"`              | true if your design requires `cob1` or `cob2`views                                                                                                                                                                                                           |
-| `"key_show_delta"`            | true if your design requires `delta` information                                                                                                                                                                                                             |
-| `"key_show_avg_delta"`        | true if your design requires `avg_delta` information                                                                                                                                                                                                         |
-| `"key_show_temp_target"`      | true if your design requires `tempTarget` information                                                                                                                                                                                                        |
-| `"key_show_reservoir_level"`  | true if your design requires `reservoir` information                                                                                                                                                                                                         |
-| `"key_show_uploader_battery"` | true if your design requires `uploader_battery` (phone battery) information                                                                                                                                                                                  |
-| `"key_show_rig_battery"`      | true if your design requires `rig_battery` information                                                                                                                                                                                                       |
-| `"key_show_temp_basal"`       | true if your design requires `basalRate` information                                                                                                                                                                                                         |
-| `"key_show_direction"`        | true if your design requires `direction` information (BG variation arrows)                                                                                                                                                                                   |
-| `"key_show_ago"`              | true if your design requires `timestamp` information (minutes ago for last received BG)                                                                                                                                                                      |
-| `"key_show_bg"`               | true if your design requires `sgv` information (BG value)                                                                                                                                                                                                    |
-| `"key_show_loop_status"`      | true if your design requires `loop` information (loop status and ago)                                                                                                                                                                                        |
-| `"key_show_week_number"`      | true if your design requires `week_number` information (loop status and ago)                                                                                                                                                                                 |
-| `"key_show_date"`             | true if your design requires `Date`, `Month` or `Day of the week` information                                                                                                                                                                                |
+| 键                             | 默认值与注释                                                                                                                          |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `"key_show_detailed_iob"`     | true将锁定视图`iob2`上的详细IOB数据，此时`iob1`（若可见且未被图标替换）将显示IOB总量。<br />false则会在`iob2`视图上锁定IOB总量显示。 当`iob2`视图宽度过小无法正确显示详细IOB数据时可启用此选项 |
+| `"key_show_detailed_delta"`   | false（仅当设计不兼容`delta`与`avg_delta`视图的详细差值宽度时使用）                                                                                   |
+| `"key_show_bgi"`              | 若设计需要显示`bgi`信息则设为true                                                                                                           |
+| `"key_show_iob"`              | 若设计需要显示`iob1`或`iob2`视图则设为true                                                                                                   |
+| `"key_show_cob"`              | 若设计需要显示`cob1`或`cob2`视图则设为true                                                                                                   |
+| `"key_show_delta"`            | 若设计需要显示`delta`信息则设为true                                                                                                         |
+| `"key_show_avg_delta"`        | 若设计需要显示`avg_delta`信息则设为true                                                                                                     |
+| `"key_show_temp_target"`      | 若设计需要显示`tempTarget`信息则设为true                                                                                                    |
+| `"key_show_reservoir_level"`  | 若设计需要显示`reservoir`信息则设为true                                                                                                     |
+| `"key_show_uploader_battery"` | 若设计需要显示`uploader_battery`（手机电量）信息则设为true                                                                                        |
+| `"key_show_rig_battery"`      | 若设计需要显示`rig_battery`信息则设为true                                                                                                   |
+| `"key_show_temp_basal"`       | 若设计需要显示`basalRate`信息则设为true                                                                                                     |
+| `"key_show_direction"`        | 若设计需要显示`direction`信息（血糖变化箭头）则设为true                                                                                             |
+| `"key_show_ago"`              | 若设计需要显示`timestamp`信息（最近血糖数据接收时间/分钟前）则设为true                                                                                     |
+| `"key_show_bg"`               | 若设计需要显示`sgv`信息（血糖值）则设为true                                                                                                      |
+| `"key_show_loop_status"`      | 若设计需要显示`loop`信息（闭环状态及时间间隔）则设为true                                                                                               |
+| `"key_show_week_number"`      | 若设计需要显示`week_number`信息（周数）则设为true                                                                                               |
+| `"key_show_date"`             | 若设计需要显示`Date`、`Month`或`Day of the week`信息则设为true                                                                                |
 
-#### Internal keys
+#### 内部键
 
-| Key                   | Comment and                                                                                                                                                                                   |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"filename"`          | This key will be created (or updated) automatically when the watchface is loaded and will contains local zip filename within exports folder                                                   |
-| `"cwf_authorization"` | this key will be created (when the watchface is loaded) and updated each time authorization preference is changed in Wear settings, and it will be used to synchronize authorization to watch |
+| 键                     | 注释                                         |
+| --------------------- | ------------------------------------------ |
+| `"filename"`          | 此键将在表盘加载时自动创建（或更新），并包含导出文件夹中的本地zip文件名      |
+| `"cwf_authorization"` | 此键将在表盘加载时创建，并在Wear设置中每次更改授权偏好时更新，用于同步授权至手表 |
 
 (cwf-reference-list-of-general-parameters)=
 
-### List of General parameters
+### 通用参数列表
 
-| Key                      | Comment                                                                                                                                                                                                                                                   |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"highColor"`            | `"#FFFF00"`(default Yellow): Color of BG value, trend arrows and bg value in graph if bg is above upper limit (Hyper)                                                                                                                                     |
-| `"midColor"`             | `"#00FF00"`(default Green): Color of BG value, trend arrows and bg value in graph if bg is within range                                                                                                                                                   |
-| `"lowColor"`             | `"#FF0000"`(default Red): Color of BG value, trend arrows and bg value in graph if bg is below lower limit (Hypo)                                                                                                                                         |
-| `"lowBatColor"`          | `"#E53935"`(default Dark Red): Color of `uploader_battery` when value is low (below 20% tbc)                                                                                                                                                              |
-| `"carbColor"`            | `"#FB8C00"`(default Orange): Color of Carbs points within graph                                                                                                                                                                                           |
-| `"basalBackgroundColor"` | `"#0000FF"`(default Dark blue): Color of TBR curve within graph                                                                                                                                                                                           |
-| `"basalCenterColor"`     | `"#64B5F6"`(default Light blue): Color of Bolus or SMB points within graph                                                                                                                                                                                |
-| `"gridColor"`            | `"#FFFFFF"`(default White): Color of lines and text scale within graph                                                                                                                                                                                    |
-| `"pointSize"`            | 2 (default): size of points in graph (1 for small point, 2 for big points)                                                                                                                                                                                |
-| `"enableSecond"`         | false (default): specify if watchface will manage seconds or not within `time`, `second` or `second_hand` views. it's important to be consistent between view visibility and this overall setting that will allow update every second of time information |
-| `"dayNameFormat"`        | "E" (default): from "E" to "EEEE" specify dayname format (number, short name, full name) tbc                                                                                                                                                              |
-| `"monthFormat"`          | "MMM" (default): from "M" to "MMMM" specify month format (number, short name, full name)                                                                                                                                                                  |
+| 键                        | 备注                                                                                         |
+| ------------------------ | ------------------------------------------------------------------------------------------ |
+| `"highColor"`            | `"#FFFF00"`（默认黄色）：当血糖值超过上限（高血糖）时，血糖值、趋势箭头及图表中血糖值的显示颜色                                      |
+| `"midColor"`             | `"#00FF00"`（默认绿色）：当血糖值在范围内时，血糖值、趋势箭头及图表中血糖值的显示颜色                                           |
+| `"lowColor"`             | `"#FF0000"`（默认红色）：当血糖值低于下限（低血糖）时，血糖值、趋势箭头及图表中血糖值的显示颜色                                      |
+| `"lowBatColor"`          | `"#E53935"`（默认深红色）：当`uploader_battery`值过低（低于20%，待确认）时的显示颜色                                 |
+| `"carbColor"`            | `"#FB8C00"`（默认橙色）：图表中碳水化合物数据点的显示颜色                                                         |
+| `"basalBackgroundColor"` | `"#0000FF"`（默认深蓝色）：图表中TBR曲线的显示颜色                                                           |
+| `"basalCenterColor"`     | `"#64B5F6"`（默认浅蓝色）：图表中大剂量或超微大剂量数据点的显示颜色                                                    |
+| `"gridColor"`            | `"#FFFFFF"`（默认白色）：图表中线条和文本刻度的显示颜色                                                          |
+| `"pointSize"`            | 2（默认值）：图表中数据点的大小（1为小点，2为大点）                                                                |
+| `"enableSecond"`         | false（默认值）：指定表盘是否在`time`、`second`或`second_hand`视图中处理秒数。 必须确保视图可见性与该全局设置保持一致，该设置将允许每秒更新时间信息 |
+| `"dayNameFormat"`        | "E"（默认值）：从"E"到"EEEE"指定星期名称格式（数字、简称、全称），待确认                                                 |
+| `"monthFormat"`          | "MMM"（默认值）：从"M"到"MMMM"指定月份格式（数字、简称、全称）                                                     |
 
 (cwf-reference-list-of-hardcoded-resource-files)=
 
-### List of HardCoded resource files
+### 硬编码资源文件列表
 
-For most images, High and Low suffix allow tuning of image according to BG level (in Range, Hyper or Hypo)
+对于大多数图像，High和Low后缀允许根据血糖水平（在范围内、高血糖或低血糖）调整图像
 
-| Filenames                                                       | Comment                                                                                                                                                                  |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| CustomWatchface                                                 | Image shown for watchface selection and within Wear plugin                                                                                                               |
-| Background,<br />BackgroundHigh,<br />BackgroundLow | none (default black): Background image. background is always visible and default color is black if no image provided. Color can be modified to fit watchface design      |
-| CoverChart,<br />CoverChartHigh,<br />CoverChartLow | none (default): Image in front of Chart (transparency should be available to see Chart behind) Can be used to limit boundaries of graph                                  |
-| CoverPlate,<br />CoverPlateHigh,<br />CoverPlateLow | simple dial (default): image in front of all text values. transparency mandatory to see all values that are behind                                                       |
-| HourHand,<br />HourHandHigh,<br />HourHandLow       | hour_hand (default): image of hour hand. a default image is provided and can be colored to fit analog design. Note axis for rotation will be the center of the image     |
-| MinuteHand,<br />MinuteHandHigh,<br />MinuteHandLow | minute_hand (default): image of minute hand. a default image is provided and can be colored to fit analog design. Note axis for rotation will be the center of the image |
-| SecondHand,<br />SecondHandHigh,<br />SecondHandLow | second_hand (default): image of second hand. a default image is provided and can be colored to fit analog design. Note axis for rotation will be the center of the image |
-| ArrowNone                                                       | ?? (default): image shown when no valid arrow is available.                                                                                                              |
-| ArrowDoubleUp                                                   | ↑↑ (default): image of double arrow up                                                                                                                                   |
-| ArrowSingleUp                                                   | ↑ (default): image of single arrow up                                                                                                                                    |
-| Arrow45Up                                                       | ↗ (default): image of fortyfive arrow up                                                                                                                                 |
-| ArrowFlat                                                       | → (default): image of flat arrow                                                                                                                                         |
-| Arrow45Down                                                     | ↘ (default): image of fortyfive arrow down                                                                                                                               |
-| ArrowSingleDown                                                 | ↓ (default): image of single arrow down                                                                                                                                  |
-| ArrowDoubleDown                                                 | ↓↓ (default): image of double arrow down                                                                                                                                 |
+| 文件名                                                             | 备注                                                          |
+| --------------------------------------------------------------- | ----------------------------------------------------------- |
+| CustomWatchface                                                 | 用于表盘选择和在Wear插件中显示的图像                                        |
+| Background,<br />BackgroundHigh,<br />BackgroundLow | 无（默认黑色）：背景图像。 若无背景图像，则始终显示默认黑色背景。 可修改颜色以适应表盘设计              |
+| CoverChart,<br />CoverChartHigh,<br />CoverChartLow | 无（默认值）：图表前景图像（需保持透明度以确保底层图表可见），可用于限定图表边界                    |
+| CoverPlate,<br />CoverPlateHigh,<br />CoverPlateLow | 简易表盘（默认值）：所有文本值前方的图像。 必须保持透明度以确保后方所有数值可见                    |
+| 时针、<br />高血糖时针、<br />低血糖时针                          | hour_hand（默认值）：时针图像。 提供默认图像，可调整颜色以匹配模拟表盘设计。 注意：旋转轴心为图像中心点   |
+| MinuteHand,<br />MinuteHandHigh,<br />MinuteHandLow | minute_hand（默认值）：分针图像。 提供默认图像，可调整颜色以匹配模拟表盘设计。 注意：旋转轴心为图像中心点 |
+| SecondHand,<br />SecondHandHigh,<br />SecondHandLow | second_hand（默认值）：秒针图像。 提供默认图像，可调整颜色以匹配模拟表盘设计。 注意：旋转轴心为图像中心点 |
+| ArrowNone                                                       | ?? （默认值）：无有效箭头时显示的图像。                                       |
+| ArrowDoubleUp                                                   | ↑↑（默认值）：双上箭头图像                                              |
+| ArrowSingleUp                                                   | ↑（默认值）：单上箭头图像                                               |
+| Arrow45Up                                                       | ↗（默认值）：45度上箭头图像                                             |
+| ArrowFlat                                                       | →（默认值）：水平箭头图像                                               |
+| Arrow45Down                                                     | ↘（默认值）：45度下箭头图像                                             |
+| ArrowSingleDown                                                 | ↓（默认值）：单下箭头图像                                               |
+| ArrowDoubleDown                                                 | ↓↓（默认值）：双下箭头图像                                              |
 
-For each above filenames, extension can be either `.jpg`, `.png` or `.svg`. But be careful, `.jpg`doesn't manage transparency (so most of the files should be with .png or .svg to not hide view that are behind...)
+上述每个文件名可使用`.jpg`、`.png`或`.svg`扩展名。 但需注意，`.jpg`格式不支持透明度（因此多数文件应使用.png或.svg格式，避免遮挡后方视图...）
 
 (cwf-reference-list-of-view-keys)=
 
-### List of View keys
+### 视图键列表
 
-This list is sorted from background to foreground this is very important when you organize your watchface to know this order because some image or text can be hidden by other images.
+此列表按从背景到前景的顺序排列，在组织表盘时了解此顺序非常重要，因为某些图像或文本可能被其他图像遮挡。
 
-Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for multi users Watchfaces.
+注意：所有以`_Ext1`或`_Ext2`结尾的键都是新增的，专用于多用户表盘。
 
-| Key                                                                                    | Type of view        | Data attached                                                                                                                         | DynData Key                                                                                                                                      |
+| 键                                                                                      | 视图类型                | 关联数据                                                                                                                                  | 动态数据键                                                                                                                                            |
 | -------------------------------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `"background"`                                                                         | Image View          |                                                                                                                                       |                                                                                                                                                  |
 | `"chart"`                                                                              | Specific Chart View | Graphical curves                                                                                                                      |                                                                                                                                                  |
@@ -1329,7 +1329,7 @@ delta_Ext1<br/>delta_Ext2                                                       
 
  that can be used on all view types (Text View, image View, graph view)
 
-| Key                      | type    | comment / value                                                                                                                                                                        |
+| 键                        | type    | comment / value                                                                                                                                                                        |
 | ------------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"width"`                | int     | width of view in pixel                                                                                                                                                                 |
 | `"height"`               | int     | height of view in pixel                                                                                                                                                                |
@@ -1350,7 +1350,7 @@ delta_Ext1<br/>delta_Ext2                                                       
 
 #### TextView keys
 
-| Key            | type    | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 键              | type    | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | -------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"textsize"`   | int     | size of font in pixel (keep in mind that font can include top and bottom margin so the real text size will generally be smaller than the number of pixel set). Note that size should be smaller than view height to not be truncated                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `"gravity"`    | string  | see key value table                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -1370,7 +1370,7 @@ From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a f
 
 #### ImageView keys
 
-| Key       | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 键         | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"color"` | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexadecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
 
@@ -1378,7 +1378,7 @@ From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a f
 
 #### ChartView keys
 
-| Key            | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 键              | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"color"`      | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexadecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
 | `"background"` | string | `resource_filename` you can include a resource image as background of the text view (resource file will be resized to fit height and width of text view, but keeping image ratio). text value will be in front of background image.<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -1412,7 +1412,7 @@ From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a f
 
 ### DynData keys
 
-| Key                       | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 键                         | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"dynData"`               | block  | define the block of all dynamic data blocks that will be used for the views. generally after the last view.<br />All the keys defined within this block will be used as key Value within view block:<br />`"dynData": { dynData blocks }`<br />and each block is defined by a custom name and several keys inside:<br />`"customName": { one dynData block }`                                                                                                                                   |
 | `"valueKey"`              | string | name of dynamic data to use (generally same that associated view key).<br />If not existing, the default will be the values used for the view that uses this block. <br />for example you can define one block to customize battery level percentage without specifying valueKey, and then use the same block to customize uploader_battery and rig_battery                                                                                                                                               |
@@ -1473,7 +1473,7 @@ From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a f
 
 ### DynPref keys
 
-| Key              | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| 键                | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ---------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"dynPref"`      | block  | define the block of all dynamic preference blocks that will be used for the views. Generally after the last view or after the dynData block.<br />All the keys defined within this block will be used as key Value within view block:<br />`"dynPref": { dynPref blocks }`<br />and each block is defined by a custom name and several keys inside:<br />`"customName": { one dynPref block }`                                                                                                                 |
 | `"dynPref"`      | string | *Within a view Block*<br />name of dynamic dynPref block to use (generally same that associated view key or associated preference).                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -1491,7 +1491,7 @@ All keys included into [Preference keys](#cwf-reference-preference-keys) chapter
 
 You can also you these additional key below included into AAPS (Custom) specific parameters:
 
-| Key                   | type    | comment                                                                                                                                                                                                                                                                                                                                                             |
+| 键                     | type    | comment                                                                                                                                                                                                                                                                                                                                                             |
 | --------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"key_units"`         | boolean | *true*: if units selected on AAPS is mgdl<br />*false*: if units selected on AAPS is mmol                                                                                                                                                                                                                                                                     |
 | `"key_dark"`          | boolean | *true*: to use a dark background<br />false: to use a light background<br />Note: this parameter is often use into previous AAPS watchfaces (AAPS, AAPS V2...)                                                                                                                                                                                          |
