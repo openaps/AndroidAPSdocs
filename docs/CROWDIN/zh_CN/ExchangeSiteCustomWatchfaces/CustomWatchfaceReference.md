@@ -177,55 +177,55 @@ JSON文件可通过记事本（或notepad++）文本编辑器编辑（推荐能�
 - 图像编辑器（位图/矢量图）
   - 如果您使用位图
     - 图像编辑器需支持透明通道处理（背景上层图像均需此功能），若使用位图则需兼容png格式。
-    - Background image can  be in jpg format (smaller that png)
-    - Image editor should allow you to measure in pixel graphical objects (can be a simple square) (top, left, width, height)
-    - Image editor should be able to show you colors with RRVVBB code in hexadecimal
-    - Image editor should be able to resize image to 400px x 400px (very important to work with this resolution)
-  - If you use Vector
-    - Vector image should be exported in svg format
+    - 背景图像可采用jpg格式（体积较png更小）。
+    - 图像编辑器需支持以像素为单位测量图形对象（如简单方形）的坐标参数（顶部、左侧、宽度、高度）。
+    - 图像编辑器需支持以十六进制RRVVBB代码显示颜色。
+    - 图像编辑器需能将图像调整为400px×400px分辨率（此分辨率至关重要）。
+  - 如果您使用矢量图
+    - 矢量图像应导出为svg格式。
 
-### Get template to not start from scratch
+### 获取模板以避免从零开始。
 
-When you want to design your first watchface, the best is to start by the default watchface (this will ensure you to have latest version with all available views correctly sorted)
+设计首个表盘时，最佳方案是从默认表盘开始（可确保获得含所有正确排序视图的最新版本）。
 
-- You can get zip file by clicking on "Export Template" button within Wear plugin and get zip file within AAPS/exports folder
-- Note that you will need to have a watch connected to AAPS to see Custom Watchface buttons (but watch is also required to check, test and tune your custom watchface)
+- 点击Wear插件中的"导出模板"按钮，即可在AAPS/exports文件夹获取zip文件。
+- 请注意：需连接手表至AAPS才能显示自定义表盘按钮（调试、测试及调整自定义表盘时亦需保持连接）。
 
-Default watchface is very simple and zip file will contains only the 2 files:
+默认表盘极为简洁，zip文件仅包含以下两个文件：
 
-- CustomWatchface.png (image of default watchface for WF selection)
+- CustomWatchface.png（用于表盘选择的默认表盘预览图）
 - CustomWatchface.json
 
-### Organize your files within your computer
+### 在电脑中整理您的文件
 
-The easiest way to work is to have phone connected to the computer, and work with to specific folders:
+最便捷的操作方式是将手机连接电脑，并专注于两个特定文件夹：
 
-- one explorer opened on a specific folder that will have all files (json, bitmap images, vector images, fonts), and the CustomWatchface.zip file within it
-- another explorer (or navigation tree tuned) opened to have Phone/AAPS/exports folder available
+- 在专用文件夹（内含json文件、位图/矢量图、字体等所有素材）中打开资源管理器，并将CustomWatchface.zip文件置于其中。
+- 同时打开另一个资源管理器（或调整导航树）以访问Phone/AAPS/exports文件夹。
 
-That way working is very easy: each time you tune json file with a text editor, image with image editor (bitmap or vector) you have to just:
+如此操作极为简便：每次用文本编辑器修改json文件或用图像编辑器（位图/矢量图）调整图像后，仅需：
 
-1. save your modifications in each app
-2. drag and drop all files within CustomWatchface.zip file
-3. drag and drop CustomWatchface.zip into AAPS/exports folder of the phone
-4. send CustomWatchface to the watch to check the results
+1. 在各应用程序中保存修改内容。
+2. 将所有文件拖放至CustomWatchface.zip文件中。
+3. 将CustomWatchface.zip拖放至手机的AAPS/exports文件夹。
+4. 将CustomWatchface发送至手表以查看效果。
 
-### Initialize Watchface customization
+### 初始化表盘自定义设置
 
-First step you will have to define a watchface Name (necessary to select it easily for testing), and start to tune metadata keys at the beginning of json file
+首先需定义表盘名称（便于测试时快速选择），并开始调整json文件开头的元数据键值。
 
-Then you will have to define which information you want to show so which view should be visible or hidden.
+随后需设定要显示的信息，即确定哪些视图应显示或隐藏。
 
-- will you manage second or not?
-- do you want to design an analog watch or a digital watch (or both...)
+- 是否启用秒针显示？
+- 需设计模拟表盘、数字表盘或两者兼具？
 
-Now you can start to modify json file with the `"visibility":` key of each view set to `"visible"` or `"gone"` (if you want to keep or not the view)
+现在您可通过修改json文件中的`"visibility"`键值来设定每个视图为`"visible"`（显示）或`"gone"`（隐藏）。
 
-You can also start to tune approximativaly top, left margin and width height values to start organizing the watchface (these values will be tuned later using image editor)
+您还可先初步调整顶部、左侧边距及宽高数值来布局表盘（这些数值后续将通过图像编辑器精确校准）。
 
-Note: everything is design within a **400px x 400px rectangle**. So everything will be position in absolute coordinates within this size.
+注：所有设计均在**400px×400px矩形框**内完成。 因此所有元素均需在此尺寸范围内采用绝对坐标定位。
 
-When you design your first watchface, you have to know that everything is organized by layer from the Back to the Top, so each view (ImageView or TextView) can hide something that is behind...
+设计首个表盘时需注意：所有元素按从底层到顶层的顺序堆叠排列，因此每个视图（ImageView或TextView）都可能遮挡后方内容...
 
 
 
@@ -233,92 +233,92 @@ When you design your first watchface, you have to know that everything is organi
 
 
 
-Then within json file all views are sorted from the Back to the Top (this will help you to remember what is behind what...)
+json文件中所有视图均按从底层到顶层的顺序排列（便于您记忆各视图的遮挡关系...）
 
-If you design or tune your first custom watchface, start by simple things: change visibility of some views, include a dedicated background image without changing json file...
+若首次设计或调整自定义表盘，建议从简单操作入手：更改部分视图的可见性、添加专属背景图（无需修改json文件）...
 
-### Manage colors
+### 管理颜色
 
-Within json file, you will have several keys to specify colors: `"color"`, `"fontColor"`for views, but also `"highColor"`, `"midColor"`, `"lowColor"`, ... (see [List of General Parameters](#cwf-reference-list-of-general-parameters))
+json文件中包含多个颜色设定键：视图的`"color"`、`"fontColor"`，以及`"highColor"`、`"midColor"`、`"lowColor"`等（详见[通用参数列表](#cwf-reference-list-of-general-parameters)）。
 
-Colors are specified with a text field that starts by `#` followed by RRGGBB (Red, Green, Blue) values in hexadecimal format:
+颜色通过以`#`开头的文本字段指定，后接十六进制格式的RRGGBB（红绿蓝）值：
 
-- `"#FFFFFF"` is white, and `"#000000"` is black, `"#FF0000"` is red...
+- `"#FFFFFF"`为白色，`"#000000"`为黑色，`"#FF0000"`为红色...
 
-You can also include 2 additional values for alpha layer and specify a transparency level (AARRGGBB):
+还可添加2位Alpha通道值来设定透明度（AARRGGBB格式）：
 
-- `"#00000000"`is completely transparent, and `"#FF000000"` is completely opaque ( so  `"#FF000000"` is equivalent to  `"#000000"`)
+- `"#00000000"`表示完全透明，`"#FF000000"`表示完全不透明（因此`"#FF000000"`等同于`"#000000"`）
 
-You can also use the specific keyvalue `"bgColor"` to automatically use `"highColor"`, `"midColor"`, `"lowColor"` specified in general parameters according to BG Value:
+您还可使用特定键值`"bgColor"`，根据血糖值自动调用通用参数中设定的`"highColor"`、`"midColor"`、`"lowColor"`：
 
-- `"fontColor": "bgColor",` will automatically set the font color of the view according to BG Value
-- Note that `sgv` (for BG Value) and `direction` (for trend arrow) views automatically apply BG colors set into general parameters (for these 2 views, if you want to have different colors, you will have to use advanced [dynData](#cwf-reference-dyndata-feature) feature with one step color...)
+- `"fontColor": "bgColor",` 将根据血糖值自动设置视图的字体颜色
+- 注意：`sgv`（血糖值）和`direction`（趋势箭头）视图会自动应用通用参数中的血糖颜色设置（若需为这两个视图设定不同颜色，需使用进阶的[dynData](#cwf-reference-dyndata-feature)功能配合单阶颜色...）
 
-For more information concerning ImageViews and `"color":` key, see dedicated chapter [Tune image color](#cwf-reference-tune-image-color) below.
+有关ImageView及`"color":`键的详细信息，请参阅下文[调整图像颜色](#cwf-reference-tune-image-color)专章。
 
-### Include Hardcoded images
+### 嵌入硬编码图像
 
-the easiest way to start tuning your watchface is to include within zip file some images with a specific names (see [List of Hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files))
+调整表盘最便捷的方式是在zip文件中包含特定命名的图像（参见[硬编码资源文件列表](#cwf-reference-list-of-hardcoded-resource-files)）
 
-- Image should be in `.jpg`, `.png` or `.svg` format. but be careful, jpg doesn't manage transparency, so should be only used for background layer. For all intermediate layers (cover_chart, cover_plate, hands) use either `.png`or `.svg` image
+- 图像需采用`.jpg`、`.png`或`.svg`格式。 但需注意：jpg格式不支持透明度，因此仅适用于背景图层。 所有中间图层（如cover_chart、cover_plate、表针）请使用`.png`或`.svg`格式图像
 
-- If you have a vector image editor (like for example Illustrator), prefer this format that will produce small text files with `.svg` extension the best quality.
-- You should take care to use exact filename (including High/lower case)
+- 若您使用矢量图像编辑器（如Illustrator），建议优先选择`.svg`格式，该格式能生成体积小巧的文本文件且画质最佳。
+- 务必确保使用精确的文件名（含大小写敏感）。
 
-Now if you want a dedicated backgoung image, you only have to include within the zip file a file named `Background.jpg` (without changing anything else. send zip file into the watch and check result!.
+若需定制背景图，只需在zip文件中添加名为`Background.jpg`的文件（无需修改其他内容）。 将zip文件发送至手表并查看效果！
 
-If you want to customize hour_hand, minute_hand or second_hand for an analog watch, simply include `HourHand.png` (or `HourHand.svg`), `MinuteHand.png` and `SecondHand.png`.
+若需定制模拟表盘的时针、分针或秒针，只需添加`HourHand.png`（或`HourHand.svg`）、`MinuteHand.png`及`SecondHand.png`文件。
 
-- these images will automatically rotate around the center of the image, so the images should be set to 00:00:00 (and for a "full frame" analog watch, use a size of 400 x 400 px positioned at top 0 left 0)
+- 这些图像将自动绕其中心点旋转，因此图像需设置为00:00:00状态（若设计"全屏"模拟表盘，请使用400×400像素尺寸并定位在top 0 left 0位置）。
 
-You can also noticed within [List of Hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files) that for each image view, you have two additional hardcoded filenames `High` and `Low` (for example you can include other images named `BackgroundHigh.jpg` and `BackgroundLow.jpg` within zip file). then image will automatically change according to you BG level (within Range, Hyper or Hypo). See AIMICO watchface as example.
+您还可在[硬编码资源文件列表](#cwf-reference-list-of-hardcoded-resource-files)中注意到：每个图像视图均对应两个附加的硬编码文件名`High`和`Low`（例如可在zip文件中添加名为`BackgroundHigh.jpg`和`BackgroundLow.jpg`的其他图像）。 图像将根据您的血糖水平（正常范围、高血糖或低血糖）自动切换。 参见AIMICO表盘示例。
 
 (cwf-reference-tune-image-color)=
 
-### Tune image color
+### 调整图像颜色
 
-`"color"` key can  be used to tune default image color:
+`"color"`键可用于调整默认图像颜色：
 
-- applied on background view, it will set the background color (default black)
-- applied on cover_plate (simple dial) or hands, it will change the default image (white) by the color specified (including `"bgColor"`)
+- 应用于背景视图时将设定背景色（默认为黑色）
+- 应用于cover_plate（简易表盘）或表针时，将用指定颜色（含`"bgColor"`）替换默认图像（白色）
 
-When you apply `"color"` key on a bitmap image (`.jpg` or `.png`), color will apply an interesting effect on color saturation. So you will still recognize your bitmap.
+当您在位图图像（`.jpg`或`.png`）上应用`"color"`键时，颜色将对色彩饱和度产生独特效果。 因此您仍可识别位图原貌。
 
-Finally on `.svg` image file, `"color"`key will have no effect, consider color of vector files as hardcoded within the image. If you want to change colors, you will have to include several `svg` files, and use advanced [dynData](#cwf-reference-dyndata-feature) feature to change it
+最后，在`.svg`图像文件上，`"color"`键将不起作用，矢量文件的颜色被视为硬编码在图像中。 若需更改颜色，需包含多个`svg`文件，并使用高级[dynData](#cwf-reference-dyndata-feature)功能进行切换
 
-### Use additional fonts for TextViews
+### 为TextView使用附加字体
 
-Several defaults font are already available within wear apk (see font keys included into [key values](#cwf-reference-key-values) chapter). But if you want to use additional fonts not available as default, you can include additional fonts within zip file:
+穿戴应用已内置多种默认字体（参见[键值](#cwf-reference-key-values)章节中的字体键）。 但若需使用非默认的附加字体，可在zip文件中添加字体文件：
 
-- the 2 accepted font format are `.ttf` and `.otf` files
-- if you include a custom font within zip file, for example with a file named `myCustomFont.ttf`, then you will have to use the filename to use it within json file for a TextView:
+- 支持的两种字体格式为`.ttf`和`.otf`文件
+- 若在zip文件中添加自定义字体（例如名为`myCustomFont.ttf`的文件），则需在json文件中通过文件名指定TextView使用的字体：
 
 ```
 "font": "myCustomFont",
 ```
 
-Keep in mind that some fonts can be included into big files (and you are limited to a maximum size for zip file). So if you only use very few characters (numbers, `.`, `,`), you can use free tools to remove unused characters (for example [here](https://products.aspose.app/font/generator/ttf-to-ttf)) and then reduce font size.
+请注意：部分字体文件体积较大（且zip文件存在大小限制）。 因此若仅使用极少量字符（数字、`.`、`,`），可用免费工具剔除未用字符（例如[此处](https://products.aspose.app/font/generator/ttf-to-ttf)），从而缩减字体体积。
 
 (cwf-reference-advanced-features)=
 
-## Advanced features
+## 高级功能
 
 (cwf-reference-preference-feature)=
 
-### Preferences Feature
+### 偏好设置功能
 
-CustomWatchface can automatically tune some watch preferences to have the correct visualization of the watchface (if authorization is given within Wear preferencesby the user).
+CustomWatchface可自动调整部分手表偏好设置，以确保表盘正确显示（前提是用户已在Wear偏好设置中授予权限）。
 
-But this feature should be used with care. Preferences are common with all other watchfaces. So several rules to respect with this feature:
+但此功能需谨慎使用。 偏好设置与所有其他表盘共用。 使用此功能需遵循以下规则：
 
-- never set preferences concerning hidden views
-- try to maximize the visible views
-- feel free to oversize the width of certain views:
-  - TBR can be shown as percentage (small width, but also as absolute values much wider)
-  - delta or avg delta with detailed information can be wide
-  - same for iob2: this view can have total iob, but if detailed iob is selected, then text size can be very long
+- 切勿设置与隐藏视图相关的偏好设置
+- 尽量最大化可见视图
+- 可随意放大某些视图的宽度：
+  - TBR可显示为百分比（宽度较小）或绝对值（宽度较大）
+  - 含详细信息的delta或avg delta可设置较宽宽度
+  - iob2同理：该视图可显示总iob，若选择详细iob则文本可能极长
 
-If you still need some very specific settings to have a correct display (in example below, if there is not enough space for detailed iob, you can "force" this parameter to `false` of your watch, you can include within metadata block some settings constraint like that
+若仍需特定设置才能正确显示（如下例中详细iob空间不足时），可在元数据块中添加此类设置约束，例如将参数"强制"设为`false`
 
 ```json
 "metadata": {
@@ -332,11 +332,11 @@ If you still need some very specific settings to have a correct display (in exam
 },
 ```
 
-If user authorize custom watchface to modify watch parameter (setting within wear plugin) then Show detailed iob will be set to "disable", and locked to disable (no modification of this parameter possible, until authorization is disabled within wear plugin parameter, or another watchface is selected)
+若用户授权自定义表盘修改手表参数（通过Wear插件设置），则"显示详细iob"将被设为"禁用"状态并锁定（除非在Wear插件参数中撤销授权或切换其他表盘，否则无法修改此参数）
 
-- Note that when a user select a watchface, he can see the number of "required parameter" during watchface selection
+- 请注意：用户选择表盘时，可在选择界面查看"必要参数"的数量
 
-In example below Gota watchface has one required parameter. If authorization is not given it will be shown in white color, but authorization is given, then this parameter will be set and locked on the watch (in this case the number is in orange color)
+下例中Gota表盘需配置1个必要参数。 未获授权时该参数显示为白色；获授权后，参数将被设定并锁定（此时数字显示为橙色）
 
 ![Required parameters](../images/CustomWatchface_2.jpg)
 
@@ -344,21 +344,21 @@ In example below Gota watchface has one required parameter. If authorization is 
 
 (cwf-reference-twinview-feature)=
 
-### TwinView Feature
+### 双视图功能
 
-Twin views provide an easy way to adjust the view position based on the visible views. This does not have the power of a layout entirely made up of LinearLayout, but can handle many common cases.
+双视图功能可根据可见视图轻松调整视图位置。 虽不具备完全由LinearLayout构建的布局功能，但能处理多数常见情况。
 
-In example below you can see AAPS (Cockpit) watchface with all views visible within settings, and the same watchface with "Show rig battery" disabled and "Show avg delta" disabled
+下例展示AAPS（驾驶舱）表盘：设置中所有视图均可见，以及关闭"显示设备电量"和"显示平均差值"后的同一表盘效果
 
 ![Twin Views](../images/CustomWatchface_3.jpg)
 
-You can see that when one of the twin views is hidden, the other is shifted to be centered
+可见当双视图之一隐藏时，另一视图会自动居中显示
 
-in this example, you can see that within `"uploader_battery"` block, we have `"twinView":` key is added to define `"rig_battery"` view, and in `"rig_battery"` block  `"twinView":` key define `"uploader_battery"` as twin. Then then additional key `"leftOffsetTwinHidden":` define the number of pixel to shift the view when twin is hidden.
+本例中，`"uploader_battery"`区块通过`"twinView":`键指定`"rig_battery"`视图为配对对象，而`"rig_battery"`区块的`"twinView":`键则反向指定`"uploader_battery"`为配对视图。 此外，`"leftOffsetTwinHidden":`键用于设定配对视图隐藏时本视图的像素左移量。
 
-To calculate this number, you can see that the difference between the leftMargin of each of the twin views is 50 pixels, so the offset to stay centered is half in one direction or the other.
+计算该数值时，可见双视图的leftMargin差值为50像素，故居中偏移量需按单方向差值的一半设定。
 
-If the twin views are positioned vertically, in this case you must use the key `"topOffsetTwinHidden":`
+若双视图为垂直排列，则需改用`"topOffsetTwinHidden":`键
 
 ```json
 "uploader_battery": {
@@ -394,33 +394,33 @@ If the twin views are positioned vertically, in this case you must use the key `
 ```
 (cwf-reference-dyndata-feature)=
 
-### DynData Feature
+### 动态数据功能
 
-DynData is the most powerful feature if you want to include some animation within you watchface, according to some internal values (like BG value, BG level, delta, % of battery... see list of available data [here](#cwf-reference-dyndata-key-values))
+DynData是最强大的功能，可根据内部数值（如血糖值、血糖水平、变化量、电池百分比等，可用数据列表见[此处](#cwf-reference-dyndata-key-values)）为表盘添加动画效果。
 
-To illustrate this feature, I will take the example of AAPS (SteamPunk) watchface:
+为说明此功能，现以AAPS（蒸汽朋克）表盘为例：
 
 ![CustomWatchface_4](../images/CustomWatchface_4.png)
 
-In this watchface, we will have to manage the [rotation of BG value](#cwf-reference-background-management) (from 30 degrees to 330 degrees) on the right, the [dynamic range of avg_delta](#cwf-reference-avg-delta-management) (scale up to 5mgdl, 10mgdl or 20mgdl according to value), the [rotation of pointer](#cwf-reference-dynamic-rotation-management) that should be synchronized to the scale, and also the different layer of the views...
+该表盘需实现：右侧[血糖值旋转](#cwf-reference-background-management)（30度至330度）、[平均差值动态范围](#cwf-reference-avg-delta-management)（根据数值按5/10/20mgdl缩放）、[指针旋转](#cwf-reference-dynamic-rotation-management)（需与刻度同步），以及各视图层级控制...
 
-To be able to manage this Watchface, see below all the images included into the zip file:
+为配置此表盘，请参见压缩包内所有图片：
 
-Note: to be able to see the transparency, all these images are on a yellow background and surrounded by a red square
+注：为展示透明度，所有图片均采用黄色背景并添加红色边框
 
 ![Steampunk images](../images/CustomWatchface_5.jpg)
 
-- On the first row, Background.jpg and CoverPlate.png will be automatically mapped with associated view (default views filename), and steampunk_pointer.png will be managed by dynData
-- On the second row you see the 3 scales of dynamic range for avg_delta that will also be managed by dynData
-- On the third row, chartBackground.jpg will be linked manually within chart view, HourHand.png and finally MinuteHand.png files will be automatically mapped with associated views
+- 首行Background.jpg和CoverPlate.png将自动关联至对应视图（默认视图文件名），steampunk_pointer.png则由dynData控制
+- 次行显示avg_delta动态范围的3种刻度，同样由dynData调控
+- 第三行chartBackground.jpg将手动关联至图表视图，HourHand.png和MinuteHand.png文件则自动匹配对应视图
 
 (cwf-reference-background-management)=
 
-#### **Background management**
+#### **背景管理**
 
-First, concerning BG value image, no choice here, it can only be in the background layer (otherwise it will be in front of the chart view and chart will not be visible!). So we will have to map BG value to the background, and then rotate background image according to BG value.
+首先，关于血糖值图像，此处别无选择——必须置于背景层（否则会遮挡图表视图导致不可见！） 因此需将血糖值映射至背景层，再根据血糖值旋转背景图像。
 
-Within `"background"` block, we will include 2 dedicated keys to make this rotation:
+在`"background"`区块中，我们将加入2个专用键实现旋转：
 
 ```json
 "background": {
@@ -433,11 +433,11 @@ Within `"background"` block, we will include 2 dedicated keys to make this rotat
     "visibility": "visible"
 },
 ```
-`"dynData":` key will define which block should be used to define the animation (value, range, conversion...) here this block was named "rotateSgv" (choose an explicit name when you use this feature),
+`"dynData":`键指定定义动画的区块（数值、范围、转换等），本例使用名为"rotateSgv"的区块（使用此功能时请选用明确名称）
 
-`"rotationOffset": true,` will define that the expected animation according to value should be a rotation. (others available keys are `"leftOffset"` and `"topOffset"` if you want to create a slider)
+`"rotationOffset": true,`声明该数值动画应为旋转效果。 （若需创建滑动效果，还可使用`"leftOffset"`和`"topOffset"`键）
 
-Now we will go at the end of the file, after the last view:
+现在我们将跳转至文件末尾，最后一个视图之后：
 
 ```json
 "second_hand": {
@@ -454,21 +454,21 @@ Now we will go at the end of the file, after the last view:
         "maxData": 330
     },
 ```
-You can see that after the latest view (`"second_hand"`), we added a new `"dynData": { ... }` block that  will contains all the animations:
+可见在末视图(`"second_hand"`)之后，我们新增了`"dynData": { ... }`区块以容纳所有动画配置：
 
-The block defined within `"background"`view was named `"rotateSgv"`, it's the first block you will find into `"dynData"`!
+`"background"`视图内定义的区块命名为`"rotateSgv"`，这正是`"dynData"`中的首个配置区块！
 
-This block is simple: you have a first key named `"valueKey":` that will be used to define which value should be used. in this case `"sgv"` is a "keyValue" that defines BG value (note that in most cases the keyValue has the same name that the view that shows this information).
+该区块配置简明：首先通过`"valueKey":`键指定关联的数值来源。 此处`"sgv"`作为"keyValue"表示血糖值（注意多数情况下keyValue与显示该信息的视图同名）。
 
-Concerning BG value, default min data is set to 39mgdl and max  data is set to 400mgdl (see [DynData reference key values](#cwf-reference-dyndata-key-values) below all available keyValues and associated min/max data values).
+血糖值的默认最小数据设为39mgdl，最大数据设为400mgdl（所有可用keyValue及对应最小/最大数据值详见下方[动态数据参考键值](#cwf-reference-dyndata-key-values)）。
 
-Within `"rotateSgv"` block the two additional keys (`"minData":` and `"maxData":`) will be used to tune min and max data to 30 and 330. With these min and max values, we will be able to directly use data value (without any conversion) to rotate background in degrees. In this situation all BG values above 330mgdl will be limited to 330, upper limit of the image.
+在`"rotateSgv"`区块中，另两个键(`"minData":`和`"maxData":`)用于将数据范围调整为30至330。 通过这些最小和最大值，我们可以直接使用数据值（无需转换）来旋转背景（以度为单位）。 在此设置下，所有高于330mgdl的血糖值都将被限制在图像上限330度。
 
-#### **Chart management**
+#### **图表管理**
 
-Default background of chart is transparent, so to hide BG scale included into background image, we will need to include a dedicated background image (this image will include the overall shadows of Steampunk watchface). The link to charBackground.jpg file is done with `"background":` key
+图表默认背景为透明，为遮盖背景图像中的血糖刻度，需添加专用背景图（该图含蒸汽朋克表盘的整体阴影效果）。 通过`"background":`键关联charBackground.jpg文件
 
-Of course, the sizing and positioning of the view must be done to the pixel!
+当然，视图的尺寸和定位必须精确到像素！
 
 ```json
 "chart": {
@@ -482,15 +482,15 @@ Of course, the sizing and positioning of the view must be done to the pixel!
 ```
 (cwf-reference-avg-delta-management)=
 
-#### **Avg delta management**
+#### **平均差值管理**
 
-To be able to manage dynamic range of avg delta, we will use the four freetext views. freetext1 will be used to manage the image scale, and freetext2 to freetext4 will be used to manage pointer rotation according to scale.
+为实现平均差值的动态范围调控，我们将使用四个自由文本视图。 freetext1用于调控刻度图像，freetext2至freetext4则根据刻度控制指针旋转。
 
 **freetext1**
 
-As explain before, freetext views are in front of chart and in front of background, that's why we included transparent area to see these images (right side and bottom side of the image)
+如前所述，自由文本视图位于图表和背景层之上，因此我们设置了透明区域（图像右侧和底部）以显示这些图像。
 
-Note that the removed bottom part of these images has been used as background of chart to have a perfect integration.
+注意：这些图像被裁切的底部区域已用作图表背景，实现无缝融合效果。
 
 ```json
 "freetext1": {
@@ -503,7 +503,7 @@ Note that the removed bottom part of these images has been used as background of
     "dynData": "avgDeltaBackground"
 },
 ```
-For this view we include the link to another `"dynData"`block named `avgDeltaBackground`. This block will manage avgDelta scale according to avgDelta value.
+该视图关联至另一个名为`avgDeltaBackground`的`"dynData"`区块。 此区块将根据avgDelta值调控avgDelta刻度。
 
 ```json
 "avgDeltaBackground": {
@@ -521,24 +521,24 @@ For this view we include the link to another `"dynData"`block named `avgDeltaBac
     "image8": "steampunk_gauge_mgdl_20"
 },
 ```
-- `"valueKey":` will make the link with `"avg_delta"` value
-- min and max Data will also limit the range to the maximum value available within this watchface (from -20mgdl to 20mgdl). For mmol users, keep in mind that all internal values are always in mgdl within AAPS.
+- `"valueKey":`将关联`"avg_delta"`数值
+- minData和maxData同时会将范围限制在该表盘支持的最大值区间（-20mgdl至20mgdl）。 使用mmol单位的用户请注意：AAPS内部数值始终以mgdl为单位存储。
 
-Then we will see here how to manage dynamic background image according to value.
+随后我们将在此说明如何根据数值动态管理背景图像。
 
-`"invalidImage":` is the key to manage image to show when we have an invalid data (or missing data). Here we make the link to additional resource image including into zip file with 5 mgdl scale
+`"invalidImage":`键用于管理数据无效（或缺失）时显示的图像。 此处关联压缩包内含有5mgdl刻度的附加资源图像
 
-Then we will use a series of images, starting from `"image1":` to `"image8":`. The number of provided images will define the number of steps between `minData` and `maxData`.
+随后我们将使用从`"image1":`到`"image8":`的系列图像。 提供的图像数量将决定`minData`与`maxData`之间的分段阶数。
 
-- `image1` will define image to show when avg_delta is equal or close to `minData` and the image with the highest number (here `image8`) will be used to define the image that should be shown when avg_delta is equal or close to `maxData`
-- between -20mgdl and 20mgdl, the overall range is 40mgdl, divided by 8 (number of images provided), we will have 8 steps of 5mgdl
-- Now we can map background images according to avg_delta value, starting from the lowest values: between -20 and -15, and also between -15 and -10 we will use  `steampunk_gauge_mgdl_20` for the scale, then between -10 and -5 `steampunk_gauge_mgdl_10`, and so on until +15 and +20 where we will again use `steampunk_gauge_mgdl_20` background image
+- `image1`设定avg_delta等于或接近`minData`时显示的图像，编号最大的图像（此处为`image8`）则设定avg_delta等于或接近`maxData`时的显示图像
+- 在-20mgdl至20mgdl范围内，总跨度为40mgdl，除以8（提供的图像数量）即得到8个5mgdl的递进步阶
+- 现在根据avg_delta值映射背景图像：从最低值开始，-20至-15及-15至-10区间使用`steampunk_gauge_mgdl_20`刻度图，-10至-5区间用`steampunk_gauge_mgdl_10`，以此类推直至+15至+20区间再次使用`steampunk_gauge_mgdl_20`背景图
 
 (cwf-reference-dynamic-rotation-management)=
 
-**freetext2 to freetext4**
+**freetext2 到 freetext4**
 
-For these views will will combine dynamic images and rotation feature explained before:
+对于这些视图，我们将结合之前说明的动态图像与旋转功能：
 
 ```json
 "freetext2": {
@@ -572,7 +572,7 @@ For these views will will combine dynamic images and rotation feature explained 
     "rotationOffset": true
 },
 ```
-Here each view is dedicated to a specific scale (so is linked to a dedicated dynData block), you can also notice that `"rotationOffset":` key is enabled for these 3 views.Now take a look on the first dynData block:
+此处每个视图对应特定刻度（故关联独立dynData区块），可注意到这3个视图启用了`"rotationOffset":`键。现在查看首个dynData区块：
 
 ```json
 "avgDelta5": {
@@ -594,19 +594,19 @@ Here each view is dedicated to a specific scale (so is linked to a dedicated dyn
     "image8": "null"
 },
 ```
-Here, even if dynamic range will be used only between -5 and +5 avg_delta data, it's important to keep the overall range of -20, +20mgdl to ensure that the pointer will be synchronize with the background during scale switches. That's why we keep the same overall range than for `avgDeltaBackground`  and the same number of steps (8 images).
+此处尽管动态范围仅使用-5至+5的avg_delta数据，但必须保持-20至+20mgdl的整体范围，以确保指针在刻度切换时与背景同步。 因此我们保持与`avgDeltaBackground`相同的整体范围和分段数量（8张图像）。
 
-You can note that either `"invalidImage"` or several `"imagexx"` are with `"null"` key value (it could be any string not existing as a filename within zip file). When a filename is not found, then view background image will be transparent. So the setting ensure that pointer will only be visible for step 4 and step 5 (avg delta between -5mgdl and +5 mgdl), and will not be visible outside this range.
+请注意：`"invalidImage"`及部分`"imagexx"`使用了`"null"`键值（该值可为压缩包内不存在的任意字符串文件名）。 当文件名未找到时，视图背景图像将显示为透明。 该设置确保指针仅在阶数4和5（avg delta介于-5mgdl至+5mgdl）时显示，超出此范围则隐藏。
 
-Now we can see a new block `"rotationOffset":` that will have inside two keys `"minValue":` and `"maxValue":`. These values are used to make the conversion between internal data (in mgdl), and the angle rotation we want to have.
+现在可见新增的`"rotationOffset":`区块，内含`"minValue":`和`"maxValue":`两个键。 这些数值用于将内部数据（mgdl单位）转换为所需的指针旋转角度。
 
-- Steampunk watchface is designed to have maximum from -30 degrees to 30 degrees rotation for the pointer. So according to the scale (here from -5mgdl to 5mgdl), we will want to have 30 degrees for these values. Because `minData` and `maxData`are 4 times greater, then the corresponding minValues and maxValues are 4 * 30 degrees so -120 and +120 degrees. But for all rotation above or below +-30 degrees the pointer will be hidden (no image visible), and the pointer will only be visible for values between -5 and +5mgdl... So it's exactly what is expected here.
+- 蒸汽朋克表盘设计为指针提供-30度至30度的最大旋转范围。 因此根据当前刻度（此处为-5mgdl至5mgdl），这些数值将对应30度的旋转角度。 由于`minData`与`maxData`范围扩大4倍，对应的minValue和maxValue也需乘以4倍，即-120度至+120度。 但当旋转角度超出±30度范围时指针将隐藏（无图像显示），仅当数值处于-5至+5mgdl区间时指针可见。 这完全符合此处设计预期。
 
-The other dynData blocks are defined the same way to tune `"avgDelt10"`and `"avgDelta20"`
+其他dynData区块以相同方式定义，用于调整`"avgDelt10"`和`"avgDelta20"`。
 
-#### loop view
+#### loop视图
 
-in Steampunk watchface loop green and red arrows (for status) are disabled, this is also managed with a dedicated dynData block associated to loop view.
+蒸汽朋克表盘中，状态指示的绿色/红色循环箭头被禁用，该功能同样通过关联循环视图的独立dynData区块实现。
 
 ```json
     "loopArrows": {
@@ -615,15 +615,15 @@ in Steampunk watchface loop green and red arrows (for status) are disabled, this
         "image2": "redArrows"
     }
 ```
-Because this block is only called by loop View, and default data managed by this view is loop information, then `"valueKey":` key is optional.
+由于该区块仅由循环视图调用，且该视图默认管理循环数据，故`"valueKey":`键可省略。
 
-Default `minData` and `maxData` for loop are defined to 0min and 28min, so with two images, all data values below 14 min will be shown with background `image1` and all data values above 14 min will be shown with `image2`. 14 min is exactly the threshold to switch from green arrow to red arrow.
+循环视图默认的`minData`和`maxData`设为0分钟和28分钟，使用两张图像时：低于14分钟的数据显示`image1`背景，高于14分钟则显示`image2`。 14分钟正是绿色箭头切换为红色箭头的临界值。
 
-In this example, `greyArrows`, `greenArrows` and `redArrows` files are not included into zip file, so these arrows are just removed (invisible), but you can use this block "as is" if you want to tune status arrows with custom background images.
+本例中，`greyArrows`、`greenArrows`和`redArrows`文件未包含在压缩包内，故这些箭头被移除（不可见），但若需用自定义背景图像调整状态箭头，可直接使用该区块配置。
 
-#### rig_battery and uploader_battery views
+#### rig电池与uploader电池视图
 
-To finish the overview of dynData feature, we will take a look on battery management. The idea here is to customize text color according to battery level (from 0 to 100%)
+为完成dynData功能的概览，我们将查看电池管理部分。 此处设计理念是根据电池电量（0%至100%）自定义文本颜色。
 
 ```json
 "uploader_battery": {
@@ -659,11 +659,11 @@ To finish the overview of dynData feature, we will take a look on battery manage
     "topOffsetTwinHidden": 13
 },
 ```
-You can see here that these both views share the same `dynData` block named `batteryIcons`. It's possible because by default attached data is the one of the view (to without specifying a  `"valueKey":` key within  `batteryIcons` block, it will be applied with `uploader_battery` data or `rig_battery` data according to the view).
+可见这两个视图共享名为`batteryIcons`的同一`dynData`区块。 实现原理在于：默认关联视图自身数据（当`batteryIcons`区块未指定`"valueKey":`键时，将自动应用`uploader_battery`或`rig_battery`数据，具体取决于当前视图）。
 
-Note these two views also use TwinView feature explain [here](#cwf-reference-twinview-feature).
+请注意这两个视图还使用了[此处](#cwf-reference-twinview-feature)说明的TwinView功能。
 
-Now lets take a look on dynData block:
+现在让我们查看dynData区块：
 
 ```json
 "batteryIcons": {
@@ -675,27 +675,27 @@ Now lets take a look on dynData block:
     "fontColor5": "#000000"        
 },
 ```
-Here we use exactly the same logic that for dynamic background image, but with dedicated keys (`"invalidFontColor"` and  `"fontColor1"` to `"fontColor5"` to specify 5 steps of 20% each one).
+此处采用与动态背景图像完全相同的逻辑，但使用专用键值（`"invalidFontColor"`及`"fontColor1"`至`"fontColor5"`来定义每20%为一个阶数的5个分段）。
 
-- `"fontColor1"` (dark red) will be used for all values below 20%, and white will be used for all values above this threshold.
-- If you want to lower the threshold to "below 10%", you just have to add 5 additional keys from `"fontColor6"` to `"fontColor10"` , but you can also adjust each color if you want progressive variation from green to yellow, orange and red...
+- `"fontColor1"`（深红色）将用于20%以下的所有数值，超过此阈值则使用白色。
+- 若需将阈值降至"10%以下"，只需新增`"fontColor6"`至`"fontColor10"`五个键值，也可通过逐级调整颜色实现从绿色到黄色、橙色直至红色的渐变效果。
 
 (cwf-reference-dynpref-feature)=
 
-### DynPref Feature
+### DynPref功能
 
-Before reading this chapter, you have to understand how [dynData](#cwf-reference-dyndata-feature) works, because DynPref is an advanced usage of DynData: You will now be able to adjust each DynData block according to preferences set by the user:
+在阅读本章前，需先掌握[dynData](#cwf-reference-dyndata-feature)的工作原理，因DynPref是其高级应用：现在您将能根据用户偏好设置来调整每个DynData区块：
 
-To illustrate DynPref feature, we will use two example:
+为演示DynPref功能，我们将使用两个示例：
 
-- Steampunk watchface (simple use to include into the same watchface mgdl and mmol version, watchface will automatically switch according to unit selected into aaps).
-- AAPS V2 watchface will combine different preferences to be able to manage text color and background according to dark and match divider preferences.
+- 蒸汽朋克表盘（简易应用：通过同一表盘集成mgdl与mmol版本，根据aaps中选择的单位自动切换）。
+- AAPS V2表盘将结合多项偏好设置，实现根据暗色模式及匹配分隔线偏好来管理文本颜色与背景。
 
-#### Simple usage of dynPref within Steampunk watchface
+#### 蒸汽朋克表盘中dynPref的简易应用
 
-Within Steampunk, we have to set of images according to units: `background` image that will have BG scale and will turn according to BG value. and `freeText1` that contains dynamic scale according to avgDelta value.To be able to have one watchface that will automatically show correct units, we should select image according to unit selected.
+在蒸汽朋克表盘中，我们根据单位设置了两组图像：包含血糖刻度的`background`图像将随血糖值旋转。 以及根据avgDelta值动态调整刻度的`freeText1`。为实现表盘自动显示正确单位，需根据所选单位切换对应图像。
 
-To do that we will replace `dynData` key by a `dynPref`key within view block:
+为此，我们将在视图区块中用`dynPref`键替换`dynData`键：
 
 ```json
  "background": {
@@ -708,9 +708,9 @@ To do that we will replace `dynData` key by a `dynPref`key within view block:
     "visibility": "visible"
 },
 ```
-Usage of `dynPref`keys will be very close to `dynData`keys explained in previous chapter
+`dynPref`键的用法与前一章所述`dynData`键高度相似
 
-Now we will take a look at the end of the json file, after `dynData` block:
+现在我们将查看json文件末尾，位于`dynData`区块之后的内容：
 
 ```json
 "dynData": {
@@ -737,22 +737,22 @@ Now we will take a look at the end of the json file, after `dynData` block:
     ...
 }
 ```
-You can see that the dynpref key defined within `background` view block (`"dynPref": "rotateSgv"`) exists into the `dynPref` json block included at the end of json file:
+可见定义于`background`视图区块的dynpref键（`"dynPref": "rotateSgv"`）已存在于json文件末尾的`dynPref`区块中：
 
-This block should contains a `"prefKey"`key that will define which preference should be used. In this example the key `"key_units"` is linked to units selected within AAPS on phone, and value is `"true"`if selected unit is mgdl, `"false"`if selected unit is mmol.
+该区块必须包含`"prefKey"`键，用于指定需调用的偏好设置项。 本示例中，键`"key_units"`关联手机端AAPS选择的单位，其值为`"true"`表示选择mgdl单位，`"false"`表示选择mmol单位。
 
-Then you will find two json blocks that will use "dynData" format, and that will be used according to selected preference
+随后您将看到两个采用"dynData"格式的json区块，系统将根据所选偏好设置调用对应区块。
 
-Note that the "HardCoded" file name for Background image is now replaced by a dynamic image that will be the same whatever the BG value (`Background_mgdl.png`file if key_units is "true", `Background_mmol.png` if key_units is false), and we also include an `"invalidImage" key to always have a background image even if no data has been received from the phone.
+请注意"HardCoded"背景图像文件名现已被动态图像替代（当key_units为"true"时使用`Background_mgdl.png`文件，为false时使用`Background_mmol.png`），同时添加了`"invalidImage"`键确保即使未收到手机数据也始终显示背景图像。
 
-#### Combine different preferences within dynPref with AAPS V2
+#### 在AAPS V2中整合dynPref的多项偏好设置
 
-Most of the time, when you set a preference, it's not to get "dynamic behaviour", but only the results according to what you select, but within dynPref, it's considered as a dynamic feature...
+多数情况下，设置偏好时并非为了获得"动态行为"，而仅是呈现所选结果——但在dynPref中，这被视为动态功能特性...
 
-- when in `dynData`you specify one full block of parameters (with images, fontColor, Color, ...), with `dynPref`, you will be able to combine each parameter according to one specific preference.
-- Here we will see how match divider preference will be associated to dark preference to show when it's enabled (true) white text on black background on dark watchface (dark parameter true) or black text on white background on light watchface (dark false)...
+- 当`dynData`需要指定包含图像、字体颜色、颜色等参数的完整区块时，`dynPref`则能根据特定偏好设置逐项组合各参数。
+- 此处将演示如何将分隔线偏好与暗色偏好关联：当启用时（true），暗色表盘（dark参数为true）显示黑底白字，浅色表盘（dark为false）则显示白底黑字...
 
-First lets see the beginning of json file:
+首先查看json文件起始部分：
 
 ```json
 "dynPrefColor": "prefColorDark",
@@ -767,9 +767,9 @@ First lets see the beginning of json file:
     "dynPref": "dark"
 },
 ```
-`"dynPrefColor": "prefColorDark"` will specify the dynPref block of all default colors outside views. These colors will be tuned according to dark parameter within `"prefColorDark"`:
+`"dynPrefColor": "prefColorDark"`将指定视图外所有默认颜色的dynPref区块。 这些颜色将根据`"prefColorDark"`中的dark参数进行调整：
 
-And at the end, within the `dynPref` block, you will have a specific dynPref block for default colors:
+最终在`dynPref`区块内，您会看到针对默认颜色的专属dynPref区块：
 
 ```json
 "prefColorDark": {
@@ -796,9 +796,9 @@ And at the end, within the `dynPref` block, you will have a specific dynPref blo
     }
 }
 ```
-The difference between this dynPref block and the other standard dynPref blocks used for views is that here you don't have a dynData block for each value of `"key_dark"` parameter, but only the list of main colors (`highColor`, `midColor` , ...)
+此dynPref区块与视图用标准区块的区别在于：此处未为`"key_dark"`参数的每个值配置dynData区块，仅列出主色列表（`highColor`、`midColor`等）
 
-Lets now take a look on items included into the "divider banner" (in example below `"basalRate"` view linked to `"matchDivider"` dynPref view:
+现在查看"分隔条"内的项目（如下例中关联`"matchDivider"` dynPref视图的`"basalRate"`视图）：
 
 ```json
 "basalRate": {
@@ -812,7 +812,7 @@ Lets now take a look on items included into the "divider banner" (in example bel
     "dynPref": "matchDivider"
 },
 ```
-Then within dynPref block, you can see that Match divider parameter (`key_match_divider` key), include the 2 blocks "true" and "false", but these two blocks are only used to define that view will use either "dark" dynBlock (so exactly the same background and text color than the otherviews outside the banner), or "white" dynBLock that will set opposite colors for background and text...
+在dynPref区块中可见分隔线参数（`key_match_divider`键）包含"true"和"false"两个区块，这两个区块仅用于定义视图将采用"dark"动态区块（与横幅外其他视图完全相同的背景和文本颜色），或采用"white"动态区块（为背景和文本设置相反颜色）...
 
 ```json
 "matchDivider": {
@@ -836,13 +836,13 @@ Then within dynPref block, you can see that Match divider parameter (`key_match_
     }
 },
 ```
-Note that here you are within a "dynData" block, then to define a color or a fontColor, you will use a dynData (not specified here), and a single step (`"color1"` and `'fontColor1'` are used)
+请注意此处位于"dynData"区块内，因此定义颜色或字体颜色时需使用dynData（本文未具体说明），并采用单一步骤（使用`"color1"`和`'fontColor1'`）
 
-- for all parameter other than `image` default "invalid value (if not set specifically by `"invalidColor"` key or `"invalidFontColor"` keys) will be `"color1"` and `"fontColor1"`.
+- 除`image`外，所有参数的默认"无效值"（若未通过`"invalidColor"`或`"invalidFontColor"`键专门设置）将采用`"color1"`和`"fontColor1"`。
 
 
 
-Then we will see a third example with iob views (`iob1` and `iob2`), where we will use smaller text for detailed iob and bigger text for total iob:
+接着我们将看到第三个示例——iob视图（`iob1`和`iob2`），其中详细iob数据使用较小字体，总iob数据使用较大字体：
 
 ```json
 "iob1": {
@@ -869,7 +869,7 @@ Then we will see a third example with iob views (`iob1` and `iob2`), where we wi
     "dynPref": "prefIob2"
 },
 ```
-You will see within default view settings the text size (19 on `iob1` and 24 on `iob2`) and the two different `dynPref` block that should tune textsize (according to detailed iob parameter), and colors (according to dark parameter)
+在默认视图设置中可见文本大小（`iob1`为19，`iob2`为24），以及两个不同的`dynPref`区块：一个根据详细iob参数调整文本尺寸，另一个根据暗色参数调整颜色。
 
 ```json
 "prefIob1": {
@@ -893,11 +893,11 @@ You will see within default view settings the text size (19 on `iob1` and 24 on 
     }
 },
 ```
-You can see here that according to detailed iob parameter (`"key_show_detailed_iob"` key), when it's "true" then textsize is defined to a fix value bigger than default (24 instead of 19): this is done using textsize "step" feature, within only one value so one step... (note that for all parameter others than images,if invalidTextSize is not set, then textsize1 will be used for invalid data)
+此处可见：根据详细iob参数（`"key_show_detailed_iob"`键），当其为"true"时，文本尺寸被固定设置为比默认值更大的数值（24替代19）——这是通过仅含单值的文本尺寸"阶梯"功能实现的...（注意：除图像外所有参数，若未设置invalidTextSize，则无效数据将使用textsize1）
 
-Then "dark" dynPref block will be used to set colorand fontColor
+随后"dark"动态偏好区块将用于设置颜色与字体颜色
 
-In this example the dynData block that will be used for iob1 view will be if detailed IOB is enabled and dark enabled:
+本示例中，当详细IOB启用且暗色模式开启时，将调用以下dynData区块作用于iob1视图：
 
 ```
 {
@@ -907,9 +907,9 @@ In this example the dynData block that will be used for iob1 view will be if det
 },
 ```
 
-So the text will be inwhite on black background and the size 24 will replace default size of 19 set into the view
+因此文本将显示为黑底白字，且24号字体尺寸将替换视图中预设的19号默认尺寸。
 
-The dynData block that will be used for the same view iob1 if detailed IOB is disabled and dark disabled will be:
+当详细IOB禁用且暗色模式关闭时，作用于同一iob1视图的dynData区块为：
 
 ```
 {
@@ -918,58 +918,58 @@ The dynData block that will be used for the same view iob1 if detailed IOB is di
 },
 ```
 
-Now the text will be in black on white background with a size of 19
+此时文本将以白底黑字显示，并保持19号字体尺寸。
 
-#### Tips and tricks for dynPref
+#### dynPref使用技巧
 
-- You can combine as many pref than you want, but be careful, the number of blocks to describe can increase very fast (it's exponential): if you chain 3 parameters and you want to define all situations, you will have 8 blocks to describe, if each parameter has only 2 values...
-- Be careful to not build "infinite loop" (for example if dynpref1 block should be completed by dynpref2 block that should be completed by dynpref1 block...). In this case the dynpref blocks will be considered as invalid...
-- Do not forget to include the numéric index after the key (when you use for example `"textsize"`key within a view, you will have to use `"textsize1"`within the dynPref  value block, because it's a "dynData" format, so linked to value with a single step in this case)
-- Only one key `"valueKey"` should be set for one view, so if the final `dynData` block is built from several `dynPref`blocks, do not include several `"valueKey"`  (and associated `"minData"`, `"maxData"`, ...)
+- 您可以组合任意数量的偏好设置，但需注意描述区块数量会呈指数级增长：若串联3个参数且需定义所有情形（假设每个参数仅有2种取值），则需描述8个区块...
+- 注意避免构建"无限循环"（例如当dynpref1区块需由dynpref2区块补充，而dynpref2区块又需由dynpref1区块补充时...）。 此时这些dynpref区块将被视为无效...
+- 使用视图中的`"textsize"`键时，必须在dynPref值区块中使用`"textsize1"`（因其采用"dynData"格式，本例中仅关联单一步骤的值），切勿忘记在键名后添加数字索引。
+- 每个视图仅应设置一个`"valueKey"`键，因此若最终`dynData`区块由多个`dynPref`区块构建时，切勿包含多个`"valueKey"`（及其关联的`"minData"`、`"maxData"`等参数）。
 
 (cwf-reference-new-v2-features)=
 
-### New Features in CustomWatchface V2 (AAPS V3.3.0 or above)
+### 自定义表盘V2的新功能（适用于AAPS V3.3.0及以上版本）
 
-Note that the watchfaces using these new features or views will require the latest wear apk built from 3.3.0 version of AAPS.
+请注意，使用这些新功能或视图的表盘需要基于AAPS 3.3.0版本构建的最新wear apk。
 
-If you use a zip "v2" with a watch that includes CustomWachface V1, you will have missing information or wrong content into the watchface.
+若在搭载CustomWatchface V1的手表上使用"v2"压缩包，表盘将出现信息缺失或内容错误。
 
-CustomWatchface V2 includes these new features:
+自定义表盘V2包含以下新功能：
 
-- [New Status view](cwf-reference-new-status-feature)
-- [New TempTarget view](cwf-reference-new-temp-target-feature)
-- [New Reservoir Level view](cwf-reference-new-reservoir-level-feature)
-- [New Formatting Feature](cwf-reference-new-formating-feature)
-- [Show External data for Follower](cwf-reference-show-external-datas) (up to 3 set of data within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
+- [全新状态视图](cwf-reference-new-status-feature)
+- [全新临时目标视图](cwf-reference-new-temp-target-feature)
+- [全新储药器余量视图](cwf-reference-new-reservoir-level-feature)
+- [全新格式设置功能](cwf-reference-new-formating-feature)
+- [显示跟随者外部数据](cwf-reference-show-external-datas)（单个表盘最多可显示3组数据：AAPS、AAPSCLIENT和AAPSCLIENT2）
 
 (cwf-reference-new-status-feature)=
 
-#### New Status view
+#### 全新状态视图
 
-The key of this view is `"status"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above)
+该视图的键为`"status"`，其关联区块已自动包含在wear apk"自定义表盘V2"（基于AAPS 3.3.0及以上版本构建）导出的模板中。
 
-This view was included into previous AAPS (NoChart), AAPS (BigChart) and AAPS (Large) previous existing watchfaces available and include a string value (built within wear apk).
+该视图已内置在早期AAPS（无图表）、AAPS（大图表）和AAPS（大号）等现有表盘中，并包含由wear apk构建的字符串值。
 
-These previous watchfaces has been removed and replaced by 3 new custom watchfaces in AAPS 3.3.0.
+AAPS 3.3.0版本中已移除这些旧表盘，替换为3款全新自定义表盘。
 
-- the minimum information is IOB value (always visible whatever IOB parameter into watch)
-- then you have detailed IOB values (BolusIOB|BasalIOB) if enabled within preferences
-- and BGI value (again if enabled within preferences)
+- 最低显示信息为IOB值（无论手表IOB参数如何设置始终可见）
+- 若在偏好设置中启用，则显示详细IOB值（大剂量IOB|基础率IOB）
+- 以及BGI值（同样需在偏好设置中启用）
 
-This `"status"` view is associated with `"key_show_loop_status"` key (within dynPref) to manage visibility.
+该`"status"`视图通过`"key_show_loop_status"`键（位于dynPref内）关联，用于管理可见性。
 
-This view could be managed in V1 using `"iob1"`, `"iob2"` and `"bgi"`  existing views, but with the need of complex dynPref settings to manage spacing within each information according to different settings selected within Watch.
+该视图在V1版本中可通过`"iob1"`、`"iob2"`和`"bgi"`现有视图实现，但需配置复杂的dynPref设置来根据手表不同选项调节各信息间距。
 
 (cwf-reference-new-temp-target-feature)=
 
-#### New TempTarget view
+#### 全新临时目标视图
 
-The key of this view is `"tempTarget"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above).
+该视图的键为`"tempTarget"`，其关联区块已自动包含在由wear apk"自定义表盘V2"（基于AAPS 3.3.0及以上版本构建）导出的模板中。
 
-It shows within watchface:
+表盘将显示以下内容：
 
-- Profile target (single value or min-max target values) (default color in white)
+- 配置文件目标值（单值或最小-最大目标范围）（默认白色显示）
 - Loop adjusted target (default color in Green)
 - Temp Target defined by user (default color in Yellow)
 
@@ -987,7 +987,7 @@ Note that this view is also available for external data (see [below](cwf-referen
 
 (cwf-reference-new-reservoir-level-feature)=
 
-#### New Reservoir Level view
+#### 全新储药器余量视图
 
 The key of this view is `"reservoir"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above).
 
