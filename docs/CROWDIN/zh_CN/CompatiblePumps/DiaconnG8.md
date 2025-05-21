@@ -2,94 +2,94 @@
 orphan: true
 - - -
 
-# Diaconn G8 Insulin Pump
+# Diaconn G8 胰岛素泵
 
-## Insulin Pump Bluetooth Pairing
+## 胰岛素泵蓝牙配对
 
-- Click on the hamburger menu in the top left corner.
+- 点击左上角的汉堡菜单。
 
 ![image](../images/DiaconnG8/DiaconnG8_01.jpg)
 
-- Click on Config Builder.
+- 点击 Config Builder。
 
 ![image](../images/DiaconnG8/DiaconnG8_02.jpg)
 
-- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
+- 选择 Diaconn G8 泵后，点击设置图标（齿轮）。
 
 ![image](../images/DiaconnG8/DiaconnG8_03.jpg)
 
-- Choose Selected pump.
+- 选择 Selected pump（选择的泵）。
 
 ![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
-- Select your insulin pump’s model number once it appears in the list.
+- 在列表中出现您的胰岛素泵型号后，选择它。
 
 ![image](../images/DiaconnG8/DiaconnG8_05.jpg)
 
-- There are two options to check your model number:
+- 有两种方法可以检查您的型号：
 
-1. The last 5 digits of the SN number on the back of the pump.
-2. Click on O button > Information > BLE > Last 5 digits.
+1. 泵背面 SN 码的最后 5 位数字。
+2. 点击 O 按钮 \> Information（信息）> BLE > 最后 5 位数字。
 
 ![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
+- 选择您的泵后，会出现一个窗口，要求输入密码。 输入泵上显示的密码以完成连接。
 
  ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-## Pump status check and log synchronization
+## 泵状态检查和日志同步
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+- 泵连接后，点击蓝牙符号以检查状态并同步日志。
 
 ![image](../images/DiaconnG8/DiaconnG8_08.jpg)
 
-## Bluetooth Troubleshooting
+## 蓝牙故障排除
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+**当与泵的蓝牙连接不稳定时，该怎么办。**
 
-### Method 1 ) Check the pump again after AAPS application is completed.
+### 方法 1) 在 AAPS 应用程序完成后再次检查泵。
 
-- Click on the 3 dots button on the top right.
+- 点击右上角的 3 个点按钮。
 
 ![image](../images/DiaconnG8/DiaconnG8_09.jpg)
 
-- Click on Exit.
+- 点击 Exit（退出）。
 
 ![image](../images/DiaconnG8/DiaconnG8_10.jpg)
 
-### Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+### 方法 2) 如果第一种方法不起作用，断开蓝牙连接，然后重新连接。
 
-- Press and hold the Bluetooth button at the top for about 3 seconds.
+- 按住顶部的蓝牙按钮约 3 秒钟。
 
 ![image](../images/DiaconnG8/DiaconnG8_11.jpg)
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- 点击已配对的 Diaconn G8 胰岛素泵上的 Setting（设置）按钮。
 
 ![image](../images/DiaconnG8/DiaconnG8_12.jpg)
 
-- Unpair.
+- 取消配对。
 
 ![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- Repeat the Bluetooth pairing process for the pump (see above).
+- 重复泵的蓝牙配对过程（见上文）。
 
-## Further Information
+## 更多信息
 
-### Diaconn G8 Insulin pump option setting
+### Diaconn G8 胰岛素泵选项设置
 
-- Config manager > pump > Diaconn G8 > Settings
-- DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+- 配置管理器 > 泵体 > Diaconn G8 > 设置
+- DIACONN G8顶部 > 右上角三点按钮 > Diaconn G8偏好设置
 
 ![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
 
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+- 若启用**记录储药器更换**选项，发生"胰岛素更换"事件时将自动上传相关数据至careportal。
+- 若启用**记录针头更换**选项，发生"输注部位更换"事件时将自动上传相关数据至careportal。
+- 若启用**记录管路更换**选项，发生"管路更换"事件时将自动上传相关数据至careportal。
+- 若启用**记录电池更换**选项，发生"电池更换"事件时将自动上传相关数据至careportal，同时操作标签页中的泵电池更换按钮将失效。 （注意：更换电池前请先停止所有正在执行的输注功能。）
 
 ![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
 
-### Extended Bolus function
+### 扩展大剂量功能
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](#Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- 使用扩展大剂量功能将关闭闭环系统。
+- 具体原因请参阅[此页面](#Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)了解为何扩展大剂量功能在闭环环境中不可用。

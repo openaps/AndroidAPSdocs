@@ -703,7 +703,7 @@ v3为新协议， 更加安全高效
 
 (Releasenotes-important-notes-2-5-0)=
 
-### Important notes
+### 重要说明
 
 - 请使用[Android Studio版本3.5.1](https://developer.android.com/studio/)或更高版本来[构建APK](../SettingUpAaps/BuildingAaps.md)或[更新](UpdateToNewVersion)。
 - 如果您使用xDrip，[识别接收器](#xdrip-identify-receiver)必须设置。

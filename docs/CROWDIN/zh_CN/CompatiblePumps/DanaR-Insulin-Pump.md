@@ -4,29 +4,29 @@ orphan: true
 
 * * *
 
-# DanaR Pump
+# DanaR 泵
 
-*These instructions are for configuring the app and your pump if you have a DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*
+*本指南适用于DanaR泵体的应用程序配置操作。 若使用2017年发布的DanaRS泵体，请参阅[DanaRS胰岛素泵](./DanaRS-Insulin-Pump.md)章节。*
 
-* In the pump go to Main Menu > Setting > User Option
-* Turn on "8. 扩展大剂量"
+* 在泵体操作界面进入：主菜单 > 设置 > 用户选项
+* 开启“8. 扩展大剂量"
 
-![DanaR pump](../images/danar1.png)
+![DanaR 泵](../images/danar1.png)
 
-* Go to Main Menu > Setting > Discovery
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.
+* 转到主菜单 > 设置 > 发现
+* 手机端进入蓝牙设置，扫描周边设备后选择DanaR序列号，输入配对密码（默认密码0000）。 若扫描未发现DanaR设备，请重启手机并取出DanaR电池后重新执行上述步骤。
 
-* In AAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
+* 在AAPS配置生成器中，选择您使用的DanaR型号（DanaR/DanaR韩版/DanaRv2）。
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
-* Select DanaR Bluetooth device, and click your DanaR serial number.
-* Select Pump password, and input your password. (Default password is 1234)
-* If you want AAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Note this means you cannot loop with high TBRs whilst using extended boluses for food.
-* In Preferences under DanaR pump settings you can change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
-* Set basal step on pump to 0.01 U/h
-* Set bolus step on pump to 0.1 U/h
+* 点击右上角三点图标选择菜单。 选择首选项。
+* 选择DanaR蓝牙设备，点击您的DanaR序列号。
+* 选择泵体密码选项，输入您的密码。 (默认密码为 1234）
+* 如需允许AAPS设置超过200%的基础率，请启用"使用延长大剂量实现>200%"功能。 请注意：启用该功能后，进食期间使用延长大剂量时将无法同步执行高临时基础率闭环。
+* 在DanaR泵体设置的偏好选项中，可修改默认大剂量输注速度（12秒/单位、30秒/单位或60秒/单位）。
+* 将泵体基础率步进值设为0.01单位/小时。
+* 将泵体大剂量步进值设为0.1单位/小时。
 * 在泵上启用扩展大剂量
 
-## Timezone traveling with Dana R pump
+## Dana R泵跨时区操作指南
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+跨时区操作说明请参阅[泵体时区切换](#timezone-traveling-danarv2-danars)章节。

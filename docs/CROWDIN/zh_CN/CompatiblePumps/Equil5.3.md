@@ -4,22 +4,22 @@ orphan: true
 
 # Equil 5.3
 
-These instructions are for configuring the Equil insulin pump.
+以下说明用于配置Equil胰岛素泵。
 
-## Pump capabilities with AAPS
-
-§todo
-
-## Hardware and Software Requirements
-* **Compatible Equil hardware**
+## AAPS支持的胰岛素泵功能
 
 §todo
 
-* [Version 3.3.0.0](#version3300) or newer of AAPS
+## 硬件和软件要求
+* **兼容的Equil硬件设备**
 
-### Select Equil pump
+§todo
 
-In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
+* [版本3.3.0.0](#version3300)或更高版本的AAPS
+
+### 选择 Equil 泵
+
+在[配置构建器 > 泵](#Config-Builder-pump)中，切换至**Equil 5.3**。
 
 ### 设置
 
@@ -27,7 +27,7 @@ In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
 
 ### Activate patch
 
-Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
+进入Equil标签页，点击**配对Equil贴片泵**。
 
 ![overview.png](../images/Equil/overview.png)
 

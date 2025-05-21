@@ -408,7 +408,7 @@ Android Studio现在将构建AAPS apk。 在右下角会显示“Gradle 构建�
 
    ![File location apk](../images/Building-the-App/050_LocateAPK.png)
 
-Congratulations! 现在您已经构建了AAPS apk文件，接下来您将把这个文件传输到您的智能手机上。
+恭喜！ 现在您已经构建了AAPS apk文件，接下来您将把这个文件传输到您的智能手机上。
 
 ```{tip}
 如果您认为将来可能会使用Android Wear智能手表，那么现在是构建AAPS Wear apk的最佳时机，以确保它与您的AAPS apk同步。
