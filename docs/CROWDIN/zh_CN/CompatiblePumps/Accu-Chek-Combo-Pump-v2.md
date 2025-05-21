@@ -6,7 +6,7 @@ orphan: true
 
 **该软件是DIY解决方案的一部分，并非成品，但需要您阅读、学习并理解系统，包括其使用方法。 该工具并非全自动糖尿病管理系统，但如果您愿意投入必要时间，它能帮助您改善糖尿病状况并提高生活质量。 切勿操之过急，给自己留出学习的时间。 使用后果由您自行承担。**
 
-## Hardware and software requirements
+## 硬件和软件要求
 
 * Roche Accu-Chek Combo 泵（任何固件版本均可）。
 * 需使用Smartpix或Realtyme设备配合360配置软件来设置胰岛素泵。 （罗氏公司应客户要求可免费提供Smartpix设备及配置软件。）
@@ -92,7 +92,7 @@ orphan: true
 
   ![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
 
-  ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+  ![Screenshot of bolus settings](../images/combo/combo-insulin-settings.png)
 
 ## 激活驱动程序并与Combo配对
 
@@ -134,95 +134,95 @@ orphan: true
 
 Accu-Chek Combo的开发时间早于蓝牙4.0发布，距离首个Android版本问世仅一年。 因此其设备配对方式与现行Android系统的标准配对流程并非完全兼容。 要彻底解决此问题，AAPS需获取系统级权限，而该权限仅对系统应用开放。 这些系统应用由手机制造商预装——用户无法自行安装系统级应用。
 
-其结果是配对过程永远无法完全避免问题，尽管新版驱动程序已大幅改善此状况。 特别说明：配对过程中，Android系统的蓝牙PIN码对话框可能会短暂闪现后自动消失。 但有时该对话框会持续显示，并要求输入4位PIN码。 （请注意：这与Combo要求的10位配对PIN码不同） 无需输入任何内容，直接点击取消即可。 If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
+其结果是配对过程永远无法完全避免问题，尽管新版驱动程序已大幅改善此状况。 特别说明：配对过程中，Android系统的蓝牙PIN码对话框可能会短暂闪现后自动消失。 但有时该对话框会持续显示，并要求输入4位PIN码。 （请注意：这与Combo要求的10位配对PIN码不同） 无需输入任何内容，直接点击取消即可。 若配对未继续进行，请按屏幕提示重试配对操作。
 
 (combov2-tab-contents)=
-## Accu-Chek Combo tab contents
+## Accu-Chek Combo 选项卡内容
 
-The tab shows the following information when a pump was paired (items are listed from top to bottom):
+当泵体完成配对后，该标签页将显示以下信息（条目按从上至下顺序排列）：
 
 ![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
 
-1. _Driver state_: The driver can be in one of the following states:
-   - "Disconnected" : There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
-   - "Connecting"
-   - "Checking pump" : the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
-   - "Ready" : the driver is ready to accept commands from AAPS
-   - "Suspended" : the pump is suspended (shown as "stopped" in the Combo)
-   - "Executing command" : an AAPS command is being executed
-   - "Error" : an error occurred; the connection was terminated, any ongoing command was aborted
-2. _Last connection_: How many minutes ago did the driver successfully connect to the Combo; if this goes beyond 30 minutes, this item is shown with a red color
-3. _Current activity_: Additional detail about what the pump is currently doing; this is also where a thin progress bar can show a command's execution progress, like setting a basal profile
-4. _Battery_: Battery level; the Combo only indicates "full", "low", "empty" battery, and does not offer anything more accurate (like a percentage), so only these three levels are shown here
-5. _Reservoir_: How many IU are currently in the Combo's reservoir
-6. _Last bolus_: How many minutes ago the last bolus was delivered; if none was delivered yet after AAPS was started, this is empty
-7. _Temp basal_: Details about the currently active temporary basal; if none is currently active, this is empty
-8. _Base basal rate_: Currently active base basal rate ("base" means the basal rate without any active TBR influencing the basal rate factor)
-9. _Serial number_: Combo serial number as indicated by the pump (this corresponds to the serial number shown on the back of the Combo)
-10. _Bluetooth address_: The Combo's 6-byte Bluetooth address, shown in the `XX:XX:XX:XX:XX:XX` format
+1. _驱动程序状态_：驱动程序可能处于以下任一状态：
+   - "已断开连接"：蓝牙未建立连接；驱动程序大部分时间处于此状态，仅在需要时连接泵体——这有助于节省电量
+   - "正在连接"
+   - "正在检查泵体"：已连接泵体，但驱动程序正在执行安全检查以确保一切正常且数据最新
+   - "准备就绪"：驱动程序已准备好接收来自AAPS的指令
+   - "已暂停"：泵体处于暂停状态（在Combo上显示为"已停止"）
+   - "正在执行指令"：AAPS指令正在处理中
+   - "错误"：发生异常；连接已中断，所有进行中的指令均被终止
+2. _最后连接时间_：显示驱动程序上次成功连接Combo的分钟数；若超过30分钟未连接，此项将显示为红色
+3. _当前活动_：详细显示泵体当前执行的操作；此处细进度条可显示指令执行进度（如设置基础率配置文件）
+4. _电池状态_：显示电池电量；Combo仅提供"满电"、"低电量"、"无电"三种粗略指示（无百分比等精确数据），故此处仅显示这三档状态
+5. _储药器_：显示Combo储药器中当前剩余的药量（单位：IU）
+6. _最后大剂量_：显示最近一次大剂量输注的分钟数；若AAPS启动后未执行过大剂量输注，此项为空
+7. _临时基础率_：显示当前运行的临时基础率详情；若无临时基础率运行，此项为空
+8. _基础基础率_：当前生效的基础基础率（"基础"指不受临时基础率影响的基准基础率数值）
+9. _序列号_：泵体显示的Combo序列号（与Combo背面标注的序列号一致）
+10. _蓝牙地址_：Combo的6字节蓝牙地址，以`XX:XX:XX:XX:XX:XX`格式显示
 
-The Combo can be operated through Bluetooth in the _remote-terminal_ mode or in the _command_ mode. The remote-terminal mode corresponds to the "remote control mode" on the Combo's meter, which mimics the pump's LCD and four buttons. Some commands have to be performed in this mode by the driver, since they have no counterpart in the command mode. That latter mode is much faster, but, as said, limited in scope. When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing at the bottom. When the driver switches to the command mode however, that field is left blank.
+Combo可通过蓝牙在_远程终端_模式或_指令_模式下运行。 远程终端模式对应Combo血糖仪上的"遥控模式"，可模拟泵体LCD屏及四个按键的操作。 由于部分操作在指令模式下无法实现，驱动程序必须在此模式下执行这些特定指令。 指令模式虽速度更快，但如前所述，其功能范围存在局限。 当远程终端模式激活时，当前远程终端界面会显示在底部Combo图示上方的区域中。 但当驱动程序切换至指令模式时，该区域将保持空白。
 
-(The user does not influence this; the driver fully decides on its own what mode to use. This is merely a note for users to know why sometimes they can see Combo frames in that field.)
+（用户无法干预该行为；驱动程序完全自主决定使用何种模式。 此处说明仅为让用户了解为何有时能在该区域看到Combo界面。）
 
-At the very bottom, there is the "Refresh" button. This triggers an immediate pump status update. It also is used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#alerts-warnings-and-errors-and-how-they-are-handled)).
+最底部设有"刷新"按钮。 点击该按钮可立即触发泵体状态更新。 该按钮还用于通知AAPS先前发现的错误已修复，可重新检查系统状态是否正常（详见下文[警报相关章节](#alerts-warnings-and-errors-and-how-they-are-handled)）。
 
 ## 偏好设置
 
-These preferences are available for the combo driver (items are listed from top to bottom):
+以下是移宇驱动程序的可配置选项（按从上至下顺序排列）：
 
 ![Screenshot of Accu-Chek Combo preferences](../images/combo/combov2-preferences.png)
 
-1. _Pair with pump_: This is a button that can be pressed to pair with a Combo. It is disabled if a pump is already paired.
-2. _Unpair pump_: Unpairs a paired Combo; the polar opposite of item no. 1. It is disabled if no pump is paired.
-3. _Discovery duration (in seconds)_: When pairing, the drivers makes the phone discoverable by the pump. This controls how long that discoverability lasts. By default, the maximum (300 seconds = 5 minutes) is selected. Android does not allow for discoverability to last indefinitely, so a duration has to be chosen.
-4. _Autodetect and automatically enter insulin reservoir change_: If enabled, the "reservoir change" action that is normally done by the user through the "prime/fill" button in the Action tab. This is explained [in further detail below](#autodetecting-and-automatically-entering-battery-and-reservoir-changes).
-5. _Autodetect and automatically enter battery change_: If enabled, the "battery change" action that is normally done by the user through the "pump battery change" button in the Action tab. This is explained [in further detail below](#autodetecting-and-automatically-entering-battery-and-reservoir-changes).
-6. _Enable verbose Combo logging_: This greatly expands the amount of logging done by the driver. **CAUTION**: Do not enable this unless asked to by a developer. Otherwise, this can add a lot of noise to AndroidAPS logs and lessen their usefulness.
+1. _与泵体配对_：点击此按钮可与Combo建立配对。 若已配对泵体，该按钮将自动禁用。
+2. _解除泵体配对_：断开已配对的Combo连接；与第1项功能完全相反。 若未配对泵体，该按钮将自动禁用。
+3. _设备发现时长（秒）_：配对时，驱动程序使手机能被泵体检测到。 此项控制设备可被发现的持续时间。 默认选择最大值（300秒=5分钟）。 Android系统不允许无限期保持可发现状态，因此必须设定具体时长。
+4. _自动检测并执行储药器更换操作_：若启用，通常由用户通过"操作"标签页中"填充/灌注"按钮完成的"储药器更换"动作将自动执行。 具体说明详见[下文详解](#autodetecting-and-automatically-entering-battery-and-reservoir-changes)。
+5. _自动检测并执行电池更换操作_：若启用，通常由用户通过"操作"标签页中"泵体电池更换"按钮完成的"电池更换"动作将自动执行。 具体说明详见[下文详解](#autodetecting-and-automatically-entering-battery-and-reservoir-changes)。
+6. _启用Combo详细日志记录_：该选项将大幅增加驱动程序生成的日志数据量。 **注意**：除非开发者要求，否则请勿启用此选项。 否则可能大幅增加AndroidAPS日志冗余信息，降低日志可用性。
 
-Most users only ever use the top two items, the _Pair with pump_ and _Unpair pump_ buttons.
+大多数用户仅使用顶部两项功能：_与泵体配对_和_解除泵体配对_按钮。
 
 (combov2-autodetections)=
-## Autodetecting and automatically entering battery and reservoir changes
+## 自动检测并执行电池及储药器更换操作
 
-The driver is capable of detecting battery and reservoir changes by keeping track of the battery and reservoir levels. If the battery level was reported by the Combo as low the last time the pump status was updated, and now, during the new pump status update, the battery level shows up as normal, then the driver concludes that the user must have replaced the battery. The same logic is used for the reservoir level: If it now is higher than before, this is interpreted as a reservoir change.
+驱动程序通过持续监测电池电量及储药器余量，可自动识别电池更换与储药器更换操作。 若Combo在上次状态更新时报告电池电量低，而本次更新显示电量恢复正常，驱动程序将判定用户已完成电池更换。 储药器余量采用相同逻辑判定：若当前余量高于先前数值，则视为已完成储药器更换。
 
-This only works if the battery and reservoir are replaced when these levels are reported as low _and_ the battery and reservoir are sufficiently filled.
+此功能仅在电池/储药器余量报告为低值时进行更换_且_新电池/储药器已充分填充的情况下生效。
 
-These autodetections can be turned off in the Preferences UI.
+用户可在偏好设置界面关闭上述自动检测功能。
 
 (combov2-alerts)=
-## Alerts (warnings and errors) and how they are handled
+## 警报（警告与错误）及其处理机制
 
-The Combo shows alerts as remote-terminal screens. Warnings are shown with a "Wx" code (x is a digit), along with by a short description. One example is "W7", "TBR OVER". Errors are similar, but show up with an "Ex" code instead.
+Combo通过远程终端界面显示警报信息。 警告信息以"Wx"代码（x为数字）及简短描述形式呈现。 例如"W7"表示"临时基础率超限"。 错误信息采用相同格式，但代码前缀为"Ex"。
 
-Certain warnings are automatically dismissed by the driver. These are:
+特定警告可由驱动程序自动消除。 自动消除的警告包括：
 
-- W1 "reservoir low" : the driver turns this into a "low reservoir" warning that is shown on the AAPS main tab
-- W2 "battery low" : the driver turns this into a "low battery" warning that is shown on the AAPS main tab
-- W3, W6, W7, W8 : these are all purely informational for the user, so it is safe for the driver to auto-dismiss them
+- W1 "储药器余量低"：驱动程序将其转换为AAPS主界面显示的"低药量"警告
+- W2 "电池电量低"：驱动程序将其转换为AAPS主界面显示的"低电量"警告
+- W3、W6、W7、W8：此类警告仅向用户提供参考信息，驱动程序可安全执行自动消除
 
-Other warnings are _not_ automatically dismissed. Also, errors are _never_ automatically dismissed. Both of these are handled the same way: They cause the driver to produce an alert dialog on top of the AAPS UI, and also cause it to abort any ongoing command execution. The driver then switches to the "error" state (see [the Accu-Chek Combo tab contents description above](#accu-chek-combo-tab-contents)). This state does not allow for any command execution. The user has to handle the error on the pump; for example, an occlusion error may require replacing the cannula. Once the user took care of the error, normal operation can be resumed by pressing the "Refresh" button on the Accu-Chek Combo tab. The driver then connects to the Combo and updates its status, checking for whether an error is still shown on screen etc. Also, the driver auto-refreshes the pump status after a while, so manually pressing that button is not mandatory.
+其余警告_不会_被自动消除。 此外，错误信息_绝不_会自动消除。 这两类警报采用相同处理机制：触发后驱动程序将在AAPS界面弹出警示对话框，并立即终止所有正在执行的指令。 随后驱动程序将切换至"错误"状态（详见[上文Accu-Chek Combo标签页说明](#accu-chek-combo-tab-contents)）。 该状态下禁止执行任何指令。 用户须在胰岛素泵上处理错误，例如发生输注阻塞错误时可能需要更换输注管路。 用户处理完错误后，点击Accu-Chek Combo标签页的"刷新"按钮即可恢复正常操作。 驱动程序将重新连接Combo并更新状态，检查屏幕是否仍显示错误信息等。 此外，驱动程序会定期自动刷新胰岛素泵状态，因此并非必须手动点击该按钮。
 
-Bolusing is a special case. It is done in the Combo's command mode, which does not report mid-bolus that an alert appeared. As a consequence, the driver cannot automatically dismiss warnings _during_ a bolus. This means that unfortunately, the pump will be beeping until the bolus is finished. The most common mid-bolus alert typically is W1 "reservoir low". **Don't** dismiss Comnbo warnings on the pump itself manually during a bolus. You risk interrupting the bolus. The driver will take care of the warning once the bolus is over.
+大剂量注射属于特殊情况。 该操作在Combo的命令模式下执行，此模式不会在注射过程中报告出现的警报。 因此，驱动程序_无法_在大剂量注射期间自动消除警告。 这意味着胰岛素泵将持续发出蜂鸣声直至大剂量注射完成。 大剂量注射期间最常见的警报通常是W1"储药器余量低"。 **切勿**在大剂量注射过程中手动消除胰岛素泵上的Combo警告。 此操作可能导致大剂量注射中断。 驱动程序将在大剂量注射完成后处理该警告。
 
-Alerts that happen while the driver is not connected to the Combo will not be noticed by the driver. The Combo has no way of automatically pushing that alert to the phone; it is always the phone that has to initiate the connection. As a consequence, the alert will persist until the driver connects to the pump. Users can press the "Refresh" button to trigger a connection and let the driver handle the alert right then and there (instead of waiting until AAPS itself decides to initiate a connection).
+驱动程序未连接Combo时发生的警报将无法被检测到。 Combo无法自动推送警报至手机，必须由手机主动发起连接。 因此，警报将持续显示直至驱动程序连接胰岛素泵。 用户可点击"刷新"按钮立即建立连接，使驱动程序当场处理警报（无需等待AAPS自行发起连接）。
 
-**IMPORTANT**: If an error occurs, or a warning shows up that isn't one of those that are automatically dismissed, the driver enters the error state. In that state, the loop **WILL BE BLOCKED** until the pump status is refreshed! It is unblocked after the pump status is updated (either by manual "Refresh" button press or by the driver's eventual auto-update) and no error is shown anymore.
+**重要提示**：若发生错误或出现非自动消除类警告，驱动程序将进入错误状态。 在此状态下，闭环系统**将被阻断**，直至刷新胰岛素泵状态！ 当胰岛素泵状态更新后（通过手动点击"刷新"按钮或驱动程序最终自动更新）且不再显示错误时，阻断状态即解除。
 
-## Things to be careful about when using the Combo
+## 使用Combo时的注意事项
 
-* Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
-* Due to the way the Combo's remote control functionality works, several operations (especially setting a basal profile) are slow compared to other pumps. This is an unfortunate limitation of the Combo that cannot be overcome.
-* Don't set or cancel a TBR on the pump. The loop assumes control of TBRs and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
-* Don't press any buttons on the pump while AAPS communicates with the pump (the Bluetooth logo is shown on the pump while it is connected to AAPS). Doing that will interrupt the Bluetooth connection. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](#before-you-begin)).
-* Don't press any buttons while the pump is bolusing. In particular, don't try to dismiss alerts by pressing buttons. See [the section about alerts](#alerts-warnings-and-errors-and-how-they-are-handled) for a more detailed explanation why.
+* 请注意这并非商业化产品，尤其在初始阶段，用户需持续监控并充分理解系统功能、使用限制及潜在故障模式。 强烈建议不具备完全理解该系统能力的人员不要使用。
+* 由于Combo远程控制功能的工作原理，多项操作（特别是设置基础率配置文件）相比其他胰岛素泵更为缓慢。 这是Combo无法克服的固有缺陷。
+* 切勿在胰岛素泵上设置或取消临时基础率。 闭环系统需完全掌控临时基础率，否则无法可靠运行，因无法确定用户在胰岛素泵上设置的临时基础率起始时间。
+* 当AAPS与胰岛素泵通信时（泵体显示蓝牙标识期间），请勿操作泵体任何按键。 此操作将中断蓝牙连接。 仅当建立连接出现问题时方可操作（参见[上文"使用前准备"章节](#before-you-begin)）。
+* 大剂量注射期间请勿操作任何按键。 特别提醒：切勿通过按键操作来消除警报。 具体原因详见[警报相关章节](#alerts-warnings-and-errors-and-how-they-are-handled)的详细说明。
 
-## Checklist for when no connection can be established with the Combo
+## Combo无法建立连接时的排查清单
 
-The driver does its best to connect to the Combo, and uses a couple of tricks to maximize reliability. Still, sometimes, connections aren't established. Here are some steps to take for trying to remedy this situation.
+驱动程序会竭尽全力连接Combo，并采用多种技巧来最大限度地提高可靠性。 尽管如此，有时仍无法建立连接。 以下是尝试解决此问题的步骤。
 
-1. Press a button on the Combo. Sometimes, the Combo's Bluetooth stack becomes non-responsive, and does not accept connections anymore. By pressing a button on the Combo and making the LCD show something, the Bluetooth stack is reset. Most of the time, this is the only step that's needed to fix the connection issues.
-2. Restart the phone. This may be needed if there is an issue with the phone's Bluetooth stack itself.
-3. If the Combo's battery cap is old, consider replacing it. Old battery caps can cause issues with the Combo's power supply, which affect Bluetooth.
-4. If connection attempts still keep failing, consider unpairing and then re-pairing the pump.
+1. 按下Combo上的任意按键。 有时Combo的蓝牙协议栈会停止响应，不再接受任何连接。 通过按下Combo按键使LCD屏幕显示内容，可重置蓝牙协议栈。 大多数情况下，仅需此步骤即可解决连接问题。
+2. 重启手机。 当手机蓝牙协议栈自身出现问题时可能需要此操作。
+3. 若Combo电池盖老旧，建议更换新部件。 老化的电池盖可能导致Combo供电异常，进而影响蓝牙功能。
+4. 若连接尝试持续失败，建议解除配对后重新配对胰岛素泵。
