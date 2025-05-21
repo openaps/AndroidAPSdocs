@@ -1,68 +1,68 @@
-# Custom Watchface Reference Document
+# 自定义表盘参考文档
 
-This page is for designers of new Watchfaces. It will list all the keywords and features available when you want to create or animate a new watchface.
+本页面向新表盘设计师提供参考。 本文将列出创建或制作动态表盘时可用的所有关键词和功能。
 
-- New features and keys available in Custom Watchface V2 (Wear apk 3.3.0 or above) are available [here](#cwf-reference-new-v2-features)
+- 自定义表盘V2版本（Wear apk 3.3.0及以上）的新功能和按键详见[此处](#cwf-reference-new-v2-features)
 
-## Custom Watchface Format
+## 自定义表盘格式
 
-Custom Watchface is an open format designed for AAPS and associated to the new "AAPS (Custom)" watchface available on Watch.
+自定义表盘是为AAPS设计的开放格式，关联至手表端新版"AAPS(自定义)"表盘。
 
-The Watchface file is a simple zip file, but to be recognized as a Watchface file, the zip file must contain the following files:
+表盘文件为简易zip压缩包，但需包含以下文件才能被识别为表盘文件：
 
-- One image file named CustomWatchface (can be bitmap files `CustomWatchface.jpg`, `CustomWatchface.png` or a vector `CustomWatchface.svg`). This file is the little icon used to select the watchface when you click on "Load Watchface" button, and also the image visible within AAPS Wear plugin.
-- One file named `CustomWatchface.json` (see [JSON structure](#cwf-reference-json-structure) below). This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because a missing or additional comma is enough to break the json format). This JSON file must also include a `"metadata"` block with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metadata settings](#cwf-reference-metadata-settings) below)
-- the size of this zip should be as small as possible (less than about 500kb). If this file is too big, it will just be blocked and not transmitted to the watch.
+- 一个名为CustomWatchface的图像文件（可为位图`CustomWatchface.jpg`、`CustomWatchface.png`或矢量图`CustomWatchface.svg`）。 该文件是点击"加载表盘"按钮时用于选择表盘的小图标，同时也是AAPS Wear插件中显示的图像。
+- 一个名为`CustomWatchface.json`的文件（参见下文[JSON结构](#cwf-reference-json-structure)）。 该核心文件包含设计表盘所需的全部信息。 该json文件必须格式正确（在文本编辑器中手动编辑时最易出错，缺失或多一个逗号都会破坏json格式）。 该JSON文件必须包含带非空`"name"`键的`"metadata"`区块。 这将作为自定义表盘的名称（参见下文[元数据设置](#cwf-reference-metadata-settings)）
+- 该zip文件应尽可能小（建议小于500KB）。 文件过大将被拦截，无法传输至手表。
 
-The zip file can also contain some additional resource files:
+zip文件还可包含额外资源文件：
 
-- Hardcoded file names for images that will be used used in standard views included in the watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files) below). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
-- Additional resource files with free names. These additional files can be either image files, or font files (`ttf` and `otf` format are accepted for fonts). Note that for these additional files, the `filename` (without extension) will be used as the keyValue, within JSON file, to specify where or when these files should be used.
-  - image files are often used as background of text views or for dynamic animation (like battery level from 0% to 100%)
-  - font files allow you to use dedicated fonts within your watchface
+- 表盘标准视图使用的硬编码图像文件名（如`Background`、`CoverChart`...参见下文[硬编码资源文件列表](#cwf-reference-list-of-hardcoded-resource-files)）。 所有文件均可采用`jpg`、`png`或`svg`格式。 但多数情况下需使用支持透明度的`png`或`svg`格式（jpg体积虽小于png但不支持透明）。 请注意，svg文件（矢量格式）通常能实现最佳画质与最小体积的结合。
+- 可自由命名的附加资源文件。 这些附加文件可为图像文件或字体文件（字体支持`ttf`和`otf`格式）。 请注意，这些附加文件的`文件名`（不含扩展名）将作为JSON文件中的keyValue，用于指定其使用位置或时机。
+  - 图像文件常用作文本视图背景或动态动画素材（如电量从0%到100%的变化效果）
+  - 字体文件支持在表盘中使用定制字体
 
 (cwf-reference-json-structure)=
 
-## JSON Structure
+## JSON 结构
 
-JSON files can be edited in Notepad (or notepad++) text editor (prefer notepad++ that recognize JSON and use color formatting)
+JSON文件可通过记事本（或notepad++）文本编辑器编辑（推荐能识别JSON并支持彩色格式的notepad++）
 
-- it contains string keys `"string_key":` and key values that can be strings like `"key value"`, integer, boolean like `true`or `false` or block of data.
-- each value is separated by a comma `,`
-- A block of data starts by `{`  and ends by `}`
-- the json file is a whole block so it starts by  `{`  and ends by `}`, and inside this file all embedded blocks are associated to a `"key"` that should be unique within the block
-- To improve readability of json file, it's generally indented (each new key is on a new line, each new block is shifted on the right by 4 spaces characters)
+- 文件包含字符串键`"string_key":`及键值，键值可为`"key value"`类字符串、整数、`true`/`false`布尔值或数据块。
+- 各键值间用逗号`,`分隔
+- 数据块以`{`开始，以`}`结束
+- json文件整体为数据块，以`{`起始、`}`结束，内部所有嵌套块均通过`"key"`关联（键名在块内须唯一）。
+- 为提升json文件可读性，通常采用缩进格式（每个新键换行显示，每个新块向右缩进4个空格字符）
 
 (cwf-reference-metadata-settings)=
 
-### Metadata Settings
+### 元数据设置
 
-This block is the first block included into the json file and is mandatory. It contains all the information associated to this watchface, like the name, the author, the date of creation or update, the author version or the plugin version.
+该区块是json文件中首个且必须包含的区块。 该区块包含与此表盘相关的所有信息，如名称、作者、创建或更新日期、作者版本或插件版本。
 
-See below an example of metadata block:
+以下是元数据区块示例：
 
 ```json
 "metadata": {
-    "name": "Default Watchface",
-    "author": "myName",
-    "created_at": "07\/10\/2023",
+    "name": "默认表盘",
+    "author": "我的名字", 
+    "created_at": "2023年10月7日",
     "author_version": "1.0",
     "cwf_version": "1.0",
-    "comment": "Default watchface, you can click on EXPORT WATCHFACE button to generate a template"
+    "comment": "默认表盘模板，点击'导出表盘'按钮可生成"
 },
 ```
 
-Note that `/` used for the date is a special character, so to be recognize correctly within json file, you have to put before an "escape" character `\`
+请注意，日期中的`/`是特殊字符，需在前添加转义符`\`才能被json正确识别。
 
-You can see in some json file an additional key `"filename"`, this key will be automatically created or updated when the custom watchface will be loaded within AAPS (it will be used to show to the user the zip filename within exports folder), so you can remove this key within metadata block.
+部分json文件中可能含额外键`"filename"`，该键会在自定义表盘加载至AAPS时自动生成或更新（用于在导出文件夹向用户显示zip文件名），因此可从元数据区块中删除此键。
 
 (cwf-reference-general-parameter-settings)=
 
-### General parameter settings
+### 常规参数设置
 
-After the first block with metadata, you will set some general parameters (see [List of general parameters](#cwf-reference-list-of-general-parameters) below), this allow you to set Graph colors (Carbs, Bolus, BG values...), and also default colors for value in range, hyper or hypo (default colors of BG value and arrows)
+在首个元数据区块后，需设置常规参数（参见下文[常规参数列表](#cwf-reference-list-of-general-parameters)），用于配置图表颜色（碳水、大剂量、血糖值等）以及范围内/高/低血糖的默认颜色（血糖值及箭头的预设颜色）。
 
-See below an example of general parameters
+以下是常规参数示例：
 
 ```json
 "highColor": "#FFFF00",
@@ -78,11 +78,11 @@ See below an example of general parameters
 ```
 (cwf-reference-imageview-settings)=
 
-### ImageView settings
+### ImageView 设置
 
-Custom image can be tuned using correct filename associated to each ImageView included into custom watchface Layout, then the json block is only here to define the position, the size, if the view is visible or not, and optionally tune the color:
+自定义图像可通过匹配表盘布局中各ImageView的正确文件名进行调整，json区块仅用于定义位置、尺寸、可见性，并可选择性调整颜色：
 
-See below an example of an Image block for second_hand, (in this case there are no image included into zip file so default second hand image will be used, but tuned with a custom color.
+以下是秒针(second_hand)的图像区块示例（此例zip未包含图像文件，将使用默认秒针图像但应用自定义颜色）：
 
 ```json
 "second_hand": {
@@ -94,7 +94,7 @@ See below an example of an Image block for second_hand, (in this case there are 
     "color": "#BC906A"
 }
 ```
-To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest ligne with the keyValue `bgColor`
+要使秒针(second_hand)显示默认血糖颜色（低/中/高范围），只需将最后一行键值改为`bgColor`即可。
 
 ```json
     "color": "bgColor"
@@ -102,9 +102,9 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
 
 (cwf-reference-textview-settings)=
 
-### TextView settings
+### TextView 设置
 
-TexView have more available parameters compare to ImageView: you can tune rotation (integer value in degrees), textsize (integer value in pixel), gravity (to define if text value will be centered (default value), or aligned left or right), set the font, fontStyle and fontColor, and also background color of the TextView
+文本视图(TexView)参数比图像视图更丰富：可调整旋转角度（整数值/度）、字号（整数值/像素）、对齐方式（默认居中，可选左/右对齐），并支持设置字体、字型、文字颜色及文本视图背景色。
 
 ```json
 "basalRate": {
@@ -121,7 +121,7 @@ TexView have more available parameters compare to ImageView: you can tune rotati
     "fontColor": "#BDBDBD"
 },
 ```
-Note that if you don't want to manage one view within your watchface, then put the `"visibility"` key to `"gone"` but also set size and position outside visible area like that:
+注意：若需隐藏表盘中的某个视图，除将`"visibility"`设为`"gone"`外，还需将其尺寸和位置调整至可视区域外，例如：
 
 ```json
 "second": {
@@ -138,23 +138,23 @@ Note that if you don't want to manage one view within your watchface, then put t
     "fontColor": "#BDBDBD"
 },
 ```
-If size and position are within visible area, you can get some "flash" of the hidden value during the refresh of the watchface.
+若尺寸和位置位于可视区域内，表盘刷新时可能出现隐藏值的闪烁现象。
 
-If you want to customize background image of a text view, then you can use the key `"background":` and put the filename of image included into zip file as keyValue, you can also just change the background color using `"color:"` key.
+若需自定义文本视图背景图像，可使用键`"background":`并将zip内图像文件名设为键值，亦可直接通过`"color:"`键更改背景色。
 
 ```json
 "background": "fileName"
 ```
 
-You also have 4 specific textViews (named freetext1 to freetext4) that have a specific parameter `"textvalue":` that can be used to set for example a label
+另有4个专用文本视图（命名为freetext1至freetext4），含特定参数`"textvalue":`，可用于设置标签等固定文本。
 
 (cwf-reference-chartview-settings)=
 
-### ChartView settings
+### ChartView 设置
 
-Chart view is a very specific view that can share some parameters with ImageView or with TextView...
+图表视图是特殊视图，可共享部分图像视图或文本视图的参数...
 
-Standard settings for this view is very simple:
+该视图的标准设置非常简单：
 
 ```json
 "chart": {
@@ -165,18 +165,18 @@ Standard settings for this view is very simple:
     "visibility": "visible"
 },
 ```
-The 2 additional parameters you can include for Chart view is a background color (default is transparent), using `"color"` key or a background image using `"background"` key.
+图表视图可添加的两个额外参数：通过`"color"`键设置背景色（默认透明），或通过`"background"`键设置背景图像。
 
 (cwf-reference-how-to-build-watchface)=
 
-## How to build/design your first Watchface
+## 如何构建/设计您的首个表盘
 
-### Tools required
+### 所需工具
 
-- Text editor: My advice is to use NotePad++ (or equivalent) that is a simple text editor, but added value is you can see formatted text with color code, so it's easier to detect errors. any simple text editor will do the job. Since the purpose is to tune json information.
-- Image editor (bitmap and/or vector)
-  - If you use Bitmap
-    - Image editor should be able to manage transparency (required for all image above background), and png format (if you used bitmap image)
+- 文本编辑器：建议使用NotePad++（或同类工具），作为简易文本编辑器，其优势在于可显示带颜色标记的格式化文本，便于错误排查。 任何简易文本编辑器均可胜任。 因需调整json信息。
+- 图像编辑器（位图/矢量图）
+  - 如果您使用位图
+    - 图像编辑器需支持透明通道处理（背景上层图像均需此功能），若使用位图则需兼容png格式。
     - Background image can  be in jpg format (smaller that png)
     - Image editor should allow you to measure in pixel graphical objects (can be a simple square) (top, left, width, height)
     - Image editor should be able to show you colors with RRVVBB code in hexadecimal
