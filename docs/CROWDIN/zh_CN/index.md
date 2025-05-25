@@ -23,14 +23,14 @@ Android APS (**AAPS**) 是一个开放源码的安卓应用程序，适用于糖
 
 第3节**设置AAPS** 包含具体的分步操作说明。 包括选择和[配置远程数据服务器](./SettingUpAaps/SettingUpTheReportingServer.md)（Nightscout或Tidepool），以便您可以查看和分享数据，准备好电脑以构建AAPS应用程序，构建（build）AAPS应用程序并将其传输到手机上。 同时指导您通过“设置向导”来完成 **AAPS** 应用的初始化配置，将其与动态血糖仪（CGM）应用及真实/虚拟胰岛素泵进行联动，并将 **AAPS** 连接到您的远程数据服务器。 接下来，您将通过一个安全审慎的分阶段训练流程，一步一步地掌握**AAPS**的全部功能，该流程旨在确保您/您的孩子能完全熟悉并熟练操作所有不同层级的功能和菜单设置，然后才进入下一阶段（AAPS界面上称之为"目标（Objectives）"）。 这些目标（Objectives）都经过专门的设计，将循序渐进地解锁**AAPS**更多可能性，最终实现从开环模式向闭环模式的过渡。
 
-第4节**AAPS的日常** 介绍了关键的 **AAPS** 功能，帮助您使用（和自定义）**AAPS**。 包括理解屏幕显示内容、活性碳水、敏感度、配置文件切换、临时目标、碳水补录（或称eCarbs）、自动化和动态ISF（DynamicISF）。 它还涵盖了一些常见话题，如如何管理不同类型的餐食、如何更换管路和探头、智能手机更新、夏令时变化，以及[使用AAPS旅行](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md)和运动。 常见问题和答案位于故障排除部分。
+第4节**AAPS的日常** 涵盖 **AAPS** 的关键功能，帮助您使用（和自定义）**AAPS**。 内容包括理解操作界面、活性碳水（COB，carbs-on-board）、敏感度、配置文件（profile）切换、临时目标（TT，temp targets）、扩展碳水（extended carbs，eCarbs）、自动化规则（automations）和动态ISF（DynamicISF）。 同时涉及常见主题，例如如何管理不同类型的餐食、处理管路（cannula）与探头（sensor）更换、智能手机更新、夏令时调整、[使用AAPS旅行](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md)及运动场景。 常见问答详见故障排查章节。
 
-**第5节[远程 AAPS 功能](./RemoteFeatures/RemoteControl.md)** 强调了 **AAPS** 的真正优势。 不管是远程发送指令，还是仅仅跟踪来自**AAPS**的数据，AAPS都提供了很多的选择。 不管是想为孩子使用 **AAPS** 的家长，还是想要比在手机上（手表上，在车上 _等等_）更方便地监测血糖（及其他指标）的成年糖人，再或者是其他需要检测数据的人来说，AAPS的功能都同样有用。 这一节还提供了Android Auto的使用指南，以便您可以在车上查看血糖水平。
+**第5节[远程 AAPS 功能](./RemoteFeatures/RemoteControl.md)** 强调了 **AAPS** 的真正优势。 用户可通过多种方式远程发送指令或单纯查看**AAPS**数据， 该功能既适用于想用 **AAPS**孩子血糖的家长，也便于成年糖尿病患者通过智能手表、车载设备_等_多端便捷监测血糖及其他指标，同时支持重要亲友共同查看数据。 这一节还提供了Android Auto的使用指南，实现车载血糖监测。
 
-**第6节 Wear OS的智能手表** 讲的是**Wear OS**系统的安卓手表的使用，手表可以设定上专用的**AAPS**表盘或者自定义表盘，这样我们可以通过手机进行远程遥控，或者把手表作为数据显示器。
+**第6节 Wear OS的智能手表** 讲的是如何搭配**Android Wear OS**系统的智能手表，来使用**AAPS**专属表盘或自定义表盘，既可以作为手机远程控制器，也可以作为显示终端。
 
 
-第7节 **AAPS的维护** 讲述了如何导出和备份您的设置（如果您的手机丢了或者坏了的时候不至于抓瞎），提供了最新版本说明，并详细介绍了如何更新 **AAPS**。 一般来说，AAPS每年会有一个新版本，中间会需要更新2-3次。 跟其他所有软件一样，您最好及时更新**AAPS**，这样才能修复一些发现的小问题，也能用上一些改进的功能。 在故障排除章节专门有一部分内容讲AAPS更新的常见问题。
+第7节 **AAPS的维护** 讲述了如何导出和备份您的设置（手机丢失或损坏时不至于抓瞎），提供了最新版本说明及**AAPS**更新操作指南 。 预计每年发布1个新版本及2-3次强制更新， 跟其他所有软件一样，您需要及时更新**AAPS**以修复潜在问题并优化系统性能。 本节设有“更新”问题排查专区，解答常见疑问。
 
 第8节** [寻求帮助](GettingHelp/WhereCanIGetHelp.md)** 会告诉您遇到 **AAPS** 相关的问题到哪里求助最管用。 特别是在最开始，有这样的指引能让你不会觉着孤立无助，遇到问题也能尽快联系到其他人然后弄清问题、解决问题。 尽管很多人已经顺利用上了**AAPS**，但谁都会遇到自己无法独立解决的问题。 得益于庞大的用户群，问题提出以后通常几个小时内就能收到回复。 不要因为觉着自己的问题太低级就不好意思开口求助，没有不能问的问题。 不论是新手还是老鸟，只要对系统的顺利搭建和安全运行有帮助，我们期盼大家尽可能多地提出问题。 本节包括 **AAPS** 和 **AAPSClient**（跟踪监控数据的程序）常见故障的处理方法，如果您发现**AAPS**存在需要关注和解决的技术问题，这里也介绍了如何将您的 **AAPS** 数据（日志文件）发送给开发人员以便查找问题原因。
 
@@ -152,8 +152,8 @@ AAPS发布公告 <./Maintenance/ReleaseNotes.md>
 :caption: 8) 寻求帮助
 
 去哪里寻找帮助 <./GettingHelp/WhereCanIGetHelp.md>
-常见故障 <./GettingHelp/GeneralTroubleshooting.md>
-Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+常见故障排查 <./GettingHelp/GeneralTroubleshooting.md>
+Android Studio故障排查 <./GettingHelp/TroubleshootingAndroidStudio.md>
 获取日志 <./GettingHelp/AccessingLogFiles.md>
 ```
 
