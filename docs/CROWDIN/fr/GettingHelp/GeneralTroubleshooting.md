@@ -37,7 +37,29 @@ Ignore it: More details, Install anyway.
 
 * [Commandes SMS](#SMSCommands-troubleshooting)
 
-### Problèmes de connexion bluetooth fréquents
+### Frequent bluetooth connection problems due to android 15 (in particular for  Samsung & Pixel phones )
+
+#### Symptoms:
+After a recent Android update or moving to a recent phone, you notice that AAPS lose its bluetooth connection to the pump (mostly on Samsung/Pixel running Andrtoid 15). The problem disapears if you restart the phone completely for a limited amount of time.
+
+#### Fix:
+1) open AAPS and go to the vertical 3 dots  menu on the top right.\
+![Paramètres Android ¦Applications](../images/troubleshooting/samsung/01_BondBT_20250526.png)
+
+3) click preferences\
+![Paramètres Android ¦Applications](../images/troubleshooting/samsung/02_BondBT_20250526.png)
+
+5) slide down and open the "Confirmation beeps" submenu \
+![Paramètres Android ¦Applications](../images/troubleshooting/samsung/03_BondBT_20250526.png)
+
+7) open the "Advanced"  sub-submenu and "select BondBT device on Android 15+" (note that you might have to accept "pairing" with the pump MAC address moving forward something like 00:01:02:03:04:05:06) \
+![Paramètres Android ¦Applications](../images/troubleshooting/samsung/04_BondBT_20250526.png)
+
+
+
+
+
+### Frequent bluetooth connection problems due to battery optimizations
 
 Cela peut se produire avec diverses pompes. En plus d'exclure AAPS de toute optimisation de batterie, vous pouvez également exclure l'application Bluetooth du système de l'optimisation de la batterie. Cela peut être utile dans certains cas. Selon le téléphone que vous utilisez, vous trouverez l'application bluetooth différemment.
 
