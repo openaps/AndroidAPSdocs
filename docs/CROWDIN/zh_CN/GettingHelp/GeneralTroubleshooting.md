@@ -37,7 +37,29 @@
 
 * [短信指令](#SMSCommands-troubleshooting)
 
-### 频繁的蓝牙连接问题
+### Frequent bluetooth connection problems due to android 15 (in particular for  Samsung & Pixel phones )
+
+#### Symptoms:
+After a recent Android update or moving to a recent phone, you notice that AAPS lose its bluetooth connection to the pump (mostly on Samsung/Pixel running Andrtoid 15). The problem disapears if you restart the phone completely for a limited amount of time.
+
+#### Fix:
+1) open AAPS and go to the vertical 3 dots  menu on the top right.\
+![Android 设置 > 应用](../images/troubleshooting/samsung/01_BondBT_20250526.png)
+
+3) click preferences\
+![Android 设置 > 应用](../images/troubleshooting/samsung/02_BondBT_20250526.png)
+
+5) slide down and open the "Confirmation beeps" submenu \
+![Android 设置 > 应用](../images/troubleshooting/samsung/03_BondBT_20250526.png)
+
+7) open the "Advanced"  sub-submenu and "select BondBT device on Android 15+" (note that you might have to accept "pairing" with the pump MAC address moving forward something like 00:01:02:03:04:05:06) \
+![Android 设置 > 应用](../images/troubleshooting/samsung/04_BondBT_20250526.png)
+
+
+
+
+
+### Frequent bluetooth connection problems due to battery optimizations
 
 这种情况可能发生在多种胰岛素泵上。 除了将 AAPS 排除在电池优化之外，您还可以将系统蓝牙应用排除在电池优化之外。 这在某些情况下可能有所帮助。 根据您使用的手机型号，查找蓝牙应用的位置会有所不同。
 
@@ -92,7 +114,7 @@
 
 ## CGM
 
-* [一般](#general-cgm-troubleshooting)
+* [常规](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
 * [Libre 2](#Libre2-experiences-and-troubleshooting)
