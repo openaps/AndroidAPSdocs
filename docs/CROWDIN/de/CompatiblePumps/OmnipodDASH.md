@@ -18,7 +18,7 @@ Hier finden sich die besonderen Merkmale des **Omnipod DASH** („DASH“) und d
 * Bei Aktivierung des Pods wird **AAPS** den neuen DASH-Pod finden und sich mit ihm verbinden.
 * Reichweite für die BT-Verbindung: 5-10 Meter (je nach Umgebung).
 
-WARNUNG: Derzeit werden Bluetooth-Verbindungsprobleme in der Kombination **AAPS** / DASH / Android 15 gemeldet. **AAPS** sollte nicht in der Kombination Android 15 mit DASH genutzt werden, es sei denn, Du hast die folgende [**Liste**](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) geprüft und Dein Smartphone ist dort nicht als problematisch aufgeführt. Das **AAPS**-Team arbeitet daran, dieses Problem zu beheben.
+WARNUNG: Derzeit werden Bluetooth-Verbindungsprobleme in der Kombination **AAPS** / DASH / Android 15 gemeldet. **AAPS** sollte nicht in der Kombination Android 15 mit DASH genutzt werden, es sei denn, Du hast die folgende [**Liste**](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) geprüft und Dein Smartphone ist dort nicht als problematisch aufgeführt. **AAPS** is currently working to resolve this issue; a possible fix is to enable BondBT as described in: [**Bluetooth Issues**](../GettingHelp/GeneralTroubleshooting.md).
 
 ## Hardware- und Software-Anforderungen
 
