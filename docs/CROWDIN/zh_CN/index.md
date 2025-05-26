@@ -32,31 +32,31 @@ Android APS (**AAPS**) 是一个开放源码的安卓应用程序，适用于糖
 
 第7节 **AAPS的维护** 讲述了如何导出和备份您的设置（手机丢失或损坏时不至于抓瞎），提供了最新版本说明及**AAPS**更新操作指南 。 预计每年发布1个新版本及2-3次强制更新， 跟其他所有软件一样，您需要及时更新**AAPS**以修复潜在问题并优化系统性能。 本节设有“更新”问题排查专区，解答常见疑问。
 
-第8节** [寻求帮助](GettingHelp/WhereCanIGetHelp.md)** 会告诉您遇到 **AAPS** 相关的问题到哪里求助最管用。 特别是在最开始，有这样的指引能让你不会觉着孤立无助，遇到问题也能尽快联系到其他人然后弄清问题、解决问题。 尽管很多人已经顺利用上了**AAPS**，但谁都会遇到自己无法独立解决的问题。 得益于庞大的用户群，问题提出以后通常几个小时内就能收到回复。 不要因为觉着自己的问题太低级就不好意思开口求助，没有不能问的问题。 不论是新手还是老鸟，只要对系统的顺利搭建和安全运行有帮助，我们期盼大家尽可能多地提出问题。 本节包括 **AAPS** 和 **AAPSClient**（跟踪监控数据的程序）常见故障的处理方法，如果您发现**AAPS**存在需要关注和解决的技术问题，这里也介绍了如何将您的 **AAPS** 数据（日志文件）发送给开发人员以便查找问题原因。
+第8节** [获取帮助指南](GettingHelp/WhereCanIGetHelp.md)**将引导您快速找到**AAPS**的技术支持资源。 该指南能帮助您快速联系社区成员，解答疑问并规避常见问题。 尽管很多人已经顺利用上了**AAPS**，但遇到疑难时仍需寻求帮助。 得益于庞大的用户群，问题提出以后通常几个小时内就能收到回复。 不要因为觉着自己的问题太低级就不好意思开口求助，没有不能问的问题。 无论使用者经验水平如何，我们都鼓励积极提问以确保安全使用。 本节包括 **AAPS** 和 **AAPSClient**（其配套数据查看应用）常见故障的排查方案，并说明当**AAPS**系统出现技术故障时，如何向开发者发送**AAPS**数据（日志文件）进行分析。
 
-**第9节**涵盖了**高级AAPS选项**的内容，比如如何从使用**AAPS**进行混合闭环（餐时大剂量_等_）发展到完全闭环（无需手动大剂量），以及开发和工程模式的细节。 对绝大多数用户来说，**AAPS**的正式版本已经够使了，但总会有些大牛，即便已经用的很好了，还想着继续折腾更深入的功能，这一节的内容主要是给他们看的。
+**第9节**涵盖了**高级AAPS选项**的内容，比如如何从使用**AAPS**进行混合闭环（需手动注射餐时大剂量_等_）进阶至全闭环模式（无需手动注射大剂量），以及开发和工程模式的细节。 对绝大多数用户来说，**AAPS**的主版本（"Master"版）即可满足需求，但总会有些大牛，即便已经用的很好了，还想着继续折腾更深入的功能，这一节的内容主要是给他们看的。
 
-在**第10节[如何支持AAPS](SupportingAaps/HowToEditTheDocs.md)**，我们提供了一些有用的信息，以便您能为这个项目提供一些支持。 你可以捐钱、捐设备或捐知识。 你可以对文档的改进提建议，也可以直接下手改，还可以参与到[文档翻译](SupportingAaps/Translations)中来，或者向开放人类项目（the Open Humans project）提供一些你的数据。
+在**第10节[如何支持AAPS](SupportingAaps/HowToEditTheDocs.md)**，我们提供了一些有用的信息，以便您能为这个项目提供一些支持。 您可通过捐款、捐赠设备或贡献专业知识助力项目发展。 也可自行提出或修改文档内容、协助[文档翻译](SupportingAaps/Translations)，并通过Open Humans项目共享个人数据。
 
 **第11节 资料**包含了很多文档，有的内容面向对**AAPS**之类的开源人工胰腺技术感兴趣的[临床医生](UsefulLinks/ClinicianGuideToAaps.md)，有的内容面向希望和医生交流相关信息的病人。 这一节还有更多关于糖尿病和闭环的参考资料。 包括[术语表](./UsefulLinks/Glossary.md)，也就是**AAPS** 中使用的缩写(或简称)清单。 举例来说，想知道ISF或TT代表什么意思就去这里找。
 
 
- ### 有兴趣开始使用 **AAPS**? 在 [引言](Getting-Started/Introduction.md) 中阅读更多关于**AAPS**的信息
+ ### 想要开始使用 **AAPS**? 请参阅[引言](Getting-Started/Introduction.md)部分进一步了解**AAPS**。
 
 ```{admonition} SAFETY NOTICE
-::::class:安全提示危险
-**AAPS**的安全性依赖于你的硬件装备（手机、泵、动态）的安全功能。 一定要使用经过FDA/CE核准的功能完全正常的胰岛素泵和动态。 不要使用坏的、改装过的或者自制的胰岛素泵或者动态。 泵和动态一定要使用原装或者厂商认证的耗材（助针器、管路和储药器）。 使用未经测试或者改装过的耗材可能造成数据不准确或者胰岛素输注剂量错误，那样可能把使用者置于极其危险的境地。 
+:class: danger
+**AAPS**的安全性依赖于你的硬件装备（手机、泵、动态）的安全性能。 请务必使用经FDA/CE认证且功能完整的胰岛素泵及动态血糖仪（CGM）。 禁止使用损坏、改装或自制的胰岛素泵或动态血糖仪。 泵和动态一定要使用原装或者厂商认证的耗材（助针器、管路和储药器）。 非官方测试或改装配件可能导致数据误差及胰岛素输注错误，从而对使用者构成重大风险。 
 
-SGLT-2 抑制剂（格列吡嗪）能降糖，如果服用这种药的话就不要使用 AAPS 。 如果减少胰岛素的剂量会增加糖尿病酮症酸中毒（DKA）的风险，过分追求较低的血糖水平会增加严重低血糖的风险。 
+请勿在使用SGLT-2抑制剂（格列净类药物）期间使用**AAPS**。 此类药物会降低血糖水平。由于胰岛素输注量减少及血糖水平降低，可能增加糖尿病酮症酸中毒（DKA）及低血糖风险。 
 ```
 
 ```{admonition} Disclaimer
-:class:注意
-这里提供的所有信息和代码仅用于信息交流和教育目的。 使用 [Nightscout](https://nightscout.github.io/) 和 **AAPS** 的后果自负，本文档提供的信息和代码请勿用于医疗决策。 Nightscout 目前尚未尝试达到 HIPAA 隐私规定。 
+:class: note
+本文所述所有信息及代码仅供教育参考之用。 使用 [Nightscout](https://nightscout.github.io/)及**AAPS**需自行承担风险，相关内容不可作为医疗决策依据。 Nightscout目前未针对HIPAA隐私合规性进行特别设计。 
 - 文中来自 github.com 的代码未经正式授权也没有任何官方支持。 更多细节请查阅本代码仓库的许可协议（LICENSE）。
-- 所有产品、公司名称、商标、服务标识、注册商标和注册服务标志归其所有者所有。 使用他们仅是作为参考，并不意味着与他们有任何联系或得到过他们的认可。
+- 所有产品、公司名称、商标、服务标识、注册商标和注册服务标志归其所有者所有。 使用他们仅是作为信息传递目的，不暗示任何关联或官方认可。
 
-请注意 - 本项目与以下机构或个人没有任何关系，也未经其确认背书：[SOOIL-秀逸](https://www.sooil.com/eng/), [Dexcom-德康](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care-罗氏](https://www.accu-chek.com/) or [Medtronic-美敦力](https://www.medtronic.com/)
+请注意 - 本项目与以下机构或个人没有任何关系，亦未获得其认可：[SOOIL-秀逸](http://www.sooil.com/eng/), [Dexcom-德康](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care-罗氏](https://www.accu-chek.com/)，[Insulet](https://www.insulet.com/)以及 [Medtronic-美敦力](https://www.medtronic.com/)。
 
 ```
 
@@ -91,27 +91,27 @@ AAPS简介 <./Getting-Started/Introduction.md>
 构建（Building）AAPS <./SettingUpAaps/BuildingAaps.md>
 传输和安装AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
 安装向导 <./SettingUpAaps/SetupWizard.md>
-完成目标 <./SettingUpAaps/CompletingTheObjectives.md>
 你的AAPS配置文件 <./SettingUpAaps/YourAapsProfile.md>
 调整AAPS参数设置 <./SettingUpAaps/ChangeAapsConfiguration.md>
-- 设置向导 <./SettingUpAaps/ConfigBuilder.md>
+- 配置生成器 <./SettingUpAaps/ConfigBuilder.md>
 - 首选项 <./SettingUpAaps/Preferences.md>
+完成目标 <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
 :caption: 4) AAPS的日常
 
 AAPS 界面 <./DailyLifeWithAaps/AapsScreens.md>
-AAPS关键特性 <./DailyLifeWithAaps/KeyAapsFeatures.md>
-COB计算 <./DailyLifeWithAaps/CobCalculation.md>
+AAPS关键功能 <./DailyLifeWithAaps/KeyAapsFeatures.md>
+COB的计算 <./DailyLifeWithAaps/CobCalculation.md>
 敏感性检测 <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-切换配置文件 & 配置文件百分比 <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-临时目标 <./DailyLifeWithAaps/TempTargets.md>
-扩展碳水 <./DailyLifeWithAaps/ExtendedCarbs.md>
-自动化 <./DailyLifeWithAaps/Automations.md>
+配置文件切换 & 配置文件百分比 <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+临时目标（Temp-Targets） <./DailyLifeWithAaps/TempTargets.md>
+扩展碳水（Extended carbs） <./DailyLifeWithAaps/ExtendedCarbs.md>
+自动化规则（Automations） <./DailyLifeWithAaps/Automations.md>
 动态胰岛素敏感系数（Dynamic ISF） <./DailyLifeWithAaps/DynamicISF.md>
-用于儿童的AAPS <./DailyLifeWithAaps/AapsForChildren.md>
-泵与管路 <./DailyLifeWithAaps/PumpsAndCannulas.md>
+将AAPS用于儿童 <./DailyLifeWithAaps/AapsForChildren.md>
+泵与管路（cannulas） <./DailyLifeWithAaps/PumpsAndCannulas.md>
 跨时区旅行 & 夏令时 <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
 ```
@@ -122,15 +122,15 @@ COB计算 <./DailyLifeWithAaps/CobCalculation.md>
 远程监控 <./RemoteFeatures/RemoteMonitoring.md>
 远程控制 <./RemoteFeatures/RemoteControl.md>
 手机短信命令 <./RemoteFeatures/SMSCommands.md>
-仅跟踪 <./RemoteFeatures/FollowingOnly.md>
+仅跟踪模式 <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
 ```{toctree}
 :caption: 6) Wear OS 智能手表
 
-构建AAPS Wear OS应用 <./WearOS/BuildingAapsWearOS.md>
-在您的Wear OS手表上安装AAPS <./WearOS/WearOsSmartwatch.md>
+适用于Wear OS的AAPS <./WearOS/BuildingAapsWearOS.md>
+使用智能手表 <./WearOS/WearOsSmartwatch.md>
 远程控制 <./RemoteFeatures/RemoteControlWearOS.md>
 自定义表盘参数 <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
 自定义表盘交换网站 <./ExchangeSiteCustomWatchfaces/index.md>
@@ -142,7 +142,7 @@ Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 导出/导入设置 <./Maintenance/ExportImportSettings.md>
 回顾你的数据 <./Maintenance/Reviewing.md>
-AAPS发布公告 <./Maintenance/ReleaseNotes.md>
+AAPS发布说明 <./Maintenance/ReleaseNotes.md>
 文档更新 <./Maintenance/DocumentationUpdate.md>
 升级到新版本的AAPS <./Maintenance/UpdateToNewVersion.md>
 
@@ -160,9 +160,9 @@ Android Studio故障排查 <./GettingHelp/TroubleshootingAndroidStudio.md>
 ```{toctree}
 :caption: 9) 高级AAPS选项
 
-全闭环 <./AdvancedOptions/FullClosedLoop.md>
-代码分支 <./AdvancedOptions/DevBranch.md>
-自动调优 <./AdvancedOptions/Autotune.md>
+全闭环（Full Closed Loop） <./AdvancedOptions/FullClosedLoop.md>
+开发分支（Dev branch） <./AdvancedOptions/DevBranch.md>
+自动调校（Autotune） <./AdvancedOptions/Autotune.md>
 
 ```
 ```{toctree}
@@ -172,7 +172,7 @@ Android Studio故障排查 <./GettingHelp/TroubleshootingAndroidStudio.md>
 编辑文档 <./SupportingAaps/HowToEditTheDocs.md>
 参与应用和文档的翻译 <./SupportingAaps/Translations.md>
 翻译声明 <./SupportingAaps/StateOfTranslations.md>
-开放人类项目上传 <./SupportingAaps/OpenHumans.md>
+Open Humans项目上传 <./SupportingAaps/OpenHumans.md>
 
 ```
 ```{toctree}
