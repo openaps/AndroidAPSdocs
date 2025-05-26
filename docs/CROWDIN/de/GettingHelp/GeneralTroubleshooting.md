@@ -37,7 +37,29 @@ Ignoriere sie: Weitere Details, Trotzdem installieren.
 
 * [SMS-Befehle](#SMSCommands-troubleshooting)
 
-### Häufige Bluetooth-Verbindungsprobleme
+### Frequent bluetooth connection problems due to android 15 (in particular for  Samsung & Pixel phones )
+
+#### Symptoms:
+After a recent Android update or moving to a recent phone, you notice that AAPS lose its bluetooth connection to the pump (mostly on Samsung/Pixel running Andrtoid 15). The problem disapears if you restart the phone completely for a limited amount of time.
+
+#### Fix:
+1) open AAPS and go to the vertical 3 dots  menu on the top right.\
+![Android-Einstellungen > Apps](../images/troubleshooting/samsung/01_BondBT_20250526.png)
+
+3) click preferences\
+![Android-Einstellungen > Apps](../images/troubleshooting/samsung/02_BondBT_20250526.png)
+
+5) slide down and open the "Confirmation beeps" submenu \
+![Android-Einstellungen > Apps](../images/troubleshooting/samsung/03_BondBT_20250526.png)
+
+7) open the "Advanced"  sub-submenu and "select BondBT device on Android 15+" (note that you might have to accept "pairing" with the pump MAC address moving forward something like 00:01:02:03:04:05:06) \
+![Android-Einstellungen > Apps](../images/troubleshooting/samsung/04_BondBT_20250526.png)
+
+
+
+
+
+### Frequent bluetooth connection problems due to battery optimizations
 
 Der Fehler kann bei verschiedenen Insulinpumpen auftreten. Außer AAPS von jeder Batterieoptimierung auszuschließen, kannst Du auch die Bluetooth-App des Systems von der Batterieoptimierung ausschließen. In einigen Fällen hilft das. Je nach verwendetem Smartphone findet sich die Bluetooth-App an anderen Stellen.
 
