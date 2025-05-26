@@ -45,7 +45,7 @@ After a recent Android update or moving to a recent phone, you notice that AAPS 
 #### Fix: 
 1) open AAPS and go to the vertical 3 dots  menu on the top right.\
   ![Android Settings¦Apps](../images/troubleshooting/samsung/01_BondBT_20250526.png)
-  
+
 3) click preferences\
    ![Android Settings¦Apps](../images/troubleshooting/samsung/02_BondBT_20250526.png)
 
