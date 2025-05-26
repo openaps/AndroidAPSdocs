@@ -37,7 +37,29 @@
 
 * [SMS 指令](#SMSCommands-troubleshooting)
 
-### 頻繁的藍牙連線問題
+### Frequent bluetooth connection problems due to android 15 (in particular for  Samsung & Pixel phones )
+
+#### Symptoms:
+After a recent Android update or moving to a recent phone, you notice that AAPS lose its bluetooth connection to the pump (mostly on Samsung/Pixel running Andrtoid 15). The problem disapears if you restart the phone completely for a limited amount of time.
+
+#### Fix:
+1) open AAPS and go to the vertical 3 dots  menu on the top right.\
+![Android 設定¦應用程式](../images/troubleshooting/samsung/01_BondBT_20250526.png)
+
+3) click preferences\
+![Android 設定¦應用程式](../images/troubleshooting/samsung/02_BondBT_20250526.png)
+
+5) slide down and open the "Confirmation beeps" submenu \
+![Android 設定¦應用程式](../images/troubleshooting/samsung/03_BondBT_20250526.png)
+
+7) open the "Advanced"  sub-submenu and "select BondBT device on Android 15+" (note that you might have to accept "pairing" with the pump MAC address moving forward something like 00:01:02:03:04:05:06) \
+![Android 設定¦應用程式](../images/troubleshooting/samsung/04_BondBT_20250526.png)
+
+
+
+
+
+### Frequent bluetooth connection problems due to battery optimizations
 
 這可能會發生在各種幫浦上。 除了將 AAPS 排除在任何電池優化之外，你還可以將系統的藍牙應用程式排除在電池優化之外。 這在某些情況下有幫助。 根據你使用的手機，你會以不同方式找到藍牙應用程式。
 
