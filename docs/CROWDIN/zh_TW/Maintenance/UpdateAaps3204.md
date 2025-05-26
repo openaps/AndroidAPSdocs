@@ -67,7 +67,7 @@ Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲�
 此頁面提供 **新** 與舊 (**Classic**) Android Studio 使用者介面的範例圖片。
 ```
 
-## 更新 3.2.0.x 至 3.2.0.4 的概覽
+## 更新 3.2.0.x 至 3.2.0.4 的總覽
 
 ```{contents} Steps for updating to 3.2.0.4
 :depth: 1
