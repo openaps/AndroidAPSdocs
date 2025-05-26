@@ -18,7 +18,7 @@ orphan: true
 * Pod 啟動時，**AAPS**將尋找並連接到新的DASH Pod 。
 * 預期範圍：5-10公尺（依個人情況而異）。
 
-警告：目前報告有以下組合的藍牙連線問題**AAPS** / DASH / Android 15。 **AAPS** 不應與 Android 15 和 DASH 一起使用，除非使用者已檢查以下[**清單**](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)並確認其手機不是已知的報告問題。 **AAPS** 目前正在努力解決此問題。
+警告：目前報告有以下組合的藍牙連線問題**AAPS** / DASH / Android 15。 **AAPS** 不應與 Android 15 和 DASH 一起使用，除非使用者已檢查以下[**清單**](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)並確認其手機不是已知的報告問題。 **AAPS** is currently working to resolve this issue; a possible fix is to enable BondBT as described in: [**Bluetooth Issues**](../GettingHelp/GeneralTroubleshooting.md).
 
 ## 硬體/軟體要求
 
@@ -379,7 +379,7 @@ orphan: true
 
 **胰島素等級**
 
-顯示的胰島素水平是 DASH 報告的數量。 然而，Pod 僅在儲液器低於 50 單位時報告實際的胰島素儲液量。 在此之前，會顯示「超過 50 單位」。 報告的數量並不精準：當 Pod 報告「空」時，大多數情況下儲液器仍有一些剩餘的胰島素單位。 DASH 概覽標籤將顯示如下所述：
+顯示的胰島素水平是 DASH 報告的數量。 然而，Pod 僅在儲液器低於 50 單位時報告實際的胰島素儲液量。 在此之前，會顯示「超過 50 單位」。 報告的數量並不精準：當 Pod 報告「空」時，大多數情況下儲液器仍有一些剩餘的胰島素單位。 DASH 總覽標籤將顯示如下所述：
 
   * **超過 50 單位** - 藥量報告目前儲存庫中有超過 50 單位。
   * **少於 50 單位** - Pod 報告的儲液器中剩餘的胰島素量。
