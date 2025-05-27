@@ -37,36 +37,37 @@ Ignore it: More details, Install anyway.
 
 * [SMS Komutları](#SMSCommands-troubleshooting)
 
-### Frequent bluetooth connection problems due to android 15 (in particular for  Samsung & Pixel phones )
+### Frequent Bluetooth connection problems
 
-#### Symptoms:
-After a recent Android update or moving to a recent phone, you notice that AAPS lose its bluetooth connection to the pump (mostly on Samsung/Pixel running Andrtoid 15). The problem disapears if you restart the phone completely for a limited amount of time.
+#### Android 15
 
-#### Fix:
-1) open AAPS and go to the vertical 3 dots  menu on the top right.\
-![Android Ayarları¦Uygulamalar](../images/troubleshooting/samsung/01_BondBT_20250526.png)
+```{warning}
+Developers are working on this issue impacting **AAPS** on some Samsung and Pixel phones.
+```
 
-3) click preferences\
-![Android Ayarları¦Uygulamalar](../images/troubleshooting/samsung/02_BondBT_20250526.png)
+After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15, you can try to enable the following:
 
-5) slide down and open the "Confirmation beeps" submenu \
-![Android Ayarları¦Uygulamalar](../images/troubleshooting/samsung/03_BondBT_20250526.png)
-
-7) open the "Advanced"  sub-submenu and "select BondBT device on Android 15+" (note that you might have to accept "pairing" with the pump MAC address moving forward something like 00:01:02:03:04:05:06) \
-![Android Ayarları¦Uygulamalar](../images/troubleshooting/samsung/04_BondBT_20250526.png)
+1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
 
+![Open preferences](../images/Pref2020_Open2.png)
 
+2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
 
+   ![BondBT](../images/troubleshooting/BondBT.png)
 
-### Frequent bluetooth connection problems due to battery optimizations
+3. If the pump asks for a pairing request, accept it.
 
-Bu, çeşitli pompalarda olabilir. AAPS'i pil optimizasyonunun dışında tutmanın yanı sıra, sistem bluetooth uygulamasını da pil optimizasyonunun dışında tutabilirsiniz. Bu, bazı durumlarda yardımcı olabilir. Kullandığınız telefona bağlı olarak, bluetooth ayarları farklı olacaktır.
+4. Restart your phone.
+
+#### Battery optimization
+
+Bu, çeşitli pompalarda olabilir. Apart from excluding AAPS from any battery optimization, you can also exclude the system Bluetooth app from battery optimization. Bu, bazı durumlarda yardımcı olabilir. Depending on the phone you use, you will find the Bluetooth app differently.
 
 Bunları belirli android telefonlarda nasıl bulacağınıza dair örnekler aşağıda verilmiştir.
 
 
-#### Pixel telefonlar (stok android)
+##### Pixel phones (stock Android)
 
 * Android ayarlarına gidin, "Uygulamalar" ı seçin.
 
@@ -89,7 +90,7 @@ Bunları belirli android telefonlarda nasıl bulacağınıza dair örnekler aşa
   ![BT Pil optimizasyonu](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Samsung telefonlar
+##### Samsung telefonlar
 
 * Android ayarlarına gidin, "Uygulamalar" ı seçin
 
