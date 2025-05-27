@@ -12,24 +12,24 @@
 
 在不远的将来，既能输注胰岛素也能输注胰高糖素的“双激素”系统，将能够预防严重低血糖，进而实现更加严格的血糖控制。
 
-人工胰腺可被视为[“糖尿病的自动驾驶仪”](https://www.artificialpancreasbook.com/)。 这是什么意思呢？
+人工胰腺可被视为[“糖尿病的自动驾驶系统”](https://www.artificialpancreasbook.com/)。 这意味着什么？
 
-飞机的自动驾驶模式不可能完全取代飞行员，要不然飞行员就可以全程睡觉了。 但自动驾驶能给飞行员提供帮助， 让他们不用只盯着飞机的状态，而是可以把注意力放在更广泛的飞行状况管理上。 自动驾驶装置从各种传感器接收信号，按照飞行员的设置来评估这些信号，然后按需调整飞行参数，有需要注意的问题就提醒飞行员。 飞行员就不用事必躬亲了。
+在航空领域，自动驾驶系统不可能完全取代飞行员，要不然飞行员就可以全程睡觉了。 自动驾驶系统的作用在于辅助飞行员操作。 让飞行员得以从持续监控飞行状态的负荷中解脱，转而专注于更高层次的全局监控与策略制定。 自动驾驶系统通过持续处理各类传感器信号，结合飞行员预设的参数进行综合运算，进而自动执行必要的飞行姿态调整。当系统识别到潜在风险时，会立即向飞行员发出警报提示。 这样飞行员就不用事必躬亲了。
 
 ![image](../images/autopilot.png)
 
 (Introduction-what-does-hybrid-closed-loop-mean)=
 ## 什么是混合闭环（hybrid closed loop）？
 
-1型糖尿病的最佳疗法应该是“恢复功能”（比如移植能受免疫系统保护的胰腺细胞）。 但这种疗法我们还不知道什么时候能实现，那么“全闭环”人工胰腺应该是次优选择。 也就是无需用户输入任何信息就能把血糖水平控的很好的科技系统（像是餐前大剂量胰岛素、计划之内的运动等信息都不用输入）。 目前应用比较广泛的闭环系统都不是真正的“全闭环”，还是需要用户输入一些数据。 这样的系统采用了自动处理和用户输入相结合的方式，所以被称为“混合闭环”。
+针对1型糖尿病的最佳解决方案是"功能性治愈"（比如通过移植受免疫保护的胰岛细胞实现）。 但这种疗法我们还不知道什么时候能实现，那么“全闭环”人工胰腺应该是次优选择。 这种技术系统无需任何用户输入（如针对饮食的大剂量注射或运动前告知），即可实现良好的血糖调控。 目前应用比较广泛的闭环系统都不是真正的“全闭环”，还是需要用户输入一些数据。 因此被称为"混合"闭环系统，即自动化技术与人工干预相结合。
 
 ## 闭环的由来？
 
-用于1型糖尿病患者（T1D）的商业化技术发展的很慢。 2013年，T1D社区发起了#WeAreNotWaiting（我们不想等下去）运动。 他们利用胰岛素泵、血糖仪等目前可用的技术自己开发了各种系统来改进血糖控制方式、增强安全性、提高生活质量。 这些系统被称为DIY（do-it-yourself，自己动手制作）系统，因为它们没有得到过卫生机构（FDA、NHS等）的正式批准。 目前主要有四种 DIY 系统： [OpenAPS](https://openaps.org/what-is-openaps/)、**AAPS**、[Loop](https://loopkit.github.io/loopdocs/#what-is-loop)和[ iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI)。
+1型糖尿病（T1D）领域商业化技术的发展进程极为缓慢。 2013年，T1D患者群体发起了#WeAreNotWaiting（#我们不再等待）运动。 他们利用胰岛素泵、血糖仪等目前可用的技术自己开发了各种系统来改进血糖控制方式、增强安全性、提高生活质量。 这些系统被称为DIY（do-it-yourself，自己动手制作）系统，因其未获得医疗监管机构（如FDA、NHS等）正式认证。 目前主要有四种 DIY 系统： [OpenAPS](https://openaps.org/what-is-openaps/)、**AAPS**、[Loop](https://loopkit.github.io/loopdocs/#what-is-loop)和[ iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI)。
 
-要想理解 DIY 闭环的基础原理，最好是阅读Dana Lewis的著作《自动胰岛素输注》（Automated Insulin Delivery）。（中文书籍推荐马学毅的《胰岛素泵治疗糖尿病》）。 您可以在[这里](https://www.artificialpancreasbook.com/)免费获取第一本书(或购买该书的印刷版)。 如果您想更多地了解**AAPS**的前身[OpenAPS](https://openaps.org/what-is-openaps/)，[OpenAPS 网站](https://openaps.org/what-is-openaps/)有很多好资源。
+要想理解 DIY 闭环的基础原理，最好是阅读Dana Lewis的著作《自动胰岛素输注》（Automated Insulin Delivery）。（中文书籍推荐马学毅的《胰岛素泵治疗糖尿病》）。 您可通过[此链接](https://www.artificialpancreasbook.com/)免费获取电子版(或购买实体书)。 如果您想更多地了解**AAPS**的开发基础——[OpenAPS](https://openaps.org/what-is-openaps/)的详细信息，[OpenAPS 官网](https://openaps.org/what-is-openaps/)提供了丰富的学习资源。
 
-一些商用混合闭环系统已经推出，其中最新的是[CamAPS FX](https://camdiab.com/)（英国和欧盟）和 [Omnipod 5](https://www.omnipod.com/en-gb/what-is-omnipod/omnipod-5)（美国和欧盟）。 这些商业化的系统与 DIY 系统有很大差异，主要因为他们都带有“自学习算法”，可以根据近几天你的胰岛素需求量来调整给药量。 在DIY社区，许多人已经尝试过这些商业系统，并将其与DIY系统进行了比较。 您可以在这些系统的专门 Facebook 群组、[AAPS Facebook](https://www.facebook.com/groups/AndroidAPSUsers/) 群组或 [Discord](https://discord.com/invite/4fQUWHZ4Mw) 上询问，以了解不同系统的比较情况。
+目前已有若干商用混合闭环系统面市，其中最新的是[CamAPS FX](https://camdiab.com/)（英国和欧盟）和 [Omnipod 5](https://www.omnipod.com/en-gb/what-is-omnipod/omnipod-5)（美国和欧盟）。 这些商业化的系统与 DIY 系统有很大差异，主要因为他们都带有“自学习算法”，可以根据用户近几天胰岛素需求量来调整给药量。 在DIY社区，许多人已经尝试过这些商业系统，并将其与DIY系统进行了比较。 欲了解不同系统的详细比较，您可以在相关系统的专属 Facebook 群组、[AAPS Facebook](https://www.facebook.com/groups/AndroidAPSUsers/) 群组或 [Discord](https://discord.com/invite/4fQUWHZ4Mw) 上询问。
 
 ## 什么是 Android APS (AAPS)？
 
