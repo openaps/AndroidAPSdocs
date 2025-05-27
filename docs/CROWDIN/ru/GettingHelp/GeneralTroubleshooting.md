@@ -37,14 +37,37 @@ Ignore it: More details, Install anyway.
 
 * [SMS-команды](#SMSCommands-troubleshooting)
 
-### Частые проблемы с подключением Bluetooth
+### Frequent Bluetooth connection problems
 
-Это может произойти с различными помпами. Помимо того, что AAPS должен быть исключен из оптимизации батареи, можно также исключить системное приложение Bluetooth из оптимизации батареи. В некоторых случаях это может помочь. В зависимости от используемого телефона приложение bluetooth находится по-разному.
+#### Android 15
+
+```{warning}
+Developers are working on this issue impacting **AAPS** on some Samsung and Pixel phones.
+```
+
+After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15, you can try to enable the following:
+
+1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+
+
+![Open preferences](../images/Pref2020_Open2.png)
+
+2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
+
+   ![BondBT](../images/troubleshooting/BondBT.png)
+
+3. If the pump asks for a pairing request, accept it.
+
+4. Restart your phone.
+
+#### Battery optimization
+
+Это может произойти с различными помпами. Apart from excluding AAPS from any battery optimization, you can also exclude the system Bluetooth app from battery optimization. В некоторых случаях это может помочь. Depending on the phone you use, you will find the Bluetooth app differently.
 
 Вот примеры того, как найти их на конкретных Android-телефонах.
 
 
-#### ТелефоныPixel (стоковый android)
+##### Pixel phones (stock Android)
 
 * Перейдите в настройки Android и выберите "Приложения".
 
@@ -67,7 +90,7 @@ Ignore it: More details, Install anyway.
   ![Оптимизация батареи BT](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Телефоны Samsung
+##### Телефоны Samsung
 
 * Перейдите в настройки Android и выберите "Приложения"
 

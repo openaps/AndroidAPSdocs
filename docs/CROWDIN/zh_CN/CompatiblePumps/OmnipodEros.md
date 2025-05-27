@@ -43,7 +43,7 @@ orphan: true
 
 **安全第一** - 请勿在无法处理突发故障的环境中操作（必须备有备用储药器、胰岛素、电量充足的RileyLink及手机设备）。
 
-**AAPS Omnipod驱动激活储药器后，您的Omnipod PDM将无法继续使用**。 此前您通过Omnipod PDM向Eros储药器发送指令。 Eros储药器仅允许单一设备与其建立通信连接。 成功激活储药器的设备将成为此后唯一获准与其通信的设备。 这意味着当您通过AAPS Omnipod驱动使用RileyLink激活Eros储药器后，**PDM将无法再控制该储药器**。 配备RileyLink的AAPS Omnipod驱动现已成为您的实际控制设备。 *这并不意味着您应该丢弃PDM，建议将其保留作为备用设备，以防AAPS运行异常时应急使用。*
+**AAPS Omnipod驱动激活储药器后，您的Omnipod PDM将无法继续使用**。 此前您通过Omnipod PDM向Eros储药器发送指令。 Eros储药器仅允许单一设备与其建立通信连接。 The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. 这意味着当您通过AAPS Omnipod驱动使用RileyLink激活Eros储药器后，**PDM将无法再控制该储药器**。 配备RileyLink的AAPS Omnipod驱动现已成为您的实际控制设备。 *这并不意味着您应该丢弃PDM，建议将其保留作为备用设备，以防AAPS运行异常时应急使用。*
 
 **可配置多个RileyLink设备，但同一时间仅能选择一个RileyLink与储药器通信。** AAPS Omnipod驱动支持在RileyLink配置中添加多个设备，但每次仅能启用一个RileyLink进行收发通信。
 
@@ -191,7 +191,7 @@ orphan: true
 
 正常情况下，储药器使用寿命为3天（72小时），触发过期警告后仍可延长使用8小时，总使用时长达80小时。
 
-要停用储药器（无论是因到期还是故障）：
+To deactivate a pod (either from expiration or from a pod failure):
 
 1. 请进入**Omnipod(POD)**标签页 → 点击**储药器管理(1)**按钮 → 在**储药器管理**界面选择**停用储药器(2)**功能。
 
@@ -245,7 +245,7 @@ orphan: true
 
 #### 恢复胰岛素输注
 
-此指令用于命令当前暂停中的储药器恢复胰岛素输注。 命令成功处理后，胰岛素将根据当前时间从活动基础配置文件中恢复使用当前基础率进行正常输注。 Pod将重新接受大剂量、临时基础率和超微大剂量的指令。
+Use this command to instruct the active, currently suspended pod to resume insulin delivery. 命令成功处理后，胰岛素将根据当前时间从活动基础配置文件中恢复使用当前基础率进行正常输注。 Pod将重新接受大剂量、临时基础率和超微大剂量的指令。
 
 1. 请前往**Omnipod(POD)**标签页，确认**Pod状态(1)**字段显示为**已暂停**，然后点击**恢复输注(2)**按钮启动流程，指示当前pod恢复正常胰岛素输注。 **Pod状态(3)**字段将显示**恢复输注**信息，表明RileyLink正在向暂停中的pod发送该指令。
 
@@ -574,7 +574,7 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
-以下是设置分组列表，您可通过切换开关启用或禁用下文所述的大多数选项：
+The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
 
 ![Omnipod_Settings_3](../images/omnipod/Omnipod_Settings_3.png)
 
@@ -595,7 +595,7 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
 ### 确认提示音
 
-提供储药器对大剂量注射、基础率、超微大剂量(SMB)和临时基础率(TBR)输送及变更的确认提示音。
+Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
 - ***启用大剂量提示音：** 设置是否在大剂量给药时播放确认提示音。
 - ***基础率提示音启用：** 设置是否在以下情况播放确认提示音：新基础率设定时、活动基础率取消时或当前基础率变更时。
@@ -606,7 +606,7 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
 当pod到期、关机或根据设定的阈值单位检测到储药器药量不足时，提供AAPS警报和Nightscout通知。
 
-*请注意：自警报触发后与储药器首次通信时，AAPS将始终针对任何警报发出通知。 除非启用"自动确认储药器警报"功能，否则仅消除通知并不会消除警报状态。 要手动消除警报，必须访问Omnipod(POD)标签页并按下"确认警报"按钮。*
+*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. 要手动消除警报，必须访问Omnipod(POD)标签页并按下"确认警报"按钮。*
 
 - ***启用到期提醒：** 设置是否在达到关机前设定小时数时触发pod到期提醒。
 - **关机前小时数：** 设定活动储药器关机前触发过期提醒警报的小时数。
@@ -618,7 +618,7 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
 当不确定临时基础率(TBR)、超微大剂量(SMB)或大剂量给药是否成功时，提供AAPS通知和手机声音警报。
 
-*注：这些仅为手机通知，不会触发储药器声音提示。*
+*NOTE: These are notifications only, no audible beep alerts are made.*
 
 - **不确定TBR通知的声音已启用:** 启用或禁用此设置，当AAPs不确定是否成功设置TBR时，触发声音警报和视觉通知。
 - ***不确定超微大剂量通知的声音已启用:** 启用或禁用此设置，当AAPS不确定是否成功输注超微大剂量时，触发声音警报和视觉通知。
@@ -690,7 +690,7 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
 ### 余量水平
 
-**胰岛素储药量**
+**Insulin Level**
 
 Omnipod Eros Pod中的胰岛素量报告不精确。  这是因为无法精确知道Pod中注入了多少胰岛素，只能通过填充Pod时触发的2声提示音来判断已注入超过85单位。 单个Pod最多可容纳200单位胰岛素。 初始化过程也可能引入误差，因为这不是一个精确的操作流程。  基于这两个因素，Omnipod驱动程序的编写旨在提供储药器中剩余胰岛素的最佳估算值。
 
@@ -716,11 +716,11 @@ Omnipod Eros Pod中的胰岛素量报告不精确。  这是因为无法精确�
 
 ### Pod 故障
 
-储药器偶尔会因各种问题发生故障，包括储药器自身的硬件问题。 最佳做法是不要向Insulet公司报修，因为AAPS并非官方认可的使用方案。 故障代码列表可[在此处](https://github.com/openaps/openomni/wiki/Fault-event-codes)查看，以帮助确定原因。
+Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. 故障代码列表可[在此处](https://github.com/openaps/openomni/wiki/Fault-event-codes)查看，以帮助确定原因。
 
 ### 预防49号储药器故障
 
-该故障与指令对应的储药器状态错误或胰岛素输注指令执行出错有关。 我们建议用户在**配置构建器**➜**通用**➜**NS客户端**➜**齿轮图标**➜**高级设置**下切换为仅上传模式(禁用同步)，以防止可能出现的问题。
+This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. 我们建议用户在**配置构建器**➜**通用**➜**NS客户端**➜**齿轮图标**➜**高级设置**下切换为仅上传模式(禁用同步)，以防止可能出现的问题。
 
 ### 泵体失联警报
 
@@ -739,7 +739,7 @@ Omnipod Eros Pod中的胰岛素量报告不精确。  这是因为无法精确�
 
 ### Omnipod驱动警报
 
-请注意：Omnipod驱动程序在**概览标签页**会显示多种独特警报，其中大部分为信息类警报可忽略，但部分警报会提示用户需采取相应操作来解决触发警报的原因。 以下是您可能会遇到的主要警报摘要：
+请注意：Omnipod驱动程序在**概览标签页**会显示多种独特警报，其中大部分为信息类警报可忽略，但部分警报会提示用户需采取相应操作来解决触发警报的原因。 A summary of the main alerts that you may encounter is listed below:
 
 #### 无活动Pod
 

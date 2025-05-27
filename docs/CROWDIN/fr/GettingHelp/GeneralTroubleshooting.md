@@ -37,14 +37,37 @@ Ignore it: More details, Install anyway.
 
 * [Commandes SMS](#SMSCommands-troubleshooting)
 
-### Problèmes de connexion bluetooth fréquents
+### Frequent Bluetooth connection problems
 
-Cela peut se produire avec diverses pompes. En plus d'exclure AAPS de toute optimisation de batterie, vous pouvez également exclure l'application Bluetooth du système de l'optimisation de la batterie. Cela peut être utile dans certains cas. Selon le téléphone que vous utilisez, vous trouverez l'application bluetooth différemment.
+#### Android 15
+
+```{warning}
+Developers are working on this issue impacting **AAPS** on some Samsung and Pixel phones.
+```
+
+After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15, you can try to enable the following:
+
+1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+
+
+![Open preferences](../images/Pref2020_Open2.png)
+
+2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
+
+   ![BondBT](../images/troubleshooting/BondBT.png)
+
+3. If the pump asks for a pairing request, accept it.
+
+4. Restart your phone.
+
+#### Battery optimization
+
+Cela peut se produire avec diverses pompes. Apart from excluding AAPS from any battery optimization, you can also exclude the system Bluetooth app from battery optimization. Cela peut être utile dans certains cas. Depending on the phone you use, you will find the Bluetooth app differently.
 
 Voici des exemples pour les trouver sur des téléphones Android spécifiques.
 
 
-#### Téléphones Pixel (Android standard)
+##### Pixel phones (stock Android)
 
 * Allez dans les paramètres d'Android, sélectionnez "Applications".
 
@@ -67,7 +90,7 @@ Voici des exemples pour les trouver sur des téléphones Android spécifiques.
   ![Optimisation batterie BT](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Téléphone Samsung
+##### Téléphone Samsung
 
 * Allez dans les paramètres d'Android, sélectionnez "Applications"
 

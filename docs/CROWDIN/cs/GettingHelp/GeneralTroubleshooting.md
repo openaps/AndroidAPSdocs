@@ -37,14 +37,37 @@ Ignore it: More details, Install anyway.
 
 * [SMS commands](#SMSCommands-troubleshooting)
 
-### Frequent bluetooth connection problems
+### Frequent Bluetooth connection problems
 
-This can happen with various pumps. Apart from excluding AAPS from any battery optimization, you can also exclude the system bluetooth app from battery optimization. This can help in some cases. Depending on the phone you use, you will find the bluetooth app differently.
+#### Android 15
+
+```{warning}
+Developers are working on this issue impacting **AAPS** on some Samsung and Pixel phones.
+```
+
+After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15, you can try to enable the following:
+
+1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+
+
+![Open preferences](../images/Pref2020_Open2.png)
+
+2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
+
+   ![BondBT](../images/troubleshooting/BondBT.png)
+
+3. If the pump asks for a pairing request, accept it.
+
+4. Restart your phone.
+
+#### Battery optimization
+
+This can happen with various pumps. Apart from excluding AAPS from any battery optimization, you can also exclude the system Bluetooth app from battery optimization. This can help in some cases. Depending on the phone you use, you will find the Bluetooth app differently.
 
 Here are examples how to find them on specific android phones.
 
 
-#### Pixel phones (stock android)
+##### Pixel phones (stock Android)
 
 * Go to the android settings, select "Apps".
 
@@ -67,7 +90,7 @@ Here are examples how to find them on specific android phones.
   ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Samsung phones
+##### Samsung phones
 
 * Go to the android settings, select "Apps"
 

@@ -43,7 +43,7 @@ These instructions will assume that you are starting a new pod session; if this 
 
 **SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
 
-**Your Omnipod PDM will no longer work after the AAPS Omnipod driver activates your pod**. Previously you used your Omnipod PDM to send commands to your Omnipod Eros pod. An Omnipod Eros pod only allows a single device to send communication to it. המכשיר שמפעיל את הפוד הוא המכשיר היחיד שמורשה לתקשר איתו מאותה נקודה ואילך. This means that once you activate an Omnipod Eros pod with your RileyLink through the AAPS Omnipod driver, **you will no longer be able to use your PDM with your pod**. The AAPS Omnipod driver with the RileyLink is now your acting PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies with AAPS is not working correctly.*
+**Your Omnipod PDM will no longer work after the AAPS Omnipod driver activates your pod**. Previously you used your Omnipod PDM to send commands to your Omnipod Eros pod. An Omnipod Eros pod only allows a single device to send communication to it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate an Omnipod Eros pod with your RileyLink through the AAPS Omnipod driver, **you will no longer be able to use your PDM with your pod**. The AAPS Omnipod driver with the RileyLink is now your acting PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies with AAPS is not working correctly.*
 
 **You can configure multiple RileyLinks, but only one selected RileyLink at a time can communicate with a pod.** The AAPS Omnipod driver supports the ability to add multiple RileyLinks in the RileyLink configuration, however, only one RileyLink at a time can be selected to be used for sending and receiving communication.
 
@@ -191,7 +191,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
 Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
 
-כיצד להשבית את הפוד (מתוקף התפוגה או בעקבות כשל של הפוד):
+To deactivate a pod (either from expiration or from a pod failure):
 
 1. Go to the **Omnipod (POD)** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
 
@@ -245,7 +245,7 @@ Use this command to put the active pod into a suspended state. In this suspended
 
 #### חידוש הזרקת האינסולין
 
-השתמשו בפקודה זו כדי להנחות את הפוד הפעיל כעת לחדש את אספקת האינסולין. לאחר עיבוד הפקודה, מתן האינסולין יחודש לפי המינון הבזאלי הנוכחי בהתאם להגדרתו בפרופיל. הפוד יקבל שוב פקודות עבור בולוס, מינון בזאלי זמני ו-SMB.
+Use this command to instruct the active, currently suspended pod to resume insulin delivery. לאחר עיבוד הפקודה, מתן האינסולין יחודש לפי המינון הבזאלי הנוכחי בהתאם להגדרתו בפרופיל. הפוד יקבל שוב פקודות עבור בולוס, מינון בזאלי זמני ו-SMB.
 
 1. Go to the **Omnipod (POD)** tab and ensure the **Pod status (1)** field displays **Suspended**, then press the **Resume Delivery (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod status (3)** field, signifying the RileyLink is actively sending the command to the suspended pod.
 
@@ -574,7 +574,7 @@ The Omnipod driver settings are configurable from the top-left hand corner **ham
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
-להלן קבוצות ההגדרות; תוכלו להפעילן או להשביתן באמצעות מתגים שיש לרוב ההגדרות המתוארות להלן:
+The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
 
 ![Omnipod_Settings_3](../images/omnipod/Omnipod_Settings_3.png)
 
@@ -595,7 +595,7 @@ Allows for scanning of a pod communication device. The Omnipod driver cannot sel
 
 ### צפצופי אישור
 
-מספק צפצופי אישור מהפוד על ביצוע בולוס, שינויים במינון הבזאלי, בזאלי זמני, SMB ושינויים אחרים.
+Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
 - **\*Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
 - **\*Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
@@ -606,7 +606,7 @@ Allows for scanning of a pod communication device. The Omnipod driver cannot sel
 
 Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
-*שימו לב כי הודעת AAPS תינתן תמיד לכל התראה לאחר התקשורת הראשונית עם הפוד מאז הופעלה ההתראה. דחיית ההודעה לא תבטל את ההתראה, אלא אם כן מופעל אישור התראות פוד אוטומטי. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
+*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
 
 - **\*Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 - **שעות לפני כיבוי:** מגדיר את מספר השעות לפני כיבוי הפוד הפעיל, שלאחר מכן תופעל תזכורת לתפוגה.
@@ -618,7 +618,7 @@ Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, 
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful.
 
-*הערה: אלה הן התראות בלבד, לא מתבצעות התראות מסוג צפצופים.*
+*NOTE: These are notifications only, no audible beep alerts are made.*
 
 - **התראת צליל של בזאלי זמני לא ברור מאופשרת:** הפעילו או השביתו הגדרה זו כדי להפעיל התראה קולית והתראה חזותית כאשר AAPS לא בטוח אם מינון בזאלי זמני הוגדר בהצלחה.
 - **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
@@ -690,7 +690,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 ### Levels
 
-**יתרת אינסולין**
+**Insulin Level**
 
 Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod that over 85 units have been injected. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not and exact process.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.
 
@@ -716,11 +716,11 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 ### שגיאות בפוד
 
-פודים נכשלים מדי פעם בשל מגוון בעיות, כולל בעיות חומרה של הפוד עצמו. הנוהג הטוב ביותר הוא לא להודיע אותם למשווק המשאבה, מכיוון ש- AAPS אינו מקרה שימוש מאושר. A list of fault codes can be found [here](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found [here](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
 
 ### מניעת שגיאה 49 - כישלונות פוד
 
-כשל זה קשור למצב פוד שגוי עבור פקודה או שגיאה במהלך פקודת אספקת אינסולין. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**➜**General**➜**NSClient**➜**cog wheel**➜**Advanced Settings** to prevent possible failures.
+This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**➜**General**➜**NSClient**➜**cog wheel**➜**Advanced Settings** to prevent possible failures.
 
 ### התראות המשאבה אינה נגישה
 
@@ -739,7 +739,7 @@ Please note that importing settings has the possibility to import an outdated Po
 
 ### התראות פוד
 
-please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. להלן סיכום של ההתראות העיקריות בהן אתם עשויים להיתקל:
+please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
 
 #### No active Pod
 

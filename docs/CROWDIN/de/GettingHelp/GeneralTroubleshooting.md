@@ -37,14 +37,37 @@ Ignoriere sie: Weitere Details, Trotzdem installieren.
 
 * [SMS-Befehle](#SMSCommands-troubleshooting)
 
-### Häufige Bluetooth-Verbindungsprobleme
+### Frequent Bluetooth connection problems
 
-Der Fehler kann bei verschiedenen Insulinpumpen auftreten. Außer AAPS von jeder Batterieoptimierung auszuschließen, kannst Du auch die Bluetooth-App des Systems von der Batterieoptimierung ausschließen. In einigen Fällen hilft das. Je nach verwendetem Smartphone findet sich die Bluetooth-App an anderen Stellen.
+#### Android 15
+
+```{warning}
+Developers are working on this issue impacting **AAPS** on some Samsung and Pixel phones.
+```
+
+After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15, you can try to enable the following:
+
+1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+
+
+![Einstellungen öffnen](../images/Pref2020_Open2.png)
+
+2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
+
+   ![BondBT](../images/troubleshooting/BondBT.png)
+
+3. If the pump asks for a pairing request, accept it.
+
+4. Restart your phone.
+
+#### Battery optimization
+
+Der Fehler kann bei verschiedenen Insulinpumpen auftreten. Apart from excluding AAPS from any battery optimization, you can also exclude the system Bluetooth app from battery optimization. In einigen Fällen hilft das. Depending on the phone you use, you will find the Bluetooth app differently.
 
 Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones findest.
 
 
-#### Pixel Smartphones (unverändertes Android)
+##### Pixel phones (stock Android)
 
 * Gehe zu Einstellungen > Apps
 
@@ -67,7 +90,7 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
   ![Bluetooth Akku-Optimierung](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Samsung Smartphones
+##### Samsung Smartphones
 
 * Gehe zu Einstellungen > Apps
 
