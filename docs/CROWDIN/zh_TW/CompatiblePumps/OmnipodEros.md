@@ -43,7 +43,7 @@ orphan: true
 
 **安全第一** - 不要在無法從錯誤中恢復的環境中嘗試此過程（必備項包括額外的 pod、胰島素、已充電的 RileyLink 和手機設備）。
 
-**當 AAPS Omnipod 驅動程式啟用你的 pod 後，你的 Omnipod PDM 將無法再運作**。 以往你使用 Omnipod PDM 向 Omnipod Eros pod 發送指令。 Omnipod Eros pod 只允許單一裝置向其發送通訊。 The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. 這意味著你透過 AAPS Omnipod 驅動程式和 RileyLink 啟用了 Omnipod Eros pod，**你將無法再使用你的 PDM 與 pod 通訊**。 AAPS Omnipod 驅動程式與 RileyLink 現在是你的替代 PDM。 *這並不意味著你應該丟掉你的 PDM，建議保留他作為備用並在 AAPS 運作不正常時使用。*
+**當 AAPS Omnipod 驅動程式啟用你的 pod 後，你的 Omnipod PDM 將無法再運作**。 以往你使用 Omnipod PDM 向 Omnipod Eros pod 發送指令。 Omnipod Eros pod 只允許單一裝置向其發送通訊。 從那時起，成功啟動 Pod 的裝置將是唯一能夠與其通訊的裝置。 這意味著你透過 AAPS Omnipod 驅動程式和 RileyLink 啟用了 Omnipod Eros pod，**你將無法再使用你的 PDM 與 pod 通訊**。 AAPS Omnipod 驅動程式與 RileyLink 現在是你的替代 PDM。 *這並不意味著你應該丟掉你的 PDM，建議保留他作為備用並在 AAPS 運作不正常時使用。*
 
 **你可以配置多個 RileyLink，但一次只能選擇一個 RileyLink 與 pod 通訊。** AAPS Omnipod 驅動程式支援在 RileyLink 配置中添加多個 RileyLink，但一次只能選擇一個 RileyLink 用來發送和接收通訊。
 
@@ -191,7 +191,7 @@ orphan: true
 
 在正常情況下，幫浦的壽命應為三天（72 小時），並在提示幫浦過期警告後額外持續8小時，總計80小時的幫浦使用。
 
-To deactivate a pod (either from expiration or from a pod failure):
+要停用 Pod（不論是過期還是 Pod 故障）：
 
 1. 轉到 **Omnipod (POD)** 標籤，點擊 **幫浦管理 (1)** 按鈕，在 **幫浦管理** 畫面上點擊 **停用幫浦 (2)** 按鈕。
 
@@ -245,7 +245,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 #### 恢復胰島素輸送
 
-Use this command to instruct the active, currently suspended pod to resume insulin delivery. 指令成功處理後，胰島素將根據目前時間並使用活動基礎率設定檔恢復正常輸送。 Pod 將再次接受注射、TBR 和 SMB 的指令。
+使用此指令指示目前暫停的活動 Pod 恢復胰島素輸送。 指令成功處理後，胰島素將根據目前時間並使用活動基礎率設定檔恢復正常輸送。 Pod 將再次接受注射、TBR 和 SMB 的指令。
 
 1. 進入**Omnipod（POD）**頁籤，確保** POD 狀態（1）**欄位顯示**已暫停**，然後按下**恢復輸送（2）**按鈕以啟動流程，指示目前 POD 恢復正常的胰島素輸送。 **恢復輸送**訊息將顯示在** POD 狀態（3）**欄位，表示 RileyLink 正在積極向暫停的 POD 發送指令。
 
@@ -574,7 +574,7 @@ Omnipod 驅動程式設置可透過左上角的**漢堡選單**中的**設置生
 
 ![Omnipod_設置_2](../images/omnipod/Omnipod_Settings_2.png)
 
-The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
+下方列出了設定組；大多數項目可透過切換開關啟用或停用：
 
 ![Omnipod_設置_3](../images/omnipod/Omnipod_Settings_3.png)
 
@@ -595,7 +595,7 @@ The settings groups are listed below; you can enable or disable via a toggle swi
 
 ### 確認嗶聲提示
 
-Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
+提供來自藥筒的確認聲音提示，用於注射、基礎輸注、SMB以及TBR輸送和變更。
 
 - **\*注射嗶聲啟用：**啟用或停用在注射送達時的確認嗶聲聲。
 - **\*基礎率嗶聲啟用：**啟用或停用在設定新基礎率、取消啟動基礎率或更改目前基礎率時的確認嗶聲聲。
@@ -606,7 +606,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 
 根據設定的門檻值單位，提供 AAPS 警告和 Nightscout 通知以提示幫浦到期、關閉或低庫存。
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. 要手動解除警告，你必須查看 Omnipod (幫浦) 分頁並按下確認警告按鈕。*
+*請注意，Pod 觸發警報後，AAPS 通知將始終發出。 解除通知不會取消警報，除非啟用了自動確認 Pod 警報功能。 要手動解除警告，你必須查看 Omnipod (幫浦) 分頁並按下確認警告按鈕。*
 
 - **\*到期提醒啟用：**啟用或停用設定的幫浦到期提醒，當到達設定的關機時間前的幾個小時時觸發。
 - **關閉前的時數：** 定義 Pod 關閉前的幾小時，這將觸發到期提醒警報。
@@ -618,7 +618,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 
 當不確定 TBR、SMB 或注射事件是否成功時，提供 AAPS 通知和手機警報。
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+*注意：這些僅是通知，沒有嗶聲警報。*
 
 - **啟用不確定 TBR 通知音效：** 啟用或停用此設定，以在 AAPS 不確定 TBR 是否成功設置時觸發提示音和視覺通知。
 - **\*不確定 SMB 通知聲音啟用：**啟用或停用此設置以在 AAPS 不確定 SMB 是否成功送達時觸發警報聲和視覺通知。
@@ -690,7 +690,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 
 ### 層級
 
-**Insulin Level**
+**胰島素等級**
 
 Omnipod Eros 幫浦中的胰島素量報告並不精準。  這是因為無法確定幫浦中實際注入了多少胰島素，只知道當填充幫浦時觸發了兩次嗶聲，這表示已注入超過 85 單位。 一個幫浦最多可容納 200 單位。 啟動過程也會引入一些變化，因為這並不是一個精準的過程。  考慮到這些因素，Omnipod 驅動程式已經編寫為盡可能準確地估算幫浦內剩餘的胰島素量。
 
@@ -716,11 +716,11 @@ Omnipod Eros 幫浦中的胰島素量報告並不精準。  這是因為無法�
 
 ### Pod 故障
 
-Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. 你可以在[這裡](https://github.com/openaps/openomni/wiki/Fault-event-codes)找到錯誤代碼列表，以幫助確定原因。
+Pod 會因多種問題偶爾發生故障，包括 Pod 本身的硬體問題。 最佳做法是不要向 Insulet 報告，因為 AAPS 並非經過認證的使用情況。 你可以在[這裡](https://github.com/openaps/openomni/wiki/Fault-event-codes)找到錯誤代碼列表，以幫助確定原因。
 
 ### 防止 49 號錯誤 Pod 故障
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. 我們建議使用者切換至 Nightscout 客戶端，並在**設置生成器**➜**一般**➜**NSClient**➜**齒輪圖示**➜**進階設定**中**僅上傳 (停用同步)**，以防止可能的故障。
+此故障與指令的 Pod 狀態不正確或胰島素輸送指令中的錯誤有關。 我們建議使用者切換至 Nightscout 客戶端，並在**設置生成器**➜**一般**➜**NSClient**➜**齒輪圖示**➜**進階設定**中**僅上傳 (停用同步)**，以防止可能的故障。
 
 ### 幫浦無法連線警報
 
@@ -739,7 +739,7 @@ This failure is related to an incorrect pod state for a command or an error duri
 
 ### Omnipod 驅動程式警報
 
-請注意，Omnipod 驅動程式在**首頁總覽分頁**中會呈現各種獨特的警報，其中大多數是資訊性的，可以忽略，然而有些會要求使用者採取行動以解決警報原因。 A summary of the main alerts that you may encounter is listed below:
+請注意，Omnipod 驅動程式在**首頁總覽分頁**中會呈現各種獨特的警報，其中大多數是資訊性的，可以忽略，然而有些會要求使用者採取行動以解決警報原因。 你可能會遇到的主要警報總結如下：
 
 #### 沒有啟動幫浦
 

@@ -37,37 +37,37 @@
 
 * [SMS 指令](#SMSCommands-troubleshooting)
 
-### Frequent Bluetooth connection problems
+### 藍牙連線問題頻繁
 
 #### Android 15
 
 ```{warning}
-Developers are working on this issue impacting **AAPS** on some Samsung and Pixel phones.
+開發者正在處理這個影響某些 Samsung 和 Pixel 手機的 **AAPS** 問題。
 ```
 
-After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15, you can try to enable the following:
+升級 Android 或更換到近期手機後，**AAPS**經常會失去與幫浦的藍牙連線。 重新啟動手機後，這個問題會暫時消失。 如果手機運行 Android 15，您可以嘗試啟用以下設定：
 
-1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+1) 透過點擊主畫面右上角的三個點的選單來 **打開偏好設定**。
 
 
 ![打開偏好設定](../images/Pref2020_Open2.png)
 
-2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
+2. 向下滾動並打開 **確認嗶聲** / **進階** 子選單。 啟用 **Android 15+ 的 Bond BT 裝置**。
 
    ![BondBT](../images/troubleshooting/BondBT.png)
 
-3. If the pump asks for a pairing request, accept it.
+3. 如果幫浦要求配對請求，請允許它。
 
-4. Restart your phone.
+4. 重新啟動您的手機。
 
-#### Battery optimization
+#### 電池優化
 
-這可能會發生在各種幫浦上。 Apart from excluding AAPS from any battery optimization, you can also exclude the system Bluetooth app from battery optimization. 這在某些情況下有幫助。 Depending on the phone you use, you will find the Bluetooth app differently.
+這可能會發生在各種幫浦上。 除了將 AAPS 排除在任何電池優化之外，您還可以將系統藍牙應用排除在電池優化之外。 這在某些情況下有幫助。 根據您使用的手機，您會以不同的方式找到藍牙應用。
 
 這裡是一些如何在特定 Android 手機上找到他們的範例。
 
 
-##### Pixel phones (stock Android)
+##### Pixel 手機（原生 Android）
 
 * 進入 Android 設定，選擇「應用程式」。
 
