@@ -37,37 +37,37 @@
 
 * [短信指令](#SMSCommands-troubleshooting)
 
-### Frequent Bluetooth connection problems
+### 频繁的蓝牙连接问题
 
 #### Android 15
 
 ```{warning}
-Developers are working on this issue impacting **AAPS** on some Samsung and Pixel phones.
+开发者正在解决影响**AAPS**在某些三星和Pixel手机上的问题。
 ```
 
-After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15, you can try to enable the following:
+升级安卓系统或更换新手机后，**AAPS**经常丢失与泵的蓝牙连接。 重启手机后问题会暂时消失。 如果手机运行的是安卓15系统，可以尝试启用以下选项：
 
-1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+1) **打开偏好设置**，点击主屏幕右上角的三点菜单。
 
 
 ![打开参数设置](../images/Pref2020_Open2.png)
 
-2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
+2. 向下滚动并打开**确认提示音** / **高级**子菜单。 启用**在安卓15+上绑定蓝牙设备**。
 
    ![BondBT](../images/troubleshooting/BondBT.png)
 
-3. If the pump asks for a pairing request, accept it.
+3. 如果泵请求配对，请接受。
 
-4. Restart your phone.
+4. 重启您的手机。
 
-#### Battery optimization
+#### 电池优化
 
-这种情况可能发生在多种胰岛素泵上。 Apart from excluding AAPS from any battery optimization, you can also exclude the system Bluetooth app from battery optimization. 这在某些情况下可能有所帮助。 Depending on the phone you use, you will find the Bluetooth app differently.
+这种情况可能发生在多种胰岛素泵上。 除了将AAPP排除在任何电池优化之外，您还可以将系统蓝牙应用排除在电池优化之外。 这在某些情况下可能有所帮助。 根据您使用的手机不同，蓝牙应用的位置也会有所不同。
 
 以下是特定 Android 手机上的示例操作步骤：
 
 
-##### Pixel phones (stock Android)
+##### Pixel手机（原生安卓系统）
 
 * 进入 Android 设置，选择"应用"
 
