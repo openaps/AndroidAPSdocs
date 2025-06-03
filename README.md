@@ -20,7 +20,7 @@ Detail of broken links in the doc can be found in the build logs. Select a build
 
 ### 1) Change language
 
-[Change language](https://androidaps.readthedocs.io/en/latest/ChangeLanguage/ChangeLanguage.html)
+[Change language](https://androidaps.readthedocs.io/en/latest/NavigateDoc/ChangeLanguage.html)
 
 ### 2) Getting started
 
