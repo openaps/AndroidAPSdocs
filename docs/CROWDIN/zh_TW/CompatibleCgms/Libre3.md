@@ -8,8 +8,6 @@ Freestyle Libre 3 (FSL3) 需要特殊設定才能將血糖值接收至 AAPS。 �
 
 ![FL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
 
-**AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理無法與 1 分鐘讀取值搭配使用。**
-
 下述方法使用單獨的應用程式 Juggluco 來實現此目的。 他使用 Juggluco 以接收來自傳感器的原始 1 分鐘間隔資料，然後將其傳送至 xDrip+ 或 AAPS。 可以使用 Libre 3 應用程式或直接在 Juggluco 中啟動新傳感器。 下方指南說明如何使用 Juggluco 應用程式啟動傳感器的過程。 如果傳感器是使用已登入 Libreview 帳戶啟動的，也可以在 Juggluco 和 Libre 3 應用程式之間切換作為接收器。
 
 當傳感器使用 Libre 3 應用程式啟動時，Juggluco 也可以將資料傳送至 LibreView 以與醫療提供者共享。
@@ -17,7 +15,7 @@ Freestyle Libre 3 (FSL3) 需要特殊設定才能將血糖值接收至 AAPS。 �
 在 xDrip+ 中，傳感器可以在 -40 mg/dL 至 +20 mg/dL（-2.2 mmol/l 至 +1.1 mmol/l）範圍內進行校正，以補償手動儀表讀取值與傳感器讀取值之間的差異。
 
 ## 方法 1：1 分鐘讀取值
-AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理無法與 1 分鐘讀取值搭配使用。
+AndroidAPS does not process 1-minute values.
 
 ![Juggluco 廣播至 AAPS](../images/Juggluco_AAPS.png)
 
