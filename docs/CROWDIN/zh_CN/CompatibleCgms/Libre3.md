@@ -8,8 +8,6 @@ Freestyle Libre 3 (FSL3) 需要特殊设置才能将血糖值传输至AAPS系统
 
 ![FL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
 
-**AndroidAPS 3.2.0.1版本不支持每分钟血糖数值的传输。 加速度和平滑处理不适用于每分钟数值。**
-
 以下实现方法需配合使用独立应用程序Juggluco。 该方法通过Juggluco接收传感器原始每分钟间隔数据，随后传输至xDrip+或AAPS系统。 新传感器既可通过Libre 3应用程序启动，也可直接在Juggluco中激活。 以下指南说明了使用Juggluco应用程序启动传感器的流程。 若传感器启动时已登录Libreview账户，接收端可在Juggluco和Libre 3应用之间切换使用。
 
 当传感器通过Libre 3应用启动时，Juggluco也可将数据传输至LibreView平台，以便与医疗保健提供者共享。
@@ -17,7 +15,7 @@ Freestyle Libre 3 (FSL3) 需要特殊设置才能将血糖值传输至AAPS系统
 在xDrip+中，传感器可校准范围为-40 mg/dl至+20 mg/dl（-2.2 mmol/l至+1.1 mmol/l），用于补偿手动血糖仪读数与传感器读数之间的差异。
 
 ## 方法 1：1 分钟读数
-AndroidAPS 3.2.0.1版本不支持每分钟血糖数值的传输。 加速度和平滑处理不适用于每分钟数值。
+AndroidAPS does not process 1-minute values.
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
