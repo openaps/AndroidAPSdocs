@@ -15,7 +15,7 @@ Freestyle Libre 3 (FSL3) 需要特殊設定才能將血糖值接收至 AAPS。 �
 在 xDrip+ 中，傳感器可以在 -40 mg/dL 至 +20 mg/dL（-2.2 mmol/l 至 +1.1 mmol/l）範圍內進行校正，以補償手動儀表讀取值與傳感器讀取值之間的差異。
 
 ## 方法 1：1 分鐘讀取值
-AndroidAPS does not process 1-minute values.
+AndroidAPS 不會處理每分鐘的資料值。
 
 ![Juggluco 廣播至 AAPS](../images/Juggluco_AAPS.png)
 
