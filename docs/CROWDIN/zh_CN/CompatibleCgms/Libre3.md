@@ -14,13 +14,13 @@ Freestyle Libre 3 (FSL3) 需要特殊设置才能将血糖值传输至AAPS系统
 
 在xDrip+中，传感器可校准范围为-40 mg/dl至+20 mg/dl（-2.2 mmol/l至+1.1 mmol/l），用于补偿手动血糖仪读数与传感器读数之间的差异。
 
-## 方法 1：1 分钟读数
-AndroidAPS does not process 1-minute values.
+## Method 1: use 1-minute readings directly
+AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
 
-## 方法 2：5 分钟读数
+## Method 2: convert 1-minute readings into 5-minute values via xDrip
 该方法通过Juggluco接收传感器原始每分钟数据，经xDrip+平滑处理后转换为5分钟间隔数据，最终传输至AAPS系统。
 
 ### 步骤 1：设置 Juggluco
