@@ -14,13 +14,13 @@ Juggluco también puede enviar datos a LibreView para compartirlos con los equip
 
 Dentro de xDrip+, el sensor se puede calibrar en un rango de -40 mg/dl a +20 mg/dl (-2,2 mmol/l a +1,1 mmol/l) para compensar las diferencias entre una lectura manual de medidor y las lecturas del sensor.
 
-## Method 1: 1-minute-readings
-AndroidAPS does not process 1-minute values.
+## Method 1: use 1-minute readings directly
+AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
 
-## Method 2: 5-minute-readings
+## Method 2: convert 1-minute readings into 5-minute values via xDrip
 Este método utiliza Juggluco para recibir datos brutos con intervalos de 1 minuto del sensor, los cuales luego se envían a xDrip+ para ser suavizados en datos con intervalos de 5 minutos que se pasan a AAPS.
 
 ### Paso 1: Configurar Juggluco
