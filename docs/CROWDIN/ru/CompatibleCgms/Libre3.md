@@ -14,13 +14,13 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 
 В рамках программы xDrip+ сенсор может быть откалиброван в диапазоне от -40 мг/дл до +20 мг/дл (-2.2 ммоль/л до +1.1 ммоль/л) для корректировки различий между замерами глюкометра и показаниями сенсора.
 
-## Метод 1: 1-минутные замеры
-AndroidAPS does not process 1-minute values.
+## Method 1: use 1-minute readings directly
+AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
 
 ![Трансляция Juggluco в AAPS](../images/Juggluco_AAPS.png)
 
 
-## Метод 2: 5-минутные замеры
+## Method 2: convert 1-minute readings into 5-minute values via xDrip
 Каждую минуту Juggluco получает необработанные данные с сенсора, которые затем передаются xDrip+ для сглаживания в 5-минутном интервале, которые в свою очередь передаются в AAPS.
 
 ### Шаг 1: Настройка Juggluco
