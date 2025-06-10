@@ -151,7 +151,7 @@
 
 **因此，您必须通过手动注射胰岛素来进行高血糖的校正。**
 
-- 如果您的基础 IOB 为负（请参见下方截图），在 **目标6** 中可以触发大于 100% 的临时基础率（TBR）。
+- If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
 
 ![负 IOB 示例](../images/Objective6_negIOB.png)
 
