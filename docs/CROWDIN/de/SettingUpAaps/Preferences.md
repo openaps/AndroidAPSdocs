@@ -321,7 +321,7 @@ Der Closed Loop steht ab dem **[Ziel 6 ](#objectives-objective6)** (oder darübe
 
 In diesem Modus ist [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) auf Null gesetzt.
 
-Das bedeutet, dass bei fallenden Glukosewerten, **AAPS** das Basal für Dich reduzieren kann. Wenn aber die Glukosewerte steigen, wird keine automatische Korrektur vorgenommen. Die Basalrate wird genauso so bleiben, wie sie im aktuellen **Profil** hinterlegt ist. Nur wenn das Basal-IOB negativ ist (wegen einer vorangegangenen Abschaltung der Basalrate bei niedrigen Werten) wird, um den **Glukosewert** zu senken, zusätzliches Insulin abgegeben.
+Das bedeutet, dass bei fallenden Glukosewerten, **AAPS** das Basal für Dich reduzieren kann. Wenn aber die Glukosewerte steigen, wird keine automatische Korrektur vorgenommen. Die Basalrate wird genauso so bleiben, wie sie im aktuellen **Profil** hinterlegt ist. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
 
 (Preferences-minimal-request-change)=
 ### Minimal request change
