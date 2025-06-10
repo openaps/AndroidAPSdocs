@@ -153,7 +153,7 @@ This means that when you are on **Objective 6**, if sensor glucose levels are dr
 
 **As a consequence, you have to handle high glucose values with manual insulin bolus corrections.**
 
-- If your basal IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
+- If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
 
 ![Example negative IOB](../images/Objective6_negIOB.png)
 
