@@ -2,5 +2,5 @@ sphinx==7.0
 sphinx_rtd_theme==3.0.0
 sphinx-togglebutton
 myst_parser==3.0.1
-urllib3==1.26.19
+urllib3==2.5.0
 sphinx-notfound-page==1.0.4
