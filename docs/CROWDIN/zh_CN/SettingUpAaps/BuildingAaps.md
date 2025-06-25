@@ -21,7 +21,7 @@
 | [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                      | 最高支持至Meerkat版本                           | 8.2    | 17  |
 | [3.3](#version3300)     | Ladybug (2024.2.1)                       | 最高支持至Meerkat版本                           | 8.9    | 21  |
 | [3.3.1.3](#version3300) | Ladybug 功能更新包 (2024.2.2)                 | 最高支持至Meerkat版本                           | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                       |                                          | 8.11   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                       | Narwhal                                  | 8.11   | 21  |
 
 推荐版本是已内置适配的JVM版本。 推荐版本同时也是构建**AAPS**的最低可用版本。 若使用低于"推荐"的版本将**无法**完成构建。 若选用其他版本，可能遭遇与JVM版本相关的兼容性问题。 请参考[Android Studio问题排查指南](#troubleshooting_androidstudio-uncommitted-changes)解决。 若您当前的Android Studio版本未在下表中列出，则需先升级至支持版本。
 
