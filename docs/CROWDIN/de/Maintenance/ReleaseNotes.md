@@ -344,6 +344,8 @@ EMPFOHLENE EINSTELLUNGEN
 - Der Einsatz von Websockets mit V3 oder nicht ist Geschmackssache
 - Es wird DRINGEND empfohlen AAPS die Daten sammeln zu lassen und dann zentral als einziger Uploader an Nightscout übertragen lassen. Alle anderen Geräte und Anwendungen sollten Daten von Nightscout lediglich auslesen. Dadurch vermeidest Du Synchronisierungsfehler und -konflikte. Dies gilt auch für die Übermittlung der Glukosewerte an Nightscout mit dem Dexcom Share Connector o. ä. Tools
 
+(version3100)=
+
 ## Version 3.1.0
 
 Erscheinungsdatum: 19.07.2022

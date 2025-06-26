@@ -344,6 +344,8 @@ RECOMMENDED SETTING
 - using websockets or not using with v3 depends on your preference
 - it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
 
+(version3100)=
+
 ## Έκδοση 3.1.0
 
 Ημερομηνία κυκλοφορίας: 19-07-2022
