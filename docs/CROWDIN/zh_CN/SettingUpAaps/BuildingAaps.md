@@ -146,6 +146,8 @@ Android Studio版本至关重要。 请参考[前文说明](#Building-APK-recomm
 
 ![欢迎来到Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
+If you want to save hard disk space, your you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+
 ![选择组件](../images/Building-the-App/012_InstallLadybug.png)
 
 ![参数设置](../images/Building-the-App/013_InstallLadybug.png)
