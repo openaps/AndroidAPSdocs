@@ -1,8 +1,16 @@
 # Smartphones
 
-Die aktuelle **AAPS**-Version (3.3) setzt ein Android Smartphone mit Google **Android 11.0 oder höher** voraus. Wenn Du planst Dir (ab Dezember 2024) ein neues Smartphone zuzulegen, wäre Android 14 eine gute Wahl.  
-Im November 2024 sind Probleme mit Android 15 und der Bluetooth-Konnektivität gemeldet worden. Eventuell macht es Sinn, das Update auf Android 15 zu verschieben, insbesondere dann, wenn Du den Omnipod Dash oder den Dexcom G7 nutzt. Die neuesten Informationen zu diesem Thema findest Du auf [Facebook oder Discord](../GettingHelp/WhereCanIGetHelp.md).  
-Aus Sicherheitsgründen wird Dir dringend ans Herz gelegt, Dein **AAPS** auf dem neuesten Stand zu halten. Für Menschen, die kein Gerät mit Android 11 (oder neuer) nutzen können, stehen weiterhin ältere **AAPS**-Versionen für ältere Android-Versionen zur Verfügung, siehe dazu auch die [Release Notes](#maintenance-android-version-aaps-version).
+Die aktuelle **AAPS**-Version (3.3) setzt ein Android Smartphone mit Google **Android 11.0 oder höher** voraus. If you are considering buying a new phone, (as of December 2024), **Android 14 is preferred**.
+
+As of November 2024, several users have reported issues with Android 15 and Omnipod Dash Bluetooth connection.
+
+Since June 2025, many users report not being able to start Omnipod Dash with Android 16.
+
+You may wish to delay the updates, especially if you are using Omnipod Dash.
+
+Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.
+
+Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. Für Menschen, die kein Gerät mit Android 11 (oder neuer) nutzen können, stehen weiterhin ältere **AAPS**-Versionen für ältere Android-Versionen zur Verfügung, siehe dazu auch die [Release Notes](#maintenance-android-version-aaps-version).
 
 - [Jelly Pro Einstellungen](../CompatiblePhones/Jelly.md)
 - [Huawei Einstellungen](../CompatiblePhones/Huawei.md)
