@@ -1,8 +1,16 @@
 # 手機
 
-目前版本的 **AAPS**（3.3）需要使用 Google **Android 11.0 或更高版本** 的 Android 智慧型手機。 如果你考慮購買新手機，(截至2024年12月)，建議使用 Android 14。  
-截至2024年11月，若干用戶報告在 Android 15 和藍牙連線上遇到問題。 如果你使用 Omnipod Dash 或 Dexcom G7，你可能希望延遲更新至 Android 15。 請查閱 [Facebook 或 Discord](../GettingHelp/WhereCanIGetHelp.md) 以獲取此主題的最新更新。  
-強烈建議用戶為安全原因保持 **AAPS** 的版本最新。 然而，對於無法使用 Android 11.0 或更新設備的用戶，仍可使用兼容舊版 Android 的早期 **AAPS** 版本，請參見：[發行說明](#maintenance-android-version-aaps-version)。
+目前版本的 **AAPS**（3.3）需要使用 Google **Android 11.0 或更高版本** 的 Android 智慧型手機。 If you are considering buying a new phone, (as of December 2024), **Android 14 is preferred**.
+
+As of November 2024, several users have reported issues with Android 15 and Omnipod Dash Bluetooth connection.
+
+Since June 2025, many users report not being able to start Omnipod Dash with Android 16.
+
+You may wish to delay the updates, especially if you are using Omnipod Dash.
+
+Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.
+
+Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. 然而，對於無法使用 Android 11.0 或更新設備的用戶，仍可使用兼容舊版 Android 的早期 **AAPS** 版本，請參見：[發行說明](#maintenance-android-version-aaps-version)。
 
 - [Jelly Pro 設定](../CompatiblePhones/Jelly.md)
 - [華為設定](../CompatiblePhones/Huawei.md)
