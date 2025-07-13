@@ -28,7 +28,7 @@ orphan: true
 
 **閉環狀態：** 這三款幫浦都將是閉環候選者。
 
-Awaiting release of t:mobi in Europe (other two are not yet released anywhere). Development of AAPS t:mobi support has already started and should be available by end of 2025 (see more info on Discord).
+正在等待 t:mobi 在歐洲的發布（其他兩個尚未在任何地方發布）。 AAPS t:mobi 支援的開發已經開始，預計在 2025 年底前可用（詳細資訊請參閱 Discord）。
 
 **AAPS 硬體需求：**無。 看起來已啟用藍牙 (BT)。
 
