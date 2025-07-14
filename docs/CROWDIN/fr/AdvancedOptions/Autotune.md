@@ -1,8 +1,8 @@
 # Comment utiliser le plugin Autotune (dev uniquement)
 
-Documentation about Autotune algorithm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
+La documentation sur l'algorithme Autotune peut être trouvée dans la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
-Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
+Le plugin Autotune est une implémentation de l'algorithme autotune OpenAPS dans AAPS.
 
 **Actuellement, le plugin Autotune n'est disponible que dans la [branche dev](../AdvancedOptions/DevBranch.md) et avec le mode Ingénierie.**
 
@@ -18,7 +18,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
   - Remarque : chaque fois que vous changez le paramètre Nb jours, les résultats précédents seront supprimés
 - Dernier run affiche la date du dernier calcul et permet d'afficher votre dernier calcul valide. Si vous n'avez pas lancé Autotune le jour en cours, ou si les résultats précédents ont été supprimés avec une modification du paramètre de calcul ci-dessus, vous pouvez alors récupérer les paramètres et les résultats de la dernière exécution réussie.
 - L'avertissement vous montre par exemple des informations sur le profil sélectionné (si vous avez plusieurs valeurs G/I ou plusieurs valeurs SI)
-  - Remarque : Le calcul Autotune fonctionne avec une seule valeur de G/I et une seule valeur de SI. There is currently no existing Autotune algorithm to tune a circadian IC or circadian ISF. Si votre profil d'entrée a plusieurs valeurs, vous pouvez voir dans la section Avertissement la valeur moyenne prise en compte pour calculer votre profil.
+  - Remarque : Le calcul Autotune fonctionne avec une seule valeur de G/I et une seule valeur de SI. Il n'existe actuellement aucun algorithme Autotune pour ajuster un G/I circadien ou une SI circadienne. Si votre profil d'entrée a plusieurs valeurs, vous pouvez voir dans la section Avertissement la valeur moyenne prise en compte pour calculer votre profil.
 - Le bouton Vérifiez Profil d'entrée permet d'ouvrir la Visionneuse de Profil pour vous permettre de faire une vérification rapide de votre profil (unités, DAI, G/I, SI, basal et cible)
   - Remarque : Autotune ne réglera que le G/I (valeur unique), la SI (valeur unique) et les débits de basal (avec variation circadienne). Les unités, la DAI et les cibles resteront inchangées dans le profil de sortie.
 
@@ -87,16 +87,16 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 ![Autotune écran par défaut](../images/Autotune/Autotune_11.png)
 
 - Changer le profil avec l'Automatisation (Désactivé par défaut) : voir [Exécuter Autotune avec une règle d'automatisation](#run-autotune-with-an-automation-rule) ci-dessous. Si vous activez ce paramètre, le profil d'entrée sera automatiquement mis à jour par le profil Tuned, et il sera activé.
-  - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
+  - **Soyez prudent, vous devez prendre confiance en vérifiant pendant plusieurs jours qu'après une mise à jour et l'activation du profil Tuned sans aucune modification, cela améliore effectivement votre boucle**
 
 - Catégoriser UAM comme basal (par défaut On) : Ce paramètre est pour les utilisateurs utilisant AndroidAPS sans aucun glucide entré (Full UAM). Il empêchera (quand désactivé) de catégoriser les RNS en tant que basal.
   - Remarque : si vous avez au moins une heure d'absorption de glucides détectée pendant une journée, alors toutes les données catégorisées comme "RNS" seront catégorisées en tant que basal, quel que soit ce paramètre (Activé ou Désactivé)
 - Nombre de jours de données (par défaut 5) : Vous pouvez définir la valeur par défaut avec ce paramètre. À chaque fois que vous sélectionnez un nouveau profil dans le plugin Autotune, le nombre de jours sera remplacé par cette valeur par défaut
-- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
+- Appliquer le résultat moyen dans les G/I & SI circadienne (Désactivation par défaut) : voir [Profil avec G/I ou SI Circadiens](#circadian-ic-or-isf-profile) ci-dessous.
 
 ### Other settings
 
-- Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. Vous pouvez voir et ajuster ces valeurs dans Configuration > Plugin Sensitivité > Paramètres > Paramètres Avancés
+- Autotune utilise également les ratio Max et Min Autosens pour limiter la variation. Vous pouvez voir et ajuster ces valeurs dans Configuration > Plugin Sensitivité > Paramètres > Paramètres Avancés
 
   ![Autotune écran par défaut](../images/Autotune/Autotune_12.png)
 
@@ -108,7 +108,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
 ### Profil avec G/I ou SI Circadiens
 
-- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can set "Apply average result in circadian IC/ISF"
+- Si vous avez des variations importantes de G/I et/ou de votre SI dans votre profil, et si vous avez entièrement confiance en vos heures et variations circadiens, alors vous pouvez définir "Appliquer le résultat G/I et SI moyen sur le profil circadien"
 
   - Notez que le calcul Autotune sera toujours fait avec une seule valeur, et que la variation circadienne ne sera pas ajustée par Autotune. Ce paramètre n'applique que la variation moyenne calculée pour le G/I et/ou la SI sur vos valeurs circadiennes
 
