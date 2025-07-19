@@ -28,7 +28,7 @@ orphan: true
 
 **闭环状态:** 所有3款泵都将成为闭环候选。
 
-等待在欧洲发布。
+Awaiting release of t:mobi in Europe (other two are not yet released anywhere). Development of AAPS t:mobi support has already started and should be available by end of 2025 (see more info on Discord).
 
 **硬件要求 AAPS：** 无。 似乎启用了蓝牙。
 

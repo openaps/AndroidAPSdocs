@@ -5,7 +5,7 @@
 ```{admonition} Version 3.3
 :class: note
 
-29/12/2024 : Version 3.3 is out. Check the [Release Notes](#version3300) to see what's new and get update instructions.
+29/12/2024 : La version 3.3 est sortie. Consultez les [Notes de version] (#version3300) pour voir ce qui est nouveau et obtenir des instructions de mise à jour.
 
 ```
 
@@ -66,10 +66,10 @@ Toutes les informations et le code décrits ici le sont à des fins d'informatio
 ## Index de la documentation AAPS
 
 ```{toctree}
-:caption: 1) Change language
+:caption: 1) Changer la langue
 
-Change language <./NavigateDoc/ChangeLanguage.md>
-Change version <./NavigateDoc/ChangeVersion.md>
+Changer la langue <./NavigateDoc/ChangeLanguage.md>
+Changer la version <./NavigateDoc/ChangeVersion.md>
 ```
 ```{toctree}
 :caption: 2) Démarrage

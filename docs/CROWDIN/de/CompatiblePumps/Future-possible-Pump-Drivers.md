@@ -28,7 +28,7 @@ Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nich
 
 **Loop Status:** Alle drei Pumpen werden Loop Kandidaten sein.
 
-Awaiting release in Europe.
+Awaiting release of t:mobi in Europe (other two are not yet released anywhere). Development of AAPS t:mobi support has already started and should be available by end of 2025 (see more info on Discord).
 
 **Hardware Voraussetzungen für AAPS:** Keine. It seems to be BT enabled.
 

@@ -1,12 +1,12 @@
 # Comment utiliser le plugin Autotune (dev uniquement)
 
-Documentation about Autotune algorithm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
+La documentation sur l'algorithme Autotune peut être trouvée dans la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
-Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
+Le plugin Autotune est une implémentation de l'algorithme autotune OpenAPS dans AAPS.
 
 **Actuellement, le plugin Autotune n'est disponible que dans la [branche dev](../AdvancedOptions/DevBranch.md) et avec le mode Ingénierie.**
 
-![Autotune plugin](../images/Autotune/Autotune_1.png)
+![Plugin Autotune](../images/Autotune/Autotune_1.png)
 
 ## Interface utilisateur Autotune
 
@@ -18,7 +18,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
   - Remarque : chaque fois que vous changez le paramètre Nb jours, les résultats précédents seront supprimés
 - Dernier run affiche la date du dernier calcul et permet d'afficher votre dernier calcul valide. Si vous n'avez pas lancé Autotune le jour en cours, ou si les résultats précédents ont été supprimés avec une modification du paramètre de calcul ci-dessus, vous pouvez alors récupérer les paramètres et les résultats de la dernière exécution réussie.
 - L'avertissement vous montre par exemple des informations sur le profil sélectionné (si vous avez plusieurs valeurs G/I ou plusieurs valeurs SI)
-  - Remarque : Le calcul Autotune fonctionne avec une seule valeur de G/I et une seule valeur de SI. There is currently no existing Autotune algorithm to tune a circadian IC or circadian ISF. Si votre profil d'entrée a plusieurs valeurs, vous pouvez voir dans la section Avertissement la valeur moyenne prise en compte pour calculer votre profil.
+  - Remarque : Le calcul Autotune fonctionne avec une seule valeur de G/I et une seule valeur de SI. Il n'existe actuellement aucun algorithme Autotune pour ajuster un G/I circadien ou une SI circadienne. Si votre profil d'entrée a plusieurs valeurs, vous pouvez voir dans la section Avertissement la valeur moyenne prise en compte pour calculer votre profil.
 - Le bouton Vérifiez Profil d'entrée permet d'ouvrir la Visionneuse de Profil pour vous permettre de faire une vérification rapide de votre profil (unités, DAI, G/I, SI, basal et cible)
   - Remarque : Autotune ne réglera que le G/I (valeur unique), la SI (valeur unique) et les débits de basal (avec variation circadienne). Les unités, la DAI et les cibles resteront inchangées dans le profil de sortie.
 
@@ -87,16 +87,16 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 ![Autotune écran par défaut](../images/Autotune/Autotune_11.png)
 
 - Changer le profil avec l'Automatisation (Désactivé par défaut) : voir [Exécuter Autotune avec une règle d'automatisation](#run-autotune-with-an-automation-rule) ci-dessous. Si vous activez ce paramètre, le profil d'entrée sera automatiquement mis à jour par le profil Tuned, et il sera activé.
-  - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
+  - **Soyez prudent, vous devez prendre confiance en vérifiant pendant plusieurs jours qu'après une mise à jour et l'activation du profil Tuned sans aucune modification, cela améliore effectivement votre boucle**
 
 - Catégoriser UAM comme basal (par défaut On) : Ce paramètre est pour les utilisateurs utilisant AndroidAPS sans aucun glucide entré (Full UAM). Il empêchera (quand désactivé) de catégoriser les RNS en tant que basal.
   - Remarque : si vous avez au moins une heure d'absorption de glucides détectée pendant une journée, alors toutes les données catégorisées comme "RNS" seront catégorisées en tant que basal, quel que soit ce paramètre (Activé ou Désactivé)
 - Nombre de jours de données (par défaut 5) : Vous pouvez définir la valeur par défaut avec ce paramètre. À chaque fois que vous sélectionnez un nouveau profil dans le plugin Autotune, le nombre de jours sera remplacé par cette valeur par défaut
-- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
+- Appliquer le résultat moyen dans les G/I & SI circadienne (Désactivation par défaut) : voir [Profil avec G/I ou SI Circadiens](#circadian-ic-or-isf-profile) ci-dessous.
 
 ### Other settings
 
-- Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. Vous pouvez voir et ajuster ces valeurs dans Configuration > Plugin Sensitivité > Paramètres > Paramètres Avancés
+- Autotune utilise également les ratio Max et Min Autosens pour limiter la variation. Vous pouvez voir et ajuster ces valeurs dans Configuration > Plugin Sensitivité > Paramètres > Paramètres Avancés
 
   ![Autotune écran par défaut](../images/Autotune/Autotune_12.png)
 
@@ -108,7 +108,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
 ### Profil avec G/I ou SI Circadiens
 
-- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can set "Apply average result in circadian IC/ISF"
+- Si vous avez des variations importantes de G/I et/ou de votre SI dans votre profil, et si vous avez entièrement confiance en vos heures et variations circadiens, alors vous pouvez définir "Appliquer le résultat G/I et SI moyen sur le profil circadien"
 
   - Notez que le calcul Autotune sera toujours fait avec une seule valeur, et que la variation circadienne ne sera pas ajustée par Autotune. Ce paramètre n'applique que la variation moyenne calculée pour le G/I et/ou la SI sur vos valeurs circadiennes
 
@@ -118,15 +118,15 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
 
 
-### Tune specific days of the week
+### Ajuster des jours spécifiques de la semaine
 
-- If you click on the checkbox with the eye on the right of "Rune days" parameter, you will see the day selection. You can specify which day of the week should be included in Autotune calculation (in screenshot below you can see an example for "working days" with Saturday and Sunday removed from autotune calculation)
-  - If the number of day included in Autotune calculation is lower than the number of Tune days, then you will see how many days will be included on the right of Tune days selector (10 days in the example below)
-  - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should select a minimum of 21 or 28 Tune days to have 6 or 8 days included in Autotune calculation)
+- Si vous cliquez sur la case à cocher avec l'œil à droite du paramètre "Nb jours", vous verrez la sélection du jour. Vous pouvez spécifier quels jours de la semaine doivent être inclus dans le calcul Autotune (en capture d'écran ci-dessous, vous pouvez voir un exemple pour les "jours de travail" avec le samedi et le dimanche enlevé du calcul Autotune)
+  - Si le nombre de jours inclus dans le calcul Autotune est inférieur au nombre de jours sélectionnés, alors vous verrez combien de jours seront inclus dans le calcul à droite du sélecteur de jours (10 jours dans l'exemple ci-dessous)
+  - Ce paramètre ne donne de bons résultats que si le nombre de jours restants n'est pas trop petit (par exemple si vous ajustez un profil spécifique pour les jours du week-end avec seulement le dimanche et le samedi sélectionnés, vous devez sélectionner un minimum de 21 ou 28 jours de Tune pour avoir 6 ou 8 jours inclus dans le calcul Autotune)
 
 ![Autotune écran par défaut](../images/Autotune/Autotune_14b.png)
 
-- During Autotune calculation, you can see the progress of the calculations ("Partial result day 3 / 10 tuned" on example below)
+- Lors du calcul Autotune, vous pouvez voir la progression des calculs ("Résultat partiel jour 3 / 10 calculé" dans l'exemple ci-dessous)
 
   ![Autotune écran par défaut](../images/Autotune/Autotune_15b.png)
 
@@ -138,9 +138,9 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
 La première étape est de définir le déclencheur correct pour une règle d'automatisation avec Autotune :
 
-Note: for more information on how to set an automation rule, see [here](../DailyLifeWithAaps/Automations.md).
+Remarque : pour plus d'informations sur la façon de définir une règle d'automatisation, voir [ici](../DailyLifeWithAaps/Automations.md).
 
-- You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be run daily (each new run you shift one day later and quickly profile modification should be tiny)
+- Vous devez sélectionner le déclencheur Période répétitive : il ne faut exécuter Autotune au maximum qu'une seule fois par jour, Autotune est conçu pour être exécuté tous les jours (à chaque nouvelle exécution, vous décalez la période de calcul d'un jour et rapidement les modifications du profil devrait être très faibles)
 
   ![Autotune écran par défaut](../images/Autotune/Autotune_16.png)
 
@@ -156,11 +156,11 @@ Note: for more information on how to set an automation rule, see [here](../Daily
 
   ![Autotune écran par défaut](../images/Autotune/Autotune_19b.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
+- Après quelques jours, si vous faites entièrement confiance aux résultats Autotune et si le pourcentage de modification est faible, vous pouvez modifier les [Paramètres Autotune](#autotune-plugin-settings) "Changer le Profil avec l'automatisation" pour l'activer, cela mettre à jour le profil et l'activera automatiquement après le calcul.
 
-Note: if you want to automatically tune profiles for specific days of the week (for example a profile for "Weekend days" and another one for "Working days"), then create one rule for each profile, select the same days in Trigger and in Autotune Action, Tune days must be high enough to be sure tuning will be done with at least 6 or 8 days, and don't forget to select time after 4AM in trigger...
+Remarque : si vous souhaitez modifier automatiquement les profils pour des jours spécifiques de la semaine (par exemple un profil pour "jours de fin de semaine" et un autre pour "jours ouvrables"), puis créez une règle pour chaque profil, sélectionnez les mêmes jours dans le déclencheur et dans l'action Autotune, Le réglage des jours doit être assez élevé pour être sûr que le réglage sera fait avec au moins 6 ou 8 jours, et n'oubliez pas de sélectionner l'heure après 4AM dans le déclencheur...
 
-- See below an example of rule to tune "my profile" on all "Working days" with 14 Tune days selected (so only 10 days included in autotune calculation).
+- Voir ci-dessous un exemple de règle pour régler "mon profil" sur tous les "jours de travail" avec 14 jours de travail sélectionnés (donc seulement 10 jours inclus dans le calcul autotune).
 
 ![Autotune écran par défaut](../images/Autotune/Autotune_20b.png)
 
@@ -172,13 +172,13 @@ Autotune fonctionne avec les informations existantes dans votre base de données
 
 Autotune n'est qu'une aide, il est important de vérifier régulièrement si vous êtes d'accord avec le profil calculé. Si vous avez le moindre doute, modifiez les paramètres Autotune (par exemple le nombre de jours) ou copiez les résultats dans le profil local et ajustez le profil avant de l'utiliser.
 
-Always use Autotune several days manually to check results before applying them. Et ce n'est que lorsque vous faites entièrement confiance aux résultats Autotune et quand la variation devient très faible entre le profil précédent et le profil calculé que vous pouvez commencer à utiliser l'automatisation (jamais avant)
+Utilisez toujours Autotune plusieurs jours manuellement pour vérifier les résultats avant de les appliquer. Et ce n'est que lorsque vous faites entièrement confiance aux résultats Autotune et quand la variation devient très faible entre le profil précédent et le profil calculé que vous pouvez commencer à utiliser l'automatisation (jamais avant)
 
 - Autotune peut très bien fonctionner pour certains utilisateurs et pas du tout pour d'autres, donc **Si vous ne faites pas confiance au résultat Autotune, ne l'utilisez pas**
 
 Il est également important d'analyser les résultats d'Autotune pour comprendre (ou essayer de comprendre) pourquoi Autotune propose ces modifications
 
-- vous pouvez avoir une augmentation ou une diminution de la globalité du profil (par exemple une augmentation du débit de basal total associé à la diminution des valeurs de la SI et du G/I). it could be associated to several following days with autosens correction above 100% (more aggressivity required) or below 100% (you are more sensitive)
+- vous pouvez avoir une augmentation ou une diminution de la globalité du profil (par exemple une augmentation du débit de basal total associé à la diminution des valeurs de la SI et du G/I). il pourrait être associé à plusieurs jours successifs avec correction autosens supérieure à 100% (plus d'agressivité requise) ou inférieure à 100% (vous êtes plus sensible)
 - Parfois, Autotune propose un équilibre différent entre les taux de basal et la SI et G/I (ex basal inférieur et SI / G/I plus agressifs)
 
 Nous recommandons de ne pas utiliser Autotune dans les cas suivants :
@@ -190,7 +190,7 @@ Nous recommandons de ne pas utiliser Autotune dans les cas suivants :
   - Toutes les périodes RNS (sauf si vous n'entrez jamais vos glucides dans AAPS et que le paramètre Categoriser UAM en tant que basal est désactivé) seront catégorisées en basal, cela peut augmenter beaucoup votre Basal (beaucoup plus que nécessaire).
 
 - L'absorption des glucides est très lente : si la plupart de vos glucides sont calculés avec un paramètre min_5m_carbimpact (vous pouvez voir ces périodes avec un petit point orange en haut de la courbe), le calcul des GA pourrait être erroné et conduire à de mauvais résultats.
-  - When you practice sport, you are generally more sensitive and your BG doesn't rise a lot, so during or after an exercise, it's usual to see some periods with slow carbs. Mais si vous avez trop souvent une absorption lente inattendue des glucides, alors vous aurez besoin d'un ajustement de profil (valeur plus élevée de G/I) ou d'un min_5m_carbimpact un peu plus élevé.
-- Vous avez un "très mauvais jours", par exemple coincé plusieurs heures en hyperglycémie avec une énorme quantité d'insuline pour pouvoir descendre à l'intérieur de la cible, ou après un changement de capteur, vous avez obtenu de longues périodes avec des glycémies erronées. If during the pas weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
+  - Quand vous faites du sport, vous êtes généralement plus sensible et votre glycémie ne monte pas beaucoup, donc pendant ou après un exercice, il est habituel de voir quelques périodes avec des glucides lents. Mais si vous avez trop souvent une absorption lente inattendue des glucides, alors vous aurez besoin d'un ajustement de profil (valeur plus élevée de G/I) ou d'un min_5m_carbimpact un peu plus élevé.
+- Vous avez un "très mauvais jours", par exemple coincé plusieurs heures en hyperglycémie avec une énorme quantité d'insuline pour pouvoir descendre à l'intérieur de la cible, ou après un changement de capteur, vous avez obtenu de longues périodes avec des glycémies erronées. Si pendant les précédentes semaines vous avez seulement un ou deux "mauvais jours", vous pouvez désactiver manuellement ces jours dans le calcul automatique pour les exclure du calcul, et à nouveau **vérifiez soigneusement si vous pouvez faire confiance aux résultats**
 - Si le pourcentage de modification est trop important
   - Vous pouvez essayer d'augmenter le nombre de jours pour obtenir des résultats plus lisses

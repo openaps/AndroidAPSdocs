@@ -147,6 +147,8 @@ Installiere Android Studio, indem Du, wie in den folgenden Screenshots gezeigt, 
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
+If you want to save hard disk space, your you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
 ![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
