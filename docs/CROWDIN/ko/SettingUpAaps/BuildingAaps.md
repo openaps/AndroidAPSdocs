@@ -15,12 +15,12 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 | AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
 | ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                |                                                        | 5.6    | 11  |
-| 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1    | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                             | up to Narwhal                                          | 7.3    | 17  |
+| 2.6.2                   | 3.6.1                                                |                                                        | 5.6.4  | 11  |
+| 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1.1  | 13  |
+| [3.1.0.3](#version3100) | 2020.3.1                                             | up to Narwhal                                          | 7.3.3  | 17  |
 | [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | up to Narwhal                                          | 8.2    | 17  |
 | [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | up to Narwhal                                          | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | Narwhal                                                | 8.11   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | Narwhal                                                | 8.11.1 | 21  |
 
 The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
 
