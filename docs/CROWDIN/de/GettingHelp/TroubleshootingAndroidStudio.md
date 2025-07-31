@@ -168,7 +168,7 @@ Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal 
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), wähle das JDK aus, das zur **AAPS**-Version passt (das ist die von Dir notierte Version aus der Anforderungstabelle). In Vendor (2) select any Vendor. Location (3): Ändere nichts.
+4. In Version (1), wähle das JDK aus, das zur **AAPS**-Version passt (das ist die von Dir notierte Version aus der Anforderungstabelle). In Vendor (2) wähle einen beliebigen Anbieter aus. Location (3): Ändere nichts.
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -206,7 +206,7 @@ Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal 
 
   Wenn Du eine Fehlermeldung wie die unten siehst, verwendest Du wahrscheinlich ein Windows 10 32-Bit-Betriebssystem. Dies wird seit Android Studio 3.5.1 und höher nicht unterstützt und es gibt leider nichts, was die **AAPS**-Entwickelnden dagegen tun können!
 
-  There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  Es gibt im Internet eine Reihe von Anleitungen (wie z. B. [diese](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)), die beschreiben, wie Du herausfindest, ob Du ein 32-Bit oder 64-Bit Betriebssystem hast.
 
   ![Screenshot konnte den Daemon-Prozess nicht starten](../images/AndroidStudioWin10_32bitError.png)
 
