@@ -286,7 +286,7 @@ Sei vorsichtig und aktiviere ihn erst dann, wenn Du vollständig verstanden hast
 - Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Abgabemenge von Bolus Insulin entspricht, das Du für eine Mahlzeitenkorrektur brauchst.
 - Diese Einschränkung gilt auch für die Ergebnisse des Bolus-Rechners.
 
-### Max allowed carbs
+### Max erlaubte KH [g]
 
 - Legt die maximale Kohlenhydratmenge, für die der **AAPS**-Bolus-Rechner einen Bolus abgeben darf, fest.
 - Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhinden.
@@ -295,7 +295,7 @@ Sei vorsichtig und aktiviere ihn erst dann, wenn Du vollständig verstanden hast
 ## Loop
 
 (Preferences-aps-mode)=
-### APS mode
+### APS-Modus
 Wechsel zwischen Open Loop, Closed Loop und Unterbrechung bei niedrigen BZ (LGS).
 
 ![Konfigurations-Generator - Loop Modus](../images/ConfigBuilder_LoopLGS.png)
@@ -317,14 +317,14 @@ Der Closed Loop arbeitet im Rahmen zahlreicher Sicherheitsgrenzen, die Du indivi
 
 Der Closed Loop steht ab dem **[Ziel 6 ](#objectives-objective6)** (oder darüber) zur Verfügung und setzt eine kompatible Pumpe voraus.
 
-#### Low Glucose Suspend (LGS)
+#### Abschalten der Basalrate bei niedrigen Werten (Low Glucose Suspend - LGS)
 
 In diesem Modus ist [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) auf Null gesetzt.
 
-Das bedeutet, dass bei fallenden Glukosewerten, **AAPS** das Basal für Dich reduzieren kann. Wenn aber die Glukosewerte steigen, wird keine automatische Korrektur vorgenommen. Die Basalrate wird genauso so bleiben, wie sie im aktuellen **Profil** hinterlegt ist. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+Das bedeutet, dass bei fallenden Glukosewerten, **AAPS** das Basal für Dich reduzieren kann. Wenn aber die Glukosewerte steigen, wird keine automatische Korrektur vorgenommen. Die Basalrate wird genauso so bleiben, wie sie im aktuellen **Profil** hinterlegt ist. Nur wenn das IOB negativ ist (wegen einer vorangegangenen Abschaltung der Basalrate bei niedrigen Werten) wird, um den **Glukosewert** zu senken, zusätzliches Insulin abgegeben.
 
 (Preferences-minimal-request-change)=
-### Minimal request change
+### Minimaler Wert zur Anfrage einer Änderung
 
 Wenn Du im **Open Loop** bist, erhältst Du jedes Mal, wenn **AAPS** eine Basalraten-Anpassung empfiehlt, eine Benachrichtigung. Um die Anzahl der Benachrichtigungen zu reduzieren, kannst Du entweder einen [breiteren BZ-Zielbereich](#profile-glucose-targets) verwenden oder den Prozentsatz des minimalen Werts zur Anfrage einer Änderung erhöhen. Diese definiert, wie hoch die relative Änderung sein muss, damit eine Benachrichtigung erscheint.
 
@@ -367,11 +367,11 @@ Im COB-Diagramm auf dem Startbildschirm werden Zeiten, in denen min_5m_impact ve
 
 ![COB-Diagramm](../images/Pref2020_min_5m_carbimpact.png)
 
-### Meal max absorption time
+### Maximale Dauer der Essens-Resorption [h]
 
 Wenn du oft Mahlzeiten mit viel Fett oder Eiweiß zu dir nimmst, wirst du die Resorptionszeit für das Essen erhöhen müssen.
 
-### Advanced settings - autosens ratio
+### Erweiterte Einstellungen - Autosens-Faktoren
 
 ![Resorptions-Einstellungen](../images/Pref2020_Absorption.png)
 
@@ -424,15 +424,15 @@ Bei der Verwendung von NSClientV3 müssen alle Uploader die API V3 verwenden. Da
 - Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
 - Lasse "Mit Websockets verbinden" aktiviert (empfohlen).
 
-### Synchronization
+### Synchronisierung
 
 Die Art der Synchronisierung hängt davon ab, wie Du **AAPS** nutzen möchtest.
 
 Du kannst festlegen welche Informationen [von und zu Nightscout hoch- bzw. heruntergeladen werden sollen](#Nightscout-aaps-settings).
 
-### Alarm options
+### Alarm-Optionen
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
+![Alarm-Optionen](../images/Pref2024_NSClient_Alarms.png)
 
 - In den Alarm-Optionen legst Du fest, welche Standard-Nightscout-Alarme in AAPS genutzt werden sollen. **AAPS** wird dann alarmieren, wenn Nightscout einen Alarm auslöst.
 - Damit die Alarme ausgelöst werden können, musst Du in den [Nightscout-Variablen](https://nightscout.github.io/nightscout/setup_variables/#alarms) Werte für Urgent High, High, Low und Urgent Low Alarme setzen.
@@ -441,7 +441,7 @@ Du kannst festlegen welche Informationen [von und zu Nightscout hoch- bzw. herun
 - Benachrichtigungen über Nightscout-[Ankündigungen](https://nightscout.github.io/nightscout/discover/#announcement): Nightscout-Ankündigungen werden dann auch in der **AAPS**-Benachrichtigungszeile angezeigt.
 - Du kannst die Schwellenwerte für veraltete Daten und stark veraltete Alarme ändern, wenn nach einer bestimmten Zeit keine Daten von Nightscout empfangen werden.
 
-### Connection settings
+### Verbindungseinstellungen
 
 ![NSClient Verbindungseinstellungen](../images/ConfBuild_ConnectionSettings.png)
 
@@ -452,7 +452,7 @@ Du kannst festlegen welche Informationen [von und zu Nightscout hoch- bzw. herun
 - Gib zum Löschen aller SSIDs ein Leerzeichen in das Feld ein.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
+### Erweiterte Einstellungen (Nightscout-Client)
 
 ![NS-Client - erweiterte Einstellungen](../images/Pref2024_NSClientAdv.png)
 
