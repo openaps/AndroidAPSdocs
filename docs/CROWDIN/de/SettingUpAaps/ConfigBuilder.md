@@ -171,7 +171,7 @@ Dieses Modul kann nicht deaktiviert werden, da es ein zentraler Bestandteil von 
 
 Weitere Informationen findest Du auf der Seite [Ziele (Objectives)](../SettingUpAaps/CompletingTheObjectives.md).
 
-## Synchronization
+## Synchronisierung
 
 In diesem Abschnitt kannst Du einstellen, ob und wenn ja wohin **AAPS** Deine Daten senden darf.
 
