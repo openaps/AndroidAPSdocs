@@ -57,7 +57,7 @@ Gehe auf Deinem Smartphone zu **Apps > AAPS > Berechtigungen**. Stelle sicher, d
 
 ![grafik](../images/remote-control-08.png)
 
-### Date and time syncing
+### Datum und Uhrzeit synchronisieren
 
 Die Zeit auf beiden Telefonen muss synchron sein. Am einfachsten erfolgt dies direkt über das Mobilfunknetz. Zeitunterschiede können zu Authentifizierungsproblemen führen.
 
