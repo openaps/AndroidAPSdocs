@@ -9,7 +9,7 @@ Hinweis: Die Tidepool-Organisation arbeitet auch daran, den iOS Loop als Produkt
 
 ## Schritt 1 - Ein Tidepool-Konto erstellen
 
--Navigate to [tidepool.org](https://www.tidepool.org/)
+-Navigiere zu [tidepool.org](https://www.tidepool.org/)
 
 - Gehe auf “Personal Sign Up” oder “Sign Up”
 
