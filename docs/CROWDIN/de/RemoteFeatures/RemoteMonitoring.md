@@ -26,7 +26,7 @@ Es gibt einige Möglichkeiten (z. B. mit SMS-Befehlen), AAPS fernsteuern zu kön
 Eine Smartwatch kann die AAPS-Steuerung speziell mit Kindern vereinfachen. Es sind einige verschiedene Konfigurationen möglich:
 
 - Auf einer kompatiblen Smartwatch kann die [AAPSClient WearOS App](https://github.com/nightscout/AndroidAPS/releases/) installiert werden, die mit der AAPSClient App auf dem Eltern-Smartphone verbunden wird. Damit können der aktuelle Glukosewert und der Loop-Status angezeigt werden. Zusätzlich können dann KH-Einträge vorgenommen werden und auch temporäre Ziele und Profiländerungen aktiviert werden. Die Abgabe eines Bolus ist NICHT über die WearOS App möglich.
-- Alternativ kann die [AAPS WearOS-App](../WearOS/WearOsSmartwatch.md) erstellt und auf einer kompatiblen Smartwatch installiert werden. Die App ist zwar mit der Smartwatch des Kindes verbunden, aber die Smartwatch selbst wird nicht durch ein Elternteil getragen. Damit sind dann alle Funktionen der oben beschriebenen NSClient-Version (Smatwatch) verfügbar und zusätzlich die Abgabe eines Bolus möglich. This allows the parent to administer insulin without needing to remove the kid's phone from however it is kept on them.
+- Alternativ kann die [AAPS WearOS-App](../WearOS/WearOsSmartwatch.md) erstellt und auf einer kompatiblen Smartwatch installiert werden. Die App ist zwar mit der Smartwatch des Kindes verbunden, aber die Smartwatch selbst wird nicht durch ein Elternteil getragen. Damit sind dann alle Funktionen der oben beschriebenen NSClient-Version (Smatwatch) verfügbar und zusätzlich die Abgabe eines Bolus möglich. Damit kann ein Elternteil einen Bolus abgeben, ohne an das in Reichweite befindliche Smartphone des Kindes zu müssen.
 
 ## Dinge, die zu beachten sind
 
