@@ -43,7 +43,7 @@ Diese Anleitung geht davon aus, dass Du eine neue Pod-Sitzung startest. Falls di
 
 **Sicherheit geht vor** - Stelle sicher, dass Du auf eventuell auftretende Fehler reagieren kannst, bevor Du diesen Prozess beginnst: zusätzliche Pods, Insulin, geladener RileyLink und Smartphone mit vollem Akku sind unbedingt notwendig.
 
-**Dein Omnipod PDM funktioniert nicht mehr, wenn der AAPS Omnipod Treiber Deinen Pod aktiviert hat**. Bisher hast Du Deinen Omnipod PDM verwendet, um Befehle an Deinen Omnipod Eros Pod zu senden. Ein Omnipod Eros Pod kann sich nur mit einem einzigen Gerät verbinden. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. Dies bedeutet, dass, sobald Du einen Omnipod Eros Pod mit Deinem RileyLink über den AAPS Omnipod Treiber aktiviert hast, **wirst Du Deinen PDM nicht mehr mit diesem Pod** verwenden können. Der AAPS Omnipod Treiber mit dem RileyLink ist dann Dein aktiver PDM. *Dies bedeutet NICHT, dass Du Deinen PDM wegwerfen solltest. Es wird empfohlen, ihn als Backup zu behalten und für Notfälle, falls AAPS nicht korrekt funktioniert.*
+**Dein Omnipod PDM funktioniert nicht mehr, wenn der AAPS Omnipod Treiber Deinen Pod aktiviert hat**. Bisher hast Du Deinen Omnipod PDM verwendet, um Befehle an Deinen Omnipod Eros Pod zu senden. Ein Omnipod Eros Pod kann sich nur mit einem einzigen Gerät verbinden. Das Gerät, das den Pod erfolgreich aktiviert, ist das einzige Gerät, das von diesem Zeitpunkt an mit ihm kommunizieren darf. Dies bedeutet, dass, sobald Du einen Omnipod Eros Pod mit Deinem RileyLink über den AAPS Omnipod Treiber aktiviert hast, **wirst Du Deinen PDM nicht mehr mit diesem Pod** verwenden können. Der AAPS Omnipod Treiber mit dem RileyLink ist dann Dein aktiver PDM. *Dies bedeutet NICHT, dass Du Deinen PDM wegwerfen solltest. Es wird empfohlen, ihn als Backup zu behalten und für Notfälle, falls AAPS nicht korrekt funktioniert.*
 
 **Du kannst mehrere RileyLinks konfigurieren, aber nur ein RileyLink kann gleichzeitig mit einem Pod kommunizieren.** Der AAPS Omnipod Treiber unterstützt die Möglichkeit, mehrere RileyLinks in der RileyLink-Konfiguration hinzuzufügen, jedoch kann nur ein RileyLink gleichzeitig für das Senden und Empfangen der Kommunikation ausgewählt werden.
 
@@ -191,7 +191,7 @@ Bevor Du einen Pod aktivieren kannst, stelle sicher, dass Du Deine RileyLink-Ver
 
 Unter normalen Umständen beträgt die Lebensdauer eines Pods drei Tage (72 Stunden) und zusätzlich 8 Stunden nach der Pod-Ablaufwarnung und somit insgesamt 80 Stunden.
 
-To deactivate a pod (either from expiration or from a pod failure):
+Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der Nutzungsdauer oder wegen eines Pod-Fehlers):
 
 1. Navigiere zur Registerkarte **Omnipod (POD)** und klicke auf den **POD MGMT (1)** Button und dann im **Pod Management** Screen klicke auf den **Pod deaktivieren (2)** Button.
 
@@ -574,7 +574,7 @@ Die Omnipod Treibereinstellungen sind aus der oberen linken Ecke **Hamburger Men
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
-The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
+Die Einstellungen sind nach Gruppen sortiert unten aufgelistet. Du kannst die meisten der Einstellungen über einen Kippschalter aktivieren oder deaktivieren:
 
 ![Omnipod_Settings_3](../images/omnipod/Omnipod_Settings_3.png)
 
@@ -595,7 +595,7 @@ Ermöglicht das Scannen eines Pod-Kommunikationsgeräts. Der Omnipod-Treiber kan
 
 ### Bestätigungstöne
 
-Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
+Bestätigt mit Signaltönen des Pods die Abgabe und Änderung von Bolus, Basalrate, SMB und TBR.
 
 - **\*Bolus-Töne aktiviert:** Aktiviert oder deaktiviert Bestätigungstöne, wenn ein Bolus abgegeben wird.
 - **\*Basal-Töne aktiviert:** Aktiviert oder deaktiviert die Bestätigungstöne, wenn eine neue Basalrate eingestellt wird, eine aktive Basalrate abgebrochen oder die aktuelle Basalrate geändert wird.
@@ -606,7 +606,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 
 Bietet AAPS-Warnungen und Nightscout-Ankündigungen für den Ablauf eines Pods, die Abschaltung oder einen niedrigen Füllstand basierend auf den definierten Schwellenwerten.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. Um den Alarm MANUELL zu deaktivieren, musst du die Registerkarte Omnipod (POD) aufrufen und die Schaltfläche AKK ALERTS drücken.*
+*Beachte, dass eine AAPS-Benachrichtigung IMMER für jeden Alarm nach der ersten Kommunikation mit dem Pod ausgegeben wird, da der Alarm ausgelöst wurde. Wenn Du die Benachrichtigung löschst, wird der Alarm NICHT gelöscht, AUSSER wenn die automatische Bestätigung von Pod-Alarmen aktiviert ist. Um den Alarm MANUELL zu deaktivieren, musst du die Registerkarte Omnipod (POD) aufrufen und die Schaltfläche AKK ALERTS drücken.*
 
 - **\*Ablauferinnerung aktiviert:** Aktiviere oder deaktiviere die Pod-Ablauferinnerung, die ausgelöst wird, wenn die festgelegte Anzahl von Stunden vor dem Herunterfahren erreicht ist.
 - **Stunden bis zum Podende:** Legt die Anzahl der Stunden vor der Abschaltung des aktiven Pods fest, die den Alarm zur Pod-Ablauferinnerung auslöst.
@@ -618,7 +618,7 @@ Bietet AAPS-Warnungen und Nightscout-Ankündigungen für den Ablauf eines Pods, 
 
 Meldet AAPS-Benachrichtigungen und akustische Telefonwarnungen, wenn unsicher ist, ob TBR-, SMB- oder Bolus-Ereignisse erfolgreich waren.
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+*HINWEIS: Dies sind nur Benachrichtigungen, es werden keine akustischen Signale ausgegeben.*
 
 - **Ton für unsichere TBR-Benachrichtigung aktiviert:** Aktiviere oder deaktiviere diese Einstellung, um einen akustischen Alarm und eine visuelle Benachrichtigung auszulösen, wenn AAPS unsicher ist, ob eine TBR erfolgreich gesetzt wurde.
 - **\*Ton für Benachrichtigung bei unsicheren SMB-Ereignis aktiviert:** Aktiviere oder deaktiviere diese Einstellung, um einen akustischen Alarm und eine visuelle Benachrichtigung auszulösen, wenn AAPS unsicher ist, ob eine SMB erfolgreich zugestellt wurde.
@@ -716,11 +716,11 @@ Die Batteriestandsmeldung ist eine Einstellung, die aktiviert werden kann, um de
 
 ### Pod Fehler
 
-Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. Eine Liste an Fehlercodes findest du [hier](https://github.com/openaps/openomni/wiki/Fault-event-codes), um die Ursache zu ermitteln.
+Pods fallen gelegentlich aus unterschiedlichen Gründen aus, u. a. wegen Hardwareproblemen mit dem Pod selbst. Am besten ist es, diese nicht bei Insulet anzugeben, da AAPS kein zugelassener Anwendungsfall ist. Eine Liste an Fehlercodes findest du [hier](https://github.com/openaps/openomni/wiki/Fault-event-codes), um die Ursache zu ermitteln.
 
 ### Verhindere Pod Fehler 49
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. Wir empfehlen Benutzern, in den Nightscout-Client Einstellungen *nur hochladen (Sync-deaktivieren)* auszuwählen, um mögliche Fehler zu vermeiden.
+Dieser Fehler hängt mit einem fehlerhaften Pod-Status für einen Befehl oder einem Fehler während der Insulinabgabe zusammen. Wir empfehlen Benutzern, in den Nightscout-Client Einstellungen *nur hochladen (Sync-deaktivieren)* auszuwählen, um mögliche Fehler zu vermeiden.
 
 ### Pumpe nicht erreichbar Alarme
 
@@ -739,7 +739,7 @@ Bitte beachte, dass beim Importieren von Einstellungen die Möglichkeit besteht,
 
 ### Omnipod-Treiberwarnungen
 
-Bitte beachte, dass der Omnipod-Treiber auf der Registerkarte **Übersicht** eine Vielzahl einzigartiger Warnungen anzeigt. Die meisten davon sind informativ und können ignoriert werden, während einige dem Benutzer eine Aktion vorschlagen, um die Ursache für die ausgelöste Warnung zu beheben. A summary of the main alerts that you may encounter is listed below:
+Bitte beachte, dass der Omnipod-Treiber auf der Registerkarte **Übersicht** eine Vielzahl einzigartiger Warnungen anzeigt. Die meisten davon sind informativ und können ignoriert werden, während einige dem Benutzer eine Aktion vorschlagen, um die Ursache für die ausgelöste Warnung zu beheben. Im Folgenden findest du eine Zusammenfassung der wichtigsten Warnmeldungen, die dir begegnen können:
 
 #### Kein aktiver Pod
 
