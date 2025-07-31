@@ -21,8 +21,8 @@ Installiere die **AAPS Wear-**-APK mit [Wear-Installer 2](https://youtu.be/abgN4
 Keine Einschränkung in den **AAPS Wear-** Operationen.
 
 ```{admonition} Android Wear OS 5
-:class: warning
-**FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
+:class: Warnung
+**FIRMWARE UPDATES WERDEN MIT SEHR HOHER WAHRSCHEINLICHHKEIT DIE AAPS-ZIFFERBLÄTTER UNBRAUCHBAR MACHEN: DEAKTIVIERE SMARTWATCH UPDATES**.
 ```
 
 ### Galaxy Watch mit vorinstalliertem Wear OS 5
@@ -31,10 +31,10 @@ Keine Einschränkung in den **AAPS Wear-** Operationen.
 
 ```{admonition} Android Wear OS 5
 :class: warning
-Installing the AAPS Watch Face has to be done with [Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk) after installing the Wear app.<br>
-Accidental change of the Watch Face to another one requires the procedure above to be repeated.<br>
-Changing the dedicated Watch Face parameters like: Dark, Watchdivider, etc. is not possible.<br><br>
-**FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
+Die Installation des AAPS-Zifferblatts muss mit dem [Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk) nach der Installation der Wear App erfolgen.<br>
+Ein versehnentliches Ändern des Zifferblattes auf ein anderes Zifferblatt, hat zur Folge, dass die oben beschriebene Prozedur wiederholt werden muss<br>
+Ändern spezieller Zifferblatt-Parameter wie: Dark, Watchdivider, etc. ist nicht möglich.<br><br>
+**FIRMWARE UPDATES WERDEN MIT SEHR HOHER WAHRSCHEINLICHHKEIT DIE AAPS-ZIFFERBLÄTTER UNBRAUCHBAR MACHEN: DEAKTIVIERE SMARTWATCH UPDATES**.
 ```
 
 Eine Alternative kann der [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) mit einer Komplikation sein.
@@ -138,9 +138,9 @@ Tippe side "plug-in" socket in der App, um die WearOS.apk auf Dein Smartwatch ho
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-### General troubleshooting recommendations for Wear OS 5
+### Allgemeine Empfehlungen zur Fehlerbehebung bei Wear OS 5
 
-- WLAN Tethering nicht verwenden. That won't work.
+- WLAN Tethering nicht verwenden. Das wird nicht funktionieren.
 - ADB-Debugging muss nicht auf dem Smartphone aktiviert werden (nur auf der Smartwatch). Deaktiviere das ADB Debugging auf dem Smartphone.
 - Achte darauf, dass Du Dich mit Deinem lokalen Netzwerk verbindest, in dem sich das Smartphone und die Smartwatch gegenseitig „sehen“ können (verwende nicht Dein WLAN-Gästenetzwerk).
 - Für die Galaxy Watch 7 musst Du den Wear Installer verwenden, da dieser Dir die Möglichkeit gibt das „AAPS(Custom)“-Zifferblatt bei der Installation auszuwählen.
@@ -180,7 +180,7 @@ Wenn das Sideloading der **AAPS** Wear.apk auf die Smartwatch erfolgreich war, s
 
 ![24-10-23, successful galaxy watch photo](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
-### Troubleshooting the **AAPS** watch- **AAPS** phone communication
+### Verbindungsprobleme zwischen **AAPS** Smartwatch und **AAPS** Smartphone beheben
 
 1.  Wenn Easy Fire Tools sich nicht verbindet oder Du die Meldung "authorisation failed" erhälst > Überprüfe, ob die IP-Adresse korrekt eingegeben wurde.
 2.  Überprüfe, ob die Smartwatch mit dem Internet (und nicht nur über Bluetooth mit dem Smartphone) verbunden ist.
