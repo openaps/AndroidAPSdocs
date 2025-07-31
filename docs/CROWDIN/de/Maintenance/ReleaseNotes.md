@@ -23,7 +23,7 @@ Da die Releasefolge und deren Veröffenlichungszeitpunkte immer wieder erfragt w
 
 ## Android Version und AAPS Version
 
-If your smartphone uses an Android Version older than Android 11 you will not be able to use AAPS v3.3 and up as it requires at least Android 11.
+Wenn die Android-Version Deines Smartphones älter als Android 11 ist, kannst Du nicht auf AAPS 3.3 updaten. Die Mindestanforderung ist Android 11.
 
 Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zwei ältere Versionen zur Verfügung gestellt, bei denen die Versionsprüfung angepasst wurde. Es sind keine anderen Verbesserungen enthalten.
 
@@ -58,41 +58,41 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 (version3300)=
 ## Version 3.3.2.0
 
-Release date: 27-03-2025
+Erscheinungsdatum: 27.03.2025
 
 ### So wird aktualisiert
 
-* [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* Um diese Version zu erstellen, benötigst Du die [Android Studio Version „Meerkat“](#Building-APK-recommended-specification-of-computer-for-building-apk-file) oder höher. Auch wenn Du bereits eine 3.3.x-Version erstellt hast, musst Du das Android Studio erneut aktualisieren.
 
-### Starting this version, notification and version enforcement has been simplified and softed and works following way:
-*  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
-*  After expiration LGS mode is enforced
-*  You'll receive warning/notifications less often:
-   - 28+ days remaining: every 7 days
-   - 27-14 days remaining: every 3 days
-   - then once a day
-   - Notification will be generated after noon to not bother you during nights
-* There are only 2 kinds of notification
-   - New version available (has no effect on AAPS)
-   - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
+### Beginnend mit dieser Version, wurde die Benachrichtigung und die Pflicht auf die neueste Version aktualisieren zu müssen vereinfacht und aufgeweicht. Das Vorgehen ist wie folgt:
+*  Frist läuft nicht ab, wenn das Gerät offline ist (wenn keine Verbindung zum Internet besteht). D. h. es gibt keine 60- und 90-Tage „Übergangsfristen“ mehr.
+*  Nach Ablauf wird der LGS-Modus erzwungen
+*  Du erhältst seltener Warnungen/Benachrichtigungen:
+   - 28+ Tage verbleibend: alle 7 Tage
+   - 27-14 Tage verbleibend: alle 3 Tage
+   - dann einmal am Tag
+   - Benachrichtigung wird nach Mittag generiert, um Dich während der Nacht nicht zu stören
+* Es gibt nur 2 Benachrichtigungsarten
+   - Neue Version verfügbar (hat keine Auswirkung auf AAPS)
+   - Anwendung läuft bald ab (noch keine Auswirkung auf AAPS) / ist abgelaufen (AAPS wird in den LGS-Modus umgestellt)
 
-### News
+### Neues
 
-* SMS RESTART command @MilosKozak
-* Watch Profile switch parameters @olorinmaia
-* Dark mode AAPS V2 watchface @olorinmaia
-* G7 data exchange improvements @olorinmaia
-* Widget configuration @MilosKozak
-* Radiobuttons UI improvements @olorinmaia
-* Automation: position choosing from map @MilosKozak
-* Version visible on main screens @MilosKozak
-* Compilation with existing git system in enforced (no zip downloads)
-* Show version on main screen @MilosKozak
-* Tidepool upload improvements @ConstantinMatheis
+* SMS RESTART Befehl @MilosKozak
+* Smartwatch Profilwechsel-Parameter @olorinmaia
+* Dark Mode AAPS V2 Zifferblatt @olorinmaia
+* Verbesserung des G7-Datenaustauschs @olorinmaia
+* Widget-Konfiguration @MilosKozak
+* Radiobuttons UI verbessert @olorinmaia
+* Automatisierung: Position aus der Karte auswählen @MilosKozak
+* Version auf der Übersicht sichtbar @MilosKozak
+* Kompilierung mit vorhandenem Git-System wird erzwungen (keine Zip-Downloads)
+* Version auf der Übersicht anzeigen @MilosKozak
+* Tidepool-Upload verbessert @ConstantinMatheis
 
 ### Behobene Fehler
 
-* Dash unbonding fix @Andreas
+* Dash: Problem mit Entkoppelung behoben @Andreas
 * Garmin fixes @robertbuessow @suside
 * Fix of IOB displaying in dialogs @olorinmaia
 * Objectives spelling and validation improvements @MilosKozak
