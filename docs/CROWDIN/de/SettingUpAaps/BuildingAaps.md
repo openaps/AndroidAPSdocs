@@ -17,10 +17,10 @@ Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 | ----------------------- | ------------------------------------------------------- | -------------------------------------------------------- | ------ |:--- |
 | 2.6.2                   | 3.6.1                                                   |                                                          | 5.6.4  | 11  |
 | 2.8.2.1                 | 4.1.1                                                   |                                                          | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                                | up to Narwhal                                            | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                     | up to Narwhal                                            | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                         | up to Narwhal                                            | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | Narwhal                                                  | 8.11.1 | 21  |
+| [3.1.0.3](#version3100) | 2020.3.1                                                | bis zu Narwhal                                           | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                     | bis zu Narwhal                                           | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                         | bis zu Narwhal                                           | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | Narwhal                                                  |        | 21  |
 
 Die „empfohlene Version“ enthält im Paket bereits die entsprechende JVM-Version. Die empfohlene Version ist gleichzeitig auch die Mindestversion, die Du zum Erstellen von **AAPS** nutzen kannst. Mit einer älteren Version als der, die unter „empfohlen“ aufgeführt ist, wirst Du **NICHT** in der Lage sein, AAPS zu erstellen. Solltest Du eine andere Version verwenden, kann es aufgrund der JVM-Version zu Problemen kommen. Schaue auf den Seiten zur [Fehlerbehebung für Android Studio](#troubleshooting_androidstudio-uncommitted-changes) nach, um diese Probleme zu lösen. Wenn Deine aktuelle Android Studio Version nicht in der Tabelle aufgeführt ist, musst Du sie zuerst aktualisieren.
 
@@ -147,7 +147,7 @@ Installiere Android Studio, indem Du, wie in den folgenden Screenshots gezeigt, 
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, your you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+Wenn Du Festplattenplatz sparen möchtest, kannst Du Option Android Virtual Device deaktivieren: Diese wird nicht zum Erstellen von **AAPS** genutzt.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -211,7 +211,7 @@ Android Studio wird dann mit **Gradle** (einem Entwicklungswerkzeug für Android
 
 Überprüfe auf dem Begrüßungsbildschirm von Android Studio, ob „**Projects**“ (1) auf der linken Seite hervorgehoben ist.
 
-Then click "**Clone Repository**" (2) on the right:
+Klick dann rechts auf „**Clone Repository**“ (2):
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
