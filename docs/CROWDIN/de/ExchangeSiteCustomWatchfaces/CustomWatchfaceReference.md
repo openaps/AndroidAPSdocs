@@ -11,13 +11,13 @@ Diese Seite ist für Designer neuer Zifferblättern gedacht. Es listet alle verf
 Die Zifferblatt-Datei ist eine einfache Zip-Datei. Damit sie auch als Zifferblatt erkannt werden kann, muss sie die folgenden Dateien enthalten:
 
 - Eine Bilddatei mit dem Namen "CustomWatchface" (zulässige Bitmap-formate sind `CustomWatchface.jpg`, `CustomWatchface.png` oder ein Vektor `CustomWatchface.svg`). Diese Datei wird als Icon in der Zifferblatt-Auswahl angezeigt, wenn Du auf "Watchface laden" klickst. Das Bild wird auch auf den Buttons im WEAR-Tab angezeigt.
-- Eine Datei mit dem Namen `CustomWatchface.json` (siehe [JSON-Struktur](#cwf-reference-json-structure) unten). Diese zweite Datei ist die Schlüsseldatei, die alle Informationen enthält, die für das Design des Zifferblattes bestimmt. Diese json-Datei muss gültig sein (das ist wahrscheinlich der schwierigste Punkt, wenn Du diese Datei von Hand in einem Texteditor bearbeitest, weil bereits ein fehlendes oder zusätzliches Komma ausreicht, um das json-Format zu zerstören). This JSON file must also include a `"metadata"` block with a `"name"` key with not empty value. Dies wird später der Zifferblatt-Name sein (siehe [Metadaten Einstellungen](#cwf-reference-metadata-settings) unten)
+- Eine Datei mit dem Namen `CustomWatchface.json` (siehe [JSON-Struktur](#cwf-reference-json-structure) unten). Diese zweite Datei ist die Schlüsseldatei, die alle Informationen enthält, die für das Design des Zifferblattes bestimmt. Diese json-Datei muss gültig sein (das ist wahrscheinlich der schwierigste Punkt, wenn Du diese Datei von Hand in einem Texteditor bearbeitest, weil bereits ein fehlendes oder zusätzliches Komma ausreicht, um das json-Format zu zerstören). Diese JSON-Datei muss auch einen `"metadata"` Block mit einem `"name"` Schlüssel mit nicht leerem Wert enthalten. Dies wird später der Zifferblatt-Name sein (siehe [Metadaten Einstellungen](#cwf-reference-metadata-settings) unten)
 - Die ZIP-Datei sollte so klein wie möglich (kleiner als 500 KB) sein. Eine zu große Datei wird geblockt und nicht an die Smartwatch übertragen.
 
 Die ZIP-Datei kann auch einige zusätzliche Ressourcen-Dateien enthalten:
 
 - Hardcodierte Dateinamen für Bilder, die in Standardansichten der Smartwatch verwendet werden (wie `Background`, `CoverChart` ...) findest Du in der [Liste der hartkodierten Ressourcen-Dateien](#cwf-reference-list-of-hardcoded-resource-files) unten. Gültige Dateiformate sind: `jpg`, `png` oder `svg`. Für die meisten wirst Du `png` oder `svg`, die mit Transparenz umgehen können, nutzen müssen. (jpg sind kleiner als png, können aber keine Transparenz darstellen). Hinweis: Das beste Verhältnis zwischen Qualität und Dateigröße bietet das Vektorformat (svg-Dateien).
-- Additional resource files with free names. Diese zusätzlichen Dateien können entweder Bilddateien oder Schriftarten sein (`ttf` und `otf` Formate werden für Schriftarten akzeptiert). Beachte bitte, dass für diese zusätzlichen Dateien `Dateiname` (ohne die Erweiterung) als Schlüsselwert innerhalb der JSON-Datei verwendet wird, um festzulegen, wo oder wann diese Dateien verwendet werden sollen.
+- Zusätzliche Ressourcen-Dateien mit freien Namen. Diese zusätzlichen Dateien können entweder Bilddateien oder Schriftarten sein (`ttf` und `otf` Formate werden für Schriftarten akzeptiert). Beachte bitte, dass für diese zusätzlichen Dateien `Dateiname` (ohne die Erweiterung) als Schlüsselwert innerhalb der JSON-Datei verwendet wird, um festzulegen, wo oder wann diese Dateien verwendet werden sollen.
   - Bilddateien werden häufig als Hintergrund für Textansichten oder für dynamische Animationen (wie zum Beispiel den Akkustand zwischen 0% und 100%) eingesetzt
   - Schriftarten-Dateien ermöglichen Dir eigene Schriftarten innerhalb Deines Zifferblattes zu nutzen
 
@@ -25,19 +25,19 @@ Die ZIP-Datei kann auch einige zusätzliche Ressourcen-Dateien enthalten:
 
 ## JSON-Struktur
 
-JSON files can be edited in Notepad (or notepad++) text editor (prefer notepad++ that recognize JSON and use color formatting)
+JSON-Dateien können im Texteditor Editor (oder Notepad++) bearbeitet werden (Notepad++ erkennt JSON und nutzt Farbformatierungen und ist daher zu bevorzugen)
 
 - Es enthält String Keys `"string_key":` und Schlüsselwerte, die Strings wie `"key value"`, integer, boolean wie `true`oder `false` oder Datenblöcke sein können.
-- each value is separated by a comma `,`
+- Werte werden durch ein Komma `,` getrennt
 - Ein Datenblock beginnt mit `{`  und endet mit `}`
-- the json file is a whole block so it starts by  `{`  and ends by `}`, and inside this file all embedded blocks are associated to a `"key"` that should be unique within the block
-- To improve readability of json file, it's generally indented (each new key is on a new line, each new block is shifted on the right by 4 spaces characters)
+- Die JSON Datei ist ein vollständiger Block. Er startet mit `{`  und endet mit `}`. Alle in der Datei eingebetteten Blöcke sind mit dem Schlüssel `"key"` verknüpft. Diese Schlüssel sollten innerhalb des Blocks "unique" sein
+- Um die Lesbarkeit der JSON Datei zu verbessern, werden Einrückungen genutzt (jeder neue Schlüssel befindet sich in einer neuen Zeile, jeder neue Block wird rechts von 4 Leerzeichen verschoben)
 
 (cwf-reference-metadata-settings)=
 
 ### Metadaten-Einstellungen
 
-Dieser Block ist der erste und verpflichtende Block, der in der JSON-Datei enthalten ist. It contains all the information associated to this watchface, like the name, the author, the date of creation or update, the author version or the plugin version.
+Dieser Block ist der erste und verpflichtende Block, der in der JSON-Datei enthalten ist. Er enthält alle für das Zifferblatt wichtige Informationen (Name, Autor, Ertstell-/Aktualisierungsdatum, Version oder Plugin-Version).
 
 Ein Beispiel des Metadatenblocks:
 
@@ -173,12 +173,12 @@ Zwei zusätzliche Parameter, die Du für die Diagrammansicht (ChartView) hinzuf�
 
 ### Benötigte Werkzeuge
 
-- Text editor: My advice is to use NotePad++ (or equivalent) that is a simple text editor, but added value is you can see formatted text with color code, so it's easier to detect errors. any simple text editor will do the job. Since the purpose is to tune json information.
+- Texteditor: Mein Rat ist, NotePad++ (oder etwas Gleichwertiges) zu verwenden. Das ist ein einfacher Texteditor, dessen Mehrwert darin liegt, formatierten Text mit Farbcodes sichtbar zu machen, und das Erkennen von Fehlern damit einfacher macht. Das kann mit jedem einfachen Texteditor gemacht werden. Da der Zweck ist es, die json Informationen anzupassen.
 - Bildeditor (Bitmap und/oder Vektor)
   - Wenn Du Bitmaps verwendest
     - Der Bildeditor sollte in der Lage sein, mit Transparenz (erforderlich für alle Bilder über dem Hintergrund) und dem png-Format (wenn Du ein Bitmap-Bild verwendet hast) umzugehen
     - Das Hintergrundbild kann im jpg-Format sein (kleiner als png)
-    - Image editor should allow you to measure in pixel graphical objects (can be a simple square) (top, left, width, height)
+    - Der Bildeditor sollte grafische Objekte in Pixel messen können (das kann ein einfaches Quadrat sein) (oben, links, Breite, Höhe)
     - Der Bildeditor sollte Farben mit dem RRVVBB-Code in Hexadezimal anzeigen können
     - Der Bildeditor sollte Bilder auf 400px x 400px (eine der wichtigsten Auflösungen) verkleinern können
   - Wenn Du Vektoren verwendest
@@ -212,7 +212,7 @@ Das vereinfacht das Arbeiten erheblich: Bei jeder Änderung mit dem Texteditor a
 
 ### Die Zifferblatt-Anpassung beginnen
 
-First step you will have to define a watchface Name (necessary to select it easily for testing), and start to tune metadata keys at the beginning of json file
+Im ersten Schritt musst Du einen Namen für das Zifferblatt festlegen (das ist notwendig, um es später zum Testen auswählen zu können) und beginne damit, die Metadaten (metadata keys) am Anfang der JSON-Datei anzupassen
 
 Dann musst Du festlegen, welche Informationen angezeigt werden sollen, d. h. Du definierst welche Ansicht sichtbar sein soll und welche ausgeblendet werden soll.
 
@@ -221,7 +221,7 @@ Dann musst Du festlegen, welche Informationen angezeigt werden sollen, d. h. Du 
 
 Nun kannst Du damit beginnen den `"visibility":` Key der einzelnen Ansichten festzulegen, indem Du ihnen entweder den Wert `"visible"` oder `"gone"` (je nachdem, ob Du die Ansicht behalten möchtest oder nicht) zuweist
 
-You can also start to tune approximativaly top, left margin and width height values to start organizing the watchface (these values will be tuned later using image editor)
+Du kannst damit beginnen die ungefähren oberen und linken Ränder, sowie die Breite und Größe des Zifferblatts festzulegen (diese Werte werden später mit dem Bildeditor)
 
 Hinweis: Alles innerhalb eines **400px x 400px Rechtecks** kann gestaltet werden. Alle Angaben sind absolute Koordinaten innerhalb dieses Bereichs.
 
@@ -247,7 +247,7 @@ Farben werden mit einem Textfeld angegeben, das mit `#` beginnt, gefolgt von RRG
 
 Du kannst auch 2 zusätzliche Werte für den Alphakanal und eine Transparenzstufe angeben (AARRGGBB):
 
-- `"#00000000"`is completely transparent, and `"#FF000000"` is completely opaque ( so  `"#FF000000"` is equivalent to  `"#000000"`)
+- `"#00000000"` ist komplett transparent, und `"#FF000000"` ist komplett undurchsichtig (damit ist `"#FF000000"` identisch mit `"#000000"`)
 
 Du kannst auch den spezifischen Schlüsselwert (keyvalue) `"bgColor"` verwenden, um damit automatisch die dem jeweiligen Glukosewert zugeordneten Farben für `"highColor"`, `"midColor"`, `"lowColor"`, die in in den allgemeinen Parametern festgelegt sind, zu nutzen:
 
@@ -260,7 +260,7 @@ Um mehr über ImageViews und die `"color":`-Schlüssel zu erfahren, kannst Du un
 
 Der einfachste Weg Dein Zifferblatt anzupassen ist, einige Bilder mit spezifischen Namen in die Zip-Datei aufzunehmen (siehe [Liste der fest codierten Ressourcendateien](#cwf-reference-list-of-hardcoded-resource-files))
 
-- Das Bild sollte das `.jpg`, `.png` oder `.svg`-Format haben. but be careful, jpg doesn't manage transparency, so should be only used for background layer. For all intermediate layers (cover_chart, cover_plate, hands) use either `.png`or `.svg` image
+- Das Bild sollte das `.jpg`, `.png` oder `.svg`-Format haben. Aber Vorsicht, jpg unterstützt keine Transparenz, sollte also nur für den Hintergrund verwendet werden. Für alle dazwischen liegenden Schichten (cover_chart, cover_plate, Zeiger) verwende entweder Bilder im `.png`- oder `.svg`-Format
 
 - Wenn einen Vektorbildeditor hast (wie zum Beispiel "Illustrator"), bevorzuge ein Format, das kleine Textdateien mit der `.svg`-Erweiterung und bester Qualität erzeugt.
 - Du solltest darauf achten, den genauen Dateinamen zu verwenden (einschließlich Groß-/Kleinschreibung)
@@ -282,13 +282,13 @@ Der `"color"`-Schlüssel kann verwendet werden, um die Standardbildfarbe anzupas
 - Angewendet auf die Hintergrundansicht wird damit die Hintergrundfarbe eingestellt (Standardmäßig schwarz)
 - Angewendet auf die cover_plate (einfaches Zifferblatt) oder die Zeiger ändert es das Standardbild (weiß) durch die angegebene Farbe (einschließlich `"bgColor"`)
 
-When you apply `"color"` key on a bitmap image (`.jpg` or `.png`), color will apply an interesting effect on color saturation. Du wirst Dein Bitmap immer noch erkennen.
+Wenn Du `"color"` auf ein Bitmap-Bild anwendest (`. pg` oder `.png`), wird die Farbe wird einen interessanten Effekt auf die Farbsättigung haben. Du wirst Dein Bitmap immer noch erkennen.
 
 Der `color`-Schlüssel wird auf Bilddateien im `.svg`-Format keine Wirkung haben, nimm an die Farbe der Vektor-Dateien sei fest codiert. Wenn Du die Farben ändern möchtest, musst Du mehrere `svg`-Dateien einbinden und die [dynData](#cwf-reference-dyndata-feature)-Funktion verwenden, um sie zu ändern
 
 ### Zusätzliche Schriftarten für TextViews verwenden
 
-Mehrere Standardschriftarten sind bereits in der Wear-App verfügbar (siehe font-Keys im Kapitel [Schlüsselwerte](#cwf-reference-key-values)). But if you want to use additional fonts not available as default, you can include additional fonts within zip file:
+Mehrere Standardschriftarten sind bereits in der Wear-App verfügbar (siehe font-Keys im Kapitel [Schlüsselwerte](#cwf-reference-key-values)). Wenn Du aber zusätzliche Schriftarten verwenden möchtest, die nicht standardmäßig verfügbar sind, kannst Du zusätzliche Schriftarten in die Zip-Datei aufnehmen:
 
 - Die beiden zulässigen Font-Formate sind `.ttf` und `.otf`
 - Wenn Du eine eigene Schriftart in der Zip-Datei aufnimmst, zum Beispiel eine Datei mit dem Namen `myCustomFont.ttf`, dann muß genau dieser Dateinamen genutzt werden, um sie in der JSON-Datei für einen TextView zu verwenden:
@@ -314,7 +314,7 @@ Diese Funktion sollte aber mit Vorsicht verwendet werden. Voreinstellungen werde
 - Lege niemals Einstellungen, die sich auf versteckte Ansichten (hidden views) beziehen, fest
 - Versuche die sichtbaren Ansichten zu maximieren
 - Stelle die Breite bestimmter Ansichten übergroß dar (oversize):
-  - TBR can be shown as percentage (small width, but also as absolute values much wider)
+  - TBR kann als Prozentsatz angezeigt werden (geringe Breite, aber auch als absolute Werte: viel breiter)
   - delta oder avg delta mit detaillierten Informationen können sehr breit sein
   - Das Gleiche gilt für iob2: Diese Ansicht kann einen Gesamt-IOB haben, aber wenn ein detailliertes IOB ausgewählt ist, kann die Textgröße sehr lang sein
 
@@ -388,7 +388,7 @@ Wenn die Zwillings-Ansichten vertikal positioniert sind, musst Du den Schlüssel
 
 ### DynDaten-Funktion
 
-DynData is the most powerful feature if you want to include some animation within you watchface, according to some internal values (like BG value, BG level, delta, % of battery... see list of available data [here](#cwf-reference-dyndata-key-values))
+DynData ist die leistungsstärkste Funktion, wenn Du Animationen, die von einigen internen Werten abhängen (z.B. Glukosewert, Glukosespiegel, Delta, % des Akkus ... siehe Liste der verfügbaren Daten [hier](#cwf-reference-dyndata-key-values)), in Dein Zifferblatt einbinden möchtest.
 
 Um diese Funktion zu veranschaulichen, nehme ich das Beispiel des AAPS (SteamPunk) Zifferblatts:
 
@@ -410,7 +410,7 @@ Hinweis: Um Transparenz sehen zu können, sind alle diese Bilder auf einem gelbe
 
 #### **Hintergrund-Management**
 
-First, concerning BG value image, no choice here, it can only be in the background layer (otherwise it will be in front of the chart view and chart will not be visible!). Also müssen wir den Glukosewert auf den Hintergrund abbilden und dann das Hintergrundbild entsprechend dem Glukosewert drehen.
+Zunächst, was das Glukosewert-Bild betrifft: Hier gibt es keine Wahl. Es kann nur in der Hintergrundebene sein (sonst wäre es vor der Diagrammansicht und das Diagramm wäre nicht sichtbar!). Also müssen wir den Glukosewert auf den Hintergrund abbilden und dann das Hintergrundbild entsprechend dem Glukosewert drehen.
 
 Innerhalb des `"background"`-Blocks werden wir 2 dedizierte Schlüssel einfügen, um diese Rotation durchzuführen:
 
@@ -425,7 +425,7 @@ Innerhalb des `"background"`-Blocks werden wir 2 dedizierte Schlüssel einfügen
     "visibility": "visible"
 },
 ```
-`"dynData":` key will define which block should be used to define the animation (value, range, conversion...) here this block was named "rotateSgv" (choose an explicit name when you use this feature),
+Der `"dynData":`-Schlüssel wird definieren, welcher Block verwendet werden soll, um die Animation zu definieren (Wert, Bereich, Konvertierung...) hier wurde dieser Block "rotateSgv" genannt (wenn Du diese Funktion nutzt, wähle einen expliziten Namen),
 
 `"rotationOffset": true,` wird festlegen, dass die Animation entsprechend dem Wert rotieren sollte. (andere verfügbare Schlüssel sind `"leftOffset"` und `"topOffset"`, wenn Du einen Schieberegler (Slider) erstellen möchtest)
 
@@ -454,7 +454,7 @@ Dieser Block ist einfach: Du hast einen ersten Schlüssel mit dem Namen `"valueK
 
 In Bezug auf den Glukosewert wird 39 mg/dl als Minimalwert (min data) und 400 mg/dl Maximalwert (max data) vorbelegt (siehe [DynData-Referenzschlüsselwerte](#cwf-reference-dyndata-key-values) unten allen verfügbaren Schlüsselwerten und den zugehörigen Min/Max-Datenwerten).
 
-Innerhalb des `"rotateSgv"`-Blocks werden die beiden zusätzlichen Schlüssel (`"minData":` und `"maxData":`) verwendet, um die Mindest- und Höchstwerte auf 30 und 330 zu justieren. With these min and max values, we will be able to directly use data value (without any conversion) to rotate background in degrees. In dieser Situation werden alle Glukosewerte über 330 mg/dl auf 330 begrenzt, die obere Begrenzung des Bildes.
+Innerhalb des `"rotateSgv"`-Blocks werden die beiden zusätzlichen Schlüssel (`"minData":` und `"maxData":`) verwendet, um die Mindest- und Höchstwerte auf 30 und 330 zu justieren. Mit diesen Min- und Max-Werten können wir den Datenwert direkt (ohne jegliche Konvertierung) verwenden, um den Hintergrund in Grad zu drehen. In dieser Situation werden alle Glukosewerte über 330 mg/dl auf 330 begrenzt, die obere Begrenzung des Bildes.
 
 #### **Chart-Management**
 
@@ -1423,7 +1423,7 @@ Aus dem Custom Watchface plugin v2 (AAPS 3.3), kann der Textwert verwendet werde
 | `"dynPrefColor"` | string | Dieser Schlüssel gilt ausdrücklich für den Main-Block und dessen wesentlichen Farben (highColor, midColor, lowColor, graph colors...). Du kannst dies nutzen, um die Standardfarben auf Basis der Einstellungen (Preferences) zu verändern                                                                                                                                                                                                                                                                                                                                                                       |
 | `"prefKey"`      | string | Gib hier den Schlüsselwert der Einstellung an, der genutzt werden soll, um die benutzerdefinierten Einstellungen zu erhalten (siehe [PrefKey-Werte](#cwf-reference-prefkey-values) unten). Dieser Schlüssel sollte innerhalb eines `dynPref` Blocks verwendet werden.<br />Dann sollte der `dynPref`-Block genau so viele Schlüssel wie prefKey Werte enthalten.<br />Beachte, dass die meisten Zeiteinstellungen "Boolean" sind, also solltest Du innerhalb des dynPref-Blocks diese beiden dynData-Blöcke finden: <br />`"true": { dynData Block },`<br />`"false": { dynData Block }` |
 | `"true"`         | block  | Die meisten Einstellungen werden als boolean `"true"` oder `"false"` gesetzt. You will specify the dynData block to use if preference selected by user is true.<br />Note that if the block also contains a `"dynPref":`key, the dynData block will be merged with other block. Das ermöglicht Dir beispielsweise Farben mit einer Einstellung und die Textgröße auf Basis einer anderen Einstellung zu setzen                                                                                                                                                                                             |
-| `"false"`        | block  | Die meisten Einstellungen werden als boolean `"true"` oder `"false"` gesetzt. You will specify the dynData block to use if preference selected by user is false.<br />Note that if the block also contains a `"dynPref":`key, the dynData block will be merged with other block. Das ermöglicht Dir beispielsweise Farben mit einer Einstellung und die Textgröße auf Basis einer anderen Einstellung zu setzen                                                                                                                                                                                            |
+| `"false"`        | block  | Die meisten Einstellungen werden als boolean `"true"` oder `"false"` gesetzt. Du wirst den dynData-Block, der genutzt werden soll, wenn die Einstellung durch den User "false" ist, angeben.<br />Beachte, dass wenn der Block auch einen `"dynPref":`-Schlüssel enthält, diese dynData-Blöcke miteinander verschmolzen werden. Das ermöglicht Dir beispielsweise Farben mit einer Einstellung und die Textgröße auf Basis einer anderen Einstellung zu setzen                                                                                                                                             |
 
 (cwf-reference-prefkey-values)=
 
