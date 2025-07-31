@@ -293,7 +293,7 @@ Drücke auf "WEITER", um zur nächsten Seite zu kommen.
 
 ![grafik](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-## Patient type
+## Patiententyp
 
 Hier legst Du den „Patiententyp“ fest, der dazu führt, dass die **AAPS**-Software je nach Alter des Patienten unterschiedliche Grenzwerte berücksichtigt. Dies ist aus Sicherheits- und Schutzgründen wichtig.
 
