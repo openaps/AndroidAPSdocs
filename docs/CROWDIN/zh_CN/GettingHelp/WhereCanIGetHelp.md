@@ -34,7 +34,7 @@
 
 ### 捷克与斯洛伐克
 
-* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/)：捷克语AndroidAPS用户
+* [AAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech-speaking users of AndroidAPS
 
 ### 法国
 
