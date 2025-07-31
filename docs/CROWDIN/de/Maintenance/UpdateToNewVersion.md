@@ -32,11 +32,11 @@ Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als
     Die benötigte Minimalversion ist im Abschnitt [AAPS erstellen](#Building-APK-recommended-specification-of-computer-for-building-apk-file) beschrieben. Sollte Deine Version älter sein, [aktualisiere zuerst das Android Studio](#Building-APK-install-android-studio)!
     
     (Update-to-new-version-update-your-local-copy)=
-    ### Update your local copy
+    ### Aktualisiere Deine lokale Kopie
     
     ```{admonition} WARNING
     :class: warning
-    If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../SettingUpAaps/BuildingAaps.md), as this guide will not work for you!
+    Wenn Du von einer Version vor 2.8.x aktualisierst, erstelle - wie in der Anleitung beschrieben - einen [neuen Clone](../SettingUpAaps/BuildingAaps.md). Der hier beschriebene Weg wird für Dich nicht funktionieren!
     
 
 * Öffne Dein bestehendes AAPS-Projekt mit Android Studio. Möglicherweise musst Du Dein Projekt wählen. Klicke (doppelt) auf das AAPS-Projekt.

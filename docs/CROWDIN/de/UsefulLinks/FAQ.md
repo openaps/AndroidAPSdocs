@@ -298,7 +298,7 @@ Das Telefon kann AAPS-Dienste oder sogar Bluetooth unterbrechen, wodurch die Ver
 
 ### Wo kann ich Behandlungen in AAPS v3 löschen?
 
-3 dots menu, select treatments, then 3 dots menu again and you have different options available.
+3-Punkte-Menü, wähle Behandlungen, dann hast Du verschiedene Optionen zur Verfügung.
 
 ### AAPSClient Remote App konfigurieren und nutzen
 

@@ -30,9 +30,9 @@ Die häufigsten Strategien im Zusammenhang mit **AAPS** werden weiter unten erl�
 
 #### Dexcom Follow konfigurieren: Schritt-für-Schritt-Anleitung
 
-If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app.
+Wenn Du die inoffizielle Dexcom App BYODA für das Auslesen der Sensorwerte nutzt, kannst Du weitere Follower aus der BYODA App heraus einladen.
 
-You cannot send invite emails to Dexcom followers anymore from third-party apps. In xDrip+ wird die Einladungsanfrage nur zu einer „Einladung nicht gesendet“-Nachricht führen.
+Mittlerweile können aus Drittanbieter-Apps keine Einladungs-Emails mehr an Dexcom-Follower verschickt werden. In xDrip+ wird die Einladungsanfrage nur zu einer „Einladung nicht gesendet“-Nachricht führen.
 
 Du musst die offizielle Dexcom-App installieren, die Einladung senden und dann die offizielle App wieder deinstallieren.
 
@@ -123,20 +123,20 @@ Die [xDrip4iOS Facebook-Gruppe](https://www.facebook.com/groups/853994615056838/
 "Wie bekomme ich **xDrip4iOS** für mein iPhone?"
 Es gibt zwei Möglichkeiten:
 
-1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by [following the instructions](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
+1. Wenn Du einen Mac und einen Apple Developer Account (99 EUR/USD pro Jahr) hast, kannst Du Dein eigenes xDrip4iOS erstellen, indem Du [den folgenden Anweisungen folgst:](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
 
-If you want, you can then become a "releaser" and [share a Personal Testflight xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) with up to 100 other people to help them.
+Wenn Du möchtest, kannst Du dann zu einem Herausgeber („Releaser“) werden, [einen persönlichen Testflight xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) mit bis zu 100 anderen Personen teilen, um ihnen auf diese Weise zu helfen.
 
-2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and read the pinned posts for current methods to get the app. **Du solltest nicht um eine Einladung zur App** bitten (lies die Gruppenregeln).
+2. Du trittst der [xDrip4iOS Facebook-Gruppe](https://www.facebook.com/groups/853994615056838/announcements) bei und verfolgst die „pinned posts“, die die derzeit verfügbaren Möglichkeiten die App zu bekommen, beschreiben. **Du solltest nicht um eine Einladung zur App** bitten (lies die Gruppenregeln).
 ```
 
 
 
 ![grafik](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
-"What is **Shuggah**?" A group of Ukrainian developers copied the project code for xDrip4iOS (which is shared publicly on GitHub) and released it on the App Store under a business account. The Shuggah release is in no way managed by the xDrip4iOS developers.
+„Was ist **Shuggah**?“ Eine Gruppe ukrainischer Entwickelnder nahm den xDrip4iOS Projektcode (der öffentlich auf Github verfügbar ist) und veröffentlichte ihn unter einem Firmenkonto im App Store. Das Shuggah-Release wird nicht von den xDrip4iOS Entwickelnden gemanagt.
 
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) supports xDrip4iOS, and the matching Apple Watch apps.
+Die [xDrip4iOS Facebook-Gruppe](https://www.facebook.com/groups/853994615056838/announcements) unterstützt xDrip4iOS und die zugehörigen Apple Watch Apps.
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 

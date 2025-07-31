@@ -22,14 +22,14 @@ Hinweise, wie die Firmware der Pumpe ermittelt werden kann, findest Du in den [O
 ## Hardware- und Softwareanforderungen
 
 - **Telefon:** Der Medtronic-Treiber sollte mit jedem Android-Telefon funktionieren, das Bluetooth-Verbindungen unterstützt. **WICHTIG: Die Bluetooth-Implementierungen der Telefonhersteller können variieren, so dass jedes Telefonmodell variiert. Zum Beispiel werden bei einigen Telefonen Bluetooth anders aktiviert/deaktiviert. Dies kann die Benutzererfahrung (Systemverhalten) beeinflussen, wenn AAPS sich erneut mit dem Rileylink-Gerät verbinden muss.**
-- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a separate device to handle communications. Dieses Gerät verbindet sich mit Ihrem Telefon über Bluetooth und mit Ihrer Pumpe über eine kompatible Funkverbindung. Das erste derartige Gerät wurde als Rileylink bezeichnet, aber eine Reihe weiterer Optionen sind jetzt verfügbar, die zusätzliche Funktionalität bieten können.
+- **RileyLink kompatibles Gerät:** Android-Smartphones können ohne ein separates Gerät, dass die Kommunikation steuert, nicht mit Medtronic-Pumpen kommunizieren. Dieses Gerät verbindet sich mit Ihrem Telefon über Bluetooth und mit Ihrer Pumpe über eine kompatible Funkverbindung. Das erste derartige Gerät wurde als Rileylink bezeichnet, aber eine Reihe weiterer Optionen sind jetzt verfügbar, die zusätzliche Funktionalität bieten können.
     
     - Rileylink verfügbar unter [getrileylink.org](https://getrileylink.org/product/rileylink916)
     - Orangelink verfügbar unter [getrileylink.org](https://getrileylink.org/product/orangelink)
     - Emalink (mehrere Model-Optionen) verfügbar unter [github.com](https://github.com/sks01/EmaLink)
     - Gnarl (einige zusätzliche DIY Tätigkeiten erforderlich) Details verfügbar auf [github.com](https://github.com/ecc1/gnarl)
 
-A comparison chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+Eine Vergleichstabelle der verschiedenen Rileylink kompatiblen Geräte findest Du unter [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
 (MedtronicPump-configuration-of-the-pump)=
 
@@ -52,13 +52,13 @@ Damit AAPS Befehle remote verschicken kann, solltest Du die folgenden Pumpeneins
 1. Den Einrichtungsassistenten im Zuge einer Neuinstallation verwenden
 2. Indem Du unter KONFIGURATION > Pumpe 'Medtronic' auswählst
 
-When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot successfully connect to the pump). Sollte das so sein, wähle unter KONFIGURATION > Pumpe 'Virtuelle Pumpe' aus und wähle zur Fehlerbehebung den zweiten Weg (s.o.).
+Falls Du Deine Medtronic-Pumpe mit Hilfe des Einrichtungsassistenten konfigurierst, kann es sein, dass Du die Einrichtung aufgrund von Bluetooth-Problemen nicht abschließen kannst (z.B. Verbindung zur Pumpe nicht möglich). Sollte das so sein, wähle unter KONFIGURATION > Pumpe 'Virtuelle Pumpe' aus und wähle zur Fehlerbehebung den zweiten Weg (s.o.).
 
 ![Medtronic-Einstellungen](../images/Medtronic01a.png)
 
 Während der Konfiguration Deiner Medtronic-Pumpe, solltest Du die folgenden Einstellungen (s. Bild oben) vornehmen:
 
-- **Seriennummer der Pumpe**: Steht auf der Rückseite der Pumpe und beginnt mit 'SN'. You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
+- **Seriennummer der Pumpe**: Steht auf der Rückseite der Pumpe und beginnt mit 'SN'. Hier sollen nur die sechs Ziffern (keine Buchstaben) eingegeben werden (z.B. 123456).
 - **Pumpentyp**: Das genutzte Pumpenmodell (z.B. 522). 
 - **Pumpenfrequenz**: In Abhängigkeit davon, wo Deine Pumpe hergestellt wurde, wähle eine der beiden Optionen aus. Bitte schlage in den [FAQ](#faq) nach, wenn Du nicht sicher bist welche Option Du wählen solltest: 
     - für Pumpen aus den USA & Kanada ist die Frequenz 916 MHz.
@@ -79,7 +79,7 @@ Während der Konfiguration Deiner Medtronic-Pumpe, solltest Du die folgenden Ein
 - **RileyLink-Konfiguration**: Über diese Option kannst Du Deinen RileyLink finden ('scannen') und dann koppeln. Nach dem Scanvorgang werden alle sich in der Nähe befindlichen RileyLink-kompatiblen Geräte und deren Signalstärke angezeigt.
 - **Verwende Scannen** aktiviert das Bluetooth-Scannen, bevor eine Verbindung mit Deinem RileyLink-kompatiblen Gerät aufgebaut werden kann. Das sollte die Stabilität der Verbindung zu Deinem Gerät verbessern.
 - **Akkustand von OrangeLink/EmaLink/DiaLink anzeigen** Diese Funktion wird nur auf neueren Nachbauten (EmaLink oder OrangeLink) funktionieren, jedoch nicht auf dem Original-RileyLink. Die Werte werden in AAPS auf dem Tab MEDTRONIC angezeigt. 
-- **Neutrale TBR setzen** Medtronic-Pumpen piepen/vibrieren bei einer aktiven TBR standardmäßig zur vollen Stunde. Enabling this option can help reduce the number of beeps heard by interrupting a temporary basal at the hour change in order to suppress the beep.
+- **Neutrale TBR setzen** Medtronic-Pumpen piepen/vibrieren bei einer aktiven TBR standardmäßig zur vollen Stunde. Bei aktivierter Funktion, wird die TBR vor Ende jeder Stunde abgebrochen und so ein piepen/vibrieren umgangen.
 
 ## MEDTRONIC (MDT) Tab
 
@@ -89,8 +89,8 @@ Während der Konfiguration Deiner Medtronic-Pumpe, solltest Du die folgenden Ein
 - **RileyLink Akku**: Zeigt den aktuellen Akkustand Deines EmaLink oder OrangeLink Gerätes an. Nur wenn unter Medtronic-Einstellungen 'Akkustand von OrangeLink/EmaLink/DiaLink anzeigen' aktiviert wurde.
 - **Pumpen-Status**: Status der Verbindung zur Pumpe. Da die Pumpe nicht permanent verbunden ist, wird hier in erster Linie das Schlafsymbol angezeigt. Es gibt eine Reihe von möglichen anderen Status wie "Aufwachen", wenn AAPS versucht, einen Befehl oder andere Pumpen-Befehle wie "Zeit abfragen", "Setze TBR", etc. auszuführen.
 - **Batterie**: Zeigt den Batteriestand basierend auf dem gewählten Batterietyp (Power View) im Menü Medtronic-Einstellungen. 
-- **Last connection**: How long ago the last successful pump connection happened.
-- **Last Bolus**: How long ago the last successful bolus was delivered.
+- **Letzte Verbindung**: Wie lange liegt die letzte erfolgreiche Verbindung zur Pumpe zurück.
+- **Letzter Bolus**: Wie lange liegt der letzte abgegebene Bolus zurück.
 - **Basis Basalrate**: Das ist die Basis-Basalrate, die in dieser Stunde in Deinem aktiven Profil hinterlegt ist.
 - **TBR / Temp basal**: Ist die aktuell laufende temporäre Basalrate. Diese kann auch 0 Einheiten pro Stunde sein.
 - **Reservoir**: Insulinstand im Reservoir (Update erfolgt mindestens stündlich).
@@ -108,7 +108,7 @@ Am unteren Bildschirmrand befinden sich drei Schaltflächen:
 
 ![Dialog Pumpenhistorie](../images/Medtronic03.png)
 
-Die Pumpen Historie wird alle 5 Minuten abgerufen und lokal gespeichert. Nur die letzten 24 Stunden der Pumpen-Historie werden gespeichert. The allows for a convenient way to see pump behaviour should that be required. The only items stored are those relevenant to AAPS and will not include a configuration function that has no relevance.
+Die Pumpen Historie wird alle 5 Minuten abgerufen und lokal gespeichert. Nur die letzten 24 Stunden der Pumpen-Historie werden gespeichert. Damit können die Log-Dateien übersichtlich gehalten werden und das Pumpenverhalten gut analysiert werden, wenn es erforderlich werden sollte. Es werden nur die Einträge gespeichert, die eine Relevanz für AAPS haben. Konfigurations-Daten ohne Relevanz werden nicht gespeichert.
 
 (MedtronicPump-rl-status-rileylink-status)=
 
@@ -125,7 +125,7 @@ Der RL-Statusdialog hat zwei Tabs:
 
 Wenn der Medtronic-Treiber verwendet wird, werden zwei zusätzliche Aktionen im AKTIONEN-Tab hinzugefügt:
 
-- **Wake und Tune-Up** - Falls AAPS die Pumpe über längere Zeit nicht erreichen kann (Kontakt sollte normalerweise alle fünf Minuten erfolgen), kannst Du die Verbindung mit diesem Button erzwingen. Es wird dann auf allen möglichen Funkfrequenzen versucht Deine Pumpe zu erreichen. In the event a successful connection is made the successful frequency will be set as the default.
+- **Wake und Tune-Up** - Falls AAPS die Pumpe über längere Zeit nicht erreichen kann (Kontakt sollte normalerweise alle fünf Minuten erfolgen), kannst Du die Verbindung mit diesem Button erzwingen. Es wird dann auf allen möglichen Funkfrequenzen versucht Deine Pumpe zu erreichen. Falls eine Verbindung so hergestellt werden kann, wird diese dann verwendete Frequenz als Standard gespeichert.
 - **RileyLink Konfiguration zurücksetzen** - Wenn Du Dein RileyLink-kompatibles Gerät zurücksetzten möchtest, kannst Du diese Aktion nutzen. Das Gerät kann dann neu konfiguriert werden (Frequenzbereich, Frequenztyp, Verschlüsselung).
 
 ## Wichtige Hinweise
@@ -140,7 +140,7 @@ Als OpenAPS-Nutzender solltest Du wissen, dass AAPS mit einer Medtronic-Pumpe ei
 
 ### Protokollierung
 
-In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintenance and Log Settings. Pump, PumpComm, PumpBTComm sollte für die Fehleranalyse von Medtronic-Problemen ausgewählt werden.
+Falls Du einen Fehler in der Pumpenfunktion Deiner Medtronic behoben möchtest, wähle aus dem Hamburger-Menü (drei Striche) „Wartung“ aus und dann „Log-Einstellungen“. Pump, PumpComm, PumpBTComm sollte für die Fehleranalyse von Medtronic-Problemen ausgewählt werden.
 
 ### Medtronic CGM
 
@@ -158,9 +158,9 @@ Wenn Du Richtung Osten reist, werden Stunden zur aktuellen Zeit addiert (z. B. v
 
 Das Problem der Reisen nach Westen ist den Entwickler*innen bekannt und die Arbeiten an einer Lösung dauern an. Beachte dazu auch https://github.com/andyrozman/RileyLinkAAPS/issues/145 mit mehr Details. Für den Moment, habe bitte im Kopf, dass das Problem auftreten kann und sei beim Reisen durch Zeitzonen entsprechend aufmerksam.
 
-### Is a GNARL a fully compatible Rileylink compatible device?
+### Ist ein GNARL ein voll kompatibles Rileylink kompatibles Gerät?
 
-Der GNARL-Code unterstützt alle Funktionen des Medtronic-Treibers in AAPS und ist damit vollständig kompatibel. It is important to note that this will require additional work as you will have to source compatible hardware and then load the GNARL code on to the device.
+Der GNARL-Code unterstützt alle Funktionen des Medtronic-Treibers in AAPS und ist damit vollständig kompatibel. Es ist allerdings wichtig zu wissen, dass das mit zusätzlicher Arbeit verbunden ist. Es muss kompatible Hardware beschafft werden, auf die dann der GNARL-Code geladen werden muss.
 
 **Hinweis:** Die GNARL-Software ist noch experimentell und wenig getestet ist. Sie sollte daher nicht als so sicher angesehen werden wie die des RileyLink.
 

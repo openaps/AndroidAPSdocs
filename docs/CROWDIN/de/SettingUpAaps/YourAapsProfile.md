@@ -153,7 +153,7 @@ Ein **höherer / schwächerer ISF** (z. B. 45 statt 35) bedeutet, dass das Insul
 * Der **Glukosewert** ist 190 mg/dl (10,5 mmol/l) und das Ziel ist 100 mg/dl (5,6 mmol/l).
 * Du möchtest also eine Korrektur um `190 - 110 = 90 mg/dl` oder `10,5 - 5,6 = 4,9 mmol/l`
 * Wenn `ISF = 30` -> `90 / 30 = 3` oder `ISF = 1,3` -> `4,9 / 1,63 = 3`: 3 Einheiten Insulin
-* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 units of insulin
+* Wenn `ISF = 45` -> `90 / 45 = 2` oder `ISF = 2,45` -> `4,9 / 2,45 = 2`: 2 Einheiten Insulin
 
 Ein zu niedriger **ISF** (und daher zu aggressiver; nicht unüblich) kann zu „Überkorrekturen“ führen. **AAPS** errechnet, dass mehr Insulin benötigt wird, um einen hohen **Glukosewert** zu korrigieren. Dies kann (besonders während des Fastens) zu einem „Achterbahn“-Verlauf der Glukosewerte führen, so wie es auf dem Bild unten dargestellt ist. In diesen Situationen sollte der **ISF**-Wert erhöht werden, um **AAPS** so weniger aggressiv zu machen. Dadurch wird sichergestellt, dass **AAPS** kleinere Korrekturdosen abgibt, und vermeidet damit die Überkorrektur eines hohen **Glukosewertes**, die einen niedrigen **Glukosewert** zur Folge haben würde.
 

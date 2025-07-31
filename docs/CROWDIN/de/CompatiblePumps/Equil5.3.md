@@ -27,7 +27,7 @@ Wähle in [Konfiguration > Pumpe](#Config-Builder-pump), **Equil 5.3** aus.
 
 ### Patch aktivieren
 
-Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
+Navigiere zum Equil-Tab und tippe auf **Equil-Patch-Pumpe koppeln**.
 
 ![overview.png](../images/Equil/overview.png)
 

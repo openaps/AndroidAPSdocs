@@ -153,7 +153,7 @@ Das heißt, während Du Dich im **Ziel 6** befindest, wird **AAPS** bei fallende
 
 **Hohe Werte müssen deshalb von Dir manuell mit einem Korrekturbolus korrigiert werden.**
 
-- If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
+- Wenn Dein IOB negativ ist (siehe Screenshot unten), kann auch in **Ziel 6** eine temporäre Basalrate (TBR) > 100% gesetzt werden.
 
 ![Example negative IOB](../images/Objective6_negIOB.png)
 

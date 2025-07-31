@@ -80,7 +80,7 @@ Nutze den Bolus-Kalkulator erst dann wieder, wenn Du sicher bist, dass COB und I
 
 ### Accu-Chek Combo
 
-**NOTE**: As mentioned above, this section is only valid for the old, Ruffy-based driver. Der neue Treiber passt Datum und Uhrzeit und Sommer-/Winterzeit automatisch an.
+**HINWEIS**: Wie oben erwähnt, gelten die Informationen dieses Abschnitts nur für die alten Ruffy-basierenden Treiber. Der neue Treiber passt Datum und Uhrzeit und Sommer-/Winterzeit automatisch an.
 
 AAPS wird Dich alarmieren, wenn die Uhrzeit der Pumpe zu sehr von der des Smartphones abweicht. Bei der Zeitumstellung wäre dies unerfreulicherweise mitten in der Nacht. Um dies zu verhindern und stattdessen den Schlaf zu genießen, folge diesen Schritten, so dass Du die Zeitumstellung zu einer Zeit erzwingen kannst, die Dir passt.
 

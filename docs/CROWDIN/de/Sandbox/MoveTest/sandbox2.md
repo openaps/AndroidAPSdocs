@@ -18,9 +18,9 @@ Dies ist eine interne Sandbox-Datei für das Dokumentationsteam zum Testen
     1. CROWDIN Übersetzung und
     2. Read The Docs Deployment.
 
-You can directly jump from here to the first label in the sandbox1.md file - ["Jump"](../sandbox1.md#this-is-a-test).
+Du kannst direkt von hier zum ersten Label in der sandbox1.md-Datei springen - ["Jump"](../sandbox1.md#this-is-a-test).
 
-You can directly jump from here to the second label in this file - ["Jump"](../sandbox1.md#this-is-another-test).
+Du kannst direkt von hier zum zweiten Label in dieser Datei springen - ["Jump"](../sandbox1.md#this-is-another-test).
 
 Hier kannst Du zur ersten Sandbox-Datei springen - ["Jump"](../sandbox1.md).
 

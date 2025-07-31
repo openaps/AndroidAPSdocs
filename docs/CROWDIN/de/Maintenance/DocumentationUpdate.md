@@ -1,8 +1,8 @@
 # Docs Updates & Änderungen
 
-## May 2025
+## Mai 2025
 
-- Added [3.2.0.4 upgrade page](#update-aaps-3204) @psonnera
+- [3.2.0.4 Upgrade-Seite](#update-aaps-3204) hinzugefügt @psonnera
 
 ## Januar 2025
 

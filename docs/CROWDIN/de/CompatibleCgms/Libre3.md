@@ -14,13 +14,13 @@ Wenn der Sensor mit der Libre 3 App gestartet wird, können Deine Daten über Ju
 
 Der Sensor kann in xDrip+ im Bereich von -40 mg/dl bis +20 mg/dl (-2.2 mmol/l bis +1.1 mmol/l) kalibriert werden. Damit kannst Du die Differenz zwischen einer blutigen Messung und den Sensorwerten anpassen.
 
-## Method 1: use 1-minute readings directly
-AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
+## Methode 1: Direkte Nutzung der minütlich übertragenen Sensorwerte
+AAPS ist auf „Sensorwerte alle 5 Minuten“ ausgelegt. Die Verarbeitung von minütlichen Werten bringt in einzelnen Situationen daher Einschränkungen mit sich.
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
 
-## Method 2: convert 1-minute readings into 5-minute values via xDrip
+## Methode 2: Umwandlung in xDrip+ der minütlichen Messwerte in 5-Minuten-Werte
 Juggluco wird dabei genutzt, die minütlich vorliegenden Sensorrohdaten an xDrip+ zur Glättung auf 5-Minutenintervalle zu übergeben, und von dort aus an AAPS weiterzureichen.
 
 ### Schritt 1: Juggluco einrichten

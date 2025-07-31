@@ -8,7 +8,7 @@ Dieses Projekt basiert auf ehrenamtlicher Arbeit, weshalb einige Regeln existier
 * Stufe 2: Durchsuche die Facebook-Gruppe; wenn deine Frage dort nicht schon beantwortet wurde, dann stelle sie in der [AndroidAPS users Facebook-Gruppe](https://www.facebook.com/groups/1900195340201874/).
 * Stufe 3: Wenn Facebook keine Lösung bringt, frage in [discord](https://discord.gg/4fQUWHZ4Mw). Duplizierte Beiträge werden auf beiden Kanälen ignoriert/gelöscht, um doppelte Antworten zu vermeiden. Denke bitte daran, dass die Mehrheit der Entwickler sich in Eurpoa befinden, so dass sie zur Beantwortung nicht rund um die Uhr verfügbar sind; bitte gib ihnen besonders an Wochenenden und in der Urlaubszeit ein paar Stunden Zeit.
 * Stufe 4: Erstelle ein [Fehlerticket](https://github.com/nightscout/AndroidAPS/issues) und hänge die [Protokolldateien](../GettingHelp/AccessingLogFiles.md) (engl. log files) an.
-* level 5: email *developers@aaps.app* (only if personal data is involved that should not go in a public channel and your problems have not been resolved in the other levels)
+* Stufe 5: Schreibe eine E-Mail an *developers@aaps.app* (nur dann, wenn persönliche Daten benötigt werden, die nicht auf einem öffentlichen Kanal verbreitet werden sollten und wenn dein Problem nicht auf einer anderen Stufe gelöst wurde)
 
 Für Unterstützung zu CGM-Quellen nutze bitte die Facebook-Gruppen oder Discord-Kanäle für das jeweilige System (z. B. [xDrip+](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)). Bei Unterstützungsbedarf zu Nightscout nutze [CGM in der Cloud](https://www.facebook.com/groups/cgminthecloud/), da die Mitglieder dort Spezialwissen haben, das Leute in den verschiedenen Systemgruppen nicht in der Tiefe besitzen.
 
@@ -16,7 +16,7 @@ Für Unterstützung zu CGM-Quellen nutze bitte die Facebook-Gruppen oder Discord
 
 Trete der [AndroidAPS Facebook-Gruppe](https://www.facebook.com/groups/1900195340201874/) und/oder [AndroidAPS auf Discord](https://discord.gg/4fQUWHZ4Mw) bei. Du kannst dort alle Fragen zum Algorithmus stellen, alle Setup-Probleme posten, die du mit Android Studio und der Erstellung der APK hast, alle Fragen zur Verwendung der App anbringen und auch Tipps bekommen, wie du die App optimal nutzen kannst. Es gibt auch eine Gruppe für die Combo Insulinpumpe [AAPSCombo](https://www.facebook.com/groups/127507891261169/), die ein etwas spezifischeres Setup hat.
 
-Bitte beachte, dass Facebook kürzlich innerhalb der AAPS Facebook-Gruppe geteilte externe Links entfernt hat. Dies betrifft sowohl aktuelle als auch ältere Beiträge mit externen Links zu den AAPS-Notizen bzw. zur AAPS Dokumentation („read the docs“). For new users who are working through the Objectives and reviewing historic AAPS Facebook posts please search key terms as discussed within the AAPS notes for further assistance.
+Bitte beachte, dass Facebook kürzlich innerhalb der AAPS Facebook-Gruppe geteilte externe Links entfernt hat. Dies betrifft sowohl aktuelle als auch ältere Beiträge mit externen Links zu den AAPS-Notizen bzw. zur AAPS Dokumentation („read the docs“). Als Neuling, der sich gerade durch die Ziele arbeitet und auf der Suche nach Hilfe historische AAPS Facebook-Beiträge prüfen möchte, suche mit den Suchbegriffen wie sie in den AAPS-Notizen diskutiert werden.
 
 ## Weitere Informationsquellen in englischer Sprache
 

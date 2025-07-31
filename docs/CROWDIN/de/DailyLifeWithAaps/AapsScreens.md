@@ -93,8 +93,8 @@ Auf der rechten Seite zeigt ein Symbol den Loop-Status an:
 
 1. Grüner Kreis = Loop läuft
 2. Grüner Kreis mit gepunkteter Linie = [Low Glucose Suspend (LGS)](#objectives-objective6) (dt. Abschalten vor Niedrig)
-3. Red circle = loop disabled (not working permanently)
-4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
+3. Roter Kreis = Loop deaktiviert (dauerhaft)
+4. Roter Kreis = Loop ausgesetzt (vorübergehend pausiert, aber Basalinsulin wird weiter abgegeben) - verbleibende Zeit wird unter dem Symbol angezeigt
 5. Grauer Kreis = Pumpe getrennt (vorübergehend gar keine Insulinabgabe) - verbleibende Zeit wird unter dem Symbol angezeigt
 6. orangener Kreis = Superbolus läuft - verbleibende Zeit wird unterhalb des Symbols angezeigt
 7. Blauer Kreis mit gepunkteten Linien = Open Loop
@@ -303,7 +303,7 @@ Um zusätzliche Diagramme zu konfigurieren, aktiviere die zu den von Dir auf dem
 
 Viele kommen mit der folgenden Konfiguration zusätzlicher Diagramme gut zurecht:
 
-* Graph 1 with IOB, COB, Sensitivity change
+* Diagramm 1 mit „Aktives Insulin“, „Aktive Kohlenhydrate“, „Sensitivität“
 * Diagramm 2 mit „Abweichungen“ und „Blutzuckerwirkung“.
 
 #### Gesamtinsulin
@@ -366,7 +366,7 @@ Es ergibt eine gute Kombination diese Linie zusammen mit den Balken für Abweich
 
 ![Buttons für den Homescreen](../images/Home2020_Buttons.png)
 
-Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
+Die Schaltflächen für Insulin und Kohlenhydrate sind fast immer sichtbar. Wenn die Verbindung zur Pumpe unterbrochen ist, ist die Schaltfläche „Rechner“ nicht sichtbar.
 
 Andere Schaltflächen können unter [Einstellungen > Übersicht > Schaltflächen](#Preferences-buttons) eingerichtet werden.
 

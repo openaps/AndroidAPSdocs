@@ -2,7 +2,7 @@
 
 # Empfindlichkeitserkennung
 
-## Sensitivity algorithm
+## Sensitivitäts-Algorithmus
 
 Aktuell gibt es 3 Modelle zur Empfindlichkeitserkennung:
 

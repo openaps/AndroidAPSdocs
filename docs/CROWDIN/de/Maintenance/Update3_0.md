@@ -20,11 +20,11 @@ orphan: true
 * Wenn eine der Bedingungen fehlt, musst Du sie erneut hinzufügen.
 * Rote Automatisierungen enthalten ungültige Aktionen, bearbeite sie und setze sie auf gültige Werte zurück.
 
-  Example: A profile change to 140% was allowed earlier but is now restricted to 130%.
+  Beispiel: Eine Änderung des Profils auf 140 % wurde früher erlaubt, ist jetzt aber auf 130 % beschränkt.
 
 ## Prüfe Deine NSClient- und Synchronisations-Einstellungen
 
-* The implementation of the nsclient plugin has changed completely.
+* Die Implementierung des NSClient Plugins hat sich komplett geändert.
 * Gehe zur Registerkarte NSClient und öffne die Einstellungen im rechten Menü. Eine neue Einstellung "Synchronisierung" ist jetzt verfügbar.
 * Du kannst nun eine detaillierte Auswahl treffen, welche Daten mit deiner Nightscout-Seite synchronisiert werden sollen.
 
@@ -34,12 +34,12 @@ orphan: true
 * Um Dein aktuelles Nightscout-Profil in ein lokales Profil zu kopieren, geh auf die Seite 'Behandlungen' (jetzt im rechten Dreipunkt-Menü).
 * Suche nach einem Profilwechsel mit 100% und drücke 'Klonen'.
 * Ein neues lokales Profil wird hinzugefügt, dass vom aktuellen Datum an gültig ist.
-* Um das Profil von Nightscout aus zu aktualisieren, musst Du 'Clone' verwenden (den Eintrag, nicht das Profil) und die Änderungen speichern. You should see "Profile valid from:" set to current date.
+* Um das Profil von Nightscout aus zu aktualisieren, musst Du 'Clone' verwenden (den Eintrag, nicht das Profil) und die Änderungen speichern. Du solltest „Profil gültig ab:“ mit dem aktuellen Datum gefüllt sehen.
 
 (Update3_0-reset-master-password)=
 ## Masterpasswort zurücksetzen
 * Du kannst nun Dein Master-Passwort zurücksetzen, falls Du es vergessen hast.
-* You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones filesystem.
+* Dazu muss eine Datei mit dem Namen `PasswordReset` in das `/AAPS/extra` Verzeichnis Deines Smartphone-Dateisystems hinzugefügt werden.
 * Starte AAPS neu.
 * Das neue Passwort wird durch die Seriennummer Deiner aktiven Pumpe gebildet.
 * Für den Omnipod Dash ist die Seriennummer immer '4241'.

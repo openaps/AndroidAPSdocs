@@ -12,9 +12,9 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Loop Status:** Pumpe ist ein Loop-Kandidat, aber aktuell ist das Protokoll noch unbekannt. Kein Interesse des Herstellers an Open Source.
 
-**Hardware Voraussetzungen für AAPS:** Keine. It seems to be BT enabled.
+**Hardware Voraussetzungen für AAPS:** Keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
 ### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
 
@@ -22,21 +22,21 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nicht durch externe Geräte steuern zu lassen, gab es hier in den letzten Jahren Veränderungen. Die t:slim X2 Pumpe wurde aktualisiert, um über die t:connect App ferngesteuert zu werden. Das bedeutet, dass die Türen geöffnet wurden, damit künftig eine Nutzung der Pumpe mit AAPS möglich sein könnte. Eine neue Pumpenfirmware soll in Kürze veröffentlicht werden - dieses oder nächstes Jahr, bevor die schlauchlose Pumpe t:sport auf den Markt kommt. Details, welche Funktionen über t:connect steuerbar sind, gibt es noch nicht - Boli auf jeden Fall, alles andere ist unbekannt.
 
-**Hardware Voraussetzungen für AAPS:** Keine. It seems to be BT enabled.
+**Hardware Voraussetzungen für AAPS:** Keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
 ### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
 **Loop Status:** Alle drei Pumpen werden Loop Kandidaten sein.
 
-Awaiting release of t:mobi in Europe (other two are not yet released anywhere). Development of AAPS t:mobi support has already started and should be available by end of 2025 (see more info on Discord).
+Es wird auf den Markteintritt der t:mobi in Europa gewartet (die anderen beiden Pumpen sind noch nirgendwo freigegeben). Die Entwicklung der AAPS t:mobi Unterstützung hat bereits begonnen und sollte bis Ende 2025 verfügbar sein (weitere Informationen hierzu gibt es auf Discord).
 
-**Hardware Voraussetzungen für AAPS:** Keine. It seems to be BT enabled.
+**Hardware Voraussetzungen für AAPS:** Keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
 ### Willcare Insulin Pumpe ([Homepage](http://shinmyungmedi.com/en/))
 
 **Loop Status:** Momentan kein Loop-Kandidat. Aber wir wurden von Mitarbeitern des Herstellers kontaktiert, da sie daran interessiert sind, ihre Pumpe loopfähig zu machen. Momentan fehlen wohl nur Kommandos zum Lesen und Schreiben der Profile.
 
-**Hardware Voraussetzungen für AAPS:** Keine. It seems to be BT enabled.
+**Hardware Voraussetzungen für AAPS:** Keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
 **Kommentare:** Da das Unternehmen Interesse an der Integration mit AAPS hat, könnten sie evtl. selbst die Umsetzung vornehmen.
 
@@ -50,7 +50,7 @@ Awaiting release of t:mobi in Europe (other two are not yet released anywhere). 
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Kommentare:** Supportende März 2025.
 
 ## Pumpen, die nicht für den Loop geeignet sind
 
@@ -60,11 +60,11 @@ Awaiting release of t:mobi in Europe (other two are not yet released anywhere). 
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Kommentare:** Die Community konnte keine Kommunikation mit der Solo Pumpe aufbauen.
 
-### Ypsomed Pump
+### Ypsomed Pumpe
 
-**Comments:** Ypso added very heavy 3rd party encryption.
+**Kommentare:** Ypso hat sehr starke Drittanbieter-Verschlüsselung eingeführt.
 
 ## Anforderungen an Pumpen, um loopbar zu sein
 

@@ -38,7 +38,7 @@ Wir verwenden Markdown für die Dokumentation. Die Datei hat das Suffix ".md". D
 
 ![Edit branch](../images/PR3.png)
 
-4. Du arbeitest im "<>Edit file" Reiter. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typos sic.). Wenn du etwas entdeckst, das ausgebessert werden muss, wechsle wieder zum edit Reiter, um die Ausbesserungen vorzunehmen. 
+4. Du arbeitest im "<>Edit file" Reiter. Wechsle zum „Preview changes“-Reiter, um auf die Vorschau einen Blick zu werfen, damit alles, was Du geändert hast, so aussieht, wie Du es wolltest (Rechtschreibfehler prüfen). Wenn du etwas entdeckst, das ausgebessert werden muss, wechsle wieder zum edit Reiter, um die Ausbesserungen vorzunehmen. 
 
 ![preview mode](../images/PR5.png)
 
@@ -62,7 +62,7 @@ PS: dein Fork und Branch befinden sich nach wie vor auf deinem persönlichen Git
 
 Wir verwenden Markdown für die Dokumentation. Die Dateien haben die Endung "*.md".
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown ist eine sehr einfache Textformatierungssprache, die Inhalte von der Formatierung trennt.
 
 Der Autor markiert z.B. eine Überschrift als Überschrift 1 und in der Markdown-Verarbeitung wird daraus der entsprechende HTML Code erzeugt, der diese Textstelle wie gewünscht formatiert.
 
@@ -176,9 +176,9 @@ Interne Links auf Seiten, sind Links auf den Anfang einer md-Datei, die auf unse
 
 - Interne Links zu .md Seiten: `[Linktext](.../folder/file.md)`
 
-#### Internal links to named inline references
+#### Interne Links auf bestimmte Textstellen (Textanker)
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Textanker sind Links auf eine beliebige Textstelle in einer md-Datei auf unseren eigenen Servern, die als Sprungziel (Anker) festgelegt wurden.
 
 Setze einen Textanker an die Stelle in der Zieldatei, an die gesprungen werden soll.
 
@@ -190,9 +190,9 @@ Es hat sich daher bewährt, als Namen den Dateinamen und eine zusätzliche Refer
 
 Verwende ausschließlich Kleinbuchstaben und verbinde Wörter mit Bindestrichen.
 
-Then link this reference in the text you are writing with the following kind of link.
+Mit der folgenden Schreibweise kannst Du den Link in Deinem Text setzen.
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Link auf einen Textanker: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
 ### Notizen, Warnungen, Ausklappinformationen
 

@@ -223,7 +223,7 @@ Klicke auf das Papierkorbsymbol, um eine **Automatisierungsregel** zu löschen.
 
 ![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
-## Examples of Automations
+## Beispiele für Automatisierungen
 
 Es folgen nun einige Beispiele für **Automatisierungen**. Weiterführende und tiefere Diskussionen über **Automatisierungen** im allgemeinen und einige Praxisbeispiele findest Du entweder in den Facebook-Gruppen oder auf Discord. Die folgenden Beispiele sollten nicht blind übernommenen werden. Wichtig ist, die genaue Funktionsweise der jeweiligen </strong>Automatisierung** zu verstehen, bevor sie genutzt wird.</p>
 
@@ -270,7 +270,7 @@ Der Screenshot zeigt die detaillierten Auslöser der **Automatisierung**:
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
-## Automating Preference Settings Export
+## Automatischer Export der Einstellungen
 
 ### Täglicher automatischer Export der Einstellungen
 
@@ -293,7 +293,7 @@ Screenshots, die die Auslöser für diese Automatisierung im Detail zeigen:
 Hinweis: Der Export wird im Careportal protokolliert. Hinweis: Automatisierungen werden **nur dann** ausgeführt, wenn Du vorher einen manuellen Export der Einstellungen gemacht hast. Siehe [Einstellungen > Wartung](#preferences-maintenance-settings) zur richtigen Aktivierung des automatischen Exports der Einstellungen.
 
 
-## Automation Logs
+## Automatisierungsprotokolle (Logs)
 
 Es gibt unten am Rand des Reiters eine **AAPS**Protokollierung der zuletzt ausgelösten **Automatisierung**.
 
@@ -332,6 +332,6 @@ Setze einen Haken im Kästchen neben der **Automatisierung**, um sicherzustellen
 
 Überprüfe die Reihenfolge der Regeln in Deiner Liste, so es oben beschrieben wurde.
 
-## Alternatives to Automations
+## Alternativen zu einer Automatisierung
 
 Für fortgeschrittene Benutzer gibt es andere Möglichkeiten, Aufgaben mit IFTTT oder einer Drittanbieter-Android-App namens Automate zu automatisieren. 

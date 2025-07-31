@@ -37,37 +37,37 @@ Ignoriere sie: Weitere Details, Trotzdem installieren.
 
 * [SMS-Befehle](#SMSCommands-troubleshooting)
 
-### Frequent Bluetooth connection problems
+### Häufige Bluetooth-Verbindungsprobleme
 
 #### Android 15
 
 ```{warning}
-Developers are working on this issue impacting **AAPS** on some Samsung and Pixel phones.
+Entwickler arbeiten an dem Problem, das Einfluss auf **AAPS** auf einigen Samsung und Pixel Smartphones hat.
 ```
 
-After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15, you can try to enable the following:
+Nach einem Android-Upgrade oder dem Umzug auf ein neueres Smartphone verliert **AAPS** häufig die Bluetooth-Verbindung zur Pumpe. Mit einem Neustart des Smartphones verschwindet das Problem vorübergehend. Wenn auf dem Smartphone Android 15 läuft, kannst Du versuchen die folgenden Dinge zu aktivieren:
 
-1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+1) **Öffne die Einstellungen** durch einen Klick auf das 3-Punkte-Menü rechts oben auf dem Startbildschirm.
 
 
 ![Einstellungen öffnen](../images/Pref2020_Open2.png)
 
-2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
+2. Scrolle ganz herunter und öffne das **Bestätigungstöne** / **Erweitertes**-Untermenü. Aktiviere **Verbinde BT-Gerät bei Android 15+**.
 
    ![BondBT](../images/troubleshooting/BondBT.png)
 
-3. If the pump asks for a pairing request, accept it.
+3. Wenn die Pumpe eine Koppelungsanfrage schickt, nimm Sie sie an.
 
-4. Restart your phone.
+4. Starte dein Smartphone neu.
 
-#### Battery optimization
+#### Akku-Optimierung
 
-Der Fehler kann bei verschiedenen Insulinpumpen auftreten. Apart from excluding AAPS from any battery optimization, you can also exclude the system Bluetooth app from battery optimization. In einigen Fällen hilft das. Depending on the phone you use, you will find the Bluetooth app differently.
+Der Fehler kann bei verschiedenen Insulinpumpen auftreten. Neben AAPS von jeder Akku-Optimierung auszuschließen, kannst Du auch die Bluetooth-App des Systems von der Akku-Optimierung ausschließen. In einigen Fällen hilft das. Je nach verwendetem Smartphone findet sich die Bluetooth-App an anderen Stellen.
 
 Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones findest.
 
 
-##### Pixel phones (stock Android)
+##### Pixel Smartphones (unverändertes Android)
 
 * Gehe zu Einstellungen > Apps
 
