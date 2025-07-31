@@ -245,7 +245,7 @@ Verwende diesen Befehl, um den aktiven Pod in den Status 'unterbrochen' zu verse
 
 #### Insulinabgabe fortsetzen
 
-Use this command to instruct the active, currently suspended pod to resume insulin delivery. Nachdem der Befehl erfolgreich verarbeitet wurde, wird die normale Insulinabgabe mit der aktuellen Basalrate fortgesetzt. Grundlage dafür ist das aktive Basalprofil zur aktuellen Uhrzeit. Der Pod akzeptiert wieder Befehle für Bolus, TBR und SMB.
+Benutze diesen Befehl, um den aktiven, derzeit pausierten Pod anzuweisen, die Insulinabgabe fortzusetzen. Nachdem der Befehl erfolgreich verarbeitet wurde, wird die normale Insulinabgabe mit der aktuellen Basalrate fortgesetzt. Grundlage dafür ist das aktive Basalprofil zur aktuellen Uhrzeit. Der Pod akzeptiert wieder Befehle für Bolus, TBR und SMB.
 
 1. Gehe zum Tab **Omnipod (POD)** und stelle sicher, dass das **Pod Status (1)** Feld zeigt **Suspended**, drücke dann den **Weiterlieferung (2)** Button, um den Prozess zu starten und den aktuellen Pod anzuweisen, die normale Insulinlieferung wieder fortzusetzen. Eine Nachricht **RESUME DELIVERY** wird im Feld **Pod Status (3)** angezeigt und signalisiert, dass der RileyLink den Befehl aktiv an den suspendierten Pod sendet.
 
