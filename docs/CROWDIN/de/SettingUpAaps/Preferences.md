@@ -49,7 +49,7 @@ Wenn Du **AAPS** zum ersten Mal installierst, wird standardmäßig der **Einfach
 - Wird auf dem [Dual Watchface](../WearOS/WearOsSmartwatch.md) angezeigt.
 
 (Preferences-skin)=
-### Skin
+### Erscheinungsbild
 
 Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
@@ -61,12 +61,12 @@ Bei der „Darstellung niedrige Auflösungen“ werden die Beschriftungen kürze
 
 Der Unterschiede in Darstellungsarten hängen von der Anzeigeorientierung des Smartphones ab:
 
-#### Portrait orientation
+#### Hochformat
 
 - **Ursprüngliches Erscheinungsbild** und **Schaltflächen werden immer am unteren Rand des Bildschirms angezeigt** sind identisch.
 - **Großer Bildschirm** zeigt alle Diagramme größer an.
 
-#### Landscape orientation
+#### Querformat
 
 - Bei Verwendung von **Ursprüngliches Erscheinungsbild** und **Großer Bildschirm**, musst Du nach unten scrollen, um Schaltflächen am unteren Rand des Bildschirms zu sehen
 
@@ -80,7 +80,7 @@ Der Unterschiede in Darstellungsarten hängen von der Anzeigeorientierung des Sm
 ![Einstellungen > Allgemein - Schutz](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-### Master password
+### Master-Passwort
 
 Da ab Version 2.7 die Einstellungen verschlüsselt sind, wird ein Passwort benötigt, um die [Einstellungen exportieren](../Maintenance/ExportImportSettings.md) zu können.
 
@@ -88,7 +88,7 @@ Da ab Version 2.7 die Einstellungen verschlüsselt sind, wird ein Passwort benö
 
 ![Master-Passwort festlegen](../images/MasterPW.png)
 
-### Settings protection
+### Schutz der Einstellungen
 
 - Schütze Deine Einstellungen mit einem Passwort oder einer biometrischen Authentifizierung (d. h. [**AAPS**-Nutzung durch Kinder](../RemoteFeatures/RemoteMonitoring.md)). Ist diese Option aktiviert, wirst Du bei jedem Zugriff auf die Einstellungen jedes Mal zur Authentifizierung aufgefordert.
 
@@ -98,13 +98,13 @@ Da ab Version 2.7 die Einstellungen verschlüsselt sind, wird ein Passwort benö
 
 ![Schutz](../images/Pref2020_Protection.png)
 
-### Application protection
+### Schutz der App
 
 Wenn die App gesichert ist, musst Du zum Öffnen von **AAPS** ein Passwort eingeben oder die biometrische Authentifizierung Deine Smartphones nutzen.
 
 **AAPS** wird sofort geschlossen, wenn ein falsches Kennwort eingegeben wurde. AAPS wird aber trotzdem im Hintergrund weiter ausgeführt, wenn AAPS zuvor erfolgreich geöffnet worden war.
 
-### Bolus protection
+### Bolus-Schutz
 
 - Bolus-Schutz könnte nützlich sein, wenn **AAPS** von einem kleinen Kind verwendet wird und Du [SMS für Boli](../RemoteFeatures/SMSCommands.md) verwendest.
 
@@ -112,7 +112,7 @@ Wenn die App gesichert ist, musst Du zum Öffnen von **AAPS** ein Passwort einge
 
 ![Freigabe mit biometrischer Authentifizierung](../images/Pref2020_PW.png)
 
-### Password and PIN retention
+### Passwort und PIN-Sperrung
 
 Lege hier fest, wie viele Sekunden nachdem das Passwort erfolgreich eingegeben wurde, die Einstellungen oder die Bolus-Funktionen freigeschaltet bleiben sollen.
 
@@ -122,7 +122,7 @@ Im Abschnitt **Übersicht** kannst Du die Einstellungen für den Startbildschirm
 
 ![Einstellungen > Überblick](../images/Pref2020_OverviewII.png)
 
-### Keep screen on
+### Bildschirm aktiv lassen
 
 Die Option "Bildschirm aktiv lassen" hindert Android daran, den Bildschirm abzuschalten. Dies ist z.B. zu Präsentationszwecken hilfreich,  es verbraucht aber sehr viel Batterie.  Deshalb wird empfohlen, das Smartphone an ein Ladekabel anzuschließen.
 
@@ -158,7 +158,7 @@ Der Vorschlag muss bestätigt werden, bevor Insulin abgegeben wird.
 Es wird nur eine Quick Wizard-Schaltfläche angezeigt. Wenn Du eine andere ausführen möchtest: Drücke lange auf die gerade angezeigte Quick Wizard-Schaltfläche. Damit werden dann alle verfügbaren Quick Wizard-Optionen aufgelistet. Um eine davon auszuführen, drücke lange darauf. Vor der Ausführung musst Du sie bestätigen.
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### Vordefinierte temporäre Ziele
 
 Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
@@ -174,7 +174,7 @@ Das Ziel und die Dauer jedes vordefinierten temporären Ziels (TT) kannst Du hie
 
 Lerne [hier, wie Du temporäre Ziele aktivierst](#TempTargets-where-can-i-select-a-temp-target).
 
-### Fill/Prime standard insulin amounts
+### Füll-/Vorfüll-Standardmengen
 
 Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
@@ -183,13 +183,13 @@ Wenn Du den Schlauch oder die Kanüle über **AAPS** füllen möchtest, machst D
 Voreinstellungen für Füllmengen können in diesem Dialog definiert werden. Stelle die Werte für die drei Buttons im Dialog 'Katheterwechsel' (Aktionen Tab / Menü) abhängig von der Länge Deines Katheters ein.
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### Zielbereich für die Grafikanzeige
 
 Wähle die Ober- und Untergrenze des grün hinterlegten Zielbereichs für das Diagramm auf der **AAPS**-Übersicht und auf der Smartwatch. Dies dient nur der Anzeige und ist nicht der Zielwert für Deinen Blutzucker. Beispiel: 70 - 180 mg/dl oder 3,9 - 10 mmol/l
 
 ![Einstellungen > Zielbereich für die Grafikanzeige](../images/Pref2020_OV_Range2.png)
 
-### Shorten tab titles
+### Kurze Tab-Überschriften
 
 Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
@@ -200,7 +200,7 @@ Zum Beispiel wird die 'OpenAPS AMA' -Registerkarte zu 'OAPS', 'Objectives (Ziele
 ![Einstellungen > Tabs](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes field in treatments dialogs
+### Möglichkeit zur Erfassung von Notizen in Behandlungsdialogen
 
 Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
@@ -230,7 +230,7 @@ Mit der letzten Option kannst Du diese Einstellungen, wenn Du sie definiert hast
 ![Einstellungen > Status Lights](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Deliver this part of bolus wizard result
+### Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
 
 Lege den [Standard-Prozentsatz](#AapsScreens-section-j) des Bolus fest, den der Bolus-Rechner bei seinen Berechnungen berücksichtigen soll.
 
@@ -240,7 +240,7 @@ Bei der Verwendung von [SMB](#objectives-objective9) geben viele Menschen nicht 
 * für Menschen mit langsamer Verdauung: Ein voller Vorab-Bolus kann eine Hypo zur Folge haben, da die Insulinwirkung schneller eintritt, als die die Kohlenhydrate verdaut werden.
 * um **AAPS** mehr Spielraum für den Umgang mit **Glukosewertanstiegen** zu geben. Sobald es sinnvoll erscheint, wird **AAPS** in beiden Fällen den fehlenden Bolus-Teil mit SMBs ausgleichen.
 
-### Enabled bolus advisor
+### Bolus-Berater aktivieren
 
 Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
@@ -248,14 +248,14 @@ Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 Wenn der Bolus-Berater aktiviert ist und Du ihn in einer Hyperglykämie aufrufst, erhältst Du eine Warnung, und Du wirst gefragt, ob Du einen Vorab-Bolus abgeben und später, wenn Dein **Glukosewert** wieder im Zielbereich ist, essen möchtest.
 
-### Enabled bolus reminder
+### Bolus-Erinnerung aktivieren
 
 Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 - Abschnitt wird aktuell überarbeitet -
 
 (Preferences-advanced-settings-overview)=
-### Advanced Settings (Overview)
+### Erweiterte Einstellungen (Übersicht)
 
 ![Einstellungen > Erweiterte Einstellungen](../images/Pref2021_OV_Adv.png)
 
@@ -272,14 +272,14 @@ Sei vorsichtig und aktiviere ihn erst dann, wenn Du vollständig verstanden hast
 ## Sicherheitseinstellungen der Behandlungen
 
 (preferences-patient-type)=
-### Patient type
+### Patiententyp
 
 - Sicherheitsgrenzwerte werden auf der Grundlage des Alters festgelegt, das Du in dieser Einstellung auswählst.
 - Wenn du an diese festen Grenzen (z.B. Maximal-Bolus) kommst, ist es an der Zeit, einen Schritt weiter zu gehen.
 - Es ist keine gute Idee, ein höheres Alter als das echte Alter. Dies kann zu einer Überdosierung aufgrund von Falscheingaben (z.B. das Weglassen des Dezimalpunktes) im Bolus-Dialog führen.
 - Wenn Du die Werte für diese fest eingestellten Sicherheitsgrenzen wissen möchtest, scrolle auf [dieser Seite](../DailyLifeWithAaps/KeyAapsFeatures.md) zu der Algorithmenfunktion, die Du verwendest.
 
-### Max allowed bolus
+### Max. erlaubter Bolus [IE]
 
 - Legt die maximale Bolusgröße (in IE) fest, die **AAPS** als Einzelbolus abgeben darf.
 - Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhinden.
