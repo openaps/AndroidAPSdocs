@@ -27,7 +27,7 @@ Vertrauliche oder private Informationen wie z. B. Deine Nightscout-URL oder das 
 1. Erstelle ein Konto bei [Open Humans](https://www.openhumans.org), falls Du dies noch nicht getan hast. Zur Anmeldung kannst Du auch Dein Google- oder Facebook-Konto verwenden, wenn Du dies möchtest.
 2. Aktiviere das “Open Humans”-Modul in [Konfiguration > Synchronisation](../SettingUpAaps/ConfigBuilder.md).
 3. Öffne dessen Einstellungen durch einen Klick auf das Zahnradsymbol. Du kannst das Hochladen auf die Zeiten beschränken, in denen Du Dich im WLAN befindest und/oder zu denen das Smartphone geladen wird.
-4. Open the Open Humans Plugin (either through OH tab or hamburger menu) and click 'LOGIN'.
+4. Öffne das Open-Humans-Plugin (entweder über den OH Tab oder Hamburger-Menü) und klicke auf „LOGIN“.
 
 ![Open Humans Konfigurations-Generator](../images/OHUploader1.png)
 
