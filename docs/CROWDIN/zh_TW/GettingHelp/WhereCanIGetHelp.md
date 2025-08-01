@@ -34,7 +34,7 @@
 
 ### 捷克和斯洛伐克
 
-* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/)：使用 AndroidAPS 的捷克語使用者
+* 翻譯如下： [AAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/)：AndroidAPS 的捷克語使用者
 
 ### 法國
 

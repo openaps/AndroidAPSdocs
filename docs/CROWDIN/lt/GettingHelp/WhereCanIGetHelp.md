@@ -34,7 +34,7 @@ Please note that Facebook has recently removed external links shared within the 
 
 ### Čekų ir slovakų
 
-* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech-speaking users of AndroidAPS
+* [AAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech-speaking users of AndroidAPS
 
 ### France
 
