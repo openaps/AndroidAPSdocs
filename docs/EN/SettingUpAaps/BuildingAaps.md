@@ -14,7 +14,12 @@ There are two ways to build the APK, suitable for [General Users](general-users)
 This section is designed for general users. If this is your first time, please complete the [preparation step](aaps-ci-preparation) first.
 
 For the download links mentioned in the tutorial videos, please use the following site:  
-Support Website: [aaps-ci-preparation](https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
+
+```{eval-rst}
+.. raw:: html
+
+   Download Support Website: <a href="../aaps-ci-preparation.html" download>aaps-ci-preparation</a>
+```
 
 If you have any questions during the process, please refer to [AAPS-CI Troubleshooting](aaps-ci-troubleshooting) first.
 
