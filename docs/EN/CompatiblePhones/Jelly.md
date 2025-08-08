@@ -38,19 +38,19 @@ You can enable NFC for Libre sensors.
 
 ### Battery life optimization
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usuage' should be disabled by selecting 'unrestricted' (and other **DIY apps** like BYODA, xDrip+, OOP2, Juggluco, etc...).
+To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' (and other **DIY apps** like BYODA, xDrip+, OOP2, Juggluco, etc...).
 
-![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](https://github.com/user-attachments/assets/439a08a6-b72b-459e-b771-ff72208a944a)
+![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
 ### Intelligent Assistance and App Blocker 
 
 Like with the Jelly 2 (above), the Jelly Star should have 'Intelligent Assistance' disabled for **DIY apps**. Similarly, 'App Blocker' under 'Settings' must also be switched off to avoid disruption with **AAPS**: 
 
-![App Blocker Screenshot 2025-08-03 213400](https://github.com/user-attachments/assets/fb19c426-389c-49c9-91e7-2b432327d2a6)
-   
-### Gooogle Play Protect 
+![App Blocker Screenshot 2025-08-03 213400](../images/JellyStarMini2.jpg)
 
-Google Play Protect should also be disabled.
+### Google Play Protect 
+
+Remember to disable Google Play Protect.
 
 
 
