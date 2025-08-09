@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <title>AAPS-CI Auth + Keystore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/node-forge@1.3.1/dist/forge.min.js"></script>
+  <script>
+    // i18n 多國語系字典
+    const i18nStrings = {
+      en: {
+        fileManagerAlert: "Please use the 'File Manager' app from Google Play to open this page",
+        mainTitle: "AAPS-CI Preparation",
+        option1Title: "Option 1: Generate JKS",
+        generateJksBtn: "Generate JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Copy",
+        option2Title: "Option 2: Upload Existing JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Google Drive Auth",
+        defaultRadio: "Default",
+        customRadio: "Custom",
+        startAuthBtn: "Start Auth",
+        customClientIdPlaceholder: "Your Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Copied to clipboard!",
+        importantTipTitle: "Important",
+        importantTipContent: "This page will not save the generated keys. Please make sure to copy and save them in a safe place.",
+        githubSecretTip: "Please copy to your Github branch Settings => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "This page uses AI translation. If you find any translation errors, please report them at",
+        aiTranslateIssues: "issues",
+        aiTranslateSuggest: "or submit a PR to help improve."
+      },
+      ar: {
+        fileManagerAlert: "يرجى استخدام تطبيق 'مدير الملفات' من Google Play لفتح هذه الصفحة",
+        mainTitle: "تحضير AAPS-CI",
+        option1Title: "الخيار 1: إنشاء JKS",
+        generateJksBtn: "إنشاء JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "نسخ",
+        option2Title: "الخيار 2: رفع JKS موجود",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "كلمة مرور KEYSTORE:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "كلمة مرور KEY:",
+        oauth2Title: "تفويض Google Drive",
+        defaultRadio: "افتراضي",
+        customRadio: "مخصص",
+        startAuthBtn: "بدء التفويض",
+        customClientIdPlaceholder: "معرّف عميل Google الخاص بك",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "تم النسخ إلى الحافظة!",
+        importantTipTitle: "مهم",
+        importantTipContent: "لن يتم حفظ المفاتيح التي تم إنشاؤها في هذه الصفحة. يرجى التأكد من نسخها وحفظها في مكان آمن.",
+        githubSecretTip: "يرجى النسخ إلى إعدادات فرع GitHub الخاص بك => الأسرار والمتغيرات => الإجراءات => أسرار المستودع الجديدة",
+        aiTranslateNotice: "تستخدم هذه الصفحة الترجمة بالذكاء الاصطناعي. إذا وجدت أي أخطاء في الترجمة، يرجى الإبلاغ عنها في",
+        aiTranslateIssues: "المشكلات",
+        aiTranslateSuggest: "أو إرسال PR للمساعدة في التحسين."
+      },
+      bg: {
+        fileManagerAlert: "Моля, използвайте приложението 'File Manager' от Google Play, за да отворите тази страница",
+        mainTitle: "AAPS-CI Подготовка",
+        option1Title: "Опция 1: Генериране на JKS",
+        generateJksBtn: "Генерирай JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Копирай",
+        option2Title: "Опция 2: Качване на съществуващ JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Google Drive Удостоверяване",
+        defaultRadio: "По подразбиране",
+        customRadio: "Потребителски",
+        startAuthBtn: "Стартирай удостоверяване",
+        customClientIdPlaceholder: "Вашият Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Копирано в клипборда!",
+        importantTipTitle: "Важно",
+        importantTipContent: "Тази страница няма да запази генерираните ключове. Моля, копирайте и съхранете ги на сигурно място.",
+        githubSecretTip: "Моля, копирайте във вашите GitHub настройки на клона => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Тази страница използва AI превод. Ако откриете грешки, моля, докладвайте ги на",
+        aiTranslateIssues: "проблеми",
+        aiTranslateSuggest: "или изпратете PR за подобрение."
+      },
+      ca: {
+        fileManagerAlert: "Si us plau, utilitzeu l'aplicació 'File Manager' de Google Play per obrir aquesta pàgina",
+        mainTitle: "Preparació AAPS-CI",
+        option1Title: "Opció 1: Generar JKS",
+        generateJksBtn: "Genera JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Copia",
+        option2Title: "Opció 2: Pujar un JKS existent",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "Contrasenya del KEYSTORE:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "Contrasenya del KEY:",
+        oauth2Title: "Autorització de Google Drive",
+        defaultRadio: "Per defecte",
+        customRadio: "Personalitzat",
+        startAuthBtn: "Inicia l'autorització",
+        customClientIdPlaceholder: "El teu Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Copiat al porta-retalls!",
+        importantTipTitle: "Important",
+        importantTipContent: "Aquesta pàgina no desarà les claus generades. Assegureu-vos de copiar-les i guardar-les en un lloc segur.",
+        githubSecretTip: "Si us plau, copia-ho a la configuració del teu branch de Github => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Aquesta pàgina utilitza traducció per IA. Si trobeu errors, informeu-ho a",
+        aiTranslateIssues: "incidències",
+        aiTranslateSuggest: "o envieu un PR per ajudar a millorar."
+      },
+      cs: {
+        fileManagerAlert: "Pro otevření této stránky použijte aplikaci 'File Manager' z Google Play",
+        mainTitle: "Příprava AAPS-CI",
+        option1Title: "Možnost 1: Generovat JKS",
+        generateJksBtn: "Generovat JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Kopírovat",
+        option2Title: "Možnost 2: Nahrát existující JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Autorizace Google Drive",
+        defaultRadio: "Výchozí",
+        customRadio: "Vlastní",
+        startAuthBtn: "Spustit autorizaci",
+        customClientIdPlaceholder: "Váš Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Zkopírováno do schránky!",
+        importantTipTitle: "Důležité",
+        importantTipContent: "Tato stránka neukládá vygenerované klíče. Nezapomeňte si je zkopírovat a uložit na bezpečné místo.",
+        githubSecretTip: "Zkopírujte prosím do nastavení vašeho Github branch => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Tato stránka používá AI překlad. Pokud najdete chyby, nahlaste je na",
+        aiTranslateIssues: "problémy",
+        aiTranslateSuggest: "nebo pošlete PR pro zlepšení."
+      },
+      da: {},
+      da: {
+        fileManagerAlert: "Brug venligst 'File Manager'-appen fra Google Play for at åbne denne side",
+        mainTitle: "AAPS-CI Forberedelse",
+        option1Title: "Valgmulighed 1: Generér JKS",
+        generateJksBtn: "Generér JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Kopiér",
+        option2Title: "Valgmulighed 2: Upload eksisterende JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Google Drev Autorisation",
+        defaultRadio: "Standard",
+        customRadio: "Brugerdefineret",
+        startAuthBtn: "Start autorisation",
+        customClientIdPlaceholder: "Din Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Kopieret til udklipsholder!",
+        importantTipTitle: "Vigtigt",
+        importantTipContent: "Denne side gemmer ikke genererede nøgler. Husk at kopiere og gemme dem et sikkert sted.",
+        githubSecretTip: "Kopier venligst til din Github branch Settings => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Denne side bruger AI-oversættelse. Hvis du finder fejl, så rapportér dem på",
+        aiTranslateIssues: "problemer",
+        aiTranslateSuggest: "eller send en PR for at hjælpe med at forbedre."
+      },
+      de: {
+        fileManagerAlert: "Bitte verwenden Sie die 'Dateimanager'-App aus dem Google Play Store, um diese Seite zu öffnen",
+        mainTitle: "AAPS-CI Vorbereitung",
+        option1Title: "Option 1: JKS generieren",
+        generateJksBtn: "JKS generieren",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Kopieren",
+        option2Title: "Option 2: Vorhandene JKS hochladen",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Google Drive Autorisierung",
+        defaultRadio: "Standard",
+        customRadio: "Benutzerdefiniert",
+        startAuthBtn: "Autorisierung starten",
+        customClientIdPlaceholder: "Deine Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "In die Zwischenablage kopiert!",
+        importantTipTitle: "Wichtig",
+        importantTipContent: "Diese Seite speichert keine generierten Schlüssel. Bitte kopiere und sichere sie an einem sicheren Ort.",
+        githubSecretTip: "Bitte kopiere in die Einstellungen deines Github-Branches => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Diese Seite verwendet KI-Übersetzung. Wenn du Fehler findest, melde sie bitte unter",
+        aiTranslateIssues: "Probleme",
+        aiTranslateSuggest: "oder sende einen PR zur Verbesserung."
+      },
+      el: {
+        fileManagerAlert: "Παρακαλώ χρησιμοποιήστε την εφαρμογή 'Διαχειριστής Αρχείων' από το Google Play για να ανοίξετε αυτήν τη σελίδα",
+        mainTitle: "Προετοιμασία AAPS-CI",
+        option1Title: "Επιλογή 1: Δημιουργία JKS",
+        generateJksBtn: "Δημιουργία JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Αντιγραφή",
+        option2Title: "Επιλογή 2: Μεταφόρτωση υπάρχοντος JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Εξουσιοδότηση Google Drive",
+        defaultRadio: "Προεπιλογή",
+        customRadio: "Προσαρμοσμένο",
+        startAuthBtn: "Έναρξη εξουσιοδότησης",
+        customClientIdPlaceholder: "Το Google Client ID σας",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Αντιγράφηκε στο πρόχειρο!",
+        importantTipTitle: "Σημαντικό",
+        importantTipContent: "Αυτή η σελίδα δεν αποθηκεύει τα παραγόμενα κλειδιά. Βεβαιωθείτε ότι τα αντιγράψατε και τα αποθηκεύσατε με ασφάλεια.",
+        githubSecretTip: "Παρακαλώ αντιγράψτε στις ρυθμίσεις του Github branch σας => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Αυτή η σελίδα χρησιμοποιεί μετάφραση AI. Αν βρείτε λάθη, αναφέρετέ τα στο",
+        aiTranslateIssues: "ζητήματα",
+        aiTranslateSuggest: "ή στείλτε PR για βελτίωση."
+      },
+      es: {
+        fileManagerAlert: "Por favor, use la aplicación 'Administrador de archivos' de Google Play para abrir esta página",
+        mainTitle: "Preparación de AAPS-CI",
+        option1Title: "Opción 1: Generar JKS",
+        generateJksBtn: "Generar JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Copiar",
+        option2Title: "Opción 2: Subir JKS existente",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Autorización de Google Drive",
+        defaultRadio: "Predeterminado",
+        customRadio: "Personalizado",
+        startAuthBtn: "Iniciar autorización",
+        customClientIdPlaceholder: "Tu Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "¡Copiado al portapapeles!",
+        importantTipTitle: "Importante",
+        importantTipContent: "Esta página no guardará las claves generadas. Asegúrate de copiarlas y guardarlas en un lugar seguro.",
+        githubSecretTip: "Por favor, copia en la configuración de tu rama de Github => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Esta página utiliza traducción por IA. Si encuentras errores, repórtalos en",
+        aiTranslateIssues: "problemas",
+        aiTranslateSuggest: "o envía un PR para ayudar a mejorar."
+      },
+      fr: {
+        fileManagerAlert: "Veuillez utiliser l'application 'Gestionnaire de fichiers' de Google Play pour ouvrir cette page",
+        mainTitle: "Préparation AAPS-CI",
+        option1Title: "Option 1 : Générer JKS",
+        generateJksBtn: "Générer JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Copier",
+        option2Title: "Option 2 : Télécharger un JKS existant",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Autorisation Google Drive",
+        defaultRadio: "Par défaut",
+        customRadio: "Personnalisé",
+        startAuthBtn: "Démarrer l'autorisation",
+        customClientIdPlaceholder: "Votre Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Copié dans le presse-papiers !",
+        importantTipTitle: "Important",
+        importantTipContent: "Cette page ne sauvegarde pas les clés générées. Veuillez les copier et les conserver en lieu sûr.",
+        githubSecretTip: "Veuillez copier dans les paramètres de votre branche Github => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Cette page utilise la traduction IA. Si vous trouvez des erreurs, signalez-les sur",
+        aiTranslateIssues: "problèmes",
+        aiTranslateSuggest: "ou envoyez un PR pour aider à améliorer."
+      },
+      he: {
+        fileManagerAlert: "אנא השתמש באפליקציית 'מנהל הקבצים' מ-Google Play כדי לפתוח דף זה",
+        mainTitle: "הכנת AAPS-CI",
+        option1Title: "אפשרות 1: יצירת JKS",
+        generateJksBtn: "צור JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "העתק",
+        option2Title: "אפשרות 2: העלאת JKS קיים",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "הרשאת Google Drive",
+        defaultRadio: "ברירת מחדל",
+        customRadio: "מותאם אישית",
+        startAuthBtn: "התחל הרשאה",
+        customClientIdPlaceholder: "Google Client ID שלך",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "הועתק ללוח!",
+        importantTipTitle: "חשוב",
+        importantTipContent: "דף זה לא שומר את המפתחות שנוצרו. הקפד להעתיק ולשמור אותם במקום בטוח.",
+        githubSecretTip: "אנא העתק להגדרות הסניף שלך ב-Github => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "דף זה משתמש בתרגום AI. אם מצאת שגיאות, דווח עליהן ב-",
+        aiTranslateIssues: "בעיות",
+        aiTranslateSuggest: "או שלח PR לשיפור."
+      },
+      hr: {
+        fileManagerAlert: "Molimo koristite aplikaciju 'Upravitelj datotekama' iz Google Playa za otvaranje ove stranice",
+        mainTitle: "AAPS-CI Priprema",
+        option1Title: "Opcija 1: Generiraj JKS",
+        generateJksBtn: "Generiraj JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Kopiraj",
+        option2Title: "Opcija 2: Učitaj postojeći JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Google Drive autorizacija",
+        defaultRadio: "Zadano",
+        customRadio: "Prilagođeno",
+        startAuthBtn: "Pokreni autorizaciju",
+        customClientIdPlaceholder: "Tvoj Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Kopirano u međuspremnik!",
+        importantTipTitle: "Važno",
+        importantTipContent: "Ova stranica ne sprema generirane ključeve. Obavezno ih kopirajte i spremite na sigurno mjesto.",
+        githubSecretTip: "Kopirajte u postavke vašeg Github branch-a => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Ova stranica koristi AI prijevod. Ako pronađete greške, prijavite ih na",
+        aiTranslateIssues: "problemi",
+        aiTranslateSuggest: "ili pošaljite PR za poboljšanje."
+      },
+      hu: {
+        fileManagerAlert: "Kérjük, a Google Play 'Fájlkezelő' alkalmazását használja az oldal megnyitásához",
+        mainTitle: "AAPS-CI Előkészítés",
+        option1Title: "1. lehetőség: JKS generálása",
+        generateJksBtn: "JKS generálása",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Másolás",
+        option2Title: "2. lehetőség: Meglévő JKS feltöltése",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Google Drive hitelesítés",
+        defaultRadio: "Alapértelmezett",
+        customRadio: "Egyéni",
+        startAuthBtn: "Hitelesítés indítása",
+        customClientIdPlaceholder: "Saját Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Vágólapra másolva!",
+        importantTipTitle: "Fontos",
+        importantTipContent: "Ez az oldal nem menti el a generált kulcsokat. Ne felejtse el kimásolni és biztonságos helyen tárolni őket.",
+        githubSecretTip: "Kérjük, másolja a Github branch beállításaihoz => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Ez az oldal AI fordítást használ. Ha hibát talál, jelentse a következő címen:",
+        aiTranslateIssues: "hibák",
+        aiTranslateSuggest: "vagy küldjön PR-t a javításhoz."
+      },
+      it: {
+        fileManagerAlert: "Si prega di utilizzare l'app 'File Manager' da Google Play per aprire questa pagina",
+        mainTitle: "Preparazione AAPS-CI",
+        option1Title: "Opzione 1: Genera JKS",
+        generateJksBtn: "Genera JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Copia",
+        option2Title: "Opzione 2: Carica JKS esistente",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Autorizzazione Google Drive",
+        defaultRadio: "Predefinito",
+        customRadio: "Personalizzato",
+        startAuthBtn: "Avvia autorizzazione",
+        customClientIdPlaceholder: "Il tuo Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Copiato negli appunti!",
+        importantTipTitle: "Importante",
+        importantTipContent: "Questa pagina non salverà le chiavi generate. Assicurati di copiarle e conservarle in un luogo sicuro.",
+        githubSecretTip: "Copia nelle impostazioni del tuo branch Github => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Questa pagina utilizza la traduzione AI. Se trovi errori, segnalali su",
+        aiTranslateIssues: "problemi",
+        aiTranslateSuggest: "o invia una PR per migliorare."
+      },
+      ko: {
+        fileManagerAlert: "이 페이지를 열려면 Google Play의 '파일 관리자' 앱을 사용하세요",
+        mainTitle: "AAPS-CI 준비",
+        option1Title: "옵션 1: JKS 생성",
+        generateJksBtn: "JKS 생성",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "복사",
+        option2Title: "옵션 2: 기존 JKS 업로드",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Google 드라이브 인증",
+        defaultRadio: "기본값",
+        customRadio: "사용자 지정",
+        startAuthBtn: "인증 시작",
+        customClientIdPlaceholder: "Google Client ID 입력",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "클립보드에 복사됨!",
+        importantTipTitle: "중요",
+        importantTipContent: "이 페이지는 생성된 키를 저장하지 않습니다. 반드시 복사하여 안전한 곳에 보관하세요.",
+        githubSecretTip: "Github 브랜치 설정 => Secrets and Variables => Actions => New repository secrets에 복사하세요",
+        aiTranslateNotice: "이 페이지는 AI 번역을 사용합니다. 번역 오류가 있으면 다음에 신고해 주세요:",
+        aiTranslateIssues: "이슈",
+        aiTranslateSuggest: "또는 개선을 위해 PR을 보내주세요."
+      },
+      lt: {
+        fileManagerAlert: "Norėdami atidaryti šį puslapį, naudokite 'File Manager' programėlę iš Google Play",
+        mainTitle: "AAPS-CI Paruošimas",
+        option1Title: "1 pasirinkimas: Sugeneruoti JKS",
+        generateJksBtn: "Generuoti JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Kopijuoti",
+        option2Title: "2 pasirinkimas: Įkelti esamą JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Google Drive autorizacija",
+        defaultRadio: "Numatytasis",
+        customRadio: "Pasirinktinis",
+        startAuthBtn: "Pradėti autorizaciją",
+        customClientIdPlaceholder: "Jūsų Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Nukopijuota į iškarpinę!",
+        importantTipTitle: "Svarbu",
+        importantTipContent: "Šis puslapis neišsaugo sugeneruotų raktų. Būtinai nukopijuokite ir laikykite juos saugioje vietoje.",
+        githubSecretTip: "Nukopijuokite į savo Github šakos nustatymus => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Šis puslapis naudoja AI vertimą. Jei radote klaidų, praneškite apie jas adresu",
+        aiTranslateIssues: "problemos",
+        aiTranslateSuggest: "arba pateikite PR patobulinimui."
+      },
+      nb: {
+        fileManagerAlert: "Bruk 'File Manager'-appen fra Google Play for å åpne denne siden",
+        mainTitle: "AAPS-CI Forberedelse",
+        option1Title: "Alternativ 1: Generer JKS",
+        generateJksBtn: "Generer JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Kopier",
+        option2Title: "Alternativ 2: Last opp eksisterende JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Google Drive-autorisasjon",
+        defaultRadio: "Standard",
+        customRadio: "Egendefinert",
+        startAuthBtn: "Start autorisasjon",
+        customClientIdPlaceholder: "Din Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Kopiert til utklippstavle!",
+        importantTipTitle: "Viktig",
+        importantTipContent: "Denne siden lagrer ikke genererte nøkler. Husk å kopiere og lagre dem et trygt sted.",
+        githubSecretTip: "Kopier til innstillingene for din Github-branch => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Denne siden bruker AI-oversettelse. Hvis du finner feil, rapporter dem på",
+        aiTranslateIssues: "problemer",
+        aiTranslateSuggest: "eller send inn en PR for å forbedre."
+      },
+      nl: {
+        fileManagerAlert: "Gebruik de 'Bestandsbeheer'-app van Google Play om deze pagina te openen",
+        mainTitle: "AAPS-CI Voorbereiding",
+        option1Title: "Optie 1: Genereer JKS",
+        generateJksBtn: "Genereer JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Kopiëren",
+        option2Title: "Optie 2: Bestaande JKS uploaden",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Google Drive-autorisatie",
+        defaultRadio: "Standaard",
+        customRadio: "Aangepast",
+        startAuthBtn: "Start autorisatie",
+        customClientIdPlaceholder: "Je Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Gekopieerd naar klembord!",
+        importantTipTitle: "Belangrijk",
+        importantTipContent: "Deze pagina slaat de gegenereerde sleutels niet op. Zorg ervoor dat je ze kopieert en veilig bewaart.",
+        githubSecretTip: "Kopieer naar de instellingen van je Github-branch => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Deze pagina gebruikt AI-vertaling. Als je fouten vindt, meld ze dan op",
+        aiTranslateIssues: "problemen",
+        aiTranslateSuggest: "of stuur een PR om te helpen verbeteren."
+      },
+      pl: {
+        fileManagerAlert: "Użyj aplikacji 'Menedżer plików' z Google Play, aby otworzyć tę stronę",
+        mainTitle: "Przygotowanie AAPS-CI",
+        option1Title: "Opcja 1: Wygeneruj JKS",
+        generateJksBtn: "Wygeneruj JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Kopiuj",
+        option2Title: "Opcja 2: Prześlij istniejący JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Autoryzacja Google Drive",
+        defaultRadio: "Domyślny",
+        customRadio: "Niestandardowy",
+        startAuthBtn: "Rozpocznij autoryzację",
+        customClientIdPlaceholder: "Twój Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Skopiowano do schowka!",
+        importantTipTitle: "Ważne",
+        importantTipContent: "Ta strona nie zapisuje wygenerowanych kluczy. Pamiętaj, aby je skopiować i przechowywać w bezpiecznym miejscu.",
+        githubSecretTip: "Skopiuj do ustawień swojego branch'a Github => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Ta strona używa tłumaczenia AI. Jeśli znajdziesz błędy, zgłoś je na",
+        aiTranslateIssues: "problemy",
+        aiTranslateSuggest: "lub wyślij PR, aby pomóc ulepszyć."
+      },
+      'pt_BR': {
+        fileManagerAlert: "Por favor, use o aplicativo 'File Manager' da Google Play para abrir esta página",
+        mainTitle: "Preparação AAPS-CI",
+        option1Title: "Opção 1: Gerar JKS",
+        generateJksBtn: "Gerar JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Copiar",
+        option2Title: "Opção 2: Enviar JKS existente",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Autorização do Google Drive",
+        defaultRadio: "Padrão",
+        customRadio: "Personalizado",
+        startAuthBtn: "Iniciar autorização",
+        customClientIdPlaceholder: "Seu Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Copiado para a área de transferência!",
+        importantTipTitle: "Importante",
+        importantTipContent: "Esta página não salva as chaves geradas. Certifique-se de copiá-las e guardá-las em um local seguro.",
+        githubSecretTip: "Copie para as configurações do seu branch do Github => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Esta página usa tradução por IA. Se encontrar erros, relate em",
+        aiTranslateIssues: "problemas",
+        aiTranslateSuggest: "ou envie um PR para ajudar a melhorar."
+      },
+      'pt_PT': {
+        fileManagerAlert: "Por favor, utilize a aplicação 'File Manager' da Google Play para abrir esta página",
+        mainTitle: "Preparação AAPS-CI",
+        option1Title: "Opção 1: Gerar JKS",
+        generateJksBtn: "Gerar JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Copiar",
+        option2Title: "Opção 2: Carregar JKS existente",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Autorização do Google Drive",
+        defaultRadio: "Padrão",
+        customRadio: "Personalizado",
+        startAuthBtn: "Iniciar autorização",
+        customClientIdPlaceholder: "O seu Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Copiado para a área de transferência!",
+        importantTipTitle: "Importante",
+        importantTipContent: "Esta página não guarda as chaves geradas. Certifique-se de as copiar e guardar num local seguro.",
+        githubSecretTip: "Copie para as definições do seu branch do Github => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Esta página utiliza tradução por IA. Se encontrar erros, reporte em",
+        aiTranslateIssues: "problemas",
+        aiTranslateSuggest: "ou envie um PR para ajudar a melhorar."
+      },
+      ro: {
+        fileManagerAlert: "Vă rugăm să folosiți aplicația 'File Manager' din Google Play pentru a deschide această pagină",
+        mainTitle: "Pregătire AAPS-CI",
+        option1Title: "Opțiunea 1: Generează JKS",
+        generateJksBtn: "Generează JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Copiază",
+        option2Title: "Opțiunea 2: Încarcă JKS existent",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Autorizare Google Drive",
+        defaultRadio: "Implicit",
+        customRadio: "Personalizat",
+        startAuthBtn: "Începe autorizarea",
+        customClientIdPlaceholder: "ID-ul tău Google Client",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Copiat în clipboard!",
+        importantTipTitle: "Important",
+        importantTipContent: "Această pagină nu salvează cheile generate. Asigură-te că le copiezi și le păstrezi într-un loc sigur.",
+        githubSecretTip: "Copiază în setările branch-ului tău Github => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Această pagină folosește traducere AI. Dacă găsești erori, raportează-le la",
+        aiTranslateIssues: "probleme",
+        aiTranslateSuggest: "sau trimite un PR pentru îmbunătățire."
+      },
+      ru: {
+        fileManagerAlert: "Пожалуйста, используйте приложение 'File Manager' из Google Play для открытия этой страницы",
+        mainTitle: "Подготовка AAPS-CI",
+        option1Title: "Вариант 1: Сгенерировать JKS",
+        generateJksBtn: "Сгенерировать JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Копировать",
+        option2Title: "Вариант 2: Загрузить существующий JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Авторизация Google Drive",
+        defaultRadio: "По умолчанию",
+        customRadio: "Пользовательский",
+        startAuthBtn: "Начать авторизацию",
+        customClientIdPlaceholder: "Ваш Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Скопировано в буфер обмена!",
+        importantTipTitle: "Важно",
+        importantTipContent: "Эта страница не сохраняет сгенерированные ключи. Обязательно скопируйте их и храните в безопасном месте.",
+        githubSecretTip: "Скопируйте в настройки вашей ветки Github => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Эта страница использует AI-перевод. Если вы нашли ошибки, сообщите о них на",
+        aiTranslateIssues: "проблемы",
+        aiTranslateSuggest: "или отправьте PR для улучшения."
+      },
+      sk: {
+        fileManagerAlert: "Na otvorenie tejto stránky použite aplikáciu 'File Manager' z Google Play",
+        mainTitle: "Príprava AAPS-CI",
+        option1Title: "Možnosť 1: Generovať JKS",
+        generateJksBtn: "Generovať JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Kopírovať",
+        option2Title: "Možnosť 2: Nahrať existujúci JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Autorizácia Google Drive",
+        defaultRadio: "Predvolené",
+        customRadio: "Vlastné",
+        startAuthBtn: "Spustiť autorizáciu",
+        customClientIdPlaceholder: "Váš Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Skopírované do schránky!",
+        importantTipTitle: "Dôležité",
+        importantTipContent: "Táto stránka neukladá vygenerované kľúče. Nezabudnite si ich skopírovať a uložiť na bezpečné miesto.",
+        githubSecretTip: "Skopírujte do nastavení vášho Github branchu => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Táto stránka používa AI preklad. Ak nájdete chyby, nahláste ich na",
+        aiTranslateIssues: "problémy",
+        aiTranslateSuggest: "alebo pošlite PR na zlepšenie."
+      },
+      'sr_Latn': {
+        fileManagerAlert: "Molimo koristite aplikaciju 'File Manager' sa Google Play-a za otvaranje ove stranice",
+        mainTitle: "AAPS-CI Priprema",
+        option1Title: "Opcija 1: Generiši JKS",
+        generateJksBtn: "Generiši JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Kopiraj",
+        option2Title: "Opcija 2: Učitaj postojeći JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Google Drive autorizacija",
+        defaultRadio: "Podrazumevano",
+        customRadio: "Prilagođeno",
+        startAuthBtn: "Pokreni autorizaciju",
+        customClientIdPlaceholder: "Tvoj Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Kopirano u međuspremnik!",
+        importantTipTitle: "Važno",
+        importantTipContent: "Ova stranica ne čuva generisane ključeve. Obavezno ih kopiraj i sačuvaj na sigurnom mestu.",
+        githubSecretTip: "Kopiraj u podešavanja svog Github branch-a => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Ova stranica koristi AI prevod. Ako pronađeš greške, prijavi ih na",
+        aiTranslateIssues: "problemi",
+        aiTranslateSuggest: "ili pošalji PR za poboljšanje."
+      },
+      sv: {
+        fileManagerAlert: "Använd appen 'File Manager' från Google Play för att öppna denna sida",
+        mainTitle: "AAPS-CI Förberedelse",
+        option1Title: "Alternativ 1: Generera JKS",
+        generateJksBtn: "Generera JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Kopiera",
+        option2Title: "Alternativ 2: Ladda upp befintlig JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Google Drive-autentisering",
+        defaultRadio: "Standard",
+        customRadio: "Anpassad",
+        startAuthBtn: "Starta autentisering",
+        customClientIdPlaceholder: "Ditt Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Kopierat till urklipp!",
+        importantTipTitle: "Viktigt",
+        importantTipContent: "Denna sida sparar inte genererade nycklar. Kom ihåg att kopiera och spara dem på en säker plats.",
+        githubSecretTip: "Kopiera till din Github branch-inställning => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Denna sida använder AI-översättning. Om du hittar fel, rapportera dem på",
+        aiTranslateIssues: "problem",
+        aiTranslateSuggest: "eller skicka in en PR för att förbättra."
+      },
+      tr: {
+        fileManagerAlert: "Bu sayfayı açmak için lütfen Google Play'den 'Dosya Yöneticisi' uygulamasını kullanın",
+        mainTitle: "AAPS-CI Hazırlık",
+        option1Title: "Seçenek 1: JKS Oluştur",
+        generateJksBtn: "JKS Oluştur",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Kopyala",
+        option2Title: "Seçenek 2: Mevcut JKS Yükle",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Google Drive Yetkilendirme",
+        defaultRadio: "Varsayılan",
+        customRadio: "Özel",
+        startAuthBtn: "Yetkilendirmeyi Başlat",
+        customClientIdPlaceholder: "Google Client ID'niz",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Panoya kopyalandı!",
+        importantTipTitle: "Önemli",
+        importantTipContent: "Bu sayfa oluşturulan anahtarları kaydetmez. Lütfen anahtarları kopyalayıp güvenli bir yerde saklayın.",
+        githubSecretTip: "Lütfen Github branch ayarlarınıza kopyalayın => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Bu sayfa AI çeviri kullanıyor. Hata bulursanız lütfen şurada bildirin:",
+        aiTranslateIssues: "sorunlar",
+        aiTranslateSuggest: "veya iyileştirmek için PR gönderin."
+      },
+      uk: {
+        fileManagerAlert: "Будь ласка, використовуйте додаток 'File Manager' з Google Play для відкриття цієї сторінки",
+        mainTitle: "Підготовка AAPS-CI",
+        option1Title: "Варіант 1: Згенерувати JKS",
+        generateJksBtn: "Згенерувати JKS",
+        keystoreSetLabel: "KEYSTORE_SET:",
+        copyBtn: "Копіювати",
+        option2Title: "Варіант 2: Завантажити існуючий JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64:",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD:",
+        keystoreAliasLabel: "KEY_ALIAS:",
+        keyPasswordLabel: "KEY_PASSWORD:",
+        oauth2Title: "Авторизація Google Drive",
+        defaultRadio: "За замовчуванням",
+        customRadio: "Власний",
+        startAuthBtn: "Почати авторизацію",
+        customClientIdPlaceholder: "Ваш Google Client ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2:",
+        toastCopied: "Скопійовано в буфер обміну!",
+        importantTipTitle: "Важливо",
+        importantTipContent: "Ця сторінка не зберігає згенеровані ключі. Обов'язково скопіюйте їх і збережіть у безпечному місці.",
+        githubSecretTip: "Скопіюйте у налаштування вашої гілки Github => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "Ця сторінка використовує AI-переклад. Якщо знайдете помилки, повідомте про них на",
+        aiTranslateIssues: "проблеми",
+        aiTranslateSuggest: "або надішліть PR для покращення."
+      },
+      'zh_CN': {
+        fileManagerAlert: "请使用 Google Play 上的“文件管理器”App 打开本页",
+        mainTitle: "AAPS-CI 准备",
+        option1Title: "选项 1：生成 JKS",
+        generateJksBtn: "生成 JKS",
+        keystoreSetLabel: "KEYSTORE_SET：",
+        copyBtn: "复制",
+        option2Title: "选项 2：上传已有 JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64：",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD：",
+        keystoreAliasLabel: "KEY_ALIAS：",
+        keyPasswordLabel: "KEY_PASSWORD：",
+        oauth2Title: "Google 云端硬盘授权",
+        defaultRadio: "默认",
+        customRadio: "自定义",
+        startAuthBtn: "开始授权",
+        customClientIdPlaceholder: "你的 Google 客户端 ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2：",
+        toastCopied: "已复制到剪贴板",
+        importantTipTitle: "重要提示",
+        importantTipContent: "本页面不会保存生成的密钥。请务必将密钥复制到安全的地方保存。",
+        githubSecretTip: "请复制到你的 Github 分支 Settings => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "本网页使用AI翻译，如有翻译错误需要修正，请至",
+        aiTranslateIssues: "问题反馈",
+        aiTranslateSuggest: "反馈，或提PR给我"
+      },
+      zh_TW: {
+        fileManagerAlert: "請改用Google Play上的「檔案管理員」App 開啟本頁",
+        mainTitle: "AAPS-CI 準備",
+        option1Title: "選項 1：產生 JKS",
+        generateJksBtn: "產生 JKS",
+        keystoreSetLabel: "KEYSTORE_SET：",
+        copyBtn: "複製",
+        option2Title: "選項 2：上傳現有的 JKS",
+        keystoreBase64Label: "KEYSTORE_BASE64：",
+        keystorePasswordLabel: "KEYSTORE_PASSWORD：",
+        keystoreAliasLabel: "KEY_ALIAS：",
+        keyPasswordLabel: "KEY_PASSWORD：",
+        oauth2Title: "Google 雲端硬碟授權",
+        defaultRadio: "預設",
+        customRadio: "自訂",
+        startAuthBtn: "開始授權",
+        customClientIdPlaceholder: "你的 Google 用戶端 ID",
+        gdriveOauth2Label: "GDRIVE_OAUTH2：",
+        toastCopied: "已複製到剪貼簿",
+        importantTipTitle: "重要提示",
+        importantTipContent: "本頁面不會保存產生出的金鑰。請務必將金鑰複製到安全的地方保存。",
+        githubSecretTip: "請複製到你的 Github 分支 Settings => Secrets and Variables => Actions => New repository secrets",
+        aiTranslateNotice: "本網頁使用AI翻譯，如有翻譯錯誤需要修正，請至",
+        aiTranslateIssues: "問題回報",
+        aiTranslateSuggest: "反應，或提PR給我"
+      }
+    };
+  </script>
+  <script>
+    // i18nStrings 已由 js/i18n.js 提供為 window.i18nStrings
+
+    // 切換語言函式
+    function switchLanguage(lang, updateUrl = true) {
+      // 標準化語言 key
+      let key = lang;
+      if (key === 'zh-CN' || key === 'zh_cn' || key === 'zh_Hans') key = 'zh_CN';
+      else if (key === 'zh-TW' || key === 'zh_tw' || key === 'zh_Hant') key = 'zh_TW';
+      else if (key === 'pt-BR' || key === 'pt_br') key = 'pt_BR';
+      else if (key === 'pt-PT' || key === 'pt_pt') key = 'pt_PT';
+      
+      const dict = i18nStrings[key] || i18nStrings['en'];
+      document.getElementById('langSelector').value = lang;
+      // 依據 data-i18n 屬性批次替換
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const k = el.getAttribute('data-i18n');
+        if (dict[k]) el.innerText = dict[k];
+      });
+      // 處理 placeholder
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const k = el.getAttribute('data-i18n-placeholder');
+        if (dict[k]) el.placeholder = dict[k];
+      });
+      // 更新 toast 內容
+      document.getElementById('copyToast').innerText = dict.toastCopied;
+      // 語言切換時更新網址參數
+      if (updateUrl) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        window.location.href = url.toString();
+      }
+    }
+
+    // 頁面載入時自動偵測語言
+    window.addEventListener('DOMContentLoaded', function() {
+      // 先檢查 URL 是否有 lang 參數
+      const urlParams = new URLSearchParams(window.location.search);
+      let lang = urlParams.get('lang');
+      if (!lang) {
+        lang = (navigator.language || navigator.userLanguage || 'en');
+        // 標準化
+        if (lang.toLowerCase().startsWith('zh')) {
+          if (lang.toLowerCase().includes('tw') || lang.toLowerCase().includes('hant')) lang = 'zh_TW';
+          else lang = 'zh-CN';
+        } else if (lang.toLowerCase().startsWith('pt')) {
+          if (lang.toLowerCase().includes('br')) lang = 'pt-BR';
+          else lang = 'pt-PT';
+        } else if (lang.toLowerCase().startsWith('sr')) {
+          lang = 'sr-Latn';
+        } else {
+          lang = lang.split('-')[0];
+        }
+      }
+      switchLanguage(lang, false);
+    });
+    function showToast(message) {
+        const toast = document.getElementById('copyToast');
+        toast.textContent = message || (i18nStrings[document.getElementById('langSelector').value] || i18nStrings['en']).toastCopied;
+        toast.style.display = 'block';
+        setTimeout(() => {
+            toast.style.display = 'none';
+        }, 2000);
+    }
+    
+    function toggleOption(optionNumber) {
+        // 關閉所有選項
+        document.querySelectorAll('.option').forEach(option => {
+            option.classList.remove('active');
+        });
+        
+        // 開啟被點擊的選項
+        document.getElementById('option' + optionNumber).classList.add('active');
+    }
+    
+    // page init
+    window.onload = function() {
+
+      const lang = document.getElementById('langSelector').value;
+      document.getElementById('langSelector').addEventListener('change', function(e) {
+        switchLanguage(e.target.value, true);
+      });
+
+      if (window.location.hostname !== '127.0.0.1' && window.location.hostname !== 'localhost') {
+        var msg = (i18nStrings && i18nStrings[lang] && i18nStrings[lang].fileManagerAlert);
+        alert(msg);
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.alphainventor.filemanager';
+      }
+
+      const urlParams = new URLSearchParams(window.location.search);
+      // 保留原始的 code 處理
+      if (urlParams.has('code')) {
+          const code = urlParams.get('code');
+          exchangeCodeForToken(code);
+          
+          const clientMode = sessionStorage.getItem('clientMode');
+          const customClientId = sessionStorage.getItem('customClientId');
+          if (clientMode) {
+            const radio = document.querySelector(`input[name="clientMode"][value="${clientMode}"]`);
+            if (radio) radio.checked = true;
+
+            if (clientMode === 'custom') {
+              const input = document.getElementById('customClientId');
+              input.value = customClientId;
+              input.style.display = 'block';
+            }
+            sessionStorage.removeItem('clientMode');
+            sessionStorage.removeItem('customClientId');
+          }
+          return;
+      }
+      toggleOption(1);
+      var customClientInput = document.getElementById('customClientId');
+      if (customClientInput) customClientInput.style.display = 'none';
+    };
+  </script>
+  <style>
+    .flex-row {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 0.5rem;
+    }
+    .right-button {
+      margin-left: auto;
+      white-space: nowrap;
+    }
+    .right-button {
+      background: #1a73e8;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: 500;
+      padding: 0.45rem 1.1rem;
+      box-shadow: 0 1.5px 6px rgba(26, 115, 232, 0.10);
+      transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+    }
+    .right-button:hover {
+      background: #1765c1;
+      box-shadow: 0 3px 12px rgba(26, 115, 232, 0.16);
+      transform: translateY(-1px) scale(1.04);
+    }
+    .right-button:active {
+      background: #1558a6;
+      box-shadow: 0 1px 2px rgba(26, 115, 232, 0.10);
+      transform: scale(0.97);
+    }
+    .label-no-margin {
+      margin-bottom: 0;
+    }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f9f9f9; color: #333; margin: 0; padding: 1rem; }
+    .container { max-width: 800px; margin: auto; background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: relative; }
+    h2 { color: #1a73e8; display: flex; align-items: center; gap: 0.5rem; }
+    input[type=text], textarea { width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 4px; }
+    .styled-input { width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 4px; background-color: #f8f9fa; font-size: 0.9rem; }
+    button { padding: 0.5rem 1rem; background: #0077cc; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:active{ background: #005fa3; }
+    .btn-green {
+      background: #27ae60 !important;
+      color: #fff !important;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(39, 174, 96, 0.12);
+      transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+    }
+    .btn-green:hover {
+      background: #219150 !important;
+      box-shadow: 0 4px 16px rgba(39, 174, 96, 0.18);
+      transform: translateY(-1.5px) scale(1.03);
+    }
+    .btn-green:active {
+      background: #1e7e45 !important;
+      box-shadow: 0 1px 2px rgba(39, 174, 96, 0.10);
+      transform: scale(0.98);
+    }
+    .field-group { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .field-group .right-button { margin-left: auto; }
+    .button-group { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+    .full-width-btn { width: 100%; margin-top: 0.5rem; }
+    .auth-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 0.5rem 0; }
+    .auth-controls .custom-client { flex-basis: 100%; display: none; }
+    @media (min-width: 600px) {
+      .auth-controls .custom-client { flex-basis: auto; display: none; }
+    }
+    .copy-right {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .toast {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #34a853;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        font-weight: 500;
+        display: none;
+        z-index: 1000;
+    }
+    
+    /* 新增的步驟樣式 */
+    .option {
+        margin-bottom: 24px;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    
+    .option.active {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-color: #1a73e8;
+    }
+    
+    .option-header {
+        padding: 16px 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+        background-color: white;
+        transition: background-color 0.2s ease;
+        border-bottom: 1px solid transparent;
+    }
+    
+    .option.active .option-header {
+        border-bottom-color: #dadce0;
+        background-color: #e8f0fe;
+    }
+    
+    .option-header:hover {
+        background-color: #f8f9fa;
+    }
+    
+    .option-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
+        padding: 0 20px;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    
+    .option.active .option-content {
+        max-height: 2000px;
+        padding: 24px 20px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* 移除的內聯樣式 */
+    .version-badge {
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        background: #e3eafc;
+        color: #1a73e8;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 4px 12px;
+        border-radius: 6px;
+        z-index: 10;
+        box-shadow: 0 1px 4px rgba(26,115,232,0.07);
+        max-width: calc(100% - 32px);
+    }
+    
+    #langSelector {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        padding: 0.3rem 0.5rem;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+    
+    .header-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 20px;
+        gap: 20px;
+    }
+    
+    .logo {
+        height: 120px;
+    }
+
+    .keystore-input {
+        flex: 1 1 auto;
+        min-width: 200px;
+    }
+    
+    .main-title {
+        font-size: 1.5rem;
+        color: #1a73e8;
+        margin: 0;
+        margin-left: -10px;
+    }
+
+    .icon-drive {
+        height: 24px;
+        vertical-align: middle;
+        margin-right: 6px;
+    }
+    #jksFile{
+      margin-top: 10px;
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="version-badge">v1.1.2</div>
+    <select id="langSelector" onchange="switchLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="bg">Български</option>
+        <option value="ca">Català</option>
+        <option value="cs">Čeština</option>
+        <option value="da">Dansk</option>
+        <option value="de">Deutsch</option>
+        <option value="el">Ελληνικά</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="he">עברית</option>
+        <option value="hr">Hrvatski</option>
+        <option value="hu">Magyar</option>
+        <option value="it">Italiano</option>
+        <option value="ko">한국어</option>
+        <option value="lt">Lietuvių</option>
+        <option value="nb">Norsk Bokmål</option>
+        <option value="nl">Nederlands</option>
+        <option value="pl">Polski</option>
+        <option value="pt_BR">Português (Brasil)</option>
+        <option value="pt_PT">Português (Portugal)</option>
+        <option value="ro">Română</option>
+        <option value="ru">Русский</option>
+        <option value="sk">Slovenčina</option>
+        <option value="sr_Latn">Srpski (latinica)</option>
+        <option value="sv">Svenska</option>
+        <option value="tr">Türkçe</option>
+        <option value="uk">Українська</option>
+        <option value="zh_CN">简体中文</option>
+        <option value="zh_TW">繁體中文</option>
+    </select>
+    <div class="header-container">
+      <img src="https://raw.githubusercontent.com/Angus-repo/aaps-ci-preparation/main/src/main/resources/static/images/logo.png" alt="AndroidAPS Logo" class="logo">
+      <h1 class="main-title" data-i18n="mainTitle">AAPS-CI Preparation</h1>
+    </div>
+    <hr style="margin: 24px 0; border: none; border-top: 1.5px solid #e0e0e0;">
+    <div class="ai-translate-notice" style="background: #fffbe6; color: #856404; border-left: 4px solid #ffe58f; padding: 12px 16px; border-radius: 8px; margin-bottom: 20px; font-size: 0.98rem;">
+        <span data-i18n="aiTranslateNotice">本網頁使用AI翻譯，如有翻譯錯誤需要修正，請至</span>
+        <a href="https://github.com/Angus-repo/aaps-ci-preparation/issues" target="_blank" data-i18n="aiTranslateIssues">問題回報</a>
+        <span data-i18n="aiTranslateSuggest">反應，或提PR給我</span>
+    </div>
+    <div class="option active" id="option1">
+      <div class="option-header" onclick="toggleOption(1)">
+        <h2 data-i18n="option1Title">Option 1: Generate JKS</h2>
+        <i class="fas fa-chevron-down option-icon"></i>
+      </div>
+      <div class="option-content">
+        <button id="generateJksBtn" class="btn-green" onclick="generateJks()"><i class="fa-solid fa-key"></i> <span data-i18n="generateJksBtn">Generate JKS</span></button>
+        <div class="field-group">
+          <div class="flex-row">
+            <label for="keystoreSet" class="label-no-margin" data-i18n="keystoreSetLabel">KEYSTORE_SET:</label>
+            <button class="right-button" onclick="copyToClipboardText('KEYSTORE_SET')"><i class="fa-regular fa-copy"></i> <span data-i18n="copyBtn">Copy</span></button>
+          </div>
+          <div class="flex-row">
+            <input id="keystoreSet" readonly class="keystore-input styled-input label-no-margin">
+            <button class="right-button" onclick="copyToClipboard('keystoreSet')"><i class="fa-regular fa-copy"></i> <span data-i18n="copyBtn">Copy</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="option1-tip" style="margin-top: 20px; border-radius: 6px; padding: 16px;">
+        <div style="background: #fffbe6; border: 1px solid #ffe58f; border-radius: 6px; padding: 12px 16px; margin-bottom: 10px;">
+          <span style="color: #d48806;"><strong data-i18n="importantTipTitle">重要提示</strong>：<span data-i18n="importantTipContent">本頁面不會保存產生出的金鑰。請務必將金鑰複製到安全的地方保存。</span></span>
+        </div>
+        <div style="background: #f9f9f9; border-radius: 6px; padding: 12px 16px;">
+          <span data-i18n="githubSecretTip">請複製到你的 Github 分支 Settings =&gt; Secrets and Variables =&gt; Actions =&gt; New repository secrets</span>
+          <div style="margin-top: 12px; text-align: left;">
+            <img src="https://raw.githubusercontent.com/Angus-repo/aaps-ci-preparation/main/src/main/resources/static/images/secrets_option1.png" alt="secrets_option1" style="max-width:100%;border:1px solid #eee;border-radius:4px;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="option" id="option2">
+      <div class="option-header" onclick="toggleOption(2)">
+        <h2 data-i18n="option2Title">Option 2: Upload Existing JKS</h2>
+        <i class="fas fa-chevron-down option-icon"></i>
+      </div>
+      <div class="option-content">
+        <div class="flex-row">
+          <label for="keystoreBase64" class="label-no-margin" data-i18n="keystoreBase64Label">KEYSTORE_BASE64:</label>
+          <button class="right-button" onclick="copyToClipboardText('KEYSTORE_BASE64')"><i class="fa-regular fa-copy"></i> <span data-i18n="copyBtn">Copy</span></button>
+        </div>
+        <input type="file" id="jksFile" accept=".jks" onchange="convertJks()" class="btn-green" style="background: #34a853; color: #fff; padding: 0.5rem 1rem; border-radius: 4px; border: none; cursor: pointer; width: auto;">
+        <div class="flex-row">
+          <input id="keystoreBase64" readonly class="keystore-input styled-input label-no-margin">
+          <button class="right-button" onclick="copyToClipboard('keystoreBase64')"><i class="fa-regular fa-copy"></i> <span data-i18n="copyBtn">Copy</span></button>
+        </div>
+        <div class="button-group">
+          <div class="flex-row">
+            <label for="keystorePassword" class="label-no-margin" data-i18n="keystorePasswordLabel">KEYSTORE_PASSWORD:</label>
+            <button class="right-button" onclick="copyToClipboardText('KEYSTORE_PASSWORD')"><i class="fa-regular fa-copy"></i> <span data-i18n="copyBtn">Copy</span></button>
+          </div>
+          <div class="flex-row">
+            <label for="keystoreAlias" class="label-no-margin" data-i18n="keystoreAliasLabel">KEY_ALIAS:</label>
+            <button class="right-button" onclick="copyToClipboardText('KEY_ALIAS')"><i class="fa-regular fa-copy"></i> <span data-i18n="copyBtn">Copy</span></button>
+          </div>
+          <div class="flex-row">
+            <label for="keystoreAlias" class="label-no-margin" data-i18n="keyPasswordLabel">KEY_PASSWORD:</label>
+            <button class="right-button" onclick="copyToClipboardText('KEY_PASSWORD')"><i class="fa-regular fa-copy"></i> <span data-i18n="copyBtn">Copy</span></button>
+          </div>
+        </div>
+        <div class="option2-tip" style="margin-top: 20px; border-radius: 6px; padding: 16px;">
+        <div style="background: #f9f9f9; border-radius: 6px; padding: 12px 16px;">
+          <span data-i18n="githubSecretTip">請複製到你的 Github 分支 Settings =&gt; Secrets and Variables =&gt; Actions =&gt; New repository secrets</span>
+          <div style="margin-top: 12px; text-align: left;">
+            <img src="https://raw.githubusercontent.com/Angus-repo/aaps-ci-preparation/main/src/main/resources/static/images/secrets_option2.png" alt="secrets_option2" style="max-width:100%;border:1px solid #eee;border-radius:4px;">
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <h2><img src="https://raw.githubusercontent.com/Angus-repo/aaps-ci-preparation/main/src/main/resources/static/images/google-drive.png" alt="Google Drive" class="icon-drive" style="height:24px;vertical-align:middle;margin-right:6px;" /><span data-i18n="oauth2Title">Google OAuth2 Auth</span></h2>
+    <div class="auth-controls">
+      <label><input type="radio" name="clientMode" value="default" checked onchange="toggleClientInput()"> <span data-i18n="defaultRadio">Default</span></label>
+      <label><input type="radio" name="clientMode" value="custom" onchange="toggleClientInput()"> <span data-i18n="customRadio">Custom</span></label>
+      <button class="btn-green" onclick="startAuth()"><i class="fa-solid fa-right-to-bracket"></i> <span data-i18n="startAuthBtn">Start Auth</span></button>
+      <input type="text" class="custom-client styled-input" id="customClientId" data-i18n-placeholder="customClientIdPlaceholder" placeholder="Your Google Client ID">
+    </div>
+    <div class="flex-row">
+      <label for="oauth2Base64" class="label-no-margin" data-i18n="gdriveOauth2Label">GDRIVE_OAUTH2:</label>
+      <button class="right-button" onclick="copyToClipboardText('GDRIVE_OAUTH2')"><i class="fa-regular fa-copy"></i> <span data-i18n="copyBtn">Copy</span></button>
+    </div>
+    <div class="flex-row">
+      <input id="oauth2Base64" readonly class="keystore-input styled-input label-no-margin">
+      <button class="right-button" onclick="copyToClipboard('oauth2Base64')"><i class="fa-regular fa-copy"></i> <span data-i18n="copyBtn">Copy</span></button>
+    </div>
+    <div style="background: #f9f9f9; border-radius: 6px; padding: 12px 16px;">
+      <span data-i18n="githubSecretTip">請複製到你的 Github 分支 Settings =&gt; Secrets and Variables =&gt; Actions =&gt; New repository secrets</span>
+      <div style="margin-top: 12px; text-align: left;">
+        <img src="https://raw.githubusercontent.com/Angus-repo/aaps-ci-preparation/main/src/main/resources/static/images/gdrive_oauth2.png" alt="secrets_option2" style="max-width:100%;border:1px solid #eee;border-radius:4px;">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function generateJks() {
+  const btn = document.getElementById('generateJksBtn');
+  const originalText = btn.innerHTML;
+  btn.innerHTML = '🔄 .........';
+  btn.disabled = true;
+
+  const forge = window.forge;
+  forge.pki.rsa.generateKeyPair({ bits: 2048, workers: -1 }, function (err, keys) {
+    const cert = forge.pki.createCertificate();
+    cert.publicKey = keys.publicKey;
+    cert.serialNumber = '01';
+    cert.validity.notBefore = new Date();
+    cert.validity.notAfter = new Date();
+    cert.validity.notAfter.setFullYear(cert.validity.notBefore.getFullYear() + 20);
+    const attrs = [{ name: 'commonName', value: 'aaps.app' }];
+    cert.setSubject(attrs);
+    cert.setIssuer(attrs);
+    cert.sign(keys.privateKey, forge.md.sha256.create());
+
+    // 產生10位英數字元的亂數密碼
+    const generateRandomPassword = () => {
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let result = '';
+      for (let i = 0; i < 10; i++) {
+        result += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return result;
+    };
+    
+    const password = generateRandomPassword();
+    const alias = 'key0';
+    // 產生 PKCS#12 時，alias 要用 options.friendlyName，cert 直接傳入
+    const p12Asn1 = forge.pkcs12.toPkcs12Asn1(
+      keys.privateKey,
+      cert,
+      password,
+      { algorithm: '3des', friendlyName: alias }
+    );
+    const p12Der = forge.asn1.toDer(p12Asn1).getBytes();
+    const base64 = forge.util.encode64(p12Der);
+
+    const keystoreSet = btoa(`${base64}|${password}|${alias}|${password}`);
+    document.getElementById('keystoreSet').value = keystoreSet;
+
+    // 還原按鈕
+    btn.innerHTML = originalText;
+    btn.disabled = false;
+  });
+}
+
+    function convertJks() {
+      const fileInput = document.getElementById('jksFile');
+      const reader = new FileReader();
+      if (!fileInput.files.length) return;
+      reader.onload = function () {
+        const binary = new Uint8Array(reader.result);
+        const base64 = forge.util.encode64(forge.util.binary.raw.encode(binary));
+        document.getElementById('keystoreBase64').value = base64;
+      };
+      reader.readAsArrayBuffer(fileInput.files[0]);
+    }
+
+    function copyToClipboard(id) {
+      const el = document.getElementById(id);
+      navigator.clipboard.writeText(el.value);
+      showToast();
+    }
+
+    function copyToClipboardText(text) {
+      navigator.clipboard.writeText(text);
+      showToast();
+    }
+
+    const defaultClientId = "705061051276-5ssikkg2ag39l7hj9t63saq549n3s2n5.apps.googleusercontent.com";
+    let redirectUri = "http://" + window.location.hostname + ":" + window.location.port + window.location.pathname;
+    // 若 URL 有 lang 參數，redirectUri 也加上 lang
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const lang = urlParams.get('lang');
+      if (lang) {
+        redirectUri += (redirectUri.includes('?') ? '&' : '?') + 'lang=' + encodeURIComponent(lang);
+      }
+    })();
+    
+    function toggleClientInput() {
+      const input = document.getElementById('customClientId');
+      const isCustom = document.querySelector('input[name="clientMode"]:checked').value === 'custom';
+      input.style.display = isCustom ? 'block' : 'none';
+    }
+
+    async function startAuth() {
+      let clientId = defaultClientId;
+      const clientMode = document.querySelector('input[name="clientMode"]:checked').value;
+      if (document.querySelector('input[name="clientMode"]:checked').value === 'custom') {
+        clientId = document.getElementById('customClientId').value;
+        sessionStorage.setItem('clientMode', clientMode);
+        sessionStorage.setItem('customClientId', clientId);
+      }
+      const codeVerifier = [...crypto.getRandomValues(new Uint8Array(32))].map(b => ('0' + b.toString(16)).slice(-2)).join('');
+      const encoder = new TextEncoder();
+      const data = encoder.encode(codeVerifier);
+      const digest = await crypto.subtle.digest('SHA-256', data);
+      const codeChallenge = btoa(String.fromCharCode(...new Uint8Array(digest))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+
+      sessionStorage.setItem("pkce_code_verifier", codeVerifier);
+      const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${encodeURIComponent(clientId)}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.file&access_type=offline&code_challenge_method=S256&code_challenge=${codeChallenge}`;
+      window.location.href = authUrl;
+    }
+
+    async function exchangeCodeForToken(code) {
+      const codeVerifier = sessionStorage.getItem("pkce_code_verifier");
+      const clientId = document.querySelector('input[name="clientMode"]:checked').value === 'custom' ? document.getElementById('customClientId').value : defaultClientId;
+      const res = await fetch('https://oauth2.googleapis.com/token', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          client_id: clientId,
+          code: code,
+          code_verifier: codeVerifier,
+          grant_type: 'authorization_code',
+          redirect_uri: redirectUri
+        }).toString()
+      });
+      const data = await res.json();
+      if (data.refresh_token) {
+        // document.getElementById('refreshToken').value = data.refresh_token;
+        document.getElementById('oauth2Base64').value = btoa(clientId + '|' + data.refresh_token);
+        // 清除 URL 上的 code 參數，避免重複觸發
+        window.history.replaceState({}, document.title, window.location.pathname);
+        // 平滑卷動到 class="icon-drive" 的元素
+        const iconDrive = document.querySelector('.icon-drive');
+        if (iconDrive) {
+          iconDrive.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    }
+
+
+  </script>
+  <div class="toast toast-success" id="copyToast" data-i18n="toastCopied">已複製到剪貼簿</div>
+</body>
+</html>
