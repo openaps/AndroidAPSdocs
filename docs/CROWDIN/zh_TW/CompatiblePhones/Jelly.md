@@ -2,7 +2,7 @@
 
 ## Jelly 2
 
-Do not confuse with Jelly Star (below).
+請不要與 Jelly Star (如下所示) 混淆。
 
 **優點**
 
@@ -38,16 +38,16 @@ Jelly 2 配有強大的最佳化功能，**必須**停用這些功能以便 AAPS
 
 ### 電池壽命最佳化
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' (and other **DIY apps** like BYODA, xDrip+, OOP2, Juggluco, etc...).
+為了避免影響 **AAPS** 的使用，Jelly Star 的「電池使用」應該設定為「不限制」，並在其他 **DIY 應用程式**（如 BYODA、xDrip+、OOP2、Juggluco 等等）中也應如此設定。
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
-### Intelligent Assistance and App Blocker
+### 智慧助手與應用程式阻擋器
 
-Like with the Jelly 2 (above), the Jelly Star should have 'Intelligent Assistance' disabled for **DIY apps**. Similarly, 'App Blocker' under 'Settings' must also be switched off to avoid disruption with **AAPS**:
+與 Jelly 2 (如上所示) 一樣，Jelly Star 應該在 **DIY 應用程式** 當中關閉「智慧助手」。 同樣地，必須在「設定」中將「應用程式阻擋器」關閉，以避免干擾 **AAPS**：
 
-![App Blocker Screenshot 2025-08-03 213400](../images/JellyStarMini2.jpg)
+![應用程式阻擋器 截圖 2025-08-03 213400](../images/JellyStarMini2.jpg)
 
-### Google Play Protect
+### Google Play 保護
 
-Remember to disable Google Play Protect.
+請記得關閉 Google Play 保護。
