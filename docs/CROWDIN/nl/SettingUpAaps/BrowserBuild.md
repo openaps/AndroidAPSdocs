@@ -29,7 +29,7 @@ You will need to jump from tab to tab: start with all tabs closed to avoid losin
 
 ## 1. AAPS personal fork
 
-You will need to secretly store your personal Android Java Key and Google Drive information in GitHub.
+You will need to secretly store your personal Android Java Key and Google Drive information in GitHub (later in the process, we will explain how).
 
 Since this cannot be done inside the public repository of AndroidAPS, you need to make your personal copy of the source code (called a fork).
 
@@ -70,7 +70,7 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
 
 - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
-- If you want to use your own JKS (the one you used in Android Studio), you know its password and alias, please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
+- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
 
 ```{warning}
 Building AAPS with **Option 1** will not allow you to upgrade your existing AAPS: you will need to uninstall it, restore the settings from your phone and data from Nightscout.
@@ -169,68 +169,7 @@ The AAPS app will be saved in your Google Cloud drive once built:
   - variant:
     - Please refer to [variant](variant)
 
-
-
-
-
-***Do we want to move this to another page?***
-
-
-
-(github-pr-test)=
-## If you want to test the items in a pull request
- - Suitable for testers or those helping with testing.
-```{eval-rst}
-.. raw:: html
-
-    <!--crowdin: exclude-->
-    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
-      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
-        <iframe
-          src="https://www.youtube.com/embed/REQ7RqzoUkM"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-```
-
-![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
-
-- PR number: Please enter the PR number that you want to test.
-
-- PR reference types: PR reference types include two options:
-  - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
-
-  - merge:
-    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
-    - This is a virtual merge commit automatically created by GitHub.
-    - This commit only exists when the PR has no conflicts and is mergeable.
-
-  - variant:
-    - Please refer to [variant](variant)
-
-  (variant)=
-
-  ### variant
-    - Select the variant you need:
-      - fullRelease: For regular pump usage with full functionality.
-      - [aapsclient、aapsclient2](../RemoteFeatures/RemoteControl.md#aapsclient) For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md))。
-      - pumpcontrol
-      - Text ending with “Debug” indicates that the APK will be built in debug mode, which is useful for troubleshooting.
-
-(github-cherry-pick)=
-## If you want to add a specific commit to your branch, please use cherry-pick.
-  ![aaps_cherry-pick_ci](../images/Building-the-App/CI/aaps_cherry_pick_ci.png)
-
-  - Use workflow from Branch: Please enter the branch name you want to cherry-pick to.
-  - Upstream Repository: Please enter the repository name you want to cherry-pick from.
-  - Commit SHA: Please enter the commit SHA you want to cherry-pick.(like git commit hash)
-  - Select Build Variant: [variant](variant)
-
+<!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
 (aaps-ci-troubleshooting)=
 ## AAPS-CI Troubleshooting
@@ -241,3 +180,22 @@ The AAPS app will be saved in your Google Cloud drive once built:
   - Please reopen aaps-ci-preparation.html using the file manager app and complete the remaining steps.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
+
+
+
+--------
+
+```{warning}
+Customizations are usually not necessary. This is for your information ony.
+```
+
+(github-cherry-pick)=
+
+## If you want to add a specific commit to your branch, please use cherry-pick.
+
+  ![aaps_cherry-pick_ci](../images/Building-the-App/CI/aaps_cherry_pick_ci.png)
+
+  - Use workflow from Branch: Please enter the branch name you want to cherry-pick to.
+  - Upstream Repository: Please enter the repository name you want to cherry-pick from.
+  - Commit SHA: Please enter the commit SHA you want to cherry-pick.(like git commit hash)
+  - Select Build Variant: [variant](variant)
