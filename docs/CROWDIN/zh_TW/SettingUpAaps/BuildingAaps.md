@@ -44,7 +44,7 @@ Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲�
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">記憶體</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB或更多</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16GB or more</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">硬碟</th>
