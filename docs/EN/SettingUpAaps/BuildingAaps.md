@@ -21,6 +21,27 @@ For the download links mentioned in the tutorial videos, please use the followin
    Download Support Website: <a href="../aaps-ci-preparation.html" download>aaps-ci-preparation</a>
 ```
 
+(fork_and_sync)=
+### First-time GitHub setup (fork and sync)
+- If this is your first time, fork the upstream repository to your own GitHub account. If you don’t have a GitHub account yet, you can sign up for free at https://github.com/signup. For help with registration, see https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github.
+- Fork from the upstream master branch: https://github.com/nightscout/AndroidAPS to your GitHub account.
+![aaps_ci_sync.png](../images/Building-the-App/aaps_ci_fork.png)
+![aaps_ci_sync.png](../images/Building-the-App/aaps_ci_fork_create.png)
+
+- If you have already forked the upstream repository, check if there is a Sync fork button before starting the build process.
+	•	If you see Sync fork, click it to check and sync the latest updates.
+	•	If you don’t see Sync fork, your fork is already up to date.
+![aaps_ci_sync.png](../images/Building-the-App/aaps_ci_sync.png)
+- If you have made changes in your master branch, you may see a conflict prompt. Choose "Discard xx commits" to drop your changes.
+![aaps_ci_discard.png](../images/Building-the-App/aaps_ci_discard.png)
+- If you don’t see "Discard xx commits", you can click "Update branch" to sync with upstream.
+![aaps_ci_update_branch.png](../images/Building-the-App/aaps_ci_update_branch.png)
+- If you see "This branch is not behind the upstream", your fork is already up to 
+![aaps_ci_not_behind.png](../images/Building-the-App/aaps_ci_not_behind.png)
+
+### When using Actions for the first time, go to the Actions tab to review the statement.
+![aaps_ci_actions_understand.png](../images/Building-the-App/aaps_ci_actions_understand.png)
+
 If you have any questions during the process, please refer to [AAPS-CI Troubleshooting](aaps-ci-troubleshooting) first.
 
 (aaps-ci-preparation)=
