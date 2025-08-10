@@ -45,7 +45,7 @@ The Gradle version is linked to the source code, you will always get the correct
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16GB or more</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disk</th>
@@ -61,6 +61,7 @@ The Gradle version is linked to the source code, you will always get the correct
   </tr>
 </tbody>
 </table>
+
 
 **It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
 
