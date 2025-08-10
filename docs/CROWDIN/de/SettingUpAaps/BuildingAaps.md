@@ -44,7 +44,7 @@ Die Gradle-Version ist mit dem Quellcode verknüpft. Wenn Du den Quellcode herun
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB oder mehr</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16GB or more</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Festplatte</th>
