@@ -1,14 +1,8 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Jelly
 
 ## Jelly 2
 
-請勿與 Jelly Star 混淆。
+請不要與 Jelly Star (如下所示) 混淆。
 
 **優點**
 
@@ -34,3 +28,26 @@ Jelly 2 配有強大的最佳化功能，**必須**停用這些功能以便 AAPS
 你可以啟用 NFC 來支援 Libre 傳感器。
 
 ![](../images/Jelly_Settings3.png)
+
+## Jelly Star Mini
+
+**功能**
+
+* Android 13
+* 8 GB RAM
+
+### 電池壽命最佳化
+
+為了避免影響 **AAPS** 的使用，Jelly Star 的「電池使用」應該設定為「不限制」，並在其他 **DIY 應用程式**（如 BYODA、xDrip+、OOP2、Juggluco 等等）中也應如此設定。
+
+![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
+
+### 智慧助手與應用程式阻擋器
+
+與 Jelly 2 (如上所示) 一樣，Jelly Star 應該在 **DIY 應用程式** 當中關閉「智慧助手」。 同樣地，必須在「設定」中將「應用程式阻擋器」關閉，以避免干擾 **AAPS**：
+
+![應用程式阻擋器 截圖 2025-08-03 213400](../images/JellyStarMini2.jpg)
+
+### Google Play 保護
+
+請記得關閉 Google Play 保護。
