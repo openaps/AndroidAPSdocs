@@ -105,6 +105,23 @@ The AAPS app will be saved in your Google Cloud drive once built:
     </div>
 ```
 
+ Compatible with iOS (using iPad as an example)
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/pA-z1ODrSps"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
 - As described in the video, please copy it to the corresponding field.
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_option1.png)
@@ -119,7 +136,7 @@ The AAPS app will be saved in your Google Cloud drive once built:
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
-          src="https://www.youtube.com/embed/L5L3XtnszMQ?cc_load_policy=1"
+          src="https://www.youtube.com/embed/L5L3XtnszMQ"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
