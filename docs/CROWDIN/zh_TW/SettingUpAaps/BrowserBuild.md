@@ -14,9 +14,7 @@
 
 ## 建置 AAPS 的裝置和軟體規格
 
-您需要一個 Android 裝置，Android 版本 > ?
-
-iOS?
+你需要一個可在 Android 或 iOS 上運作的瀏覽器
 
 您還需要一個 Google 帳號，以便將應用程式保存在您的 Google 雲端硬碟中。
 
@@ -65,7 +63,12 @@ GitHub 現在顯示您個人的 AndroidAPS 副本。 請保持這個瀏覽器標
 ## 2. 準備步驟
 
 - 如果您是從 Android 裝置建置，請從 Google Play 商店安裝[File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager)。
-- 從[這裡](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/CI/aaps-ci-preparation.html)下載準備檔案。
+```{eval-rst}
+.. <pre style="font-family: inherit; margin: 0;">
+       • 從<a href="../_static/CI/aaps-ci-preparation.html" download>這裡</a>下載準備檔案
+</pre><br />
+
+```
 
 AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS）：
 
@@ -73,7 +76,7 @@ AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS
 - 如果您想使用自己的 JKS（您在先前的 AAPS 建置中使用的那個 JKS），並且你知道它的密碼和別名（key0），請選擇 [AAPS-CI 選項 2 – 上傳現有的 JKS](aaps-ci-option2)。
 
 ```{warning}
-使用 **選項 1** 建立 AAPS 將不允許您升級現有的 AAPS：您需要卸載它，從您的手機恢復設定，並從 Nightscout 讀取資料。
+使用 **選項 1** 建立 AAPS 將無法更新已安裝的 AAPS：您需要卸載它，重新安裝後，從你的手機恢復設定，並從 Nightscout 讀取資料。
 ```
 
 AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
@@ -101,6 +104,23 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
     </div>
 ```
 
+ iOS 適用（以 iPad 為例）
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/pA-z1ODrSps"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
 - 如影片所示，請將其複製到相應的欄位中。
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_option1.png)
@@ -115,7 +135,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
-          src="https://www.youtube.com/embed/L5L3XtnszMQ?cc_load_policy=1"
+          src="https://www.youtube.com/embed/L5L3XtnszMQ"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
