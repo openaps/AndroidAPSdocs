@@ -44,7 +44,7 @@ The Gradle version is linked to the source code, you will always get the correct
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16GB or more</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disk</th>

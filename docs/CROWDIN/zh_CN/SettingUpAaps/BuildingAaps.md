@@ -44,7 +44,7 @@ Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取�
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">内存（RAM）</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB 或更多</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16GB or more</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">硬盘</th>
