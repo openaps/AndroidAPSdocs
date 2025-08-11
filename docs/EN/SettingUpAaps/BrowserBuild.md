@@ -14,9 +14,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 ## Device and software specifications for building AAPS
 
-You need an Android device with Android version > ?
-
-iOS?
+You need a browser that works on either Android or iOS.
 
 You also need a Google account so that the app can be saved in your Google Drive.
 
@@ -65,7 +63,13 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 ## 2. Preparation Steps
 
 - If you are building from an Android device, install [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) from the Google Play store.
-- Download the preparation file from [here](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/CI/aaps-ci-preparation.html).
+```{eval-rst}
+.. raw:: html
+
+    <pre style="font-family: inherit; margin: 0;">
+      • Download the preparation file from <a href="../_static/CI/aaps-ci-preparation.html" download>here</a>
+    </pre><br />
+```
 
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
 
@@ -101,6 +105,23 @@ The AAPS app will be saved in your Google Cloud drive once built:
     </div>
 ```
 
+ Compatible with iOS (using iPad as an example)
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/pA-z1ODrSps"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
 - As described in the video, please copy it to the corresponding field.
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_option1.png)
@@ -115,7 +136,7 @@ The AAPS app will be saved in your Google Cloud drive once built:
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
-          src="https://www.youtube.com/embed/L5L3XtnszMQ?cc_load_policy=1"
+          src="https://www.youtube.com/embed/L5L3XtnszMQ"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
