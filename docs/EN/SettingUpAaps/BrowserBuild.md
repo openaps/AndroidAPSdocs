@@ -14,7 +14,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 ## Device and software specifications for building AAPS
 
-You need an Android device with Android version > ?
+You need an Android device with Android version >= 11
 
 iOS?
 
@@ -65,7 +65,13 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 ## 2. Preparation Steps
 
 - If you are building from an Android device, install [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) from the Google Play store.
-- Download the preparation file from [here](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/CI/aaps-ci-preparation.html).
+```{eval-rst}
+.. raw:: html
+
+    <pre style="font-family: inherit; margin: 0;">
+      • Download the preparation file from <a href="../_static/CI/aaps-ci-preparation.html" download>here</a>
+    </pre><br />
+```
 
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
 
