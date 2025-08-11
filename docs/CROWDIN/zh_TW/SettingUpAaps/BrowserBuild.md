@@ -1,8 +1,8 @@
-# Browser build
+# 瀏覽器建置
 
-Building AAPS with GitHub Actions.
+使用 GitHub Actions 建置 AAPS。
 
-**Minimum AAPS version supported is 3.3.2.1.**
+**最低支援 AAPS 版本為 3.3.2.1。**
 
 ## 自行建置，而不是下載
 
@@ -12,79 +12,79 @@ Building AAPS with GitHub Actions.
 
 (Building-APK-without-a-computer)=
 
-## Device and software specifications for building AAPS
+## 建置 AAPS 的裝置和軟體規格
 
-You need an Android device with Android version > ?
+您需要一個 Android 裝置，Android 版本 > ?
 
 iOS?
 
-You also need a Google account so that the app can be saved in your Google Drive.
+您還需要一個 Google 帳號，以便將應用程式保存在您的 Google 雲端硬碟中。
 
 ```{note}
-This wiki assumes you're performing all operations with your Android cellular phone and the Chrome web browser.  
-You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
+本維基假設您使用 Android 手機和 Chrome 瀏覽器進行所有操作。  
+您將需要在不同的標籤之間切換：從所有標籤關閉開始，以避免在切換時迷失。
 ```
 
 (github-fork)=
 
-## 1. AAPS personal fork
+## 1. AAPS 個人分支
 
-You will need to secretly store your personal Android Java Key and Google Drive information in GitHub (later in the process, we will explain how).
+您需要秘密儲存您的個人 Android Java 金鑰和 Google 雲端硬碟資訊於 GitHub（稍後我們將會說明如何操作）。
 
-Since this cannot be done inside the public repository of AndroidAPS, you need to make your personal copy of the source code (called a fork).
+由於這無法在 AndroidAPS 的公開庫中完成，您需要製作自己的源代碼副本（稱為分支）。
 
-### GitHub account
+### GitHub 帳號
 
-You need to [create a GitHub account](https://github.com/signup) if you don't have one yet.  
-You can sign up with your email, or you can sign up with Google. Follow the registration and verification process.
+如果您尚未擁有帳號，您需要[創建一個 GitHub 帳號](https://github.com/signup)。  
+您可以使用電子郵件註冊，也可以透過 Google 註冊。 遵循註冊和驗證過程。
 
-When you have an account, [sign in to GitHub](https://github.com/login).
+當您擁有帳號後，[登入 GitHub](https://github.com/login)。
 
-### Fork AndroidAPS
+### 分支 AndroidAPS
 
-Open the official AndroidAPS repository following [this link](https://github.com/nightscout/AndroidAPS).
+按照[這個連結](https://github.com/nightscout/AndroidAPS)打開官方 AndroidAPS 倉庫。
 
-Tap on the fork icon. This will create a copy inside your own account.
+輕觸分支圖示。 這將在您的帳號內創建一個副本。
 
 ![fork_aaps](../images/Building-the-App/CI/ForkAAPS.png)
 
-Scroll down the next screen and tap **Create Fork**.
+向下滾動至下一個螢幕並輕觸**建立分支**。
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Note: you can **unselect** "Copy the main branch only" if you will want to build developers versions or customizations.*
+*注意：如果您想要建置開發版本或自訂版本，您可以**取消選擇**「僅複製主分支」。*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
-GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab open.
+GitHub 現在顯示您個人的 AndroidAPS 副本。 請保持這個瀏覽器標籤開啟。
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)
 
 (aaps-ci-preparation)=
 
-## 2. Preparation Steps
+## 2. 準備步驟
 
-- If you are building from an Android device, install [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) from the Google Play store.
-- Download the preparation file from [here](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/CI/aaps-ci-preparation.html).
+- 如果您是從 Android 裝置建置，請從 Google Play 商店安裝[File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager)。
+- 從[這裡](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/CI/aaps-ci-preparation.html)下載準備檔案。
 
-AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
+AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS）：
 
-- If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
-- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
+- 如果這是您第一次建立 AAPS（或您沒有 Android Studio 的 JKS），請參考 [AAPS-CI 選項 1 – 產生 JKS](aaps-ci-option1) 來完成設定。
+- 如果您想使用自己的 JKS（您在先前的 AAPS 建置中使用的那個 JKS），並且你知道它的密碼和別名（key0），請選擇 [AAPS-CI 選項 2 – 上傳現有的 JKS](aaps-ci-option2)。
 
 ```{warning}
-Building AAPS with **Option 1** will not allow you to upgrade your existing AAPS: you will need to uninstall it, restore the settings from your phone and data from Nightscout.
+使用 **選項 1** 建立 AAPS 將不允許您升級現有的 AAPS：您需要卸載它，從您的手機恢復設定，並從 Nightscout 讀取資料。
 ```
 
-The AAPS app will be saved in your Google Cloud drive once built:
+AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
 
-- Also perform the Google Drive [Auth](aaps-ci-google-drive-auth) to allow the build to be saved there.
+- 同時執行 Google 雲端硬碟 [授權](aaps-ci-google-drive-auth) 以允許將建置保存到那裡。
 
 (aaps-ci-option1)=
-### AAPS-CI Option 1 – Generate JKS
- - Suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+### AAPS-CI 選項 1 – 生成 JKS
+ - 適合首次使用者、沒有 JKS 的使用者或忘記密碼或別名的使用者。
 
- Compatible with Android
+ 與 Android 相容
 ```{eval-rst}
 .. raw:: html
 
@@ -101,13 +101,13 @@ The AAPS app will be saved in your Google Cloud drive once built:
     </div>
 ```
 
-- As described in the video, please copy it to the corresponding field.
+- 如影片所示，請將其複製到相應的欄位中。
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_option1.png)
 
 (aaps-ci-option2)=
-### AAPS-CI Option 2 – Upload Existing JKS
- - Suitable for users who already have a JKS and know the JKS password and alias.
+### AAPS-CI 選項 2 – 上傳現有 JKS
+ - 適合已經擁有 JKS 並且知道 JKS 密碼和別名的用戶。
 ```{eval-rst}
 .. raw:: html
 
@@ -124,11 +124,11 @@ The AAPS app will be saved in your Google Cloud drive once built:
     </div>
 ```
 
-- As described in the video, please copy it to the corresponding field.
+- 如影片所示，請將其複製到相應的欄位中。
 
 ![aaps_ci_option2](../images/Building-the-App/CI/aaps_ci_option2.png)
 
-- For KEYSTORE_PASSWORD, KEY_ALIAS, and KEY_PASSWORD, please enter your actual password and alias in GitHub.
+- 對於 KEYSTORE_PASSWORD、KEY_ALIAS 和 KEY_PASSWORD，請在 GitHub 中輸入您的實際密碼和別名。
 
 ![aaps_ci_option2_2](../images/Building-the-App/CI/aaps_ci_option2_2.png)
 
@@ -137,14 +137,14 @@ The AAPS app will be saved in your Google Cloud drive once built:
 ![aaps_ci_option2_4](../images/Building-the-App/CI/aaps_ci_option2_4.png)
 
 (aaps-ci-google-drive-auth)=
-### AAPS-CI Google Drive Auth
-- Click Start Auth to begin the authorization process, and set the obtained token in GitHub after authorization.
+### AAPS-CI Google 雲端硬碟授權
+- 點擊開始授權以開始授權過程，並在授權後將獲得的令牌設定在 GitHub 中。
 
 ![aaps_ci_gdrive_auth](../images/Building-the-App/CI/aaps_ci_gdrive_auth.png)
 
 (github-build-apk)=
-## AAPS-CI GitHub Actions to Build the AAPS APK
- - Suitable for general users.
+## AAPS-CI GitHub Actions 以建置 AAPS APK
+ - 適合一般使用者。
 ```{eval-rst}
 .. raw:: html
 
@@ -160,24 +160,24 @@ The AAPS app will be saved in your Google Cloud drive once built:
       </div>
     </div>
 ```
-  - In GitHub, go to Actions, select AAPS-CI, and click Run workflow to start building the APK.
+  - 在 GitHub 中，前往 Actions，選擇 AAPS-CI，然後點擊運行工作流以開始建置 APK。
 
-*Note: both Android and Android Wear apps will be built automatically.*
+*注意： Android 和 Android Wear 應用程式將自動建置。*
 
   ![aaps_ci_github_build_apk](../images/Building-the-App/CI/aaps_ci_github_build_apk.png)
 
-  - variant:
-    - Please refer to [variant](variant)
+  - 變體：
+    - 請參考 [變體](variant)
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
 (aaps-ci-troubleshooting)=
-## AAPS-CI Troubleshooting
+## AAPS-CI 問題排除
 
-  (aaps-ci-preparation)= ### aaps-ci-preparation web page
-  - When you open aaps-ci-preparation.html using a file manager, it will start a temporary local server on your phone to display the webpage and receive the Google refresh token.
-  - If you see the screen below, it means you have been inactive for a while, and the file manager has already shut down the local server.
-  - Please reopen aaps-ci-preparation.html using the file manager app and complete the remaining steps.
+  (aaps-ci-preparation)= ### aaps-ci-preparation 網頁
+  - 當您使用「檔案管理器」打開 aaps-ci-preparation.html 時，它會在您的手機上啟動一個臨時本地伺服器來顯示網頁並接收 Google Refresh token。
+  - 如果您看到以下螢幕，這表示您已經一段時間未進行操作，檔案管理器已經關閉本地伺服器。
+  - 請使用檔案管理器應用程式重新打開 aaps-ci-preparation.html，並完成剩餘步驟。
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
@@ -186,16 +186,16 @@ The AAPS app will be saved in your Google Cloud drive once built:
 --------
 
 ```{warning}
-Customizations are usually not necessary. This is for your information ony.
+「自訂」欄位適合熟悉Google Oauth2的人想要使用自已的ClientID時使用。 僅供您參考。
 ```
 
 (github-cherry-pick)=
 
-## If you want to add a specific commit to your branch, please use cherry-pick.
+## 如果您想將特定的提交添加到您的分支，請使用 cherry-pick。
 
   ![aaps_cherry-pick_ci](../images/Building-the-App/CI/aaps_cherry_pick_ci.png)
 
-  - Use workflow from Branch: Please enter the branch name you want to cherry-pick to.
-  - Upstream Repository: Please enter the repository name you want to cherry-pick from.
-  - Commit SHA: Please enter the commit SHA you want to cherry-pick.(like git commit hash)
-  - Select Build Variant: [variant](variant)
+  - 使用來自分支的工作流：請輸入您想要 cherry-pick 到的分支名稱。
+  - 上游庫：請輸入您想要 cherry-pick 的庫名稱。
+  - 提交 SHA：請輸入您想要 cherry-pick 的提交 SHA（類似於 git 提交哈希）。
+  - 選擇建構變體： [變體](variant)
