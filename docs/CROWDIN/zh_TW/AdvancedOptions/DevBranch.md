@@ -15,11 +15,11 @@ AAPS 的開發版本僅適用於能處理堆棧追蹤、查找日誌文件，甚
 
 (github-pr-test)=
 
-## Test items in a pull request (GitHub CI actions deploy)
+## 拉取請求中的測試項目（GitHub CI 動作部署）
 
-Available from 3.3.2.1.dev
+可從 3.3.2.1.dev 版本開始使用
 
-- Suitable for testers or those helping with testing.
+- 適合測試人員或想要測試的人使用。
 
 ```{eval-rst}
 .. raw:: html
@@ -39,30 +39,30 @@ Available from 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\Building-the-App\CI\aaps_ci_pr_ci.png)
 
-- PR number: Please enter the PR number that you want to test.
+- PR 編號：請輸入您想測試的 PR 編號。
 
-- PR reference types: PR reference types include two options:
+- PR 參考類型：PR 參考類型包括兩個選項：
     
     - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+    - 從 PR 作者的分支獲取實際內容（即，原始提交歷史紀錄而不包含任何合併操作）。
+    - 這與 PR 分支的原始狀態相同，就像是直接從一個分支或功能分支獲取的資料。
     
     - merge:
     
-    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
-    - This is a virtual merge commit automatically created by GitHub.
-    - This commit only exists when the PR has no conflicts and is mergeable.
+    - 獲取 GitHub 預先模擬合併 PR 到目標分支（例如，dev）的結果。
+    - 這是一個由 GitHub 自動創建的虛擬合併提交。
+    - 當 PR 沒有衝突且可合併時，這個提交才會存在。
     
-    - variant:
+    - 變體：
     
-    - Please refer to <variant>
+    - 請參考 [變體](variant)
     
     (variant)=
     
     ### variant
     
-    - Select the variant you need: 
-        - fullRelease: For regular pump usage with full functionality.
-        - [aapsclient、aapsclient2](../RemoteFeatures/RemoteControl.md#aapsclient) For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md))。
+    - 選擇您需要的變種： 
+        - fullRelease: 用於正常的幫浦使用，具有完整功能。
+        - [aapsclient、aapsclient2](../RemoteFeatures/RemoteControl.md#aapsclient) 針對照護者使用（需 [Nightscout](../SettingUpAaps/Nightscout.md)）。
         - pumpcontrol
-        - Text ending with “Debug” indicates that the APK will be built in debug mode, which is useful for troubleshooting.
+        - 以“Debug”結尾的文字表示 APK 將在除錯模式下建置，這對於除錯很有幫助。
