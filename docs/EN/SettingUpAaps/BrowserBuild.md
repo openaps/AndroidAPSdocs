@@ -14,9 +14,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 ## Device and software specifications for building AAPS
 
-You need an Android device with Android version >= 11
-
-iOS?
+You need a browser that works on either Android or iOS.
 
 You also need a Google account so that the app can be saved in your Google Drive.
 
