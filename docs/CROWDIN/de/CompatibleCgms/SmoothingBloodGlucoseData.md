@@ -33,7 +33,7 @@ Verwende diese Option nur dann, wenn Deine CGM-Daten bereits (in einer Collector
 | G5/G6/ONE     | Wenn verrauscht |              | Empfohlen |
 | G7/ONE+/Stelo | Wenn verrauscht | Falls stabil |           |
 
-Die Werte der Libre Sensoren sind verrauscht und müssen geglättet werden. Wenn Du eine xDrip+-Direktverbindung oder die [gepatchte App als Datenquelle-Datenquelle](https://xdrip.readthedocs.io/en/latest/install/libre2patch/) nutzt (Empfang von einer anderen App, bei Juggluco enthalten), ist die Glättung bereits [innerhalb der App](https://xdrip.readthedocs.io/en/latest/use/NFC/#smooth-libre-3-data-when-using-xxx-method) erledigt worden.
+Die Werte der Libre Sensoren sind verrauscht und müssen geglättet werden. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), smoothing is already done inside the app.
 
 | Sensor / Datenquelle |   Juggluco   | xDrip+ Direkt | xDrip+ Bridge | xDrip+ gepatchte App |
 | -------------------- |:------------:|:-------------:|:-------------:|:--------------------:|
