@@ -88,7 +88,7 @@ Nachteile (von Nutzenden gemeldet)
 
 * Es hat eine dunkle Benutzeroberfläche, große Anzeigen und Schaltflächen für die Benutzung in der Nacht.
 
-### [xDrip+](https://xdrip.readthedocs.io/en/latest/) (Android)
+### xDrip+ (Android)
 
 Du kannst xDrip+ als Follower-App nutzen.
 
