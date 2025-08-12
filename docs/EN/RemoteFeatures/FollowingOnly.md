@@ -93,7 +93,7 @@ Cons (as reported by users)
 
 * It has a dark Ul, large readings and buttons, designed for usage at night. 
 
-### [xDrip+](https://xdrip.readthedocs.io/en/latest/) (Android)
+### xDrip+ (Android)
 
 You can use xDrip+ as a follower.
 
