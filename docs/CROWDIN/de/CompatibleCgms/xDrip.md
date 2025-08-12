@@ -210,7 +210,7 @@ Nutze [diese Anleitung](https://navid200.github.io/xDrip/docs/Dexcom/SensorFaile
 
 ### Libre Transmitter verbinden und Sensor starten
 
-- Wenn Dein Sensor (Libre 2 EU und Libre 1 US) es erfordert, installiere den [neuesten Verarbeitungsalgorithmus](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
+- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
 
 - Dein Sensor muss mit der Hersteller-App oder dem Lesegerät gestartet worden sein (xDrip+ kann Libre-Sensoren nicht starten oder stoppen).
 
