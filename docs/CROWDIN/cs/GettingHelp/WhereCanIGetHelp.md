@@ -22,7 +22,6 @@ Please note that Facebook has recently removed external links shared within the 
 
 * [Facebooková skupina Looped](https://www.facebook.com/groups/TheLoopedGroup): najdete zde vše, co se týká DIY systémů uzavřené smyčky (OpenAPS, Loop a AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [xDrip+ - ](https://xdrip.readthedocs.io/en/latest/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): obecné informace o CGM
 * [AndroidAPS na Discordu](https://discord.gg/4fQUWHZ4Mw)
 
