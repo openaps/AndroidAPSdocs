@@ -77,7 +77,7 @@ Die Community hat eine [Liste mit getesteten Samrtphones und Smartwatches](#Phon
 
 ### xDrip+
 
-Auch wenn Du die [xDrip+-App](https://xdrip.readthedocs.io/en/latest/) nicht als **BZ-Quelle** benötigst, kannst Du sie dennoch _z. B._ für Alarme oder als alternative Anzeige Deiner Glukosewerte nutzen. Du kannst in xDrip+ beliebig viele Alarme einrichten, festlegen zu welchen Zeiten diese aktiv sein sollen, ob sie die Stummschaltung des Smartphones überschreiben können etc. Einige xDrip+ Informationen können [hier](../CompatibleCgms/xDrip.md) gefunden werden. Beachte bitte, dass die Entwicklung von xDrip+ sehr agil ist und die Dokumentation damit teilweise nicht Schritt halten und entsprechend nicht immer aktuell sein kann.
+Even if you don't need to have the xDrip+ App as **BG Source**, you can still use it for _i.e._ alarms or a different blood glucose display. Du kannst in xDrip+ beliebig viele Alarme einrichten, festlegen zu welchen Zeiten diese aktiv sein sollen, ob sie die Stummschaltung des Smartphones überschreiben können etc. Einige xDrip+ Informationen können [hier](../CompatibleCgms/xDrip.md) gefunden werden. Beachte bitte, dass die Entwicklung von xDrip+ sehr agil ist und die Dokumentation damit teilweise nicht Schritt halten und entsprechend nicht immer aktuell sein kann.
 
 ## Wartezeit überbrücken
 

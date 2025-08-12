@@ -29,7 +29,7 @@ Wenn Du den Libre 1 als BZ-Quelle nutzt, können aus Sicherheitsgründen die Fun
 -   xDrip+ unterstützt Miaomiao, Bubble, Blucon, Atom und LibreAlarm.
 -   Du kannst die [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) einfach herunterladen, es sei denn, Du benötigst aktuelle Funktionen, in diesem Fall solltest Du den neuesten [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases) verwenden.
 -   Folge den Anweisungen zum Einrichten auf der [xDrip+-Einstellungen Seite](../CompatibleCgms/xDrip.md).
--    Du brauchst für den Libre 1 US (und Libre 2 EU) auch [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
+-    You also need OOP2 for Libre 1 US (and Libre 2 EU).
 -   Wähle xDrip+ unter [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
 
 (libre1-using-glimp)=
