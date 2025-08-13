@@ -121,7 +121,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
     </div>
 ```
 
-- 如影片所示，請將其複製到相應的欄位中。
+- 如影片所示，請將他複製到對應的欄位中。
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_option1.png)
 
@@ -144,11 +144,11 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
     </div>
 ```
 
-- 如影片所示，請將其複製到相應的欄位中。
+- 如影片所示，請將他複製到對應的欄位中。
 
 ![aaps_ci_option2](../images/Building-the-App/CI/aaps_ci_option2.png)
 
-- 對於 KEYSTORE_PASSWORD、KEY_ALIAS 和 KEY_PASSWORD，請在 GitHub 中輸入您的實際密碼和別名。
+- 而 KEYSTORE_PASSWORD、KEY_ALIAS 和 KEY_PASSWORD 欄位，請在 GitHub 中輸入您的實際密碼和別名。
 
 ![aaps_ci_option2_2](../images/Building-the-App/CI/aaps_ci_option2_2.png)
 
@@ -158,7 +158,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
 
 (aaps-ci-google-drive-auth)=
 ### AAPS-CI Google 雲端硬碟授權
-- 點選開始授權以開始授權過程，並在授權後將獲得的TOKEN設定在 GitHub 中。
+- 點選開始授權，啟動 Google 授權頁面，並在授權後將獲得的TOKEN設定在 GitHub 中。
 
 ![aaps_ci_gdrive_auth](../images/Building-the-App/CI/aaps_ci_gdrive_auth.png)
 
@@ -186,7 +186,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
 
   ![aaps_ci_github_build_apk](../images/Building-the-App/CI/aaps_ci_github_build_apk.png)
 
-  - 變體：
+  - variant：
     - 請參考 [變體](variant)
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
@@ -197,7 +197,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
   (aaps-ci-preparation)= ### aaps-ci-preparation 網頁
   - 當您使用「檔案管理器」打開 aaps-ci-preparation.html 時，它會在您的手機上啟動一個臨時本地伺服器來顯示網頁並接收 Google Refresh token。
   - 如果您看到以下螢幕，這表示您已經一段時間未進行操作，檔案管理器已經關閉本地伺服器。
-  - 請使用檔案管理器應用程式重新打開 aaps-ci-preparation.html，並完成剩餘步驟。
+  - 請使用「檔案管理器」應用程式重新打開 aaps-ci-preparation.html，並完成剩餘步驟。
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
@@ -206,7 +206,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
 --------
 
 ```{warning}
-「自訂」欄位適合熟悉Google Oauth2的人想要使用自已的ClientID時使用。 僅供您參考。
+Google 雲端硬碟授權中的「自訂」欄位，適合熟悉Google Oauth2的人，並且想要使用自已的ClientID時使用。 僅供您參考。
 ```
 
 (github-cherry-pick)=
@@ -215,7 +215,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
 
   ![aaps_cherry-pick_ci](../images/Building-the-App/CI/aaps_cherry_pick_ci.png)
 
-  - 使用來自分支的工作流：請輸入您想要 cherry-pick 到的分支名稱。
-  - 上游庫：請輸入您想要 cherry-pick 的庫名稱。
-  - 提交 SHA：請輸入您想要 cherry-pick 的提交 SHA（類似於 git 提交哈希）。
-  - 選擇建構變體： [變體](variant)
+  - Use workflow from Branch：請輸入您想要 cherry-pick 到的分支名稱。
+  - Upstream Repository：請輸入您想要 cherry-pick 的庫名稱。
+  - Commit SHA：請輸入您想要 cherry-pick 的提交 SHA（類似於 git 提交哈希）。
+  - Select Build Variant： [變體](variant)
