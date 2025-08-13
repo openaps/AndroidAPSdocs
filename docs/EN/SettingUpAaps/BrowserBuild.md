@@ -70,7 +70,7 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
       • Download the preparation file from <a href="../_static/CI/aaps-ci-preparation.html" download>here</a>
     </pre>
 ```
-
+<br>
 
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
 
