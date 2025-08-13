@@ -209,7 +209,7 @@ The AAPS app will be saved in your Google Cloud drive once built:
   - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAUTH key.
 
 (aaps-ci-actions-permission)=
-### Check GitHub Action Permission Settings
+### Check GitHub Actions Permission Settings
   - Make sure GitHub Actions policies are set to “Allow all actions and reusable workflows” (Settings → Actions → General).
 
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.jpg)
