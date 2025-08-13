@@ -29,24 +29,24 @@
 
 您需要秘密儲存您的個人 Android Java 金鑰和 Google 雲端硬碟資訊於 GitHub（稍後我們將會說明如何操作）。
 
-由於這無法在 AndroidAPS 的公開庫中完成，您需要製作自己的源代碼副本（稱為分支）。
+由於這無法在 AndroidAPS 的公開倉庫中完成，您需要製作自己的原始碼副本（稱為分支）。
 
 ### GitHub 帳號
 
 如果您尚未擁有帳號，您需要[創建一個 GitHub 帳號](https://github.com/signup)。  
 您可以使用電子郵件註冊，也可以透過 Google 註冊。 遵循註冊和驗證過程。
 
-當您擁有帳號後，[登入 GitHub](https://github.com/login)。
+當您擁有帳號後，請[登入 GitHub](https://github.com/login)。
 
 ### 分支 AndroidAPS
 
 按照[這個連結](https://github.com/nightscout/AndroidAPS)打開官方 AndroidAPS 倉庫。
 
-輕觸分支圖示。 這將在您的帳號內創建一個副本。
+點選分支圖示。 這將在您的帳號內創建一個副本。
 
 ![fork_aaps](../images/Building-the-App/CI/ForkAAPS.png)
 
-向下滾動至下一個螢幕並輕觸**建立分支**。
+向下滾動至下一個螢幕並點選**建立分支**。
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
@@ -54,7 +54,7 @@
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
-GitHub 現在顯示您個人的 AndroidAPS 副本。 請保持這個瀏覽器標籤開啟。
+GitHub 現在顯示您個人的 AndroidAPS 副本。 請保持這個瀏覽器頁籤開啟。
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)
 
@@ -62,7 +62,7 @@ GitHub 現在顯示您個人的 AndroidAPS 副本。 請保持這個瀏覽器標
 
 ## 2. 準備步驟
 
-- 如果您是從 Android 裝置建置，請從 Google Play 商店安裝[File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager)。
+- 如果您是從 Android 裝置建置，請先從 Google Play 商店安裝[File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager)。
 ```{eval-rst}
 .. <pre style="font-family: inherit; margin: 0;">
        • 從<a href="../_static/CI/aaps-ci-preparation.html" download>這裡</a>下載準備檔案
@@ -87,7 +87,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
 ### AAPS-CI 選項 1 – 生成 JKS
  - 適合首次使用者、沒有 JKS 的使用者或忘記密碼或別名的使用者。
 
- 與 Android 相容
+ Android 適用
 ```{eval-rst}
 .. raw:: html
 
@@ -158,7 +158,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
 
 (aaps-ci-google-drive-auth)=
 ### AAPS-CI Google 雲端硬碟授權
-- 點擊開始授權以開始授權過程，並在授權後將獲得的令牌設定在 GitHub 中。
+- 點選開始授權以開始授權過程，並在授權後將獲得的TOKEN設定在 GitHub 中。
 
 ![aaps_ci_gdrive_auth](../images/Building-the-App/CI/aaps_ci_gdrive_auth.png)
 
