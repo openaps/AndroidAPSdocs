@@ -33,7 +33,7 @@ orphan: true
 | G5/G6/ONE     | 如果有干擾 |        | 建議使用  |
 | G7/ONE+/Stelo | 如果有干擾 | 如果穩定的話 |       |
 
-Libre 感測器的干擾較大，可能需要平滑處理。 在使用 xDrip+ 直接連線或[修補應用程式資料來源](https://xdrip.readthedocs.io/en/latest/install/libre2patch/)（接收來自其他應用程式的資料，包括 Juggluco）時，平滑處理已在[程式內完成](https://xdrip.readthedocs.io/en/latest/use/NFC/#smooth-libre-3-data-when-using-xxx-method)。
+Libre 感測器的干擾較大，可能需要平滑處理。 在使用 xDrip+ 直接連線或修補應用程式資料來源（接收來自其他應用程式的資料，包括 Juggluco）時，平滑處理已在程式內完成。
 
 | 感測器 / 資料來源      | Juggluco | xDrip+ 直接 | xDrip+ 橋接 | xDrip+ 修補應用程式 |
 | --------------- |:--------:|:---------:|:---------:|:-------------:|

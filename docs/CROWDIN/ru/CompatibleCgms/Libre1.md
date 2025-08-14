@@ -29,7 +29,7 @@ orphan: true
 -   xDrip+ поддерживает Miaomiao, Bubble, Blucon, Atom и LibreAlarm.
 -   Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции. В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Следуйте инструкциям по установке на странице настроек [xDrip+](../CompatibleCgms/xDrip.md).
--    Вам также нужен [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) для Libre 1 США (и Libre 2 EU).
+-    You also need OOP2 for Libre 1 US (and Libre 2 EU).
 -   В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
 
 (libre1-using-glimp)=

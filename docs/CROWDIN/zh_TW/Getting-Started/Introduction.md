@@ -87,7 +87,7 @@ AAPS 的“核心”是一個你自己建置的**應用程式**。 這裡有詳�
 **AAPS** 相對於商業系統的一個重大優勢是，關注者可以透過認證的簡訊（SMS）指令或應用程式（如 [Nightscout](https://nightscout.github.io/) 或 AAPSClient）向 **AAPS** 系統發送多種指令。 第1型糖尿病兒童的父母們廣泛使用AAPS。 例如，在遊樂場時，你可以透過自己的手機為孩子的點心提前注射，而孩子則繼續玩耍。 可以監控系統（_例如_ Fitbit）、傳送基本指令（_例如_ Samsung Galaxy 手錶4），甚至可以從高規格的智慧手錶（**5**）(_例如_ LEMFO) 運行整個AAPS系統。 在這種情況下，你不需要使用手機運作AAPS。 隨著手錶的電池壽命提高和技術變得更加穩定，這最後一個選項可能會變得越來越具吸引力。
 
 #### 6) **開放的應用程式介面，無商業限制**
-除了使用開源方法外，允許隨時查看**AAPS**的程式碼，提供開放的程式介面這一做法，也讓其他開發者有機會貢獻新想法。 **AAPS** 與 Nightscout 緊密整合。 這加快了發展，讓用戶可以添加功能，使得與糖尿病的生活更加方便。 這類整合良好例子包括 [Nightscout](https://nightscout.github.io/)、[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)、[xDrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/)、[M5 Stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) 等。 開源開發者與商業系統開發者之間的對話持續進行。 許多 DIY 創新逐漸被商業系統採用，儘管開發速度較慢，這在一定程度上是因為不同公司的系統（如幫浦、應用程式、傳感器等）之間的介面需要謹慎協商和授權。 這也可能減緩創新，這些創新對患者（或一小部分特定需求的患者）很方便，因為這些創新無法帶來顯著的利潤。
+除了使用開源方法外，允許隨時查看**AAPS**的程式碼，提供開放的程式介面這一做法，也讓其他開發者有機會貢獻新想法。 **AAPS** 與 Nightscout 緊密整合。 這加快了發展，讓用戶可以添加功能，使得與糖尿病的生活更加方便。 這種整合的好例子有 [Nightscout](https://nightscout.github.io/)、[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)、xDrip+、[M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) 等等。 開源開發者與商業系統開發者之間的對話持續進行。 許多 DIY 創新逐漸被商業系統採用，儘管開發速度較慢，這在一定程度上是因為不同公司的系統（如幫浦、應用程式、傳感器等）之間的介面需要謹慎協商和授權。 這也可能減緩創新，這些創新對患者（或一小部分特定需求的患者）很方便，因為這些創新無法帶來顯著的利潤。
 
 #### 7) **詳細的應用程式介面**
 透過 **AAPS**，你可以輕鬆追蹤幫浦胰島素數值、套管使用時間、傳感器時間、幫浦電池時間、活性胰島素量_等等_。 許多操作可以直接在 **AAPS** 應用中完成（如幫浦注射、幫浦中斷等），無需在幫浦本身上操作，這樣幫浦可以一直放在你的口袋或腰帶上。

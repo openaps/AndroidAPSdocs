@@ -210,7 +210,7 @@ orphan: true
 
 ### 连接Libre发射器并启动传感器
 
-- 若您的传感器需要（欧盟版Libre 2和美国版Libre 1），请安装[最新独立处理算法](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)。
+- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
 
 - 您的传感器必须已通过厂商应用程序或读卡器启动（xDrip+无法启动或停止Libre传感器）。
 

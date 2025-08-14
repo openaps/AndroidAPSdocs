@@ -8,7 +8,7 @@ FreeStyle Libre 2传感器现已成为真正的CGM设备，即使使用官方应
 
 ## 1. 使用蓝牙桥接器和 OOP
 
-蓝牙发射器可与Libre 2（欧版）或2+（欧版）配合使用，但需搭配[外部处理算法](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)应用程序。 您可以像使用[Libre 1](./Libre1.md)一样，每5分钟接收一次血糖读数。
+Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an out of process algorithm app. 您可以像使用[Libre 1](./Libre1.md)一样，每5分钟接收一次血糖读数。
 
 请确认您选用的桥接器及应用程序与传感器和xDrip+兼容（旧版Blucon及近期版本不可用，喵喵1需固件39版，喵喵2需固件7版）。
 
@@ -36,7 +36,7 @@ xDrip+ 不支持直接连接到 Libre 2 US 和 AUS。
 仅限 Libre 2 和 2+ **EU** 型号。
 ```
 
-- 请按照[此说明](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip)配置xDrip+，但务必下载[最新版OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)，因文档中的版本已过时。
+- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [the latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
 - 请按照[xDrip+设置页面](../CompatibleCgms/xDrip.md)上的安装说明进行操作。
 
 -   在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。

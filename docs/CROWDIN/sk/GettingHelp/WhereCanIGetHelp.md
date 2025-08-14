@@ -22,7 +22,6 @@ Please note that Facebook has recently removed external links shared within the 
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): covers all DIY closed loop systems (OpenAPS, Loop and AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [xDrip+ - ](https://xdrip.readthedocs.io/en/latest/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
 * [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 

@@ -37,7 +37,7 @@ AAPS 的開發版本僅適用於能處理堆棧追蹤、查找日誌文件，甚
     </div>
 ```
 
-![aaps_ci_pr_ci](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\Building-the-App\CI\aaps_ci_pr_ci.png)
+![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
 - PR number：請輸入您想測試的 PR 編號。
 

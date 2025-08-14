@@ -210,7 +210,7 @@ Dexcom 傳感器的自動延長（`預防性重啟`）不建議使用，因為�
 
 ### 連線 Libre 傳輸器並啟動傳感器
 
-- 如果你的傳感器需要（例如 Libre 2 EU 和 Libre 1 US），請安裝[最新的外部處理演算法](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)。
+- 如果你的傳感器需要（例如 Libre 2 EU 和 Libre 1 US），請安裝最新的外部處理演算法。
 
 - 你的傳感器必須已經使用供應商應用程式或讀取器啟動（xDrip+ 無法啟動或停止 Libre 傳感器）。
 

@@ -88,7 +88,7 @@
 
 * 它有深色界面、大字體和按鈕，設計用於夜間使用。
 
-### [xDrip+](https://xdrip.readthedocs.io/en/latest/)（Android）
+### xDrip+ (Android)
 
 你可以將 xDrip+ 作為追蹤者應用程式使用。
 

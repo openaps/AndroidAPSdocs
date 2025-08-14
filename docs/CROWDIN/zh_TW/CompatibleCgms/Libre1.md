@@ -29,7 +29,7 @@ orphan: true
 -   xDrip+ 支援 MiaoMiao、Bubble、Blucon、Atom 和 LibreAlarm。
 -   除非你需要最新功能，否則可以安全下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)，在這種情況下，你應該使用最新的[Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases)。
 -   按照[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)上的設置說明進行操作。
--    你還需要適用於 Libre 1 US（和 Libre 2 EU）的[OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)。
+-    你還需要適用於 Libre 1 US（和 Libre 2 EU）的OOP2。
 -   在[ConfigBuilder 的血糖來源](#Config-Builder-bg-source)中選擇 xDrip+。
 
 (libre1-using-glimp)=

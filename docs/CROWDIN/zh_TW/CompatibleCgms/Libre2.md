@@ -8,7 +8,7 @@ orphan: true
 
 ## 1. 使用藍牙橋接器和 OOP
 
-藍牙發射器可用於 Libre 2（EU）或 2+（EU），以及一個 [非處理演算法](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) 應用程式。 你可以像使用 [Libre 1](./Libre1.md) 一樣每 5 分鐘接收一次血糖讀取值。
+藍牙發射器可用於 Libre 2（EU）或 2+（EU），以及一個 非處理演算法 應用程式。 你可以像使用 [Libre 1](./Libre1.md) 一樣每 5 分鐘接收一次血糖讀取值。
 
 檢查你要使用的橋接器和應用程式是否與你的傳感器及 xDrip+ 相容（舊版 Blucon 及近期的版本不支援，Miaomiao 1 需要韌體 39，Miaomiao 2 則需要韌體 7）。
 
@@ -36,7 +36,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 僅支持 Libre 2 和 2+ **EU** 型號。
 ```
 
-- 請按照 [這些指示](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) 設定 xDrip+，但請確保下載 [此最新版 OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)，因為文件中的版本已過時。
+- 請依照[這些指示](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip)來設置 xDrip+，但請確保下載[最新的 OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)，因為文件中的版本已經過時。
 - 按照[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)上的設置說明進行操作。
 
 -   在[組態建置工具的血糖來源](#Config-Builder-bg-source)中選擇 xDrip+。

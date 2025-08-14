@@ -22,7 +22,6 @@
 
 * [Looped Facebook群组](https://www.facebook.com/groups/TheLoopedGroup)：涵盖所有DIY闭环系统(OpenAPS、Loop和AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [xDrip+ - ](https://xdrip.readthedocs.io/en/latest/)
 * [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/)：通用CGM讨论
 * [Discord上的AndroidAPS](https://discord.gg/4fQUWHZ4Mw)
 

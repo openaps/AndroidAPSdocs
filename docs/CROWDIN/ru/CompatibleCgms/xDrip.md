@@ -208,7 +208,7 @@ orphan: true
 
 ### Подключите трансмиттер Libre и запустите сенсор
 
-- Если сенсор нуждается в этом (Libre 2 EU и Libre 1 US), установите [ новейший алгоритм out-of-process ](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
+- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
 
 - Сенсор должен быть уже запущен с помощью приложения поставщика или при помощи ридера (xDrip+ не может запускать или останавливать сенсоры Libre).
 
