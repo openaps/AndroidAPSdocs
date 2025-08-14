@@ -33,7 +33,7 @@ Use this option only if your CGM data is being properly smoothed by your collect
 | G5/G6/ONE     |  If noisy   |           | Recommended |
 | G7/ONE+/Stelo |  If noisy   | If stable |             |
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the [patched app data source](https://xdrip.readthedocs.io/en/latest/install/libre2patch/) (receiving from another app, Juggluco included), smoothing is already done [inside the app](https://xdrip.readthedocs.io/en/latest/use/NFC/#smooth-libre-3-data-when-using-xxx-method).
+Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), smoothing is already done inside the app.
 
 | Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
 | -------------------- |:--------:|:-------------:|:-------------:|:------------------:|
