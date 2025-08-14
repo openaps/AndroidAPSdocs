@@ -1,5 +1,7 @@
 # Browser build
 
+(browser-build)=
+
 Building AAPS with GitHub Actions.
 
 **Minimum AAPS version supported is 3.3.2.1.**
