@@ -18,14 +18,6 @@ orphan: true
 * 在储药器激活时，**AAPS** 将自动搜寻并连接新的 DASH 储药器。
 * 预期连接范围：5-10米（实际效果可能因环境而异）。
 
-```{admonition} Android 15
-:class: warning
-
-目前​​AAPS​​报告以下组合存在蓝牙连接问题：DASH + Android 15。
-请勿将手机升级至Android 15，除非您已查阅以下[**​​列表**​​](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&amp;single=true)并确认您的手机不在已知问题报告中。
-如果您经常遇到断开连接的问题，请尝试按照[**蓝牙问题**](../GettingHelp/GeneralTroubleshooting.md)中的说明启用Bond BT。 
-```
-
 ## 硬件/软件要求
 
 * DASH 以蓝色针头帽为标识。
