@@ -88,7 +88,7 @@ For Dexcom Follow, the sensor data is then exported from the **AAPS** phone eith
 
 * It has a dark Ul, large readings and buttons, designed for usage at night.
 
-### [xDrip+](https://xdrip.readthedocs.io/en/latest/) (Android)
+### xDrip+ (Android)
 
 You can use xDrip+ as a follower.
 
