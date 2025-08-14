@@ -37,13 +37,13 @@
 
 * [SMS 指令](#SMSCommands-troubleshooting)
 
+### Cannot start Omnipod with Android 16
+
+Upgrade to minimum version of AndroidAPS: 3.3.2.1.
+
 ### 藍牙連線問題頻繁
 
 #### Android 15
-
-```{warning}
-開發者正在處理這個影響某些 Samsung 和 Pixel 手機的 **AAPS** 問題。
-```
 
 升級 Android 或更換到近期手機後，**AAPS**經常會失去與幫浦的藍牙連線。 重新啟動手機後，這個問題會暫時消失。 如果手機運行 Android 15，您可以嘗試啟用以下設定：
 
