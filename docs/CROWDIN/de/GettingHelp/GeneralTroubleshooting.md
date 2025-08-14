@@ -37,13 +37,13 @@ Ignoriere sie: Weitere Details, Trotzdem installieren.
 
 * [SMS-Befehle](#SMSCommands-troubleshooting)
 
+### Cannot start Omnipod with Android 16
+
+Upgrade to minimum version of AndroidAPS: 3.3.2.1.
+
 ### Häufige Bluetooth-Verbindungsprobleme
 
 #### Android 15
-
-```{warning}
-Entwickler arbeiten an dem Problem, das Einfluss auf **AAPS** auf einigen Samsung und Pixel Smartphones hat.
-```
 
 Nach einem Android-Upgrade oder dem Umzug auf ein neueres Smartphone verliert **AAPS** häufig die Bluetooth-Verbindung zur Pumpe. Mit einem Neustart des Smartphones verschwindet das Problem vorübergehend. Wenn auf dem Smartphone Android 15 läuft, kannst Du versuchen die folgenden Dinge zu aktivieren:
 
