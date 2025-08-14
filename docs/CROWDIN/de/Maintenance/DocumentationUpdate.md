@@ -1,5 +1,11 @@
 # Docs Updates & Änderungen
 
+## August 2025
+
+- Updated versions and Android Studio prerequisites
+- Added [3.3.2.1](#version3321) release, removed Android 16 references (fixed)
+- Added [Browser Build](browser-build) @Angus
+
 ## Mai 2025
 
 - [3.2.0.4 Upgrade-Seite](#update-aaps-3204) hinzugefügt @psonnera
