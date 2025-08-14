@@ -1,5 +1,7 @@
 # 瀏覽器建置
 
+(browser-build)=
+
 使用 GitHub Actions 建置 AAPS。
 
 **最低支援 AAPS 版本為 3.3.2.1。**
