@@ -87,7 +87,7 @@
 
 * 具有深色Ul、大号读数和按钮，专为夜间使用而设计。
 
-### [xDrip+](https://xdrip.readthedocs.io/en/latest/) (Android)
+### xDrip+ (Android)
 
 您可以使用xDrip+作为跟踪器。
 
