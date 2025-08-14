@@ -36,7 +36,7 @@ Available from 3.3.2.1.dev
     </div>
 ```
 
-![aaps_ci_pr_ci](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\Building-the-App\CI\aaps_ci_pr_ci.png)
+![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
 - PR number: Please enter the PR number that you want to test.
 
