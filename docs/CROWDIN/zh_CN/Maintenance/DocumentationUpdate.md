@@ -1,5 +1,11 @@
 # 文档更新与变更
 
+## August 2025
+
+- Updated versions and Android Studio prerequisites
+- Added [3.3.2.1](#version3321) release, removed Android 16 references (fixed)
+- Added [Browser Build](browser-build) @Angus
+
 ## 2025年5月
 
 - 添加 [3.2.0.4 升级页面](#update-aaps-3204) @psonnera
