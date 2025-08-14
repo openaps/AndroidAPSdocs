@@ -21,6 +21,7 @@
 | [3.2.0.4](#version3204) | Hedgehog（2023.1.1）                       | 最高支援到 Narwhal                            | 8.2    | 17  |
 | [3.3.1.3](#version3300) | Ladybug功能更新（2024.2.2）                    | 最高支援到 Narwhal                            | 8.10   | 21  |
 | [3.3.2](#version3300)   | Meerkat (2024.3.1)                       | Narwhal                                  | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                       |                                          | 8.13   | 21  |
 
 "首選版本"已打包與適當的JVM版本。 首選版本也是你可以用來建立**AAPS**的最小版本。 你**無法**在比"首選"版本更舊的版本上建立。 如果使用不同的版本，你可能會遇到與JVM版本相關的問題。 請參閱 [Android Studio 問題排除](#troubleshooting_androidstudio-uncommitted-changes) 頁面以協助解決這些問題。 如果你當前的 Android Studio 版本未在表格中列出，你必須先更新它。
 
