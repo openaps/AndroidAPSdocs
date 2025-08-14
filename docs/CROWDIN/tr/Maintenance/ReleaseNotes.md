@@ -55,7 +55,23 @@ Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmas
 WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
 ```
 
+(version3321)=
+
+## Version 3.3.2.1
+
+Release date: 13-08-2025
+
+- Fixed Omnipod Bluetooth connection on Android 16
+- CI process (Browser build)
+- Fix mmol-mgdl conversion
+- Fix wrong time selection in dialogs in some timezones
+- Fix reading keys in simple mode
+- Fix missed predictions on wear
+- Improved ConfigBuilder
+- Improved NSCv3 full sync
+
 (version3300)=
+
 ## Version 3.3.2.0
 
 Release date: 27-03-2025
