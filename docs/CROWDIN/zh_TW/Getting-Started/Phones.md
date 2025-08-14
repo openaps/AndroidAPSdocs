@@ -2,12 +2,6 @@
 
 目前版本的 **AAPS**（3.3）需要使用 Google **Android 11.0 或更高版本** 的 Android 智慧型手機。 如果您考慮購買新手機，(截至 2024 年 12 月)， **建議選擇 Android 14**。
 
-截至 2024 年 11 月，多位用戶報告 Android 15 與 Omnipod Dash 的藍牙連線存在問題。
-
-自 2025 年 6 月以來，許多用戶反映無法在 Android 16 上啟動 Omnipod Dash。
-
-您可能希望推遲更新，特別是在使用 Omnipod Dash 的情況下。
-
 請查看 [Facebook 或 Discord](../GettingHelp/WhereCanIGetHelp.md) 獲取有關此主題的最新更新。
 
 為安全起見，強烈建議用戶保持其 **AAPS** 的版本為最新。 然而，對於無法使用 Android 11.0 或更新設備的用戶，仍可使用兼容舊版 Android 的早期 **AAPS** 版本，請參見：[發行說明](#maintenance-android-version-aaps-version)。
