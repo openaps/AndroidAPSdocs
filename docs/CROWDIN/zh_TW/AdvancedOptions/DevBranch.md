@@ -39,9 +39,9 @@ AAPS 的開發版本僅適用於能處理堆棧追蹤、查找日誌文件，甚
 
 ![aaps_ci_pr_ci](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\Building-the-App\CI\aaps_ci_pr_ci.png)
 
-- PR 編號：請輸入您想測試的 PR 編號。
+- PR number：請輸入您想測試的 PR 編號。
 
-- PR 參考類型：PR 參考類型包括兩個選項：
+- PR reference types：PR 參考類型包括兩個選項：
     
     - head:
     - 從 PR 作者的分支獲取實際內容（即，原始提交歷史紀錄而不包含任何合併操作）。
@@ -53,7 +53,7 @@ AAPS 的開發版本僅適用於能處理堆棧追蹤、查找日誌文件，甚
     - 這是一個由 GitHub 自動創建的虛擬合併提交。
     - 當 PR 沒有衝突且可合併時，這個提交才會存在。
     
-    - 變體：
+    - variant：
     
     - 請參考 [變體](variant)
     

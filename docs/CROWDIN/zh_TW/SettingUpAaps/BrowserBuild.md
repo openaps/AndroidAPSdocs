@@ -29,24 +29,24 @@
 
 您需要秘密儲存您的個人 Android Java 金鑰和 Google 雲端硬碟資訊於 GitHub（稍後我們將會說明如何操作）。
 
-由於這無法在 AndroidAPS 的公開庫中完成，您需要製作自己的源代碼副本（稱為分支）。
+由於這無法在 AndroidAPS 的公開倉庫中完成，您需要製作自己的原始碼副本（稱為分支）。
 
 ### GitHub 帳號
 
 如果您尚未擁有帳號，您需要[創建一個 GitHub 帳號](https://github.com/signup)。  
 您可以使用電子郵件註冊，也可以透過 Google 註冊。 遵循註冊和驗證過程。
 
-當您擁有帳號後，[登入 GitHub](https://github.com/login)。
+當您擁有帳號後，請[登入 GitHub](https://github.com/login)。
 
 ### 分支 AndroidAPS
 
 按照[這個連結](https://github.com/nightscout/AndroidAPS)打開官方 AndroidAPS 倉庫。
 
-輕觸分支圖示。 這將在您的帳號內創建一個副本。
+點選分支圖示。 這將在您的帳號內創建一個副本。
 
 ![fork_aaps](../images/Building-the-App/CI/ForkAAPS.png)
 
-向下滾動至下一個螢幕並輕觸**建立分支**。
+向下滾動至下一個螢幕並點選**建立分支**。
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
@@ -54,7 +54,7 @@
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
-GitHub 現在顯示您個人的 AndroidAPS 副本。 請保持這個瀏覽器標籤開啟。
+GitHub 現在顯示您個人的 AndroidAPS 副本。 請保持這個瀏覽器頁籤開啟。
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)
 
@@ -62,7 +62,7 @@ GitHub 現在顯示您個人的 AndroidAPS 副本。 請保持這個瀏覽器標
 
 ## 2. 準備步驟
 
-- 如果您是從 Android 裝置建置，請從 Google Play 商店安裝[File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager)。
+- 如果您是從 Android 裝置建置，請先從 Google Play 商店安裝[File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager)。
 ```{eval-rst}
 .. <pre style="font-family: inherit; margin: 0;">
        • 從<a href="../_static/CI/aaps-ci-preparation.html" download>這裡</a>下載準備檔案
@@ -87,7 +87,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
 ### AAPS-CI 選項 1 – 生成 JKS
  - 適合首次使用者、沒有 JKS 的使用者或忘記密碼或別名的使用者。
 
- 與 Android 相容
+ Android 適用
 ```{eval-rst}
 .. raw:: html
 
@@ -121,7 +121,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
     </div>
 ```
 
-- 如影片所示，請將其複製到相應的欄位中。
+- 如影片所示，請將他複製到對應的欄位中。
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_option1.png)
 
@@ -144,11 +144,11 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
     </div>
 ```
 
-- 如影片所示，請將其複製到相應的欄位中。
+- 如影片所示，請將他複製到對應的欄位中。
 
 ![aaps_ci_option2](../images/Building-the-App/CI/aaps_ci_option2.png)
 
-- 對於 KEYSTORE_PASSWORD、KEY_ALIAS 和 KEY_PASSWORD，請在 GitHub 中輸入您的實際密碼和別名。
+- 而 KEYSTORE_PASSWORD、KEY_ALIAS 和 KEY_PASSWORD 欄位，請在 GitHub 中輸入您的實際密碼和別名。
 
 ![aaps_ci_option2_2](../images/Building-the-App/CI/aaps_ci_option2_2.png)
 
@@ -158,7 +158,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
 
 (aaps-ci-google-drive-auth)=
 ### AAPS-CI Google 雲端硬碟授權
-- 點擊開始授權以開始授權過程，並在授權後將獲得的令牌設定在 GitHub 中。
+- 點選開始授權，啟動 Google 授權頁面，並在授權後將獲得的TOKEN設定在 GitHub 中。
 
 ![aaps_ci_gdrive_auth](../images/Building-the-App/CI/aaps_ci_gdrive_auth.png)
 
@@ -186,7 +186,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
 
   ![aaps_ci_github_build_apk](../images/Building-the-App/CI/aaps_ci_github_build_apk.png)
 
-  - 變體：
+  - variant：
     - 請參考 [變體](variant)
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
@@ -197,7 +197,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
   (aaps-ci-preparation)= ### aaps-ci-preparation 網頁
   - 當您使用「檔案管理器」打開 aaps-ci-preparation.html 時，它會在您的手機上啟動一個臨時本地伺服器來顯示網頁並接收 Google Refresh token。
   - 如果您看到以下螢幕，這表示您已經一段時間未進行操作，檔案管理器已經關閉本地伺服器。
-  - 請使用檔案管理器應用程式重新打開 aaps-ci-preparation.html，並完成剩餘步驟。
+  - 請使用「檔案管理器」應用程式重新打開 aaps-ci-preparation.html，並完成剩餘步驟。
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
@@ -206,7 +206,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
 --------
 
 ```{warning}
-「自訂」欄位適合熟悉Google Oauth2的人想要使用自已的ClientID時使用。 僅供您參考。
+Google 雲端硬碟授權中的「自訂」欄位，適合熟悉Google Oauth2的人，並且想要使用自已的ClientID時使用。 僅供您參考。
 ```
 
 (github-cherry-pick)=
@@ -215,7 +215,7 @@ AAPS 應用程式在建立後會保存在您的 Google 雲端硬碟中：
 
   ![aaps_cherry-pick_ci](../images/Building-the-App/CI/aaps_cherry_pick_ci.png)
 
-  - 使用來自分支的工作流：請輸入您想要 cherry-pick 到的分支名稱。
-  - 上游庫：請輸入您想要 cherry-pick 的庫名稱。
-  - 提交 SHA：請輸入您想要 cherry-pick 的提交 SHA（類似於 git 提交哈希）。
-  - 選擇建構變體： [變體](variant)
+  - Use workflow from Branch：請輸入您想要 cherry-pick 到的分支名稱。
+  - Upstream Repository：請輸入您想要 cherry-pick 的庫名稱。
+  - Commit SHA：請輸入您想要 cherry-pick 的提交 SHA（類似於 git 提交哈希）。
+  - Select Build Variant： [變體](variant)
