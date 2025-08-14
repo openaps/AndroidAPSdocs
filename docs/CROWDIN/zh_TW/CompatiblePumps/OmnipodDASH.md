@@ -18,14 +18,6 @@ orphan: true
 * Pod 啟動時，**AAPS**將尋找並連接到新的DASH Pod 。
 * 預期範圍：5-10公尺（依個人情況而異）。
 
-```{admonition} Android 15
-:class: warning
-
-目前有報告指出以下組合的 **AAPS** 在藍牙連線上有問題：DASH + Android 15。
-請避免將手機升級到 Android 15，除非您已經檢查了以下的 [**清單**](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&amp;single=true) 並確認您的手機不是已知的問題。
-如果您經常遇到中斷連線的情況，請嘗試啟用 Bond BT，如以下的 [**藍牙問題**](../GettingHelp/GeneralTroubleshooting.md) 所描述。 
-```
-
 ## 硬體/軟體要求
 
 * DASH以藍色針頭蓋識別。
