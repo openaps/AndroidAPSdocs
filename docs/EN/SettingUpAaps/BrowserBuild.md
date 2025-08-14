@@ -68,8 +68,9 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 
     <pre style="font-family: inherit; margin: 0;">
       • Download the preparation file from <a href="../_static/CI/aaps-ci-preparation.html" download>here</a>
-    </pre><br />
+    </pre>
 ```
+<br>
 
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
 
@@ -195,15 +196,23 @@ The AAPS app will be saved in your Google Cloud drive once built:
 (aaps-ci-troubleshooting)=
 ## AAPS-CI Troubleshooting
 
-  (aaps-ci-preparation)=
-  ### aaps-ci-preparation web page
+(aaps-ci-preparation)=
+### aaps-ci-preparation web page
   - When you open aaps-ci-preparation.html using a file manager, it will start a temporary local server on your phone to display the webpage and receive the Google refresh token.
   - If you see the screen below, it means you have been inactive for a while, and the file manager has already shut down the local server.
   - Please reopen aaps-ci-preparation.html using the file manager app and complete the remaining steps.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
+(aaps-ci-disable-software)=
+### Disable Software That May Interfere With OAUTH Verification
+  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAUTH key.
 
+(aaps-ci-actions-permission)=
+### Check GitHub Actions Permission Settings
+  - Make sure GitHub Actions policies are set to “Allow all actions and reusable workflows” (Settings → Actions → General).
+
+  ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.jpg)
 
 --------
 
