@@ -37,13 +37,13 @@
 
 * [短信指令](#SMSCommands-troubleshooting)
 
+### Cannot start Omnipod with Android 16
+
+Upgrade to minimum version of AndroidAPS: 3.3.2.1.
+
 ### 频繁的蓝牙连接问题
 
 #### Android 15
-
-```{warning}
-开发者正在解决影响**AAPS**在某些三星和Pixel手机上的问题。
-```
 
 升级安卓系统或更换新手机后，**AAPS**经常丢失与泵的蓝牙连接。 重启手机后问题会暂时消失。 如果手机运行的是安卓15系统，可以尝试启用以下选项：
 

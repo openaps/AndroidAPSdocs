@@ -54,7 +54,23 @@
 WearOS 5（API级别34，基于Android 14）存在[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
+(version3321)=
+
+## Version 3.3.2.1
+
+Release date: 13-08-2025
+
+- Fixed Omnipod Bluetooth connection on Android 16
+- CI process (Browser build)
+- Fix mmol-mgdl conversion
+- Fix wrong time selection in dialogs in some timezones
+- Fix reading keys in simple mode
+- Fix missed predictions on wear
+- Improved ConfigBuilder
+- Improved NSCv3 full sync
+
 (version3300)=
+
 ## 版本 3.3.2.0
 
 发布日期：2025年3月27日
