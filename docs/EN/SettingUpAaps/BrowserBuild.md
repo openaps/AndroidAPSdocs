@@ -63,14 +63,17 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 ## 2. Preparation Steps
 
 - If you are building from an Android device, install [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) from the Google Play store.
+- Download the preparation file from here:
+<!--crowdin:disable-->
 ```{eval-rst}
 .. raw:: html
 
-    <pre style="font-family: inherit; margin: 0;">
-      • Download the preparation file from <a href="../_static/CI/aaps-ci-preparation.html" download>here</a>
-    </pre>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>aaps-ci-preparation.html</a>
 ```
 <br>
+<br>
+<br>
+<!--crowdin:enable-->
 
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
 
