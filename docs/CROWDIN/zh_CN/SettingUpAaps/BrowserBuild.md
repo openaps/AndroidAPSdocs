@@ -1,7 +1,5 @@
 # Browser build
 
-(browser-build)=
-
 Building AAPS with GitHub Actions.
 
 **Minimum AAPS version supported is 3.3.2.1.**
@@ -65,14 +63,17 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 ## 2. Preparation Steps
 
 - If you are building from an Android device, install [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) from the Google Play store.
+- Download the preparation file from here:
+<!--crowdin:disable-->
 ```{eval-rst}
 .. raw:: html
 
-    <pre style="font-family: inherit; margin: 0;">
-      • Download the preparation file from <a href="../_static/CI/aaps-ci-preparation.html" download>here</a>
-    </pre>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>aaps-ci-preparation.html</a>
 ```
 <br>
+<br>
+<br>
+<!--crowdin:enable-->
 
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
 
@@ -90,8 +91,10 @@ The AAPS app will be saved in your Google Cloud drive once built:
 (aaps-ci-option1)=
 ### AAPS-CI Option 1 – Generate JKS
  - Suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+- Here are examples using multiple platforms below.
 
- Compatible with Android
+(aaps-ci-option1-android)=
+ - Compatible with Android(The simplest, recommended as the first choice)
 ```{eval-rst}
 .. raw:: html
 
@@ -108,7 +111,8 @@ The AAPS app will be saved in your Google Cloud drive once built:
     </div>
 ```
 
- Compatible with iOS (using iPad as an example)
+(aaps-ci-ios-ipad)=
+ - Compatible with iOS (using iPad as an example)
 ```{eval-rst}
 .. raw:: html
 
@@ -125,6 +129,45 @@ The AAPS app will be saved in your Google Cloud drive once built:
     </div>
 ```
 
+(aaps-ci-option1-computer)=
+- Use a computer (supports Windows/Mac/Linux)
+
+  Open the webpage https://simplewebserver.org/download.html
+
+  Install Simple HTTP Server If you are a Windows/Mac user, you can install it from the store. After clicking the link, you will be asked whether to allow opening it. Please choose Open Link. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)
+
+  Example on Mac:
+
+  - get → install → open ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)
+
+  - Click Get Started ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
+
+  - Click Get Server ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
+
+  - In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
+
+  - Seeing this screen means the server has been started. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)
+
+  - Do not close Simple HTTP Server. Please switch to your browser and open [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)
+
+  - For the subsequent steps, please refer to the video below, starting from 1 minute 37 seconds.
+
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/t1VlnCpm-A4?start=97"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
 - As described in the video, please copy it to the corresponding field.
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_option1.png)
@@ -132,6 +175,10 @@ The AAPS app will be saved in your Google Cloud drive once built:
 (aaps-ci-option2)=
 ### AAPS-CI Option 2 – Upload Existing JKS
  - Suitable for users who already have a JKS and know the JKS password and alias.
+ - Here are examples using multiple platforms below.
+
+(aaps-ci-option2-android)=
+ - Compatible with Android(The simplest, recommended as the first choice)
 ```{eval-rst}
 .. raw:: html
 
@@ -140,6 +187,45 @@ The AAPS app will be saved in your Google Cloud drive once built:
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
           src="https://www.youtube.com/embed/L5L3XtnszMQ"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
+(aaps-ci-option2-computer)=
+- Use a computer (supports Windows/Mac/Linux)
+
+  Open the webpage https://simplewebserver.org/download.html
+
+  Install Simple HTTP Server If you are a Windows/Mac user, you can install it from the store. After clicking the link, you will be asked whether to allow opening it. Please choose Open Link. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)
+
+  Example on Mac:
+
+  - get → install → open ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)
+
+  - Click Get Started ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
+
+  - Click Get Server ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
+
+  - In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
+
+  - Seeing this screen means the server has been started. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)
+
+  - Do not close Simple HTTP Server. Please switch to your browser and open [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)
+
+  - For the subsequent steps, please refer to the video below, starting from 2 minute 18 seconds.
+
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/L5L3XtnszMQ?start=138"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
@@ -165,6 +251,10 @@ The AAPS app will be saved in your Google Cloud drive once built:
 - Click Start Auth to begin the authorization process, and set the obtained token in GitHub after authorization.
 
 ![aaps_ci_gdrive_auth](../images/Building-the-App/CI/aaps_ci_gdrive_auth.png)
+
+```{warning}
+Customizations are usually not necessary. This is for your information ony.
+```
 
 (github-build-apk)=
 ## AAPS-CI GitHub Actions to Build the AAPS APK
@@ -217,10 +307,6 @@ The AAPS app will be saved in your Google Cloud drive once built:
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.jpg)
 
 --------
-
-```{warning}
-Customizations are usually not necessary. This is for your information ony.
-```
 
 (github-cherry-pick)=
 
