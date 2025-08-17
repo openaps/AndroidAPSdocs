@@ -1,7 +1,5 @@
 # 瀏覽器建置
 
-(browser-build)=
-
 使用 GitHub Actions 建置 AAPS。
 
 **最低支援 AAPS 版本為 3.3.2.1。**
@@ -65,15 +63,19 @@ GitHub 現在顯示你個人的 AndroidAPS 副本。 請保持這個瀏覽器頁
 ## 2. 準備步驟
 
 - 如果你是從 Android 裝置建置，請先從 Google Play 商店安裝[File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager)。
+- Download the preparation file from here:
+<!--crowdin:disable-->
 ```{eval-rst}
-.. <pre style="font-family: inherit; margin: 0;">
-       • 從<a href="../_static/CI/aaps-ci-preparation.html" download>這裡</a>下載準備檔案
-</pre>
+.. raw:: html
 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>aaps-ci-preparation.html</a>
 ```
 <br>
+<br>
+<br>
+<!--crowdin:enable-->
 
-AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS）：
+AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
 
 - 如果這是你第一次建立 AAPS（或你沒有 Android Studio 的 JKS），請參考 [AAPS-CI 選項 1 – 產生 JKS](aaps-ci-option1) 來完成設定。
 - 如果你想使用自己的 JKS（你在先前的 AAPS 建置中使用的那個 JKS），並且你知道它的密碼和別名（key0），請選擇 [AAPS-CI 選項 2 – 上傳現有的 JKS](aaps-ci-option2)。
@@ -82,15 +84,17 @@ AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS
 使用 **選項 1** 建立 AAPS 將無法更新已安裝的 AAPS：你需要卸載它，重新安裝後，從你的手機恢復設定，並從 Nightscout 讀取資料。
 ```
 
-AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
+The AAPS app will be saved in your Google Cloud drive once built:
 
 - 同時執行 Google 雲端硬碟 [授權](aaps-ci-google-drive-auth) 以允許將建置保存到那裡。
 
 (aaps-ci-option1)=
 ### AAPS-CI 選項 1 – 生成 JKS
- - 適合首次使用者、沒有 JKS 的使用者或忘記密碼或別名的使用者。
+ - Suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+- Here are examples using multiple platforms below.
 
- Android 上的作法
+(aaps-ci-option1-android)=
+ - Compatible with Android(The simplest, recommended as the first choice)
 ```{eval-rst}
 .. raw:: html
 
@@ -107,7 +111,8 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
     </div>
 ```
 
- iOS 上相容的作法（以 iPad 為例）
+(aaps-ci-ios-ipad)=
+ - iOS 上相容的作法（以 iPad 為例）
 ```{eval-rst}
 .. raw:: html
 
@@ -124,6 +129,45 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
     </div>
 ```
 
+(aaps-ci-option1-computer)=
+- Use a computer (supports Windows/Mac/Linux)
+
+  Open the webpage https://simplewebserver.org/download.html
+
+  Install Simple HTTP Server If you are a Windows/Mac user, you can install it from the store. After clicking the link, you will be asked whether to allow opening it. Please choose Open Link. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)
+
+  Example on Mac:
+
+  - get → install → open ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)
+
+  - Click Get Started ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
+
+  - Click Get Server ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
+
+  - In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
+
+  - Seeing this screen means the server has been started. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)
+
+  - Do not close Simple HTTP Server. Please switch to your browser and open [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)
+
+  - For the subsequent steps, please refer to the video below, starting from 1 minute 37 seconds.
+
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/t1VlnCpm-A4?start=97"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
 - 如影片所示，請將他複製到對應的欄位中。
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_option1.png)
@@ -131,6 +175,10 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 (aaps-ci-option2)=
 ### AAPS-CI 選項 2 – 上傳現有 JKS
  - 適合已經擁有 JKS 並且知道 JKS 密碼和別名的用戶。
+ - Here are examples using multiple platforms below.
+
+(aaps-ci-option2-android)=
+ - Compatible with Android(The simplest, recommended as the first choice)
 ```{eval-rst}
 .. raw:: html
 
@@ -139,6 +187,45 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
           src="https://www.youtube.com/embed/L5L3XtnszMQ"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
+(aaps-ci-option2-computer)=
+- Use a computer (supports Windows/Mac/Linux)
+
+  Open the webpage https://simplewebserver.org/download.html
+
+  Install Simple HTTP Server If you are a Windows/Mac user, you can install it from the store. After clicking the link, you will be asked whether to allow opening it. Please choose Open Link. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)
+
+  Example on Mac:
+
+  - get → install → open ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)
+
+  - Click Get Started ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
+
+  - Click Get Server ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
+
+  - In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
+
+  - Seeing this screen means the server has been started. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)
+
+  - Do not close Simple HTTP Server. Please switch to your browser and open [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)
+
+  - For the subsequent steps, please refer to the video below, starting from 2 minute 18 seconds.
+
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/L5L3XtnszMQ?start=138"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
@@ -164,6 +251,10 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 - 點選開始授權，啟動 Google 授權頁面，並在授權後將獲得的TOKEN設定在 GitHub 中。
 
 ![aaps_ci_gdrive_auth](../images/Building-the-App/CI/aaps_ci_gdrive_auth.png)
+
+```{warning}
+Google 雲端硬碟授權中的「自訂」欄位，適合熟悉Google Oauth2的人，並且想要使用自已的ClientID時使用。 僅供你參考。
+```
 
 (github-build-apk)=
 ## AAPS-CI GitHub Actions 以建置 AAPS APK
@@ -216,10 +307,6 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.jpg)
 
 --------
-
-```{warning}
-Google 雲端硬碟授權中的「自訂」欄位，適合熟悉Google Oauth2的人，並且想要使用自已的ClientID時使用。 僅供你參考。
-```
 
 (github-cherry-pick)=
 
