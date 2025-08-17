@@ -36,7 +36,7 @@ xDrip+ unterstützt keine direkte Verbindung zum Libre 2 US und AUS.
 Nur Libre 2 und 2+ **EU** Modelle.
 ```
 
-- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [the latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
+- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [the latest OOP2](https://drive.google.com/file/d/1hkbs60Bv2udTlMS81UStCdY4RaHR0V57/view) as the one in the document is obsolete.
 - Folge den Anweisungen zum Einrichten auf der [xDrip+-Einstellungen Seite](../CompatibleCgms/xDrip.md).
 
 -   Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
@@ -51,22 +51,10 @@ Nur Libre 2 und 2+ **EU** Modelle.
 
 ## 4. Juggluco nutzen
 
-- Lade die Juggluco-App [hier](https://www.juggluco.nl/Juggluco/download.html) herunter und installiere sie.
-- Folge [dieser](https://www.juggluco.nl/Juggluco/index.html) Anleitung
-- Aktiviere in den Einstellungen den xDrip+ Broadcast (der Daten an AAPS, aber nicht an xDrip+ sendet).
-
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
-
-- Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
-
-```{admonition} Use with xDrip+
-:class: note
-Du kannst Juggluco so einstellen, dass Werte direkt an xDrip+ übertragen (broadcast) werden. In diesem Fall sollte der xDrip+ Broadcast ausgeschaltet werden. Auf diese Weise kannst Du kalibrieren (siehe hier) und vermeiden, dass minütlich Werte an AAPS gesendet werden.  
-![Juggluco Broadcast an xDrip+](../images/Juggluco_xDrip.png)  
-Um Daten von Juggluco empfangen zu können, muss in xDrip+ die Datenquelle auf 'Libre (patched App)' umgestellt werden.  
-```
+See [here](./Juggluco.md).
 
 (libre2-patched-librelink-app-with-xdrip)=
+
 ## 5. Nutze xDrip+ mit der gepatchten LibreLink-App
 
 ```{admonition} Libre 2 EU only
