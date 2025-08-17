@@ -1,7 +1,5 @@
 # Computer Build
 
-(computer-build)=
-
 This is the traditional method to build your AAPS app.
 
 You can build the app without a computer using the [Browser Build](#browser-build) method.
@@ -12,7 +10,7 @@ You can build the app without a computer using the [Browser Build](#browser-buil
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
-
+---
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 ## Computer and software specifications for building AAPS
