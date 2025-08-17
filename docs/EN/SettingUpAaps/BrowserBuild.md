@@ -167,6 +167,10 @@ The AAPS app will be saved in your Google Cloud drive once built:
 
 ![aaps_ci_gdrive_auth](../images/Building-the-App/CI/aaps_ci_gdrive_auth.png)
 
+```{warning}
+Customizations are usually not necessary. This is for your information ony.
+```
+
 (github-build-apk)=
 ## AAPS-CI GitHub Actions to Build the AAPS APK
  - Suitable for general users.
@@ -218,10 +222,6 @@ The AAPS app will be saved in your Google Cloud drive once built:
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.jpg)
 
 --------
-
-```{warning}
-Customizations are usually not necessary. This is for your information ony.
-```
 
 (github-cherry-pick)=
 
