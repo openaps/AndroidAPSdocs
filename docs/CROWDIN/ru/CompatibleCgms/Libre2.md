@@ -36,7 +36,7 @@ xDrip+ не поддерживает прямое подключение к Libr
 Только модели Libre 2 и 2+ **для рынка ЕС**.
 ```
 
-- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [the latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
+- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [the latest OOP2](https://drive.google.com/file/d/1hkbs60Bv2udTlMS81UStCdY4RaHR0V57/view) as the one in the document is obsolete.
 - Следуйте инструкциям по установке на странице настроек [xDrip+](../CompatibleCgms/xDrip.md).
 
 -   В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
@@ -51,22 +51,10 @@ xDrip+ не поддерживает прямое подключение к Libr
 
 ## 4. Использовать Juggluco
 
-- Скачайте и установите приложение Juggluco [отсюда](https://www.juggluco.nl/Juggluco/download.html).
-- Следуйте инструкциям [здесь](https://www.juggluco.nl/Juggluco/index.html)
-- В Настройках включите трансляцию в xDrip+ (посылает данные не в xDrip+, а в AAPS).
-
-![Трансляция Juggluco в AAPS](../images/Juggluco_AAPS.png)
-
-- В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
-
-```{admonition} Use with xDrip+
-:class: заметка
-Вы можете установить Juggluco на трансляцию в xDrip+ при помощи трансляции Patched Libre (необходимо отключить трансляцию xDrip+), для калибровки (см. здесь) и чтобы избежать ежеминутной отправки показаний на AAPS.  
-![Трансляция Juggluco на xDrip+](../images/Juggluco_xDrip.png)  
-Потребуется в качестве аппаратного источник данных в xDrip+указать Libre 2 patched чтобы получать данные с Juggluco.  
-```
+See [here](./Juggluco.md).
 
 (libre2-patched-librelink-app-with-xdrip)=
+
 ## 5. Использовать модифицированное приложение LibreLink с xDrip+
 
 ```{admonition} Libre 2 EU only
