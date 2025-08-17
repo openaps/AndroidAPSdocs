@@ -51,22 +51,10 @@ Only Libre 2 and 2+ **EU** models.
 
 ## 4. Use Juggluco
 
-- Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html).
-- Follow the instructions [here]( https://www.juggluco.nl/Juggluco/index.html)
-- In Settings, enable xDrip+ broadcast (which doesn't send data to xDrip+ but to AAPS).
-
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
-
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
-
-```{admonition} Use with xDrip+
-:class: note
-You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
-![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
-You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
-```
+See [here](./Juggluco.md).
 
 (libre2-patched-librelink-app-with-xdrip)=
+
 ## 5. Use the patched LibreLink app with xDrip+
 
 ```{admonition} Libre 2 EU only
