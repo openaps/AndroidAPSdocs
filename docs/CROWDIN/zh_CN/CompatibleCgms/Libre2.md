@@ -36,7 +36,7 @@ xDrip+ 不支持直接连接到 Libre 2 US 和 AUS。
 仅限 Libre 2 和 2+ **EU** 型号。
 ```
 
-- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [the latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
+- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [the latest OOP2](https://drive.google.com/file/d/1hkbs60Bv2udTlMS81UStCdY4RaHR0V57/view) as the one in the document is obsolete.
 - 请按照[xDrip+设置页面](../CompatibleCgms/xDrip.md)上的安装说明进行操作。
 
 -   在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。
@@ -51,22 +51,10 @@ xDrip+ 不支持直接连接到 Libre 2 US 和 AUS。
 
 ## 4. 使用 Juggluco
 
-- 从[此处](https://www.juggluco.nl/Juggluco/download.html)下载并安装 Juggluco 应用程序。
-- 按照[此处](https://www.juggluco.nl/Juggluco/index.html)的说明进行操作
-- 在“设置”中，启用 xDrip+ 广播（不会将数据发送到 xDrip+，而是发送到 AAPS）。
-
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
-
-- 在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。
-
-```{admonition} Use with xDrip+
-:class: note
-您可将Juggluco设置为通过"Patched Libre Broadcast"向xDrip+传输数据（此时应禁用xDrip+的广播功能），以便进行校准（参见此处说明）并避免将1分钟间隔的读数发送至AAPS。  
-![Juggluco广播至xDrip+](../images/Juggluco_xDrip.png)  
-随后需将xDrip+数据源设为"Libre 2 Patched App"以接收来自Juggluco的数据。  
-```
+See [here](./Juggluco.md).
 
 (libre2-patched-librelink-app-with-xdrip)=
+
 ## 5. 请使用经过修改的LibreLink应用配合xDrip+。
 
 ```{admonition} Libre 2 EU only
