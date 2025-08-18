@@ -1,8 +1,8 @@
-# Computer Build
+# 電腦建立
 
-This is the traditional method to build your AAPS app.
+這是傳統的方法來建立您的 AAPS 應用程式。
 
-You can build the app without a computer using the [Browser Build](#browser-build) method.
+您可以使用 [瀏覽器建立](./BrowserBuild.md) 方法在沒有電腦的情況下建立應用程式。
 
 ## 自行建置，而不是下載
 

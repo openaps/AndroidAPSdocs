@@ -33,7 +33,7 @@ orphan: true
 | G5/G6/ONE     | 若存在噪点 |      | 推荐 |
 | G7/ONE+/Stelo | 若存在噪点 | 如果稳定 |    |
 
-Libre传感器数据存在噪点，可能需要进行平滑处理。 When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), smoothing is already done inside the app.
+Libre传感器数据存在噪点，可能需要进行平滑处理。 When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
 
 | 传感器/数据源          | Juggluco | xDrip+ 直接连接 | xDrip+ 桥接 | xDrip+ 修补的应用程序 |
 | ---------------- |:--------:|:-----------:|:---------:|:--------------:|

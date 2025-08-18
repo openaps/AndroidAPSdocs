@@ -1,10 +1,10 @@
 # 文件更新與變更
 
-## August 2025
+## 2025年8月
 
-- Updated versions and Android Studio prerequisites
-- Added [3.3.2.1](#version3321) release, removed Android 16 references (fixed)
-- Added [Browser Build](browser-build) @Angus
+- 已更新版本和 Android Studio 的前置需求
+- 新增 [3.3.2.1](#version3321) 版本，移除 Android 16 參考 (已修正)
+- 新增 [瀏覽器版](browser-build) @Angus
 
 ## 2025年5月
 

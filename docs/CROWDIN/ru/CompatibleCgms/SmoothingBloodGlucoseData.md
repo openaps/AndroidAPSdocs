@@ -33,7 +33,7 @@ In general, this is the recommended option to start with, as it is most aggressi
 | G5/G6/ONE     | При зашумлении данных |           | Рекомендуемое |
 | G7/ONE+/Stelo | При зашумлении данных | If stable |               |
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), smoothing is already done inside the app.
+Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
 
 | Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
 | -------------------- |:--------:|:-------------:|:-------------:|:------------------:|

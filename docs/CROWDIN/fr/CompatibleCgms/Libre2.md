@@ -36,7 +36,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 Only Libre 2 and 2+ **EU** models.
 ```
 
-- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [the latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
+- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [the latest OOP2](https://drive.google.com/file/d/1hkbs60Bv2udTlMS81UStCdY4RaHR0V57/view) as the one in the document is obsolete.
 - Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 
 -   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
@@ -51,22 +51,10 @@ Only Libre 2 and 2+ **EU** models.
 
 ## 4. Use Juggluco
 
-- Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html).
-- Follow the instructions [here](https://www.juggluco.nl/Juggluco/index.html)
-- In Settings, enable xDrip+ broadcast (which doesn't send data to xDrip+ but to AAPS).
-
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
-
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
-
-```{admonition} Use with xDrip+
-:class: note
-You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
-![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
-You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
-```
+See [here](./Juggluco.md).
 
 (libre2-patched-librelink-app-with-xdrip)=
+
 ## 5. Use the patched LibreLink app with xDrip+
 
 ```{admonition} Libre 2 EU only
