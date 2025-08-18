@@ -2,7 +2,7 @@
 
 This is the traditional method to build your AAPS app.
 
-You can build the app without a computer using the [Browser Build](#browser-build) method.
+You can build the app without a computer using the [Browser Build](./BrowserBuild.md) method.
 
 ## Construire vous-même au lieu de télécharger
 
