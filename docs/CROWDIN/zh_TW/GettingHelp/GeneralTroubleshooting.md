@@ -37,9 +37,9 @@
 
 * [SMS 指令](#SMSCommands-troubleshooting)
 
-### Cannot start Omnipod with Android 16
+### 無法在 Android 16 上啟動 Omnipod
 
-Upgrade to minimum version of AndroidAPS: 3.3.2.1.
+升級到最低版本的 AndroidAPS：3.3.2.1。
 
 ### 藍牙連線問題頻繁
 
