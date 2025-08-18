@@ -63,7 +63,7 @@ GitHub 現在顯示你個人的 AndroidAPS 副本。 請保持這個瀏覽器頁
 ## 2. 準備步驟
 
 - 如果你是從 Android 裝置建置，請先從 Google Play 商店安裝[File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager)。
-- Download the preparation file from here:
+- 從這裡下載準備檔案：
 <!--crowdin:disable-->
 ```{eval-rst}
 .. raw:: html
@@ -75,7 +75,7 @@ GitHub 現在顯示你個人的 AndroidAPS 副本。 請保持這個瀏覽器頁
 <br>
 <!--crowdin:enable-->
 
-AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
+AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS）：
 
 - 如果這是你第一次建立 AAPS（或你沒有 Android Studio 的 JKS），請參考 [AAPS-CI 選項 1 – 產生 JKS](aaps-ci-option1) 來完成設定。
 - 如果你想使用自己的 JKS（你在先前的 AAPS 建置中使用的那個 JKS），並且你知道它的密碼和別名（key0），請選擇 [AAPS-CI 選項 2 – 上傳現有的 JKS](aaps-ci-option2)。
@@ -84,17 +84,17 @@ AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS)
 使用 **選項 1** 建立 AAPS 將無法更新已安裝的 AAPS：你需要卸載它，重新安裝後，從你的手機恢復設定，並從 Nightscout 讀取資料。
 ```
 
-The AAPS app will be saved in your Google Cloud drive once built:
+AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 
 - 同時執行 Google 雲端硬碟 [授權](aaps-ci-google-drive-auth) 以允許將建置保存到那裡。
 
 (aaps-ci-option1)=
 ### AAPS-CI 選項 1 – 生成 JKS
- - Suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
-- Here are examples using multiple platforms below.
+ - 適合首次使用者、沒有 JKS 的使用者或忘記密碼或別名的使用者。
+- 以下是使用多個平台的範例。
 
 (aaps-ci-option1-android)=
- - Compatible with Android(The simplest, recommended as the first choice)
+ - 與 Android 相容（最簡單，建議作為首選）
 ```{eval-rst}
 .. raw:: html
 
@@ -130,27 +130,27 @@ The AAPS app will be saved in your Google Cloud drive once built:
 ```
 
 (aaps-ci-option1-computer)=
-- Use a computer (supports Windows/Mac/Linux)
+- 使用電腦（支援 Windows/Mac/Linux）
 
-  Open the webpage https://simplewebserver.org/download.html
+  打開網頁 https://simplewebserver.org/download.html
 
-  Install Simple HTTP Server If you are a Windows/Mac user, you can install it from the store. After clicking the link, you will be asked whether to allow opening it. Please choose Open Link. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)
+  安裝 Simple HTTP Server 如果您是 Windows/Mac 使用者，可以從應用商店安裝。 點擊連結後，系統會詢問您是否允許打開它。 請選擇打開連結。 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)
 
-  Example on Mac:
+  在 Mac 上的範例：
 
-  - get → install → open ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)
+  - 取得 → 安裝 → 開啟 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)
 
-  - Click Get Started ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
+  - 點擊開始 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
 
-  - Click Get Server ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
+  - 點擊獲取伺服器 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
 
-  - In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
+  - 在資料夾路徑中，選擇包含 aaps-ci-preparation.html 的資料夾，然後點擊建立伺服器。 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
 
-  - Seeing this screen means the server has been started. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)
+  - 看到這個畫面表示伺服器已啟動。 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)
 
-  - Do not close Simple HTTP Server. Please switch to your browser and open [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)
+  - 請勿關閉 Simple HTTP Server。 請切換到您的瀏覽器並打開 [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)
 
-  - For the subsequent steps, please refer to the video below, starting from 1 minute 37 seconds.
+  - 後續步驟請參考下方影片，從 1 分 37 秒開始。
 
 ```{eval-rst}
 .. raw:: html
@@ -175,10 +175,10 @@ The AAPS app will be saved in your Google Cloud drive once built:
 (aaps-ci-option2)=
 ### AAPS-CI 選項 2 – 上傳現有 JKS
  - 適合已經擁有 JKS 並且知道 JKS 密碼和別名的用戶。
- - Here are examples using multiple platforms below.
+ - 以下是使用多個平台的範例。
 
 (aaps-ci-option2-android)=
- - Compatible with Android(The simplest, recommended as the first choice)
+ - 與 Android 相容（最簡單，建議作為首選）
 ```{eval-rst}
 .. raw:: html
 
@@ -196,27 +196,27 @@ The AAPS app will be saved in your Google Cloud drive once built:
 ```
 
 (aaps-ci-option2-computer)=
-- Use a computer (supports Windows/Mac/Linux)
+- 使用電腦（支援 Windows/Mac/Linux）
 
-  Open the webpage https://simplewebserver.org/download.html
+  打開網頁 https://simplewebserver.org/download.html
 
-  Install Simple HTTP Server If you are a Windows/Mac user, you can install it from the store. After clicking the link, you will be asked whether to allow opening it. Please choose Open Link. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)
+  安裝 Simple HTTP Server 如果您是 Windows/Mac 使用者，可以從應用商店安裝。 點擊連結後，系統會詢問您是否允許打開它。 請選擇打開連結。 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)
 
-  Example on Mac:
+  在 Mac 上的範例：
 
-  - get → install → open ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)
+  - 取得 → 安裝 → 開啟 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)
 
-  - Click Get Started ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
+  - 點擊開始 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
 
-  - Click Get Server ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
+  - 點擊獲取伺服器 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
 
-  - In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
+  - 在資料夾路徑中，選擇包含 aaps-ci-preparation.html 的資料夾，然後點擊建立伺服器。 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
 
-  - Seeing this screen means the server has been started. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)
+  - 看到這個畫面表示伺服器已啟動。 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)
 
-  - Do not close Simple HTTP Server. Please switch to your browser and open [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)
+  - 請勿關閉 Simple HTTP Server。 請切換到您的瀏覽器並打開 [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)
 
-  - For the subsequent steps, please refer to the video below, starting from 2 minute 18 seconds.
+  - 後續步驟請參考下方影片，從 2 分 18 秒開始。
 
 ```{eval-rst}
 .. raw:: html
