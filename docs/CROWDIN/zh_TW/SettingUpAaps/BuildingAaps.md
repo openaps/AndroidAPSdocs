@@ -8,19 +8,19 @@
 
 ---
 
-Two methods are available to build the AAPS app:
+提供兩種方法來建立 AAPS 應用程式：
 
-### Build with a browser
+### 使用瀏覽器建立
 
-You can build the app with your smartphone using GitHub actions, and save it in your Google Drive.
+您可以使用 GitHub actions 在智慧型手機上建立應用程式，並將其儲存在 Google 雲端硬碟中。
 
-**[Follow these instructions.](./BrowserBuild.md)**
+**[請按照這些指示進行操作。](./BrowserBuild.md)**
 
 ----
 
-### Build with a computer
+### 使用電腦建立
 
-You can build the app with your computer using Android Studio.
+您可以使用 Android Studio 在電腦上建立應用程式。
 
-**[Follow these instructions.](./ComputerBuild.md)**
+**[請按照這些指示進行操作。](./ComputerBuild.md)**
 
