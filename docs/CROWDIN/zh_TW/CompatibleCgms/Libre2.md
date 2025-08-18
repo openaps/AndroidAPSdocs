@@ -36,7 +36,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 僅支持 Libre 2 和 2+ **EU** 型號。
 ```
 
-- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [the latest OOP2](https://drive.google.com/file/d/1hkbs60Bv2udTlMS81UStCdY4RaHR0V57/view) as the one in the document is obsolete.
+- 請依照[這些指示](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip)來設置 xDrip+，但請確保下載[最新的 OOP2](https://drive.google.com/file/d/1hkbs60Bv2udTlMS81UStCdY4RaHR0V57/view)，因為文件中的版本已經過時。
 - 按照[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)上的設置說明進行操作。
 
 -   在[組態建置工具的血糖來源](#Config-Builder-bg-source)中選擇 xDrip+。
@@ -51,7 +51,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 
 ## 4. 使用 Juggluco
 
-See [here](./Juggluco.md).
+請參閱 [這裡](./Juggluco.md).
 
 (libre2-patched-librelink-app-with-xdrip)=
 
