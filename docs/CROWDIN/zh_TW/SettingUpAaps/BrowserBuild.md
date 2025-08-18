@@ -94,7 +94,7 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 - 以下是使用多個平台的範例。
 
 (aaps-ci-option1-android)=
- - 與 Android 相容（最簡單，建議作為首選）
+ - 與 Android 相容（最簡單，建議使用這個方法）
 ```{eval-rst}
 .. raw:: html
 
@@ -140,11 +140,11 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 
   - 取得 → 安裝 → 開啟 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)
 
-  - 點擊開始 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
+  - 按一下 「新服務」鈕 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
 
-  - 點擊獲取伺服器 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
+  - 按一下「創建服務」鈕 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
 
-  - 在資料夾路徑中，選擇包含 aaps-ci-preparation.html 的資料夾，然後點擊建立伺服器。 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
+  - 在文件夾路徑中，選擇包含 aaps-ci-preparation.html 的資料夾，然後按一下「創建服務」鈕。 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
 
   - 看到這個畫面表示伺服器已啟動。 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)
 
@@ -178,7 +178,7 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
  - 以下是使用多個平台的範例。
 
 (aaps-ci-option2-android)=
- - 與 Android 相容（最簡單，建議作為首選）
+ - 與 Android 相容（最簡單，建議使用這個方法）
 ```{eval-rst}
 .. raw:: html
 
@@ -206,11 +206,11 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 
   - 取得 → 安裝 → 開啟 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)
 
-  - 點擊開始 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
+  - 按一下 「新服務」鈕 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
 
-  - 點擊獲取伺服器 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
+  - 按一下「創建服務」鈕 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
 
-  - 在資料夾路徑中，選擇包含 aaps-ci-preparation.html 的資料夾，然後點擊建立伺服器。 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
+  - 在文件夾路徑中，選擇包含 aaps-ci-preparation.html 的資料夾，然後按一下「創建服務」鈕。 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
 
   - 看到這個畫面表示伺服器已啟動。 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)
 
