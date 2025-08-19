@@ -2,10 +2,10 @@
 
 ![image](./images/basic-outline-of-AAPS.png)
 
-```{admonition} Version 3.3
+```{admonition} Latest Release
 :class: note
 
-29/12/2024 : 3.3版本发布. 查看[发行说明](#version3300)以了解新功能并获取更新说明。
+14/08/2025 : Version 3.3.2.1 is out. Check the [Release Notes](#latestrelease) to see what's new and get update instructions.
 
 ```
 
@@ -21,7 +21,7 @@ Android APS (**AAPS**) 是一个开放源码的安卓应用程序，适用于糖
 
 现在，您已充分了解整个流程，可以开始组建您的**AAPS**闭环系统了。
 
-第3节**设置AAPS** 包含具体的分步操作说明。 包括选择和[配置远程数据服务器](./SettingUpAaps/SettingUpTheReportingServer.md)（Nightscout或Tidepool），以便您可以查看和分享数据，准备好电脑以构建AAPS应用程序，构建（build）AAPS应用程序并将其传输到手机上。 同时指导您通过“设置向导”来完成 **AAPS** 应用的初始化配置，将其与动态血糖仪（CGM）应用及真实/虚拟胰岛素泵进行联动，并将 **AAPS** 连接到您的远程数据服务器。 接下来，您将通过一个安全审慎的分阶段训练流程，一步一步地掌握**AAPS**的全部功能，该流程旨在确保您/您的孩子能完全熟悉并熟练操作所有不同层级的功能和菜单设置，然后才进入下一阶段（AAPS界面上称之为"目标（Objectives）"）。 这些目标（Objectives）都经过专门的设计，将循序渐进地解锁**AAPS**更多可能性，最终实现从开环模式向闭环模式的过渡。
+第3节**设置AAPS** 包含具体的分步操作说明。 It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. 同时指导您通过“设置向导”来完成 **AAPS** 应用的初始化配置，将其与动态血糖仪（CGM）应用及真实/虚拟胰岛素泵进行联动，并将 **AAPS** 连接到您的远程数据服务器。 接下来，您将通过一个安全审慎的分阶段训练流程，一步一步地掌握**AAPS**的全部功能，该流程旨在确保您/您的孩子能完全熟悉并熟练操作所有不同层级的功能和菜单设置，然后才进入下一阶段（AAPS界面上称之为"目标（Objectives）"）。 这些目标（Objectives）都经过专门的设计，将循序渐进地解锁**AAPS**更多可能性，最终实现从开环模式向闭环模式的过渡。
 
 第4节**AAPS的日常** 涵盖 **AAPS** 的关键功能，帮助您使用（和自定义）**AAPS**。 内容包括理解操作界面、活性碳水（COB，carbs-on-board）、敏感度、配置文件（profile）切换、临时目标（TT，temp targets）、扩展碳水（extended carbs，eCarbs）、自动化规则（automations）和动态ISF（DynamicISF）。 同时涉及常见主题，例如如何管理不同类型的餐食、处理管路（cannula）与探头（sensor）更换、智能手机更新、夏令时调整、[使用AAPS旅行](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md)及运动场景。 常见问答详见故障排查章节。
 
