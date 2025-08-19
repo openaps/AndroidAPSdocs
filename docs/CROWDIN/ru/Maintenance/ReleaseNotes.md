@@ -55,6 +55,8 @@ If your smartphone uses an Android Version older than Android 11 you will not be
 WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
 ```
 
+(latestrelease)=
+
 (version3321)=
 
 ## Version 3.3.2.1
