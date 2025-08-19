@@ -1,3 +1,5 @@
+(browser-build)=
+
 # Browser build
 
 Building AAPS with GitHub Actions.
