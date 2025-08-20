@@ -19,6 +19,8 @@ Disable any active uploader to Nightscout in Juggluco.
 
 ![Disable Nightscout Upload](../images/juggluco/DisableNightscoutUpload.png)
 
+(juggluco-to-aaps)=
+
 ## Juggluco to AAPS
 
 Juggluco can send blood glucose directly to AAPS, enabling SMBs always if you are using a [trusted sensor](#GettingStarted-TrustedBGSource).
@@ -30,6 +32,8 @@ Enable xDrip broadcast in Juggluco (do not enable Patched Libre), confirm and sa
 Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS.
 
 ![Juggluco to AAPS](../images/juggluco/Juggluco-AAPS.png)
+
+(juggluco-to-xdrip)=
 
 ## Juggluco to xDrip+
 
