@@ -19,6 +19,8 @@ orphan: true
 
 ![停用 Nightscout 上傳](../images/juggluco/DisableNightscoutUpload.png)
 
+(juggluco-to-aaps)=
+
 ## Juggluco 到 AAPS
 
 Juggluco 可以將血糖直接傳送到 AAPS，當您使用 [可信任的感測器](#GettingStarted-TrustedBGSource) 時，讓 SMB 始終啟用。
@@ -30,6 +32,8 @@ Juggluco 可以將血糖直接傳送到 AAPS，當您使用 [可信任的感測�
 在 AAPS 中應用足夠的 [平滑處理](./SmoothingBloodGlucoseData.md)。
 
 ![Juggluco 到 AAPS](../images/juggluco/Juggluco-AAPS.png)
+
+(juggluco-to-xdrip)=
 
 ## Juggluco 到 xDrip+
 
