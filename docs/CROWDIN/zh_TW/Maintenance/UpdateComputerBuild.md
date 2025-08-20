@@ -1,38 +1,38 @@
-# Update with a computer
+# 透過電腦進行更新
 
 ## 自行建置，而不是下載
 
-**AAPS** is not available to download, due to regulations concerning medical devices. 自行建置應用程式以供個人使用是合法的，但你不得將副本提供給他人！ 詳細資訊請參閱 [FAQ 頁面](../UsefulLinks/FAQ.md)。
+**AAPS** 無法下載，因為這涉及醫療設備的法規。 自行建置應用程式以供個人使用是合法的，但你不得將副本提供給他人！ 詳細資訊請參閱 [FAQ 頁面](../UsefulLinks/FAQ.md)。
 
 ```{note}
 如果你想在新電腦上建立 **AAPS**：請將你的備份金鑰存檔複製到新電腦上。 然後按照 [初始建置 **AAPS** 程序](../SettingUpAaps/BuildingAaps.md) 的步驟，而不是這個指導。 唯一的不同之處在於，你可以選擇你在新電腦上複製的金鑰存檔，而不必建立新的金鑰存檔。
 ```
 
-## Overview for updating to a new version of AAPS with a computer
+## 使用電腦更新 AAPS 的總覽
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+如果您遇到問題，請參見單獨的[問題排除Android Studio](../GettingHelp/TroubleshootingAndroidStudio)頁面。
 
-### Export your settings
+### 匯出你的設定
 
 從您手機上現有的 **AAPS** 版本匯出您的設定。 你可能不需要這樣做，但防患於未然更好。
 
 如果您忘記如何做，請參見[匯出與匯入設定](ExportImportSettings.md)頁面。
 
-### Check your Android Studio version
+### 檢查你的 Android Studio 版本
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+所需的最低版本已在 [建置指南](#Building-APK-recommended-specification-of-computer-for-building-apk-file)中描述。 如果你的版本過舊，請 [先更新 Android Studio](#Building-APK-install-android-studio)！
 
 (Update-to-new-version-update-your-local-copy)=
-### Update your local copy
+### 更新本地副本
 
 ```{admonition} WARNING
 :class: warning
-If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../SettingUpAaps/BuildingAaps.md), as this guide will not work for you!
+如果你從 2.8.x 之前的版本更新，請遵循指示進行 [新複製](../SettingUpAaps/BuildingAaps.md)，因為這個指南對你無效！
 ```
 
 * 使用 Android Studio 開啟你現有的 AAPS 項目。 你可能需要選擇你的項目。 (雙擊) 點擊 AAPS 項目。
@@ -69,9 +69,9 @@ If you update from versions prior to 2.8.x, please follow the instructions to do
 
 ### 檢查 JVM 版本
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+此檢查特別適合如果你已經在同一台電腦上建置過之前版本的 **AAPS**。
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. 然後按照在 [不相容的 Gradle JVM](#incompatible-gradle-jvm) 中描述的步驟，以確保你當前使用的是正確的版本。
+在 [建置指示](#Building-APK-recommended-specification-of-computer-for-building-apk-file)中查詢 JVM 的所需版本，該版本應與你目前建置的 **AAPS** 版本相匹配。 然後按照在 [不相容的 Gradle JVM](#incompatible-gradle-jvm) 中描述的步驟，以確保你當前使用的是正確的版本。
 
 Update-to-new-version-build-the-signed-apk)=
 ### 建置簽章 APK
@@ -90,7 +90,7 @@ Update-to-new-version-build-the-signed-apk)=
 
 請參閱有關[傳送和安裝 AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)的說明。
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+繼續 [這裡](#Update-to-new-version-check-aaps-version-on-phone)。
 
 ## 問題排除
 
@@ -100,4 +100,4 @@ Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
 
 然後查看專門頁面[問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio)，看看你的問題是否已經紀錄在案！
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+如果你需要進一步幫助，請聯繫其他**AAPS**使用者，透過[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)。
