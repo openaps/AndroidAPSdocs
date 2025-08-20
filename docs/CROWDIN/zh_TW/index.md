@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-14/08/2025 : Version 3.3.2.1 is out. Check the [Release Notes](#latestrelease) to see what's new and get update instructions.
+2025/08/14 : 版本 3.3.2.1 已發布。 檢查[發行說明](#latestrelease)以查看新功能並獲取更新說明。
 
 ```
 
@@ -21,7 +21,7 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 
 現在你已經對過程有了深入的了解，可以開始建置你的**AAPS** 循環系統了。
 
-本章節 **三) 設置 AAPS** 包含逐步指導來進行此操作。 It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. 他還涵蓋了使用設置嚮導來設定 **AAPS** 應用程式，與你的 CGM 應用程式連結，並與實體或虛擬胰島素幫浦連結，以及將 **AAPS** 連結到你的報告伺服器。 你將透過一個安全且經過精心設計的逐步流程，慢慢了解**AAPS**所提供的全部功能。此流程主要在確保你或你的孩子能夠充分熟悉，並能操作所有不同的層級和選單配置，然後再進入下一階段，通常稱為下一個「目標」，直到你累積足夠的經驗，再開始使用應用程式內更進階的選項。 這些目標被特別設計為逐步解鎖更多 **AAPS** 的可能性，並從開環轉為閉環。
+本章節 **三) 設置 AAPS** 包含逐步指導來進行此操作。 它涵蓋了選擇和 [設置報告伺服器](./SettingUpAaps/SettingUpTheReportingServer.md)（Nightscout 或 Tidepool），使你能夠檢視和分享你的資料，準備建立 AAPS 應用程式，建置 AAPS 應用程式並將其傳送到你的手機。 他還涵蓋了使用設置嚮導來設定 **AAPS** 應用程式，與你的 CGM 應用程式連結，並與實體或虛擬胰島素幫浦連結，以及將 **AAPS** 連結到你的報告伺服器。 你將透過一個安全且經過精心設計的逐步流程，慢慢了解**AAPS**所提供的全部功能。此流程主要在確保你或你的孩子能夠充分熟悉，並能操作所有不同的層級和選單配置，然後再進入下一階段，通常稱為下一個「目標」，直到你累積足夠的經驗，再開始使用應用程式內更進階的選項。 這些目標被特別設計為逐步解鎖更多 **AAPS** 的可能性，並從開環轉為閉環。
 
 第**4)**節使用**AAPS**的日常生活涵蓋關鍵的**AAPS**功能，以協助你使用（並自訂）**AAPS**。 包括暸解各個畫面、碳水化合物計算、敏感度、設定檔切換、臨時目標、延展碳水化合物（或 eCarbs）、自動化和 動態ISF。 此外，還涵蓋了如何處理不同類型的餐食、更換套管和傳感器、手機更新、夏令時間更改、[與 AAPS 一起旅行](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) 和運動等常見問題與解答。 常見問題和答案位於問題排除部分。
 
