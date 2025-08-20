@@ -17,7 +17,7 @@ Freestyle Libre 3 (FSL3) 需要特殊设置才能将血糖值传输至AAPS系统
 ## Method 1: use 1-minute readings directly
 AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
 
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+See [here](#juggluco-to-aaps).
 
 
 ## Method 2: convert 1-minute readings into 5-minute values via xDrip
@@ -27,8 +27,6 @@ AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute valu
 从[此处](https://www.juggluco.nl/Juggluco/download.html)下载并安装 Juggluco 应用程序。 按照[此处](https://www.juggluco.nl/Juggluco/libre3/)的说明进行操作
 
 请确保将血糖值发送至xDrip+：在Juggluco的设置中，您可将其配置为向其他应用程序发送血糖值。 Juggluco可发送三种广播类型：**修改版Libre广播**最初由修改版Librelink应用使用，可用于向xDrip+发送血糖值。
-
-![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)
 
 ### 步骤 2：设置 xDrip
 
@@ -58,10 +56,10 @@ AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute valu
 
 ### 步骤 4：配置 AndroidAPS
 
-- 在[ConfigBuilder, BG Source](#Config-Builder-bg-source)中选择xDrip+。
+- See [here](#juggluco-to-xdrip) and come back.
 
 - 当手机处于飞行模式时若AndroidAPS未接收到血糖值，请使用"识别接收器"功能。
-- 关闭平滑处理（已在xDrip+中完成）
+- Turn off Smoothing (done in xDrip+ already)
 
 ## 后续传感器更换
 
