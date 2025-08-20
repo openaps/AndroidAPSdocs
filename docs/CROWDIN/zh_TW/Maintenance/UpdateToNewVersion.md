@@ -9,15 +9,15 @@
 * 請在有新版本發布後儘快更新到最新版本的 **AAPS**。
 * 當有新版本發布時，你將在 **AAPS** 應用中收到關於新版本的訊息橫幅。
 * 新版本也會在發布時於 Facebook 上公佈。
-* Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+* 發布後，請詳細閱讀[發布說明](ReleaseNotes.md)，如有任何疑問，請在Facebook或Discord社群中澄清後再進行更新。
 
-## Update AAPS with browser build
+## 使用瀏覽器版本更新 AAPS
 
-If you already built your AAPS app with the Browser Build method, follow [these instructions](./UpdateBrowserBuild.md).
+如果你已使用瀏覽器版本方法建置了 AAPS 應用程式，請遵循 [這些指示](./UpdateBrowserBuild.md)。
 
-## Update AAPS with a computer
+## 使用電腦更新 AAPS
 
-Follow [these instructions.](./UpdateComputerBuild.md).
+請遵循 [這些指示。](./UpdateComputerBuild.md)
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
