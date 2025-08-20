@@ -17,7 +17,7 @@ Within xDrip+ the sensor can be calibrated in the range of -40 mg/dl to +20 mg/d
 ## Method 1: use 1-minute readings directly
 AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
 
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+See [here](#juggluco-to-aaps).
 
 
 ## Method 2: convert 1-minute readings into 5-minute values via xDrip
@@ -27,8 +27,6 @@ This method uses Juggluco to receive raw, 1-minute interval data from the sensor
 Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html). Follow the instructions [here](https://www.juggluco.nl/Juggluco/libre3/)
 
 Make sure you send the glucose values to xDrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip+
-
-![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)
 
 ### Step 2: Setup xDrip
 
@@ -58,10 +56,10 @@ After a sensor change xDrip+ will automatically detect the new sensor and will d
 
 ### Step 4: Configure AndroidAPS (for looping only)
 
-- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- See [here](#juggluco-to-xdrip) and come back.
 
 - In xDrip+ select "Libre2 (patched App)" as data source
-- Turn of Smoothing (done in xDrip+ already)
+- Turn off Smoothing (done in xDrip+ already)
 
 ## Subsequent sensor changes
 
