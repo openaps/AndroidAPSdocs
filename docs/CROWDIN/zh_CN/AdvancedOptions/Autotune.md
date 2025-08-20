@@ -43,7 +43,7 @@ Autotune插件是OpenAPS自动调节算法在AAPS中的具体实现。
 
 - 点击"对比配置文件"按钮将打开配置文件对比视图。 输入配置文件以蓝色标识，优化输出配置文件（标为"Tuned"）则以红色显示。
 
-  - 注意：下例所示输入配置文件中的胰岛素碳水化合物比值（IC）与胰岛素敏感系数（ISF）均呈现昼夜节律变化，但经计算输出的优化配置文件将生成单一参数值。 若需获取昼夜节律性输出配置文件，请参阅下方[昼夜节律IC/ISF配置文件](#circadian-ic-or-isf-profile)说明。
+  - 注意：下例所示输入配置文件中的胰岛素碳水化合物比值（IC）与胰岛素敏感系数（ISF）均呈现昼夜节律变化，但经计算输出的优化配置文件将生成单一参数值。 If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
 
   ![Autotune Compare profiles ](../images/Autotune/Autotune_5.png)
 
@@ -86,13 +86,13 @@ Autotune插件是OpenAPS自动调节算法在AAPS中的具体实现。
 
 ![Autotune default screen ](../images/Autotune/Autotune_11.png)
 
-- 自动化切换配置文件功能（默认关闭）：详见下方[通过自动化规则运行Autotune](#run-autotune-with-an-automation-rule)说明。 若将此设置切换为"开启"状态，系统将自动使用优化配置文件（Tuned profile）更新输入配置文件，并自动激活更新后的配置。
+- Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. 若将此设置切换为"开启"状态，系统将自动使用优化配置文件（Tuned profile）更新输入配置文件，并自动激活更新后的配置。
   - **警告：在随后数日内，您必须对未经修改即更新激活的优化配置文件（Tuned profile）进行持续验证，确保其确实能提升闭环系统运行效果。**
 
 - 将未标记餐食（UAM）归类为基础率（默认开启）：本设置适用于使用AndroidAPS时未输入任何碳水化合物数据（完全UAM模式）的用户。 当设置为"关闭"时，系统将禁止将未标记餐食（UAM）归类为基础率。
   - 注意：若系统在一天内检测到至少1小时的碳水化合物吸收活动，则无论当前设置为"开启"或"关闭"，所有标记为"未标记餐食（UAM）"的数据都将被归类为基础率。
 - 数据采集天数（默认5天）：您可通过此设置定义默认值范围。 每当在Autotune插件中选择新配置文件时，"优化天数"参数将自动重置为此默认值。
-- 昼夜节律IC/ISF均值应用功能（默认关闭）：详见下方[昼夜节律IC/ISF配置文件](#circadian-ic-or-isf-profile)说明。
+- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
 
 ### 其他设置
 
