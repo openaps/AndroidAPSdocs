@@ -94,12 +94,13 @@ The AAPS app will be saved in your Google Cloud drive once built:
 ### AAPS-CI Option 1 – Generate JKS
  - Suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
 - Here are examples using multiple platforms below.
+- Select your platform in the list below, between Android (preferred choice), iOS or Computer)
 
+```{tab-set}
+
+:::{tab-item} Android
 (aaps-ci-option1-android)=
- - Compatible with Android(The simplest, recommended as the first choice)
-```{eval-rst}
-.. raw:: html
-
+ - Compatible with Android (The simplest, recommended as the first choice)
     <!--crowdin: exclude-->
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
@@ -111,13 +112,11 @@ The AAPS app will be saved in your Google Cloud drive once built:
         </iframe>
       </div>
     </div>
-```
+:::  
 
+:::{tab-item} iOS
 (aaps-ci-ios-ipad)=
  - Compatible with iOS (using iPad as an example)
-```{eval-rst}
-.. raw:: html
-
     <!--crowdin: exclude-->
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
@@ -129,33 +128,41 @@ The AAPS app will be saved in your Google Cloud drive once built:
         </iframe>
       </div>
     </div>
-```
+:::  
 
+:::{tab-item} Computer
 (aaps-ci-option1-computer)=
 - Use a computer (supports Windows/Mac/Linux)
 
-  Open the webpage https://simplewebserver.org/download.html
+  Open the webpage
+  [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
-  Install Simple HTTP Server If you are a Windows/Mac user, you can install it from the store. After clicking the link, you will be asked whether to allow opening it. Please choose Open Link. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)
+  Install Simple HTTP Server</br>
+  If you are a Windows/Mac user, you can install it from the store.</br>
+  After clicking the link, you will be asked whether to allow opening it. Please choose Open Link.</br></br>
+  ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br>
 
   Example on Mac:
 
-  - get → install → open ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)
+  - get → install → open</br></br>
+  ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)</br></br>
 
-  - Click Get Started ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
+  - Click Get Started</br></br>
+  ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)</br></br>
 
-  - Click Get Server ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
+  - Click Get Server</br></br>
+  ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)</br></br>
 
-  - In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
+  - In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server.</br></br>
+  ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)</br></br>
 
-  - Seeing this screen means the server has been started. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)
+  - Seeing this screen means the server has been started.</br></br>
+  ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)</br></br>
 
-  - Do not close Simple HTTP Server. Please switch to your browser and open [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)
+  - Do not close Simple HTTP Server. Please switch to your browser and open</br>
+  [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)</br></br>
 
   - For the subsequent steps, please refer to the video below, starting from 1 minute 37 seconds.
-
-```{eval-rst}
-.. raw:: html
 
     <!--crowdin: exclude-->
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -168,6 +175,8 @@ The AAPS app will be saved in your Google Cloud drive once built:
         </iframe>
       </div>
     </div>
+:::  
+
 ```
 
 - As described in the video, please copy it to the corresponding field.
@@ -178,12 +187,14 @@ The AAPS app will be saved in your Google Cloud drive once built:
 ### AAPS-CI Option 2 – Upload Existing JKS
  - Suitable for users who already have a JKS and know the JKS password and alias.
  - Here are examples using multiple platforms below.
+ - Select your platform in the list below, between Android (preferred choice) or Computer)
 
+
+```{tab-set}
+
+:::{tab-item} Android
 (aaps-ci-option2-android)=
- - Compatible with Android(The simplest, recommended as the first choice)
-```{eval-rst}
-.. raw:: html
-
+ - Compatible with Android (The simplest, recommended as the first choice)
     <!--crowdin: exclude-->
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
@@ -195,34 +206,41 @@ The AAPS app will be saved in your Google Cloud drive once built:
         </iframe>
       </div>
     </div>
-```
+:::  
 
+:::{tab-item} Computer
 (aaps-ci-option2-computer)=
 - Use a computer (supports Windows/Mac/Linux)
 
-  Open the webpage https://simplewebserver.org/download.html
+  Open the webpage
+   [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
-  Install Simple HTTP Server If you are a Windows/Mac user, you can install it from the store. After clicking the link, you will be asked whether to allow opening it. Please choose Open Link. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)
+  Install Simple HTTP Server</br></br>
+  If you are a Windows/Mac user, you can install it from the store.
+  After clicking the link, you will be asked whether to allow opening it. Please choose Open Link.</br></br>
+  ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br></br>
 
   Example on Mac:
 
-  - get → install → open ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)
+  - get → install → open</br></br>
+  ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)</br></br>
 
-  - Click Get Started ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)
+  - Click Get Started</br></br>
+  ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)</br></br>
 
-  - Click Get Server ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)
+  - Click Get Server</br></br>
+  ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)</br></br>
 
-  - In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)
+  - In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server.</br></br>
+  ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)</br></br>
 
-  - Seeing this screen means the server has been started. ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)
+  - Seeing this screen means the server has been started.</br></br>
+  ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)</br></br>
 
-  - Do not close Simple HTTP Server. Please switch to your browser and open [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)
+  - Do not close Simple HTTP Server. Please switch to your browser and open</br></br>
+  [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)</br></br>
 
-  - For the subsequent steps, please refer to the video below, starting from 2 minute 18 seconds.
-
-```{eval-rst}
-.. raw:: html
-
+  - For the subsequent steps, please refer to the video below, starting from 2 minute 18 seconds.</br></br>
     <!--crowdin: exclude-->
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
@@ -234,13 +252,14 @@ The AAPS app will be saved in your Google Cloud drive once built:
         </iframe>
       </div>
     </div>
+:::  
 ```
 
 - As described in the video, please copy it to the corresponding field.
 
 ![aaps_ci_option2](../images/Building-the-App/CI/aaps_ci_option2.png)
 
-- For KEYSTORE_PASSWORD, KEY_ALIAS, and KEY_PASSWORD, please enter your actual password and alias in GitHub.
+- For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, please enter your actual password and alias in GitHub.
 
 ![aaps_ci_option2_2](../images/Building-the-App/CI/aaps_ci_option2_2.png)
 
@@ -290,7 +309,7 @@ Customizations are usually not necessary. This is for your information ony.
 (aaps-ci-troubleshooting)=
 ## AAPS-CI Troubleshooting
 
-(aaps-ci-preparation)=
+(aaps-ci-preparation-web)=
 ### aaps-ci-preparation web page
   - When you open aaps-ci-preparation.html using a file manager, it will start a temporary local server on your phone to display the webpage and receive the Google refresh token.
   - If you see the screen below, it means you have been inactive for a while, and the file manager has already shut down the local server.
