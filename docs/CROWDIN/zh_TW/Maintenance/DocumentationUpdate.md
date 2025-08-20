@@ -4,7 +4,7 @@
 
 - 已更新版本和 Android Studio 的前置需求
 - 新增 [3.3.2.1](#version3321) 版本，移除 Android 16 參考 (已修正)
-- Added [Browser Build](#browser-build) @Angus
+- 新增 [瀏覽器版](#browser-build) @Angus
 
 ## 2025年5月
 
