@@ -53,6 +53,8 @@ Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Andr
 WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
 ```
 
+(latestrelease)=
+
 (version3321)=
 
 ## Version 3.3.2.1

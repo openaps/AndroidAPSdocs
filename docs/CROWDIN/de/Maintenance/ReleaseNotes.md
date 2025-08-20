@@ -55,6 +55,8 @@ Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zw
 WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsWearOs-WearOS5).
 ```
 
+(latestrelease)=
+
 (version3321)=
 
 ## Version 3.3.2.1

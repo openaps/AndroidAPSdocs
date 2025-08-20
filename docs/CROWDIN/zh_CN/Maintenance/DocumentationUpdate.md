@@ -4,7 +4,7 @@
 
 - Updated versions and Android Studio prerequisites
 - Added [3.3.2.1](#version3321) release, removed Android 16 references (fixed)
-- Added [Browser Build](browser-build) @Angus
+- Added [Browser Build](#browser-build) @Angus
 
 ## 2025年5月
 

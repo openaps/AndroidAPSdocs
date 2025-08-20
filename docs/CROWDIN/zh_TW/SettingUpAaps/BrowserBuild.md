@@ -1,3 +1,5 @@
+(browser-build)=
+
 # 瀏覽器建置
 
 使用 GitHub Actions 建置 AAPS。
