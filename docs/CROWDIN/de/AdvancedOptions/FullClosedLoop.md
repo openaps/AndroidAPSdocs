@@ -7,7 +7,7 @@ Der **Hybrid Closed Loop** („HCL“) basiert zwar auf einem Algorithmus, erfor
 
 Im **FCL** sind mahlzeitenbezogene Boli nicht mehr notwendig: Überlasse das dem Algorithmus!  Der Modus, der es **AAPS** ermöglicht ohne KH-Eingaben und manuelle Boli auszukommen, nennt sich „unangekündigte Mahlzeiten“ (engl.: un-announced meals **„UAM“**). **UAM** ermöglicht **AAPS** aggressiver auf falsche Kohlenhydrateingaben zu reagieren, sodass sich AAPS damit toleranter auf diese Fehleingaben zeigt.
 
-### Was erwartet mich?
+## What to expect?
 
 Es gibt viele veröffentlichte Studien über die guten Ergebnisse, die **FCL** erreichen kann. Weitere Informationen findest Du in den folgenden Quellen:
 
@@ -22,7 +22,7 @@ Um erfolgreich mit **FCL** zu sein, muss der Nutzende:
 - die **AAPS**-Einstellungen (insbesondere die **Automatisierungen**) fein nachjustieren und anpassen.
 
 
-### Generelle Überlegungen, warum (nicht) von Hybrid zu Full Closed Loop gewechselt werden sollte
+## General considerations why (not to) move from HCL to FCL
 
 Ein **FCL** (Full Closed Loop System) ist nicht für jeden geeignet:
 
@@ -32,7 +32,7 @@ Ein **FCL** (Full Closed Loop System) ist nicht für jeden geeignet:
 - Es bleiben noch Schwierigkeiten beim **FCL** mit Kindern (weiter unten diskutiert).
 
 
-### Gut eingestellter Hybrid Closed Loop
+## Well-tuned hybrid closed loop
 
 Es ist ratsam, zuerst eine gut abgestimmte Steuerung des Hybrid Closed Loop (**HCL**) zu haben, bevor Du den Schritt zum **FCL** überlegst.  Ein erfolgreicher **FCL** braucht eine sehr individuelle Abstimmung der Einstellungen, damit **AAPS** so Insulin abgibt, wie es DEIN gut laufender Hybrid-Closed-Loop-Modus tut (d. h. er ahmt ihn nach).
 
@@ -40,7 +40,7 @@ Es ist ratsam, zuerst eine gut abgestimmte Steuerung des Hybrid Closed Loop (**H
 
 **FCL ist ein DIY-Setup von Automatisierungen, das vom Benutzer durch die Analyse seiner Daten sowohl aus seinen erfolgreichen HCL- als auch aus seinen ersten FCL-Erfahrungen bei der Anpassung seiner Einstellungen erstellt wird.**
 
-### Schnelles Insulin (Lyumjev, Fiasp)
+## Fast insulin (Lyumjev, Fiasp)
 
 **FCL** benötigt schnelles Insulin.  Es ist so, dass zu Beginn eines mahlzeitenbedingten **Glukosewert**-Anstiegs, **FCL** in der Lage ist, den **Glukosewert** im Zielbereich zu halten (üblicherweise unter 180 mg/dl (10 mmol/l)).
 
@@ -62,7 +62,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 Allerdings können Fiasp oder Lyumjev häufig zu Verstopfungen führen, auch wenn Dinge wie beispielsweise die Nadellänge angepasst wurden. Es ist wichtig, ein Auge auf die Kanülen- oder Pod-Dauer zu haben. Bei vielen Nutzenden lässt die Insulinwirkung nach 48 Stunden nach, bevor die Kanüle bzw. der Pod letztendlich ausfällt.
 
-### Voraussetzungen
+## Prerequisites
 
 **Glukosewerte** und eine stabile Bluetooth-Verbindung sind Voraussetzung dafür, dass **AAPS** optimal und zügig agieren kann. **FCL** benötigt rund um die Uhr ein technisch stabiles System:
 
@@ -76,13 +76,13 @@ Allerdings können Fiasp oder Lyumjev häufig zu Verstopfungen führen, auch wen
 
 Das oben Genannte hängt von den jeweiligen Komponenten Deines **AAPS**-Systems und Deinem individuellem Lebensstil ab.
 
-### Mahlzeitbezogene Einschränkungen
+## Meal-related limitations
 
 - Das Einrichten eines **FCL** für Menschen, deren Ernährung aus wenig schnellen Kohlenhydraten besteht und damit einen geringen Einfluss auf den **Glukosewert** hat und deren Mahlzeiten sich täglich ähneln, könnte einfacher sein. Dies bedeutet nicht automatisch „Low Carb“.
 
 - Fette oder proteinreiche Ernährung oder langsame Verdauung/Gastroparese machen die Dinge eher einfacher als schwieriger für den **FCL**, weil späte Kohlenhydrate schön die unvermeidlichen „späten Wirkenden“ (tails), die durch die zur Spitzenabdeckung benötigten Boli abdecken.
 
-#### Glykämischer Index und Wirkung auf den Blutzucker
+### Glykämischer Index und Wirkung auf den Blutzucker
 
 Die Herausforderung für den **UAM**-Modus steigt mit steigendem „Effekt auf Blutzucker“ („EBG“)
 
@@ -98,7 +98,7 @@ Die schwierigsten Mahlzeiten für den **FCL** sind diejenigen mit ausschließlic
 Der falsche Konsum von Snacks und Süßgetränken, die aus schnell absorbierten Kohlenhydraten bestehen, ist für den **FCL** problematisch.
 
 
-#### Vorbereitung auf Aktivität/Sport
+## Preparing for activity/sports
 
 Wenn Du mit einer Pumpe oder einem hybriden Closed Loop trainierst oder aktiv bist, wird empfohlen, das **IOB** vor der Aktivität zu reduzieren.
 
@@ -106,7 +106,7 @@ Mit **FCL** ist der Algorithmus so eingestellt, dass er **UAM** erkennt und bei 
 
 Ungewöhnliche oder fehlerhafte Aktivität sind für den **FCL** problematisch. Für sportliche Aktivitäten ist es nötig im Voraus zu planen (insbesondere, wenn der Bedarf an Notfall-KH/Snacks während einer Sport-Hypo reduziert werden soll). Nach einem aktiven Tag wird empfohlen, einen niedrigeres  **prozentuales Profil** für die Nacht, nachdem das Abendessen vollständig verstoffwechselt ist, zu setzen: Setze in **Automatisierung** ein erhöhtes (>100 mg/dl) **Glukoseziel** und stelle sicher, dass in den **AAPS**-Einstellungen „keine **SMBs** bei erhöhtem Ziel“ausgewählt ist.
 
-#### Hindernisse für Kinder
+## Hurdles for kids
 
 **FCL** kann für Kinder zusätzliche Herausforderungen mit sich bringen, unter anderem:
 
@@ -116,7 +116,7 @@ Ungewöhnliche oder fehlerhafte Aktivität sind für den **FCL** problematisch. 
 - Wachstumshormone und ausgeprägte Veränderungen der Insulinempfindlichkeit machen es schwierig, den **FCL** genau einzustellen.
 
 
-## Aktivierung stärkerer SMBs: Sicherheit
+## Enabling boosted SMBs: safety
 
 Im **HCL** sind Sicherheitseinschränkungen hinsichtlich der Bolusgrößen, die vom Loop automatisch abgegeben werden dürfen, hinterlegt.
 
@@ -141,7 +141,7 @@ Beobachte/analysiere die **SMB**-Größen kurz nach Beginn der Mahlzeit sehr gen
 Deine **AAPS**-Einstellungen müssen gut genug eingestellt sein, um Deine (!) Essensgewohnheiten und Mahlzeitenauswahl bewältigen zu können.
 ```
 
-## Mahlzeiterkennung / Deine Automationen zum Boosten
+## Meal detection/your Automations for boosting
 
 Der Schlüssel für einen erfolgreichen **FCL** ist der richtig abgestimmte **ISF**-Parameter. Wenn der **AAPS**-Master mit **Automationen** genutzt wird, muss **bei der Erkennung einer Mahlzeit (über Glukose-Deltas) automatisch eine Profiländerung > 100% ausgelöst** werden, damit ein aggressiverer **ISF** zur Verfügung steht.
 
@@ -151,7 +151,7 @@ Die **AAPS**-Master-Version erlaubt im **HCL**-Modus ein maximales temporäres *
 - Schritt 2 - Wende einen Faktor (1/Profil%, wie in **Automation** hinterlegt) an, um den **ISF** zu verstärken.
 - Schritt 3 - Stelle sicher, dass der vorgeschlagene **ISF** innerhalb der festgelegten Sicherheitsgrenzen liegt.
 
-### FCL Automationsvorlagen
+### FCL's Automation templates
 
 Kästchen, die oben markiert werden sollen. Du hast die Option:
 
@@ -163,7 +163,7 @@ Diese Funktion kann für bestimmte Situationen wie z. B. das Aufsteh-Phänomen (
 
 Der untenstehende Abschnitt enthält Anleitungen, wie man die **Automatisierungs**-Bedingungen zusammenfasst und wie man Situationen begegnen kann, in denen **AAPS** die Insulinabgabe erhöhen (oder verringern) sollte. Da der **ISF** nicht direkt angepasst werden kann, wird das prozentuale Anheben des **Profils** über 100 % für unsern Zweck den gleichen Effekt haben.
 
-### Automatisierte große SMBs bei Glukoseanstieg
+### Automated big SMBs at bg rise
 
 Der Schlüssel zu einem erfolgreichen **FCL** ist, **zu Beginn des mahlzeitbedingten Glukoseanstiegs so schnell wie möglich große automatische SMBs durch den Loop abzugeben**, um das benötigte **IOB** „aufzuholen” (verglichen mit dem normalerweise für vergleichbare Mahlzeiten abzugebenden Bolus im **HCL**!)
 
@@ -206,7 +206,7 @@ Kurz nachdem einige erste **SMBs** abgegeben wurden, kommt eine **balancierte Ph
 Die **AAPS**-Übersicht (wo Du COB=0 bei **UAM** im Full Loop siehst) könnte in dieser Phase nach zusätzlichen Kohlenhydraten fragen. Im **UAM**-Modus bedeutet das einfach, dass Du eine sehr grobe Plausibilitätsprüfung machen kannst: Ist es wahrscheinlich, dass diese Kohlenhydrate der Mahlzeit von vor einer Stunde unverdaut in Deinem Körper sind (von denen Du dem Loop nichts mitgeteilt hast)?
 
 
-### IOB-Schwellenwert
+### iob threshold
 
 Oft bewirken die **Automatisierung** #1 und/oder #2, dass das IOB soweit aufgebaut wird, dass es typischerweise **Deine** Mahlzeiten abdeckt. Für eine individuelles Tuning, schau in den Daten Deines **HCL** nach den maximalen IOB-Werten (max IOB), die bei gut kalkulierbaren Mahlzeiten auftreten (meist: Dein Mahlzeiten-Bolus), und in welchem Ausmaß danach eine Hypo (oder der Bedarf an zusätzlichen Kohlenhydraten) auftrat.
 
@@ -235,7 +235,7 @@ Nachdem die ersten geboosterten **SMBs** abgegeben wurden, sollte Dein eingestel
 
 Falls sich beispielsweise Dein Frühstück kohlenhydratmäßig vollständig von Deinen durchschnittlichen Abendessen unterscheidet, kannst Du von **Automatisierungen**, die zu den jeweiligen Tageszeiten gelten und unterschiedliche **iobTH**-Werte haben (möglicherweise auch unterschiedliche Deltas und unterschiedliche **prozentuale Profileinstellungen**), profitieren. Sowohl Du mit der Definition Deines Essensspektrums und Einstellungen (insbesondere **iobTH**), als auch der Loop, der sich um den sich entwickelnden **Glukose**verlauf kümmert, müssen bestimmte hohe Spitzen akzeptieren, um die Hypo-Gefahr gegen Ende der **Insulinwirkdauer** der **SMBs** zu reduzieren.
 
-### Stagnierende hohe Glukosewerte
+### Stagnation at high bg values
 
 Falls nach einer „reichhaltigen“ Mahlzeit ein lang anhaltender **hoher Glukosespiegel** auftritt, hilft die **Automatisierung** #6 (unten links), „Hoch nach dem Essen“ mit der Fettsäureresistenz umzugehen: Nach mehrgängigen Mahlzeiten, einer großen fettigen Pizza oder einem Raclette-Abend könen sich in der Glukosekurve zwei Höcker oder sehr oft auch ein längeres hohes Plateau zeigen.
 
@@ -251,7 +251,7 @@ Automation #4, “Hoch nach dem Essen”, ist auch für einen Hybrid Closed Loop
 
 Außerdem muss die Automation#5 abgebrochen werden können ("Stopp Hoch nach dem Essen"), damit die Insulinabgabe bei einem sinkenden Glukosewert weniger aggressiv erfolgt. (Allerdings wird der Loop, bei einem niedrigen erwarteten Glukosewert oft ohnehin schon die Insulinabgabe reduzieren bzw. begrenzen).
 
-### Einer Hypo vorbeugen
+## Hypo prevention
 
 Das Kernproblem hier ist natürlich, dass der **UAM**-**FCL** (ohne die Eingabe der Kohlenhydrate) **nicht wissen kann, wie viele Gramm an Kohlenhydraten für die Aufnahme noch verfügbar sind**, und möglicherweise das „Rest“-Insulin aufbraucht, ohne dass Du in eine Hypo kommst.
 
@@ -274,7 +274,7 @@ Die Gefahr einer Hypo einge Stunden nach dem Essen ist im Wesentlichen eine Frag
 
 Im Laufe der Zeit wirst Du Muster erkennen, Deine Automatisierungen adjustieren - vielleicht sogar Deine Essgewohnheiten ein wenig anpassen, z.B. einfach einen gelegentlichen kleinen(!) Snack genießen, der helfen kann, eine gute **Balance zwischen Insulinaktivität und Kohlenhydratabsorption** für die **gesamte** Dauer der Mahlzeit (mit Verdauung, Absorption) zu halten und so das Leben Deines Loops (und für Dich selbst) einfacher zu machen.
 
-### Reihenfolge der programmierten Automationen
+### Order of programmed Automations
 
 Es können Probleme mit sich überschneidenden Definitionen zwischen den **Automatisierungen** auftreten. Beispiel: Die Problemstellung ist, dass Delta >8 auch Delta >5 ist, d.h. es kann zwei konkurrierende **Automatisierungen** geben. Was macht der Loop in dieser Situation? Der Loop entscheidet immer nach der Sortierung Deiner **Automatisierungen** in der entsprechenden Ansicht (Hamburger-Menü/AAPS-Übersicht).  Beispiel: Die Delta > +8-Regel muss als erstes ausgeführt werden (und startet, wenn alle Bedingungen zutreffen den stärksten Boost); danach folgt die Überprüfung auf Delta >5 (und eine sanftere Reaktion). Würden sie anders herum sortiert und ausgeführt werden, würde die Delta >8-Regel nie in Kraft treten, weil bereits Delta >5 angewendet wird, Fall abgeschlossen.
 > Tipp für Automatisierungen: Die Reihenfolge ist sehr leicht änderbar. Tippe auf einen Listeneintrag in **AAPS/Automatisierungen** und sortiere die fraglichen **Automatisierungen** an eine andere Stelle ein.
@@ -283,7 +283,7 @@ Genauso schnell und einfach kannst Du Auslöser oder Aktionen binnen weniger Sek
 
 ## Problembehandlung
 
-### Wie man wieder in den Hybrid Closed Loop zurückkehrt
+### How to get back into Hybrid Closed Loop
 
 Du kannst die oberen Kästchen in den **FCL**-bezogenen **Automatisierungen** abwählen und wieder mit Mahlzeiten-Boli und der Eingabe von Kohlenhydraten beginnen. Eventuell musst Du unter **AAPS** Einstellungen/Übersicht/Schaltflächen die Schaltflächen „Insulin“ und „Rechner…” aktivieren, um sie auf der **AAPS**-Übersicht anzuzeigen. Ab jetzt bist Du wieder selber für das Bolen der Mahlzeiten verantwortlich.
 
@@ -293,13 +293,13 @@ Nachdem **Automatisierungen** für Abendessenzeiten erstellt sind, ist es beispi
 
 
 
-### Sind die Voraussetzungen für einen FCL immer noch gegeben?
+### Are the pre-conditions for FCL still given?
 
 - Ist das Basis-**Profil** noch korrekt?
 - Hat sich die **CGM**-Qualität verschlechtert
 - Bitte beachte die Voraussetzungen (oben).
 
-### Glukosewerte steigen zu weit an
+### Glucose goes too high
 
 - Mahlzeiten werden nicht sofort erkannt
     - Prüfe die Bluetooth-(In)Stabilität
@@ -313,7 +313,7 @@ Nachdem **Automatisierungen** für Abendessenzeiten erstellt sind, ist es beispi
 > Wenn Du dazu bereit bist AAPS-Entwicklungsversionen zu nutzen, kannst Du auch eine Version verwenden, die größere SMBs zulässt. Einige Nutzende greifen auch auf einen kleinen Pre-Bolus in ihrem „FCL“ zurück. Das beeinflusst allerdings den Glukoseverlauf und verändern damit die Erkennung der Anstiege und wie sich abgegebene **SMBs** verhalten und kann damit nicht ohne weiteres aus einer Nutzensicht überzeugen.
 - Eine wichtige Erkenntnis von Nutzenden im Piloten war, dass es sehr wichtig ist, wie sich Deine Glukose- und IOB-Kurven dem Beginn der Mahlzeit nähern, um zu bestimmen, wie stark sie durch Kohlenhydrate ansteigen: Das Abfallen (zum Beispiel in Richtung eines temporären Ziels "Bald Essen"), der Aufbau von etwas IOB und eine bereits begonnene positive Beschleunigung, scheinen zu helfen, die Spitzen niedrig zu halten.
 
-### Glukosewerte fallen zu weit ab
+### Glucose goes too low
 
 - Mahlzeiten werden fälschlicherweise erkannt
     - Prüfe, ob Du größere Deltas zum Auslösen des ersten **SMB** festlegen kannst
@@ -330,7 +330,7 @@ Nachdem **Automatisierungen** für Abendessenzeiten erstellt sind, ist es beispi
     - Es könnte gut sein, dass Du höhere **Glukose**spitzen zum Vermeiden einer Hypo akzeptieren musst. Oder stelle Deine Ernährung auf kleinere Kohlenhydrat- und höhere Fett- und Proteinmengen um.
 
 
-### Weitere Informationen
+### More info
 
 Stelle sicher Dich mit anderen **FCL**-Benutzenden zu vernetzen und auszutauschen.
 
