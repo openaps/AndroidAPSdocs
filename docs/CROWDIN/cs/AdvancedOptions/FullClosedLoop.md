@@ -7,7 +7,7 @@ Whilst **hybrid closed loop** ('HCL') is algorithm based, it still requires the 
 
 In **FCL** mealsize-related bolus are no longer required: leave it to the algorithm!  **AAPS** may allow without the user giving any bolus, and without making carb inputs, in a mode called ‘un-announced meals’ **(‘UAM’)**. **UAM** allows **AAPS** to better tolerate incorrect carb inputs by being more aggressive.
 
-### What to expect?
+## What to expect?
 
 There are many published studies on the favourable results **FCL** can achieve. For further reading refer to the following:
 
@@ -22,7 +22,7 @@ Success for **FCL** requires the user to:
 - fine tune and adjust the **AAPS** settings (notably **Automations**).
 
 
-### General considerations why (not to) move from HCL to FCL
+## General considerations why (not to) move from HCL to FCL
 
 **FCL** is not for everyone:
 
@@ -32,7 +32,7 @@ Success for **FCL** requires the user to:
 - Difficulties still remain to establish a **FCL** for kids (discussed below).
 
 
-### Well-tuned hybrid closed loop
+## Well-tuned hybrid closed loop
 
 It is advisable to first establish a well-tuned **HC**L before considering the transition to **FCL**.  Success with **FCL** requires a highly personalised individualised tuning of the user’s setting so that **AAPS** can give insulin to closely mimic YOUR successful hybrid closed loop mode.
 
@@ -40,7 +40,7 @@ It is advisable to first establish a well-tuned **HC**L before considering the t
 
 **FCL is a DIY set up of Automations determined by the user by analysing their data from both their successful HCL and  initial FCL experience when tuning your settings.**
 
-### Fast insulin (Lyumjev, Fiasp)
+## Fast insulin (Lyumjev, Fiasp)
 
 **FCL** requires fast insulin.  This is so that at the start of meal-related **BG** rise, **FCL** is able to keep **BG** in range (by common definition, under 180 mg/dl (10 mmol/l)).
 
@@ -62,7 +62,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 However, Fiasp or Lyumjev can result in frequent pump occlusions, even after optimising things like needle length. It is important to have an eye on the cannula or pod time. Many users find 48 hours to be the efficacy insulin limit before resulting in cannula/pod failure.
 
-### Prerequisites
+## Prerequisites
 
 **BG** values and stable bluetooth connectivity are required to ensure **AAPS** can optimally perform without losing valuable time. **FCL** requires a 24/7 technically stable system:
 
@@ -76,13 +76,13 @@ However, Fiasp or Lyumjev can result in frequent pump occlusions, even after opt
 
 The above will vary depending on your **AAPS** component system and your lifestyle.
 
-### Meal-related limitations
+## Meal-related limitations
 
 - Setting up a **FCL** may be easier for people whose diets do not consist of food components with a rapid high effect on **BG**, and meal patterns that do not wildly vary day-to-day. This does not necessarily mean low carb.
 
 - Fat or protein rich diets, or slow digestion/gastroparesis, make things easier rather than harder for **FCL**  because late carbs nicely cover for inevitable “tails” of late action from bolus needed around peak time.
 
-#### Glycemic index and effect on blood glucose
+### Glycemic index and effect on blood glucose
 
 The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose ('EBG')
 
@@ -98,7 +98,7 @@ The most difficult meals for **FCL** are those foods exclusively very high and h
 Erratic consumption of snacks and sweet drinks that are loaded with fast absorbing carbs is problematic for **FCL**.
 
 
-#### Preparing for activity/sports
+## Preparing for activity/sports
 
 When exercising or being active, with a pump or hybrid closed loop it is recommended that the user reduces **IOB** prior to exercise.
 
@@ -106,7 +106,7 @@ With **FCL**, the algorithm is tuned to detect **UAM** and automatically deliver
 
 Unusual or erratic exercise activity levels present difficulties for **FCL**. Planning ahead is required for exercise (especially if you want to reduce the need for rescue carbs/snacks during sports low). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dl) **BG**  target, with “no **SMBs** at elevated target” selected in **AAPS*** preferences.
 
-#### Hurdles for kids
+## Hurdles for kids
 
 **FCL** can present extra challenges for children and these include:
 
@@ -251,7 +251,7 @@ Automation #4, “post-meal High”, is also suitable in hybrid closed loop.
 
 In addition, a termination-Automation #5, “Stop pmH”, is needed, so that the aggressiveness of the insulin administration is reduced, as soon as the glucose value is falling. (However, often the loop will limit more insulin anyways for hypo prevention because predicted glucose runs low already).
 
-### Hypo prevention
+## Hypo prevention
 
 The core problem is that the **UAM** **FCL** (without carb inputs) can have **no idea how many g of carbs are still available** for absorption, and might use up that “tail” insulin, without you going into a hypo from it.
 
