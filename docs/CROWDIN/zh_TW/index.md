@@ -84,19 +84,21 @@ AAPS 簡介 <./Getting-Started/Introduction.md>
 ```
 
 ```{toctree}
-:caption: 3) 設置 AAPS
+:caption: 3) Setting up AAPS
 
-設置報告伺服器 <./SettingUpAaps/SettingUpTheReportingServer.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-建立 AAPS <./SettingUpAaps/BuildingAaps.md>
-傳輸和安裝 AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-設置嚮導 <./SettingUpAaps/SetupWizard.md>
-你的 AAPS 配置 <./SettingUpAaps/YourAapsProfile.md>
-變更 AAPS 配置 <./SettingUpAaps/ChangeAapsConfiguration.md>
-- 配置建置工具 <./SettingUpAaps/ConfigBuilder.md>
-- 偏好設定 <./SettingUpAaps/Preferences.md>
-完成目標 <./SettingUpAaps/CompletingTheObjectives.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+- Browser Build <./SettingUpAaps/BrowserBuild.md>
+- Computer Build <./SettingUpAaps/ComputerBuild.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -139,13 +141,15 @@ AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
 ```
 
 ```{toctree}
-:caption: 7) AAPS 的維護
+:caption: 7) Maintenance of AAPS
 
-匯出/匯入設定 <./Maintenance/ExportImportSettings.md>
-檢視你的資料 <./Maintenance/Reviewing.md>
-AAPS 發佈說明 <./Maintenance/ReleaseNotes.md>
-文件更新 <./Maintenance/DocumentationUpdate.md>
-更新至新的 AAPS 版本 <./Maintenance/UpdateToNewVersion.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+Reviewing your data <./Maintenance/Reviewing.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Computer Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 
