@@ -94,7 +94,7 @@ After the first block with metadata, you will set some general parameters (see [
     "color": "#BC906A"
 }
 ```
-Чтобы секундная_стрелка была окрашена в цвет ГК по умолчанию (низкий диапазон, средний диапазон или высокий диапазон), нужно просто изменить последний линь ligne с помощью величины KeyValue `bgColor`
+To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest line with the keyValue `bgColor`
 
 ```json
     "color": "bgColor"
