@@ -94,7 +94,7 @@ The AAPS app will be saved in your Google Cloud drive once built:
 ### AAPS-CI Option 1 – Generate JKS
  - Suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
 - Here are examples using multiple platforms below.
-- Select your platform in the list below, between Android (preferred choice), iOS or Computer)
+- Select your platform in the list below, between Android (preferred choice), iOS or Computer.
 
 ```{tab-set}
 
@@ -129,12 +129,12 @@ The AAPS app will be saved in your Google Cloud drive once built:
 ```{tab-set}
 
 :::{tab-item} Android
-(aaps-ci-option1-android)=
+(aaps-ci-option2-android)=
 :::{include} BrowserBuildO2A.md
 :::  
 
 :::{tab-item} Computer
-(aaps-ci-option1-computer)=
+(aaps-ci-option2-computer)=
 :::{include} BrowserBuildO2C.md
 :::  
 
