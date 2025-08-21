@@ -120,7 +120,7 @@ Diese Einstellung ändert, wenn das [Patch Ablaufdatum](#medtrum-patch-expiratio
 
 ***Voreingestellt: 25 IE.***
 
-Diese Einstellung begrenzt die maximal in einer Stunde abzugebende Insulinmenge. Beim Überschreiten des Limits, wird der Patch die Insulinlieferung unterbrechen und einen Alarm auslösen. Der Alarm kann durch das Drücken der Reset-Taste im Übersichtsmenü zurückgesetzt werden (siehe [Alarme zurücksetzen](#reset-alarms)).
+Diese Einstellung begrenzt die maximal in einer Stunde abzugebende Insulinmenge. Beim Überschreiten des Limits, wird der Patch die Insulinlieferung unterbrechen und einen Alarm auslösen. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
 
 Setze den Wert auf eine für Deine speziellen Insulin-Anforderungen vernünftigen Wert.
 
@@ -128,7 +128,7 @@ Setze den Wert auf eine für Deine speziellen Insulin-Anforderungen vernünftige
 
 ***Voreingestellt: 80 IE.***
 
-Diese Einstellung begrenzt die maximal an einem Tag abzugebende Insulinmenge. Beim Überschreiten des Limits, wird der Patch die Insulinlieferung unterbrechen und einen Alarm auslösen. Der Alarm kann durch das Drücken der Reset-Taste im Übersichtsmenü zurückgesetzt werden (siehe [Alarme zurücksetzen](#reset-alarms)).
+Diese Einstellung begrenzt die maximal an einem Tag abzugebende Insulinmenge. Beim Überschreiten des Limits, wird der Patch die Insulinlieferung unterbrechen und einen Alarm auslösen. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
 
 Setze den Wert auf eine für Deine speziellen Insulin-Anforderungen vernünftigen Wert.
 
@@ -189,9 +189,9 @@ Diese Einstellung kann für eine Medtrum-Pumpe geändert werden. Aus Sicherheits
 
 #### Patch über den Medtrum Übersichts-Reiter aktivieren
 
-Navigiere zum [MEDTRUM-Reiter](#overview) in der AAPS-Übersicht und tippe auf **Wechsele Patch** in der unteren rechten Ecke.
+Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
 
-Wenn ein Patch bereits aktiv ist, wirst Du aufgefordert, diesen aktiven Patch zuerst zu deaktivieren. Vgl. [Patch deaktivieren](#deactivate-patch).
+Wenn ein Patch bereits aktiv ist, wirst Du aufgefordert, diesen aktiven Patch zuerst zu deaktivieren. see [Deactivate Patch](#nano-deactivate-patch).
 
 Befolge die Anweisungen, um den neuen Patch zu befüllen und zu aktivieren. Bitte beachten Sie, dass es wichtig ist, die Pumpbase nur an den Patch des Reservoirs anzuschließen, wenn Sie dazu aufgefordert werden. **Du darfst die Pumpe nur dann auf Deinem Körper anbringen und die Kanüle einführen, wenn Du während des Aktivierungsvorgangs dazu aufgefordert wirst (nachdem die Befüllung der Pumpe abgeschlossen ist).**
 
@@ -242,9 +242,11 @@ Wenn die Aktivierung abgeschlossen ist, wird Folgendes angezeigt
 
 Drücke **OK** um zum Hauptbildschirm zurückzukehren.
 
+(nano-deactivate-patch)=
+
 ### Patch deaktivieren
 
-Um einen aktuell aktiven Patch zu deaktivieren, gehe zum [Medtrum-Reiter](#overview) in der AAPS-Übersicht und tippe auf **Wechsele Patch **.
+To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
 
 ![Patch deaktivieren](../images/medtrum/activation/DeactivatePatch.png)
 
@@ -258,9 +260,11 @@ Falls AAPS den Patch nicht deaktivieren kann (zum Beispiel, weil die Pumpenbasis
 
 Sobald die Deaktivierung abgeschlossen ist, tippe auf **OK**, um zum Hauptbildschirm zurückzukehren oder tippe auf **Weiter**, um einen neuen Patch zu aktivieren zu können.
 
+(nano-resume-interrupted-activation)=
+
 ### unterbrochene Aktivierung fortsetzen
 
-Wenn eine Patch-Aktivierung unterbrochen wird, zum Beispiel weil der Akkustand des Smartphones zu niedrig ist, kannst Du den Aktivierungsvorgang fortsetzen, indem Du auf den [Medtrum-Reiter](#overview) in der AAPS-Übersicht gehst und auf **Wechsele Patch** tippst.
+If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
 
 ![unterbrochene Aktivierung fortsetzen](../images/medtrum/activation/ActivationInProgress.png)
 
@@ -269,6 +273,8 @@ Tippe auf **Weiter**, um den Aktivierungsprozess fortzusetzen. Drücke auf **Ver
 ![Aktivierungsstatus lesen](../images/medtrum/activation/ReadingActivationStatus.png)
 
 AAPS wird versuchen, den aktuellen Status der Patch-Aktivierung zu bestimmen. Wenn das erfolgreich war, wird in den Aktivierungsfortschritt übergegangen.
+
+(nano-overview)=
 
 ## Übersicht
 
@@ -343,6 +349,8 @@ Diese Schaltfläche aktualisiert den Patch-Status.
 
 Diese Schaltfläche startet den Prozess zum Wechseln des Patches. Weitere Informationen findest Du unter [Patch aktivieren](#medtrum-activate-patch).
 
+(nano-reset-alarms)=
+
 ### Alarme zurücksetzen
 
 Die Alarmtaste wird auf der Übersicht angezeigt, wenn es einen aktiven Alarm, der zurückgesetzt werden kann, gibt. Durch Drücken dieser Taste werden die Alarme zurückgesetzt und die Insulinabgabe fortgesetzt, sofern die Abgabe aufgrund des Alarms unterbrochen wurde. z.B. wenn aufgrund eines "maximale tägliche Insulinmenge"-Alarms die Abgabe unterbrochen wurde.
@@ -372,7 +380,7 @@ Wenn Du Verbindungsabbrüche oder andere Verbindungsprobleme hast:
 
 ### Aktivierung unterbrochen
 
-Wenn der Aktivierungsprozess beispielsweise durch einen leeren Smartphone-Akku oder einen Smartphone-Absturz unterbrochen wird. Der Aktivierungsprozess kann fortgesetzt werden, indem Du zum "Wechsele Patch"-Bildschirm gehst und den entsprechenden Schritten zur Aktivierung, wie im Abschnitt [Aktivierung fortsetzen](#resume-interrupted-activation) beschrieben, folgst.
+Wenn der Aktivierungsprozess beispielsweise durch einen leeren Smartphone-Akku oder einen Smartphone-Absturz unterbrochen wird. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
 
 ### Patch-Fehler verhindern
 
