@@ -94,7 +94,7 @@ Voir ci-dessous un exemple de bloc Image pour l'aiguille des secondes, (dans ce 
     "color": "#BC906A"
 }
 ```
-Pour avoir la vue second_hand (aiguille des secondes) avec la couleur par défaut des glycémies (Hypo, dans la plage cible ou Hyper), il vous suffit de modifier la dernière ligne avec le mot clé `bgColor`
+To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest line with the keyValue `bgColor`
 
 ```json
     "color": "bgColor"
