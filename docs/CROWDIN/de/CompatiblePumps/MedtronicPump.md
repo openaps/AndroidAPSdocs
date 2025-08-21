@@ -60,7 +60,7 @@ Während der Konfiguration Deiner Medtronic-Pumpe, solltest Du die folgenden Ein
 
 - **Seriennummer der Pumpe**: Steht auf der Rückseite der Pumpe und beginnt mit 'SN'. Hier sollen nur die sechs Ziffern (keine Buchstaben) eingegeben werden (z.B. 123456).
 - **Pumpentyp**: Das genutzte Pumpenmodell (z.B. 522). 
-- **Pumpenfrequenz**: In Abhängigkeit davon, wo Deine Pumpe hergestellt wurde, wähle eine der beiden Optionen aus. Bitte schlage in den [FAQ](#faq) nach, wenn Du nicht sicher bist welche Option Du wählen solltest: 
+- **Pumpenfrequenz**: In Abhängigkeit davon, wo Deine Pumpe hergestellt wurde, wähle eine der beiden Optionen aus. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select): 
     - für Pumpen aus den USA & Kanada ist die Frequenz 916 MHz.
     - Pumpen aus anderen Ländern ("worldwide") nutzen 868 MHz.
 - **Max Basal in der Pumpe (IE/h)**: Der Wert muss mit den Einstellungen auf Deiner Pumpe übereinstimmen (vgl. 'Pumpen-Einstellungen' oben). Auch hier gilt: Wähle die Einstellung sorgfältig, da dieser Wert bestimmt, welche Insulinmenge AAPS Dir über die Basalrate geben darf. Damit wird die maximale temporäre Basalrate festgelegt. Zum Beispiel würde die Einstellung dieses Wertes auf das Vierfache Deiner maximalen Standard-Basalrate eine temporäre Basalrate von 400% ermöglichen. Der Maximalwert der Pumpe beträgt 34,9 Einheiten pro Stunde.
@@ -99,10 +99,10 @@ Während der Konfiguration Deiner Medtronic-Pumpe, solltest Du die folgenden Ein
 Am unteren Bildschirmrand befinden sich drei Schaltflächen:
 
 - **Aktualisieren** ist zum Aktualisieren des Pumpen-Status. Dies sollte nur verwendet werden, wenn die Verbindung über einen längeren Zeitraum unterbrochen war. Dies löst eine vollständige Datenaktualisierung aus (Chronik abrufen abfragen/setzen der Zeit, Profil abfragen, Batteriestand abfragen, etc).
-- **Pumpen-Historie**: Zeigt die Pumpen-Historie (s. [unten](#pump-history))
-- **RL Stats**: Zeigt Statistiken zum RileyLink (s. [unten](#rl-status-rileylink-status))
+- **Pump History**: Shows pump history (see [below](#MedtronicPump-pump-history))
+- **RL Stats**: Show RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status))
 
-(MedtronicPump-pump-history)=
+(MedtronicPump-MedtronicPump-pump-history)=
 
 ## Pumpen Historie
 
@@ -110,7 +110,7 @@ Am unteren Bildschirmrand befinden sich drei Schaltflächen:
 
 Die Pumpen Historie wird alle 5 Minuten abgerufen und lokal gespeichert. Nur die letzten 24 Stunden der Pumpen-Historie werden gespeichert. Damit können die Log-Dateien übersichtlich gehalten werden und das Pumpenverhalten gut analysiert werden, wenn es erforderlich werden sollte. Es werden nur die Einträge gespeichert, die eine Relevanz für AAPS haben. Konfigurations-Daten ohne Relevanz werden nicht gespeichert.
 
-(MedtronicPump-rl-status-rileylink-status)=
+(MedtronicPump-MedtronicPump-rl-status-rileylink-status)=
 
 ## RL Status (RileyLink Status)
 
