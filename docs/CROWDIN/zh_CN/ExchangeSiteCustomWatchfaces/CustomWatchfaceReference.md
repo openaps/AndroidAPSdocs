@@ -94,7 +94,7 @@ JSON文件可通过记事本（或notepad++）文本编辑器编辑（推荐能�
     "color": "#BC906A"
 }
 ```
-要使秒针(second_hand)显示默认血糖颜色（低/中/高范围），只需将最后一行键值改为`bgColor`即可。
+To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest line with the keyValue `bgColor`
 
 ```json
     "color": "bgColor"
