@@ -60,7 +60,7 @@ When configuring your Medtronic pump with the setup wizard it is possible that y
 
 - **Серийный номер помпы**: Находится на задней панели помпы и начинается с SN. You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
 - **Pump Type**: Используемая модель помпы (например, 522). 
-- **Частота помпы**: Есть два варианта, в зависимости от региона рынка. Проверьте [FAQ](#faq) если не уверены что выбрать): 
+- **Частота помпы**: Есть два варианта, в зависимости от региона рынка. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select): 
     - для США & Канады применяется частота 916 МГц
     - для остального мира - 868 МГц
 - **Макс. базал на помпе (ед./ч.)**: Должен соответствоватьпараметрам помпs (см. Конфигурация помпы выше). Опять же эта настройка должна быть тщательно подобрана, так как определяет, какую базу можно задать для AAPS. То есть установить максимальную величину временного базала. Например, установка этого значения в четыре раза выше максимальной стандартной скорости позволит задавать временную скорость базала на 400%. Максимальное допустимое значение помпы составляет 34,9 ед. в час.
@@ -99,10 +99,10 @@ When configuring your Medtronic pump with the setup wizard it is possible that y
 В нижней части экрана расположены три кнопки:
 
 - **Обновить** для обновления текущего статуса помпы. Ей следует пользоваться только в случае, когда соединение отсутствовало в течение длительного периода, так как потребует полного обновления данных (получение истории, установка времени, получение профиля, получение статуса батареи и т. д.).
-- **История помпы**: Показывает журнал помпы (см. [ниже](#pump-history))
-- **Статистика RL**: Показать статистику RL (см. [ниже](#rl-status-rileylink-status))
+- **Pump History**: Shows pump history (see [below](#MedtronicPump-pump-history))
+- **RL Stats**: Show RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status))
 
-(MedtronicPump-pump-history)=
+(MedtronicPump-MedtronicPump-pump-history)=
 
 ## Журнал помпы
 
@@ -110,7 +110,7 @@ When configuring your Medtronic pump with the setup wizard it is possible that y
 
 Хронология помпы извлекается каждые 5 минут и сохраняется в памяти. Сохраняются только предыдущие 24 часа истории. The allows for a convenient way to see pump behaviour should that be required. The only items stored are those relevenant to AAPS and will not include a configuration function that has no relevance.
 
-(MedtronicPump-rl-status-rileylink-status)=
+(MedtronicPump-MedtronicPump-rl-status-rileylink-status)=
 
 ## Состояние RL (Состояние RileyLink)
 
