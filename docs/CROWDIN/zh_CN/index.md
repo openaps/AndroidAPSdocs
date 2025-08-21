@@ -83,19 +83,21 @@ AAPS简介 <./Getting-Started/Introduction.md>
 ```
 
 ```{toctree}
-:caption: 3) AAPS设置
+:caption: 3) Setting up AAPS
 
-配置远程数据服务器 <./SettingUpAaps/SettingUpTheReportingServer.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-构建（Building）AAPS <./SettingUpAaps/BuildingAaps.md>
-传输和安装AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-安装向导 <./SettingUpAaps/SetupWizard.md>
-你的AAPS配置文件 <./SettingUpAaps/YourAapsProfile.md>
-调整AAPS参数设置 <./SettingUpAaps/ChangeAapsConfiguration.md>
-- 配置生成器 <./SettingUpAaps/ConfigBuilder.md>
-- 首选项 <./SettingUpAaps/Preferences.md>
-完成目标 <./SettingUpAaps/CompletingTheObjectives.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+- Browser Build <./SettingUpAaps/BrowserBuild.md>
+- Computer Build <./SettingUpAaps/ComputerBuild.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -138,13 +140,15 @@ Android Auto <./RemoteFeatures/AndroidAuto.md>
 ```
 
 ```{toctree}
-:caption: 7) AAPS的维护
+:caption: 7) Maintenance of AAPS
 
-导出/导入设置 <./Maintenance/ExportImportSettings.md>
-回顾你的数据 <./Maintenance/Reviewing.md>
-AAPS发布说明 <./Maintenance/ReleaseNotes.md>
-文档更新 <./Maintenance/DocumentationUpdate.md>
-升级到新版本的AAPS <./Maintenance/UpdateToNewVersion.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+Reviewing your data <./Maintenance/Reviewing.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Computer Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 
