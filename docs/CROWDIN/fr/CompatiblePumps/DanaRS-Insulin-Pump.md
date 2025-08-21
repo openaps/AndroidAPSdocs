@@ -79,7 +79,7 @@ orphan: true
 
 * Appuyez sur OK pour saisir l'ancien mot de passe.
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS Entrez l'ancien mot de passe](../images/DanaRSPW_04_11PWenter.png)
 
@@ -130,7 +130,7 @@ Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessair
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure as described [above](#pairing-pump).
+* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
 * Il est parfois nécessaire d'effacer les informations d'appairage dans AAPS en faisant un clic long sur l'icône BT dans l'onglet Dana-i/RS.
 
 ## Voyager avec différents fuseaux horaires avec la pompe DanaR
