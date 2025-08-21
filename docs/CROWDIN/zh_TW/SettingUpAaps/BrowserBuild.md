@@ -94,7 +94,7 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 ### AAPS-CI 選項 1 – 生成 JKS
  - 適合首次使用者、沒有 JKS 的使用者或忘記密碼或別名的使用者。
 - Here are examples using multiple platforms below.
-- Select your platform in the list below, between Android (preferred choice), iOS or Computer)
+- Select your platform in the list below, between Android (preferred choice), iOS or Computer.
 
 ```{tab-set}
 
@@ -129,12 +129,12 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 ```{tab-set}
 
 :::{tab-item} Android
-(aaps-ci-option1-android)=
+(aaps-ci-option2-android)=
 :::{include} BrowserBuildO2A.md
 :::  
 
 :::{tab-item} Computer
-(aaps-ci-option1-computer)=
+(aaps-ci-option2-computer)=
 :::{include} BrowserBuildO2C.md
 :::  
 
