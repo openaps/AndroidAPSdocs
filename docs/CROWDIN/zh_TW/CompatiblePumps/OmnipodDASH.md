@@ -65,7 +65,7 @@ orphan: true
 
 選中**設定齒輪(3)**旁邊的**復選框(4)**將使DASH選單顯示為**AAPS**介面的標籤**DASH**。 勾選此框將方便你在使用**AAPS**時訪問DASH指令。
 
-**NOTE:** A faster way to access the [**Dash settings**](#omnipod-dash-settings) can be found below in the DASH settings section of this document.
+**注意：** 有一個更快速的方式可以在本文件的DASH設定部分中找到，訪問[**Dash設定**](#omnipod-dash-settings)。
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -133,7 +133,7 @@ orphan: true
 
     點擊手機上的返回按鈕，返回到 **DASH** 標籤畫面，該畫面現在會顯示你的啟用 Pod 的資訊，包括目前基礎率、Pod 儲液量、輸送的胰島素、Pod 錯誤和警報。
 
-    For more details on the information displayed go to the [**DASH Tab**](#omnipod-dash-tab) section of this document.
+    有關顯示資訊的更多詳細資訊，請前往此文件的 [**DASH 頁籤**](#omnipod-dash-tab) 部分。
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
 
@@ -181,7 +181,7 @@ orphan: true
 
 ### 恢復胰島素輸送
 
-**注意**：在**設定檔切換**期間，DASH 必須在設置新的基礎**設定檔**之前中斷送藥，因為送藥可能會被暫停。 Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
+**注意**：在**設定檔切換**期間，DASH 必須在設置新的基礎**設定檔**之前中斷送藥，因為送藥可能會被暫停。 在問題排除部分閱讀[**暫停交付**](#omnipod-dash-delivery-suspended)以獲取更多詳細資訊。
 
 使用此指令指示目前暫停的活動 Pod 恢復胰島素輸送。 命令成功處理後，胰島素將根據當前時間從活動的基礎**設定檔**恢復正常送藥。 藥量將再次接受注射、**TB** 和**SMB**的命令。
 
@@ -278,7 +278,7 @@ orphan: true
 
 * **儲液量：** 當儲液量超過 50 單位時顯示 50+ 單位。 當儲液量低於 50 單位時，顯示確切的單位數。
 * **總輸送量：** 顯示從儲液中輸送的胰島素總單位數。 這包含已使用和排空的胰島素。
-* **錯誤：** 顯示遇到的最後一個錯誤。 Review the [Pod history](#omnipod-dash-view-pod-history) and log files for past errors and more detailed information.
+* **錯誤：** 顯示遇到的最後一個錯誤。 檢閱 [Pod 歷史](#omnipod-dash-view-pod-history) 和日誌檔案以了解過去的錯誤和更詳細的資訊。
 *  **啟用 Pod 警報：** 保留目前啟用 Pod 上運作的警報。
 
 ### 按鈕
@@ -306,10 +306,10 @@ orphan: true
 
  ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 2 - [**Activate Pod**](#omnipod-dash-activate-pod) : Primes and activates a new pod.
-* 3 - [**Deactivate Pod**](#omnipod-dash-deactivate-pod) : Deactivates the currently active pod.
+* 2 - [**啟動 Pod**](#omnipod-dash-activate-pod)：對新的 Pod 進行灌注並啟動。
+* 3 - [**停用 Pod**](#omnipod-dash-deactivate-pod)：停用目前啟用的 Pod。
 * 4 - **播放測試嗶聲** ：按下時播放 Pod 的單次測試嗶聲。
-* 5 - [**Pod history**](#omnipod-dash-view-pod-history) : Displays the active pod activity history.
+* 5 - [**Pod 歷史**](#omnipod-dash-view-pod-history)：顯示當前 Pod 的活動歷史紀錄。
 
 (omnipod-dash-settings)=
 
@@ -401,7 +401,7 @@ orphan: true
      - 可能會通知某個指令未確認：這取決於失敗發生的時間。
      - **AAPS** 每 15 分鐘嘗試設置新的基礎設定檔。
      - **AAPS** 每 15 分鐘將顯示一則通知，告知送藥已暫停，如果送藥仍然暫停（恢復送藥失敗）。
-     - The [**Resume delivery**](#omnipod-dash-resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
+     - 如果使用者選擇手動恢復供給，[**恢復供給**](#omnipod-dash-resuming-insulin-delivery)按鈕將會啟用。
      - 如果**AAPS**無法自行恢復送藥（如果藥量無法連線、聲音被靜音等情況會發生），藥量每分鐘將發出 4 次嗶聲，持續 3 分鐘，然後如果送藥暫停超過 20 分鐘將每 15 分鐘重複這個過程。
   * 對於未確認的指令，「重新整理 Pod 狀態」應能確認/否認他們。
 
