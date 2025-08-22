@@ -18,10 +18,14 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 You need a browser that works on either Android or iOS.
 
+You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+
+![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
+
 You also need a Google account so that the app can be saved in your Google Drive.
 
 ```{note}
-This wiki assumes you're performing all operations with your Android cellular phone and the Chrome web browser.  
+This wiki assumes you're performing all operations with your cellular phone and the Chrome web browser.  
 You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
 ```
 
@@ -65,12 +69,21 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 ## 2. Preparation Steps
 
 - If you are building from an Android device, install [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) from the Google Play store.
+
+```{admonition} File Manager Plus
+:class: dropdown
+
+:::{include} BrowserBuildFileManagerPlus.md
+```
+
 - Download the preparation file from here:
-<!--crowdin:disable-->
+
+  <!--crowdin:disable-->
+
 ```{eval-rst}
 .. raw:: html
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>aaps-ci-preparation.html</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download style="font-weight: bold; font-size: 20px;">  aaps-ci-preparation.html</a>
 ```
 <br>
 <br>
@@ -80,15 +93,18 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
 
 - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
-- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
+
+</br>
 
 ```{warning}
 Building AAPS with **Option 1** will not allow you to upgrade your existing AAPS: you will need to uninstall it, restore the settings from your phone and data from Nightscout.
 ```
 
-The AAPS app will be saved in your Google Cloud drive once built:
+- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
 
-- Also perform the Google Drive [Auth](aaps-ci-google-drive-auth) to allow the build to be saved there.
+</br>
+
+The AAPS app will be saved in your Google Cloud drive once built.
 
 (aaps-ci-option1)=
 ### AAPS-CI Option 1 – Generate JKS
@@ -115,15 +131,23 @@ The AAPS app will be saved in your Google Cloud drive once built:
 
 ```
 
-- As described in the video, please copy it to the corresponding field.
+Skip the next section and continue [here](#aaps-ci-google-drive-auth).
 
-![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_option1.png)
+---
 
 (aaps-ci-option2)=
+
 ### AAPS-CI Option 2 – Upload Existing JKS
- - Suitable for users who already have a JKS and know the JKS password and alias.
+ - Suitable for users who already have a JKS and know the JKS password and alias  (For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub - those from Android Studio, see below where you used them.)
+
+```{admonition} KEY + PASSWORDS
+:class: dropdown
+
+![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+```
+
  - Here are examples using multiple platforms below.
- - Select your platform in the list below, between Android (preferred choice) or Computer)
+ - Select your platform in the list below, between Android (preferred choice) or Computer.
 
 
 ```{tab-set}
@@ -140,27 +164,12 @@ The AAPS app will be saved in your Google Cloud drive once built:
 
 ```
 
-- As described in the video, please copy it to the corresponding field.
-
-![aaps_ci_option2](../images/Building-the-App/CI/aaps_ci_option2.png)
-
-- For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, please enter your actual password and alias in GitHub.
-
-![aaps_ci_option2_2](../images/Building-the-App/CI/aaps_ci_option2_2.png)
-
-![aaps_ci_option2_3](../images/Building-the-App/CI/aaps_ci_option2_3.png)
-
-![aaps_ci_option2_4](../images/Building-the-App/CI/aaps_ci_option2_4.png)
-
 (aaps-ci-google-drive-auth)= 
+
 ### AAPS-CI Google Drive Auth
 - Click Start Auth to begin the authorization process, and set the obtained token in GitHub after authorization.
 
 ![aaps_ci_gdrive_auth](../images/Building-the-App/CI/aaps_ci_gdrive_auth.png)
-
-```{warning}
-Customizations are usually not necessary. This is for your information ony.
-```
 
 (github-build-apk)=
 ## AAPS-CI GitHub Actions to Build the AAPS APK
@@ -213,6 +222,10 @@ Customizations are usually not necessary. This is for your information ony.
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.jpg)
 
 --------
+
+```{warning}
+Customizations are usually not necessary. This is for your information ony.
+```
 
 (github-cherry-pick)=
 
