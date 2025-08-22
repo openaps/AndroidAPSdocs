@@ -17,7 +17,7 @@ Freestyle Libre 3 (FSL3) 需要特殊設定才能將血糖值接收至 AAPS。 �
 ## 方法一：直接使用每分鐘的資料值
 AndroidAPS 是專為每 5 分鐘的資料值量身打造的。 因此，在某些情況下處理每分鐘的資料值時，會有些侷限。
 
-See [here](#juggluco-to-aaps).
+請參閱 [這裡](#juggluco-to-aaps).
 
 
 ## 方法二：透過 xDrip 將每分鐘的資料值轉換為每 5 分鐘的資料值。
@@ -56,10 +56,10 @@ See [here](#juggluco-to-aaps).
 
 ### 步驟 4：配置 AndroidAPS
 
-- See [here](#juggluco-to-xdrip) and come back.
+- 請參閱 [這裡](#juggluco-to-xdrip)然後返回。
 
 - 如果 AndroidAPS 在手機處於飛行模式時無法接收血糖值，請使用「識別接收器」。
-- Turn off Smoothing (done in xDrip+ already)
+- 關閉平滑設定（在 xDrip+ 中已完成）
 
 ## 後續傳感器更換
 
