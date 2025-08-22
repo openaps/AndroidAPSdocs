@@ -2,7 +2,7 @@
 orphan: true
 - - -
 
-Compatible with iOS (using iPad as an example)
+iOS 上相容的作法（以 iPad 為例）
 <!--crowdin: exclude-->
 
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
