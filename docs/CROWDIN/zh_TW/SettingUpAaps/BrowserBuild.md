@@ -18,10 +18,14 @@
 
 你需要一個可在 Android 或 iOS 上運作的瀏覽器
 
+You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+
+![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
+
 你還需要一個 Google 帳號，以便將應用程式保存在你的 Google 雲端硬碟中。
 
 ```{note}
-本 wiki 假設你使用 Android 手機和 Chrome 瀏覽器進行所有操作。  
+This wiki assumes you're performing all operations with your cellular phone and the Chrome web browser.  
 你會需要在不同的頁籤之間切換，所以在開始之前，你可以先關閉其它頁籤，避免在切換時找不到頁面。
 ```
 
@@ -65,12 +69,21 @@ GitHub 現在顯示你個人的 AndroidAPS 副本。 請保持這個瀏覽器頁
 ## 2. 準備步驟
 
 - 如果你是從 Android 裝置建置，請先從 Google Play 商店安裝[File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager)。
+
+```{admonition} File Manager Plus
+:class: dropdown
+
+:::{include} BrowserBuildFileManagerPlus.md
+```
+
 - 從這裡下載準備檔案：
-<!--crowdin:disable-->
+
+  <!--crowdin:disable-->
+
 ```{eval-rst}
 .. raw:: html
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>aaps-ci-preparation.html</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download style="font-weight: bold; font-size: 20px;">  aaps-ci-preparation.html</a>
 ```
 <br>
 <br>
@@ -80,15 +93,18 @@ GitHub 現在顯示你個人的 AndroidAPS 副本。 請保持這個瀏覽器頁
 AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS）：
 
 - 如果這是你第一次建立 AAPS（或你沒有 Android Studio 的 JKS），請參考 [AAPS-CI 選項 1 – 產生 JKS](aaps-ci-option1) 來完成設定。
-- 如果你想使用自己的 JKS（你在先前的 AAPS 建置中使用的那個 JKS），並且你知道它的密碼和別名（key0），請選擇 [AAPS-CI 選項 2 – 上傳現有的 JKS](aaps-ci-option2)。
+
+</br>
 
 ```{warning}
 使用 **選項 1** 建立 AAPS 將無法更新已安裝的 AAPS：你需要卸載它，重新安裝後，從你的手機恢復設定，並從 Nightscout 讀取資料。
 ```
 
-AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
+- 如果你想使用自己的 JKS（你在先前的 AAPS 建置中使用的那個 JKS），並且你知道它的密碼和別名（key0），請選擇 [AAPS-CI 選項 2 – 上傳現有的 JKS](aaps-ci-option2)。
 
-- 同時執行 Google 雲端硬碟 [授權](aaps-ci-google-drive-auth) 以允許將建置保存到那裡。
+</br>
+
+The AAPS app will be saved in your Google Cloud drive once built.
 
 (aaps-ci-option1)=
 ### AAPS-CI 選項 1 – 生成 JKS
@@ -115,15 +131,23 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 
 ```
 
-- 如影片所示，請將他複製到對應的欄位中。
+Skip the next section and continue [here](#aaps-ci-google-drive-auth).
 
-![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_option1.png)
+---
 
 (aaps-ci-option2)=
+
 ### AAPS-CI 選項 2 – 上傳現有 JKS
- - 適合已經擁有 JKS 並且知道 JKS 密碼和別名的用戶。
+ - Suitable for users who already have a JKS and know the JKS password and alias  (For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub - those from Android Studio, see below where you used them.)
+
+```{admonition} KEY + PASSWORDS
+:class: dropdown
+
+![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+```
+
  - 以下是使用多個平台的範例。
- - 在以下列表中選擇您的平台， Android（優先選擇）或電腦
+ - Select your platform in the list below, between Android (preferred choice) or Computer.
 
 
 ```{tab-set}
@@ -140,27 +164,12 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 
 ```
 
-- 如影片所示，請將他複製到對應的欄位中。
-
-![aaps_ci_option2](../images/Building-the-App/CI/aaps_ci_option2.png)
-
-- 對於 `KEYSTORE_PASSWORD`、`KEY_ALIAS` 和 `KEY_PASSWORD`，請在 GitHub 中輸入您的實際密碼和別名。
-
-![aaps_ci_option2_2](../images/Building-the-App/CI/aaps_ci_option2_2.png)
-
-![aaps_ci_option2_3](../images/Building-the-App/CI/aaps_ci_option2_3.png)
-
-![aaps_ci_option2_4](../images/Building-the-App/CI/aaps_ci_option2_4.png)
-
 (aaps-ci-google-drive-auth)=
+
 ### AAPS-CI Google 雲端硬碟授權
 - 點選開始授權，啟動 Google 授權頁面，並在授權後將獲得的TOKEN設定在 GitHub 中。
 
 ![aaps_ci_gdrive_auth](../images/Building-the-App/CI/aaps_ci_gdrive_auth.png)
-
-```{warning}
-Google 雲端硬碟授權中的「自訂」欄位，適合熟悉Google Oauth2的人，並且想要使用自已的ClientID時使用。 僅供你參考。
-```
 
 (github-build-apk)=
 ## AAPS-CI GitHub Actions 以建置 AAPS APK
@@ -213,6 +222,10 @@ Google 雲端硬碟授權中的「自訂」欄位，適合熟悉Google Oauth2的
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.jpg)
 
 --------
+
+```{warning}
+Google 雲端硬碟授權中的「自訂」欄位，適合熟悉Google Oauth2的人，並且想要使用自已的ClientID時使用。 僅供你參考。
+```
 
 (github-cherry-pick)=
 
