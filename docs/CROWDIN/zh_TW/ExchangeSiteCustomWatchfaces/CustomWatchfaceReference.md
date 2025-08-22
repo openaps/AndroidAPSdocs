@@ -94,7 +94,7 @@ JSON 文件可以在 Notepad（或 Notepad++）文本編輯器中編輯（建議
     "color": "#BC906A"
 }
 ```
-To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest line with the keyValue `bgColor`
+要將秒針著色為預設的血糖顏色（低範圍、中範圍或高範圍），您只需修改最新行的 keyValue `bgColor`
 
 ```json
     "color": "bgColor"
