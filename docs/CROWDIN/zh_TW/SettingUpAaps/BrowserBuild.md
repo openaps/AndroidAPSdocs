@@ -93,8 +93,8 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 (aaps-ci-option1)=
 ### AAPS-CI 選項 1 – 生成 JKS
  - 適合首次使用者、沒有 JKS 的使用者或忘記密碼或別名的使用者。
-- Here are examples using multiple platforms below.
-- Select your platform in the list below, between Android (preferred choice), iOS or Computer.
+- 以下是使用多個平台的範例。
+- 在以下列表中選擇您的平台， Android（優先選擇）、iOS 或電腦。
 
 ```{tab-set}
 
@@ -108,7 +108,7 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 :::{include} BrowserBuildO1I.md
 :::  
 
-:::{tab-item} Computer
+:::{tab-item} 電腦
 (aaps-ci-option1-computer)=
 :::{include} BrowserBuildO1C.md
 :::  
@@ -122,8 +122,8 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 (aaps-ci-option2)=
 ### AAPS-CI 選項 2 – 上傳現有 JKS
  - 適合已經擁有 JKS 並且知道 JKS 密碼和別名的用戶。
- - Here are examples using multiple platforms below.
- - Select your platform in the list below, between Android (preferred choice) or Computer)
+ - 以下是使用多個平台的範例。
+ - 在以下列表中選擇您的平台， Android（優先選擇）或電腦
 
 
 ```{tab-set}
@@ -133,7 +133,7 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 :::{include} BrowserBuildO2A.md
 :::  
 
-:::{tab-item} Computer
+:::{tab-item} 電腦
 (aaps-ci-option2-computer)=
 :::{include} BrowserBuildO2C.md
 :::  
@@ -144,7 +144,7 @@ AAPS 應用程式在建立後會保存在你的 Google 雲端硬碟中：
 
 ![aaps_ci_option2](../images/Building-the-App/CI/aaps_ci_option2.png)
 
-- For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, please enter your actual password and alias in GitHub.
+- 對於 `KEYSTORE_PASSWORD`、`KEY_ALIAS` 和 `KEY_PASSWORD`，請在 GitHub 中輸入您的實際密碼和別名。
 
 ![aaps_ci_option2_2](../images/Building-the-App/CI/aaps_ci_option2_2.png)
 
