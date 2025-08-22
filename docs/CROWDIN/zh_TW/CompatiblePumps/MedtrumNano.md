@@ -120,7 +120,7 @@ orphan: true
 
 ***預設：25U。***
 
-此設置更改每小時最多輸送的胰島素量。 如果此限制被超過，修補版將暫停並發出警報。 The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
+此設置更改每小時最多輸送的胰島素量。 如果此限制被超過，修補版將暫停並發出警報。 可以透過點擊總覽選單中的重置按鈕來重置此警報，請參閱[重置警報](#nano-reset-alarms)。
 
 根據你的胰島素需求，設置一個合適的值。
 
@@ -128,7 +128,7 @@ orphan: true
 
 ***預設：80U。***
 
-此設置更改每日最多輸送的胰島素量。 如果此限制被超過，修補版將暫停並發出警報。 The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
+此設置更改每日最多輸送的胰島素量。 如果此限制被超過，修補版將暫停並發出警報。 可以透過點擊總覽選單中的重置按鈕來重置此警報，請參閱[重置警報](#nano-reset-alarms)。
 
 根據你的胰島素需求，設置一個合適的值。
 
@@ -189,9 +189,9 @@ orphan: true
 
 #### 從Medtrum總覽標籤啟動修補版
 
-Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
+在AAPS介面中導航至[Medtrum標籤](#nano-overview)，然後按下右下角的**更換修補版**按鈕。
 
-如果修補版已啟動，系統將提示你先停用該修補版。 see [Deactivate Patch](#nano-deactivate-patch).
+如果修補版已啟動，系統將提示你先停用該修補版。 請參閱[停用修補版](#nano-deactivate-patch)。
 
 按照提示填充並啟動新的修補版。 請注意——只有在系統提示時才應將幫浦基座連線到儲液瓶修補版。 **你應在系統提示啟動過程時（填充完成後）才將幫浦放在身體上並插入套管。**
 
@@ -246,7 +246,7 @@ Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press th
 
 ### 停用修補版
 
-To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+要停用目前啟動的修補版，請前往AAPS介面中的[Medtrum標籤](#nano-overview)，然後按下**更換修補版**按鈕。
 
 ![停用修補版](../images/medtrum/activation/DeactivatePatch.png)
 
@@ -264,7 +264,7 @@ To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) 
 
 ### 恢復中斷的啟動過程
 
-If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+如果貼片註冊過程被中斷，例如因為手機電池耗盡，您可以在 AAPS 介面中進入 [Medtrum 頁籤](#nano-overview)，然後按下 **更換貼片**
 
 ![恢復中斷的啟動過程](../images/medtrum/activation/ActivationInProgress.png)
 
@@ -380,7 +380,7 @@ If a patch activation is interrupted, for instance because the phone battery run
 
 ### 啟動中斷
 
-如果啟動過程被中斷，例如手機電量耗盡或手機當機。 The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
+如果啟動過程被中斷，例如手機電量耗盡或手機當機。 你可以前往更換修補版畫面，並按照[恢復中斷的啟動](#nano-resume-interrupted-activation)中的步驟繼續啟動過程。
 
 ### 防止修補版故障
 
