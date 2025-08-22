@@ -102,7 +102,7 @@ At the bottom of the screen there are three buttons:
 - **Pump History**: Shows pump history (see [below](#MedtronicPump-pump-history))
 - **RL Stats**: Show RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status))
 
-(MedtronicPump-MedtronicPump-pump-history)=
+(MedtronicPump-pump-history)=
 
 ## Historique pompe
 
@@ -110,7 +110,7 @@ At the bottom of the screen there are three buttons:
 
 L'historique de la pompe est récupéré toutes les 5 minutes et stocké localement. Only the previous 24 hours worth of history is stored. The allows for a convenient way to see pump behaviour should that be required. The only items stored are those relevenant to AAPS and will not include a configuration function that has no relevance.
 
-(MedtronicPump-MedtronicPump-rl-status-rileylink-status)=
+(MedtronicPump-rl-status-rileylink-status)=
 
 ## État RL (RileyLink État)
 
