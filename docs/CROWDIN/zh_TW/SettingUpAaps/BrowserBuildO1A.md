@@ -2,7 +2,7 @@
 orphan: true
 - - -
 
-Compatible with Android (The simplest, recommended as the first choice)
+與 Android 相容（最簡單，建議優先選擇）
 <!--crowdin: exclude-->
 
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
