@@ -79,7 +79,7 @@ orphan: true
 
 * 按下「OK」進入舊密碼。
 
-* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
+* 輸入 **舊密碼** (預設密碼請參閱 [上方](#DanaRS-Insulin-Pump-default-password)) 並按下 OK
     
     ![DanaRS 輸入舊密碼](../images/DanaRSPW_04_11PWenter.png)
 
@@ -130,7 +130,7 @@ orphan: true
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
+* 開始配對程序，如上所述[以上](#DanaRS-Insulin-Pump-pairing-pump)。
 * 有時可能需要透過長按 Dana-i/RS 標籤上的藍牙圖示來清除 AAPS 中的配對資訊。
 
 ## Dana RS 幫浦跨時區旅行
