@@ -94,7 +94,7 @@ Hier ist ein Beispiel eines Image-Blocks für second_hand, (in diesem Fall ist k
     "color": "#BC906A"
 }
 ```
-Um das "second_hand" Bild mit einer Standardfarbe einzufärben (lowRange, midRange oder highRange), muss die unterste Zeile mit dem Schlüsselwert `bgColor` geändert werden.
+To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest line with the keyValue `bgColor`
 
 ```json
     "color": "bgColor"

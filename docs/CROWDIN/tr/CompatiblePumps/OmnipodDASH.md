@@ -65,7 +65,7 @@ On the top-left hand corner **hamburger menu** select **Config Builder (1)**\ �
 
 Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the DASH menu to be displayed as a tab in the **AAPS** interface titled **DASH**. Checking this box will facilitate your access to the DASH commands when using **AAPS**.
 
-**NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the DASH settings section of this document.
+**NOTE:** A faster way to access the [**Dash settings**](#omnipod-dash-settings) can be found below in the DASH settings section of this document.
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -83,6 +83,7 @@ Please **swipe left** to the **DASH** tab where you will be able to manage all p
 
 ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) 'Pod Management' (Activate, Deactivate, Play test beep, and Pod history)
 
+(omnipod-dash-activate-pod)=
 
 ### Pod Etkinleştirme
 
@@ -132,7 +133,7 @@ Ensure that the new pod and the phone running **AAPS** are within close proximit
 
     **DASH** sekme ekranına dönmek için telefonunuzdaki geri düğmesini tıklayın. Şimdi aktif pod oturumunuz için mevcut bazal oran, pod rezervuar seviyesi, iletilen insülin, pod hataları ve uyarılar dahil Pod bilgileri görüntülenecektir.
 
-    For more details on the information displayed go to the [**DASH Tab**](#dash-tab) section of this document.
+    For more details on the information displayed go to the [**DASH Tab**](#omnipod-dash-tab) section of this document.
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
 
@@ -141,7 +142,7 @@ Ensure that the new pod and the phone running **AAPS** are within close proximit
 It is good practice to export settings AFTER activating the pod. Export settings should be done at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](../Maintenance/ExportImportSettings.md).
 
 
-(OmnipodDASH-deactivate-pod)=
+(omnipod-dash-deactivate-pod)=
 
 ### Pod'u Devre Dışı Bırakma
 
@@ -176,9 +177,11 @@ To deactivate a pod (either from expiration or from a pod failure):
 
  ![Deactivate_Pod_8](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
+(omnipod-dash-resuming-insulin-delivery)=
+
 ### İnsülin İletimini Sürdür
 
-**Note**: During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile** as delivery can be suspended. Read [**Delivery suspended**](#delivery-suspended) in the troubleshooting section for more details.
+**Note**: During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile** as delivery can be suspended. Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
 
 Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal **Profile**. The pod will again accept commands for bolus, **TBR**, and **SMB**.
 
@@ -215,7 +218,7 @@ The process below will show you how to acknowledge and dismiss pod beeps when th
 
 4. **DASH** sekmesine gidin. **Etkin Pod Alarmları** satırında, uyarı mesajı artık görüntülenmez ve etkin pod artık sona erme uyarısı bip sesi vermez.
 
-(OmnipodDASH-view-pod-history)=
+(omnipod-dash-view-pod-history)=
 
 ### Pod Geçmişini Görüntüle
 
@@ -240,7 +243,7 @@ This feature is helpful in verifying boluses, TBRs and basal commands that were 
 
 ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
-(OmnipodDASH-dash-tab)=
+(omnipod-dash-tab)=
 
 ## DASH Sekmesi
 
@@ -275,7 +278,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 * **Rezervuar:** Rezervuarda 50 üniteden fazla insülin olduğuda 50+Ü'den fazla kalanı gösterir. 50 Ü'nin altında, tam birimler görüntülenir.
 * **Toplam iletilen:** Rezervuardan iletilen toplam insülin ünite miktarını görüntüler. Bu miktar etkinleştirme ve hazırlama için kullanılan insülini de içerir.
-* **Hatalar:** Karşılaşılan son hatayı görüntüler. Review the [Pod history](#view-pod-history) and log files for past errors and more detailed information.
+* **Hatalar:** Karşılaşılan son hatayı görüntüler. Review the [Pod history](#omnipod-dash-view-pod-history) and log files for past errors and more detailed information.
 *  **Etkin pod alarmları:** Etkin pod alarmlarını gösteren satırdır.
 
 ### Butonlar
@@ -303,12 +306,12 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
  ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 2 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
-* 3 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
+* 2 - [**Activate Pod**](#omnipod-dash-activate-pod) : Primes and activates a new pod.
+* 3 - [**Deactivate Pod**](#omnipod-dash-deactivate-pod) : Deactivates the currently active pod.
 * 4 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
-* 5 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
+* 5 - [**Pod history**](#omnipod-dash-view-pod-history) : Displays the active pod activity history.
 
-(DanaRS-Insulin-Pump-dash-settings)=
+(omnipod-dash-settings)=
 
 ## Dash Ayarları
 
@@ -388,6 +391,8 @@ Additional note:
 
 ## Troubleshooting
 
+(omnipod-dash-delivery-suspended)=
+
 ### İletimi askıya alma
 
   * Artık iletimi askıya alma butonu yok. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes.
@@ -396,7 +401,7 @@ Additional note:
      - Komutlardan birinin onaylanmadığına dair bir bildirim olabilir: bu, hatanın ne zaman gerçekleştiğine bağlıdır.
      - **AAPS** will try to set the new basal profile every 15 minutes.
      - **AAPS** will show a notification informing that the delivery is suspended every 15 minutes, if the delivery is still suspended (resume delivery failed).
-     - The [**Resume delivery**](#resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
+     - The [**Resume delivery**](#omnipod-dash-resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
      - If **AAPS** fails to resume delivery on its own (this happens if the pod is unreachable, sound is muted, etc), the pod will start beeping 4 times every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20 minutes.
   * Onaylanmamış komutlar için "pod durumunu yenile" komutu, bunları onaylamalı/reddetmelidir.
 

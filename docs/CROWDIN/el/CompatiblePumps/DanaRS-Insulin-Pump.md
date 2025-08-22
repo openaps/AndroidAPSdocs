@@ -79,7 +79,7 @@ orphan: true
 
 * Πατήστε OK για να εισάγετε τον παλιό κωδικό πρόσβασης.
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![Εισαγωγή παλιού κωδικού πρόσβασης για την αντλία DanaRS](../images/DanaRSPW_04_11PWenter.png)
 
@@ -130,7 +130,7 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure as described [above](#pairing-pump).
+* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
 * Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
 
 ## Ταξιδεύοντας σε διαφορετικές ζώνες ώρας με την Dana Rs

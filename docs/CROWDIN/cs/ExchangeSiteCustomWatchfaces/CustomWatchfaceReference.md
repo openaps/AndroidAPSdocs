@@ -94,7 +94,7 @@ See below an example of an Image block for second_hand, (in this case there are 
     "color": "#BC906A"
 }
 ```
-To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest ligne with the keyValue `bgColor`
+To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest line with the keyValue `bgColor`
 
 ```json
     "color": "bgColor"

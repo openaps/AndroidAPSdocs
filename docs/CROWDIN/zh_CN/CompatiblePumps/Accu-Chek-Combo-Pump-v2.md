@@ -165,7 +165,7 @@ Combo可通过蓝牙在_远程终端_模式或_指令_模式下运行。 远程�
 
 （用户无法干预该行为；驱动程序完全自主决定使用何种模式。 此处说明仅为让用户了解为何有时能在该区域看到Combo界面。）
 
-最底部设有"刷新"按钮。 点击该按钮可立即触发泵体状态更新。 该按钮还用于通知AAPS先前发现的错误已修复，可重新检查系统状态是否正常（详见下文[警报相关章节](#alerts-warnings-and-errors-and-how-they-are-handled)）。
+最底部设有"刷新"按钮。 点击该按钮可立即触发泵体状态更新。 It also is used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#combov2-alerts)).
 
 ## 偏好设置
 
@@ -176,8 +176,8 @@ Combo可通过蓝牙在_远程终端_模式或_指令_模式下运行。 远程�
 1. _与泵体配对_：点击此按钮可与Combo建立配对。 若已配对泵体，该按钮将自动禁用。
 2. _解除泵体配对_：断开已配对的Combo连接；与第1项功能完全相反。 若未配对泵体，该按钮将自动禁用。
 3. _设备发现时长（秒）_：配对时，驱动程序使手机能被泵体检测到。 此项控制设备可被发现的持续时间。 默认选择最大值（300秒=5分钟）。 Android系统不允许无限期保持可发现状态，因此必须设定具体时长。
-4. _自动检测并执行储药器更换操作_：若启用，通常由用户通过"操作"标签页中"填充/灌注"按钮完成的"储药器更换"动作将自动执行。 具体说明详见[下文详解](#autodetecting-and-automatically-entering-battery-and-reservoir-changes)。
-5. _自动检测并执行电池更换操作_：若启用，通常由用户通过"操作"标签页中"泵体电池更换"按钮完成的"电池更换"动作将自动执行。 具体说明详见[下文详解](#autodetecting-and-automatically-entering-battery-and-reservoir-changes)。
+4. _自动检测并执行储药器更换操作_：若启用，通常由用户通过"操作"标签页中"填充/灌注"按钮完成的"储药器更换"动作将自动执行。 This is explained [in further detail below](#combov2-autodetections).
+5. _自动检测并执行电池更换操作_：若启用，通常由用户通过"操作"标签页中"泵体电池更换"按钮完成的"电池更换"动作将自动执行。 This is explained [in further detail below](#combov2-autodetections).
 6. _启用Combo详细日志记录_：该选项将大幅增加驱动程序生成的日志数据量。 **注意**：除非开发者要求，否则请勿启用此选项。 否则可能大幅增加AndroidAPS日志冗余信息，降低日志可用性。
 
 大多数用户仅使用顶部两项功能：_与泵体配对_和_解除泵体配对_按钮。
@@ -202,7 +202,7 @@ Combo通过远程终端界面显示警报信息。 警告信息以"Wx"代码（x
 - W2 "电池电量低"：驱动程序将其转换为AAPS主界面显示的"低电量"警告
 - W3、W6、W7、W8：此类警告仅向用户提供参考信息，驱动程序可安全执行自动消除
 
-其余警告_不会_被自动消除。 此外，错误信息_绝不_会自动消除。 这两类警报采用相同处理机制：触发后驱动程序将在AAPS界面弹出警示对话框，并立即终止所有正在执行的指令。 随后驱动程序将切换至"错误"状态（详见[上文Accu-Chek Combo标签页说明](#accu-chek-combo-tab-contents)）。 该状态下禁止执行任何指令。 用户须在胰岛素泵上处理错误，例如发生输注阻塞错误时可能需要更换输注管路。 用户处理完错误后，点击Accu-Chek Combo标签页的"刷新"按钮即可恢复正常操作。 驱动程序将重新连接Combo并更新状态，检查屏幕是否仍显示错误信息等。 此外，驱动程序会定期自动刷新胰岛素泵状态，因此并非必须手动点击该按钮。
+其余警告_不会_被自动消除。 此外，错误信息_绝不_会自动消除。 这两类警报采用相同处理机制：触发后驱动程序将在AAPS界面弹出警示对话框，并立即终止所有正在执行的指令。 The driver then switches to the "error" state (see [the Accu-Chek Combo tab contents description above](#combov2-tab-contents)). 该状态下禁止执行任何指令。 用户须在胰岛素泵上处理错误，例如发生输注阻塞错误时可能需要更换输注管路。 用户处理完错误后，点击Accu-Chek Combo标签页的"刷新"按钮即可恢复正常操作。 驱动程序将重新连接Combo并更新状态，检查屏幕是否仍显示错误信息等。 此外，驱动程序会定期自动刷新胰岛素泵状态，因此并非必须手动点击该按钮。
 
 大剂量注射属于特殊情况。 该操作在Combo的命令模式下执行，此模式不会在注射过程中报告出现的警报。 因此，驱动程序_无法_在大剂量注射期间自动消除警告。 这意味着胰岛素泵将持续发出蜂鸣声直至大剂量注射完成。 大剂量注射期间最常见的警报通常是W1"储药器余量低"。 **切勿**在大剂量注射过程中手动消除胰岛素泵上的Combo警告。 此操作可能导致大剂量注射中断。 驱动程序将在大剂量注射完成后处理该警告。
 
@@ -215,8 +215,8 @@ Combo通过远程终端界面显示警报信息。 警告信息以"Wx"代码（x
 * 请注意这并非商业化产品，尤其在初始阶段，用户需持续监控并充分理解系统功能、使用限制及潜在故障模式。 强烈建议不具备完全理解该系统能力的人员不要使用。
 * 由于Combo远程控制功能的工作原理，多项操作（特别是设置基础率配置文件）相比其他胰岛素泵更为缓慢。 这是Combo无法克服的固有缺陷。
 * 切勿在胰岛素泵上设置或取消临时基础率。 闭环系统需完全掌控临时基础率，否则无法可靠运行，因无法确定用户在胰岛素泵上设置的临时基础率起始时间。
-* 当AAPS与胰岛素泵通信时（泵体显示蓝牙标识期间），请勿操作泵体任何按键。 此操作将中断蓝牙连接。 仅当建立连接出现问题时方可操作（参见[上文"使用前准备"章节](#before-you-begin)）。
-* 大剂量注射期间请勿操作任何按键。 特别提醒：切勿通过按键操作来消除警报。 具体原因详见[警报相关章节](#alerts-warnings-and-errors-and-how-they-are-handled)的详细说明。
+* 当AAPS与胰岛素泵通信时（泵体显示蓝牙标识期间），请勿操作泵体任何按键。 此操作将中断蓝牙连接。 Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](#combov2-before-you-begin)).
+* 大剂量注射期间请勿操作任何按键。 特别提醒：切勿通过按键操作来消除警报。 See [the section about alerts](#combov2-alerts) for a more detailed explanation why.
 
 ## Combo无法建立连接时的排查清单
 

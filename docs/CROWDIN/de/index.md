@@ -84,19 +84,21 @@ Komponentenübersicht <./Getting-Started/ComponentOverview.md>
 ```
 
 ```{toctree}
-:caption: 3) AAPS
+:caption: 3) Setting up AAPS
 
-Einrichten des Berichtsservers <./SettingUpAaps/SettingUpTheReportingServer.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-AAPS erstellen <./SettingUpAaps/BuildingAaps.md>
-AAPS übertragen und installieren <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Einrichtungsassistent <./SettingUpAaps/SetupWizard.md>
-Dein AAPS-Profil <. SettingUpAaps/YourAapsProfile.md>
-Ändern der AAPS-Konfiguration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Konfiguation <./SettingUpAaps/ConfigBuilder.md>
-- Einstellungen <./SettingUpAaps/Preferences.md>
-Abschluss der Ziele <./SettingUpAaps/CompletingTheObjectives.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+- Browser Build <./SettingUpAaps/BrowserBuild.md>
+- Computer Build <./SettingUpAaps/ComputerBuild.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -139,13 +141,15 @@ Austausch-Plattform für eigene Zifferblätter <./ExchangeSiteCustomWatchfaces/i
 ```
 
 ```{toctree}
-:caption: 7) AAPS Wartung und Pflege
+:caption: 7) Maintenance of AAPS
 
-Export/Import der Einstellungen <./Maintenance/ExportImportSettings.md>
-Deine Daten reviewen <./Maintenance/Reviewing.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+Reviewing your data <./Maintenance/Reviewing.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-Dokumenten-Änderungen <./Maintenance/DocumentationUpdate.md>
-Update auf eine neue AAPS-Version <./Maintenance/UpdateToNewVersion.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Computer Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 

@@ -60,7 +60,7 @@ orphan: true
 
 - **泵序列号**：显示在泵背面，以SN开头。 只需输入显示的6位数字，无需输入任何字母字符（例如123456）。
 - **泵型号**：您正在使用的泵型号（例如522）。 
-- **泵频率**：根据泵的原始销售地区有两种选项。 如不确定选择哪个选项，请查阅[常见问题](#faq)）： 
+- **泵频率**：根据泵的原始销售地区有两种选项。 Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select): 
     - 美国及加拿大地区使用的频率为916 MHz
     - 全球其他地区使用的频率为868 MHz
 - **泵上最大基础率（单位/小时）**：必须与泵上的设置保持一致（参见上文泵配置部分）。 此设置必须谨慎选择，因为它将决定AAPS能通过基础率输送多少胰岛素。 这将实际设定临时基础率的最大值。 例如，将此值设为标准最大基础率的四倍，将允许400%的临时基础率。 泵允许的最大值为每小时34.9单位。
@@ -99,10 +99,10 @@ orphan: true
 屏幕底部有三个按钮：
 
 - **刷新**用于刷新泵的当前状态。 仅当连接长时间中断时才应使用此功能，因为这将需要完整的数据刷新(检索历史记录、获取/设置时间、获取配置文件、获取电池状态等)。
-- **泵历史记录**：显示泵历史记录（参见[下文](#pump-history)）
-- **RL统计**：显示RL统计信息（参见[下文](#rl-status-rileylink-status)）
+- **Pump History**: Shows pump history (see [below](#MedtronicPump-pump-history))
+- **RL Stats**: Show RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status))
 
-(MedtronicPump-pump-history)=
+(MedtronicPump-MedtronicPump-pump-history)=
 
 ## 泵历史记录
 
@@ -110,7 +110,7 @@ orphan: true
 
 泵历史记录每5分钟检索一次并存储在本地。 仅存储最近24小时的历史记录。 这为查看泵行为（如有需要）提供了便捷方式。 仅存储与AAPS相关的项目，不包括无关的配置功能。
 
-(MedtronicPump-rl-status-rileylink-status)=
+(MedtronicPump-MedtronicPump-rl-status-rileylink-status)=
 
 ## RL状态(RileyLink状态)
 

@@ -84,19 +84,21 @@ Change version <./NavigateDoc/ChangeVersion.md>
 ```
 
 ```{toctree}
-:caption: 3) Настройка AAPS
+:caption: 3) Setting up AAPS
 
-Настройка сервера отчетов <./SettingUpAaps/SettingUpTheReportingServer.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Сборка AAPS <./SettingUpAaps/BuildingAaps.md>
-Передача и установка AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Мастер установки <./SettingUpAaps/SetupWizard.md>
-Ваш профиль AAPS <./SettingUpAaps/YourAapsProfile.md>
-Изменение настроек AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Конфигуратор <./SettingUpAaps/ConfigBuilder.md>
-- Настройки <./SettingUpAaps/Preferences.md>
-Выполнение целей <./SettingUpAaps/CompletingTheObjectives.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+- Browser Build <./SettingUpAaps/BrowserBuild.md>
+- Computer Build <./SettingUpAaps/ComputerBuild.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -139,13 +141,15 @@ AAPS для Wear OS <./WearOS/BuildingAapsWearOS.md>
 ```
 
 ```{toctree}
-:caption: 7) Обслуживание AAPS
+:caption: 7) Maintenance of AAPS
 
-Экспорт/импорт настроек <./Maintenance/ExportImportSettings.md>
-Просмотр своих данных <./Maintenance/Reviewing.md>
-Заметки к выпускам AAPS <./Maintenance/ReleaseNotes.md>
-Обновления документации <./Maintenance/DocumentationUpdate.md>
-Обновление версии AAPS <./Maintenance/UpdateToNewVersion.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+Reviewing your data <./Maintenance/Reviewing.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Computer Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 

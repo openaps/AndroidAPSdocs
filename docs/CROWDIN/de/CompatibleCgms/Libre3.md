@@ -17,7 +17,7 @@ Der Sensor kann in xDrip+ im Bereich von -40 mg/dl bis +20 mg/dl (-2.2 mmol/l bi
 ## Methode 1: Direkte Nutzung der minütlich übertragenen Sensorwerte
 AAPS ist auf „Sensorwerte alle 5 Minuten“ ausgelegt. Die Verarbeitung von minütlichen Werten bringt in einzelnen Situationen daher Einschränkungen mit sich.
 
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+See [here](#juggluco-to-aaps).
 
 
 ## Methode 2: Umwandlung in xDrip+ der minütlichen Messwerte in 5-Minuten-Werte
@@ -27,8 +27,6 @@ Juggluco wird dabei genutzt, die minütlich vorliegenden Sensorrohdaten an xDrip
 Lade die Juggluco-App [hier](https://www.juggluco.nl/Juggluco/download.html) herunter und installiere sie. Befolge die [Anweisungen](https://www.juggluco.nl/Juggluco/libre3/)
 
 Stelle sicher, dass die Glukosewerte an xDrip+ gesendet werden: In den Juggluco Einstellungen, kannst Du Juggluco so konfigurieren, dass Glukosewerte an andere Apps weitergereicht werden. Juggluco kann auf drei Arten Werte weiterreichen: Der **gepatchte Libre Broadcast** wurde ursprünglich von der gepatchten Librelink App verwendet und kann genutzt werden, um Glukosewerte an xDrip+ zu senden
-
-![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)
 
 ### Schritt 2: xDrip+ einrichten
 
@@ -58,10 +56,10 @@ Nach einem Sensorwechsel erkennt xDrip+ den neuen Sensor automatisch und löscht
 
 ### Schritt 4: AndroidAPS konfigurieren
 
-- Wähle xDrip+ unter [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
+- See [here](#juggluco-to-xdrip) and come back.
 
 - Wenn sich das Smartphone im Flugmodus befindet und AAPS keine Glukosewerte erhält, verwende "Empfänger identifizieren"
-- Glättung deaktivieren (in xDrip+ bereits erfolgt)
+- Turn off Smoothing (done in xDrip+ already)
 
 ## Sensorwechsel
 

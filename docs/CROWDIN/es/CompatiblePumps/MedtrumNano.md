@@ -120,7 +120,7 @@ This setting changes the time of the expiration warning, when [Patch Expiration]
 
 ***Default: 25U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#reset-alarms).
+This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
 
 Set this to a sensible value for your insulin requirements.
 
@@ -128,7 +128,7 @@ Set this to a sensible value for your insulin requirements.
 
 ***Default: 80U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#reset-alarms).
+This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
 
 Set this to a sensible value for your insulin requirements.
 
@@ -189,9 +189,9 @@ This setting can be changed when using Medtrum pump but it is recommended to set
 
 #### Activate patch from the Medtrum overview Tab
 
-Navigate to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
+Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
 
-If a patch is already active, you will be prompted to deactivate this patch first. see [Deactivate Patch](#deactivate-patch).
+If a patch is already active, you will be prompted to deactivate this patch first. see [Deactivate Patch](#nano-deactivate-patch).
 
 Follow the prompts to fill and activate a new patch. Please note - it is important to only connect the pumpbase to the reservoir patch at the step when you are prompted to do so. **You must only put the pump on your body and insert the cannula when prompted to during the activation process (after priming is complete).**
 
@@ -242,9 +242,11 @@ When activation is complete, the following screen will appear
 
 Press **OK** to return to main screen.
 
+(nano-deactivate-patch)=
+
 ### Deactivate patch
 
-To deactivate a currently active patch, go to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button.
+To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
 
 ![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
 
@@ -258,9 +260,11 @@ If Android APS in unable to deactivate the patch (For instance because the pumpb
 
 Once deactivation is complete, press **OK** to return to main screen or press **Next** to continue the process to activate a new patch.
 
+(nano-resume-interrupted-activation)=
+
 ### Resume interrupted activation
 
-If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button.
+If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
 
 ![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
 
@@ -269,6 +273,8 @@ Press **Next** to continue the activation process. Press **Discard** to discard 
 ![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
 
 The driver will try to determine the current status of the patch activation. If this was successful it will go into the activation progress at the current step.
+
+(nano-overview)=
 
 ## Inicio
 
@@ -343,6 +349,8 @@ This button will refresh the status of the patch.
 
 This button will start the process to change the patch. See [Activate patch](#medtrum-activate-patch) for more information.
 
+(nano-reset-alarms)=
+
 ### Reset alarms
 
 The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. E.g. when suspended due to a maximum daily insulin delivery alarm.
@@ -372,7 +380,7 @@ If you are experiencing connection timeouts or other connection issues:
 
 ### Activation interrupted
 
-If the activation process is interrupted for example by and empty phone battery or phone crash. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#resume-interrupted-activation)
+If the activation process is interrupted for example by and empty phone battery or phone crash. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
 
 ### Preventing patch faults
 

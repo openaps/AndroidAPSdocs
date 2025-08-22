@@ -62,6 +62,6 @@ Available from 3.3.2.1.dev
     
     - Select the variant you need: 
         - fullRelease: For regular pump usage with full functionality.
-        - [aapsclient、aapsclient2](../RemoteFeatures/RemoteControl.md#aapsclient) For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md))。
+        - [aapsclient, aapsclient2](#RemoteControl_aapsclient) For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md))。
         - pumpcontrol
         - Text ending with “Debug” indicates that the APK will be built in debug mode, which is useful for troubleshooting.

@@ -79,7 +79,7 @@ orphan: true
 
 * Drücke OK, um das bisherige Passwort einzugeben.
 
-* Gib das**bisherige Passwort** (Standard-Passwort siehe [oben](#default-password)) ein und drücke OK
+* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS altes Kennwort eingeben](../images/DanaRSPW_04_11PWenter.png)
 
@@ -130,7 +130,7 @@ Falls Du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
 ### DanaRS v3, Dana-i
 
-* Starte den Kopplungsprozess wie [oben](#pairing-pump) beschrieben.
+* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
 * In Einzelfällen muss die Koppelung im alten Smartphone zunächst gelöscht werden. Um die Koppelung in AAPS zu löschen, drückst Du in der Dana-i/RS-Registerkarte lange auf das Bluetooth-Symbol.
 
 ## Mit der Dana RS Pumpe über Zeitzonen hinweg reisen

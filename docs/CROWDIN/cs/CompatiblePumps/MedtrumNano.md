@@ -120,7 +120,7 @@ This setting changes the time of the expiration warning, when [Patch Expiration]
 
 ***Výchozí: 25 U.***
 
-Tímto nastavením se mění maximální množství inzulinu, které může být dodáno během jedné hodiny. Pokud je tento limit překročen, patch bude pozastaven a spustí se alarm. Alarm lze resetovat stisknutím tlačítka reset na obrazovce s přehledem, viz [Reset alarmů](#reset-alarms).
+Tímto nastavením se mění maximální množství inzulinu, které může být dodáno během jedné hodiny. Pokud je tento limit překročen, patch bude pozastaven a spustí se alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
 
 Nastavte na rozumnou hodnotu dle svých potřeb.
 
@@ -128,7 +128,7 @@ Nastavte na rozumnou hodnotu dle svých potřeb.
 
 ***Výchozí: 80 U.***
 
-Tímto nastavením se mění maximální množství inzulinu, které může být dodáno během jednoho dne. Pokud je tento limit překročen, patch bude pozastaven a spustí se alarm. Alarm lze resetovat stisknutím tlačítka reset na obrazovce s přehledem, viz [Reset alarmů](#reset-alarms).
+Tímto nastavením se mění maximální množství inzulinu, které může být dodáno během jednoho dne. Pokud je tento limit překročen, patch bude pozastaven a spustí se alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
 
 Nastavte na rozumnou hodnotu dle svých potřeb.
 
@@ -189,9 +189,9 @@ Toto nastavení lze při použití pumpy Medtrum změnit, ale doporučuje se nas
 
 #### Aktivujte patch z karty Medtrum
 
-V rozhraní AAPS přejděte na [kartu Medtrum](#overview) a klepněte na tlačítko **Vyměnit patch** vpravo dole.
+Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
 
-Pokud je patch již aktivován, budete nejprve vyzváni k jeho deaktivaci. viz [Deaktivace patche](#deactivate-patch).
+Pokud je patch již aktivován, budete nejprve vyzváni k jeho deaktivaci. see [Deactivate Patch](#nano-deactivate-patch).
 
 Postupujte podle pokynů pro naplnění a aktivaci nového patche. Upozornění – je důležité spojit základnu se zásobníkem (patchem) až ve chvíli, kdy vás k tomu aplikace vyzve. **Umístit pumpu na tělo a aplikovat kanylu je nutné až ve chvíli, kdy vás k tomu aplikace během aktivace vyzve (po dokončení plnění).**
 
@@ -242,9 +242,11 @@ Po dokončení aktivace se zobrazí následující obrazovka
 
 Stiskněte **OK** pro návrat na hlavní obrazovku.
 
+(nano-deactivate-patch)=
+
 ### Deaktivace patche
 
-Chcete-li deaktivovat aktuálně aktivní patch, přejděte na [kartu Medtrum](#overview) v rozhraní AAPS a stiskněte tlačítko **Vyměnit patch**.
+To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
 
 ![Deaktivace patche](../images/medtrum/activation/DeactivatePatch.png)
 
@@ -258,9 +260,11 @@ Pokud AAPS nedokáže patch deaktivovat (například proto, že základna pumpy 
 
 Jakmile je deaktivace dokončena, stiskněte **OK** pro návrat na hlavní obrazovku nebo stiskněte **Další**, chcete-li pokračovat v procesu aktivace nového patche.
 
+(nano-resume-interrupted-activation)=
+
 ### Obnovení přerušené aktivace
 
-Pokud je aktivace patche přerušena, například proto, že dojde k vybití baterie telefonu, můžete proces aktivace znovu spustit – přejděte na [kartu Medtrum](#overview) v rozhraní AAPS a stiskněte tlačítko **Vyměnit patch**.
+If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
 
 ![Obnovení přerušené aktivace](../images/medtrum/activation/ActivationInProgress.png)
 
@@ -269,6 +273,8 @@ Stisknutím tlačítka **Další** pokračujte v procesu aktivace. Stisknutím t
 ![Načítání stavu aktivace](../images/medtrum/activation/ReadingActivationStatus.png)
 
 Ovladač se pokusí zjistit aktuální stav aktivace patche. Bude-li proces úspěšný, aktivace naváže a bude pokračovat.
+
+(nano-overview)=
 
 ## Přehled
 
@@ -343,6 +349,8 @@ Toto tlačítko obnoví stav patche.
 
 Toto tlačítko spustí proces výměny patche. See [Activate patch](#medtrum-activate-patch) for more information.
 
+(nano-reset-alarms)=
+
 ### Resetovat alarmy
 
 Tlačítko alarmu se zobrazí na obrazovce přehledu, když je aktivní alarm, který lze resetovat. Stisknutím tohoto tlačítka dojde k resetování alarmů a obnovení dodávky inzulínu, pokud byl patch pozastaven kvůli alarmu. E.g. když je pozastaven kvůli alarmu při dosažení maximální denní dávky inzulínu.
@@ -372,7 +380,7 @@ Pokud máte problémy s přípojením kvůli časovému limitu nebo jiné probl�
 
 ### Aktivace přerušena
 
-Pokud je proces aktivace přerušen, například kvůli vybité baterii telefonu nebo poruše telefonu. Proces aktivace lze obnovit tak, že se přejde na obrazovku pro výměnu patche a budete postupovat dle pokynů pro obnovení aktivace, jak je uvedeno v části: [Obnovení přerušené aktivace](#resume-interrupted-activation)
+Pokud je proces aktivace přerušen, například kvůli vybité baterii telefonu nebo poruše telefonu. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
 
 ### Jak předejít chybám patche
 

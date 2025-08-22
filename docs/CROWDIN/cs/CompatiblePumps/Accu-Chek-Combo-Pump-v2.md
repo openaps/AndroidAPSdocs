@@ -165,7 +165,7 @@ Combo lze provozovat přes Bluetooth v režimu _vzdáleného terminálu_ nebo v 
 
 (Uživatel na to nemá vliv; ovladač plně rozhoduje sám, jaký režim použije. To je pouze poznámka pro uživatele, aby věděli, proč jsou v tomto poli někdy vidět snímky Comba.)
 
-Zcela dole je tlačítko "Obnovit". To spustí okamžitou aktualizaci stavu pumpy. It also is used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#alerts-warnings-and-errors-and-how-they-are-handled)).
+Zcela dole je tlačítko "Obnovit". To spustí okamžitou aktualizaci stavu pumpy. It also is used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#combov2-alerts)).
 
 ## Nastavení
 
@@ -176,8 +176,8 @@ Pro ovladač Combo jsou k dispozici tyto předvolby (položky jsou uvedeny od sh
 1. _Párování_: Toto je tlačítko, kterým spustíte párování s pumpou Combo. Je zakázáno, pokud je již pumpa spárována.
 2. _Zrušit párování_: Zruší párování s již připojenou pumpou Combo; pravý opak položky č. 1. Je zakázáno, pokud není žádná pumpa spárovaná.
 3. _Doba hledání (v sekundách)_: Při párování ovladač nastaví telefon, aby byl zjistitelný pumpou. Toto určuje, jak dlouho je zjistitelnost spuštěná. Ve výchozím nastavení je vybráno maximum (300 sekund = 5 minut). Android neumožňuje spustit tuto funkci na dobu neurčitou, takže je nutné zvolit dobu trvání.
-4. _Automaticky zjistit a zadat výměnu inzulínu_: Pokud je povoleno, akce "Výměna zásobníku", kterou uživatel obvykle provádí prostřednictvím tlačítka "prime/plnění" na záložce Akce, je prováděna automaticky. This is explained [in further detail below](#autodetecting-and-automatically-entering-battery-and-reservoir-changes).
-5. _Automaticky zjistit a zadat výměnu baterie_: Pokud je povoleno, akce "Výměna baterie", kterou uživatel obvykle provádí prostřednictvím tlačítka "Výměna baterie v pumpe" na záložce Akce, je prováděna automaticky. This is explained [in further detail below](#autodetecting-and-automatically-entering-battery-and-reservoir-changes).
+4. _Automaticky zjistit a zadat výměnu inzulínu_: Pokud je povoleno, akce "Výměna zásobníku", kterou uživatel obvykle provádí prostřednictvím tlačítka "prime/plnění" na záložce Akce, je prováděna automaticky. This is explained [in further detail below](#combov2-autodetections).
+5. _Automaticky zjistit a zadat výměnu baterie_: Pokud je povoleno, akce "Výměna baterie", kterou uživatel obvykle provádí prostřednictvím tlačítka "Výměna baterie v pumpe" na záložce Akce, je prováděna automaticky. This is explained [in further detail below](#combov2-autodetections).
 6. _Povolit detailní logování Combo_: Toto značně rozšiřuje množství logovaných informací prováděné ovladačem. **UPOZORNĚNÍ**: Nezapínejte, pokud o to nepožádal vývojář. V opačném případě to může do protokolů AndroidAPS přidat mnoho šumu a snížit jejich užitečnost.
 
 Většina uživatelů používá pouze první dvě položky, _Párování_ a _Zrušit párování_.
@@ -202,7 +202,7 @@ Některá varování jsou automaticky zamítnuta ovladačem. Jedná se o:
 - W2 "Battery low" : ovladač to změní v upozornění "Nízký stav baterie", které je zobrazeno na hlavní kartě AAPS
 - W3, W6, W7, W8 : tato varování jsou čistě informační pro uživatele, takže je pro ovladač může bezpečně automaticky zamítnout
 
-Žádné další výstrahy _nejsou_ automaticky zamítnuty. Také chyby _nikdy nejsou_ automaticky zamítnuty. Oboje jsou zpracovány stejným způsobem: ovladač vytvoří výstražné dialogové okno nad rozhraním AAPS a přeruší vykonávání všech probíhajících příkazů. The driver then switches to the "error" state (see [the Accu-Chek Combo tab contents description above](#accu-chek-combo-tab-contents)). Tento stav neumožňuje provádění jakýchkoli příkazů. Uživatel musí vyřešit chybu na pumpě; například chyba okluze může vyžadovat výměnu kanyly. Jakmile uživatel vyřeší chybu, běžný provoz může být obnoven stisknutím tlačítka "Obnovit" na záložce Accu-Chek Combo. Ovladač se pak spojí s pumpou Combo, zaktualizuje její stav a zkontroluje, zda není na obrazovce stále zobrazena chyba atd. Ovladač také po chvíli automaticky aktualizuje stav pumpy, takže ruční stisknutí tohoto tlačítka není povinné.
+Žádné další výstrahy _nejsou_ automaticky zamítnuty. Také chyby _nikdy nejsou_ automaticky zamítnuty. Oboje jsou zpracovány stejným způsobem: ovladač vytvoří výstražné dialogové okno nad rozhraním AAPS a přeruší vykonávání všech probíhajících příkazů. The driver then switches to the "error" state (see [the Accu-Chek Combo tab contents description above](#combov2-tab-contents)). Tento stav neumožňuje provádění jakýchkoli příkazů. Uživatel musí vyřešit chybu na pumpě; například chyba okluze může vyžadovat výměnu kanyly. Jakmile uživatel vyřeší chybu, běžný provoz může být obnoven stisknutím tlačítka "Obnovit" na záložce Accu-Chek Combo. Ovladač se pak spojí s pumpou Combo, zaktualizuje její stav a zkontroluje, zda není na obrazovce stále zobrazena chyba atd. Ovladač také po chvíli automaticky aktualizuje stav pumpy, takže ruční stisknutí tohoto tlačítka není povinné.
 
 Zvláštní případ je dávkování bolusů. To probíhá v příkazovém režimu, který v průběhu podávání bolusu nereportuje, že se objevilo varování. Z toho důvodu ovladač nemůže automaticky zrušit _varování_ během podávání bolusu. To bohužel znamená, že pumpa bude v takovém případě pípat, dokud nebude ukončeno podávání bolusu. Nejčastější výstraha v průběhu bolusu je obvykle W1 "Reservoir low". V průběhu podávání bolusu **nevypínejte** upozornění přímo na pumpě. Riskujete tak přerušení podávání bolusu. Ovladač se o varování postará automaticky po dokončení bolusu.
 
@@ -215,8 +215,8 @@ Upozornění, která se objeví, zatímco ovladač není spojený s pumpou Combo
 * Mějte na paměti, že se nejedná o produkt. Obzvlášť na začátku uživatel potřebuje monitorovat a pochopit systém, jeho limity a jeho možná selhání. Je důrazně doporučováno nepoužívat tento systém, pokud ho uživatel není schopen plně pochopit.
 * Kvůli způsobu, jakým funguje vzdálené ovládání Comba, jsou některé operace (především nastavení bazálního profilu) jsou ve srovnání s jinými pumpami pomalejší. Jde o nešťastné omezení pump Combo, které není možné překonat.
 * Neset nebo nezrušujte TBR na pumpě. Smyčka předpokládá, že řídí dočasné bazály a bez splnění tohoto předpokladu nemůže spolehlivě fungovat. Důvodem je, že nelze určit čas spuštění dočasného bazálu zadaného uživatelem přímo na pumpě.
-* Jestliže probíhá komunikace mezi AAPS a pumpou (na pumpě je během připojení zobrazeno logo Bluetooth), nesmíte na pumpě mačkat žádná tlačítka. Došlo by k přerušení Bluetooth připojení. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](#before-you-begin)).
-* Nesmíte stisknout žádná tlačítka, pokud pumpa posílá bolus. Zejména se nepokoučejte zavřít jakákoli upozornění stiskem tlačítek. See [the section about alerts](#alerts-warnings-and-errors-and-how-they-are-handled) for a more detailed explanation why.
+* Jestliže probíhá komunikace mezi AAPS a pumpou (na pumpě je během připojení zobrazeno logo Bluetooth), nesmíte na pumpě mačkat žádná tlačítka. Došlo by k přerušení Bluetooth připojení. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](#combov2-before-you-begin)).
+* Nesmíte stisknout žádná tlačítka, pokud pumpa posílá bolus. Zejména se nepokoučejte zavřít jakákoli upozornění stiskem tlačítek. See [the section about alerts](#combov2-alerts) for a more detailed explanation why.
 
 ## Checklist pro případ, kdy nelze navázat spojení s pumpou Combo
 

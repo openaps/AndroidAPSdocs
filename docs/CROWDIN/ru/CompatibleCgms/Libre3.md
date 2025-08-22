@@ -17,7 +17,7 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 ## Method 1: use 1-minute readings directly
 AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
 
-![Трансляция Juggluco в AAPS](../images/Juggluco_AAPS.png)
+See [here](#juggluco-to-aaps).
 
 
 ## Method 2: convert 1-minute readings into 5-minute values via xDrip
@@ -27,8 +27,6 @@ AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute valu
 Скачайте и установите приложение Juggluco [отсюда](https://www.juggluco.nl/Juggluco/download.html). Следуйте [этой](https://www.juggluco.nl/Juggluco/libre3/) инструкции
 
 Убедитесь, что данные ГК отправляются в Xdrip+: В настройках Juggluco можно выбрать отправку значений глюкозы другим приложениям. Juggluco может отправить три типа трансляций: Трансляция **Librelink** изначально использовалась модифицированным приложением Librelink и может отправлять значения Гк в xDrip+
-
-![Трансляция Juggluco в xDrip+](../images/Juggluco_xDrip.png)
 
 ### Шаг 2: Настройка xDrip
 
@@ -58,10 +56,10 @@ AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute valu
 
 ### Шаг 4: Настройка AndroidAPS
 
-- В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
+- See [here](#juggluco-to-xdrip) and come back.
 
 - Если AndroidAPS не получает значения BG, когда телефон находится в режиме авиаперелета, проверьте, заполнено ли поле «Идентифицировать приемник»
-- Выключите сглаживание (уже сделано в Xdrip+)
+- Turn off Smoothing (done in xDrip+ already)
 
 ## Последующие замены сенсора
 

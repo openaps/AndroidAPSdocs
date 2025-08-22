@@ -43,7 +43,7 @@ Autotune 外掛是在 AAPS 中實作的 OpenAPS 自動調整算法。
 
 - 「比較設定檔」按鈕會打開設定檔比較視圖。 輸入設定檔顯示為藍色，輸出設定檔（名稱為「調整後」）顯示為紅色。
 
-  - 注意：以下範例中，輸入設定檔有 IC 和 ISF 的日夜變化，但輸出計算後的設定檔只有單一數值。 如果你希望獲得生理節律輸出配置，請參見[生理節律 IC 或 ISF 配置](#circadian-ic-or-isf-profile)。
+  - 注意：以下範例中，輸入設定檔有 IC 和 ISF 的日夜變化，但輸出計算後的設定檔只有單一數值。 如果您對獲得日夜變化輸出檔案感興趣，請參見 [日夜變化 IC 或 ISF 檔案](#autotune-circadian-ic-or-isf-profile) 下方。
 
   ![Autotune 設定檔比較。](../images/Autotune/Autotune_5.png)
 
@@ -86,13 +86,13 @@ Autotune 外掛是在 AAPS 中實作的 OpenAPS 自動調整算法。
 
 ![Autotune 預設畫面](../images/Autotune/Autotune_11.png)
 
-- 自動開關配置 (預設關閉)：請參見[使用自動化規則運行 Autotune](#run-autotune-with-an-automation-rule)。 如果你將此設定更改為開啟，則輸入設定檔將自動被調整後的設定檔更新並啟用。
+- 自動化切換檔案（預設為關閉）：請參見 [使用自動化規則運行自動調整](#autotune-run-autotune-with-an-automation-rule) 下方。 如果你將此設定更改為開啟，則輸入設定檔將自動被調整後的設定檔更新並啟用。
   - **請小心，你必須在接下來幾天內信任並驗證，在更新和啟用未修改的調整配置後，它會改善你的循環運行**
 
 - 將 UAM 分類為基礎率（預設為開啟）：此設定適用於未輸入碳水化合物的 AndroidAPS 用戶（完全 UAM）。 當關閉時，他將阻止 UAM 被分類為基礎率。
   - 注意：如果當天偵測到至少一小時的碳水化合物吸收，無論此設定（開啟或關閉），所有分類為「UAM」的資料都會被分類為基礎率。
 - 資料天數（預設為5天）：你可以使用此設定定義預設值。 每次你在 Autotune 外掛中選擇新設定檔時，調整天數參數將被替換為此預設值。
-- 將平均結果應用於日夜變化的 IC/ISF（預設為關閉）：請參閱[日夜變化 IC 或 ISF 設定檔](#circadian-ic-or-isf-profile)。
+- 將平均結果應用於日夜變化的 IC/ISF（預設為關閉）：請參閱[日夜變化 IC 或 ISF 設定檔](#autotune-circadian-ic-or-isf-profile)。
 
 ### 其他設置
 

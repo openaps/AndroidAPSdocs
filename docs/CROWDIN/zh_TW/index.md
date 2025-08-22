@@ -84,17 +84,19 @@ AAPS 簡介 <./Getting-Started/Introduction.md>
 ```
 
 ```{toctree}
-:caption: 3) 設置 AAPS
+:caption: 3) 設定 AAPS
 
-設置報告伺服器 <./SettingUpAaps/SettingUpTheReportingServer.md>
+設定報告伺服器 <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-建立 AAPS <./SettingUpAaps/BuildingAaps.md>
+建置 AAPS <./SettingUpAaps/BuildingAaps.md>
+- 瀏覽器建置 <./SettingUpAaps/BrowserBuild.md>
+- 電腦建置 <./SettingUpAaps/ComputerBuild.md>
 傳輸和安裝 AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-設置嚮導 <./SettingUpAaps/SetupWizard.md>
-你的 AAPS 配置 <./SettingUpAaps/YourAapsProfile.md>
+嚮導 <./SettingUpAaps/SetupWizard.md>
+您的 AAPS 設定檔 <./SettingUpAaps/YourAapsProfile.md>
 變更 AAPS 配置 <./SettingUpAaps/ChangeAapsConfiguration.md>
-- 配置建置工具 <./SettingUpAaps/ConfigBuilder.md>
+- 配置建構器 <./SettingUpAaps/ConfigBuilder.md>
 - 偏好設定 <./SettingUpAaps/Preferences.md>
 完成目標 <./SettingUpAaps/CompletingTheObjectives.md>
 ```
@@ -139,13 +141,15 @@ AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
 ```
 
 ```{toctree}
-:caption: 7) AAPS 的維護
+:caption: 7) AAPS 維護
 
 匯出/匯入設定 <./Maintenance/ExportImportSettings.md>
-檢視你的資料 <./Maintenance/Reviewing.md>
-AAPS 發佈說明 <./Maintenance/ReleaseNotes.md>
-文件更新 <./Maintenance/DocumentationUpdate.md>
-更新至新的 AAPS 版本 <./Maintenance/UpdateToNewVersion.md>
+檢查您的資料 <./Maintenance/Reviewing.md>
+AAPS 版本更新說明 <./Maintenance/ReleaseNotes.md>
+文檔更新 <./Maintenance/DocumentationUpdate.md>
+更新到新的 AAPS 版本 <./Maintenance/UpdateToNewVersion.md>
+- 瀏覽器更新 <./Maintenance/UpdateBrowserBuild.md>
+- 電腦更新 <./Maintenance/UpdateComputerBuild.md>
 
 ```
 

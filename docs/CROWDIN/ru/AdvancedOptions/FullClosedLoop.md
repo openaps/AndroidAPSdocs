@@ -7,7 +7,7 @@ Whilst **hybrid closed loop** ('HCL') is algorithm based, it still requires the 
 
 In **FCL** mealsize-related bolus are no longer required: leave it to the algorithm!  **AAPS** may allow without the user giving any bolus, and without making carb inputs, in a mode called ‘un-announced meals’ **(‘UAM’)**. **UAM** allows **AAPS** to better tolerate incorrect carb inputs by being more aggressive.
 
-### Чего ожидать?
+## What to expect?
 
 There are many published studies on the favourable results **FCL** can achieve. For further reading refer to the following:
 
@@ -22,7 +22,7 @@ Success for **FCL** requires the user to:
 - fine tune and adjust the **AAPS** settings (notably **Automations**).
 
 
-### General considerations why (not to) move from HCL to FCL
+## General considerations why (not to) move from HCL to FCL
 
 **FCL** is not for everyone:
 
@@ -32,7 +32,7 @@ Success for **FCL** requires the user to:
 - Difficulties still remain to establish a **FCL** for kids (discussed below).
 
 
-### Правильно настроенный гибридный замкнутый цикл
+## Well-tuned hybrid closed loop
 
 It is advisable to first establish a well-tuned **HC**L before considering the transition to **FCL**.  Success with **FCL** requires a highly personalised individualised tuning of the user’s setting so that **AAPS** can give insulin to closely mimic YOUR successful hybrid closed loop mode.
 
@@ -40,7 +40,7 @@ It is advisable to first establish a well-tuned **HC**L before considering the t
 
 **FCL is a DIY set up of Automations determined by the user by analysing their data from both their successful HCL and  initial FCL experience when tuning your settings.**
 
-### Инсулины короткого действия (Lyumjev, Fiasp)
+## Fast insulin (Lyumjev, Fiasp)
 
 **FCL** requires fast insulin.  This is so that at the start of meal-related **BG** rise, **FCL** is able to keep **BG** in range (by common definition, under 180 mg/dl (10 mmol/l)).
 
@@ -62,7 +62,7 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 
 However, Fiasp or Lyumjev can result in frequent pump occlusions, even after optimising things like needle length. It is important to have an eye on the cannula or pod time. Many users find 48 hours to be the efficacy insulin limit before resulting in cannula/pod failure.
 
-### Prerequisites
+## Prerequisites
 
 **BG** values and stable bluetooth connectivity are required to ensure **AAPS** can optimally perform without losing valuable time. **FCL** requires a 24/7 technically stable system:
 
@@ -76,13 +76,13 @@ However, Fiasp or Lyumjev can result in frequent pump occlusions, even after opt
 
 The above will vary depending on your **AAPS** component system and your lifestyle.
 
-### Ограничения, относящиеся к приему пищи
+## Meal-related limitations
 
 - Setting up a **FCL** may be easier for people whose diets do not consist of food components with a rapid high effect on **BG**, and meal patterns that do not wildly vary day-to-day. This does not necessarily mean low carb.
 
 - Fat or protein rich diets, or slow digestion/gastroparesis, make things easier rather than harder for **FCL**  because late carbs nicely cover for inevitable “tails” of late action from bolus needed around peak time.
 
-#### Glycemic index and effect on blood glucose
+### Glycemic index and effect on blood glucose
 
 The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose ('EBG')
 
@@ -98,7 +98,7 @@ The most difficult meals for **FCL** are those foods exclusively very high and h
 Erratic consumption of snacks and sweet drinks that are loaded with fast absorbing carbs is problematic for **FCL**.
 
 
-#### Подготовка к физическим нагрузкам
+## Preparing for activity/sports
 
 When exercising or being active, with a pump or hybrid closed loop it is recommended that the user reduces **IOB** prior to exercise.
 
@@ -106,7 +106,7 @@ With **FCL**, the algorithm is tuned to detect **UAM** and automatically deliver
 
 Unusual or erratic exercise activity levels present difficulties for **FCL**. Planning ahead is required for exercise (especially if you want to reduce the need for rescue carbs/snacks during sports low). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dl) **BG**  target, with “no **SMBs** at elevated target” selected in **AAPS*** preferences.
 
-#### Сложности для детей
+## Hurdles for kids
 
 **FCL** can present extra challenges for children and these include:
 
@@ -141,7 +141,7 @@ Carefully observe/analyse the **SMB** sizes shortly after your meal commences. �
 Your **AAPS'** setting must be sufficiently set up to cope with your (!) variety of meals.
 ```
 
-## Обнаружение приёма пищи/ Автоматизация для повышения эффективности
+## Meal detection/your Automations for boosting
 
 For successful **FCL**, **ISF** is the key tuning parameter. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
 
@@ -163,7 +163,7 @@ This feature can be useful for certain situations like “foot to floor” syndr
 
 The section below provides guidance how to bundle **Automation’s** Conditions and how to tackle situations in which the **AAPS** should increase (or decrease) insulin delivery. As **ISF** cannot directly be tuned, raising **Profile Percentage** over 100% will do the same for our purposes.
 
-### Автоматизированные большие СМБ при росте ГК
+### Automated big SMBs at bg rise
 
 The key to successful **FCL** **at the beginning of BG increases from meals, very large automatic SMBS must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in h**HCL**!)
 
@@ -206,7 +206,7 @@ Soon after a few initial **SMBs** are given comes a **balanced phase** where mod
 The **AAPS** main screen (where you see cob=0 in **UAM** full loop) might in this phase ask for more carbs required. In **UAM** mode that simply means, you could make a very rough plausibility check: Is that amount of carbs likely in your body, un-absorbed from your meal just about an hour ago (about which you gave your loop no info)?
 
 
-### порог активного инсулина IOB
+### iob threshold
 
 Often, **Automations** #1 and/or #2 make iob rise to heights that typically are enough for **your** meals. For personalised tuning, look in your **HCL** data at the max iob values that occur with well-managed meals (often: your meal bolus), and above which magnitude a hypo (or requirement for extra carbs) occurred at the end.
 
@@ -235,7 +235,7 @@ After the first boosted **SMB**s were given, your set iobTH and *Automation** #3
 
 If your breakfast substantially deviates in carb content from your average dinner, you may benefit from defining **Automations** that apply in the respective times of day, and have different **iobTH** (possibly also different deltas, and different **Percentage Profile** set). Both, you with defining your meal spectrum and settings (notably, **iobTH**), and the loop managing the unfolding **BG** curve, must accept certain peak heights for reducing hypo danger towards the end of the **DIAs** from **SMBs**.
 
-### Застой на высоких значениях ГК
+### Stagnation at high bg values
 
 In case, after a “rich” meal, a long-lasting stagnation with **high BG** value is seen, **Automation** #6 (below, left),"post-meal High”, helps deal with fatty acid resistance: After multi-course meals, large greasy pizza, raclette evening, the glucose curve can form two humps or, very often, an elongated high plateau.
 
@@ -251,7 +251,7 @@ In case, after a “rich” meal, a long-lasting stagnation with **high BG** val
 
 Кроме того, Автоматизация #5, “Stop post-meal High”, применяется для снижения агрессивности подачи инсулина как только начинает падать уровень глюкозы. (Однако часто алгоритм всё равно ограничивает количество инсулина для предотвращения гипогликемии, поскольку прогнозируемый уровень глюкозы уже снижается).
 
-### Предотвращение гипогликемии
+## Hypo prevention
 
 The core problem is that the **UAM** **FCL** (without carb inputs) can have **no idea how many g of carbs are still available** for absorption, and might use up that “tail” insulin, without you going into a hypo from it.
 
@@ -274,7 +274,7 @@ Before a special meal challenge, you can raise your **iob** threshold, or make a
 
 Со временем вы изучите закономерности, настроите свою Автоматизацию – возможно, даже немного скорректируете свои привычки в еде, чтобы, например, просто получать удовольствие от случайного (!) перекуса, который поможет поддерживать хороший **баланс между активностью инсулина и усвоением углеводов**.
 
-### Очерёдность применимости настроек Автоматизаций
+### Order of programmed Automations
 
 Problems can arise with overlapping definitions in **Automations**. Example: The problem is that delta >8 is also delta >5, i.e. there may be two competing **Automations** What does the loop do then? It always decides according to the sequence in which your **Automations** appear when looking into the burger menu / AdAPS main screen.  Пример: Правило дельта > +8 должно быть первым в списке (и если все правила активны, запускать самый сильный ответ); потом алгоритм проверяет значение дельты >5 (соответственно более мягкий ответ). Если отсортировать список наоборот, правило дельта>8 никогда не вступит в силу, поскольку правило дельта>5 уже применяется первым.
 > Tip for Automations: Order changes are very easy to make. Press on a list entry in **AAPS/Automations** and the user rearrange the **Automations** in question to another position.
@@ -283,7 +283,7 @@ Problems can arise with overlapping definitions in **Automations**. Example: The
 
 ## Устранение неполадок
 
-### Как вернуться к гибридному замкнутому циклу
+### How to get back into Hybrid Closed Loop
 
 You can un-click the top boxes in the **Automations** related to your **FCL**, and go back to bolusing for meals and make carb inputs again. You may have to go to **AAPS** Preferences/Overview/Buttons and get your Buttons “Insulin, Calculator…” back for your **AAPS** main screen. Be aware that now it is again up to you to bolus for meals.
 
@@ -293,13 +293,13 @@ For instance, it is perfectly possible, without any extra steps after **Automati
 
 
 
-### Соблюдены ли все предварительные условия для самодостаточного замкнутого цикла?
+### Are the pre-conditions for FCL still given?
 
 - Is the basic **Profile** still correct?
 - Has the **CGM** quality deteriorated
 - Refer to pre-requisites (above).
 
-### Уровень глюкозы поднимается слишком высоко
+### Glucose goes too high
 
 - Момент приёма пищи не распознается вовремя
     - Проверьте стабильность Bluetooth-соединений
@@ -313,7 +313,7 @@ For instance, it is perfectly possible, without any extra steps after **Automati
 > Если вы готовы использовать AAPS версии для разработчиков, вы можете использовать ту, которая позволяет увеличить размер SMB. Некоторые пользователи также прибегают к небольшим преболюсам в своих "самодостаточных системах замкнутого цикла". However, this interferes with how glucose curve and hence detection of rises and triggered **SMBs** behave, and is therefore not easy to implement with convincing overall benefit.
 - Важным наблюдением со стороны группы испытуемых было то, какую тенденцию ваши кривые глюкозы и активного инсулина (IOB) имеют к моменту приема пищи, это оказывает существенное влияние на пики от приёма углеводов: Снижение уровня (напр. настройка "Включить временную цель TT Ожидаемый прием пищи") позволяет увеличить содержание активного инсулина IOB и удерживать пики в более низких пределах.
 
-### Уровень глюкозы падает слишком низко
+### Glucose goes too low
 
 - Некорректно определяется время начала приёма пищи
     - Check whether you could set bigger deltas to trigger first **SMB**
@@ -330,7 +330,7 @@ For instance, it is perfectly possible, without any extra steps after **Automati
     - It could well be that you simply have to accept higher **BG** peaks for not going low. Или поменяйте диету, чтобы в ней было меньше углеводов и больше белка и жиров.
 
 
-### Больше информации
+### More info
 
 Make sure you stay in touch with other **FCL** users.
 

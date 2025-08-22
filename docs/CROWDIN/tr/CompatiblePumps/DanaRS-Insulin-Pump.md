@@ -79,7 +79,7 @@ orphan: true
 
 * Eski şifreyi girmek için Tamam'a basın.
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS Eski parola girişi](../images/DanaRSPW_04_11PWenter.png)
 
@@ -130,7 +130,7 @@ Yeni bir telefona geçerken aşağıdaki adımları yapmanız gerekir:
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure as described [above](#pairing-pump).
+* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
 * Bazen, Dana-i/RS sekmesindeki BT simgesine uzun tıklayarak AAPS'deki eşleştirme bilgilerinin temizlenmesi gerekebilir.
 
 ## Dana RS pompasıyla seyahat edenler için saat dilimi

@@ -65,7 +65,7 @@ Wähle in der oberen linken Ecke im **Hamburger-Menü** den Punkt **Konfiguratio
 
 Wenn Du das **Kontrollkästchen (4)** neben dem **Zahnrad (3)** wählst, wird das DASH-Menü als Registerkarte im **AAPS**-Interface mit dem Titel **DASH** als eigener Tab angezeigt. Wenn Du dieses Kästchen aktivierst, wird der Zugriff auf die DASH-Befehle bei der Verwendung von **AAPS** erleichtert.
 
-**HINWEIS:** Eine schnellere Möglichkeit, zu den [**DASH-Einstellungen**](#dash-settings) zu gelangen, findest Du im Abschnitt DASH-Einstellungen weiter unten in diesem Dokument.
+**NOTE:** A faster way to access the [**Dash settings**](#omnipod-dash-settings) can be found below in the DASH settings section of this document.
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -83,6 +83,7 @@ Bitte **wische nach links **zur **DASH** Registerkarte, wo du alle Pod Funktione
 
 ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) „Pod-Management“ (Aktivieren, Deaktivieren, Testsignal und Pod-Historie)
 
+(omnipod-dash-activate-pod)=
 
 ### Pod aktivieren
 
@@ -132,7 +133,7 @@ Stelle sicher, dass der neue Pod und das Smartphone, auf dem **AAPS** läuft, na
 
     Klicke auf den Zurück-Knopf auf deinem Smartphone, um zum Tab-Bildschirm **DASH** zurückzukehren, auf dem jetzt Informationen zu deiner aktiven Pod-Sitzung angezeigt werden, einschließlich der aktuellen Basalrate, Pod Reservoir Level, abgegebenem Insulin, Pod Fehlern und Warnungen.
 
-    Weitere Details zu den angezeigten Informationen findest Du im [**DASH-Tab**](#dash-tab)-Abschnitt dieses Dokuments.
+    For more details on the information displayed go to the [**DASH Tab**](#omnipod-dash-tab) section of this document.
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
 
@@ -141,7 +142,7 @@ Stelle sicher, dass der neue Pod und das Smartphone, auf dem **AAPS** läuft, na
 Es ist zu empfehlen, NACH der Aktivierung des Pods die Einstellungen zu exportieren. Exportiere mit jedem Wechsel eines Pods und einmal im Monat die Einstellungen und kopiere die exportierte Datei in Deinen Cloudspeicher. Details hierzu findest Du in [**Erstellen und Wiederherstellen von Backups**](../Maintenance/ExportImportSettings.md).
 
 
-(OmnipodDASH-deactivate-pod)=
+(omnipod-dash-deactivate-pod)=
 
 ### Pod deaktivieren
 
@@ -176,9 +177,11 @@ Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der 
 
  ![Deactivate_Pod_8](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
+(omnipod-dash-resuming-insulin-delivery)=
+
 ### Insulinabgabe fortsetzen
 
-**Hinweis**: Während eines **Profilwechsels**, muss der DASH vor dem Setzen eines neuen Basal-**Profils** die Insulinabgabe stoppen, da die Insulinabgabe unterbrochen sein kann. Lies [**Insulinabgabe unterbrochen**](#delivery-suspended) im Abschnitt Problembehandlung für weitere Details.
+**Hinweis**: Während eines **Profilwechsels**, muss der DASH vor dem Setzen eines neuen Basal-**Profils** die Insulinabgabe stoppen, da die Insulinabgabe unterbrochen sein kann. Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
 
 Benutze diesen Befehl, um den aktiven, derzeit pausierten Pod anzuweisen, die Insulinabgabe fortzusetzen. Nachdem der Befehl erfolgreich verarbeitet wurde, wird die normale Insulinabgabe mit der aktuellen Basalrate fortgesetzt. Grundlage dafür ist das zu dieser Zeit aktive Basal**profil**. Der Pod akzeptiert dann wieder Befehle für Bolus, **TBR**und **SMB**.
 
@@ -215,7 +218,7 @@ In dem folgenden Prozess wird gezeigt, wie Warntöne bestätigt und stummgeschal
 
 4. Wechsele zur Registerkarte **DASH**. Im Feld **Aktive Pod-Warnungen** wird keine Warnmeldung mehr angezeigt und der aktive Pod gibt keine Pieptöne zur Warnung mehr ab.
 
-(OmnipodDASH-view-pod-history)=
+(omnipod-dash-view-pod-history)=
 
 ### Anzeige Pod-Historie
 
@@ -240,7 +243,7 @@ Diese Funktion ist hilfreich bei der Überprüfung von Bolus-, TBR- und Basalrat
 
 ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
-(OmnipodDASH-dash-tab)=
+(omnipod-dash-tab)=
 
 ## Registerkarte DASH
 
@@ -275,7 +278,7 @@ Im Folgenden werden die Anordnung und die Bedeutung der Symbole und Statusfelder
 
 * **Reservoir:** Zeigt 50+ IE übrig an, wenn mehr als 50 Einheiten im Reservoir vorhanden sind. Unter 50 IE werden die exakten Einheiten angezeigt.
 * **Insgesamt abgegeben:** Zeigt die Gesamtzahl der aus dem Reservoir abgegebenen Insulineinheiten an. Dies schließt Insulin ein, das zum Aktivieren und Befüllen verwendet wurde.
-* **Fehler:** Zeigt den letzten Fehler an. Prüfe die [Pod Historie](#view-pod-history) und die Protokolldateien („log files“) auf vorhandene Fehlermeldungen und detailliertere Informationen.
+* **Fehler:** Zeigt den letzten Fehler an. Review the [Pod history](#omnipod-dash-view-pod-history) and log files for past errors and more detailed information.
 *  **Aktive Pod-Warnungen:** Zeigt jeweils aktuelle Warnungen auf dem aktiven Pod.
 
 ### Schaltflächen
@@ -303,12 +306,12 @@ Im Folgenden ist die Bedeutung der Symbole im **Pod Management**-Bildschirm zu s
 
  ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 2 - [**Pod aktivieren**](#activate-pod) : Füllt und aktiviert einen neuen Pod.
-* 3 - [**Pod deaktivieren**](#deactivate-pod) : Deaktiviert den derzeit aktiven Pod.
+* 2 - [**Activate Pod**](#omnipod-dash-activate-pod) : Primes and activates a new pod.
+* 3 - [**Deactivate Pod**](#omnipod-dash-deactivate-pod) : Deactivates the currently active pod.
 * 4 - **Testton abspielen**: Spielt einen einzelnen Test Piep auf dem Pod ab.
-* 5 - [**Pod Historie**](#view-pod-history) : Zeigt den Aktivitätsverlauf des aktiven Pods an.
+* 5 - [**Pod history**](#omnipod-dash-view-pod-history) : Displays the active pod activity history.
 
-(DanaRS-Insulin-Pump-dash-settings)=
+(omnipod-dash-settings)=
 
 ## DASH-Einstellungen
 
@@ -388,6 +391,8 @@ Sonstiges
 
 ## Problembehandlung
 
+(omnipod-dash-delivery-suspended)=
+
 ### Insulinabgabe unterbrochen
 
   * Es gibt keine Unterbrechen-Taste mehr. Wenn Du die Insulinabgabe unterbrechen möchtest, kannst Du eine Null-**TBR** für x Minuten setzen.
@@ -396,7 +401,7 @@ Sonstiges
      - Es kann eine Benachrichtigung geben, dass einer der Befehle unbestätigt blieb: Dies hängt davon ab, wann der Fehler aufgetreten ist.
      - **AAPS** wird alle 15 Minuten versuchen, das neue Basalprofil zu setzen.
      - **AAPS** wird alle 15 Minuten darüber benachrichtigen, dass die Insulinabgabe unterbrochen ist, sofern die Abgabe noch immer unterbrochen ist (Insulinabgabe konnte nicht gestartet werden).
-     - Die [**Insulin fortsetzen**](#resuming-insulin-delivery) Schaltfläche wird aktiv, wenn die Lieferung manuell fortgesetzt werden soll.
+     - The [**Resume delivery**](#omnipod-dash-resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
      - Wenn **AAPS** die Abgabe nicht alleine fortsetzen kann (dies geschieht, wenn der Pod nicht erreichbar ist, der Ton stumm geschaltet ist, etc.), beginnt der Pod für 3 Minuten jede Minute viermal zu piepen. Das wird, wenn die Abgabe für mehr als 20 Minuten ausgesetzt ist, alle 15 Minuten wiederholt.
   * Für unbestätigte Befehle sollte "Aktualisieren" des Podstatus diese bestätigen oder ablehnen.
 

@@ -7,7 +7,7 @@
 
 在**FCL**中，不再需要根据餐量推注胰岛素：将工作交给算法！  **AAPS** 可能允许用户不进行任何餐前大剂量注射，也不输入碳水化合物，这在一种称为“未声明膳食”（**‘UAM’**）的模式下进行。 **UAM** 通过更积极的方式，使 **AAPS** 能够更好地容忍不正确的碳水化合物输入。
 
-### 期望什么？
+## What to expect?
 
 已有许多关于**FCL**积极效果的研究发表。 如需进一步阅读，请参阅以下内容：
 
@@ -22,7 +22,7 @@
 - 微调**AAPS**设置（特别是**自动化规则**）。
 
 
-### 从HCL转向FCL的总体考量
+## General considerations why (not to) move from HCL to FCL
 
 **FCL**并不适合所有人：
 
@@ -32,7 +32,7 @@
 - 为儿童建立 **FCL** 仍然存在困难（下文讨论）。
 
 
-### 良好调校的混合闭环
+## Well-tuned hybrid closed loop
 
 在考虑转向**FCL**前，建议先建立良好调校的**HCL**。  **FCL**成功需要高度个性化的设置调校，使**AAPS**能通过胰岛素输送精确模拟您成功的混合闭环模式。
 
@@ -40,7 +40,7 @@
 
 **FCL是通过分析用户成功的HCL数据和初始FCL体验，自行设置自动化规则的过程。**
 
-### 速效胰岛素 (Lyumjev, Fiasp)
+## Fast insulin (Lyumjev, Fiasp)
 
 **FCL**需要速效胰岛素。  这是为了在进餐相关**血糖**上升初期，**FCL**能通过常规定义（低于180 mg/dl（10 mmol/l））保持**血糖**在范围内。
 
@@ -62,7 +62,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 然而，即使在优化了诸如针头长度之类的事情之后，Fiasp 或 Lyumjev 仍可能导致频繁的泵阻塞。 密切关注套管或储药器的时间非常重要。 许多用户发现 48 小时是胰岛素在导致套管/储药器故障之前的有效极限。
 
-### 先决条件
+## Prerequisites
 
 需要稳定的血糖值和蓝牙连接确保**AAPS**最佳性能，避免损失宝贵时间。 **FCL**需要24/7技术稳定系统：
 
@@ -76,13 +76,13 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 以上内容会因您的 **AAPS** 组件系统和您的生活方式而异。
 
-### 与膳食相关的限制
+## Meal-related limitations
 
 - 对饮食中不含快速影响**血糖**成分且每日餐型变化不大的用户，设置**FCL**可能更容易。 这并不一定意味着低碳水化合物。
 
 - 高脂肪或高蛋白饮食，或慢消化/胃轻瘫，反而使**FCL**更容易实施，因为后期碳水化合物能很好覆盖推注胰岛素不可避免的"尾部"效应。
 
-#### 升糖指数与血糖影响
+### 升糖指数与血糖影响
 
 **UAM**模式的挑战随着"对血糖影响（EBG）"增加而增加：
 
@@ -98,7 +98,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 随意摄入富含快速吸收碳水化合物的零食和甜饮会给**FCL**带来问题。
 
 
-#### 为活动/运动做准备
+## Preparing for activity/sports
 
 在使用泵或混合闭环进行锻炼或活动时，建议用户在锻炼前减少 **IOB**。
 
@@ -106,7 +106,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 异常或不定期的运动水平会给**FCL**带来困难。 锻炼需要提前计划（特别是如果您想减少运动期间低血糖时对急救碳水化合物/零食的需求）。 在活动一天后，建议在晚餐完全消化后为夜间设置较低的**百分比配置文件**：在**自动化**中设置一个升高（>100 mg/dl）的**BG** 目标，并在 ***AAPS*** 首选项中选择“在升高目标时不使用 **SMB**”。
 
-#### 孩子们的障碍
+## Hurdles for kids
 
 **FCL** 可能给儿童带来额外的挑战，其中包括：
 
@@ -116,7 +116,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 - 生长激素和胰岛素敏感性显著变化使**FCL**难以准确调校。
 
 
-## 启用增强型 SMB：安全性
+## Enabling boosted SMBs: safety
 
 在**HCL**中实施了关于闭环自动推注量的安全限制。
 
@@ -141,7 +141,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 您的**AAPS**设置必须充分适应您的各种餐食。
 ```
 
-## 进餐检测/您的增强自动化规则
+## Meal detection/your Automations for boosting
 
 **FCL**成功的关键调校参数是**ISF**。 当使用 **AAPS** Master + **自动化**时，**必须在识别到膳食时（通过葡萄糖增量）自动触发 > 100% 的配置文件更改**，并提供强化的 **ISF**。
 
@@ -151,7 +151,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 - 第2步 - 应用系数（1/配置文件%，在**自动化规则**中设置）增强**ISF**。
 - 步骤 3 - 检查建议的 **ISF** 是否在设定的安全限制范围内。
 
-### FCL 的自动化模板
+### FCL's Automation templates
 
 顶部的复选框。 您可以选择：
 
@@ -163,7 +163,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 下文指导如何组合**自动化规则**条件，以及如何处理**AAPS**需要增加/减少胰岛素输送的情况。 由于 **ISF** 不能直接调整，因此将**配置文件百分比**提高到 100% 以上将达到我们的目的。
 
-### 在血糖上升时自动进行大剂量SMB。
+### Automated big SMBs at bg rise
 
 **FCL**成功的关键在于：**在餐后血糖开始上升时，闭环必须尽快给予非常大的自动SMB**"追赶"所需**IOB**（与您在**HCL**中对类似餐食的典型推注量比较！）
 
@@ -206,7 +206,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 **AAPS**主屏幕（**UAM**全闭环下显示cob=0）在此阶段可能提示需要更多碳水。 在**UAM**模式下，这仅需简单合理性检查：这些碳水是否可能来自约1小时前进餐未吸收的部分？
 
 
-### iob 阈值
+### iob threshold
 
 通常规则#1和/或#2使IOB升至足够高度。 个性化调校需查看**HCL**数据中管理良好餐食（通常是您的餐时推注）的最大IOB值，以及超过该值后出现低血糖（或需要额外碳水）的情况。
 
@@ -235,7 +235,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 如果您的早餐碳水化合物含量与您的平均晚餐有很大差异，您可能会受益于定义适用于一天中相应时间的**自动化**，并具有不同的 **iobTH**（可能还有不同的增量和不同的**百分比配置文件**设置）。 您通过定义餐谱和设置（特别是IOB阈值）与闭环共同管理**血糖**曲线，必须接受某些峰值高度以减少DIA末期的低血糖风险。
 
-### 高血糖值的停滞状态
+### Stagnation at high bg values
 
 若在享用丰盛餐食后，出现**高血糖（BG）**值长期停滞的情况，可启用**自动化**方案#6（左下方所示）——"餐后高血糖"模式，该方案专门应对脂肪酸抵抗现象：在食用多道菜正餐、大量油脂披萨或奶酪火锅晚餐后，血糖曲线可能呈现双峰形态，或更常见表现为长时间的高位平台期。
 
@@ -251,7 +251,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 此外，还需要一个终止自动化 #5，“停止 pmH”，以便在血糖值下降时降低胰岛素给药的激进程度。 （但闭环通常因预测血糖走低而限制更多胰岛素）。
 
-### 低血糖预防
+## Hypo prevention
 
 核心问题是**UAM** **FCL**（无碳水输入）无法知道还有多少克碳水待吸收，可能用完"尾部"胰岛素导致低血糖。
 
@@ -274,7 +274,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 随时间推移，您将学习模式、调校规则——甚至调整饮食习惯，例如偶尔享用帮助维持胰岛素活性和碳水吸收平衡的后期小零食，使闭环（和您自己）更轻松。
 
-### 自动化规则顺序
+### Order of programmed Automations
 
 当**自动化规则**中存在定义重叠时，可能引发系统逻辑冲突。 示例：当Δ值>8mmol/L同时满足Δ值>5mmol/L时（即两条相互冲突的**自动化规则**同时被触发），闭环系统将如何执行？ 闭环系统始终依据**自动化规则**在汉堡菜单/AAPS主界面中的显示顺序执行决策。  示例：必须将Δ值>+8mmol/L的规则置于首位（当所有条件满足时触发最强调节），随后再检查Δ值>5mmol/L的情况（并执行较温和的响应）。 若顺序颠倒，Δ值>8mmol/L的规则将永远无法生效——因为系统会优先执行已适用的Δ值>5mmol/L规则并终止判断流程。
 > 自动化提示：顺序更改非常容易。 在**AAPS/自动化**界面中，长按列表条目即可将指定的**自动化规则**重新排序至其他位置。
@@ -283,7 +283,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 ## 故障排除
 
-### 如何恢复到混合闭环
+### How to get back into Hybrid Closed Loop
 
 您可取消勾选**自动化规则**中与**FCL**相关的顶部复选框，即可恢复餐时大剂量注射功能并重新启用碳水化合物输入。 您可能需要进入**AAPS**的偏好设置/概览/按钮选项，为主屏幕重新启用"胰岛素"、"计算器"等按钮功能。 请注意：现在又需要您自行注射餐前大剂量胰岛素了。
 
@@ -293,13 +293,13 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 
 
-### FCL前提条件是否仍满足？
+### Are the pre-conditions for FCL still given?
 
 - 基本**配置文件**是否仍然正确？
 - **CGM**质量是否下降
 - 参考先决条件（上文）
 
-### 血糖过高
+### Glucose goes too high
 
 - 餐食未被及时识别
     - 检查蓝牙稳定性
@@ -313,7 +313,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 > 如果你已准备好使用AAPS开发版本，也可以选用支持进一步扩大SMB剂量的变体。 部分用户还会在其"FCL"中使用少量预注射剂量。 然而，这种做法会影响血糖曲线的形态，进而干扰对血糖上升的检测以及触发的**SMB**效果，因此难以实施且难以带来显著的整体效益。
 - 试点用户的一个重要观察是：血糖曲线与活性胰岛素(iob)曲线在进食初期的走向，对碳水摄入后的峰值高度影响极大： 若呈下降趋势（例如接近预设的"即将进食临时目标"EatingSoonTT），同时积累适量活性胰岛素，且曲线已呈现强劲的正向加速态势，将显著有助于压低血糖峰值。
 
-### 血糖过低
+### Glucose goes too low
 
 - 误识别餐食
     - 检查您是否可以设置更大的增量来触发第一个 **SMB**
@@ -330,7 +330,7 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
     - 这可能意味着您需要接受更高的**血糖**峰值以避免低血糖。 或者调整饮食结构——减少碳水化合物摄入，同时增加蛋白质和脂肪的比例。
 
 
-### 更多信息
+### More info
 
 建议保持与其他**FCL**用户交流。
 

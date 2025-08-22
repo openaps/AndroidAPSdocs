@@ -84,19 +84,21 @@ Les différents composants <./Getting-Started/ComponentOverview.md>
 ```
 
 ```{toctree}
-:caption: 3) Installation d'AAPS
+:caption: 3) Setting up AAPS
 
-Serveur de reporting <./SettingUpAaps/SettingUpTheReportingServer.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Compilation d'AAPS <./SettingUpAaps/BuildingAaps.md>
-Transfert et Installation d'AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Assistant de configuration <./SettingUpAaps/SetupWizard.md>
-Votre Profil AAPS <./SettingUpAaps/YourAapsProfile.md>
-Modifier la configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration <./SettingUpAaps/ConfigBuilder.md>
-- Préférences <./SettingUpAaps/Preferences.md>
-Compléter les objectifs <./SettingUpAaps/CompletingTheObjectives.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+- Browser Build <./SettingUpAaps/BrowserBuild.md>
+- Computer Build <./SettingUpAaps/ComputerBuild.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -139,13 +141,15 @@ Site d'échange des cadrans personnalisés <./ExchangeSiteCustomWatchfaces/index
 ```
 
 ```{toctree}
-:caption: 7) Maintenance d'AAPS
+:caption: 7) Maintenance of AAPS
 
-Exporter/Importer les paramètres <./Maintenance/ExportImportSettings.md>
-Analyse des données <./Maintenance/Reviewing.md>
-Notes de version AAPS <./Maintenance/ReleaseNotes.md>
-Changements de la doc <. Maintenance/DocumentationUpdate.md>
-Mise à jour vers une nouvelle version d'AAPS <./Maintenance/UpdateToNewVersion.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+Reviewing your data <./Maintenance/Reviewing.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Computer Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 

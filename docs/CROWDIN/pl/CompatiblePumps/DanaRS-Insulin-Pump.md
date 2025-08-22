@@ -79,7 +79,7 @@ orphan: true
 
 * Press OK to enter old password.
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
 
@@ -130,7 +130,7 @@ When switching to a new phone the following steps are necessary:
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure as described [above](#pairing-pump).
+* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
 * Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
 
 ## Timezone traveling with Dana RS pump

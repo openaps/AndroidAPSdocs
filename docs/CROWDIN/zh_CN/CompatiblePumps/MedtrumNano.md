@@ -120,7 +120,7 @@ orphan: true
 
 ***默认值：25单位。***
 
-此设置将修改每小时的最大胰岛素输注量。 若超过此限制，贴片将暂停输注并发出警报。 可通过概览菜单中的[重置警报](#reset-alarms)按钮来解除警报。
+此设置将修改每小时的最大胰岛素输注量。 若超过此限制，贴片将暂停输注并发出警报。 The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
 
 请根据您的胰岛素需求设置合理数值。
 
@@ -128,7 +128,7 @@ orphan: true
 
 ***默认值：80单位。***
 
-此设置将修改每日最大胰岛素输注量。 若超过此限制，贴片将暂停输注并发出警报。 可通过概览菜单中的[重置警报](#reset-alarms)按钮来解除警报。
+此设置将修改每日最大胰岛素输注量。 若超过此限制，贴片将暂停输注并发出警报。 The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
 
 请根据您的胰岛素需求设置合理数值。
 
@@ -189,9 +189,9 @@ orphan: true
 
 #### 从移宇概览标签页激活贴片
 
-在AAPS界面中导航至[移宇标签页](#overview)，并点击右下角的**更换贴片**按钮。
+Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
 
-如果已有贴片处于激活状态，系统将提示您先停用当前贴片。 请参阅[停用贴片](#deactivate-patch)。
+如果已有贴片处于激活状态，系统将提示您先停用当前贴片。 see [Deactivate Patch](#nano-deactivate-patch).
 
 请按照提示操作，完成新贴片的填充和激活。 请注意 - 必须严格按提示步骤操作，仅在系统提示时才能将泵底座与储药贴片连接。 **必须严格遵照激活流程提示操作，仅当完成预充程序后系统提示时，方可将泵体佩戴至身上并插入导管。**
 
@@ -242,9 +242,11 @@ orphan: true
 
 点击**确定**返回主界面。
 
+(nano-deactivate-patch)=
+
 ### 停用贴片
 
-要停用当前激活的贴片，请进入AAPS界面中的[移宇标签页](#overview)，然后点击**更换贴片**按钮。
+To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
 
 ![停用贴片](../images/medtrum/activation/DeactivatePatch.png)
 
@@ -258,9 +260,11 @@ orphan: true
 
 停用完成后，点击**确定**返回主界面，或点击**下一步**继续新贴片激活流程。
 
+(nano-resume-interrupted-activation)=
+
 ### 继续中断的激活
 
-若贴片激活流程被中断（例如因手机电量耗尽），可通过进入AAPS界面中的[移宇标签页](#overview)并点击**更换贴片**按钮来恢复激活流程。
+If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
 
 ![继续中断的激活](../images/medtrum/activation/ActivationInProgress.png)
 
@@ -269,6 +273,8 @@ orphan: true
 ![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
 
 驱动程序将尝试检测当前贴片激活状态。 若检测成功，系统将从当前步骤继续激活流程。
+
+(nano-overview)=
 
 ## 概览
 
@@ -343,6 +349,8 @@ orphan: true
 
 此按钮将启动更换贴片流程。 详见[激活贴片](#medtrum-activate-patch)获取更多信息。
 
+(nano-reset-alarms)=
+
 ### 重置警报
 
 当存在可重置的激活警报时，警报按钮将显示在概览屏幕上。 按下此按钮将重置警报，若贴片因警报暂停，将恢复胰岛素输注。 例如 当日胰岛素最大输注量警报触发暂停时。
@@ -372,7 +380,7 @@ orphan: true
 
 ### 激活中断
 
-若激活流程因手机电量耗尽或系统崩溃等原因中断。 可通过进入更换贴片界面，按此处所述步骤继续激活流程：[恢复中断的激活](#resume-interrupted-activation)
+若激活流程因手机电量耗尽或系统崩溃等原因中断。 The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
 
 ### 预防贴片故障
 

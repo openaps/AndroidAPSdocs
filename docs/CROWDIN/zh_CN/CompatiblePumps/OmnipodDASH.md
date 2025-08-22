@@ -65,7 +65,7 @@ orphan: true
 
 勾选**设置齿轮图标(3)**旁的**复选框(4)**后，DASH菜单将作为标签页显示在**AAPS**界面中，标题为**DASH**。 勾选此选项后，您在使用**AAPS**时将能更便捷地调用DASH指令功能。
 
-**注意：** 您可在本文档的DASH设置章节找到更快捷访问[**Dash设置**](#dash-settings)的方法。
+**NOTE:** A faster way to access the [**Dash settings**](#omnipod-dash-settings) can be found below in the DASH settings section of this document.
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -83,6 +83,7 @@ orphan: true
 
 ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) "储药器管理"（激活、停用、测试蜂鸣音、查看使用记录）
 
+(omnipod-dash-activate-pod)=
 
 ### 激活Pod
 
@@ -132,7 +133,7 @@ orphan: true
 
     点击手机返回键回到**DASH**标签页，该界面现在将显示当前使用中储药器的信息，包括基础率设定值、储药器剩余量、已输注胰岛素量、储药器报错及警报等内容。
 
-    有关显示信息的更多详情，请参阅本文档[**DASH标签页**](#dash-tab)部分。
+    For more details on the information displayed go to the [**DASH Tab**](#omnipod-dash-tab) section of this document.
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
 
@@ -141,7 +142,7 @@ orphan: true
 建议在激活储药器后导出设置。 应在每次更换储药器时导出设置，并每月将导出文件备份至云存储。 参见[**导出设置文档**](../Maintenance/ExportImportSettings.md)。
 
 
-(OmnipodDASH-deactivate-pod)=
+(omnipod-dash-deactivate-pod)=
 
 ### 停用Pod
 
@@ -176,9 +177,11 @@ orphan: true
 
  ![Deactivate_Pod_8](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
+(omnipod-dash-resuming-insulin-delivery)=
+
 ### 恢复胰岛素输注
 
-**注意**：在执行**配置文件切换**时，DASH必须先暂停输注才能设置新的基础**配置文件**，因为输注功能可能被暂停。 详情请参阅故障排除章节中的[**输注暂停**](#delivery-suspended)部分。
+**注意**：在执行**配置文件切换**时，DASH必须先暂停输注才能设置新的基础**配置文件**，因为输注功能可能被暂停。 Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
 
 此指令用于命令当前暂停中的储药器恢复胰岛素输注。 指令成功执行后，系统将根据当前激活的基础**配置文件**，按当前时间对应的基础率恢复胰岛素正常输注。 储药器将重新接受大剂量注射、**临时基础率**和**超微大剂量**指令。
 
@@ -215,7 +218,7 @@ orphan: true
 
 4. 请进入**DASH**标签页。 在**使用中储药器警报**字段下，警告信息不再显示，且使用中的储药器将不再发出到期警告提示音。
 
-(OmnipodDASH-view-pod-history)=
+(omnipod-dash-view-pod-history)=
 
 ### 查看 Pod 历史
 
@@ -240,7 +243,7 @@ orphan: true
 
 ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
-(OmnipodDASH-dash-tab)=
+(omnipod-dash-tab)=
 
 ## DASH标签页
 
@@ -275,7 +278,7 @@ orphan: true
 
 * **储药量：**当储药器剩余药量超过50单位时，显示"50+单位剩余"。 低于50单位时，将显示精确剩余药量。
 * **总输注量：**显示储药器已输送的胰岛素总量（单位）。 该数值包含激活储药器和管路填充所消耗的胰岛素。
-* **错误信息：**显示最近发生的错误。 请查阅[储药器历史记录](#view-pod-history)和日志文件以获取过往错误详情及更完整的信息。
+* **错误信息：**显示最近发生的错误。 Review the [Pod history](#omnipod-dash-view-pod-history) and log files for past errors and more detailed information.
 *  **活动储药器警报：** 保留用于当前活动储药器上正在运行的警报。
 
 ### 按钮
@@ -303,12 +306,12 @@ orphan: true
 
  ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 2 - [**激活储药器**](#activate-pod)：对新储药器进行管路填充和激活操作。
-* 3 - [**停用储药器**](#deactivate-pod)：停用当前活动中的储药器。
+* 2 - [**Activate Pod**](#omnipod-dash-activate-pod) : Primes and activates a new pod.
+* 3 - [**Deactivate Pod**](#omnipod-dash-deactivate-pod) : Deactivates the currently active pod.
 * 4 - **播放测试提示音**：按下时使储药器发出单次测试提示音。
-* 5 - [**储药器历史记录**](#view-pod-history)：显示活动储药器的操作历史记录。
+* 5 - [**Pod history**](#omnipod-dash-view-pod-history) : Displays the active pod activity history.
 
-(DanaRS-Insulin-Pump-dash-settings)=
+(omnipod-dash-settings)=
 
 ## DASH设置
 
@@ -388,6 +391,8 @@ DASH驱动程序设置可通过左上角**汉堡菜单**中的**配置构建器(
 
 ## 故障排除
 
+(omnipod-dash-delivery-suspended)=
+
 ### 输注暂停
 
   * 不再设有暂停按钮。 如需"暂停"储药器，可设置持续时间为X分钟的零值**临时基础率(TBR)**。
@@ -396,7 +401,7 @@ DASH驱动程序设置可通过左上角**汉堡菜单**中的**配置构建器(
      - 系统可能显示某条指令未确认的通知（具体取决于通信失败发生的时机）。
      - **AAPS**将每15分钟尝试设置新的基础率配置文件。
      - 若输注仍处于暂停状态（恢复输注失败），**AAPS**将每15分钟显示一次输注暂停的提醒通知。
-     - 若用户选择手动恢复输注，[**恢复输注**](#resuming-insulin-delivery)按钮将处于激活状态。
+     - The [**Resume delivery**](#omnipod-dash-resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
      - 若**AAPS**自动恢复输注失败（当储药器无法连接、静音等情况发生时），储药器将每分钟发出4次蜂鸣、持续3分钟；若暂停状态超过20分钟仍未恢复，则每15分钟重复此警报模式。
   * 对于未确认的指令，"刷新储药器状态"操作可予以确认或否决。
 

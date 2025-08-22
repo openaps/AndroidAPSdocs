@@ -63,6 +63,6 @@ AAPS 的開發版本僅適用於能處理堆棧追蹤、查找日誌文件，甚
     
     - 選擇您需要的變種： 
         - fullRelease: 用於正常的幫浦使用，具有完整功能。
-        - [aapsclient、aapsclient2](../RemoteFeatures/RemoteControl.md#aapsclient) 針對照護者使用（需 [Nightscout](../SettingUpAaps/Nightscout.md)）。
+        - [aapsclient, aapsclient2](#RemoteControl_aapsclient) 供看護人員使用（需要 [Nightscout](../SettingUpAaps/Nightscout.md)）。
         - pumpcontrol
         - 以“Debug”結尾的文字表示 APK 將在除錯模式下建置，這對於除錯很有幫助。

@@ -79,7 +79,7 @@ orphan: true
 
 * 按确定输入旧密码。
 
-* 输入<0>旧密码</0>（默认密码见<1>上</1>），然后按确定
+* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
 
@@ -130,7 +130,7 @@ orphan: true
 
 ### DanaRS v3, Dana-i
 
-* 按[上文](#pairing-pump)所述步骤启动配对程序。
+* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
 * 有时需长按Dana-i/RS标签页的蓝牙图标清除AAPS中的配对信息。
 
 ## 使用Dana RS泵进行跨时区旅行
