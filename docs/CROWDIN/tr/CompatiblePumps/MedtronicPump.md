@@ -102,7 +102,7 @@ Ekranın altında üç buton vardır:
 - **Pump History**: Shows pump history (see [below](#MedtronicPump-pump-history))
 - **RL Stats**: Show RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status))
 
-(MedtronicPump-MedtronicPump-pump-history)=
+(MedtronicPump-pump-history)=
 
 ## Pompa geçmişi
 
@@ -110,7 +110,7 @@ Ekranın altında üç buton vardır:
 
 Pompa geçmişi her 5 dakikada bir alınır ve yerel olarak saklanır. Yalnızca 24 saatlik geçmiş değerler depolanır. The allows for a convenient way to see pump behaviour should that be required. The only items stored are those relevenant to AAPS and will not include a configuration function that has no relevance.
 
-(MedtronicPump-MedtronicPump-rl-status-rileylink-status)=
+(MedtronicPump-rl-status-rileylink-status)=
 
 ## RL Durumu (RileyLink Durumu)
 
