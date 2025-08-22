@@ -60,7 +60,7 @@ orphan: true
 
 - **幫浦序列號**：顯示在幫浦背面，以 SN 開頭。 您應該只輸入顯示的 6 位數字，沒有任何字母字符（例如：123456）。
 - **幫浦型號**：你使用的幫浦型號（例如 522）。 
-- **幫浦頻率**：有兩個選項，根據你的幫浦最初發行的地區。 Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select): 
+- **幫浦頻率**：有兩個選項，根據你的幫浦最初發行的地區。 如果你不確定選擇哪個選項，請檢查[常見問題解答](#MedtronicPump-faq)： 
     - 美國和加拿大使用的頻率為 916 Mhz
     - 全球其他地區使用的頻率為 868 Mhz
 - **幫浦最大基礎率（U/h）**：這需要與你的幫浦上設置的設定相符（請參閱上方的幫浦配置）。 再次提醒，此設定必須謹慎選擇，因為他將決定 AAPS 可透過你的基礎率提供的胰島素量。 這將有效地設置最大臨時基礎率。 作為範例，將此數值設置為你最大標準基礎率的四倍，將允許 400% 的臨時基礎率。 幫浦允許的最大值為每小時 34.9 單位。
@@ -99,8 +99,8 @@ orphan: true
 螢幕底部有三個按鈕：
 
 - **重新整理**：用於重新整理幫浦的目前狀態。 此功能應僅在連線長時間中斷時使用，因為這將需要完整的資料重新整理（檢索歷史紀錄、獲取/設置時間、獲取設定檔、獲取電池狀態等）。
-- **Pump History**: Shows pump history (see [below](#MedtronicPump-pump-history))
-- **RL Stats**: Show RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status))
+- **幫浦歷史**：顯示幫浦歷史（見[下文](#MedtronicPump-pump-history)）
+- **RL 狀態**：顯示 RL 狀態（見[下文](#MedtronicPump-rl-status-rileylink-status)）
 
 (MedtronicPump-MedtronicPump-pump-history)=
 
