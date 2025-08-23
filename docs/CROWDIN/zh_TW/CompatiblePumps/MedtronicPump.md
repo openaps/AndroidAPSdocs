@@ -102,7 +102,7 @@ orphan: true
 - **幫浦歷史**：顯示幫浦歷史（見[下文](#MedtronicPump-pump-history)）
 - **RL 狀態**：顯示 RL 狀態（見[下文](#MedtronicPump-rl-status-rileylink-status)）
 
-(MedtronicPump-MedtronicPump-pump-history)=
+(MedtronicPump-pump-history)=
 
 ## 幫浦歷史紀錄
 
@@ -110,7 +110,7 @@ orphan: true
 
 幫浦歷史紀錄每 5 分鐘檢索一次並存儲在本地。 僅存儲過去 24 小時的歷史紀錄。 這提供了一種方便的方式來查看幫浦的行為，若需要的話。 存儲的項目僅限於 AAPS 相關的資料，並不包括任何無關的配置功能。
 
-(MedtronicPump-MedtronicPump-rl-status-rileylink-status)=
+(MedtronicPump-rl-status-rileylink-status)=
 
 ## RL 狀態（RileyLink 狀態）
 

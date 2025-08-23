@@ -102,7 +102,7 @@ orphan: true
 - **Pump History**: Shows pump history (see [below](#MedtronicPump-pump-history))
 - **RL Stats**: Show RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status))
 
-(MedtronicPump-MedtronicPump-pump-history)=
+(MedtronicPump-pump-history)=
 
 ## 泵历史记录
 
@@ -110,7 +110,7 @@ orphan: true
 
 泵历史记录每5分钟检索一次并存储在本地。 仅存储最近24小时的历史记录。 这为查看泵行为（如有需要）提供了便捷方式。 仅存储与AAPS相关的项目，不包括无关的配置功能。
 
-(MedtronicPump-MedtronicPump-rl-status-rileylink-status)=
+(MedtronicPump-rl-status-rileylink-status)=
 
 ## RL状态(RileyLink状态)
 
