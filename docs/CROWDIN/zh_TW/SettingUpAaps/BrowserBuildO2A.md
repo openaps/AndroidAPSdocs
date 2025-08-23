@@ -3,8 +3,13 @@ orphan: true
 - - -
 
 與 Android 相容（最簡單，建議優先選擇）
+
 <!--crowdin: exclude-->
 
+```{tab-set}
+
+:::{tab-item} YouTube
+(aaps-ci-option2-android-video)=
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
@@ -15,3 +20,17 @@ orphan: true
     </iframe>
   </div>
 </div>
+:::  
+
+:::{tab-item} Wiki
+:::{include} BrowserBuildO2AS.md
+:::  
+
+```
+
+
+
+
+
+
+
