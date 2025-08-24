@@ -19,6 +19,8 @@
 * Между экранами также можно переходить свайпом влево или вправо.
 * Видимые вкладки можно выбрать в [Конфигураторе](#Config-Builder-tab-or-hamburger-menu).
 
+(aaps-screens-profile--target)=
+
 ### Раздел B - Профиль & Цель
 
 #### Текущий профиль
@@ -295,7 +297,7 @@
 
 Можно активировать до четырех дополнительных графиков ниже главного графика. В [Простом режиме](#preferences-simple-mode)дополнительные графики предустановлены и не могут быть изменены. Выключите **Простой режим**, если хотите установить собственную конфигурацию дополнительных графиков.
 
-Чтобы настроить дополнительные графики щелкните по маленькомутреугольнику справа от [главного](#section-f---main-graph) и прокрутите вниз.
+To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
 
 ![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
 
@@ -378,7 +380,7 @@ Buttons for Insulin and Carbs are almost always visible. If the connection to th
 
 ![Кнопка инсулина](../images/Home2020_ButtonInsulin.png)
 
-Чтобы ввести заданное количество инсулина без использования [калькулятора болюса](#bolus-wizard).
+To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
 
 Можно автоматически начать временную цель TT **Ожидаемый прием пищи**, поставив флажок рядом с опцией [Начать ВЦ ожидаемый прием пищи](#TempTargets-eating-soon-temp-target).
 
@@ -406,7 +408,7 @@ The insulin button can be used when the pump is suspended as well, i.e. to recor
 
 #### Калькулятор
 
-Смотрите раздел Мастер болюса [ниже](#bolus-wizard).
+See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
 
 #### Калибровки
 
@@ -503,17 +505,19 @@ The insulin button can be used when the pump is suspended as well, i.e. to recor
 
 ### Действия-раздел M
 
-Кнопка **[Смена профиля](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** является альтернативой нажатию на [текущий профиль](#section-b---profile--target) на главном экране.
+Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#aaps-screens-profile--target) on homescreen.
 
-Кнопка **[Временная цель](../DailyLifeWithAaps/TempTargets.md)** - альтернатива нажатию на [текущую цель](#section-b---profile--target) на главном экране.
+Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#aaps-screens-profile--target) on homescreen.
 
 Кнопка начала или отмены временного базала. Обратите внимание, что кнопка меняется с “TEMPBASAL” (ВРЕМБАЗАЛ) на “CANCEL x%” (ОТМЕНА х%), после начала действия.
 
-Несмотря на то, что [пролонгированные болюсы](#Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) не работают в замкнутом цикле, некоторые всё равно просили оставить эту опцию.
+Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
 
 * Эта опция доступна только для помпDana RS и Insight. 
     * Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов.
     * Убедитесь, что ознакомились с [подробностями](../DailyLifeWithAaps/ExtendedCarbs.md) перед использованием этой опции.
+
+(aaps-screens-careportal)=
 
 ### Портал терапии-раздел N
 
@@ -536,7 +540,7 @@ The insulin button can be used when the pump is suspended as well, i.e. to recor
 
 ### Портал терапии-раздел О
 
-Контроль ГК, заполнение инфузионного набора, установка сенсора и замена батареи помпы - основные данные в [разделе N](#careportal---section-n).
+BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#aaps-screens-careportal).
 
 Кнопка Заполнение инфузионного набора позволяет регистрировать смену места катетера помпы, а также замену картриджа инсулина.
 
@@ -647,7 +651,7 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 * Прием пищи (вручную введенный кнопками Insulin, Quick Wizard или Bolus Wizard)
 * Микроболюсы SMB, при включенной опции подачи микроболюсов
 
-Углеводы (строка **2**) хранятся только в Nightscout. Если вы пользовались Помощником болюса [](#bolus-wizard) для вычисления инсулина, то можете нажать на текст «Calc» (строка **3**) и увидеть детали расчета.
+Углеводы (строка **2**) хранятся только в Nightscout. If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
 
 В зависимости от используемой помпы инсулин и углеводов могут быть показаны на одной строке или на нескольких - для углеводов и для собственно болюса.
 
@@ -702,7 +706,7 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 
 ## Просмотр журнала
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Просмотр журнала. Его невозможно показать в главном меню через Конфигуратор. Доступ к нему также можно получить через кнопку в нижней части вкладки [Действия](#action-tab).
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Просмотр журнала. Его невозможно показать в главном меню через Конфигуратор. It can also be accessed through a button at the bottom of the [Action tab](#screens-action-tab).
 
 Позволяет перемещаться по журналу **AAPS**. См соответствующую страницу - [ Просмотр данных > Журнал истории](../Maintenance/Reviewing.md).
 
