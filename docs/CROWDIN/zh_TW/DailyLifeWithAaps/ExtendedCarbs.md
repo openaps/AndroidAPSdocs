@@ -35,7 +35,7 @@ ______________________________________________________________________
 
 **重要注意事項：**當然，你需要嘗試看看哪些具體數值對你有效。 你還可以仔細調整*限制 SMB 的最大基礎率分鐘數*設置，以使演算法更積極或較不積極。 對於低碳水化合物、高脂肪/高蛋白餐食，可能僅使用 eCarbs 就足夠，不需要手動注射（詳情請參閱上述的部落格文章）。 當生成 eCarbs 時，系統也會在 Careportal 中生成一個筆記來紀錄所有輸入，這樣可以更容易地進行調整和改進。
 
-(Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
+(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## 延長注射及其為何在閉環系統中無法運作？
 
 如上所述，延長或多波段注射在閉環系統中並不真正有效。 [請參閱下方詳情](#why-extended-boluses-wont-work-in-a-closed-loop-environment)
@@ -53,7 +53,7 @@ ______________________________________________________________________
 
 ![AAPS 2.6 中的延長注射](../images/ExtendedBolus2_6.png)
 
-(Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
+(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### 為什麼延長注射在閉環系統中無法運作
 
 1. 循環系統決定現在應注射 1.55U/h。 無論這是透過延長注射還是 TBR 提供，對於演算法來說沒有區別。 實際上，有些幫浦使用延長注射。 那麼接下來該怎麼辦？ 大多數幫浦驅動程式會停止延長注射——> 你甚至不需要開始他。
