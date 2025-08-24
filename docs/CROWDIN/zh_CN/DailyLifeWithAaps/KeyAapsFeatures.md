@@ -72,7 +72,7 @@ OpenAPS SMB的设置如下所述。
 - 胰岛素抵抗成人：12
 - 孕妇：25
 
-*另请参见[硬编码限制概述](#overview-of-hard-coded-limits)。*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
@@ -97,7 +97,7 @@ OpenAPS SMB的设置如下所述。
 - 胰岛素抵抗成人：25
 - 孕妇：40
 
-*另请参见[硬编码限制概述](#overview-of-hard-coded-limits)。*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 注意：在使用**SMB**时，**max-IOB**的计算方式与AMA不同。 在**AMA**中，maxIOB是基础**IOB**的安全参数，而在SMB模式下，它还包括大剂量IOB。
 
@@ -117,7 +117,7 @@ OpenAPS SMB的设置如下所述。
 
 ### 启用Autosens功能
 
-此为[Autosens](#autosens)功能。 启用DynamicISF时无法同时启用，因二者为修改同一参数（胰岛素敏感系数）的不同算法。
+This is the [Autosens](#Open-APS-features-autosens) feature. 启用DynamicISF时无法同时启用，因二者为修改同一参数（胰岛素敏感系数）的不同算法。
 
 Autosens观察血糖偏差（正/负/中性）。 它将尝试根据这些偏差来确定你对胰岛素的敏感或抵抗程度，并根据这些偏差调整基础率和ISF。
 
@@ -268,7 +268,7 @@ AMA，即“advanced meal assist”的缩写，是OpenAPS从2017年（oref0）�
 - 胰岛素抵抗成人：12
 - 孕妇：25
 
-*另请参见[硬编码限制概述](#overview-of-hard-coded-limits)。*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 ### OpenAPS可以提供的最大基础IOB [U]（OpenAPS“max-iob”）
 
@@ -282,7 +282,7 @@ AMA，即“advanced meal assist”的缩写，是OpenAPS从2017年（oref0）�
 - 胰岛素抵抗成人：12
 - 孕妇：25
 
-*另请参见[硬编码限制概述](#overview-of-hard-coded-limits)。*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 ### 启用AMA Autosens
 
