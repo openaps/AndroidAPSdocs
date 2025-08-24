@@ -16,7 +16,7 @@ Building AAPS with GitHub Actions.
 
 ## Device and software specifications for building AAPS
 
-You need a browser that works on either Android or iOS.
+We recommend using an Android device. You can also use a computer or an iOS device.
 
 You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
 
