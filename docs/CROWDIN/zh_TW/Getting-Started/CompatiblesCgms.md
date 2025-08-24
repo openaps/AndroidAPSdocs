@@ -9,7 +9,7 @@
 * [xDrip+設定](../CompatibleCgms/xDrip.md)
 * [Nightscout 作為血糖資料來源](../CompatibleCgms/CgmNightscoutUpload.md): 儘管可以使用 Nightscout 作為閉環胰島素給藥的血糖資料來源，但**這種方法不推薦**，因為其依賴穩定的行動網路或 Wi-Fi 連接。 這意味著你的**CGM**資料只有在與你的 Nightscout 網站保持在線連接時，才會被**AAPS**接收。 為了更加穩定的設置，使用具有接收器的本地廣播的 CGM（如下所列）到**AAPS**，是一個更好的選擇。
 
-| CGM                                                  | Available [BG Sources](#Config-Builder-bg-source)                                                        |
+| CGM                                                  | 可用的[血糖資料來源](#Config-Builder-bg-source)                                                                   |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | [Dexcom G7](../CompatibleCgms/DexcomG7.md)           | [xDrip+](../CompatibleCgms/xDrip.md)、DiaKEM 應用程式或 [Juggluco](../CompatibleCgms/Juggluco.md)              |
 | [Dexcom ONE+ 和 Stelo](../CompatibleCgms/DexcomG7.md) | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
