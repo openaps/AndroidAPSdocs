@@ -493,6 +493,8 @@ Date de sortie : 23-01-2021
 - Corrections NSClient
 - Le conseiller Bolus fonctionne maintenant avec les versions Pumpcontrol et NSClient
 
+(version-2811)=
+
 ## Version 2.8.1.1
 
 Date de sortie : 12-01-2021
