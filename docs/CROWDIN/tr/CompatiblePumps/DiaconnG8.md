@@ -92,4 +92,4 @@ orphan: true
 ### Yayma Blosu fonksiyonu
 
 - Yayma bolus kullanırsanız, kapalı döngü devre dışı bırakılır.
-- See [this page](#Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
