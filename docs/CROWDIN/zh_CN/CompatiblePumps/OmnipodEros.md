@@ -69,7 +69,7 @@ orphan: true
 
 点击**下一步**按钮继续完成**设置向导**其余步骤。所选RileyLink初始化可能需要长达一分钟，之后**下一步**按钮才会激活。
 
-具体设置储药器通信设备的步骤详见下文[RileyLink配置章节](#rileylink-setup)。
+Detailed steps on how to setup your pod communication device are listed below in the [RileyLink Setup Section](#OmnipodEros-rileylink-setup).
 
 **或**
 
@@ -77,7 +77,7 @@ orphan: true
 
 通过左上角**汉堡菜单**进入**配置构建器(1)**➜**泵**➜**Omnipod**，选择标有**Omnipod**的**单选按钮(2)**。 勾选**设置齿轮图标(3)**旁的**复选框(4)**后，Omnipod菜单将作为**POD**标签页显示在AAPS界面中。 本文档中将其称为**Omnipod(POD)**标签页。
 
-> **注意：**更快捷访问**Omnipod设置**的方法请参阅本文档[Omnipod设置章节](#omnipod-settings)。
+> **NOTE:** A faster way to access the **Omnipod settings** can be found below in the [Omnipod Settings section](#OmnipodEros-omnipod-settings) of this document.
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
@@ -101,7 +101,7 @@ orphan: true
 
 ### RileyLink 设置
 
-若您已通过设置向导或上述步骤成功配对RileyLink，请直接前往下方[激活储药器章节](#activating-a-pod)。
+If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the [Activating a Pod Section](#OmnipodEros-activating-a-pod) below.
 
 *注：RileyLink未连接时，主页标签页的胰岛素和计算器按钮会消失，这是明显的视觉提示。 AAPS启动后约30秒内也会出现此现象，此时系统正在主动连接RileyLink。*
 
@@ -109,7 +109,7 @@ orphan: true
 
 2. 选择Omnipod驱动后，通过**配置构建器(1)**➜**泵**➜**Omnipod**➜**齿轮图标(设置)(2)**➜**RileyLink配置(3)**路径，点击**未设置**或**MAC地址(如有显示)**文字来识别并选择您的RileyLink设备。
 
-   > 请确保您的RileyLink电量充足，并将其[紧贴放置](#optimal-omnipod-and-rileylink-positioning)（距离手机约30厘米以内），以便AAPS通过MAC地址识别设备。 选择完成后，即可开始激活首个储药器使用会话。 使用手机返回键回到AAPS主界面。
+   > Ensure your RileyLink battery is charged and it is [positioned in close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. 选择完成后，即可开始激活首个储药器使用会话。 使用手机返回键回到AAPS主界面。
    > 
    > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
@@ -131,7 +131,7 @@ orphan: true
 
 激活储药器前，请确保您已在Omnipod设置中正确配置并连接RileyLink设备。
 
-*重要提示：出于安全防护机制，储药器激活配对时的通信距离存在严格限制。 配对前储药器射频信号较弱，但成功配对后将恢复全功率信号传输。 操作过程中，请确保*储药器[紧贴放置](#optimal-omnipod-and-rileylink-positioning)（距离约30厘米以内），但避免直接叠放或紧靠RileyLink设备。
+*重要提示：出于安全防护机制，储药器激活配对时的通信距离存在严格限制。 配对前储药器射频信号较弱，但成功配对后将恢复全功率信号传输。 During these procedures, make sure that your pod is* [within close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) but not on top of or right next to the RileyLink.\*
 
 01. 请进入**Omnipod(POD)**标签页，点击**储药器管理(1)**按钮，然后选择**激活储药器(2)**。
 
@@ -143,7 +143,7 @@ orphan: true
     > 
     > 请确保新储药器与RileyLink设备保持近距离（30厘米以内），然后点击**下一步**按钮。
 
-03. 在**初始化储药器**界面，储药器将开始自检（您会听到"咔嗒"一声，随后是一连串滴答声，表明储药器正在进行自检程序）。 若RileyLink超出待激活储药器的有效范围，您将收到**储药器无响应**的错误提示。 遇到此情况时，请[将RileyLink移近](#optimal-omnipod-and-rileylink-positioning)储药器（保持30厘米以内距离，但勿直接叠放或紧贴），然后点击**重试(1)**按钮。
+03. 在**初始化储药器**界面，储药器将开始自检（您会听到"咔嗒"一声，随后是一连串滴答声，表明储药器正在进行自检程序）。 若RileyLink超出待激活储药器的有效范围，您将收到**储药器无响应**的错误提示。 If this occurs, [move the RileyLink closer](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
 
     > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
 
@@ -183,7 +183,7 @@ orphan: true
 
     点击手机返回键回到**Omnipod(POD)**标签页，此时界面将显示当前储药器会话信息，包括基础率、储药器余量、已输注胰岛素量、设备报错及提醒等数据。
 
-    欲了解界面显示信息的详细说明，请参阅本文档[Omnipod(POD)标签页](#omnipod-pod-tab)章节。
+    For more details on the information displayed go to the [Omnipod (POD) Tab](#OmnipodEros-omnipod-pod-tab) section of this document.
 
     ![Activate_Pod_14](../images/omnipod/Activate_Pod_14.png) ![Activate_Pod_15](../images/omnipod/Activate_Pod_15.png)
 
@@ -225,7 +225,7 @@ orphan: true
 
 以下流程将向您展示如何暂停和恢复胰岛素泵的输注。
 
-*注意 - 如果您没有看到"暂停"按钮*，说明该功能尚未在Omnipod(POD)标签页中启用显示。 在[Omnipod设置](#omnipod-settings)的**其他**选项下，启用**在Omnipod标签页显示暂停输注按钮**设置。
+*注意 - 如果您没有看到"暂停"按钮*，说明该功能尚未在Omnipod(POD)标签页中启用显示。 Enable the **Show Suspend Delivery button in Omnipod tab** setting in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### 暂停胰岛素输注
 
@@ -433,7 +433,7 @@ orphan: true
 
 - **总输注量：**显示储药器已输送的胰岛素总量（单位）。 *请注意这是近似值，因为pod的灌注和填充并非精确过程。*
 
-- **错误信息：**显示最近发生的错误。 检查[Pod历史记录](#view-pod-history)、[RileyLink历史记录](#omnipod-eros-rileylink-and-active-pod-history)以及日志文件，以查看过往错误和更详细信息。
+- **错误信息：**显示最近发生的错误。 Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
 - **活动储药器警报：** 保留用于当前活动储药器上正在运行的警报。 通常用于当pod超过72小时有效期且设备原生蜂鸣警报正在运行时。
 
@@ -447,7 +447,7 @@ orphan: true
   > 
   > 用于刷新储药器状态并清除显示（不确定）的状态字段。
   > 
-  > 请参阅下方[故障排除章节](#troubleshooting)获取更多信息。
+  > See the [Troubleshooting section](#OmnipodEros-troubleshooting) below for additional information.
 
 - **POD管理：**
 
