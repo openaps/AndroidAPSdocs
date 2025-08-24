@@ -271,6 +271,8 @@ Here is the screenshot detailing the **Automation** triggers:
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
+(automating-preference-settings-export)=
+
 ## Automating Preference Settings Export
 
 ### Unattended Exports: scheduled (daily)
