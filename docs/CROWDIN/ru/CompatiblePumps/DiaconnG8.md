@@ -92,4 +92,4 @@ orphan: true
 ### Функция пролонгированного (расширенного) болюса
 
 - Если вы пользуетесь пролонгированным болюсом, замкнутый цикл будет деактивирован.
-- [На этой странице](#Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) приведена подробная информация о том, почему расширенный болюс не работает в условиях замкнутого цикла.
+- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
