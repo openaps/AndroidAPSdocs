@@ -14,7 +14,7 @@ orphan: true
 
 ![運行工作流程](../images/update/CI/GitHubActions2.png)
 
-5. Select the branch you want to deploy (master), the [variant](#variant) (fullRelease) and tap Run Workflow.
+5. 選擇你想要部署的分支（主分支）、[版本](#variant)（fullRelease）並點擊運行工作流程。
 
 
 
