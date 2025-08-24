@@ -273,6 +273,8 @@
 
 ![替代文字](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
+(automating-preference-settings-export)=
+
 ## 自動化偏好設定匯出
 
 ### 不需人員監控的匯出：排程（每日）
