@@ -72,7 +72,7 @@ For example, if the highest basal rate in your profile was 0.5 U/h you could mul
 - Insulin-resistant adult: 12
 - Pregnant: 25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
@@ -97,7 +97,7 @@ Be careful and patient when adjusting your **max-IOB**. It is different for ever
 - Insulin resistant adult: 25
 - Pregnant: 40
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
 
@@ -117,7 +117,7 @@ If you have this option enabled, the insulin sensitivity will be decreased while
 
 ### Enable Autosens feature
 
-This is the [Autosens](#autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
+This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
 Autosens looks at blood glucose deviations (positive/negative/neutral). It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 
@@ -268,7 +268,7 @@ The hardcoded parameters in **AAPS** are:
 - Adulto insulino-resistente: 12
 - Pregnant: 25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
 
@@ -282,7 +282,7 @@ The default value is 2, but you should rise this parameter slowly to see how muc
 - Adulto insulino-resistente: 12
 - Pregnant: 25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 ### Enable AMA Autosens
 
