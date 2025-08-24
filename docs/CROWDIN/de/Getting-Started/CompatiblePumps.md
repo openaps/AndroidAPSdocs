@@ -9,12 +9,12 @@ AAPS funktioniert mit einer Reihe von Insulinpumpen.  Die folgende Liste enthäl
 - [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
 - [Diaconn G8 ](../CompatiblePumps/DiaconnG8.md)  (Bluetooth)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md) (Bluetooth)
-- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  ([zusätzliches Kommunikationsgerät](#additional-communication-device) benötigt)
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)  (Bluetooth)
 - [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)
-- Bestimmte ältere [Medtronic](../CompatiblePumps/MedtronicPump.md)-Pumpen ([zusätzliches Kommunikationsgerät](#additional-communication-device) benötigt)
+- Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
 
 ## My pump is not listed
 
