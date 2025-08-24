@@ -325,6 +325,8 @@ La tabla anterior supone que el usuario tiene acceso tanto a un monitor continuo
 
 *All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Los registros de Nightscout incluyen informes diarios y semanales que pueden ayudar a los profesionales de la salud en sus conversaciones con pacientes con diabetes tipo 1 al proporcionar datos más precisos sobre el control glucémico y consideraciones conductuales.
 
+(accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
+
 ### Accessibility for users AAPS who are partially or completely blind
 
 #### Day to day AAPS use:
