@@ -69,7 +69,7 @@ orphan: true
 
 按下 **下一步** 按鈕繼續完成其餘的 **設定嚮導。** 選擇 RileyLink 後，初始化可能需時達一分鐘，此時 **下一步** 按鈕會變為可點擊狀態。
 
-Detailed steps on how to setup your pod communication device are listed below in the [RileyLink Setup Section](#OmnipodEros-rileylink-setup).
+有關如何設置你的藥囊通訊設備的詳細步驟列示於[RileyLink 設置部分](#OmnipodEros-rileylink-setup)。
 
 **或者**
 
@@ -77,7 +77,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 透過左上角的 **漢堡選單** 進入 **組態建置工具 (1)** ➜**幫浦** ➜**Omnipod**，選擇標為 **Omnipod** 的 **單選按鈕 (2)**。 勾選 **設定齒輪圖示 (3)** 旁邊的 **勾選框(4)**， Omnipod 選單將會以標籤的形式顯示在 AAPS 界面中，標題為 **POD**。 此處在文件中被稱為 **Omnipod (POD)** 標籤。
 
-> **NOTE:** A faster way to access the **Omnipod settings** can be found below in the [Omnipod Settings section](#OmnipodEros-omnipod-settings) of this document.
+> **注意：** 可以在本文件的[Omnipod 設置部分](#OmnipodEros-omnipod-settings)中找到更快速讀取**Omnipod 設置**的方法。
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
@@ -101,7 +101,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 ### RileyLink 設定
 
-If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the [Activating a Pod Section](#OmnipodEros-activating-a-pod) below.
+如果你已經在設定嚮導或上述步驟中成功配對了你的 RileyLink，則繼續進入本文件下方的 [啟動幫浦部分](#OmnipodEros-activating-a-pod)。
 
 *注意： RileyLink未連線的一個好視覺指示是 HOME 標籤中的胰島素和計算機按鈕將缺失。 這亦會發生在 AAPS 開始運作後的約莫30秒鐘，因為他正在積極連線至 RileyLink。*
 
@@ -109,7 +109,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 2. 選擇 Omnipod 驅動程式後，從 **組態建置工具 (1)** ➜**幫浦** ➜**Omnipod** ➜**齒輪圖示（設定）(2)** ➜**RileyLink 配置 (3)** 中，按下 **未設定** 或 **MAC 地址（如存在）** 文字來選擇你的 RileyLink。
 
-   > Ensure your RileyLink battery is charged and it is [positioned in close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. 選擇後，你可以進行你的第一個幫浦會話的啟動。 使用手機上的返回按鈕回到主 AAPS 界面。
+   > 確保你的 RileyLink 電池充滿電，並且它[放置在靠近](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 公分以內) 你的手機附近，以便 AAPS 通過其 MAC 地址識別它。 選擇後，你可以進行你的第一個幫浦會話的啟動。 使用手機上的返回按鈕回到主 AAPS 界面。
    > 
    > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
@@ -131,7 +131,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 在你可以啟動幫浦之前，請確保你已正確配置並連線你的 RileyLink 在 Omnipod 設定中
 
-*提醒：幫浦的配對通訊範圍有限，是由於安全保護措施所致。 配對前幫浦無線電信號較弱，但在成功配對後他將以全信號功率運作。 During these procedures, make sure that your pod is* [within close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) but not on top of or right next to the RileyLink.\*
+*提醒：幫浦的配對通訊範圍有限，是由於安全保護措施所致。 配對前幫浦無線電信號較弱，但在成功配對後他將以全信號功率運作。 在這些步驟中，請確保你的藥囊[位於靠近](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 公分以內) 的範圍內，但不要放在 RileyLink 的上面或緊鄰其旁邊。\*</p>
 
 01. 導航到 **Omnipod (POD)** 標籤，點擊 **幫浦管理 (1)** 按鈕，然後點擊 **啟動幫浦 (2)**。
 
@@ -143,7 +143,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
     > 
     > 確保新幫浦和 RileyLink 在近距範圍內（約30厘米以內），然後點擊 **下一步** 按鈕。
 
-03. 在 **初始化 Pod** 畫面上，Pod 將開始排空（你會聽到點擊聲，接著是連續的滴答聲，表明 Pod 正在自我排空）。 如果 RileyLink 超出啟動幫浦的範圍，你會收到一條錯誤訊息 **幫浦無回應**。 If this occurs, [move the RileyLink closer](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
+03. 在 **初始化 Pod** 畫面上，Pod 將開始排空（你會聽到點擊聲，接著是連續的滴答聲，表明 Pod 正在自我排空）。 如果 RileyLink 超出啟動幫浦的範圍，你會收到一條錯誤訊息 **幫浦無回應**。 如果這種情況發生，[將 RileyLink 移得更近](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 公分以內)，但不要放在 Pod 的上面或緊鄰其旁邊，然後點擊**重試 (1)**按鈕。
 
     > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
 
@@ -183,7 +183,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
     點擊手機上的返回按鈕返回 **Omnipod (POD)** 標籤畫面，現在會顯示你活動的幫浦會話資訊，包括目前基礎速率、幫浦儲庫數值、胰島素投放量、幫浦錯誤和警報。
 
-    For more details on the information displayed go to the [Omnipod (POD) Tab](#OmnipodEros-omnipod-pod-tab) section of this document.
+    有關顯示訊息的更多詳細訊息，請參見本文件的[Omnipod (POD) 標籤](#OmnipodEros-omnipod-pod-tab)部分。
 
     ![Activate_Pod_14](../images/omnipod/Activate_Pod_14.png) ![Activate_Pod_15](../images/omnipod/Activate_Pod_15.png)
 
@@ -225,7 +225,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 以下過程將向你展示如何暫停和恢復胰島素幫浦的投放。
 
-*注意 – 如果你未看到暫停按鈕*，那麼他尚未啟用在 Omnipod (POD) 標籤中顯示。 Enable the **Show Suspend Delivery button in Omnipod tab** setting in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*注意 – 如果你未看到暫停按鈕*，那麼他尚未啟用在 Omnipod (POD) 標籤中顯示。 在[Omnipod 設置](#OmnipodEros-omnipod-settings)中啟用**Omnipod 標籤中的顯示暫停交付按鈕**設置。
 
 #### 暫停胰島素投放
 
@@ -433,7 +433,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 - **總輸送量：** 顯示從儲液中輸送的胰島素總單位數。 *注意，這是一個近似值，因為幫浦啟動和填充過程並不精準。*
 
-- **錯誤：** 顯示遇到的最後一個錯誤。 Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **錯誤：** 顯示遇到的最後一個錯誤。 檢查[藥囊歷史](#OmnipodEros-view-pod-history)、[RileyLink 歷史](#omnipod-eros-rileylink-and-active-pod-history)及日誌文件，以了解過去的錯誤及更多詳細訊息。
 
 - **啟用 Pod 警報：** 保留目前啟用 Pod 上運作的警報。 通常在幫浦到期超過 72 小時且原生幫浦嗶聲警告運作時使用。
 
@@ -447,7 +447,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
   > 
   > 用於重新整理 Pod 狀態並消除顯示 (不確定) 訊息的狀態欄位。
   > 
-  > See the [Troubleshooting section](#OmnipodEros-troubleshooting) below for additional information.
+  > 請參閱下面的[問題排除部分](#OmnipodEros-troubleshooting)以獲取額外訊息。
 
 - **幫浦管理：**
 

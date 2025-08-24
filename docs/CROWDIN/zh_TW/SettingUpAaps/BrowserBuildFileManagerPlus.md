@@ -2,31 +2,31 @@
 orphan: true
 - - -
 
-Install [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) from the Google Play store.
+從 Google Play 商店安裝 [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager)。
 
-The app is necessary for the preliminary phase and you can safely delete it from your phone once you've successfully build and installed AAPS.
+這個應用程式在初步階段是必要的，成功建構並安裝 AAPS 後可以安全地從您的手機上刪除。
 
-Check this is the correct app and tap Install, then Open.
+檢查這是否是正確的應用程式，然後點擊安裝，然後打開。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep01.png)
 
-Tap Next to accept the Privacy Policy.
+點擊下一步以接受隱私政策。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep02.png)
 
-Tap Next to allow the app to access the phone files.
+點擊下一步以允許應用程式訪問手機檔案。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep03.png)
 
-Switch to enable access to all files.
+切換以啟用對所有檔案的訪問。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep04.png)
 
-Allow File Manager + notifications.
+允許 File Manager + 通知。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep05.png)
 
-Consent to profiling.
+同意個人資料設定。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep06.png)
 

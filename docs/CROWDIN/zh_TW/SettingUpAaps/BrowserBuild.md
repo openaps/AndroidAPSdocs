@@ -18,14 +18,14 @@
 
 你需要一個可在 Android 或 iOS 上運作的瀏覽器
 
-You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+您需要在瀏覽器中使用多個選項卡，並在它們之間切換。 範例 Chrome：
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
 你還需要一個 Google 帳號，以便將應用程式保存在你的 Google 雲端硬碟中。
 
 ```{note}
-This wiki assumes you're performing all operations with your cellular phone and the Chrome web browser.  
+這個維基假設您所有操作都是使用您的行動電話和 Chrome 網頁瀏覽器進行的。  
 你會需要在不同的頁籤之間切換，所以在開始之前，你可以先關閉其它頁籤，避免在切換時找不到頁面。
 ```
 
@@ -104,7 +104,7 @@ AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS
 
 </br>
 
-The AAPS app will be saved in your Google Cloud drive once built.
+一旦建立，AAPS 應用程式將保存在您的 Google 雲端硬碟中。
 
 (aaps-ci-option1)=
 ### AAPS-CI 選項 1 – 生成 JKS
@@ -131,23 +131,23 @@ The AAPS app will be saved in your Google Cloud drive once built.
 
 ```
 
-Skip the next section and continue [here](#aaps-ci-google-drive-auth).
+跳過下一部分，繼續 [這裡](#aaps-ci-google-drive-auth)。
 
 ---
 
 (aaps-ci-option2)=
 
 ### AAPS-CI 選項 2 – 上傳現有 JKS
- - Suitable for users who already have a JKS and know the JKS password and alias  (For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub - those from Android Studio, see below where you used them.)
+ - 適用於已擁有 JKS 並知道 JKS 密碼和別名的使用者（對於 `KEYSTORE_PASSWORD`、`KEY_ALIAS` 和 `KEY_PASSWORD`，請在 GitHub 中輸入您的實際密碼和別名 - 來自 Android Studio，詳情請參閱下方您使用它們的地方）。
 
 ```{admonition} KEY + PASSWORDS
 :class: dropdown
 
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+![記住密碼](../images/Building-the-App/044_RememberPwd.png)
 ```
 
  - 以下是使用多個平台的範例。
- - Select your platform in the list below, between Android (preferred choice) or Computer.
+ - 在下面的列表中選擇您的平台，Android（首選選擇）或電腦。
 
 
 ```{tab-set}
@@ -168,59 +168,59 @@ Skip the next section and continue [here](#aaps-ci-google-drive-auth).
 
 ### AAPS-CI Google 雲端硬碟授權
 
-Note: If you already followed this part in the video, you can now skip to [here](#github-build-apk).
+注意：如果您已在影片中跟隨了這部分，現在可以跳到 [這裡](#github-build-apk)。
 
-Return to the File Explorer Plus tab.
+返回檔案資源管理器 Plus 頁籤。
 
-Scroll down to the Google Drive Auth section and tap Start Auth.
+向下滾動到 Google Drive 認證部分，然後點擊開始認證。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep44.png)
 
-Select your Google account.
+選擇您的 Google 帳號。
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH1.png)
 
-Scroll down and accept the access. The web page needs it to obtain the Google Drive authentication key.
+向下滾動並接受存取權限。 該網頁需要此存取權以獲取 Google Drive 認證金鑰。
 
-Tap Continue.
+點擊繼續。
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH2.png)
 
-The `GDRIVE_OAUTH2` field will populate, tap the top Copy button.
+`GDRIVE_OAUTH2` 欄位將會填寫，請點擊上方的複製按鈕。
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
 
-Switch back to the GitHub tab.
+切換回 GitHub 頁籤。
 
-Scroll down to Repository secrets and tap New repository secret.
+向下滾動到儲存庫密碼並點擊新增儲存庫密碼。
 
-If you followed Option 1 you should see this:
+如果您遵循了選項 1，應該會看到這個：
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4.png)
 
-If you followed Option 2 there will be more keys:
+如果您遵循了選項 2，將會有更多金鑰：
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4b.png)
 
-In the Name field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+在名稱欄位中，貼上您剛才複製的文字。 在文字框上長按以顯示「貼上」選單。
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH5.png)
 
-Switch to the File Explorer Plus tab.
+切換到 File Explorer Plus 頁籤。
 
-Tap the second Copy button.
+點擊第二個複製按鈕。
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH6.png)
 
-Switch back to the GitHub tab.
+切換回 GitHub 頁籤。
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. 在「secret」」欄位中，貼上您剛才複製的文字。 在文字框上長按以顯示「貼上」選單。
 
-2. Tap Add secret.
+2. 點擊「Add secret」。
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
 
-GitHub will now be able to store the AAPS apk file in your Google Drive, once built.
+GitHub 現在將能夠將 AAPS apk 檔案儲存在您的 Google Drive 中，一旦建立完成。
 
 (github-build-apk)=
 ## AAPS-CI GitHub Actions 以建置 AAPS APK
@@ -247,26 +247,26 @@ GitHub will now be able to store the AAPS apk file in your Google Drive, once bu
 
 ```
 
-### Build Version selection
+### 建構版本選擇
 
-**Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
+**僅 AAPS 版本 3.3.2.1 及以上將使用瀏覽器方法繼續建構。**
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
 (variant)=
 
-### Build Variants selection
+### 建構變數選擇
 
 *注意： Android 和 Android Wear 應用程式將自動建置。*
 
-  - Select the variant you need:
-    - fullRelease: For regular pump usage with full functionality.
-    - [aapsclientRelease, aapsclient2Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md))。
-    - pumpcontrolRelease: To replace your pump app/controller
+  - 選擇您需要的變種：
+    - fullRelease: 用於正常的幫浦使用，具有完整功能。
+    - [aapsclientRelease, aapsclient2Release](#RemoteControl_aapsclient)：適用於看護者（需要 [Nightscout](../SettingUpAaps/Nightscout.md)）。
+    - pumpcontrolRelease：替換您的幫浦應用程式/控制器
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicates that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+以「Debug」結尾的變數表示 APK 將以除錯模式建立，這對開發者進行故障排除非常有用。
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
@@ -291,7 +291,7 @@ Variants ending with “Debug” indicates that the APK will be built in debug m
 
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
 
-`actions/checkout@v4` and `actions/setup-java@v4` are not allowed to be used in `xxxxx/AndroidAPS`. Actions in this workflow must be: within a repository owned by `xxxxx`
+`actions/checkout@v4` 和 `actions/setup-java@v4` 不允許在 `xxxxx/AndroidAPS` 中使用。 此工作流程中的操作必須位於 `xxxxx` 擁有的儲存庫內
 
 --------
 

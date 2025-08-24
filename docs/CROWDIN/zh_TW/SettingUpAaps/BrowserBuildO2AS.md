@@ -2,126 +2,126 @@
 orphan: true
 - - -
 
-### Copy your Android Studio key in your Google Cloud drive.
+### 在您的 Google 雲端硬碟中複製您的 Android Studio 金鑰。
 
-On your computer, search for the keystore file you used to build AAPS. It is named with the extension `.jks`.
+在您的電腦上，搜尋您用於構建 AAPS 的金鑰儲存檔。 它的檔名後綴為 `.jks`。
 
-Drag it into [your Google Drive](https://drive.google.com/drive/my-drive), either inside the browser or your mapped Google Drive.
+將它拖入 [您的 Google 雲端硬碟](https://drive.google.com/drive/my-drive)，不論是在瀏覽器內部還是您映射的 Google 雲端硬碟中。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep20.png)
 
-Open File Manager Plus and select Cloud.
+打開文件管理器 Plus 並選擇雲端。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep21.png)
 
-Add a Cloud location.
+新增雲端位置。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep24.png)
 
-Choose Google Drive.
+選擇 Google 雲端硬碟。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep22.png)
 
-Select your Google Drive account email. Tap OK.
+選擇您的 Google 雲端硬碟帳號電子郵件。 點擊確定。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep23.png)
 
-Your Google Cloud drive should display its contents. Now return to the app home page.
+您的 Google 雲端硬碟應顯示其內容。 現在返回應用程式主頁。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep25.png)
 
-### Open the CI preparation help file
+### 打開 aaps-ci-preparation.html 檔案
 
-Open the file `aaps-ci-preparation-html` you downloaded above.
+打開您上面下載的檔案 `aaps-ci-preparation-html`。
 
-Select Downloads.
+選擇下載。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep07.png)
 
-And search for this file, tap it to open it, open it with Chrome, tap Just once.
+並搜尋這個檔案，點擊它以打開，選擇使用 Chrome 打開，然後點擊僅一次。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep08.png)
 
-It will open like this.
+將會這樣打開。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep09.png)
 
-Scroll down to Option 2: Upload Existing JKS. Expand the interface.
+向下捲動到選項 2：上傳現有的 JKS。 展開介面。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep26.png)
 
-Select Choose File.
+選擇選擇檔案。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep27.png)
 
-Pick your KeyStore file from your Google Drive files.
+從您的 Google 雲端硬碟中選擇您的金鑰儲存檔。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep28.png)
 
-The field below will populate.
+下面的欄位將會填入。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep29.png)
 
-Keep this tab open.
+保持此頁面開啟。
 
-### Create a new secret in GitHub
+### 在 GitHub 中建立一個新的「secret」
 
-Return to your GitHub browser tab: your own AndroidAPS copy.
+返回您的 GitHub 瀏覽器頁面：您自己的 AndroidAPS 複製版。
 
-1. Top right, tap the `...` button
-2. Select Settings in the list
+1. 右上角，點擊 `...` 按鈕
+2. 在列表中選擇設定
 
 ![](../images/Building-the-App/CI/BrowserBuildStep10.png)
 
-Scroll down to Security and select Secrets and variables.
+向下捲動到安全性並選擇「secrets and variables」。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep11.png)
 
-Now select Actions
+現在選擇動作
 
 ![](../images/Building-the-App/CI/BrowserBuildStep12.png)
 
-Scroll down to Repository secrets and tap New repository secret
+向下捲動到儲存庫「secret」並點擊「New repository secret」
 
 ![](../images/Building-the-App/CI/BrowserBuildStep13.png)
 
-You will see this dialog (scroll down if it's not visible).
+您將看到此對話框（如果不顯示，請向下捲動）。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep14.png)
 
-Leave the tab opened like this.
+保持此頁籤頁如這樣開啟。
 
-Switch to the File Explorer Plus tab.
+切換到 File Explorer Plus 頁籤。
 
-Tap the top Copy button.
+點擊上方的複製按鈕。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep30.png)
 
-Switch back to the GitHub tab.
+切換回 GitHub 頁籤。
 
-In the Name field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+在名稱欄位中，貼上您剛才複製的文字。 在文字框上長按以顯示「貼上」選單。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep31.png)
 
-Switch to the File Explorer Plus tab.
+切換到 File Explorer Plus 頁籤。
 
-Tap the second Copy button.
+點擊第二個複製按鈕。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep32.png)
 
-Switch back to the GitHub tab.
+切換回 GitHub 頁籤。
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. 在「secret」」欄位中，貼上您剛才複製的文字。 在文字框上長按以顯示「貼上」選單。
 
-2. Tap Add secret.
+2. 點擊「Add secret」。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep33.png)
 
-Check the secret has been added, scroll down to verify.
+檢查欄位是否已經添加，向下捲動來確認。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep34.png)
 
-Add a new secret: tap the New repository secret button.
+新增一個「secret」：點擊「New repository secret」按鈕。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep35.png)
 
@@ -129,68 +129,68 @@ Add a new secret: tap the New repository secret button.
 
 
 
-Switch to the File Explorer Plus tab.
+切換到 File Explorer Plus 頁籤。
 
-Tap the top Copy button to copy `KEYSTORE_PASSWORD`.
+點擊上方的複製按鈕以複製 `KEYSTORE_PASSWORD`。
 
-Note: if you're comfortable with typing the key names directly in GitHub you don't need to Copy/Paste. If you're not sure you will type exactly the same key name, continue like this. Note that you shouldn't leave `:` at the end of the key name.
+注意：如果您習慣直接在 GitHub 中輸入金鑰名稱則不需要複製/貼上。 如果您不確定是否會完全輸入相同的金鑰名稱，請繼續這樣做。 請注意，金鑰名稱的末尾不應留下 `:`。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep36.png)
 
-Switch back to the GitHub tab.
+切換回 GitHub 頁籤。
 
-1.  Paste the new key name.
-2. In the Secret entry, put your KeyStore password (don't leave it empty).
-3. Tap Add secret.
+1.  貼上新的金鑰名稱。
+2. 在「secret」欄位中，輸入您的金鑰儲存密碼（不要留空）。
+3. 點擊「Add secret」。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep37.png)
 
-Check the secret has been added, scroll down to verify.
+檢查欄位是否已經添加，向下捲動來確認。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep38.png)
 
-Tap the New repository secret button shown above.
+點擊上面顯示的「New repository secret」按鈕。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep14.png)
 
 
 
-Switch to the File Explorer Plus tab.
+切換到 File Explorer Plus 頁籤。
 
-Tap the top Copy button to copy `KEYSTORE_ALIAS`.
+點擊上方的複製按鈕以複製 `KEYSTORE_ALIAS`。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep39.png)
 
-Switch back to the GitHub tab.
+切換回 GitHub 頁籤。
 
-1.  Paste the new key name.
-2. In the Secret entry, put your KeyStore Alias (usually it's `key0`, lowercase with the number zero, not the letter O). Don't let Android autocorrect it.
-3. Tap Add secret.
+1.  貼上新的金鑰名稱。
+2. 在「secret」欄位中，輸入您的金鑰儲存別名（通常是 `key0`，小寫的數字零，而不是字母 O）。 不要讓 Android 自動修正它。
+3. 點擊「Add secret」。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep40.png)
 
-Check the secret has been added, scroll down to verify.
+檢查欄位是否已經添加，向下捲動來確認。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep41.png)
 
-Tap the New repository secret button shown above.
+點擊上面顯示的「New repository secret」按鈕。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep14.png)
 
 
 
-Switch to the File Explorer Plus tab.
+切換到 File Explorer Plus 頁籤。
 
-Tap the top Copy button to copy `KEY_PASSWORD`.
+點擊上方的複製按鈕以複製 `KEY_PASSWORD`。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep42.png)
 
-Switch back to the GitHub tab.
+切換回 GitHub 頁籤。
 
-1.  Paste the new key name.
-2. In the Secret entry, put your Key password (don't leave it empty). It is usually the same than your KeyStore password.
-3. Tap Add secret.
+1.  貼上新的金鑰名稱。
+2. 在「secret」欄位中，輸入您的金鑰密碼（不要留空）。 通常它與您的金鑰儲存密碼相同。
+3. 點擊「Add secret」。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep43.png)
 
-Check the secret has been added, scroll down to verify.
+檢查欄位是否已經添加，向下捲動來確認。
