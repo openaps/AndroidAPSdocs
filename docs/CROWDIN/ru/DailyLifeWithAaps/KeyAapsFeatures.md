@@ -72,7 +72,7 @@ The settings for OpenAPS SMB are described below.
 - Инсулинорезистентный взрослый: 12
 - Беременная: 25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
@@ -97,7 +97,7 @@ Be careful and patient when adjusting your **max-IOB**. Эта величина 
 - Инсулинорезистентный взрослый: 25
 - Беременная: 40
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
 
@@ -117,7 +117,7 @@ This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabl
 
 ### Enable Autosens feature
 
-This is the [Autosens](#autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
+This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
 Autosens looks at blood glucose deviations (positive/negative/neutral). На основе отклонений он пытается выяснить, насколько вы чувствительны/резистентны к инсулину и корректирует базальную скорость и коэффициент чувствительности к инсулину ISF.
 
@@ -268,7 +268,7 @@ The hardcoded parameters in **AAPS** are:
 - Инсулинорезистентный взрослый: 12
 - Беременная: 25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 ### Максимальное общее количество активного инсулина IOB (ед.), которое не может превысить OpenAPS ("max-iob" в OpenAPS)
 
@@ -282,7 +282,7 @@ The default value is 2, but you should rise this parameter slowly to see how muc
 - Инсулинорезистентный взрослый: 12
 - Беременная: 25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 ### Включить autosense помощника болюса AMA
 
