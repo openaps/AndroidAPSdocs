@@ -19,6 +19,8 @@ Wenn Du **AAPS** öffnest, ist dies die erste Ansicht. Sie enthält die meisten 
 * Alternativ kannst Du die Bildschirme wechseln, indem Du nach links oder rechts wischst.
 * Die anzuzeigenden Reiter können in der [Konfiguration](#Config-Builder-tab-or-hamburger-menu) ausgewählt werden.
 
+(aaps-screens-profile--target)=
+
 ### Abschnitt B - Profil & Ziel
 
 #### Aktuelles Profil
@@ -295,7 +297,7 @@ Sie basiert auf dem erwarteten Rückgang des BZ gemäß aktivem Insulin. Weitere
 
 Sie können bis zu vier zusätzliche Grafiken unterhalb der Hauptgrafik aktivieren. Wenn [Einfacher Modus](#preferences-simple-mode) aktiviert ist, sind zusätzliche Diagramme voreingestellt und können nicht verändert werden. Wenn Du eine eigene Konfiguration in den zusätzlichen Diagrammen nutzen möchtest, deaktiviere zuerst den **Einfachen Modus**.
 
-Um die Einstellungen für weitere Diagramme zu öffnen, klicke auf der rechten Seite des [Hauptdiagramms](#section-f---main-graph) auf das Dreieck und scrolle nach unten.
+To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
 
 ![Einstellung weiterer Diagramme](../images/Home2020_AdditionalGraphSetting.png)
 
@@ -378,7 +380,7 @@ Zur Nutzung der Schaltflächen Insulin, Kohlenhydrate und Rechner: Du kannst, we
 
 ![Insulin-Button](../images/Home2020_ButtonInsulin.png)
 
-Um einen Bolus abzugeben, ohne den [Bolus-Rechner](#bolus-wizard) zu nutzen.
+To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
 
 Durch Anhaken des Kästchens **Starte Essens-TT**, kannst Du automatisch Dein [temporäres Ziel „Bald essen“](#TempTargets-eating-soon-temp-target) starten.
 
@@ -406,7 +408,7 @@ Mit den Buttons kannst Du schnell die Kohlenhydratmengen erhöhen. Die Schrittwe
 
 #### Bolus-Rechner
 
-Siehe Bolus-Rechner im [Abschnitt unten](#bolus-wizard).
+See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
 
 #### Kalibrierungen
 
@@ -503,17 +505,19 @@ Für mehr Details, schaue bitte in den Hinweisen auf der Seite [Berechnung der a
 
 ### Aktionen - Abschnitt M
 
-Schaltfläche **[Profilwechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** als Alternative zum Drücken des [aktuellen Profils](#section-b---profile--target) auf dem Startbildschirm.
+Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#aaps-screens-profile--target) on homescreen.
 
-Schaltfläche **[Temporäres Ziel](../DailyLifeWithAaps/TempTargets.md)** als Alternative zum Drücken des [aktuellen Ziels](#section-b---profile--target) auf dem Startbildschirm.
+Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#aaps-screens-profile--target) on homescreen.
 
 Button zum Starten oder Abbrechen einer temporären Basalrate. Beachte, dass sich die Bezeichnung der Schaltfläche von "TBR" zu "Abbrechen X%" ändert, wenn eine temporäre Basalrate abgegeben wird.
 
-Auch wenn [verzögerte Boli](#Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) im Closed Loop nicht wirklich funktionieren, haben einige Nutzer nach einer Option gefragt, um verzögerte Boli dennoch verwenden zu können.
+Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
 
 * Diese Option ist nur für Dana RS und Insight Pumpen verfügbar. 
     * Der Closed Loop wird automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt.
     * Bitte lies, bevor Du die Option nutzt, die [Details](../DailyLifeWithAaps/ExtendedCarbs.md) dazu durch.
+
+(aaps-screens-careportal)=
 
 ### Careporal - Abschnitt N
 
@@ -536,7 +540,7 @@ Schwellenwerte können in [Einstellungen > Übersicht > Statusanzeige](#Preferen
 
 ### Careporal - Abschnitt O
 
-BZ-Test, Katheterwechsel, CGM-Sensor gesetzt, Pumpenbatterie-Wechsel sind die Basis für die in [Abschnitt N](#careportal---section-n) angezeigten Daten.
+BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#aaps-screens-careportal).
 
 Mit dem Button 'Katheterwechsel' kannst Du sowohl einen Katheter- (Schlauch) als auch einen Kanülenwechsel (Nadel) aufzeichnen.
 
@@ -647,7 +651,7 @@ Auf diesem Reiter kannst Du die Bolus- und Kohlenhydrateingaben einsehen. Jeder 
 * Mahlzeit (manuell über die Schaltflächen Insulin, Schnellassistent oder Bolus-Rechner eingegeben)
 * SMB, wenn die SMB-Funktionalität verwendet wird
 
-Die Kohlenhydrate (Zeile **2**) werden nur in Nightscout gespeichert. Wenn Du den [Bolus-Rechner](#bolus-wizard) benutzt hast, um die Insulindosis zu berechnen, kannst Du auf den Text „Berechnung“ (Zeile **3**) drücken, um die Details zur Bolusberechnung anzuzeigen.
+Die Kohlenhydrate (Zeile **2**) werden nur in Nightscout gespeichert. If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
 
 Abhängig von der gewählten Pumpe werden Insulin und Kohlenhydrate in einer oder mehreren Zeilen angezeigt: eine Zeile für die Berechnungsdetails, eine für die Kohlenhydrate und eine für den eigentlichen Bolus.
 
@@ -702,7 +706,7 @@ Auf dieser Registerkarte werden alle Notizen und Alarme angezeigt, die von Night
 
 ## Historie
 
-Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl der Historie aufgerufen werden. Es kann nicht über die Konfiguration im Hauptmenü sichtbar gemacht werden. Du kommst auch über eine Schaltfläche am unteren Rand des [Aktionen-Reiters](#action-tab) dort hin.
+Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl der Historie aufgerufen werden. Es kann nicht über die Konfiguration im Hauptmenü sichtbar gemacht werden. It can also be accessed through a button at the bottom of the [Action tab](#screens-action-tab).
 
 Zeigt die **AAPS**-Historie (d. h. die historischen Verläufe) an. Siehe dazu auch [Deine Daten reviewen > AAPS-Historie](../Maintenance/Reviewing.md).
 
