@@ -325,6 +325,8 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 *透過資料共享平台（包括Nightscout），所有來自**AAPS** 的資料都可以提供給醫療專業人士，Nightscout提供CGM資料的紀錄和實時監控，胰島素輸送、碳水化合物輸入、預測和設置。 Nightscout紀錄包括每日和每週的報告，這些報告可以幫助醫療專業人士更準確地討論1型糖尿病患者的血糖控制和行為考量。
 
+(accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
+
 ### 針對部分或完全失明的AAPS用戶的可及性
 
 #### AAPS的日常使用：
