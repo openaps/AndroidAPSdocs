@@ -72,7 +72,7 @@ OpenAPS SMB 的設定如下。
 - 胰島素抗性成人：12
 - 孕婦：25
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*請參閱 [硬性限制總覽](#Open-APS-features-overview-of-hard-coded-limits)。*
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
@@ -97,7 +97,7 @@ OpenAPS SMB 的設定如下。
 - 胰島素抗性成人：25
 - 孕婦：40
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*請參閱 [硬性限制總覽](#Open-APS-features-overview-of-hard-coded-limits)。*
 
 注意：在使用 **SMB** 時，**最大 IOB** 的計算方式與 AMA 不同。 在 **AMA** 中，最大 IOB 是基礎 **IOB** 的安全參數，而在 SMB 模式中，還包括注射 IOB。
 
@@ -117,7 +117,7 @@ OpenAPS SMB 的設定如下。
 
 ### 啟用自動敏感度調整功能
 
-This is the [Autosens](#Open-APS-features-autosens) feature. 在使用動態 ISF 時，不能使用自動敏感度調整，因為這是兩種不同的算法，會影響相同的變數（敏感度）。
+這是[自動敏感度調整](#Open-APS-features-autosens)功能。 在使用動態 ISF 時，不能使用自動敏感度調整，因為這是兩種不同的算法，會影響相同的變數（敏感度）。
 
 Autosens 會根據血糖偏差（正/負/中性）進行調整。 他會根據這些偏差計算出你對胰島素的敏感度或抗性，並根據偏差調整基礎速率和胰島素敏感指數（ISF）。
 
@@ -268,7 +268,7 @@ AMA 是 "進階餐食輔助" 的縮寫，是 2017 年 OpenAPS 的一項功能（
 - 胰島素抗性成人：12
 - 孕婦：25
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*請參閱 [硬性限制總覽](#Open-APS-features-overview-of-hard-coded-limits)。*
 
 ### OpenAPS 可注射的最大基礎 IOB [U]（OpenAPS "最大 IOB"）
 
@@ -282,7 +282,7 @@ AMA 是 "進階餐食輔助" 的縮寫，是 2017 年 OpenAPS 的一項功能（
 - 胰島素抗性成人：12
 - 孕婦：25
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*請參閱 [硬性限制總覽](#Open-APS-features-overview-of-hard-coded-limits)。*
 
 ### 啟用 AMA Autosens
 
