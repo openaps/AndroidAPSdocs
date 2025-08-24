@@ -19,6 +19,8 @@
 * 你也可以通过左右滑动来切换屏幕。
 * 在[config builder](#Config-Builder-tab-or-hamburger-menu)中可以选择显示的标签。
 
+(aaps-screens-profile--target)=
+
 ### B部分 - 配置文件&目标
 
 #### 当前配置文件
@@ -295,7 +297,7 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 
 您可以在主图表下方激活最多四个附加图表。 在[简单模式](#preferences-simple-mode)下，附加图表是预设的，无法更改。 如果希望设置自己的附加图表配置，请关闭**简单模式**。
 
-要打开附加图表的设置，请点击[主图表](#section-f---main-graph)右侧的三角形并向下滚动。
+To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
 
 ![附加图表设置](../images/Home2020_AdditionalGraphSetting.png)
 
@@ -378,7 +380,7 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 
 ![胰岛素按钮](../images/Home2020_ButtonInsulin.png)
 
-在不使用[大剂量计算器](#bolus-wizard)的情况下给予一定量的胰岛素。
+To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
 
 通过选中**即将进食临时目标**框，你可以自动启动你的[即将进食临时目标](#TempTargets-eating-soon-temp-target)。
 
@@ -406,7 +408,7 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 
 #### 计算器
 
-参见大剂量向导[下方部分](#bolus-wizard)。
+See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
 
 #### 校准
 
@@ -503,17 +505,19 @@ BG字段通常已经填充了来自您的动态（CGM）的最新读数。 如�
 
 ### 操作Action - M部分
 
-按钮**[配置文件切换](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**作为按主页屏幕上的[当前配置文件](#section-b---profile--target)的替代选项。
+Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#aaps-screens-profile--target) on homescreen.
 
-按钮**[临时目标](../DailyLifeWithAaps/TempTargets.md)**作为按主页屏幕上的[当前目标](#section-b---profile--target)的替代选项。
+Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#aaps-screens-profile--target) on homescreen.
 
 启动或取消临时基础率的按钮。 请注意，当设置了临时基础率时，按钮会从“TEMPBASAL”更改为“取消x%”。
 
-尽管[扩展大剂量](#Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)在闭环环境中并不真正适用，但有些人仍要求提供使用扩展大剂量的选项。
+Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
 
 * 此选项仅适用于Dana RS和Insight泵。 
     * 闭环将自动停止并切换到开环模式，以运行扩展大剂量。
     * 在使用此选项之前，请务必阅读[详细信息](../DailyLifeWithAaps/ExtendedCarbs.md)。
+
+(aaps-screens-careportal)=
 
 ### Careportal - N部分
 
@@ -536,7 +540,7 @@ BG字段通常已经填充了来自您的动态（CGM）的最新读数。 如�
 
 ### 护理门户（Careportal） - O部分
 
-血糖检测、输注装置准备/填充、传感器插入和泵电池更换是[N部分](#careportal---section-n)中显示数据的基础。
+BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#aaps-screens-careportal).
 
 输注装置准备/填充功能允许您记录泵底板和胰岛素储药器的更换情况。
 
@@ -647,7 +651,7 @@ BG字段通常已经填充了来自您的动态（CGM）的最新读数。 如�
 * 餐食（通过胰岛素、快速向导或大剂量向导按钮手动输入）
 * 使用SMB功能时的SMB
 
-碳水化合物（行**2**）仅存储在Nightscout中。 如果您使用了[大剂量胰岛素向导](#bolus-wizard)来计算胰岛素剂量，您可以按“Calc”文本（行**3**）来显示大剂量胰岛素计算过程的详细信息。
+碳水化合物（行**2**）仅存储在Nightscout中。 If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
 
 根据所使用的泵，胰岛素和碳水化合物可能显示在一行中，或者会产生多行：一行用于计算细节，一行用于碳水化合物，一行用于大剂量胰岛素本身。
 
@@ -702,7 +706,7 @@ BG字段通常已经填充了来自您的动态（CGM）的最新读数。 如�
 
 ## 历史浏览器
 
-可以通过点击菜单右侧的3个点，然后选择“历史记录”来访问此视图。 通过Config Builder无法将项目添加到主菜单中。 也可以通过[操作选项卡](#action-tab)底部的按钮来访问它。
+可以通过点击菜单右侧的3个点，然后选择“历史记录”来访问此视图。 通过Config Builder无法将项目添加到主菜单中。 It can also be accessed through a button at the bottom of the [Action tab](#screens-action-tab).
 
 允许您在**AAPS**历史记录中回溯。 请参阅专门页面[查看您的数据>历史记录浏览器](../Maintenance/Reviewing.md)。
 

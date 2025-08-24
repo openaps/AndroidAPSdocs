@@ -225,29 +225,48 @@ GitHub will now be able to store the AAPS apk file in your Google Drive, once bu
 (github-build-apk)=
 ## AAPS-CI GitHub Actions 以建置 AAPS APK
  - 適合一般使用者。
-```{eval-rst}
-.. raw:: html
 
-    <!--crowdin: exclude-->
-    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
-      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
-        <iframe
-          src="https://www.youtube.com/embed/amfEBwpTtQI"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
+```{tab-set}
+
+:::{tab-item} YouTube
+<div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+  <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+    <iframe
+      src="https://www.youtube.com/embed/amfEBwpTtQI"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+:::  
+
+:::{tab-item} Wiki
+:::{include} BrowserBuildCIS.md
+:::  
+
 ```
-  - 在 GitHub 中，前往 Actions，選擇 AAPS-CI，然後點擊運行工作流以開始建置 APK。
+
+### Build Version selection
+
+**Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
+
+![](../images/Building-the-App/CI/BrowserBuildVariant2.png)
+
+(variant)=
+
+### Build Variants selection
 
 *注意： Android 和 Android Wear 應用程式將自動建置。*
 
-  ![aaps_ci_github_build_apk](../images/Building-the-App/CI/aaps_ci_github_build_apk.png)
+  - Select the variant you need:
+    - fullRelease: For regular pump usage with full functionality.
+    - [aapsclientRelease, aapsclient2Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md))。
+    - pumpcontrolRelease: To replace your pump app/controller
 
-  - variant：
-    - 請參考 [變體](variant)
+![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
+
+Variants ending with “Debug” indicates that the APK will be built in debug mode, which is useful for developers for troubleshooting.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
@@ -270,7 +289,9 @@ GitHub will now be able to store the AAPS apk file in your Google Drive, once bu
 ### 檢查 GitHub Actions 權限設定
   - 請確保 GitHub Actions 政策設置為「Allow all actions and reusable workflows」（Settings → Actions → General）。
 
-  ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.jpg)
+  ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
+
+`actions/checkout@v4` and `actions/setup-java@v4` are not allowed to be used in `xxxxx/AndroidAPS`. Actions in this workflow must be: within a repository owned by `xxxxx`
 
 --------
 

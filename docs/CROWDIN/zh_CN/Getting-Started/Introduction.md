@@ -325,6 +325,8 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 * **AAPS**的所有数据均可通过数据共享平台（如Nightscout）提供给医护人员，包括动态血糖仪（CGM）数据实时监测​、胰岛素输注（insulin delivery）追踪​、碳水化合物登记（carbohydrate entries）记录、预测算法及参数设置（predictions and settings）可视化等。 Nightscout生成的日报和周报包含血糖控制状态量化分析与个体化行为观察因素的精准数据，可助力医疗团队优化与1型糖尿病患者的临床讨论。
 
+(accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
+
 ### 为部分或完全失明的 AAPS 用户提供无障碍环境
 
 #### AAPS 的日常使用：

@@ -92,4 +92,4 @@ orphan: true
 ### 扩展大剂量功能
 
 - 使用扩展大剂量功能将关闭闭环系统。
-- 具体原因请参阅[此页面](#Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)了解为何扩展大剂量功能在闭环环境中不可用。
+- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.

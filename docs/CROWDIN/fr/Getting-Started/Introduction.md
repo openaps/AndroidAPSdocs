@@ -325,6 +325,8 @@ La table ci-dessus suppose que l'utilisateur a accès à la fois à un capteur d
 
 * Toutes les données d'**AAPS** peuvent être mises à la disposition des professionnels de santé par le biais de plates-formes de partage de données. Par exemple NightScout, qui permet la surveillance en temps réel et le stockage dans le durée des données du capteur de glycémie, de l'administration d'insuline, des entrées de glucides, des prévisions et des paramètres. Les dossiers Nightscout comprennent des rapports quotidiens et hebdomadaires qui peuvent aider les professionnels de la santé à discuter avec les patients diabétiques de type 1 pour améliorer le contrôle glycémiques et les comportements à adopter.
 
+(accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
+
 ### Accessibilité pour les utilisateurs AAPS aveugles ou malvoyants
 
 #### Utilisation quotidienne de AAPS :

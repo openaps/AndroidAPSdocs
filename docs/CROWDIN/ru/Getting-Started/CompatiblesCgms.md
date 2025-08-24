@@ -9,7 +9,7 @@
 * [Настройки xDrip+](../CompatibleCgms/xDrip.md)
 * [Nightscout как источник СК](../CompatibleCgms/CgmNightscoutUpload.md): Хотя использовать Nightscout в качестве источника СК для замкнутого цикла возможно, **этот метод использовать не рекомендуется** из-за того, что он полагается на стабильность мобильного интернета или Wi-Fi. Это означает, что данные с вашего **НМГ** будут приниматься **AAPS** только лишь при наличии соединения с вашим сайтом Nightscout. В качестве более надежной конфигурации рекомендуется использовать НМГ с локальной трансляцией в **AAPS** из источников, описанных ниже.
 
-| CGM /  НМГ                                             | Available [BG Sources](../SettingUpAaps/ConfigBuilder.md#bg-source)                                                  |
+| CGM /  НМГ                                             | Available [BG Sources](#Config-Builder-bg-source)                                                                    |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
 | [Dexcom G7](../CompatibleCgms/DexcomG7.md)             | [xDrip+](../CompatibleCgms/xDrip.md), DiaKEM app or [Juggluco](../CompatibleCgms/Juggluco.md)                        |
 | [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md) | [xDrip +](../CompatibleCgms/xDrip.md)                                                                                |

@@ -72,7 +72,7 @@ Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, 
 - Adulte résistant à l'insuline : 12
 - Grossesse : 25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
@@ -97,7 +97,7 @@ Be careful and patient when adjusting your **max-IOB**. Cette valeur est différ
 - Adulte résistant à l'insuline : 25
 - Grossesse : 40
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
 
@@ -117,7 +117,7 @@ Si vous activez cette option, la sensibilité à l'insuline sera diminuée avec 
 
 ### Enable Autosens feature
 
-This is the [Autosens](#autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
+This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
 Autosens looks at blood glucose deviations (positive/negative/neutral). Il essaiera de comprendre à quel point vous êtes sensible/résistant en fonction de ces écarts et ajustera le débit basal et la SI en fonction de ces écarts.
 
@@ -268,7 +268,7 @@ The hardcoded parameters in **AAPS** are:
 - Adulte résistant à l'insuline : 12
 - Grossesse : 25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 ### IA basale max que OpenAPS pourra délivrer \[U\] (OpenAPS "max-iob")
 
@@ -282,7 +282,7 @@ The default value is 2, but you should rise this parameter slowly to see how muc
 - Adulte résistant à l'insuline : 12
 - Grossesse : 25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 ### Activer AMA Autosens
 

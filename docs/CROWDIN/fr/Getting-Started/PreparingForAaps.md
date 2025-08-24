@@ -88,7 +88,7 @@ Pour vous aider dans le processus de compilation, il y a des pages dédiées dan
 
 - “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) Subsection.
 
-Le temps nécessaire pour arriver à la boucle fermée dépendra de chacun, mais vous pouvez vous faire une idée [ici](#how-long-will-it-take-to-set-everything-up)
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
 
 
 #### Fichier de clés & exportation des paramètres de configuration
@@ -188,7 +188,7 @@ Même lorsque vous serez complètement opérationnel sur **AAPS**, vous aurez to
 
 ### Considérations médicales
 
-In addition to the medical warnings in the [safety section](#safety-first) there are also different parameters, depending on which insulin you are using in the pump.
+In addition to the medical warnings in the [safety section](#preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
 
 #### Choix de l'insuline
 

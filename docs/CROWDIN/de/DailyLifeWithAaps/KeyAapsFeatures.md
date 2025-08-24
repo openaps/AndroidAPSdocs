@@ -72,7 +72,7 @@ Wenn zum Beispiel die höchste Basalrate in deinem Profil 0.5IE/h war, kannst du
 - Insulinresistenter Erwachsener: 12
 - Schwangere: 25
 
-*Siehe auch [Übersicht der fest programmierten Limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
@@ -97,7 +97,7 @@ Sei bei der Anpassung des **max-IOB** vorsichtig. Das ist sehr individuell und h
 - Insulinresistenter Erwachsener: 25
 - Schwangere: 40
 
-*Siehe auch [Übersicht der fest programmierten Limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 Hinweis: Bei der Verwendung von **SMB** wird **max-IOB** anders berechnet als in AMA. In **AMA** ist maxIOB ein Sicherheitsparameter für das Basal-**IOB**, während im SMB-Modus auch Bolus-IOB enthalten ist.
 
@@ -117,7 +117,7 @@ Wenn du diese Option aktivierst, dann wird die Insulinempfindlichkeit verringert
 
 ### Nutze Autosens
 
-Das ist die [Autosens](#autosens)-Funktion. Autosens kann nicht gleichzeitig mit dem dynamischen ISF genutzt werden. Der Grund dafür ist, dass die beiden unterschiedlichen Algorithmen die gleichen Variablen zur Empfindlichkeit verändern würden.
+This is the [Autosens](#Open-APS-features-autosens) feature. Autosens kann nicht gleichzeitig mit dem dynamischen ISF genutzt werden. Der Grund dafür ist, dass die beiden unterschiedlichen Algorithmen die gleichen Variablen zur Empfindlichkeit verändern würden.
 
 Autosens analysiert Deine Glukosewert-Abweichungen (positiv/negativ/neutral). Dabei wird anhand dieser Abweichungen ermittelt, wie empfindlich / resistent Du auf Insulin reagierst und Deine Basalrate und den ISF entsprechend angepasst.
 
@@ -268,7 +268,7 @@ Die in **AAPS** fest hinterlegten Parameter sind:
 - Insulinresistenter Erwachsener: 12
 - Schwangere: 25
 
-*Siehe auch [Übersicht der fest programmierten Limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 ### Maximales Basal-IOB, das OpenAPS abgeben darf \[IE\] (OpenAPS “max-iob”)
 
@@ -282,7 +282,7 @@ Der Standardwert ist 2, aber Du solltest diesen Parameter in kleinen Schritten e
 - Insulinresistenter Erwachsener: 12
 - Schwangere: 25
 
-*Siehe auch [Übersicht der fest programmierten Limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 ### Verwende AMA Autosense
 

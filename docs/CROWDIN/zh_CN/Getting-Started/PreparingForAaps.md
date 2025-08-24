@@ -88,7 +88,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 - “[如何安装AAPS](../SettingUpAaps/BuildingAaps.md)？” （第D节）其中包括[故障排除](../GettingHelp/GeneralTroubleshooting.md)小节。
 
-要达到闭环控制所需的时间因人而异，但你可以（[在这里](#how-long-will-it-take-to-set-everything-up)）找到使用AAPS实现完全闭环控制的大致时间表。
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
 
 
 #### 密钥库&和配置设置导出文件
@@ -188,7 +188,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 ### 医疗考虑
 
-除了[安全部分](#safety-first)中的医疗警告外，根据您在泵中使用的胰岛素类型，还会有不同的参数设置。
+In addition to the medical warnings in the [safety section](#preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
 
 #### 胰岛素选择
 

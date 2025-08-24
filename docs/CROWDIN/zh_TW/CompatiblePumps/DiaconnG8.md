@@ -92,4 +92,4 @@ orphan: true
 ### 延長注射功能
 
 - 如果使用延長注射功能，將會停用循環模式。
-- 請參閱[本頁](#Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)了解為何延長注射功能無法在循環模式下運作的詳情。
+- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.

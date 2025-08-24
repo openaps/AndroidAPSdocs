@@ -325,6 +325,8 @@ Výše uvedená tabulka předpokládá, že uživatel má přístup k nepřetrž
 
 Veškerá data z **AAPS** mohou být k dispozici zdravotnickým pracovníkům prostřednictvím platforem pro jejich sdílení, včetně NightScout, který umožňuje zaznamenávat a v reálném čase sledovat CGM data, dávkování inzulínu, záznamenané sacharidy, předpovědi a nastavení. Záznamy z Nightscoutu obsahují také denní a týdenní reporty, které mohou zdravotnickým pracovníkům pomoci při diskusích s diabetiky I. typu přesnějšími údaji o tom, jak mají glykémii pod kontrolou a o jejich návycích.
 
+(accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
+
 ### Dostupnost pro uživatele AAPS, kteří jsou částečně nebo zcela nevidomí
 
 #### Každodenní použití AAPS:

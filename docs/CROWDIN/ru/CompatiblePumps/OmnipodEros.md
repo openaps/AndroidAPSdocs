@@ -69,7 +69,7 @@ orphan: true
 
 Нажмите кнопку **Далее**, чтобы перейти к остальной части **мастера настройки**  Для инициализации выбранного устройства RileyLink может потребоваться до минуты, после чего кнопка **Далее** станет активной.
 
-Подробные шаги по настройке устройства связи Pod приведены ниже в разделе [Настройка RileyLink](#rileylink-setup).
+Detailed steps on how to setup your pod communication device are listed below in the [RileyLink Setup Section](#OmnipodEros-rileylink-setup).
 
 **ИЛИ**
 
@@ -77,7 +77,7 @@ orphan: true
 
 В левом верхнем углу из **выпадающего меню** выберите **Конфигуратор(1)** ➜**Помпа** ➜ **Omnipod**, включив **радио кнопку(2)** под названием **Omnipod**. Поставив **флажок(4)** напротив **шестеренки настроек(3)** вы активируете вкладку меню Omnipod в интерфейсе AAPS, которая называется **POD**. В документации эта вкладка называется **Omnipod (POD)**.
 
-> **ПРИМЕЧАНИЕ:** Более быстрый способ доступа к настройкам **Omnipod** можно найти ниже в разделе [Omnipod Settings](#omnipod-settings) этого документа.
+> **NOTE:** A faster way to access the **Omnipod settings** can be found below in the [Omnipod Settings section](#OmnipodEros-omnipod-settings) of this document.
 > 
 > ![Включить Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Включить Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
@@ -101,7 +101,7 @@ orphan: true
 
 ### Настройка RileyLink
 
-Если RileyLink был успешно сопряжен в мастере установки или на шагах выше, то перейдите к разделу [активации Pod](#activating-a-pod) ниже.
+If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the [Activating a Pod Section](#OmnipodEros-activating-a-pod) below.
 
 *Примечание: Визуальным индикатором того, что RileyLink не подключен, является то, что на главном экране не появятся кнопки инсуллина и калькулятора болюса. Это произойдет примерно в течение первых 30 секунд после запуска AAPS, так как он активно подключается к RileyLink.*
 
@@ -109,7 +109,7 @@ orphan: true
 
 2. После выбора драйвера Omnipod, определите и выберите RileyLink в **Конфигураторе (1)** ➜**Помпа**➜**Omnipod**➜**Иконка шестеренки (Настройки) (2)** ➜**Конфигурация RileyLink (3)**, нажав на текст**Не настроен** или **Адрес MAC (если есть)**.
 
-   > Убедитесь, что аккумулятор RileyLink заряжен и он [расположен в непосредственной близости от](#optimal-omnipod-and-rileylink-positioning) (~30 см или менее от телефона) для идентификации AAPS по его MAC-адресу. Сделав выбор, можете перейти к активации первого сеанса Pod. Нажмите кнопку "Назад" на телефоне, чтобы вернуться к основному интерфейсу AAPS.
+   > Ensure your RileyLink battery is charged and it is [positioned in close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Сделав выбор, можете перейти к активации первого сеанса Pod. Нажмите кнопку "Назад" на телефоне, чтобы вернуться к основному интерфейсу AAPS.
    > 
    > ![Настройка_RileyLink_1](../images/omnipod/RileyLink_Setup_1.png) ![Настройка_RileyLink_2](../images/omnipod/RileyLink_Setup_2.png)
 
@@ -131,7 +131,7 @@ orphan: true
 
 Перед активацией Pod убедитесь, что вы правильно настроили и подключили RileyLink в настройках Omnipod
 
-*ПРЕДУПРЕЖДЕНИЕ: Коммуникация для активации Pod происходит на ограниченной дистанции, что вызвано мерами безопасности. Перед сопряжением радиосигнал Pod более слабый, однако после подключения связь будет работать при полной мощности сигнала. В ходе этих процедур убедитесь, что Pod* [находится в непосредственной близости ](#optimal-omnipod-and-rileylink-positioning) (~30 см или менее), но не поверх или совсем рядом с RileyLink.\*
+*ПРЕДУПРЕЖДЕНИЕ: Коммуникация для активации Pod происходит на ограниченной дистанции, что вызвано мерами безопасности. Перед сопряжением радиосигнал Pod более слабый, однако после подключения связь будет работать при полной мощности сигнала. During these procedures, make sure that your pod is* [within close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) but not on top of or right next to the RileyLink.\*
 
 01. Перейдите на вкладку **Omnipod (POD)**, нажмите кнопку **УПРАВЛЕНИЕ помпой (1)**, затем нажмите **Активировать Pod (2)**.
 
@@ -143,7 +143,7 @@ orphan: true
     > 
     > Убедитесь, что новый Pod и телефон с запущенным AAPS находятся в непосредственной близости друг от друга и нажмите кнопку **Далее**.
 
-03. На экране **Инициализация Pod**, Pod начнет первичное заполнение ( вы услышите щелчок с серией последующих тикающих звуков пока заполняется под). Если RileyLink при активации находится вне диапазона, вы получите сообщение об ошибке **Нет ответа от Pod**. Если это происходит, переместите RileyLink ближе (30 см или менее) но не поверх или совсем рядом с Pod и нажмите кнопку **Повторить**.
+03. На экране **Инициализация Pod**, Pod начнет первичное заполнение ( вы услышите щелчок с серией последующих тикающих звуков пока заполняется под). Если RileyLink при активации находится вне диапазона, вы получите сообщение об ошибке **Нет ответа от Pod**. If this occurs, [move the RileyLink closer](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
 
     > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
 
@@ -183,7 +183,7 @@ orphan: true
 
     Нажмите на кнопку Назад на телефоне, чтобы вернуться на вкладку **Omnipod (POD)**, которая теперь отображает текущую информацию с Pod, включая скорость базала, заполненность резервуара, введенный инсулин, ошибки и предупреждения.
 
-    Более подробно о показываемой информации в разделе [](#omnipod-pod-tab)Вкладка Omnipod (POD) этого документа.
+    For more details on the information displayed go to the [Omnipod (POD) Tab](#OmnipodEros-omnipod-pod-tab) section of this document.
 
     ![Activate_Pod_14](../images/omnipod/Activate_Pod_14.png) ![Activate_Pod_15](../images/omnipod/Activate_Pod_15.png)
 
@@ -225,7 +225,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 Приведенный ниже процесс покажет вам, как приостановить и возобновить подачу инсулина.
 
-*ПРИМЕЧАНИЕ - если вы не видите кнопку ПРИОСТАНОВИТЬ*, то отображение функции не было включено на вкладке Omnipod (POD). Включите кнопку **Показать приостановку введения инсулина на вкладке Omnipod** в настройках [Omnipod](#omnipod-settings) в разделе **Разное**.
+*ПРИМЕЧАНИЕ - если вы не видите кнопку ПРИОСТАНОВИТЬ*, то отображение функции не было включено на вкладке Omnipod (POD). Enable the **Show Suspend Delivery button in Omnipod tab** setting in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Приостановка подачи инсулина
 
@@ -433,7 +433,7 @@ Use this command to instruct the active, currently suspended pod to resume insul
 
 - **Всего подано** Отображает общее количество единиц инсулина, доставленных из резервуара. *Обратите внимание, что это приблизительная величина, поскольку первичное заполнение POD не является точным процессом.*
 
-- **Ошибки:** Отображает последнюю возникшую ошибку. Ознакомьтесь с версией [Pod history](#view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) и лог-файлами для более подробной информации.
+- **Ошибки:** Отображает последнюю возникшую ошибку. Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
 - **Активные оповещения Pod** зарезервировано для текущих оповещений на активном Pod. Обычно используется при истечении срока действия pod последние 72 часа, а звуковые оповещения работают.
 
@@ -447,7 +447,7 @@ Use this command to instruct the active, currently suspended pod to resume insul
   > 
   > Используйте для обновления статуса pod и сброса полей статуса, содержащих текст (не подтверждено).
   > 
-  > Дополнительную информацию см. в разделе [Устранение неполадок](#troubleshooting) ниже.
+  > See the [Troubleshooting section](#OmnipodEros-troubleshooting) below for additional information.
 
 - **УПРАВЛЕНИЕ ПОМПОЙ:**
 

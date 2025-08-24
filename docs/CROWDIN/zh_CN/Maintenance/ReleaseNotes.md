@@ -492,6 +492,8 @@ v3为新协议， 更加安全高效
 - NSClient修复
 - 推注顾问支持Pumpcontrol与NSClient
 
+(version-2811)=
+
 ## 版本 2.8.1.1
 
 发布日期：2021年1月12日

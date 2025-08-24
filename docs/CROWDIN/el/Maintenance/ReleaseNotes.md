@@ -493,6 +493,8 @@ RECOMMENDED SETTING
 - NSClient fixes
 - Bolus advisor now works with Pumpcontrol and NSClient
 
+(version-2811)=
+
 ## Έκδοση 2.8.1.1
 
 Ημερομηνία κυκλοφορίας: 12-01-2021

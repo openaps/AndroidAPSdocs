@@ -72,7 +72,7 @@ Například: máte-li ve svém profilu nejvyšší hodnotu bazálu 0.5U/h, dosta
 - Dospělí s vyšší rezistencí na inzulín: 12
 - Těhotná: 25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
@@ -97,7 +97,7 @@ Be careful and patient when adjusting your **max-IOB**. It is different for ever
 - Dospělí s vyšší rezistencí na inzulín: 25
 - Těhotná: 40
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
 
@@ -117,7 +117,7 @@ Je-li tato volba aktivní, citlivost na inzulin se při nastavení dočasného c
 
 ### Enable Autosens feature
 
-This is the [Autosens](#autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
+This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
 Autosens looks at blood glucose deviations (positive/negative/neutral). Pokud je chcete i přesto změnit, prostudujte si podrobnosti v , abyste pochopili, co děláte.
 
@@ -268,7 +268,7 @@ The hardcoded parameters in **AAPS** are:
 - Dospělí s vyšší rezistencí na inzulín: 12
 - Těhotná: 25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
 
@@ -282,7 +282,7 @@ The default value is 2, but you should rise this parameter slowly to see how muc
 - Dospělí s vyšší rezistencí na inzulín: 12
 - Těhotná: 25
 
-*See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
 ### Povolit AMA Autosense
 

@@ -69,7 +69,7 @@ Aynı ekranda, pompa seçiminin altında **Omnipod Sürücü Ayarları** görün
 
 **Kurulum Sihirbazı**'nın geri kalanına devam etmek için **İleri** düğmesine basın. Seçilen RileyLink'in başlatılması bir dakika kadar sürebilir ve **İleri** > butonuna basarak aktif hale getirin.
 
-Detailed steps on how to setup your pod communication device are listed below in the [RileyLink Setup Section](#rileylink-setup).
+Detailed steps on how to setup your pod communication device are listed below in the [RileyLink Setup Section](#OmnipodEros-rileylink-setup).
 
 **VEYA**
 
@@ -77,7 +77,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 Sol üst köşedeki **hamburger menüsü** aracılığıyla **Konfigürasyon ayarları(1)** ➜**Pompa**➜**Omnipod** altındaki **Omnipod** başlığındaki **radyo düğmesi (2)**. **Ayar Dişlisi (3)**'ün yanındaki **onay kutusu (4)** seçildiğinde, Omnipod menüsü AAPS arayüzünde **POD** başlıklı bir sekme olarak görüntülenir. Bu dokümanda **Omnipod (POD)** sekmesi olarak anılır.
 
-> **NOTE:** A faster way to access the **Omnipod settings** can be found below in the [Omnipod Settings section](#omnipod-settings) of this document.
+> **NOTE:** A faster way to access the **Omnipod settings** can be found below in the [Omnipod Settings section](#OmnipodEros-omnipod-settings) of this document.
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
@@ -101,7 +101,7 @@ Lütfen **sola kaydırıp** tüm pod ve RileyLink işlevlerini yönetebileceğin
 
 ### RileyLink Kurulumu
 
-If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the [Activating a Pod Section](#activating-a-pod) below.
+If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the [Activating a Pod Section](#OmnipodEros-activating-a-pod) below.
 
 *Not: RileyLink'in bağlı olmadığının göstergesi, GİRİŞ sekmesindeki İnsülin ve Hesap Makinesi düğmelerinin eksik olmasıdır. Bu, RileyLink'e aktif olarak bağlanıp, AAPS başladıktan sonraki ilk 30 saniye boyunca da böyle olacaktır.*
 
@@ -109,7 +109,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 2. Omnipod sürücüsünü seçtikten sonra **Konfigürasyon ayarları (1)** ➜**Pompa**➜**Omnipod**➜**Dişli Çark (Ayarlar) (2) **➜**RileyLink Yapılandırması (3)** **Ayarlanmadı** veya **MAC Adresi (varsa)** metnine basarak RileyLink'inizi belirleyin ve seçin.
 
-   > Ensure your RileyLink battery is charged and it is [positioned in close proximity](#optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Seçildikten sonra, ilk pod oturumunuzu etkinleştirmek için ilerleyebilirsiniz. Ana AAPS arayüzüne dönmek için telefonunuzdaki geri düğmesini kullanın.
+   > Ensure your RileyLink battery is charged and it is [positioned in close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Seçildikten sonra, ilk pod oturumunuzu etkinleştirmek için ilerleyebilirsiniz. Ana AAPS arayüzüne dönmek için telefonunuzdaki geri düğmesini kullanın.
    > 
    > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
@@ -131,7 +131,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 Bir podu etkinleştirmeden önce lütfen Omnipod ayarlarında RileyLink bağlantınızı doğru şekilde yapılandırdığınızdan ve bağlandığınızdan emin olun
 
-*HATIRLATICI: Güvenlik güvenlik önlemleri nedeniyle, pod aktivasyon eşleştirmesi için pod iletişimi sınırlı mesafede gerçekleşir. Eşleştirmeden önce Pod'un radyo sinyali daha zayıftır, ancak eşleştirildikten sonra tam sinyal gücünde çalışacaktır. During these procedures, make sure that your pod is* [within close proximity](#optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) but not on top of or right next to the RileyLink.\*
+*HATIRLATICI: Güvenlik güvenlik önlemleri nedeniyle, pod aktivasyon eşleştirmesi için pod iletişimi sınırlı mesafede gerçekleşir. Eşleştirmeden önce Pod'un radyo sinyali daha zayıftır, ancak eşleştirildikten sonra tam sinyal gücünde çalışacaktır. During these procedures, make sure that your pod is* [within close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) but not on top of or right next to the RileyLink.\*
 
 01. **Omnipod (POD)** sekmesine gidin ve **POD YNTM (1)** butonuna ve ardından **Podu Etkinleştir(2)**'i tıklayın.
 
@@ -143,7 +143,7 @@ Bir podu etkinleştirmeden önce lütfen Omnipod ayarlarında RileyLink bağlant
     > 
     > Yeni pod ve RileyLink'in birbirine yakın (~30cm veya daha az) olduğundan emin olun ve **İleri** butonunu tıklayın.
 
-03. **Pod'u Başlat** ekranında, pod hazırlanmaya başlar (pod kendini hazırlarken bir tıklama ve ardından bir dizi tıkırtı sesi duyarsınız). RileyLink etkinleştirilmekte olan podun kapsama alanı dışındaysa **Pod yanıt vermiyor** hata mesajı alırsınız. If this occurs, [move the RileyLink closer](#optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
+03. **Pod'u Başlat** ekranında, pod hazırlanmaya başlar (pod kendini hazırlarken bir tıklama ve ardından bir dizi tıkırtı sesi duyarsınız). RileyLink etkinleştirilmekte olan podun kapsama alanı dışındaysa **Pod yanıt vermiyor** hata mesajı alırsınız. If this occurs, [move the RileyLink closer](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
 
     > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
 
@@ -183,7 +183,7 @@ Bir podu etkinleştirmeden önce lütfen Omnipod ayarlarında RileyLink bağlant
 
     **Omnipod(POD)** sekme ekranına dönmek için telefonunuzdaki geri düğmesini tıklayın. Şimdi aktif pod oturumunuz için mevcut bazal oran, pod rezervuar seviyesi, iletilen insülin, pod hataları ve uyarılar dahil Pod bilgileri görüntülenecektir.
 
-    For more details on the information displayed go to the [Omnipod (POD) Tab](#omnipod-pod-tab) section of this document.
+    For more details on the information displayed go to the [Omnipod (POD) Tab](#OmnipodEros-omnipod-pod-tab) section of this document.
 
     ![Activate_Pod_14](../images/omnipod/Activate_Pod_14.png) ![Activate_Pod_15](../images/omnipod/Activate_Pod_15.png)
 
@@ -225,7 +225,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 Aşağıdaki süreç, insülin pompası iletimini nasıl askıya alacağınızı ve devam ettireceğinizi gösterecektir.
 
-*NOT - bir ASKIYA AL butonu* görmüyorsanız, Omnipod (POD) sekmesinde görüntülenmesi etkinleştirilmemiştir. Enable the **Show Suspend Delivery button in Omnipod tab** setting in the [Omnipod settings](#omnipod-settings) under **Other**.
+*NOT - bir ASKIYA AL butonu* görmüyorsanız, Omnipod (POD) sekmesinde görüntülenmesi etkinleştirilmemiştir. Enable the **Show Suspend Delivery button in Omnipod tab** setting in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### İnsülin İletiminin Askıya Alınması
 
@@ -433,7 +433,7 @@ Aşağıda, ana AAPS arayüzündeki **Omnipod (POD)** sekmesindeki simgelerin ve
 
 - **Toplam iletilen:** Rezervuardan iletilen toplam insülin ünite miktarını görüntüler. *Pod mutlak kesinlikle hazırlanıp ve doldurulmadığı için bunun bir tahmin olduğunu unutmayın.*
 
-- **Hatalar:** Karşılaşılan son hatayı görüntüler. Review the [Pod history](#view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **Hatalar:** Karşılaşılan son hatayı görüntüler. Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
 - **Etkin pod alarmları:** Etkin pod alarmlarını gösteren satırdır. Genellikle pod son kullanma tarihi 72 saat sonraysa ve pod yerel bip sesleri çıkardığında kullanılır.
 
@@ -447,7 +447,7 @@ Aşağıda, ana AAPS arayüzündeki **Omnipod (POD)** sekmesindeki simgelerin ve
   > 
   > Pod durumunu yenilemek ve metin içeren (belirsiz) durum satırlarını yenilemek için kullanın.
   > 
-  > See the [Troubleshooting section](#troubleshooting) below for additional information.
+  > See the [Troubleshooting section](#OmnipodEros-troubleshooting) below for additional information.
 
 - **POD YNTM:**
 

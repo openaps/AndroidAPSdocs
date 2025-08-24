@@ -493,6 +493,8 @@ Yayınlanma tarihi: 23-01-2021
 - NSClient düzeltmeleri
 - Bolus danışmanı artık Pumpcontrol ve NSClient ile çalışıyor
 
+(version-2811)=
+
 ## Sürüm 2.8.1.1
 
 Yayınlanma tarihi: 12-01-2021

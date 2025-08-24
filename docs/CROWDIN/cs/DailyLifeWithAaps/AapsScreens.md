@@ -19,6 +19,8 @@ This is the first screen you will come across when you open **AAPS**, and it con
 * Alternatively you can change screens by swiping left or right.
 * Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
 
+(aaps-screens-profile--target)=
+
 ### Section B - Profile & target
 
 #### Current Profile
@@ -295,7 +297,7 @@ Je založena na očekávaném poklesu glykémie odpovídajícímu množství inz
 
 Můžete aktivovat až čtyři další grafy pod hlavním grafem. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
 
-To open settings for additional graphs click the triangle on the right side of the [main graph](#section-f---main-graph) and scroll down.
+To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
 
 ![Nastavení dalšího grafu](../images/Home2020_AdditionalGraphSetting.png)
 
@@ -378,7 +380,7 @@ About using the Insulin, Carbs and Calculator buttons : If enabled in the [Prefe
 
 ![Tlačítko inzulín](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#bolus-wizard).
+To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
 
 By checking the box **Start eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
 
@@ -406,7 +408,7 @@ You can use the buttons to quickly increase the carb amount. The increment value
 
 #### Kalkulačka
 
-See Bolus Wizard [section below](#bolus-wizard).
+See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
 
 #### Kalibrace
 
@@ -503,17 +505,19 @@ For details, see the hints on [COB calculation page](#CobCalculation-detection-o
 
 ### Actions - section M
 
-Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#section-b---profile--target) on homescreen.
+Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#aaps-screens-profile--target) on homescreen.
 
-Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#section-b---profile--target) on homescreen.
+Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#aaps-screens-profile--target) on homescreen.
 
 Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
 
-Even though [extended boluses](#Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
 
 * This option is only available for Dana RS and Insight pumps. 
     * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
     * Make sure to read the [details](../DailyLifeWithAaps/ExtendedCarbs.md) before using this option.
+
+(aaps-screens-careportal)=
 
 ### Careportal - section N
 
@@ -536,7 +540,7 @@ Thresholds can be set in [Preferences > Overview > Status lights](#Preferences-s
 
 ### Careportal - section O
 
-BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal---section-n).
+BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#aaps-screens-careportal).
 
 Prime/Fill allows you to record pump site and insulin cartridge change.
 
@@ -647,7 +651,7 @@ On this tab you can view the bolus and carbs log. Each bolus (line **1** and **4
 * Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
 * SMB, when using the SMB Functionality
 
-The carbs (line **2**) are only stored in Nightscout. If you have used the [Bolus Wizard](#bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
+The carbs (line **2**) are only stored in Nightscout. If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
 
 Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
 
@@ -702,7 +706,7 @@ This tab shows all notes and alerts recorded in Nightscout.
 
 ## History Browser
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then History. It is not possible to put in the main menu through the Config Builder. It can also be accessed through a button at the bottom of the [Action tab](#action-tab).
+This view can be accessed by pressing the 3 dots on the right of the menu, then History. It is not possible to put in the main menu through the Config Builder. It can also be accessed through a button at the bottom of the [Action tab](#screens-action-tab).
 
 Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
 

@@ -88,7 +88,7 @@ Um Dir durch den Erstellungsprozess zu helfen, gibt es eigene spezifische Abschn
 
 - „[AAPS erstellen](../SettingUpAaps/BuildingAaps.md)“ (Abschnitt D), der einen Unterabschnitt zur [Fehlerbehebung](../GettingHelp/GeneralTroubleshooting.md) hat.
 
-Wie lange es dauert den Closed Loop zu erreichen ist individuell verschieden, ein grober Zeitablauf bis zum vollen Loopen mit AAPS findest Du ([hier](#how-long-will-it-take-to-set-everything-up)).
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
 
 
 #### Exportdatei des Keystore & der Konfigurationseinstellungen
@@ -188,7 +188,7 @@ Sobald Du **AAPS** voll nutzt, musst Du immer noch regelmäßig Deine Einstellun
 
 ### Medizinische Überlegungen
 
-Zusätzlich zu den medizinischen Warnungen in den [Sicherheitshinweisen](#safety-first) gibt es in Abhängigkeit vom in der Pumpe verwendeten Insulin weitere Parameter.
+In addition to the medical warnings in the [safety section](#preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
 
 #### Insulinwahl
 

@@ -270,6 +270,8 @@ Der Screenshot zeigt die detaillierten Auslöser der **Automatisierung**:
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
+(automating-preference-settings-export)=
+
 ## Automatischer Export der Einstellungen
 
 ### Täglicher automatischer Export der Einstellungen
