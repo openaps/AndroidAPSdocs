@@ -325,6 +325,8 @@ Die obige Tabelle setzt voraus, dass die Nutzenden sowohl Zugang zu einem CGM-Sy
 
 *Alle Daten von **AAPS** können medizinischen Fachkräften über Datenaustauschplattformen zur Verfügung gestellt werden, einschließlich Nightscout, das die Aufzeichnung und Echtzeitüberwachung von CGM-Daten, Insulinabgabe, Kohlenhydratangaben, Prognosen und Einstellungen ermöglicht. Aus Nightscout können Tages- und Wochenberichte erzeugt werden, die in Diskussionen eines Diabetes-Teams mit einem Typ 1-Patienten hilfreich sein können, da sie genauere Daten zur glykämischen Kontrolle und Verhaltensüberlegungen beisteuern.
 
+(accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
+
 ### Zugänglichkeit für AAPS-Nutzer, die teilweise oder vollständig blind sind
 
 #### Tägliche Verwendung von AAPS:
