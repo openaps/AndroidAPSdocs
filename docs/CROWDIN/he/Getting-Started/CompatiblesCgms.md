@@ -9,7 +9,7 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 * [xDrip+Settings](../CompatibleCgms/xDrip.md)
 * [Nightscout as BG Source](../CompatibleCgms/CgmNightscoutUpload.md): While it's possible to use Nightscout as a BG source for closed-loop insulin delivery, **this method is not recommended** due to its reliance on stable mobile data or Wi-Fi connectivity. This means your **CGM** data would only be received by **AAPS** when you have an online connection to your Nightscout site. For a more reliable set up, using a CGM with local broadcast from the receiver (as listed below) to **AAPS**, is a much better option.
 
-| סנסור                                                  | Available [BG Sources](../SettingUpAaps/ConfigBuilder.md#bg-source)                                                  |
+| סנסור                                                  | Available [BG Sources](#Config-Builder-bg-source)                                                                    |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
 | [Dexcom G7](../CompatibleCgms/DexcomG7.md)             | [xDrip+](../CompatibleCgms/xDrip.md), DiaKEM app or [Juggluco](../CompatibleCgms/Juggluco.md)                        |
 | [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md) | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                 |
