@@ -2,81 +2,81 @@
 orphan: true
 - - -
 
-### Open the CI preparation help file
+### 打開 aaps-ci-preparation.html 檔案
 
-With File Manager+, open the file `aaps-ci-preparation-html` you downloaded above.
+使用 File Manager+ 打開您上面下載的檔案 `aaps-ci-preparation-html`。
 
-Select Downloads.
+選擇下載。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep07.png)
 
-And search for this file, tap it to open it, open it with Chrome, tap Just once.
+並搜尋這個檔案，點擊它以打開，選擇使用 Chrome 打開，然後點擊僅一次。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep08.png)
 
-It will open like this.
+將會這樣打開。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep09.png)
 
-Select Generate JKS. The field below will populate with characters.
+選擇生成 JKS。 下方的欄位將填入字元。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep09a.png)
 
-Keep this tab open.
+保持此頁面開啟。
 
-### Create a new secret in GitHub
+### 在 GitHub 中建立一個新的「secret」
 
-Return to your GitHub browser tab: your own AndroidAPS copy.
+返回您的 GitHub 瀏覽器頁面：您自己的 AndroidAPS 複製版。
 
-1. Top right, tap the `...` button
-2. Select Settings in the list
+1. 右上角，點擊 `...` 按鈕
+2. 在列表中選擇設定
 
 ![](../images/Building-the-App/CI/BrowserBuildStep10.png)
 
-Scroll down to Security and select Secrets and variables.
+向下捲動到安全性並選擇「secrets and variables」。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep11.png)
 
-Now select Actions
+現在選擇動作
 
 ![](../images/Building-the-App/CI/BrowserBuildStep12.png)
 
-Scroll down to Repository secrets and tap New repository secret
+向下捲動到儲存庫「secret」並點擊「New repository secret」
 
 ![](../images/Building-the-App/CI/BrowserBuildStep13.png)
 
-You will see this dialog (scroll down if it's not visible).
+您將看到此對話框（如果不顯示，請向下捲動）。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep14.png)
 
-Leave the tab opened like this.
+保持此頁籤頁如這樣開啟。
 
-Switch to the File Explorer Plus tab.
+切換到 File Explorer Plus 頁籤。
 
-Tap the top Copy button.
+點擊上方的複製按鈕。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep15.png)
 
-Switch back to the GitHub tab.
+切換回 GitHub 頁籤。
 
-In the Name field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+在名稱欄位中，貼上您剛才複製的文字。 在文字框上長按以顯示「貼上」選單。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep16.png)
 
-Switch to the File Explorer Plus tab.
+切換到 File Explorer Plus 頁籤。
 
-Tap the second Copy button.
+點擊第二個複製按鈕。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep17.png)
 
-Switch back to the GitHub tab.
+切換回 GitHub 頁籤。
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. 在「secret」」欄位中，貼上您剛才複製的文字。 在文字框上長按以顯示「貼上」選單。
 
-2. Tap Add secret.
+2. 點擊「Add secret」。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep18.png)
 
-Check the secret has been added, scroll down to verify.
+檢查欄位是否已經添加，向下捲動來確認。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep19.png)
