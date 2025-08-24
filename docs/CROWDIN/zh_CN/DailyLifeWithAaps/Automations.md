@@ -269,6 +269,8 @@
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
+(automating-preference-settings-export)=
+
 ## 自动化参数设置导出
 
 ### 无人值守导出模式：定时导出​（每日执行）
