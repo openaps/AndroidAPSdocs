@@ -92,4 +92,4 @@ orphan: true
 ### Funkce prodlouženého bolusu
 
 - Pokud použijete prodloužený bolus, deaktivuje se uzavřená smyčka.
-- See [this page](#Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
