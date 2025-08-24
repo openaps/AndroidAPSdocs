@@ -9,12 +9,12 @@ AAPS可与多种胰岛素泵配合使用。  以下列表显示了当前支持�
 - [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) (蓝牙)
 - [Diaconn G8 ](../CompatiblePumps/DiaconnG8.md)  (蓝牙)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md) (蓝牙)
-- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  (需要[额外的通信设备](#additional-communication-device))
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)  (蓝牙)
 - [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)  (蓝牙)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)  (蓝牙)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md) (蓝牙)
-- 某些较旧的[美敦力](../CompatiblePumps/MedtronicPump.md)设备（需要[额外的通信设备](#additional-communication-device)）
+- Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
 
 ## 我的胰岛素泵未列出。
 
