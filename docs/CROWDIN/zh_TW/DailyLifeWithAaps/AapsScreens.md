@@ -19,6 +19,8 @@
 * 你還可以透過向左或向右滑動來更換螢幕。
 * 顯示的選項卡可以在 [組態建置工具](#Config-Builder-tab-or-hamburger-menu) 中選擇。
 
+(aaps-screens-profile--target)=
+
 ### B 區 - 設定檔 & 目標
 
 #### 目前的設定檔
@@ -295,7 +297,7 @@ Libre 使用者的特殊注意事項：
 
 你可以在主圖表下啟用最多四個其他圖表。 當在 [簡單模式](#preferences-simple-mode) 時，額外圖表是預設的，無法更改。 如果要設定自己的額外圖表組態，請關閉 **簡單模式**。
 
-要開啟額外圖表的設定，點擊[主圖表](#section-f---main-graph)右側的三角形並向下滾動。
+To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
 
 ![其他圖表設置](../images/Home2020_AdditionalGraphSetting.png)
 
@@ -378,7 +380,7 @@ Libre 使用者的特殊注意事項：
 
 ![注射按鈕](../images/Home2020_ButtonInsulin.png)
 
-要在不使用[注射計算器](#bolus-wizard)的情況下給予特定的胰島素量。
+To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
 
 透過勾選 **即將用餐(臨時目標)**方框，你可以自動啟動你的 [即將進餐的臨時目標](#TempTargets-eating-soon-temp-target)。
 
@@ -406,7 +408,7 @@ Libre 使用者的特殊注意事項：
 
 #### 計算機
 
-請參閱注射嚮導 [下方章節](#bolus-wizard)。
+See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
 
 #### 校準
 
@@ -503,17 +505,19 @@ Libre 使用者的特殊注意事項：
 
 ### 操作 - M 區
 
-按鈕**[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**作為按壓[主畫面當前設定檔](#section-b---profile--target)的替代選項。
+Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#aaps-screens-profile--target) on homescreen.
 
-按鈕**[臨時目標](../DailyLifeWithAaps/TempTargets.md)**作為按壓[主畫面當前目標](#section-b---profile--target)的替代選項。
+Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#aaps-screens-profile--target) on homescreen.
 
 啟動或取消臨時基礎率的按鈕。 請注意，當設置了臨時基礎率時，按鈕將從「臨時基礎速度」變為「取消 x.xx U/H」。
 
-儘管[延長注射](#Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)在封閉循環環境中實際上無法運作，但有些人還是要求提供使用延長注射的選項。
+Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
 
 * 此選項僅適用於 Dana RS 和 Insight 幫浦。 
     * 閉環將自動停止並切換為開環模式，以運作延長注射。
     * 在使用此選項之前，務必閱讀[詳細資訊](../DailyLifeWithAaps/ExtendedCarbs.md)。
+
+(aaps-screens-careportal)=
 
 ### 護理入口 - N 區
 
@@ -536,7 +540,7 @@ Libre 使用者的特殊注意事項：
 
 ### 護理入口 - O 區
 
-血糖檢查、預備/填充、傳感器插入和幫浦電池更換是[N部分](#careportal---section-n)中顯示資料的基礎。
+BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#aaps-screens-careportal).
 
 填充/注入允許你紀錄幫浦部位和胰島素筒的更換。
 
@@ -647,7 +651,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 * 餐前（通過胰島素、快速嚮導或注射嚮導按鈕手動輸入）
 * 當使用 SMB 功能時的 SMB
 
-碳水化合物（第**2**行）僅存儲在 Nightscout 中。 如果你使用 [注射嚮導](#bolus-wizard) 計算胰島素劑量，你可以按下「計算」文字（第**3**行）以顯示注射計算的詳細訊息。
+碳水化合物（第**2**行）僅存儲在 Nightscout 中。 If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
 
 根據使用的幫浦，胰島素和碳水化合物可以顯示在一行中，或者會導致多行顯示：一行顯示計算詳細訊息，一行顯示碳水化合物，一行顯示注射本身。
 
@@ -702,7 +706,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 ## 歷史瀏覽器
 
-可以通過按下選單右側的 3 個點然後選擇「歷史」來讀取此視圖。 無法通過組態建置工具在主選單中放入它。 還可以通過[手動操作標籤](#action-tab)底部的一個按鈕讀取。
+可以通過按下選單右側的 3 個點然後選擇「歷史」來讀取此視圖。 無法通過組態建置工具在主選單中放入它。 It can also be accessed through a button at the bottom of the [Action tab](#screens-action-tab).
 
 允許你查詢在 **AAPS** 中的歷史紀錄。 請參閱專門頁面 [檢視你的資料 > 歷史瀏覽器](../Maintenance/Reviewing.md)。
 
