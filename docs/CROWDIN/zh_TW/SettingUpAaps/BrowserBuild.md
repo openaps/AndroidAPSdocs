@@ -97,7 +97,15 @@ AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS
 </br>
 
 ```{warning}
-使用 **選項 1** 建立 AAPS 將無法更新已安裝的 AAPS：你需要卸載它，重新安裝後，從你的手機恢復設定，並從 Nightscout 讀取資料。
+Building AAPS with **Option 1** will not allow you to upgrade your existing AAPS.
+You will need to:
+1. [Export settings](#ExportImportSettings-Automating-Settings-Export) on your phone.
+2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service…).
+3. Generate a new version of the signed apk as described in Option 1 and transfer it to your phone.
+4. Uninstall previous AAPS version on your phone.
+5. Install new AAPS version on your phone.
+6. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+7. Restore your data from Nightscout.
 ```
 
 - 如果你想使用自己的 JKS（你在先前的 AAPS 建置中使用的那個 JKS），並且你知道它的密碼和別名（key0），請選擇 [AAPS-CI 選項 2 – 上傳現有的 JKS](aaps-ci-option2)。
