@@ -16,7 +16,7 @@
 
 ## 建置 AAPS 的裝置和軟體規格
 
-We recommend using an Android device. You can also use a computer or an iOS device.
+我們建議使用 Android 裝置。 你也可以使用電腦或 iOS 裝置。
 
 您需要在瀏覽器中使用多個選項卡，並在它們之間切換。 範例 Chrome：
 
