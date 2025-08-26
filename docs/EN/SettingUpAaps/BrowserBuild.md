@@ -310,3 +310,36 @@ Customizations are usually not necessary. This is for your information ony.
   - Upstream Repository: Please enter the repository name you want to cherry-pick from.
   - Commit SHA: Please enter the commit SHA you want to cherry-pick.(like git commit hash)
   - Select Build Variant: [variant](variant)
+
+(ci-keystore-export)=
+## CI KeyStore Export
+
+If you want to export your stored keystore, use this method.
+
+This script will export your previously configured keystore information (from Option 1 or Option 2) as a password-protected ZIP file to the `/AAPS/KeyStore` directory in your Google Drive.
+
+```{warning}
+Before using this export method, make sure your keystore and Google Drive settings have been completed.
+```
+
+### Steps:
+
+1. **Add ZIP Password Secret:**
+   - Go to your repository's **Settings** → **Secrets and variables** → **Actions**
+   - Click **New repository secret**
+   - In the **Name** field, enter: `ZIP_PASSWORD`
+   - In the **Secret** field, enter your custom ZIP encryption password
+   - Use only English letters and numbers for the password (no special symbols)
+   - Click **Add secret**
+
+   ![aaps_ci_zip_password.png](../images/Building-the-App/CI/aaps_ci_zip_password.png)
+
+2. **Run Export Workflow:**
+   - Go to the **Actions** tab in your repository
+   - Select **CI KeyStore Export**
+   - Click **Run workflow**
+   - The exported keystore ZIP file will be saved to your Google Drive
+
+   ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
+
+   ![aaps_ci_keystore_export_run.png](../images/Building-the-App/CI/aaps_ci_keystore_export_run.png)
