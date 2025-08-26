@@ -27,7 +27,7 @@ You also need a Google account so that the app can be saved in your Google Drive
 ```{note}
 This wiki assumes you're performing all operations with your cellular phone and the Chrome web browser.  
 You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
-```
+```op
 
 (github-fork)=
 
@@ -98,6 +98,10 @@ AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS)
 
 ```{warning}
 Building AAPS with **Option 1** will not allow you to upgrade your existing AAPS: you will need to uninstall it, restore the settings from your phone and data from Nightscout.
+
+Before unstalling AAPS you should 1. 'export' your current AAPS settings, 2. uninstall AAPS, 3. install the new version and 4. restore your AAPS settings by 'importing'.
+
+Once AAPS is uninstalled, it is not possible to get your settings back if you have not recently 'exported'. 
 ```
 
 - If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
