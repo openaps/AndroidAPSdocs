@@ -59,6 +59,8 @@
 
 3. 使用手机上的文件资源管理器（通常称为“Files”或“My Files”）导航至Internal Storage > AAPS > preferences。 在这里，您将看到所有导出的偏好设置文件的副本。 文件名应为`YYYY-MM-DD_Time_appname.json`。 将此文件上传到您选择的云平台。 然后，从云平台下载一份副本到您的本地计算机。
 
+(ExportImportSettings-Settings-Export)=
+
 ## 设置导出
 
 建议定期导出设置，尤其是在进行配置更改之前和之后。 您可以选择**手动导出或（更推荐）通过自动化方式**进行导出。 请务必记下您的AAPS主密码，并通过将手机上的设置文件复制到例如云存储位置来备份这些文件。
