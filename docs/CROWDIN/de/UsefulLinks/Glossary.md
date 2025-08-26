@@ -72,6 +72,8 @@
 
 **ISF** = Insulin Sensitivitäts-Faktor ("Korrektur-Faktor"). Die durch eine Insulineinheit zu erwartende Glukosewert-Senkung.
 
+**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuid).
+
 **LGS** = Low Glucose Suspend (dt. "Abschaltung vor Niedrig"). Bei fallendenden Glukosewerten (**BG**) wird **AAPS** die Basalrate reduzieren. Falls die Glukosewerte (**BG**) steigen, wird die Basalrate nur dann erhöht, wenn das **IOB** negativ ist (resultierend aus einem vorangegangenen **LGS**). In allen anderen Fällen bleibt die Basalraten so wie sie im ausgewählten **Profil** hinterlegt ist und bleibt damit unverändert. Wenn Du eine Hypo korrigierst, kann es vorkommen, dass danach Spitzen auftreten, die Du nicht durch Erhöhung der Basalrate korrigieren kannst. → siehe auch Ziel 6.
 
 **LineageOS** = Freies Open-Source-Betriebssystem für Smartphones usw. (wenn Du eine Accu-Chek Combo nutzt, siehe Wiki - Combo Pumpe).
