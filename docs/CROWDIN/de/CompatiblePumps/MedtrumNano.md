@@ -262,11 +262,11 @@ Sobald die Deaktivierung abgeschlossen ist, tippe auf **OK**, um zum Hauptbildsc
 
 (nano-resume-interrupted-activation)=
 
-### unterbrochene Aktivierung fortsetzen
+### Unterbrochene Aktivierung fortsetzen
 
 If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
 
-![unterbrochene Aktivierung fortsetzen](../images/medtrum/activation/ActivationInProgress.png)
+![Unterbrochene Aktivierung fortsetzen](../images/medtrum/activation/ActivationInProgress.png)
 
 Tippe auf **Weiter**, um den Aktivierungsprozess fortzusetzen. Drücke auf **Verwerfen**, um die aktuelle Patch-Sitzung zu löschen und damit eine Aktivierung eines neuen Patches zu ermöglichen.
 
