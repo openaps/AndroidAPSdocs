@@ -72,6 +72,8 @@
 
 **ISF** = Insulin Sensitivity Factor. The expected decrease in BG as a result of one unit of insulin.
 
+**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuid).
+
 **LGS** = Low Glucose Suspend. **AAPS** will reduce basal if **BG** is dropping and if **BG** is rising, then it will only increase basal if **IOB** is negative (from a previous **LGS**), otherwise basal rates will remain the same as the user’s selected **Profile**. The user may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound. → see also objective 6.
 
 **LineageOS** = free and open-source operating system for smartphones etc. (When using Accu-Chek Combo see Wiki - Combo pump).
