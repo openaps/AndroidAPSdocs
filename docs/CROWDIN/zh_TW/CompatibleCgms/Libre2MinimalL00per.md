@@ -2,280 +2,280 @@
 orphan: true
 - - -
 
-# How to setup FSL 2 and OOP2 to use a native Bluetooth connection in xDrip+
+# 如何在 xDrip+ 中設置 FSL 2 和 OOP2 使用原生藍牙連線
 
-Transferred from [MinimalL00per](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to markdown and **revised/updated**: Aug 25, 2025 psonnera
+由 [MinimalL00per](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) 轉換至 markdown 並進行 **修訂/更新**：2025 年 8 月 25 日 psonnera
 
-A list of definitions exists at the bottom of this document. If you are unfamiliar with any terms or abbreviations feel free to *[jump below](#minimallooper-definitions)* for clarification.
+本文件底部包含定義列表。 如果您對任何術語或縮寫不熟悉，可以隨時 *[移至下方](#minimallooper-definitions)* 以獲取資訊。
 
  
 
 ## 設定
 
-### Hardware
+### 硬體
 
-- *FSL2 and 2+* **NOTE: US, CAN, NZ, AUS versions are NOT supported**
+- *FSL2 和 2+* **注意：美國、加拿大、新西蘭、澳大利亞版本不受支援**
 
-**(OPTIONAL) Reader** (not compatible with FSL2+)
+**(可選) 讀取器**（與 FSL2+ 不相容）
 
-- Reader 1 (with updated firmware)
+- 讀取器 1（帶有更新的韌體）
 
-- Reader 2
+- 讀取器 2
 
-*NOTE: If you plan to use the Reader in this solution, you MUST START the sensor with the READER FIRST. If you do not do this you will not be able to use the reader to gather readings from the activated sensor. After the sensor has warmed up, you can then take readings from the LL application or xDrip+.*
+*注意：如果您計劃在此解決方案中使用讀取器，您必須首先使用讀取器啟動傳感器。 如果不這樣做，您將無法使用讀取器從已註冊傳感器收集讀取值。 感測器預熱完成後，您可以從 LL 應用程式或 xDrip+ 中進行讀取。*
 
-### Software
+### 軟體
 
-**OOP** - Out of Process Algorithm, an external Android APK application that assists in retrieving raw sensor data to obtain blood glucose values. xDrip+ sends gathered FSL2 BT raw data to OOP and blood glucose values are returned to xDrip+.
+**OOP** - 進程外演算法，一個外部的 Android APK 應用程式，幫助提取原始傳感器資料以獲得血糖值。 xDrip+ 將收集到的 FSL2 藍牙原始資料發送到 OOP，血糖值返回到 xDrip+。
 
 - **OOP2**
 
-  - **Works with European FSL2/2+ sensors only**
+  - **僅與歐洲 FSL2/2+ 傳感器相容**
 
-  - Closed source (not available on GitHub)
+  - 封閉源碼（在 GitHub 上無法獲取）
 
-  - Purpose is to decrypt the encrypted raw sensor values and return them to xDrip+. Then xDrip+ can be used with either raw data, requiring calibration, or provide glucose values similar to the Reader 1.
+  - 目的在於解密加密的原始傳感器值並將其返回給 xDrip+。 然後 xDrip+ 可以使用原始資料（需要校準），或提供類似於讀取器 1 的血糖值。
 
 [***xDrip+***](https://jamorham.github.io/)
 
-- [*Nightly*](https://github.com/NightscoutFoundation/xDrip/releases) latest source code built each night. Not thoroughly tested
+- [*Nightly*](https://github.com/NightscoutFoundation/xDrip/releases) 每晚建置的最新源碼。 尚未徹底測試
 
-- [*Stable*](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) latest stable tested release.
+- [*Stable*](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) 最新的穩定測試版本。
 
-- **NOTE: new sensors require updated an OOP2 app, for this it is recommended to use at least the latest xDrip+ release (Stable) version, matching the latest OOP2.**
+- **注意：新傳感器需要更新的 OOP2 應用程式，建議至少使用最新的 xDrip+ 版本（穩定），以對應最新的 OOP2。**
 
  
 
-## Process
+## 過程
 
-- *First download and install the apps below*
-- *Uninstall Possible Conflicting Apps*
-- *How to Start a FSL2 Sensor in Bluetooth Native mode using LL and xDrip+
-  - [*Step 1: Application Installation and Configuration*](#minimallooper-step1)
-  - [*Step 2: xDrip+ Settings Configuration*](#minimallooper-step2)
-  - [*Step 3: Physically insert the sensor*](#minimallooper-step3)
-  - [*Step 4: Start the LL App and start sensor with very first NFC Scan*](#minimallooper-step4)
-  - [*Step 5: Open xDrip+ and NFC SCAN the FSL2 sensor*](#minimallooper-step5)
-  - [*Step 6: Start the new sensor in xDrip+*](#minimallooper-step6)
-  - [*Step 7: Wait 60 seconds and NFC Scan the sensor again*](#minimallooper-step7)
-  - [*Step 8: Data Collection between 3 and 15 Minutes*](#minimallooper-step8)
-  - [*Step 9: Verify Sensor is connected and delivering data*](#minimallooper-step9)
+- *首先下載並安裝以下應用程式*
+- *移除可能衝突的應用程式*
+- *如何在 Bluetooth 原生模式下使用 LL 和 xDrip+ 啟動 FSL2 傳感器
+  - [*步驟 1：應用程式安裝與設定*](#minimallooper-step1)
+  - [*步驟 2：xDrip+ 設定配置*](#minimallooper-step2)
+  - [*步驟 3：物理插入傳感器*](#minimallooper-step3)
+  - [*步驟 4：啟動 LL 應用程式並使用第一次 NFC 掃描啟動傳感器*](#minimallooper-step4)
+  - [*步驟 5：打開 xDrip+ 並對 FSL2 傳感器進行 NFC 掃描*](#minimallooper-step5)
+  - [*步驟 6：在 xDrip+ 中啟動新的傳感器*](#minimallooper-step6)
+  - [*步驟 7：等待 60 秒，再次對傳感器進行 NFC 掃描*](#minimallooper-step7)
+  - [*步驟 8：收集資料的時間介於 3 到 15 分鐘之間*](#minimallooper-step8)
+  - [*步驟 9：驗證傳感器已連線並傳送資料*](#minimallooper-step9)
 
 - *[註釋](#minimallooper-notes)*
 - *[優點](#minimallooper-advantages)*
 - *[缺點](#minimallooper-disadvantages)*
 
-## Before You Start
+## 在你開始之前
 
-It is strongly recommended to follow this process with a **new sensor**. While it has been reported that a connection can be made with a running sensor (***see [below](#minimallooper-started-sensor)***), the chance that the LL app or the Reader will create a new private share key for communication during connection is highly likely. This means that after bonding, xDrip+ is not aware of the new key and will not be able to communicate with the sensor. Attempt a connection with a running sensor at your own risk, preferably towards the end of the sensor's life.
+強烈建議在使用 **新傳感器** 時遵循此過程。 雖然有報告指出可以與運行中的傳感器建立連線 (***見 [下方](#minimallooper-started-sensor)***)，但是 LL 應用程式或讀取器在連線期間創建新的私人共享金鑰的可能性相當高。 這意味著在配對後，xDrip+ 無法識別新金鑰，因此無法與傳感器通信。 如果您要嘗試與運行中的傳感器連線，風險自負，最好是在傳感器壽命結束時進行。
 
-### First download and install the apps below
+### 首先下載並安裝以下應用程式
 
-- **OOP2** - Versions of the oop2 can be found at:
+- **OOP2** 的版本可以在以下網址找到：
 
-  (*Note: you need to be logged in Google to access the link.*)
+  （*注意：您需登入 Google 才能訪問該連結。*）
 
-*[oop2.apk](https://drive.google.com/file/d/1hkbs60Bv2udTlMS81UStCdY4RaHR0V57/view)* - OOP2-7f0e31 (27da3f5) **2025-06-12** (latest version)
+*[oop2.apk](https://drive.google.com/file/d/1hkbs60Bv2udTlMS81UStCdY4RaHR0V57/view)* - OOP2-7f0e31 (27da3f5) **2025-06-12**（最新版本）
 
-- **xDrip+** - latest version can be found at:
+- **xDrip+** - 最新版本可以在以下網址找到：
 
 [*xDrip+.apk*](https://github.com/NightscoutFoundation/xDrip/releases)
 
 (minimallooper-started-sensor)=
 
-### What if my sensor is already started? Can I still get reading in xDrip+? YES!
+### 如果我的傳感器已經啟動怎麼辦? 我還能在 xDrip+ 中獲得讀取值嗎? 是的！
 
-Many people have asked if this method can be used with an already active sensor and I can say with a resounding **YES**, you can start an actively running sensor.
+許多人詢問此方法是否可以與已經啟動的傳感器一起使用，我可以明確地說**是的**，您可以啟動正在運行的傳感器。
 
-1.  **FIRST**, make sure you have made the configuration changes and settings to xDrip+ and installed and configured OOP2 as shown below.
+1.  **首先**，確保您已根據下述說明對 xDrip+ 進行了配置更改和設置，並安裝及配置 OOP2。
 
-2.  **THEN**, proceed to *Step 5* and **MAKE SURE** you have force closed LL before you start. Then follow the process to completion.
+2.  **然後**，繼續進行 *步驟 5*，並**確保**在開始之前已強制關閉 LL。 然後按照過程完成所有步驟。
 
-*NOTE: You will not be able to use your activated FSL2 sensor with the FSLReader IF IT was not started with the FSLReader first. If it WAS started with the FSLReader first, then you will be able to **scan** the sensor and retrieve readings from BOTH the sensor and apps like LL and xDrip+.*
+*注意：如果您的 FSL2 傳感器不是先用 FSLReader 啟動，就無法與 FSLReader 一起使用。 如果是先用 FSLReader 啟動的話，您將能夠**掃描**傳感器並從傳感器及像 LL 與 xDrip+ 的應用程式中獲取讀取值。*
 
-## How to Start a FSL2 Sensor in Bluetooth Native mode using LL and xDrip+
+## 如何使用 LL 和 xDrip+ 在藍牙原生模式下啟動 FSL2 傳感器
 
-*NOTE: If there are settings in the screenshots that are not called out with a BOX specifically and are UNCHECKED (IE, disabled) then PLEASE KEEP THEM DISABLED. The screenshots are reflective of a working configuration for ALL settings shown. If you want to experiment turning other features on/off after you have a working sensor, you are free do to so at your own risk.*
+*注意：如果截圖中有設定沒有用框框特別標註且為未勾選（例如，停用），那麼請保持這些設定為停用狀態。 這些截圖反映了所有顯示設定的工作配置。 如果您想在傳感器正常工作後嘗試開啟或關閉其他功能，會有一些風險，請自行承擔。*
 
 (minimallooper-step1)=
 
-### **Step 1: Application Installation and Configuration**
+### **步驟 1：應用程式安裝與設定**
 
-**Install and configure OOP2** and see that it works by just opening the app.
+**安裝及配置 OOP2**，只需開啟應用程式即可確認其運作正常。
 
 **設定**
 
-- *Use service* **on**
+- *使用服務* **開啟**
 
-- *Use foreground service* **on**
+- *使用前景服務* **開啟**
 
-- *Timer Duration* **5 min**
+- *計時器持續時間* **5 分鐘**
 
-  - Change to 1 sec if you are not getting results fast enough.
+  - 如果您沒有快速獲得結果，請將其改為 1 秒。
 
-**Version 2: 93e5cac-2020.12.08 (latest version)**
+**版本 2: 93e5cac-2020.12.08（最新版本）**
 
-**Install xDrip+** minimum version: latest release. Further documentation on xDrip+ installation and setup can be found [*here*](https://androidaps.readthedocs.io/en/latest/Configuration/xdrip.html).
+**安裝 xDrip+** 最低版本：最新釋出版本。 有關 xDrip+ 安裝和設置的進一步文檔可以在[*這裡*](https://androidaps.readthedocs.io/en/latest/Configuration/xdrip.html)找到。
 
 (minimallooper-step2)=
 
-### **Step 2: xDrip+ Settings Configuration**
+### **步驟 2：xDrip+ 設定配置**
 
-**Hardware Data Source**: Libre Bluetooth
+**硬體資料來源**：Libre 藍牙
 
-**NFC Scan features**: *settings not mentioned are assumed to be turned off. This applies to “faster multiblock” setting as well. Do not enable this as NFC scanning will NOT work.*
+**NFC 掃描功能**：*未提及的設定預設為停用。 這同樣適用於“更快的多區塊”設定。 不要啟用此項，因為 NFC 掃描將無法運作。*
 
-- *Use NFC feature*: **on**
+- *使用 NFC 功能*：**開啟**
 
-- *Starting Bluetooth connection with FSL2 sensor*: **Always connect to libre2 sensors**
+- *與 FSL2 傳感器啟動藍牙連線*：**始終連接到 libre2 傳感器**
 
-- *Sensor Age or Expiry*: **on**
+- *傳感器時間或過期指示*：**開啟**
 
-- *Scan when not in xDrip+*: **on**
+- *在不使用 xDrip+ 時掃描*：**開啟**
 
-**Less Common Settings -\> Advanced Calibration**
+**較不常用的設定 -\> 進階校準**
 
-- *Double Calibrations*: **on (only if you really do 2 blood tests)**
+- *雙重校準*：**開啟（僅當您確實做了 2 次血液測試時）**
 
-- *Non-fixed Libre slopes*: **on**
+- *非固定 Libre 斜率*：**開啟**
 
-- *Check Libre Serial*: **on**
+- *檢查 Libre 序號*：**開啟**
 
-**Less Common Settings -\> Bluetooth Settings** (*these are important and can vary with your phone/setup*)
+**較不常用的設定 -\> 藍牙設定**（*這些設定很重要，且可能會因您的手機/設置而有所不同*）
 
-- *Turn Bluetooth on*: **on**
-- *Trust Auto-Connect*: **on**
-- *Use Background Scans*: **on**
-- *Always discover services*: **on**
+- *開啟藍牙*：**開啟**
+- *信任自動連接*：**開啟**
+- *使用背景掃描*：**開啟**
+- *永遠探索服務*：**開啟**
 
-You can setup xDrip+ using the QR code below. You need to scan it (or load the picture) in xDrip+ -> Auto Configure.
-
-```{admonition} QR Code
-:class: dropdown
-
-![Setup Bluetooth](../images/minimal00per/qr_libre2direct-nocalib.png)
-```
-
-Once scanned the QR code above, if you have a Samsung phone (but this is also useful for many Chinese brands), scan the other QR code below to change the settings for a more reliable connection (*Trust Auto-Connect*: **off** and *Use Background Scans*: **off**).
+您可以使用下面的 QR Code 設置 xDrip+。 您需要在 xDrip+ 中掃描它（或載入圖片） -> 自動配置。
 
 ```{admonition} QR Code
 :class: dropdown
 
-![Setup Bluetooth](../images/minimal00per/qr_libre2direct_samsung.png)
+![設置藍牙](../images/minimal00per/qr_libre2direct-nocalib.png)
 ```
 
-**Advanced settings for FSL2** (*optional but helpful*)
+掃描以上的 QR Code，如果您擁有 Samsung 手機（但這對許多中國品牌也很有用），請掃描下面的另一個 QR Code 以更改設定以獲得更可靠的連接（*信任自動連接*：**關閉**，且 *使用背景掃描*：**關閉**）。
 
-- *show Raw values in Graph*: **on**
+```{admonition} QR Code
+:class: dropdown
 
-- *show Sensors infos in Status*: **on**
+![設置藍牙](../images/minimal00per/qr_libre2direct_samsung.png)
+```
 
-**Extra Logging Settings** (*needed to debug if not working correctly*)
+**FSL2 進階設定**（*可選但有幫助*）
 
-- *Extra tags for logging*: enter this value
+- *在圖表中顯示原始值*：**開啟**
+
+- *在狀態中顯示傳感器資訊*：**開啟**
+
+**額外記錄設定**（*如果運作不正常，需進行除錯*）
+
+- *額外標籤用於記錄*：請輸入此值
 
 `BgReading:d,jamorham librereceiver:v,LibreOOPAlgorithm:v,jamorham nsemulator:v,DexCollectionService:v`
 
-**Less Common Settings -\> Other misc options**
+**較不常用的設定 -\> 其他雜項選項**
 
-- *Retrieve Libre History*: **on**
+- *檢索 Libre 歷史*：**開啟**
 
-- *OOP algorithm calibration*: *THIS IS GREYED OUT AND CANNOT BE CHECKED, THIS IS NORMAL BEHAVIOUR*
+- *OOP 算法校準*：*此項為灰色並無法勾選，這是正常的*
 
-> **Settings for OOP2 Configuration**
+> **OOP2 配置的設定**
 
-- *Out of process Libre algorithm*: **OFF**
+- *非進程的 Libre 算法*：**關閉**
 
-(*MAKE SURE THIS IS **OFF** FOR OOP2 OTHERWISE YOU WILL NOT GET READINGS!*)
+（*確保對於 OOP2 這一項**關閉**，否則您將無法獲得讀取值！*）
 
 (minimallooper-step3)=
 
-### **Step 3: Physically insert the sensor**
+### **步驟 3：物理插入傳感器**
 
 (minimallooper-step4)=
 
-### **Step 4: Start the LL App and start sensor with very first NFC Scan**
+### **步驟 4：啟動 LL 應用程式並使用第一次 NFC 掃描啟動傳感器**
 
-Start the LL app, then scan the newly inserted sensor, then close and disable or uninstall the LL app. **You still need to wait for the sensor to warm-up the full 60 minutes before proceeding and starting the sensor in xDrip+**. Do not rely on the readings before as the sensor is still internally calibrating and the values vary wildly.
+啟動 LL 應用程式，然後掃描新插入的傳感器，接著關閉並停用或移除 LL 應用程式。 **在繼續進行和啟動 xDrip+ 傳感器之前，您仍需等待傳感器完全加熱 60 分鐘。** 在傳感器內部仍在調整期間，請勿依賴之前的讀取值，因為數值會有很大變化。
 
-#### **Step 4a (OPTIONAL, Use FSLReader):**
+#### **步驟 4a（選用，使用 FSLReader）：**
 
-**Start the FSL2 (not 2+) sensor by scanning it with the FSLReader with very first NFC Scan**
+**通過使用 FSLReader 首次 NFC 掃描啟動 FSL2（不是 2+）傳感器。**
 
-If you want to be able to use the **FSLReader** as well as the LL app or xDrip+ to read values from the FSL2 sensor, then **you will need to scan the newly inserted FSL2 sensor with the FSL Reader FIRST.** After the sensor warmup is complete you can then use the LL app or xDrip+ to scan readings.
+如果您希望能夠同時使用 **FSLReader** 以及 LL 應用程式或 xDrip+ 從 FSL2 傳感器中讀取數值，那麼 **您需要首先用 FSL Reader 掃描新插入的 FSL2 傳感器。** 傳感器加熱完成後，您就可以使用 LL 應用程式或 xDrip+ 來掃描讀取值。
 
-*NOTE: The LL app is only needed for the VERY FIRST NFC scan after sensor insertion. It serves to send the warmup initialization signal, afterwards the app MUST be disabled (app settings-\>force close) or uninstalled. You can use the Patched 2.3 app or Official versions, it does not matter. The main thing is to prevent the LL app from running when xDrip+ is trying to start the BT bonding process with the sensor as the LL app interferes with the Bluetooth reconnection process by disrupting communication.*
+*注意：LL 應用程式僅在傳感器插入後進行首次 NFC 掃描時需要。 這用於發送加熱初始化信號，之後必須停用（應用程式設置 -> 強制結束）或移除應用程式。 您可以使用修補的 2.3 版本應用程式或官方版本，這沒有關係。 最重要的是防止 LL 應用程式在 xDrip+ 嘗試啟動與傳感器的藍牙配對過程時執行，因為 LL 應用程式會通過干擾通訊來影響藍牙重新連線過程。*
 
-*It has been reported that simply turning off the **location permission** in the LL app Android system settings is enough to prevent it from interfering with the connection. This has been reported by a few users to be successful. Again **I recommend disabling or uninstalling the app** but you can try this if you want to experiment.*
+*有用戶報告，僅在 LL 應用程式 Android 系統設置中關閉 **位置權限** 就足以防止其干擾連線。 這被一些用戶報告為成功。 再次 **我建議停用或移除應用程式**，但如果您想實驗，您可以嘗試這樣做。*
 
 (minimallooper-step5)=
 
-### **Step 5: Open xDrip+ and NFC SCAN the FSL2 sensor**
+### **步驟 5：打開 xDrip+ 並對 FSL2 傳感器進行 NFC 掃描**
 
-(*Reminder! Ensure LL is disabled (location turned off) or uninstalled AND you have waited the entire 60 minutes for the sensor to warmup and internally calibrate.*) NFC SCAN the FSL2 sensor. This sends a signal to the sensor to turn on Bluetooth pairing in order to start the bonding process. A small notification will appear briefly on the bottom of the xDrip+ Overview screen with the text **Scanning** followed by the notification **Scanned OK!** upon a successful NFC scan of the FSL 2 sensor.
+（*提醒！ 確保禁用 LL（關閉位置）或移除，並且您已經等待整整 60 分鐘讓傳感器加熱和內部校準。*） NFC 掃描 FSL2 傳感器。 這會向傳感器發送信號，打開藍牙配對以啟動配對過程。 在 xDrip+ 總覽螢幕底部會出現一個小提示，文本為 **掃描中**，隨後在成功掃描 FSL 2 傳感器後顯示通知 **掃描成功！**
 
 (minimallooper-step6)=
 
-### **Step 6: Start the new sensor in xDrip+**
+### **步驟 6：在 xDrip+ 中啟動新的傳感器**
 
-In the **xDrip+ Overview screen** press the **hamburger menu** in the upper left corner. Then choose **Start Sensor**.
+在 **xDrip+ 總覽** 左上角按下 **漢堡選單**。 然後選擇 **啟動傳感器**。
 
-On the **Start New Sensor** screen press **Start Sensor**. A prompt will ask **Did you insert it today?** Respond by pressing **NOT TODAY**.
+在 **啟動新傳感器** 螢幕上按下 **啟動傳感器**。 系統會彈出提示 **您今天有插入嗎？** 回應時按下 **今天沒有**。
 
-*NOTE: If you accidentally clicked "YES, TODAY" then you will need to "stop sensor" from the xDrip+ main menu followed by "start sensor" by proceeding with Step 5 again.*
+*注意：如果您不小心點擊了 "是，今天" 那麼您需要從 xDrip+ 主選單中 "停止傳感器"，然後再依照步驟 5 重新啟動傳感器。*
 
 (minimallooper-step7)=
 
-### **Step 7: Wait 60 seconds and NFC Scan the sensor again**
+### **步驟 7：等待 60 秒，再次對傳感器進行 NFC 掃描**
 
-A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth device from which xDrip+ will use to retrieve the readings. Once complete you will see a notification stating **NEW SENSOR STARTED**. The **Collect Initial Readings** dialog will appear displaying the steps completed and in progress along with time estimations for completion.
+需要進行第二次 NFC 掃描以 **添加** 傳感器作為 xDrip+ 將使用的藍牙設備來檢索讀取值。 完成後，您將看到一個通知，顯示 **新傳感器已啟動**。 系統會顯示 **收集初始讀取值** 對話框，顯示完成的步驟和進行中的步驟，以及完成的時間預估。
 
-A 60 second waiting period is enforced because the sensor can’t be scanned during this process more than once per minute. If the sensor is scanned too early the warning **Not so quickly, wait 60 seconds** is displayed in the xDrip Overview screen.
+因為傳感器在此過程中無法每分鐘掃描超過一次，所以會強制實施 60 秒的等待期。 如果傳感器掃描過早，xDrip 總覽螢幕將顯示警告 **不要這麼快，請等 60 秒**。
 
 (minimallooper-step8)=
 
-### **Step 8: Data Collection between 3 and 15 Minutes**
+### **步驟 8：收集資料的時間介於 3 到 15 分鐘之間**
 
-Between 3 and 15 minutes enough data is collected to display the first values. *If you are still not receiving readings at this time, sometimes it helps to reboot the phone.*
+在 3 到 15 分鐘之間會收集足夠的資料以顯示首個數值。 *如果此時仍未收到讀取值，有時重啟手機會有所幫助。*
 
-If you use a Samsung (or many Chinese brand phones) and have issues receiving data, scan the QR code below, in xDrip+ -> Auto Configure.
+如果您使用的是三星（或許多中國品牌手機）且在接收資料時遇到問題，請掃描下面的 QR Code，在 xDrip+ -> 自動配置。
 
 ```{admonition} QR Code
 :class: dropdown
 
-![Setup Bluetooth](../images/minimal00per/qr_libre2direct_samsung.png)
+![設置藍牙](../images/minimal00per/qr_libre2direct_samsung.png)
 ```
 
-It will change xDrip+ Bluetooth settings to:
+這會將 xDrip+ 的藍牙設定更改為：
 
-- *Trust Auto-Connect*: **off**
-- *Use Background Scans*: **off**
+- *信任自動連接*: **關閉**
+- *使用背景掃描*: **關閉**
 
 (minimallooper-step9)=
 
-### **Step 9: Verify Sensor is connected and delivering data**
+### **步驟 9：驗證傳感器已連線並傳送資料**
 
-Press the Hamburger menu in the upper left of the xDrip+ Overview screen and select **System Status**. On the System Status screen the active **Bluetooth Device:** field displays the FSL2 Bluetooth naming convention of **ABB___XXXXXXXXXXX**, where the XXX’s represent the sensor serial number. The **Connection Status** field displays **Connected** and the **Sensor Start:** field displayed the time the sensor was started.
+在 xDrip+ 總覽螢幕的左上角按下漢堡選單，並選擇 **系統狀態**。 在系統狀態螢幕上，活動中的 **藍牙設備：** 欄位顯示 FSL2 藍牙命名慣例 **ABB___XXXXXXXXXXX**，其中 XXX 代表傳感器序號。 在 **連線狀態** 欄位顯示 **已連線**，而 **傳感器啟動：** 欄位顯示傳感器啟動的時間。
 
-On the **BT Device** (swipe left) screen you can verify further connection details of the sensor as well as use this screen for troubleshooting connections. Below is a list of fields and their purposes to assist in connection troubleshooting.
+在 **BT 設備**（向左滑動）螢幕上，您可以查驗傳感器的進一步連線詳情，並使用此螢幕進行連線故障排除。 以下是各欄位及其用途的列表，以協助連線故障排除。
 
-*NOTE: **DO NOT click on Bluetooth Pairing** in this window as your sensor has already been paried or is in the middle of the pairing and bonding process. Doing so will attempt a direct pair and you will have to start the process from Step 5 all over again.*
+*注意：**不要在此視窗中點擊藍牙配對**，因為您的傳感器已經配對或正在進行配對和連線的過程。 這樣會嘗試直接配對，您將不得不從步驟 5 開始重新執行整個過程。*
 
-- **Phone Service State:** The last time the phone made a BT connection to the sensor
+- **手機服務狀態：** 手機上次與傳感器建立藍牙連線的時間。
 
-- **Bluetooth Device:** Displays current status of the connection (either **Connected** or **Disconnected**)
+- **藍牙設備：** 顯示連線的當前狀態（**已連線** 或 **已中斷連線**）
 
-- **Active device connection:** Displays the status of the bluetooth bond after connection. **True** means the sensor is connected and bonded.
+- **活動設備連線：** 顯示藍牙連線之後的狀態。 **True** 意味著傳感器已連線且已配對。
 
-- **Device Mac Address**: This is the hardware ID of the sensor
+- **裝置 Mac 位址**: 這是傳感器的硬體識別碼。
 
-- **GATT device connected:** This is the hardware ID registered in the Android BT service. Any bluetooth devices actively bonded to your phone will display their hardware ID here. The GATT and Device Address should match for your sensor hardware ID.
+- **GATT 裝置已連線:** 這是註冊在 Android 藍牙服務中的硬體識別碼。 任何與您的手機配對的藍牙裝置將在這裡顯示其硬體識別碼。 GATT 和裝置位址應該與您的傳感器硬體識別碼相符。
 
-- **Request Data:** Only shown with Engineering Mode enabled in xDrip+. Pressing **Test for xBridgePlus protocol** you can manually start a request for data from your sensor.
+- **請求資料:** 僅在 xDrip+ 的工程模式啟用時顯示。 按下**xBridgePlus 協議測試** ，您可以手動開始請求傳感器的資料。
 
-- **Received Data:** This is a hexadecimal representation of the data stream coming from your sensor. If you see characters here then you are actively receiving data from the sensor. The data should change after pressing **Test for xBridgePlus protocol**.
+- **接收資料:** 這是從您的傳感器傳來的資料流的十六進制表示形式。 如果您在此看到文字，則表示您正積極接收來自傳感器的資料。 按下**xBridgePlus 協議測試**後，資料應該會改變。
 
-- **Send Data:** This is the data request hexadecimal stream sent to the sensor to start data retrieval. After pressing **Test for xBridgePlus protocol** you should see this field update however, the data may not change a the request is the same each time.
+- **發送資料:** 這是發送到傳感器以開始資料擷取的資料請求十六進制流。 按下**xBridgePlus 協議測試**後，您應該看到此欄位更新，然而資料可能不會改變，因為請求每次都是相同的。
 
  
 
@@ -283,19 +283,19 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 ### **註釋**
 
-- **Using LL NFC Scans AFTER bonding/pairing in xDrip+ is completed**: You can conduct NFC scans but the bonding/pairing process with xDrip+ needs to be completed first. Always look at xDrip+ and see if it is close to the 5 minute reading (ie. 4 minutes ago), if it is near 5 min, wait for the new BT reading to come in and then conduct the NFC scan. If you catch it at the wrong time it will disturb the BT process in xDrip+ and not receive BT readings, which can take a while to rebond and transmit again and sometimes a sensor BT connection can be “stolen” by LL. However between these BT readings I have not had any problems executing an NFC scan followed by immediately disabling the app. I am not sure if LL needs to be disabled each time but I disable it to be on the safe side.
+- **在配對/連線完成後使用 LL NFC 掃描**: 您可以進行 NFC 掃描，但需要先完成與 xDrip+ 的配對/連線過程。 始終查看 xDrip+，確保它接近 5 分鐘讀取值（例如 4 分鐘前），如果接近 5 分鐘，請等待新的藍牙讀取值進來後再進行 NFC 掃描。 如果您在錯誤的時間捕捉到，將會干擾 xDrip+ 的藍牙流程，導致無法接收藍牙讀取值，這可能需要一段時間才能重新配對並再次傳輸，且有時傳感器的藍牙連線可能會被 LL “搶走”。 然而，在這些藍牙讀取值之間，我運行 NFC 掃描後立即停用應用程式並沒有遇到任何問題。 我不確定是否每次都需要停用 LL，但我為了安全起見會停用它。
 
-- - **What is going on?** When a Bluetooth connection is made a private shared key is created that is needed to allow communication between the sensor and the calling application/device. There is a high probability that the LL app or the Reader creates a new private shared key for communication during the connection. This means that after bonding, xDrip+ is not aware of the new key and will not be able to communicate with the sensor.
+- - **發生了什麼事情?** 當藍牙連線建立時，會創建一個私有共享密鑰，這是允許傳感器與呼叫應用程式/裝置之間進行通信所需的。 LL 應用程式或讀取器在連接期間高機率會創建一個新的私有共享密鑰來進行通信。 這意味著在配對後，xDrip+ 無法識別新金鑰，因此無法與傳感器通信。
 
-  - Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readers in xDrip+. In the LL app Android permission you simply need to turn off the **Allow Location** setting. Once this is done you should be able to use the LL app and xDrip+ simultaneously. I would recommend that you don't select a default app for NFC scanning and pick which app you want to read the sensor for an NFC scan. Also, DON'T FORGET, on your next sensor change to force close the LL app after the initial warmup NFC scan on the new sensor. After the sensor is configured and receiving readings in xDrip+ you can then start the LL app again.
-
-&nbsp;
-
-- **Rebooting your phone**: After the reboot, and after disabling or force closing the app, REMEMBER to check that the LL app is NOT running. I suggest testing a reboot to see if LL starts again automatically. You can look in the LL app settings under Android Application settings on your phone. If it is still enabled, then disable the LL app again, uninstalling the LL app may be the only way to avoid this. This is to prevent LL from accidentally stealing the BT bond. Also, after rebooting it will take the same 3-15 minutes to get BT readings from the sensor so be patient and plan for this if you are rebooting close to times you require a BG reading in order to bolus, meals, etc.
+  - 幾位使用者報告說，成功啟動傳感器並在 xDrip+ 中接收讀取器後，可以重新啟動 LL 應用程式。 在 LL 應用程式的 Android 權限中，您只需關閉**允許定位**設定。 完成後，您應該能夠同時使用 LL 應用程式和 xDrip+。 我建議您不要為 NFC 掃描選擇預設應用程式，而是選擇您想要用於掃描傳感器的應用程式。 另外，別忘了，在下一次更換傳感器時，請在新的傳感器初始的暖機 NFC 掃描後強制關閉 LL 應用程式。 在傳感器配置並在 xDrip+ 中接收讀取值後，您可以再重新啟動 LL 應用程式。
 
 &nbsp;
 
-- **Battery Optimization settings**: Make sure you EXCLUDE these apps from your phone’s battery optimization settings
+- **重新啟動您的手機**: 重新啟動後，在停用或強制關閉應用程式後，記得檢查 LL 應用程式是否未在運行。 我建議測試重新啟動，看 LL 是否會自動再次啟動。 您可以在手機的 LL 應用程式設定中查看 Android 應用程式的設定。 如果仍然啟用，則再次停用 LL 應用程式，移除 LL 應用程式可能是避免此問題的唯一方法。 這是為了防止 LL 意外搶走藍牙連線。 此外，重新啟動後，從傳感器獲取藍牙讀取值仍需 3-15 分鐘，因此如果您在接近需要血糖讀取值的時間重新啟動，請耐心等待並做好這方面的計畫。
+
+&nbsp;
+
+- **電池優化設定**: 確保在手機的電池優化設定中將這些應用程式排除。
 
   - xDrip+
 
@@ -307,34 +307,34 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 &nbsp;
 
-- **Using Flight Mode:** There are some situations which call for turning on flight mode (when taking a flight ;-), sleeping at night and you do not wish to have WIFI or Mobile connection signals operating with your phone in close range of your head) and this can cause issues with the Bluetooth communication during activation of Flight mode. When switching on flightmode on the phone followed by activating Bluetooth, blood glucose readings will be lost. The only workaround is to restart the collector in xdrip+ -\> System Status -\> Classic Status Page. After restarting the collector the blood glucose readings appeared again.
+- **使用飛行模式:** 在某些情況下需要開啟飛行模式（例如，搭乘飛機 ;-)，晚上睡覺時不希望在靠近頭部的地方有 WIFI 或移動網路信號），但在啟用飛行模式時，可能會導致藍牙通訊出現問題 當在手機上開啟飛行模式後再啟用藍牙，血糖讀取值會丟失。 唯一的解決方法是重新啟動 xdrip+ 中的收集器 -\> 系統狀態 -\> 經典狀態頁面。 重新啟動收集器後，血糖讀取值再次出現。
 
  
 
-(minimallooper-advantages)=
+(minimalooper-advantages)=
 
 ### **優點**
 
-- **LL patched app no longer required** You no longer need a patched version of the LL app to retrieve values from the FSL2 sensor. While you can use the LL patched app, the official versions of the LL app can start the first NFC initialization scan in the same manner as the patched app. There is no difference as far as NFC initialization scanning to start the sensor is concerned.
+- **不再需要 LL 修補程式應用程式** 您不再需要修補版本的 LL 應用程式來從 FSL2 傳感器檢索數值。 雖然您可以使用 LL 修補程式應用程式，但 LL 應用程式的官方版本可以以與修補程式應用程式相同的方式啟動第一個 NFC 初始化掃描。 就 NFC 初始化掃描來啟動傳感器而言，沒有區別。
 
 &nbsp;
 
-- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao, Bubble or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Less hardware means less things to go wrong, less devices to charge and a more minimalistic setup.
+- **不再需要第三方 NFC 掃描裝置** 像 (Miaomiao, Bubble 或 Blucon)的第三方 NFC 掃描裝置不再需要 *(但仍可使用)* 來收集讀取值，因為現在傳感器可以透過藍牙自己傳送讀取值。 更少的硬體意味著更少的故障，更少的設備需要充電，搭配更簡約的設置。
 
 &nbsp;
 
-- **You will still be able to NFC scan readings with the FSL2 Reader (version 1 with updated FW or version 2) WHEN the FSL2 sensor has been started with the FSL Reader FIRST.** The FSL2 standalone reader can still be used to scan readings on the active sensor once it is bonded via Bluetooth to xDrip+.
+- **當 FSL2 傳感器已經先用 FSL 讀取器啟動時，您仍然可以使用 FSL2 讀取器（版本 1 與更新的韌體或版本 2）進行 NFC 掃描讀取值。** FSL2 獨立讀取器在與 xDrip+ 通過藍牙配對後，仍然可以用來掃描正在使用中的傳感器的讀取值。
 
-  - You **MUST** start the sensor with the version first NFC scan to initiate sensor warmup **with the FSL Reader FIRST**. After this point other software applications will also be able to take NFC readings from the now activated sensor.
-- It is my understanding that the FSL2 sensor (as long as it has not established or is not trying to establish a connection) will always advertise its presence (and availability) over BLE exactly every 2 minutes (visible on any Bluetooth device that has the ability to scan for Bluetooth devices). Whichever device is first to respond to this advertisement wins the race and is the *only* device allowed to connect and read the sensor as a private shared key is created during the NFC scan connection process which is used to decrypt FSL 2 communication. The sensor is then unavailable to other devices that do not have this private share key and might also be trying to connect. It seems that the FSL 2 reader always wins this race whatever the “opponent”.
-
-&nbsp;
-
-- **Minimal hardware device setup** My goal has always been to keep the medical devices attached to my body at a minimum. The FSL2 in combination with the Omnipod system accomplished this goal. This point is even more crucial when I travel (both short and long distances) because the number of items and set changes for those items becomes fewer, which means I have more room for other items in my luggage. Hopefully in the future there will be a patch pump that just has a replaceable reservoir and the chip and motor system can be packaged as a retainable/reusable piece. This would cut down on waste and decrease packaging for site changes which again leads to more room in my suitcase for other things.
+  - 您**必須**用版本的第一次 NFC 掃描來啟動傳感器，以與 FSL 讀取器**首先**進行傳感器暖機。 在這一點之後，其他軟體應用程式也能夠從現在啟用的傳感器中獲取 NFC 讀取值。
+- 據我了解，FSL2 傳感器（只要它尚未建立或不在嘗試建立連接的狀態）將會每 2 分鐘宣告其存在（和可用性），可在任何能夠掃描藍牙裝置的藍牙設備上可見。 無論哪個設備最先對這個廣播訊號回應，就能成並*唯一*能夠連線和讀取傳感器的裝置，因為在NFC掃描連線過程中會創建一個私有共享金鑰，用來解密FSL 2通訊。 然後，這個傳感器對於其他沒有這個私有共享金鑰且可能也在嘗試連線的設備將無法使用。 看起來 FSL 2 讀取器無論對上哪個「競爭裝置」，都會是最先回應的那一個。
 
 &nbsp;
 
-- **No more hour gaps when changing sensors** Because you can start another sensor with the LL app using an initial NFC scan, the current sensor can keep running and delivering readings by Bluetooth at the same time. After 20 minutes you can get readings from the new sensor but it is best to wait 1 hour for the sensor to properly internally calibrate. This means you can stop the current sensor and start up the new one (after it has been set and warmed up with the LL NFC scan an hour earlier) and within 3 to 15 minutes you will have your initial calibrations and readings.
+- **最少化硬體裝置設定** 我的目標一直是盡量減少附著在身上的醫療裝置。 FSL2 結合 Omnipod 系統實現了這個目標。 這一點在我旅行（無論是短途還是長途）時更為重要，因為物品的數量和設置變更會減少，這意味著我的行李中有更多的空間放其他物品。 希望將來會有一種藥盒幫浦，僅需更換儲液槽，而芯片和馬達系統可以作為可保留/可重複使用的部件包裝。 這將減少浪費，並減少更換位置的包裝，進一步為行李中的其他物品提供更多空間。
+
+&nbsp;
+
+- **更換傳感器時不再有小時的間隔** 由於您可以使用LL應用程式通過初步的NFC掃描啟動另一個傳感器，當前傳感器可以繼續運行並通過藍牙傳送讀取值。 20分鐘後，您可以從新傳感器獲取讀取值，但最好等待1小時以讓傳感器內部進行正確的校正。 這代表您可以停止當前傳感器並啟動新的傳感器（在它已經通過LL NFC掃描設定和預熱一小時後），在3至15分鐘內將獲得初步的校正和讀取值。
 
 &nbsp;
 
@@ -342,49 +342,49 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 ### **缺點**
 
-- **Phone Reboot:** Because the Bluetooth process has to start again when your phone reboots, you have to first ensure that you manually disable the LL app (if you did not uninstall it) and be patient for the first readings to come in (3 to 15 min). This means timing phone reboots so they do not occur during critical times like correction boluses or meal and snack times.
+- **手機重啟：** 由於當您的手機重啟時藍牙過程必須重新開始，因此您必須首先確保手動停用LL應用程式（如果您沒有移除它），並耐心等待第一次讀取值的到來（3到15分鐘）。 這代表需要安排手機重啟的時間，避免在關鍵時刻，比如修正注射或用餐和小吃時間時發生。
 
 &nbsp;
 
-- **You can't run LL and xDrip+ in parallel together for Bluetooth readings**. LL will always try to "steal" the Bluetooth connection to the sensor and bond. If that happens, you are stuck with LL for the rest of the life of the sensor. So running the apps simultaneously does not work all the time. As I mention below, you can enable the LL app and do an NFC scan to get the LL reading (if you need to compare, want to retrieve history for yourself or endocrinologist reports) however you should disable it as soon as you have your reading and not try to attempt this within a minute of when xDrip+ is going to retrieve its Bluetooth reading. I am not sure how using the FSL2 reader works while doing this but I will test that at a later point.
-- Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readers in xDrip+. In the LL app Android permission you simply need to turn off the **Allow Location** setting. Once this is done you should be able to use the LL app and xDrip+ simultaneously. I would recommend that you don't select a default app for NFC scanning and pick which app you want to read the sensor for an NFC scan. Also, DON'T FORGET, on your next sensor change to force close the LL app after the initial warmup NFC scan on the new sensor. After the sensor is configured and receiving readings in xDrip+ you can then start the LL app again.
+- **您無法同時運行LL和xDrip+以獲得藍牙讀取值**。 LL將始終嘗試“搶佔”與傳感器的藍牙連接並進行綁定。 如果發生這種情況，您將無法在傳感器其餘的使用時間中避免使用LL。 所以，同時執行這些應用程式並不一定每次都能正常運作。 如我在下文中提到的，您可以啟用LL應用程式並進行NFC掃描以獲取LL讀取值（如果您需要比較，想要為自己或內分泌科醫生報告檢索歷史）但是在獲取讀取值後應立即停用它，而不是在xDrip+即將獲取其藍牙讀取值的一分鐘內進行此操作。 我不確定在這種情況下使用FSL2讀取器如何運作，但我稍後會測試。
+- 幾位使用者報告說，成功啟動傳感器並在 xDrip+ 中接收讀取器後，可以重新啟動 LL 應用程式。 在 LL 應用程式的 Android 權限中，您只需關閉**允許定位**設定。 完成後，您應該能夠同時使用 LL 應用程式和 xDrip+。 我建議您不要為 NFC 掃描選擇預設應用程式，而是選擇您想要用於掃描傳感器的應用程式。 另外，別忘了，在下一次更換傳感器時，請在新的傳感器初始的暖機 NFC 掃描後強制關閉 LL 應用程式。 在傳感器配置並在 xDrip+ 中接收讀取值後，您可以再重新啟動 LL 應用程式。
 
 &nbsp;
 
-- **3rd Party NFC Scanning Devices can still be used**. Yes, I listed this as a disadvantage but I also wanted to point out that if something goes wrong with the sensor and LL captures control of it, you can always fall back to placing an NFC scanning device on the sensor to get readings in xDrip+. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Bubble, Blucon). Sometimes certain phones do not operate well with the native Bluetooth sensor bonding and data retrieval. You can use these devices as a backup or as normal usage, either way you still have this as an option.
-- If you are planning on using the **FSL Reader** as an NFC scanning device to take readings, you MUST start the FSL2 sensor with the **VERY FIRST NFC scan** to warm up the senor with the **READER FIRST**.
+- **第三方NFC掃描設備仍然可以使用**。 是的，我將其列為缺點，但我也想指出，如果傳感器出現問題且LL控制了它，您始終可以使用NFC掃描設備放在傳感器上獲取xDrip+中的讀取值。 如果您更喜歡使用第三方NFC掃描設備（如MiaoMiao、Bubble、Blucon）組成的設置，而非直接的藍牙連接，也可以使用此裝置。 有時某些手機與原生藍牙傳感器的綁定和資料檢索不良。 您可以將這些設備作為備用或正常使用，無論如何您仍然有這個選項。
+- 如果您計劃使用**FSL讀取器**作為NFC掃描設備進行讀取值，您 MUST 在**非常第一個NFC掃描**時啟動FSL2傳感器，並先使用**讀取器**預熱傳感器。
 
 &nbsp;
 
-- **LV data will not be uploaded automatically** Since the LL app does not have a constant Bluetooth connection (because LL should not be running simultaneously with xDrip+ once the sensor is actively sending Bluetooth readings) then it is not receiving readings automatically from the sensor. This means that blood glucose data is not automatically being uploaded to LV and by extension other phones with LL. I mark this as a disadvantage as I know many parents rely on this functionality as well as those that are forced to use the LV reporting for their healthcare provider. You can still open the LL app and scan every 8 hours to get the back-filled data from the sensor into LL (3 times every day, at least every 8 hours, but more scans would likely be needed to capture all 24 hours of data) but again this is a manual process.
+- **LV資料不會自動上傳** 由於LL應用程式沒有持續的藍牙連接（因為LL在傳感器積極傳送藍牙讀取值時不應與xDrip+同時運行），因此它不會自動接收來自傳感器的讀取值。 這意味著血糖資料不會自動上傳至LV，並進一步限制到其他使用LL的手機。 我將這標記為缺點，因為我知道許多父母依賴此功能，以及那些被迫為其醫療保健提供者使用LV報告的人。 您仍然可以打開LL應用程式並每8小時掃描一次，以將傳感器中的資料回填至LL（每天至少3次，每8小時一次，但可能需要更多掃描以捕捉所有24小時的資料），但這再次是一個手動過程。
 
 &nbsp;
 
 (minimallooper-definitions)=
 
-### **Definitions**
+### **定義**
 
-- **BT** - Bluetooth
+- **BT** - 藍牙
 
-- **BLE** - Bluetooth Low Energy
+- **BLE** - 低功耗藍牙
 
 - **FSL** - FreeStyle Libre
-  - **Libre 1 (FSL1)** - NFC only. First version of the sensor
+  - **Libre 1 (FSL1)** - 僅支援 NFC。 第一版的傳感器
 
-  - **FSL2 (FSL2)** - Bluetooth and NFC. Second version of the sensor.
+  - **FSL2 (FSL2)** - 藍牙和NFC。 第二版的傳感器。
 
-  - **Libre 3 (FSL3)** - Bluetooth and NFC. Third smaller version of the sensor. Not supported by OOP2 (see Juggluco).
+  - **Libre 3 (FSL3)** - 藍牙和NFC。 第三個更小的版本的傳感器。 不支援OOP2（請參閱Juggluco）。
 
-- **LL** - LibreLink, **application** used to start the sensor with initial NFC scan
+- **LL** - LibreLink，**應用程式**用於通過初始NFC掃描啟動傳感器
 
-- **LV** - LibreView, cloud service for sharing data with your endo team (consider using Tidepool or Nightscout)
+- **LV** - LibreView，雲端服務用於與您的內分泌科醫療團隊共享資料（考慮使用Tidepool或Nightscout）
 
-- **MM** - MiaoMiao, name and manufacturer of a 3rd party NFC scanning device that delivers readings via Bluetooth to xDrip+.
+- **MM** - MiaoMiao(喵喵)，第三方NFC掃描設備的名稱和製造商，通過藍牙傳送讀取值至xDrip+。
 
-- **NFC** - Near Field Communication, a physical operation in which you bring the NFC sensor on your phone close to your sensor to start a reading. This is often referred to as “scanning the sensor”, a “sensor scan” or “NFC scan”. This process in no way uses Bluetooth.
+- **NFC** - 近場通訊，是一種操作方式，您需要將手機上的NFC傳感器靠近傳感器以開始讀取。 這通常稱為“掃描傳感器”、“傳感器掃描”或“NFC掃描”。 該過程完全不使用藍牙。
 
-- **OOP1** - Out of Process Algorithm version 1, the 3rd party app that receives raw values (delivered to xDrip+ from the sensor by Bluetooth or NFC scan) and then uses an algorithm (very similar to the hardware algorithm on the sensor chip) to process the raw values and returns a calibrated (by the OOP1 algorithm, not by xDrip+’s native calibrations) blood sugar back to xDrip+ to either display or be further processed with xDrip+’s calibration (with a finger pick blood calibration) if needed.
+- **OOP1** - 外部程式演算法 1，第三方應用程序接收原始值（由傳感器通過藍牙或NFC掃描傳遞到xDrip+）然後使用演算法（與傳感器晶片上的硬體演算法非常類似）來處理原始值並將校正後的（由OOP1演算法校正，而非xDrip+的本地校正）血糖值返回給xDrip+，以便顯示或根據需要進一步用xDrip+的校正進行處理（也可用手指刺血校正）。
 
-- **OOP2** - Out of Process Algorithm version 2, the 3rd party app that receives encrypted data delivered to from the FSL 2 sensor (by Bluetooth or NFC scan) and then decrypts the encrypted data. Once decrypted, the data is then sent to xDrip+.
+- **OOP2** - 外部程式演算法 2，第三方應用程序接收從FSL 2傳感器（透過藍牙或NFC掃描）傳送的加密資料，然後解密這些加密的資料。 一旦解密後，資料將被發送至xDrip+。
 
  

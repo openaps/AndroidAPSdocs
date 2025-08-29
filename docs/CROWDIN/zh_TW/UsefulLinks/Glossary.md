@@ -72,7 +72,7 @@
 
 **ISF** = 胰島素敏感性因子。 注射一單位胰島素，預計血糖會下降的幅度。
 
-**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuid).
+**金鑰庫 (或 JKS)** = 一個 Java 金鑰庫，這是一個加密檔案，存放您的個人開發者證書和密鑰，這些都是您在建立 (和重新建立) **AAPS'** 時所需的。
 
 **LGS** = 低血糖暫停功能。 `**AAPS**` 會在 `**血糖**` 下降時減少基礎胰島素，若 `**血糖**` 上升，則只有在 `**IOB**` 為負值（來自之前的 `**LGS**`）時才會增加基礎胰島素，否則基礎速率將保持與用戶選擇的 `**Profile**` 相同。 用戶在處理低血糖後可能會暫時經歷血糖飆升，但無法在反彈期間增加基礎胰島素。 → 另見objective 6。
 
