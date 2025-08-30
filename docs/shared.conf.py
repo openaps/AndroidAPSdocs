@@ -44,6 +44,7 @@ extensions = [
     'notfound.extension',
     'sphinxcontrib.jquery',
     'sphinx_design',# That is for tabs
+    'sphinx_copybutton'
 ]
 
 myst_enable_extensions = [

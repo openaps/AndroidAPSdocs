@@ -76,18 +76,31 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 :::{include} BrowserBuildFileManagerPlus.md
 ```
 
-- Download the preparation file from here:
-- [aaps-ci-preparation.html](https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
+- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
-```{admonition} Note
+````{admonition} Note
 :class: note
 
-1. If you open this page in a web view or some browsers, the HTML file might not download. Copy this URL and open it in your browser to download:
-   `https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html`
-   Or visit the latest release page:
-   https://github.com/Angus-repo/aaps-ci-preparation/releases/latest
-2. Backup download: [`aaps-ci-preparation.html`](../_static/CI/aaps-ci-preparation.html)
+1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
+```text
+https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
+Or visit the latest release page:
+```text
+https://github.com/Angus-repo/aaps-ci-preparation/releases/latest
+```
+
+2.Backup copy hosted on this site:
+ - If the external link is also unavailable, you can use this backup file to download.
+<!--crowdin:disable-->
+
+```{eval-rst}
+.. raw:: html
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
+```
+<!--crowdin:enable-->
+````
 
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
 
