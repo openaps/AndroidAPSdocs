@@ -72,6 +72,8 @@
 
 **ISF** = 胰岛素敏感性因子。 一单位胰岛素预计会减少的血糖量。
 
+**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuid).
+
 **LGS** = 低血糖暂停。 如果 **BG** 下降，**AAPS** 将减少基础胰岛素；如果 **BG** 上升，则只有当 **IOB** 为负时（来自之前的 **LGS**）才会增加基础胰岛素，否则基础胰岛素将保持用户选择的 **配置文件** 设置。 用户可能在处理低血糖后暂时出现血糖飙升，且在反弹期无法增加基础胰岛素量。 → 另见目标 6。
 
 **LineageOS** = 用于智能手机等设备的免费开源操作系统。 （使用 Accu-Chek Combo 时请参见维基 - Combo 泵）。

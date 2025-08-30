@@ -70,6 +70,8 @@ in the event you need to re-install AAPS or replace your phone._
 
 3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
 
+(ExportImportSettings-Settings-Export)=
+
 ## Settings Export ##
 
 It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports
