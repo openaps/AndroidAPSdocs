@@ -76,9 +76,11 @@
 
 ![運行工作流程](../images/update/CI/GitHubActions3.png)
 
-6. 你將會看到工作流程運行成功請求的訊息。 重新整理你的瀏覽器頁面，你將能夠監控建置進度。 當操作完成時，AAPS CI 的行動將顯示綠色勾選標記。 你已成功建置 AndroidAPS 的更新版本。
+6. 你將會看到工作流程運行成功請求的訊息。 重新整理你的瀏覽器頁面，你將能夠監控建置進度。 當操作完成時，AAPS CI 的行動將顯示綠色勾選標記。 你已成功建置 AndroidAPS 的更新版本。 這表示 Master 與 Wear 的 APK 現在會直接儲存到你的 Google Drive（如下所示）。 AAPSClient apk 可以從 Github > nightscout > AndroidAPS [這裡](https://github.com/nightscout/AndroidAPS/releases)
+
 
 ![監控工作流程](../images/update/CI/GitHubActions4.png)
+
 
 ### 安裝 AAPS APK
 
