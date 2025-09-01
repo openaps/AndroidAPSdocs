@@ -59,6 +59,8 @@ Durch den Export der AAPS-Einstellungen in die Datei kannst Du die Konfiguration
 
 3. Navigiere mit dem Datei-Explorer auf Deinem Smartphone (meist als „Dateien“ oder „Meine Dateien“ bezeichnet) zu Interner Speicher > AAPS > Einstellungen. Hier findest Du Kopien aller exportierten Einstellungs-Dateien. Der Dateiname sollte `JJJJ-MM-TT_Zeit_Appname.json sein`. Lade diese Datei in den Cloud-Speicher Deiner Wahl hoch. Lade dann auch eine Kopie aus der Cloud auf Deinen lokalen Computer herunter.
 
+(ExportImportSettings-Settings-Export)=
+
 ## Einstellungen exportieren
 
 Insbesondere vor und nach den Konfigurationsänderungen, wird empfohlen, die Einstellungen regelmäßig zu exportieren. Du kannst wählen, ob Du die Exporte **manuell oder (vorzugsweise) durch eine Automatisierung** durchführen möchtest. Stelle sicher, dass Du Dir Dein AAPS Master-Passwort notierst und die Datei mit Deinen Einstellungen regelmäßig sicherst, indem Du sie von Deinem Smartphone zum Beispiel in einen Cloud-Speicher kopierst.

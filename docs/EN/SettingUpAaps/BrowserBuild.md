@@ -76,19 +76,31 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 :::{include} BrowserBuildFileManagerPlus.md
 ```
 
-- Download the preparation file from here:
+- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
-  <!--crowdin:disable-->
+````{admonition} Note
+:class: note
+
+1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
+```text
+https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+```
+Or visit the latest release page:
+```text
+https://github.com/Angus-repo/aaps-ci-preparation/releases/latest
+```
+
+2.Backup copy hosted on this site:
+ - If the external link is also unavailable, you can use this backup file to download.
+<!--crowdin:disable-->
 
 ```{eval-rst}
 .. raw:: html
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download style="font-weight: bold; font-size: 20px;">  aaps-ci-preparation.html</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
 ```
-<br>
-<br>
-<br>
 <!--crowdin:enable-->
+````
 
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
 
@@ -97,7 +109,15 @@ AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS)
 </br>
 
 ```{warning}
-Building AAPS with **Option 1** will not allow you to upgrade your existing AAPS: you will need to uninstall it, restore the settings from your phone and data from Nightscout.
+Building AAPS with **Option 1** will not allow you to upgrade your existing AAPS.
+You will need to:
+1. [Export settings](#ExportImportSettings-Automating-Settings-Export) on your phone.
+2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service…).
+3. Generate a new version of the signed apk as described in Option 1 and transfer it to your phone.
+4. Uninstall previous AAPS version on your phone.
+5. Install new AAPS version on your phone.
+6. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+7. Restore your data from Nightscout.
 ```
 
 - If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).

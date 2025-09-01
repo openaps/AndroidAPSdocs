@@ -5,3 +5,4 @@ myst_parser==3.0.1
 urllib3==2.5.0
 sphinx-notfound-page==1.0.4
 sphinx_design==0.6.1
+sphinx-copybutton==0.5.2
