@@ -76,24 +76,34 @@ GitHub 現在顯示你個人的 AndroidAPS 副本。 請保持這個瀏覽器頁
 :::{include} BrowserBuildFileManagerPlus.md
 ```
 
-- 從這裡下載準備檔案：
+- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
-  <!--crowdin:disable-->
+````{admonition} Note
+:class: note
+
+1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
+```text
+https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+```
+Or visit the latest release page:
+```text
+https://github.com/Angus-repo/aaps-ci-preparation/releases/latest
+```
+
+2.Backup copy hosted on this site:
+
+ - If the external link is also unavailable, you can use this backup file to download.
+<!--crowdin:disable-->
 
 ```{eval-rst}
 .. raw:: html
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download style="font-weight: bold; font-size: 20px;">  aaps-ci-preparation.html</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
 ```
-<br>
-<br>
-<br>
 <!--crowdin:enable-->
-
+````
 AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS）：
-
 - 如果這是你第一次建立 AAPS（或你沒有 Android Studio 的 JKS），請參考 [AAPS-CI 選項 1 – 產生 JKS](aaps-ci-option1) 來完成設定。
-
 </br>
 
 ```{warning}
