@@ -24,7 +24,7 @@ Once a new **Profile** has been created and saved, **AAPS** will maintain a libr
 
 A. In order use this feature the user must have more than one **Profile** saved within **AAPS**. To activate a **Profile Switch**:
 
-- __long-press__ on the name of the **Profile** (the example below adopts a ‘Profile’ saved as: “(Lyum) low” on **AAPS’** homescreen and selects the desired **Profile**  form the drop down tab:
+- __long-press__ on the name of the **Profile** (the example below adopts a ‘Profile’ saved as: “School” on **AAPS’** homescreen and selects the desired **Profile**  from the drop down tab:
 
 1. Long press **Profile**;
 2. Select desired **Profile**; and
