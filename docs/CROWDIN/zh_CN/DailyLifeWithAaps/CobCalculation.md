@@ -50,7 +50,7 @@
 
 ![关于错误的碳水化合物吸收量（COB）值的提示](../images/Calculator_SlowCarbAbsorption.png)
 
-在上述截图中，有41%的时间碳水化合物吸收是通过min_5m_carbimpact计算的，而不是通过偏差检测得出的值。 这表明用户实际的**活性碳水**可能比算法计算的要少。
+In the screenshot above, 58% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. 这表明用户实际的**活性碳水**可能比算法计算的要少。
 
 ### 如何应对此警告
 
