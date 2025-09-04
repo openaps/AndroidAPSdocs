@@ -40,7 +40,7 @@ Im Closed-Loop-Modus, **SMB**s:
 
 Es ist eine Überlegung wert:
 
-- das **temporäre Ziel** 1-2 Stunden vor der geplanten Aktivität zu *setzen*, so dass ausreichend Zeit ist, genügend IOB zu reduzieren. Der richtige Zeitpunkt ist von Person zu Person verschieden und
+- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
 - ein temporäres (reduziertes) Profil für die Dauer der geplanten Aktivität zu *setzen*, und so ein reduziertes **IOB** zu bekommen
 - *sicherzustellen*, dass das **temporäre Ziel** so „getimed“ ist, dass es kurz vor Beginn der Aktivität *deaktiviert* ist, da ein reduziertes **IOB**, wie bei manchen Menschen zu beobachten, einen schnellen Anstieg der **Glukosewerte** nach der Aktivität zur Folge haben können.
 
