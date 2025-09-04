@@ -120,7 +120,7 @@ Le plugin Autotune est une implémentation de l'algorithme autotune OpenAPS dans
 
 ### Ajuster des jours spécifiques de la semaine
 
-- Si vous cliquez sur la case à cocher avec l'œil à droite du paramètre "Nb jours", vous verrez la sélection du jour. Vous pouvez spécifier quels jours de la semaine doivent être inclus dans le calcul Autotune (en capture d'écran ci-dessous, vous pouvez voir un exemple pour les "jours de travail" avec le samedi et le dimanche enlevé du calcul Autotune)
+- If you click on the checkbox with the eye on the right of "Tune days" parameter, you will see the day selection. Vous pouvez spécifier quels jours de la semaine doivent être inclus dans le calcul Autotune (en capture d'écran ci-dessous, vous pouvez voir un exemple pour les "jours de travail" avec le samedi et le dimanche enlevé du calcul Autotune)
   - Si le nombre de jours inclus dans le calcul Autotune est inférieur au nombre de jours sélectionnés, alors vous verrez combien de jours seront inclus dans le calcul à droite du sélecteur de jours (10 jours dans l'exemple ci-dessous)
   - Ce paramètre ne donne de bons résultats que si le nombre de jours restants n'est pas trop petit (par exemple si vous ajustez un profil spécifique pour les jours du week-end avec seulement le dimanche et le samedi sélectionnés, vous devez sélectionner un minimum de 21 ou 28 jours de Tune pour avoir 6 ou 8 jours inclus dans le calcul Autotune)
 
@@ -179,18 +179,18 @@ Utilisez toujours Autotune plusieurs jours manuellement pour vérifier les résu
 Il est également important d'analyser les résultats d'Autotune pour comprendre (ou essayer de comprendre) pourquoi Autotune propose ces modifications
 
 - vous pouvez avoir une augmentation ou une diminution de la globalité du profil (par exemple une augmentation du débit de basal total associé à la diminution des valeurs de la SI et du G/I). il pourrait être associé à plusieurs jours successifs avec correction autosens supérieure à 100% (plus d'agressivité requise) ou inférieure à 100% (vous êtes plus sensible)
-- Parfois, Autotune propose un équilibre différent entre les taux de basal et la SI et G/I (ex basal inférieur et SI / G/I plus agressifs)
+- Sometimes Autotune proposes a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
 
 Nous recommandons de ne pas utiliser Autotune dans les cas suivants :
 
 - Vous n'entrez pas tous vos glucides
-  - Si vous n'entrez pas de correction de glucides pour une hypoglycémie, Autotune verra une augmentation imprévue de votre glycémie et augmentera vos taux de basal les 4 heures précédentes, cela pourrait être le contraire de ce que vous avez besoin pour éviter une hypoglycémie, en particulier si c'est au milieu de la nuit. C'est pourquoi il est important d'entrer tous les glucides en particulier pour la correction des hypo.
-- Vous avez beaucoup de périodes avec des RNS détectée lors de la journée
-  - Avez-vous entré tous vos glucides et les avez vous correctement estimés ?
+  - If you don't enter carbs correction for hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs, especially correction for hypo.
+- You have a lot of periods with UAM detected during the day.
+  - Do you have entered all your carbs and correctly estimated your Carbs?
   - Toutes les périodes RNS (sauf si vous n'entrez jamais vos glucides dans AAPS et que le paramètre Categoriser UAM en tant que basal est désactivé) seront catégorisées en basal, cela peut augmenter beaucoup votre Basal (beaucoup plus que nécessaire).
 
 - L'absorption des glucides est très lente : si la plupart de vos glucides sont calculés avec un paramètre min_5m_carbimpact (vous pouvez voir ces périodes avec un petit point orange en haut de la courbe), le calcul des GA pourrait être erroné et conduire à de mauvais résultats.
   - Quand vous faites du sport, vous êtes généralement plus sensible et votre glycémie ne monte pas beaucoup, donc pendant ou après un exercice, il est habituel de voir quelques périodes avec des glucides lents. Mais si vous avez trop souvent une absorption lente inattendue des glucides, alors vous aurez besoin d'un ajustement de profil (valeur plus élevée de G/I) ou d'un min_5m_carbimpact un peu plus élevé.
-- Vous avez un "très mauvais jours", par exemple coincé plusieurs heures en hyperglycémie avec une énorme quantité d'insuline pour pouvoir descendre à l'intérieur de la cible, ou après un changement de capteur, vous avez obtenu de longues périodes avec des glycémies erronées. Si pendant les précédentes semaines vous avez seulement un ou deux "mauvais jours", vous pouvez désactiver manuellement ces jours dans le calcul automatique pour les exclure du calcul, et à nouveau **vérifiez soigneusement si vous pouvez faire confiance aux résultats**
+- You have "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you have long periods of wrong BG values. If during the past weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
 - Si le pourcentage de modification est trop important
   - Vous pouvez essayer d'augmenter le nombre de jours pour obtenir des résultats plus lisses
