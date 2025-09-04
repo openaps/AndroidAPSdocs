@@ -50,7 +50,7 @@
 
 ![錯誤 COB 值的提示](../images/Calculator_SlowCarbAbsorption.png)
 
-在上面的截圖中，有 41% 的時間是用 min_5m_carbimpact 來計算碳水化合物的吸收量，而不是透過變動來偵測的數值。 這表示使用者實際上的 **COB** ，可能比演算法計算出來的還要少。
+In the screenshot above, 58% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. 這表示使用者實際上的 **COB** ，可能比演算法計算出來的還要少。
 
 ### 如何處理這個警告？
 
