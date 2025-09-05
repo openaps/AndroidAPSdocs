@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Bomba de Insulina Accu Chek Combo
 
 **Este software é parte de uma solução DIY (faça você mesmo) e não é um produto, no entanto é necessário que VOCÊ leia, aprenda e compreenda o sistema, incluindo a forma de o usar. Não é algo que faça a gestão total da sua diabetes, mas permite melhorá-la, bem como a sua qualidade de vida, se estiver disposto a utilizar o seu tempo para isso. Não tenha demasiada pressa, permita-se ter tempo para aprender. Você é o ÚNICO responsável pela utilização e configuração deste sistema, e pelo que faz com ele.**
