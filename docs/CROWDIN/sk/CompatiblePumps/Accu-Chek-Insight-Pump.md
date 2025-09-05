@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Pumpa Accu-Chek Insight
 
 **Tento software je súčasťou DIY riešenia umelého pankreasu, nie je to výrobok. Vyžaduje si od Vás aby ste si prečítali, naučili sa a pochopili ako systém funguje a ako ho správne používať. Nie je to niečo, čo za Vás bude robiť celý management diabetu ale pomôže Vám zlepšiť Vaše výsledky a tým aj kvalitu života, ak ste ochotní tomu venovať potrebný čas. Neponáhľajte sa, urobte si čas, aby ste sa to naučili. Iba vy ste zodpovední za ovládanie Vašeho systému.**
