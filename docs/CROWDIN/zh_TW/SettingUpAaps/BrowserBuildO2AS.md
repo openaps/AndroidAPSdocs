@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 ### 在您的 Google 雲端硬碟中複製您的 Android Studio 金鑰。
 
 在您的電腦上，搜尋您用於構建 AAPS 的金鑰儲存檔。 它的檔名後綴為 `.jks`。
