@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Unihertz Jelly
 
 ## Jelly 2
