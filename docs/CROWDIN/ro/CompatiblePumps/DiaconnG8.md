@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Diaconn G8 Insulin Pump
 
 ## Insulin Pump Bluetooth Pairing
