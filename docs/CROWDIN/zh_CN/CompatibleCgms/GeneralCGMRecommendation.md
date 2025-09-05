@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # 常规CGM使用建议
 
 ## CGM 卫生
