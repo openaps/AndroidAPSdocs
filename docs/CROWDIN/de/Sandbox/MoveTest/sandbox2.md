@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # interne Sandbox-Datei 2 zum Testen
 
 ```{admonition} no need to translate this
