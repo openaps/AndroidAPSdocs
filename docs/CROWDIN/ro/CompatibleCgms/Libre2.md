@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Freestyle Libre 2 and 2+
 
 The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
@@ -36,7 +32,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 Only Libre 2 and 2+ **EU** models.
 ```
 
-- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [the latest OOP2](https://drive.google.com/file/d/1hkbs60Bv2udTlMS81UStCdY4RaHR0V57/view) as the one in the document is obsolete.
+- Follow [these instructions](./Libre2MinimalL00per.md) to setup xDrip+ as the original documentation links to an obsolete OOP2  version.
 - Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 
 -   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
