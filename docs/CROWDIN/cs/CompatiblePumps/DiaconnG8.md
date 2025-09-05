@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Inzulínová pumpa Diaconn G8
 
 ## Bluetooth párování inzulínové pumpy
