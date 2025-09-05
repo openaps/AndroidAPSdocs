@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Recommandations générales MGC
 
 ## Hygiène de la MGC
