@@ -11,11 +11,8 @@ jobs:
       shell: bash
       run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
       id: extract_branch
-    - name: Fix front-matter fences (first 3 lines only)
-      run: |
-        for f in $(find ./docs/CROWDIN -type f -name "*.md"); do
-          head -n 3 "$f" | sed -i 's/^- - -$/---/' "$f"
-        done
+    - name: List Crowdin files
+      run: ls
     - name: curl
       uses: wei/curl@v1
       with:
