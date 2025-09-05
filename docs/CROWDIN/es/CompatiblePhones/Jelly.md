@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Jelly
 
 ## Jelly 2
