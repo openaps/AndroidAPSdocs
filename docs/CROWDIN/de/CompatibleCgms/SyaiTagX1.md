@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Syai X1
 
 
