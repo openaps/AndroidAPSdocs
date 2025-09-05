@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Ottai(歐態) M8
 
 
