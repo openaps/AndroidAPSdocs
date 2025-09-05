@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Temel kullanım için Accu-Chek Combo İpuçları
 
 ## Sorunsuz kullanim nasıl sağlanır
