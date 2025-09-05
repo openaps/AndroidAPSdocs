@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Dexcom G6 et ONE
 
 ## Les bases en premier
