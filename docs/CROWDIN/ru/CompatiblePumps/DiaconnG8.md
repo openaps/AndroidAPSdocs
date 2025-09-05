@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Помпа Diaconn G8
 
 ## Bluetooth-сопряжение
