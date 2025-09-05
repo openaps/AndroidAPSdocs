@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # xDrip+ Einstellungen
 
 Lade - sofern noch nicht geschehen - [xDrip+](https://jamorham.github.io/#xdrip-plus) herunter.
