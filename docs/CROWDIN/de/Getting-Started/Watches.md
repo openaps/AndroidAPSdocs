@@ -170,7 +170,7 @@ Pebble Smartwatches ([Produktion mittlerweile eingestellt](https://en.wikipedia.
 
 Dies ist eine besondere Technologie, die Glukosedaten **direkt** vom Dexcom Transmitter empfangen kann. Es ist nicht so bekannt, dass ein Dexcom G6/G7-Transmitter tatsächlich die aktuellen Glukosedaten auf _zwei_ getrennten Kanälen überträgt, einem Smartphone-Kanal und einem medizinischen Kanal. Die Bluejay Uhren können so eingerichtet werden, dass sie Glukosedaten auf allen Kanälen erhalten. Wenn **AAPS ** den Smartphone-Kanal nutzt, dann können die Bluejay Uhren den medizinischen Kanal benutzen.
 
-Sie ist derzeitig die einzige Smartwatch, die ohne Smartphone und Loop-System in der Nähe genutzt werden kann. Beispiel: Wenn Du die Insulinpumpe und das **AAPS** -Smartphone am Strand oder im Wasserpark trennst, und Du entfernst Dich vom **AAPS**-Smartphone, kannst Du trotzdem die Dexcom-Glukosewerte auf der BlueJay Smartwatch direkt empfangen.
+Sie ist derzeitig die einzige Smartwatch, die ohne Smartphone und Loop-System in der Nähe genutzt werden kann. So, for example, if you disconnect the pump and the **AAPS** phone at the beach or theme park, and are out of range of the **AAPS** phone, you can still get readings from your Dexcom directly to the Bluejay watch.
 
 Bekannte Nachteile sind, dass sie nicht zuverlässig alle 5 Minuten neue Werte verarbeitet und dass der Akku nicht auszutauschen ist. Die Bluejay GTS Smartwatch läuft mit einer modifizierten Version der xDrip+ Software, während die Bluejay U1 mit der xDrip+-Vollversion läuft.
 

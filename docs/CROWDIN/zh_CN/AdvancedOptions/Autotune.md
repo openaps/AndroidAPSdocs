@@ -120,7 +120,7 @@ Autotune插件是OpenAPS自动调节算法在AAPS中的具体实现。
 
 ### 按周指定日期调校
 
-- 若点击"运行天数"参数右侧带眼睛图标的复选框，即可显示日期选择界面。 您可指定每周参与Autotune计算的特定日期（如下图所示示例：已排除周六周日的"工作日"模式将不纳入计算范围）。
+- If you click on the checkbox with the eye on the right of "Tune days" parameter, you will see the day selection. 您可指定每周参与Autotune计算的特定日期（如下图所示示例：已排除周六周日的"工作日"模式将不纳入计算范围）。
   - 若Autotune计算包含的天数少于"调校天数"设定值，您将在天数选择器右侧看到实际参与计算的天数（如下例所示：10天）。
   - 当前设置仅在剩余天数充足时方能获得理想效果（例如：若您仅为周末调校特定配置文件——仅选择周六周日时，建议将"调校天数"设为至少21或28天，以确保Autotune计算能包含6-8个有效数据日）。
 
@@ -179,18 +179,18 @@ Autotune仅作为辅助工具，使用者需定期核验计算生成的配置文
 深入分析Autotune结果以理解（或尝试理解）其提出特定修改建议的原因，亦为关键所在。
 
 - 您的配置文件可能出现整体强度调整（例如：基础率总量提升伴随胰岛素敏感系数(ISF)与碳水化合物系数(IC)数值下降的情况）。 该调整可能伴随连续数日的自动灵敏度校正值高于100%（需更积极干预）或低于100%（敏感性提升）的情况。
-- Autotune算法可能建议调整基础率与胰岛素碳水化合物比值(IC)/胰岛素敏感系数(ISF)之间的平衡关系（例如：降低基础率并采用更积极的IC/ISF组合方案）。
+- Sometimes Autotune proposes a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
 
 我们建议在以下情况下禁用Autotune功能：
 
 - 未完整记录碳水化合物摄入量
-  - 若未输入低血糖后的碳水化合物校正量，Autotune将误判血糖异常升高，进而提前4小时增加基础率——这种调整可能与避免低血糖的需求完全相悖，夜间发生时风险尤甚。 因此，完整记录碳水化合物摄入量（特别是低血糖校正量）至关重要
-- 当系统检测到日间频繁出现未标记餐食(UAM)时
-  - 是否已完整记录所有碳水化合物摄入量并准确估算碳水值？​
+  - If you don't enter carbs correction for hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs, especially correction for hypo.
+- You have a lot of periods with UAM detected during the day.
+  - Do you have entered all your carbs and correctly estimated your Carbs?
   - 所有未标记餐食(UAM)时段（除非全天未摄入碳水且已禁用"UAM归为基础率"功能）都将被归类为基础率，这可能导致基础率被过度提升（远超实际需求）。​
 
 - 碳水化合物吸收速率过缓：若大部分吸收过程依赖min_5m_carbimpact参数计算（可通过COB曲线顶端的橙色小圆点识别此类时段），可能导致COB计算错误并引发连锁性结果偏差。​
   - 运动期间生理敏感性增强：运动时胰岛素敏感性普遍提升且血糖波动趋缓，故运动中和运动后出现碳水化合物缓释时段属常见生理现象。​ 但若频繁出现非预期的碳水化合物缓释现象，则可能需要提高配置文件中的碳水化合物系数(IC)值，或者适当下调min_5m_carbimpact参数阈值。​
-- 当出现"异常代谢日"时（例如：持续数小时的高血糖状态需大量胰岛素才能回落至目标范围，或传感器更换后出现长期血糖读数异常），需特别注意数据有效性。​ 若过去数周仅出现1-2个"异常日"，可手动在Autotune计算中禁用这些日期以排除影响，并务必**仔细核查结果可信度**​。
+- You have "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you have long periods of wrong BG values. If during the past weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
 - 若参数修改幅度超出合理阈值
   - 建议增加计算天数以获得更平稳的调校结果

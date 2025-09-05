@@ -24,7 +24,7 @@ Sobald ein neues **Profil** erstellt und gespeichert wurde, wird **AAPS** die er
 
 A. Um diese Funktion nutzen zu können, musst Du mehr als ein **Profil** in **AAPS** gespeichert haben. Um einen **Profilwechsel** durchzuführen bzw. zu aktivieren:
 
-- **Drücke lange** auf den **Profilnamen** (im Beispiel unten wird auf dem **AAPS**-Startbildschirm das Profil '(LYUM) low' auf das gewünschte (auszuwählende) **Profil** aus dem Dropdown geändert:
+- **long-press** on the name of the **Profile** (the example below adopts a ‘Profile’ saved as: “School” on **AAPS’** homescreen and selects the desired **Profile** from the drop down tab:
 
 1. Drücke lange auf das **Profil**;
 2. Wähle das gewünschte **Profil** aus und

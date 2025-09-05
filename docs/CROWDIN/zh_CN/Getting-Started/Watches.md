@@ -170,7 +170,7 @@ Pebble手表（[现已停产](https://en.wikipedia.org/wiki/Pebble_(watch))）�
 
 这些独特的技术设备能够**直接**从Dexcom发射器接收血糖数据。 很少有人知道，Dexcom G6/G7发射器实际上会在_两个_不同的频道上广播当前的血糖数据：一个手机频道和一个医疗频道。 Bluejay手表可以被设置为接收任一频道上的血糖数据，因此，如果AAPS正在使用手机频道，那么Bluejay手表就可以使用医疗频道。
 
-其关键优势在于，它是目前唯一一款完全独立于手机和闭环系统的智能手表。 因此，例如，如果您在海滩或水上乐园断开了泵和**AAPS**手机，并且超出了**AAPS**手机的范围，您仍然可以直接从Dexcom获取读数到Bluejay手表上。
+其关键优势在于，它是目前唯一一款完全独立于手机和闭环系统的智能手表。 So, for example, if you disconnect the pump and the **AAPS** phone at the beach or theme park, and are out of range of the **AAPS** phone, you can still get readings from your Dexcom directly to the Bluejay watch.
 
 据报道，其缺点是它并不总是能每5分钟就获取一次读数，而且电池是不可更换的。 Bluejay GTS手表运行的是xDrip+软件的修改版，而Bluejay U1手表则运行完整的xDrip+软件。
 

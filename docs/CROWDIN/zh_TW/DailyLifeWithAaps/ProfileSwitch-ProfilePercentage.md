@@ -24,7 +24,7 @@
 
 A. 使用此功能時，使用者必須在**AAPS** 中儲存多個**設定檔**。 要啟用**設定檔切換**：
 
-- **長按** **設定檔**的名稱（範例中使用了存儲為「(Lyum) 低」的**設定檔**），並從下拉選單中選擇所需的**設定檔**：
+- **long-press** on the name of the **Profile** (the example below adopts a ‘Profile’ saved as: “School” on **AAPS’** homescreen and selects the desired **Profile** from the drop down tab:
 
 1. 長按**設定檔**；
 2. 選擇所需的**設定檔**；然後按「確定」。
