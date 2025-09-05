@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 從 Google Play 商店安裝 [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager)。
 
 這個應用程式在初步階段是必要的，成功建構並安裝 AAPS 後可以安全地從您的手機上刪除。
