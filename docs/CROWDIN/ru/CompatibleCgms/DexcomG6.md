@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Dexcom G6 и ONE
 
 ## Сначала основное
