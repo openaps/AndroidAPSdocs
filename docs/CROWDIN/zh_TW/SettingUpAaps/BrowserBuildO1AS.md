@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 ### 打開 aaps-ci-preparation.html 檔案
 
 使用 File Manager+ 打開您上面下載的檔案 `aaps-ci-preparation-html`。
