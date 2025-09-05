@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # AccuChek Combo pagrindinio naudojimo patarimai
 
 ## Kaip užtikrinti sklandų veikimą
