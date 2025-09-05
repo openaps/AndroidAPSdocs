@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Future (possible) Pump Drivers
 
 This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
