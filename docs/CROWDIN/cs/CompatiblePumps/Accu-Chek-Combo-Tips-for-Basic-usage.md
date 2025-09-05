@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # AccuChek Combo tipy pro základní použití
 
 ## Jak zajistit bezproblémové používaní
