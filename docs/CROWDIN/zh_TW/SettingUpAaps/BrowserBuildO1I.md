@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 iOS 上相容的作法（以 iPad 為例）
 <!--crowdin: exclude-->
 
