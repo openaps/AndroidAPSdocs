@@ -13,7 +13,7 @@ jobs:
       id: extract_branch
     - name: Fix front-matter fences (first 3 lines only)
       run: |
-        for f in $(find docs/CROWDIN -type f -name "*.md"); do
+        for f in $(find ./docs/CROWDIN -type f -name "*.md"); do
           head -n 3 "$f" | sed -i 's/^- - -$/---/' "$f"
         done
     - name: curl
