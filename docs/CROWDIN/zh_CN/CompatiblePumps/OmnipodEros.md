@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # AAPS Omnipod胰岛素泵驱动文档
 
 本指南适用于配置Omnipod Eros系列胰岛素泵（**不包含Omnipod Dash**）。 自AAPS 2.8版本起已集成Omnipod驱动功能。
