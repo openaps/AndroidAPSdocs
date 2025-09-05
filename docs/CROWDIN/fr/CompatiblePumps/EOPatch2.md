@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Manuel d'instruction EOPatch2
 
 Le patch nécessite l'utilisation d'insuline de type U-100 à action rapide, comme NovoRapid ou Humalog. Utilisez une insuline à action rapide qui vous convient selon l’ordonnance de votre médecin et injectez le dosage prescrit.
