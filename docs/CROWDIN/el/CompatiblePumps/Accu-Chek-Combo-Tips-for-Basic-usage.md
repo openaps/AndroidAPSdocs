@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Accu-Chek Combo Tips for basic usage
 
 ## Πώς να εξασφαλίσετε ομαλές λειτουργίες
