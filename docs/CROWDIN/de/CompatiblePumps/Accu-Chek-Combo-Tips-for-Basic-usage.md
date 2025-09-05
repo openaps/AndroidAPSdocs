@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Accu-Chek Combo Tipps zum Einstieg
 
 ## Wie man einen reibungslosen Betrieb gewährleistet
