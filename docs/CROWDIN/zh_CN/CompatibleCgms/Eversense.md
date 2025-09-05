@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Eversense 用户须知
 
 获取Eversense读数有以下三种方法：
