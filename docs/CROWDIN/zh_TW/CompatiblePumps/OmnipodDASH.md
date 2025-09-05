@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Omnipod DASH
 
 這些指示是用於設定**Omnipod DASH**世代幫浦**(不適用於 Omnipod Eros)**，可作為**AAPS**版本 3.0的一部分。
