@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Freestyle Libre 1
 
 要將你的 Libre 用作 CGM，每 5 分鐘獲取一次新的血糖值，而無需掃描傳感器，你需要購買一個 NFC 到藍牙橋接器（基於已過時的[LimiTTer](https://github.com/JoernL/LimiTTer) 項目的商用設備）。
