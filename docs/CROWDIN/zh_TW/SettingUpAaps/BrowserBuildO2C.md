@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 電腦上相容的作法（支援 Windows/Mac/Linux）
 
 打開網頁 [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
