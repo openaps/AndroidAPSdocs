@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # 內部沙盒文件 1，用於測試我們的衝刺
 
 ```{admonition} no need to translate this
