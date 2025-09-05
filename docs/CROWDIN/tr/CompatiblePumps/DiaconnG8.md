@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Diaconn G8 İnsülin Pompası
 
 ## İnsülin Pompası Bluetooth Eşleştirme
