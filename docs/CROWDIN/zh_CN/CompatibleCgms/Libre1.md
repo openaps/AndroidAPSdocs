@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Freestyle Libre 1
 
 若要将Libre用作CGM设备实现每5分钟自动获取血糖值（无需手动扫描传感器），需购买NFC转蓝牙桥接器（市售设备，基于已停用的[LimiTTer](https://github.com/JoernL/LimiTTer)项目）。
