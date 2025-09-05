@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Accu-Chek Insight pompa
 
 **Ši programinė įranga yra ne paruoštas produktas, o Pasidaryk Pats sprendimo dalis, todėl Jūs turite skaityti, mokytis ir suprasti sistemos veikimą savarankiškai. Tai nėra kažkas, kas kontroliuos Jūsų diabetą už Jus, tačiau jei skirsite tiek laiko, kiek reikia, sistema leis Jums pagerinti diabeto kontrolę ir gyvenimo kokybę. Nepulkite stačia galva, skirkite laiko mokymuisi. Tik Jūs pats atsakote už tai, ką darysite su šia sistema.**
@@ -95,8 +89,8 @@ In the Insight settings in AAPS you can enable the following options:
     kartoti -> nėra ryšio -> palaukti **7** sek.   
     kartoti -> nėra ryšio -> palaukti **8** sek.   
     ...   
-    kartoti -> nėra ryšio -> palaukti **20** sek.   
-    kartoti -> nėra ryšio -> palaukti **20** sek.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
 * "Disconnect delay": This defines how long (in seconds) AAPS will wait to disconnect from the pump after an operation is finished. Numatytoji vertė yra 5 sekundės.
