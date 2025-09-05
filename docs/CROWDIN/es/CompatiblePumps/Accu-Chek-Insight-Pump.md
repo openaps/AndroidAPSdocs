@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Bomba Accu-Chek Insight
 
 **Este software es parte de una solución de páncreas artificial de "hágalo usted mismo" y no es un producto, pero requiere que lea, aprenda y entienda el sistema, incluyendo cómo utilizarlo. No es algo que haga todo el manejo de su diabetes, pero le permite mejorar su diabetes y su calidad de vida si está dispuesto a dedicar el tiempo necesario. No te precipites, date tiempo para aprender. Solo Usted es responsable de lo que hace con él.**
@@ -95,8 +89,8 @@ In the Insight settings in AAPS you can enable the following options:
     reintento-> sin conexión-> espera **7 ** seg.   
     reintento-> sin conexión-> espera **8 ** seg.   
     ...   
-    reintento-> sin conexión-> espera **20 ** seg.   
-    reintento-> sin conexión-> espera **20 ** seg.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
 * "Disconnect delay": This defines how long (in seconds) AAPS will wait to disconnect from the pump after an operation is finished. El valor predeterminado es de 5 segundos.
