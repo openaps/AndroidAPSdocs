@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # DanaRS 和 Dana-i 泵
 
 *本指南适用于2017年起发布的DanaRS及新款Dana-i泵体的应用程序配置。 若使用初代DanaR泵体，请参阅[DanaR胰岛素泵](./DanaR-Insulin-Pump.md)章节。*
