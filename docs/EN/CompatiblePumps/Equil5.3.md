@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Equil 5.3
 
 These instructions are for configuring the Equil insulin pump. 

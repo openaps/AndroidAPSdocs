@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 Use a computer (supports Windows/Mac/Linux)
 
 Open the webpage

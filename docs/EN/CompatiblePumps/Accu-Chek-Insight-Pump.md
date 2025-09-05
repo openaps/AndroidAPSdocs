@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Accu-Chek Insight Pump
 
 **This software is part of a DIY artificial pancreas solution and is not a product, but

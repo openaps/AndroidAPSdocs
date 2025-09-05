@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Juggluco settings
 
 If not already set up, then download [Juggluco](https://www.juggluco.nl/Juggluco/download.html).

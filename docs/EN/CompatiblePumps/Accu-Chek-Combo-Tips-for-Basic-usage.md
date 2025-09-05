@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Accu-Chek Combo Tips for basic usage
 
 ## How to ensure smooth operations

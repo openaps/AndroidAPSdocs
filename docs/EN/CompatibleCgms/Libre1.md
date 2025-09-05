@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Freestyle Libre 1
 
 To use your Libre as a CGM that is getting new BG values every 5 minutes without having to scan the sensor,

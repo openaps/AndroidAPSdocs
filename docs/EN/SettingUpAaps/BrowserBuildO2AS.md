@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 ### Copy your Android Studio key in your Google Cloud drive.
 
 On your computer, search for the keystore file you used to build AAPS. It is named with the extension `.jks`.

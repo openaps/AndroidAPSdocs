@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 ### Open the CI preparation help file
 
 With File Manager+, open the file `aaps-ci-preparation-html` you downloaded above.
