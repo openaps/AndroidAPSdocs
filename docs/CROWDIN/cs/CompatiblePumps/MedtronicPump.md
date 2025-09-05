@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Pumpy Medtronic
 
 The driver does not work with any newer models, including all models ending in G (530G, 600-series [630G, 640G, 670G], 700-series [770G, 780G], etc.).
