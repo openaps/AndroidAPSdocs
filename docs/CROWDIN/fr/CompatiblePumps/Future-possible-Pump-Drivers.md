@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Pilotes de pompe futurs (possibles)
 
 Voici une liste de certaines pompes et leur statut de prise en charge dans l'un des systèmes en boucle, puis leur statut dans AAPS. En fin de compte, il y a quelques informations de ce qui est nécessaire pour qu'une pompe soit "bouclable".
