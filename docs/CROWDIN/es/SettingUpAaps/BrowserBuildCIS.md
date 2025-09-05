@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 ### Run the Workflow to Build the Signed APK
 
 1. In your GitHub copy of AndroidAPS, select Actions.
