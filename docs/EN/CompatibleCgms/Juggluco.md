@@ -1,6 +1,5 @@
 ---
 orphan: true
-
 ---
 
 # Juggluco settings
