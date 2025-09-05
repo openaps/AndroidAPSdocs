@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Posibles (futuros) drivers para Bombas
 
 Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado de soporte a las mismas en cualquiera de los sistemas de Lazo cerrado y, a continuación, su situación respecto en AAPS. Al final hay alguna información, de lo que se requiere para que una bomba pueda ser utilizada para "Lazos Cerrados".
