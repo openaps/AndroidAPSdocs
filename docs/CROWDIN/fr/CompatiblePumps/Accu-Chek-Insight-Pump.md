@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Pompe Accu-Chek Insight
 
 **Ce logiciel fait partie d'une solution de pancréas artificiel DIY (Faire soi même) et n'est pas un produit, mais exige que VOUS oblige à lire, apprendre et comprendre le système, y compris comment l'utiliser. Ce n'est pas quelque chose qui gère tout votre gestion du diabète à votre place, mais il vous permet d'améliorer votre diabète et votre qualité de vie, si vous êtes prêt à y mettre le temps nécessaire. Ne vous précipitez pas, mais laissez vous le temps d’apprendre. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
@@ -95,8 +89,8 @@ In the Insight settings in AAPS you can enable the following options:
     réessayer -> aucune connexion -> attendre **7** sec.   
     réessayer -> aucune connexion -> attendre **8** sec.   
     ...   
-    réessayer -> aucune connexion -> attendre **20** sec.   
-    réessayer -> aucune connexion -> attendre **20** sec.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
 * "Disconnect delay": This defines how long (in seconds) AAPS will wait to disconnect from the pump after an operation is finished. La valeur par défaut est de 5 secondes.
