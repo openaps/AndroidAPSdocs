@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Accu-Chek Combo conseils pour une utilisation de base
 
 ## Comment assurer les opérations en douceur
