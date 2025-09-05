@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Návod k EOPatch2
 
 Patch vyžaduje použití inzulínu s rychlým účinkem, typu U-100, jako je NovoRapid nebo Humalog. Použijte inzulín s rychlým účinkem, který je pro vás vhodný podle předpisu lékaře, a používejte předepsané množství.
