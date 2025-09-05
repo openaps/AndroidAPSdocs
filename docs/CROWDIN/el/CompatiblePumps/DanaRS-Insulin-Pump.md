@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # DanaRS and Dana-i Pump
 
 *Αυτές οι οδηγίες αφορούν στη διαμόρφωση της εφαρμογής και της αντλίας σας εάν έχετε μια αντλία DanaRS από το 2017 και μετά. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
