@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Medtrum Nano / 300U
 
 這些是配置Medtrum胰島素幫浦的指導說明。
