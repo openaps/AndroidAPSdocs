@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Documentation du driver AAPS pour la pompe à insuline Omnipod
 
 Ces instructions sont pour configurer la pompe de génération Omnipod Eros (**PAS l'Omnipod Dash**). Le pilote Omnipod est disponible dans AAPS à partir de la version 2.8.
