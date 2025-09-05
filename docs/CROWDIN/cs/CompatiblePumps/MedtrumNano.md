@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Medtrum Nano / 300U
 
 Tyto pokyny slouží ke konfiguraci inzulinové pumpy Medtrum.
