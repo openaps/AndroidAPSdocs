@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # 如何在 xDrip+ 中設置 FSL 2 和 OOP2 使用原生藍牙連線
 
 由 [MinimalL00per](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) 轉換至 markdown 並進行 **修訂/更新**：2025 年 8 月 25 日 psonnera
