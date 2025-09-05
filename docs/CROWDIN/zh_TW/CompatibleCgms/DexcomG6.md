@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Dexcom G6 和 ONE
 
 ## 基本事項
