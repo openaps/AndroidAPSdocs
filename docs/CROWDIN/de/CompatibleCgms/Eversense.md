@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Für Eversense Nutzer
 
 Es gibt drei verschiedene Methoden, um auf die Messwerte des Eversense zuzugreifen:
