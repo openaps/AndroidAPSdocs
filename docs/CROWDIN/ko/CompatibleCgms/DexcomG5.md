@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # 덱스콤 G5
 
 ## If using G5 with xDrip+
