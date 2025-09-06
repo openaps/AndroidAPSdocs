@@ -60,6 +60,7 @@ A list of definitions exists at the bottom of this document. If you are unfamili
 - *[Notes](#minimallooper-notes)*
 - *[Advantages](#minimallooper-advantages)*
 - *[Disadvantages](#minimallooper-disadvantages)*
+- <u>*[Troubleshooting](#minimallooper-troubleshooting)*</u>
 
 ## Before You Start
 
@@ -190,6 +191,8 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 ![xDrip+ debug settings](../images/minimal00per/xdripDBG.png)
 
+(minimallooper-OOPsettings)=
+
 **Less Common Settings -\> Other misc options**
 
 > **Settings for OOP2 Configuration**
@@ -255,6 +258,10 @@ A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth devi
 A 60 second waiting period is enforced because the sensor can’t be scanned during this process more than once per minute. If the sensor is scanned too early the warning **Not so quickly, wait 60 seconds** is displayed in the xDrip Overview screen.
 
 ![xDrip+ scan](../images/minimal00per/xdripscan3.png)
+
+Open xDrip+ event logs and check the sensor paired correctly with xDrip+.
+
+![xDrip+ scan](../images/minimal00per/xdripstream.png)
 
 (minimallooper-step8)=
 
@@ -414,3 +421,59 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 - **OOP2** - Out of Process Algorithm version 2, the 3rd party app that receives encrypted data delivered to from the FSL 2 sensor (by Bluetooth or NFC scan) and then decrypts the encrypted data. Once decrypted, the data is then sent to xDrip+.
 
  
+
+(minimallooper-troubleshooting)=
+
+### Troubleshooting
+
+#### Failure to scan the sensor with NFC
+
+- Make sure your phone NFC reader is enabled in Android settings.
+- The NFC reader must be compatible with **ISO 15693** tags. Some Cubot phones are very difficult to use.
+- Look into you phone documentation to identify the NFC antenna position. Bring it to the sensor and stay on it for 10 seconds: xDrip+ NFC reading takes longer than the vendor app or the reader.
+- Try to close xDrip+ before scanning the sensor.
+- Make sure no other app wants to read the sensor (you might see a selection with different app choices when scanning: select xDrip+ but don't move the phone).
+- Try all combinations of xDrip+ NFC settings *Use faster multi-block reading method* and *Use Any-tag optimized reading method* knowing that NFC scans are usually more reliable with both these options **off**.
+
+#### Stuck on collecting initial readings
+
+*Note: FSL 2 is not recognized as a trusted data source when calibrated manually.*
+
+Set [OOP2 calibration](#minimallooper-OOPsettings) strategy to "No calibration" until you have everything working.
+
+Then you can decide to calibrate or not.
+
+![xDrip+ scan](../images/minimal00per/xdripinitial.png)
+
+#### Sensor is reported as FSL1
+
+![xDrip+ scan](../images/minimal00per/xdripL1.png)
+
+Make sure you are running the latest versions of xDrip+ and OOP2.
+
+#### Connection to the sensor fails
+
+- Verify OOP1 is disabled (see [here](#minimallooper-OOPsettings))
+
+![xDrip+ scan](../images/minimal00per/xdripstreamfail.png)
+
+- Verify OOP2 is not put to sleep by the phone battery savings apps and settings
+- Verify Google Play protect is disabled as it will kill OOP2
+
+#### Missed readings
+
+Make sure OOP2 shows values that are not 0 or -1, it might be a sign your sensor is failing (example below in mmol/l).
+
+![xDrip+ scan](../images/minimal00per/OOP2values.png)
+
+Sensor age has not advanced might also be a sign your sensor has issues. This means xDrip+ received a value, but discarded it as it was not acceptable (sensor error).
+
+![xDrip+ scan](../images/minimal00per/xdripnotadvanced.png)
+
+#### Restart from scratch sensor pairing
+
+1. xDrip+ menu -> Stop sensor (it won't stop the FSL2, just change xDrip+ state to not started)
+2. xDrip+ menu -> System status -> Forget device
+3. Scan the sensor with xDrip+ NFC. Wait at least one minute
+4. xDrip+ menu -> Start sensor. Wait at least one minute
+5. Scan the sensor with xDrip+ NFC, a few times,  always waiting at least one minute between two scans
