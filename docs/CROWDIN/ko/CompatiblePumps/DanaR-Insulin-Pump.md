@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # 다나R 펌프
 
 *다음 지침은 다나R에서 앱과 펌프를 구성하기 위한 것입니다. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*
