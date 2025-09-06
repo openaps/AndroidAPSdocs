@@ -60,6 +60,7 @@
 - *[註釋](#minimallooper-notes)*
 - *[優點](#minimallooper-advantages)*
 - *[缺點](#minimallooper-disadvantages)*
+- <u>*\[Troubleshooting\](#minimallooper-troubleshooting)*</u>
 
 ## 在你開始之前
 
@@ -190,6 +191,8 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 ![xDrip+ debug settings](../images/minimal00per/xdripDBG.png)
 
+(minimallooper-OOPsettings)=
+
 **較不常用的設定 -\> 其他雜項選項**
 
 > **OOP2 配置的設定**
@@ -255,6 +258,10 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 因為傳感器在此過程中無法每分鐘掃描超過一次，所以會強制實施 60 秒的等待期。 如果傳感器掃描過早，xDrip 總覽螢幕將顯示警告 **不要這麼快，請等 60 秒**。
 
 ![xDrip+ scan](../images/minimal00per/xdripscan3.png)
+
+Open xDrip+ event logs and check the sensor paired correctly with xDrip+.
+
+![xDrip+ scan](../images/minimal00per/xdripstream.png)
 
 (minimallooper-step8)=
 
@@ -414,3 +421,59 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 - **OOP2** - 外部程式演算法 2，第三方應用程序接收從FSL 2傳感器（透過藍牙或NFC掃描）傳送的加密資料，然後解密這些加密的資料。 一旦解密後，資料將被發送至xDrip+。
 
  
+
+(minimallooper-troubleshooting)=
+
+### 問題排除
+
+#### Failure to scan the sensor with NFC
+
+- Make sure your phone NFC reader is enabled in Android settings.
+- The NFC reader must be compatible with **ISO 15693** tags. Some Cubot phones are very difficult to use.
+- Look into you phone documentation to identify the NFC antenna position. Bring it to the sensor and stay on it for 10 seconds: xDrip+ NFC reading takes longer than the vendor app or the reader.
+- Try to close xDrip+ before scanning the sensor.
+- Make sure no other app wants to read the sensor (you might see a selection with different app choices when scanning: select xDrip+ but don't move the phone).
+- Try all combinations of xDrip+ NFC settings *Use faster multi-block reading method* and *Use Any-tag optimized reading method* knowing that NFC scans are usually more reliable with both these options **off**.
+
+#### Stuck on collecting initial readings
+
+*Note: FSL 2 is not recognized as a trusted data source when calibrated manually.*
+
+Set [OOP2 calibration](#minimallooper-OOPsettings) strategy to "No calibration" until you have everything working.
+
+Then you can decide to calibrate or not.
+
+![xDrip+ scan](../images/minimal00per/xdripinitial.png)
+
+#### Sensor is reported as FSL1
+
+![xDrip+ scan](../images/minimal00per/xdripL1.png)
+
+Make sure you are running the latest versions of xDrip+ and OOP2.
+
+#### Connection to the sensor fails
+
+- Verify OOP1 is disabled (see [here](#minimallooper-OOPsettings))
+
+![xDrip+ scan](../images/minimal00per/xdripstreamfail.png)
+
+- Verify OOP2 is not put to sleep by the phone battery savings apps and settings
+- Verify Google Play protect is disabled as it will kill OOP2
+
+#### Missed readings
+
+Make sure OOP2 shows values that are not 0 or -1, it might be a sign your sensor is failing (example below in mmol/l).
+
+![xDrip+ scan](../images/minimal00per/OOP2values.png)
+
+Sensor age has not advanced might also be a sign your sensor has issues. This means xDrip+ received a value, but discarded it as it was not acceptable (sensor error).
+
+![xDrip+ scan](../images/minimal00per/xdripnotadvanced.png)
+
+#### Restart from scratch sensor pairing
+
+1. xDrip+ menu -> Stop sensor (it won't stop the FSL2, just change xDrip+ state to not started)
+2. xDrip+ menu -> System status -> Forget device
+3. Scan the sensor with xDrip+ NFC. Wait at least one minute
+4. xDrip+ menu -> Start sensor. Wait at least one minute
+5. Scan the sensor with xDrip+ NFC, a few times,  always waiting at least one minute between two scans
