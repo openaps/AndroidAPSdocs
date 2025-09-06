@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # xDrip+ 设置
 
 若尚未设置，请下载[xDrip+](https://jamorham.github.io/#xdrip-plus)。

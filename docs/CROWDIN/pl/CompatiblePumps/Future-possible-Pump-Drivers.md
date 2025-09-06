@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Sterowniki do pomp (prawdopodobne) w przyszłości
 
 Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, status ich wsparcia w dowolnym systemie pętlowym, oraz status dla systemu AAPS. Na końcu jest trochę informacji, jakie są wymagania, aby pompa nadawała się do pracy w pętli.

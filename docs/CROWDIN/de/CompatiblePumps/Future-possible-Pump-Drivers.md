@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Zukünftig ggf. loopbare Pumpen
 
 Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie zum Loopen bzw. für AAPS geeignet sind. Am Schluss findest du Informationen, welche Eigenschaften eine Insulinpumpe haben müsste um damit loopen zu können.

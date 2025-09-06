@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Diaconn G8 胰岛素泵
 
 ## 胰岛素泵蓝牙配对

@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # **Freestyle Libre 3** and 3+
 
 Freestyle Libre 3 (FSL3) requires a unique setup to receive BG values in to AAPS. There are two possible ways of getting Freestyle Libre 3 (FSL3) values to AAPS.

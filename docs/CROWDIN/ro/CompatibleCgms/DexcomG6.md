@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Dexcom G6 and ONE
 
 ## Elemente de bază

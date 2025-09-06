@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Medtrum Nano / 300U
 
 Diese Anleitung beschreibt die Konfiguration der Medtrum Insulinpumpe.

@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 Compatible with iOS (using iPad as an example)
 <!--crowdin: exclude-->
 

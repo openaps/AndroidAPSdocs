@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # 針對 Eversense 使用者
 
 有三種不同的方法來存取 Eversense 的讀取值：

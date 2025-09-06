@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Bomba DanaR
 
 *Estas instrucciones son para configurar la app y la bomba si tiene una DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*

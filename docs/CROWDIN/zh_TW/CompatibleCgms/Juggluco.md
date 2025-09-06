@@ -1,8 +1,3 @@
-- - -
-orphan: true
-
-- - -
-
 # Juggluco 設定
 
 如果尚未設置，請下載 [Juggluco](https://www.juggluco.nl/Juggluco/download.html)。

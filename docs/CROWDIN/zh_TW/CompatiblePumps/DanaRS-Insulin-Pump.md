@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # DanaRS 和 Dana-i 幫浦
 
 *這些說明適用於配置 2017 年之後的 DanaRS 或更新的 Dana-i 幫浦。 如果你擁有原始的 DanaR，請讀取[DanaR 胰島素幫浦](./DanaR-Insulin-Pump.md)。*

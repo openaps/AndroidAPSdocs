@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 與 Android 相容（最簡單，建議優先選擇）
 
 <!--crowdin: exclude-->

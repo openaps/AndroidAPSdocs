@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # DanaR 幫浦
 
 *這些說明適用於配置該應用程式與 DanaR 幫浦。 如果你擁有 2017 年推出的 DanaRS，請讀取[DanaRS 胰島素幫浦](./DanaRS-Insulin-Pump.md)。*

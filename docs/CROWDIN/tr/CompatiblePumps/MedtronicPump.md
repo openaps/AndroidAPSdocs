@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Medtronic Pompaları
 
 AAPS sürücüsü, G ile biten (530G, 600 serisi [630G, 640G, 670G], 700 serisi [770G, 780G] vb.) tüm modellerde ve daha yeni modellerde çalışmaz.

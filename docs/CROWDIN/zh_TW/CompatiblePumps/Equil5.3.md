@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Equil 5.3
 
 這些指示是用於配置 Equil 胰島素幫浦。

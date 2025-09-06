@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Accu-Chek Combo 基本使用技巧
 
 ## 如何確保系統運作順暢

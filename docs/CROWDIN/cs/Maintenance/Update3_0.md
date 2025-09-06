@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Necessary checks after update to AAPS 3.0
 
 * **Minimální verze Androidu je nyní 9.0.**

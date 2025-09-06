@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # internal sandbox file 2 for testing
 
 ```{admonition} no need to translate this

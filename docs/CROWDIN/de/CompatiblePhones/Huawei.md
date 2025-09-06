@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Konfigurations-Einstellungen für Huawei Smartphones
 
 Einige der nachfolgenden Optionen sind Android-spezifisch, einige Huawei-spezifisch:

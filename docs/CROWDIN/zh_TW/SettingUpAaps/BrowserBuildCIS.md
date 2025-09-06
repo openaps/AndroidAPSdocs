@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 ### 執行工作流程，以建置簽名的 APK
 
 1. 在你的 GitHub 複製版 AndroidAPS 中，選擇操作。

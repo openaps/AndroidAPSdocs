@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # 适用于 PocTech CT-100 用户
 
 - 安装 [PocTech 应用程序](https://play.google.com/store/apps/details?id=com.poctechcorp.pocct)

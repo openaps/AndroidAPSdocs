@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Budoucí (možné) ovladače pump
 
 Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jejich podpory vůči jakémukoliv systému uzavřené smyčky a stav podpory vůči AAPS. Na konci stránky jsou informace, co je po pumpě vyžadováno, aby byla použitelná pro uzavřenou smyčku.

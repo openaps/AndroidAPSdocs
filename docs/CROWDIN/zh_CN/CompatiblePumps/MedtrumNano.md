@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # 移宇（Medtrum）Nano/300U胰岛素泵
 
 本说明用于配置移宇（Medtrum）胰岛素泵。

@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Dexcom G5
 
 ## 如果使用Dexcom G5搭配xDrip+

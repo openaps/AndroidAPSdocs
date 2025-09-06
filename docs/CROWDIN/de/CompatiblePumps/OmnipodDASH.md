@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Omnipod DASH
 
 Diese Anleitung hilft bei der Konfiguration der seit **AAPS**-Version 3.0 integrierten Pumpengeneration des **Omnipod DASH** **(NICHT des Omnipod Eros)**.

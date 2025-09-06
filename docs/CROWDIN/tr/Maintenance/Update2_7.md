@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Necessary checks after update coming from AAPS 2.6
 
 - AAPS 2.7'ye geçilirken program kodu önemli ölçüde değiştirildi.

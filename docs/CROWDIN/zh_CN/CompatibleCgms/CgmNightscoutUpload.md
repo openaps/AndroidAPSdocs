@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # 对于上传至Nightscout的其他连续血糖监测(CGM)设备用户
 
 如果您的其他连续血糖监测(CGM)设备设置**仅能**将血糖数据发送至[Nightscout](https://nightscout.github.io/)。

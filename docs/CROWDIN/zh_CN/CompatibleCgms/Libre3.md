@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # **Freestyle Libre 3** 和 3+
 
 Freestyle Libre 3 (FSL3) 需要特殊设置才能将血糖值传输至AAPS系统。 获取Freestyle Libre 3 (FSL3)数值至AAPS系统存在两种可行方案。

@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # AAPS Omnipod Insulin Pump Driver Documentation
 
 These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AAPS (AAPS) as of version 2.8.

@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Dexcom G6 and ONE
 
 ## 우선적인 기본 사항

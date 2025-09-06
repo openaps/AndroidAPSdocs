@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Pompe à insuline Diaconn G8
 
 ## Appairage Bluetooth de la pompe à insuline

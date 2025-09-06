@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # AAPS Omnipod 胰島素幫浦驅動程式文件
 
 以下是配置 Omnipod Eros 代幫浦的說明（**不包括 Omnipod Dash**）。 從 AAPS 2.8 版本開始，AAPS 支援 Omnipod 驅動程式。

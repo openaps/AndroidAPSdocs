@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 Compatible with Android (The simplest, recommended as the first choice)
 
 <!--crowdin: exclude-->

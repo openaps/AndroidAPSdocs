@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Gelecekteki (olası) Pompa Sürücüleri
 
 Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemindeki destek durumu ile AAPS'deki durumu anlatılmaya çalışılacaktır. Bölüm sonunda bir pompanın "Döngü özellikli" olması için gerekli olan bazı bilgiler vardır.

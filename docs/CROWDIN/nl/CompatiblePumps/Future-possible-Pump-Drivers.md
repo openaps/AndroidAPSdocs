@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Mogelijk toekomstige insulinepompen
 
 Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor één van de beschikbare doe-het-zelf closed loop systemen (AndroidAPS, OpenAPS of Loop). Op het einde van deze pagina staat algemene info over welke software-mogelijkheden een pomp moet beschikken om überhaupt "loopbaar" te kunnen zijn.

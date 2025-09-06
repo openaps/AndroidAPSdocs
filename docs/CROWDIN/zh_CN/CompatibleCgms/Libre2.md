@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Freestyle Libre 2 和 2+
 
 FreeStyle Libre 2传感器现已成为真正的CGM设备，即使使用官方应用亦可实现。 然而，LibreLink仍无法向AAPS传输数据。 现有多种方案可实现其与AAPS的协同使用。
@@ -36,7 +32,7 @@ xDrip+ 不支持直接连接到 Libre 2 US 和 AUS。
 仅限 Libre 2 和 2+ **EU** 型号。
 ```
 
-- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [the latest OOP2](https://drive.google.com/file/d/1hkbs60Bv2udTlMS81UStCdY4RaHR0V57/view) as the one in the document is obsolete.
+- Follow [these instructions](./Libre2MinimalL00per.md) to setup xDrip+ as the original documentation links to an obsolete OOP2  version.
 - 请按照[xDrip+设置页面](../CompatibleCgms/xDrip.md)上的安装说明进行操作。
 
 -   在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。

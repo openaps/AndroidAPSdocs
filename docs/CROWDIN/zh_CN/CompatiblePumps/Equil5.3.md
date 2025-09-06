@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Equil 5.3
 
 以下说明用于配置Equil胰岛素泵。

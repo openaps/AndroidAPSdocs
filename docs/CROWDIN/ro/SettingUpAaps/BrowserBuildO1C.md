@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 Use a computer (supports Windows/Mac/Linux)
 
 Open the webpage [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)

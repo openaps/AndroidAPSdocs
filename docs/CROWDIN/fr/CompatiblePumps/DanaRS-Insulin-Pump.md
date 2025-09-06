@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Pompe DanaRS et Dana-i
 
 *Ces instructions décrivent la configuration de l’application et de votre pompe si vous avez une DanaRS commercialisée depuis 2017 ou la nouvelle Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*

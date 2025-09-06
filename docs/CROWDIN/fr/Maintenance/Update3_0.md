@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Vérifications nécessaires après la mise à jour vers AAPS 3.0
 
 * **La version minimale d'Android est maintenant 9.0.**

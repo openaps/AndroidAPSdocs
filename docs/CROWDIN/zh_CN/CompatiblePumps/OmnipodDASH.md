@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Omnipod DASH
 
 本说明适用于配置**Omnipod DASH**代泵**(非Omnipod Eros)**，该功能作为**AAPS** 3.0版本的一部分提供。

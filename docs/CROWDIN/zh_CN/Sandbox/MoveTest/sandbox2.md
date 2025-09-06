@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # 内部沙盒测试文件2
 
 ```{admonition} no need to translate this

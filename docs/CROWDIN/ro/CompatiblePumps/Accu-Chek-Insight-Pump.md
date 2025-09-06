@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Pompa Accu-Chek Insight
 
 **Aceasta aplicatie face parte dintr-o soluţie de pancreas artificial DIY (Do-it-Yourself), realizata personal) care nu este un produs finit, ceea ce inseamna ca va trebui ca TU sa citesti, să studiezi si să înţelegi sistemul, inclusiv cum să îl folosesti. Nu este ceva creat pentru a gestiona in totalitate tratamentul diabetul, dar permite îmbunătățirea calitatii vieții cu diabet, dacă acordati timpul necesar. Nu te grăbi să o faci, dar acorda-ți timp să înveți. Doar tu esti responsabil de utilizarea acestui sistem.**
@@ -93,8 +87,8 @@ In the Insight settings in AAPS you can enable the following options:
     reîncearcă -> fără conexiune -> așteaptă **7** sec.   
     reîncearcă -> fără conexiune -> așteaptă **8** sec.   
     ...   
-    Reîncearcă -> fără conexiune -> așteaptă **20** sec.   
-    Reîncearcă -> fără conexiune -> așteaptă **20** sec.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
 * "Disconnect delay": This defines how long (in seconds) AAPS will wait to disconnect from the pump after an operation is finished. Valoarea implicită este de 5 secunde.

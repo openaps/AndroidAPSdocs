@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Pumpa DanaRS a Dana-i
 
 *Tyto pokyny slouží k nastavení aplikace a pumpy DanaRS od roku 2017 nebo nejnovější Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*

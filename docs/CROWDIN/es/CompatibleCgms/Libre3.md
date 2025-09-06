@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # **Freestyle Libre 3** and 3+
 
 El Freestyle Libre 3 (FSL3) requiere una configuración especial para recibir los valores de glucosa en sangre en AAPS. Hay dos posibles formas de obtener los valores de Freestyle Libre 3 (FSL3) en AAPS.

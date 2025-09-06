@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Pompes Medtronic
 
 Le pilote ne fonctionne pas avec les nouveaux modèles, y compris tous les modèles se terminant par G (530G, 600-series [630G, 640G, 670G], 700-series [770G, 780G], etc.).

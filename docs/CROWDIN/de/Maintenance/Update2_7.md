@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Notwendige Überprüfungen nach einem Update von AAPS 2.7
 
 - Der Programmcode wurde bei der Umstellung auf AAPS 2.7 deutlich verändert.

@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Kaip sukonfigūruoti "Huawei" telefoną
 
 Yra įvairių variantų, kai kurie būdingi konkrečiai "Android", kai kurie - "Huawei":
