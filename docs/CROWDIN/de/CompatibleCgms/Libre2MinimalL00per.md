@@ -99,6 +99,8 @@ Many people have asked if this method can be used with an already active sensor 
 
 **Install and configure OOP2** and see that it works by just opening the app.
 
+![OOP2 app](../images/minimal00per/OOP2app.png)
+
 **Einstellungen**
 
 - *Use service* **on**
@@ -111,6 +113,8 @@ Many people have asked if this method can be used with an already active sensor 
 
 **Version 2: 93e5cac-2020.12.08 (latest version)**
 
+![OOP2 settings](../images/minimal00per/OOP2settings.png)
+
 **Install xDrip+** minimum version: latest release. Further documentation on xDrip+ installation and setup can be found [*here*](https://androidaps.readthedocs.io/en/latest/Configuration/xdrip.html).
 
 (minimallooper-step2)=
@@ -119,23 +123,24 @@ Many people have asked if this method can be used with an already active sensor 
 
 **Hardware Data Source**: Libre Bluetooth
 
-**NFC Scan features**: *settings not mentioned are assumed to be turned off. This applies to “faster multiblock” setting as well. Do not enable this as NFC scanning will NOT work.*
+![xDrip+ NFC settings](../images/minimal00per/xdripDS.png)
+
+**NFC Scan features**: *settings not mentioned are assumed to be turned off.*
 
 - *Use NFC feature*: **on**
+- *Sensor Age or Expiry*: **on**
+- *Scan when not in xDrip+*: **on**
+- *Use Any-tag optimized reading method*: **off** but try **on** in case of difficulties to scan
+
+![xDrip+ NFC settings](../images/minimal00per/xdripNFC.png)
 
 - *Starting Bluetooth connection with FSL2 sensor*: **Always connect to libre2 sensors**
 
-- *Sensor Age or Expiry*: **on**
+![xDrip+ L2 connect settings](../images/minimal00per/xdripNFCBT.png)
 
-- *Scan when not in xDrip+*: **on**
+- *Smooth libre 3 data when using xxx method*: leave default. Increase the value for noisy sensors, decrease when stable.
 
-**Less Common Settings -\> Advanced Calibration**
-
-- *Double Calibrations*: **on (only if you really do 2 blood tests)**
-
-- *Non-fixed Libre slopes*: **on**
-
-- *Check Libre Serial*: **on**
+![xDrip+ smooth settings](../images/minimal00per/xdripNFCsmooth.png)
 
 **Less Common Settings -\> Bluetooth Settings** (*these are important and can vary with your phone/setup*)
 
@@ -152,7 +157,14 @@ You can setup xDrip+ using the QR code below. You need to scan it (or load the p
 ![Setup Bluetooth](../images/minimal00per/qr_libre2direct-nocalib.png)
 ```
 
-Once scanned the QR code above, if you have a Samsung phone (but this is also useful for many Chinese brands), scan the other QR code below to change the settings for a more reliable connection (*Trust Auto-Connect*: **off** and *Use Background Scans*: **off**).
+![xDrip+ BT settings](../images/minimal00per/xdripBT1.png)
+
+![xDrip+ NFC settings](../images/minimal00per/xdripBT2.png)
+
+Once scanned the QR code above, if you have a Samsung phone (but this is also useful for many Chinese brands), scan the other QR code below to change the settings for a more reliable connection:
+
+- *Trust Auto-Connect*: **off**
+- *Use Background Scans*: **off**
 
 ```{admonition} QR Code
 :class: dropdown
@@ -160,11 +172,15 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 ![Setup Bluetooth](../images/minimal00per/qr_libre2direct_samsung.png)
 ```
 
+![xDrip+ BT settings](../images/minimal00per/xdripBT3.png)
+
 **Advanced settings for FSL2** (*optional but helpful*)
 
 - *show Raw values in Graph*: **on**
 
-- *show Sensors infos in Status*: **on**
+- *show Sensor info in Status*: **on**
+
+![xDrip+ BT settings](../images/minimal00per/xdripAS.png)
 
 **Extra Logging Settings** (*needed to debug if not working correctly*)
 
@@ -172,17 +188,17 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 `BgReading:d,jamorham librereceiver:v,LibreOOPAlgorithm:v,jamorham nsemulator:v,DexCollectionService:v`
 
+![xDrip+ debug settings](../images/minimal00per/xdripDBG.png)
+
 **Less Common Settings -\> Other misc options**
-
-- *Retrieve Libre History*: **on**
-
-- *OOP algorithm calibration*: *THIS IS GREYED OUT AND CANNOT BE CHECKED, THIS IS NORMAL BEHAVIOUR*
 
 > **Settings for OOP2 Configuration**
 
 - *Out of process Libre algorithm*: **OFF**
 
 (*MAKE SURE THIS IS **OFF** FOR OOP2 OTHERWISE YOU WILL NOT GET READINGS!*)
+
+![xDrip+ OOP2 settings](../images/minimal00per/xdripOOP.png)
 
 (minimallooper-step3)=
 
@@ -208,7 +224,11 @@ If you want to be able to use the **FSLReader** as well as the LL app or xDrip+ 
 
 ### **Step 5: Open xDrip+ and NFC SCAN the FSL2 sensor**
 
-(*Reminder! Ensure LL is disabled (location turned off) or uninstalled AND you have waited the entire 60 minutes for the sensor to warmup and internally calibrate.*) NFC SCAN the FSL2 sensor. This sends a signal to the sensor to turn on Bluetooth pairing in order to start the bonding process. A small notification will appear briefly on the bottom of the xDrip+ Overview screen with the text **Scanning** followed by the notification **Scanned OK!** upon a successful NFC scan of the FSL 2 sensor.
+(*Reminder! Ensure LL is disabled (location turned off) or uninstalled AND you have waited the entire 60 minutes for the sensor to warmup and internally calibrate.*)
+
+**NFC SCAN** the FSL2 sensor with xDrip+. This sends a signal to the sensor to turn on Bluetooth pairing in order to start the bonding process. A small notification will appear briefly on the bottom of the xDrip+ Overview screen with the text **Scanning** followed by the notification **Scanned OK!** upon a successful NFC scan of the FSL 2 sensor.
+
+![xDrip+ scan](../images/minimal00per/xdripscan1.png)
 
 (minimallooper-step6)=
 
@@ -218,15 +238,23 @@ In the **xDrip+ Overview screen** press the **hamburger menu** in the upper left
 
 On the **Start New Sensor** screen press **Start Sensor**. A prompt will ask **Did you insert it today?** Respond by pressing **NOT TODAY**.
 
+![xDrip+ scan](../images/minimal00per/xdripstart.png)
+
+![xDrip+ scan](../images/minimal00per/xdripstart2.png)
+
 *NOTE: If you accidentally clicked "YES, TODAY" then you will need to "stop sensor" from the xDrip+ main menu followed by "start sensor" by proceeding with Step 5 again.*
 
 (minimallooper-step7)=
 
 ### **Step 7: Wait 60 seconds and NFC Scan the sensor again**
 
-A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth device from which xDrip+ will use to retrieve the readings. Once complete you will see a notification stating **NEW SENSOR STARTED**. The **Collect Initial Readings** dialog will appear displaying the steps completed and in progress along with time estimations for completion.
+A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth device from which xDrip+ will use to retrieve the readings. Once complete you will see a notification stating **NEW SENSOR STARTED**.
+
+![xDrip+ scan](../images/minimal00per/xdripscan2.png)
 
 A 60 second waiting period is enforced because the sensor can’t be scanned during this process more than once per minute. If the sensor is scanned too early the warning **Not so quickly, wait 60 seconds** is displayed in the xDrip Overview screen.
+
+![xDrip+ scan](../images/minimal00per/xdripscan3.png)
 
 (minimallooper-step8)=
 
@@ -253,6 +281,8 @@ It will change xDrip+ Bluetooth settings to:
 
 Press the Hamburger menu in the upper left of the xDrip+ Overview screen and select **System Status**. On the System Status screen the active **Bluetooth Device:** field displays the FSL2 Bluetooth naming convention of **ABB___XXXXXXXXXXX**, where the XXX’s represent the sensor serial number. The **Connection Status** field displays **Connected** and the **Sensor Start:** field displayed the time the sensor was started.
 
+![xDrip+ scan](../images/minimal00per/xdripSSlog.png)
+
 On the **BT Device** (swipe left) screen you can verify further connection details of the sensor as well as use this screen for troubleshooting connections. Below is a list of fields and their purposes to assist in connection troubleshooting.
 
 *NOTE: **DO NOT click on Bluetooth Pairing** in this window as your sensor has already been paried or is in the middle of the pairing and bonding process. Doing so will attempt a direct pair and you will have to start the process from Step 5 all over again.*
@@ -273,7 +303,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 - **Send Data:** This is the data request hexadecimal stream sent to the sensor to start data retrieval. After pressing **Test for xBridgePlus protocol** you should see this field update however, the data may not change a the request is the same each time.
 
- 
+ ![xDrip+ scan](../images/minimal00per/xdripSStat.png)
 
 (minimallooper-notes)=
 
