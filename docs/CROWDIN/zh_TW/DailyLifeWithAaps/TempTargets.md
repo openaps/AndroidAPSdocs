@@ -40,7 +40,7 @@ AAPS 會在 40 分鐘內目標達到 8mmol/l 或 144mg/dl
 
 用戶可能也希望考慮：
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
+- *選擇* 此 **臨時目標** 1-2 小時之前的計劃運動，以確保減少 IOB (此 **臨時目標** 的正確時機將因人而異); 並且
 - *在計畫活動期間選擇一個臨時設定檔（減少）以確保減少 **IOB**；</li> 
     
     - *確保***臨時目標**的時間設置在運動前不久 *停用*，因為一些用戶在運動後經歷 **BG** 的快速上升。</ul> 
