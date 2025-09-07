@@ -292,7 +292,9 @@ Press the Hamburger menu in the upper left of the xDrip+ Overview screen and sel
 
 On the **BT Device** (swipe left) screen you can verify further connection details of the sensor as well as use this screen for troubleshooting connections. Below is a list of fields and their purposes to assist in connection troubleshooting.
 
-*NOTE: **DO NOT click on Bluetooth Pairing** in this window as your sensor has already been paried or is in the middle of the pairing and bonding process. Doing so will attempt a direct pair and you will have to start the process from Step 5 all over again.*
+*NOTE: **<u>DO NOT TOUCH</u> AND CHANGE Bluetooth Pairing from <u>Disabled</u>** in this window. Doing so will attempt a direct pair, it will fail (Not bonded) and you will have to start the process from Step 5 all over again.*
+
+![xDrip+ scan](../images/minimal00per/xdripSSbond.png)
 
 - **Phone Service State:** The last time the phone made a BT connection to the sensor
 
@@ -459,6 +461,9 @@ Make sure you are running the latest versions of xDrip+ and OOP2.
 
 - Verify OOP2 is not put to sleep by the phone battery savings apps and settings
 - Verify Google Play protect is disabled as it will kill OOP2
+- Did you change Bluetooth Pairing in System Status? Touch it back to bring it back to **<u>Disabled</u>**
+
+![xDrip+ scan](../images/minimal00per/xdripSSbond.png)
 
 #### Missed readings
 
