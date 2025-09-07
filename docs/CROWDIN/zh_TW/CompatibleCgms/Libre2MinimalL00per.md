@@ -292,7 +292,9 @@
 
 在 **BT 設備**（向左滑動）螢幕上，您可以查驗傳感器的進一步連線詳情，並使用此螢幕進行連線故障排除。 以下是各欄位及其用途的列表，以協助連線故障排除。
 
-*注意：**不要在此視窗中點擊藍牙配對**，因為您的傳感器已經配對或正在進行配對和連線的過程。 這樣會嘗試直接配對，您將不得不從步驟 5 開始重新執行整個過程。*
+*NOTE: **<u>DO NOT TOUCH</u> AND CHANGE Bluetooth Pairing from <u>Disabled</u>** in this window. Doing so will attempt a direct pair, it will fail (Not bonded) and you will have to start the process from Step 5 all over again.*
+
+![xDrip+ 掃描](../images/minimal00per/xdripSSbond.png)
 
 - **手機服務狀態：** 手機上次與傳感器建立藍牙連線的時間。
 
@@ -459,6 +461,9 @@
 
 - 驗證 OOP2 是否未被手機的省電應用和設定讓其進入待機狀態
 - 驗證 Google Play 保護已停用，因為這會影響 OOP2
+- Did you change Bluetooth Pairing in System Status? Touch it back to bring it back to **<u>Disabled</u>**
+
+![xDrip+ 掃描](../images/minimal00per/xdripSSbond.png)
 
 #### 讀數遺失
 
