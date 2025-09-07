@@ -60,6 +60,7 @@
 - *[註釋](#minimallooper-notes)*
 - *[優點](#minimallooper-advantages)*
 - *[缺點](#minimallooper-disadvantages)*
+- <u>*\[疑難排解\](#minimallooper-troubleshooting)*</u>
 
 ## 在你開始之前
 
@@ -113,7 +114,7 @@
 
 **版本 2: 93e5cac-2020.12.08（最新版本）**
 
-![OOP2 settings](../images/minimal00per/OOP2settings.png)
+![OOP2 設定](../images/minimal00per/OOP2settings.png)
 
 **安裝 xDrip+** 最低版本：最新釋出版本。 有關 xDrip+ 安裝和設置的進一步文檔可以在[*這裡*](https://androidaps.readthedocs.io/en/latest/Configuration/xdrip.html)找到。
 
@@ -123,24 +124,24 @@
 
 **硬體資料來源**：Libre 藍牙
 
-![xDrip+ NFC settings](../images/minimal00per/xdripDS.png)
+![xDrip+ NFC 設定](../images/minimal00per/xdripDS.png)
 
-**NFC Scan features**: *settings not mentioned are assumed to be turned off.*
+**NFC 掃描功能**: *未提及的設定預設為關閉。*
 
 - *使用 NFC 功能*：**開啟**
 - *傳感器時間或過期指示*：**開啟**
 - *在不使用 xDrip+ 時掃描*：**開啟**
-- *Use Any-tag optimized reading method*: **off** but try **on** in case of difficulties to scan
+- *使用任何標籤優化讀取方法*: **關閉**，但在掃描困難的情況下可嘗試 **開啟**
 
-![xDrip+ NFC settings](../images/minimal00per/xdripNFC.png)
+![xDrip+ NFC 設定](../images/minimal00per/xdripNFC.png)
 
 - *與 FSL2 傳感器啟動藍牙連線*：**始終連接到 libre2 傳感器**
 
-![xDrip+ L2 connect settings](../images/minimal00per/xdripNFCBT.png)
+![xDrip+ L2 連線設定](../images/minimal00per/xdripNFCBT.png)
 
-- *Smooth libre 3 data when using xxx method*: leave default. Increase the value for noisy sensors, decrease when stable.
+- *平滑使用 xxx 方法的 libre 3 資料*: 保持預設。 對於干擾較多的感測器，請提高該數值，而當感測器穩定時，則降低該數值。
 
-![xDrip+ smooth settings](../images/minimal00per/xdripNFCsmooth.png)
+![xDrip+ 平滑設定](../images/minimal00per/xdripNFCsmooth.png)
 
 **較不常用的設定 -\> 藍牙設定**（*這些設定很重要，且可能會因您的手機/設置而有所不同*）
 
@@ -157,11 +158,11 @@
 ![設置藍牙](../images/minimal00per/qr_libre2direct-nocalib.png)
 ```
 
-![xDrip+ BT settings](../images/minimal00per/xdripBT1.png)
+![xDrip+ BT 設定](../images/minimal00per/xdripBT1.png)
 
-![xDrip+ NFC settings](../images/minimal00per/xdripBT2.png)
+![xDrip+ NFC 設定](../images/minimal00per/xdripBT2.png)
 
-Once scanned the QR code above, if you have a Samsung phone (but this is also useful for many Chinese brands), scan the other QR code below to change the settings for a more reliable connection:
+掃描上方的 QR Code 後，如果你有 Samsung 手機（許多中國品牌也有用），請掃描下方的另一個 QR Code 以更改設定，獲得更穩定的連線：
 
 - *信任自動連接*: **關閉**
 - *使用背景掃描*: **關閉**
@@ -172,15 +173,15 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 ![設置藍牙](../images/minimal00per/qr_libre2direct_samsung.png)
 ```
 
-![xDrip+ BT settings](../images/minimal00per/xdripBT3.png)
+![xDrip+ BT 設定](../images/minimal00per/xdripBT3.png)
 
 **FSL2 進階設定**（*可選但有幫助*）
 
 - *在圖表中顯示原始值*：**開啟**
 
-- *show Sensor info in Status*: **on**
+- *在狀態中顯示傳感器資訊*: **開啟**
 
-![xDrip+ BT settings](../images/minimal00per/xdripAS.png)
+![xDrip+ BT 設定](../images/minimal00per/xdripAS.png)
 
 **額外記錄設定**（*如果運作不正常，需進行除錯*）
 
@@ -188,7 +189,9 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 `BgReading:d,jamorham librereceiver:v,LibreOOPAlgorithm:v,jamorham nsemulator:v,DexCollectionService:v`
 
-![xDrip+ debug settings](../images/minimal00per/xdripDBG.png)
+![xDrip+ 除錯設定](../images/minimal00per/xdripDBG.png)
+
+(minimallooper-OOP設定)=
 
 **較不常用的設定 -\> 其他雜項選項**
 
@@ -198,7 +201,7 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 （*確保對於 OOP2 這一項**關閉**，否則您將無法獲得讀取值！*）
 
-![xDrip+ OOP2 settings](../images/minimal00per/xdripOOP.png)
+![xDrip+ OOP2 設定](../images/minimal00per/xdripOOP.png)
 
 (minimallooper-step3)=
 
@@ -224,11 +227,11 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 ### **步驟 5：打開 xDrip+ 並對 FSL2 傳感器進行 NFC 掃描**
 
-（*提醒！ Ensure LL is disabled (location turned off) or uninstalled AND you have waited the entire 60 minutes for the sensor to warmup and internally calibrate.*)
+（*提醒！ 確保 LL 被停用（位置已關閉）或已解除安裝，並且你已經等待傳感器完全暖機和內部校準 60 分鐘。*)
 
-**NFC SCAN** the FSL2 sensor with xDrip+. 這會向傳感器發送信號，打開藍牙配對以啟動配對過程。 在 xDrip+ 總覽螢幕底部會出現一個小提示，文本為 **掃描中**，隨後在成功掃描 FSL 2 傳感器後顯示通知 **掃描成功！**
+**NFC 掃描** FSL2 傳感器與 xDrip+。 這會向傳感器發送信號，打開藍牙配對以啟動配對過程。 在 xDrip+ 總覽螢幕底部會出現一個小提示，文本為 **掃描中**，隨後在成功掃描 FSL 2 傳感器後顯示通知 **掃描成功！**
 
-![xDrip+ scan](../images/minimal00per/xdripscan1.png)
+![xDrip+ 掃描](../images/minimal00per/xdripscan1.png)
 
 (minimallooper-step6)=
 
@@ -238,9 +241,9 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 在 **啟動新傳感器** 螢幕上按下 **啟動傳感器**。 系統會彈出提示 **您今天有插入嗎？** 回應時按下 **今天沒有**。
 
-![xDrip+ scan](../images/minimal00per/xdripstart.png)
+![xDrip+ 掃描](../images/minimal00per/xdripstart.png)
 
-![xDrip+ scan](../images/minimal00per/xdripstart2.png)
+![xDrip+ 掃描](../images/minimal00per/xdripstart2.png)
 
 *注意：如果您不小心點擊了 "是，今天" 那麼您需要從 xDrip+ 主選單中 "停止傳感器"，然後再依照步驟 5 重新啟動傳感器。*
 
@@ -250,11 +253,15 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 需要進行第二次 NFC 掃描以 **添加** 傳感器作為 xDrip+ 將使用的藍牙設備來檢索讀取值。 完成後，您將看到一個通知，顯示 **新傳感器已啟動**。
 
-![xDrip+ scan](../images/minimal00per/xdripscan2.png)
+![xDrip+ 掃描](../images/minimal00per/xdripscan2.png)
 
 因為傳感器在此過程中無法每分鐘掃描超過一次，所以會強制實施 60 秒的等待期。 如果傳感器掃描過早，xDrip 總覽螢幕將顯示警告 **不要這麼快，請等 60 秒**。
 
-![xDrip+ scan](../images/minimal00per/xdripscan3.png)
+![xDrip+ 掃描](../images/minimal00per/xdripscan3.png)
+
+打開 xDrip+ 事件日誌並檢查傳感器是否正確配對 xDrip+。
+
+![xDrip+ 掃描](../images/minimal00per/xdripstream.png)
 
 (minimallooper-step8)=
 
@@ -281,7 +288,7 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 在 xDrip+ 總覽螢幕的左上角按下漢堡選單，並選擇 **系統狀態**。 在系統狀態螢幕上，活動中的 **藍牙設備：** 欄位顯示 FSL2 藍牙命名慣例 **ABB___XXXXXXXXXXX**，其中 XXX 代表傳感器序號。 在 **連線狀態** 欄位顯示 **已連線**，而 **傳感器啟動：** 欄位顯示傳感器啟動的時間。
 
-![xDrip+ scan](../images/minimal00per/xdripSSlog.png)
+![xDrip+ 掃描](../images/minimal00per/xdripSSlog.png)
 
 在 **BT 設備**（向左滑動）螢幕上，您可以查驗傳感器的進一步連線詳情，並使用此螢幕進行連線故障排除。 以下是各欄位及其用途的列表，以協助連線故障排除。
 
@@ -303,7 +310,7 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 - **發送資料:** 這是發送到傳感器以開始資料擷取的資料請求十六進制流。 按下**xBridgePlus 協議測試**後，您應該看到此欄位更新，然而資料可能不會改變，因為請求每次都是相同的。
 
- ![xDrip+ scan](../images/minimal00per/xdripSStat.png)
+ ![xDrip+ 掃描](../images/minimal00per/xdripSStat.png)
 
 (minimallooper-notes)=
 
@@ -414,3 +421,59 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 - **OOP2** - 外部程式演算法 2，第三方應用程序接收從FSL 2傳感器（透過藍牙或NFC掃描）傳送的加密資料，然後解密這些加密的資料。 一旦解密後，資料將被發送至xDrip+。
 
  
+
+(minimallooper-故障排除)=
+
+### 問題排除
+
+#### 無法使用 NFC 掃描傳感器
+
+- 確保你的手機 NFC 閱讀器在 Android 設定中已啟用。
+- NFC 閱讀器必須與 **ISO 15693** 標籤相容。 某些 Cubot 手機使用起來非常困難。
+- 查看手機說明書以識別 NFC 天線位置。 將其帶到傳感器上，並保持 10 秒鐘：xDrip+ NFC 讀取比供應商應用程式或讀取器更耗時。
+- 在掃描傳感器之前，盡量關閉 xDrip+。
+- 確保沒有其他應用程式想要讀取傳感器（掃描時可能會出現多個應用選擇，請選擇 xDrip+，但不要移動手機）。
+- 嘗試所有 xDrip+ NFC 設定的組合 *使用更快的多區塊讀取方法* 和 *使用任何標籤優化讀取方法*，因為通常這兩個選項 **關閉** 會讓 NFC 掃描更可靠。
+
+#### 卡在收集初始讀數
+
+*注意：FSL 2 在手動校準時不被視為可信的資料來源。*
+
+將 [OOP2 校準](#minimallooper-OOP設定) 策略設置為「不校準」，直到一切正常運作。
+
+然後你可以決定是否要校準。
+
+![xDrip+ 掃描](../images/minimal00per/xdripinitial.png)
+
+#### 傳感器報告為 FSL1
+
+![xDrip+ 掃描](../images/minimal00per/xdripL1.png)
+
+確保你正在運行最新版本的 xDrip+ 和 OOP2。
+
+#### 與傳感器的連線失敗
+
+- 驗證 OOP1 是否已停用（請見 [這裡](#minimallooper-OOP設定)）
+
+![xDrip+ 掃描](../images/minimal00per/xdripstreamfail.png)
+
+- 驗證 OOP2 是否未被手機的省電應用和設定讓其進入待機狀態
+- 驗證 Google Play 保護已停用，因為這會影響 OOP2
+
+#### 讀數遺失
+
+確保 OOP2 顯示的數值不是 0 或 -1，這可能是你的傳感器有故障的徵兆（下方以 mmol/l 為例）。
+
+![xDrip+ 掃描](../images/minimal00per/OOP2values.png)
+
+傳感器年限未增長也可能是你的傳感器出現問題的跡象。 這意味著 xDrip+ 收到了數值，但因為不合格而被丟棄（傳感器錯誤）。
+
+![xDrip+ 掃描](../images/minimal00per/xdripnotadvanced.png)
+
+#### 從頭開始重新配對傳感器
+
+1. xDrip+ 選單 -> 停止傳感器（不會停止 FSL2，只是改變 xDrip+ 狀態為未開始）
+2. xDrip+ 選單 -> 系統狀態 -> 忘記設備
+3. 使用 xDrip+ NFC 掃描傳感器。 等待至少一分鐘
+4. xDrip+ 選單 -> 啟動傳感器。 等待至少一分鐘
+5. 使用 xDrip+ NFC 掃描傳感器幾次，兩次掃描之間總是等待至少一分鐘

@@ -120,7 +120,7 @@ Autotune 外掛是在 AAPS 中實作的 OpenAPS 自動調整算法。
 
 ### 調整特定星期幾
 
-- If you click on the checkbox with the eye on the right of "Tune days" parameter, you will see the day selection. 你可以指定 Autotune 計算應包含哪些星期幾（在下方截圖中可以看到「工作日」的範例，週六和週日被排除在 Autotune 計算之外）。
+- 如果您點擊 "調整天數" 參數右側帶眼睛的核取方塊，您將看到天數選擇。 你可以指定 Autotune 計算應包含哪些星期幾（在下方截圖中可以看到「工作日」的範例，週六和週日被排除在 Autotune 計算之外）。
   - 如果 Autotune 計算中包含的天數少於調整天數，則會在調整天數選擇器的右側顯示有多少天數被包含在內（下方範例中顯示為 10 天）。
   - 此設定僅在剩餘天數不太少的情況下才能獲得良好的結果（例如，如果你為週末天數調整特定設定檔，只選擇週六和週日，你應該選擇至少 21 或 28 個調整天數，以確保 Autotune 計算中包含 6 或 8 天）。
 
@@ -179,18 +179,18 @@ Autotune 只是輔助工具，重要的是定期檢查你是否同意計算出�
 分析 Autotune 結果以暸解（或嘗試暸解）Autotune 為何提出這些修改也是很重要的。
 
 - 你可能會發現設定檔的強度整體增加或減少（例如總基礎率增加，與 ISF 和 IC 值的減少相關聯）。 這可能與隨後幾天的自動敏感度修正超過 100%（需要更激進的調整）或低於 100%（您更敏感）有關。
-- Sometimes Autotune proposes a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
+- 有時，自動調整會提出基礎率和 IC/ISF 之間的不同平衡 (例如：較低基礎率和更積極的 IC/ISF)
 
 我們建議在以下情況下不要使用 Autotune：
 
 - 你沒有輸入所有的碳水化合物。
-  - If you don't enter carbs correction for hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs, especially correction for hypo.
-- You have a lot of periods with UAM detected during the day.
-  - Do you have entered all your carbs and correctly estimated your Carbs?
+  - 如果您沒有輸入因低血糖而進行的碳水化合物修正，自動調整會看到您的 **血糖** 值意外上升，並在 4 小時前提高您的基礎率，這可能正好相反，會導致您避免低血糖，特別是如果它發生在深夜時。 因此，輸入所有碳水化合物，尤其是低血糖的修正是非常重要的。
+- 您有很多被偵測到的 UAM 期間。
+  - 您輸入了所有碳水化合物並正確估算了它們嗎？
   - 所有的未註明餐點（UAM）時間段（除非你在一天內沒有輸入碳水化合物並且未啟用將未註明餐點歸類為基礎率），所有的未註明餐點時間將會被歸類為基礎率，這可能會大幅增加你的基礎率（遠超出必要範圍）。
 
 - 你的碳水化合物吸收速度非常慢：如果大部分的碳水化合物吸收是根據 min_5m_carbimpact 參數計算的（你可以在 COB 曲線頂端看到一個小橙點標示的這些時間段），COB 的計算可能會出錯，並導致錯誤的結果。
   - 當你運動時，你的敏感度通常會增加，血糖不會上升很多，因此在運動期間或之後，通常會看到一些碳水化合物的緩慢釋放期。 但如果你經常發生意外的碳水化合物吸收過慢的情況，那麼你可能需要調整你的設定檔（增加 IC 值）或調低 min_5m_carbimpact。
-- You have "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you have long periods of wrong BG values. If during the past weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
+- 您有「非常糟糕的日子」，例如在高血糖數值中卡住幾小時，並需要使用大量胰島素才能恢復到正常範圍，或在感測器更換之後您有長時間的錯誤 **血糖** 值。 如果在過去幾週中，您只有一兩天的「糟糕日子」，您可以在自動調整計算中手動禁用這些天，以排除它們的計算，再次 **仔細檢查是否可以信任結果**
 - 如果修改的百分比過高。
   - 你可以嘗試增加天數以獲得更平滑的結果。
