@@ -292,31 +292,24 @@
 
 在 **BT 設備**（向左滑動）螢幕上，您可以查驗傳感器的進一步連線詳情，並使用此螢幕進行連線故障排除。 以下是各欄位及其用途的列表，以協助連線故障排除。
 
-*注意：**不要在此視窗中點擊藍牙配對**，因為您的傳感器已經配對或正在進行配對和連線的過程。 這樣會嘗試直接配對，您將不得不從步驟 5 開始重新執行整個過程。*
+*NOTE: **<u>DO NOT TOUCH</u> AND CHANGE Bluetooth Pairing from <u>Disabled</u>** in this window. Doing so will attempt a direct pair, it will fail (Not bonded) and you will have to start the process from Step 5 all over again.*
 
-- **手機服務狀態：** 手機上次與傳感器建立藍牙連線的時間。
+![xDrip+ 掃描](../images/minimal00per/xdripSSbond.png)
 
-- **藍牙設備：** 顯示連線的當前狀態（**已連線** 或 **已中斷連線**）
-
-- **活動設備連線：** 顯示藍牙連線之後的狀態。 **True** 意味著傳感器已連線且已配對。
-
+- **Phone Service State:** The last time the phone made a BT connection to the sensor (it should be less than 5 minutes ago)
+- **Bluetooth Device:** Displays current status of the connection (either **Connected** or **Disconnected**)
 - **裝置 Mac 位址**: 這是傳感器的硬體識別碼。
+- **Bluetooth Pairing**:  This should be **<u>Disabled, tap to enable</u>**. Be careful to NOT tap this. If you tap it by mistake, tap it again until it returns to disabled.
+- **Slowest wake up**: You can ignore this. xDrip+ doesn't spend its time waiting for readings: it will start expecting them at after a certain time (traditionally 5 minutes). If no data arrives at that time, you'll see "Woke up early" meaning xDrip+ was expecting data to be ready but there's none. Slowest wake up is the highest delay encountered before receiving data normally.
+- **Next Wake up**: Should say 5 minutes
 
-- **GATT 裝置已連線:** 這是註冊在 Android 藍牙服務中的硬體識別碼。 任何與您的手機配對的藍牙裝置將在這裡顯示其硬體識別碼。 GATT 和裝置位址應該與您的傳感器硬體識別碼相符。
-
-- **請求資料:** 僅在 xDrip+ 的工程模式啟用時顯示。 按下**xBridgePlus 協議測試** ，您可以手動開始請求傳感器的資料。
-
-- **接收資料:** 這是從您的傳感器傳來的資料流的十六進制表示形式。 如果您在此看到文字，則表示您正積極接收來自傳感器的資料。 按下**xBridgePlus 協議測試**後，資料應該會改變。
-
-- **發送資料:** 這是發送到傳感器以開始資料擷取的資料請求十六進制流。 按下**xBridgePlus 協議測試**後，您應該看到此欄位更新，然而資料可能不會改變，因為請求每次都是相同的。
-
- ![xDrip+ 掃描](../images/minimal00per/xdripSStat.png)
+![xDrip+ 掃描](../images/minimal00per/xdripSStat.png)
 
 (minimallooper-notes)=
 
 ### **註釋**
 
-- **在配對/連線完成後使用 LL NFC 掃描**: 您可以進行 NFC 掃描，但需要先完成與 xDrip+ 的配對/連線過程。 始終查看 xDrip+，確保它接近 5 分鐘讀取值（例如 4 分鐘前），如果接近 5 分鐘，請等待新的藍牙讀取值進來後再進行 NFC 掃描。 如果您在錯誤的時間捕捉到，將會干擾 xDrip+ 的藍牙流程，導致無法接收藍牙讀取值，這可能需要一段時間才能重新配對並再次傳輸，且有時傳感器的藍牙連線可能會被 LL “搶走”。 然而，在這些藍牙讀取值之間，我運行 NFC 掃描後立即停用應用程式並沒有遇到任何問題。 我不確定是否每次都需要停用 LL，但我為了安全起見會停用它。
+- **在配對/連線完成後使用 LL NFC 掃描**: 您可以進行 NFC 掃描，但需要先完成與 xDrip+ 的配對/連線過程。 Always look at xDrip+ and see if it is close to the 5 minute reading (i.e. 4 minutes ago), if it is near 5 min, wait for the new BT reading to come in and then conduct the NFC scan. If you catch it at the wrong time it will disturb the BT process in xDrip+ and not receive BT readings, which can take a while to re-bond and transmit again and sometimes a sensor BT connection can be “stolen” by LL. 然而，在這些藍牙讀取值之間，我運行 NFC 掃描後立即停用應用程式並沒有遇到任何問題。 我不確定是否每次都需要停用 LL，但我為了安全起見會停用它。
 
 - - **發生了什麼事情?** 當藍牙連線建立時，會創建一個私有共享密鑰，這是允許傳感器與呼叫應用程式/裝置之間進行通信所需的。 LL 應用程式或讀取器在連接期間高機率會創建一個新的私有共享密鑰來進行通信。 這意味著在配對後，xDrip+ 無法識別新金鑰，因此無法與傳感器通信。
 
@@ -459,6 +452,9 @@
 
 - 驗證 OOP2 是否未被手機的省電應用和設定讓其進入待機狀態
 - 驗證 Google Play 保護已停用，因為這會影響 OOP2
+- Did you change Bluetooth Pairing in System Status? Touch it back to bring it back to **<u>Disabled</u>**
+
+![xDrip+ 掃描](../images/minimal00per/xdripSSbond.png)
 
 #### 讀數遺失
 
