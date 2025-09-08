@@ -296,29 +296,20 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 ![xDrip+ scan](../images/minimal00per/xdripSSbond.png)
 
-- **Phone Service State:** The last time the phone made a BT connection to the sensor
-
+- **Phone Service State:** The last time the phone made a BT connection to the sensor (it should be less than 5 minutes ago)
 - **Bluetooth Device:** Displays current status of the connection (either **Connected** or **Disconnected**)
-
-- **Active device connection:** Displays the status of the bluetooth bond after connection. **True** means the sensor is connected and bonded.
-
 - **Device Mac Address**: This is the hardware ID of the sensor
+- **Bluetooth Pairing**:  This should be **<u>Disabled, tap to enable</u>**. Be careful to NOT tap this. If you tap it by mistake, tap it again until it returns to disabled.
+- **Slowest wake up**: You can ignore this. xDrip+ doesn't spend its time waiting for readings: it will start expecting them at after a certain time (traditionally 5 minutes). If no data arrives at that time, you'll see "Woke up early" meaning xDrip+ was expecting data to be ready but there's none. Slowest wake up is the highest delay encountered before receiving data normally.
+- **Next Wake up**: Should say 5 minutes
 
-- **GATT device connected:** This is the hardware ID registered in the Android BT service. Any bluetooth devices actively bonded to your phone will display their hardware ID here. The GATT and Device Address should match for your sensor hardware ID.
-
-- **Request Data:** Only shown with Engineering Mode enabled in xDrip+. Pressing **Test for xBridgePlus protocol** you can manually start a request for data from your sensor.
-
-- **Received Data:** This is a hexadecimal representation of the data stream coming from your sensor. If you see characters here then you are actively receiving data from the sensor. The data should change after pressing **Test for xBridgePlus protocol**.
-
-- **Send Data:** This is the data request hexadecimal stream sent to the sensor to start data retrieval. After pressing **Test for xBridgePlus protocol** you should see this field update however, the data may not change a the request is the same each time.
-
- ![xDrip+ scan](../images/minimal00per/xdripSStat.png)
+![xDrip+ scan](../images/minimal00per/xdripSStat.png)
 
 (minimallooper-notes)=
 
 ### **Notes**
 
-- **Using LL NFC Scans AFTER bonding/pairing in xDrip+ is completed**: You can conduct NFC scans but the bonding/pairing process with xDrip+ needs to be completed first. Always look at xDrip+ and see if it is close to the 5 minute reading (ie. 4 minutes ago), if it is near 5 min, wait for the new BT reading to come in and then conduct the NFC scan. If you catch it at the wrong time it will disturb the BT process in xDrip+ and not receive BT readings, which can take a while to rebond and transmit again and sometimes a sensor BT connection can be “stolen” by LL. However between these BT readings I have not had any problems executing an NFC scan followed by immediately disabling the app. I am not sure if LL needs to be disabled each time but I disable it to be on the safe side.
+- **Using LL NFC Scans AFTER bonding/pairing in xDrip+ is completed**: You can conduct NFC scans but the bonding/pairing process with xDrip+ needs to be completed first. Always look at xDrip+ and see if it is close to the 5 minute reading (i.e. 4 minutes ago), if it is near 5 min, wait for the new BT reading to come in and then conduct the NFC scan. If you catch it at the wrong time it will disturb the BT process in xDrip+ and not receive BT readings, which can take a while to re-bond and transmit again and sometimes a sensor BT connection can be “stolen” by LL. However between these BT readings I have not had any problems executing an NFC scan followed by immediately disabling the app. I am not sure if LL needs to be disabled each time but I disable it to be on the safe side.
 
 - - **What is going on?** When a Bluetooth connection is made a private shared key is created that is needed to allow communication between the sensor and the calling application/device. There is a high probability that the LL app or the Reader creates a new private shared key for communication during the connection. This means that after bonding, xDrip+ is not aware of the new key and will not be able to communicate with the sensor.
 
