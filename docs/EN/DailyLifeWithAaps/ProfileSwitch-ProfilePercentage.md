@@ -54,7 +54,7 @@ How to action a **Profile** ‘Percentage’:
 
 4. Enter ‘Time Shift’.
 
-## To activate a Profile Percentage within Profile Switch:
+## Profile Percentage
 
 It is important that a user understands the essential features of a **Profile Percentage**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
 
