@@ -59,10 +59,9 @@ Bu güvenlik ayarı, insülin pompasının iletebileceği maksimum geçici bazal
 
 Değer, ünite/saat (Ü/s) cinsinden ölçülür. It is advised to set this to something sensible. A good recommendation for setting this parameter is:
 
-    max-basal = highest basal rate x 4
-    
+**MAX-BASAL = HIGHEST BASAL RATE x 4**
 
-Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 4 ile çarparak maks geçici bazal için 2 Ü/s değerini elde edersiniz.
+For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 
 **AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
 
@@ -80,11 +79,11 @@ Değer, ünite/saat (Ü/s) cinsinden ölçülür. It is advised to set this to s
 
 This value determines the maximum **Insulin on Board** (basal and bolus IOB) that **AAPS** will remain under while running in closed loop mode. It is also known as **maxIOB**.
 
-Mevcut AİNS (örneğin bir yemek bolusundan sonra) tanımlanan değerin üzerindeyse, döngü AİNS limiti verilen değerin altına düşene kadar insülin dozlamayı durdurur.
+If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
 
 A good start for setting this parameter is:
 
-    maksIAİNS= ortalama öğün yemeği + 3x maksimum günlük bazal olacaktır
+    maxIOB = average mealbolus + 3x max daily basal
     
 
 Be careful and patient when adjusting your **max-IOB**. It is different for everyone and can also depend on the average total daily dose (TDD).
@@ -101,7 +100,7 @@ Be careful and patient when adjusting your **max-IOB**. It is different for ever
 
 Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
 
-Ayrıca [SMB için OpenAPS dokümantasyonuna](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb) bakın.
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Enable dynamic sensitivity
 
@@ -119,7 +118,7 @@ If you have this option enabled, the insulin sensitivity will be decreased while
 
 This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
-Autosens looks at blood glucose deviations (positive/negative/neutral). Bu sapmalara göre sizin ne kadar duyarlı/dirençli olduğunuzu anlamaya çalışacak ve bu sapmalara göre bazal hızı ve IDF'yi ayarlayacaktır.
+Autosens looks at blood glucose deviations (positive/negative/neutral). It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 
 When enabled, new settings become available.
 
