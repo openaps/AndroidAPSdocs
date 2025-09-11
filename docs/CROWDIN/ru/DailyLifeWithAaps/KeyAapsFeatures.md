@@ -59,10 +59,9 @@ The settings for OpenAPS SMB are described below.
 
 Значение задается в единицах в час (ед./ч). Рекомендуется установить какое-то разумное значение. A good recommendation for setting this parameter is:
 
-    max-basal = highest basal rate x 4
-    
+**MAX-BASAL = HIGHEST BASAL RATE x 4**
 
-Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 4, вы получите значение 2 ед./ч.
+For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 
 **AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
 
@@ -80,14 +79,14 @@ The settings for OpenAPS SMB are described below.
 
 This value determines the maximum **Insulin on Board** (basal and bolus IOB) that **AAPS** will remain under while running in closed loop mode. It is also known as **maxIOB**.
 
-Если текущий активный инсулин IOB (например, после болюса на еду) превышает определенную величину, то алгоритм останавливает подачу инсулина до тех пор, пока предел IOB не будет ниже заданного значения.
+If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
 
 A good start for setting this parameter is:
 
-    maxIOB = средний болюс на еду + троекратный макс. базал
+    maxIOB = average mealbolus + 3x max daily basal
     
 
-Be careful and patient when adjusting your **max-IOB**. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD).
+Be careful and patient when adjusting your **max-IOB**. It is different for everyone and can also depend on the average total daily dose (TDD).
 
 **AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
 
@@ -101,7 +100,7 @@ Be careful and patient when adjusting your **max-IOB**. Эта величина 
 
 Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
 
-См. также [документацию OpenAPS по SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Enable dynamic sensitivity
 
@@ -109,17 +108,17 @@ This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabl
 
 #### Высокая врем. цель temptarget повышает чувствительность
 
-Если эта опция включена, то чувствительность инсулина будет увеличена при временной цели более 100 мг/дл или 5.6 ммол/л. Это означает, что чувствительность к инсулину ISF возрастет, в то время как углеводный коэффициент IC и базал уменьшатся. This will effectively make **AAPS** less aggressive when you set a high temp target.
+If you have this option enabled, the insulin sensitivity will be increased while having a temporary target above 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease. This will effectively make **AAPS** less aggressive when you set a high temp target.
 
 #### Низкая временная цель temptarget снижает чувствительность
 
-Если эта опция включена, то параметр чувствительность инсулина будет снижен при временной цели ниже 100 мг/дл или 5.6 ммол/л. Это означает, что чувствительность к инсулину ISF снизится, в то время как IC и базал увеличатся. This will effectively make **AAPS** more aggressive when you set a low temp target.
+If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise. This will effectively make **AAPS** more aggressive when you set a low temp target.
 
 ### Enable Autosens feature
 
 This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
-Autosens looks at blood glucose deviations (positive/negative/neutral). На основе отклонений он пытается выяснить, насколько вы чувствительны/резистентны к инсулину и корректирует базальную скорость и коэффициент чувствительности к инсулину ISF.
+Autosens looks at blood glucose deviations (positive/negative/neutral). It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 
 When enabled, new settings become available.
 
@@ -141,7 +140,7 @@ This setting is available when one of "Enable dynamic sensitivity" or "Enable Au
 
 ### Включить супер микро болюс SMB
 
-Включите, чтобы использовать функционал SMB. If disabled, no **SMBs** will be given.
+Enable this to use SMB functionality. If disabled, no **SMBs** will be given.
 
 When enabled, new settings become available.
 
@@ -149,15 +148,15 @@ When enabled, new settings become available.
 
 #### Включить супер микро болюс SMB с высокими значениями временных целей
 
-If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l, regardless of **Profile** target). Эта опция нужна для отключения микроболюсов SMB, когда параметр отключен. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
+If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l, regardless of **Profile** target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
 
 If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled.
 
-(Open-APS-функции-включать-микроболюсы-всегда)=
+(Open-APS-features-enable-smb-always)=
 
 #### Всегда включать супер микро болюс SMB
 
-If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). Если этот параметр включен, остальные параметры включения не будут иметь эффекта. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
+If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
 
 This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
 

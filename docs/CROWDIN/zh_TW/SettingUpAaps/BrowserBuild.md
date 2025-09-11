@@ -327,3 +327,36 @@ Google 雲端硬碟授權中的「自訂」欄位，適合熟悉Google Oauth2的
   - Upstream Repository：請輸入你想要 cherry-pick 的庫名稱。
   - Commit SHA：請輸入你想要 cherry-pick 的提交 SHA（像 git commit hash）。
   - Select Build Variant： [變體](variant)
+
+(ci-keystore-export)=
+## CI KeyStore 匯出
+
+如果您想要匯出儲存的金鑰庫，請使用這個方法。
+
+這段腳本將會把您先前配置的金鑰庫資訊（來自選項 1 或選項 2）匯出為一個受密碼保護的 ZIP 檔案到你的 Google 雲端硬碟裡 `/AAPS/KeyStore` 目錄中
+
+```{warning}
+在使用這個匯出方法之前，請確保您的金鑰庫和 Google 雲端硬碟的設定已完成。
+```
+
+### 步驟：
+
+1. **新增 ZIP 密碼：**
+   - 前往您的儲存庫的 **設定** → **密碼和變數** → **動作**
+   - 點擊 **New repository secret(新增儲存庫密碼)**
+   - 在 **Name(名稱)** 欄位中，輸入: `ZIP_PASSWORD`
+   - 在 **Secret(密碼)** 欄位中，輸入您自訂的 ZIP 加密密碼
+   - 請僅使用英文字母和數字作為密碼（不可以使用特殊符號）
+   - 點擊 **Add secret(新增密碼)**
+
+   ![aaps_ci_zip_password.png](../images/Building-the-App/CI/aaps_ci_zip_password.png)
+
+2. **執行匯出工作流程：**
+   - 前往您的儲存庫中的 **Actions** 標籤
+   - 選擇 **CI KeyStore Export**
+   - 點擊 **執行工作流程**
+   - 匯出的金鑰庫 ZIP 檔案將會保存在您的 Google 雲端硬碟中
+
+   ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
+
+   ![aaps_ci_keystore_export_run.png](../images/Building-the-App/CI/aaps_ci_keystore_export_run.png)

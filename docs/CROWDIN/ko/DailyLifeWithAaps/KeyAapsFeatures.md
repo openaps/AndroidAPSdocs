@@ -59,8 +59,7 @@ This safety setting determines the maximum temporary basal rate the insulin pump
 
 The value is measured in units per hour (U/h). It is advised to set this to something sensible. A good recommendation for setting this parameter is:
 
-    max-basal = highest basal rate x 4
-    
+**MAX-BASAL = HIGHEST BASAL RATE x 4**
 
 For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 
@@ -84,7 +83,7 @@ If the current IOB (e.g. after a meal bolus) is above the defined value, the loo
 
 A good start for setting this parameter is:
 
-    maxIOB = 평균 식사 bolus + 하루 최대 basal의 3배 양
+    maxIOB = average mealbolus + 3x max daily basal
     
 
 Be careful and patient when adjusting your **max-IOB**. It is different for everyone and can also depend on the average total daily dose (TDD).
