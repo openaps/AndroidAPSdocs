@@ -59,10 +59,9 @@ Toto bezpečnostní omezení stanoví maximální výši dočasné bazální dá
 
 Jakmile je tato hodnota dosažena, AAPS zastaví přidávání dodatečného bazálu, dokud hodnota inzulínu v těle (IOB) opět neklesne pod tuto hodnotu. Doporučuje se nastavit toto na rozumnou hodnotu. A good recommendation for setting this parameter is:
 
-    max-basal = highest basal rate x 4
-    
+**MAX-BASAL = HIGHEST BASAL RATE x 4**
 
-Například: máte-li ve svém profilu nejvyšší hodnotu bazálu 0.5U/h, dostanete po vynásobení 4 hodnotu 2U/h.
+For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 
 **AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
 
@@ -80,11 +79,11 @@ Například: máte-li ve svém profilu nejvyšší hodnotu bazálu 0.5U/h, dosta
 
 This value determines the maximum **Insulin on Board** (basal and bolus IOB) that **AAPS** will remain under while running in closed loop mode. It is also known as **maxIOB**.
 
-Pokud je aktuální IOB (např. po bolusové dávce) nad nastavenou hodnotou, smyčka nenavýší dávky inzulínu, dokud se hodnota IOB pod tuto hodnotu nesníží.
+If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
 
 A good start for setting this parameter is:
 
-    max IOB = průměrná hodnota bolusů podávaných před jídlem + 3násobek nejvyšší hodnoty v bazálním profilu
+    maxIOB = average mealbolus + 3x max daily basal
     
 
 Be careful and patient when adjusting your **max-IOB**. It is different for everyone and can also depend on the average total daily dose (TDD).
@@ -101,7 +100,7 @@ Be careful and patient when adjusting your **max-IOB**. It is different for ever
 
 Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
 
-Viz také [Dokumentace k OpenAPS SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Enable dynamic sensitivity
 
@@ -109,17 +108,17 @@ This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabl
 
 #### Vysoký dočasný cíl zvýší senzitivitu
 
-If you have this option enabled, the insulin sensitivity will be increased while having a temporary target above 100 mg/dl or 5.6 mmol/l. To znamená, že ISF se zvýší, zatímco IC a bazál se sníží. This will effectively make **AAPS** less aggressive when you set a high temp target.
+If you have this option enabled, the insulin sensitivity will be increased while having a temporary target above 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease. This will effectively make **AAPS** less aggressive when you set a high temp target.
 
 #### Nízký dočasný cíl sníží senzitivitu
 
-Je-li tato volba aktivní, citlivost na inzulin se při nastavení dočasného cíle pod 5.6 mmol/l (100 mg/dl) sníží. To znamená, že ISF se sníží, zatímco IC a bazál se zvýší. This will effectively make **AAPS** more aggressive when you set a low temp target.
+If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise. This will effectively make **AAPS** more aggressive when you set a low temp target.
 
 ### Enable Autosens feature
 
 This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
-Autosens looks at blood glucose deviations (positive/negative/neutral). Pokud je chcete i přesto změnit, prostudujte si podrobnosti v , abyste pochopili, co děláte.
+Autosens looks at blood glucose deviations (positive/negative/neutral). It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 
 When enabled, new settings become available.
 
@@ -129,7 +128,7 @@ If this option is enabled, the sensitivity detection (autosens) can raise the ta
 
 If the target is modified due to sensitivity detection, it will be displayed with a green background on your home screen.
 
-![Cíl upraven Autosens](../images/Home2020_DynamicTargetAdjustment.png)
+![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
 
 This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
 
