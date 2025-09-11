@@ -59,12 +59,11 @@ OpenAPS SMB的设置如下所述。
 
 该值以单位/小时（U/h）为单位。 建议将其设置为合理的值。 设置此参数的一个好建议是：
 
-    max-basal = 最高基础率 x 4
-    
+**MAX-BASAL = HIGHEST BASAL RATE x 4**
 
-例如，如果你的配置文件中的最高基础率是0.5 U/h，你可以将其乘以4得到2 U/h的值。
+For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 
-**AAPS**根据[首选项 > 治疗安全 > 患者类型](#preferences-patient-type)将此值限制为“硬限制”。 硬限制如下：
+**AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
 
 - 儿童：2
 - 青少年：5
@@ -78,18 +77,18 @@ OpenAPS SMB的设置如下所述。
 
 ### OpenAPS不能超过的最大总IOB
 
-这个值决定了在闭环模式下运行时，**AAPS**将保持在其之下的最大**IOB**（包括基础胰岛素和餐时胰岛素IOB）的量。 它也被称为**最大IOB**。
+This value determines the maximum **Insulin on Board** (basal and bolus IOB) that **AAPS** will remain under while running in closed loop mode. It is also known as **maxIOB**.
 
-如果当前的IOB（例如，餐后给予餐时胰岛素后的IOB）超过了设定的值，那么闭环系统将停止给予胰岛素，直到IOB的值降低到设定的阈值以下。
+If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
 
-设置这个参数的一个良好开端是：
+A good start for setting this parameter is:
 
-    maxIOB = 平均餐时大剂量 + 日最大基础率*3
+    maxIOB = average mealbolus + 3x max daily basal
     
 
-在调整您的**最大IOB**时，请保持小心和耐心。 它对于每个人来说都是不同的，并且还可能取决于平均每日总剂量（TDD）。
+Be careful and patient when adjusting your **max-IOB**. It is different for everyone and can also depend on the average total daily dose (TDD).
 
-**AAPS**根据[首选项 > 治疗安全 > 患者类型](#preferences-patient-type)将此值限制为“硬限制”。 硬限制如下：
+**AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
 
 - 儿童：3
 - 青少年：7
@@ -99,150 +98,150 @@ OpenAPS SMB的设置如下所述。
 
 *See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
-注意：在使用**SMB**时，**max-IOB**的计算方式与AMA不同。 在**AMA**中，maxIOB是基础**IOB**的安全参数，而在SMB模式下，它还包括大剂量IOB。
+Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
 
-另请参见[OpenAPS的SMB文档](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb)。
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### 启用动态敏感度调整
 
-此为[DynamicISF](../DailyLifeWithAaps/DynamicISF.md)功能。 启用后将激活新配置选项， 具体参数说明请查阅[DynamicISF](#dyn-isf-preferences)功能专页。
+This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
 
 #### 高临时目标提高敏感性
 
-如果您启用了此选项，那么在设置临时目标高于100 mg/dl（或5.6 mmol/l）时，胰岛素敏感性将会增加。 这意味着，ISF将会上升，而IC和基础率将会减少。 这将有效地使**AAPS**在您设置高临时目标时变得不那么激进。
+If you have this option enabled, the insulin sensitivity will be increased while having a temporary target above 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease. This will effectively make **AAPS** less aggressive when you set a high temp target.
 
 #### 低临时目标降低敏感性
 
-如果您启用了此选项，那么在设置临时目标低于100 mg/dl（或5.6 mmol/l）时，胰岛素敏感性将会降低。 这意味着，ISF将会下降，而IC和基础率将会增加。 这将有效地使**AAPS**在您设置低临时目标时变得更加积极。
+If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise. This will effectively make **AAPS** more aggressive when you set a low temp target.
 
 ### 启用Autosens功能
 
-This is the [Autosens](#Open-APS-features-autosens) feature. 启用DynamicISF时无法同时启用，因二者为修改同一参数（胰岛素敏感系数）的不同算法。
+This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
-Autosens观察血糖偏差（正/负/中性）。 它将尝试根据这些偏差来确定你对胰岛素的敏感或抵抗程度，并根据这些偏差调整基础率和ISF。
+Autosens looks at blood glucose deviations (positive/negative/neutral). It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 
-启用后将激活新配置选项，
+When enabled, new settings become available.
 
 ### 敏感时提高目标
 
-如果启用了此选项，当检测到敏感性（低于100%）时，灵敏度检测（autosens）可以提高目标。 在这种情况下，你的目标将根据检测到的敏感性的百分比提高。
+If this option is enabled, the sensitivity detection (autosens) can raise the target when sensitivity is detected (below 100%). In this case your target will be raised by the percentage of the detected sensitivity.
 
-如果由于灵敏度检测而修改了目标，它将在你的主屏幕上以绿色背景显示。
+If the target is modified due to sensitivity detection, it will be displayed with a green background on your home screen.
 
-![由Autosens修改的目标](../images/Home2020_DynamicTargetAdjustment.png)
+![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
 
-该设置需满足以下条件​：当"启用动态敏感度调整"或"启用Autosens功能"其中一项处于激活状态时可见。
+This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
 
 ### 抗药时降低目标
 
-如果启用了此选项，当检测到抗药性（高于100%）时，灵敏度检测（autosens）可以降低目标。 在这种情况下，你的目标将根据检测到的抗药性的百分比降低。
+If this option is enabled, the sensitivity detection (autosens) can lower the target when resistance is detected (above 100%). In this case your target will be lowered by the percentage of the detected resistance.
 
-该设置需满足以下条件​：当"启用动态敏感度调整"或"启用Autosens功能"其中一项处于激活状态时可见。
+This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
 
 ### 启用超微大剂量（SMB）
 
-启用此功能以使用SMB功能。 如果禁用此功能，将不会给予任何**SMB**。
+Enable this to use SMB functionality. If disabled, no **SMBs** will be given.
 
-启用后将激活新配置选项，
+When enabled, new settings become available.
 
 (Open-APS-features-enable-smb-with-high-temp-targets)=
 
 #### 启用具有高临时目标的 SMB
 
-如果启用了此设置，即使用户选择了高**临时目标**（定义为高于100mg/dL或5.6mmol/l，无论**配置文件**目标如何），也会给予**SMB**。 此选项旨在通过禁用设置来禁用SMB。 例如，如果禁用了此选项，则通过将**临时目标**设置为高于100mg/dL或5.6mmol/l可以禁用**SMB**。 无论其他什么条件试图启用SMB，此选项都将禁用**SMB**。
+If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l, regardless of **Profile** target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
 
-如果启用了此设置，则仅当也启用了**启用带有临时目标的SMB**时，SMB才会在高临时目标下启用。
+If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled.
 
 (Open-APS-features-enable-smb-always)=
 
 #### 始终启用 SMB
 
-如果启用了此设置，那么SMB将始终启用（与COB、临时目标或餐时胰岛素无关）。 如果启用了此设置，那么下面其他的启用设置将无效。 然而，如果禁用了**启用高临时目标的SMB**，并且设置了一个高临时目标，那么SMB将被禁用。
+If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
 
-本设置仅在**AAPS**检测到使用[可靠血糖数据源](#GettingStarted-TrustedBGSource)（需具备高级数据滤波功能）时激活。 FreeStyle Libre 1因传感器故障时可能无限循环旧血糖数据，不被视为可靠数据源。
+This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
 
-噪声数据可能导致**AAPS**误判血糖急剧上升，进而触发不必要的超微大剂量（SMB）。 关于数据噪声与平滑处理的详细机制，参见[这里](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
+Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 #### 启用带活性碳水化合物(COB)的SMB
 
-如果启用了此设置，当COB大于0时，SMB将被启用。
+If this setting is enabled, SMB is enabled when the COB is greater than 0.
 
-当"启用SMB始终模式"处于开启状态时，该设置将隐藏。
+This setting is not visible if "Enable SMB always" is switched on.
 
 #### 启用带有临时目标的SMB
 
-如果启用了此设置，那么当设置了任何临时目标（如即将进食、活动、低血糖、自定义）时，SMB将被启用。 如果启用了此设置但禁用了**启用具有高临时目标的SMB**，则在设置低临时目标（低于100mg/dL或5.6mmol/l）时SMB将启用，但在设置高临时目标时将禁用。
+If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100mg/dL or 5.6mmol/l) but disabled when a high temp target is set.
 
-当"启用SMB始终模式"处于开启状态时，该设置将隐藏。
+This setting is not visible if "Enable SMB always" is switched on.
 
 #### 在输入碳水化合物后启用SMB
 
-如果启用了此设置，则在宣布碳水化合物后的6小时内，SMB将启用，即使COB已达到0。
+If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0.
 
-出于安全考虑，本设置仅在**AAPS**检测到使用可靠血糖数据源时激活。 当"启用SMB始终模式"处于开启状态时，此设置将隐藏不可见。
+For safety reasons, this setting is only available if **AAPS** detects that you are using a reliable BG source. It is not visible if "Enable SMB always" is switched on.
 
-本设置仅在**AAPS**检测到使用[可靠血糖数据源](#GettingStarted-TrustedBGSource)时激活（需具备高级数据滤波功能）。 FreeStyle Libre 1因传感器故障时可能无限循环旧血糖数据，不被视为可靠数据源。
+This setting is only available if **AAPS** detects that you are using a [reliable BG source,](#GettingStarted-TrustedBGSource) with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
 
-噪声数据可能导致**AAPS**误判血糖急剧上升，进而触发不必要的超微大剂量（SMB）。 关于数据噪声与平滑处理的详细机制，参见[这里](../CompatibleCgms/SmoothingBloodGlucoseData.md)  
-。 当"启用SMB始终模式"处于开启状态时，该设置将隐藏。
+Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
+This setting is not visible if "Enable SMB always" is switched on.
 
 #### 以分钟为单位设置SMB的频率是多少
 
-此功能限制了SMB的频率。 这个值决定了SMB之间的最小时间间隔。 请注意，每当收到血糖值时（通常为每5分钟一次），闭环系统就会运行一次。 减去2分钟，以便为闭环系统完成操作提供额外时间。 例如，如果您希望每次闭环运行时都发送SMB，请将此设置为3分钟。
+This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
 
-默认值：3分钟。
+Default value: 3 min.
 
 (Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
 
 #### 限制SMB可调整的最大基础率分钟数
 
-这是一个重要的安全设置。 此值决定了在给定时间内，当被COB覆盖时，基于基础胰岛素的量，可以给予多少SMB。
+This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
-将此值设置得更大可以使SMB更加激进。 您应该从默认值30分钟开始。 在积累了一些经验后，以15分钟为增量增加该值，并观察多餐后的效果。
+Making this value larger allows the SMB to be more aggressive. You should start with the default value of 30 minutes. After some experience, increase the value in 15 minutes increments and observe the effects over multiple meals.
 
-建议不要将此值设置为高于90分钟，因为这可能导致算法无法在基础胰岛素为0U/h（'零临时'）的情况下适应血糖下降。 您还应该设置警报，尤其是在您仍在测试新设置时，这将能在低血糖发生前很久就提醒您。
+It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to accommodate a decreasing BG with 0 U/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which will warn you well before a hypo.
 
-默认值：30分钟。
+Default value: 30 min.
 
 #### 监测到UAM(未通知膳食) 后启用SMB替代基础率的最大分钟数
 
-本设置用于在UAM期间且无剩余碳水化合物时，调节超微大剂量（SMB）的作用强度。
+This setting allows to adjust the strength of SMB during UAM, when there are no more carbs.
 
-默认值​：与<1>限制SMB可调整的最大基础率分钟数</1>参数值相同。
+Default value : the same as **Max minutes of basal to limit SMB to**.
 
-仅当“启用SMB”与“启用UAM”功能均处于开启状态时，本设置可见。
+This setting is only visible if "Enable SMB" and "Enable UAM " are switched on.
 
 ### 启用 UAM
 
-启用此选项后，SMB算法可以识别未提前通知的进餐。 如果您忘记告诉**AAPS**您的碳水化合物摄入量，或者错误地估计了碳水化合物摄入量，导致输入的碳水化合物量不准确，或者如果一顿含有大量脂肪和蛋白质的餐食持续时间比预期更长，那么此功能将非常有用。 在没有任何碳水化合物输入的情况下，UAM可以识别由碳水化合物、肾上腺素等引起的血糖快速升高，并尝试通过SMBs进行调整。 这同样适用于相反的情况：如果血糖快速下降，它可以更早地停止SMBs。
+With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
 
-**因此，在使用SMB时应当始终激活UAM。**
+**Therefore, UAM should always be activated when using SMB.**
 
 (key-aaps-features-minimal-carbs-required-for-suggestion)=
 
 ### 建议所需的最小碳水化合物量
 
-这是显示碳水化合物建议警报所需的最小碳水化合物克数。 当检测到需要额外摄入碳水化合物时，会建议您进食。 在这种情况下，您将收到一个通知，该通知可以被设置为5、15或30分钟后再次提醒。
+Minimum grams of carbs to display a carbs suggestion alert. Eating of additional carbs will be suggested when the reference design detects that it requires carbs. In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
 
 如果需要，可以将碳水通知推送到Nightscout，在这种情况下，将显示并广播公告。
 
-无论如何，所需的碳水化合物量都将在您主屏幕的COB部分中显示。
+In any case, the required carbs will be displayed in the COB section on your home screen.
 
-![主屏上显示的所需碳水](../images/Pref2020_CarbsRequired.png)
+![Display carbs required on home screen](../images/Pref2020_CarbsRequired.png)
 
 ### 高级设置
 
-您可以在此处阅读更多内容：[OpenAPS文档](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html)。
+You can read more here : [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**始终使用短期平均变化量而非简单数据**：如果您启用此功能，**AAPS**将使用过去15分钟内的短期平均血糖变化量/血糖值，这通常是最后三个值的平均值。 这有助于**AAPS**在处理如xDrip+和Libre等可能产生噪声的数据源时更加稳定。
+**Always use short average delta instead of simple data** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to be steadier with noisy data sources like xDrip+ and Libre.
 
-**每日最大安全乘数**：这是一个重要的安全限制。 默认设置（通常不需要调整）是3。 此设置意味着**AAPS**将被严格禁止设定超过用户胰岛素泵或配置文件中设定的最高每小时基础率3倍的临时基础率。 例如：如果您的最高基础率是1.0 U/h，且每日最大安全乘数是3，那么**AAPS**可以设置的最高临时基础率就是3.0 U/h（= 3 x 1.0 U/h）。
+**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump and/or profile. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
 
-默认值：3（除非您确实需要并且知道自己在做什么，否则不应更改）
+Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
 
-**当前基础率安全乘数**：这是另一个重要的安全限制。 默认设置（同样通常不需要调整）是4。 此设置意味着**AAPS**将被绝对禁止设定超过用户胰岛素泵或配置文件中设定的当前每小时基础率4倍的临时基础率。
+**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump and/or profile.
 
-默认值：4（除非您确实需要并且知道自己在做什么，否则不应更改）
+Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
 
 * * *
 
@@ -250,17 +249,17 @@ Autosens观察血糖偏差（正/负/中性）。 它将尝试根据这些偏差
 
 ## 高级进餐助手（AMA）
 
-AMA，即“advanced meal assist”的缩写，是OpenAPS从2017年（oref0）开始的一项功能。 OpenAPS高级进餐助手（AMA）允许系统在你可靠地输入碳水化合物后更快地增加高临时基础率。
+AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
 
-你可以在[OpenAPS文档](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama)中找到更多信息。
+You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### 临时基础率可以设置的最大U/hr（OpenAPS 最大基础率）
 
-这项安全设置有助于防止**AAPS**给出危险的高基础率，并将临时基础率限制在每小时x单位。 建议将其设置为合理的值。 一个好的建议是将您配置中的最高基础率乘以4，并且至少乘以3。 例如，如果您配置中的最高基础率是1.0 U/h，您可以将其乘以4得到4 U/h，并将4设置为您的安全参数。
+This safety setting helps **AAPS** from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. 建议将其设置为合理的值。 A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
 
-您不能随意选择任何值：出于安全考虑，存在一个“硬限制”，它取决于患者的年龄。 在AMA模式中，maxIOB的“硬限制”低于SMB。 对于儿童，这个值是最低的，而对于胰岛素抵抗的成年人，这个值则是最大的。
+You cannot choose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
 
-**AAPS**中通过代码限死的参数包括：
+The hardcoded parameters in **AAPS** are:
 
 - 儿童：2
 - 青少年：5
@@ -272,9 +271,9 @@ AMA，即“advanced meal assist”的缩写，是OpenAPS从2017年（oref0）�
 
 ### OpenAPS可以提供的最大基础IOB [U]（OpenAPS“max-iob”）
 
-这个参数限制了AAPS仍能正常工作的最大活性胰岛素量（IOB）。 如果IOB超过这个值，AAPS将停止给予额外的基础胰岛素，直到基础IOB降到限制值以下。
+This parameter limits the maximum of basal IOB where **AAPS** still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-默认值设置为2，但您应该缓慢增加这个参数，以观察它对您的影响以及哪个值最适合您。 这个值对每个人来说都是不同的，并且还取决于平均每日总剂量（TDD）。 出于安全考虑，存在一个限制，这个限制取决于患者的年龄。 在AMA模式中，maxIOB的“硬限制”低于SMB。
+The default value is 2, but you should rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 - 儿童：3
 - 青少年：5
@@ -286,30 +285,30 @@ AMA，即“advanced meal assist”的缩写，是OpenAPS从2017年（oref0）�
 
 ### 启用AMA Autosens
 
-在这里，你可以选择是否要使用[灵敏度检测](../DailyLifeWithAaps/SensitivityDetectionAndCob.md)autosens。
+Here, you can choose, if you want to use the [sensitivity detection](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) autosens or not.
 
 ### Autosens也调整临时目标
 
-如果启用了此选项，autosens也可以调整目标（除了基础和ISF之外）。 这可以使**AAPS**工作得更“激进”或更不那么“激进”。 这样可能更快地达到实际目标。
+If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets **AAPS** work more 'aggressive' or not. The actual target might be reached faster with this.
 
 ### 高级设置
 
 - 通常你不需要更改此对话框中的设置！
 - 如果你无论如何都要更改它们，请确保阅读[OpenAPS文档](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#)中的详细信息，并了解你在做什么。
 
-**始终使用短期平均变化量而非简单数据**：如果您启用此功能，**AAPS**将使用过去15分钟内的短期平均血糖变化量/血糖值，这通常是最后三个值的平均值。 这有助于**AAPS**在处理xDrip+和Libre等嘈杂数据源时更稳定。
+**Always use short average delta instead of simple data** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to work more steady with noisy data sources like xDrip+ and Libre.
 
-**每日最大安全乘数**：这是一个重要的安全限制。 默认设置（通常不需要调整）是3。 此设置意味着**AAPS**将被严格禁止设定超过用户胰岛素泵设定的最高每小时基础率3倍的临时基础率。 例如：如果您的最高基础率是1.0 U/h，且每日最大安全乘数是3，那么**AAPS**可以设置的最高临时基础率就是3.0 U/h（= 3 x 1.0 U/h）。
+**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
 
-默认值：3（除非您确实需要并且知道自己在做什么，否则不应更改）
+Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
 
-**当前基础率安全乘数**：这是另一个重要的安全限制。 默认设置（同样通常不需要调整）是4。 此设置意味着**AAPS**将被绝对禁止设定超过用户胰岛素泵中设定的当前每小时基础率4倍的临时基础率。
+**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
 
-默认值：4（除非您确实需要并且知道自己在做什么，否则不应更改）
+Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
 
-​​**推注延迟间隔系数（Bolus snooze dia divisor）**​​ "bolus snooze"（推注延迟）功能将在餐后大剂量执行后激活。 **AAPS**在餐后的一段时间内，即“DIA（作用时间）”除以“bolus snooze”参数所得的时间段内，不会设置较低的临时基础率。 默认值为2。 这意味着，如果DIA为5小时，那么“bolus snooze”的持续时间将是5小时除以2，即2.5小时。
+**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. **AAPS** doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
-默认值：2
+Default value: 2
 
 * * *
 
