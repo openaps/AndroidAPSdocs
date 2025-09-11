@@ -59,8 +59,7 @@ The settings for OpenAPS SMB are described below.
 
 The value is measured in units per hour (U/h). מומלץ להגדיר ערך סביר. A good recommendation for setting this parameter is:
 
-    max-basal = highest basal rate x 4
-    
+**MAX-BASAL = HIGHEST BASAL RATE x 4**
 
 For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 
@@ -80,14 +79,14 @@ For example, if the highest basal rate in your profile was 0.5 U/h you could mul
 
 This value determines the maximum **Insulin on Board** (basal and bolus IOB) that **AAPS** will remain under while running in closed loop mode. It is also known as **maxIOB**.
 
-אם ה-IOB הנוכחי (למשל לאחר בולוס ארוחה) הוא מעל הערך maxIOB המוגדר, הלופ יפסיק את מתן האינסולין עד שהאינסולין הפעיל יירד אל מתחת לערך ה-IOB המקסימלי.
+If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
 
 A good start for setting this parameter is:
 
-    אינסולין פעיל מרבי = בולוס ארוחה ממוצע + מינון בזאלי מקסימלי 3X
+    maxIOB = average mealbolus + 3x max daily basal
     
 
-Be careful and patient when adjusting your **max-IOB**. ה-Max-IOB שונה עבור כל אחד ותלוי גם במינון היומי הממוצע (TDD).
+Be careful and patient when adjusting your **max-IOB**. It is different for everyone and can also depend on the average total daily dose (TDD).
 
 **AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
 
@@ -101,7 +100,7 @@ Be careful and patient when adjusting your **max-IOB**. ה-Max-IOB שונה עב
 
 Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
 
-ראו גם [תיעוד OpenAPS בנושא SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
+See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
 ### Enable dynamic sensitivity
 
@@ -109,11 +108,11 @@ This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabl
 
 #### ערך מטרה זמני גבוה מעלה את הרגישות
 
-אם אפשרות זו מופעלת, הרגישות לאינסולין תוגבר כל עוד יש ערך מטרה זמני מעל 100 mg/dl. המשמעות היא שהרגישות-ISF תעלה בעוד שיחס הפחמימות-IC והמינון הבזאלי ירדו. This will effectively make **AAPS** less aggressive when you set a high temp target.
+If you have this option enabled, the insulin sensitivity will be increased while having a temporary target above 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease. This will effectively make **AAPS** less aggressive when you set a high temp target.
 
 #### ערך מטרה זמני נמוך מוריד את הרגישות
 
-אם אפשרות זו מופעלת, הרגישות לאינסולין תפחת כשערך מטרה זמני מעל 100 mg/dl. המשמעות היא שהרגישות-ISF תפחת בעוד שיחס הפחמימות-IC והמינון הבזאלי יעלו. This will effectively make **AAPS** more aggressive when you set a low temp target.
+If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise. This will effectively make **AAPS** more aggressive when you set a low temp target.
 
 ### Enable Autosens feature
 
@@ -141,7 +140,7 @@ This setting is available when one of "Enable dynamic sensitivity" or "Enable Au
 
 ### אפשר SMB
 
-אפשרו הגדרה זו כדי להשמש ב-SMB. If disabled, no **SMBs** will be given.
+Enable this to use SMB functionality. If disabled, no **SMBs** will be given.
 
 When enabled, new settings become available.
 
@@ -149,7 +148,7 @@ When enabled, new settings become available.
 
 #### הפעלת SMB עם ערכי מטרה גבוהים
 
-If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l, regardless of **Profile** target). אפשרות זו נועדה להשבתת SMB כאשר היא מושבתת. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
+If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l, regardless of **Profile** target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
 
 If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled.
 
@@ -157,7 +156,7 @@ If this setting is enabled, **SMB** will only be enabled with a high temp target
 
 #### הפעלת SMB תמיד
 
-If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). בהפעלת הגדרה זו, שאר הגדרות ההפעלה שלהלן לא ישפיעו. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
+If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
 
 This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
 
