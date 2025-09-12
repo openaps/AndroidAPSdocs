@@ -61,9 +61,9 @@ OpenAPS SMB 的設定如下。
 
 **MAX-BASAL = HIGHEST BASAL RATE x 4**
 
-For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
+例如，如果你的設定檔最高基礎率為0.5 U/h，你可以將他乘以4得到2 U/h的值。
 
-**AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
+**AAPS** 會依照 [偏好設定 > 治療安全 > 患者類型](#preferences-patient-type) 的「規定上限」。 規定上限如下：
 
 - 兒童：2
 - 青少年：5
@@ -71,24 +71,24 @@ For example, if the highest basal rate in your profile was 0.5 U/h you could mul
 - 胰島素抗性成人：12
 - 孕婦：25
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*請參閱 [規定上限總覽](#Open-APS-features-overview-of-hard-coded-limits)。*
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
 ### 最大總 IOB 的 OpenAPS 不能超過
 
-This value determines the maximum **Insulin on Board** (basal and bolus IOB) that **AAPS** will remain under while running in closed loop mode. It is also known as **maxIOB**.
+此值決定了在閉環模式運行時 **AAPS** 所維持的最大 **在體胰島素**（基礎和注射 IOB）。 這也被稱為 **最大 IOB**。
 
-If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
+如果目前的 IOB（例如餐後注射）超過了設定值，循環將暫停胰島素注射，直到 IOB 降至設定的限制值以下。
 
-A good start for setting this parameter is:
+設置此參數的一個好做法是：
 
-    maxIOB = average mealbolus + 3x max daily basal
+    最大 IOB = 平均餐食注射量 + 每日最大基礎率的 3 倍
     
 
-Be careful and patient when adjusting your **max-IOB**. It is different for everyone and can also depend on the average total daily dose (TDD).
+在調整你的 **最大 IOB** 時要小心並保持耐心。 每個人的情況都不同，這也可能取決於每日總劑量 (TDD) 的平均值。
 
-**AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
+**AAPS** 會依照 [偏好設定 > 治療安全 > 患者類型](#preferences-patient-type) 的「規定上限」。 規定上限如下：
 
 - 兒童：3
 - 青少年：7
@@ -96,23 +96,23 @@ Be careful and patient when adjusting your **max-IOB**. It is different for ever
 - 胰島素抗性成人：25
 - 孕婦：40
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*請參閱 [規定上限總覽](#Open-APS-features-overview-of-hard-coded-limits)。*
 
-Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
+注意：在使用 **SMB** 時，**最大 IOB** 的計算方式與 AMA 不同。 在 **AMA** 中，最大 IOB 是基礎 **IOB** 的安全參數，而在 SMB 模式中，還包括注射 IOB。
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
+另見 [OpenAPS 的 SMB 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb)。
 
 ### 啟用動態靈敏度
 
-This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
+這是[動態 ISF](../DailyLifeWithAaps/DynamicISF.md) 功能。 當啟用時，將提供新的設定。 設定說明請參見[動態 ISF](#dyn-isf-preferences)頁面。
 
 #### 高臨時目標提升敏感度
 
-If you have this option enabled, the insulin sensitivity will be increased while having a temporary target above 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease. This will effectively make **AAPS** less aggressive when you set a high temp target.
+如果啟用了此選項，當臨時目標高於 100 mg/dl 或 5.6 mmol/l 時，胰島素敏感度將會增加。 這代表，胰島素敏感因子（ISF）會上升，而胰島素碳水化合物比（IC）和基礎率會下降。 這將使得 **AAPS** 在你設置高臨時目標時變得不那麼積極。
 
 #### 低臨時目標降低敏感度
 
-If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise. This will effectively make **AAPS** more aggressive when you set a low temp target.
+如果啟用了此選項，當臨時目標低於 100 mg/dl 或 5.6 mmol/l 時，胰島素敏感度將會下降。 這意味著，胰島素敏感因子（ISF）會下降，而胰島素碳水化合物比（IC）和基礎率會上升。 This will effectively make **AAPS** more aggressive when you set a low temp target.
 
 ### 啟用自動敏感度調整功能
 
@@ -120,7 +120,7 @@ This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicI
 
 Autosens looks at blood glucose deviations (positive/negative/neutral). It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 
-When enabled, new settings become available.
+當啟用時，將提供新的設定。
 
 ### 敏感度提升目標
 
@@ -142,7 +142,7 @@ This setting is available when one of "Enable dynamic sensitivity" or "Enable Au
 
 Enable this to use SMB functionality. If disabled, no **SMBs** will be given.
 
-When enabled, new settings become available.
+當啟用時，將提供新的設定。
 
 (Open-APS-features-enable-smb-with-high-temp-targets)=
 
@@ -267,7 +267,7 @@ The hardcoded parameters in **AAPS** are:
 - 胰島素抗性成人：12
 - 孕婦：25
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*請參閱 [規定上限總覽](#Open-APS-features-overview-of-hard-coded-limits)。*
 
 ### OpenAPS 可注射的最大基礎 IOB [U]（OpenAPS "最大 IOB"）
 
@@ -281,7 +281,7 @@ The default value is 2, but you should rise this parameter slowly to see how muc
 - 胰島素抗性成人：12
 - 孕婦：25
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*請參閱 [規定上限總覽](#Open-APS-features-overview-of-hard-coded-limits)。*
 
 ### 啟用 AMA Autosens
 

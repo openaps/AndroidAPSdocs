@@ -53,7 +53,7 @@ Wie man eine **prozentuale Profilanpassung** durchführt:
 
 4. Gib die „Zeitverschiebung“ ein.
 
-## Um eine prozentuale Profilanpassung mit dem Profilwechsels zu aktivieren:
+## Profile Percentage
 
 Es ist wichtig, dass Du die grundlegende Funktionsweise der **prozentuale(n) Profilanpassung** verstehst. Durch die prozentuale Erhöhung oder Verringerung innerhalb eines **Profilwechsels** werden alle Parameter die in Deinem **Profil** hinterlegt sind, im gleichen Maße angehoben oder reduziert.
 
