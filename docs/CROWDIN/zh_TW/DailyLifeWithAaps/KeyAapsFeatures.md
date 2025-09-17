@@ -59,7 +59,7 @@ OpenAPS SMB 的設定如下。
 
 該值以每小時單位（U/h）測量。 建議將此設為合理的數值。 設置此參數的良好建議為：
 
-**MAX-BASAL = HIGHEST BASAL RATE x 4**
+**MAX-BASAL = 最高基礎速率 × 4**
 
 例如，如果你的設定檔最高基礎率為0.5 U/h，你可以將他乘以4得到2 U/h的值。
 
@@ -112,23 +112,23 @@ OpenAPS SMB 的設定如下。
 
 #### 低臨時目標降低敏感度
 
-如果啟用了此選項，當臨時目標低於 100 mg/dl 或 5.6 mmol/l 時，胰島素敏感度將會下降。 這意味著，胰島素敏感因子（ISF）會下降，而胰島素碳水化合物比（IC）和基礎率會上升。 This will effectively make **AAPS** more aggressive when you set a low temp target.
+如果啟用了此選項，當臨時目標低於 100 mg/dl 或 5.6 mmol/l 時，胰島素敏感度將會下降。 這意味著，胰島素敏感因子（ISF）會下降，而胰島素碳水化合物比（IC）和基礎率會上升。 這會在你設定較低的臨時目標時，讓 **AAPS** 的反應更積極
 
 ### 啟用自動敏感度調整功能
 
-This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
+這是[自動敏感度調整](#Open-APS-features-autosens)功能。 在使用動態 ISF 時，不能使用自動敏感度調整，因為這是兩種不同的算法，會影響相同的變數（敏感度）。
 
-Autosens looks at blood glucose deviations (positive/negative/neutral). It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
+Autosens 會根據血糖偏差（正/負/中性）進行調整。 他會根據這些偏差計算出你對胰島素的敏感度或抗性，並根據偏差調整基礎速率和胰島素敏感指數（ISF）。
 
 當啟用時，將提供新的設定。
 
 ### 敏感度提升目標
 
-If this option is enabled, the sensitivity detection (autosens) can raise the target when sensitivity is detected (below 100%). In this case your target will be raised by the percentage of the detected sensitivity.
+如果啟用了此選項，敏感度偵測（autosens）可以在偵測到胰島素敏感度增強（低於 100%）時提高目標值。 在這種情況下，目標值將根據偵測到的敏感度百分比提高。
 
-If the target is modified due to sensitivity detection, it will be displayed with a green background on your home screen.
+如果因為敏感度檢測而調整目標值時，會在你的主螢幕上以綠色背景顯示。
 
-![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
+![Autosens 修改目標](../images/Home2020_DynamicTargetAdjustment.png)
 
 This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
 
