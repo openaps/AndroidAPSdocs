@@ -1,7 +1,7 @@
 
 # Release Notes
 
-Gehe durch Schritte der [Update-Anleitung](UpdateToNewVersion). Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
+Gehe durch die Schritte der [Update-Anleitung](UpdateToNewVersion). Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
 
 Sobald ein neues Update zur Verfügung steht, wirst Du darüber informiert. Solltest Du bis zum Fälligkeitsdatum das Update nicht durchgeführt haben, wird **AAPS** in den „Open Loop“ wechseln.
 
