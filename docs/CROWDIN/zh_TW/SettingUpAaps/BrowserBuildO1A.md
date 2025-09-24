@@ -4,6 +4,10 @@
 
 ```{tab-set}
 
+:::{tab-item} Wiki
+:::{include} BrowserBuildO1AS.md
+:::  
+
 :::{tab-item} YouTube
 (aaps-ci-option1-android-video)=
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -16,10 +20,6 @@
     </iframe>
   </div>
 </div>
-:::  
-
-:::{tab-item} Wiki
-:::{include} BrowserBuildO1AS.md
 :::  
 
 ```
