@@ -1,4 +1,4 @@
-# Your AAPS profile
+# Váš AAPS profil
 
 Váš **Profil AAPS** je súbor piatich kľúčových parametrov, ktoré definujú, ako má **AAPS** podávať inzulín v reakcii na hladiny glukózy namerané senzorom. Toto sú hlavné parametre, na ktorých je postavený **AAPS**. Ako budete postupovať cez **Ciele**, odomknú sa vám ďalšie nastaviteľné parametre (napríklad nastavenia SMB), ale výkon týchto funkcií závisí od správneho nastavenia vášho **profilu**. **Profil** zahŕňa:
 * [trvanie účinku inzulínu](#duration-of-insulin-action-dia) (DIA),
@@ -7,11 +7,11 @@ Váš **Profil AAPS** je súbor piatich kľúčových parametrov, ktoré definuj
 * [faktor citlivosti na inzulín](#insulin-sensitivity-factor-isf) (ISF) a
 * [pomery inzulínu a sacharidov](#insulin-to-carb-ratio-icr) (IC alebo ICR).
 
-Pri používaní **AAPS** by ste mali stále sledovať a kontrolovať presnosť nastavení svojho **profilu**. Odporúča sa vykonať nastavenia v poradí, v akom sú uvedené tu. Cieľom je správne nastaviť jeden parameter pred tým než budete ladiť ten ďalší. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [backup your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your Preferences.
+Pri používaní **AAPS** by ste mali stále sledovať a kontrolovať presnosť nastavení svojho **profilu**. Odporúča sa vykonať nastavenia v poradí, v akom sú uvedené tu. Cieľom je správne nastaviť jeden parameter pred tým než budete ladiť ten ďalší. Postupujte pomaly a nerobte súčasne viacero zmien. Po každej zmene si nezabudnite nový profil aktivovať. Pravidelne [zálohujte nastavenia svojho **profilu**](#YourAapsProfile_Profile-backup) exportovaním svojich nastavení.
 
-Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
+Nastavenia vášho **profilu** sa navzájom ovplyvňujú – môžete mať „nesprávne“ nastavenia, ktoré za určitých okolností dobre fungujú, ale za iných nie. Napríklad sa môže stať, že je príliš vysoký bazál a súčasne príliš vysoký **CR**. To znamená, že musíte zvážiť jednotlivé nastavenia a skontrolovať, či spolu dobre spolupracujú za rôznych okolností.
 
-You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances.
+Môžete použiť [Autotune](https://autotuneweb.azurewebsites.net/) aby vás nasmeroval, ale nemali by ste ho slepo nasledovať: nemusí pre vás dobre fungovať, prípadne nie za všetkých okolností.
 
 ```{admonition} Your diabetes may vary
 :class: information
