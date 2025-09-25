@@ -8,11 +8,11 @@
 - Он пытается определить, насколько вы чувствительны/резистентны на основании этих отклонений.
 - Реализация oref в ** OpenAPS ** выполняется на основе комбинации данных за 24 и 8 часов. Он использует тот, который является более чувствительным.
 - In versions prior to **AAPS 2.7**, the user had to choose between 8 or 24 hours manually.
-- From **AAPS 2.7** on Autosens in **AAPS** will switch between a 24 and 8 hours window for calculating sensitivity. It will pick whichever one is more sensitive. 
+- From **AAPS 2.7** on Autosens in **AAPS** will switch between a 24 and 8 hours window for calculating sensitivity. Он выберет более чувствительный вариант. 
 - Если пользователи перешли с oref1, они, вероятно, заметят, что система может быть менее динамичной из-за различий в 24 или 8 часах чувствительности.
 - Замена канюли или изменение профиля сбросит Autosens назад на 100% (переключение профиля по процентам с установкой продолжительности не сбрасывает Autosens).
 - Autosens настраивает базал и ISF ( примерно так же как изменение профиля в процентах).
-- If continuously eating carbs over an extended period, Autosens will be less effective during that period as carbs are excluded from **BG** delta calculations.
+- Если пользователь потребляет углеводы, не внося данные в систему в течение длительного периода, autosens будет менее эффективен в этот период, так как углеводы исключены из расчетов изменяемого диапазона **ГК**.
 
 (Open-APS-features-super-micro-bolus-smb)=
 
