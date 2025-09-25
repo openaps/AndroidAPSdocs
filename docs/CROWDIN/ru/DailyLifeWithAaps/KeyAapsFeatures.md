@@ -26,7 +26,7 @@
 
 SMB отображаются на главном графике синими треугольниками. Нажмите на треугольник, чтобы узнать, сколько инсулина было введено, или перейдите на вкладку [ Терапия ](#aaps-screens-treatments).
 
-**SMB's** features contain some safety mechanisms:
+Алгоритм **SMB** имеет встроенные механизмы безопасности:
 
 1. **Largest single SMB dose**  
     The largest single SMB dose can only be the smallest value of:
