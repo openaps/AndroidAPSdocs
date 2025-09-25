@@ -24,7 +24,7 @@
 
 ![SMBs on main graph](../images/SMBs.png)
 
-SMBs are shown on the main graph with blue triangles. Tap on the triangle to see how much insulin was delivered, or use the [Treatments tab](#aaps-screens-treatments).
+SMB отображаются на главном графике синими треугольниками. Tap on the triangle to see how much insulin was delivered, or use the [Treatments tab](#aaps-screens-treatments).
 
 **SMB's** features contain some safety mechanisms:
 
