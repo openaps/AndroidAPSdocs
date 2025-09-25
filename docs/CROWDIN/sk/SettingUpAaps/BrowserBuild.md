@@ -246,6 +246,10 @@ GitHub will now be able to store the AAPS apk file in your Google Drive, once bu
 
 ```{tab-set}
 
+:::{tab-item} Wiki
+:::{include} BrowserBuildCIS.md
+:::  
+
 :::{tab-item} YouTube
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
@@ -257,10 +261,6 @@ GitHub will now be able to store the AAPS apk file in your Google Drive, once bu
     </iframe>
   </div>
 </div>
-:::  
-
-:::{tab-item} Wiki
-:::{include} BrowserBuildCIS.md
 :::  
 
 ```

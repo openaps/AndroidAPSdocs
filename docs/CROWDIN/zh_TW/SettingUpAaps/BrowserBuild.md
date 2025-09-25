@@ -246,6 +246,10 @@ GitHub 現在將能夠將 AAPS apk 檔案儲存在您的 Google Drive 中，一�
 
 ```{tab-set}
 
+:::{tab-item} Wiki
+:::{include} BrowserBuildCIS.md
+:::  
+
 :::{tab-item} YouTube
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
@@ -257,10 +261,6 @@ GitHub 現在將能夠將 AAPS apk 檔案儲存在您的 Google Drive 中，一�
     </iframe>
   </div>
 </div>
-:::  
-
-:::{tab-item} Wiki
-:::{include} BrowserBuildCIS.md
 :::  
 
 ```
