@@ -250,11 +250,11 @@ GitHub 現在將能夠將 AAPS apk 檔案儲存在您的 Google Drive 中，一�
 :::{include} BrowserBuildCIS.md
 :::  
 
-:::{tab-item} YouTube
+:::{tab-item} Video
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
-      src="https://www.youtube.com/embed/amfEBwpTtQI"
+      src="https://www.dailymotion.com/embed/video/x9rdwms"
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
       frameborder="0"
       allowfullscreen>
