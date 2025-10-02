@@ -72,9 +72,9 @@ It is strongly recommended to follow this process with a **new sensor**. While i
 
   (*Note: you need to be logged in Google to access the link.*)
 
-*[oop2.apk](https://drive.google.com/file/d/1hkbs60Bv2udTlMS81UStCdY4RaHR0V57/view)* - OOP2-7f0e31 (27da3f5) **2025-06-12** (latest version)
+*[oop2.apk](https://drive.google.com/file/d/1106h2s12b3Ev9gKCTU2G75q8h9ChHjcz/view?usp=sharing)* - OOP2_21_09_25 (05d1989) **2025.09.21** (latest version)
 
-- **xDrip+** - latest version can be found at:
+- **xDrip+** - **<u>latest version</u>** (minimum version 2025.09.26) can be found at:
 
 [*xDrip+.apk*](https://github.com/NightscoutFoundation/xDrip/releases)
 
