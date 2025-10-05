@@ -72,9 +72,9 @@
 
   （*注意：您需登入 Google 才能訪問該連結。*）
 
-*[oop2.apk](https://drive.google.com/file/d/1106h2s12b3Ev9gKCTU2G75q8h9ChHjcz/view?usp=sharing)* - OOP2_21_09_25 (05d1989) **2025.09.21** (latest version)
+*[oop2.apk](https://drive.google.com/file/d/1106h2s12b3Ev9gKCTU2G75q8h9ChHjcz/view?usp=sharing)* - OOP2_21_09_25 (05d1989) **2025.09.21** (最新版本)
 
-- **xDrip+** - **<u>latest version</u>** (minimum version 2025.09.26) can be found at:
+- **xDrip+** - **<u>最新版本</u>** (最低版本 2025.09.26) 可於以下位置取得 :
 
 [*xDrip+.apk*](https://github.com/NightscoutFoundation/xDrip/releases)
 
