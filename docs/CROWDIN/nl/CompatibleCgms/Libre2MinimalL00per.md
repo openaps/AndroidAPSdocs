@@ -68,6 +68,8 @@ It is strongly recommended to follow this process with a **new sensor**. While i
 
 ### First download and install the apps below
 
+(Libre2_OOP2)=
+
 - **OOP2** - Versions of the oop2 can be found at:
 
   (*Note: you need to be logged in Google to access the link.*)
