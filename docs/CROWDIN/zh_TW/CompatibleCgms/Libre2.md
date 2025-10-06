@@ -8,7 +8,7 @@
 
 檢查你要使用的橋接器和應用程式是否與你的傳感器及 xDrip+ 相容（舊版 Blucon 及近期的版本不支援，Miaomiao 1 需要韌體 39，Miaomiao 2 則需要韌體 7）。
 
-The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings as with the original reader. AAPS 與 Libre 2 的讀取值會經過 10 至 25 分鐘的平滑處理，以避免某些讀取值的跳動。 請參閱以下內容[讀取值平滑化及原始讀取值](#libre2-value-smoothing-raw-values)。 OOP 每 5 分鐘生成一次讀取值，並取最近 5 分鐘的平均值。 因此，這些血糖讀取值可能不如其他方法平滑，但他們與原始讀取器的讀取值一致，並且更快速地反應“真實”血糖讀取值。 如果你嘗試使用 OOP 進行循環，請在 xDrip+ 中啟用所有平滑設定。
+Libre2 的 OOP（可在[此處](#Libre2_OOP2)找到）產生的血糖讀值與原始接收器所顯示的結果相同。 AAPS 與 Libre 2 的讀取值會經過 10 至 25 分鐘的平滑處理，以避免某些讀取值的跳動。 請參閱以下內容[讀取值平滑化及原始讀取值](#libre2-value-smoothing-raw-values)。 OOP 每 5 分鐘生成一次讀取值，並取最近 5 分鐘的平均值。 因此，這些血糖讀取值可能不如其他方法平滑，但他們與原始讀取器的讀取值一致，並且更快速地反應“真實”血糖讀取值。 如果你嘗試使用 OOP 進行循環，請在 xDrip+ 中啟用所有平滑設定。
 
 有幾個使用藍牙傳輸器的理由：
 
@@ -34,7 +34,7 @@ The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings a
 
 更換傳感器後，xDrip+ 會自動偵測到新傳感器並刪除所有校正資料。 啟動後，你可以檢查你的血糖值並進行新的初始校正。
 
-### Configure AAPS (for looping only)
+### 設定 AAPS（僅用於循環功能）
 
 -   在 AAPS 中，前往 組態建置工具 >血糖來源，並勾選 'xDrip+'。
 
