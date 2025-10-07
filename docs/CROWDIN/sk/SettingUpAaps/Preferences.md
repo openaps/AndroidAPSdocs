@@ -1,4 +1,4 @@
-# Preferences
+# Nastavenia
 
 - **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
