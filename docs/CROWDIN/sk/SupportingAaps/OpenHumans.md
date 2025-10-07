@@ -15,7 +15,7 @@ The following data will be uploaded to your Open Humans account:
 - Total daily doses
 - Temporary basals
 - Temp targets
-- Preferences
+- Nastavenia
 - Application version
 - Device model
 - Screen dimensions
