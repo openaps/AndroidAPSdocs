@@ -1,4 +1,4 @@
-# AAPS screens
+# Obrazovky aplikácie AAPS
 
 ```{contents}
 :backlinks: entry
@@ -7,7 +7,7 @@
 
 (AapsScreens-the-homescreen)=
 
-## The Homescreen
+## Domovská obrazovka
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
