@@ -200,10 +200,10 @@ Carb required notifications can be pushed to Nightscout if wished, in which case
 
 Status lights give a visual warning for
 
-* Cannula age
-* Insulin age (days reservoir is used)
-* Reservoir level (units)
-* Sensor age
+* Vek kanyly
+* Vek inzulínu (dni používania zásobníka)
+* Hladina inzulínu v zásobníku (units)
+* Vek senzora
 * Battery age and level (%)
 
 If threshold warning is exceeded, values will be shown in yellow.
