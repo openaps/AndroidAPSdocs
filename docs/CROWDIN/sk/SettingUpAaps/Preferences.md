@@ -72,196 +72,196 @@ Rozdiel medzi ostatnými vzhľadmi závisí od orientácie displeja telefónu:
 
 - **Veľký displej** má v porovnaní s inými vzhľadmi zväčšenú výšku všetkých grafov
 
-![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
+![Vzhľad závisí od orientácie displeja telefónu](../images/Screenshots_Skins.png)
 
 (Preferences-protection)=
-## Protection
+## Ochrana
 
-![Preferences > General - Protection](../images/Pref2020_General2.png)
+![Nastavenie > Všeobecné – Ochrana](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-### Master password
+### Hlavné heslo
 
-Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
+Povinné pre možnosť [exportovať nastavenia](../Maintenance/ExportImportSettings.md), pretože sú od verzie 2.7 šifrované.
 
-**Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+**Biometrická ochrana nemusí na telefónoch OnePlus fungovať. Toto je známy problém na niektorých telefónoch OnePlus.**
 
-![Set master password](../images/MasterPW.png)
+![Nastavenie hlavného hesla](../images/MasterPW.png)
 
-### Settings protection
+### Ochrana nastavení
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
+- Chráňte svoje nastavenia heslom alebo biometrickým overením telefónu (napr. [ak dieťa používa **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). Ak túto funkciu povolíte, budete vyzvaní na overenie vždy, keď budete chcieť získať prístup k akémukoľvek zobrazeniu súvisiacemu s nastaveniami.
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the preferences.
+- Vlastné heslo by sa malo použiť, ak chcete hlavné heslo používať iba na zabezpečenie [exportovaných nastavení](../Maintenance/ExportImportSettings.md), a iné heslo na úpravu nastavení.
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
+- Ak používate vlastné heslo, kliknite na riadok „Nastavenia hesla“ a nastavte heslo podľa postupu [vyššie](#Preferences-master-password).
 
-![Protection](../images/Pref2020_Protection.png)
+![Ochrana](../images/Pref2020_Protection.png)
 
-### Application protection
+### Ochrana aplikácie
 
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
+Ak je aplikácia chránená, musíte na otvorenie aplikácie **AAPS** zadať heslo alebo použiť biometrické overenie telefónu.
 
-**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
+**AAPS** sa okamžite vypne, ak zadáte nesprávne heslo, ale bude stále bežať na pozadí, ak bol predtým úspešne spustený.
 
-### Bolus protection
+### Ochrana bolusu
 
-- Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
+- Ochrana bolusu môže byť užitočná, ak **AAPS** používa malé dieťa a vy [podávate bolus cez SMS](../RemoteFeatures/SMSCommands.md).
 
-- In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter thr master password.
+- V nasledujúcom príklade vidíte výzvu na biometrickú ochranu. Ak biometrické overenie nefunguje, kliknite do priestoru nad bielym oknom a zadajte hlavné heslo.
 
-![Prompt biometric protection](../images/Pref2020_PW.png)
+![Rýchla biometrická ochrana](../images/Pref2020_PW.png)
 
-### Password and PIN retention
+### Uchovanie hesla a PIN
 
-Define how long (in seconds), the preferences or bolus functionalities remain unlocked after you successfully enter the password.
+Definujte, ako dlho (v sekundách) zostanú nastavenia alebo funkcie bolusu odomknuté po úspešnom zadaní hesla.
 
 ## Prehľad
 
-In the **Overview** section, you can define the preferences for the home screen.
+V sekcii **Prehľad** môžete definovať nastavenia pre domovskú obrazovku.
 
-![Preferences > Overview](../images/Pref2020_OverviewII.png)
+![Nastavenia > Prehľad](../images/Pref2020_OverviewII.png)
 
-### Keep screen on
+### Nechať obrazovku zapnutú
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+Možnosť „Ponechať obrazovku zapnutú“ prinúti Android, aby obrazovka zostala zapnutá stále. Toto je užitočné pri prezentáciách atď. Ale spotrebuje veľa energie batérie. Preto sa odporúča pripojiť smartfón k nabíjačke.
 
 (Preferences-buttons)=
 ### Buttons
 
-- Define which buttons are visible on the bottom of your home screen.
+- Definujte, ktoré tlačidlá sú viditeľné v dolnej časti domovskej obrazovky.
 - Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
-![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
+![Nastavenia > Tlačidlá](../images/Pref2020_OV_Buttons.png)
 
-- The **Increment** options allow you to define the amount for the three buttons in the carb and insulin dialogues, for easy entry.
+- Možnosti **Prídavok** vám umožňujú definovať množstvo inzulínu pre tri tlačidlá v oknách sacharidy a inzulín.
 
-![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
+![Nastavenia > Tlačidlá > Inzulín](../images/Pref2020_OV_Buttons2.png)
 
-![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
+![Nastavenia > Tlačidlá > sacharidy](../images/Pref2020_OV_Buttons3.png)
 
 (Preferences-quick-wizard)=
-### Quick Wizard
+### Sprievodca rýchlym bolusom
 
-Create customized buttons for certain standard meals or snacks which will be displayed on the home screen. Useful for standard meals frequently eaten.
+Vytvorte si prispôsobené tlačidlá pre určité jedlá alebo občerstvenie, ktoré sa budú zobrazovať na domovskej obrazovke. Užitočné pre jedlá, ktoré často konzumujete.
 
-For each button, you define the carbs and calculation method for the bolus. Then, you define during which time period the button will be visible on your home screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Pre každé tlačidlo definujete sacharidy a spôsob výpočtu bolusu. Potom si nastavíte v ktorom časovom úseku sa má tlačidlo zobrazovať na hlavnej obrazovke - v danom čase sa môže zobraziť len jedno. Tlačidlo nebude viditeľné, ak je časový rozsah mimo zadaného rozsahu alebo ak máte dostatok IOB na pokrytie sacharidov definovaných v tlačidle rýhleho bolusu. Ak sú pre rôzne jedlá zadané rôzne časy, na domovskej obrazovke sa vždy zobrazí príslušné tlačidlo jedla v závislosti od dennej doby.
 
-![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
+![Nastavenia > Nastavenie tlačidla rýchleho bolusu](../images/Pref2020_OV_QuickWizard.png)
 
-If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
+Ak kliknete na tlačidlo rýchleho bolusu, systém **AAPS** vypočíta a navrhne bolus pre tieto sacharidy na základe vašich aktuálnych pomerov (s prihliadnutím na hodnotu glukózy v krvi alebo IOB, ak je nastavený).
 
-The proposal has to be confirmed before insulin is delivered.
+Návrh musí byť potvrdený pred podaním inzulínu.
 
-![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
+![Nastavenia > Tlačidlo Rýchleho bolusu](../images/Pref2020_OV_QuickWizard2.png)
 
-Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
+Súčasne sa môže zobraziť iba jedno tlačidlo rýchleho bolusu. Ak chcete spustiť iný: dlho podržte zobrazené tlačidlo rýchleho bolusu. Presmeruje vás na zoznam všetkých uložených možností rýchleho bolusu. Ak chcete jeden použiť, dlho ho podržte. Pred použitím ho budete musieť potvrdiť.
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### Predvolené dočasné ciele
 
-Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
-[Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
+[Dočasné ciele (TT)](../DailyLifeWithAaps/TempTargets.md) vám umožňujú zmeniť cieľovú hodnotu glukózy v krvi na určité časové obdobie. Pri nastavovaní predvoleného TT môžete jednoducho zmeniť cieľ aktivity, pred jedlom atď.
 
-Here you can change the target and the duration for each predefined TT. Preset values are:
+Tu môžete zmeniť cieľ a trvanie pre každý preddefinovaný TT. Prednastavené hodnoty sú:
 
-* Eating soon: target 72 mg/dL / 4.0 mmol/l, duration 45 min
-* Activity: target 140 mg/dL / 7.8 mmol/l, duration 90 min
-* Hypo: target 125 mg/dL / 6.9 mmol/l, duration 45 min
+* Pred jedlom: cieľová hodnota 72 mg/dl / 4,0 mmol/l, trvanie 45 min
+* Aktivita: cieľová hodnota 140 mg/dl / 7,8 mmol/l, trvanie 90 min
+* Hypoglykémia: cieľová hodnota 125 mg/dl / 6,9 mmol/l, trvanie 45 min
 
-![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
+![Nastavenia > Predvolené dočasné ciele](../images/Pref2020_OV_DefaultTT.png)
 
-Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
+[Tu](#TempTargets-where-can-i-select-a-temp-target) si môžte pozrieť ako aktivovať dočasné ciele.
 
-### Fill/Prime standard insulin amounts
+### Štandardné množstvo inzulínu pre Plnenie/Doplňovanie
 
-Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
-If you want to fill the tube or prime cannula through **AAPS** you can do this through the [**Actions** tab](#screens-action-tab).
+Ak chcete naplniť hadičku alebo kanylu cez **AAPS**, môžete to urobiť na karte [**Akcie**](#screens-action-tab).
 
-Pre-set values can be defined in this dialogue. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+V tomto okne je možné definovať prednastavené hodnoty. V okne plnenia/dopĺňanie vyberte predvolené hodnoty troch tlačidiel v závislosti od dĺžky vašej kanyly.
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### Rozsah pre zobrazenie
 
-Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Vyberte si najvyššie a najnižšie hodnoty pre graf glykémie v prehľade **AAPS** a na inteligentných hodinkách. Je to len vizualizácia, nie cieľový rozsah vašej glykémie. Príklad: 70 – 180 mg/dl alebo 3,9 – 10 mmol/l
 
-![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
+![Nastavenia > Rozsah pre vizualizáciu](../images/Pref2020_OV_Range2.png)
 
-### Shorten tab titles
+### Krátke názvy modulov
 
-Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
-Useful to see more tab titles on screen.
+Užitočné na zobrazenie viacerých názvov kariet na obrazovke.
 
-For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+Napríklad karta „OpenAPS AMA“ sa zmení na „OAPS“, „CIELE“ na „OBJ“ ​​atď.
 
-![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
+![Nastavenia > Karty](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes field in treatments dialogs
+### Zobrazenie pola na poznámky v oknách ošetrenia
 
-Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
-Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+Ponúka možnosť pridať k ošetreniam krátke textové poznámky (kalkulačka, sacharidy, inzulín...)
 
-![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
+![Nastavenia > Poznámky v oknách ošetrenia](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
 ### Indikátory stavu
 
-Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
-Status lights give a visual warning for:
+Indikátory stavu zobrazujú vizuálne varovanie pre tieto možnosti:
 
-- Sensor age
-- Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
-- Insulin age (days reservoir is used)
-- Reservoir level (units)
-- Cannula age
-- Pump battery age
-- Pump battery level (%)
+- Vek senzora
+- Úroveň nabitia batérie senzora pre niektoré inteligentné čítačky (podrobnosti nájdete na [stránke snímky obrazovky](#screens-sensor-level-battery)).
+- Vek inzulínu (dni používania zásobníka)
+- Hladina inzulínu v zásobníku (units)
+- Vek kanyly
+- Vek batérie v pumpe
+- Úroveň nabitia batérie pumpy (%)
 
-If the warning threshold is exceeded, values will be shown in yellow. If the critical threshold is exceeded, values will be shown in red.
+Ak je prekročená prahová hodnota varovania, hodnoty sa zobrazia žltou farbou. Ak je prekročená kritická hodnota, hodnoty sa zobrazia červenou farbou.
 
-The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
+Posledná možnosť vám umožňuje importovať tieto nastavenia z Nightscoutu, ak sú tam definované. Viac informácií nájdete v [dokumentácii k Nightscoutu](https://nightscout.github.io/nightscout/setup_variables/#age-pills).
 
-![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
+![Nastavnia > Indikátory stavu](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Deliver this part of bolus wizard result
+### Podaj túto časť z výsledku kalkulácie
 
-Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
+Nastavte [predvolené percento](#AapsScreens-section-j) bolusu vypočítaného pri použití bolusovej kalkulačky.
 
-Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard. If this setting is 75 % and you had to bolus 10U, the bolus wizard will propose a meal bolus of only 7.5 units.
+Predvolená hodnota je 100 %: žiadna korekcia. Aj keď tu nastavujete inú hodnotu, stále ju môžete zmeniť pri každom použití bolusovej kalkulačky. Ak je toto nastavenie 75 % a museli ste podať bolus 10 jednotiek, kalkulačka navrhne bolus k jedlu iba 7,5 jednotiek.
 
-When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (Unattended Meal Detection) do the rest. Using a value lower than 100% here can be useful:
-* for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
-* to leave more room to **AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate for the missing part of the bolus with SMBs, if/when deemed adequate.
+Pri používaní systému [SMB](#objectives-objective9) si veľa ľudí nepodáva 100 % potrebného inzulínu v podobe bolusu k jedlu, ale iba jeho časť (napr. 75 %) a zvyšok nechávajú na systém SMB s funkciou UAM (Unattended Meal Detection). Použitie hodnoty nižšej ako 100 % tu môže byť dosť nápomocné:
+* Pre ľudí s pomalým trávením: odoslanie celého bolusu naraz môže spôsobiť hypoglykémiu, pretože účinok inzulínu je rýchlejší ako trávenie.
+* aby sa **AAPS** mohol sám vysporiadať so **zvýšenou hladinou glukózy v krvi**. V oboch prípadoch systém **AAPS** kompenzuje chýbajúcu časť bolusu pomocou SMB, ak/keď sa to bude považovať za dostatočné.
 
-### Enabled bolus advisor
+### Povolenie bolusového poradcu
 
-Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
-![Bolus Advisor](../images/BolusAdvisor.png)
+![Bolusový poradca](../images/BolusAdvisor.png)
 
-When enabled, when you use the bolus wizard as you are in hyperglycemia, you will get a warning, prompting you if you wish to pe-bolus and eat later, when your **BG** gets back in range.
+Keď je táto funkcia povolená a používate bolusového sprievodcu počas hyperglykémie, zobrazí sa vám upozornenie s výzvou, či chcete podať bolus a najesť sa neskôr, keď sa vaša **glykémia** vráti do rozsahu.
 
-### Enabled bolus reminder
+### Povolenie pripomenutia bolusu
 
-Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 % todo
 
 (Preferences-advanced-settings-overview)=
-### Advanced Settings (Overview)
+### Rozšírené nastavenia (prehľad)
 
-![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
+![Nastavenia > Rozšírené nastavenia](../images/Pref2021_OV_Adv.png)
 
 #### Superbolus
 
-Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 Option to enable superbolus in bolus wizard.
 
