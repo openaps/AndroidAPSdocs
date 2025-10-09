@@ -20,7 +20,7 @@ Ignore it: More details, Install anyway.
 ![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
 
 ### Settings
-* Profile
+* Profil
 
   ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
 
@@ -115,7 +115,7 @@ Here are examples how to find them on specific android phones.
 
 ## CGM
 
-* [General](#general-cgm-troubleshooting)
+* [Všeobecne](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
 * [Libre 2](#Libre2-experiences-and-troubleshooting)
