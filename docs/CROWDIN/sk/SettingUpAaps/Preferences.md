@@ -1,6 +1,6 @@
 # Nastavenia
 
-- **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+- **Otvorte nastavenia** kliknutím na trojbodkové menu v pravom hornom rohu domovskej obrazovky.
 
 ![Open preferences](../images/Pref2020_Open2.png)
 
@@ -22,7 +22,7 @@
 ```
 
 (Preferences-general)=
-## General
+## Všeobecne
 
 ![Preferences > General](../images/Pref2020_General.png)
 
@@ -116,7 +116,7 @@ If the app is protected, you must enter the password or use the phone's biometri
 
 Define how long (in seconds), the preferences or bolus functionalities remain unlocked after you successfully enter the password.
 
-## Overview
+## Prehľad
 
 In the **Overview** section, you can define the preferences for the home screen.
 
@@ -209,7 +209,7 @@ Gives you the option to add short text notes to your treatments (bolus wizard, c
 ![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
-### Status lights
+### Indikátory stavu
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -267,7 +267,7 @@ Option to enable superbolus in bolus wizard.
 
 [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. It is different from *super micro bolus*!
 
-Use with caution and do not enable it until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Use with caution and do not enable it until you learn what it really does. V podstate sa k bolusu pridá bazálna dávka na ďalšie dve hodiny a na ďalšie dve hodiny sa vypne bazál. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ## Treatment safety
 
@@ -292,7 +292,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 - This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
-## Loop
+## Uzavretý okruh
 
 (Preferences-aps-mode)=
 ### APS mode
@@ -346,7 +346,7 @@ All the settings for OpenAPS AMA are described in the dedicated section in [Key 
 
 All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-## Absorption settings
+## Nastavenie vstrebávania sacharidov
 
 (Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
@@ -355,7 +355,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
 
-At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. Basically, it is a failsafe. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
+At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. V podstate je to niečo ako poistka. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
 
 To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc.
 
@@ -373,12 +373,12 @@ If you often eat high fat or protein meals you will need to increase your meal a
 
 ### Advanced settings - autosens ratio
 
-![Absorption settings](../images/Pref2020_Absorption.png)
+![Nastavenie vstrebávania sacharidov](../images/Pref2020_Absorption.png)
 
 - Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
 - Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
-## Pump
+## Pumpa
 
 ### BT Watchdog
 
@@ -424,7 +424,7 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 - Double check for typos here if you are stuck in Objective 1.
 - Leave Connect to websockets enabled (recommended).
 
-### Synchronization
+### Synchronizácia
 
 Synchronization choices will depend on the way you will want to use **AAPS**.
 
@@ -458,11 +458,11 @@ You can select which data you want to [upload and download to or from Nightscout
 
 Options in advanced settings are self-explanatory.
 
-## SMS Communicator
+## SMS komunikátor
 
 More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
 
-## Automation
+## Automatizácia
 
 Select which location service shall be used:
 
