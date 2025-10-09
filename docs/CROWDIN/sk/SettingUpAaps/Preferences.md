@@ -4,15 +4,15 @@
 
 ![Open preferences](../images/Pref2020_Open2.png)
 
-- You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
+- Na nastavenia pre konkrétnu kartu (napr. kartu pumpy) môžete prejsť priamo otvorením tejto karty a kliknutím na položku Nastavenia doplnkov.
 
 ![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
 
-- **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+- **Podponuky** je možné otvoriť kliknutím na trojuholník pod názvom podponuky.
 
 ![Open submenu](../images/Pref2020_Submenu2.png)
 
-- With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+- Pomocou **filtra** v hornej časti obrazovky s nastaveniami môžete rýchlo získať prístup k určitým nastaveniam. Stačí začať písať časť textu, ktorý hľadáte.
 
 ![Preferences filter](../images/Pref2021_Filter.png)
 
@@ -26,51 +26,51 @@
 
 ![Preferences > General](../images/Pref2020_General.png)
 
-**Units**
+**Jednotky**
 
-- Set units to mmol/l or mg/dl depending on your preferences.
+- Nastavte jednotky na mmol/l alebo mg/dl podľa vašej potreby.
 
-**Language**
+**Jazyk**
 
-- New option to use phone's default language (recommended).
+- Máte aj možnosť použiť predvolený jazyk telefónu (odporúčané).
 
-- In case you want **AAPS** in a different language than your standard phone language, you can choose from a broad variety.
+- Ak chcete **AAPS** v inom jazyku, ako je váš štandardný jazyk telefónu, môžete si vybrať zo širokej ponuky.
 
-- If you use different languages, you might sometimes see a language mix. This is due to an android issue where overriding the default android language sometimes doesn't work.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Ak používate rôzne jazyky, niekedy sa môže stať, že sa používajú rôzne kombinácie týchto jazykov. Je to spôsobené problémom s Androidom, kde prepísanie predvoleného jazyka systému Android niekedy nefunguje.
+- Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 (preferences-simple-mode)= **Simple mode**
 
-The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
+**Jednoduchý režim**je predvolene aktivovaný pri prvej inštalácii **AAPS**. V **jednoduchom režime** je značné množstvo nastavení skryté a nastavenia sú nahradené preddefinovanými hodnotami. [Ďalšie grafy](#AapsScreens-section-g-additional-graphs) na domovskej stránke sú tiež preddefinované. Jednoduchý režim by ste mali vypnúť hneď, ako sa oboznámite s používateľským rozhraním a nastaveniami **AAPS**.
 
-**Patient name**
+**Meno pacienta**
 
-- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
-- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
+- Môžete použiť, ak musíte rozlišovať medzi viacerými nastaveniami (napr. dve deti s diabetom 1. typu vo vašej rodine).
+- Zobrazuje sa v [dvojitom ciferníku](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-### Skin
+### Vzhľad
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
-You can choose from four types of skins:
+Môžete si vybrať zo štyroch typov vzhľadov:
 
 ![Select skin](../images/Pref2021_SkinWExample.png)
 
-'Low resolution skin' comes with shorter labels and age/level removed to have more available space on a very low resolution screen.
+„Vzhľad s nízkym rozlíšením“ má kratšie označenia a odstránený vek/úroveň, aby sa na obrazovke s veľmi nízkym rozlíšením vytvorilo viac miesta.
 
-Difference between the other skins depends on the phone's display orientation:
+Rozdiel medzi ostatnými vzhľadmi závisí od orientácie displeja telefónu:
 
-#### Portrait orientation
+#### Orientácia na výšku
 
-- **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-- **Large Display** has an increased height for all graphs compared to other skins
+- **Pôvodný vzhľad** a **Tlačidlá zobrazené v dolnej časti obrazovky** sú identické
+- **Veľký displej** má v porovnaní s inými vzhľadmi zväčšenú výšku všetkých grafov
 
-#### Landscape orientation
+#### Orientácia na šírku
 
-- Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
+- Pri použití **Originálneho vzhľadu** a **Veľkého displeja** musíte posunúť nadol, aby ste videli tlačidlá v dolnej časti obrazovky
 
-- **Large Display** has an increased height for all graphs compared to other skins
+- **Veľký displej** má v porovnaní s inými vzhľadmi zväčšenú výšku všetkých grafov
 
 ![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
@@ -130,7 +130,7 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 ### Buttons
 
 - Define which buttons are visible on the bottom of your home screen.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 ![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
 
@@ -160,7 +160,7 @@ Only one QuickWizard button can show up at the same time. If you want to execute
 (Preferences-default-temp-targets)=
 ### Default temp targets
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 [Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
 
@@ -176,7 +176,7 @@ Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp
 
 ### Fill/Prime standard insulin amounts
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 If you want to fill the tube or prime cannula through **AAPS** you can do this through the [**Actions** tab](#screens-action-tab).
 
@@ -191,7 +191,7 @@ Choose the high and low marks for the BG-graph on **AAPS** overview and smartwat
 
 ### Shorten tab titles
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 Useful to see more tab titles on screen.
 
@@ -202,7 +202,7 @@ For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc
 (Preferences-show-notes-field-in-treatments-dialogs)=
 ### Show notes field in treatments dialogs
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
 
@@ -211,7 +211,7 @@ Gives you the option to add short text notes to your treatments (bolus wizard, c
 (Preferences-status-lights)=
 ### Indikátory stavu
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 Status lights give a visual warning for:
 
@@ -242,7 +242,7 @@ When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of 
 
 ### Enabled bolus advisor
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 ![Bolus Advisor](../images/BolusAdvisor.png)
 
@@ -250,7 +250,7 @@ When enabled, when you use the bolus wizard as you are in hyperglycemia, you wil
 
 ### Enabled bolus reminder
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 % todo
 
@@ -261,7 +261,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 #### Superbolus
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 Option to enable superbolus in bolus wizard.
 
@@ -351,7 +351,7 @@ All the settings for OpenAPS SMB are described in the dedicated section in [Key 
 (Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
 
