@@ -195,7 +195,7 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 | BG         | No   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                             |
 | CAL 5.6/90 | Yes  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent* |
 
-### Pump
+### Pumpa
 
 | Command              | Auth | Function & *Response*                                                                                 |
 | -------------------- | ---- | ----------------------------------------------------------------------------------------------------- |
@@ -214,7 +214,7 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 | BASAL STOP/CANCEL | Yes  | To stop temp basal               |
 
 
-### Loop
+### Uzavretý okruh
 
 | Command           | Auth | Function & *Response*                                                                                                                                                                                                                     |
 | ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -239,7 +239,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#screens-action-tab).                          |
 | EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                       |
 
-### Profile
+### Profil
 
 | Command        | Auth | Function & *Response*                                                                                                                                        |
 | -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |

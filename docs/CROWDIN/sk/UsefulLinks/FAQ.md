@@ -2,7 +2,7 @@
 
 How to add questions to the FAQ: Follow the these [instructions](../SupportingAaps/HowToEditTheDocs.md)
 
-## General
+## Všeobecne
 
 ### Can I just download the AAPS installation file?
 
@@ -95,7 +95,7 @@ In AAPSClient check 'Connection settings'. Maybe you actually are not in an allo
 
 If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AAPS OpenAPS-tab. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
 
-### Pump
+### Pumpa
 
 #### Where to place the pump?
 

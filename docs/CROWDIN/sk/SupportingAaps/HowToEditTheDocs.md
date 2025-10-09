@@ -4,7 +4,7 @@
 
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
 
-## General
+## Všeobecne
 
 For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
 

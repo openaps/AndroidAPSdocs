@@ -200,10 +200,10 @@ Carb required notifications can be pushed to Nightscout if wished, in which case
 
 Status lights give a visual warning for
 
-* Cannula age
-* Insulin age (days reservoir is used)
-* Reservoir level (units)
-* Sensor age
+* Vek kanyly
+* Vek inzulínu (dni používania zásobníka)
+* Hladina inzulínu v zásobníku (units)
+* Vek senzora
 * Battery age and level (%)
 
 If threshold warning is exceeded, values will be shown in yellow.
@@ -237,7 +237,7 @@ Blue triangles show [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled
 On the main graph, you can switch on these optional information:
 
 * Predictions
-* Treatments
+* Ošetrenia
 * Basals
 * Activity - insulin activity curve
 
@@ -336,7 +336,7 @@ Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
 
 Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+Upozorňujeme, že musíte plniť [Cieľ 8](#objectives-objective8), aby detekcia citlivosti/[Autosens](#Open-APS-features-autosens) automaticky upravila množstvo podaného inzulínu. Before reaching that objective, the line in your graph is displayed for information only.
 
 ### Variable sensitivity
 
@@ -376,7 +376,7 @@ About using the Insulin, Carbs and Calculator buttons : If enabled in the [Prefe
 
 (aaps-screens-buttons-insulin)=
 
-#### Insulin
+#### Inzulín
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
@@ -593,13 +593,13 @@ For more details see [APS section on config builder page](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
-## Profile
+## Profil
 
-![Profile](../images/Screenshots_Profile.png)
+![Profil](../images/Screenshots_Profile.png)
 
 Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
 
-## Automation
+## Automatizácia
 
 See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
 
@@ -623,7 +623,7 @@ Shows history of CGM readings and offers option to remove reading in case of fai
 
 (aaps-screens-treatments)=
 
-## Treatments
+## Ošetrenia
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder. In this view, you can view and alter the history of the following treatments:
 
