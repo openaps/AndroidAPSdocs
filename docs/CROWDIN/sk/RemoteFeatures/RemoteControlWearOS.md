@@ -22,14 +22,14 @@ Enable the Wear module in the [Config Builder > Synchronization](../SettingUpAap
 
 Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+Ak chcete podať bolus atď. z hodiniek, potom v časti „Nastavenia Wear“ musíte povoliť „Ovládanie z hodiniek“.
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Nastavenie hodiniek](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Prostredníctvom karty wear alebo hamburgerovej ponuky (vľavo hore na obrazovke, ak karta nie je zobrazená) môžete
 
-* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* Znovu odoslať všetky údaje. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* Otvorte nastavenia na hodinkách priamo z telefónu.
 
 Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
 
