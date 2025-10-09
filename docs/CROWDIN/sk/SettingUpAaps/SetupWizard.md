@@ -282,7 +282,7 @@ Go back twice, to the list of plugins and select "NEXT" to go to the next screen
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
-## Patient name
+## Meno pacienta
 
 Here you can setup your name in **AAPS**.
 
