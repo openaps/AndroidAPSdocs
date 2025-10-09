@@ -61,7 +61,7 @@ On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ *
 
 Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
 
-![Config Builder](../images/medtrum/ConfigBuilder.png)
+![Konfigurácia](../images/medtrum/ConfigBuilder.png)
 
 ### Step 2: Change Medtrum settings
 
@@ -272,7 +272,7 @@ The driver will try to determine the current status of the patch activation. If 
 
 (nano-overview)=
 
-## Overview
+## Prehľad
 
 The overview contains the current status of the Medtrum patch. It also contains buttons to change the patch, reset alarms and refresh the status.
 
