@@ -134,7 +134,7 @@ Click the "NEXT" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-## Master password
+## Hlavné heslo
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
