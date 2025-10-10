@@ -328,147 +328,189 @@ To znamená, že ak hladina glukózy v krvi klesá, **AAPS** vám môže zníži
 
 Pri používaní **Otvorenej slučky** budete dostávať upozornenia vždy, keď systém **AAPS** odporučí úpravu bazálnej dávky. Ak chcete znížiť počet upozornení, môžete použiť buď [širší cieľový rozsah bg](#profile-glucose-targets), alebo zvýšiť percento minimálnej miery požiadaviek. Tým nastavíte aká veľká zmena je potrebná aby sa zobrazilo upozornenie.
 
-## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+## Rozšírený asistent jedla (AMA) alebo super mikro bolus (SMB)
 
-Depending on your settings in [Config builder > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+V závislosti od nastavení v [Konfigurátor > APS](#Open-APS-features-advanced-meal-assist-ama) si môžete vybrať medzi dvoma algoritmami:
 
-- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – stav algoritmu v roku 2017
+- [Super micro bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – najnovší algoritmus odporúčaný pre začiatočníkov
 
-As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
+Od
+**AAPS** verzie 3.3 bola funkcia [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) presunutá ako súčasť OpenAPS SMB.</p> 
+
+
 
 ### OpenAPS AMA
 
-All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
+Všetky nastavenia pre OpenAPS AMA sú popísané v časti [Kľúčové funkcie AAPS – Pokročilý asistent pri jedle (AMA)](#Open-APS-features-advanced-meal-assist-ama).
 
 (Preferences-openaps-smb-settings)=
+
+
 ### OpenAPS SMB
 
-All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+Všetky nastavenia pre OpenAPS SMB sú popísané v časti [Kľúčové funkcie AAPS – Super mikrobolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+
+
 
 ## Nastavenie vstrebávania sacharidov
 
 (Preferences-min_5m_carbimpact)=
+
+
 ### min_5m_carbimpact
 
-Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
-The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
+Algoritmus používa BGI (vplyv glukózy v krvi) na určenie, kedy sa [sacharidy vstrebávajú](../DailyLifeWithAaps/CobCalculation.md).
 
-At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. V podstate je to niečo ako poistka. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
+V prípadoch, keď absorpciu sacharidov nie je možné dynamicky vypočítať na základe reakcií vašej glykémie, **AAPS** vloží do vašich sacharidov predvolený rozklad. V podstate je to niečo ako poistka. Táto hodnota sa používa iba počas chýbajúcich údajov **CGM** alebo keď fyzická aktivita „spotrebuje“ všetok nárast hladiny glukózy v krvi, ktorý by inak spôsobil rozklad COB pomocou **AAPS**.
 
-To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc.
+Jednoducho povedané: Algoritmus „*vie*“, ako by sa vaše glykémie mali správať, keď sú ovplyvnené aktuálnou dávkou inzulínu atď. Vždy, keď dôjde k pozitívnej odchýlke od očakávaného správania, niektoré sacharidy sa vstrebajú/rozložia. Veľká zmena = veľa sacharidov atď.
 
-The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+Parameter min_5m_carbimpact definuje predvolený vplyv absorpcie sacharidov za 5 minút. Viac informácií nájdete v [dokumentácii OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-Standard value for AMA is 5, for SMB it's 8.
+Štandardná hodnota pre AMA je 5, pre SMB je to 8.
 
-The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+Graf COB na hlavnej obrazovke zobrazuje oranžovú bodku v hornej časti grafu, kedy sa používa min_5m_impact.
 
-![COB graph](../images/Pref2020_min_5m_carbimpact.png)
+![Graf COB](../images/Pref2020_min_5m_carbimpact.png)
 
-### Meal max absorption time
 
-If you often eat high fat or protein meals you will need to increase your meal absorption time.
 
-### Advanced settings - autosens ratio
+### Maximálna doba vstrebávania jedla
+
+Ak často jedávate jedlá s vysokým obsahom tuku alebo bielkovín, budete musieť nastaviť dlhší čas vstrebávania jedla.
+
+
+
+### Rozšírené nastavenia – pomer autosens
 
 ![Nastavenie vstrebávania sacharidov](../images/Pref2020_Absorption.png)
 
-- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
-- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+- Definujte min. a max. pomer [automatickej citlivosti](#Open-APS-features-autosens).
+- Štandardné hodnoty (max. 1,2 a min. 0,7) by sa normálne nemali meniť.
+
+
 
 ## Pumpa
 
-### BT Watchdog
 
-Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
 
-## Pump settings
+### Strážny pes BT
 
-The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump).  Pair and set your pump up according to the [pump related instructions](../Getting-Started/CompatiblePumps.md).
+V prípade potreby aktivujte BT watchdog (napr. pre pumpy Dana). Ak nie je možné pripojenie k pumpe, na jednu sekundu sa vypne Bluetooth. To vám môže pomôcť na niektorých telefónoch, kde sa bluetooth zasekáva.
+
+
+
+## Nastavenia pumpy
+
+Možnosti sa budú líšiť v závislosti od pumpy, ktorú ste vybrali v nástroji [Konfigurátor > Pumpa](#Config-Builder-pump).  Spárujte a nastavte pumpu podľa [pokynov k pumpe](../Getting-Started/CompatiblePumps.md).
+
+
 
 ## Tidepool
 
-More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
+Viac informácií nájdete na stránke [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
-## NSClient
 
-![NSClient](../images/Pref2020_NSClient.png)
 
-Original communication protocol, can be used with older Nightscout versions.
+## Interný NSClient
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
+![Interný NSClient](../images/Pref2020_NSClient.png)
+
+Pôvodný komunikačný protokol, možno ho použiť so staršími verziami Nightscoutu.
+
+- Nastavte si *URL adresu Nightscout* (napr. <https://yoursitename.yourplaform.dom>).
+- **Uistite sa, že adresa URL je BEZ /api/v1/ na konci.**
+- *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (12-znakové heslo uložené vo vašom Nightscoute).
+- To vám umožní čítanie a zápis údajov medzi webovou stránkou Nightscout a **AAPS**.
+- Ak ste sa zasekli pri Cieli 1, prekontrolujte si zadané údaje.
+
+
 
 ## NSClientV3
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
+[Nový protokol zavedený s AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Bezpečnejší a efektívnejší.
+
+
 
 ```{admonition} V3 data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+Pri používaní NSClientV3 musia všetky zdroje ktoré uploadujú dáta používať API V3. Keďže väčšina z nich ešte nie je kompatibilná, znamená to, že **musíte povoliť **AAPS** nahrávať všetky údaje** (glukózu, ošetrenia atď.) do Nightscout a zakázať všetky ostatné nahrávacie programy, ak nie sú kompatibilné s V3.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **NS access token** (not your API Secret!).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
-- Leave Connect to websockets enabled (recommended).
+
+- Nastavte si *URL adresu Nightscout* (napr. <https://yoursitename.yourplaform.dom>).
+- **Uistite sa, že adresa URL je BEZ /api/v1/ na konci.**
+- V Nightscoute vytvorte *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (na používanie V3 API je potrebný [Nightscout 15](https://nightscout.github.io/update/update/)) a zadajte ho do **NS prístupového tokenu** (nie váš API secret!).
+- To vám umožní čítanie a zápis údajov medzi webovou stránkou Nightscout a **AAPS**.
+- Ak ste sa zasekli pri Cieli 1, prekontrolujte si zadané údaje.
+- Možnosť Pripojenie k webovým socketom nechajte povolenú (odporúčané).
+
+
 
 ### Synchronizácia
 
-Synchronization choices will depend on the way you will want to use **AAPS**.
+Možnosti synchronizácie budú závisieť od spôsobu, akým chcete používať **AAPS**.
 
-You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
+Môžete si vybrať, ktoré údaje chcete [nahrať a stiahnuť do alebo z Nightscoutu](#Nightscout-aaps-settings). 
 
-### Alarm options
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
-- Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
-- If you have the **CGM** source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
-- Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
-- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
+### Nastavenie alarmov
 
-### Connection settings
+![Nastavenie alarmov](../images/Pref2024_NSClient_Alarms.png)
 
-![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
+- Možnosti alarmov vám umožňujú vybrať si, ktoré alarmy Nightscout chcete používať prostredníctvom aplikácie. **AAPS** potom spustí alarm, keď sa spustí alarm Nightscout.
+- Aby sa spustili alarmy, musíte nastaviť hodnoty alarmov Urgent High (Veľmi vysoká), High (Vysoká), Low (Nízka) a Urgent Low (Veľmi nízka) v [nastaveniach Nightscoutu](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+- Budú fungovať iba vtedy, keď máte pripojenie k Nightscoutu a sú určené pre rodičov/opatrovateľov.
+- Ak máte v telefóne zdroj **CGM** (napr. xDrip+ alebo BYODA) môžete použiť tieto alarmy namiesto alarmov z Nightscoutu.
+- Ak zapnete túto možnosť **AAPS** vám zobrazí [upozornenia](https://nightscout.github.io/nightscout/discover/#announcement) z Nightscoutu aj priamo v aplikácii AAPS.
+- Môžete zmeniť prah alarmov zastaraných údajov a urgentných zastaraných údajov, keď sa z Nightscoutu po určitom čase neprijmú žiadne údaje.
 
-- Connection settings define when Nightscout connection will be enabled.
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific Wi-Fi network you can enter its Wi-Fi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+
+
+### Nastavenie pripojenia
+
+![Nastavenie pripojenia NSClient](../images/ConfBuild_ConnectionSettings.png)
+
+- Nastavenia pripojenia definujú, kedy sa AAPS bude pripájať k Nightscoutu.
+- Môžete nastaviť aby AAPS posielal dáta do Nightscoutu len vtedy keď ste pripojený na Wi-Fi alebo len na konkrétnu Wi-Fi sieť, ktorú si zvolíte.
+- Ak chcete používať iba konkrétnu sieť Wi-Fi, môžete zadať jej SSID.
+- Viaceré SSID je možné oddeliť bodkočiarkou.
+- Ak chcete odstrániť všetky SSID, zadajte do poľa prázdne miesto(medzeru).
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
 
-![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
-Options in advanced settings are self-explanatory.
+### Rozšírené nastavenia (NSClient)
+
+![Rozšírené nastavenia klienta NS](../images/Pref2024_NSClientAdv.png)
+
+Možnosti v rozšírených nastaveniach sú samovysvetľujúce.
+
+
 
 ## SMS komunikátor
 
-More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Viac informácií nájdete na stránke [SMS príkazy](../RemoteFeatures/SMSCommands.md).
+
+
 
 ## Automatizácia
 
-Select which location service shall be used:
+Vyberte, ktorá lokalizačná služba sa má použiť:
 
-- Use passive location: **AAPS** only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! May cause excessive battery drain!)
+- Použiť pasívnu polohu: **AAPS** zaznamenáva polohu iba v prípade, že o ňu požadujú iné aplikácie
+- Použiť sieťovú polohu: Poloha vašej siete Wi-Fi
+- Použiť GPS polohu (Pozor! Môže spôsobiť nadmerné vybitie batérie!)
+
+
 
 ## Local alerts
 
@@ -477,6 +519,8 @@ Select which location service shall be used:
 Settings should be self-explanatory.
 
 (preferences-maintenance-settings)=
+
+
 ## Maintenance settings
 
 ![Maintenance settings](../images/Pref2020_Maintenance.png)
@@ -499,10 +543,13 @@ After enabling this option, make sure to perform a manual settings export, where
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
+
+
 ## Open Humans
 
 You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
 
 In Preferences, you can define when data shall be uploaded
+
 - only if connected to Wi-Fi
 - only if charging
