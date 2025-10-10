@@ -142,13 +142,13 @@ Go to preferences
 
 #### Pump:
 
-##### BT Watchdog
+##### Strážny pes BT
 
 Go to preferences and select **Pump**:
 
-![BT Watchdog](../images/medtrum/BTWatchdogSetting.png)
+![Strážny pes BT](../images/medtrum/BTWatchdogSetting.png)
 
-##### BT Watchdog
+##### Strážny pes BT
 
 This setting will try to work around any BLE issues. It will try to reconnect to the pump when the connection is lost. It will also try to reconnect to the pump when the pump is unreachable for a certain amount of time.
 

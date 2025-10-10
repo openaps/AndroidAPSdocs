@@ -265,244 +265,291 @@ Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 Option to enable superbolus in bolus wizard.
 
-[Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. It is different from *super micro bolus*!
+[Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. Je to niečo iné ako *super mikro bolus*!
 
-Use with caution and do not enable it until you learn what it really does. V podstate sa k bolusu pridá bazálna dávka na ďalšie dve hodiny a na ďalšie dve hodiny sa vypne bazál. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Používajte ho opatrne a nepovoľujte ho, kým nezistíte ako funguje. V podstate sa k bolusu pridá bazálna dávka na ďalšie dve hodiny a na ďalšie dve hodiny sa vypne bazál. **Funkcie slučky AAPS budú vypnuté – preto ich používajte opatrne! Ak používate SMB, AAPS** vypne slučku podľa vašich nastavení v časti [„Maximálny počet minút bazálnej dávky na obmedzenie SMB na“](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to). Ak nepoužívate SMB slučka sa automaticky pozastaví na dve hodiny. Podrobnosti o super boluse nájdete [tu](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
-## Treatment safety
+## Bezpečnosť ošetrení
 
 (preferences-patient-type)=
-### Patient type
+### Typ pacienta
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
+- Bezpečnostné limity sú nastavené na základe veku, ktorý vyberiete v tomto nastavení.
+- Ak začnete narážať na tieto pevné limity (ako napríklad maximálny bolus), je čas posunúť sa o krok vyššie.
+- Neodporúčame zadať vyšší vek ako je skutočný pretože to môže viesť k predávkovaniu inzulínom (napríklad vynechaním desatinnej bodky).
+- Ak vás zaujímajú aké presné hodnoty majú tieto bezpečnostné limity, prejdite na [stránku](../DailyLifeWithAaps/KeyAapsFeatures.md) k funkcii algoritmu, ktorý používate.
 
-### Max allowed bolus
+### Maximálny povolený bolus
 
-- Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
+- Definuje maximálne množstvo bolusového inzulínu v inzulínových jednotkách, ktoré môže systém **AAPS** podať naraz.
+- Je to bezpečnostné nastavenie aby sa predišlo podaniu príliš velkého bolusu v prípade, že omylom zadáte chybné množstvo sacharidov a pod.
+- Odporúča sa ho nastaviť na takú hodnotu, ktorá zhruba zodpovedá maximálnemu bolusu, ktorý budete potrebovať pri jedle alebo korekcii.
+- Toto obmedzenie sa vzťahuje aj na výsledky bolusovej kalkulačky.
 
-### Max allowed carbs
+### Maximálne povolené množstvo sacharidov
 
-- Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- Definuje maximálne množstvo sacharidov v gramoch, ktoré môže bolusová kalkulačka **AAPS** použiť pre výpočet.
+- Je to bezpečnostné nastavenie aby sa predišlo podaniu príliš velkého bolusu v prípade, že omylom zadáte chybné množstvo sacharidov a pod.
+- Odporúča sa ho nastaviť na takú hodnotu, ktorá zhruba zodpovedá maximálnemu množstvu sacharidov, ktoré prijmete v jednom jedle.
 
 ## Uzavretý okruh
 
 (Preferences-aps-mode)=
-### APS mode
-Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
+### Režim APS
+Prepínanie medzi otvorenou slučkou, uzavretou slučkou a pozastavením pri nízkej hladine glukózy (LGS).
 
-![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
+![Konfigurátor – režim slučky](../images/ConfigBuilder_LoopLGS.png)
 
 (Preferences-pen-loop)=
-#### Open Loop
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
+#### Otvorený okruh
+**AAPS** priebežne vyhodnocuje všetky dostupné údaje (IOB, COB, BG...) a v prípade potreby podáva návrhy ošetrení (dočasné bazálne dávky), ako upraviť vašu liečbu.
 
-The suggestions will not be executed automatically (as in closed loop). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
+Návrhy sa nebudú vykonávať automaticky (ako v uzavretej slučke). Návrhy musí používateľ zadať manuálne do pumpy (ak sa používa virtuálna pumpa) alebo pomocou tlačidla, ak je **AAPS** pripojený k reálnej pumpe.
 
-This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
+Táto možnosť slúži na oboznámenie sa s fungovaním systému **AAPS** alebo v prípade, že používate nepodporovanú pumpu. Bez ohľadu na to, aké rozhodnutie tu urobíte, budete v otvorenej slučke až do konca **[Cieľa 5](#objectives-objective5)**.
 
 (preferences-closed-loop)=
-#### Closed Loop
+#### Uzavretý okruh
 
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (_i.e._ without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
+Systém **AAPS** priebežne vyhodnocuje všetky dostupné údaje (IOB, COB, BG...) a v prípade potreby automaticky upravuje dávkovanie (_t. j._ bez ďalšieho zásahu z vašej strany), aby sa dosiahol nastavený [cieľový rozsah alebo hodnota](#profile-glucose-targets) (podávanie bolusu, dočasná bazálna dávka, vypnutie inzulínu, aby sa predišlo hypoglykémii atď.).
 
-The Closed Loop works within numerous safety limits, which can be set individually.
+Uzavretá slučka má viacero bezpečnostných obmedzení, ktoré si môžete prispôsobiť podľa seba.
 
-Closed Loop is only possible if you are in **[Objective 6](#objectives-objective6)** or higher and use a supported pump.
+Uzavretú slučku je možné používať iba v prípade, že plníte **[Cieľ 6](#objectives-objective6)** alebo vyšší a používate podporovanú pumpu.
 
-#### Low Glucose Suspend (LGS)
+#### Zastavovanie pri nízkej glykémii (LGS)
 
-In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
+V tomto režime je [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) nastavený na nulu.
 
-This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+To znamená, že ak hladina glukózy v krvi klesá, **AAPS** vám môže znížiť bazálnu dávku. Ak však hladina glukózy v krvi stúpa, automatická korekcia sa nevykoná. Vaše bazálne dávky zostanú rovnaké, ako sú definované vo vašom aktuálnom **profile**. Iba ak je IOB negatívny (z predchádzajúceho LGS), podá sa ďalší inzulín na zníženie **glykémie**.
 
 (Preferences-minimal-request-change)=
-### Minimal request change
+### Minimálna požiadavka na zmenu
 
-When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the minimal request rate. This defines the relative change required to trigger a notification.
+Pri používaní **Otvorenej slučky** budete dostávať upozornenia vždy, keď systém **AAPS** odporučí úpravu bazálnej dávky. Ak chcete znížiť počet upozornení, môžete použiť buď [širší cieľový rozsah bg](#profile-glucose-targets), alebo zvýšiť percento minimálnej miery požiadaviek. Tým nastavíte aká veľká zmena je potrebná aby sa zobrazilo upozornenie.
 
-## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+## Rozšírený asistent jedla (AMA) alebo super mikro bolus (SMB)
 
-Depending on your settings in [Config builder > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+V závislosti od nastavení v [Konfigurátor > APS](#Open-APS-features-advanced-meal-assist-ama) si môžete vybrať medzi dvoma algoritmami:
 
-- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – stav algoritmu v roku 2017
+- [Super micro bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – najnovší algoritmus odporúčaný pre začiatočníkov
 
-As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
+Od
+**AAPS** verzie 3.3 bola funkcia [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) presunutá ako súčasť OpenAPS SMB.</p> 
+
+
 
 ### OpenAPS AMA
 
-All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
+Všetky nastavenia pre OpenAPS AMA sú popísané v časti [Kľúčové funkcie AAPS – Pokročilý asistent pri jedle (AMA)](#Open-APS-features-advanced-meal-assist-ama).
 
 (Preferences-openaps-smb-settings)=
+
+
 ### OpenAPS SMB
 
-All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+Všetky nastavenia pre OpenAPS SMB sú popísané v časti [Kľúčové funkcie AAPS – Super mikrobolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+
+
 
 ## Nastavenie vstrebávania sacharidov
 
 (Preferences-min_5m_carbimpact)=
+
+
 ### min_5m_carbimpact
 
-Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
-The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
+Algoritmus používa BGI (vplyv glukózy v krvi) na určenie, kedy sa [sacharidy vstrebávajú](../DailyLifeWithAaps/CobCalculation.md).
 
-At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. V podstate je to niečo ako poistka. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
+V prípadoch, keď absorpciu sacharidov nie je možné dynamicky vypočítať na základe reakcií vašej glykémie, **AAPS** vloží do vašich sacharidov predvolený rozklad. V podstate je to niečo ako poistka. Táto hodnota sa používa iba počas chýbajúcich údajov **CGM** alebo keď fyzická aktivita „spotrebuje“ všetok nárast hladiny glukózy v krvi, ktorý by inak spôsobil rozklad COB pomocou **AAPS**.
 
-To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc.
+Jednoducho povedané: Algoritmus „*vie*“, ako by sa vaše glykémie mali správať, keď sú ovplyvnené aktuálnou dávkou inzulínu atď. Vždy, keď dôjde k pozitívnej odchýlke od očakávaného správania, niektoré sacharidy sa vstrebajú/rozložia. Veľká zmena = veľa sacharidov atď.
 
-The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+Parameter min_5m_carbimpact definuje predvolený vplyv absorpcie sacharidov za 5 minút. Viac informácií nájdete v [dokumentácii OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-Standard value for AMA is 5, for SMB it's 8.
+Štandardná hodnota pre AMA je 5, pre SMB je to 8.
 
-The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+Graf COB na hlavnej obrazovke zobrazuje oranžovú bodku v hornej časti grafu, kedy sa používa min_5m_impact.
 
-![COB graph](../images/Pref2020_min_5m_carbimpact.png)
+![Graf COB](../images/Pref2020_min_5m_carbimpact.png)
 
-### Meal max absorption time
 
-If you often eat high fat or protein meals you will need to increase your meal absorption time.
 
-### Advanced settings - autosens ratio
+### Maximálna doba vstrebávania jedla
+
+Ak často jedávate jedlá s vysokým obsahom tuku alebo bielkovín, budete musieť nastaviť dlhší čas vstrebávania jedla.
+
+
+
+### Rozšírené nastavenia – pomer autosens
 
 ![Nastavenie vstrebávania sacharidov](../images/Pref2020_Absorption.png)
 
-- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
-- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+- Definujte min. a max. pomer [automatickej citlivosti](#Open-APS-features-autosens).
+- Štandardné hodnoty (max. 1,2 a min. 0,7) by sa normálne nemali meniť.
+
+
 
 ## Pumpa
 
-### BT Watchdog
 
-Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
 
-## Pump settings
+### Strážny pes BT
 
-The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump).  Pair and set your pump up according to the [pump related instructions](../Getting-Started/CompatiblePumps.md).
+V prípade potreby aktivujte BT watchdog (napr. pre pumpy Dana). Ak nie je možné pripojenie k pumpe, na jednu sekundu sa vypne Bluetooth. To vám môže pomôcť na niektorých telefónoch, kde sa bluetooth zasekáva.
+
+
+
+## Nastavenia pumpy
+
+Možnosti sa budú líšiť v závislosti od pumpy, ktorú ste vybrali v nástroji [Konfigurátor > Pumpa](#Config-Builder-pump).  Spárujte a nastavte pumpu podľa [pokynov k pumpe](../Getting-Started/CompatiblePumps.md).
+
+
 
 ## Tidepool
 
-More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
+Viac informácií nájdete na stránke [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
-## NSClient
 
-![NSClient](../images/Pref2020_NSClient.png)
 
-Original communication protocol, can be used with older Nightscout versions.
+## Interný NSClient
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
+![Interný NSClient](../images/Pref2020_NSClient.png)
+
+Pôvodný komunikačný protokol, možno ho použiť so staršími verziami Nightscoutu.
+
+- Nastavte si *URL adresu Nightscout* (napr. <https://yoursitename.yourplaform.dom>).
+- **Uistite sa, že adresa URL je BEZ /api/v1/ na konci.**
+- *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (12-znakové heslo uložené vo vašom Nightscoute).
+- To vám umožní čítanie a zápis údajov medzi webovou stránkou Nightscout a **AAPS**.
+- Ak ste sa zasekli pri Cieli 1, prekontrolujte si zadané údaje.
+
+
 
 ## NSClientV3
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
+[Nový protokol zavedený s AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Bezpečnejší a efektívnejší.
+
+
 
 ```{admonition} V3 data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+Pri používaní NSClientV3 musia všetky zdroje ktoré uploadujú dáta používať API V3. Keďže väčšina z nich ešte nie je kompatibilná, znamená to, že **musíte povoliť **AAPS** nahrávať všetky údaje** (glukózu, ošetrenia atď.) do Nightscout a zakázať všetky ostatné nahrávacie programy, ak nie sú kompatibilné s V3.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **NS access token** (not your API Secret!).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
-- Leave Connect to websockets enabled (recommended).
+
+- Nastavte si *URL adresu Nightscout* (napr. <https://yoursitename.yourplaform.dom>).
+- **Uistite sa, že adresa URL je BEZ /api/v1/ na konci.**
+- V Nightscoute vytvorte *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (na používanie V3 API je potrebný [Nightscout 15](https://nightscout.github.io/update/update/)) a zadajte ho do **NS prístupového tokenu** (nie váš API secret!).
+- To vám umožní čítanie a zápis údajov medzi webovou stránkou Nightscout a **AAPS**.
+- Ak ste sa zasekli pri Cieli 1, prekontrolujte si zadané údaje.
+- Možnosť Pripojenie k webovým socketom nechajte povolenú (odporúčané).
+
+
 
 ### Synchronizácia
 
-Synchronization choices will depend on the way you will want to use **AAPS**.
+Možnosti synchronizácie budú závisieť od spôsobu, akým chcete používať **AAPS**.
 
-You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
+Môžete si vybrať, ktoré údaje chcete [nahrať a stiahnuť do alebo z Nightscoutu](#Nightscout-aaps-settings). 
 
-### Alarm options
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
-- Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
-- If you have the **CGM** source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
-- Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
-- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
+### Nastavenie alarmov
 
-### Connection settings
+![Nastavenie alarmov](../images/Pref2024_NSClient_Alarms.png)
 
-![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
+- Možnosti alarmov vám umožňujú vybrať si, ktoré alarmy Nightscout chcete používať prostredníctvom aplikácie. **AAPS** potom spustí alarm, keď sa spustí alarm Nightscout.
+- Aby sa spustili alarmy, musíte nastaviť hodnoty alarmov Urgent High (Veľmi vysoká), High (Vysoká), Low (Nízka) a Urgent Low (Veľmi nízka) v [nastaveniach Nightscoutu](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+- Budú fungovať iba vtedy, keď máte pripojenie k Nightscoutu a sú určené pre rodičov/opatrovateľov.
+- Ak máte v telefóne zdroj **CGM** (napr. xDrip+ alebo BYODA) môžete použiť tieto alarmy namiesto alarmov z Nightscoutu.
+- Ak zapnete túto možnosť **AAPS** vám zobrazí [upozornenia](https://nightscout.github.io/nightscout/discover/#announcement) z Nightscoutu aj priamo v aplikácii AAPS.
+- Môžete zmeniť prah alarmov zastaraných údajov a urgentných zastaraných údajov, keď sa z Nightscoutu po určitom čase neprijmú žiadne údaje.
 
-- Connection settings define when Nightscout connection will be enabled.
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific Wi-Fi network you can enter its Wi-Fi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+
+
+### Nastavenie pripojenia
+
+![Nastavenie pripojenia NSClient](../images/ConfBuild_ConnectionSettings.png)
+
+- Nastavenia pripojenia definujú, kedy sa AAPS bude pripájať k Nightscoutu.
+- Môžete nastaviť aby AAPS posielal dáta do Nightscoutu len vtedy keď ste pripojený na Wi-Fi alebo len na konkrétnu Wi-Fi sieť, ktorú si zvolíte.
+- Ak chcete používať iba konkrétnu sieť Wi-Fi, môžete zadať jej SSID.
+- Viaceré SSID je možné oddeliť bodkočiarkou.
+- Ak chcete odstrániť všetky SSID, zadajte do poľa prázdne miesto(medzeru).
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
 
-![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
-Options in advanced settings are self-explanatory.
+### Rozšírené nastavenia (NSClient)
+
+![Rozšírené nastavenia klienta NS](../images/Pref2024_NSClientAdv.png)
+
+Možnosti v rozšírených nastaveniach sú samovysvetľujúce.
+
+
 
 ## SMS komunikátor
 
-More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Viac informácií nájdete na stránke [SMS príkazy](../RemoteFeatures/SMSCommands.md).
+
+
 
 ## Automatizácia
 
-Select which location service shall be used:
+Vyberte, ktorá lokalizačná služba sa má použiť:
 
-- Use passive location: **AAPS** only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! May cause excessive battery drain!)
+- Použiť pasívnu polohu: **AAPS** zaznamenáva polohu iba v prípade, že o ňu požadujú iné aplikácie
+- Použiť sieťovú polohu: Poloha vašej siete Wi-Fi
+- Použiť GPS polohu (Pozor! Môže spôsobiť nadmerné vybitie batérie!)
 
-## Local alerts
 
-![Local alerts](../images/Pref2020_LocalAlerts.png)
 
-Settings should be self-explanatory.
+## Lokálne výstrahy
+
+![Lokálne výstrahy](../images/Pref2020_LocalAlerts.png)
+
+Nastavenia by mali byť samovysvetľujúce.
 
 (preferences-maintenance-settings)=
-## Maintenance settings
 
-![Maintenance settings](../images/Pref2020_Maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+## Nastavenia údržby
 
-**Data Choices**
+![Nastavenia údržby](../images/Pref2020_Maintenance.png)
 
-![Data choices](../images/Pref2020_DataChoice.png)
+**Príjemca e-mailu**: Informácie o chode aplikácie sa štandardne posielajú na  <logs@aaps.app>.
 
-You can help develop **AAPS** further by sending crash reports to the developers.
+**Možnosti dát**
 
-**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+![Možnosti dát](../images/Pref2020_DataChoice.png)
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the AAPS 'Careportal' and 'User entry' lists under Treatments.
+Môžete pomôcť vývojárom **AAPS** zasielaním hlásení o chybách aplikácie.
 
-After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
+**automatický export nastavení**<br/> Povolením tejto funkcie umožníte **AAPS** export nastavení bez zásahu používateľa. Pri ďalšom manuálnom exporte sa hlavné heslo bezpečne uloží len do vášho telefónu. Uložené heslo bude platné až 4 týždne. Po 4 týždňoch budete upozornení, že platnosť hesla čoskoro vyprší. Počas týždňa od posledného exportu si môžete heslo obnoviť manuálnym exportom nastavení z menu údržby.
 
-(preferences-maintenance-logdirectory)= Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
+Po uplynutí 1 týždňa uložené heslo vyprší a akýkoľvek automatický export nastavení sa preruší, pričom sa používateľovi zobrazí upozornenie s otázkou  Všetky [**automatické exporty nastavení**](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) sa zapíšu do AAPS 'Careportal' a 'User entry' v časti ošetrenia.
+
+Po povolení tejto možnosti nezabudnite na manuálny export nastavení, kde sa od vás bude vyžadovať heslo, aby ho **AAPS** mohol uložiť.
+
+(preferences-maintenance-logdirectory)= Nastavenia údržby zahŕňajú aj adresár **AAPS**, ktorý sa nachádza priamo na karte Údržba. Toto nastavenie umožňuje používateľovi vybrať si adresár v telefóne, kam bude **AAPS** ukladať nastavenia, protokoly a ďalšie súbory.
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
+
+
 ## Open Humans
 
-You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
+Môžete pomôcť komunite zdielaním svojich údajov na výskumné projekty! Podrobnosti sú popísané na [stránke Open Humans](../SupportingAaps/OpenHumans.md).
 
-In Preferences, you can define when data shall be uploaded
-- only if connected to Wi-Fi
-- only if charging
+V nastaveniach môžete zadať, kedy sa majú údaje nahrať
+
+- iba ak ste pripojený k Wi-Fi
+- len pri nabíjaní
