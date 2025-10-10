@@ -512,34 +512,34 @@ Vyberte, ktorá lokalizačná služba sa má použiť:
 
 
 
-## Local alerts
+## Lokálne výstrahy
 
-![Local alerts](../images/Pref2020_LocalAlerts.png)
+![Lokálne výstrahy](../images/Pref2020_LocalAlerts.png)
 
-Settings should be self-explanatory.
+Nastavenia by mali byť samovysvetľujúce.
 
 (preferences-maintenance-settings)=
 
 
-## Maintenance settings
+## Nastavenia údržby
 
-![Maintenance settings](../images/Pref2020_Maintenance.png)
+![Nastavenia údržby](../images/Pref2020_Maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+**Príjemca e-mailu**: Informácie o chode aplikácie sa štandardne posielajú na  <logs@aaps.app>.
 
-**Data Choices**
+**Možnosti dát**
 
-![Data choices](../images/Pref2020_DataChoice.png)
+![Možnosti dát](../images/Pref2020_DataChoice.png)
 
-You can help develop **AAPS** further by sending crash reports to the developers.
+Môžete pomôcť vývojárom **AAPS** zasielaním hlásení o chybách aplikácie.
 
-**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+**automatický export nastavení**<br/> Povolením tejto funkcie umožníte **AAPS** export nastavení bez zásahu používateľa. Pri ďalšom manuálnom exporte sa hlavné heslo bezpečne uloží len do vášho telefónu. Uložené heslo bude platné až 4 týždne. Po 4 týždňoch budete upozornení, že platnosť hesla čoskoro vyprší. Počas týždňa od posledného exportu si môžete heslo obnoviť manuálnym exportom nastavení z menu údržby.
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the AAPS 'Careportal' and 'User entry' lists under Treatments.
+Po uplynutí 1 týždňa uložené heslo vyprší a akýkoľvek automatický export nastavení sa preruší, pričom sa používateľovi zobrazí upozornenie s otázkou  Všetky [**automatické exporty nastavení**](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) sa zapíšu do AAPS 'Careportal' a 'User entry' v časti ošetrenia.
 
-After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
+Po povolení tejto možnosti nezabudnite na manuálny export nastavení, kde sa od vás bude vyžadovať heslo, aby ho **AAPS** mohol uložiť.
 
-(preferences-maintenance-logdirectory)= Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
+(preferences-maintenance-logdirectory)= Nastavenia údržby zahŕňajú aj adresár **AAPS**, ktorý sa nachádza priamo na karte Údržba. Toto nastavenie umožňuje používateľovi vybrať si adresár v telefóne, kam bude **AAPS** ukladať nastavenia, protokoly a ďalšie súbory.
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
@@ -547,9 +547,9 @@ After enabling this option, make sure to perform a manual settings export, where
 
 ## Open Humans
 
-You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
+Môžete pomôcť komunite zdielaním svojich údajov na výskumné projekty! Podrobnosti sú popísané na [stránke Open Humans](../SupportingAaps/OpenHumans.md).
 
-In Preferences, you can define when data shall be uploaded
+V nastaveniach môžete zadať, kedy sa majú údaje nahrať
 
-- only if connected to Wi-Fi
-- only if charging
+- iba ak ste pripojený k Wi-Fi
+- len pri nabíjaní
