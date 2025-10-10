@@ -603,9 +603,9 @@ Profile contains information on your individual diabetes settings, see the detai
 
 See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
 
-## NSClient
+## Interný NSClient
 
-![NSClient](../images/Screenshots_NSClient.png)
+![Interný NSClient](../images/Screenshots_NSClient.png)
 
 This page displays the status of the connection with your Nightscout site.
 
