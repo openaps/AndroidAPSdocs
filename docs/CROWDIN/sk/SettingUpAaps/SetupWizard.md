@@ -294,7 +294,7 @@ Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-## Patient type
+## Typ pacienta
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
 
@@ -502,7 +502,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-## APS mode
+## Režim APS
 
 Let "Open Loop" remain selected.
 
