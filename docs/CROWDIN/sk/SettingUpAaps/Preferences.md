@@ -265,68 +265,68 @@ Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
 
 Option to enable superbolus in bolus wizard.
 
-[Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. It is different from *super micro bolus*!
+[Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. Je to niečo iné ako *super mikro bolus*!
 
-Use with caution and do not enable it until you learn what it really does. V podstate sa k bolusu pridá bazálna dávka na ďalšie dve hodiny a na ďalšie dve hodiny sa vypne bazál. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Používajte ho opatrne a nepovoľujte ho, kým nezistíte ako funguje. V podstate sa k bolusu pridá bazálna dávka na ďalšie dve hodiny a na ďalšie dve hodiny sa vypne bazál. **Funkcie slučky AAPS budú vypnuté – preto ich používajte opatrne! Ak používate SMB, AAPS** vypne slučku podľa vašich nastavení v časti [„Maximálny počet minút bazálnej dávky na obmedzenie SMB na“](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to). Ak nepoužívate SMB slučka sa automaticky pozastaví na dve hodiny. Podrobnosti o super boluse nájdete [tu](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
-## Treatment safety
+## Bezpečnosť ošetrení
 
 (preferences-patient-type)=
-### Patient type
+### Typ pacienta
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
+- Bezpečnostné limity sú nastavené na základe veku, ktorý vyberiete v tomto nastavení.
+- Ak začnete narážať na tieto pevné limity (ako napríklad maximálny bolus), je čas posunúť sa o krok vyššie.
+- Neodporúčame zadať vyšší vek ako je skutočný pretože to môže viesť k predávkovaniu inzulínom (napríklad vynechaním desatinnej bodky).
+- Ak vás zaujímajú aké presné hodnoty majú tieto bezpečnostné limity, prejdite na [stránku](../DailyLifeWithAaps/KeyAapsFeatures.md) k funkcii algoritmu, ktorý používate.
 
-### Max allowed bolus
+### Maximálny povolený bolus
 
-- Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
+- Definuje maximálne množstvo bolusového inzulínu v inzulínových jednotkách, ktoré môže systém **AAPS** podať naraz.
+- Je to bezpečnostné nastavenie aby sa predišlo podaniu príliš velkého bolusu v prípade, že omylom zadáte chybné množstvo sacharidov a pod.
+- Odporúča sa ho nastaviť na takú hodnotu, ktorá zhruba zodpovedá maximálnemu bolusu, ktorý budete potrebovať pri jedle alebo korekcii.
+- Toto obmedzenie sa vzťahuje aj na výsledky bolusovej kalkulačky.
 
-### Max allowed carbs
+### Maximálne povolené množstvo sacharidov
 
-- Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- Definuje maximálne množstvo sacharidov v gramoch, ktoré môže bolusová kalkulačka **AAPS** použiť pre výpočet.
+- Je to bezpečnostné nastavenie aby sa predišlo podaniu príliš velkého bolusu v prípade, že omylom zadáte chybné množstvo sacharidov a pod.
+- Odporúča sa ho nastaviť na takú hodnotu, ktorá zhruba zodpovedá maximálnemu množstvu sacharidov, ktoré prijmete v jednom jedle.
 
 ## Uzavretý okruh
 
 (Preferences-aps-mode)=
-### APS mode
-Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
+### Režim APS
+Prepínanie medzi otvorenou slučkou, uzavretou slučkou a pozastavením pri nízkej hladine glukózy (LGS).
 
-![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
+![Konfigurátor – režim slučky](../images/ConfigBuilder_LoopLGS.png)
 
 (Preferences-pen-loop)=
-#### Open Loop
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
+#### Otvorený okruh
+**AAPS** priebežne vyhodnocuje všetky dostupné údaje (IOB, COB, BG...) a v prípade potreby podáva návrhy ošetrení (dočasné bazálne dávky), ako upraviť vašu liečbu.
 
-The suggestions will not be executed automatically (as in closed loop). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
+Návrhy sa nebudú vykonávať automaticky (ako v uzavretej slučke). Návrhy musí používateľ zadať manuálne do pumpy (ak sa používa virtuálna pumpa) alebo pomocou tlačidla, ak je **AAPS** pripojený k reálnej pumpe.
 
-This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
+Táto možnosť slúži na oboznámenie sa s fungovaním systému **AAPS** alebo v prípade, že používate nepodporovanú pumpu. Bez ohľadu na to, aké rozhodnutie tu urobíte, budete v otvorenej slučke až do konca **[Cieľa 5](#objectives-objective5)**.
 
 (preferences-closed-loop)=
-#### Closed Loop
+#### Uzavretý okruh
 
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (_i.e._ without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
+Systém **AAPS** priebežne vyhodnocuje všetky dostupné údaje (IOB, COB, BG...) a v prípade potreby automaticky upravuje dávkovanie (_t. j._ bez ďalšieho zásahu z vašej strany), aby sa dosiahol nastavený [cieľový rozsah alebo hodnota](#profile-glucose-targets) (podávanie bolusu, dočasná bazálna dávka, vypnutie inzulínu, aby sa predišlo hypoglykémii atď.).
 
-The Closed Loop works within numerous safety limits, which can be set individually.
+Uzavretá slučka má viacero bezpečnostných obmedzení, ktoré si môžete prispôsobiť podľa seba.
 
-Closed Loop is only possible if you are in **[Objective 6](#objectives-objective6)** or higher and use a supported pump.
+Uzavretú slučku je možné používať iba v prípade, že plníte **[Cieľ 6](#objectives-objective6)** alebo vyšší a používate podporovanú pumpu.
 
-#### Low Glucose Suspend (LGS)
+#### Zastavovanie pri nízkej glykémii (LGS)
 
-In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
+V tomto režime je [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) nastavený na nulu.
 
-This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+To znamená, že ak hladina glukózy v krvi klesá, **AAPS** vám môže znížiť bazálnu dávku. Ak však hladina glukózy v krvi stúpa, automatická korekcia sa nevykoná. Vaše bazálne dávky zostanú rovnaké, ako sú definované vo vašom aktuálnom **profile**. Iba ak je IOB negatívny (z predchádzajúceho LGS), podá sa ďalší inzulín na zníženie **glykémie**.
 
 (Preferences-minimal-request-change)=
-### Minimal request change
+### Minimálna požiadavka na zmenu
 
-When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the minimal request rate. This defines the relative change required to trigger a notification.
+Pri používaní **Otvorenej slučky** budete dostávať upozornenia vždy, keď systém **AAPS** odporučí úpravu bazálnej dávky. Ak chcete znížiť počet upozornení, môžete použiť buď [širší cieľový rozsah bg](#profile-glucose-targets), alebo zvýšiť percento minimálnej miery požiadaviek. Tým nastavíte aká veľká zmena je potrebná aby sa zobrazilo upozornenie.
 
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
 
