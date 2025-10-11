@@ -3,7 +3,7 @@
 
 ## 使用 M8 配合 歐態（Ottai）應用程式
 
--   從 <https://play.google.com/store/apps/details?id=com.ottai.seas> 下載並安裝 apk。
+-   Download and Install the apk from <https://play.google.com/store/apps/details?id=com.ottai.seas>. For the Chinese version of Ottai use <https://ottai.com.cn/70ICjxAI4i>
 
 -   啟動傳感器
 
