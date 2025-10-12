@@ -52,5 +52,11 @@ Like with the Jelly 2 (above), the Jelly Star should have 'Intelligent Assistanc
 
 Remember to disable Google Play Protect.
 
+### Remote Connection for Weak apk
+
+For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly 2, **Wear.apk** & **AAPS** remotely via wifi.
+
+![MURCIMG-20251007-WA0000](https://github.com/user-attachments/assets/5db08a08-f256-49a0-8843-46bdd01b33d6)
+
 
 
