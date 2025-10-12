@@ -164,7 +164,7 @@ Once paired you should be able to install the AAPS wear apk:
 
 ## Setting up the connection between the watch and the phone from **AAPS** 
 
-The final step is to configure **AAPS** on the phone to interact with **AAPS** Wear” on the watch. To do this, enable the Wear plugin in Config Builder:
+The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. To do this, enable the Wear plugin in Config Builder:
 
 * Go to the **AAPS** app on the phone
 
@@ -181,6 +181,11 @@ If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, 
 
 
 ![24-10-23, successful galaxy watch photo](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
+
+
+For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via wifi.
+
+![MURCIMG-20251007-WA0000](https://github.com/user-attachments/assets/5db08a08-f256-49a0-8843-46bdd01b33d6)
 
 ### Troubleshooting the **AAPS** watch- **AAPS** phone communication
 
