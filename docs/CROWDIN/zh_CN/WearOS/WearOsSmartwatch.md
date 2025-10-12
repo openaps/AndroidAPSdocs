@@ -147,7 +147,7 @@ Wear OS 5以下设备可选方案：
 
 ## 从**AAPS**设置手表与手机的连接
 
-最后一步是在手机上配置**AAPS**以与手表上的**AAPS** Wear进行交互。 为此，请在配置构建器中启用Wear插件：
+The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. 为此，请在配置构建器中启用Wear插件：
 
 * 打开手机上的**AAPS**
 
@@ -163,6 +163,11 @@ Wear OS 5以下设备可选方案：
 
 
 ![24-10-23, successful galaxy watch photo](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
+
+
+For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via wifi.
+
+![MURCIMG-20251007-WA0000](https://github.com/user-attachments/assets/5db08a08-f256-49a0-8843-46bdd01b33d6)
 
 ### 排查**AAPS**手表与**AAPS**手机之间的通信问题
 
