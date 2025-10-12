@@ -3,7 +3,7 @@
 
 ## 搭配Ottai应用程序使用M8
 
--   从<https://play.google.com/store/apps/details?id=com.ottai.seas>下载并安装该apk文件。
+-   Download and Install the apk from <https://play.google.com/store/apps/details?id=com.ottai.seas>. For the Chinese version of Ottai use <https://ottai.com.cn/70ICjxAI4i>
 
 -   启动传感器
 
