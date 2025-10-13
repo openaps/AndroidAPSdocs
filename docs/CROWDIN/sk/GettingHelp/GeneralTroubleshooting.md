@@ -129,7 +129,7 @@ Here are examples how to find them on specific android phones.
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
-## Phones
+## Telefóny
 
 * [Jelly](../CompatiblePhones/Jelly.md)
 * [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)

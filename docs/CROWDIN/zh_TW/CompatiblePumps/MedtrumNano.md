@@ -41,7 +41,7 @@
 
 ## 設定
 
-注意：當使用AAPS啟動修補版時，**必須**停用所有其他可與Medtrum幫浦基座通訊的裝置。 例如，啟動的PDM與Medtrum App。 請確保你已準備好幫浦基座及其序號，進行新修補版的啟動。
+注意：當使用AAPS啟動貼片時，**必須**停用所有其他可與Medtrum幫浦基座通訊的裝置。 例如，啟動的PDM與Medtrum App。 請確保你已準備好幫浦基座及其序號，進行新修補版的啟動。
 
 ### 步驟1：選擇Medtrum幫浦
 
@@ -98,7 +98,7 @@
 無論如何，這些警告也會顯示在Medtrum總覽畫面中的[活動警報](#medtrum-active-alarms)下。
 
 (medtrum-patch-expiration)=
-#### 修補版過期
+#### 貼片到期
 
 ***預設：已啟用。***
 
@@ -110,7 +110,7 @@
 
 ***預設：72小時。***
 
-此設置更改過期警告的時間，當[修補版過期](#medtrum-patch-expiration)啟用時，AAPS將在啟動後的設定小時內發送通知。
+此設置更改過期警告的時間，當[貼片過期](#medtrum-patch-expiration)啟用時，AAPS將在啟動後的設定小時內發送通知。
 
 #### 每小時最大胰島素輸送量
 
@@ -176,14 +176,14 @@
 
 此設定可在使用Medtrum幫浦時更改，但建議出於安全理由設為30分鐘。
 
-### 步驟3：啟動修補版
+### 步驟3：啟動貼片
 
 **在繼續之前：**
 - 準備好你的Medtrum Nano幫浦基座與儲液瓶修補版。
 - 確保 AAPS 正確設置，並且已啟動[配置](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)。
 - 停用其他可與Medtrum幫浦連線的裝置（PDM與Medtrum App）
 
-#### 從Medtrum總覽標籤啟動修補版
+#### 從Medtrum總覽標籤啟動貼片
 
 在AAPS介面中導航至[Medtrum標籤](#nano-overview)，然後按下右下角的**更換修補版**按鈕。
 
@@ -225,12 +225,12 @@
 
 清潔皮膚，撕下貼紙並將修補版附著在身體上。 移除安全鎖，並按下修補版上的針頭按鈕插入套管。
 
-按**下一步**啟動修補版。
+按**下一步**啟動貼片。
 
 (medtrum-activate-patch)=
-##### 啟動修補版
+##### 啟動貼片
 
-![啟動修補版](../images/medtrum/activation/ActivatePatch.png)
+![啟動貼片](../images/medtrum/activation/ActivatePatch.png)
 
 啟動完成後，將顯示以下畫面
 
@@ -333,9 +333,9 @@
 
 這顯示了啟動的修補版序列號。 每次啟動新修補版時，這個號碼會遞增。
 
-### 修補版過期：
+### 貼片到期:
 
-這顯示了修補版過期的日期和時間。
+這顯示了貼片過期的日期和時間。
 
 ### 重新整理：
 
