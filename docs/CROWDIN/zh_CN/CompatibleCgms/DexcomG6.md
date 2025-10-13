@@ -1,5 +1,7 @@
 # Dexcom G6 和 ONE
 
+WARNING --- [BYODA](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)--- There are reported issues **AAPS** receiving no BG data when using either BYODA & DiaKEM as its data source. Users are recommended to use [X-Drip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+
 ## 先掌握基础
 
 -   遵循[此处](../CompatibleCgms/GeneralCGMRecommendation.md)的一般CGM卫生和传感器设置建议。
