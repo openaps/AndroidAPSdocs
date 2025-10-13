@@ -76,23 +76,23 @@ GitHub 現在顯示你個人的 AndroidAPS 副本。 請保持這個瀏覽器頁
 :::{include} BrowserBuildFileManagerPlus.md
 ```
 
-- 從這裡下載準備檔案：[aaps-ci-preparation.html](https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
+- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: 注意
 
-1. 如果你是從應用程式內開啟此頁面（透過 Web View），HTML 檔案可能無法下載。 請複製下方 URL 並在瀏覽器中開啟下載：
+1. 如果你是從應用程式內開啟此頁面（透過 Web View），HTML 檔案可能無法下載。 Please copy the URL and open it in your browser instead:
 ```text
-https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-或前往最新版本頁面：
+Or visit the latest release page:
 ```text
-https://github.com/Angus-repo/aaps-ci-preparation/releases/latest
+https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2.本站提供的備份檔：
+2.Backup copy hosted on this site:
 
- - 如果外部連結也無法使用，你可以改用這個備份檔案進行下載。
+ - If the external link is also unavailable, you can use this backup file to download.
 <!--crowdin:disable-->
 
 ```{eval-rst}
@@ -254,7 +254,7 @@ GitHub 現在將能夠將 AAPS apk 檔案儲存在您的 Google Drive 中，一�
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
-      src="https://www.dailymotion.com/embed/video/x9rdwms"
+      src="https://www.dailymotion.com/embed/video/x9rdwms?autoplay=0&queue-enable=false&loop=1"
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
       frameborder="0"
       allowfullscreen>
