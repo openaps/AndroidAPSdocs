@@ -76,18 +76,18 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 :::{include} BrowserBuildFileManagerPlus.md
 ```
 
-- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
+- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: note
 
 1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
 ```text
-https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
 Or visit the latest release page:
 ```text
-https://github.com/Angus-repo/aaps-ci-preparation/releases/latest
+https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
 2.Backup copy hosted on this site:
