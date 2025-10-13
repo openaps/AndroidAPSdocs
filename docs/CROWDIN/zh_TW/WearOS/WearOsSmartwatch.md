@@ -161,7 +161,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ## 設置 **AAPS** 手機與手錶的連線
 
-The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. 為此，在 組態建置工具 中啟用 Wear 外掛：
+最後一步是在手機上設定 **AAPS**，使其能與手錶上的 **Wear.apk** 進行互動。 為此，在 組態建置工具 中啟用 Wear 外掛：
 
 * 前往手機上的 **AAPS** 應用程式
 
@@ -179,7 +179,7 @@ The final step is to configure **AAPS** on the phone to interact with **Wear.apk
 ![24-10-23，成功的 Galaxy 手錶照片](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via wifi.
+對於某些智慧手錶，例如 Samsung Galaxy，若要透過 Wi-Fi 遠端使用 **Wear.apk** 與 **AAPS**，必須在 Samsung Galaxy 的「進階功能」中將 **遠端連線** 設為 <0>開啟</0>。
 
 ![MURCIMG-20251007-WA0000](https://github.com/user-attachments/assets/5db08a08-f256-49a0-8843-46bdd01b33d6)
 
