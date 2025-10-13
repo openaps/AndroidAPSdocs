@@ -21,7 +21,7 @@
 
 ![settings.png](../images/Equil/settings.png)
 
-### 啟動修補版
+### 啟動貼片
 
 前往 Equil 標籤並按下 **配對 Equil 貼片幫浦**。
 
