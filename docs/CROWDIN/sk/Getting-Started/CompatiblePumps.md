@@ -1,8 +1,8 @@
-# Compatible Pumps
+# Kompatibilné pumpy
 
-AAPS works with a number of insulin pumps.  The following list shows the currently supported devices and indicates if AAPS communicates with the pump using your phone's native Bluetooth function or if it requires a Rileylink Compatible device in brackets.
+AAPS funguje s viacerými inzulínovými pumpami.  Nasledujúci zoznam zobrazuje aktuálne podporované zariadenia a v zátvorkách uvádza, či systém AAPS komunikuje s pumpou pomocou natívnej funkcie Bluetooth alebo či vyžaduje zariadenie kompatibilné s Rileylink.
 
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; see also [Accu-Chek Combo Tips for Basic usage](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
+- <0>Accu-Chek Combo</0> (Bluetooth; pozrite si tiež aj <1>Tipy pre základné používanie Accu-Chek Combo</1>)
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
@@ -14,18 +14,18 @@ AAPS works with a number of insulin pumps.  The following list shows the current
 - [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)
-- Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
+- Niektoré staršie zariadenia [Medtronic](../CompatiblePumps/MedtronicPump.md) (vyžaduje sa [ďalšie komunikačné zariadenie](#CompatiblePumps-additional-communication-device))
 
-## My pump is not listed
+## Moja pumpa nie je v zozname
 
-Details of the status of other pumps that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md) page.
+Podrobnosti o stave ďalších púmp, ktoré by mohli byť v budúcnosti kompatibilné s AAPS, sú uvedené na stránke [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
-## Additional communication device
+## Prídavné komunikačné zariadenie
 
-If no additional communication device is mentioned, the communication between insulin pump and **AAPS** is based on the integrated bluetooth stack of Android, without the need of an additional communication device to translate the communication protocol.
+Ak nie je uvedené žiadne ďalšie komunikačné zariadenie, komunikácia medzi inzulínovou pumpou a systémom **AAPS** je založená na integrovanom rozhraní Bluetooth systému Android bez potreby ďalšieho komunikačného zariadenia na preklad komunikačného protokolu.
 
-For old Medtronic pumps and Omnipod Eros, an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+Pri starých pumpách Medtronic a Omnipod Eros je potrebné ďalšie komunikačné zariadenie (okrem telefónu) na „preklad“ signálu z pumpy do rozhrania Bluetooth. Uistite sa, že ste si vybrali správnu verziu v závislosti od vašej pumpy.
 
 - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
 - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
