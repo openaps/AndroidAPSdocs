@@ -1,62 +1,62 @@
-# Preparing to start with AAPS
+# Príprava na štart s AAPS
 
-Welcome. This documentation aims to guide users who are preparing to setup and start using the Android Artificial Pancreas System (**AAPS**).
+Vitajte. Táto dokumentácia má slúžiť ako pomôcka pre používateľov, ktorí sa pripravujú na nastavenie a začatie používania systému umelého pankreasu pre systém Android (**AAPS**).
 
-## Finding your way around the documentation
+## Ako sa vyznať v dokumentácii
 
-An **index** and explanation of the documentation structure can be found [here](../index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol.
+**Index** a vysvetlenie štruktúry dokumentácie nájdete [tu](../index.md), môžete sa k tomu dostať aj kliknutím na symbol **AAPS** v ľavom hornom rohu dokumentácie. Nájdete tam zhrnutie, na čo slúžia rôzne časti dokumentácie. Na navigáciu v dokumentácii môžete použiť aj nadpisy naľavo od tejto stránky. Nakoniec je tu funkcia vyhľadávania priamo pod symbolom **AAPS**.
 
-We aim to make it easy to determine both the capabilities and limitations of **AAPS**. It can be disappointing to discover after investing time in reading the documentation that you might not have a compatible insulin pump or CGM, or that **AAPS** offers different functionality than hoped for.
+Naším cieľom je uľahčiť určenie možností aj obmedzení systému **AAPS**. Môže byť nepríjemné keď po naštudovaní návodu zistíte, že vaša pumpa alebo senzor niesú kompatibilné s **AAPS** alebo že systém vie niečo iné než ste čakali.
 
-Many experience-related details in the **AAPS** documentation make more sense when you are actually using **AAPS** in real-time. Just as it is difficult to learn a sport only by reading the rules, it takes a combination of learning the foundations of the rules for safely operating **AAPS** and then learning how best to apply those rules as you start to use **AAPS**.
+Mnohé podrobnosti týkajúce sa skúseností v dokumentácii k **AAPS** dávajú väčší zmysel, keď **AAPS** skutočne používate v reálnom čase. Rovnako ako je ťažké naučiť sa šport len ​​čítaním pravidiel, vyžaduje si to kombináciu učenia sa základov pravidiel pre bezpečné fungovanie **AAPS** a následného učenia sa ako tieto pravidlá čo najlepšie uplatňovať keď začínate používať **AAPS**.
 
 (preparing-safety-first)=
 
 ## Safety First
-“With great power comes great responsibility…”
+„S veľkou mocou prichádza aj veľká zodpovednosť…“
 
-### Technical safety
-**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
+### Technická bezpečnosť
+Systém **AAPS** má rozsiahlu sadu bezpečnostných prvkov. Tieto obmedzenia sa postupne odstraňujú prostredníctvom postupného plnenia série [Cieľov](../SettingUpAaps/CompletingTheObjectives.md), ktoré zahŕňajú testovanie špecifických parametrov a odpovedanie na otázky s výberom odpovede. Funkcie **AAPS** sa odomknú po úspešnom splnení cieľov. Tento proces umožňuje používateľovi bezpečne migrovať po etapách z otvorenej slučky do uzavretej slučky a zároveň sa učiť o rôznych funkciách systému **AAPS**.
 
-The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimise these issues.
+[Ciele](../SettingUpAaps/CompletingTheObjectives.md) boli navrhnuté tak, aby sa dosiahol čo najlepší úvod do **AAPS**, berúc do úvahy typické chyby ktoré vývojári **AAPS** pozorovali u nových používateľov. Chyby sa môžu stať, pretože začiatočník je neskúsený a príliš dychtivý začať s **AAPS** alebo prehliadol kľúčové body. Cieľom [Cieľov](../SettingUpAaps/CompletingTheObjectives.md) je minimalizovať tieto problémy.
 
-### Medical safety
+### Bezpečnosť pri používaní zdravotníckych zariadení a inzulínovej techniky
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
 :class: danger
-Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
+V súvislosti s rýchlym zlepšením kontroly hladiny glukózy v krvi a znížením HbA1c sa odporúča opatrnosť 
 ```
 
-An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicans make their patients aware of this issue.
+Dôležitým bezpečnostným aspektom je, že **rýchle zníženie HbA1c a zlepšená kontrola hladiny glukózy v krvi u osôb, ktoré majú dlhší čas zvýšené hladiny glukózy, môže spôsobiť trvalé poškodenie**. Mnoho ľudí s cukrovkou si to neuvedomuje a nie všetci lekári o tomto probléme informujú svojich pacientov.
 
-This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+Toto poškodenie môže zahŕňať **stratu zraku a trvalú neuropatiu (bolesť)**. Tomuto poškodeniu sa dá vyhnúť pomalším znižovaním priemerných hladín glukózy. Ak máte momentálne zvýšený HbA1c a prechádzate na **AAPS** (alebo akýkoľvek iný systém s uzavretou slučkou), _prosím_ pred začatím preberte toto potenciálne riziko so svojím lekárom a dohodnite si s ním časový harmonogram s postupným znižovaním bezpečných cieľových hodnôt glukózy. V **AAPS** si môžete spočiatku jednoducho nastaviť vyššie cieľové hodnoty glukózy (v súčasnosti je najvyššia cieľová hodnota, ktorú si môžete vybrať, 10,6 mmol/l, ale v prípade potreby si môžete udržiavať aj zámerne slabý profil) a potom cieľovú hodnotu v priebehu mesiacov znižovať.
 
-#### How quickly can I reduce my HbA1c without risking permanent damage?
+#### Ako rýchlo si môžem znížiť HbA1c bez rizika trvalého poškodenia?
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the Hba1C dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
+Jedna retrospektívna [štúdia](https://pubmed.ncbi.nlm.nih.gov/1464975/) so 76 pacientmi uviedla, že riziko progresie retinopatie sa zvýšilo 1,6-krát, 2,4-krát a 3,8-krát, ak Hba1C klesol o 1 %, 2 % alebo 3 % počas 6 mesiacov. Navrhli, aby **„pokles hodnoty HbA1c počas 6-mesačného obdobia bol obmedzený na menej ako 2 %, aby sa zabránilo progresii retinopatie... Príliš rýchly pokles na začiatku kontroly glykémie by mohol spôsobiť závažné alebo prechodné zhoršenie progresie retinopatie.“**
 
-N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
+N.B. Ak používate iné jednotky HbA1c (mmol/mol namiesto %), kliknite [sem](https://www.diabetes.co.uk/hba1c-units-converter.html) pre výpočet HbA1c.
 
-In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
+V ďalšom retrospektívnom [hodnotení](https://academic.oup.com/brain/article/138/1/43/337923) 954 pacientov výskumníci zistili, že:
 
-**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
+**„Pri poklese HbA1c o 2 – 3 % počas 3 mesiacov existovalo 20 % riziko vzniku neuropatie vyvolanej liečbou pri diabete, pri poklese HbA1c o > 4 % počas 3 mesiacov riziko vzniku neuropatie vyvolanej liečbou pri diabete prekročilo 80 %“.**
 
-A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
+V [komentári](https://academic.oup.com/brain/article/138/1/2/340563) k tejto práci sa zhoda, že na predchádzanie komplikáciám **cieľom by malo byť zníženie A1c o < 2 % počas 3 mesiacov.** Ďalšie recenzie na túto tému si môžete prečítať [tu](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) a [tu](https://www.mdpi.com/1999-4923/15/7/1791).
 
-It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
+Všeobecne je známe, že _novo_ diagnostikovaní diabetici 1. typu (ktorí majú často pri diagnóze veľmi vysoký HbA1c pred začatím inzulínovej liečby) sa zdajú byť schopní rýchlo znížiť svoj HbA1c ihneď po diagnóze bez toho, aby sa stretli s týmito rizikami v rovnakej miere, pretože nemali zvýšené hladiny glukózy v krvi počas takéhoto dlhodobého obdobia. Je to však stále otázka, ktorú by ste mali prediskutovať so svojím lekárom.
 
 (PreparingForAaps-no-sglt-2-inhibitors)=
-### No SGLT-2 inhibitors
+### Žiadne inhibítory SGLT-2
 
 ```{admonition} NO SGLT-2 inhibitors
 :class: danger
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
+Inhibítory SGLT-2, nazývané aj gliflozíny, inhibujú reabsorpciu glukózy v obličkách. Gliflozíny výrazne znižujú hladinu cukru v krvi, a preto ich NESMIETE užívať počas používania systému s uzavretou slučkou, ako je AAPS! Hrozí značné riziko ketoacidózy a/alebo hypoglykémie! Kombinácia tohto lieku so systémom, ktorý znižuje bazálne dávky s cieľom zvýšiť glykémiu, je obzvlášť nebezpečná. 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45g of glucose. The problem is that unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs resulting in your body having too much insulin compared to the absorbed Carbs, resulting in hypoglycemia.
+Stručne povedané:
+- **Príklad 1: riziko hypoglykémie**
+> Počas obeda použijete **AAPS** na podanie bolusu na základe konzumácie 45 g glukózy. Problém je v tom, že AAPS si to neuvedomuje, ale inhibítory spôsobujú, že telo vylučuje časť sacharidov, čo má za následok, že vaše telo má priveľa inzulínu v porovnaní s absorbovanými sacharidmi, čo vedie k hypoglykémii.
 
-- **Example 2: risk of Ketoacidosis**
->The inhibitors eliminate some of the carbs in the background causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake  including basal. Over time this can result  in your  BG remaining below target value to the point where the body does not have enough background insulin to absorb any carbs resulting in Ketoacidosis. Ordinarily, Ketoacidosis  develops in T1D patients because their pump fails which would trigger alerts on their phone and be noticeable due to a high BG value. However, the danger with Gliflozins  is that there would be no AAPS alerts as  the pump remains operational and the BG potentially remains within target.  
+- **Príklad 2: riziko ketoacidózy**
+> Inhibítory eliminujú časť sacharidov v pozadí, čo spôsobuje zníženie glykémie. **AAPS** will automatically instruct the pump to decrease insulin intake  including basal. Over time this can result  in your  BG remaining below target value to the point where the body does not have enough background insulin to absorb any carbs resulting in Ketoacidosis. Ordinarily, Ketoacidosis  develops in T1D patients because their pump fails which would trigger alerts on their phone and be noticeable due to a high BG value. However, the danger with Gliflozins  is that there would be no AAPS alerts as  the pump remains operational and the BG potentially remains within target.  
 
 Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro, and Xigduo XR, others.
 ```
