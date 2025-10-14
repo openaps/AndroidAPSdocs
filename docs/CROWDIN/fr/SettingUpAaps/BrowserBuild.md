@@ -76,18 +76,18 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 :::{include} BrowserBuildFileManagerPlus.md
 ```
 
-- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
+- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: note
 
 1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
 ```text
-https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
 Or visit the latest release page:
 ```text
-https://github.com/Angus-repo/aaps-ci-preparation/releases/latest
+https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
 2.Backup copy hosted on this site:
@@ -254,7 +254,7 @@ GitHub will now be able to store the AAPS apk file in your Google Drive, once bu
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
-      src="https://www.dailymotion.com/embed/video/x9rdwms"
+      src="https://www.dailymotion.com/embed/video/x9rdwms?autoplay=0&queue-enable=false&loop=1"
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
       frameborder="0"
       allowfullscreen>
