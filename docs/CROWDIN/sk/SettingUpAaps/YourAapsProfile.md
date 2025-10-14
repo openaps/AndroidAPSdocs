@@ -85,7 +85,7 @@ If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl 
 
 The **figure below** shows an example of how the target can be set in an **AAPS** profile.
 
-![Target](../images/Profile_Target.png)
+![Cieľ](../images/Profile_Target.png)
 
 **BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
 
