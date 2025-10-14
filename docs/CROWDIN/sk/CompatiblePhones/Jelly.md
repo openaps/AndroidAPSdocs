@@ -31,7 +31,7 @@ You can enable NFC for Libre sensors.
 
 ## Jelly Star Mini
 
-**Features**
+**Vlastnosti**
 
 * Android 13
 * 8 GB RAM
