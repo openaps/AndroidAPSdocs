@@ -24,6 +24,10 @@ Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggesti
 
 ### Install a new patched (!) G7 app and start the sensor
 
+WARNING --- [BYODA](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)---
+There are reported issues **AAPS** receiving no BG data when using either BYODA & DiaKEM as its data source. Users are recommended to use [X-Drip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+
+
 A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
 - Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
