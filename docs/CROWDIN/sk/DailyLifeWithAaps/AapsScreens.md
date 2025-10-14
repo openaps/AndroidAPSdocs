@@ -9,208 +9,207 @@
 
 ## Domovská obrazovka
 
-![Homescreen V2.7](../images/Home2020_Homescreen.png)
+![Domovská obrazovka V2.7](../images/Home2020_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Toto je prvá obrazovka, s ktorou sa stretnete po otvorení **AAPS** a obsahuje väčšinu informácií, ktoré budete denne potrebovať.
 
-### Section A - Tabs
+### Sekcia A – Záložky
 
-* Navigate between the various **AAPS** modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Môžete sa pohybovať medzi rôznymi modulmi **AAPS**.
+* Prípadne môžete meniť obrazovky potiahnutím prsta doľava alebo doprava.
+* Zobrazené záložky je možné vybrať v [nastaveniach konfigurátora](#Config-Builder-tab-or-hamburger-menu).
 
 (aaps-screens-profile--target)=
 
-### Section B - Profile & target
+### Sekcia B – Profil a ciel
 
-#### Current Profile
+#### Aktuálny Profil
 
-The current profile is displayed in the left bar.
+Aktuálny profil sa zobrazuje v ľavom paneli.
 
-Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Krátkym stlačením panela profilu zobrazíte podrobnosti profilu. Dlhým stlačením panela profilov [prepínate medzi rôznymi profilmi](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a remaining duration of 59mn.
-3. Profile switch with a specific percentage of 120%.
-4. Profile switch with a specific percentage of 80% and a remaining duration of 59 mn.
-5. Profile switch with a time shift of -1 hour.
-6. Profile switch with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
+1. Bežné zobrazenie so štandardnou aktiváciou profilu.
+2. Zmena profilu so zostávajúcou dobou trvania 59 minút.
+3. Zmena profilu s konkrétnym percentom 120 %.
+4. Zmena profilu s konkrétnym percentom 80 % a zostávajúcou dobou trvania 59 minút.
+5. Zmena profilov s časovým posunom -1 hodina.
+6. Zmena profilov s konkrétnym percentom 120 %, časovým posunom o 1 hodinu a zostávajúcim trvaním 59 minút.
 
-#### Target
+#### Cieľ
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Zostávajúci čas dočasného cieľa](../images/Home2020_TT.png)
 
-Current target blood glucose level is displayed in the right bar.
+Aktuálna cieľová hladina glukózy v krvi sa zobrazuje v pravom stĺpci.
 
-Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
+Krátkym stlačením panela s cieľmi nastavíte **[dočasný cieľ](../DailyLifeWithAaps/TempTargets.md)**.
 
-If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
+Ak je nastavený dočasný cieľ, lišta sa zafarbí na žlto a v zátvorkách sa zobrazí zostávajúci čas v minútach.
 
 (AapsScreens-visualization-of-dynamic-target-adjustment)=
 
-#### Visualization of Dynamic target adjustment
+#### Vizualizácia nastavenia Dynamického cieľa
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+![Vizualizácia dynamického nastavenia cieľa](../images/Home2020_DynamicTargetAdjustment.png)
 
-When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+Pri použití [algoritmu SMB](#Config-Builder-aps) a funkcie [Autosens](#Open-APS-features-autosens) dokáže **AAPS** dynamicky upraviť váš cieľ na základe citlivosti.
 
-Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](#Preferences-openaps-smb-settings):
+V časti [Predvoľby > Nastavenia OpenAPS SMB](#Preferences-openaps-smb-settings) povoľte jednu alebo obe z nasledujúcich možností:
 
-* "sensitivity raises target" and/or 
-* "resistance lowers target" 
+* „citlivosť zvyšuje cieľ“ a/alebo 
+* "rezistencia znižuje cieľ" 
 
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
+Ak systém **AAPS** zistí rezistenciu alebo citlivosť, cieľ sa zmení oproti nastaveniu v profile. Keď sa zmení cieľová glukóza, pozadie sa zmení na zelené.
 
 (AapsScreens-section-c-bg-loop-status)=
 
-### Section C - BG & loop status
+### Sekcia C – Stav glykémie a slučky
 
-#### Current blood glucose
+#### Aktuálna hladina glukózy v krvi
 
-The latest blood glucose reading from your CGM is shown on the left side.
+Najnovšia hodnota glukózy v krvi z vášho CGM sa zobrazuje na ľavej strane.
 
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
+Farba hodnoty glykémie odráža stav v zadanom [rozsahu](#Preferences-range-for-visualization).
 
-* green = in range
-* red = below range
-* yellow = above range 
+* Zelená = v rozsahu
+* červená = pod rozsahom
+* žltá = nad rozsahom 
 
 ![Deltas](../images/Home_Delta.png)
 
-The blocks in the middle shows:
+Bloky v strede zobrazujú:
 
-1. how many minutes since last **CGM** reading
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-    Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
+1. Koľko minút uplynulo od posledného merania **CGM**
+2. Rozdiely oproti poslednej nameranej hodnote: Δ, a oproti priemeru za posledných 15 a 40 minút (Δ15 a Δ40).  
+    Dlhodobé odchýlky sa vypočítavajú ako priemerná hodnota zmien v minulosti, pričom ukazujú, aká bola priemerná hodnota.
 
 (AapsScreens-loop-status)=
 
-#### Loop status
+#### Stav uzavretého okruhu
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Stav uzavretého okruhu](../images/Home2020_LoopStatus.png)
 
-On the right side, an icon shows the loop status:
+Na pravej strane ikona zobrazuje stav slučky:
 
-1. Green circle = loop running
-2. Green circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
-3. Red circle = loop disabled (not working permanently)
-4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-6. Orange circle = super bolus running - remaining time is shown below icon
-7. Blue circle with dotted line = open loop
+1. Zelený kruh = bežiaca slučka
+2. Zelený kruh s bodkovanou čiarou = [low glucose suspend (LGS)](#objectives-objective6)
+3. Červený kruh = slučka deaktivovaná (nefunguje trvalo)
+4. Žltý kruh = slučka pozastavená (dočasne pozastavená, ale bude podávaný bazálny inzulín) - zostávajúci čas je zobrazený pod ikonou
+5. Sivý kruh = pumpa odpojená (dočasne sa vôbec nedáva inzulín) - zostávajúci čas je zobrazený pod ikonou
+6. Oranžový kruh = prebieha super bolus – zostávajúci čas je zobrazený pod ikonou
+7. Modrý kruh s bodkovanou čiarou = otvorená slučka
 
-Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
+Krátkym alebo dlhým stlačením ikony otvoríte dialógové okno Slučka, kde môžete prepnúť režim slučky (Zatvoriť, Pozastaviť pri nízkej glukóze, Otvoriť alebo Zakázať), pozastaviť/opätovne zapnúť slučku alebo odpojiť/opätovne pripojiť pumpu.
 
-* If short press on Loop icon, a validation is required after selection in Loop Dialog
+* Ak krátko stlačíte ikonu Slučky, po výbere v okne Slučky je potrebné overenie
     
     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
 (aaps-screens-bg-warning-sign)=
 
-#### BG warning sign
+#### Upozornenia na glykémiu
 
-If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
+Ak sa z akéhokoľvek dôvodu vyskytnú problémy s údajmi o glykémii, ktoré prijíma **AAPS**, zobrazí sa vám na hlavnej obrazovke varovný signál pod hodnotou glykémie.
 
-##### Red warning sign: Duplicate BG data
+##### Červená varovná značka: Duplicitné údaje o glykémii
 
-The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
+Červený varovný signál vám signalizuje potrebu okamžitého zásahu. Dostávate **duplicitné údaje o glykémii**, čo bráni správnemu fungovaniu slučky. Preto bude vaša slučka deaktivovaná, kým sa problém nevyrieši.
 
-    {admonition} Your loop is not running
+    {admonition} Vaša slučka je pozastavená
     :class: note
-    Your loop is not running until you solve this issue !
+    Vaša slučka je pozastavená kým sa problém neodstráni !
 
 ![Red BG warning](../images/bg_warn_red.png)
 
-You need to find out why you get duplicate BGs:
+Musíte zistiť, prečo máte duplicitné hodnoty glykémie:
 
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In **AAPS**, go to [Preferences > NSClient](#Preferences-nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
+* Je Dexcom bridge povolený na vašej Nightscout stránke? Vypnutie bridge je možné cez administračný panel vašej Nightscout stránky: nájdite premennú „enable“ a z nej odstráňte hodnotu „bridge". (Pre heroku [viac detailov môžte nájsť tu](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Nahráva sa viacero zdrojov vašej glykémie do Nightscoutu? Ak používate aplikáciu BYODA, povoľte upload v **AAPS**, ale nepovoľujte ho v xDrip+, ak ho používate.
+* Máte nejakých sledovateľov, ktorí prijímajú údaje o vašej glykémii ale zároveň ich oj odosielajú na váš Nightscout účet?
+* Posledná možnosť: V **AAPS** prejdite do časti [Nastavenia > NSClient](#Preferences-nsclient), vyberte nastavenia synchronizácie a vypnite možnosť „Prijímať údaje CGM z NS“.
 
-To remove the warning immediately and get to loop running again, you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+Ak chcete rýchlo odstrániť upozornenie a znova spustiť slučku, musíte manuálne odstrániť niekoľko položiek z karty Dexcom/xDrip+.
 
-However, when there are a lot of duplicates, it might be easier to
+Ak je však veľa zdvojených údajov, jednoduchšie môže byť
 
-* [backup your settings](../Maintenance/ExportImportSettings.md),
-* reset your database in the maintenance menu and
-* [import your settings](../Maintenance/ExportImportSettings.md) again
+* [zálohujte si nastavenia](../Maintenance/ExportImportSettings.md),
+* resetujte databázu v ponuke údržby a
+* [importujte nastavenia](../Maintenance/ExportImportSettings.md) znova
 
-##### Yellow warning sign
+##### Žltý výstražný signál
 
-The yellow warning signal is indicating that your BG arrived in irregular time intervals or that some BGs are missing. When pressing the sign, the message indicates “Recalculated data used”.
+Žltý výstražný signál signalizuje, že vaša glykémia prichádzala v nepravidelných časových intervaloch alebo že niektoré hodnoty glykémie chýbajú. Po stlačení znaku sa zobrazí správa „Použité prepočítané dáta“.
 
 ![Yellow BG warning](../images/bg_warn_yellow.png)
 
-Usually you do not have to take any action. The closed loop will continue to work!
+Zvyčajne nemusíte podniknúť žiadne kroky. Uzavretá slučka bude naďalej fungovať!
 
-As a sensor change is interrupting the constant flow of BG data, a yellow warning sign after sensor change is normal and nothing to worry about.
+Keďže počas výmeny/zahrievania senzora sú dáta o glykémii pozastavené, žltý varovný signál v takomto prípade je normálny a nie je dôvod na obavy.
 
-Special note for Libre users:
+Špeciálna poznámka pre používateľov Libre:
 
-* Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
-* Also, jumpy readings interrupt the continuous flow.
-* Therefore, the yellow warning sign will be 'always on' for Libre users.
+* Každá jedna hodnota LIBRE sa každých pár hodín posunie o minútu alebo dve, čo znamená, že nikdy nedosiahnete pravidelný tok údajov o glykémii.
+* Taktiež, nepravidelné hodnoty narúšajú plynulé dáta.
+* Preto bude žltá výstražná značka pre používateľov Libre „vždy aktívna“.
 
-*Note*: Up to 30h hours are taken into accord for **AAPS** calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+*Poznámka*: Pri výpočtoch **AAPS** sa berie do úvahy doba prevádzky až 30 hodín. Takže aj po vyriešení problému môže trvať približne 30 hodín, kým žltý trojuholník zmizne po poslednom nepravidelnom intervale.
 
-#### Simple mode
+#### Jednoduchý mód
 
-An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+Ikona s detskou tvárou v pravom hornom rohu tejto sekcie označuje, že sa nachádzate v [Jednoduchom móde](#preferences-simple-mode).
 
 ![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
 
-### Section D - IOB, COB, BR and AS
+### Sekcia D – IOB, COB, BR a AS
 
 ![Section D](../images/Home2020_TBR.png)
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
+1. **Striekačka**: Inzulín v tele (IOB) – predstavuje množstvo aktívneho inzulínu, ktorý ešte účinkuje vo vašom tele. Hodnota IOB by bola nulová, ak by sa podával iba základný (bazálny) inzulín a zároveň by v tele nezostali žiadne zvyšky z predchádzajúcich bolusov.
     
-    * IOB may be negative if there have recently been periods of reduced basal.
-    * Press the icon to see the split of bolus and basal insulin
+    * IOB môže byť záporný, ak bol v poslednom čase aktívny znížený bazál.
+    * Stlačením ikony zobrazíte rozdelenie bolusového a bazálneho inzulínu
 
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
+2. **Klások**: [aktívne sacharidy v tele (COB)](../DailyLifeWithAaps/CobCalculation.md) – ešte nevstrebané sacharidy, ktoré ste predtým zjedli. Ikona bliká na červeno, ak sú potrebné ďalšie sacharidy (pozri [nižšie](#aaps-screens-carbs-required))
 
-3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%) 
-    * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
-    * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
-    * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
+3. **Fialová linka**: aktuálna bazálna dávka. Ikona sa zmení, aby odrážala dočasné zmeny bazálnej dávky (rovná pri 100 %) 
+    * Ťuknutím na ikonu zobrazíte základnú bazálnu dávku a podrobnosti o dočasnej bazálnej dávke (vrátane zostávajúcej dĺžky)
+4. **Šípky hore a dole**: označuje stav funkcií dynamickej citlivosti ([Autosens](#Open-APS-features-autosens) alebo [DynamicISF](#Open-APS-features-DynamicISF)): aktívne alebo neaktívne. V tejto časti sa môže zobraziť niekoľko hodnôt: 
+    * AS: Hodnota automatickej citlivosti. Zobrazuje sa, aj keď je funkcia Autosens vypnutá (len pre informáciu). Zobrazuje sa aj pri aktívnej funkcii DynISF, hoci to nemá žiadny účinok.
+    * Alg: Hodnota DynamicISF (na základe TDD). Viac informácií nájdete na stránke [DynamicISF](#Open-APS-features-DynamicISF).
 
 (aaps-screens-carbs-required)=
 
-#### Carbs required
+#### Požadované sacharidy
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Požadované sacharidy](../images/Home2020_CarbsRequired.png)
 
-Carbs suggestions are given when the reference design detects that it requires carbs.
+Návrhy na sacharidy sa zobrazia, keď systém zistí potrebu ďalších sacharidov.
 
-This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
+V tomto prípade si algoritmus oref myslí, že vám nebude stačiť nulový dočasný bazál a preto budete potrebovať ďalšie sacharidy.
 
-The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+Upozornenia na sacharidy sú oveľa sofistikovanejšie ako tie z bolusovej kalkulačky. Môže sa zobraziť návrh sacharidov, zatiaľ čo bolusová kalkulačka nezobrazuje chýbajúce sacharidy.
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+Upozornenia na potrebu sacharidov je možné v prípade potreby odoslať do Nightscoutu, v takom prípade sa upozornenie zobrazí a pošle ďalej.
 
-### Section E - Status lights
+### Sekcia E – Stavové indikátory
 
 ![Section E](../images/Home2020_StatusLights.png)
 
-Status lights give a visual warning for
+Stavové indikátory poskytujú vizuálne varovanie pred
 
 * Vek kanyly
 * Vek inzulínu (dni používania zásobníka)
 * Hladina inzulínu v zásobníku (units)
 * Vek senzora
-* Battery age and level (%)
+* Vek a úroveň nabitia batérie (%)
 
-If threshold warning is exceeded, values will be shown in yellow.
+Pri prekročení limitu sa hodnoty zobrazia žltou farbou.
 
-If threshold critical is exceeded, values will be shown in red.
+Ak je prekročená kritická hodnota, hodnoty sa zobrazia červenou farbou.
 
-Settings can be changed in [Preferences > Overview > Status lights](#Preferences-status-lights).
+Nastavenia je možné zmeniť v časti [Nastavenia > Prehľad > Stavové indikátory](#Preferences-status-lights).
 
 Depending on the pump you use, you may not have all of these icons.
 
