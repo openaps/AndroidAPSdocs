@@ -11,7 +11,7 @@
   </div>
 </div>
 
-Install Simple HTTP Server</br></br> If you are a Windows/Mac user, you can install it from the store. After clicking the link, you will be asked whether to allow opening it. 請選擇打開連結。</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br></br>
+安裝 Simple HTTP Server</br></br> 如果您是 Windows / Mac 使用者，您可以從商店安裝它。 點擊連結後，系統會詢問您是否允許打開它。 請選擇打開連結。</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br></br>
 
 在 Mac 上的範例：
 
