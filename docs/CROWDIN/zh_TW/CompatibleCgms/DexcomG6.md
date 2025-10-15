@@ -1,6 +1,6 @@
 # Dexcom G6 和 ONE
 
-WARNING --- [BYODA](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)--- There are reported issues **AAPS** receiving no BG data when using either BYODA & DiaKEM as its data source. Users are recommended to use [X-Drip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+警告 --- [BYODA](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)--- 有回報指出，當以 BYODA 與 DiaKEM 作為資料來源時，**AAPS** 可能無法接收到血糖資料。 建議使用者在問題解決前，先將 [X-Drip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) 設為 **AAPS** 的血糖資料來源。
 
 ## 基本事項
 
