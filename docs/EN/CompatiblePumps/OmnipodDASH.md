@@ -103,8 +103,6 @@ Please **swipe left** to the **DASH** tab where you will be able to manage all p
 
 ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) 'Pod Management' (Activate, Deactivate, Play test beep, and Pod history)
 
-(omnipod-dash-activate-pod)=
-
 ### Activate Pod
 
 1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
@@ -177,7 +175,7 @@ Click on the **Next** button.
 
 ### Deactivate Pod
 
-Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of total pod usage.
 
 To deactivate a pod (either from expiration or from a pod failure):
 
