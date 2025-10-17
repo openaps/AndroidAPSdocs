@@ -7,18 +7,21 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 These are the specifications of the **Omnipod DASH** ('DASH') and what differentiates it from the **Omnipod EROS** ('EROS'):
 
 - The DASH pods are identified by a **blue needle cap** (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
--  DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
+- DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
 - The DASH's Bluetooth connection is used only when sending a command (e.g a Bolus), and disconnects right after issuing the command.
 - No more "no connection to link device / pod" errors with DASH.
 - **AAPS** will wait for pod's accessibility to send commands.
 - On pod activation, **AAPS** will find and connect to a new DASH pod.
 - Expected range from phone: 5-10 meters (YMMV).
 
+(#omnipod-dash-known-aaps-constraints/issues)=
+
 ## Omnipod DASH known AAPS constraints/issues
 - Android 16 must use AAPS version 3.3.2.1 or later ([Github issue - Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471))
 - [Too frequent basal updates may cause basal insulin delivery problems with Omnipod Dash](https://github.com/nightscout/AndroidAPS/issues/4158) if using Super Micro Bolas limit to 5 minute interval to avoid this issue.
 - Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set.
 - The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to take a setting export after each pod activation to allow a restore of that pods activation state if something happens to your rig. 
+- When setting a new basil profile, DASH will suspend delivery before setting the new basal **Profile**. Sometimes the basil profile won't automatically re-start see section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
 
 ## Hardware/Software Requirements
 
@@ -42,7 +45,7 @@ The instructions below explain how to activate a new pod session using **AAPS**.
 
 ## Before You Begin
 
-**Ensure you have read and understand all the [Omnipod and AAPS Constraints and Issues](#Omnipod-DASH-known-AAPS-constraints/issues)**
+**Ensure you have read and understand all the [Omnipod and AAPS Constraints and Issues](#omnipod-dash-known-aaps-constraints/issues)**
 
 #### **SAFETY FIRST** - you should not try to connect **AAPS** to a pod for the first time without having access to all of the following:
 1. Extra pods (3 or more spare)
@@ -230,7 +233,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 ### Resuming Insulin Delivery
 
-**Note**: During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile** as delivery can be suspended. Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
+**NOTE**: During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile** as delivery can be suspended. Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
 
 Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal **Profile**. The pod will again accept commands for bolus, **TBR**, and **SMB**.
 
