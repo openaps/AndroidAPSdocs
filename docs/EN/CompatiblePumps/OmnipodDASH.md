@@ -32,7 +32,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
     - For **Android 16**: you **MUST** use **Version 3.3.2.1 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, due to Android 16 changing how it's bluetooth works any version earlier than 3.3.2.1 will likely cause pod failures and/or activation issues. 
 - A supported [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-The instructions below explain how to activate a new pod session. Wait to close to expiry of a current pod session before trying to connect **AAPS** with a new pod. Once a pod is is cancelled it cannot reused and the disconnection will be final.
+The instructions below explain how to activate a new pod session using **AAPS**. You should wait for your current Pod to be close expiry, as you will need to activate a new Pod with **AAPS**. Once a pod is cancelled it cannot be reused/re-activated, the disconnection is final.
 
 ## Before You Begin
 
@@ -40,7 +40,7 @@ The instructions below explain how to activate a new pod session. Wait to close 
 1. Extra pods (3 or more spare)
 2. Spare Insulin and MDI equipment
 3. A working Omnipod PDM (In case **AAPS** fails)
-4. Supported Phones are a must!
+4. Supported Phones are a must!Hardware/Software RequirementsHardware/Software Requirements
 5. Correct version of AAPS built and installed (See [Hardware/Software Requirements](#Hardware/Software-Requirements))
 
 **Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.** Previously a user may have operated a PDM to send commands to your DASH. A DASH will only facilitate a single device to send commands to communicate with it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate a DASH with your Android phone through the **AAPS**, **you will no longer be able to use your PDM with that pod**. The **AAPS** Dash driver in your Android phone is now your acting PDM.
