@@ -19,7 +19,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 ## Omnipod DASH known AAPS constraints/issues
 - Android 16 must use AAPS version 3.3.2.1 or later ([Github issue - Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471))
 - [Too frequent basal updates may cause basal insulin delivery problems with Omnipod Dash](https://github.com/nightscout/AndroidAPS/issues/4158) if using Super Micro Bolas limit to 5 minute interval to avoid this issue.
-- Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set.
+- Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
 - The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to take a setting export after each pod activation to allow a restore of that pods activation state if something happens to your rig. 
 - When setting a new basil profile, DASH will suspend delivery before setting the new basal **Profile**. Sometimes the basil profile won't automatically re-start see section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
 
@@ -73,7 +73,7 @@ You will need to change this 1.1 unit basal rate to a time range of either 9:00-
 #### **0U/h Profile basal rates are NOT supported in AAPS**  
 While the DASH does support a zero basal rate, **AAPS** uses multiples of the user's **Profile** basal rate to determine automated treatment; it cannot function with a zero basal rate.  
 Instead a temporary zero basal rate can be achieved through the "Disconnect pump" function, or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.  
-**NOTE:** The lowest basal rate allowed in **AAPS** is 0.05U/h.
+**NOTE:** The lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
 
 ## Selecting Dash in AAPS
 
