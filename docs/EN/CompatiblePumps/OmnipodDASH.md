@@ -52,7 +52,7 @@ The instructions below explain how to activate a new pod session using **AAPS**.
 #### **Your pod ***WILL NOT*** stop delivering insulin when it is not connected to AAPS**.
 Default basal rates are programmed on the pod on activation as defined in the current active [**Profile**](../SettingUpAaps/YourAapsProfile.md).  
 As long as **AAPS** is operational it will send basal rate adjustment commands that run for a maximum of 120 minutes.  
-When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod -> phone distance) the pod will automatically fall back to default basal rates as defined in your [**Profile**](../SettingUpAaps/YourAapsProfile.md).
+When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod ➜ phone distance) the pod will automatically fall back to default basal rates as defined in your [**Profile**](../SettingUpAaps/YourAapsProfile.md).
 
 #### **AAPS Profile(s) do not support 30 minute basal rate time frames**
 If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported.
@@ -66,21 +66,22 @@ Instead a temporary zero basal rate can be achieved through the "Disconnect pump
 
 ## Selecting Dash in AAPS
 
-There are **two ways**:
+There are **two** available options to configure Omnipod in **AAPS**:
 
 ### Option 1: New installations
 
-When installing **AAPS** for the first time, the **Setup Wizard** will guide new users through key features and installation requirements for **AAPS**. Select “DASH” when you reach Pump selection.
+When installing **AAPS** for the first time, the **Setup Wizard** will guide new users through key features and installation requirements for **AAPS**.  
+Select “DASH” when you reach Pump selection.
 
 ![Enable_Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
 
-When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up **AAPS** (see option 2).
+When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up **AAPS** (See [Option 2](#Option-2:-The-Config-Builder)).
 
 ### Option 2: The Config Builder
 
 On an existing installation you can select the **DASH** pump from the Config builder:
 
-On the top-left hand corner **hamburger menu** select **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. 
+On the top-left hand corner **hamburger menu** select **Config Builder (1)** ➜ **Pump** ➜ **Dash** ➜ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. 
 
 Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the DASH menu to be displayed as a tab in the **AAPS** interface titled **DASH**. Checking this box will facilitate your access to the DASH commands when using **AAPS**. 
 
@@ -108,60 +109,71 @@ Please **swipe left** to the **DASH** tab where you will be able to manage all p
 
 1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
-![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)
+   ![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)  
+    
+   ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)  
 
-​    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
+2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed.  
 
-2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.
+   ***NOTE:** When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.*  
 
-![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
+   ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)  
 
-Ensure that the new pod and the phone running **AAPS** are within close proximity of each other and click the **Next** button.
+   ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)  
 
-**NOTE**: if the  error message below pops up _'Could not find an available pod for activation'_ (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.
+   Ensure that the new pod and the phone running **AAPS** are within close proximity of each other and click the **Next** button.  
 
-![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
+   ***NOTE**: if the  error message below pops up _'Could not find an available pod for activation'_ (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.*  
 
-3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
+   ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
-![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
+3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  
+   A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
+   
+   ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-4. Next, prepare the infusion site ready to receive the new pod. Wash hands to avoid any risk of infection. Clean the infusion site by either using soap and water or an alcohol wipe to disinfect and let the skin air dry completely before proceeding. Remove the pod's blue plastic needle cap. If you see something that sticks out of the pod or unusual, cancel the process and start with a new pod. If everything looks OK, proceed to take off the white paper backing from the adhesive and apply the pod to the selected site on your body. When finished, click on the **Next** button.
+4. Next, prepare the infusion site ready to receive the new pod. Wash hands to avoid any risk of infection. Clean the infusion site by either using soap and water or an alcohol wipe to disinfect and let the skin air dry completely before proceeding. If you get skin irritation from the adhesive consider using a Barrier Wipe or Barrier Spray.  
 
-![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
+   Remove the pod's blue plastic needle cap. If you see something that sticks out of the pod or it looks unusual, STOP the process and start with a new pod. If everything looks OK, proceed to take off the white paper backing from the adhesive and stick the pod to the selected site on your body.  
+   
+   When finished, click on the **Next** button.  
 
-5. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula**.
+   ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
+5. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula**.  
 
-6. After pressing **OK**, it may take some time before the DASH responds and inserts the cannula (1-2 minutes maximum). Be patient.
+   ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
- *NOTE: Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
+6. After pressing **OK**, it may take some time before the DASH responds and inserts the cannula (1-2 minutes maximum). **Be patient!**
 
-![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
+   ***NOTE:** Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
 
-7. A green checkmark appears, and the **Next** button becomes enabled upon successful cannula insertion. Click on the **Next** button.
+   ![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
+7. A green checkmark is shown on the screen, and the **Next** button becomes available to select upon successful cannula insertion.   
+Click on the **Next** button.
 
-9. The **Pod activated** screen is displayed. Click on the green **Finished** button. Congratulations! You have now started a new pod session.
+   ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
+8. The **Pod activated** screen is displayed.  
 
-10. The **Pod management** menu screen should now display the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
+   Click on the green **Finished** button. 
+   
+   Congratulations! You have now started a new pod session.
+
+   ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
+
+9. The **Pod management** menu screen should now display the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
 
     Click on the back button on your phone to return to the **DASH** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
 
     For more details on the information displayed go to the [**DASH Tab**](#omnipod-dash-tab) section of this document.
 
-![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
+   ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
+   
+   ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-​    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
-
-It is good practice to export settings AFTER activating the pod. Export settings should be done at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](../Maintenance/ExportImportSettings.md).
-
-
-(omnipod-dash-deactivate-pod)=
+   ***NOTE:** It is good practice to export settings AFTER activating the pod. Settings should be exported after each pod change and once a month, ensure you copy the exported settings file to a cloud storage location (e.g. Google Drive) or somewhere off your phone in case you loose your phone (see [**Export settings Doc**](../Maintenance/ExportImportSettings.md)).*
 
 ### Deactivate Pod
 
