@@ -6,24 +6,31 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 
 These are the specifications of the **Omnipod DASH** ('DASH') and what differentiates it from the **Omnipod EROS** ('EROS'):
 
-* The DASH pods are identified by a blue needle cap (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
-*  DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-* The DASH's bluetooth connection is used only when needed, and connects to send command and disconnects right after!
-* No more "no connection to link device / pod" errors with DASH.
-* **AAPS** will wait for pod's accessibility to send commands.
-* On pod activation, **AAPS** will find and connect to a new DASH pod.
-* Expected range: 5-10 meters (YMMV).
+- The DASH pods are identified by a blue needle cap (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
+-  DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
+- The DASH's bluetooth connection is used only when needed, and connects to send command and disconnects right after!
+- No more "no connection to link device / pod" errors with DASH.
+- **AAPS** will wait for pod's accessibility to send commands.
+- On pod activation, **AAPS** will find and connect to a new DASH pod.
+- Expected range: 5-10 meters (YMMV).
 
 ## Hardware/Software Requirements
 
-* DASH is identified by blue needle cap.
+- DASH is identified by blue needle cap.
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-* **Compatible Android phone** with a BLE Bluetooth connection  
-  Be aware that **AAPS** Omnipod Dash driver connects with the DASH via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connection can be disturbed by other bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.  
-   -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions.
-* [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+- **A Compatible Android phone** with a Bluetooth Low Energy (BLE) / Bluetooth connection (see [Phones](../Getting-Started/Phones.md) for more info), additionally the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
+    -  The **AAPS** Omnipod Dash driver connects with the DASH Pod using Bluetooth.  
+      **AAPS** will automatically establish a new Bluetooth connection to the Pod every time it needs to send a command (e.g a Bolus), after sending the command the Bluetooth connection is immediately disconnected.  
+       - **NOTE:** The Bluetooth connection can be interrupted/disturbed by other Bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... Devices like this can cause connection errors or pod activation issues on some models of phones. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&amp;single=true) list for known working configurations before committing to a new rig build around Omnipod DASH.
+
+    - The following Apps are known to cause problems for OmniPod DASH and should be avoided if possible (See [Troubleshooting](#Troubleshooting) for advice on other Bluetooth issues):
+      - MyBMW app
+      - Amazon Alexa
+    - For **Android 15** or below: You **MUST** use **Version 3.0 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, however it's advisable to run the latest released version of Master branch.
+    - For **Android 16**: you **MUST** use **Version 3.3.2.1 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, due to Android 16 changing how it's bluetooth works any version earlier than 3.3.2.1 will likely cause pod failures and/or activation issues. 
+- A supported [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
 The instructions below explain how to activate a new pod session. Wait to close to expiry of a current pod session before trying to connect **AAPS** with a new pod. Once a pod is is cancelled it cannot reused and the disconnection will be final.
 
@@ -31,8 +38,8 @@ The instructions below explain how to activate a new pod session. Wait to close 
 
 **SAFETY FIRST** - you should not try to connect **AAPS** to a pod for the first time without having access to extra pods, insulin, and phone devices are a must have.
 
-**Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.** Previously a user may have operated a PDM to send commands to your DASH. A DASH will only faciiliate a single device to send commands to communicate with it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate a DASH with your Android phone through the **AAPS**, **you will no longer be able to use your PDM with that pod**. The **AAPS** Dash driver in your Android phone is now your acting PDM.
-
+**Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.** Previously a user may have operated a PDM to send commands to your DASH. A DASH will only facilitate a single device to send commands to communicate with it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate a DASH with your Android phone through the **AAPS**, **you will no longer be able to use your PDM with that pod**. The **AAPS** Dash driver in your Android phone is now your acting PDM.
+D:\Projects
 *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or AAPS is not working correctly.*
 
 **Your pod will not stop delivering insulin when it is not connected to AAPS**.
