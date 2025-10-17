@@ -1,22 +1,22 @@
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**, available as part of **AAPS** version 3.0.
+These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**, available as part of **AAPS** version 3.0+.
 
 ## Omnipod DASH specifications
 
 These are the specifications of the **Omnipod DASH** ('DASH') and what differentiates it from the **Omnipod EROS** ('EROS'):
 
-- The DASH pods are identified by a blue needle cap (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
+- The DASH pods are identified by a **blue needle cap** (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
 -  DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-- The DASH's bluetooth connection is used only when needed, and connects to send command and disconnects right after!
+- The DASH's Bluetooth connection is used only when sending a command (e.g a Bolus), and disconnects right after issuing the command.
 - No more "no connection to link device / pod" errors with DASH.
 - **AAPS** will wait for pod's accessibility to send commands.
 - On pod activation, **AAPS** will find and connect to a new DASH pod.
-- Expected range: 5-10 meters (YMMV).
+- Expected range from phone: 5-10 meters (YMMV).
 
 ## Hardware/Software Requirements
 
-- DASH is identified by blue needle cap.
+- Omnipod DASH is identified by the blue needle cap.
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
@@ -43,19 +43,26 @@ The instructions below explain how to activate a new pod session using **AAPS**.
 4. Supported Phones are a must!Hardware/Software RequirementsHardware/Software Requirements
 5. Correct version of AAPS built and installed (See [Hardware/Software Requirements](#Hardware/Software-Requirements))
 
-**Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.** Previously a user may have operated a PDM to send commands to your DASH. A DASH will only facilitate a single device to send commands to communicate with it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate a DASH with your Android phone through the **AAPS**, **you will no longer be able to use your PDM with that pod**. The **AAPS** Dash driver in your Android phone is now your acting PDM.
-D:\Projects
-*This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or AAPS is not working correctly.*
+#### **Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.**  
+- Before using **AAPS** you or your care giver would have had to manage the Pod using the Ominipod PDM (or in some regions a Phone app) to send commands to your DASH (e.g a Bolus).  
+- The DASH can only facilitate a single Bluetooth device (e.g PDM or Phone) connection to manage and send commands.  
+- The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate a DASH with your Android phone using **AAPS**, **you will no longer be able to use your PDM with that pod!**. For the time that Pod is active the **AAPS** Dash driver running on your Android phone is now the new PDM for your pod.  
+- **DO NOT Throw away your PDM!**, it is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or **AAPS** is not working correctly.*
 
-**Your pod will not stop delivering insulin when it is not connected to AAPS**.
-Default basal rates are programmed on the pod on activation as defined in the current active **Profile**.
-As long as **AAPS** is operational it will send basal rate commands that run for a maximum of 120 minutes. When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod - phone distance) the pod will automatically fall back to default basal rates.
+#### **Your pod ***WILL NOT*** stop delivering insulin when it is not connected to AAPS**.
+Default basal rates are programmed on the pod on activation as defined in the current active [**Profile**](../SettingUpAaps/YourAapsProfile.md).  
+As long as **AAPS** is operational it will send basal rate adjustment commands that run for a maximum of 120 minutes.  
+When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod -> phone distance) the pod will automatically fall back to default basal rates as defined in your [**Profile**](../SettingUpAaps/YourAapsProfile.md).
 
-**AAPS Profile does not support a 30 minute basal rate time frame**
-If you are new to **AAPS** and are setting up your basal rate **Profile** for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and programmes on an hourly basis. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this im **AAPS**. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does support this feature.
+#### **AAPS Profile(s) do not support 30 minute basal rate time frames**
+If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported.
+For example, on your Ominpod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact basil **Profile** in **AAPS**.  
+You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does NOT support this feature.
 
-**0U/h profile basal rates are NOT supported in AAPS**
-While the DASH does support a zero basal rate, since **AAPS** uses multiples of the user's **Profile** basal rate to determine automated treatment; it cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate. The lowest basal rate allowed in **AAPS** is 0.05U/h.
+#### **0U/h Profile basal rates are NOT supported in AAPS**  
+While the DASH does support a zero basal rate, **AAPS** uses multiples of the user's **Profile** basal rate to determine automated treatment; it cannot function with a zero basal rate.  
+Instead a temporary zero basal rate can be achieved through the "Disconnect pump" function, or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.  
+**NOTE:** The lowest basal rate allowed in **AAPS** is 0.05U/h.
 
 ## Selecting Dash in AAPS
 
