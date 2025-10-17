@@ -36,7 +36,12 @@ The instructions below explain how to activate a new pod session. Wait to close 
 
 ## Before You Begin
 
-**SAFETY FIRST** - you should not try to connect **AAPS** to a pod for the first time without having access to extra pods, insulin, and phone devices are a must have.
+**SAFETY FIRST** - you should not try to connect **AAPS** to a pod for the first time without having access to all of the following:
+1. Extra pods (3 or more spare)
+2. Spare Insulin and MDI equipment
+3. A working Omnipod PDM (In case **AAPS** fails)
+4. Supported Phones are a must!
+5. Correct version of AAPS built and installed (See [Hardware/Software Requirements](#Hardware/Software-Requirements))
 
 **Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.** Previously a user may have operated a PDM to send commands to your DASH. A DASH will only facilitate a single device to send commands to communicate with it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate a DASH with your Android phone through the **AAPS**, **you will no longer be able to use your PDM with that pod**. The **AAPS** Dash driver in your Android phone is now your acting PDM.
 D:\Projects
