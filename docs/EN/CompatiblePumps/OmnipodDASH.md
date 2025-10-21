@@ -109,7 +109,7 @@ To verify that you have selected the DASH in **AAPS**, if you have checked the b
 
 ## Dash Configuration
 
-Please **swipe left** to the **DASH** tab where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
+Please **swipe left** to the [**DASH tab**](#omnipod-dash-tab) where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
 
 ![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) 'Refresh' pod connectivity and status, be able to silence pod alarms when the pod beeps
 
@@ -282,22 +282,16 @@ This section explains how to review your active pod history and filter by differ
 
 This feature is helpful in verifying boluses, TBRs and basal commands that were sent to the pod. The remaining categories are useful for troubleshooting issues and determining the order of events that occurred leading up to a failure.
 
-*NOTE:* **Only the last command can be uncertain**. New commands *will not be sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. The way to 'fix' uncertain commands is to **'refresh pod status'**.
+***NOTE:** **Only the last command can be uncertain**. New commands *will not be sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. The way to 'fix' uncertain commands is to **'refresh pod status'**.*
 
 1. Go to the **DASH** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu and then press the **Pod history (2)** button to access the pod history screen.
 
-![Pod_history_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
-
-
-
- ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
-
-
+   ![Pod_history_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)  
+   ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
 
 2. On the **Pod history** screen, the default category of **All (1)** is displayed, showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **DASH** tab in the main **AAPS** interface.
 
-
-![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
+   ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
 (omnipod-dash-tab)=
 
@@ -305,67 +299,60 @@ This feature is helpful in verifying boluses, TBRs and basal commands that were 
 
 Below is an explanation of the layout and meaning of the icons and status fields on the **DASH** tab in the main AAPS interface.
 
-*NOTE: If any message in the **DASH** tab status fields report (uncertain), then you will need to press the Refresh button to clear it and refresh the pod status.*
+***NOTE:** If any message in the **DASH** tab status fields report (uncertain), then you will need to press the Refresh button to clear it and refresh the pod status.*
 
 ![DASH_Tab_1](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 ### Fields
 
-* **Bluetooth Address:** Displays the current bluetooth address of the connected Pod.
-* **Bluetooth Status:** Displays the current connection status.
-* **Sequence Number:** Displays the sequence number of the active POD.
-* **Firmware Version:** Displays the firmware version for the active connection.
-* **Time on Pod:** Displays the current time on the Pod.
-* **Pod expires:** Displays the date and time when the Pod will expire.
-* **Pod status:** Displays the Pod status.
-* **Last connection:** Displays time of last communication with the Pod.
+The table below describes what each field / value is when viewing the Dash tab infomation:
 
-   - *Moments ago* - less than 20 seconds ago.
-   - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
-   - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
-   - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
-
-* **Last bolus:** Displays the amount of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
-* **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
-* **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
-
-   - {Units per hour} @{TBR start time}  ({minutes run}/{total minutes TBR will be run})
-   - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
-
-* **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below 50 U, the exact units are displayed.
-* **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming. 
-* **Errors:** Displays the last error encountered. Review the [Pod history](#omnipod-dash-view-pod-history) and log files for past errors and more detailed information.
-*  **Active pod alerts:** Reserved for currently running alerts on the active pod.
+| Field                     | Function
+|---------------------------|----------
+| **Bluetooth Address:**    | Displays the current bluetooth address of the connected Pod. |
+| **Bluetooth Status:**     | Displays the current connection status. |
+| **Sequence Number:**      | Displays the sequence number of the active POD. |
+| **Firmware Version:**     | Displays the firmware version for the active connection. |
+| **Time on Pod:**          | Displays the current time on the Pod. |
+| **Pod status:**           | Displays the Pod status. |
+| **Last connection:**      | Displays time of last communication with the Pod.<ul><li>*Moments ago* - less than 20 seconds ago.</li><li>*Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.</li><li> *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)</li><li>*XX minutes ago* - more than 2 minutes ago as defined by the value of XX</li></ul>  |
+| **Last bolus:**           | Displays the amount of the last bolus sent to the active pod and how long ago it was issued in parenthesis. |
+| **Base Basal rate:**      | Displays the basal rate programmed for the current time from the basal rate profile. |
+| **Temp basal rate:**      | Displays the currently running Temporary Basal Rate in the following format<ul><li>{Units per hour} @{TBR start time}  ({minutes run}/{total minutes TBR will be run})</li><li>Example:* 0.00U/h @18:25 ( 90/120 minutes)</li></ul> |
+| **Reservoir:**            | Displays over 50+U left when more than 50 units are left in the reservoir. Below 50 U, the exact units are displayed. |
+| **Total delivered:**      | Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming. |
+| **Errors:**               | Displays the last error encountered. Review the [Pod history](#omnipod-dash-view-pod-history) and log files for past errors and more detailed information. |
+| **Active pod alerts:**    | Reserved for currently running alerts on the active pod. |
 
 ### Buttons
 
+The table below defines what each button under the Pod Tab does.
 
-![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication.
-
-   * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-   * See the Troubleshooting section below for additional information.
-
-![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu.
-
-![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) : When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
-
-   * Button is displayed only when pod time is past expiration warning time.
-   * Upon successful dismissal, this icon will no longer appear.
-
-![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod. 
+| Button | Function
+|----------|----------
+| ![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png)     | Sends a refresh command to the active pod to update communication.<br>*• Use to refresh the pod status and dismiss status fields that contain the text (uncertain).*<br>*• See the [Troubleshooting](#omnipod-dash-troubleshooting) section below for additional information.* |
+| ![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png)   | Navigates to the Pod management menu. |
+| ![ack_alert_logo](../images/DASH_images/ack_alert_logo.png)  | When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).<br> *• Button is displayed only when pod time is past expiration warning time.*<br> *• Upon successful dismissal, this icon will no longer appear.* |
+| ![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) | Resumes the currently suspended insulin delivery in the active pod. |
      
 ### Pod Management Menu
 
-Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (1)** button from the **DASH** tab.
+Below is describes the purpose of each icon on the **Pod Management** menu, accessed by pressing **POD MGMT (1)** button from the **DASH** tab.
 
 ![DASH_Tab_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
 
- ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 2 - [**Activate Pod**](#omnipod-dash-activate-pod) : Primes and activates a new pod.
-* 3 - [**Deactivate Pod**](#omnipod-dash-deactivate-pod) : Deactivates the currently active pod.
-* 4 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
-* 5 - [**Pod history**](#omnipod-dash-view-pod-history) : Displays the active pod activity history.
+The function of each button is described in the table below:
+
+| Button | Function
+|--------|----------
+| 1      | Access the Pod Mgmt settings 
+| 2      | [**Activate Pod**](#omnipod-dash-activate-pod): Primes and activates a new pod. |
+| 3      | [**Deactivate Pod**](#omnipod-dash-deactivate-pod): Deactivates the currently active pod.|
+| 4      | **Play Test Beep** : Plays a single test beep on the pod when pressed.|
+| 5      | [**Pod history**](#omnipod-dash-view-pod-history) : Displays the active pod activity history. |
+
 
 (omnipod-dash-settings)=
 
@@ -445,6 +432,8 @@ The DASH overview tab will display as described the below:
 Additional note:
   * **SMS** - Returns value or 50+U for SMS responses
   * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
+
+(omnipod-dash-troubleshooting)=
 
 ## Troubleshooting
 
