@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Accu-Chek Insight 幫浦
 
 **此軟體是DIY人工胰臟解決方案的一部分，不是產品， 你需要閱讀、學習並暸解整個系統，包括如何使用他。 他並不是為你自動管理所有糖尿病控制，而是 讓你在投入必要時間的前提下，提升糖尿病管理和生活品質。 不要急於使用， 請給自己時間學習。 你對自己 所做的決定負全部責任。**
@@ -27,7 +21,7 @@ orphan: true
     
     ![移除血糖機 Insight 的螢幕截圖](../images/Insight_RemoveMeter.png)
 
-* 在 AAPS 應用程式的[組態建置工具](../SettingUpAaps/ConfigBuilder.md)中，選擇 Accu-Chek Insight 作為幫浦部分。
+* 在[組態建置工具 > 幫浦](../SettingUpAaps/ConfigBuilder.md)中，選擇 Accu-Chek Insight。
     
     ![組態建置工具 Insight 的螢幕截圖](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -60,7 +54,7 @@ orphan: true
 
 ## AAPS 設定
 
-**注意：現在可以（僅在 AAPS v2.7.0 及以上版本）使用「始終使用基礎絕對值」，如果您想使用 Autotune 與 Insight 幫浦，即使在 Nightscout 中啟用同步。**（在 AAPS 中轉到[偏好設定 > NSClient > 進階設定](#Preferences-advanced-settings-nsclient)）。
+**注意：現在可以（僅在 AAPS v2.7.0 及以上版本）使用「始終使用基礎絕對值」，如果你想使用 Autotune 與 Insight 幫浦，即使在 Nightscout 中啟用同步。**（在 AAPS 中轉到[偏好設定 > NSClient > 進階設定](#Preferences-advanced-settings-nsclient)）。
 
 ![Insight 設定的螢幕截圖](../images/Insight_settings.png)
 

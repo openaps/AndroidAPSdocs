@@ -1,28 +1,20 @@
-(Releasenotes-release-notes)=
+
 # Notes de Version
 
-Please follow the instructions in the [update manual](UpdateToNewVersion). Vous pouvez également trouver une section de dépannage répondant aux difficultés les plus courantes lors de la mise à jour dans la page du manuel de mise à jour.
+Please follow the instructions in the [update manual](UpdateToNewVersion). The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
 
-Vous recevrez les informations suivantes dès qu'une nouvelle mise à jour sera disponible :
-
-![Update info](../images/AAPS_LoopLGS60days.png)
-
-
-
-Ensuite, vous avez 60 jours pour mettre à jour. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](#objectives-objective6).
-
-Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à partir de la nouvelle date de sortie), AAPS passe à Boucle Ouverte.
+You will receive the information as soon as a new update is available. If you do not update until expiration date **AAPS** will switch to Open Loop.
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
+This prompt is important, should not be ignored and is not intended to bug you. New versions of **AAPS** do not only provide new features but also important safety fixes. Therefore it is necessary that every **AAPS** user updates to the latest version a.s.a.p. Unfortunately there are still bug reports from very old versions so this an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
 
-```{admonition} First version of AAPS
+```{admonition} First version of **AAPS**
 :class: note
 
 La première version de test a déjà commencé en 2015. In 2016 has been the first released version.
 
-La chronologie de ces versions n'est pas disponible pour le moment, mais comme cette question est posée plusieurs fois, nous la documenterons ici.
+The chronology of these releases is not available at the moment but as this question is asked several times we document it here.
 
 ```
 ![AAPS 1.0](../images/update/AAPS1.0.png)
@@ -31,7 +23,7 @@ La chronologie de ces versions n'est pas disponible pour le moment, mais comme c
 
 ## Version d'Android et version AAPS
 
-Si votre smartphone utilise une version d'Android antérieure à Android 9, vous ne pourrez pas utiliser AAPS v3 et supérieur car il nécessite au moins Android 9.
+If your smartphone uses an Android Version older than Android 11 you will not be able to use AAPS v3.3 and up as it requires at least Android 11.
 
 Afin de permettre aux utilisateurs ayant une ancienne version d'Android d'utiliser une ancienne version de AAPS de nouvelles versions ont été poussées qui ne changent que la vérification de version. Aucune autre amélioration n'est incluse.
 
@@ -63,14 +55,238 @@ Afin de permettre aux utilisateurs ayant une ancienne version d'Android d'utilis
 WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
 ```
 
+(latestrelease)=
+
+(version3321)=
+
+## Version 3.3.2.1
+
+Release date: 13-08-2025
+
+- Fixed Omnipod Bluetooth connection on Android 16
+- CI process (Browser build)
+- Fix mmol-mgdl conversion
+- Fix wrong time selection in dialogs in some timezones
+- Fix reading keys in simple mode
+- Fix missed predictions on wear
+- Improved ConfigBuilder
+- Improved NSCv3 full sync
+
 (version3300)=
+
+## Version 3.3.2.0
+
+Release date: 27-03-2025
+
+### How to upgrade
+
+* [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
+
+### Starting this version, notification and version enforcement has been simplified and softed and works following way:
+*  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
+*  After expiration LGS mode is enforced
+*  You'll receive warning/notifications less often:
+   - 28+ days remaining: every 7 days
+   - 27-14 days remaining: every 3 days
+   - then once a day
+   - Notification will be generated after noon to not bother you during nights
+* There are only 2 kinds of notification
+   - New version available (has no effect on AAPS)
+   - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
+
+### News
+
+* SMS RESTART command @MilosKozak
+* Watch Profile switch parameters @olorinmaia
+* Dark mode AAPS V2 watchface @olorinmaia
+* G7 data exchange improvements @olorinmaia
+* Widget configuration @MilosKozak
+* Radiobuttons UI improvements @olorinmaia
+* Automation: position choosing from map @MilosKozak
+* Version visible on main screens @MilosKozak
+* Compilation with existing git system in enforced (no zip downloads)
+* Show version on main screen @MilosKozak
+* Tidepool upload improvements @ConstantinMatheis
+
+### Bug fixes
+
+* Dash unbonding fix @Andreas
+* Garmin fixes @robertbuessow @suside
+* Fix of IOB displaying in dialogs @olorinmaia
+* Objectives spelling and validation improvements @MilosKozak
+* Fixed rendering of emulated TBRs @MilosKozak
+* Fixed bypassing security @tdrkDev
+
+## Version 3.3.1.3
+
+Release date: 21-01-2025
+
+### Bug fixes
+
+* Dash: bonding is optional (default off) @MilosKozak
+* Equil: fixed bolud 10+U, alarm improvements @EquilHack
+* Garmin: watch improvements @swissalpine
+* Watch improvements @olorinmaia
+* Control loop status from watch @tdrkDev
+* Stability improvements
+
+*  **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
+
+## Version 3.3.1.2
+
+Release date: 15-01-2025
+
+### How to upgrade
+
+* [Android Studio version called "Ladybug Feature Drop"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
+
+### Bug fixes
+
+* Dash: use bonding on Android 15+
+* Restored Dexcom button on Overview
+* Equil: allowed remove non working pump
+* Warn when DynISF Adjustment Factor is zero
+* NSCv3: resolve websocket communication on phones with slightly different time
+* SMS Commands: fix OneTimePassword. **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
+* Fix issue where some preferences could not be edited anymore.
+* Fix reset of master password with virtual pump.
+* Fixed import of large settings backup files.
+
+## Version 3.3.1.0
+
+Release date: 06-01-2025
+
+### UI changes
+
+* [Added colors to differentiate between AAPSClient and AAPSClient2](#RemoteControl_aapsclient) @MilosKozak
+* Improved Users actions layout and icons
+
+### Other functionalities
+
+* New automation trigger : [steps count](#screen-heart-rate-steps) @Roman Rihter
+* Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR) @MilosKozak
+* NSClient v3 : make Announcement work (_i.e._ from AAPSClient to AAPS) @MilosKozak
+
+### Technical changes & bug fixes
+
+* Fix Insight crash @philoul
+* Fix creation of extra-numerous deviceStatus entries in Nightscout @MilosKozak
+* Fix carbs absorption @MilosKozak
+* Fixed color of RadioButtons & CheckBoxes @MilosKozak
+* Fixed bug in DynISF percentage migration @MilosKozak
+* Resolved misplaced DynISF notification @MilosKozak
+* Fixed bug in watchfaces @philoul
+
 ## Version 3.3.0.0
 
-Version 3.3 is close ! Use the version switcher at the bottom right of your screen to see what's new.
+Release date: 29-12-2024
 
-![Ouvrir le menu de langue](../images/documentation_language_menu.png)
+### Main features
+
+* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behaviour:
+  * **Profile Switch** and **Profile Percentage** is now taken into account for **Dynamic ISF** in respect of dynamic sensitivity strengthness
+  * The average **ISF** of the last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
+  * DynamicISF documentation page has been rewritten. Please read the important section [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf).
+* [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users
+  * Note : Requires latest version of xDrip+ or Juggluco.
+* New **Automation** triggers
+* Unattended settings exports
+
+### How to upgrade
+
+* Before upgrading:
+  * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
+  * If you use the “old” Combo driver with ruffy device, migrate to the [native Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) before update
+  * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade: make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
+  * The [Bluetooth connectivity issues some people encounter on Android 15](../Getting-Started/Phones.md) are **NOT** solved by this release (this is an Android issue, not **AAPS**). A fix is available in 3.3.1.2.
+  * The BYODA button on the homescreen is no longer available due to Android limitations. This is fixed in 3.3.1.2.
+* Update instructions: follow the [Update to a new version](../Maintenance/UpdateToNewVersion.md) guide.
+  * [Android Studio version called "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already have an older version of Android Studio installed, you may need to <span style="color:red">configure the JVM version to 21</span>. See [Troubleshooting Android Studio > Incompatible Gradle JVM](#incompatible-gradle-jvm).
+  * Tip - if you do not want to lose your **AAPS** history ALWAYS do an UPDATE and NOT an UNINSTALL/INSTALL. As a precaution, back up your current **AAPS** settings and old APK to revert to an old version should anything go wrong.
+* After upgrading:
+  * Set the new [“AAPS directory” setting](#preferences-maintenance-logdirectory), in the Maintenance tab.
+
+### Detailed changes
+
+#### CGMs and Pumps
+
+* [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users @MilosKozak
+* [Medtrum driver](../CompatiblePumps/MedtrumNano.md) improvements @jbr77rr
+  * Communication improvements, including new setting to workaround problems on some smartphones
+  * Show reservoir level at start of activation
+  * Fix bug where activation returns to start and user cannot finish the activation
+  * Feedback for sync status and other clarifications
+* New supported pump : [Equil 5.3](../CompatiblePumps/Equil5.3.md) @EquilHack
+* New supported CGMs : [Ottai](../CompatibleCgms/OttaiM8.md) @ottai-developer and [Syai Tag](../CompatibleCgms/SyaiTagX1.md) @syai-dev
+* Insight driver rewritten to kotlin @Philoul
+* Removed old ruffy dependent Combo driver
+
+#### UI changes
+
+* [Simple mode](#preferences-simple-mode) activated by default on fresh install @MilosKozak
+* New [QuickWizard](#Preferences-quick-wizard) options @radicalb
+  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. You can now use the “carb time” field in QuickWizard  to pre-bolus.
+* New [graph scale menu](#aaps-screens-main-graph); [additional graphs menu](#AapsScreens-activate-optional-information) UI improvements @Philoul
+* [ConfigBuilder layout improvement](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
+  * Sections are now collapsed by default. Use arrow to expand.
+* Variable sensitivity visible in AAPSClient
+* BolusWizard UI improvements @kenzo44
+* Fix text display in pump tabs when using light theme @jbr77rr
+
+#### Other functionalities
+
+* [Unattended settings exports](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
+* New [Automation trigger](#automations-automation-triggers) @vanelsberg
+  * Pod Activation (patch pump only)
+* New [Automation triggers](#automations-automation-triggers) @jbr77rr
+  * Cannula age, Insulin age, Battery age, Sensor age, Reservoir level, Pump battery level
+* Allowing negative carbs entry @MilosKozak
+* New Parameter [“AAPS directory”](#preferences-maintenance-settings) to choose a storage directory different from the default one.
+* Allow for [insulin records when pump suspended](#aaps-screens-buttons-insulin) @jbr77rr
+* Updated [Objective 2](#objectives-objective2) @MilosKozak
+  * Check that master password is set and known
+* Random carbs in test mode @MilosKozak
+* Fixed bug in TDD calculation @MilosKozak
+* SMS Commands : allow to [**not** send SMS for profile change](#sms-commands-too-many-messages) coming from NS @MilosKozak
+
+#### Montres connectées
+
+* wear and watchfaces improvement @Philoul @MilosKozak @olorinmaia
+* Watch tiles from Automation actions @Philoul
+* Combined watchfaces from AAPS, AAPSClient and AAPSClient2 to monitor more patients @Philoul @MilosKozak
+* EXTRA: show\_user\_actions\_on\_watch\_only @MilosKozak
+
+#### Technical changes
+
+* [log files location change](#Accessing-logfiles-accessing-logfiles)
+* new internal modules structure @MilosKozak
+* split persistence layer from main code @MilosKozak
+* build files rewritten to kts @MilosKozak
+* algorithms rewritten to kotlin for better performance @MilosKozak
+* tons of new unit tests @MilosKozak and others
+* more code converted to kotlin @MilosKozak
+* new preferences management, xml \-\> kotlin @MilosKozak
+* new CI configuration, run CI on own servers @MilosKozak
+* libraries updated to latest version, toml @MilosKozak
+* migration to kotlin 2.0, java 21 @MilosKozak
+
+(version3204)=
+
+## [Version 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
+
+Release date: 27-02-2024
+
+This version is the last one supporting Android 10. If you cannot upgrade to Android 11, [update AAPS to 3.2.0.4](#update-aaps-3204).
+
+### Modifications
+
+- xDrip G7 support
+- Medtrum fixes
+- Automation icon fix
+- Passing objective 1 fix
 
 (version3200)=
+
 ## Version 3.2.0.0 dedicated to @Philoul
 
 Release date: 23-10-2023
@@ -78,8 +294,8 @@ Release date: 23-10-2023
 ### Conseils importants
 
 - NS 15 is required
-- Lors de l'utilisation de websockets dans le plugin NS v3, les traitements entrés par l'interface utilisateur NS (bouton plus) et d'autres applications utilisant l'API v1 ne sont pas envoyées à AAPS. Cela sera corrigé dans la prochaine version de NS. Toujours utiliser le même client (v1 ou v3) dans AAPS et AAPSClient jusqu'à ce que NS passe entièrement à v3 en interne. Il en va de même pour AAPS et AAPSClient.
-- Les Websockets avec le plugin v3 fonctionnent de manière similiaire au plugin v1. Sans websockets activés,  AAPS télécharge régulièrement à partir de NS, ce qui devrait réduire la consommation d'énergie parce que NS n'est pas connecté de façon permanente. D'un autre côté, cela signifie des retards dans l'échange de données. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
+- Lors de l'utilisation de websockets dans le plugin NS v3, les traitements entrés par l'interface utilisateur NS (bouton plus) et d'autres applications utilisant l'API v1 ne sont pas envoyées à AAPS. Cela sera corrigé dans la prochaine version de NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internally. Il en va de même pour AAPS et AAPSClient.
+- Websockets in v3 plugin work in a similar manner as v1 plugin. Sans websockets activés,  AAPS télécharge régulièrement à partir de NS, ce qui devrait réduire la consommation d'énergie parce que NS n'est pas connecté de façon permanente. On the opposite side it means delays in exchanging data. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
 - Si vous utilisez xdrip comme source MGC, vous devez le sélectionner à nouveau après la mise à jour en raison de changements internes
 - Tidepool peut être utilisé à la place de NS pour passer le premier objectif
 - Si vous envoyez à xDrip+, vous devez configurer le plugin de synchronisation xDrip. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
@@ -115,7 +331,7 @@ Release date: 23-10-2023
 - Change in BolusWizard. Si la MGC n'est pas disponible, le pourcentage est ignoré (100% est utilisé)
 - migration to kts build system @MilosKozak
 - improved CI integration @MilosKozak @buessow
-- tests cleaup @ryanhaining @MilosKozak
+- tests cleanup @ryanhaining @MilosKozak
 - new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
@@ -138,13 +354,15 @@ LIMITATIONS
 - NS 15 must be used with AAPS 3.2
 - v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
 - in opposite because of old uneffective method of tracking changes v1 see changes done by v3
-- remember NS still uses v1 internaly so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
+- remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
 
 RECOMMENDED SETTING
 - because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
-- v3 is preffered because of efficiency
+- v3 is preferred because of efficiency
 - using websockets or not using with v3 depends on your preference
 - it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
+
+(version3100)=
 
 ## Version 3.1.0
 
@@ -275,6 +493,8 @@ Date de sortie : 23-01-2021
 - Corrections NSClient
 - Le conseiller Bolus fonctionne maintenant avec les versions Pumpcontrol et NSClient
 
+(version-2811)=
+
 ## Version 2.8.1.1
 
 Date de sortie : 12-01-2021
@@ -294,7 +514,7 @@ Date de sortie : 12-01-2021
 - correction pour SMB & appli. Dexcom
 - Correctif Cadran wear
 - rapport de plantage amélioré
-- gradle restauré pour permettre l'installation directe des cadrans de montres
+- gradle reverted to allow direct watchface installation
 - corrections de l'automatisation
 - amélioration du driver RS
 - divers plantages corrigés
@@ -320,10 +540,10 @@ Date de sortie : 01-01-2021
 - New watchface @rICTx-T1D
 - Améliorations de la connexion Dana RS @MilosKozak
 - Suppression de "Valeurs MGC inchangées" pour les SMB pour l'application native Dexcom
-- New [Low Ressolution Skin](#Preferences-skin)
+- New [Low Resolution Skin](#Preferences-skin)
 - New ["Pregnant" patient type](#Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
 - Nouvelle présentation tablette de NSClient @MilosKozak
-- NSClient transfert des paramètres insuline, sensibilité et les paramètres d'affichage directement à partir de l'écran principal AAPS @MilosKozak
+- NSClient transfer insulin, sensitivity and display settings directly from main AAPS @MilosKozak
 - [Preferences filter](../SettingUpAaps/Preferences.md) @Brian Quinion
 - Nouvelles icônes de pompe @Rig22 @teleriddler @osodebailar
 - New [insulin type Lyumjev](#Config-Builder-lyumjev)
@@ -338,7 +558,7 @@ Date de sortie : 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** [here](../Maintenance/Update2_7.md).
 
-You need at least start [objective 11 (in later versions objective 10!)](#objectives-objective10) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start [objective 11](#objectives-objective11). Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
+You need at least start [objective 11 (in later versions objective 10!)](#objectives-objective10) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 ### Nouvelles fonctionnalités majeures
 
@@ -453,7 +673,7 @@ Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une ve
   - Les profils peuvent être dupliqués et modifiés
   - Possibilité de télécharger les profils vers NS
   - Les anciens changements de profil peuvent être dupliqués veres un nouveau profil local (décalage horaire et pourcentage appliqués)
-  - Sélecteur pour les cibles temps
+  - Vertical NumberPicker for targets
 
 - Le Profil Simple est supprimé
 
@@ -585,7 +805,7 @@ Date de sortie : 03-03-2019
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
 - Voyants d'état sur l'écran principal (Nico Schmitz)
 - Aide sur les changements d'heure (Roumen Georgiev)
-- Correctif des nom de profil venant de NS (Johannes Mockenhaupt)
+- Fix processing profile names coming from NS (Johannes Mockenhaupt)
 - Correctifs Interface utilisateur (Johannes Mockenhaupt)
 - Support de la mise à jour G5 (Tebbe Ubben et Milos Kozak)
 - Support des sources de GLY G6, Poctech, Tomato, Eversense (Tebbe Ubben et Milos Kozak)
@@ -602,7 +822,7 @@ Date de sortie : 03-11-2018
 ### Nouvelles fonctionnalités majeures
 
 - Support de oref1/SMB ([documentation oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Assurez-vous de bien lire la documentation pour savoir ce que vous pouvez attendre des SMB, comment il fonctionne, ce qu'il peut faire et comment l'utiliser pour qu'il marche en douceur.
-- [\_Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md) pump support
+- Accu-Chek Combo pump support
 - Assistant de configuration : vous guide dans le processus de configuration d'AAPS
 
 (Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=

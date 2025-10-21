@@ -11,6 +11,14 @@
 * [Потеряно хранилище ключей](#troubleshooting_androidstudio-lost-keystore)
 * [Устранение неполадок Android Studio](TroubleshootingAndroidStudio)
 
+### Installing
+
+You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
+
+Ignore it: More details, Install anyway.
+
+![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+
 ### Настройки
 * Profile
 
@@ -29,14 +37,37 @@
 
 * [SMS-команды](#SMSCommands-troubleshooting)
 
-### Частые проблемы с подключением Bluetooth
+### Cannot start Omnipod with Android 16
 
-Это может произойти с различными помпами. Помимо того, что AAPS должен быть исключен из оптимизации батареи, можно также исключить системное приложение Bluetooth из оптимизации батареи. В некоторых случаях это может помочь. В зависимости от используемого телефона приложение bluetooth находится по-разному.
+Upgrade to minimum version of AndroidAPS: 3.3.2.1.
+
+### Frequent Bluetooth connection problems
+
+#### Android 15
+
+After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15, you can try to enable the following:
+
+1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+
+
+![Open preferences](../images/Pref2020_Open2.png)
+
+2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
+
+   ![BondBT](../images/troubleshooting/BondBT.png)
+
+3. If the pump asks for a pairing request, accept it.
+
+4. Restart your phone.
+
+#### Battery optimization
+
+Это может произойти с различными помпами. Apart from excluding AAPS from any battery optimization, you can also exclude the system Bluetooth app from battery optimization. В некоторых случаях это может помочь. Depending on the phone you use, you will find the Bluetooth app differently.
 
 Вот примеры того, как найти их на конкретных Android-телефонах.
 
 
-#### ТелефоныPixel (стоковый android)
+##### Pixel phones (stock Android)
 
 * Перейдите в настройки Android и выберите "Приложения".
 
@@ -59,7 +90,7 @@
   ![Оптимизация батареи BT](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Телефоны Samsung
+##### Телефоны Samsung
 
 * Перейдите в настройки Android и выберите "Приложения"
 
@@ -95,7 +126,6 @@
 
 * [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
 * [Accu-Chek Combo общее](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
-* [Accu-Chek Combo + Ruffy](#Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 

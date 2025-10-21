@@ -10,7 +10,7 @@
 ```{admonition} needed time for final publication
 在 Crowdin 完成翻譯後，每天都會進行同步到 Github 的排程，將翻譯作為 pull request（PR）傳送到 Github。
 
-PR 的接受是一項手動任務，將儘快完成。
+PR 的接受是一項手動審核工作，審核人員會盡快完成工作。
 ```
 
 ## 應用程式翻譯狀態

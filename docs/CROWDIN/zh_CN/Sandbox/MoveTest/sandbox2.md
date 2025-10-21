@@ -1,13 +1,9 @@
-- - -
-orphan: true
-- - -
-
-# internal sandbox file 2 for testing
+# 内部沙盒测试文件2
 
 ```{admonition} no need to translate this
 :class: note
 
-No need to translate this.
+无需翻译。
 ```
 
 This is an internal sandbox file for the documentation team to test
@@ -18,9 +14,9 @@ This is an internal sandbox file for the documentation team to test
     1. CROWDIN translation and
     2. Read The Docs deployment.
 
-You can dirctly jump from here to the first label in the sandbox1.md file - ["Jump"](../sandbox1.md#this-is-a-test).
+You can directly jump from here to the first label in the sandbox1.md file - ["Jump"](../sandbox1.md#this-is-a-test).
 
-You can dirctly jump from here to the second label in this file - ["Jump"](../sandbox1.md#this-is-another-test).
+You can directly jump from here to the second label in this file - ["Jump"](../sandbox1.md#this-is-another-test).
 
 Here you can jump to the first sandbox file - ["Jump"](../sandbox1.md).
 

@@ -31,8 +31,8 @@
 
 **目标1**要求用户在**AAPS**中设置其基本的技术配置。 在完成这一步之前，无法取得任何进展。
 
-- 在[配置构建器](#Config-Builder-bg-source)中选择正确的CGM/FGM。 有关更多信息，请参阅[血糖数据源](../Getting-Started/CompatiblesCgms.md)。
-- 在[配置构建器](../SettingUpAaps/ConfigBuilder.md)中选择正确的泵，以确保你的泵可以与 **AAPS** 通信。 如果你使用的泵型号没有适配 **AAPS** 的驱动程序，或者你想在完成早期**目标**时使用其他胰岛素输送系统，请选择**虚拟泵**。 有关更多信息，请参阅[胰岛素泵](../Getting-Started/CompatiblePumps.md)。
+- 在[配置构建器 > BG来源](#Config-Builder-bg-source)中选择正确的CGM/FGM类型。 有关更多信息，请参阅[血糖数据源](../Getting-Started/CompatiblesCgms.md)。
+- 在[配置构建器 > 泵](../SettingUpAaps/ConfigBuilder.md)中选择正确的胰岛素泵型号，以确保您的胰岛素泵可与**AAPS**正常通信。 如果你使用的泵型号没有适配 **AAPS** 的驱动程序，或者你想在完成早期**目标**时使用其他胰岛素输送系统，请选择**虚拟泵**。 有关更多信息，请参阅[胰岛素泵](../Getting-Started/CompatiblePumps.md)。
 - 如果使用Nightscout：
   - 按照[Nightscout](../SettingUpAaps/Nightscout.md)页面上的说明进行操作，以确保**Nightscout**能够接收并显示**AAPS**的数据。
   - 请注意，**NSClient** 中的URL必须以**“/api/v1/”**结尾 - 参见[首选项 > NSClient](#Preferences-nsclient)。
@@ -41,6 +41,7 @@
 
 *注意*：你可能需要等待下一个传感器葡萄糖读数到达后，**AAPS** 才能识别它。
 
+(objectives-objective2)=
 ## 目标2：学习如何控制AAPS
 
 **目标2** 需要完成几个“任务”，如下方截图所示。 点击橙色文本“尚未完成”以访问待办事项。 如果不熟悉某个具体操作，我们会提供链接来指导你。
@@ -62,6 +63,9 @@
 - 展示**闭环**插件的内容。
 - [缩放BG图表](#aaps-screens-main-graph)以便能够查看更大或更小的时间框架：在6小时、12小时、18小时、24小时的历史数据之间切换。
   - _提示_：长按图表或使用右上角的箭头。
+- 请确认AAPS主密码已设置并妥善保管
+  - 提示：前往[首选项 > 保护](#Preferences-protection)进行设置。
+
 
 (objectives-objective3)=
 ## 目标3：证明您的知识
@@ -92,6 +96,7 @@
 - 从 [Preferences > OpenAPS](#Preferences-aps-mode) 菜单或通过长按 **Overview** 屏幕左上角的闭环图标来选择开环。
 - 在7天内，至少手动执行20次临时基础率建议；将它们输入到你的（实体）胰岛素泵中，并在AAPS中确认你已接受这些建议。 确保这些基础率调整在**AAPS**和**Nightscout**中都能显示出来。
 - 必要时使用[**临时目标**](../DailyLifeWithAaps/TempTargets.md)。 在治疗低血糖后，使用预定义的“低血糖临时目标”来防止系统在血糖回升时出现过度校正。
+- 若您此刻仍处于[简易模式](#preferences-simple-mode)，现在可能是关闭该模式的最佳时机。
 
 为了减少在开环模式下提出的基础率更改建议的数量，您仍然可以使用 **目标3** 中描述的技巧。 此外，你可以更改建议的基础率变化的最小百分比。 值越高，你收到的更改通知就越少。
 
@@ -146,7 +151,7 @@
 
 **因此，您必须通过手动注射胰岛素来进行高血糖的校正。**
 
-- 如果您的基础 IOB 为负（请参见下方截图），在 **目标6** 中可以触发大于 100% 的临时基础率（TBR）。
+- If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
 
 ![负 IOB 示例](../images/Objective6_negIOB.png)
 
@@ -227,16 +232,6 @@
 然后，您可以尝试设置更有用的**自动化**。 文档页面给出了几个示例，您还可以在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 群组中搜索“自动化”截图。 [Discord](https://discord.gg/4fQUWHZ4Mw) 社区中也有一个专用频道。
 
 例如，如果您每天早上在上学/上班前都吃同样的早餐，您可以创建一个**自动化**，如“早餐前目标”，以在早餐前30分钟设置一个稍低的**临时目标**。 在这种情况下，你的条件可能包括“重复时间”，这包括选择一周中的特定几天（星期一、星期二、星期三、星期四、星期五）和特定时间（早上6:30）。 动作将包括“开始临时目标”，该目标的值低于平常，并持续30分钟。
-
-(objectives-objective11)=
-## 目标11：为日间使用启用额外功能，如动态敏感性插件（DynISF）。
-
-完成此 **目标** 的最短时间**：28天**。 这是一个强制性的等待时间。 在此时间段结束之前，无法继续进行下一个**目标**。
-
-- 确保**SMB**运行正常。
-- 阅读[此处](../DailyLifeWithAaps/DynamicISF.md) 关于 **动态 ISF** 的文档
-- 在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 和 [Discord](https://discord.gg/4fQUWHZ4Mw) 群组中搜索关于 **Dynamic ISF** 的讨论，并阅读其他用户的经验和建议。
-- 启用 **DynamicISF 插件**，并根据您身体的独特性确定适当的校准。 出于安全考虑，建议从低于100%的值开始。
 
 (CompletingTheObjectives-go-back-in-objectives)=
 ## 回顾目标

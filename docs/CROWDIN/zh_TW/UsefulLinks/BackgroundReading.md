@@ -44,4 +44,4 @@
 
 [Tim Omer: 被賦能的公民「健康黑客」- 我們不再等待！ - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
 
-[與 Do-It-Yourself 胰腺系統創作者 Dana Lewis 的現場訪談 - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
+[與 Do-It-Yourself 胰臟系統創作者 Dana Lewis 的現場訪談 - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)

@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # EOPatch2 Anleitung
 
 Der Patch erfordert die Verwendung von schnell wirkendem U-100 Insulin wie NovoRapid oder Humalog. Verwende ein schnell wirkendes Insulin, das für Dich nach dem Rezept Deines Arztes geeignet ist und verwende die vorgeschriebene Dosierung.

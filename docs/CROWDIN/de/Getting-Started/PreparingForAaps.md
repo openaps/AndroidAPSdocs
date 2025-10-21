@@ -4,7 +4,7 @@ Willkommen. Diese Dokumentation möchte Benutzer*innen, die sich darauf vorberei
 
 ## Deinen Weg durch die Dokumentation finden
 
-An **index** and explanation of the documentation structure can be found [here](../index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. Dort findest Du eine Zusammenfassung der jeweiligen Zielsetzung der einzelnen Abschnitte in der Dokumentation. Du kannst auch mit Hilfe der Überschriften auf der linken Seite durch die Navigation navigieren. Zusätzlich gibt es eine praktische Suchfunktion direkt unterhalb des **AAPS**-Symbols.
+Ein **Index** und eine Erklärung der Dokumentenstruktur findest Du [hier](../index.md). Alternativ klickst Du auf das Symbol **AAPS** oben links in der Dokumentation. Dort findest Du eine Zusammenfassung der jeweiligen Zielsetzung der einzelnen Abschnitte in der Dokumentation. Du kannst auch mit Hilfe der Überschriften auf der linken Seite durch die Navigation navigieren. Zusätzlich gibt es eine praktische Suchfunktion direkt unterhalb des **AAPS**-Symbols.
 
 Unser Ziel ist es, sowohl die **AAPS**-Möglichkeiten als auch dessen Beschränkungen leicht verständlich zu beschreiben. Es kann enttäuschend sein, wenn Du, nachdem Du bereits einiges an Zeit in das Lesen der Dokumentation investiert hast, feststellst, dass Deine Insulinpumpe oder Dein Sensor nicht mit **AAPS** kompatibel ist oder <0>AAPS</0> andere Funktionalitäten bietet, als Du Dir erhofft hast.
 
@@ -16,9 +16,9 @@ Viele Details in der **AAPS**-Dokumentation sind aus Erfahrungen entstanden und 
 „Mit großen Möglichkeiten kommt auch eine große Verantwortung…”
 
 ### Technische Sicherheit
-**AAPS** hat umfangreiche Sicherheitsfunktionen. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS**-Funktionen werden mit dem erfolgreichen Abschluss des jeweiligen Ziels freigeschaltet. Dieses Vorgehen ermöglicht durch das schrittweise Kennenlernen der verschiedenen **AAPS**-Funktionen einen sicheren Übergang aus dem 'Open Loop' in den 'Closed Loop'.
+**AAPS** hat umfangreiche Sicherheitsfunktionen. Diese beschränken das System und werden schrittweise durch das stufenweise Abschließen einer Reihe von [Zielen](../SettingUpAaps/CompletingTheObjectives.md) entfernt. Diese beinhalten das Testen bestimmter Parameter und die Beantwortung mehrerer Multiple-Choice-Fragen. **AAPS**-Funktionen werden mit dem erfolgreichen Abschluss des jeweiligen Ziels freigeschaltet. Dieses Vorgehen ermöglicht durch das schrittweise Kennenlernen der verschiedenen **AAPS**-Funktionen einen sicheren Übergang aus dem 'Open Loop' in den 'Closed Loop'.
 
-The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Weil Einsteiger unerfahren sind und zu schnell mit **AAPS** loslegen wollen oder wichtige Punkte übersehen haben, können Fehler passieren. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimise these issues.
+Die [Ziele (Objectives)](../SettingUpAaps/CompletingTheObjectives.md) sollen den bestmöglichen Einstieg in **AAPS** ermöglichen, und dabei die typischen Fehler und Nutzungsmuster, die **AAPS**-Entwickler bei Neulingen beobachtet haben, adressieren. Weil Einsteiger unerfahren sind und zu schnell mit **AAPS** loslegen wollen oder wichtige Punkte übersehen haben, können Fehler passieren. Die [Ziele](../SettingUpAaps/CompletingTheObjectives.md) wollen genau diese Probleme minimieren.
 
 ### Medizinische Sicherheit
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -76,7 +76,7 @@ In der Anfangsphase das **AAPS**-System aufzubauen und auch beim späteren Nachj
 
 #### Technologie-Kompatibilität
 
-**AAPS** ist nur mit bestimmten Insulinpumpen, CGMs und Smartphones kompatibel. Einige Systeme/Technologien sind möglicherweise nicht in jedem Land verfügbar. In order to avoid any disappointment or frustrations, please read the [CGM](../Getting-Started/CompatiblesCgms.md), [pump](../Getting-Started/CompatiblePumps.md) and [phone](../Getting-Started/Phones.md) sections.
+**AAPS** ist nur mit bestimmten Insulinpumpen, CGMs und Smartphones kompatibel. Einige Systeme/Technologien sind möglicherweise nicht in jedem Land verfügbar. Um Enttäuschungen oder Frustrationen vorzubeugen, lies bitte die Abschnitte [CGM](../Getting-Started/CompatiblesCgms.md), [Insulinpumpen](../Getting-Started/CompatiblePumps.md) und [Smartphones](../Getting-Started/Phones.md).
 
 #### Zeit die App zu erstellen und zum vollständigen Loopen weiterzugehen
 
@@ -84,11 +84,11 @@ Der Zeitbedarf, um **AAPS** zu erstellen, hängt von Deiner Erfahrung und Deinem
 
 Um Dir durch den Erstellungsprozess zu helfen, gibt es eigene spezifische Abschnitte:
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../UsefulLinks/FAQ.md) K);
+- Eine Liste von Fragen und Antworten zu häufigen Fehlern, die wahrscheinlich auftreten (unter [FAQ - Abschnitt](../UsefulLinks/FAQ.md) K);
 
-- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) Subsection.
+- „[AAPS erstellen](../SettingUpAaps/BuildingAaps.md)“ (Abschnitt D), der einen Unterabschnitt zur [Fehlerbehebung](../GettingHelp/GeneralTroubleshooting.md) hat.
 
-Wie lange es dauert den Closed Loop zu erreichen ist individuell verschieden, ein grober Zeitablauf bis zum vollen Loopen mit AAPS findest Du ([hier](#how-long-will-it-take-to-set-everything-up)).
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
 
 
 #### Exportdatei des Keystore & der Konfigurationseinstellungen
@@ -102,9 +102,9 @@ Ein "keystore" ist eine mit einem Passwort verschlüsselte Datei, die ausschlie�
 
 Damit kannst Du die Keystore-Datei für jedes Update auf eine neue **AAPS**-Version nutzen. Im Durchschnitt werden zwei AAPS-Updates pro Jahr nötig.
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](../Maintenance/ExportImportSettings.md). Damit kannst Du das System z.B. bei einem Smartphone-Wechsel oder bei einer Neuinstallation/Update der App sicher wieder herstellen und es mit einer nur kurzen Unterbrechung weiter nutzen. 
+Zusätzlich bietet **AAPS** die Möglichkeit, [alle Konfigurationseinstellungen zu exportieren](../Maintenance/ExportImportSettings.md). Damit kannst Du das System z.B. bei einem Smartphone-Wechsel oder bei einer Neuinstallation/Update der App sicher wieder herstellen und es mit einer nur kurzen Unterbrechung weiter nutzen. 
 
-#### Troubleshooting
+#### Problembehandlung
 
 Wenn Du Dir bei irgendetwas unsicher bist, gehe bitte auf die AAPS-Community zu - es gibt keine dummen Fragen! Alle Nutzenden, egal mit welcher Erfahrung, sollen sich bestärkt fühlen, Fragen zu stellen. Da es viele **AAPS**-Nutzende gibt, werden Fragen in der Regel schnell beantwortet.
 
@@ -116,13 +116,13 @@ Wenn Du Dir bei irgendetwas unsicher bist, gehe bitte auf die AAPS-Community zu 
 
 
 
-#### [Where to go for help](../UsefulLinks/BackgroundReading.md)?
+#### [Wo finde ich Hilfe](../UsefulLinks/BackgroundReading.md)?
 
 Dieser Abschnitt zielt darauf ab, neuen Benutzern Links zu Ressourcen bereitzustellen, um Hilfe zu erhalten, einschließlich des Zugriffs auf den Community Support, welcher aus neuen und erfahrenen Benutzern besteht, die Fragen klären und die üblichen Fallstricke lösen können, die mit AAPS einhergehen.
 
 #### [Abschnitt für Mediziner und Fachpersonal](../UsefulLinks/ClinicianGuideToAaps.md)
 
-This is a [section specificially for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+Dieser [Abschnitt ist für Mediziner und Fachpersonal](../UsefulLinks/ClinicianGuideToAaps.md), die mehr über AAPS und Open Source Artificial Pancreas Technolgie lernen möchten. In der Einleitung gibt es auch Hilfestellung dazu, [wie Du das mit Deinem Diabetes-Team besprechen kannst](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team).
 
 ## Was werden wir bauen und installieren?
 
@@ -139,11 +139,11 @@ Neben den drei grundlegenden Hardwarekomponenten (Smartphone, Insulinpumpe und G
 
 ### 2) Ein Server für Berichte: Nightscout (Tidepool*)
 
-Um alle **AAPS**-Vorteile nutzen zu können, musst Du einen Nightscout-Server einrichten. Du kannst das selbst machen (LINK auf die Anleitung) oder alternativ einen kommerziellen Anbieter (LINK auf T1 pal, 10be.de etc.) gegen eine kleine Gebühr mit dem Aufsetzen und Betreiben des Nightscout-Services (managed service) für Dich beauftragen. Nightscout wird genutzt, um über die Zeit hinweg Daten von **AAPS** zu sammeln und kann daraus detaillierte Berichte erstellen, die Zusammenhänge von CGM- und Insulinmustern zeigt. Eltern und Betreuende können Nightscout auch dazu nutzen, um remote mit der **AAPS**-Anwendung zu kommunizieren und das Diabetes-Management des Kindes im Auge zu behalten. Die Funktionen zur Remote-Kommunikation beinhaltet Echtzeit-Informationen der Glukosewerte und dem Insulinspiegel, Remote-Bolus (über SMS) und Ankündigung von Mahlzeiten. Eine getrennte Betrachtung von CGM-Daten und Pumpen-Daten ist beim Versuch die Diabetes-Performanz zu analysieren, so als ob dem blinden Autofahrer der Beifahrende die Umgebung beschreibt.  Alternativ zu Nightscout kann seit der AAPS version 3.2 (oder neuer) auch Tidepool genutzt werden.
+Um alle **AAPS**-Vorteile nutzen zu können, musst Du einen Nightscout-Server einrichten. Du kannst das [selbst machen](https://nightscout.github.io/nightscout/new_user/#free-diy) oder alternativ einen kommerziellen Anbieter gegen eine kleine Gebühr mit dem Aufsetzen und Betreiben des Nightscout-Services ([managed service](https://nightscout.github.io/#nightscout-as-a-service)) für Dich beauftragen. Nightscout wird genutzt, um über die Zeit hinweg Daten von **AAPS** zu sammeln und kann daraus detaillierte Berichte erstellen, die Zusammenhänge von CGM- und Insulinmustern zeigt. Eltern und Betreuende können Nightscout auch dazu nutzen, um remote mit der **AAPS**-Anwendung zu kommunizieren und das Diabetes-Management des Kindes im Auge zu behalten. Die Funktionen zur Remote-Kommunikation beinhaltet Echtzeit-Informationen der Glukosewerte und dem Insulinspiegel, Remote-Bolus (über SMS) und Ankündigung von Mahlzeiten. Eine getrennte Betrachtung von CGM-Daten und Pumpen-Daten ist beim Versuch die Diabetes-Performanz zu analysieren, so als ob dem blinden Autofahrer der Beifahrende die Umgebung beschreibt.  Alternativ zu Nightscout kann seit der AAPS version 3.2 (oder neuer) auch Tidepool genutzt werden.
 
 ### 3) Eine App zum Auslesen Deines Sensors (CGM)
 
-Um Glukosewerte zu empfangen und an **AAPS** weiterzureichen, benötigst Du die zu Deinem Sensor passende und kompatible App. The different options are shown below and more information is given in the [compatible CGMs section](../Getting-Started/CompatiblesCgms.md):
+Um Glukosewerte zu empfangen und an **AAPS** weiterzureichen, benötigst Du die zu Deinem Sensor passende und kompatible App. Die verschiedenen Optionen werden unten gezeigt und weitere Informationen findest Du im Abschnitt [kompatible Sensoren (CGMs)](../Getting-Started/CompatiblesCgms.md):
 
 ![dexcom_options](../images/preparing_images/AAPS_connectivity_Dex_02.png) ![libre_options](../images/preparing_images/AAPSconnectivity_libre.png) ![](../images/preparing_images/AAPS_connectivity_eversense.png)
 
@@ -154,41 +154,41 @@ Mit dem Erscheinen von verbesserten Versionen müssen **Nightscout** und **AAPS*
 (preparing-how-long-will-it-take)=
 ## Wie lange wird es dauern, alles einzurichten?
 
-Wie schon erwähnt, ist die **AAPS**-Nutzung eher eine „Reise“, die es notwendig macht, dass Du Deine Zeit in sie investierst. Es ist kein einmaliger Aufwand. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
+Wie schon erwähnt, ist die **AAPS**-Nutzung eher eine „Reise“, die es notwendig macht, dass Du Deine Zeit in sie investierst. Es ist kein einmaliger Aufwand. Aktuelle Schätzungen für das Erstellen, die Installation und Konfiguration von **AAPS** und **CGM**-Software, sowie den Übergang von Open Loop zu Hybrid Closed Loop mit **AAPS**, gehen von ca. 4 bis 6 Monaten aus. Daher wird empfohlen sich als Erstes auf das Erstellen (Build) der **AAPS**-App zu konzentrieren und so schnell wie möglich die ersten Aufgaben bzw. Ziele (Objectives) anzugehen. Das gilt auch, wenn Du aktuell noch ein anderes "Insulinabgabesystem" haben solltest, da Du bis zum Ziel 5 eine "virtuelle Pumpe" nutzen kannst.
 
-Some of the objectives require a given amount of days to pass to make sure you understand the new functionality. It is not possible to bypass this waiting time, these minimal timings have been set-up for your own safety.
+Einige der Ziele verlangen, dass eine bestimmte Anzahl von Tagen in ihnen verbracht wird, um so die neue Funktionalität vollständig verstehen zu können. Es ist nicht möglich, diese Wartezeit zu umgehen. Diese Wartezeit wurde zu Deiner eigenen Sicherheit eingerichtet.
 
 Ein ungefährer Zeitrahmen ist:
 
-| Aufgaben                                                      |         Ungefähre Dauer          |
-| ------------------------------------------------------------- |:--------------------------------:|
-| Initial reading of the documentation                          |             1-2 Tage             |
-| Installing/configuring PC to allow the build                  |           2-8 Stunden            |
-| Setting up a reporting server                                 |             1 Stunde             |
-| Installing a CGM app (xDrip+, BYODA, …)                       |             1 Stunde             |
-| Configuring CGM → xDrip+ → APPS initially                     |             1 Stunde             |
-| Configuring AAPS → pump initially                             |             1 Stunde             |
-| Configuring AAPS → Nightscout/Tidepool (reporting only)       |             1 Stunde             |
-| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers    |             1 Stunde             |
-| Objective 1: Setting up visualization and monitoring          |             1 Stunde             |
-| Ziel 2: Lerne, wie AAPS bedient wird                          |             2 Stunde             |
-| Ziel 3: Belege Dein Wissen                                    |         bis zu 14 Tagen          |
-| Ziel 4: Starte den Open Loop                                  |        Minimum of 7 days         |
-| Objective 5: Understanding your open loop                     |      wurden 7 Tage erreicht      |
-| Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
-| Objective 7: Tuning the closed loop                           |  Minimum of 1 day, up to 7 days  |
-| Objective 8: Adjust basals and ratios, enable Autosens        | Minimum of 7 days, up to 14 days |
-| Objective 9: Enabling Super Micro Bolus (SMB)                 |        Minimum of 28 days        |
-| Ziel 10: Automatisierung                                      |        Minimum of 28 days        |
-| Objective 11: Dynamic ISF                                     |        Minimum of 28 days        |
+| Aufgaben                                                                       |     Ungefähre Dauer      |
+| ------------------------------------------------------------------------------ |:------------------------:|
+| Erstmaliges Lesen der Dokumentation                                            |         1-2 Tage         |
+| Installation/Konfiguration des PCs zum Erstellen der App                       |       2-8 Stunden        |
+| Einen Berichtsserver einrichten                                                |         1 Stunde         |
+| Eine CGM-App installieren (xDrip+, BYODA, …)                                   |         1 Stunde         |
+| CGM → xDrip+ → APPS initial installieren                                       |         1 Stunde         |
+| AAPS → Pumpe initial konfigurieren                                             |         1 Stunde         |
+| AAPS → Nightscout/Tidepool (nur für Berichte) initial konfigurieren            |         1 Stunde         |
+| Optional: Nightscout ↔ **AAPS** & NS-Follower konfigurieren                    |         1 Stunde         |
+| Ziel 1: Visualisierung und Überwachung einrichten                              |         1 Stunde         |
+| Ziel 2: Lerne, wie AAPS bedient wird                                           |         2 Stunde         |
+| Ziel 3: Belege Dein Wissen                                                     |     bis zu 14 Tagen      |
+| Ziel 4: Starte den Open Loop                                                   |    Mindestens 7 Tage     |
+| Ziel 5: Deinen Open Loop verstehen                                             |  wurden 7 Tage erreicht  |
+| Ziel 6: Den Closed Loop (mit Abschaltung bei niedrigen Glukose-Werten) starten | Mindestens 5 bis 14 Tage |
+| Ziel 7: Feinabstimmung des Closed Loop                                         | Mindestens 1 bis 7 Tage  |
+| Ziel 8: Basal und Faktoren anpassen, Autosens aktivieren                       | Mindestens 7 bis 14 Tage |
+| Ziel 9: Aktivieren des Super Micro Bolus (SMB)                                 |    Mindestens 28 Tage    |
+| Ziel 10: Automatisierung                                                       |    Mindestens 28 Tage    |
+| Ziel 11: Dynamischer ISF                                                       |    Mindestens 28 Tage    |
 
-Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
+Sobald Du **AAPS** voll nutzt, musst Du immer noch regelmäßig Deine Einstellungen nachjustieren, um so Dein gesamtes Diabetes-Management verbessern zu können.
 
 ## Voraussetzungen
 
 ### Medizinische Überlegungen
 
-In addition to the medical warnings in the [safety section](#safety-first) there are also different parameters, depending on which insulin you are using in the pump.
+In addition to the medical warnings in the [safety section](#preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
 
 #### Insulinwahl
 
@@ -210,17 +210,17 @@ Diese Dokumentation möchte die notwendige technische Expertise auf ein absolute
 
 #### AAPS und Android-Versionen
 
-Die aktuelle **AAPS**-Version (3.2) setzt ein Android Smartphone mit Google **Android 9.0 oder höher** voraus. The next **AAPS** version (3.3) will require **Android 11.0 or above**. If you are considering buying a new phone, (as of July 2024), Android 13 is preferred.<br/> As of November 2024, several users have reported issues with Android 15 and Bluetooth connection. You may wish to delay the update to Android 15, especially if you are using Omnipod Dash or Dexcom G7. Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 11.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+Die aktuelle **AAPS**-Version (3.3) setzt ein Android Smartphone mit Google **Android 11.0 oder höher** voraus. If you are considering buying a new phone, (as of December 2024), Android 14 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. Für Menschen, die kein Gerät mit Android 11 (oder neuer) nutzen können, stehen weiterhin ältere **AAPS**-Versionen für ältere Android-Versionen zur Verfügung, siehe dazu auch die [Release Notes](#maintenance-android-version-aaps-version).
 
 #### Smartphone-Modell wählen
-Welches genaue Modell Du kaufen solltest, hängt von den gewünschten Funktionen ab. You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
+Welches genaue Modell Du kaufen solltest, hängt von den gewünschten Funktionen ab. Die [Smartphones](../Getting-Started/Phones.md)-Seite enthält von Nutzendenden getestete und empfohlene Setups.
 
 Das Smartphone sollte regelmäßig Sicherheitsupdates erhalten und stets auf der aktuellen Android-Version gehalten werden. Wenn Du mit AAPS noch nicht sehr vertraut bist oder kein technischer Experte bist, solltest Du mit dem jeweiligen Update warten, bis andere das Update erfolgreich gemacht haben und in den verschiedenen Foren bestätigt haben, dass es problemlos durchgeführt werden kann.
 
 ```{admonition} delaying Samsung phones updates
 :class: Warnung
-Samsung hält unglücklicherweise einen Rekord an erzwungenen Updates nach denen Bluetooth-Verbindungsprobleme auftreten. Um diese Zwangsupdates zu deaktivieren, musst Du das Smartphone in den "Entwicklermodus" schalten:
- Gehe zu Einstellungen - Telefoninfo - Softwareinformationenen und tippe so lange auf "Buildnummer", bis die Meldung über den aktivierten Entwicklermodus erscheint. Gehe zurück in die Einstellungen und Du solltest ganz unten einen neuen Eintrag "Entwickleroptionen" finden. Öffne die Entwickleroptionen und scrolle bis zum Punkt "System automat. aktualisieren" und deaktiviere diese Option
+Samsung hält unglücklicherweise einen Rekord an erzwungenen Updates nach denen Bluetooth-Verbindungsprobleme auftreten. Um diese Zwangsupdates zu deaktivieren, musst Du das Smartphone in den „Entwicklermodus“ schalten:
+ Gehe zu Einstellungen - Telefoninfo - Softwareinformationen und tippe so lange auf „Buildnummer“, bis die Meldung über den aktivierten Entwicklermodus erscheint. Gehe zurück in die Einstellungen und Du solltest ganz unten einen neuen Eintrag "Entwickleroptionen" finden. Öffne die Entwickleroptionen und scrolle bis zum Punkt "System automat. aktualisieren" und deaktiviere diese Option
 ```
 
 ```{admonition} Google Play Protect potential Issue

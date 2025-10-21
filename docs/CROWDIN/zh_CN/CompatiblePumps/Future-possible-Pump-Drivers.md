@@ -1,124 +1,96 @@
-* * *
+# 未来（可能）的泵驱动程序
 
-orphan: true
+这是市面上部分胰岛素泵的清单，包含各循环系统对其支持状态及在AAPS中的兼容情况。 文末附有胰岛素泵实现"闭环兼容"所需条件的说明。
 
-* * *
+## 能闭环的泵
 
-# Future (possible) Pump Drivers
+### Kaleido ([主页](https://www.hellokaleido.com/))
 
-This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
+**闭环状态:** 泵是闭环候选，但当前协议未知。 厂商对开源不感兴趣。
 
-## Pumps that are Loopable
+**硬件要求 AAPS：** 无。 似乎启用了蓝牙。
 
-### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
+### Tandem: t:slim X2 ([主页](https://www.tandemdiabetes.com/))
 
-**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
+**闭环状态:** 尚不可闭环。
 
-**Hardware requirement for AAPS:** None. It's BT enabled.
+虽然过去公司决定不允许外部设备控制他们的泵，但最近几年似乎发生了重大转变。 公司决定升级其t:slim X2泵以实现远程控制（通过t:connect应用程序），这意味着我们有望在未来通过AAPS控制泵。 新泵固件计划很快发布（今年或明年，在其无管路泵t:sport上市之前）。 目前尚不清楚t:connect将支持哪些操作（大剂量肯定可以，其他功能均未知）。
 
-**Comments:** Dose version of pump had very heavy encryption added, so there is big probababilty that this pump won't be supported by AAPS in near future (or ever). We had developer working with Ypsomed and helping with medical trials, so maybe his version of driver will be alowed to be released, but this is just small possibility of that. You can find more information on our discord in channel "ypsopump-talk".
+**硬件要求 AAPS：** 无。 似乎启用了蓝牙。
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+### Tandem：t:Mobi、t:slim X3和t:Mobi无管路版（[官网](https://www.tandemdiabetes.com/about-us/pipeline)）
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**闭环状态:** 所有3款泵都将成为闭环候选。
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+Awaiting release of t:mobi in Europe (other two are not yet released anywhere). Development of AAPS t:mobi support has already started and should be available by end of 2025 (see more info on Discord).
 
-### Equil (pump from Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
+**硬件要求 AAPS：** 无。 似乎启用了蓝牙。
 
-**Loop status:** Is a Loop candidate.
+### Willcare Insulin pump ([首页](http://shinmyungmedi.com/en/))
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**闭环状态:** 目前尚不具备闭环条件，但其工作人员已与我们联系，并表示有意扩展泵的闭环功能（目前仅缺少获取/设置配置文件的指令）。
 
-**Comment:** Some people started looking into supporting pump in AAPS, but this is still in beginning phases. You can find more information on our discord in channel "equil".
+**硬件要求 AAPS：** 无。 似乎启用了蓝牙。
 
-### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
+**备注：** 由于该公司有意与AAPS整合，可能会自行实现相关功能。
 
-**Loop status:** Is a Loop candidate.
-
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-**Comments:** There are some developers looking into decoding the protocol, but so far this is only in preliminary phases.
-
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
-
-**Loop status:** Not yet loopable.
-
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
-
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
-
-**Loop status:** All 3 pumps will be Loop candidates.
-
-They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).
-
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
-
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
-
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
-
-## Pumps no longer sold (companies no longer operating)
-
-### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
-
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
-
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
-
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
-
-## Pumps that aren't Loopable
+## 不再销售的泵（公司已停止运营）
 
 ### Animas Vibe
 
-**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
-
 ### Animas Ping
 
-**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
+### Cellnovo
 
-### Medtronic Bluetooth
+### Accu-Chek Insight
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**备注：** 支持终止于2025年3月。
 
-## Requirements for pumps being loopable
+## 无法闭环的泵
 
-**Prerequisite**
+### Medtronic 蓝牙
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+**评论：** Medtronic [已撤回](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps)。
 
-**Minimal requirement**
+### Accu-Chek Solo
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+**备注：** 社区未能成功与Solo泵通信。
 
-**For oref1(SMB) or Bolusing:**
+### Ypsomed 泵
 
-- Set Bolus
+**备注：** Ypso增加了非常严格的第三方加密。
 
-**Good to have**
+## 泵实现闭环的要求
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+**先决条件**
 
-**Other (not required but good to have)**
+- 泵必须支持某种远程控制功能。 （蓝牙，无线电频率等）
+- 协议已被破解/记录/等。
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+**最低要求**
 
-### Other pumps support
+- 设置临时基础率
+- 获取状态
+- 取消临时基础率
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+**对于oref1(超微大剂量)或大剂量给药：**
+
+- 设置大剂量
+
+**最好有**
+
+- 取消大剂量
+- 获取基础率配置文件（几乎是必需条件）
+- 设置基础率配置文件（最好具备）
+- 读取历史记录 
+
+**其他（不是必需的，但最好有）**
+
+- 设置扩展大剂量
+- 取消扩展大剂量
+- 读取历史记录
+- 读取 TDD
+
+### 其他泵支持
+
+若您想了解其他泵的状态，请在Discord上联系我们。

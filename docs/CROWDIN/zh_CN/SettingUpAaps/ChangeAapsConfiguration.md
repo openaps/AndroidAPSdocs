@@ -22,7 +22,7 @@
 
 有关配置构建器的文档，请点击[此处](../SettingUpAaps/ConfigBuilder.md)查阅。
 
-## Preferences
+## 偏好设置
 
 ![打开参数设置](../images/Pref2020_Open2.png)
 

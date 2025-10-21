@@ -26,7 +26,7 @@ AAPS nabízí několik možností pro vzdálené monitorování dětí a také u
 Když máte děti, mohou být chytré hodinky velmi užitečným nástrojem pro ovládání AAPS. K dispozici je několik možností:
 
 - Je-li na telefonu rodičů nainstalován AAPSClient, lze na kompatibilní chytré hodinky připojené k rodičovskému telefonu nainstalovat [aplikaci AAPSClient pro WearOS](https://github.com/nightscout/AndroidAPS/releases/). Na hodinkách pak bude zoubrazována aktuální glykémiie, stav smyčky, a bude možné zadávat sacharidy, dočasné cíle a změny profilu. Z aplikace WearOS ale nebude možné posílat bolusy.
-- Alternatively, the [AAPS WearOS app](../WearOS/WearOsSmartwatch.md) can be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the parent. Takto lze využít všechny funkce popsané v předchozím případě, ale navíc lze posílat i bolusy. To umožňuje rodičům ovládat vydávání inzulínu bez toho, aby museli dítěti brát mobilní telefon.
+- Alternatively, the [AAPS WearOS app](../WearOS/WearOsSmartwatch.md) can be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the parent. Takto lze využít všechny funkce popsané v předchozím případě, ale navíc lze posílat i bolusy. This allows the parent to administer insulin without needing to remove the kid's phone from however it is kept on them.
 
 ## Co je třeba zvážit
 

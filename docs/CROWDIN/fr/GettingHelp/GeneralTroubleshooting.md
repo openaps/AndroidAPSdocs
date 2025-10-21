@@ -11,6 +11,14 @@ D'autres informations utiles peuvent également être disponibles dans la [FAQ](
 * [Fichier de clés perdu](#troubleshooting_androidstudio-lost-keystore)
 * [Dépannage AndroidStudio](TroubleshootingAndroidStudio)
 
+### Installing
+
+You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
+
+Ignore it: More details, Install anyway.
+
+![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+
 ### Paramètres
 * Profil
 
@@ -29,14 +37,37 @@ D'autres informations utiles peuvent également être disponibles dans la [FAQ](
 
 * [Commandes SMS](#SMSCommands-troubleshooting)
 
-### Problèmes de connexion bluetooth fréquents
+### Cannot start Omnipod with Android 16
 
-Cela peut se produire avec diverses pompes. En plus d'exclure AAPS de toute optimisation de batterie, vous pouvez également exclure l'application Bluetooth du système de l'optimisation de la batterie. Cela peut être utile dans certains cas. Selon le téléphone que vous utilisez, vous trouverez l'application bluetooth différemment.
+Upgrade to minimum version of AndroidAPS: 3.3.2.1.
+
+### Frequent Bluetooth connection problems
+
+#### Android 15
+
+After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15, you can try to enable the following:
+
+1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+
+
+![Open preferences](../images/Pref2020_Open2.png)
+
+2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
+
+   ![BondBT](../images/troubleshooting/BondBT.png)
+
+3. If the pump asks for a pairing request, accept it.
+
+4. Restart your phone.
+
+#### Battery optimization
+
+Cela peut se produire avec diverses pompes. Apart from excluding AAPS from any battery optimization, you can also exclude the system Bluetooth app from battery optimization. Cela peut être utile dans certains cas. Depending on the phone you use, you will find the Bluetooth app differently.
 
 Voici des exemples pour les trouver sur des téléphones Android spécifiques.
 
 
-#### Téléphones Pixel (Android standard)
+##### Pixel phones (stock Android)
 
 * Allez dans les paramètres d'Android, sélectionnez "Applications".
 
@@ -59,7 +90,7 @@ Voici des exemples pour les trouver sur des téléphones Android spécifiques.
   ![Optimisation batterie BT](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Téléphone Samsung
+##### Téléphone Samsung
 
 * Allez dans les paramètres d'Android, sélectionnez "Applications"
 
@@ -95,7 +126,6 @@ Voici des exemples pour les trouver sur des téléphones Android spécifiques.
 
 * [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
 * [Accu-Chek Combo généralités](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
-* [Accu-Chek Combo + Ruffy](#Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 

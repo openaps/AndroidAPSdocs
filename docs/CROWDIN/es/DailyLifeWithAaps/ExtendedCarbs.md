@@ -35,7 +35,7 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 
 **Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. Con comidas bajas en carbohidratos, altas en grasas y proteínas, puede ser suficiente usar solo eCarbs sin bolos manuales (consulte el post arriba mencionado). Cuando los eCarbs son generados, se genera una nota en el Careportal para documentar los inputs, para así hacer más fácil la iteración y mejorar los inputs.
 
-(Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
+(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Extended bolus and why they won't work in closed-loop environment?
 
 Como se ha mencionado anteriormente, los bolos extendidos o de onda múltiple no funcionan realmente en un entorno de lazo cerrado. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
@@ -53,7 +53,7 @@ That's why as of version 2.6 there is an option for an extended bolus for users 
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
-(Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
+(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Why extended boluses won't work in a closed loop environment
 
 1. El lazo determina que ahora se van a entregar 1.55U/h. Si se entrega como un bolus ampliado o TBR no importa al algoritmo. De hecho, algunas de las bombas utilizan el bolo extendido. ¿Qué debería pasar entonces? Most pump drivers then stop the extended bolus -> You didn't even need to start it.

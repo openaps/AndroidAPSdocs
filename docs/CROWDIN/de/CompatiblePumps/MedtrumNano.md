@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Medtrum Nano / 300U
 
 Diese Anleitung beschreibt die Konfiguration der Medtrum Insulinpumpe.
@@ -24,9 +20,9 @@ Diese Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein k
         - Medtrum TouchCare Nano mit Pumpenbasis Ref.: **MD0201** und **MD8201**.
         - Medtrum TouchCare 300U mit Pumpenbasis Ref.: **MD8301**.
         - Wenn Du ein bisher nicht unterstütztes Modell hast und bereit bist es zu spenden oder Du beim Testen helfen möchtest, kontaktiere uns über den Discord-Kanal [hier](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
+* **AAPS Version 3.2.0.0 oder neuer erstellt und installiert** nach den [AAPS erstellen](../SettingUpAaps/BuildingAaps.md)-Anweisungen.
 * **Kompatibles Android Smartphone** mit Bluetooth-Verbindung (Bluetooth Low Energy, BLE)
-    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
+    - Siehe dazu auch die AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
 * [**Kontinuierliche Glukosemessung (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
 ## Bevor du startest
@@ -59,7 +55,7 @@ Falls Du Dir nicht sicher bist, kannst Du auch zunächst die „Virtuelle Pumpe�
 
 #### Option 2: Der Konfigurations-Generator
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](#Config-Builder-pump):
+Bei einer bestehenden Installation kannst Du die **Medtrum**-Pumpe unter [Konfiguration > Pumpe](#Config-Builder-pump) auswählen:
 
 Das **Hamburger-Menü** in der oberen linken Ecke antippen und **Konfiguration**\ ➜\ **Pumpe**\ ➜\ **Medtrum**\ durch **Aktivieren** des Optionsfelds vor dem Namen **Medtrum** auswählen.
 
@@ -94,12 +90,12 @@ Hinweis: Im Stumm-Modus gibt AAPS je nach Lautstärkeeinstellungen Deines Smartp
 
 ***Voreingestellt: Aktiviert.***
 
-Diese Einstellungen ändern die Art und Weise, wie AAPS Benachrichtigung bei nicht kritischen Pumpenwarnungen anzeigt. Wenn die Option aktiviert ist, wird beim Auftreten einer Pumpenwarnung eine Benachrichtigung auf dem Smartphone angezeigt. Das betrifft auch:
+Diese Einstellungen ändern die Art und Weise, wie AAPS Benachrichtigungen bei nicht kritischen Pumpenwarnungen anzeigt. Wenn die Option aktiviert ist, wird beim Auftreten einer Pumpenwarnung eine Benachrichtigung auf dem Smartphone angezeigt. Das betrifft auch:
     - Niedriger Akkustand
     - Reservoir fast leer (20 IE)
     - Patch-Ablaufwarnung
 
-In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
+In jedem Fall werden diese Warnungen auch auf der Medtrum-Übersichtsseite unter [Aktive Alarme](#medtrum-active-alarms) angezeigt.
 
 (medtrum-patch-expiration)=
 #### Patch Ablaufdatum
@@ -114,13 +110,13 @@ Wenn diese Einstellung deaktiviert ist, wird der Patch keine Warnung abgeben und
 
 ***Voreingestellt: 72 Stunden.***
 
-This setting changes the time of the expiration warning, when [Patch Expiration](#medtrum-patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
+Diese Einstellung ändert, wenn das [Patch Ablaufdatum](#medtrum-patch-expiration) aktiviert ist, den Zeitpunkt (in Stunden nach der Aktivierung) zu dem AAPS eine Benachrichtigung anzeigen wird.
 
 #### Stündliches Maximum Insulin
 
 ***Voreingestellt: 25 IE.***
 
-Diese Einstellung begrenzt die maximal in einer Stunde abzugebende Insulinmenge. Beim Überschreiten des Limits, wird der Patch die Insulinlieferung unterbrechen und einen Alarm auslösen. Der Alarm kann durch das Drücken der Reset-Taste im Übersichtsmenü zurückgesetzt werden (siehe [Alarme zurücksetzen](#reset-alarms)).
+Diese Einstellung begrenzt die maximal in einer Stunde abzugebende Insulinmenge. Beim Überschreiten des Limits, wird der Patch die Insulinlieferung unterbrechen und einen Alarm auslösen. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
 
 Setze den Wert auf eine für Deine speziellen Insulin-Anforderungen vernünftigen Wert.
 
@@ -128,9 +124,17 @@ Setze den Wert auf eine für Deine speziellen Insulin-Anforderungen vernünftige
 
 ***Voreingestellt: 80 IE.***
 
-Diese Einstellung begrenzt die maximal an einem Tag abzugebende Insulinmenge. Beim Überschreiten des Limits, wird der Patch die Insulinlieferung unterbrechen und einen Alarm auslösen. Der Alarm kann durch das Drücken der Reset-Taste im Übersichtsmenü zurückgesetzt werden (siehe [Alarme zurücksetzen](#reset-alarms)).
+Diese Einstellung begrenzt die maximal an einem Tag abzugebende Insulinmenge. Beim Überschreiten des Limits, wird der Patch die Insulinlieferung unterbrechen und einen Alarm auslösen. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
 
 Setze den Wert auf eine für Deine speziellen Insulin-Anforderungen vernünftigen Wert.
+
+#### Scannen bei Verbindungsfehler
+
+***Standard: Aus.***
+
+Zu finden unter **Erweiterte Einstellungen**.
+
+Aktiviere diese Option nur, wenn Du Verbindungsprobleme hast. Bei aktivierter Option wird vor dem erneuten Verbindungsaufbau zur Pumpe eine Suche (sog. Scan) gestartet. Stelle sicher, dass Du die Standortberechtigung auf "Immer zulassen" gesetzt hast.
 
 ### Schritt 2b: AAPS Alarm-Einstellungen
 
@@ -176,14 +180,14 @@ Diese Einstellung kann für eine Medtrum-Pumpe geändert werden. Aus Sicherheits
 
 **Bevor Du weiter machst:**
 - Habe Deine Medtrum Nano Pumpenbasis und ein Reservoir-Patch zur Hand.
-- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+- Stell sicher, dass AAPS korrekt eingerichtet und ein [Profil aktiviert ist](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 - Andere Geräte, die sich mit der Medtrum-Pumpe verbinden könnten, sind deaktiviert (PDM und Medtrum-App)
 
 #### Patch über den Medtrum Übersichts-Reiter aktivieren
 
-Navigiere zum [MEDTRUM-Reiter](#overview) in der AAPS-Übersicht und tippe auf **Wechsele Patch** in der unteren rechten Ecke.
+Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
 
-Wenn ein Patch bereits aktiv ist, wirst Du aufgefordert, diesen aktiven Patch zuerst zu deaktivieren. Vgl. [Patch deaktivieren](#deactivate-patch).
+Wenn ein Patch bereits aktiv ist, wirst Du aufgefordert, diesen aktiven Patch zuerst zu deaktivieren. see [Deactivate Patch](#nano-deactivate-patch).
 
 Befolge die Anweisungen, um den neuen Patch zu befüllen und zu aktivieren. Bitte beachten Sie, dass es wichtig ist, die Pumpbase nur an den Patch des Reservoirs anzuschließen, wenn Sie dazu aufgefordert werden. **Du darfst die Pumpe nur dann auf Deinem Körper anbringen und die Kanüle einführen, wenn Du während des Aktivierungsvorgangs dazu aufgefordert wirst (nachdem die Befüllung der Pumpe abgeschlossen ist).**
 
@@ -234,9 +238,11 @@ Wenn die Aktivierung abgeschlossen ist, wird Folgendes angezeigt
 
 Drücke **OK** um zum Hauptbildschirm zurückzukehren.
 
+(nano-deactivate-patch)=
+
 ### Patch deaktivieren
 
-Um einen aktuell aktiven Patch zu deaktivieren, gehe zum [Medtrum-Reiter](#overview) in der AAPS-Übersicht und tippe auf **Wechsele Patch **.
+To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
 
 ![Patch deaktivieren](../images/medtrum/activation/DeactivatePatch.png)
 
@@ -250,17 +256,21 @@ Falls AAPS den Patch nicht deaktivieren kann (zum Beispiel, weil die Pumpenbasis
 
 Sobald die Deaktivierung abgeschlossen ist, tippe auf **OK**, um zum Hauptbildschirm zurückzukehren oder tippe auf **Weiter**, um einen neuen Patch zu aktivieren zu können.
 
-### unterbrochene Aktivierung fortsetzen
+(nano-resume-interrupted-activation)=
 
-Wenn eine Patch-Aktivierung unterbrochen wird, zum Beispiel weil der Akkustand des Smartphones zu niedrig ist, kannst Du den Aktivierungsvorgang fortsetzen, indem Du auf den [Medtrum-Reiter](#overview) in der AAPS-Übersicht gehst und auf **Wechsele Patch** tippst.
+### Unterbrochene Aktivierung fortsetzen
 
-![unterbrochene Aktivierung fortsetzen](../images/medtrum/activation/ActivationInProgress.png)
+If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+
+![Unterbrochene Aktivierung fortsetzen](../images/medtrum/activation/ActivationInProgress.png)
 
 Tippe auf **Weiter**, um den Aktivierungsprozess fortzusetzen. Drücke auf **Verwerfen**, um die aktuelle Patch-Sitzung zu löschen und damit eine Aktivierung eines neuen Patches zu ermöglichen.
 
 ![Aktivierungsstatus lesen](../images/medtrum/activation/ReadingActivationStatus.png)
 
 AAPS wird versuchen, den aktuellen Status der Patch-Aktivierung zu bestimmen. Wenn das erfolgreich war, wird in den Aktivierungsfortschritt übergegangen.
+
+(nano-overview)=
 
 ## Übersicht
 
@@ -333,7 +343,9 @@ Diese Schaltfläche aktualisiert den Patch-Status.
 
 ### Wechsele Patch:
 
-Diese Schaltfläche startet den Prozess zum Wechseln des Patches. See [Activate patch](#medtrum-activate-patch) for more information.
+Diese Schaltfläche startet den Prozess zum Wechseln des Patches. Weitere Informationen findest Du unter [Patch aktivieren](#medtrum-activate-patch).
+
+(nano-reset-alarms)=
 
 ### Alarme zurücksetzen
 
@@ -343,19 +355,19 @@ Die Alarmtaste wird auf der Übersicht angezeigt, wenn es einen aktiven Alarm, d
 
 Tippe auf **Alarme zurücksetzen**, um die Alarme zurückzusetzen und den normalen Betrieb fortzusetzen.
 
-## Switching phone, export/import settings
+## Smartphone wechseln, Export/Import-Einstellungen
 
 Falls Du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
-* Transfer settings from old to new phone, and import them into AAPS
+* [Exportiere die Einstellungen](../Maintenance/ExportImportSettings.md) auf Deinem alten Smartphone
+* Übertrage die Einstellungen vom alten auf das neue Smartphone und importiere sie in AAPS
 
-The imported settings file has to be of the same patch session that you are currently using, otherwise the patch will not connect.
+Die importierte Einstellungsdatei muss in der gleichen Patch-Session, die aktuell aktiv ist, exportiert worden sein. Ist dem nichts so, wird sich der Patch nicht verbinden lassen.
 
-After a settings import the driver will sync history with the pump, this can take a while depending on the age of the settings file.
+Nach dem Import der Einstellungen erfolgt eine Synchronisierung der Pumpenhistorie. Je nach Alter der Einstellungsdatei kann das eine Weile dauern.
 
-From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen: ![Sync progress](../images/medtrum/SyncProgress.png)
+Ab AAPS Version 3.3.0.0 wird der Synchronisations-Fortschritt auf dem Startbildschirm angezeigt: ![Synchronisationsfortschritt](../images/medtrum/SyncProgress.png)
 
-## Troubleshooting
+## Problembehandlung
 
 ### Verbindungsprobleme
 
@@ -364,7 +376,7 @@ Wenn Du Verbindungsabbrüche oder andere Verbindungsprobleme hast:
 
 ### Aktivierung unterbrochen
 
-Wenn der Aktivierungsprozess beispielsweise durch einen leeren Smartphone-Akku oder einen Smartphone-Absturz unterbrochen wird. Der Aktivierungsprozess kann fortgesetzt werden, indem Du zum "Wechsele Patch"-Bildschirm gehst und den entsprechenden Schritten zur Aktivierung, wie im Abschnitt [Aktivierung fortsetzen](#resume-interrupted-activation) beschrieben, folgst.
+Wenn der Aktivierungsprozess beispielsweise durch einen leeren Smartphone-Akku oder einen Smartphone-Absturz unterbrochen wird. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
 
 ### Patch-Fehler verhindern
 
@@ -378,5 +390,5 @@ Die gesamte Entwicklungsarbeit rund um das Medtrum-Modul wird von der Community 
 
 -  **Level 0:** Lies den entsprechenden Abschnitt dieser Dokumentation um sicherzustellen, dass du verstehst, wie die Funktion, mit der Du Schwierigkeiten hast, funktionieren soll.
 -  **Level 1:** Solltest Du trotz dieses Dokuments ein Problem nicht lösen können, tritt dem *#Medtrum* **Discord**-Channel bei, indem Du auf diesen [Einladungs-Link](https://discord.gg/4fQUWHZ4Mw) klickst.
--  **Level 2:** Vorhandene 'Issues' durchsuchen um zu sehen, ob Dein Problem bereits in den [Issues](https://github.com/nightscout/AAPS/issues) gemeldet wurde. Falls vorhanden, bitte bestätige/kommentiere/ergänze Informationen zu Deinem Problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
+-  **Level 2:** Vorhandene 'Issues' durchsuchen um zu sehen, ob Dein Problem bereits in den [Issues](https://github.com/nightscout/AAPS/issues) gemeldet wurde. Falls vorhanden, bitte bestätige/kommentiere/ergänze Informationen zu Deinem Problem. Wenn nicht, erstelle bitte ein [neues Issue](https://github.com/nightscout/AndroidAPS/issues) und füge [Deine Protokolldateien](../GettingHelp/AccessingLogFiles.md) (Logs) hinzu.
 -  **Sei geduldig - die meisten Mitglieder unserer Community sind gutmütige Freiwillige und die Lösung von Problemen erfordert oft Zeit und Geduld von Nutzern und Entwicklern.**

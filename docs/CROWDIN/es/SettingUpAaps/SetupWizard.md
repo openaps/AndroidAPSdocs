@@ -20,14 +20,13 @@ So, please take your time in configuring your loop, the benefits of a well-runni
 :class: note
 If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Step-wise guide to the AAPS Setup Wizard
-### Welcome message
+## Welcome message
 
 This is just the welcome message which you can skip with the "NEXT" button:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_125636.png)
 
-### License agreement
+## License agreement
 
 In the end user license agreement there is important information about the legal aspects of using **AAPS**. Please read it carefully.
 
@@ -37,7 +36,7 @@ If you understand and agree, please click the "I UNDERSTAND AND AGREE" button an
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_125650.png)
 
-### Required permissions
+## Required permissions
 
 **AAPS** needs some requirements to operate correctly.
 
@@ -49,28 +48,15 @@ Please click the "NEXT" button:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_125709.png)
 
-Battery consumption on smartphones is still a consideration, as the performance of the batteries is still quite limited. Therefore, the Android operating system on your smartphone is quite restrictive about allowing applications to run and consume CPU time, and therefore battery power.
-
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be allowed to do so by Android.
-
-You do this by confirming the setting.
-
-Please click the "ASK FOR PERMISSION" button:
-
-![imagen](../images/setup-wizard/Screenshot_20231202_125721.png)
-
-Please select "Allow":
-
-![imagen](../images/setup-wizard/Screenshot_20231202_125750.png)
+### Notification and battery optimization
 
 Android requires special permission for apps if they want to send you notifications.
 
 While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
 
-Please click the "ASK FOR PERMISSION" button:
+Please click the first "ASK FOR PERMISSION" button:
 
-![imagen](../images/setup-wizard/Screenshot_20231202_125813.png)
-
+![imagen](../images/setup-wizard/Screenshot_20231202_125721.png)
 
 Select the "AAPS" app:
 
@@ -84,11 +70,27 @@ The slider should look this way if it is enabled:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_125851.png)
 
+Battery consumption on smartphones is still a consideration, as the performance of the batteries is still quite limited. Therefore, the Android operating system on your smartphone is quite restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+
+However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be allowed to do so by Android.
+
+You do this by confirming the setting.
+
+Click the second "ASK FOR PERMISSION" button. Please select "Allow":
+
+![imagen](../images/setup-wizard/Screenshot_20231202_125750.png)
+
+Click the "NEXT" button:
+
+![Screenshot_20241207-161454.png](../images/setup-wizard/Screenshot_20241207-161454.png)
+
+### Location
+
 Android links the use of bluetooth communication to the ability to use location services. Perhaps you have seen it with other apps too. It's common to need location permission if you want to access bluetooth.
 
 **AAPS** uses bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Details may differ from setup to setup.
 
-Click the "ASK FOR PERMISSION" button:
+Click the first "ASK FOR PERMISSION" button:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_125924.png)
 
@@ -98,13 +100,21 @@ Click "While using the app":
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_125939.png)
 
+Click the second "ASK FOR PERMISSION" button:
+
+![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
+
+Select "Allow all the time".
+
 Click the "NEXT" button:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_130002.png)
 
+### Storage permission
+
 **AAPS** needs to log information to the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
 
-Click the "ASK FOR PERMISSION" button:
+Click the first "ASK FOR PERMISSION" button:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_130012.png)
 
@@ -112,16 +122,19 @@ Click "Allow":
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_130022.png)
 
-You are being informed that you have to reboot your smartphone after this change to take effect.
+Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information. The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
 
-Please **don't stop the Setup Wizard now**. You can do it after finishing the Setup Wizard.
+![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
 
-Click "OK" and then the "NEXT" button:
+Confirm that you wish to grant access to **AAPS** to the selected directory:
+
+![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
+
+Click the "NEXT" button:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-
-### Contraseña maestra
+## Master password
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
@@ -132,7 +145,7 @@ After filling in the password twice, please click the "NEXT" button:
 ![imagen](../images/setup-wizard/Screenshot_20231202_130122.png)
 
 
-### Fabric upload
+## Fabric upload
 
 Here you can setup the usage of an automated crash and usage reporting service.
 
@@ -164,13 +177,13 @@ Click the "NEXT" button:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-### Units (mg/dL <-> mmol/L)
+## Units (mg/dL <-> mmol/L)
 
 Please select if your glucose values are in mg/dl or mmol/L and then please click the "NEXT" button:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_135830.png)
 
-### Display settings
+## Display settings
 
  Here you select the range for the sensor glucose display, which will be shown as "in range" between the values you set. You can leave it as the default values for now, and edit it later.
 
@@ -185,7 +198,7 @@ Please press the "NEXT" button:
 ![imagen](../images/setup-wizard/Screenshot_20231202_135853.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-### Synchronization with the reporting server and more
+## Synchronization with the reporting server and more
 
 Here you are configuring the data upload to your reporting server.
 
@@ -202,7 +215,7 @@ In this example we select Nightscout as reporting server, and will configure it.
 
 Click [here](#version3200) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**.
 
-Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
+Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout web interface, in which case, choose the first option "**NSClient**" until further notice. 
 ```
 For Tidepool it is even simpler, as you only need your personal login information.
 
@@ -241,7 +254,7 @@ Go back to the previous screen and select "Alarm option":
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_141310.png)
 
-For now, leave the switches disabled. We only walked to the screen to make you familar with possible options you might configure in the future. At the moment there is no need to do it.
+For now, leave the switches disabled. We only walked to the screen to make you familiar with possible options you might configure in the future. At the moment there is no need to do it.
 
 Go back to the previous screen before and select "Connection settings".
 
@@ -249,7 +262,7 @@ Here you can configure how to transfer your data to the reporting server.
 
 Caregivers must enable "use cellular connection" as otherwise the smartphone which serves the dependant/child can not upload data outside of WiFi range _e.g._ on the way to school.
 
-Other **AAPS** users can disable the tranfer via cellular connection if they want to save data or battery.
+Other **AAPS** users can disable the transfer via cellular connection if they want to save data or battery.
 
 If in doubt, just leave all enabled.
 
@@ -263,13 +276,13 @@ It might be interesting to see if **AAPS** is correctly configured now, but late
 
 Enable "Create announcements from errors" and "Create announcements from carbs required alerts".
 
-Leave "Slow down uploads" disabled. You would only use it in unusual circumstances if for example a lot of information is to be transfered to the Nightscout server, and the Nightscout server is being slow in processing this data.
+Leave "Slow down uploads" disabled. You would only use it in unusual circumstances if for example a lot of information is to be transferred to the Nightscout server, and the Nightscout server is being slow in processing this data.
 
 Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_141351.png)
 
-### Patient name
+## Patient name
 
 Here you can setup your name in **AAPS**.
 
@@ -281,7 +294,7 @@ Press "NEXT" to go to the next screen.
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-### Patient type
+## Patient type
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
 
@@ -293,7 +306,7 @@ After setting these values, press "NEXT" to go to the next screen:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_141817.png)
 
-### Used insulin
+## Used insulin
 
 Select the type of insulin being used in the pump.
 
@@ -309,7 +322,7 @@ Press "NEXT" to go to the next screen:
 ![imagen](../images/setup-wizard/Screenshot_20231202_141840.png)
 
 
-### Blood sugar source
+## Blood sugar source
 
 Select the BG source you are using. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
@@ -335,7 +348,7 @@ Go back and press "NEXT" to go to the next screen:
 ![imagen](../images/setup-wizard/Screenshot_20231202_141958.png)
 
 (setup-wizard-profile)=
-### Perfil
+## Perfil
 
 Now we are entering a very important part of the Setup Wizard.
 
@@ -343,7 +356,7 @@ Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-An accurate profile is necessary to control the safe action of **AAPS**
+An accurate profile is necessary to control the safe action of **AAPS**.
 
 It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
 
@@ -399,7 +412,7 @@ Save the profile by clicking on "SAVE":
 ![imagen](../images/setup-wizard/Screenshot_20231202_143724.png)
 
 
-After saving a new buttom "Activate Profile" occurs.
+After saving, a new button "Activate Profile" appears.
 
 ```{admonition} Several defined but only one active profile
 :class: information
@@ -440,7 +453,7 @@ Your profile has now been set:
 ![imagen](../images/setup-wizard/Screenshot_20231202_143833.png)
 
 
-### Insulin pump
+## Insulin pump
 
 
 
@@ -465,9 +478,9 @@ Press "NEXT" to go to the next screen:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-### APS algorithm
+## APS algorithm
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
+Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
 
 The reason SMB is disabled in the beginning is because the SMB feature enables faster reaction on blood sugar increase through the Super Micro Bolus instead of increasing the basal rate percentage. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
 
@@ -489,7 +502,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-### APS mode
+## APS mode
 
 Let "Open Loop" remain selected.
 
@@ -497,7 +510,7 @@ Press "NEXT" to go to the next screen:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_144049.png)
 
-### Detección sensibilidad
+## Detección sensibilidad
 
 Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
@@ -505,7 +518,7 @@ Press "NEXT" to go to the next screen:
 
 ![imagen](../images/setup-wizard/Screenshot_20231202_144101.png)
 
-### Start Objective 1
+## Start Objective 1
 
 You are entering now the Objectives. The qualification for access to further **AAPS** features.
 

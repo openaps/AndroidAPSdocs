@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Accu-Chek Insight Pumpe
 
 **Diese Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) einer künstlichen Bauchspeicheldrüse und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Das System wird Dir nicht alle Schwierigkeiten Deiner Diabetestherapie abnehmen, aber wenn Du willens bist, die nötige Zeit zu investieren, dann kann es die Ergebnisse Deiner Therapie verbessern und die Lebensqualität erhöhen. Überstürze nichts. Nimm dir Zeit zum Lernen. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
@@ -18,7 +12,7 @@ orphan: true
 
 Hinweis: AAPS schreibt Daten immer in das **erstes Basalratenprofil in der Pumpe**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Getting-Started/ComponentOverview) page which Android version is required to run AAPS.)
+* Ein Android-Smartphone - im Grunde funktionieren alle Android-Versionen mit der Insight, aber prüfe auf der Seite [Komponenten-Übersicht](../Getting-Started/ComponentOverview), welche Android Version für AAPS benötigt wird.
 * AAPS muss auf Deinem Smartphone installiert sein.
 
 ## Einrichtung
@@ -27,7 +21,7 @@ Hinweis: AAPS schreibt Daten immer in das **erstes Basalratenprofil in der Pumpe
     
     ![Screenshot Insight-Fernbedienung entfernen](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* Wähle in der [Konfiguration > Pumpe](../SettingUpAaps/ConfigBuilder.md) die "Accu-Chek Insight" aus.
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -60,7 +54,7 @@ Hinweis: Es besteht keine permanente Verbindung zwischen Pumpe und Smartphone. E
 
 ## Einstellungen in AAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](#Preferences-advanced-settings-nsclient)).
+**Hinweis: Es ist ab AAPS Version 2.7.0 nun wieder möglich, „Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout“ mit der Insight zu aktivieren, um Autotune nutzen zu können.** Dies gilt auch dann, wenn die Synchronisation mit Nightscout aktiviert ist. (Gehe dazu in AAPS auf [Einstellungen > Nightscout-Client > Erweiterte Einstellungen](#Preferences-advanced-settings-nsclient).)
 
 ![Screenshot der Insight Einstellungen](../images/Insight_settings.png)
 
@@ -95,8 +89,8 @@ In den Insight-Einstellungen in AAPS kannst Du die folgenden Optionen aktivieren
     neuer Versuch - keine Verbindung - warte **7** Sek.   
     neuer Versuch - keine Verbindung - warte **8** Sek.   
     ...   
-    neuer Versuch - keine Verbindung - warte **20** Sek.   
-    neuer Versuch - keine Verbindung - warte **20** Sek.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
 * "Verbindungsabbau-Verzögerung": Legt (in Sekunden) fest, wie lange AAPS nach einer erfolgreich abgeschlossenen Aktion wartet, bis dann die Verbindung zur Pumpe getrennt wird. Der Standardwert ist 5 Sekunden.
@@ -128,7 +122,7 @@ Abhängig von der Version der Pumpen-Firmware kann die Insight bei Bolusabgabe (
 
 * Firmware 1.x: Grundsätzlich keine Vibration
 * Firmware 2.x: Vibration kann nicht deaktiviert werden.
-* Firmware 3.x: AAPS Bolusabgabe ohne Vibration. (minimum [version 2.6.1.4](#Releasenotes-version-2-6-1-4))
+* Firmware 3.x: AAPS Bolusabgabe ohne Vibration. (mindestens [Version 2.6.1.4](#Releasenotes-version-2-6-1-4))
 
 Die Firmware-Version kann im Menü der Pumpe nachgesehen werden.
 
@@ -156,4 +150,4 @@ Schalte dann Bluetooth auf Pumpe und Smartphone für etwa 10 Sekunden aus und sc
 
 ## Mit der Insight Pumpe über Zeitzonen hinweg reisen
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-insight).
+Für allgemeine Informationen zum Reisen über Zeitzonen hinweg siehe [Mit der Pumpe über Zeitzonen hinweg reisen](#timezone-traveling-insight).

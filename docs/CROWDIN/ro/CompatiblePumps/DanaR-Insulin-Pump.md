@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Pompa DanaR
 
 *Aceste instrucțiuni sunt destinate configurării aplicației și pompei pentru modelul de pompă DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*

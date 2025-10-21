@@ -6,11 +6,11 @@ Bevor du dein rig erstellst, musst du sehr viel lesen, um die ganze Funktionswei
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[OpenAPS Dokumentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Loop Docs - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
-[Fine-Tuning your settings - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
+[Fein-Tuning Deiner Einstellungen - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 [Tim Omer – Hypodiabetic Blog - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
 
@@ -26,11 +26,11 @@ Bevor du dein rig erstellst, musst du sehr viel lesen, um die ganze Funktionswei
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+[„Brights Spots and Landmines“](https://diatribe.org/bright-spots-and-landmines/) von Adam Brown
 
-[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+[„Think like a Pancreas“](https://amzn.eu/d/iVU0RGe) von Gary Scheiner
 
-["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
+[„Pumping insulin“](https://amzn.eu/d/iaCsFa2) von John Walsh & Ruth Roberts
 
 ## Hintergrundwissen und Artikel über DIY Closed Looping
 

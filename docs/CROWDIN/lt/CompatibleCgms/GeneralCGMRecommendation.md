@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Pagrindinės NGJ rekomendacijos
 
 ## NGJ higiena

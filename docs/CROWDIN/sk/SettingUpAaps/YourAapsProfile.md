@@ -1,17 +1,17 @@
-# Your AAPS profile
+# Váš AAPS profil
 
-Your **AAPS Profile** is a set of five key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates:
-* [duration of insulin action](#duration-of-insulin-action-dia) (DIA),
-* [glucose targets](#glucose-targets),
-* [basal rates](#basal-rates) (BR),
-* [insulin sensitivity factors](#insulin-sensitivity-factor-isf) (ISF) and
-* [insulin-to-carb ratios](#insulin-to-carb-ratio-icr) (IC or ICR).
+Váš **Profil AAPS** je súbor piatich kľúčových parametrov, ktoré definujú, ako má **AAPS** podávať inzulín v reakcii na hladiny glukózy namerané senzorom. Toto sú hlavné parametre, na ktorých je postavený **AAPS**. Ako budete postupovať cez **Ciele**, odomknú sa vám ďalšie nastaviteľné parametre (napríklad nastavenia SMB), ale výkon týchto funkcií závisí od správneho nastavenia vášho **profilu**. **Profil** zahŕňa:
+* [trvanie účinku inzulínu](#duration-of-insulin-action-dia) (DIA),
+* [glukózové ciele](#glucose-targets),
+* [bazálne dávky](#basal-rates) (BR),
+* [faktor citlivosti na inzulín](#insulin-sensitivity-factor-isf) (ISF) a
+* [pomery inzulínu a sacharidov](#insulin-to-carb-ratio-icr) (IC alebo ICR).
 
-As part of **AAPS**’ management, users should continually assess and scrutinise the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [backup your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your Preferences.
+Pri používaní **AAPS** by ste mali stále sledovať a kontrolovať presnosť nastavení svojho **profilu**. Odporúča sa vykonať nastavenia v poradí, v akom sú uvedené tu. Cieľom je správne nastaviť jeden parameter pred tým než budete ladiť ten ďalší. Postupujte pomaly a nerobte súčasne viacero zmien. Po každej zmene si nezabudnite nový profil aktivovať. Pravidelne [zálohujte nastavenia svojho **profilu**](#YourAapsProfile_Profile-backup) exportovaním svojich nastavení.
 
-Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
+Nastavenia vášho **profilu** sa navzájom ovplyvňujú – môžete mať „nesprávne“ nastavenia, ktoré za určitých okolností dobre fungujú, ale za iných nie. Napríklad sa môže stať, že je príliš vysoký bazál a súčasne príliš vysoký **CR**. To znamená, že musíte zvážiť jednotlivé nastavenia a skontrolovať, či spolu dobre spolupracujú za rôznych okolností.
 
-You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances.
+Môžete použiť [Autotune](https://autotuneweb.azurewebsites.net/) aby vás nasmeroval, ale nemali by ste ho slepo nasledovať: nemusí pre vás dobre fungovať, prípadne nie za všetkých okolností.
 
 ```{admonition} Your diabetes may vary
 :class: information
@@ -85,7 +85,7 @@ If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl 
 
 The **figure below** shows an example of how the target can be set in an **AAPS** profile.
 
-![Target](../images/Profile_Target.png)
+![Cieľ](../images/Profile_Target.png)
 
 **BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
 
@@ -99,7 +99,7 @@ When In [Open Loop](#Preferences-pen-loop), especially when progressing through 
 
 Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 23 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
 
 Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimise your ISF and ICR.
 
@@ -153,7 +153,7 @@ A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG*
 * **BG** is 190 mg/dL (10,5 mmol/L) and target is 100 mg/dL (5,6 mmol/L).
 * So, you want a correction of `190 - 110 = 90 mg/dL` or `10,5 - 5,6 = 4.9 mmol/L`
 * If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
-* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 3`: 2 units of insulin
+* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 units of insulin
 
 An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
 

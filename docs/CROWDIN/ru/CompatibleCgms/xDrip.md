@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Настройки xDrip+
 
 Если это еще не сделано, загрузите [xDrip+](https://jamorham.github.io/#xdrip-plus).
@@ -81,7 +75,7 @@ orphan: true
 ### Версия xDrip+ в зависимости от серии трансмиттера G6.
 
 - Все трансмиттеры G6, изготовленные после осени/конца 2018 называют "Firefly" (светлячок). Они не позволяют перезапустить сенсор без [ извлечения трансмиттера](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), они не отправляют необработанные данные. Рекомендуется использовать самые свежие [Ночные сборки](https://github.com/NightscoutFoundation/xDrip/releases) xDrip+.
-- Трансмиттеры с замененными старыми батареями и модифицированные трансмиттеры позволяют продлить срок службы сенсора и перезапускать его, они также отправляют необработанные данные. В этом случае можно пользоваться [свежей стабильной версией APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
+- Old rebatteried transmitters and modified transmitters allow sensor life extension and restarts, they also send raw data. В этом случае можно пользоваться [свежей стабильной версией APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
 
 ### Настройки для работы с Dexcom
 
@@ -138,8 +132,8 @@ orphan: true
 - Выключите оригинальный ресивер Dexcom (если используете).
 - Нажмите на [Остановить сенсор](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (только при замене сенсора).
 
-- Забудьте устройство в системном состоянии XDrip и в настройках BT смартфона (показывается как Dexcom?? где ?? являются последними двумя цифрами серийного номера трансмиттера)  
-    → Сэндвич - меню (1) → Состояние системы (2) → На классической странице состояния (3) сдвиньте экран влево (4), чтобы перейти к → Экрану состояния G5/G6 /G7 → Забыть устройство (5).
+- Забудьте устройство в системном состоянии XDrip и в настройках BT смартфона (показывается как Dexcom?? где ?? - последние две цифры серийного номера трансмиттера.)  
+    → Сэндвич- Меню (1) → Состоянние системы (2) → Если вы не на странице Classic Status Page (3) проведите пальцем по экрану (4) для входа в него → затем нажмите Забыть устройство (5).
 
 ![состояние системы xDrip+](../images/xDrip_Dexcom_StopSensor.png)
 
@@ -208,7 +202,7 @@ orphan: true
 
 ### Подключите трансмиттер Libre и запустите сенсор
 
-- Если сенсор нуждается в этом (Libre 2 EU и Libre 1 US), установите [ новейший алгоритм out-of-process ](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
+- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
 
 - Сенсор должен быть уже запущен с помощью приложения поставщика или при помощи ридера (xDrip+ не может запускать или останавливать сенсоры Libre).
 

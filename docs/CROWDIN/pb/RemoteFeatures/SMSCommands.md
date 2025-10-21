@@ -38,6 +38,7 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 :local: true
 ```
 
+(sms-commands-authenticator-setup)=
 ### Authenticator setup
 
 Two-factor authentication is used to improve safety.
@@ -56,7 +57,7 @@ On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phon
 
 ![image](../images/remote-control-08.png)
 
-### Date and time synching
+### Date and time syncing
 
 The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
 
@@ -68,7 +69,7 @@ Some options may be greyed out, due to needing admin via a family account if the
 
 ### AAPS settings
 
-Now that the phone settings have been checked, in the **AAPS** app itself, use the [Config Builder](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
+Now that the phone settings have been checked, in the **AAPS** app itself, go to [Config Builder > General](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
 
 Go to the Preferences for SMS Communicator.
 
@@ -108,7 +109,6 @@ PIN requirements are:
 
 ![image](../images/remote-control-13.png)
 
-(sms-commands-authenticator-setup)=
 #### Authenticator setup
 
 * Follow the step-by-step instructions on the screen.
@@ -262,7 +262,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | Command            | Auth | Function & *Response*                                                                                                                                                                                     |
 | ------------------ | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | TREATMENTS REFRESH | No   | Refresh treatments from NS                                                                                                                                                                                |
-| NSCLIENT RESTART   | No   | Useful if you notice a communication problem<br/>with Nightscout or **AAPSClient**                                                                                                                  |
+| AAPSCLIENT RESTART | No   | Useful if you notice a communication problem<br/>with Nightscout or **AAPSClient**                                                                                                                  |
 | SMS DISABLE/STOP   | No   | To disable the SMS Remote Service reply with code Any.<br/>Keep in mind that you'll able to reactivate it directly<br/>from the **AAPS** master smartphone only.                              |
 | HELP               | No   | Returns all functions available for interrogation:<br/>BG, LOOP, TREATMENTS, ....<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
 | HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                      |
@@ -332,6 +332,9 @@ If you receive the same message repeatedly (_e.g._ a profile switch) you may hav
 
 If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 
+(sms-commands-too-many-messages)=
 ### I am getting far too many text messages from SMS Commands. Can I reduce the frequency, or make them stop?
 
 Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
+
+It is possible do disabled the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.

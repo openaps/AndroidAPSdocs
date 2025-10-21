@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Small Crowdin Test
 
 This is a small set for testing the translation with Crowdin.

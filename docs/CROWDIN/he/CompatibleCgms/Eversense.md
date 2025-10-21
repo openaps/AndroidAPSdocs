@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # עבור משתמשי Eversense
 
 There are three different methods to access the readings from Eversense:

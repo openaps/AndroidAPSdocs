@@ -1,26 +1,26 @@
-# state of translation for app and the documentation
+# 应用程序及文档的翻译状态
 
-The state is once per hour updated and reflects only the state in Crowdin.
+该状态每小时更新一次，且仅反映Crowdin平台中的翻译进度。
 
 ```{tip}
-Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations.
-It's better to look only at the percentage level of translations to see if work is to be done.
+请注意：校对完成度必须低于翻译进度，但系统设计将其显示在翻译进度上方。
+建议仅关注翻译进度百分比来判断剩余工作量。
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Crowdin翻译完成后，系统每日定时同步至GitHub，通过拉取请求（PR）提交翻译内容。
 
-The acceptance of the PR is a manual task which will be done es fast as possible.
+PR的审核验收为人工操作，我们将尽快处理。
 ```
 
-## state app translation
+## 应用程序翻译状态
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+**应用程序**各语言翻译状态（国家代码、翻译进度百分比、校对进度百分比）。
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![应用程序翻译状态](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## 文档翻译状态
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+**文档**各语言翻译状态（国家代码、翻译进度百分比、校对进度百分比）。
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![文档翻译状态](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

@@ -2,7 +2,7 @@
 
 在之前的部分，[构建AAPS](../SettingUpAaps/BuildingAaps.md)中，您已经在计算机上构建了AAPS应用程序（这是一个.apk文件）。
 
-接下来的步骤是将**AAPS** APK文件（以及您可能需要的其他应用程序，如BYODA、Xdrip+或其他CGM接收器应用程序）**传输**到您的Android智能手机上，然后**安装**这些应用程序。
+接下来的步骤是：将**AAPS** APK文件（以及其他可能需要的应用，如BYODA、xDrip+或其他CGM接收器应用）**传输**至您的安卓智能手机，然后**安装**这些应用。
 
 在智能手机上安装**AAPS**之后，您就可以继续进行[**配置AAPS闭环**](../SettingUpAaps/SetupWizard.md)了。
 
@@ -49,8 +49,8 @@
 您应该能够看到**AAPS**图标，并能够打开应用程序。
 
 ```{warning}
-重要安全提示
-您是否记得禁止从Google Drive安装应用？
+**重要安全提示​**
+是否已禁用从Google Drive安装？
 ```
 
 请继续[配置AAPS闭环](../SettingUpAaps/SetupWizard.md)。

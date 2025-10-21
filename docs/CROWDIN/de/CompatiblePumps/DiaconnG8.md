@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Diaconn G8 Insulinpumpe
 
 ## Bluetooth-Pairing
@@ -92,4 +88,4 @@ orphan: true
 ### Funktion verzögerter Bolus
 
 - Wenn Du einen verzögerten Bolus verwendest, wird der "Closed Loop"-Modus deaktiviert.
-- See [this page](#Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.

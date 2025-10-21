@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Помпы DanaRS и Dana-i
 
 *Эти инструкции подойдут для настройки приложения AAPS и помпы DanaRS, выпускаемой с 2017 года или для более поздней Dana-i. Если у вас оригинальная помпа DanaR, перейдите на страницу [DanaR](./DanaR-Insulin-Pump.md).*
@@ -79,7 +73,7 @@ orphan: true
 
 * Нажмите OK, чтобы ввести старый пароль.
 
-* Введите **старый пароль** (пароль по умолчанию см. [выше](#default-password)) и нажмите OK
+* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![Ввод старого пароля](../images/DanaRSPW_04_11PWenter.png)
 
@@ -130,7 +124,7 @@ orphan: true
 
 ### DanaRS v3, Dana-i
 
-* Начните процедуру сопряжения как описано [выше](#pairing-pump).
+* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
 * Иногда необходимо очистить информацию о сопряжении в AAPS - долгое нажатие на иконке BT на вкладке Dana-i/RS.
 
 ## Пересечение часовых поясов с помпой Dana RS

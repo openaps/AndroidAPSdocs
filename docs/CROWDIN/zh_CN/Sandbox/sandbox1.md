@@ -1,13 +1,9 @@
-- - -
-orphan: true
-- - -
-
 # internal sandbox file 1 for testing our sprint
 
 ```{admonition} no need to translate this
 :class: note
 
-No need to translate this.
+无需翻译。
 ```
 
 ```{danger}

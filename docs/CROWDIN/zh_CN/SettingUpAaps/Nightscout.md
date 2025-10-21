@@ -1,4 +1,4 @@
-# Nightscout
+# Nightscout设置
 
 (Nightscout-security-considerations)=
 
@@ -8,7 +8,7 @@
 
 如果使用Nightscout作为AAPS的数据源，请务必格外小心。
 
-### Nightscout settings
+### Nightscout设置
 
 您可以通过使用[认证角色](https://nightscout.github.io/nightscout/security)来拒绝公众访问您的Nightscout站点：确保您只与具有“可读”权限的令牌共享您的URL，切勿与具有“管理员”权限的令牌共享。
 

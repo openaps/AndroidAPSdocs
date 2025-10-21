@@ -17,20 +17,25 @@ See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
 (RemoteControl_aapsclient)=
 ## 2) AAPSClient
 
-_Обратите внимание, что **NSClient** теперь заменен на **AAPSClient** для AAPS версии 3. и выше, подробности см. в примечаниях к версиям._
-
-For versions of **AAPS** which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) apk. **AAPSClient** похож внешне на сам **AAPS**, но позволяет опекунам отправлять команды в **AAPS** дистанционно:
+**AAPSClient** похож внешне на сам **AAPS**, но позволяет опекунам отправлять команды в **AAPS** дистанционно:
 
 ![NSCLIENT_ 2024-05-17 134512](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
 
+### About AAPSClient and AAPSClient2
 
-There are 2 versions of the apk that can be [downloaded from here](https://github.com/nightscout/AndroidAPS/releases/),  **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
-
-**AAPSClient** can be installed on a single phone or multiple follower phones (i.e. parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
+There are 2 versions of the apk that can be installed, **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
 
 Should a caregiver require a second copy of **AAPSClient** to remote control an additional patient with a Nightscout account, they should install **AAPSClient2** in addition to **AAPSClient**. **AAPSClient 2** позволяет одному опекуну установить apk **AAPSClient** два раза на одном и том же телефоне, чтобы получить одновременный доступ и дистанционное управление для двух различных пациентов.
 
-To download **AAPSClient**, navigate to [here](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+To differentiate between the two apps, some elements have a different background color: yellow for **AAPSClient**, blue for **AAPSClient2**. Those elements are the app icon, the widget, and the **AAPS** status section in the app itself. <br/> Note : opacity of the widget background is customizable.
+
+![AAPSClient_and_AAPSClient2.png](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
+
+### Download and installation
+
+**AAPSClient** can be installed on a single phone or multiple follower phones (i.e. parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
+
+To download **AAPSClient**, navigate to the [GitHUb repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
 
 ![изображение](../images/remote_control_and_following/AAPSClient_download_02.png)
 
@@ -43,6 +48,8 @@ To download **AAPSClient**, navigate to [here](https://github.com/nightscout/And
 The **AAPSClient** apk can now be either:
 
 Перенесено при помощи кабеля USB на телефон опекуна; или перетащено в папку Google диска, а затем добавлено на телефон опекуна после нажатия на app-AAPSClient-release-3. apk.
+
+Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the Github repository as described above. The reason is that you can't install both **AAPS** and **AAPSClient** on the same phone, signed by a different key. <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). On the **Generate signed App Bundle or APK** page, select **aapsclientRelease** instead of **fullRelease**.
 
 ### Synchronization- AAPSClient and AAPS set up (for Version 3.2.0.0 above)
 

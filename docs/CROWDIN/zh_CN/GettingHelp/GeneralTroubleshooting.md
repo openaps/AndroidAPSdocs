@@ -1,109 +1,139 @@
-# Troubleshooting
+# 故障排除
 
-You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
+您可以在维基的许多页面中找到故障排除信息。 本页面是一个链接合集，旨在帮助您找到解决问题的相关信息。
 
-Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
+更多有用信息可能也可在[常见问题解答](../UsefulLinks/FAQ.md)中找到。
 
-## AAPS app
+## AAPS 应用
 
-### Building & updating
+### 构建与更新
 
-* [Lost keystore](#troubleshooting_androidstudio-lost-keystore)
-* [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
+* [丢失密钥库](#troubleshooting_androidstudio-lost-keystore)
+* [Android Studio 故障排除](TroubleshootingAndroidStudio)
+
+### 安装
+
+您可能会看到 Google Play Protect 警告，提示该应用不安全、为旧版 Android 构建且不包含最新的隐私保护功能。
+
+忽略该警告：更多详情，仍要安装。
+
+![Google Play Protect 警告](../images/troubleshooting/InstallGPP.png)
 
 ### 设置
 * 配置文件
 
-  ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
+  ![错误：基础率未按小时对齐](../images/Screen_DifferentPump.png)
 
-* [Pump - data from different pump](#update30-failure-message-data-from-different-pump)
+* [胰岛素泵 - 来自不同泵的数据](#update30-failure-message-data-from-different-pump)
 
-  ![Failure message: Data from different pump](../images/BasalNotAlignedToHours2.png)
+  ![错误提示：来自其他泵的数据](../images/BasalNotAlignedToHours2.png)
 
-* [Nightscout Client](../GettingHelp/TroubleshootingNsClient.md)
+* [Nightscout 客户端](../GettingHelp/TroubleshootingNsClient.md)
 
-### Usage
-* [Wrong carb values](#CobCalculation-detection-of-wrong-cob-values)
+### 使用
+* [错误的碳水化合物值](#CobCalculation-detection-of-wrong-cob-values)
 
-   ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+   ![错误：碳水化合物吸收缓慢](../images/Calculator_SlowCarbAbsorption.png)
 
-* [SMS commands](#SMSCommands-troubleshooting)
+* [短信指令](#SMSCommands-troubleshooting)
 
-### Frequent bluetooth connection problems
+### Cannot start Omnipod with Android 16
 
-This can happen with various pumps. Apart from excluding AAPS from any battery optimization, you can also exclude the system bluetooth app from battery optimization. This can help in some cases. Depending on the phone you use, you will find the bluetooth app differently.
+Upgrade to minimum version of AndroidAPS: 3.3.2.1.
 
-Here are examples how to find them on specific android phones.
+### 频繁的蓝牙连接问题
 
+#### Android 15
 
-#### Pixel phones (stock android)
+升级安卓系统或更换新手机后，**AAPS**经常丢失与泵的蓝牙连接。 重启手机后问题会暂时消失。 如果手机运行的是安卓15系统，可以尝试启用以下选项：
 
-* Go to the android settings, select "Apps".
-
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
-
-* Select "See all apps"
-
-  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
-
-* On the menu on the right, select "Show system" apps.
-
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
-
-* Now search and select the app "Bluetooth".
-
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
-
-* Click the "App battery usage" and select "Not optimized".
-
-  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
+1) **打开偏好设置**，点击主屏幕右上角的三点菜单。
 
 
-#### Samsung phones
+![打开参数设置](../images/Pref2020_Open2.png)
 
-* Go to the android settings, select "Apps"
+2. 向下滚动并打开**确认提示音** / **高级**子菜单。 启用**在安卓15+上绑定蓝牙设备**。
 
-* On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
+   ![BondBT](../images/troubleshooting/BondBT.png)
 
-  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+3. 如果泵请求配对，请接受。
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+4. 重启您的手机。
 
-* Now search the bluetooth app and select it to see its settings.
+#### 电池优化
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+这种情况可能发生在多种胰岛素泵上。 除了将AAPP排除在任何电池优化之外，您还可以将系统蓝牙应用排除在电池优化之外。 这在某些情况下可能有所帮助。 根据您使用的手机不同，蓝牙应用的位置也会有所不同。
 
-* Select "battery".
+以下是特定 Android 手机上的示例操作步骤：
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Not optimized"
+##### Pixel手机（原生安卓系统）
 
-  ![Not optimized](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+* 进入 Android 设置，选择"应用"
+
+  ![Android 设置 > 应用](../images/troubleshooting/pixel/01_androidsettings.png)
+
+* 选择"查看所有应用"
+
+  ![查看所有应用](../images/troubleshooting/pixel/02_apps.png)
+
+* 在右侧菜单中选择"显示系统"应用
+
+  ![显示系统应用](../images/troubleshooting/pixel/03_allapps.png)
+
+* 现在搜索并选择"蓝牙"应用
+
+  ![蓝牙应用](../images/troubleshooting/pixel/03_bluetooth.png)
+
+* 点击"应用电池用量"并选择"无限制"
+
+  ![蓝牙电池优化](../images/troubleshooting/pixel/04_btunrestricted.png)
+
+
+##### 三星手机
+
+* 进入 Android 设置，选择"应用"
+
+* 在疑似改变排序算法的图标处（1），选择"显示系统应用"（2）
+
+  ![应用过滤器](../images/troubleshooting/samsung/Samsung01_Apps.png)
+
+  ![显示系统应用](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+
+* 现在搜索蓝牙应用并选择查看其设置
+
+  ![蓝牙应用](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+
+* 选择"电池"
+
+  ![电池设置](../images/troubleshooting/samsung/Samsung04_Battery.png)
+
+* 设置为"无限制"
+
+  ![未优化](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
 
 ## CGM
 
-* [一般](#general-cgm-troubleshooting)
+* [常规](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
 * [Libre 2](#Libre2-experiences-and-troubleshooting)
-* [xDrip - no CGM data](#xdrip-identify-receiver)
-* [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip - 无 CGM 数据](#xdrip-identify-receiver)
+* [xDrip - Dexcom 故障排除](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
-## Pumps
+## 胰岛素泵
 
 * [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo general](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
-* [Accu-Chek Combo + Ruffy](#Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
+* [Accu-Chek Combo 通用指南](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
-## Phones
+## 手机
 
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [华为蓝牙与电池优化](../CompatiblePhones/Huawei.md)
 
-## Smartwatches
+## 智能手表
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
+* [穿戴应用故障排除](#Watchfaces-troubleshooting-the-wear-app)

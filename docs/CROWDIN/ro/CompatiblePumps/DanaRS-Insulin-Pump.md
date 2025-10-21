@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # DanaRS and Dana-i Pump
 
 *These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
@@ -79,7 +73,7 @@ orphan: true
 
 * Apăsaţi OK pentru a introduce parola veche.
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS Introduceţi parola veche](../images/DanaRSPW_04_11PWenter.png)
 
@@ -130,7 +124,7 @@ When switching to a new phone the following steps are necessary:
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](#pairing-pump).
+* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
 * Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
 
 ## Timezone traveling with Dana RS pump

@@ -1,14 +1,8 @@
-- - -
-orphan: true
-- - -
-
 # **Freestyle Libre 3** and 3+
 
 Freestyle Libre 3 (FSL3) requires a unique setup to receive BG values in to AAPS. There are two possible ways of getting Freestyle Libre 3 (FSL3) values to AAPS.
 
 ![FL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
-
-**Version 3.2.0.1 of AndroidAPS does not support 1-minute values. Acceleration and Smoothing does not work with 1-minute values.**
 
 The below methods for achieving this are using the separate app Juggluco. It uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip+ or AAPS. New sensors can be started either with the Libre 3 App or directly in Juggluco. The guide below indicates the process for starting a sensor with the Juggluco app. If the sensor has been started with a Libreview account logged in, it is also possible to switch between Juggluco and the Libre 3 app as receiver.
 
@@ -16,21 +10,19 @@ Juggluco can also pass data to LibreView for sharing with health care providers 
 
 Within xDrip+ the sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2.2 mmol/l to +1.1 mmol/l) to compensate for differences between a manual meter reading and the sensor readings.
 
-## Method 1: 1-minute-readings
-Version 3.2.0.1 of AndroidAPS does not support 1-minute values. Acceleration and Smoothing does not work with 1-minute values.
+## Method 1: use 1-minute readings directly
+AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
 
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+See [here](#juggluco-to-aaps).
 
 
-## Method 2: 5-minute-readings
+## Method 2: convert 1-minute readings into 5-minute values via xDrip
 This method uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip+ to be smoothed into 5-minute interval data to be passed to AAPS.
 
 ### Step 1: Setup Juggluco
 Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html). Follow the instructions [here](https://www.juggluco.nl/Juggluco/libre3/)
 
-Make sure you send the glucose values to Xdrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip+
-
-![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)
+Make sure you send the glucose values to xDrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip+
 
 ### Step 2: Setup xDrip
 
@@ -60,14 +52,10 @@ After a sensor change xDrip+ will automatically detect the new sensor and will d
 
 ### Step 4: Configure AndroidAPS (for looping only)
 
-- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- See [here](#juggluco-to-xdrip) and come back.
 
 - In xDrip+ select "Libre2 (patched App)" as data source
-- Turn of Smoothing (done in Xdrip+ already)
-
-As of now, when using Libre 3 as a BG source, the "Always enable SMB" and "Enable SMB by Carbs" options cannot be enabled in the SMB algorithm. The BG values from Libre 3 are not smooth enough to use safely.
-
-
+- Turn off Smoothing (done in xDrip+ already)
 
 ## Subsequent sensor changes
 
@@ -77,7 +65,7 @@ As of now, when using Libre 3 as a BG source, the "Always enable SMB" and "Enabl
 
 2. Now simply scan your new sensor with your phone’s NFC reader. Juggluco will display a notice if the process had been started successfully.
 3. When you are ready to deactivate the old sensor, then open the Juggluco menu by clicking anywhere in the empty space in the upper left hand corner of the screen.
-4. Select the exired sensor and tap "Terminate"
+4. Select the expired sensor and tap "Terminate"
 
 ![Terminate sensor](../images/libre3/step_14.jpg)
 

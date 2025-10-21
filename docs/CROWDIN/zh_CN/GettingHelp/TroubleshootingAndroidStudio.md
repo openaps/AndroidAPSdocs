@@ -1,253 +1,294 @@
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
-# Troubleshooting Android Studio
+
+# Android Studio 故障排除
+
+```{contents} List of common issues
+:depth: 2
+:local: true
+```
 
 (troubleshooting_androidstudio-lost-keystore)=
-## Lost keystore
-If you use the same keystore when updating AAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+## 丢失密钥库
+如果更新 **AAPS** 时使用相同的密钥库，则无需卸载手机上的旧版本。 因此建议将密钥库存储在安全位置。
 
-If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
+如果尝试安装使用不同密钥库签名的 apk 文件，将出现安装失败的提示！
 
-In case you cannot find your old keystore or its password anymore, proceed as follows:
+若无法找回旧密钥库或密码，请按以下步骤操作：
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
-4. Generate signed apk of new version as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
-5. Uninstall previous AAPS version on your phone.
-6. Install new AAPS version on your phone.
-7. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+1. 在手机上[导出设置](../Maintenance/ExportImportSettings.md)
+2. 将设置文件从手机复制或上传至外部存储（如电脑、云存储等）
+4. 按照[更新指南](../Maintenance/UpdateToNewVersion)生成新签名的 apk 文件并传输至手机
+5. 卸载手机上的旧版 **AAPS**
+6. 安装新版 **AAPS**
+7. 导入设置</a>以恢复目标完成进度和配置数据
 
-   If you can't find them on your phone copy them from the external storage to your phone.
+   若在手机中找不到设置文件，请从外部存储复制回手机
 
-8. Check your battery optimization options and disable them again.
-9. Keep on looping.
+8. 重新检查并禁用电池优化设置
+9. 保持闭环运行
 
-## Gradle Sync failed
-Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
+## Gradle 同步失败
+Gradle 同步可能因多种原因失败。 当提示"Gradle sync failed"时，请点击 Android Studio 底部"Build"标签(1)查看具体错误信息(2)
 
-  ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+![Gradle 同步失败](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-These are the usual gradle sync failures:
-* [Uncommitted changes](#uncommitted-changes)
-* [No cached version of ... available](#could-not-resolveno-cached-version)
-* [Incompatible Gradle JVM](#incompatible-gradle-jvm)
-* [Incompatible version of the Android Gradle plugin](#incompatible-version-of-android-gradle-plugin)
+```{contents} Likely reasons for gradle sync failures are:
+:depth: 1
+:local: true
+```
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*重要提示*： 解决特定问题后，需要重新触发[Gradle 同步](#gradle-resync)
 
 (troubleshooting_androidstudio-uncommitted-changes)=
-### Uncommitted changes
+### 存在未提交的更改
 
-If you receive a failure message like
+若出现如下错误：
 
-![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Gradle 未提交更改](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
+```
+Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
+
+存在未提交的更改。
+请按照 wiki 重新克隆源码并禁止 gradle 更新
+```
+
+#### 步骤 1 - 检查 Git 安装
+  * 打开 Android Studio 底部的终端标签(1)，输入以下命令：
     ```
     git --version
     ```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+    ![查看 Git 版本](../images/studioTroubleshooting/03_GitVersion.png)
 
-    Note: There is a space and two hyphens between git and version!
+    注意：git 和 version 之间有一个空格和两个连字符！
 
-  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
+  * 若显示 Git 版本号（如上图）， 请继续[步骤 2](#troubleshooting-android-studio-check-for-uncommitted-changes)
 
-  * In case you get an message saying
+  * 若提示：
     ```
     Git: command not found
     ```
-    your Git installation is not right.
+    表示 Git 未正确安装
 
-  * [Check git installation](#BuildingAaps-steps-for-installing-git)
+  * [检查 Git 安装](#BuildingAaps-steps-for-installing-git)
 
-  * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
+  * 若在 Windows 系统且刚安装 Git，需重启计算机使 Git 全局生效
 
-  * If Git is installed, you have restarted (if on windows), and git still couldn't found:
+  * 若已安装 Git 并重启后仍无法识别：
 
-  * Search your computer for a file "git.exe".
+  * 在计算机中搜索"git.exe"文件
 
-    Note for yourself, what directory it is in.
+    记录所在目录路径
 
-  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your git installation.
+  * 转到Windows中的环境变量，选择变量“PATH”并点击编辑。 添加 Git 所在目录
 
-  * Save and close.
+  * 保存并关闭
 
-  * Restart Android Studio.
+  * 重启 Android Studio
 
 (troubleshooting-android-studio-check-for-uncommitted-changes)=
-#### Step 2: Check for uncommitted changes.
+#### 步骤 2：检查未提交的更改
 
-  * In Android Studio, oben the "Commit" Tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either a "Default changeset" (2) or "Unversioned files" (3):
+  * 在 Android Studio 左侧打开"Commit"标签(1)![提交标签-未提交更改](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * 可能看到"Default changeset"(2)或"Unversioned files"(3)：
 
-    * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
+    * 对于"Default changeset"，可能是误更新了 Gradle 或修改了文件内容
 
-    * Right click on "Default Changeset" and select "Rollback"
+    * 右键点击"Default Changeset"选择"Rollback"
 
-      ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
+      ![回滚更改](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+    * 文件将从 Git 服务器重新获取。 若无其他更改，继续[步骤 3](#gradle-resync)
 
-  * If you can see "Unversioned Files", you might have stored files in your sourecode directory which should be better places somewhere else, e.g. your keystore file.
+  * 若存在"Unversioned Files"，可能是误将文件存入源码目录。 重要文件（如密钥库）应移至其他位置。 若不确定文件来源且非自行创建，可删除
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a save place.
+    * 使用文件管理器移动或剪切文件至安全位置
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AAPS directory anymore.
+    * 返回 Android Studio，点击 Commit 标签中的刷新按钮(4)确保文件已移除
 
-      If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+      若无其他更改，继续[步骤 3](#gradle-resync)
 
 
-(troubleshooting_androidstudio-step-3-gradle-resync)=
+#### 步骤 3：重新同步 Gradle
 
-#### Step 3: Resync Gradle (again)
+按照[重新同步 Gradle ](#gradle-resync)步骤操作
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+### Git 拉取失败 - 请确认身份信息
+
+若出现此提示，需配置 Git 身份信息：
+
+![Git 身份验证](../images/studioTroubleshooting/164_Git_Identify.png)
+
+在终端依次执行以下命令：
+
+```
+git config --global user.name "您的姓名"
+git config --global user.email 您的邮箱@example.com
+```
+
+姓名需用引号包裹
+
+![Git 身份验证修复](../images/studioTroubleshooting/164_Git_Identify2.png)
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 (incompatible-gradle-jvm)=
-### Incompatible Gradle JVM
+### 不兼容的 Gradle JVM
 
-![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) If you experience the following error message, you need to download a correct JVM version before you can try again:
-* Open the gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+![不兼容的 Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
+```
+当前构建配置使用了不兼容的 Java 21.0.3 和 Gradle 8.2
+无法同步项目
 
-* Open the **Gradle JDK** options, then select **Download JDK...**
+建议升级至 Gradle 8.9 版本
 
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+最低兼容 Gradle 版本为 8.5
 
-* At **Version** (1), you need to select **17**. Then select the **JetBrains Runtime** from the **Vendor** (2) options. Do not change the **Location** (3).
+最大兼容 Gradle JVM 版本为 19
+```
+
+或：
+
+```
+原因：错误：无效的源版本：21
+```
+
+出现此类错误时，需下载正确的 JVM 版本：
+
+1.  查看[要求表](#Building-APK-recommended-specification-of-computer-for-building-apk-file)确认当前构建的 **AAPS** 版本所需的 JVM 版本
+
+2. 点击右侧大象图标(1)打开 Gradle 视图，进入设置(2)选择 **Gradle Settings**(3)：
+
+![打开 Gradle 设置](../images/studioTroubleshooting/161_GradleSettings.png)
+
+3.  在“Gradle JDK”字段中，检查是否已选择正确的版本（1）。若未选择，点击该字段查看列表中是否已有目标版本。​ 下方示例显示JVM 21对应的选项标记为“jbr-21”。 若列表中已有，直接选中即可完成配置。 若未找到，点击字段选择"Download JDK"
+
+
+![选择 JDK 17](../images/studioTroubleshooting/162_DownloadJDK.png)
+
+4. 在版本(1)中选择 **AAPS** 要求的 JDK， 供应商(2)任选， 位置(3)保持默认。
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
-* Close the **Settings** dialog with **OK**.
-* You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](#gradle-resync).
+5.  点击 **OK** 关闭**设置**
+6. 重新同步 Gradle 按照[重新同步 Gradle ](#gradle-resync)步骤操作
 
 (incompatible-version-of-android-gradle-plugin)=
-### Incompatible version of Android Gradle plugin
+### 不兼容的 Android Gradle 插件版本
 
-  If you experience the following error message
+  若出现如下错误：
 
-  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+`项目使用了不兼容的 Android Gradle 插件版本 (AGP x.x.x)。 最新支持版本为 AGP x.x.x`
 
-  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
+  ![不兼容的 Android Gradle 插件版本](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+
+  说明 Android Studio 版本过旧。 通过菜单 Help > Check for updates 更新 Android Studio 及其插件。
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
-### Could not resolve/No cached version
+### 无法解析/无缓存版本
 
-  You might get this error message:
+  可能出现如下错误：
 
-![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
+![Could not resolve... 无法解析...无缓存版本](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * On the right side, open the Gradle tab (1).
+  * 右侧打开 Gradle 标签(1)
 
-    Make sure the button shown at (2) is *NOT* selected.
+    确保按钮（2）*未*选中。
 
-    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+    ![Gradle 离线模式](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * 按照[重新同步 Gradle](#gradle-resync) 步骤操作
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
-### Unable to start daemon process
+### 无法启动守护进程
 
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about!
+  如果您看到类似下面的错误消息，您可能使用的是Windows 10 32位系统。 Android Studio 3.5.1 及以上版本不支持此功能，**AAPS** 开发者对此也无能为力！
 
-  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  网络上已有相关方法可帮助判断操作系统是 32 位还是 64 位——例如[此链接](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)。
 
   ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
-### Gradle Resync
+### 重新同步 Gradle
 
-  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  若仍显示同步失败，点击"Try again"链接重新尝试![Gradle 同步失败提示](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-  If you don't see the a message anymore, you can still trigger this manually:
+  若无错误提示，可手动触发同步：
 
-  * Open the Gradle tab (1) on the right border of Android Studio.
+  * 打开右侧 Gradle 标签(1)
 
-    ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
+    ![手动重新加载 Gradle](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * Right-click on AAPS (2)
+  * 右键点击 AAPS(2)
 
-  * Click on "Reload Gradle Project" (3)
+  * 选择"Reload Gradle Project"(3)
 
-## Generate Signed APK generated successfully with 0 build variants
+## 成功生成签名 APK 但显示 0 个构建变体
 
-When you generate the signed apk, you might get the notification that generation was successfully but are told that 0 build variants where generated:
+生成签名 APK 时可能出现"0 build variants"的误报：
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
+此为假性警告。 检查输出目录即可找到生成的 apk 文件。
 
 
-## App was created with compiler/kotlin warnings
+## 应用生成时存在编译器/Kotlin 警告
 
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
+若构建成功但显示黄色/蓝色感叹号警告，可忽略这些警告
 
  ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
 
-Your app was build successfully and can be transferred to phone!
+APK 已成功生成，可传输至手机安装。
 
 
-## Key was created with errors
+## AAPS 未接收 CGM 数据
 
-When creating a new keystore for building the signed APK, on Windows the following error message might appear
+* 若使用修改版 Dexcom G6 应用：该版本已过时， 请改用[BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 
-![Key was created with errors](../images/AndroidStudio35SigningKeys.png)
-
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+* 若使用 xDrip+：按[xDrip+ 设置页面](#xdrip-identify-receiver)标识接收器
 
 
-## No CGM data is received by AAPS
-
-* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
-
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](#xdrip-identify-receiver).
-
-
-## App not installed
+## APK 安装失败
 
 ![phone app note installed](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
+* 确认已将"app-full-release.apk"传输至手机
+* 若手机显示"未安装应用"：
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
-2. Uninstall AAPS on your phone.
-3. Enable airplane mode & turn off bluetooth.
-4. Install new version (“app-full-release.apk”)
+1. [导出设置](../Maintenance/ExportImportSettings.md)（在已安装的 AAPS 中）
+2. 卸载手机上的 **AAPS**
+3. 启用飞行模式并关闭蓝牙
+4. 安装新版 apk
 5. [导入配置](../Maintenance/ExportImportSettings.md)
-6. Turn bluetooth back on and disable airplane mode
+6. 重新启用蓝牙并关闭飞行模式
 
-## App installed but old version
+## 安装成功但版本未更新
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](#Update-to-new-version-update-your-local-copy)
+若成功构建并安装，但版本号未变，可能未[更新本地代码库](#Update-to-new-version-update-your-local-copy)
 
-## None of the above worked
+## 以上方法均无效
 
-If non of the above tips helped you might consider building the app from scratch:
+若所有方法均无效，可尝试全新构建：
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
+1. [导出设置](../Maintenance/ExportImportSettings.md)（在已安装的 AAPS 中）
 
-2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
+2. 准备好密钥密码和密钥库密码。 若忘记密码，可尝试在项目文件中查找（参考[这里](https://youtu.be/nS3wxnLgZOo)）
 
-    Or you just use a new keystore.
+    或创建新密钥库
 
-3. Build app from scratch as described [here](#Building-APK-download-AAPS-code).
+3. 按照[指南](#Building-APK-download-AAPS-code)重新构建
 
-4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
-5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
-6. You should check your battery optimization options and disable them again.
+4. 成功构建后删除手机旧版 apk，传输并安装新版
+5. [重新导入设置](../Maintenance/ExportImportSettings.md)恢复配置
+6. 重新检查并禁用电池优化
 
-## Worst case scenario
+## 最坏的情况
 
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+若问题仍未解决，可尝试完全卸载 Android Studio 后重新安装。  部分用户发现此操作可解决其构建问题。  卸载Android Studio时，请勿删除Android用户设置，并**确保卸载所有与之相关的文件**。若未彻底移除包括隐藏文件在内的所有Android Studio文件，卸载操作可能引发新问题而非解决现有问题。 完整的卸载指南可在线查找，例如：
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+[https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10)
 
-[https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
-
-Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
+然后按[安装指南](#Building-APK-install-android-studio)重新安装。

@@ -20,7 +20,7 @@
 
 你可以使用每個啟用外掛旁邊的齒輪來進入設定。
 
-有關組態建置工具的文檔可在[這裡](../SettingUpAaps/ConfigBuilder.md)獲得。
+有關組態建置工具的文件可在[這裡](../SettingUpAaps/ConfigBuilder.md)獲得。
 
 ## 偏好設定
 
@@ -30,7 +30,7 @@
 
 如果你不確定在哪裡尋找設定選項，這是一個不錯的方式，但如果你確定只想更改某一特定外掛的設定，那麼過程可能有點繁瑣。
 
-偏好設定的文檔可在[這裡](../SettingUpAaps/Preferences.md)獲得。
+偏好設定的文件可在[這裡](../SettingUpAaps/Preferences.md)獲得。
 
 ## 外掛偏好設定
 
@@ -40,4 +40,4 @@
 
 例如，如果你知道想要更改 BYODA 的設定，這是個不錯的方式。 然後，你可以在**AAPS**的上方選單中選擇「BYODA」標籤，並在 BYODA 頁面上，右上方選擇 _三個點_選單，然後選擇「外掛偏好設定」項目。 你將直接進入BYODA外掛的偏好設定對話框。
 
-這是通往一般偏好設定對話框的「捷徑」，偏好設定的文檔可在[這裡](../SettingUpAaps/Preferences.md)查看。
+這是通往一般偏好設定對話框的「捷徑」，偏好設定的文件可在[這裡](../SettingUpAaps/Preferences.md)查看。

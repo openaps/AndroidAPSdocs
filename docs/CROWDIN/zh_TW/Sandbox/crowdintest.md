@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # 小型 Crowdin 測試
 
 這是一個用於測試 Crowdin 翻譯的小集合。

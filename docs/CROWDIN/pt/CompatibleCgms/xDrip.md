@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Definições xDrip+
 
 If not already set up, then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
@@ -83,7 +77,7 @@ Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time A
 ### xDrip+ version depending on G6 transmitter serial no.
 
 - All G6 transmitters manufactured after fall/end 2018 are called "Firefly". They do not allow sensor restart without [removing the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), they do not send raw data. It is recommended to use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
-- Old rebatteried transmitters and modified trasmitters allow sensor life extension and restarts, they also send raw data. You can use the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
+- Old rebatteried transmitters and modified transmitters allow sensor life extension and restarts, they also send raw data. You can use the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
 
 ### Dexcom specific settings
 
@@ -141,7 +135,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.ht
 - [Stop sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (only if replacing sensor).
 
 - Forget device in xDrip+ system status AND in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)  
-    → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Forget Device (5).
+    → Hamburger Menu (1) → System Status (2) → If you are not on the Classic Status Page (3) swipe the screen (4) to reach it → then tap Forget Device (5).
 
 ![xDrip+ System status](../images/xDrip_Dexcom_StopSensor.png)
 
@@ -210,7 +204,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
 ### Connect Libre Transmitter & start sensor
 
-- If your sensor requires it (Libre 2 EU and Libre 1 US) install the [latest out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
+- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
 
 - Your sensor must be already started using the vendor app or the reader (xDrip+ cannot start or stop Libre sensors).
 

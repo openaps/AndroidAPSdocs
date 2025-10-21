@@ -28,7 +28,7 @@ Attention à l'amélioration rapide du contrôle de la glycémie et à la réduc
 
 Il est très important de prendre en considération qu'une **baisse rapide de l'HbA1c et un meilleur contrôle de la glycémie chez ceux qui ont eu des taux de glucose élevés pendant un certain temps peuvent causer des dommages permanents**. De nombreuses personnes atteintes de diabète n'ont pas connaissance de ça, et tous les professionnels de santé ne parlent pas de ce problème à leurs patients.
 
-Parmi ces atteintes, on trouve la **perte de vue et neuropathie permanente (douleur)**. Il est possible d'éviter que ces atteintes ne se produisent en faisant baisser plus lentement les niveaux de glycémie moyens. Si vous avez actuellement un taux élevé d'HbA1c et que vous passez à **AAPS**(ou n'importe quel autre système en boucle fermée), _veuillez discuter_ de ce risque potentiel avec votre équipe médicale avant de commencer, et convenez d'un plan de mise en place avec elle. Vous pouvez simplement commencer avec une cible de glycémie élevée dans **AAPS** (actuellement, la cible la plus élevée que vous pouvez sélectionner est de 200md/dL (ou 10,6 mmol/L), mais vous pouvez également utiliser un profil délibérément faible si nécessaire), puis réduire la cible au fur et à mesure des mois qui passent.
+Parmi ces atteintes, on trouve la **perte de vue et neuropathie permanente (douleur)**. It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. Si vous avez actuellement un taux élevé d'HbA1c et que vous passez à **AAPS**(ou n'importe quel autre système en boucle fermée), _veuillez discuter_ de ce risque potentiel avec votre équipe médicale avant de commencer, et convenez d'un plan de mise en place avec elle. Vous pouvez simplement commencer avec une cible de glycémie élevée dans **AAPS** (actuellement, la cible la plus élevée que vous pouvez sélectionner est de 200md/dL (ou 10,6 mmol/L), mais vous pouvez également utiliser un profil délibérément faible si nécessaire), puis réduire la cible au fur et à mesure des mois qui passent.
 
 #### À quelle vitesse puis-je réduire mon HbA1c sans risquer des dommages permanents ?
 
@@ -88,7 +88,7 @@ Pour vous aider dans le processus de compilation, il y a des pages dédiées dan
 
 - “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) Subsection.
 
-Le temps nécessaire pour arriver à la boucle fermée dépendra de chacun, mais vous pouvez vous faire une idée [ici](#how-long-will-it-take-to-set-everything-up)
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
 
 
 #### Fichier de clés & exportation des paramètres de configuration
@@ -122,7 +122,7 @@ Cette section a pour but de fournir aux nouveaux utilisateurs des liens vers des
 
 #### [Pour les professionnels de santé](../UsefulLinks/ClinicianGuideToAaps.md)
 
-This is a [section specificially for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
 
 ## Que va-t-on compiler et installer?
 
@@ -139,7 +139,7 @@ En plus des trois composants matériels de base (téléphone, pompe, capteur de 
 
 ### 2) Un serveur de reporting : NightScout (Tidepool*)
 
-Afin de profiter de tous les avantages de **AAPS**, vous aurez besoin de configurer un serveur Nightscout. Vous pouvez le faire vous-même (lien vers les instructions) ou, à défaut, payer un petit abonnement pour un service Nightscout tout prêt installé (lien vers T1 pal 10.be etc). Nightscout est utilisé pour collecter les données de **AAPS** au fil du temps et peut générer des rapports détaillés mettant en relation les données de glycémie et d'insuline. Les aidants peuvent également utiliser Nightscout pour communiquer à distance avec l'application **AAPS**, pour superviser la gestion du diabète de leur enfant. Dans les fonctionnalités de communication à distance, on trouve la surveillance en temps réel de la glycémie et de l'insuline active, l'administration à distance d'insuline (par SMS) et les annonces de repas. Tenter d'analyser vos performances dans le suivi du diabète en examinant les données de glycémie séparément des données de la pompe, c'est comme conduire une voiture où le conducteur est aveugle et le passager décrit la scène.  Tidepool est disponible comme alternative à Nightscout, pour les versions AAPS 3.2 et ultérieures.
+Afin de profiter de tous les avantages de **AAPS**, vous aurez besoin de configurer un serveur Nightscout. You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout est utilisé pour collecter les données de **AAPS** au fil du temps et peut générer des rapports détaillés mettant en relation les données de glycémie et d'insuline. Les aidants peuvent également utiliser Nightscout pour communiquer à distance avec l'application **AAPS**, pour superviser la gestion du diabète de leur enfant. Dans les fonctionnalités de communication à distance, on trouve la surveillance en temps réel de la glycémie et de l'insuline active, l'administration à distance d'insuline (par SMS) et les annonces de repas. Tenter d'analyser vos performances dans le suivi du diabète en examinant les données de glycémie séparément des données de la pompe, c'est comme conduire une voiture où le conducteur est aveugle et le passager décrit la scène.  Tidepool est disponible comme alternative à Nightscout, pour les versions AAPS 3.2 et ultérieures.
 
 ### 3) Application pour le capteur MGC
 
@@ -188,7 +188,7 @@ Même lorsque vous serez complètement opérationnel sur **AAPS**, vous aurez to
 
 ### Considérations médicales
 
-In addition to the medical warnings in the [safety section](#safety-first) there are also different parameters, depending on which insulin you are using in the pump.
+In addition to the medical warnings in the [safety section](#preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
 
 #### Choix de l'insuline
 
@@ -210,7 +210,7 @@ Cette documentation a pour but de réduire autant que faire se peut l'expertise 
 
 #### AAPS et versions Android
 
-La version actuelle d'**AAPS** (3.2) nécessite un smartphone Android avec Google **Android 9.0 ou supérieur**. The next **AAPS** version (3.3) will require **Android 11.0 or above**. If you are considering buying a new phone, (as of July 2024), Android 13 is preferred.<br/> As of November 2024, several users have reported issues with Android 15 and Bluetooth connection. You may wish to delay the update to Android 15, especially if you are using Omnipod Dash or Dexcom G7. Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 11.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+The current version of **AAPS** (3.3) requires an Android smartphone with Google **Android 11.0 or above**. If you are considering buying a new phone, (as of December 2024), Android 14 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 11.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
 
 #### Choix du modèle de smartphone
 Vous choisirez un modèle précis en fonction de la/des fonction(s) que vous recherchez. You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
@@ -219,8 +219,8 @@ Les utilisateurs sont encouragés à faire les mises à jour de version Android 
 
 ```{admonition} delaying Samsung phones updates
 :class: warning
-Samsung est malheureusement connu pour forcer les mises à jour sur leurs téléphones, ce qui cause des problèmes de connectivité bluetooth. Pour désactiver ces mises à jour forcées, vous devez passer le téléphone en "mode développeur" en :
- accédant aux paramètres, puis "à propos", puis en tapant sur "Numéro de version" jusqu'à ce qu'il confirme que vous avez déverrouillé le mode développeur. Retournez au menu principal des paramètres, ici ou dans "Système", vous trouverez un nouvel élément de menu "Options pour les développeurs". Ouvrez ce menu et faites défiler jusqu'à trouver l'option de mise à jour automatique du système et désactivez-la
+Samsung est malheureusement connu pour forcer les mises à jour sur leurs téléphones, ce qui cause des problèmes de connectivité bluetooth. To disable these forced updates you need to switch the phone to "developer mode" by:
+ go to settings and about then software information, then tap build number u til it confirms you have unlocked developer mode. Retournez au menu principal des paramètres, ici ou dans "Système", vous trouverez un nouvel élément de menu "Options pour les développeurs". Ouvrez ce menu et faites défiler jusqu'à trouver l'option de mise à jour automatique du système et désactivez-la
 ```
 
 ```{admonition} Google Play Protect potential Issue

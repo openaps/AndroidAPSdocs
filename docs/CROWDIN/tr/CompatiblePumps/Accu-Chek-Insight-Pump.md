@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Accu-Chek Insight Pompa
 
 **Bu yazılım bir DIY (Kendin Yap) çözümünün parçasıdır ve bir ürün değildir, ancak nasıl kullanılacağı da dahil olmak üzere sistemi okumanızı, öğrenmenizi ve anlamanızı gerektirir. Tüm diyabet yönetimini sizin için yapan bir şey değildir, ancak gerekli zamanı ayırmaya istekliyseniz diyabetinizi ve yaşam kalitenizi iyileştirmenize izin verir. Acele etmeyin, ancak öğrenmek için kendinize zaman tanıyın. Yazılımla yaptıklarınızdan yalnızca siz sorumlusunuz.**
@@ -27,7 +21,7 @@ Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
     
     ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* In [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md), select Accu-Chek Insight.
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -95,8 +89,8 @@ In the Insight settings in AAPS you can enable the following options:
     yeniden dene -> bağlantı yok -> **7** saniye bekleyin.   
     yeniden dene -> bağlantı yok -> **8** saniye bekleyin.   
     ...   
-    yeniden dene -> bağlantı yok -> **20** saniye bekleyin.   
-    yeniden dene -> bağlantı yok -> **20** saniye bekleyin.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
 * "Disconnect delay": This defines how long (in seconds) AAPS will wait to disconnect from the pump after an operation is finished. Varsayılan değer 5 saniyedir.

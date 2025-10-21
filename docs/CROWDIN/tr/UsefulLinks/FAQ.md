@@ -298,7 +298,7 @@ Telefonunuz AAPS hizmetlerini veya bluetooth'u askıya alarak RL ile bağlantıs
 
 ### Where can I delete treatments in AAPS v3 ?
 
-3 nokta menüsü, tedavileri seçin, ardından silmek istediğiniz tedavinin ana başlığını seçin.
+3 dots menu, select treatments, then 3 dots menu again and you have different options available.
 
 ### Configuring and Using the AAPSClient remote app
 

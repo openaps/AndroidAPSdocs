@@ -37,18 +37,50 @@
 - 如果你希望**AAPS**使用不同於標準手機語言的語言，你可以從廣泛的選擇中選擇。
 
 - 如果你使用不同的語言，有時可能會看到語言混合的情況。 這是由於 Android 的問題，覆蓋預設的 Android 語言有時不起作用。
+- 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
+
+(preferences-simple-mode)= **簡易模式**
+
+在首次安裝**AAPS**時，將預設啟用**簡易模式**。 在**簡易模式**中，大量設定將被隱藏，偏好設定將被預定義的數值取代。 [首頁上的額外圖表](#AapsScreens-section-g-additional-graphs)也為你預定義。 一旦你熟悉**AAPS**的用戶介面和設定，應該關閉簡易模式。
 
 **患者名稱**
 
 - 如果你需要區分多個設置（例如家中有兩個 T1D 小孩），可以使用此功能。
+- 在 [雙錶面](../WearOS/WearOsSmartwatch.md) 中顯示。
+
+(Preferences-skin)=
+### 外觀
+
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
+
+你可以從四種類型的外觀中選擇：
+
+![選擇外觀](../images/Pref2021_SkinWExample.png)
+
+“低解析度外觀”帶有較短的標籤和省略年齡/等級，以在非常低解析度的螢幕上提供更多可用空間。
+
+其他外觀之間的差異取決於手機的顯示方向：
+
+#### 直向顯示
+
+- **原始外觀**與**按鈕始終顯示在螢幕底部**相同
+- **大型顯示**在所有圖表中高度增加，與其他介面相比較
+
+#### 橫向顯示
+
+- 使用**原始外觀**與**大顯示**時，你需要向下捲動才能看到螢幕底部的按鈕
+
+- **大型顯示**在所有圖表中高度增加，與其他介面相比較
+
+![外觀取決於手機螢幕方向](../images/Screenshots_Skins.png)
 
 (Preferences-protection)=
-### 保護
+## 保護
 
 ![偏好設定 > 一般 - 保護](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-#### 主密碼
+### 主密碼
 
 出於安全要求，通常必須能夠[匯出設定](../Maintenance/ExportImportSettings.md)，因為從版本 2.7 開始它們是加密的。
 
@@ -56,7 +88,7 @@
 
 ![設置主密碼](../images/MasterPW.png)
 
-#### 設定保護
+### 設定保護
 
 - 用密碼或手機的生物識別身份驗證來保護你的設定（例如：[小孩正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）。 如果你啟用此功能，每次你想要進入任何偏好設置相關視圖時，系統都會提示你進行身份驗證。
 
@@ -66,13 +98,13 @@
 
 ![保護](../images/Pref2020_Protection.png)
 
-#### 應用程式保護
+### 應用程式保護
 
 如果應用程式受到保護，則必須輸入密碼或使用手機的生物識別身份驗證才能打開**AAPS**。
 
 **AAPS**如果輸入錯誤密碼將立即關閉，但如果先前成功打開，將仍會在背景運行。
 
-#### 注射保護
+### 注射保護
 
 - 如果**AAPS**被小孩使用，則注射保護可能會很有用，並且你可通過[SMS 進行注射](../RemoteFeatures/SMSCommands.md)。
 
@@ -80,32 +112,9 @@
 
 ![提示生物辨識保護](../images/Pref2020_PW.png)
 
-#### 密碼和 PIN 保留
+### 密碼和 PIN 保留
 
 定義在你成功輸入密碼後，偏好設置或注射功能保持解鎖的時間（以秒為單位）。
-
-(Preferences-skin)=
-#### 外觀
-你可以從四種類型的外觀中選擇：
-
-![選擇外觀](../images/Pref2021_SkinWExample.png)
-
-“低解析度外觀”帶有較短的標籤和省略年齡/等級，以在非常低解析度的螢幕上提供更多可用空間。
-
-其他外觀之間的差異取決於手機的顯示方向：
-
-##### 直向顯示
-
-- **原始外觀**與**按鈕始終顯示在螢幕底部**相同
-- **大型顯示**在所有圖表中高度增加，與其他介面相比較
-
-##### 橫向顯示
-
-- 使用**原始外觀**與**大顯示**時，你需要向下捲動才能看到螢幕底部的按鈕
-
-- **大型顯示**在所有圖表中高度增加，與其他介面相比較
-
-![外觀取決於手機螢幕方向](../images/Screenshots_Skins.png)
 
 ## 首頁總覽
 
@@ -121,6 +130,7 @@
 ### 按鈕
 
 - 定義哪些按鈕在主螢幕底部可顯示。
+- 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 ![偏好設定 > 按鈕](../images/Pref2020_OV_Buttons.png)
 
@@ -145,8 +155,12 @@
 
 ![偏好設定 > 快速嚮導按鈕](../images/Pref2020_OV_QuickWizard2.png)
 
+同一時間只能顯示一個快速嚮導按鈕。 如果你想執行不同的選項：長按當前顯示的快速嚮導按鈕。 這將帶你到所有快速嚮導選項的列表。 要執行某個選項，請長按它。 在執行之前，你必須確認。
+
 (Preferences-default-temp-targets)=
 ### 預設臨時目標
+
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 [臨時目標（TT）](../DailyLifeWithAaps/TempTargets.md)允許你在特定時間範圍內更改你的血糖目標。 設置預設TT時，你可以輕鬆更改活動、即將用餐等的目標。
 
@@ -162,6 +176,8 @@
 
 ### 填充/啟動標準胰島素量
 
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
+
 如果你想透過**AAPS**填充管路或引導導管，你可以透過[**手動操作**標籤](#screens-action-tab)執行此操作。
 
 可以在此對話框中定義預設值。 根據你的導管長度選擇填充/啟動對話框中的三個按鈕的預設量。
@@ -169,11 +185,13 @@
 (Preferences-range-for-visualization)=
 ### 可視化範圍
 
-選擇**AAPS**總覽和智慧手錶上血糖圖表的高低標記。 這僅限於視覺化顯示，並非血糖的目標範圍。 範例：70 - 180 mg/dl 或 3.9 - 10 mmol/l
+選擇**AAPS**總覽和智慧型手錶上血糖圖表的高低標記。 這僅限於視覺化顯示，並非血糖的目標範圍。 範例：70 - 180 mg/dl 或 3.9 - 10 mmol/l
 
 ![偏好設定 > 可視化範圍](../images/Pref2020_OV_Range2.png)
 
 ### 縮短標籤標題
+
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 方便在螢幕上顯示更多的標籤名稱。
 
@@ -184,12 +202,16 @@
 (Preferences-show-notes-field-in-treatments-dialogs)=
 ### 在治療對話框中顯示備註欄
 
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
+
 給你一個在治療（追加注射嚮導、碳水化合物、胰島素等）中添加簡短文字備註的選項。
 
 ![偏好設定 > 治療對話框中的備註](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
 ### 狀態燈
+
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 狀態指示燈為以下情況提供視覺警告：:
 
@@ -203,7 +225,7 @@
 
 如果超出警告門檻值，數值將顯示為黃色。 如果超出危急門檻值，數值將顯示為紅色。
 
-最後一個選項允許你從Nightscout匯入那些設定（如果在那裡定義）。 詳情請參考[Nightscout文檔](https://nightscout.github.io/nightscout/setup_variables/#age-pills)。
+最後一個選項允許你從Nightscout匯入那些設定（如果在那裡定義）。 詳情請參考[Nightscout文件](https://nightscout.github.io/nightscout/setup_variables/#age-pills)。
 
 ![偏好設定 > 狀態燈](../images/Pref2020_OV_StatusLights2.png)
 
@@ -212,7 +234,7 @@
 
 設置使用注射嚮導時計算的注射的[預設百分比](#AapsScreens-section-j)。
 
-預設值為 100%：無需修正。 即便在這裡設置不同的值，您每次使用注射嚮導時仍然可以更改。 如果此設定為75%，而你必須注射10U，則注射嚮導將提出僅7.5單位的餐前注射。
+預設值為 100%：無需修正。 即便在這裡設置不同的值，你每次使用注射嚮導時仍然可以更改。 如果此設定為75%，而你必須注射10U，則注射嚮導將提出僅7.5單位的餐前注射。
 
 使用[SMB](#objectives-objective9)時，許多人不會注射所需胰島素的100%，而只會注射部分（例如75%），並讓SMB以UAM（不在場用餐偵測）處理餘下的部分。 在這裡使用低於100%的值可能會有用：
 * 對於消化緩慢的人來說：一次傳送所有的注射劑量可能會引起低血糖，因為胰島素的作用速度比消化快。
@@ -220,11 +242,15 @@
 
 ### 啟用的注射顧問
 
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
+
 ![注射顧問](../images/BolusAdvisor.png)
 
 啟用後，當你在高血糖狀態使用注射嚮導時，你將獲得警告，提示你是否想要預先注射，並在你的**BG**回到正常範圍時再進食。
 
 ### 啟用的注射提醒
+
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 %待辦事項
 
@@ -234,6 +260,8 @@
 ![偏好設定 > 進階設置](../images/Pref2021_OV_Adv.png)
 
 #### 超級注射
+
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 選擇在注射嚮導中啟用超級注射的選項。
 
@@ -293,7 +321,7 @@
 
 在此模式中，[maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) 設定為零。
 
-這意味著如果血糖下降，**AAPS** 可以為你減少基礎胰島素。 但是，如果血糖上升，則不會進行自動校正。 你的基礎率將保持在你當前**個人設置**中定義的值。 僅當基礎IOB為負值（來自先前的低血糖暫停）時，才會額外給予胰島素以降低**BG**。
+這意味著如果血糖下降，**AAPS** 可以為你減少基礎胰島素。 但是，如果血糖上升，則不會進行自動校正。 你的基礎率將保持在你當前**設定檔**中定義的值。 只有當 IOB（來自先前的低血糖暫停）為負值時，才會額外注射胰島素來降低**血糖**。
 
 (Preferences-minimal-request-change)=
 ### 最小請求變更
@@ -302,11 +330,12 @@
 
 ## 進階餐前注射助手（AMA）或超微量注射（SMB）
 
-根據你在[組態建置工具](../SettingUpAaps/ConfigBuilder.md)中的設置，你可以在三個演算法之間選擇：
+根據你在[組態建置工具 > APS](../SettingUpAaps/ConfigBuilder.md)中的設定，你可以選擇兩種算法：
 
 - [進階餐前注射助手（OpenAPS AMA）](#Open-APS-features-advanced-meal-assist-ama) - 2017年的算法狀態
 - [超微量注射（OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - 最推薦給初學者的最新算法
-- [動態ISF](../DailyLifeWithAaps/DynamicISF.md) - 於2024年釋出，從**[目標11](#objectives-objective11)**開始可用
+
+自[**AAPS**版本 3.3](#version3300)起，[動態 ISF](../DailyLifeWithAaps/DynamicISF.md)功能已移至 OpenAPS 微量注射的一部分。
 
 ### OpenAPS AMA
 
@@ -317,14 +346,12 @@
 
 所有針對OpenAPS SMB的設置都在[關鍵AAPS功能 > 超微量注射(SMB)](#Open-APS-features-super-micro-bolus-smb)中詳細描述。
 
-### 動態ISF
-
-所有針對動態ISF的設置都在[動態ISF](../DailyLifeWithAaps/DynamicISF.md)中詳細描述。
-
 ## 吸收設定
 
 (Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
+
+在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 該演算法使用BGI（血糖影響）來確定[碳水化合物的吸收](../DailyLifeWithAaps/CobCalculation.md)時間。
 
@@ -359,7 +386,7 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 
 ## 幫浦設定
 
-此處的選項會根據你在[組態建置工具](#Config-Builder-pump)中選擇的幫浦驅動程式而有所不同。  根據[幫浦相關說明](../Getting-Started/CompatiblePumps.md)配對並設置你的幫浦。
+此處的選項將根據你在[組態建置工具 > 幫浦](#Config-Builder-pump)中選擇的幫浦驅動程式而有所不同。  根據[幫浦相關說明](../Getting-Started/CompatiblePumps.md)配對並設置你的幫浦。
 
 ## Tidepool
 
@@ -449,17 +476,28 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 
 設定應該是簡單明瞭的。
 
-## 資料選項
+(preferences-maintenance-settings)=
+## 維護設置
+
+![維護設置](../images/Pref2020_Maintenance.png)
+
+**電子郵件收件人**：日誌的標準收件人是<logs@aaps.app>。
+
+**資料選擇**
 
 ![資料選項](../images/Pref2020_DataChoice.png)
 
 你可以通過向開發者發送崩潰報告來幫助進一步開發**AAPS**。
 
-## 維護設置
+**自動設定匯出**<br/>啟用此功能後，你允許**AAPS**自動執行設定匯出，而無需用戶介入。 為此，主密碼 安全地存儲在你的手機中（僅限於下次手動匯出時）。 存儲的密碼將在最多 4 週內有效。 4 週後，你將收到通知，提示密碼即將過期。 在為期 1 週的寬限期內，可以透過 從維護選單手動匯出設定來刷新密碼。
 
-![維護設置](../images/Pref2020_Maintenance.png)
+在寬限期過期的 1 週後，存儲的密碼將過期，任何自動化設定匯出將中止，同時通知用戶，要求 重新輸入密碼。  [(**自動化設定匯出**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)將被記錄在 AAPS 的「照護入口」和「用戶輸入」列表下的治療項目中。
 
-日誌的標準收件人是 <logs@aaps.app>。
+啟用此選項後，請確保執行一次手動設定匯出，屆時系統會要求你輸入密碼，以便**AAPS**能夠儲存它。
+
+(preferences-maintenance-logdirectory)= 維護設定還包括**AAPS** 目錄，該目錄可以直接在維護選單中找到。 此設定允許用戶選擇電話上的一個目錄，**AAPS**將在該目錄中儲存偏好設定、日誌及其他檔案。
+
+![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
 ## Open Humans
 

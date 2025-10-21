@@ -1,8 +1,8 @@
-# Troubleshooting
+# Problembehandlung
 
 Informationen zur Behebung von Problemen findest Du auf vielen Seiten im Wiki. Auf dieser Seite sind Links zu den entsprechenden Abschnitten zusammengetragen, so dass Du schneller eine Lösung für Dein Problem finden kannst.
 
-Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
+Weitere nützliche Informationen können auch im [FAQ](../UsefulLinks/FAQ.md) stehen.
 
 ## AAPS-App
 
@@ -11,8 +11,16 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 * [Verlorener Keystore](#troubleshooting_androidstudio-lost-keystore)
 * [Fehlerbehebung Android Studio](TroubleshootingAndroidStudio)
 
+### Installation
+
+Es kann sein, dass Google Play Protect ein Warnung anzeigt, dass die App unsicher ist, für eine ältere Android-Version erstellt wurde und nicht die neuesten Datenschutz-Schutzmaßnahmen enthält.
+
+Ignoriere sie: Weitere Details, Trotzdem installieren.
+
+![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+
 ### Einstellungen
-* Profile
+* Profil
 
   !['Fehler: Basal ist nicht auf Stunden ausgerichtet'](../images/Screen_DifferentPump.png)
 
@@ -29,14 +37,37 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 
 * [SMS-Befehle](#SMSCommands-troubleshooting)
 
+### Cannot start Omnipod with Android 16
+
+Upgrade to minimum version of AndroidAPS: 3.3.2.1.
+
 ### Häufige Bluetooth-Verbindungsprobleme
 
-Der Fehler kann bei verschiedenen Insulinpumpen auftreten. Außer AAPS von jeder Batterieoptimierung auszuschließen, kannst Du auch die Bluetooth-App des Systems von der Batterieoptimierung ausschließen. In einigen Fällen hilft das. Je nach verwendetem Smartphone findet sich die Bluetooth-App an anderen Stellen.
+#### Android 15
+
+Nach einem Android-Upgrade oder dem Umzug auf ein neueres Smartphone verliert **AAPS** häufig die Bluetooth-Verbindung zur Pumpe. Mit einem Neustart des Smartphones verschwindet das Problem vorübergehend. Wenn auf dem Smartphone Android 15 läuft, kannst Du versuchen die folgenden Dinge zu aktivieren:
+
+1) **Öffne die Einstellungen** durch einen Klick auf das 3-Punkte-Menü rechts oben auf dem Startbildschirm.
+
+
+![Einstellungen öffnen](../images/Pref2020_Open2.png)
+
+2. Scrolle ganz herunter und öffne das **Bestätigungstöne** / **Erweitertes**-Untermenü. Aktiviere **Verbinde BT-Gerät bei Android 15+**.
+
+   ![BondBT](../images/troubleshooting/BondBT.png)
+
+3. Wenn die Pumpe eine Koppelungsanfrage schickt, nimm Sie sie an.
+
+4. Starte dein Smartphone neu.
+
+#### Akku-Optimierung
+
+Der Fehler kann bei verschiedenen Insulinpumpen auftreten. Neben AAPS von jeder Akku-Optimierung auszuschließen, kannst Du auch die Bluetooth-App des Systems von der Akku-Optimierung ausschließen. In einigen Fällen hilft das. Je nach verwendetem Smartphone findet sich die Bluetooth-App an anderen Stellen.
 
 Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones findest.
 
 
-#### Pixel Smartphones (unverändertes Android)
+##### Pixel Smartphones (unverändertes Android)
 
 * Gehe zu Einstellungen > Apps
 
@@ -59,7 +90,7 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
   ![Bluetooth Akku-Optimierung](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Samsung Smartphones
+##### Samsung Smartphones
 
 * Gehe zu Einstellungen > Apps
 
@@ -84,7 +115,7 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 
 ## CGM
 
-* [General](#general-cgm-troubleshooting)
+* [Allgemein](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
 * [Libre 2](#Libre2-experiences-and-troubleshooting)
@@ -95,7 +126,6 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 
 * [Dana RS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
 * [Accu-Chek Combo allgemein](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
-* [Accu-Chek Combo + Ruffy](#Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
@@ -106,4 +136,4 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 
 ## Smartwatches
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
+* [Fehlerbehebung der Wear App](#Watchfaces-troubleshooting-the-wear-app)

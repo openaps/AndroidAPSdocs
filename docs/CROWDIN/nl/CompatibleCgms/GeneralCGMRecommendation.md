@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Algemene CGM aanbevelingen
 
 ## Kalibraties

@@ -13,7 +13,7 @@ Chytré hodinky se začínají stále více používat s **AAPS** aplikací, a t
 
 Chytré hodinky, v závislosti na modelu, mohou být s **AAPS** využity mnoha různými způsoby. Mohou být využity k úplnému nebo částečnému ovládání **AAPS** nebo jednoduše ke vzdálené kontrole glykémií, aktivního inzulínu a dalších parametrů.
 
-Integrace chytrých hodinek s **AAPS** může být užitečná v mnoha situacích, včetně řízení auta, motocyklu, kola nebo během cvičení. Někteří lidé to vnímají tak, že podívat se na hodinky (v průběhu schůzky, večírku, večeře apod.) je diskrétnější než hledět na telefon. Z hlediska bezpečnosti, chytré hodinky mohou být přínosem na cestách, kdy uživateli umožňují mít jeho **AAPS** telefon uložen z dohledu (například v tašce), ale přitom pod vzdálenou kontrolou prostřednictvím hodinek.
+Integrace chytrých hodinek s **AAPS** může být užitečná v mnoha situacích, včetně řízení auta, motocyklu, kola nebo během cvičení. Some people feel that looking at a watch (in a meeting, party, dinner table etc.) is more discrete than looking on a phone. Z hlediska bezpečnosti, chytré hodinky mohou být přínosem na cestách, kdy uživateli umožňují mít jeho **AAPS** telefon uložen z dohledu (například v tašce), ale přitom pod vzdálenou kontrolou prostřednictvím hodinek.
 
 ## Specifické výhody pro rodiče/pečovatele používající **AAPS**
 
@@ -49,11 +49,11 @@ Nejlepší způsob, jak vybrat chytré hodinky, je hledat v příspěvcích "hod
 
 ## Full Android
 
-Zní to jako atraktivní možnost, že? V současné době však pouze několik nadšenců experimentuje s **AAPS** na hodinkách samostatně. Existuje omezené množství typů chytrých hodinek s dostatečně velkým ciferníkem a zároveň správně fungujících s **AAPS** a CGM aplikací. Populární modely zahrnují LEMFO LEM 14, 15 a 16. Hodinky budete muset startovat s plnou verzí **AAPS** aplikace (full.apk, která se obvykle používá na telefonech) namísto **AAPS** "wear" apk.
+Zní to jako atraktivní možnost, že? V současné době však pouze několik nadšenců experimentuje s **AAPS** na hodinkách samostatně. Existuje omezené množství typů chytrých hodinek s dostatečně velkým ciferníkem a zároveň správně fungujících s **AAPS** a CGM aplikací. Popular models include the LEMFO LEM. Hodinky budete muset startovat s plnou verzí **AAPS** aplikace (full.apk, která se obvykle používá na telefonech) namísto **AAPS** "wear" apk.
 
 Protože neexistuje specifikace, podle které by šlo určit, které hodinky jsou vhodné pro samostatný provoz **AAPS**, tyto parametry mohou pomoct:
 
-1) Android 10 nebo novější. 2) Je schopen použít ciferník v režimu „čtverec“, aby byl text větší a snadněji čitelný. 3) Velmi dobrá životnost baterie. 4)  Good Bluetooth range.
+1)  Android 11 or newer. 2) Je schopen použít ciferník v režimu „čtverec“, aby byl text větší a snadněji čitelný. 3) Velmi dobrá životnost baterie. 4)  Good Bluetooth range.
 
 Většina frustrace ze samostatného provozu **AAPS** na hodinkách pramení z práce s maličkou obrazovkou a z faktu, že plná AAPS aplikace nebyla navržena pro zobrazení na hodinkách. Práce s rozhraním **AAPS** na hodinkách může být kvůli omezené velikosti orazovky pohodlnější se stylusem. Z těchto důvodů ani nemusí být některá tlačítka <0>AAPS</0> na obrazovce viditelná.
 
@@ -75,9 +75,9 @@ Verify your smartwatch satisfies **AAPS** [prerequisites](#maintenance-android-v
 
 První tři možnosti chytrých hodinek vyžadují, aby měly instalovaný **Wear OS**.
 
-**Wear OS** je operační systém, který běží na některých moderních chytrýích hodinkách Android. V [2018](https://en.wikipedia.org/wiki/Wear_OS)Google přejmenoval _Android Wear 1.x na Wear OS_ od verze 2.x. Pokud je tedy zařízení označené jako _"Android Wear"_ namísto **Wear OS**, může se jednat o starší verzi hodinek. Pokud je v popisu chtrých hodinek informace pouze o _kompatibilitě_ s Android nebo iOS, neznamená to, že běží na WearOS. Může se jednat o jiný druh operačního systému konkrétního výrobce, který není kompatibilní s **AAPS**. Aby byla podporována instalace a používání jakékoliv verze **AAPS** nebo **AAPSClient**, chytré hodinky musí běžet na **Wear OS** a v ideálním případě na Android 10 nebo novější. Vodítkem při výběru může být, že v říjnu 2023 je poslední verze **Wear OS** 4.0 založená na Android 13).
+**Wear OS** je operační systém, který běží na některých moderních chytrýích hodinkách Android. Pokud je v popisu chtrých hodinek informace pouze o _kompatibilitě_ s Android nebo iOS, neznamená to, že běží na WearOS. Může se jednat o jiný druh operačního systému konkrétního výrobce, který není kompatibilní s **AAPS**. To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch will need to be running **Wear OS**, and be Android 11 or newer. As a guide, as of October 2024, the latest release of **Wear OS** is version 5.0 (based on Android 13).
 
-If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of different custom **AAPS** watchfaces which can be selected. Alternativně můžete využít standardní ciferník, kde budou informace z **AAPS** zobrazeny na malých polích známých jako "complications". A complication is any feature that is displayed on a watchface in addition to the time. Takovéto funkce vyžadují Wear OS verze 2.0 nebo vyšší.
+If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of different custom **AAPS** watchfaces which can be selected. Alternativně můžete využít standardní ciferník, kde budou informace z **AAPS** zobrazeny na malých polích známých jako "complications". A complication is any feature that is displayed on a watchface in addition to the time.
 
 
 ### What could my smartwatch look like?
@@ -170,7 +170,7 @@ Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))
 
 These are unique pieces of technology which can receive glucose data **directly** from the Dexcom transmitter. It is not widely known that Dexcom G6/G7 transmitters actually broadcasts the current glucose data on _two_ separate channels, a phone channel and a medical channel. The Bluejay watches can be set to receive glucose data on either channel, so if **AAPS ** is using the phone channel, then the Bluejay watches can use the medical channel.
 
-The key advantage is that it is currently the only watch which is completely independent of both the phone and the looping system. So, for example, if you disconnect the pump and the **AAPS** phone at the beach or flume park, and are out of range of the **AAPS** phone, you can still get readings from your Dexcom directly to the Bluejay watch.
+The key advantage is that it is currently the only watch which is completely independent of both the phone and the looping system. So, for example, if you disconnect the pump and the **AAPS** phone at the beach or theme park, and are out of range of the **AAPS** phone, you can still get readings from your Dexcom directly to the Bluejay watch.
 
 Reported disadvantages are that it doesn’t always pick up a reading every 5 min, and the battery is not replaceable. The Bluejay GTS watch runs a modified version of xDrip+ software whilst the Bluejay U1 runs full xDrip+.
 

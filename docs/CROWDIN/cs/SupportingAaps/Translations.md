@@ -87,7 +87,7 @@ Schválení je nutné provést ručně. Jako nezisková organizace neposkytujeme
     
     
 
-You are translating the text which represents the link. Please you have to be carefull **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+You are translating the text which represents the link. Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
 
 It's the proofreaders job to have a special look on this!
 

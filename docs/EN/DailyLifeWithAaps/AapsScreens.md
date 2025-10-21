@@ -16,7 +16,9 @@ This is the first screen you will come across when you open **AAPS**, and it con
 
 * Navigate between the various **AAPS** modules.
 * Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
+
+(aaps-screens-profile--target)=
 
 ### Section B - Profile & target
 
@@ -69,7 +71,13 @@ The color of the BG value reflects the status to the defined [range](#Preference
    * red = below range
    * yellow = above range 
 
-The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+![Deltas](../images/Home_Delta.png)
+
+The blocks in the middle shows:
+
+1.  how many minutes since last **CGM** reading
+2.  differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
+   Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
 
 (AapsScreens-loop-status)=
 #### Loop status
@@ -79,8 +87,8 @@ The greyish block in the middle shows minutes since last reading and changes sin
 On the right side, an icon shows the loop status:
 1. Green circle = loop running
 2. Green circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
-3. Red circled = loop disabled (not working permanently)
-4. Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
+3. Red circle = loop disabled (not working permanently)
+4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
 5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
 6. Orange circle = super bolus running - remaining time is shown below icon
 7. Blue circle with dotted line = open loop
@@ -139,12 +147,18 @@ Special note for Libre users:
 *Note*:
 Up to 30h hours are taken into accord for **AAPS** calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
+#### Simple mode
+
+An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+
+![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
+
 ### Section D - IOB, COB, BR and AS
 
 ![Section D](../images/Home2020_TBR.png)
 
-**Syringe**: insulin on board (IOB) - amount of active insulin inside your body
-1. The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
+1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body<br/>
+The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
    - IOB may be negative if there have recently been periods of reduced basal.
    - Press the icon to see the split of bolus and basal insulin
 
@@ -152,7 +166,9 @@ Up to 30h hours are taken into accord for **AAPS** calculations. So even after y
     The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
 3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%)
    * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-4. **Arrows up & down**: indicating actual [Autosens](#Open-APS-features-autosens) status (enabled or disabled) and value is shown below icon
+4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section:
+  - AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
+  - Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
 
 (aaps-screens-carbs-required)=
 #### Carbs required
@@ -195,7 +211,7 @@ The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
 
 Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here.
 
-Long press on the graph to change the timescale. You can choose 6, 12, 18 or 24 hours.
+Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
 
 The green area reflects your target range.
 
@@ -206,10 +222,11 @@ Blue triangles show [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled
 
 On the main graph, you can switch on these optional information:
 * Predictions
+* Treatments
 * Basals
 * Activity - insulin activity curve
 
-To show this information, click the triangle on the right side of the main graph. For the main graph just the three options above the line "------- Graph 1 -------" are available.
+To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph   1 2 3 4" are available.
 
    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
@@ -257,18 +274,18 @@ The **thin yellow** line shows the activity of Insulin.
 It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
 
 (AapsScreens-section-g-additional-graphs)=
-### Section G - additional graphs
+### Section G - Additional graphs
 
-You can activate up to four additional graphs below the main graph.
+You can activate up to four additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
 
-To open settings for additional graphs click the triangle on the right side of the [main graph](#section-f---main-graph) and scroll down.
+To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
 
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
-To add another graph check the box on the left side of its name (i.e. ------- Graph 1 -------).
+To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
 
 Most users find the following configuration of additional graphs to be adequate :
-* Graph 1 with IOB, COB, Sensitivity
+* Graph 1 with IOB, COB, Sensitivity change
 * Graph 2 with Deviations and BGI.
 
 #### Absolute insulin
@@ -293,7 +310,7 @@ Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/
 
 If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings).
 
-#### Sensitivity
+#### Sensitivity change
 
 Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
 
@@ -301,9 +318,15 @@ Sensitivity is a calculation of sensitivity to insulin as a result of exercise, 
 
 Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
 
-#### Heart rate
+### Variable sensitivity
 
-This data may be available when using a [Garmin smartwatch](#Watchfaces-garmin).
+Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+
+(screen-heart-rate-steps)=
+#### Heart rate & Steps
+
+This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md).
+Enable them on **AAPS** Wear app and give permission for health data.
 
 #### Deviations
 * **Grey** bars show a deviation due to carbs. 
@@ -324,23 +347,28 @@ It is a good combination to display this line along with the Deviation bars. The
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
-Buttons for Insulin, Carbs and Calculator are almost always visible. If the connection to the pump is lost, the insulin button will not be visible.
+Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
 
 Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-buttons).
 
 About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
 
+(aaps-screens-buttons-insulin)=
 #### Insulin
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#bolus-wizard).
+To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
 
 By checking the box **Start eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
 
 If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) check the corresponding box. When checking this box, you get an additional field “Time offset”, that you can use to record an insulin injection made in the past.
 
 You can use the buttons to quickly increase the insulin quantity. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+
+The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+
+![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
 
 #### Carbs
 
@@ -358,7 +386,7 @@ You can use the buttons to quickly increase the carb amount. The increment value
 
 
 #### Calculator
-See Bolus Wizard [section below](#bolus-wizard).
+See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
 
 #### Calibrations
 Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
@@ -378,6 +406,7 @@ Easily enter amount of carbs and set calculation basics.
 
 Details are set up in [Preferences > Overview > QuickWizard settings](#Preferences-quick-wizard).
 
+(aaps-screens-bolus-wizard)=
 ## Bolus Wizard
 
 ![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
@@ -447,17 +476,19 @@ For details, see the hints on [COB calculation page](#CobCalculation-detection-o
 
 ### Actions - section M
 
-Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#section-b---profile--target) on homescreen.
+Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#aaps-screens-profile--target) on homescreen.
 
-Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#section-b---profile--target) on homescreen.
+Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#aaps-screens-profile--target) on homescreen.
 
 Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
 
-Even though [extended boluses](#Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
 
  * This option is only available for Dana RS and Insight pumps. 
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
    * Make sure to read the [details](../DailyLifeWithAaps/ExtendedCarbs.md) before using this option.
+
+(aaps-screens-careportal)=
 
 ### Careportal - section N
 
@@ -479,7 +510,7 @@ Thresholds can be set in [Preferences > Overview > Status lights](#Preferences-s
 
 ### Careportal - section O
 
-BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal---section-n).
+BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#aaps-screens-careportal).
 
 Prime/Fill allows you to record pump site and insulin cartridge change.
 
@@ -508,7 +539,7 @@ Like most of these rules-of-thumb it is of limited real validity. Note: Your dia
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [config builder](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
+This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
 
 The **purple**  line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. 
 
@@ -583,7 +614,7 @@ Each bolus (line **1** and **4**) shows the remaining associated IOB next to the
 * SMB, when using the SMB Functionality
 
 The carbs (line **2**) are only stored in Nightscout.
-If you have used the [Bolus Wizard](#bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
+If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
 
 Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
 
@@ -636,7 +667,7 @@ This tab shows all notes and alerts recorded in Nightscout.
 
 ## History Browser
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then History. It is not possible to put in the main menu through the Config Builder. It can also be accessed through a button at the bottom of the [Action tab](#action-tab).
+This view can be accessed by pressing the 3 dots on the right of the menu, then History. It is not possible to put in the main menu through the Config Builder. It can also be accessed through a button at the bottom of the [Action tab](#screens-action-tab).
 
 Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
 

@@ -3,11 +3,10 @@
 # 讀取日誌檔案
 
 * 將手機連線到電腦，並選擇檔案傳輸模式
-* 在 AAPS 資料目錄中找到日誌檔案
-    
-    * (2.8.2) 資料夾位置類似於 ***內部儲存(1) / Android / data / info.nightscout.androidaps / files***
-    * (3.0.0) 資料夾位置類似於 ***內部儲存(1) / AAPS / logs***
-    * 根目錄資料夾的名稱 (1) 可能會根據手機稍有不同。
+* 在 AAPS 資料目錄中找到日誌檔案，路徑為 `Android\data\info.nightscout.androidaps\files`。  
+    根儲存資料夾的命名可能會根據手機略有不同。
+* 對於 [AAPSClient](#RemoteControl_aapsclient)，位置是 `Android\data\info.nightscout.aapsclient\files`。
+* 注意：在**AAPS 3.3**中，日誌位置已更改。 如果需要，請參閱先前版本的文件。
 
 ![日誌](../images/aapslog.png)
 

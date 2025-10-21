@@ -9,7 +9,7 @@ Note: the Tidepool organization is also working on bringing the iOS Loop product
 
 ## Step 1 - Setup a tidepool account
 
--Navigate to tidepool.org
+-Navigate to [tidepool.org](https://www.tidepool.org/)
 
 -Select “Personal Sign Up” or “Sign Up”
 

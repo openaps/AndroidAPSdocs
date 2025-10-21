@@ -8,6 +8,11 @@
 
 **AMA** = Advanced Meal Assist. An algorithm which allows **AAPS** to increase the user’s basal more aggressively after a meal bolus. Further info → Wiki - 'AMA'.
 
+**Adjustment Factor** = used within **DynamicISF** and is a value set within a user's **Preferences** between 1% and 300%. This acts as a multiplier on the **TDD** value.
+
+- increasing the **Adjustment Factor** value above 100 % makes **DynamicISF** more aggressive: the **ISF** values become smaller (i.e. more insulin required to decrease **BG** levels a small amount)
+- lowering the **Adjustment Factor** value under 100% makes **DynamicISF** less aggressive: the **ISF** values become larger (i.e. less insulin required to decrease **BG** levels a small amount).
+
 **Android Auto** = a system used to host certain functions of an Android smartphone’s features, including **AAPS**, within a car's display. Further info → Wiki - 'android auto'.
 
 **APK** = Android application Package. A software installation file. Further info → Wiki - 'Building APK'.
@@ -46,6 +51,11 @@
 
 **DST** = Daylight Savings Time Wiki DST.
 
+**Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s:
+
+- Total Daily Dose of insulin (**TDD**); and
+- current and predicted **BG** values.
+
 **eCarbs** = extended Carbs. Carbs split up over several hours to accommodate/protein and permits **AAPS** to deliver extended boluses. Further info → Wiki - 'eCarbs', 'eCarbs use'.
 
 **FGM** = Flash Glucose Monitor manufactured by Freestyle Libre. Further info → Wiki - 'BG source' and see also 'CGM'.
@@ -61,6 +71,8 @@
 **IOB** = Insulin On Board. Insulin active in the user’s body.
 
 **ISF** = Insulin Sensitivity Factor. The expected decrease in BG as a result of one unit of insulin.
+
+**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuid).
 
 **LGS** = Low Glucose Suspend. **AAPS** will reduce basal if **BG** is dropping and if **BG** is rising, then it will only increase basal if **IOB** is negative (from a previous **LGS**), otherwise basal rates will remain the same as the user’s selected **Profile**. The user may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound. → see also objective 6.
 
@@ -81,8 +93,6 @@
 **NSClient** ( or **‘AAPSClient’)** = see **AAPSClient**.
 
 **OpenAPS** = Open Artificial Pancreas System.
-
-**AAPS** operating on small computers (i.e. Raspberry Pi).and uses some of the OpenAPS features OpenAPS docs.
 
 **Open Loop system** = an **AAPS** feature that will recommend adjustments and which must be performed manually by the user on **AAPS**. Further info → Wiki - 'config builder'.
 

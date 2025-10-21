@@ -1,6 +1,6 @@
 # Profile switch & Profile Percentage
 
-This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn about how to create a **Profile** at [Config Builder - profile](#setup-wizard-profile).
+This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn about how to create a **Profile** at [Config Builder > Profile](#setup-wizard-profile).
 
 When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can offer be particularly beneficial for:
 
@@ -24,7 +24,7 @@ Once a new **Profile** has been created and saved, **AAPS** will maintain a libr
 
 A. In order use this feature the user must have more than one **Profile** saved within **AAPS**. To activate a **Profile Switch**:
 
-- __long-press__ on the name of the **Profile** (the example below adopts a ‘Profile’ saved as: “(Lyum) low” on **AAPS’** homescreen and selects the desired **Profile**  form the drop down tab:
+- __long-press__ on the name of the **Profile** (the example below adopts a ‘Profile’ saved as: “School” on **AAPS’** homescreen and selects the desired **Profile**  from the drop down tab:
 
 1. Long press **Profile**;
 2. Select desired **Profile**; and
@@ -54,7 +54,7 @@ How to action a **Profile** ‘Percentage’:
 
 4. Enter ‘Time Shift’.
 
-## To activate a Profile Percentage within Profile Switch:
+## Profile Percentage
 
 It is important that a user understands the essential features of a **Profile Percentage**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
 

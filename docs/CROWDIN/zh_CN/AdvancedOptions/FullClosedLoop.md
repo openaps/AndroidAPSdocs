@@ -1,359 +1,341 @@
-# Full Closed Loop
+# 全闭环
 
-## Full vs. Hybrid Closed Loop (FCL, HCL)
 
-### Definitions
+全闭环系统（**FCL**）的主要优势在于其能够模拟人工胰腺功能，无需餐前注射大剂量胰岛素即可简化日常血糖管理。
 
-In **hybrid closed loop** you gave at least one bolus prior to meals. This pushed your loop often into a temporary shut-off (temporary zero basal) and generally only into a co-management role while that given bolus was strongly active.
+虽然**混合闭环**（“HCL”）是基于算法的，但它仍然需要用户在餐前手动进行餐前大剂量注射。 因此，环路可能会进入临时关闭状态（临时零基础率）以防止胰岛素输送过多。
 
-Also, prior to each meal, you made inputs about the carb, fat, and protein intake, and also gave indications (generally in settings, plus every day related to each meal) related to estimated carb absorption times.
+在**FCL**中，不再需要根据餐量推注胰岛素：将工作交给算法！  **AAPS** 可能允许用户不进行任何餐前大剂量注射，也不输入碳水化合物，这在一种称为“未声明膳食”（**‘UAM’**）的模式下进行。 **UAM** 通过更积极的方式，使 **AAPS** 能够更好地容忍不正确的碳水化合物输入。
 
-AAPS also allows **full closed looping without the user giving any boli**, and without making carb inputs, in a mode called UAM = un-announced meals.
+## What to expect?
 
-- Note that **UAM** can also be switched on in hybrid closed looping, in which case it just means that the algorithm tolerates wrong carb inputs better.
+已有许多关于**FCL**积极效果的研究发表。 如需进一步阅读，请参阅以下内容：
 
-- It is discussed controversially whether e.g. for particularly high carb meals, or for people with certain eating habits or sensitivity swings, a mode with small pre-bolusses might be preferable or even needed. This would basically be a hybrid closed loop without carb info, and therefore a variant of HCL really. We stick to FCL as really **without user boli**, and once you tuned your FCL, you might even remove all „useless“ buttons on the bottom of your AAPS main screen.
+1) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png)![PubMed](../images/US-NLM-PubMed-Logo.png)美国国家医学图书，PubMed[开源自动胰岛素输送系统AndroidAPS在全闭环场景中的首次应用：Pancreas4ALL随机试点研究](https://pubmed.ncbi.nlm.nih.gov/36826996/)；
 
-### What to expect?
+2)![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png)美国国家医学图书馆，临床试验 [全闭环胰岛素输送系统Pancreas4ALL（ASAP）的可行性和安全性研究](https://www.clinicaltrials.gov/study/NCT04835350?term=Feasibility%20and%20Safety%20Study%20of%20the%20Automated%20Insulin%20Delivery%20Closed%20Loop%20System%20Pancreas4ALL%20(ASAP)&rank=1)
 
-In 2022/23 a first medical study was conducted and published that showed patients can achieve comparatively good results with AAPS in a simple FCL mode:
+**FCL** 的成功需要用户：
 
-> 16 adolescents with T1D (HbA1c range 43-75), and duration of diabetes of 9-15 years underwent three distinct 3-day periods of camp living, while using a modified and locked version of AAPS 3.1.0.3 **Results:** The glycemia was controlled by the system 95% time of the study and the proportion of time below 3.9 mmol/L did not exceed 1% over the whole study period (0.72%). The HCL scenario reached significantly higher percentage of time below 3 mmol/L (HCL 1.05% vs. MA 0.0% vs. FCL 0.0%; P = 0.05) compared to other scenarios. **No difference was observed among the scenarios in the percentage of time between 3.9 and 10 mmol/L** (HCL 83.3% vs. MA 79.85% vs. **FCL 81.03%**, P = 0.58) corresponding to mean glycemia (HCL 6.65 mmol/L vs. MA 7.34 mmol/L vs. FCL 7.05 mmol/L, P = 0.28). No difference was observed in the mean daily dose of insulin or in the daily carbohydrate intake. No serious adverse event occurred during the study period. **Conclusions:** Our pilot study showed that **FCL might be a realistic mode of treatment** for people with T1D.
+- 检查他们是否满足 **FCL** 的先决条件；
+- 设置适合日常管理需求的**自动化规则**；
+- 微调**AAPS**设置（特别是**自动化规则**）。
 
-Source:
 
-1) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ![PubMed](../images/US-NLM-PubMed-Logo.png) National Library of Medicine, PubMed [First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study](https://pubmed.ncbi.nlm.nih.gov/36826996/);
+## General considerations why (not to) move from HCL to FCL
 
-2) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ClinicalTrials.gov National Library of Medicine, Clinical Trial [Feasibility and Safety Study of the Automated Insulin Delivery Closed Loop System Pancreas4ALL (ASAP)](https://www.clinicaltrials.gov/study/NCT04835350?term=Feasibility%20and%20Safety%20Study%20of%20the%20Automated%20Insulin%20Delivery%20Closed%20Loop%20System%20Pancreas4ALL%20(ASAP)&rank=1)
+**FCL**并不适合所有人：
 
-For you to enjoy the promised reduced daily burden, you will have to:
+- 部分**FCL**用户可实现TIR（70-180）约90%和HbA1c低于6%，但其他用户可能希望更严格控制。 值得注意的是，在食用快速碳水化合物的饮食中，将数值控制在 140 mg/dl 以下可能需要预先注射。
+- **AAPS**调校具有挑战性。 它不适合那些对 AAPS 感到不知所措的用户。  您需要花费几周时间来调整和微调您的 **FCL**。 投入这些时间可以产生更好的结果和 **BG** 控制。
+- 进餐管理可能更轻松，但**FCL**中的运动管理仍具挑战性。 多数人希望通过限制运动零食来控制体重。
+- 为儿童建立 **FCL** 仍然存在困难（下文讨论）。
 
-- check whether you have all pre-requisites for FCL
-- set up a couple of Automations
-- go through a learning and tuning stage in which you adjust the settings, notably those in your Automations. The suggestions that follow guide you in this process.
 
-### General considerations why (not to) move from hybrid to full closed loop
+## Well-tuned hybrid closed loop
 
-The full closed loop system may **not** be **for everyone**:
+在考虑转向**FCL**前，建议先建立良好调校的**HCL**。  **FCL**成功需要高度个性化的设置调校，使**AAPS**能通过胰岛素输送精确模拟您成功的混合闭环模式。
 
-- While some full closed loopers using Automations achieve TIR (70-180) around 90%  and HbA1c under 6%, you might prefer tighter control. Notably, **minimizing values over 140 mg/dl at diets with rapid carbs** probably requires pre-bolussing.
-- Are you up for an informed and mindful approach towards a highly personalized calibration of your system? The **personalized tuning** can be **challenging**. This is definitely not for you if you were overwhelmed already with setting basal rate and ISFs. But balance it against what you could gain every day without counting any carbs. You might also value the gained deeper knowledge from analyzing and tuning your loop’s reponse to your meals.
-- While meal management gets very easy, **activity** management might get a bit more difficult, especially considering most of us probably like to limit sports snacks, in an attempt to control body weight.
-- Unfortunately, there are additional difficulties to establish a full closed loop for **kids** (see next section, pre-requisites)
+**FCL**需要用户设置和调校**自动化规则**。 但用户必须充分理解自身胰岛素管理需求后才能开始**FCL**。 错误可能会被反向错误所掩盖， 导致**FCL**系统不稳定，后期难以纠正。 您应预期FCL的%TIR与当前**HCL**水平相当。
 
-## Pre-requisites for full closed looping
+**FCL是通过分析用户成功的HCL数据和初始FCL体验，自行设置自动化规则的过程。**
 
-The main attraction of full closed looping would be that you could get close to the dream of an artificial pancreas. Indeed, it promises very easy everyday use. **“Just eat!”**
+## Fast insulin (Lyumjev, Fiasp)
 
-### Well-tuned hybrid closed loop
+**FCL**需要速效胰岛素。  这是为了在进餐相关**血糖**上升初期，**FCL**能通过常规定义（低于180 mg/dl（10 mmol/l））保持**血糖**在范围内。
 
-It is advisable to first establish a well-tuned hybrid closed loop before considering the transition to FCL. There are two important reasons for this:
+一项建模研究（详情参见链接 FullLoop V2/March2023；其中第 2.2 节）可以定量地表明*更快的胰岛素*
 
-- The UAM full closed loop requires a highly personalized (individual) tuning of settings, so the loop will give insulin mimicking YOUR successful hybrid closed loop mode.
-- The UAM full closed loop comes with new parameters (in your Automations) to be set and tuned. It would be **problematic to set and tune these additional parameters before the basics were tuned “right”**. Errors could easily be balanced with counter-errors. This can work in single scenarios, but would create a highly unstable system, hard to re-calibrate better later. Also, as seen by many early testers and also in the above quoted study, you should expect to reach comparable %TIR with your *FCL* as you see today in your *HCL*. The switch is not about performance, but about convenience, -  after a bit of inconvenience: **The heart of this FCL method is a DIY set up of Automations that you have to do for yourself, analyzing *your data*, both, from *your* successful HCL, and from your initial FCL experience when tuning your settings.** This is no self-adjusting off the shelf wonder-product! The programmers of the software, and writers of this wiki, assume no responsibility. You have to find out for yourself whether and how you may want to make use of the tools, and suggested ways they might be used.
+来源：
 
-### Fast insulin (Lyumjev, Fiasp)
-
-If the user does not bolus for meals, clearly a very fast insulin is needed so, upon realization of a starting meal-related glucose rise, the loop has any chance to eventually keep glucose in range (by common definition, under 180 mg/dl (10 mmol/l)).
-
-A modelling study (details see LINK FullLoop V2/March2023; there section 2.2) can show in quantitative terms that *faster insulins*
-
-Source:
-
-![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
+![IEEE控制系统杂志](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
 
 
 
 IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
-- will result in significantly **lower** glucose **peaks** than slower insulins
-- **tolerate** a couple of minutes **delayed** first meal bolus while not incurring unacceptable height of peaks
-- **minimize the effect** on glucose peak **from different** carb load (**meal sizes**).
+- 与较慢的胰岛素相比，会导致 *BG** 峰值显著降低；
+- 能容忍首次餐时推注延迟数分钟，同时不产生不可接受的高峰值；
+- 最大限度地减少不同碳水化合物负荷（膳食大小）对 **BG** 峰值的影响。
 
-In conclusion, do not attempt FCL with other insulin than Lyumjev or Fiasp, unless, maybe, if you are on a very moderate to low carb diet.
+除非用户采用非常温和至低碳水化合物饮食，否则使用Lyumjev或Fiasp以外的胰岛素，**FCL**可能难以有效。
 
-Many users of Fiasp or of Lyumjev observe frequent **occlusions**, even after optimizing things like needle length or SMB delivery speed. It seems very important to have an eye on the time a **cannula (or pod)** is in use (many find **48 hrs** to be the **limit**), and whether hard-to-explain glucose rises happen at ever increasing „fake“ iob.
+然而，即使在优化了诸如针头长度之类的事情之后，Fiasp 或 Lyumjev 仍可能导致频繁的泵阻塞。 密切关注套管或储药器的时间非常重要。 许多用户发现 48 小时是胰岛素在导致套管/储药器故障之前的有效极限。
 
-An incidence report in (LINK, section 2.2.) illustrates this problem and shows that per *one* occlusion you easily lose 25% TIR that day, or 5% TIR on the week, and still 1% TIR on the month.
+## Prerequisites
 
-### Excellent CGM
+需要稳定的血糖值和蓝牙连接确保**AAPS**最佳性能，避免损失宝贵时间。 **FCL**需要24/7技术稳定系统：
 
-You do not give a mealsize-related bolus any longer; that leaves ALL insulination jobs to the algo! As glucose values are the very basis for this, please **inform yourself well about** how **your CGM** 1) principally performs  2) whether and how this may depend on data flow and intermediate apps you use, or differ between days of sensor usage   3) specifically, how and where any smoothing is done, and what this might imply for your tuning, notably for how you define a delta that is a true sign of a starting meal.
+- **CGM性能 您的CGM不应产生跳跃式**血糖**值，以免被**FCL**误判为进餐开始信号。 同样，**CGM** 校准可能会产生跳跃的结果。
+- 任何 **CGM** 平滑的处理方式和位置，以及这对您的调整可能意味着什么。 特别是delta定义方式，以及AAPS是否识别为进餐开始信号。
+- 泵和 CGM 泵的蓝牙稳定性；
+- 避免（或至少及早识别）泵阻塞；
+- 数据流和您手机上使用的应用程序以及传感器使用天数之间的差异；
+- 保持所有**AAPS**组件充足电量并备有备用件；
+- 始终及时更换管路（或敷贴）以降低堵塞风险；
 
-Around meals, a stable Bluetooth connectivity is absolutely essential, too, so CGM, loop, and pump can do their job without losing more valueable time.
+以上内容会因您的 **AAPS** 组件系统和您的生活方式而异。
 
-Then, but even more importantly in all other day and night times, the CGM should not produce any artefacts (jumpy values) that the loop could **misinterpret** as sign of a starting meal. Note that also calibrations could produce jumps.
+## Meal-related limitations
 
-The best way currently is to use Dexcom G5 or **G6**, and to ensure via **overlapping** right and left arm sensor and transmitter utilization, that always good quality values can be used by the loop. Other ways are possible, but come with a lot of monitoring effort (via watch) and occasional time-outs for the loop.
+- 对饮食中不含快速影响**血糖**成分且每日餐型变化不大的用户，设置**FCL**可能更容易。 这并不一定意味着低碳水化合物。
 
-### Meal-related limitations
+- 高脂肪或高蛋白饮食，或慢消化/胃轻瘫，反而使**FCL**更容易实施，因为后期碳水化合物能很好覆盖推注胰岛素不可避免的"尾部"效应。
 
-Setting up a full closed loop is relatively easy for people whose diet does not consist **mainly** of components with **rapid high effect on blood glucose**, and whose meal patterns do not wildly vary day-to-day. They do not have to be low carb.
+### 升糖指数与血糖影响
 
-Fat or protein rich diets, or slow digestion/gastroparesis, make things easier rather than harder for the full closed loop because late carbs nicely cover for inevitable “tails” of late action from boli needed around peak time.
+**UAM**模式的挑战随着"对血糖影响（EBG）"增加而增加：
 
-#### Glycemic index and effect on blood glucose
+- 从中/低EBG开始，调校**配置文件**设置。 然后"测试"高**EBG**餐食。
+- 如果摄入极高**EBG**，考虑初始推注量<50%。
 
-Challenge for the UAM mode rises with rising EBG (effect on blood glucose)
+1) **无EBG**：如新鲜肉类、鱼类、鸡蛋、培根、油类、奶酪。 2) **低EBG**：如新鲜蔬菜和浆果、蘑菇、坚果、牛奶、酸奶、奶酪。 3) **中EBG**：如全麦面包/面条、土豆、野米、燕麦、干果。 4) **高EBG**：如小麦面包、法棍、吐司、华夫饼、饼干、土豆泥、面条、米饭。 5) **极高EBG**：如糖、甜饮、果汁、玉米片、糖果、薯片、咸脆棒。
 
-- Start moderate/low, and tune your settings. Inly then, "test" meals with high EBG
-- Consider a < 50% initial bolus if consuming very high EBG
+![升糖指数与血糖影响](../images/fullClosedLoop01.png)
 
-1) **No EBG**: fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**: wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: (sugar-) sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
+对**FCL**最具挑战性的餐食是仅含极高和高**EBG**成分的食物（图中红色部分）：不仅**血糖**迅速飙升，且缺乏脂肪/蛋白质/纤维成分来平衡控制高血糖早期所需的胰岛素"尾部"效应。
 
-![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
-
-The most difficult meals are those with exclusively very high and high EBG components (see red in the picture): Not only does glucose shoot up rapidly, but also there is not much of a fat/protein/fibre component to balance the inevitable “tail” of insulin activity that would come with attempts to control the high glucose earlier on.
-
-**Erratic consumption of snacks and sweet drinks** that are loaded with fast resorbing carbs is a problem.
+随意摄入富含快速吸收碳水化合物的零食和甜饮会给**FCL**带来问题。
 
 
-### Lifestyle-related limitations
+## Preparing for activity/sports
 
-#### Technically stable system
+在使用泵或混合闭环进行锻炼或活动时，建议用户在锻炼前减少 **IOB**。
 
-Full closed looping requires a 24/7 technically stable system, especially regarding reliable **CGM** signals, but also **Bluetooth stability** with the **pump**, and avoiding (or at least early recognition of) occlusion. This could require attention to details like keeping all components well charged and in close proximity; making cannula (or pod) changes always early enough to lower the risk of occlusion; having always potentially needed parts with you. **Depending on your system, your experience with it, but also on your acceptance and general lifestyle, these aspects may or may not limit you.**
+在**FCL**中，算法被调校为检测**UAM**并自动输送胰岛素对抗**血糖**上升。  应在任何活动开始前尽早设置较高的**临时目标**和较低的**配置文件百分比**（在用餐开始时左右已生效）。
 
-#### Preparing for activity/sports
+异常或不定期的运动水平会给**FCL**带来困难。 锻炼需要提前计划（特别是如果您想减少运动期间低血糖时对急救碳水化合物/零食的需求）。 在活动一天后，建议在晚餐完全消化后为夜间设置较低的**百分比配置文件**：在**自动化**中设置一个升高（>100 mg/dl）的**BG** 目标，并在 ***AAPS*** 首选项中选择“在升高目标时不使用 **SMB**”。
 
-To prepare for activity / sports /exercise,  the normal protocol with a pump or **hybrid** closed loop is to take actions that reduce insulin on board prior to exercise.
+## Hurdles for kids
 
-With your **full closed loop**, the algorithm is tuned to detect meals and to give you insulin to counter glucose rises automatically. Setting a high temp. target and lower %profile right away (effective already around meal start) would be a problem.
+**FCL** 可能给儿童带来额外的挑战，其中包括：
 
-Unusual activity levels therefore likely require **disciplined preparation** (especially **if you want to keep the need to snack during sports low**). In nights after an active day it can be smart to keep a lowered% profile, and set, for the hours after the evening meal is fully digested, an elevated (>100 mg/dl) glucose target, with “no SMBs at elevated target” selected in AAPS preferences.
+- Lyumjev 或 Fiasp 可能无法获得或耐受性不佳。
+- 小时基础率可能极低，难以为大剂量**SMB**提供基础。
+- 饮食可能富含甜食。 由于儿童身体通常血容量较低，因此很容易出现非常高的 **BG** 峰值。
+- 生长激素和胰岛素敏感性显著变化使**FCL**难以准确调校。
 
-#### Hurdles for kids
 
-To establish and maintain a FCL for kids brings about some extra challenges if:
+## Enabling boosted SMBs: safety
 
-- Lyumjev is not available or well tolerated
-- Hourly basal rate is very low, providing a poor basis for big SMBs
-- Diet is rich in sweet components. With the typical low blood volume of a small body, strong tendency towards very high bg spikes!
-- Going through marked changes of insulin sensitivity or of circadian pattern makes it difficult to keep the FCL appropriately tuned.
+在**HCL**中实施了关于闭环自动推注量的安全限制。
 
-There are a couple of parents and kids pioneering this area, too. This paper highlights areas that would require some minimum compliance; in the end it comes down to whether the achieved results are at least comparable to where everyone stood in her/his everyday hybrid closed loop.
+**FCL**用户不再需要在餐时给予大剂量推注。 这意味着必须放宽**SMB**量限制，使闭环能输送足够大的**SMB**。
 
-#### Time required for setting-up
+如果使用**AAPS**主版本，建议**AAPS**偏好设置允许最大**SMB**量（maxUAMSMBBasalMinutes=120，即日间2小时基础量）。
 
-Lastly, before enjoying a functioning full closed loop you need to have a period of a some weeks with some free time and „free head“ for set-up –. Can you get, in the time you are willing to invest, to a result that you consider good-enough is really the question. Depending on your „habits“, and which – if any - compromises (like doing cannula/pod changes more often, never starting meals when bg sits high … ) are you willing to make (and everyday able to stick to), for the ease of not having to deal with assessing meals and bolussing for them?
+如果基础率非常低，生成的**SMB**限制可能不足以控制餐后**血糖**上升。 一个解决方案是避免导致强烈**血糖**飙升的饮食，然后切换到提供新**SMB**输送参数的**AAPS**开发版：smb_max_range_extension。 这将使标准的最大 2 小时基础胰岛素量扩大 >1 倍。 （此外，默认的 50% **SMB** 输送率可能会在开发变体中提高） 。
 
-## Enabling boosted SMBs; safety
+**按照说明操作，使AAPS能够通过若干次超级微剂量（SMB）模拟您的餐前大剂量注射**。
 
-In hybrid closed looping, strong safety restrictions are implemented regarding bolus sizes that can be automatically given by the loop.
+定期检查 **SMB** 选项卡，查看您的 **SMB** 是否被允许足够大，以在用餐开始时提供循环所需的胰岛素。
 
-However, in full closed loop application, loopers themselves do no longer give a sizeable bolus around meal start. Then clearly size limits on SMBs must be widened to make the loop capable of giving large enough SMBs.
+否则，您的调校努力有时会白费！
 
-As you are operating with AAPS Master release, it is suggested you set in AAPS preferences the largest setting for maximum allowed SMB size the loop can give (maxUAMSMBBasalMinutes=120, i.e. 2 hours worth of basal at that daytime).
 
-> If your basal rate is very low, the resulting SMB limits might be too low to allow good-enough control of your post-prandial glucose rises. In that case the solution might be to avoid diets with strong spikes and later switch to a AAPS dev variant that offers a new parameter in SMB delivery settings: smb_max_range_extension. It expands the standard maximum of 2 h worth of basal by a factor of >1. (Additionally, the default 50% SMB delivery ratio might be elevated in dev variants).
+```{admonition} Boosting **ISF** can become dangerous
+:class: 危险
 
-Going to the max. limits on SMB size in AAPS Master will not make the FCL mode inheritantly less safe. In contrary, you replace your big meal bolus by several smaller ones that you enable your loop to give you, and even with some minutes of delay. This virtually eliminates the hypo risk in the first 1-2 hours of any meal. In hour 3 and thereafter, there should not be much difference because in HCL and FCL the loop manages with the same algorithm.
+请密切观察/分析**超级微剂量(SMB)​**在餐后初期的给药量。 逐步调校，每次最多调整1-2个参数。
 
-**Follow the instruction** to enable AAPS **to mimick your bolussing via a couple of SMBs**.
-
-Check the SMB tab from time to time to see whether your SMBs are allowed to be large enough to deliver the insulinReq as needed for your full closed loop around meal starts.
-
-If not, your tuning efforts will sometimes come to nothing!
-
-```{admonition} Boosting ISF can become dangerous
-:class: danger
-
-Carefully observe/analyze the SMB sizes that, briefly after meal start, result from your settings. Tune in steps, and do not vary more than 1 or 2 parameters at a time.
-
-Setting must work good-enough for your (!) variety of meals.
+您的**AAPS**设置必须充分适应您的各种餐食。
 ```
 
 ## Meal detection/your Automations for boosting
 
-For successful full closed looping, ISF is the key tuning parameter. When utilizating AAPS Master + Automations, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened ISF.
+**FCL**成功的关键调校参数是**ISF**。 当使用 **AAPS** Master + **自动化**时，**必须在识别到膳食时（通过葡萄糖增量）自动触发 > 100% 的配置文件更改**，并提供强化的 **ISF**。
 
-AAPS Master allows up to 130% temp. profile in Hybrid Closed Loop mode. Boosting the ISF is done in 3 steps:
+**AAPS** Master 在 **HCL** p 模式下允许高达 130% 的临时**配置文件**。 提升 **ISF** 分 3 个步骤完成：
 
-- Step 1 is to look up the ISF applicable for this meal time hour in the profile, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
-- Step 2 applies a factor (1/profile%, as set in your Automation) to boost ISF.
-- Step 3 is a check, that the suggested ISF falls within set safety limits.
+- 第1步 - 查看**配置文件**中当前餐时适用的**ISF**，例如Autosens是否建议考虑身体当前（过去几小时）胰岛素敏感性状态的调整。
+- 第2步 - 应用系数（1/配置文件%，在**自动化规则**中设置）增强**ISF**。
+- 步骤 3 - 检查建议的 **ISF** 是否在设定的安全限制范围内。
 
-### FCL Automation templates
+### FCL's Automation templates
 
-Boxes to tick at the top: You always have the options:
+顶部的复选框。 您可以选择：
 
-- In the list of all your Automations, you can tick the check-mark (to left of each field) OFF => This de-activates that Automation.  For instance you could do this for all breakfast related FCL Automations to go to Hybrid Closed Looping for breakfast(s).
-- In each Automation event template, you can tick the box for **User action** => Then the defined Actions will not automatically be executed when Conditions apply. Rather, your AAPS main screen will alert you whenever your FCL would automatically give a SMB. You have the opportunity then to say yes or no. This is **extremely useful in your tuning phase**.                                                                                                                        
-  This feature can be very valueable also everyday. An example would be, if you see the “foot to floor” syndrome (suddenly rising glucose when getting up), but want to prevent a fully automatic “breakfast started” response.
+- 在**自动化规则**列表中，可取消左侧复选框>停用该规则。 例如，您可以对所有与早餐相关的 **FCL** **自动化**执行此操作，以便在早餐时切换到 **HCL**。
 
-The following section shows in detail how you can bundle a whole series of conditions to describe situations in which the AAPS loop should increase (or decrease) insulin delivery.                                                                                                                                      As ISF cannot directly be tuned, raising profile% over 100% will do the same for our purposes.
+- 对于每个**自动化**规则，您可以勾选用户操作框 =\> 那么当条件适用时，定义的操作将不会自动执行。 相反，当您的 **FCL** 会自动给出 **SMB** 时，**AAPS** 主屏幕会提醒您。 然后您有机会说“是”或“否”。 这在调校阶段非常有用。
+
+该功能可用于某些场景，如早晨起床时"脚踏实地"综合征（血糖突然上升），但用户希望阻止全自动"早餐开始"响应。
+
+下文指导如何组合**自动化规则**条件，以及如何处理**AAPS**需要增加/减少胰岛素输送的情况。 由于 **ISF** 不能直接调整，因此将**配置文件百分比**提高到 100% 以上将达到我们的目的。
 
 ### Automated big SMBs at bg rise
 
-Key to success in full closed looping: **At the beginning of glucose increases from meals, very large automatic boli (SMBs) must be given by the loop as quickly as possible** “to catch up” with the evidently needed iob. (Compare with your administered bolus for similar meal in hybrid closed loop!)
+**FCL**成功的关键在于：**在餐后血糖开始上升时，闭环必须尽快给予非常大的自动SMB**"追赶"所需**IOB**（与您在**HCL**中对类似餐食的典型推注量比较！）
 
-First of all, **personal data** (from your time in hybrid closed loop) have to be researched to determine which **deltas** might be not meal –related, and which ones surely would be.
+为实现这一目标，需分析来自您**混合闭环系统（HCL）**的数据，以区分可能与饮食无关或者相关的**血糖变化值（deltas）**。
 
-- As you can define the Automation to only work in a pre-defined time-window, you need only to analyse there.
-- If you do very different kinds of meals (e.g. a rather high carb breakfast, but low carb lunch) you can choose to do two different (sets of) Automations for each of the time slots.
-- Exclude the nights if you see occasional jumps from a compression lows
-- Usually, just using the delta of the past 5 minutes suffices.
-- But you can also make use one of the average deltas. By comparing the deltas in the conditions of your Automations you could even define actions of different aggressiveness depending on whether the glucose rises in an accelerated way or not.
+- 由于您可以在预定义的时间窗口内定义**自动化**，因此您只需要在该时间窗口内进行分析。
+- 如果餐型差异大（如高碳早餐、低碳午餐），可为不同时段设置不同**规则集**。
+- 如果在夜间看到偶尔的跳变，请排除夜间
+- 通常仅使用过去5分钟的delta足够。
+- 也可使用平均delta。 通过比较规则条件中的delta，甚至可根据血糖上升加速度定义不同积极程度的操作。
 
-> ( delta – short avg delta )>n   is a term that could be used for acceleration detection , to trigger first SMB at earliest sign of rising glucose. -                                                                             Caution: not possible to use with poor or highly smoothened CGM-values!
+> (delta - 短期平均delta)>n 可作为加速度检测项，在血糖上升最早迹象时触发首个**SMB**。 -                                                                             
+> 注意：在CGM数据质量差或过度平滑时不适用！
 
-A CGM with lots of scatter will put you in a bad spot because, to be on the safe side,  you need to „sandbag“ your definition which delta is surely asign of a started meal. That means:
+数据不稳定的 **CGM** 会让用户处于不利地位，因为为了安全起见，您需要“保守”地定义哪个增量肯定是开始进餐的迹象。 这意味着：
 
-- your FCL loses additional time, resulting in higher glucose peaks and lower %TIR
-- because you cannot use a earlier or smaller delta which could trigger, also without a meal, the SMBs that are supposed to make up for a user bolus in FCL.
+- **FCL** 会损失额外的时间，导致更高的 **BG** 峰值和更低的 %**TIR**；
+- 无法使用更早/更小的delta触发非进餐情况下的**SMB**（本应用于模拟**FCL**中的用户推注）。
 
-Furthermore, first rises after a meal are characterized by **low iob** present. With that in mind, an Automation(#1) for a dinner might look like this:
+此外，餐后首次血糖升高通常伴随着**低 IOB**。 基于此，晚餐的自动化规则（#1）可能如下：
 
 ![8mg jump 130% ioby4](../images/fullClosedLoop02.png)
 
-Automation #1
+自动化规则 #1
 
-If conditions apply, the loop would give 1 or 2 SMBs in the next 12 minutes, using a boosted ISF according to the set elevated profile%  (in the example, a 30% boost of insulinReq). As long as these conditions apply, the Automation rule extends by another 12 minutes. A low carb meal might have slower bg rise characteristics. It would benefit from another Automation (#2) that kicks in at lower delta, and gives a weaker insulin boost.
+条件满足时，**AAPS**将在接下来12分钟内给予1-2次**SMB**，使用提升的**ISF**（示例中胰岛素需求提升30%）。 只要这些条件适用，**自动化**规则将再延长 12 分钟。 低碳餐可能有更慢的**血糖**上升特征， 它将受益于另一个在较低增量时启动并提供较弱胰岛素增强的自动化 (#2)。
 
 ![>=5mg jump 115%, iob<5.5](../images/fullClosedLoop03.png)
 
-The same Automation probably will kick in also in higher carb meals, once the steep rise as defined in Automation#1 is over.
+一旦自动化#1中定义的急剧上升结束，同样的**自动化**可能也会在碳水化合物含量较高的膳食中启动。
 
-You need to “stage” these two (+ maybe a third) Automations to fit with what you see in your meal (variety) => Setting appropriate jump sizes, iob citeria, and amplifications will be an iterative tuning process.  Also, if you include appropriate time slots in the Conditions, you can easy do different Automations for your different daily meals times (breakfast, lunch, dinner).
+您需要“分阶段”安排这两个（或许还有第三个）**自动化**，以适应您所见的膳食（种类）=> 设置适当的跳跃幅度、**iob** 标准和放大倍数将是一个需要反复调试的过程。  此外，如果您在条件中包含适当的时间段，您可以轻松地为不同的每日用餐时间（早餐、午餐、晚餐）设置不同的自动化。
 
-Note that, still in the rise phase (!), the "overflow" of  iob must be blocked so that the late effects of the **insulin** (the "**tail**" after 3-5 hours) will not exceed the braking capacity of the loop through zero-temping (“taking away” basal, to reduce hypo risk).
+注意，在上升阶段仍需阻止"溢出"的**IOB**，以免胰岛素后期效应（3-5小时后的"尾部"）超过闭环通过零基础率（减少低血糖风险）的制动能力。
 
-With large meals there is **sometimes a second increase**. By then, usually also the iob has dropped a bit, and the more aggressive Automations take effect again. (Check that your iob condition in Automation #2 is not set too low to for this to happen).
+对于大餐，**有时会出现第二次升高**。 此时IOB通常已下降，更积极的规则再次生效。 （检查自动化 #2 中的 iob 条件是否设置得太低而不会发生这种情况）。
 
-Soon after a few intial SMBs were given comes a **balanced phase** where moderate addition of insulin should cover the additional carbs absorbed. (Except in low carb meals, where the loop might see too weak of a bg rise, and go into zero-temping right away already now).
+在最初几次 **SMB** 给予后不久，就会出现一个**平衡阶段**，此时适度的胰岛素输送应该可以覆盖额外吸收的碳水化合物。 （低碳水化合物膳食除外，此时循环系统可能检测到**血糖**上升过弱，并立即进入零基础率）。
 
-The AAPS main screen (where you always see cob=0 in UAM full loop) might in this phase ask for more carbs required. In UAM mode that simply means, you could make a very rough plausibility check: Is that amount of carbs likely in your body, un-absorbed from your meal just about an hour ago (about which you gave your loop no info)?
+**AAPS**主屏幕（**UAM**全闭环下显示cob=0）在此阶段可能提示需要更多碳水。 在**UAM**模式下，这仅需简单合理性检查：这些碳水是否可能来自约1小时前进餐未吸收的部分？
 
 
 ### iob threshold
 
-Often, Automations #1 and/or #2 make iob rise to heights that typically are enough for **your** meals. For personalized tuning, look in your hybrid closed loop data at the max iob values that occur with well-managed meals (often: your meal bolus), and above which magnitude a hypo (or requirement for extra carbs) occured at the end.
+通常规则#1和/或#2使IOB升至足够高度。 个性化调校需查看**HCL**数据中管理良好餐食（通常是您的餐时推注）的最大IOB值，以及超过该值后出现低血糖（或需要额外碳水）的情况。
 
-Sensible **iob thresholds** at which you should reduce aggressiveness of your loop, might not be the same for every meal. But especially in the first hour after the start of a meal, which is very crucial in the UAM mode, these data differ little for me: Just about 30g/hour get absorbed, and to define a meaningful iob independent of the exact meal can be possible.
+您应该降低循环系统激进程度的合理 **iob 阈值**，对于每顿饭可能不尽相同。 但尤其是在用餐开始后的第一个小时，这在 **UAM** 模式下至关重要。 它会因用户而异。 对于某些用户来说，每小时仅吸收约 30 克，并且可以定义一个与确切膳食无关的有意义的 **iob**。
 
-For exceptional meals, or to lower it if sports follow, the iob threshold can rapidly be set differently in your Automation.
+对于特殊膳食，或者如果随后进行运动则降低该值，可以在您的**自动化**中快速设置不同的 **iob** 阈值。
 
-Automation(#3),”iobTH reached => SMBs off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive SMB boosting.
+规则(#3)"达到IOB阈值=>关闭SMB"用于终止（或暂停）积极**SMB**增强，直到新一波碳水相关上升出现。
 
 ![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop04.png)
 
-Automation #3
+自动化 #3
 
-It tells the loop that above your set **iob threshold** it's better not to use any more SMBs
+它告诉循环系统，当高于您设定的 **iob 阈值**时，最好不要再使用任何 **SMB**。
 
-- The given example does that by setting TT=111 (which is kind of arbitrary; pick a number>100 that you easy recognize as your automated SMB shut-off)
-- In AAPS Preferences/ SMB Settings generally do not allow SMB at elevated target).                                                                                                                   
-  The insulinReq will then have to be delivered with much more caution through the bottleneck of TBRs
+- 示例通过设置TT=111（任意选择>100的易识别值）实现
+- 在**AAPS偏好设置/SMB**中，通常不允许在升高的目标下启用**SMB**）。                                                                                                                   
+  所需胰岛素将不得不通过**TBR**的瓶颈更加谨慎地输注。
 
-**Caution: Automation #3 only works when there is no active TT.** So, in case you worked with EatingSoonTT, it must be ended by that time, which usually should be 30-40 minutes after meal start.
+**注意：规则#3仅在无活动TT时有效**。 例如，如果您使用EatingSoonTT，必须在该时间结束（通常餐后30-40分钟）。
 
-One idea how to do this automatically would be an Automation that ends an eventually running EatingSoonTT under the condition that iob >65% * iobTH.
-> Ways to work with EatingSoonTT Some loopers set (by pressing the TT button, or automated via a lowered profile glucose target if eating time slots are fairly fixed) an EatingSoonTT roughly an hour or more before meal start, just to guarantee a low starting glucose and a bit of positive iob. But, assuming the FCL is anyways always en route towards target, this might not yield much and you might rather just define an Automation that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). A low TT is important in this stage because any SMB is calculated by your loop using (predicted glucose minus TT)/sens, so a small TT makes the resulting insulinReq bigger.
+可通过设置**自动化规则**条件（如IOB>65%*IOB阈值）来终止可能运行的EatingSoonTT。
+> 使用 EatingSoonTT 的方法 一些闭环使用者会在用餐开始前大约一小时或更长时间设置 EatingSoonTT（通过按下 TT 按钮，或者如果用餐时间段相当固定，则通过降低的**配置文件****BG** 目标自动设置），只是为了保证较低的起始 **BG** 和略微增加的 **iob**。 但是，假设 **FCL** 始终朝着目标前进，这可能不会产生太多效果，您可能更愿意定义一个**自动化**，在识别到用餐开始时（葡萄糖增量，或加速度 = 增量 > 平均增量）设置 EatingSoonTT。 在此阶段，较低的**临时目标（TT）**至关重要，因为闭环系统会通过（预测血糖值减去TT）/胰岛素敏感系数来计算每个**超级微剂量（SMB）**，因此较小的TT值会使最终所需的胰岛素剂量（insulinReq）增大。
 
-After the first boosted SMBs were given, your set iobTH and Automation #3 should strike a good balance of limiting the glucose peak, but also not leading to a hypo after the meal.
+在给予最初的增强型 **SMB** 后，您设置的 iobTH 和*自动化** #3 应该在限制葡萄糖峰值和餐后不导致低血糖之间取得良好平衡。
 
-In case for instance your breakfast totally deviates in carb content from your average dinner, you may benefit from defining Automations that apply in the respective times of day, and have different iobTH (possibly also different deltas, and different %profile set). Both, you with defining your meal spectrum and settings (notably, iobTH), and the loop managing the unfolding bg curve, must accept certain peak heights for reducing hypo danger towards the end of the DIAs from SMBs.
+如果您的早餐碳水化合物含量与您的平均晚餐有很大差异，您可能会受益于定义适用于一天中相应时间的**自动化**，并具有不同的 **iobTH**（可能还有不同的增量和不同的**百分比配置文件**设置）。 您通过定义餐谱和设置（特别是IOB阈值）与闭环共同管理**血糖**曲线，必须接受某些峰值高度以减少DIA末期的低血糖风险。
 
 ### Stagnation at high bg values
 
-In case, after a “rich” meal, a long-lasting stagnation with **high glucose** value is seen, Automation #6 (below, left),"post-meal High”, helps deal with fatty acid resistance: After multi-course meals, large greasy pizza, raclette evening, the glucose curve can form two humps or, very often, an elongated high plateau.
+若在享用丰盛餐食后，出现**高血糖（BG）**值长期停滞的情况，可启用**自动化**方案#6（左下方所示）——"餐后高血糖"模式，该方案专门应对脂肪酸抵抗现象：在食用多道菜正餐、大量油脂披萨或奶酪火锅晚餐后，血糖曲线可能呈现双峰形态，或更常见表现为长时间的高位平台期。
 
 ![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop05.png)
 
-Automation #4
+自动化 #4
 
 ![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop06.png)
 
-Automation #5
+自动化 #5
 
-Automation #4, “post-meal High”, is also suitable in hybrid closed loop.
+自动化#4“餐后高血糖”也适用于混合闭环。
 
-In addition, a termination-Automation #5, “Stop pmH”, is needed, so that the aggressiveness of the insulin administration is reduced, as soon as the glucose value is falling. (However, often the loop will limit more insulin anyways for hypo prevention because predicted glucose runs low already).
+此外，还需要一个终止自动化 #5，“停止 pmH”，以便在血糖值下降时降低胰岛素给药的激进程度。 （但闭环通常因预测血糖走低而限制更多胰岛素）。
 
-### Hypo prevention
+## Hypo prevention
 
-The core problem here is of course that the UAM full closed loop (without carb inputs) can have **no idea how many g of carbs are still available** for absorption, and might use up that “tail” insulin, without you going into a hypo from it.
+核心问题是**UAM** **FCL**（无碳水输入）无法知道还有多少克碳水待吸收，可能用完"尾部"胰岛素导致低血糖。
 
-Using boosted SMBs, the loop “caught up” with what we formerly did with a meal bolus. But, **at the “tail” end of insulin activity, hypo prevention can become a serious topic**.
+**FCL**通过使用增强**SMB**"追赶"餐时推注。 但是，**在胰岛素作用的“尾效”阶段，低血糖预防可能成为一个严重的问题**。
 
-In preparation for your full closed loop Automations, you therefore must take a closer look at the **time course of iob** for typical meals, and judge **when it becomes too much, and how you can catch that by tuning your Automations**. That is definitely possible, because we have several adjusting screws. However, it can get a bit tricky to get it “right”, so it reasonably works for your variety of meals.
+准备**FCL**时，用户需仔细查看典型餐食的**IOB时程**，判断何时过量，以及如何通过调校规则解决。 这是可能的，因为我们有好几个可调节项。 要正确设置可能是一个挑战。
 
-Generally, it makes no sense to keep optimising settings for one kind of meal. Once you have a good-enough setting e.g. for one kind of lunch you frequently have, test how this works with other kinds, and how you would “compromise”.
+通常为单一餐型优化设置没有意义。 当获得对某常见午餐的良好设置后，需测试其对其他餐型的适用性，进行"折衷"。
 
-In order to prevent hypo in post-meal hours 3 – 5, reduce the aggressiveness before too much iob comes together. Specific approaches:
+为了防止餐后 3-5 小时发生低血糖，在 iob 聚集过多之前降低激进程度。 具体方法：
 
-- Become milder and milder with the ISF already during the glucose rise, as in Automation examples #1 and #2 given.
-- Define the iob threshold, from which the loop is made significantly more cautious (Automation #3, above). Note this iob can be exceeded, by the last SMB before it went into effect; and then further by TBRs if the loop sees insulinReq Carbs getting absorbed will provide a counter-movement towards lower iob.
-- The iob threshold could be differentiated according to meals: By cloning the automations, you could easily differentiate for breakfast, lunch, and dinner time slots (or even for geo-locations, like company cafeteria, or at mother-in-law etc)  
-  >You could differentiate within these time slots even further by setting different TTs for low carb vs. fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with Automations specially tuned for them.(That is probably not not necessary, unless your diet habits do vary a lot.).
+- 在血糖升高期间即开始逐渐减缓**ISF**，如提供的自动化示例#1和#2所示。
+- 定义使**AAPS**明显更谨慎的IOB阈值（规则#3）。 需注意：在生效前最后一次**SMB**可能使**IOB**超出此值；若闭环系统检测到胰岛素需求，临时基础率（TBRs）会进一步增加该值。碳水化合物吸收过程将产生降低胰岛素在体量的反向作用。
+- IOB阈值可根据餐次进行差异化设置：通过克隆自动化规则，可轻松为早餐、午餐和晚餐时段分别设定不同阈值（甚至可根据地理位置差异，如公司食堂或岳母家等场景进行个性化配置）。
+> 可在此时段内进一步细分：通过为低碳水化合物与快速碳水化合物等不同类型餐食设定不同临时目标（TTs），从而预置该时段可能出现的不同餐类配置，并通过专门调校的**自动化规则**进行调用。 除非饮食习惯差异大，否则可能无需此操作。
 
-Before a special meal challenge, you can raise your iob threshold, or make another change in any of your Automations within under 5 seconds, right from your AAPS main screen (burger top left; or Automations tab, depending how you configured your AAPS.).
+在进行特殊饮食挑战前，您可直接通过AAPS主界面（左上角汉堡菜单或**自动化规则**标签页，具体取决于您的**AAPS**配置），在5秒内提升**胰岛素在体量**阈值或修改任意自动化规则参数。
 
-The hypo danger some hours after the meal is essentially a question of whether your meal composition was such, that the **insulin tails from fighting the bulk of carbs** will be **consumed by “extended carbs”** (excessive/delayed carb absorption/protein/fat/fibre).
+餐后低血糖风险本质是餐食成分是否使对抗主要碳水的胰岛素"尾部"能被"延伸碳水"（过量/延迟吸收的碳水/蛋白质/脂肪/纤维）消耗。
 
-Over time you will learn patterns, tune your Automations – maybe even adjust your eating habits a bit, e.g. just enjoy the occasional late little(!) snack that may help maintain a good **balance of insulin activity and carb absorption** for the **entire** meal (digestion, absorption) time, and thus make life for your loop (and for yourself) easier.
+随时间推移，您将学习模式、调校规则——甚至调整饮食习惯，例如偶尔享用帮助维持胰岛素活性和碳水吸收平衡的后期小零食，使闭环（和您自己）更轻松。
 
 ### Order of programmed Automations
 
-Problems can arise with overlapping definitions in Automations. Example: The problem is that delta >8 is also delta >5, i.e. there may be two competing Automations. What does the loop do then? It always decides according to the sequence in which your Automations appear when looking into the burger menue / AdAPS main screen.  Example: The delta > +8 rule must come first (and launch the strongest boost if all conditions apply); then comes the check for delta >5 (and a milder response). If done the other way round, the delta>8 rule would never come into effect because the delta>5 already applies, case closed.
-> Tip for "house cleaning" in your Automations: Order changes are very easy to make. If you press on a list entry in AAPS/Automations, you can move the Automation in question to another position. So you can quickly (re-)arrange.
+当**自动化规则**中存在定义重叠时，可能引发系统逻辑冲突。 示例：当Δ值>8mmol/L同时满足Δ值>5mmol/L时（即两条相互冲突的**自动化规则**同时被触发），闭环系统将如何执行？ 闭环系统始终依据**自动化规则**在汉堡菜单/AAPS主界面中的显示顺序执行决策。  示例：必须将Δ值>+8mmol/L的规则置于首位（当所有条件满足时触发最强调节），随后再检查Δ值>5mmol/L的情况（并执行较温和的响应）。 若顺序颠倒，Δ值>8mmol/L的规则将永远无法生效——因为系统会优先执行已适用的Δ值>5mmol/L规则并终止判断流程。
+> 自动化提示：顺序更改非常容易。 在**AAPS/自动化**界面中，长按列表条目即可将指定的**自动化规则**重新排序至其他位置。
 
-Also it is very easy and quick to adjust any conditions or actions at any time, within seconds, just on your AAPS smartphone; for instance if you head into a very special eating event. (But don’t forget to set it back to normal on/for the next day).
+在AAPS智能手机上，您还能随时快速调整任何条件或操作，只需数秒即可完成——比如当您要参加特殊饮食活动时。 但需记得次日恢复设置。
 
-## Troubleshooting
+## 故障排除
 
 ### How to get back into Hybrid Closed Loop
 
-You can un-click the top boxes in the Automations related to your FCL, and go back to bolussing for meals and making carb inputs again.  You may have to go to AAPS Preferences/Overview/Buttons and get your Buttons “Insulin, Calculator…”  back for your AAPS HCL main screen. Be aware that now it is again up to you to bolus for meals
+您可取消勾选**自动化规则**中与**FCL**相关的顶部复选框，即可恢复餐时大剂量注射功能并重新启用碳水化合物输入。 您可能需要进入**AAPS**的偏好设置/概览/按钮选项，为主屏幕重新启用"胰岛素"、"计算器"等按钮功能。 请注意：现在又需要您自行注射餐前大剂量胰岛素了。
 
-It can also be wise to do FCL only for meals (time slots) where Automations are fully defined and clicked on, and un-klick only those for the other meal times when you like to do hybrid looping (or have none defined yet, in your transition period).
+建议仅在已完整定义并启用**自动化规则**的餐次（时段）采用**全闭环模式（FCL）**，而其他需要**混合闭环模式（HCL）**的餐次（或过渡期尚未定义规则的时段），则取消勾选相应配置。
 
-For instance, it is perfectly possible, without any extra steps after Automations for dinner time slots are defined, to do FCL only for dinners, while breakfast and lunch are done in hybrid closed loop as you are used to.
+例如：当晚餐时段的**自动化规则**配置完成后，您完全可以仅对晚餐启用**全闭环模式(FCL)**，而早餐和午餐仍保持您惯用的**混合闭环模式(HCL)**，无需任何额外操作步骤。
+
 
 
 ### Are the pre-conditions for FCL still given?
 
-- Is the basic profile still correct?
-- Has the CGM quality deteriorated
-- etc (see section pre-requisites)
+- 基本**配置文件**是否仍然正确？
+- **CGM**质量是否下降
+- 参考先决条件（上文）
 
 ### Glucose goes too high
 
-- Meals are not recognized asap
-    - Check regarding Bluetooth (in)stability
-    - Check whether you could set smaller deltas to trigger first SMB
-    - Experiment with an aperetif, soup acouple of minutes before meal start
-- SMBs are too weak
-    - Check order of Automations (e.g.: big delta before small delta)
-    - Check (real-time) in SMB tab whether hourly profile basal and set minutes (max 120) limit allowed SMB size
-    - Check (real-time) in SMB tab whether %profile must  be set bigger
-- If all your settings are at the limit, you may have to live with the temporary high, or adjust your diet.
-> If you are ready to use AAPS dev variants, you could also employ one that allows further expanded SMB sizes. Some users also resort to using a small pre-bolus in their “FCL”. However, this interferes with how glucose curve and hence detection of rises and triggered SMBs behave, and is therefore not easy to implement with convincing overall benefit.
-- An important observation by pilot users was, that how your glucose and iob curves approach meal start matters a lot regarding how you peak from carbs: Going down (e.g. towards a set EatingSoonTT), building some iob, and curving already towards strong positive acceleration seems very helpful to keep peaks low.
+- 餐食未被及时识别
+    - 检查蓝牙稳定性
+    - 检查您是否可以设置更小的增量来触发第一个 **SMB**
+    - 建议进行以下餐前试验：在正式进餐前数分钟，可尝试饮用开胃酒或汤品（作为血糖波动测试）。
+- SMB强度不足
+    - 检查规则顺序（如大delta先于小delta）
+    - 请在**SMB**标签页实时核查配置文件中的每小时基础率和设定分钟数（最长120分钟）是否限制了允许的SMB剂量上限
+    - 请在**SMB**标签页实时核查当前基础率百分比参数，必要时需调高该数值。
+- 若所有参数设置已达上限，您可能需要暂时接受血糖偏高的情况，或相应调整饮食方案。
+> 如果你已准备好使用AAPS开发版本，也可以选用支持进一步扩大SMB剂量的变体。 部分用户还会在其"FCL"中使用少量预注射剂量。 然而，这种做法会影响血糖曲线的形态，进而干扰对血糖上升的检测以及触发的**SMB**效果，因此难以实施且难以带来显著的整体效益。
+- 试点用户的一个重要观察是：血糖曲线与活性胰岛素(iob)曲线在进食初期的走向，对碳水摄入后的峰值高度影响极大： 若呈下降趋势（例如接近预设的"即将进食临时目标"EatingSoonTT），同时积累适量活性胰岛素，且曲线已呈现强劲的正向加速态势，将显著有助于压低血糖峰值。
 
 ### Glucose goes too low
 
-- Meals are falsely recognized
-    - Check whether you could set bigger deltas to trigger first SMB
-    - Click “User action” in the related Automation, so in the futurte you can ad hoc decide to block execution of the Automatiojn if not meal-related
-    - To prevent snacks from triggering SMBs as for a meal, set a TT>100 when snacking (as you would do in sports and for anti-hypo snacks, anyways)
-- SMBs deliver overall too much insulin
-    - Check (real-time) in SMB tab whether SMB range extention must be set smaller
-    - Check (real-time) in SMB tab whether %profile must  be set smaller
-    - SMB delivery ratio probably can be set smaller. Note in this case, it works across the bord for all SMBs (all time slots),
-- Problems with insulin “tail” after meals
-    - You may need to take a snack (seeing hypo prediction) or glucose tablets (if already in hypo zone). But note that the carbs required the loop might tell you at some point are very likely exaggerated as the loop has absolutely zero info on your carb intake (while you may be able to guess how much more, incl. from fats and proteins) is still waiting to be absorbed.
-    - A valueable information would be whether the problem originates mostly in the bg rise phase already. Then setting a lower iobTH might be an easy remedy.
-    - If the need for additional carbs happens frequently, note down how many grams were needed (not counting what you eventually took too much and required extra insulin again).  Then use your profile IC value to estimate how much insulin less the SMBs should have delivered, and go with this info into your tuning (regarding the % profile in the Automations, or maybe also your set iobTH). This may relate to the SMBs given when glucose was high, or also extending regarding also the SMBs during the glucose rise.
-    - It could well be that you simply have to accept higher glucose peaks for not going low. Or change diet to something with lower amounts of carbs, and higher amount of proteien and fats.
+- 误识别餐食
+    - 检查您是否可以设置更大的增量来触发第一个 **SMB**
+    - 点击相关自动化设置中的"用户操作"选项，这样未来您可临时决定阻止与用餐无关的自动化操作执行。
+    - 为避免零食触发与正餐同等的**SMB**，加餐时请设置临时目标(TT)＞100（此操作同样适用于运动期间及预防性抗低血糖加餐场景）。
+- SMB总体过量
+    - 请在**超级微剂量(SMB)**标签页中实时检查是否需要缩小**SMB**剂量范围扩展设置。
+    - 请实时在**超级微剂量(SMB)**标签页中检查是否需要调低**配置文件百分比(Percentage Profile)**的设置值。
+    - SMB 输送率可能可以设置得更小。 请注意：在此情况下，该设置将全局生效，适用于所有时间段的**超级微剂量(SMB)**。
+- 餐后胰岛素“拖尾”问题
+    - 您可能需要吃点零食（看到低血糖预测）或葡萄糖片（如果已经处于低血糖区）。 但需注意：闭环系统在某个时间点提示您所需的碳水化合物量很可能被高估，因为系统完全无法获取您的实际碳水摄入数据（尽管您可能自行估算包括脂肪和蛋白质在内的待吸收营养总量）。
+    - 关键信息在于：问题是否主要源于血糖上升阶段初期。 那么，将胰岛素活性阈值（iobTH）设低可能是个简单的解决方案。
+    - 若频繁需要额外补充碳水化合物，请记录所需克数（不包括因过量摄入而需再次追加胰岛素的部分）。  随后，根据您的胰岛素敏感系数（IC值）估算**超级微剂量（SMB）**应减少的胰岛素量，并将该数据用于参数调整（涉及**自动化**中的**百分比配置文件**，或可能包括您设定的胰岛素活性阈值iobTH）。 这可能与高血糖期间给予的**SMB**有关，或需进一步考量**血糖**上升阶段的**SMB**设置。
+    - 这可能意味着您需要接受更高的**血糖**峰值以避免低血糖。 或者调整饮食结构——减少碳水化合物摄入，同时增加蛋白质和脂肪的比例。
 
 
 ### More info
 
-Make sure you stay in touch with other FCL users.
+建议保持与其他**FCL**用户交流。
 
-Discussion Full Closed Loop using Automations:
+讨论利用自动化技术实现全闭环：
 
-- English:   [Discord Channel](https://discord.gg/ChXj8BaKwA)
+- 英语：[Discord 频道](https://discord.gg/ChXj8BaKwA)
 
-- German:  [German Looper Community](https://de.loopercommunity.org/t/ueber-die-kategorie-full-loop/10107)
+- 德语：[德国 Looper 社区](https://de.loopercommunity.org/t/ueber-die-kategorie-full-loop/10107)

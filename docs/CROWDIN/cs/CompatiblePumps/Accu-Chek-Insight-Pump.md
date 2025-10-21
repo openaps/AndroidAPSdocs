@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Pumpa Accu-Chek Insight
 
 **Tento software je součástí DIY řešení umělé slinivky, nejedná se o výrobek. Před jeho používáním je důležité, abyste prostudovali a pochopili celý systém, včetně toho jak ho používat. Není to něco, co za Vás udělá veškerý management diabetu. Pokud do toho investujete potřebný čas, pomůže Vám dojít k lepším výsledkům při léčbě Vaší cukrovky, a tím zlepšit i kvalitu Vašeho života. Zbytečně nespěchejte, a vytvořte si čas pro učení. Pouze Vy jste zodpovědní za ovládání Vašeho systému.**
@@ -27,7 +21,7 @@ Poznámka: AAPS vždy zapíše data do **prvního bazálního profilu v pumpě**
     
     ![Snímek obrazovky odebrání glukometru z pumpy Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* In [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md), select Accu-Chek Insight.
     
     ![Snímek obrazovky nastavení pumpy Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -95,8 +89,8 @@ V nastavení pumpy Insight v AAPS můžete povolit následující možnosti:
     znovu -> žádné spojení -> čekej **7** sec.   
     znovu -> žádné spojení -> čekej **8** sec.   
     ...   
-    znovu -> žádné spojení -> čekej **20** sec.   
-    znovu -> žádné spojení -> čekej **20** sec.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
 * „Limit pro odpojení“: Definuje, jak dlouho (v sekundách) bude AAPS čekat s odpojením od pumpy po dokončení úlohy. Výchozí hodnota je 5 sekund.

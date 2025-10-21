@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Dexcom G7 a ONE+
 
 
@@ -11,14 +7,13 @@ Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not 
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-```{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)
-:class: warning
-**Average Smoothing or Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
+```{admonition} Smoothing method 
+Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
 ```
 
 ## 1. xDrip+ (direct connection to G7 or ONE+)
 
-- Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Follow the instructions here: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
 - Select  xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 - Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
@@ -29,11 +24,14 @@ Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not 
 
 ### Install a new patched (!) G7 app and start the sensor
 
+WARNING --- [BYODA](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)--- There are reported issues **AAPS** receiving no BG data when using either BYODA & DiaKEM as its data source. Users are recommended to use [X-Drip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+
+
 A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
 - Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
-- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases) or [here](https://github.com/emmatovar27/dexcom-g7-apk-patcher/releases).
+- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
 
 - Enter sensor code in the patched app.
 
@@ -53,4 +51,20 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 - As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
 -   Select  xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
--   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md) 
+-   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+
+## 4. Juggluco
+
+Version 9.0+ required
+
+- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+
+- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+
+- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+
+- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+
+- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+
+- Exception: Wear OS watches can bond without pressing an agree button.

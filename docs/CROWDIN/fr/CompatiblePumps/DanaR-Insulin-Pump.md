@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Pompe DanaR
 
 *Ces instructions décrivent la configuration de l’application et de votre pompe si vous avez une DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*

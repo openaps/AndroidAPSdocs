@@ -144,4 +144,4 @@ Gmail将显示账户名称。它将要求你接受Gmail的条款和条件并确�
 
 ![](../images/Building-the-App/building_0014.png)
 
-Congratulations! 恭喜！现在你已经创建了一个AAPS专用谷歌账户。 下一步是[构建AAPS应用](../SettingUpAaps/BuildingAaps.md)。
+恭喜！ 恭喜！现在你已经创建了一个AAPS专用谷歌账户。 下一步是[构建AAPS应用](../SettingUpAaps/BuildingAaps.md)。

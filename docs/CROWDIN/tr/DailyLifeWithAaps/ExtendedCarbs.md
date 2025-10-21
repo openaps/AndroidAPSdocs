@@ -35,7 +35,7 @@ Bir Pizza için, *hesap makinesi* aracılığıyla önden (kısmi) bir bolus ver
 
 **Önemli notlar:** Elbette sizin için hangi somut değerlerin işe yaradığını denemeniz ve görmeniz gerekecek. Algoritmayı daha fazla veya daha az agresif hale getirmek için *SMB'yi sınırlamak için maksimum bazal dakika* ayarını dikkatli bir şekilde ayarlayabilirsiniz. Düşük karbonhidratlı, yüksek yağlı/proteinli öğünlerde, manuel bolus olmadan yalnızca yKarb kullanmak yeterli olabilir (yukarıdaki blog gönderisine bakın). yKarb oluşturulduğunda, girdileri yinelemeyi ve iyileştirmeyi kolaylaştırmak için tüm girdileri belgelemek için bir Careportal notu da oluşturulur.
 
-(Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
+(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Yayma bolus ve neden kapalı döngü ortamında çalışmaz?
 
 Yukarıda belirtildiği gibi, yayma veya çoklu yayma boluslar, kapalı döngü ortamında gerçekten çalışmaz. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
@@ -53,7 +53,7 @@ Bu nedenle 2.6 sürümünden itibaren Dana ve Insight pompa kullanıcıları iç
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
-(Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
+(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Yayma boluslar neden kapalı döngü ortamında çalışmaz?
 
 1. Şimdi döngü 1,55Ü/s teslim edileceğini belirler. Bunun yayma bir bolus olarak mı yoksa GBO olarak mı iletildiği, algoritma için önemli değildir. Aslında, bazı pompalar yayma bolusu kullanır. O zaman ne olmalı? Çoğu pompa sürücüsü daha sonra yayma bolusu durdurur -> Başlatmanıza bile gerek yoktur.

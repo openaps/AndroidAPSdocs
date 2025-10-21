@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Een Huawei telefoon instellen
 
 Er zijn verschillende opties, sommige Android specifiek, sommige Huawei specifiek:

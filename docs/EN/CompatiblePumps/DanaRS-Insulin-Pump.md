@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # DanaRS and Dana-i Pump
 
 _These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead._
@@ -66,14 +62,14 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * In options menu select "USER OPTION"
 
   ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
-   
+  
 * Use arrow button to scroll down to "11. password"
 
   ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
-   
+  
 * Press OK to enter old password.
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
 
   ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
 
@@ -81,12 +77,12 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
 
   ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
-   
+  
 * Confirm with OK button.
 * Press OK to save setting.
 
   ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
-   
+  
 * Move down to "14. EXIT" and press OK to exit.
 
   ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
@@ -117,7 +113,7 @@ When switching to a new phone the following steps are necessary:
 * [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
 
 ### DanaRS v3, Dana-i
-* Start pairing procedure like decribed [above](#pairing-pump).
+* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
 * Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
 
 ## Timezone traveling with Dana RS pump

@@ -1,88 +1,88 @@
-# **Reviewing your data**
+# **Deine Daten reviewen**
 
-## **AAPS History Browser**
+## **AAPS-Historie**
 
-**AAPS** stores all the user’s history (__**BG****, treatments, basal, targets, **Profile Switch**,…) in its own database, that cannot be exported or copied and might require clean up after a while. In order to clean up, a review of 'older history’ is required in **AAPS**. This can be done by uploading to Nightscout.
+**AAPS** speichert die gesamte Historie (__**Glukosewerte****, Behandlungen, Basal, Ziele, **Profilwechsel**,…) in seiner eigenen Datenbank, die nicht exportiert oder kopiert werden kann und nach einer Weile bereinigt werden muss. Zur Bereinigung ist eine Überprüfung der „ältesten Daten“ in **AAPS** erforderlich. Dies kann durch das Hochladen zu Nightscout erledigt werden.
 
-**AAPS** history can be reviewed using the ‘History’ browser, from the Overview menu.
+Die **AAPS**-Historie kann über die Funktion „Historie“ (Drei-Punkte-Menü oben rechts) aus der Übersicht heraus aufgerufen werden.
 
 ![Historie](../images/Maintenance/historybrowser.png)
 
-Select the date you want to review.
+Wähle das zu prüfende Datum.
 
 ![Historie](../images/Maintenance/historybrowser2.png)
 
-Display options are available like in the Overview main graph.
+Die Anzeigeoptionen sind identisch mit denen des Graphen in der Übersicht.
 
 ![Historie](../images/Maintenance/historybrowser3.png)
 
-The ‘history browser’ menu allows the selection of the time periods to be displayed in the following intervals: 6, 12, 18 or 24 hours.
+Die „Historie“ kann in Zeitspannen von 6, 12, 18 oder 24 Stunden angezeigt werden.
 
 ![Historie](../images/Maintenance/historybrowser4.png)
 
-The ‘history browser’ can be shifted forward and backwards by selecting the arrows display as per the desired time intervals (as indicated below).
+Durch Drücken auf die Pfeiltasten neben dem Datum kann der dargestellte Zeitraum (wie unten dargestellt) nach links oder rechts verschoben werden.
 
 ![Historie](../images/Maintenance/historybrowser5.png)
 
-To return to real time select this button:
+Um zu den aktuellen Daten zurückzukehren, tippe auf diese Schaltfläche:
 
 ![Historie](../images/Maintenance/historybrowser6.png)
 
 (reviewing-statistics)=
-## **AAPS Statistics**
+## **AAPS-Statistiken**
 
-**AAPS** provides basic monitoring statistics.
+**AAPS** stellt einige rudimentäre Statistiken zur Verfügung.
 
-Most values are referenced by ADA 2023 [recommendations](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
+Die meisten Werte und Kennzahlen basieren auf den [Empfehlungen](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes) der ADA (American Diabetes Association) aus 2023.
 
-![Statistics](../images/Maintenance/statistics.png)
+![Statistiken](../images/Maintenance/statistics.png)
 
-### Total Daily Dose
+### Total Daily Dose (TDD, dt. tägliche Gesamtinsulinmenge)
 
-**TDD** displays one week information on:
+**TDD** fasst die Informationen einer Woche, gruppiert nach Tagen, zusammen:
 
-- Σ: the Total Daily Dose of insulin (**TDD**), the sum of bolus and basal insulin delivered during the day.
-- Bolus: the sum of bolus treatments and SMBs.
-- Basal: only basal.
-- Basal%: the proportion of basal insulin in the sum (**TDD**).
-- Carbs: declared carbs and eCarbs treatments.
+- Σ: Die tägliche Gesamtinsulinmenge (**TDD**), die Summe aller Insulinmengen des Tages (Bolus und Basal).
+- Bolus: Die Summe aller Bolusgaben und SMBs.
+- Basal: Nur das Basal.
+- Basal%: Der Anteil des Basalinsulins an der Gesamtinsulinmenge (**TDD**).
+- KHs: eingegebene und verzögerte (sog. eCarbs) Kohlenhydrate.
 
-TDD section is calculated on the go when you display the page, and takes a few seconds to compute.
+Die TDD-Statistik wird erst mit dem Aufruf der Seite berechnet und braucht daher etwas Zeit.
 
-![Statistics](../images/Maintenance/statistics2.png)
+![Statistiken](../images/Maintenance/statistics2.png)
 
-### Time in Range
+### Time in Range (TIR, dt. Zeit im Zielbereich)
 
-Time In Range (**TIR**): 70-180 mg/dl or 3.9-10 mmol/l.
+Time In Range (**TIR**): 70-180 mg/dl oder 3,9-10 mmol/l.
 
-**TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
+**TIR**-Informationen stehen, in Abhängigkeit von der Datenmenge in der **AAPS**-Datenbank, für 7 und 30 Tage zur Verfügung.
 
-Time In Tight Range (TITR) 70-140 mg/dl or 3.9-7.8 mmol/l statistics are available below.
+Time In Tight Range (TITR) 70-140 mg/dl oder 3,9-7,8 mmol/l sind unten verfügbar.
 
-**Discuss targets with your endo**
+**Besprich den Zielbereich mit Deinem Diabetes-Team.**
 
-Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress .
+Dein Diabetes kann anders aussehen. Du solltest alle vorgeschlagenen Zielbereiche mit Deinem Endokrinologen oder Deinem Diabetes-Team besprechen. Bei richtiger Verwendung können AAPS-Statistiken ein effektives Mittel sein, um __Glukokosewert__-Trends und deren Entwicklung im Auge zu behalten.
 
-![Statistics](../images/Maintenance/statistics3.png)
+![Statistiken](../images/Maintenance/statistics3.png)
 
-Detailed 14 days **TIR** statistics.
+Detaillierte 14 Tage **TIR**-Statistiken.
 
-**SD**: Standard Deviation, an [indicator](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) of BG variability (the highest = the worst).
+**SD**: Standard Deviation (dt. Standardabweichung), ein [Indikator](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) für Glukosewert-Schwankungenof (je höher umso schlechter).
 
-HbA1c: the estimate of the resulting glycated hemoglobin, based on the average of CGM measurements. This is an indicative value that might not match blood HbA1c tests.
+HbA1c: die Schätzung des sich ergebenden glykierten Hämoglobins („Langzeit-Blutzucker“), basierend auf dem Durchschnitt der CGM-Messungen. Dies ist ein indikativer Wert, der möglicherweise nicht mit dem im Blut gemessenen HbA1c übereinstimmt.
 
-![Statistics](../images/Maintenance/statistics4.png)
+![Statistiken](../images/Maintenance/statistics4.png)
 
-### Activity monitor
+### Aktivitätsmonitor
 
-Activity monitor captures the time spent on each **AAPS** activity.
+Der Aktivitätsmonitor erfasst die Zeit für jede **AAPS**-Aktivität.
 
-![Statistics](../images/Maintenance/statistics5.png)
+![Statistiken](../images/Maintenance/statistics5.png)
 
 ------
 
-## **What is the difference between Nightscout vs Tidepool?**
+## **Wie unterscheiden sich Nightscout und Tidepool?**
 
-Nightscout can facilitate the user’s storage of **AAPS’** data and offers a wide range of [reporting tools](https://nightscout.github.io/nightscout/reports/).
+Nightscout ermöglicht die Speicherung von **AAPS**-Daten und bietet eine breite Palette an [Auswertungsmöglichkeiten](https://nightscout.github.io/nightscout/reports/).
 
-Whereas, Tidepool allows the user to [review their data](https://www.tidepool.org/viewing-your-data) and provides [simple sharing with your endo team](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
+Tidepool dahingegen erlaubt den Review der [Daten](https://www.tidepool.org/viewing-your-data) und macht das [Teilen der Informationen mit dem Diabetes-Team sehr einfach](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).

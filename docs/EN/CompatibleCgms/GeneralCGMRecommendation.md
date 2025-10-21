@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # General CGM recommendations
 
 ## CGM hygiene

@@ -37,18 +37,50 @@
 - In case you want **AAPS** in a different language than your standard phone language, you can choose from a broad variety.
 
 - If you use different languages, you might sometimes see a language mix. This is due to an android issue where overriding the default android language sometimes doesn't work.
+- Setting hidden in [simple mode](#preferences-simple-mode).
+
+(preferences-simple-mode)= **Simple mode**
+
+The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
 
 **Patient name**
 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
+
+(Preferences-skin)=
+### Skin
+
+Setting hidden in [simple mode](#preferences-simple-mode).
+
+Dört çeşit görünüm arasından seçim yapabilirsiniz:
+
+![Select skin](../images/Pref2021_SkinWExample.png)
+
+'Low resolution skin' comes with shorter labels and age/level removed to have more available space on a very low resolution screen.
+
+Difference between the other skins depends on the phone's display orientation:
+
+#### Portrait orientation
+
+- **Orijinal Dış Görünüm** ve **Butonlar her zaman ekranın altında görüntülenir** aynıdır
+- **Large Display** has an increased height for all graphs compared to other skins
+
+#### Landscape orientation
+
+- **Orijinal Dış Görünüm** ve **Büyük Ekranı** kullanarak ekranın alt kısmındaki butonları görmek için aşağı kaydırmanız gerekir
+
+- **Large Display** has an increased height for all graphs compared to other skins
+
+![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
 (Preferences-protection)=
-### Güvenlik
+## Güvenlik
 
 ![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-#### Ana parola
+### Master password
 
 Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
 
@@ -56,7 +88,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Ana parola tanımlama](../images/MasterPW.png)
 
-#### Ayarların Güvenliği "Settings protection"
+### Settings protection
 
 - Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
 
@@ -66,13 +98,13 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Güvenlik](../images/Pref2020_Protection.png)
 
-#### Uygulama Güvenliği
+### Application protection
 
 If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
 
 **AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
 
-#### Bolus koruması
+### Bolus protection
 
 - Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
@@ -80,32 +112,9 @@ If the app is protected, you must enter the password or use the phone's biometri
 
 ![Prompt biometric protection](../images/Pref2020_PW.png)
 
-#### Password and PIN retention
+### Password and PIN retention
 
 Define how long (in seconds), the preferences or bolus functionalities remain unlocked after you successfully enter the password.
-
-(Preferences-skin)=
-#### Görünüm
-Dört çeşit görünüm arasından seçim yapabilirsiniz:
-
-![Select skin](../images/Pref2021_SkinWExample.png)
-
-'Low resolution skin' comes with shorter labels and age/level removed to have more available space on a very low resolution screen.
-
-Difference between the other skins depends on the phone's display orientation:
-
-##### Dikey oryantasyon
-
-- **Orijinal Dış Görünüm** ve **Butonlar her zaman ekranın altında görüntülenir** aynıdır
-- **Large Display** has an increased height for all graphs compared to other skins
-
-##### Yatay oryantasyon
-
-- **Orijinal Dış Görünüm** ve **Büyük Ekranı** kullanarak ekranın alt kısmındaki butonları görmek için aşağı kaydırmanız gerekir
-
-- **Large Display** has an increased height for all graphs compared to other skins
-
-![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
 ## Genel Bakış
 
@@ -113,7 +122,7 @@ In the **Overview** section, you can define the preferences for the home screen.
 
 ![Preferences > Overview](../images/Pref2020_OverviewII.png)
 
-### Ekranı açık tut
+### Keep screen on
 
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
@@ -121,6 +130,7 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 ### Butonlar
 
 - Define which buttons are visible on the bottom of your home screen.
+- Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
 
@@ -145,8 +155,12 @@ If you click the quick wizard button **AAPS** will calculate and propose a bolus
 
 ![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
 
+Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
+
 (Preferences-default-temp-targets)=
-### Varsayılan Geçici hedefler
+### Default temp targets
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 [Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
 
@@ -160,20 +174,24 @@ Here you can change the target and the duration for each predefined TT. Preset v
 
 Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
 
-### Standart insülin miktarlarını Hazırla/Doldur
+### Fill/Prime standard insulin amounts
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 If you want to fill the tube or prime cannula through **AAPS** you can do this through the [**Actions** tab](#screens-action-tab).
 
 Bu diyalogda önceden ayarlanmış (pompanıza göre) değerler tanımlanabilir. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
 
 (Preferences-range-for-visualization)=
-### Görselleştirme Aralığı
+### Range for visualization
 
 Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
 ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
 
-### Kısa sekme başlıkları
+### Shorten tab titles
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 Useful to see more tab titles on screen.
 
@@ -182,7 +200,9 @@ Useful to see more tab titles on screen.
 ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Tedavi diyaloglarında not alanını göster
+### Show notes field in treatments dialogs
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 Tedavilerinize kısa metin notları ekleme seçeneği sunar (bolus sihirbazı, karbonhidrat, insülin...)
 
@@ -190,6 +210,8 @@ Tedavilerinize kısa metin notları ekleme seçeneği sunar (bolus sihirbazı, k
 
 (Preferences-status-lights)=
 ### Durum ışıkları
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 Status lights give a visual warning for:
 
@@ -220,20 +242,26 @@ When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of 
 
 ### Enabled bolus advisor
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 ![Bolus Advisor](../images/BolusAdvisor.png)
 
 When enabled, when you use the bolus wizard as you are in hyperglycemia, you will get a warning, prompting you if you wish to pe-bolus and eat later, when your **BG** gets back in range.
 
 ### Enabled bolus reminder
 
+Setting hidden in [simple mode](#preferences-simple-mode).
+
 % todo
 
 (Preferences-advanced-settings-overview)=
-### Gelişmiş ayarlar
+### Advanced Settings (Overview)
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
-#### Süperbolus
+#### Superbolus
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 Bolus sihirbazında süper bolusu etkinleştirme seçeneği.
 
@@ -244,7 +272,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 ## Tedavi güvenliği
 
 (preferences-patient-type)=
-### Hasta tipi
+### Patient type
 
 - Güvenlik limitleri bu ayarda seçtiğiniz yaşa göre belirlenir.
 - Bu limitlere (maksimum bolus gibi) çok sık ulaşıyorsanız, bir adım yukarı çıkmanın zamanı gelmiştir.
@@ -267,7 +295,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 ## Döngü
 
 (Preferences-aps-mode)=
-### APS modu
+### APS mode
 Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
@@ -293,7 +321,7 @@ Closed Loop is only possible if you are in **[Objective 6](#objectives-objective
 
 In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
 
-This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
 
 (Preferences-minimal-request-change)=
 ### Minimal request change
@@ -302,11 +330,12 @@ When using **Open loop**, you will receive notifications every time **AAPS** rec
 
 ## Gelişmiş Yemek Asistanı (AMA) veya Süper Mikro Bolus (SMB)
 
-Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between three algorithms:
+Depending on your settings in [Config builder > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
-- [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) - released in 2024, available starting at **[Objective 11](#objectives-objective11)**
+
+As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -317,14 +346,12 @@ All the settings for OpenAPS AMA are described in the dedicated section in [Key 
 
 All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-### Dynamic ISF
-
-All the settings for Dynamic ISF are described in the dedicated section in [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md).
-
 ## Emilim ayarları
 
 (Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
+
+Setting hidden in [simple mode](#preferences-simple-mode).
 
 The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
 
@@ -344,7 +371,7 @@ Ana ekrandaki AKRB grafiği, en üste turuncu bir daire koyarak min_5m_impact'in
 
 Sık sık yüksek yağlı veya proteinli yemekler yiyorsanız, yemek emilim sürenizi artırmanız gerekecektir.
 
-### Gelişmiş ayarlar - otoduyarlılık oranı
+### Advanced settings - autosens ratio
 
 ![Emilim ayarları](../images/Pref2020_Absorption.png)
 
@@ -359,7 +386,7 @@ Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off bluetoo
 
 ## Pompa Ayarları
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](#Config-Builder-pump).  Pair and set your pump up according to the [pump related instructions](../Getting-Started/CompatiblePumps.md).
+The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump).  Pair and set your pump up according to the [pump related instructions](../Getting-Started/CompatiblePumps.md).
 
 ## Tidepool
 
@@ -403,9 +430,9 @@ Synchronization choices will depend on the way you will want to use **AAPS**.
 
 You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
-### Alarm türleri
+### Alarm options
 
-![Alarm türleri](../images/Pref2024_NSClient_Alarms.png)
+![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
 - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -414,7 +441,7 @@ You can select which data you want to [upload and download to or from Nightscout
 - Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
 - You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 
-### Bağlantı Ayarları
+### Connection settings
 
 ![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
@@ -425,7 +452,7 @@ You can select which data you want to [upload and download to or from Nightscout
 - Tüm SSID'leri silmek için alana boşluk girin.
 
 (Preferences-advanced-settings-nsclient)=
-### Gelişmiş Ayarlar (NSClient)
+### Advanced settings (NSClient)
 
 ![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
@@ -449,17 +476,28 @@ Select which location service shall be used:
 
 Ayarlar açıklayıcı olmalıdır.
 
-## Veri seçenekleri
+(preferences-maintenance-settings)=
+## Bakım ayarları
+
+![Bakım ayarları](../images/Pref2020_Maintenance.png)
+
+**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+
+**Data Choices**
 
 ![Veri seçenekleri](../images/Pref2020_DataChoice.png)
 
 You can help develop **AAPS** further by sending crash reports to the developers.
 
-## Bakım ayarları
+**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
 
-![Bakım ayarları](../images/Pref2020_Maintenance.png)
+After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the AAPS 'Careportal' and 'User entry' lists under Treatments.
 
-Standard recipient of logs is <logs@aaps.app>.
+After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
+
+(preferences-maintenance-logdirectory)= Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
+
+![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
 ## Open Humans
 

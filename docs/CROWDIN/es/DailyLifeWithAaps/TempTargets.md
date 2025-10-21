@@ -40,7 +40,7 @@ In closed loop mode, **SMB**:
 
 Users may also wish to consider:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary peerson to person); and
+- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
 - *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
 - *ensuring* **TT** is timed to be *deactivated* shortly before the exercise as reduced **IOB** as some users experience a rapid rise in **BG **post exercise.
 

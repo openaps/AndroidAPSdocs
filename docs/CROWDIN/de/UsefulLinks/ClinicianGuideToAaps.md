@@ -8,9 +8,9 @@ Dieser Leitfaden enthält einige wichtige Informationen über DIY Closed Looping
 
 Um mit AAPS zu beginnen, sollten folgende Schritte unternommen werden:
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
-* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
+* Finde eine [kompatible Pump](../Getting-Started/CompatiblePumps.md), ein [kompatibles Android-Gerät](../Getting-Started/Phones.md), und einen [kompatiblen Sensor (CGM)](../Getting-Started/CompatiblesCgms.md).
+* [Lade den AAPS-Quellcode herunter und erstelle die Software](../SettingUpAaps/BuildingAaps.md).
+* [Konfigurieren Sie die Software so, dass sie mit Ihren Diabetes-Geräten kommuniziert, richten Sie sie ein und nehmen Sie Sicherheitseinstellungen vor](../SettingUpAaps/SetupWizard.md).
 
 ## Wie ein DIY Closed Loop funktioniert
 
@@ -43,7 +43,7 @@ AAPS wurde so entworfen, dass alle Eingabedaten, die daraus resultierende Empfeh
 
 ## Beispiele für die Entscheidungsfindung des AAPS-Algorithmus
 
-AAPS verwendet den gleichen OpenAPS-Algorithmus und -Funktionsumfang. Der Algorithmus macht, basierend auf den Einstellungen und der aktuellen Situation, mehrere Vorhersagen, die verschiedene Szenarien berechnen, was in der Zukunft passieren könnte. In Nightscout werden diese als "violette Linien" angezeigt. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). In den Log-Dateien kann nachvollzogen werden, welche dieser verschiedenen Vorhersagen in welchem Zeitraum für die Berechnung der notwendigen Maßnahmen verwendet wurde.
+AAPS verwendet den gleichen OpenAPS-Algorithmus und -Funktionsumfang. Der Algorithmus macht, basierend auf den Einstellungen und der aktuellen Situation, mehrere Vorhersagen, die verschiedene Szenarien berechnen, was in der Zukunft passieren könnte. In Nightscout werden diese als "violette Linien" angezeigt. Die [Vorhersagelinien](#aaps-screens-prediction-lines) sind in AAPS, zur besseren Unterscheidung, verschieden eingefärbt. In den Log-Dateien kann nachvollzogen werden, welche dieser verschiedenen Vorhersagen in welchem Zeitraum für die Berechnung der notwendigen Maßnahmen verwendet wurde.
 
 ### Hier einige Beispiele für die Vorhersagelinien und wie sie sich unterscheiden können:
 
@@ -95,7 +95,7 @@ Dies soll ein erster allgemeiner Überblick über die Funktionsweise von AAPS se
 
 Zusätzliche Literaturhinweise:
 
-* The [full AAPS documentation](../index.md)
+* Die [vollständige AAPS-Dokumentation](../index.md)
 * Das [OpenAPS Reference Design](https://OpenAPS.org/reference-design/) das erklärt, wie OpenAPS für die Sicherheit konzipiert ist: https://openaps.org/reference-design/
 * Die [vollständige OpenAPS-Dokumentation](https://openaps.readthedocs.io/en/latest/index.html) 
   * Weitere [Details zur OpenAPS Berechnungen](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

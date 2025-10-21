@@ -87,7 +87,7 @@ Onay manuel bir adımdır. Kâr amacı gütmeyen kuruluş olarak SLA'lar sağlam
     
     
 
-Bağlantıyı temsil eden metni çeviriyorsunuz. Lütfen bir çift `<0></0>` etiketiyle temsil edilen veya bir paragrafta başka bir sayı varsa bağlantıyı **kaldırmamaya** dikkat etmelisiniz.
+Bağlantıyı temsil eden metni çeviriyorsunuz. Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
 
 Bu bağlantılar ve karakter çiftleri için dokümanı kontrol edip göz atmak redaktörlerin işidir!
 

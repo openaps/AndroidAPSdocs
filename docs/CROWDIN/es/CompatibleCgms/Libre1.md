@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Freestyle libre 1
 
 To use your Libre as a CGM that is getting new BG values every 5 minutes without having to scan the sensor, you need to buy an NFC to Bluetooth bridge (commercially available devices, based on the obsolete [LimiTTer](https://github.com/JoernL/LimiTTer) project).
@@ -29,7 +25,7 @@ As it currently stands, if using Libre 1 as BG source you cannot activate ‘Ena
 -   xDrip+ supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
 -   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
--    You also need [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) for Libre 1 US (and Libre 2 EU).
+-    You also need OOP2 for Libre 1 US (and Libre 2 EU).
 -   Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 (libre1-using-glimp)=

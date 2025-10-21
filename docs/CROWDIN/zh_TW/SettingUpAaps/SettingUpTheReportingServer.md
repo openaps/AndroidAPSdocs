@@ -18,7 +18,7 @@ Nightscout是一個開源軟體。 任何人都可以使用免費或付費服務
 
 你可以在[Nightscout 專案網站](http://nightscout.github.io/)上找到更多資訊。
 
-### 選項 1 - 自行設置您的 Nightscout 伺服器
+### 選項 1 - 自行設置你的 Nightscout 伺服器
 
 建立你的Nightscout報告伺服器可能需要一個或多個基於網路的應用程式，這些應用程式需要維護。 為了獲得完全免費的服務，當提供商移除免費方案時，你可能需要遷移你的Nightscout網站和資料。
 

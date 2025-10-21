@@ -31,8 +31,8 @@ The **Objectives** will need to be restarted from the beginning should you fail 
 
 **Objective 1** requires the user to set up their basic technical setup in **AAPS**. No progress can be made until this step has been completed.
 
-- Select the correct CGM/FGM in [Config Builder](#Config-Builder-bg-source). See [BG Source](../Getting-Started/CompatiblesCgms.md) for more information.
-- Select the correct Pump in [Config Builder](../SettingUpAaps/ConfigBuilder.md) to ensure your pump can communicate with **AAPS**. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **Objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/CompatiblePumps.md) for more information.
+- Select the correct CGM/FGM in [Config Builder > BG Source](#Config-Builder-bg-source). See [BG Source](../Getting-Started/CompatiblesCgms.md) for more information.
+- Select the correct Pump in [Config Builder > Pump](../SettingUpAaps/ConfigBuilder.md) to ensure your pump can communicate with **AAPS**. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **Objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/CompatiblePumps.md) for more information.
 - If using Nightscout:
   - Follow instructions in [Nightscout](../SettingUpAaps/Nightscout.md) page to ensure **Nightscout** can receive and display **AAPS** data.
   - Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [Preferences > NSClient](#Preferences-nsclient).
@@ -41,7 +41,8 @@ The **Objectives** will need to be restarted from the beginning should you fail 
 
 Note - *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it.*
 
-## Objective 2: Learn how to control AAPS
+(objectives-objective2)=
+## Cieľ 2: Naučiť sa ovládať AAPS
 
 **Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below Click on the orange text "Not completed yet" to access the to-dos. Links will be provided to guide you, in case you are not familiar with a specific action yet.
 
@@ -62,9 +63,12 @@ Tasks to complete **Objective 2** are:
 - Display the **Loop** plugin's content.
 - [Scale the BG-Chart](#aaps-screens-main-graph) to be able to look at larger or smaller time frames: toggling between 6h, 12h, 18h 24h of past data.
   - _Hint_: Long press on the chart or use the arrow at the top right.
+- Check that AAPS master password is set and known
+  - Hint : see [Preferences > Protection](#Preferences-protection).
+
 
 (objectives-objective3)=
-## Objective 3: Prove your knowledge
+## Cieľ 3: Overte si svoje vedomosti
 
 **Objective 3** requires the user to pass a multiple-choice exam which is designed to test your **AAPS** knowledge.
 
@@ -83,7 +87,7 @@ For each question, there may be more than one answer that is correct! If an inco
 From time to time, new features are added to **AAPS** which may require a new question to be added to the **Objectives**, particularly **Objective 3**. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other **Objectives** remain completed.
 ```
 
-## Objective 4: Starting on an open loop
+## Cieľ 4: Začnite s otvoreným okruhom
 
 The purpose of **Objective 4** is to recognise how often **AAPS** will evaluate the user's basal rate against glucose levels, and recommend temporary basal rate adjustments. As part of this **Objective**, you will activate open looping for the first time, and will accept 20 proposed temporary basal rate changes, and if required, apply these manually on your pump. You will also observe the impact of [**Temporary Targets**](../DailyLifeWithAaps/TempTargets.md). If you are not familiar with setting a temporary basal rate change in **AAPS** yet, please refer to the [**Actions** tab](#screens-action-tab).
 
@@ -92,6 +96,7 @@ The minimal time to complete this objective: **7 days**. This is a mandatory wai
 - Select Open Loop either from the [Preferences > OpenAPS](#Preferences-aps-mode) menu or by pressing and holding the Loop icon on the top left of the **Overview** screen.
 - Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
 - Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
+- If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objective-3-prove-your-knowledge). Additionally, you can change the minimum percentage for recommended basal rate changes. The higher the value, the fewer change notifications you will receive.
 
@@ -148,7 +153,7 @@ This means that when you are on **Objective 6**, if sensor glucose levels are dr
 
 **As a consequence, you have to handle high glucose values with manual insulin bolus corrections.**
 
-- If your basal IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
+- If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
 
 ![Example negative IOB](../images/Objective6_negIOB.png)
 
@@ -204,7 +209,7 @@ Minimal time to complete this objective: **28 days**. This is a mandatory wait t
 - Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Preferences > Absorption settings > min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
 
 (objectives-objective10)=
-## Objective 10: Automation
+## Cieľ 10: Automatizácia
 
 **Automations** become available when **Objective 10** is started.
 
@@ -229,16 +234,6 @@ Set-up the most basic automation rule; for example trigger an Android notificati
 You can then experiment with setting up a more useful **Automation**. The documentation page gives a few examples, and you can search for "Automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. There is also a dedicated channel in the [Discord](https://discord.gg/4fQUWHZ4Mw) community.
 
 For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
-
-(objectives-objective11)=
-## Objective 11: Enabling additional features for daytime use, such as Dynamic Sensitivity plugin (DynISF).
-
-Minimal time to complete this **Objective**: **28 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
-
-- Ensure that **SMB** is functioning properly
-- Read the documentation concerning **Dynamic ISF** [here](../DailyLifeWithAaps/DynamicISF.md)
-- Search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) and [Discord](https://discord.gg/4fQUWHZ4Mw) groups for discussions around **Dynamic ISF** and read about other users' experiences and recommendations.
-- Enable the **DynamicISF plugin** and identify the appropriate calibration for your body's uniqueness. It is advisable to begin with a value lower than 100% for safety reasons.
 
 (CompletingTheObjectives-go-back-in-objectives)=
 ## Go back in objectives

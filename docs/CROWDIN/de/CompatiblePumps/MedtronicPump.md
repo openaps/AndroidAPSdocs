@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Medtronic Pumpen
 
 Der Treiber funktioniert nicht mit neueren Modellen, einschließlich aller Modelle mit Endung in G (530G, 600-Serie [630G, 640G, 670G], 700-Serie [770G, 780G], etc.).
@@ -22,14 +16,14 @@ Hinweise, wie die Firmware der Pumpe ermittelt werden kann, findest Du in den [O
 ## Hardware- und Softwareanforderungen
 
 - **Telefon:** Der Medtronic-Treiber sollte mit jedem Android-Telefon funktionieren, das Bluetooth-Verbindungen unterstützt. **WICHTIG: Die Bluetooth-Implementierungen der Telefonhersteller können variieren, so dass jedes Telefonmodell variiert. Zum Beispiel werden bei einigen Telefonen Bluetooth anders aktiviert/deaktiviert. Dies kann die Benutzererfahrung (Systemverhalten) beeinflussen, wenn AAPS sich erneut mit dem Rileylink-Gerät verbinden muss.**
-- **RileyLink Kompatibles Gerät:** Android-Telefone können nicht mit Medtronic-Pumpen kommunizieren ohne ein separates Gerät um die Kommunikation zu steuern. Dieses Gerät verbindet sich mit Ihrem Telefon über Bluetooth und mit Ihrer Pumpe über eine kompatible Funkverbindung. Das erste derartige Gerät wurde als Rileylink bezeichnet, aber eine Reihe weiterer Optionen sind jetzt verfügbar, die zusätzliche Funktionalität bieten können.
+- **RileyLink kompatibles Gerät:** Android-Smartphones können ohne ein separates Gerät, dass die Kommunikation steuert, nicht mit Medtronic-Pumpen kommunizieren. Dieses Gerät verbindet sich mit Ihrem Telefon über Bluetooth und mit Ihrer Pumpe über eine kompatible Funkverbindung. Das erste derartige Gerät wurde als Rileylink bezeichnet, aber eine Reihe weiterer Optionen sind jetzt verfügbar, die zusätzliche Funktionalität bieten können.
     
     - Rileylink verfügbar unter [getrileylink.org](https://getrileylink.org/product/rileylink916)
     - Orangelink verfügbar unter [getrileylink.org](https://getrileylink.org/product/orangelink)
     - Emalink (mehrere Model-Optionen) verfügbar unter [github.com](https://github.com/sks01/EmaLink)
     - Gnarl (einige zusätzliche DIY Tätigkeiten erforderlich) Details verfügbar auf [github.com](https://github.com/ecc1/gnarl)
 
-Ein Vergleichsdiagramm für die verschiedenen Rileylink-kompatiblen Geräte finden Sie unter [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+Eine Vergleichstabelle der verschiedenen Rileylink kompatiblen Geräte findest Du unter [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
 (MedtronicPump-configuration-of-the-pump)=
 
@@ -52,7 +46,7 @@ Damit AAPS Befehle remote verschicken kann, solltest Du die folgenden Pumpeneins
 1. Den Einrichtungsassistenten im Zuge einer Neuinstallation verwenden
 2. Indem Du unter KONFIGURATION > Pumpe 'Medtronic' auswählst
 
-Falls Du Deine Medtronic-Pumpe mit Hilfe des Einrichtungsassistenten konfigurierst, kann es sein, dass Du die Einrichtung aufgrund von Bluetooth-Problemen nicht abschliessen kannst (z.B. Verbindung zur Pumpe nicht möglich). Sollte das so sein, wähle unter KONFIGURATION > Pumpe 'Virtuelle Pumpe' aus und wähle zur Fehlerbehebung den zweiten Weg (s.o.).
+Falls Du Deine Medtronic-Pumpe mit Hilfe des Einrichtungsassistenten konfigurierst, kann es sein, dass Du die Einrichtung aufgrund von Bluetooth-Problemen nicht abschließen kannst (z.B. Verbindung zur Pumpe nicht möglich). Sollte das so sein, wähle unter KONFIGURATION > Pumpe 'Virtuelle Pumpe' aus und wähle zur Fehlerbehebung den zweiten Weg (s.o.).
 
 ![Medtronic-Einstellungen](../images/Medtronic01a.png)
 
@@ -60,7 +54,7 @@ Während der Konfiguration Deiner Medtronic-Pumpe, solltest Du die folgenden Ein
 
 - **Seriennummer der Pumpe**: Steht auf der Rückseite der Pumpe und beginnt mit 'SN'. Hier sollen nur die sechs Ziffern (keine Buchstaben) eingegeben werden (z.B. 123456).
 - **Pumpentyp**: Das genutzte Pumpenmodell (z.B. 522). 
-- **Pumpenfrequenz**: In Abhängigkeit davon, wo Deine Pumpe hergestellt wurde, wähle eine der beiden Optionen aus. Please check the [FAQ](#faq) if you are unsure which option to select): 
+- **Pumpenfrequenz**: In Abhängigkeit davon, wo Deine Pumpe hergestellt wurde, wähle eine der beiden Optionen aus. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select): 
     - für Pumpen aus den USA & Kanada ist die Frequenz 916 MHz.
     - Pumpen aus anderen Ländern ("worldwide") nutzen 868 MHz.
 - **Max Basal in der Pumpe (IE/h)**: Der Wert muss mit den Einstellungen auf Deiner Pumpe übereinstimmen (vgl. 'Pumpen-Einstellungen' oben). Auch hier gilt: Wähle die Einstellung sorgfältig, da dieser Wert bestimmt, welche Insulinmenge AAPS Dir über die Basalrate geben darf. Damit wird die maximale temporäre Basalrate festgelegt. Zum Beispiel würde die Einstellung dieses Wertes auf das Vierfache Deiner maximalen Standard-Basalrate eine temporäre Basalrate von 400% ermöglichen. Der Maximalwert der Pumpe beträgt 34,9 Einheiten pro Stunde.
@@ -99,8 +93,8 @@ Während der Konfiguration Deiner Medtronic-Pumpe, solltest Du die folgenden Ein
 Am unteren Bildschirmrand befinden sich drei Schaltflächen:
 
 - **Aktualisieren** ist zum Aktualisieren des Pumpen-Status. Dies sollte nur verwendet werden, wenn die Verbindung über einen längeren Zeitraum unterbrochen war. Dies löst eine vollständige Datenaktualisierung aus (Chronik abrufen abfragen/setzen der Zeit, Profil abfragen, Batteriestand abfragen, etc).
-- **Pump History**: Shows pump history (see [below](#pump-history))
-- **RL Stats**: Show RL Stats (see [below](#rl-status-rileylink-status))
+- **Pump History**: Shows pump history (see [below](#MedtronicPump-pump-history))
+- **RL Stats**: Show RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status))
 
 (MedtronicPump-pump-history)=
 
@@ -140,7 +134,7 @@ Als OpenAPS-Nutzender solltest Du wissen, dass AAPS mit einer Medtronic-Pumpe ei
 
 ### Protokollierung
 
-Falls Du einen Fehler in der Pumpenfunktion Deiner Medtronic behoben möchtest, wähle aus dem Hamburger-Menü (drei Striche) 'Wartung' aus und dann 'Log-Einstellungen'. Pump, PumpComm, PumpBTComm sollte für die Fehleranalyse von Medtronic-Problemen ausgewählt werden.
+Falls Du einen Fehler in der Pumpenfunktion Deiner Medtronic behoben möchtest, wähle aus dem Hamburger-Menü (drei Striche) „Wartung“ aus und dann „Log-Einstellungen“. Pump, PumpComm, PumpBTComm sollte für die Fehleranalyse von Medtronic-Problemen ausgewählt werden.
 
 ### Medtronic CGM
 
@@ -158,7 +152,7 @@ Wenn Du Richtung Osten reist, werden Stunden zur aktuellen Zeit addiert (z. B. v
 
 Das Problem der Reisen nach Westen ist den Entwickler*innen bekannt und die Arbeiten an einer Lösung dauern an. Beachte dazu auch https://github.com/andyrozman/RileyLinkAAPS/issues/145 mit mehr Details. Für den Moment, habe bitte im Kopf, dass das Problem auftreten kann und sei beim Reisen durch Zeitzonen entsprechend aufmerksam.
 
-### Ist ein GNARL ein voll kompatibles RileyLink-kompatibles Gerät?
+### Ist ein GNARL ein voll kompatibles Rileylink kompatibles Gerät?
 
 Der GNARL-Code unterstützt alle Funktionen des Medtronic-Treibers in AAPS und ist damit vollständig kompatibel. Es ist allerdings wichtig zu wissen, dass das mit zusätzlicher Arbeit verbunden ist. Es muss kompatible Hardware beschafft werden, auf die dann der GNARL-Code geladen werden muss.
 

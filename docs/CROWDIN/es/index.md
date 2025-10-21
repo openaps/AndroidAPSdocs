@@ -2,6 +2,13 @@
 
 ![imagen](./images/basic-outline-of-AAPS.png)
 
+```{admonition} Latest Release
+:class: note
+
+14/08/2025 : Version 3.3.2.1 is out. Check the [Release Notes](#latestrelease) to see what's new and get update instructions.
+
+```
+
 Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an OpenAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** a FDA/CE approved insulin pump. Optionally you will need cloud services **(4)** to remote control **AAPS**, share your data and store them in a reporting server, then also **(5)** a smartwatch.
 
 This documentation explains how to setup and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy "**Search docs**" function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
@@ -14,7 +21,7 @@ Section **2) Getting Started**, the [Introduction](Getting-Started/Introduction.
 
 Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop.
 
-Section **3) Setting up AAPS** contains step-by-step instructions to do this. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting your computer ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. It also covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app, and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. You are then slowly introduced to the full usage of what **AAPS** has to offer via a safe and carefully calibrated step-by-step process designed to make sure that you/your child are thoroughly familiar and comfortable navigating all the different levels and menu configurations before graduating on the next phase, commonly referred to as the next "Objective", until you are have enough experience to begin using the more advanced options available within the app. These Objectives are specially designed in such a way that will gradually unlock more possibilities of **AAPS** and switch from Open Loop to Closed Loop.
+Section **3) Setting up AAPS** contains step-by-step instructions to do this. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. It also covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app, and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. You are then slowly introduced to the full usage of what **AAPS** has to offer via a safe and carefully calibrated step-by-step process designed to make sure that you/your child are thoroughly familiar and comfortable navigating all the different levels and menu configurations before graduating on the next phase, commonly referred to as the next "Objective", until you are have enough experience to begin using the more advanced options available within the app. These Objectives are specially designed in such a way that will gradually unlock more possibilities of **AAPS** and switch from Open Loop to Closed Loop.
 
 Section **4) Daily life with AAPS** covers key **AAPS** features, to help you use (and customise)  **AAPS**. This including understanding the screens, carbs-on-board, sensitivity, profile switching, temp targets, extended carbs (or eCarbs), automations, and DynamicISF. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, and [travelling with AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) and sports. Common questions and answers are located within the troubleshooting section.
 
@@ -61,7 +68,8 @@ Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower bl
 ```{toctree}
 :caption: 1) Change language
 
-Change language <./ChangeLanguage/ChangeLanguage.md>
+Change language <./NavigateDoc/ChangeLanguage.md>
+Change version <./NavigateDoc/ChangeVersion.md>
 ```
 ```{toctree}
 :caption: 2) Getting started
@@ -82,6 +90,8 @@ Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 Building AAPS <./SettingUpAaps/BuildingAaps.md>
+- Browser Build <./SettingUpAaps/BrowserBuild.md>
+- Computer Build <./SettingUpAaps/ComputerBuild.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
 Setup Wizard <./SettingUpAaps/SetupWizard.md>
 Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
@@ -138,6 +148,8 @@ Reviewing your data <./Maintenance/Reviewing.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Computer Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 

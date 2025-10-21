@@ -35,7 +35,7 @@ Par exemple pour une pizza, cela pourrait être de donner un bolus (partiel) à 
 
 **Remarques importantes :** Vous devrez essayer et voir quelles sont les valeurs qui marchent pour vous bien sûr. Vous pouvez également ajuster soigneusement le paramètre *Max minutes de basal pour limiter SMB* pour rendre l'algorithme plus ou moins agressif. Avec des repas faibles en glucides et riches en graisses/protéines, il peut être suffisant d'utiliser uniquement des eGlucides sans bolus manuels (voir le blog ci-dessus). Lorsque des eGlucides sont générés, une note Careportal est également créée pour pouvoir documenter toutes les entrées, et faciliter les itérations et l'amélioration des entrées.
 
-(Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
+(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Bolus étendu et pourquoi ils ne fonctionneront pas dans une boucle fermée ?
 
 Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
@@ -53,7 +53,7 @@ C'est pourquoi à partir de la version 2.6, il y a une option pour un bolus éte
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
-(Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
+(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Pourquoi les bolus étendus ne marchent pas avec une boucle fermée
 
 1. La boucle détermine que maintenant 1,55 U / h doit être délivré. Que ce soit administré sous forme de bolus étendu ou de DBT n'a pas d'importance pour l'algorithme. En fait, certaines des pompes utilisent le bolus étendu. Que devrait-il arriver alors ? La plupart des pilotes de pompe arrêtent alors le bolus prolongé -> Vous n’avez même pas eu besoin de le démarrer.

@@ -2,6 +2,13 @@
 
 ![изображение](./images/basic-outline-of-AAPS.png)
 
+```{admonition} Latest Release
+:class: note
+
+14/08/2025 : Version 3.3.2.1 is out. Check the [Release Notes](#latestrelease) to see what's new and get update instructions.
+
+```
+
 Android APS (**AAPS**) является приложением с открытым исходным кодом для людей, страдающих инсулинозависимым диабетом. Это система искусственной поджелудочной железы (APS), которая работает на смартфонах Android. **AAPS** использует алгоритм OpenAPS и нацелен на воплощение функциональности реальной поджелудочной железы - содержание СК (сахара, глюкозы в крови) в здоровых пределах при помощи автоматизированной подачи инсулина. Для использования **AAPS** вам понадобятся **три** совместимых с ним устройства: **(1)** Android телефон, **(2)** система непрерывного мониторинга за глюкозой (НМГ, англ: CGM) и **(3)** одобренная FDA/CE инсулиновая помпа. По желанию вам могут пригодиться облачные сервисы **(4)** для удаленного управления **AAPS**, передачи и сохранения ваших данных на сервере отчетов, так же будут полезными **(5)** умные часы.
 
 Данная документация описывает процесс установки и использования **AAPS**. Вы можете перемещаться по документации **AAPS** либо при помощи левого меню (и полезной функции "**Поиска в документации**"), либо через [оглавление](#index-aaps-documentation-index) внизу этой страницы.
@@ -14,7 +21,7 @@ Android APS (**AAPS**) является приложением с открыты
 
 Теперь, когда у вас есть четкое понимание всего процесса, вы можете начать собирать свой цикл (петлю) на базе **AAPS**.
 
-Раздел **3) Настройка AAPS** содержит пошаговые инструкции того, как это можно сделать. Он покрывает выбор и [настройку вашего сервера отчетов](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout или Tidepool) для оценки и передачи своих показателей, подготовку вашего ПК к сборке приложения AAPS, саму его сборку и передачу установочного файла на ваш телефон. Так же он покрывает настройку приложения **AAPS** с помощью мастера установки, его связку с приложением вашего НМГ и либо реальной, либо виртуальной инсулиновой помпой, так же подключение **AAPS** к вашему серверу отчетов. Далее вам медленно будет представлена полная функциональность **AAPS** с помощью безопасного и хорошо отлаженного пошагового процесса, разработанного с целью убедиться в том, что вы или ваш ребенок хорошо ориентируетесь и разбираетесь во всех различных уровнях меню и настройках перед переходом к следующему этапу, часто именуемому следующей "Целью", вплоть до того момента, как у вас наберется достаточно опыта для использования более продвинутых настроек, доступных в программе. Данные цели специально разработаны таким образом, чтобы вы постепенно открывали все больше и больше возможностей **AAPS** и переключились с открытого цикла на замкнутый.
+Раздел **3) Настройка AAPS** содержит пошаговые инструкции того, как это можно сделать. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. Так же он покрывает настройку приложения **AAPS** с помощью мастера установки, его связку с приложением вашего НМГ и либо реальной, либо виртуальной инсулиновой помпой, так же подключение **AAPS** к вашему серверу отчетов. Далее вам медленно будет представлена полная функциональность **AAPS** с помощью безопасного и хорошо отлаженного пошагового процесса, разработанного с целью убедиться в том, что вы или ваш ребенок хорошо ориентируетесь и разбираетесь во всех различных уровнях меню и настройках перед переходом к следующему этапу, часто именуемому следующей "Целью", вплоть до того момента, как у вас наберется достаточно опыта для использования более продвинутых настроек, доступных в программе. Данные цели специально разработаны таким образом, чтобы вы постепенно открывали все больше и больше возможностей **AAPS** и переключились с открытого цикла на замкнутый.
 
 Раздел **4) Жизнь с AAPS** покрывает основные возможности **AAPS**, помогая с использованием (и настройкой) **AAPS**. В том числе понимание всех экранов, активных углеводов (англ: COB, carbs on board), чувствительности, смены профилей, временных целей, растянутых углеводов (англ: eCarbs), автоматизаций и DynamicISF (динамического фактора чувствительности к инсулину). Так же он отвечает на часто задаваемые вопросы по типу того, что делать с различными типами еды, как отрабатывать смену канюли или сенсора НМГ, что делать с обновлениями ПО на смартфоне, переходом на летнее время, как путешествовать и заниматься спортом с [AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md). Частые вопросы и ответы на них находятся в секции "Решение проблем".
 
@@ -59,9 +66,10 @@ Android APS (**AAPS**) является приложением с открыты
 ## Оглавление документации AAPS
 
 ```{toctree}
-:caption: 1) Смените язык
+:caption: 1) Change language
 
-Смена языка <./ChangeLanguage/ChangeLanguage.md>
+Change language <./NavigateDoc/ChangeLanguage.md>
+Change version <./NavigateDoc/ChangeVersion.md>
 ```
 ```{toctree}
 :caption: 2) Начало работы
@@ -76,19 +84,21 @@ Android APS (**AAPS**) является приложением с открыты
 ```
 
 ```{toctree}
-:caption: 3) Настройка AAPS
+:caption: 3) Setting up AAPS
 
-Настройка сервера отчетов <./SettingUpAaps/SettingUpTheReportingServer.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Сборка AAPS <./SettingUpAaps/BuildingAaps.md>
-Передача и установка AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Мастер установки <./SettingUpAaps/SetupWizard.md>
-Ваш профиль AAPS <./SettingUpAaps/YourAapsProfile.md>
-Изменение настроек AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Конфигуратор <./SettingUpAaps/ConfigBuilder.md>
-- Настройки <./SettingUpAaps/Preferences.md>
-Выполнение целей <./SettingUpAaps/CompletingTheObjectives.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+- Browser Build <./SettingUpAaps/BrowserBuild.md>
+- Computer Build <./SettingUpAaps/ComputerBuild.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -131,13 +141,15 @@ AAPS для Wear OS <./WearOS/BuildingAapsWearOS.md>
 ```
 
 ```{toctree}
-:caption: 7) Обслуживание AAPS
+:caption: 7) Maintenance of AAPS
 
-Экспорт/импорт настроек <./Maintenance/ExportImportSettings.md>
-Просмотр своих данных <./Maintenance/Reviewing.md>
-Заметки к выпускам AAPS <./Maintenance/ReleaseNotes.md>
-Обновления документации <./Maintenance/DocumentationUpdate.md>
-Обновление версии AAPS <./Maintenance/UpdateToNewVersion.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+Reviewing your data <./Maintenance/Reviewing.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Computer Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 

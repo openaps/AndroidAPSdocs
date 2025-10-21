@@ -1,5 +1,24 @@
 # Обновления и изменения в документации
 
+## August 2025
+
+- Updated versions and Android Studio prerequisites
+- Added [3.3.2.1](#version3321) release, removed Android 16 references (fixed)
+- Added [Browser Build](#browser-build) @Angus
+
+## May 2025
+
+- Added [3.2.0.4 upgrade page](#update-aaps-3204) @psonnera
+
+## January 2025
+
+- Quick wizard [long press feature](#Preferences-quick-wizard) @emilise
+- [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page rewritten @emilise
+
+## December 2024
+
+- Documentation of [3.3 version](#version3300) @emilise
+
 ## November 2024
 
 - Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
@@ -71,7 +90,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 ## Февраль 2021
 
-- New navigation bar and [language switch](../ChangeLanguage/ChangeLanguage.md)
+- New navigation bar and [language switch](../NavigateDoc/ChangeLanguage.md)
 
 ## Январь 2021
 

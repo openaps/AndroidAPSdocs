@@ -1,12 +1,6 @@
-* * *
-
-orphan: true
-
-* * *
-
 # DanaRS 和 Dana-i 幫浦
 
-*這些說明適用於配置 2017 年之後的 DanaRS 或更新的 Dana-i 幫浦。 如果您擁有原始的 DanaR，請讀取[DanaR 胰島素幫浦](./DanaR-Insulin-Pump.md)。*
+*這些說明適用於配置 2017 年之後的 DanaRS 或更新的 Dana-i 幫浦。 如果你擁有原始的 DanaR，請讀取[DanaR 胰島素幫浦](./DanaR-Insulin-Pump.md)。*
 
 **Dana RS v3 韌體從 AAPS 版本 2.7 開始支援使用。**
 
@@ -79,7 +73,7 @@ orphan: true
 
 * 按下「OK」進入舊密碼。
 
-* 輸入**舊密碼**（預設密碼見[上方](#default-password)）並按下 OK。
+* 輸入 **舊密碼** (預設密碼請參閱 [上方](#DanaRS-Insulin-Pump-default-password)) 並按下 OK
     
     ![DanaRS 輸入舊密碼](../images/DanaRSPW_04_11PWenter.png)
 
@@ -111,7 +105,7 @@ orphan: true
 
 * 大多數情況下，這只是通訊問題，正確劑量的胰島素已經注射完畢。
 * 檢查幫浦歷史紀錄（在幫浦或透過 Dana 標籤 > 幫浦歷史 > 注射紀錄），確認正確的注射劑量。
-* 如果您希望，請在 [治療選項卡](#screens-bolus-carbs) 中刪除錯誤的項目。
+* 如果你希望，請在 [治療選項卡](#screens-bolus-carbs) 中刪除錯誤的項目。
 * 實際注射量會在下次連線時讀取並紀錄。 要強制此操作，請按下 Dana 標籤上的藍牙圖示，或等待下一次連線。
 
 ## 更換手機時的特別注意事項
@@ -130,7 +124,7 @@ orphan: true
 
 ### DanaRS v3, Dana-i
 
-* 開始配對程序，如[上方](#pairing-pump)所述。
+* 開始配對程序，如上所述[以上](#DanaRS-Insulin-Pump-pairing-pump)。
 * 有時可能需要透過長按 Dana-i/RS 標籤上的藍牙圖示來清除 AAPS 中的配對資訊。
 
 ## Dana RS 幫浦跨時區旅行

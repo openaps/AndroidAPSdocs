@@ -298,7 +298,7 @@ AndroidAPS אינו פועל ב"מצב מפתחים". AAPS מציג את ההו�
 
 ### Where can I delete treatments in AAPS v3 ?
 
-תפריט 3 נקודות, בחרו טיפולים ואז שוב תפריט 3 נקודות שם יש אפשרויות זמינות שונות.
+3 dots menu, select treatments, then 3 dots menu again and you have different options available.
 
 ### Configuring and Using the AAPSClient remote app
 

@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # a test file for image scaling
 
 We got some problems with scaling on different devices and wanted to check how we can solve in

@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/ChangeLanguage/ChangeLanguage.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Getting-Started/Introduction.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Getting-Started/PreparingForAaps.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Getting-Started/ComponentOverview.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Getting-Started/CompatiblePumps.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Getting-Started/CompatiblesCgms.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Getting-Started/Phones.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Getting-Started/Watches.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SettingUpAaps/SettingUpTheReportingServer.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SettingUpAaps/Nightscout.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SettingUpAaps/Tidepool.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SettingUpAaps/BuildingAaps.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SettingUpAaps/TransferringAndInstallingAaps.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SettingUpAaps/SetupWizard.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SettingUpAaps/ChangeAapsConfiguration.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SettingUpAaps/ConfigBuilder.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SettingUpAaps/Preferences.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SettingUpAaps/CompletingTheObjectives.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/AapsScreens.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/KeyAapsFeatures.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/CobCalculation.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/SensitivityDetectionAndCob.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/TempTargets.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/ExtendedCarbs.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/Automations.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/DynamicISF.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/AapsForChildren.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/PumpsAndCannulas.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/RemoteFeatures/RemoteMonitoring.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/RemoteFeatures/RemoteControl.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/RemoteFeatures/SMSCommands.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/RemoteFeatures/FollowingOnly.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/RemoteFeatures/AndroidAuto.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/WearOS/BuildingAapsWearOS.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/WearOS/WearOsSmartwatch.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/RemoteFeatures/RemoteControlWearOS.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/ExchangeSiteCustomWatchfaces/index.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Maintenance/ExportImportSettings.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Maintenance/Reviewing.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Maintenance/ReleaseNotes.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Maintenance/DocumentationUpdate.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Maintenance/UpdateToNewVersion.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/GettingHelp/WhereCanIGetHelp.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/GettingHelp/GeneralTroubleshooting.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/GettingHelp/TroubleshootingAndroidStudio.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/GettingHelp/AccessingLogFiles.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/AdvancedOptions/FullClosedLoop.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/AdvancedOptions/DevBranch.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/AdvancedOptions/Autotune.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SupportingAaps/HowCanIHelp.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SupportingAaps/HowToEditTheDocs.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SupportingAaps/Translations.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SupportingAaps/StateOfTranslations.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/SupportingAaps/OpenHumans.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/UsefulLinks/Glossary.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/UsefulLinks/FAQ.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/UsefulLinks/BackgroundReading.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/UsefulLinks/DedicatedGoogleAccountForAaps.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/UsefulLinks/ClinicianGuideToAaps.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/index.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePumps/DanaRS-Insulin-Pump.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePumps/DanaR-Insulin-Pump.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePumps/OmnipodDASH.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePumps/OmnipodEros.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePumps/DiaconnG8.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePumps/EOPatch2.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePumps/MedtrumNano.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePumps/Accu-Chek-Combo-Pump.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePumps/Accu-Chek-Insight-Pump.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePumps/MedtronicPump.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatibleCgms/DexcomG7.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatibleCgms/DexcomG6.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatibleCgms/DexcomG5.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatibleCgms/Libre3.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatibleCgms/Libre2.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatibleCgms/Libre1.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatibleCgms/Eversense.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatibleCgms/MM640g.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatibleCgms/PocTech.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatibleCgms/CgmNightscoutUpload.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePumps/Accu-Chek-Combo-Pump-v2.html</loc>
+  <lastmod>2024-12-25T21:54:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePumps/Future-possible-Pump-Drivers.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatibleCgms/GeneralCGMRecommendation.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatibleCgms/SmoothingBloodGlucoseData.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePhones/Jelly.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/CompatiblePhones/Huawei.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/GettingHelp/TroubleshootingNsClient.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Maintenance/Update3_0.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Maintenance/Update2_7.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/index.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/building-AAPS.html</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/changelanguage.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/introduction.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/preparing.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Getting-Started/Safety-first.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Getting-Started/ClosedLoop.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Getting-Started/WhatisAndroidAPS.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Getting-Started/WikiUpdate.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/BG-Source.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Getting-Started/Pump-Choices.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Module/module.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Installing-AndroidAPS/Building-APK.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Installing-AndroidAPS/Update-to-new-version.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Installing-AndroidAPS/update3_0.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Installing-AndroidAPS/update2_7.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Installing-AndroidAPS/git-install.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Installing-AndroidAPS/troubleshooting_androidstudio.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Installing-AndroidAPS/Releasenotes.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Installing-AndroidAPS/Dev_branch.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/xdrip.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/Phoneconfig.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Installing-AndroidAPS/Nightscout.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/Smartwatch.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/Config-Builder.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/Preferences.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Getting-Started/Screenshots.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/Objectives.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/Open-APS-features.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/COB-calculation.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/Sensitivity-detection-and-COB.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/Profiles.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/temptarget.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/Extended-Carbs.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/Automation.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/autotune.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/CPbefore26.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/OpenHumans.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/automationwithapp.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/Android-auto.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/Timezone-traveling.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/Accessing-logfiles.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/ExportImportSettings.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/Enabling-Engineering-Mode-in-xDrip.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Children/Children.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Children/SMS-Commands.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/profilehelper.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/FullClosedLoop.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/troubleshooting.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/Troubleshooting-NSClient.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Getting-Started/FAQ.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Getting-Started/Glossary.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Where-To-Go-For-Help/Background-reading.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Where-To-Go-For-Help/Connect-with-other-users.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Resources/clinician-guide-to-AndroidAPS.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Getting-Started/How-can-I-help.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/translations.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/make-a-PR.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Administration/stateTranslations.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Sandbox/sandbox1.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/DanaRS-Insulin-Pump.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/DanaR-Insulin-Pump.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/OmnipodDASH.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/OmnipodEros.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/DiaconnG8.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/EOPatch2.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/MedtrumNano.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/Accu-Chek-Combo-Pump.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/Accu-Chek-Insight-Pump.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/MedtronicPump.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/DexcomG7.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/DexcomG6.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/DexcomG5.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/DexcomG4.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/Libre3.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/Libre2.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/Libre1.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/Eversense.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/MM640g.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/PocTech.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/CgmNightscoutUpload.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Getting-Started/Phones.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/jelly.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/huawei.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/pumps.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/Watchfaces.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/SonySW3.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Hardware/GeneralCGMRecommendation.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Configuration/Accu-Chek-Combo-Pump-v2.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Getting-Started/Future-possible-Pump-Drivers.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Usage/Open-APS-features.html?highlight=uam</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/3.1/Sandbox/sandbox2.html</loc>
+  <lastmod>2024-10-13T18:28:21+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting</loc>
+  <lastmod>2024-12-25T21:54:13+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>

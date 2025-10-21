@@ -40,7 +40,7 @@ AAPS将努力在40分钟内达到8mmol/l或144mg/dl。
 
 用户可能还希望考虑：
 
-- 在计划运动前*选择*此**TT** 1-2小时，以确保减少IOB（此TT的正确时机因人而异）；
+- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
 - 在计划活动的持续时间内*选择*一个临时配置文件（降低）以确保减少**IOB**；
 - *确保***TT**在运动前*被停用*，因为减少**IOB**后，一些用户可能在运动后会出现**BG**快速上升的情况。
 

@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 (Troubleshooting-NSClient-troubleshooting-nsclient)=
 
 # Řešení problémů s NSClientem

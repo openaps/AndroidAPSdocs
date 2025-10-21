@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # 針對其他 CGM 使用者上傳到 Nightscout
 
 如果你設定了其他 CGM，並且只能將你的血糖資料**發送**到[Nightscout](https://nightscout.github.io/)。

@@ -35,7 +35,7 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 
 **Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. Laikantis mitybos, kuriojee mažai angliavandenių, ir daugiau riebalų bei baltymų, gali pakakti įvesti tik iAV be įprasto boluso maistui (plačiau apie tai aukščiau tinklaraščio įraše). Įvedus iAV, Priežiūros portale automatiškai sukuriamas užrašas, kad būtų lengviau patikrinti ir pakoreguoti įrašus.
 
-(Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
+(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Extended bolus and why they won't work in closed-loop environment?
 
 Kaip jau minėta aukščiau, ištęstas arba vadinamasis daugiabangis bolusas neveikia su uždaru ciklu. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
@@ -53,7 +53,7 @@ Kai kurie žmonės vis dar prašė parinkties AAPS naudoti ištęstinius bolusus
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
-(Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
+(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Kodėl ištęstas bolusas neveiks uždaro ciklo aplinkoje
 
 1. Ciklas nustato, kad turi būti suleista 1.55 vv/h. Algoritmui nesvarbu, ar suleidžiama kaip ištęstas boliusas, ar kaip TBR (laikina valandinė bazė). Tiesą sakant, kai kurios pompos naudoja ištęstus bolusus. Kas tada atsitinka? Most pump drivers then stop the extended bolus -> You didn't even need to start it.

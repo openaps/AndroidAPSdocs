@@ -298,7 +298,7 @@ AAPS не работает в "режиме разработчика". AAPS по
 
 ### Where can I delete treatments in AAPS v3 ?
 
-3 точки меню, выберите терапия, затем меню настроек, и получите различные возможные варианты.
+3 dots menu, select treatments, then 3 dots menu again and you have different options available.
 
 ### Configuring and Using the AAPSClient remote app
 

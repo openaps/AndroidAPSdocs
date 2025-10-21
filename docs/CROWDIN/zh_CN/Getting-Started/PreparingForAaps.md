@@ -1,10 +1,10 @@
 # 准备开始使用AAPS
 
-欢迎。 这份文档旨在为准备安装并开始使用Android人工胰腺系统（**AAPS**）的用户提供指导。
+欢迎使用本文档。 本指南旨在帮助用户​​准备配置并启用​​Android人工胰腺系统（**AAPS**）。
 
 ## 在文档中查找信息
 
-您可以在[此处](../index.md)找到文档的**索引**和结构说明，也可以通过点击文档左上角**AAPS**符号来访问。 在那里，您将找到对不同文档部分目的的概述。 您还可以使用本页左侧的标题来浏览文档。 最后，在**AAPS**符号的正下方，有一个实用的搜索功能。
+您可以在[此处](../index.md)找到文档的**索引**和结构说明，也可以通过点击文档左上角**AAPS**图标来访问。 该索引页面提供各版块功能的概览， 您还可以使用本页左侧的标题来浏览文档。 最后，在**AAPS**符号的正下方，有一个实用的搜索功能。
 
 我们的目标是让您能够轻松了解**AAPS**的功能和局限性。 在投入时间阅读文档后发现，您可能没有兼容的胰岛素泵或连续血糖监测（CGM）设备，或者**AAPS**提供的功能与您的期望不同，这可能会让您感到失望。
 
@@ -12,7 +12,7 @@
 
 (preparing-safety-first)=
 
-## Safety First
+## 安全第一
 “能力越大，责任越大…”
 
 ### 技术安全
@@ -28,7 +28,7 @@
 
 一个重要的安全考虑是，**对于那些血糖水平已经升高了一段时间的人来说，糖化血红蛋白（HbA1c）的快速降低和血糖控制的改善可能会造成永久性损害**。 许多糖尿病患者并不了解这一点，而且并非所有临床医生都会让患者意识到这个问题。
 
-这种损害可能包括**视力丧失和永久性神经病变（疼痛）**。 通过更缓慢地降低平均血糖水平，有可能避免这种损害的发生。 如果您目前的 HbA1c 偏高，并准备改用 **AAPS**（或任何其他闭环系统），_请_在开始之前与您的临床团队讨论这一潜在风险，并与他们商定一个时间计划。 在**AAPS**系统中，您可以轻松地先设定较高的血糖目标（目前，您可以选择的最高目标是10.6 mmol/L，但如果需要，您也可以保持一个故意设置得较宽松的控制方案），然后随着月份的推移逐步降低目标。
+这种损害可能包括**视力丧失和永久性神经病变（疼痛）**。 通过更缓慢地降低平均血糖水平，可以避免这种损害发生。 如果您目前的 HbA1c 偏高，并准备改用 **AAPS**（或任何其他闭环系统），_请_在开始之前与您的临床团队讨论这一潜在风险，并与他们商定一个时间计划。 在**AAPS**系统中，您可以轻松地先设定较高的血糖目标（目前，您可以选择的最高目标是10.6 mmol/L，但如果需要，您也可以保持一个故意设置得较宽松的控制方案），然后随着月份的推移逐步降低目标。
 
 #### 在不造成永久性损害的情况下，能多快降低我的糖化血红蛋白（HbA1c）水平？
 
@@ -88,7 +88,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 - “[如何安装AAPS](../SettingUpAaps/BuildingAaps.md)？” （第D节）其中包括[故障排除](../GettingHelp/GeneralTroubleshooting.md)小节。
 
-要达到闭环控制所需的时间因人而异，但你可以（[在这里](#how-long-will-it-take-to-set-everything-up)）找到使用AAPS实现完全闭环控制的大致时间表。
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
 
 
 #### 密钥库&和配置设置导出文件
@@ -104,7 +104,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 此外，**AAPS**提供了[导出所有配置设置](../Maintenance/ExportImportSettings.md)的功能。 这确保了你可以在更换手机、升级/重新安装应用程序时，以最小的干扰安全地恢复你的系统。 
 
-#### Troubleshooting
+#### 故障排除
 
 如果你有任何不确定的地方，请随时联系AAPS社区——没有问题是愚蠢的！ 我们鼓励所有不同经验水平的用户提问。 由于**AAPS**用户众多，通常问题的回复速度很快。
 
@@ -122,7 +122,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 #### [临床医生部分](../UsefulLinks/ClinicianGuideToAaps.md)
 
-这是一个[专门为临床医生设置的章节](../UsefulLinks/ClinicianGuideToAaps.md)，旨在为那些想要了解更多关于AAPS（AndroidAPS）和开源人工胰腺技术的人提供信息。 在引言部分还提供了[如何与你的临床团队沟通](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)的指导。
+此处为[专为临床医生设计的章节](../UsefulLinks/ClinicianGuideToAaps.md)，旨在帮助其深入了解AAPS（Android人工胰腺系统）及开源人工胰腺技术。 在引言部分还提供了[如何与你的临床团队沟通](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)的指导。
 
 ## 我们要构建和安装什么？
 
@@ -139,7 +139,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 ### 2) 报告服务器：NightScout（Tidepool*）
 
-为了充分利用**AAPS**，您需要设置一个Nightscout服务器。 您可以自行完成这一设置（链接到教程），或者选择支付少量费用，让他人为您设置托管的Nightscout服务（链接到 T1Pal、10.be 等）。 Nightscout用于随时间收集来自**AAPS**的数据，并能够生成将连续葡萄糖监测（CGM）和胰岛素模式相关联的详细报告。 护理人员也可以使用Nightscout与**AAPS**应用程序进行远程通信，以监督其孩子的糖尿病管理。 这种远程通信功能包括实时监测血糖和胰岛素水平、远程注射胰岛素（通过短信）以及录入碳水。 试图单独分析连续葡萄糖监测（CGM）数据而不结合泵数据来评估你的糖尿病管理效果，就像是一个司机在开车时看不见前方，而只能依靠乘客来描述路况一样。  对于AAPS 3.2及更高版本，Tidepool可以作为Nightscout的替代方案。
+为了充分利用**AAPS**，您需要设置一个Nightscout服务器。 您可[自行操作](https://nightscout.github.io/nightscout/new_user/#free-diy)，或选择支付少量费用使用[托管式Nightscout服务](https://nightscout.github.io/#nightscout-as-a-service)代您完成配置。 Nightscout用于随时间收集来自**AAPS**的数据，并能够生成将连续葡萄糖监测（CGM）和胰岛素模式相关联的详细报告。 护理人员也可以使用Nightscout与**AAPS**应用程序进行远程通信，以监督其孩子的糖尿病管理。 这种远程通信功能包括实时监测血糖和胰岛素水平、远程注射胰岛素（通过短信）以及录入碳水。 试图单独分析连续葡萄糖监测（CGM）数据而不结合泵数据来评估你的糖尿病管理效果，就像是一个司机在开车时看不见前方，而只能依靠乘客来描述路况一样。  对于AAPS 3.2及更高版本，Tidepool可以作为Nightscout的替代方案。
 
 ### 3）CGM传感器应用
 
@@ -184,11 +184,11 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 一旦您全面使用**AAPS**系统，您仍然需要定期微调您的设置，以改善您的整体糖尿病管理。
 
-## Requirements
+## 要求
 
 ### 医疗考虑
 
-除了[安全部分](#safety-first)中的医疗警告外，根据您在泵中使用的胰岛素类型，还会有不同的参数设置。
+In addition to the medical warnings in the [safety section](#preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
 
 #### 胰岛素选择
 
@@ -210,7 +210,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 #### AAPS与Android版本
 
-当前版本的**AAPS**（3.2版）需要一部搭载谷歌**Android 9.0或更高版本**的Android智能手机。 下一个**AAPS**版本（3.3版）将要求**Android 11.0或更高版本**。 如果您正在考虑购买新手机（截至2024年7月），建议选择Android 13。<br/>截至2024年11月，部分用户报告了Android 15与蓝牙连接存在兼容性问题。 您可能希望推迟更新到Android 15，特别是如果您正在使用Omnipod Dash或Dexcom G7的话。 请查看[Facebook或Discord](../GettingHelp/WhereCanIGetHelp.md)以获取此主题的最新更新。<br/> 出于安全考虑，强烈建议用户保持其**AAPS**构建的更新。 然而，对于无法使用Android 11.0或更高版本设备的用户，仍然可以使用与旧版Android兼容的**AAPS**早期版本，请参阅：[发行说明](#maintenance-android-version-aaps-version)。
+当前版本的**AAPS**（3.3）需要搭载**谷歌Android 11.0或更高版本**的Android智能手机。 If you are considering buying a new phone, (as of December 2024), Android 14 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. 然而，对于无法使用Android 11.0或更高版本设备的用户，仍然可以使用与旧版Android兼容的**AAPS**早期版本，请参阅：[发行说明](#maintenance-android-version-aaps-version)。
 
 #### 智能手机型号选择
 您购买的具体型号取决于所需的功能。 您可以在[手机页面](../Getting-Started/Phones.md)上找到关于工作配置的建议和用户反馈。
@@ -219,8 +219,8 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 ```{admonition} delaying Samsung phones updates
 :class:警告
-三星有着不幸的记录，他们强制推送手机更新，而这些更新却导致了蓝牙连接问题。 要禁用这些强制更新，您需要将手机切换到‘开发者模式’，方法是：
-进入设置，然后点击关于手机中的软件信息，接着连续点击版本号，直到系统确认您已解锁开发者模式。 返回到主设置菜单，您应该会看到一个新的‘开发者选项’菜单项。 打开开发者选项，滚动查找‘自动系统更新’并将其关闭。
+三星有着不幸的记录，他们强制推送手机更新，而这些更新却导致了蓝牙连接问题。 要禁用强制更新功能，需通过以下步骤启用手机的"开发者模式"：
+前往设置 → 进入「关于手机」 → 选择「软件信息」 → 连续点击「版本号」直至系统提示已开启开发者模式。 返回到主设置菜单，您应该会看到一个新的‘开发者选项’菜单项。 打开开发者选项，滚动查找‘自动系统更新’并将其关闭。
 ```
 
 ```{admonition} Google Play Protect potential Issue

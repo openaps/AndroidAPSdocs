@@ -38,7 +38,7 @@ We are using markdown for the docs pages. The file have got the suffix ".md".The
 
 ![Edit branch](../images/PR3.png)
 
-4. "<>Dosyayı düzenle" sekmesinde çalışıyorsunuz. Değiştirdiğiniz her şeyin istediğiniz gibi göründüğünden emin olmak için yeni bir görünüm için "Preview changes" "Değişiklikleri önizle" sekmesini seçin (yazım hataları vs.). Gerekli bir iyileştirme görürseniz, daha fazla iyileştirme yapmak için düzenleme sekmesine geri dönün. 
+4. "<>Dosyayı düzenle" sekmesinde çalışıyorsunuz. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typos sic.). Gerekli bir iyileştirme görürseniz, daha fazla iyileştirme yapmak için düzenleme sekmesine geri dönün. 
 
 ![preview mode](../images/PR5.png)
 
@@ -62,7 +62,7 @@ Not: Çatalınız (fork) ve şubeniz (branch) hala kendi kişisel GitHub hesabı
 
 We are using markdown for the documentation pages. The files have got the suffix ".md".
 
-Markdown is a very simple text formating language which separates text content from text formating.
+Markdown is a very simple text formatting language which separates text content from text formatting.
 
 The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
 
@@ -176,9 +176,9 @@ Internal links to pages are links to the start of a md file which is hosted on o
 
 - internal link to .md page: `[alt text](../folder/file.md)`
 
-#### Internal links to named inline refernces
+#### Internal links to named inline references
 
-Internal links to named inline refernces are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
 
 Add a named reference at the location in the target md file you want to jump to.
 
@@ -190,9 +190,9 @@ Therefore it is a good practice to start with the filename and then the referenc
 
 Use only lowercase letters and hyphenate words.
 
-Then link this refernce in the text you are writing with the following kind of link.
+Then link this reference in the text you are writing with the following kind of link.
 
-- Internal links to named inline refernces: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
 ### Notes, Warnings, Collapsing Notes
 

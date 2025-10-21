@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # Pumpa DanaRS a Dana-i
 
 *Tyto pokyny slouží k nastavení aplikace a pumpy DanaRS od roku 2017 nebo nejnovější Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
@@ -79,7 +73,7 @@ orphan: true
 
 * Stiskněte OK pro zadání starého hesla.
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS Zadejte staré heslo](../images/DanaRSPW_04_11PWenter.png)
 
@@ -130,7 +124,7 @@ Pokud měníte telefon za nový, je nezbytné, abyste provedli následující kr
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](#pairing-pump).
+* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
 * Někdy může být nutné vymazat informace o párování v AAPS delším podržením ikony BT na kartě Dana-i/RS.
 
 ## Cestování mezi časovými pásmy s pumpou Dana RS

@@ -1,9 +1,3 @@
-* * *
-
-orphan: true
-
-* * *
-
 # How-to configure a Huawei phone
 
 There are different options, some Android specific, some Huawei specific:
