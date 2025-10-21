@@ -423,19 +423,20 @@ The Notification section allows the user to select their preferred notifications
 
 ## Actions (ACT) Tab
 
-This tab is well documented in the main**AAPS**documentation but there are a few items on this tab that are specific to how the DASH differs from tube based pumps, especially after the processes of applying a new pod.
+This tab is well documented in the main **AAPS** documentation but there are a few items on this tab that are specific to how the DASH differs from tube based pumps, especially after the processes of applying a new pod.
 
-1. Go to the **Actions (ACT)** tab in the main **AAPS**interface.
+1. Go to the **Actions (ACT)** tab in the main **AAPS** interface.
 
 2. Under the **Careportal (1)** section the **Insulin** and **Cannula** fields will have their **age reset** to 0 days and 0 hours **after each pod change**. This is done because of how the Omnipod pump is built and operates. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours). The **pump battery** and **insulin reservoir** are self contained inside of each pod.
 
-![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+   ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
 ### Level
 
 **Insulin Level**
 
-Insulin level displayed is the amount reported by DASH. However, the pod only reports the actual insulin reservoir level when it is below 50 units. Until then “Above 50 units” will be displayed. The amount reported is not exact: when the pod reports ‘empty’ in most cases the reservoir will still have some additional units of insulin left.
+Insulin level displayed is the amount reported by DASH. However, the pod only reports the actual insulin reservoir level when it is below 50 units. Until then “Above 50 units” will be displayed. The amount reported is not exact: when the pod reports ‘empty’ in most cases the reservoir will still have some additional units of insulin left.  
+
 The DASH overview tab will display as described the below:
 
   * **Above 50 Units** - The pod reports more than 50 units currently in the reservoir.
