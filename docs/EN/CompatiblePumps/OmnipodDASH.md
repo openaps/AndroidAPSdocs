@@ -111,10 +111,12 @@ To verify that you have selected the DASH in **AAPS**, if you have checked the b
 
 Please **swipe left** to the [**DASH tab**](#omnipod-dash-tab) where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
 
-![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) 'Refresh' pod connectivity and status, be able to silence pod alarms when the pod beeps
+The table below describes the button functions on the Dash tab
 
-![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) 'Pod Management' (Activate, Deactivate, Play test beep, and Pod history)
-
+| Button                                                    | Function |
+|-----------------------------------------------------------|----------|
+|![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png)    | 'Refresh' pod connectivity and status, be able to silence pod alarms when the pod beeps |
+| ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) | 'Pod Management' (Activate, Deactivate, Play test beep, and Pod history) |
 
 (omnipod-dash-activate-pod)=
 
