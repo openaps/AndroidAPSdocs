@@ -21,8 +21,9 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 - [Too frequent basal updates may cause basal insulin delivery problems with Omnipod Dash](https://github.com/nightscout/AndroidAPS/issues/4158) if using Super Micro Bolas limit to 5 minute interval to avoid this issue.
 - Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
 - The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to take a setting export after each pod activation to allow a restore of that pods activation state if something happens to your rig. 
-- When setting a new basil profile, DASH will suspend delivery before setting the new basal **Profile**. Sometimes the basil profile won't automatically re-start see section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
-
+- When setting a new basil profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interuption or error, the basil profile won't automatically re-start see section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
+- If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
+  
 ## Hardware/Software Requirements
 
 - Omnipod DASH is identified by the blue needle cap.
@@ -255,20 +256,21 @@ When insulin delivery is suspended you will need to issue a command to instruct 
 
 The process below will show you how to acknowledge and dismiss pod beeps when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Dash alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
 
-***NOTE**: The SILENCE ALERTS button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the SILENCE ALERTS button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
+***NOTE**: The SILENCE ALERTS button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the **SILENCE ALERTS** button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
 
-1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and pod change will be required soon. You can verify this on the **DASH** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation), and the text will turn **red** after this time has passed. Under the **Active Pod alerts (2)** field the status message **Pod will expire soon** is displayed. This also will trigger displaying the **SILENCE ALERTS (3)** button.
+1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will be required soon.  
+   You can verify this on the **DASH** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation), and the text will turn **red** after this time has passed.  
+   Under the **Active Pod alerts (2)** field the status message **Pod will expire soon** is displayed. This also will trigger displaying the **SILENCE ALERTS (3)** button.
 
-![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
+   ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
-2. Go to the **DASH** tab and press the **SILENCE ALERTS (2)** button . **AAPS** sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
+2. Go to the **DASH** tab and press the **SILENCE ALERTS (2)** button. **AAPS** sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
 
-![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
+   ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
 3. Upon **successful deactivation** of the alerts, **2 beeps** will be issued by the active pod and a confirmation dialog will display the message **Activate alerts have been Silenced**. Click the **OK** button to confirm and dismiss the dialog.
 
-
-![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
+   ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
 4. Go to the **DASH** tab. Under the **Active Pod alerts** field, the warning message is no longer displayed, and the active pod will no longer issue pod expiration warning beeps.
 
