@@ -452,53 +452,95 @@ Additional note:
 
 (omnipod-dash-delivery-suspended)=
 
+This section covers common known issues and solutions for Omnipod use with AAPS. There is also [General Troubleshooting](GettingHelp/GeneralTroubleshooting.html) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
+
+---
+### Bluetooth related issues
+
+Some poeple in the community have been running into issues with Pod activation failures and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues:
+
+#### **Android 16**
+
+- Android 16 needs at a minimum **AAPS** version 3.3.2.1, as this versions has fixes added to specifically address known problems introduced in Android 16 for Omnipod. 
+- More info here: 
+  - [Cannot start omnipod with android 16](GettingHelp/GeneralTroubleshooting.html#cannot-start-omnipod-with-android-16)
+  - [Github issue - Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471)
+
+#### **Apps that use the "Nearby devices" Android permission**
+
+Android allows you to control what each app is able to do or access on your phone via a permission model. For each app installed you can choose to allow or deny specific permissions, e.g. Access files on the device, access to bluetooth, scan for nearby devices etc. 
+
+AAPS requires a number of specific permission to function, one which is required ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
+
+#### **Apps that use "Nearby device" permissions and are known to have caused problems:**
+   - MyBMW
+   - Amazon Alexa
+   - Samsung Galaxy Wearable
+   - myChevrolet
+   - Android Auto
+
+#### **How to revoke "Nearby device" permissions for other apps:**
+If you are facing issues activating a new Pod and you are running on the correct supported version of AAPS for your version of Android. It may be necessary to revoked the permission for other apps while activating a new Pod.
+
+Follow this procedure to revoked the "Nearby device" permission for all apps except **AAPS**:
+
+
+---
 ### Delivery suspended
 
-  * There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes. 
-  * During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile**. If communication fails between the two commands, then delivery can stay suspended. When this happens:
+  - There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes. 
+  - During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile**. If communication fails between the two commands, then delivery can stay suspended. When this happens:
      - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
      - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened. 
      - **AAPS** will try to set the new basal profile every 15 minutes.
      - **AAPS** will show a notification informing that the delivery is suspended every 15 minutes, if the delivery is still suspended (resume delivery failed).
      - The [**Resume delivery**](#omnipod-dash-resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
      - If **AAPS** fails to resume delivery on its own (this happens if the pod is unreachable, sound is muted, etc), the pod will start beeping 4 times every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20 minutes.
-  * For unconfirmed commands, "refresh pod status" should confirm/deny them.
+  - For unconfirmed commands, "refresh pod status" should confirm/deny them.
 
-**Note:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, **so you need to check !**
+***NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, **so you need to check !***  
 
+---
 ### Pod Failures
 
-Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+- Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. 
+- It is best practice not to raise support / replacement cases with Insulet, since AAPS is not an approved method of using the pods.
+- A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
 
+---
 ### Preventing error 49 pod failures
 
 This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a built-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod.
 The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
 
+---
+
 ### Pump Unreachable Alerts
 
-When no communication can be established with the pod for a preconfigured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]**. Recommended value is alerting after **120** minutes.
+When no communication can be established with the pod for a preconfigured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences** ➜ **Local Alerts** ➜ **Pump unreachable threshold [min]**. Recommended value is alerting after **120** minutes.
 
+---
 ### Export  Settings
 
 Exporting **AAPS** settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling **AAPS** or in case of phone loss, reinstalling on the new phone.
 
-Note: The active pod information is included in the exported settings. If you import an "old" exported file, your actual pod will "die". There is no other alternative. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore **AAPS'** settings **while keeping the current active Pod**. In this case it is important to only use the recently exported settings file containing the pod currently active.
+***NOTE:** The active pod information is included in the exported settings. If you import an "old" exported file, your actual pod will "die". There is no other alternative. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore **AAPS'** settings **while keeping the current active Pod**. In this case it is important to only use the recently exported settings file containing the pod currently active.*
 
 **It is good practice to do an export immediately after activating a pod**. This way you will always be able to restore the current active pod in case of a problem. For instance when moving to another backup phone.
 
-Regularly copy your exported settings to a safe place (as a cloud drive) that can be accessible by any phone when needed (e.g. in case of a phone loss or factory reset of the actual phone).
+Regularly (after each export preferably) copy your exported settings to a safe place (a cloud drive e.g. Google Drive) that is accessible by any phone when needed. This allows you to restore to a phone from anywhere in case of a phone loss or factory reset of your phone while you are not at home.
 
+---
 ### Import Settings
 
-**WARNING**
-Please note that importing settings will possibly import an outdated Pod status. As a result, there is a risk of losing the active Pod! (see **Exporting Settings**). It is better to only try it when no other options are available.
-
-When importing settings with an active Pod, make sure the export was done with the currently active pod. 
+**WARNING**: Please note that importing settings will possibly import an outdated Pod status (depending when you made the last export/backup).  
+As a result, there is a **risk of losing the active Pod!** (see **Exporting Settings**). 
+1. Only try an import when no other options are available.
+2. When importing settings with an active Pod, make sure the export was done with the currently active pod. 
 
 **Importing while on an active Pod:** (you risk losing the Pod!)
 
-1. Make sure you are importing settings that were recently exported with the currently active Pod.
+1. **Make sure you are importing settings that were recently exported with the currently active Pod!**
 2. Import your settings.
 3. Check all preferences.
 
@@ -509,19 +551,25 @@ When importing settings with an active Pod, make sure the export was done with t
 3. Check all preferences.
 4. You may need to **Deactivate** the "non existing" pod if the imported settings included any active pod data. 
 
+---
 ### Importing settings that contain Pod state from an inactive Pod
 
 When importing settings containing data for a Pod that is no longer active, AAPS will try to connect with it, which will obviously fail. You can not activate a new Pod in this situation.
 
-To remove the old pod session “try” to de-activate the Pod. The de-activation will fail. Select “Retry”. After the second or third retry you will get the option to remove the pod. Once the old pod is removed you will be able to activate a new pod.
+To remove the old pod session:
+1. “try” to de-activate the Pod. The de-activation will likely fail. 
+2. Select “Retry”. 
+3. After the second or third retry you will get the option to remove the pod. 
+4. Once the old pod is removed you will be able to activate a new pod.
 
+---
 ### Reinstalling AAPS
 
-When uninstalling**AAPS** you will lose all your settings, objectives and the current Pod session. To restore them make sure you have a recent exported settings file available!
+When uninstalling **AAPS** you will lose all your settings, objectives and the current Pod session. **To restore them make sure you have a recent exported settings file available!**
 
 When on an active Pod, make sure that you have an export for the current pod session or you will lose the currently active pod when importing older settings.
 
-1. Export your settings and store a copy in a safe place.
+1. Export your settings and store a copy in a safe place (e.g Google Drive).
 2. Uninstall **AAPS** and restart your phone.
 3. Install the new version of **AAPS**.
 4. Import your settings.
@@ -529,9 +577,10 @@ When on an active Pod, make sure that you have an export for the current pod ses
 6. Activate a new pod.
 7. When done: Export current settings.
 
+---
 ### Updating AAPS to a newer version
 
-In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod  session.
+In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod session.
 
 1. Export your settings.
 2. Install the new **AAPS** version.
@@ -539,26 +588,42 @@ In most cases there is no need to uninstall. You can do an “in-place” instal
 4. RESUME the Pod or activate a new pod.
 5. When done: Export current settings.
 
+---
 ### Omnipod driver alerts
 
-Please note that the Omnipod Dash driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
+The Omnipod Dash driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action requiring their input to resolve the cause of the triggered alert.  
 
-* No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
-* Pod suspended
+A summary of the main alerts that you may encounter is listed below:
+
+- No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
+- Pod suspended
 Informational alert that pod has been suspended.
-* Setting basal **Profile** failed : Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
+- Setting basal **Profile** failed : Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
 Informational alert that the Pod basal **Profile** setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
-* Unable to verify whether **SMB** bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
+- Unable to verify whether **SMB** bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
 Alert that the **SMB** bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if **SMB** bolus succeeded and if not remove the entry from the Treatments tab.
-* Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
+- Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
 
 ## Where to get help for DASH
 
 All of the development work for the DASH is done by the community on a **volunteer** basis; please keep this in mind and use the following guidelines before requesting assistance:
 
 -  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#AAPS* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
+-  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#AAPS* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw). There are also numerous Facebook and other groups you can ask in too (see [**Getting Help**](../GettingHelp/WhereCanIGetHelp.md))
 -  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues)
 if it exists, please confirm/comment/add information on your problem.
 If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+
+When requesting help come prepared with the following information to help those in the community with your specific questions and problems:  
+- Android phone make and model
+- Android OS version (e.g 15 or 16)
+  - Did you recently upgrade your Android OS version?
+- The version of **AAPS** you are running
+- Plain english description of the problem you are facing considering some of the following things
+   - Was it working before now?
+   - When did it work or not work? 
+   - Did you make any changes to configuration or profile settings?
+   - Did you pair a new bluetooth device?
+   - Did you upgrade or install a new app?
+   - How long was it working before it stopped working?
