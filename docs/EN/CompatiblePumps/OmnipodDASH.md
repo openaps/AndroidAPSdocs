@@ -307,7 +307,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ### Fields
 
-The table below describes what each field / value is when viewing the Dash tab infomation:
+**The table below describes what each field / value is when viewing the Dash tab information:**
 
 | Field                     | Function
 |---------------------------|----------
@@ -328,7 +328,7 @@ The table below describes what each field / value is when viewing the Dash tab i
 
 ### Buttons
 
-The table below defines what each button under the Pod Tab does.
+**The table below describes each button and it's function:**
 
 | Button | Function
 |----------|----------
@@ -345,7 +345,7 @@ Below is describes the purpose of each icon on the **Pod Management** menu, acce
 
 ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-The function of each button is described in the table below:
+**The table below describes each button and it's function:**
 
 | Button | Function
 |--------|----------
@@ -360,19 +360,17 @@ The function of each button is described in the table below:
 
 ## Dash Settings
 
-The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the **AAPS** interface titled **DASH**.
+The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜ **Pump**  **Dash** ➜ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the **AAPS** interface titled **DASH**.
 
 ![Dash_settings_1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
-
-
-**NOTE:** A faster way to access the **Dash settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **DASH** tab and selecting **Dash preferences (2)** from the dropdown menu.
+***NOTE:** A faster way to access the **Dash settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **DASH** tab and selecting **Dash preferences (2)** from the dropdown menu.*
 
 ![Dash_settings_3](../images/DASH_images/Dash_settings/Dash_settings_3.png)
 
 The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
 
-*NOTE: An asterisk (\*) denotes the default setting is enabled.*
+***NOTE:** An asterisk (\*) denotes the default setting is enabled.*
 
 ### Confirmation beeps
 
@@ -380,10 +378,14 @@ The settings groups are listed below; you can enable or disable via a toggle swi
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
-* **Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
-* **Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-* **SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
-* **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
+**The table below describes each setting and it's function:**
+
+| Setting Name               | Function |
+|----------------------------|----------|
+| **Bolus beeps enabled:**   | Enable or disable confirmation beeps when a bolus is delivered. |
+| **Basal beeps enabled:**   | Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
+| **SMB beeps enabled:**     | Enable or disable confirmation beeps when a SMB is delivered. |
+| **TBR beeps enabled:**     | Enable or disable confirmation beeps when a TBR is set or canceled. |
 
 ### Alerts
 
@@ -391,25 +393,33 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 
 Provides **AAPS** alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
-	
-* **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
-* **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
-* **Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
-* **Number of units:** The number of units at which to trigger the pod low reservoir alert.
+***NOTE:** an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
+
+**The table below describes each setting and it's function:**
+
+| Setting Name                     | Function |
+|----------------------------------|----------|
+| **Expiration reminder enabled:** | Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached. |
+| **Hours before shutdown:**       | Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert. |
+| **Low reservoir alert enabled:** | Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field. | 
+| **Number of units:**             | The number of units at which to trigger the pod low reservoir alert. |
 
 ### Notifications
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
-The Notification section allows the user to so select their preferred notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus, and delivery suspended events were successful. 
+The Notification section allows the user to select their preferred notifications and audible phone alerts when AAPS is uncertain about the status of TBR, SMB, or bolus, and when delivery suspended events were successful.
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+***NOTE:** These are notifications only, no audible beep alerts are made.*
 
-* **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a TBR was successfully set.
-* **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when **AAPS**is uncertain if an SMB was successfully delivered.
-* **Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when **AAPS**is uncertain if a bolus was successfully delivered.
-* **Sound when delivery suspended notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when suspend delivery was successfully delivered.
+**The table below describes each setting and it's function:**
+
+| Setting Name                                              | Function |
+|-----------------------------------------------------------|----------|
+| **Sound for uncertain TBR notifications enabled:**        | Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a TBR was successfully set.        |
+| **Sound for uncertain SMB notifications enabled:**        | Enable or disable this setting to trigger an audible alert and visual notification when **AAPS**is uncertain if an SMB was successfully delivered. |
+| **Sound for uncertain bolus notifications enabled:**      | Enable or disable this setting to trigger an audible alert and visual notification when **AAPS**is uncertain if a bolus was successfully delivered. |
+| **Sound when delivery suspended notifications enabled:**  | Enable or disable this setting to trigger an audible alert and visual notification when suspend delivery was successfully delivered. |
 
 ## Actions (ACT) Tab
 
