@@ -14,6 +14,7 @@ Hier finden sich die besonderen Merkmale des **Omnipod DASH** („DASH“) und d
 * Bei Aktivierung des Pods wird **AAPS** den neuen DASH-Pod finden und sich mit ihm verbinden.
 * Reichweite für die BT-Verbindung: 5-10 Meter (je nach Umgebung).
 
+(omnipod-dash-hardware-software-requirements)=
 ## Hardware- und Software-Anforderungen
 
 * Den DASH erkennt man an der blauen Nadelkappe.
