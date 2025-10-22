@@ -14,6 +14,7 @@
 * 在储药器激活时，**AAPS** 将自动搜寻并连接新的 DASH 储药器。
 * 预期连接范围：5-10米（实际效果可能因环境而异）。
 
+(omnipod-dash-hardware-software-requirements)=
 ## 硬件/软件要求
 
 * DASH 以蓝色针头帽为标识。
