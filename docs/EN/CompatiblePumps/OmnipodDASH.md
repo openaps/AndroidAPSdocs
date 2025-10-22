@@ -22,7 +22,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 - [Too frequent basal updates may cause basal insulin delivery problems with Omnipod Dash](https://github.com/nightscout/AndroidAPS/issues/4158) if using Super Micro Bolas limit to 5 minute interval to avoid this issue.
 - Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
 - The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to take a setting export after each pod activation to allow a restore of that pods activation state if something happens to your rig. 
-- When setting a new basil profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interuption or error, the basil profile won't automatically re-start see section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
+- When setting a new basil profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basil profile won't automatically re-start see section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
 - If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
 - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#Troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
   
@@ -67,7 +67,7 @@ When for some reason the pod does not receive any new commands (for instance bec
 
 #### **AAPS Profile(s) do not support 30 minute basal rate time frames**
 If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported.
-For example, on your Ominpod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact basil **Profile** in **AAPS**.  
+For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact basil **Profile** in **AAPS**.  
 You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does NOT support this feature.
 
 #### **0U/h Profile basal rates are NOT supported in AAPS**  
@@ -459,7 +459,7 @@ This section covers common known issues and solutions for Omnipod use with AAPS.
 
 ### Bluetooth related issues
 
-Some poeple in the community have been running into issues with Pod activation failures and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues:
+Some members of the community have been running into issues with Pod activation failures and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues:
 
 #### **Android 16**
 
@@ -476,7 +476,7 @@ AAPS requires a number of specific permission to function, one which is required
 
 #### **Apps that use "Nearby device" permissions and are known to have caused problems:**
 
-Apps in this list have been discussed in one or more places in the community as causing problems for Omnipod DASH devices. Any advice and links to the inforamtion found will be in this table. 
+Apps in this list have been discussed in one or more places in the community as causing problems for Omnipod DASH devices. Any advice and links to the information found will be in this table. 
 
 ***NOTE:** If you wish to update any info in this table please ping @XiTatiON on #omnipod-dash Discord channel.*
 
@@ -487,7 +487,7 @@ Apps in this list have been discussed in one or more places in the community as 
 | Samsung Galaxy Wearable       | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
 | myChevrolet                   | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
 | Android Auto                  | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
-| MINI app                      | Appears the app is based on myBMW app and might mirror it's behaviour as a result | • Discord: #omnipod-dash by multiple people <br> | 
+| MINI app                      | Appears the app is based on myBMW app and might mirror it's behavior as a result | • Discord: #omnipod-dash by multiple people <br> | 
 | Mammotion                     | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
 | Kinomap                       | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
 
@@ -578,7 +578,7 @@ The exact origin of a “49 pod failure” often is hard to trace. In situations
 
 ### Pump Unreachable Alerts
 
-When no communication can be established with the pod for a preconfigured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences** ➜ **Local Alerts** ➜ **Pump unreachable threshold [min]**. Recommended value is alerting after **120** minutes.
+When no communication can be established with the pod for a pre-configured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences** ➜ **Local Alerts** ➜ **Pump unreachable threshold [min]**. Recommended value is alerting after **120** minutes.
 
 ---
 ### Export  Settings
