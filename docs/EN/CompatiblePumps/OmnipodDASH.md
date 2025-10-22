@@ -18,11 +18,13 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 
 ## Omnipod DASH known AAPS constraints/issues
 - Android 16 must use AAPS version 3.3.2.1 or later ([Github issue - Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471))
+- General advice is to run **AAPS** on Android 14 or 16. Android 15 has a lot of reported issues from the community. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](GettingHelp/GeneralTroubleshooting.html) for more info on the Bonding settings.
 - [Too frequent basal updates may cause basal insulin delivery problems with Omnipod Dash](https://github.com/nightscout/AndroidAPS/issues/4158) if using Super Micro Bolas limit to 5 minute interval to avoid this issue.
 - Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
 - The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to take a setting export after each pod activation to allow a restore of that pods activation state if something happens to your rig. 
 - When setting a new basil profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interuption or error, the basil profile won't automatically re-start see section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
 - If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
+- There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#Troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
   
 ## Hardware/Software Requirements
 
@@ -34,10 +36,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
     -  The **AAPS** Omnipod Dash driver connects with the DASH Pod using Bluetooth.  
       **AAPS** will automatically establish a new Bluetooth connection to the Pod every time it needs to send a command (e.g a Bolus), after sending the command the Bluetooth connection is immediately disconnected.  
        - **NOTE:** The Bluetooth connection can be interrupted/disturbed by other Bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... Devices like this can cause connection errors or pod activation issues on some models of phones. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&amp;single=true) list for known working configurations before committing to a new rig built around Omnipod DASH.
-
-    - The following Apps are known to cause problems for OmniPod DASH and should be avoided if possible (See [Troubleshooting](#Troubleshooting) for advice on other Bluetooth issues):
-      - MyBMW app
-      - Amazon Alexa
+       - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#Troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
     - For **Android 15** or below: You **MUST** use **Version 3.0 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, however it's advisable to run the latest released version of Master branch.
     - For **Android 16**: you **MUST** use **Version 3.3.2.1 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, due to Android 16 changing how it's bluetooth works any version earlier than 3.3.2.1 will likely cause pod failures and/or activation issues. For more info read the [Github issue - Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471)]
 - A supported [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
@@ -455,6 +454,9 @@ Additional note:
 This section covers common known issues and solutions for Omnipod use with AAPS. There is also [General Troubleshooting](GettingHelp/GeneralTroubleshooting.html) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
 
 ---
+
+(omnipod-dash-bluetooth-related-issues)=
+
 ### Bluetooth related issues
 
 Some poeple in the community have been running into issues with Pod activation failures and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues:
@@ -473,17 +475,26 @@ Android allows you to control what each app is able to do or access on your phon
 AAPS requires a number of specific permission to function, one which is required ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
 
 #### **Apps that use "Nearby device" permissions and are known to have caused problems:**
-   - MyBMW
-   - Amazon Alexa
-   - Samsung Galaxy Wearable
-   - myChevrolet
-   - Android Auto
+
+Apps in this list have been discussed in one or more places in the community as causing problems for Omnipod DASH devices. Any advice and links to the inforamtion found will be in this table. 
+
+***NOTE:** If you wish to update any info in this table please ping @XiTatiON on #omnipod-dash Discord channel.*
+
+| Application Name              | Details / Info / Notes | Where was this reported / Link(s) to info |
+|-------------------------------|------------------------|-------------------------------------------|
+| myBMW                         | MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK.| • Discord: #omnipod-dash by multiple people <br> • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471)<br> • Github issue: [Medtrum Pump unreachable after 2 minutes](https://github.com/nightscout/AndroidAPS/issues/4011) |
+| Amazon Alexa                  | Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IOT devices | • Discord: #omnipod-dash by multiple people<br> • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
+| Samsung Galaxy Wearable       | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
+| myChevrolet                   | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
+| Android Auto                  | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
+| MINI app                      | Appears the app is based on myBMW app and might mirror it's behaviour as a result | • Discord: #omnipod-dash by multiple people <br> | 
+| Mammotion                     | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
+| Kinomap                       | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
 
 #### **How to revoke "Nearby device" permissions for other apps:**
 If you are facing issues activating a new Pod and you are running on the correct supported version of AAPS for your version of Android. It may be necessary to revoked the permission for other apps while activating a new Pod.
 
 Follow this procedure to revoked the "Nearby device" permission for all apps except **AAPS**:
-
 
 ---
 ### Delivery suspended
