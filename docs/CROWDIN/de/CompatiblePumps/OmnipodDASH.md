@@ -54,6 +54,7 @@ Bei der **AAPS**-Erstinstallation wird Dich der **Einrichtungsassistent** durch 
 
 Falls Du unsicher sein solltest, kannst Du auch zunächst die „Virtuelle Pumpe“ und dann später, nach abgeschlossener **AAPS**-Einrichtung, „DASH“ wählen (siehe Option 2).
 
+(omnipod-dash-option-2-config-builder)=
 ### Option 2: Der Konfigurations-Generator
 
 Bei einer vorhandenen Installation von AAPS kannst Du **DASH** als Pumpe unter "Konfiguration" auswählen:
