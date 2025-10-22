@@ -1,6 +1,6 @@
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**, available as part of **AAPS** version 3.0+.
+These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**, available in **AAPS** from version 3.0.
 
 ## Omnipod DASH specifications
 
@@ -14,15 +14,15 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 - On pod activation, **AAPS** will find and connect to a new DASH pod.
 - Expected range from phone: 5-10 meters (YMMV).
 
-(#omnipod-dash-known-aaps-constraints/issues)=
+(#omnipod-dash-known-aaps-constraints-issues)=
 
 ## Omnipod DASH known AAPS constraints/issues
-- Android 16 must use AAPS version 3.3.2.1 or later ([Github issue - Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471))
-- General advice is to run **AAPS** on Android 14 or 16. Android 15 has a lot of reported issues from the community. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](GettingHelp/GeneralTroubleshooting.html) for more info on the Bonding settings.
-- [Too frequent basal updates may cause basal insulin delivery problems with Omnipod Dash](https://github.com/nightscout/AndroidAPS/issues/4158) if using Super Micro Bolas limit to 5 minute interval to avoid this issue.
+- Android 16 requires **AAPS** version 3.3.2.1 or later.
+- General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
+- Too frequent basal updates may cause basal insulin delivery [problems]((https://github.com/nightscout/AndroidAPS/issues/4158)) with Omnipod Dash. When using **SMB**, limit the interval to 5 minutes minimum to avoid this issue.
 - Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
-- The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to take a setting export after each pod activation to allow a restore of that pods activation state if something happens to your rig. 
-- When setting a new basil profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basil profile won't automatically re-start see section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
+- The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to export settings after each pod activation to allow a restore of that pods activation state if something happens to your rig. 
+- When setting a new basal profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basal profile won't automatically re-start. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
 - If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
 - There are a number of known issues with Bluetooth which can cause pod activation problems. See [Troubleshooting](#Troubleshooting) for advice on Bluetooth issues, specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
   
@@ -38,15 +38,15 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
        - **NOTE:** 
          - The Bluetooth connection can be interrupted/disturbed by other Bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... Devices like this can cause connection errors or pod activation issues on some models of phones. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&amp;single=true) list for known working configurations before committing to a new rig built around Omnipod DASH.
          - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#Troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
-    - For **Android 15** or below: You **MUST** use **Version 3.0 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, however it's advisable to run the latest released version of Master branch.
-    - For **Android 16**: you **MUST** use **Version 3.3.2.1 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, due to Android 16 changing how it's bluetooth works any version earlier than 3.3.2.1 will likely cause pod failures and/or activation issues. For more info read the [Github issue - Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471)]
+    - For **Android 15** or below: You **MUST** use **Version 3.0 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, however it's advisable to run the latest released version.
+    - For **Android 16**: you **MUST** use **Version 3.3.2.1 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, due to Android 16 changing how its Bluetooth works. Any version earlier than 3.3.2.1 will likely cause pod failures and/or activation [issues](https://github.com/nightscout/AndroidAPS/issues/3471). 
 - A supported [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
 The instructions below explain how to activate a new pod session using **AAPS**. You should wait for your current Pod to be close expiry, as you will need to activate a new Pod with **AAPS**. Once a pod is de-activated it cannot be reused/re-activated, the de-activation is final.
 
 ## Before You Begin
 
-**Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as the [Omnipod and AAPS Constraints and Issues](#omnipod-dash-known-aaps-constraints/issues)** to avoid running into a known problem.
+Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as  **[Omnipod and AAPS Constraints and Issues](#omnipod-dash-known-aaps-constraints/issues)** to avoid running into a known problem.
 
 #### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
 1. Extra pods (3 or more spare)
@@ -56,12 +56,12 @@ The instructions below explain how to activate a new pod session using **AAPS**.
 5. Correct version of AAPS built and installed
 
 #### **Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.**  
-- Before using **AAPS** you or your care giver would have had to manage the Pod using the Ominipod PDM (or in some regions a Phone app) to send commands to your DASH (e.g a Bolus).  
+- Before using **AAPS** you or your care giver would have had to manage the Pod using the Omnipod PDM (or in some regions a Phone app) to send commands to your DASH (e.g a Bolus).  
 - The DASH can only facilitate a single Bluetooth device (e.g PDM or Phone) connection to manage and send commands.  
 - The device that successfully activates the pod is the only device allowed to communicate with that Pod from that point forward. This means that once you activate a DASH with your Android phone using **AAPS**, **you will no longer be able to use your PDM with that pod!** For the time that Pod is active the **AAPS** Dash driver running on your Android phone is now the new PDM for your pod.  
-- **DO NOT Throw away your PDM!** It is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or **AAPS** is not working correctly.*
+- **DO NOT Throw away your PDM!** It is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or **AAPS** is not working correctly.
 
-#### **Your pod ***WILL NOT*** stop delivering insulin when it is not connected to AAPS**.
+#### Your pod **WILL NOT** stop delivering insulin when it is not connected to AAPS.
 Default basal rates are programmed on the pod on activation as defined in the current active [**Profile**](../SettingUpAaps/YourAapsProfile.md).  
 As long as **AAPS** is operational it will send basal rate adjustment commands that run for a maximum of 120 minutes.  
 When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod ➜ phone distance) the pod will automatically fall back to default basal rates as defined in your [**Profile**](../SettingUpAaps/YourAapsProfile.md).
@@ -125,7 +125,7 @@ The table below describes the button functions on the Dash tab:
 1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
    ![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)  
-    
+   
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)  
 
 2. The **Fill Pod** screen is displayed. Fill a new pod with **at least 80 units** of insulin and listen for two beeps indicating that the pod is ready to be primed.  
@@ -329,7 +329,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ### Buttons
 
-**The table below describes each button and it's function:**
+**The table below describes each button and its function:**
 
 | Button | Function
 |----------|----------
@@ -337,7 +337,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 | ![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png)   | Navigates to the Pod management menu. |
 | ![ack_alert_logo](../images/DASH_images/ack_alert_logo.png)  | When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).<br> *• Button is displayed only when pod time is past expiration warning time.*<br> *• Upon successful dismissal, this icon will no longer appear.* |
 | ![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) | Resumes the currently suspended insulin delivery in the active pod. |
-     
+
 ### Pod Management Menu
 
 Below is describes the purpose of each icon on the **Pod Management** menu, accessed by pressing **POD MGMT (1)** button from the **DASH** tab.
@@ -415,12 +415,12 @@ The Notification section allows the user to select their preferred notifications
 
 **The table below describes each setting and it's function:**
 
-| Setting Name                                              | Function |
-|-----------------------------------------------------------|----------|
-| **Sound for uncertain TBR notifications enabled:**        | Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a TBR was successfully set.        |
-| **Sound for uncertain SMB notifications enabled:**        | Enable or disable this setting to trigger an audible alert and visual notification when **AAPS**is uncertain if an SMB was successfully delivered. |
-| **Sound for uncertain bolus notifications enabled:**      | Enable or disable this setting to trigger an audible alert and visual notification when **AAPS**is uncertain if a bolus was successfully delivered. |
-| **Sound when delivery suspended notifications enabled:**  | Enable or disable this setting to trigger an audible alert and visual notification when suspend delivery was successfully delivered. |
+| Setting Name                                             | Function                                                     |
+| -------------------------------------------------------- | ------------------------------------------------------------ |
+| **Sound for uncertain TBR notifications enabled:**       | Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a TBR was successfully set. |
+| **Sound for uncertain SMB notifications enabled:**       | Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if an SMB was successfully delivered. |
+| **Sound for uncertain bolus notifications enabled:**     | Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a bolus was successfully delivered. |
+| **Sound when delivery suspended notifications enabled:** | Enable or disable this setting to trigger an audible alert and visual notification when suspend delivery was successfully delivered. |
 
 ## Actions (ACT) Tab
 
@@ -453,7 +453,7 @@ Additional note:
 
 (omnipod-dash-delivery-suspended)=
 
-This section covers common known issues and solutions for Omnipod DASH use with AAPS. There is also [General Troubleshooting](GettingHelp/GeneralTroubleshooting.html) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
+This section covers common known issues and solutions for Omnipod DASH use with AAPS. There is also [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
 
 ---
 
@@ -465,10 +465,7 @@ Some members of the community have been running into issues with Pod activation 
 
 #### **Android 16**
 
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1, as this versions has fixes added to specifically address known problems introduced in Android 16 for Omnipod. 
-- More info here: 
-  - [Cannot start omnipod with android 16](GettingHelp/GeneralTroubleshooting.html#cannot-start-omnipod-with-android-16)
-  - [Github issue - Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471)
+- Android 16 needs at a minimum **AAPS** version 3.3.2.1, as this versions has fixes added to specifically address [known problems](../GettingHelp/GeneralTroubleshooting.md#cannot-start-omnipod-with-android-16) introduced in Android 16 for Omnipod. 
 
 #### **Apps that use the "Nearby devices" Android permission**
 
@@ -482,16 +479,11 @@ Apps in this list have been discussed in one or more places in the community as 
 
 ***NOTE:** If you wish to update any info in this table please ping @XiTatiON on #omnipod-dash Discord channel.*
 
-| Application Name              | Details / Info / Notes | Where was this reported / Link(s) to info |
-|-------------------------------|------------------------|-------------------------------------------|
-| myBMW                         | MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK.| • Discord: #omnipod-dash by multiple people <br> • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471)<br> • Github issue: [Medtrum Pump unreachable after 2 minutes](https://github.com/nightscout/AndroidAPS/issues/4011) |
-| Amazon Alexa                  | Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IOT devices | • Discord: #omnipod-dash by multiple people<br> • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
-| Samsung Galaxy Wearable       | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
-| myChevrolet                   | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
-| Android Auto                  | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
-| MINI app                      | Appears the app is based on myBMW app and might mirror it's behavior as a result | • Discord: #omnipod-dash by multiple people <br> | 
-| Mammotion                     | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
-| Kinomap                       | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
+| Application Name              | Details / Info / Notes |
+|-------------------------------|------------------------|
+| myBMW                         | MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK.|
+| Amazon Alexa                  | Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IOT devices |
+| MINI app                      | Appears the app is based on myBMW app and might mirror it's behavior as a result |
 
 #### **How to revoke "Nearby device" permissions for other apps:**
 If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android. It may be necessary to revoked the permission for other apps while activating a new Pod.
@@ -543,7 +535,7 @@ Follow this procedure to revoked the "Nearby device" permission for all apps exc
    ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)  
 
 3. To show hidden system apps Press on the **Three Dotted Lines (Hamburger) (1)**, then Press on **"Show System (1)"**. You should now be able to see the hidden system app in the list **Android Auto (3)**.  
- 
+
    ***NOTE:** If an app is revoked you will need to scroll down until you see the list of revoked apps lower down in the list.*
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png) 
