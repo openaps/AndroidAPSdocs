@@ -14,6 +14,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 * On pod activation, **AAPS** will find and connect to a new DASH pod.
 * Expected range: 5-10 meters (YMMV).
 
+(omnipod-dash-hardware-software-requirements)=
 ## Donanım/Yazılım Gereksinimleri
 
 * DASH is identified by blue needle cap.
