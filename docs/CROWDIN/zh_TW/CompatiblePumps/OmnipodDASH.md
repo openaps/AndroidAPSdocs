@@ -14,6 +14,7 @@
 * Pod 啟動時，**AAPS**將尋找並連接到新的DASH Pod 。
 * 預期範圍：5-10公尺（依個人情況而異）。
 
+(omnipod-dash-hardware-software-requirements)=
 ## 硬體/軟體要求
 
 * DASH以藍色針頭蓋識別。
