@@ -54,6 +54,7 @@ When installing **AAPS** for the first time, the **Setup Wizard** will guide new
 
 When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up **AAPS** (see option 2).
 
+(omnipod-dash-option-2-config-builder)=
 ### Seçenek 2: Konfigürasyon ayarları
 
 On an existing installation you can select the **DASH** pump from the Config builder:
