@@ -24,7 +24,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 - The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to take a setting export after each pod activation to allow a restore of that pods activation state if something happens to your rig. 
 - When setting a new basil profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basil profile won't automatically re-start see section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
 - If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
-- There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#Troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
+- There are a number of known issues with Bluetooth which can cause pod activation problems. See [Troubleshooting](#Troubleshooting) for advice on Bluetooth issues, specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
   
 ## Hardware/Software Requirements
 
@@ -32,33 +32,34 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-- **A Compatible Android phone** with a Bluetooth Low Energy (BLE) / Bluetooth connection (see [Phones](../Getting-Started/Phones.md) for more info), additionally the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
+- **A Compatible Android phone** with a Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info), additionally the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
     -  The **AAPS** Omnipod Dash driver connects with the DASH Pod using Bluetooth.  
       **AAPS** will automatically establish a new Bluetooth connection to the Pod every time it needs to send a command (e.g a Bolus), after sending the command the Bluetooth connection is immediately disconnected.  
-       - **NOTE:** The Bluetooth connection can be interrupted/disturbed by other Bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... Devices like this can cause connection errors or pod activation issues on some models of phones. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&amp;single=true) list for known working configurations before committing to a new rig built around Omnipod DASH.
-       - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#Troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
+       - **NOTE:** 
+         - The Bluetooth connection can be interrupted/disturbed by other Bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... Devices like this can cause connection errors or pod activation issues on some models of phones. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&amp;single=true) list for known working configurations before committing to a new rig built around Omnipod DASH.
+         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#Troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
     - For **Android 15** or below: You **MUST** use **Version 3.0 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, however it's advisable to run the latest released version of Master branch.
     - For **Android 16**: you **MUST** use **Version 3.3.2.1 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, due to Android 16 changing how it's bluetooth works any version earlier than 3.3.2.1 will likely cause pod failures and/or activation issues. For more info read the [Github issue - Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471)]
 - A supported [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-The instructions below explain how to activate a new pod session using **AAPS**. You should wait for your current Pod to be close expiry, as you will need to activate a new Pod with **AAPS**. Once a pod is cancelled it cannot be reused/re-activated, the disconnection is final.
+The instructions below explain how to activate a new pod session using **AAPS**. You should wait for your current Pod to be close expiry, as you will need to activate a new Pod with **AAPS**. Once a pod is de-activated it cannot be reused/re-activated, the de-activation is final.
 
 ## Before You Begin
 
-**Ensure you have read and understand all the [Omnipod and AAPS Constraints and Issues](#omnipod-dash-known-aaps-constraints/issues)**
+**Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as the [Omnipod and AAPS Constraints and Issues](#omnipod-dash-known-aaps-constraints/issues)** to avoid running into a known problem.
 
-#### **SAFETY FIRST** - you should not try to connect **AAPS** to a pod for the first time without having access to all of the following:
+#### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
 1. Extra pods (3 or more spare)
 2. Spare Insulin and MDI equipment
 3. A working Omnipod PDM (In case **AAPS** fails)
-4. Supported Phones are a must!Hardware/Software RequirementsHardware/Software Requirements
-5. Correct version of AAPS built and installed (See [Hardware/Software Requirements](#Hardware/Software-Requirements))
+4. Supported Phones are a must! (See [Hardware/Software Requirements](#Hardware/Software-Requirements))
+5. Correct version of AAPS built and installed
 
 #### **Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.**  
 - Before using **AAPS** you or your care giver would have had to manage the Pod using the Ominipod PDM (or in some regions a Phone app) to send commands to your DASH (e.g a Bolus).  
 - The DASH can only facilitate a single Bluetooth device (e.g PDM or Phone) connection to manage and send commands.  
-- The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate a DASH with your Android phone using **AAPS**, **you will no longer be able to use your PDM with that pod!**. For the time that Pod is active the **AAPS** Dash driver running on your Android phone is now the new PDM for your pod.  
-- **DO NOT Throw away your PDM!**, it is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or **AAPS** is not working correctly.*
+- The device that successfully activates the pod is the only device allowed to communicate with that Pod from that point forward. This means that once you activate a DASH with your Android phone using **AAPS**, **you will no longer be able to use your PDM with that pod!** For the time that Pod is active the **AAPS** Dash driver running on your Android phone is now the new PDM for your pod.  
+- **DO NOT Throw away your PDM!** It is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or **AAPS** is not working correctly.*
 
 #### **Your pod ***WILL NOT*** stop delivering insulin when it is not connected to AAPS**.
 Default basal rates are programmed on the pod on activation as defined in the current active [**Profile**](../SettingUpAaps/YourAapsProfile.md).  
@@ -102,15 +103,15 @@ Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the 
 
 ### Verification of Omnipod Driver Selection
 
-To verify that you have selected the DASH in **AAPS**, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab on **AAPS**. If this box is left unchecked, you’ll find the DASH tab in the hamburger menu upper left. 
+To verify that you have selected the DASH in **AAPS**, if you have **checked the box (4)**, **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab on **AAPS**. If this box is left unchecked, you’ll find the DASH tab in the hamburger menu upper left. 
 
 ![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
 ## Dash Configuration
 
-Please **swipe left** to the [**DASH tab**](#omnipod-dash-tab) where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
+**Swipe left** to the [**DASH tab**](#omnipod-dash-tab) where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
 
-The table below describes the button functions on the Dash tab
+The table below describes the button functions on the Dash tab:
 
 | Button                                                    | Function |
 |-----------------------------------------------------------|----------|
@@ -127,7 +128,7 @@ The table below describes the button functions on the Dash tab
     
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)  
 
-2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed.  
+2. The **Fill Pod** screen is displayed. Fill a new pod with **at least 80 units** of insulin and listen for two beeps indicating that the pod is ready to be primed.  
 
    ***NOTE:** When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.*  
 
@@ -146,30 +147,31 @@ The table below describes the button functions on the Dash tab
    
    ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-4. Next, prepare the infusion site ready to receive the new pod. Wash hands to avoid any risk of infection. Clean the infusion site by either using soap and water or an alcohol wipe to disinfect and let the skin air dry completely before proceeding. If you get skin irritation from the adhesive consider using a Barrier Wipe or Barrier Spray.  
+4. Next, prepare the infusion site ready to receive the new pod. Wash hands to avoid any risk of infection. Clean the infusion site by either using soap and water or an alcohol wipe to disinfect and let the skin air dry completely before proceeding.   
+   If you get skin irritation from the adhesive consider using a Barrier Wipe or Barrier Spray.  
 
-   Remove the pod's blue plastic needle cap. If you see something that sticks out of the pod or it looks unusual, STOP the process and start with a new pod. If everything looks OK, proceed to take off the white paper backing from the adhesive and stick the pod to the selected site on your body.  
+   Remove the pod's blue plastic needle cap. If you see something that sticks out of the pod or it looks unusual, **STOP** the process and start with a new pod. If everything looks **OK**, proceed to take off the white paper backing from the adhesive and stick the pod to the selected site on your body.  
    
    When finished, click on the **Next** button.  
 
    ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-5. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula**.  
+6. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula!**   
 
    ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
-6. After pressing **OK**, it may take some time before the DASH responds and inserts the cannula (1-2 minutes maximum). **Be patient!**
+7. After pressing **OK**, it may take some time before the DASH responds and inserts the cannula (1-2 minutes maximum). **Be patient!**
 
    ***NOTE:** Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
 
    ![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-7. A green checkmark is shown on the screen, and the **Next** button becomes available to select upon successful cannula insertion.   
+8. A green checkmark is shown on the screen, and the **Next** button becomes available to select upon successful cannula insertion.   
 Click on the **Next** button.
 
    ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-8. The **Pod activated** screen is displayed.  
+1. The **Pod activated** screen is displayed.  
 
    Click on the green **Finished** button. 
    
@@ -177,17 +179,17 @@ Click on the **Next** button.
 
    ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
-9. The **Pod management** menu screen should now display the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
+2. The **Pod management** menu screen should now display the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
 
     Click on the back button on your phone to return to the **DASH** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
 
-    For more details on the information displayed go to the [**DASH Tab**](#omnipod-dash-tab) section of this document.
+    ***NOTE:** For more details on the information displayed go to the [**DASH Tab**](#omnipod-dash-tab) section of this document.*
 
    ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
    
    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-   ***NOTE:** It is good practice to export settings AFTER activating the pod. Settings should be exported after each pod change and once a month, ensure you copy the exported settings file to a cloud storage location (e.g. Google Drive) or somewhere off your phone in case you loose your phone (see [**Export settings Doc**](../Maintenance/ExportImportSettings.md)).*
+   ***NOTE:** It is good practice to export settings AFTER activating the pod. Settings should be exported after each pod change and once a month, ensure you copy the exported settings file to a cloud storage location (e.g. Google Drive) or somewhere off your phone in case you loose your phone (see [**Export settings**](../Maintenance/ExportImportSettings.md)).*
 
 
 (omnipod-dash-deactivate-pod)=
@@ -257,7 +259,7 @@ When insulin delivery is suspended you will need to issue a command to instruct 
 
 The process below will show you how to acknowledge and dismiss pod beeps when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Dash alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
 
-***NOTE**: The SILENCE ALERTS button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the **SILENCE ALERTS** button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
+***NOTE**: The **SILENCE ALERTS (3)** button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the **SILENCE ALERTS** button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
 
 1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will be required soon.  
    You can verify this on the **DASH** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation), and the text will turn **red** after this time has passed.  
@@ -451,7 +453,7 @@ Additional note:
 
 (omnipod-dash-delivery-suspended)=
 
-This section covers common known issues and solutions for Omnipod use with AAPS. There is also [General Troubleshooting](GettingHelp/GeneralTroubleshooting.html) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
+This section covers common known issues and solutions for Omnipod DASH use with AAPS. There is also [General Troubleshooting](GettingHelp/GeneralTroubleshooting.html) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
 
 ---
 
@@ -472,7 +474,7 @@ Some members of the community have been running into issues with Pod activation 
 
 Android allows you to control what each app is able to do or access on your phone via a permission model. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to bluetooth, scan for nearby devices etc. 
 
-AAPS requires a number of specific permission to function, one which is required ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
+**AAPS** requires a number of specific permission to function, one which is required ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
 
 #### **Apps that use "Nearby device" permissions and are known to have caused problems:**
 
@@ -492,11 +494,11 @@ Apps in this list have been discussed in one or more places in the community as 
 | Kinomap                       | None | • Github issue: [Can't connect to Omnipod DASH pods after Android 15 upgrade](https://github.com/nightscout/AndroidAPS/issues/3471) |
 
 #### **How to revoke "Nearby device" permissions for other apps:**
-If you are facing issues activating a new Pod and you are running on the correct supported version of AAPS for your version of Android. It may be necessary to revoked the permission for other apps while activating a new Pod.
+If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android. It may be necessary to revoked the permission for other apps while activating a new Pod.
 
 Follow this procedure to revoked the "Nearby device" permission for all apps except **AAPS**:
 
-***NOTE:** The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Other manufactures and devices will likely not exactly match these, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.*
+***NOTE:** The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Other manufactures and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.*
 
 1. Open Android settings on your phone, scroll down and press on **Security and privacy (1)**.
 
@@ -520,7 +522,7 @@ Follow this procedure to revoked the "Nearby device" permission for all apps exc
    
    To avoid bricking more pods we advise everyone initially to revoke the permission on all apps except **AAPS**.
 
-   ***NOTE:** If you are unsure which app is causing you an issue, disable them all (remember to check the list of known problem apps too and start with those) and if you can spare a few bricked pods on the way, enable the permission on one new app before every new Pod activation, until you can narrow down which app specifically causes your Pod issues.*
+   ***NOTE:** If you are unsure which app is causing you an issue, disable them all (remember to check the list of known problem apps too and start with those) and if you can spare a few bricked pods on the way, enable the permission on one new app before every new Pod activation, until you can narrow down which app specifically causes your Pod issues. If you do identify new problematic apps please let us know on the #omnipod-dash Discord channel.*
 
    ![android_nearby_dev](../images/android_16/android_nearby_dev.png)  
 
@@ -540,11 +542,13 @@ Follow this procedure to revoked the "Nearby device" permission for all apps exc
 
    ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)  
 
-3. To show hidden system apps Press on the **Three Dotted Lines (Hamburger) (1)**, then Press on **"Show System (1)"**. You should now be able to see the hidden system app in the list **Android Auto (3)**.
+3. To show hidden system apps Press on the **Three Dotted Lines (Hamburger) (1)**, then Press on **"Show System (1)"**. You should now be able to see the hidden system app in the list **Android Auto (3)**.  
+ 
+   ***NOTE:** If an app is revoked you will need to scroll down until you see the list of revoked apps lower down in the list.*
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png) 
 
-4. Follow the guidance in **"How to revoke "Nearby device" permissions for other apps"** in reverse to re-enable permissions for each app.
+5. Follow the guidance in **"How to revoke "Nearby device" permissions for other apps"** in reverse to re-enable permissions for each app.
 
 ---
 ### Delivery suspended
@@ -565,7 +569,7 @@ Follow this procedure to revoked the "Nearby device" permission for all apps exc
 ### Pod Failures
 
 - Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. 
-- It is best practice not to raise support / replacement cases with Insulet, since AAPS is not an approved method of using the pods.
+- It is best practice not to raise support / replacement cases with Insulet, since AAPS is not an approved method of using the Pods.
 - A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
 
 ---
