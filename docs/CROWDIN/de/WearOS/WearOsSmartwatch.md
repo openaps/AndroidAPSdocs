@@ -1,8 +1,8 @@
 # AAPS auf Deiner Wear OS-Smartwatch einrichten
 
-Die untenstehende Anleitung gilt für die **AAPS Wear**-apk, die Du auf die gleiche Art wie die **AAPS**-Smartphone-apk erstellst. (Wenn Du das noch nicht getan hast, dann findest Du [hier](../WearOS/BuildingAapsWearOS.md) eine Anleitung dazu wie Du das machen kannst.)
+The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
 
-Du kannst auch einige der Informationen für die direkt in [GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4) verfügbaren **AAPSClient** und **PumpControl** **Wear** APKs verwenden. Jede **Wear**-App kommuniziert mit der zugehörigen Smartphone-App. Beispiel: Die **AAPSClient Wear**-App kann **AAPSClient**-Daten anzeigen, aber keine **AAPS**-Daten.
+You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with it's matching phone app. Beispiel: Die **AAPSClient Wear**-App kann **AAPSClient**-Daten anzeigen, aber keine **AAPS**-Daten.
 
 ## Wear OS-Versionen und Kompatibilität
 
