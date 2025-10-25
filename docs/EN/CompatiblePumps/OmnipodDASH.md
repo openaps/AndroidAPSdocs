@@ -14,18 +14,20 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 - On pod activation, **AAPS** will find and connect to a new DASH pod.
 - Expected range from phone: 5-10 meters (YMMV).
 
-(#omnipod-dash-known-aaps-constraints-issues)=
+(#omnipod-dash-constraints)=
 
 ## Omnipod DASH known AAPS constraints/issues
 - Android 16 requires **AAPS** version 3.3.2.1 or later.
 - General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
-- Too frequent basal updates may cause basal insulin delivery [problems]((https://github.com/nightscout/AndroidAPS/issues/4158)) with Omnipod Dash. When using **SMB**, limit the interval to 5 minutes minimum to avoid this issue.
+- Too frequent basal updates may cause basal insulin delivery [problems](https://github.com/nightscout/AndroidAPS/issues/4158) with Omnipod Dash. When using **SMB**, limit the interval to 5 minutes minimum to avoid this issue.
 - Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
 - The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to export settings after each pod activation to allow a restore of that pods activation state if something happens to your rig. 
 - When setting a new basal profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basal profile won't automatically re-start. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
 - If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
-- There are a number of known issues with Bluetooth which can cause pod activation problems. See [Troubleshooting](#Troubleshooting) for advice on Bluetooth issues, specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
-  
+- There are a number of known issues with Bluetooth which can cause pod activation problems. See [Troubleshooting](#troubleshooting) for advice on Bluetooth issues, specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
+
+(hardware-software-requirements)=
+
 ## Hardware/Software Requirements
 
 - Omnipod DASH is identified by the blue needle cap.
@@ -37,7 +39,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
       **AAPS** will automatically establish a new Bluetooth connection to the Pod every time it needs to send a command (e.g a Bolus), after sending the command the Bluetooth connection is immediately disconnected.  
        - **NOTE:** 
          - The Bluetooth connection can be interrupted/disturbed by other Bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... Devices like this can cause connection errors or pod activation issues on some models of phones. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&amp;single=true) list for known working configurations before committing to a new rig built around Omnipod DASH.
-         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#Troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
+         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
     - For **Android 15** or below: You **MUST** use **Version 3.0 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, however it's advisable to run the latest released version.
     - For **Android 16**: you **MUST** use **Version 3.3.2.1 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, due to Android 16 changing how its Bluetooth works. Any version earlier than 3.3.2.1 will likely cause pod failures and/or activation [issues](https://github.com/nightscout/AndroidAPS/issues/3471). 
 - A supported [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
@@ -46,13 +48,13 @@ The instructions below explain how to activate a new pod session using **AAPS**.
 
 ## Before You Begin
 
-Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as  **[Omnipod and AAPS Constraints and Issues](#omnipod-dash-known-aaps-constraints/issues)** to avoid running into a known problem.
+Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as  **[Omnipod and AAPS Constraints and Issues](#omnipod-dash-constraints)** to avoid running into a known problem.
 
 #### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
 1. Extra pods (3 or more spare)
 2. Spare Insulin and MDI equipment
 3. A working Omnipod PDM (In case **AAPS** fails)
-4. Supported Phones are a must! (See [Hardware/Software Requirements](#Hardware/Software-Requirements))
+4. Supported Phones are a must! (See [Hardware/Software Requirements](#hardware-software-requirements))
 5. Correct version of AAPS built and installed
 
 #### **Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.**  
@@ -111,12 +113,9 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
 **Swipe left** to the [**DASH tab**](#omnipod-dash-tab) where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
 
-The table below describes the button functions on the Dash tab:
+![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png)	'Refresh' pod connectivity and status, be able to silence pod alarms when the pod beeps
 
-| Button                                                    | Function |
-|-----------------------------------------------------------|----------|
-|![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png)    | 'Refresh' pod connectivity and status, be able to silence pod alarms when the pod beeps |
-| ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) | 'Pod Management' (Activate, Deactivate, Play test beep, and Pod history) |
+![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png)	'Pod Management' (Activate, Deactivate, Play test beep, and Pod history)
 
 (omnipod-dash-activate-pod)=
 
@@ -308,35 +307,67 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ### Fields
 
-**The table below describes what each field / value is when viewing the Dash tab information:**
 
-| Field                     | Function
-|---------------------------|----------
-| **Bluetooth Address:**    | Displays the current bluetooth address of the connected Pod. |
-| **Bluetooth Status:**     | Displays the current connection status. |
-| **Sequence Number:**      | Displays the sequence number of the active POD. |
-| **Firmware Version:**     | Displays the firmware version for the active connection. |
-| **Time on Pod:**          | Displays the current time on the Pod. |
-| **Pod status:**           | Displays the Pod status. |
-| **Last connection:**      | Displays time of last communication with the Pod.<ul><li>*Moments ago* - less than 20 seconds ago.</li><li>*Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.</li><li> *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)</li><li>*XX minutes ago* - more than 2 minutes ago as defined by the value of XX</li></ul>  |
-| **Last bolus:**           | Displays the amount of the last bolus sent to the active pod and how long ago it was issued in parenthesis. |
-| **Base Basal rate:**      | Displays the basal rate programmed for the current time from the basal rate profile. |
-| **Temp basal rate:**      | Displays the currently running Temporary Basal Rate in the following format<ul><li>{Units per hour} @{TBR start time}  ({minutes run}/{total minutes TBR will be run})</li><li>Example:* 0.00U/h @18:25 ( 90/120 minutes)</li></ul> |
-| **Reservoir:**            | Displays over 50+U left when more than 50 units are left in the reservoir. Below 50 U, the exact units are displayed. |
-| **Total delivered:**      | Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming. |
-| **Errors:**               | Displays the last error encountered. Review the [Pod history](#omnipod-dash-view-pod-history) and log files for past errors and more detailed information. |
-| **Active pod alerts:**    | Reserved for currently running alerts on the active pod. |
+
+- **Bluetooth Address:** Displays the current bluetooth address of the connected Pod.
+
+- **Bluetooth Status:**  Displays the current connection status.
+
+- **Sequence Number:** Displays the sequence number of the active POD.
+
+- **Firmware Version:** Displays the firmware version for the active connection.
+
+- **Time on Pod:** Displays the current time on the Pod.
+
+- **Pod status:** Displays the Pod status.
+
+- **Last connection:** Displays time of last communication with the Pod.
+
+  - *Moments ago* - less than 20 seconds ago.
+
+  - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
+
+  - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
+
+  - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
+
+- **Last bolus:** Displays the amount of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
+
+- **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
+
+- **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
+  - {Units per hour} @{TBR start time}  ({minutes run}/{total minutes TBR will be run})
+
+  - Example:* 0.00U/h @18:25 ( 90/120 minutes)
+
+- **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below 50 U, the exact units are displayed.
+
+- **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming.
+
+- **Errors:** Displays the last error encountered. Review the [Pod history](#omnipod-dash-view-pod-history) and log files for past errors and more detailed information.
+
+- **Active pod alerts:** Reserved for currently running alerts on the active pod.
+
+
 
 ### Buttons
 
-**The table below describes each button and its function:**
+![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png)	Sends a refresh command to the active pod to update communication.
 
-| Button | Function
-|----------|----------
-| ![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png)     | Sends a refresh command to the active pod to update communication.<br>*• Use to refresh the pod status and dismiss status fields that contain the text (uncertain).*<br>*• See the [Troubleshooting](#omnipod-dash-troubleshooting) section below for additional information.* |
-| ![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png)   | Navigates to the Pod management menu. |
-| ![ack_alert_logo](../images/DASH_images/ack_alert_logo.png)  | When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).<br> *• Button is displayed only when pod time is past expiration warning time.*<br> *• Upon successful dismissal, this icon will no longer appear.* |
-| ![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) | Resumes the currently suspended insulin delivery in the active pod. |
+  - *Use to refresh the pod status and dismiss status fields that contain the text (uncertain).*
+
+  - *See the [Troubleshooting](#omnipod-dash-troubleshooting) section below for additional information.*
+
+![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png)	Navigates to the Pod management menu.
+
+![ack_alert_logo](../images/DASH_images/ack_alert_logo.png)	When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
+
+  - *Button is displayed only when pod time is past expiration warning time.*
+  -  *Upon successful dismissal, this icon will no longer appear.*
+
+![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png)	Resumes the currently suspended insulin delivery in the active pod.
+
+
 
 ### Pod Management Menu
 
@@ -348,12 +379,12 @@ Below is describes the purpose of each icon on the **Pod Management** menu, acce
 
 **The table below describes each button and it's function:**
 
-| Button | Function
-|--------|----------
-| 1      | Access the Pod Mgmt settings 
+| Button | Function                                                     |
+| ------ | ------------------------------------------------------------ |
+| 1      | Access the Pod Mgmt settings                                 |
 | 2      | [**Activate Pod**](#omnipod-dash-activate-pod): Primes and activates a new pod. |
-| 3      | [**Deactivate Pod**](#omnipod-dash-deactivate-pod): Deactivates the currently active pod.|
-| 4      | **Play Test Beep** : Plays a single test beep on the pod when pressed.|
+| 3      | [**Deactivate Pod**](#omnipod-dash-deactivate-pod): Deactivates the currently active pod. |
+| 4      | **Play Test Beep** : Plays a single test beep on the pod when pressed. |
 | 5      | [**Pod history**](#omnipod-dash-view-pod-history) : Displays the active pod activity history. |
 
 
@@ -379,14 +410,15 @@ The settings groups are listed below; you can enable or disable via a toggle swi
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
-**The table below describes each setting and it's function:**
+**Bolus beeps enabled:**	Enable or disable confirmation beeps when a bolus is delivered.
 
-| Setting Name               | Function |
-|----------------------------|----------|
-| **Bolus beeps enabled:**   | Enable or disable confirmation beeps when a bolus is delivered. |
-| **Basal beeps enabled:**   | Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-| **SMB beeps enabled:**     | Enable or disable confirmation beeps when a SMB is delivered. |
-| **TBR beeps enabled:**     | Enable or disable confirmation beeps when a TBR is set or canceled. |
+**Basal beeps enabled:**	Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
+
+**SMB beeps enabled:**	Enable or disable confirmation beeps when a SMB is delivered.
+
+**TBR beeps enabled:**	Enable or disable confirmation beeps when a TBR is set or canceled.
+
+
 
 ### Alerts
 
@@ -396,14 +428,15 @@ Provides **AAPS** alerts for pod expiration, shutdown, low reservoir based on th
 
 ***NOTE:** an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
 
-**The table below describes each setting and it's function:**
+**Expiration reminder enabled:**	Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 
-| Setting Name                     | Function |
-|----------------------------------|----------|
-| **Expiration reminder enabled:** | Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached. |
-| **Hours before shutdown:**       | Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert. |
-| **Low reservoir alert enabled:** | Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field. | 
-| **Number of units:**             | The number of units at which to trigger the pod low reservoir alert. |
+**Hours before shutdown:**	Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
+
+**Low reservoir alert enabled:**	Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
+
+**Number of units:**	The number of units at which to trigger the pod low reservoir alert.
+
+
 
 ### Notifications
 
@@ -413,14 +446,13 @@ The Notification section allows the user to select their preferred notifications
 
 ***NOTE:** These are notifications only, no audible beep alerts are made.*
 
-**The table below describes each setting and it's function:**
+**Sound for uncertain TBR notifications enabled:**	Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a TBR was successfully set.
 
-| Setting Name                                             | Function                                                     |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
-| **Sound for uncertain TBR notifications enabled:**       | Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a TBR was successfully set. |
-| **Sound for uncertain SMB notifications enabled:**       | Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if an SMB was successfully delivered. |
-| **Sound for uncertain bolus notifications enabled:**     | Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a bolus was successfully delivered. |
-| **Sound when delivery suspended notifications enabled:** | Enable or disable this setting to trigger an audible alert and visual notification when suspend delivery was successfully delivered. |
+**Sound for uncertain SMB notifications enabled:**	Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if an SMB was successfully delivered.
+
+**Sound for uncertain bolus notifications enabled:**	Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a bolus was successfully delivered.
+
+**Sound when delivery suspended notifications enabled:** 	Enable or disable this setting to trigger an audible alert and visual notification when suspend delivery was successfully delivered.
 
 ## Actions (ACT) Tab
 
@@ -479,11 +511,13 @@ Apps in this list have been discussed in one or more places in the community as 
 
 ***NOTE:** If you wish to update any info in this table please ping @XiTatiON on #omnipod-dash Discord channel.*
 
-| Application Name              | Details / Info / Notes |
-|-------------------------------|------------------------|
-| myBMW                         | MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK.|
-| Amazon Alexa                  | Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IOT devices |
-| MINI app                      | Appears the app is based on myBMW app and might mirror it's behavior as a result |
+**myBMW**	MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
+
+**Amazon Alexa**	Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IOT devices
+
+**MINI app**	Appears the app is based on myBMW app and might mirror it's behavior as a result
+
+
 
 #### **How to revoke "Nearby device" permissions for other apps:**
 If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android. It may be necessary to revoked the permission for other apps while activating a new Pod.
