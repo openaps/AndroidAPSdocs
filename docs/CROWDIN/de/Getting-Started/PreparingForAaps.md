@@ -219,8 +219,8 @@ Das Smartphone sollte regelmäßig Sicherheitsupdates erhalten und stets auf der
 
 ```{admonition} delaying Samsung phones updates
 :class: Warnung
-Samsung hält unglücklicherweise einen Rekord an erzwungenen Updates nach denen Bluetooth-Verbindungsprobleme auftreten. Um diese Zwangsupdates zu deaktivieren, musst Du das Smartphone in den „Entwicklermodus“ schalten:
- Gehe zu Einstellungen - Telefoninfo - Softwareinformationen und tippe so lange auf „Buildnummer“, bis die Meldung über den aktivierten Entwicklermodus erscheint. Gehe zurück in die Einstellungen und Du solltest ganz unten einen neuen Eintrag "Entwickleroptionen" finden. Öffne die Entwickleroptionen und scrolle bis zum Punkt "System automat. aktualisieren" und deaktiviere diese Option
+Samsung hält unglücklicherweise einen Rekord an erzwungenen Updates nach denen Bluetooth-Verbindungsprobleme auftreten. To disable these forced updates you need to switch the phone to "developer mode" by:
+ go to settings and about then software information, then tap build number until it confirms you have unlocked developer mode. Gehe zurück in die Einstellungen und Du solltest ganz unten einen neuen Eintrag "Entwickleroptionen" finden. Öffne die Entwickleroptionen und scrolle bis zum Punkt "System automat. aktualisieren" und deaktiviere diese Option
 ```
 
 ```{admonition} Google Play Protect potential Issue
