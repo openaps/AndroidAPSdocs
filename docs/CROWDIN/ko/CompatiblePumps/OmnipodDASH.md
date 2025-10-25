@@ -14,6 +14,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 * On pod activation, **AAPS** will find and connect to a new DASH pod.
 * Expected range: 5-10 meters (YMMV).
 
+(omnipod-dash-hardware-software-requirements)=
 ## Hardware/Software Requirements
 
 * DASH is identified by blue needle cap.
@@ -53,6 +54,7 @@ When installing **AAPS** for the first time, the **Setup Wizard** will guide new
 
 When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up **AAPS** (see option 2).
 
+(omnipod-dash-option-2-config-builder)=
 ### Option 2: The Config Builder
 
 On an existing installation you can select the **DASH** pump from the Config builder:
