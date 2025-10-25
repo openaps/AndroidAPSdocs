@@ -1,8 +1,8 @@
 # 在你的 Wear OS 手錶上設置 AAPS
 
-下面的說明適用於你需要建置的**AAPS Wear** apk（如果尚未建置，請參閱[這裡](../WearOS/BuildingAapsWearOS.md)），因為你已經建置了手機的**AAPS** apk。
+The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
 
-你還可以使用一些信息用於**AAPSClient**和**PumpControl**的**Wear** apk，這些信息可以直接在[GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)中找到。 每個**Wear**應用都將與其一致的手機應用進行通信。 例如：**AAPSClient Wear**應用可用於顯示**AAPSClient**資料，而不是**AAPS**資料。
+You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with it's matching phone app. 例如：**AAPSClient Wear**應用可用於顯示**AAPSClient**資料，而不是**AAPS**資料。
 
 ## Wear OS 版本和相容性
 
