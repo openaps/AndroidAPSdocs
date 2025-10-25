@@ -219,8 +219,8 @@ Používateľom sa odporúča, aby si vo svojich telefónoch udržiavali aktuál
 
 ```{admonition} delaying Samsung phones updates
 :class: warning
-Spoločnosť Samsung je známa tým ze vnucuje aktualizácie svojich telefónov, ktoré potom spôsobujú problémy s pripojením Bluetooth. Ak chcete tieto vynútené aktualizácie zakázať, musíte telefón prepnúť do „režimu vývojára“ takto:
-Prejdite do nastavení a potom do sekcie „O aplikácii“, potom do sekcie „Informácie o softvéri“. Potom ťuknite na číslo zostavy, kým sa nepotvrdí, že ste odomkli režim vývojára. Vrátite sa do hlavnej ponuky nastavení a mali by ste vidieť novú položku ponuky možností pre vývojárov. Otvorte možnosti pre vývojárov a posúvaním vyhľadajte automatickú aktualizáciu systému a vypnite ju
+Spoločnosť Samsung je známa tým ze vnucuje aktualizácie svojich telefónov, ktoré potom spôsobujú problémy s pripojením Bluetooth. To disable these forced updates you need to switch the phone to "developer mode" by:
+ go to settings and about then software information, then tap build number until it confirms you have unlocked developer mode. Vrátite sa do hlavnej ponuky nastavení a mali by ste vidieť novú položku ponuky možností pre vývojárov. Otvorte možnosti pre vývojárov a posúvaním vyhľadajte automatickú aktualizáciu systému a vypnite ju
 ```
 
 ```{admonition} Google Play Protect potential Issue
