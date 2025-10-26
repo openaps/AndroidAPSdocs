@@ -5,8 +5,6 @@
 
 值得注意的是，与G6相比，G7和ONE+系统无论在应用程序还是读取器中都不会对数值进行平滑处理。 更多详情请参见[此处](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
 
-![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
-
 ```{admonition} Smoothing method 
 请参阅[Dexcom G7/ONE+/Stelo适用的平滑方法建议](../CompatibleCgms/SmoothingBloodGlucoseData.md)
 ```
@@ -20,14 +18,19 @@
 
 ## 2.  修补版 Dexcom G7 应用程序 (DiaKEM)
 
+```{admonition} No new users
+:class: warning
+Latest Dexcom servers update broke DiaKEM for new installs: the G7 app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
+Existing users do not experience issues for now: do not logout, wipe data, or reinstall the G7 app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
+New users are recommended to use [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+```
+
 **注意：需要 AAPS 3.2.0.0 或更高版本！ 不适用于 ONE+。**
 
 ### 安装新的修补版 (\!) G7 应用程序并启动传感器
 
-WARNING --- [BYODA](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)--- There are reported issues **AAPS** receiving no BG data when using either BYODA & DiaKEM as its data source. Users are recommended to use [X-Drip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
 
-
-修补版 Dexcom G7 应用程序 (DiaKEM) 可访问 Dexcom G7 数据。 这不是 BYODA 应用程序，因为此应用程序目前无法接收 G7 数据。
+A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
 - 若您先前使用过原版Dexcom应用，请将其卸载（正在进行的传感器会话可继续使用——注意：卸载应用前请记录传感器代码！）
 
@@ -55,7 +58,7 @@ WARNING --- [BYODA](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaF
 
 ## 4. Juggluco
 
-需要 9.0+ 版本
+Version 9.0+ required
 
 - 请禁用先前连接传感器的应用：卸载该应用或使用"强制停止"功能。 在应用设置中禁用"附近设备"权限。 限制应用程序的电池使用量。
 
