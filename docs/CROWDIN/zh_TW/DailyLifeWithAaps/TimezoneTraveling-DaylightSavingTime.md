@@ -14,9 +14,9 @@
 
 ### 方案1：保持家庭時間並時間調整設定
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+* 在手機設定中關閉「自動日期和時間」（手動更改時區）。
 
-* Phone must keep your standard time as at home for the whole travel period.
+* 手機在整個旅程期間必須保持與家中相同的標準時間。
 
 * 根據家庭時間與目的地時間的時差，時間調整你的設定。
    
