@@ -118,7 +118,6 @@ Here are examples how to find them on specific android phones.
 * [Všeobecne](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [Libre 2](#Libre2-experiences-and-troubleshooting)
 * [xDrip - no CGM data](#xdrip-identify-receiver)
 * [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
