@@ -14,8 +14,10 @@
 
 ### 方案1：保持家庭時間並時間調整設定
 
-* 在手機設定中關閉「自動日期和時間」（手動更改時區）。
-* 手機在整個旅行期間必須保持為你的家庭標準時間。
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+
+* Phone must keep your standard time as at home for the whole travel period.
+
 * 根據家庭時間與目的地時間的時差，時間調整你的設定。
    
    * 長按設定名稱（主畫面頂部中間部分）。
@@ -26,7 +28,6 @@
    
    * 例如：維也納 -> 紐約：設定切換 +6 小時
    * 例如：維也納 -> 悉尼：設定切換 -8 小時
-* 如果使用[修補版 LibreLink 應用程式](#libre2-patched-librelink-app-with-xdrip)，可能無法選擇，因為必須設置自動時區才能啟動新的 Libre 2 傳感器。
 
 ### 方案2：刪除幫浦歷史紀錄
 
