@@ -15,7 +15,9 @@ To avoid this there are two possibilities:
 ### Option 1: Keep home time and timeshift profile
 
 * Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+
 * Phone must keep your standard time as at home for the whole travel period.
+
 * Time-shift your profile according to time difference between home time and destination time.
    
    * Long-press profile name (middle of top section on homescreen)
@@ -26,7 +28,6 @@ To avoid this there are two possibilities:
    
    * i.e. Vienna -> New York: profile switch +6 hours
    * i.e. Vienna -> Sydney: profile switch -8 hours
-* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Option 2: Delete pump history
 
