@@ -20,9 +20,11 @@
 
 ```{admonition} No new users
 :class: warning
-Latest Dexcom servers update broke DiaKEM for new installs: the G7 app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
-Existing users do not experience issues for now: do not logout, wipe data, or reinstall the G7 app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
-New users are recommended to use [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+Dexcom 伺服器的最新更新導致新安裝的 DiaKEM 無法使用：G7 應用程式在全新安裝後，無法順利完成登入與設定流程。 
+現有使用者目前不會遇到問題：
+請不要登出、清除資料或重新安裝 G7 應用程式，否則將導致無法再次啟動與使用該應用程式。 如果應用程式已經在執行中，則不會受到影響。
+建議新使用者暫時改用 [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) 作為 **AAPS** 的血糖資料來源，
+直到此問題被修復為止。
 ```
 
 **注意：需要 AAPS 3.2.0.0 或更高版本！ 不適用於 ONE+。**
@@ -30,7 +32,7 @@ New users are recommended to use [xDrip+](https://androidaps.readthedocs.io/en/l
 ### 安裝新的修補版 G7 應用程式並啟動傳感器
 
 
-A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+修補版 Dexcom G7 應用程式 (DiaKEM) 可查看 Dexcom G7 資料。 這不是 BYODA 應用程式，因為該應用程式目前無法接收 G7 資料。
 
 - 如果之前有使用過原Dexcom應用程式，請將其解除安裝（如果傳感器正在運作，可以繼續使用傳感器，請在移除應用程式前記下傳感器代碼！）
 
@@ -58,7 +60,7 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 ## 4. Juggluco
 
-Version 9.0+ required
+需要版本 9.0 以上
 
 - 停用之前連接到傳感器的應用程式：卸載應用程式或使用「強制停止」。 在應用程式設定中停用「附近設備」權限。 限制應用程式的電池使用。
 
