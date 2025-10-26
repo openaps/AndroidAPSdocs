@@ -14,8 +14,10 @@ To avoid this there are two possibilities:
 
 ### Opción 1: Conservar la zona horaria original el perfil de tiempo
 
-* Apague Automático de fecha y hora "en la configuración del teléfono (cambio manual de zona horaria).
-* El teléfono debe mantener su tiempo estándar como en casa durante todo el período de viaje.
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+
+* Phone must keep your standard time as at home for the whole travel period.
+
 * Cambie el tiempo de su perfil de acuerdo a la diferencia horaria entre la hora de su casa y la hora de destino.
    
    * Pulsación larga en el nombre del perfil (en el medio de la sección superior de la pantalla)
@@ -26,7 +28,6 @@ To avoid this there are two possibilities:
    
    * p.e. Viena -> Nueva York: cambio de perfil +6 horas
    * p.e. Viena -> Sydney: cambio de perfil -8 horas
-* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Opción 2: Suprimir historial de bomba
 
