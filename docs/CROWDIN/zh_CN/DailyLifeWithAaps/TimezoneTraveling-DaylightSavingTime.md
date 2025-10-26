@@ -14,8 +14,10 @@
 
 ### 选项1：保持家乡时间并使用时间偏移配置文件
 
-* 在手机设置中关闭“自动日期和时间”（手动更改时区）。
-* 手机在整个旅行期间必须保持家乡的标准时间。
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+
+* Phone must keep your standard time as at home for the whole travel period.
+
 * 根据家乡时间和目的地时间之间的时差，调整你的配置文件。
    
    * 长按配置文件名称（主屏幕顶部中间位置）
@@ -26,7 +28,6 @@
    
    * 例如，维也纳到纽约：配置文件切换+6小时；
    * 维也纳到悉尼：配置文件切换-8小时。
-* 如果使用[打了补丁的LibreLink应用](#libre2-patched-librelink-app-with-xdrip)，则可能无法使用此选项，因为必须设置自动时区才能启动新的Libre 2传感器。
 
 ### 选项2：删除泵的历史记录
 
