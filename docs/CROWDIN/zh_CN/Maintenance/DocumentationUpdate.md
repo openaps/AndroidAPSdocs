@@ -1,5 +1,11 @@
 # 文档更新与变更
 
+## October 2025
+
+- DiaKEM and BYODA: new installs don't work after servers upgrade @psonnera
+- Removed Libre 2 patched app (obsolete): doesn't work with new sensors @psonnera
+- Reworked Omnipod Dash page @XiTatiON
+
 ## August 2025
 
 - Updated versions and Android Studio prerequisites
@@ -62,7 +68,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 
 ## 2021年11月
 
-- [Libre 2传感器](#Libre2-best-practices-for-calibrating-a-libre-2-sensor)的最佳校准实践
+- Best practices for calibrating a libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md)影响表述的修改
 - 更新[Android Studio故障排除](../GettingHelp/TroubleshootingAndroidStudio)
 - 移除已废弃的[Dexcom](../CompatibleCgms/DexcomG6.md)补丁应用
@@ -121,7 +127,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 
 ## 2020年6月
 
-- [Libre 2](../CompatibleCgms/Libre2.md) - 更多关于补丁Libre Link应用和蓝牙发射器使用的细节
+- Libre 2 - more details patched Libre Link app & use of bluetooth transmitters
 - [跨时区旅行](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) 使用Libre 2注意事项
 
 ## 2020年5月
@@ -129,7 +135,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 - [仅Dana和Insight泵可用的扩展输注](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [Insight停用振动](#Accu-Chek-Insight-Pump-vibration)（仅适用于固件3.x）
 - [最小请求速率](#Preferences-minimal-request-change)以减少开环模式下的通知次数
-- [Libre Link补丁应用](#libre2-patched-librelink-app-with-xdrip) - 检查是否正确补丁
+- Patched Libre Link app - check if correctly patched
 - [预测线](#aaps-screens-prediction-lines) - 更多详细信息
 
 ## 2020年4月
