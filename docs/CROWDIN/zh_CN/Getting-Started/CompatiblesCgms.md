@@ -11,9 +11,9 @@
 
 | CGM                                                    | Available [BG Sources](#Config-Builder-bg-source)                                                                    |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
-| [德康 G7](../CompatibleCgms/DexcomG7.md)                 | [xDrip+](../CompatibleCgms/xDrip.md), DiaKEM app or [Juggluco](../CompatibleCgms/Juggluco.md)                        |
+| [德康 G7](../CompatibleCgms/DexcomG7.md)                 | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                                    |
 | [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md) | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                 |
-| [Dexcom G6](../CompatibleCgms/DexcomG6.md)             | [xDrip+](../CompatibleCgms/xDrip.md) or BYODA                                                                        |
+| [Dexcom G6](../CompatibleCgms/DexcomG6.md)             | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                 |
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)            | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                 |
 | [Dexcom G5](../CompatibleCgms/DexcomG5.md)             | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                 |
 | [Libre 3/3+](../CompatibleCgms/Libre3.md)              | [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip+)                                                   |
@@ -38,8 +38,8 @@
 
 | 传感器                   |                                                         CGM 应用                                                         |
 | --------------------- |:----------------------------------------------------------------------------------------------------------------------:|
-| Dexcom G5/G6          |                                           BYODA, xDrip+ (**Direct, Native**)                                           |
-| 德康 G7                 |                DiaKEM, xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)                 |
+| Dexcom G5/G6          |                                              xDrip+ (**Direct, Native**)                                               |
+| 德康 G7                 |                    xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)                     |
 | Dexcom ONE/ONE+/Stelo |                                              xDrip+ (**Direct, Native**)                                               |
 | Libre 2/2+ (EU)       | xDrip+ (OOP2 **no calibration**), </br>Juggluco (**xDrip broadcast** without xDrip+, or **Patched Libre** with xDrip+) |
 | Libre 2/2+/3/3+       |                    Juggluco (**xDrip broadcast** without xDrip+, or **Patched Libre** with xDrip+)                     |
