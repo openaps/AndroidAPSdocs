@@ -1,5 +1,11 @@
 # Docs Updates & Änderungen
 
+## October 2025
+
+- DiaKEM and BYODA: new installs don't work after servers upgrade @psonnera
+- Removed Libre 2 patched app (obsolete): doesn't work with new sensors @psonnera
+- Reworked Omnipod Dash page @XiTatiON
+
 ## August 2025
 
 - Updated versions and Android Studio prerequisites
@@ -62,7 +68,7 @@ AAPS 3.1 Dokumentation ist [hier](https://androidaps.readthedocs.io/en/3.1/index
 
 ## November 2021
 
-- Best Practices für die Kalibrierung eines [Libre 2 Sensors](#Libre2-best-practices-for-calibrating-a-libre-2-sensor)
+- Best practices for calibrating a libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) Neuformulierung der Wirkweise
 - Aktualisierung [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
 - Gepatchte [Dexcom](../CompatibleCgms/DexcomG6.md)-App entfernt, da nicht mehr erforderlich
@@ -121,7 +127,7 @@ AAPS 3.1 Dokumentation ist [hier](https://androidaps.readthedocs.io/en/3.1/index
 
 ## Juni 2020
 
-- [Libre 2](../CompatibleCgms/Libre2.md) - weitere Details zu gepatchten Libre Link-App und zu Bluetooth-Transmittern
+- Libre 2 - more details patched Libre Link app & use of bluetooth transmitters
 - [Reisen über Zeitzonen](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) mit Libre 2
 
 ## Mai 2020
@@ -129,7 +135,7 @@ AAPS 3.1 Dokumentation ist [hier](https://androidaps.readthedocs.io/en/3.1/index
 - [Verzögerter Bolus nur für Dana + Insight Pumpen](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [Insight Vibration deaktivieren](#Accu-Chek-Insight-Pump-vibration) (nur Firmware 3.x)
 - [Kleinste Anforderungsrate](#Preferences-minimal-request-change), um die Anzahl der Benachrichtigungen im Open Loop zu verringern
-- [Patched Libre Link-App](#libre2-patched-librelink-app-with-xdrip) - prüfen, ob korrekt gepatcht wurde
+- Patched Libre Link app - check if correctly patched
 - [Vorhersagelinien](#aaps-screens-prediction-lines) - mehr Details
 
 ## April 2020
