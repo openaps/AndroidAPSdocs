@@ -118,7 +118,6 @@ Voici des exemples pour les trouver sur des téléphones Android spécifiques.
 * [General](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [Libre 2](#Libre2-experiences-and-troubleshooting)
 * [xDrip - pas de données MGC](#xdrip-identify-receiver)
 * [Dépannage xDrip - Dexcom](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
