@@ -14,6 +14,7 @@
 * Pod 啟動時，**AAPS**將尋找並連接到新的DASH Pod 。
 * 預期範圍：5-10公尺（依個人情況而異）。
 
+(omnipod-dash-hardware-software-requirements)=
 ## 硬體/軟體要求
 
 * DASH以藍色針頭蓋識別。
@@ -53,6 +54,7 @@
 
 如果有疑慮，你也可以選擇“虛擬幫浦”，稍後在設置**AAPS**後選擇“DASH”（請參見選項2）。
 
+(omnipod-dash-option-2-config-builder)=
 ### 選項 2：組態建置工具
 
 在現有安裝中，你可以從組態建置工具中選擇**DASH**幫浦：

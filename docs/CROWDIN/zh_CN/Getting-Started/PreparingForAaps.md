@@ -219,8 +219,8 @@ In addition to the medical warnings in the [safety section](#preparing-safety-fi
 
 ```{admonition} delaying Samsung phones updates
 :class:警告
-三星有着不幸的记录，他们强制推送手机更新，而这些更新却导致了蓝牙连接问题。 要禁用强制更新功能，需通过以下步骤启用手机的"开发者模式"：
-前往设置 → 进入「关于手机」 → 选择「软件信息」 → 连续点击「版本号」直至系统提示已开启开发者模式。 返回到主设置菜单，您应该会看到一个新的‘开发者选项’菜单项。 打开开发者选项，滚动查找‘自动系统更新’并将其关闭。
+三星有着不幸的记录，他们强制推送手机更新，而这些更新却导致了蓝牙连接问题。 To disable these forced updates you need to switch the phone to "developer mode" by:
+ go to settings and about then software information, then tap build number until it confirms you have unlocked developer mode. 返回到主设置菜单，您应该会看到一个新的‘开发者选项’菜单项。 打开开发者选项，滚动查找‘自动系统更新’并将其关闭。
 ```
 
 ```{admonition} Google Play Protect potential Issue

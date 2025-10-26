@@ -220,7 +220,7 @@ Les utilisateurs sont encouragés à faire les mises à jour de version Android 
 ```{admonition} delaying Samsung phones updates
 :class: warning
 Samsung est malheureusement connu pour forcer les mises à jour sur leurs téléphones, ce qui cause des problèmes de connectivité bluetooth. To disable these forced updates you need to switch the phone to "developer mode" by:
- go to settings and about then software information, then tap build number u til it confirms you have unlocked developer mode. Retournez au menu principal des paramètres, ici ou dans "Système", vous trouverez un nouvel élément de menu "Options pour les développeurs". Ouvrez ce menu et faites défiler jusqu'à trouver l'option de mise à jour automatique du système et désactivez-la
+ go to settings and about then software information, then tap build number until it confirms you have unlocked developer mode. Retournez au menu principal des paramètres, ici ou dans "Système", vous trouverez un nouvel élément de menu "Options pour les développeurs". Ouvrez ce menu et faites défiler jusqu'à trouver l'option de mise à jour automatique du système et désactivez-la
 ```
 
 ```{admonition} Google Play Protect potential Issue
