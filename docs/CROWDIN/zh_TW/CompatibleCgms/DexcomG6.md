@@ -1,7 +1,5 @@
 # Dexcom G6 和 ONE
 
-警告 --- [BYODA](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)--- 有回報指出，當以 BYODA 與 DiaKEM 作為資料來源時，**AAPS** 可能無法接收到血糖資料。 建議使用者在問題解決前，先將 [X-Drip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) 設為 **AAPS** 的血糖資料來源。
-
 ## 基本事項
 
 -   遵循一般 CGM 衛生和傳感器設定建議，[點擊此處](../CompatibleCgms/GeneralCGMRecommendation.md)了解更多。
@@ -33,7 +31,14 @@
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## 如果使用 G6 配合自製 Dexcom 應用程式
 
--   [自製 Dexcom 應用程式](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)（BYODA）支援本地廣播到 AAPS 和/或 xDrip+（不適用於 G5/ONE/G7 傳感器！）
+```{admonition} No new users
+:class: warning
+Latest Dexcom servers update broke BYODA for new installs: the app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
+Existing users do not experience issues for now: do not logout, wipe data, or reinstall the BYODA app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
+New users are recommended to use [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+```
+
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+ (**not for** **G5/ONE/G7 sensors!**)
 
 ![BYODA 廣播選項](../images/BYODA.png)
 
