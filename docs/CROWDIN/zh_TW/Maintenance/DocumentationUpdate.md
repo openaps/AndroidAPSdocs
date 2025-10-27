@@ -1,5 +1,11 @@
 # 文件更新與變更
 
+## 2025年10月
+
+- DiaKEM 和 BYODA：伺服器升級後，新安裝的版本無法正常運作 @psonnera
+- 移除了 Libre 2 修補版應用程式（已淘汰）： 該版本無法與新感測器搭配使用 @psonnera
+- Reworked Omnipod Dash page @XiTatiON
+
 ## 2025年8月
 
 - 已更新版本和 Android Studio 的前置需求
@@ -62,7 +68,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2021年11月
 
-- 校正 [Libre 2 傳感器](#Libre2-best-practices-for-calibrating-a-libre-2-sensor) 的最佳方法
+- 校正 Libre 2 傳感器 的最佳方法
 - [ISF](../UsefulLinks/FAQ.md) 影響的重新表述
 - 更新[Android Studio問題排除](../GettingHelp/TroubleshootingAndroidStudio)
 - 移除已修補的[Dexcom](../CompatibleCgms/DexcomG6.md)應用程式，因為它已過時
@@ -121,7 +127,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2020年6月
 
-- [Libre 2](../CompatibleCgms/Libre2.md) - 有關已修補的 Libre Link 應用及藍牙傳輸器使用的更多細節
+- Libre 2 - 有關已修補的 Libre Link 應用及藍牙傳輸器使用的更多細節
 - [隨時區旅行](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) 透過 Libre 2
 
 ## 2020年5月
@@ -129,7 +135,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 - [延長注射僅適用於 Dana 和 Insight 幫浦](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [Insight 停用震動](#Accu-Chek-Insight-Pump-vibration)（韌體 3.x 僅限）
 - [最小請求率](#Preferences-minimal-request-change) 以減少開放迴路模式中的通知數量
-- [已修補的 Libre Link 應用](#libre2-patched-librelink-app-with-xdrip) - 檢查是否已正確修補
+- 已修補的 Libre Link 應用 - 檢查是否已正確修補
 - [預測線](#aaps-screens-prediction-lines) - 更多細節
 
 ## 2020年4月

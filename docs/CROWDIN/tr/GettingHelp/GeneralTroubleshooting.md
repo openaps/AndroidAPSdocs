@@ -118,7 +118,6 @@ Bunları belirli android telefonlarda nasıl bulacağınıza dair örnekler aşa
 * [General](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [Libre 2](#Libre2-experiences-and-troubleshooting)
 * [xDrip - CGM verisi yok](#xdrip-identify-receiver)
 * [xDrip - Dexcom sorun giderme](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 

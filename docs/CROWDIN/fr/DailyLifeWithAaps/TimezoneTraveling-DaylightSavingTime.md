@@ -14,8 +14,10 @@ Pour éviter cela, il y a deux possibilités :
 
 ### Option 1 : Garder l'heure du domicile et décaler temporairement le profil
 
-* Désactiver l'option 'Date et heure automatiques' dans les paramètres de votre téléphone (changement de fuseau horaire manuel).
-* Le téléphone doit conserver votre heure normale comme à la maison pendant toute la période de voyage.
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+
+* Phone must keep your standard time as at home for the whole travel period.
+
 * Faites un décalage horaire de votre profil en fonction de la différence de temps entre l'heure de la maison et l'heure de destination.
    
    * Faites un appui long sur le nom du profil (au milieu de la section du haut sur la page d'accueil)
@@ -26,7 +28,6 @@ Pour éviter cela, il y a deux possibilités :
    
    * par ex. Vienne -> New York : Changement de profil +6 heures
    * par ex. Vienne -> Sydney : Changement de profil -8 heures
-* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Option 2: Supprimer l'historique de la pompe
 

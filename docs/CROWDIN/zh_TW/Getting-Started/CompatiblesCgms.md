@@ -11,9 +11,9 @@
 
 | CGM                                                  | 可用的[血糖資料來源](#Config-Builder-bg-source)                                                                   |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [Dexcom G7](../CompatibleCgms/DexcomG7.md)           | [xDrip+](../CompatibleCgms/xDrip.md)、DiaKEM 應用程式或 [Juggluco](../CompatibleCgms/Juggluco.md)              |
+| [Dexcom G7](../CompatibleCgms/DexcomG7.md)           | [xDrip+](../CompatibleCgms/xDrip.md) 或 [Juggluco](../CompatibleCgms/Juggluco.md)                         |
 | [Dexcom ONE+ 和 Stelo](../CompatibleCgms/DexcomG7.md) | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
-| [Dexcom G6](../CompatibleCgms/DexcomG6.md)           | [xDrip+](../CompatibleCgms/xDrip.md) 或 BYODA                                                             |
+| [Dexcom G6](../CompatibleCgms/DexcomG6.md)           | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)          | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
 | [Dexcom G5](../CompatibleCgms/DexcomG5.md)           | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
 | [Libre 3/3+](../CompatibleCgms/Libre3.md)            | [Juggluco](../CompatibleCgms/Juggluco.md)（可搭配或不搭配 xDrip+ 使用）                                             |
@@ -38,8 +38,8 @@
 
 | 傳感器                   |                                        CGM 應用程式                                        |
 | --------------------- |:--------------------------------------------------------------------------------------:|
-| Dexcom G5/G6          |                                BYODA、xDrip+ （**直連，原生**）                                |
-| Dexcom G7             |            DiaKEM、xDrip+ （**直連，原生**），</br>Juggluco （**xDrip 廣播** 不帶 xDrip+）            |
+| Dexcom G5/G6          |                                   xDrip+ （**直連，原生**）                                   |
+| Dexcom G7             |              xDrip+（**直連、原生**），</br>Juggluco（**透過 xDrip 廣播**，不需安裝 xDrip+）              |
 | Dexcom ONE/ONE+/Stelo |                                   xDrip+ （**直連，原生**）                                   |
 | Libre 2/2+ (歐盟)       | xDrip+ （OOP2 **無需校正**），</br>Juggluco （**xDrip 廣播** 不帶 xDrip+，或 **修補版 Libre** 與 xDrip+） |
 | Libre 2/2+/3/3+       |               Juggluco （**xDrip 廣播** 不帶 xDrip+，或 **修補版 Libre** 與 xDrip+）               |

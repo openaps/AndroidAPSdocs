@@ -1,7 +1,5 @@
 # Dexcom G6 和 ONE
 
-警告 --- [BYODA](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)--- 有回報指出，當以 BYODA 與 DiaKEM 作為資料來源時，**AAPS** 可能無法接收到血糖資料。 建議使用者在問題解決前，先將 [X-Drip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) 設為 **AAPS** 的血糖資料來源。
-
 ## 基本事項
 
 -   遵循一般 CGM 衛生和傳感器設定建議，[點擊此處](../CompatibleCgms/GeneralCGMRecommendation.md)了解更多。
@@ -33,7 +31,16 @@
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## 如果使用 G6 配合自製 Dexcom 應用程式
 
--   [自製 Dexcom 應用程式](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)（BYODA）支援本地廣播到 AAPS 和/或 xDrip+（不適用於 G5/ONE/G7 傳感器！）
+```{admonition} No new users
+:class: warning
+Dexcom 伺服器的最新更新導致新安裝的 BYODA 出現問題：該應用程式在全新安裝後，無法順利完成登入與設定流程。 
+現有使用者目前不會遇到問題：
+請不要登出、清除資料或重新安裝 BYODA 應用程式，否則將導致無法再次啟動與使用該應用程式。 如果應用程式已經在執行中，則不會受到影響。
+建議新使用者暫時改用 [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) 作為 **AAPS** 的血糖資料來源，
+直到此問題被修復為止。
+```
+
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)（BYODA）支援向 AAPS 及／或 xDrip+ 進行本機廣播（**不適用於** **G5／ONE／G7 傳感器！**）
 
 ![BYODA 廣播選項](../images/BYODA.png)
 

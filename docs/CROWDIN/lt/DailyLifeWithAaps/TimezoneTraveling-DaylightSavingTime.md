@@ -14,8 +14,10 @@ To avoid this there are two possibilities:
 
 ### Pasirinkimas Nr. 1: "Namų" laiko nustatymas ir laiko poslinkio nustatymas profilyje
 
-* Išjunkite "Automatinį laiko ir datos" nustatymą telefone (rankinis laiko zonos pasirinkimas).
-* Telefonas turi veikti Jūsų gyvenamosios vietos laiku visos kelionės metu. 
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+
+* Phone must keep your standard time as at home for the whole travel period.
+
 * Pakeiskite laiko poslinkį profilyje, atsižvelgdami į gyvenamosios vietos ir esamos vietos laiko skirtumą. 
    
    * AndroidAPS programoje spauskite (ilgas paspaudimas) ant profilio (viršutinėje eilutėje vidurinis mygtukas)
@@ -26,7 +28,6 @@ To avoid this there are two possibilities:
    
    * pvz.: Viena -> Niujorkas: profilio perjungimas +6 valandos
    * pvz.: Viena -> Sidnėjus: profilio perjungimas -8 valandos
-* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Pasirinkimas Nr. 2: Pompos istorijos ištrynimas
 

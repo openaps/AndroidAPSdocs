@@ -14,8 +14,10 @@ To avoid this there are two possibilities:
 
 ### Επιλογή 1: Διατήρηση του προφίλ ώρας και χρονικής μετατόπισης
 
-* Απενεργοποιήστε την "Αυτόματη ημερομηνία και ώρα" στις ρυθμίσεις του τηλεφώνου σας (αλλαγή σε χειροκίνητης ζώνη ώρας).
-* Το τηλέφωνο πρέπει να διατηρεί τον κανονικό σας χρόνο όπως στο σπίτι για ολόκληρη την περίοδο ταξιδιού.
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+
+* Phone must keep your standard time as at home for the whole travel period.
+
 * Χρονική μετατόπιση του προφίλ σας σύμφωνα με τη χρονική διαφορά μεταξύ του χρόνου στο σπίτι και του χρόνου προορισμού.
    
    * Παρατεταμένο πάτημα στο όνομα προφίλ (στη μέση της κορυφαίας ενότητας στην αρχική οθόνη)
@@ -26,7 +28,6 @@ To avoid this there are two possibilities:
    
    * π.χ. Βιέννη -> Νέα Υόρκη: διακόπτης προφίλ +6 ώρες
    * π.χ. Βιέννη -> Σίδνεϊ: διακόπτης προφίλ -8 ώρες
-* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Επιλογή 2: Διαγραφή ιστορικού αντλίας
 

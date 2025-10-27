@@ -118,7 +118,6 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 * [Allgemein](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [Libre 2](#Libre2-experiences-and-troubleshooting)
 * [xDrip - fehlende CGM Daten](#xdrip-identify-receiver)
 * [xDrip - Dexcom Problembehandlung](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 

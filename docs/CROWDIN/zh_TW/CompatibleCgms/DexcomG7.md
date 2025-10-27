@@ -5,8 +5,6 @@
 
 值得注意的是，與 G6 相比，G7 和 ONE+ 系統在應用程式和讀取器中都不會平滑值。 更多詳細資訊請參閱 [這裡](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
 
-![G7 英文](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
-
 ```{admonition} Smoothing method 
 請閱讀 [平滑方法](../CompatibleCgms/SmoothingBloodGlucoseData.md) 建議，以用於 Dexcom G7/ONE+/Stelo
 ```
@@ -20,11 +18,18 @@
 
 ## 2.  修補版 Dexcom G7 應用程式 (DiaKEM)
 
+```{admonition} No new users
+:class: warning
+Dexcom 伺服器的最新更新導致新安裝的 DiaKEM 無法使用：G7 應用程式在全新安裝後，無法順利完成登入與設定流程。 
+現有使用者目前不會遇到問題：
+請不要登出、清除資料或重新安裝 G7 應用程式，否則將導致無法再次啟動與使用該應用程式。 如果應用程式已經在執行中，則不會受到影響。
+建議新使用者暫時改用 [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) 作為 **AAPS** 的血糖資料來源，
+直到此問題被修復為止。
+```
+
 **注意：需要 AAPS 3.2.0.0 或更高版本！ 不適用於 ONE+。**
 
 ### 安裝新的修補版 G7 應用程式並啟動傳感器
-
-警告 --- [BYODA](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)--- 有回報指出，當以 BYODA 與 DiaKEM 作為資料來源時，**AAPS** 可能無法接收到血糖資料。 建議使用者在問題解決前，先將 [X-Drip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) 設為 **AAPS** 的血糖資料來源。
 
 
 修補版 Dexcom G7 應用程式 (DiaKEM) 可查看 Dexcom G7 資料。 這不是 BYODA 應用程式，因為該應用程式目前無法接收 G7 資料。

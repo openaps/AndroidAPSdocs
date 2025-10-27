@@ -118,7 +118,6 @@
 * [一般問題](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [Libre 2](#Libre2-experiences-and-troubleshooting)
 * [xDrip - 無 CGM 資料](#xdrip-identify-receiver)
 * [xDrip - Dexcom 問題排除](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 

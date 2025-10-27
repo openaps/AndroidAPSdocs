@@ -118,7 +118,6 @@ Upgrade to minimum version of AndroidAPS: 3.3.2.1.
 * [常规](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [Libre 2](#Libre2-experiences-and-troubleshooting)
 * [xDrip - 无 CGM 数据](#xdrip-identify-receiver)
 * [xDrip - Dexcom 故障排除](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 

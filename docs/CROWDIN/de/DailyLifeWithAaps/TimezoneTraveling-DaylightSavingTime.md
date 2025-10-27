@@ -14,8 +14,10 @@ Um dies zu vermeiden, gibt es zwei Möglichkeiten:
 
 ### Option 1: Heimatzeit beibehalten und Time Shift des Profils
 
-* Schalte die automatische Einstellung von Datum und Uhrzeit in Deinem Smartphone aus (manueller Zeitzonen-Wechsel).
-* Dein Smartphone muss für die gesamte Reise auf Datum und Zeit Deines Heimatortes eingestellt bleiben.
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+
+* Phone must keep your standard time as at home for the whole travel period.
+
 * Führe einen Profilwechsel mit Zeitverschiebung entsprechend dem Zeitunterschied Deines Heimatortes zum Zielort durch.
    
    * Drücke lang auf den Profilnamen (oben in der Mitte auf dem Startbildschirm).
@@ -26,7 +28,6 @@ Um dies zu vermeiden, gibt es zwei Möglichkeiten:
    
    * z.B. Wien -> New York: Profilwechsel +6 Stunden
    * z.B. Wien -> Sydney: Profilwechsel -8 Stunden
-* Vermutlich keine Option, wenn Du die [gepatchte LibreLink-App](#libre2-patched-librelink-app-with-xdrip) nutzt, da zum Starten „Automatische Zeitzone“ im Smartphone aktiviert sein muss.
 
 ### Option 2: Pumpenhistorie löschen
 

@@ -14,8 +14,10 @@ Abychom se tomu vyhnuli, existují dvě možnosti:
 
 ### Možnost 1: Ponechat původní čas a posunout profil
 
-* Na telefonu v nastavení vypněte 'Automatická změna data a času' (ruční změna časového pásma).
-* Telefon musí mít po celou dobu cestování/pobytu nastaven standardní domácí čas.
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+
+* Phone must keep your standard time as at home for the whole travel period.
+
 * Posuňte v čase svůj profil podle rozdílu času doma a v cílové destinaci.
    
    * Dlouze přidržte název profilu (uprostřed horní části hlavní obrazovky)
@@ -26,7 +28,6 @@ Abychom se tomu vyhnuli, existují dvě možnosti:
    
    * např. Vídeň -> New York: posun času +6 hodin
    * např. Vídeň -> Sydney: posun času -8 hodin
-* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Možnost 2: Vymazat historii pumpy
 

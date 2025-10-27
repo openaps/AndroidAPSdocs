@@ -14,8 +14,10 @@ To avoid this there are two possibilities:
 
 ### Optie 1: Houd de tijdzone van thuis en doe een tijdverschuiving van je profiel
 
-* Schakel 'Automatische datum en tijd' uit in je telefooninstellingen (handmatige tijdzonewijziging).
-* Jouw telefoon moet op de standaard tijd van jouw thuisland blijven staan gedurende de hele reisperiode.
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+
+* Phone must keep your standard time as at home for the whole travel period.
+
 * Doe een tijdverschuiving van jouw profiel op basis van het tijdverschil tussen je thuisland en je reisbestemming.
    
    * Houd jouw profiel naam (bovenaan in het midden van jouw Overzicht-scherm) lang ingedrukt
@@ -26,7 +28,6 @@ To avoid this there are two possibilities:
    
    * Bijvoorbeeld Wenen-> New York: profiel wissel + 6 uur
    * Bijvoorbeeld Wenen-> Sydney: profiel wissel - 8 uur
-* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Optie 2: pomphistorie wissen
 

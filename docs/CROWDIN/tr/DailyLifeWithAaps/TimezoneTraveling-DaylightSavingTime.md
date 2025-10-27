@@ -14,8 +14,10 @@ Bunu önlemek için iki olasılık vardır:
 
 ### Seçenek 1: Yerel saati koruyarak profilde zaman kaydırma
 
-* Telefon ayarlarınızda 'Otomatik tarih ve saat'i özelliğini kapatın (manuel saat dilimi değişikliği).
-* Telefon, tüm seyahat süresi boyunca standart saatinizi yerelde olduğu gibi tutmalıdır.
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+
+* Phone must keep your standard time as at home for the whole travel period.
+
 * Ev konumunuz ile varış noktanız arasındaki zaman farkına göre zaman kaydırmalı bir profil değişikliği gerçekleştirin.
    
    * Profil adına uzun basın (ana ekranın üst ortası)
@@ -26,7 +28,6 @@ Bunu önlemek için iki olasılık vardır:
    
    * ör. Viyana -> New York: profil değiştirme +6 saat
    * ör. Viyana -> Sidney: profil değiştirme -8 saat
-* Probably not an option if using [patched LibreLink app](#libre2-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Seçenek 2: Pompa geçmişini sil
 
