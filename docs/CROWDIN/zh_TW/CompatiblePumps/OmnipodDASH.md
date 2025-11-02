@@ -6,7 +6,7 @@
 
 以下是**Omnipod DASH**（簡稱「DASH」）的規格，以及它與**Omnipod EROS**（簡稱「EROS」）的區別：
 
-- DASH 的 Pod 可藉由藍色針帽辨識（EROS 為透明針帽）。 這兩種 Pod 在物理尺寸上是相同的。
+- DASH 的 Pod 可藉由**藍色針帽辨識**（EROS 為透明針帽）。 這兩種 Pod 在物理尺寸上是相同的。
 - DASH 不需要 BLE 連結/橋接設備（無需 RileyLink、OrangeLink 或 EmaLink）。
 - DASH 的藍牙連線僅在傳送指令時（例如進行注射）使用，並會在發出指令後立即中斷連線。
 - 使用DASH時再也不會出現「無法連線到連結設備/ Pod 」的錯誤。
