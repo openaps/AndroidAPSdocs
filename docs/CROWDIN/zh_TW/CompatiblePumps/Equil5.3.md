@@ -1,4 +1,4 @@
-# Equil 5.3
+# Equil
 
 這些指示是用於配置 Equil 胰島素幫浦。
 
@@ -7,15 +7,15 @@
 §todo
 
 ## 硬體和軟體需求
-* **相容的 Equil 硬體**
+* **Compatible Equil hardware**
 
-§todo
+  Currently Equil 5.3 and 5.4 is supported
 
-* [AAPS 版本 3.3.0.0](#version3300) 或更新版本
+* [Version 3.3.0.0](#version3300) or newer of AAPS
 
 ### 選擇 Equil 幫浦
 
-在 [組態建置工具 > 幫浦](#Config-Builder-pump) 中，切換到 **Equil 5.3**。
+In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
 
 ### 設定
 
@@ -23,7 +23,7 @@
 
 ### 啟動貼片
 
-前往 Equil 標籤並按下 **配對 Equil 貼片幫浦**。
+Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
 
 ![overview.png](../images/Equil/overview.png)
 
@@ -32,3 +32,5 @@
 ![activate2.png](../images/Equil/activate2.png)
 
 ![activate3.png](../images/Equil/activate3.png)
+
+If you set different password than default 0000 (recommended for your safety), do not forget to store this password on a safe place. This password is stored to the pump. Then this password is asked on every next pairing attempt until you do proper unpairing in AAPS. This makes the pump also unusable with original PDA until you unpair pump from AAPS.
