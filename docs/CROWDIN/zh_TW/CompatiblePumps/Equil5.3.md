@@ -7,15 +7,15 @@
 §todo
 
 ## 硬體和軟體需求
-* **Compatible Equil hardware**
+* **相容的 Equil 硬體**
 
-  Currently Equil 5.3 and 5.4 is supported
+  目前支援 Equil 5.3 與 5.4。
 
-* [Version 3.3.0.0](#version3300) or newer of AAPS
+* [AAPS 版本 3.3.0.0](#version3300) 或更新版本
 
 ### 選擇 Equil 幫浦
 
-In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
+在 [組態建置工具 > 幫浦](#Config-Builder-pump) 中，切換到 **Equil 5.3**。
 
 ### 設定
 
@@ -23,7 +23,7 @@ In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
 
 ### 啟動貼片
 
-Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
+前往 Equil 標籤並按下 **配對 Equil 貼片幫浦**。
 
 ![overview.png](../images/Equil/overview.png)
 
@@ -33,4 +33,4 @@ Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
 
 ![activate3.png](../images/Equil/activate3.png)
 
-If you set different password than default 0000 (recommended for your safety), do not forget to store this password on a safe place. This password is stored to the pump. Then this password is asked on every next pairing attempt until you do proper unpairing in AAPS. This makes the pump also unusable with original PDA until you unpair pump from AAPS.
+如果你設定了不同於預設值「0000」的密碼（為了安全性建議這樣做），請務必將此密碼妥善儲存在安全的地方。 此密碼會儲存在幫浦中。 之後在每次嘗試重新配對時，都會要求輸入此密碼，直到你在 AAPS 中正確地解除配對為止。 這會導致在你從 AAPS 中解除配對之前，該幫浦無法與原廠 PDA 一同使用。
