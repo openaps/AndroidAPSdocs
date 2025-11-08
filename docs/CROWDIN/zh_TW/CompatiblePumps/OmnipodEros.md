@@ -39,7 +39,7 @@
 
 **安全第一** - 不要在無法從錯誤中恢復的環境中嘗試此過程（必備項包括額外的 pod、胰島素、已充電的 RileyLink 和手機設備）。
 
-**當 AAPS Omnipod 驅動程式啟用你的 pod 後，你的 Omnipod PDM 將無法再運作**。 以往你使用 Omnipod PDM 向 Omnipod Eros pod 發送指令。 Omnipod Eros pod 只允許單一裝置向其發送通訊。 從那時起，成功啟動 Pod 的裝置將是唯一能夠與其通訊的裝置。 這意味著你透過 AAPS Omnipod 驅動程式和 RileyLink 啟用了 Omnipod Eros pod，**你將無法再使用你的 PDM 與 pod 通訊**。 AAPS Omnipod 驅動程式與 RileyLink 現在是你的替代 PDM。 *這並不意味著你應該丟掉你的 PDM，建議保留他作為備用並在 AAPS 運作不正常時使用。*
+**當 AAPS Omnipod 驅動程式啟用你的 pod 後，你的 Omnipod PDM 將無法再運作**。 以往你使用 Omnipod PDM 向 Omnipod Eros pod 發送指令。 Omnipod Eros pod 只允許單一裝置向其發送通訊。 從那時起，成功啟動 Pod 的裝置將是唯一能夠與其通訊的裝置。 這意味著你透過 AAPS Omnipod 驅動程式和 RileyLink 啟用了 Omnipod Eros pod，**你將無法再使用你的 PDM 與 pod 通訊**。 AAPS Omnipod 驅動程式與 RileyLink 現在替代你的  PDM。 *這並不意味著你應該丟掉你的 PDM，建議保留他作為備用並在 AAPS 運作不正常時使用。*
 
 **你可以配置多個 RileyLink，但一次只能選擇一個 RileyLink 與 pod 通訊。** AAPS Omnipod 驅動程式支援在 RileyLink 配置中添加多個 RileyLink，但一次只能選擇一個 RileyLink 用來發送和接收通訊。
 
@@ -201,11 +201,11 @@
 
    > ![Deactivate_Pod_4](../images/omnipod/Deactivate_Pod_4.png)
    > 
-   > **如果停用失敗** 並且你未收到確認嗶聲，你可能會收到 **RileyLink 無回應** 或 **幫浦無回應訊息**。 請按 **重試 (1)** 按鈕再次嘗試停用。 如果停用持續失敗，請點擊 **丟棄幫浦 (2)** 按鈕遺棄幫浦。 你現在可以移除 Pod，因為該使用階段已停用。 如果你的幫浦發出尖叫警報，你可能需要手動將其靜音（使用別針或回形針），因為 **丟棄幫浦 (2)** 按鈕無法使其靜音。
+   > **如果停用失敗** 並且你未收到確認嗶聲，你可能會收到 **RileyLink 無回應** 或 **幫浦無回應訊息**。 請按 **重試 (1)** 按鈕再次嘗試停用。 如果停用持續失敗，請點擊 **丟棄幫浦 (2)** 按鈕遺棄幫浦。 你現在可以移除 Pod，該使用階段已停用。 如果你的幫浦發出尖叫警報，你可能需要手動將其靜音（使用別針或回形針），因為 **丟棄幫浦 (2)** 按鈕無法使其靜音。
    > 
    > > ![Deactivate_Pod_5](../images/omnipod/Deactivate_Pod_5.png)  ![Deactivate_Pod_6](../images/omnipod/Deactivate_Pod_6.png)
 
-4. 停用成功後會顯示綠色勾號。 點擊 **下一步** 按鈕以顯示 Pod 停用畫面。 你現在可以移除 Pod，因為該使用階段已停用。
+4. 停用成功後會顯示綠色勾號。 點擊 **下一步** 按鈕以顯示 Pod 停用畫面。 你現在可以移除 Pod，該使用階段已停用。
 
    > ![Deactivate_Pod_7](../images/omnipod/Deactivate_Pod_7.png)
 
@@ -591,7 +591,7 @@ Omnipod 驅動程式設置可透過左上角的**漢堡選單**中的**設置生
 
 ### 確認嗶聲提示
 
-提供來自藥筒的確認聲音提示，用於注射、基礎輸注、SMB以及TBR輸送和變更。
+提供來自藥筒的確認聲音提示，用於注射、基礎輸注、超微劑量(SMB)以及臨時基礎率(TBR)輸送和變更。
 
 - **\*注射嗶聲啟用：**啟用或停用在注射送達時的確認嗶聲聲。
 - **\*基礎率嗶聲啟用：**啟用或停用在設定新基礎率、取消啟動基礎率或更改目前基礎率時的確認嗶聲聲。
