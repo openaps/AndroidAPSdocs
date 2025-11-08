@@ -355,7 +355,7 @@
 
 ![重新整理圖示](../images/DASH_images/Refresh_LOGO.png) 傳送重新整理指令給作用中的 Pod，以更新通訊。
 
-  - *用於重新整理 Pod 狀態並消除顯示 (不確定) 訊息的狀態欄位。*
+  - *用於重新整理 Pod 狀態並消除顯示訊息的狀態欄位。*
 
   - *更多資訊請參閱下方的 [疑難排解](#omnipod-dash-troubleshooting) 章節。*
 
@@ -383,7 +383,7 @@
 | 按鈕 | 功能                                                         |
 | -- | ---------------------------------------------------------- |
 | 1  | 存取 Pod 管理設定                                                |
-| 2  | [**I啟動 Pod**](#omnipod-dash-activate-pod)：為新的 Pod 預充並註冊。   |
+| 2  | [**啟動 Pod**](#omnipod-dash-activate-pod)：為新的 Pod 預充並註冊。    |
 | 3  | [**停用 Pod**](#omnipod-dash-deactivate-pod)：停用目前作用中的 Pod。   |
 | 4  | **播放測試嗶聲**：按下時在 Pod 上播放一次測試嗶聲。                             |
 | 5  | [**Pod 歷史**](#omnipod-dash-view-pod-history)：顯示 Pod 的活動紀錄。 |
