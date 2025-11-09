@@ -16,26 +16,26 @@ When using **Dynamic ISF**, disable any temporary **Profile** change as an **Aut
 
 ```
 
-To use **Dynamic ISF**, **AAPS'** database requires a minimum of 7 days of the user's **AAPS** data.
+Для работы **динамического ISF**, база данных **AAPS** должна иметь пользовательские данные минимум за 7 дней.
 
-## What does Dynamic ISF do ?
+## Как работает Динамический ISF ?
 
-**Dynamic ISF** adapts the insulin sensitivity factor (**ISF**) dynamically based on the user's:
+**Динамический ISF** оперативно адаптирует коэффициент чувствительности к инсулину (**ISF**) в зависимости от потребностей пользователя:
 
-- Total Daily Dose of insulin (**TDD**); and
-- current and predicted blood glucose values.
+- Суммарной суточной дозы инсулина (**TDD**) и
+- текущего и прогнозируемого значения ГК.
 
-When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation  of the app).
+При использовании **динамического ISF** значения **ISF**, введенные в **Профиле**, больше не используются, за исключением тех случаев, когда в **AAPS** недостаточно данных в базе TDD (*, напр.* при  новой переустановке приложения).
 
-**SMB/AMA** - an example of a user's **Profile** with static **ISF** as set by the user and utilised by **SMB** and **AMA**.
+Алгоритмы **SMB/AMA** - пример ** профиля ** со статическим **ISF**, заданным пользователем.
 
 ![Static ISF](../images/DynamicISF/DynISF1.png)
 
-**Dynamic ISF** - an example of a user's **ISF** subject to change as determined by **Dynamic ISF**.
+Алгоритм **Динамического ISF** - пример **ISF**, который меняется в зависимости от работы этого алгоритма.
 
 ![Dyn ISF](../images/DynamicISF/DynISF2.png)
 
-The section circled in red shows: `profile ISF` -> `ISF as calculated by DynISF`. <br/> Taping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+Участок, обведенный красным кружком, показывает: `ISF профиля` -> `ISF, рассчитанный с помощью DynISF`. <br/> Taping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
 
 The **DynISF** value can also be shown in an additional graph, enabling “Variable sensitivity” data. It shows as a white line (see red arrow on the image above).
 
