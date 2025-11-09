@@ -35,7 +35,7 @@ When using **Dynamic ISF**, disable any temporary **Profile** change as an **Aut
 
 ![Dyn ISF](../images/DynamicISF/DynISF2.png)
 
-Участок, обведенный красным кружком, показывает: `ISF профиля` -> `ISF, рассчитанный с помощью DynISF`. <br/> Taping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+Участок, обведенный красным кружком, показывает: `ISF профиля` -> `ISF, рассчитанный с помощью DynISF`. <br/> При нажатии на этот участок отображается диалоговое окно с дополнительной информацией, такой как **ISF **для калькулятоа болюса и усвоения углеводов (см [ Другие варианты использования ISF](#dynisf-other-usages-of-isf) ниже).
 
 The **DynISF** value can also be shown in an additional graph, enabling “Variable sensitivity” data. It shows as a white line (see red arrow on the image above).
 
