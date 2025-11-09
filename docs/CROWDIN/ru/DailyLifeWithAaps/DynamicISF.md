@@ -1,39 +1,41 @@
 (возможности_Open-APS-DynamicISF)=
-# Dynamic ISF (DynISF)
+# Динамическое изменение коэффициента чувствительности к инсулину (DynISF)
 
-Up until now, with **AMA** and **SMB**, **ISF** was defined in the **Profile** and was static for each defined period in the day. But in reality, a person’s **ISF** is not that static and varies depending on their **BG** level: when at a high BG level, the user will need more insulin to bring their **BG** down 50mg/dL / 3mmol/L than compared to a lower  **BG**. [Autosens](#Open-APS-features-autosens) was the first algorithm to try and address this issue, by adjusting **ISF** outside of mealtimes.
+До недавнего времени, фактор чувствительности к инсулину **ISF** в алгоритмах **AMA** и **SMB**, задавался в ** профиле** и был статичным для каждого конкретного времени суток. На самом деле, **ISF** человека не статичен и варьируется в зависимости от уровня **ГК**: на высоких сахарах пользователю понадобится больше инсулина, чтобы опустить **ГК** на 50мг/дл / 3ммоль/л по сравнению с тем, когда у него низкая **ГК**. Первый алгоритм, который попытался устранить эту сложность был [Autosens](#Open-APS-features-autosens) который корректировал **ISF** вне времени приема пищи.
 
-**Dynamic ISF** (also called **DynISF**) serves the same purpose but is more advanced as it can be used at all times. It is recommended only for advanced users that have a good handle on their **AAPS**’ controls and monitoring. Read the [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf) below before trying it out.
+Алгоритм **Динамической чувствительности к инсулину** (также сокращенно именуемый **DynISF**) служит этой же цели, но более совершенен, т. к. работает в любое время. It is recommended only for advanced users that have a good handle on their **AAPS**’ controls and monitoring. Ознакомьтесь с документом [ Что следует учитывать при работе с динамическим ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf), приводимом ниже, прежде чем начать пользоваться этим алгоритмом.
 
 ```{admonition} CAUTION - Automations or Profile Percentage change
-:class: warning
+:класс: предупреждение
 
-**Automations** should always be used with care. This is particularly so with **Dynamic ISF**.
+**Средства автоматизации** всегда следует использовать с осторожностью. Особенно это касается **Динамического ISF**.
+
+При использовании **Динамической ISF** отключите любое временное изменение профиля, поскольку это может привести к чрезмерной агрессивности алгоритма** Динамической ISF** при коррекции болюса и привести к гипогликемии. Именно в этом заключается назначение динамической ISF, и поэтому нет необходимости сообщать AAPS о необходимости введения дополнительного инсулина с помощью автоматизации в случае высокойгликемии. This is particularly so with **Dynamic ISF**.
 
 When using **Dynamic ISF**, disable any temporary **Profile** change as an **Automation** rule, because it would cause **Dynamic ISF** to be overly aggressive in correction bolusing and result in hypoglycemia. This is the exact purpose of **Dynamic ISF** and so there is no need for **AAPS** to be told to provide additional insulin by way of Automation in the event of high **BGs**.
 
 ```
 
-To use **Dynamic ISF**, **AAPS'** database requires a minimum of 7 days of the user's **AAPS** data.
+Для работы **динамического ISF**, база данных **AAPS** должна иметь пользовательские данные минимум за 7 дней.
 
-## What does Dynamic ISF do ?
+## Как работает Динамический ISF ?
 
-**Dynamic ISF** adapts the insulin sensitivity factor (**ISF**) dynamically based on the user's:
+**Динамический ISF** оперативно адаптирует коэффициент чувствительности к инсулину (**ISF**) в зависимости от потребностей пользователя:
 
-- Total Daily Dose of insulin (**TDD**); and
-- current and predicted blood glucose values.
+- Суммарной суточной дозы инсулина (**TDD**) и
+- текущего и прогнозируемого значения ГК.
 
-When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation  of the app).
+При использовании **динамического ISF** значения **ISF**, введенные в **Профиле**, больше не используются, за исключением тех случаев, когда в **AAPS** недостаточно данных в базе TDD (*, напр.* при  новой переустановке приложения).
 
-**SMB/AMA** - an example of a user's **Profile** with static **ISF** as set by the user and utilised by **SMB** and **AMA**.
+Алгоритмы **SMB/AMA** - пример ** профиля ** со статическим **ISF**, заданным пользователем.
 
 ![Static ISF](../images/DynamicISF/DynISF1.png)
 
-**Dynamic ISF** - an example of a user's **ISF** subject to change as determined by **Dynamic ISF**.
+Алгоритм **Динамического ISF** - пример **ISF**, который меняется в зависимости от работы этого алгоритма.
 
 ![Dyn ISF](../images/DynamicISF/DynISF2.png)
 
-The section circled in red shows: `profile ISF` -> `ISF as calculated by DynISF`. <br/> Taping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+Участок, обведенный красным кружком, показывает: `ISF профиля` -> `ISF, рассчитанный с помощью DynISF`. <br/> Taping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
 
 The **DynISF** value can also be shown in an additional graph, enabling “Variable sensitivity” data. It shows as a white line (see red arrow on the image above).
 
