@@ -513,11 +513,13 @@ Apps in this list have been discussed in one or more places in the community as 
 
 ***NOTE:** If you wish to update any info in this table please ping @XiTatiON on #omnipod-dash Discord channel.*
 
-**myBMW**	MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
+- **myBMW**	MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
 
-**Amazon Alexa**	Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IOT devices
+- **Amazon Alexa**	Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IOT devices
 
-**MINI app**	Appears the app is based on myBMW app and might mirror it's behavior as a result
+- **MINI app**	Appears the app is based on myBMW app and might mirror it's behavior as a result
+
+- **BM2** Solar Battery Monitoring app, used in a bunch of camper van and camping solar setups, when the app is running it prevented activation of a New Pod. Forcer Stoping the app while activating an new pod worked around the issue. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
 
 
 
