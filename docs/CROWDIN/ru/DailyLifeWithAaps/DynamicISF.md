@@ -10,9 +10,9 @@
 
 **Средства автоматизации** всегда следует использовать с осторожностью. Особенно это касается **Динамического ISF**.
 
-При использовании **Динамической ISF** отключите любое временное изменение профиля, поскольку это может привести к чрезмерной агрессивности алгоритма** Динамической ISF** при коррекции болюса и привести к гипогликемии. Именно в этом заключается назначение динамической ISF, и поэтому нет необходимости сообщать AAPS о необходимости введения дополнительного инсулина с помощью автоматизации в случае высокойгликемии. This is particularly so with **Dynamic ISF**.
+При использовании **Динамической ISF** отключите любое временное изменение профиля, поскольку это может привести к чрезмерной агрессивности алгоритма** Динамической ISF** при коррекции болюса и привести к гипогликемии. Именно в этом заключается назначение динамической ISF, и поэтому нет необходимости сообщать AAPS о необходимости введения дополнительного инсулина с помощью автоматизации в случае высокой гликемии. This is particularly so with **Dynamic ISF**.
 
-When using **Dynamic ISF**, disable any temporary **Profile** change as an **Automation** rule, because it would cause **Dynamic ISF** to be overly aggressive in correction bolusing and result in hypoglycemia. This is the exact purpose of **Dynamic ISF** and so there is no need for **AAPS** to be told to provide additional insulin by way of Automation in the event of high **BGs**.
+При использовании **Динамической ISF** отключите временное изменение профиля в настройках автоматизации, поскольку это может привести к чрезмерной агрессивности ** Динамической ISF** и гипогликемии. Именно в этом заключается назначение динамической ISF, и поэтому нет необходимости сообщать AAPS о необходимости введения дополнительного инсулина с помощью автоматизации в случае высокого уровня BGS.
 
 ```
 
@@ -37,9 +37,9 @@ When using **Dynamic ISF**, disable any temporary **Profile** change as an **Aut
 
 Участок, обведенный красным кружком, показывает: `ISF профиля` -> `ISF, рассчитанный с помощью DynISF`. <br/> При нажатии на этот участок отображается диалоговое окно с дополнительной информацией, такой как **ISF **для калькулятоа болюса и усвоения углеводов (см [ Другие варианты использования ISF](#dynisf-other-usages-of-isf) ниже).
 
-The **DynISF** value can also be shown in an additional graph, enabling “Variable sensitivity” data. It shows as a white line (see red arrow on the image above).
+Значение **DynISF** может быть показано на дополнительном графике, при активации «Переменной чувствительности». Она показана в виде белой линии (см. красную стрелку на изображении выше).
 
-## How is Dynamic ISF calculated ?
+## Как рассчитывается динамическая чувствительность ISF?
 
 **Dynamic ISF** uses Chris Wilson’s model to determine **ISF** instead of the user's static **ISF** value as set within the **Profile**. A detailed explanation can be found here: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
