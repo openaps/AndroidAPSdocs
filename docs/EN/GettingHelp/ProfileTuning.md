@@ -7,7 +7,8 @@ This guide provides advice originally written up by @Robby from Discord on tips 
 This guide is mainly trying to find/explain logic to the OpenAPS algorithm results with a given profile, and provide information of which values to adjust when certain outcomes are observed. 
 
 ## Profile setting change process
-Over several days carefully observe and compare what is happening with your Blood Glucose Levels (BG) and your Insulin on Board (IOB). Keep an eye out for patterns that happen around the same time of day.   
+Over several days carefully observe and compare what is happening with your Blood Glucose Levels (BG) and your Insulin on Board (IOB).  
+Keep an eye out for patterns that happen around the same time of day.   
 It's important to do this over several days and never use the data you observe from a single day to make **profile** adjustment decisions.  
 After you have observed a repeatable pattern of behaviors, e.g. at 1PM you see a spike in BG, and a low IOB value, only then start to make small changes to your profile. 
 It's important to limit the changes you make to one thing at a time. E.g. increase your basil by .5 around 1PM.  
