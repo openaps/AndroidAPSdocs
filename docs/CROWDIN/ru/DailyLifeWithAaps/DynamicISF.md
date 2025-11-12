@@ -64,11 +64,11 @@ This is set within the user’s **Preferences** and is used to make **Dynamic IS
 ### Коэффициент делителя Инсулина
 Коэффициент делителя инсулина зависит от пика используемого инсулина и обратно пропорционален времени пика. Для Люмжева его значение 75, для Фиаспа 65 и для обычных быстрых инсулинов 55.
 
-### Коэффициент чувствительности инсулина ISF на основе прогнозируемой гликемии при принятии решений о дозировке
+### Коэффициент чувствительности инсулина ISF основывается на прогнозируемой гликемии при принятии решений о дозировке
 
-Dynamic sensitivity is computed with the **current BG** value, and displayed as your current ISF in **AAPS**. But when doing dosing calculations, the oref1 algorithm computes and uses **Future ISF** instead.
+Динамическая чувствительность вычисляется с использованием текущего значения ** ГК** и отображается как текущий коэффициент чувствительности ISF в **AAPS**. Но при вычислении дозировок вместо этого алгоритм oref1 использует параметр **Future ISF**.
 
-This is done to prevent dosing too much insulin when **BG** is low or predicted to go low.
+Это делается для того, чтобы предотвратить избыточные дозировки, когда **ГК** низка или прогнозируется низкой.
 
 **Future ISF** uses the same formula as described above, except that it may use **minimum predicted BG** instead of **current BG**. **Minimum predicted BG**, [as calculated in oref1](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), is the minimum value your BG is predicted to go during all the course of the predictions.
 
