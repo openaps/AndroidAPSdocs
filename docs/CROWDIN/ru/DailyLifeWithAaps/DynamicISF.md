@@ -41,13 +41,13 @@
 
 ## Как рассчитывается динамическая чувствительность ISF?
 
-**Dynamic ISF** uses Chris Wilson’s model to determine **ISF** instead of the user's static **ISF** value as set within the **Profile**. A detailed explanation can be found here: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
+**Dynamic ISF, Динамический ISF** использует модель Криса Уилсона для определения коэффициента чувствительности **ISF** вместо статического **ISF,** задаваемого пользователями в **Профиле**. Подробное объяснение можно найти здесь: [Крис Уилсон о чувствительности к инсулину (Коэффициент коррекции) в замкнутом цикле, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
-The **Dynamic ISF** equation implemented is: `ISF = 1800 / ((TDD * DynISF Adjust Factor) * Ln (( current BG / insulin divisor) + 1 ))`
+Здесь применяется уравнение **динамического ISF**, которое выглядит следующим образом: `ISF = 1800 / ((TDD * коэффициент коррекции DynISF) * Ln ((текущая ГК /инсулин) + 1 ))`
 
-The variables used in this equation are detailed below.<br/> Note : `Ln` stands for natural logarithm, a mathematical function.
+Переменные, используемые в этом уравнении, приведены ниже.<br/> Примечание : `Ln` означает натуральный логарифм, математическую функцию.
 
-The implementation uses the above equation to calculate current **ISF** and in the oref1 [predictions for **IOB**, **ZT** (zero-temping) and **UAM**](#aaps-screens-prediction-lines). It is also used for **COB** and in the bolus wizard (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+Приведенное выше уравнение применяется для расчета текущего **ISF** и прогнозов oref1 [ относительно активного инсулина **IOB**, **ZT** (нулевого временного базала) и **непредвиденного приема пищи UAM**](#aaps-screens-prediction-lines). Оно используется и для расчета активных улеводов **COB**, а также в калькуляторе болюса (см. [Другие применения ISF](#dynisf-other-usages-of-isf) ниже).
 
 ### TDD (Total Daily Dose)
 TDD will use a combination of the following values:
