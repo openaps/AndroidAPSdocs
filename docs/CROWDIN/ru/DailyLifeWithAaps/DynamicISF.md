@@ -49,15 +49,15 @@
 
 Приведенное выше уравнение применяется для расчета текущего **ISF** и прогнозов oref1 [ относительно активного инсулина **IOB**, **ZT** (нулевого временного базала) и **непредвиденного приема пищи UAM**](#aaps-screens-prediction-lines). Оно используется и для расчета активных улеводов **COB**, а также в калькуляторе болюса (см. [Другие применения ISF](#dynisf-other-usages-of-isf) ниже).
 
-### TDD (Total Daily Dose)
-TDD will use a combination of the following values:
-1.  7 day's average **TDD**;
-2.  the previous day’s **TDD**; and
-3.  a weighted average of the last eight (8) hours of insulin use extrapolated out for 24 hours.
+### TDD (Общая суточная доза)
+TDD использует комбинацию следующих значений:
+1.  среднее значение **TDD** за 7 дней;
+2.  **TDD **предыдущего дня; и
+3.  средневзвешенное значение за последние восемь (8) часов применения инсулина, экстраполированное на 24 часа.
 
-The **TDD** used in the above equation is weighted one third of each of the above values.
+В приведенном уравнении значение **TDD**, взвешено на одну треть от каждого из приведенных выше значений.
 
-### Dynamic ISF Adjustment Factor
+### Настройка Коэффициента динамического диапазона чувствительности ISF
 
 This is set within the user’s **Preferences** and is used to make **Dynamic ISF** more or less aggressive. See the [Preferences](#dyn-isf-preferences) section below.
 
@@ -104,7 +104,7 @@ Check **Enable dynamic sensitivity** in [Preferences > OpenAPS SMB](#Preferences
 ![Dynamic ISF settings](../images/Pref2020_DynISF.png)
 
 (dyn-isf-adjustment-factor)=
-### Dynamic ISF Adjustment Factor
+### Настройка Коэффициента динамического диапазона чувствительности ISF
 **Dynamic ISF** works based on a single rule which is supposed to apply to everyone, implying that people having the same **TDD** would have the same sensitivity. As each user has their own personal sensitivity, the **Adjustment Factor** allows the user to define whether they are more or less sensitive to insulin than the "standard" person.
 
 The **Adjustment Factor** is a value between 1% and 300%. This acts as a multiplier on the **TDD** value.
