@@ -116,18 +116,18 @@ TDD использует комбинацию следующих значени�
 
 Например, если **корректирующий коэффициент ** равен 80%, а в профиле ** установлен переключатель** на 80%, то корректирующий коэффициент **** будет равен `0.8*0.8=0.64`.
 
-This means that, when using **DynISF**, you can use **Profile Percentage** to temporarily fine tune your sensitivity manually. This can be useful for physical activity (lower percentage), illness (higher percentage), etc.
+Это означает, что при работе алгоритма **DynISF** можно использовать **Процент профиля** для временной точной настройки чувствительности вручную. Может быть полезно при физической активности (более низкий процент), болезнях (более высокий процент) и т. д.
 
-### BG level below which low glucose suspend occurs
+### Уровень ГК, ниже которого происходит остановка подачи инсулина
 
-**BG** value below which insulin is suspended. Default value uses the standard target model. A user can set this value between 60mg/dl (3.3mmol/l) and 100mg/dl(5.5mmol/l). Values below 65/3.6 result in use of the default model.
+Значение **ГК**, ниже которого подача инсулина приостанавливается. По умолчанию используется стандартная целевая модель. Пользователь может установить это значение в диапазоне от 60 мг/дл (3,3 ммоль/л) до 100 мг/дл (5,5 ммоль/л). Значения ниже 65/3.6 приводят к использованию модели по умолчанию.
 
-### Enable TDD based sensitivity ratio for basal and glucose target modification
+### Включить коэффициент чувствительности на основе суточной дозировки инсулина TDD для изменения базальной скорости и целевых значений гликемии
 
-This setting replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. Эта вычисляемая величина также применяется для подстройки цели, если включены опции подстройки целей в зависимости от чувствительности. Unlike Autosens, this option does not adjust **ISF** values.
+Эта настройка заменяет Autosens и базируется на суммарной суточной дозе **TDD** за последние 24 часа /7 ДНЕЙ **TDD** для увеличения и уменьшения базальной скорости, примерно так же, как и алгоритм Autosens. Эта вычисляемая величина также применяется для подстройки цели, если включены опции подстройки целей в зависимости от чувствительности. В отличие от Autosens, она не корректирует значения **ISF**.
 
-(dyn-isf-things-to-consider-when-activating-dynamicisf)=
-## Things to consider when activating Dynamic ISF
+(dyn-isf-things-to consider-when-activating-dynamicisf)=
+## Что нужно учитывать при активации Dynamic ISF
 
 * **Dynamic ISF** is recommended only for advanced users that have a good handle on their **AAPS'** controls and monitoring. Users should ideally have attained good control with **SMB** before moving onto **Dynamic ISF**.
 * As mentioned above, turn off all [**Automations**](../DailyLifeWithAaps/Automations.md) which activate a **Profile Percentage** in relation to **BG** because it will be too aggressive and may over deliver in insulin! This is already part of the **Dynamic ISF** algorithm.
