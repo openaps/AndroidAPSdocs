@@ -4,30 +4,31 @@
 
 This guide provides advice originally written up by @Robby from Discord on tips and tricks to help tune your **AAPS** Profile.
 
-This guide is mainly trying to find/explain logic to the OpenAPS algorithm results with a given profile, and provide information of which values to adjust when certain outcomes are observed. 
+This guide is mainly trying to find/explain the logic of the OpenAPS algorithm results with a given profile, and provide information about which values to adjust when certain situations are observed. 
 
-## Profile setting change process
-Over several days carefully observe and compare what is happening with your Blood Glucose Levels (BG) and your Insulin on Board (IOB).  
-Keep an eye out for patterns that happen around the same time of day.   
+## Changing the profile settings, how to process
+Carefully observe and compare, **over several days**, what is happening with your Blood Glucose Levels (BG) and your Insulin on Board (IOB).  
+Keep an eye out for patterns that happen around the same time (almost) everyday.   
 It's important to do this over several days and never use the data you observe from a single day to make **profile** adjustment decisions.  
-After you have observed a repeatable pattern of behaviors, e.g. at 1PM you see a spike in BG, and a low IOB value, only then start to make small changes to your profile. 
+After you have observed a repeatable pattern of behaviors, e.g. at 1PM you see a spike in BG or a negative IOB value, only then start to make small changes to your profile. 
 It's important to limit the changes you make to one thing at a time. E.g. increase your basil by .5 around 1PM.  
 After every change it's important to monitor the impact this has on your BG and IOB for the next few days.
 Repeat this pattern of observe, decide, change.
 
 **Don't Rush, go slow!**
 
-## Recommended settings and situation and advice while tweaking
+## Recommended settings and advice while tweaking
 - Do all testing with closed loop enabled.
+- On the secondary charts: on chart 1, use IOB, COB and SENS. On chart 2, use DEV and -BGI
 - COB=0*
   -  *meaning that the meal is digested, and there are no more carbs in your body. AAPS might indicate COB=0 while you still have carbs on board.
 - No physical activities.
 - No stress.
 - No illness.  
-- Turn OFF AutoSens so that it will not try to adapt your profile.  
-- Before starting to tweak IC or ISF value, it is important to have set a very good basal rate.
-- With a good basal rate in profile, when you are on target with COB=0* and IOB=0, you will remain constantly on target whatever your ISF (it's only when you are
-away from the target that a good ISF value is important).
+- Turn OFF AutoSens and DynISF so that they will not try to adapt your profile.  
+- Before starting to tweak IC or ISF value, it is important to have set correct basal rates.
+- When your basal rate in profile is correct, when you are on target with COB=0* and IOB=0, you will remain constantly on target whatever your ISF (ISF is only used when you are
+higher than your target).
 - You need to check the actual IOB but also, the IOB chart to see how was the IOB during the past few hours.  
   ![IOB Chart](../images/troubleshooting/profile/IOB_Chart.png)  
   - This chart shows negative IOB during early morning hours. (IA= IOB GA=COB)  
@@ -46,20 +47,20 @@ If you observe the following patterns after a few days, consider the following c
 - Basal is not strong enough
 
 ### IOB negative
-- Basil too strong
+- Basal too strong
 - Previous meal: too much bolus
-- Effects from past exercise/physical activity
+- May be the effects from past exercise/physical activity
 
 ## BG Target Observations
 
 ### Stuck High
-- ISF is not strong enough
-- Basil might not be strong enough
-- A security (MaxIOB ?) might have kicked in
+- ISF is not strong enough (the calculated insulin is too weak)
+- Basal might not be strong enough (SMBs do not have enough "basal stock" to use)
+- A security (MaxIOB ?) might have kicked in and is limiting insulin injection. For the limitations, look in the OpenSMB tab
 
 ### Stuck Low
 - ISF too strong
-- Basil too strong (if also negative IOB)
+- Basal too strong (if also negative IOB)
 
 ### Rollercoaster  
 - ISF too strong
@@ -67,8 +68,9 @@ If you observe the following patterns after a few days, consider the following c
 ## BG After Meals Observations
 
 ### Fast rise and go high
+- Food contains fast carbs
 - Consider doing a pre-bolus
-- Bolus not strong enough
+- Bolus (IC or injected %) not strong enough
 
 ### Fast rise and go low 
 - Consider doing a pre-bolus
