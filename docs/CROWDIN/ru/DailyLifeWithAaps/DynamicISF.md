@@ -74,43 +74,43 @@ TDD использует комбинацию следующих значени�
 
 * Если текущее значение **ГК** превышает целевое значение <br/> ** и ** если уровни **ГК** не меняются в пределах +/-3 мг/дл: <br/>ГК в формуле имеет следующий вид: `среднее значение (минимальное прогнозируемое значение ГК, текущее значение ГК)`.
 * Если конечный **уровень сахара в крови** превышает целевой, а уровень глюкозы повышается,<br/>  
-  **или** возможная конечная **ГК** выше текущей **ГК**:<br/>то ГК используется в формуле следующим образом: `текущая ГК`.
+  **или** возможная конечная **ГК** выше текущей **ГК**:<br/>то ГК в формуле выглядит так: `текущая ГК`.
 * В иных случаях: <br/>ГК используется в формуле следующим образом: `минимальная прогнозируемая ГК`.
 
-For a simplified explanation, refer to the screenshot below, which illustrates the above situation. Orange dots use **predicted BG**, purple dots use **average(predicted BG, current BG)**, and blue dots use **current BG**.
+Для упрощения приводим снимок экрана, который иллюстрирует описанную выше ситуацию. Оранжевые точки отображают ** прогнозируемое значение ГК**, фиолетовые точки - **среднее значение (прогнозируемое значение ГК, текущее значение ГК)**, а синие точки **текущее значение ГК**.
 
 ![DynISF_BGValue.png](../images/DynamicISF/DynISF_BGValue.png)
 
 (dynisf-other-usages-of-isf)=
-## Other usages of ISF
+## Другие примеры использования ISF
 
-### ISF and COB absorption
+### ISF и усвоение активных углеводов COB
 
-As described in the [COB Calculation](../DailyLifeWithAaps/CobCalculation.md) page, usually, the absorption of COB is calculated with this formula :   
-`absorbed_carbs = deviation * ic / isf`  
-When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dynamic ISF values.
+Как описано на странице [ Расчет активных углеводов COB](../DailyLifeWithAaps/CobCalculation.md), обычно поглощение углеводов рассчитывается по следующей формуле :   
+`поглощенные_углеводы = отклонение * ic / isf`  
+В алгоритме **Dynamic ISF**, **ISF** здесь - среднее значением динамического ISF за последние 24 часа.
 
-### ISF in Bolus Wizard
+### ISF в Калькуляторе болюса
 
-When using the [Bolus wizard](#aaps-screens-bolus-wizard), **ISF** is used if **BG** is above target to add a correction.
+В [ Калькуляторе болюса ](#aaps-screens-bolus-wizard) **ISF** применяется для коррекции, если **ГК** превышает целевое значение.
 
-When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dynamic ISF values.
+Алгоритм **Dynamic ISF** берет среднее значение динамического **ISF** за последние 24 часа.
 
 (dyn-isf-preferences)=
 ## Настройки
 
-Check **Enable dynamic sensitivity** in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings) to activate. New settings become available once selected.
+Установите флажок **Включить динамическую чувствительность** в [Настройках > OpenAPS SMB](#Preferences-openaps-smb-settings) для активации алгоритма. New settings become available once selected.
 
 ![Dynamic ISF settings](../images/Pref2020_DynISF.png)
 
 (dyn-isf-adjustment-factor)=
 ### Настройка Коэффициента динамического диапазона чувствительности ISF
-**Dynamic ISF** works based on a single rule which is supposed to apply to everyone, implying that people having the same **TDD** would have the same sensitivity. As each user has their own personal sensitivity, the **Adjustment Factor** allows the user to define whether they are more or less sensitive to insulin than the "standard" person.
+**Dynamic ISF** работает на основе единого правила, которое подразумевает, что люди, имеющие одинаковую суточную дозу **TDD**, будут иметь одинаковую чувствительность. Поскольку у каждого человека своя индивидуальная чувствительность, корректирующий коэффициент ** Adjustment Facto** позволяет пользователю определить, является ли он более или менее чувствительным к инсулину, чем "обычный" человек.
 
-The **Adjustment Factor** is a value between 1% and 300%. This acts as a multiplier on the **TDD** value.
+Коэффициент **Adjustment Factor** есть величина между 1 и 300%. Он действует как множитель относительно суточной дозы **TDD**.
 
-* Increasing this value above 100 % makes **DynISF** more aggressive: the **ISF** values become *smaller* (_i.e._ more insulin required to decrease **BG** levels a small amount)
-* Lowering this value under 100% makes **DynISF** less aggressive: the **ISF** values become larger (_i.e._ less insulin required to decrease **BG** levels a small amount).
+* Увеличение этого значения выше 100 % делает **DynISF** более агрессивным: значения **ISF** становятся * меньше* (_т.е._ требуется больше инсулина для снижения уровня **ГК** на небольшую величину)
+* Понижение этого значения ниже 100% делает **DynISF** менее агрессивным: величина **ISF** растет (_, т.е. _ требуется меньше инсулина для небольшого понижения **ГК**).
 
 The **Adjustment Factor** is also altered when activating a [**Profile Switch** with percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). A lower **Profile Percentage** will lower the **Adjustment Factor**, and vice versa in respect of higher **Profile Percentage**.
 
