@@ -61,9 +61,8 @@
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-You cannot fork and you see this?</br></br>
-`**Create a new fork**`</br>
-`A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. <u>View existing forks.</u>`</br>
+無法 fork，而你看到這個訊息？
+</br></br> **Create a new fork**</br> Fork 是資料庫的一份複製版。 Fork 一個資料庫讓你可以自由嘗試修改，而不會影響原始專案。 <u>View existing forks.</u>`</br>
 `*Required fields are marked with an asterisk (*).*`</br>
 `**No available destinations to fork this repository.**`</br></br>
 This means you already have an existing fork of AndroidAPS.</br>
