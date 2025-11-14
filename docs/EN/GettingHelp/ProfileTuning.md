@@ -72,21 +72,21 @@ If you observe the following patterns after a few days, consider the following c
 - Consider doing a pre-bolus
 - Bolus (IC or injected %) not strong enough
 
-### Fast rise and go low 
-- Consider doing a pre-bolus
+### Fast rise and then go low 
+- Consider doing a pre-bolus, profile might be too agressive (over correction of the raise)
 - Bolus too strong
 
-## How to calculate your C/I
+## How to calculate your IC
 1. First, you need the correct basal settings in your profile.
 2. Start on target, better without negative IOB.
-3. Record the total insulin given in the pump tab (or pump history) and call it **Start insulin**.
-4. Very accurately measure a known portion of carbs, and record the start time and **Start IOB**. Then enter carbs and bolus information into **AAPS** using the current configured CI. Don't forget to eat the carbs.
+3. Record the total insulin given in the pump tab (or pump history) and call it **Start insulin**
+C4. Very accurately measure a known portion of carbs, and record the start time and **Start IOB**. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured CI). Don't forget to eat the carbs ;)
 5. After some hours, when COB=0* and you're back on target, record end time, and note down the **End IOB**, check the total insulin given as before and call it **End insulin**.  
    ***NOTE:** The time frame is NOT important, as long as it is longer than your digestion*
 6. From the difference between **Start** and **End** insulin amount, subtract/add the difference end IOB - start IOB. Then subtract the basal insulin calculated from your profile settings.
-7. You'll have the total insulin used to “digest” your carbs. Calculate your C/I.
+7. You'll have the total insulin used to “digest” your carbs. Calculate your IC.
 
-### Other Considerations while calculating your C/I
+### Explanations for the IC calculations
 - With a profile that has correct basal(s), during any time frame, you stay on target and have an IOB near 0. You get your profile basal only.
 - You add carbs and bolus to this mix. Wait till your body digests all the carbs and be back on target. Your insulin usage will be the sum of your basal + the insulin needed for the carbs. You calculate the insulin used for your basal (by using your profile) and the surplus will be the insulin used to digest the carbs.
 - If the time frame is too short, there will be carbs undigested, thus your "insulin needed for the carbs" will be wrong.
