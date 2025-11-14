@@ -129,7 +129,7 @@ TDD использует комбинацию следующих значени�
 (dyn-isf-things-to consider-when-activating-dynamicisf)=
 ## Что нужно учитывать при активации Dynamic ISF
 
-* **Dynamic ISF** is recommended only for advanced users that have a good handle on their **AAPS'** controls and monitoring. Users should ideally have attained good control with **SMB** before moving onto **Dynamic ISF**.
+* **Dynamic ISF** рекомендуется для опытных пользователей, которые хорошо разбираются в элементах управления и мониторинге своих **AAPS.**. Users should ideally have attained good control with **SMB** before moving onto **Dynamic ISF**.
 * As mentioned above, turn off all [**Automations**](../DailyLifeWithAaps/Automations.md) which activate a **Profile Percentage** in relation to **BG** because it will be too aggressive and may over deliver in insulin! This is already part of the **Dynamic ISF** algorithm.
 * [Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) is taken into account for the Dynamic ISF calculation (see [Dynamic ISF Adjustment Factor](#dyn-isf-adjustment-factor) above). It is bad practice to use a **Profile Percentage** other than 100% for a long time. If you determine that your **Profile** has changed, create a new **Profile** with your revised values in order to replicate the **Profile** with a specific percentage.
 * **Dynamic ISF** may not work for everyone. Specifically, you may see unexpected results if one of these situations apply to you:
