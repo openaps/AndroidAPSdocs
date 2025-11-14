@@ -2,7 +2,7 @@
 
 ## Как AAPS вычисляет значение COB?
 
-When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**’CSF**”). This is not a feature within the user’s **Profile**  but is calculated by **AAPS** according to **ISF/I:C** set up, and is determined by how many mg/dl 1g of carbs will raise the user’s **BG**.
+Когда пользователь вводит углеводы во время приема пищи или при коррекции, **AAPS** добавляет это значение к текущему количеству активных углеводов (**COB**). После этого **AAPS** рассчитывает усвоение углеводов на основе наблюдаемых отклонений от значений **ГК пользователя**. Скорость усвоения зависит от коэффициента чувствительности к углеводам (**CSF**). Эта функция не указана в **Профиле**, она рассчитывается алгоритмом **AAPS** в соответствии с настройками **ISF/I:C** и зависит от того, насколько 1 грамм углеводов потребляемой пищи увеличит гликемию **ГК** пользователя.
 
 ## Carb Sensitivity Factor
 
