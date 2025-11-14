@@ -169,7 +169,7 @@ The final step is to configure **AAPS** on the phone to interact with **Wear.apk
 
 * Select > Config Builder in the left-hand Hamburger tab
 
-* Tick for Wear selection under General
+* Tick for Wear selection under Synchronization
 
 ![Wear OS](../images/WearOS.png)
 
