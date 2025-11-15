@@ -24,7 +24,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 - The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to export settings after each pod activation to allow a restore of that pods activation state if something happens to your rig. 
 - When setting a new basal profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basal profile won't automatically re-start. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
 - If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
-- There are a number of known issues with Bluetooth which can cause pod activation problems. See [Troubleshooting](#troubleshooting) for advice on Bluetooth issues, specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
+- There are a number of known issues with Bluetooth which can cause pod activation problems. See [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md) for the known issue and solutions to these problems.
 
 (hardware-software-requirements)=
 
@@ -493,90 +493,9 @@ This section covers common known issues and solutions for Omnipod DASH use with 
 
 (omnipod-dash-bluetooth-related-issues)=
 
-### Bluetooth related issues
+## **Bluetooth related issues**
 
-Some members of the community have been running into issues with Pod activation failures and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues:
-
-#### **Android 16**
-
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1, as this versions has fixes added to specifically address [known problems](../GettingHelp/GeneralTroubleshooting.md#cannot-start-omnipod-with-android-16) introduced in Android 16 for Omnipod. 
-
-#### **Apps that use the "Nearby devices" Android permission**
-
-Android allows you to control what each app is able to do or access on your phone via a permission model. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to bluetooth, scan for nearby devices etc. 
-
-**AAPS** requires a number of specific permission to function, one which is required ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
-
-#### **Apps that use "Nearby device" permissions and are known to have caused problems:**
-
-Apps in this list have been discussed in one or more places in the community as causing problems for Omnipod DASH devices. Any advice and links to the information found will be in this table. 
-
-***NOTE:** If you wish to update any info in this table please ping @XiTatiON on #omnipod-dash Discord channel.*
-
-**myBMW**	MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
-
-**Amazon Alexa**	Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IOT devices
-
-**MINI app**	Appears the app is based on myBMW app and might mirror it's behavior as a result
-
-
-
-#### **How to revoke "Nearby device" permissions for other apps:**
-If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android. It may be necessary to revoked the permission for other apps while activating a new Pod.
-
-Follow this procedure to revoked the "Nearby device" permission for all apps except **AAPS**:
-
-***NOTE:** The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Other manufactures and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.*
-
-1. Open Android settings on your phone, scroll down and press on **Security and privacy (1)**.
-
-    ![android_settings_sec_priv](../images/android_16/android_settings_sec_priv.png)  
-
-2. Scroll down and press on **Privacy controls (1)**.
-
-   ![android_sec_priv](../images/android_16/android_sec_priv.png)  
-
-3. Press on **Permission manager (1)**.
-
-   ![android_priv_control](../images/android_16/android_priv_control.png)  
-
-3. Scroll down and press on **Nearby devices (1)**.
-
-   ![android_perm_man_nearby_dev](../images/android_16/android_perm_man_nearby_dev.png)  
-
-4. Browse the list of apps and press on the app you wish to revoke **Nearby devices** permissions for.  
-   
-   In this guide **Android Auto (1)** is the app we will revoke the permission on. 
-   
-   To avoid bricking more pods we advise everyone initially to revoke the permission on all apps except **AAPS**.
-
-   ***NOTE:** If you are unsure which app is causing you an issue, disable them all (remember to check the list of known problem apps too and start with those) and if you can spare a few bricked pods on the way, enable the permission on one new app before every new Pod activation, until you can narrow down which app specifically causes your Pod issues. If you do identify new problematic apps please let us know on the #omnipod-dash Discord channel.*
-
-   ![android_nearby_dev](../images/android_16/android_nearby_dev.png)  
-
-5. To revoke the permission Press on **Don't allow (1)**, then Press on **Don't allow anyway (2)**. If done correctly you should see **Don't allow (3)** as the selected Toggle option. You can now go back to the **Nearby device** menu by pressing the **Back arrow (4)** and change this setting on other apps if required.
-
-   ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dev.png) ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow_anyway.png)  ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow.png)
-
-#### **How to re-enable "Nearby device" permissions for system apps and other apps:**
-
-1. If required Reference the **"How to revoke "Nearby device" permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
-
-2. Browse the list of apps and press on the app you wish to allow **Nearby devices** permissions for.  
-   
-   In this guide **Android Auto (1)** is the app we will allow the permission on.    
-
-   You will notice that **Android Auto (1)** is missing in the app list after the permission is revoked. This is because the **Android Auto** app is a **System app** and by default system apps are hidden.
-
-   ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)  
-
-3. To show hidden system apps Press on the **Three Dotted Lines (Hamburger) (1)**, then Press on **"Show System (1)"**. You should now be able to see the hidden system app in the list **Android Auto (3)**.  
-
-   ***NOTE:** If an app is revoked you will need to scroll down until you see the list of revoked apps lower down in the list.*
-
-   ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png) 
-
-5. Follow the guidance in **"How to revoke "Nearby device" permissions for other apps"** in reverse to re-enable permissions for each app.
+For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 ### Delivery suspended
