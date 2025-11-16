@@ -18,31 +18,31 @@
 
 - _изменение_ ** процента Профиля** - увеличение/уменьшение обеих величин таким образом не влияет на время усвоения углеводов.
 
-Например, если в **Профиле** пользователя **ISF** равен 100, а углеводный коэффициент **I:C** равен 5, Rоэффициент чувствительности пользователя к углеводам будет равен 20. For every 20 mg/dl the user’ **BG** goes up and 1g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS**  predicts the user’s **BG** to go down by 20 mg/dl because of **IOB** and it instead stayed flat, **AAPS**  would also calculate 1g of carbs as absorbed.
+Например, если в **Профиле** пользователя **ISF** равен 100, а углеводный коэффициент **I:C** равен 5, Rоэффициент чувствительности пользователя к углеводам будет равен 20. При каждом увеличении **гликемии** пользоателя на 20 мг/дл (1,1 ммоль/л) **AAPS** считает, что организм поглотил 1 г углеводов. Положительное значение активного инсулина **IOB** также влияет на расчет **COB**. Таким образом, если **AAPS** предсказывает, что **ГК пользователя** снизится на 20 мг/дл  (1,1 ммоль/л) из-за действия активного инсулина **IOB**, а гликемия вместо этого остается неизменной, то  алгоритм **AAPS** будет считать, что усвоен 1 г углеводов.
 
-Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
+Усвоение углеводов также будет рассчитываться с помощью методов, описанных ниже, в зависимости от выбора алгоритма чувствительности в настройках **AAPS**.
 
-## Carbs Sensitivity - Oref1
+## Чувствительность к углеводам - Oref1
 
-Unabsorbed carbs are cut off after specified time:
+Непоглощенные углеводы отбрасываются после указанного времени:
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
 ![Screenshot 2024-10-05 161009](../images/cob_oref0_orange_I.png)
 
 
-## Carbs Sensitivity - WeightedAverage
+## Чувствительность к углеводам - средневзвешенная
 
-Absorption is calculated to have COB = 0 after specified time:
+Усвоение принимается из рассчета, что активные углеводы COB = 0 по истечении указанного времени:
 
 ![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
+Если вместо значения, рассчитанного на основе отклонений **ГК**, используется минимальное поглощение углеводов (min_5m_carbimpact), на графике **COB** появится оранжевая точка.
 
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Обнаружение неправильного значения COB
 
-**AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
+**AAPS** предупредит пользователя о неверном подсчете углеводов **COB** перед подачей болюса, если  от предыдущего приема пищи остаются активные углеводы **COB**,. В этом случае пользователь получит дополнительную подсказку на экране подтверждения калькулятора болюса.
 
 ### Как AndroidAPS обнаруживает неправильные значения активных углеводов COB?
 
