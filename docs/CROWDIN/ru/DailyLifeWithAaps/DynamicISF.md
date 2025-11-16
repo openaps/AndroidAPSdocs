@@ -3,16 +3,16 @@
 
 До недавнего времени, фактор чувствительности к инсулину **ISF** в алгоритмах **AMA** и **SMB**, задавался в ** профиле** и был статичным для каждого конкретного времени суток. На самом деле, **ISF** человека не статичен и варьируется в зависимости от уровня **ГК**: на высоких сахарах пользователю понадобится больше инсулина, чтобы опустить **ГК** на 50мг/дл / 3ммоль/л по сравнению с тем, когда у него низкая **ГК**. Первый алгоритм, который попытался устранить эту сложность был [Autosens](#Open-APS-features-autosens) который корректировал **ISF** вне времени приема пищи.
 
-Алгоритм **Динамической чувствительности к инсулину** (также сокращенно именуемый **DynISF**) служит этой же цели, но более совершенен, т. к. работает в любое время. It is recommended only for advanced users that have a good handle on their **AAPS**’ controls and monitoring. Ознакомьтесь с документом [ Что следует учитывать при работе с динамическим ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf), приводимом ниже, прежде чем начать пользоваться этим алгоритмом.
+Алгоритм **Динамической чувствительности к инсулину** (также сокращенно именуемый **DynISF**) служит этой же цели, но более совершенен, т. к. работает в любое время. Рекомендуется для опытных пользователей, которые хорошо разбираются в элементах управления и мониторинга своих **AAPS**. Ознакомьтесь с документом [ Что следует учитывать при работе с динамическим ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf), приводимом ниже, прежде чем начать пользоваться этим алгоритмом.
 
 ```{admonition} CAUTION - Automations or Profile Percentage change
 :класс: предупреждение
 
 **Средства автоматизации** всегда следует использовать с осторожностью. Особенно это касается **Динамического ISF**.
 
-При использовании **Динамической ISF** отключите любое временное изменение профиля, поскольку это может привести к чрезмерной агрессивности алгоритма** Динамической ISF** при коррекции болюса и привести к гипогликемии. Именно в этом заключается назначение динамической ISF, и поэтому нет необходимости сообщать AAPS о необходимости введения дополнительного инсулина с помощью автоматизации в случае высокойгликемии. This is particularly so with **Dynamic ISF**.
+При использовании **Динамической ISF** отключите любое временное изменение профиля, поскольку это может привести к чрезмерной агрессивности алгоритма** Динамической ISF** при коррекции болюса и привести к гипогликемии. Именно в этом заключается назначение динамической ISF, и поэтому нет необходимости сообщать AAPS о необходимости введения дополнительного инсулина с помощью автоматизации в случае высокой гликемии. Это особенно касается **Dynamic ISF**.
 
-When using **Dynamic ISF**, disable any temporary **Profile** change as an **Automation** rule, because it would cause **Dynamic ISF** to be overly aggressive in correction bolusing and result in hypoglycemia. This is the exact purpose of **Dynamic ISF** and so there is no need for **AAPS** to be told to provide additional insulin by way of Automation in the event of high **BGs**.
+При использовании **Динамической ISF** отключите временное изменение профиля в настройках автоматизации, поскольку это может привести к чрезмерной агрессивности ** Динамической ISF** и гипогликемии. Именно в этом заключается назначение динамической ISF, и поэтому нет необходимости сообщать AAPS о необходимости введения дополнительного инсулина с помощью автоматизации в случае высокого уровня BGS.
 
 ```
 
@@ -29,7 +29,7 @@ When using **Dynamic ISF**, disable any temporary **Profile** change as an **Aut
 
 Алгоритмы **SMB/AMA** - пример ** профиля ** со статическим **ISF**, заданным пользователем.
 
-![Static ISF](../images/DynamicISF/DynISF1.png)
+![Статическая ISF](../images/DynamicISF/DynISF1.png)
 
 Алгоритм **Динамического ISF** - пример **ISF**, который меняется в зависимости от работы этого алгоритма.
 
@@ -37,103 +37,103 @@ When using **Dynamic ISF**, disable any temporary **Profile** change as an **Aut
 
 Участок, обведенный красным кружком, показывает: `ISF профиля` -> `ISF, рассчитанный с помощью DynISF`. <br/> При нажатии на этот участок отображается диалоговое окно с дополнительной информацией, такой как **ISF **для калькулятоа болюса и усвоения углеводов (см [ Другие варианты использования ISF](#dynisf-other-usages-of-isf) ниже).
 
-The **DynISF** value can also be shown in an additional graph, enabling “Variable sensitivity” data. It shows as a white line (see red arrow on the image above).
+Значение **DynISF** может быть показано на дополнительном графике, при активации «Переменной чувствительности». Она показана в виде белой линии (см. красную стрелку на изображении выше).
 
-## How is Dynamic ISF calculated ?
+## Как рассчитывается динамическая чувствительность ISF?
 
-**Dynamic ISF** uses Chris Wilson’s model to determine **ISF** instead of the user's static **ISF** value as set within the **Profile**. A detailed explanation can be found here: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
+**Dynamic ISF, Динамический ISF** использует модель Криса Уилсона для определения коэффициента чувствительности **ISF** вместо статического **ISF,** задаваемого пользователями в **Профиле**. Подробное объяснение можно найти здесь: [Крис Уилсон о чувствительности к инсулину (Коэффициент коррекции) в замкнутом цикле, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
-The **Dynamic ISF** equation implemented is: `ISF = 1800 / ((TDD * DynISF Adjust Factor) * Ln (( current BG / insulin divisor) + 1 ))`
+Здесь применяется уравнение **динамического ISF**, которое выглядит следующим образом: `ISF = 1800 / ((TDD * коэффициент коррекции DynISF) * Ln ((текущая ГК /инсулин) + 1 ))`
 
-The variables used in this equation are detailed below.<br/> Note : `Ln` stands for natural logarithm, a mathematical function.
+Переменные, используемые в этом уравнении, приведены ниже.<br/> Примечание : `Ln` означает натуральный логарифм, математическую функцию.
 
-The implementation uses the above equation to calculate current **ISF** and in the oref1 [predictions for **IOB**, **ZT** (zero-temping) and **UAM**](#aaps-screens-prediction-lines). It is also used for **COB** and in the bolus wizard (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+Приведенное выше уравнение применяется для расчета текущего **ISF** и прогнозов oref1 [ относительно активного инсулина **IOB**, **ZT** (нулевого временного базала) и **непредвиденного приема пищи UAM**](#aaps-screens-prediction-lines). Оно используется и для расчета активных улеводов **COB**, а также в калькуляторе болюса (см. [Другие применения ISF](#dynisf-other-usages-of-isf) ниже).
 
-### TDD (Total Daily Dose)
-TDD will use a combination of the following values:
-1.  7 day's average **TDD**;
-2.  the previous day’s **TDD**; and
-3.  a weighted average of the last eight (8) hours of insulin use extrapolated out for 24 hours.
+### TDD (Общая суточная доза)
+TDD использует комбинацию следующих значений:
+1.  среднее значение **TDD** за 7 дней;
+2.  **TDD **предыдущего дня; и
+3.  средневзвешенное значение за последние восемь (8) часов применения инсулина, экстраполированное на 24 часа.
 
-The **TDD** used in the above equation is weighted one third of each of the above values.
+В приведенном уравнении значение **TDD**, взвешено на одну треть от каждого из приведенных выше значений.
 
-### Dynamic ISF Adjustment Factor
+### Настройка Коэффициента динамического диапазона чувствительности ISF
 
-This is set within the user’s **Preferences** and is used to make **Dynamic ISF** more or less aggressive. See the [Preferences](#dyn-isf-preferences) section below.
+Он устанавливается в **настройках **для того, чтобы сделать **Динамический ISF** более или менее агрессивным. См. раздел [Настройки](#dyn-isf-preferences) ниже.
 
-### Insulin Divisor
-Делитель инсулина зависит от пика используемого инсулина и обратно пропорционален времени до пика. Для Люмжева его значение 75, для Фиаспа 65 и для обычных быстрых инсулинов 55.
+### Величина делителя Инсулина
+Величина делителя инсулина зависит от пика используемого инсулина и обратно пропорциональна времени до пика. Для Люмжева его значение 75, для Фиаспа 65 и для обычных быстрых инсулинов 55.
 
-### ISF based on predicted BG for dosing decisions
+### Коэффициент чувствительности инсулина ISF, основанный на прогнозируемой гликемии при принятии решений о дозировке
 
-Dynamic sensitivity is computed with the **current BG** value, and displayed as your current ISF in **AAPS**. But when doing dosing calculations, the oref1 algorithm computes and uses **Future ISF** instead.
+Динамическая чувствительность вычисляется с использованием текущего значения ** ГК** и отображается как текущий коэффициент чувствительности ISF в **AAPS**. Но при вычислении дозировок вместо этого алгоритм oref1 использует параметр **Future ISF**.
 
-This is done to prevent dosing too much insulin when **BG** is low or predicted to go low.
+Это делается для того, чтобы предотвратить избыточные дозировки, когда **ГК** низка или прогнозируется низкой.
 
-**Future ISF** uses the same formula as described above, except that it may use **minimum predicted BG** instead of **current BG**. **Minimum predicted BG**, [as calculated in oref1](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), is the minimum value your BG is predicted to go during all the course of the predictions.
+**Future ISF** использует ту же формулу, что и описанная выше, за исключением того, что в ней применяется **минимальная прогнозируемая гликемия** вместо **текущей ГК**. **Минимальная прогнозируемая ГК**, [рассчитанная в oref1](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), - это минимальное значение, которое, по прогнозам, достигнет гликемия в течение всего периода прогнозирования.
 
-* If the current **BG** is above target  <br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
-* If eventual **BG** is above target and glucose levels are increasing,<br/>  
-  **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
-* Otherwise:<br/>BG is used in the formula as follows: `minimum predicted BG`.
+* Если текущее значение **ГК** превышает целевое значение <br/> ** и ** если уровни **ГК** не меняются в пределах +/-3 мг/дл: <br/>ГК в формуле имеет следующий вид: `среднее значение (минимальное прогнозируемое значение ГК, текущее значение ГК)`.
+* Если конечный **уровень сахара в крови** превышает целевой, а уровень глюкозы повышается,<br/>  
+  **или** возможная конечная **ГК** выше текущей **ГК**:<br/>то ГК в формуле выглядит так: `текущая ГК`.
+* В иных случаях: <br/>ГК используется в формуле следующим образом: `минимальная прогнозируемая ГК`.
 
-For a simplified explanation, refer to the screenshot below, which illustrates the above situation. Orange dots use **predicted BG**, purple dots use **average(predicted BG, current BG)**, and blue dots use **current BG**.
+Для упрощения приводим снимок экрана, который иллюстрирует описанную выше ситуацию. Оранжевые точки отображают ** прогнозируемое значение ГК**, фиолетовые точки - **среднее значение (прогнозируемое значение ГК, текущее значение ГК)**, а синие точки **текущее значение ГК**.
 
 ![DynISF_BGValue.png](../images/DynamicISF/DynISF_BGValue.png)
 
 (dynisf-other-usages-of-isf)=
-## Other usages of ISF
+## Другие примеры использования ISF
 
-### ISF and COB absorption
+### ISF и усвоение активных углеводов COB
 
-As described in the [COB Calculation](../DailyLifeWithAaps/CobCalculation.md) page, usually, the absorption of COB is calculated with this formula :   
-`absorbed_carbs = deviation * ic / isf`  
-When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dynamic ISF values.
+Как описано на странице [ Расчет активных углеводов COB](../DailyLifeWithAaps/CobCalculation.md), обычно поглощение углеводов рассчитывается по следующей формуле :   
+`поглощенные_углеводы = отклонение * ic / isf`  
+В алгоритме **Dynamic ISF**, **ISF** здесь - среднее значением динамического ISF за последние 24 часа.
 
-### ISF in Bolus Wizard
+### ISF в Калькуляторе болюса
 
-When using the [Bolus wizard](#aaps-screens-bolus-wizard), **ISF** is used if **BG** is above target to add a correction.
+В [ Калькуляторе болюса ](#aaps-screens-bolus-wizard) **ISF** применяется для коррекции, если **ГК** превышает целевое значение.
 
-When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dynamic ISF values.
+Алгоритм **Dynamic ISF** берет среднее значение динамического **ISF** за последние 24 часа.
 
 (dyn-isf-preferences)=
 ## Настройки
 
-Check **Enable dynamic sensitivity** in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings) to activate. New settings become available once selected.
+Установите флажок **Включить динамическую чувствительность** в [Настройках > OpenAPS SMB](#Preferences-openaps-smb-settings) для активации алгоритма. После того как выбор сделан, становятся доступными новые настройки.
 
-![Dynamic ISF settings](../images/Pref2020_DynISF.png)
+![Настройки Dynamic ISF](../images/Pref2020_DynISF.png)
 
 (dyn-isf-adjustment-factor)=
-### Dynamic ISF Adjustment Factor
-**Dynamic ISF** works based on a single rule which is supposed to apply to everyone, implying that people having the same **TDD** would have the same sensitivity. As each user has their own personal sensitivity, the **Adjustment Factor** allows the user to define whether they are more or less sensitive to insulin than the "standard" person.
+### Настройка Коэффициента динамического диапазона чувствительности ISF
+**Dynamic ISF** работает на основе единого правила, которое подразумевает, что люди, имеющие одинаковую суточную дозу **TDD**, будут иметь одинаковую чувствительность. Поскольку у каждого человека своя индивидуальная чувствительность, корректирующий коэффициент ** Adjustment Facto** позволяет пользователю определить, является ли он более или менее чувствительным к инсулину, чем "обычный" человек.
 
-The **Adjustment Factor** is a value between 1% and 300%. This acts as a multiplier on the **TDD** value.
+Коэффициент **Adjustment Factor** есть величина между 1 и 300%. Он действует как множитель относительно суточной дозы **TDD**.
 
-* Increasing this value above 100 % makes **DynISF** more aggressive: the **ISF** values become *smaller* (_i.e._ more insulin required to decrease **BG** levels a small amount)
-* Lowering this value under 100% makes **DynISF** less aggressive: the **ISF** values become larger (_i.e._ less insulin required to decrease **BG** levels a small amount).
+* Увеличение этого значения выше 100 % делает **DynISF** более агрессивным: значения **ISF** становятся * меньше* (_т.е._ требуется больше инсулина для снижения уровня **ГК** на небольшую величину)
+* Понижение этого значения ниже 100% делает **DynISF** менее агрессивным: величина **ISF** растет (_, т.е. _ требуется меньше инсулина для небольшого понижения **ГК**).
 
-The **Adjustment Factor** is also altered when activating a [**Profile Switch** with percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). A lower **Profile Percentage** will lower the **Adjustment Factor**, and vice versa in respect of higher **Profile Percentage**.
+**Корректирующий коэффициент ** также изменяется при активации [**Переключателя профиля ** в процентах](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). Более низкий ** процент профиля** приведет к снижению ** корректирующего коэффициента**, а при более высоком ** проценте профиля**, наоборот.
 
-For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned , the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
+Например, если **корректирующий коэффициент ** равен 80%, а в профиле ** установлен переключатель** на 80%, то корректирующий коэффициент **** будет равен `0.8*0.8=0.64`.
 
-This means that, when using **DynISF**, you can use **Profile Percentage** to temporarily fine tune your sensitivity manually. This can be useful for physical activity (lower percentage), illness (higher percentage), etc.
+Это означает, что при работе алгоритма **DynISF** можно использовать **Процент профиля** для временной точной настройки чувствительности вручную. Может быть полезно при физической активности (более низкий процент), болезнях (более высокий процент) и т. д.
 
-### BG level below which low glucose suspend occurs
+### Уровень ГК, ниже которого происходит остановка подачи инсулина
 
-**BG** value below which insulin is suspended. Default value uses the standard target model. A user can set this value between 60mg/dl (3.3mmol/l) and 100mg/dl(5.5mmol/l). Values below 65/3.6 result in use of the default model.
+Значение **ГК**, ниже которого подача инсулина приостанавливается. По умолчанию используется стандартная целевая модель. Пользователь может установить это значение в диапазоне от 60 мг/дл (3,3 ммоль/л) до 100 мг/дл (5,5 ммоль/л). Значения ниже 65/3.6 приводят к использованию модели по умолчанию.
 
-### Enable TDD based sensitivity ratio for basal and glucose target modification
+### Включить коэффициент чувствительности на основе суточной дозировки инсулина TDD для изменения базальной скорости и целевых значений гликемии
 
-This setting replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. Эта вычисляемая величина также применяется для подстройки цели, если включены опции подстройки целей в зависимости от чувствительности. Unlike Autosens, this option does not adjust **ISF** values.
+Эта настройка заменяет Autosens и базируется на суммарной суточной дозе **TDD** за последние 24 часа /7 ДНЕЙ **TDD** для увеличения и уменьшения базальной скорости, примерно так же, как и алгоритм Autosens. Эта вычисляемая величина также применяется для подстройки цели, если включены опции подстройки целей в зависимости от чувствительности. В отличие от Autosens, она не корректирует значения **ISF**.
 
-(dyn-isf-things-to-consider-when-activating-dynamicisf)=
-## Things to consider when activating Dynamic ISF
+(dyn-isf-things-to consider-when-activating-dynamicisf)=
+## Что нужно учитывать при активации Dynamic ISF
 
-* **Dynamic ISF** is recommended only for advanced users that have a good handle on their **AAPS'** controls and monitoring. Users should ideally have attained good control with **SMB** before moving onto **Dynamic ISF**.
-* As mentioned above, turn off all [**Automations**](../DailyLifeWithAaps/Automations.md) which activate a **Profile Percentage** in relation to **BG** because it will be too aggressive and may over deliver in insulin! This is already part of the **Dynamic ISF** algorithm.
-* [Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) is taken into account for the Dynamic ISF calculation (see [Dynamic ISF Adjustment Factor](#dyn-isf-adjustment-factor) above). It is bad practice to use a **Profile Percentage** other than 100% for a long time. If you determine that your **Profile** has changed, create a new **Profile** with your revised values in order to replicate the **Profile** with a specific percentage.
-* **Dynamic ISF** may not work for everyone. Specifically, you may see unexpected results if one of these situations apply to you:
-  * Variable lifestyle (inconsistent eating or physical activity patterns)
-  * Inconsistent TDD or sensitivity from day to day.
-* There is no precise guide to set the initial value of the **Adjustment Factor**. However, as a starting point: assuming your **Profile** values are correct, when you are in range and **BG** levels are flat, the **DynISF** value should be about the same as the one you had in your **Profile** before.<br/>If you see that **Dynamic ISF** is too aggressive, lower the **Adjustment Factor**, and vice-versa.
-* Even though **DynISF** does not use **Profile ISF** at all, if you notice that your sensitivity is very different from what was previously stored in your **Profile**, you should consider keeping it up-to-date. This may be useful in case you loose your **AAPS** data (_i.e._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
+* **Dynamic ISF** рекомендуется для опытных пользователей, которые хорошо разбираются в элементах управления и мониторинге своих **AAPS.**. В идеале, прежде чем переходить на **Dynamic ISF**, следует добиться хорошего контроля при помощи алгоритма **SMB**.
+* Как отмечалось выше, отключите все [** настройки Автоматизации**](../DailyLifeWithAaps/Automations.md), которые активируют ** Процентное изменение профиля** относительно **ГК**, поскольку они агрессивны и могут привести к переизбытку инсулина! Они уже являются частью алгоритма **Dynamic ISF**.
+* [Процент профиля](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) учитывается в Dynamic ISF (см. [Корректирующий коэффициент Dynamic ISF](#dyn-isf-adjustment-factor) выше). Не рекомендуется менять **Процент Профиля** на отличный от 100% на длительное время. Если вы определите, что ваш ** профиль** изменился, создайте новый ** профиль** с измененными значениями, чтобы воспроизвести ** профиль** в определенном процентном соотношении.
+* **Dynamic ISF** может кому-то не подойти. В частности, возможны неожиданные результаты, если возникнет одна из следующих ситуаций:
+  * Непостоянный образ жизни (непоследовательный режим питания или физической активности)
+  * Непостоянная суммарная суточная потребность TDD в инсулине или переменчивая чувствительность.
+* Не существует точного руководства по установке начального значения ** Корректирующего коэффициента**. Однако, в качестве отправной точки: предполагая, что начальные параметры **Профиля** верны, когда вы в диапазоне и уровни **ГК** стабильны, значение **DynISF** должно быть примерно таким же, как у вас было в **Профиле** ранее.<br/>Если вы видите, что **Dynamic ISF** слишком агрессивен, уменьшите ** Корректирующий коэффициент**, и наоборот.
+* Несмотря на то, что **DynISF** не использует **ISF** из Профиля, если ваша новая чувствительность сильно отличается от ранее сохраненной в **Профиле**, следует подумать о том, чтобы поддерживать ее в актуальном состоянии. Это может быть полезно на случай потери данных **AAPS** (_напр. _ новый телефон, новая версия **AAPS**...), поскольку ISF вашего ** профиля** будет использоваться в качестве резервной копии на следующие 7 дней.

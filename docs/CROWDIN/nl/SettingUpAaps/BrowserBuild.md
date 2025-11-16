@@ -60,6 +60,20 @@ Scroll down the next screen and tap **Create Fork**.
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
+```{note}
+You cannot fork and you see this?</br></br>
+`**Create a new fork**`</br>
+`A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. <u>View existing forks.</u>`</br>
+`*Required fields are marked with an asterisk (*).*`</br>
+`**No available destinations to fork this repository.**`</br></br>
+This means you already have an existing fork of AndroidAPS.</br>
+Make sure it's up to date and continue to Preparation Steps.
+```
+
+```{warning}
+**Never delete your fork without having done a backup of your secrets!**
+```
+
 GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab open.
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)

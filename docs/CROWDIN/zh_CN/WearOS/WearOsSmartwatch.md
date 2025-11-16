@@ -153,7 +153,7 @@ The final step is to configure **AAPS** on the phone to interact with **Wear.apk
 
 * 在左侧的汉堡菜单中选择>配置构建器
 
-* 在“常规”下勾选Wear选项
+* Tick for Wear selection under Synchronization
 
 ![Wear OS](../images/WearOS.png)
 

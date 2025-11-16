@@ -2,21 +2,21 @@
 
 ## Как AAPS вычисляет значение COB?
 
-When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**’CSF**”). This is not a feature within the user’s **Profile**  but is calculated by **AAPS** according to **ISF/I:C** set up, and is determined by how many mg/dl 1g of carbs will raise the user’s **BG**.
+Когда пользователь вводит углеводы во время приема пищи или при коррекции, **AAPS** добавляет это значение к текущему количеству активных углеводов (**COB**). После этого **AAPS** рассчитывает усвоение углеводов на основе наблюдаемых отклонений от значений **ГК пользователя**. Скорость усвоения зависит от коэффициента чувствительности к углеводам (**CSF**). Эта функция не указана в **Профиле**, она рассчитывается алгоритмом **AAPS** в соответствии с настройками **ISF/I:C** и зависит от того, насколько 1 грамм углеводов потребляемой пищи увеличит гликемию **ГК** пользователя.
 
-## Carb Sensitivity Factor
+## Фактор чувствительности к углеводам
 
-The formula adopted by **AAPS** is:
+Подсчет в **AAPS** ведется по следующей формуле:
 
-- absorbed_carbs = deviation * ic / isf.
+- усвоенные углеводы = отклонение * углеводный коэффициент ic / фактор чувствительности к инсулину isf.
 
-The effect on the user’s **Profile** will:
+При этом на ** Профиль ** пользователя происходит следующее воздействие:
 
-- _increase_ **IC**- by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _повышение _ **IC ** -увеличение усваивамых каждые 5 минут углеводов тем самым уменьшает общее время усвоения;
 
-- _increase_ **ISF** - by decreasing the carbs absorbed every 5 minutes thus prolong total time of absorption; and
+- _повышение _ **ISF**- уменьшение усваиваемых каждые 5 минут углеводов тем самым продлевает общее время усвоения
 
-- _change_ **Profile Percentage** -  increase/decrease both values thus has no impact on carbs absorption time.
+- _изменение_ ** процента Профил** - увеличение/уменьшение обеих величин таким образом не влияет на время усвоения углеводов.
 
 For example, if the user’s  **Profile**  **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dl the user’ **BG** goes up and 1g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS**  predicts the user’s **BG** to go down by 20 mg/dl because of **IOB** and it instead stayed flat, **AAPS**  would also calculate 1g of carbs as absorbed.
 
