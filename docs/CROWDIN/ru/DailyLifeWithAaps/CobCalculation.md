@@ -46,7 +46,7 @@
 
 ### Как AndroidAPS обнаруживает неправильные значения активных углеводов COB?
 
-Ordinarily __AAPS__ detects carb absorption through **BG** deviations. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
+В обычных расчетах __AAPS__ определяет усвоение углеводов по отклонениям **ГК**. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
 
 ![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
 
