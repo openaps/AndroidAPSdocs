@@ -56,28 +56,28 @@
 
 - Подумайте об отмене терапевтического действия - нажмите «Отмена» вместо ОК.
 - -Заново рассчитайте свой предстоящий прием пищи с помощью калькулятора болюса, сняв галочку с активных углеводов **COB**.
-- If you need a correction bolus, enter it manually.
-- Be careful not to overdose or insulin stacking!
+- Если требуется болюс на коррекцию, введите его вручную.
+- Будьте осторожны, не допустиеь передозировки или переизбытка инсулина!
 
 
 ### Почему алгоритм неправильно распознает активные углеводы COB?
 
-This could be because:
-- Potentially the user overestimated carbs when entering them.
-- Activity / exercise after your previous meal.
-- I:C needs adjustment.
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
+Это может быть вызвано тем, что:
+- Пользователь мог переоценить количество углеводов при вводе записи.
+- После предыдущего приема пищи происходила физическая активность или нагрузка.
+- -Углеводный коэффициент I:C нуждается в корректировке.
+- Значение для min_5m_carbimpact неверно (рекомендуется 8 для алгоритма SMB, 3 для OpenAPS AMA).
 
 
 ## Ручная коррекция введенных углеводов
 
-If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](#screens-bolus-carbs).
+Если углеводов слишком много или наоборот недостаточно, это можно исправить с помощью вкладки "Терапия" и вкладки "Действия" / меню, как описано [ здесь](#screens-bolus-carbs).
 
 
-## Carb correction - how to delete a Carb entry from Treatments
+## Коррекция количества углеводов - как удалить запись из Терапии
 
 
-The ‘Treatments’ tab can be used to correct a faulty carb entry by deleting the entry in Treatments. This may be because the user over or underestimated the carb entry:
+Для исправления ошибочной записи об углеводах, можно воспользоваться вкладкой "Терапия", удалив ее оттуда. This may be because the user over or underestimated the carb entry:
 
 ![COB_Screenshot 2024-10-05 170124](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
