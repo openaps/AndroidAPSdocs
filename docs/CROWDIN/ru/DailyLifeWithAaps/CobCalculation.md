@@ -77,15 +77,15 @@
 ## Коррекция количества углеводов - как удалить запись из Терапии
 
 
-Для исправления ошибочной записи об углеводах, можно воспользоваться вкладкой "Терапия", удалив ее оттуда. This may be because the user over or underestimated the carb entry:
+Для исправления ошибочной записи об углеводах, можно воспользоваться вкладкой "Терапия", удалив ее оттуда. Это может произойти из-за того, что пользователь переоценил или недооценил количество вводимых углеводов:
 
 ![COB_Screenshot 2024-10-05 170124](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
-1. Check and remember actual **COB** and **IOB** on the **AAPS'** homescreen.
-2. Depending on the pump, the carbs in the Treatments tab might show together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry by firstly 'ticking' the waste bin on the top right corner (see above photo, step 1). Then 'tick' the faulty carb amount (see above photo, step 2). Then 'tick' the ‘waste bin’ on the top right corner (step 1 again).
-4. Make sure carbs are removed successfully by checking **COB** on **AAPS’** homescreen again.
-5. Do the same for **IOB** if there is just one line in the Treatment tab including carbs and insulin.
+1. Проверьте и запомните фактическое количество активных углеводов **COB** и активного инсулина **IOB** на главном экране **AAPS**.
+2. В зависимости от помпы, углеводы на вкладке "Терапия" могут отображаться на одной строке или в виде отдельной записи (например, на Dana RS).
+3. Удалите запись, сначала поставив галочку напротив мусорного ведра в правом верхнем углу (см. Фото выше, шаг 1). Затем отметьте галочкой количество неправильно введенных углеводов (см фото выше, шаг 2). Затем отметьте ‘мусорное ведро’ в правом верхнем углу (повторите шаг 1).
+4. Убедитесь, что углеводы удалены успешно, еще раз проверив **COB** на главном экране **AAPS**.
+5. Сделайте то же для активного инсулина **IOB**, если на вкладке терапии только одна общая строка для углеводов и инсулина.
 6. If carbs are not removed as intended and additional carbs are added as explained in this section, the **COB** entry will be too high and this could lead to **AAPS** delivering too much insulin.
 7. Enter correct carbs amount through carbs button on **AAPS’** homescreen and set the correct event time.
 8. If there is just one line in Treatment tab including carbs and insulin the user should add also the amount of insulin. Make sure to set the correct event time and check **IOB** on homescreen after confirming the new entry.
