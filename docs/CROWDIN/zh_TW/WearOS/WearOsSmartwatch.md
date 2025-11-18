@@ -167,7 +167,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 * 在左側漢堡按鈕中選擇 > 組態建置工具
 
-* Tick for Wear selection under Synchronization
+* 在同步設定下勾選 Wear 選項
 
 ![Wear OS](../images/WearOS.png)
 
