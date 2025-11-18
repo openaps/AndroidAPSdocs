@@ -46,16 +46,16 @@
 
 ### Как AndroidAPS обнаруживает неправильные значения активных углеводов COB?
 
-В обычных расчетах __AAPS__ определяет усвоение углеводов по отклонениям **ГК**. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
+В обычных расчетах __AAPS__ определяет усвоение углеводов по отклонениям **ГК**. В случае, если пользователь ввел углеводы, а **AAPS** не может рассчитать их предполагаемое усвоение по отклонениям **ГК**, то алгоритмом применяется метод [min_5m_carbimpact](#Preferences-min_5m_carbimpact) (так называемый "запасной вариант"). Поскольку этот метод вычисляет только минимальное усвоение углеводов, без учета отклонений **ГК**, то в этом случае возможны некорректные значения активных углеводов COB.
 
 ![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
 
-In the screenshot above, 58% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
+На снимке экрана выше 58% времени поглощения углеводов был вычислен математически методом min_5m_carbimpact вместо значения, основанного на отклонениях ГК. Это означает, что на самом деле у пользователя может быть меньше активных углеводов **COB**, чем рассчитывает алгоритм.
 
 ### Как относиться к этому предупреждению?
 
-- Consider cancelling the treatment - press ‘Cancel’ instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
+- Подумайте об отмене терапевтического действия - нажмите «Отмена» вместо ОК.
+- -Заново рассчитайте свой предстоящий прием пищи с помощью калькулятора болюса, сняв галочку с активных углеводов **COB**.
 - If you need a correction bolus, enter it manually.
 - Be careful not to overdose or insulin stacking!
 
