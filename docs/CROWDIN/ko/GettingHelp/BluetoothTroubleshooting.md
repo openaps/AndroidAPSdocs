@@ -122,7 +122,7 @@ After upgrading Android or moving to a recent phone, **AAPS** frequently loses B
 
 ```{admonition} Android 16
 :class: warning
-Only enable the **Bond BT device on Android 15+** option on Android 15, and only if you experiance connectivity issues. DO NOT enable bonding option on Android 16.
+Only enable the **Bond BT device on Android 15+** option on Android 15, and only if you experience connectivity issues. DO NOT enable bonding option on Android 16.
 ```
 
 1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
