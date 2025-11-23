@@ -122,7 +122,7 @@ If an app is revoked you will need to scroll down until you see the list of revo
 
 ```{admonition} Android 16
 :class: warning
-Only enable the **Bond BT device on Android 15+** option on Android 15, and only if you experiance connectivity issues. DO NOT enable bonding option on Android 16.
+Only enable the **Bond BT device on Android 15+** option on Android 15, and only if you experience connectivity issues. DO NOT enable bonding option on Android 16.
 ```
 
 1) **打开偏好设置**，点击主屏幕右上角的三点菜单。
