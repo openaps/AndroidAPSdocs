@@ -374,6 +374,9 @@ If a patch activation is interrupted, for instance because the phone battery run
 Если долго не происходит подключение или другие проблемы с подключением:
 - В настройках приложений Android для AAPS: Установите разрешение на местоположение на "Разрешать все время".
 
+### Bluetooth issues
+For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+
 ### Активация прервана
 
 Если активация прервана, например, из-за низкого заряда батареи телефона или поломки телефона. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
