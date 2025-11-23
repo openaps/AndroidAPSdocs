@@ -122,7 +122,7 @@ Nach einem Android-Upgrade oder dem Umzug auf ein neueres Smartphone verliert **
 
 ```{admonition} Android 16
 :class: warning
-Only enable the **Bond BT device on Android 15+** option on Android 15, and only if you experiance connectivity issues. DO NOT enable bonding option on Android 16.
+Only enable the **Bond BT device on Android 15+** option on Android 15, and only if you experience connectivity issues. DO NOT enable bonding option on Android 16.
 ```
 
 1) **Öffne die Einstellungen** durch einen Klick auf das 3-Punkte-Menü rechts oben auf dem Startbildschirm.
