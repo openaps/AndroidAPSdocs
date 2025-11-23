@@ -383,6 +383,9 @@ From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home sc
 If you are experiencing connection timeouts or other connection issues:
 - In Android application settings for AAPS: Set location permission to "Allow all the time".
 
+### Bluetooth issues
+For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+
 ### Activation interrupted
 
 If the activation process is interrupted for example by and empty phone battery or phone crash. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
