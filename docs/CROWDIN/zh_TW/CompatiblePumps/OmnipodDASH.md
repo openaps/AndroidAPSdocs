@@ -24,7 +24,7 @@
 - Pod 的註冊狀態會儲存在設定檔案中，如果你在 Pod 已註冊的狀態下匯出設定檔案。 接著更換為新的 Pod，然後再從先前匯出的設定還原，這會還原舊 Pod 的註冊狀態，並移除新 Pod 的註冊狀態。 因此建議每次註冊 Pod 後都匯出設定，以便在你的裝置出狀況時，能還原該 Pod 的註冊狀態。
 - 當設定新的基礎率設定檔時，DASH 會先暫停輸注，然後再設定新的基礎率設定檔。 若通訊中斷或發生錯誤，基礎率設定檔不會自動重新開始。 詳細內容請參閱 [恢復胰島素輸注](#omnipod-dash-resuming-insulin-delivery) 章節。
 - 如果已設定警示，且 Pod 即將到期，Pod 會持續發出嗶聲，直到將警示靜音為止；詳情請參閱 [靜音 Pod 警示](#omnipod-dash-silencing-pod-alerts)。
-- 有多項已知的藍牙問題可能導致 Pod 註冊異常。 關於藍牙問題的建議，請參閱 [問題排除](#troubleshooting)，特別是[藍牙相關問題](#omnipod-dash-bluetooth-related-issues)章節。
+- 有多項已知的藍牙問題可能導致 Pod 註冊異常。 See [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md) for the known issue and solutions to these problems.
 
 (hardware-software-requirements)=
 
@@ -492,90 +492,9 @@ DASH 概覽標籤將顯示如下所述：
 
 (omnipod-dash-bluetooth-related-issues)=
 
-### 藍牙相關問題
+## **Bluetooth related issues**
 
-部分社群成員遇到與藍牙相關的 Pod 啟用失敗與其他 Pod 錯誤。 許多問題可追溯至以下其中一項原因：
-
-#### **Android 16**
-
-- Android 16 至少需要 **AAPS** 版本 3.3.2.1，因為此版本加入了專門針對 Android 16 在 Omnipod 上引入的[已知問題](../GettingHelp/GeneralTroubleshooting.md#cannot-start-omnipod-with-android-16)之修正。
-
-#### **使用 Android「附近裝置」權限的應用程式**
-
-Android 透過權限模型讓你控制每個應用程式在手機上能做什麼、能存取什麼。 你可針對每個已安裝的應用程式允許或拒絕特定權限，例如存取裝置上的檔案、存取藍牙、掃描附近裝置等。
-
-**AAPS** 需要多項特定權限才能運作，其中確保 Pod 正常工作的必要權限是「附近裝置」。 也有許多其他應用程式需要此權限；社群發現，當某些應用被授予此權限時，可能會在部分裝置上導致新 Pod 的啟用發生問題。
-
-#### **使用「附近裝置」權限且已知會引發問題的應用程式：**
-
-此清單中的應用程式已在社群的一處或多處被討論過，確認會對 Omnipod DASH 裝置造成問題。 任何建議與找到的資訊連結都會放在此表格中。
-
-***注意：** 若想更新此表中的任何資訊，請在 Discord 的 #omnipod-dash 頻道標記 @XiTatiON。*
-
-**myBMW**   MyBMW 會干擾 Medtrum Nano 與 Omnipod DASH。 MyBMW App 對「尋找附近裝置」權限只會提示一次；即使不授權，仍可正常運作。
-
-**Amazon Alexa**    對部分使用者，移除 Alexa App 的「附近裝置」權限即可解決問題，但會使配對 Matter 物聯網裝置的功能失效。
-
-**MINI app**    看起來此 App 是以 myBMW App 為基礎，因此行為可能相同。
-
-
-
-#### **如何撤銷其他應用程式的「附近裝置」權限：**
-如果你在啟用新 Pod 時遇到問題，且你使用的 **AAPS** 版本與你的 Android 版本相容， 在啟用新 Pod 的過程中，可能需要先撤銷其他應用程式的該權限。
-
-請依照以下步驟，將除了 **AAPS** 之外的所有應用程式的「附近裝置」權限撤銷：
-
-***注意：** 本指南的螢幕截圖與操作說明來自 Google Pixel 8 Pro 上的原生 Android 16 安裝。 其他廠牌與裝置的選單與設定描述可能不盡相同，請依你的裝置調整步驟；若卡關，請參閱[DASH 求助管道](#omnipod-dash-where-to-get-help-for-dash)章節，了解如何向社群尋求支援。*
-
-1. 打開手機上的 Android 設定，向下捲動並點選**安全與隱私 (1)**。
-
-    ![android_settings_sec_priv](../images/android_16/android_settings_sec_priv.png)
-
-2. 向下捲動並點選**隱私控制 (1)**。
-
-   ![android_sec_priv](../images/android_16/android_sec_priv.png)
-
-3. 點選**權限管理員 (1)**。
-
-   ![android_priv_control](../images/android_16/android_priv_control.png)
-
-3. 向下捲動並點選**附近裝置 (1)**。
-
-   ![android_perm_man_nearby_dev](../images/android_16/android_perm_man_nearby_dev.png)
-
-4. 瀏覽應用程式清單，點選你要撤銷**附近裝置**權限的應用程式。
-
-   在本指南中，我們以**Android Auto (1)** 作為撤銷權限的示範 App。
-
-   為避免讓更多 Pod 變磚，我們建議一開始先對除 **AAPS** 之外的所有應用程式撤銷該權限。
-
-   ***注意：** 若不確定是哪個應用程式造成問題，請全部先停用（也記得先查看已知問題 App 清單，從那些開始）。如果你能接受在過程中有幾個 Pod 變磚，就在每次啟用新 Pod 前，僅替一個新的應用程式開啟該權限，逐步縮小範圍，直到找出造成 Pod 問題的特定應用程式。 如果你確定了新的問題應用程式，請在 Discord 的 #omnipod-dash 頻道告訴我們。*
-
-   ![android_nearby_dev](../images/android_16/android_nearby_dev.png)
-
-5. 若要撤銷該權限，請點選 **Don't allow (1)**，然後點選 **Don't allow anyway (2)**。 若操作正確，您應會看到 **Don't allow (3)** 為已選取的切換選項。 現在您可以按下 **Back arrow (4)** 返回 **Nearby device** 選單；如有需要，也可在其他應用程式上變更此設定。
-
-   ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dev.png) ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow_anyway.png)  ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow.png)
-
-#### **如何為系統應用程式與其他應用程式重新啟用「Nearby device」權限：**
-
-1. 如有需要，請參閱 **「How to revoke "Nearby device" permissions for other apps」** 章節以瞭解如何前往應用程式的隱私設定，進入 **Nearby device** 設定後請繼續第 2 步。
-
-2. 瀏覽應用程式清單，點選您希望允許 **Nearby devices** 權限的應用程式。
-
-   在本指南中，**Android Auto (1)** 是我們要允許該權限的應用程式。
-
-   您會注意到在撤銷權限後，應用程式清單中找不到 **Android Auto (1)**。 這是因為 **Android Auto** 應用程式是 **系統應用程式**，而系統應用程式在預設情況下會被隱藏。
-
-   ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)
-
-3. 若要顯示隱藏的系統應用程式，請點選 **三條線（漢堡選單）(1)**，接著點選 **"顯示系統  (1)"**。 現在您應該可以在清單中看到先前隱藏的系統應用程式 **Android Auto (3)**。
-
-   ***注意：** 如果某個應用程式已被撤銷，您需要往下捲動，直到在清單下方看到已撤銷的應用程式清單。*
-
-   ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
-
-5. 請反向依照 **「How to revoke "Nearby device" permissions for other apps」** 的指引，為各個應用程式重新啟用權限。
+For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 ### 暫停輸送
