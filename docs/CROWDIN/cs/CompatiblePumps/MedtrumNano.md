@@ -374,6 +374,9 @@ From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home sc
 Pokud máte problémy s přípojením kvůli časovému limitu nebo jiné problémy s připojením:
 - V nastavení AAPS v systému Android: Nastavte oprávnění k určení polohy na „Povolit vždy“.
 
+### Bluetooth issues
+For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+
 ### Aktivace přerušena
 
 Pokud je proces aktivace přerušen, například kvůli vybité baterii telefonu nebo poruše telefonu. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
