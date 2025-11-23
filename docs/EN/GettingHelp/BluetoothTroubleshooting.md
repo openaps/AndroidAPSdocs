@@ -2,7 +2,7 @@
 
 # **Bluetooth related issues**
 
-Some members of the community have been running into issues with Omnipod DASH activation failures and Medtrum Nano connectivity problems, and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues. 
+Some users have been running into issues with Omnipod DASH activation failures, Medtrum Nano connectivity problems, and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues. 
 
 Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medtrum Nano has known issues with nearby device permission as well as the Omnipod DASH. 
 
@@ -27,9 +27,12 @@ Android allows you to control what each app is able to do or access on your phon
 
 ### **Apps that use "Nearby device" permissions and are known to have caused problems:**
 
-Apps in this list have been discussed in one or more places in the community as causing problems for Omnipod DASH devices and in some cases Medtrum Nano too. Any advice and links to the information found is listed below: 
+Apps in this list have been discussed in one or more places in the community as causing problems for Omnipod DASH devices and in some cases Medtrum Nano too.
 
-***NOTE:** If you wish to update any info here please ping @XiTatiON on #omnipod-dash Discord channel.*
+```{admonition} Updating the list
+:class: note
+Ping @XiTatiON on #omnipod-dash Discord channel to discuss apps to be added to this list.
+```
 
 - **myBMW**	MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
 
@@ -37,7 +40,7 @@ Apps in this list have been discussed in one or more places in the community as 
 
 - **MINI app**	Appears the app is based on myBMW app and might mirror it's behavior as a result
 
-- **BM2** Solar Battery Monitoring app, used in a bunch of camper van and camping solar setups, when the app is running it prevented activation of a New Pod. Forcer Stopping the app while activating an new pod worked around the issue. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
+- **BM2** Solar Battery Monitoring app, used in a some camper van and camping solar setups, when the app is running it prevented activation of a new Pod. Force Stopping the app while activating an new pod is a workaround to the issue. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
@@ -46,7 +49,10 @@ If you are facing issues activating a new Pod and you are running on the correct
 
 Follow this procedure to revoked the "Nearby device" permission for all apps except **AAPS**:
 
-***NOTE:** The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Other manufactures and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.*
+```{admonition} Menus and settings
+:class: note
+The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Other manufactures and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
+```
 
 1. Open Android settings on your phone, scroll down and press on **Security and privacy (1)**.
 
@@ -70,7 +76,10 @@ Follow this procedure to revoked the "Nearby device" permission for all apps exc
    
    To avoid bricking more pods we advise everyone initially to revoke the permission on all apps except **AAPS**.
 
-   ***NOTE:** If you are unsure which app is causing you an issue, disable them all (remember to check the list of known problem apps too and start with those) and if you can spare a few bricked pods on the way, enable the permission on one new app before every new Pod activation, until you can narrow down which app specifically causes your Pod issues. If you do identify new problematic apps please let us know on the #omnipod-dash Discord channel.*
+```{admonition} Which app to select?
+:class: tip
+If you are unsure which app is causing you an issue, disable them all (remember to check the list of known problem apps too and start with those) and if you can spare a few bricked pods on the way, enable the permission on one new app before every new Pod activation, until you can narrow down which app specifically causes your Pod issues. If you do identify new problematic apps please let us know on the #omnipod-dash Discord channel.
+```
 
    ![android_nearby_dev](../images/android_16/android_nearby_dev.png)  
 
@@ -94,7 +103,10 @@ Follow this procedure to revoked the "Nearby device" permission for all apps exc
 
 3. To show hidden system apps Press on the **Three Dotted Lines (Hamburger) (1)**, then Press on **"Show System (1)"**. You should now be able to see the hidden system app in the list **Android Auto (3)**.  
 
-   ***NOTE:** If an app is revoked you will need to scroll down until you see the list of revoked apps lower down in the list.*
+```{admonition} Find your app
+:class: tip
+If an app is revoked you will need to scroll down until you see the list of revoked apps lower down in the list.
+```
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png) 
 
@@ -108,7 +120,10 @@ Follow this procedure to revoked the "Nearby device" permission for all apps exc
 
 After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15. Enabling the **Bond BT device on Android 15+** setting within **AAPS** settings may help improve stability of Bluetooth connections, follow guide below to enable this:
 
-***NOTE:** Only enable the **Bond BT device on Android 15+** option on Android 15, and only if you experiance connectivity issues. DO NOT enable bonding option on Android 16.*
+```{admonition} Android 16
+:class: warning
+Only enable the **Bond BT device on Android 15+** option on Android 15, and only if you experiance connectivity issues. DO NOT enable bonding option on Android 16.
+```
 
 1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
