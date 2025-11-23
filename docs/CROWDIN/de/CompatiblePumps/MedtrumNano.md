@@ -374,6 +374,9 @@ Ab AAPS Version 3.3.0.0 wird der Synchronisations-Fortschritt auf dem Startbilds
 Wenn Du Verbindungsabbrüche oder andere Verbindungsprobleme hast:
 - In den Android-Anwendungseinstellungen für AAPS: Standortberechtigung auf "Immer zulassen" setzen.
 
+### Bluetooth issues
+For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+
 ### Aktivierung unterbrochen
 
 Wenn der Aktivierungsprozess beispielsweise durch einen leeren Smartphone-Akku oder einen Smartphone-Absturz unterbrochen wird. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
