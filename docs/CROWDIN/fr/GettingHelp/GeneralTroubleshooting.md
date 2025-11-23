@@ -1,17 +1,23 @@
-# Troubleshooting
+(generaltroubleshooting)=
 
-Vous pouvez trouver des informations de dépannage sur de nombreuses pages dans le wiki. Cette page est une collection de liens pour vous aider à trouver les informations nécessaires pour résoudre votre problème.
+# **Troubleshooting**
+
+Vous pouvez trouver des informations de dépannage sur de nombreuses pages dans le wiki. This page is a collection of links to help you find the information to solve your problem for various known issues.
 
 D'autres informations utiles peuvent également être disponibles dans la [FAQ](../UsefulLinks/FAQ.md).
 
-## Application AAPS
+---
 
-### Génération et mise à jour
+(generaltroubleshooting-aaps-app)=
+
+## **Application AAPS**
+
+### **Génération et mise à jour**
 
 * [Fichier de clés perdu](#troubleshooting_androidstudio-lost-keystore)
 * [Dépannage AndroidStudio](TroubleshootingAndroidStudio)
 
-### Installing
+### **Installing**
 
 You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
 
@@ -19,7 +25,7 @@ Ignore it: More details, Install anyway.
 
 ![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
 
-### Paramètres
+### **Paramètres**
 * Profil
 
   ![Error: Débits de Basal non alignés sur les heures](../images/Screen_DifferentPump.png)
@@ -30,46 +36,43 @@ Ignore it: More details, Install anyway.
 
 * [Client Nightscout](../GettingHelp/TroubleshootingNsClient.md)
 
-### Utilisation
+### **Utilisation**
 * [Valeur de glucides incorrectes](#CobCalculation-detection-of-wrong-cob-values)
 
    ![Erreur: Absorption lente des glucides](../images/Calculator_SlowCarbAbsorption.png)
 
 * [Commandes SMS](#SMSCommands-troubleshooting)
 
-### Cannot start Omnipod with Android 16
+---
 
-Upgrade to minimum version of AndroidAPS: 3.3.2.1.
-
-### Frequent Bluetooth connection problems
-
-#### Android 15
-
-After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15, you can try to enable the following:
-
-1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+(generaltroubleshooting-bluetooth-related-issues)=
 
 
-![Open preferences](../images/Pref2020_Open2.png)
+## **Bluetooth related issues**
 
-2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
+For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
 
-   ![BondBT](../images/troubleshooting/BondBT.png)
+---
 
-3. If the pump asks for a pairing request, accept it.
+(generaltroubleshooting-android-related-issues)=
 
-4. Restart your phone.
+## **Android Related Issues**
 
-#### Battery optimization
+### **Battery optimization**
 
-Cela peut se produire avec diverses pompes. Apart from excluding AAPS from any battery optimization, you can also exclude the system Bluetooth app from battery optimization. Cela peut être utile dans certains cas. Depending on the phone you use, you will find the Bluetooth app differently.
+Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
 
-Voici des exemples pour les trouver sur des téléphones Android spécifiques.
+When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip+**.
 
+It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
 
-##### Pixel phones (stock Android)
+Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
 
-* Allez dans les paramètres d'Android, sélectionnez "Applications".
+***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+
+#### **Pixel phones (stock Android)**
+
+* Go to the Android settings, select "Apps".
 
   ![Paramètres Android ¦Applications](../images/troubleshooting/pixel/01_androidsettings.png)
 
@@ -90,7 +93,7 @@ Voici des exemples pour les trouver sur des téléphones Android spécifiques.
   ![Optimisation batterie BT](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-##### Téléphone Samsung
+#### **Téléphone Samsung**
 
 * Allez dans les paramètres d'Android, sélectionnez "Applications"
 
@@ -112,8 +115,17 @@ Voici des exemples pour les trouver sur des téléphones Android spécifiques.
 
   ![Non optimisée](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
+#### **Huawei phones**
 
-## MGC
+See this guide for [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+
+---
+
+(generaltroubleshooting-cgm)=
+
+## **Continious Glucose Monitor (CGM)**
+
+Useful links to known issues and steps to resolve for CGMs.
 
 * [General](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
@@ -121,18 +133,35 @@ Voici des exemples pour les trouver sur des téléphones Android spécifiques.
 * [xDrip - pas de données MGC](#xdrip-identify-receiver)
 * [Dépannage xDrip - Dexcom](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
-## Pompes
+---
+
+(generaltroubleshooting-pumps)=
+
+## **Pompes**
+
+Useful links to known issues and steps to resolve for Pumps
 
 * [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
 * [Accu-Chek Combo généralités](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
-## Téléphones
+---
 
+(generaltroubleshooting-phones)=
+
+## **Téléphones**
+
+Useful links to known issues and steps to resolve for Phones
+
+* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
 * [Huawei optimisation bluetooth & batterie](../CompatiblePhones/Huawei.md)
 
+(generaltroubleshooting-smartwatches)=
+
 ## Montres connectées
+
+Useful links to known issues and steps to resolve for Smartwatches
 
 * [Dépannage de l'application Wear](#Watchfaces-troubleshooting-the-wear-app)
