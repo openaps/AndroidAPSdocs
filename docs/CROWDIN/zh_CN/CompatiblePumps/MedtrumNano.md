@@ -374,6 +374,9 @@ If a patch activation is interrupted, for instance because the phone battery run
 若出现连接超时或其他连接问题：
 - 在AAPS的安卓应用设置中：将位置权限设为"始终允许"。
 
+### Bluetooth issues
+For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+
 ### 激活中断
 
 若激活流程因手机电量耗尽或系统崩溃等原因中断。 The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
