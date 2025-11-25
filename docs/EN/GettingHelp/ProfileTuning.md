@@ -7,18 +7,21 @@ This guide provides advice originally written up by @Robby from Discord on tips 
 This guide is mainly trying to find/explain the logic of the OpenAPS algorithm results with a given profile, and provide information about which values to adjust when certain situations are observed. 
 
 ## Changing the profile settings, how to process
-Carefully observe and compare, **over several days**, what is happening with your Blood Glucose Levels (BG) and your Insulin on Board (IOB).  
-Keep an eye out for patterns that happen around the same time (almost) everyday.   
-It's important to do this over several days and never use the data you observe from a single day to make **profile** adjustment decisions.  
-After you have observed a repeatable pattern of behaviors, e.g. at 1PM you see a spike in BG or a negative IOB value, only then start to make small changes to your profile. 
-It's important to limit the changes you make to one thing at a time. E.g. increase your basil by .5 around 1PM.  
-After every change it's important to monitor the impact this has on your BG and IOB for the next few days.
-Repeat this pattern of observe, decide, change.
+1. Ensure you have read and understand the recommended settings and advice below, not following this advice will make the whole process more complex and less likely to get well tuned profile.
+2. Carefully observe and compare, **over several days**, what is happening with your Blood Glucose Levels (BG) and your Insulin on Board (IOB).  
+3. Keep an eye out for patterns that happen around the same time (almost) everyday.   
+4. It's important to do this over several days and never use the data you observe from a single day to make **profile** adjustment decisions.  
+5. After you have observed a repeatable pattern of behaviours, e.g. at 1PM you see a spike in BG or a negative IOB value, only then start to make small changes to your profile. 
+6. It's important to limit the changes you make to one thing at a time. E.g. increase your basil by .5 around 1PM.  
+7. After every change it's important to monitor the impact this has on your BG and IOB for the next few days.
+8. Repeat this pattern of observe, decide, change.
 
 **Don't Rush, go slow!**
 
 ## Recommended settings and advice while tweaking
 - Do all testing with closed loop enabled.
+- Turn OFF all automations.
+- Do not take manual user actions (manual bolus, temp targets etc) while testing, let the system use the profile settings only.
 - On the secondary charts: on chart 1, use IOB, COB and SENS. On chart 2, use DEV and -BGI
 - COB=0*
   -  *meaning that the meal is digested, and there are no more carbs in your body. AAPS might indicate COB=0 while you still have carbs on board.
@@ -31,11 +34,11 @@ Repeat this pattern of observe, decide, change.
 higher than your target).
 - You need to check the actual IOB but also, the IOB chart to see how was the IOB during the past few hours.  
   ![IOB Chart](../images/troubleshooting/profile/IOB_Chart.png)  
-  - This chart shows negative IOB during early morning hours. (IA= IOB GA=COB)  
+  - This chart shows negative IOB during early morning hours. (IA=IOB GA=COB)  
 
 
 ## Profile definitions
-A **strong** profile indicates some combintation of the the following:
+A **strong** profile indicates some combination of the the following:
 - ISF number is too small
 - The basal number is too big
 - IC number is too small
@@ -62,7 +65,7 @@ If you observe the following patterns after a few days, consider the following c
 - ISF too strong
 - Basal too strong (if also negative IOB)
 
-### Rollercoaster  
+### Rollercoaster
 - ISF too strong
 
 ## BG After Meals Observations
@@ -73,7 +76,7 @@ If you observe the following patterns after a few days, consider the following c
 - Bolus (IC or injected %) not strong enough
 
 ### Fast rise and then go low 
-- Consider doing a pre-bolus, profile might be too agressive (over correction of the raise)
+- Consider doing a pre-bolus, profile might be too aggressive (over correction of the raise)
 - Bolus too strong
 
 ## How to calculate your IC
