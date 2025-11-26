@@ -154,12 +154,13 @@ Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 ```
 
 ```{toctree}
-:caption: 8) Trouver de l'aide
+:caption: 8) Getting Help
 
-Où trouver de l'aide <./GettingHelp/WhereCanIGetHelp.md>
-Problèmes fréquents<./GettingHelp/GeneralTroubleshooting.md>
-Problèmes Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Accès aux fichiers journaux <./GettingHelp/AccessingLogFiles.md>
+Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
+General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
+- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
+Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}

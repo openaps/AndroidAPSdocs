@@ -1,17 +1,23 @@
-# Problembehandlung
+(generaltroubleshooting)=
 
-Informationen zur Behebung von Problemen findest Du auf vielen Seiten im Wiki. Auf dieser Seite sind Links zu den entsprechenden Abschnitten zusammengetragen, so dass Du schneller eine Lösung für Dein Problem finden kannst.
+# **Problembehandlung**
+
+Informationen zur Behebung von Problemen findest Du auf vielen Seiten im Wiki. This page is a collection of links to help you find the information to solve your problem for various known issues.
 
 Weitere nützliche Informationen können auch im [FAQ](../UsefulLinks/FAQ.md) stehen.
 
-## AAPS-App
+---
 
-### Erstellen & Update
+(generaltroubleshooting-aaps-app)=
+
+## **AAPS-App**
+
+### **Erstellen & Update**
 
 * [Verlorener Keystore](#troubleshooting_androidstudio-lost-keystore)
 * [Fehlerbehebung Android Studio](TroubleshootingAndroidStudio)
 
-### Installation
+### **Installation**
 
 Es kann sein, dass Google Play Protect ein Warnung anzeigt, dass die App unsicher ist, für eine ältere Android-Version erstellt wurde und nicht die neuesten Datenschutz-Schutzmaßnahmen enthält.
 
@@ -19,7 +25,7 @@ Ignoriere sie: Weitere Details, Trotzdem installieren.
 
 ![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
 
-### Einstellungen
+### **Einstellungen**
 * Profil
 
   !['Fehler: Basal ist nicht auf Stunden ausgerichtet'](../images/Screen_DifferentPump.png)
@@ -30,46 +36,43 @@ Ignoriere sie: Weitere Details, Trotzdem installieren.
 
 * [Nightscout-Client (NSClient)](../GettingHelp/TroubleshootingNsClient.md)
 
-### Nutzung
+### **Nutzung**
 * [Fehlerhafte Kohlenhydrat-Werte (COB)](#CobCalculation-detection-of-wrong-cob-values)
 
    ![Fehler: Langsame KH-Aufnahme](../images/Calculator_SlowCarbAbsorption.png)
 
 * [SMS-Befehle](#SMSCommands-troubleshooting)
 
-### Cannot start Omnipod with Android 16
+---
 
-Upgrade to minimum version of AndroidAPS: 3.3.2.1.
-
-### Häufige Bluetooth-Verbindungsprobleme
-
-#### Android 15
-
-Nach einem Android-Upgrade oder dem Umzug auf ein neueres Smartphone verliert **AAPS** häufig die Bluetooth-Verbindung zur Pumpe. Mit einem Neustart des Smartphones verschwindet das Problem vorübergehend. Wenn auf dem Smartphone Android 15 läuft, kannst Du versuchen die folgenden Dinge zu aktivieren:
-
-1) **Öffne die Einstellungen** durch einen Klick auf das 3-Punkte-Menü rechts oben auf dem Startbildschirm.
+(generaltroubleshooting-bluetooth-related-issues)=
 
 
-![Einstellungen öffnen](../images/Pref2020_Open2.png)
+## **Bluetooth related issues**
 
-2. Scrolle ganz herunter und öffne das **Bestätigungstöne** / **Erweitertes**-Untermenü. Aktiviere **Verbinde BT-Gerät bei Android 15+**.
+For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
 
-   ![BondBT](../images/troubleshooting/BondBT.png)
+---
 
-3. Wenn die Pumpe eine Koppelungsanfrage schickt, nimm Sie sie an.
+(generaltroubleshooting-android-related-issues)=
 
-4. Starte dein Smartphone neu.
+## **Android Related Issues**
 
-#### Akku-Optimierung
+### **Akku-Optimierung**
 
-Der Fehler kann bei verschiedenen Insulinpumpen auftreten. Neben AAPS von jeder Akku-Optimierung auszuschließen, kannst Du auch die Bluetooth-App des Systems von der Akku-Optimierung ausschließen. In einigen Fällen hilft das. Je nach verwendetem Smartphone findet sich die Bluetooth-App an anderen Stellen.
+Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
 
-Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones findest.
+When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip+**.
 
+It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
 
-##### Pixel Smartphones (unverändertes Android)
+Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
 
-* Gehe zu Einstellungen > Apps
+***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+
+#### **Pixel Smartphones (unverändertes Android)**
+
+* Go to the Android settings, select "Apps".
 
   ![Android-Einstellungen > Apps](../images/troubleshooting/pixel/01_androidsettings.png)
 
@@ -90,7 +93,7 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
   ![Bluetooth Akku-Optimierung](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-##### Samsung Smartphones
+#### **Samsung Smartphones**
 
 * Gehe zu Einstellungen > Apps
 
@@ -112,8 +115,17 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 
   ![Nicht eingeschränkt](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
+#### **Huawei phones**
 
-## CGM
+See this guide for [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+
+---
+
+(generaltroubleshooting-cgm)=
+
+## **Continious Glucose Monitor (CGM)**
+
+Useful links to known issues and steps to resolve for CGMs.
 
 * [Allgemein](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
@@ -121,18 +133,35 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 * [xDrip - fehlende CGM Daten](#xdrip-identify-receiver)
 * [xDrip - Dexcom Problembehandlung](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
-## Pumpen
+---
+
+(generaltroubleshooting-pumps)=
+
+## **Pumpen**
+
+Useful links to known issues and steps to resolve for Pumps
 
 * [Dana RS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
 * [Accu-Chek Combo allgemein](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
-## Smartphones
+---
 
+(generaltroubleshooting-phones)=
+
+## **Smartphones**
+
+Useful links to known issues and steps to resolve for Phones
+
+* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Unihertz Jelly](../CompatiblePhones/Jelly.md)
 * [Huawei Bluetooth & Optimierung der Akkulaufzeit](../CompatiblePhones/Huawei.md)
 
+(generaltroubleshooting-smartwatches)=
+
 ## Smartwatches
+
+Useful links to known issues and steps to resolve for Smartwatches
 
 * [Fehlerbehebung der Wear App](#Watchfaces-troubleshooting-the-wear-app)
