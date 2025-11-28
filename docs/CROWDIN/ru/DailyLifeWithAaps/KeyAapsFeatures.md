@@ -124,43 +124,43 @@ Autosens отслеживает отклонения гликемии в кро�
 
 ### Чувствительность поднимает цель
 
-Если эта опция включена, функция определения чувствительности (autosens) может поднять цель при обнаружении чувствительности ниже 100%. В этом случае цель будет увеличена на процент обнаруженной (не)чувствительности.
+Если эта опция включена, функция определения чувствительности (autosens) может поднять цель при обнаружении чувствительности ниже 100%. В этом случае цель будет увеличена на процент обнаруженной чувствительности.
 
-If the target is modified due to sensitivity detection, it will be displayed with a green background on your home screen.
+Если цель меняется из-за обнаружения чувствительности, она отображается на главном экране зеленым фоном.
 
 ![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
 
-This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
+Эта настройка доступна, если включена одна из опций "Включить динамическую чувствительность" или "Включить функцию Autosens".
 
-### Resistance lowers target
+### Резистентность понижает цель
 
-If this option is enabled, the sensitivity detection (autosens) can lower the target when resistance is detected (above 100%). In this case your target will be lowered by the percentage of the detected resistance.
+Если включена эта опция, функция определения чувствительности (autosens) может снизить целевое значение при обнаружении резистентности (выше 100%). В этом случае цель будет снижена на процент обнаруженной резистентности.
 
-This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
+Эта настройка доступна, если включена одна из опций "Включить динамическую чувствительность" или "Включить функцию Autosens".
 
 ### Включить супер микро болюс SMB
 
-Enable this to use SMB functionality. If disabled, no **SMBs** will be given.
+Включите, чтобы использовать функционал SMB. Если этот параметр отключен, то микроболюсы **SMBS** не подаются.
 
 При ее включении становятся доступными новые настройки.
 
 (Open-APS-features-enable-smb-with-high-temp-targets)=
 
-#### Включить супер микро болюс SMB с высокими значениями временных целей
+#### Включить супер микро болюс SMB при высоких значениях временных целей
 
-If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l, regardless of **Profile** target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
+Если активирован этот параметр, микроболюсы **SMBS** будут вводиться, даже если пользователь выбрал высокую **Временную Цель** (то есть любую величину, больше 100 мг/дл или 5,6 ммоль/л, независимо от целевого значения **Профиля **). Эта опция нужна для отключения микроболюсов SMB, когда параметр отключен. Например, если эта опция отключена, то микроболюсы **SMBs** можно отключить, установив **Временную Цель** выше 100mg/dL или 5.6mmol/l. Эта опция также отключает **SMB** независимо от того, какое другое условие пытается включить микроболюс.
 
-If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled.
+Если этот параметр включен, **SMB** будут активны только с высокой временной целью, если при этом также активирован **включать SMB с временными целями**.
 
-(Open-APS-features-enable-smb-always)=
+(Open-APS-функции-включать-микроболюсы-всегда)=
 
 #### Всегда включать супер микро болюс SMB
 
-If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
+Если включена эта настройка, микроболюсы SMB работают всегда (независимо от активных углеводов COB, временных целей или болюсов). Если этот параметр включен, остальные параметры включения не будут иметь эффекта. Однако, если отключена настройка **Включить SMB с высокими временными целями** и задается высокая временная цель, SMB будут отключены.
 
-This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+Эта настройка доступна только в том случае, если **AAPS** определяет, что вы используете [ надежный источник ГК](#GettingStarted-TrustedBGSource) с хорошей фильтрацией. FreeStyle Libre 1 не считается надежным источником из-за риска бесконечно повторяющихся старых данных ГК в случае сбоя датчика.
 
-Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Зашумленные данные могут привести к тому, что **AAPS** поверит, что ГК растет очень быстро, что в свою очередь приведет к подаче ненужных микроболюсов. Для получения дополнительной информации о шуме и сглаживании данных смотрите [ здесь](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 #### Включать супер микро болюсы при активных углеводах COB
 
@@ -180,9 +180,9 @@ If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB
 
 For safety reasons, this setting is only available if **AAPS** detects that you are using a reliable BG source. It is not visible if "Enable SMB always" is switched on.
 
-This setting is only available if **AAPS** detects that you are using a [reliable BG source,](#GettingStarted-TrustedBGSource) with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+This setting is only available if **AAPS** detects that you are using a [reliable BG source,](#GettingStarted-TrustedBGSource) with advanced filtering. FreeStyle Libre 1 не считается надежным источником из-за риска бесконечно повторяющихся старых данных ГК в случае сбоя датчика.
 
-Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
+Зашумленные данные могут привести к тому, что **AAPS** поверит, что ГК растет очень быстро, что в свою очередь приведет к подаче ненужных микроболюсов. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
 This setting is not visible if "Enable SMB always" is switched on.
 
 #### How frequently SMBs will be given in min
