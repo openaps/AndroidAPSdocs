@@ -182,20 +182,20 @@ Autosens отслеживает отклонения гликемии в кро�
 
 Эта настройка доступна только в том случае, если **AAPS** определяет, что вы используете [ надежный источник ГК](#GettingStarted-TrustedBGSource) с хорошей фильтрацией. FreeStyle Libre 1 не считается надежным источником из-за риска бесконечно повторяющихся старых данных ГК в случае сбоя датчика.
 
-Зашумленные данные могут привести к тому, что **AAPS** поверит, что ГК растет очень быстро, что в свою очередь приведет к подаче ненужных микроболюсов. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
-This setting is not visible if "Enable SMB always" is switched on.
+Зашумленные данные могут привести к тому, что **AAPS** поверит, что ГК растет очень быстро, что в свою очередь приведет к подаче ненужных микроболюсов. Дополнительная информация о шуме и сглаживании данных находится [здесь](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
+Эта настройка не отображается, если включен параметр "Всегда включать SMB".
 
-#### How frequently SMBs will be given in min
+#### Как часто будут подаваться микроболюсы
 
-This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
+Этот параметр ограничивает частоту микроболюсов. Его значение определяет минимальное время между микроболюсами. Напоминаем, что цикл запускается каждый раз, когда алгоритм получает данные гликемии (обычно каждые 5 минут). Отсюда отнимите 2 минуты для выполнения цикла. То есть, если требуется чтобы SMB работали при каждом запуске цикла, установите это значение на 3 минуты.
 
-Default value: 3 min.
+Значение по умолчанию: 3 мин.
 
-(Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
+(Open-APS-функции-макс-минут-базала-для-ограничения)=
 
 #### Верхний лимит минут базала при SMB
 
-This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
+Это важный элемент в настройках безопасности. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
 Making this value larger allows the SMB to be more aggressive. You should start with the default value of 30 minutes. After some experience, increase the value in 15 minutes increments and observe the effects over multiple meals.
 
