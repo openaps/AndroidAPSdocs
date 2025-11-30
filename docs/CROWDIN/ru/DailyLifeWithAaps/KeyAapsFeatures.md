@@ -207,31 +207,31 @@ Autosens отслеживает отклонения гликемии в кро�
 
 Эта настройка позволяет регулировать силу микроболюсов во время непредвиденного приема пищи когда не остается углеводов.
 
-Default value : the same as **Max minutes of basal to limit SMB to**.
+Значение по умолчанию: то же, что и **Максимальное количество минут базала, до которого можно ограничить SMB **.
 
-This setting is only visible if "Enable SMB" and "Enable UAM " are switched on.
+Этот параметр виден только если включены опции "Включить SMB" и "Включить UAM".
 
 ### Включить непредвиденный прием пищи UAM
 
-With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
+При включении этой опции алгоритм SMB может распознать непредвиденный прием пищи. Этот параметр полезен, если вы забыли ввести в **AAPS** потребляемые углеводы или неправильно рассчитали количество углеводов, или если пища с большим количеством жира и белка усваивается дольше, чем ожидалось. Без ввода углеводов UAM может распознать быстрое повышение уровня глюкозы, вызванное углеводами, адреналином и т. д., и пытается скорректировать его с помощью SMB. И наоборот: если гликемия падает быстро, то настройка поможет досрочно прекратить SMB.
 
-**Therefore, UAM should always be activated when using SMB.**
+**Поэтому при использовании микроболюсов SMB всегда следует активировать непредвиденный прием пищи UAM.**
 
 (key-aaps-features-minimal-carbs-required-for-suggestion)=
 
-### Minimal carbs required for suggestion
+### Минимальные количество углеводов, необходимое для предложения
 
-Minimum grams of carbs to display a carbs suggestion alert. Eating of additional carbs will be suggested when the reference design detects that it requires carbs. In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
+Минимальное количество граммов углеводов для отображения предупреждения о рекомендуемых углеводах. Если алгоритм обнаруживает, что организму требуются дополнительные углеводы, об этом появится сообщение. Вы получите уведомление, которое можно отложить на 5, 15 или 30 минут.
 
 При желании уведомления об углеводах могут быть переданы в Nightscout. В этом случае сработают стандартные настройки оповещения NS. 
 
-In any case, the required carbs will be displayed in the COB section on your home screen.
+В любом случае, необходимые углеводы будут отображены в разделе активные углеводы на главном экране.
 
 ![Display carbs required on home screen](../images/Pref2020_CarbsRequired.png)
 
 ### Дополнительные настройки
 
-You can read more here : [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
+Подробнее читайте здесь : [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
 **Always use short average delta instead of simple data** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to be steadier with noisy data sources like xDrip+ and Libre.
 
