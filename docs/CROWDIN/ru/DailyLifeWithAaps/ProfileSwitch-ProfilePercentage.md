@@ -2,7 +2,7 @@
 
 В этом разделе объясняется, что такое **Переключение профиля** и **Процент профиля**. **Профиль** создается через [Конфигуратор > Профиль ](#setup-wizard-profile).
 
-When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can offer be particularly beneficial for:
+Когда мы вступаем в жизнь с использованием **AAPS**, нам следует создать диабетический **Профиль**, понять, как он работает, как выполнять **Переключение Профилей**, а также изучить влияние ** Процентного соотношения Профилей** на алгоритмы **AAPS**. Возможности ** Переключения профиля** или **Процентного соотношения профилей** могут быть особенно полезны для:
 
 - the Menstrual Cycle - a percentage adjustment within a **Profile** can be set up in **Automations** in order to allow **AAPS** to accommodate for different stages of the hormone cycle and with predicted insulin resistance.
 
