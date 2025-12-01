@@ -10,7 +10,7 @@
 
 - людей, работающих по сменам - сдвиг по времени в ** Профиле**, изменяя **Профиль** в зависимости от того, насколько позже / раньше пользователь ложится спать или просыпается.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
+Зачем использовать ** Процентное соотношение профилей **, а не корректировку при помощи временной базальной скорости? Для повышения эффективности ** Процентное соотношение профилей** пропорционально уменьшается или увеличивается по базалу, ISF и I:C. Это гарантирует, что при назначении дозы инсулина **AAPS** обеспечит сбалансированный подход. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
 
 ## How to activate a Profile Switch?
 
