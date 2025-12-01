@@ -4,11 +4,11 @@
 
 Когда мы вступаем в жизнь с использованием **AAPS**, нам следует создать диабетический **Профиль**, понять, как он работает, как выполнять **Переключение Профилей**, а также изучить влияние ** Процентного соотношения Профилей** на алгоритмы **AAPS**. Возможности ** Переключения профиля** или **Процентного соотношения профилей** могут быть особенно полезны для:
 
-- the Menstrual Cycle - a percentage adjustment within a **Profile** can be set up in **Automations** in order to allow **AAPS** to accommodate for different stages of the hormone cycle and with predicted insulin resistance.
+- принятия в расчет менструального цикла - процентная корректировка в пределах ** Профиля** может быть настроена в **Автоматизации**, чтобы позволить **AAPS** адаптироваться к различным стадиям гормонального цикла и прогнозируемой резистентности к инсулину.
 
-- Exercise - a percentage adjustment within a **Profile** can be set up in **Automations** for exercise in order to reduce basal intake.
+- учета физических нагрузок - процентная корректировка в ** профиле** может быть настроена в ** Автоматизациях** при физических нагрузках, чтобы снизить расход базала.
 
-- Night or pattern shift workers - a time shift in **Profile** can be set up for pattern shift workers by altering the number of hours in the **Profile** to how much later/earlier the user will go to bed or wake up.
+- людей, работающих по сменам - сдвиг по времени в ** Профиле**, изменяя **Профиль** в зависимости от того, насколько позже / раньше пользователь ложится спать или просыпается.
 
 Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
 
