@@ -65,45 +65,45 @@ B. Для активации **Процентной доли профиля**:
 
 Помните, что снижение **ISF** или **I:C** означает более агрессивную подачу инсулина. Новички **AAPS** могут легко упустить это из виду.
 
-Once selected, **AAPS** readjusts the default basal rate, and **AAPS** (open or closed) will continue to work on top of the selected percentage **Profile**.
+После смены профиля **AAPS** изменит базальную скорость по умолчанию, и (в открытом или замкнутом цикле) будет продолжать работать исходя из выбранного процентного значения ** Профиля **.
 
-The effect of a **Profile** Percentage is summarized in the table below:
+Влияние процентного изменения ** Профиля ** можно увидеть в таблице ниже:
 
 | Смена Профиля   
-Процент |    Effect    |    I:C  
-g/UI     | example  
-15g |         ISF  
-mmol/l/UI  
-mg/dl/UI         | UI to lower  
-2mmol/l  
-40mg/dl |
-|:------------------------:|:------------:|:-----------------:|:-------------:|:------------------------------------------:|:-------------------------------:|
-|           90%            |    Weaker    | 5/0.9  
-=**5.55** |    2.7 UI     | 2.2/0.9  
+Процент |    Эффект    |    I:C  
+г/ед     | пример  
+15г |        ISF  
+ммоль/л/ед  
+мг/дл/ед         | ед инс на пониж  
+2ммоль/л  
+40мг/дл |
+|:------------------------:|:------------:|:-----------------:|:------------:|:------------------------------------------:|:------------------------------------:|
+|           90%            |    Слабее    | 5/0.9  
+=**5.55** |    2.7 ед    | 2.2/0.9  
 =**2.4**  
   
 40/0.9  
-=**44.4** |             0.8 UI              |
-|         **100%**         | **Standard** |       **5**       |   **3 UI**    |                **2.2  
-40**                |           **0.9** UI            |
-|           130%           |   Stronger   | 5/1.3  
-=**3.85** |    3.9 UI     | 2.2/1.3  
-=**1.7**  
+=**44.4** |                0.8 ед                |
+|         **100%**         | **Стандарт** |       **5**       |   **3 ед**   |                **2.2  
+40**                |              **0.9** ед              |
+|           130%           |   Сильнее    | 5/1.3  
+=**3.85** |    3.9 ед    | 2.2/1.3  
+=**2.4**  
   
 40/1.3  
-=**30.8** |             1.2 UI              |
+=**30.8** |                1.2 ед                |
 
-(ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
+(ProfileSwitch-ProfilePercentage-time-shift-the-circadian-percentage-profile)=
 
-## Time shift of the Circadian Percentage Profile
+## Временной сдвиг циркадного процентного Профиля
 
-A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:
+Функция "сдвиг по времени" в **Профиле ** переместит настройки ** Профиля ** пользователя в соответствии с суточным (циркадным) часовым ритмом на введенное количество часов. Это полезно для:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
-- **users changing time zones during travelling**; or
-- **users who are type 1 children**: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
+- ** людей, работающих по сменам**: работая в ночную смену сдвиньте время в зависимости от того, насколько позже / раньше будете ложиться спать или просыпаться чем в **Профиле**; 
+- **пользователей, меняющих часовые пояса во время путешествия**; или
+- **Детей с диабетом 1 типа**: у которых есть установленный режим отхода ко сну и резистентность к инсулину, указанные в **Профиле**. Если по какой-либо причине ребенку назначено более позднее время отхода ко сну, лицо, осуществляющее уход, может применить "сдвиг во времени" к **Профилю** ребенка, чтобы позволить **AAPS** реагировать на резистентность к инсулину в период времени, установленный врачом.
 
-It is always a question of which hour’s **Profile’s** settings should replace the settings of the current time. Это время должно быть сдвинуто на х часов. So please be mindful of the directions as described in the following example:
+Всегда возникает вопрос о том, настройки **Профиля ** какого времени должны замениться настройками текущего времени. Это время должно быть сдвинуто на х часов. Поэтому, внимательно отнеситесь к инструкциям, описанным в следующем примере:
 
 - Текущее время: 12:00
 - **Сдвиг в сторону увеличения** времени 
@@ -115,10 +115,10 @@ It is always a question of which hour’s **Profile’s** settings should replac
 
 ![Инструкции по смене профиля и часового пояса](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+Этот механизм создания моментальных снимков **Профиля ** позволяет точнее рассчитать прошлое и отследить изменения **Профиля **.
 
-## Keep a profile switch for later use
+## Сохраняйте изменения в профиле для последующего использования
 
-Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
+После того, как выполнена Смену профиля с помощью процентного и/или временного сдвига, можно скопировать этот временный профиль в новый профиль.
 
-To do this, go to the tab [Treatments > Profile Switch](#your-aaps-profile-clone-profile-switch).
+Для этого перейдите на вкладку [Терапия > Смена Профиля ](#your-aaps-profile-clone-profile-switch).
