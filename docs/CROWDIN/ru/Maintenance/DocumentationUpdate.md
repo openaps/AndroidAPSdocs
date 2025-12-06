@@ -184,7 +184,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [Insight - отключить абсолютные значения в NS Client](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Помпа Medtronic - возможные задвоения данных](../CompatiblePumps/MedtronicPump.md)
 - [Новая инструкция для Freestyle Libre 2](../CompatibleCgms/Libre2.md)
-- [Переключение профиля с процентами - пример](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
+- [Смена профиля с процентами - пример](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [SMS--команды. Обновление](../RemoteFeatures/SMSCommands.md)
 - [Устранение неполадок Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
 - [Устранение неполадок - коллекция ссылок](../GettingHelp/GeneralTroubleshooting.md)

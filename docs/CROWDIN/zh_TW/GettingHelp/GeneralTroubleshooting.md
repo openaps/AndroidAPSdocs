@@ -2,7 +2,7 @@
 
 # **問題排除**
 
-你可以在許多 wiki 頁面上找到問題排除的資訊。 This page is a collection of links to help you find the information to solve your problem for various known issues.
+你可以在許多 wiki 頁面上找到問題排除的資訊。 本頁面彙整多個連結，協助你針對各類已知問題找到解決方式所需的資訊。
 
 額外的有用資訊也可能在[FAQ](../UsefulLinks/FAQ.md)中提供。
 
@@ -48,31 +48,31 @@
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## **Bluetooth related issues**
+## **藍牙相關問題**
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+若遇到藍牙連線、幫浦 / Pods 中斷，或註冊與連線等已知問題，請參閱 [藍牙疑難排解](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (generaltroubleshooting-android-related-issues)=
 
-## **Android Related Issues**
+## **Android 相關問題**
 
 ### **電池優化**
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+Android 已實作預設啟用的省電設定。 這些設定會自動暫停/中止對系統運作非必需的應用程式，以降低不需要隨時執行的 App 的電量消耗。
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip+**.
+啟用後，很可能會對 **AAPS** 與其他支援的應用程式（如 **xDrip+**）造成問題。
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+為確保 **AAPS** 與其他支援的應用程式能夠隨時保持運作，請務必停用電池優化。
 
-Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
+依你的手機品牌與型號，可能需要在多個位置停用這項設定。
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+***注意：**若你的手機提供此選項，請依下列步驟為藍牙服務停用電池優化；相同步驟也可用於 **AAPS** 與其他應用程式，但螢幕擷取畫面僅示範如何為藍牙服務操作。*
 
 #### **Pixel 手機（原生 Android）**
 
-* Go to the Android settings, select "Apps".
+* 前往 Android 設定，選取「應用程式」。
 
   ![Android 設定¦應用程式](../images/troubleshooting/pixel/01_androidsettings.png)
 
@@ -115,17 +115,17 @@ Depending on your phone model and make there may be more than one location and s
 
   ![未優化](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### **Huawei phones**
+#### **華為手機**
 
-See this guide for [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+請參閱此指南：[Huawei 藍牙與電池優化](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-cgm)=
 
-## **Continious Glucose Monitor (CGM)**
+## **連續式血糖監測（CGM）**
 
-Useful links to known issues and steps to resolve for CGMs.
+針對 CGM 的已知問題與解決步驟的實用連結。
 
 * [一般問題](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
@@ -139,7 +139,7 @@ Useful links to known issues and steps to resolve for CGMs.
 
 ## **幫浦**
 
-Useful links to known issues and steps to resolve for Pumps
+針對幫浦的已知問題與解決步驟的實用連結
 
 * [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
 * [Accu-Chek Combo 總覽](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
@@ -152,9 +152,9 @@ Useful links to known issues and steps to resolve for Pumps
 
 ## **手機**
 
-Useful links to known issues and steps to resolve for Phones
+針對手機的已知問題與解決步驟的實用連結
 
-* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
+* [已測試的手機與裝置設定清單](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
 * [華為藍牙 & 電池優化](../CompatiblePhones/Huawei.md)
 
@@ -162,6 +162,6 @@ Useful links to known issues and steps to resolve for Phones
 
 ## 智慧型手錶
 
-Useful links to known issues and steps to resolve for Smartwatches
+針對智慧型手錶的已知問題與解決步驟的實用連結
 
 * [問題排除 Wear 應用程式](#Watchfaces-troubleshooting-the-wear-app)
