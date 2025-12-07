@@ -16,3 +16,5 @@ sphinx:
   builder: html
   fail_on_warning: false
   configuration: docs/EN/conf.py
+
+formats: all
