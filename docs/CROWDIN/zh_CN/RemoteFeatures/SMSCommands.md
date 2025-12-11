@@ -263,6 +263,7 @@ PIN码要求：
 | ------------------ | ---- | -------------------------------------------------------------------------------------------------------------------------------- |
 | TREATMENTS REFRESH | 否    | 从Nightscout刷新治疗数据                                                                                                                |
 | AAPSCLIENT RESTART | 否    | 如果发现<br/>与Nightscout或**AAPSClient**的通信问题，则很有用                                                                              |
+| RESTART            | 否    | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                |
 | SMS DISABLE/STOP   | 否    | 禁用短信远程服务，回复代码Any。 <br/>请记住，您只能从**AAPS**主智能手机直接重新激活它。                                                                       |
 | HELP               | 否    | 返回所有可用于查询的功能：<br/>BG, LOOP, TREATMENTS, ....<br/>发送进一步的***HELP ***FUNCTION****** 指令以列出<br/>该部分的所有可用选项。 |
 | HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                             |
