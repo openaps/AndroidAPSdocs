@@ -2,15 +2,15 @@
 
 ## Что такое временные цели, где их можно задать и сконфигурировать?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. Это достигается за счет того, что **AAPS** вносит корректировки в расходование инсулина пользователем.
+**Временная Цель** (или сокращенно **ВЦ**) - это функция ** AAPS**, которая позволяет изменять [**целевой диапазон ГК** ](#profile-glucose-targets)в зависимости от вида активности в течение дня (приём пищи, физ нагрузка). Это достигается за счет того, что **AAPS** вносит корректировки в расходование инсулина пользователем.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+Цель гликемии, особенно если она краткосрочна (менее 4 часов), не должна быть *конкретным значением*, которого вы добиваетесь. Скорее, это способ заставить алгоритм **AAPS** быть более или менее агрессивным, при этом сохраняя уровни ГК в целевом диапазоне.
 
-Temporary targets can be defined within those boundaries :
+Временные цели можно задать в таких границах:
 
 |         | Временная цель         |
 | ------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   |
+| Минимум | 4 mmol/l or 72 mg/dL   |
 | Maximum | 15 mmol/l or 225 mg/dL |
 
 **AAPS** предусматривает три варианта ** временных целей **, подходящих для физических упражнений (**Временная цель- Нагрузка**), приема пищи (**Временная цель- Ожидаемый прием пищи**) и прогнозируемой гипогликемии (**Временная цель-Гипо**). **Временные цели** находятся на вкладке **Действия**.
