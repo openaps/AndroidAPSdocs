@@ -72,10 +72,10 @@ Your **BG target** is a core value and all of **AAPS** calculations are based on
 
 The targets can be defined within those boundaries :
 
-|         | _Low_ target           | _High_ target          |
-| ------- | ---------------------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   | 5 mmol/l or 90 mg/dL   |
-| Maximum | 10 mmol/l or 180 mg/dL | 15 mmol/l or 225 mg/dL |
+|          | _Low_ target           | _High_ target            |
+| -------- | ---------------------- | ------------------------ |
+| Минимум  | 4 ммоль/л или 72 мг/дЛ | 5 mmol/l or 90 mg/dL     |
+| Максимум | 10 mmol/l or 180 mg/dL | 15 ммоль/л или 225 мг/дЛ |
 
 ### Impact
 
