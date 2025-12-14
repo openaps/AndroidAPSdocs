@@ -8,10 +8,10 @@
 
 Временные цели можно задать в таких границах:
 
-|         | Временная цель         |
-| ------- | ---------------------- |
-| Минимум | 4 mmol/l or 72 mg/dL   |
-| Maximum | 15 mmol/l or 225 mg/dL |
+|          | Временная цель           |
+| -------- | ------------------------ |
+| Минимум  | 4 ммоль/л или 72 мг/дЛ   |
+| Максимум | 15 ммоль/л или 225 мг/дЛ |
 
 **AAPS** предусматривает три варианта ** временных целей **, подходящих для физических упражнений (**Временная цель- Нагрузка**), приема пищи (**Временная цель- Ожидаемый прием пищи**) и прогнозируемой гипогликемии (**Временная цель-Гипо**). **Временные цели** находятся на вкладке **Действия**.
 
@@ -19,17 +19,17 @@
 
 Для достижения желаемого значения **ГК** может потребоваться около 30 минут или больше с момента активации **Временной Цели**. **AAPS** не в состоянии достичь целевой **ГК** немедленно, и пользователи должны помнить об этом при использовании **Врем-Цели**.
 
-The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
+В таблице ниже приведены особенности **Врем-Цель-Нагрузка**, **Врем-цель-Ожидаемый приём пищи** и **Врем-Цель-Гипо**.
 
-### TT - Activity
+### ВЦ - Нагрузка
 
 ![TT Activity](../images/TempTarget2.png)
 
-**BG Target (depending on users' settings)**
+**Целевая ГК (в зависимости от настроек пользователя)**
 
-AAPS will aim to reach 8mmol/l or 144mg/dl for 40 minutes
+AAPS будет стремиться достичь 8ммол/л или 144мг/дл в течение 40 минут
 
-**Other considerations users may wish to factor in when selecting**:
+**Другие соображения, которые могут быть желательны пользователям при выборе**:
 
 Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
 
@@ -48,11 +48,11 @@ Users may also wish to consider:
 
 ![TT Activity](../images/TempTarget1.png)
 
-**BG Target (depending on users' settings)**
+**Целевая ГК (в зависимости от настроек пользователя)**
 
 AAPS will aim to reach 5mmol/l or 90mg/dl for 30 minutes
 
-**Other considerations users may wish to factor in when selecting**:
+**Другие соображения, которые могут быть желательны пользователям при выборе**:
 
 In closed loop mode, **SMB**:
 
@@ -65,11 +65,11 @@ Depending on **BG** level, **AAPS** will "increase" insulin usage within the use
 
 ![TT Activity](../images/TempTarget3.png)
 
-**BG Target (depending on users' settings)**
+**Целевая ГК (в зависимости от настроек пользователя)**
 
 AAPS will aim to reach 7mmol/l or 126mg/dl for 30 minutes
 
-**Other considerations users may wish to factor in when selecting**:
+**Другие соображения, которые могут быть желательны пользователям при выборе**:
 
 In closed loop mode, **SMB**:
 
