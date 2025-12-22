@@ -70,7 +70,7 @@ Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲�
 
 ## 建置過程中的幫助與支援
 
-如果在建置**AAPS**應用的過程中遇到困難，請參考專門的[**Android Studio問題排除**](../GettingHelp/TroubleshootingAndroidStudio)部分。
+If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) section, please consult that first.
 
 如果你認為建置說明中的內容有錯誤、缺失或令人困惑，或仍然感到困難，請與其他**AAPS**用戶群聯繫，群組可在[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)上找到。 如果你想自行更改某些內容（更新螢幕截圖_等_），請提交[拉取請求（PR）](../SupportingAaps/HowToEditTheDocs.md)。
 
@@ -409,7 +409,7 @@ Android Studio在建置完成後將顯示“BUILD SUCCESSFUL”的訊息。 你�
 
 ![建置完成](../images/Building-the-App/049_ReopenNotification.png)
 
-**_如果建置不成功，請參考[Android Studio 問題排除部分](../GettingHelp/TroubleshootingAndroidStudio)。_**
+**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
 在通知欄中，點擊藍色連結“定位”：
 
