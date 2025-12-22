@@ -220,7 +220,7 @@ Copy on an internet drive (Dropbox, Google etc) : all the apks you used to insta
 
 Please 
 
-* check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) for typical errors and
+* check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) for typical errors and
 * the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ### I'm stuck on an objective and need help.
