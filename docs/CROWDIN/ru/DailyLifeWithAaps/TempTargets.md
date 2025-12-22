@@ -2,16 +2,16 @@
 
 ## Что такое временные цели, где их можно задать и сконфигурировать?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. Это достигается за счет того, что **AAPS** вносит корректировки в расходование инсулина пользователем.
+**Временная Цель** (или сокращенно **ВЦ**) - это функция ** AAPS**, которая позволяет изменять [**целевой диапазон ГК** ](#profile-glucose-targets)в зависимости от вида активности в течение дня (приём пищи, физ нагрузка). Это достигается за счет того, что **AAPS** вносит корректировки в расходование инсулина пользователем.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+Цель гликемии, особенно если она краткосрочна (менее 4 часов), не должна быть *конкретным значением*, которого вы добиваетесь. Скорее, это способ заставить алгоритм **AAPS** быть более или менее агрессивным, при этом сохраняя уровни ГК в целевом диапазоне.
 
-Temporary targets can be defined within those boundaries :
+Временные цели можно задать в таких границах:
 
-|         | Временная цель         |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   |
-| Maximum | 15 mmol/l or 225 mg/dL |
+|          | Временная цель           |
+| -------- | ------------------------ |
+| Минимум  | 4 ммоль/л или 72 мг/дЛ   |
+| Максимум | 15 ммоль/л или 225 мг/дЛ |
 
 **AAPS** предусматривает три варианта ** временных целей **, подходящих для физических упражнений (**Временная цель- Нагрузка**), приема пищи (**Временная цель- Ожидаемый прием пищи**) и прогнозируемой гипогликемии (**Временная цель-Гипо**). **Временные цели** находятся на вкладке **Действия**.
 
@@ -19,81 +19,81 @@ Temporary targets can be defined within those boundaries :
 
 Для достижения желаемого значения **ГК** может потребоваться около 30 минут или больше с момента активации **Временной Цели**. **AAPS** не в состоянии достичь целевой **ГК** немедленно, и пользователи должны помнить об этом при использовании **Врем-Цели**.
 
-The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
+В таблице ниже приведены особенности **Врем-Цель-Нагрузка**, **Врем-цель-Ожидаемый приём пищи** и **Врем-Цель-Гипо**.
 
-### TT - Activity
+### ВЦ - Нагрузка
 
-![TT Activity](../images/TempTarget2.png)
+![ВЦ Нагрузка](../images/TempTarget2.png)
 
-**BG Target (depending on users' settings)**
+**Целевая ГК (в зависимости от настроек пользователя)**
 
-AAPS will aim to reach 8mmol/l or 144mg/dl for 40 minutes
+AAPS будет стремиться достичь 8ммол/л или 144мг/дл в течение 40 минут
 
-**Other considerations users may wish to factor in when selecting**:
+**Другие соображения, которые пользователи могут инкорпорировать при выборее**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+В зависимости от уровня **ГК**, **AAPS**"понижает" расход инсулина для достижения целевой **ГК**. Если целевая **ГК** не находится в нужном диапазоне (напр. выше целевого значения **ГК** **Профиля**), тогда **AAPS** может не отключать базу.
 
-In closed loop mode, **SMB**:
+В замкнутом цикле микроболюсы **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *могут* быть отключены (обсуждается в дальнейшем); и/или
+- алгоритм **AAPS** может активировать подачу базала при наличии отрицательного активного инсулина **IOB** или <0.
 
-Users may also wish to consider:
+Пользователи, возможно, также захотят:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise as reduced **IOB** as some users experience a rapid rise in **BG **post exercise.
+- *выбрать* эту **ВЦ** за 1-2 часа до планируемой нагрузки, чтобы обеспечить уменьшение активного инсулина IOB (правильное время для этой ВЦ индивидуально); и
+- *выбрать* временный Профиль (пониженный) на время запланированного мероприятия для обеспечения понижения активного инсулина **IOB**;
+- *убедиться, что* **ВЦ** будет деактивирована ко времени ** начала тренировки, чтобы уменьшить **IOB**, поскольку у некоторых пользователей после тренировки наблюдается быстрый рост **ГК**.
 
-### TT - Eating soon
+### ВЦ - Ожидаемый прием пищи
 
-![TT Activity](../images/TempTarget1.png)
+![ВЦ Нагрузка](../images/TempTarget1.png)
 
-**BG Target (depending on users' settings)**
+**Целевая ГК (в зависимости от настроек пользователя)**
 
-AAPS will aim to reach 5mmol/l or 90mg/dl for 30 minutes
+AAPS будет стремиться достичь 8ммол/л или 144мг/дл в течение 30 минут
 
-**Other considerations users may wish to factor in when selecting**:
+**Другие соображения, которые пользователи могут инкорпорировать при выборее**:
 
-In closed loop mode, **SMB**:
+В замкнутом цикле микроболюсы **SMB**:
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- останется активированным; и/или
+- базал также может быть активирован в зависимости от настроек профиля **пользователя**.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+В зависимости от уровня **ГК**, **AAPS** "увеличит" потребление инсулина в соответствии с параметрами, заданными пользователем для достижения желаемого уровня **ГК**.
 
-### TT - Hypo
+### ВЦ - Гипо
 
-![TT Activity](../images/TempTarget3.png)
+![ВЦ Нагрузка](../images/TempTarget3.png)
 
-**BG Target (depending on users' settings)**
+**Целевая ГК (в зависимости от настроек пользователя)**
 
-AAPS will aim to reach 7mmol/l or 126mg/dl for 30 minutes
+AAPS будет стремиться достичь 8ммол/л или 144мг/дл в течение 30 минут
 
-**Other considerations users may wish to factor in when selecting**:
+**Другие соображения, которые пользователи могут инкорпорировать при выборее**:
 
-In closed loop mode, **SMB**:
+В замкнутом цикле микроболюсы **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *могут* быть отключены (обсуждается в дальнейшем); и/или
+- алгоритм **AAPS** может активировать подачу базала при наличии отрицательного активного инсулина **IOB** или <0.
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
 ## Как выбрать временную цель?
 
-In the **Actions** tab in **AAPS**.
+На вкладке **Действия** в **AAPS**.
 
 1. выберите иконку **Временная Цель**; и затем
 2. настройте желаемые параметры **Врем-Цели**
 
-![Carbs TT](../images/TempTarget4a.png)
+![ВЦ Углеводы](../images/TempTarget4a.png)
 
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+Или нажав на кнопку "**Целевая ГК**", расположенную в правом верхнем углу **AAPS**.
 
-![Carbs TT](../images/TempTarget6.png)
+![ВЦ Углеводы](../images/TempTarget6.png)
 
 - Выполните долгое нажатие в правом верхнем углу на главном экране или используйте оранжевую кнопку «Углеводы» внизу.
 
-![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
+![Настройки Временные цели по умолчанию](../images/Pref2020_OV_DefaultTT2.png)
 
 ## Как изменить временную цель по умолчанию и переопределить её своими собственными значениями?
 
@@ -105,38 +105,38 @@ Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
 4. шаг 4 указывает (ниже), где изменить временной диапазон **ВЦ- Ожидаемый приём пищи**
 5. шаг 5 указывает (ниже), где изменить **целевое значение ГК при ожидаемом приеме пищи eatingsoon** (и те же шаги можно повторить для **целевое значение ГК при физической нагрузке** и **целевое значение ГК при гипо**.
 
-![Custom TT](../images/TempTarget7.png)
+![ВЦ, задаваемая пользователем](../images/TempTarget7.png)
 
 ## Как отменить Врем-Цель?
 
-To cancel a **Temp-Target** running:
+Для отмены действия **Временной Цели**:
 
-Select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
+Выберите кнопку «Отменить» в разделе **Временная цель** под вкладкой **Действия** как показано ниже.
 
-![Custom TT](../images/TempTarget8.png)
+![ВЦ, задаваемая пользователем](../images/TempTarget8.png)
 
 Или коротко нажмите «Целевой ГК» в желто-зелёном поле, расположенном в правом верхнем углу **AAPS**, и выберите «Отмена», как показано ниже:
 
-![Actions TT](../images/TempTarget9.png)
+![ВЦ Действия](../images/TempTarget9.png)
 
 ## Как выбрать "Временные цели по умолчанию"
 
-In the **Actions** tab in **AAPS**.
+На вкладке **Действия** в **AAPS**.
 
 1. выберите иконку **Временная Цель**; и затем
 2. настройте желаемые параметры **Врем-Цели**
 
-![Actions TT](../images/TempTarget4.png)
+![ВЦ Действия](../images/TempTarget4.png)
 
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+Или нажав на кнопку "**Целевая ГК**", расположенную в правом верхнем углу **AAPS**.
 
-![BG TT](../images/TempTarget6.png)
+![ВЦ ГК](../images/TempTarget6.png)
 
-Or in the **Carbs** button
+Или после нажатия на кнопку **Углеводы**
 
-1. selecting the desired **Temp-Target** in the shortcuts
+1. отметить желаемую **Врем Цель** в опциях
 
-![Carbs TT](../images/TempTarget5.png)
+![ВЦ Углеводы](../images/TempTarget5.png)
 
 (TempTargets-hypo-temp-target)=
 
@@ -154,7 +154,7 @@ Or in the **Carbs** button
 
 Примечание: если пользователь вводит углеводы с помощью кнопки Углеводы, а уровень глюкозы в крови составляет менее 72 мг/дл или 4 ммоль/л, **Врем-Цель Гипо** активируется **алгоритмом AAPS** автоматически.
 
-(TempTargets-activity-temp-target)=
+(TempTargets-activity-temp-target) =
 
 ## Временная цель Нагрузка
 
@@ -162,7 +162,7 @@ Or in the **Carbs** button
 
 Чтобы упростить управление временной целью **Нагрузка**, пользователь может настроить цель по умолчанию **Временная Цель Нагрузка** для повышения уровня **ГК** за счет снижения использования инсулина, чтобы замедлить падение **ГК** и избежать гипогликемии.
 
-Новым пользователям **AAPS**, возможно, придется поэкспериментировать и персонализировать настройки по умолчанию для **Временной цели Нагрузка**, чтобы оптимизировать ее под свои потребности. Все люди разные, когда речь идет о достижении стабильного контроля уровня глюкозы во время тренировки. See also the [sports section in FAQ](#FAQ-sports). в часто задаваемых вопросах.
+Новым пользователям **AAPS**, возможно, придется поэкспериментировать и персонализировать настройки по умолчанию для **Временной цели Нагрузка**, чтобы оптимизировать ее под свои потребности. Все люди разные, когда речь идет о достижении стабильного контроля уровня глюкозы во время тренировки. См. также [Раздел Спорт](#FAQ-sports) в Часто задаваемых вопросах. в часто задаваемых вопросах.
 
 Некоторые пользователи предпочитают активировать **Смену профиля** (снижение профиля < 100 % для снижения количества инсулина с помощью **AAPS**) до и во время активной **Временной Цели Нагрузка**.
 
@@ -180,12 +180,12 @@ Or in the **Carbs** button
 
 Подробнее о режиме «Ожидаемый прием пищи» можно прочитать в статье [Как пользоваться режимом «Ожидаемый прием пищи»](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned. /) или [здесь](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. Для этого варианта требуется, чтобы **ВЦ** составляла менее 100 мг/дл или 5,5 ммоль/л.
+В настройках OpenAps SMB, дополнительно, [по достижении цели 9](#objectives-objective9) если включен режим *'Низкая ВЦ снижает чувствительность'*, **AAPS** работает немного более агрессивно. Для этого варианта требуется, чтобы **ВЦ** составляла менее 100 мг/дл или 5,5 ммоль/л.
 
 ## Как отключить СМБ во время активной Временной-Цели?
 
 Для этого зайдите в **Настройки** > и деактивируйте *Включать супер микро болюс SMB при высоких значениях временных целей*.
 
-![Carbs TT](../images/TempTargetSMB.png)
+![ВЦ Углеводы](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'SMB with Temp-Target'* or *'SMB always'* enabled and OpenAPS SMB active.
+Это гарантирует, что **AAPS** не будет вводить микроболюсы **SMB**, даже при активных углеводах COB > 0, при активированных опциях * "Включить "SMB при Временных Целях"* или *"Всегда включать микроболюсы SMB* при активном режиме OpenAPS SMB.
