@@ -247,7 +247,7 @@ Nahrajte si na cloudové úložiště (Dropbox, Google etc) všechny apk soubory
 
 Prosím
 
-- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) for typical errors and
+- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) for typical errors and
 - tipy na [krok za krokem](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ### I'm stuck on an objective and need help.
