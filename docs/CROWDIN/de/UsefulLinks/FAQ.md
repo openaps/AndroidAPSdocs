@@ -247,7 +247,7 @@ Kopiere auf ein Cloud-Drive (Dropbox, Google etc.): Alle APK's die Du benutzt ha
 
 Bitte
 
-- schau im Abschnitt [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio) nach typischen Fehlern und
+- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) for typical errors and
 - die Tipps in dieser [Schritt für Schritt Anleitung](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ### Ich stecke bei einem Ziel fest und brauche Hilfe.
