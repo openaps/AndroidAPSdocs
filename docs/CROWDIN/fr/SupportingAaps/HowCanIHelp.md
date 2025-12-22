@@ -15,7 +15,7 @@ Yeh ! Regardez les problèmes ("Issues"), demandez dans "discord", il y a toujou
 Excellent, c'est une chose très appréciée et une bonne façon de contribuer !
 
 * Le canal de discord concernant la doc se trouve ici : [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Les autres langues ne sont que traduites de l'anglais et ne peuvent pas être éditées indépendamment pour des raisons de cohérence.
+* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
 
 ## Je parle plusieurs langues et je veux traduire l'application ou la documentation
 
@@ -23,7 +23,7 @@ Si vous traduisez pour la première fois, veuillez commencer par traduire les ch
 
 Vous pouvez commencer en tant que traducteur pour la documentation en parallèle ou plus tard.
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
 
 * Si vous voulez traduire **l'application** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidaps).
 * Si vous voulez traduire la **documentation** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidapsdocs). 
