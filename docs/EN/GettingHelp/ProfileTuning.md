@@ -117,7 +117,7 @@ If you observe the following patterns after a few days, consider the following c
 
 
 
-## **[How to calculate your I:C](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.html#id12)**
+## **[How to calculate your I:C](#your-aaps-profile-insulin-to-carbs-ratio)**
 
 1. First, you need the correct default basal settings in your **Profile**.
 2. Start on target, better without negative IOB.
