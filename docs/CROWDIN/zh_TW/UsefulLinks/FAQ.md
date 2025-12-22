@@ -247,7 +247,7 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 
 請
 
-- 請檢查[問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio)以獲取典型錯誤和
+- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) for typical errors and
 - 查看有關[逐步指南](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po)的提示。
 
 ### 我在目標上卡住了，需要幫助。
