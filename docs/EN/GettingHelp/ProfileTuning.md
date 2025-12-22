@@ -64,7 +64,7 @@ If you observe the following patterns after a few days, consider the following c
 
 - **Profile** basal might not be strong enough (this could also be because of things like unannounced food, illness, bad site absorption, etc.)
 
-  ![Positive IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
+![Positive IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
 
 ### **IOB negative**
 
@@ -75,7 +75,7 @@ If you observe the following patterns after a few days, consider the following c
 
 - Previous meal: too much bolus (which resulted in a very long zero temp basal)
 
-  ![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
+![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
 
 ## **BG Target Observations**
 
