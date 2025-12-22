@@ -70,7 +70,7 @@ Die Gradle-Version ist mit dem Quellcode verknüpft. Wenn Du den Quellcode herun
 
 ## Hilfe und Unterstützung während des Erstellungsprozesses
 
-Solltest Du Probleme beim Erstellen der **AAPS**-App haben, kannst Du im Abschnitt [**Fehlerbehebung für Android Studio**](../GettingHelp/TroubleshootingAndroidStudio) einiges an Hilfestellung finden.
+If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) section, please consult that first.
 
 Wenn Du den Eindruck hast, dass in der Anleitung Schritte falsch, fehlend oder missverständlich sind, oder Du trotzdem noch Probleme hast, wende Dich über [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) oder [Discord](https://discord.gg/4fQUWHZ4Mw) an andere **AAPS**-Nutzende. Wenn Du selbst etwas ändern möchtest (z.B. Screenshots aktualisieren _etc_), erstelle einen entsprechenden [Pull-Request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
@@ -409,7 +409,7 @@ Sobald der Build abgeschlossen ist, wird Android Studio "BUILD SUCCESSFUL" anzei
 
 ![Build abgeschlossen](../images/Building-the-App/049_ReopenNotification.png)
 
-**_Wenn der „Build“ fehlgeschlagen ist, lies bitte den Abschnitt [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio)._**
+**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
 Klicke im Benachrichtigungsfeld auf den blauen Link "locate":
 
