@@ -300,7 +300,7 @@
 
 ![組態建置工具 - 循環模式](../images/ConfigBuilder_LoopLGS.png)
 
-(Preferences-pen-loop)=
+(Preferences-open-loop)=
 #### 開放循環
 **AAPS**持續評估所有可用資料（IOB、COB、BG...）並在必要時提供治療建議（臨時基礎率），告訴你如何調整治療。
 
