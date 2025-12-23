@@ -247,7 +247,7 @@ AAPS用于控制您的泵并输注胰岛素。 根据欧洲现行的规定，所
 
 请
 
-- 请查看[Android Studio故障排除](../GettingHelp/TroubleshootingAndroidStudio)以了解典型错误及其解决方案。
+- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) for typical errors and
 - 以及[逐步操作指南](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po)中的提示。
 
 ### 我被卡在一个目标上，需要帮助。
