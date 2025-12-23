@@ -300,7 +300,7 @@ Prepínanie medzi otvorenou slučkou, uzavretou slučkou a pozastavením pri ní
 
 ![Konfigurátor – režim slučky](../images/ConfigBuilder_LoopLGS.png)
 
-(Preferences-pen-loop)=
+(Preferences-open-loop)=
 #### Otvorený okruh
 **AAPS** priebežne vyhodnocuje všetky dostupné údaje (IOB, COB, BG...) a v prípade potreby podáva návrhy ošetrení (dočasné bazálne dávky), ako upraviť vašu liečbu.
 
