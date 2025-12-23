@@ -15,7 +15,7 @@
 太棒了！文档贡献是极受社区推崇的回馈方式，您的付出将推动项目持续发展！​
 
 * 有关Wiki的Discord频道请访问：[AndroidAPS](https://discord.gg/4fQUWHZ4Mw)​ 
-* 英文Wiki的提交操作指南详见：[如何创建PR](../SupportingAaps/HowToEditTheDocs.md)​ 其他语言版本仅从英文原文翻译而来，出于一致性考虑禁止直接编辑。​
+* 英文Wiki的提交操作指南详见：[如何创建PR](../SupportingAaps/HowToEditTheDocs.md)​ Other languages are only translated from English and can't be edited for consistency reasons.
 
 ## 我掌握多门语言，愿参与应用程序或文档的翻译工作。​
 
@@ -23,7 +23,7 @@
 
 您也可以同时或后续参与文档翻译工作，我们非常欢迎！​
 
-您可在此查看应用程序及文档的各语言翻译进度：[链接](StateOfTranslations)​
+You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
 
 * 如需将**应用程序**翻译为其他语言（感谢您的贡献），请使用[Crowdin](https://crowdin.com/project/androidaps)平台。​
 * 如需将**文档**翻译为其他语言（感谢您的贡献），请使用[Crowdin](https://crowdin.com/project/androidapsdocs)平台。​ 
