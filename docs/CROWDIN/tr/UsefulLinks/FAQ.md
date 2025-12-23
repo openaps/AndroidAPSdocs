@@ -247,7 +247,7 @@ Bir internet sürücüsüne kopyalayın (Dropbox, Google vb.): Telefonunuza uygu
 
 Lütfen
 
-- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) for typical errors and
+- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) for typical errors and
 - [adım adım izlenecek yol](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po) ile ilgili ipuçları.
 
 ### I'm stuck on an objective and need help.
