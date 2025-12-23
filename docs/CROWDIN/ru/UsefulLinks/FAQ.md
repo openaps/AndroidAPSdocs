@@ -247,7 +247,7 @@ If you want to share some information about AAPS and DIY looping with your clini
 
 Пожалуйста,
 
-- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) for typical errors and
+- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) for typical errors and
 - [пошаговые инструкции](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ### I'm stuck on an objective and need help.
