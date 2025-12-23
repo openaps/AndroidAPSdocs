@@ -15,7 +15,7 @@ Hey! Konulara bak, discord kanalında sor, her zaman yapılacak çok iş var! İ
 Harika, bu çok takdir edilen bir şey ve ona katkıda bulunmanın iyi bir yolu!
 
 * Wiki ile ilgili discord kanalını burada bulabilirsiniz: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Diğer diller yalnızca İngilizce'den çevrilmiştir ve tutarlılık nedeniyle düzenlenemez.
+* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
 
 ## Birden çok dil konuşuyorum ve uygulamayı veya belgeleri çevirmek istiyorum
 
@@ -23,7 +23,7 @@ Bir şeyi ilk kez çeviriyorsanız, lütfen uygulamayı çevirerek başlayın, �
 
 Paralelinde veya daha sonra dokümantasyon çevirisine başlayabilirsiniz.
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
 
 * **Uygulamayı** başka dillere çevirmek istiyorsanız (teşekkür ederim), lütfen [crowdin](https://crowdin.com/project/androidaps) kullanın.
 * **Dokümantasyonu** başka dillere çevirmek istiyorsanız (teşekkürler), lütfen [crowdin](https://crowdin.com/project/androidapsdocs) kullanın. 
