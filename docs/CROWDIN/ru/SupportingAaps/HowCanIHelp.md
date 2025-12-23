@@ -15,7 +15,7 @@
 Отлично, это очень ценится и это хороший способ внести свой вклад в общее дело!
 
 * Канал для обсуждения AAPS находится здесь: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Другие языки переводятся только с английского языка и не могут редактироваться по соображениям целостности и последовательности.
+* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
 
 ## Я говорю на нескольких языках и хочу перевести приложение или документацию
 
@@ -23,7 +23,7 @@
 
 Вы можете приступить к переводу документации параллельно или позднее.
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
 
 * Если вы хотите перевести **приложение** на другие языки (спасибо), воспользуйтесь [crowdin](https://crowdin.com/project/androidaps).
 * Если вы хотите перевести **документацию** на другие языки (спасибо), воспользуйтесь [crowdin](https://crowdin.com/project/androidapsdocs). 
