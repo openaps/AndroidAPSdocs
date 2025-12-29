@@ -1,13 +1,13 @@
-# Автономный замкнутый контур
+# Автономный замкнутый цикл
 
 
 Привлекательность технологии Автономного замкнутого цикла **FCL ** в том, что она потенциально может имитировать искусственную поджелудочную железу и упрощать повседневную компенсацию без необходимости введения болюсов на еду.
 
-Whilst **hybrid closed loop** ('HCL') is algorithm based, it still requires the user to manually deliver boluses prior to meals. As a result, the loop may go into a temporary shut-off (temporary zero basal) to prevent over delivery of insulin.
+Несмотря на то, что ** гибридный замкнутый цикл ** ("HCL") имеет собственный алгоритм работы, он, тем не менее требует, чтобы пользователь самостоятельное вводил болюсы на прием пищи. В результате петля может приостановить работу (временный нулевой базал), чтобы предотвратить избыточную подачу инсулина.
 
-In **FCL** mealsize-related bolus are no longer required: leave it to the algorithm!  **AAPS** may allow without the user giving any bolus, and without making carb inputs, in a mode called ‘un-announced meals’ **(‘UAM’)**. **UAM** allows **AAPS** to better tolerate incorrect carb inputs by being more aggressive.
+В Автономном замкнутом цикле **FCL** больше не требуются болюсы на еду: алгоритм производит все расчеты самостоятельно!  **AAPS** может разрешать прием пищи без подачи болюсов и без введения углеводов в режиме, называемом "непредвиденный прием пищи" **("UAM")**. Режим **UAM** позволяет алгоритму **AAPS** лучше справляться с неверно введенными углеводами за счет большей агрессивности.
 
-## What to expect?
+## Чего ожидать?
 
 There are many published studies on the favourable results **FCL** can achieve. For further reading refer to the following:
 
