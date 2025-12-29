@@ -27,10 +27,15 @@ If your smartphone uses an Android Version older than Android 11 you will not be
 
 Afin de permettre aux utilisateurs ayant une ancienne version d'Android d'utiliser une ancienne version de AAPS de nouvelles versions ont été poussées qui ne changent que la vérification de version. Aucune autre amélioration n'est incluse.
 
-### Android 11 and up
+### Android 12 and up
 
 - Utiliser la dernière version d'AAPS
 - Téléchargez le code AAPS depuis <https://github.com/nightscout/AndroidAPS>
+
+### Android 11
+
+- Use AAPS version **3.3.2.1**
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 3.3.2.1
 
 ### Android 9,10
 
