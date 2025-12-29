@@ -1,7 +1,7 @@
 # Автономный замкнутый контур
 
 
-The main attraction of Full Closed Looping **FCL** is that it has the potential to mimic an artificial pancreas and make daily management easier without having the need to bolus for meals.
+Привлекательность технологии Автономного замкнутого цикла **FCL ** в том, что она потенциально может имитировать искусственную поджелудочную железу и упрощать повседневную компенсацию без необходимости введения болюсов на еду.
 
 Whilst **hybrid closed loop** ('HCL') is algorithm based, it still requires the user to manually deliver boluses prior to meals. As a result, the loop may go into a temporary shut-off (temporary zero basal) to prevent over delivery of insulin.
 
