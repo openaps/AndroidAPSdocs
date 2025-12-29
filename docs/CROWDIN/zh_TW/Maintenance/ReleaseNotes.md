@@ -27,10 +27,15 @@
 
 為了允許使用舊版 Android 的用戶繼續使用舊版 AAPS，我們發佈了一些僅更改版本驗證的版本。 這些版本不包含其他改進。
 
-### Android 11 及以上
+### Android 12 and up
 
 - 使用最新的 AAPS 版本
 - 從 <https://github.com/nightscout/AndroidAPS> 下載 AAPS 程式碼
+
+### Android 11
+
+- Use AAPS version **3.3.2.1**
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 3.3.2.1
 
 ### Android 9,10
 
