@@ -9,13 +9,13 @@
 
 ## Чего ожидать?
 
-There are many published studies on the favourable results **FCL** can achieve. For further reading refer to the following:
+Существует множество публикаций, посвященных позитивным результатам, достижимым при помощи автономного замкнутого цикла **FCL**. С ними можно ознакомиться в этих рааботах:
 
 1) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ![PubMed](../images/US-NLM-PubMed-Logo.png) National Library of Medicine, PubMed [First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study](https://pubmed.ncbi.nlm.nih.gov/36826996/);
 
 2) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ClinicalTrials.gov National Library of Medicine, Clinical Trial [Feasibility and Safety Study of the Automated Insulin Delivery Closed Loop System Pancreas4ALL (ASAP)](https://www.clinicaltrials.gov/study/NCT04835350?term=Feasibility%20and%20Safety%20Study%20of%20the%20Automated%20Insulin%20Delivery%20Closed%20Loop%20System%20Pancreas4ALL%20(ASAP)&rank=1)
 
-Success for **FCL** requires the user to:
+Для успешного применения автономного замкнутого цикла **FCL** от пользователя требуется:
 
 - check whether they met the **FCL** requisites;
 - set up **Automations** that are tailored for  their daily management’s needs; and
