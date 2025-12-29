@@ -27,10 +27,15 @@ If your smartphone uses an Android Version older than Android 11 you will not be
 
 Aby bylo uživatelům se starším Androidem umožněno používat starší verzi AAPS, byla upravena pouze kontrola verzí. Jiné změny neobsahuje.
 
-### Android 11 and up
+### Android 12 and up
 
 - Použijte poslední verzi AAPS
 - Stáhněte zdrojový kód AAPS z <https://github.com/nightscout/AndroidAPS>
+
+### Android 11
+
+- Use AAPS version **3.3.2.1**
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 3.3.2.1
 
 ### Android 9,10
 
