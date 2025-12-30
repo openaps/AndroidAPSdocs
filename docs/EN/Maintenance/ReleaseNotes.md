@@ -74,44 +74,45 @@ Release date: 31-12-2025
 * Update to latest Android Studio or better setup using browser build.
 
 ### New features
-- Running mode @MilosKozak
-- new CGMs
-- Site rotation support @Philoul
-- ability to stop SMB from UI
+* Running mode @MilosKozak
+* new CGMs
+* Site rotation support @Philoul
+* ability to stop SMB from UI @MilosKozak
+* Syai CGM is trusted source and supports advanced filtering @MilosKozak
 
 ### Wear OS Improvements
-- dramatically reduced battery usage @MilosKozak 
-- UI improvements and fixes @olorinmaia
-- almost complete rewritten code to match current level of libs (WearOS 2 previously) @MilosKozak
-- 2 new complications for extended data @Philoul
-- Migrated to modern complication provider with DataStore @MilosKozak
+* dramatically reduced battery usage @MilosKozak 
+* UI improvements and fixes @olorinmaia
+* almost complete rewritten code to match current level of libs (WearOS 2 previously) @MilosKozak
+* 2 new complications for extended data @Philoul
+* Migrated to modern complication provider with DataStore @MilosKozak
 
 ### Memory Leak Fixes
-- Fixed memory leaks in code @MilosKozak
-- Added LeakCanary memory leak reporting to Firebase Crashlytics @MilosKozak
+* Fixed memory leaks in code @MilosKozak
+* Added LeakCanary memory leak reporting to Firebase Crashlytics @MilosKozak
 
 ### Pump Driver Improvements
-- **DanaI**: fixed disconnection issues @MilosKozak
-- **RileyLink**: Speedup communication by minimizing delays @mifi100
-- **Medtrum**: Added patch activation time and age display @vanelsberg, password uppercase fix @MilosKozak
-- **Combo**: Fixed Test race conditions @MilosKozak @dv1
-- **Equil**: Optimized connectivity, reduced battery usage @MilosKozak
+* **DanaI**: fixed disconnection issues @MilosKozak
+* **RileyLink**: Speedup communication by minimizing delays @mifi100
+* **Medtrum**: Added patch activation time and age display @vanelsberg, password uppercase fix @MilosKozak
+* **Combo**: Fixed Test race conditions @MilosKozak @dv1
+* **Equil**: Optimized connectivity, reduced battery usage @MilosKozak
 
 ### Nightscout Sync
-- Improved deduplication on NS failure @MilosKozak
+* Improved deduplication on NS failure @MilosKozak
 
 ### UI/UX Improvements
-- various improvemnts @MilosKozak @Philoul @olorinmaia
+* various improvemnts @MilosKozak @Philoul @olorinmaia
 
 ### Automation
-- New SMB control action - enable/disable SMB via automation @MilosKozak
+* New SMB control action - enable/disable SMB via automation @MilosKozak
 
 ### Testing
-- Added comprehensive unit tests for Equil, Eopatch, Dana, and Medtronic pumps @MilosKozak
-- Improved test stability and coverage across multiple modules @MilosKozak
+* Added comprehensive unit tests for Equil, Eopatch, Dana, and Medtronic pumps @MilosKozak
+* Improved test stability and coverage across multiple modules @MilosKozak
 
 ### Tidepool
-- Tidepool OAUTH2 (Support for new Tidepool authentication) @MilosKozak
+* Tidepool OAUTH2 (Support for new Tidepool authentication) @MilosKozak
 
 (version3321)=
 
