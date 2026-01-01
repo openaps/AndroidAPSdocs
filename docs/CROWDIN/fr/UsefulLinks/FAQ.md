@@ -247,7 +247,7 @@ Copiez sur un lecteur internet (Dropbox, Google etc) : toutes les apks que vous 
 
 Veuillez
 
-- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) for typical errors and
+- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) for typical errors and
 - suivre les conseils pour un accompagnement [pas à pas](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ### I'm stuck on an objective and need help.

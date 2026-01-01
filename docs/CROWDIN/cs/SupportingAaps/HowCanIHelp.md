@@ -15,7 +15,7 @@ Jéje! Podívejte se na seznam problémů, zeptejte se na discord fóru, tam je 
 Skvělé, toto je velmi ceněná věc a dobrý způsob, jak své znalosti zúročit!
 
 * Kanál na discordu týkající se wiki lze nalézt zde: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Jiné jazyky jsou pouze překladem z angličtiny a nelze je upravovat z důvodů konzistence.
+* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
 
 ## Umím víc jazyků a chci překládat aplikaci nebo dokumentaci
 
@@ -23,7 +23,7 @@ If you are translating something for the first time, please start with translati
 
 You are welcome to start as a translator for the documentation in parallel or later.
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
 
 * Pokud chcete přeložit **aplikaci** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidaps).
 * Pokud chcete přeložit **wiki** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs). 

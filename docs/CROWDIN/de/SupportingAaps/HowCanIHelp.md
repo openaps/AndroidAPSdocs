@@ -15,7 +15,7 @@ Juhuu! Schau dir die Issues an, frag im discord Channel. Es gibt immer viel zu t
 Großartig, das ist sehr willkommen und eine gute Möglichkeit, etwas beizutragen!
 
 * Den discord Channel über das Wiki findest du hier: [AndroidAPSwiki/Lobby](https://discord.gg/4fQUWHZ4Mw). 
-* Eine Anleitung, wie man Beiträge auf Englisch hinzufügt und bearbeitet, ist hier zu finden: [Wie man die Dokumentation bearbeitet](../SupportingAaps/HowToEditTheDocs.md). Andere Sprachen können nur übersetzt, aber nicht bearbeitet werden. Dadurch wird die Einheitlichkeit des Wikis in allen Sprachen gewährleistet.
+* Eine Anleitung, wie man Beiträge auf Englisch hinzufügt und bearbeitet, ist hier zu finden: [Wie man die Dokumentation bearbeitet](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
 
 ## Ich spreche mehrere Sprachen und würde gerne bei der Übersetzung der App bzw. des Wikis helfen
 
@@ -23,7 +23,7 @@ Wenn Du zum ersten Mal übersetzen solltest, beginne mit der Übersetzung der Te
 
 Als Übersetzer für die Dokumentation kannst Du parallel zur App-Übersetzung oder auch später anfangen.
 
-Den aktuellen Fortschritt bei der Übersetzung der App und der Dokumentation kannst Du[hier](StateOfTranslations) einsehen.
+You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
 
 * Falls du die **die App** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://crowdin.com/project/androidaps).
 * Falls du die **die Docs** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://crowdin.com/project/androidapsdocs). 

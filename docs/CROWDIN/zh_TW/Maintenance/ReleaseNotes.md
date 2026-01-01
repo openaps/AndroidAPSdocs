@@ -27,10 +27,15 @@
 
 為了允許使用舊版 Android 的用戶繼續使用舊版 AAPS，我們發佈了一些僅更改版本驗證的版本。 這些版本不包含其他改進。
 
-### Android 11 及以上
+### Android 12 and up
 
 - 使用最新的 AAPS 版本
 - 從 <https://github.com/nightscout/AndroidAPS> 下載 AAPS 程式碼
+
+### Android 11
+
+- Use AAPS version **3.3.2.1**
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 3.3.2.1
 
 ### Android 9,10
 
@@ -49,13 +54,64 @@
 
 ## WearOS 版本
 
-- AAPS 需要至少 WearOS API 等級 28（Android 9）
+- AAPS requires at least WearOS API level 30 (Android 11)
 
 ```{tip}
 WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
 (latestrelease)=
+
+(version3400)=
+
+## Version 3.4.0.0
+
+Release date: 31-12-2025
+
+### 在升級之前：
+* This version requires Google Android 12.0 or above. 在嘗試更新之前請檢查你的手機版本。
+* Update to latest Android Studio or better setup using browser build.
+
+### New features
+* Running mode @MilosKozak
+* new CGMs
+* Site rotation support @Philoul
+* ability to stop SMB from UI @MilosKozak
+* Syai CGM is trusted source and supports advanced filtering @MilosKozak
+
+### Wear OS Improvements
+* dramatically reduced battery usage @MilosKozak
+* UI improvements and fixes @olorinmaia
+* almost complete rewritten code to match current level of libs (WearOS 2 previously) @MilosKozak
+* 2 new complications for extended data @Philoul
+* Migrated to modern complication provider with DataStore @MilosKozak
+
+### Memory Leak Fixes
+* Fixed memory leaks in code @MilosKozak
+* Added LeakCanary memory leak reporting to Firebase Crashlytics @MilosKozak
+
+### Pump Driver Improvements
+* **DanaI**: fixed disconnection issues @MilosKozak
+* **RileyLink**: Speedup communication by minimizing delays @mifi100
+* **Medtrum**: Added patch activation time and age display @vanelsberg, password uppercase fix @MilosKozak
+* **Combo**: Fixed Test race conditions @MilosKozak @dv1
+* **Equil**: Optimized connectivity, reduced battery usage @MilosKozak
+
+### Nightscout Sync
+* Improved deduplication on NS failure @MilosKozak
+
+### UI/UX Improvements
+* various improvemnts @MilosKozak @Philoul @olorinmaia
+
+### 自動化
+* New SMB control action - enable/disable SMB via automation @MilosKozak
+
+### Testing
+* Added comprehensive unit tests for Equil, Eopatch, Dana, and Medtronic pumps @MilosKozak
+* Improved test stability and coverage across multiple modules @MilosKozak
+
+### Tidepool
+* Tidepool OAUTH2 (Support for new Tidepool authentication) @MilosKozak
 
 (version3321)=
 

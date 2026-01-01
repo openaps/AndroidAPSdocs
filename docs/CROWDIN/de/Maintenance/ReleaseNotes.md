@@ -27,10 +27,15 @@ Wenn die Android-Version Deines Smartphones älter als Android 11 ist, kannst Du
 
 Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zwei ältere Versionen zur Verfügung gestellt, bei denen die Versionsprüfung angepasst wurde. Es sind keine anderen Verbesserungen enthalten.
 
-### Ab Android 11
+### Android 12 and up
 
 - Verwende die aktuelle AAPS-Version.
 - Download des AAPS Code unter <https://github.com/nightscout/AndroidAPS>
+
+### Android 11
+
+- Use AAPS version **3.3.2.1**
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 3.3.2.1
 
 ### Android 9,10
 
@@ -49,13 +54,64 @@ Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zw
 
 ## Wear OS-Version
 
-- AAPS benötigt mindestens Wear OS API Level 28 (Android 9)
+- AAPS requires at least WearOS API level 30 (Android 11)
 
 ```{tip}
 WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsWearOs-WearOS5).
 ```
 
 (latestrelease)=
+
+(version3400)=
+
+## Version 3.4.0.0
+
+Release date: 31-12-2025
+
+### Vor dem Aktualisieren:
+* This version requires Google Android 12.0 or above. Prüfe vor der Aktualisierung die Smartphone-Version.
+* Update to latest Android Studio or better setup using browser build.
+
+### New features
+* Running mode @MilosKozak
+* new CGMs
+* Site rotation support @Philoul
+* ability to stop SMB from UI @MilosKozak
+* Syai CGM is trusted source and supports advanced filtering @MilosKozak
+
+### Wear OS Improvements
+* dramatically reduced battery usage @MilosKozak
+* UI improvements and fixes @olorinmaia
+* almost complete rewritten code to match current level of libs (WearOS 2 previously) @MilosKozak
+* 2 new complications for extended data @Philoul
+* Migrated to modern complication provider with DataStore @MilosKozak
+
+### Memory Leak Fixes
+* Fixed memory leaks in code @MilosKozak
+* Added LeakCanary memory leak reporting to Firebase Crashlytics @MilosKozak
+
+### Pump Driver Improvements
+* **DanaI**: fixed disconnection issues @MilosKozak
+* **RileyLink**: Speedup communication by minimizing delays @mifi100
+* **Medtrum**: Added patch activation time and age display @vanelsberg, password uppercase fix @MilosKozak
+* **Combo**: Fixed Test race conditions @MilosKozak @dv1
+* **Equil**: Optimized connectivity, reduced battery usage @MilosKozak
+
+### Nightscout Sync
+* Improved deduplication on NS failure @MilosKozak
+
+### UI/UX Improvements
+* various improvemnts @MilosKozak @Philoul @olorinmaia
+
+### Automatisierung
+* New SMB control action - enable/disable SMB via automation @MilosKozak
+
+### Testing
+* Added comprehensive unit tests for Equil, Eopatch, Dana, and Medtronic pumps @MilosKozak
+* Improved test stability and coverage across multiple modules @MilosKozak
+
+### Tidepool
+* Tidepool OAUTH2 (Support for new Tidepool authentication) @MilosKozak
 
 (version3321)=
 

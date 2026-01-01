@@ -192,7 +192,7 @@ Ak by došlo k škodlivému útoku na vašu inzulínovú pumpu, takéto riešeni
 
 #### Bezpečnostné aspekty týkajúce sa príliš rýchleho zlepšenia kontroly hladiny glukózy v krvi
 
-Rýchle zníženie HbA1c a zlepšená kontrola hladiny glukózy v krvi znie lákavo. Príliš rýchle zníženie priemernej hladiny glukózy v krvi spustením akéhokoľvek systému s uzavretou slučkou však môže spôsobiť trvalé poškodenie, vrátane poškodenia očí, a bolestivú neuropatiu, ktorá nikdy nezmizne. Tomuto poškodeniu sa dá vyhnúť jednoducho pomalším znižovaním hladín. Ak máte v súčasnosti zvýšený HbA1c a prechádzate na AAPS (alebo akýkoľvek iný systém s uzavretou slučkou), pred začatím preberte toto potenciálne riziko so svojím lekárom a dohodnite si s ním časový harmonogram. Všeobecnejšie informácie o tom, ako bezpečne znížiť hladinu glukózy, vrátane odkazov na lekársku literatúru, sú uvedené v [sekcii o bezpečnosti [tu](#preparing-safety-first)].
+Rýchle zníženie HbA1c a zlepšená kontrola hladiny glukózy v krvi znie lákavo. Príliš rýchle zníženie priemernej hladiny glukózy v krvi spustením akéhokoľvek systému s uzavretou slučkou však môže spôsobiť trvalé poškodenie, vrátane poškodenia očí, a bolestivú neuropatiu, ktorá nikdy nezmizne. Tomuto poškodeniu sa dá vyhnúť jednoducho pomalším znižovaním hladín. If you currently have an elevated HbA1c and are moving to AAPS (or any other closed loop system), please discuss this potential risk with your clinical team before starting, and agree a time plan with them. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the safety section [here](#preparing-safety-first).
 
 #### Bezpečnosť v oblasti zdravotníckych zariadení, spotrebného materiálu a iných liekov
 

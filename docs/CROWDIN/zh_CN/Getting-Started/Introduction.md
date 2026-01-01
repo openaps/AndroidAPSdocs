@@ -192,7 +192,7 @@ _表格说明：_
 
 #### 关于过快改善血糖控制的安全注意事项
 
-快速降低 HbA1c 和改善血糖控制听起来很有吸引力。 但是，不管用哪种闭环系统，_过快_降低平均血糖水平都可能造成永久性损伤，包括对眼睛的损伤，以及永远无法消除的疼痛性神经病变。 这种损害可以通过缓慢降低血糖水平来避免。 如果您目前的 HbA1c 偏高，并准备改用 AAPS（或任何其他闭环系统），请在开始之前与您的临床团队讨论这一潜在风险，并与他们商定一个时间计划。 有关如何安全降低血糖水平的更多一般信息，包括医学文献链接，请参阅[此处](#preparing-safety-first)的安全部分。
+快速降低 HbA1c 和改善血糖控制听起来很有吸引力。 但是，不管用哪种闭环系统，_过快_降低平均血糖水平都可能造成永久性损伤，包括对眼睛的损伤，以及永远无法消除的疼痛性神经病变。 这种损害可以通过缓慢降低血糖水平来避免。 If you currently have an elevated HbA1c and are moving to AAPS (or any other closed loop system), please discuss this potential risk with your clinical team before starting, and agree a time plan with them. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the safety section [here](#preparing-safety-first).
 
 #### 关于设备、耗材和其他药物的医疗安全
 

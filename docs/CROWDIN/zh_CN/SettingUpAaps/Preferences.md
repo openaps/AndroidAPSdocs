@@ -300,7 +300,7 @@
 
 ![配置构建器 - 循环模式](../images/ConfigBuilder_LoopLGS.png)
 
-(Preferences-pen-loop)=
+(Preferences-open-loop)=
 #### 开环
 **AAPS**连续评估所有可用数据（IOB、COB、BG...），如有必要，会就如何调整治疗（如临时基础率）提出建议。
 

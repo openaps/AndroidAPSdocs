@@ -156,11 +156,12 @@ AAPS 版本更新說明 <./Maintenance/ReleaseNotes.md>
 ```{toctree}
 :caption: 8) 取得協助
 
-在哪裡可以取得 AAPS 協助 <./GettingHelp/WhereCanIGetHelp.md>
+我可以在哪裡取得 AAPS 的協助 <./GettingHelp/WhereCanIGetHelp.md>
 一般疑難排解 <./GettingHelp/GeneralTroubleshooting.md>
 - 藍牙疑難排解 <./GettingHelp/BluetoothTroubleshooting.md>
+設定檔調整指南 <./GettingHelp/ProfileTuning.md>
 Android Studio 疑難排解 <./GettingHelp/TroubleshootingAndroidStudio.md>
-存取記錄檔 <./GettingHelp/AccessingLogFiles.md>
+讀取日誌檔 <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}

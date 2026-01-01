@@ -158,6 +158,7 @@ Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
 General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
 - Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
+Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
 Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
 Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 ```
