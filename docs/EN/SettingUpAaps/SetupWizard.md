@@ -24,7 +24,7 @@ If there is an error in the documentation or you have a better idea for how some
 
 This is just the welcome message which you can skip with the "NEXT" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_125636.png)
+![Welcome](../images/setup-wizard/Wizard01.png)
 
 ## License agreement
 
@@ -34,21 +34,19 @@ If you don't understand, or can't agree to the end user license agreement please
 
 If you understand and agree, please click the "I UNDERSTAND AND AGREE" button and follow the Setup Wizard:
 
-![image](../images/setup-wizard/Screenshot_20231202_125650.png)
+![EULA](../images/setup-wizard/Wizard02.png)
 
 ## Required permissions
 
 **AAPS** needs some requirements to operate correctly.
 
-In the following screens you are asked several questions you have to agree to, to get **AAPS** working. The Wizard itself explains why it asks for the relevant setting.
+In the following screen you are asked several questions you have to agree to, to get **AAPS** working. The Wizard itself explains why it asks for the relevant setting.
 
-In this screen, we aim to give some more background information, translate more technical speak into common language or explain the reason.
+In this screen, we aim to give some more background information, translate more technical speak into common language or explain the reason. Continue reading below to see each permission request.
 
-Please click the "NEXT" button:
+![Permissions](../images/setup-wizard/Wizard03.png)
 
-![image](../images/setup-wizard/Screenshot_20231202_125709.png)
-
-### Notification and battery optimization
+### Notifications
 
 Android requires special permission for apps if they want to send you notifications.
 
@@ -56,59 +54,35 @@ While it is a good feature to disable notifications _e.g._ from  social media ap
 
 Please click the first "ASK FOR PERMISSION" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_125721.png)
+![Notifications](../images/setup-wizard/Wizard04.png)
 
 Select the "AAPS" app:
 
-![image](../images/setup-wizard/Screenshot_20231202_125833.png)
+![AAPS over other apps](../images/setup-wizard/Wizard04-AndroidSettings1.png)
 
 Enable "Allow display over other apps" by sliding the slider to the right:
 
-![image](../images/setup-wizard/Screenshot_20231202_125843.png)
+![image](../images/setup-wizard/Wizard04-AndroidSettings2.png)
 
 The slider should look this way if it is enabled:
 
-![image](../images/setup-wizard/Screenshot_20231202_125851.png)
+![image](../images/setup-wizard/Wizard04-AndroidSettings3.png)
 
-Battery consumption on smartphones is still a consideration, as the performance of the batteries is still quite limited. Therefore, the Android operating system on your smartphone is quite restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+### Battery optimization
+
+Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
 
 However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be allowed to do so by Android.
 
 You do this by confirming the setting.
 
-Click the second "ASK FOR PERMISSION" button. Please select "Allow":
+Click the second "ASK FOR PERMISSION" button. 
 
-![image](../images/setup-wizard/Screenshot_20231202_125750.png)
+![Allow Background](../images/setup-wizard/Wizard05.png)
 
-Click the "NEXT" button:
+Please select "Allow":
 
-![Screenshot_20241207-161454.png](../images/setup-wizard/Screenshot_20241207-161454.png)
-
-### Location
-
-Android links the use of bluetooth communication to the ability to use location services. Perhaps you have seen it with other apps too. It's common to need location permission if you want to access bluetooth.
-
-**AAPS** uses bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Details may differ from setup to setup.
-
-Click the first "ASK FOR PERMISSION" button:
-
-![image](../images/setup-wizard/Screenshot_20231202_125924.png)
-
-This is important. Otherwise **AAPS** can not work properly at all.
-
-Click "While using the app":
-
-![image](../images/setup-wizard/Screenshot_20231202_125939.png)
-
-Click the second "ASK FOR PERMISSION" button:
-
-![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
-
-Select "Allow all the time".
-
-Click the "NEXT" button:
-
-![image](../images/setup-wizard/Screenshot_20231202_130002.png)
+![Allow Background](../images/setup-wizard/Wizard05-Background.png)
 
 ### Storage permission
 
@@ -116,23 +90,57 @@ Click the "NEXT" button:
 
 Click the first "ASK FOR PERMISSION" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_130012.png)
+![Allow Background](../images/setup-wizard/Wizard06.png)
 
 Click "Allow":
 
-![image](../images/setup-wizard/Screenshot_20231202_130022.png)
+![image](../images/setup-wizard/Wizard06-Memory.png)
 
-Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information. The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder": 
+Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information.
 
-![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
+![AAPS Directory](../images/setup-wizard/Wizard07.png)
+
+The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder": 
+
+![Select folder](../images/setup-wizard/Wizard07-Folder.png)
 
 Confirm that you wish to grant access to **AAPS** to the selected directory:
 
-![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
+![Select folder](../images/setup-wizard/Wizard07-Confirm.png)
 
 Click the "NEXT" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_130031.png)
+![Finish Permissions](../images/setup-wizard/Wizard08.png)
+
+### Location
+
+Android links the use of Bluetooth communication to the ability to use location services. Perhaps you have seen it with other apps too. It's common to need location permission if you want to access Bluetooth.
+
+**AAPS** uses Bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Details may differ from setup to setup.
+
+Click the first "ASK FOR PERMISSION" button:
+
+![Allow Location](../images/setup-wizard/Wizard09.png)
+
+This is important. Otherwise **AAPS** can not work properly at all.
+
+Click "While using the app":
+
+![Location](../images/setup-wizard/Wizard09-location.png)
+
+Click the second "ASK FOR PERMISSION" button:
+
+![Location 2](../images/setup-wizard/Wizard10.png)
+
+Select "Allow all the time".
+
+![Location all the time](../images/setup-wizard/Wizard10-allthetime.png)
+
+
+
+Click the "NEXT" button:
+
+![Location 2](../images/setup-wizard/Wizard11.png)
 
 ## Master password
 

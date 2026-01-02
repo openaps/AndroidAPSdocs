@@ -53,7 +53,7 @@ It sounds like an attractive option, right? However, at present, only a few enth
 
 While there is no clear specification which helps you to know if a watch will work well for standalone **AAPS** use, the following parameters will help:
 
-1)	Android 11 or newer.
+1)	Android 12 or newer.
 2)	Being able to take the watchface off “square” mode to make text larger and easier to read.
 3)	Very good battery life.
 4)	Good Bluetooth range.
