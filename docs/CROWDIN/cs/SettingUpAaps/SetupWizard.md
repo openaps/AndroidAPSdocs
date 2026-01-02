@@ -24,7 +24,7 @@ If there is an error in the documentation or you have a better idea for how some
 
 Toto je pouze uvítací zpráva kterou můžete přeskočit kliknutím na tlačítko "Další":
 
-![image](../images/setup-wizard/Screenshot_20231202_125636.png)
+![Welcome](../images/setup-wizard/Wizard01.png)
 
 ## Licenční ujednání
 
@@ -34,21 +34,19 @@ If you don't understand, or can't agree to the end user license agreement please
 
 Pokud rozumíte a souhlasíte, klikněte na tlačítko "ROZUMÍM A SOUHLASÍM" a pokračujte v Průvodci nastavením:
 
-![image](../images/setup-wizard/Screenshot_20231202_125650.png)
+![EULA](../images/setup-wizard/Wizard02.png)
 
 ## Vyžadovaná oprávnění
 
 **AAPS** needs some requirements to operate correctly.
 
-In the following screens you are asked several questions you have to agree to, to get **AAPS** working. Průvodce vždy poskytne vysvětlení, z jakého důvodu jsou tato nastavení vyžadována.
+In the following screen you are asked several questions you have to agree to, to get **AAPS** working. Průvodce vždy poskytne vysvětlení, z jakého důvodu jsou tato nastavení vyžadována.
 
-Na těchto obrazovkách se zaměřujeme na poskytnutí informací o pozadí, přeložení technických termínů do běžného jazyka nebo vysvětlení důvodů.
+Na těchto obrazovkách se zaměřujeme na poskytnutí informací o pozadí, přeložení technických termínů do běžného jazyka nebo vysvětlení důvodů. Continue reading below to see each permission request.
 
-Klikněte prosím na tlačítko "DALŠÍ":
+![Permissions](../images/setup-wizard/Wizard03.png)
 
-![image](../images/setup-wizard/Screenshot_20231202_125709.png)
-
-### Notification and battery optimization
+### Oznámení
 
 Android vyžaduje zvláštní oprávnění pro aplikace, které potřebují posílat uživateli upozornění.
 
@@ -56,59 +54,35 @@ While it is a good feature to disable notifications _e.g._ from  social media ap
 
 Please click the first "ASK FOR PERMISSION" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_125721.png)
+![Oznámení](../images/setup-wizard/Wizard04.png)
 
 Vyberte aplikaci "AAPS":
 
-![image](../images/setup-wizard/Screenshot_20231202_125833.png)
+![AAPS over other apps](../images/setup-wizard/Wizard04-AndroidSettings1.png)
 
 Povolte oprávnění "Zobrazit nahoře" přesunem přepínače doprava:
 
-![image](../images/setup-wizard/Screenshot_20231202_125843.png)
+![image](../images/setup-wizard/Wizard04-AndroidSettings2.png)
 
 Přepínač v povoleném stavu by měl vypadat takto:
 
-![image](../images/setup-wizard/Screenshot_20231202_125851.png)
+![image](../images/setup-wizard/Wizard04-AndroidSettings3.png)
 
-U chytrých telefonů je pořád důležité brát ohled na spotřebu energie, protože kapacita baterií je stále docela omezená. Z toho důvodu je operační systém Android na vašem telefonu docela restriktivní ohledně povolení aplikacím fungovat a spotřebovávat čas procesoru a tedy i energii baterie.
+### Battery optimization
+
+Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
 
 However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Proto AAPS potřebuje povolení v systému Android.
 
 Toho dosáhnete potvrzením požadovaných nastavení.
 
-Click the second "ASK FOR PERMISSION" button. Vyberte prosím "Povolit":
+Click the second "ASK FOR PERMISSION" button.
 
-![image](../images/setup-wizard/Screenshot_20231202_125750.png)
+![Allow Background](../images/setup-wizard/Wizard05.png)
 
-Kliněte na tlačítko "DALŠÍ":
+Vyberte prosím "Povolit":
 
-![Screenshot_20241207-161454.png](../images/setup-wizard/Screenshot_20241207-161454.png)
-
-### Location
-
-Android propojuje využití Bluetooth komunikace s funkcemi určení polohy. Možná už jste na to narazili i u jiných aplikací. Běžně je nutné povolit služby určování polohy, pokud potřebujete přístup k Bluetooth.
-
-**AAPS** uses bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Detaily se mohou lišit u různých konfigurací.
-
-Click the first "ASK FOR PERMISSION" button:
-
-![image](../images/setup-wizard/Screenshot_20231202_125924.png)
-
-Toto je důležité. Otherwise **AAPS** can not work properly at all.
-
-Klikněte na "Během používání aplikace":
-
-![image](../images/setup-wizard/Screenshot_20231202_125939.png)
-
-Click the second "ASK FOR PERMISSION" button:
-
-![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
-
-Select "Allow all the time".
-
-Kliněte na tlačítko "DALŠÍ":
-
-![image](../images/setup-wizard/Screenshot_20231202_130002.png)
+![Allow Background](../images/setup-wizard/Wizard05-Background.png)
 
 ### Storage permission
 
@@ -116,23 +90,57 @@ Kliněte na tlačítko "DALŠÍ":
 
 Click the first "ASK FOR PERMISSION" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_130012.png)
+![Allow Background](../images/setup-wizard/Wizard06.png)
 
 Klikněte na "Povolit":
 
-![image](../images/setup-wizard/Screenshot_20231202_130022.png)
+![image](../images/setup-wizard/Wizard06-Memory.png)
 
-Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information. The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
+Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information.
 
-![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
+![AAPS Directory](../images/setup-wizard/Wizard07.png)
+
+The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
+
+![Select folder](../images/setup-wizard/Wizard07-Folder.png)
 
 Confirm that you wish to grant access to **AAPS** to the selected directory:
 
-![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
+![Select folder](../images/setup-wizard/Wizard07-Confirm.png)
 
 Kliněte na tlačítko "DALŠÍ":
 
-![image](../images/setup-wizard/Screenshot_20231202_130031.png)
+![Finish Permissions](../images/setup-wizard/Wizard08.png)
+
+### Location
+
+Android links the use of Bluetooth communication to the ability to use location services. Možná už jste na to narazili i u jiných aplikací. It's common to need location permission if you want to access Bluetooth.
+
+**AAPS** uses Bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Detaily se mohou lišit u různých konfigurací.
+
+Click the first "ASK FOR PERMISSION" button:
+
+![Allow Location](../images/setup-wizard/Wizard09.png)
+
+Toto je důležité. Otherwise **AAPS** can not work properly at all.
+
+Klikněte na "Během používání aplikace":
+
+![Location](../images/setup-wizard/Wizard09-location.png)
+
+Click the second "ASK FOR PERMISSION" button:
+
+![Location 2](../images/setup-wizard/Wizard10.png)
+
+Select "Allow all the time".
+
+![Location all the time](../images/setup-wizard/Wizard10-allthetime.png)
+
+
+
+Kliněte na tlačítko "DALŠÍ":
+
+![Location 2](../images/setup-wizard/Wizard11.png)
 
 ## Master password
 
