@@ -24,7 +24,7 @@ If there is an error in the documentation or you have a better idea for how some
 
 Dies ist nur die Begrüßungsnachricht, die Du mit "WEITER" überspringen kannst:
 
-![grafik](../images/setup-wizard/Screenshot_20231202_125636.png)
+![Willkommen](../images/setup-wizard/Wizard01.png)
 
 ## Lizenzvereinbarung
 
@@ -34,81 +34,55 @@ Wenn Du die Endnutzer-Lizenzvereinbarung nicht verstehst oder sie nicht akzeptie
 
 Wenn Du sie verstehst und zustimmst, klicke auf die "ICH VESTEHE UND STIMME ZU"-Schaltfläche und folge dem Einrichtungsassistenten:
 
-![grafik](../images/setup-wizard/Screenshot_20231202_125650.png)
+![EULA](../images/setup-wizard/Wizard02.png)
 
 ## Erforderliche Berechtigungen
 
 **AAPS** benötigt einige Berechtigungen, um richtig zu funktionieren.
 
-In den folgenden Bildschirmen werden Dir mehrere Fragen gestellt, denen Du zustimmen musst, um **AAPS** zum Laufen zu bringen. Der Assistent selbst erklärt, warum er nach der entsprechenden Einstellung fragt.
+In the following screen you are asked several questions you have to agree to, to get **AAPS** working. Der Assistent selbst erklärt, warum er nach der entsprechenden Einstellung fragt.
 
-In diesem Bildschirm geben wir zusätzliche Hintergrundinformationen, übersetzen technischere Ausdrücke in allgemein verständliche Sprache oder erklären den Grund.
+In diesem Bildschirm geben wir zusätzliche Hintergrundinformationen, übersetzen technischere Ausdrücke in allgemein verständliche Sprache oder erklären den Grund. Continue reading below to see each permission request.
 
-Bitte klicke auf "WEITER":
+![Permissions](../images/setup-wizard/Wizard03.png)
 
-![grafik](../images/setup-wizard/Screenshot_20231202_125709.png)
-
-### Benachrichtigungen und Akku-Optimierung
+### Benachrichtigungen
 
 Wenn Apps Benachrichtigungen senden möchten, benötigt Android hierfür eine besondere Berechtigung.
 
-Obwohl es grundsätzlich gut ist. Benachrichtigungen _z.B._ von Social Media-Apps zu deaktivieren, ist es zwingend notwendig, dass Du **AAPS** erlaubst, Dir Benachrichtigungen zu senden.
+While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
 
-Bitte klicke auf das erste "NACH BERECHTIGUNG FRAGEN":
+Please click the first "ASK FOR PERMISSION" button:
 
-![grafik](../images/setup-wizard/Screenshot_20231202_125721.png)
+![Benachrichtigungen](../images/setup-wizard/Wizard04.png)
 
 Wähle die "AAPS"-App aus:
 
-![grafik](../images/setup-wizard/Screenshot_20231202_125833.png)
+![AAPS over other apps](../images/setup-wizard/Wizard04-AndroidSettings1.png)
 
 Aktiviere "Am Anfang anzeigen" indem Du den Schieberegler nach rechts schiebst:
 
-![grafik](../images/setup-wizard/Screenshot_20231202_125843.png)
+![grafik](../images/setup-wizard/Wizard04-AndroidSettings2.png)
 
 Der Schieberegler sollte, wenn er aktiviert ist, so aussehen:
 
-![grafik](../images/setup-wizard/Screenshot_20231202_125851.png)
+![grafik](../images/setup-wizard/Wizard04-AndroidSettings3.png)
 
-Der Akkuverbrauch ist bei Smartphones immer noch ein Thema, da die Akku-Kapazität noch immer ziemlich begrenzt ist. Daher ist das Android-Betriebssystem auf Ihrem Smartphone ziemlich restriktiv, was die Ausführung von Anwendungen und den Verbrauch von CPU-Zeit und damit des Akkus betrifft.
+### Akku-Optimierung
+
+Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
 
 **AAPS** muss regelmäßig ausgeführt werden, _z.B._ um die Glukosewerte alle paar Minuten zu empfangen und dann den Algorithmus anzuwenden, der basierend auf Deinen Spezifikationen entscheidet, wie mit Deinen Glukosewerten umzugehen ist. Deshalb muss es Android erlaubt werden, dies zu tun.
 
 Das tust Du, indem Du die Einstellung bestätigst.
 
-Bitte klicke auf die zweite "NACH BERECHTIGUNG FRAGEN"-Schaltfläche. Bitte tippe auf "Zulassen":
+Bitte klicke auf die zweite "NACH BERECHTIGUNG FRAGEN"-Schaltfläche.
 
-![grafik](../images/setup-wizard/Screenshot_20231202_125750.png)
+![Allow Background](../images/setup-wizard/Wizard05.png)
 
-Klicke auf "WEITER":
+Bitte tippe auf "Zulassen":
 
-![Screenshot_20241207-161454.png](../images/setup-wizard/Screenshot_20241207-161454.png)
-
-### Standort
-
-Android verknüpft die Nutzung der Bluetooth-Kommunikation mit der Möglichkeit, Standortdienste zu nutzen. Vielleicht hast Du das bei anderen Apps auch schon bemerkt. Es ist üblich, Standortberechtigung zu benötigen, wenn Du auf Bluetooth zugreifen willst.
-
-**AAPS** nutzt für die direkte Kommunikation mit Deinem CGM und der Steuerung der Insulinpumpe Bluetooth (alternativ kann **AAPS** auch mit anderen Apps kommunizieren). Die Details können je nach Setup variieren.
-
-Bitte klicke auf die erste "NACH BERECHTIGUNG FRAGEN"-Schaltfläche:
-
-![grafik](../images/setup-wizard/Screenshot_20231202_125924.png)
-
-Das ist wichtig. Ansonsten kann **AAPS** überhaupt nicht funktionieren.
-
-Klicke auf "Bei Nutzung der App":
-
-![grafik](../images/setup-wizard/Screenshot_20231202_125939.png)
-
-Bitte klicke auf die zweite "NACH BERECHTIGUNG FRAGEN"-Schaltfläche:
-
-![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
-
-Wähle "Immer zulassen".
-
-Klicke auf "WEITER":
-
-![grafik](../images/setup-wizard/Screenshot_20231202_130002.png)
+![Allow Background](../images/setup-wizard/Wizard05-Background.png)
 
 ### Speicherberechtigung
 
@@ -116,23 +90,57 @@ Um Log-Dateien zu sichern und Einstellungen exportieren zu können, benötigt **
 
 Bitte klicke auf die erste "NACH BERECHTIGUNG FRAGEN"-Schaltfläche:
 
-![grafik](../images/setup-wizard/Screenshot_20231202_130012.png)
+![Allow Background](../images/setup-wizard/Wizard06.png)
 
 Klicke auf "Zulassen":
 
-![grafik](../images/setup-wizard/Screenshot_20231202_130022.png)
+![grafik](../images/setup-wizard/Wizard06-Memory.png)
 
-Klicke auf "AAPS Verzeichnis". Dadurch wird das Dateisystem auf Deinem Smartphone geöffnet und Du kannst wählen, wo AAPS seine Informationen speichern soll. Das Standardverzeichnis ist **AAPS**, aber Du kannst jedes beliebige Verzeichnis nutzen. Erstelle das Verzeichnis, falls erforderlich, rufe es auf und wähle "Diesen Ordner verwenden":
+Klicke auf "AAPS Verzeichnis". Dadurch wird das Dateisystem auf Deinem Smartphone geöffnet und Du kannst wählen, wo AAPS seine Informationen speichern soll.
 
-![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
+![AAPS Directory](../images/setup-wizard/Wizard07.png)
+
+Das Standardverzeichnis ist **AAPS**, aber Du kannst jedes beliebige Verzeichnis nutzen. Erstelle das Verzeichnis, falls erforderlich, rufe es auf und wähle "Diesen Ordner verwenden":
+
+![Select folder](../images/setup-wizard/Wizard07-Folder.png)
 
 Bestätige, dass Du **AAPS** den Zugriff auf das ausgewählte Verzeichnis gewähren willst:
 
-![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
+![Select folder](../images/setup-wizard/Wizard07-Confirm.png)
 
 Klicke auf "WEITER":
 
-![grafik](../images/setup-wizard/Screenshot_20231202_130031.png)
+![Finish Permissions](../images/setup-wizard/Wizard08.png)
+
+### Standort
+
+Android links the use of Bluetooth communication to the ability to use location services. Vielleicht hast Du das bei anderen Apps auch schon bemerkt. It's common to need location permission if you want to access Bluetooth.
+
+**AAPS** uses Bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Die Details können je nach Setup variieren.
+
+Bitte klicke auf die erste "NACH BERECHTIGUNG FRAGEN"-Schaltfläche:
+
+![Allow Location](../images/setup-wizard/Wizard09.png)
+
+Das ist wichtig. Ansonsten kann **AAPS** überhaupt nicht funktionieren.
+
+Klicke auf "Bei Nutzung der App":
+
+![Standort](../images/setup-wizard/Wizard09-location.png)
+
+Bitte klicke auf die zweite "NACH BERECHTIGUNG FRAGEN"-Schaltfläche:
+
+![Location 2](../images/setup-wizard/Wizard10.png)
+
+Wähle "Immer zulassen".
+
+![Location all the time](../images/setup-wizard/Wizard10-allthetime.png)
+
+
+
+Klicke auf "WEITER":
+
+![Location 2](../images/setup-wizard/Wizard11.png)
 
 ## Master-Passwort
 
