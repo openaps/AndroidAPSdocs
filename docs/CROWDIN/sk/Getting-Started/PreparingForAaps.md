@@ -210,7 +210,7 @@ Cieľom tejto dokumentácie je znížiť požadovanú technickú odbornosť na a
 
 #### Verzie AAPS a Androidu
 
-Aktuálna verzia aplikácie **AAPS** (3.3) vyžaduje smartfón so systémom Android a systémom Google **Android 11.0 alebo novším**. Ak uvažujete o kúpe nového telefónu (stav od decembra 2024), odporúča sa systém Android 14.<br/> Používateľom sa dôrazne odporúča, aby si z bezpečnostných dôvodov aktualizovali verziu systému **AAPS**. Pre používateľov, ktorí nemôžu používať zariadenie so systémom Android 11.0 alebo novším, sú však stále k dispozícii staršie verzie aplikácie **AAPS** kompatibilné so staršími verziami systému Android, pozri: [Poznámky k vydaniu](#maintenance-android-version-aaps-version).
+The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), Android 16 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
 
 #### Výber modelu smartfónu
 Presný model, ktorý si kúpite, závisí od požadovaných funkcií. Odporúčania a spätnú väzbu od používateľov týkajúce sa funkčných nastavení nájdete na [stránke Telefóny](../Getting-Started/Phones.md).
