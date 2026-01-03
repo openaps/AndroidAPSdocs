@@ -150,46 +150,13 @@ Android links the use of Bluetooth communication to the ability to use location 
 
 填寫密碼兩次後，請點擊“下一步”按鈕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_130122.png)
-
-
-## Fabric上傳
-
-在這裡，你可以設置自動崩潰和使用報告服務的使用。
-
-這不是強制性的，但使用他是一種良好的做法。
-
-他幫助開發人員更好地了解你如何使用應用程式，並告知他們發生了哪些崩潰。
-
-他們將獲得：
-
-1. 應用程式崩潰的資訊，否則他們無法知道，因為他們自己的設置中一切運作正常，並且
-1. 發送的資料（崩潰訊息）中包含崩潰發生的情況以及使用了何種配置的相關訊息。
-
-因此，這有助於開發人員改進應用程式。
-
-請透過向右滑動滑塊來啟用“Fabric上傳”：
-
-
-![圖像](../images/setup-wizard/Screenshot_20231202_130136.png)
-
-此外，你可以標識自己，以便在開發人員希望就問題或緊急關注事項聯繫你時能夠找到你：
-
-![圖像](../images/setup-wizard/Screenshot_20231202_130147.png)
-
-填寫你的“聯絡訊息”後，點擊“確定”按鈕。 聯絡訊息可以是你在Facebook、Discord等平台上的身份訊息…… 只需提供你認為能透過最佳方式聯繫你的訊息：
-
-![圖像](../images/setup-wizard/Screenshot_20231202_135748.png)
-
-點擊“下一步”按鈕：
-
-![圖像](../images/setup-wizard/Screenshot_20231202_135807.png)
+![密碼](../images/setup-wizard/Wizard12.png)
 
 ## 單位 (mg/dL <-> mmol/L)
 
-請選擇你的血糖值是以 mg/dl 還是 mmol/L 為單位，然後點擊“下一步”按鈕：
+Please select if your glucose values are in mg/dL or mmol/L and then please click the "NEXT" button:
 
-![圖像](../images/setup-wizard/Screenshot_20231202_135830.png)
+![單位](../images/setup-wizard/Wizard13.png)
 
 ## 顯示設置
 
@@ -203,7 +170,7 @@ Android links the use of Bluetooth communication to the ability to use location 
 
 請按下“下一步”按鈕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_135853.png)
+![Range](../images/setup-wizard/Wizard14.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
 ## 與報告伺服器同步及更多設置
@@ -218,49 +185,47 @@ Android links the use of Bluetooth communication to the ability to use location 
 
 在此示例中，我們選擇Nightscout作為報告伺服器，並將進行配置。
 
-```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
+```{admonition}  **NSClient** version
 :class: 注意
 
 點擊 [這裡](#version3200) 查看 **AAPS** 3.2.0.0 的發布說明，其中解釋了第一選項 **NSClient**（這是「v1」，雖然未明確標記）和第二選項 **NSClient v3** 之間的差異。
-
-Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介面監控或發送遠端療程（例如，作為使用**AAPS**的父母或護理人監控子女），在這種情況下，請選擇第一個選項“**NSClient**”直至另行通知。 
 ```
 對於Tidepool來說，這更簡單，因為你只需要你的個人登錄訊息。
 
 選擇後，請按下你選擇項目旁邊的齒輪按鈕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_140916.png)
+![同步選項](../images/setup-wizard/Wizard15.png)
 
 在這裡，你可以配置Nightscout報告伺服器。
 
 請點擊“Nightscout URL”：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_140952.png)
+![NSClient](../images/setup-wizard/Wizard16.png)
 
 輸入你的Nightscout URL，這是你的個人Nightscout伺服器。 這只是你自己設置的URL，或者是從你的Nightscout服務提供商那裡獲得的。
 
 請點擊“確定”按鈕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141051.png)
+![NSClient ULR](../images/setup-wizard/Wizard16-URL.png)
 
-輸入你的Nightscout存取權杖。 這是你配置的Nightscout伺服器的存取權杖。 沒有這個權杖，無法存取。
+Enter your Nightscout access token. 這是你配置的Nightscout伺服器的存取權杖。 沒有這個權杖，無法存取。
 
 如果你目前沒有此文件，請查看**AAPS** 的文件以設置報告伺服器。
 
-在填寫「**NS 存取權杖**」並點擊「確定」後，請按下「同步」按鈕：
+After filling in the "**Nightscout access token**" and clicking "OK", please click on the "Synchronization" button:
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141131.png)
+![NSClient Token](../images/setup-wizard/Wizard16-Token.png)
 
-如果你在設定嚮導的前幾步中已經配置了Nightscout，請選擇“上傳資料到NS”。
+Please select "Upload data to NS" if you already configured Nightscout in the previous steps of the Setup Wizard.
 
 如果你在 Nightscout 上已存儲個人設定並希望將其下載到**AAPS**，請啟用「接收個人設定」：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141219.png)
+![Syncronization](../images/setup-wizard/Wizard16-Sync.png)
 
 
 返回上一個螢幕並選擇“警報選項”：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141310.png)
+![警報](../images/setup-wizard/Wizard16-Alarm.png)
 
 現在先不要啟用這些開關。 我們僅僅是走到螢幕前，讓你熟悉將來可能配置的選項。 目前還不需要設置他們。
 
@@ -276,7 +241,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 返回上一個螢幕並選擇“進階設置”。
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141326.png)
+![Connection](../images/setup-wizard/Wizard16-Connect.png)
 
 如果你希望在報告伺服器中獲取應用程式啟動的相關訊息，請啟用“紀錄應用啟動到NS”。 這有助於你遠端了解應用程式是否已重新啟動，特別是作為照護者時。
 
@@ -288,7 +253,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 返回兩次，回到外掛列表，然後選擇 "下一步" 以進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141351.png)
+![圖像](../images/setup-wizard/Wizard16-App.png)
 
 ## 患者名稱
 
@@ -300,7 +265,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 按“下一步”進入下一個螢幕。
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141445.png)
+![名稱](../images/setup-wizard/Wizard17.png)
 
 ## 病人類型
 
@@ -312,7 +277,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 設置這些值後，請按“下一步”進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141817.png)
+![Patient](../images/setup-wizard/Wizard18.png)
 
 ## 使用的胰島素
 
@@ -327,33 +292,33 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 按“下一步”進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141840.png)
+![胰島素](../images/setup-wizard/Wizard19.png)
 
 
 ## 血糖來源
 
 選擇你使用的血糖來源。 請閱讀你的[血糖資料來源](../Getting-Started/CompatiblesCgms.md)的文件。
 
-由於有多個選項可用，因此我們不會在此詳細解釋所有選項的配置。 在這裡我們使用Dexcom G6與BYODA應用程式的示例：
+由於有多個選項可用，因此我們不會在此詳細解釋所有選項的配置。 We are using xDrip+ in our example here:
 
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141912.png)
+![血糖來源](../images/setup-wizard/Wizard20.png)
 
 
-如果你使用Dexcom G6與BYODA，請在頂層選單中點擊右側的勾選框來啟用可見性。
+Enable the visibility in the top level menu by clicking the check box on the right side.
 
 選擇後，按“下一步”進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141925.png)
+![Select BG](../images/setup-wizard/Wizard20-Set.png)
 
 
-如果你正在使用 Dexcom G6 與 BYODA，點擊齒輪按鈕來讀取 BYODA 的設定。
+Click on the cogwheel button to access the settings.
 
 啟用“上傳血糖資料到NS”和“紀錄傳感器變更到NS”。
 
 返回並按 "下一步" 以進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141958.png)
+![Upload](../images/setup-wizard/Wizard20-Upload.png)
 
 (setup-wizard-profile)=
 ## 設定檔
@@ -373,7 +338,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 按“下一步”進入下一個螢幕。 輸入一個“設定檔案名稱”：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_142027.png)
+![圖像](../images/setup-wizard/Wizard21.png)
 
 
 長期來看，如果有需要，你可以擁有多個設定檔案。 這裡我們只建立一個。
@@ -389,20 +354,20 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 請輸入你的[胰島素作用時間 (DIA)](#your-aaps-profile-duration-of-insulin-action)，以小時為單位。 然後按“IC”：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_142143.png)
+![DIA](../images/setup-wizard/Wizard21-Name.png)
 
 請輸入你的[胰島素與碳水化合物比例 (IC)](#your-aaps-profile-insulin-to-carbs-ratio)值：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_142903.png)
+![IC](../images/setup-wizard/Wizard21-IC.png)
 
 按“ISF”。 請輸入你的[胰島素敏感度係數 (ISF)](#your-aaps-profile-insulin-sensitivity-factor)值：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143009.png)
+![ISF](../images/setup-wizard/Wizard21-ISF.png)
 
 
 按“基礎速率”。 請輸入你的[基礎胰島素值](#your-aaps-profile-basal-rates)：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143623.png)
+![圖像](../images/setup-wizard/Wizard21-Basal.png)
 
 
 按“TARG”。 輸入你的血糖目標值。
@@ -413,11 +378,11 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 輸入/確認目標值：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143709.png)
+![目標](../images/setup-wizard/Wizard22.png)
 
 點擊“儲存”來儲存設定檔案：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143724.png)
+![Save](../images/setup-wizard/Wizard22-Save.png)
 
 
 保存後，將顯示一個新按鈕「啟用設定檔」。
@@ -429,7 +394,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 按下“啟用設定檔案”：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143741.png)
+![圖像](../images/setup-wizard/Wizard22-Activate.png)
 
 
 
@@ -446,7 +411,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 按下“確定”：
 
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143808.png)
+![Switch](../images/setup-wizard/Wizard22-Switch.png)
 
 
 
@@ -454,11 +419,11 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 你可以按“確定”確認他。 按“下一步”進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143822.png)
+![Ok](../images/setup-wizard/Wizard22-SwitchOk.png)
 
 你的設定檔案現在已設置：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143833.png)
+![Info](../images/setup-wizard/Wizard22-Info.png)
 
 
 ## 胰島素幫浦
@@ -477,14 +442,14 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 按“下一步”進入下一個螢幕。
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143909.png)
+![Pump Warning](../images/setup-wizard/Wizard23.png)
 
 
 在此例中，我們選擇“虛擬幫浦”。
 
 按“下一步”進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143935.png)
+![幫浦](../images/setup-wizard/Wizard23-Pump.png)
 
 ## APS 演算法
 
@@ -499,7 +464,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 按齒輪查看詳細資訊：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_144014.png)
+![APS](../images/setup-wizard/Wizard24.png)
 
 
 僅閱讀文本，此處不進行任何更改。
@@ -508,15 +473,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 返回並按 "下一步" 以進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_144025.png)
-
-## APS模式
-
-讓“開放循環”保持選中狀態。
-
-按“下一步”進入下一個螢幕：
-
-![圖像](../images/setup-wizard/Screenshot_20231202_144049.png)
+![設定](../images/setup-wizard/Wizard24-Settings.png)
 
 ## 敏感度偵測
 
@@ -524,7 +481,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 按“下一步”進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_144101.png)
+![Sensitivity](../images/setup-wizard/Wizard25.png)
 
 ## 開始目標1
 
@@ -536,13 +493,13 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 按下綠色的“開始”按鈕以開始目標1：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_144113.png)
+![目標](../images/setup-wizard/Wizard26.png)
 
 你會看到你已經取得了一些進展，但還有其他區域需要完成。
 
 按“完成”進入下一個螢幕。
 
-![圖像](../images/setup-wizard/Screenshot_20231202_144135.png)
+![Done](../images/setup-wizard/Wizard26-Started.png)
 
 你即將進入**AAPS**的主螢幕。
 
@@ -552,7 +509,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 你可以點擊“延後”，他會消失。
 
-![圖像](../images/setup-wizard/Screenshot_20231202_144156.png)
+![圖像](../images/setup-wizard/Wizard26-Done.png)
 
 如果你在任何時候不小心離開設置嚮導，你可以簡單地重新啟動嚮導，或手動更改[AAPS 循環的配置](../SettingUpAaps/ChangeAapsConfiguration.md)。
 
