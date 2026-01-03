@@ -150,46 +150,13 @@ Android links the use of Bluetooth communication to the ability to use location 
 
 在两次填写密码后，请点击“下一步”按钮：
 
-![image](../images/setup-wizard/Screenshot_20231202_130122.png)
-
-
-## Fabric 上传
-
-在这里，您可以设置使用自动化崩溃和使用情况报告服务。
-
-虽然这不是强制性的，但使用它是一个好习惯。
-
-它有助于开发人员更好地了解您对应用程序的使用情况，并告知他们发生的崩溃情况。
-
-他们获得：
-
-1. 应用程序崩溃的信息，这对开发者来说很重要，因为在他们自己的设置中一切正常，所以他们可能不知道应用程序已经崩溃。
-1. 在发送的数据（崩溃信息）中，有关于崩溃发生的情况和正在使用的配置类型的信息。
-
-因此，它有助于开发人员改进应用程序。
-
-请通过向右滑动滑块来启用“Fabric 上传”：
-
-
-![image](../images/setup-wizard/Screenshot_20231202_130136.png)
-
-此外，您可以填写身份信息，以防开发人员想联系您询问问题或紧急情况：
-
-![image](../images/setup-wizard/Screenshot_20231202_130147.png)
-
-填写完您的“联系信息”后，点击“确定”按钮。 联系信息可以是您在 Facebook、Discord 上的身份标识，... 只是您认为有助于通过最佳途径联系您的信息：
-
-![image](../images/setup-wizard/Screenshot_20231202_135748.png)
-
-点击“下一步”按钮：
-
-![image](../images/setup-wizard/Screenshot_20231202_135807.png)
+![Password](../images/setup-wizard/Wizard12.png)
 
 ## 单位（mg/dL <-> mmol/L）
 
-请选择您的血糖值是以 mg/dl 还是 mmol/L 为单位，然后点击“下一步”按钮：
+Please select if your glucose values are in mg/dL or mmol/L and then please click the "NEXT" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_135830.png)
+![单位](../images/setup-wizard/Wizard13.png)
 
 ## 显示设置
 
@@ -203,7 +170,7 @@ Android links the use of Bluetooth communication to the ability to use location 
 
 请点击“下一步”按钮：
 
-![image](../images/setup-wizard/Screenshot_20231202_135853.png)
+![Range](../images/setup-wizard/Wizard14.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
 ## 与报告服务器的同步等
@@ -218,48 +185,46 @@ Android links the use of Bluetooth communication to the ability to use location 
 
 在此示例中，我们选择 Nightscout 作为报告服务器，并将对其进行配置。
 
-```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
+```{admonition}  **NSClient** version
 :class: 注意
 点击 [这里](#version3200) 查看 **AAPS** 3.2.0.0 的发布说明，其中解释了顶部选项 **NSClient**（这是“v1”，尽管没有明确标记）和第二个选项 **NSClient v3** 之间的差异。
-
-Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页界面进行远程治疗监控或发送（例如作为父母或护理人员通过**AAPS**管理儿童治疗）。若存在此类需求，请暂选择第一项"**NSClient**"直至另行通知前。 
 ```
 对于 Tidepool 来说更简单，因为您只需要个人登录信息。
 
 做出选择后，请点击旁边的齿轮按钮：
 
-![image](../images/setup-wizard/Screenshot_20231202_140916.png)
+![同步](../images/setup-wizard/Wizard15.png)
 
 您正在这里配置 Nightscout 报告服务器。
 
 请点击“Nightscout URL”：
 
-![image](../images/setup-wizard/Screenshot_20231202_140952.png)
+![NSClient](../images/setup-wizard/Wizard16.png)
 
 输入您的Nightscout URL，这是您的个人Nightscout服务器。 这只是您自己设置的 URL，或者您的 Nightscout 服务提供商提供给您的 URL。
 
 请点击“OK”按钮：
 
-![image](../images/setup-wizard/Screenshot_20231202_141051.png)
+![NSClient ULR](../images/setup-wizard/Wizard16-URL.png)
 
-输入您的 Nightscout 访问令牌。 这是您为 Nightscout 服务器配置的访问令牌。 没有这个令牌，将无法访问。
+Enter your Nightscout access token. 这是您为 Nightscout 服务器配置的访问令牌。 没有这个令牌，将无法访问。
 
 如果您目前看不到它，请查看 **AAPS** 文档中关于设置报告服务器的文档。
 
-在填写“**NS访问令牌（NS access token）**”并点击“OK”后，请点击“同步（Synchronization）”按钮：
+After filling in the "**Nightscout access token**" and clicking "OK", please click on the "Synchronization" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_141131.png)
+![NSClient Token](../images/setup-wizard/Wizard16-Token.png)
 
-如果您已经在设置向导的先前步骤中配置了 Nightscout，请选择“Upload data to NS”。
+Please select "Upload data to NS" if you already configured Nightscout in the previous steps of the Setup Wizard.
 
 如果您在 Nightscout 上存储了配置文件并希望将它们下载到 **AAPS**，请启用“Receive profile store”：
 
-![image](../images/setup-wizard/Screenshot_20231202_141219.png)
+![Syncronization](../images/setup-wizard/Wizard16-Sync.png)
 
 
 返回上一屏幕并选择“警报选项”：
 
-![image](../images/setup-wizard/Screenshot_20231202_141310.png)
+![报警](../images/setup-wizard/Wizard16-Alarm.png)
 
 现在，请将开关保持禁用状态。 我们带您浏览此界面，是为了让您熟悉未来可能需要配置的选项。 目前没有必要进行这些配置。
 
@@ -275,7 +240,7 @@ Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页
 
 返回之前的屏幕并选择“高级设置”。
 
-![image](../images/setup-wizard/Screenshot_20231202_141326.png)
+![Connection](../images/setup-wizard/Wizard16-Connect.png)
 
 如果您想在报告服务器上获取此信息，请启用“Log app start to NS”。 这可以帮助您（特别是作为护理人员）远程了解应用程序是否以及何时被重新启动。
 
@@ -287,7 +252,7 @@ Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页
 
 返回两次，在插件列表中选择“下一步”以转到下一个屏幕：
 
-![image](../images/setup-wizard/Screenshot_20231202_141351.png)
+![image](../images/setup-wizard/Wizard16-App.png)
 
 ## 患者名称
 
@@ -299,7 +264,7 @@ Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页
 
 点击“下一步”转到下一个屏幕。
 
-![image](../images/setup-wizard/Screenshot_20231202_141445.png)
+![名称](../images/setup-wizard/Wizard17.png)
 
 ## 患者类型
 
@@ -311,7 +276,7 @@ Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页
 
 设置这些值后，点击“下一步”转到下一个屏幕：
 
-![image](../images/setup-wizard/Screenshot_20231202_141817.png)
+![Patient](../images/setup-wizard/Wizard18.png)
 
 ## 使用的胰岛素
 
@@ -326,33 +291,33 @@ Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页
 
 点击“下一步”转到下一个屏幕：
 
-![image](../images/setup-wizard/Screenshot_20231202_141840.png)
+![胰岛素](../images/setup-wizard/Wizard19.png)
 
 
 ## 血糖数据来源
 
 选择您正在使用的 BG 来源。 请阅读您 [血糖数据源](../Getting-Started/CompatiblesCgms.md) 的文档。
 
-由于有多个选项可用，我们不会在这里解释所有选项的配置。 我们在此示例中使用 Dexcom G6 和 BYODA 应用程序：
+由于有多个选项可用，我们不会在这里解释所有选项的配置。 We are using xDrip+ in our example here:
 
 
-![image](../images/setup-wizard/Screenshot_20231202_141912.png)
+![血糖数据源](../images/setup-wizard/Wizard20.png)
 
 
-如果您使用 Dexcom G6 和 BYODA，请通过点击右侧的复选框在顶层菜单中启用可见性。
+Enable the visibility in the top level menu by clicking the check box on the right side.
 
 做出选择后，点击“下一步”转到下一个屏幕：
 
-![image](../images/setup-wizard/Screenshot_20231202_141925.png)
+![Select BG](../images/setup-wizard/Wizard20-Set.png)
 
 
-如果您使用 Dexcom G6 和 BYODA，请点击齿轮按钮访问 BYODA 的设置。
+Click on the cogwheel button to access the settings.
 
 启用“将血糖数据上传到NS”和“将探头更换记录到NS”。
 
 返回并点击“下一步”转到下一个屏幕：
 
-![image](../images/setup-wizard/Screenshot_20231202_141958.png)
+![Upload](../images/setup-wizard/Wizard20-Upload.png)
 
 (setup-wizard-profile)=
 ## 配置文件
@@ -372,7 +337,7 @@ Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页
 
 点击“下一步”转到下一个屏幕。 输入一个“配置文件名称”：
 
-![image](../images/setup-wizard/Screenshot_20231202_142027.png)
+![image](../images/setup-wizard/Wizard21.png)
 
 
 如果需要，长期来看你可以拥有多个配置文件。 我们在这里只创建一个。
@@ -388,20 +353,20 @@ Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页
 
 输入您的 [胰岛素作用持续时间（DIA）](#your-aaps-profile-duration-of-insulin-action)（小时）。 然后点击“IC”：
 
-![image](../images/setup-wizard/Screenshot_20231202_142143.png)
+![DIA](../images/setup-wizard/Wizard21-Name.png)
 
 输入您的 [IC](#your-aaps-profile-insulin-to-carbs-ratio) 值：
 
-![image](../images/setup-wizard/Screenshot_20231202_142903.png)
+![IC](../images/setup-wizard/Wizard21-IC.png)
 
 点击“ISF”。 输入您的[胰岛素敏感系数（ISF）](#your-aaps-profile-insulin-sensitivity-factor)值：
 
-![image](../images/setup-wizard/Screenshot_20231202_143009.png)
+![ISF](../images/setup-wizard/Wizard21-ISF.png)
 
 
 点击"BAS". 输入您的[基础率](#your-aaps-profile-basal-rates)：
 
-![image](../images/setup-wizard/Screenshot_20231202_143623.png)
+![image](../images/setup-wizard/Wizard21-Basal.png)
 
 
 点击 "TARG"。 输入你的目标血糖值。
@@ -412,11 +377,11 @@ Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页
 
 输入/确认目标值：
 
-![image](../images/setup-wizard/Screenshot_20231202_143709.png)
+![血糖控制目标值](../images/setup-wizard/Wizard22.png)
 
 通过点击“保存”来保存配置文件：
 
-![image](../images/setup-wizard/Screenshot_20231202_143724.png)
+![Save](../images/setup-wizard/Wizard22-Save.png)
 
 
 保存后，新的"激活配置文件"按钮将出现。
@@ -428,7 +393,7 @@ Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页
 
 点击“激活配置文件”：
 
-![image](../images/setup-wizard/Screenshot_20231202_143741.png)
+![image](../images/setup-wizard/Wizard22-Activate.png)
 
 
 
@@ -445,7 +410,7 @@ Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页
 点击“确定”：
 
 
-![image](../images/setup-wizard/Screenshot_20231202_143808.png)
+![Switch](../images/setup-wizard/Wizard22-Switch.png)
 
 
 
@@ -453,11 +418,11 @@ Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页
 
 你可以通过点击“确定”来确认。 点击“下一步”转到下一个屏幕：
 
-![image](../images/setup-wizard/Screenshot_20231202_143822.png)
+![Ok](../images/setup-wizard/Wizard22-SwitchOk.png)
 
 你的配置文件现在已经设置好了：
 
-![image](../images/setup-wizard/Screenshot_20231202_143833.png)
+![Info](../images/setup-wizard/Wizard22-Info.png)
 
 
 ## 胰岛素泵
@@ -476,14 +441,14 @@ Nightscout用户应选择**NSClient v3**，除非您需要通过Nightscout网页
 
 点击“下一步”转到下一个屏幕。
 
-![image](../images/setup-wizard/Screenshot_20231202_143909.png)
+![Pump Warning](../images/setup-wizard/Wizard23.png)
 
 
 在此，我们选择“虚拟泵”。
 
 点击“下一步”转到下一个屏幕：
 
-![image](../images/setup-wizard/Screenshot_20231202_143935.png)
+![胰岛素泵](../images/setup-wizard/Wizard23-Pump.png)
 
 ## APS算法
 
@@ -498,7 +463,7 @@ OpenAPS AMA是最基本的算法，不支持用SMB纠正高血糖。 在某些�
 
 点击齿轮图标以查看详细信息：
 
-![image](../images/setup-wizard/Screenshot_20231202_144014.png)
+![APS算法](../images/setup-wizard/Wizard24.png)
 
 
 只需阅读文本，不要在此处进行任何更改。
@@ -507,15 +472,7 @@ OpenAPS AMA是最基本的算法，不支持用SMB纠正高血糖。 在某些�
 
 返回并点击“下一步”转到下一个屏幕：
 
-![image](../images/setup-wizard/Screenshot_20231202_144025.png)
-
-## APS模式
-
-保持“Open Loop（开环）”选中状态。
-
-点击“下一步”转到下一个屏幕：
-
-![image](../images/setup-wizard/Screenshot_20231202_144049.png)
+![设置](../images/setup-wizard/Wizard24-Settings.png)
 
 ## 灵敏度检测
 
@@ -523,7 +480,7 @@ OpenAPS AMA是最基本的算法，不支持用SMB纠正高血糖。 在某些�
 
 点击“下一步”转到下一个屏幕：
 
-![image](../images/setup-wizard/Screenshot_20231202_144101.png)
+![Sensitivity](../images/setup-wizard/Wizard25.png)
 
 ## 开始目标1
 
@@ -535,13 +492,13 @@ OpenAPS AMA是最基本的算法，不支持用SMB纠正高血糖。 在某些�
 
 点击绿色“开始”开始目标1：
 
-![image](../images/setup-wizard/Screenshot_20231202_144113.png)
+![目标](../images/setup-wizard/Wizard26.png)
 
 您会看到您已经取得了一些进展，但还有其他领域需要完成。
 
 点击“完成”以进入下一个屏幕。
 
-![image](../images/setup-wizard/Screenshot_20231202_144135.png)
+![Done](../images/setup-wizard/Wizard26-Started.png)
 
 您来到了**AAPS**的主屏幕。
 
@@ -551,7 +508,7 @@ OpenAPS AMA是最基本的算法，不支持用SMB纠正高血糖。 在某些�
 
 你可以点击“稍后再提醒”，它就会消失。
 
-![image](../images/setup-wizard/Screenshot_20231202_144156.png)
+![image](../images/setup-wizard/Wizard26-Done.png)
 
 如果您在任何时候意外退出了设置向导，您可以简单地重新启动向导，或者手动更改[AAPS闭环的配置](../SettingUpAaps/ChangeAapsConfiguration.md)。
 
