@@ -24,7 +24,7 @@ If there is an error in the documentation or you have a better idea for how some
 
 Это просто приветственное сообщение, которое можно пропустить, нажав кнопку "ДАЛЕЕ":
 
-![изображение](../images/setup-wizard/Screenshot_20231202_125636.png)
+![Welcome](../images/setup-wizard/Wizard01.png)
 
 ## Лицензионное соглашение
 
@@ -34,21 +34,19 @@ If you don't understand, or can't agree to the end user license agreement please
 
 Если вы понимаете и соглашаетесь, нажмите кнопку "I UNDERSTAND AND AGREE" (я принимаю и соглашаюсь) и следуйте подсказкам Мастера установки:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_125650.png)
+![EULA](../images/setup-wizard/Wizard02.png)
 
 ## Необходимые разрешения
 
 **AAPS** needs some requirements to operate correctly.
 
-In the following screens you are asked several questions you have to agree to, to get **AAPS** working. Мастер сам объясняет, почему он запрашивает соответствующие разрешения или настройки.
+In the following screen you are asked several questions you have to agree to, to get **AAPS** working. Мастер сам объясняет, почему он запрашивает соответствующие разрешения или настройки.
 
-На этом экране мы даем дополнительную справочную информацию, переводим с технического языка на общий или объясняем причину.
+На этом экране мы даем дополнительную справочную информацию, переводим с технического языка на общий или объясняем причину. Continue reading below to see each permission request.
 
-Нажмите кнопку «ДАЛЕЕ»:
+![Permissions](../images/setup-wizard/Wizard03.png)
 
-![изображение](../images/setup-wizard/Screenshot_20231202_125709.png)
-
-### Notification and battery optimization
+### Уведомления
 
 Android требует специального разрешения для уведомлений от приложений.
 
@@ -56,59 +54,35 @@ While it is a good feature to disable notifications _e.g._ from  social media ap
 
 Please click the first "ASK FOR PERMISSION" button:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_125721.png)
+![Уведомления](../images/setup-wizard/Wizard04.png)
 
 Выберите приложение "AAPS":
 
-![изображение](../images/setup-wizard/Screenshot_20231202_125833.png)
+![AAPS over other apps](../images/setup-wizard/Wizard04-AndroidSettings1.png)
 
 Включите "Разрешить поверх других приложений", сдвинув переключатель вправо:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_125843.png)
+![изображение](../images/setup-wizard/Wizard04-AndroidSettings2.png)
 
 Так выглядит переключатель во включенном положении:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_125851.png)
+![изображение](../images/setup-wizard/Wizard04-AndroidSettings3.png)
 
-Расход батареи на смартфонах все еще является сложной задачей, поскольку производительность батарей по-прежнему весьма ограничена. Операционная система Android довольно неохотно разрешает приложениям запускатьсся и расходоавать время работы процессора, а, следовательно, и заряд батареи.
+### Battery optimization
+
+Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
 
 However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Поэтому Android должен разрешить эти действия без препятствий.
 
 Это делается при помощи подтверждения настроек.
 
-Click the second "ASK FOR PERMISSION" button. Выберите "Разрешить:
+Click the second "ASK FOR PERMISSION" button.
 
-![изображение](../images/setup-wizard/Screenshot_20231202_125750.png)
+![Allow Background](../images/setup-wizard/Wizard05.png)
 
-Нажмите кнопку «ДАЛЕЕ»:
+Выберите "Разрешить:
 
-![Screenshot_20241207-161454.png](../images/setup-wizard/Screenshot_20241207-161454.png)
-
-### Location
-
-Android увязывает использование Bluetooth со службой определения местоположения. Возможно, вы замечали это у других приложений. Обычно, если нужен доступ к Bluetooth, требуется разрешение на определение местоположения.
-
-**AAPS** uses bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Детали могут различаться в зависимости от настроек.
-
-Click the first "ASK FOR PERMISSION" button:
-
-![изображение](../images/setup-wizard/Screenshot_20231202_125924.png)
-
-Это важно. Otherwise **AAPS** can not work properly at all.
-
-Выберите "При использовании приложения":
-
-![изображение](../images/setup-wizard/Screenshot_20231202_125939.png)
-
-Click the second "ASK FOR PERMISSION" button:
-
-![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
-
-Select "Allow all the time".
-
-Нажмите кнопку «ДАЛЕЕ»:
-
-![изображение](../images/setup-wizard/Screenshot_20231202_130002.png)
+![Allow Background](../images/setup-wizard/Wizard05-Background.png)
 
 ### Storage permission
 
@@ -116,23 +90,57 @@ Select "Allow all the time".
 
 Click the first "ASK FOR PERMISSION" button:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_130012.png)
+![Allow Background](../images/setup-wizard/Wizard06.png)
 
 Нажмите "Разрешить":
 
-![изображение](../images/setup-wizard/Screenshot_20231202_130022.png)
+![изображение](../images/setup-wizard/Wizard06-Memory.png)
 
-Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information. The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
+Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information.
 
-![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
+![AAPS Directory](../images/setup-wizard/Wizard07.png)
+
+The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
+
+![Select folder](../images/setup-wizard/Wizard07-Folder.png)
 
 Confirm that you wish to grant access to **AAPS** to the selected directory:
 
-![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
+![Select folder](../images/setup-wizard/Wizard07-Confirm.png)
 
 Нажмите кнопку «ДАЛЕЕ»:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_130031.png)
+![Finish Permissions](../images/setup-wizard/Wizard08.png)
+
+### Location
+
+Android links the use of Bluetooth communication to the ability to use location services. Возможно, вы замечали это у других приложений. It's common to need location permission if you want to access Bluetooth.
+
+**AAPS** uses Bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Детали могут различаться в зависимости от настроек.
+
+Click the first "ASK FOR PERMISSION" button:
+
+![Allow Location](../images/setup-wizard/Wizard09.png)
+
+Это важно. Otherwise **AAPS** can not work properly at all.
+
+Выберите "При использовании приложения":
+
+![Location](../images/setup-wizard/Wizard09-location.png)
+
+Click the second "ASK FOR PERMISSION" button:
+
+![Location 2](../images/setup-wizard/Wizard10.png)
+
+Select "Allow all the time".
+
+![Location all the time](../images/setup-wizard/Wizard10-allthetime.png)
+
+
+
+Нажмите кнопку «ДАЛЕЕ»:
+
+![Location 2](../images/setup-wizard/Wizard11.png)
 
 ## Master password
 
@@ -142,46 +150,13 @@ The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD
 
 После двукратного ввода пароля нажмите кнопку "Далее":
 
-![изображение](../images/setup-wizard/Screenshot_20231202_130122.png)
-
-
-## Загрузка отчета для разработчиков в Fabric
-
-Здесь вы можете настроить автоматизированную службу отчетов о пользовании приложением и сбоях.
-
-Это не обязательно, но рекомендуется.
-
-Это помогает разработчикам лучше понимать как пользователи работают с приложением и информирует о происходящих сбоях.
-
-Они получают:
-
-1. Информацию о сбоях в работе приложения, о которых им может быть неизвестно, если у них все работает должным образом
-1. В отправляемых данных (информация о сбоях) содержится информация о обстоятельствах, при которых произошел сбой, а также о конфигурации приложения.
-
-Что помогает разработчикам улучшить приложение.
-
-Поэтому включите отправку данных разработчикам, сдвинув переключатель вправо:
-
-
-![изображение](../images/setup-wizard/Screenshot_20231202_130136.png)
-
-Кроме того, вы можете определить что разработчики могут связаться с вами только по неотложным проблемам:
-
-![изображение](../images/setup-wizard/Screenshot_20231202_130147.png)
-
-Заполнив "контактную информацию" нажмите кнопку "ОК". Контактная информация может быть учетная запись в Facebook, на Discord, ... Просто информация для связи с вами наилучшим способом:
-
-![изображение](../images/setup-wizard/Screenshot_20231202_135748.png)
-
-Нажмите кнопку «ДАЛЕЕ»:
-
-![изображение](../images/setup-wizard/Screenshot_20231202_135807.png)
+![Пароль](../images/setup-wizard/Wizard12.png)
 
 ## Units (mg/dL <-> mmol/L)
 
-Выберите, в каких единицах хотите видеть значения гликемии -- в мг/дл или ммоль/л, затем нажмите кнопку "ДАЛЕЕ":
+Please select if your glucose values are in mg/dL or mmol/L and then please click the "NEXT" button:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_135830.png)
+![Units](../images/setup-wizard/Wizard13.png)
 
 ## Параметры экрана
 
@@ -195,7 +170,7 @@ Your glucose target _e.g._ is configured separately in your profile.
 
 Нажмите кнопку «ДАЛЕЕ»:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_135853.png)
+![Range](../images/setup-wizard/Wizard14.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
 ## Синхронизация с сервером отчетов и другие вопросы
@@ -210,49 +185,47 @@ If you select an item here on the left tick box, on the right you can then ticki
 
 В этом примере мы выберем Nightscout в качестве сервера отчетов и настроим его.
 
-```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
+```{admonition}  **NSClient** version
 :class: Note
 
 Click [here](#version3200) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**.
-
-Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout web interface, in which case, choose the first option "**NSClient**" until further notice. 
 ```
 Для Tidepool проще, так как требуются только персональные данные для входа.
 
 After making your selection, please press the cogwheel button next to the item you selected :
 
-![изображение](../images/setup-wizard/Screenshot_20231202_140916.png)
+![Synchronization](../images/setup-wizard/Wizard15.png)
 
 Здесь вы настраиваете сервер отчетов Nightscout.
 
 Нажмите на "URL-адрес Nightscout":
 
-![изображение](../images/setup-wizard/Screenshot_20231202_140952.png)
+![клиент NS](../images/setup-wizard/Wizard16.png)
 
 Введите адрес вашего сайта URL Nightscout. Это просто URL-адрес, который вы настроили самостоятельно, или он был предоставлен поставщиком услуг Nightscout.
 
 Нажмите кнопку "OK":
 
-![изображение](../images/setup-wizard/Screenshot_20231202_141051.png)
+![NSClient ULR](../images/setup-wizard/Wizard16-URL.png)
 
-Введите атрибут защиты доступа к Nightscout. Это код доступа для Nightscout, настроенный вами. Без него доступа не будет.
+Enter your Nightscout access token. Это код доступа для Nightscout, настроенный вами. Без него доступа не будет.
 
 If you don't have it at the moment please check the documentation for setting up the reporting server in the **AAPS** documentation.
 
-After filling in the "**NS access token**" and clicking "OK", please click on the "Synchronization" button:
+After filling in the "**Nightscout access token**" and clicking "OK", please click on the "Synchronization" button:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_141131.png)
+![NSClient Token](../images/setup-wizard/Wizard16-Token.png)
 
-Выберите "Передать данные в NS", если вы уже настроили Nightscout на предыдущих шагах мастера установки.
+Please select "Upload data to NS" if you already configured Nightscout in the previous steps of the Setup Wizard.
 
 If you have stored profiles on Nightscout and want to download them to **AAPS**, enable "Receive profile store":
 
-![изображение](../images/setup-wizard/Screenshot_20231202_141219.png)
+![Syncronization](../images/setup-wizard/Wizard16-Sync.png)
 
 
 Вернитесь на предыдущий экран и выберите "Опции оповещения":
 
-![изображение](../images/setup-wizard/Screenshot_20231202_141310.png)
+![Сигналы оповещения](../images/setup-wizard/Wizard16-Alarm.png)
 
 Пока что оставьте переключатели неактивными. We only walked to the screen to make you familiar with possible options you might configure in the future. В настоящий момент такой необходимости нет.
 
@@ -268,7 +241,7 @@ Other **AAPS** users can disable the transfer via cellular connection if they wa
 
 Вернитесь на предыдущий экран и выберите "Дополнительные настройки".
 
-![изображение](../images/setup-wizard/Screenshot_20231202_141326.png)
+![Connection](../images/setup-wizard/Wizard16-Connect.png)
 
 Включите "Передать в NS запись о начале работы приложения", если хотите получить эту информацию на сервере отчетов. Это может помочь вам удаленно узнать, было ли перезапущено приложение и когда именно, особенно если вы лицо, осуществляющее уход.
 
@@ -280,7 +253,7 @@ It might be interesting to see if **AAPS** is correctly configured now, but late
 
 Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_141351.png)
+![изображение](../images/setup-wizard/Wizard16-App.png)
 
 ## Patient name
 
@@ -292,7 +265,7 @@ Here you can setup your name in **AAPS**.
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану.
 
-![изображение](../images/setup-wizard/Screenshot_20231202_141445.png)
+![Имя](../images/setup-wizard/Wizard17.png)
 
 ## Patient type
 
@@ -304,7 +277,7 @@ Here is where you also configure the **maximum allowed bolus** for a meal. То 
 
 После установки этих значений нажмите "ДАЛЕЕ" и перейдите на следующий экран:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_141817.png)
+![Patient](../images/setup-wizard/Wizard18.png)
 
 ## Применяемый инсулин
 
@@ -319,33 +292,33 @@ For advanced users or medical studies there is the possibility to define with "F
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_141840.png)
+![Инсулин](../images/setup-wizard/Wizard19.png)
 
 
 ## Источник ГК
 
 Выберите используемый вами источник ГК Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
-Поскольку доступно несколько вариантов, мы не объясняем здесь конфигурацию каждого. В нашем примере мы приводим Dexcom G6 с самостоятельно собранным приложением BYODA:
+Поскольку доступно несколько вариантов, мы не объясняем здесь конфигурацию каждого. We are using xDrip+ in our example here:
 
 
-![изображение](../images/setup-wizard/Screenshot_20231202_141912.png)
+![Источник данных гликемии](../images/setup-wizard/Wizard20.png)
 
 
-Если вы используете Dexcom G6 с BYODA, активируйте видимость его меню, поставив галочку справа.
+Enable the visibility in the top level menu by clicking the check box on the right side.
 
 После установки этих значений нажмите "ДАЛЕЕ" и перейдите на следующий экран:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_141925.png)
+![Select BG](../images/setup-wizard/Wizard20-Set.png)
 
 
-If you are using Dexcom G6 with BYODA, click on the cogwheel button to access the settings for BYODA.
+Click on the cogwheel button to access the settings.
 
 Включите «Загружать данные ГК в NS» и «Вносить запись о замене сенсора в NS».
 
 Go back and press "NEXT" to go to the next screen:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_141958.png)
+![Upload](../images/setup-wizard/Wizard20-Upload.png)
 
 (setup-wizard-profile)=
 ## Profile
@@ -365,7 +338,7 @@ If a robot has an incorrect input it will fail - consistently. **AAPS** can only
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану. Введите "название профиля":
 
-![изображение](../images/setup-wizard/Screenshot_20231202_142027.png)
+![изображение](../images/setup-wizard/Wizard21.png)
 
 
 В дальнейшем при необходимости можно настроить несколько профилей. Мы здесь создадим только один.
@@ -381,20 +354,20 @@ Don't use it for actually looping!
 
 Enter your [Duration of insulin Action (DIA)](#your-aaps-profile-duration-of-insulin-action) in hours. Затем нажмите "IC" (углеводный коэффициент):
 
-![изображение](../images/setup-wizard/Screenshot_20231202_142143.png)
+![DIA](../images/setup-wizard/Wizard21-Name.png)
 
 Enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_142903.png)
+![IC](../images/setup-wizard/Wizard21-IC.png)
 
 Нажмите "ISF" (фактор чувствительности к инсулину). Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
 
-![изображение](../images/setup-wizard/Screenshot_20231202_143009.png)
+![ISF](../images/setup-wizard/Wizard21-ISF.png)
 
 
 Нажмите "БАЗАЛ". Enter your [basal values](#your-aaps-profile-basal-rates):
 
-![изображение](../images/setup-wizard/Screenshot_20231202_143623.png)
+![изображение](../images/setup-wizard/Wizard21-Basal.png)
 
 
 Нажмите "ЦЕЛЬ". Введите целевые значения сахара в крови.
@@ -405,11 +378,11 @@ For open looping this target can be a wider range, as otherwise **AAPS** notifie
 
 Введите/подтвердите целевые значения:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_143709.png)
+![Целевое значение ГК (Цель)](../images/setup-wizard/Wizard22.png)
 
 Сохраните профиль, нажав "СОХРАНИТЬ":
 
-![изображение](../images/setup-wizard/Screenshot_20231202_143724.png)
+![Save](../images/setup-wizard/Wizard22-Save.png)
 
 
 After saving, a new button "Activate Profile" appears.
@@ -421,7 +394,7 @@ After saving, a new button "Activate Profile" appears.
 
 Нажмите "Активировать профиль":
 
-![изображение](../images/setup-wizard/Screenshot_20231202_143741.png)
+![изображение](../images/setup-wizard/Wizard22-Activate.png)
 
 
 
@@ -438,7 +411,7 @@ After saving, a new button "Activate Profile" appears.
 Нажмите "OK":
 
 
-![изображение](../images/setup-wizard/Screenshot_20231202_143808.png)
+![Switch](../images/setup-wizard/Wizard22-Switch.png)
 
 
 
@@ -446,11 +419,11 @@ After saving, a new button "Activate Profile" appears.
 
 Подтвердите нажав кнопку "OK". Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_143822.png)
+![Ok](../images/setup-wizard/Wizard22-SwitchOk.png)
 
 Ваш профиль установлен:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_143833.png)
+![Info](../images/setup-wizard/Wizard22-Info.png)
 
 
 ## Инсулиновая помпа
@@ -469,14 +442,14 @@ Please read the documentation for your [insulin pump](../Getting-Started/Compati
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану.
 
-![изображение](../images/setup-wizard/Screenshot_20231202_143909.png)
+![Pump Warning](../images/setup-wizard/Wizard23.png)
 
 
 В данном случае мы выберем "Виртуальную помпу".
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_143935.png)
+![Pump](../images/setup-wizard/Wizard23-Pump.png)
 
 ## APS algorithm
 
@@ -491,7 +464,7 @@ OpenAPS AMA is the most basic algorithm which does not support micro boluses to 
 
 Press the cogwheel to see the details:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_144014.png)
+![Система ИПЖ](../images/setup-wizard/Wizard24.png)
 
 
 Только прочтите текст и ничего не меняйте.
@@ -500,15 +473,7 @@ Due to the limitations which are imposed by the **Objectives** you can't use eit
 
 Go back and press "NEXT" to go to the next screen:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_144025.png)
-
-## APS mode
-
-Оставьте выбранным "Открытый цикл".
-
-Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
-
-![изображение](../images/setup-wizard/Screenshot_20231202_144049.png)
+![Настройки](../images/setup-wizard/Wizard24-Settings.png)
 
 ## Определение чувствительности
 
@@ -516,7 +481,7 @@ Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_144101.png)
+![Sensitivity](../images/setup-wizard/Wizard25.png)
 
 ## Начните выполнение Цели 1
 
@@ -528,13 +493,13 @@ Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
 Нажмите на зеленую надпись "СТАРТ" для запуска Цели 1:
 
-![изображение](../images/setup-wizard/Screenshot_20231202_144113.png)
+![Objectives](../images/setup-wizard/Wizard26.png)
 
 Вы видите, что уже добились определенного прогресса, но другие области еще не завершены.
 
 Нажмите "ГОТОВО" и перейдите к следующему экрану.
 
-![изображение](../images/setup-wizard/Screenshot_20231202_144135.png)
+![Done](../images/setup-wizard/Wizard26-Started.png)
 
 You are coming to the home screen of **AAPS**.
 
@@ -544,7 +509,7 @@ Here you find the information message in **AAPS** that you set your profile.
 
 Нажмите "УБРАТЬ ОПОВЕЩЕНИЕ" и оно исчезнет.
 
-![изображение](../images/setup-wizard/Screenshot_20231202_144156.png)
+![изображение](../images/setup-wizard/Wizard26-Done.png)
 
 If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
 

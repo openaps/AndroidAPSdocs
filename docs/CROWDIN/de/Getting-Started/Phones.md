@@ -1,10 +1,10 @@
 # Smartphones
 
-Die aktuelle **AAPS**-Version (3.3) setzt ein Android Smartphone mit Google **Android 11.0 oder höher** voraus. Solltest Du in Erwägung ziehen, ein neues Smartphone zu kaufen so wäre (Stand: Dezember 2024) **Android 14** zu bevorzugen.
+The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
 
 Die allerneusten Informationen zu diesem Thema erhältst Du auf [Facebook oder Discord](../GettingHelp/WhereCanIGetHelp.md).
 
-Aus Sicherheitsgründen wird Dir dringend empfohlen, Deine **AAPS**-Version immer aktuell zu halten. Für Menschen, die kein Gerät mit Android 11 (oder neuer) nutzen können, stehen weiterhin ältere **AAPS**-Versionen für ältere Android-Versionen zur Verfügung, siehe dazu auch die [Release Notes](#maintenance-android-version-aaps-version).
+Aus Sicherheitsgründen wird Dir dringend empfohlen, Deine **AAPS**-Version immer aktuell zu halten. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
 
 - [Jelly Pro Einstellungen](../CompatiblePhones/Jelly.md)
 - [Huawei Einstellungen](../CompatiblePhones/Huawei.md)

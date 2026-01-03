@@ -1,10 +1,10 @@
 # Telefóny
 
-Aktuálna verzia aplikácie **AAPS** (3.3) vyžaduje smartfón so systémom **Android 11.0 alebo novším**. Ak uvažujete o kúpe nového telefónu (stav k decembru 2024), **uprednostňuje sa Android 14**.
+The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
 
 Najnovšie aktualizácie k tejto téme nájdete na [Facebooku alebo Discorde](../GettingHelp/WhereCanIGetHelp.md).
 
-Používateľom sa dôrazne odporúča, aby si z bezpečnostných dôvodov udržiavali svoju verziu **AAPS** aktuálnu. Pre používateľov, ktorí nemôžu používať zariadenie so systémom Android 11.0 alebo novším, sú však stále k dispozícii staršie verzie aplikácie **AAPS** kompatibilné so staršími verziami systému Android, pozri: [Poznámky k vydaniu](#maintenance-android-version-aaps-version).
+Používateľom sa dôrazne odporúča, aby si z bezpečnostných dôvodov udržiavali svoju verziu **AAPS** aktuálnu. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
 
 - [Nastavenia Jelly Pro](../CompatiblePhones/Jelly.md)
 - [Nastavenia Huawei](../CompatiblePhones/Huawei.md)

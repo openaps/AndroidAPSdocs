@@ -23,19 +23,19 @@
 
 ## Android 版本與 AAPS 版本
 
-如果你的智慧型手機使用的是 Android 11 以下的版本，就無法使用 AAPS v3.3 及更新版本，因為這些版本至少需要 Android 11 才能運作。
+如果你的智慧型手機使用的 Android 版本低於 Android 12，將無法使用 AAPS v3.4 及更新版本，因為至少需要 Android 12。
 
 為了允許使用舊版 Android 的用戶繼續使用舊版 AAPS，我們發佈了一些僅更改版本驗證的版本。 這些版本不包含其他改進。
 
-### Android 12 and up
+### Android 12 及以上
 
 - 使用最新的 AAPS 版本
 - 從 <https://github.com/nightscout/AndroidAPS> 下載 AAPS 程式碼
 
 ### Android 11
 
-- Use AAPS version **3.3.2.1**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 3.3.2.1
+- 使用 AAPS 版本 **3.3.2.1**
+- 從 <https://github.com/nightscout/AndroidAPS> 下載 3.3.2.1 分支程式碼
 
 ### Android 9,10
 
@@ -54,7 +54,7 @@
 
 ## WearOS 版本
 
-- AAPS requires at least WearOS API level 30 (Android 11)
+- AAPS 需要至少 WearOS API 等級 30（Android 11）
 
 ```{tip}
 WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
@@ -64,54 +64,54 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 (version3400)=
 
-## Version 3.4.0.0
+## 版本 3.4.0.0
 
-Release date: 31-12-2025
+發布日期：2025-12-31
 
 ### 在升級之前：
-* This version requires Google Android 12.0 or above. 在嘗試更新之前請檢查你的手機版本。
-* Update to latest Android Studio or better setup using browser build.
+* 此版本需要 Google Android 12.0 或以上。 在嘗試更新之前請檢查你的手機版本。
+* 更新至最新的 Android Studio，或使用瀏覽器建置以獲得更好的設定流程。
 
-### New features
-* Running mode @MilosKozak
-* new CGMs
-* Site rotation support @Philoul
-* ability to stop SMB from UI @MilosKozak
-* Syai CGM is trusted source and supports advanced filtering @MilosKozak
+### 新功能
+* 執行模式 @MilosKozak
+* 新增多款 CGM
+* 支援部位輪換 @Philoul
+* 可從 UI 停止微量注射 @MilosKozak
+* Syai CGM 為受信任的來源並支援進階過濾 @MilosKozak
 
-### Wear OS Improvements
-* dramatically reduced battery usage @MilosKozak
-* UI improvements and fixes @olorinmaia
-* almost complete rewritten code to match current level of libs (WearOS 2 previously) @MilosKozak
-* 2 new complications for extended data @Philoul
-* Migrated to modern complication provider with DataStore @MilosKozak
+### Wear OS 改進
+* 大幅降低電量消耗 @MilosKozak
+* 介面改進與修正 @olorinmaia
+* 幾乎完全重寫程式碼以符合目前函式庫層級（先前為 Wear OS 2）@MilosKozak
+* 2 個新的複雜功能，用於擴充資料 @Philoul
+* 使用 DataStore 遷移至現代複雜功能提供程式 @MilosKozak
 
-### Memory Leak Fixes
-* Fixed memory leaks in code @MilosKozak
-* Added LeakCanary memory leak reporting to Firebase Crashlytics @MilosKozak
+### 記憶體洩漏修正
+* 修正程式碼中的記憶體洩漏 @MilosKozak
+* 新增 LeakCanary 記憶體洩漏回報至 Firebase Crashlytics @MilosKozak
 
-### Pump Driver Improvements
-* **DanaI**: fixed disconnection issues @MilosKozak
-* **RileyLink**: Speedup communication by minimizing delays @mifi100
-* **Medtrum**: Added patch activation time and age display @vanelsberg, password uppercase fix @MilosKozak
-* **Combo**: Fixed Test race conditions @MilosKozak @dv1
-* **Equil**: Optimized connectivity, reduced battery usage @MilosKozak
+### 幫浦驅動程式改進
+* **DanaI**: 修正中斷連線問題 @MilosKozak
+* **RileyLink**: 透過最小化延遲加速通訊 @mifi100
+* **Medtrum**: 新增貼片註冊時間與使用時長顯示 @vanelsberg，密碼大寫修正 @MilosKozak
+* **Combo**: 修正測試中的競態條件 @MilosKozak @dv1
+* **Equil**: 最佳化連線，降低電量消耗 @MilosKozak
 
-### Nightscout Sync
-* Improved deduplication on NS failure @MilosKozak
+### Nightscout 同步
+* 改進 Nightscout 異常時的重複資料過濾 @MilosKozak
 
-### UI/UX Improvements
-* various improvemnts @MilosKozak @Philoul @olorinmaia
+### UI/UX 改進
+* 多項改進 @MilosKozak @Philoul @olorinmaia
 
 ### 自動化
-* New SMB control action - enable/disable SMB via automation @MilosKozak
+* 新的微量注射控制動作 - 透過自動化啟用/停用微量注射 @MilosKozak
 
-### Testing
-* Added comprehensive unit tests for Equil, Eopatch, Dana, and Medtronic pumps @MilosKozak
-* Improved test stability and coverage across multiple modules @MilosKozak
+### 測試
+* 新增針對 Equil、Eopatch、Dana 與 Medtronic 幫浦的完整單元測試 @MilosKozak
+* 提升多個模組的測試穩定性與涵蓋率 @MilosKozak
 
 ### Tidepool
-* Tidepool OAUTH2 (Support for new Tidepool authentication) @MilosKozak
+* Tidepool OAUTH2（支援新的 Tidepool 驗證）@MilosKozak
 
 (version3321)=
 

@@ -21,10 +21,13 @@ Táto časť poskytuje stručný prehľad všetkých kompatibilných **CGM/FGM**
 | [LIbre 1](../CompatibleCgms/Libre1.md)                | [xDrip+](../CompatibleCgms/xDrip.md), Glimp, Tomato alebo Diabox. Potrebujete vysielač                                      |
 | [Eversense](../CompatibleCgms/Eversense.md)           | [xDrip+](../CompatibleCgms/xDrip.md) alebo opravená aplikácia ESEL/Eversense                                                |
 | [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md) | [xDrip+](../CompatibleCgms/xDrip.md) or MM640g + 600SeriesAndroidUploader App                                               |
-| [PocTech](../CompatibleCgms/PocTech.md)               | PocTech                                                                                                                     |
+| [PocTech](../CompatibleCgms/PocTech.md)               | PocTech app                                                                                                                 |
+| Glunovo                                               | Glunovo App                                                                                                                 |
+| Intelligo                                             | Intelligo App                                                                                                               |
 | [Ottai](../CompatibleCgms/OttaiM8.md)                 | Ottai                                                                                                                       |
-| [Syai Tag](../CompatibleCgms/SyaiTagX1.md)            | Syai Tag                                                                                                                    |
-| Sibionics CGM                                         | [Juggluco](../CompatibleCgms/Juggluco.md)                                                                                   |
+| [Syai](../CompatibleCgms/SyaiTagX1.md)                | Syai Tag                                                                                                                    |
+| Sibionics CGM                                         | [Juggluco](../CompatibleCgms/Juggluco.md) or Patched SI App                                                                 |
+| Sinocare                                              | Patched Sino App                                                                                                            |
 
 (GettingStarted-TrustedBGSource)=
 
@@ -43,5 +46,6 @@ Dôveryhodné zdroje údajov umožňujú nepretržité podávanie **SMB**.
 | Dexcom ONE/ONE+/Stelo |                                            xDrip+ (**Priamy, Natívny**)                                            |
 | Libre 2/2+ (EU)       | xDrip+ (OOP2 **bez kalibrácie**), </br>Juggluco (**xDrip vysielanie** bez xDrip+ alebo **Patched Libre** s xDrip+) |
 | Libre 2/2+/3/3+       |                    Juggluco (**xDrip vysielanie** bez xDrip+ alebo **Patched Libre** s xDrip+)                     |
+| Syai                  |                                                      Syai App                                                      |
 
 **Poznámka: Aplikácie xDrip+ Companion a režimy Follower (vrátane 640G/Eversense) nie sú dôveryhodnými zdrojmi údajov.**

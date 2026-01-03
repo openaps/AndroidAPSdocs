@@ -24,7 +24,7 @@
 
 這只是歡迎訊息，你可以透過點擊“下一步”按鈕跳過：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_125636.png)
+![歡迎](../images/setup-wizard/Wizard01.png)
 
 ## 許可協議
 
@@ -34,21 +34,19 @@
 
 如果你暸解並同意，請點擊“我暸解並同意”按鈕並繼續設定嚮導：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_125650.png)
+![最終使用者授權合約](../images/setup-wizard/Wizard02.png)
 
 ## 必要的權限
 
 **AAPS** 需要一些權限才能正常運行。
 
-在接下來的畫面中，你會被問到幾個必須同意的問題，以使**AAPS**正常運作。 嚮導本身會解釋為何需要相關設置。
+接下來的畫面會詢問幾個你必須同意的問題，才能讓 **AAPS** 正常運作。 嚮導本身會解釋為何需要相關設置。
 
-在此畫面中，我們提供更多背景訊息，將更技術性的內容轉換為常用語系，或解釋其原因。
+在此畫面中，我們提供更多背景訊息，將更技術性的內容轉換為常用語系，或解釋其原因。 請繼續往下閱讀以查看每一項權限請求。
 
-請點擊“下一步”按鈕：
+![權限](../images/setup-wizard/Wizard03.png)
 
-![圖像](../images/setup-wizard/Screenshot_20231202_125709.png)
-
-### 通知和電池優化
+### 通知
 
 如果應用程式希望向你發送通知，Android需要特殊的許可。
 
@@ -56,59 +54,35 @@
 
 請點擊第一個「請求權限」按鈕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_125721.png)
+![通知](../images/setup-wizard/Wizard04.png)
 
 選擇“AAPS”應用程式：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_125833.png)
+![AAPS 顯示在其他 App 之上](../images/setup-wizard/Wizard04-AndroidSettings1.png)
 
 透過向右滑動滑塊來啟用“允許在其他應用程式上顯示”：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_125843.png)
+![圖像](../images/setup-wizard/Wizard04-AndroidSettings2.png)
 
 如果已啟用，滑塊應該看起來是這樣的：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_125851.png)
+![圖像](../images/setup-wizard/Wizard04-AndroidSettings3.png)
 
-智慧型手機的電池消耗仍然是需要考慮的因素，因為電池性能仍然相當有限。 因此，智慧型手機上的Android操作系統在允許應用程式運作和消耗CPU時間（因此消耗電池電量）方面有嚴格的限制。
+### 電池優化
+
+由於電池效能仍相當有限，智慧型手機的電量消耗需要特別留意。 因此，你的智慧型手機上的 Android 作業系統會對允許應用程式在背景執行並耗用 CPU 時間（也就是電量）採取較嚴格的限制。
 
 然而，**AAPS** 需要定期運行，_例如_每幾分鐘接收血糖讀值，然後根據你的規範應用算法來決定如何處理你的血糖水平。 因此，必須讓Android允許一些權限。
 
 你可以透過確認設置來完成這一操作。
 
-點擊第二個「請求權限」按鈕。 請選擇“允許”：
+點擊第二個「請求權限」按鈕。
 
-![圖像](../images/setup-wizard/Screenshot_20231202_125750.png)
+![允許背景執行](../images/setup-wizard/Wizard05.png)
 
-點擊“下一步”按鈕：
+請選擇“允許”：
 
-![Screenshot_20241207-161454.png](../images/setup-wizard/Screenshot_20241207-161454.png)
-
-### 位置
-
-Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可能在其他應用程式中也見過這一點。 如果你想查看藍牙，通常需要位置權限。
-
-**AAPS** 使用藍牙與你的 CGM 和胰島素幫浦通信，如果這些設備是直接由**AAPS** 控制，而不是其他應用程式所使用的。 具體細節可能因設置而異。
-
-請點擊第一個「請求權限」按鈕：
-
-![圖像](../images/setup-wizard/Screenshot_20231202_125924.png)
-
-這很重要。 否則**AAPS**將完全無法正常運作。
-
-點擊“使用應用程式時”：
-
-![圖像](../images/setup-wizard/Screenshot_20231202_125939.png)
-
-點擊第二個「請求權限」按鈕：
-
-![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
-
-選擇「始終允許」。
-
-點擊“下一步”按鈕：
-
-![圖像](../images/setup-wizard/Screenshot_20231202_130002.png)
+![允許背景執行](../images/setup-wizard/Wizard05-Background.png)
 
 ### 儲存權限
 
@@ -116,23 +90,57 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 請點擊第一個「請求權限」按鈕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_130012.png)
+![允許背景執行](../images/setup-wizard/Wizard06.png)
 
 點擊“允許”：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_130022.png)
+![圖像](../images/setup-wizard/Wizard06-Memory.png)
 
-點擊「AAPS 目錄」。 這將開啟你手機上的檔案系統，讓你選擇希望 AAPS 儲存資訊的地方。 預設目錄是 **AAPS**，但你可以使用任何慣用的目錄。 如有必要，創建目錄，進入該目錄，並選擇「使用此資料夾」：
+點擊「AAPS 目錄」。 這將開啟你手機上的檔案系統，讓你選擇希望 AAPS 儲存資訊的地方。
 
-![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
+![AAPS 目錄](../images/setup-wizard/Wizard07.png)
+
+預設目錄是 **AAPS**，但你可以使用任何慣用的目錄。 如有必要，創建目錄，進入該目錄，並選擇「使用此資料夾」：
+
+![選取資料夾](../images/setup-wizard/Wizard07-Folder.png)
 
 確認你希望授予 **AAPS** 存取所選目錄的權限：
 
-![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
+![選取資料夾](../images/setup-wizard/Wizard07-Confirm.png)
 
 點擊“下一步”按鈕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_130031.png)
+![完成權限設定](../images/setup-wizard/Wizard08.png)
+
+### 位置
+
+Android 將藍牙通訊的使用與定位服務的權限綁定在一起。 你可能在其他應用程式中也見過這一點。 因此，要存取藍牙時通常需要定位權限。
+
+**AAPS** 會使用藍牙與你的 CGM 與胰島素幫浦通訊（前提是它們由 **AAPS** 直接控制，而不是透過 **AAPS** 所使用的其他 App）。 具體細節可能因設置而異。
+
+請點擊第一個「請求權限」按鈕：
+
+![允許定位權限](../images/setup-wizard/Wizard09.png)
+
+這很重要。 否則**AAPS**將完全無法正常運作。
+
+點擊“使用應用程式時”：
+
+![位置](../images/setup-wizard/Wizard09-location.png)
+
+點擊第二個「請求權限」按鈕：
+
+![定位 2](../images/setup-wizard/Wizard10.png)
+
+選擇「始終允許」。
+
+![始終允許定位](../images/setup-wizard/Wizard10-allthetime.png)
+
+
+
+點擊“下一步”按鈕：
+
+![定位 2](../images/setup-wizard/Wizard11.png)
 
 ## 主密碼
 
@@ -142,46 +150,13 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 填寫密碼兩次後，請點擊“下一步”按鈕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_130122.png)
-
-
-## Fabric上傳
-
-在這裡，你可以設置自動崩潰和使用報告服務的使用。
-
-這不是強制性的，但使用他是一種良好的做法。
-
-他幫助開發人員更好地了解你如何使用應用程式，並告知他們發生了哪些崩潰。
-
-他們將獲得：
-
-1. 應用程式崩潰的資訊，否則他們無法知道，因為他們自己的設置中一切運作正常，並且
-1. 發送的資料（崩潰訊息）中包含崩潰發生的情況以及使用了何種配置的相關訊息。
-
-因此，這有助於開發人員改進應用程式。
-
-請透過向右滑動滑塊來啟用“Fabric上傳”：
-
-
-![圖像](../images/setup-wizard/Screenshot_20231202_130136.png)
-
-此外，你可以標識自己，以便在開發人員希望就問題或緊急關注事項聯繫你時能夠找到你：
-
-![圖像](../images/setup-wizard/Screenshot_20231202_130147.png)
-
-填寫你的“聯絡訊息”後，點擊“確定”按鈕。 聯絡訊息可以是你在Facebook、Discord等平台上的身份訊息…… 只需提供你認為能透過最佳方式聯繫你的訊息：
-
-![圖像](../images/setup-wizard/Screenshot_20231202_135748.png)
-
-點擊“下一步”按鈕：
-
-![圖像](../images/setup-wizard/Screenshot_20231202_135807.png)
+![密碼](../images/setup-wizard/Wizard12.png)
 
 ## 單位 (mg/dL <-> mmol/L)
 
-請選擇你的血糖值是以 mg/dl 還是 mmol/L 為單位，然後點擊“下一步”按鈕：
+請選擇你的血糖數值單位為 mg/dL 或 mmol/L，然後點擊「下一步」按鈕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_135830.png)
+![單位](../images/setup-wizard/Wizard13.png)
 
 ## 顯示設置
 
@@ -195,7 +170,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 請按下“下一步”按鈕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_135853.png)
+![範圍](../images/setup-wizard/Wizard14.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
 ## 與報告伺服器同步及更多設置
@@ -210,49 +185,47 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 在此示例中，我們選擇Nightscout作為報告伺服器，並將進行配置。
 
-```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
+```{admonition}  **NSClient** version
 :class: 注意
 
 點擊 [這裡](#version3200) 查看 **AAPS** 3.2.0.0 的發布說明，其中解釋了第一選項 **NSClient**（這是「v1」，雖然未明確標記）和第二選項 **NSClient v3** 之間的差異。
-
-Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介面監控或發送遠端療程（例如，作為使用**AAPS**的父母或護理人監控子女），在這種情況下，請選擇第一個選項“**NSClient**”直至另行通知。 
 ```
 對於Tidepool來說，這更簡單，因為你只需要你的個人登錄訊息。
 
 選擇後，請按下你選擇項目旁邊的齒輪按鈕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_140916.png)
+![同步選項](../images/setup-wizard/Wizard15.png)
 
 在這裡，你可以配置Nightscout報告伺服器。
 
 請點擊“Nightscout URL”：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_140952.png)
+![NSClient](../images/setup-wizard/Wizard16.png)
 
 輸入你的Nightscout URL，這是你的個人Nightscout伺服器。 這只是你自己設置的URL，或者是從你的Nightscout服務提供商那裡獲得的。
 
 請點擊“確定”按鈕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141051.png)
+![NSClient ULR](../images/setup-wizard/Wizard16-URL.png)
 
-輸入你的Nightscout存取權杖。 這是你配置的Nightscout伺服器的存取權杖。 沒有這個權杖，無法存取。
+輸入你的 Nightscout 存取權杖。 這是你配置的Nightscout伺服器的存取權杖。 沒有這個權杖，無法存取。
 
 如果你目前沒有此文件，請查看**AAPS** 的文件以設置報告伺服器。
 
-在填寫「**NS 存取權杖**」並點擊「確定」後，請按下「同步」按鈕：
+填入「Nightscout 存取權杖」並點選「確定」後，請再點擊「同步」按鈕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141131.png)
+![NSClient 權杖](../images/setup-wizard/Wizard16-Token.png)
 
-如果你在設定嚮導的前幾步中已經配置了Nightscout，請選擇“上傳資料到NS”。
+若你已在前述設定嚮導步驟中完成 Nightscout 設定，請勾選「上傳資料到 NS」。
 
 如果你在 Nightscout 上已存儲個人設定並希望將其下載到**AAPS**，請啟用「接收個人設定」：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141219.png)
+![同步](../images/setup-wizard/Wizard16-Sync.png)
 
 
 返回上一個螢幕並選擇“警報選項”：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141310.png)
+![警報](../images/setup-wizard/Wizard16-Alarm.png)
 
 現在先不要啟用這些開關。 我們僅僅是走到螢幕前，讓你熟悉將來可能配置的選項。 目前還不需要設置他們。
 
@@ -268,7 +241,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 返回上一個螢幕並選擇“進階設置”。
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141326.png)
+![連線](../images/setup-wizard/Wizard16-Connect.png)
 
 如果你希望在報告伺服器中獲取應用程式啟動的相關訊息，請啟用“紀錄應用啟動到NS”。 這有助於你遠端了解應用程式是否已重新啟動，特別是作為照護者時。
 
@@ -280,7 +253,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 返回兩次，回到外掛列表，然後選擇 "下一步" 以進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141351.png)
+![圖像](../images/setup-wizard/Wizard16-App.png)
 
 ## 患者名稱
 
@@ -292,7 +265,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 按“下一步”進入下一個螢幕。
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141445.png)
+![名稱](../images/setup-wizard/Wizard17.png)
 
 ## 病人類型
 
@@ -304,7 +277,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 設置這些值後，請按“下一步”進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141817.png)
+![病患](../images/setup-wizard/Wizard18.png)
 
 ## 使用的胰島素
 
@@ -319,33 +292,33 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 按“下一步”進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141840.png)
+![胰島素](../images/setup-wizard/Wizard19.png)
 
 
 ## 血糖來源
 
 選擇你使用的血糖來源。 請閱讀你的[血糖資料來源](../Getting-Started/CompatiblesCgms.md)的文件。
 
-由於有多個選項可用，因此我們不會在此詳細解釋所有選項的配置。 在這裡我們使用Dexcom G6與BYODA應用程式的示例：
+由於有多個選項可用，因此我們不會在此詳細解釋所有選項的配置。 此處的範例我們使用 xDrip+：
 
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141912.png)
+![血糖來源](../images/setup-wizard/Wizard20.png)
 
 
-如果你使用Dexcom G6與BYODA，請在頂層選單中點擊右側的勾選框來啟用可見性。
+在頂層選單右側勾選核取方塊以啟用顯示。
 
 選擇後，按“下一步”進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141925.png)
+![選取血糖](../images/setup-wizard/Wizard20-Set.png)
 
 
-如果你正在使用 Dexcom G6 與 BYODA，點擊齒輪按鈕來讀取 BYODA 的設定。
+點擊齒輪按鈕以進入設定。
 
 啟用“上傳血糖資料到NS”和“紀錄傳感器變更到NS”。
 
 返回並按 "下一步" 以進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_141958.png)
+![上傳](../images/setup-wizard/Wizard20-Upload.png)
 
 (setup-wizard-profile)=
 ## 設定檔
@@ -365,7 +338,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 按“下一步”進入下一個螢幕。 輸入一個“設定檔案名稱”：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_142027.png)
+![圖像](../images/setup-wizard/Wizard21.png)
 
 
 長期來看，如果有需要，你可以擁有多個設定檔案。 這裡我們只建立一個。
@@ -381,20 +354,20 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 請輸入你的[胰島素作用時間 (DIA)](#your-aaps-profile-duration-of-insulin-action)，以小時為單位。 然後按“IC”：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_142143.png)
+![DIA](../images/setup-wizard/Wizard21-Name.png)
 
 請輸入你的[胰島素與碳水化合物比例 (IC)](#your-aaps-profile-insulin-to-carbs-ratio)值：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_142903.png)
+![IC](../images/setup-wizard/Wizard21-IC.png)
 
 按“ISF”。 請輸入你的[胰島素敏感度係數 (ISF)](#your-aaps-profile-insulin-sensitivity-factor)值：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143009.png)
+![ISF](../images/setup-wizard/Wizard21-ISF.png)
 
 
 按“基礎速率”。 請輸入你的[基礎胰島素值](#your-aaps-profile-basal-rates)：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143623.png)
+![圖像](../images/setup-wizard/Wizard21-Basal.png)
 
 
 按“TARG”。 輸入你的血糖目標值。
@@ -405,11 +378,11 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 輸入/確認目標值：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143709.png)
+![目標](../images/setup-wizard/Wizard22.png)
 
 點擊“儲存”來儲存設定檔案：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143724.png)
+![儲存](../images/setup-wizard/Wizard22-Save.png)
 
 
 保存後，將顯示一個新按鈕「啟用設定檔」。
@@ -421,7 +394,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 按下“啟用設定檔案”：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143741.png)
+![圖像](../images/setup-wizard/Wizard22-Activate.png)
 
 
 
@@ -438,7 +411,7 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 按下“確定”：
 
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143808.png)
+![切換](../images/setup-wizard/Wizard22-Switch.png)
 
 
 
@@ -446,11 +419,11 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 你可以按“確定”確認他。 按“下一步”進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143822.png)
+![確定](../images/setup-wizard/Wizard22-SwitchOk.png)
 
 你的設定檔案現在已設置：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143833.png)
+![資訊](../images/setup-wizard/Wizard22-Info.png)
 
 
 ## 胰島素幫浦
@@ -469,14 +442,14 @@ Nightscout用戶應選擇**NSClient v3**，除非你想透過Nightscout網頁介
 
 按“下一步”進入下一個螢幕。
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143909.png)
+![幫浦警告](../images/setup-wizard/Wizard23.png)
 
 
 在此例中，我們選擇“虛擬幫浦”。
 
 按“下一步”進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_143935.png)
+![幫浦](../images/setup-wizard/Wizard23-Pump.png)
 
 ## APS 演算法
 
@@ -491,7 +464,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 按齒輪查看詳細資訊：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_144014.png)
+![APS](../images/setup-wizard/Wizard24.png)
 
 
 僅閱讀文本，此處不進行任何更改。
@@ -500,15 +473,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 返回並按 "下一步" 以進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_144025.png)
-
-## APS模式
-
-讓“開放循環”保持選中狀態。
-
-按“下一步”進入下一個螢幕：
-
-![圖像](../images/setup-wizard/Screenshot_20231202_144049.png)
+![設定](../images/setup-wizard/Wizard24-Settings.png)
 
 ## 敏感度偵測
 
@@ -516,7 +481,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 按“下一步”進入下一個螢幕：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_144101.png)
+![敏感度](../images/setup-wizard/Wizard25.png)
 
 ## 開始目標1
 
@@ -528,13 +493,13 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 按下綠色的“開始”按鈕以開始目標1：
 
-![圖像](../images/setup-wizard/Screenshot_20231202_144113.png)
+![目標](../images/setup-wizard/Wizard26.png)
 
 你會看到你已經取得了一些進展，但還有其他區域需要完成。
 
 按“完成”進入下一個螢幕。
 
-![圖像](../images/setup-wizard/Screenshot_20231202_144135.png)
+![完成](../images/setup-wizard/Wizard26-Started.png)
 
 你即將進入**AAPS**的主螢幕。
 
@@ -544,7 +509,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 你可以點擊“延後”，他會消失。
 
-![圖像](../images/setup-wizard/Screenshot_20231202_144156.png)
+![圖像](../images/setup-wizard/Wizard26-Done.png)
 
 如果你在任何時候不小心離開設置嚮導，你可以簡單地重新啟動嚮導，或手動更改[AAPS 循環的配置](../SettingUpAaps/ChangeAapsConfiguration.md)。
 

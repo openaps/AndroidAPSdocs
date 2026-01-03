@@ -210,7 +210,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 #### AAPS 與 Android 版本
 
-目前版本的 **AAPS**（3.3）需要使用 Google **Android 11.0 或更高版本** 的 Android 智慧型手機。 如果你考慮購買新手機，(截至 2024 年 12 月)，建議使用 Android 14。<br/> 強烈建議使用者將 **AAPS** 的版本保持最新，以確保安全。 然而，對於無法使用 Android 11.0 或更新版本的使用者，早期版本的 **AAPS** 仍然可與舊版 Android 相容，詳情請見： [版本說明](#maintenance-android-version-aaps-version)。
+目前版本的 **AAPS**（3.4）需要使用 Google **Android 12.0 或更高版本** 的 Android 智慧型手機。 如果你正在考慮購買新手機（截至 2026 年 1 月），建議優先選擇 Android 16。<br/> 基於安全因素，強烈建議使用者保持他們的 **AAPS** 建置為最新版本。 然而，對於無法使用 Android 12.0 或更新版本的使用者，早期版本的 **AAPS** 仍然可與舊版 Android 相容，詳情請見： [版本說明](#maintenance-android-version-aaps-version)。
 
 #### 智慧型手機型號選擇
 你選購的具體型號取決於所需的功能。 你可以在 [手機頁面](../Getting-Started/Phones.md) 上找到推薦與用戶對於可用設置的反饋。
