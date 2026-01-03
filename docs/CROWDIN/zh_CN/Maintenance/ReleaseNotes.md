@@ -22,7 +22,7 @@
 
 ## Android版本与AAPS版本
 
-如果您的手机使用低于Android 11的系统，将无法使用AAPS v3.3及更高版本，因为最低要求为Android 11。
+If your smartphone uses an Android Version older than Android 12 you will not be able to use AAPS v3.4 and up as it requires at least Android 12.
 
 为允许旧版Android用户继续使用旧版AAPS，我们推送了仅修改版本验证的新版本，不包含其他改进。 不包含其他改进。
 

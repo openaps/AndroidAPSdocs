@@ -21,10 +21,13 @@
 | [Libre 1](../CompatibleCgms/Libre1.md)                 | [xDrip+](../CompatibleCgms/xDrip.md), Glimp, Tomato or Diabox. 需要发射器                                                 |
 | [Eversense](../CompatibleCgms/Eversense.md)            | [xDrip+](../CompatibleCgms/xDrip.md) or ESEL/Eversense patched App                                                   |
 | [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)  | [xDrip+](../CompatibleCgms/xDrip.md) or MM640g + 600SeriesAndroidUploader App                                        |
-| [PocTech](../CompatibleCgms/PocTech.md)                | PocTech                                                                                                              |
+| [PocTech](../CompatibleCgms/PocTech.md)                | PocTech app                                                                                                          |
+| Glunovo                                                | Glunovo App                                                                                                          |
+| Intelligo                                              | Intelligo App                                                                                                        |
 | [Ottai](../CompatibleCgms/OttaiM8.md)                  | Ottai                                                                                                                |
-| [Syai Tag](../CompatibleCgms/SyaiTagX1.md)             | Syai Tag                                                                                                             |
-| 硅基 CGM                                                 | [Juggluco](../CompatibleCgms/Juggluco.md)                                                                            |
+| [Syai](../CompatibleCgms/SyaiTagX1.md)                 | Syai Tag                                                                                                             |
+| 硅基 CGM                                                 | [Juggluco](../CompatibleCgms/Juggluco.md) or Patched SI App                                                          |
+| Sinocare                                               | Patched Sino App                                                                                                     |
 
 (GettingStarted-TrustedBGSource)=
 
@@ -43,5 +46,6 @@
 | Dexcom ONE/ONE+/Stelo |                                              xDrip+ (**Direct, Native**)                                               |
 | Libre 2/2+ (EU)       | xDrip+ (OOP2 **no calibration**), </br>Juggluco (**xDrip broadcast** without xDrip+, or **Patched Libre** with xDrip+) |
 | Libre 2/2+/3/3+       |                    Juggluco (**xDrip broadcast** without xDrip+, or **Patched Libre** with xDrip+)                     |
+| Syai                  |                                                        Syai App                                                        |
 
 **Note: xDrip+ Companion apps and Follower modes (includes 640G/Eversense) are not trusted data sources.**

@@ -23,7 +23,7 @@ The chronology of these releases is not available at the moment but as this ques
 
 ## Android version and AAPS version
 
-If your smartphone uses an Android Version older than Android 11 you will not be able to use AAPS v3.3 and up as it requires at least Android 11.
+If your smartphone uses an Android Version older than Android 12 you will not be able to use AAPS v3.4 and up as it requires at least Android 12.
 
 In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
 

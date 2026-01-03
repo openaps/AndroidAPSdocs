@@ -53,7 +53,7 @@ Znie to ako atraktívna možnosť, však? V súčasnosti však len niekoľko nad
 
 Hoci neexistuje jasná špecifikácia, ktorá by vám pomohla zistiť, či hodinky budú dobre fungovať na samostatné použitie s **AAPS**, nasledujúce parametre vám môžu pomôcť:
 
-1) Android 11 alebo novší. 2) Možnosť vypnúť štvorcový režim ciferníka, aby bol text väčší a ľahšie čitateľný. 3) Veľmi dobrá výdrž batérie. 4) Dobrý dosah Bluetooth.
+1)  Android 12 or newer. 2) Možnosť vypnúť štvorcový režim ciferníka, aby bol text väčší a ľahšie čitateľný. 3) Veľmi dobrá výdrž batérie. 4) Dobrý dosah Bluetooth.
 
 Väčšina frustrácií zo samostatných hodiniek **AAPS** pramení z interakcie s malou obrazovkou a zo skutočnosti, že súčasné rozhranie plnej aplikácie AAPS nebolo navrhnuté pre hodinky. Na úpravu nastavení **AAPS** na hodinkách môžete uprednostniť použitie stylusu kvôli obmedzenej veľkosti obrazovky a niektoré tlačidlá AAPS nemusia byť na obrazovke hodiniek viditeľné.
 

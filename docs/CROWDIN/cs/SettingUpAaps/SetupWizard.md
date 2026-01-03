@@ -24,7 +24,7 @@ If there is an error in the documentation or you have a better idea for how some
 
 Toto je pouze uvítací zpráva kterou můžete přeskočit kliknutím na tlačítko "Další":
 
-![image](../images/setup-wizard/Screenshot_20231202_125636.png)
+![Welcome](../images/setup-wizard/Wizard01.png)
 
 ## Licenční ujednání
 
@@ -34,21 +34,19 @@ If you don't understand, or can't agree to the end user license agreement please
 
 Pokud rozumíte a souhlasíte, klikněte na tlačítko "ROZUMÍM A SOUHLASÍM" a pokračujte v Průvodci nastavením:
 
-![image](../images/setup-wizard/Screenshot_20231202_125650.png)
+![EULA](../images/setup-wizard/Wizard02.png)
 
 ## Vyžadovaná oprávnění
 
 **AAPS** needs some requirements to operate correctly.
 
-In the following screens you are asked several questions you have to agree to, to get **AAPS** working. Průvodce vždy poskytne vysvětlení, z jakého důvodu jsou tato nastavení vyžadována.
+In the following screen you are asked several questions you have to agree to, to get **AAPS** working. Průvodce vždy poskytne vysvětlení, z jakého důvodu jsou tato nastavení vyžadována.
 
-Na těchto obrazovkách se zaměřujeme na poskytnutí informací o pozadí, přeložení technických termínů do běžného jazyka nebo vysvětlení důvodů.
+Na těchto obrazovkách se zaměřujeme na poskytnutí informací o pozadí, přeložení technických termínů do běžného jazyka nebo vysvětlení důvodů. Continue reading below to see each permission request.
 
-Klikněte prosím na tlačítko "DALŠÍ":
+![Permissions](../images/setup-wizard/Wizard03.png)
 
-![image](../images/setup-wizard/Screenshot_20231202_125709.png)
-
-### Notification and battery optimization
+### Oznámení
 
 Android vyžaduje zvláštní oprávnění pro aplikace, které potřebují posílat uživateli upozornění.
 
@@ -56,59 +54,35 @@ While it is a good feature to disable notifications _e.g._ from  social media ap
 
 Please click the first "ASK FOR PERMISSION" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_125721.png)
+![Oznámení](../images/setup-wizard/Wizard04.png)
 
 Vyberte aplikaci "AAPS":
 
-![image](../images/setup-wizard/Screenshot_20231202_125833.png)
+![AAPS over other apps](../images/setup-wizard/Wizard04-AndroidSettings1.png)
 
 Povolte oprávnění "Zobrazit nahoře" přesunem přepínače doprava:
 
-![image](../images/setup-wizard/Screenshot_20231202_125843.png)
+![image](../images/setup-wizard/Wizard04-AndroidSettings2.png)
 
 Přepínač v povoleném stavu by měl vypadat takto:
 
-![image](../images/setup-wizard/Screenshot_20231202_125851.png)
+![image](../images/setup-wizard/Wizard04-AndroidSettings3.png)
 
-U chytrých telefonů je pořád důležité brát ohled na spotřebu energie, protože kapacita baterií je stále docela omezená. Z toho důvodu je operační systém Android na vašem telefonu docela restriktivní ohledně povolení aplikacím fungovat a spotřebovávat čas procesoru a tedy i energii baterie.
+### Battery optimization
+
+Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
 
 However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Proto AAPS potřebuje povolení v systému Android.
 
 Toho dosáhnete potvrzením požadovaných nastavení.
 
-Click the second "ASK FOR PERMISSION" button. Vyberte prosím "Povolit":
+Click the second "ASK FOR PERMISSION" button.
 
-![image](../images/setup-wizard/Screenshot_20231202_125750.png)
+![Allow Background](../images/setup-wizard/Wizard05.png)
 
-Kliněte na tlačítko "DALŠÍ":
+Vyberte prosím "Povolit":
 
-![Screenshot_20241207-161454.png](../images/setup-wizard/Screenshot_20241207-161454.png)
-
-### Location
-
-Android propojuje využití Bluetooth komunikace s funkcemi určení polohy. Možná už jste na to narazili i u jiných aplikací. Běžně je nutné povolit služby určování polohy, pokud potřebujete přístup k Bluetooth.
-
-**AAPS** uses bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Detaily se mohou lišit u různých konfigurací.
-
-Click the first "ASK FOR PERMISSION" button:
-
-![image](../images/setup-wizard/Screenshot_20231202_125924.png)
-
-Toto je důležité. Otherwise **AAPS** can not work properly at all.
-
-Klikněte na "Během používání aplikace":
-
-![image](../images/setup-wizard/Screenshot_20231202_125939.png)
-
-Click the second "ASK FOR PERMISSION" button:
-
-![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
-
-Select "Allow all the time".
-
-Kliněte na tlačítko "DALŠÍ":
-
-![image](../images/setup-wizard/Screenshot_20231202_130002.png)
+![Allow Background](../images/setup-wizard/Wizard05-Background.png)
 
 ### Storage permission
 
@@ -116,23 +90,57 @@ Kliněte na tlačítko "DALŠÍ":
 
 Click the first "ASK FOR PERMISSION" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_130012.png)
+![Allow Background](../images/setup-wizard/Wizard06.png)
 
 Klikněte na "Povolit":
 
-![image](../images/setup-wizard/Screenshot_20231202_130022.png)
+![image](../images/setup-wizard/Wizard06-Memory.png)
 
-Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information. The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
+Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information.
 
-![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
+![AAPS Directory](../images/setup-wizard/Wizard07.png)
+
+The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
+
+![Select folder](../images/setup-wizard/Wizard07-Folder.png)
 
 Confirm that you wish to grant access to **AAPS** to the selected directory:
 
-![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
+![Select folder](../images/setup-wizard/Wizard07-Confirm.png)
 
 Kliněte na tlačítko "DALŠÍ":
 
-![image](../images/setup-wizard/Screenshot_20231202_130031.png)
+![Finish Permissions](../images/setup-wizard/Wizard08.png)
+
+### Location
+
+Android links the use of Bluetooth communication to the ability to use location services. Možná už jste na to narazili i u jiných aplikací. It's common to need location permission if you want to access Bluetooth.
+
+**AAPS** uses Bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Detaily se mohou lišit u různých konfigurací.
+
+Click the first "ASK FOR PERMISSION" button:
+
+![Allow Location](../images/setup-wizard/Wizard09.png)
+
+Toto je důležité. Otherwise **AAPS** can not work properly at all.
+
+Klikněte na "Během používání aplikace":
+
+![Location](../images/setup-wizard/Wizard09-location.png)
+
+Click the second "ASK FOR PERMISSION" button:
+
+![Location 2](../images/setup-wizard/Wizard10.png)
+
+Select "Allow all the time".
+
+![Location all the time](../images/setup-wizard/Wizard10-allthetime.png)
+
+
+
+Kliněte na tlačítko "DALŠÍ":
+
+![Location 2](../images/setup-wizard/Wizard11.png)
 
 ## Master password
 
@@ -142,46 +150,13 @@ The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD
 
 Po dvojím zadání hesla klikněte na tlačítko "DALŠÍ":
 
-![image](../images/setup-wizard/Screenshot_20231202_130122.png)
-
-
-## Odesílání do Fabric
-
-Tady můžete nastavit využití automatického reportování pádů aplikace a jejího využití.
-
-Není to povinné, ale je dobrým zvykem tato data odesílat.
-
-Pomůžete tak vývojářům lépe porozumnět tomu, jak aplikaci využíváte a k jakým dochází pádům aplikace.
-
-Vývojáři dostanou:
-
-1. Informaci o pádech aplikace, o kterých by jinak nevěděli protože v jejich prostředí a nastavení všechno funguje správně.
-1. V zaslaných datech (informace o pádu) získají informace o okolnostech pádu aplikace a jaká se využívá konfigurace.
-
-Díky tomu mohou vývojáři aplikaci postupně zdokonalovat.
-
-Povolte prosím "Odesílání do Fabric" přepnutím přepínače doprava:
-
-
-![image](../images/setup-wizard/Screenshot_20231202_130136.png)
-
-Dále můžete sami sebe identifikovat pro případ, že se na vás vývojáři budou chtít obrátit s dotazy nebo v naléhavé záležitosti:
-
-![image](../images/setup-wizard/Screenshot_20231202_130147.png)
-
-Po vyplnění kontaktních informací klikněte na tlačítko "OK". Kontaktní informace může být i vaše identifikace na Facebooku, Discordu apod. Zadejte takové kontaktní informace, které jsou nejvhodnější k vašemu kontaktování:
-
-![image](../images/setup-wizard/Screenshot_20231202_135748.png)
-
-Kliněte na tlačítko "DALŠÍ":
-
-![image](../images/setup-wizard/Screenshot_20231202_135807.png)
+![Heslo](../images/setup-wizard/Wizard12.png)
 
 ## Units (mg/dL <-> mmol/L)
 
-Vyberte prosím, jestli vaše hodnoty glykémie jsou v mg/dl nebo mmol/L a klikněte na tlačítko "DALŠÍ":
+Please select if your glucose values are in mg/dL or mmol/L and then please click the "NEXT" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_135830.png)
+![Units](../images/setup-wizard/Wizard13.png)
 
 ## Přehled
 
@@ -195,7 +170,7 @@ Váš rozsah pro analýzu Času v rozsahu se konfiguruje nezávisle na vašem re
 
 Klikněte prosím na tlačítko "DALŠÍ":
 
-![image](../images/setup-wizard/Screenshot_20231202_135853.png)
+![Range](../images/setup-wizard/Wizard14.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
 ## Synchronizace dat s reportovacím serverem a další
@@ -210,49 +185,47 @@ If you select an item here on the left tick box, on the right you can then ticki
 
 V tomto příkladu vybereme reportovací server Nightscout a zkonfigurujeme ho.
 
-```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
+```{admonition}  **NSClient** version
 :class: Note
 
 Click [here](#version3200) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**.
-
-Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout web interface, in which case, choose the first option "**NSClient**" until further notice. 
 ```
 Pro reportovací server Tidepool je nastavení ještě jednodušší, protože je třeba pouze zadání vašch přihlašovacích údajů.
 
 After making your selection, please press the cogwheel button next to the item you selected :
 
-![image](../images/setup-wizard/Screenshot_20231202_140916.png)
+![Synchronization](../images/setup-wizard/Wizard15.png)
 
 Zde nastavujete reportovací server Nightscout.
 
 Klikněte prosím na "Nightscout URL":
 
-![image](../images/setup-wizard/Screenshot_20231202_140952.png)
+![NSClient](../images/setup-wizard/Wizard16.png)
 
 Zadejte URL adresu vašho osobního Nightscout serveru. Jedná se buď o URL, které jste sami nastavili nebo jste ho dostali od vašeho poskytovatele služby Nightscout.
 
 Klikněte prosím na tlačítko "OK":
 
-![image](../images/setup-wizard/Screenshot_20231202_141051.png)
+![NSClient ULR](../images/setup-wizard/Wizard16-URL.png)
 
-Zadejte váš Nightscout přístupový token. Jedná se o přístupový token, který jste nastavili na vašem Nightscout serveru. Bez tohoto tokenu nebude přístup fungovat.
+Enter your Nightscout access token. Jedná se o přístupový token, který jste nastavili na vašem Nightscout serveru. Bez tohoto tokenu nebude přístup fungovat.
 
 If you don't have it at the moment please check the documentation for setting up the reporting server in the **AAPS** documentation.
 
-After filling in the "**NS access token**" and clicking "OK", please click on the "Synchronization" button:
+After filling in the "**Nightscout access token**" and clicking "OK", please click on the "Synchronization" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_141131.png)
+![NSClient Token](../images/setup-wizard/Wizard16-Token.png)
 
-Pokud jste v předchozích krocích Průvodce nastavením zkonfigurovali Nightscout server, vyberte "Nahrávat data do NS".
+Please select "Upload data to NS" if you already configured Nightscout in the previous steps of the Setup Wizard.
 
 If you have stored profiles on Nightscout and want to download them to **AAPS**, enable "Receive profile store":
 
-![image](../images/setup-wizard/Screenshot_20231202_141219.png)
+![Syncronization](../images/setup-wizard/Wizard16-Sync.png)
 
 
 Vraťte se na předchozí obrazovku a vyberte "Nastavení alarmů":
 
-![image](../images/setup-wizard/Screenshot_20231202_141310.png)
+![Alarmy](../images/setup-wizard/Wizard16-Alarm.png)
 
 Prozatím ponechte přepínače vypnuté. We only walked to the screen to make you familiar with possible options you might configure in the future. V tuto chvíli to není třeba dělat.
 
@@ -268,7 +241,7 @@ Pokud máte pochybnosti, ponechte vše povoleno.
 
 Vraťte se na předchozí obrazovku a vyberte "Rozšířená nastavení".
 
-![image](../images/setup-wizard/Screenshot_20231202_141326.png)
+![Connection](../images/setup-wizard/Wizard16-Connect.png)
 
 Povolte "Zaznamenávat spuštění aplikace do NS", pokud chcete mít tuto informaci zaznamenanou na serveru. Může vám to, především jako ošetřující osobě, mít vzdáleně přehled jestli a kdy byla aplikace restartována.
 
@@ -280,7 +253,7 @@ Položku "Zpomalit odesílání" ponechte vypnutou. You would only use it in unu
 
 Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Screenshot_20231202_141351.png)
+![image](../images/setup-wizard/Wizard16-App.png)
 
 ## Patient name
 
@@ -292,7 +265,7 @@ Pro jednoduchost zadejte jméno a příjmení.
 
 Klikněte na tlačítko "DALŠÍ" a přejdete k další obrazovce.
 
-![image](../images/setup-wizard/Screenshot_20231202_141445.png)
+![Název](../images/setup-wizard/Wizard17.png)
 
 ## Patient type
 
@@ -304,7 +277,7 @@ Druhý limit je koncipován obdobně, ale vztahuje se k maximálnímu očekávan
 
 Po zadání potřebných hodnot klikněte na "DALŠÍ":
 
-![image](../images/setup-wizard/Screenshot_20231202_141817.png)
+![Patient](../images/setup-wizard/Wizard18.png)
 
 ## Používaný inzulín
 
@@ -319,33 +292,33 @@ For advanced users or medical studies there is the possibility to define with "F
 
 Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 
-![image](../images/setup-wizard/Screenshot_20231202_141840.png)
+![Inzulín](../images/setup-wizard/Wizard19.png)
 
 
 ## Zdroj informací o glykémii
 
 Vyberte zdroj dat o glykémii, který používáte. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
-Jelikož je k dispozici více možností, nebudeme zde popisovat všechny. V našem příkladu uvažujeme použití senzoru Dexcom G6 a aplikace BYODA:
+Jelikož je k dispozici více možností, nebudeme zde popisovat všechny. We are using xDrip+ in our example here:
 
 
-![image](../images/setup-wizard/Screenshot_20231202_141912.png)
+![Zdroj glykémií](../images/setup-wizard/Wizard20.png)
 
 
-Pokud používáte Dexcom G6 a BYODA, povolte zobrazení patřičné záložky v horním menu zaškrtnutím čtverečku na pravé straně.
+Enable the visibility in the top level menu by clicking the check box on the right side.
 
 Po nastavení vašeho výběru klikněte na tlačítko "DALŠÍ" a přejděte k následující obrazovce:
 
-![image](../images/setup-wizard/Screenshot_20231202_141925.png)
+![Select BG](../images/setup-wizard/Wizard20-Set.png)
 
 
-If you are using Dexcom G6 with BYODA, click on the cogwheel button to access the settings for BYODA.
+Click on the cogwheel button to access the settings.
 
 Povolte "Nahrát data glykémie do NS" a "Zaznamenat výměnu senzoru do NS".
 
 Go back and press "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Screenshot_20231202_141958.png)
+![Upload](../images/setup-wizard/Wizard20-Upload.png)
 
 (setup-wizard-profile)=
 ## Profile
@@ -365,7 +338,7 @@ If a robot has an incorrect input it will fail - consistently. **AAPS** can only
 
 Klikněte na tlačítko "DALŠÍ" a přejdete k další obrazovce. Zadejte "Název profilu":
 
-![image](../images/setup-wizard/Screenshot_20231202_142027.png)
+![image](../images/setup-wizard/Wizard21.png)
 
 
 Postupem času se může stát, že budete potřebovat několik různých profilů. V tuto chvíli vytvoříme pouze jeden.
@@ -381,20 +354,20 @@ Don't use it for actually looping!
 
 Enter your [Duration of insulin Action (DIA)](#your-aaps-profile-duration-of-insulin-action) in hours. Potom klikněte na "IC":
 
-![image](../images/setup-wizard/Screenshot_20231202_142143.png)
+![DIA](../images/setup-wizard/Wizard21-Name.png)
 
 Enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values:
 
-![image](../images/setup-wizard/Screenshot_20231202_142903.png)
+![IC](../images/setup-wizard/Wizard21-IC.png)
 
 Klikněte na "ISF". Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
 
-![image](../images/setup-wizard/Screenshot_20231202_143009.png)
+![ISF](../images/setup-wizard/Wizard21-ISF.png)
 
 
 Klikněte na "BAZ". Enter your [basal values](#your-aaps-profile-basal-rates):
 
-![image](../images/setup-wizard/Screenshot_20231202_143623.png)
+![image](../images/setup-wizard/Wizard21-Basal.png)
 
 
 Klikněte na "CÍL". Zadejte vaše cílové hodnoty glykémie.
@@ -405,11 +378,11 @@ Později, s uzavřenou smyčkou, budete mít obvykle zadanou stejnou hodnotu pro
 
 Zadejte/potvrďte cílové hodnoty:
 
-![image](../images/setup-wizard/Screenshot_20231202_143709.png)
+![Target](../images/setup-wizard/Wizard22.png)
 
 Uložte profil kliknutím na tlačítko "ULOŽIT":
 
-![image](../images/setup-wizard/Screenshot_20231202_143724.png)
+![Save](../images/setup-wizard/Wizard22-Save.png)
 
 
 After saving, a new button "Activate Profile" appears.
@@ -421,7 +394,7 @@ Můžete mít několik vytvořených profilů, ale v jeden okamžik může být 
 
 Klikněte na "AKTIVOVAT PROFIL":
 
-![image](../images/setup-wizard/Screenshot_20231202_143741.png)
+![image](../images/setup-wizard/Wizard22-Activate.png)
 
 
 
@@ -438,7 +411,7 @@ Otevře se dialog přepnutí profilu. V tomto případě ponechte předvolené n
 Klikněte na tlačítko "OK":
 
 
-![image](../images/setup-wizard/Screenshot_20231202_143808.png)
+![Switch](../images/setup-wizard/Wizard22-Switch.png)
 
 
 
@@ -446,11 +419,11 @@ Otevře se potvrzovací dialog přepnutí profilu.
 
 Můžete ho potvrdit kliknutím na "OK". Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 
-![image](../images/setup-wizard/Screenshot_20231202_143822.png)
+![Ok](../images/setup-wizard/Wizard22-SwitchOk.png)
 
 Váš profil byl nyní nastaven:
 
-![image](../images/setup-wizard/Screenshot_20231202_143833.png)
+![Info](../images/setup-wizard/Wizard22-Info.png)
 
 
 ## Inzulinová pumpa
@@ -469,14 +442,14 @@ Please read the documentation for your [insulin pump](../Getting-Started/Compati
 
 Klikněte na tlačítko "DALŠÍ" a přejdete k další obrazovce.
 
-![image](../images/setup-wizard/Screenshot_20231202_143909.png)
+![Pump Warning](../images/setup-wizard/Wizard23.png)
 
 
 V tomto případě vybereme "Virtuální pumpu".
 
 Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 
-![image](../images/setup-wizard/Screenshot_20231202_143935.png)
+![Pump](../images/setup-wizard/Wizard23-Pump.png)
 
 ## APS algorithm
 
@@ -491,7 +464,7 @@ OpenAPS AMA is the most basic algorithm which does not support micro boluses to 
 
 Press the cogwheel to see the details:
 
-![image](../images/setup-wizard/Screenshot_20231202_144014.png)
+![APS](../images/setup-wizard/Wizard24.png)
 
 
 Zde si pouze přečtěte text a nic zde neměňte.
@@ -500,15 +473,7 @@ Due to the limitations which are imposed by the **Objectives** you can't use eit
 
 Go back and press "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Screenshot_20231202_144025.png)
-
-## APS mode
-
-Ponechte vybranou možnost "Otevřená smyčka".
-
-Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
-
-![image](../images/setup-wizard/Screenshot_20231202_144049.png)
+![Nastavení](../images/setup-wizard/Wizard24-Settings.png)
 
 ## Detekce citlivosti
 
@@ -516,7 +481,7 @@ Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
 Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 
-![image](../images/setup-wizard/Screenshot_20231202_144101.png)
+![Sensitivity](../images/setup-wizard/Wizard25.png)
 
 ## Začněte Cíl 1
 
@@ -528,13 +493,13 @@ Ale je to začátek.
 
 Stiskněte zelené tlačítko "START" pro spuštění cíle 1:
 
-![image](../images/setup-wizard/Screenshot_20231202_144113.png)
+![Objectives](../images/setup-wizard/Wizard26.png)
 
 Vidíte, že jste již udělali určitý pokrok, ale další oblasti je ještě třeba dokončit.
 
 Klikněte na tlačítko "DOKONČIT" a přejděte k další obrazovce.
 
-![image](../images/setup-wizard/Screenshot_20231202_144135.png)
+![Done](../images/setup-wizard/Wizard26-Started.png)
 
 You are coming to the home screen of **AAPS**.
 
@@ -544,7 +509,7 @@ K tomu došlo ve chvíli, kdy jsme přepnuli na náš nový profil.
 
 Můžete kliknout na "ODLOŽIT" a zpráva zmizí.
 
-![image](../images/setup-wizard/Screenshot_20231202_144156.png)
+![image](../images/setup-wizard/Wizard26-Done.png)
 
 If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
 
