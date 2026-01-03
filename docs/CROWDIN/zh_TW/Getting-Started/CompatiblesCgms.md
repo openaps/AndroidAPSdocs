@@ -21,17 +21,17 @@
 | [Libre 1](../CompatibleCgms/Libre1.md)               | [xDrip+](../CompatibleCgms/xDrip.md)、Glimp、Tomato 或 Diabox。 需要發射器                                        |
 | [Eversense](../CompatibleCgms/Eversense.md)          | [xDrip+](../CompatibleCgms/xDrip.md) 或 ESEL/Eversense 修補應用程式                                             |
 | [Enlite（MM640G/MM630G）](../CompatibleCgms/MM640g.md) | [xDrip+](../CompatibleCgms/xDrip.md) 或 MM640g + 600SeriesAndroidUploader 應用程式                            |
-| [PocTech](../CompatibleCgms/PocTech.md)              | PocTech app                                                                                              |
+| [PocTech](../CompatibleCgms/PocTech.md)              | PocTech App                                                                                              |
 | Glunovo                                              | Glunovo App                                                                                              |
 | Intelligo                                            | Intelligo App                                                                                            |
 | [歐態（Ottai）](../CompatibleCgms/OttaiM8.md)            | 歐態（Ottai）                                                                                                |
 | [Syai](../CompatibleCgms/SyaiTagX1.md)               | Syai Tag                                                                                                 |
-| Sibionics CGM                                        | [Juggluco](../CompatibleCgms/Juggluco.md) or Patched SI App                                              |
+| Sibionics CGM                                        | [Juggluco](../CompatibleCgms/Juggluco.md) 或 Patched SI App                                               |
 | Sinocare                                             | Patched Sino App                                                                                         |
 
 (GettingStarted-TrustedBGSource)=
 
-## 可信的血糖來源
+## 可信任的血糖來源
 
 獲得監管批准的**CGM**用於商業混合閉環系統，視為可信的**血糖**來源。
 
