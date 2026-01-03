@@ -150,46 +150,13 @@ The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD
 
 After filling in the password twice, please click the "NEXT" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_130122.png)
-
-
-## Fabric upload
-
-Here you can setup the usage of an automated crash and usage reporting service.
-
-It's not mandatory, but it is good practice to use it.
-
-It helps the developers to better understand your usage of the app, and informs them about crashes which happen.
-
-They get:
-
-1. The information that the app crashed, which they would not otherwise know since in their own set-up everything works fine and
-1. In the send data (crash information), there is information about the circumstances under which the crash happened, and what kind of configuration is being used.
-
-So it helps the developers to improve the app.
-
-Please enable the "Fabric Upload" by sliding the slider to the right:
-
-
-![image](../images/setup-wizard/Screenshot_20231202_130136.png)
-
-Furthermore you can identify yourself that just in case the developers want to reach out to you for questions or urgent concerns:
-
-![image](../images/setup-wizard/Screenshot_20231202_130147.png)
-
-After filling in your "contact information" click the "OK" button. Contact information can be your identification on Facebook, on Discord, ... Just the information you think is helpful to contact you through the best route:
-
-![image](../images/setup-wizard/Screenshot_20231202_135748.png)
-
-Click the "NEXT" button:
-
-![image](../images/setup-wizard/Screenshot_20231202_135807.png)
+![Password](../images/setup-wizard/Wizard12.png)
 
 ## Units (mg/dL <-> mmol/L)
 
-Please select if your glucose values are in mg/dl or mmol/L and then please click the "NEXT" button:
+Please select if your glucose values are in mg/dL or mmol/L and then please click the "NEXT" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_135830.png)
+![Units](../images/setup-wizard/Wizard13.png)
 
 ## Display settings
 
@@ -203,7 +170,7 @@ Your range to analyze TIR (time in range) is configured separately in your repor
 
 Please press the "NEXT" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_135853.png)
+![Range](../images/setup-wizard/Wizard14.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
 ## Synchronization with the reporting server and more
@@ -218,49 +185,47 @@ If you select an item here on the left tick box, on the right you can then ticki
 
 In this example we select Nightscout as reporting server, and will configure it.
 
-```{admonition}  Make sure to choose the correct **NSClient** version for your needs! 
+```{admonition}  **NSClient** version
 :class: Note
 
 Click [here](#version3200) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**.
-
-Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout web interface, in which case, choose the first option "**NSClient**" until further notice. 
 ```
 For Tidepool it is even simpler, as you only need your personal login information.
 
 After making your selection, please press the cogwheel button next to the item you selected :
 
-![image](../images/setup-wizard/Screenshot_20231202_140916.png)
+![Synchronization](../images/setup-wizard/Wizard15.png)
 
 Here you are configuring the Nightscout reporting server.
 
 Please click on "Nightscout URL":
 
-![image](../images/setup-wizard/Screenshot_20231202_140952.png)
+![NSClient](../images/setup-wizard/Wizard16.png)
 
 Enter you Nightscout URL which is your personal Nightscout server. It's just an URL you setup yourself, or you were given from your service provider for Nightscout.
 
 Please click the "OK" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_141051.png)
+![NSClient ULR](../images/setup-wizard/Wizard16-URL.png)
 
-Enter your nightscout access token. This is the access token for your Nightscout server you configured. Without this token, access will not work.
+Enter your Nightscout access token. This is the access token for your Nightscout server you configured. Without this token, access will not work.
 
 If you don't have it at the moment please check the documentation for setting up the reporting server in the **AAPS** documentation.
 
-After filling in the "**NS access token**" and clicking "OK", please click on the "Synchronization" button:
+After filling in the "**Nightscout access token**" and clicking "OK", please click on the "Synchronization" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_141131.png)
+![NSClient Token](../images/setup-wizard/Wizard16-Token.png)
 
-Please select "Upload data to NS" if you already configured nightscout in the previous steps of the Setup Wizard.
+Please select "Upload data to NS" if you already configured Nightscout in the previous steps of the Setup Wizard.
 
 If you have stored profiles on Nightscout and want to download them to **AAPS**, enable "Receive profile store":
 
-![image](../images/setup-wizard/Screenshot_20231202_141219.png)
+![Syncronization](../images/setup-wizard/Wizard16-Sync.png)
 
 
 Go back to the previous screen and select "Alarm option":
 
-![image](../images/setup-wizard/Screenshot_20231202_141310.png)
+![Alarms](../images/setup-wizard/Wizard16-Alarm.png)
 
 For now, leave the switches disabled. We only walked to the screen to make you familiar with possible options you might configure in the future. At the moment there is no need to do it.
 
@@ -276,7 +241,7 @@ If in doubt, just leave all enabled.
 
 Go back to the screen before and select "Advanced Settings".
 
-![image](../images/setup-wizard/Screenshot_20231202_141326.png)
+![Connection](../images/setup-wizard/Wizard16-Connect.png)
 
 Enable "Log app start to NS" if you want get this information in the reporting server. It can help you to know remotely if and when the app has been restarted, particularly as a caregiver. 
 
@@ -288,7 +253,7 @@ Leave "Slow down uploads" disabled. You would only use it in unusual circumstanc
 
 Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Screenshot_20231202_141351.png)
+![image](../images/setup-wizard/Wizard16-App.png)
 
 ## Patient name
 
@@ -300,7 +265,7 @@ To keep it simple just enter first name and last name.
 
 Press "NEXT" to go to the next screen.
 
-![image](../images/setup-wizard/Screenshot_20231202_141445.png)
+![Name](../images/setup-wizard/Wizard17.png)
 
 ## Patient type
 
@@ -312,7 +277,7 @@ The second limit is similar in concept, but relates to the max carbohydrate inta
 
 After setting these values, press "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Screenshot_20231202_141817.png)
+![Patient](../images/setup-wizard/Wizard18.png)
 
 ## Used insulin
 
@@ -327,33 +292,33 @@ For advanced users or medical studies there is the possibility to define with "F
 
 Press "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Screenshot_20231202_141840.png)
+![Insulin](../images/setup-wizard/Wizard19.png)
 
 
 ## Blood sugar source
 
 Select the BG source you are using. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
-As there are several options available, we don't explain the configuration for all of them here. We are using Dexcom G6 with the BYODA app in our example here:
+As there are several options available, we don't explain the configuration for all of them here. We are using xDrip+ in our example here:
 
 
-![image](../images/setup-wizard/Screenshot_20231202_141912.png)
+![BG Source](../images/setup-wizard/Wizard20.png)
 
 
-If you are using Dexcom G6 with BYODA, enable the visibility in the top level menu by clicking the tickbox on the right side.
+Enable the visibility in the top level menu by clicking the check box on the right side.
 
 After making your selection, press "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Screenshot_20231202_141925.png)
+![Select BG](../images/setup-wizard/Wizard20-Set.png)
 
 
-If you are using Dexcom G6 with BYODA, click on the cogwheel button to access the settings for BYODA.
+Click on the cogwheel button to access the settings.
 
 Enable the "Upload BG data to NS" and "Log sensor change to NS".
 
 Go back and press "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Screenshot_20231202_141958.png)
+![Upload](../images/setup-wizard/Wizard20-Upload.png)
 
 (setup-wizard-profile)=
 ## Profile
@@ -373,7 +338,7 @@ If a robot has an incorrect input it will fail - consistently. **AAPS** can only
 
 Press "NEXT" to go to the next screen. Enter a "profile name":
 
-![image](../images/setup-wizard/Screenshot_20231202_142027.png)
+![image](../images/setup-wizard/Wizard21.png)
 
 
 You can have several profiles in the long-term if needed. We only create one here.
@@ -389,20 +354,20 @@ Don't use it for actually looping!
 
 Enter your [Duration of insulin Action (DIA)](#your-aaps-profile-duration-of-insulin-action) in hours. Then press "IC":
 
-![image](../images/setup-wizard/Screenshot_20231202_142143.png)
+![DIA](../images/setup-wizard/Wizard21-Name.png)
 
 Enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values:
 
-![image](../images/setup-wizard/Screenshot_20231202_142903.png)
+![IC](../images/setup-wizard/Wizard21-IC.png)
 
 Press "ISF". Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
 
-![image](../images/setup-wizard/Screenshot_20231202_143009.png)
+![ISF](../images/setup-wizard/Wizard21-ISF.png)
 
 
 Press "BAS". Enter your [basal values](#your-aaps-profile-basal-rates):
 
-![image](../images/setup-wizard/Screenshot_20231202_143623.png)
+![image](../images/setup-wizard/Wizard21-Basal.png)
 
 
 Press "TARG". Enter your blood sugar target values.
@@ -413,11 +378,11 @@ Later, for closed looping, you will generally have only one value for top and bo
 
 Enter/confirm the target values: 
 
-![image](../images/setup-wizard/Screenshot_20231202_143709.png)
+![Target](../images/setup-wizard/Wizard22.png)
 
 Save the profile by clicking on "SAVE":
 
-![image](../images/setup-wizard/Screenshot_20231202_143724.png)
+![Save](../images/setup-wizard/Wizard22-Save.png)
 
 
 After saving, a new button "Activate Profile" appears.
@@ -429,7 +394,7 @@ You can have several profiles defined, but only one activated profile running at
 
 Press "Activate Profile":
 
-![image](../images/setup-wizard/Screenshot_20231202_143741.png)
+![image](../images/setup-wizard/Wizard22-Activate.png)
 
 
 
@@ -446,7 +411,7 @@ You will learn later how to use this general dialog to handle situations like il
 Press "OK":
 
 
-![image](../images/setup-wizard/Screenshot_20231202_143808.png)
+![Switch](../images/setup-wizard/Wizard22-Switch.png)
 
 
 
@@ -454,11 +419,11 @@ A confirmation dialog for the profile switch appears.
 
 You can confirm it with pressing "OK". Press "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Screenshot_20231202_143822.png)
+![Ok](../images/setup-wizard/Wizard22-SwitchOk.png)
 
 Your profile has now been set:
 
-![image](../images/setup-wizard/Screenshot_20231202_143833.png)
+![Info](../images/setup-wizard/Wizard22-Info.png)
 
 
 ## Insulin pump
@@ -477,14 +442,14 @@ Please read the documentation for your [insulin pump](../Getting-Started/Compati
 
 Press "NEXT" to go to the next screen.
 
-![image](../images/setup-wizard/Screenshot_20231202_143909.png)
+![Pump Warning](../images/setup-wizard/Wizard23.png)
 
 
 In this case we select "Virtual Pump".
 
 Press "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Screenshot_20231202_143935.png)
+![Pump](../images/setup-wizard/Wizard23-Pump.png)
 
 ## APS algorithm
 
@@ -499,7 +464,7 @@ OpenAPS AMA is the most basic algorithm which does not support micro boluses to 
 
 Press the cogwheel to see the details:
 
-![image](../images/setup-wizard/Screenshot_20231202_144014.png)
+![APS](../images/setup-wizard/Wizard24.png)
 
 
 Only read the text and change nothing here.
@@ -508,15 +473,7 @@ Due to the limitations which are imposed by the **Objectives** you can't use eit
 
 Go back and press "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Screenshot_20231202_144025.png)
-
-## APS mode
-
-Let "Open Loop" remain selected.
-
-Press "NEXT" to go to the next screen:
-
-![image](../images/setup-wizard/Screenshot_20231202_144049.png)
+![Settings](../images/setup-wizard/Wizard24-Settings.png)
 
 ## Sensitivity detection
 
@@ -524,7 +481,7 @@ Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
 Press "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Screenshot_20231202_144101.png)
+![Sensitivity](../images/setup-wizard/Wizard25.png)
 
 ## Start Objective 1
 
@@ -536,13 +493,13 @@ But this is the start.
 
 Press the green "START" to to start objective 1:
 
-![image](../images/setup-wizard/Screenshot_20231202_144113.png)
+![Objectives](../images/setup-wizard/Wizard26.png)
 
 You see that you already made some progress, but other areas are to be done.
 
 Press "FINISH" to go to the next screen.
 
-![image](../images/setup-wizard/Screenshot_20231202_144135.png)
+![Done](../images/setup-wizard/Wizard26-Started.png)
 
 You are coming to the home screen of **AAPS**.
 
@@ -552,7 +509,7 @@ This was done when we switched to our new profile.
 
 You can click "SNOOZE" and it will disappear.
 
-![image](../images/setup-wizard/Screenshot_20231202_144156.png)
+![image](../images/setup-wizard/Wizard26-Done.png)
 
 If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually. 
 
