@@ -24,7 +24,7 @@
 
 这只是欢迎信息，您可以点击“NEXT”按钮跳过：
 
-![image](../images/setup-wizard/Screenshot_20231202_125636.png)
+![欢迎](../images/setup-wizard/Wizard01.png)
 
 ## 许可协议
 
@@ -34,81 +34,55 @@
 
 如果您理解并同意，请点击“我理解并同意”按钮，并按照设置向导进行操作：
 
-![image](../images/setup-wizard/Screenshot_20231202_125650.png)
+![EULA](../images/setup-wizard/Wizard02.png)
 
 ## 所需权限
 
 **AAPS**需要满足一些要求才能正常运行。
 
-在接下来的屏幕中，您会被问到几个问题，您必须同意这些问题，才能使 **AAPS** 正常工作。 向导本身会解释它为什么要请求相关设置。
+In the following screen you are asked several questions you have to agree to, to get **AAPS** working. 向导本身会解释它为什么要请求相关设置。
 
-在这一屏幕中，我们旨在提供更多背景信息，将更多技术术语翻译成普通语言或解释原因。
+在这一屏幕中，我们旨在提供更多背景信息，将更多技术术语翻译成普通语言或解释原因。 Continue reading below to see each permission request.
 
-请点击“下一步”按钮：
+![Permissions](../images/setup-wizard/Wizard03.png)
 
-![image](../images/setup-wizard/Screenshot_20231202_125709.png)
-
-### 通知与电池优化
+### 通知
 
 如果应用程序想要向您发送通知，Android 需要特殊权限。
 
-虽然禁用社交媒体应用程序等通知是一个很好的功能，但允许 **AAPS** 发送通知至关重要。
+While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
 
-请点击第一个“申请权限”按钮：
+Please click the first "ASK FOR PERMISSION" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_125721.png)
+![通知](../images/setup-wizard/Wizard04.png)
 
 选择“AAPS”应用程序：
 
-![image](../images/setup-wizard/Screenshot_20231202_125833.png)
+![AAPS over other apps](../images/setup-wizard/Wizard04-AndroidSettings1.png)
 
 通过将滑块向右滑动来启用“在其他应用上层显示”：
 
-![image](../images/setup-wizard/Screenshot_20231202_125843.png)
+![image](../images/setup-wizard/Wizard04-AndroidSettings2.png)
 
 如果已启用，滑块应如下所示：
 
-![image](../images/setup-wizard/Screenshot_20231202_125851.png)
+![image](../images/setup-wizard/Wizard04-AndroidSettings3.png)
 
-智能手机的电池消耗仍然是一个需要考虑的问题，因为电池的性能仍然相当有限。 因此，您智能手机上的 Android 操作系统对允许应用程序运行和消耗 CPU 时间（以及因此消耗电池电量）有相当严格的限制。
+### 电池优化
+
+Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
 
 然而，**AAPS** 需要定期运行，例如，每几分钟接收一次血糖读数，然后根据您设定的参数来应用算法，以决定如何调整您的血糖。 因此，Android 必须允许它这样做。
 
 您通过确认设置来做到这一点。
 
-请点击第二个“申请权限”按钮。 请选择“允许”：
+请点击第二个“申请权限”按钮。
 
-![image](../images/setup-wizard/Screenshot_20231202_125750.png)
+![Allow Background](../images/setup-wizard/Wizard05.png)
 
-点击“下一步”按钮：
+请选择“允许”：
 
-![Screenshot_20241207-161454.png](../images/setup-wizard/Screenshot_20241207-161454.png)
-
-### 位置
-
-Android 将蓝牙通信的使用与定位服务的使用联系起来。 也许您在其他应用程序中也看到过这一点。 如果要使用蓝牙，通常需要位置权限。
-
-如果您的动态和泵直接由 **AAPS** 控制，而不是由 **AAPS** 使用的另一个应用程序控制，**AAPS** 会使用蓝牙与它们通信。 具体细节可能因设置而异。
-
-请点击第一个“申请权限”按钮：
-
-![image](../images/setup-wizard/Screenshot_20231202_125924.png)
-
-这一点很重要。 否则，**AAPS** 将根本无法正常工作。
-
-点击“在使用应用时”：
-
-![image](../images/setup-wizard/Screenshot_20231202_125939.png)
-
-请点击第二个“申请权限”按钮：
-
-![Screenshot_20241207-154117.png](../images/setup-wizard/Screenshot_20241207-154117.png)
-
-选择“始终允许”。
-
-点击“下一步”按钮：
-
-![image](../images/setup-wizard/Screenshot_20231202_130002.png)
+![Allow Background](../images/setup-wizard/Wizard05-Background.png)
 
 ### 存储权限
 
@@ -116,23 +90,57 @@ Android 将蓝牙通信的使用与定位服务的使用联系起来。 也许�
 
 请点击第一个“申请权限”按钮：
 
-![image](../images/setup-wizard/Screenshot_20231202_130012.png)
+![Allow Background](../images/setup-wizard/Wizard06.png)
 
 点击“允许”：
 
-![image](../images/setup-wizard/Screenshot_20231202_130022.png)
+![image](../images/setup-wizard/Wizard06-Memory.png)
 
-点击“AAPS目录”。 这将打开手机文件系统，您可选择AAPS存储数据的位置。 默认目录为**AAPS**，但您可使用任意专用目录。 如需可新建目录，进入后选择“使用此文件夹”：
+点击“AAPS目录”。 这将打开手机文件系统，您可选择AAPS存储数据的位置。
 
-![Screenshot_20241207-155358.png](../images/setup-wizard/Screenshot_20241207-155358.png)
+![AAPS Directory](../images/setup-wizard/Wizard07.png)
+
+默认目录为**AAPS**，但您可使用任意专用目录。 如需可新建目录，进入后选择“使用此文件夹”：
+
+![Select folder](../images/setup-wizard/Wizard07-Folder.png)
 
 确认您要授予**AAPS**访问所选目录的权限：
 
-![Screenshot_20241207-155833.png](../images/setup-wizard/Screenshot_20241207-155833.png)
+![Select folder](../images/setup-wizard/Wizard07-Confirm.png)
 
 点击“下一步”按钮：
 
-![image](../images/setup-wizard/Screenshot_20231202_130031.png)
+![Finish Permissions](../images/setup-wizard/Wizard08.png)
+
+### 位置
+
+Android links the use of Bluetooth communication to the ability to use location services. 也许您在其他应用程序中也看到过这一点。 It's common to need location permission if you want to access Bluetooth.
+
+**AAPS** uses Bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. 具体细节可能因设置而异。
+
+请点击第一个“申请权限”按钮：
+
+![Allow Location](../images/setup-wizard/Wizard09.png)
+
+这一点很重要。 否则，**AAPS** 将根本无法正常工作。
+
+点击“在使用应用时”：
+
+![位置](../images/setup-wizard/Wizard09-location.png)
+
+请点击第二个“申请权限”按钮：
+
+![Location 2](../images/setup-wizard/Wizard10.png)
+
+选择“始终允许”。
+
+![Location all the time](../images/setup-wizard/Wizard10-allthetime.png)
+
+
+
+点击“下一步”按钮：
+
+![Location 2](../images/setup-wizard/Wizard11.png)
 
 ## 主密码
 
