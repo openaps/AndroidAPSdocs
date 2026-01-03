@@ -34,31 +34,31 @@
 
 如果你暸解並同意，請點擊“我暸解並同意”按鈕並繼續設定嚮導：
 
-![EULA](../images/setup-wizard/Wizard02.png)
+![最終使用者授權合約](../images/setup-wizard/Wizard02.png)
 
 ## 必要的權限
 
 **AAPS** 需要一些權限才能正常運行。
 
-In the following screen you are asked several questions you have to agree to, to get **AAPS** working. 嚮導本身會解釋為何需要相關設置。
+接下來的畫面會詢問幾個你必須同意的問題，才能讓 **AAPS** 正常運作。 嚮導本身會解釋為何需要相關設置。
 
-在此畫面中，我們提供更多背景訊息，將更技術性的內容轉換為常用語系，或解釋其原因。 Continue reading below to see each permission request.
+在此畫面中，我們提供更多背景訊息，將更技術性的內容轉換為常用語系，或解釋其原因。 請繼續往下閱讀以查看每一項權限請求。
 
-![Permissions](../images/setup-wizard/Wizard03.png)
+![權限](../images/setup-wizard/Wizard03.png)
 
 ### 通知
 
 如果應用程式希望向你發送通知，Android需要特殊的許可。
 
-While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
+雖然停用通知很方便_例如_來自社群媒體應用程式的通知，但你必須允許**AAPS**向你發送通知。
 
-Please click the first "ASK FOR PERMISSION" button:
+請點擊第一個「請求權限」按鈕：
 
 ![通知](../images/setup-wizard/Wizard04.png)
 
 選擇“AAPS”應用程式：
 
-![AAPS over other apps](../images/setup-wizard/Wizard04-AndroidSettings1.png)
+![AAPS 顯示在其他 App 之上](../images/setup-wizard/Wizard04-AndroidSettings1.png)
 
 透過向右滑動滑塊來啟用“允許在其他應用程式上顯示”：
 
@@ -70,7 +70,7 @@ Please click the first "ASK FOR PERMISSION" button:
 
 ### 電池優化
 
-Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+由於電池效能仍相當有限，智慧型手機的電量消耗需要特別留意。 因此，你的智慧型手機上的 Android 作業系統會對允許應用程式在背景執行並耗用 CPU 時間（也就是電量）採取較嚴格的限制。
 
 然而，**AAPS** 需要定期運行，_例如_每幾分鐘接收血糖讀值，然後根據你的規範應用算法來決定如何處理你的血糖水平。 因此，必須讓Android允許一些權限。
 
@@ -78,11 +78,11 @@ Battery consumption on smartphones is a consideration, as the performance of bat
 
 點擊第二個「請求權限」按鈕。
 
-![Allow Background](../images/setup-wizard/Wizard05.png)
+![允許背景執行](../images/setup-wizard/Wizard05.png)
 
 請選擇“允許”：
 
-![Allow Background](../images/setup-wizard/Wizard05-Background.png)
+![允許背景執行](../images/setup-wizard/Wizard05-Background.png)
 
 ### 儲存權限
 
@@ -90,7 +90,7 @@ Battery consumption on smartphones is a consideration, as the performance of bat
 
 請點擊第一個「請求權限」按鈕：
 
-![Allow Background](../images/setup-wizard/Wizard06.png)
+![允許背景執行](../images/setup-wizard/Wizard06.png)
 
 點擊“允許”：
 
@@ -98,29 +98,29 @@ Battery consumption on smartphones is a consideration, as the performance of bat
 
 點擊「AAPS 目錄」。 這將開啟你手機上的檔案系統，讓你選擇希望 AAPS 儲存資訊的地方。
 
-![AAPS Directory](../images/setup-wizard/Wizard07.png)
+![AAPS 目錄](../images/setup-wizard/Wizard07.png)
 
 預設目錄是 **AAPS**，但你可以使用任何慣用的目錄。 如有必要，創建目錄，進入該目錄，並選擇「使用此資料夾」：
 
-![Select folder](../images/setup-wizard/Wizard07-Folder.png)
+![選取資料夾](../images/setup-wizard/Wizard07-Folder.png)
 
 確認你希望授予 **AAPS** 存取所選目錄的權限：
 
-![Select folder](../images/setup-wizard/Wizard07-Confirm.png)
+![選取資料夾](../images/setup-wizard/Wizard07-Confirm.png)
 
 點擊“下一步”按鈕：
 
-![Finish Permissions](../images/setup-wizard/Wizard08.png)
+![完成權限設定](../images/setup-wizard/Wizard08.png)
 
 ### 位置
 
-Android links the use of Bluetooth communication to the ability to use location services. 你可能在其他應用程式中也見過這一點。 It's common to need location permission if you want to access Bluetooth.
+Android 將藍牙通訊的使用與定位服務的權限綁定在一起。 你可能在其他應用程式中也見過這一點。 因此，要存取藍牙時通常需要定位權限。
 
-**AAPS** uses Bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. 具體細節可能因設置而異。
+**AAPS** 會使用藍牙與你的 CGM 與胰島素幫浦通訊（前提是它們由 **AAPS** 直接控制，而不是透過 **AAPS** 所使用的其他 App）。 具體細節可能因設置而異。
 
 請點擊第一個「請求權限」按鈕：
 
-![Allow Location](../images/setup-wizard/Wizard09.png)
+![允許定位權限](../images/setup-wizard/Wizard09.png)
 
 這很重要。 否則**AAPS**將完全無法正常運作。
 
@@ -130,17 +130,17 @@ Android links the use of Bluetooth communication to the ability to use location 
 
 點擊第二個「請求權限」按鈕：
 
-![Location 2](../images/setup-wizard/Wizard10.png)
+![定位 2](../images/setup-wizard/Wizard10.png)
 
 選擇「始終允許」。
 
-![Location all the time](../images/setup-wizard/Wizard10-allthetime.png)
+![始終允許定位](../images/setup-wizard/Wizard10-allthetime.png)
 
 
 
 點擊“下一步”按鈕：
 
-![Location 2](../images/setup-wizard/Wizard11.png)
+![定位 2](../images/setup-wizard/Wizard11.png)
 
 ## 主密碼
 
@@ -154,7 +154,7 @@ Android links the use of Bluetooth communication to the ability to use location 
 
 ## 單位 (mg/dL <-> mmol/L)
 
-Please select if your glucose values are in mg/dL or mmol/L and then please click the "NEXT" button:
+請選擇你的血糖數值單位為 mg/dL 或 mmol/L，然後點擊「下一步」按鈕：
 
 ![單位](../images/setup-wizard/Wizard13.png)
 
@@ -170,7 +170,7 @@ Please select if your glucose values are in mg/dL or mmol/L and then please clic
 
 請按下“下一步”按鈕：
 
-![Range](../images/setup-wizard/Wizard14.png)
+![範圍](../images/setup-wizard/Wizard14.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
 ## 與報告伺服器同步及更多設置
@@ -208,19 +208,19 @@ Please select if your glucose values are in mg/dL or mmol/L and then please clic
 
 ![NSClient ULR](../images/setup-wizard/Wizard16-URL.png)
 
-Enter your Nightscout access token. 這是你配置的Nightscout伺服器的存取權杖。 沒有這個權杖，無法存取。
+輸入你的 Nightscout 存取權杖。 這是你配置的Nightscout伺服器的存取權杖。 沒有這個權杖，無法存取。
 
 如果你目前沒有此文件，請查看**AAPS** 的文件以設置報告伺服器。
 
-After filling in the "**Nightscout access token**" and clicking "OK", please click on the "Synchronization" button:
+填入「Nightscout 存取權杖」並點選「確定」後，請再點擊「同步」按鈕：
 
-![NSClient Token](../images/setup-wizard/Wizard16-Token.png)
+![NSClient 權杖](../images/setup-wizard/Wizard16-Token.png)
 
-Please select "Upload data to NS" if you already configured Nightscout in the previous steps of the Setup Wizard.
+若你已在前述設定嚮導步驟中完成 Nightscout 設定，請勾選「上傳資料到 NS」。
 
 如果你在 Nightscout 上已存儲個人設定並希望將其下載到**AAPS**，請啟用「接收個人設定」：
 
-![Syncronization](../images/setup-wizard/Wizard16-Sync.png)
+![同步](../images/setup-wizard/Wizard16-Sync.png)
 
 
 返回上一個螢幕並選擇“警報選項”：
@@ -241,7 +241,7 @@ Please select "Upload data to NS" if you already configured Nightscout in the pr
 
 返回上一個螢幕並選擇“進階設置”。
 
-![Connection](../images/setup-wizard/Wizard16-Connect.png)
+![連線](../images/setup-wizard/Wizard16-Connect.png)
 
 如果你希望在報告伺服器中獲取應用程式啟動的相關訊息，請啟用“紀錄應用啟動到NS”。 這有助於你遠端了解應用程式是否已重新啟動，特別是作為照護者時。
 
@@ -277,7 +277,7 @@ Please select "Upload data to NS" if you already configured Nightscout in the pr
 
 設置這些值後，請按“下一步”進入下一個螢幕：
 
-![Patient](../images/setup-wizard/Wizard18.png)
+![病患](../images/setup-wizard/Wizard18.png)
 
 ## 使用的胰島素
 
@@ -299,26 +299,26 @@ Please select "Upload data to NS" if you already configured Nightscout in the pr
 
 選擇你使用的血糖來源。 請閱讀你的[血糖資料來源](../Getting-Started/CompatiblesCgms.md)的文件。
 
-由於有多個選項可用，因此我們不會在此詳細解釋所有選項的配置。 We are using xDrip+ in our example here:
+由於有多個選項可用，因此我們不會在此詳細解釋所有選項的配置。 此處的範例我們使用 xDrip+：
 
 
 ![血糖來源](../images/setup-wizard/Wizard20.png)
 
 
-Enable the visibility in the top level menu by clicking the check box on the right side.
+在頂層選單右側勾選核取方塊以啟用顯示。
 
 選擇後，按“下一步”進入下一個螢幕：
 
-![Select BG](../images/setup-wizard/Wizard20-Set.png)
+![選取血糖](../images/setup-wizard/Wizard20-Set.png)
 
 
-Click on the cogwheel button to access the settings.
+點擊齒輪按鈕以進入設定。
 
 啟用“上傳血糖資料到NS”和“紀錄傳感器變更到NS”。
 
 返回並按 "下一步" 以進入下一個螢幕：
 
-![Upload](../images/setup-wizard/Wizard20-Upload.png)
+![上傳](../images/setup-wizard/Wizard20-Upload.png)
 
 (setup-wizard-profile)=
 ## 設定檔
@@ -382,7 +382,7 @@ Click on the cogwheel button to access the settings.
 
 點擊“儲存”來儲存設定檔案：
 
-![Save](../images/setup-wizard/Wizard22-Save.png)
+![儲存](../images/setup-wizard/Wizard22-Save.png)
 
 
 保存後，將顯示一個新按鈕「啟用設定檔」。
@@ -411,7 +411,7 @@ Click on the cogwheel button to access the settings.
 按下“確定”：
 
 
-![Switch](../images/setup-wizard/Wizard22-Switch.png)
+![切換](../images/setup-wizard/Wizard22-Switch.png)
 
 
 
@@ -419,11 +419,11 @@ Click on the cogwheel button to access the settings.
 
 你可以按“確定”確認他。 按“下一步”進入下一個螢幕：
 
-![Ok](../images/setup-wizard/Wizard22-SwitchOk.png)
+![確定](../images/setup-wizard/Wizard22-SwitchOk.png)
 
 你的設定檔案現在已設置：
 
-![Info](../images/setup-wizard/Wizard22-Info.png)
+![資訊](../images/setup-wizard/Wizard22-Info.png)
 
 
 ## 胰島素幫浦
@@ -442,7 +442,7 @@ Click on the cogwheel button to access the settings.
 
 按“下一步”進入下一個螢幕。
 
-![Pump Warning](../images/setup-wizard/Wizard23.png)
+![幫浦警告](../images/setup-wizard/Wizard23.png)
 
 
 在此例中，我們選擇“虛擬幫浦”。
@@ -481,7 +481,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 按“下一步”進入下一個螢幕：
 
-![Sensitivity](../images/setup-wizard/Wizard25.png)
+![敏感度](../images/setup-wizard/Wizard25.png)
 
 ## 開始目標1
 
@@ -499,7 +499,7 @@ OpenAPS AMA 是最基本的算法，不支援微量注射來修正高值。 在�
 
 按“完成”進入下一個螢幕。
 
-![Done](../images/setup-wizard/Wizard26-Started.png)
+![完成](../images/setup-wizard/Wizard26-Started.png)
 
 你即將進入**AAPS**的主螢幕。
 
