@@ -22,3 +22,17 @@ th {
 th.head p a.reference {
   color: yellow;
 }
+
+/* Override code fence characters styling - change from red on black to black bold */
+code, .literal {
+  color: #000000 !important;
+  background-color: transparent !important;
+  font-weight: bold !important;
+}
+
+/* Ensure code blocks within pre tags also follow this style */
+pre code {
+  color: #000000 !important;
+  background-color: transparent !important;
+  font-weight: bold !important;
+}
