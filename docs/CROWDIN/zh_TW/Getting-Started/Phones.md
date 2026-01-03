@@ -1,10 +1,10 @@
 # 手機
 
-The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
+目前版本的 **AAPS**（3.4）需要使用 Google **Android 12.0 或更高版本** 的 Android 智慧型手機。 如果你正在考慮購買新智慧型手機（截至 2026 年 1 月），**建議優先選擇 Android 16**，不建議使用 Android 15。
 
 請查看 [Facebook 或 Discord](../GettingHelp/WhereCanIGetHelp.md) 獲取有關此主題的最新更新。
 
-為安全起見，強烈建議用戶保持其 **AAPS** 的版本為最新。 However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+為安全起見，強烈建議用戶保持其 **AAPS** 的版本為最新。 然而，對於無法使用 Android 12.0 或更新版本的使用者，早期版本的 **AAPS** 仍然可與舊版 Android 相容，詳情請見： [版本說明](#maintenance-android-version-aaps-version)。
 
 - [Jelly Pro 設定](../CompatiblePhones/Jelly.md)
 - [華為設定](../CompatiblePhones/Huawei.md)
