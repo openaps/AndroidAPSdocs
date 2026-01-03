@@ -11,7 +11,7 @@ Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medt
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
 ## Cannot start Omnipod with Android 16  
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this versions has fixes added to specifically address [known problems](../GettingHelp/GeneralTroubleshooting.md#cannot-start-omnipod-with-android-16) introduced in Android 16 for Omnipod. 
+- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this versions has fixes added to specifically address known problems introduced in Android 16 for Omnipod. 
 
 ---
 
