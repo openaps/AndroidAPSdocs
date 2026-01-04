@@ -84,9 +84,9 @@ Der Zeitbedarf, um **AAPS** zu erstellen, hängt von Deiner Erfahrung und Deinem
 
 Um Dir durch den Erstellungsprozess zu helfen, gibt es eigene spezifische Abschnitte:
 
-- Eine Liste von Fragen und Antworten zu häufigen Fehlern, die wahrscheinlich auftreten (unter [FAQ - Abschnitt](../UsefulLinks/FAQ.md) K);
+- List of questions and answers for frequent errors that are likely to occur in [FAQs](../UsefulLinks/FAQ.md) (Section 11);
 
-- „[AAPS erstellen](../SettingUpAaps/BuildingAaps.md)“ (Abschnitt D), der einen Unterabschnitt zur [Fehlerbehebung](../GettingHelp/GeneralTroubleshooting.md) hat.
+- „[AAPS erstellen](../SettingUpAaps/BuildingAaps.md)“ (Section 3) and [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) (Section 8).
 
 How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
 
