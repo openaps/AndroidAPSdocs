@@ -93,10 +93,10 @@
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [NSClient 血糖](../CompatibleCgms/CgmNightscoutUpload.md) - 僅當你清楚操作時，查看[血糖來源](../Getting-Started/CompatiblesCgms.md)。
 * [MM640g](../CompatibleCgms/MM640g.md)
-* Glimp - only version 4.15.57 and newer are supported
+* Glimp - 僅支援版本 4.15.57 及更新版本
 * [自建你的 Dexcom 應用程式 (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)。
 * [Poctech](../CompatibleCgms/PocTech.md)
-* Tomato App for MiaoMiao device
+* Tomato 應用程式，用於 MiaoMiao 裝置
 * [Glunovo 應用程式](https://infinovo.com/) 用於 Glunovo CGM 系統
 * [歐態（Ottai）](../CompatibleCgms/OttaiM8.md)
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
@@ -267,6 +267,10 @@
 
 * 重新發送所有資料。 如果手錶長時間未連線，你可能希望將訊息推送到手錶。
 * 直接從手機上打開手錶的設置。
+
+### 自動調整
+
+You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
 
 ### 維護
 
