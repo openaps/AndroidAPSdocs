@@ -62,10 +62,10 @@ Scroll down the next screen and tap **Create Fork**.
 
 ```{note}
 You cannot fork and you see this?</br></br>
-`**Create a new fork**`</br>
-`A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. <u>View existing forks.</u>`</br>
-`*Required fields are marked with an asterisk (*).*`</br>
-`**No available destinations to fork this repository.**`</br></br>
+**`Create a new fork`**</br>
+`A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. View existing forks.`</br>
+*`Required fields are marked with an asterisk (*).`*</br>
+**`No available destinations to fork this repository.`**</br></br>
 This means you already have an existing fork of AndroidAPS.</br>
 Make sure it's up to date and continue to Preparation Steps.
 ```
