@@ -73,10 +73,12 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 * 更新至最新的 Android Studio，或使用瀏覽器建置以獲得更好的設定流程。
 
 ### 新功能
-* 執行模式 @MilosKozak
-* 新增多款 CGM
+* Running mode @MilosKozak
+  * Show [loop status history](#AapsScreens-running-mode) in treatment tabs
+  * Show and allow changing [loop status from AAPSClient](#RemoteControl_aapsclient).<br>NB : needs the setting [NSClient > Synchronization > Receive Running mode events](#Preferences-nsclient-synchronization)
+* [New CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
 * [Site rotation](#Aapsscreens-site-rotation) support @Philoul
-* 可從 UI 停止微量注射 @MilosKozak
+* New [automation action](#automations-automation-action) : enable or disable SMBs @MilosKozak
 * Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
 
 ### Wear OS 改進
