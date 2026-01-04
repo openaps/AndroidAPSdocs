@@ -77,7 +77,7 @@ Release date: 31-12-2025
 * Running mode @MilosKozak
 * new CGMs
 * [Site rotation](#Aapsscreens-site-rotation) support @Philoul
-* ability to stop SMB from UI @MilosKozak
+* New [automation action](#automations-automation-action) : enable or disable SMBs @MilosKozak
 * Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
 
 ### Wear OS Improvements
