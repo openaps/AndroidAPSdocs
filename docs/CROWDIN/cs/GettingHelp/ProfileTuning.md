@@ -50,9 +50,9 @@ AAPS might indicate [COB=0 while you still have carbs on board](../DailyLifeWith
 
 A too **strong Profile** indicates some combination of the following:
 
-- [ISF](#insulin-sensitivity-factor-isf) number is too small
-- The [basal](#basal-rates) number is too big
-- [I:C](#insulin-to-carb-ratio-icr) number is too small
+- [ISF](#your-aaps-profile-insulin-sensitivity-factor) number is too small
+- The [basal](#your-aaps-profile-basal-rates) number is too big
+- [I:C](#your-aaps-profile-insulin-to-carbs-ratio) number is too small
 
 ## **IOB Observations**
 
