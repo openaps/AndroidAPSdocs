@@ -268,6 +268,10 @@ Prostredníctvom karty wear alebo hamburgerovej ponuky (vľavo hore na obrazovke
 * Znovu odoslať všetky údaje. Môže to byť užitočné, ak hodinky neboli nejaký čas pripojené a chcete do nich preniesť informácie.
 * Otvorte nastavenia na hodinkách priamo z telefónu.
 
+### Autotune
+
+You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+
 ### Údržba
 
 Prejdite na túto kartu pre export/import nastavení.
