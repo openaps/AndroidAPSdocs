@@ -268,6 +268,10 @@ Wenn Du Deinen Loop von der Uhr aus steuern willst (z.B. Bolus abgeben), aktivie
 * Alle Daten erneut senden. Dies kann hilfreich sein, wenn die Uhr längere Zeit außer Reichweite war und du die Informationen an die Uhr pushen willst.
 * Über das Smartphone die Einstellungen auf der Uhr öffnen.
 
+### Autotune
+
+You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+
 ### Wartung
 
 Gehe auf diesen Reiter, wenn Du Deine Einstellungen ex- oder importieren möchtest.
