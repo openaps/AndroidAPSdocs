@@ -50,9 +50,9 @@
 
 過**強的設定檔**是由以下幾項因素造成：
 
-- [ISF](#insulin-sensitivity-factor-isf) 數值太小
-- [基礎率](#basal-rates)數值太大
-- [I:C](#insulin-to-carb-ratio-icr) 數值太小
+- [ISF](#your-aaps-profile-insulin-sensitivity-factor) number is too small
+- The [basal](#your-aaps-profile-basal-rates) number is too big
+- [I:C](#your-aaps-profile-insulin-to-carbs-ratio) number is too small
 
 ## **IOB 觀察**
 
