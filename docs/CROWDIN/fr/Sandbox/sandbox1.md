@@ -26,10 +26,6 @@ Vous pouvez sauter directement d'ici à la deuxième étiquette dans ce fichier 
 
 Et vous pouvez aussi aller à la première étiquette - ["Sauter"](#this-is-a-test) ou [lien ancre nommée](#sandbox1-this-is-a-test).
 
-Et vous pouvez aussi aller à la première étiquette - ["Sauter"](./MoveTest/sandbox2.md) ou [lien ancre nommée](#sandbox2-this-is-a-test).
-
-Vous pouvez sauter directement d'ici à la première étiquette dans le fichier sandbox2.md [Lien](./MoveTest/sandbox2.md#this-is-a-test).
-
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-in-the-middle-of-nowhere)=
