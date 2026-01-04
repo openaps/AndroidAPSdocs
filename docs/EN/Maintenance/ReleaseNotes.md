@@ -79,7 +79,7 @@ Release date: 31-12-2025
   * Show and allow changing [loop status from AAPSClient](#RemoteControl_aapsclient).<br>NB : needs the setting [NSClient > Synchronization > Receive Running mode events](#Preferences-nsclient-synchronization)
 * [New CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
 * [Site rotation](#Aapsscreens-site-rotation) support @Philoul
-* ability to stop SMB from UI @MilosKozak
+* New [automation action](#automations-automation-action) : enable or disable SMBs @MilosKozak
 * Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
 
 ### Wear OS Improvements
