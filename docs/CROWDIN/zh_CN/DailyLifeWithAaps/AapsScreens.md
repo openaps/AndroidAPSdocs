@@ -9,7 +9,7 @@
 
 ## 主界面
 
-![主界面 V2.7](../images/Home2020_Homescreen.png)
+![主界面 V2.7](../images/Home_Homescreen.png)
 
 这是你打开**AAPS**后首先看到的界面，它包含了你日常所需的大部分信息。
 
@@ -58,8 +58,9 @@
 
 在[偏好设置>OpenAPS SMB设置](#Preferences-openaps-smb-settings)中启用以下选项之一或全部：
 
-* “敏感时提高目标”和/或 
-* “抵抗时降低目标” 
+     * "sensitivity raises target" and/or 
+     * "resistance lowers target" 
+    
 
 如果**AAPS**检测到抗药或敏感，目标将从配置中设置的值更改。 当更改目标血糖时，背景将变为绿色。
 
@@ -73,17 +74,18 @@
 
 BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visualization)的关系：
 
-* 绿色 = 在范围内
-* 红色 = 低于范围
-* 黄色 = 高于范围 
+     * green = in range
+     * red = below range
+     * yellow = above range 
+    
 
 ![变化值](../images/Home_Delta.png)
 
 中间的区块显示：
 
 1. 自上次**CGM**读取以来的分钟数
-2. 与最近读数的差值：Δ，与过去15分钟和40分钟平均值的差值（Δ15与Δ40）。  
-    长期差值为历史差值的平均值计算，反映平均变化情况。
+2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
+  Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
 
 (AapsScreens-loop-status)=
 
@@ -94,7 +96,7 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 右侧图标显示闭环状态：
 
 1. 绿色圆圈 = 闭环运行
-2. 绿色圆圈带虚线 = [低血糖暂停（LGS）](#objectives-objective6)
+2. Purple circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
 3. 红色圆圈 = 闭环禁用（永久不工作）
 4. 红色圆圈 = 闭环暂停（暂时停止，但会给予基础胰岛素）- 下方显示剩余时间
 5. 灰色圆圈 = 泵断开（暂时无胰岛素剂量）- 下方显示剩余时间
@@ -103,9 +105,10 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 
 短按或长按图标以打开闭环对话框，切换闭环模式（关闭、低血糖暂停、开环或禁用）、暂停/重新启用闭环或断开/重新连接泵。
 
-* 如果在闭环对话框中短按，选择后需要进行验证。
+     * If short press on Loop icon, a validation is required after selection in Loop Dialog
     
-    ![闭环状态菜单](../images/Home2020_Loop_Dialog.png)
+     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+    
 
 (aaps-screens-bg-warning-sign)=
 
@@ -121,7 +124,8 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
     :class: note
     你的闭环未运行，直到你解决此问题！
 
-![红色 BG 警告](../images/bg_warn_red.png)
+    ![Red BG warning](../images/bg_warn_red.png)
+    
 
 你需要找出为什么会收到重复的BG：
 
@@ -142,7 +146,8 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 
 黄色警告信号表示你的BG以不规则的时间间隔到达，或者缺少一些BG。 按压标志时，消息显示“使用重新计算的数据”。
 
-![黄色 BG 警告](../images/bg_warn_yellow.png)
+    ![Yellow BG warning](../images/bg_warn_yellow.png)
+    
 
 通常你不需要采取任何行动。 闭环系统将继续工作！
 
@@ -167,18 +172,18 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 ![部分D](../images/Home2020_TBR.png)
 
 1. **注射器**：活性胰岛素（IOB）——体内活性胰岛素总量  
-    当且仅当运行标准基础率且无先前推注的胰岛素残留时，IOB数值才会为零。
-    
-    * 如果最近有一段时间基础量减少，IOB可能为负数。
-    * 按压图标以查看大剂量和基础胰岛素的分配。
+  当且仅当运行标准基础率且无先前推注的胰岛素残留时，IOB数值才会为零。
+  
+  * 如果最近有一段时间基础量减少，IOB可能为负数。
+  * 按压图标以查看大剂量和基础胰岛素的分配。
 
-2. **谷物**：[体内活性碳水（COB）](../DailyLifeWithAaps/CobCalculation.md)- 你之前摄入的尚未吸收的碳水。如果需要碳水，图标将脉冲为红色（见[下方](#aaps-screens-carbs-required)）。
+2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
 
 3. **紫色线条**：当前基础率。 图标会发生变化，以反映基础率（100%时是直线）的临时变化 
-    * 按压图标以查看基础基础率和任何临时基础率（包括剩余时长）的详细信息。
+  * 按压图标以查看基础基础率和任何临时基础率（包括剩余时长）的详细信息。
 4. **箭头向上&向下**：指示动态敏感功能状态（[Autosens/自动敏感度调整](#Open-APS-features-autosens) 或 [DynamicISF/动态胰岛素敏感系数](#Open-APS-features-DynamicISF)）的启用/禁用状态。 本区域可能显示以下数值： 
-    * AS：Autosens数值。 即使禁用Autosens仍会显示（仅作参考）。 激活DynISF时也会显示，但该数值不生效。
-    * Alg：DynamicISF数值（基于总日剂量TDD）。 详见[DynamicISF](#Open-APS-features-DynamicISF)页面末行的技术说明。
+  * AS：Autosens数值。 即使禁用Autosens仍会显示（仅作参考）。 激活DynISF时也会显示，但该数值不生效。
+  * Alg：DynamicISF数值（基于总日剂量TDD）。 详见[DynamicISF](#Open-APS-features-DynamicISF)页面末行的技术说明。
 
 (aaps-screens-carbs-required)=
 
@@ -222,58 +227,66 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 
 该图表显示从动态（CGM）读取的血糖（BG）。
 
-在操作标签中输入的备注，如指尖校准和碳水条目，以及配置文件切换，都显示在这里。
-
 点击图表左上角的菜单或长按图表任意区域，即可调整显示的时间范围。 您可以选择6、12、18或24小时。
 
 绿色区域反映你的目标范围。
 
-蓝色三角形显示[SMB](#Open-APS-features-super-micro-bolus-smb)- 如果在[偏好设置>OpenAPS SMB](#Preferences-openaps-smb-settings)中启用。
+This information is also shown on this graph :
+
+* Boluses: blue triangle on the BG curve and insulin amount
+* Carbs entries: orange triangle on the BG curve and carb amount
+* Target as defined in the profile or modified by temporary target: green line
+* Profile switches: star at the top of the graph
+* Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
+* [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
 
 (AapsScreens-activate-optional-information)=
 
 #### 激活可选信息
 
-在主图上，你可以打开以下可选信息：
+Using the top right arrow, you can switch on these optional information:
 
-* 预测
-* 治疗动作（Treatments）
-* 基础率
-* 活动-胰岛素活动曲线
+* Predictions (see below)
+* Treatments : notes entered in action tab: grey, orange or red dot depending on the severity, as well as fingerstick calibrations: red dot
+* 基础率 
+  * As defined in the profile: blue dotted line at the bottom of the graph
+  * Actually delivered basal: blue plain line with blue background
+* Activity - insulin activity curve: yellow line
 
-要显示此信息，请点击主图表右侧的三角形。 对于主图表，仅提供“图表 1 2 3 4”上方的四个选项。
+To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
 
-![主图设置](../images/Home2020_MainGraphSetting.png)
+     ![Main graph setting](../images/Home2020_MainGraphSetting.png)
+    
 
 (aaps-screens-prediction-lines)=
 
 #### 预测线
 
 * **橙色**线：[COB](CobCalculation)（颜色通常用于表示COB和碳水）
-    
-    此预测线显示基于当前**配置文件**设置，假设由于碳水吸收的偏差保持恒定，你的BG（而不是COB本身！）将走向何处。 此线仅在已知COB时出现。
+  
+  此预测线显示基于当前**配置文件**设置，假设由于碳水吸收的偏差保持恒定，你的BG（而不是COB本身！）将走向何处。 此线仅在已知COB时出现。
 
 * **深蓝色**线：IOB（颜色通常用于表示IOB和胰岛素）
-    
-    这条预测线显示了仅在胰岛素影响下会发生的情况。 例如，如果你注入了一些胰岛素但没有摄入任何碳水化合物。
+  
+  这条预测线显示了仅在胰岛素影响下会发生的情况。 例如，如果你注入了一些胰岛素但没有摄入任何碳水化合物。
 
 * **浅蓝色**线：零临时基础率（如果设置临时基础率为0%，则预测的BG）
-    
-    此预测线显示如果泵停止所有胰岛素输送（0% TBR），BG轨迹线将如何变化。
-    
-    *当使用[SMB](#Config-Builder-aps)算法时，此线才会出现。*
+  
+  此预测线显示如果泵停止所有胰岛素输送（0% TBR），BG轨迹线将如何变化。
+  
+  *当使用[SMB](#Config-Builder-aps)算法时，此线才会出现。*
 
 * **深黄色**线：[未宣布的餐食（UAM，un-announced meals）](#SensitivityDetectionAndCob-sensitivity-oref1)
-    
-    未宣布的用餐意味着检测到由于用餐、肾上腺素或其他影响导致的血糖水平显著升高。 预测线类似于**橙色的COB线**，但它假设偏差将以恒定速率逐渐减小（通过延长当前的降低速率）。
-    
-    *当使用[SMB](#Config-Builder-aps)算法时，此线才会出现。*
+  
+  未宣布的用餐意味着检测到由于用餐、肾上腺素或其他影响导致的血糖水平显著升高。 预测线类似于**橙色的COB线**，但它假设偏差将以恒定速率逐渐减小（通过延长当前的降低速率）。
+  
+  *当使用[SMB](#Config-Builder-aps)算法时，此线才会出现。*
 
 * **深橙色**线：aCOB（加速碳水吸收）
-    
-    与COB相似，但假设静态的10 mg/dL/5m（-0.555 mmol/l/5m）碳水吸收率。 已弃用且用途有限。
-    
-    *当使用较旧的[AMA](#Config-Builder-aps)算法时，此线才会出现。*
+  
+  与COB相似，但假设静态的10 mg/dL/5m（-0.555 mmol/l/5m）碳水吸收率。 已弃用且用途有限。
+  
+  *当使用较旧的[AMA](#Config-Builder-aps)算法时，此线才会出现。*
 
 通常，你的实际血糖曲线会落在这些线的中间，或接近与你的情况最接近的假设线。
 
@@ -514,8 +527,8 @@ Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alterna
 Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
 
 * 此选项仅适用于Dana RS和Insight泵。 
-    * 闭环将自动停止并切换到开环模式，以运行扩展大剂量。
-    * 在使用此选项之前，请务必阅读[详细信息](../DailyLifeWithAaps/ExtendedCarbs.md)。
+  * 闭环将自动停止并切换到开环模式，以运行扩展大剂量。
+  * 在使用此选项之前，请务必阅读[详细信息](../DailyLifeWithAaps/ExtendedCarbs.md)。
 
 (aaps-screens-careportal)=
 
@@ -523,10 +536,11 @@ Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-
 
 显示信息：
 
-* 传感器使用时间&电量（百分比）
-* 胰岛素使用时间&药量（单位u）
-* 管路使用时间
-* 泵电池使用时间&电量（百分比）
+     * sensor age & level (battery percentage)
+     * insulin age & level (units)
+     * cannula age
+     * pump battery age & level (percentage
+    
 
 如果使用**低分辨率皮肤**（[首选项 > 常规 > 皮肤](#Preferences-skin)），则显示的信息将减少。
 
@@ -554,14 +568,21 @@ BG check, prime/fill, sensor insert and pump battery change are the base for the
 
 Site Rotation button opens the Site Rotation Dialog in View mode:
 
-* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes (1)
+* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
 * All Cannula change and Sensor change event since the past 45 days are available.
 * Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry (4)
+* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
 
 ![View Mode](../images/SiteRotation/ViewMode.png)
 
-* The Setting tab allow you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both. Note that it is this setting which will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"
+* The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
+
+![设置](../images/SiteRotation/Settings.png)
+
+![Settings type](../images/SiteRotation/Type.png)
+
+*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+
 * For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
 
 Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
@@ -569,11 +590,19 @@ Edit Mode allows you to select Location, Arrow, and Note associated to selected 
 * Entry type is visible on the to of Edit mode (Cannula Icon, or Sensor Icon)
 * You have to select Front or Back tab and then the Area
 * Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
+
+![Edit Mode](../images/SiteRotation/EditMode.png)
+
 * You can adjust an optional arrow with a click on little arrow icon on the top (Arrow allow you to precise sub-location, from 2 to 9, or Pod Orientation)
+
+![Position](../images/SiteRotation/EditModeSub.png)
+
 * You can also adjust comments concerning selected site
 * After confirmation, the site is recorded
 
 Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+
+![Filtering](../images/SiteRotation/Filtering.png)
 
 #### 历史浏览器
 
@@ -660,6 +689,7 @@ Filtering can be done graphically on the image, or clicking a therapy event in t
 * [临时目标](../DailyLifeWithAaps/TempTargets.md)
 * [配置文件切换](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 * Careportal：通过操作选项卡和对话框中输入的备注
+* Running mode : history of loop status
 * 用户输入：未发送到Nightscout的其他备注
 
 在最后一列中，每行的数据来源以蓝色显示。 它可以是：
@@ -689,8 +719,8 @@ Filtering can be done graphically on the image, or clicking a therapy event in t
 3. 删除包含错误碳水化合物量的条目。 （最新版本在治疗屏幕上有一个垃圾桶图标。 点击垃圾桶图标，选择要删除的行，然后再次点击垃圾桶图标以完成操作。）
 4. 通过再次检查主屏幕上的COB来确保碳水已成功删除。
 5. 如果治疗选项卡中只有一行包含碳水化合物和胰岛素，则对IOB也执行相同的操作。
-    
-    →如果碳水化合物没有按预期删除，并且您按照此处（6.）所述添加了额外的碳水化合物，那么COB将会过高，这可能导致胰岛素输送过多。
+  
+  →如果碳水化合物没有按预期删除，并且您按照此处（6.）所述添加了额外的碳水化合物，那么COB将会过高，这可能导致胰岛素输送过多。
 
 6. 通过主屏幕上的碳水按钮输入正确的碳水量，并确保设置了正确的事件时间。
 
@@ -725,11 +755,27 @@ Filtering can be done graphically on the image, or clicking a therapy event in t
 
 您可以使用行**1**上显示的**克隆**按钮来复制一个**配置文件切换**。 有关更多信息，请参阅[您的AAPS配置文件>管理您的配置文件](#your-aaps-profile-clone-profile-switch)。
 
+(AapsScreens-running-mode)=
+
+### Running mode
+
+![Running mode](../images/TreatmentsView6.png)
+
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
+
 ### Care portal
 
 ![Care portal](../images/TreatmentsView5.png)
 
 此选项卡显示了记录在Nightscout中的所有备注和警报。
+
+(aaps-screens-running-mode)=
+
+### Running mode
+
+![Running mode](../images/Screens/RunningMode.png)
+
+Running mode shows current and past AAPS running mode, it is also visible on the main graph as an upper colored bar.
 
 ## 历史浏览器
 
