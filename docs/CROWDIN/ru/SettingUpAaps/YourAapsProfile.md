@@ -1,11 +1,11 @@
 # Your AAPS profile
 
 Your **AAPS Profile** is a set of five key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates:
-* [duration of insulin action](#duration-of-insulin-action-dia) (DIA),
-* [glucose targets](#glucose-targets),
-* [basal rates](#basal-rates) (BR),
-* [insulin sensitivity factors](#insulin-sensitivity-factor-isf) (ISF) and
-* [insulin-to-carb ratios](#insulin-to-carb-ratio-icr) (IC or ICR).
+* [duration of insulin action](#your-aaps-profile-duration-of-insulin-action) (DIA),
+* [glucose targets](#profile-glucose-targets),
+* [basal rates](#your-aaps-profile-basal-rates) (BR),
+* [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
+* [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR).
 
 As part of **AAPS**’ management, users should continually assess and scrutinise the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Старайтесь выверить одну настройку прежде чем переходить к другой. Двигайтесь небольшими шагами, не вносите большие изменения сразу. Don't forget to activate the new profile after each change. Regularly [backup your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your Preferences.
 
@@ -57,7 +57,7 @@ Example of a too-short **DIA** is a **high BG** followed by **AAPS** over-correc
 
 ### How to set it
 
-The **figure below** shows an example of how the **DIA** set in an **AAPS** profile.
+The **figure below** shows an example of how the **DIA** is set in an **AAPS** profile.
 
 ![DIA](../images/Profile_DIA.png)
 
@@ -89,7 +89,7 @@ The **figure below** shows an example of how the target can be set in an **AAPS*
 
 **BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. Если вы хотите убедиться, что у вас достаточно активного инсулина (IOB) утром перед болюсом на завтрак, можно установить нижнюю цель в 4. ммоль/л с 7 до 8 утра.
 
-When In [Open Loop](#Preferences-pen-loop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#preferences-closed-loop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+When In [Open Loop](#Preferences-open-loop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#preferences-closed-loop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
 
 (your-aaps-profile-basal-rates)=
 
