@@ -424,7 +424,10 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 - Větší množství SSID lze oddělit středníkem.
 - Ponechte připojení k websocketům povolené (doporučeno).
 
+(Preferences-nsclient-synchronization)=
 ### Synchronization
+
+![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
 
 Synchronization choices will depend on the way you will want to use **AAPS**.
 
