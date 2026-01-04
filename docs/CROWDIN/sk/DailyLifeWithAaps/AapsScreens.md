@@ -500,7 +500,7 @@ For details, see the hints on [COB calculation page](#CobCalculation-detection-o
 
 ## Action tab
 
-![Actions tab](../images/Home2021_Action.png)
+![Actions tab](../images/Home_Action.png)
 
 ### Actions - section M
 
@@ -546,6 +546,33 @@ Prime/Fill allows you to record pump site and insulin cartridge change.
 Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
 
 ### Tools - section P
+
+(Aapsscreens-site-rotation)=
+
+#### Site Rotation
+
+Site Rotation button opens the Site Rotation Dialog in View mode:
+
+* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes (1)
+* All Cannula change and Sensor change event since the past 45 days are available.
+* Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
+* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry (4)
+
+![View Mode](../images/SiteRotation/ViewMode.png)
+
+* The Setting tab allow you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both. Note that it is this setting which will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"
+* For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+
+Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+
+* Entry type is visible on the to of Edit mode (Cannula Icon, or Sensor Icon)
+* You have to select Front or Back tab and then the Area
+* Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
+* You can adjust an optional arrow with a click on little arrow icon on the top (Arrow allow you to precise sub-location, from 2 to 9, or Pod Orientation)
+* You can also adjust comments concerning selected site
+* After confirmation, the site is recorded
+
+Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
 
 #### History Browser
 

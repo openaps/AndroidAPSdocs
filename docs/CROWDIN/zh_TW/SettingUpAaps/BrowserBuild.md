@@ -61,8 +61,13 @@
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-無法 fork，而你看到這個訊息？
-</br></br> **Create a new fork**</br> Fork 是資料庫的一份複製版。 Fork 一個資料庫讓你可以自由嘗試修改，而不會影響原始專案。 <u>查看現有的 fork。</u>`</br> `*必填欄位會以星號（*）標示。*`</br>** 沒有可用的目的地可以 fork 此儲存庫。**`</br></br> 這表示你已經擁有一個現有的 AndroidAPS fork。</br> 請確保它已更新至最新版本，並繼續進行準備步驟。
+You cannot fork and you see this?</br></br>
+**`建立新的 fork`**</br>
+`fork 是儲存庫的副本。 Fork 一個資料庫讓你可以自由嘗試修改，而不會影響原始專案。 檢視現有的 fork。`</br>
+*`必填欄位以星號（*）標示。`*</br>
+**`沒有可用的目標可用來 fork 此儲存庫。`**</br></br>
+這代表你已經有 AndroidAPS 的現有 fork。</br>
+請確保它是最新狀態，然後繼續進行準備步驟。
 ```
 
 ```{warning}

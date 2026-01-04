@@ -8,7 +8,7 @@
 
 當模組內有額外設定可用時，你可以點擊齒輪圖示 (B)，這將帶你進入偏好設定中的具體設定。
 
-![組態建置工具框和齒輪](../images/ConfBuild_ConfigBuilder_AAPS30.png)
+![組態建置工具框和齒輪](../images/ConfBuild_ConfigBuilder.png)
 
 (Config-Builder-tab-or-hamburger-menu)=
 
@@ -16,7 +16,7 @@
 
 透過眼睛圖示下方的選框，你可以決定如何開啟相應的程式區段。
 
-![標籤或選單](../images/ConfBuild_TabOrHH_AAPS30.png)
+![標籤或選單](../images/ConfBuild_TabOrHH.png)
 
 ```{contents}
 :backlinks: entry
@@ -93,10 +93,10 @@
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [NSClient 血糖](../CompatibleCgms/CgmNightscoutUpload.md) - 僅當你清楚操作時，查看[血糖來源](../Getting-Started/CompatiblesCgms.md)。
 * [MM640g](../CompatibleCgms/MM640g.md)
-* [Glimp](#libre1-using-glimp) - 僅支援版本 4.15.57 及更新版本
+* Glimp - 僅支援版本 4.15.57 及更新版本
 * [自建你的 Dexcom 應用程式 (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)。
 * [Poctech](../CompatibleCgms/PocTech.md)
-* [Tomato 應用程式](#libre1-using-tomato)，用於 MiaoMiao 裝置
+* Tomato 應用程式，用於 MiaoMiao 裝置
 * [Glunovo 應用程式](https://infinovo.com/) 用於 Glunovo CGM 系統
 * [歐態（Ottai）](../CompatibleCgms/OttaiM8.md)
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
@@ -267,6 +267,10 @@
 
 * 重新發送所有資料。 如果手錶長時間未連線，你可能希望將訊息推送到手錶。
 * 直接從手機上打開手錶的設置。
+
+### 自動調整
+
+You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
 
 ### 維護
 

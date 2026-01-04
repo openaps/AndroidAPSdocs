@@ -84,9 +84,9 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 为了辅助构建过程，设有专门的章节：
 
-- [常见问题解答（FAQs，第K节）](../UsefulLinks/FAQ.md)中有可能出现的常见错误及其解答列表；
+- List of questions and answers for frequent errors that are likely to occur in [FAQs](../UsefulLinks/FAQ.md) (Section 11);
 
-- “[如何安装AAPS](../SettingUpAaps/BuildingAaps.md)？” （第D节）其中包括[故障排除](../GettingHelp/GeneralTroubleshooting.md)小节。
+- “[如何安装AAPS](../SettingUpAaps/BuildingAaps.md)？” (Section 3) and [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) (Section 8).
 
 How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
 

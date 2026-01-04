@@ -29,7 +29,7 @@
 - **將<u>關閉</u>所有[自動化](../DailyLifeWithAAPS/Automations.md)功能**
 - **關閉<u></u> [DynISF](#Open-APS-features-DynamicISF)、[AutoISF](../AdvancedOptions/DevBranch.md)、[AutoSens](#Open-APS-features-autosens)**，以避免它們嘗試調整你的設定檔。
 - 測試期間請勿進行手動操作（手動注射、臨時目標等…）：讓系統僅使用**設定檔**中的設定。
-- 就[附加圖表](#AapsScreens-section-g-additional-graphs)而言：在圖表 1 中，使用活性胰島素（IOB）、活性碳水化合物（COB）（以及敏感度變化）。 在圖表 2 中，使用偏差與血糖影響。 需要尋求建議時，截圖請一併包含上述圖表。
+- 就[額外圖表](#AapsScreens-section-g-additional-graphs)而言：在圖表 1 中，使用活性胰島素（IOB）、活性碳水化合物（COB）（以及敏感度變化）。 在圖表 2 中，使用偏差與血糖影響。 需要尋求建議時，截圖請一併包含上述圖表。
 - COB=0[*](#profiletuning-cob-zero)
 - 不進行任何體能活動。
 - 沒有壓力。
@@ -50,9 +50,9 @@
 
 過**強的設定檔**是由以下幾項因素造成：
 
-- [ISF](#insulin-sensitivity-factor-isf) 數值太小
-- [基礎率](#basal-rates)數值太大
-- [I:C](#insulin-to-carb-ratio-icr) 數值太小
+- [ISF](#your-aaps-profile-insulin-sensitivity-factor) 數值太小
+- [基礎率](#your-aaps-profile-basal-rates)數值太大
+- [I:C](#your-aaps-profile-insulin-to-carbs-ratio) 數值太小
 
 ## **IOB 觀察**
 

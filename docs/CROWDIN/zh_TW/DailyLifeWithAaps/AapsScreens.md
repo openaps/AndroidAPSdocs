@@ -9,7 +9,7 @@
 
 ## 主畫面
 
-![主畫面 V2.7](../images/Home2020_Homescreen.png)
+![主畫面 V2.7](../images/Home_Homescreen.png)
 
 這是你打開**AAPS**後會看到的第一個螢幕，裡面包含了你每天所需的大部分資訊。
 
@@ -501,7 +501,7 @@ Libre 使用者的特殊注意事項：
 
 ## 手動操作標籤
 
-![操作標籤](../images/Home2021_Action.png)
+![操作標籤](../images/Home_Action.png)
 
 ### 操作 - M 區
 
@@ -547,6 +547,48 @@ Libre 使用者的特殊注意事項：
 O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和問題是特別的筆記形式。
 
 ### 工具 - P 區
+
+(Aapsscreens-site-rotation)=
+
+#### 部位輪替
+
+部位輪替按鈕會在檢視模式開啟部位輪替對話方塊：
+
+* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
+* 可查看過去 45 天內所有套管更換與傳感器更換事件。
+* 點選某個部位區域，或點選下方清單中的一筆項目，以篩選為僅顯示所選區域的項目。 所選區域會以淺綠色標示。
+* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
+
+![檢視模式](../images/SiteRotation/ViewMode.png)
+
+* The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
+
+![設定](../images/SiteRotation/Settings.png)
+
+![Settings type](../images/SiteRotation/Type.png)
+
+*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+
+* 若直接從幫浦進行部位更換，你需要開啟檢視模式並編輯新項目，以選擇位置與箭頭。
+
+編輯模式可為所選項目設定位置、箭頭與備註：
+
+* 項目類型會顯示在編輯模式頂端（套管圖示或傳感器圖示）。
+* 你需要先選擇「前側」或「後側」分頁，接著選取區域。
+* 當選定某個部位（會以綠色反白）後，下方清單會顯示過去 45 天在此部位的所有項目。
+
+![Edit Mode](../images/SiteRotation/EditMode.png)
+
+* 可點擊上方的小箭頭圖示來設定可選的箭頭（箭頭可更精確標示子位置，從 2 到 9，或 Pod 方向）。
+
+![Position](../images/SiteRotation/EditModeSub.png)
+
+* 你也可以調整與所選部位相關的備註。
+* 確認後會儲存該部位。
+
+可在圖像上直接操作進行篩選，或點擊清單中的治療事件 要移除篩選，只需在圖像上點擊任何部位區域之外的地方。
+
+![Filtering](../images/SiteRotation/Filtering.png)
 
 #### 歷史瀏覽器
 
@@ -703,6 +745,14 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 ![照護入口](../images/TreatmentsView5.png)
 
 此標籤顯示所有在 Nightscout 中紀錄的筆記和警報。
+
+(aaps-screens-running-mode)=
+
+### Running mode
+
+![Running mode](../images/Screens/RunningMode.png)
+
+Running mode shows current and past AAPS running mode, it is also visible on the main graph as an upper colored bar.
 
 ## 歷史瀏覽器
 

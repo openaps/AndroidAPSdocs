@@ -84,9 +84,9 @@ Systém **AAPS** je kompatibilný iba s určitými typmi inzulínových púmp, s
 
 Na uľahčenie procesu vytvorenia aplikácie existujú samostatné sekcie:
 
-- Zoznam otázok a odpovedí na časté chyby, ktoré sa pravdepodobne vyskytnú v časti [FAQs (Sekcia](../UsefulLinks/FAQ.md) K);
+- List of questions and answers for frequent errors that are likely to occur in [FAQs](../UsefulLinks/FAQ.md) (Section 11);
 
-- [Ako nainštalovať AAPS](../SettingUpAaps/BuildingAaps.md)? (Sekcia D), ktorá obsahuje podsekciu [Riešenie problémov](../GettingHelp/GeneralTroubleshooting.md).
+- [Ako nainštalovať AAPS](../SettingUpAaps/BuildingAaps.md)? (Section 3) and [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) (Section 8).
 
 Ako dlho trvá dosiahnutie uzavretej slučky, závisí od jednotlivca, ale približný časový harmonogram pre dosiahnutie plnej slučky s AAPS nájdete ([tu](#preparing-how-long-will-it-take))
 

@@ -14,7 +14,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 - On pod activation, **AAPS** will find and connect to a new DASH pod.
 - Expected range from phone: 5-10 meters (YMMV).
 
-(#omnipod-dash-constraints)=
+(omnipod-dash-constraints)=
 
 ## Omnipod DASH known AAPS constraints/issues
 - Android 16 requires **AAPS** version 3.3.2.1 or later.

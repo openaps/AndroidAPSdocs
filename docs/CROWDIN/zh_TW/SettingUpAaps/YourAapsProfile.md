@@ -1,11 +1,11 @@
 # 你的 AAPS 配置
 
 你的 **AAPS 配置** 是一組五個關鍵參數，定義了 **AAPS** 根據你的傳感器血糖水平如何輸送胰島素。 這些是 **AAPS** 的主要參數。 隨著你逐步完成 **目標**，你將解鎖其他可修改的參數（如 SMB 設置），但這些功能的性能依賴於你的基礎 **配置** 是否正確。 該 **配置** 包含：
-* [胰島素作用持續時間](#duration-of-insulin-action-dia)（DIA）、
-* [血糖目標](#glucose-targets)、
-* [基礎率](#basal-rates)（BR）、
-* [胰島素敏感性因子](#insulin-sensitivity-factor-isf)（ISF）及
-* [胰島素與碳水化合物比率](#insulin-to-carb-ratio-icr)（IC 或 ICR）。
+* [胰島素作用持續時間](#your-aaps-profile-duration-of-insulin-action)（DIA）、
+* [血糖目標](#profile-glucose-targets)、
+* [基礎率](#your-aaps-profile-basal-rates)（BR）、
+* [胰島素敏感性因子](#your-aaps-profile-insulin-sensitivity-factor)（ISF）及
+* [胰島素與碳水化合物比率](#your-aaps-profile-insulin-to-carbs-ratio)（IC 或 ICR）。
 
 作為 **AAPS** 管理的一部分，用戶應不斷評估和檢查其 **配置** 設定的準確性。 建議按照此處所提供的順序進行設定。 在更改另一個設置之前，請確保先調整好一個設置。 逐步進行調整，而不是一次性做出大幅更改。 記得在每次更改後啟用新配置。 定期 [備份你的 **配置**](#YourAapsProfile_Profile-backup) 設置，通過匯出你的偏好設定。
 
@@ -57,7 +57,7 @@
 
 ### 如何設定
 
-下面的**圖示**顯示了在**AAPS**設定檔中設置的**DIA**範例。
+**下圖**顯示在 **AAPS** 設定檔中設定 **DIA** 的範例。
 
 ![DIA](../images/Profile_DIA.png)
 
@@ -89,7 +89,7 @@
 
 **血糖**目標根據你的個人偏好和需求進行設置。 例如，如果你擔心夜間低血糖，可以將目標稍微提高到晚上 9 點到早上 7 點的 117 mg/dL (6.5 mmol/L)。 如果你希望在早餐前有充足的胰島素儲備，你可以將早上 7 點到 8 點的目標設定為較低的 81 mg/dL（4.5 mmol/L）。
 
-在[開放循環](#Preferences-pen-loop)中，特別是在進行[第一個目標](../SettingUpAaps/CompletingTheObjectives.md)時，使用寬範圍目標是個好選擇，在你學習 **AAPS** 的行為並調整你的**設定檔**時。<br/> 在[封閉循環](#preferences-closed-loop)中（開始於**[目標 6](#objectives-objective6)**），建議減少範圍，直到你為每個時段確定一個單一目標（_低_ 目標 = _高_ 目標），以確保**AAPS**對**血糖**的波動快速做出反應。
+在 [開放循環](#Preferences-open-loop) 模式下，特別是在完成 [前幾個目標](../SettingUpAaps/CompletingTheObjectives.md) 的過程中，使用較寬的目標範圍是一個不錯的選擇，有助於你一邊學習 **AAPS** 的行為，一邊調整你的 **設定檔**。<br/> 在 [封閉循環](#preferences-closed-loop) 模式下（從 **[目標 6](#objectives-objective6)** 開始），建議縮小範圍，直到一天中的每個時段都只有單一目標（_低_ 目標 = _高_ 目標），以確保 **AAPS** 能及時對 **血糖** 波動作出反應。
 
 (your-aaps-profile-basal-rates)=
 

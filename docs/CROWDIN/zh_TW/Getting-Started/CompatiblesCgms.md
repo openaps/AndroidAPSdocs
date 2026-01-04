@@ -13,21 +13,21 @@
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | [Dexcom G7](../CompatibleCgms/DexcomG7.md)           | [xDrip+](../CompatibleCgms/xDrip.md) 或 [Juggluco](../CompatibleCgms/Juggluco.md)                         |
 | [Dexcom ONE+ 和 Stelo](../CompatibleCgms/DexcomG7.md) | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
-| [Dexcom G6](../CompatibleCgms/DexcomG6.md)           | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
+| [Dexcom G6](../CompatibleCgms/DexcomG6.md)           | BYODA 或 [xDrip+](../CompatibleCgms/xDrip.md)                                                             |
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)          | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
-| [Dexcom G5](../CompatibleCgms/DexcomG5.md)           | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
 | [Libre 3/3+](../CompatibleCgms/Libre3.md)            | [Juggluco](../CompatibleCgms/Juggluco.md)（可搭配或不搭配 xDrip+ 使用）                                             |
 | [Libre 2/2+](../CompatibleCgms/Libre2.md)            | [xDrip+](../CompatibleCgms/xDrip.md)（僅限歐盟）或 [Juggluco](../CompatibleCgms/Juggluco.md)（不論是否與 xDrip+ 一起使用） |
-| [Libre 1](../CompatibleCgms/Libre1.md)               | [xDrip+](../CompatibleCgms/xDrip.md)、Glimp、Tomato 或 Diabox。 需要發射器                                        |
+| [Libre 1](../CompatibleCgms/Libre1.md)               | [xDrip+](../CompatibleCgms/xDrip.md) 或 Diabox。 需要發射器                                                     |
 | [Eversense](../CompatibleCgms/Eversense.md)          | [xDrip+](../CompatibleCgms/xDrip.md) 或 ESEL/Eversense 修補應用程式                                             |
 | [Enlite（MM640G/MM630G）](../CompatibleCgms/MM640g.md) | [xDrip+](../CompatibleCgms/xDrip.md) 或 MM640g + 600SeriesAndroidUploader 應用程式                            |
 | [PocTech](../CompatibleCgms/PocTech.md)              | PocTech App                                                                                              |
 | Glunovo                                              | Glunovo App                                                                                              |
 | Intelligo                                            | Intelligo App                                                                                            |
-| [歐態（Ottai）](../CompatibleCgms/OttaiM8.md)            | 歐態（Ottai）                                                                                                |
-| [Syai](../CompatibleCgms/SyaiTagX1.md)               | Syai Tag                                                                                                 |
+| [歐態（Ottai）](../CompatibleCgms/OttaiM8.md)            | Ottai App                                                                                                |
+| [Syai](../CompatibleCgms/SyaiTagX1.md)               | Syai Tag App                                                                                             |
 | Sibionics CGM                                        | [Juggluco](../CompatibleCgms/Juggluco.md) 或 Patched SI App                                               |
 | Sinocare                                             | Patched Sino App                                                                                         |
+| Caresens、Simplera、iCan、LinX、SmartGuide               | xDrip+ Companion App                                                                                     |
 
 (GettingStarted-TrustedBGSource)=
 

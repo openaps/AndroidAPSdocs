@@ -8,7 +8,7 @@ The **Config Builder** is the tab where you turn the modular features on and off
 
 When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
 
-![Konfigürasyon ayarları kutusu ve dişli çark](../images/ConfBuild_ConfigBuilder_AAPS30.png)
+![Konfigürasyon ayarları kutusu ve dişli çark](../images/ConfBuild_ConfigBuilder.png)
 
 (Config-Builder-tab-or-hamburger-menu)=
 
@@ -16,7 +16,7 @@ When there are additional settings available within the module, you can click on
 
 Göz simgesinin altındaki onay kutusu ile ilgili program bölümünün nasıl açılacağına karar verebilirsiniz.
 
-![Sekme veya hamburger menüsü](../images/ConfBuild_TabOrHH_AAPS30.png)
+![Sekme veya hamburger menüsü](../images/ConfBuild_TabOrHH.png)
 
 ```{contents}
 :backlinks: entry
@@ -93,10 +93,10 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
 * [MM640g](../CompatibleCgms/MM640g.md)
-* [Glimp](#libre1-using-glimp) - only version 4.15.57 and newer are supported
+* Glimp - only version 4.15.57 and newer are supported
 * [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 * [Poctech](../CompatibleCgms/PocTech.md)
-* [Tomato App](#libre1-using-tomato) for MiaoMiao device
+* Tomato App for MiaoMiao device
 * [Glunovo App](https://infinovo.com/) for Glunovo CGM system
 * [Ottai](../CompatibleCgms/OttaiM8.md)
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)

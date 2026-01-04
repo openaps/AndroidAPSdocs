@@ -1,8 +1,20 @@
 # 文档更新与变更
 
+## 2025年1月
+
+- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
+- CGM list update. Dexcom G5, Tomato, Glimp removed.
+- [Site rotation UI](#Aapsscreens-site-rotation)
+- Run Mode
+- Autotune
+
+## December 2025
+
+- [Profile tuning](../GettingHelp/ProfileTuning.md) from @robrub
+
 ## October 2025
 
-- DiaKEM and BYODA: new installs don't work after servers upgrade @psonnera
+- DiaKEM: new installs don't work after servers upgrade @psonnera
 - Removed Libre 2 patched app (obsolete): doesn't work with new sensors @psonnera
 - Reworked Omnipod Dash page @XiTatiON
 
@@ -28,7 +40,7 @@
 ## 2024年11月
 
 - [您的AAPS个人资料](../SettingUpAaps/YourAapsProfile.md)更新 @emilise
-- [Wear OS智能手表](../WearOS/BuildingAapsWearOS.md)内容重组 @psonnerat
+- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnerat
 
 ## 2024年10月
 

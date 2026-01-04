@@ -9,7 +9,7 @@
 
 ## Die Startseite
 
-![Startbildschirm v2.7](../images/Home2020_Homescreen.png)
+![Startbildschirm v2.7](../images/Home_Homescreen.png)
 
 Wenn Du **AAPS** öffnest, ist dies die erste Ansicht. Sie enthält die meisten der täglich benötigten Informationen.
 
@@ -501,7 +501,7 @@ Für mehr Details, schaue bitte in den Hinweisen auf der Seite [Berechnung der a
 
 ## Aktionen Tab
 
-![Aktionen Tab](../images/Home2021_Action.png)
+![Aktionen Tab](../images/Home_Action.png)
 
 ### Aktionen - Abschnitt M
 
@@ -547,6 +547,48 @@ Mit dem Button 'Katheterwechsel' kannst Du sowohl einen Katheter- (Schlauch) als
 Abschnitt O spiegelt das Careportal aus Nightscout wider. Bewegung, Ankündigung und Frage sind daher spezielle Formen der Notiz.
 
 ### Tools - Abschnitt P
+
+(Aapsscreens-site-rotation)=
+
+#### Site Rotation
+
+Site Rotation button opens the Site Rotation Dialog in View mode:
+
+* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
+* All Cannula change and Sensor change event since the past 45 days are available.
+* Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
+* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
+
+![View Mode](../images/SiteRotation/ViewMode.png)
+
+* The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
+
+![Einstellungen](../images/SiteRotation/Settings.png)
+
+![Settings type](../images/SiteRotation/Type.png)
+
+*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+
+* For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+
+Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+
+* Entry type is visible on the to of Edit mode (Cannula Icon, or Sensor Icon)
+* You have to select Front or Back tab and then the Area
+* Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
+
+![Edit Mode](../images/SiteRotation/EditMode.png)
+
+* You can adjust an optional arrow with a click on little arrow icon on the top (Arrow allow you to precise sub-location, from 2 to 9, or Pod Orientation)
+
+![Position](../images/SiteRotation/EditModeSub.png)
+
+* You can also adjust comments concerning selected site
+* After confirmation, the site is recorded
+
+Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+
+![Filtering](../images/SiteRotation/Filtering.png)
 
 #### Historie
 
@@ -703,6 +745,14 @@ Mit dem Befehl **Klonen** in Zeile **1** kannst Du eine Kopie eines **Profilwech
 ![Careportal (Behandlungen)](../images/TreatmentsView5.png)
 
 Auf dieser Registerkarte werden alle Notizen und Alarme angezeigt, die von Nightscout empfangen wurden.
+
+(aaps-screens-running-mode)=
+
+### Running mode
+
+![Running mode](../images/Screens/RunningMode.png)
+
+Running mode shows current and past AAPS running mode, it is also visible on the main graph as an upper colored bar.
 
 ## Historie
 

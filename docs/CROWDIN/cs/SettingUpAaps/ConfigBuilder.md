@@ -8,7 +8,7 @@ The **Config Builder** is the tab where you turn the modular features on and off
 
 When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
 
-![Tlačítko konfigurace a ozubené kolo](../images/ConfBuild_ConfigBuilder_AAPS30.png)
+![Tlačítko konfigurace a ozubené kolo](../images/ConfBuild_ConfigBuilder.png)
 
 (Config-Builder-tab-or-hamburger-menu)=
 
@@ -16,7 +16,7 @@ When there are additional settings available within the module, you can click on
 
 Pomocí zaškrtávacího políčka pod symbolem oka se můžete rozhodnout, jak chcete otevírat odpovídající sekci programu.
 
-![Záložka nebo hamburger menu](../images/ConfBuild_TabOrHH_AAPS30.png)
+![Záložka nebo hamburger menu](../images/ConfBuild_TabOrHH.png)
 
 ```{contents}
 :backlinks: entry
@@ -93,10 +93,10 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
 * [MM640g](../CompatibleCgms/MM640g.md)
-* [Glimp](#libre1-using-glimp) - only version 4.15.57 and newer are supported
+* Glimp - only version 4.15.57 and newer are supported
 * [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 * [Poctech](../CompatibleCgms/PocTech.md)
-* [Tomato App](#libre1-using-tomato) for MiaoMiao device
+* Tomato App for MiaoMiao device
 * [Glunovo App](https://infinovo.com/) for Glunovo CGM system
 * [Ottai](../CompatibleCgms/OttaiM8.md)
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
@@ -267,6 +267,10 @@ Through Wear tab or hamburger menu (top left of screen, if tab is not displayed)
 
 * Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
+
+### Autotune
+
+You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
 
 ### Údržba
 

@@ -40,7 +40,7 @@ Nightscout是一個開源軟體。 任何人都可以使用免費或付費服務
 (SettingUpTheReportingServer-tidepool)=
 ## Tidepool
 
-Tidepool 自**AAPS** 版本 3.2 開始提供，該版本於 2023 年底發布。
+Tidepool 自 **AAPS** 3.2 版（於 2023 年底發佈）起即可使用。
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  

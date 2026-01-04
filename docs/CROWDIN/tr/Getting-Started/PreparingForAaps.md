@@ -84,9 +84,9 @@ The time to build the **AAPS** app  depends on your level of expertise and techn
 
 To aid the build process there are dedicated sections:
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../UsefulLinks/FAQ.md) K);
+- List of questions and answers for frequent errors that are likely to occur in [FAQs](../UsefulLinks/FAQ.md) (Section 11);
 
-- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) Subsection.
+- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section 3) and [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) (Section 8).
 
 How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
 

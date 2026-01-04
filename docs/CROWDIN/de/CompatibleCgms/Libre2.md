@@ -6,7 +6,7 @@ Der Freestyle Libre 2 Sensor ist mittlerweile (auch mit der offiziellen App) ein
 
 Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an out of process algorithm app. Glukosewerte können - wie beim [Libre 1](./Libre1.md) - alle 5 Minuten empfangen werden.
 
-Prüfe im Vorfeld, ob der Bluetooth-Transmitter und die notwendige App, sowohl mit Deinem Sensor als auch mit xDrip+ kompatibel ist (ältere und auch aktuelle Blucons sind nicht kompatibel, Miaomiao 1 benötigt Firmwareversion 39 und Miaomiao 2 Firmwareversion 7).
+Check the bridge and app you want to use are compatible with your sensor and xDrip+.
 
 The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings as with the original reader. AAPS glättet Libre2 Daten über 10-25 Minuten, um Sprünge zu vermeiden. Mehr Details findest Du im Abschnitt [Glättung der Werte & Rohdaten](#libre2-value-smoothing-raw-values).  OOP übergibt alle fünf Minuten einen Wert. Dieser entspricht dem Durchschnitt der letzten fünf Minuten. Daher sind die BZ-Werte nicht so glatt, stimmen aber mit dem Lesegerät überein und folgen den "echten" BZ-Entwicklungen schneller. Wenn Du mit OOP loppen möchtest, aktiviere alle Glättungseinstellungen in xDrip+.
 

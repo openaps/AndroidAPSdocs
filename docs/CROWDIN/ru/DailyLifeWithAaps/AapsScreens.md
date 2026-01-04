@@ -9,7 +9,7 @@
 
 ## Главный экран
 
-![Главный экран V2.7](../images/Home2020_Homescreen.png)
+![Главный экран V2.7](../images/Home_Homescreen.png)
 
 Это первый экран, который виден при открытии приложения **AAPS**. Он отображает почти всю информацию, требующуюся повседневно.
 
@@ -501,7 +501,7 @@ See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
 
 ## Вкладка "Действия"
 
-![Вкладка "Действия"](../images/Home2021_Action.png)
+![Вкладка "Действия"](../images/Home_Action.png)
 
 ### Действия-раздел M
 
@@ -547,6 +547,48 @@ BG check, prime/fill, sensor insert and pump battery change are the base for the
 Раздел O отражает состояние портала терапии сайта Nightscout. Так что упражнения, объявление и вопрос являются специальными формами заметок.
 
 ### Инструменты - раздел P
+
+(Aapsscreens-site-rotation)=
+
+#### Site Rotation
+
+Site Rotation button opens the Site Rotation Dialog in View mode:
+
+* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
+* All Cannula change and Sensor change event since the past 45 days are available.
+* Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
+* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
+
+![View Mode](../images/SiteRotation/ViewMode.png)
+
+* The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
+
+![Настройки](../images/SiteRotation/Settings.png)
+
+![Settings type](../images/SiteRotation/Type.png)
+
+*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+
+* For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+
+Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+
+* Entry type is visible on the to of Edit mode (Cannula Icon, or Sensor Icon)
+* You have to select Front or Back tab and then the Area
+* Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
+
+![Edit Mode](../images/SiteRotation/EditMode.png)
+
+* You can adjust an optional arrow with a click on little arrow icon on the top (Arrow allow you to precise sub-location, from 2 to 9, or Pod Orientation)
+
+![Position](../images/SiteRotation/EditModeSub.png)
+
+* You can also adjust comments concerning selected site
+* After confirmation, the site is recorded
+
+Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+
+![Filtering](../images/SiteRotation/Filtering.png)
 
 #### Просмотр журнала
 
@@ -703,6 +745,14 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 ![Портал терапии](../images/TreatmentsView5.png)
 
 Эта вкладка показывает все заметки и оповещения, записанные в Nightscout.
+
+(aaps-screens-running-mode)=
+
+### Running mode
+
+![Running mode](../images/Screens/RunningMode.png)
+
+Running mode shows current and past AAPS running mode, it is also visible on the main graph as an upper colored bar.
 
 ## Просмотр журнала
 

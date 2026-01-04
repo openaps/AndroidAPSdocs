@@ -8,7 +8,7 @@ Im **Konfiguration**-Tab kannst Du modular einzelne Funktionen ein- und ausschal
 
 Falls es innerhalb einer Funktion zusätzliche Einstellmöglichkeiten geben sollte, können diese über das Zahnrad (B) aufgerufen werden.
 
-![Konfigurations-Generator - Checkboxen und Zahnrad](../images/ConfBuild_ConfigBuilder_AAPS30.png)
+![Konfigurations-Generator - Checkboxen und Zahnrad](../images/ConfBuild_ConfigBuilder.png)
 
 (Config-Builder-tab-or-hamburger-menu)=
 
@@ -16,7 +16,7 @@ Falls es innerhalb einer Funktion zusätzliche Einstellmöglichkeiten geben soll
 
 Mit der Checkbox unter dem Augensymbol entscheidest Du, wie Du den entsprechenden Programmabschnitt öffnest.
 
-![Registerkarte (Tab) oder Hamburger-Menü](../images/ConfBuild_TabOrHH_AAPS30.png)
+![Registerkarte (Tab) oder Hamburger-Menü](../images/ConfBuild_TabOrHH.png)
 
 ```{contents}
 :backlinks: entry
@@ -93,10 +93,10 @@ Wähle hier die von Dir genutzte Glukosewert-Quelle aus. Weitergehende Informati
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [Nightscout-Client BZ](../CompatibleCgms/CgmNightscoutUpload.md) - nur wenn Du genau weißt, was Du tust, siehe [BZ-Quelle](../Getting-Started/CompatiblesCgms.md).
 * [MM640g](../CompatibleCgms/MM640g.md)
-* [Glimp](#libre1-using-glimp) - es werden nur Versionen 4.15.57 und neuer unterstützt
+* Glimp - only version 4.15.57 and newer are supported
 * [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 * [Poctech](../CompatibleCgms/PocTech.md)
-* [Tomato (MiaoMiao)](#libre1-using-tomato) für MiaoMiao-Geräte
+* Tomato App for MiaoMiao device
 * [Glunovo-App](https://infinovo.com/) für ein Glunovo-CGM-System
 * [Ottai](../CompatibleCgms/OttaiM8.md)
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
@@ -267,6 +267,10 @@ Wenn Du Deinen Loop von der Uhr aus steuern willst (z.B. Bolus abgeben), aktivie
 
 * Alle Daten erneut senden. Dies kann hilfreich sein, wenn die Uhr längere Zeit außer Reichweite war und du die Informationen an die Uhr pushen willst.
 * Über das Smartphone die Einstellungen auf der Uhr öffnen.
+
+### Autotune
+
+You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
 
 ### Wartung
 

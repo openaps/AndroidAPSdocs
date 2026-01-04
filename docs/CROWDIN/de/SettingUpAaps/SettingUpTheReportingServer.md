@@ -40,7 +40,7 @@ Sobald Du Deine Nightscout-Seite installiert und lauffähig hast, gehe zur [Nigh
 (SettingUpTheReportingServer-tidepool)=
 ## Tidepool
 
-Tidepool ist erst seit der Ende 2023 erschienenen Version 3.2 in **AAPS** verfügbar.
+Tidepool has been available in **AAPS** since version 3.2 which was released in late 2023.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  

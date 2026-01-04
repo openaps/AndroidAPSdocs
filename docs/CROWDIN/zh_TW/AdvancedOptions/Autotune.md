@@ -1,10 +1,18 @@
-# 如何使用 Autotune 外掛（僅限開發者）
+# How to use Autotune plugin
 
 有關 Autotune 算法的文檔可以在 [OpenAPS 文檔](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) 中找到。
 
 Autotune 外掛是在 AAPS 中實作的 OpenAPS 自動調整算法。
 
-**目前 Autotune 外掛僅在[dev 分支](../AdvancedOptions/DevBranch.md)和工程模式下可用。**
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+
+## Show the Autotune plugin
+
+Create an empty file named `enable_autotune` in the `extra` subfolder of your phone AAPS folder.
+
+![Enable Autotune](../images/Autotune/Enable.png)
+
+Autotune will then display in Config Builder after you restart AAPS.
 
 ![自動調整外掛](../images/Autotune/Autotune_1.png)
 

@@ -73,9 +73,9 @@ Release date: 31-12-2025
 ### New features
 * Running mode @MilosKozak
 * new CGMs
-* Site rotation support @Philoul
+* [Site rotation](#Aapsscreens-site-rotation) support @Philoul
 * ability to stop SMB from UI @MilosKozak
-* Syai CGM is trusted source and supports advanced filtering @MilosKozak
+* Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
 
 ### Wear OS Improvements
 * dramatically reduced battery usage @MilosKozak

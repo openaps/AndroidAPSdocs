@@ -129,7 +129,7 @@ AAPS的“中枢”是您自己构建的 **应用程序**。 构建过程有详�
 | 泵    | [丹纳 I](../CompatiblePumps/DanaRS-Insulin-Pump.md)              | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
 | 泵    | [丹纳 RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)             | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
 | 泵    | [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)             | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
-| 泵    | [Omnipod (Dash)](../CompatiblePumps/OmnipodDASH.md) (2)        | ![可用](../images/available.png)    | ![可用](../images/available.png)                  | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
+| 泵    | [Omnipod (Dash)](../CompatiblePumps/OmnipodDASH.md)            | ![可用](../images/available.png)    | ![可用](../images/available.png)                  | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
 | 泵    | [Omnipod (Eros)](../CompatiblePumps/OmnipodEros.md)            | ![可用](../images/available.png)    | ![可用](../images/available.png)                  | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
 | 泵    | [Diaconn G8](../CompatiblePumps/DiaconnG8.md)                  | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
 | 泵    | [EOPatch 2](../CompatiblePumps/EOPatch2.md)                    | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
@@ -139,12 +139,11 @@ AAPS的“中枢”是您自己构建的 **应用程序**。 构建过程有详�
 | 泵    | [罗氏 Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)     | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
 | 泵    | [老版美敦力（Older Medtronic）](../CompatiblePumps/MedtronicPump.md)  | ![可用](../images/available.png)    | ![可用](../images/available.png)                  | ![可用](../images/available.png)                        | ![可用](../images/available.png)                 |
 | 泵    | [Equil 5.3](../CompatiblePumps/Equil5.3.md)                    | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
-| CGM  | [德康 G7](../CompatibleCgms/DexcomG7.md)                         | ![可用](../images/available.png)    | ![可用](../images/available.png)                  | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
+| CGM  | [Dexcom G7/One+](../CompatibleCgms/DexcomG7.md)                | ![可用](../images/available.png)    | ![可用](../images/available.png)                  | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
 | CGM  | [德康 One](../CompatibleCgms/DexcomG6.md)                        | ![可用](../images/available.png)    | ![可用](../images/available.png)                  | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
 | CGM  | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                     | ![可用](../images/available.png)    | ![可用](../images/available.png)                  | ![可用](../images/available.png)                        | ![可用](../images/available.png)                 |
-| CGM  | [Dexcom G5](../CompatibleCgms/DexcomG5.md)                     | ![可用](../images/available.png)    | ![可用](../images/available.png)                  | ![可用](../images/available.png)                        | ![可用](../images/available.png)                 |
-| CGM  | [Libre 3](../CompatibleCgms/Libre3.md)                         | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
-| CGM  | [Libre 2](../CompatibleCgms/Libre2.md)                         | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
+| CGM  | [Libre 3/3+](../CompatibleCgms/Libre3.md)                      | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
+| CGM  | [Libre 2/2+](../CompatibleCgms/Libre2.md)                      | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
 | CGM  | [Libre 1](../CompatibleCgms/Libre1.md)                         | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
 | CGM  | [Eversense](../CompatibleCgms/Eversense.md)                    | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
 | CGM  | [MM640g/MM630g](../CompatibleCgms/MM640g.md)                   | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
@@ -155,7 +154,6 @@ AAPS的“中枢”是您自己构建的 **应用程序**。 构建过程有详�
 
 _表格说明：_
 1. **Rig**是一种随身携带的小型计算机，不带显示器。 一种支持的设备类型是英特尔 Edison + Explorer Board，另一种是 Raspberry Pi + Explorer HAT 或 Adafruit RFM69HCW Bonnet。 由于以前的手机无法运行所需的算法，第一批 APS 就是基于这种配置。 用这些系统的已经越来越少，因为手机上的设置变得更容易，而且手机还带有显示屏。 英特尔公司也停止了英特尔 Edison 的销售。 优秀的 OpenAPS 算法 **oref0** 和 **oref1** 现已纳入 AAPS 和 iAPS。
-2. Omnipod Dash 是 Omnipod Eros 的后续产品。 它支持蓝牙通信，无需 rig 网关即可在 Omnipod 和手机之间进行通信。 如果可以选择，我们建议使用 Dash 而不是 Eros。
 
 
 2022年，多名国际专家共同起草的 《开源自动胰岛素输注系统：国际专家共识与保健专业人员实践指南》（国际专家共识）发表在了[_《柳叶刀：糖尿病与内分泌学》_, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) 上（糖尿病与内分泌学领域最牛X的期刊），其中就包含了开源闭环系统的指南。 不管是对您还是您的糖尿病医生，都很有必要了解和总结不同开源混合闭环系统之间的主要技术差异。
@@ -165,7 +163,7 @@ _表格说明：_
 
 ## AAPS是否使用人工智能或任何机器学习算法？
 
-目前的 **AAPS** 主版本（3.3.1.3）没有使用任何机器学习算法、多参数胰岛素反应模型或人工智能。 因此，该系统在运作方式上是公开和透明的，不仅专家能看懂，临床医生和病人也能弄明白。 这也意味着，诸如生活状态转换的时候可能需要大幅调整胰岛素计量(比如从紧张的工作日转到轻松的假期)， 您可以立即把 **AAPS**切换到一个更弱/更强的配置文件。 如果是那些能“自动学习”的系统，类似的调整可以自动执行，但相比之下需要等一段时间才能调整胰岛素剂量（那些系统需要等指标的趋势发生变化才能做出调整）。
+The current master version of **AAPS** (3.4) does not have any machine learning algorithms, multiple-parameter insulin response models, or artificial intelligence. 因此，该系统在运作方式上是公开和透明的，不仅专家能看懂，临床医生和病人也能弄明白。 这也意味着，诸如生活状态转换的时候可能需要大幅调整胰岛素计量(比如从紧张的工作日转到轻松的假期)， 您可以立即把 **AAPS**切换到一个更弱/更强的配置文件。 如果是那些能“自动学习”的系统，类似的调整可以自动执行，但相比之下需要等一段时间才能调整胰岛素剂量（那些系统需要等指标的趋势发生变化才能做出调整）。
 
 ## 哪种系统适合我或我的家人？
 
@@ -178,7 +176,7 @@ _表格说明：_
 ## 像AAPS这样的开源系统安全吗？
 
 ### AAPS 系统的安全性
-更准确的问题可能是 "与我目前使用的胰岛素输注系统**相比**，它是否更安全？"因为没有一种胰岛素输注方法是零风险的。 **AAPS** 有许多制衡机制。 有篇[论文](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)研究了 **AAPS** 在计算机模拟装置中的使用情况，这是主观地检验该系统安全性和有效性的有效方法。 更宏观地来看，全世界有过万人正在使用开源自动胰岛素输注系统，而且这一数量还在全球范围内持续增加。
+更准确的问题可能是 "与我目前使用的胰岛素输注系统**相比**，它是否更安全？"因为没有一种胰岛素输注方法是零风险的。 **AAPS** 有许多制衡机制。 有篇[论文](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)研究了 **AAPS** 在计算机模拟装置中的使用情况，这是主观地检验该系统安全性和有效性的有效方法。 More generally, it is estimated that over 30,000 individuals worldwide are using open-source automated-insulin delivery systems, and uptake continues to increase globally.
 
 任何使用无线电通信的电子设备都可能被黑客攻击，即便是非闭环的胰岛素泵也不例外。 目前，我们没有发现有人试图通过入侵糖尿病医疗设备来伤天害理的情况。 然而，有多种方法可以预防这种风险：
 
@@ -220,7 +218,7 @@ _表格说明：_
 
 若临床团队对使用 **AAPS** 闭环持保留态度，以下论点可能会有所帮助：
 
-a) **AAPS** 系统是由患者及其护理人员设计的。 核心设计遵循最高安全标准并深度整合患者真实体验。 目前全球约有 **10,000** 名 AAPS 用户。 因此，在您诊所的患者群体中，很可能还有其他患者在使用 DIY 闭环（无论是否公开）。
+a) **AAPS** 系统是由患者及其护理人员设计的。 核心设计遵循最高安全标准并深度整合患者真实体验。 There are currently around **20,000** AAPS users worldwide. 因此，在您诊所的患者群体中，很可能还有其他患者在使用 DIY 闭环（无论是否公开）。
 
 b) 国际权威医学杂志《柳叶刀》（[The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_）最近发表的专家共识指南证实，DIY 闭环可以**安全****有效**提升糖尿病控制水平（包括入框率）。 在[《自然》](https://doi.org/10.1038/d41586-023-02648-9)_(3)_等权威期刊持续刊载DIY社区技术进展的专题报道。
 
@@ -323,7 +321,7 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 上表假定用户可使用连续血糖监测仪和胰岛素泵。
 
-* **AAPS**的所有数据均可通过数据共享平台（如Nightscout）提供给医护人员，包括动态血糖仪（CGM）数据实时监测​、胰岛素输注（insulin delivery）追踪​、碳水化合物登记（carbohydrate entries）记录、预测算法及参数设置（predictions and settings）可视化等。 Nightscout生成的日报和周报包含血糖控制状态量化分析与个体化行为观察因素的精准数据，可助力医疗团队优化与1型糖尿病患者的临床讨论。
+* **AAPS**的所有数据均可通过数据共享平台（如Nightscout）提供给医护人员，包括动态血糖仪（CGM）数据实时监测​、胰岛素输注（insulin delivery）追踪​、碳水化合物登记（carbohydrate entries）记录、预测算法及参数设置（predictions and settings）可视化等。 Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioral considerations.
 
 (accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
 
@@ -333,7 +331,7 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 盲人可以使用 AAPS。 在安卓设备上，操作系统有一个名为 TalkBack 的程序。 作为操作系统的一部分，它允许通过语音输出进行屏幕定位。 通过使用TalkBack功能，您可以在无需视力辅助的情况下操作您的智能手机和AAPS。
 
 #### 构建 AAPS App：
-作为用户，您将在 Android Studio 中构建 AAPS 应用程序。 许多人为此使用 Microsoft Windows，其中有类似 TalkBack 的屏幕阅读器。 由于 Android Studio 是 Java 应用程序，因此必须在控制面板中启用 "Java Access Bridge "组件。 否则，在Android Studio中，电脑的屏幕阅读器将无法发声。
+作为用户，您将在 Android Studio 中构建 AAPS 应用程序。 Many people use Microsoft Windows for this purpose, where there is the screen reader analogous to TalkBack. 由于 Android Studio 是 Java 应用程序，因此必须在控制面板中启用 "Java Access Bridge "组件。 否则，在Android Studio中，电脑的屏幕阅读器将无法发声。
 
 具体方法取决于操作系统，下面介绍两种方法：
 
