@@ -15,18 +15,18 @@
 
 2) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ClinicalTrials.gov National Library of Medicine, Clinical Trial [Feasibility and Safety Study of the Automated Insulin Delivery Closed Loop System Pancreas4ALL (ASAP)](https://www.clinicaltrials.gov/study/NCT04835350?term=Feasibility%20and%20Safety%20Study%20of%20the%20Automated%20Insulin%20Delivery%20Closed%20Loop%20System%20Pancreas4ALL%20(ASAP)&rank=1)
 
-Для успешного применения автономного замкнутого цикла **FCL** от пользователя требуется:
+Для успешного применения автономного замкнутого цикла **FCL** от пользователей требуется:
 
-- check whether they met the **FCL** requisites;
-- set up **Automations** that are tailored for  their daily management’s needs; and
-- fine tune and adjust the **AAPS** settings (notably **Automations**).
+- проверить, соответствуют ли они требованиям **FCL**;
+- настроить автоматзации **Automations**, которые будут адаптированы к потребностям повседневного контроля; и
+- выполнить более тонкую настройку и подгонку всех параметров **AAPS** (особенно **Автоматизаций**).
 
 
-## General considerations why (not to) move from HCL to FCL
+## Общие соображения, почему (не) переходить с неполного на автономный замкнутый цикл
 
-**FCL** is not for everyone:
+Автономный замкнутый цикл (**FCL**) не для всех:
 
-- Some **FCL** users achieve TIR (70-180) around 90% and HbA1c under 6%, however other users prefer tighter control. Notably, minimising values over 140 mg/dl at diets with rapid carbs probably requires pre-bolusing.
+- Многие пользователи автономного цикла добиваются 90% времени в целевом диапазоне (4--! 0), а HbA1c - менее 6%, однако некоторые предпочитают более жесткий контроль. Следует отметить, что снижение показателей выше 140 мг/дл (7,7 ммоль/л) при приёме быстрых углеводов, вероятно, требует предварительного введения болюса.
 - **AAPS** tuning can be challenging. It is not for those users who feel overwhelmed AAPS.  You will need to dedicate a few weeks in order to adjust and fine tune your **FCL**. Investing such time can yield better results and **BG** control.
 - Meal management may become easier, however exercise can still be challenging in **FCL**. Most of us like to limit sports snacks in an attempt to control body weight.
 - Difficulties still remain to establish a **FCL** for kids (discussed below).
