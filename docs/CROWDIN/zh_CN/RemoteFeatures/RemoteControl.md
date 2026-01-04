@@ -1,8 +1,8 @@
 # 远程控制AAPS
 有四种高度有效的工具可用于远程管理**AAPS**：
 
-1) [短信命令](RemoteControl_SMS-Commands)（跟随者手机可以是Android或iOS）， 2) [AAPSClient](RemoteControl_aapsclient)（跟随者手机是Android）， 3) [Nightscout](RemoteControl_nightscout)（Android、iOS或其他计算机/设备），  
-4) [智能手表](RemoteControl_smartwatches)（Android）。
+1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower phone is Android) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device).  
+4) [Smartwatches](#RemoteControl_smartwatches) (Android)
 
 前三种大多适用于护理人员/家长，但智能手表对护理人员/家长以及成人糖尿病患者本身都非常有用。
 
@@ -19,7 +19,7 @@
 
 **AAPSClient**在外观上非常类似于**AAPS**本身，为护理人员提供了远程操作AAPS命令的标签：
 
-![NSCLIENT_ 2024-05-17 134512 ](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
+![NSCLIENT_ 2024-05-17 134512 ](../images/remote_control_and_following/AAPSClient_main_view.png)
 
 ### 关于AAPSClient与AAPSClient2
 
@@ -94,15 +94,17 @@
 
 ### AAPSClient的功能包括：
 
-| 标签/汉堡菜单           | 功能                                                                                                                                   |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| **操作（Action）** 标签 | - 配置文件切换<br>- 临时目标<br>- 血糖检查<br>- 动态探头插入<br>- 备注<br>- 锻炼<br>- 宣布<br>- 问题?<br>- 历史浏览器 |
-| **食物** 标签         |                                                                                                                                      |
-| **治疗** 标签         | - 检查已执行完毕的治疗，包括推注和输入的碳水化合物                                                                                                           |
-| **运维** 标签         | - 导出和导入设置                                                                                                                            |
-| **配置文件** 标签       | - 创建新配置文件<br>- 配置文件切换                                                                                                          |
+| 标签/汉堡菜单           | 功能                                                                                                                                                                                                                                   |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **操作（Action）** 标签 | - Profile Switch <br>- Loop Status change <br>- Temp Target<br>- BG Check<br>- CGM Sensor Insert<br>- Note<br>- Exercise<br>- Announcement<br>- Question?<br>- History Browser |
+| **食物** 标签         |                                                                                                                                                                                                                                      |
+| **治疗** 标签         | - 检查已执行完毕的治疗，包括推注和输入的碳水化合物                                                                                                                                                                                                           |
+| **运维** 标签         | - 导出和导入设置                                                                                                                                                                                                                            |
+| **配置文件** 标签       | - 创建新配置文件<br>- 配置文件切换                                                                                                                                                                                                          |
 
-**AAPSClient**允许护理人员通过移动或互联网网络远程进行许多在**AAPS**中允许的调整（不包括胰岛素推注）。 **AAPSClient**的主要优点是护理人员/家长可以快速、轻松地使用它来远程控制**AAPS**。 __AAPSClient__在发送需要认证的命令时，_可以_比输入SMS命令快得多。 在**AAPSClient**上输入的命令会上传到Nightscout。
+**AAPSClient**允许护理人员通过移动或互联网网络远程进行许多在**AAPS**中允许的调整（不包括胰岛素推注）。 **AAPSClient**的主要优点是护理人员/家长可以快速、轻松地使用它来远程控制**AAPS**。 __AAPSClient__在发送需要认证的命令时，_可以_比输入SMS命令快得多。 在**AAPSClient**上输入的命令会上传到Nightscout。 In order for the actions taken in **AAPSClient** to be actually actioned in **AAPS**, the NSClient settings must allow to receive such orders. See the [Synchronization section of NSClient preferences](#Preferences-nsclient-synchronization).
+
+
 
 只有同步功能运行良好（_即_您没有看到不需要的数据更改，如TT、TBR等的自我修改），才建议通过**AAPSClient**进行远程控制。 请参阅[2.8.1.1版本的发布说明](#important-hints-2-8-1-1)以获取更多详细信息。
 
