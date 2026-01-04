@@ -86,7 +86,7 @@ The blocks in the middle shows:
 
 On the right side, an icon shows the loop status:
 1. Green circle = loop running
-2. Green circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
+2. Purple circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
 3. Red circle = loop disabled (not working permanently)
 4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
 5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
@@ -209,22 +209,28 @@ Depending on the pump you use, you may not have all of these icons.
 
 The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
 
-Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here.
-
 Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
 
 The green area reflects your target range.
 
-Blue triangles show [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings).
+This information is also shown on this graph : 
+* Boluses: blue triangle on the BG curve and insulin amount
+* Carbs entries: orange triangle on the BG curve and carb amount
+* Target as defined in the profile or modified by temporary target: green line
+* Profile switches: star at the top of the graph
+* Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
+* [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
 
 (AapsScreens-activate-optional-information)=
 #### Activate optional information
 
-On the main graph, you can switch on these optional information:
-* Predictions
-* Treatments
+Using the top right arrow, you can switch on these optional information:
+* Predictions (see below)
+* Treatments : notes entered in action tab: grey, orange or red dot depending on the severity, as well as fingerstick calibrations: red dot
 * Basals
-* Activity - insulin activity curve
+  * As defined in the profile: blue dotted line at the bottom of the graph
+  * Actually delivered basal: blue plain line with blue background
+* Activity - insulin activity curve: yellow line
 
 To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph   1 2 3 4" are available.
 
@@ -640,6 +646,7 @@ In this view, you can view and alter the history of the following treatments:
 * [Temporary target](../DailyLifeWithAaps/TempTargets.md)
 * [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 * Careportal: notes entered through action tab and notes in dialogues
+* Running mode : history of loop status
 * User entry: other notes that are not sent to Nightscout
 
 In the last column, the data source for each line is displayed in blue. It can be :
@@ -701,6 +708,13 @@ The history of profile switches can be seen here. You may see multiple entries e
 Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
 
 You can use the **Clone** button shown on line **1** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
+
+(AapsScreens-running-mode)=
+### Running mode
+
+![Running mode](../images/TreatmentsView6.png)
+
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
 
 ### Care portal
 
