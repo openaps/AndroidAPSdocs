@@ -62,12 +62,12 @@
 
 ```{note}
 You cannot fork and you see this?</br></br>
-**`Create a new fork`**</br>
-`A fork is a copy of a repository. Fork 一個資料庫讓你可以自由嘗試修改，而不會影響原始專案。 View existing forks.`</br>
-*`Required fields are marked with an asterisk (*).`*</br>
-**`No available destinations to fork this repository.`**</br></br>
-This means you already have an existing fork of AndroidAPS.</br>
-Make sure it's up to date and continue to Preparation Steps.
+**`建立新的 fork`**</br>
+`fork 是儲存庫的副本。 Fork 一個資料庫讓你可以自由嘗試修改，而不會影響原始專案。 檢視現有的 fork。`</br>
+*`必填欄位以星號（*）標示。`*</br>
+**`沒有可用的目標可用來 fork 此儲存庫。`**</br></br>
+這代表你已經有 AndroidAPS 的現有 fork。</br>
+請確保它是最新狀態，然後繼續進行準備步驟。
 ```
 
 ```{warning}
