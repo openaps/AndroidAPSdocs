@@ -14,7 +14,7 @@
 - Pod 啟動時，**AAPS**將尋找並連接到新的DASH Pod 。
 - 與手機的預期連線距離：5–10 公尺（實際情況可能不同）。
 
-(#omnipod-dash-constraints)=
+(omnipod-dash-constraints)=
 
 ## Omnipod DASH 已知的 AAPS 限制／問題
 - Android 16 需要 AAPS 版本 3.3.2.1 或更新版本。
