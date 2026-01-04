@@ -75,9 +75,9 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ### 新功能
 * 執行模式 @MilosKozak
 * 新增多款 CGM
-* 支援部位輪換 @Philoul
+* [Site rotation](#Aapsscreens-site-rotation) support @Philoul
 * 可從 UI 停止微量注射 @MilosKozak
-* Syai CGM 為受信任的來源並支援進階過濾 @MilosKozak
+* Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
 
 ### Wear OS 改進
 * 大幅降低電量消耗 @MilosKozak
