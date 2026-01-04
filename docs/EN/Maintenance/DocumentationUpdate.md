@@ -6,7 +6,7 @@
 - CGM list update. Dexcom G5, Tomato, Glimp removed.
 - [Site rotation UI](#Aapsscreens-site-rotation)
 - [Running mode](#AapsScreens-running-mode)
-- Autotune
+- [Autotune](../AdvancedOptions/Autotune.md)
 
 ## December 2025
 
