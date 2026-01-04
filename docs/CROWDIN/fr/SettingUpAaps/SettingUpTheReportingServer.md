@@ -40,7 +40,7 @@ Once you have your Nightscout instance up and running, see [Nightscout configura
 (SettingUpTheReportingServer-tidepool)=
 ## Tidepool
 
-Tidepool has only been available in **AAPS** since version 3.2 which was released in late 2023.
+Tidepool has been available in **AAPS** since version 3.2 which was released in late 2023.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  
