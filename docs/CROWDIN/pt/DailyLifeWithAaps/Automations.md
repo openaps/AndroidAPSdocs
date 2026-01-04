@@ -178,9 +178,10 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 * Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
 * Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
 
+(automations-automation-action)=
 ## Acção
 
-![Automation Triggers](../images/automation_actions.png)
+![Automation Actions](../images/automation_actions.png)
 
 **Actions:** start **Temp Target**
 
