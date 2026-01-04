@@ -625,6 +625,7 @@ In this view, you can view and alter the history of the following treatments:
 * [Temporary target](../DailyLifeWithAaps/TempTargets.md)
 * [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 * Careportal: notes entered through action tab and notes in dialogues
+* Running mode : history of loop status
 * User entry: other notes that are not sent to Nightscout
 
 In the last column, the data source for each line is displayed in blue. It can be :
@@ -686,6 +687,13 @@ The history of profile switches can be seen here. You may see multiple entries e
 Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
 
 You can use the **Clone** button shown on line **1** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
+
+(AapsScreens-running-mode)=
+### Running mode
+
+![Running mode](../images/TreatmentsView6.png)
+
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
 
 ### Care portal
 
