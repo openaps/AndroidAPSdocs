@@ -1,10 +1,18 @@
-# Как использовать модуль Autotune (только для ветки разработчиков (dev))
+# How to use Autotune plugin
 
 Documentation about Autotune algorithm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
 Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
-**В настоящее время модуль Autotune доступен только в [ветке dev](../AdvancedOptions/DevBranch.md) и в режиме разработчика.**
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+
+## Show the Autotune plugin
+
+Create an empty file named `enable_autotune` in the `extra` subfolder of your phone AAPS folder.
+
+![Enable Autotune](../images/Autotune/Enable.png)
+
+Autotune will then display in Config Builder after you restart AAPS.
 
 ![Модуль autotune](../images/Autotune/Autotune_1.png)
 
