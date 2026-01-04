@@ -1,11 +1,11 @@
 # 你的AAPS配置文件
 
 **你的AAPS配置文件**是一组五个关键参数，定义了AAPS如何根据你的传感器血糖水平来输注胰岛素。 这些参数是AAPS运行的基础。 随着你完成各个**目标**，你将解锁额外的可修改参数（如SMB设置），但这些功能的性能依赖于你的底层**配置文件**是否正确。 配置文件包括：
-* [胰岛素作用时间](#duration-of-insulin-action-dia) (DIA),
-* [目标血糖](#glucose-targets)，
-* [基础率](#basal-rates) (BR),
-* [胰岛素敏感因子](#insulin-sensitivity-factor-isf)（ISF）
-* [碳水系数](#insulin-to-carb-ratio-icr)（IC或ICR）
+* [duration of insulin action](#your-aaps-profile-duration-of-insulin-action) (DIA),
+* [glucose targets](#profile-glucose-targets),
+* [basal rates](#your-aaps-profile-basal-rates) (BR),
+* [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
+* [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR).
 
 作为AAPS管理的一部分，用户应不断评估和审查其**配置文件**设置的准确性。 建议按照这里提供的顺序调整设置。 在更改另一个设置之前，确保一个设置正确。 以小步骤进行更改，而不是一次性进行大幅更改。 不要忘记在每次更改后激活新的配置文件。 通过导出你的偏好设置来定期[备份你的**配置文件**](#YourAapsProfile_Profile-backup)设置。
 
@@ -57,7 +57,7 @@
 
 ### 如何设置
 
-**下图**显示了在**AAPS**配置文件中设置**DIA**的示例。
+The **figure below** shows an example of how the **DIA** is set in an **AAPS** profile.
 
 ![DIA](../images/Profile_DIA.png)
 
@@ -89,7 +89,7 @@
 
 **血糖（Blood Glucose，BG）**目标是根据您的个人偏好和需求来设定的。 例如，如果你担心夜间低血糖，你可以在晚上9点至早上7点将目标稍微设置高一些，如117 mg/dL（6.5 mmol/L）。 如果你想确保在早上注射早餐前有足够的胰岛素在体内（IOB），你可以在早上7点至8点将目标设置低一些，如81 mg/dL（4.5 mmol/L）。
 
-在[开环](#Preferences-pen-loop)中，尤其是在完成[第一个目标](../SettingUpAaps/CompletingTheObjectives.md)时，使用较宽的目标范围可能是一个不错的选择，同时你可以学习AAPS的行为并调整你的**配置文件**。 <br/>在[闭环](#preferences-closed-loop)（从**[目标6](#objectives-objective6)**开始）中，建议缩小范围，直到你每天为每个时间段设置单个目标（_低_目标 = _高_目标），以确保AAPS迅速对**BG**波动做出反应。
+When In [Open Loop](#Preferences-open-loop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#preferences-closed-loop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
 
 (your-aaps-profile-basal-rates)=
 
