@@ -14,7 +14,7 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 - 在储药器激活时，**AAPS** 将自动搜寻并连接新的 DASH 储药器。
 - Expected range from phone: 5-10 meters (YMMV).
 
-(#omnipod-dash-constraints)=
+(omnipod-dash-constraints)=
 
 ## Omnipod DASH known AAPS constraints/issues
 - Android 16 requires **AAPS** version 3.3.2.1 or later.
