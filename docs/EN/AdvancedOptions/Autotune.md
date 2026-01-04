@@ -94,6 +94,11 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ![Autotune default screen](../images/Autotune/Autotune_11.png)
 
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
+
 - Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. If you change this setting to On, the input profile will automatically be updated by the Tuned profile, and it will be activated.
   - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
 
@@ -143,6 +148,11 @@ Autotune will then display in Config Builder after you restart AAPS.
 (autotune-run-autotune-with-an-automation-rule)=
 
 ## Run Autotune with an automation rule
+
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
 
 First step is to define correct trigger for an automation rule with Autotune:
 
