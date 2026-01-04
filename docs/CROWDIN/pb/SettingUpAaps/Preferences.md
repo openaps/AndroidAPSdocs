@@ -424,7 +424,10 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 - Double check for typos here if you are stuck in Objective 1.
 - Leave Connect to websockets enabled (recommended).
 
+(Preferences-nsclient-synchronization)=
 ### Synchronization
+
+![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
 
 Synchronization choices will depend on the way you will want to use **AAPS**.
 
