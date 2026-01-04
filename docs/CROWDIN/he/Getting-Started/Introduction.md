@@ -129,7 +129,7 @@ As of June 25 2023, there are four major open source closed loop systems availab
 | PUMP        | [Dana I](../CompatiblePumps/DanaRS-Insulin-Pump.md)                 | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
 | PUMP        | [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)                | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
 | PUMP        | [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)                  | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| PUMP        | [Omnipod (Dash)](../CompatiblePumps/OmnipodDASH.md) (2)             | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
+| PUMP        | [Omnipod (Dash)](../CompatiblePumps/OmnipodDASH.md)                 | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
 | PUMP        | [Omnipod (Eros)](../CompatiblePumps/OmnipodEros.md)                 | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
 | PUMP        | [Diaconn G8](../CompatiblePumps/DiaconnG8.md)                       | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
 | PUMP        | [EOPatch 2](../CompatiblePumps/EOPatch2.md)                         | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
@@ -139,12 +139,11 @@ As of June 25 2023, there are four major open source closed loop systems availab
 | PUMP        | [Roche Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)       | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
 | PUMP        | [Older Medtronic](../CompatiblePumps/MedtronicPump.md)              | ![available](../images/available.png)     | ![available](../images/available.png)        | ![available](../images/available.png)                 | ![available](../images/available.png)          |
 | PUMP        | [Equil 5.3](../CompatiblePumps/Equil5.3.md)                         | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| סנסור       | [Dexcom G7](../CompatibleCgms/DexcomG7.md)                          | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
+| סנסור       | [Dexcom G7/One+](../CompatibleCgms/DexcomG7.md)                     | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
 | סנסור       | [Dexcom One](../CompatibleCgms/DexcomG6.md)                         | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
 | סנסור       | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                          | ![available](../images/available.png)     | ![available](../images/available.png)        | ![available](../images/available.png)                 | ![available](../images/available.png)          |
-| סנסור       | [Dexcom G5](../CompatibleCgms/DexcomG5.md)                          | ![available](../images/available.png)     | ![available](../images/available.png)        | ![available](../images/available.png)                 | ![available](../images/available.png)          |
-| סנסור       | [Libre 3](../CompatibleCgms/Libre3.md)                              | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
-| סנסור       | [Libre 2](../CompatibleCgms/Libre2.md)                              | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
+| סנסור       | [Libre 3/3+](../CompatibleCgms/Libre3.md)                           | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png)      |
+| סנסור       | [Libre 2/2+](../CompatibleCgms/Libre2.md)                           | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
 | סנסור       | [Libre 1](../CompatibleCgms/Libre1.md)                              | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
 | סנסור       | [Eversense](../CompatibleCgms/Eversense.md)                         | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
 | סנסור       | [MM640g/MM630g](../CompatibleCgms/MM640g.md)                        | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)          |
@@ -155,7 +154,6 @@ As of June 25 2023, there are four major open source closed loop systems availab
 
 _Table notes:_
 1. A **rig** is a small computer which you carry around with you, without a monitor. One supported device type is Intel Edison + Explorer Board and the other Raspberry Pi + Explorer HAT or Adafruit RFM69HCW Bonnet. The first APS were based on this setup, as mobile phones were not capable of running the required algorithms. Use of these systems has declined, as the setup on mobile phones has become easier, and phones have a display included. Intel has also stopped selling the Intel Edison. The excellent OpenAPS algorithms **oref0** and **oref1** are now incorporated in AAPS and iAPS.
-2. Omnipod Dash is the successor of Omnipod Eros. It supports bluetooth communication and does not need a rig gateway to communicate between the Omnipod and mobile phone. If you have a choice, we recommend use of the Dash instead of Eros.
 
 
 An international peer-reviewed consensus statement containing practical guidance on open source looping was written by and for health-care professionals, and published in a leading medical journal in 2022: [_Lancet Diabetes Endocrinol_, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_). It is well worth a read (including for your diabetes clinic) and summarises the main technical differences between the different open-source hybrid closed loop systems.
@@ -165,7 +163,7 @@ It is hard to get a “feel” for any system without using it, or talking to ot
 
 ## Does AAPS use artificial intelligence or any learning algorithm?
 
-The current master version of **AAPS** (3.3.1.3) does not have any machine learning algorithms, multiple-parameter insulin response models, or artificial intelligence. As such, the system is open and transparent in how it works, and has the ability to be understood not just by experts, but also by clinicians and patients. It also means that if you have a sharply varying schedule (maybe switching from a stressful week at work to a relaxing holiday) and are likely to need a significantly different amount of insulin, you can immediately switch **AAPS** to run a weaker/stronger customised profile. A ‘learning system’ will do this adjustment for you automatically, but is likely to take longer to adjust the insulin delivery.
+The current master version of **AAPS** (3.4) does not have any machine learning algorithms, multiple-parameter insulin response models, or artificial intelligence. As such, the system is open and transparent in how it works, and has the ability to be understood not just by experts, but also by clinicians and patients. It also means that if you have a sharply varying schedule (maybe switching from a stressful week at work to a relaxing holiday) and are likely to need a significantly different amount of insulin, you can immediately switch **AAPS** to run a weaker/stronger customised profile. A ‘learning system’ will do this adjustment for you automatically, but is likely to take longer to adjust the insulin delivery.
 
 ## Which system is right for me or my dependant?
 
@@ -178,7 +176,7 @@ It is important to note that the **AAPS** user needs to be proactive to troubles
 ## Is it safe to use open-source systems like AAPS?
 
 ### Safety of the AAPS system
-A more accurate question is probably “is it safe **compared** with my current insulin delivery system?” since no method of insulin delivery is without risk. There are many checks and balances in place with **AAPS**. A recent [paper](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375) looked at the use of **AAPS** in a computer simulated set-up, which was an effective way to unobjectively trial how safe and effective the system is. More generally, it is estimated that over 10,000 individuals worldwide are using open-source automated-insulin delivery systems, and uptake continues to increase globally.
+A more accurate question is probably “is it safe **compared** with my current insulin delivery system?” since no method of insulin delivery is without risk. There are many checks and balances in place with **AAPS**. A recent [paper](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375) looked at the use of **AAPS** in a computer simulated set-up, which was an effective way to unobjectively trial how safe and effective the system is. More generally, it is estimated that over 30,000 individuals worldwide are using open-source automated-insulin delivery systems, and uptake continues to increase globally.
 
 Any device that uses radio communications could be hacked, and this is true for a non-looping insulin pump as well. Currently, we are not aware of anyone attempting to harm individuals by hacking their diabetes-related medical equipment. However, there are multiple ways to protect against such risks:
 
@@ -220,7 +218,7 @@ Ask if your team has any patients under their care who already use DIY looping. 
 
 If you feel unsupported by your team to loop with **AAPS**, the following discussion points may help:
 
-a) The **AAPS** system has been designed BY patients and their caregivers. It has been designed ultimately for safety, but also drawing on in-depth patient experience. There are currently around **10,000** AAPS users worldwide. There is therefore likely to be other patients using DIY looping in your clinic's patient population (whether they know about it or not).
+a) The **AAPS** system has been designed BY patients and their caregivers. It has been designed ultimately for safety, but also drawing on in-depth patient experience. There are currently around **20,000** AAPS users worldwide. There is therefore likely to be other patients using DIY looping in your clinic's patient population (whether they know about it or not).
 
 b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ has confirmed that DIY loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_ which highlight the progress of the DIY looping community.
 
@@ -323,7 +321,7 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 The above table assumes that the user has access to both continuous gluocse monitor and insulin pump.
 
-*All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioural considerations.
+*All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioral considerations.
 
 (accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
 
@@ -333,7 +331,7 @@ The above table assumes that the user has access to both continuous gluocse moni
 AAPS can be used by blind people. On Android devices, the operating system has a program called TalkBack. This allows screen orientation via voice output as part of the operating system. By using TalkBack you can operate both your smartphone and AAPS without needing to be able to see.
 
 #### Building the AAPS app:
-As a user you will build the AAPS app in Android Studio. Many people use Microsoft Windows for this purpose, where there is the Screenreader analogous to TalkBack. Since Android Studio is a Java application, the “Java Access Bridge” component must be enabled in the Control Panel. Otherwise, the screen reader of the PC will not speak in Android Studio.
+As a user you will build the AAPS app in Android Studio. Many people use Microsoft Windows for this purpose, where there is the screen reader analogous to TalkBack. Since Android Studio is a Java application, the “Java Access Bridge” component must be enabled in the Control Panel. Otherwise, the screen reader of the PC will not speak in Android Studio.
 
 How you do this depends on your operating system, two methods are outlined below:
 
