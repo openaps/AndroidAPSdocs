@@ -75,10 +75,12 @@ Release date: 31-12-2025
 
 ### New features
 * Running mode @MilosKozak
-* new CGMs
-* Site rotation support @Philoul
-* ability to stop SMB from UI @MilosKozak
-* Syai CGM is trusted source and supports advanced filtering @MilosKozak
+  * Show [loop status history](#AapsScreens-running-mode) in treatment tabs
+  * Show and allow changing [loop status from AAPSClient](#RemoteControl_aapsclient).<br>NB : needs the setting [NSClient > Synchronization > Receive Running mode events](#Preferences-nsclient-synchronization)
+* [New CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
+* [Site rotation support](#Aapsscreens-site-rotation) @Philoul
+* Ability to stop SMB from UI @MilosKozak
+* [Syai CGM](../CompatibleCgms/SyaiTagX1.md) is trusted source and supports advanced filtering @MilosKozak
 
 ### Wear OS Improvements
 * dramatically reduced battery usage @MilosKozak 
