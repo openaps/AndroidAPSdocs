@@ -1,11 +1,11 @@
 # Dein AAPS-Profil
 
 Dein **AAPS-Profil** hat fünf wichtige Parametern, die definieren, wie **AAPS** Insulin als Reaktion auf Deine Sensorglukosewerte abgeben soll. Dies sind die Hauptparameter auf denen **AAPS** aufbaut. Während Du Dich durch die **Ziele** arbeitest, wirst Du weitere einstellbare Parameter (wie SMB-Einstellungen) freischalten. Die Wirksamkeit dieser Funktionen hängt aber hauptsächlich davon ab, dass Dein zugrundeliegendes **Profil** korrekt ist. Das **Profil** enthält:
-* [Insulinwirkdauer](#duration-of-insulin-action-dia) (DIA; engl. duration of insulin action),
-* [Glukoseziele](#glucose-targets),
-* [Basalraten](#basal-rates) (BR),
-* [Insulinempfindlichkeits- / Korrekturfaktoren](#insulin-sensitivity-factor-isf) (ISF; engl. insulin sensitivity factors) und
-* [Mahlzeitenfaktoren / KH-Faktoren](#insulin-to-carb-ratio-icr) (IC oder ICR; engl. insulin-to-carb ratios).
+* [duration of insulin action](#your-aaps-profile-duration-of-insulin-action) (DIA),
+* [glucose targets](#profile-glucose-targets),
+* [basal rates](#your-aaps-profile-basal-rates) (BR),
+* [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
+* [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR).
 
 Im Rahmen des **AAPS**-Managements sollten Nutzende ihre **Profil-**-Einstellungen kontinuierlich auf ihre Passgenauigkeit anschauen und bewerten. Es wird empfohlen, die Einstellungen in der Reihenfolge vorzunehmen, wie es hier dargestellt ist. Stelle sicher, dass die Einstellung wirklich richtig ist, bevor Du die jeweils nächste in Angriff nimmst. Taste dich in kleinen Schritten voran, statt zu viele Änderungen auf einmal vorzunehmen. Vergiss nicht nach jeder Änderung Dein Profil auch zu aktivieren. Sichere [Deine **Profil**](#YourAapsProfile_Profile-backup)-Einstellungen regelmäßig, in dem Du die Einstellungen exportierst.
 
@@ -57,7 +57,7 @@ Ein Beispiel für einen zu kurzen **DIA** ist ein **hoher Glukosewert**, der dur
 
 ### Wie es eingestellt wird
 
-Die **Abbildung unten** zeigt ein Beispiel einer im **AAPS**-Profil gesetzten Insulinwirkdauer (**DIA**).
+The **figure below** shows an example of how the **DIA** is set in an **AAPS** profile.
 
 ![DIA](../images/Profile_DIA.png)
 
@@ -89,7 +89,7 @@ Die **Abbildung unten** zeigt ein Beispiel wie im **AAPS**-Profil das Glukosezie
 
 **Glukoseziele** werden so gesetzt, dass sie zu Deinen eigenen Wünschen und Anforderungen passen. Wenn Du beispielsweise Angst vor nächtlichen Hypos hast, kannst Du Dein Glukoseziel von 21.00 - 07.00 Uhr auf 117 mg/dl setzen (6,5 mmol/l) setzen. Wenn Du erreichen möchtest, dass Du vor dem Frühstücksbolus am Morgen bereits genügend aktives Insulin (IOB) im Körper hast, könntest Du für die Zeit von 07.00 - 08.00 Uhr ein niedrigeres Ziel von 81 mg/dl (4,5 mmol/dl) setzen.
 
-Wenn Du im [Open Loop](#Preferences-pen-loop) und insbesondere beim Durchlaufen der [ersten Ziele](../SettingUpAaps/CompletingTheObjectives.md) bist, gerade lernst wie sich **AAPS** verhält und/oder Du Dein **Profil** anpasst, kann es helfen den Zielbereich etwas größer zu wählen.<br/> Sobald Du in den [Closed Loop](#preferences-closed-loop) (beginnend mit dem **[Zie 6](#objectives-objective6)**) wechselst, wird empfohlen den Zielbereich für jeden Tagsabschnitt bis auf einen einzelnen Zielwert (_unteres_ Ziel = _oberes_ Ziel) zu verkleinern. Damit kann **AAPS** sofort **Glukosewert**-Schwankungen.
+When In [Open Loop](#Preferences-open-loop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#preferences-closed-loop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
 
 (your-aaps-profile-basal-rates)=
 
