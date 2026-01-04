@@ -8,7 +8,7 @@
 
 当模块内有其他可用设置时，您可以点击齿轮图标（B），这将带您进入首选项中的具体设置。
 
-![配置生成器 选项框和齿轮图标](../images/ConfBuild_ConfigBuilder_AAPS30.png)
+![配置生成器 选项框和齿轮图标](../images/ConfBuild_ConfigBuilder.png)
 
 (Config-Builder-tab-or-hamburger-menu)=
 
@@ -16,7 +16,7 @@
 
 通过眼睛符号下的复选框，您可以决定如何打开相应的程序部分。
 
-![选项卡或汉堡菜单](../images/ConfBuild_TabOrHH_AAPS30.png)
+![选项卡或汉堡菜单](../images/ConfBuild_TabOrHH.png)
 
 ```{contents}
 :backlinks: entry
@@ -93,10 +93,10 @@
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - 仅当您清楚自己在做什么时才选择此项，请参阅[血糖数据来源](../Getting-Started/CompatiblesCgms.md)。
 * [美敦力640g](../CompatibleCgms/MM640g.md)
-* [Glimp](#libre1-using-glimp) - 仅支持4.15.57及更高版本
+* Glimp - only version 4.15.57 and newer are supported
 * [自建Dexcom应用程序 Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 * [Poctech](../CompatibleCgms/PocTech.md)
-* 用于MiaoMiao设备的[Tomato App](#libre1-using-tomato)
+* Tomato App for MiaoMiao device
 * 用于Glunovo CGM系统的[Glunovo App](https://infinovo.com/)
 * [Ottai](../CompatibleCgms/OttaiM8.md)
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
