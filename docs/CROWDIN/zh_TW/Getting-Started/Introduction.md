@@ -163,7 +163,7 @@ _表格說明：_
 
 ## AAPS是否使用人工智慧或任何學習演算法？
 
-The current master version of **AAPS** (3.4) does not have any machine learning algorithms, multiple-parameter insulin response models, or artificial intelligence. 因此，該系統是開放且透明的，操作方式可以被非專家以及臨床醫生和患者暸解。 這也意味著，如果你的日程變化劇烈（例如從一個緊張的工作週切換到一個輕鬆的假期），並且可能需要顯著不同的胰島素劑量，你可以立即切換**AAPS**來運作較弱/較強的自定義設定檔案。 ‘學習系統’會自動為你進行這種調整，但可能需要更長的時間來調整胰島素的輸送。
+目前 **AAPS** 的主分支版本（3.4）不包含任何機器學習演算法、多參數胰島素反應模型或人工智慧。 因此，該系統是開放且透明的，操作方式可以被非專家以及臨床醫生和患者暸解。 這也意味著，如果你的日程變化劇烈（例如從一個緊張的工作週切換到一個輕鬆的假期），並且可能需要顯著不同的胰島素劑量，你可以立即切換**AAPS**來運作較弱/較強的自定義設定檔案。 ‘學習系統’會自動為你進行這種調整，但可能需要更長的時間來調整胰島素的輸送。
 
 ## 哪個系統適合我或我的家人？
 
@@ -176,7 +176,7 @@ The current master version of **AAPS** (3.4) does not have any machine learning 
 ## 使用像AAPS這樣的開源系統是否安全？
 
 ### AAPS系統的安全性
-一個更正確的問法可能是「與我目前的胰島素輸送系統相比，他是否安全」，因為任何胰島素輸送方法都不是完全無風險的。 **AAPS**系統中有許多檢查和平衡機制。 最近一篇[文章](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)探討了在電腦模擬環境中使用**AAPS**，這是一種以有效、客觀的的方式測試系統的安全性和效能。 More generally, it is estimated that over 30,000 individuals worldwide are using open-source automated-insulin delivery systems, and uptake continues to increase globally.
+一個更正確的問法可能是「與我目前的胰島素輸送系統相比，他是否安全」，因為任何胰島素輸送方法都不是完全無風險的。 **AAPS**系統中有許多檢查和平衡機制。 最近一篇[文章](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)探討了在電腦模擬環境中使用**AAPS**，這是一種以有效、客觀的的方式測試系統的安全性和效能。 更普遍來說，據估計全球有超過30,000人正在使用開源自動胰島素輸送系統，並且全球範圍內的使用人數還在不斷增加。
 
 任何使用無線通訊的設備都有可能被駭客入侵，這對非閉環的胰島素幫浦也是如此。 目前，我們尚未聽說有人試圖透過駭入糖尿病相關的醫療設備來傷害他人。 然而，有多種方法可以防範此類風險：
 
@@ -218,7 +218,7 @@ The current master version of **AAPS** (3.4) does not have any machine learning 
 
 如果你覺得你的醫療團隊不支援你使用**AAPS** ，以下討論點可能會有幫助：
 
-a) **AAPS** 系統是由患者及其看護者設計的。 他的設計最終是為了安全，同時也借鑒了深入的患者經驗。 There are currently around **20,000** AAPS users worldwide. 因此，你的診所患者群體中很可能有其他使用DIY閉環系統的患者（無論他們是否了解）。
+a) **AAPS** 系統是由患者及其看護者設計的。 他的設計最終是為了安全，同時也借鑒了深入的患者經驗。 目前全球大約有**20,000**位AAPS用戶。 因此，你的診所患者群體中很可能有其他使用DIY閉環系統的患者（無論他們是否了解）。
 
 b) 最近發表於國際領先醫學期刊[The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ 的同行評審指導確認，DIY閉環系統**安全**且**有效改善糖尿病控制**，包括增加血糖範圍內的時間。 在像[Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_這樣的頂級期刊中經常有文章，突顯了 DIY 循環社區的進展。
 
@@ -321,7 +321,7 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 上述表格假設用戶可以使用連續血糖監測儀和胰島素幫浦。
 
-*透過資料共享平台（包括Nightscout），所有來自**AAPS** 的資料都可以提供給醫療專業人士，Nightscout提供CGM資料的紀錄和實時監控，胰島素輸送、碳水化合物輸入、預測和設置。 Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioral considerations.
+*透過資料共享平台（包括Nightscout），所有來自**AAPS** 的資料都可以提供給醫療專業人士，Nightscout提供CGM資料的紀錄和實時監控，胰島素輸送、碳水化合物輸入、預測和設置。 Nightscout 紀錄包含每日與每週報告，可透過更精確的血糖控制與任何行為面考量的資料，協助醫療專業人員與第 1 型糖尿病患者進行討論。
 
 (accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
 
@@ -331,7 +331,7 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 AAPS 可以由盲人使用。 在Android設備上，操作系統有一個名為TalkBack的程式。 這允許透過語音輸出來進行螢幕導覽，這是操作系統的一部分功能。 使用TalkBack，你可以在不需要看到螢幕的情況下操作你的智慧型手機和AAPS。
 
 #### 建置AAPS應用程式：
-作為用戶，你將在Android Studio中建置AAPS應用程式。 Many people use Microsoft Windows for this purpose, where there is the screen reader analogous to TalkBack. 由於Android Studio是Java應用程式，因此必須在控制面板中啟用“Java Access Bridge”組件。 否則，PC的螢幕閱讀器將無法在Android Studio中發聲。
+作為用戶，你將在Android Studio中建置AAPS應用程式。 許多人會為此使用 Microsoft Windows，其中有與 TalkBack 類似的螢幕閱讀器。 由於Android Studio是Java應用程式，因此必須在控制面板中啟用“Java Access Bridge”組件。 否則，PC的螢幕閱讀器將無法在Android Studio中發聲。
 
 如何操作取決於你的操作系統，以下提供了兩種方法：
 
