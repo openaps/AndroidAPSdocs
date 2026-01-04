@@ -26,10 +26,6 @@ Du kannst direkt von hier zum zweiten Label in dieser Datei springen - ["Jump"](
 
 Und Du kannst zum ersten Label springen - ["Jump"](#this-is-a-test) oder [tag springen](#sandbox1-this-is-a-test).
 
-Hier kannst Du zur zweiten Sandbox-Datei springen - ["Jump"](./MoveTest/sandbox2.md) oder [tag jump](#sandbox2-this-is-a-test).
-
-Du kannst direkt von hier zum ersten Label in der sandbox2.md-Datei springen - ["Jump"](./MoveTest/sandbox2.md#this-is-a-test).
-
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-in-the-middle-of-nowhere)=
