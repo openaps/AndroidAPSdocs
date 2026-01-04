@@ -33,7 +33,7 @@
 
 ```{admonition} Old app version
 :class: warning
-Dexcom G6 BYODA is now a very old version of the app and cannot be updated.
+Dexcom G6 BYODA 是非常舊的 App 版本，且無法更新。
 ```
 
 -   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)（BYODA）支援向 AAPS 及／或 xDrip+ 進行本機廣播（**不適用於** **G5／ONE／G7 傳感器！**）
