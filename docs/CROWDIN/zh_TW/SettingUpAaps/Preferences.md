@@ -424,7 +424,10 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 - 如果你在目標 1 中遇到困難，請再次檢查是否有拼寫錯誤。
 - 保持啟用與 websockets 的連線（推薦）。
 
+(Preferences-nsclient-synchronization)=
 ### 同步選項
+
+![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
 
 同步選擇將取決於你希望如何使用**AAPS**。
 
