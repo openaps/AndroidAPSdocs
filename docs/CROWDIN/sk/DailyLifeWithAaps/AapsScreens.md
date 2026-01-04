@@ -9,7 +9,7 @@
 
 ## Domovská obrazovka
 
-![Domovská obrazovka V2.7](../images/Home2020_Homescreen.png)
+![Domovská obrazovka V2.7](../images/Home_Homescreen.png)
 
 Toto je prvá obrazovka, s ktorou sa stretnete po otvorení **AAPS** a obsahuje väčšinu informácií, ktoré budete denne potrebovať.
 
@@ -58,8 +58,9 @@ Pri použití [algoritmu SMB](#Config-Builder-aps) a funkcie [Autosens](#Open-AP
 
 V časti [Predvoľby > Nastavenia OpenAPS SMB](#Preferences-openaps-smb-settings) povoľte jednu alebo obe z nasledujúcich možností:
 
-* „citlivosť zvyšuje cieľ“ a/alebo 
-* "rezistencia znižuje cieľ" 
+     * "sensitivity raises target" and/or 
+     * "resistance lowers target" 
+    
 
 Ak systém **AAPS** zistí rezistenciu alebo citlivosť, cieľ sa zmení oproti nastaveniu v profile. Keď sa zmení cieľová glukóza, pozadie sa zmení na zelené.
 
@@ -73,17 +74,18 @@ Najnovšia hodnota glukózy v krvi z vášho CGM sa zobrazuje na ľavej strane.
 
 Farba hodnoty glykémie odráža stav v zadanom [rozsahu](#Preferences-range-for-visualization).
 
-* Zelená = v rozsahu
-* červená = pod rozsahom
-* žltá = nad rozsahom 
+     * green = in range
+     * red = below range
+     * yellow = above range 
+    
 
 ![Deltas](../images/Home_Delta.png)
 
 Bloky v strede zobrazujú:
 
 1. Koľko minút uplynulo od posledného merania **CGM**
-2. Rozdiely oproti poslednej nameranej hodnote: Δ, a oproti priemeru za posledných 15 a 40 minút (Δ15 a Δ40).  
-    Dlhodobé odchýlky sa vypočítavajú ako priemerná hodnota zmien v minulosti, pričom ukazujú, aká bola priemerná hodnota.
+2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
+  Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
 
 (AapsScreens-loop-status)=
 
@@ -94,7 +96,7 @@ Bloky v strede zobrazujú:
 Na pravej strane ikona zobrazuje stav slučky:
 
 1. Zelený kruh = bežiaca slučka
-2. Zelený kruh s bodkovanou čiarou = [low glucose suspend (LGS)](#objectives-objective6)
+2. Purple circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
 3. Červený kruh = slučka deaktivovaná (nefunguje trvalo)
 4. Žltý kruh = slučka pozastavená (dočasne pozastavená, ale bude podávaný bazálny inzulín) - zostávajúci čas je zobrazený pod ikonou
 5. Sivý kruh = pumpa odpojená (dočasne sa vôbec nedáva inzulín) - zostávajúci čas je zobrazený pod ikonou
@@ -103,9 +105,10 @@ Na pravej strane ikona zobrazuje stav slučky:
 
 Krátkym alebo dlhým stlačením ikony otvoríte dialógové okno Slučka, kde môžete prepnúť režim slučky (Zatvoriť, Pozastaviť pri nízkej glukóze, Otvoriť alebo Zakázať), pozastaviť/opätovne zapnúť slučku alebo odpojiť/opätovne pripojiť pumpu.
 
-* Ak krátko stlačíte ikonu Slučky, po výbere v okne Slučky je potrebné overenie
+     * If short press on Loop icon, a validation is required after selection in Loop Dialog
     
-    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+    
 
 (aaps-screens-bg-warning-sign)=
 
@@ -121,7 +124,8 @@ Ak sa z akéhokoľvek dôvodu vyskytnú problémy s údajmi o glykémii, ktoré 
     :class: note
     Vaša slučka je pozastavená kým sa problém neodstráni !
 
-![Red BG warning](../images/bg_warn_red.png)
+    ![Red BG warning](../images/bg_warn_red.png)
+    
 
 Musíte zistiť, prečo máte duplicitné hodnoty glykémie:
 
@@ -142,7 +146,8 @@ Ak je však veľa zdvojených údajov, jednoduchšie môže byť
 
 Žltý výstražný signál signalizuje, že vaša glykémia prichádzala v nepravidelných časových intervaloch alebo že niektoré hodnoty glykémie chýbajú. Po stlačení znaku sa zobrazí správa „Použité prepočítané dáta“.
 
-![Yellow BG warning](../images/bg_warn_yellow.png)
+    ![Yellow BG warning](../images/bg_warn_yellow.png)
+    
 
 Zvyčajne nemusíte podniknúť žiadne kroky. Uzavretá slučka bude naďalej fungovať!
 
@@ -167,17 +172,17 @@ Ikona s detskou tvárou v pravom hornom rohu tejto sekcie označuje, že sa nach
 ![Section D](../images/Home2020_TBR.png)
 
 1. **Striekačka**: Inzulín v tele (IOB) – predstavuje množstvo aktívneho inzulínu, ktorý ešte účinkuje vo vašom tele. Hodnota IOB by bola nulová, ak by sa podával iba základný (bazálny) inzulín a zároveň by v tele nezostali žiadne zvyšky z predchádzajúcich bolusov.
-    
-    * IOB môže byť záporný, ak bol v poslednom čase aktívny znížený bazál.
-    * Stlačením ikony zobrazíte rozdelenie bolusového a bazálneho inzulínu
+  
+  * IOB môže byť záporný, ak bol v poslednom čase aktívny znížený bazál.
+  * Stlačením ikony zobrazíte rozdelenie bolusového a bazálneho inzulínu
 
-2. **Klások**: [aktívne sacharidy v tele (COB)](../DailyLifeWithAaps/CobCalculation.md) – ešte nevstrebané sacharidy, ktoré ste predtým zjedli. Ikona bliká na červeno, ak sú potrebné ďalšie sacharidy (pozri [nižšie](#aaps-screens-carbs-required))
+2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
 
 3. **Fialová linka**: aktuálna bazálna dávka. Ikona sa zmení, aby odrážala dočasné zmeny bazálnej dávky (rovná pri 100 %) 
-    * Ťuknutím na ikonu zobrazíte základnú bazálnu dávku a podrobnosti o dočasnej bazálnej dávke (vrátane zostávajúcej dĺžky)
+  * Ťuknutím na ikonu zobrazíte základnú bazálnu dávku a podrobnosti o dočasnej bazálnej dávke (vrátane zostávajúcej dĺžky)
 4. **Šípky hore a dole**: označuje stav funkcií dynamickej citlivosti ([Autosens](#Open-APS-features-autosens) alebo [DynamicISF](#Open-APS-features-DynamicISF)): aktívne alebo neaktívne. V tejto časti sa môže zobraziť niekoľko hodnôt: 
-    * AS: Hodnota automatickej citlivosti. Zobrazuje sa, aj keď je funkcia Autosens vypnutá (len pre informáciu). Zobrazuje sa aj pri aktívnej funkcii DynISF, hoci to nemá žiadny účinok.
-    * Alg: Hodnota DynamicISF (na základe TDD). Viac informácií nájdete na stránke [DynamicISF](#Open-APS-features-DynamicISF).
+  * AS: Hodnota automatickej citlivosti. Zobrazuje sa, aj keď je funkcia Autosens vypnutá (len pre informáciu). Zobrazuje sa aj pri aktívnej funkcii DynISF, hoci to nemá žiadny účinok.
+  * Alg: Hodnota DynamicISF (na základe TDD). Viac informácií nájdete na stránke [DynamicISF](#Open-APS-features-DynamicISF).
 
 (aaps-screens-carbs-required)=
 
@@ -221,58 +226,66 @@ Depending on the pump you use, you may not have all of these icons.
 
 The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
 
-Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here.
-
 Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
 
 The green area reflects your target range.
 
-Blue triangles show [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings).
+This information is also shown on this graph :
+
+* Boluses: blue triangle on the BG curve and insulin amount
+* Carbs entries: orange triangle on the BG curve and carb amount
+* Target as defined in the profile or modified by temporary target: green line
+* Profile switches: star at the top of the graph
+* Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
+* [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
 
 (AapsScreens-activate-optional-information)=
 
 #### Activate optional information
 
-On the main graph, you can switch on these optional information:
+Using the top right arrow, you can switch on these optional information:
 
-* Predictions
-* Ošetrenia
-* Basals
-* Activity - insulin activity curve
+* Predictions (see below)
+* Treatments : notes entered in action tab: grey, orange or red dot depending on the severity, as well as fingerstick calibrations: red dot
+* Basals 
+  * As defined in the profile: blue dotted line at the bottom of the graph
+  * Actually delivered basal: blue plain line with blue background
+* Activity - insulin activity curve: yellow line
 
 To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
 
-![Main graph setting](../images/Home2020_MainGraphSetting.png)
+     ![Main graph setting](../images/Home2020_MainGraphSetting.png)
+    
 
 (aaps-screens-prediction-lines)=
 
 #### Prediction lines
 
 * **Orange** line: [COB](CobCalculation) (color is used generally to represent COB and carbs)
-    
-    This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. This line only appears if there are known COB.
+  
+  This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. This line only appears if there are known COB.
 
 * **Dark blue** line: IOB (color is used generally to represent IOB and insulin)
-    
-    This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+  
+  This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
 
 * **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
-    
-    This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
-    
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+  
+  This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+  
+  *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
 
 * **Dark yellow** line: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (un-announced meals)
-    
-    Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
-    
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+  
+  Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+  
+  *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
 
 * **Dark orange** line: aCOB (accelerated carbohydrate absorption)
-    
-    Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
-    
-    *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
+  
+  Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
+  
+  *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
 
 Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
@@ -513,8 +526,8 @@ Button to start or cancel a temporary basal rate. Please note that the button ch
 Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
 
 * This option is only available for Dana RS and Insight pumps. 
-    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-    * Make sure to read the [details](../DailyLifeWithAaps/ExtendedCarbs.md) before using this option.
+  * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
+  * Make sure to read the [details](../DailyLifeWithAaps/ExtendedCarbs.md) before using this option.
 
 (aaps-screens-careportal)=
 
@@ -522,10 +535,11 @@ Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-
 
 Displays information on:
 
-* sensor age & level (battery percentage)
-* insulin age & level (units)
-* cannula age
-* pump battery age & level (percentage
+     * sensor age & level (battery percentage)
+     * insulin age & level (units)
+     * cannula age
+     * pump battery age & level (percentage
+    
 
 Less information will be shown if **low resolution skin** is used ([Preferences > General > Skin](#Preferences-skin)).
 
@@ -553,14 +567,21 @@ Section O reflects the Nightscout careportal. So exercise, announcement and ques
 
 Site Rotation button opens the Site Rotation Dialog in View mode:
 
-* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes (1)
+* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
 * All Cannula change and Sensor change event since the past 45 days are available.
 * Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry (4)
+* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
 
 ![View Mode](../images/SiteRotation/ViewMode.png)
 
-* The Setting tab allow you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both. Note that it is this setting which will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"
+* The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
+
+![Settings](../images/SiteRotation/Settings.png)
+
+![Settings type](../images/SiteRotation/Type.png)
+
+*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+
 * For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
 
 Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
@@ -568,11 +589,19 @@ Edit Mode allows you to select Location, Arrow, and Note associated to selected 
 * Entry type is visible on the to of Edit mode (Cannula Icon, or Sensor Icon)
 * You have to select Front or Back tab and then the Area
 * Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
+
+![Edit Mode](../images/SiteRotation/EditMode.png)
+
 * You can adjust an optional arrow with a click on little arrow icon on the top (Arrow allow you to precise sub-location, from 2 to 9, or Pod Orientation)
+
+![Position](../images/SiteRotation/EditModeSub.png)
+
 * You can also adjust comments concerning selected site
 * After confirmation, the site is recorded
 
 Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+
+![Filtering](../images/SiteRotation/Filtering.png)
 
 #### History Browser
 
@@ -659,6 +688,7 @@ This view can be accessed by pressing the 3 dots on the right of the menu, then 
 * [Temporary target](../DailyLifeWithAaps/TempTargets.md)
 * [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 * Careportal: notes entered through action tab and notes in dialogues
+* Running mode : history of loop status
 * User entry: other notes that are not sent to Nightscout
 
 In the last column, the data source for each line is displayed in blue. It can be :
@@ -688,8 +718,8 @@ The treatment tab can be used to correct faulty carb entries (*i.e.* you over- o
 3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. Make sure carbs are removed successfully by checking COB on homescreen again.
 5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
-    
-    → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+  
+  → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
 
 6. Enter correct carb amount through carbs button on homescreen and make sure to set the correct event time.
 
@@ -724,11 +754,27 @@ Deleting the entries only affects your reports in Nightscout and will never actu
 
 You can use the **Clone** button shown on line **1** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
 
+(AapsScreens-running-mode)=
+
+### Running mode
+
+![Running mode](../images/TreatmentsView6.png)
+
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
+
 ### Care portal
 
 ![Care portal](../images/TreatmentsView5.png)
 
 This tab shows all notes and alerts recorded in Nightscout.
+
+(aaps-screens-running-mode)=
+
+### Running mode
+
+![Running mode](../images/Screens/RunningMode.png)
+
+Running mode shows current and past AAPS running mode, it is also visible on the main graph as an upper colored bar.
 
 ## History Browser
 
