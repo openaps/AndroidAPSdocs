@@ -94,6 +94,11 @@ Autotune s'affichera ensuite dans le Générateur de configuration après avoir 
 
 ![Autotune écran par défaut](../images/Autotune/Autotune_11.png)
 
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
+
 - Changer le profil avec l'Automatisation (Désactivé par défaut) : voir [Exécuter Autotune avec une règle d'automatisation](#autotune-run-autotune-with-an-automation-rule) ci-dessous. Si vous activez ce paramètre, le profil d'entrée sera automatiquement mis à jour par le profil Tuned, et il sera activé.
   - **Soyez prudent, vous devez prendre confiance en vérifiant pendant plusieurs jours qu'après une mise à jour et l'activation du profil Tuned sans aucune modification, cela améliore effectivement votre boucle**
 
@@ -143,6 +148,11 @@ Autotune s'affichera ensuite dans le Générateur de configuration après avoir 
 (autotune-run-autotune-with-an-automation-rule)=
 
 ## Exécuter Autotune avec une règle d'automatisation
+
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
 
 La première étape est de définir le déclencheur correct pour une règle d'automatisation avec Autotune :
 
