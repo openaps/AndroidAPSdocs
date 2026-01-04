@@ -268,6 +268,10 @@ Through Wear tab or hamburger menu (top left of screen, if tab is not displayed)
 * Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
 
+### Autotune
+
+You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+
 ### Bakım
 
 Access this tab to export / import settings.
