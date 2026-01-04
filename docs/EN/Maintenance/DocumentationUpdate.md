@@ -5,7 +5,7 @@
 - [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
 - CGM list update. Dexcom G5, Tomato, Glimp removed.
 - [Site rotation UI](#Aapsscreens-site-rotation)
-- Run Mode
+- [Running mode](#AapsScreens-running-mode)
 - Autotune
 
 ## December 2025
