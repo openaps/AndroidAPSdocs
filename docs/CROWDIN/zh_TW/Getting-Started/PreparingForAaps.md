@@ -84,9 +84,9 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 為了幫助建置過程，有專門的部分：
 
-- 列出**AAPS**中可能出現的常見錯誤的問答清單，請參閱[常見問題（K 部分）](../UsefulLinks/FAQ.md)；
+- List of questions and answers for frequent errors that are likely to occur in [FAQs](../UsefulLinks/FAQ.md) (Section 11);
 
-- “[如何安裝 AAPS](../SettingUpAaps/BuildingAaps.md)？” （D 部分），包括[問題排除](../GettingHelp/GeneralTroubleshooting.md)子部分。
+- “[如何安裝 AAPS](../SettingUpAaps/BuildingAaps.md)？” (Section 3) and [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) (Section 8).
 
 達到閉環控制的時間因人而異，但使用 AAPS 達到全閉環控制的大致時間表可以參考[>此處](#preparing-how-long-will-it-take)。
 
