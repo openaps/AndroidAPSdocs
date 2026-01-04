@@ -7,10 +7,10 @@
 驗證橋接和你想要使用的應用程式是否與你的傳感器相容。  
 ```
 
-Some bridges are still available on the market:
+市面上仍有一些橋接器可購買：
 
 -   [MiaoMiao 讀取器](https://www.miaomiao.cool/)（版本 1、2 或 3），也可在 AliExpress 上購買。
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). 也可在 AliExpress 上購買。
+-   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) 來自歐洲供應商（[BubbleShop](https://bubbleshop.eu/)），或俄羅斯用戶請見 [此處](https://vk.com/saharmonitor/)。 也可在 AliExpress 上購買。
 -   適用於俄羅斯用戶的 Atom。
 
 ## 1. 使用 xDrip+
