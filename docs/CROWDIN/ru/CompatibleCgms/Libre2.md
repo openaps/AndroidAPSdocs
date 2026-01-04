@@ -6,7 +6,7 @@
 
 Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an out of process algorithm app. В этом случае Вы будете получать показания сахара крови каждые 5 минут, так же как с [Libre1](./Libre1.md).
 
-Убедитесь, что мост и приложение, которое вы хотите использовать, совместимы с вашим сенсором и xDrip+ (более старые модели Blucon не будут работать, Miaomiao 1 требует прошивки 39 и Miaomiao 2 прошивки 7).
+Check the bridge and app you want to use are compatible with your sensor and xDrip+.
 
 The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings as with the original reader. Во избежание скачков, AAPS с Libre2 производит сглаживание в пределах от 10 до 25 минут. См. ниже [Сглаживание показаний & необоаботанные данные](#libre2-value-smoothing-raw-values). Алгоритм программы генерирует данные каждые 5 минут со сглаживанием по среднему значению за последние 5 минут. Поэтому значения ГК не выглядят гладкими, а совпадают с показаниями оригинального устройства считывания и быстрее следуют "реальным". Если вы хотите пользоваться алгоритмом OOP, включите все настройки сглаживания в xDrip+.
 
