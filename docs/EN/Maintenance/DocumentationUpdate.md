@@ -3,13 +3,14 @@
 ## January 2025
 
 - [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
-- CGM list update, Dexcom G5, Tomato, Glimp removed.
+- CGM list update. Dexcom G5, Tomato, Glimp removed.
 - [Site rotation UI](#Aapsscreens-site-rotation)
-- 
+- Run Mode
+- Autotune
 
 ## December 2025
 
-- Profile tuning from @robrub
+- [Profile tuning](../GettingHelp/ProfileTuning.md) from @robrub
 
 ## October 2025
 
@@ -39,7 +40,7 @@
 ## November 2024
 
 - Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganisation of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnerat
+- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnerat
 
 ## October 2024
 
