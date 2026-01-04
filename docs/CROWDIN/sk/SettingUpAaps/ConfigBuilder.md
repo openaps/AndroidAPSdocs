@@ -8,7 +8,7 @@ V závislosti od vašich nastavení môžete otvoriť nástroj konfigurácia pro
 
 Ak sú dostupné podrobnejšie nastavenia modulu, po kliknutí na ozubené koliesko (B) v blízkosti štvorčekov vpravo môžete tieto parametre modulu upraviť priamo v Nastaveniach.
 
-![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder_AAPS30.png)
+![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
 (Config-Builder-tab-or-hamburger-menu)=
 
@@ -16,7 +16,7 @@ Ak sú dostupné podrobnejšie nastavenia modulu, po kliknutí na ozubené kolie
 
 Zaškrtávacím políčkom pod symbolom oka sa môžete rozhodnúť, ako otvoriť príslušnú časť programu.
 
-![Záložky alebo hamburgerové menu](../images/ConfBuild_TabOrHH_AAPS30.png)
+![Záložky alebo hamburgerové menu](../images/ConfBuild_TabOrHH.png)
 
 ```{contents}
 :backlinks: entry
@@ -93,10 +93,10 @@ Vyberte zdroj glukózy v krvi, ktorý používate. Pre viac informácií kliknit
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) – iba ak viete, čo robíte, pozrite si [Zdroj BG](../Getting-Started/CompatiblesCgms.md).
 * [MM640g](../CompatibleCgms/MM640g.md)
-* [Glimp](#libre1-using-glimp) – podporované sú iba verzie 4.15.57 a novšie
+* Glimp - only version 4.15.57 and newer are supported
 * [Vytvorte si vlastnú aplikáciu Dexcom (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 * [Poctech](../CompatibleCgms/PocTech.md)
-* [Aplikácia Tomato](#libre1-using-tomato) pre zariadenie MiaoMiao
+* Tomato App for MiaoMiao device
 * [Aplikácia Glunovo](https://infinovo.com/) pre systém Glunovo CGM
 * [Ottai](../CompatibleCgms/OttaiM8.md)
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
