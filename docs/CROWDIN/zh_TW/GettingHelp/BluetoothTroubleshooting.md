@@ -11,7 +11,7 @@
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
 ## 無法在 Android 16 上啟動 Omnipod
-- 在 Android 16 上，Omnipod DASH 要能正常運作至少需要 **AAPS** 版本 3.3.2.1，因為該版本加入了修正，專門處理 Android 16 導致 Omnipod 的[已知問題](../GettingHelp/GeneralTroubleshooting.md#cannot-start-omnipod-with-android-16)。
+- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this versions has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
 
 ---
 
