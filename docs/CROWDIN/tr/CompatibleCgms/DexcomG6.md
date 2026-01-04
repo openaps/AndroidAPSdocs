@@ -31,11 +31,9 @@ Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-lo
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## Kendi Dexcom Uygulamanızı Oluşturun ile G6 kullanıyorsanız
 
-```{admonition} No new users
+```{admonition} Old app version
 :class: warning
-Latest Dexcom servers update broke BYODA for new installs: the app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
-Existing users do not experience issues for now: do not logout, wipe data, or reinstall the BYODA app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
-New users are recommended to use [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+Dexcom G6 BYODA is now a very old version of the app and cannot be updated.
 ```
 
 -   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+ (**not for** **G5/ONE/G7 sensors!**)
