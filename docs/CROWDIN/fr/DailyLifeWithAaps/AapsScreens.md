@@ -554,7 +554,7 @@ Thresholds can be set in [Preferences > Overview > Status lights](#Preferences-s
 
 ### Careportal - section O
 
-BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#aaps-screens-careportal).
+Contrôle glycémie, Amorcer/Remplir, Insertion capteur MGC et Changement pile pompe sont les données d'entrées des informations affichées dans la [section N](#aaps-screens-careportal).
 
 Amocer/Remplir vous permet d'enregistrer le changement de site et de la cartouche d'insuline de la pompe.
 
