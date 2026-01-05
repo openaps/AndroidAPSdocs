@@ -7,59 +7,59 @@
 
 (AapsScreens-the-homescreen)=
 
-## The Homescreen
+## Écran d'accueil
 
 ![Homescreen V2.7](../images/Home_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Ceci est le premier écran que vous verrez quand vous ouvrirez **AAPS**, il contient la plupart des informations dont vous aurez besoin au jour le jour.
 
-### Section A - Tabs
+### Section A - Onglets
 
-* Navigate between the various **AAPS** modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Permet de naviguer entre les différents modules **AAPS**.
+* Vous pouvez également changer d'écran en glissant vers la gauche ou la droite.
+* Les onglets affichés ici peuvent être configurés dans le menu [Configuration](#Config-Builder-tab-or-hamburger-menu).
 
 (aaps-screens-profile--target)=
 
-### Section B - Profile & target
+### Section B - Profil & cible
 
-#### Current Profile
+#### Profil actuel
 
-The current profile is displayed in the left bar.
+Le profil actuel est affiché dans la barre de gauche.
 
-Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Un appui court sur le profil permet de voir les détails du profil. Un appui long sur le bouton de profil permet de [changer de profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a remaining duration of 59mn.
-3. Profile switch with a specific percentage of 120%.
-4. Profile switch with a specific percentage of 80% and a remaining duration of 59 mn.
-5. Profile switch with a time shift of -1 hour.
-6. Profile switch with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
+1. Affichage classique avec activation standard du profil.
+2. Changement de profil avec une durée restante de 59mn.
+3. Changement de profil avec un pourcentage spécifique de 120%.
+4. Changement de profil avec un pourcentage spécifique de 80% et une durée restante de 59 mn.
+5. Changement de profil avec un décalage horaire de -1 heure.
+6. Changement de profil avec un pourcentage spécifique de 120%, un décalage horaire d'une heure et une durée restante de 59 mn.
 
-#### Target
+#### Cible
 
 ![Temp target remaining duration](../images/Home2020_TT.png)
 
-Current target blood glucose level is displayed in the right bar.
+La cible de glycémie actuelle est affichée dans la barre de droite.
 
-Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
+Un appui court sur le bouton de cible permet de définir une **[cible temporaire](../DailyLifeWithAaps/TempTargets.md)**.
 
-If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
+Si une cible temporaire est définie, le bouton devient jaune et le temps restant en minutes est affiché entre parenthèses.
 
 (AapsScreens-visualization-of-dynamic-target-adjustment)=
 
-#### Visualization of Dynamic target adjustment
+#### Visualisation de l'ajustement dynamique de la cible
 
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
-When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+Lorsque vous utilisez l'algorithme [SMB](#Config-Builder-aps) et [Autosens](#Open-APS-features-autosens) , **AAPS** peut ajuster dynamiquement votre cible en fonction de la sensibilité.
 
-Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](#Preferences-openaps-smb-settings):
+Activez l'une ou les deux des options suivantes dans [Préférences > OpenAPS SMB](#Preferences-openaps-smb-settings):
 
-     * "sensitivity raises target" and/or 
-     * "resistance lowers target" 
+     * "Sensibilité augmente la cible" et/ou 
+     * "Résistance diminue la cible" 
     
 
 If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
@@ -534,7 +534,7 @@ Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-
 
 ### Careportal - section N
 
-Displays information on:
+Afficher les informations:
 
      * sensor age & level (battery percentage)
      * insulin age & level (units)
