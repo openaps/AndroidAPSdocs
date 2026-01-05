@@ -94,6 +94,11 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_11.png)
 
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
+
 - Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Bu ayarı Açık olarak değiştirirseniz, giriş profili Ayarlanmış profil tarafından otomatik olarak güncellenecek ve etkinleştirilecektir.
   - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
 
@@ -143,6 +148,11 @@ Autotune will then display in Config Builder after you restart AAPS.
 (autotune-run-autotune-with-an-automation-rule)=
 
 ## Otomasyon kuralı ile Otoayar çalıştırma
+
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
 
 İlk adım, otomasyon kuralı için doğru tetikleyiciyi Otoayar tanımlamaktır:
 
