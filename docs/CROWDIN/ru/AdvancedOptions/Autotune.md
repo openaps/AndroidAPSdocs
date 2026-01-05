@@ -94,6 +94,11 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ![Экран Autotune по умолчанию](../images/Autotune/Autotune_11.png)
 
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
+
 - Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Если изменить эту настройку на Включить, профиль ввода будет автоматически обновлен профилем Tuned и активирован.
   - **Будьте внимательны, в течение нескольких следующих дней следите, чтобы после обновления и активации настроенного профиля система заработала лучше по сравнен с профилем без изменений**
 
@@ -143,6 +148,11 @@ Autotune will then display in Config Builder after you restart AAPS.
 (autotune-run-autotune-with-an-automation-rule)=
 
 ## Запустить Autotune с правилом автоматизации
+
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
 
 Первый шаг заключается в определении правильной отправной точки (триггера) для правила автоматизации с автонастройкой:
 
