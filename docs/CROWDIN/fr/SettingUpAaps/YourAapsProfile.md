@@ -321,7 +321,7 @@ See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-Pro
 (your-aaps-profile-clone-profile-switch)=
 ### Clone a Profile switch to a new Profile
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Changement profil](../images/TreatmentsView4.png)
 
 The [Treatments](#aaps-screens-treatments) tab shows all past **Profile Switches**. When going to the **Profile Switch** sub-tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
 
