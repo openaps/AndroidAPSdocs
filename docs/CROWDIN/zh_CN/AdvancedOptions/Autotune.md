@@ -1,10 +1,18 @@
-# Autotune插件使用说明（仅限开发者）
+# How to use Autotune plugin
 
 关于Autotune算法的文档可在[OpenAPS文档](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)中查阅。
 
 Autotune插件是OpenAPS自动调节算法在AAPS中的具体实现。
 
-**目前，Autotune插件仅可在[开发分支（dev branch）](../AdvancedOptions/DevBranch.md)中通过工程模式（Engineering mode）使用。**
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+
+## Show the Autotune plugin
+
+Create an empty file named `enable_autotune` in the `extra` subfolder of your phone AAPS folder.
+
+![Enable Autotune](../images/Autotune/Enable.png)
+
+Autotune will then display in Config Builder after you restart AAPS.
 
 ![Autotune plugin ](../images/Autotune/Autotune_1.png)
 
@@ -86,6 +94,11 @@ Autotune插件是OpenAPS自动调节算法在AAPS中的具体实现。
 
 ![Autotune default screen ](../images/Autotune/Autotune_11.png)
 
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
+
 - Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. 若将此设置切换为"开启"状态，系统将自动使用优化配置文件（Tuned profile）更新输入配置文件，并自动激活更新后的配置。
   - **警告：在随后数日内，您必须对未经修改即更新激活的优化配置文件（Tuned profile）进行持续验证，确保其确实能提升闭环系统运行效果。**
 
@@ -135,6 +148,11 @@ Autotune插件是OpenAPS自动调节算法在AAPS中的具体实现。
 (autotune-run-autotune-with-an-automation-rule)=
 
 ## 通过自动化规则运行Autotune
+
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
 
 首要步骤是为Autotune自动化规则定义正确触发器：
 

@@ -1,10 +1,18 @@
-# Как использовать модуль Autotune (только для ветки разработчиков (dev))
+# How to use Autotune plugin
 
 Documentation about Autotune algorithm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
 Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
-**В настоящее время модуль Autotune доступен только в [ветке dev](../AdvancedOptions/DevBranch.md) и в режиме разработчика.**
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+
+## Show the Autotune plugin
+
+Create an empty file named `enable_autotune` in the `extra` subfolder of your phone AAPS folder.
+
+![Enable Autotune](../images/Autotune/Enable.png)
+
+Autotune will then display in Config Builder after you restart AAPS.
 
 ![Модуль autotune](../images/Autotune/Autotune_1.png)
 
@@ -86,6 +94,11 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
 ![Экран Autotune по умолчанию](../images/Autotune/Autotune_11.png)
 
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
+
 - Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Если изменить эту настройку на Включить, профиль ввода будет автоматически обновлен профилем Tuned и активирован.
   - **Будьте внимательны, в течение нескольких следующих дней следите, чтобы после обновления и активации настроенного профиля система заработала лучше по сравнен с профилем без изменений**
 
@@ -135,6 +148,11 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 (autotune-run-autotune-with-an-automation-rule)=
 
 ## Запустить Autotune с правилом автоматизации
+
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
 
 Первый шаг заключается в определении правильной отправной точки (триггера) для правила автоматизации с автонастройкой:
 

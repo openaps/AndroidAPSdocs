@@ -180,9 +180,10 @@
 * 儲備液位觸發：所有幫浦均可用，且比較 "NOT\_AVAILABLE" 不適用於此觸發，因為值始終填入**AAPS**
 * 幫浦電池電量觸發：支援幫浦可用，且比較 "NOT\_AVAILABLE" 不適用於此觸發，因為值始終填入**AAPS**
 
+(automations-automation-action)=
 ## 動作
 
-![自動化觸發器](../images/automation_actions.png)
+![Automation Actions](../images/automation_actions.png)
 
 **動作：**啟動**臨時目標**
 

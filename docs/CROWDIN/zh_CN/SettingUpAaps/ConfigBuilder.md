@@ -268,6 +268,10 @@
 * 重新发送所有数据。 如果手表在一段时间内未连接，并且您希望将信息推送到手表，这可能会很有帮助。
 * 直接从手机打开手表上的设置。
 
+### Autotune
+
+You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+
 ### 维护
 
 访问此选项卡以导出/导入设置。

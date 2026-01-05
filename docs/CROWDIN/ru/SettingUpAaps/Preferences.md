@@ -424,7 +424,10 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 - Если вы застряли на Цели 1, еще раз проверьте поля с адресом и паролем на наличие опечаток.
 - Оставьте Подключение к websocket включенным (рекомендуется).
 
+(Preferences-nsclient-synchronization)=
 ### Synchronization
+
+![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
 
 Synchronization choices will depend on the way you will want to use **AAPS**.
 

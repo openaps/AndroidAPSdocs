@@ -176,9 +176,10 @@
 * 储药器液位触发器​：全泵型兼容，"NOT_AVAILABLE"比较运算符无效（**AAPS**系统持续更新液位数据）
 * 泵体电池电量触发器​：仅限兼容泵型可用，"NOT_AVAILABLE"比较运算符无效（**AAPS**系统持续记录电量值）。
 
+(automations-automation-action)=
 ## 操作
 
-![自动化触发器](../images/automation_actions.png)
+![Automation Actions](../images/automation_actions.png)
 
 **操作**：启动**临时目标**
 

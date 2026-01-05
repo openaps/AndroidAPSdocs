@@ -5,7 +5,7 @@
 - [3.4](#version3400) 版發佈與文件更新彙總（嚮導、電腦建置版本、組態建置工具）
 - CGM 清單更新。 已移除 Dexcom G5、Tomato、Glimp。
 - [部位輪替介面](#Aapsscreens-site-rotation)
-- [Running Mode](#aaps-screens-running-mode)
+- [Running mode](#AapsScreens-running-mode)
 - [自動調整](../AdvancedOptions/Autotune.md)
 
 ## 2025年12月

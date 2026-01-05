@@ -1,8 +1,8 @@
 # AAPS remote steuern
 Es gibt vier sehr wirkungsvolle Wege, **AAPS** remote zu steuern:
 
-1) [SMS-Befehle](RemoteControl_SMS-Commands) (das Follower-Smartphone kann entweder Android oder iOS nutzen), 2) [AAPSClient](RemoteControl_aapsclient) (das Follower-Smartphone nutzt Android) 3) [Nightscout](RemoteControl_nightscout) (Android, iOS oder ein anderes Gerät/Computer).  
-4) [Smartwatches](RemoteControl_smartwatches) (Android)
+1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower phone is Android) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device).  
+4) [Smartwatches](#RemoteControl_smartwatches) (Android)
 
 Die ersten drei sind meist für Pflegende/Eltern geeignet und Smartwatches sind **zusätzlich** für Erwachsene mit Diabetes sehr hilfreich.
 
@@ -19,7 +19,7 @@ Hierzu gibt es die gesonderte Seite [SMS-Befehle](../RemoteFeatures/SMSCommands.
 
 Der **AAPSClient** sieht **AAPS** sehr ähnlich, und stellt den Eltern/Betreuenden einen Reiter zur Verfügung, auf dem Aktionen remote in **AAPS** ausgeführt werden können:
 
-![NSCLIENT_ 2024-05-17 134512](../images/6c66a27c-21d7-4c43-ac66-001669c0634f.png)
+![NSCLIENT_ 2024-05-17 134512](../images/remote_control_and_following/AAPSClient_main_view.png)
 
 ### Über den AAPSClient und AAPSClient2
 
@@ -94,15 +94,17 @@ Wenn Du Probleme mit **AAPS** v3 hast ('NS Access Token' wird nicht akzeptiert) 
 
 ### AAPSClient-Funktionen sind unter anderem:
 
-| Tab / Hamburger      | Funktionalitäten                                                                                                                                                                               |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Aktionen**-Tab     | - Profilwechsel <br>- Temporäres Ziel<br>- BZ-Test<br>- CGM-Sensor gesetzt<br>- Notiz<br>- Bewegung<br>- Ankündigung<br>- Frage?<br>- Historie |
-| **Nahrung**-Tab      |                                                                                                                                                                                                |
-| **Behandlungen**-Tab | - Prüfen der durchgeführten Behandlungen inkl. des Insulins und der eingegebenen Kohlenhydrate                                                                                                 |
-| **Wartung**-Tab      | - Einstellungen ex- und importieren                                                                                                                                                            |
-| **Profil**-Tab       | - Neues Profil erstellen<br>- Profilwechsel                                                                                                                                              |
+| Tab / Hamburger      | Funktionalitäten                                                                                                                                                                                                                     |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Aktionen**-Tab     | - Profile Switch <br>- Loop Status change <br>- Temp Target<br>- BG Check<br>- CGM Sensor Insert<br>- Note<br>- Exercise<br>- Announcement<br>- Question?<br>- History Browser |
+| **Nahrung**-Tab      |                                                                                                                                                                                                                                      |
+| **Behandlungen**-Tab | - Prüfen der durchgeführten Behandlungen inkl. des Insulins und der eingegebenen Kohlenhydrate                                                                                                                                       |
+| **Wartung**-Tab      | - Einstellungen ex- und importieren                                                                                                                                                                                                  |
+| **Profil**-Tab       | - Neues Profil erstellen<br>- Profilwechsel                                                                                                                                                                                    |
 
-Mit dem **AAPSClient** kann das Elternteil/Betreuende einen Großteil der Anpassungen direkt in **AAPS** (Ausnahme: Bolusabgabe) über das Mobilfunknetz oder Internet remote vornehmen. Die wichtigsten Vorteile des **AAPSClient** sind die Geschwindigkeit und Einfachheit mit der Eltern/Betreuende **AAPS** remote steuern können. Der __AAPSClient__ _kann_ deutlich schneller als die Eingabe von zu authentifizierenden SMS-Befehlen sein. Befehle, die im **AAPSClient** eingegeben werden, werden nach Nightscout hochgeladen.
+Mit dem **AAPSClient** kann das Elternteil/Betreuende einen Großteil der Anpassungen direkt in **AAPS** (Ausnahme: Bolusabgabe) über das Mobilfunknetz oder Internet remote vornehmen. Die wichtigsten Vorteile des **AAPSClient** sind die Geschwindigkeit und Einfachheit mit der Eltern/Betreuende **AAPS** remote steuern können. Der __AAPSClient__ _kann_ deutlich schneller als die Eingabe von zu authentifizierenden SMS-Befehlen sein. Befehle, die im **AAPSClient** eingegeben werden, werden nach Nightscout hochgeladen. In order for the actions taken in **AAPSClient** to be actually actioned in **AAPS**, the NSClient settings must allow to receive such orders. See the [Synchronization section of NSClient preferences](#Preferences-nsclient-synchronization).
+
+
 
 Eine Remote-Steuerung über die **AAPSClient**-App wird nur dann empfohlen, wenn Deine Synchronisation gut funktioniert (_d. h._ Du hast keine unerwünschten Datenänderungen wie z. B. eigenständige Änderungen von TT, TBR usw.) siehe [Versionshinweise für Version 2.8.1.1](#important-hints-2-8-1-1) für weitere Details.
 

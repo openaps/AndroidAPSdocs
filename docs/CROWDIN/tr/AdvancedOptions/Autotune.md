@@ -1,10 +1,18 @@
-# Otoayar eklentisi nasıl kullanılır? (sadece geliştirici sürümünde)
+# How to use Autotune plugin
 
 Documentation about Autotune algorithm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
 Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
-**Currently Autotune Plugin is only available in [dev branch](../AdvancedOptions/DevBranch.md) and with Engineering mode.**
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+
+## Show the Autotune plugin
+
+Create an empty file named `enable_autotune` in the `extra` subfolder of your phone AAPS folder.
+
+![Enable Autotune](../images/Autotune/Enable.png)
+
+Autotune will then display in Config Builder after you restart AAPS.
 
 ![Autotune plugin](../images/Autotune/Autotune_1.png)
 
@@ -86,6 +94,11 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
 ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_11.png)
 
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
+
 - Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Bu ayarı Açık olarak değiştirirseniz, giriş profili Ayarlanmış profil tarafından otomatik olarak güncellenecek ve etkinleştirilecektir.
   - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
 
@@ -135,6 +148,11 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 (autotune-run-autotune-with-an-automation-rule)=
 
 ## Otomasyon kuralı ile Otoayar çalıştırma
+
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
 
 İlk adım, otomasyon kuralı için doğru tetikleyiciyi Otoayar tanımlamaktır:
 

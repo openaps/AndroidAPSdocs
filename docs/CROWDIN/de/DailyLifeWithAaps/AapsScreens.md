@@ -58,8 +58,9 @@ Wenn Du den [SMB-Algorithmus](#Config-Builder-aps) und [Autosens](#Open-APS-feat
 
 Aktiviere eine oder beide der folgenden Optionen in [Einstellungen > OpenAPS SMB Einstellungen](#Preferences-openaps-smb-settings):
 
-* "Sensibilität erhöht den Zielwert" und/oder 
-* "Resistenz senkt Zielwert" 
+     * "sensitivity raises target" and/or 
+     * "resistance lowers target" 
+    
 
 Falls **AAPS** Resistenz oder Sensibilität erkennt, wird das aus dem Profil vorgegebene Ziel angepasst. Falls das Ziel geändert wird, wechselt der Hintergrund der Zielschaltfläche auf grün.
 
@@ -73,17 +74,18 @@ Der neueste Glukosewert Deines CGM wird auf der linken Seite angezeigt.
 
 Die Farbe des Glukosewertes zeigt wie sich der Wert zum definierten [Zielbereich](#Preferences-range-for-visualization) verhält.
 
-* grün = innerhalb des Bereichs
-* rot = unterhalb des Zielbereichs
-* gelb = oberhalb des Zielbereichs 
+     * green = in range
+     * red = below range
+     * yellow = above range 
+    
 
 ![Deltas](../images/Home_Delta.png)
 
 Der Abschnitt in der Mitte zeigt:
 
 1. wie alt der letzte Sensorwert (**CGM**-Wert) in Minuten ist
-2. Änderungen zum letzten Sensorwert: Δ, und dem Durchschnitt der letzten 15 und 40 Minuten (Δ15 und Δ40).  
-    "Lange Deltas" sind der Durchschnitt der vergangenen Deltas und zeigen wie die durchschnittliche Änderung war.
+2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
+  Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
 
 (AapsScreens-loop-status)=
 
@@ -94,7 +96,7 @@ Der Abschnitt in der Mitte zeigt:
 Auf der rechten Seite zeigt ein Symbol den Loop-Status an:
 
 1. Grüner Kreis = Loop läuft
-2. Grüner Kreis mit gepunkteter Linie = [Low Glucose Suspend (LGS)](#objectives-objective6) (dt. Abschalten vor Niedrig)
+2. Purple circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
 3. Roter Kreis = Loop deaktiviert (dauerhaft)
 4. Roter Kreis = Loop ausgesetzt (vorübergehend pausiert, aber Basalinsulin wird weiter abgegeben) - verbleibende Zeit wird unter dem Symbol angezeigt
 5. Grauer Kreis = Pumpe getrennt (vorübergehend gar keine Insulinabgabe) - verbleibende Zeit wird unter dem Symbol angezeigt
@@ -103,9 +105,10 @@ Auf der rechten Seite zeigt ein Symbol den Loop-Status an:
 
 Drücke kurz oder lang auf das Icon um den Dialog zum Wechsel des Loop-Modus (Close loop, Low Glucose Suspend [Reduzierung der Basalrate bei niedrigen Glukosewerten], Open Loop, Abschalten), zum Pausieren / wieder Einschalten des Loop oder zum Trennen / erneuten Verbinden der Pumpe.
 
-* Wenn Du kurz drückst, muss die Auswahl im Loop-Dialog zusätzlich bestätigt werden.
+     * If short press on Loop icon, a validation is required after selection in Loop Dialog
     
-    ![Statusmenü Loop](../images/Home2020_Loop_Dialog.png)
+     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+    
 
 (aaps-screens-bg-warning-sign)=
 
@@ -121,7 +124,8 @@ Das rote Warndreieck signalisiert, dass Du sofort aktiv werden solltest: Du erh�
     :class: note
     Dein Loop ist so lange gestoppt, bis Du das Problem behebst!
 
-![Rotes BG-Warndreieck](../images/bg_warn_red.png)
+    ![Red BG warning](../images/bg_warn_red.png)
+    
 
 Du musst herausfinden, warum Du doppelte Glukosewert-Daten erhältst:
 
@@ -142,7 +146,8 @@ Wenn es jedoch viele Duplikate gibt, könnte es einfacher sein,
 
 Das gelbe Warnsignal weist darauf hin, dass Glukosewert-Daten in unregelmäßigen Zeitintervallen angekommen sind oder einige Glukosewerte fehlen. Beim Tippen auf das Warndreieck wird die Nachricht „Verwendete Daten neu berechnet“ angezeigt.
 
-![Gelbes BG-Warndreieck](../images/bg_warn_yellow.png)
+    ![Yellow BG warning](../images/bg_warn_yellow.png)
+    
 
 Normalerweise musst Du in diesem Falle nichts tun. Der closed loop funktioniert weiter!
 
@@ -167,18 +172,18 @@ Ein Symbol mit einem Kindergesicht oben rechts in diesem Abschnitt zeigt, dass D
 ![Abschnitt D](../images/Home2020_TBR.png)
 
 1. **Spritze**: Insulin an Bord (IOB) - Menge an aktivem Insulin im Körper  
-    Das Insulin on Board wäre Null, wenn nur Deine Standardbasalrate liefe und kein Insulin mehr aus einem früheren Bolus wirken würde.
-    
-    * IOB kann negativ sein, wenn zuvor die Basalrate reduziert worden ist.
-    * Ein Klick auf das Symbol zeigt die Aufteilung von Bolus und Basal-Insulin.
+  Das Insulin on Board wäre Null, wenn nur Deine Standardbasalrate liefe und kein Insulin mehr aus einem früheren Bolus wirken würde.
+  
+  * IOB kann negativ sein, wenn zuvor die Basalrate reduziert worden ist.
+  * Ein Klick auf das Symbol zeigt die Aufteilung von Bolus und Basal-Insulin.
 
-2. **Getreideähre**: [Kohlenhydrate an Bord (COB)](../DailyLifeWithAaps/CobCalculation.md) - bisher noch nicht verstoffwechselte Kohlenhydrate. Das Symbol pulsiert Rot, wenn Kohlenhydrate genommen werden müssen(siehe [unten](#aaps-screens-carbs-required))
+2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
 
 3. **Lila Linie**: current basal rate. Das Symbol verändert sich, um eine temporäre Basalrate zu zeigen (Standard ist 100%) 
-    * Klicke auf das Icon um Details zur Basalrate und einer eventuellen temporären Basalrate (inkl. verbleibende Dauer) angezeigt zu bekommen.
+  * Klicke auf das Icon um Details zur Basalrate und einer eventuellen temporären Basalrate (inkl. verbleibende Dauer) angezeigt zu bekommen.
 4. **Pfeile nach oben & unten**: zeigen den aktuellen [Autosens](#Open-APS-features-autosens)-Status bzw. den Status des [dynamischen ISF](#Open-APS-features-DynamicISF) (aktiviert oder deaktiviert) an. In diesem Abschnitt können mehrere Werte angezeigt werden: 
-    * AS: Autosens-Wert. Wird auch dann angezeigt, wenn Autosens deaktiviert ist (rein informatorisch). Wird auch angezeigt, wenn DynISF aktiviert ist und ohne Wirkung ist.
-    * Alg: Wert des dynamischen ISF (basierend auf TDD). Mehr Informationen dazu gibt es in den letzten Zeilen der [Dynamischer ISF (DynISF)](#Open-APS-features-DynamicISF)-Seite.
+  * AS: Autosens-Wert. Wird auch dann angezeigt, wenn Autosens deaktiviert ist (rein informatorisch). Wird auch angezeigt, wenn DynISF aktiviert ist und ohne Wirkung ist.
+  * Alg: Wert des dynamischen ISF (basierend auf TDD). Mehr Informationen dazu gibt es in den letzten Zeilen der [Dynamischer ISF (DynISF)](#Open-APS-features-DynamicISF)-Seite.
 
 (aaps-screens-carbs-required)=
 
@@ -222,58 +227,66 @@ Abhängig von der verwendeten Pumpe, kann es sein, dass Du nicht alle diese Symb
 
 Die Grafik zeigt Deinen Blutzucker (BZ), so wie er von Deinem Sensor (CGM) gemessen wurde.
 
-Notizen, die auf der Registerkarte "Aktion" eingegeben werden, wie z. B. die Kalibrierungen nach Messung am Finger, die Kohlenhydrat Einträge sowie die Profilwechsel werden hier angezeigt.
-
 Nutze das Menü oben links im Diagramm oder drücke lange irgendwo im Diagramm, um den dargestellten Zeitraum zu ändern. Du kannst zwischen 6, 12, 18 oder 24 Stunden auswählen.
 
 Der grüne Bereich spiegelt den Zielbereich wider.
 
-Blaue Dreiecke zeigen [SMB](#Open-APS-features-super-micro-bolus-smb) - wenn sie unter [Einstellungen > OpenAPS SMB](#Preferences-openaps-smb-settings) aktiviert sind.
+This information is also shown on this graph :
+
+* Boluses: blue triangle on the BG curve and insulin amount
+* Carbs entries: orange triangle on the BG curve and carb amount
+* Target as defined in the profile or modified by temporary target: green line
+* Profile switches: star at the top of the graph
+* Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
+* [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
 
 (AapsScreens-activate-optional-information)=
 
 #### Aktiviere optionale Informationen
 
-Im Hauptdiagramm kannst Du einige optionale Informationen anschalten:
+Using the top right arrow, you can switch on these optional information:
 
-* Predictions (Vorhersagen)
-* Behandlungen
-* Basal
-* Aktivität - Insulin Aktivitätskurve
+* Predictions (see below)
+* Treatments : notes entered in action tab: grey, orange or red dot depending on the severity, as well as fingerstick calibrations: red dot
+* Basal 
+  * As defined in the profile: blue dotted line at the bottom of the graph
+  * Actually delivered basal: blue plain line with blue background
+* Activity - insulin activity curve: yellow line
 
-Um diese Informationen anzuzeigen, klicke auf der rechten Seite des Hauptdiagramms auf das Dreieck. Für das Haupt-Diagramm gibt es nur die vier Optionen oberhalb der Zeile "Diagramm 1 2 3 4".
+To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
 
-![Einstellungen des Hauptdiagramms](../images/Home2020_MainGraphSetting.png)
+     ![Main graph setting](../images/Home2020_MainGraphSetting.png)
+    
 
 (aaps-screens-prediction-lines)=
 
 #### Vorhersage Kurven
 
 * **Orangene** Linie: [COB](CobCalculation) (carbs on board - aktive Kohlenhydrate) (Die Farbe Orange wird generell genutzt, um COB und Kohlenhydrate darzustellen.)
-    
-    Die Prognosekurve zeigt, wohin sich der Glukosewert (nicht die COB selbst!) auf der Grundlage der aktuellen **Profil**-Einstellungen und unter der Annahme, dass die Abweichungen aufgrund der Kohlenhydratresorption konstant bleiben, entwickeln wird. Diese Linie erscheint nur, wenn es bekannte COB gibt.
+  
+  Die Prognosekurve zeigt, wohin sich der Glukosewert (nicht die COB selbst!) auf der Grundlage der aktuellen **Profil**-Einstellungen und unter der Annahme, dass die Abweichungen aufgrund der Kohlenhydratresorption konstant bleiben, entwickeln wird. Diese Linie erscheint nur, wenn es bekannte COB gibt.
 
 * **Dunkelblaue** Linie: IOB (insulin on board - aktives Insulin) (Die Farbe Dunkelblau wird generell genutzt, um IOB und Insulin darzustellen.]
-    
-    Die Prognoselinie zeigt, was passieren würde, wenn nur der Einfluss des Insulins berücksichtigt wird. Zum Beispiel, wenn Du Insulin abgegeben hast und dann keine Kohlenhydrate zu Dir genommen hast.
+  
+  Die Prognoselinie zeigt, was passieren würde, wenn nur der Einfluss des Insulins berücksichtigt wird. Zum Beispiel, wenn Du Insulin abgegeben hast und dann keine Kohlenhydrate zu Dir genommen hast.
 
 * **Hellblaue** Linie: zero-temp (BZ-Vorhersage bei Annahme, dass eine temporäre Basalrate mit 0% gesetzt wäre)
-    
-    Die Prognoselinie (Vorhersagelinie) zeigt, wie sich der Glukosewert-Verlauf ändern würde, wenn die Pumpe die Insulinabgabe komplett stoppen würde (0 % TBR).
-    
-    *Diese Zeile ist nur zu sehen, wenn der [SMB](#Config-Builder-aps)-Algorithmus genutzt wird.*
+  
+  Die Prognoselinie (Vorhersagelinie) zeigt, wie sich der Glukosewert-Verlauf ändern würde, wenn die Pumpe die Insulinabgabe komplett stoppen würde (0 % TBR).
+  
+  *Diese Zeile ist nur zu sehen, wenn der [SMB](#Config-Builder-aps)-Algorithmus genutzt wird.*
 
 * **Dunkelgelbe** Linie: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (unangekündigte Mahlzeiten)
-    
-    Unannounced meals (nicht angekündigte Mahlzeiten) bedeutet, dass ein signifikanter Anstieg des Glukosespiegels durch Mahlzeiten, Adrenalin oder andere Einflüsse festgestellt wird. Die Prognoselinie ähnelt der **orangenen COB-Linie**, geht aber davon aus, dass die Abweichungen mit konstanter Rate abnehmen werden (durch Verlängerung der aktuellen Reduktionsrate).
-    
-    *Diese Zeile ist nur zu sehen, wenn der [SMB](#Config-Builder-aps)-Algorithmus genutzt wird.*
+  
+  Unannounced meals (nicht angekündigte Mahlzeiten) bedeutet, dass ein signifikanter Anstieg des Glukosespiegels durch Mahlzeiten, Adrenalin oder andere Einflüsse festgestellt wird. Die Prognoselinie ähnelt der **orangenen COB-Linie**, geht aber davon aus, dass die Abweichungen mit konstanter Rate abnehmen werden (durch Verlängerung der aktuellen Reduktionsrate).
+  
+  *Diese Zeile ist nur zu sehen, wenn der [SMB](#Config-Builder-aps)-Algorithmus genutzt wird.*
 
 * **Dunkelorange** Linie: COB (beschleunigte Kohlenhydratabsorption)
-    
-    Ähnlich wie COB, aber unter Annahme einer festen Kohlenhydrat-Absorptionsrate von 10 mg/dL/5m (-0,555 mmol/l/5m). Veraltet und nur begrenzt nützlich.
-    
-    *Diese Linie ist nur sichtbar, wenn der ältere [AMA](#Config-Builder-aps)-Algorithmus genutzt wird.*
+  
+  Ähnlich wie COB, aber unter Annahme einer festen Kohlenhydrat-Absorptionsrate von 10 mg/dL/5m (-0,555 mmol/l/5m). Veraltet und nur begrenzt nützlich.
+  
+  *Diese Linie ist nur sichtbar, wenn der ältere [AMA](#Config-Builder-aps)-Algorithmus genutzt wird.*
 
 Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselinien oder in der Nähe der Linie, die Annahmen macht, die Deiner Situation am nächsten kommen, liegen.
 
@@ -514,8 +527,8 @@ Button zum Starten oder Abbrechen einer temporären Basalrate. Beachte, dass sic
 Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
 
 * Diese Option ist nur für Dana RS und Insight Pumpen verfügbar. 
-    * Der Closed Loop wird automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt.
-    * Bitte lies, bevor Du die Option nutzt, die [Details](../DailyLifeWithAaps/ExtendedCarbs.md) dazu durch.
+  * Der Closed Loop wird automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt.
+  * Bitte lies, bevor Du die Option nutzt, die [Details](../DailyLifeWithAaps/ExtendedCarbs.md) dazu durch.
 
 (aaps-screens-careportal)=
 
@@ -523,10 +536,11 @@ Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-
 
 Zeigt Informationen zu:
 
-* Sensoralter & -level (Batterieladestand in %)
-* Insulinalter & Reservoirstand (Einheiten)
-* Kanülenalter
-* Alter & Ladestand (in %) der Pumpenbatterie
+     * sensor age & level (battery percentage)
+     * insulin age & level (units)
+     * cannula age
+     * pump battery age & level (percentage
+    
 
 Wenn die **Darstellung in niedriger Auflösung** verwendet wird ([Einstellungen > Allgemein > Erscheinungsbild](#Preferences-skin)), werden weniger Informationen angezeigt.
 
@@ -675,6 +689,7 @@ Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und A
 * [Temporäres Ziel](../DailyLifeWithAaps/TempTargets.md)
 * [Profilwechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 * Careportal: Notizen aus dem Aktionen-Reiter und Notizen, die in Dialogen eingegeben wurden
+* Running mode : history of loop status
 * Benutzereintrag: Andere Notizen, die nicht an Nightscout gesendet werden
 
 In der letzten Spalte wird die Datenquelle für jede Zeile in Blau angezeigt. Das kann sein:
@@ -704,8 +719,8 @@ Auf dem Reiter „Behandlungen“ können fehlerhafte Kohlenhydrat-Einträge kor
 3. Lösche den Eintrag mit der fehlerhaften KH-Menge. (Die aktuellen AAPS-Versionen haben das Papierkorb-Symbol auf dem Behandlungen-Tab oben rechts. Tippe auf das Papierkorb-Symbol und wähle die zu entfernenden Zeilen aus und tippe dann erneut auf das Papierkorb-Symbol um das Löschen abzuschliessen.)
 4. Stelle sicher, dass die KH erfolgreich gelöscht wurden, indem Du COB auf dem Startbildschirm überprüfst.
 5. Mache das gleiche für IOB falls bei Dir im Tab 'Behandlungen' KH und Insulin zusammen in einer Zeile angezeigt werden.
-    
-    → Falls die KH nicht wie vorgesehen gelöscht werden und Du dennoch zusätzliche Kohlenhydrate eingibst, wird mit einem zu hohen COB gerechnet und dies kann zu überhöhter Insulinabgabe führen.
+  
+  → Falls die KH nicht wie vorgesehen gelöscht werden und Du dennoch zusätzliche Kohlenhydrate eingibst, wird mit einem zu hohen COB gerechnet und dies kann zu überhöhter Insulinabgabe führen.
 
 6. Gib die korrekte Kohlenhydratmenge über den Kohlenhydrate-Button auf der Startseite ein und achte dabei auf die Auswahl des richtigen Zeitpunkts.
 
@@ -739,6 +754,14 @@ Die Historie der Profilwechsel ist hier zu sehen. Hier können pro Profilwechsel
 Das Löschen der Einträge wirkt sich nur auf die Nightscout-Berichte aus und niemals das aktuelle Profil verändern.
 
 Mit dem Befehl **Klonen** in Zeile **1** kannst Du eine Kopie eines **Profilwechsels** erstellen. Mehr dazu erfährst Du im Abschnitt [Dein AAPS-Profil > Deine Profile verwalten](#your-aaps-profile-clone-profile-switch).
+
+(AapsScreens-running-mode)=
+
+### Running mode
+
+![Running mode](../images/TreatmentsView6.png)
+
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
 
 ### Careportal (Behandlungen)
 

@@ -378,7 +378,7 @@ Plus tard, pour la boucle fermée, vous n'aurez généralement qu'une valeur uni
 
 Saisissez les valeurs cibles :
 
-![Target](../images/setup-wizard/Wizard22.png)
+![Cible](../images/setup-wizard/Wizard22.png)
 
 Enregistrez le profil en cliquant sur "ENREGISTRER" :
 

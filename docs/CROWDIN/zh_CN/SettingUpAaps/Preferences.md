@@ -423,7 +423,10 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 - 如果您在目标1中遇到了问题，请仔细检查此处是否有拼写错误。
 - 保持启用Websockets连接（推荐）。
 
+(Preferences-nsclient-synchronization)=
 ### 同步
+
+![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
 
 同步选项将取决于您希望使用**AAPS**的方式。
 
