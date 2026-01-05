@@ -94,6 +94,11 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ![Autotune Standardbildschirm](../images/Autotune/Autotune_11.png)
 
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
+
 - Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Wenn Du diese Einstellung auf AN änderst, wird in einer Automatisierungsregel das Eingabeprofil automatisch durch das berechnete Profil aktualisiert und anschliessend darauf gewechselt.
   - **Sei vorsichtig und prüfe in den kommenden Tagen sehr genau, ob sich das Loop-Verhalten nach der Anpassung und Aktivierung des Profils verbessert.**
 
@@ -143,6 +148,11 @@ Autotune will then display in Config Builder after you restart AAPS.
 (autotune-run-autotune-with-an-automation-rule)=
 
 ## Autotune mit einer Automatisierungsregel starten
+
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
 
 Der erste Schritt besteht darin, den richtigen Auslöser für eine Automatisierungsregel mit Autotune zu definieren:
 
