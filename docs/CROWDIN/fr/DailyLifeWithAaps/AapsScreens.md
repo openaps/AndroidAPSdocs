@@ -9,7 +9,7 @@
 
 ## Écran d'accueil
 
-![Homescreen V2.7](../images/Home_Homescreen.png)
+![Écran d'accueil V2.7](../images/Home_Homescreen.png)
 
 Ceci est le premier écran que vous verrez quand vous ouvrirez **AAPS**, il contient la plupart des informations dont vous aurez besoin au jour le jour.
 
@@ -29,7 +29,7 @@ Le profil actuel est affiché dans la barre de gauche.
 
 Un appui court sur le profil permet de voir les détails du profil. Un appui long sur le bouton de profil permet de [changer de profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+![Durée restante du Changement de profil](../images/Home2020_ProfileSwitch.png)
 
 1. Affichage classique avec activation standard du profil.
 2. Changement de profil avec une durée restante de 59mn.
@@ -40,7 +40,7 @@ Un appui court sur le profil permet de voir les détails du profil. Un appui lon
 
 #### Cible
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Durée restante de la Cible temporaire](../images/Home2020_TT.png)
 
 La cible de glycémie actuelle est affichée dans la barre de droite.
 
@@ -52,7 +52,7 @@ Si une cible temporaire est définie, le bouton devient jaune et le temps restan
 
 #### Visualisation de l'ajustement dynamique de la cible
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+![Visualisation de l'ajustement dynamique de la cible](../images/Home2020_DynamicTargetAdjustment.png)
 
 Lorsque vous utilisez l'algorithme [SMB](#Config-Builder-aps) et [Autosens](#Open-APS-features-autosens) , **AAPS** peut ajuster dynamiquement votre cible en fonction de la sensibilité.
 
@@ -62,48 +62,48 @@ Activez l'une ou les deux des options suivantes dans [Préférences > OpenAPS SM
      * "Résistance diminue la cible" 
     
 
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
+Si **AAPS** détecte une résistance ou une sensibilité, la cible change en fonction de ce qui est défini dans le profil. Lorsqu'il modifie la cible glycémique, l'arrière-plan passe en vert.
 
 (AapsScreens-section-c-bg-loop-status)=
 
-### Section C - BG & loop status
+### Section C - Gly & état de la boucle
 
-#### Current blood glucose
+#### Glycémie actuelle
 
-The latest blood glucose reading from your CGM is shown on the left side.
+La dernière glycémie reçue de votre MGC est affichée sur le côté gauche.
 
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
+La couleur de la glycémie reflète sa position par rapport à la [fourchette](#Preferences-range-for-visualization) définie.
 
-     * green = in range
-     * red = below range
-     * yellow = above range 
+     * Vert = dans la plage
+     * Rouge = au-dessous de la plage
+     * Jaune = au-dessus de la plage 
     
 
 ![Deltas](../images/Home_Delta.png)
 
-The blocks in the middle shows:
+Les zones du milieu montrent :
 
-1. how many minutes since last **CGM** reading
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-  Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
+1. combien de minutes depuis la dernière valeur **MGC**
+2. différences avec la dernière valeur : Δ, et variation moyenne des 15 et 40 dernières minutes (Δ15 and Δ40).  
+  Les deltas longs sont calculés comme une moyenne des derniers deltas, indiquant ainsi la variation moyenne de la glycémie.
 
 (AapsScreens-loop-status)=
 
-#### Loop status
+#### État de la boucle
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![État de la boucle](../images/Home2020_LoopStatus.png)
 
-On the right side, an icon shows the loop status:
+Sur le côté droit, une icône montre le statut de la boucle :
 
-1. Green circle = loop running
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
-3. Red circle = loop disabled (not working permanently)
-4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-6. Orange circle = super bolus running - remaining time is shown below icon
-7. Blue circle with dotted line = open loop
+1. Cercle vert = boucle fermée en cours d'exécution
+2. Cercle violet avec ligne pointillée = [arrêt glycémie basse (AGB)](#objectives-objective6)
+3. Cercle rouge = boucle désactivée (ne fonctionne pas de façon permanente)
+4. Cercle rouge = boucle suspendue (suspension temporaire, mais l'insuline basale sera délivrée) - le temps restant est affiché sous l'icône
+5. Cercle gris = pompe déconnectée (temporairement aucune insuline n'est délivrée) - le temps restant est affiché sous l'icône
+6. Cercle orange = super bolus en cours - le temps restant est affiché sous l'icône
+7. Cercle bleu avec pointillés = boucle ouverte
 
-Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
+Un appui court ou long sur l'icône de la boucle permet d'ouvrir une boite de dialogue pour changer la boucle (Fermée, Mode Arrêt Glycémie Basse, Ouverte), suspendre/réactiver la boucle ou déconnecter/reconnecter la pompe.
 
      * If short press on Loop icon, a validation is required after selection in Loop Dialog
     
@@ -112,56 +112,56 @@ Short press or Long press the icon to open the Loop dialog to switch loop mode (
 
 (aaps-screens-bg-warning-sign)=
 
-#### BG warning sign
+#### Avertissement Glycémie
 
-If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
+Si pour une raison quelconque, il y a un problème avec les glycémies reçues par **AAPS**, vous verrez un triangle d'avertissement à côté de la glycémie sur l'écran principal.
 
-##### Red warning sign: Duplicate BG data
+##### Signe d'alerte rouge : données Gly dupliquées
 
-The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
+Le triangle rouge nécessite une action de votre part immédiate : vous recevez des **glycémies en double**, ce qui empêche la boucle de faire son travail correctement. Par conséquent, votre boucle est désactivée jusqu'à ce que ce problème soit résolu.
 
-    {admonition} Your loop is not running
-    :class: note
-    Your loop is not running until you solve this issue !
+    {admonition} Votre boucle ne marche pas
+     :class: note
+     Votre boucle ne marche pas tant que vous ne résolvez pas ce problème !
 
     ![Red BG warning](../images/bg_warn_red.png)
     
 
 Vous devez savoir pourquoi vous avez des Gly dupliquées :
 
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (Pour heroku les [détails peuvent être trouvés ici](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In **AAPS**, go to [Preferences > NSClient](#Preferences-nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
+* Est-ce que la connexion avec Dexcom (Dexcom Bridge) est activée sur votre instance Nightscout ? Désactivez cette connexion en allant dans l'interface d'administration de votre instance Nightscout, éditez la variable "ENABLED" et retirez la partie "bridge" à cet endroit. (Pour heroku les [détails peuvent être trouvés ici](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Y a-t-il plusieurs sources qui envoient votre glycémie vers Nightscout ? Si vous utilisez l'application BYODA, activez l'envoi des données vers Nightscout dans **AAPS** mais ne l'activez pas dans xDrip+, si vous l'utilisez.
+* Avez-vous des suiveurs qui pourraient recevoir votre glycémie mais aussi la renvoyer vers votre site Nightscout ?
+* En dernier recours : Dans **AAPS**, allez dans [Préférences > NSClient](#Preferences-nsclient), puis dans les paramètres de synchronisation, désactivez l'option "Accepter les données MGC de NS".
 
-To remove the warning immediately and get to loop running again, you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+Pour faire disparaitre cette alerte immédiatement, vous devez supprimer manuellement quelques entrées dans l'onglet Dexcom/xDrip+.
 
 Cependant, quand il y a beaucoup de doublons, il peut être plus facile de
 
-* [backup your settings](../Maintenance/ExportImportSettings.md),
+* [sauvegarder vos paramètres](../Maintenance/ExportImportSettings.md),
 * réinitialiser votre base de données dans le menu de maintenance et
-* [import your settings](../Maintenance/ExportImportSettings.md) again
+* [réimporter vos paramètres](../Maintenance/ExportImportSettings.md)
 
 ##### Signe d'alerte jaune
 
-The yellow warning signal is indicating that your BG arrived in irregular time intervals or that some BGs are missing. When pressing the sign, the message indicates “Recalculated data used”.
+Le triangle d'alerte jaune indique que vos glycémies arrivent avec des intervalles de temps irréguliers ou qu'il manque des mesures. Lorsque vous appuyez sur le triangle, le message indique « Données recalculées utilisées ».
 
     ![Yellow BG warning](../images/bg_warn_yellow.png)
     
 
 Habituellement, vous n'avez rien à faire. La boucle fermée va continuer à fonctionner !
 
-As a sensor change is interrupting the constant flow of BG data, a yellow warning sign after sensor change is normal and nothing to worry about.
+Étant donné qu'un changement de capteur interrompt le flux régulier des glycémies, un triangle d'avertissement jaune après le changement de capteur est normal et ne doit pas vous inquiéter.
 
-Special note for Libre users:
+Note pour les utilisateurs du Freestyle libre :
 
 * Chaque capteur FSL glisse d'une ou deux minutes toutes les quelques heures, ce qui signifie que vous n’obtenez jamais un flux parfaitement régulier de glycémie.
-* Also, jumpy readings interrupt the continuous flow.
-* Therefore, the yellow warning sign will be 'always on' for Libre users.
+* En outre, des sauts de lectures interrompent le flux régulier.
+* Par conséquent, le triangle d'avertissement jaune sera 'toujours visible' pour les utilisateurs du FreeStyle Libre.
 
 *Note*: Up to 30h hours are taken into accord for **AAPS** calculations. Donc, même après avoir résolu la cause racine, cela peut prendre environ 30 heures pour que le triangle jaune disparaisse après le dernier interval irrégulier.
 
-#### Simple mode
+#### Mode simple
 
 An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
 
@@ -179,7 +179,7 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
 
-3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%) 
+3. **Ligne violette**: basale actuelle. L'icône change pour montrer les taux de basale temporaires (ligne plate à 100%) 
   * Appuyez sur l'icône pour voir le débit de basal du profil et les détails de n'importe quel basal temporaire (y compris la durée restante)
 4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
   * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
@@ -193,7 +193,7 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 Des suggestions de glucides sont données lorsque l'algorithme détecte que des glucides supplémentaires sont nécessaires.
 
-This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
+Cela se produit quand l'algorithme oref pense qu'il ne suffira pas de mettre la basale à zéro et que vous aurez besoin de vous resucrer.
 
 Les notifications de glucides sont beaucoup plus sophistiquées que celles de l'Assistant bolus. Vous pouvez voir la suggestion des glucides alors que l'Assistant bolus ne montre pas les glucides manquants.
 
@@ -215,9 +215,9 @@ Si le seuil d'alerte est dépassé, les valeurs seront affichées en jaune.
 
 Si le seuil critique est dépassé, les valeurs seront affichées en rouge.
 
-Settings can be changed in [Preferences > Overview > Status lights](#Preferences-status-lights).
+Les paramètres peuvent être modifiés dans [Préférences > Aperçu > Voyants d'état](#Preferences-status-lights).
 
-Depending on the pump you use, you may not have all of these icons.
+Selon la pompe que vous utilisez, il se peut que vous n'ayez pas toutes ces icônes.
 
 (aaps-screens-main-graph)=
 
@@ -225,7 +225,7 @@ Depending on the pump you use, you may not have all of these icons.
 
 ![Section F](../images/Home2020_MainGraph.png)
 
-The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
+Le graphique montre votre glycémie telle qu'elle est lue par votre capteur de glycémie (MGC).
 
 Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
 
@@ -253,7 +253,7 @@ Using the top right arrow, you can switch on these optional information:
   * Actually delivered basal: blue plain line with blue background
 * Activity - insulin activity curve: yellow line
 
-To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
+Pour afficher ces informations, cliquez sur le triangle à droite du graphique principal. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
 
      ![Main graph setting](../images/Home2020_MainGraphSetting.png)
     
@@ -262,31 +262,31 @@ To show this information, click the triangle on the right side of the main graph
 
 #### Lignes de prédiction
 
-* **Orange** line: [COB](CobCalculation) (color is used generally to represent COB and carbs)
+* Ligne **orange** : [Glucides Actifs (GA)](CobCalculation) (cette couleur est généralement utilisée pour représenter les Glucides et GA)
   
-  This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. Cette ligne n'apparaît que s'il y a des GA connus.
+  Cette ligne de prédiction montre comment votre glycémie (et pas les GA eux-mêmes) devrait évoluer sur la base de votre **Profil** actuel, en supposant que les déviations liées à l'absorption des glucides restent constantes. Cette ligne n'apparaît que s'il y a des GA connus.
 
-* **Dark blue** line: IOB (color is used generally to represent IOB and insulin)
+* Ligne **bleu foncé** : Insuline Active (IA) (cette couleur est généralement utilisée pour représenter l'insuline)
   
-  This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+  Cette ligne de prédiction montre ce qui pourrait arriver avec uniquement l'action de l'Insuline. Par exemple si vous avez injecté de l'insuline mais que vous n'avez pas mangé de glucides.
 
 * Ligne **bleu clair** ligne : zéro-temp (glycémie prévisionnelle si un débit de base temporaire à 0% était défini)
   
-  This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+  Cette ligne de prédiction montre comment la glycémie évoluerait si la pompe arrêtait toute injection d'insuline (DBT 0%).
   
-  *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+  *Cette ligne n'apparaît que lorsque l'algorithme [SMB](#Config-Builder-aps) est utilisé.*
 
-* **Dark yellow** line: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (un-announced meals)
+* Ligne **jaune foncé** : [RNS](#SensitivityDetectionAndCob-sensitivity-oref1) (Repas non signalés)
   
-  Les Repas Non Signalés signifient qu'une augmentation significative de la glycémie liée aux repas, à l'adrénaline ou à d'autres facteurs est détectée. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+  Les Repas Non Signalés signifient qu'une augmentation significative de la glycémie liée aux repas, à l'adrénaline ou à d'autres facteurs est détectée. Cette ligne de prédiction est similaire à la ligne **orange des GA**, mais elle suppose que les déviations diminueront de façon constante (en extrapolant le taux de diminution actuel).
   
-  *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+  *Cette ligne n'apparaît que lorsque l'algorithme [SMB](#Config-Builder-aps) est utilisé.*
 
 * **Ligne orange foncé** : aGA (absorption accélérée des glucides)
   
   Similaire à GA, mais en supposant un taux d'absorption de glucides statique de 10 mg/dL/5m (-0,555 mmol/l/5m). Obsolète et d'une utilité limitée.
   
-  *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
+  *Cette ligne n'apparaît que lorsque l'ancien algorithme [AMA](#Config-Builder-aps) est utilisé.*
 
 Généralement votre courbe de glycémie réelle finira au milieu de ces lignes, ou proche de la ligne qui représente le mieux votre situation réelle.
 
@@ -296,7 +296,7 @@ Une ligne **bleue continue** indique le débit de basal de votre pompe et reflè
 
 La ligne **bleue pointillée** est ce qu'aurait dû être le débit de basal s'il n'y avait pas d'ajustements de débit de basal temporaire (DBT).
 
-When the standard basal rate is given, the area under the curve is shown in dark blue. When the basal rate is temporarily adjusted (increased or decreased), the area under the curve is shown in light blue.
+Quand le débit de basal standard est donné, la zone sous la courbe est affichée en bleu foncé. Quand le débit de basal est temporairement ajusté (augmenté ou diminué), la zone sous la courbe est affichée en bleu clair.
 
 #### Activité
 
@@ -310,16 +310,16 @@ Elle indique la capacité de l'insuline présente dans votre corps à faire bais
 
 Vous pouvez activer jusqu'à quatre graphiques supplémentaires en dessous du graphique principal. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
 
-To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
+Pour ouvrir les paramètres des graphiques supplémentaires, cliquez sur le triangle sur la droite du [graphique principal](#aaps-screens-main-graph) et faites défiler vers le bas.
 
 ![Paramètres graphiques additionnels](../images/Home2020_AdditionalGraphSetting.png)
 
 To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
 
-Most users find the following configuration of additional graphs to be adequate :
+La plupart des utilisateurs apprécient la configuration suivante pour les graphiques supplémentaires :
 
 * Graph 1 with IOB, COB, Sensitivity change
-* Graph 2 with Deviations and BGI.
+* Graphique 2 avec Déviations et Impact glycémique.
 
 #### Insuline absolue
 
@@ -329,29 +329,29 @@ Insuline Active incluant les bolus **et la basal**.
 
 Affiche la quantité d'insuline que vous avez à chaque instant (= insuline active dans votre corps). Il inclut l'insuline des bolus et des débits de basal temporaires, (**mais exclut les débits de basal intégrés dans votre profil**).
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+Dans l'hypothèse où il n'y aurait eu aucun [SMB](#Open-APS-features-super-micro-bolus-smb), bolus ni débit basal temporaire pendant toute la durée d'action de l'insuline (DAI), l'Insuline Active serait à zéro.
 
 L'IA peut être négative si vous n'avez pas de bolus restants et et que vous avez eu une zéro/faible basal temp pendant longtemps.
 
-Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/YourAapsProfile.md).
+La diminution (absorption) de l'insuline active est fonction des [paramètres de DAI et d'insuline du profil](../SettingUpAaps/YourAapsProfile.md).
 
 #### Glucides actifs
 
 Affiche la quantité de glucides que vous avez à chaque instant (= glucides actifs dans votre corps, non encore assimilés).
 
-Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
+La diminution dépend des [écarts que l'algorithme détecte](../DailyLifeWithAaps/CobCalculation.md).
 
 S'il détecte une absorption plus élevée de glucides que prévu, de l'insuline sera injectée, ce qui augmentera l'IA (plus ou moins, selon vos paramètres de sécurité).
 
-#### Sensitivity change
+#### AutoSens
 
-Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
+Affiche la sensibilité détectée par [Autosens](#Open-APS-features-autosens).
 
 C'est le résultat d'un calcul de la sensibilité à l'insuline suite à de l'exercice, aux hormones, etc.
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Avant d'atteindre cet objectif, la ligne sur le graphique est affichée pour information seulement.
 
-### Variable sensitivity
+### SI variable
 
 Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
 
@@ -363,19 +363,19 @@ This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartw
 
 #### Déviations
 
-* **Grey** bars show a deviation due to carbs. 
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
-* **Yellow** bars show a deviation due to UAM.
-* **Black** bars show small deviations not taken into account for sensitivity
+* Les barres **grises** montrent une déviation dûe aux glucides. 
+* Les barres **vertes** montrent que la glycémie est supérieure à ce qu'attendait l'algorithme. Les barres vertes sont utilisées par [Autosens](#Open-APS-features-autosens) pour augmenter la résistance.
+* Les barres **rouges** montrent que la glycémie est inférieure à ce qu'attendait l'algorithme. Les barres rouges sont utilisées par [Autosens](#Open-APS-features-autosens) pour augmenter la sensibilité.
+* Les barres **jaunes** montrent une déviation due aux RNS.
+* Les barres **noires** montrent de petites déviations non prises en compte pour la sensibilité.
 
 #### Blood Glucose Impact
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+Cette ligne montre à quel point la glycémie devrait augmenter ou diminuer en prenant seulement en compte l’activité de l’insuline.
 
 ![Boutons de l'écran d'accueil](../images/Screenshots_DEV_BGI.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are greater than the BGI line, indicating that BG is rising. Later, during the hours marked **2**, BGI and DEV are pretty much in line, indicating that BG is stable.
+Cette ligne forme une bonne combinaison à afficher avec les barres de déviation. Elles partagent la même échelle, mais c'est une échelle différente de celle des autres données additionnelles, c'est donc une bonne idée de les afficher sur un graphique séparé, comme montré ci-dessus. Comparer la ligne d'IG et les barres de déviation est une autre façon de comprendre comment la **glycémie** fluctue. Ici, au moment marqué **1**, les barres de déviation sont plus hautes que la ligne IG, indiquant que la glycémie monte. Plus tard, au cours des heures marquées **2**, IG et DEV sont à peu près alignés, indiquant que la glycémie est stable.
 
 ### Section H - Boutons
 
@@ -716,7 +716,7 @@ The treatment tab can be used to correct faulty carb entries (*i.e.* you over- o
 
 1. Vérifiez et mémorisez les GA et IA actuels sur l'écran d'accueil.
 2. Selon la pompe, dans l'onglet Traitement, les glucides peuvent être affichés avec l'insuline sur une seule ligne ou dans deux lignes séparées (par ex. avec Dana RS).
-3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
+3. Supprimez l'entrée qui a la mauvaise quantité de glucides. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. Assurez-vous que les glucides ont bien été enlevés en vérifiant à nouveau les GA sur l'écran d'accueil.
 5. Vérifiez également l'IA s'il n'y a qu'une seule ligne dans l'onglet de Traitement contenant les glucides et l'insuline.
   
@@ -726,9 +726,9 @@ The treatment tab can be used to correct faulty carb entries (*i.e.* you over- o
 
 7. S'il n'y a qu'une seule ligne dans l'onglet Traitement, contenant les glucides et l'insuline, vous devez remettre la quantité d'insuline qui a été injectée. Assurez-vous de régler correctement l'heure de l'événement et vérifiez bien l'IA sur l'écran d'accueil après avoir confirmé la nouvelle entrée.
 
-### Temp Basal
+### Basal Temp.
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Basal Temp.](../images/TreatmentsView2.png)
 
 The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown in green. It can be:
 
@@ -745,9 +745,9 @@ On the left of a line, a red S means “Suspend” : it happens when basal is no
 
 The history of temporary targets can be seen here.
 
-### Profile Switch
+### Changement profil
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Changement profil](../images/TreatmentsView4.png)
 
 The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user. Line **2**, stored both in NS and PH, correspond to the actual switch.
 
@@ -757,9 +757,9 @@ You can use the **Clone** button shown on line **1** to make a copy of a **Profi
 
 (AapsScreens-running-mode)=
 
-### Running mode
+### En cours de fonctionnement
 
-![Running mode](../images/TreatmentsView6.png)
+![En cours de fonctionnement](../images/TreatmentsView6.png)
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
 
@@ -771,9 +771,9 @@ This tab shows all notes and alerts recorded in Nightscout.
 
 (aaps-screens-running-mode)=
 
-### Running mode
+### En cours de fonctionnement
 
-![Running mode](../images/Screens/RunningMode.png)
+![En cours de fonctionnement](../images/Screens/RunningMode.png)
 
 Running mode shows current and past AAPS running mode, it is also visible on the main graph as an upper colored bar.
 
