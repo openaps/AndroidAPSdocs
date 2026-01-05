@@ -94,6 +94,11 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ![Autotune default screen ](../images/Autotune/Autotune_11.png)
 
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
+
 - Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. 若将此设置切换为"开启"状态，系统将自动使用优化配置文件（Tuned profile）更新输入配置文件，并自动激活更新后的配置。
   - **警告：在随后数日内，您必须对未经修改即更新激活的优化配置文件（Tuned profile）进行持续验证，确保其确实能提升闭环系统运行效果。**
 
@@ -143,6 +148,11 @@ Autotune will then display in Config Builder after you restart AAPS.
 (autotune-run-autotune-with-an-automation-rule)=
 
 ## 通过自动化规则运行Autotune
+
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
 
 首要步骤是为Autotune自动化规则定义正确触发器：
 
