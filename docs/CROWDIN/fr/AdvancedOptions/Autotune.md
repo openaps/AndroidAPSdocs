@@ -10,7 +10,7 @@ Le plugin Autotune est disponible dans la version "Release" depuis [3.4](#versio
 
 Créez un fichier vide nommé `enable_autotune` dans le sous-dossier `extra` de votre dossier AAPS du téléphone.
 
-![Activer Autotune](../images/Autotune/Enable.png)
+![Activer Autotune](../images/Autotune/Autotune_0.png)
 
 Autotune s'affichera ensuite dans le Générateur de configuration après avoir redémarré AAPS.
 
