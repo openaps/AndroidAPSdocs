@@ -427,7 +427,7 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 (Preferences-nsclient-synchronization)=
 ### 同步選項
 
-![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
+![同步選項](../images/Pref2025_NSclient_Synchronization.png)
 
 同步選擇將取決於你希望如何使用**AAPS**。
 
