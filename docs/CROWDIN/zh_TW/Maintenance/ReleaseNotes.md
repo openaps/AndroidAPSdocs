@@ -73,13 +73,13 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 * 更新至最新的 Android Studio，或使用瀏覽器建置以獲得更好的設定流程。
 
 ### 新功能
-* Running mode @MilosKozak
-  * Show [loop status history](#AapsScreens-running-mode) in treatment tabs
-  * Show and allow changing [loop status from AAPSClient](#RemoteControl_aapsclient).<br>NB : needs the setting [NSClient > Synchronization > Receive Running mode events](#Preferences-nsclient-synchronization)
-* [New CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
-* [Site rotation](#Aapsscreens-site-rotation) support @Philoul
-* New [automation action](#automations-automation-action) : enable or disable SMBs @MilosKozak
-* Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
+* 執行模式 @MilosKozak
+  * 在治療分頁顯示 [循環狀態歷史](#AapsScreens-running-mode)
+  * 顯示並允許從 [AAPSClient](#RemoteControl_aapsclient) 變更循環狀態。<br>注意：需要在 [NSClient > Synchronization > 接收執行模式事件](#Preferences-nsclient-synchronization) 啟用設定。
+* [新款 CGM](../Getting-Started/CompatiblesCgms.md)：Glunovo、Intelligo、Sinocare
+* [部位輪替](#Aapsscreens-site-rotation) 支援 @Philoul
+* 新的 [自動化動作](#automations-automation-action)：啟用或停用 SMB 微量注射 @MilosKozak
+* Syai CGM 為 [可信來源](#GettingStarted-TrustedBGSource)，並支援進階過濾 @MilosKozak
 
 ### Wear OS 改進
 * 大幅降低電量消耗 @MilosKozak
