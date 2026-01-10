@@ -1,5 +1,45 @@
 # Основной функционал AAPS
 
+### Loop mode
+
+The loop status is shown on the main screen with one of the icons below.
+
+**AAPS** offers several loop modes, such as Open Loop (7), Closed Loop (1) and Low Glucose Suspend (LGS - 2).
+
+See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode.
+
+![Статус контура](../images/Home2020_LoopStatus.png)
+
+(KeyAapsFeatures-OpenLoop)=
+
+#### Open Loop
+
+**AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
+
+The suggestions will not be executed automatically (as in closed loop). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
+
+This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
+
+(KeyAapsFeatures-LGS)=
+
+#### Low Glucose Suspend (LGS)
+
+In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
+
+This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+
+This mode is available starting at **[Objective 6](#objectives-objective6)**.
+
+(KeyAapsFeatures-ClosedLoop)=
+
+#### Closed Loop
+
+**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (*i.e.* without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
+
+The Closed Loop works within numerous safety limits, which can be set individually.
+
+Closed Loop is only possible if you are in **[Objective 7](#objectives-objective7)** or higher and use a supported pump.
+
 (Open-APS-features-autosens)=
 
 ## Autosens
@@ -106,15 +146,7 @@ SMB отображаются на главном графике синими т�
 
 Эта функция называется [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). При ее включении становятся доступными новые настройки. Эти настройки подробно описаны на странице [DynamicISF](#dyn-isf-preferences).
 
-#### Высокая врем. цель temptarget повышает чувствительность
-
-Если эта опция включена, то чувствительность к инсулину увеличивается при временной цели более 100 мг/дл или 5.6 ммол/л. Это означает, что чувствительность к инсулину ISF возрастет, в то время как IC и базал уменьшатся. Это сделает поведение алгоритма **AAPS** менее агрессивным, когда устанавливается высокая временная цель.
-
-#### Низкая временная цель temptarget снижает чувствительность
-
-Если эта опция включена, то параметр чувствительность к инсулину будет снижен при временной цели ниже 100 мг/дл или 5.6 ммол/л. Это означает, что чувствительность к инсулину ISF снизится, в то время как IC и базал увеличатся. При установке низкой временной цели это сделает поведение алгоритма **AAPS** более агрессивным.
-
-### Включить функционал Autosens
+### Use Autosens feature
 
 Это функция [Autosens](#Open-APS-features-autosens). При работе алгоритма DynamicISF, функция Autosens не используется, поскольку это два разных алгоритма, изменяющих одну и ту же переменную (чувствительность).
 
@@ -122,7 +154,7 @@ Autosens отслеживает отклонения гликемии в кро�
 
 При ее включении становятся доступными новые настройки.
 
-### Чувствительность поднимает цель
+#### Чувствительность поднимает цель
 
 Если эта опция включена, функция определения чувствительности (autosens) может поднять цель при обнаружении чувствительности ниже 100%. В этом случае цель будет увеличена на процент обнаруженной чувствительности.
 
@@ -132,7 +164,7 @@ Autosens отслеживает отклонения гликемии в кро�
 
 Эта настройка доступна, если включена одна из опций "Включить динамическую чувствительность" или "Включить функцию Autosens".
 
-### Резистентность понижает цель
+#### Резистентность понижает цель
 
 Если включена эта опция, функция определения чувствительности (autosens) может снизить целевое значение при обнаружении резистентности (выше 100%). В этом случае цель будет снижена на процент обнаруженной резистентности.
 
