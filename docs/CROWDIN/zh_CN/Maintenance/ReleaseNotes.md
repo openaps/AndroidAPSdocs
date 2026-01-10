@@ -628,7 +628,7 @@ v3为新协议， 更加安全高效
 - [动态目标可视化](#AapsScreens-visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - 新[偏好设置布局](../SettingUpAaps/Preferences.md) @MilosKozak
 - SMB算法更新 @Tornado-Tim
-- [低血糖暂停模式](#Preferences-aps-mode) @Tornado-Tim
+- [Low glucose suspend mode](#KeyAapsFeatures-LGS) @Tornado-Tim
 - [最低碳水需求通知](#key-aaps-features-minimal-carbs-required-for-suggestion) @twain47 @Tornado-Tim
 - 移除Careportal（移至Actions） @MilosKozak
 - 新加密备份格式 @dlvoy
