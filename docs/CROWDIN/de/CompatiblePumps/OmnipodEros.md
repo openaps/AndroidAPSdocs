@@ -69,7 +69,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 **ODER**
 
-### Option 2: Der Konfigurations-Generator
+### Option 2: The Config Builder
 
 Über das **Hamburger Menü** oben links unter **Konfigurations-Assistent (1)** \<unk> **Pumpe**\<unk> **Omnipod** indem Du das **Auswahlfeld (2)** mit dem Titel **Omnipod** wählst. Wenn du das **Kontrollkästchen (4)** neben dem **Einstellungsrädchen (3)** wählst, wird das Omnipod-Menü als Registerkarte im AAPS-Interface mit dem Titel **POD** angezeigt. Dies wird in dieser Dokumentation als Registerkarte **Omnipod (POD)** bezeichnet.
 
@@ -77,7 +77,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
-### Überprüfung der Omnipod-Treiberauswahl
+### Verification of Omnipod Driver Selection
 
 *Hinweis: Wenn Du den Setup-Assistenten vorzeitig verlassen hast, ohne Deinen RileyLink auszuwählen, ist der Omnipod Treiber aktiviert, aber Du musst trotzdem Deinen RileyLink noch auswählen.  Dann erscheint bei dir der Omnipod (POD) Tab wie unten zusehen*
 
@@ -239,7 +239,7 @@ Verwende diesen Befehl, um den aktiven Pod in den Status 'unterbrochen' zu verse
 
    > ![Suspend_Insulin_Delivery_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
 
-#### Insulinabgabe fortsetzen
+#### Resuming Insulin Delivery
 
 Benutze diesen Befehl, um den aktiven, derzeit pausierten Pod anzuweisen, die Insulinabgabe fortzusetzen. Nachdem der Befehl erfolgreich verarbeitet wurde, wird die normale Insulinabgabe mit der aktuellen Basalrate fortgesetzt. Grundlage dafür ist das aktive Basalprofil zur aktuellen Uhrzeit. Der Pod akzeptiert wieder Befehle für Bolus, TBR und SMB.
 
@@ -283,7 +283,7 @@ In dem folgenden Prozess wird gezeigt, wie Warntöne bestätigt und quittiert we
 
 (OmnipodEros-view-pod-history)=
 
-### Anzeige Pod-Historie
+### View Pod History
 
 In diesem Abschnitt wird gezeigt, wie Du Deine Pod-Historie überprüfen und nach verschiedenen Aktionskategorien filtern kannst. Das Podhistory-Werkzeug erlaubt es, die Aktionen und Ergebnisse Ihres aktuell aktiven Pods während seines dreitägigen Lebens (72 - 80 Stunden) anzusehen.
 
@@ -371,7 +371,7 @@ Dieser Bildschirm gibt in umgekehrter chronologischer Reihenfolge Auskunft über
    > 
    > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
-##### Felder
+##### Fields
 
 > - **Datum & Uhrzeit**: In umgekehrter chronologischer Reihenfolge der Zeitstempel der einzelnen Ereignisse.
 > - **Gerät:** Das Gerät, auf das sich die aktuelle Aktion oder der aktuelle Zustand bezieht.
@@ -387,7 +387,7 @@ Im Folgenden werden die Anordnung und die Bedeutung der Symbole und Statusfelder
 
 > ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
 
-### Felder
+### Fields
 
 - **RileyLink Status:** Zeigt den aktuellen Verbindungsstatus des RileyLink an
 
@@ -483,13 +483,13 @@ Im Folgenden werden die Darstellung und die Bedeutung der Symbole im Menü **Pod
 
 > ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
-- **Pod aktivieren**
+- **Activate Pod**
 
   > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
   > Startet und aktiviert einen neuen Pod
 
-- **Pod deaktivieren**
+- **Deactivate Pod**
 
   > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
@@ -589,7 +589,7 @@ Ermöglicht das Scannen eines Pod-Kommunikationsgeräts. Der Omnipod-Treiber kan
 
 - **Aktiviere die Protokollierung des Akkuwechsels im Aktionen-Tab/Menü:** Im Menü "Aktionen" ist die Schaltfläche "Batteriewechsel protokollieren" aktiviert, WENN Du diese Einstellung UND die obige Einstellung zum Anzeigen des Akkustands aktiviert hast.  Einige Pod-Kommunikationsgeräte können inzwischen mit normalen Batterien betrieben werden, die ausgewechselt werden können.  Diese Option ermöglicht es Dir, dies zu protokollieren und den Timer für das Batteriealter zurückzusetzen.
 
-### Bestätigungstöne
+### Confirmation beeps
 
 Bestätigt mit Signaltönen des Pods die Abgabe und Änderung von Bolus, Basalrate, SMB und TBR.
 
@@ -598,7 +598,7 @@ Bestätigt mit Signaltönen des Pods die Abgabe und Änderung von Bolus, Basalra
 - **\*SMB-Töne aktiviert:** Aktiviert oder deaktiviert Bestätigungstöne, wenn ein SMB abgegeben wird.
 - **TBR-Piep aktiviert:** Aktiviert oder deaktiviert Bestätigungstöne, bei Setzen oder Abbruch einer TBR.
 
-### Alarme
+### Alerts
 
 Bietet AAPS-Warnungen und Nightscout-Ankündigungen für den Ablauf eines Pods, die Abschaltung oder einen niedrigen Füllstand basierend auf den definierten Schwellenwerten.
 
@@ -610,7 +610,7 @@ Bietet AAPS-Warnungen und Nightscout-Ankündigungen für den Ablauf eines Pods, 
 - **Anzahl der Einheiten:** Die Anzahl der verbleibenden Einheiten, bei denen der Alarm für den niedrigen Reservoirstand ausgelöst werden soll.
 - **Automatisch Pod Benachrichtigungen bestätigen:** Wenn aktiviert, wird eine Benachrichtigung unmittelbar nach dem ersten Pod Kommunikationskontakt seit der Warnung automatisch bestätigt und die Warnung wird verworfen.
 
-### Benachrichtigungen
+### Notifications
 
 Meldet AAPS-Benachrichtigungen und akustische Telefonwarnungen, wenn unsicher ist, ob TBR-, SMB- oder Bolus-Ereignisse erfolgreich waren.
 
@@ -710,15 +710,15 @@ Die Batteriestandsmeldung ist eine Einstellung, die aktiviert werden kann, um de
 
 ## Problembehandlung
 
-### Pod Fehler
+### Pod Failures
 
 Pods fallen gelegentlich aus unterschiedlichen Gründen aus, u. a. wegen Hardwareproblemen mit dem Pod selbst. Am besten ist es, diese nicht bei Insulet anzugeben, da AAPS kein zugelassener Anwendungsfall ist. Eine Liste an Fehlercodes findest du [hier](https://github.com/openaps/openomni/wiki/Fault-event-codes), um die Ursache zu ermitteln.
 
-### Verhindere Pod Fehler 49
+### Preventing error 49 pod failures
 
 Dieser Fehler hängt mit einem fehlerhaften Pod-Status für einen Befehl oder einem Fehler während der Insulinabgabe zusammen. Wir empfehlen Benutzern, in den Nightscout-Client Einstellungen *nur hochladen (Sync-deaktivieren)* auszuwählen, um mögliche Fehler zu vermeiden.
 
-### Pumpe nicht erreichbar Alarme
+### Pump Unreachable Alerts
 
 Es wird empfohlen, Alarme für unerreichbare Pumpen auf **120 Minuten** zu konfigurieren, indem du im Drei-Punkte-Menü oben rechts **Einstellungen** ➜ **Lokale Alarme** ➜ **Schwellenwert für unerreichbare Pumpen \[min\]** auswählst und diesen auf **120** setzt.
 
@@ -733,7 +733,7 @@ Bitte beachte, dass beim Importieren von Einstellungen die Möglichkeit besteht,
 4. Installiere die neue Version von AAPS und stelle sicher, dass Du keine aktive Pod-Sitzung hast.
 5. Importiere deine Einstellungen und aktiviere einen neuen Pod.
 
-### Omnipod-Treiberwarnungen
+### Omnipod driver alerts
 
 Bitte beachte, dass der Omnipod-Treiber auf der Registerkarte **Übersicht** eine Vielzahl einzigartiger Warnungen anzeigt. Die meisten davon sind informativ und können ignoriert werden, während einige dem Benutzer eine Aktion vorschlagen, um die Ursache für die ausgelöste Warnung zu beheben. Im Folgenden findest du eine Zusammenfassung der wichtigsten Warnmeldungen, die dir begegnen können:
 
