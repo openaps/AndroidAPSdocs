@@ -46,7 +46,7 @@ In the following screen you are asked several questions you have to agree to, to
 
 ![Permissions](../images/setup-wizard/Wizard03.png)
 
-### 通知
+### Notifications
 
 如果应用程序想要向您发送通知，Android 需要特殊权限。
 
@@ -54,7 +54,7 @@ While it is a good feature to disable notifications _e.g._ from  social media ap
 
 Please click the first "ASK FOR PERMISSION" button:
 
-![通知](../images/setup-wizard/Wizard04.png)
+![Notifications](../images/setup-wizard/Wizard04.png)
 
 选择“AAPS”应用程序：
 
