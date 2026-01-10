@@ -45,7 +45,7 @@
 
 ### 步驟1：選擇Medtrum幫浦
 
-#### 選項 1：新安裝
+#### Option 1: New installations
 
 如果你是首次安裝AAPS，**安裝嚮導**將引導你完成AAPS的安裝過程。 當你到達幫浦選擇時，請選擇「Medtrum」。
 
@@ -53,7 +53,7 @@
 
 ![安裝嚮導](../images/medtrum/SetupWizard.png)
 
-#### 選項 2：組態建置工具
+#### Option 2: The Config Builder
 
 在現有安裝中，可以在[組態建置工具 > 幫浦](#Config-Builder-pump)中選擇**Medtrum**幫浦：
 
