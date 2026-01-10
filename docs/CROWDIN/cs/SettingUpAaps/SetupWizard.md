@@ -46,7 +46,7 @@ Na těchto obrazovkách se zaměřujeme na poskytnutí informací o pozadí, př
 
 ![Permissions](../images/setup-wizard/Wizard03.png)
 
-### Oznámení
+### Notifications
 
 Android vyžaduje zvláštní oprávnění pro aplikace, které potřebují posílat uživateli upozornění.
 
@@ -54,7 +54,7 @@ While it is a good feature to disable notifications _e.g._ from  social media ap
 
 Please click the first "ASK FOR PERMISSION" button:
 
-![Oznámení](../images/setup-wizard/Wizard04.png)
+![Notifications](../images/setup-wizard/Wizard04.png)
 
 Vyberte aplikaci "AAPS":
 
