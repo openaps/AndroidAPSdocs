@@ -1,5 +1,45 @@
 # AAPS 的主要功能
 
+### Loop mode
+
+The loop status is shown on the main screen with one of the icons below.
+
+**AAPS** offers several loop modes, such as Open Loop (7), Closed Loop (1) and Low Glucose Suspend (LGS - 2).
+
+See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode.
+
+![循環狀態](../images/Home2020_LoopStatus.png)
+
+(KeyAapsFeatures-OpenLoop)=
+
+#### 開放循環
+
+**AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
+
+這些建議不會自動執行（如封閉迴路）。 The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
+
+This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
+
+(KeyAapsFeatures-LGS)=
+
+#### 低血糖暫停 (LGS)
+
+在此模式中，[maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) 設定為零。
+
+This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. 但是，如果血糖上升，則不會進行自動校正。 Your basal rates will remain the same as defined in your current **Profile**. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+
+This mode is available starting at **[Objective 6](#objectives-objective6)**.
+
+(KeyAapsFeatures-ClosedLoop)=
+
+#### 閉合循環
+
+**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (*i.e.* without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
+
+閉環系統在多個安全限制內運行，可以個別設置。
+
+Closed Loop is only possible if you are in **[Objective 7](#objectives-objective7)** or higher and use a supported pump.
+
 (Open-APS-features-autosens)=
 
 ## 自動敏感度調整 (Autosens)
@@ -106,15 +146,7 @@ OpenAPS SMB 的設定如下。
 
 這是[動態胰島素敏感度](../DailyLifeWithAaps/DynamicISF.md)功能。 啟用後，新的設定將可用。 設定在[動態胰島素敏感度](#dyn-isf-preferences)頁面上說明。
 
-#### 高臨時目標提升敏感度
-
-如果啟用了這個選項，當臨時目標高於100 mg/dl或5.6 mmol/l時，胰島素敏感度將會提高。 這代表，胰島素敏感因子（ISF）會上升，而胰島素碳水化合物比（IC）和基礎率會下降。 這將使得**AAPS**在設定高的臨時目標時不會那麼積極。
-
-#### 低臨時目標降低敏感度
-
-如果啟用了這個選項，當臨時目標低於100 mg/dl或5.6 mmol/l時，胰島素敏感度會降低。 這代表著，胰島素敏感度會下降，而碳水化合物與基礎量會上升。 這會在你設定較低的臨時目標時，讓 **AAPS** 的反應更積極
-
-### 啟用自動敏感度調整功能
+### Use Autosens feature
 
 這是[自動敏感度調整](#Open-APS-features-autosens)功能。 使用 DynamicISF 時，無法使用 Autosens，因為它們是兩種調整相同變數（敏感度）的不同演算法。
 
@@ -122,7 +154,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 
 啟用後，新的設定將可用。
 
-### 敏感度提升目標
+#### 敏感度提升目標
 
 如果啟用此選項，當偵測到敏感度（低於 100%）時，敏感度檢測（autosens）可以提高目標。 在這種情況下，您的目標將根據檢測到的敏感度百分比而提高。
 
@@ -132,7 +164,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 
 當“啟用動態敏感度”或“啟用 Autosens 功能”中的任一選項被啟用時，將提供此設定。
 
-### 抗性降低目標
+#### 抗性降低目標
 
 如果啟用此選項，當偵測到抗性（超過 100%）時，敏感度檢測（autosens）可以降低目標。 在這種情況下，您的目標將根據檢測到的抗性百分比而降低。
 
