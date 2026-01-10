@@ -125,7 +125,7 @@ AAPS以默认基础率为“基线”。 如果基础率设置得太高，那么
 
 There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. 虽然你需要测试一整天的基础率，但不建议连续24小时禁食。 这是因为身体会触发激素等机制进行补偿。 一个推荐的方法是在一天中进行三次8小时的禁食。
 
-The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#Preferences-aps-mode) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. 观察你的**BG**如何变化：如果它在下降，基础率就过高。 反之亦然。<br/> 另一种方法（可能更棘手）是让闭环系统持续运行，并观察**活性胰岛素（IOB）**的变化情况。 如果IOB为负，你的基础率就过高。 反之亦然。 请注意，这种方法依赖于**ISF**来纠正**BG**，因此取决于其他变量设置得是否合理才能成功。 <br/>另一种调整基础率的方法是观察夜间循环操作，当所有碳水化合物都已消耗时。 这种方法对儿童特别有用，当禁食困难或胰岛素需求经常变化时。 [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
+The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. 观察你的**BG**如何变化：如果它在下降，基础率就过高。 反之亦然。<br/> 另一种方法（可能更棘手）是让闭环系统持续运行，并观察**活性胰岛素（IOB）**的变化情况。 如果IOB为负，你的基础率就过高。 反之亦然。 请注意，这种方法依赖于**ISF**来纠正**BG**，因此取决于其他变量设置得是否合理才能成功。 <br/>另一种调整基础率的方法是观察夜间循环操作，当所有碳水化合物都已消耗时。 这种方法对儿童特别有用，当禁食困难或胰岛素需求经常变化时。 [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
 
 See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, analyzing patterns in closed loop.
 
