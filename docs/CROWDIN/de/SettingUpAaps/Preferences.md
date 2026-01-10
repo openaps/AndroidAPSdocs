@@ -127,7 +127,7 @@ Im Abschnitt **Übersicht** kannst Du die Einstellungen für den Startbildschirm
 Die Option "Bildschirm aktiv lassen" hindert Android daran, den Bildschirm abzuschalten. Dies ist z.B. zu Präsentationszwecken hilfreich,  es verbraucht aber sehr viel Batterie.  Deshalb wird empfohlen, das Smartphone an ein Ladekabel anzuschließen.
 
 (Preferences-buttons)=
-### Schaltflächen
+### Buttons
 
 - Lege fest welche Schaltflächen am unteren Rand des Homescreens sichtbar sind.
 - Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
