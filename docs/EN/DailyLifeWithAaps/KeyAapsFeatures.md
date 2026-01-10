@@ -1,6 +1,6 @@
 # Key AAPS features
 
-### Loop mode
+## Loop mode
 
 The loop status is shown on the main screen with one of the icons below. 
 
@@ -11,7 +11,7 @@ See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for 
 ![Loop status](../images/Home2020_LoopStatus.png)
 
 (KeyAapsFeatures-OpenLoop)=
-#### Open Loop
+### Open Loop
 **AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
 
 The suggestions will not be executed automatically (as in closed loop). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
@@ -19,7 +19,7 @@ The suggestions will not be executed automatically (as in closed loop). The sugg
 This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
 
 (KeyAapsFeatures-LGS)=
-#### Low Glucose Suspend (LGS)
+### Low Glucose Suspend (LGS)
 
 In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
 
@@ -28,7 +28,7 @@ This means that if blood glucose is dropping, **AAPS** can reduce the basal for 
 This mode is available starting at **[Objective 6](#objectives-objective6)**.
 
 (KeyAapsFeatures-ClosedLoop)=
-#### Closed Loop
+### Closed Loop
 
 **AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (_i.e._ without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
 
