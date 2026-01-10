@@ -89,7 +89,7 @@
 
 **血糖**目標根據你的個人偏好和需求進行設置。 例如，如果你擔心夜間低血糖，可以將目標稍微提高到晚上 9 點到早上 7 點的 117 mg/dL (6.5 mmol/L)。 如果你希望在早餐前有充足的胰島素儲備，你可以將早上 7 點到 8 點的目標設定為較低的 81 mg/dL（4.5 mmol/L）。
 
-在 [開放循環](#Preferences-open-loop) 模式下，特別是在完成 [前幾個目標](../SettingUpAaps/CompletingTheObjectives.md) 的過程中，使用較寬的目標範圍是一個不錯的選擇，有助於你一邊學習 **AAPS** 的行為，一邊調整你的 **設定檔**。<br/> 在 [封閉循環](#preferences-closed-loop) 模式下（從 **[目標 6](#objectives-objective6)** 開始），建議縮小範圍，直到一天中的每個時段都只有單一目標（_低_ 目標 = _高_ 目標），以確保 **AAPS** 能及時對 **血糖** 波動作出反應。
+When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
 
 (your-aaps-profile-basal-rates)=
 
