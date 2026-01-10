@@ -69,7 +69,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 **OU**
 
-### Option 2 : Le Générateur de configuration
+### Option 2: The Config Builder
 
 Via le **menu hamburger** situé dans le coin supérieur gauche, dans la **Configuration (1)** ➜**Pompe**➜**Omnipod** en sélectionnant le **bouton radio (2) Omnipod**. En sélectionnant la **case à cocher (4)** à côté de la **roue crantée (3)** cela affichera le menu Omnipod sous la forme d'un onglet intitulé **POD** dans l'interface AAPS. C'est ce que l'on appelle dans cette documentation l'onglet **Omnipod (POD)**.
 
@@ -77,7 +77,7 @@ Via le **menu hamburger** situé dans le coin supérieur gauche, dans la **Confi
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
-### Vérification de la sélection du pilote Omnipod
+### Verification of Omnipod Driver Selection
 
 *Remarque : Si vous avez quitté l'Assistant de configuration plus tôt sans sélectionner votre RileyLink, Le pilote Omnipod est activé mais vous devrez toujours sélectionner votre RileyLink.  Vous pouvez voir l'onglet Omnipod (POD) s'afficher comme ci-dessous*
 
@@ -239,7 +239,7 @@ Utilisez cette commande pour placer le pod actif dans un état suspendu. Dans ce
 
    > ![Suspend_Insulin_Delivery_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
 
-#### Reprendre l'injection d'insuline
+#### Resuming Insulin Delivery
 
 Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. The pod will again accept commands for bolus, TBR, and SMB.
 
@@ -283,7 +283,7 @@ Le processus ci-dessous vous montrera comment accepter et arêter les bips du po
 
 (OmnipodEros-view-pod-history)=
 
-### Voir l'historique du Pod
+### View Pod History
 
 This section shows you how to review your active pod history and filter by different action categories. L'outil historique du pod vous permet de visualiser les actions et résultats effectués dans votre pod actuellement actif pendant sa durée de vie de trois jours (72 à 80 heures).
 
@@ -371,7 +371,7 @@ Cet écran montre les informations dans l'ordre chronologique inverse de chaque 
    > 
    > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
-##### Champs
+##### Fields
 
 > - **Date & Heure** : horodatage de chaque événement dans l'ordre chronologique inverse.
 > - **Appareil :** L'appareil concerné par l'action ou l'état courant.
@@ -387,7 +387,7 @@ Vous trouverez ci-dessous une explication de la mise en page et la signification
 
 > ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
 
-### Champs
+### Fields
 
 - **État RileyLink :** Affiche l'état actuel de la connexion du RileyLink
 
@@ -477,19 +477,19 @@ Vous trouverez ci-dessous une explication de la mise en page et la signification
   > 
   > > Réactive l'injection d'insuline du pod actif actuellement suspendu
 
-### Menu de Gestion du pod
+### Pod Management Menu
 
 Vous trouverez ci-dessous une explication de la mise en page et de la signification des icônes de la page **Gestion du Pod** accessible depuis l'onglet **Omnipod (POD)**.
 
 > ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
-- **Activer le Pod**
+- **Activate Pod**
 
   > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
   > Amorce et active un nouveau pod
 
-- **Désactiver Pod**
+- **Deactivate Pod**
 
   > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
@@ -589,7 +589,7 @@ Permet le balayage d'un périphérique de communication pod. Le pilote Omnipod n
 
 - **Activer l'enregistrement des changements de pile dans Actions :** Dans le menu Actions le bouton de changement de pile est activé SI vous avez activé ce paramètre ET le paramètre de rapport de la batterie ci-dessus.  Certains appareils de communication pods ont maintenant la possibilité d’utiliser des piles ordinaires qui peuvent être changées.  Cette option vous permet d'enregistrer et de réinitialiser l'âge de la pile.
 
-### Bips de confirmation
+### Confirmation beeps
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
@@ -598,7 +598,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 - **Bips SMB activés :** Active ou désactive les bips de confirmation lorsqu'un SMB est injecté.
 - **Bips DBT activés :** Active ou désactive les bips de confirmation lorsqu'un DBT est défini ou annulé.
 
-### Alertes
+### Alerts
 
 Fournit des alertes AAPS et des notifications Nightscout pour l'arrêt, l'expiration des pod, le niveau de réservoir bas, en fonction des seuils définis.
 
@@ -710,15 +710,15 @@ L'affichage du niveau de la batterie est un paramètre qui peut être activé po
 
 ## Troubleshooting
 
-### Erreurs Pod
+### Pod Failures
 
 Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. Une liste de codes défaut peut être trouvée [ici](https://github.com/openaps/openomni/wiki/Fault-event-codes) pour aider à trouver les causes.
 
-### Empêcher l'erreur 49 échecs du pod
+### Preventing error 49 pod failures
 
 This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. Il est vivement recommandé aux utilisateurs d'activer dans le client Nightscout *Envoi NS uniquement* dans la **Configuration**➜**Général**➜**NSClient**➜**roue crantée**➜**Paramètres Avancés** pour prévenir les éventuels échecs.
 
-### Alertes Pompe hors de portée
+### Pump Unreachable Alerts
 
 Il est recommandé de configurer les alertes de la pompe sur **120 minutes** en allant dans le menu trois points en haut à droite puis en sélectionnant **Préférences**➜ **Alertes locales**➜ **Seuil d'alerte pompe hors de portée \[min\]** et en réglant **120**.
 
@@ -733,7 +733,7 @@ Veuillez noter qu'il est possible d'importer un état du Pod périmé lors de l'
 4. Installez la nouvelle version d'AAPS et vérifiez que vous n'avez pas de session pod actif.
 5. Importez vos paramètres et activez votre nouveau pod.
 
-### Alertes Pilote Omnipod
+### Omnipod driver alerts
 
 Veuillez noter que le pilote Omnipod présente une variété d'alertes uniques dans l'onglet **Aperçu (Accueil)**, la plupart d'entre elles sont juste une information et peuvent être rejetées tandis que certaines indiquent à l'utilisateur une action à faire pour traiter la cause de l'alerte déclenchée. A summary of the main alerts that you may encounter is listed below:
 
