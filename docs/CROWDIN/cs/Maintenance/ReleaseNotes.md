@@ -629,7 +629,7 @@ You need at least start [objective 11 (in later versions objective 10!)](#object
 - visualization of [dynamic target adjustment](#AapsScreens-visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - new [preferences layout](../SettingUpAaps/Preferences.md) @MilosKozak
 - vylepšení SMB algoritmu @Tornado-Tim
-- [Low glucose suspend mode](#Preferences-aps-mode) @Tornado-Tim
+- [Low glucose suspend mode](#KeyAapsFeatures-LGS) @Tornado-Tim
 - [carbs required notifications](#key-aaps-features-minimal-carbs-required-for-suggestion) @twain47 @Tornado-Tim
 - odstraněn plugin Ošetření (přesunut do pluginu Akce) @MilosKozak
 - [new encrypted backup format](ExportImportSettings.md) @dlvoy
