@@ -183,7 +183,7 @@
 (automations-automation-action)=
 ## 動作
 
-![Automation Actions](../images/automation_actions.png)
+![自動化動作](../images/automation_actions.png)
 
 **動作：**啟動**臨時目標**
 

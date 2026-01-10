@@ -1,8 +1,8 @@
 # 遠端控制 AAPS
 有四種非常有效的工具可以遠端管理 **AAPS**：
 
-1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower phone is Android) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device).  
-4) [Smartwatches](#RemoteControl_smartwatches) (Android)
+1) [簡訊指令](#RemoteControl_SMS-Commands) (關注者的手機可以是 Android 或 iOS) 2) [AAPSClient](#RemoteControl_aapsclient) (關注者的手機是 Android) 3) [Nightscout](#RemoteControl_nightscout) (Android、iOS 或其他計算機/設備)。  
+4) [智慧型手錶](#RemoteControl_smartwatches) (Android)
 
 前三個主要適合於照護者/父母，但智慧型手錶對照護者/父母**和**糖尿病患者本身都非常有用。
 
@@ -94,15 +94,15 @@
 
 ### AAPSClient 的功能包括：
 
-| 標籤 / 漢堡選單  | 功能                                                                                                                                                                                                                                   |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **功能** 標籤  | - Profile Switch <br>- Loop Status change <br>- Temp Target<br>- BG Check<br>- CGM Sensor Insert<br>- Note<br>- Exercise<br>- Announcement<br>- Question?<br>- History Browser |
-| **食物** 標籤  |                                                                                                                                                                                                                                      |
-| **治療** 標籤  | - 檢查已交付的治療，包括注射和輸入的碳水化合物                                                                                                                                                                                                             |
-| **維護** 標籤  | - 匯出和匯入設定                                                                                                                                                                                                                            |
-| **設定檔** 標籤 | - 建立新設定檔<br>- 設定檔切換                                                                                                                                                                                                            |
+| 標籤 / 漢堡選單  | 功能                                                                                                                                                         |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **功能** 標籤  | - 設定檔切換 <br>- 循環狀態變更 <br>- 臨時目標<br>- 血糖測量<br>- CGM 感測器插入<br>- 備註<br>- 運動<br>- 公告<br>- 提問？<br>- 歷史瀏覽器 |
+| **食物** 標籤  |                                                                                                                                                            |
+| **治療** 標籤  | - 檢查已交付的治療，包括注射和輸入的碳水化合物                                                                                                                                   |
+| **維護** 標籤  | - 匯出和匯入設定                                                                                                                                                  |
+| **設定檔** 標籤 | - 建立新設定檔<br>- 設定檔切換                                                                                                                                  |
 
-**AAPSClient** 允許照護者透過行動網絡或網際網路，遠端進行許多 **AAPS** 中允許的調整（不包括胰島素注射）。 **AAPSClient** 的主要優點是照護者/父母能夠以快速、便捷的方式遠端控制 **AAPS**。 __AAPSClient__ _可能_ 比輸入 SMS 指令快得多，尤其是當執行需要身份驗證的指令時。 透過 **AAPSClient** 輸入的指令將上傳到 Nightscout。 In order for the actions taken in **AAPSClient** to be actually actioned in **AAPS**, the NSClient settings must allow to receive such orders. See the [Synchronization section of NSClient preferences](#Preferences-nsclient-synchronization).
+**AAPSClient** 允許照護者透過行動網絡或網際網路，遠端進行許多 **AAPS** 中允許的調整（不包括胰島素注射）。 **AAPSClient** 的主要優點是照護者/父母能夠以快速、便捷的方式遠端控制 **AAPS**。 __AAPSClient__ _可能_ 比輸入 SMS 指令快得多，尤其是當執行需要身份驗證的指令時。 透過 **AAPSClient** 輸入的指令將上傳到 Nightscout。 要讓在 **AAPSClient** 中執行的動作實際生效，必須在 NSClient 設定中允許接收此類指令。 請參閱 [NSClient 偏好設定的同步區段](#Preferences-nsclient-synchronization)。
 
 
 

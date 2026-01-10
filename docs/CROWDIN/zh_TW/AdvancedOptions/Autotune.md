@@ -1,18 +1,18 @@
-# How to use Autotune plugin
+# 如何使用 Autotune 外掛
 
 有關 Autotune 算法的文檔可以在 [OpenAPS 文檔](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) 中找到。
 
 Autotune 外掛是在 AAPS 中實作的 OpenAPS 自動調整算法。
 
-Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預設為隱藏。
 
-## Show the Autotune plugin
+## 顯示 Autotune 外掛
 
-Create an empty file named `enable_autotune` in the `extra` subfolder of your phone AAPS folder.
+在手機的 AAPS 資料夾中之 `extra` 子資料夾內，建立一個名為 `enable_autotune` 的空白檔案。
 
-![Enable Autotune](../images/Autotune/Enable.png)
+![啟用 Autotune](../images/Autotune/Autotune_0.png)
 
-Autotune will then display in Config Builder after you restart AAPS.
+重新啟動 AAPS 後，Autotune 會顯示在組態建置工具中。
 
 ![自動調整外掛](../images/Autotune/Autotune_1.png)
 
@@ -96,7 +96,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ```{admonition} Only DEV
 :class: info
-Automation Switch Profile feature is only available in Dev/Engineering mode.
+自動化的切換設定檔功能僅在開發/工程模式提供。
 ```
 
 - 自動化切換檔案（預設為關閉）：請參見 [使用自動化規則運行自動調整](#autotune-run-autotune-with-an-automation-rule) 下方。 如果你將此設定更改為開啟，則輸入設定檔將自動被調整後的設定檔更新並啟用。
@@ -151,7 +151,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
 
 ```{admonition} Only DEV
 :class: info
-Automation Switch Profile feature is only available in Dev/Engineering mode.
+自動化的切換設定檔功能僅在開發/工程模式提供。
 ```
 
 第一步是為 Autotune 定義正確的自動化規則觸發條件：

@@ -270,7 +270,7 @@
 
 ### 自動調整
 
-You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+您可以啟用 Autotune，請參閱 [這裡](../AdvancedOptions/Autotune.md)。
 
 ### 維護
 

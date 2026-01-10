@@ -58,8 +58,8 @@
 
 在[偏好設定 > OpenAPS SMB 設定](#Preferences-openaps-smb-settings)中，啟用下方任一選項：
 
-     * "sensitivity raises target" and/or 
-     * "resistance lowers target" 
+     * 「敏感度提高目標」和/或 
+     * 「阻抗降低目標」 
     
 
 如果**AAPS**檢測到阻力或敏感度，目標將會從設定檔中變更。 當它變更目標血糖時，底色顏色會變為綠色。
@@ -74,9 +74,9 @@
 
 血糖值的顏色反映了對定義的[範圍](#Preferences-range-for-visualization)的狀態。
 
-     * green = in range
-     * red = below range
-     * yellow = above range 
+     * 綠色 = 在範圍內
+     * 紅色 = 低於範圍
+     * 黃色 = 高於範圍 
     
 
 ![變化量](../images/Home_Delta.png)
@@ -84,8 +84,8 @@
 中間的區塊顯示：
 
 1. 距上一次 **CGM** 讀取的分鐘數
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-  Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
+2. 與上次讀取值的差異：Δ，以及與過去 15 與 40 分鐘平均值的差異（Δ15 與 Δ40）。  
+  長時間 Δ 值會以過去的 Δ 平均值計算，表示平均變化量。
 
 (AapsScreens-loop-status)=
 
@@ -96,7 +96,7 @@
 在右側，一個圖示顯示了循環狀態：
 
 1. 綠色圓圈 = 循環運作中
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
+2. 紫色虛線圓圈 = [低血糖暫停（LGS）](#objectives-objective6)
 3. 紅色圓圈 = 循環已停用（永久無法運作）
 4. 紅色圓圈 = 循環已暫停（暫時暫停，但基礎胰島素仍會輸送）- 剩餘時間顯示於圖示下方
 5. 灰色圓圈 = 幫浦中斷連線（暫時不給予任何胰島素劑量） - 剩餘時間顯示在圖示下方
@@ -105,9 +105,9 @@
 
 點一下或長按圖示以打開循環對話框來切換循環模式（關閉、低血糖暫停(LGS)、開放或停用），暫停/重新啟動循環或中斷/重新連線幫浦。
 
-     * If short press on Loop icon, a validation is required after selection in Loop Dialog
+     * 若短按循環圖示，在循環對話框中選擇後需要確認
     
-     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+     ![循環狀態選單](../images/Home2020_Loop_Dialog.png)
     
 
 (aaps-screens-bg-warning-sign)=
@@ -124,7 +124,7 @@
     :class: note
     在解決此問題之前，你的循環不會運行！
 
-    ![Red BG warning](../images/bg_warn_red.png)
+    ![紅色血糖警示](../images/bg_warn_red.png)
     
 
 你需要找出為什麼會收到重複的血糖資料：
@@ -146,7 +146,7 @@
 
 黃色警告標誌表示你的血糖資料接收不規則，可能是時間間隔不規則或某些血糖資料遺失。 按壓標誌時，訊息顯示「使用了重新計算的資料」。
 
-    ![Yellow BG warning](../images/bg_warn_yellow.png)
+    ![黃色血糖警示](../images/bg_warn_yellow.png)
     
 
 通常你不需要採取任何行動。 閉環會繼續運作！
@@ -177,7 +177,7 @@ Libre 使用者的特殊注意事項：
   * 如果最近有減少的基礎率，IOB 可能為負值。
   * 按圖示可查看注射胰島素與基礎胰島素的分配情況。
 
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
+2. **碳水**：[活性碳水化合物（COB）](../DailyLifeWithAaps/CobCalculation.md) - 先前攝取但尚未吸收的碳水 若需要碳水，圖示會以紅色脈動顯示（請見[下方](#aaps-screens-carbs-required)）
 
 3. **紫色線**: 當前的基礎率。 圖示會根據基礎率的臨時變化而改變（維持在 100%） 
   * 按圖示可查看基礎基礎率和任何臨時基礎率的詳細資訊(包括剩餘時間)。
@@ -231,29 +231,29 @@ Libre 使用者的特殊注意事項：
 
 綠色區域反應你的目標範圍。
 
-This information is also shown on this graph :
+此資訊也會顯示在此圖表上：
 
-* Boluses: blue triangle on the BG curve and insulin amount
-* Carbs entries: orange triangle on the BG curve and carb amount
-* Target as defined in the profile or modified by temporary target: green line
-* Profile switches: star at the top of the graph
-* Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
-* [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
+* 注射：血糖曲線上的藍色三角形與胰島素劑量
+* 碳水紀錄：血糖曲線上的橘色三角形與碳水量
+* 目標（依設定檔定義，或被臨時目標調整）：綠色線
+* 設定檔切換：圖表上方的星號
+* 循環狀態：當狀態不是閉環時，圖表頂端會顯示彩色線條—顏色請參見 [循環狀態](#AapsScreens-loop-status)
+* [SMB](#Open-APS-features-super-micro-bolus-smb) 微量注射—若在 [偏好設定 > OpenAPS SMB](#Preferences-openaps-smb-settings) 中啟用：圖表底部的藍色三角形
 
 (AapsScreens-activate-optional-information)=
 
 #### 啟用可選資訊
 
-Using the top right arrow, you can switch on these optional information:
+使用右上角的箭頭，可切換顯示下列可選資訊：
 
-* Predictions (see below)
-* Treatments : notes entered in action tab: grey, orange or red dot depending on the severity, as well as fingerstick calibrations: red dot
+* 預測（請參閱下方）
+* 治療：在動作分頁輸入的備註，依嚴重程度以灰色、橘色或紅色圓點顯示；指尖血校正則為紅色圓點
 * 基礎率 
-  * As defined in the profile: blue dotted line at the bottom of the graph
-  * Actually delivered basal: blue plain line with blue background
-* Activity - insulin activity curve: yellow line
+  * 依設定檔定義：圖表底部的藍色虛線
+  * 實際輸注的基礎率：藍色實線，並有藍色背景
+* 胰島素作用曲線：黃色線條
 
-To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
+要顯示這些資訊，請點擊主圖表右側的三角形。 對於主圖表，只有 "Graph 1 2 3 4" 以上的四個選項可用。
 
      ![Main graph setting](../images/Home2020_MainGraphSetting.png)
     
@@ -536,10 +536,10 @@ To show this information, click the triangle on the right side of the main graph
 
 顯示以下資訊:
 
-     * sensor age & level (battery percentage)
-     * insulin age & level (units)
-     * cannula age
-     * pump battery age & level (percentage
+     * 感測器使用時間與電量（電池百分比）
+     * 胰島素使用時間與餘量（單位）
+     * 套管使用時間
+     * 幫浦電池使用時間與電量（百分比
     
 
 如果使用**低解析度外觀**，將顯示較少資訊（[偏好設定 > 一般 > 外觀](#Preferences-skin)）。
@@ -568,20 +568,20 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 部位輪替按鈕會在檢視模式開啟部位輪替對話方塊：
 
-* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
+* 可透過上方核取方塊選擇僅顯示套管位置、僅顯示感測器位置，或兩者皆顯示
 * 可查看過去 45 天內所有套管更換與傳感器更換事件。
 * 點選某個部位區域，或點選下方清單中的一筆項目，以篩選為僅顯示所選區域的項目。 所選區域會以淺綠色標示。
-* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
+* 可開啟編輯檢視，更新每筆條目的部位位置、箭頭或註解
 
 ![檢視模式](../images/SiteRotation/ViewMode.png)
 
-* The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
+* 設定分頁（右上角齒輪）可調整病患外觀（男性、女性或兒童），並選擇僅管理幫浦部位、僅管理感測器部位，或兩者皆管理。
 
 ![設定](../images/SiteRotation/Settings.png)
 
-![Settings type](../images/SiteRotation/Type.png)
+![設定類型](../images/SiteRotation/Type.png)
 
-*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+*注意：當從「預充/填充 按鈕」或「CGM 感測器插入 按鈕」新增條目時，是否自動開啟部位輪替對話框（編輯模式），將依此設定決定。*
 
 * 若直接從幫浦進行部位更換，你需要開啟檢視模式並編輯新項目，以選擇位置與箭頭。
 
@@ -591,18 +591,18 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 * 你需要先選擇「前側」或「後側」分頁，接著選取區域。
 * 當選定某個部位（會以綠色反白）後，下方清單會顯示過去 45 天在此部位的所有項目。
 
-![Edit Mode](../images/SiteRotation/EditMode.png)
+![編輯模式](../images/SiteRotation/EditMode.png)
 
 * 可點擊上方的小箭頭圖示來設定可選的箭頭（箭頭可更精確標示子位置，從 2 到 9，或 Pod 方向）。
 
-![Position](../images/SiteRotation/EditModeSub.png)
+![位置](../images/SiteRotation/EditModeSub.png)
 
 * 你也可以調整與所選部位相關的備註。
 * 確認後會儲存該部位。
 
 可在圖像上直接操作進行篩選，或點擊清單中的治療事件 要移除篩選，只需在圖像上點擊任何部位區域之外的地方。
 
-![Filtering](../images/SiteRotation/Filtering.png)
+![過濾](../images/SiteRotation/Filtering.png)
 
 #### 歷史瀏覽器
 
@@ -689,7 +689,7 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 * [臨時目標](../DailyLifeWithAaps/TempTargets.md)
 * [設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 * 照護入口：通過動作標籤輸入的筆記和對話中的筆記
-* Running mode : history of loop status
+* 執行模式：循環狀態的歷史紀錄
 * 用戶輸入：其他未發送至 Nightscout 的筆記
 
 在最後一欄中，每行的資料來源以藍色顯示。 它可以是：
@@ -757,11 +757,11 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 
 (AapsScreens-running-mode)=
 
-### Running mode
+### 運行模式
 
-![Running mode](../images/TreatmentsView6.png)
+![運行模式](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
+此分頁顯示 [循環狀態](#AapsScreens-loop-status) 的變更歷史：開環、閉環、暫停循環。
 
 ### 照護入口
 
@@ -771,11 +771,11 @@ This tab shows the history of [loop status](#AapsScreens-loop-status) changes : 
 
 (aaps-screens-running-mode)=
 
-### Running mode
+### 運行模式
 
-![Running mode](../images/Screens/RunningMode.png)
+![運行模式](../images/Screens/RunningMode.png)
 
-Running mode shows current and past AAPS running mode, it is also visible on the main graph as an upper colored bar.
+執行模式會顯示目前與過去的 AAPS 執行模式，也會在主圖表上方以彩色長條顯示。
 
 ## 歷史瀏覽器
 
