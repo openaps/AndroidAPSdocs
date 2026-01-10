@@ -1,6 +1,6 @@
 # Key AAPS features
 
-### Loop mode
+## Loop mode
 
 The loop status is shown on the main screen with one of the icons below.
 
@@ -12,7 +12,7 @@ See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for 
 
 (KeyAapsFeatures-OpenLoop)=
 
-#### Otvorený okruh
+### Open Loop
 
 **AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
 
@@ -22,7 +22,7 @@ This option is for getting to know how **AAPS** works or if you are using an uns
 
 (KeyAapsFeatures-LGS)=
 
-#### Zastavovanie pri nízkej glykémii (LGS)
+### Low Glucose Suspend (LGS)
 
 V tomto režime je [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) nastavený na nulu.
 
@@ -32,7 +32,7 @@ This mode is available starting at **[Objective 6](#objectives-objective6)**.
 
 (KeyAapsFeatures-ClosedLoop)=
 
-#### Uzavretý okruh
+### Closed Loop
 
 **AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (*i.e.* without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
 
