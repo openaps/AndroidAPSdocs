@@ -127,7 +127,7 @@ In the **Overview** section, you can define the preferences for the home screen.
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
 (Preferences-buttons)=
-### Mygtukai
+### Buttons
 
 - Define which buttons are visible on the bottom of your home screen.
 - Setting hidden in [simple mode](#preferences-simple-mode).
