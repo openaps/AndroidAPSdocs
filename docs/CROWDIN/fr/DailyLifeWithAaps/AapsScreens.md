@@ -95,13 +95,13 @@ Les zones du milieu montrent :
 
 Sur le côté droit, une icône montre le statut de la boucle :
 
-1. Cercle vert = boucle fermée en cours d'exécution
-2. Cercle violet avec ligne pointillée = [arrêt glycémie basse (AGB)](#objectives-objective6)
+1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
+2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
 3. Cercle rouge = boucle désactivée (ne fonctionne pas de façon permanente)
 4. Cercle rouge = boucle suspendue (suspension temporaire, mais l'insuline basale sera délivrée) - le temps restant est affiché sous l'icône
 5. Cercle gris = pompe déconnectée (temporairement aucune insuline n'est délivrée) - le temps restant est affiché sous l'icône
 6. Cercle orange = super bolus en cours - le temps restant est affiché sous l'icône
-7. Cercle bleu avec pointillés = boucle ouverte
+7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
 
 Un appui court ou long sur l'icône de la boucle permet d'ouvrir une boite de dialogue pour changer la boucle (Fermée, Mode Arrêt Glycémie Basse, Ouverte), suspendre/réactiver la boucle ou déconnecter/reconnecter la pompe.
 
@@ -770,12 +770,6 @@ This tab shows the history of [loop status](#AapsScreens-loop-status) changes : 
 This tab shows all notes and alerts recorded in Nightscout.
 
 (aaps-screens-running-mode)=
-
-### En cours de fonctionnement
-
-![En cours de fonctionnement](../images/Screens/RunningMode.png)
-
-Running mode shows current and past AAPS running mode, it is also visible on the main graph as an upper colored bar.
 
 ## Historique
 
