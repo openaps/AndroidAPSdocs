@@ -95,13 +95,13 @@ Der Abschnitt in der Mitte zeigt:
 
 Auf der rechten Seite zeigt ein Symbol den Loop-Status an:
 
-1. Grüner Kreis = Loop läuft
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
+1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
+2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
 3. Roter Kreis = Loop deaktiviert (dauerhaft)
 4. Roter Kreis = Loop ausgesetzt (vorübergehend pausiert, aber Basalinsulin wird weiter abgegeben) - verbleibende Zeit wird unter dem Symbol angezeigt
 5. Grauer Kreis = Pumpe getrennt (vorübergehend gar keine Insulinabgabe) - verbleibende Zeit wird unter dem Symbol angezeigt
 6. orangener Kreis = Superbolus läuft - verbleibende Zeit wird unterhalb des Symbols angezeigt
-7. Blauer Kreis mit gepunkteten Linien = Open Loop
+7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
 
 Drücke kurz oder lang auf das Icon um den Dialog zum Wechsel des Loop-Modus (Close loop, Low Glucose Suspend [Reduzierung der Basalrate bei niedrigen Glukosewerten], Open Loop, Abschalten), zum Pausieren / wieder Einschalten des Loop oder zum Trennen / erneuten Verbinden der Pumpe.
 
@@ -770,12 +770,6 @@ This tab shows the history of [loop status](#AapsScreens-loop-status) changes : 
 Auf dieser Registerkarte werden alle Notizen und Alarme angezeigt, die von Nightscout empfangen wurden.
 
 (aaps-screens-running-mode)=
-
-### Running mode
-
-![Running mode](../images/Screens/RunningMode.png)
-
-Running mode shows current and past AAPS running mode, it is also visible on the main graph as an upper colored bar.
 
 ## Historie
 
