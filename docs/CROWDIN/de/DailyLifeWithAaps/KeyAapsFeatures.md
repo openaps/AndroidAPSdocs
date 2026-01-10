@@ -1,5 +1,45 @@
 # Wichtigste AAPS-Funktionalitäten
 
+### Loop mode
+
+The loop status is shown on the main screen with one of the icons below.
+
+**AAPS** offers several loop modes, such as Open Loop (7), Closed Loop (1) and Low Glucose Suspend (LGS - 2).
+
+See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode.
+
+![Loop Status](../images/Home2020_LoopStatus.png)
+
+(KeyAapsFeatures-OpenLoop)=
+
+#### Open Loop
+
+**AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
+
+Die Vorschläge werden nicht, wie im Closed Loop, automatisch ausgeführt. The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
+
+This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
+
+(KeyAapsFeatures-LGS)=
+
+#### Abschalten der Basalrate bei niedrigen Werten (Low Glucose Suspend - LGS)
+
+In diesem Modus ist [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) auf Null gesetzt.
+
+This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. Wenn aber die Glukosewerte steigen, wird keine automatische Korrektur vorgenommen. Your basal rates will remain the same as defined in your current **Profile**. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+
+This mode is available starting at **[Objective 6](#objectives-objective6)**.
+
+(KeyAapsFeatures-ClosedLoop)=
+
+#### Closed Loop
+
+**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (*i.e.* without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
+
+Der Closed Loop arbeitet im Rahmen zahlreicher Sicherheitsgrenzen, die Du individuell einstellen kannst.
+
+Closed Loop is only possible if you are in **[Objective 7](#objectives-objective7)** or higher and use a supported pump.
+
 (Open-APS-features-autosens)=
 
 ## Autosens
@@ -106,15 +146,7 @@ See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/lates
 
 This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
 
-#### Hohe temporäre Ziele erhöhen die Sensitivität
-
-If you have this option enabled, the insulin sensitivity will be increased while having a temporary target above 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease. This will effectively make **AAPS** less aggressive when you set a high temp target.
-
-#### Niedrige temporäre Ziele senken die Sensitivität
-
-If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise. This will effectively make **AAPS** more aggressive when you set a low temp target.
-
-### Nutze Autosens
+### Use Autosens feature
 
 This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
@@ -122,7 +154,7 @@ Autosens looks at blood glucose deviations (positive/negative/neutral). It will 
 
 When enabled, new settings become available.
 
-### Empfindlichkeit erhöht den Zielwert
+#### Empfindlichkeit erhöht den Zielwert
 
 If this option is enabled, the sensitivity detection (autosens) can raise the target when sensitivity is detected (below 100%). In this case your target will be raised by the percentage of the detected sensitivity.
 
@@ -132,7 +164,7 @@ If the target is modified due to sensitivity detection, it will be displayed wit
 
 This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
 
-### Resistenz senkt den Zielwert
+#### Resistenz senkt den Zielwert
 
 If this option is enabled, the sensitivity detection (autosens) can lower the target when resistance is detected (above 100%). In this case your target will be lowered by the percentage of the detected resistance.
 
