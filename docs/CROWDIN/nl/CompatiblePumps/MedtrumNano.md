@@ -53,7 +53,7 @@ If in doubt you can also select “Virtual Pump” and select “Medtrum” late
 
 ![Setup Wizard](../images/medtrum/SetupWizard.png)
 
-#### Optie 2: De Configurator
+#### Option 2: The Config Builder
 
 On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
 
