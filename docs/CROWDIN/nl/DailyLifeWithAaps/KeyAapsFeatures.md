@@ -1,6 +1,6 @@
 # Key AAPS features
 
-### Loop mode
+## Loop mode
 
 The loop status is shown on the main screen with one of the icons below.
 
@@ -12,7 +12,7 @@ See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for 
 
 (KeyAapsFeatures-OpenLoop)=
 
-#### Open Loop
+### Open Loop
 
 **AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
 
@@ -22,7 +22,7 @@ This option is for getting to know how **AAPS** works or if you are using an uns
 
 (KeyAapsFeatures-LGS)=
 
-#### Low Glucose Suspend (LGS)
+### Low Glucose Suspend (LGS)
 
 In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
 
@@ -32,7 +32,7 @@ This mode is available starting at **[Objective 6](#objectives-objective6)**.
 
 (KeyAapsFeatures-ClosedLoop)=
 
-#### Closed Loop
+### Closed Loop
 
 **AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (*i.e.* without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
 
@@ -42,7 +42,7 @@ Closed Loop is only possible if you are in **[Objective 7](#objectives-objective
 
 (Open-APS-features-autosens)=
 
-## Gevoeligheidsdetectie (Autosens)
+## Autosens
 
 - Autosens is an algorithm which looks at blood glucose deviations (positive/negative/neutral).
 - Op basis van deze afwijkingen, bepaalt het algoritme hoe insulinegevoelig/resistent je bent.
@@ -170,7 +170,7 @@ If this option is enabled, the sensitivity detection (autosens) can lower the ta
 
 This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
 
-### Activeer SMB
+### Enable SMB
 
 Enable this to use SMB functionality. If disabled, no **SMBs** will be given.
 
@@ -206,7 +206,7 @@ If this setting is enabled, SMB is enabled when there is any temp target set (ea
 
 This setting is not visible if "Enable SMB always" is switched on.
 
-#### Activeer SMB na koolhydraten
+#### Enable SMB after carbs
 
 If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0.
 
@@ -225,7 +225,7 @@ Default value: 3 min.
 
 (Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
 
-#### Maximum aantal minuten basaal om SMB te limiteren tot
+#### Max minutes of basal to limit SMB to
 
 This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
@@ -243,7 +243,7 @@ Default value : the same as **Max minutes of basal to limit SMB to**.
 
 This setting is only visible if "Enable SMB" and "Enable UAM " are switched on.
 
-### Activeer UAM
+### Enable UAM
 
 With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
 
@@ -261,7 +261,7 @@ In any case, the required carbs will be displayed in the COB section on your hom
 
 ![Display carbs required on home screen](../images/Pref2020_CarbsRequired.png)
 
-### Geavanceerde instellingen
+### Advanced Settings
 
 You can read more here : [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
@@ -279,13 +279,13 @@ Default value: 4 (shouldn’t be changed unless you really need to and know what
 
 (Open-APS-features-advanced-meal-assist-ama)=
 
-## Geavanceerde maaltijdhulp (AMA)
+## Advanced Meal Assist (AMA)
 
 AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
 
 You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
-### Maximale E/uur dat een tijdelijke basaalstand kan toedienen (OpenAPS "max-basal")
+### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
 
 This safety setting helps **AAPS** from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
 
@@ -301,7 +301,7 @@ The hardcoded parameters in **AAPS** are:
 
 *See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
-### Max basaal IOB dat OpenAPS kan toedienen \[E\] (OpenAPS "max-iob")
+### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
 
 This parameter limits the maximum of basal IOB where **AAPS** still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
@@ -323,7 +323,7 @@ Here, you can choose, if you want to use the [sensitivity detection](../DailyLif
 
 If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets **AAPS** work more 'aggressive' or not. The actual target might be reached faster with this.
 
-### Geavanceerde instellingen
+### Advanced Settings
 
 - Normally you do not have to change the settings in this dialogue!
 - If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
