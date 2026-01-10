@@ -69,7 +69,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 **VEYA**
 
-### Seçenek 2: Konfigürasyon ayarları
+### Option 2: The Config Builder
 
 Sol üst köşedeki **hamburger menüsü** aracılığıyla **Konfigürasyon ayarları(1)** ➜**Pompa**➜**Omnipod** altındaki **Omnipod** başlığındaki **radyo düğmesi (2)**. **Ayar Dişlisi (3)**'ün yanındaki **onay kutusu (4)** seçildiğinde, Omnipod menüsü AAPS arayüzünde **POD** başlıklı bir sekme olarak görüntülenir. Bu dokümanda **Omnipod (POD)** sekmesi olarak anılır.
 
@@ -77,7 +77,7 @@ Sol üst köşedeki **hamburger menüsü** aracılığıyla **Konfigürasyon aya
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
-### Omnipod Sürücü Seçiminin Doğrulanması
+### Verification of Omnipod Driver Selection
 
 *Not: Kurulum Sihirbazından RileyLink'inizi seçmeden erken çıktıysanız, Omnipod Sürücüsü etkinleştirilir ancak yine de RileyLink'inizi seçmeniz gerekir.  Omnipod (POD) sekmesi aşağıdaki gibi görünecektir*
 
@@ -239,7 +239,7 @@ Etkin podu askıya alınmış duruma getirmek için bu komutu kullanın. Bu ask�
 
    > ![Suspend_Insulin_Delivery_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
 
-#### İnsülin İletimini Sürdür
+#### Resuming Insulin Delivery
 
 Use this command to instruct the active, currently suspended pod to resume insulin delivery. Komut başarıyla işlendikten sonra, aktif bazal profildeki geçerli zamana dayalı mevcut bazal oranı kullanılarak normal insülin iletimi sürdürülecektir. Pod bolus, GBO ve SMB için komutları tekrar kabul edecektir.
 
@@ -283,7 +283,7 @@ Aşağıdaki süreç, etkin pod süresi 72 saatlik (3 gün) pod sona ermeden ön
 
 (OmnipodEros-view-pod-history)=
 
-### Pod Geçmişini Görüntüle
+### View Pod History
 
 Bu bölüm, aktif pod geçmişinizi nasıl gözden geçireceğinizi ve farklı eylem kategorilerine göre nasıl filtreleyeceğinizi gösterir. Pod geçmişi aracı, üç günlük (72 - 80 saat) ömrü boyunca şu anda etkin olan pod'unuza yönelik eylemleri ve sonuçları görüntülemenize olanak tanır.
 
@@ -371,7 +371,7 @@ Bu ekran RileyLink'in veya o anda bağlı olan pod içinde olduğu veya gerçekl
    > 
    > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
-##### Alanlar
+##### Fields
 
 > - **Tarih & Zaman**: Ters kronolojik sırayla her olayın zaman damgası.
 > - **Cihaz:** Mevcut eylemin veya durumun atıfta bulunduğu cihaz.
@@ -387,7 +387,7 @@ Aşağıda, ana AAPS arayüzündeki **Omnipod (POD)** sekmesindeki simgelerin ve
 
 > ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
 
-### Alanlar
+### Fields
 
 - **RileyLink Durumu:** RileyLink'in mevcut bağlantı durumunu görüntüler
 
@@ -477,19 +477,19 @@ Aşağıda, ana AAPS arayüzündeki **Omnipod (POD)** sekmesindeki simgelerin ve
   > 
   > > Şu anda askıya alınmış, etkin pod'u devam ettirir
 
-### Pod Yönetim Menüsü
+### Pod Management Menu
 
 Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsündeki simgelerin düzeni ve anlamının bir açıklaması bulunmaktadır.
 
 > ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
-- **Pod Etkinleştirme**
+- **Activate Pod**
 
   > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
   > Yeni bir pod hazırlar ve etkinleştirir
 
-- **Pod'u Devre Dışı Bırakma**
+- **Deactivate Pod**
 
   > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
@@ -589,7 +589,7 @@ Bir pod iletişim cihazının taranmasına izin verir. Omnipod sürücüsü ayn�
 
 - **Eylemlerde pil değişikliği kaydını etkinleştir:** Eylemler menüsünde, bu ayarı VE yukarıdaki pil raporlama ayarını etkinleştirdiyseniz pil değiştirme düğmesi etkinleştirilir.  Bazı pod iletişim cihazları artık değiştirilebilen normal pilleri kullanmaya imkan sağlarlar.  Bu seçenek, bunu not etmenize ve pil yaşı zamanlayıcılarını sıfırlamanıza olanak tanır.
 
-### Onay Bildirimleri
+### Confirmation beeps
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
@@ -598,7 +598,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 - **\*SMB bip seslerini etkinleştir:** Bir SMB teslim edildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
 - **GBO (TBR) bip seslerini etkinleştir:** Bir GBO ayarlandığında veya iptal edildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
 
-### Alarmlar
+### Alerts
 
 Tanımlanan eşik birimlerine dayalı olarak pod sona erme, kapatma, düşük rezervuar için AAPS uyarıları ve Nightscout duyuruları sağlar.
 
@@ -610,7 +610,7 @@ Tanımlanan eşik birimlerine dayalı olarak pod sona erme, kapatma, düşük re
 - **Ünite:** Pod düşük rezervuar alarmının tetikleneceği ünite sayısı.
 - **Pod uyarılarını otomatik olarak kabul et:** Etkinleştirildiğinde, yine de bir bildirim verilecektir, ancak uyarının verilmesinden bu yana ilk pod iletişim temasından hemen sonra, artık otomatik olarak onaylanacak ve uyarı reddedilecektir.
 
-### Bildirimler
+### Notifications
 
 GBO, SMB veya bolus olaylarının başarılı olup olmadığı yani belirsiz olduğunda AAPS bildirimleri ve sesli telefon uyarıları sağlar.
 
@@ -710,15 +710,15 @@ Pil seviyesi bildirimi, OrangeLink, EmaLink veya DiaLink gibi pod iletişim ciha
 
 ## Troubleshooting
 
-### Pod Hataları
+### Pod Failures
 
 Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. Nedeni belirlemeye yardımcı olması için [burada](https://github.com/openaps/openomni/wiki/Fault-event-codes) hata kodlarının bir listesi bulunmaktadır.
 
-### 49 numaralı Pod hatasını önleme
+### Preventing error 49 pod failures
 
 This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. Nightscout client kullanıcılarının, olası arızaları önlemek için **Konfigürasyon ayarları**➜**Genel**➜**NSClient**➜**dişli çark**➜**Gelişmiş Ayarlar** altında *yalnızca yükleme (Senkronizasyonu devre dışı bırak)* seçeneğini etkinleştirmelerini öneririz.
 
-### Pompaya Ulaşılamıyor Uyarıları
+### Pump Unreachable Alerts
 
 Pompa ulaşılamaz uyarılarının sağ üst taraftaki üç noktalı menüye giderek,**Tercihler**➜**Yerel Uyarılar**➜**Pompa Ulaşılamaz eşiği \[min\]** seçip bu seçeneğin **120** olarak ayarlanması önerilir.
 
@@ -733,7 +733,7 @@ Ayarları içe aktarmanın, eski bir Pod durumunu içe aktarma olanağına sahip
 4. AAPS'nin yeni sürümünü yükleyin ve etkin bir pod oturumunuz olmadığını doğrulayın.
 5. Ayarlarınızı içe aktarın ve yeni podunuzu etkinleştirin.
 
-### Omnipod sürücü uyarıları
+### Omnipod driver alerts
 
 Omnipod ürücüsü **Giriş sekmesinde** çeşitli uyarılar sunmakla birlikte bunların çoğu bilgi amaçlıdır ve kapatılabilirken, bazıları da kullanıcıya tetiklenen uyarının nedenini çözmek için bir eylemde bulunmasını sağlar. A summary of the main alerts that you may encounter is listed below:
 
