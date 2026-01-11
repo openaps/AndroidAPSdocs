@@ -93,7 +93,7 @@ The purpose of **Objective 4** is to recognise how often **AAPS** will evaluate 
 
 The minimal time to complete this objective: **7 days**. Vous serez obligé d'attendre que ce temps soit écoulé. It is not possible to proceed to the next **Objective**, even if all basal rate changes were enacted already.
 
-- Select Open Loop either from the [Preferences > OpenAPS](#Preferences-aps-mode) menu or by pressing and holding the Loop icon on the top left of the **Overview** screen.
+- Select Open Loop either by pressing and holding the [Loop icon](#AapsScreens-loop-status) on the top right of the **Overview** screen.
 - Acceptez manuellement au moins 20 suggestions de débits de base temporaires sur une période de 7 jours; entrez-les dans votre pompe (réelle) et confirmez dans AAPS que vous les avez acceptés. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
 - Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
 - If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
@@ -114,7 +114,7 @@ As part of **Objective 5** you will start to understand how temporary basal reco
 
 Estimated time to complete this objective: **7 days**.
 
-This **Objective** requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). This value can be set in **Preferences > OpenAPS**. If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
+This **Objective** requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). This value can be set in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings). If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
 
 You might wish to set your [**Profile** BG target](#profile-glucose-targets) higher than usual until you are comfortable with **AAPS**' calculations and settings. You may wish to experiment with adjusting your **BG target** in your **Profile** being in a tighter range (say, 1 or less mmol/l [20 mg/dl or less] wide) and observe the resulting behavior.
 
@@ -162,13 +162,14 @@ This means that when you are on **Objective 6**, if sensor glucose levels are dr
 - Vous pouvez voir le basal temporaire actif sur l'écran d'accueil grâce au texte de basal turquoise, et en voir l'historique avec la courbe de basal turquoise du graphique.
 - Vous pouvez subir temporairement des pics de glycémie à la suite d'hypos sans pouvoir augmenter le débit de base sur le rebond.
 
+(objectives-objective7)=
 ## Objectif 7 : Réglage de la Boucle Fermée, augmentation de l'IA (Insuline Active) maximale au dessus de 0 et abaissement progressif des cibles glycémiques
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**. Ce n'est plus le cas. **AAPS** will start to use your defined maxIOB value to correct high glucose values.
+To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** will start to use your defined maxIOB value to correct high glucose values.
 
 Minimal time to complete this objective: **1 day**. Vous serez obligé d'attendre que ce temps soit écoulé. It is not possible to proceed to the next **Objective** until this period of time has expired.
 
-- Select **Closed Loop** either from [Preferences > OpenAPS](../SettingUpAaps/Preferences.md) or by pressing and holding the Loop icon in the top right corner of the **Overview** screen. Stay in **Closed Loop** over a period of 1 day.
+- Select **Closed Loop** by pressing and holding the [Loop icon](#AapsScreens-loop-status) in the top right corner of the **Overview** screen. Stay in **Closed Loop** over a period of 1 day.
 
 - Slowly raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 

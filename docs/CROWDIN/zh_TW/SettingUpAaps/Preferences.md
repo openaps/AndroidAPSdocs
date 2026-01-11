@@ -127,7 +127,7 @@
 選項「保持螢幕常亮」將強制 Android 隨時保持螢幕亮起。 這對於演示等場合很有用。 但他會消耗大量電池電量。 因此，建議將智慧型手機連線到充電線。
 
 (偏好設定-按鈕)=
-### 按鈕
+### Buttons
 
 - 定義哪些按鈕在主螢幕底部可顯示。
 - 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
@@ -240,6 +240,10 @@
 * 對於消化緩慢的人來說：一次傳送所有的注射劑量可能會引起低血糖，因為胰島素的作用速度比消化快。
 * 以便給**AAPS**留出更多空間自行處理**血糖上升**。 在這兩種情況下，**AAPS**將在需要時透過SMB來補償缺失的注射部分。
 
+### Old glycemia time threshold
+
+If the last **BG** received is older than this threshold, then the bolus wizard will by default offer a 100% dose instead of the **Deliver this part of bolus wizard result** setting above. The reason for this is that when **BG** is missing, **AAPS** will not be able to send the remaining part of the bolus afterward (the loop is not running), which would result in high **BG**.
+
 ### 啟用的注射顧問
 
 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
@@ -294,34 +298,7 @@
 
 ## 循環
 
-(Preferences-aps-mode)=
-### APS模式
-在開放循環、閉合循環和低血糖暫停 (LGS) 之間切換。
-
-![組態建置工具 - 循環模式](../images/ConfigBuilder_LoopLGS.png)
-
-(Preferences-open-loop)=
-#### 開放循環
-**AAPS**持續評估所有可用資料（IOB、COB、BG...）並在必要時提供治療建議（臨時基礎率），告訴你如何調整治療。
-
-這些建議不會自動執行（如封閉迴路）。 建議必須由使用者手動輸入到幫浦中（如果使用虛擬幫浦）或透過按鈕輸入，如果**AAPS**連接到真實幫浦。
-
-此選項是用於了解**AAPS**的運作方式或如果你使用不支援的幫浦。 無論你在這裡做出什麼選擇，直到**[目標5](#objectives-objective5)**結束之前，你都將處於開放迴路中。
-
-(preferences-closed-loop)=
-#### 閉合循環
-
-**AAPS** 持續評估所有可用的資料（IOB、COB、血糖……）並在必要時自動調整治療（_即_ 無需你進一步干預）以達到設定的 [目標範圍或數值](#profile-glucose-targets) （注射給藥、臨時基礎率、停用胰島素以避免低血糖等）。
-
-閉環系統在多個安全限制內運行，可以個別設置。
-
-閉環系統僅在你達到 **[目標 6](#objectives-objective6)** 或更高時，並使用支援的幫浦時才能使用。
-
-#### 低血糖暫停 (LGS)
-
-在此模式中，[maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) 設定為零。
-
-這意味著如果血糖下降，**AAPS** 可以為你減少基礎胰島素。 但是，如果血糖上升，則不會進行自動校正。 你的基礎率將保持在你當前**設定檔**中定義的值。 只有當 IOB（來自先前的低血糖暫停）為負值時，才會額外注射胰島素來降低**血糖**。
+As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
 
 (Preferences-minimal-request-change)=
 ### 最小請求變更

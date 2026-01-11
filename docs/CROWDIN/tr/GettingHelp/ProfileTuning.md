@@ -26,7 +26,7 @@ Don't rush, go slow!
 ## **Recommended settings and advice while tweaking basal**
 
 - Do all testing with [closed loop enabled](#AapsScreens-loop-status).
-- **Turn <u>OFF</u> all [automations](../DailyLifeWithAAPS/Automations.md)**
+- **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
 - **Turn <u>OFF</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](../AdvancedOptions/DevBranch.md), [AutoSens](#Open-APS-features-autosens)** so that they will not try to adapt your profile.
 - Do not make manual user actions (manual bolus, temp targets etc…) while testing: let the system use the **Profile** settings only.
 - For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board, Carbs On Board (and Sensitivity change). On graph 2, use Deviations and Blood Glucose Impact. When asking for advice, always include those on your screenshots.
@@ -44,7 +44,7 @@ Don't rush, go slow!
 
 Meaning that the meal is digested, and there are no more carbs in your body.
 
-AAPS might indicate [COB=0 while you still have carbs on board](../DailyLifeWithAAPS/CobCalculation.md).
+AAPS might indicate [COB=0 while you still have carbs on board](../DailyLifeWithAaps/CobCalculation.md).
 
 ## **[Profile](../SettingUpAaps/YourAapsProfile.md) definitions**
 

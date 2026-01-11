@@ -95,13 +95,13 @@ BG值的颜色反映其状态与预定义[范围](#Preferences-range-for-visuali
 
 右侧图标显示闭环状态：
 
-1. 绿色圆圈 = 闭环运行
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
+1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
+2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
 3. 红色圆圈 = 闭环禁用（永久不工作）
 4. 红色圆圈 = 闭环暂停（暂时停止，但会给予基础胰岛素）- 下方显示剩余时间
 5. 灰色圆圈 = 泵断开（暂时无胰岛素剂量）- 下方显示剩余时间
 6. 橙色圆圈 = 超级大剂量运行- 下方显示剩余时间
-7. 带虚线的蓝色圆圈 = 开环
+7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
 
 短按或长按图标以打开闭环对话框，切换闭环模式（关闭、低血糖暂停、开环或禁用）、暂停/重新启用闭环或断开/重新连接泵。
 
@@ -770,12 +770,6 @@ This tab shows the history of [loop status](#AapsScreens-loop-status) changes : 
 此选项卡显示了记录在Nightscout中的所有备注和警报。
 
 (aaps-screens-running-mode)=
-
-### Running mode
-
-![Running mode](../images/Screens/RunningMode.png)
-
-Running mode shows current and past AAPS running mode, it is also visible on the main graph as an upper colored bar.
 
 ## 历史浏览器
 

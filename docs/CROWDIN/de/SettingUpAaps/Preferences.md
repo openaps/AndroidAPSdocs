@@ -127,7 +127,7 @@ Im Abschnitt **Übersicht** kannst Du die Einstellungen für den Startbildschirm
 Die Option "Bildschirm aktiv lassen" hindert Android daran, den Bildschirm abzuschalten. Dies ist z.B. zu Präsentationszwecken hilfreich,  es verbraucht aber sehr viel Batterie.  Deshalb wird empfohlen, das Smartphone an ein Ladekabel anzuschließen.
 
 (Preferences-buttons)=
-### Schaltflächen
+### Buttons
 
 - Lege fest welche Schaltflächen am unteren Rand des Homescreens sichtbar sind.
 - Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
@@ -240,6 +240,10 @@ Bei der Verwendung von [SMB](#objectives-objective9) geben viele Menschen nicht 
 * für Menschen mit langsamer Verdauung: Ein voller Vorab-Bolus kann eine Hypo zur Folge haben, da die Insulinwirkung schneller eintritt, als die die Kohlenhydrate verdaut werden.
 * um **AAPS** mehr Spielraum für den Umgang mit **Glukosewertanstiegen** zu geben. Sobald es sinnvoll erscheint, wird **AAPS** in beiden Fällen den fehlenden Bolus-Teil mit SMBs ausgleichen.
 
+### Old glycemia time threshold
+
+If the last **BG** received is older than this threshold, then the bolus wizard will by default offer a 100% dose instead of the **Deliver this part of bolus wizard result** setting above. The reason for this is that when **BG** is missing, **AAPS** will not be able to send the remaining part of the bolus afterward (the loop is not running), which would result in high **BG**.
+
 ### Bolus-Berater aktivieren
 
 Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
@@ -294,34 +298,7 @@ Sei vorsichtig und aktiviere ihn erst dann, wenn Du vollständig verstanden hast
 
 ## Loop
 
-(Preferences-aps-mode)=
-### APS-Modus
-Wechsel zwischen Open Loop, Closed Loop und Unterbrechung bei niedrigen BZ (LGS).
-
-![Konfigurations-Generator - Loop Modus](../images/ConfigBuilder_LoopLGS.png)
-
-(Preferences-open-loop)=
-#### Open Loop
-**AAPS** wertet kontinuierlich alle verfügbaren Daten (IOB, COB, BZ...) aus und erstellt, sofern notwendig, daraus Behandlungsvorschläge (temporäre Basalraten) zur Anpassung Deiner Therapie.
-
-Die Vorschläge werden nicht, wie im Closed Loop, automatisch ausgeführt. Die Vorschläge müssen manuell in die Pumpe (falls eine virtuelle Pumpe verwendet wird) eingegeben oder über einen Tastendruck, wenn **AAPS** mit einer echten Pumpe verbunden ist, ausgeführt werden.
-
-Diese Option ist zum Kennenlernen der **AAPS**-Funktionsweise gedacht. Die Option wird auch für nicht unterstützte Pumpen genutzt. Bis zum Ende des **[Ziel 5](#objectives-objective5)** wirst Du, unabhängig davon, welche Auswahl Du hier triffst, im Open Loop bleiben.
-
-(preferences-closed-loop)=
-#### Closed Loop
-
-**AAPS** wertet kontinierlich alle verfügbaren Daten (IOB, COB, BZ-Wert) aus und passt die Behandlung bei Bedarf automatisch (_d.h._ ohne weiteren Eingriff durch Dich) an, um den eingestellten [Zielbereich oder Zielwert](#profile-glucose-targets) zu erreichen (Bolusabgabe, temporäre Basalrate, Insulinabschaltung zur Hypovermeidung etc.).
-
-Der Closed Loop arbeitet im Rahmen zahlreicher Sicherheitsgrenzen, die Du individuell einstellen kannst.
-
-Der Closed Loop steht ab dem **[Ziel 6 ](#objectives-objective6)** (oder darüber) zur Verfügung und setzt eine kompatible Pumpe voraus.
-
-#### Abschalten der Basalrate bei niedrigen Werten (Low Glucose Suspend - LGS)
-
-In diesem Modus ist [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) auf Null gesetzt.
-
-Das bedeutet, dass bei fallenden Glukosewerten, **AAPS** das Basal für Dich reduzieren kann. Wenn aber die Glukosewerte steigen, wird keine automatische Korrektur vorgenommen. Die Basalrate wird genauso so bleiben, wie sie im aktuellen **Profil** hinterlegt ist. Nur wenn das IOB negativ ist (wegen einer vorangegangenen Abschaltung der Basalrate bei niedrigen Werten) wird, um den **Glukosewert** zu senken, zusätzliches Insulin abgegeben.
+As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
 
 (Preferences-minimal-request-change)=
 ### Minimaler Wert zur Anfrage einer Änderung

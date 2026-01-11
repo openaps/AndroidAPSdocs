@@ -69,7 +69,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 **OR**
 
-### Optie 2: De Configurator
+### Option 2: The Config Builder
 
 Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜**Pump**➜**Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
 
@@ -77,7 +77,7 @@ Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
-### Verificatie van de selectie van de Omnipod Driver
+### Verification of Omnipod Driver Selection
 
 *Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below*
 
@@ -483,13 +483,13 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
 > ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
-- **Activeer Pod**
+- **Activate Pod**
 
   > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
   > Primes and activates a new pod
 
-- **Deactiveer Pod**
+- **Deactivate Pod**
 
   > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
@@ -589,7 +589,7 @@ Allows for scanning of a pod communication device. The Omnipod driver cannot sel
 
 - **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
 
-### Pieptonen
+### Confirmation beeps
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
@@ -598,7 +598,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 - **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
 - **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 
-### Waarschuwingen
+### Alerts
 
 Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
@@ -610,7 +610,7 @@ Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, 
 - **Number of units:** The number of units at which to trigger the pod low reservoir alert.
 - **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
 
-### Meldingen
+### Notifications
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful.
 

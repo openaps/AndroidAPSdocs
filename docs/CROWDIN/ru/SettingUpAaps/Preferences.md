@@ -127,7 +127,7 @@ In the **Overview** section, you can define the preferences for the home screen.
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
 (Preferences-buttons)=
-### Кнопки
+### Buttons
 
 - Define which buttons are visible on the bottom of your home screen.
 - Setting hidden in [simple mode](#preferences-simple-mode).
@@ -240,6 +240,10 @@ When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of 
 * for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
 * to leave more room to **AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate for the missing part of the bolus with SMBs, if/when deemed adequate.
 
+### Old glycemia time threshold
+
+If the last **BG** received is older than this threshold, then the bolus wizard will by default offer a 100% dose instead of the **Deliver this part of bolus wizard result** setting above. The reason for this is that when **BG** is missing, **AAPS** will not be able to send the remaining part of the bolus afterward (the loop is not running), which would result in high **BG**.
+
 ### Enabled bolus advisor
 
 Setting hidden in [simple mode](#preferences-simple-mode).
@@ -294,34 +298,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 
 ## Замкнутый цикл
 
-(Preferences-aps-mode)=
-### APS mode
-Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
-
-![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
-
-(Preferences-open-loop)=
-#### Open Loop
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
-
-The suggestions will not be executed automatically (as in closed loop). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
-
-This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
-
-(preferences-closed-loop)=
-#### Closed Loop
-
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (_i.e._ without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
-
-The Closed Loop works within numerous safety limits, which can be set individually.
-
-Closed Loop is only possible if you are in **[Objective 6](#objectives-objective6)** or higher and use a supported pump.
-
-#### Low Glucose Suspend (LGS)
-
-In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
-
-This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
 
 (Preferences-minimal-request-change)=
 ### Minimal request change

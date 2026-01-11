@@ -95,13 +95,13 @@ Bloky v strede zobrazujú:
 
 Na pravej strane ikona zobrazuje stav slučky:
 
-1. Zelený kruh = bežiaca slučka
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
+1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
+2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
 3. Červený kruh = slučka deaktivovaná (nefunguje trvalo)
 4. Žltý kruh = slučka pozastavená (dočasne pozastavená, ale bude podávaný bazálny inzulín) - zostávajúci čas je zobrazený pod ikonou
 5. Sivý kruh = pumpa odpojená (dočasne sa vôbec nedáva inzulín) - zostávajúci čas je zobrazený pod ikonou
 6. Oranžový kruh = prebieha super bolus – zostávajúci čas je zobrazený pod ikonou
-7. Modrý kruh s bodkovanou čiarou = otvorená slučka
+7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
 
 Krátkym alebo dlhým stlačením ikony otvoríte dialógové okno Slučka, kde môžete prepnúť režim slučky (Zatvoriť, Pozastaviť pri nízkej glukóze, Otvoriť alebo Zakázať), pozastaviť/opätovne zapnúť slučku alebo odpojiť/opätovne pripojiť pumpu.
 
@@ -769,12 +769,6 @@ This tab shows the history of [loop status](#AapsScreens-loop-status) changes : 
 This tab shows all notes and alerts recorded in Nightscout.
 
 (aaps-screens-running-mode)=
-
-### Running mode
-
-![Running mode](../images/Screens/RunningMode.png)
-
-Running mode shows current and past AAPS running mode, it is also visible on the main graph as an upper colored bar.
 
 ## History Browser
 

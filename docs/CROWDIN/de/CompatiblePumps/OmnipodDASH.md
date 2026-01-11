@@ -51,29 +51,29 @@ The instructions below explain how to activate a new pod session using **AAPS**.
 
 Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as  **[Omnipod and AAPS Constraints and Issues](#omnipod-dash-constraints)** to avoid running into a known problem.
 
-#### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
+### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
 1. Extra pods (3 or more spare)
 2. Spare Insulin and MDI equipment
 3. A working Omnipod PDM (In case **AAPS** fails)
 4. Supported Phones are a must! (See [Hardware/Software Requirements](#hardware-software-requirements))
 5. Correct version of AAPS built and installed
 
-#### **Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.**
+### **Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.**
 - Before using **AAPS** you or your care giver would have had to manage the Pod using the Omnipod PDM (or in some regions a Phone app) to send commands to your DASH (e.g a Bolus).
 - The DASH can only facilitate a single Bluetooth device (e.g PDM or Phone) connection to manage and send commands.
 - The device that successfully activates the pod is the only device allowed to communicate with that Pod from that point forward. This means that once you activate a DASH with your Android phone using **AAPS**, **you will no longer be able to use your PDM with that pod!** For the time that Pod is active the **AAPS** Dash driver running on your Android phone is now the new PDM for your pod.
 - **DO NOT Throw away your PDM!** It is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or **AAPS** is not working correctly.
 
-#### Your pod **WILL NOT** stop delivering insulin when it is not connected to AAPS.
+### Your pod **WILL NOT** stop delivering insulin when it is not connected to AAPS.
 Default basal rates are programmed on the pod on activation as defined in the current active [**Profile**](../SettingUpAaps/YourAapsProfile.md).  
 As long as **AAPS** is operational it will send basal rate adjustment commands that run for a maximum of 120 minutes.  
 When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod ➜ phone distance) the pod will automatically fall back to default basal rates as defined in your [**Profile**](../SettingUpAaps/YourAapsProfile.md).
 
-#### **AAPS Profile(s) do not support 30 minute basal rate time frames**
+### **AAPS Profile(s) do not support 30 minute basal rate time frames**
 If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported. For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact basil **Profile** in **AAPS**.  
 You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does NOT support this feature.
 
-#### **0U/h Profile basal rates are NOT supported in AAPS**
+### **0U/h Profile basal rates are NOT supported in AAPS**
 While the DASH does support a zero basal rate, **AAPS** uses multiples of the user's **Profile** basal rate to determine automated treatment; it cannot function with a zero basal rate.  
 Instead a temporary zero basal rate can be achieved through the "Disconnect pump" function, or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.  
 **NOTE:** The lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
@@ -82,7 +82,7 @@ Instead a temporary zero basal rate can be achieved through the "Disconnect pump
 
 There are **two** available options to configure Omnipod in **AAPS**:
 
-### Option 1: Neue Installation
+### Option 1: New installations
 
 When installing **AAPS** for the first time, the **Setup Wizard** will guide new users through key features and installation requirements for **AAPS**.  
 Select “DASH” when you reach Pump selection.
@@ -92,7 +92,7 @@ Select “DASH” when you reach Pump selection.
 When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up **AAPS** (See Option 2).
 
 (omnipod-dash-option-2-config-builder)=
-### Option 2: Der Konfigurations-Generator
+### Option 2: The Config Builder
 
 Bei einer vorhandenen Installation von AAPS kannst Du **DASH** als Pumpe unter "Konfiguration" auswählen:
 
@@ -104,7 +104,7 @@ Wenn Du das **Kontrollkästchen (4)** neben dem **Zahnrad (3)** wählst, wird da
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
-### Überprüfung der Omnipod-Treiberauswahl
+### Verification of Omnipod Driver Selection
 
 To verify that you have selected the DASH in **AAPS**, if you have **checked the box (4)**, **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab on **AAPS**. Wenn diese Option nicht aktiviert ist, finden Sie die DASH Registerkarte links oben im Hamburger-Menü.
 
@@ -120,7 +120,7 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
 (omnipod-dash-activate-pod)=
 
-### Pod aktivieren
+### Activate Pod
 
 1. Navigiere zur Registerkarte **DASH** und klicke auf den **POD MGMT (1)** Button und dann auf **Pod aktivieren (2)**.
 
@@ -194,7 +194,7 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
 (omnipod-dash-deactivate-pod)=
 
-### Pod deaktivieren
+### Deactivate Pod
 
 Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of total pod usage.
 
@@ -235,7 +235,7 @@ Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der 
 
 (omnipod-dash-resuming-insulin-delivery)=
 
-### Insulinabgabe fortsetzen
+### Resuming Insulin Delivery
 
 **NOTE**: During **Profile Switches**, like when using the PDM, AAPS must suspend delivery on the Pod before setting the new basal **Profile**. If communication fails between the suspend and resume commands, then delivery can stay suspended, Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
 
@@ -255,7 +255,7 @@ When insulin delivery is suspended you will need to issue a command to instruct 
 
 (omnipod-dash-silencing-pod-alerts)=
 
-### Pod Alarme stummschalten
+### Silencing Pod Alerts
 
 In dem folgenden Prozess wird gezeigt, wie Warntöne bestätigt und stummgeschaltet werden können, die auftreten, wenn die Laufzeit des aktiven Pods den Grenzwert für die Warnung vor dem Ablauf von 72 Stunden (3 Tage) erreicht. Dieser Grenzwert für die Laufzeit ist unter **Stunden bis zum Podende** in den DASH-Einstellungen 'Alarme' definiert. Die maximale Nutzungsdauer eines Pods beträgt 80 Stunden (3 Tage und 8 Stunden), dennoch empfiehlt der Hersteller, 72 Stunden (3 Tage) nicht zu überschreiten.
 
@@ -279,7 +279,7 @@ In dem folgenden Prozess wird gezeigt, wie Warntöne bestätigt und stummgeschal
 
 (omnipod-dash-view-pod-history)=
 
-### Anzeige Pod-Historie
+### View Pod History
 
 In diesem Abschnitt wird erklärt, wie Du Deine Pod-Historie überprüfen und nach verschiedenen Aktionskategorien filtern kannst. Mit dem Werkzeug 'Pod Historie' kannst Du die Aktionen und Ergebnisse deines jeweils aktiven Pod während dessen dreitägigem Lebenszyklus (72 - 80 Stunden) ansehen.
 
@@ -306,7 +306,7 @@ Im Folgenden werden die Anordnung und die Bedeutung der Symbole und Statusfelder
 
 ![DASH_Tab_1](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
-### Felder
+### Fields
 
 
 
@@ -351,7 +351,7 @@ Im Folgenden werden die Anordnung und die Bedeutung der Symbole und Statusfelder
 
 
 
-### Schaltflächen
+### Buttons
 
 ![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) Sends a refresh command to the active pod to update communication.
 
@@ -405,7 +405,7 @@ Die Einstellungen sind nach Gruppen sortiert unten aufgelistet. Du kannst die me
 
 ***NOTE:** An asterisk (\*) denotes the default setting is enabled.*
 
-### Bestätigungstöne
+### Confirmation beeps
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
@@ -421,7 +421,7 @@ Bestätigt mit Signaltönen des Pods die Abgabe und Änderung von Bolus, Basalra
 
 
 
-### Alarme
+### Alerts
 
 ![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
@@ -439,7 +439,7 @@ Einstellungen für **AAPS**-Alarme für Ablauferinnerung, Zeit bis Pod-Ende und 
 
 
 
-### Benachrichtigungen
+### Notifications
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
@@ -497,7 +497,7 @@ This section covers common known issues and solutions for Omnipod DASH use with 
 For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
-### Insulinabgabe unterbrochen
+### Delivery suspended
 
   - Es gibt keine Unterbrechen-Taste mehr. Wenn Du die Insulinabgabe unterbrechen möchtest, kannst Du eine Null-**TBR** für x Minuten setzen.
   - Während eines **Profilwechsels** muss der DASH die Insulinabgabe unterbrechen, bevor das neue Basal-**Profil** gesetzt wird. Wenn die Kommunikation zwischen den beiden Befehlen fehlschlägt, kann die Insulinabgabe unterbrochen bleiben. Wenn das passiert:
@@ -512,25 +512,25 @@ For known issues with Bluetooth connections, dropouts of pump/pods, or activatio
 *****NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !******
 
 ---
-### Pod Fehler
+### Pod Failures
 
 - Pods fallen gelegentlich aus unterschiedlichen Gründen aus, u. a. wegen Hardwareproblemen mit dem Pod selbst.
 - It is best practice not to raise support / replacement cases with Insulet, since AAPS is not an approved method of using the Pods.
 - Um die Ursache zu ermitteln, kannst Du in [**dieser Liste**](https://github.com/openaps/openomni/wiki/Fault-event-codes) die Fehlercodes nachschlagen.
 
 ---
-### Verhindere Pod Fehler 49
+### Preventing error 49 pod failures
 
 Dieser Fehler hängt mit einem fehlerhaften Pod-Status für einen Befehl oder einem Fehler während der Insulinabgabe zusammen. Dies ist der Fall, wenn der AAPS-Treiber und der Pod unterschiedliche Angaben zum aktuellen Status haben. Der Pod reagiert (aufgrund einer eingebauten Sicherheitsfunktion) dann mit einem nicht auflösbaren Fehlercode 49 (0x31) und verabschiedet sich mit einem so genannten „Heuler“: dem langen, irritierenden Piepton, der nur gestoppt werden kann, indem mit einer Büroklammer in ein Loch am richtigen Ort auf der Rückseite des Pods gedrückt wird. Der genaue Ursprung eines „Pod Fehlers 49“ ist oft schwer zu ermitteln. Situationen, die für das Auftreten dieses Fehlers vermutet werden (z.B. bei einem Absturz der Anwendung, beim Ausführen einer Entwicklungsversion oder bei einer Neuinstallation).
 
 ---
 
-### Pumpe nicht erreichbar Alarme
+### Pump Unreachable Alerts
 
 When no communication can be established with the pod for a pre-configured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences** ➜ **Local Alerts** ➜ **Pump unreachable threshold [min]**. Eine Alarmierung nach **120** Minuten wird als Wert empfohlen.
 
 ---
-### Exporteinstellungen
+### Export  Settings
 
 Durch den Export der **AAPS**-Einstellungen kannst Du alle Deine Einstellungen - und vielleicht noch wichtiger - alle Deine Objectives (Ziele) wiederherstellen. Es kann passieren, dass die Einstellungen in der „letzten bekannten funktionierenden Fassung“ wieder hergestellt werden müssen, etwa nach der Deinstallation/Neuinstallation von **AAPS** oder im Falle eines Smartphone-Verlustes.
 
@@ -541,7 +541,7 @@ Durch den Export der **AAPS**-Einstellungen kannst Du alle Deine Einstellungen -
 Regularly (after each export preferably) copy your exported settings to a safe place (a cloud drive e.g. Google Drive) that is accessible by any phone when needed. This allows you to restore to a phone from anywhere in case of a phone loss or factory reset of your phone while you are not at home.
 
 ---
-### Importeinstellungen
+### Import Settings
 
 **WARNING**: Please note that importing settings will possibly import an outdated Pod status (depending when you made the last export/backup).  
 As a result, there is a **risk of losing the active Pod!** (see **Exporting Settings**).
@@ -562,7 +562,7 @@ As a result, there is a **risk of losing the active Pod!** (see **Exporting Sett
 4. Es kann erforderlich sein, einen in den importierten Einstellungen enthaltenen, aber nicht mehr vorhandenen Pod zu **deaktivieren**.
 
 ---
-### Importieren von Einstellungen, die den Pod-Status von einem inaktiven Pod enthalten
+### Importing settings that contain Pod state from an inactive Pod
 
 Wenn Du Einstellungen für einen mittlerweile inaktiven Pod importierst, wird AAPS versuchen sich mit diesem Pod zu verbinden. Dies wird logischerweise scheitern. Du kannst in dieser Situation keinen neuen Pod aktivieren.
 
@@ -573,7 +573,7 @@ To remove the old pod session:
 4. Sobald der alte Pod gelöscht ist, kannst Du einen neuen Pod aktivieren.
 
 ---
-### Neuinstallation von AAPS
+### Reinstalling AAPS
 
 When uninstalling **AAPS** you will lose all your settings, objectives and the current Pod session. **To restore them make sure you have a recent exported settings file available!**
 
@@ -588,7 +588,7 @@ Wenn ein Pod aktiv ist, stelle sicher, dass Du einen Export für die aktuelle Po
 7. Anschließend: Aktuelle Einstellungen exportieren.
 
 ---
-### AAPS auf eine neuere Version aktualisieren
+### Updating AAPS to a newer version
 
 In den meisten Fällen ist eine Deinstallation nicht erforderlich. Du kannst eine „in-place“ Installation durchführen, indem Du die Installation für die neue Version startest. This is also possible when on an active Pod session.
 
@@ -599,7 +599,7 @@ In den meisten Fällen ist eine Deinstallation nicht erforderlich. Du kannst ein
 5. Anschließend: Aktuelle Einstellungen exportieren.
 
 ---
-### Omnipod-Treiberwarnungen
+### Omnipod driver alerts
 
 The Omnipod Dash driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action requiring their input to resolve the cause of the triggered alert.
 

@@ -46,7 +46,7 @@
 
 ![權限](../images/setup-wizard/Wizard03.png)
 
-### 通知
+### Notifications
 
 如果應用程式希望向你發送通知，Android需要特殊的許可。
 
@@ -54,7 +54,7 @@
 
 請點擊第一個「請求權限」按鈕：
 
-![通知](../images/setup-wizard/Wizard04.png)
+![Notifications](../images/setup-wizard/Wizard04.png)
 
 選擇“AAPS”應用程式：
 

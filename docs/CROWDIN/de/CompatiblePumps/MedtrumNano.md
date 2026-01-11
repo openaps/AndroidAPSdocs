@@ -45,7 +45,7 @@ ACHTUNG: Wenn ein Patch mit AAPS mit aktiviert wird, **MÜSSEN** alle anderen Ge
 
 ### Schritt 1: Wähle die Medtrum-Pumpe aus
 
-#### Option 1: Neue Installation
+#### Option 1: New installations
 
 Wenn Du AAPS erstmals installierst, führt Dich der **Einrichtungsassistent** durch die AAPS-Installation. Wenn Du das Pumpenauswahlmenü erreichst, wähle "Medtrum" aus.
 
@@ -53,7 +53,7 @@ Falls Du Dir nicht sicher bist, kannst Du auch zunächst die „Virtuelle Pumpe�
 
 ![Einrichtungsassistent](../images/medtrum/SetupWizard.png)
 
-#### Option 2: Der Konfigurations-Generator
+#### Option 2: The Config Builder
 
 Bei einer bestehenden Installation kannst Du die **Medtrum**-Pumpe unter [Konfiguration > Pumpe](#Config-Builder-pump) auswählen:
 

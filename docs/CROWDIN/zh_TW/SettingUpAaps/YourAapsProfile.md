@@ -89,7 +89,7 @@
 
 **血糖**目標根據你的個人偏好和需求進行設置。 例如，如果你擔心夜間低血糖，可以將目標稍微提高到晚上 9 點到早上 7 點的 117 mg/dL (6.5 mmol/L)。 如果你希望在早餐前有充足的胰島素儲備，你可以將早上 7 點到 8 點的目標設定為較低的 81 mg/dL（4.5 mmol/L）。
 
-在 [開放循環](#Preferences-open-loop) 模式下，特別是在完成 [前幾個目標](../SettingUpAaps/CompletingTheObjectives.md) 的過程中，使用較寬的目標範圍是一個不錯的選擇，有助於你一邊學習 **AAPS** 的行為，一邊調整你的 **設定檔**。<br/> 在 [封閉循環](#preferences-closed-loop) 模式下（從 **[目標 6](#objectives-objective6)** 開始），建議縮小範圍，直到一天中的每個時段都只有單一目標（_低_ 目標 = _高_ 目標），以確保 **AAPS** 能及時對 **血糖** 波動作出反應。
+When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
 
 (your-aaps-profile-basal-rates)=
 
@@ -125,7 +125,7 @@
 
 有些基礎率測試方法通常是在 24 小時期間進行<u>間歇性</u> 斷食，同時觀察你的基礎率與胰島素需求。 雖然你需要測試全天的基礎率，但不建議連續禁食24小時。 因為身體會啟動機制如激素來進行補償。 推薦的方式是禁食3次，每次8小時。
 
-建議的方法是暫停循環（為了安全，你可以將 AAPS 設為 LGS 以避免低血糖，與完成目標 6 時的作法相同），這會恢復為你預設的背景基礎率。 觀察你的**血糖**如何變化：如果它下降，則基礎率過高。 反之亦然。<br/> 另一種替代方法（ might be more tricky）是在循環運行的情況下，查看**IOB**如何變化。 如果**IOB**是負的，則你的基礎率過高。 反之亦然。 請注意，這種方法依賴於**ISF**來修正**血糖**，因此需要其他變數合理設置，這樣才能成功。<br/> 調整基礎率的另一種方法是觀察在夜間的循環行為，當所有 COB 已經降到為止。 這種方法對於兒童特別有用，因為禁食較困難或胰島素需求經常變化。 [來自 Tidepool 的 Saleh Adi 醫師](https://www.youtube.com/watch?v=-fpWnGRhLSo)提供了分析夜間血糖曲線的實用方法，以最佳化你的基礎率。
+The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. 觀察你的**血糖**如何變化：如果它下降，則基礎率過高。 反之亦然。<br/> 另一種替代方法（ might be more tricky）是在循環運行的情況下，查看**IOB**如何變化。 如果**IOB**是負的，則你的基礎率過高。 反之亦然。 請注意，這種方法依賴於**ISF**來修正**血糖**，因此需要其他變數合理設置，這樣才能成功。<br/> 調整基礎率的另一種方法是觀察在夜間的循環行為，當所有 COB 已經降到為止。 這種方法對於兒童特別有用，因為禁食較困難或胰島素需求經常變化。 [來自 Tidepool 的 Saleh Adi 醫師](https://www.youtube.com/watch?v=-fpWnGRhLSo)提供了分析夜間血糖曲線的實用方法，以最佳化你的基礎率。
 
 關於如何在封閉式循環中分析型態並調整你的基礎設定檔，請參閱 [此處](../GettingHelp/ProfileTuning.md)。
 

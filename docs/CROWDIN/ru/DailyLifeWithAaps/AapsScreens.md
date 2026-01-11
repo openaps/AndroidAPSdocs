@@ -95,13 +95,13 @@
 
 Пиктограмма справа показывает состояние цикла:
 
-1. Зеленый круг = замкнутый цикл активен
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
+1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
+2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
 3. Красный круг = цикл деактивирован (постоянно отключен)
 4. Красный круг = Цикл приостановлен (временно, но выдается базальный инсулин) - оставшееся время показано ниже значка
 5. Серый круг = помпа отключена (временно отключена любая подача инсулина) - оставшееся время остановки отображается под пиктограммой
 6. Оранжевый круг = запущен суперболюс - оставшееся время отображаешься под пиктограммой
-7. Синий круг с пунктирной линией = активен незамкнутый цикл
+7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
 
 Короткое или длинное нажатие на пиктограмму откроет диалоговое окно для переключения между режимами контура (Закрытый, Приостановка на низкой ГК, Открытый или Отключен), для отключения / возобновления цикла или отключения / подключения помпы обратно.
 
@@ -770,12 +770,6 @@ This tab shows the history of [loop status](#AapsScreens-loop-status) changes : 
 Эта вкладка показывает все заметки и оповещения, записанные в Nightscout.
 
 (aaps-screens-running-mode)=
-
-### Running mode
-
-![Running mode](../images/Screens/RunningMode.png)
-
-Running mode shows current and past AAPS running mode, it is also visible on the main graph as an upper colored bar.
 
 ## Просмотр журнала
 

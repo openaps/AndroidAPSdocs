@@ -46,7 +46,7 @@ In this screen, we aim to give some more background information, translate more 
 
 ![Permissions](../images/setup-wizard/Wizard03.png)
 
-### Bildirimler
+### Notifications
 
 Android requires special permission for apps if they want to send you notifications.
 
@@ -54,7 +54,7 @@ While it is a good feature to disable notifications _e.g._ from  social media ap
 
 Please click the first "ASK FOR PERMISSION" button:
 
-![Bildirimler](../images/setup-wizard/Wizard04.png)
+![Notifications](../images/setup-wizard/Wizard04.png)
 
 Select the "AAPS" app:
 

@@ -69,7 +69,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 **或**
 
-### 选项2：配置构建器
+### Option 2: The Config Builder
 
 通过左上角**汉堡菜单**进入**配置构建器(1)**➜**泵**➜**Omnipod**，选择标有**Omnipod**的**单选按钮(2)**。 勾选**设置齿轮图标(3)**旁的**复选框(4)**后，Omnipod菜单将作为**POD**标签页显示在AAPS界面中。 本文档中将其称为**Omnipod(POD)**标签页。
 
@@ -77,7 +77,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
-### Omnipod驱动选择验证
+### Verification of Omnipod Driver Selection
 
 *注：若您未选择RileyLink便提前退出设置向导，虽已启用Omnipod驱动，但仍需完成RileyLink设备选择。  您可能会看到Omnipod（POD）标签页如下所示*
 
@@ -239,7 +239,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
    > ![Suspend_Insulin_Delivery_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
 
-#### 恢复胰岛素输注
+#### Resuming Insulin Delivery
 
 此指令用于命令当前暂停中的储药器恢复胰岛素输注。 命令成功处理后，胰岛素将根据当前时间从活动基础配置文件中恢复使用当前基础率进行正常输注。 Pod将重新接受大剂量、临时基础率和超微大剂量的指令。
 
@@ -283,7 +283,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 (OmnipodEros-view-pod-history)=
 
-### 查看 Pod 历史
+### View Pod History
 
 本部分将向您展示如何查看活动pod的历史记录，并按不同操作类别进行筛选。 Pod历史记录工具可让您查看当前活动pod在其3天(72-80小时)生命周期内执行的操作及结果。
 
@@ -371,7 +371,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
    > 
    > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
-##### 字段
+##### Fields
 
 > - **日期和时间**：按时间倒序排列的每个事件的时间戳。
 > - **设备：** 当前操作或状态所指向的设备。
@@ -387,7 +387,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 > ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
 
-### 字段
+### Fields
 
 - **RileyLink状态：**显示RileyLink的当前连接状态
 
@@ -477,19 +477,19 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
   > 
   > > 恢复当前暂停的活动pod
 
-### Pod 管理菜单
+### Pod Management Menu
 
 以下是关于从**Omnipod (POD)**选项卡进入的**Pod管理**菜单中图标布局和含义的说明。
 
 > ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
-- **激活Pod**
+- **Activate Pod**
 
   > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
   > 对新pod进行灌注和激活
 
-- **停用Pod**
+- **Deactivate Pod**
 
   > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
@@ -589,7 +589,7 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
 - **在操作菜单中启用电池更换记录：** 若您已启用此设置及上述电池报告设置，则操作菜单中的电池更换按钮将被激活。  某些pod通信设备现在可以使用可更换的普通电池。  此选项可让您记录更换时间并重置电池使用计时器。
 
-### 确认提示音
+### Confirmation beeps
 
 提供储药器对大剂量注射、基础率、超微大剂量(SMB)和临时基础率(TBR)输送及变更的确认提示音。
 
@@ -598,7 +598,7 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 - ***超微大剂量提示音启用：** 设置是否在超微大剂量给药时播放确认提示音。
 - **启用临时基础率提示音：** 控制设置或取消临时基础率(TBR)时是否发出确认提示音。
 
-### 警报
+### Alerts
 
 当pod到期、关机或根据设定的阈值单位检测到储药器药量不足时，提供AAPS警报和Nightscout通知。
 
@@ -610,7 +610,7 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 - **单位数值：** 触发储药器低药量警报的剩余药量单位数。
 - **自动确认Pod警报：** 启用后仍会发出通知，但在警报触发后首次与Pod建立通信连接时，系统将自动确认并消除该警报。
 
-### 通知
+### Notifications
 
 当不确定临时基础率(TBR)、超微大剂量(SMB)或大剂量给药是否成功时，提供AAPS通知和手机声音警报。
 
@@ -710,15 +710,15 @@ Omnipod Eros Pod中的胰岛素量报告不精确。  这是因为无法精确�
 
 ## 故障排除
 
-### Pod 故障
+### Pod Failures
 
 储药器偶尔会因各种问题发生故障，包括储药器自身的硬件问题。 最佳做法是不要向Insulet公司报修，因为AAPS并非官方认可的使用方案。 故障代码列表可[在此处](https://github.com/openaps/openomni/wiki/Fault-event-codes)查看，以帮助确定原因。
 
-### 预防49号储药器故障
+### Preventing error 49 pod failures
 
 该故障与指令对应的储药器状态错误或胰岛素输注指令执行出错有关。 我们建议用户在**配置构建器**➜**通用**➜**NS客户端**➜**齿轮图标**➜**高级设置**下切换为仅上传模式(禁用同步)，以防止可能出现的问题。
 
-### 泵体失联警报
+### Pump Unreachable Alerts
 
 建议通过右上角三点菜单进入**偏好设置**➜**本地警报**➜**泵不可达阈值[分钟]**，将该值设为**120**来配置泵不可达警报。
 
@@ -733,7 +733,7 @@ Omnipod Eros Pod中的胰岛素量报告不精确。  这是因为无法精确�
 4. 安装新版AAPS并确认没有正在使用的Pod会话。
 5. 导入您的设置并激活新Pod。
 
-### Omnipod驱动警报
+### Omnipod driver alerts
 
 请注意：Omnipod驱动程序在**概览标签页**会显示多种独特警报，其中大部分为信息类警报可忽略，但部分警报会提示用户需采取相应操作来解决触发警报的原因。 以下是您可能会遇到的主要警报摘要：
 

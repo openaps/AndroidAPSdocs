@@ -629,7 +629,7 @@ Du musst [Ziel 11](#objectives-objective10) (in späteren Version Ziel 10!) zumi
 - Visualisierung der [dynamischen Zielanpassung](#AapsScreens-visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - Neues [Layout der Einstellungen](../SettingUpAaps/Preferences.md) @MilosKozak
 - Update des SMB Algorithmus @Tornado-Tim
-- [Low Glucose Suspend Modus](#Preferences-aps-mode) (dt. Abschaltung vor Niedrig) @Tornado-Tim
+- [Low glucose suspend mode](#KeyAapsFeatures-LGS) @Tornado-Tim
 - [Benachrichtigung für „Kohlenhydrate benötigt“](#key-aaps-features-minimal-carbs-required-for-suggestion) @twain47 @Tornado-Tim
 - Careportal entfernt (jetzt im Aktionen-Tab/Menü) @MilosKozak
 - [Neues verschlüsseltes Sicherungsformat](ExportImportSettings.md) @dlvoy

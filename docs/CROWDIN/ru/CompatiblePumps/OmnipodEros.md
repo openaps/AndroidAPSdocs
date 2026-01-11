@@ -69,7 +69,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 **ИЛИ**
 
-### Вариант 2: Конфигуратор
+### Option 2: The Config Builder
 
 В левом верхнем углу из **выпадающего меню** выберите **Конфигуратор(1)** ➜**Помпа** ➜ **Omnipod**, включив **радио кнопку(2)** под названием **Omnipod**. Поставив **флажок(4)** напротив **шестеренки настроек(3)** вы активируете вкладку меню Omnipod в интерфейсе AAPS, которая называется **POD**. В документации эта вкладка называется **Omnipod (POD)**.
 
@@ -77,7 +77,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 > 
 > ![Включить Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Включить Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
-### Верификация выбора драйвера Omnipod
+### Verification of Omnipod Driver Selection
 
 *Примечание: Если вы уже вышли из мастера настройки без выбора RileyLink, драйвер Omnipod будет включен, но вам все равно нужно выбрать RileyLink.  Вы увидите вкладку Omnipod (POD) как показано ниже*
 
@@ -239,7 +239,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
    > ![Приостановка_инсулина_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
 
-#### Возобновление подачи инсулина
+#### Resuming Insulin Delivery
 
 Use this command to instruct the active, currently suspended pod to resume insulin delivery. После успешной обработки команды, нормальная подача инсулина возобновится в соответствии с текущим активным профилем базала. Pod снова будет принимать команды на болюс, TBR и SMB.
 
@@ -283,7 +283,7 @@ Use this command to instruct the active, currently suspended pod to resume insul
 
 (OmnipodEros-view-pod-history)=
 
-### Просмотр истории Pod
+### View Pod History
 
 В этом разделе показано, как просмотреть историю активного пода и отфильтровать ее по различным категориям. Инструмент истории пода позволяет просматривать действия текущего активного пода за трое суток его жизни (72 - 80 часов).
 
@@ -371,7 +371,7 @@ Use this command to instruct the active, currently suspended pod to resume insul
    > 
    > ![RileyLink_Статистика_Журнал_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
-##### Поля
+##### Fields
 
 > - **Дата & Время**: В обратном хронологическом порядке временная отметка каждого события.
 > - **Устройство:** Устройство, на которое ссылается текущее действие или состояние.
@@ -387,7 +387,7 @@ Use this command to instruct the active, currently suspended pod to resume insul
 
 > ![Вкладка_Omnipod](../images/omnipod/Omnipod_Tab.png)
 
-### Поля
+### Fields
 
 - **Статус RileyLink:** Отображает текущее состояние соединения RileyLink
 
@@ -477,19 +477,19 @@ Use this command to instruct the active, currently suspended pod to resume insul
   > 
   > > Возобновляет остановленный активный под
 
-### Меню управления помпой
+### Pod Management Menu
 
 Ниже приводится описание макета и значения иконок в меню **Управление Pod**, доступном из вкладки **Omnipod (POD)**.
 
 > ![Вкладка_Omnipod_Pod_Управление](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
-- **Активация Pod**
+- **Activate Pod**
 
   > ![активировать Pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
   > Заполняет катетер и активирует новый Pod
 
-- **Деактивация Pod**
+- **Deactivate Pod**
 
   > ![деактивировать Pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
@@ -589,7 +589,7 @@ The settings groups are listed below; you can enable or disable via a toggle swi
 
 - **Включить запись о замене батареи в Действиях:** в меню Действий, кнопка изменения батареи включена, ЕСЛИ вы включили эту настройку и настройку батареи выше.  Некоторые коммуникационные устройства работают от обычных заменяемых батарей.  Эта опция позволяет сбросить таймеры батареи.
 
-### Звуковые сигналы подтверждения
+### Confirmation beeps
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
@@ -598,7 +598,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 - **Звуковой сигнал микроболюсов SMB включен** Включить или отключить подтверждающие сигналы при подаче микроболюсов.
 - **Звуковой сигнал временного базала TBR включен** Включить или отключить подтверждающие сигналы при установке или отмене TBR.
 
-### Оповещения
+### Alerts
 
 Оповещения AAPS и Nightscout об истечении срока, выключении, низком резервуаре на основе заданных пороговых значений.
 
@@ -610,7 +610,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 - **Количество единиц:** Количество единиц, на которые можно вызывать предупреждение о низком резервуаре резервуара.
 - **Автоматически признавать Pod уведомления:** Когда включено, уведомление все еще будет выдано однако сразу после первого сообщения от Pod, оно будет автоматически признано, и предупреждение будет закрыто.
 
-### Уведомления
+### Notifications
 
 Выдает уведомления AAPS и звуковые оповещения, когда нет уверенности в успешных TBR, SMB, болюсах или приостановленных событиях.
 
@@ -710,15 +710,15 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 
 ## Устранение неполадок
 
-### Сбои в работе Pod
+### Pod Failures
 
 Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. Список ошибок можно найти [здесь](https://github.com/openaps/openomni/wiki/Fault-event-codes) для помощи в определении причины.
 
-### Предотвращение ошибки 49 при сбоях Pod
+### Preventing error 49 pod failures
 
 This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. Чтобы предотвратить возможные сбои рекомендуем пользователям переключиться на клиент Nightscout на *только загружать (отключить синхронизацию)* в **Конфигураторе**➜**Общие**➜**NSClient**➜**шестеренка настроек**➜**Расширенные настройки**,.
 
-### Оповещения о недоступности помпы
+### Pump Unreachable Alerts
 
 Рекомендуется настроить оповещения о недоступности сигналов помпы на **120 минут**, перейдя в верхнее правое меню, выберите **Настройки**➜**Локальные оповещения**➜**Порог недоступности помпы \[мин\]** и установить значение **120**.
 
@@ -733,7 +733,7 @@ This failure is related to an incorrect pod state for a command or an error duri
 4. Установите новую версию AAPS и убедитесь, что у вас нет активной сессии Pod.
 5. Импортируйте ваши настройки и активируйте новый код.
 
-### Оповещения драйвера Omnipod
+### Omnipod driver alerts
 
 обратите внимание, что драйвер Omnipod Erosсодержит множество оповещений на вкладке **Начало**, большинство из них являются информационными и могут быть отключены, в то время как некоторые предоставляют пользователю возможности устранения причин оповещения. A summary of the main alerts that you may encounter is listed below:
 

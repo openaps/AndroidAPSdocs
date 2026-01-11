@@ -93,7 +93,7 @@
 
 完成此目標的最短時間為：**7天**。 這是一個強制的等待時間。 即使所有基礎率變更都已應用，也無法繼續到下一個**目標**。
 
-- 從[選單中的偏好設定 > OpenAPS](#Preferences-aps-mode)或按住**首頁總覽**螢幕左上角的循環圖示來選擇開放循環。
+- Select Open Loop either by pressing and holding the [Loop icon](#AapsScreens-loop-status) on the top right of the **Overview** screen.
 - 在 7 天內手動執行至少 20 次臨時基礎率建議；將他們輸入到你的（實體）幫浦中，並在 AAPS 中確認你已接受他們。 確保這些基礎率調整顯示在**AAPS**和**Nightscout**中。
 - 在必要時使用[**臨時目標**](../DailyLifeWithAaps/TempTargets.md)。 在治療低血糖後，使用預定的「低血糖臨時目標」以防止系統過度修正回升。
 - 如果你此時仍處於 [簡單模式](#preferences-simple-mode)，現在可能是關閉它的好時機。
@@ -114,7 +114,7 @@
 
 完成此目標的預計時間為：**7天**。
 
-這**目標**要求你確定並設置你的「最大U/h的臨時基礎率」（max-basal）值，如[OpenAPS特徵](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)所述。 該值可以在**偏好設定 > OpenAPS**中設置。 如果你仍在使用虛擬幫浦，請確保在**AAPS**和你的胰島素幫浦中均設置此安全設置。
+這**目標**要求你確定並設置你的「最大U/h的臨時基礎率」（max-basal）值，如[OpenAPS特徵](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)所述。 This value can be set in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings). 如果你仍在使用虛擬幫浦，請確保在**AAPS**和你的胰島素幫浦中均設置此安全設置。
 
 你可能希望將你的[**設定檔**血糖目標](#profile-glucose-targets)設置得比平時高，直到你對**AAPS**的計算和設置熟悉為止。 你可能希望實驗一下將你的**BG目標**在**設定檔**中調整到更緊密的範圍（例如，寬度為1或更低的mmol/l [20 mg/dl或更低]），觀察其後的行為。
 
@@ -162,13 +162,14 @@
 - 檢視啟動的臨時基礎率，觀察 「首頁總覽」螢幕上的藍綠色基礎文本或 「首頁總覽」圖表中的藍綠色基礎呈現。
 - 在處理低血糖後，你可能會暫時經歷血糖反彈，但無法提高基礎率來應對反彈。
 
+(objectives-objective7)=
 ## 目標 7：調整閉環模式，將 maxIOB 提高至 0 以上並逐步降低血糖目標
 
-要完成**目標 7**，你必須關閉循環並提升你的[最大IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)。 **最大IOB**在**目標 6**中已自動設為零。 現在這個設定將被恢復。 **AAPS**將開始使用你所定義的最大IOB值來調整高血糖值。
+要完成**目標 7**，你必須關閉循環並提升你的[最大IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)。 **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS**將開始使用你所定義的最大IOB值來調整高血糖值。
 
 完成這個目標的最短時間為**1天**。 這是一個強制的等待時間。 在這段時間內，無法進入下一個**目標**。
 
-- 要選擇**閉合循環**，可以從[偏好設定 > OpenAPS](../SettingUpAaps/Preferences.md)中選擇，或通過長按**總覽**螢幕右上角的循環圖示來操作。 保持在**閉合循環**中至少持續1天。
+- Select **Closed Loop** by pressing and holding the [Loop icon](#AapsScreens-loop-status) in the top right corner of the **Overview** screen. 保持在**閉合循環**中至少持續1天。
 
 - 慢慢提高“**最大總 IOB OpenAPS 不能超過**” （在 OpenAPS 中稱為 'max-iob'）的值，直到你找到最適合自己的設置。
 

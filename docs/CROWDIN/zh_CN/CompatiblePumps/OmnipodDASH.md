@@ -51,29 +51,29 @@ The instructions below explain how to activate a new pod session using **AAPS**.
 
 Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as  **[Omnipod and AAPS Constraints and Issues](#omnipod-dash-constraints)** to avoid running into a known problem.
 
-#### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
+### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
 1. Extra pods (3 or more spare)
 2. Spare Insulin and MDI equipment
 3. A working Omnipod PDM (In case **AAPS** fails)
 4. Supported Phones are a must! (See [Hardware/Software Requirements](#hardware-software-requirements))
 5. Correct version of AAPS built and installed
 
-#### **Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.**
+### **Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.**
 - Before using **AAPS** you or your care giver would have had to manage the Pod using the Omnipod PDM (or in some regions a Phone app) to send commands to your DASH (e.g a Bolus).
 - The DASH can only facilitate a single Bluetooth device (e.g PDM or Phone) connection to manage and send commands.
 - The device that successfully activates the pod is the only device allowed to communicate with that Pod from that point forward. This means that once you activate a DASH with your Android phone using **AAPS**, **you will no longer be able to use your PDM with that pod!** For the time that Pod is active the **AAPS** Dash driver running on your Android phone is now the new PDM for your pod.
 - **DO NOT Throw away your PDM!** It is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or **AAPS** is not working correctly.
 
-#### Your pod **WILL NOT** stop delivering insulin when it is not connected to AAPS.
+### Your pod **WILL NOT** stop delivering insulin when it is not connected to AAPS.
 Default basal rates are programmed on the pod on activation as defined in the current active [**Profile**](../SettingUpAaps/YourAapsProfile.md).  
 As long as **AAPS** is operational it will send basal rate adjustment commands that run for a maximum of 120 minutes.  
 When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod ➜ phone distance) the pod will automatically fall back to default basal rates as defined in your [**Profile**](../SettingUpAaps/YourAapsProfile.md).
 
-#### **AAPS Profile(s) do not support 30 minute basal rate time frames**
+### **AAPS Profile(s) do not support 30 minute basal rate time frames**
 If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported. For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact basil **Profile** in **AAPS**.  
 You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does NOT support this feature.
 
-#### **0U/h Profile basal rates are NOT supported in AAPS**
+### **0U/h Profile basal rates are NOT supported in AAPS**
 While the DASH does support a zero basal rate, **AAPS** uses multiples of the user's **Profile** basal rate to determine automated treatment; it cannot function with a zero basal rate.  
 Instead a temporary zero basal rate can be achieved through the "Disconnect pump" function, or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.  
 **NOTE:** The lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
@@ -82,7 +82,7 @@ Instead a temporary zero basal rate can be achieved through the "Disconnect pump
 
 There are **two** available options to configure Omnipod in **AAPS**:
 
-### 方式一：全新安装
+### Option 1: New installations
 
 When installing **AAPS** for the first time, the **Setup Wizard** will guide new users through key features and installation requirements for **AAPS**.  
 Select “DASH” when you reach Pump selection.
@@ -92,7 +92,7 @@ Select “DASH” when you reach Pump selection.
 When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up **AAPS** (See Option 2).
 
 (omnipod-dash-option-2-config-builder)=
-### 选项2：配置构建器
+### Option 2: The Config Builder
 
 在现有安装中，您可以通过配置构建器选择**DASH**泵：
 
@@ -104,7 +104,7 @@ On the top-left hand corner **hamburger menu** select **Config Builder (1)** ➜
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
-### Omnipod驱动选择验证
+### Verification of Omnipod Driver Selection
 
 To verify that you have selected the DASH in **AAPS**, if you have **checked the box (4)**, **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab on **AAPS**. 若未勾选此选项，您仍可在左上角汉堡菜单中找到DASH标签页。
 
@@ -120,7 +120,7 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
 (omnipod-dash-activate-pod)=
 
-### 激活Pod
+### Activate Pod
 
 1. 请进入**DASH**标签页，点击**储药器管理(1)**按钮，然后选择**激活储药器(2)**。
 
@@ -194,7 +194,7 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
 (omnipod-dash-deactivate-pod)=
 
-### 停用Pod
+### Deactivate Pod
 
 Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of total pod usage.
 
@@ -235,7 +235,7 @@ Under normal circumstances, the expected lifetime of a pod is three days (72 hou
 
 (omnipod-dash-resuming-insulin-delivery)=
 
-### 恢复胰岛素输注
+### Resuming Insulin Delivery
 
 **NOTE**: During **Profile Switches**, like when using the PDM, AAPS must suspend delivery on the Pod before setting the new basal **Profile**. If communication fails between the suspend and resume commands, then delivery can stay suspended, Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
 
@@ -255,7 +255,7 @@ When insulin delivery is suspended you will need to issue a command to instruct 
 
 (omnipod-dash-silencing-pod-alerts)=
 
-### 静音储药器警报
+### Silencing Pod Alerts
 
 以下流程将说明当储药器使用时间接近72小时（3天）有效期前的警告时限时，如何确认并消除储药器提示音。 该警告时限由**关机前小时数**的Dash警报设置定义。 储药器最长使用时限为80小时（3天8小时），但Insulet建议不要超过72小时（3天）的标准周期。
 
@@ -279,7 +279,7 @@ When insulin delivery is suspended you will need to issue a command to instruct 
 
 (omnipod-dash-view-pod-history)=
 
-### 查看 Pod 历史
+### View Pod History
 
 本节说明如何查看使用中储药器的历史记录，并按不同操作类别进行筛选。 储药器历史工具可让您查看当前使用中储药器在其3天（72-80小时）使用周期内执行的操作及结果记录。
 
@@ -306,7 +306,7 @@ When insulin delivery is suspended you will need to issue a command to instruct 
 
 ![DASH_Tab_1](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
-### 字段
+### Fields
 
 
 
@@ -351,7 +351,7 @@ When insulin delivery is suspended you will need to issue a command to instruct 
 
 
 
-### 按钮
+### Buttons
 
 ![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) Sends a refresh command to the active pod to update communication.
 
@@ -370,7 +370,7 @@ When insulin delivery is suspended you will need to issue a command to instruct 
 
 
 
-### Pod 管理菜单
+### Pod Management Menu
 
 Below is describes the purpose of each icon on the **Pod Management** menu, accessed by pressing **POD MGMT (1)** button from the **DASH** tab.
 
@@ -405,7 +405,7 @@ The Dash driver settings are configurable from the top-left hand corner **hambur
 
 ***NOTE:** An asterisk (\*) denotes the default setting is enabled.*
 
-### 确认提示音
+### Confirmation beeps
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
@@ -421,7 +421,7 @@ The Dash driver settings are configurable from the top-left hand corner **hambur
 
 
 
-### 警报
+### Alerts
 
 ![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
@@ -439,7 +439,7 @@ The Dash driver settings are configurable from the top-left hand corner **hambur
 
 
 
-### 通知
+### Notifications
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
@@ -465,7 +465,7 @@ This tab is well documented in the main **AAPS** documentation but there are a f
 
    ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-### 余量水平
+### Level
 
 **胰岛素储药量**
 
@@ -497,7 +497,7 @@ This section covers common known issues and solutions for Omnipod DASH use with 
 For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
-### 输注暂停
+### Delivery suspended
 
   - 不再设有暂停按钮。 如需"暂停"储药器，可设置持续时间为X分钟的零值**临时基础率(TBR)**。
   - 在执行**配置文件切换**时，DASH必须在设置新的基础率**配置文件**前暂停胰岛素输注。 若两条指令间通信失败，输注可能保持暂停状态。 当发生此情况时：
@@ -512,25 +512,25 @@ For known issues with Bluetooth connections, dropouts of pump/pods, or activatio
 *****NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !******
 
 ---
-### Pod 故障
+### Pod Failures
 
 - 储药器偶尔会因各种问题发生故障，包括储药器自身的硬件问题。
 - It is best practice not to raise support / replacement cases with Insulet, since AAPS is not an approved method of using the Pods.
 - 故障代码列表可[**在此查阅**](https://github.com/openaps/openomni/wiki/Fault-event-codes)以帮助判断故障原因。
 
 ---
-### 预防49号储药器故障
+### Preventing error 49 pod failures
 
 该故障与指令对应的储药器状态错误或胰岛素输注指令执行出错有关。 此时驱动程序和储药器对实际状态的判断出现分歧。 出于内置安全机制，储药器会触发不可恢复的49号错误代码(0x31)，导致俗称"尖叫器"的状态——这种持续恼人的蜂鸣声只能通过在储药器背面指定位置打孔来停止。 "49号储药器故障"的具体成因通常难以追溯。 在怀疑可能发生此类故障的情况下（例如应用程序崩溃、运行开发版本或重新安装时）。
 
 ---
 
-### 泵体失联警报
+### Pump Unreachable Alerts
 
 When no communication can be established with the pod for a pre-configured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences** ➜ **Local Alerts** ➜ **Pump unreachable threshold [min]**. 建议将警报阈值设置为**120**分钟后触发。
 
 ---
-### 导出设置
+### Export  Settings
 
 导出**AAPS**设置可让您恢复所有配置参数，更重要的是能完整保留所有目标进度状态。 当需要恢复到"最后已知的正常状态"、或卸载重装**AAPS**后、以及手机丢失需在新设备上重新安装时，均可通过该功能还原设置。
 
@@ -541,7 +541,7 @@ When no communication can be established with the pod for a pre-configured time 
 Regularly (after each export preferably) copy your exported settings to a safe place (a cloud drive e.g. Google Drive) that is accessible by any phone when needed. This allows you to restore to a phone from anywhere in case of a phone loss or factory reset of your phone while you are not at home.
 
 ---
-### 导入设置
+### Import Settings
 
 **WARNING**: Please note that importing settings will possibly import an outdated Pod status (depending when you made the last export/backup).  
 As a result, there is a **risk of losing the active Pod!** (see **Exporting Settings**).
@@ -562,7 +562,7 @@ As a result, there is a **risk of losing the active Pod!** (see **Exporting Sett
 4. 若导入的设置包含任何激活状态的储药器数据，您可能需要**停用**这个"不存在"的储药器。
 
 ---
-### 导入包含非活跃状态储药器数据的设置文件
+### Importing settings that contain Pod state from an inactive Pod
 
 当导入包含已停用储药器数据的设置时，AAPS将尝试与其建立连接，这显然会导致失败。 在此情况下您将无法激活新储药器。
 
@@ -573,7 +573,7 @@ To remove the old pod session:
 4. 待旧储药器移除后，即可激活新储药器。
 
 ---
-### 重新安装AAPS
+### Reinstalling AAPS
 
 When uninstalling **AAPS** you will lose all your settings, objectives and the current Pod session. **To restore them make sure you have a recent exported settings file available!**
 
@@ -588,7 +588,7 @@ When uninstalling **AAPS** you will lose all your settings, objectives and the c
 7. 操作完成后：请导出当前设置文件。
 
 ---
-### 升级AAPS至新版本
+### Updating AAPS to a newer version
 
 多数情况下无需卸载旧版本。 您可直接安装新版本进行"就地升级"。 This is also possible when on an active Pod session.
 
@@ -599,7 +599,7 @@ When uninstalling **AAPS** you will lose all your settings, objectives and the c
 5. 操作完成后：请导出当前设置文件。
 
 ---
-### Omnipod驱动警报
+### Omnipod driver alerts
 
 The Omnipod Dash driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action requiring their input to resolve the cause of the triggered alert.
 

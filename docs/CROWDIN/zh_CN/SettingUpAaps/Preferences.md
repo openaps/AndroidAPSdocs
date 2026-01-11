@@ -127,7 +127,7 @@
 “保持屏幕常亮”选项将强制Android始终保持屏幕开启。 这对于演示等场景很有用 但它会消耗大量电池电量。 因此，建议将手机连接到充电线。
 
 (Preferences-buttons)=
-### 按钮
+### Buttons
 
 - 定义主页屏幕底部显示哪些按钮。
 - 该设置在[简单模式](#preferences-simple-mode)下被隐藏。
@@ -240,6 +240,10 @@
 * 对于消化缓慢的人：提前输送所有大剂量可能会导致低血糖，因为胰岛素的作用比消化快。
 * 为**AAPS**自己处理**血糖升高**留下更多空间。 在这两种情况下，如果认为合适，**AAPS**将通过SMB补偿缺失的部分大剂量。
 
+### Old glycemia time threshold
+
+If the last **BG** received is older than this threshold, then the bolus wizard will by default offer a 100% dose instead of the **Deliver this part of bolus wizard result** setting above. The reason for this is that when **BG** is missing, **AAPS** will not be able to send the remaining part of the bolus afterward (the loop is not running), which would result in high **BG**.
+
 ### 启用大剂量顾问（bolus advisor）
 
 该设置在[简单模式](#preferences-simple-mode)下被隐藏。
@@ -294,34 +298,7 @@
 
 ## 闭环（Loop）
 
-(Preferences-aps-mode)=
-### APS模式
-在开环、闭环和低血糖暂停（LGS）之间切换。
-
-![配置构建器 - 循环模式](../images/ConfigBuilder_LoopLGS.png)
-
-(Preferences-open-loop)=
-#### 开环
-**AAPS**连续评估所有可用数据（IOB、COB、BG...），如有必要，会就如何调整治疗（如临时基础率）提出建议。
-
-建议不会像闭环模式中那样自动执行。 如果使用虚拟泵，用户必须手动将建议输入到泵中，如果**AAPS**连着真实的泵，用户需要通过相应的按钮来执行操作。
-
-此选项适用于了解**AAPS**的工作原理，或者你使用的是不受支持的泵。 在**[目标5](#objectives-objective5)**结束之前，无论你做出什么选择，你都将处于开环模式。
-
-(preferences-closed-loop)=
-#### 闭环
-
-**AAPS**连续评估所有可用数据（IOB、COB、BG...），并在必要时（_即_无需你进一步干预）自动调整治疗以达到设定的[目标范围或值](#profile-glucose-targets)（大剂量输注、临时基础率、胰岛素关闭以避免低血糖等）。
-
-闭环在多个安全限制内工作，这些限制可以单独设置。
-
-闭环仅在达到**[目标6](#objectives-objective6)**或更高，并且使用已经支持的泵时才可用。
-
-#### 低血糖暂停（LGS）
-
-在此模式下，[maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)设置为零。
-
-这意味着如果血糖正在下降，**AAPS**可以降低你的基础率。 但如果血糖正在上升，则不会自动进行校正。 您的基础率将保持与您当前**个人设置**中定义的一致。 Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
 
 (Preferences-minimal-request-change)=
 ### 最小请求更改（Minimal request change）

@@ -69,7 +69,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 **OR**
 
-### אפשרות 2: בונה התצורה
+### Option 2: The Config Builder
 
 Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜**Pump**➜**Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
 
@@ -77,7 +77,7 @@ Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
-### אימות בחירת מנהל התקן Omnipod
+### Verification of Omnipod Driver Selection
 
 *Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below*
 
@@ -239,7 +239,7 @@ Use this command to put the active pod into a suspended state. In this suspended
 
    > ![Suspend_Insulin_Delivery_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
 
-#### חידוש הזרקת האינסולין
+#### Resuming Insulin Delivery
 
 Use this command to instruct the active, currently suspended pod to resume insulin delivery. לאחר עיבוד הפקודה, מתן האינסולין יחודש לפי המינון הבזאלי הנוכחי בהתאם להגדרתו בפרופיל. הפוד יקבל שוב פקודות עבור בולוס, מינון בזאלי זמני ו-SMB.
 
@@ -283,7 +283,7 @@ The process below will show you how to acknowledge and dismiss pod beeps that oc
 
 (OmnipodEros-view-pod-history)=
 
-### הצגת היסטוריית הפוד
+### View Pod History
 
 פרק זה מתאר כיצד לבדוק את היסטוריית הפודים ולסנן לפי קטגוריות פעולה שונות. The pod history tool allows you to view the actions and results committed to your currently active pod during its three day (72 - 80 hours) life.
 
@@ -371,7 +371,7 @@ This screen provides information in reverse chronological order of each state or
    > 
    > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
-##### שדות
+##### Fields
 
 > - **Date & Time**: In reverse chronological order the timestamp of each event.
 > - **Device:** The device to which the current action or state is referring.
@@ -387,7 +387,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 > ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
 
-### שדות
+### Fields
 
 - **RileyLink Status:** Displays the current connection status of the RileyLink
 
@@ -477,7 +477,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
   > 
   > > Resumes the currently suspended, active pod
 
-### תפריט ניהול הפוד
+### Pod Management Menu
 
 Below is an explanation of the layout and meaning of the icons on the **Pod Management** menu accessed from the **Omnipod (POD)** tab.
 
@@ -589,7 +589,7 @@ Allows for scanning of a pod communication device. The Omnipod driver cannot sel
 
 - **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
 
-### צפצופי אישור
+### Confirmation beeps
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
@@ -598,7 +598,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 - **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
 - **צפצופי בזאלי זמני מופעלים:** הפעלת או השבתת צפצופי אישור כאשר בזאלי זמני מופעל או מבוטל.
 
-### התראות
+### Alerts
 
 Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
@@ -610,7 +610,7 @@ Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, 
 - **מספר יחידות:** מספר היחידות בהן מופעלת התראת המכל הנמוך.
 - **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
 
-### הודעות
+### Notifications
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful.
 
@@ -710,15 +710,15 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 ## Troubleshooting
 
-### שגיאות בפוד
+### Pod Failures
 
 Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found [here](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
 
-### מניעת שגיאה 49 - כישלונות פוד
+### Preventing error 49 pod failures
 
 This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**➜**General**➜**NSClient**➜**cog wheel**➜**Advanced Settings** to prevent possible failures.
 
-### התראות המשאבה אינה נגישה
+### Pump Unreachable Alerts
 
 It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**➜**Local Alerts**➜**Pump unreachable threshold \[min\]** and setting this to **120**.
 
@@ -733,7 +733,7 @@ Please note that importing settings has the possibility to import an outdated Po
 4. Install the new version of AAPS and verify that you do not have an active pod session.
 5. Import your settings and activate your new pod.
 
-### התראות פוד
+### Omnipod driver alerts
 
 please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
 

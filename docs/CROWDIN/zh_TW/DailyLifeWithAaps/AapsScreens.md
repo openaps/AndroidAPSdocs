@@ -95,13 +95,13 @@
 
 在右側，一個圖示顯示了循環狀態：
 
-1. 綠色圓圈 = 循環運作中
-2. 紫色虛線圓圈 = [低血糖暫停（LGS）](#objectives-objective6)
+1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
+2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
 3. 紅色圓圈 = 循環已停用（永久無法運作）
 4. 紅色圓圈 = 循環已暫停（暫時暫停，但基礎胰島素仍會輸送）- 剩餘時間顯示於圖示下方
 5. 灰色圓圈 = 幫浦中斷連線（暫時不給予任何胰島素劑量） - 剩餘時間顯示在圖示下方
 6. 橙色圓圈 = 超級注射進行中 - 圖示下方顯示剩餘時間
-7. 藍色圓圈帶虛線 = 開放循環
+7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
 
 點一下或長按圖示以打開循環對話框來切換循環模式（關閉、低血糖暫停(LGS)、開放或停用），暫停/重新啟動循環或中斷/重新連線幫浦。
 
@@ -770,12 +770,6 @@ O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和�
 此標籤顯示所有在 Nightscout 中紀錄的筆記和警報。
 
 (aaps-screens-running-mode)=
-
-### 運行模式
-
-![運行模式](../images/Screens/RunningMode.png)
-
-執行模式會顯示目前與過去的 AAPS 執行模式，也會在主圖表上方以彩色長條顯示。
 
 ## 歷史瀏覽器
 

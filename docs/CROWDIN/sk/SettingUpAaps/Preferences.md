@@ -240,6 +240,10 @@ Pri používaní systému [SMB](#objectives-objective9) si veľa ľudí nepodáv
 * Pre ľudí s pomalým trávením: odoslanie celého bolusu naraz môže spôsobiť hypoglykémiu, pretože účinok inzulínu je rýchlejší ako trávenie.
 * aby sa **AAPS** mohol sám vysporiadať so **zvýšenou hladinou glukózy v krvi**. V oboch prípadoch systém **AAPS** kompenzuje chýbajúcu časť bolusu pomocou SMB, ak/keď sa to bude považovať za dostatočné.
 
+### Old glycemia time threshold
+
+If the last **BG** received is older than this threshold, then the bolus wizard will by default offer a 100% dose instead of the **Deliver this part of bolus wizard result** setting above. The reason for this is that when **BG** is missing, **AAPS** will not be able to send the remaining part of the bolus afterward (the loop is not running), which would result in high **BG**.
+
 ### Povolenie bolusového poradcu
 
 Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
@@ -294,34 +298,7 @@ Používajte ho opatrne a nepovoľujte ho, kým nezistíte ako funguje. V podsta
 
 ## Uzavretý okruh
 
-(Preferences-aps-mode)=
-### Režim APS
-Prepínanie medzi otvorenou slučkou, uzavretou slučkou a pozastavením pri nízkej hladine glukózy (LGS).
-
-![Konfigurátor – režim slučky](../images/ConfigBuilder_LoopLGS.png)
-
-(Preferences-open-loop)=
-#### Otvorený okruh
-**AAPS** priebežne vyhodnocuje všetky dostupné údaje (IOB, COB, BG...) a v prípade potreby podáva návrhy ošetrení (dočasné bazálne dávky), ako upraviť vašu liečbu.
-
-Návrhy sa nebudú vykonávať automaticky (ako v uzavretej slučke). Návrhy musí používateľ zadať manuálne do pumpy (ak sa používa virtuálna pumpa) alebo pomocou tlačidla, ak je **AAPS** pripojený k reálnej pumpe.
-
-Táto možnosť slúži na oboznámenie sa s fungovaním systému **AAPS** alebo v prípade, že používate nepodporovanú pumpu. Bez ohľadu na to, aké rozhodnutie tu urobíte, budete v otvorenej slučke až do konca **[Cieľa 5](#objectives-objective5)**.
-
-(preferences-closed-loop)=
-#### Uzavretý okruh
-
-Systém **AAPS** priebežne vyhodnocuje všetky dostupné údaje (IOB, COB, BG...) a v prípade potreby automaticky upravuje dávkovanie (_t. j._ bez ďalšieho zásahu z vašej strany), aby sa dosiahol nastavený [cieľový rozsah alebo hodnota](#profile-glucose-targets) (podávanie bolusu, dočasná bazálna dávka, vypnutie inzulínu, aby sa predišlo hypoglykémii atď.).
-
-Uzavretá slučka má viacero bezpečnostných obmedzení, ktoré si môžete prispôsobiť podľa seba.
-
-Uzavretú slučku je možné používať iba v prípade, že plníte **[Cieľ 6](#objectives-objective6)** alebo vyšší a používate podporovanú pumpu.
-
-#### Zastavovanie pri nízkej glykémii (LGS)
-
-V tomto režime je [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) nastavený na nulu.
-
-To znamená, že ak hladina glukózy v krvi klesá, **AAPS** vám môže znížiť bazálnu dávku. Ak však hladina glukózy v krvi stúpa, automatická korekcia sa nevykoná. Vaše bazálne dávky zostanú rovnaké, ako sú definované vo vašom aktuálnom **profile**. Iba ak je IOB negatívny (z predchádzajúceho LGS), podá sa ďalší inzulín na zníženie **glykémie**.
+As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
 
 (Preferences-minimal-request-change)=
 ### Minimálna požiadavka na zmenu

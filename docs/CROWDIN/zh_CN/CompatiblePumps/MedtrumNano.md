@@ -45,7 +45,7 @@
 
 ### 步骤1：选择移宇胰岛素泵
 
-#### 方式一：全新安装
+#### Option 1: New installations
 
 若您首次安装AAPS，**设置向导**将引导您完成安装流程。 当进入泵体选择界面时，请选择"移宇"。
 
@@ -53,7 +53,7 @@
 
 ![设置向导](../images/medtrum/SetupWizard.png)
 
-#### 选项2：配置构建器
+#### Option 2: The Config Builder
 
 在现有安装中，您可通过[配置生成器 > 泵](#Config-Builder-pump)选择**移宇**胰岛素泵：
 

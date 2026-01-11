@@ -1,5 +1,45 @@
 # Key AAPS features
 
+## Loop mode
+
+The loop status is shown on the main screen with one of the icons below.
+
+**AAPS** offers several loop modes, such as Open Loop (7), Closed Loop (1) and Low Glucose Suspend (LGS - 2).
+
+See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode.
+
+![Loop status](../images/Home2020_LoopStatus.png)
+
+(KeyAapsFeatures-OpenLoop)=
+
+### Open Loop
+
+**AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
+
+The suggestions will not be executed automatically (as in closed loop). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
+
+This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
+
+(KeyAapsFeatures-LGS)=
+
+### Low Glucose Suspend (LGS)
+
+In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
+
+This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+
+This mode is available starting at **[Objective 6](#objectives-objective6)**.
+
+(KeyAapsFeatures-ClosedLoop)=
+
+### Closed Loop
+
+**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (*i.e.* without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
+
+The Closed Loop works within numerous safety limits, which can be set individually.
+
+Closed Loop is only possible if you are in **[Objective 7](#objectives-objective7)** or higher and use a supported pump.
+
 (Open-APS-features-autosens)=
 
 ## Autosens
@@ -106,15 +146,7 @@ See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/lates
 
 This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
 
-#### Vysoký dočasný cíl zvýší senzitivitu
-
-If you have this option enabled, the insulin sensitivity will be increased while having a temporary target above 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease. This will effectively make **AAPS** less aggressive when you set a high temp target.
-
-#### Nízký dočasný cíl sníží senzitivitu
-
-If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise. This will effectively make **AAPS** more aggressive when you set a low temp target.
-
-### Enable Autosens feature
+### Use Autosens feature
 
 This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
@@ -122,7 +154,7 @@ Autosens looks at blood glucose deviations (positive/negative/neutral). It will 
 
 When enabled, new settings become available.
 
-### Citlivost zvyšuje cíl
+#### Sensitivity raises target
 
 If this option is enabled, the sensitivity detection (autosens) can raise the target when sensitivity is detected (below 100%). In this case your target will be raised by the percentage of the detected sensitivity.
 
@@ -132,13 +164,13 @@ If the target is modified due to sensitivity detection, it will be displayed wit
 
 This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
 
-### Rezistence snižuje cíl
+#### Resistance lowers target
 
 If this option is enabled, the sensitivity detection (autosens) can lower the target when resistance is detected (above 100%). In this case your target will be lowered by the percentage of the detected resistance.
 
 This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
 
-### Povolit SMB
+### Enable SMB
 
 Enable this to use SMB functionality. If disabled, no **SMBs** will be given.
 
@@ -146,7 +178,7 @@ When enabled, new settings become available.
 
 (Open-APS-features-enable-smb-with-high-temp-targets)=
 
-#### Povolit SMB s vysokými dočasnými cíli
+#### Enable SMB with high temp targets
 
 If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l, regardless of **Profile** target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
 
@@ -154,7 +186,7 @@ If this setting is enabled, **SMB** will only be enabled with a high temp target
 
 (Open-APS-features-enable-smb-always)=
 
-#### Vždy povolit SMB
+#### Enable SMB always
 
 If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
 
@@ -162,19 +194,19 @@ This setting is only available if **AAPS** detects that you are using a [reliabl
 
 Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-#### Povolit SMB se sacharidy
+#### Enable SMB with COB
 
 If this setting is enabled, SMB is enabled when the COB is greater than 0.
 
 This setting is not visible if "Enable SMB always" is switched on.
 
-#### Povolit SMB s dočasnými cíli
+#### Enable SMB with temp targets
 
 If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100mg/dL or 5.6mmol/l) but disabled when a high temp target is set.
 
 This setting is not visible if "Enable SMB always" is switched on.
 
-#### Povolit SMB po jídle
+#### Enable SMB after carbs
 
 If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0.
 
@@ -185,7 +217,7 @@ This setting is only available if **AAPS** detects that you are using a [reliabl
 Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
 This setting is not visible if "Enable SMB always" is switched on.
 
-#### Jak často budou SMB podávány v minutách
+#### How frequently SMBs will be given in min
 
 This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
 
@@ -193,7 +225,7 @@ Default value: 3 min.
 
 (Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
 
-#### Maximální počet minut bazálu, ke kterým se limituje SMB
+#### Max minutes of basal to limit SMB to
 
 This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
@@ -211,7 +243,7 @@ Default value : the same as **Max minutes of basal to limit SMB to**.
 
 This setting is only visible if "Enable SMB" and "Enable UAM " are switched on.
 
-### Povolit UAM
+### Enable UAM
 
 With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
 
@@ -229,7 +261,7 @@ In any case, the required carbs will be displayed in the COB section on your hom
 
 ![Display carbs required on home screen](../images/Pref2020_CarbsRequired.png)
 
-### Rozšířená nastavení
+### Advanced Settings
 
 You can read more here : [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
@@ -253,7 +285,7 @@ AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (o
 
 You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
-### Max. povolený bazál U/h (OpenAPS "max-basal")
+### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
 
 This safety setting helps **AAPS** from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. Doporučuje se nastavit toto na rozumnou hodnotu. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
 
@@ -283,15 +315,15 @@ The default value is 2, but you should rise this parameter slowly to see how muc
 
 *See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
-### Povolit AMA Autosense
+### Enable AMA Autosens
 
 Here, you can choose, if you want to use the [sensitivity detection](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) autosens or not.
 
-### Autosense upravuje také cílovou glykémii
+### Autosens adjust temp targets too
 
 If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets **AAPS** work more 'aggressive' or not. The actual target might be reached faster with this.
 
-### Rozšířená nastavení
+### Advanced Settings
 
 - Obvykle v tomto dialogu není potřeba měnit žádná nastavení!
 - Pokud je chcete přesto změnit, ujistěte se, že jste si přečetli podrobnosti v [dokumentaci OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) a rozmíte tomu, co děláte.
@@ -314,7 +346,7 @@ Default value: 2
 
 (Open-APS-features-overview-of-hard-coded-limits)=
 
-## Přehled pevně naprogramovaných limitů
+## Overview of hard-coded limits
 
 |            | Dítě | Dospívající | Dospělý | Dospělý s nízkou citlivostí | Těhotná |
 | ---------- | ---- | ----------- | ------- | --------------------------- | ------- |
