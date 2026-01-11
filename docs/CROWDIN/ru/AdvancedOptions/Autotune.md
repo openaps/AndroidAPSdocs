@@ -8,7 +8,7 @@ Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is h
 
 ## Show the Autotune plugin
 
-Create an empty file named `enable_autotune` in the `extra` subfolder of your phone AAPS folder.
+Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
 
 ![Enable Autotune](../images/Autotune/Autotune_0.png)
 
