@@ -111,7 +111,6 @@ Click the "NEXT" button:
 ![image](../images/setup-wizard/Screenshot_20231202_130002.png)
 
 (setup-wizard-bluetooth-battery-optimisation)=
-
 ### Bluetooth battery optimisation
 
 Newer versions of Android have added battery optimisation to the system Bluetooth application too. 
