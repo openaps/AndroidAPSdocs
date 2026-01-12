@@ -1,6 +1,6 @@
 # Freestyle Libre 1
 
-To use your Libre as a CGM that is getting new BG values every 5 minutes without having to scan the sensor, you need to buy an NFC to Bluetooth bridge (commercially available devices, based on the obsolete [LimiTTer](https://github.com/JoernL/LimiTTer) project).
+Um Deinen Libre als CGM zu verwenden, der ohne zu scannen alle 5 Minuten neue Glukosewerte erhält, musst Du einen „NFC auf Bluetooth“-Adapter (eine sog. „bridge“) kaufen (kommerziell verfügbare Geräte, basierend auf dem veralteten [LimiTTer](https://github.com/JoernL/LimiTTer) Projekt).
 
 ```{admonition} Libre 2, Libre 1 US and Libre Pro
 :class: warning
