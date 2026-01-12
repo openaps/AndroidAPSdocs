@@ -8,7 +8,7 @@ Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預�
 
 ## 顯示 Autotune 外掛
 
-在手機的 AAPS 資料夾中之 `extra` 子資料夾內，建立一個名為 `enable_autotune` 的空白檔案。
+Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
 
 ![啟用 Autotune](../images/Autotune/Autotune_0.png)
 
