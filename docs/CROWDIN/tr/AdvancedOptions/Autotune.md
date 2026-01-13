@@ -10,11 +10,15 @@ Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is h
 
 Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
 
+***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.***
+
 ![Enable Autotune](../images/Autotune/Autotune_0.png)
 
 Autotune will then display in Config Builder after you restart AAPS.
 
 ![Autotune plugin](../images/Autotune/Autotune_1.png)
+
+***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
 
 ## Otoayar kullanıcı arabirimi
 
@@ -33,7 +37,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 - "OtoAyarı Çalıştır", seçili profil ve ayarlama gün sayısı ile OtoAyar hesaplamasını başlatır
   - Not: Otomatik ayar hesaplaması uzun sürebilir. Başlatıldıktan sonra, başka bir görünüme (ev, ...) geçebilir ve sonuçları görmek için daha sonra otoayar eklentisinde geri dönebilirsiniz
 
-![Otoayar Çalışmayı başlat](../images/Autotune/Autotune_2b.png)
+  ![Otoayar Çalışmayı başlat](../images/Autotune/Autotune_2b.png)
 
 - Ardından çalıştırma sırasında aşağıda ara sonuçları göreceksiniz
 
@@ -43,7 +47,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 - OtoAyar hesaplaması bittiğinde, sonucu (Ayarlanmış profil) ve aşağıda dört buton göreceksiniz.
 
-![Otoayar Sonucu](../images/Autotune/Autotune_4b.png)
+  ![Otoayar Sonucu](../images/Autotune/Autotune_4b.png)
 
 - Girdi profilini ("Profil" sütunu), çıktı profilini ("Ayar" sütunu) ve her değer için varyasyon yüzdesini ("%" Sütunu) her zaman karşılaştırmak önemlidir.
 
@@ -66,7 +70,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
   - Yerel profil eklentisinde "Ayarlanmış" ön ekine ve çalıştırmanın tarih ve saatine sahip yeni bir profil oluşturulacak
 
-![Otoayar yerel profile kopyalama](../images/Autotune/Autotune_7.png)
+  ![Otoayar yerel profile kopyalama](../images/Autotune/Autotune_7.png)
 
 - Ardından, Ayarlanmış profilini düzenlemek için yerel profili seçebilirsiniz (Yerel profil eklentisini açtığınızda varsayılan olarak seçilecektir)
 
@@ -92,7 +96,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ### Otoayar eklenti ayarları
 
-![Otoayar varsayılan ekranı](../images/Autotune/Autotune_11.png)
+  ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_11.png)
 
 ```{admonition} Only DEV
 :class: info
@@ -137,7 +141,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
   - If the number of day included in Autotune calculation is lower than the number of Tune days, then you will see how many days will be included on the right of Tune days selector (10 days in the example below)
   - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should select a minimum of 21 or 28 Tune days to have 6 or 8 days included in Autotune calculation)
 
-![Otoayar varsayılan ekranı](../images/Autotune/Autotune_14b.png)
+  ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_14b.png)
 
 - During Autotune calculation, you can see the progress of the calculations ("Partial result day 3 / 10 tuned" on example below)
 
@@ -180,7 +184,7 @@ Note: if you want to automatically tune profiles for specific days of the week (
 
 - See below an example of rule to tune "my profile" on all "Working days" with 14 Tune days selected (so only 10 days included in autotune calculation).
 
-![Otoayar varsayılan ekranı](../images/Autotune/Autotune_20b.png)
+  ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_20b.png)
 
 
 
