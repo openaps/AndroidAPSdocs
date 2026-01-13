@@ -10,11 +10,15 @@ Le plugin Autotune est disponible dans la version "Release" depuis [3.4](#versio
 
 Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
 
+***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.***
+
 ![Activer Autotune](../images/Autotune/Autotune_0.png)
 
 Autotune s'affichera ensuite dans le Générateur de configuration après avoir redémarré AAPS.
 
 ![Plugin Autotune](../images/Autotune/Autotune_1.png)
+
+***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
 
 ## Interface utilisateur Autotune
 
@@ -33,7 +37,7 @@ Autotune s'affichera ensuite dans le Générateur de configuration après avoir 
 - "Lancer Autotune" exécutera le calcul Autotune avec le profil et le nombre de jours sélectionnés
   - Remarque : Le calcul Autotune peut prendre beaucoup de temps. Une fois lancé, vous pouvez passer à une autre vue (écran d'accueil ...) et revenir plus tard dans le plugin Autotune pour voir les résultats
 
-![Démarrage Run Autotune](../images/Autotune/Autotune_2b.png)
+  ![Démarrage Run Autotune](../images/Autotune/Autotune_2b.png)
 
 - Ensuite, au cours de l'exécution vous verrez les résultats intermédiaires ci-dessous
 
@@ -43,7 +47,7 @@ Autotune s'affichera ensuite dans le Générateur de configuration après avoir 
 
 - Une fois le calcul automatique terminé, vous verrez le résultat (Tuned Profil) et les quatre boutons ci-dessous.
 
-![Résultat Autotune](../images/Autotune/Autotune_4b.png)
+  ![Résultat Autotune](../images/Autotune/Autotune_4b.png)
 
 - Il est important de toujours comparer le profil d'entrée (colonne "Profil"), le profil de sortie (colonne "Tuned") et le pourcentage de variation pour chaque valeur (colonne "%").
 
@@ -66,7 +70,7 @@ Autotune s'affichera ensuite dans le Générateur de configuration après avoir 
 
   - Un nouveau profil avec le préfixe "Tuned" et la date et l'heure de l'exécution seront créés dans le plugin de profil local
 
-![Copier vers Profil Local](../images/Autotune/Autotune_7.png)
+  ![Copier vers Profil Local](../images/Autotune/Autotune_7.png)
 
 - Vous pouvez ensuite sélectionner le profil local pour modifier le profil Tuned (il sera sélectionné par défaut lorsque vous ouvrirez le plugin de profil local)
 
@@ -92,7 +96,7 @@ Autotune s'affichera ensuite dans le Générateur de configuration après avoir 
 
 ### Paramètres du plugin Autotune
 
-![Autotune écran par défaut](../images/Autotune/Autotune_11.png)
+  ![Autotune écran par défaut](../images/Autotune/Autotune_11.png)
 
 ```{admonition} Only DEV
 :class: info
@@ -137,7 +141,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
   - Si le nombre de jours inclus dans le calcul Autotune est inférieur au nombre de jours sélectionnés, alors vous verrez combien de jours seront inclus dans le calcul à droite du sélecteur de jours (10 jours dans l'exemple ci-dessous)
   - Ce paramètre ne donne de bons résultats que si le nombre de jours restants n'est pas trop petit (par exemple si vous ajustez un profil spécifique pour les jours du week-end avec seulement le dimanche et le samedi sélectionnés, vous devez sélectionner un minimum de 21 ou 28 jours de Tune pour avoir 6 ou 8 jours inclus dans le calcul Autotune)
 
-![Autotune écran par défaut](../images/Autotune/Autotune_14b.png)
+  ![Autotune écran par défaut](../images/Autotune/Autotune_14b.png)
 
 - Lors du calcul Autotune, vous pouvez voir la progression des calculs ("Résultat partiel jour 3 / 10 calculé" dans l'exemple ci-dessous)
 
@@ -180,7 +184,7 @@ Remarque : si vous souhaitez modifier automatiquement les profils pour des jours
 
 - Voir ci-dessous un exemple de règle pour régler "mon profil" sur tous les "jours de travail" avec 14 jours de travail sélectionnés (donc seulement 10 jours inclus dans le calcul autotune).
 
-![Autotune écran par défaut](../images/Autotune/Autotune_20b.png)
+  ![Autotune écran par défaut](../images/Autotune/Autotune_20b.png)
 
 
 
