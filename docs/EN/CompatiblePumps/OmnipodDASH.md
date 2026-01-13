@@ -576,7 +576,7 @@ To remove the old pod session:
 
 ### Generic error: java.lan.illegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.  
 
-If you receive this error when attempting to Initiialize a new pod **AAPS** fails as it still has settings for an old pod stored in configuration. 
+If you receive this error when attempting to Initialize a new pod **AAPS** fails as it still has settings for an old pod stored in configuration. 
 
 ![omnipod_address_in_use](../images/DASH_images/Errors/omnipod_address_in_use.png)
 
