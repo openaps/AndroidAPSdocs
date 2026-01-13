@@ -10,11 +10,15 @@ Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預�
 
 Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
 
+***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.***
+
 ![啟用 Autotune](../images/Autotune/Autotune_0.png)
 
 重新啟動 AAPS 後，Autotune 會顯示在組態建置工具中。
 
 ![自動調整外掛](../images/Autotune/Autotune_1.png)
+
+***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
 
 ## Autotune 使用者介面
 
@@ -33,7 +37,7 @@ Create an empty file named `enable_autotune` in the `extra` subfolder of your ph
 - 「執行 Autotune」將以選定的設定檔和調整天數啟動 Autotune 計算。
   - 注意：Autotune 計算可能需要較長時間。 當啟動後，你可以切換到其他視圖（主頁等），稍後再回到 Autotune 外掛查看結果。
 
-![Autotune 運作開始。](../images/Autotune/Autotune_2b.png)
+  ![Autotune 運作開始。](../images/Autotune/Autotune_2b.png)
 
 - 運作過程中，你將在下方看到中間結果。
 
@@ -43,7 +47,7 @@ Create an empty file named `enable_autotune` in the `extra` subfolder of your ph
 
 - 當 Autotune 計算完成後，你將看到結果（調整後的設定檔）及下方的四個按鈕。
 
-![Autotune 結果。](../images/Autotune/Autotune_4b.png)
+  ![Autotune 結果。](../images/Autotune/Autotune_4b.png)
 
 - 重要的是要比較輸入設定檔（「設定檔」欄）、輸出設定檔（「調整後」欄）和每個數值的變異百分比（「百分比」欄）。
 
@@ -66,7 +70,7 @@ Create an empty file named `enable_autotune` in the `extra` subfolder of your ph
 
   - 一個帶有「調整後」前綴並附上運作日期和時間的新設定檔會在本地設定檔外掛中建立。
 
-![Autotune 複製到本地設定檔。](../images/Autotune/Autotune_7.png)
+  ![Autotune 複製到本地設定檔。](../images/Autotune/Autotune_7.png)
 
 - 然後你可以選擇本地設定檔來編輯調整後的設定檔（當你打開本地設定檔外掛時，他會被預設選中）。
 
@@ -92,7 +96,7 @@ Create an empty file named `enable_autotune` in the `extra` subfolder of your ph
 
 ### Autotune 外掛設定。
 
-![Autotune 預設畫面](../images/Autotune/Autotune_11.png)
+  ![Autotune 預設畫面](../images/Autotune/Autotune_11.png)
 
 ```{admonition} Only DEV
 :class: info
@@ -137,7 +141,7 @@ Create an empty file named `enable_autotune` in the `extra` subfolder of your ph
   - 如果 Autotune 計算中包含的天數少於調整天數，則會在調整天數選擇器的右側顯示有多少天數被包含在內（下方範例中顯示為 10 天）。
   - 此設定僅在剩餘天數不太少的情況下才能獲得良好的結果（例如，如果你為週末天數調整特定設定檔，只選擇週六和週日，你應該選擇至少 21 或 28 個調整天數，以確保 Autotune 計算中包含 6 或 8 天）。
 
-![Autotune 預設畫面](../images/Autotune/Autotune_14b.png)
+  ![Autotune 預設畫面](../images/Autotune/Autotune_14b.png)
 
 - 在 Autotune 計算期間，你可以看到計算的進度（範例中顯示為「部分結果，第 3 / 10 天已調整」）。
 
@@ -180,7 +184,7 @@ Create an empty file named `enable_autotune` in the `extra` subfolder of your ph
 
 - 請參閱下方範例，調整「我的設定檔」於所有「工作日」的規則，選擇了 14 個調整天數（因此 Autotune 計算中只包含 10 天）。
 
-![Autotune 預設畫面](../images/Autotune/Autotune_20b.png)
+  ![Autotune 預設畫面](../images/Autotune/Autotune_20b.png)
 
 
 
