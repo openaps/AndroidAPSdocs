@@ -135,9 +135,11 @@ Follow these steps on Android 16, other versions will varies slightly from the p
 
 4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.  
    
+   ***NOTE: It's safe to ignore the `Bluetooth MIDI Service` this is not used by AAPS***
+   
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)   
 
-   5. On Android 12 Click on `Battery`, Android 13+ Click on `App battery usage`,
+   1. On Android 12 Click on `Battery`, Android 13+ Click on `App battery usage`,
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
