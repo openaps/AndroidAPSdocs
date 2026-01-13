@@ -10,11 +10,15 @@ Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is h
 
 Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
 
+***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of people have been caught out putting the file into the wrong folder***
+
 ![Enable Autotune](../images/Autotune/Autotune_0.png)
 
 Autotune will then display in Config Builder after you restart AAPS.
 
 ![Autotune plugin](../images/Autotune/Autotune_1.png)
+
+***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
 
 ## Autotune user interface
 
