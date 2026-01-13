@@ -10,11 +10,15 @@ Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is h
 
 Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
 
+***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.***
+
 ![Enable Autotune](../images/Autotune/Autotune_0.png)
 
 Autotune will then display in Config Builder after you restart AAPS.
 
 ![Модуль autotune](../images/Autotune/Autotune_1.png)
+
+***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
 
 ## Интерфейс пользователя Autotune
 
@@ -33,7 +37,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 - "Запустить Autotune" запустит расчет Autotune с выбранным профилем и количеством дней, выбранных для подстройки
   - Примечание: Расчет Autotune может занять длительное время. После запуска autotune можно переключиться на другое окно (главый экран и. п., ...) и вернуться позже в Autotune, чтобы увидеть результаты
 
-![Запуск Autotune](../images/Autotune/Autotune_2b.png)
+  ![Запуск Autotune](../images/Autotune/Autotune_2b.png)
 
 - Затем во время запуска вы увидите промежуточные результаты
 
@@ -43,7 +47,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 - По завершении вычисления Autotune вы увидите результат - настроенный профиль (Tuned profile) и четыре кнопки.
 
-![Результат Autotune](../images/Autotune/Autotune_4b.png)
+  ![Результат Autotune](../images/Autotune/Autotune_4b.png)
 
 - Важно всегда сравнивать входной профиль (столбец "Профиль"), выходной профиль (столбец "Настроено") и процент изменений каждого значения (столбец "%").
 
@@ -66,7 +70,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
   - Новый профиль с префиксом "Tuned" и датой и временем запуска будет создан в локальном модуле профиля
 
-![Autotune -копировать в локальный профиль](../images/Autotune/Autotune_7.png)
+  ![Autotune -копировать в локальный профиль](../images/Autotune/Autotune_7.png)
 
 - Затем вы можете выбрать локальный профиль для редактирования подстроенного профиля Tuned (он будет выбран по умолчанию при открытии локального модуля профиля)
 
@@ -92,7 +96,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ### Настройки модуля Autotune
 
-![Экран Autotune по умолчанию](../images/Autotune/Autotune_11.png)
+  ![Экран Autotune по умолчанию](../images/Autotune/Autotune_11.png)
 
 ```{admonition} Only DEV
 :class: info
@@ -137,7 +141,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
   - Если количество дней, включенных в расчет Autotune меньше, чем количество дней для настройки то вы увидите, сколько дней будет включено справа от селектора настраиваемых дней (10 дней в примере ниже)
   - Этот параметр дает хорошие результаты только в том случае, если количество оставшихся дней не слишком мало (например, если вы настраиваете конкретный профиль на выходные дни только с выбранным воскресеньем и субботой, следует выбрать не менее 21 или 28 дней, чтобы было 6 или 8 дней для расчета Autotune)
 
-![Экран Autotune по умолчанию](../images/Autotune/Autotune_14b.png)
+  ![Экран Autotune по умолчанию](../images/Autotune/Autotune_14b.png)
 
 - Во время вычисления Autotune вы можете увидеть прогресс вычислений ("Частичный результат дня 3/10 для расчета" на примере внизу)
 
@@ -180,7 +184,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
 
 - Смотрите ниже пример правила для настройки "Моего профиля" в "рабочие дни" на основе 14 отобранных дней (то есть в вычислениях учтены только 10 дней).
 
-![Экран Autotune по умолчанию](../images/Autotune/Autotune_20b.png)
+  ![Экран Autotune по умолчанию](../images/Autotune/Autotune_20b.png)
 
 
 
