@@ -133,20 +133,19 @@ Follow these steps on Android 16, other versions will varies slightly from the p
 
    ![settings_apps](../images/setup-wizard/show_system.png)
 
-4. Search for the Bluetooth App and then click on it to open its settings.  
-   ***NOTE: it may be called **Legacy Bluetooth** on some phones***
+4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.  
+   
+   ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)   
 
-   ![settings_apps](../images/setup-wizard/search_bluetooth.png)
+   5. On Android 12 Click on `Battery`, Android 13+ Click on `App battery usage`,
 
-5. Click on the **App battery usage**
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
-   ![settings_apps](../images/setup-wizard/app_bluetooth.png)
+5. On Android 12+ select the `Unrestricted` option, on Android 15+ you need to expand the `Allow background usage` setting, click on the section highlighted in red to do this then follow step 6 to complete.
 
-5. We need to expand the **Allow background usage**, click on the section highlighted in red to do this.
+   ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
 
-   ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background.png)
-
-6. Select **Unrestricted**
+6. On Android 16 Select ``Unrestricted``
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
