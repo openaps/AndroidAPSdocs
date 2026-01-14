@@ -10,11 +10,15 @@ Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is h
 
 Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
 
+***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.***
+
 ![Enable Autotune](../images/Autotune/Autotune_0.png)
 
 Autotune will then display in Config Builder after you restart AAPS.
 
 ![Autotune plugin](../images/Autotune/Autotune_1.png)
+
+***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
 
 ## Autotune user interface
 
@@ -33,7 +37,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 - "Run Autotune" will launch Autotune calculation with selected profile and the number of Tune days
   - Note: Autotune calculation can take a long time. Once launched, you can switch to another view (home, ...) and come back later in Autotune plugin to see results
 
-![Autotune Run start](../images/Autotune/Autotune_2b.png)
+  ![Autotune Run start](../images/Autotune/Autotune_2b.png)
 
 - Then during the run you will see intermediate results below
 
@@ -43,7 +47,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 - When Autotune calculation is finished, you will see the result (Tuned profile) and four buttons below.
 
-![Autotune Result](../images/Autotune/Autotune_4b.png)
+  ![Autotune Result](../images/Autotune/Autotune_4b.png)
 
 - It's important to always compare input profile (column "Profile"), output profile (column "Tuned") and the percentage of variation for each value (Column "%").
 
@@ -66,7 +70,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
   - A new profile with the prefix "Tuned" and the date and time of the run will be created in local profile plugin
 
-![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
+  ![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
 
 - You can then select local profile to edit the Tuned profile (it will be selected by default when you open Local profile plugin)
 
@@ -92,7 +96,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ### Autotune plugin settings
 
-![Autotune default screen](../images/Autotune/Autotune_11.png)
+  ![Autotune default screen](../images/Autotune/Autotune_11.png)
 
 ```{admonition} Only DEV
 :class: info
@@ -137,7 +141,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
   - If the number of day included in Autotune calculation is lower than the number of Tune days, then you will see how many days will be included on the right of Tune days selector (10 days in the example below)
   - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should select a minimum of 21 or 28 Tune days to have 6 or 8 days included in Autotune calculation)
 
-![Autotune default screen](../images/Autotune/Autotune_14b.png)
+  ![Autotune default screen](../images/Autotune/Autotune_14b.png)
 
 - During Autotune calculation, you can see the progress of the calculations ("Partial result day 3 / 10 tuned" on example below)
 
@@ -180,7 +184,7 @@ Note: if you want to automatically tune profiles for specific days of the week (
 
 - See below an example of rule to tune "my profile" on all "Working days" with 14 Tune days selected (so only 10 days included in autotune calculation).
 
-![Autotune default screen](../images/Autotune/Autotune_20b.png)
+  ![Autotune default screen](../images/Autotune/Autotune_20b.png)
 
 
 

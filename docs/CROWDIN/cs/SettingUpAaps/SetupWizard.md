@@ -84,6 +84,47 @@ Vyberte prosím "Povolit":
 
 ![Allow Background](../images/setup-wizard/Wizard05-Background.png)
 
+(setup-wizard-bluetooth-battery-optimisation)=
+### Bluetooth battery optimisation
+
+Newer versions of Android have added battery optimisation to the system Bluetooth application too.
+
+As well as Disabling battery optimisation for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
+
+***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
+
+Follow these steps on Android 16, other versions will varies slightly from the provided screenshots:
+
+1. Open Android settings and search for **Apps**, and open the Apps settings.
+
+   ![settings_apps](../images/setup-wizard/settings_apps.png)
+
+2. You will see the App settings, however we need to expand to see all apps, click on **See all apps** to expand.
+
+   ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
+
+3. As the Bluetooth app is a system app its hidden by default, we need to show system apps. Click on the **three dots (hamburger)** on the top left (1). Then click on **Show System** (2).
+
+   ![settings_apps](../images/setup-wizard/show_system.png)
+
+4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.
+
+   ***NOTE: It's safe to ignore the `Bluetooth MIDI Service` this is not used by AAPS***
+
+   ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
+
+   1. On Android 12 Click on `Battery`, Android 13+ Click on `App battery usage`,
+
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+
+5. On Android 12+ select the `Unrestricted` option, on Android 15+ you need to expand the `Allow background usage` setting, click on the section highlighted in red to do this then follow step 6 to complete.
+
+   ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
+
+6. On Android 16 Select `Unrestricted`
+
+   ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
+
 ### Storage permission
 
 **AAPS** needs to log information to the permanent storage of your smartphone. Trvalá paměť znamená, že data budou k dispozici i po restartu vašeho telefonu. Informace uložené pouze v operační paměti a nikoli v paměti trvalé mohou být ztracené.

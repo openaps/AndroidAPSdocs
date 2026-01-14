@@ -10,11 +10,15 @@ Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is h
 
 Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
 
+***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.***
+
 ![Enable Autotune](../images/Autotune/Autotune_0.png)
 
 Autotune will then display in Config Builder after you restart AAPS.
 
 ![Autotune plugin](../images/Autotune/Autotune_1.png)
+
+***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
 
 ## Autotune Dialogbox
 
@@ -33,7 +37,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 - 'Autotune ausführen' startet den Autotune-Durchlauf mit dem ausgewählten Profil und den zu berücksichtigenden Tagen ('Anpassungstage')
   - Hinweis: Die Autotune-Berechnung kann einige Zeit in Anspruch nehmen. Sobald 'Autotune' gestartet wurde, kannst zu anderen Ansichten (Startbildschirm, ...) wechseln und später zum Autotune-Plugin zurückkehren, um die Ergebnisse zu prüfen
 
-![Autotune-Berechnung starten](../images/Autotune/Autotune_2b.png)
+  ![Autotune-Berechnung starten](../images/Autotune/Autotune_2b.png)
 
 - Während 'Autotune' läuft, wirst Du Zwischenergebnisse angezeigt bekommen
 
@@ -43,7 +47,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 - Sind die Autotune-Berechnungen abgeschlossen, bekommst Du das angepasste Profil und vier Schaltflächen angezeigt.
 
-![Autotune Ergebnis](../images/Autotune/Autotune_4b.png)
+  ![Autotune Ergebnis](../images/Autotune/Autotune_4b.png)
 
 - Wichtig ist, dass Du das Eingangsprofil (Spalte 'Profil') mit dem Ergebnisprofil (Spalte 'Angepasst') und die Abweichungen der Einzelwerte (Spalte '%') vergleichst.
 
@@ -66,7 +70,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
   - Ein neues Profil mit dem Präfix 'Angepasst' und dem Erstelldatum und der Erstellzeit wird in das Profil-Plugin geschrieben.
 
-![Autotune In lokales Profil kopieren](../images/Autotune/Autotune_7.png)
+  ![Autotune In lokales Profil kopieren](../images/Autotune/Autotune_7.png)
 
 - Du kannst dann Dein lokales Profil auswählen, um das Ergebnisprofil zu bearbeiten (es wird vorausgefüllt, sobald Du das lokales-Profil-Plugin öffnest
 
@@ -92,7 +96,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ### Autotune Einstellungen
 
-![Autotune Standardbildschirm](../images/Autotune/Autotune_11.png)
+  ![Autotune Standardbildschirm](../images/Autotune/Autotune_11.png)
 
 ```{admonition} Only DEV
 :class: info
@@ -137,7 +141,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
   - Wenn die Anzahl der Tage, die in der Autotune-Berechnung berücksichtigt werden sollen, kleiner ist als die unter "Anpassungstage" angegeben wurde, wird die tatsächlich zu berücksichtigenden Tage daneben angezeigt (im Beispiel unten sind es 10 Tage)
   - Diese Einstellung ergibt nur dann ein gutes Ergebnis, wenn die Anzahl der verbleibenden Tage groß genug ist (wenn beispielsweise ein Wochenend-Profil (nur Samstag und Sonntag) überarbeitet werden soll, solltest Du 21 oder 28 Anpassungstage angeben, damit am Ende 6 bzw. 8 Tage in der Autotune-Berechnung berücksichtigt werden)
 
-![Autotune Standardbildschirm](../images/Autotune/Autotune_14b.png)
+  ![Autotune Standardbildschirm](../images/Autotune/Autotune_14b.png)
 
 - Während der Autotune-Berechnung wird der Berechnungs-Fortschritt angezeigt ("Zwischenergebnis Tag 3 / 10 tuned" im Beispiel unten)
 
@@ -180,7 +184,7 @@ Hinweis: Wenn Du automatisch Profile für einzelne Wochentage (z. B. ein Profil 
 
 - Unten ist ein Regel-Beispiel, in dem "myprofile" überarbeitet werden soll und dabei nur "Arbeitstage" bei 14 Anpassungstagen berücksichtigt werden sollen (sodass am Ende nur 10 Tage in der Berechnung werden).
 
-![Autotune Standardbildschirm](../images/Autotune/Autotune_20b.png)
+  ![Autotune Standardbildschirm](../images/Autotune/Autotune_20b.png)
 
 
 

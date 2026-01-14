@@ -10,11 +10,15 @@ Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is h
 
 Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
 
+***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.***
+
 ![Enable Autotune](../images/Autotune/Autotune_0.png)
 
 Autotune will then display in Config Builder after you restart AAPS.
 
 ![Autotune plugin ](../images/Autotune/Autotune_1.png)
+
+***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
 
 ## Autotune用户界面
 
@@ -33,7 +37,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 - 点击"执行Autotune"将使用选定的配置文件及设定的调节天数（Tune days）参数启动Autotune算法计算。
   - 注意：Autotune算法计算过程可能耗时较长。 启动计算后，您可切换至其他界面（如主界面等），稍后返回Autotune插件查看计算结果。
 
-![Autotune Run start ](../images/Autotune/Autotune_2b.png)
+  ![Autotune Run start ](../images/Autotune/Autotune_2b.png)
 
 - 运行过程中，系统将在下方实时显示中间计算结果。
 
@@ -43,7 +47,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 - 当Autotune算法计算完成后，界面将显示优化后的配置文件（Tuned profile）和底部四个功能按钮。
 
-![Autotune Result ](../images/Autotune/Autotune_4b.png)
+  ![Autotune Result ](../images/Autotune/Autotune_4b.png)
 
 - 必须始终对比输入配置文件（"Profile"列）、优化输出配置文件（"Tuned"列）和各参数值的变化百分比（"%"列）。
 
@@ -66,7 +70,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
   - 系统将在本地配置文件插件中创建一个带"Tuned"前缀且包含运行日期时间戳的新配置文件。
 
-![Autotune Copy to local profile ](../images/Autotune/Autotune_7.png)
+  ![Autotune Copy to local profile ](../images/Autotune/Autotune_7.png)
 
 - 随后您可在本地配置文件中选定待编辑的优化配置文件（Tuned profile）——当您打开本地配置文件插件时，系统将默认选中该配置文件。
 
@@ -92,7 +96,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ### Autotune插件设置
 
-![Autotune default screen ](../images/Autotune/Autotune_11.png)
+  ![Autotune default screen ](../images/Autotune/Autotune_11.png)
 
 ```{admonition} Only DEV
 :class: info
@@ -137,7 +141,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
   - 若Autotune计算包含的天数少于"调校天数"设定值，您将在天数选择器右侧看到实际参与计算的天数（如下例所示：10天）。
   - 当前设置仅在剩余天数充足时方能获得理想效果（例如：若您仅为周末调校特定配置文件——仅选择周六周日时，建议将"调校天数"设为至少21或28天，以确保Autotune计算能包含6-8个有效数据日）。
 
-![Autotune default screen ](../images/Autotune/Autotune_14b.png)
+  ![Autotune default screen ](../images/Autotune/Autotune_14b.png)
 
 - 在Autotune计算过程中，系统将实时显示计算进度（如下图所示示例："第3/10天部分调校结果"）。
 
@@ -180,7 +184,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
 
 - 请参见下方为"我的配置文件"设置的工作日调校规则示例：对"工作日"进行调校，选择14天作为"调校天数"（所以仅10天纳入Autotune计算范围）。
 
-![Autotune default screen ](../images/Autotune/Autotune_20b.png)
+  ![Autotune default screen ](../images/Autotune/Autotune_20b.png)
 
 
 
