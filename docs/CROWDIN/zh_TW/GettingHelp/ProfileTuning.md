@@ -26,7 +26,7 @@
 ## **微調基礎率時的建議設定與說明**
 
 - 請在[啟用循環](#AapsScreens-loop-status)的情況下完成所有測試。
-- **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
+- **將<u>關閉</u>所有[自動化](../DailyLifeWithAaps/Automations.md)功能**
 - **關閉<u></u> [DynISF](#Open-APS-features-DynamicISF)、[AutoISF](../AdvancedOptions/DevBranch.md)、[AutoSens](#Open-APS-features-autosens)**，以避免它們嘗試調整你的設定檔。
 - 測試期間請勿進行手動操作（手動注射、臨時目標等…）：讓系統僅使用**設定檔**中的設定。
 - 就[額外圖表](#AapsScreens-section-g-additional-graphs)而言：在圖表 1 中，使用活性胰島素（IOB）、活性碳水化合物（COB）（以及敏感度變化）。 在圖表 2 中，使用偏差與血糖影響。 需要尋求建議時，截圖請一併包含上述圖表。
@@ -44,7 +44,7 @@
 
 表示餐點已消化，體內已無碳水化合物。
 
-AAPS might indicate [COB=0 while you still have carbs on board](../DailyLifeWithAaps/CobCalculation.md).
+即使你體內仍有碳水化合物，AAPS 仍可能[顯示 COB=0](../DailyLifeWithAaps/CobCalculation.md)。
 
 ## **[設定檔](../SettingUpAaps/YourAapsProfile.md)定義**
 
