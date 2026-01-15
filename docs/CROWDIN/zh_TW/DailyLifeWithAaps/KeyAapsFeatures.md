@@ -1,48 +1,48 @@
 # AAPS 的主要功能
 
-## Loop mode
+## 循環模式
 
-The loop status is shown on the main screen with one of the icons below.
+循環狀態會在主畫面以下列其中一個圖示顯示。
 
-**AAPS** offers several loop modes, such as Open Loop (7), Closed Loop (1) and Low Glucose Suspend (LGS - 2).
+**AAPS** 提供數種循環模式，例如開放循環（7）、封閉循環（1）與低血糖暫停（LGS - 2）。
 
-See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode.
+請參閱 [AAPS 畫面 > 主畫面 > 循環狀態](#AapsScreens-loop-status) 以了解如何選擇循環模式。
 
 ![循環狀態](../images/Home2020_LoopStatus.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
-### Open Loop
+### 開放循環
 
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
+**AAPS**持續評估所有可用資料（IOB、COB、BG...）並在必要時提供治療建議（臨時基礎率），告訴你如何調整治療。
 
-這些建議不會自動執行（如封閉迴路）。 The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
+這些建議不會自動執行（如封閉迴路）。 建議必須由使用者手動輸入到幫浦中（如果使用虛擬幫浦）或透過按鈕輸入，如果**AAPS**連接到真實幫浦。
 
-This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
+此選項是用於了解**AAPS**的運作方式或如果你使用不支援的幫浦。 無論你在這裡做出什麼選擇，直到**[目標5](#objectives-objective5)**結束之前，你都將處於開放迴路中。
 
 (KeyAapsFeatures-LGS)=
 
-### Low Glucose Suspend (LGS)
+### 低血糖暫停 (LGS)
 
 在此模式中，[maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) 設定為零。
 
-This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. 但是，如果血糖上升，則不會進行自動校正。 Your basal rates will remain the same as defined in your current **Profile**. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+這意味著如果血糖下降，**AAPS** 可以為你減少基礎胰島素。 但是，如果血糖上升，則不會進行自動校正。 你的基礎率將保持在你當前**設定檔**中定義的值。 只有當 IOB（來自先前的低血糖暫停）為負值時，才會額外注射胰島素來降低**血糖**。
 
-This mode is available starting at **[Objective 6](#objectives-objective6)**.
+此模式自 **[目標 6](#objectives-objective6)** 起可用。
 
 (KeyAapsFeatures-ClosedLoop)=
 
-### Closed Loop
+### 閉合循環
 
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (*i.e.* without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
+**AAPS** 持續評估所有可用的資料（IOB、COB、血糖……）並在必要時自動調整治療（*即* 無需你進一步干預）以達到設定的 [目標範圍或數值](#profile-glucose-targets) （注射給藥、臨時基礎率、停用胰島素以避免低血糖等）。
 
 閉環系統在多個安全限制內運行，可以個別設置。
 
-Closed Loop is only possible if you are in **[Objective 7](#objectives-objective7)** or higher and use a supported pump.
+閉環系統僅在你達到 **[目標 7](#objectives-objective7)** 或更高時，並使用支援的幫浦時才能使用。
 
 (Open-APS-features-autosens)=
 
-## Autosens
+## 自動敏感度調整 (Autosens)
 
 - Autosens 是一種算法，可以觀察血糖的偏差（正/負/中性）。
 - 他會根據這些偏差，試圖找出你對胰島素的敏感度或抗性。
@@ -56,7 +56,7 @@ Closed Loop is only possible if you are in **[Objective 7](#objectives-objective
 
 (Open-APS-features-super-micro-bolus-smb)=
 
-## Super Micro Bolus (SMB)
+## 超微量注射 (Super Micro Bolus, SMB)
 
 **SMB**，**超微量注射**的簡稱，是自 2018 年起於 Oref1 算法中引入的 OpenAPS 功能。 與**AMA**不同，**SMB**並不使用臨時基礎率來控制葡萄糖水平，而主要使用**小型超微量注射**。 在**AMA**會使用臨時基礎率添加 1.0 IU 胰島素的情況下，**SMB**則會以**5 分鐘的間隔**在小步驟中提供多次超微量注射，例如 0.4 IU、0.3 IU、0.2 IU 和 0.1 IU。 同時（為了安全），實際基礎率會在一段時間內設為 0 IU/h，以防止過量注射（稱為 **“零臨時基礎率”**）。 這使得系統能夠比**AMA**中的臨時基礎率增加更快速地調整血糖。
 
@@ -93,7 +93,7 @@ OpenAPS SMB 的設定如下。
 
 (Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)=
 
-### Max U/h a temp basal can be set to
+### 臨時基礎可以設置的最大 U/h
 
 此安全設定決定了胰島素幫浦所能提供的最大臨時基礎率。 這也被稱為 **最大基礎**。
 
@@ -115,7 +115,7 @@ OpenAPS SMB 的設定如下。
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
-### Maximum total IOB OpenAPS can’t go over
+### 最大總 IOB 是 OpenAPS 不可超過的上限
 
 這個數值決定了**體內胰島素**（基礎與注射的體內胰島素）在運行閉環模式下**AAPS**所維持的最大值。 這也被稱為**maxIOB**。
 
@@ -142,11 +142,11 @@ OpenAPS SMB 的設定如下。
 
 詳細請參見[OpenAPS的SMB文檔](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb)。
 
-### Enable dynamic sensitivity
+### 啟用動態敏感度
 
 這是[動態胰島素敏感度](../DailyLifeWithAaps/DynamicISF.md)功能。 啟用後，新的設定將可用。 設定在[動態胰島素敏感度](#dyn-isf-preferences)頁面上說明。
 
-### Use Autosens feature
+### 使用自動敏感度功能
 
 這是[自動敏感度調整](#Open-APS-features-autosens)功能。 使用 DynamicISF 時，無法使用 Autosens，因為它們是兩種調整相同變數（敏感度）的不同演算法。
 
@@ -154,7 +154,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 
 啟用後，新的設定將可用。
 
-#### Sensitivity raises target
+#### 敏感度提升目標
 
 如果啟用此選項，當偵測到敏感度（低於 100%）時，敏感度檢測（autosens）可以提高目標。 在這種情況下，您的目標將根據檢測到的敏感度百分比而提高。
 
@@ -164,13 +164,13 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 
 當“啟用動態敏感度”或“啟用 Autosens 功能”中的任一選項被啟用時，將提供此設定。
 
-#### Resistance lowers target
+#### 抗性降低目標
 
 如果啟用此選項，當偵測到抗性（超過 100%）時，敏感度檢測（autosens）可以降低目標。 在這種情況下，您的目標將根據檢測到的抗性百分比而降低。
 
 當“啟用動態敏感度”或“啟用 Autosens 功能”中的任一選項被啟用時，將提供此設定。
 
-### Enable SMB
+### 啟用 SMB
 
 啟用此功能以使用 SMB 功能。 如果停用，將不會給予**SMBs**。
 
@@ -178,7 +178,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 
 (Open-APS-features-enable-smb-with-high-temp-targets)=
 
-#### Enable SMB with high temp targets
+#### 啟用具有高臨時目標的 SMB
 
 如果啟用此設定，即使用戶選擇了高**Temp Target**（定義為超過 100mg/dL 或 5.6mmol/l，不考慮**Profile**目標），也將持續給予**SMBs**。 此選項旨在當設定被停用時，停用 SMBs。 例如，如果此選項被停用，可以通過設定高於 100mg/dL 或 5.6mmol/l 的**Temp Target**來停用**SMBs**。 即使有其他條件試圖啟用 SMB，此選項也將停用**SMBs**。
 
@@ -186,7 +186,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 
 (Open-APS-features-enable-smb-always)=
 
-#### Enable SMB always
+#### 始終啟用 SMB
 
 如果此設定啟用，SMB 將始終啟用（不論是否有 COB、臨時目標或注射）。 如果啟用此設定，以下的其他啟用設定將不會生效。 然而，如果**Enable SMB with high temp targets**被停用，並設定高溫目標，則 SMBs 將被停用。
 
@@ -194,19 +194,19 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 
 吵雜的資料可能會導致**AAPS**認為血糖在快速上升，結果會施用不必要的 SMBs。 有關雜訊和數據平滑的更多信息，請參閱[此處](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
 
-#### Enable SMB with COB
+#### 啟用具有 COB 的 SMB
 
 如果啟用此設定，在 COB 大於 0 時會啟用 SMB。
 
 如果“啟用 SMB 始終”開啟，則此設定將不可見。
 
-#### Enable SMB with temp targets
+#### 啟用具有臨時目標的 SMB
 
 如果啟用此設定，當設定任何暫時目標（即將進餐、活動、低血糖、自訂）時，將啟用 SMB。 如果啟用此設定，但**Enable SMB with high temp targets**被停用，則當設定低溫目標（低於 100mg/dL 或 5.6mmol/l）時，SMB 將會啟用，但當設定高溫目標時則會停用。
 
 如果“啟用 SMB 始終”開啟，則此設定將不可見。
 
-#### Enable SMB after carbs
+#### 啟用碳水後的 SMB
 
 如果啟用，在宣告碳水化合物後的 6 小時內，SMB 將被啟用，即使 COB 達到 0。
 
@@ -217,7 +217,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 吵雜的資料可能會導致**AAPS**認為血糖在快速上升，結果會施用不必要的 SMBs。 有關雜訊和數據平滑的更多信息，請參閱[此處](../CompatibleCgms/SmoothingBloodGlucoseData.md)。  
 如果“啟用 SMB 始終”開啟，則此設定將不可見。
 
-#### How frequently SMBs will be given in min
+#### SMB 執行的最小間隔時間（分鐘）
 
 此功能限制 SMB 的頻率。 此數值決定 SMB 之間的最小時間。 注意，每次接收到葡萄糖值時循環將運行（通常是 5 分鐘）。 減去 2 分鐘以為循環提供額外時間來完成。 例如，如果您希望每次循環運行時給予 SMB，將其設定為 3 分鐘。
 
@@ -225,7 +225,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 
 (Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
 
-#### Max minutes of basal to limit SMB to
+#### 限制 SMB 的最大基礎率時間（分鐘）
 
 這是一項重要的安全設定。 此數值決定在設定的時間內，由於 COB 覆蓋的基礎胰島素的量可以給予多少 SMB。
 
@@ -235,7 +235,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 
 預設值：30 分鐘。
 
-#### Max minutes of basal to limit SMB to for UAM
+#### 限制UAM SMB的最大基礎分鐘數
 
 此設定允許在無碳水化合物的情況下調整 SMB 的強度。
 
@@ -243,7 +243,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 
 此設定只有在「啟用 SMB」和「啟用 UAM」開啟的情況下可見。
 
-### Enable UAM
+### 啟用 UAM
 
 啟用此選項後，SMB 演算法可以識別未通知的餐點。 如果您忘記告訴 **AAPS** 您的碳水化合物或錯誤估算您的碳水化合物，並且輸入的碳水化合物數量不正確，或者如果餐點中含有大量脂肪和蛋白質，持續時間超過預期，這將很有幫助。 如果沒有輸入任何碳水化合物，UAM 可以識別由碳水化合物、腎上腺素等引起的快速葡萄糖上升，並試圖使用 SMB 來調整。 這也以相反的方式運作：如果出現快速葡萄糖下降，可以更早停止 SMB。
 
@@ -251,7 +251,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 
 (key-aaps-features-minimal-carbs-required-for-suggestion)=
 
-### Minimal carbs required for suggestion
+### 建議所需的最少碳水化合物
 
 顯示碳水化合物建議警示所需的最小克數。 當參考設計檢測到需要碳水化合物時，將建議額外攝入碳水化合物。 在這種情況下，您將收到通知，該通知可以延遲 5、15 或 30 分鐘。
 
@@ -261,7 +261,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 
 ![在主螢幕上顯示所需的碳水化合物](../images/Pref2020_CarbsRequired.png)
 
-### Advanced Settings
+### 進階設定
 
 您可以在這裡了解更多資訊 : [OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html)。
 
@@ -279,13 +279,13 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。 它會根據這�
 
 (Open-APS-features-advanced-meal-assist-ama)=
 
-## Advanced Meal Assist (AMA)
+## 進階餐食輔助 (AMA)
 
 AMA，"進階餐點輔助" 的簡稱，是 2017 年的 OpenAPS 功能（oref0）。 OpenAPS 進階餐點輔助（AMA）允許系統在進餐注射後更快地進行高溫控制，如果您可靠地輸入碳水化合物。
 
 您可以在 [OpenAPS 文件](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama) 中找到更多資訊。
 
-### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
+### 臨時基礎率的最大 U/h (OpenAPS "最大基礎率")
 
 此安全設定幫助 **AAPS** 永遠不會給予危險的高基礎率，並將臨時基礎率限制在 x U/h。 建議將此設為合理的數值。 一個好的建議是將您設定檔中的最高基礎率乘以 4，最低乘以 3。 例如，如果您設定檔中的最高基礎率為 1.0 U/h，您可以將其乘以 4 獲得 4 U/h，並將 4 設為您的安全參數。
 
@@ -301,7 +301,7 @@ AMA，"進階餐點輔助" 的簡稱，是 2017 年的 OpenAPS 功能（oref0）
 
 *請參閱 [規定上限總覽](#Open-APS-features-overview-of-hard-coded-limits)。*
 
-### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
+### OpenAPS 可注射的最大基礎 IOB [U]（OpenAPS "最大 IOB"）
 
 這個參數限制了 **AAPS** 仍然運行時的最大基礎 IOB。 如果 IOB 更高，則停止給予額外的基礎胰島素，直到基礎 IOB 降低到限制以下。
 
@@ -315,15 +315,15 @@ AMA，"進階餐點輔助" 的簡稱，是 2017 年的 OpenAPS 功能（oref0）
 
 *請參閱 [規定上限總覽](#Open-APS-features-overview-of-hard-coded-limits)。*
 
-### Enable AMA Autosens
+### 啟用 AMA Autosens
 
 在這裡，您可以選擇是否要使用 [敏感度檢測](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) 的自動敏感度調整功能。
 
-### Autosens adjust temp targets too
+### Autosens 也調整臨時目標
 
 如果您啟用此選項，自動敏感度調整也可以調整目標（除了基礎和 ISF）。 這使得 **AAPS** 的工作更「積極」或否。 實際目標可能會更快達成。
 
-### Advanced Settings
+### 進階設定
 
 - 通常你無需更改此對話框中的設定！
 - 如果你仍然想要更改，請務必閱讀[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#)，並了解你在做什麼。
@@ -346,7 +346,7 @@ AMA，"進階餐點輔助" 的簡稱，是 2017 年的 OpenAPS 功能（oref0）
 
 (Open-APS-features-overview-of-hard-coded-limits)=
 
-## Overview of hard-coded limits
+## 固定限制總覽
 
 |                     | 兒童  | 青少年 | 成人  | 胰島素抗性成人 | 孕婦  |
 | ------------------- | --- | --- | --- | ------- | --- |
