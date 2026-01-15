@@ -127,7 +127,7 @@
 選項「保持螢幕常亮」將強制 Android 隨時保持螢幕亮起。 這對於演示等場合很有用。 但他會消耗大量電池電量。 因此，建議將智慧型手機連線到充電線。
 
 (偏好設定-按鈕)=
-### Buttons
+### 按鈕
 
 - 定義哪些按鈕在主螢幕底部可顯示。
 - 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
@@ -240,9 +240,9 @@
 * 對於消化緩慢的人來說：一次傳送所有的注射劑量可能會引起低血糖，因為胰島素的作用速度比消化快。
 * 以便給**AAPS**留出更多空間自行處理**血糖上升**。 在這兩種情況下，**AAPS**將在需要時透過SMB來補償缺失的注射部分。
 
-### Old glycemia time threshold
+### 舊血糖時間門檻
 
-If the last **BG** received is older than this threshold, then the bolus wizard will by default offer a 100% dose instead of the **Deliver this part of bolus wizard result** setting above. The reason for this is that when **BG** is missing, **AAPS** will not be able to send the remaining part of the bolus afterward (the loop is not running), which would result in high **BG**.
+如果最後收到的 **血糖** 早於此門檻，則注射嚮導預設會提供 100% 劑量，而不是使用上面的 **傳送注射嚮導結果的這一部分** 設定。 這麼做的原因是當 **血糖** 缺少時，**AAPS** 將無法在之後送出注射的剩餘部分（循環未執行），這可能導致 **血糖** 偏高。
 
 ### 啟用的注射顧問
 
@@ -298,7 +298,7 @@ If the last **BG** received is older than this threshold, then the bolus wizard 
 
 ## 循環
 
-As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+自從 [AAPS 版本 3.4](#version3400) 起，便無法在此設定循環模式。 請參閱 [AAPS 畫面 > 主畫面 > 循環狀態](#AapsScreens-loop-status) 以變更循環模式。
 
 (Preferences-minimal-request-change)=
 ### 最小請求變更
