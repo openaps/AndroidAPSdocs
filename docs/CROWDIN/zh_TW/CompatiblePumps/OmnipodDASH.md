@@ -572,6 +572,18 @@ DASH 概覽標籤將顯示如下所述：
 3. 在第二次或第三次重試後，你將獲得移除 Pod 的選項。
 4. 一旦舊藥量被移除，你將能夠啟動新的藥量。
 
+### Generic error: java.lan.illegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
+
+If you receive this error when attempting to Initialize a new pod **AAPS** fails as it still has settings for an old pod stored in configuration.
+
+![omnipod_address_in_use](../images/DASH_images/Errors/omnipod_address_in_use.png)
+
+This can happen if you restore from a backup, or a pod deactivation fails.
+
+To resolve keep clicking on `RETRY` until a `Discard` option is shown, then discard. This procedure should work for De-Activating a pod too.
+
+You should now be able to Activate a new pod.
+
 ---
 ### Reinstalling AAPS
 
