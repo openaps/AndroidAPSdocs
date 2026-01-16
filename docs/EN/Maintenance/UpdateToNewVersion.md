@@ -9,6 +9,7 @@
 * When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
 * The new version will also be announced on Facebook at the time of release.
 * Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+* Do not forget to export your __AAPS'__ settings.
 
 ## Update AAPS with browser build
 
@@ -21,8 +22,15 @@ Follow [these instructions.](./UpdateComputerBuild.md).
 (Update-to-new-version-check-aaps-version-on-phone)=
 ### Check AAPS version on phone
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+
+After you installed the new apk:
+
+- you can check the __AAPS'__ version on your phone by clicking the three dots menu on the top right and then 'About' (as per the screenshot below). The __AAPS'__ current version can be viewed; 
+- ensure import settings have been actioned;
+- action a 'full synchroniation' under __NSClient__ to ensure __AAPS__ is working off accurate & complete data; and
+- please check your __AAPS'__ settings under __Preferences__ and ensure these remain accurate.
 
 ![AAPS version installed](../images/Update_VersionCheck.png)
 
-Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+
