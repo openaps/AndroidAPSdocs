@@ -53,7 +53,7 @@
 
 虽然没有明确的规格可以帮助您了解一款手表是否适合独立使用**AAPS**，但以下参数将有所帮助：
 
-1)  Android 12 or newer. 2）能够将手表表盘从“方形”模式切换出来，以使文字更大、更易阅读。 3）电池续航非常出色。 4）良好的蓝牙连接范围。
+1）Android 12或更高版本。 2）能够将手表表盘从“方形”模式切换出来，以使文字更大、更易阅读。 3）电池续航非常出色。 4）良好的蓝牙连接范围。
 
 大多数关于独立**AAPS**手表的困扰都来自于与一个小屏幕的交互，以及当前的AAPS完整应用程序界面尚未为手表设计的事实。 由于屏幕尺寸受限，您可能更喜欢使用手写笔在手表上编辑**AAPS**设置，并且某些AAPS按钮可能无法在手表屏幕上显示。
 
@@ -170,7 +170,7 @@ Pebble手表（[现已停产](https://en.wikipedia.org/wiki/Pebble_(watch))）�
 
 这些独特的技术设备能够**直接**从Dexcom发射器接收血糖数据。 很少有人知道，Dexcom G6/G7发射器实际上会在_两个_不同的频道上广播当前的血糖数据：一个手机频道和一个医疗频道。 Bluejay手表可以被设置为接收任一频道上的血糖数据，因此，如果AAPS正在使用手机频道，那么Bluejay手表就可以使用医疗频道。
 
-其关键优势在于，它是目前唯一一款完全独立于手机和闭环系统的智能手表。 So, for example, if you disconnect the pump and the **AAPS** phone at the beach or theme park, and are out of range of the **AAPS** phone, you can still get readings from your Dexcom directly to the Bluejay watch.
+其关键优势在于，它是目前唯一一款完全独立于手机和闭环系统的智能手表。 例如，如果你在海滩或主题公园将泵与 **AAPS** 手机断开连接，且超出了手机的蓝牙覆盖范围，你仍然可以直接通过 Bluejay 手表获取 Dexcom 传感器的读数。
 
 据报道，其缺点是它并不总是能每5分钟就获取一次读数，而且电池是不可更换的。 Bluejay GTS手表运行的是xDrip+软件的修改版，而Bluejay U1手表则运行完整的xDrip+软件。
 
