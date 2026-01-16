@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31/12/2025 : Version 3.4 is out. Check the [Release Notes](#latestrelease) to see what's new and get update instructions.
+31/12/2025 : 3.4版本已经发布. 查看[发行说明](#latestrelease)以了解新功能并获取更新说明。
 
 ```
 
@@ -83,21 +83,21 @@ AAPS简介 <./Getting-Started/Introduction.md>
 ```
 
 ```{toctree}
-:caption: 3) Setting up AAPS
+:caption: 3) 设置 AAPS
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+设置报告服务器 (Setting up the reporting server) <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Computer Build <./SettingUpAaps/ComputerBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+构建 AAPS (Building AAPS) <./SettingUpAaps/BuildingAaps.md>
+- 浏览器构建<./SettingUpAaps/BrowserBuild.md>
+- 电脑构建 <./SettingUpAaps/ComputerBuild.md>
+传输并安装 AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+设置向导 <./SettingUpAaps/SetupWizard.md>
+你的 AAPS 配置文件 <./SettingUpAaps/YourAapsProfile.md>
+更改 AAPS 配置 <./SettingUpAaps/ChangeAapsConfiguration.md>
+- 配置生成器 <./SettingUpAaps/ConfigBuilder.md>
+- 偏好设置 <./SettingUpAaps/Preferences.md>
+完成任务阶段 <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -140,27 +140,27 @@ Android Auto <./RemoteFeatures/AndroidAuto.md>
 ```
 
 ```{toctree}
-:caption: 7) Maintenance of AAPS
+:caption: 7) AAPS 的维护
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update <./Maintenance/UpdateBrowserBuild.md>
-- Computer Update <./Maintenance/UpdateComputerBuild.md>
+导出/导入设置 <./Maintenance/ExportImportSettings.md>
+查看你的数据 <./Maintenance/Reviewing.md>
+AAPS 发行说明 <./Maintenance/ReleaseNotes.md>
+文档更新 <./Maintenance/DocumentationUpdate.md>
+更新至 AAPS 新版本 <./Maintenance/UpdateToNewVersion.md>
+- 浏览器更新 <./Maintenance/UpdateBrowserBuild.md>
+- 电脑更新 <./Maintenance/UpdateComputerBuild.md>
 
 ```
 
 ```{toctree}
-:caption: 8) Getting Help
+:caption: 8) 获取帮助
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
-Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
-Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
+在哪里可以获得 AAPS 的帮助 <./GettingHelp/WhereCanIGetHelp.md>
+通用故障排除 <./GettingHelp/GeneralTroubleshooting.md>
+- 蓝牙故障排除 <./GettingHelp/BluetoothTroubleshooting.md>
+配置文件调优指南 <./GettingHelp/ProfileTuning.md>
+Android Studio 故障排除 <./GettingHelp/TroubleshootingAndroidStudio.md>
+访问日志文件 <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}
