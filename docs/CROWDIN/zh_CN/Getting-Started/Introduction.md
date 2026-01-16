@@ -39,7 +39,7 @@
 
 安卓 APS（**AAPS**）是一款混合闭环系统，或称人工胰腺系统（APS）。 它使用 #WeAreNotWaiting 1 型糖尿病社区开发的 [OpenAPS 算法](https://openaps.org/)（规则集）进行胰岛素剂量计算。
 
-由于 OpenAPS 只与某些较老的胰岛素泵兼容，Milos Kozak于2016年为其罹患1型糖尿病的家庭成员开发了**AAPS**（适配更广泛的胰岛素泵型号）。 自那时起， 很多与1型糖尿病有关的志愿者计算机开发团队和技术爱好者加入了进来，不断优化升级**AAPS** 。 Today, **AAPS** is used by approximately 20,000 people. AAPS是一个高度可定制且多功能的系统，由于它是开源的，因此与众多开源糖尿病软件及平台实现良好兼容。 目前 **AAPS** 系统的基本组件架构如上**图 1** 所示。
+由于 OpenAPS 只与某些较老的胰岛素泵兼容，Milos Kozak于2016年为其罹患1型糖尿病的家庭成员开发了**AAPS**（适配更广泛的胰岛素泵型号）。 自那时起， 很多与1型糖尿病有关的志愿者计算机开发团队和技术爱好者加入了进来，不断优化升级**AAPS** 。 目前，全球约有 20,000 人正在使用 **AAPS**。 AAPS是一个高度可定制且多功能的系统，由于它是开源的，因此与众多开源糖尿病软件及平台实现良好兼容。 目前 **AAPS** 系统的基本组件架构如上**图 1** 所示。
 
 
 
@@ -87,7 +87,7 @@ AAPS的“中枢”是您自己构建的 **应用程序**。 构建过程有详�
 与商业系统相比，**AAPS** 的核心优势在于，监护人尤其是糖宝家长可以使用经过验证的短信（SMS）命令或通过 App（[Nightscout](https://nightscout.github.io/) 或 AAPSClient）向 **AAPS** 系统发送各种命令。 这个功能1型糖宝的父母用的比较多。 例如，孩子在操场上忙着玩，一会要吃点小零食，这时你就可以用手机给个提前大剂量。 可以通过智能设备（_例如_Fitbit）来监控系统、发送基本指令（_例如_三星Galaxy Watch 4），甚至在高性能智能手表（**5**）（_例如_LEMFO）上运行完整的AAPS系统。 最后这种情况下，你就可以抛开手机运行AAPS。 随着手表电池续航时间的延长和技术的日益稳定，最后一种选择可能会变得越来越有吸引力。
 
 #### 6) **得益于应用程序的开源，不受商业限制**
-除了采用开放源代码的方法，允许随时查看 **AAPS** 的源代码之外，提供标准开放式编程接口也给其他开发人员提供了贡献新想法的机会。 **AAPS** 与 Nightscout 紧密集成。 这加快了开发速度，并让用户能通过附加功能进一步提升糖尿病管理的便利性。 Good examples for such integrations are [Nightscout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), xDrip+, [M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) etc. 开源开发者和商业系统开发者之间一直在进行对话。 许多 DIY 创新逐渐被商业系统采用，而商业系统的开发速度较慢是可以理解的，部分原因是不同公司的系统（泵、App、传感器_等_）之间的接口需要仔细协商并获得授权。 这也会延缓那些方便患者（或有特殊需求的小部分患者）但不能产生可观利润的创新。
+除了采用开放源代码的方法，允许随时查看 **AAPS** 的源代码之外，提供标准开放式编程接口也给其他开发人员提供了贡献新想法的机会。 **AAPS** 与 Nightscout 紧密集成。 这加快了开发速度，并让用户能通过附加功能进一步提升糖尿病管理的便利性。 这类集成的优秀示例包括 [Nightscout](https://nightscout.github.io/)、[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)、xDrip+、[M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) 等。 开源开发者和商业系统开发者之间一直在进行对话。 许多 DIY 创新逐渐被商业系统采用，而商业系统的开发速度较慢是可以理解的，部分原因是不同公司的系统（泵、App、传感器_等_）之间的接口需要仔细协商并获得授权。 这也会延缓那些方便患者（或有特殊需求的小部分患者）但不能产生可观利润的创新。
 
 #### 7) **详细的 App 界面**
 使用 **AAPS** 可以方便地跟踪以下信息：泵内胰岛素量、管路使用时长、探头使用时长、泵电池使用时长、活性胰岛素_等_。 许多操作都可以通过 **AAPS** 应用程序完成（给泵补药、断开泵连接_等_），无需操作泵体本身，这意味着泵可始终置于您（或受监护者）的口袋或腰带上。
@@ -148,7 +148,7 @@ AAPS的“中枢”是您自己构建的 **应用程序**。 构建过程有详�
 | CGM  | [Eversense](../CompatibleCgms/Eversense.md)                    | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
 | CGM  | [MM640g/MM630g](../CompatibleCgms/MM640g.md)                   | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
 | CGM  | [PocTech](../CompatibleCgms/PocTech.md)                        | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![可用](../images/available.png)                 |
-| CGM  | [Ottai](../CompatibleCgms/OttaiM8.md)                          | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
+| CGM  | [欧泰 (Ottai)](../CompatibleCgms/OttaiM8.md)                     | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
 | CGM  | [Syai Tag](../CompatibleCgms/SyaiTagX1.md)                     | ![可用](../images/available.png)    | ![不可用](../images/unavailable.png)               | ![不可用](../images/unavailable.png)                     | ![不可用](../images/unavailable.png)              |
 | CGM  | [Nightscout 作为血糖数据源](../CompatibleCgms/CgmNightscoutUpload.md) | ![可用](../images/available.png)    | ![可用](../images/available.png)                  | ![可用](../images/available.png)                        | ![可用](../images/available.png)                 |
 
@@ -163,7 +163,7 @@ _表格说明：_
 
 ## AAPS是否使用人工智能或任何机器学习算法？
 
-The current master version of **AAPS** (3.4) does not have any machine learning algorithms, multiple-parameter insulin response models, or artificial intelligence. 因此，该系统在运作方式上是公开和透明的，不仅专家能看懂，临床医生和病人也能弄明白。 这也意味着，诸如生活状态转换的时候可能需要大幅调整胰岛素计量(比如从紧张的工作日转到轻松的假期)， 您可以立即把 **AAPS**切换到一个更弱/更强的配置文件。 如果是那些能“自动学习”的系统，类似的调整可以自动执行，但相比之下需要等一段时间才能调整胰岛素剂量（那些系统需要等指标的趋势发生变化才能做出调整）。
+目前 **AAPS** 的主版本 (3.4) 不包含任何机器学习算法、多参数胰岛素响应模型或人工智能（AI）。 因此，该系统在运作方式上是公开和透明的，不仅专家能看懂，临床医生和病人也能弄明白。 这也意味着，诸如生活状态转换的时候可能需要大幅调整胰岛素计量(比如从紧张的工作日转到轻松的假期)， 您可以立即把 **AAPS**切换到一个更弱/更强的配置文件。 如果是那些能“自动学习”的系统，类似的调整可以自动执行，但相比之下需要等一段时间才能调整胰岛素剂量（那些系统需要等指标的趋势发生变化才能做出调整）。
 
 ## 哪种系统适合我或我的家人？
 
@@ -176,7 +176,7 @@ The current master version of **AAPS** (3.4) does not have any machine learning 
 ## 像AAPS这样的开源系统安全吗？
 
 ### AAPS 系统的安全性
-更准确的问题可能是 "与我目前使用的胰岛素输注系统**相比**，它是否更安全？"因为没有一种胰岛素输注方法是零风险的。 **AAPS** 有许多制衡机制。 有篇[论文](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)研究了 **AAPS** 在计算机模拟装置中的使用情况，这是主观地检验该系统安全性和有效性的有效方法。 More generally, it is estimated that over 30,000 individuals worldwide are using open-source automated-insulin delivery systems, and uptake continues to increase globally.
+更准确的问题可能是 "与我目前使用的胰岛素输注系统**相比**，它是否更安全？"因为没有一种胰岛素输注方法是零风险的。 **AAPS** 有许多制衡机制。 有篇[论文](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)研究了 **AAPS** 在计算机模拟装置中的使用情况，这是主观地检验该系统安全性和有效性的有效方法。 更广泛地来看，据估计全球有超过 30,000 人正在使用开源的人工胰岛素自动化输注系统（AID），且这一比例在全球范围内持续增长。
 
 任何使用无线电通信的电子设备都可能被黑客攻击，即便是非闭环的胰岛素泵也不例外。 目前，我们没有发现有人试图通过入侵糖尿病医疗设备来伤天害理的情况。 然而，有多种方法可以预防这种风险：
 
@@ -190,7 +190,7 @@ The current master version of **AAPS** (3.4) does not have any machine learning 
 
 #### 关于过快改善血糖控制的安全注意事项
 
-快速降低 HbA1c 和改善血糖控制听起来很有吸引力。 但是，不管用哪种闭环系统，_过快_降低平均血糖水平都可能造成永久性损伤，包括对眼睛的损伤，以及永远无法消除的疼痛性神经病变。 这种损害可以通过缓慢降低血糖水平来避免。 If you currently have an elevated HbA1c and are moving to AAPS (or any other closed loop system), please discuss this potential risk with your clinical team before starting, and agree a time plan with them. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the safety section [here](#preparing-safety-first).
+快速降低 HbA1c 和改善血糖控制听起来很有吸引力。 但是，不管用哪种闭环系统，_过快_降低平均血糖水平都可能造成永久性损伤，包括对眼睛的损伤，以及永远无法消除的疼痛性神经病变。 这种损害可以通过缓慢降低血糖水平来避免。 如果你目前的糖化血红蛋白（HbA1c）水平较高，并且准备开始使用 AAPS（或任何其他闭环系统），请在开始前与你的临床医疗团队讨论潜在的风险，并与他们商定一个时间计划。 关于如何安全降低血糖水平的更广泛信息，包括指向医学文献的链接，请参阅安全章节中的[此处](#preparing-safety-first)。
 
 #### 关于设备、耗材和其他药物的医疗安全
 
@@ -218,7 +218,7 @@ The current master version of **AAPS** (3.4) does not have any machine learning 
 
 若临床团队对使用 **AAPS** 闭环持保留态度，以下论点可能会有所帮助：
 
-a) **AAPS** 系统是由患者及其护理人员设计的。 核心设计遵循最高安全标准并深度整合患者真实体验。 There are currently around **20,000** AAPS users worldwide. 因此，在您诊所的患者群体中，很可能还有其他患者在使用 DIY 闭环（无论是否公开）。
+a) **AAPS** 系统是由患者及其护理人员设计的。 核心设计遵循最高安全标准并深度整合患者真实体验。 目前全球约有 **20,000** 名 AAPS 用户。 因此，在您诊所的患者群体中，很可能还有其他患者在使用 DIY 闭环（无论是否公开）。
 
 b) 国际权威医学杂志《柳叶刀》（[The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_）最近发表的专家共识指南证实，DIY 闭环可以**安全****有效**提升糖尿病控制水平（包括入框率）。 在[《自然》](https://doi.org/10.1038/d41586-023-02648-9)_(3)_等权威期刊持续刊载DIY社区技术进展的专题报道。
 
@@ -321,7 +321,7 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 上表假定用户可使用连续血糖监测仪和胰岛素泵。
 
-* **AAPS**的所有数据均可通过数据共享平台（如Nightscout）提供给医护人员，包括动态血糖仪（CGM）数据实时监测​、胰岛素输注（insulin delivery）追踪​、碳水化合物登记（carbohydrate entries）记录、预测算法及参数设置（predictions and settings）可视化等。 Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioral considerations.
+* **AAPS**的所有数据均可通过数据共享平台（如Nightscout）提供给医护人员，包括动态血糖仪（CGM）数据实时监测​、胰岛素输注（insulin delivery）追踪​、碳水化合物登记（carbohydrate entries）记录、预测算法及参数设置（predictions and settings）可视化等。 Nightscout 的记录包括每日和每周报告，这些报告可以通过提供更准确的血糖控制数据和任何行为因素参考，协助医护人员与 1 型糖尿病患者进行讨论。
 
 (accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
 
@@ -331,7 +331,7 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 盲人可以使用 AAPS。 在安卓设备上，操作系统有一个名为 TalkBack 的程序。 作为操作系统的一部分，它允许通过语音输出进行屏幕定位。 通过使用TalkBack功能，您可以在无需视力辅助的情况下操作您的智能手机和AAPS。
 
 #### 构建 AAPS App：
-作为用户，您将在 Android Studio 中构建 AAPS 应用程序。 Many people use Microsoft Windows for this purpose, where there is the screen reader analogous to TalkBack. 由于 Android Studio 是 Java 应用程序，因此必须在控制面板中启用 "Java Access Bridge "组件。 否则，在Android Studio中，电脑的屏幕阅读器将无法发声。
+作为用户，您将在 Android Studio 中构建 AAPS 应用程序。 许多人使用 Microsoft Windows 来完成此操作，在 Windows 系统中拥有与 Android 系统上的 TalkBack 类似的屏幕阅读器。 由于 Android Studio 是 Java 应用程序，因此必须在控制面板中启用 "Java Access Bridge "组件。 否则，在Android Studio中，电脑的屏幕阅读器将无法发声。
 
 具体方法取决于操作系统，下面介绍两种方法：
 
@@ -361,7 +361,7 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 投入时间，**AAPS**有可能带来以下好处
 
-- 减轻1型糖尿病管理引发的​​心理负担；
+- 减轻管理 1 型糖尿病的压力与负担；
 
 - 精简因疾病产生的​​琐碎管理决策；
 
