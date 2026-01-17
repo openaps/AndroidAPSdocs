@@ -6,10 +6,11 @@
 
 ## Belangrijk:
 
-* Please update to the new version of **AAPS** as soon as possible after a new release is available.
-* When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-* The new version will also be announced on Facebook at the time of release.
-* Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+- Please update to the new version of **AAPS** as soon as possible after a new release is available.
+- When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
+- The new version will also be announced on Facebook at the time of release.
+- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+- Do not forget to export your **AAPS'** settings.
 
 ## Update AAPS with browser build
 
@@ -23,8 +24,13 @@ Follow [these instructions.](./UpdateComputerBuild.md).
 
 ### Check AAPS version on phone
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+
+After you installed the new apk:
+
+- you can check the **AAPS'** version on your phone by clicking the three dots menu on the top right and then 'About' (as per the screenshot below). The **AAPS'** current version can be viewed; 
+- ensure import settings have been actioned;
+- action a 'full synchroniation' under **NSClient** to ensure **AAPS** is working off accurate & complete data; and
+- please check your **AAPS'** settings under **Preferences** and ensure these remain accurate.
 
 ![AAPS version installed](../images/Update_VersionCheck.png)
-
-Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
