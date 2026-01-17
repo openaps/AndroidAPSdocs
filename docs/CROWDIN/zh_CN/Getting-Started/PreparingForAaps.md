@@ -84,11 +84,11 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 为了辅助构建过程，设有专门的章节：
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs](../UsefulLinks/FAQ.md) (Section 11);
+- 在 [常见问题解答 (FAQs)](../UsefulLinks/FAQ.md)（第 11 节）中，列出了针对可能出现的频繁错误的问题与解答。
 
-- “[如何安装AAPS](../SettingUpAaps/BuildingAaps.md)？” (Section 3) and [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) (Section 8).
+- “[如何安装AAPS](../SettingUpAaps/BuildingAaps.md)？” （第 3 节）以及 [故障排除 (Troubleshooting)](../GettingHelp/GeneralTroubleshooting.md)（第 8 节）。
 
-How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
+要达到闭环控制所需的时间因人而异，但你可以（[在这里](#preparing-how-long-will-it-take)）找到使用AAPS实现完全闭环控制的大致时间表。
 
 
 #### 密钥库&和配置设置导出文件
@@ -188,7 +188,7 @@ How long it takes to get to closed looping depends on the individual, but an app
 
 ### 医疗考虑
 
-In addition to the medical warnings in the [safety section](#preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
+除了[安全部分](#preparing-safety-first)中的医疗警告外，根据您在泵中使用的胰岛素类型，还会有不同的参数设置。
 
 #### 胰岛素选择
 
@@ -210,7 +210,7 @@ In addition to the medical warnings in the [safety section](#preparing-safety-fi
 
 #### AAPS与Android版本
 
-The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), Android 16 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+当前版本的**AAPS**（3.4）需要搭载**谷歌Android 12.0或更高版本**的Android智能手机。 如果你正考虑购买一部新手机（截至 2026 年 1 月），建议首选 Android 16 系统。<br/>出于安全原因，强烈建议用户保持其 **AAPS** 构建版本处于最新状态。 但是，对于无法使用Android 12.0或更高版本设备的用户，仍然可以使用与旧版Android兼容的**AAPS**早期版本，请参阅：[发行说明](#maintenance-android-version-aaps-version)。
 
 #### 智能手机型号选择
 您购买的具体型号取决于所需的功能。 您可以在[手机页面](../Getting-Started/Phones.md)上找到关于工作配置的建议和用户反馈。
@@ -219,8 +219,7 @@ The current version of **AAPS** (3.4) requires an Android smartphone with Google
 
 ```{admonition} delaying Samsung phones updates
 :class:警告
-三星有着不幸的记录，他们强制推送手机更新，而这些更新却导致了蓝牙连接问题。 To disable these forced updates you need to switch the phone to "developer mode" by:
- go to settings and about then software information, then tap build number until it confirms you have unlocked developer mode. 返回到主设置菜单，您应该会看到一个新的‘开发者选项’菜单项。 打开开发者选项，滚动查找‘自动系统更新’并将其关闭。
+三星有着不幸的记录，他们强制推送手机更新，而这些更新却导致了蓝牙连接问题。 要禁用这些强制更新，你需要将手机切换到“开发者模式”，步骤如下：进入“设置”，点击“关于”，然后选择“软件信息”，连续点击“版本号（Build number）”，直到系统确认你已开启开发者模式。 返回到主设置菜单，您应该会看到一个新的‘开发者选项’菜单项。 打开开发者选项，滚动查找‘自动系统更新’并将其关闭。
 ```
 
 ```{admonition} Google Play Protect potential Issue

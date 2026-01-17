@@ -1,10 +1,10 @@
 (browser-build)=
 
-# Browser build
+# AAPS 浏览器构建指南
 
-Building AAPS with GitHub Actions.
+GitHub Actions 构建流程
 
-**Minimum AAPS version supported is 3.3.2.1.**
+**为什么 3.3.2.1 是“强制底线”？**
 
 ## 自行构建而非下载
 
@@ -14,75 +14,78 @@ Building AAPS with GitHub Actions.
 
 (Building-APK-without-a-computer)=
 
-## Device and software specifications for building AAPS
+## 构建 AAPS 的设备与软件规范
 
-We recommend using an Android device. You can also use a computer or an iOS device.
+我们推荐使用 Android 设备。 你也可以使用电脑或 iOS 设备。
 
-You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+你需要在浏览器中打开多个标签页，并频繁地在它们之间切换。 例如使用 Chrome 浏览器：
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
-You also need a Google account so that the app can be saved in your Google Drive.
+你还需要一个 Google 账号，以便将生成的应用程序保存到你的 Google 云端硬盘（Google Drive）中。
 
 ```{note}
-This wiki assumes you're performing all operations with your cellular phone and the Chrome web browser.  
-You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
+本维基指南假设你正通过手机和 Chrome 浏览器执行所有操作。  
+你需要在不同的标签页之间来回切换：建议在开始前关闭所有已打开的标签页，以防在切换过程中迷失操作步骤。
 ```
 
 (github-fork)=
 
-## 1. AAPS personal fork
+## 1. AAPS 个人分叉 (AAPS personal fork)
 
-You will need to secretly store your personal Android Java Key and Google Drive information in GitHub (later in the process, we will explain how).
+你需要将你的个人 Android Java 密钥（Key）和 Google Drive 信息秘密地存储在 GitHub 中（稍后我们将解释具体操作方法）。
 
-Since this cannot be done inside the public repository of AndroidAPS, you need to make your personal copy of the source code (called a fork).
+由于这些操作无法在 AndroidAPS 的公共仓库中进行，因此你需要创建一份属于你个人的源代码副本（这被称为“分叉”或 Fork）。
 
-### GitHub account
+### GitHub 账号
 
-You need to [create a GitHub account](https://github.com/signup) if you don't have one yet.  
-You can sign up with your email, or you can sign up with Google. Follow the registration and verification process.
+如果你还没有 GitHub 账号，你需要创建一个 GitHub 账号。 你可以使用电子邮件注册，也可以通过 Google 账号进行关联注册。 请按照注册和验证流程进行操作。
 
-When you have an account, [sign in to GitHub](https://github.com/login).
+完成账号注册后，登录 GitHub。
 
-### Fork AndroidAPS
+### 分叉 (Fork) AndroidAPS
 
-Open the official AndroidAPS repository following [this link](https://github.com/nightscout/AndroidAPS).
+点击[此链接](https://github.com/nightscout/AndroidAPS)打开 AndroidAPS 官方仓库。
 
-Tap on the fork icon. This will create a copy inside your own account.
+点击“Fork”图标。 这将在你自己的账户中创建一份副本。
 
 ![fork_aaps](../images/Building-the-App/CI/ForkAAPS.png)
 
-Scroll down the next screen and tap **Create Fork**.
+向下滚动下一个页面，点击“Create Fork”。
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Note: you can **unselect** "Copy the main branch only" if you will want to build developers versions or customizations.*
+*如果你想要构建开发版本（Developers versions）或进行自定义开发，你可以[取消勾选]“Copy the main branch only（仅复制主分支）”。*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-You cannot fork and you see this?</br></br>
-**`Create a new fork`**</br>
-`A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. View existing forks.`</br>
-*`Required fields are marked with an asterisk (*).`*</br>
-**`No available destinations to fork this repository.`**</br></br>
-This means you already have an existing fork of AndroidAPS.</br>
-Make sure it's up to date and continue to Preparation Steps.
+以下是该段内容的原文翻译：
+
+你无法执行 Fork 并且看到了这个提示？
+
+创建新的分叉 (Create a new fork)
+
+分叉 (Fork) 是仓库的一份副本。 分叉（Forking）一个仓库可以让你自由地实验各种更改，而不会影响到原始项目。 查看现有的分叉（View existing forks）。</br>
+ “必填项均标有星号 ()”</br>
+* “没有可用于分叉此仓库的目标。”</br></br>
+这意味着你已经拥有一个现有的 AndroidAPS 分叉（Fork）</br>。
+ 请确保它是最新的，然后继续执行“准备步骤（Preparation Steps）”。
 ```
 
 ```{warning}
-**Never delete your fork without having done a backup of your secrets!**
+绝不要在未备份 Secret（私密变量）的情况下删除你的分叉（Fork）！
 ```
 
-GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab open.
+以下是该段内容的原文翻译： GitHub 现在显示的是你个人的 AndroidAPS 副本。 请保持此浏览器标签页处于打开状态。
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)
 
 (aaps-ci-preparation)=
 
-## 2. Preparation Steps
+## 2. 准备步骤
 
-- If you are building from an Android device, install [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) from the Google Play store.
+- 如果你正在使用 Android 设备进行构建，请从 Google Play 商店安装 “[File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager)”（文件管理器 +）。
 
 ```{admonition} File Manager Plus
 :class: dropdown
@@ -90,23 +93,21 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 :::{include} BrowserBuildFileManagerPlus.md
 ```
 
-- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
+- 从此处下载准备文件：[aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: note
 
-1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
+1. 如果你是从某个 App 内部（通过内置网页视图 Web View）打开此页面，HTML 文件可能无法正常下载。 请复制该 URL 并在浏览器（如 Chrome）中打开：
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Or visit the latest release page:
+或者访问最新的发布版本页面:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
-
-2.Backup copy hosted on this site:
-
- - If the external link is also unavailable, you can use this backup file to download.
+2.托管在本站的备份副本：
+—— 如果外部链接也无法访问，你可以使用此备份文件进行下载。
 <!--crowdin:disable-->
 
 ```{eval-rst}
@@ -116,30 +117,29 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 <!--crowdin:enable-->
 ````
-AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
-- If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
+AndroidAPS 的构建需要私钥（Private keys），这些私钥存储在一个 Java 密钥库（Java KeyStore，简称 JKS）中：
+- 如果你是第一次构建 AAPS（或者你没有 Android Studio 生成的 JKS 文件），请按照 [AAPS-CI 选项 1 – 生成 JKS (Generate JKS)](aaps-ci-option1) 的步骤来完成设置。
 </br>
 
 ```{warning}
-Building AAPS with **Option 1** will not allow you to upgrade your existing AAPS.
-You will need to:
-1. [Export settings](#ExportImportSettings-Automating-Settings-Export) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service…).
-3. Generate a new version of the signed apk as described in Option 1 and transfer it to your phone.
-4. Uninstall previous AAPS version on your phone.
-5. Install new AAPS version on your phone.
-6. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
-7. Restore your data from Nightscout.
+使用 选项 1 (Option 1) 构建 AAPS 将无法直接升级你现有的 AAPS。
+你需要： [Export settings](#ExportImportSettings-Automating-Settings-Export) on your phone.
+2. 将设置文件从手机复制或上传到外部位置（例如：你的电脑、云存储服务等）。
+3. 按照“选项 1”所述的方法，生成一个新版本的已签名 APK，并将其传输到你的手机上。
+4. 在您的手机上卸载之前的 AAPS 版本。
+5. 在您的手机上安装新的 AAPS 版本。
+6. 导入设置以恢复你的任务进度（Objectives）和配置信息
+7. 从 Nightscout 恢复你的数据。
 ```
 
-- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
+- 如果你想使用自己的 JKS 文件（即你之前在电脑上使用 Android Studio 构建 AAPS 时所用的密钥文件），并且你知道该文件的密码和别名（通常为 key0），请选择 [AAPS-CI 选项 2 – 上传现有 JKS (Upload Existing JKS)](aaps-ci-option2)。
 
 </br>
 
-The AAPS app will be saved in your Google Cloud drive once built.
+AAPS 应用程序（App）构建完成后，将自动保存到您的 Google 云端硬盘（Google Drive）中。
 
 (aaps-ci-option1)=
-### AAPS-CI Option 1 – Generate JKS
+### AAPS-CI 选项 1 – 生成 JKS (Generate JKS)
  - Suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
 - Here are examples using multiple platforms below.
 - Select your platform in the list below, between Android (preferred choice), iOS or Computer.

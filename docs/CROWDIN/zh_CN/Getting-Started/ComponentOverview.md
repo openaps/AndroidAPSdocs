@@ -77,7 +77,7 @@ Combo、Insight以及较旧的Medtronic都是可靠的泵，并且可以实现�
 
 ### xDrip+
 
-Even if you don't need to have the xDrip+ App as **BG Source**, you can still use it for _i.e._ alarms or a different blood glucose display. 您可以设置任意数量的报警，指定报警应该激活的时间，是否可以在静音模式下覆盖等。 有关xDrip+的更多信息，请见[此处](../CompatibleCgms/xDrip.md)。 请注意，由于该应用程序的更新速度很快，因此其相关文档可能并不总是最新的。
+即使你不需要将 xDrip+ 应用作为**血糖来源（BG Source）**，你仍然可以将其用于_例如_警报设置或不同的血糖数据显示。 您可以设置任意数量的报警，指定报警应该激活的时间，是否可以在静音模式下覆盖等。 有关xDrip+的更多信息，请见[此处](../CompatibleCgms/xDrip.md)。 请注意，由于该应用程序的更新速度很快，因此其相关文档可能并不总是最新的。
 
 ## 在等待模块时该做什么
 

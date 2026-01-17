@@ -572,6 +572,18 @@ To remove the old pod session:
 3. Nach der zweiten oder dritten Wiederholung erhälst Du die Möglichkeit, den Pod zu entfernen.
 4. Sobald der alte Pod gelöscht ist, kannst Du einen neuen Pod aktivieren.
 
+### Generic error: java.lan.illegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
+
+If you receive this error when attempting to Initialize a new pod **AAPS** fails as it still has settings for an old pod stored in configuration.
+
+![omnipod_address_in_use](../images/DASH_images/Errors/omnipod_address_in_use.png)
+
+This can happen if you restore from a backup, or a pod deactivation fails.
+
+To resolve keep clicking on `RETRY` until a `Discard` option is shown, then discard. This procedure should work for De-Activating a pod too.
+
+You should now be able to Activate a new pod.
+
 ---
 ### Reinstalling AAPS
 

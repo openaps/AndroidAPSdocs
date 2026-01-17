@@ -51,29 +51,29 @@
 
 請確定您已完整閱讀並理解本指南、**開始前**章節，以及 **[Omnipod 與 AAPS 的限制與問題](#omnipod-dash-constraints)**，以避免遇到已知問題。
 
-### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
+### **安全第一**—在無法取得以下所有項目時，您**不應該**首次嘗試將 **AAPS** 連線到 Pod：
 1. 備用 Pod（至少 3 顆）
 2. 備用胰島素與 MDI 器材
 3. 可正常使用的 Omnipod PDM（以防 **AAPS** 發生異常）
 4. 必須使用受支援的手機！ （請參閱[硬體／軟體需求](#hardware-software-requirements)）
 5. 已建置並安裝正確版本的 AAPS
 
-### **Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.**
+### **當 AAPS Dash 驅動程式註冊您的 Pod 後，您的 Omnipod Dash PDM 將形同冗餘。**
 - 在使用 **AAPS** 之前，您或照護者必須使用 Omnipod PDM（或在某些地區使用手機 App）來管理 Pod，並向您的 DASH 傳送指令（例如注射）。
 - DASH 一次只能由單一藍牙裝置（例如 PDM 或手機）連線以進行管理與傳送指令。
 - 自成功註冊該 Pod 起，只有完成註冊的那台裝置被允許與該 Pod 通訊。 也就是說，一旦您使用 **AAPS** 透過 Android 手機註冊了 DASH，**之後將無法再用 PDM 操作該 Pod！**在該 Pod 啟動期間，執行於您 Android 手機上的 **AAPS** Dash 驅動程式即成為該 Pod 的新 PDM。
 - **請勿丟棄您的 PDM！**建議保留做為備用與應急之用，例如手機遺失或 **AAPS** 無法正常運作時。
 
-### Your pod **WILL NOT** stop delivering insulin when it is not connected to AAPS.
+### 您的 Pod 在未連線到 AAPS 時**並不會**停止輸注胰島素。
 依照目前啟用中的[**設定檔**](../SettingUpAaps/YourAapsProfile.md)，Pod 會在註冊時被寫入預設基礎率。  
 只要 **AAPS** 正常運作，它就會送出最長 120 分鐘的基礎率調整指令。  
 若因任何原因 Pod 未收到新指令（例如 Pod 與 手機 距離過遠導致通訊中斷），Pod 會自動回復到您[**設定檔**](../SettingUpAaps/YourAapsProfile.md)中定義的預設基礎率。
 
-### **AAPS Profile(s) do not support 30 minute basal rate time frames**
+### **AAPS 的設定檔不支援 30 分鐘為單位的基礎率時間區段**
 若您是 AAPS 新手並首次建立基礎率[**設定檔**](../SettingUpAaps/YourAapsProfile.md)，請注意：不支援以半小時為起點的基礎率。 例如：在您的 Omnipod PDM 上，若您有 1.1 單位、於 09:30 開始並持續 2 小時至 11:30 結束的基礎率，則無法在 **AAPS** 中完全複製相同的基礎**設定檔**。  
 您需要將這個 1.1 單位的基礎率調整為 9:00–11:00 或 10:00–12:00 的時間範圍。 即使 DASH 硬體本身支援 30 分鐘增量的基礎率**設定檔**，**AAPS** 仍不支援此功能。
 
-### **0U/h Profile basal rates are NOT supported in AAPS**
+### **AAPS 不支援 0 U/h 的設定檔基礎率**
 雖然 DASH 支援零基礎率，**AAPS** 會以使用者**設定檔**的基礎率倍數來決定自動治療；因此無法在零基礎率下運作。  
 您可以改用「中斷幫浦連線」功能，或搭配「停用 循環／臨時基礎率」或「暫停 循環／臨時基礎率」來達成暫時的零基礎率。  
 **注意：**在 **AAPS** 中，DASH 允許的最低基礎率為 0.05 U/h。
@@ -82,7 +82,7 @@
 
 在 **AAPS** 中設定 Omnipod 有**兩種**方式：
 
-### Option 1: New installations
+### 選項 1：新安裝
 
 首次安裝 **AAPS** 時，**安裝嚮導**會引導新使用者了解 **AAPS** 的重點功能與安裝需求。  
 當進入幫浦選擇時，請選擇「DASH」。
@@ -92,7 +92,7 @@
 若不確定，您也可以選擇「Virtual Pump」，待完成 **AAPS** 設定後再選擇「DASH」（見選項 2）。
 
 (omnipod-dash-option-2-config-builder)=
-### Option 2: The Config Builder
+### 選項 2：組態建置工具
 
 在現有安裝中，你可以從組態建置工具中選擇**DASH**幫浦：
 
@@ -104,7 +104,7 @@
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
-### Verification of Omnipod Driver Selection
+### 驗證 Omnipod 驅動程式選擇
 
 若要確認您已在 **AAPS** 中選擇了 DASH，當您**勾選核取方塊 (4)**後，請從**總覽**分頁**向左滑**，此時您會在 **AAPS** 中看到 **DASH** 分頁。 如果此框未勾選，則DASH標籤將位於左上角的漢堡選單中。
 
@@ -120,7 +120,7 @@
 
 (omnipod-dash-activate-pod)=
 
-### Activate Pod
+### 註冊 Pod
 
 1. 導航至**DASH**標籤，點擊**POD 管理（1）**按鈕，然後點擊**註冊 Pod（2）**。
 
@@ -194,7 +194,7 @@
 
 (omnipod-dash-deactivate-pod)=
 
-### Deactivate Pod
+### 停用 Pod
 
 一般情況下，Pod 的預期使用壽命為 3 天（72 小時），在 Pod 到期警示後還可再使用 8 小時，總計可使用 80 小時。
 
@@ -235,7 +235,7 @@
 
 (omnipod-dash-resuming-insulin-delivery)=
 
-### Resuming Insulin Delivery
+### 恢復胰島素輸送
 
 **注意**：在進行 **設定檔切換（Profile Switches）** 期間（例如使用 PDM 時），AAPS 必須先在 Pod 上暫停輸注，才能設定新的基礎率 **設定檔**。 若在暫停與恢復指令之間通訊失敗，輸注可能會持續維持在暫停狀態。更多細節請在疑難排解章節閱讀 [**輸注已暫停**](#omnipod-dash-delivery-suspended)。
 
@@ -255,7 +255,7 @@
 
 (omnipod-dash-silencing-pod-alerts)=
 
-### Silencing Pod Alerts
+### 靜音 Pod 警報
 
 以下流程將向你展示當 Pod 的使用時間接近72小時（3天）到期的警告時，如何確認並關閉 Pod 的嗶聲。 此警告時間限制定義在 **距關閉時間的時數** Dash 警報設置中。 Pod 的最大使用壽命為 80 小時（3 天 8 小時），但 Insulet 建議不要超過 72 小時（3 天）限制。
 
@@ -279,7 +279,7 @@
 
 (omnipod-dash-view-pod-history)=
 
-### View Pod History
+### 查看 Pod 歷史紀錄
 
 本節解釋如何檢視你的活動藥量歷史，並按不同操作類別進行篩選。 Pod 歷史工具允許你查看在其三天（72 - 80 小時）使用壽命期間提交到目前活動 Pod 的操作和結果。
 
@@ -306,7 +306,7 @@
 
 ![DASH_Tab_1](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
-### Fields
+### 欄位
 
 
 
@@ -351,7 +351,7 @@
 
 
 
-### Buttons
+### 按鈕
 
 ![重新整理圖示](../images/DASH_images/Refresh_LOGO.png) 傳送重新整理指令給作用中的 Pod，以更新通訊。
 
@@ -370,7 +370,7 @@
 
 
 
-### Pod Management Menu
+### Pod 管理選單
 
 下面說明從 **DASH** 分頁按下 **POD 管理 (1)** 按鈕進入的 **Pod 管理** 選單中，各圖示的用途。
 
@@ -405,7 +405,7 @@ Dash 驅動程式設定可在左上角 **漢堡選單** 的 **組態建置工具
 
 ***注意：**星號（\*）表示此項為預設啟用。*
 
-### Confirmation beeps
+### 確認嗶聲提示
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
@@ -421,7 +421,7 @@ Dash 驅動程式設定可在左上角 **漢堡選單** 的 **組態建置工具
 
 
 
-### Alerts
+### 警報
 
 ![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
@@ -439,7 +439,7 @@ Dash 驅動程式設定可在左上角 **漢堡選單** 的 **組態建置工具
 
 
 
-### Notifications
+### 通知
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
@@ -465,7 +465,7 @@ Dash 驅動程式設定可在左上角 **漢堡選單** 的 **組態建置工具
 
    ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-### Level
+### 等級
 
 **胰島素等級**
 
@@ -497,7 +497,7 @@ DASH 概覽標籤將顯示如下所述：
 若遇到藍牙連線、幫浦 / Pods 中斷，或註冊與連線等已知問題，請參閱 [藍牙疑難排解](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
-### Delivery suspended
+### 暫停輸送
 
   - 現在已無暫停按鈕。 如果你想要「暫停」藥量，你可以將臨時基礎率設置為零，持續 x 分鐘。
   - 在**設定檔切換**期間，DASH 必須在設置新的基礎**設定檔**之前暫停送藥。 如果兩個指令之間的通訊失敗，則輸送可能會保持暫停。 當這種情況發生時：
@@ -512,25 +512,25 @@ DASH 概覽標籤將顯示如下所述：
 *****注意：** 當您聽到來自 Pod 的嗶聲時，請不要在未檢查手機的情況下就假設輸送會持續進行，輸送可能仍維持暫停狀態，***所以您需要檢查！******
 
 ---
-### Pod Failures
+### Pod 故障
 
 - Pod 會因多種問題偶爾發生故障，包括 Pod 本身的硬體問題。
 - 建議不要向 Insulet 提出支援／更換案件，因為 AAPS 並非核准的 Pod 使用方式。
 - 一份故障代碼列表可在 [**這裡找到**](https://github.com/openaps/openomni/wiki/Fault-event-codes)，以幫助確定原因。
 
 ---
-### Preventing error 49 pod failures
+### 防止 49 號錯誤 Pod 故障
 
 此故障與指令的 Pod 狀態不正確或胰島素輸送指令中的錯誤有關。 這是當驅動程式和 Pod 對實際狀態存在分歧時發生的情況。 Pod（出於內建安全措施）隨後對不可恢復的錯誤代碼 49（0x31）作出反應，最終產生所謂的「尖叫聲」：那聲長且令人惱怒的嗶聲，只有在在 Pod 背面適當位置打個洞才能停止。 「49 Pod 故障」的確切原因通常難以追溯。 在某些情況下，這種故障可能發生（例如應用程式崩潰、運作開發版本或重新安裝）。
 
 ---
 
-### Pump Unreachable Alerts
+### 幫浦無法連線警報
 
 當在預先設定的時間內無法與 Pod 建立連線時，會觸發「幫浦無法使用」警示。 您可以前往右上角三點選單，選取 **偏好設定** ➜ **本機警示** ➜ **幫浦無法使用門檻 [分鐘]** 來設定「幫浦無法使用」警示。 建議設置的值是**120** 分鐘後提醒。
 
 ---
-### Export  Settings
+### 匯出設定
 
 匯出**AAPS**設置可讓你恢復所有設置，可能更重要的是，恢復所有目標。 你可能需要將設置恢復至「最後一次正常運作的狀況」，或在卸載/重新安裝**AAPS**後，或在手機遺失的情況下，在新手機上重新安裝。
 
@@ -541,7 +541,7 @@ DASH 概覽標籤將顯示如下所述：
 請定期（最好在每次匯出後）將您匯出的設定複製到安全的位置（例如雲端硬碟，如 Google Drive），以便在需要時任何手機都能存取。 如此一來，若您在外時手機遺失或執行恢復原廠設定，便能從任何地方將設定還原到一支手機。
 
 ---
-### Import Settings
+### 匯入設定
 
 **警告**：請注意，匯入設定時可能會匯入過期的 Pod 狀態（取決於您上次匯出／備份的時間）。  
 因此，**有遺失作用中 Pod 的風險！**（請參閱 **匯出設定**）。
@@ -562,7 +562,7 @@ DASH 概覽標籤將顯示如下所述：
 4. 如果匯入的設定包含任何活動的 Pod 資料，您可能需要**停用**「不存在」的 Pod。
 
 ---
-### Importing settings that contain Pod state from an inactive Pod
+### 匯入包含非活動 Pod 狀態的設定
 
 當匯入包含已不再啟用的 Pod 資料時，AAPS 將嘗試與其連線，這顯然會失敗。 在這種情況下，你無法啟動新 Pod。
 
@@ -572,8 +572,20 @@ DASH 概覽標籤將顯示如下所述：
 3. 在第二次或第三次重試後，你將獲得移除 Pod 的選項。
 4. 一旦舊藥量被移除，你將能夠啟動新的藥量。
 
+### 通用錯誤：java.lan.illegalStateException：嘗試將藍牙位址設為 ***，但其已設為 ***。
+
+如果你在嘗試初始化新的 Pod 時收到此錯誤，**AAPS** 將失敗，因為組態中仍保留舊 Pod 的設定。
+
+![Omnipod 位址已在使用中](../images/DASH_images/Errors/omnipod_address_in_use.png)
+
+如果你從備份還原，或 Pod 停用失敗，就可能發生此狀況。
+
+解決方法：持續點選 `RETRY`，直到出現 `Discard` 選項，然後捨棄。 此流程也適用於取消註冊 Pod。
+
+你現在應該可以註冊新的 Pod。
+
 ---
-### Reinstalling AAPS
+### 重新安裝 AAPS
 
 當解除安裝 **AAPS** 時，您將會遺失所有設定、目標以及目前的 Pod 工作階段。 **若要還原它們，請務必備妥最新的匯出設定檔！**
 
@@ -588,7 +600,7 @@ DASH 概覽標籤將顯示如下所述：
 7. 完成後：匯出目前設定。
 
 ---
-### Updating AAPS to a newer version
+### 更新 AAPS 至新版本
 
 在大多數情況下，無需卸載。 你可以透過啟動新版本的安裝進行「就地」安裝。 即使目前正處於作用中的 Pod 工作階段，也可以這麼做。
 
@@ -599,7 +611,7 @@ DASH 概覽標籤將顯示如下所述：
 5. 完成後：匯出目前設定。
 
 ---
-### Omnipod driver alerts
+### Omnipod 驅動程式警報
 
 **Omnipod Dash** 驅動程式會在 **總覽 分頁** 顯示多種獨特警示，其中多數為資訊性並可關閉，另有一些會提供需要使用者輸入的動作，以解決觸發該警示的原因。
 

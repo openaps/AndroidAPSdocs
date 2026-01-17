@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31/12/2025 : Version 3.4 is out. Check the [Release Notes](#latestrelease) to see what's new and get update instructions.
+31/12/2025 : 3.4版本已经发布. 查看[发行说明](#latestrelease)以了解新功能并获取更新说明。
 
 ```
 
@@ -21,7 +21,7 @@ Android APS (**AAPS**) 是一个开放源码的安卓应用程序，适用于糖
 
 现在，您已充分了解整个流程，可以开始组建您的**AAPS**闭环系统了。
 
-第3节**设置AAPS** 包含具体的分步操作说明。 It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. 同时指导您通过“设置向导”来完成 **AAPS** 应用的初始化配置，将其与动态血糖仪（CGM）应用及真实/虚拟胰岛素泵进行联动，并将 **AAPS** 连接到您的远程数据服务器。 接下来，您将通过一个安全审慎的分阶段训练流程，一步一步地掌握**AAPS**的全部功能，该流程旨在确保您/您的孩子能完全熟悉并熟练操作所有不同层级的功能和菜单设置，然后才进入下一阶段（AAPS界面上称之为"目标（Objectives）"）。 这些目标（Objectives）都经过专门的设计，将循序渐进地解锁**AAPS**更多可能性，最终实现从开环模式向闭环模式的过渡。
+第3节**设置AAPS** 包含具体的分步操作说明。 它涵盖了选择并[设置你的报告服务器](./SettingUpAaps/SettingUpTheReportingServer.md)（Nightscout 或 Tidepool）以便你查看和分享数据，以及为构建 AAPS 应用做好准备、构建应用并将其传输到手机的整个流程。 同时指导您通过“设置向导”来完成 **AAPS** 应用的初始化配置，将其与动态血糖仪（CGM）应用及真实/虚拟胰岛素泵进行联动，并将 **AAPS** 连接到您的远程数据服务器。 接下来，您将通过一个安全审慎的分阶段训练流程，一步一步地掌握**AAPS**的全部功能，该流程旨在确保您/您的孩子能完全熟悉并熟练操作所有不同层级的功能和菜单设置，然后才进入下一阶段（AAPS界面上称之为"目标（Objectives）"）。 这些目标（Objectives）都经过专门的设计，将循序渐进地解锁**AAPS**更多可能性，最终实现从开环模式向闭环模式的过渡。
 
 第4节**AAPS的日常** 涵盖 **AAPS** 的关键功能，帮助您使用（和自定义）**AAPS**。 内容包括理解操作界面、活性碳水（COB，carbs-on-board）、敏感度、配置文件（profile）切换、临时目标（TT，temp targets）、扩展碳水（extended carbs，eCarbs）、自动化规则（automations）和动态ISF（DynamicISF）。 同时涉及常见主题，例如如何管理不同类型的餐食、处理管路（cannula）与探头（sensor）更换、智能手机更新、夏令时调整、[使用AAPS旅行](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md)及运动场景。 常见问答详见故障排查章节。
 
@@ -83,21 +83,21 @@ AAPS简介 <./Getting-Started/Introduction.md>
 ```
 
 ```{toctree}
-:caption: 3) Setting up AAPS
+:caption: 3) 设置 AAPS
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+设置报告服务器 (Setting up the reporting server) <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Computer Build <./SettingUpAaps/ComputerBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+构建 AAPS (Building AAPS) <./SettingUpAaps/BuildingAaps.md>
+- 浏览器构建<./SettingUpAaps/BrowserBuild.md>
+- 电脑构建 <./SettingUpAaps/ComputerBuild.md>
+传输并安装 AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+设置向导 <./SettingUpAaps/SetupWizard.md>
+你的 AAPS 配置文件 <./SettingUpAaps/YourAapsProfile.md>
+更改 AAPS 配置 <./SettingUpAaps/ChangeAapsConfiguration.md>
+- 配置生成器 <./SettingUpAaps/ConfigBuilder.md>
+- 偏好设置 <./SettingUpAaps/Preferences.md>
+完成任务阶段 <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -140,27 +140,27 @@ Android Auto <./RemoteFeatures/AndroidAuto.md>
 ```
 
 ```{toctree}
-:caption: 7) Maintenance of AAPS
+:caption: 7) AAPS 的维护
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update <./Maintenance/UpdateBrowserBuild.md>
-- Computer Update <./Maintenance/UpdateComputerBuild.md>
+导出/导入设置 <./Maintenance/ExportImportSettings.md>
+查看你的数据 <./Maintenance/Reviewing.md>
+AAPS 发行说明 <./Maintenance/ReleaseNotes.md>
+文档更新 <./Maintenance/DocumentationUpdate.md>
+更新至 AAPS 新版本 <./Maintenance/UpdateToNewVersion.md>
+- 浏览器更新 <./Maintenance/UpdateBrowserBuild.md>
+- 电脑更新 <./Maintenance/UpdateComputerBuild.md>
 
 ```
 
 ```{toctree}
-:caption: 8) Getting Help
+:caption: 8) 获取帮助
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
-Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
-Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
+在哪里可以获得 AAPS 的帮助 <./GettingHelp/WhereCanIGetHelp.md>
+通用故障排除 <./GettingHelp/GeneralTroubleshooting.md>
+- 蓝牙故障排除 <./GettingHelp/BluetoothTroubleshooting.md>
+配置文件调优指南 <./GettingHelp/ProfileTuning.md>
+Android Studio 故障排除 <./GettingHelp/TroubleshootingAndroidStudio.md>
+访问日志文件 <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}

@@ -69,7 +69,7 @@
 
 **或者**
 
-### Option 2: The Config Builder
+### 選項 2：組態建置工具
 
 透過左上角的 **漢堡選單** 進入 **組態建置工具 (1)** ➜**幫浦** ➜**Omnipod**，選擇標為 **Omnipod** 的 **單選按鈕 (2)**。 勾選 **設定齒輪圖示 (3)** 旁邊的 **勾選框(4)**， Omnipod 選單將會以標籤的形式顯示在 AAPS 界面中，標題為 **POD**。 此處在文件中被稱為 **Omnipod (POD)** 標籤。
 
@@ -77,7 +77,7 @@
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
-### Verification of Omnipod Driver Selection
+### 驗證 Omnipod 驅動程式選擇
 
 *注意：如果你在未選擇 RileyLink 的情況下提前退出設定嚮導，Omnipod 驅動程式已啟用，但你仍需要選擇你的 RileyLink。  你可能會看到 Omnipod (POD) 標籤顯示如下所示*
 
@@ -239,7 +239,7 @@
 
    > ![Suspend_Insulin_Delivery_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
 
-#### Resuming Insulin Delivery
+#### 恢復胰島素輸送
 
 使用此指令指示目前暫停的活動 Pod 恢復胰島素輸送。 指令成功處理後，胰島素將根據目前時間並使用活動基礎率設定檔恢復正常輸送。 Pod 將再次接受注射、TBR 和 SMB 的指令。
 
@@ -283,7 +283,7 @@
 
 (OmnipodEros-view-pod-history)=
 
-### View Pod History
+### 查看 Pod 歷史紀錄
 
 本節將向你展示如何查看你的活動 Pod 歷史紀錄，並根據不同的操作類別進行篩選。 POD 歷史工具允許你查看目前啟用 POD在其三天（72 - 80 小時）壽命期間執行的動作和結果。
 
@@ -371,7 +371,7 @@
    > 
    > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
-##### Fields
+##### 欄位
 
 > - **Date & Time**: 事件發生的時間戳，按時間倒序排列。
 > - **Device:** 事件或狀態所涉及的設備。
@@ -387,7 +387,7 @@
 
 > ![Omnipod_分頁](../images/omnipod/Omnipod_Tab.png)
 
-### Fields
+### 欄位
 
 - **RileyLink 狀態：**顯示目前 RileyLink 的連線狀態
 
@@ -477,19 +477,19 @@
   > 
   > > 繼續目前已暫停的啟動幫浦
 
-### Pod Management Menu
+### Pod 管理選單
 
 以下是從 **Omnipod (幫浦)** 分頁進入的 **幫浦管理** 選單中的圖示佈局及其含義的說明。
 
 > ![Omnipod_分頁_幫浦管理](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
-- **Activate Pod**
+- **註冊 Pod**
 
   > ![啟動幫浦](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
   > 幫浦啟動並註冊新幫浦
 
-- **Deactivate Pod**
+- **停用 Pod**
 
   > ![停用幫浦](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
@@ -589,7 +589,7 @@ Omnipod 驅動程式設置可透過左上角的**漢堡選單**中的**設置生
 
 - **在動作中啟用電池更換紀錄：**若你啟用了此設置，且啟用了上方的電池報告設置，則在動作選單中將啟用電池更換按鈕。  部分幫浦連線裝置現在可以使用可更換的普通電池。  此選項允許你紀錄並重設電池壽命計時器。
 
-### Confirmation beeps
+### 確認嗶聲提示
 
 提供來自藥筒的確認聲音提示，用於注射、基礎輸注、超微劑量(SMB)以及臨時基礎率(TBR)輸送和變更。
 
@@ -598,7 +598,7 @@ Omnipod 驅動程式設置可透過左上角的**漢堡選單**中的**設置生
 - **\*SMB 嗶聲啟用：**啟用或停用在送達 SMB 時的確認嗶聲聲。
 - **啟用 TBR 嗶聲：** 啟用或停用設置或取消 TBR 時的確認嗶聲。
 
-### Alerts
+### 警報
 
 根據設定的門檻值單位，提供 AAPS 警告和 Nightscout 通知以提示幫浦到期、關閉或低庫存。
 
@@ -610,7 +610,7 @@ Omnipod 驅動程式設置可透過左上角的**漢堡選單**中的**設置生
 - **單位數：** 定義觸發 Pod 儲液量低警報的單位數量。
 - **自動確認幫浦警告：**啟用後，將仍然發出通知，但在發出警告後的首次幫浦連線連線後，警告將被自動確認並解除。
 
-### Notifications
+### 通知
 
 當不確定 TBR、SMB 或注射事件是否成功時，提供 AAPS 通知和手機警報。
 
@@ -710,15 +710,15 @@ Omnipod Eros 幫浦中的胰島素量報告並不精準。  這是因為無法�
 
 ## 問題排除
 
-### Pod Failures
+### Pod 故障
 
 Pod 會因多種問題偶爾發生故障，包括 Pod 本身的硬體問題。 最佳做法是不要向 Insulet 報告，因為 AAPS 並非經過認證的使用情況。 你可以在[這裡](https://github.com/openaps/openomni/wiki/Fault-event-codes)找到錯誤代碼列表，以幫助確定原因。
 
-### Preventing error 49 pod failures
+### 防止 49 號錯誤 Pod 故障
 
 此故障與指令的 Pod 狀態不正確或胰島素輸送指令中的錯誤有關。 我們建議使用者切換至 Nightscout 客戶端，並在**設置生成器**➜**一般**➜**NSClient**➜**齒輪圖示**➜**進階設定**中**僅上傳 (停用同步)**，以防止可能的故障。
 
-### Pump Unreachable Alerts
+### 幫浦無法連線警報
 
 建議將幫浦無法使用警報設置為**120 分鐘**，方法是前往右上角的三點選單，選擇**偏好設定**➜**本地警報**➜**幫浦無法使用的門檻值 \[分鐘\]**，並將其設置為**120**。
 
@@ -733,7 +733,7 @@ Pod 會因多種問題偶爾發生故障，包括 Pod 本身的硬體問題。 �
 4. 安裝新版本的 AAPS 並確認你沒有啟動的幫浦會話。
 5. 匯入你的設定並註冊你的新幫浦。
 
-### Omnipod driver alerts
+### Omnipod 驅動程式警報
 
 請注意，Omnipod 驅動程式在**首頁總覽分頁**中會呈現各種獨特的警報，其中大多數是資訊性的，可以忽略，然而有些會要求使用者採取行動以解決警報原因。 你可能會遇到的主要警報總結如下：
 
