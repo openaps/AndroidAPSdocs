@@ -82,9 +82,9 @@
 ![WB2_Screenshot 2024-05-17 140548](../images/d9a7dc5-b3ea-4bf3-9286-313f329b1966.png)
 
 
-用户应确保__AAPSClient__和__AAPS__在各自手机的“NSClient”标签下均显示“已连接”，并且一旦在__AAPSClient__中选择，就可以在__AAPS__中正确激活“Profile Switches”或“Temp Target”。
+The user should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ under the ‘NSClient' tab for each phone, and that ‘Profile Switches’ or ‘Temp Target' can be correctly activated in __AAPS__ once selected in __AAPSClient__.
 
-用户还应确保在__AAPSClient__和__AAPS__的“Treatments”中都记录了碳水化合物，否则可能表明用户设置出现故障。
+The user should also ensure that when carbs are entered in either __AAPS__ or __AAPSClient__ that the data is automatically logged in both ‘Treatments’ for both __AAPSClient__ and __AAPS__. Otherwise, this could indicate a malfunction within either the user’s __AAPS__ or __AAPSClient__ set up.
 
 ### 故障排除“NS访问令牌”配置问题
 
@@ -110,7 +110,7 @@
 
 ### AAPSClient与智能手表选项
 
-智能手表是帮助管理孩子**AAPS**的非常有用的工具。 有几种不同的配置可选。 如果在父母的手机上安装了**AAPSClient**，则可以在与父母的手机连接的兼容智能手表上安装[**AAPSClient WearOS**应用程序](https://github.com/nightscout/AndroidAPS/releases/)。 这将显示当前的血糖值、Loop（闭环系统）状态和允许碳水化合物输入、临时目标设定以及配置更改。 但它不允许通过WearOS应用进行大剂量胰岛素注射。 您可以阅读有关智能手表的更多信息[此处](#4-smartwatches)。
+智能手表是帮助管理孩子**AAPS**的非常有用的工具。 有几种不同的配置可选。 If **AAPSClient** is installed on the caregiver's phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. 这将显示当前的血糖值、Loop（闭环系统）状态和允许碳水化合物输入、临时目标设定以及配置更改。 但它不允许通过WearOS应用进行大剂量胰岛素注射。 您可以阅读有关智能手表的更多信息[此处](#4-smartwatches)。
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout
