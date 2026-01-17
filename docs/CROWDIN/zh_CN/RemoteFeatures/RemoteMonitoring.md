@@ -2,20 +2,20 @@
 
 ![监控儿童](../images/KidsMonitoring.png)
 
-AAPS为儿童提供多种远程监控选项，并且还可以发送远程指令。 当然，您也可以使用远程监控来跟踪您的伴侣或朋友。
+__AAPS__ offers several features for remote monitoring of type 1 diabetic children and also faciltates remote commands which sends instructions to the __AAPS__ remotely. Similarly, __AAPSClient__ can also be used for remote monitoring to follow your partner's or friend's __AAPS__.
 
 ## 功能
 
-- 孩子的泵可通过孩子的手机使用AAPS进行控制。
-- 父母可以使用手机上的**AAPSClient应用程序**远程查看所有相关数据，如血糖水平、活性碳水、活性胰岛素量等。 AAPS和AAPSClient应用程序中的设置必须相同。
-- 父母可以通过在手机上使用**xDrip+应用程序的跟随者模式**接收警报。
-- 使用受双重身份验证保护的[短信指令](../RemoteFeatures/SMSCommands.md)进行AAPS的远程控制。
-- 如果同步运行良好（即，您没有看到不需要的数据更改，如临时目标（TT）、临时基础率（TBR）等的自我修改），则建议使用AAPSClient应用程序进行远程控制。 有关更多详细信息，请参阅[2.8.1.1版发行说明](#important-hints-2-8-1-1)。
+- Kid's pump is controlled by kid's phone using __AAPS__.
+- Caregivers can remotely follow viewing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **AAPSClient apk** on their phone which must be an Android phone. Settings amended in __AAPS__ will synchromise with __AAPSClient__ and vice versa.
+- Caregivers can be alarmed by using **xDrip+ app in follower mode** on their Android phone if xdrip companion mode is set up.
+- Remote control of __AAPS__ using [SMS Commands](../RemoteFeatures/SMSCommands.md) is secured by two-factor authentication.
+- Remote control through __AAPSClient__ is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](#important-hints-2-8-1-1) for further details. However synchonization is less likely to an issue if the user if usiing the latest version of __AAPS__ and __AAPSClient with NSClientv3/Nightscout15.
 
 ## 远程监控的工具和应用程序
 
 - 在网页浏览器中使用[Nightscout](https://nightscout.github.io/)（主要用于数据显示）
-- AAPSClient应用程序是AAPS的精简版，能够跟踪他人、切换配置、设置临时目标和输入碳水化合物。 有两个应用程序可供[下载](https://github.com/nightscout/AndroidAPS/releases/)：AAPSClient和AAPSClient2。 唯一的区别是应用程序名称。 这样，您可以在同一部手机上安装该应用程序两次，以便能够用它跟踪两个不同的个人/Nightscout。
+- __AAPSClient__ apk is a stripped down version of __AAPS__ capable of following somebody, making __Profile Switches__, setting __TTs__ and entering carbs. 有两个应用程序可供[下载](https://github.com/nightscout/AndroidAPS/releases/)：AAPSClient和AAPSClient2。 AAPSClient should be used is the caregivers wishes to install the apk twice on the same phone to follow 2 different persons (e.g two children with type 1 each with their own nightscout acccount).
 - 如果使用的是Dexcom原版应用程序，则可以使用Dexcom跟踪（仅血糖值）
 - 在跟随者模式下使用[xDrip+](../CompatibleCgms/xDrip.md)（主要是血糖值和**警报**）
 - 在iOS上使用[Sugarmate](https://sugarmate.io/)或[Spike](https://spike-app.com/)（主要是血糖值和**警报**）
@@ -23,13 +23,12 @@ AAPS为儿童提供多种远程监控选项，并且还可以发送远程指令�
 
 ## 智能手表选项
 
-智能手表在帮助儿童管理AAPS方面是一个非常有用的工具。 可以实现几种不同的配置：
+A smartwatch can be a very useful tool in helping manage __AAPS__ with T1D kids. A couple of different options are possible:
 
-- 如果在父母的手机上安装了AAPSClient，则可以在与父母的手机连接的兼容智能手表上安装[AAPSClient WearOS应用程序](https://github.com/nightscout/AndroidAPS/releases/)。 这将显示当前的血糖值、Loop（闭环系统）状态和允许碳水化合物输入、临时目标设定以及配置更改。 但它不允许通过WearOS应用进行大剂量胰岛素注射。
-- 或者，可以在与孩子的手机连接但由父母佩戴的兼容智能手表上构建并安装[AAPS WearOS应用程序](../WearOS/WearOsSmartwatch.md)。 这包括上面列出的所有功能，以及大剂量注射胰岛素的能力。 家长可通过此功能实施胰岛素注射，无需取出孩子的手机，无论手机如何存放于孩子身边。
+- Option 1 - If __AAPSClient__ is installed on the caregiver's phone, the [AAPSClient WearOS app](https://github.com/nightscout/AndroidAPS/releases/) can be installed on a compatible smartwatch connected to the caregiver's phone. This will show current BG, loop status and allow carb entry, Temp Targets and Profile changes. 但它不允许通过WearOS应用进行大剂量胰岛素注射。
+- Option 2 - Alternatively, the [AAPS WearOS app](../WearOS/WearOsSmartwatch.md) can be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the parent. 这包括上面列出的所有功能，以及大剂量注射胰岛素的能力。 This allows the caregiver o administer insulin without needing to remove the kid's phone from however it is kept on them.
 
 ## 需要考虑的事项
 
-- AAPS和AAPSClient应用程序中的设置必须相同。
-- 考虑到上传和下载所需的时间，以及AAPS主手机仅在循环运行后才会上传数据，因此主设备和跟随者设备之间会存在时间差。
+- Consider time gap between master and follower due to time for up- and download as well as the fact that __AAPS__ master phone will only upload after loop run.
 - 如果远程控制不起作用（_即_，出现网络问题或蓝牙连接丢失）时，您的应急计划是什么？  始终考虑如果您突然无法发送新指令，**AAPS**会发生什么。 **AAPS**会用当前配置值覆盖泵的基础率、胰岛素敏感因子（ISF）和碳水化合物比率（ICR）。 如果切换到更强的胰岛素配置，则只使用临时配置切换（_即_，设置持续时间），以防远程连接中断。 然后，当时间到期时，泵将恢复为原始配置。
