@@ -6,10 +6,11 @@
 
 ## 重要提示
 
-* 請在有新版本發布後儘快更新到最新版本的 **AAPS**。
-* 當有新版本發布時，你將在 **AAPS** 應用中收到關於新版本的訊息橫幅。
-* 新版本也會在發布時於 Facebook 上公佈。
-* 發布後，請詳細閱讀[發布說明](ReleaseNotes.md)，如有任何疑問，請在Facebook或Discord社群中澄清後再進行更新。
+- 請在有新版本發布後儘快更新到最新版本的 **AAPS**。
+- 當有新版本發布時，你將在 **AAPS** 應用中收到關於新版本的訊息橫幅。
+- 新版本也會在發布時於 Facebook 上公佈。
+- 發布後，請詳細閱讀[發布說明](ReleaseNotes.md)，如有任何疑問，請在Facebook或Discord社群中澄清後再進行更新。
+- Do not forget to export your **AAPS'** settings.
 
 ## 使用瀏覽器版本更新 AAPS
 
@@ -23,8 +24,13 @@
 
 ### 檢查手機上的 AAPS 版本
 
-安裝新 apk 後，你可以點擊右上角的三點選單，然後選擇 "關於"，以檢查手機上的 AAPS 版本。 你應該能看到目前版本。
+檢查[發佈說明](../Maintenance/ReleaseNotes.md)以了解更新後是否有任何特定的指示。
+
+After you installed the new apk:
+
+- you can check the **AAPS'** version on your phone by clicking the three dots menu on the top right and then 'About' (as per the screenshot below). The **AAPS'** current version can be viewed; 
+- ensure import settings have been actioned;
+- action a 'full synchroniation' under **NSClient** to ensure **AAPS** is working off accurate & complete data; and
+- please check your **AAPS'** settings under **Preferences** and ensure these remain accurate.
 
 ![已安裝的 AAPS 版本](../images/Update_VersionCheck.png)
-
-檢查[發佈說明](../Maintenance/ReleaseNotes.md)以了解更新後是否有任何特定的指示。
