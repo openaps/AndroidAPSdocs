@@ -27,7 +27,7 @@
 Автономный замкнутый цикл (**FCL**) не для всех:
 
 - Многие пользователи автономного цикла добиваются 90% времени в целевом диапазоне (4--! 0), а HbA1c - менее 6%, однако некоторые предпочитают более жесткий контроль. Следует отметить, что снижение показателей выше 140 мг/дл (7,7 ммоль/л) при приёме быстрых углеводов, вероятно, требует предварительного введения болюса.
-- **AAPS** tuning can be challenging. It is not for those users who feel overwhelmed AAPS.  You will need to dedicate a few weeks in order to adjust and fine tune your **FCL**. Investing such time can yield better results and **BG** control.
+- Тонкая настройка **AAPS** может быть сложной. It is not for those users who feel overwhelmed AAPS.  You will need to dedicate a few weeks in order to adjust and fine tune your **FCL**. Investing such time can yield better results and **BG** control.
 - Meal management may become easier, however exercise can still be challenging in **FCL**. Most of us like to limit sports snacks in an attempt to control body weight.
 - Difficulties still remain to establish a **FCL** for kids (discussed below).
 
