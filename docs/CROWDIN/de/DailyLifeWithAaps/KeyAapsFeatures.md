@@ -1,6 +1,6 @@
 # Wichtigste AAPS-Funktionalitäten
 
-## Loop mode
+## Loop-Modus
 
 The loop status is shown on the main screen with one of the icons below.
 
