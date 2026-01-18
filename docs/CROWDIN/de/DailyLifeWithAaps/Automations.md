@@ -179,7 +179,7 @@ Beachte, dass für alle altersbezogenen Bedingungen der Vergleich auf Gleichheit
 * Pumpenbatterie-Stand: Für alle unterstützen Pumpen verfügbar, der Vergleich „NOT\_AVAILABLE“ funktioniert für diesen Auslöser nicht, da der Wert in **AAPS** immer gefüllt ist
 
 (automations-automation-action)=
-## Aktion
+## Action
 
 ![Automation Actions](../images/automation_actions.png)
 
