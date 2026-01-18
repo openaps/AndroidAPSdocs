@@ -13,7 +13,7 @@ Der Sensor kann in xDrip+ im Bereich von -40 mg/dl bis +20 mg/dl (-2.2 mmol/l bi
 ## Methode 1: Direkte Nutzung der minütlich übertragenen Sensorwerte
 AAPS ist auf „Sensorwerte alle 5 Minuten“ ausgelegt. Die Verarbeitung von minütlichen Werten bringt in einzelnen Situationen daher Einschränkungen mit sich.
 
-See [here](#juggluco-to-aaps).
+Schaue [hier](#juggluco-to-aaps) nach.
 
 
 ## Methode 2: Umwandlung in xDrip+ der minütlichen Messwerte in 5-Minuten-Werte
@@ -52,10 +52,10 @@ Nach einem Sensorwechsel erkennt xDrip+ den neuen Sensor automatisch und löscht
 
 ### Schritt 4: AndroidAPS konfigurieren
 
-- See [here](#juggluco-to-xdrip) and come back.
+- Lies [diesen Abschnitt](#juggluco-to-xdrip) und komme dann hierhin zurück.
 
 - Wenn sich das Smartphone im Flugmodus befindet und AAPS keine Glukosewerte erhält, verwende "Empfänger identifizieren"
-- Turn off Smoothing (done in xDrip+ already)
+- Glättung deaktivieren (in xDrip+ bereits erfolgt)
 
 ## Sensorwechsel
 
