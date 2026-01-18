@@ -15,7 +15,7 @@ Juhuu! Schau dir die Issues an, frag im discord Channel. Es gibt immer viel zu t
 Großartig, das ist sehr willkommen und eine gute Möglichkeit, etwas beizutragen!
 
 * Den discord Channel über das Wiki findest du hier: [AndroidAPSwiki/Lobby](https://discord.gg/4fQUWHZ4Mw). 
-* Eine Anleitung, wie man Beiträge auf Englisch hinzufügt und bearbeitet, ist hier zu finden: [Wie man die Dokumentation bearbeitet](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
+* Eine Anleitung, wie man Beiträge auf Englisch hinzufügt und bearbeitet, ist hier zu finden: [Wie man die Dokumentation bearbeitet](../SupportingAaps/HowToEditTheDocs.md). Andere Sprachen können nur übersetzt, aber nicht bearbeitet werden. Dadurch wird die Einheitlichkeit des Wikis in allen Sprachen gewährleistet.
 
 ## Ich spreche mehrere Sprachen und würde gerne bei der Übersetzung der App bzw. des Wikis helfen
 
