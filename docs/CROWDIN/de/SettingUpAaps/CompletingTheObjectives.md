@@ -114,7 +114,7 @@ Im **Ziel 5**, wirst Du kennen- und verstehen lernen, wie sich die temporären B
 
 Um das Ziel abzuschließen, werden ungefähr **7 Tage ** benötigt.
 
-In diesem **Ziel** musst Du Deinen Wert für „Maximales Basal-IOB, das OpenAPS abgeben darf \[IE\] (OpenAPS “max-iob”)“, wie es im Abschnitt [OpenAPS Funktionen](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to) beschrieben ist, ermitteln. This value can be set in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings). Wenn Du an dieser stelle noch eine virtuelle Pumpe nutzt, stelle sicher, dass diese Sicherheitseinstellung sowohl in **AAPS**, als auch in Deiner Insulinpumpe eingestellt ist.
+In diesem **Ziel** musst Du Deinen Wert für „Maximales Basal-IOB, das OpenAPS abgeben darf \[IE\] (OpenAPS “max-iob”)“, wie es im Abschnitt [OpenAPS Funktionen](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to) beschrieben ist, ermitteln. Diesen Wert kannst Du in den [Einstellungen > OpenAPS SMB](#Preferences-openaps-smb-settings) festlegen. Wenn Du an dieser stelle noch eine virtuelle Pumpe nutzt, stelle sicher, dass diese Sicherheitseinstellung sowohl in **AAPS**, als auch in Deiner Insulinpumpe eingestellt ist.
 
 Eventuell setzt Du, bis Du mit den **AAPS**-Berechnungen und Einstellungen zufrieden bist, in Deinem [**Profil** ein Glukosewert-Ziel](#profile-glucose-targets), das über Deinem üblichen Ziel liegt. Möglicherweise möchtest Du mit der Anpassung Deines **Glukosewert-Ziels** experimientieren und in Deinem **Profil** einen engeren Bereich (z.B. 1 oder weniger mmol/l [20 mg/dl oder weniger]) hinterlegen und beobachten, wie sich das auswirkt.
 
@@ -165,11 +165,11 @@ Das heißt, während Du Dich im **Ziel 6** befindest, wird **AAPS** bei fallende
 (objectives-objective7)=
 ## Ziel 7: Justiere den Closed Loop, erhöhe maxIOB über 0 und setze den Zielbereich langsam herunter
 
-Um **Ziel 7** abzuschließen, musst Du den Loop schließen (Closed Loop) und Deinen [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)-Wert erhöhen. **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** wird ab jetzt Deinen hinterlegten maxIOB-Wert nutzen, um hohe Glukosewerte zu korrigieren.
+Um **Ziel 7** abzuschließen, musst Du den Loop schließen (Closed Loop) und Deinen [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)-Wert erhöhen. **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. Das ist jetzt nicht mehr nötig. **AAPS** wird ab jetzt Deinen hinterlegten maxIOB-Wert nutzen, um hohe Glukosewerte zu korrigieren.
 
 Das Ziel kann frühestens nach **einem Tag** abgeschlossen werden. Das ist eine Pflichtwartezeit. Das nächste **Ziel** kann erst dann gestartet werden, wenn die Wartezeit abgelaufen ist.
 
-- Select **Closed Loop** by pressing and holding the [Loop icon](#AapsScreens-loop-status) in the top right corner of the **Overview** screen. Bleibe einen Tag im **Closed Loop**-Modus.
+- Aktiviere den **Closed Loop** dadurch, dass Du länger auf das [Loop-Symbol](#AapsScreens-loop-status) in der oberen rechten Ecke der **ÜBERSICHT** drückst. Bleibe einen Tag im **Closed Loop**-Modus.
 
 - Slowly raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
