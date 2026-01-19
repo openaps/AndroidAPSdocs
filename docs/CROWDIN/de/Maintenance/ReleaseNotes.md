@@ -23,7 +23,7 @@ Da die Releasefolge und deren Veröffenlichungszeitpunkte immer wieder erfragt w
 
 ## Android Version und AAPS Version
 
-If your smartphone uses an Android Version older than Android 12 you will not be able to use AAPS v3.4 and up as it requires at least Android 12.
+Wenn die Android-Version Deines Smartphones älter als Android 12 ist, kannst Du nicht auf AAPS v3.4 updaten. Es ist mindestens Android 12 erforderlich.
 
 Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zwei ältere Versionen zur Verfügung gestellt, bei denen die Versionsprüfung angepasst wurde. Es sind keine anderen Verbesserungen enthalten.
 
@@ -69,14 +69,14 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 Release date: 31-12-2025
 
 ### Vor dem Aktualisieren:
-* This version requires Google Android 12.0 or above. Prüfe vor der Aktualisierung die Smartphone-Version.
-* Update to latest Android Studio or better setup using browser build.
+* Diese Version benötigt Google Android 12.0 oder höher. Prüfe vor der Aktualisierung die Smartphone-Version.
+* Aktualisiere Android Studio auf die neueste Version oder noch besser, nutze den „Browser-Build“.
 
 ### New features
 * Running mode @MilosKozak
   * Show [loop status history](#AapsScreens-running-mode) in treatment tabs
   * Show and allow changing [loop status from AAPSClient](#RemoteControl_aapsclient).<br>NB : needs the setting [NSClient > Synchronization > Receive Running mode events](#Preferences-nsclient-synchronization)
-* [New CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
+* [Neue CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
 * [Site rotation](#Aapsscreens-site-rotation) support @Philoul
 * New [automation action](#automations-automation-action) : enable or disable SMBs @MilosKozak
 * Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
