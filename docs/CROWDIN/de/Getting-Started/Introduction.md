@@ -218,7 +218,7 @@ Frage Dein Team, ob es bereits Patienten in Behandlung hat, die DIY-Looping verw
 
 Wenn Du das Gefühl hast, dass Du von Deinem Team beim Loopen mit **AAPS** nicht genügend unterstützt wirst, können folgende Diskussionspunkte hilfreich sein:
 
-a) Das **AAPS** System wurde von Patienten und deren Betreuern entworfen. Es wurde letztendlich für die Sicherheit konzipiert, aber auch auf Grundlage einer fundierten Patientenerfahrung. There are currently around **20,000** AAPS users worldwide. Es ist daher wahrscheinlich, dass es in Deiner Klinik weitere Patienten gibt, die DIY-Looping verwenden (ob sie gegenseitig davon wissen oder nicht).
+a) Das **AAPS** System wurde von Patienten und deren Betreuern entworfen. Es wurde letztendlich für die Sicherheit konzipiert, aber auch auf Grundlage einer fundierten Patientenerfahrung. Derzeit gibt es weltweit rund **20.000** AAPS-Nutzende. Es ist daher wahrscheinlich, dass es in Deiner Klinik weitere Patienten gibt, die DIY-Looping verwenden (ob sie gegenseitig davon wissen oder nicht).
 
 b) Eine kürzlich in der international führenden medizinischen Fachzeitschrift [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ veröffentlichte und von Experten begutachtete Anleitung hat bestätigt, dass DIY-Loops **sicher** und **wirksam bei der Verbesserung der Diabeteskontrolle** sind, einschließlich der Zeit im Zielbereich (engl. time in range = TIR). Es gibt regelmäßige Artikel in führenden Zeitschriften wie [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_ die den Fortschritt in der DIY-Looping-Commmunity hervorheben.
 
@@ -321,7 +321,7 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 Die obige Tabelle setzt voraus, dass die Nutzenden sowohl Zugang zu einem CGM-System und auch zu einer Insulinpumpe haben.
 
-*Alle Daten von **AAPS** können medizinischen Fachkräften über Datenaustauschplattformen zur Verfügung gestellt werden, einschließlich Nightscout, das die Aufzeichnung und Echtzeitüberwachung von CGM-Daten, Insulinabgabe, Kohlenhydratangaben, Prognosen und Einstellungen ermöglicht. Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioral considerations.
+*Alle Daten von **AAPS** können medizinischen Fachkräften über Datenaustauschplattformen zur Verfügung gestellt werden, einschließlich Nightscout, das die Aufzeichnung und Echtzeitüberwachung von CGM-Daten, Insulinabgabe, Kohlenhydratangaben, Prognosen und Einstellungen ermöglicht. Aus Nightscout können Tages- und Wochenberichte erzeugt werden, die in Diskussionen eines Diabetes-Teams mit einem Typ 1-Patienten hilfreich sein können, da sie genauere Daten zur glykämischen Kontrolle und Verhaltensüberlegungen beisteuern.
 
 (accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
 
@@ -331,7 +331,7 @@ Die obige Tabelle setzt voraus, dass die Nutzenden sowohl Zugang zu einem CGM-Sy
 AAPS kann von Blinden verwendet werden. Auf Android-Geräten stellt das Betriebssystem ein Programm namens TalkBack zur Verfügung. Dies ermöglicht die Bildschirmorientierung über die Sprachausgabe als Teil des Betriebssystems. Mit TalkBack kannst Du sowohl Dein Smartphone als auch AAPS bedienen, ohne dass Du es sehen musst.
 
 #### Das Erstellen der AAPS-App:
-Als Benutzer wirst Du die AAPS-App in Android Studio erstellen. Many people use Microsoft Windows for this purpose, where there is the screen reader analogous to TalkBack. Da Android Studio eine Java-Anwendung ist, muss die Komponente "Java Access Bridge" in der Systemsteuerung aktiviert werden. Andernfalls wird der Screenreader des PCs nicht in Android Studio sprechen.
+Als Benutzer wirst Du die AAPS-App in Android Studio erstellen. Zu diesem Zweck verwenden viele Microsoft Windows, wo es den Screenreader analog zu TalkBack gibt. Da Android Studio eine Java-Anwendung ist, muss die Komponente "Java Access Bridge" in der Systemsteuerung aktiviert werden. Andernfalls wird der Screenreader des PCs nicht in Android Studio sprechen.
 
 Wie Du das machst, hängt von Deinem Betriebssystem ab. Zwei Methoden sind nachfolgend aufgeführt:
 
