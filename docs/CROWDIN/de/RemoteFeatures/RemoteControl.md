@@ -82,9 +82,9 @@ Wenn Du die optionale Funktion 'Mit Websockets verbinden' auswählst, achte dara
 ![WB2_Screenshot 2024-05-17 140548](../images/d9a7dc5-b3ea-4bf3-9286-313f329b1966.png)
 
 
-Achte darauf, dass sowohl der __AAPSClient__ als auch __AAPS__ auf dem Reiter „NSClient“ für jedes der Smartphones „verbunden“ anzeigt und dass bei Auswahl eines „Profilwechsel“ oder „Temporäres Ziel“ im  __AAPSClient__ dieses auch in __AAPS__ korrekt aktiviert wird.
+The user should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ under the ‘NSClient' tab for each phone, and that ‘Profile Switches’ or ‘Temp Target' can be correctly activated in __AAPS__ once selected in __AAPSClient__.
 
-Achte auch darauf, dass Kohlenhydrat-Eingaben, sowohl im __AAPSClient__ als auch in __AAPS__ unter 'Behandlungen" erscheinen. Passiert das nicht, ist das ein Hinweis darauf, dass die Einstellungen nicht richtig sind.
+The user should also ensure that when carbs are entered in either __AAPS__ or __AAPSClient__ that the data is automatically logged in both ‘Treatments’ for both __AAPSClient__ and __AAPS__. Otherwise, this could indicate a malfunction within either the user’s __AAPS__ or __AAPSClient__ set up.
 
 ### Das 'NS access token'-Konfigurationsproblem beheben
 
@@ -110,7 +110,7 @@ Eine Remote-Steuerung über die **AAPSClient**-App wird nur dann empfohlen, wenn
 
 ### AAPSClient mit Smartwatch-Optionen
 
-Eine Smartwatch kann sehr nützlich sein, um bei Kindern **AAPS** zu managen. Es sind einige verschiedene Konfigurationen möglich. Auf einer kompatiblen Smartwatch kann die [AAPSClient WearOS App](https://github.com/nightscout/AndroidAPS/releases/) installiert werden, die mit der AAPSClient-App auf dem Eltern-Smartphone verbunden wird. Damit können der aktuelle Glukosewert und der Loop-Status angezeigt werden. Zusätzlich können dann KH-Einträge vorgenommen werden und auch temporäre Ziele und Profiländerungen aktiviert werden. Die Abgabe eines Bolus ist NICHT über die WearOS App möglich. [Hier](#4-smartwatches) kannst Du mehr über Smartwatches erfahren.
+Eine Smartwatch kann sehr nützlich sein, um bei Kindern **AAPS** zu managen. Es sind einige verschiedene Konfigurationen möglich. If **AAPSClient** is installed on the caregiver's phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. Damit können der aktuelle Glukosewert und der Loop-Status angezeigt werden. Zusätzlich können dann KH-Einträge vorgenommen werden und auch temporäre Ziele und Profiländerungen aktiviert werden. Die Abgabe eines Bolus ist NICHT über die WearOS App möglich. [Hier](#4-smartwatches) kannst Du mehr über Smartwatches erfahren.
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout

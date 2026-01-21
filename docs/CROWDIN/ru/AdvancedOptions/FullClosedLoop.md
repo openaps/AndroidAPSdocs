@@ -27,14 +27,14 @@
 Автономный замкнутый цикл (**FCL**) не для всех:
 
 - Многие пользователи автономного цикла добиваются 90% времени в целевом диапазоне (4--! 0), а HbA1c - менее 6%, однако некоторые предпочитают более жесткий контроль. Следует отметить, что снижение показателей выше 140 мг/дл (7,7 ммоль/л) при приёме быстрых углеводов, вероятно, требует предварительного введения болюса.
-- **AAPS** tuning can be challenging. It is not for those users who feel overwhelmed AAPS.  You will need to dedicate a few weeks in order to adjust and fine tune your **FCL**. Investing such time can yield better results and **BG** control.
-- Meal management may become easier, however exercise can still be challenging in **FCL**. Most of us like to limit sports snacks in an attempt to control body weight.
-- Difficulties still remain to establish a **FCL** for kids (discussed below).
+- Тонкая настройка **AAPS** может быть сложной. Особенно для тех, кто не чуствует себя уверенным пользователем AAPS.  Для полноценной настройки **Автономного ЗЦ** понадобится несколько недель. Потраченное время не пропадет зря - вы получите полноценную компенсацию и контоль **ГК**.
+- Как правило, при работе с **АЗЦ**. люди легче справляются с компенсацией питания, чем физической нагрузки. Многие любят ограничивать себя в количестве спортивных перекусов чтобы контролировать массу тела.
+- Организация **АЗЦ** для детей по-прежнему представляет сложности (обсуждаются ниже).
 
 
-## Well-tuned hybrid closed loop
+## Правильно настроенный гибридный замкнутый цикл
 
-It is advisable to first establish a well-tuned **HC**L before considering the transition to **FCL**.  Success with **FCL** requires a highly personalised individualised tuning of the user’s setting so that **AAPS** can give insulin to closely mimic YOUR successful hybrid closed loop mode.
+Прежде чем переходить на **АЗЦ** рекомендуется хорошо отладить гибридный **ЗЦ**.  Success with **FCL** requires a highly personalised individualised tuning of the user’s setting so that **AAPS** can give insulin to closely mimic YOUR successful hybrid closed loop mode.
 
 **FCL** requires the user to set up and tune their **Automations**. However the user must have a confident understanding of their insulin management needs before embarking on **FCL**. Errors can be masked with counter-errors. This can create an unstable **FCL** system, and make it hard to later correct. You should expect to reach a comparable %TIR with your FCL as you see today in your **HCL**.
 

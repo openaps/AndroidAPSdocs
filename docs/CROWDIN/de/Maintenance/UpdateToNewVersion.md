@@ -6,10 +6,11 @@ Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als
 
 ## Wichtige Hinweise
 
-* Aktualisiere so bald wie möglich auf die neueste **AAPS**-Version, nachdem sie verfügbar ist.
-* Sobald eine neue Version verfügbar ist, wird Dir in der **AAPS**-App ein Hinweis darüber angezeigt.
-* Wenn eine neue Version verfügbar ist, wird darüber auch auf Facebook informiert.
-* Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+- Aktualisiere so bald wie möglich auf die neueste **AAPS**-Version, nachdem sie verfügbar ist.
+- Sobald eine neue Version verfügbar ist, wird Dir in der **AAPS**-App ein Hinweis darüber angezeigt.
+- Wenn eine neue Version verfügbar ist, wird darüber auch auf Facebook informiert.
+- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+- Do not forget to export your **AAPS'** settings.
 
 ## Update AAPS with browser build
 
@@ -23,8 +24,13 @@ Follow [these instructions.](./UpdateComputerBuild.md).
 
 ### AAPS-Version auf dem Smartphone überprüfen
 
-Nachdem Du die neue APK-Datei installiert hast, kannst Du auf dem Smartphone die Version prüfen. Gehe dazu oben rechts auf die drei Punkte und wähle dann "Über". Du solltest die aktuelle Version angezeigt bekommen.
+Schaue in den [Release Notes](../Maintenance/ReleaseNotes.md) nach, ob es nach dem Update besondere Dinge zu beachten gibt.
+
+After you installed the new apk:
+
+- you can check the **AAPS'** version on your phone by clicking the three dots menu on the top right and then 'About' (as per the screenshot below). The **AAPS'** current version can be viewed; 
+- ensure import settings have been actioned;
+- action a 'full synchroniation' under **NSClient** to ensure **AAPS** is working off accurate & complete data; and
+- please check your **AAPS'** settings under **Preferences** and ensure these remain accurate.
 
 ![Installierte AAPS Version](../images/Update_VersionCheck.png)
-
-Schaue in den [Release Notes](../Maintenance/ReleaseNotes.md) nach, ob es nach dem Update besondere Dinge zu beachten gibt.

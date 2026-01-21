@@ -82,9 +82,9 @@ Pokud zvolíte Websockety (což je volitelné), ujistěte se, že jsou aktivová
 ![WB2_Screenshot 2024-05-17 140548](../images/d9a7dc5-b3ea-4bf3-9286-313f329b1966.png)
 
 
-Uživatelé by měli zajistit, že jak __AAPSClient__, tak __AAPS__ zobrazují „připojeno“ na záložce „NSClient" a že lze přepnout 'Profil' nebo 'Dočasný cíl' správně aktivovat v __AAPS__ po jejich výběru v __AAPSClient__.
+The user should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ under the ‘NSClient' tab for each phone, and that ‘Profile Switches’ or ‘Temp Target' can be correctly activated in __AAPS__ once selected in __AAPSClient__.
 
-Uživatelé by měli také zajistit, že jsou sacharidy jsou zaznamenány v obou aplikacích na kartě „Ošetření“, jinak by to mohlo naznačovat chybu v uživatelském nastavení.
+The user should also ensure that when carbs are entered in either __AAPS__ or __AAPSClient__ that the data is automatically logged in both ‘Treatments’ for both __AAPSClient__ and __AAPS__. Otherwise, this could indicate a malfunction within either the user’s __AAPS__ or __AAPSClient__ set up.
 
 ### Troubleshooting 'NS access token' configuration issues
 
@@ -110,7 +110,7 @@ Remote control through **AAPSClient** is only recommended if your synchronizatio
 
 ### AAPSClient a možnosti chytrých hodinek
 
-Chytré hodinky mohou být velmi užitečným nástrojem pro správu **AAPS** vašeho dítěte. K dispozici je několik možností. Je-li na telefonu rodičů nainstalován **AAPSClient**, lze na kompatibilní chytré hodinky připojené k rodičovskému telefonu nainstalovat [**AAPSClient WearOS aplikaci**](https://github.com/nightscout/AndroidAPS/releases/). Na hodinkách pak bude zoubrazována aktuální glykémiie, stav smyčky, a bude možné zadávat sacharidy, dočasné cíle a změny profilu. Z aplikace WearOS ale nebude možné posílat bolusy. You can read more about Smartwatches [here](#4-smartwatches).
+Chytré hodinky mohou být velmi užitečným nástrojem pro správu **AAPS** vašeho dítěte. K dispozici je několik možností. If **AAPSClient** is installed on the caregiver's phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. Na hodinkách pak bude zoubrazována aktuální glykémiie, stav smyčky, a bude možné zadávat sacharidy, dočasné cíle a změny profilu. Z aplikace WearOS ale nebude možné posílat bolusy. You can read more about Smartwatches [here](#4-smartwatches).
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout

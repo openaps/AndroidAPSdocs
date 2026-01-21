@@ -82,9 +82,9 @@ If selecting Websockets (which is optional) ensure this is activated or deactiva
 ![WB2_Screenshot 2024-05-17 140548](../images/d9a7dc5-b3ea-4bf3-9286-313f329b1966.png)
 
 
-Users should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ under the ‘NSClient' tab for each phone, and that ‘Profile Switches’ or ‘Temp Target' can be correctly activated in __AAPS__ once selected in __AAPSClient__.
+The user should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ under the ‘NSClient' tab for each phone, and that ‘Profile Switches’ or ‘Temp Target' can be correctly activated in __AAPS__ once selected in __AAPSClient__.
 
-Users should also ensure that carbs are logged in both ‘Treatments’ within both __AAPSClient__ and __AAPS__ otherwise this could indicate a malfunction within the user’s set up.
+The user should also ensure that when carbs are entered in either __AAPS__ or __AAPSClient__ that the data is automatically logged in both ‘Treatments’ for both __AAPSClient__ and __AAPS__. Otherwise, this could indicate a malfunction within either the user’s __AAPS__ or __AAPSClient__ set up.
 
 ### Troubleshooting 'NS access token' configuration issues
 
@@ -110,7 +110,7 @@ Remote control through **AAPSClient** is only recommended if your synchronizatio
 
 ### AAPSClient with smartwatch options
 
-A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the parents phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. האפליקציה תראה רמת סוכר נוכחית, מצב לולאה, ותאפשר הזנת פחמימות, יעדי מטרה זמניים, ושינויי פרופיל. אין אפשרות לבולוסים מרחוק באמצעות אפליקציית WearOS. You can read more about Smartwatches [here](#4-smartwatches).
+A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the caregiver's phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. האפליקציה תראה רמת סוכר נוכחית, מצב לולאה, ותאפשר הזנת פחמימות, יעדי מטרה זמניים, ושינויי פרופיל. אין אפשרות לבולוסים מרחוק באמצעות אפליקציית WearOS. You can read more about Smartwatches [here](#4-smartwatches).
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout

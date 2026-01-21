@@ -16,4 +16,4 @@
 3. 点击"与AAPS共享"，同意第三方数据传输协议
 4. 启用"与AAPS共享血糖数据"功能
 
-![Ottai](../images/Ottai.png)
+![欧泰 (Ottai)](../images/Ottai.png)

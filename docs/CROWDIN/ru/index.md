@@ -125,7 +125,7 @@ AAPS для детей <./DailyLifeWithAaps/AapsForChildren.md>
 Удаленный мониторинг <./RemoteFeatures/RemoteMonitoring.md>
 Удаленное управление <./RemoteFeatures/RemoteControl.md>
 SMS команды <./RemoteFeatures/SMSCommands.md>
-Только лишь мониторинг <./RemoteFeatures/FollowingOnly.md>
+Только наблюдение <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```

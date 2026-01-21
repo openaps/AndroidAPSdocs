@@ -98,7 +98,7 @@
 * [Poctech](../CompatibleCgms/PocTech.md)
 * Tomato App for MiaoMiao device
 * 用于Glunovo CGM系统的[Glunovo App](https://infinovo.com/)
-* [Ottai](../CompatibleCgms/OttaiM8.md)
+* [欧泰 (Ottai)](../CompatibleCgms/OttaiM8.md)
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
 * 随机 Random BG：生成随机BG数据（仅演示模式）
 
