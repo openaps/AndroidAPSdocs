@@ -57,7 +57,7 @@ Ein Beispiel für einen zu kurzen **DIA** ist ein **hoher Glukosewert**, der dur
 
 ### Wie es eingestellt wird
 
-The **figure below** shows an example of how the **DIA** is set in an **AAPS** profile.
+Die **Abbildung unten** zeigt ein Beispiel einer im **AAPS**-Profil gesetzten Insulinwirkdauer (**DIA**).
 
 ![DIA](../images/Profile_DIA.png)
 
@@ -89,7 +89,7 @@ Die **Abbildung unten** zeigt ein Beispiel wie im **AAPS**-Profil das Glukosezie
 
 **Glukoseziele** werden so gesetzt, dass sie zu Deinen eigenen Wünschen und Anforderungen passen. Wenn Du beispielsweise Angst vor nächtlichen Hypos hast, kannst Du Dein Glukoseziel von 21.00 - 07.00 Uhr auf 117 mg/dl setzen (6,5 mmol/l) setzen. Wenn Du erreichen möchtest, dass Du vor dem Frühstücksbolus am Morgen bereits genügend aktives Insulin (IOB) im Körper hast, könntest Du für die Zeit von 07.00 - 08.00 Uhr ein niedrigeres Ziel von 81 mg/dl (4,5 mmol/dl) setzen.
 
-When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+Wenn Du im [Open Loop](#KeyAapsFeatures-OpenLoop) und insbesondere beim Durchlaufen der [ersten Ziele](../SettingUpAaps/CompletingTheObjectives.md) bist, gerade lernst wie sich **AAPS** verhält und/oder Du Dein **Profil** anpasst, kann es helfen den Zielbereich etwas weiter zu wählen.<br/> Sobald Du in den [Closed Loop](#KeyAapsFeatures-ClosedLoop) (beginnend mit dem **[Ziel 6](#objectives-objective6)**) wechselst, wird empfohlen den Zielbereich für jeden Tagsabschnitt bis auf einen einzelnen Zielwert (_unteres_ Ziel = _oberes_ Ziel) zu verkleinern. Damit kann **AAPS** schnell auf **Glukosewert**-Schwankungen reagieren.
 
 (your-aaps-profile-basal-rates)=
 
