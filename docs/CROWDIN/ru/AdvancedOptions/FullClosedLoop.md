@@ -34,15 +34,15 @@
 
 ## Правильно настроенный гибридный замкнутый цикл
 
-Прежде чем переходить на **АЗЦ** рекомендуется хорошо отладить гибридный **ЗЦ**.  Success with **FCL** requires a highly personalised individualised tuning of the user’s setting so that **AAPS** can give insulin to closely mimic YOUR successful hybrid closed loop mode.
+Прежде чем переходить на **АЗЦ** рекомендуется хорошо отладить гибридный **ЗЦ**.  Для успешной работы **АЗЦ** требуются точные индивидуальные настройки, чтобы ** AAPS** мог полноценно имитировать именно ВАШ гибридный режим замкнутого цикла.
 
-**FCL** requires the user to set up and tune their **Automations**. However the user must have a confident understanding of their insulin management needs before embarking on **FCL**. Errors can be masked with counter-errors. This can create an unstable **FCL** system, and make it hard to later correct. You should expect to reach a comparable %TIR with your FCL as you see today in your **HCL**.
+**АЗЦ** требует настройки режимов **Автоматизации**. Прежде чем переходить на **АЗЦ**, пользователь должен иметь четкое представление о своих потребностях в инсулинотерапии. Ошибки могут маскироваться другими ошибками. Это может создать нестабильную систему **АЗЦ**, которую будет трудно откорректировать. Следует стремиться к достижению целевых показателей времени в диапазоне %TIR, сопоставимых с теми, которые вы уже имеете в гибридном цикле **HCL**.
 
-**FCL is a DIY set up of Automations determined by the user by analysing their data from both their successful HCL and  initial FCL experience when tuning your settings.**
+**АЗЦ - это самостоятельно выполненная система автоматизации, которую пользователь создает на основе успешного опыта гибридной петли HCL и первых резульатов работы в автономном замкнутом цикле FCL.**
 
-## Fast insulin (Lyumjev, Fiasp)
+## Инсулины короткого действия (Lyumjev, Fiasp)
 
-**FCL** requires fast insulin.  This is so that at the start of meal-related **BG** rise, **FCL** is able to keep **BG** in range (by common definition, under 180 mg/dl (10 mmol/l)).
+Для корректной работы **АЗЦ** требуется быстродействующий инсулин.  Это нужно для того, чтобы в начале повышения уровня **ГК**, связанного с приемом пищи, алгоритм автономного замкнутого цикла **FCL** был в состоянии поддерживать уровень **ГК** в пределах нормы (обычно ниже 180 мг/дл (10 ммоль/л)).
 
 Моделирующее исследование (подробности см по ссылке Full Loop V2/Март 2023; там же раздел 2.2) показывает, что *инсулины короткого действия*
 
@@ -54,7 +54,7 @@
 
 EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
-- will result in significantly lower *BG** peaks than slower insulins;
+- приводят к значительному снижению пиковых *ГК** по сравнению с более медленными инсулинами;
 - tolerate a couple of minutes delayed first meal bolus while not incurring unacceptable height of peaks; and
 - minimise the effect on **BG** peak from different carb loads (meal sizes).
 
