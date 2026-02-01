@@ -55,18 +55,18 @@
 EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
 - приводят к значительному снижению пиковых *ГК** по сравнению с более медленными инсулинами;
-- tolerate a couple of minutes delayed first meal bolus while not incurring unacceptable height of peaks; and
-- minimise the effect on **BG** peak from different carb loads (meal sizes).
+- справляются с задержкой подачи болюса в пару минут, не допуская при этом пиков; и
+- сводят к минимуму влияние количества углеводов (объема принятой пищи) на пики **ГК**.
 
-**FCL** is unlikely to be effective with insulin other than Lyumjev or Fiasp, unless the user is on a very moderate to low carb diet.
+**АЗЦ** вряд ли будет эффективен при применении иных инсулинов кроме Lyumjev или Fiasp, если только пользователь не придерживается диеты с очень умеренным или низким содержанием углеводов.
 
-However, Fiasp or Lyumjev can result in frequent pump occlusions, even after optimising things like needle length. It is important to have an eye on the cannula or pod time. Many users find 48 hours to be the efficacy insulin limit before resulting in cannula/pod failure.
+Однако Fiasp или Lyumjev могут привести к частым закупоркам помпы, даже после оптимизации таких параметров, как длина иглы. Важно наблюдать за состоянием катетора помпы или пода. Многие пользователи считают, что 48 часов - это предел эффективности инсулина до отказа катетера/ канюли.
 
-## Prerequisites
+## Предварительные требования
 
-**BG** values and stable bluetooth connectivity are required to ensure **AAPS** can optimally perform without losing valuable time. **FCL** requires a 24/7 technically stable system:
+Корректные значения **ГК** и стабильная связь по Bluetooth необходимы для оптимальной работы **AAPS** без потери ценного времени. **АЗЦ** требует технически стабильной системы 24/7:
 
-- your **CGM’s performance. Your CGM should not produce jumpy **BG** values that could be misinterpreted by **FCL** as a sign of a starting meal. Similarly, **CGM** calibrations can produce jumpy results.
+- Корректная работа системы мониторинга ГК. Система мониторинга гликемии не должна выдавать скачкообразных значений, которые могут быть истолкованы алгоритмом ЗЦ как признак начала приема пищи. Аналогично, неверные калибровки системы НМГ могут привести к скачкам.
 - how and where any **CGM** smoothing is done, and what this might imply for your tuning. Notably how delta is defined, and AAPS recognising this as being sign of a starting meal.
 - bluetooth stability for the pump and CGM  pump;
 - avoiding (or at least early recognition of) pump occlusion;
