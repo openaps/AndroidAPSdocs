@@ -84,9 +84,9 @@ Der Zeitbedarf, um **AAPS** zu erstellen, hängt von Deiner Erfahrung und Deinem
 
 Um Dir durch den Erstellungsprozess zu helfen, gibt es eigene spezifische Abschnitte:
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs](../UsefulLinks/FAQ.md) (Section 11);
+- Eine Liste von Fragen und Antworten zu den häufigsten bzw. wahrscheinlichsten Fehlern im [FAQ](../UsefulLinks/FAQ.md) (Abschnitt 11);
 
-- „[AAPS erstellen](../SettingUpAaps/BuildingAaps.md)“ (Section 3) and [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) (Section 8).
+- „[AAPS erstellen](../SettingUpAaps/BuildingAaps.md)“ (Abschnitt 3) und [Fehlerbehebung](../GettingHelp/GeneralTroubleshooting.md) (Abschnitt 8).
 
 How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
 
@@ -210,7 +210,7 @@ Diese Dokumentation möchte die notwendige technische Expertise auf ein absolute
 
 #### AAPS und Android-Versionen
 
-The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), Android 16 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+Die aktuelle **AAPS**-Version (3.4) setzt ein Android Smartphone mit Google **Android 12.0 oder höher** voraus. Wenn Du vorhast ein neues Smartphones zu kaufen (Stand: Januar 2026), wird Android 16 empfohlen.<br/> Aus Sicherheitsgründen wird dringend empfohlen, **AAPS**-Version immer auf dem neuesten Stand zu halten. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
 
 #### Smartphone-Modell wählen
 Welches genaue Modell Du kaufen solltest, hängt von den gewünschten Funktionen ab. Die [Smartphones](../Getting-Started/Phones.md)-Seite enthält von Nutzendenden getestete und empfohlene Setups.

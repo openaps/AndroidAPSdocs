@@ -74,9 +74,9 @@ Der neueste Glukosewert Deines CGM wird auf der linken Seite angezeigt.
 
 Die Farbe des Glukosewertes zeigt wie sich der Wert zum definierten [Zielbereich](#Preferences-range-for-visualization) verhält.
 
-     * green = in range
-     * red = below range
-     * yellow = above range 
+     * grün = im Zielbereich
+     * rot = unter dem Zielbereich
+     * gelb = über dem Zielbereich 
     
 
 ![Deltas](../images/Home_Delta.png)
@@ -84,8 +84,8 @@ Die Farbe des Glukosewertes zeigt wie sich der Wert zum definierten [Zielbereich
 Der Abschnitt in der Mitte zeigt:
 
 1. wie alt der letzte Sensorwert (**CGM**-Wert) in Minuten ist
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-  Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
+2. Änderungen zum letzten Sensorwert: Δ, und dem Durchschnitt der letzten 15 und 40 Minuten (Δ15 und Δ40).  
+  „Lange Deltas“ sind der Durchschnitt der vergangenen Deltas und zeigen wie die durchschnittliche Änderung war.
 
 (AapsScreens-loop-status)=
 
@@ -177,7 +177,7 @@ Ein Symbol mit einem Kindergesicht oben rechts in diesem Abschnitt zeigt, dass D
   * IOB kann negativ sein, wenn zuvor die Basalrate reduziert worden ist.
   * Ein Klick auf das Symbol zeigt die Aufteilung von Bolus und Basal-Insulin.
 
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
+2. **Getreideähre**: [Kohlenhydrate an Bord (COB)](../DailyLifeWithAaps/CobCalculation.md) - bisher noch nicht verstoffwechselte Kohlenhydrate. Das Symbol pulsiert rot, wenn Kohlenhydrate genommen werden müssen(siehe [unten](#aaps-screens-carbs-required))
 
 3. **Lila Linie**: aktuelle Basalrate. Das Symbol verändert sich, um eine temporäre Basalrate zu zeigen (Standard ist 100%) 
   * Klicke auf das Icon um Details zur Basalrate und einer eventuellen temporären Basalrate (inkl. verbleibende Dauer) angezeigt zu bekommen.
@@ -231,7 +231,7 @@ Nutze das Menü oben links im Diagramm oder drücke lange irgendwo im Diagramm, 
 
 Der grüne Bereich spiegelt den Zielbereich wider.
 
-This information is also shown on this graph :
+Diese Informationen werden auch in diesem Graph angezeigt:
 
 * Boluses: blue triangle on the BG curve and insulin amount
 * Carbs entries: orange triangle on the BG curve and carb amount
@@ -244,18 +244,18 @@ This information is also shown on this graph :
 
 #### Aktiviere optionale Informationen
 
-Using the top right arrow, you can switch on these optional information:
+Mit dem Pfeil oben rechts kannst Du die folgenden optionalen Informationen einblenden:
 
 * Predictions (see below)
-* Treatments : notes entered in action tab: grey, orange or red dot depending on the severity, as well as fingerstick calibrations: red dot
+* Behandlungen: Notizen aus dem AKTIONEN-Reiter: grauer, oranger oder roter Punkt je nach Schweregrad, sowie BZ-Kalibrierungen: roter Punkt
 * Basal 
-  * As defined in the profile: blue dotted line at the bottom of the graph
-  * Actually delivered basal: blue plain line with blue background
-* Activity - insulin activity curve: yellow line
+  * Wie im Profil hinterlegt: blaue gepunktete Linie am unteren Rand des Graphen
+  * Tatsächlich geliefertes Basal: blaue Linie mit blauem Hintergrund
+* Aktivität - Verlauf des aktiven Insulins: gelbe Linie
 
 To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
 
-     ![Main graph setting](../images/Home2020_MainGraphSetting.png)
+     ![Hauptdiagramm-Einstellungen](../images/Home2020_MainGraphSetting.png)
     
 
 (aaps-screens-prediction-lines)=
@@ -421,7 +421,7 @@ Mit den Buttons kannst Du schnell die Kohlenhydratmengen erhöhen. Die Schrittwe
 
 #### Bolus-Rechner
 
-See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
+Siehe Bolus-Rechner im [Abschnitt unten](#aaps-screens-bolus-wizard).
 
 #### Kalibrierungen
 
@@ -536,10 +536,10 @@ Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-
 
 Zeigt Informationen zu:
 
-     * sensor age & level (battery percentage)
-     * insulin age & level (units)
-     * cannula age
-     * pump battery age & level (percentage
+     * Sensoralter & Akkustand (Batterie-Prozent)
+     * Insulinalter & Menge (Einheiten)
+     * Kanülenalter
+     * Pumpenbatterie-Alter & Batteriestand (Prozentsatz)
     
 
 Wenn die **Darstellung in niedriger Auflösung** verwendet wird ([Einstellungen > Allgemein > Erscheinungsbild](#Preferences-skin)), werden weniger Informationen angezeigt.
@@ -564,7 +564,7 @@ Abschnitt O spiegelt das Careportal aus Nightscout wider. Bewegung, Ankündigung
 
 (Aapsscreens-site-rotation)=
 
-#### Site Rotation
+#### Wechsel der Setzstellen (Site Rotation)
 
 Site Rotation button opens the Site Rotation Dialog in View mode:
 
@@ -708,7 +708,7 @@ Auf diesem Reiter kannst Du die Bolus- und Kohlenhydrateingaben einsehen. Jeder 
 * Mahlzeit (manuell über die Schaltflächen Insulin, Schnellassistent oder Bolus-Rechner eingegeben)
 * SMB, wenn die SMB-Funktionalität verwendet wird
 
-Die Kohlenhydrate (Zeile **2**) werden nur in Nightscout gespeichert. If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
+Die Kohlenhydrate (Zeile **2**) werden nur in Nightscout gespeichert. Wenn Du den [Bolus-Rechner](#aaps-screens-bolus-wizard) benutzt hast, um die Insulindosis zu berechnen, kannst Du auf den Text „Berechnung“ (Zeile **3**) drücken, um die Details zur Bolusberechnung anzuzeigen.
 
 Abhängig von der gewählten Pumpe werden Insulin und Kohlenhydrate in einer oder mehreren Zeilen angezeigt: eine Zeile für die Berechnungsdetails, eine für die Kohlenhydrate und eine für den eigentlichen Bolus.
 
@@ -757,9 +757,9 @@ Mit dem Befehl **Klonen** in Zeile **1** kannst Du eine Kopie eines **Profilwech
 
 (AapsScreens-running-mode)=
 
-### Running mode
+### Betriebsmodus
 
-![Running mode](../images/TreatmentsView6.png)
+![Betriebsmodus](../images/TreatmentsView6.png)
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
 

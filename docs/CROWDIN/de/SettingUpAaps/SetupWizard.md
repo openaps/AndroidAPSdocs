@@ -40,9 +40,9 @@ Wenn Du sie verstehst und zustimmst, klicke auf die "ICH VESTEHE UND STIMME ZU"-
 
 **AAPS** benötigt einige Berechtigungen, um richtig zu funktionieren.
 
-In the following screen you are asked several questions you have to agree to, to get **AAPS** working. Der Assistent selbst erklärt, warum er nach der entsprechenden Einstellung fragt.
+In den folgenden Bildschirmen werden Dir mehrere Fragen gestellt, denen Du zustimmen musst, um **AAPS** zum Laufen zu bringen. Der Assistent selbst erklärt, warum er nach der entsprechenden Einstellung fragt.
 
-In diesem Bildschirm geben wir zusätzliche Hintergrundinformationen, übersetzen technischere Ausdrücke in allgemein verständliche Sprache oder erklären den Grund. Continue reading below to see each permission request.
+In diesem Bildschirm geben wir zusätzliche Hintergrundinformationen, übersetzen technischere Ausdrücke in allgemein verständliche Sprache oder erklären den Grund. Jede der Berechtigungsanfragen siehst Du unten, wenn Du weiter liest.
 
 ![Permissions](../images/setup-wizard/Wizard03.png)
 
@@ -70,7 +70,7 @@ Der Schieberegler sollte, wenn er aktiviert ist, so aussehen:
 
 ### Akku-Optimierung
 
-Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+Der Akkuverbrauch ist bei Smartphones immer noch ein Thema, da die Akku-Kapazität noch ziemlich begrenzt ist. Daher ist das Android-Betriebssystem auf Deinem Smartphone ziemlich restriktiv, was die Ausführung von Anwendungen und den Verbrauch von CPU-Zeit und damit des Akkus betrifft.
 
 **AAPS** muss regelmäßig ausgeführt werden, _z.B._ um die Glukosewerte alle paar Minuten zu empfangen und dann den Algorithmus anzuwenden, der basierend auf Deinen Spezifikationen entscheidet, wie mit Deinen Glukosewerten umzugehen ist. Deshalb muss es Android erlaubt werden, dies zu tun.
 
@@ -85,13 +85,13 @@ Bitte tippe auf "Zulassen":
 ![Allow Background](../images/setup-wizard/Wizard05-Background.png)
 
 (setup-wizard-bluetooth-battery-optimisation)=
-### Bluetooth battery optimisation
+### Bluetooth-Akku-Optimierung
 
-Newer versions of Android have added battery optimisation to the system Bluetooth application too.
+Neuere Android-Versionen haben nun auch eine Akku-Optimierung für die Bluetooth-Anwendung.
 
-As well as Disabling battery optimisation for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
+Neben der Deaktivierung der Akku-Optimierung für **AAPS**, musst Du sehr wahrscheinlich auch die Akku-Optimierung für die Bluetooth-System-App deaktivieren. Falls das nicht gemacht wird, kann das zu Pumpen-Verbindungsabbrüchen und anderen Problemen führen.
 
-***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
+***HINWEIS: Die xDrip-Dokumentation beschreibt hier ([xDrip-Dokumentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)) genau, wie Du vorgehen musst:***
 
 Follow these steps on Android 16, other versions will varies slightly from the provided screenshots:
 
@@ -155,7 +155,7 @@ Klicke auf "WEITER":
 
 ### Standort
 
-Android links the use of Bluetooth communication to the ability to use location services. Vielleicht hast Du das bei anderen Apps auch schon bemerkt. It's common to need location permission if you want to access Bluetooth.
+Android verknüpft die Nutzung der Bluetooth-Kommunikation mit der Möglichkeit, Standortdienste zu nutzen. Vielleicht hast Du das bei anderen Apps auch schon bemerkt. Wenn Du auf Bluetooth zugreifen willst, wird üblicherweise auch die Standortberechtigung benötigt.
 
 **AAPS** uses Bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Die Details können je nach Setup variieren.
 
@@ -195,7 +195,7 @@ Nachdem Du das Passwort zweimal eingegeben hast, klicke bitte auf "WEITER":
 
 ## Einheiten (mg/dl <-> mmol/l)
 
-Please select if your glucose values are in mg/dL or mmol/L and then please click the "NEXT" button:
+Bitte lege fest, ob Deine Glukosewerte in mg/dl oder mmol/dl vorliegen, und klicke dann auf "WEITER":
 
 ![Einheiten](../images/setup-wizard/Wizard13.png)
 
@@ -248,7 +248,7 @@ Bitte tippe auf "OK":
 
 ![NSClient ULR](../images/setup-wizard/Wizard16-URL.png)
 
-Enter your Nightscout access token. Das ist der Zugriffsschlüssel, den Du für Deinen Nightscout-Server angelegt hast. Ohne dieses Token, wird der Zugriff nicht funktionieren.
+Gib nun Deinen Nightscout Zugangstoken (Zugriffsschlüssel) ein. Das ist der Zugriffsschlüssel, den Du für Deinen Nightscout-Server angelegt hast. Ohne dieses Token, wird der Zugriff nicht funktionieren.
 
 Wenn Du bis jetzt keinen hast, findest Du in der **AAPS**-Dokumentation beschrieben, wie der Auswertungsserver aufgesetzt werden kann.
 
@@ -339,7 +339,7 @@ Tippe auf "WEITER", um zur nächsten Seite zu kommen:
 
 Wähle die von Dir genutzte BZ-Quelle aus. Zum Thema [BZ-Quelle](../Getting-Started/CompatiblesCgms.md) lies bitte die Dokumentation.
 
-Da es mehrere Optionen gibt, erklären wir hier nicht alle der möglichen Konfigurationen. We are using xDrip+ in our example here:
+Da es mehrere Optionen gibt, erklären wir hier nicht alle der möglichen Konfigurationen. In unserem Beispiel verwenden hier xDrip+:
 
 
 ![BZ-Quelle](../images/setup-wizard/Wizard20.png)
