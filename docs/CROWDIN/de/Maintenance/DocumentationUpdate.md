@@ -3,26 +3,26 @@
 ## Januar 2025
 
 - [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
-- CGM list update. Dexcom G5, Tomato, Glimp removed.
+- Update der CGM-Liste. Dexcom G5, Tomato, Glimp removed.
 - [Site rotation UI](#Aapsscreens-site-rotation)
-- [Running mode](#AapsScreens-running-mode)
+- [Betriebsmodus](#AapsScreens-running-mode)
 - [Autotune](../AdvancedOptions/Autotune.md)
 
-## December 2025
+## Dezember 2025
 
 - [Profile tuning](../GettingHelp/ProfileTuning.md) from @robrub
 
-## October 2025
+## Oktober 2025
 
-- DiaKEM: new installs don't work after servers upgrade @psonnera
-- Removed Libre 2 patched app (obsolete): doesn't work with new sensors @psonnera
-- Reworked Omnipod Dash page @XiTatiON
+- DiaKEM: Neuinstallationen funktionieren nach einem Server-Upgrade nicht mehr @psonnera
+- Libre 2 gepatchte App entfernt (veraltet): Funktioniert nicht mit neuen Sensoren @psonnera
+- Omnipod-Dash-Seite überarbeitet @XiTatiON
 
 ## August 2025
 
-- Updated versions and Android Studio prerequisites
-- Added [3.3.2.1](#version3321) release, removed Android 16 references (fixed)
-- Added [Browser Build](#browser-build) @Angus
+- Versionen und Android Studio Voraussetzungen aktualisiert
+- [3.3.2.1](#version3321)-Release hinzugefügt und Android 16 Referenzen entfernt (fixed)
+- [Browser-Build](#browser-build) @Angus hinzugefügt
 
 ## Mai 2025
 
@@ -139,7 +139,7 @@ AAPS 3.1 Dokumentation ist [hier](https://androidaps.readthedocs.io/en/3.1/index
 
 ## Juni 2020
 
-- Libre 2 - more details patched Libre Link app & use of bluetooth transmitters
+- Libre 2 - weitere Details zu gepatchten Libre Link-App und zu Bluetooth-Transmittern
 - [Reisen über Zeitzonen](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) mit Libre 2
 
 ## Mai 2020
@@ -147,7 +147,7 @@ AAPS 3.1 Dokumentation ist [hier](https://androidaps.readthedocs.io/en/3.1/index
 - [Verzögerter Bolus nur für Dana + Insight Pumpen](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [Insight Vibration deaktivieren](#Accu-Chek-Insight-Pump-vibration) (nur Firmware 3.x)
 - [Kleinste Anforderungsrate](#Preferences-minimal-request-change), um die Anzahl der Benachrichtigungen im Open Loop zu verringern
-- Patched Libre Link app - check if correctly patched
+- Patched Libre Link-App - prüfen, ob korrekt gepatcht wurde
 - [Vorhersagelinien](#aaps-screens-prediction-lines) - mehr Details
 
 ## April 2020
