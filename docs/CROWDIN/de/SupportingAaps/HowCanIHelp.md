@@ -23,7 +23,7 @@ Wenn Du zum ersten Mal übersetzen solltest, beginne mit der Übersetzung der Te
 
 Als Übersetzer für die Dokumentation kannst Du parallel zur App-Übersetzung oder auch später anfangen.
 
-You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
+Den aktuellen Fortschritt bei der Übersetzung der App und der Dokumentation kannst Du[hier](#StateOfTranslations) einsehen.
 
 * Falls du die **die App** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://crowdin.com/project/androidaps).
 * Falls du die **die Docs** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://crowdin.com/project/androidapsdocs). 
