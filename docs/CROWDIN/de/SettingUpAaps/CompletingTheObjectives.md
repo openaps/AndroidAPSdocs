@@ -93,7 +93,7 @@ Die Grundidee hinter **Ziel 4** ist zu erkennen, wie oft **AAPS** die Basalrate 
 
 Das Ziel kann frühestens nach **7 Tagen** abgeschlossen werden. Das ist eine Pflichtwartezeit. Auch wenn alle Basalraten-Änderungen gemacht wurden, ist es vorher nicht möglich mit dem nächsten **Ziel** zu starten.
 
-- Select Open Loop either by pressing and holding the [Loop icon](#AapsScreens-loop-status) on the top right of the **Overview** screen.
+- Wähle den Open Loop aus, indem Du länger auf das [Loop-Symbol](#AapsScreens-loop-status) oben rechts in der **Übersicht** drückst.
 - Bestätige in einem Zeitraum von 7 Tagen mindestens 20 der vorgeschlagenen temporären Basalratenanpassungen; gib diese (physisch) in der Pumpe ein und bestätige in AAPS, dass Du den Vorschlag akzeptierst hast. Vergewissere Dich, dass die Basalraten-Anpassungen sowohl in **AAPS** als auch in **Nightscout** angezeigt werden.
 - Wenn nötig, nutze [**temporäre Ziele**](../DailyLifeWithAaps/TempTargets.md). After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
 - Wenn Du noch im [Einfachen Modus](#preferences-simple-mode) unterwegs bist, ist es jetzt wahrscheinlich ein guter Zeitpunkt, um ihn auszuschalten.
@@ -165,7 +165,7 @@ Das heißt, während Du Dich im **Ziel 6** befindest, wird **AAPS** bei fallende
 (objectives-objective7)=
 ## Ziel 7: Justiere den Closed Loop, erhöhe maxIOB über 0 und setze den Zielbereich langsam herunter
 
-Um **Ziel 7** abzuschließen, musst Du den Loop schließen (Closed Loop) und Deinen [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)-Wert erhöhen. **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. Das ist jetzt nicht mehr nötig. **AAPS** wird ab jetzt Deinen hinterlegten maxIOB-Wert nutzen, um hohe Glukosewerte zu korrigieren.
+Um **Ziel 7** abzuschließen, musst Du den Loop schließen (Closed Loop) und Deinen [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)-Wert erhöhen. **maxIOB** wurde in **Ziel 6** wegen des Low-Glucose-Suspend-Modus automatisch ausgesetzt. Das ist jetzt nicht mehr nötig. **AAPS** wird ab jetzt Deinen hinterlegten maxIOB-Wert nutzen, um hohe Glukosewerte zu korrigieren.
 
 Das Ziel kann frühestens nach **einem Tag** abgeschlossen werden. Das ist eine Pflichtwartezeit. Das nächste **Ziel** kann erst dann gestartet werden, wenn die Wartezeit abgelaufen ist.
 
