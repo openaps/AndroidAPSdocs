@@ -242,7 +242,7 @@ Bei der Verwendung von [SMB](#objectives-objective9) geben viele Menschen nicht 
 
 ### Old glycemia time threshold
 
-If the last **BG** received is older than this threshold, then the bolus wizard will by default offer a 100% dose instead of the **Deliver this part of bolus wizard result** setting above. The reason for this is that when **BG** is missing, **AAPS** will not be able to send the remaining part of the bolus afterward (the loop is not running), which would result in high **BG**.
+Wenn der letzte empfangene **Glukosewert** älter als dieser Schwellenwert ist, dann bietet der Bolus-Rechner standardmäßig einen 100%igen Bolus an und berücksichtigt nicht, den Wert, der in der Option **Abgabe von [%] des Ergebnisses des Bolus-Rechners** eingetragen ist. Durch den fehlenden **Glukosewert** kann **AAPS** den verbleibenden Bolusteil nicht hinterschicken (der Loop ist ausgeschaltet). Die Folge wären hohe **Glukosewerte**.
 
 ### Bolus-Berater aktivieren
 
