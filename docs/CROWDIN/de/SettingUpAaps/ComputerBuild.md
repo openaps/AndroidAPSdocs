@@ -1,8 +1,8 @@
 # Computer Build
 
-This is the traditional method to build your AAPS app.
+Dies ist die herkömmliche Methode, um Deine AAPS-App zu erstellen.
 
-You can build the app without a computer using the [Browser Build](./BrowserBuild.md) method.
+Du kannst die App auch ohne Computer mit der sog. [Browser Build](./BrowserBuild.md)-Methode erstellen.
 
 ## Kein Download möglich - APK muss selbst erstellt werden
 
@@ -21,11 +21,11 @@ Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 | ----------------------- | ------------------------------------------------------- | -------------------------------------------------------- | ------ |:--- |
 | 2.6.2                   | 3.6.1                                                   |                                                          | 5.6.4  | 11  |
 | 2.8.2.1                 | 4.1.1                                                   |                                                          | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                                | up to Otter                                              | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                     | up to Otter                                              | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                         | up to Otter                                              | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | up to Otter                                              | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                      | up to Otter                                              | 8.13   | 21  |
+| [3.1.0.3](#version3100) | 2020.3.1                                                | bis zu „Otter“                                           | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                     | bis zu „Otter“                                           | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                         | bis zu „Otter“                                           | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | bis zu „Otter“                                           | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                      | bis zu „Otter“                                           | 8.13   | 21  |
 | [3.4](#version3400)     | Otter 2 Feature Drop (2025.2.2)                         |                                                          | 9      | 21  |
 
 Die „empfohlene Version“ enthält im Paket bereits die entsprechende JVM-Version. Die empfohlene Version ist gleichzeitig auch die Mindestversion, die Du zum Erstellen von **AAPS** nutzen kannst. Mit einer älteren Version als der, die unter „empfohlen“ aufgeführt ist, wirst Du **NICHT** in der Lage sein, AAPS zu erstellen. Solltest Du eine andere Version verwenden, kann es aufgrund der JVM-Version zu Problemen kommen. Schaue auf den Seiten zur [Fehlerbehebung für Android Studio](#troubleshooting_androidstudio-uncommitted-changes) nach, um diese Probleme zu lösen. Wenn Deine aktuelle Android Studio Version nicht in der Tabelle aufgeführt ist, musst Du sie zuerst aktualisieren.
@@ -50,7 +50,7 @@ Die Gradle-Version ist mit dem Quellcode verknüpft. Wenn Du den Quellcode herun
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16 GB oder mehr</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Festplatte</th>
@@ -71,7 +71,7 @@ Die Gradle-Version ist mit dem Quellcode verknüpft. Wenn Du den Quellcode herun
 
 ## Hilfe und Unterstützung während des Erstellungsprozesses
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) section, please consult that first.
+Solltest Du Probleme beim Erstellen der **AAPS**-App haben, kannst Du im Abschnitt [**Fehlerbehebung für Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) einiges an Hilfestellung finden.
 
 Wenn Du den Eindruck hast, dass in der Anleitung Schritte falsch, fehlend oder missverständlich sind, oder Du trotzdem noch Probleme hast, wende Dich über [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) oder [Discord](https://discord.gg/4fQUWHZ4Mw) an andere **AAPS**-Nutzende. Wenn Du selbst etwas ändern möchtest (z.B. Screenshots aktualisieren _etc_), erstelle einen entsprechenden [Pull-Request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
@@ -410,7 +410,7 @@ Sobald der Build abgeschlossen ist, wird Android Studio "BUILD SUCCESSFUL" anzei
 
 ![Build abgeschlossen](../images/Building-the-App/049_ReopenNotification.png)
 
-**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
+**_Wenn der „Build“ fehlgeschlagen ist, lies bitte den Abschnitt [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
 Klicke im Benachrichtigungsfeld auf den blauen Link "locate":
 
