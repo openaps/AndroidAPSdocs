@@ -4,11 +4,11 @@ Der Freestyle Libre 2 Sensor ist mittlerweile (auch mit der offiziellen App) ein
 
 ## 1. Verwende einen Bluetooth-Transmitter und OOP
 
-Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an out of process algorithm app. Glukosewerte können - wie beim [Libre 1](./Libre1.md) - alle 5 Minuten empfangen werden.
+Bluetooth-Transmitter können mit dem Libre 2 (EU) oder 2+ (EU) und einer Out of Process Algorithmus-App verwendet werden. Glukosewerte können - wie beim [Libre 1](./Libre1.md) - alle 5 Minuten empfangen werden.
 
-Check the bridge and app you want to use are compatible with your sensor and xDrip+.
+Überprüfe, dass sowohl die Bridge als auch die App, die Du nutzen möchtest, mit Deinem Sensor und auch mit xDrip+ kompatibel sind.
 
-The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings as with the original reader. AAPS glättet Libre2 Daten über 10-25 Minuten, um Sprünge zu vermeiden. Mehr Details findest Du im Abschnitt [Glättung der Werte & Rohdaten](#libre2-value-smoothing-raw-values).  OOP übergibt alle fünf Minuten einen Wert. Dieser entspricht dem Durchschnitt der letzten fünf Minuten. Daher sind die BZ-Werte nicht so glatt, stimmen aber mit dem Lesegerät überein und folgen den "echten" BZ-Entwicklungen schneller. Wenn Du mit OOP loppen möchtest, aktiviere alle Glättungseinstellungen in xDrip+.
+Der Libre 2 OOP (Details findest Du [hier](#Libre2_OOP2)) erzeugt die gleichen Glukose-Messwerte wie das originale Lesegerät. AAPS glättet Libre2 Daten über 10-25 Minuten, um Sprünge zu vermeiden. Mehr Details findest Du im Abschnitt [Glättung der Werte & Rohdaten](#libre2-value-smoothing-raw-values).  OOP übergibt alle fünf Minuten einen Wert. Dieser entspricht dem Durchschnitt der letzten fünf Minuten. Daher sind die BZ-Werte nicht so glatt, stimmen aber mit dem Lesegerät überein und folgen den "echten" BZ-Entwicklungen schneller. Wenn Du mit OOP loppen möchtest, aktiviere alle Glättungseinstellungen in xDrip+.
 
 Es psricht viel dafür einen Bluetooth-Transmitter zu nutzen:
 
@@ -34,7 +34,7 @@ Damit wird der Libre2 Sensor nicht gestartet und wird auch kein Datenaustausch m
 
 Nach einem Sensorwechsel erkennt xDrip+ den neuen Sensor automatisch und löscht alle Kalibrierungsdaten. Du kannst nach der Aktivierung blutig messen und eine neue erste Kalibrierung hinzufügen.
 
-### Configure AAPS (for looping only)
+### AAPS konfigurieren (nur für's Loopen)
 
 -   Öffne in AAPS die KONFIGURATION > BZ-Quelle und aktiviere "xDrip+ BZ".
 
@@ -50,7 +50,7 @@ xDrip+ unterstützt keine direkte Verbindung zum Libre 2 US und AUS.
 Nur Libre 2 und 2+ **EU** Modelle.
 ```
 
-- Follow [these instructions](./Libre2MinimalL00per.md) to setup xDrip+ as the original documentation links to an obsolete OOP2  version.
+- Nutze [diese Schritt-für-Schritt-Anleitung](./Libre2MinimalL00per.md), um xDrip+ aufzusetzen, da die Originaldokumentation auf eine veraltete OOP2-Version verweist.
 - Folge den Anweisungen zum Einrichten auf der [xDrip+-Einstellungen Seite](../CompatibleCgms/xDrip.md).
 
 -   Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
@@ -89,4 +89,4 @@ Der Libre2-Sensor kann **im Bereich von -40 mg/dl bis +20 mg/dl\[-2,2 mmol/l bis
 
 ## 4. Juggluco nutzen
 
-See [here](./Juggluco.md).
+Schaue [hier](./Juggluco.md) nach.
