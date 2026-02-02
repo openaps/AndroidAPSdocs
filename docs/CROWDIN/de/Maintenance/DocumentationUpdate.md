@@ -40,7 +40,7 @@
 ## November 2024
 
 - Aktualisierung [Dein AAPS-Profil](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnerat
+- Neustrukturierung der [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md)-Inhalte @psonnerat
 
 ## Oktober 2024
 
