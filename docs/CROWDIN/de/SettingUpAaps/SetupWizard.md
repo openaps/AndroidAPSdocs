@@ -50,9 +50,9 @@ In diesem Bildschirm geben wir zusätzliche Hintergrundinformationen, übersetze
 
 Wenn Apps Benachrichtigungen senden möchten, benötigt Android hierfür eine besondere Berechtigung.
 
-While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
+Obwohl es grundsätzlich gut ist. Benachrichtigungen _z. B._ von Social Media-Apps zu deaktivieren, ist es zwingend notwendig, dass Du **AAPS** erlaubst, Dir Benachrichtigungen zu senden.
 
-Please click the first "ASK FOR PERMISSION" button:
+Bitte klicke auf das erste "NACH BERECHTIGUNG FRAGEN":
 
 ![Notifications](../images/setup-wizard/Wizard04.png)
 
@@ -93,35 +93,35 @@ Neben der Deaktivierung der Akku-Optimierung für **AAPS**, musst Du sehr wahrsc
 
 ***HINWEIS: Die xDrip-Dokumentation beschreibt hier ([xDrip-Dokumentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)) genau, wie Du vorgehen musst:***
 
-Follow these steps on Android 16, other versions will varies slightly from the provided screenshots:
+Für Android 16 arbeite die folgenden Schritte ab. Bei anderen Versionen können die tatsächlichen Screens von den gezeigten Screenshots leicht abweichen:
 
-1. Open Android settings and search for **Apps**, and open the Apps settings.
+1. Öffne die Android-Einstellungen und suche nach **Apps** und öffne die App-Einstellungen.
 
    ![settings_apps](../images/setup-wizard/settings_apps.png)
 
-2. You will see the App settings, however we need to expand to see all apps, click on **See all apps** to expand.
+2. Du wirst einige App-Einstellungen sehen, allerdings müssen auch die verborgenen angezeigt werden, damit wir alle Apps sehen können. Tippe auf **Alle Apps**, um alle einzublenden.
 
    ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
 
-3. As the Bluetooth app is a system app its hidden by default, we need to show system apps. Click on the **three dots (hamburger)** on the top left (1). Then click on **Show System** (2).
+3. Da die Bluetooth-App eine Systemanwendung ist, die standardmäßig versteckt ist, müssen wir die Systemanwendungen einblenden. Tippe auf die **drei Punkte (Hamburger)** oben rechts (1). Tippe danach auf **Systemanwendungen anzeigen** (2).
 
    ![settings_apps](../images/setup-wizard/show_system.png)
 
-4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.
+4. Suche die `Bluetooth`-App und tippe `Bluetooth` und/oder `Legacy Bluetooth`, wenn es beide geben sollte. Achte darauf, dass die Anpassungen für beide Apps erfolgen.
 
-   ***NOTE: It's safe to ignore the `Bluetooth MIDI Service` this is not used by AAPS***
+   ***HINWEIS: Du kannst den `Bluetooth MIDI Service` ignorieren. Dieser wird von AAPS nicht genutzt***
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 Click on `Battery`, Android 13+ Click on `App battery usage`,
+   1. Bei Android 12 tippe auf `Akku`, Android 13+ tippe auf `Akkuverbrauch`,
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
-5. On Android 12+ select the `Unrestricted` option, on Android 15+ you need to expand the `Allow background usage` setting, click on the section highlighted in red to do this then follow step 6 to complete.
+5. Bei Android 12+ wähle `Nicht eingeschränkt` als Option aus, auf Android 15+ musst Du `Hintergrundnutzung zulassen` konfigurieren. Um das zu tun, tippe auf den rot hervorgehobenen Bereich. Zum Abschließen befolge den Schritt 6.
 
    ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
 
-6. On Android 16 Select `Unrestricted`
+6. Bei Android 16 wähle `Nicht eingeschränkt` aus
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
@@ -157,7 +157,7 @@ Klicke auf "WEITER":
 
 Android verknüpft die Nutzung der Bluetooth-Kommunikation mit der Möglichkeit, Standortdienste zu nutzen. Vielleicht hast Du das bei anderen Apps auch schon bemerkt. Wenn Du auf Bluetooth zugreifen willst, wird üblicherweise auch die Standortberechtigung benötigt.
 
-**AAPS** uses Bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Die Details können je nach Setup variieren.
+**AAPS** nutzt für die direkte Kommunikation mit Deinem CGM und der Steuerung der Insulinpumpe Bluetooth (alternativ kann **AAPS** auch mit anderen Apps kommunizieren). Die Details können je nach Setup variieren.
 
 Bitte klicke auf die erste "NACH BERECHTIGUNG FRAGEN"-Schaltfläche:
 
@@ -252,11 +252,11 @@ Gib nun Deinen Nightscout Zugangstoken (Zugriffsschlüssel) ein. Das ist der Zug
 
 Wenn Du bis jetzt keinen hast, findest Du in der **AAPS**-Dokumentation beschrieben, wie der Auswertungsserver aufgesetzt werden kann.
 
-After filling in the "**Nightscout access token**" and clicking "OK", please click on the "Synchronization" button:
+Nachdem Du den „**Nightscout-Zugriffstoken**“ eingegeben hast und mit „OK“ weiter gegangen bist, tippe auf „Synchronisierung“:
 
 ![NSClient Token](../images/setup-wizard/Wizard16-Token.png)
 
-Please select "Upload data to NS" if you already configured Nightscout in the previous steps of the Setup Wizard.
+Wenn Du Nightscout in den vorangegangenen Schritten des Einrichtungsassistenten bereits konfiguriert hast, wähle "Daten zu NS hochladen" aus.
 
 Wenn Du in Nightscout Profile hinterlegt hast und diese nach **AAPS** herunterladen möchtest, aktiviere „Gespeicherte Profile abrufen“:
 
@@ -345,14 +345,14 @@ Da es mehrere Optionen gibt, erklären wir hier nicht alle der möglichen Konfig
 ![BZ-Quelle](../images/setup-wizard/Wizard20.png)
 
 
-Enable the visibility in the top level menu by clicking the check box on the right side.
+Durch Tippen auf das Kontrollkästchen auf der rechten Seite, kannst Du steuern, ob es im obersten Menü angezeigt wird.
 
 Nachdem Du Deine Auswahl getroffen hast, tippe auf "WEITER", um auf die nächste Seite zu kommen:
 
 ![Select BG](../images/setup-wizard/Wizard20-Set.png)
 
 
-Click on the cogwheel button to access the settings.
+Tippe auf das Zahnrad, um die Einstellungen zu öffnen.
 
 Aktiviere "Speichere BZ-Werte in Nightscout" und "Speichere Sensorwechsel in Nightscout".
 
@@ -422,7 +422,7 @@ Gib die Zielwerte ein und bestätige sie:
 
 Speichere das Profil, indem Du auf "SPEICHERN" tippst:
 
-![Save](../images/setup-wizard/Wizard22-Save.png)
+![Speichern](../images/setup-wizard/Wizard22-Save.png)
 
 
 Nach dem Speichern erscheint eine neue Schaltfläche „Aktiviere Profil“.
@@ -521,7 +521,7 @@ Lass „Sensitivität Oref1“ als Standard für das Modul "Sensitivitätserkenn
 
 Tippe auf "WEITER", um zur nächsten Seite zu kommen:
 
-![Sensitivity](../images/setup-wizard/Wizard25.png)
+![Sensitivität](../images/setup-wizard/Wizard25.png)
 
 ## Starte das erste Ziel (Objective 1)
 
@@ -539,7 +539,7 @@ Du erkennst, dass Du schon Fortschritt gemacht hast, aber auch, dass es in ander
 
 Tippe auf "ABSCHLIESSEN", um zur nächsten Seite zu gelangen.
 
-![Done](../images/setup-wizard/Wizard26-Started.png)
+![Fertig](../images/setup-wizard/Wizard26-Started.png)
 
 Du kommst nun zur **AAPS**-Übersicht (Startbildschirm).
 
