@@ -1,10 +1,10 @@
 # Tidepool
 
-Tidepool ist ein Drittanbieter-Hilfsmittel, das Therapiedaten (u.a. Glukosewerte, Insulin und Kohlenhydrate) sammelt, die dann analysiert und mit Deinem Diabetes-Team geteilt werden können. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. Er kann auch in Kombination mit Nightscout als alternative Berichtsplattform eingesetzt werden, die sich gut in klinische Umgebungen integriert. Dies kann die gewünschte Option für Kinder, die AAPS verwenden, sein, die eine Remoteüberwachung und -steuerung von Nightscout einsetzen wollen, aber auch eine Berichtsplattform haben wollen, mit der ihr klinisches Team besser vertraut ist.
+Tidepool ist ein Drittanbieter-Hilfsmittel, das Therapiedaten (u.a. Glukosewerte, Insulin und Kohlenhydrate) sammelt, die dann analysiert und mit Deinem Diabetes-Team geteilt werden können. Seit der AAPS-Version 3.2 kann Tidepool als Alternative zu Nightscout genutzt werden, um das Ziel (Objective) 1 zu erfüllen. Er kann auch in Kombination mit Nightscout als alternative Berichtsplattform eingesetzt werden, die sich gut in klinische Umgebungen integriert. Dies kann die gewünschte Option für Kinder, die AAPS verwenden, sein, die eine Remoteüberwachung und -steuerung von Nightscout einsetzen wollen, aber auch eine Berichtsplattform haben wollen, mit der ihr klinisches Team besser vertraut ist.
 
 Wichtig ist zu wissen, dass Tidepool lediglich für die Erstellung von Berichten genutzt werden kann. Es ist KEINE Echtzeit-Follower-App. Wenn Du, neben dem eigentlichen AAPS-Smartphone, weitere Follower benötigst, musst Du auch Nightscout einrichten.
 
-Note: the Tidepool organization has brought the iOS Loop product to market with FDA approval. Diese Anstrengungen sind unabhängig von deren Reportingplattform und AAPS.
+Hinweis: Die Tidepool-Organisation hat das Produkt iOS Loop mit FDA-Genehmigung auf den Markt gebracht. Diese Anstrengungen sind unabhängig von deren Reportingplattform und AAPS.
 
 
 ## Schritt 1 - Ein Tidepool-Konto erstellen
