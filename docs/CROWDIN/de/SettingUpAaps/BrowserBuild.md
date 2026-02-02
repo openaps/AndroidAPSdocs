@@ -281,95 +281,95 @@ GitHub wird ab jetzt in der Lage sein, die AAPS-APK-Datei in Deinem Google Drive
 
 ### Auswahl der zu erstellenden Version („Build Version“)
 
-**Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
+**Das Erstellen der Version in einem Browser („Browser Build“) ist erst ab AAPS-Version 3.3.2.1 (oder höher) möglich.**
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
 (variant)=
 
-### Build Variants selection
+### Auswahl der zu erstellenden Variante („Build Variants“)
 
-*Note: both Android and Android Wear apps will be built automatically.*
+*Hinweis: Sowohl die Android- als auch Android Wear-App werden automatisch erstellt.*
 
-  - Select the variant you need:
-    - fullRelease: For regular pump usage with full functionality.
-    - [aapsclientRelease, aapsclient2Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md))。
-    - pumpcontrolRelease: To replace your pump app/controller
+  - Wähle die gewünschte Variante aus:
+    - fullRelease: Volle Funktionalität mit normaler Pumpennutzung.
+    - [aapsclientRelease, aapsclient2Release](#RemoteControl_aapsclient): Für Pflegende/Eltern (erfordert [Nightscout](../SettingUpAaps/Nightscout.md)).
+    - pumpcontrolRelease: Ersetzt die Pumpenbedienung über App oder das separate Bediengerät („controller“)
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicates that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+Varianten mit der Endung „Debug“ signalisieren, dass die APK im Debug-Modus gebaut wird. Diese Versionen helfen Entwickelnden bei der Fehleranalyse und -behebung.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
 (aaps-ci-troubleshooting)=
-## AAPS-CI Troubleshooting
+## AAPS-CI Fehlerbehebung
 
 (aaps-ci-preparation-web)=
-### aaps-ci-preparation web page
-  - When you open aaps-ci-preparation.html using a file manager, it will start a temporary local server on your phone to display the webpage and receive the Google refresh token.
-  - If you see the screen below, it means you have been inactive for a while, and the file manager has already shut down the local server.
-  - Please reopen aaps-ci-preparation.html using the file manager app and complete the remaining steps.
+### aaps-ci-preparation Webseite
+  - Wenn Du die Seite „aaps-ci-preparation.html“ mit einem Dateimanager öffnest, wird ein temporärer lokaler Server auf Deinem Smartphone gestartet, um so die Webseite anzuzeigen und das Google Refresh Token zu erhalten.
+  - Solltest Du den unten gezeigten Bildschirm sehen, bedeutet das, dass Du eine ganze Weile inaktiv warst und der Dateimanager den lokalen Server bereits abgeschaltet hat.
+  - Bitte öffne „aaps-ci-preparation.html“ erneut mit der Dateimanager-App und schließe die verbleibenden Schritte ab.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
 (aaps-ci-disable-software)=
-### Disable Software That May Interfere With OAUTH Verification
-  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAUTH key.
+### Software, die bei der OAUTH-Verifizierung stören könnte, deaktivieren
+  - Deaktiviere sämtliche VPN- oder Sicherheits-Apps (Firewall, Antimalware, ...) auf dem Smartphone, bevor Du versuchst den OAUTH-Key abzurufen.
 
 (aaps-ci-actions-permission)=
-### Check GitHub Actions Permission Settings
-  - Make sure GitHub Actions policies are set to “Allow all actions and reusable workflows” (Settings → Actions → General).
+### Prüfe die GitHub-Berechtigungen (Actions Permission Settings)
+  - Stelle sicher, dass die GitHub-Actions-Richtlinien auf „Allow all actions and resusable workflows“ gesetzt sind (Settings → Actions → General).
 
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
 
-`actions/checkout@v4` and `actions/setup-java@v4` are not allowed to be used in `xxxxx/AndroidAPS`. Actions in this workflow must be: within a repository owned by `xxxxx`
+`actions/checkout@v4` und `actions/setup-java@v4` dürfen nicht in `xxxxx/AndroidAPS` genutzt werden. Actions in diesem Workflow müssen aus einem Repository, das `xxxxx` gehört, stammen
 
 --------
 
 ```{warning}
-Customizations are usually not necessary. This is for your information ony.
+Anpassungen sind in der Regel nicht notwendig. Das dient lediglich der Information.
 ```
 
 (github-cherry-pick)=
 
-## If you want to add a specific commit to your branch, please use cherry-pick.
+## Wenn Du einen bestimmten Commit zu Deinem Branch hinzufügen möchtest, benutze bitte „Cherry-pick“ als Methode
 
   ![aaps_cherry-pick_ci](../images/Building-the-App/CI/aaps_cherry_pick_ci.png)
 
-  - Use workflow from Branch: Please enter the branch name you want to cherry-pick to.
-  - Upstream Repository: Please enter the repository name you want to cherry-pick from.
-  - Commit SHA: Please enter the commit SHA you want to cherry-pick.(like git commit hash)
-  - Select Build Variant: [variant](variant)
+  - Use workflow from Branch: Bitte gib den Branch-Namen ein, aus dem Du die Funktionalität auswählen/hinzufügen möchtest.
+  - Upstream Repository: Bitte gib den Repository-Namen ein, aus dem Du die Funktionalität auswählen/hinzufügen möchtest.
+  - Commit SHA: Bitte gib den Commit SHA (Secure Hash Algorithmus) ein, den Du auswählen möchtest. (wie ein Git-Commit Hash)
+  - Wähle die Build-Variante aus: [variant](variant)
 
 (ci-keystore-export)=
 ## CI KeyStore Export
 
-If you want to export your stored keystore, use this method.
+Wenn Du den Keystore exportieren willst, nutze diese Methode.
 
-This script will export your previously configured keystore information (from Option 1 or Option 2) as a password-protected ZIP file to the `/AAPS/KeyStore` directory in your Google Drive.
+Dieses Skript exportiert Deine zuvor konfigurierten Keystore-Informationen (von Option 1 oder Option 2) als passwortgeschützte ZIP-Datei in das Verzeichnis `/AAPS/KeyStore` in Dein Google Drive.
 
 ```{warning}
-Before using this export method, make sure your keystore and Google Drive settings have been completed.
+Bevor Du diese Exportmethode nutzt, stelle sicher, dass Du Deine Keystore- und Google Drive-Einstellungen abgeschlossen hast.
 ```
 
 ### Schritte:
 
-1. **Add ZIP Password Secret:**
-   - Go to your repository's **Settings** → **Secrets and variables** → **Actions**
-   - Click **New repository secret**
-   - In the **Name** field, enter: `ZIP_PASSWORD`
-   - In the **Secret** field, enter your custom ZIP encryption password
-   - Use only English letters and numbers for the password (no special symbols)
-   - Click **Add secret**
+1. **ZIP-Passwort-Secret hinzufügen:**
+   - Gehe in die Einstellungen Deines Repositorys: **Settings** → **Secrets and variables** → **Actions**
+   - Klick auf **New repository secret**
+   - Ins Feld **Name** gib bitte `ZIP_PASSWORD` ein
+   - In das Feld **Secret**, gib Dein selbstgewähltes Passwort zur ZIP-Verschlüsselung ein
+   - Verwende ausschließlich englische Buchstaben und Zahlen für das Passwort (keine speziellen Symbole)
+   - Klicke auf **Add secret**
 
    ![aaps_ci_zip_password.png](../images/Building-the-App/CI/aaps_ci_zip_password.png)
 
-2. **Run Export Workflow:**
-   - Go to the **Actions** tab in your repository
-   - Select **CI KeyStore Export**
-   - Click **Run workflow**
-   - The exported keystore ZIP file will be saved to your Google Drive
+2. **Starte „Export Workflow“:**
+   - Gehe zum **Actions**-Tab in Deinem Repository
+   - Wähle **CI KeyStore Export** aus
+   - Klicke auf **Run workflow**
+   - Die exportierte Keystore-ZIP-Datei wird in Deinem Google Drive gespeichert
 
    ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
 
