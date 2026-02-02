@@ -2,7 +2,7 @@
 
 # **Problembehandlung**
 
-Informationen zur Behebung von Problemen findest Du auf vielen Seiten im Wiki. This page is a collection of links to help you find the information to solve your problem for various known issues.
+Informationen zur Behebung von Problemen findest Du auf vielen Seiten im Wiki. Diese Seite enthält eine Link-Sammlung zur Lösung verschiedener bekannter Probleme. Diese Informationen können helfen, auch Dein Problem zu lösen.
 
 Weitere nützliche Informationen können auch im [FAQ](../UsefulLinks/FAQ.md) stehen.
 
@@ -56,27 +56,27 @@ For known issues with Bluetooth connections, dropouts of pump/pods, or activatio
 
 (generaltroubleshooting-android-related-issues)=
 
-## **Android Related Issues**
+## **Probleme rund um Android**
 
 ### **Akku-Optimierung**
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+Mit Android wurden standardmäßig aktivierte Energiespareinstellungen eingeführt. Diese Einstellungen stoppen oder pausieren nicht zwingend benötigte Anwendungen, um so die Akkulaufzeit zu verlängern.
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip+**.
+Bei aktiver Akkuoptimierung ist es sehr wahrscheinlich, dass es zu Problemen mit **AAPS** und anderen unterstützenden Apps wie z. B. **xDrip+** kommt.
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+Damit **AAPS** und die anderen unterstützenden Apps permanent aktiv bleiben, ist es wichtig die Akkuoptimierung zu deaktivieren.
 
-Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
+Abhängig vom Hersteller und dem Smartphone-Modell müssen Einstellungen möglicherweise an verschiedenen Stellen angepasst bzw. deaktiviert werden.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+***HINWEIS:** Führe die folgenden Schritte durch, um die Akkuoptimierung (sofern vorhanden) für den Bluetooth-Dienst zu deaktivieren. Das gleiche Vorgehen kann auch für die Deaktivierung der Option für **AAPS** und andere Apps genutzt werden. Die Screenshots zeigen allderdings nur den Weg für den Bluetooth-Service.*
 
 #### **Pixel Smartphones (unverändertes Android)**
 
-* Go to the Android settings, select "Apps".
+* Gehe zu Einstellungen > Apps
 
   ![Android-Einstellungen > Apps](../images/troubleshooting/pixel/01_androidsettings.png)
 
-* Wähle 'alle Apps anzeigen' aus.
+* Wähle „alle Apps anzeigen“ aus.
 
   ![Alle Apps anzeigen](../images/troubleshooting/pixel/02_apps.png)
 
@@ -115,17 +115,17 @@ Depending on your phone model and make there may be more than one location and s
 
   ![Nicht eingeschränkt](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### **Huawei phones**
+#### **Huawei Smartphones**
 
-See this guide for [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+Hier ist die Anleitung für [Huawei Bluetooth & Akkuoptimierung](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-cgm)=
 
-## **Continious Glucose Monitor (CGM)**
+## **Kontinuierliche Glukosemessung (CGM)**
 
-Useful links to known issues and steps to resolve for CGMs.
+Nützliche Links zu Lösungsschritten bekannter CGM-Probleme.
 
 * [Allgemein](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
@@ -139,7 +139,7 @@ Useful links to known issues and steps to resolve for CGMs.
 
 ## **Pumpen**
 
-Useful links to known issues and steps to resolve for Pumps
+Nützliche Links zu Lösungsschritten bekannter Pumpen-Probleme.
 
 * [Dana RS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
 * [Accu-Chek Combo allgemein](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
@@ -152,9 +152,9 @@ Useful links to known issues and steps to resolve for Pumps
 
 ## **Smartphones**
 
-Useful links to known issues and steps to resolve for Phones
+Nützliche Links zu Lösungsschritten bekannter Smartphone-Probleme.
 
-* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
+* [Liste der getesteten Smartphone- und Geräte-Setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Unihertz Jelly](../CompatiblePhones/Jelly.md)
 * [Huawei Bluetooth & Optimierung der Akkulaufzeit](../CompatiblePhones/Huawei.md)
 
@@ -162,6 +162,6 @@ Useful links to known issues and steps to resolve for Phones
 
 ## Smartwatches
 
-Useful links to known issues and steps to resolve for Smartwatches
+Nützliche Links zu Lösungsschritten bekannter Smartwatch-Probleme.
 
 * [Fehlerbehebung der Wear App](#Watchfaces-troubleshooting-the-wear-app)
