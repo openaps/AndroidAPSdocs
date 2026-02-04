@@ -1,21 +1,21 @@
-# **Tweaking the AAPS' Profile**
+# **Feinjustierung des AAPS-Profils**
 
 ```{admonition} This is NOT a medical advice
 :class: warning
-Please work with your care team for support and advice on your diabetes management.</br>
-Use this guide only once you have [set up your **Profile** correctly](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), following all **AAPS** objectives.
+Bitte arbeite gemeinsam mit Deinem Diabetes-Team an Deinem Diabetes-Management und nutze dazu deren Empfehlungen und Hilfestellungen.</br>
+Nutze erst dann diese Anleitung, wenn Du [Dein **Profil** richtig erstellt hast](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), und die **AAPS**-Ziele (Objectives) erfolgreich abgeschlossen hast.
 ```
 
-This guide explains the logic of the OpenAPS algorithm results with a given __Profile__, and provides information about which values to adjust when certain situations are observed. The suggestions about basal testing below may diverge from what your care team  advises
+Diese Anleitung erklärt wie sich die Ergebnisse des OpenAPS-Algorithmus für ein gegebenes __Profil__ ergeben, und beschreibt die in besonderen auftretenden Situationen anzupassenden Werte. Die nun folgenden Vorschläge für einen Basalratentest, können mitunter von dem abweichen, was Dein Diabetes-Team empfiehlt.
 
-Using **closed loop** may make basal  testing easier and may significantly reduce  the hypo risk if your __Profile__ basal is too strong.
+Im **Closed Loop** können Basalratentests einfacher und das Hypo-Risiko erheblich kleiner sein, wenn das Basal-__Profil__ zu stark sein sollte.
 
-## **Changing profile's settings, how to proceed**
+## **Profileinstellungen ändern - wie gehe ich vor?**
 
-1. Ensure you have read and understand __AAPS’__ recommended settings and advice below. Not following this advice will make the whole process problematic and less likely to get a well tuned __Profile__
-2. Carefully observe and compare, **over several days**, what is happening with your __BG__ and __IOB__.
-3. Keep an eye out for patterns that happen around the same time (almost) everyday.
-4. It's important to do this over several days. Poor results tend to be yielded from using data observed on a single day to make __Profile’s__ adjustment decisions.
+1. Stell sicher, dass Du die für __AAPS__ empfohlenen Einstellungen und Tipps gelesen und verstanden hast. Solltest Du die Empfehlungen nicht berücksichtigen, wird der gesamte Prozess problematisch und die Wahrscheinlichkeit sinkt, ein gut abgestimmtes __Profil__ zu erreichen.
+2. Beobachte und vergleiche **über mehrere Tage**, wie sich Deine __Glukosewerte__ und das __IOB__ verhalten.
+3. Hab ein Auge besonders auf Muster, die sich regelmäßig zur (fast) gleichen Tageszeit ergeben.
+4. Die Beobachtung über mehrere Tage ist wichtig. Schlechte Ergebnisse kommen tendenziell deswegen zustande, weil Daten eines einzigen Tages genutzt werden, um das __Profil__ anzupassen.
 5. After you have observed a repeatable pattern of behavior, e.g. at 1PM you see a spike in __BG__ or a negative __IOB__ value, only then start to make small changes to your __Profile__.
 6. It's important to limit the changes you make to one thing at a time. z.B. increase your basal by 10% around 1PM.
 7. After every change, it's important to monitor the impact on your __BG__ and __IOB__ for the next few days.
