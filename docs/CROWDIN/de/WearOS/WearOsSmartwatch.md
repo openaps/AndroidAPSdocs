@@ -1,8 +1,8 @@
 # AAPS auf Deiner Wear OS-Smartwatch einrichten
 
-The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
+Die folgenden Anweisungen gelten für die durch Dich zu erstellende **AAPS Wear**-APK. Solltest Du es zum ersten Mal machen, hilft Dir die [Anleitung](../WearOS/BuildingAapsWearOS.md) weiter. Im Erstellprozess ist es wichtig, dass Du die gleiche Keystore-Datei nutzt, die Du schon beim Erstellen der **AAPS**-APK für das Smartphone genutzt hast.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with it's matching phone app. Beispiel: Die **AAPSClient Wear**-App kann **AAPSClient**-Daten anzeigen, aber keine **AAPS**-Daten.
+Einige der Informationen können auch für die **AAPSClient**- und die **PumpControl**-**Wear**-APK genutzt werden. Jede der **Wear**-Apps kommuniziert mit der zugehörigen Smartphone-App. Beispiel: Die **AAPSClient Wear**-App kann **AAPSClient**-Daten anzeigen, aber keine **AAPS**-Daten.
 
 ## Wear OS-Versionen und Kompatibilität
 
@@ -163,13 +163,13 @@ Sobald Du gekoppelt bist, solltest Du die AAPS Wear-APK installieren können:
 
 ## Die Verbindung zwischen der Smartwatch und Smartphone aus **AAPS** heraus einrichten
 
-The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. Aktiviere dazu das Wear-Plugin in der KONFIGURATION:
+Der letzte Schritt ist es, **AAPS** auf dem Smartphone so einzurichten, so dass es mit **Wear.apk** auf der Smartwatch interagiert. Aktiviere dazu das Wear-Plugin in der KONFIGURATION:
 
 * Gehe zur **AAPS**-App auf dem Smartphone
 
 * Wähle > „Konfiguration“ im linken Hamburger-Menü
 
-* Tick for Wear selection under Synchronization
+* Hake im Abschnitt „Synchronisierung“ die Option für „Wear“ an
 
 ![Wear OS](../images/WearOS.png)
 
@@ -181,7 +181,7 @@ Wenn das Sideloading der **AAPS** Wear.apk auf die Smartwatch erfolgreich war, s
 ![24-10-23, successful galaxy watch photo](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via wifi.
+Für bestimmte Smartwatches wie z. B. die Samsung Galaxy, „Remote Verbindung“ unter Samsung Galaxys erweiterten Funktionen muss auf **an** geändert werden, um **Wear.apk** & **AAPS** remote über WLAN nutzen zu können.
 
 ![MURCIMG-20251007-WA0000](https://github.com/user-attachments/assets/5db08a08-f256-49a0-8843-46bdd01b33d6)
 
