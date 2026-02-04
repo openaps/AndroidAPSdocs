@@ -31,7 +31,7 @@ Du wirst zwischen den Tabs springen: Starte mit geschlossenen Tabs. Das verhinde
 
 (github-fork)=
 
-## 1. AAPS personal fork
+## 1. AAPS eigener „Fork“
 
 Du musst Deinen persönlichen Android Java Key und Dein Google Drive-Informationen geheim in GitHub speichern (später im Prozess erklären wir, wie das geht).
 
@@ -95,18 +95,18 @@ GitHub zeigt jetzt Deine persönliche Kopie von AndroidAPS an. Lasse diesen Tab 
 ````{admonition} Note
 :class: note
 
-1. Solltest Du diese Seite aus einer App heraus aufgerufen haben (über einen Webview), kann es sein, dass die HTML-Datei nicht heruntergeladen wird. Please copy the URL and open it in your browser instead:
+1. Solltest Du diese Seite aus einer App heraus aufgerufen haben (über einen Webview), kann es sein, dass die HTML-Datei nicht heruntergeladen wird. Bitte kopiere die URL und öffne diese in einem Browser:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Or visit the latest release page:
+oder gehe zur Seite mit den neuesten Releases:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2.Backup copy hosted on this site:
+2.Backup-Kopie auf dieser Seite verfügbar:
 
- - If the external link is also unavailable, you can use this backup file to download.
+ - Sollte auch der externe Link nicht verfügbar sein, kannst Du alternativ auch eine Backup-Datei herunterladen.
 <!--crowdin:disable-->
 
 ```{eval-rst}
