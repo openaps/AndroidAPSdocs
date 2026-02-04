@@ -298,7 +298,7 @@ Sei vorsichtig und aktiviere ihn erst dann, wenn Du vollständig verstanden hast
 
 ## Loop
 
-As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+Seit der [AAPS-Version 3.4](#version3400), ist es hier nicht mehr möglich den Loop-Modus einzustellen. Du kannst den Loop Status jetzt unter [AAPS Bildschirme > Die Startseite > Loop Status](#AapsScreens-loop-status) ändern.
 
 (Preferences-minimal-request-change)=
 ### Minimaler Wert zur Anfrage einer Änderung
