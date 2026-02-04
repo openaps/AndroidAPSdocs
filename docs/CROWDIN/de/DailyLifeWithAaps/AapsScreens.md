@@ -95,19 +95,19 @@ Der Abschnitt in der Mitte zeigt:
 
 Auf der rechten Seite zeigt ein Symbol den Loop-Status an:
 
-1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
+1. Grüner Kreis = [Closed Loop](#KeyAapsFeatures-ClosedLoop), Loop läuft
+2. Violetter Kreis mit gepunkteter Linie = [Low Glucose Suspend (LGS)](#KeyAapsFeatures-LGS) (dt. Abschalten vor Niedrig)
 3. Roter Kreis = Loop deaktiviert (dauerhaft)
 4. Roter Kreis = Loop ausgesetzt (vorübergehend pausiert, aber Basalinsulin wird weiter abgegeben) - verbleibende Zeit wird unter dem Symbol angezeigt
 5. Grauer Kreis = Pumpe getrennt (vorübergehend gar keine Insulinabgabe) - verbleibende Zeit wird unter dem Symbol angezeigt
 6. Orangener Kreis = Superbolus läuft - verbleibende Zeit wird unterhalb des Symbols angezeigt
-7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
+7. Blauer Kreis mit gepunkteter Linie = [Open Loop](#KeyAapsFeatures-OpenLoop)
 
 Drücke kurz oder lang auf das Icon um den Dialog zum Wechsel des Loop-Modus (Close loop, Low Glucose Suspend [Reduzierung der Basalrate bei niedrigen Glukosewerten], Open Loop, Abschalten), zum Pausieren / wieder Einschalten des Loop oder zum Trennen / erneuten Verbinden der Pumpe.
 
-     * If short press on Loop icon, a validation is required after selection in Loop Dialog
+     * Bei kurzem Tippen auf das Loop-Symbol muss die Auswahl im Loop-Dialog bestätigt werden
     
-     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+     ![Loop Status Menü](../images/Home2020_Loop_Dialog.png)
     
 
 (aaps-screens-bg-warning-sign)=
@@ -124,7 +124,7 @@ Das rote Warndreieck signalisiert, dass Du sofort aktiv werden solltest: Du erh�
     :class: note
     Dein Loop ist so lange gestoppt, bis Du das Problem behebst!
 
-    ![Red BG warning](../images/bg_warn_red.png)
+    ![Rote Glukosewert-Warnung](../images/bg_warn_red.png)
     
 
 Du musst herausfinden, warum Du doppelte Glukosewert-Daten erhältst:
@@ -146,7 +146,7 @@ Wenn es jedoch viele Duplikate gibt, könnte es einfacher sein,
 
 Das gelbe Warnsignal weist darauf hin, dass Glukosewert-Daten in unregelmäßigen Zeitintervallen angekommen sind oder einige Glukosewerte fehlen. Beim Tippen auf das Warndreieck wird die Nachricht „Verwendete Daten neu berechnet“ angezeigt.
 
-    ![Yellow BG warning](../images/bg_warn_yellow.png)
+    ![Gelbe Glukosewert-Warnung](../images/bg_warn_yellow.png)
     
 
 Normalerweise musst Du in diesem Falle nichts tun. Der closed loop funktioniert weiter!
@@ -233,12 +233,12 @@ Der grüne Bereich spiegelt den Zielbereich wider.
 
 Diese Informationen werden auch in diesem Graph angezeigt:
 
-* Boluses: blue triangle on the BG curve and insulin amount
-* Carbs entries: orange triangle on the BG curve and carb amount
-* Target as defined in the profile or modified by temporary target: green line
-* Profile switches: star at the top of the graph
-* Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
-* [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
+* Boli: Blaues Dreieck auf der Glukosewert-Kurve und die Insulinmenge
+* Kohlenhydrat-Einträge: orangefarbenes Dreieck auf der Glukosewert-Kurve und die KH-Menge
+* Ziel, entweder so wie es im Profil hinterlegt ist oder wie es durch temporäre Ziele angepasst wurde: grüne Linie
+* Profilwechsel: Stern oben am Diagramm
+* Loop-Status: Farbige Linie oben am Graph, wenn der Status nicht Closed Loop sein sollte - Erklärungen zu den Farben findest Du bei [Loop-Status](#AapsScreens-loop-status)
+* [SMB](#Open-APS-features-super-micro-bolus-smb) - Wenn in [Einstellungen > OpenAPS SMB](#Preferences-openaps-smb-settings) aktiviert: blaue Dreiecke am unteren Rand des Graphen
 
 (AapsScreens-activate-optional-information)=
 
@@ -246,14 +246,14 @@ Diese Informationen werden auch in diesem Graph angezeigt:
 
 Mit dem Pfeil oben rechts kannst Du die folgenden optionalen Informationen einblenden:
 
-* Predictions (see below)
+* Vorhersagen (siehe unten)
 * Behandlungen: Notizen aus dem AKTIONEN-Reiter: grauer, oranger oder roter Punkt je nach Schweregrad, sowie BZ-Kalibrierungen: roter Punkt
 * Basal 
   * Wie im Profil hinterlegt: blaue gepunktete Linie am unteren Rand des Graphen
   * Tatsächlich geliefertes Basal: blaue Linie mit blauem Hintergrund
 * Aktivität - Verlauf des aktiven Insulins: gelbe Linie
 
-To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
+Um diese Informationen anzuzeigen, klicke auf der rechten Seite des Hauptdiagramms auf das Dreieck. Für das Haupt-Diagramm gibt es nur die vier Optionen oberhalb der Zeile „Diagramm 1 2 3 4“.
 
      ![Hauptdiagramm-Einstellungen](../images/Home2020_MainGraphSetting.png)
     
@@ -310,7 +310,7 @@ Sie basiert auf dem erwarteten Rückgang des BZ gemäß aktivem Insulin. Weitere
 
 Sie können bis zu vier zusätzliche Grafiken unterhalb der Hauptgrafik aktivieren. Wenn [Einfacher Modus](#preferences-simple-mode) aktiviert ist, sind zusätzliche Diagramme voreingestellt und können nicht verändert werden. Wenn Du eine eigene Konfiguration in den zusätzlichen Diagrammen nutzen möchtest, deaktiviere zuerst den **Einfachen Modus**.
 
-To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
+Um die Einstellungen für weitere Diagramme zu öffnen, klicke auf der rechten Seite des [Hauptdiagramms](#aaps-screens-main-graph) auf das Dreieck und scrolle nach unten.
 
 ![Einstellung weiterer Diagramme](../images/Home2020_AdditionalGraphSetting.png)
 
@@ -393,7 +393,7 @@ Zur Nutzung der Schaltflächen Insulin, Kohlenhydrate und Rechner: Du kannst, we
 
 ![Insulin-Button](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
+Um einen Bolus abzugeben, ohne den [Bolus-Rechner](#aaps-screens-bolus-wizard) zu nutzen.
 
 Durch Anhaken des Kästchens **Starte Essens-TT**, kannst Du automatisch Dein [temporäres Ziel „Bald essen“](#TempTargets-eating-soon-temp-target) starten.
 
@@ -518,13 +518,13 @@ Für mehr Details, schaue bitte in den Hinweisen auf der Seite [Berechnung der a
 
 ### Aktionen - Abschnitt M
 
-Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#aaps-screens-profile--target) on homescreen.
+Schaltfläche **[Profilwechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** als Alternative zum Drücken des [aktuellen Profils](#aaps-screens-profile--target) auf dem Startbildschirm.
 
-Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#aaps-screens-profile--target) on homescreen.
+Schaltfläche **[Temporäres Ziel](../DailyLifeWithAaps/TempTargets.md)** als Alternative zum Drücken des [aktuellen Ziels](#aaps-screens-profile--target) auf dem Startbildschirm.
 
 Button zum Starten oder Abbrechen einer temporären Basalrate. Beachte, dass sich die Bezeichnung der Schaltfläche von "TBR" zu "Abbrechen X%" ändert, wenn eine temporäre Basalrate abgegeben wird.
 
-Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+Auch wenn [verzögerte Boli](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) im Closed Loop nicht wirklich funktionieren, haben einige Nutzer nach einer Option gefragt, um verzögerte Boli dennoch verwenden zu können.
 
 * Diese Option ist nur für Dana RS und Insight Pumpen verfügbar. 
   * Der Closed Loop wird automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt.
@@ -554,7 +554,7 @@ Schwellenwerte können in [Einstellungen > Übersicht > Statusanzeige](#Preferen
 
 ### Careporal - Abschnitt O
 
-BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#aaps-screens-careportal).
+BZ-Test, Katheterwechsel, CGM-Sensor gesetzt, Pumpenbatterie-Wechsel sind die Basis für die in [Abschnitt N](#aaps-screens-careportal) angezeigten Daten.
 
 Mit dem Button 'Katheterwechsel' kannst Du sowohl einen Katheter- (Schlauch) als auch einen Kanülenwechsel (Nadel) aufzeichnen.
 
@@ -566,41 +566,41 @@ Abschnitt O spiegelt das Careportal aus Nightscout wider. Bewegung, Ankündigung
 
 #### Wechsel der Setzstellen (Site Rotation)
 
-Site Rotation button opens the Site Rotation Dialog in View mode:
+Die Schaltfläche „Wechsel der Setzstellen“ (engl. Site Rotation) öffnet den Dialog im Ansichts-Modus:
 
-* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
-* All Cannula change and Sensor change event since the past 45 days are available.
-* Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
+* Du kannst mit dem oberen Kontrollkästchen wählen, ob Du nur die Kanülen-Setzstellen, nur die Sensor-Setzstellen oder beides sehen möchtest
+* Es sind die Kanülen- oder Sensorwechsel der letzten 45 Tagen verfügbar.
+* Durch Klicken auf den Setzstellen-Bereich oder die Auswahl eines Listeneintrags werden nur die Einträge des ausgewählten Bereichs angezeigt. Der ausgewählte Bereich wird hellgrün hervorgehoben.
+* Du kannst, um die Setzstelle, den Pfeil oder den Kommentar zum gewählten Eintrag zu ändern, die „Bearbeiten-Ansicht“ öffnen
 
 ![View Mode](../images/SiteRotation/ViewMode.png)
 
-* The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
+* Auf der Registerkarte „Einstellungen“ (das rechte obere Zahnrad) kannst Du die Patientenansicht anpassen (Mann, Frau oder Kind) oder wählen, ob Du nur Kanülen-Setzstellen oder Sensor-Setzstellen oder beides managen möchtest.
 
 ![Einstellungen](../images/SiteRotation/Settings.png)
 
 ![Settings type](../images/SiteRotation/Type.png)
 
-*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+*Hinweis: Diese Einstellung legt fest, ob der Dialog für den Setzstellen-Wechsel bei einem neuen Eintrag „Nadelwechsel/Füllen“ oder „CGM-Sensor gesetzt“ automatisch zur Bearbeitung geöffnet wird oder nicht*
 
-* For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+* Bei Kanülenwechseln, die direkt über die Pumpe erfolgt sind, musst Du den „Bearbeiten-Modus“ öffnen und den neuen Eintrag bearbeiten, um Stelle und Pfeil einzutragen
 
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+Im „Bearbeiten-Modus“ kannst Du die Stelle, den Pfeil und die Notizen zum ausgewählten Eintrag wählen:
 
-* Entry type is visible on the to of Edit mode (Cannula Icon, or Sensor Icon)
-* You have to select Front or Back tab and then the Area
-* Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
+* Eintragstyp ist oben im Bearbeitungsmodus zu erkennen (Kanülen- oder Sensor-Symbol)
+* Du musst als Erstes die Vorder- oder Rückseite und dann den Bereich auswählen
+* Sobald eine Setzstelle ausgewählt wurde (grün hervorgehoben), werden in der Liste alle Einträge der letzten 45 Tage für die Stelle angezeigt
 
 ![Edit Mode](../images/SiteRotation/EditMode.png)
 
-* You can adjust an optional arrow with a click on little arrow icon on the top (Arrow allow you to precise sub-location, from 2 to 9, or Pod Orientation)
+* Den optionalen Pfeil kannst Du mit mit einem Klick auf das kleine Pfeil-Symbol oben einstellen (Pfeil präzisiert die Setzstelle von 2 bis 9 oder die Pod-Lage)
 
 ![Position](../images/SiteRotation/EditModeSub.png)
 
-* You can also adjust comments concerning selected site
-* After confirmation, the site is recorded
+* Du kannst auch Kommentare zur gewählten Setzstelle hinzufügen
+* Nach der Bestätigung wird die Setzstelle gespeichert
 
-Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+Durch einen Klick auf das Bild kann graphisch gefiltert werden, oder klicke auf ein Therapieereignis in der Liste. Um die Filter wieder zu löschen, klicke einfach außerhalb der Setzstellen auf das Bild
 
 ![Filtering](../images/SiteRotation/Filtering.png)
 
@@ -689,7 +689,7 @@ Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und A
 * [Temporäres Ziel](../DailyLifeWithAaps/TempTargets.md)
 * [Profilwechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 * Careportal: Notizen aus dem Aktionen-Reiter und Notizen, die in Dialogen eingegeben wurden
-* Running mode : history of loop status
+* Betriebsmodus: Die Historie des Loop-Status
 * Benutzereintrag: Andere Notizen, die nicht an Nightscout gesendet werden
 
 In der letzten Spalte wird die Datenquelle für jede Zeile in Blau angezeigt. Das kann sein:
@@ -761,7 +761,7 @@ Mit dem Befehl **Klonen** in Zeile **1** kannst Du eine Kopie eines **Profilwech
 
 ![Betriebsmodus](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
+Dieser Tab zeigt die Änderungen des [Loop-Status](#AapsScreens-loop-status): Loop geöffnet, geschlossen, unterbrochen.
 
 ### Careportal (Behandlungen)
 
@@ -773,7 +773,7 @@ Auf dieser Registerkarte werden alle Notizen und Alarme angezeigt, die von Night
 
 ## Historie
 
-Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl der Historie aufgerufen werden. Es kann nicht über die Konfiguration im Hauptmenü sichtbar gemacht werden. It can also be accessed through a button at the bottom of the [Action tab](#screens-action-tab).
+Diese Ansicht kann durch Drücken auf die drei Punkte oben rechts im Menü und Auswahl der Historie aufgerufen werden. Es kann nicht über die Konfiguration im Hauptmenü sichtbar gemacht werden. Du kommst auch über eine Schaltfläche am unteren Rand des [Aktionen-Reiters](#screens-action-tab) dort hin.
 
 Zeigt die **AAPS**-Historie (d. h. die historischen Verläufe) an. Siehe dazu auch [Deine Daten reviewen > AAPS-Historie](../Maintenance/Reviewing.md).
 
