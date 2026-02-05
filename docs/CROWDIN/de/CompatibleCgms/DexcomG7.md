@@ -20,9 +20,9 @@ Im Abschnitt [Glättung der Blut-Glukose-Daten](../CompatibleCgms/SmoothingBlood
 
 ```{admonition} No new users
 :class: warning
-Latest Dexcom servers update broke DiaKEM for new installs: the G7 app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
-Existing users do not experience issues for now: do not logout, wipe data, or reinstall the G7 app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
-New users are recommended to use [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+Das letzte Update der Dexcom-Server hat DiaKEM für neue Installationen beschädigt: Der Anmelde- und Onboarding-Prozess im Rahmen einer Neuinstallation kann in der G7-App nicht mehr durchlaufen werden. 
+Bestehende Benutzer haben momentan keine Probleme: Logge Dich nicht aus, lösche keine Daten und installiere die G7-App nicht neu, da Du sonst die App nicht wieder ans Laufen bekommst. Wenn sie bereits läuft, solltest Du davon nicht betroffen sein.
+Neuen Benutzern wird bis zur Lösung des Problems empfohlen, [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) als **AAPS** BZ-Datenquelle zu nutzen.
 ```
 
 **Hinweis: AAPS 3.2.0.0 oder höher ist erforderlich! Nicht für ONE+ verfügbar.**
@@ -30,7 +30,7 @@ New users are recommended to use [xDrip+](https://androidaps.readthedocs.io/en/l
 ### Installiere eine neue gepatchte (!) G7-App und starte den Sensor
 
 
-A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+Eine gepatchte Dexcom G7 App (DiAKEM) ermöglicht den Zugriff auf die Dexcom G7 Daten. Dies ist nicht die BYODA-App. BYODA kann derzeit keine Daten direkt vom G7 empfangen.
 
 - Wenn Du bisher die originale Dexcom-App genutzt hast, musst Du diese im ersten Schritt nun deinstallieren. Wenn Du den Sensor-Kopplungscode noch kennst, kannst Du eine laufende Sensorsitzung weiterführen. Bitte merke ihn Dir daher, bevor Du die originale G7-App deinstallierst.
 
@@ -58,7 +58,7 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 ## 4. Juggluco
 
-Version 9.0+ required
+Version 9.0+ ist erforderlich
 
 - Deaktiviere die App, die zuvor mit dem Sensor verbunden war: Deinstalliere die App oder nutze „Stopp erzwingen“ Deaktiviere in den App-Einstellungen die Berechtigung „Geräte in der Nähe“. Schränke den Akkuverbrauch der App ein.
 

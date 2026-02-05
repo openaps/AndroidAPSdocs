@@ -33,10 +33,10 @@ Mehr dazu findest Du in dem, von Tim Street auf der Seite [www.diabettech.com](h
 
 ```{admonition} Old app version
 :class: warning
-Dexcom G6 BYODA is now a very old version of the app and cannot be updated.
+Dexcom G6 BYODA ist mittlerweile eine sehr alte App-Version und kann nicht mehr aktualisiert werden.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+ (**not for** **G5/ONE/G7 sensors!**)
+-   Die [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) unterstützt auch lokale Broadcasts an AAPS und/oder xDrip+ (**gilt nicht für** **G5/ONE/G7 Sensoren!**)
 
 ![BYODA broadcast options](../images/BYODA.png)
 

@@ -9,16 +9,16 @@ Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als
 - Aktualisiere so bald wie möglich auf die neueste **AAPS**-Version, nachdem sie verfügbar ist.
 - Sobald eine neue Version verfügbar ist, wird Dir in der **AAPS**-App ein Hinweis darüber angezeigt.
 - Wenn eine neue Version verfügbar ist, wird darüber auch auf Facebook informiert.
-- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-- Do not forget to export your **AAPS'** settings.
+- Nach der Veröffentlichung lies bitte die [Versionshinweise](ReleaseNotes.md) (Release Notes) genau durch, und kläre mögliche Fragen in der Community auf Facebook oder Discord, bevor Du mit dem Update weiter machst.
+- Vergiss nicht Deine **AAPS**-Einstellungen zu exportieren.
 
-## Update AAPS with browser build
+## AAPS mit Browser-Build aktualisieren
 
-If you already built your AAPS app with the Browser Build method, follow [these instructions](./UpdateBrowserBuild.md).
+Wenn Du die AAPS-App bereits mit der Browser-Build-Methode erstellt hast, befolge [diesen Anweisungen](./UpdateBrowserBuild.md).
 
-## Update AAPS with a computer
+## AAPS mit einem Computer aktualisieren
 
-Follow [these instructions.](./UpdateComputerBuild.md).
+Nutze [diese Anleitung](./UpdateComputerBuild.md).
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
@@ -26,11 +26,11 @@ Follow [these instructions.](./UpdateComputerBuild.md).
 
 Schaue in den [Release Notes](../Maintenance/ReleaseNotes.md) nach, ob es nach dem Update besondere Dinge zu beachten gibt.
 
-After you installed the new apk:
+Nach der Installation der neuen APK:
 
-- you can check the **AAPS'** version on your phone by clicking the three dots menu on the top right and then 'About' (as per the screenshot below). The **AAPS'** current version can be viewed; 
-- ensure import settings have been actioned;
-- action a 'full synchroniation' under **NSClient** to ensure **AAPS** is working off accurate & complete data; and
-- please check your **AAPS'** settings under **Preferences** and ensure these remain accurate.
+- Du kannst prüfen welche **AAPS**-Version auf Deinem Smartphone installiert ist, indem Du rechts oben auf das Drei-Punkte-Menü und dann auf „Über“ tippst (wie im Screenshot unten). Die aktuelle **AAPS**-Version wird angezeigt 
+- Achte darauf, dass die Einstellungen importiert worden sind
+- Führe eine „Vollständige Synchronisierung“ im Menü **NSClient** aus, um sicherzustellen, dass **AAPS** mit richtigen und vollständigen Daten arbeitet und
+- Prüfe in den **Einstellungen** die **AAPS**-Einstellungen, um sicher zu sein, dass diese unverändert richtig sind.
 
 ![Installierte AAPS Version](../images/Update_VersionCheck.png)

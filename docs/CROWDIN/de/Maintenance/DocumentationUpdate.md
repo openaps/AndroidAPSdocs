@@ -2,15 +2,15 @@
 
 ## Januar 2025
 
-- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
-- Update der CGM-Liste. Dexcom G5, Tomato, Glimp removed.
-- [Site rotation UI](#Aapsscreens-site-rotation)
+- [3.4](#version3400) Veröffentlichung und Dokumentation aktualisiert Roll-up (Einrichtungsasssistent, Computer Build-Versionen, Konfiguration)
+- Update der CGM-Liste. Dexcom G5, Tomato, Glimp entfernt.
+- [Oberfläche für Setzstellen-Wechsel](#Aapsscreens-site-rotation)
 - [Betriebsmodus](#AapsScreens-running-mode)
 - [Autotune](../AdvancedOptions/Autotune.md)
 
 ## Dezember 2025
 
-- [Profile tuning](../GettingHelp/ProfileTuning.md) from @robrub
+- [Profil-Feinjustierung](../GettingHelp/ProfileTuning.md) von @robrub
 
 ## Oktober 2025
 
@@ -40,7 +40,7 @@
 ## November 2024
 
 - Aktualisierung [Dein AAPS-Profil](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnerat
+- Neustrukturierung der [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md)-Inhalte @psonnerat
 
 ## Oktober 2024
 
@@ -80,7 +80,7 @@ AAPS 3.1 Dokumentation ist [hier](https://androidaps.readthedocs.io/en/3.1/index
 
 ## November 2021
 
-- Best practices for calibrating a libre 2 sensor
+- Best Practices für die Kalibrierung eines Libre 2 Sensors
 - [ISF](../UsefulLinks/FAQ.md) Neuformulierung der Wirkweise
 - Aktualisierung [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
 - Gepatchte [Dexcom](../CompatibleCgms/DexcomG6.md)-App entfernt, da nicht mehr erforderlich
