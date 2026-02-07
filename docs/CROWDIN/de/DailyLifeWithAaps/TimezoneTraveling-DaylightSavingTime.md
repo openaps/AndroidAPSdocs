@@ -14,9 +14,9 @@ Um dies zu vermeiden, gibt es zwei Möglichkeiten:
 
 ### Option 1: Heimatzeit beibehalten und Time Shift des Profils
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+* Schalte die automatische Einstellung von Datum und Uhrzeit in Deinem Smartphone aus (manueller Zeitzonen-Wechsel).
 
-* Phone must keep your standard time as at home for the whole travel period.
+* Dein Smartphone muss für die gesamte Reise auf Datum und Zeit Deines Heimatortes eingestellt bleiben.
 
 * Führe einen Profilwechsel mit Zeitverschiebung entsprechend dem Zeitunterschied Deines Heimatortes zum Zielort durch.
    
