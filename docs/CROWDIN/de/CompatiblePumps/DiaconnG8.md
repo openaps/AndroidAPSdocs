@@ -88,4 +88,4 @@
 ### Funktion verzögerter Bolus
 
 - Wenn Du einen verzögerten Bolus verwendest, wird der "Closed Loop"-Modus deaktiviert.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- [Diese Seite](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) erklärt die Details, warum der Extended-Bolus in einem Closed-Loop-Umfeld nicht funktioniert.
