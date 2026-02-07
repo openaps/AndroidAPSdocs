@@ -15,11 +15,11 @@ Eine Entwickler-Version hat ein Ablaufdatum. Das scheint unpraktisch, wenn es zu
 
 (github-pr-test)=
 
-## Test items in a pull request (GitHub CI actions deploy)
+## Testelemente in einem Pull-Request (GitHub CI-Aktionen bereitstellen)
 
-Available from 3.3.2.1.dev
+Verfügbar ab 3.3.2.1. Dev
 
-- Suitable for testers or those helping with testing.
+- Geeignet für Tester oder für diejenigen, die beim Testen helfen.
 
 ```{eval-rst}
 .. raw:: html
@@ -39,20 +39,20 @@ Available from 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- PR number: Please enter the PR number that you want to test.
+- PR-Nummer: Bitte gib die zu testende PR-Nummer ein.
 
-- PR reference types: PR reference types include two options:
+- PR-Referenztypen: PR-Referenztypen haben zwei Optionen:
     
     - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+    - Ruft den tatsächlichen Inhalt aus dem Branch des PR-Autors ab (d. h. die ursprüngliche Commit-Historie ohne Merge-Operationen).
+    - Dies entspricht dem ursprünglichen Zustand des PR-Zweigs, als wäre er direkt aus einem Fork- oder Feature-Zweig abgerufen worden.
     
     - merge:
     
-    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
-    - This is a virtual merge commit automatically created by GitHub.
-    - This commit only exists when the PR has no conflicts and is mergeable.
+    - Ruft das Ergebnis der von GitHub vorab simulierten Zusammenführung des PR in den Zielzweig (z. B. Dev) ab.
+    - Dies ist ein virtueller Merge-Commit, der automatisch von GitHub erstellt wurde.
+    - Dieser Commit existiert nur, wenn die PR keine Konflikte hat und zusammenführbar ist.
     
     - variant:
     
-    - Please refer to <variant>
+    - Bitte beachte hierzu den Abschnitt [Variante](variant)
