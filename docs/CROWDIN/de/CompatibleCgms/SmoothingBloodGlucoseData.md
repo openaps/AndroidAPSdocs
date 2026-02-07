@@ -29,7 +29,7 @@ Verwende diese Option nur dann, wenn Deine CGM-Daten bereits (in einer Collector
 | G5/G6/ONE     | Wenn verrauscht |              | Empfohlen |
 | G7/ONE+/Stelo | Wenn verrauscht | Falls stabil |           |
 
-Die Werte der Libre Sensoren sind verrauscht und müssen geglättet werden. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Die Werte der Libre Sensoren sind verrauscht und müssen geglättet werden. Wenn Du eine xDrip+-Direktverbindung oder die [gepatchte App als Datenquelle-Datenquelle nutzt (Empfang von einer anderen App, bei Juggluco enthalten), ist die Glättung bereits innerhalb der App](#libre2-value-smoothing-raw-values) erledigt worden.
 
 | Sensor / Datenquelle |   Juggluco   | xDrip+ Direkt | xDrip+ Bridge | xDrip+ gepatchte App |
 | -------------------- |:------------:|:-------------:|:-------------:|:--------------------:|
