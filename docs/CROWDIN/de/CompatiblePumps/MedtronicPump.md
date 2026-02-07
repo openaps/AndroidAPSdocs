@@ -54,7 +54,7 @@ Während der Konfiguration Deiner Medtronic-Pumpe, solltest Du die folgenden Ein
 
 - **Seriennummer der Pumpe**: Steht auf der Rückseite der Pumpe und beginnt mit 'SN'. Hier sollen nur die sechs Ziffern (keine Buchstaben) eingegeben werden (z.B. 123456).
 - **Pumpentyp**: Das genutzte Pumpenmodell (z.B. 522). 
-- **Pumpenfrequenz**: In Abhängigkeit davon, wo Deine Pumpe hergestellt wurde, wähle eine der beiden Optionen aus. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select): 
+- **Pumpenfrequenz**: In Abhängigkeit davon, wo Deine Pumpe hergestellt wurde, wähle eine der beiden Optionen aus. Bitte schlage in den [FAQ](#MedtronicPump-faq) nach, wenn Du nicht sicher bist welche Option Du wählen solltest: 
     - für Pumpen aus den USA & Kanada ist die Frequenz 916 MHz.
     - Pumpen aus anderen Ländern ("worldwide") nutzen 868 MHz.
 - **Max Basal in der Pumpe (IE/h)**: Der Wert muss mit den Einstellungen auf Deiner Pumpe übereinstimmen (vgl. 'Pumpen-Einstellungen' oben). Auch hier gilt: Wähle die Einstellung sorgfältig, da dieser Wert bestimmt, welche Insulinmenge AAPS Dir über die Basalrate geben darf. Damit wird die maximale temporäre Basalrate festgelegt. Zum Beispiel würde die Einstellung dieses Wertes auf das Vierfache Deiner maximalen Standard-Basalrate eine temporäre Basalrate von 400% ermöglichen. Der Maximalwert der Pumpe beträgt 34,9 Einheiten pro Stunde.
@@ -93,8 +93,8 @@ Während der Konfiguration Deiner Medtronic-Pumpe, solltest Du die folgenden Ein
 Am unteren Bildschirmrand befinden sich drei Schaltflächen:
 
 - **Aktualisieren** ist zum Aktualisieren des Pumpen-Status. Dies sollte nur verwendet werden, wenn die Verbindung über einen längeren Zeitraum unterbrochen war. Dies löst eine vollständige Datenaktualisierung aus (Chronik abrufen abfragen/setzen der Zeit, Profil abfragen, Batteriestand abfragen, etc).
-- **Pump History**: Shows pump history (see [below](#MedtronicPump-pump-history))
-- **RL Stats**: Show RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status))
+- **Pumpen-Historie**: Zeigt die Pumpen-Historie (s. [unten](#MedtronicPump-pump-history))
+- **RL Stats**: Zeigt Statistiken zum RileyLink (s. [unten](#MedtronicPump-rl-status-rileylink-status))
 
 (MedtronicPump-pump-history)=
 
@@ -130,7 +130,7 @@ AAPS verwendet die Seriennummer für die Synchronisation und wird Nightscout off
 
 ### OpenAPS Nutzer
 
-Als OpenAPS-Nutzender solltest Du wissen, dass AAPS mit einer Medtronic-Pumpe einen völlig anderen Ansatz als OpenAPS verfolgt. Using AAPS the primary method of interacting with the pump is via your phone. In der Regel muss die Pumpe nur bei einem Reservoirwechsel direkt über das Pumpen-Menü bedient werden. Bei OpenAPS ist es erforderlich zumindest den Teil eines Bolus direkt an der Pumpe auszulösen. Das ist bei AAPS nicht notwendig. Wenn ein manueller Bolus direkt an der Pumpe eingegeben wird und AAPS gleichzeitig versucht einen Bolus abzugeben, kann es zu Problemen kommen. Auch wenn es Sicherhheitsprüfungen zum Verhindern solcher Probleme gibt, sollten diese besser vermieden werden.
+Als OpenAPS-Nutzender solltest Du wissen, dass AAPS mit einer Medtronic-Pumpe einen völlig anderen Ansatz als OpenAPS verfolgt. AAPS interagiert mit der Pumpe im Wesentlichen über Dein Smartphone. In der Regel muss die Pumpe nur bei einem Reservoirwechsel direkt über das Pumpen-Menü bedient werden. Bei OpenAPS ist es erforderlich zumindest den Teil eines Bolus direkt an der Pumpe auszulösen. Das ist bei AAPS nicht notwendig. Wenn ein manueller Bolus direkt an der Pumpe eingegeben wird und AAPS gleichzeitig versucht einen Bolus abzugeben, kann es zu Problemen kommen. Auch wenn es Sicherhheitsprüfungen zum Verhindern solcher Probleme gibt, sollten diese besser vermieden werden.
 
 ### Protokollierung
 
