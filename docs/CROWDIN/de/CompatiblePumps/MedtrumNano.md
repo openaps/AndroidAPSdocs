@@ -45,7 +45,7 @@ ACHTUNG: Wenn ein Patch mit AAPS mit aktiviert wird, **MÜSSEN** alle anderen Ge
 
 ### Schritt 1: Wähle die Medtrum-Pumpe aus
 
-#### Option 1: New installations
+#### Option 1: Neue Installation
 
 Wenn Du AAPS erstmals installierst, führt Dich der **Einrichtungsassistent** durch die AAPS-Installation. Wenn Du das Pumpenauswahlmenü erreichst, wähle "Medtrum" aus.
 
@@ -53,7 +53,7 @@ Falls Du Dir nicht sicher bist, kannst Du auch zunächst die „Virtuelle Pumpe�
 
 ![Einrichtungsassistent](../images/medtrum/SetupWizard.png)
 
-#### Option 2: The Config Builder
+#### Option 2: Der Konfigurations-Generator
 
 Bei einer bestehenden Installation kannst Du die **Medtrum**-Pumpe unter [Konfiguration > Pumpe](#Config-Builder-pump) auswählen:
 
@@ -375,7 +375,7 @@ Wenn Du Verbindungsabbrüche oder andere Verbindungsprobleme hast:
 - In den Android-Anwendungseinstellungen für AAPS: Standortberechtigung auf "Immer zulassen" setzen.
 
 ### Bluetooth-Probleme
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Bei bekannten Problemen mit Bluetooth-Verbindungen, Pumpen/Pods oder Aktivierungs- und Verbindungsproblemen schau im Abschnitt [Bluetooth-Fehlerbehebung](../GettingHelp/BluetoothTroubleshooting.md) nach.
 
 ### Aktivierung unterbrochen
 
