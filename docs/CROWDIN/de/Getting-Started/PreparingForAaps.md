@@ -88,7 +88,7 @@ Um Dir durch den Erstellungsprozess zu helfen, gibt es eigene spezifische Abschn
 
 - „[AAPS erstellen](../SettingUpAaps/BuildingAaps.md)“ (Abschnitt 3) und [Fehlerbehebung](../GettingHelp/GeneralTroubleshooting.md) (Abschnitt 8).
 
-How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
+Wie lange es dauert den Closed Loop zu erreichen ist individuell verschieden, ein grober Zeitablauf bis zum vollen Loopen mit AAPS findest Du ([hier](#preparing-how-long-will-it-take)).
 
 
 #### Exportdatei des Keystore & der Konfigurationseinstellungen
@@ -188,7 +188,7 @@ Sobald Du **AAPS** voll nutzt, musst Du immer noch regelmäßig Deine Einstellun
 
 ### Medizinische Überlegungen
 
-In addition to the medical warnings in the [safety section](#preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
+Zusätzlich zu den medizinischen Warnungen in den [Sicherheitshinweisen](#preparing-safety-first) gibt es in Abhängigkeit vom in der Pumpe verwendeten Insulin weitere Parameter.
 
 #### Insulinwahl
 
@@ -210,7 +210,7 @@ Diese Dokumentation möchte die notwendige technische Expertise auf ein absolute
 
 #### AAPS und Android-Versionen
 
-Die aktuelle **AAPS**-Version (3.4) setzt ein Android Smartphone mit Google **Android 12.0 oder höher** voraus. Wenn Du vorhast ein neues Smartphones zu kaufen (Stand: Januar 2026), wird Android 16 empfohlen.<br/> Aus Sicherheitsgründen wird dringend empfohlen, **AAPS**-Version immer auf dem neuesten Stand zu halten. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+Die aktuelle **AAPS**-Version (3.4) setzt ein Android Smartphone mit Google **Android 12.0 oder höher** voraus. Wenn Du vorhast ein neues Smartphones zu kaufen (Stand: Januar 2026), wird Android 16 empfohlen.<br/> Aus Sicherheitsgründen wird dringend empfohlen, **AAPS**-Version immer auf dem neuesten Stand zu halten. Für Menschen, die kein Gerät mit Android 12.0 (oder neuer) nutzen können, stehen weiterhin ältere **AAPS**-Versionen für ältere Android-Versionen zur Verfügung, siehe dazu auch die [Release Notes](#maintenance-android-version-aaps-version).
 
 #### Smartphone-Modell wählen
 Welches genaue Modell Du kaufen solltest, hängt von den gewünschten Funktionen ab. Die [Smartphones](../Getting-Started/Phones.md)-Seite enthält von Nutzendenden getestete und empfohlene Setups.
@@ -219,8 +219,8 @@ Das Smartphone sollte regelmäßig Sicherheitsupdates erhalten und stets auf der
 
 ```{admonition} delaying Samsung phones updates
 :class: Warnung
-Samsung hält unglücklicherweise einen Rekord an erzwungenen Updates nach denen Bluetooth-Verbindungsprobleme auftreten. To disable these forced updates you need to switch the phone to "developer mode" by:
- go to settings and about then software information, then tap build number until it confirms you have unlocked developer mode. Gehe zurück in die Einstellungen und Du solltest ganz unten einen neuen Eintrag "Entwickleroptionen" finden. Öffne die Entwickleroptionen und scrolle bis zum Punkt "System automat. aktualisieren" und deaktiviere diese Option
+Samsung hält unglücklicherweise einen Rekord an erzwungenen Updates nach denen Bluetooth-Verbindungsprobleme auftreten. Um diese Zwangsupdates zu deaktivieren, musst Du das Smartphone in den „Entwicklermodus“ schalten:
+ Gehe zu Einstellungen - Telefoninfo - Softwareinformationen und tippe so lange auf „Buildnummer“, bis die Meldung über den aktivierten Entwicklermodus erscheint. Gehe zurück in die Einstellungen und Du solltest ganz unten einen neuen Eintrag "Entwickleroptionen" finden. Öffne die Entwickleroptionen und scrolle bis zum Punkt "System automat. aktualisieren" und deaktiviere diese Option
 ```
 
 ```{admonition} Google Play Protect potential Issue
