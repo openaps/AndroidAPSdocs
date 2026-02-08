@@ -1,7 +1,7 @@
 # AAPS remote steuern
 Es gibt vier sehr wirkungsvolle Wege, **AAPS** remote zu steuern:
 
-1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower phone is Android) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device).  
+1) [SMS-Befehle](#RemoteControl_SMS-Commands) (das Follower-Smartphone kann entweder Android oder iOS nutzen), 2) [AAPSClient](#RemoteControl_aapsclient) (das Follower-Smartphone nutzt Android) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS oder ein anderes Gerät/Computer).  
 4) [Smartwatches](#RemoteControl_smartwatches) (Android)
 
 Die ersten drei sind meist für Pflegende/Eltern geeignet und Smartwatches sind **zusätzlich** für Erwachsene mit Diabetes sehr hilfreich.
@@ -84,7 +84,7 @@ Wenn Du die optionale Funktion 'Mit Websockets verbinden' auswählst, achte dara
 
 Achte darauf, dass sowohl der __AAPSClient__ als auch __AAPS__ auf dem Reiter „NSClient“ für jedes der Smartphones „verbunden“ anzeigt und dass bei Auswahl eines „Profilwechsel“ oder „Temporäres Ziel“ im  __AAPSClient__ dieses auch in __AAPS__ korrekt aktiviert wird.
 
-Achte auch bei der Eingabe von Kohlenhydraten in __AAPS__ oder dem __AAPSClient__ darauf, dass die Daten automatisch in der Rubrik „Behandlungen“ des __AAPSClient__ und __AAPS__ sichtbar werden. Otherwise, this could indicate a malfunction within either the user’s __AAPS__ or __AAPSClient__ set up.
+Achte auch bei der Eingabe von Kohlenhydraten in __AAPS__ oder dem __AAPSClient__ darauf, dass die Daten automatisch in der Rubrik „Behandlungen“ des __AAPSClient__ und __AAPS__ sichtbar werden. Sollte das nicht der Fall sein, deutet das darauf hin, dass entweder Dein __AAPS__ oder der __AAPSClient__ nicht richtig konfiguriert ist.
 
 ### Das 'NS access token'-Konfigurationsproblem beheben
 
@@ -102,7 +102,7 @@ Wenn Du Probleme mit **AAPS** v3 hast ('NS Access Token' wird nicht akzeptiert) 
 | **Wartung**-Tab      | - Einstellungen ex- und importieren                                                                                                                                                                                            |
 | **Profil**-Tab       | - Neues Profil erstellen<br>- Profilwechsel                                                                                                                                                                              |
 
-Mit dem **AAPSClient** kann das Elternteil/Betreuende einen Großteil der Anpassungen direkt in **AAPS** (Ausnahme: Bolusabgabe) über das Mobilfunknetz oder Internet remote vornehmen. Die wichtigsten Vorteile des **AAPSClient** sind die Geschwindigkeit und Einfachheit mit der Eltern/Betreuende **AAPS** remote steuern können. Der __AAPSClient__ _kann_ deutlich schneller als die Eingabe von zu authentifizierenden SMS-Befehlen sein. Befehle, die im **AAPSClient** eingegeben werden, werden nach Nightscout hochgeladen. In order for the actions taken in **AAPSClient** to be actually actioned in **AAPS**, the NSClient settings must allow to receive such orders. Vgl. [Synchronisations-Abschnitt der NSClient-Einstellungen](#Preferences-nsclient-synchronization).
+Mit dem **AAPSClient** kann das Elternteil/Betreuende einen Großteil der Anpassungen direkt in **AAPS** (Ausnahme: Bolusabgabe) über das Mobilfunknetz oder Internet remote vornehmen. Die wichtigsten Vorteile des **AAPSClient** sind die Geschwindigkeit und Einfachheit mit der Eltern/Betreuende **AAPS** remote steuern können. Der __AAPSClient__ _kann_ deutlich schneller als die Eingabe von zu authentifizierenden SMS-Befehlen sein. Befehle, die im **AAPSClient** eingegeben werden, werden nach Nightscout hochgeladen. Damit die im **AAPSClient** durchgeführten Aktionen tatsächlich in **AAPS** ausgeführt werden, müssen die NSClient-Einstellungen es zulassen solche Anforderungen zu empfangen. Vgl. [Synchronisations-Abschnitt der NSClient-Einstellungen](#Preferences-nsclient-synchronization).
 
 
 
