@@ -53,7 +53,7 @@ Klingt attraktiv, oder? Wie dem auch sei, momentan experimentieren nur wenige En
 
 Auch wenn es derzeit keinen eindeutigen Spezifikationen gibt, die erkennen lassen, ob eine Smartwatch als Standalone **AAPS** nutzbar ist, gibt es einige Parameter, die gute Indikatoren sind:
 
-1)  Android 12 or newer. 2)  Die Möglichkeit zu haben das Zifferblatt aus dem "Square-Modus" zu holen, um Text zum einfacheren Lesen zu vergrößern. 3) Sehr gute Akkulaufzeit. 4) Gute Bluetooth-Reichweite.
+1) Android 12 oder höher. 2)  Die Möglichkeit zu haben das Zifferblatt aus dem "Square-Modus" zu holen, um Text zum einfacheren Lesen zu vergrößern. 3) Sehr gute Akkulaufzeit. 4) Gute Bluetooth-Reichweite.
 
 Die meisten Frustrationen mit Standalone **AAPS**-Smartwatches entstehen aus der Interaktion mit einem winzigen Bildschirm, und der Tatsache, dass die aktuelle AAPS-Voll-App-Benutzeroberfläche nicht für eine Smartwatch konzipiert wurde. Durch das sehr eingeschränkte Display und kann ein Stift beim Editieren der **AAPS**-Einstellungen helfen. Einige der AAPS-Tasten sind möglicherweise auf dem Zifferblatt nicht sichtbar.
 
@@ -170,7 +170,7 @@ Pebble Smartwatches ([Produktion mittlerweile eingestellt](https://en.wikipedia.
 
 Dies ist eine besondere Technologie, die Glukosedaten **direkt** vom Dexcom Transmitter empfangen kann. Es ist nicht so bekannt, dass ein Dexcom G6/G7-Transmitter tatsächlich die aktuellen Glukosedaten auf _zwei_ getrennten Kanälen überträgt, einem Smartphone-Kanal und einem medizinischen Kanal. Die Bluejay Uhren können so eingerichtet werden, dass sie Glukosedaten auf allen Kanälen erhalten. Wenn **AAPS ** den Smartphone-Kanal nutzt, dann können die Bluejay Uhren den medizinischen Kanal benutzen.
 
-Sie ist derzeitig die einzige Smartwatch, die ohne Smartphone und Loop-System in der Nähe genutzt werden kann. So, for example, if you disconnect the pump and the **AAPS** phone at the beach or theme park, and are out of range of the **AAPS** phone, you can still get readings from your Dexcom directly to the Bluejay watch.
+Sie ist derzeitig die einzige Smartwatch, die ohne Smartphone und Loop-System in der Nähe genutzt werden kann. Beispiel: Wenn Du die Insulinpumpe und das **AAPS**-Smartphone am Strand oder im Freizeitpark trennst, und Du entfernst Dich vom **AAPS**-Smartphone, kannst Du trotzdem die Dexcom-Glukosewerte auf der BlueJay Smartwatch direkt empfangen.
 
 Bekannte Nachteile sind, dass sie nicht zuverlässig alle 5 Minuten neue Werte verarbeitet und dass der Akku nicht auszutauschen ist. Die Bluejay GTS Smartwatch läuft mit einer modifizierten Version der xDrip+ Software, während die Bluejay U1 mit der xDrip+-Vollversion läuft.
 
