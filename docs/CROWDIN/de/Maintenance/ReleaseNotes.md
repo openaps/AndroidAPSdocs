@@ -27,15 +27,15 @@ Wenn die Android-Version Deines Smartphones älter als Android 12 ist, kannst Du
 
 Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zwei ältere Versionen zur Verfügung gestellt, bei denen die Versionsprüfung angepasst wurde. Es sind keine anderen Verbesserungen enthalten.
 
-### Android 12 and up
+### Ab Android 12
 
 - Verwende die aktuelle AAPS-Version.
 - Download des AAPS Code unter <https://github.com/nightscout/AndroidAPS>
 
 ### Android 11
 
-- Use AAPS version **3.3.2.1**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 3.3.2.1
+- Verwende AAPS Version **3.3.2.1**
+- Download des AAPS Codes unter <https://github.com/nightscout/AndroidAPS> branch 3.3.2.1
 
 ### Android 9,10
 
@@ -54,7 +54,7 @@ Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zw
 
 ## Wear OS-Version
 
-- AAPS requires at least WearOS API level 30 (Android 11)
+- AAPS benötigt mindestens Wear OS API Level 30 (Android 11)
 
 ```{tip}
 WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsWearOs-WearOS5).
@@ -66,69 +66,69 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 
 ## Version 3.4.0.0
 
-Release date: 31-12-2025
+Erscheinungsdatum: 31.12.2025
 
 ### Vor dem Aktualisieren:
 * Diese Version benötigt Google Android 12.0 oder höher. Prüfe vor der Aktualisierung die Smartphone-Version.
 * Aktualisiere Android Studio auf die neueste Version oder noch besser, nutze den „Browser-Build“.
 
-### New features
-* Running mode @MilosKozak
-  * Show [loop status history](#AapsScreens-running-mode) in treatment tabs
-  * Show and allow changing [loop status from AAPSClient](#RemoteControl_aapsclient).<br>NB : needs the setting [NSClient > Synchronization > Receive Running mode events](#Preferences-nsclient-synchronization)
+### Neue Funktionen
+* Betriebsmodus @MilosKozak
+  * Zeige die [Lopp-Status-Historie](#AapsScreens-running-mode) bei den „Behandlungen“
+  * Anzeigen und ändern des [Loop-Status mit dem AAPSClient](#RemoteControl_aapsclient).<br>Beachte: Muss mit der Einstellung [NSClient > Synchronisation > Empfangen von Betriebsmodus-Ereignissen](#Preferences-nsclient-synchronization)
 * [Neue CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
-* [Site rotation](#Aapsscreens-site-rotation) support @Philoul
-* New [automation action](#automations-automation-action) : enable or disable SMBs @MilosKozak
-* Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
+* Unterstützung von [Setzstellen-Wechseln](#Aapsscreens-site-rotation) @Philoul
+* Neue [Automatisierungsaktion](#automations-automation-action) : SMBs aktivieren oder deaktivieren @MilosKozak
+* Syai CGM ist eine [vertrauenswürdige Quelle](#GettingStarted-TrustedBGSource) und unterstützt erweitertes Filtern @MilosKozak
 
-### Wear OS Improvements
-* dramatically reduced battery usage @MilosKozak
-* UI improvements and fixes @olorinmaia
-* almost complete rewritten code to match current level of libs (WearOS 2 previously) @MilosKozak
-* 2 new complications for extended data @Philoul
-* Migrated to modern complication provider with DataStore @MilosKozak
+### Wear OS Verbesserungen
+* Akkuverbrauch drastisch reduziert @MilosKozak
+* UI-Verbesserungen und -Korrekturen @olorinmaia
+* Code fast vollständig neu geschrieben, um dem aktuellen Stand der Bibliotheken (zuvor WearOS 2) zu entsprechen @MilosKozak
+* 2 neue Komplikationen für erweiterte Daten @Philoul
+* Umstellung auf modernen Komplikationsanbieter mit DataStore @MilosKozak
 
-### Memory Leak Fixes
-* Fixed memory leaks in code @MilosKozak
-* Added LeakCanary memory leak reporting to Firebase Crashlytics @MilosKozak
+### Behebung von Speicherlecks
+* Speicherlecks im Code behoben @MilosKozak
+* LeakCanary-Speicherleckberichte zu Firebase Crashlytics hinzugefügt @MilosKozak
 
-### Pump Driver Improvements
-* **DanaI**: fixed disconnection issues @MilosKozak
-* **RileyLink**: Speedup communication by minimizing delays @mifi100
-* **Medtrum**: Added patch activation time and age display @vanelsberg, password uppercase fix @MilosKozak
-* **Combo**: Fixed Test race conditions @MilosKozak @dv1
-* **Equil**: Optimized connectivity, reduced battery usage @MilosKozak
+### Verbesserungen in der Pumpenunterstützung
+* **DanaI**: Verbindungsabbrüche behoben @MilosKozak
+* **RileyLink**: Schnellere Kommunikation durch Minimierung der Verzögerungen @mifi100
+* **Medtrum**: Patch-Aktivierungszeit und Alter hinzugefügt @vanelsberg, Passwort-Großbuchstaben behoben @MilosKozak
+* **Combo**: Test Race Bedingungen korrigiert @MilosKozak @dv1
+* **Equil**: Optimierte Konnektivität, reduzierter Akkuverbrauch @MilosKozak
 
 ### Nightscout Sync
-* Improved deduplication on NS failure @MilosKozak
+* Verbesserte Deduplizierung bei NS-Ausfall @MilosKozak
 
-### UI/UX Improvements
-* various improvemnts @MilosKozak @Philoul @olorinmaia
+### UI/UX Verbesserungen
+* Diverse Verbesserungen @MilosKozak @Philoul @olorinmaia
 
 ### Automatisierung
-* New SMB control action - enable/disable SMB via automation @MilosKozak
+* Neue SMB-Steuerungsaktion – SMB über Automatisierung aktivieren/deaktivieren @MilosKozak
 
-### Testing
-* Added comprehensive unit tests for Equil, Eopatch, Dana, and Medtronic pumps @MilosKozak
-* Improved test stability and coverage across multiple modules @MilosKozak
+### Testen
+* Umfassende Komponententests für Equil-, Eopatch-, Dana- und Medtronic-Pumpen hinzugefügt @MilosKozak
+* Verbesserte Teststabilität und Abdeckung über mehrere Module hinweg @MilosKozak
 
 ### Tidepool
-* Tidepool OAUTH2 (Support for new Tidepool authentication) @MilosKozak
+* Tidepool OAUTH2 (Support für neue Tidepool-Authentifizierung) @MilosKozak
 
 (version3321)=
 
 ## Version 3.3.2.1
 
-Release date: 13-08-2025
+Erscheinungsdatum: 13.08.2025
 
-- Fixed Omnipod Bluetooth connection on Android 16
-- CI process (Browser build)
-- Fix mmol-mgdl conversion
-- Fix wrong time selection in dialogs in some timezones
-- Fix reading keys in simple mode
-- Fix missed predictions on wear
-- Improved ConfigBuilder
-- Improved NSCv3 full sync
+- Omnipod Bluetooth-Verbindung auf Android 16 behoben
+- CI-Prozess - „Kontinuierliche Integration“ (Browser-Build)
+- Umrechnung mmol-mg/dl korrigiert
+- Falsche Zeitauswahl in Dialogen in einigen Zeitzonen korrigiert
+- Lesen der Schlüssel im einfachen Modus korrigiert
+- Fehlende Vorhersagen auf der Wear-Smartwatch korrigiert
+- Konfigurator verbessert
+- NSCv3 Vollsynchronisation verbessert
 
 (version3300)=
 
@@ -629,7 +629,7 @@ Du musst [Ziel 11](#objectives-objective10) (in späteren Version Ziel 10!) zumi
 - Visualisierung der [dynamischen Zielanpassung](#AapsScreens-visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - Neues [Layout der Einstellungen](../SettingUpAaps/Preferences.md) @MilosKozak
 - Update des SMB Algorithmus @Tornado-Tim
-- [Low glucose suspend mode](#KeyAapsFeatures-LGS) @Tornado-Tim
+- [Low Glucose Suspend Modus](#KeyAapsFeatures-LGS) (dt. Abschaltung vor Niedrig) @Tornado-Tim
 - [Benachrichtigung für „Kohlenhydrate benötigt“](#key-aaps-features-minimal-carbs-required-for-suggestion) @twain47 @Tornado-Tim
 - Careportal entfernt (jetzt im Aktionen-Tab/Menü) @MilosKozak
 - [Neues verschlüsseltes Sicherungsformat](ExportImportSettings.md) @dlvoy
