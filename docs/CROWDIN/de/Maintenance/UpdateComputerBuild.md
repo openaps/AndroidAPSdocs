@@ -1,38 +1,38 @@
-# Update with a computer
+# Mit einem PC/Computer aktualisieren
 
 ## Kein Download möglich - APK muss selbst erstellt werden
 
-**AAPS** is not available to download, due to regulations concerning medical devices. Es ist zulässig, die App für den eigenen Gebrauch zu erstellen, aber du darfst keine Kopie an andere weitergeben! Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
+Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als Download verfügbar. Es ist zulässig, die App für den eigenen Gebrauch zu erstellen, aber du darfst keine Kopie an andere weitergeben! Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 
 ```{note}
 Falls Du **AAPS** auf einem neuen Computer erstellen möchtest: Kopiere das Backup Deiner Keystore-Datei auf den neuen Computer. Folge dann dem [Prozess für die erstmalige **AAPS**-Erstellung](../SettingUpAaps/BuildingAaps.md) und nicht dieser Anleitung. Der einzige Unterschied besteht darin, dass Du anstelle einen neuen Keystore zu erstellen, den Keystore auswählst, den Du auf den neuen Computer kopiert hast.
 ```
 
-## Overview for updating to a new version of AAPS with a computer
+## Übersicht zur Aktualisierung auf eine neue AAPS-Version mit einem Computer
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+Falls Du damit Probleme haben solltest, findest Du einige Lösungen auf der eigenen Seite [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
 
-### Export your settings
+### Exportiere Deine Einstellungen
 
 Exportiere die Einstellungen Deiner aktuellen **AAPS**-Version Deines Smartphones. Vielleicht brauchst Du sie nicht, aber sicher ist sicher.
 
 Wenn Du nicht mehr genau weißt, wie man das macht, schaue auf der Seite [Export & Import der Einstellungen](ExportImportSettings.md) nach.
 
-### Check your Android Studio version
+### Überprüfe die Android-Studio-Version
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+Die erforderliche minimale Version ist im Abschnitt [Computer- und Software-Spezifikationen für das „Bauen“ von AAPS](#Building-APK-recommended-specification-of-computer-for-building-apk-file) beschrieben. Sollte Deine Version älter sein, [aktualisiere als Erstes Android Studio](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
-### Update your local copy
+### Führe ein Update Deiner lokalen Version durch
 
 ```{admonition} WARNING
 :class: warning
-If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../SettingUpAaps/BuildingAaps.md), as this guide will not work for you!
+Wenn Du von einer älteren Version auf 2.8.x aktualisierst, befolge die Schritte zum Erstellen eines [neuen Clone](../SettingUpAaps/BuildingAaps.md), da diese Anleitung hier nicht funktionieren wird!
 ```
 
 * Öffne Dein bestehendes AAPS-Projekt mit Android Studio. Möglicherweise musst Du Dein Projekt wählen. Klicke (doppelt) auf das AAPS-Projekt.
@@ -69,9 +69,9 @@ If you update from versions prior to 2.8.x, please follow the instructions to do
 
 ### JVM-Version prüfen
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+Diese Prüfung ist besonders dann notwendig, wenn Du bereits eine frühere **AAPS**-Version auf demselben Computer erstellt hast.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Um sicherzustellen, dass Du die korrekte JVM-Version verwendest, befolge die Schritte, die im Abschnitt [Incompatible Gradle JVM](#incompatible-gradle-jvm) beschriebenen sind.
+Schaue im Abschnitt [AAPS erstellen](#Building-APK-recommended-specification-of-computer-for-building-apk-file) nach, welche JVM-Version zur **AAPS**-Version, die Du erstellen möchtest, passt. Um sicherzustellen, dass Du die korrekte JVM-Version verwendest, befolge die Schritte, die im Abschnitt [Incompatible Gradle JVM](#incompatible-gradle-jvm) beschriebenen sind.
 
 (Update-to-new-version-build-the-signed-apk)=
 ### Erstelle die signierte APK
@@ -90,7 +90,7 @@ In allen anderen Fällen (z.B. wenn ein neuer 'key store' für das Signieren der
 
 Nutze die Anleitung [AAPS auf Dein Smartphone übertragen und installieren](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+[Hier](#Update-to-new-version-check-aaps-version-on-phone) geht's weiter.
 
 ## Problembehandlung
 
@@ -100,4 +100,4 @@ Tief durchatmen!
 
 Danach schaue auf der Seite [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio) nach einer Lösung, sofern Dein Problem bereits bekannt sein sollte!
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Wenn Du weitere Hilfe brauchst, kontaktiere bitte andere **AAPS**-Nutzende auf [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) oder [Discord](https://discord.gg/4fQUWHZ4Mw).
