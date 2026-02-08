@@ -1,59 +1,59 @@
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**, available in **AAPS** from version 3.0.
+Diese Anleitung hilft bei der Konfiguration der seit **AAPS**-Version 3.0 integrierten Pumpengeneration des **Omnipod DASH** **(NICHT des Omnipod Eros)**.
 
 ## Omnipod DASH Spezifikationen
 
 Hier finden sich die besonderen Merkmale des **Omnipod DASH** („DASH“) und dessen Unterschiede zum **Omnipod EROS** („EROS“):
 
-- The DASH pods are identified by a **blue needle cap** (EROS has a clear needle cap). Die Pods sind ansonsten in Bezug auf deren Abmessungen identisch.
+- Die DASH Pods sind an einer **blauen Nadelkappe** zu erkennen (EROS haben eine farblose Nadelkappe). Die Pods sind ansonsten in Bezug auf deren Abmessungen identisch.
 - DASH benötigt keinen BLE-Link ein sog. Bridge Device (es wird KEIN RileyLink, OrangeLink oder EmaLink gebraucht).
-- The DASH's Bluetooth connection is used only when sending a command (e.g a Bolus), and disconnects right after issuing the command.
+- Die Bluetooth-Verbindung des DASH wird nur genutzt, wenn ein Befehl (z. B. ein Bolus) gesendet wird. Die Verbindung wird unmittelbar danach wieder getrennt.
 - Keine Verbindungsfehler „Verbindung zum Gerät / Pod“ mehr beim DASH.
 - **AAPS** wartet zum Senden der Befehle bis der Pod erreichbar ist.
 - Bei Aktivierung des Pods wird **AAPS** den neuen DASH-Pod finden und sich mit ihm verbinden.
-- Expected range from phone: 5-10 meters (YMMV).
+- Erwartete Reichweite zum Smartphone: 5-10 Meter (kann individuell verschieden sein; „YMMV“).
 
 (omnipod-dash-constraints)=
 
-## Omnipod DASH known AAPS constraints/issues
-- Android 16 requires **AAPS** version 3.3.2.1 or later.
-- General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
-- Too frequent basal updates may cause basal insulin delivery [problems](https://github.com/nightscout/AndroidAPS/issues/4158) with Omnipod Dash. When using **SMB**, limit the interval to 5 minutes minimum to avoid this issue.
-- Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
-- The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to export settings after each pod activation to allow a restore of that pods activation state if something happens to your rig.
-- When setting a new basal profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basal profile won't automatically re-start. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
-- If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
-- There are a number of known issues with Bluetooth which can cause pod activation problems. See [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md) for the known issue and solutions to these problems.
+## Bekannte Omnipod DASH AAPS-Einschränkungen/Probleme
+- Android 16 benötigt eine **AAPS**-Version 3.3.2.1 oder höher.
+- Generell wird empfohlen, **AAPS** auf Android 14 oder 16 auszuführen. Die Community hat im Zusammenhang mit Android 15 viele [Probleme](https://github.com/nightscout/AndroidAPS/issues/3471) gemeldet. Wenn Du Android 15 nutzt, wirst Du sehr wahrscheinlich das „Bluetooth Bonding“ aktivieren müssen, um Pods erfolgreich aktivieren und nutzen zu können. Schaue im Abschnitt [Allgemeine Problembehandlung](../GettingHelp/GeneralTroubleshooting.md) nach, wenn Du mehr über die „Bonding Einstellungen“ erfahren möchtest.
+- Beim Omnipod Dash können zu häufige Änderungen der Basalrate zu [Problemen](https://github.com/nightscout/AndroidAPS/issues/4158) bei der Basalabgabe führen. Um das Problem zu umgehen, wenn Du **SMB**s nutzt, setzte das Änderungsintervall auf 5 Minuten oder länger.
+- Dash unterstützt nur Basalraten in 0,05 IE/h Schritten. Solltest Du versuchen in Deinem **AAPS-Profil** Basalraten mit 0,01 Schritten zu hinterlegen, wirst Du keine Warnmeldung von AAPS erhalten. Der Pod wird die Basalrate auf 0,05 Schritte aufrunden. Wenn Du Dir „POD MGMT/Pod History“ anschaust, wirst Du sehen, dass ein 0,05 Basal gesetzt wurde. Dies bedeutet auch, dass die kleinst mögliche Basalrate des DASH in **AAPS** 0,05 IE/h beträgt.
+- Wenn Du die Einstellungen mit einem aktiven Pod exportierst, enthält die Datei den Pod-Aktivierungsstatus. Wechsel dann auf einen neuen Pod und stelle die Einstellungen mit der Exportdatei wieder her. Damit hast Du sowohl die alte Pod-Aktivierung wieder hergestellt, als auch die neue Aktivierung gelöscht. Aus diesem Grund empfehlen wir die Einstellungen nach jeder Pod-Aktivierung zu exportieren, um eine Wiederherstellung des Pod-Aktivierungsstatus zu ermöglichen, falls etwas mit Deinem Rigg passiert.
+- Beim Setzen eines neuen Basalprofils unterbricht der DASH die Insulinabgabe, bevor das neue Basalprofil **Profil** gesetzt wird. Wenn es eine Kommunikationsstörung oder einen Fehler gibt, wird das Basalprofil nicht automatisch neu gestartet. Mehr Details hierzu findest Du im Abschnitt [Insulinabgabe fortsetzen](#omnipod-dash-resuming-insulin-delivery).
+- Wenn Alarme konfiguriert sind und der Pod bald ablaufen wird, wird der Pod solange piepen, bis die Alarme stumm geschaltet werden. Der Abschnitt [Pod-Alarme stummschalten](#omnipod-dash-silencing-pod-alerts) enthält detailliertere Informationen.
+- Es gibt eine Reihe von bekannten Bluetooth-Auffälligkeiten, die Probleme mit der Pod-Aktivierung verursachen können. Lies im Abschnitt [Bluetooth-Fehlerbehebung](../GettingHelp/BluetoothTroubleshooting.md) nach, um mehr über die Lösungsmöglichkeiten zu diesen Problemen zu erfahren.
 
 (hardware-software-requirements)=
 
 (omnipod-dash-hardware-software-requirements)=
 ## Hardware- und Software-Anforderungen
 
-- Omnipod DASH is identified by the blue needle cap.
+- Omnipod DASH kann an der blauen Nadelkappe erkannt werden.
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-- **A Compatible Android phone** with a Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info), additionally the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
-    -  The **AAPS** Omnipod Dash driver connects with the DASH Pod using Bluetooth.  
-      **AAPS** will automatically establish a new Bluetooth connection to the Pod every time it needs to send a command (e.g a Bolus), after sending the command the Bluetooth connection is immediately disconnected.
+- **Ein kompatibles Android-Smartphone** mit Bluetooth Low Energy (BLE) (siehe [Smartphones](../Getting-Started/Phones.md) für weitere Informationen). Zusätzlich helfen Dir die folgenden Informationen bei der erfolgreichen Aktivierung und Nutzung des DASH auf einem kompatiblen Smartphone:
+    -  Der **AAPS** Omnipod Dash „Treiber“ verbindet sich über Bluetooth mit dem DASH Pod.  
+      **AAPS** baut zum Senden eines Kommandos (z. B. eines Bolus) eine Bluetooth-Verbindung auf. Nach dem Senden wird die Bluetooth-Verbindung sofort wieder getrennt.
        - **HINWEIS:**
-         - The Bluetooth connection can be interrupted/disturbed by other Bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... Devices like this can cause connection errors or pod activation issues on some models of phones. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) list for known working configurations before committing to a new rig built around Omnipod DASH.
-         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
-    - For **Android 15** or below: You **MUST** use **Version 3.0 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, however it's advisable to run the latest released version.
-    - For **Android 16**: you **MUST** use **Version 3.3.2.1 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, due to Android 16 changing how its Bluetooth works. Any version earlier than 3.3.2.1 will likely cause pod failures and/or activation [issues](https://github.com/nightscout/AndroidAPS/issues/3471).
-- A supported [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+         - Die Bluetooth-Verbindung kann durch andere mit dem Smartphone, auf dem **AAPS** läuft, verbundene Bluetooth-Geräte (z. B. Ear Buds) gestört oder sogar unterbrochen werden. Derartige Geräte können Verbindungsfehler oder Pod-Aktivierungsprobleme auf einigen Smartphone-Modellen verursachen. Es empfiehlt sich, die Liste der [getesteten Hardware-Setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) im Vorfeld auf Konfigurationen zu prüfen, die sich bewährt haben, bevor Du auf ein neues Setup um Deinen Omnipod DASH herum umsteigst.
+         - Es gibt eine Reihe von bekannten Bluetooth-Auffälligkeiten, die Probleme mit der Pod-Aktivierung verursachen können. Im Abschnitt [Fehlerbehebung](#troubleshooting) findest Du einige Hinweise zu Bluetooth-Problemen, mit einer dedizierten Sektion zu den [Bluetooth-Problemen](#omnipod-dash-bluetooth-related-issues).
+    - Für **Android 15** oder darunter: Du **MUSST** die **AAPS- Version 3.0 oder neuer** nutzen. Verwende dazu die [**AAPS erstellen**](../SettingUpAaps/BuildingAaps.md)-Anweisungen. Es ist dabei immer sinnvoll die neueste veröffentlichte Version nutzen.
+    - Für **Android 16**: Du **MUSST** die **Version 3.3.2.1 oder neuer** mit den zugehörigen [**AAPS erstellen**](../SettingUpAaps/BuildingAaps.md)-Anweisungen nutzen, da sich mit Android 16 die Bluetooth-Funktionsweise geändert hat. Jede Version vor 3.3.2.1 wird wahrscheinlich zu Pod-Fehlern und/oder Aktivierungs-[Problemen](https://github.com/nightscout/AndroidAPS/issues/3471) führen.
+- Ein unterstützter [**Kontinuierlicher Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-The instructions below explain how to activate a new pod session using **AAPS**. You should wait for your current Pod to be close expiry, as you will need to activate a new Pod with **AAPS**. Once a pod is de-activated it cannot be reused/re-activated, the de-activation is final.
+In den nachfolgenden Anweisungen wird erläutert, wie man eine neue Pod-Sitzung mit **AAPS** aktiviert. Du solltest so lange warten, bis Dein aktueller Pod unmittelbar vor dem Laufzeitende ist, da Du mit **AAPS** ein neuen Pod aktivieren musst. Sobald ein Pod deaktiviert ist, kann er nicht wieder verwendet oder wieder aktiviert werden. Die Deaktivierung ist endgültig.
 
 ## Bevor Du anfängst
 
-Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as  **[Omnipod and AAPS Constraints and Issues](#omnipod-dash-constraints)** to avoid running into a known problem.
+Stelle sicher, dass Du die vorliegende Anleitung vollständig gelesen und verstanden hast, Du den Abschnitt **Bevor Du anfängst** gelesen und verstanden hast, sowie  **[Omnipod und AAPS Einschränkungen und Probleme](#omnipod-dash-constraints)** gelesen hast, um nicht in bekannte Problem zu laufen.
 
-### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
-1. Extra pods (3 or more spare)
-2. Spare Insulin and MDI equipment
+### **SAFETY FIRST** - Du **SOLLTEST NICHT** versuchen, **AAPS** mit einem Pod zu verbinden, bevor Du nicht die folgenden Dinge zusammenhast:
+1. Zusätzliche Pods (3 oder mehr als Ersatz)
+2. Ersatz-Insulin und Pen-Equipment
 3. A working Omnipod PDM (In case **AAPS** fails)
 4. Supported Phones are a must! (See [Hardware/Software Requirements](#hardware-software-requirements))
 5. Correct version of AAPS built and installed
