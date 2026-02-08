@@ -46,7 +46,7 @@ In diesem Bildschirm geben wir zusätzliche Hintergrundinformationen, übersetze
 
 ![Permissions](../images/setup-wizard/Wizard03.png)
 
-### Notifications
+### Benachrichtigungen
 
 Wenn Apps Benachrichtigungen senden möchten, benötigt Android hierfür eine besondere Berechtigung.
 
@@ -54,7 +54,7 @@ Obwohl es grundsätzlich gut ist. Benachrichtigungen _z. B._ von Social Media-Ap
 
 Bitte klicke auf das erste "NACH BERECHTIGUNG FRAGEN":
 
-![Notifications](../images/setup-wizard/Wizard04.png)
+![Benachrichtigungen](../images/setup-wizard/Wizard04.png)
 
 Wähle die "AAPS"-App aus:
 
