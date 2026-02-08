@@ -48,9 +48,9 @@ Ignoriere sie: Weitere Details, Trotzdem installieren.
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## **Bluetooth related issues**
+## **Bluetooth-Probleme**
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Bei bekannten Problemen mit Bluetooth-Verbindungen, Pumpen/Pods oder Aktivierungs- und Verbindungsproblemen schau im Abschnitt [Bluetooth-Fehlerbehebung](../GettingHelp/BluetoothTroubleshooting.md) nach.
 
 ---
 
