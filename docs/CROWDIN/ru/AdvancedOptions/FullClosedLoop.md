@@ -70,17 +70,17 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 - как и где выполняется сглаживание мониторинга **НМГ** и как оно влияет на индивидуальные настройки. В особенности то, как определяется дельта, и как AAPS распознает признаки начала приема пищи.
 - стабильность работы Bluetooth помпы и мониторинга;
 - недопущение (или по крайней мере раннее распознавание окклюзии помпы);
-- data flow and your phone's apps used and difference between days of sensor usage;
-- keeping all **AAPS** components well charged and in spare parts close proximity; and
-- actioning cannula (or pod) changes always early enough to lower the risk of occlusion;
+- поток данных и используемые приложения телефона, а также разница между днями использования сенсора;
+- поддержание всех компонентов **AAPS** в хорошо заряженном состоянии и в непосредственной близости от запасных частей; и
+- заблаговременная замена катетера (или POD) для снижения риска окклюзии;
 
-The above will vary depending on your **AAPS** component system and your lifestyle.
+Всё вышеперечисленное варьируется в зависимости от компонентов **AAPS** и образа жизни пользователя.
 
-## Meal-related limitations
+## Ограничения, относящиеся к приему пищи
 
-- Setting up a **FCL** may be easier for people whose diets do not consist of food components with a rapid high effect on **BG**, and meal patterns that do not wildly vary day-to-day. This does not necessarily mean low carb.
+- Настройка **АЗЦ** проще для людей, чей рацион состоит из компонентов, не оказывающих влияние на быстрое и значительное колебание **ГК**, и питание которых не сильно меняется изо дня в день. Это не обязательно означает низкоуглеводную диету.
 
-- Fat or protein rich diets, or slow digestion/gastroparesis, make things easier rather than harder for **FCL**  because late carbs nicely cover for inevitable “tails” of late action from bolus needed around peak time.
+- Диета, богатая жирами или белками, или гастропарез (замедленное переваривание пищи), скорее облегчают, чем усложняют работу **АЗЦ**, потому что запоздалые углеводы хорошо маскируют неизбежные “хвосты” болюса, вводимого в пиковое время.
 
 ### Glycemic index and effect on blood glucose
 
