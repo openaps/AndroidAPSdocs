@@ -84,7 +84,7 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 
 ### Glycemic index and effect on blood glucose
 
-The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose ('EBG')
+Сложность режима **UAM** возрастает с повышением воздействия на уровень глюкозы в крови
 
 - Start moderate/low, and tune your **Profile's** settings. Only then, "test" meals with high **EBG**.
 - Consider a < 50% initial bolus if consuming very high **EBG**.
