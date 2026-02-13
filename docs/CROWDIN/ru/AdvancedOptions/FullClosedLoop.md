@@ -67,9 +67,9 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 Корректные значения **ГК** и стабильная связь по Bluetooth необходимы для оптимальной работы **AAPS** без потери ценного времени. **АЗЦ** требует технически стабильной системы 24/7:
 
 - Корректная работа системы мониторинга ГК. Система мониторинга гликемии не должна выдавать скачкообразных значений, которые могут быть истолкованы алгоритмом ЗЦ как признак начала приема пищи. Аналогично, неверные калибровки системы НМГ могут привести к скачкам.
-- how and where any **CGM** smoothing is done, and what this might imply for your tuning. Notably how delta is defined, and AAPS recognising this as being sign of a starting meal.
-- bluetooth stability for the pump and CGM  pump;
-- avoiding (or at least early recognition of) pump occlusion;
+- как и где выполняется сглаживание мониторинга **НМГ** и как оно влияет на индивидуальные настройки. В особенности то, как определяется дельта, и как AAPS распознает признаки начала приема пищи.
+- стабильность работы Bluetooth помпы и мониторинга;
+- недопущение (или по крайней мере раннее распознавание окклюзии помпы);
 - data flow and your phone's apps used and difference between days of sensor usage;
 - keeping all **AAPS** components well charged and in spare parts close proximity; and
 - actioning cannula (or pod) changes always early enough to lower the risk of occlusion;
