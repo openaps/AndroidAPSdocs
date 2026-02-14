@@ -222,7 +222,7 @@ Das Feld `GDRIVE_OAUTH2` wird ausgefüllt. Tippe auf die oberste „Copy“-Scha
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
 
-Switch back to the GitHub tab.
+Wechsle zurück auf den GitHub-Tab.
 
 Scrolle zu den „Repository Secrets“ herunter und tippe auf „New Repository Secret“.
 
@@ -234,21 +234,21 @@ Nutzt Du die Option 2, sind weitere Schlüssel notwendig:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4b.png)
 
-In the Name field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+Füge in das Namensfeld den gerade kopierten Text ein. Drücke lange auf die Textbox, um das „Einfügen-Menü“ anzuzeigen.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH5.png)
 
-Switch to the File Explorer Plus tab.
+Wechsle auf den Dateimanager+ Tab.
 
-Tap the second Copy button.
+Tippe auf den zweiten Kopieren-Knopf.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH6.png)
 
-Switch back to the GitHub tab.
+Wechsle zurück auf den GitHub-Tab.
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. Füge in das Secret-Feld den gerade kopierten Text ein. Drücke lange auf die Textbox, um das „Einfügen-Menü“ anzuzeigen.
 
-2. Tap Add secret.
+2. Tippe auf „Add Secret“.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
 

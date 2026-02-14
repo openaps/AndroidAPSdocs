@@ -1,28 +1,28 @@
-Install [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) from the Google Play store.
+Installiere [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) aus dem Google Play Store.
 
-The app is necessary for the preliminary phase and you can safely delete it from your phone once you've successfully build and installed AAPS.
+Die App wird für die Vorbereitungsphase benötigt. Du kannst sie, nach dem AAPS erfolgreich erstellt und installiert wurde, ohne Probleme wieder von Deinem Smartphone löschen.
 
-Check this is the correct app and tap Install, then Open.
+Überprüfe, ob es die richtige App ist, tippe auf „Installieren“ und dann auf „Öffnen“.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep01.png)
 
-Tap Next to accept the Privacy Policy.
+Tippe auf „Weiter“, um die Datenschutzerklärung zu akzeptieren.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep02.png)
 
-Tap Next to allow the app to access the phone files.
+Tippe auf „Weiter“, um der App den Zugriff auf die Smartphone-Dateien zu erlauben.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep03.png)
 
-Switch to enable access to all files.
+Erteile die Berechtigung für den Zugriff auf alle Dateien.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep04.png)
 
-Allow File Manager + notifications.
+Tippe auf „Zulassen“, um dem Dateimanager + zu erlauben Benachrichtigungen zu senden.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep05.png)
 
-Consent to profiling.
+Tippe auf „Consent“, um dem Profiling zuzustimmen.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep06.png)
 

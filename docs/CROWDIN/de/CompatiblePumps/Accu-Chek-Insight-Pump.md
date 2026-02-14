@@ -89,8 +89,8 @@ In den Insight-Einstellungen in AAPS kannst Du die folgenden Optionen aktivieren
     neuer Versuch - keine Verbindung - warte **7** Sek.   
     neuer Versuch - keine Verbindung - warte **8** Sek.   
     ...   
-    retry -> no connection -> wait **20** sec.   
-    retry -> no connection -> wait **20** sec.   
+    neuer Versuch - keine Verbindung - warte **20** Sek.   
+    neuer Versuch - keine Verbindung - warte **20** Sek.   
     ...
 
 * "Verbindungsabbau-Verzögerung": Legt (in Sekunden) fest, wie lange AAPS nach einer erfolgreich abgeschlossenen Aktion wartet, bis dann die Verbindung zur Pumpe getrennt wird. Der Standardwert ist 5 Sekunden.

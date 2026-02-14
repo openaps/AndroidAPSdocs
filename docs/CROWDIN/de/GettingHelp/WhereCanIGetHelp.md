@@ -33,7 +33,7 @@ Bitte beachte, dass Facebook kürzlich innerhalb der AAPS Facebook-Gruppe geteil
 
 ### Tschechien und Slowakei
 
-* [AAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech-speaking users of AndroidAPS
+* [AAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): tschechischsprachige AAPS-Nutzende
 
 ### Frankreich
 

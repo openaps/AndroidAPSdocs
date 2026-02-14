@@ -219,19 +219,19 @@ Starte die Libre Link-App, scanne dann den neu gesetzten Sensor. Danach schließ
 
 **Starte den Libre 2-Sensor (nicht 2+) durch einen Scan mit dem Lesegerät. Das Lesegerät muss das erste Gerät sein, dass den Sensor scannt.**
 
-If you want to be able to use the **FSLReader** as well as the LL app or xDrip+ to read values from the FSL2 sensor, then **you will need to scan the newly inserted FSL2 sensor with the FSL Reader FIRST.** After the sensor warmup is complete you can then use the LL app or xDrip+ to scan readings.
+Wenn Du zum Auslesen der Glukosewerte sowohl das **Lesegerät** als auch die Libre Link-App oder xDrip+ nutzen möchtest, dann ** muss der neu gesetzte Sensor als ALLERERSTES mit dem Lesegerät gescannt werden.** Nach Abschluss der Sensor-Aufwärmphase, kann dann auch die Libre Link-App oder xDrip+ zum Scannen der Glukosewerte genutzt werden.
 
-*NOTE: The LL app is only needed for the VERY FIRST NFC scan after sensor insertion. It serves to send the warmup initialization signal, afterwards the app MUST be disabled (app settings-\>force close) or uninstalled. You can use the Patched 2.3 app or Official versions, it does not matter. The main thing is to prevent the LL app from running when xDrip+ is trying to start the BT bonding process with the sensor as the LL app interferes with the Bluetooth reconnection process by disrupting communication.*
+*HINWEIS: Die Libre Link-App wird nur für den ALLERERSTEN NFC Scan nach dem Setzen des Sensors benötigt. Sie wird genutzt, um das Warmup-Startsignal zu senden. Im Anschluss MUSS die App deaktiviert werden (App-Einstellungen-\>Stopp erzwingen) oder deinstalliert werden. Du kannst entweder die gepatchte App 2.3 oder die offiziellen Versionen verwenden. Das macht keinen Unterschied. Das Wichtigste ist, dass die Libre Link-App nicht läuft, wenn xDrip+ versucht, die Bluetooth-Koppelung mit dem Sensor zu starten. Die Libre Link-App stört die Kommunikation und unterbricht damit die Bluetooth-Wiederverbindung.*
 
-*It has been reported that simply turning off the **location permission** in the LL app Android system settings is enough to prevent it from interfering with the connection. This has been reported by a few users to be successful. Again **I recommend disabling or uninstalling the app** but you can try this if you want to experiment.*
+*Es gibt Rückmeldungen, die sagen, dass das Abschalten der **Standortberechtigung** in den Android-Systemeinstellungen der Libre Link-App ausreicht, um die Störung zu verhindern. Einige Benutzer haben damit das Problem erfolgreich behoben. Noch einmal: **Ich empfehle, die App zu deaktivieren oder zu deinstallieren**. Wenn Du experimentierfreudig bist, kannst Du den Weg über die Standortberechtigung ausprobieren.*
 
 (minimallooper-step5)=
 
 ### **Schritt 5: Öffne xDrip+ und scanne den FSL2-Sensor per NFC**
 
-(*Reminder! Ensure LL is disabled (location turned off) or uninstalled AND you have waited the entire 60 minutes for the sensor to warmup and internally calibrate.*)
+(*Zur Erinnerung! Stelle sicher, dass Libre Link deaktiviert (Standort ausgeschaltet) oder deinstalliert ist UND Du die 60-minütige Aufwärmphase, in der sich der Sensor intern kalibriert, abgewartet hast.*)
 
-**NFC SCAN** the FSL2 sensor with xDrip+. This sends a signal to the sensor to turn on Bluetooth pairing in order to start the bonding process. A small notification will appear briefly on the bottom of the xDrip+ Overview screen with the text **Scanning** followed by the notification **Scanned OK!** upon a successful NFC scan of the FSL 2 sensor.
+**Scanne per NFC** mit xDrip+ den Libre 2-Sensor. Das sendet ein Signal an den Sensor, das Bluetooth-Pairing einzuschalten und den Koppelungsprozess zu beginnen. Unten auf dem xDrip+ Startbildschirm erscheint die kurze Mitteilung **Scanning**. Bei einem erfolgreichen NFC-Scan des Libre 2-Sensors folgt dann die Benachrichtigung **Scanned OK!**.
 
 ![xDrip+ scan](../images/minimal00per/xdripscan1.png)
 
@@ -239,29 +239,29 @@ If you want to be able to use the **FSLReader** as well as the LL app or xDrip+ 
 
 ### **Schritt 6: Starte in xDrip+ den neuen Sensor**
 
-In the **xDrip+ Overview screen** press the **hamburger menu** in the upper left corner. Then choose **Start Sensor**.
+Tippe auf das **Hamburger Menü** in der oberen linken Ecke des **xDrip+ Startbildschirms**. Wähle dann **Sensor starten** aus.
 
-On the **Start New Sensor** screen press **Start Sensor**. A prompt will ask **Did you insert it today?** Respond by pressing **NOT TODAY**.
+Auf dem Bildschirm **Neuen Sensor starten** tippe auf **Sensor starten**. Eine Eingabeaufforderung wird fragen **Hast Du ihn heute gesetzt?**. Beantworte diese Frage mit **NICHT HEUTE**.
 
 ![xDrip+ scan](../images/minimal00per/xdripstart.png)
 
 ![xDrip+ scan](../images/minimal00per/xdripstart2.png)
 
-*NOTE: If you accidentally clicked "YES, TODAY" then you will need to "stop sensor" from the xDrip+ main menu followed by "start sensor" by proceeding with Step 5 again.*
+*HINWEIS: Solltest Du versehentlich auf „JA, HEUTE“ geklickt haben, musst Du den Sensor aus dem xDrip+ Startbildschirm stoppen („Sensor stoppen“) und dann wieder mit Schritt 5 beginnen.*
 
 (minimallooper-step7)=
 
 ### **Schritt 7: Warte 60 Sekunden und scanne den Sensor per NFC erneut**
 
-A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth device from which xDrip+ will use to retrieve the readings. Once complete you will see a notification stating **NEW SENSOR STARTED**.
+Ein zweiter NFC-Scan wird benötigt, um den Sensor als Bluetooth-Gerät von dem xDrip+ die Messwerte abruft **HINZUZUFÜGEN**. Wenn alles abgeschlossen ist, erhältst Du die Nachricht **NEUER SENSOR GESTARTET**.
 
 ![xDrip+ scan](../images/minimal00per/xdripscan2.png)
 
-A 60 second waiting period is enforced because the sensor can’t be scanned during this process more than once per minute. If the sensor is scanned too early the warning **Not so quickly, wait 60 seconds** is displayed in the xDrip Overview screen.
+Der Sensor kann während dieses Ablaufs nur einmal pro Minute gescannt werden, sodass sich eine 60-sekündige Zwangspause ergibt. Wenn der Sensor zu früh gescannt wird, erscheint auf dem xDrip+-Hauptbildschirm die Warnung **Nicht so schnell, warte 60 Sekunden**.
 
 ![xDrip+ scan](../images/minimal00per/xdripscan3.png)
 
-Open xDrip+ event logs and check the sensor paired correctly with xDrip+.
+Öffne xDrip+ Fehler- und Ereignisliste und prüfe, ob der Sensor richtig mit xDrip+ gekoppelt ist.
 
 ![xDrip+ scan](../images/minimal00per/xdripstream.png)
 
@@ -269,9 +269,9 @@ Open xDrip+ event logs and check the sensor paired correctly with xDrip+.
 
 ### **Schritt 8: Datenerfassung zwischen 3 und 15 Minuten**
 
-Between 3 and 15 minutes enough data is collected to display the first values. *If you are still not receiving readings at this time, sometimes it helps to reboot the phone.*
+In der ersten 3-15 Minuten werden genug Daten gesammelt, um die ersten Glukosewerte anzuzeigen. *Wenn Du danach noch keine Glukosewerte erhältst, hilft es manchmal das Smartphone neu zu starten*.
 
-If you use a Samsung (or many Chinese brand phones) and have issues receiving data, scan the QR code below, in xDrip+ -> Auto Configure.
+Wenn Du Probleme beim Empfangen der Werte haben solltest und ein Samsung Smartphone (oder eines der vielen chinesischen Marken) hast, scanne mit der xDrip+ > Auto-Konfiguration den unten abgebildeten QR-Code.
 
 ```{admonition} QR Code
 :class: dropdown
@@ -279,7 +279,7 @@ If you use a Samsung (or many Chinese brand phones) and have issues receiving da
 ![Bluetooth einrichten](../images/minimal00per/qr_libre2direct_samsung.png)
 ```
 
-It will change xDrip+ Bluetooth settings to:
+Damit änderst Du die xDrip+ Bluetooth-Einstellungen auf:
 
 - *Vertraue Auto-Wiederverbindung*: **Aus**
 - *Scan im Hintergrund ausführen*: **Aus**
@@ -288,22 +288,22 @@ It will change xDrip+ Bluetooth settings to:
 
 ### **Schritt 9: Stelle sicher, dass der Sensor verbunden ist und Daten liefert**
 
-Press the Hamburger menu in the upper left of the xDrip+ Overview screen and select **System Status**. On the System Status screen the active **Bluetooth Device:** field displays the FSL2 Bluetooth naming convention of **ABB___XXXXXXXXXXX**, where the XXX’s represent the sensor serial number. The **Connection Status** field displays **Connected** and the **Sensor Start:** field displayed the time the sensor was started.
+Tippe auf dem xDrip+-Startbildschirm oben links auf das Hamburger Menü und wähle dann **Systemstatus** aus. Auf dem Systemstatus-Bildschirm wird das aktive **Bluetooth-Gerät:** angezeigt. Es folgt der Bluetooth-Namenskonvention **ABB___XXXXXXXXXXXXXXX**. Die XXX... sind dabei die Seriennummer des Sensors. Das Feld **Verbindungsstatus** zeigt **Verbunden** an und das Feld **Sensorstart:** zeigt an, wann der Sensor gestartet wurde.
 
 ![xDrip+ scan](../images/minimal00per/xdripSSlog.png)
 
-On the **BT Device** (swipe left) screen you can verify further connection details of the sensor as well as use this screen for troubleshooting connections. Below is a list of fields and their purposes to assist in connection troubleshooting.
+Auf dem **BT Device** Tab (nach links wischen) kannst Du weitere Verbindungsdetails des Sensors prüfen. Die Übersicht hilft bei einer möglichen Fehlerbehebung. In der Liste unten findest Du die Felder und deren Bedeutung, um die Fehlerbehebung zu vereinfachen.
 
-*NOTE: **<u>DO NOT TOUCH</u> AND CHANGE Bluetooth Pairing from <u>Disabled</u>** in this window. Doing so will attempt a direct pair, it will fail (Not bonded) and you will have to start the process from Step 5 all over again.*
+*NOTE: **<u>NIMM KEINE ÄNDERUNGEN</u> auf diesem Bildschirm am Bluetooth Pairing vor. Laß die Einstellung unverändert auf <u>Deaktiviert</u>** stehen. Das würde zu einem direkten Koppelungsversuch führen. Dieser wird fehlschlagen (Nicht gekoppelt) und Du musst wieder ab Schritt 5 des Prozesses beginnen.*
 
 ![xDrip+ scan](../images/minimal00per/xdripSSbond.png)
 
-- **Phone Service State:** The last time the phone made a BT connection to the sensor (it should be less than 5 minutes ago)
-- **Bluetooth Device:** Displays current status of the connection (either **Connected** or **Disconnected**)
-- **Device Mac Address**: This is the hardware ID of the sensor
-- **Bluetooth Pairing**:  This should be **<u>Disabled, tap to enable</u>**. Be careful to NOT tap this. If you tap it by mistake, tap it again until it returns to disabled.
-- **Slowest wake up**: You can ignore this. xDrip+ doesn't spend its time waiting for readings: it will start expecting them at after a certain time (traditionally 5 minutes). If no data arrives at that time, you'll see "Woke up early" meaning xDrip+ was expecting data to be ready but there's none. Slowest wake up is the highest delay encountered before receiving data normally.
-- **Next Wake up**: Should say 5 minutes
+- **Phone Service State:** Gibt den Zeitpunkt an, an dem das Smartphone das letzte Mal eine Bluetooth-Verbindung zum Sensor hatte (das sollte weniger als 5 Minuten zurückliegen)
+- **Bluetooth Device:** Gibt den aktuellen Verbindungsstatus an (entweder **Connected** oder **Disconnected**)
+- **Device Mac Address**: Das ist die Hardware ID des Sensors
+- **Bluetooth Pairing**:  Das sollte **<u>Disabled sein, tippe darauf, um es zu aktivieren</u>**. Achte darauf, NICHT darauf zu tippen. Solltest Du versehentlich darauf getippt haben, tippe erneut darauf, um es zu deaktivieren.
+- **Slowest wake up**: Du kannst diese Information ignorieren. xDrip+ wartet nicht auf Werte: Es erwartet die Werte nach einer bestimmten Zeit (üblicherweise nach 5 Minuten). Wenn bis dahin keine Werte eingetroffen sind, wird dort ein „woke up early“ zu sehen sein, was heißt, dass xDrip+ Werte erwartet hat, die dann aber noch nicht da waren. Slowest wake up ist längste erkannte Verzögerung beim normalen Eintreffen der Werte.
+- **Next Wake up**: Solle 5 Minuten anzeigen
 
 ![xDrip+ scan](../images/minimal00per/xdripSStat.png)
 
@@ -311,31 +311,31 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 ### **Notiz**
 
-- **Using LL NFC Scans AFTER bonding/pairing in xDrip+ is completed**: You can conduct NFC scans but the bonding/pairing process with xDrip+ needs to be completed first. Always look at xDrip+ and see if it is close to the 5 minute reading (i.e. 4 minutes ago), if it is near 5 min, wait for the new BT reading to come in and then conduct the NFC scan. If you catch it at the wrong time it will disturb the BT process in xDrip+ and not receive BT readings, which can take a while to re-bond and transmit again and sometimes a sensor BT connection can be “stolen” by LL. However between these BT readings I have not had any problems executing an NFC scan followed by immediately disabling the app. I am not sure if LL needs to be disabled each time but I disable it to be on the safe side.
+- **Die Nutzung der LL NFC-Scans NACH der Koppelung in xDrip+ ist nun abgeschlossen**: Du kannst NFC-Scans durchführen, aber der xDrip+ Koppelungsprozess muss zuerst abgeschlossen werden. Schau immer in xDrip+ nach, ob der Datenempfang nahe um die 5 Minutengrenze liegt (z. B. vor 4 Minuten). Sollte die 5 Minutengrenze fast erreicht sein, warte auf den nächsten Wert und scanne erst dann per NFC. Solltest Du einen ungünstigen Zeitpunkt erwischen, stört das den Bluetooth-Prozess in xDrip+ und es werden keine Werte über Bluetooth empfangen. Es kann eine Weile dauern, bis die Verbindung wieder steht und Werte übertragen werden. In manchen Fällen wird die Bluetoothverbindung zum Sensor auch von LL „gestohlen“. Ich hatte noch nie Probleme, wenn ich einen NFC-Scan zwischen dem Werteempfang und dem sofortigen Deaktivieren der App danach durchgeführt habe. Es ist unklar, ob LL jedes Mal deaktiviert werden muss. Es kann aber nicht schaden, dies zu tun.
 
-- - **What is going on?** When a Bluetooth connection is made a private shared key is created that is needed to allow communication between the sensor and the calling application/device. There is a high probability that the LL app or the Reader creates a new private shared key for communication during the connection. Das bedeutet, dass xDrip+ nach der Koppelung den neuen Schlüssel nicht kennt und nicht mit dem Sensor kommunizieren kann.
+- **Was passiert hier?** Wenn eine Bluetoothverbindung aufgebaut wird, wird ein Private Shared Key erzeugt. Dieser Schlüssel wird benötigt, um die Kommunikation zwischen dem Sensor und der anfragenden App (oder anfragendem Gerät) zuzulassen. Es ist sehr wahrscheinlich, dass die LL-App oder das Lesegerät während der Verbindung einen neuen privaten gemeinsamen Schlüssel für die Kommunikation erstellen. Das bedeutet, dass xDrip+ nach der Koppelung den neuen Schlüssel nicht kennt und nicht mit dem Sensor kommunizieren kann.
 
-  - Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readers in xDrip+. In the LL app Android permission you simply need to turn off the **Allow Location** setting. Once this is done you should be able to use the LL app and xDrip+ simultaneously. I would recommend that you don't select a default app for NFC scanning and pick which app you want to read the sensor for an NFC scan. Also, DON'T FORGET, on your next sensor change to force close the LL app after the initial warmup NFC scan on the new sensor. After the sensor is configured and receiving readings in xDrip+ you can then start the LL app again.
-
-&nbsp;
-
-- **Rebooting your phone**: After the reboot, and after disabling or force closing the app, REMEMBER to check that the LL app is NOT running. I suggest testing a reboot to see if LL starts again automatically. You can look in the LL app settings under Android Application settings on your phone. If it is still enabled, then disable the LL app again, uninstalling the LL app may be the only way to avoid this. This is to prevent LL from accidentally stealing the BT bond. Also, after rebooting it will take the same 3-15 minutes to get BT readings from the sensor so be patient and plan for this if you are rebooting close to times you require a BG reading in order to bolus, meals, etc.
+  - Einige haben davon berichtet, dass die LL-App nach dem erfolgreichen Start des Sensors und dem Empfang von Werten in xDrip+ neu gestartet werden kann. In den Android-Berechtigungen der LL-App musst Du lediglich die **Standortfreigabe** ausschalten. Sobald das erledigt ist, solltest Du die LL-App und xDrip+ gleichzeitig nutzen können. Es wird empfohlen, keine Standard-Anwendung fürs NFC-Scannen festzulegen und so bei jedem NFC-Scan entscheiden zu können, mit welcher App Du den Sensor auslesen möchtest. VERGISS beim nächsten Sensorwechsel NICHT die LL-App nach dem ersten Scan zum Starten der Aufwärmphase zu beenden („Stopp erzwingen“). Nachdem der Sensor konfiguriert ist und die und Messwerte in xDrip+ empfangen werden, kannst Du die LL-App wieder starten.
 
 &nbsp;
 
-- **Battery Optimization settings**: Make sure you EXCLUDE these apps from your phone’s battery optimization settings
+- **Smartphone neustarten**: DENK DARAN, nach dem Neustart und nach dem Deaktivieren/dem erzwungenen Stopp der App, zu prüfen, dass die LL-App NICHT ausgeführt wird. Ich schlage vor, einen Neustart zu testen, um zu sehen, ob LL automatisch wieder gestartet wird. Du kannst in den LL-App-Einstellungen in den Android-App-Einstellungen Deines Smartphones nachschauen. Wenn es noch aktiviert ist, dann deaktiviere die LL-App erneut. Die Deinstallation der LL-App kann die einzige Möglichkeit sein, das zu verhindern. Das Vorgehen soll verhindern, dass LL versehentlich die BT-Verbindung „stiehlt“. Nach dem Neustart dauert es zwischen 3 und 15 Minuten, bis über Bluetooth Werte vom Sensor kommen. Habe Geduld und plane den Neustart um die Zeit, in der Du Glukosewerte benötigst (Mahlzeitenbolus etc.), herum.
+
+&nbsp;
+
+- **Akku-Optimierungseinstellungen**: Stelle sicher, dass die folgenden Apps von der Akkuoptimierung Deines Smartphones AUSGESCHLOSSEN werden:
 
   - xDrip+
 
   - OOP 2
 
-  - LL
+  - LibreLink
 
   - AndroidAPS
 
 &nbsp;
 
-- **Using Flight Mode:** There are some situations which call for turning on flight mode (when taking a flight ;-), sleeping at night and you do not wish to have WIFI or Mobile connection signals operating with your phone in close range of your head) and this can cause issues with the Bluetooth communication during activation of Flight mode. When switching on flightmode on the phone followed by activating Bluetooth, blood glucose readings will be lost. The only workaround is to restart the collector in xdrip+ -\> System Status -\> Classic Status Page. After restarting the collector the blood glucose readings appeared again.
+- **Flugmodus nutzen:** Es gibt Situationen, in denen der Flugmodus eingeschaltet wird (bei einer Flugreise ;-), während der Nacht zum Schlafen, wenn Du keine WLAN- oder Mobilfunksignale Deines Smartphones in der Nähe Deines Kopfes haben möchtest). Das kann zu Problemen mit der Bluetooth-Kommunikation beim Einschalten des Flugmodus führen. Beim Einschalten des Flugmodus auf dem Smartphone mit anschließender Bluetooth-Aktivierung gehen Glukosewerte verloren. Der einzige Workaround ist, den Datensammler xDrip+ -\> Systemstatus -\> Classic Status Page neu zu starten. Nach dem Neustart des Datensammlers kamen die Glukosewerte wieder an.
 
  
 
@@ -343,26 +343,26 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 ### **Vorteile**
 
-- **LL patched app no longer required** You no longer need a patched version of the LL app to retrieve values from the FSL2 sensor. While you can use the LL patched app, the official versions of the LL app can start the first NFC initialization scan in the same manner as the patched app. There is no difference as far as NFC initialization scanning to start the sensor is concerned.
+- **Die LL-gepatchte App wird nicht mehr benötigt**: Du brauchst keine gepatchte Version der LL-App mehr, um Werte vom Libre 2-Sensor abzurufen. Sowohl die gepatchte LibreLink-App, als auch die offiziellen Versionen der LibreLink-App können für den initialen NFC-Scan genutzt werden. Beide Apps funktionieren beim initialen NFC-Scan zum Starten des Sensors gleich.
 
 &nbsp;
 
-- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao, Bubble or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Less hardware means less things to go wrong, less devices to charge and a more minimalistic setup.
+- **Drittanbieter-Geräte zum Scannen werden nicht mehr benötigt:** Da der Sensor die Messwerte mittlerweile per Bluetooth überträgt, werden Drittanbieter-Geräte (z. B. (Miaomiao, Bubble oder Blucon) nicht mehr benötigt *(sie können aber weiterhin genutzt werden)*. Weniger Hardware bedeutet weniger Fehlerquellen, weniger Dinge, die geladen werden müssen und ein vereinfachtes Setup.
 
 &nbsp;
 
-- **You will still be able to NFC scan readings with the FSL2 Reader (version 1 with updated FW or version 2) WHEN the FSL2 sensor has been started with the FSL Reader FIRST.** The FSL2 standalone reader can still be used to scan readings on the active sensor once it is bonded via Bluetooth to xDrip+.
+- **Du kannst mit dem Libre 2 Lesegerät (Version 1 mit aktualisierter Firmware oder Version 2) auch weiterhin NFC Scans durchführen WENN Du den Libre 2 ALS ERSTES mit dem Lesegerät gestartet hast.** Das FSL2 Lesegerät kann weiterhin zum Scannen und Auslesen der Messwerte des aktiven Sensors verwendet werden, sobald er mit xDrip+ über Bluetooth gekoppelt ist.
 
-  - You **MUST** start the sensor with the version first NFC scan to initiate sensor warmup **with the FSL Reader FIRST**. After this point other software applications will also be able to take NFC readings from the now activated sensor.
-- It is my understanding that the FSL2 sensor (as long as it has not established or is not trying to establish a connection) will always advertise its presence (and availability) over BLE exactly every 2 minutes (visible on any Bluetooth device that has the ability to scan for Bluetooth devices). Whichever device is first to respond to this advertisement wins the race and is the *only* device allowed to connect and read the sensor as a private shared key is created during the NFC scan connection process which is used to decrypt FSL 2 communication. The sensor is then unavailable to other devices that do not have this private share key and might also be trying to connect. It seems that the FSL 2 reader always wins this race whatever the “opponent”.
-
-&nbsp;
-
-- **Minimal hardware device setup** My goal has always been to keep the medical devices attached to my body at a minimum. The FSL2 in combination with the Omnipod system accomplished this goal. This point is even more crucial when I travel (both short and long distances) because the number of items and set changes for those items becomes fewer, which means I have more room for other items in my luggage. Hopefully in the future there will be a patch pump that just has a replaceable reservoir and the chip and motor system can be packaged as a retainable/reusable piece. This would cut down on waste and decrease packaging for site changes which again leads to more room in my suitcase for other things.
+  - Du **MUSST**, um den Sensor zu starten, ihn **mit dem Libre Lesegerät scannen, mit dem Du auch die Aufwärmphase ALS ERSTES** eingeleitet hast. Danach können auch andere Softwareanwendungen NFC-Messungen vom nun aktivierten Sensor zu erhalten.
+- Nach meinem Verständnis signalisiert der Libre 2 Sensor exakt alle 2 Minuten seine Verfügbarkeit und Präsenz über BLE, solange noch keine Verbindung aufgebaut wurde oder ein Verbindungsaufbau erfolgt. Dies ist auf jedem Bluetooth-Gerät, das die Möglichkeit hat nach Bluetooth-Geräten zu scannen, zu erkennen. Das Gerät, das als Erstes auf dieses Signal reagiert, gewinnt das Rennen und ist das *einzige* Gerät, das sich mit dem Sensor verbinden und auslesen kann. Der private „Shared Key“ wird während des NFC-Verbindungsprozesses erzeugt und zur Entschlüsselung der FSL 2 Kommunikation verwendet. Der Sensor ist damit für andere Geräte, die diesen privaten „shared key“ nicht haben und dennoch versuchen sich zu verbinden, nicht verfügbar. Es scheint so zu sein, dass das FSL 2 Lesegerät immer, unabhängig davon wer der „Gegner“ ist, das Rennen macht.
 
 &nbsp;
 
-- **No more hour gaps when changing sensors** Because you can start another sensor with the LL app using an initial NFC scan, the current sensor can keep running and delivering readings by Bluetooth at the same time. After 20 minutes you can get readings from the new sensor but it is best to wait 1 hour for the sensor to properly internally calibrate. This means you can stop the current sensor and start up the new one (after it has been set and warmed up with the LL NFC scan an hour earlier) and within 3 to 15 minutes you will have your initial calibrations and readings.
+- **Möglichst wenig Hardware** Mein Ziel war es immer, die medizinischen Geräte, die mit meinem Körper verbunden sind auf ein Minimum zu begrenzen. Die Kombination aus Libre 2 und dem Omnipod-System erreicht dieses Ziel. Dieser Punkt ist auf Reisen (sowohl auf kurzen als auch auf Fernreisen) umso wichtiger, weil damit die Dinge, die getauscht werden müssen, weniger werden und so mehr Platz für andere Gegenstände in meinem Reisegepäck bleibt. Hoffentlich wird es in Zukunft eine Patchpumpe geben, die nur ein Auswechseln des Reservoirs benötigt und der Chip und das Motorsystem eine wiederverwendbare Einheit ist. Das würde den Müllberg verringern und die Abfallmenge für einen Kanülenwechsel reduzieren. Das wiederum führt zu mehr Platz in meinem Koffer für andere Dinge.
+
+&nbsp;
+
+- **Sensorwechsel ohne fehlende Werte**, da der neue Sensor mit einem ersten NFC-Scan der LibreLink-App gestartet werden kann, läuft der aktive Sensor währenddessen weiter und liefert Messwerte per Bluetooth. Nach 20 Minuten liefert der Sensor die ersten Werte, es ist allerdings besser die volle Stunde abzuwarten, bis der Sensor sich vernünftig intern kalibriert hat. D. h. dass Du den aktuellen Sensor stoppen und den neuen Sensor starten kannst (nachdem er gesetzt wurde und eine Stunde zuvor mit LibreLink per NFC gescannt wurde). In den nächsten 3 bis 15 Minuten werden die ersten Kalibrierungen durchgeführt und die ersten Messwerte sind verfügbar.
 
 &nbsp;
 
@@ -370,50 +370,50 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 ### **Nachteile**
 
-- **Phone Reboot:** Because the Bluetooth process has to start again when your phone reboots, you have to first ensure that you manually disable the LL app (if you did not uninstall it) and be patient for the first readings to come in (3 to 15 min). This means timing phone reboots so they do not occur during critical times like correction boluses or meal and snack times.
+- **Neustarten des Smartphones:** Da bei einem Neustart des Smartphones auch der Bluetooth-Prozess neu gestartet wird, muss die LibreLink-App manuell deaktiviert werden bzw. sein (sofern sie nicht ohnehin deinstalliert wurde) und Du musst abwarten bis die ersten Messwerte eintreffen (3 bis 15 Minuten). Lege den Smartphone-Neustart also so, dass er nicht in einen kritischen Zeitraum fällt (außerhalb von z. B. von Korrektur- oder Mahlzeiten-Bolus).
 
 &nbsp;
 
-- **You can't run LL and xDrip+ in parallel together for Bluetooth readings**. LL will always try to "steal" the Bluetooth connection to the sensor and bond. If that happens, you are stuck with LL for the rest of the life of the sensor. So running the apps simultaneously does not work all the time. As I mention below, you can enable the LL app and do an NFC scan to get the LL reading (if you need to compare, want to retrieve history for yourself or endocrinologist reports) however you should disable it as soon as you have your reading and not try to attempt this within a minute of when xDrip+ is going to retrieve its Bluetooth reading. I am not sure how using the FSL2 reader works while doing this but I will test that at a later point.
-- Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readers in xDrip+. In the LL app Android permission you simply need to turn off the **Allow Location** setting. Once this is done you should be able to use the LL app and xDrip+ simultaneously. I would recommend that you don't select a default app for NFC scanning and pick which app you want to read the sensor for an NFC scan. Also, DON'T FORGET, on your next sensor change to force close the LL app after the initial warmup NFC scan on the new sensor. After the sensor is configured and receiving readings in xDrip+ you can then start the LL app again.
+- **LibreLink und xDrip+ können für den Bluetooth-Empfang nicht gleichzeitig genutzt werden**. LibreLink wird immer versuchen, die Bluetooth-Verbindung zum Sensor zu kapern und zu übernehmen. In diesem Fall, bist Du bis zum Laufzeitende des Sensors auf LibreLink angewiesen. Daher funktioniert es nicht immer, die Apps parallel zu nutzen. Wie ich oben erwähnt habe, kannst Du die LibreLink-App aktivieren und einen NFC-Scan durchführen, um die LibreLink-Messwerte zu erhalten (z. B. um die Werte zu vergleichen oder Daten für einen Bericht für das Diabetes-Team abzufragen). Du solltest die App allerdings sofort wieder deaktivieren, sobald Du die Werte erhalten hast. Vermeide auch die Werte in dem Zeitraum abzufragen, in dem xDrip+ versuchen wird Messwerte per Bluetooth zu empfangen. Ich bin mir aktuell nicht sicher, welchen Einfluss der Einsatz des Libre 2 Lesegeräts hat. Ich werde das zu einem späteren Zeitpunkt testen.
+- Einige haben davon berichtet, dass die LL-App nach dem erfolgreichen Start des Sensors und dem Empfang von Werten in xDrip+ neu gestartet werden kann. In den Android-Berechtigungen der LL-App musst Du lediglich die **Standortfreigabe** ausschalten. Sobald das erledigt ist, solltest Du die LL-App und xDrip+ gleichzeitig nutzen können. Es wird empfohlen, keine Standard-Anwendung fürs NFC-Scannen festzulegen und so bei jedem NFC-Scan entscheiden zu können, mit welcher App Du den Sensor auslesen möchtest. VERGISS beim nächsten Sensorwechsel NICHT die LL-App nach dem ersten Scan zum Starten der Aufwärmphase zu beenden („Stopp erzwingen“). Nachdem der Sensor konfiguriert ist und die und Messwerte in xDrip+ empfangen werden, kannst Du die LL-App wieder starten.
 
 &nbsp;
 
-- **3rd Party NFC Scanning Devices can still be used**. Yes, I listed this as a disadvantage but I also wanted to point out that if something goes wrong with the sensor and LL captures control of it, you can always fall back to placing an NFC scanning device on the sensor to get readings in xDrip+. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Bubble, Blucon). Sometimes certain phones do not operate well with the native Bluetooth sensor bonding and data retrieval. You can use these devices as a backup or as normal usage, either way you still have this as an option.
-- If you are planning on using the **FSL Reader** as an NFC scanning device to take readings, you MUST start the FSL2 sensor with the **VERY FIRST NFC scan** to warm up the senor with the **READER FIRST**.
+- **NFC-Scan-Geräte von Drittanbietern können weiterhin genutzt werden**. Ja, ich habe das als Nachteil aufgelistet. Wenn etwas mit dem Sensor schiefgeht, und LibreLink die Kontrolle übernimmt, kannst Du - als Notlösung - mit dem Aufsetzen eines NFC-Scan-Geräts auf den Sensor Messwerte nach xDrip+ bringen. Wenn Du Dich mit einem Setup, dass einen Drittanbieter NFC-Scan-Gerät (Miaomiao, Bubble, Blucon) enthält, wohler fühlst, kannst Du das Gerät auch anstelle einer direkten Bluetooth-Verbindung verwenden. In einzelnen Fällen und für bestimme Smartphones funktioniert die native Bluetooth-Verbindung und -Datenabfrage zum Sensor nicht verlässlich. In dieser Situation können diese Geräte entweder als Backup oder regulär genutzt werden. Wie dem auch sei, Du hast die Möglichkeit.
+- Wenn Du vorhast, das **FSL-Lesegerät** als NFC-Scangerät zum Auslesen der Messwerte zu nutzen, MUSS der **ALLERERSTE SCAN** zum Starten der Aufwärmphase des Libre 2 Sensors mit dem **LESEGERÄT** erfolgen.
 
 &nbsp;
 
-- **LV data will not be uploaded automatically** Since the LL app does not have a constant Bluetooth connection (because LL should not be running simultaneously with xDrip+ once the sensor is actively sending Bluetooth readings) then it is not receiving readings automatically from the sensor. This means that blood glucose data is not automatically being uploaded to LV and by extension other phones with LL. I mark this as a disadvantage as I know many parents rely on this functionality as well as those that are forced to use the LV reporting for their healthcare provider. You can still open the LL app and scan every 8 hours to get the back-filled data from the sensor into LL (3 times every day, at least every 8 hours, but more scans would likely be needed to capture all 24 hours of data) but again this is a manual process.
+- **LibreView-Daten werden nicht automatisch** hochgeladen, da die LibreLink-App keine permanente Bluetooth-Verbindung hat. Da LibreLink, während der Sensor Messwerte per Bluetooth sendet, nicht parallel zu xDrip+ laufen sollte, erhält es auch die Messwerte nicht automatisch. Das heißt, das Glukosewerte nicht automatisch in LibreView verfügbar werden und in der Folge auch auf anderen Smartphones mit LibreLink nicht sichtbar werden. Ich stelle das deswegen als Nachteil heraus, weil viele Eltern und diejenigen, die Reports aus LibreView für ihr Diabetes-Team erstellen müssen, auf diese Funktion angewiesen sind. Du kannst immer noch die LibreLink-App öffnen und damit alle 8 Stunden scannen, um die zurückliegenden Werte des Sensor in LibreLink zu bekommen (3 mal täglich mindestens alle 8 Stunden; aber wahrscheinlich werden mehr Scans benötigt, um die Daten für 24 Stunden zu erfassen). Aber auch das ist ein manueller Prozess.
 
 &nbsp;
 
 (minimallooper-definitions)=
 
-### **Definitions**
+### **Definitionen**
 
 - **BT** - Bluetooth
 
 - **BLE** - Bluetooth Low Energy
 
 - **FSL** - FreeStyle Libre
-  - **Libre 1 (FSL1)** - NFC only. First version of the sensor
+  - **Libre 1 (FSL1)** - nur NFC. Erste Version des Sensors.
 
-  - **FSL2 (FSL2)** - Bluetooth and NFC. Second version of the sensor.
+  - **Libre 2 (FSL2)** - Bluetooth und NFC. Zweite Version des Sensors.
 
-  - **Libre 3 (FSL3)** - Bluetooth and NFC. Third smaller version of the sensor. Not supported by OOP2 (see Juggluco).
+  - **Libre 3 (FSL3)** - Bluetooth und NFC. Dritte kleinere Version des Sensors. Von OOP2 nicht unterstützt (siehe Juggluco).
 
-- **LL** - LibreLink, **application** used to start the sensor with initial NFC scan
+- **LL** - LibreLink, die **Anwendung** wird genutzt, um den Sensor mit dem initialen NFC-Scan zu starten
 
-- **LV** - LibreView, cloud service for sharing data with your endo team (consider using Tidepool or Nightscout)
+- **LV** - LibreView, Cloud-Dienst zum Teilen von Daten mit Deinem Diabetes-Team (denke darüber nach eventuell Tidepool oder Nightscout zu nutzen)
 
-- **MM** - MiaoMiao, name and manufacturer of a 3rd party NFC scanning device that delivers readings via Bluetooth to xDrip+.
+- **MM** - MiaoMiao, Name und Hersteller eines NFC-Scanners eines Drittanbieters, der die Messwerte via Bluetooth an xDrip+ liefert.
 
-- **NFC** - Near Field Communication, a physical operation in which you bring the NFC sensor on your phone close to your sensor to start a reading. This is often referred to as “scanning the sensor”, a “sensor scan” or “NFC scan”. This process in no way uses Bluetooth.
+- **NFC** - Near Field Communication, eine physische Aktion, bei der der NFC-Sensor auf dem Smartphone in die Nähe des Sensors gebracht wird, um so einen Glukosewert zu ermitteln. Dies wird oft auch als „Scannen des Sensors“, „Sensor-Scan“ oder „NFC-Scan“ bezeichnet. Dieser Prozess verwendet in keinem Fall Bluetooth.
 
-- **OOP1** - Out of Process Algorithm version 1, the 3rd party app that receives raw values (delivered to xDrip+ from the sensor by Bluetooth or NFC scan) and then uses an algorithm (very similar to the hardware algorithm on the sensor chip) to process the raw values and returns a calibrated (by the OOP1 algorithm, not by xDrip+’s native calibrations) blood sugar back to xDrip+ to either display or be further processed with xDrip+’s calibration (with a finger pick blood calibration) if needed.
+- **OOP1** - Out of Proces Alorithm Version 1, die Drittanbieter-App, die Rohwerte erhält (werden an xDrip+ vom Sensor über Bluetooth oder per NFC-Scan übermittelt) und dann einen Algorithmus verwendet (sehr ähnlich dem Hardware-Algorithmus auf dem Sensorchip), um die Rohwerte zu verarbeiten und einen kalibrierten (durch den OOP1-Algorithmus, nicht durch xDrip+s native Kalibrierung) Glukosewert zurück an xDrip+ liefert, um die Kalibrierung von xDrip+ (bei Bedarf durch eine „blutige“ Kalibrierung mit einem Fingerpieks) entweder anzuzeigen oder weiter zu verarbeiten.
 
-- **OOP2** - Out of Process Algorithm version 2, the 3rd party app that receives encrypted data delivered to from the FSL 2 sensor (by Bluetooth or NFC scan) and then decrypts the encrypted data. Once decrypted, the data is then sent to xDrip+.
+- **OOP2** - Out of Process Algorithm Version 2, die Drittanbieter-App, die verschlüsselte Daten vom FSL 2-Sensor erhält (über Bluetooth oder NFC-Scan) und dann diese verschlüsselten Informationen entschlüsselt. Nach der Entschlüsselung werden die Daten dann an xDrip+ gesendet.
 
  
 
@@ -421,57 +421,57 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 ### Problembehandlung
 
-#### Failure to scan the sensor with NFC
+#### Sensor kann nicht per NFC gescannt werden
 
-- Make sure your phone NFC reader is enabled in Android settings.
-- The NFC reader must be compatible with **ISO 15693** tags. Some Cubot phones are very difficult to use.
-- Look into you phone documentation to identify the NFC antenna position. Bring it to the sensor and stay on it for 10 seconds: xDrip+ NFC reading takes longer than the vendor app or the reader.
-- Try to close xDrip+ before scanning the sensor.
-- Make sure no other app wants to read the sensor (you might see a selection with different app choices when scanning: select xDrip+ but don't move the phone).
-- Try all combinations of xDrip+ NFC settings *Use faster multi-block reading method* and *Use Any-tag optimized reading method* knowing that NFC scans are usually more reliable with both these options **off**.
+- Stelle sicher, dass in den Android-Einstellungen das NFC-Lesegerät aktiviert ist.
+- Der NFC-Reader muss mit **ISO 15693**-Tags kompatibel sein. Einige Cubot Smartphones sind sehr schwierig zu bedienen.
+- Schau in der Smartphone-Anleitung nach, wo die NFC-Antenne positioniert ist. Bringe sie in die Nähe des Sensors und bleibe 10 Sekunden in dessen Nähe: xDrip+-NFC-Messungen benötigen länger als die über eine Hersteller-App oder das Lesegerät.
+- Versuche xDrip+ vor dem Scannen des Sensors zu schließen.
+- Stelle sicher, dass keine andere App den Sensor gleichzeitig auslesen möchte (es kann beim Scannen eine App-Auswahl angezeigt werden: Wähle xDrip+ aus, ohne das Smartphone zu bewegen).
+- Probiere alle Kombinationen der xDrip+-NFC-Einstellungen *Verwende eine schnellere Multi-Block-Lesemethode* und *eine Any-Tag optimierte Lesemethode*. NFC-Scans sind allerdings zuverlässiger, wenn diese Optionen **aus** sind.
 
-#### Stuck on collecting initial readings
+#### Die ersten Messwerte werden nicht empfangen
 
-*Note: FSL 2 is not recognized as a trusted data source when calibrated manually.*
+*Hinweis: Wenn die Werte des Libre 2 manuell kalibriert wurden, wird der Sensor nicht als vertrauenswürdige Datenquelle eingestuft.*
 
-Set [OOP2 calibration](#minimallooper-OOPsettings) strategy to "No calibration" until you have everything working.
+Setze [OOP2-Kalibrierung](#minimallooper-OOPsettings)s-Strategie auf „Keine Kalibrierung“, solange bis alles funktioniert.
 
-Then you can decide to calibrate or not.
+Dann kannst Du entscheiden, ob Du kalibrierst oder nicht.
 
 ![xDrip+ scan](../images/minimal00per/xdripinitial.png)
 
-#### Sensor is reported as FSL1
+#### Sensor wird als Libre 1 erkannt
 
 ![xDrip+ scan](../images/minimal00per/xdripL1.png)
 
-Make sure you are running the latest versions of xDrip+ and OOP2.
+Stelle sicher, dass Du die neuesten Versionen von xDrip+ und OOP2 benutzt.
 
-#### Connection to the sensor fails
+#### Verbindung zum Sensor fehlgeschlagen
 
-- Verify OOP1 is disabled (see [here](#minimallooper-OOPsettings))
+- Prüfe, ob OOP1 deaktiviert ist (Details findest Du [hier](#minimallooper-OOPsettings))
 
 ![xDrip+ scan](../images/minimal00per/xdripstreamfail.png)
 
-- Verify OOP2 is not put to sleep by the phone battery savings apps and settings
-- Verify Google Play protect is disabled as it will kill OOP2
-- Did you change Bluetooth Pairing in System Status? Touch it back to bring it back to **<u>Disabled</u>**
+- Prüfe, dass OOP2 nicht durch die Energiespar-Apps und die Einstellungen des Smartphones in den Tiefschlaf versetzt wurde
+- Prüfe, dass Google Play Protect ausgeschaltet ist, da es sonst OOP2 „killt“
+- Hast Du die Bluetooth-Koppelung im Systemstatus geändert? Tippe darauf, so dass sie wieder **<u>deaktiviert</u>** ist
 
 ![xDrip+ scan](../images/minimal00per/xdripSSbond.png)
 
-#### Missed readings
+#### Fehlende Glukosewerte
 
-Make sure OOP2 shows values that are not 0 or -1, it might be a sign your sensor is failing (example below in mmol/l).
+Stelle sicher, dass OOP2 Werte anzeigt, die von 0 oder -1 verschieden sind. Es kann ein Indikator für Sensorversagen sein (Beispiel unten in mmol/l).
 
 ![xDrip+ scan](../images/minimal00per/OOP2values.png)
 
-Sensor age has not advanced might also be a sign your sensor has issues. This means xDrip+ received a value, but discarded it as it was not acceptable (sensor error).
+Das Sensoralter hat sich nicht weiter verändert. Auch das kann ein Indikator für Sensorprobleme sein. Das bedeutet, dass xDrip+ einen Wert erhalten hat, aber ihn verworfen hat, da er nicht zulässig war (Sensorfehler).
 
 ![xDrip+ scan](../images/minimal00per/xdripnotadvanced.png)
 
-#### Restart from scratch sensor pairing
+#### Sensor komplett neu koppeln
 
-1. xDrip+ menu -> Stop sensor (it won't stop the FSL2, just change xDrip+ state to not started)
-2. xDrip+ menu -> System status -> Forget device
-3. Scan the sensor with xDrip+ NFC. Wait at least one minute
-4. xDrip+ menu -> Start sensor. Wait at least one minute
-5. Scan the sensor with xDrip+ NFC, a few times,  always waiting at least one minute between two scans
+1. xDrip+ Menü -> Sensor stoppen (das wird den Libre 2 nicht wirklich stoppen, sondern nur den xDrip+ Status auf „nicht gestartet“ setzen)
+2. xDrip+ Menü -> Systemstatus -> Gerät löschen
+3. Scanne den Sensor mit xDrip+ NFC. Warte mindestens eine Minute
+4. xDrip+ Menü -> Sensor starten. Warte mindestens eine Minute
+5. Scanne den Sensor mehrmals mit xDrip+ NFC und warte zwischen den Scans immer mindestens eine Minute

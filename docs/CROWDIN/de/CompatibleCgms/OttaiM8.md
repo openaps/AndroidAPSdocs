@@ -3,7 +3,7 @@
 
 ## M8 mit der Ottai-App nutzen
 
--   Download and Install the apk from <https://play.google.com/store/apps/details?id=com.ottai.seas>. For the Chinese version of Ottai use <https://ottai.com.cn/70ICjxAI4i>
+-   Lade von <https://play.google.com/store/apps/details?id=com.ottai.seas> die APK herunter und installiere sie. Für die chinesische Version des Ottai nutze <https://ottai.com.cn/70ICjxAI4i>
 
 -   Starte den Sensor
 

@@ -7,15 +7,15 @@ Diese Anleitung führt Dich durch die Konfiguration der Equil-Insulinpumpe.
 §todo
 
 ## Hardware- und Software-Anforderungen
-* **Compatible Equil hardware**
+* **Kompatible Equil-Hardware**
 
-  Currently Equil 5.3 and 5.4 is supported
+  Derzeit werden Equil 5.3 und 5.4 unterstützt
 
-* [Version 3.3.0.0](#version3300) or newer of AAPS
+* AAPS-[Version 3.3.0.0](#version3300) oder neuer
 
 ### Equil-Insulinpumpe auswählen
 
-In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
+Wähle in [Konfiguration > Pumpe](#Config-Builder-pump), **Equil 5.3** aus.
 
 ### Einstellungen
 
@@ -23,7 +23,7 @@ In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
 
 ### Patch aktivieren
 
-Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
+Navigiere zum Equil-Tab und tippe auf **Equil-Patch-Pumpe koppeln**.
 
 ![overview.png](../images/Equil/overview.png)
 
@@ -33,4 +33,4 @@ Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
 
 ![activate3.png](../images/Equil/activate3.png)
 
-If you set different password than default 0000 (recommended for your safety), do not forget to store this password on a safe place. This password is stored to the pump. Then this password is asked on every next pairing attempt until you do proper unpairing in AAPS. This makes the pump also unusable with original PDA until you unpair pump from AAPS.
+Wenn Du - wie aus Sicherheitsüberlegungen heraus empfohlen - ein vom Standard („0000“) abweichendes Passwort nutzt, bewahre das Password an einem sicheren Ort auf. Dieses Passwort wird in der Pumpe gespeichert. Dieses Passwort wird, solange Du nicht sauber in AAPS entkoppelst, bei jedem folgenden Verbindungsversuch abgefragt. Solange die Pumpe nicht aus AAPS heraus getrennt wird, ist auch das Original-PDA nicht nutzbar.

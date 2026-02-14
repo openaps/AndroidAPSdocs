@@ -1,6 +1,6 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# **Bluetooth related issues**
+# **Bluetooth-Probleme**
 
 Einige Benutzer haben Probleme bei der Aktivierung des Omnipod DASH, Verbindungsprobleme mit der Medtrum Nano und haben andere Pod-Fehler, die auf Bluetooth-Probleme hinweisen, erhalten. Viele dieser Probleme sind auf eines der folgenden Probleme zurückzuführen.
 

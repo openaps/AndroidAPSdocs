@@ -93,10 +93,10 @@ Wähle hier die von Dir genutzte Glukosewert-Quelle aus. Weitergehende Informati
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [Nightscout-Client BZ](../CompatibleCgms/CgmNightscoutUpload.md) - nur wenn Du genau weißt, was Du tust, siehe [BZ-Quelle](../Getting-Started/CompatiblesCgms.md).
 * [MM640g](../CompatibleCgms/MM640g.md)
-* Glimp - only version 4.15.57 and newer are supported
+* Glimp - es werden nur Versionen 4.15.57 und neuer unterstützt
 * [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 * [Poctech](../CompatibleCgms/PocTech.md)
-* Tomato App for MiaoMiao device
+* Tomato (MiaoMiao) für MiaoMiao-Geräte
 * [Glunovo-App](https://infinovo.com/) für ein Glunovo-CGM-System
 * [Ottai](../CompatibleCgms/OttaiM8.md)
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
@@ -270,7 +270,7 @@ Wenn Du Deinen Loop von der Uhr aus steuern willst (z.B. Bolus abgeben), aktivie
 
 ### Autotune
 
-You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+Du kannst Autotune aktivieren. [Hier](../AdvancedOptions/Autotune.md) erfährst mehr Du mehr dazu.
 
 ### Wartung
 

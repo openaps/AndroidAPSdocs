@@ -1,123 +1,123 @@
-### Copy your Android Studio key in your Google Cloud drive.
+### Kopiere Deinen Android Studio Schlüssel in Dein Google Cloud Laufwerk.
 
-On your computer, search for the keystore file you used to build AAPS. It is named with the extension `.jks`.
+Suche auf Deinem Computer nach der Keystore-Datei, die Du zum Erstellen von AAPS verwendet hast. Du kannst sie an der Dateiendung `.jks` erkennen.
 
-Drag it into [your Google Drive](https://drive.google.com/drive/my-drive), either inside the browser or your mapped Google Drive.
+Zieh es in [Dein Google Drive](https://drive.google.com/drive/my-drive), entweder im Browser oder in Deinem verknüpften Google Drive.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep20.png)
 
-Open File Manager Plus and select Cloud.
+Öffne den Dateimanager+ und wähle die Cloud aus.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep21.png)
 
-Add a Cloud location.
+Füge einen Cloud-Pfad hinzu.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep24.png)
 
-Choose Google Drive.
+Wähle Google Drive aus.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep22.png)
 
-Select your Google Drive account email. Tap OK.
+Wähle die E-Mail Deines Google Drive-Kontos. Tippe auf OK.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep23.png)
 
-Your Google Cloud drive should display its contents. Now return to the app home page.
+Du solltest die Inhalte Deines Google Cloud-Laufwerk sehen. Gehe jetzt zur App-Startseite zurück.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep25.png)
 
-### Open the CI preparation help file
+### Öffne die CI preparation Hilfedatei
 
-Open the file `aaps-ci-preparation-html` you downloaded above.
+Öffne die von Dir heruntergeladene Datei `aaps-ci-preparation-html`.
 
-Select Downloads.
+Wähle den Downloads-Ordner aus.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep07.png)
 
-And search for this file, tap it to open it, open it with Chrome, tap Just once.
+Und suche nach der Datei, tippe auf den Namen, um sie zu öffnen, öffne sie mit Chrome, tippe nur einmal darauf.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep08.png)
 
-It will open like this.
+Es wird sich ungefähr so öffnen.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep09.png)
 
-Scroll down to Option 2: Upload Existing JKS. Expand the interface.
+Scroll nach unten zur Option 2: Upload existing JKS. Klappe die Oberfläche auf.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep26.png)
 
-Select Choose File.
+Wähle „Choose File“.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep27.png)
 
-Pick your KeyStore file from your Google Drive files.
+Wähle Deine Keystore-Datei aus Deinen Google Drive-Dateien aus.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep28.png)
 
-The field below will populate.
+Das Feld unten wird ausgefüllt.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep29.png)
 
-Keep this tab open.
+Lass diesen Tab geöffnet.
 
-### Create a new secret in GitHub
+### Erstelle ein neues Geheimnis (New Secret) in GitHub
 
-Return to your GitHub browser tab: your own AndroidAPS copy.
+Gehe zurück auf den GitHub-Browser-Tab: Deiner eigenen AndroidAPS-Kopie.
 
-1. Top right, tap the `...` button
-2. Select Settings in the list
+1. Oben rechts, tippe auf die `...`-Schaltfläche
+2. Wähle aus der Liste die Einstellungen aus
 
 ![](../images/Building-the-App/CI/BrowserBuildStep10.png)
 
-Scroll down to Security and select Secrets and variables.
+Scrolle zum Abschnitt „Security“ nach unten und wähle „Secrets and Variables“ aus.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep11.png)
 
-Now select Actions
+Wähle jetzt „Actions“ aus
 
 ![](../images/Building-the-App/CI/BrowserBuildStep12.png)
 
-Scroll down to Repository secrets and tap New repository secret
+Scrolle zu den „Repository Secrets“ herunter und tippe auf „New Repository Secret“
 
 ![](../images/Building-the-App/CI/BrowserBuildStep13.png)
 
-You will see this dialog (scroll down if it's not visible).
+Du wirst den folgenden Dialog sehen. (Sollte er nicht zu sehen sein, scrolle nach unten).
 
 ![](../images/Building-the-App/CI/BrowserBuildStep14.png)
 
-Leave the tab opened like this.
+Lass den Tab, so wie hier gezeigt, geöffnet.
 
-Switch to the File Explorer Plus tab.
+Wechsle auf den Dateimanager+ Tab.
 
-Tap the top Copy button.
+Tippen auf die oberste Kopieren-Schaltfläche.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep30.png)
 
-Switch back to the GitHub tab.
+Wechsle zurück auf den GitHub-Tab.
 
-In the Name field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+Füge in das Namensfeld den gerade kopierten Text ein. Drücke lange auf die Textbox, um das „Einfügen-Menü“ anzuzeigen.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep31.png)
 
-Switch to the File Explorer Plus tab.
+Wechsle auf den Dateimanager+ Tab.
 
-Tap the second Copy button.
+Tippe auf den zweiten Kopieren-Knopf.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep32.png)
 
-Switch back to the GitHub tab.
+Wechsle zurück auf den GitHub-Tab.
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. Füge in das Secret-Feld den gerade kopierten Text ein. Drücke lange auf die Textbox, um das „Einfügen-Menü“ anzuzeigen.
 
-2. Tap Add secret.
+2. Tippe auf „Add Secret“.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep33.png)
 
-Check the secret has been added, scroll down to verify.
+Prüfe, ob das „Secret“ hinzugefügt wurde, und scrolle dazu nach unten.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep34.png)
 
-Add a new secret: tap the New repository secret button.
+Neues Secret hinzufügen: Tippe auf „New Repository Secret“.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep35.png)
 
@@ -125,68 +125,68 @@ Add a new secret: tap the New repository secret button.
 
 
 
-Switch to the File Explorer Plus tab.
+Wechsle auf den Dateimanager+ Tab.
 
-Tap the top Copy button to copy `KEYSTORE_PASSWORD`.
+Tippe auf die oberste Kopieren-Schaltfläche, um das `KEYSTORE_PASSWORD` zu kopieren.
 
-Note: if you're comfortable with typing the key names directly in GitHub you don't need to Copy/Paste. If you're not sure you will type exactly the same key name, continue like this. Note that you shouldn't leave `:` at the end of the key name.
+Hinweis: Wenn Du sicher bist, kannst Du die Schlüsselnamen direkt in GitHub eingeben und musst sie nicht kopieren/einfügen. Falls Du nicht sicher sein solltest, den Schlüsselnamen richtig einzugeben, mache wie folgt weiter. Beachte bitte, dass am Ende des Schlüsselnamens kein `:` stehen sollte.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep36.png)
 
-Switch back to the GitHub tab.
+Wechsle zurück auf den GitHub-Tab.
 
-1.  Paste the new key name.
-2. In the Secret entry, put your KeyStore password (don't leave it empty).
-3. Tap Add secret.
+1.  Füge den neuen Schlüsselnamen ein.
+2. Gib Dein Keystore-Passwort in das „Secret“-Feld ein und lasse es nicht leer.
+3. Tippe auf „Add Secret“.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep37.png)
 
-Check the secret has been added, scroll down to verify.
+Prüfe, ob das „Secret“ hinzugefügt wurde, und scrolle dazu nach unten.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep38.png)
 
-Tap the New repository secret button shown above.
+Tippe auf die „New Repository Secret“-Schaltfläche, die oben gezeigt wird.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep14.png)
 
 
 
-Switch to the File Explorer Plus tab.
+Wechsle auf den Dateimanager+ Tab.
 
-Tap the top Copy button to copy `KEYSTORE_ALIAS`.
+Tippe auf die Kopieren-Schaltfläche, um den `KEYSTORE_ALIAS` zu kopieren.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep39.png)
 
-Switch back to the GitHub tab.
+Wechsle zurück auf den GitHub-Tab.
 
-1.  Paste the new key name.
-2. In the Secret entry, put your KeyStore Alias (usually it's `key0`, lowercase with the number zero, not the letter O). Don't let Android autocorrect it.
-3. Tap Add secret.
+1.  Füge den neuen Schlüsselnamen ein.
+2. Gib Deinen Keystore-Alias (normalerweise ist er `key0`, kleingeschrieben und mit einer Null und nicht dem Buchstaben O) in das „Secret“-Feld ein. Achte darauf, dass die Android-Autokorrektur nichts verändert.
+3. Tippe auf „Add Secret“.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep40.png)
 
-Check the secret has been added, scroll down to verify.
+Prüfe, ob das „Secret“ hinzugefügt wurde, und scrolle dazu nach unten.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep41.png)
 
-Tap the New repository secret button shown above.
+Tippe auf die „New Repository Secret“-Schaltfläche, die oben gezeigt wird.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep14.png)
 
 
 
-Switch to the File Explorer Plus tab.
+Wechsle auf den Dateimanager+ Tab.
 
-Tap the top Copy button to copy `KEY_PASSWORD`.
+Tippe auf die Kopieren-Schaltfläche, um das `KEY_PASSWORD` zu kopieren.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep42.png)
 
-Switch back to the GitHub tab.
+Wechsle zurück auf den GitHub-Tab.
 
-1.  Paste the new key name.
-2. In the Secret entry, put your Key password (don't leave it empty). It is usually the same than your KeyStore password.
-3. Tap Add secret.
+1.  Füge den neuen Schlüsselnamen ein.
+2. Gib Dein Key-Passwort in das „Secret“-Feld ein und lasse es nicht leer. Es ist in der Regel das gleiche wie das Keystore-Passwort.
+3. Tippe auf „Add Secret“.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep43.png)
 
-Check the secret has been added, scroll down to verify.
+Prüfe, ob das „Secret“ hinzugefügt wurde, und scrolle dazu nach unten.

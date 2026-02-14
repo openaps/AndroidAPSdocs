@@ -1,6 +1,6 @@
 # Smartphones
 
-The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. Solltest Du Dir ein neues Smartphone zulegen wollen, wird Dir (Stand: Januar 2026) empfohlen, eines mit **Android 16** anzuschaffen. Android 15 ist nicht zu empfehlen.
+Die aktuelle **AAPS**-Version (3.4) setzt ein Android Smartphone mit Google **Android 12.0 oder höher** voraus. Solltest Du Dir ein neues Smartphone zulegen wollen, wird Dir (Stand: Januar 2026) empfohlen, eines mit **Android 16** anzuschaffen. Android 15 ist nicht zu empfehlen.
 
 Die allerneusten Informationen zu diesem Thema erhältst Du auf [Facebook oder Discord](../GettingHelp/WhereCanIGetHelp.md).
 

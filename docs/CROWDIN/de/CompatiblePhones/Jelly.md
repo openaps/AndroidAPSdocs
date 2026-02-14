@@ -2,7 +2,7 @@
 
 ## Jelly 2
 
-Do not confuse with Jelly Star (below).
+Nicht mit dem Jelly Star (unten) verwechseln.
 
 **Vorteile**
 
@@ -38,22 +38,22 @@ NFC kann für Nutzung mit Libre Sensoren aktiviert werden.
 
 ### Optimierung der Akkulaufzeit
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' (and other **DIY apps** like BYODA, xDrip+, OOP2, Juggluco, etc...).
+Um Interferenzen mit **AAPS** zu vermeiden, sollte die „Akkuverbrauch” des Jelly Star deaktiviert werden, indem „uneingeschränkt” ausgewählt wird (und auch bei andere **DIY-Apps** wie BYODA, xDrip+, OOP2, Juggluco usw.).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
-### Intelligent Assistance and App Blocker
+### Intelligent Assistance und App-Blocker
 
-Like with the Jelly 2 (above), the Jelly Star should have 'Intelligent Assistance' disabled for **DIY apps**. Similarly, 'App Blocker' under 'Settings' must also be switched off to avoid disruption with **AAPS**:
+Wie beim Jelly 2 (oben) sollte auch für das Jelly Star „Intelligent Assistance“ für **DIY-Apps** deaktiviert sein. Ebenso muss '„App-Blocker“ in den „Einstellungen“ auch ausgeschaltet werden, um Störungen mit **AAPS** zu vermeiden:
 
 ![App Blocker Screenshot 2025-08-03 213400](../images/JellyStarMini2.jpg)
 
 ### Google Play Protect
 
-Remember to disable Google Play Protect.
+Denk daran, Google Play Protect zu deaktivieren.
 
-### Remote Connection for Weak apk
+### Remote-Verbindung für Wear APK
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly 2, **Wear.apk** & **AAPS** remotely via wifi.
+Für bestimmte Smartwatches wie z. B. die Samsung Galaxy, „Remote Verbindung“ unter Samsung Galaxys erweiterten Funktionen muss auf **an** geändert werden, um das Jelly 2, **Wear.apk** & **AAPS** remote über WLAN nutzen zu können.
 
 ![MURCIMG-20251007-WA0000](https://github.com/user-attachments/assets/5db08a08-f256-49a0-8843-46bdd01b33d6)

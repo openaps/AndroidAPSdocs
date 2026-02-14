@@ -24,7 +24,7 @@ Sobald ein neues **Profil** erstellt und gespeichert wurde, wird **AAPS** die er
 
 A. Um diese Funktion nutzen zu können, musst Du mehr als ein **Profil** in **AAPS** gespeichert haben. Um einen **Profilwechsel** durchzuführen bzw. zu aktivieren:
 
-- **long-press** on the name of the **Profile** (the example below adopts a ‘Profile’ saved as: “School” on **AAPS’** homescreen and selects the desired **Profile** from the drop down tab:
+- **Drücke lange** auf den **Profilnamen** (im Beispiel unten wird auf dem **AAPS**-Startbildschirm das Profil „School“ auf das gewünschte (auszuwählende) **Profil** aus dem Dropdown geändert:
 
 1. Drücke lange auf das **Profil**;
 2. Wähle das gewünschte **Profil** aus und
@@ -53,7 +53,7 @@ Wie man eine **prozentuale Profilanpassung** durchführt:
 
 4. Gib die „Zeitverschiebung“ ein.
 
-## Profile Percentage
+## Prozentsatz des Profils
 
 Es ist wichtig, dass Du die grundlegende Funktionsweise der **prozentuale(n) Profilanpassung** verstehst. Durch die prozentuale Erhöhung oder Verringerung innerhalb eines **Profilwechsels** werden alle Parameter die in Deinem **Profil** hinterlegt sind, im gleichen Maße angehoben oder reduziert.
 

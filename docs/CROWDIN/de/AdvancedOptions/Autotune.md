@@ -1,24 +1,24 @@
-# How to use Autotune plugin
+# Wie man das Autotune-Plugin benutzt
 
 Die Beschreibung des Autotune-Algorithmus findest Du in der [OpenAPS Dokumentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
 Das Autotune-Plugin ist die Umsetzung des OpenAPS Autotune-Algorithmus in AAPS.
 
-Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+Das Autotune-Plugin ist seit der AAPS-Version [3.4](#version3400) verfügbar. Es ist aber standardmäßig nicht sichtbar.
 
-## Show the Autotune plugin
+## Das Autotune-Plugin sichtbar machen
 
-Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+Erstelle im Unterordner `extra` Deines [AAPS-Ordners](#preferences-maintenance-settings) auf Deinem Smartphone eine leere Datei mit dem Namen `enable_autotune`.
 
-***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.***
+***HINWEIS: Schaue in den **AAPS**-Einstellungen, wo sich Dein AAPS-Ordner befindet und überprüfe, dass die Datei in das richtige Verzeichnis gelegt wurde. Es kam häufiger vor, dass diese Datei nicht im richtigen Verzeichnis lag.***
 
 ![Enable Autotune](../images/Autotune/Autotune_0.png)
 
-Autotune will then display in Config Builder after you restart AAPS.
+Dadurch wird dann Autotune, nach einem AAPS-Neustart, in der KONFIGURATION angezeigt.
 
 ![Autotune plugin](../images/Autotune/Autotune_1.png)
 
-***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
+***HINWEIS: Wenn Du die Option `Autotune` nicht sehen kannst, klicke auf den markierten Pfeil (rote Box), um alle Einstellungen im `Allgemein`-Abschnitt aufzuklappen und sichtbar zu machen.***
 
 ## Autotune Dialogbox
 
@@ -55,7 +55,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 - Die Schaltfläche "Profile vergleichen" öffnet die Profilvergleichsansicht. Das Eingangsprofil ist blau und das Ergebnisprofil 'Angepasst' ist rot dargestellt.
 
-  - Hinweis: im Beispiel unten hat das Eingangsprofil zirkadianisch angepasste Werte für IC und ISF, aber das Ergebnisprofil hat jeweils nur einen Wert. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+  - Hinweis: im Beispiel unten hat das Eingangsprofil zirkadianisch angepasste Werte für IC und ISF, aber das Ergebnisprofil hat jeweils nur einen Wert. Wenn es Dir wichtig ist ein zirkadian verteiltes Ergebnisprofil zu bekommen, lies den Abschnitt [Zirkadiane Profile für KH- und Korrekturfaktoren (IC/ISF)](#autotune-circadian-ic-or-isf-profile) unten.
 
   ![Autotune Profile vergleichen](../images/Autotune/Autotune_5.png)
 
@@ -100,16 +100,16 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ```{admonition} Only DEV
 :class: info
-Automation Switch Profile feature is only available in Dev/Engineering mode.
+Die Funktion Automatisierung Profilwechsel ist nur im Dev/Engineering Modus verfügbar.
 ```
 
-- Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Wenn Du diese Einstellung auf AN änderst, wird in einer Automatisierungsregel das Eingabeprofil automatisch durch das berechnete Profil aktualisiert und anschliessend darauf gewechselt.
+- Damit wird das Profil nach einer Autotune-Berechnung automatisch mit den Ergebnissen aktualisiert und anschliessend aktiviert. Wenn Du diese Einstellung auf AN änderst, wird in einer Automatisierungsregel das Eingabeprofil automatisch durch das berechnete Profil aktualisiert und anschliessend darauf gewechselt.
   - **Sei vorsichtig und prüfe in den kommenden Tagen sehr genau, ob sich das Loop-Verhalten nach der Anpassung und Aktivierung des Profils verbessert.**
 
 - UAM als Basal kategorisieren (voreingestellt: EIN): Diese Einstellung ist für Nutzende gedacht, die AAPS ohne Eingabe der Kohlenhydrate einsetzen (vollständiges UAM). Wenn die Option deaktiviert ist, werden UAM nicht als Basal bewertet.
   - Hinweis: Wenn mindestens eine Stunde eines Tages erkannt wird, in der KH-Aufnahme stattgefunden hat, werden alle als "UAM" kategorisierte Daten, als Basal gewertet. Das ist unabhängig davon, ob Du die Option aktiviert hast oder nicht (AN oder AUS)
 - Anzahl der Tage an Daten (voreingestellt: 5): Hier kannst Du den Standardwert festlegen. Jedes Mal, wenn Du ein neues Profil im Autotune-Plugin auswählst, wird der Parameter 'Anpassungstage' durch diesen Standardwert ersetzt.
-- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+- Durchschnittsresultat im zirkadianen IC/ISF anwenden (voreingestellt: AUS): Details hierzu findest Du unten im Abschnitt [Zirkadiane Profile für KH- und Korrekturfaktoren (IC/ISF)](#autotune-circadian-ic-or-isf-profile).
 
 ### Andere Einstellungen
 
@@ -137,7 +137,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
 
 ### Bestimmte Tage der Woche anpassen
 
-- If you click on the checkbox with the eye on the right of "Tune days" parameter, you will see the day selection. Du kannst festlegen, welche Wochentage in der Autotune-Berechnung berücksichtigt werden sollen (im Screenshot unten ist ein Beispiel zu sehen, in dem nur die "Arbeitstage" berücksichtigt werden und Samstag und Sonntag von der Berechnung ausgeschlossen werden)
+- Wenn Du rechts neben dem Parameter „Anpassungstage“ auf das Kontrollkästchen mit dem Auge klickst, siehst Du die auszuwählenden Tage. Du kannst festlegen, welche Wochentage in der Autotune-Berechnung berücksichtigt werden sollen (im Screenshot unten ist ein Beispiel zu sehen, in dem nur die "Arbeitstage" berücksichtigt werden und Samstag und Sonntag von der Berechnung ausgeschlossen werden)
   - Wenn die Anzahl der Tage, die in der Autotune-Berechnung berücksichtigt werden sollen, kleiner ist als die unter "Anpassungstage" angegeben wurde, wird die tatsächlich zu berücksichtigenden Tage daneben angezeigt (im Beispiel unten sind es 10 Tage)
   - Diese Einstellung ergibt nur dann ein gutes Ergebnis, wenn die Anzahl der verbleibenden Tage groß genug ist (wenn beispielsweise ein Wochenend-Profil (nur Samstag und Sonntag) überarbeitet werden soll, solltest Du 21 oder 28 Anpassungstage angeben, damit am Ende 6 bzw. 8 Tage in der Autotune-Berechnung berücksichtigt werden)
 
@@ -155,7 +155,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
 
 ```{admonition} Only DEV
 :class: info
-Automation Switch Profile feature is only available in Dev/Engineering mode.
+Die Funktion Automatisierung Profilwechsel ist nur im Dev/Engineering Modus verfügbar.
 ```
 
 Der erste Schritt besteht darin, den richtigen Auslöser für eine Automatisierungsregel mit Autotune zu definieren:
@@ -201,18 +201,18 @@ Autotune sollte immer einige Tage manuell ausgeführt werden, damit Du die Mögl
 Wichtig ist auch, sich die Autotune-Ergebnise sehr genau anzuschauen, um zu verstehen, aus welchem Grund Autotune welche Anpassungen vorschlägt.
 
 - Es kann eine vollständige Erhöhung oder Abschwächung Deines Profils geben (z.B. Anhebung des Basalprofils, um ISF- und IC-Werte abzuschwächen). Das kann die Folge von längeren Phasen (mehrere Tage) mit einer Autosens-Korrektur über 100% (höhere Aggressivität notwendig) oder unter 100% (Abschwächung notwendig) sein
-- Sometimes Autotune proposes a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
+- Manchmal schlägt Autotune ein anderes „Basal zu IC/ISF“-Verhältnis vor (z. B. niedrigere Basalrate und aggressivere IC/ISF-Faktoren)
 
 In folgenden Situationen wird von einer Autotune-Nutzung abgeraten:
 
 - Du gibst nicht alle Kohlenhydrate ein
-  - If you don't enter carbs correction for hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. Deshalb ist es wichtig, alle Kohlenhydrate (insbesondere die KH, um aus einer Hypo zu kommen) vollständig einzugeben.
-- You have a lot of periods with UAM detected during the day.
-  - Do you have entered all your carbs and correctly estimated your Carbs?
+  - Wenn Du Kohlenhydrate zur Korrektur einer Hypo nicht eingibst, wird Autotune den dann steigenden Glukosewert nicht erwarten und als Konsequenz eine Erhöhung der Basalraten 4 Stunden davor vorschlagen. Das kann genau das Gegenteil sein, was nötig ist, um die Hypo (besonders in den Nachtstunden) zukünftig zu vermeiden. Deshalb ist es wichtig, alle Kohlenhydrate (insbesondere die KH, um aus einer Hypo zu kommen) vollständig einzugeben.
+- Du hast viele Abschnitte mit nicht angekündigten Mahlzeiten (UAM) im Verlauf Deines Tages
+  - Hast Du alle Kohlenhydrate eingegeben und hast Du die Kohlenhydratmenge richtig eingeschätzt?
   - Alle Abschnitte mit nicht angekündigten Mahlzeiten (UAM), werden der Basalrate zugerechnet, sodass eine erhebliche Anhebung (mehr als notwendig) der Basalrate als Folge vorgeschlagen werden wird. Ausnahme: Du hast die Option 'UAM als Basal kategorisieren' deaktiviert
 
 - Deine KH-Aufnahme ist deutlich verlangsamt: Die Berechnung der aktiven Kohlenhydrate (COB) kann falsch sein und in der Folge zu falschen Ergebnissen führen. Die verlangsamte Aufnahme kannst Du an kleinen orangenen Punkten oberhalb der COB-Kurve erkennen. Als Referenz wird der Parameter 'min_5m_carbimpact' in den 'Resorptions-Einstellungen' genutzt.
   - Während Du Sport treibst, bist Du durchweg insulinempfindlicher und Dein Glukosewert steigt nur leicht. Es ist daher völlig normal während und nach dem Sport Phasen mit langsamer KH-Aufnahme zu sehen. Solltest Du aber häufiger unerwartet Phasen mit langsamer KH-Aufnahme haben, kann eine Profilanpassung sinnvoll sein. In diesem Fall kann eventuell eine Erhöhung des KH-Faktors (IC) oder eine Reduktion des 'min_5m_carbimpact'-Parameters helfen.
-- You have "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you have long periods of wrong BG values. If during the past weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
+- Du hast einige „sehr schlechte Tage“. Du hängst beispielsweise über mehrere Stunden in einer Hyperglykämie, die Du mit großen Insulinmengen korrigieren kannst oder Deine Glukosewerte sind nach einem Sensorwechsel vorübergehend nicht verlässlich. Wenn Du in den vergangenen Wochen ein oder zwei „schlechte“ Tage hattest, kannst Du diese von der Autotune-Berechnung manuell ausschließen. Es kann nicht oft genug wiederholt werden: **Schau' sehr genau, ob Du den Ergebnissen trauen kannst**.
 - Wenn die vorgeschlagenen prozentualen Anpassungen zu gravierend sind
   - Eine bessere Glättung kannst Du eventuell über eine Erhöhung der zu berücksichtigenden Tage (Anpassungstage) erreichen
