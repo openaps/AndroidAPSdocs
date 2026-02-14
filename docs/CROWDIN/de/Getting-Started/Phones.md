@@ -13,7 +13,7 @@ Aus Sicherheitsgründen wird Dir dringend empfohlen, Deine **AAPS**-Version imme
 
 ## Liste der getesteten Smartphones
 
-Wir pflegen eine Liste mit [getesteten Hardware-Kombinationen](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true).
+We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) that you can [explore with a friendly interface](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/).
 
 Diese Liste enthält die Rückmeldungen zu Smartphones mit **AAPS** und dem Zusammenspiel mit einer gegebenen Pumpe und Sensor (CGM). Es kann helfen, zu prüfen, ob Dein Smartphone, Deine Insulinpumpe und Dein Sensor von anderen Benutzenden bereits erfolgreich genutzt wurden.
 
