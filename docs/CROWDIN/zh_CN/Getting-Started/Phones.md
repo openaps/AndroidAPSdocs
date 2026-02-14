@@ -13,7 +13,7 @@
 
 ## 已测试手机列表
 
-我们维护了一个[经过测试的硬件设置](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)列表。
+We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) that you can [explore with a friendly interface](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/).
 
 此列表提供了用户关于手机与**AAPS**以及特定泵和CGM配合使用的反馈。 它可以帮助您检查您的手机/泵/CGM是否已被其他用户成功使用。
 
