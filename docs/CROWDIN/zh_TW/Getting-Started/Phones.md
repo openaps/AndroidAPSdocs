@@ -13,7 +13,7 @@
 
 ## 測試過的手機列表
 
-We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) that you can [explore with a friendly interface](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/).
+我們維護了一份[已測試過的硬體設定清單](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)，你可以透過[友善的介面來瀏覽與探索](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/)。
 
 此列表提供用戶對於使用手機搭配**AAPS**以及指定的幫浦和 CGM 的回饋。 這可以幫助你檢查你的手機/幫浦/CGM 是否有其他用戶已成功使用。
 
