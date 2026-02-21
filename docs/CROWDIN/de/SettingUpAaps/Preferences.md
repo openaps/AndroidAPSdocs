@@ -240,7 +240,7 @@ Bei der Verwendung von [SMB](#objectives-objective9) geben viele Menschen nicht 
 * für Menschen mit langsamer Verdauung: Ein voller Vorab-Bolus kann eine Hypo zur Folge haben, da die Insulinwirkung schneller eintritt, als die die Kohlenhydrate verdaut werden.
 * um **AAPS** mehr Spielraum für den Umgang mit **Glukosewertanstiegen** zu geben. Sobald es sinnvoll erscheint, wird **AAPS** in beiden Fällen den fehlenden Bolus-Teil mit SMBs ausgleichen.
 
-### Old glycemia time threshold
+### Schwelllenwert für alte Glykämie
 
 Wenn der letzte empfangene **Glukosewert** älter als dieser Schwellenwert ist, dann bietet der Bolus-Rechner standardmäßig einen 100%igen Bolus an und berücksichtigt nicht, den Wert, der in der Option **Abgabe von [%] des Ergebnisses des Bolus-Rechners** eingetragen ist. Durch den fehlenden **Glukosewert** kann **AAPS** den verbleibenden Bolusteil nicht hinterschicken (der Loop ist ausgeschaltet). Die Folge wären hohe **Glukosewerte**.
 
