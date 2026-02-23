@@ -111,14 +111,14 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 **АЗЦ** может создавать дополнительные трудности для детей, в том числе:
 
 - Инсулины Liumjev или Fiasp могут быть недоступны или плохо переносимы.
-- Hourly basal rate may very low, providing a poor basis for big **SMBs**.
-- Diet may be rich in sweet components. With the typical low blood volume of a small body, strong tendency towards very high **BG** spikes.
-- Growth hormones and going through marked changes of insulin sensitivity makes it difficult to keep the **FCL** accurately tuned.
+- Почасовая скорость базала может быть весьма низкой, что создает плохую основу для больших микроболюсов **SMB**.
+- Диета может быть богата сладкими компонентами. При низком объеме крови в теле ребёнка очевидна тенденция к высоким скачкам уровня **ГК**.
+- Гормоны роста и заметные изменения чувствительности к инсулину затрудняют точную настройку **АЗЦ**.
 
 
-## Enabling boosted SMBs: safety
+## Включение повышенного SMB; безопасность
 
-In **HCL** safety restrictions are implemented regarding bolus sizes that can be automatically given by the loop.
+В гибридных **ЗЦ** реализованы ограничения безопасности в отношении размера болюсов автоматически вводимых циклом.
 
 **FCL** loopers no longer need to give a sizable bolus around meal start. The impact of this means that restrictions in size limits for **SMBs** must be widened to make the loop capable of delivering large enough **SMBs**.
 
