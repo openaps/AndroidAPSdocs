@@ -84,41 +84,41 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 
 ### Glycemic index and effect on blood glucose
 
-Сложность режима **UAM** возрастает с повышением воздействия на уровень глюкозы в крови
+Сложность режима непредвиденного приема пищи **UAM** возрастает при приеме пищи с повышенным воздействием на гликемию ('EBG')
 
-- Start moderate/low, and tune your **Profile's** settings. Only then, "test" meals with high **EBG**.
-- Consider a < 50% initial bolus if consuming very high **EBG**.
+- Начните с пищи с умеренным/низким воздействием и подстройте **Профиль** соответствующим образом. Только после этого пробуйте "тестировать" пищу с более высоким воздействием на гликемию **EBG**.
+- Можно подумать о преболюсе < 50% если употребляете блюда с высоким влиянием на ГК.
 
-1) **No EBG**: e.g. fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: e.g. fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: e.g. whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**:e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: e.g. sugar, sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
+1) **С нулевым EBG **: например, у таких продуктов как свежее мясо, рыба, яйца, ветчина, растительные масла, сыр. 2) **С низким воздействием на гликемию **: например, у свежих овощей и ягод, грибов, орехов, молока, йогурта, творога. 3) **С умеренным воздействием на гликемию**: например, у хлеба из цельного зерна/лапши, картофеля, дикорастущего риса, овсяных хлопьев, сухофруктов. 4) **С высоким воздействием на гликемию**:например, у пшеничного хлеба, багета, тостов, вафель, печенья, картофельного пюре, лапши, риса. 5) **С очень высокой степенью воздействия на уровень сахара в крови**: например, сахар, сладкие напитки, фруктовые соки, кукурузные хлопья, конфеты, помадки, картофельные чипсы, соленые крендельки.
 
 ![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
 
-The most difficult meals for **FCL** are those foods exclusively very high and high **EBG** components (see red in the picture): Not only does **BG** shoot up rapidly, but also there is little fat/protein/fibre component to balance the inevitable “tail” of insulin activity that would come with attempts to control the high glucose earlier on.
+Самыми сложными блюдами для **АЗЦ** являются продукты с очень высоким воздействием на гликемию **EBG** (см. красный цвет на рисунке): происходит не только быстрый подъем **ГК**, но и отсутствуют жировые/белково-волокнистые компоненты, уравновешивающие неизбежный “хвост” активности инсулина при попытках контролировать высокий уровень глюкозы на ранних стадиях.
 
-Erratic consumption of snacks and sweet drinks that are loaded with fast absorbing carbs is problematic for **FCL**.
-
-
-## Preparing for activity/sports
-
-When exercising or being active, with a pump or hybrid closed loop it is recommended that the user reduces **IOB** prior to exercise.
-
-With **FCL**, the algorithm is tuned to detect **UAM** and automatically deliver insulin to counter **BG** rises.  A high **Temp Target** and lower **Profile Percentage** (effective already around meal start) should be set well in advance of any activity.
-
-Unusual or erratic exercise activity levels present difficulties for **FCL**. Planning ahead is required for exercise (especially if you want to reduce the need for rescue carbs/snacks during sports low). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dl) **BG**  target, with “no **SMBs** at elevated target” selected in **AAPS*** preferences.
-
-## Hurdles for kids
-
-**FCL** can present extra challenges for children and these include:
-
-- Lyumjev or Fiasp may not available or well tolerated.
-- Hourly basal rate may very low, providing a poor basis for big **SMBs**.
-- Diet may be rich in sweet components. With the typical low blood volume of a small body, strong tendency towards very high **BG** spikes.
-- Growth hormones and going through marked changes of insulin sensitivity makes it difficult to keep the **FCL** accurately tuned.
+Несбалансированное потребление закусок и сладких напитков, содержащих быстро усваиваемые углеводы, приводит к некорректной работе **АЗЦ**.
 
 
-## Enabling boosted SMBs: safety
+## Подготовка к физическим нагрузкам
 
-In **HCL** safety restrictions are implemented regarding bolus sizes that can be automatically given by the loop.
+При физических нагрузках или занятиях спортом на помпе или гибридном замкнутом цикле перед нагрузкой рекомендуется уменьшить значение **IOB**.
+
+При работе **АЗЦ** алгоритм настроен на обнаружение непредвиденного приема пищи **UAM** и автоматическую подачу инсулина для противодействия повышению **ГК**.  Задолго до начала любой нагрузки следует установить высокую ** временную цель TT** и низкий ** процент профиля** (который вступит в силу уже перед началом приема пищи).
+
+Необычные или неустойчивые уровни физической активности создают трудности для **АЗЦ**. Перед тренировкой необходимо заранее планировать свои действия (особенно если хотите уменьшить потребность в дополнительных углеводах / перекусах на купирование гипогликемии). После активного дня и полного усвоения вечерней пищи рекомендуется установить более низкий ** процент профиля ** на ночь: в **Автоматизациях** установите повышенную (>100 мг/дл) **целевую гликемию**, при этом в настройках **AAPS*** выберите отключить **SMB** при высокой ВЦ.
+
+## Сложности для детей
+
+**АЗЦ** может создавать дополнительные трудности для детей, в том числе:
+
+- Инсулины Liumjev или Fiasp могут быть недоступны или плохо переносимы.
+- Почасовая скорость базала может быть весьма низкой, что создает плохую основу для больших микроболюсов **SMB**.
+- Диета может быть богата сладкими компонентами. При низком объеме крови в теле ребёнка очевидна тенденция к высоким скачкам уровня **ГК**.
+- Гормоны роста и заметные изменения чувствительности к инсулину затрудняют точную настройку **АЗЦ**.
+
+
+## Включение повышенного SMB; безопасность
+
+В гибридных **ЗЦ** реализованы ограничения безопасности в отношении размера болюсов автоматически вводимых циклом.
 
 **FCL** loopers no longer need to give a sizable bolus around meal start. The impact of this means that restrictions in size limits for **SMBs** must be widened to make the loop capable of delivering large enough **SMBs**.
 
