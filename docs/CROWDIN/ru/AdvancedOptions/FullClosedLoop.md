@@ -108,9 +108,9 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 
 ## Сложности для детей
 
-**FCL** can present extra challenges for children and these include:
+**АЗЦ** может создавать дополнительные трудности для детей, в том числе:
 
-- Lyumjev or Fiasp may not available or well tolerated.
+- Инсулины Liumjev или Fiasp могут быть недоступны или плохо переносимы.
 - Hourly basal rate may very low, providing a poor basis for big **SMBs**.
 - Diet may be rich in sweet components. With the typical low blood volume of a small body, strong tendency towards very high **BG** spikes.
 - Growth hormones and going through marked changes of insulin sensitivity makes it difficult to keep the **FCL** accurately tuned.
