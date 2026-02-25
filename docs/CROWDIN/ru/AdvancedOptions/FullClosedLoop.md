@@ -124,21 +124,19 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 
 Если вы пользуетесь основной версией **AAPS**, рекомендуется настроить параметры **AAPS** с максимально допустимым размером **SMB**, чтобы **АЗЦ** мог обрабатывать максимум UAM SMB минут базала=120, то есть эквивалент двух часов базала в дневное время).
 
-Если скорость вашего базала очень низкая, то пределы **SMB** могут также оказаться слишком низкими и не обеспечить достаточный контроль над повышением ГК после приема пищи. One possible solution is to avoid diets that cause strong **BG** spikes and later switches to a **AAPS** dev variant that offers a new parameter in **SMB** delivery settings: smb_max_range_extension. This will expand the standard maximum of 2 hours worth of basal by a factor of >1. (Additionally, the default 50% **SMB** delivery ratio might be elevated in dev. variants).
+Если скорость вашего базала очень низкая, то пределы **SMB** могут также оказаться слишком низкими и не обеспечить достаточный контроль над повышением ГК после приема пищи. Одно из возможных решений заключается в том, чтобы избегать диет, которые вызывают сильные скачки **ГК**, а затем перейти на ту ветку разработчиков **AAPS**, которая предлагает новый параметр в настройках **SMB**: smb_max_range_extension. Это увеличит стандартную максимальную продолжительность базала, составляющую 2 часа, в >1 раз. (Плюс к этому, коэффициент микроболюсов **SMB**, равный по умолчанию 50% может быть повышен в вариантах ветки dev. variants).
 
-**Follow the instructions to enable AAPS to mimic your bolussing via a couple of SMBs**.
+Чтобы позволить AAPS имитировать обычные болюсы при помощи введения нескольких микроБолюсов (SMB) **следуйте этой инструкции**.
 
-Check the **SMB** tab periodicallu to see whether your **SMBs** are allowed to be sufficient enough to deliver the required insulin needed for the loop around meal starts.
+Периодически, где-то в районе начала приема пищи, проверяйте вкладку **SMB**, чтобы узнать, достаточно ли подается микроболюсов **SMB** в замкнутом цикле.
 
-Иначе, все усилия по настройке параметров не приведут ни к чему!
+Иначе, все усилия по настройке параметров могут оказаться бесполезными!
 
 
 ```{admonition} Boosting **ISF** can become dangerous
-:class: danger
+:class: опасность Внимательно понаблюдайте / проанализируйте размеры **SMB** вскоре после начала приема пищи. Настраивайте пошагово и никогда не меняйте более 1 или 2 параметров одновременно.
 
-Carefully observe/analyse the **SMB** sizes shortly after your meal commences. Настраивайте пошагово и никогда не меняйте более 1 или 2 параметров одновременно.
-
-Your **AAPS'** setting must be sufficiently set up to cope with your (!) variety of meals.
+Настройки **AAPS'** должны быть достаточно эффективны для того, чтобы справляться с разнообразием потребляемых вами (!) блюд.
 ```
 
 ## Meal detection/your Automations for boosting
