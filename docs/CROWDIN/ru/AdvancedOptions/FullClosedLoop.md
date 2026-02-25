@@ -139,9 +139,9 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 Настройки **AAPS'** должны быть достаточно эффективны для того, чтобы справляться с разнообразием потребляемых вами (!) блюд.
 ```
 
-## Meal detection/your Automations for boosting
+## Обнаружение приёма пищи/ Автоматизация для повышения эффективности
 
-For successful **FCL**, **ISF** is the key tuning parameter. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
+Для успешной работы **АЗЦ** ключевым параметром настройки является чувствительность к инсулину **ISF**. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
 
 **AAPS** Master allows up to 130% temporary **Profile** in **HCL** p mode. Boosting the **ISF** is done in 3 steps:
 
