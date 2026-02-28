@@ -125,6 +125,8 @@
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
+(SetupWizard-StoragePermission)=
+
 ### 儲存權限
 
 **AAPS** 需要將訊息記錄到你的智慧型手機的永久儲存中。 永久儲存意味著即使重啟智慧型手機後，他仍然可用。 其他訊息則會遺失，因為他們沒有儲存到永久儲存中。
