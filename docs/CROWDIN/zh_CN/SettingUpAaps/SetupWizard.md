@@ -125,6 +125,8 @@ Follow these steps on Android 16, other versions will varies slightly from the p
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
+(SetupWizard-StoragePermission)=
+
 ### 存储权限
 
 **AAPS** 需要将信息记录到智能手机的永久存储中。 永久存储意味着即使在重新启动智能手机后，信息仍然可用。（PC硬盘的概念） 其他信息只是丢失了，因为它们没有被保存到永久存储中。
