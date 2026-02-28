@@ -120,30 +120,28 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 
 В гибридных **ЗЦ** реализованы ограничения безопасности в отношении размера болюсов автоматически вводимых циклом.
 
-**FCL** loopers no longer need to give a sizable bolus around meal start. The impact of this means that restrictions in size limits for **SMBs** must be widened to make the loop capable of delivering large enough **SMBs**.
+Пользователям **АЗЦ** больше не нужно вводить большую дозу перед началом приема пищи. Это означает, что ограничения микроболюсов **SMB** должны быть расширены, чтобы петля была в состоянии вводить достаточно большие **SMB**.
 
-If you are operating with **AAPS** in the Master release, it is suggested **AAPS**' Preferences are set up with the maximum allowed **SMB** size so that **FCL** can give (maxUAMSMBBasalMinutes=120, i.e. 2 hours worth of basal at that daytime).
+Если вы пользуетесь основной версией **AAPS**, рекомендуется настроить параметры **AAPS** с максимально допустимым размером **SMB**, чтобы **АЗЦ** мог обрабатывать максимум UAM SMB минут базала=120, то есть эквивалент двух часов базала в дневное время).
 
-If your basal rate is very low, the resulting **SMB** limits might be too low to allow sufficient control to tackle postprandial **BG** rises. One possible solution is to avoid diets that cause strong **BG** spikes and later switches to a **AAPS** dev variant that offers a new parameter in **SMB** delivery settings: smb_max_range_extension. This will expand the standard maximum of 2 hours worth of basal by a factor of >1. (Additionally, the default 50% **SMB** delivery ratio might be elevated in dev. variants).
+Если скорость вашего базала очень низкая, то пределы **SMB** могут также оказаться слишком низкими и не обеспечить достаточный контроль над повышением ГК после приема пищи. Одно из возможных решений заключается в том, чтобы избегать диет, которые вызывают сильные скачки **ГК**, а затем перейти на ту ветку разработчиков **AAPS**, которая предлагает новый параметр в настройках **SMB**: smb_max_range_extension. Это увеличит стандартную максимальную продолжительность базала, составляющую 2 часа, в >1 раз. (Плюс к этому, коэффициент микроболюсов **SMB**, равный по умолчанию 50% может быть повышен в вариантах ветки dev. variants).
 
-**Follow the instructions to enable AAPS to mimic your bolussing via a couple of SMBs**.
+Чтобы позволить AAPS имитировать обычные болюсы при помощи введения нескольких микроБолюсов (SMB) **следуйте этой инструкции**.
 
-Check the **SMB** tab periodicallu to see whether your **SMBs** are allowed to be sufficient enough to deliver the required insulin needed for the loop around meal starts.
+Периодически, где-то в районе начала приема пищи, проверяйте вкладку **SMB**, чтобы узнать, достаточно ли подается микроболюсов **SMB** в замкнутом цикле.
 
-Иначе, все усилия по настройке параметров не приведут ни к чему!
+Иначе, все усилия по настройке параметров могут оказаться бесполезными!
 
 
 ```{admonition} Boosting **ISF** can become dangerous
-:class: danger
+:class: опасность Внимательно понаблюдайте / проанализируйте размеры **SMB** вскоре после начала приема пищи. Настраивайте пошагово и никогда не меняйте более 1 или 2 параметров одновременно.
 
-Carefully observe/analyse the **SMB** sizes shortly after your meal commences. Настраивайте пошагово и никогда не меняйте более 1 или 2 параметров одновременно.
-
-Your **AAPS'** setting must be sufficiently set up to cope with your (!) variety of meals.
+Настройки **AAPS'** должны быть достаточно эффективны для того, чтобы справляться с разнообразием потребляемых вами (!) блюд.
 ```
 
-## Meal detection/your Automations for boosting
+## Обнаружение приёма пищи/ Автоматизация для повышения эффективности
 
-For successful **FCL**, **ISF** is the key tuning parameter. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
+Для успешной работы **АЗЦ** ключевым параметром настройки является чувствительность к инсулину **ISF**. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
 
 **AAPS** Master allows up to 130% temporary **Profile** in **HCL** p mode. Boosting the **ISF** is done in 3 steps:
 
