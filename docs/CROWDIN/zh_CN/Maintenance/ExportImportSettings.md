@@ -2,9 +2,9 @@
 
 在手机上安装AAPS后，它就变成了你每天依赖的“医疗设备”。 强烈建议为手机出现故障、被盗或丢失的情况制定紧急备份计划。 因此，务必做好准备，问问自己：“万一呢？”
 
-为了将你的AAPS设置恢复到现有手机或新手机上，重要的是要将以下项目保存在安全的位置（即：不要保存在手机上）。 最佳实践是至少保留两份独立的备份：一份在本地硬盘或U盘上，另一份（推荐）在云端存储上，如Google Drive或Microsoft 365 OneDrive。 通过将备份存储在云端，你可以随时随地通过手机访问恢复设置所需的一切。
+为了将你的AAPS设置恢复到现有手机或新手机上，重要的是要将以下项目保存在安全的位置（即：不要保存在手机上）。 Best practice is to keep at least two separate backups: on a local hard drive, USB stick and (preferred) on Cloud storage like Google Drive or Microsoft 365 OneDrive. By storing your backups in the cloud you'll always have everything needed accessible from your phone to restore your setup anywhere and anytime.
 
-考虑购买一部备用手机，并练习恢复AAPS，以确保备用手机能按预期工作。 这一步将让你对紧急计划的有效性充满信心，如果你的主手机无法使用，你可以无缝继续使用AAPS。
+考虑购买一部备用手机，并练习恢复AAPS，以确保备用手机能按预期工作。 This step will give you confidence that your emergency plan is effective and that you can seamlessly continue using AAPS if your primary phone becomes unavailable.
 
 为了能够恢复，手头备有以下项目是很重要的：
 
@@ -36,14 +36,21 @@
 **如何备份**：使用Android Studio构建APK的计算机上会保留一份副本。 此外，建议使用云平台存储一份安装程序APK的副本。 确保您知道如何在需要时找到这两个位置。 考虑在计算机和云平台上设置专用文件夹来存储这些备份。
 
 ### AAPS设置文件（又称“首选项”）
+
+```{admonition} Where are preferences stored on my phone?
+:class: tip
+You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
+You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+```
+
 有了APK安装程序文件的副本（见上文）和您的**设置**文件，您就可以快速在现有手机或新手机上开始使用。
 
-**偏好设置**是根据您的设置定制AAPS应用程序的方式。 它们包含诸如配置构建器设置、目标状态、第三方通信设置（例如，Nightscout、Tidepool）、自动化和配置文件等详细信息。
+The **Settings** file is used to customize the AAPS application to fit your specific setup. They encompass details such as your config builder settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
 
-将AAPS设置导出到文件，可以使您将配置恢复到特定的时间点。 如前所述，除了所有配置设置外，导出文件还包含您的目标状态，这在**（重新）安装**AAPS时需要恢复。 如果不这样做，您将需要从头开始重新完成所有目标以启用闭环。 设置文件还使您能够恢复“最后一个已知良好”的设置，以撤销任何配置更改。
+将AAPS设置导出到文件，可以使您将配置恢复到特定的时间点。 As mentioned, in addition to all configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AAPS. Without this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration changes.
 
 **何时备份AAPS设置：**
-* 每次完成一个目标时，以防止丢失进度。 _如果没有您的**设置**副本，在您需要重新安装AAPS或更换手机的情况下，您将不得不再次完成所有目标。_
+* 每次完成一个目标时，以防止丢失进度。 _Without a copy of your **Settings** you will have to complete all objectives again in the event you need to re-install AAPS or replace your phone._
 
 * 每当您计划对配置进行重大更改时（更改SMB设置、更改胰岛素类型、更换泵、更改自动化设置），应在更改前后备份您的**偏好设置**。 这样，您既拥有最新的设置，也拥有更改前的副本，以防需要恢复。
 
@@ -63,7 +70,13 @@
 
 ## 设置导出
 
-建议定期导出设置，尤其是在进行配置更改之前和之后。 您可以选择**手动导出或（更推荐）通过自动化方式**进行导出。 请务必记下您的AAPS主密码，并通过将手机上的设置文件复制到例如云存储位置来备份这些文件。
+```{admonition} Where are preferences stored on my phone?
+:class: tip
+You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
+You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+```
+
+建议定期导出设置，尤其是在进行配置更改之前和之后。 You can choose to do exports **manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings files by copying them off your phone to for instance a cloud storage location.
 
 **注意**：_导出的设置将使用您的AAPS主密码进行加密：如果没有用于导出的主密码，您将无法导入设置文件！_
 
@@ -85,6 +98,13 @@ _**注意**：在将设置导入用户时，总是需要输入AAPS密码！_
 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
 ## 在新手机或全新安装的AAPS上从备份中恢复
+
+```{admonition} Where are preferences stored on my phone?
+:class: tip
+You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
+You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+```
+
 如果您有想要加载到新手机上的APK和**设置**的备份，或者因任何原因需要在现有手机上删除并重新安装APK，请使用以下说明。
 
 _如果您使用相同密钥库构建的APK更新**AAPS**，则无需遵循此过程。 但是，在应用更新之前，仍建议创建备份。_
@@ -108,13 +128,15 @@ _如果您使用相同密钥库构建的APK更新**AAPS**，则无需遵循此�
 
 5. 在**AAPS**主屏幕，在[Preferences > General > Protection](#Preferences-master-password)中设置主密码，与您备份时使用的密码相同。
 
-6. 在**AAPS**主屏幕，选择左上角的三条线（汉堡）菜单 > Maintenance（维护）> Export settings（导出设置）> 输入上面设置的主密码 > Ok（确定）。 如果手机上尚不存在preferences文件夹，这将创建该文件夹。
+6. If you haven't done it yet, [set the **AAPS Directory**](#preferences-maintenance-settings): from the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > AAPS DIRECTORY.
 
-7. 从云平台下载您的**偏好设置**文件备份。
+7. 在**AAPS**主屏幕，选择左上角的三条线（汉堡）菜单 > Maintenance（维护）> Export settings（导出设置）> 输入上面设置的主密码 > Ok（确定）。 如果手机上尚不存在preferences文件夹，这将创建该文件夹。
 
-8. 使用文件资源管理器（通常称为“Files”或“My Files”）将文件从下载位置移动到`/internal storage/AAPS/preferences`。
+8. 从云平台下载您的**偏好设置**文件备份。
 
-9. 在**AAPS**主屏幕，选择左上角的三条线（汉堡）菜单 > Maintenance（维护）> Import settings（导入设置）> 选择您要从中备份的偏好设置文件 > Ok（确定）> 输入上面设置的主密码 > Ok（确定）。 确保选择正确的偏好设置文件，将显示preferences文件夹中的所有.json文件。
+9. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences` if your **AAPS Directory** has been set `/internal storage/AAPS`
+
+10. 在**AAPS**主屏幕，选择左上角的三条线（汉堡）菜单 > Maintenance（维护）> Import settings（导入设置）> 选择您要从中备份的偏好设置文件 > Ok（确定）> 输入上面设置的主密码 > Ok（确定）。 确保选择正确的偏好设置文件，将显示preferences文件夹中的所有.json文件。
 
 ![AAPS导入设置1](../images/Maintenance/AAPS_ImportSettings1.png) ![AAPS导入设置2](../images/Maintenance/AAPS_ImportSettings2.png)
 
