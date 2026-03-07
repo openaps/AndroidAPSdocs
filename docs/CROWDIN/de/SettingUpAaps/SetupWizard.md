@@ -125,6 +125,8 @@ Für Android 16 arbeite die folgenden Schritte ab. Bei anderen Versionen können
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
+(SetupWizard-StoragePermission)=
+
 ### Speicherberechtigung
 
 Um Log-Dateien zu sichern und Einstellungen exportieren zu können, benötigt **AAPS** Zugriff auf den permanenten Speicher Deines Smartphones. Permanenter Speicher bedeutet, dass es auch nach dem Neustarten Deines Smartphones verfügbar sein wird. Andere Informationen gehen einfach verloren, da sie nicht im permanenten Speicher abgelegt sind.

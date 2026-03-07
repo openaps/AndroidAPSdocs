@@ -125,6 +125,8 @@ Follow these steps on Android 16, other versions will varies slightly from the p
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
+(SetupWizard-StoragePermission)=
+
 ### Storage permission
 
 **AAPS** needs to log information to the permanent storage of your smartphone. Ce stockage permanent sur la mémoire interne signifie que les fichiers seront toujours disponibles, même après le redémarrage de votre smartphone. D'autres données sont simplement perdues, car elles ne sont pas enregistrées sur la mémoire interne.

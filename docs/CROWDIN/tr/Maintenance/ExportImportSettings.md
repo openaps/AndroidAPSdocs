@@ -36,9 +36,16 @@ In case your main **AAPS** phone is lost or damaged, having a copy of the APK av
 **How to back-up:** Maintain a copy on the computer used to build the APK with Android Studio. Additionally, it is recommended to use a cloud platform to store a copy of the installer APK. Make sure you know how to locate both backups when needed. Consider setting up dedicated folders to store these backups.
 
 ### AAPS settings file (also referred to as 'Preferences')
+
+```{admonition} Where are preferences stored on my phone?
+:class: tip
+You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
+You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+```
+
 With a copy of the APK installer file (see above) and your **Settings** file, you can quickly get up and running on an existing or new phone.
 
-The **Settings** file is used t customize the AAPS application to fit your specific setup. They encompass details such as your config builder settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
+The **Settings** file is used to customize the AAPS application to fit your specific setup. They encompass details such as your config builder settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
 
 Exporting the AAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AAPS. Without this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration changes.
 
@@ -63,6 +70,12 @@ Exporting the AAPS settings to file enables you to restore its configuration to 
 
 ## Settings Export
 
+```{admonition} Where are preferences stored on my phone?
+:class: tip
+You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
+You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+```
+
 It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports **manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings files by copying them off your phone to for instance a cloud storage location.
 
 **Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting you will be unable to import the settings file!_
@@ -85,6 +98,13 @@ _**Note:** On importing settings to user always needs to enter the AAPS password
 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
 ## Restoring from your backups on a new phone or fresh installation of AAPS
+
+```{admonition} Where are preferences stored on my phone?
+:class: tip
+You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
+You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+```
+
 Use these instructions if you have a back-up of your APK and **Preferences** that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
 
 _If you are updating **AAPS** using an APK built with the same keystore you should not need to follow this process. However, it is still advised to create a back-up before you apply the update._
@@ -108,13 +128,15 @@ Importing a **Preferences** file will deactivate your current pod if those **Pre
 
 5. From the **AAPS** home screen, set the master password in [Preferences > General > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
 
-6. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok. This will create the preferences folder if it does not already exist on your phone.
+6. If you haven't done it yet, [set the **AAPS Directory**](#preferences-maintenance-settings): from the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > AAPS DIRECTORY.
 
-7. Download the back-up of your **Preferences** file from your cloud platform.
+7. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok. This will create the preferences folder if it does not already exist on your phone.
 
-8. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences`
+8. Download the back-up of your **Preferences** file from your cloud platform.
 
-9. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Import settings > select the preferences file you want to back-up from > Ok > type in Master password set above > Ok. Make sure you select the correct preferences file, all .json files from the preferences folder will be shown.
+9. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences` if your **AAPS Directory** has been set `/internal storage/AAPS`
+
+10. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Import settings > select the preferences file you want to back-up from > Ok > type in Master password set above > Ok. Make sure you select the correct preferences file, all .json files from the preferences folder will be shown.
 
 ![AAPS import settings 1](../images/Maintenance/AAPS_ImportSettings1.png) ![AAPS import settings 2](../images/Maintenance/AAPS_ImportSettings2.png)
 
