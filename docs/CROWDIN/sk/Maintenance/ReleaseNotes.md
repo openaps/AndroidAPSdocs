@@ -64,6 +64,55 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 
 (version3400)=
 
+## Version 3.4.1.0
+
+Release date: 03-08-2026
+
+### Core
+- Fix DST handling @MilosKozak
+- Improve and unify normal target identification (mgdl > 99, mmol > 5.5) @MilosKozak
+- SMS: protect RESTART by PIN @MilosKozak
+- Maintenance: warn if wrong directory selected @MilosKozak
+
+### Pump Driver Improvements
+- **Omnipod Dash**: refactor BLE driver code to omnipod/common module @jwoglom
+- **Omnipod Dash**: try to fix connection state @MilosKozak
+- **Omnipod**: validate profile before pod activation to prevent wasting pods (#4534) @brianV
+- **Medtronic**: fix same encoding type displayed in settings dialog @mifi100
+- **Medtronic**: prepare pump common classes (Tandem preparation) @andy-rozman
+- **RileyLink**: encoding fix (#4519) @mifi100
+- **Equil**: expand insulin pump compatibility by serial number prefix (#4510) @hhfcvmars
+- **Equil**: add logging @MilosKozak
+- **Diaconn G8**: fix log sync bug and add firmware 3.58+ support @miyeongkim
+- **Diaconn**: fix TBR duration unit conversion @miyeongkim
+- **Diaconn**: use commandQueue.loadEvents() for history sync @miyeongkim
+- Allow insulin delivery while loop is suspended but pump is available @cschuijt
+
+### Cloud / Backup
+- Add backup to Google Drive @Angus-repo
+- Notify UI on cloud storage error state change @Angus-repo
+- Allow both local and cloud storage at the same time @Angus-repo
+
+### Tidepool
+- Improve Tidepool OAuth2 migration @MilosKozak
+- Fix indefinite Tidepool BLOCKED state, fix rejecting empty SSIDs @michaeln-synapse
+
+### Interný NSClient
+- NSCv3: improve reconnection @MilosKozak
+
+### Wear OS
+- Display New IOB in Wizard Result if IOB is used in calculations @olorinmaia
+- Fix Wear BolusProgress with Total Amount @Philoul
+
+### UI
+- Improve ic_none icon for Site Rotation @Philoul
+- Fix site rotation manage pump setting not being used @samfundev
+
+### Contributors
+@MilosKozak @Philoul @olorinmaia @jwoglom @mifi100 @andy-rozman @Angus-repo @brianV @cschuijt @hhfcvmars @miyeongkim @samfundev @michaeln-synapse
+
+(version3400)=
+
 ## Version 3.4.0.0
 
 Release date: 31-12-2025
