@@ -162,28 +162,25 @@ Enable this to use SMB functionality. If disabled, no **SMBs** will be given.
 
 When enabled, new settings become available.
 
-(Open-APS-features-enable-smb-with-high-temp-targets)=
-#### Enable SMB with high temp targets
+#### Enable SMB with temp targets
 
-If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l,  regardless of **Profile** target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
+If this setting is enabled, **SMBs** will still be delivered _even if_ the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l, regardless of **Profile** target __'High Temp Target'__). Please exercise caution when enabling this setting as __SMB__ can be overly aggressivley if the user's settings are not correct or if the user's __Profile__ is subject to frequent variation like with children.
 
-If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled. 
+If this option is disabled __SMBs__ will not be delivered when a __High Temp Target__ has been selected within __AAPS__. For example, **SMBs** will be disabled by selecting __TT Activty__. **SMBs** will always be disabled regardless of what other condition is trying to enable **SMB** _apart from_ 'TT Eating Soon' (or if **TT** is set below 100mg/dL or 5.6mmol/l) which may deliver __SMBs__ to drive __BG__ to desired target level depending on __BG__.
 
-(Open-APS-features-enable-smb-always)=
 #### Enable SMB always
-If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled. 
+
+If this setting is enabled, __SMB__ is activated always regardless of independent of **COB** or **Temp Targets**. The rest of the enabled settings below under **Preferences** will have no effect. 
+
+**However**, if selected along with **Enable SMB with temp targets** as disabled under settings and a high Temp Target is set, __SMBs__ will be disabled. This setting's combination is important and seems to be preferred by some **AAPS** users to avoid __AAPS__  delivering too many **SMBs** and prevent hypoglycemia.
 
 This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
 
 Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 #### Enable SMB with COB
+
 If this setting is enabled, SMB is enabled when the COB is greater than 0.
-
-This setting is not visible if "Enable SMB always" is switched on.
-
-#### Enable SMB with temp targets
-If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100mg/dL or 5.6mmol/l) but disabled when a high temp target is set.
 
 This setting is not visible if "Enable SMB always" is switched on.
 
