@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31/12/2025 : La version 3.4 est sortie. Consultez les [Notes de version] (#latestrelease) pour voir ce qui est nouveau et obtenir des instructions de mise à jour.
+8 March 2026 : Version 3.4.1 is out. Check the [Release Notes](#latestrelease) to see what's new.
 
 ```
 
