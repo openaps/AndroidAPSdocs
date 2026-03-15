@@ -146,8 +146,11 @@ Connect your smartwatch and computer to the same Wi-Fi network.
 - To install ADB download it from:
 https://developer.android.com/tools/releases/platform-tools
 - Open a terminal.
-- After installation of ADB for windows set the path to the folder where ADB is located:
-```setx PATH "%PATH%;C:\platform-tools"```
+- For Windows, create a new folder named `adb` under your disk `C:`.
+  Open the `platform-tools-latest-windows.zip` file you downloaded above.
+  Copy all files inside `platform-tools` to `C:\adb` and open this folder with a command prompt (right click and Open in Terminal).
+  Type the command below to set the path to the folder where ADB is located:
+  ```setx PATH "%PATH%;C:\adb"```
 - For Mac instead of installing manually you can use homebrew:
 `brew install android-platform-tools`
 
@@ -158,18 +161,18 @@ On the watch:
 - Go to Settings → Developer options → Wireless debugging → **Pair new device** 
 
 You will see a Wi-Fi paring code and IP address and port appearing:
-<img width="689" height="400" alt="Screenshot 2025-12-21 at 17 46 42" src="https://github.com/user-attachments/assets/9b73869a-e4ca-47e6-9ac4-37ecc20182e1" />
+![image](../images/wearos/ADB03.png)
 
 - In the terminal:
 `adb pair ipaddress:port`
 E.g.
-`adb pair 10.10.1.125:36443`
+`adb pair 10.10.1.125:36299`
 - You will be asked for the pairing code. Enter it. 
 - You will see a response:<br>
-`Successfully paired to 10.10.1.125:36443 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
+`Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
 - In the terminal type: <br>`adb devices`.<br> You should see something like:<br>
 `List of devices attached`<br>
-`10.10.1.125:45559	offline`<br>
+`10.10.1.125:36299	offline`<br>
 `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp	device`<br>
 
 - Now go to the folder on your computer where the Wear apk is and type<br>
@@ -183,7 +186,7 @@ E.g.
 - Do not use Wi-Fi Tethering. That won't work.
 - You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
 - Make sure you are connecting to your local network where phone and watch can see each other (do not use your Wi-Fi guest network to connect).
-- For GW7 you need to install using Wear Installer as it gives you the option to select the AAPS(Custom) watchface on installation.
+- For GW7 you need to install using Wear Installer 2 as it gives you the option to select the AAPS (Custom) watchface on installation.
 - Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
 - Make sure to be near your main router, then restart both phone and watch.
 
