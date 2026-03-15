@@ -61,7 +61,7 @@ WearOS 5（API级别34，基于Android 14）存在[限制](#BuildingAapsWearOs-W
 
 (latestrelease)=
 
-(version3400)=
+(version3410)=
 
 ## Version 3.4.1.0
 

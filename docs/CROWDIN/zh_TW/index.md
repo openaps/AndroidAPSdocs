@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31/12/2025 : 版本 3.4 已推出。 檢查[發行說明](#latestrelease)以查看新功能並獲取更新說明。
+8 March 2026 : Version 3.4.1 is out. Check the [Release Notes](#latestrelease) to see what's new.
 
 ```
 
