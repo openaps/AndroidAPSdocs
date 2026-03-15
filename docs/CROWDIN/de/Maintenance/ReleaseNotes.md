@@ -62,14 +62,14 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 
 (latestrelease)=
 
-(version3400)=
+(version3410)=
 
 ## Version 3.4.1.0
 
 Release date: 03-08-2026
 
 ### Core
-- Fix DST handling @MilosKozak
+- Zeitumstellungsproblem behoben @MilosKozak
 - Improve and unify normal target identification (mgdl > 99, mmol > 5.5) @MilosKozak
 - SMS: protect RESTART by PIN @MilosKozak
 - Maintenance: warn if wrong directory selected @MilosKozak
@@ -89,7 +89,7 @@ Release date: 03-08-2026
 - Allow insulin delivery while loop is suspended but pump is available @cschuijt
 
 ### Cloud / Backup
-- Add backup to Google Drive @Angus-repo
+- Backup zu Google Drive hinzufügen @Angus-repo
 - Notify UI on cloud storage error state change @Angus-repo
 - Allow both local and cloud storage at the same time @Angus-repo
 
@@ -104,11 +104,11 @@ Release date: 03-08-2026
 - Display New IOB in Wizard Result if IOB is used in calculations @olorinmaia
 - Fix Wear BolusProgress with Total Amount @Philoul
 
-### UI
+### UI (Benutzeroberfläche)
 - Improve ic_none icon for Site Rotation @Philoul
 - Fix site rotation manage pump setting not being used @samfundev
 
-### Contributors
+### Beitragende
 @MilosKozak @Philoul @olorinmaia @jwoglom @mifi100 @andy-rozman @Angus-repo @brianV @cschuijt @hhfcvmars @miyeongkim @samfundev @michaeln-synapse
 
 (version3400)=

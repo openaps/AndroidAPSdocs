@@ -77,9 +77,9 @@ a) Mit einem USB-Kabel, um die **AAPS** wear apk Datei auf das Smartphone zu bri
 b) Schneide die Wear.apk aus Android Studio aus und füge sie in Dein Google Drive Laufwerk ein.
 
 
-Um AAPS per "sideloading" auf die Smartwatch zu bringen, kannst Du entweder Wear Installer 2 oder Easy Fire Tools nutzen. Wir empfehlen den Wear Installer 2 zu nutzen, da die Anleitung und der Prozess im Video klar und verständlich erklärt wird.
+To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained. If Wear Installer 2 does not work for you try via
 
-## Wear Installer 2 zum „Sideloading“ von **AAPS** Wear vom Smartphone auf die Smartwatch nutzen
+### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
 
  ![grafik](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
@@ -96,47 +96,69 @@ Um die Akkulaufzeit zu verlängern, schalte - wie auch im Video gezeigt - auf de
 
 Alternativ, allerdings nicht für Wear OS 5, kannst Du:
 
-```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
-:class: dropdown
+### Use Easy Fire tools to side-load the **AAPS** wear on the watch
 
-1)   Lade _Easy Fire Tools_ aus dem Playstore auf Dein Smartphone 
+1)   Download _Easy Fire Tools_ from playstore onto phone
 
-![image](../images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
+![grafik](../images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
 
-2)  Aktiviere die Entwickleroptionen auf Deiner Smartwatch (sobald sie fertig eingerichtet ist und mit Deinem Smartphone verbunden ist): 
+2)  Make yourself a developer in the watch (once set up and connected to phone):
 
-Gehe in die Einstellungen > Info zur Uhr (unterste Option) > Software-Informationen > Softwareversion. 
+Go to settings >about watch (bottom option) >- software info > software version.
 
-Tippe schnell so lange auf "Softwareversion", bis eine Benachrichtigung erscheint, die besagt, dass die Smartwatch nun im "Entwicklermodus" ist. Kehre zum oberen Teil des Einstellungsmenüs zurück, scrolle nach unten
- zum Punkt „Entwickleroptionen“ unter „Info zur Uhr“. 
+Tippe schnell so lange auf "Softwareversion", bis eine Benachrichtigung erscheint, die besagt, dass die Smartwatch nun im "Entwicklermodus" ist. Kehre zum oberen Teil des Einstellungsmenüs zurück, scrolle nach unten zum Punkt „Entwickleroptionen“ unter „Info zur Uhr“.
 
-In den „Entwickleroptionen“ aktiviere das „ADB Debugging“ und „Über Bluetooth debuggen“. Die letzte Option zeigt dann die IP-Adresse der Smartwatch. Die letzten beiden Ziffern ändern sich jedesmal mit dem Koppelungsvorgang zu einem neuen Smartphone. Es wird in etwa so aussehen: 167.177.0.20. 5555 (ignoriere die letzten 4 Ziffern). Beachte, dass sich die letzten beiden Ziffern (hier, „20“) dieser Adresse mit jedem neuen AAPS Smartphone ändern.  
+In den „Entwickleroptionen“ aktiviere das „ADB Debugging“ und „Über Bluetooth debuggen“. Die letzte Option zeigt dann die IP-Adresse der Smartwatch. Die letzten beiden Ziffern ändern sich jedesmal mit dem Koppelungsvorgang zu einem neuen Smartphone. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Beachte, dass sich die letzten beiden Ziffern (hier, „20“) dieser Adresse mit jedem neuen AAPS Smartphone ändern.
 
 ![24-10-23, watch ADB debug pic](../images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
-3)     Gib die IP-Adresse _z.B._ **167.177.0.20** ins Easy Fire Tool auf Deinem Smartphone ein (gehe in das linke Hamburger-Menü, Einstellungen und gib die IP-Adresse ein). Klicke dann auf das plug socket Icon oben rechts.  
+STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Klicke dann auf das plug socket Icon oben rechts.
 
-![image](../images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
-
-
-![image](../images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
+![grafik](../images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
 
 
-4) Befolge die einzelnen Schritte der Anleitung [hier](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true), um die Wear.apk mit dem Easy Fire Tools auf Deine Smartwatch zu "side-loaden" (z.B. übertragen)
-
-Tippe side "plug-in" socket in der App, um die WearOS.apk auf Dein Smartwatch hochzuladen: 
-
-![image](../images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
+![grafik](../images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
 
 
- Nächster Schritt > Akzeptiere die Authorisierungs-Anfrage auf Deiner Smartwatch
+STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
+
+Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch:
+
+![grafik](../images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
 
 
-![image](../images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
+ Next step > accept the authorisation request on the smartwatch
 
-```
+
+![grafik](../images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
+
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
+
+### Using the terminal
+Connect your smartwatch and computer to the same wifi network.
+
+- To install ADB download it from: https://developer.android.com/tools/releases/platform-tools
+- Open a terminal.
+- After installation of ADB for windows set the path to the folder where ADB is located: `setx PATH "%PATH%;C:\platform-tools"`
+- For Mac instead of installing manually you can use homebrew: `brew install android-platform-tools`
+
+On the watch:
+- Go to Settings → About watch → **Software Information**
+- Tap Software version 7 times until you see Developer mode enabled.
+- Go to Settings → Developer options. Enable **ADB debugging**
+- Go to Settings → Developer options → Wireless debugging → **Pair new device**
+
+You will see a wifi pariing code and ipaddress and port appearing:
+<img width="689" height="400" alt="Screenshot 2025-12-21 at 17 46 42" src="https://github.com/user-attachments/assets/9b73869a-e4ca-47e6-9ac4-37ecc20182e1" />
+- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36443`
+- You will be asked for the pairing code. Enter it.
+- You will see a response:<br> `Successfully paired to 10.10.1.125:36443 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
+- In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:45559  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
+
+- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear.apk replaced by the name of your apk file.
+- You will see:<br> `Performing Streamed Install`<br> `Success`
+
 
 ### Allgemeine Empfehlungen zur Fehlerbehebung bei Wear OS 5
 

@@ -470,13 +470,57 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 **无人值守设置导出**<br/> 启用此功能后，您将允许**AAPS**自动执行设置导出操作，无需用户手动干预。 为此，主密码将在下次手动导出时安全地存储在您的手机上（仅限于此）。 存储的密码将有效期长达4周。 4周后，您将收到密码即将到期的通知。 在为期1周的宽限期内，您可以通过从维护菜单手动导出设置来刷新密码。
 
-1周的宽限期过后，存储的密码将过期，任何自动化设置导出都将中止，并通知用户重新输入密码。  [（**自动化设置导出**）](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)将记录在AAPS的“Careportal”和“用户输入”列表下的“治疗”部分。
+1周的宽限期过后，存储的密码将过期，任何自动化设置导出都将中止，并通知用户重新输入密码。  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
 
 启用此功能后，需立即执行一次手动设置导出操作。此时系统将要求您输入密码，**AAPS**会加密存储该密码以实现后续自动导出。
 
-(preferences-maintenance-logdirectory)= 维护设置还包含**AAPS目录**，该目录可直接在维护选项卡下找到。 此设置允许用户在手机上选择一个目录，供**AAPS**存储偏好设置、日志及其他文件。
+### Log files
+
+AAPS will save logs for troubleshooting.
+
+Do not disable this feature: it will help understanding the reasons if something goes wrong.
+
+If you need to send the logs to the developers, make sure you file accurately the mail contents to describe the issue. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
+
+You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
+
+![Log files options](../images/Pref2020_Maintenance_Logs.png)
+
+(preferences-maintenance-logdirectory)=
+
+### Setting the local AAPS directory
+
+Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. 此设置允许用户在手机上选择一个目录，供**AAPS**存储偏好设置、日志及其他文件。
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
+
+It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
+
+![Local directory location](../images/preferences/maintenance_settings_directory.png)
+
+If you select a subdirectory of AAPS, you will see an error message. Tap "OK" and retry, selecting the correct directory (one above). Do not select "DISMISS" unless you clearly know what you are doing.
+
+![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
+
+(preferences-maintenance-cloud)=
+
+### Setting a cloud directory
+
+You can export your settings, logs and CSV data to a cloud service.
+
+1.  Select Cloud directory
+2. Select your cloud service
+3. Enable cloud export
+
+![Cloud directory](../images/preferences/maintenance_settings_cloud.png)
+
+You can then define what data will be uploaded to the cloud.
+
+![Cloud directory data](../images/preferences/maintenance_settings_clouddata.png)
+
+You can disable cloud export.
+
+![Cloud directory disable](../images/preferences/maintenance_settings_cloudoff.png)
 
 ## 开源人类项目（Open Humans）
 

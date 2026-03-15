@@ -171,11 +171,9 @@ See the **figure below** for an example of how ISF values could be set in an **A
 
 Основной отправной точкой для определения ISF в дневное время является суммарная суточная доза (TDD) и правило 1700 (94). More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
 
-    1700 (если измеряется в мг/дл) или 94 (ммоль/л)/ TDD= примерно ISF.
-    
-    Пример: TDD = 40 ед.
-    ISF приблиз. (мг/дл) = 1700/40 = 43
-    ISF приблиз. (ммоль/л) = 94/40 = 2,4
+| 1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dl) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                 |
 
 Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
 

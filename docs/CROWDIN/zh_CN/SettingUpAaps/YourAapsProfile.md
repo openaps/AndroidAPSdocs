@@ -72,7 +72,7 @@ The **figure below** shows an example of how the **DIA** is set in an **AAPS** p
 
 目标可以在以下范围内定义：
 
-|     | _低_目标                 | _高_目标                 |
+|     | _Low_ target          | _High_ target         |
 | --- | --------------------- | --------------------- |
 | 最小值 | 4 mmol/l 或 72 mg/dL   | 5 mmol/l 或 90 mg/dL   |
 | 最大值 | 10 mmol/l 或 180 mg/dL | 15 mmol/l 或 225 mg/dL |
@@ -171,11 +171,9 @@ When taking action on the result of your basal testing, changes in the **Profile
 
 确定日间ISF的一个基本起点是根据你的每日总剂量（TDD）使用1700（94）规则。 Gary Scheiner的[“像胰腺一样思考（Think like a Pancreas）”](https://amzn.eu/d/iVU0RGe)第7章提供了更多详细信息。
 
-    1700（如果以mg/dl测量）或94（mmol/L）/ TDD ≈ ISF。
-    
-    示例：每日总剂量（TDD）= 40 单位
-    大约的胰岛素敏感系数（mg/dl）= 1700/40 = 43
-    大约的胰岛素敏感系数（mmol/L）= 94/40 = 2.4
+| 1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dl) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                 |
 
 假设你的基础率正确，你可以通过暂停循环、检查**IOB**是否为零，并服用一些葡萄糖片来达到稳定的“高血糖”水平来测试这一点。
 

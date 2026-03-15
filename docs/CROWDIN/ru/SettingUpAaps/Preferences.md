@@ -471,13 +471,57 @@ You can help develop **AAPS** further by sending crash reports to the developers
 
 **Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the AAPS 'Careportal' and 'User entry' lists under Treatments.
+After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
 
 After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
 
-(preferences-maintenance-logdirectory)= Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
+### Log files
+
+AAPS will save logs for troubleshooting.
+
+Do not disable this feature: it will help understanding the reasons if something goes wrong.
+
+If you need to send the logs to the developers, make sure you file accurately the mail contents to describe the issue. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
+
+You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
+
+![Log files options](../images/Pref2020_Maintenance_Logs.png)
+
+(preferences-maintenance-logdirectory)=
+
+### Setting the local AAPS directory
+
+Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
+
+It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
+
+![Local directory location](../images/preferences/maintenance_settings_directory.png)
+
+If you select a subdirectory of AAPS, you will see an error message. Tap "OK" and retry, selecting the correct directory (one above). Do not select "DISMISS" unless you clearly know what you are doing.
+
+![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
+
+(preferences-maintenance-cloud)=
+
+### Setting a cloud directory
+
+You can export your settings, logs and CSV data to a cloud service.
+
+1.  Select Cloud directory
+2. Select your cloud service
+3. Enable cloud export
+
+![Cloud directory](../images/preferences/maintenance_settings_cloud.png)
+
+You can then define what data will be uploaded to the cloud.
+
+![Cloud directory data](../images/preferences/maintenance_settings_clouddata.png)
+
+You can disable cloud export.
+
+![Cloud directory disable](../images/preferences/maintenance_settings_cloudoff.png)
 
 ## Проект Open Humans
 
