@@ -72,7 +72,7 @@ Dein **Glukoseziel** ist der zentrale Wert. Alle **AAPS**-Berechnungen basieren 
 
 The targets can be defined within those boundaries :
 
-|         | _Unteres_ Ziel         | _Oberes_ Ziel            |
+|         | _Low_ target           | _High_ target            |
 | ------- | ---------------------- | ------------------------ |
 | Minimum | 4 mmol/l oder 72 mg/dl | 5 mmol/l or 90 mg/dL     |
 | Maximum | 10 mmol/l or 180 mg/dL | 15 mmol/l oder 225 mg/dl |
@@ -171,11 +171,9 @@ Die **Abbildung unten** zeigt an einem Beispiel, wie ISF-Werte in einem **AAPS**
 
 Eine Möglichkeit einen ersten Wert für den ISF am Tage zu ermitteln, nutzt Deinen tägliches Gesamtinsulinbedarf (TDD) und die 1700- bzw. 94-Regel. Für weitere Informationen ist das Kapitel 7 des englischsprachigen Buches [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) von Gary Scheiner lesenswert.
 
-    1700 (wenn Du in in mg/dl misst) oder 94 (mmol/l) / TDD = ca.
-    
-    Beispiel: TDD = 40 IE
-    Ungefährer ISF (mg/dl) = 1700/40 = 43
-    Ungefährer ISF (mmol/l) = 94/40 = 2,4
+| 1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dl) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                 |
 
 Wenn Du der Meinung bist, dass Deine Basalrate passt, kannst Du sie testen, indem Du den Loop pausierst, sicherstellst, dass das **IOB** Null ist, und Du Deinen Glukosewert z. B. mit Traubenzucker auf ein hohes und stabiles Niveau bringst.
 
