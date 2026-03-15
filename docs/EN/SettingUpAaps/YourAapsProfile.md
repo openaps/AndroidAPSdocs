@@ -176,11 +176,8 @@ See the **figure below** for an example of how ISF values could be set in an **A
 
 A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
 
-    1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.
-    
-    Example: TDD = 40 U
-    Approx ISF (mg/dl) = 1700/40 = 43
-    Approx ISF (mmol/L) = 94/40 = 2.4
+| 1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dl) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
+| ------------------------------------------------------------ |
 
 Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
 
