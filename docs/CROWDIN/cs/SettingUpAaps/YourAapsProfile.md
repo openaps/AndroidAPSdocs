@@ -171,11 +171,9 @@ See the **figure below** for an example of how ISF values could be set in an **A
 
 Výchozím bodem pro stanovení vaší citlivosti v průběhu dne je výpočet založený na celkové denní dávce (TDD) pomocí pravidla 1700 (94). More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
 
-    1700 (měřeno v mg/dl) nebo 94 (mmol/L)/TDD = přibližná ISF.
-    
-    Například: TDD = 40
-    Cca. ISF (mg/dL) = 1700/40 = 43
-    Cca. ISF (mmol/L) = 94/40 = 2,4
+| 1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dl) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                 |
 
 Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
 
