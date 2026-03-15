@@ -143,6 +143,11 @@ Klicke auf "AAPS Verzeichnis". Dadurch wird das Dateisystem auf Deinem Smartphon
 
 ![AAPS Directory](../images/setup-wizard/Wizard07.png)
 
+```{tip}
+Choosing the default AAPS directory is recommended.</br>
+Do **not** select a subdirectory of AAPS.
+```
+
 Das Standardverzeichnis ist **AAPS**, aber Du kannst jedes beliebige Verzeichnis nutzen. Erstelle das Verzeichnis, falls erforderlich, rufe es auf und wähle "Diesen Ordner verwenden":
 
 ![Select folder](../images/setup-wizard/Wizard07-Folder.png)
@@ -194,6 +199,24 @@ Der zweite Satz ist sehr wichtig, bitte **VERLIERE DEIN MASTER-PASSWORT NICHT**.
 Nachdem Du das Passwort zweimal eingegeben hast, klicke bitte auf "WEITER":
 
 ![Passwort](../images/setup-wizard/Wizard12.png)
+
+### Importiere die Einstellungen
+
+```{tip}
+Import your last settings file if present.</br>
+You can also do this after completing the wizard.</br>
+If you already have them ready, importing now will be faster than recreating you profile.
+```
+
+If your current AAPS directory contains settings, you will be asked if you want to import them.
+
+This will happen only if you uninstalled and reinstalled AAPS on the same phone.
+
+Tap NEXT if you don't want to restore them now.
+
+Tap RESTORE SETTINGS to select which file to restore, then NEXT.
+
+![Einstellungen](../images/setup-wizard/Wizard12b.png)
 
 ## Einheiten (mg/dl <-> mmol/l)
 
@@ -486,10 +509,12 @@ Drücke auf "WEITER", um zur nächsten Seite zu kommen.
 
 ![Pump Warning](../images/setup-wizard/Wizard23.png)
 
+Once a pump requiring AAPS to use Bluetooth is select, you will see a warning: AAPS requires Bluetooth permission. This will be addressed after you complete the Wizard.
+
+![Bluetooth Warning](../images/setup-wizard/Wizard23b.png)
+
 
 In diesem Fall wählen wir die "Virtuelle Pumpe" aus.
-
-Tippe auf "WEITER", um zur nächsten Seite zu kommen:
 
 ![Pumpe](../images/setup-wizard/Wizard23-Pump.png)
 
@@ -554,5 +579,19 @@ Du kannst auf "SCHLUMMERN" tippen und sie wird veschwinden.
 ![grafik](../images/setup-wizard/Wizard26-Done.png)
 
 Solltest Du versehentlich den Einrichtungsassistenten verlassen haben, kannst Du ihn entweder einfach neu starten oder die [Konfiguration des AAPS Loop](../SettingUpAaps/ChangeAapsConfiguration.md) manuell vornehmen.
+
+## Restart AAPS to validate settings
+
+From the top right menu, select Exit to force AAPS to restart.
+
+![Neustart](../images/setup-wizard/Wizard27.png)
+
+If you selected a Bluetooth connected pump, you will now see the permission request:
+
+![Bluetooth Request](../images/setup-wizard/Wizard28.png)
+
+Allow AAPS to connect to nearby devices.
+
+![Bluetooth Request](../images/setup-wizard/Wizard28b.png)
 
 Wenn Dein **AAPS**-Loop nun fertig eingerichtet ist, gehe zum nächsten Abschnitt [„Abschließen der Ziele (Objectives)“](../SettingUpAaps/CompletingTheObjectives.md).
