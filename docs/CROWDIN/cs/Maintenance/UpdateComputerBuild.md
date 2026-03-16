@@ -1,4 +1,4 @@
-# Update with a computer
+# Update with Android Studio
 
 ## Vyrobte si místo stažení
 
@@ -8,7 +8,7 @@
 In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
 ```
 
-## Overview for updating to a new version of AAPS with a computer
+## Overview for updating to a new version of AAPS with Android Studio
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
