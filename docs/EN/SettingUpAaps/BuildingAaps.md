@@ -8,9 +8,9 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 ---
 
-Two methods are available to build the AAPS app:
+Three methods are available to build the AAPS app:
 
-### Build with a browser
+### Build with a browser (recommended)
 
 You can build the app with your smartphone using GitHub actions, and save it in your Google Drive.
 
@@ -18,9 +18,10 @@ You can build the app with your smartphone using GitHub actions, and save it in 
 
 ----
 
-### Build with a computer
+### Build with Android Studio
 
-You can build the app with your computer using Android Studio.
+You can build the app with your computer using Android Studio. This used to be the only build option,
+nowadays Android Studio is mostly used by developers who consider making code changes.
 
 **[Follow these instructions.](./ComputerBuild.md)**
 
