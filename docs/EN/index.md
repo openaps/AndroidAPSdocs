@@ -94,6 +94,7 @@ Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 Building AAPS <./SettingUpAaps/BuildingAaps.md>
 - Browser Build <./SettingUpAaps/BrowserBuild.md>
 - Computer Build <./SettingUpAaps/ComputerBuild.md>
+- CLI Build <./SettingUpAaps/CLIBuild.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
 Setup Wizard <./SettingUpAaps/SetupWizard.md>
 Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>

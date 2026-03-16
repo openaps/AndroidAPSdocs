@@ -24,3 +24,10 @@ You can build the app with your computer using Android Studio.
 
 **[Follow these instructions.](./ComputerBuild.md)**
 
+----
+
+### Build using the command-line
+
+This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+
+**[Follow these instructions.](./CLIBuild.md)**
