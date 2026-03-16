@@ -16,9 +16,13 @@ Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als
 
 Wenn Du die AAPS-App bereits mit der Browser-Build-Methode erstellt hast, befolge [diesen Anweisungen](./UpdateBrowserBuild.md).
 
-## AAPS mit einem Computer aktualisieren
+## Update AAPS with Android Studio
 
 Nutze [diese Anleitung](./UpdateComputerBuild.md).
+
+## Update AAPS with the command-line
+
+Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
