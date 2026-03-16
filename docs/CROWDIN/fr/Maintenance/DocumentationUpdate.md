@@ -1,5 +1,10 @@
 # Mises à jour et modifications de la documentation
 
+## March 2026
+
+- [Add CLI Build option](../SettingUpAaps/CLIBuild.md) @je-l
+- Rename *Computer Build* to *Android Studio Build*. Preserve file names for URLs.
+
 ## January 2025
 
 - [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
