@@ -1,4 +1,4 @@
-# Update with a computer
+# Update with Android Studio
 
 ## 自行构建而非下载
 
@@ -8,7 +8,7 @@
 如果您想在新电脑上构建 **AAPS**：请将备份的密钥库文件复制到新电脑。 然后按照 [首次构建 **AAPS** 流程](../SettingUpAaps/BuildingAaps.md) 操作，而非本指南。 唯一区别在于您可以选择已复制的密钥库文件而无需新建。
 ```
 
-## Overview for updating to a new version of AAPS with a computer
+## Overview for updating to a new version of AAPS with Android Studio
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
