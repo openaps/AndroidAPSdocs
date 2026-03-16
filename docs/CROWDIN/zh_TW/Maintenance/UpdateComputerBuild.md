@@ -1,4 +1,4 @@
-# 透過電腦進行更新
+# Update with Android Studio
 
 ## 自行建置，而不是下載
 
@@ -8,7 +8,7 @@
 如果你想在新電腦上建立 **AAPS**：請將你的備份金鑰存檔複製到新電腦上。 然後按照 [初始建置 **AAPS** 程序](../SettingUpAaps/BuildingAaps.md) 的步驟，而不是這個指導。 唯一的不同之處在於，你可以選擇你在新電腦上複製的金鑰存檔，而不必建立新的金鑰存檔。
 ```
 
-## 使用電腦更新 AAPS 的總覽
+## Overview for updating to a new version of AAPS with Android Studio
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
