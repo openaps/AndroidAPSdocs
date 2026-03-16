@@ -16,9 +16,13 @@
 
 If you already built your AAPS app with the Browser Build method, follow [these instructions](./UpdateBrowserBuild.md).
 
-## Update AAPS with a computer
+## Update AAPS with Android Studio
 
 Follow [these instructions.](./UpdateComputerBuild.md).
+
+## Update AAPS with the command-line
+
+Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
