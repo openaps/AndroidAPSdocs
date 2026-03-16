@@ -1,4 +1,6 @@
-# Computer Build
+<!-- Android Studio Build, FKA Computer Build. Preserve filenames to avoid breaking URLs. -->
+
+# Android Studio Build
 
 Dies ist die herkömmliche Methode, um Deine AAPS-App zu erstellen.
 
