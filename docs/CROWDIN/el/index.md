@@ -91,7 +91,8 @@ Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 Building AAPS <./SettingUpAaps/BuildingAaps.md>
 - Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Computer Build <./SettingUpAaps/ComputerBuild.md>
+- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
+- CLI Build <./SettingUpAaps/CLIBuild.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
 Setup Wizard <./SettingUpAaps/SetupWizard.md>
 Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
@@ -149,7 +150,7 @@ AAPS Release Notes <./Maintenance/ReleaseNotes.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 - Browser Update <./Maintenance/UpdateBrowserBuild.md>
-- Computer Update <./Maintenance/UpdateComputerBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 
