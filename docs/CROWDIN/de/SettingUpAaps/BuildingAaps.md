@@ -8,9 +8,9 @@ Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 
 ---
 
-Die AAPS-App kann auf zwei Wegen erstellt werden:
+Three methods are available to build the AAPS app:
 
-### Mit einem Browser erstellen
+### Build with a browser (recommended)
 
 Du kannst die App mit Deinem Smartphone und entsprechenden GitHub-Aktionen erstellen und in Deinem Google Drive speichern.
 
@@ -18,9 +18,16 @@ Du kannst die App mit Deinem Smartphone und entsprechenden GitHub-Aktionen erste
 
 ----
 
-### Mit einem Computer erstellen
+### Build with Android Studio
 
-Du kannst die App mit Deinem Computer und dem „Android Studio“ erstellen.
+You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
 
 **[Nutze diese Anleitung.](./ComputerBuild.md)**
 
+----
+
+### Build using the command-line
+
+This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+
+**[Nutze diese Anleitung.](./CLIBuild.md)**
