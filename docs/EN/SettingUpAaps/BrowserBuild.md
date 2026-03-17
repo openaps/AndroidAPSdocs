@@ -198,9 +198,15 @@ Skip the next section and continue [here](#aaps-ci-google-drive-auth).
 
 ```
 
+</br>
+
 (aaps-ci-google-drive-auth)= 
 
 ### AAPS-CI Google Drive Auth
+
+```{warning}
+No matter which of the prior sets of instructions you followed (option 1 or option 2), you MUST add the Google Drive authorization to successfully use the Browser Build.
+```
 
 Note: If you already followed this part in the video, you can now skip to [here](#github-build-apk).
 
@@ -253,6 +259,10 @@ Switch back to the GitHub tab.
 2. Tap Add secret.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
+
+You should have either two (option 1) or five (option 2) secrets entries now.
+
+![](../images/Building-the-App/CI/BrowserBuildGAUTH8.png)
 
 GitHub will now be able to store the AAPS apk file in your Google Drive, once built.
 
