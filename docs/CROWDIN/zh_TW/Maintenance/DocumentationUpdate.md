@@ -1,5 +1,10 @@
 # 文件更新與變更
 
+## March 2026
+
+- [Add CLI Build option](../SettingUpAaps/CLIBuild.md) @je-l
+- Rename *Computer Build* to *Android Studio Build*. Preserve file names for URLs.
+
 ## 2025年1月
 
 - [3.4](#version3400) 版發佈與文件更新彙總（嚮導、電腦建置版本、組態建置工具）

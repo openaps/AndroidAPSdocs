@@ -1,4 +1,4 @@
-# Mit einem PC/Computer aktualisieren
+# Update with Android Studio
 
 ## Kein Download möglich - APK muss selbst erstellt werden
 
@@ -8,7 +8,7 @@ Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als
 Falls Du **AAPS** auf einem neuen Computer erstellen möchtest: Kopiere das Backup Deiner Keystore-Datei auf den neuen Computer. Folge dann dem [Prozess für die erstmalige **AAPS**-Erstellung](../SettingUpAaps/BuildingAaps.md) und nicht dieser Anleitung. Der einzige Unterschied besteht darin, dass Du anstelle einen neuen Keystore zu erstellen, den Keystore auswählst, den Du auf den neuen Computer kopiert hast.
 ```
 
-## Übersicht zur Aktualisierung auf eine neue AAPS-Version mit einem Computer
+## Overview for updating to a new version of AAPS with Android Studio
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1

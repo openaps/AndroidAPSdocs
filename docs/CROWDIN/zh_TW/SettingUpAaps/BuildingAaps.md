@@ -8,9 +8,9 @@
 
 ---
 
-提供兩種方法來建立 AAPS 應用程式：
+Three methods are available to build the AAPS app:
 
-### 使用瀏覽器建立
+### Build with a browser (recommended)
 
 您可以使用 GitHub actions 在智慧型手機上建立應用程式，並將其儲存在 Google 雲端硬碟中。
 
@@ -18,9 +18,16 @@
 
 ----
 
-### 使用電腦建立
+### Build with Android Studio
 
-您可以使用 Android Studio 在電腦上建立應用程式。
+You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
 
 **[請按照這些指示進行操作。](./ComputerBuild.md)**
 
+----
+
+### Build using the command-line
+
+This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+
+**[請按照這些指示進行操作。](./CLIBuild.md)**
