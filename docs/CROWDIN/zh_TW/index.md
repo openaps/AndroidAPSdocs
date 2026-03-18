@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-8 March 2026 : Version 3.4.1 is out. Check the [Release Notes](#latestrelease) to see what's new.
+2026 年 3 月 8 日：版本 3.4.1 已發布。 請參閱 [發行說明](#latestrelease) 以了解新內容。
 
 ```
 
@@ -84,22 +84,22 @@ AAPS 簡介 <./Getting-Started/Introduction.md>
 ```
 
 ```{toctree}
-:caption: 3) Setting up AAPS
+:caption: 3) 設定 AAPS
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+設定報表伺服器 <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
-- CLI Build <./SettingUpAaps/CLIBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+建置 AAPS <./SettingUpAaps/BuildingAaps.md>
+- 瀏覽器建置 <./SettingUpAaps/BrowserBuild.md>
+- Android Studio 建置 <./SettingUpAaps/ComputerBuild.md>
+- CLI 建置 <./SettingUpAaps/CLIBuild.md>
+傳輸並安裝 AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+設定嚮導 <./SettingUpAaps/SetupWizard.md>
+你的 AAPS 設定檔 <./SettingUpAaps/YourAapsProfile.md>
+變更 AAPS 組態 <./SettingUpAaps/ChangeAapsConfiguration.md>
+- 組態建置工具 <./SettingUpAaps/ConfigBuilder.md>
+- 偏好設定 <./SettingUpAaps/Preferences.md>
+完成目標 <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -142,15 +142,15 @@ AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
 ```
 
 ```{toctree}
-:caption: 7) Maintenance of AAPS
+:caption: 7) AAPS 維護
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+匯出/匯入設定 <./Maintenance/ExportImportSettings.md>
+檢視你的資料 <./Maintenance/Reviewing.md>
+AAPS 發行說明 <./Maintenance/ReleaseNotes.md>
+文件更新 <./Maintenance/DocumentationUpdate.md>
+更新至新的 AAPS 版本 <./Maintenance/UpdateToNewVersion.md>
+- 瀏覽器建置更新 <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio 建置更新 <./Maintenance/UpdateComputerBuild.md>
 
 ```
 
