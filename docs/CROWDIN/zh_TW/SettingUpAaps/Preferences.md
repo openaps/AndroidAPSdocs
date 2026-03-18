@@ -499,7 +499,7 @@ AAPS 會儲存記錄，以利疑難排解。
 
 ![本機目錄位置](../images/preferences/maintenance_settings_directory.png)
 
-若你選擇了 AAPS 的子目錄，會顯示錯誤訊息。 點選「OK」並重試，選擇正確的目錄（上一層）。 除非你非常清楚自己在做什麼，請不要選擇「DISMISS」。
+若你選擇了 AAPS 的子目錄，會顯示「目錄選擇錯誤」的訊息。 點選「確認」並重新選擇正確的目錄（上一層）。 除非你非常清楚自己在做什麼，請不要選擇「關閉」。
 
 ![本機目錄位置](../images/preferences/maintenance_settings_wrongdirectory.png)
 
