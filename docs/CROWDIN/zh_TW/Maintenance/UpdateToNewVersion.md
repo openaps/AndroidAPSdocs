@@ -16,13 +16,13 @@
 
 如果你已使用瀏覽器版本方法建置了 AAPS 應用程式，請遵循 [這些指示](./UpdateBrowserBuild.md)。
 
-## Update AAPS with Android Studio
+## 使用 Android Studio 更新 AAPS
 
 請遵循 [這些指示。](./UpdateComputerBuild.md)
 
-## Update AAPS with the command-line
+## 使用命令列更新 AAPS
 
-Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
+請使用與先前建置 AAPS 時[相同的說明](../SettingUpAaps/CLIBuild.md)，但請使用 git 取得新的變更。
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 

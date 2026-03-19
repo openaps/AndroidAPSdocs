@@ -196,9 +196,15 @@ AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS
 
 ```
 
+</br>
+
 (aaps-ci-google-drive-auth)=
 
 ### AAPS-CI Google 雲端硬碟授權
+
+```{warning}
+無論你遵循前述哪一組指引（選項 1 或選項 2），你必須新增 Google Drive 授權，才能成功使用 Browser Build。
+```
 
 注意：如果您已在影片中跟隨了這部分，現在可以跳到 [這裡](#github-build-apk)。
 
@@ -251,6 +257,10 @@ AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS
 2. 點擊「Add secret」。
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
+
+現在你應該有兩個（選項 1）或五個（選項 2）Secrets 項目。
+
+![](../images/Building-the-App/CI/BrowserBuildGAUTH8.png)
 
 GitHub 現在將能夠將 AAPS apk 檔案儲存在您的 Google Drive 中，一旦建立完成。
 

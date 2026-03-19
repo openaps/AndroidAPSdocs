@@ -471,57 +471,57 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 
 **自動設定匯出**<br/>啟用此功能後，你允許**AAPS**自動執行設定匯出，而無需用戶介入。 為此，主密碼 安全地存儲在你的手機中（僅限於下次手動匯出時）。 存儲的密碼將在最多 4 週內有效。 4 週後，你將收到通知，提示密碼即將過期。 在為期 1 週的寬限期內，可以透過 從維護選單手動匯出設定來刷新密碼。
 
-在寬限期過期的 1 週後，存儲的密碼將過期，任何自動化設定匯出將中止，同時通知用戶，要求 重新輸入密碼。  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
+在寬限期過期的 1 週後，存儲的密碼將過期，任何自動化設定匯出將中止，同時通知用戶，要求 重新輸入密碼。  [(**自動化設定匯出**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  會記錄 到 **AAPS** 的「照護入口」與「使用者輸入」清單（位於「治療」中）。
 
 啟用此選項後，請確保執行一次手動設定匯出，屆時系統會要求你輸入密碼，以便**AAPS**能夠儲存它。
 
-### Log files
+### 日誌文件
 
-AAPS will save logs for troubleshooting.
+AAPS 會儲存記錄，以利疑難排解。
 
-Do not disable this feature: it will help understanding the reasons if something goes wrong.
+請勿停用此功能：若發生問題，它有助於了解原因。
 
-If you need to send the logs to the developers, make sure you file accurately the mail contents to describe the issue. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
+若需要將記錄寄給開發者，請在郵件內容中準確描述問題。 建議僅在[在 GitHub 提交問題回報](https://github.com/nightscout/AndroidAPS/issues)後，且被要求時再傳送記錄。
 
-You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
+你可以在手機記憶體 -> Android -> data -> info.nightscout.androidaps -> files 中找到 AAPS 記錄。
 
-![Log files options](../images/Pref2020_Maintenance_Logs.png)
+![記錄檔選項](../images/Pref2020_Maintenance_Logs.png)
 
 (preferences-maintenance-logdirectory)=
 
-### Setting the local AAPS directory
+### 設定本機 AAPS 目錄
 
-Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. 此設定允許用戶選擇電話上的一個目錄，**AAPS**將在該目錄中儲存偏好設定、日誌及其他檔案。
+維護設定還包括**AAPS**目錄，可以直接在維護標籤下找到。 此設定允許用戶選擇電話上的一個目錄，**AAPS**將在該目錄中儲存偏好設定、日誌及其他檔案。
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
-It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
+強烈建議將目錄設在手機儲存空間的主目錄下。 預設為 AAPS。
 
-![Local directory location](../images/preferences/maintenance_settings_directory.png)
+![本機目錄位置](../images/preferences/maintenance_settings_directory.png)
 
-If you select a subdirectory of AAPS, you will see an error message. Tap "OK" and retry, selecting the correct directory (one above). Do not select "DISMISS" unless you clearly know what you are doing.
+若你選擇了 AAPS 的子目錄，會顯示「目錄選擇錯誤」的訊息。 點選「確認」並重新選擇正確的目錄（上一層）。 除非你非常清楚自己在做什麼，請不要選擇「關閉」。
 
-![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
+![本機目錄位置](../images/preferences/maintenance_settings_wrongdirectory.png)
 
 (preferences-maintenance-cloud)=
 
-### Setting a cloud directory
+### 設定雲端目錄
 
-You can export your settings, logs and CSV data to a cloud service.
+你可以將設定、記錄與 CSV 資料匯出到雲端服務。
 
-1.  Select Cloud directory
-2. Select your cloud service
-3. Enable cloud export
+1.  選擇雲端目錄
+2. 選擇你的雲端服務
+3. 啟用雲端匯出
 
-![Cloud directory](../images/preferences/maintenance_settings_cloud.png)
+![雲端目錄](../images/preferences/maintenance_settings_cloud.png)
 
-You can then define what data will be uploaded to the cloud.
+接著你可以定義要上傳到雲端的資料。
 
-![Cloud directory data](../images/preferences/maintenance_settings_clouddata.png)
+![雲端目錄資料](../images/preferences/maintenance_settings_clouddata.png)
 
-You can disable cloud export.
+你可以停用雲端匯出。
 
-![Cloud directory disable](../images/preferences/maintenance_settings_cloudoff.png)
+![停用雲端匯出](../images/preferences/maintenance_settings_cloudoff.png)
 
 ## Open Humans
 

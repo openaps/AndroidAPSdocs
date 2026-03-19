@@ -1,6 +1,6 @@
 <!-- Android Studio Build, FKA Computer Build. Preserve filenames to avoid breaking URLs. -->
 
-# Android Studio Build
+# Android Studio 建置
 
 這是傳統的方法來建立您的 AAPS 應用程式。
 
@@ -23,12 +23,12 @@
 | ----------------------- | ---------------------------------------- | ---------------------------------------- | ------ |:--- |
 | 2.6.2                   | 3.6.1                                    |                                          | 5.6.4  | 11  |
 | 2.8.2.1                 | 4.1.1                                    |                                          | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                 | up to Panda 2                            | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog（2023.1.1）                       | up to Panda 2                            | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug功能更新（2024.2.2）                    | up to Panda 2                            | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                       | up to Panda 2                            | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                       | up to Panda 2                            | 8.13   | 21  |
-| [3.4.1](#version3410)   | Panda 2 (2025.32)                        |                                          | 9      | 21  |
+| [3.1.0.3](#version3100) | 2020.3.1                                 | 適用至 Panda 2                              | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog（2023.1.1）                       | 適用至 Panda 2                              | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug功能更新（2024.2.2）                    | 適用至 Panda 2                              | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                       | 適用至 Panda 2                              | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                       | 適用至 Panda 2                              | 8.13   | 21  |
+| [3.4.1](#version3410)   | Panda 2（2025.32）                         |                                          | 9      | 21  |
 
 "首選版本"已打包與適當的JVM版本。 首選版本也是你可以用來建立**AAPS**的最小版本。 你**無法**在比"首選"版本更舊的版本上建立。 如果使用不同的版本，你可能會遇到與JVM版本相關的問題。 請參閱 [Android Studio 問題排除](#troubleshooting_androidstudio-uncommitted-changes) 頁面以協助解決這些問題。 如果你當前的 Android Studio 版本未在表格中列出，你必須先更新它。
 
