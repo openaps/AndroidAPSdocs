@@ -27,7 +27,7 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 | [Syai](../CompatibleCgms/SyaiTagX1.md)                 | Syai Tag App                                                 |
 | Sibionics CGM                                          | [Juggluco](../CompatibleCgms/Juggluco.md) or Patched SI App  |
 | Sinocare                                               | Patched Sino App                                             |
-| Caresens, Simplera, iCan, LinX, SmartGuide             | xDrip+ Companion App                                         |
+| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip+ Companion App                                         |
 
 (GettingStarted-TrustedBGSource)=
 
