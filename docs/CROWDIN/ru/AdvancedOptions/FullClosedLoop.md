@@ -141,7 +141,7 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 
 ## Обнаружение приёма пищи/ Автоматизация для повышения эффективности
 
-Для успешной работы **АЗЦ** ключевым параметром настройки является чувствительность к инсулину **ISF**. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
+Для успешной работы **АЗЦ** ключевым параметром настройки является чувствительность к инсулину **ISF**. В алгоритме **AAPS** Master + **Автоматизация**, при распознании (через приращения гликемии) приема пищи</strong> должно автоматически запускаться **> 100%-ное изменение профиля, обеспечивающее повышенный **ISF**.</p>
 
 **AAPS** Master allows up to 130% temporary **Profile** in **HCL** p mode. Boosting the **ISF** is done in 3 steps:
 
