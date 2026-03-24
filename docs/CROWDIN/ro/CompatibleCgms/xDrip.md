@@ -30,27 +30,27 @@ Atingeți `Opțiuni suplimentare`(8)
 
 Dezactivați `Încărcați tratamentele`(9) și asigurați-vă că **NU** utilizați `Date de completare retroactivă` (11).
 
-Opțiunea `Alerta privind eșecurile` ar trebui, de asemenea, dezactivată (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
+Opțiunea `Alerta privind eșecurile` ar trebui, de asemenea, dezactivată (10). Altfel veți primi o alarmă la fiecare 5 minute în caz de probleme cu rețeaua Wi-Fi/mobile sau în cazul în care serverul nu este disponibil.
 
 ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
 
-### **Inter-app Settings** (Broadcast)
+### **Setări între aplicații** (Broadcast)
 
-If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+Dacă urmează să utilizați AAPS și datele trebuie transmise către AAPS trebuie să activați difuzarea în xDrip+ în setările între aplicații.
 
-→ Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
+→ Meniu Hamburger (1) → Setări (2) → Setări între aplicații (3) → Transmisiune locală **PORNITĂ** (4)
 
-In order for the values to be identical in AAPS with respect to xDrip+, you should activate `Send the displayed glucose value` (5).
+Pentru ca valorile să fie identice în AAPS în raport cu xDrip+, ar trebui să activați `Trimiteți valoarea de glicemie afișată` (5).
 
-Enable Compatible Broadcast (6).
+Activează transmisiunea compatibilă (6).
 
-![xDrip+ Basic Settings 4](../images/xDrip_Basic4.png)
+![Setări de bază xDrip+ 4](../images/xDrip_Basic4.png)
 
-If you have also activated `Accept treatments` in xDrip+ and `Enable broadcasts to xDrip+` in AAPS xDrip+ plugin, then xDrip+ will receive insulin, carbs and basal rate information from AAPS.
+Dacă ați activat de asemenea `Acceptați tratamentele` în xDrip+ și `Activați transmisiunile la xDrip+` în plugin-ul AAPS xDrip+, apoi xDrip+ va primi insulină, carbohidrați și informații privind rata bazală din AAPS.
 
-If you enable `Accept Calibrations`, xDrip+ will use the calibrations from AAPS. Be careful when you use this feature with Dexcom sensors: read [this](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) first.
+Dacă activați `Acceptați calibrările`, xDrip+ va utiliza calibrările de la AAPS. Fiți atent când utilizați această funcționalitate cu senzorii Dexcom: citiți [acest](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) mai întâi.
 
-Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time AAPS sends a basal/profile change.
+Amintiți-vă să dezactivați Importul de sunete pentru a evita declanșarea sunetelor în xDrip+ de fiecare dată când AAPS trimite o schimbare de bazală/profil.
 
 ![xDrip+ Basic Settings 5](../images/xDrip_Basic5.png)
 
