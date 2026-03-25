@@ -5,11 +5,11 @@
 ```{admonition} Latest Release
 :class: note
 
-8 March 2026 : Version 3.4.1 is out. Check the [Release Notes](#latestrelease) to see what's new.
+8. März 2026: Version 3.4.1 ist nun verfügbar. Check the [Release Notes](#latestrelease) to see what's new.
 
 ```
 
-Android APS (**AAPS**) ist eine Open-Source-App für Menschen mit insulinabhängigem Diabetes. Es handelt sich dabei um ein künstliches Bauchspeicheldrüsen-System (APS), das auf Android-Smartphones läuft. **AAPS** nutzt verschiedene OpenAPS-Softwarealgorithmen, um damit genau das zu tun, was eine echte Bauchspeicheldrüse auch tut: den Glukosespiegel durch automatisierte Insulindosierung (AID) in gesunden Grenzen halten. Um **AAPS** nutzen zu können, benötigst Du **drei** kompatible Geräte: **(1)** ein Android-Smartphone, **(2)** ein CGM-System (Sensor) und **(3)** eine von der FDA/CE zugelassene Insulinpumpe. Um **(4)** **AAPS remote steuern zu können**, Daten speichern, teilen und Berichte auf einem Berichtsserver erstellen zu können, benötigst Du optional einen Cloud-Dienst und eventuell auch **(5)** eine Smartwatch.
+Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. Es handelt sich dabei um ein künstliches Bauchspeicheldrüsen-System (APS), das auf Android-Smartphones läuft. **AAPS** nutzt verschiedene OpenAPS-Softwarealgorithmen, um damit genau das zu tun, was eine echte Bauchspeicheldrüse auch tut: den Glukosespiegel durch automatisierte Insulindosierung (AID) in gesunden Grenzen halten. Um **AAPS** nutzen zu können, benötigst Du **drei** kompatible Geräte: **(1)** ein Android-Smartphone, **(2)** ein CGM-System (Sensor) und **(3)** eine von der FDA/CE zugelassene Insulinpumpe. Um **(4)** **AAPS remote steuern zu können**, Daten speichern, teilen und Berichte auf einem Berichtsserver erstellen zu können, benötigst Du optional einen Cloud-Dienst und eventuell auch **(5)** eine Smartwatch.
 
 Diese Dokumentation erklärt, wie Du **AAPS** einrichtest und nutzt. Du kannst entweder durch das Menü auf der linken Seite (und die praktische "**Suche in den Dokumenten**"-Funktion) oder durch den [Index](#index-aaps-documentation-index) am Ende dieser Seite durch die **AAPS**-Dokumentation navigieren.
 
@@ -84,22 +84,22 @@ Komponentenübersicht <./Getting-Started/ComponentOverview.md>
 ```
 
 ```{toctree}
-:caption: 3) Setting up AAPS
+:caption: 3) AAPS einrichten
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Einrichten des Berichtsservers <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
-- CLI Build <./SettingUpAaps/CLIBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+AAPS erstellen <./SettingUpAaps/BuildingAaps.md>
+- Im Browser (Browser Build) <./SettingUpAaps/BrowserBuild.md>
+- Mit Android Studio (PC) <./SettingUpAaps/ComputerBuild.md>
+- Mit Kommandozeile (CLI Build) <./SettingUpAaps/CLIBuild.md>
+AAPS übertragen und installieren <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Einrichtungsassistent <./SettingUpAaps/SetupWizard.md>
+Dein AAPS-Profil <. SettingUpAaps/YourAapsProfile.md>
+Ändern der AAPS-Konfiguration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Konfiguation <./SettingUpAaps/ConfigBuilder.md>
+- Einstellungen <./SettingUpAaps/Preferences.md>
+Abschluss der Ziele <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -142,15 +142,15 @@ Austausch-Plattform für eigene Zifferblätter <./ExchangeSiteCustomWatchfaces/i
 ```
 
 ```{toctree}
-:caption: 7) Maintenance of AAPS
+:caption: 7) AAPS pflegen
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-Reviewing your data <./Maintenance/Reviewing.md>
+Export/Import der Einstellungen <./Maintenance/ExportImporteinstellungen. d>
+Deine Daten prüfen <./Maintenance/Reviewing.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+Dokumentation aktualisieren <. Maintenance/DocumentationUpdate.md>
+Update auf eine neue AAPS-Version <./Maintenance/UpdateToNewVersion. d>
+- Browser-Update <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio-Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 
