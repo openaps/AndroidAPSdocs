@@ -143,7 +143,7 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 
 Для успешной работы **АЗЦ** ключевым параметром настройки является чувствительность к инсулину **ISF**. В алгоритме **AAPS** Master + **Автоматизация**, при распознании (через приращения гликемии) приема пищи</strong> должно автоматически запускаться **> 100%-ное изменение профиля, обеспечивающее повышенный **ISF**.</p>
 
-**AAPS** Master allows up to 130% temporary **Profile** in **HCL** p mode. Boosting the **ISF** is done in 3 steps:
+В режиме **Гибридного ЗЦ** **AAPS** Master допускает до 130% временного ** профиля **. Увеличение **ISF** осуществляется в 3 этапа:
 
 - Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body..
 - Step 2 - apply a factor (1/Profile%, as set in **Automation**) to boost **ISF**.
