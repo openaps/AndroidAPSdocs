@@ -1,72 +1,72 @@
 # Cofigurare xDrip+
 
-If not already set up, then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+Dacă nu a fost configurat deja, atunci descărcați [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-Disable battery optimization and allow background activity for the xDrip+ app.
+Dezactivați optimizarea bateriei și permiteți activitate de fundal pentru aplicația xDrip+.
 
-You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features or are using sensors that are being actively integrated (like G7), in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+Puteți descărca în siguranță [ultimul APK (stabil)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) cu excepția cazului în care aveți nevoie de caracteristici recente sau folosiți senzori care sunt integrați activ (cum ar fi G7), în cazul acela ar trebui să utilizați cel mai recent [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Setari de baza pentru toate sistemele CGM & FGM
 
-### Disable Nightscout upload
+### Dezactivează încărcarea datelor în Nightscout
 
-Starting with AAPS 3.2, you shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Începând cu AAPS 3.2, nu ar trebui să lăsați nicio altă aplicație să încarce date (glicemia din sânge și tratamente) în Nightscout.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → Switch **OFF** `Enabled` (5)
+→ Meniu Hamburger (1) → Setări (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → Comutați **OFF** `Activat` (5)
 
 ![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
 
-#### Disable automatic calibration and treatments
+#### Dezactivează calibrarea automată și tratamentele
 
-If you use an older version of AAPS (before 3.2), make sure to deactivate `Automatic Calibration` (7) If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
+Dacă utilizați o versiune mai veche de AAPS (înainte de 3.2), asigurați-vă că dezactivați `Calibrarea automată` (7) În cazul în care caseta de selectare pentru `Calibrare automată` este bifată, activați tratamentele `Descărcați` (6) o dată, apoi ștergeți căsuța de selectare pentru `Calibrarea automată` și dezactivați din nou `Descărcați tratamentele`.
 
 ![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
 
-Tap `Extra Options`(8)
+Atingeți `Opțiuni suplimentare`(8)
 
-    {admonition} Safety warning
-    :class: warning
-    You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
+    {admonition} Atenționare siguranță
+    :class: atenționare
+    Trebuie să dezactivați "Încarcă tratamente" din xDrip+, altminteri tratamentele pot fi înregistrate de 2 ori în AAPS ceea ce va duce la COB și IOB false.
 
-Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
+Dezactivați `Încărcați tratamentele`(9) și asigurați-vă că **NU** utilizați `Date de completare retroactivă` (11).
 
-Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
+Opțiunea `Alerta privind eșecurile` ar trebui, de asemenea, dezactivată (10). Altfel veți primi o alarmă la fiecare 5 minute în caz de probleme cu rețeaua Wi-Fi/mobile sau în cazul în care serverul nu este disponibil.
 
 ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
 
-### **Inter-app Settings** (Broadcast)
+### **Setări între aplicații** (Broadcast)
 
-If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+Dacă urmează să utilizați AAPS și datele trebuie transmise către AAPS trebuie să activați difuzarea în xDrip+ în setările între aplicații.
 
-→ Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
+→ Meniu Hamburger (1) → Setări (2) → Setări între aplicații (3) → Transmisiune locală **PORNITĂ** (4)
 
-In order for the values to be identical in AAPS with respect to xDrip+, you should activate `Send the displayed glucose value` (5).
+Pentru ca valorile să fie identice în AAPS în raport cu xDrip+, ar trebui să activați `Trimiteți valoarea de glicemie afișată` (5).
 
-Enable Compatible Broadcast (6).
+Activează transmisiunea compatibilă (6).
 
-![xDrip+ Basic Settings 4](../images/xDrip_Basic4.png)
+![Setări de bază xDrip+ 4](../images/xDrip_Basic4.png)
 
-If you have also activated `Accept treatments` in xDrip+ and `Enable broadcasts to xDrip+` in AAPS xDrip+ plugin, then xDrip+ will receive insulin, carbs and basal rate information from AAPS.
+Dacă ați activat de asemenea `Acceptați tratamentele` în xDrip+ și `Activați transmisiunile la xDrip+` în plugin-ul AAPS xDrip+, apoi xDrip+ va primi insulină, carbohidrați și informații privind rata bazală din AAPS.
 
-If you enable `Accept Calibrations`, xDrip+ will use the calibrations from AAPS. Be careful when you use this feature with Dexcom sensors: read [this](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) first.
+Dacă activați `Acceptați calibrările`, xDrip+ va utiliza calibrările de la AAPS. Fiți atent când utilizați această funcționalitate cu senzorii Dexcom: citiți [acest](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) mai întâi.
 
-Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time AAPS sends a basal/profile change.
+Amintiți-vă să dezactivați Importul de sunete pentru a evita declanșarea sunetelor în xDrip+ de fiecare dată când AAPS trimite o schimbare de bazală/profil.
 
-![xDrip+ Basic Settings 5](../images/xDrip_Basic5.png)
+![Setări de bază xDrip+ 5](../images/xDrip_Basic5.png)
 
 (xdrip-identify-receiver)=
 
 #### Identificare receptor
 
-- If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
-- Atenție: Auto-corectarea tinde uneori să schimbe litera i în majuscula I. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
+- Dacă sunt probleme cu transmisiunea locală (AAPS nu primește valori glicemice din xDrip+) mergeți la → Hamburger Menu (1) Setări (2) → Setări între aplicații (3) → Identifică receptorul (7) și introduceți `info.nightscout.androidaps` pentru AAPS (dacă folosești PumpControl, vă rugăm să introduceți `info.nightscout.aapspumpcontrol` în schimb!!).
+- Atenție: Auto-corectarea tinde uneori să schimbe litera i în majuscula I. **Trebuie să utilizați doar litere mici** când tastați `info.nightscout.androidaps` (sau `info.nightscout.aapspumpcontrol` pentru PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
     
     ![xDrip+ identificare receptor prin setări de bază inter-aplicații](../images/xDrip_InterApp_NS.png)
 
-## Use AAPS to calibrate in xDrip+
+## Utilizați AAPS pentru a calibra în xDrip+
 
-- If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
-- You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings.
+- Dacă doriți să aveți posibilitatea de a utiliza AAPS pentru calibrări mergeți în xDrip la Setări > Setări între aplicații > Acceptă Calibrări și selectați ON. 
+- S-ar putea să doriți de asemenea să revizuiți opțiunile din Setări → Setări mai puțin obișnuite → Setări avansate de calibrare.
 
 ## Dexcom G6
 

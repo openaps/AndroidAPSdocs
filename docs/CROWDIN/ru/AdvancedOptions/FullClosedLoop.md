@@ -124,7 +124,7 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 
 Если вы пользуетесь основной версией **AAPS**, рекомендуется настроить параметры **AAPS** с максимально допустимым размером **SMB**, чтобы **АЗЦ** мог обрабатывать максимум UAM SMB минут базала=120, то есть эквивалент двух часов базала в дневное время).
 
-Если скорость вашего базала очень низкая, то пределы **SMB** могут также оказаться слишком низкими и не обеспечить достаточный контроль над повышением ГК после приема пищи. Одно из возможных решений заключается в том, чтобы избегать диет, которые вызывают сильные скачки **ГК**, а затем перейти на ту ветку разработчиков **AAPS**, которая предлагает новый параметр в настройках **SMB**: smb_max_range_extension. Это увеличит стандартную максимальную продолжительность базала, составляющую 2 часа, в >1 раз. (Плюс к этому, коэффициент микроболюсов **SMB**, равный по умолчанию 50% может быть повышен в вариантах ветки dev. variants).
+Если скорость вашего базала очень низкая, то пределы **SMB** могут также оказаться слишком низкими и не обеспечить достаточный контроль над повышением ГК после приема пищи. Одно из возможных решений заключается в том, чтобы избегать диет, которые вызывают сильные скачки **ГК**, а затем перейти на ту ветку разработчиков **AAPS**, которая предлагает новый параметр в настройках **SMB**: smb_max_range_extension. Это увеличит стандартную максимальную продолжительность базала, составляющую 2 часа, в >1 раз. (Плюс к этому, коэффициент микроболюсов **SMB**, равный по умолчанию 50% может быть повышен в вариантах ветки dev. ).
 
 Чтобы позволить AAPS имитировать обычные болюсы при помощи введения нескольких микроБолюсов (SMB) **следуйте этой инструкции**.
 
@@ -141,21 +141,21 @@ EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Con
 
 ## Обнаружение приёма пищи/ Автоматизация для повышения эффективности
 
-Для успешной работы **АЗЦ** ключевым параметром настройки является чувствительность к инсулину **ISF**. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
+Для успешной работы **АЗЦ** ключевым параметром настройки является чувствительность к инсулину **ISF**. В алгоритме **AAPS** Master + **Автоматизация**, при распознании (через приращения гликемии) приема пищи</strong> должно автоматически запускаться **> 100%-ное изменение профиля, обеспечивающее повышенный **ISF**.</p>
 
-**AAPS** Master allows up to 130% temporary **Profile** in **HCL** p mode. Boosting the **ISF** is done in 3 steps:
+В режиме **Гибридного ЗЦ** **AAPS** Master допускает до 130% временного ** профиля **. Увеличение **ISF** осуществляется в 3 этапа:
 
-- Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body..
-- Step 2 - apply a factor (1/Profile%, as set in **Automation**) to boost **ISF**.
-- Step 3 - check that the suggested **ISF** falls within set safety limits.
+- Шаг 1 - анализ **ISF**  данного времени приема пищи в ** профиле** и оценка, может ли, например, Autosens предложить изменения, для текущего состояния чувствительности организма к инсулину (за последние несколько часов)..
+- Шаг 2 - применение коэффициента (1/%Профиля заданного в **Automation**) для повышения **ISF**.
+- Шаг 3 - проверка, не выходит ли предлагаемый **ISF** за ограничители безопасности.
 
-### FCL's Automation templates
+### Шаблоны автоматизации АЗЦ
 
-Boxes to tick at the top. You have the option:
+Поля для галочек вверху. Имеются следующие варианты:
 
-- In your **Automation** list, you can tick the check-mark (to the left of each field) OFF => This de-activates that **Automation**. For instance you can do this for all breakfast related **FCL** **Automations** to go to **HCL** for breakfast(s).
+- В списке **Автоматизаций** можно снять флажок (слева от каждого пункта)=> Это деактивирует данную **автоматизацию**. Это можно сделать для всех **Автоматизаций** **АЗЦ**, связанных с завтраком(ами), для перехода на **Гибридный ЗЦ**.
 
-- For each **Automation** rule you can tick the box for User action => then the defined Actions will not automatically be executed when Conditions apply. Rather, the **AAPS** main screen will alert you whenever your **FCL** would automatically give a **SMB**. You have the opportunity then to say ‘yes’ or ‘no’. This is extremely useful in your tuning phase.
+- Для каждого правила **Автоматизации** можно поставить галочку напротив пункта «Действие пользователя» => тогда определенные действия не будут автоматически выполняться при появлении Условий. Вместо этого на главном экране **AAPS** будет оповещение каждый раз, когда алгоритм **АЗЦ** вводит микроболюс **SMB**. У вас есть возможность принять или отклонить его. Это очень удобно на стадии отладки.
 
 This feature can be useful for certain situations like “foot to floor” syndrome whher there is a sudden rise in **BG** when getting up in the morning, but the user wants to prevent a fully automatic “breakfast started” response.
 
