@@ -35,7 +35,7 @@
 
 **AAPSClient**可以安装在单个手机或多个跟随者手机上（即家长1的跟随者手机和家长2的跟随者手机），以便两位护理人员都能获得访问权限并远程控制患者的**AAPS**手机。
 
-要下载**AAPSClient**，请前往[GitHub代码仓库](https://github.com/nightscout/AndroidAPS/releases/)，点击名为**"app-AAPSClient-release_x.x.x.x"**的资源文件（实际版本可能比下图所示版本更新）：
+To download **AAPSClient**, navigate to the [Github repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
 
 ![image](../images/remote_control_and_following/AAPSClient_download_02.png)
 
