@@ -9,25 +9,25 @@
 * [xDrip+设置](../CompatibleCgms/xDrip.md)
 * [将Nightscout作为血糖来源](../CompatibleCgms/CgmNightscoutUpload.md)：虽然可以将Nightscout用作闭环胰岛素输注的血糖来源，但**并不推荐这种方法**，因为它依赖于稳定的移动数据或Wi-Fi连接。 这意味着，只有当您与Nightscout站点在线连接时，您的**CGM（持续葡萄糖监测系统）**数据才会被**AAPS**接收。 为了获得更可靠的设置，使用能够从接收器本地广播到**AAPS**的CGM（如下所列）是一个更好的选择。
 
-| CGM                                                    | 可用的[血糖数据源](#Config-Builder-bg-source)                                                                        |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| [德康 G7](../CompatibleCgms/DexcomG7.md)                 | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                            |
-| [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md) | [xDrip+](../CompatibleCgms/xDrip.md)                                                                         |
-| [Dexcom G6](../CompatibleCgms/DexcomG6.md)             | BYODA or [xDrip+](../CompatibleCgms/xDrip.md)                                                                |
-| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)            | [xDrip+](../CompatibleCgms/xDrip.md)                                                                         |
-| [Libre 3/3+](../CompatibleCgms/Libre3.md)              | [Juggluco](../CompatibleCgms/Juggluco.md) (搭配/不搭配xDrip+)                                                     |
-| [Libre 2/2+](../CompatibleCgms/Libre2.md)              | [xDrip+](../CompatibleCgms/xDrip.md) (仅限欧盟地区) 或 [Juggluco](../CompatibleCgms/Juggluco.md) (配合或不配合 xDrip+ 均可) |
-| [Libre 1](../CompatibleCgms/Libre1.md)                 | [xDrip+](../CompatibleCgms/xDrip.md) 或 Diabox。 需要发射器                                                         |
-| [Eversense](../CompatibleCgms/Eversense.md)            | [xDrip+](../CompatibleCgms/xDrip.md) 或 ESEL/Eversense 修补版 App                                                |
-| [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)  | [xDrip+](../CompatibleCgms/xDrip.md) 或 MM640g + 600SeriesAndroidUploader 应用                                  |
-| [PocTech](../CompatibleCgms/PocTech.md)                | PocTech app                                                                                                  |
-| Glunovo                                                | Glunovo App                                                                                                  |
-| Intelligo                                              | Intelligo App                                                                                                |
-| [欧泰 (Ottai)](../CompatibleCgms/OttaiM8.md)             | 欧泰 App                                                                                                       |
-| [Syai](../CompatibleCgms/SyaiTagX1.md)                 | Syai Tag App                                                                                                 |
-| 硅基 CGM                                                 | [Juggluco](../CompatibleCgms/Juggluco.md) 或 修补版 硅基应用 (Patched SI App)                                        |
-| 三诺 (Sinocare)                                          | 修补版三诺应用 (Patched Sino App)                                                                                   |
-| Caresens, Simplera, iCan (三诺爱看), LinX, SmartGuide      | xDrip+ 伴侣应用模式 (xDrip+ Companion App)                                                                         |
+| CGM                                                                         | 可用的[血糖数据源](#Config-Builder-bg-source)                                                                        |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| [德康 G7](../CompatibleCgms/DexcomG7.md)                                      | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                            |
+| [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md)                      | [xDrip+](../CompatibleCgms/xDrip.md)                                                                         |
+| [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                  | BYODA or [xDrip+](../CompatibleCgms/xDrip.md)                                                                |
+| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                 | [xDrip+](../CompatibleCgms/xDrip.md)                                                                         |
+| [Libre 3/3+](../CompatibleCgms/Libre3.md)                                   | [Juggluco](../CompatibleCgms/Juggluco.md) (搭配/不搭配xDrip+)                                                     |
+| [Libre 2/2+](../CompatibleCgms/Libre2.md)                                   | [xDrip+](../CompatibleCgms/xDrip.md) (仅限欧盟地区) 或 [Juggluco](../CompatibleCgms/Juggluco.md) (配合或不配合 xDrip+ 均可) |
+| [Libre 1](../CompatibleCgms/Libre1.md)                                      | [xDrip+](../CompatibleCgms/xDrip.md) 或 Diabox。 需要发射器                                                         |
+| [Eversense](../CompatibleCgms/Eversense.md)                                 | [xDrip+](../CompatibleCgms/xDrip.md) 或 ESEL/Eversense 修补版 App                                                |
+| [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)                       | [xDrip+](../CompatibleCgms/xDrip.md) 或 MM640g + 600SeriesAndroidUploader 应用                                  |
+| [PocTech](../CompatibleCgms/PocTech.md)                                     | PocTech app                                                                                                  |
+| Glunovo                                                                     | Glunovo App                                                                                                  |
+| Intelligo                                                                   | Intelligo App                                                                                                |
+| [欧泰 (Ottai)](../CompatibleCgms/OttaiM8.md)                                  | 欧泰 App                                                                                                       |
+| [Syai](../CompatibleCgms/SyaiTagX1.md)                                      | Syai Tag App                                                                                                 |
+| 硅基 CGM                                                                      | [Juggluco](../CompatibleCgms/Juggluco.md) 或 修补版 硅基应用 (Patched SI App)                                        |
+| 三诺 (Sinocare)                                                               | 修补版三诺应用 (Patched Sino App)                                                                                   |
+| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip+ 伴侣应用模式 (xDrip+ Companion App)                                                                         |
 
 (GettingStarted-TrustedBGSource)=
 

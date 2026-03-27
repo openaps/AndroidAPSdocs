@@ -9,25 +9,25 @@
 * [Настройки xDrip+](../CompatibleCgms/xDrip.md)
 * [Nightscout как источник СК](../CompatibleCgms/CgmNightscoutUpload.md): Хотя использовать Nightscout в качестве источника СК для замкнутого цикла возможно, **этот метод использовать не рекомендуется** из-за того, что он полагается на стабильность мобильного интернета или Wi-Fi. Это означает, что данные с вашего **НМГ** будут приниматься **AAPS** только лишь при наличии соединения с вашим сайтом Nightscout. В качестве более надежной конфигурации рекомендуется использовать НМГ с локальной трансляцией в **AAPS** из источников, описанных ниже.
 
-| CGM /  НМГ                                             | Available [BG Sources](#Config-Builder-bg-source)                                                                    |
-| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
-| [Dexcom G7](../CompatibleCgms/DexcomG7.md)             | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                                    |
-| [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md) | [xDrip +](../CompatibleCgms/xDrip.md)                                                                                |
-| [Dexcom G6](../CompatibleCgms/DexcomG6.md)             | BYODA or [xDrip+](../CompatibleCgms/xDrip.md)                                                                        |
-| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)            | [xDrip +](../CompatibleCgms/xDrip.md)                                                                                |
-| [Libre 3/3+](../CompatibleCgms/Libre3.md)              | [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip+)                                                   |
-| [Libre 2/2+](../CompatibleCgms/Libre2.md)              | [xDrip+](../CompatibleCgms/xDrip.md) (EU only) or [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip+) |
-| [Libre 1](../CompatibleCgms/Libre1.md)                 | [xDrip+](../CompatibleCgms/xDrip.md) or Diabox. Need a transmitter                                                   |
-| [Eversense](../CompatibleCgms/Eversense.md)            | [xDrip+](../CompatibleCgms/xDrip.md) or ESEL/Eversense patched App                                                   |
-| [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)  | [xDrip+](../CompatibleCgms/xDrip.md) or MM640g + 600SeriesAndroidUploader App                                        |
-| [Poctech](../CompatibleCgms/PocTech.md)                | PocTech app                                                                                                          |
-| Glunovo                                                | Glunovo App                                                                                                          |
-| Intelligo                                              | Intelligo App                                                                                                        |
-| [Ottai](../CompatibleCgms/OttaiM8.md)                  | Ottai App                                                                                                            |
-| [Syai](../CompatibleCgms/SyaiTagX1.md)                 | Syai Tag App                                                                                                         |
-| Sibionics CGM                                          | [Juggluco](../CompatibleCgms/Juggluco.md) or Patched SI App                                                          |
-| Sinocare                                               | Patched Sino App                                                                                                     |
-| Caresens, Simplera, iCan, LinX, SmartGuide             | xDrip+ Companion App                                                                                                 |
+| CGM /  НМГ                                                                  | Available [BG Sources](#Config-Builder-bg-source)                                                                    |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                  | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                                    |
+| [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md)                      | [xDrip +](../CompatibleCgms/xDrip.md)                                                                                |
+| [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                  | BYODA or [xDrip+](../CompatibleCgms/xDrip.md)                                                                        |
+| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                 | [xDrip +](../CompatibleCgms/xDrip.md)                                                                                |
+| [Libre 3/3+](../CompatibleCgms/Libre3.md)                                   | [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip+)                                                   |
+| [Libre 2/2+](../CompatibleCgms/Libre2.md)                                   | [xDrip+](../CompatibleCgms/xDrip.md) (EU only) or [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip+) |
+| [Libre 1](../CompatibleCgms/Libre1.md)                                      | [xDrip+](../CompatibleCgms/xDrip.md) or Diabox. Need a transmitter                                                   |
+| [Eversense](../CompatibleCgms/Eversense.md)                                 | [xDrip+](../CompatibleCgms/xDrip.md) or ESEL/Eversense patched App                                                   |
+| [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)                       | [xDrip+](../CompatibleCgms/xDrip.md) or MM640g + 600SeriesAndroidUploader App                                        |
+| [Poctech](../CompatibleCgms/PocTech.md)                                     | PocTech app                                                                                                          |
+| Glunovo                                                                     | Glunovo App                                                                                                          |
+| Intelligo                                                                   | Intelligo App                                                                                                        |
+| [Ottai](../CompatibleCgms/OttaiM8.md)                                       | Ottai App                                                                                                            |
+| [Syai](../CompatibleCgms/SyaiTagX1.md)                                      | Syai Tag App                                                                                                         |
+| Sibionics CGM                                                               | [Juggluco](../CompatibleCgms/Juggluco.md) or Patched SI App                                                          |
+| Sinocare                                                                    | Patched Sino App                                                                                                     |
+| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip+ Companion App                                                                                                 |
 
 (GettingStarted-TrustedBGSource)=
 
