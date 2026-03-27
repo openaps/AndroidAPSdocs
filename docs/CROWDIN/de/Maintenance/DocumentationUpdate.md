@@ -2,8 +2,8 @@
 
 ## March 2026
 
-- [Add CLI Build option](../SettingUpAaps/CLIBuild.md) @je-l
-- Rename *Computer Build* to *Android Studio Build*. Preserve file names for URLs.
+- [CLI Build Option](../SettingUpAaps/CLIBuild.md) (Command Line Interface) @je-l hinzugefügt
+- *Computer Build* zu *Android Studio Build* umbenannt. Dateinamen für URLs unverändert.
 
 ## Januar 2025
 
