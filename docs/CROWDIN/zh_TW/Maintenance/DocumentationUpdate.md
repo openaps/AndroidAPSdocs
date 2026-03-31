@@ -20,7 +20,7 @@
 ## 2025年10月
 
 - DiaKEM：伺服器升級後，新安裝無法運作 @psonnera
-- 移除了 Libre 2 修補版應用程式（已淘汰）： 該版本無法與新感測器搭配使用 @psonnera
+- 移除了 Libre 2 修補版應用程式（已淘汰）： 該版本無法與新傳感器搭配使用 @psonnera
 - Reworked Omnipod Dash page @XiTatiON
 
 ## 2025年8月
