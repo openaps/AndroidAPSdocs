@@ -35,7 +35,7 @@
 
 **AAPSClient** 可以安裝在一部或多部追蹤者手機上（例如父母一的追蹤者手機和父母二的追蹤者手機），以便兩位照護者都能夠獲得權限並遠端控制患者的 **AAPS** 手機。
 
-To download **AAPSClient**, navigate to the [Github repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+若要下載 **AAPSClient**，前往 [Github 儲存庫](https://github.com/nightscout/AndroidAPS/releases/) 並點擊資產 **「app-AAPSClient-release_x.x.x.x」**（可能比下方截圖所示版本更新）：
 
 ![圖像](../images/remote_control_and_following/AAPSClient_download_02.png)
 
@@ -96,7 +96,7 @@ To download **AAPSClient**, navigate to the [Github repository](https://github.c
 
 | 標籤 / 漢堡選單  | 功能                                                                                                                                                         |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **功能** 標籤  | - 設定檔切換 <br>- 循環狀態變更 <br>- 臨時目標<br>- 血糖測量<br>- CGM 感測器插入<br>- 備註<br>- 運動<br>- 公告<br>- 提問？<br>- 歷史瀏覽器 |
+| **功能** 標籤  | - 設定檔切換 <br>- 循環狀態變更 <br>- 臨時目標<br>- 血糖測量<br>- CGM 傳感器插入<br>- 備註<br>- 運動<br>- 公告<br>- 提問？<br>- 歷史瀏覽器 |
 | **食物** 標籤  |                                                                                                                                                            |
 | **治療** 標籤  | - 檢查已交付的治療，包括注射和輸入的碳水化合物                                                                                                                                   |
 | **維護** 標籤  | - 匯出和匯入設定                                                                                                                                                  |
