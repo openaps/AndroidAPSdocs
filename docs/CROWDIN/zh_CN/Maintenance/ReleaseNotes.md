@@ -1,22 +1,15 @@
 
 # 发布说明
 
-请按照[更新手册](UpdateToNewVersion)中的说明进行操作。 故障排除部分也涵盖了在**AAPS**更新手册页面上更新时遇到的最常见问题。
+Please follow the instructions in the [update manual](UpdateToNewVersion) to update to a new version. 故障排除部分也涵盖了在**AAPS**更新手册页面上更新时遇到的最常见问题。
 
-当有新版本可用时，您将立即收到通知。 如果在到期日之前未更新，**AAPS**将切换至开环模式。
+You will receive a notification like this when a new update is available:
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-此提示非常重要，请勿忽略且无意打扰您。 **AAPS**的新版本不仅提供新功能，还包括重要的安全修复。 因此，每位**AAPS**用户都应尽快更新至最新版本。 遗憾的是，仍有来自非常旧版本的错误报告，因此这是为提高每位**AAPS**用户及DIY社区安全性所做的努力。 感谢您的理解。
+如果在到期日之前未更新，**AAPS**将切换至开环模式。
 
-```{admonition} First version of **AAPS**
-:class: note
-首个测试版本于2015年发布。 2016年推出了首个正式版本。
-
-目前这些版本的编年记录暂不可用，但由于多次被问及，我们在此进行说明。
-
-```
-![AAPS 1.0](../images/update/AAPS1.0.png)
+**Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This an effort to try to improve the safety for each **AAPS** user and the DIY community. 感谢您的理解。
 
 (maintenance-android-version-aaps-version)=
 
@@ -979,3 +972,15 @@ v3为新协议， 更加安全高效
 - 保持屏幕开启的选项
 - 显示Android通知作为通知的选项
 - 高级过滤（允许始终启用SMB和餐后6小时）支持使用修补版Dexcom应用或xDrip与G5原生模式作为BG源。
+
+## Version 1.0
+
+```{admonition} First version of **AAPS**
+:class: note
+
+The first test version started in 2015 and the first release was in 2016.
+
+The exact chronology of these releases is not available at the moment but as this question has been asked several times we document it here.
+
+```
+![AAPS 1.0](../images/update/AAPS1.0.png)
