@@ -1,15 +1,15 @@
 
 # 版本更新說明
 
-Please follow the instructions in the [update manual](UpdateToNewVersion) to update to a new version. 問題排除部分也更新手冊頁面上說明了，包含升級**AAPS**時最常遇到的問題。
+請依照 [更新手冊](UpdateToNewVersion) 中的指示，更新至新版本。 問題排除部分也更新手冊頁面上說明了，包含升級**AAPS**時最常遇到的問題。
 
-You will receive a notification like this when a new update is available:
+當有可用的更新時，你會收到如下的通知：
 
 ![更新資訊](../images/AAPS_LoopDisable90days.png)
 
 如果您未在到期日之前更新，**AAPS** 將切換至開環模式。
 
-**Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This an effort to try to improve the safety for each **AAPS** user and the DIY community. 感謝你的諒解。
+**請勿忽略該通知。** **AAPS** 的新版本提供重要的安全性修正。 因此，每位 **AAPS** 使用者都必須盡快更新到最新版本。 這麼做是為了提升每位 **AAPS** 使用者與 DIY 社群的安全性。 感謝你的諒解。
 
 (maintenance-android-version-aaps-version)=
 
@@ -973,14 +973,14 @@ v3 是新的協議。 更加安全和高效
 - 選項允許將通知顯示為 Android 通知
 - 支援使用 Dexcom 修補版應用或 xDrip G5 原生模式作為血糖資料來源進行進階過濾（允許始終啟用 SMB 並在飯後 6 小時內啟用）。
 
-## Version 1.0
+## 版本 1.0
 
 ```{admonition} First version of **AAPS**
 :class: note
 
-The first test version started in 2015 and the first release was in 2016.
+第一個測試版本始於 2015 年，第一個正式釋出於 2016 年。
 
-The exact chronology of these releases is not available at the moment but as this question has been asked several times we document it here.
+目前無法提供這些版本的精確時間順序，但由於這個問題被多次提出，我們在此加以記錄。
 
 ```
 ![AAPS 1.0](../images/update/AAPS1.0.png)
