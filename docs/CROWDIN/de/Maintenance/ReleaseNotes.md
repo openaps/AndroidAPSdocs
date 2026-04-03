@@ -1,23 +1,15 @@
 
 # Release Notes
 
-Gehe durch die Schritte der [Update-Anleitung](UpdateToNewVersion). Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
+Please follow the instructions in the [update manual](UpdateToNewVersion) to update to a new version. Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
 
-Sobald ein neues Update zur Verfügung steht, wirst Du darüber informiert. Solltest Du bis zum Fälligkeitsdatum das Update nicht durchgeführt haben, wird **AAPS** in den „Open Loop“ wechseln.
+You will receive a notification like this when a new update is available:
 
 ![Update-Info](../images/AAPS_LoopDisable90days.png)
 
-Diese Eingabeaufforderung ist wichtig, und sollte nicht ignoriert werden. Sie ist nicht dazu gedacht Dich zu nerven. Neue **AAPS**-Versionen bieten nicht nur neue Funktionen, sondern beheben auch wichtige Sicherheitsprobleme. Daher ist es notwendig, dass jeder, der **AAPS** nutzt, so bald wie möglich auf die neueste Version aktualisiert. Leider werden noch immer Fehler aus sehr alten Versionen gemeldet. Es entsteht ein sehr großer Aufwand darin, die Sicherheit für jeden **AAPS**-Benutzer und die DIY-Community zu verbessern. Vielen Dank für Dein Verständnis.
+Solltest Du bis zum Fälligkeitsdatum das Update nicht durchgeführt haben, wird **AAPS** in den „Open Loop“ wechseln.
 
-```{admonition} First version of **AAPS**
-:class: note
-
-Die erste Testversion gab es bereits 2015. In 2016 wurde dann das erste Release veröffentlicht.
-
-Da die Releasefolge und deren Veröffenlichungszeitpunkte immer wieder erfragt werden, haben wir diese hier - sofern verfügbar - zusammengetragen.
-
-```
-![AAPS 1.0](../images/update/AAPS1.0.png)
+**Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This an effort to try to improve the safety for each **AAPS** user and the DIY community. Vielen Dank für Dein Verständnis.
 
 (maintenance-android-version-aaps-version)=
 
@@ -980,3 +972,15 @@ Erscheinungsdatum: 03.11.2018
 - Option, das Display immer an zu lassen.
 - Option, die Hinweise als Systemmeldungen anzuzeigen.
 - Advanced filtering (das erlaubt die Nutzung von “SMB immer an” und “6 Stunden nach dem Essen”) wird unterstützt mit der gepatchten Dexcom App (nicht mit der originalen Dexcom App!) oder xDrip mit dem G5 native mode als BZ-Quelle.
+
+## Version 1.0
+
+```{admonition} First version of **AAPS**
+:class: note
+
+The first test version started in 2015 and the first release was in 2016.
+
+The exact chronology of these releases is not available at the moment but as this question has been asked several times we document it here.
+
+```
+![AAPS 1.0](../images/update/AAPS1.0.png)

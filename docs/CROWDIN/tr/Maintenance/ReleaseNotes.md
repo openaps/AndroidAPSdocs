@@ -1,23 +1,15 @@
 
 # Sürüm notları
 
-Please follow the instructions in the [update manual](UpdateToNewVersion). The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
+Please follow the instructions in the [update manual](UpdateToNewVersion) to update to a new version. The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
 
-You will receive the information as soon as a new update is available. If you do not update until expiration date **AAPS** will switch to Open Loop.
+You will receive a notification like this when a new update is available:
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-This prompt is important, should not be ignored and is not intended to bug you. New versions of **AAPS** do not only provide new features but also important safety fixes. Therefore it is necessary that every **AAPS** user updates to the latest version a.s.a.p. Unfortunately there are still bug reports from very old versions so this an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
+If you do not update until expiration date **AAPS** will switch to Open Loop.
 
-```{admonition} First version of **AAPS**
-:class: not
-
-İlk test sürümü 2015'te başladı. 2016 yılında ilk sürüm yayımlandı.
-
-The chronology of these releases is not available at the moment but as this question is asked several times we document it here.
-
-```
-![AAPS 1.0](../images/update/AAPS1.0.png)
+**Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
 
 (maintenance-android-version-aaps-version)=
 
@@ -980,3 +972,15 @@ Yayınlanma tarihi: 03-11-2018
 - Ekranı açık tutma seçeneği
 - Bildirimi Android bildirimi olarak gösterme seçeneği
 - Gelişmiş filtreleme (SMB'yi ve yemeklerden 6 saat sonra her zaman etkinleştirmeyi sağlayan), yamalı Dexcom uygulaması veya KŞ kaynağı olarak Xdripte G5 yerel modu ile desteklenir.
+
+## Version 1.0
+
+```{admonition} First version of **AAPS**
+:class: note
+
+The first test version started in 2015 and the first release was in 2016.
+
+The exact chronology of these releases is not available at the moment but as this question has been asked several times we document it here.
+
+```
+![AAPS 1.0](../images/update/AAPS1.0.png)
