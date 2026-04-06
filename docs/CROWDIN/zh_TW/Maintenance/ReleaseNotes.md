@@ -56,20 +56,20 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 (version3421)=
 
-## Version 3.4.2.1
+## 版本 3.4.2.1
 
-- Equil: fix Pairing and progress dialog @MilosKozak
+- Equil：修正配對與進度對話視窗 @MilosKozak
 
 (version3420)=
 
-## Version 3.4.2.0
+## 版本 3.4.2.0
 
-Release date: 04-02-2026
+發布日期：2026-02-04
 
-- Equil: Fix resistance for different models @hhfcvmars
-- Tidepool: Fix session @MilosKozak
-- Medtrum: Fix activation path by preveting double fill @MilosKozak
-- COB: Fix COB calculation (covers dangerous edge case) @MilosKozak
+- Equil：針對不同機型修正電阻設定 @hhfcvmars
+- Tidepool：修正工作階段 @MilosKozak
+- Medtrum：修正啟用流程以避免重複填充 @MilosKozak
+- COB：修正 COB 計算（涵蓋危險的邊界案例）@MilosKozak
 
 (version3410)=
 
