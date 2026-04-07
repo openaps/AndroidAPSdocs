@@ -70,7 +70,7 @@ You have now synchronized (updated) your own copy with the latest release of And
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Select the branch you want to deploy (master), the [variant](variant) (fullRelease) and tap Run Workflow.
+5. Keep the branch set to master, select the AAPS Version you want to build — either the latest version or a specific required version — choose the [variant](variant) (fullRelease), and then tap Run workflow.
 
 
 
