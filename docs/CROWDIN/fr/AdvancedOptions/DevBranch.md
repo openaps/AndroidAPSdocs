@@ -13,6 +13,16 @@ Si vous trouvez un bug ou pensez que quelque chose d'anormal s'est produit lors 
 
 Une version de dev a une date d'expiration. Cela semble gênant lorsqu'on son utilisation est satisfaisante, mais cela a un but : Lorsqu'une seule version de développement est en cours d'utilisation, il est plus facile de traquer les bugs que les gens signalent. Les développeurs ne veulent pas se retrouver dans une situation où il y a trois versions de dev dans la nature où les bogues sont corrigés dans certaines et pas dans d'autres, et les gens continuent de remonter des problèmes corrigés.
 
+(branch-ci-test)=
+
+## Test a specific branch (branch-ci)
+
+To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+
+![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
+
+![aaps_ci_branch_ci2](../images/Building-the-App/CI/aaps_ci_branch_ci2.png)
+
 (github-pr-test)=
 
 ## Test items in a pull request (GitHub CI actions deploy)
