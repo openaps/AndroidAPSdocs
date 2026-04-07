@@ -13,6 +13,16 @@
 
 Версия Dev имеет дату окончания срока действия. Это кажется неудобным при удовлетворительной работе, но служит определенной цели. Когда в цикле единичная версия dev, легче отслеживать ошибки, о которых сообщают люди. Разработчики не хотят, чтобы существовало три версии dev, где в одной ошибки исправлены, а в другой нет. и люди продолжают сообщать об уже исправленных.
 
+(branch-ci-test)=
+
+## Test a specific branch (branch-ci)
+
+To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+
+![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
+
+![aaps_ci_branch_ci2](../images/Building-the-App/CI/aaps_ci_branch_ci2.png)
+
 (github-pr-test)=
 
 ## Test items in a pull request (GitHub CI actions deploy)
