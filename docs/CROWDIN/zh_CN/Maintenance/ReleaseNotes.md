@@ -54,6 +54,23 @@ WearOS 5（API级别34，基于Android 14）存在[限制](#BuildingAapsWearOs-W
 
 (latestrelease)=
 
+(version3421)=
+
+## Version 3.4.2.1
+
+- Equil: fix Pairing and progress dialog @MilosKozak
+
+(version3420)=
+
+## Version 3.4.2.0
+
+Release date: 04-02-2026
+
+- Equil: Fix resistance for different models @hhfcvmars
+- Tidepool: Fix session @MilosKozak
+- Medtrum: Fix activation path by preveting double fill @MilosKozak
+- COB: Fix COB calculation (covers dangerous edge case) @MilosKozak
+
 (version3410)=
 
 ## Version 3.4.1.0
