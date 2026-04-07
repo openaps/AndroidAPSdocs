@@ -13,6 +13,16 @@ Pokud najdete chybu nebo si myslíte, že se stalo něco špatného při použí
 
 Verze pro vývojáře má konečný datum vypršení platnosti. To se zdá nepříjemné při jeho uspokojivém používání, ale má to svůj smysl. Když je rozšířena pouze jedna vývojářská verze, je snažší sledovat nahlášené chyby. Vývojáři nechtějí být v situaci, kdy jsou mezi lidmi 3 různé vývojářské verze, v některých jsou opravené chyby a v jiných nejsou, a lidé stále znovu hlásí již vyřešené chyby.
 
+(branch-ci-test)=
+
+## Test a specific branch (branch-ci)
+
+To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+
+![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
+
+![aaps_ci_branch_ci2](../images/Building-the-App/CI/aaps_ci_branch_ci2.png)
+
 (github-pr-test)=
 
 ## Test items in a pull request (GitHub CI actions deploy)
