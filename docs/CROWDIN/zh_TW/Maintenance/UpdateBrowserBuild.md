@@ -70,7 +70,7 @@
 
 ![運行工作流程](../images/update/CI/GitHubActions2.png)
 
-5. 選擇你想要部署的分支（主分支）、[版本](variant)（fullRelease）並點擊運行工作流程。
+5. Keep the branch set to master, select the AAPS Version you want to build — either the latest version or a specific required version — choose the [variant](variant) (fullRelease), and then tap Run workflow.
 
 
 
