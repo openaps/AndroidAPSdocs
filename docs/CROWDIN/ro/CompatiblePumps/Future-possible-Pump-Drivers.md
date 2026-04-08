@@ -60,9 +60,9 @@ Awaiting release of t:mobi in Europe (other two are not yet released anywhere). 
 
 **Comments:** Ypso added very heavy 3rd party encryption.
 
-## Requirements for pumps being loopable
+## Cerințe pentru pompele cu care se poate face Buclă
 
-**Prerequisite**
+**Cerințe preliminare**
 
 - Pump has to support some kind of remote control. (BT, radio frecvență etc.)
 - Protocol is hacked/documented/etc.
