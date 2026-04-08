@@ -151,7 +151,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
 
 (autotune-run-autotune-with-an-automation-rule)=
 
-## Run Autotune with an automation rule
+## Execuția Autotune cu o condiție de automatizare
 
 ```{admonition} Only DEV
 :class: info
