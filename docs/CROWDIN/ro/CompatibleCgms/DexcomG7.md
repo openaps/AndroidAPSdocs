@@ -68,6 +68,6 @@ Version 9.0+ required
 
 - Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
 
-- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+- Cerințe de asociere: Acceptați împerecherea senzorului cu Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
 
 - Exception: Wear OS watches can bond without pressing an agree button.
