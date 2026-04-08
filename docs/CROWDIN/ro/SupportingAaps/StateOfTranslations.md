@@ -19,8 +19,8 @@ State of the **app** translations per language (country code, percentage transla
 
 ![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## Stadiul traducerii documentației
 
 State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![Stadiul traducerii documentației](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
