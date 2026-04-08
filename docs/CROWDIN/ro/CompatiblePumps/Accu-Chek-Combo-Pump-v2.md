@@ -169,7 +169,7 @@ These preferences are available for the combo driver (items are listed from top 
 
 ![Screenshot of Accu-Chek Combo preferences](../images/combo/combov2-preferences.png)
 
-1. _Pair with pump_: This is a button that can be pressed to pair with a Combo. It is disabled if a pump is already paired.
+1. _Asociază pompa_: Acesta este un buton care poate fi apăsat pentru a se asocia cu un Combo. It is disabled if a pump is already paired.
 2. _Unpair pump_: Unpairs a paired Combo; the polar opposite of item no. 1. It is disabled if no pump is paired.
 3. _Discovery duration (in seconds)_: When pairing, the drivers makes the phone discoverable by the pump. This controls how long that discoverability lasts. By default, the maximum (300 seconds = 5 minutes) is selected. Android does not allow for discoverability to last indefinitely, so a duration has to be chosen.
 4. _Autodetect and automatically enter insulin reservoir change_: If enabled, the "reservoir change" action that is normally done by the user through the "prime/fill" button in the Action tab. This is explained [in further detail below](#combov2-autodetections).
