@@ -6,7 +6,7 @@ Please work with your care team for support and advice on your diabetes manageme
 Use this guide only once you have [set up your **Profile** correctly](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), following all **AAPS** objectives.
 ```
 
-This guide explains the logic of the OpenAPS algorithm results with a given __Profile__, and provides information about which values to adjust when certain situations are observed. The suggestions about basal testing below may diverge from what your care team  advises
+Acest ghid explică logica rezultatelor algoritmului OpenAPS cu un anumit __ profil __, și furnizează informații cu privire la valorile care trebuie ajustate atunci când se observă anumite situații. The suggestions about basal testing below may diverge from what your care team  advises
 
 Using **closed loop** may make basal  testing easier and may significantly reduce  the hypo risk if your __Profile__ basal is too strong.
 
