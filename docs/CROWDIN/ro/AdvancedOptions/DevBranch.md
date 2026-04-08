@@ -54,7 +54,7 @@ Available from 3.3.2.1.dev
 - PR reference types: PR reference types include two options:
     
     - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
+    - Preia conținutul real din ramura autorului PR, adică istoricul original al comiterii fără operațiuni de îmbinare).
     - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
     
     - merge:
