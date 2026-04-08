@@ -13,6 +13,16 @@ Wenn Du einen Fehler gefunden hast oder glaubst, dass etwas falsch berechnet wur
 
 Eine Entwickler-Version hat ein Ablaufdatum. Das scheint unpraktisch, wenn es zufriedenstellend genutzt wird, aber es dient einem Zweck. Wenn eine einzelne Dev-Version die Runden macht, ist es einfacher, Fehler zu verfolgen, die Leute melden. Die Entwickler wollen nicht in einer Position sein, in der es drei Versionen von dev im Umlauf sind, in denen Fehler behoben werden müssen und Testuser Fehler, die schon behoben wurden in der aktuellsten Dev-Version, in guter Absicht nochmals melden.
 
+(branch-ci-test)=
+
+## Test a specific branch (branch-ci)
+
+To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+
+![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
+
+![aaps_ci_branch_ci2](../images/Building-the-App/CI/aaps_ci_branch_ci2.png)
+
 (github-pr-test)=
 
 ## Testelemente in einem Pull-Request (GitHub CI-Aktionen bereitstellen)

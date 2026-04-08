@@ -13,6 +13,16 @@ AAPS 的開發版本僅適用於能處理堆棧追蹤、查找日誌文件，甚
 
 開發版本有一個過期日期。 當使用他滿意時，這似乎不便，但他有其作用。 當單一開發版本流傳時，更容易跟踪人們報告的錯誤。 開發人員不希望出現三個開發版本在外流傳，其中一些錯誤在某些版本中已經修復，而其他版本則未修復，而人們仍然繼續報告已經解決的錯誤。
 
+(branch-ci-test)=
+
+## Test a specific branch (branch-ci)
+
+To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+
+![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
+
+![aaps_ci_branch_ci2](../images/Building-the-App/CI/aaps_ci_branch_ci2.png)
+
 (github-pr-test)=
 
 ## 拉取請求中的測試項目（GitHub CI 動作部署）

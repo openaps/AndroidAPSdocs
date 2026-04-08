@@ -43,7 +43,7 @@
 
 ### Changing the battery
 
-* After a **low battery** alarm, the battery should be changed as soon as possible to always have enough energy for a reliable Bluetooth communication with the smartphone, even if the phone is within a wider distance of the pump.
+* După o alarmă <0>baterie scăzută</0>, bateria trebuie schimbată cât mai curând posibil pentru a avea întotdeauna suficientă energie pentru o comunicare Bluetooth fiabilă cu telefonul inteligent chiar dacă telefonul se află la o distanță mai mare de pompă.
 * Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
 * Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop for 1h**. 
 * Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.

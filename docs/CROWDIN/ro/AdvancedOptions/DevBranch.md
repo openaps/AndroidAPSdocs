@@ -13,6 +13,16 @@ If you find a bug or think something wrong has happened when using the Dev branc
 
 A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
 
+(branch-ci-test)=
+
+## Test a specific branch (branch-ci)
+
+To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+
+![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
+
+![aaps_ci_branch_ci2](../images/Building-the-App/CI/aaps_ci_branch_ci2.png)
+
 (github-pr-test)=
 
 ## Test items in a pull request (GitHub CI actions deploy)
@@ -44,7 +54,7 @@ Available from 3.3.2.1.dev
 - PR reference types: PR reference types include two options:
     
     - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
+    - Preia conținutul real din ramura autorului PR, adică istoricul original al comiterii fără operațiuni de îmbinare).
     - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
     
     - merge:

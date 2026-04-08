@@ -12,6 +12,16 @@ AAPS开发版（dev version）仅适用于能够熟练处理堆栈跟踪（stack
 
 开发版（dev version）设有有效期限制。 这在使用满意时看似不便，但实为有特定设计目的。 如果只有一个开发版本，就更容易跟踪人们报告的错误。 开发者不希望出现三种不同版本的开发模式同时存在的情况，其中某些版本修复了漏洞，而其他版本没有修复，导致人们仍然报告已经修复的问题。
 
+(branch-ci-test)=
+
+## Test a specific branch (branch-ci)
+
+To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+
+![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
+
+![aaps_ci_branch_ci2](../images/Building-the-App/CI/aaps_ci_branch_ci2.png)
+
 (github-pr-test)=
 
 ## Test items in a pull request (GitHub CI actions deploy)
