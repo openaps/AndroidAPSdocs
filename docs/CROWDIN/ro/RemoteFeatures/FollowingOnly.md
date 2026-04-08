@@ -106,7 +106,7 @@ If your **AAPS** data source is xDrip+ (or if xDrip+ can also receive BG from an
 
 #### Without Nightscout - xDrip+ BG companion app
 
-If your **AAPS** data source is not xDrip+ but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+În cazul în care sursa de date **AAPS** nu este xDrip+, dar puteți afișa date glicemice din sursa de date a aplicației companion, îl poți folosi de la telefonul principal pentru a partaja date cu adepții xDrip+, afișând glice, tratamente și tarife bazale.
 
 ![image](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
