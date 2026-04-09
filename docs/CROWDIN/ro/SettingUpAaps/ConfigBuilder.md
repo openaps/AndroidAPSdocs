@@ -1,12 +1,12 @@
 # Configurarea Sistemului (Config Builder)
 
-Depending on your settings you can open Config Builder through a tab at the top of **AAPS**' screen or through the hamburger menu.
+În funcție de setările dumneavoastră puteți deschide Configuratorul de Sistem printr-o filă din partea de sus a ecranului **AAPS** sau prin meniul hamburger.
 
 ![Deschidere Configurarea sistemului](../images/ConfBuild_Open_AAPS30.png)
 
-The **Config Builder** is the tab where you turn the modular features on and off. In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated. By default, when opening the Config Builder, sections are collapsed to only show the active plugins. Click on the arrow (G) to show all available options. The boxes on the right-hand side (C) allow you to view the active modules as a tab (E) in **AAPS**. In case the right box is not activated, you can reach the function by using the hamburger menu (D) on the top left of the screen. See [Tab or hamburger menu](#tab-or-hamburger-menu) below.
+**Configuratorul de Sistem** este o secțiune în care puteți porni sau opri diferitele opțiuni modulare. În imaginea de mai jos, casetele din partea stângă (A) îți permit să selectați modulele pe care vreți să le acivați. În mod implicit, la deschiderea Configuratorului de Sistem, secțiunile sunt ascunse pentru a afișa doar modulele active. Apăsați pe săgeată (G) pentru a afișa toate opțiunile disponibile. Casetele din partea dreaptă (C) vă permit să vizualizați modulele active ca o filă (E) în **AAPS**. În cazul în care caseta din dreapta nu este activată, poți ajunge la funcție folosind meniul hamburger (D) din stânga sus a ecranului. Vedeți [Filă sau meniul Hamburger](#tab-or-hamburger-menu) de mai jos.
 
-When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+Când există setări suplimentare disponibile în cadrul modulului, poți face clic pe rotița dințată (B), care te va duce la setările specifice din secțiunea de preferințe.
 
 ![Casuta Configurare sistem şi rotita](../images/ConfBuild_ConfigBuilder.png)
 
@@ -14,7 +14,7 @@ When there are additional settings available within the module, you can click on
 
 ## Fila sau meniul principal
 
-With the checkbox under the eye symbol you can decide how to open the corresponding program section.
+Cu bifa de sub simbol puteți stabili cum să deschideți secțiunea corespunzătoare a programului.
 
 ![Fila sau meniul principal](../images/ConfBuild_TabOrHH.png)
 
@@ -25,34 +25,34 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 (ConfigBuilder_Profile)=
 
-## Profile
+## Profil
 
-This module can not be disabled as it is a core part of **AAPS**.
+Acest modul nu poate fi dezactivat deoarece este o parte de bază a **AAPS**.
 
-See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
+Vedeți [Profilul dumneavoastră AAPS](../SettingUpAaps/YourAapsProfile.md) pentru o înțelegere de bază a ceea ce este în interiorul **Profilului** dumneavoastră.
 
 (Config-Builder-insulin)=
 
 ## Insulină
 
-![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
+![Tip de insulină](../images/ConfBuild_Insulin_AAPS30.png)
 
-Select the type of insulin you are using.
+Selectați tipul de insulină pe care o utilizați.
 
-More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
+Mai multe informații pentru a înțelege Profilul Insulinei așa cum este indicat în **AAPS** [aici](#AapsScreens-insulin-profile).
 
-### Insulin type differences
+### Diferențe între tipurile de insulină
 
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape.
-* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
-* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
-* The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
+* Toate opțiunile 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' și 'Free-Peak Oref' au formă exponențială.
+* Pentru insuline cu durata de 'Acțiune-Rapidă', 'Ultra-Rapidă' și 'Lyumjev', DIA este singura variabilă pe care o poți modifica, durata până la vârf este prestabilită. 
+* Opțiunea Insulină Fără-Vârf (Free-Peak) permite să ajustați atât DIA cât și durata până la vârf; trebuie să fie folosită numai de utilizatori avansați care cunosc efectele acestor setări. 
+* [Graficul curbei de insulină](#AapsScreens-insulin-profile) vă ajută să înțelegeți diferitele curbe ale insulinei.
 
-#### Rapid-Acting Oref
+#### Oref Acțiune-Rapidă
 
-![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
+![Tip de insulină Oref Acțiune-Rapidă](../images/ConfBuild_Insulin_RAO.png)
 
-* recommended for Humalog, Novolog and Novorapid
+* recomandat pentru Humalog, Novolog şi Novorapid
 * DIA = at least 5.0h
 * Max. peak = 75 minutes after injection (fixed, not adjustable)
 
