@@ -1,15 +1,15 @@
 
 # Release Notes
 
-Please follow the instructions in the [update manual](UpdateToNewVersion) to update to a new version. Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
+Zur Aktualisierung auf eine neue Version befolge bitte die Schritte in der [Update Anleitung](UpdateToNewVersion). Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
 
-You will receive a notification like this when a new update is available:
+Wenn eine neue Version verfügbar wird, wirst Du mit einer Meldung, wie dieser, benachrichtigt:
 
 ![Update-Info](../images/AAPS_LoopDisable90days.png)
 
 Solltest Du bis zum Fälligkeitsdatum das Update nicht durchgeführt haben, wird **AAPS** in den „Open Loop“ wechseln.
 
-**Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This an effort to try to improve the safety for each **AAPS** user and the DIY community. Vielen Dank für Dein Verständnis.
+**ignoriere die Benachrichtigung nicht.** Neue **AAPS**-Versionen beheben wichtige Sicherheitsthemen. Therefore, every **AAPS** user must update to the latest version as soon as possible. This an effort to try to improve the safety for each **AAPS** user and the DIY community. Vielen Dank für Dein Verständnis.
 
 (maintenance-android-version-aaps-version)=
 
