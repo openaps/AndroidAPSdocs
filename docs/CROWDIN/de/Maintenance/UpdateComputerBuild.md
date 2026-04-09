@@ -1,4 +1,4 @@
-# Update with Android Studio
+# Update mit Android Studio
 
 ## Kein Download möglich - APK muss selbst erstellt werden
 
