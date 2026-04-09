@@ -26,7 +26,7 @@ Ignore it: More details, Install anyway.
 ![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
 
 ### **Setări**
-* Profile
+* Profil
 
   ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
 
