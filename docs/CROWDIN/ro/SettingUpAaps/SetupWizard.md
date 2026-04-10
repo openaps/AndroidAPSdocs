@@ -561,7 +561,7 @@ But this is the start.
 
 Press the green "START" to to start objective 1:
 
-![Objectives](../images/setup-wizard/Wizard26.png)
+![Obiective](../images/setup-wizard/Wizard26.png)
 
 You see that you already made some progress, but other areas are to be done.
 
