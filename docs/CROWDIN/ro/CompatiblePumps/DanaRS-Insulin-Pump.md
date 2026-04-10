@@ -73,7 +73,7 @@
 
 * Apăsaţi OK pentru a introduce parola veche.
 
-* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
+* Introduceți **parola veche** (Parolă implicită vedeți [mai sus](#DanaRS-Insulin-Pump-default-password)) și apăsați OK
     
     ![DanaRS Introduceţi parola veche](../images/DanaRSPW_04_11PWenter.png)
 
@@ -85,23 +85,23 @@
 
 * Confirmaţi cu butonul OK.
 
-* Press OK to save setting.
+* Apăsați OK pentru a salva setările.
     
     ![Salvați noua parolă DanaRS](../images/DanaRSPW_06_PWnewSave.png)
 
-* Move down to "14. EXIT" and press OK to exit.
+* Deplasați în jos la "14. IEȘIRE" și apăsați butonul OK.
     
-    ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
+    ![DanaRS Ieșire](../images/DanaRSPW_07_Exit.png)
 
 (DanaRS-Insulin-Pump-dana-rs-specific-errors)=
 
-## Dana RS specific errors
+## Erori specifice Dana RS
 
 ### Eroare în timpul administrării insulinei
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+În cazul în care conexiunea dintre AAPS și Dana RS este pierdută în timpul administrării insulinei prin bolus (de exemplu, vă îndepărtați de telefon în timp ce Dana RS pompează insulina) vei vedea următorul mesaj și vei auzi un sunet de alarmă.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Alarmă pentru administrarea insulinei](../images/DanaRS_Error_bolus.png)
 
 * In most cases this is just a communication issue and the correct amount of insulin is delivered.
 * Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
