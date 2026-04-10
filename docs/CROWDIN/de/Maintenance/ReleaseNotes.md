@@ -64,7 +64,7 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 
 ## Version 3.4.2.0
 
-Release date: 04-02-2026
+Erscheinungsdatum: 04.02.2026
 
 - Equil: Fix resistance for different models @hhfcvmars
 - Tidepool: Fix session @MilosKozak
