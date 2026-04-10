@@ -9,7 +9,7 @@ Wenn eine neue Version verfügbar wird, wirst Du mit einer Meldung, wie dieser, 
 
 Solltest Du bis zum Fälligkeitsdatum das Update nicht durchgeführt haben, wird **AAPS** in den „Open Loop“ wechseln.
 
-**ignoriere die Benachrichtigung nicht.** Neue **AAPS**-Versionen beheben wichtige Sicherheitsthemen. Therefore, every **AAPS** user must update to the latest version as soon as possible. This an effort to try to improve the safety for each **AAPS** user and the DIY community. Vielen Dank für Dein Verständnis.
+**ignoriere die Benachrichtigung nicht.** Neue **AAPS**-Versionen beheben wichtige Sicherheitsthemen. Deswegen muss jeder **AAPS**-Nutzende so schnell wie möglich auf die neueste Version aktualisieren. Dies ist eine Chance die Sicherheit für jeden **AAPS**-Nutzenden und die DIY-Community zu verbessern. Vielen Dank für Dein Verständnis.
 
 (maintenance-android-version-aaps-version)=
 
@@ -58,7 +58,7 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 
 ## Version 3.4.2.1
 
-- Equil: fix Pairing and progress dialog @MilosKozak
+- Equil: Fehler im Koppelungs- und Fortschrittsdialog behoben @MilosKozak
 
 (version3420)=
 
