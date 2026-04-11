@@ -649,9 +649,9 @@ For more details see [APS section on config builder page](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
-## Profile
+## Profil
 
-![Profile](../images/Screenshots_Profile.png)
+![Profil](../images/Screenshots_Profile.png)
 
 Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
 

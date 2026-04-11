@@ -15,9 +15,9 @@ AAPS 的開發版本僅適用於能處理堆棧追蹤、查找日誌文件，甚
 
 (branch-ci-test)=
 
-## Test a specific branch (branch-ci)
+## 測試特定的分支（branch-ci）
 
-To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+若要建置測試分支，請選擇 branch-ci；此方式可讓你在建立 APK 時選擇特定分支。 當你需要測試 dev 分支時，可以使用此方法。
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 

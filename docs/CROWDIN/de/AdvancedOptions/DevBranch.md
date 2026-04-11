@@ -15,9 +15,9 @@ Eine Entwickler-Version hat ein Ablaufdatum. Das scheint unpraktisch, wenn es zu
 
 (branch-ci-test)=
 
-## Test a specific branch (branch-ci)
+## Einen bestimmten Zweig testen (branch-ci)
 
-To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+Um einen Testzweig zu erstellen, wähle branch-ci aus. Das ermöglicht Dir einen bestimmten Zweig für die APK-Erstellung auszuwählen. Diese Methode eignet sich, wenn Du den Dev-Branch testen musst.
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 

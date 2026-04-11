@@ -1,12 +1,12 @@
 # Configurarea Sistemului (Config Builder)
 
-Depending on your settings you can open Config Builder through a tab at the top of **AAPS**' screen or through the hamburger menu.
+În funcție de setările dumneavoastră puteți deschide Configuratorul de Sistem printr-o filă din partea de sus a ecranului **AAPS** sau prin meniul hamburger.
 
 ![Deschidere Configurarea sistemului](../images/ConfBuild_Open_AAPS30.png)
 
-The **Config Builder** is the tab where you turn the modular features on and off. In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated. By default, when opening the Config Builder, sections are collapsed to only show the active plugins. Click on the arrow (G) to show all available options. The boxes on the right-hand side (C) allow you to view the active modules as a tab (E) in **AAPS**. In case the right box is not activated, you can reach the function by using the hamburger menu (D) on the top left of the screen. See [Tab or hamburger menu](#tab-or-hamburger-menu) below.
+**Configuratorul de Sistem** este o secțiune în care puteți porni sau opri diferitele opțiuni modulare. În imaginea de mai jos, casetele din partea stângă (A) îți permit să selectați modulele pe care vreți să le acivați. În mod implicit, la deschiderea Configuratorului de Sistem, secțiunile sunt ascunse pentru a afișa doar modulele active. Apăsați pe săgeată (G) pentru a afișa toate opțiunile disponibile. Casetele din partea dreaptă (C) vă permit să vizualizați modulele active ca o filă (E) în **AAPS**. În cazul în care caseta din dreapta nu este activată, poți ajunge la funcție folosind meniul hamburger (D) din stânga sus a ecranului. Vedeți [Filă sau meniul Hamburger](#tab-or-hamburger-menu) de mai jos.
 
-When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+Când există setări suplimentare disponibile în cadrul modulului, poți face clic pe rotița dințată (B), care te va duce la setările specifice din secțiunea de preferințe.
 
 ![Casuta Configurare sistem şi rotita](../images/ConfBuild_ConfigBuilder.png)
 
@@ -14,7 +14,7 @@ When there are additional settings available within the module, you can click on
 
 ## Fila sau meniul principal
 
-With the checkbox under the eye symbol you can decide how to open the corresponding program section.
+Cu bifa de sub simbol puteți stabili cum să deschideți secțiunea corespunzătoare a programului.
 
 ![Fila sau meniul principal](../images/ConfBuild_TabOrHH.png)
 
@@ -25,73 +25,73 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 (ConfigBuilder_Profile)=
 
-## Profile
+## Profil
 
-This module can not be disabled as it is a core part of **AAPS**.
+Acest modul nu poate fi dezactivat deoarece este o parte de bază a **AAPS**.
 
-See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
+Vedeți [Profilul dumneavoastră AAPS](../SettingUpAaps/YourAapsProfile.md) pentru o înțelegere de bază a ceea ce este în interiorul **Profilului** dumneavoastră.
 
 (Config-Builder-insulin)=
 
 ## Insulină
 
-![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
+![Tip de insulină](../images/ConfBuild_Insulin_AAPS30.png)
 
-Select the type of insulin you are using.
+Selectați tipul de insulină pe care o utilizați.
 
-More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
+Mai multe informații pentru a înțelege Profilul Insulinei așa cum este indicat în **AAPS** [aici](#AapsScreens-insulin-profile).
 
-### Insulin type differences
+### Diferențe între tipurile de insulină
 
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape.
-* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
-* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
-* The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
+* Toate opțiunile 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' și 'Free-Peak Oref' au formă exponențială.
+* Pentru insuline cu durata de 'Acțiune-Rapidă', 'Ultra-Rapidă' și 'Lyumjev', DIA este singura variabilă pe care o poți modifica, durata până la vârf este prestabilită. 
+* Opțiunea Insulină Fără-Vârf (Free-Peak) permite să ajustați atât DIA cât și durata până la vârf; trebuie să fie folosită numai de utilizatori avansați care cunosc efectele acestor setări. 
+* [Graficul curbei de insulină](#AapsScreens-insulin-profile) vă ajută să înțelegeți diferitele curbe ale insulinei.
 
-#### Rapid-Acting Oref
+#### Oref Acțiune-Rapidă
 
-![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
+![Tip de insulină Oref Acțiune-Rapidă](../images/ConfBuild_Insulin_RAO.png)
 
-* recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection (fixed, not adjustable)
+* recomandat pentru Humalog, Novolog şi Novorapid
+* DIA = cel puțin 5 ore
+* Maximum vârf = 75 minute după injectare (fix, nemodificabilă)
 
-#### Ultra-Rapid Oref
+#### Oref Insulină-UltraRapidă
 
-![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
+![Tip de insulină Oref cu acțiune ultra rapidă](../images/ConfBuild_Insulin_URO.png)
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection (fixed, not adjustable)
+* recomandat pentru FIASP
+* DIA = cel puțin 5 ore
+* Maximum vârf = 55 minute după injecție (fix, nemodificabil)
 
-(Config-Builder-lyumjev)=
+(Configurator-lyumjev)=
 
 #### Lyumjev
 
-![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
+![Tipul insulinei Lyumjev](../images/ConfBuild_Insulin_L.png)
 
-* special insulin profile for Lyumjev
-* DIA = at least 5.0h
-* Max. peak = 45 minutes after injection (fixed, not adjustable)
+* profil special de insulină pentru Lyumjev
+* DIA = cel puțin 5 ore
+* Maximum vârf = 45 minute după injectare (fix, nemodificabil)
 
-#### Free Peak Oref
+#### Oref Fără-Vârf
 
-![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
+![Tipul insulinei Oref Fără-Vârf](../images/ConfBuild_Insulin_FPO.png)
 
-* With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
-* The DIA is automatically set to 5 hours if it is not specified higher in the profile.
-* This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+* Cu tipul de profil "0ref Vârf-Liber" puteți introduce individual durata până la vârf. Pentru a face acest lucru, apăsați pe rotița dințată pentru a intra în setările avansate.
+* DIA este setată automat la 5 ore dacă în profil nu se specifică o durată mai mare.
+* Acest profil este recomandat în situația în care se utilizează o insulină neacoperită în aplicație sau atunci când se utilizează un amestec de insuline.
 
 (Config-Builder-bg-source)=
 
 ## Sursă valoare glicemie
 
-Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+Selectați sursa de monitorizare a glicemiei din sânge pe care o folosiți. Vedeți pagina [Sursă glicemie](../Getting-Started/CompatiblesCgms.md) pentru mai multe informații despre configurare.
 
-![Config Builder BG source](../images/ConfBuild_BG.png)
+![Configurați sursa glicemiilor](../images/ConfBuild_BG.png)
 
 * [xDrip+](../CompatibleCgms/xDrip.md)
-* [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+* [Glicemie NSClient](../CompatibleCgms/CgmNightscoutUpload.md) - doar dacă știți ce faceți, vedeți [Sursă glicemie](../Getting-Started/CompatiblesCgms.md).
 * [MM640g](../CompatibleCgms/MM640g.md)
 * Glimp - only version 4.15.57 and newer are supported
 * [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
@@ -163,101 +163,101 @@ If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manu
 
 This module should not be disabled as it is a core part of **AAPS**.
 
-## Constraints
+## Constrângeri
 
-### Objectives
+### Obiective
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+**AAPS** are un program de învățare (o serie de obiective) pe care trebuie să îl parcurgeți pas cu pas. Acesta ar trebui să vă ghideze să configurați în siguranță un sistem de buclă închisă. Parcurgerea programului de instruire garantează că ați setat totul corect și înțelegeți exact face sistemul. Numai așa puteți avea încredere în sistem.
 
-See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
+Vedeți pagina [Obiective](../SettingUpAaps/CompletingTheObjectives.md) pentru mai multe informații.
 
 ## Synchronization
 
-In this section, you can choose if/where you want **AAPS** to send your data to.
+În această secțiune, puteți alege dacă/unde doriți **AAPS** să trimită datele dumnevoastră.
 
-### NSClient or NSClientV3
+### NSClient sau NSClientV3
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md).
+Poate fi folosit ca un [server de raportare](../SettingUpAaps/SettingUpTheReportingServer.md) și/sau pentru [monitorizare de la distanță](../RemoteFeatures/RemoteMonitoring.md), [control de la distanță](../RemoteFeatures/RemoteControl.md).
 
-See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to help you choose between NSClient (v1) and NSClientV3.
+Vedeți [Sincronizarea cu serverul de raportare](#SetupWizard-synchronization-with-the-reporting-server-and-more) pentru a te ajuta să alegeți între NSClient (v1) și NSClientV3.
 
 ### Tidepool
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+Poate fi folosit ca un [server de raportare](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-See [Tidepool](../SettingUpAaps/Tidepool.md).
+Vedeți [Tidepool](../SettingUpAaps/Tidepool.md).
 
 ### xDrip
 
-Used to **send** data such as treatments to xDrip+.
+Folosit pentru **trimite ** date, cum ar fi tratamente pentru xDrip+.
 
 ### Open Humans
 
-See [Open Humans](../SupportingAaps/OpenHumans.md).
+Vedeți [Open Humans](../SupportingAaps/OpenHumans.md).
 
-### Wear
+### Ceas
 
-Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)).
+Monitorizează și controlează **AAPS** folosind ceasul cu Android WearOS (vedeți [pagina Afișaj Ceas](../WearOS/WearOsSmartwatch.md)).
 
 ### Samsung Tizen
 
-Broadcast data to Samsung's G-Watch Wear App (Tizen OS).
+Transmitere de date către aplicația Samsung G-Watch Wear (TizenOS).
 
 ### Garmin
 
-Connection to Garmin device (Fenix, Edge...)
+Conexiune la dispozitivul Garmin (Fenix, Edge…)
 
 ## Tratamente
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](#screens-bolus-carbs).
+În fila Tratamente (Treat) puteți vedea tratamentele care au fost încărcate în Nightscout. Dacă doriți să modificați sau să ștergeți date introduse (spre exemplu când ați mâncat mai puțini carbohidrați decât ați estimat), selectați 'Ștergeți' și scrieți noua valoare (schimbați și ora, dacă este necesar) prin butonul carbohidrați din ecranul principal<0>.</p> 
 
 ## General
 
 ### Privire de ansamblu
 
-This is the [main screen](#AapsScreens-the-homescreen) of **AAPS** and can not be disabled.
+Acesta este [ecranul principal](#AapsScreens-the-homescreen) din **AAPS** și nu poate fi dezactivat.
 
-#### Show notes field in treatment dialogs
+#### Afișați câmpul pentru note în dialogurile de tratamente
 
-Choose if you want to have a notes field when entering treatments or not.
+Alegeți dacă vreți sau nu să aveți câmpul pentru note atunci când introduceți tratamente.
 
 #### Lumini de stare
 
-Choose if you want to have [status lights](#Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+Alegeți dacă doriți să aveți [lumini de stare ](#Preferences-status-lights) în privirea de ansamblu pentru vârsta canulei, vârsta insulinei, vârsta senzorului, vârsta bateriei, nivelul rezervorului sau nivelul bateriei. Când nivelul de avertizare este atins, culoarea luminii de stare va comuta la galben. La atingerea nivelului critic culoarea luminii de stare va fi roșie.
 
-#### Advanced settings
+#### Setări avansate
 
-**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percentage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
+**Livrează parțial bolusul calculat de Asistentul Rapid **: Când utilizează SMB (super micro bolus), multe persoane vor să nu primească 100% bolusul de insulină necesar, ci doar parțial (spre exemplu 75 %) și permit SMB prin UAM (unattended meal detection = detectarea automată a mesei) să facă restul. În această setare, puteți alege o valoare implicită pentru procentajul cu care asistentul de bolus ar trebui să calculeze. Dacă în această setare valoarea implicită este stabilită la 75% și ar trebui să bolusați 10u, Asistentul va propune un bolus de doar 7,5 unități.
 
-**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Activați funcționalitatea super bolus în asistent ** (Este diferită de *super micro bolus*!): Utilizați cu precauție și nu activați până nu știți cu adevărat ce face. Practic, bazala pentru următoarele două ore este adăugată la bolus și se activează în următoarele două ore o bazală temporară zero. **Funcțiile buclei AAPS vor fi dezactivate - așa că utilizați cu grijă! Dacă utilizați SMB funcțiile de buclă AAPS vor fi dezactivate în funcție de setările dumneavoastră din ["Maximul de minute de bazală pentru a limita SMB la"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), dacă nu utilizați SMB funcțiile de buclă vor fi dezactivate pentru două ore.** Detalii despre super bolus pot fi găsite [aici](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
 
 ### Acțiuni
 
-A tab offering multiple buttons to take [actions](#screens-action-tab) in **AAPS**.
+O filă care oferă mai multe butoane pentru a întreprinde [acțiuni](#screens-action-tab) în **AAPS**.
 
 ### Automatizare
 
-A tab for managing your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
+O filă pentru gestionarea [Automatizărilor](../DailyLifeWithAaps/Automations.md), disponibilă începând cu [Obiectivul 10](#objectives-objective10).
 
 (Config-Builder-sms-communicator)=
 
 ### Comunicator SMS
 
-Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
+Permite aparținătorilor să controleze de la distanță anumite funcții ale **AAPS**prin SMS, vezi [Comenzi SMS](../RemoteFeatures/SMSCommands.md) pentru mai multe informații privind configurarea.
 
-### Food
+### Mâncare
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Afișați presetările alimentare definite în baza de date Nightscout, vezi [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pentru mai multe informații despre configurare.
 
-Note: Entries cannot be used in the **AAPS** calculator. (View only)
+Notă: Intrările nu pot fi utilizate în calculatorul **AAPS**. (Numai vizualizare)
 
 (Config-Builder-wear)=
 
-### Wear
+### Ceas
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Monitorizați și controlați AAPS folosind ceasul Android Wear (vedeți [pagina Afișaj Ceas](../WearOS/WearOsSmartwatch.md)). Utilizați setările (rotiță dințată) pentru a stabili variabilele care ar trebui luate în considerare la calcularea bolusului dat de ceas (spre exemplu tendința de 15 minute, COB...).
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 

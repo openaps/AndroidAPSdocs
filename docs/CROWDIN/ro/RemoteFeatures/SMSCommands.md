@@ -239,7 +239,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#screens-action-tab).                          |
 | EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                       |
 
-### Profile
+### Profil
 
 | Command        | Auth | Function & *Response*                                                                                                                                        |
 | -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
