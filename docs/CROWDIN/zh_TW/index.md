@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 2026 年 3 月 31 日：版本 3.4.2.1 已發布。 請參閱 [發行說明](#latestrelease) 以了解最新變更，並依照 [更新手冊](#UpdateToNewVersion) 的指示更新至此版本。
+ 10 April 2026 : Version 3.4.2.2 is out. 請參閱 [發行說明](#latestrelease) 以了解最新變更，並依照 [更新手冊](#UpdateToNewVersion) 的指示更新至此版本。
 
 ```
 
