@@ -58,8 +58,8 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 
 ## Version 3.4.2.2
 
-- Fixing issues with Equil and Medtronic
-- Improve safety of Medtrum
+- Probleme mit Equil und Medtronic behoben
+- Medtrum-Sicherheit verbessert
 
 (version3421)=
 
