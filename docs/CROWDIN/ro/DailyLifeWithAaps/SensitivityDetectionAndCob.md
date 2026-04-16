@@ -26,6 +26,6 @@ Sensibilitate este calculată pe baza datelor din ultimele 8 ore sau de la ultim
 
 Oref1 este opțiunea recomandată: este singura care poate detecta UAM și lucra cu <0>OpenAps SMB</0>, cel mai recent algoritm.
 
-## Carbohidrați simultani
+## Carbohidrați concomitenți
 
-There is significant difference while using AAPS, WeightedAverage vs Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparison to Oref plugins.
+Există o diferență semnificativă la utilizarea AAPS, Medie Ponderată versus Oref1. Modulurile Oref se așteaptă la o singură masă care se descompune în timp. Aceasta înseamnă că a doua masă începe să se descompună după ce prima masă este complet descompusă. AAPS+Media ponderată începe să se descompună imediat după introducerea carbohidraților. Dacă la bord există mai mult de o masă, degradarea minimă a carbohidraților se va ajusta în funcție de dimensiunea mesei și de timpul maxim de absorbție. Absorbția minimă în consecință va fi mai mare în comparație cu modulurile Oref.
