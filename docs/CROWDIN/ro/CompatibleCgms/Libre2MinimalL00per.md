@@ -6,7 +6,7 @@ A list of definitions exists at the bottom of this document. If you are unfamili
 
  
 
-## Configuration
+## Configurare
 
 ### Hardware
 
