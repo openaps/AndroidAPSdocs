@@ -85,7 +85,7 @@ In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a para
 
 ### Nightscout settings
 
-#### AAPSClient says 'not allowed' and does not upload data. What can I do?
+#### AAPSClient says 'not allowed' and does not upload data. Ce pot face?
 
 In AAPSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
 
