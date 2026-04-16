@@ -110,23 +110,23 @@
 
 ## Special note when switching phone
 
-When switching to a new phone the following steps are necessary:
+Când treceți la un telefon nou, sunt necesari următorii pași:
 
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
-* Transfer settings from old to new phone
+* [Exportați setările](../Maintenance/ExportImportSettings.md) pe telefonul tău vechi
+* Transferați setările de pe un telefon vechi pe unul nou
 
 ### DanaRS v1
 
-* **Manually pair** Dana RS with the new phone
-* As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AAPS on the new phone.
-* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
+* **Asociați manual** Dana RS cu noul telefon
+* Deoarece setările pompei sunt, de asemenea, importate AAPS de pe noul telefon deja va „știi” pompa și, prin urmare, nu va începe o scanare Bluetooth. Prin urmare, telefonul nou și pompa trebuie asociate manual.
+* Instalați AAPS pe noul telefon.
+* [Importați setările](../Maintenance/ExportImportSettings.md) pe telefonul dumneavoastră nou
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
-* Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
+* Începeți procedura de asociere așa cum este descrisă [mai sus](#DanaRS-Insulin-Pump-pairing-pump).
+* Uneori, ar putea fi necesară curățarea informațiilor de asociere în AAPS cu o atingere lungă pe pictograma Bluetooth din fila Dana-i/RS.
 
-## Timezone traveling with Dana RS pump
+## Traversarea fusurilor orare cu pompa Dana RS
 
 For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
