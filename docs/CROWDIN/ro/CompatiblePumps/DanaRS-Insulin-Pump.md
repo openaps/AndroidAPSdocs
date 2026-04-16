@@ -91,7 +91,7 @@
 
 * Deplasați în jos la "14. IEȘIRE" și apăsați butonul OK.
     
-    ![DanaRS Ieșire](../images/DanaRSPW_07_Exit.png)
+    ![Ieșire DanaRS](../images/DanaRSPW_07_Exit.png)
 
 (DanaRS-Insulin-Pump-dana-rs-specific-errors)=
 
