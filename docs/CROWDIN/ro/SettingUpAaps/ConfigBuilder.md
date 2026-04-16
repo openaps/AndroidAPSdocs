@@ -93,14 +93,14 @@ Selectați sursa de monitorizare a glicemiei din sânge pe care o folosiți. Ved
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [Glicemie NSClient](../CompatibleCgms/CgmNightscoutUpload.md) - doar dacă știți ce faceți, vedeți [Sursă glicemie](../Getting-Started/CompatiblesCgms.md).
 * [MM640g](../CompatibleCgms/MM640g.md)
-* Glimp - only version 4.15.57 and newer are supported
-* [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+* Glimp - doar versiunea 4.15.57 și versiuni mai noi sunt acceptate
+* [Construiește-ți propria aplicație Dexcom (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 * [Poctech](../CompatibleCgms/PocTech.md)
-* Tomato App for MiaoMiao device
-* [Glunovo App](https://infinovo.com/) for Glunovo CGM system
+* Aplicația Tomato pentru dispozitivul MiaoMiao
+* [Aplicația Glunovo](https://infinovo.com/) pentru sistemul de monitorizare al glicemiei Glunovo
 * [Ottai](../CompatibleCgms/OttaiM8.md)
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
-* Random BG: Generates random BG data (Demo mode only)
+* Glicemie aleatorie: generează valori aleatorii ale glicemiei (doar în modul DEMO)
 
 ## Smoothing
 
@@ -239,7 +239,7 @@ O filă care oferă mai multe butoane pentru a întreprinde [acțiuni](#screens-
 
 ### Automatizare
 
-O filă pentru gestionarea [Automatizărilor](../DailyLifeWithAaps/Automations.md), disponibilă începând cu [Obiectivul 10](#objectives-objective10).
+O filă pentru gestionarea <0>Automatizărilor</0>, disponibilă de la <1>Obiectivul 10</1>.
 
 (Config-Builder-sms-communicator)=
 
