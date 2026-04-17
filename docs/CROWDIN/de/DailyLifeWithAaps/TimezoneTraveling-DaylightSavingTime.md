@@ -120,9 +120,9 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
 
 3. **AAPS** refresh your pump and switch to your desired **Profile**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the Fully Closed Loop for at least one DIA and Max-Carb-Time - whatever is bigger.
+4. Prüfe die **IOB**- und **COB**-Werte in **AAPS**. Deaktiviere den Closed Loop für mindestens die Insulinwirkdauer (DIA) oder „Max-Carb-Time“ (je nachdem welcher Zeitraum länger ist), sofern die Werte falsch sein sollten.
 
-5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
+5. Nach der Zeitumstellung notwendige Maßnahmen. Der Zeitpunkt zum Zurückkehren in die lokale Zeitzone ist ideal, wenn der **IOB** niedrig ist. E.g. an hour before a meal such as breakfast. Sowohl Dein **COB**, als auch Dein **IOB** sollten idealerweise dabei nahe Null sein.
 
 ### DST for Accu-Chek Combo
 
