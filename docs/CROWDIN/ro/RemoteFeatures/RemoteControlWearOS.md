@@ -29,7 +29,7 @@ Dacă doriți să bolusați șamd. de pe ceas, în "Setări Wear", trebuie să a
 Prin fila Ceas (Wear) sau prin meniul principal (sus stânga ecranului, dacă fila nu este afișată) puteți
 
 * Retrimiteți toate datele. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* Deschideți setările pe ceas direct de pe telefon.
 
 Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
 
