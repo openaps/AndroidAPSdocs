@@ -28,28 +28,28 @@ Dacă doriți să bolusați șamd. de pe ceas, în "Setări Wear", trebuie să a
 
 Prin fila Ceas (Wear) sau prin meniul principal (sus stânga ecranului, dacă fila nu este afișată) puteți
 
-* Retrimiteți toate datele. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* Retrimiteți toate datele. Ar putea fi de ajutor dacă ceasul nu a fost conectat de ceva timp, și doriți să transmiteți informația către ceas.
 * Deschideți setările pe ceas direct de pe telefon.
 
-Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
+Asigurați-vă că notificările de la AAPS nu sunt blocate pe ceas. Confirmarea unei acțiuni (spre exemplu bolus, țintă temporară) vine printr-o notificare pe care va trebui să o glisați și să o bifați.
 
-## Accessing main menu of AAPS
+## Accesarea meniului principal al AAPS
 
-To access main menu of AAPS you can use on of following options:
+Pentru a accesa meniul principal al AAPS, puteți utiliza următoarele opțiuni:
 
-* double tap on your BG value
-* select AAPS icon in watch applications menu
-* tap on AAPS complication (if configured for menu)
+* apăsați de două ori pe valoarea glicemiei
+* selectați pictograma AAPS în meniul de aplicații al ceasului
+* apăsați pe complicația AAPS (dacă este configurat pentru meniu)
 
-## Settings (in wear watch)
+## Setări (în ceas)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+Pentru a accesa setările pentru fețele de ceas, intrați in meniul principal AAPS, glisați in sus și selectați "Setări".
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+Pictograma cu steaua umplută este pentru starea activată (**Pornit**), iar pictograma cu stea goală indică faptul că setarea este dezactivată (**Oprit**):
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![Setări pornit/oprit](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### Parametrii AAPS însoțitor
 
 * **Vibrate on Bolus** (default `On`):
 * **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
@@ -155,11 +155,11 @@ AAPS furnizează următoarele complicații:
 
 ### Setări legate de complicații
 
-* **Acțiunea de atingere a complicațiilor** (default `Default`): Decides which dialog is opened when user taps complication: 
-  * *Default*: action specific to complication type *(see list above)*
-  * *Menu*: AAPS main menu
-  * *Wizard*: bolus wizard - bolus calculator
-  * *Bolus*: direct bolus value entry
+* **Acțiunea de atingere a complicațiilor** (implicit `Implicit`): Decideți ce dialog se deschide când utilizatorul apasă pe complicație: 
+  * *Implicit*: acțiune specifică tipului de complicație*(vedeți lista de mai sus)*
+  * *Meniu*: Meniu principal AAPS
+  * *Asistent*: asistent bolusare - calculator pentru bolus
+  * *Bolus*: introducere directă a valorii bolus
   * *eCarb*: eCarb configuration dialog
   * *Status*: status sub-menu
   * *None*: Disables tap action on AAPS complications
