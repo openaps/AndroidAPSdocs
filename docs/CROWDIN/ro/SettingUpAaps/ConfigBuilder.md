@@ -266,16 +266,16 @@ Dacă doriți să bolusați șamd. de pe ceas, în "Setări Wear", trebuie să a
 Prin fila Ceas (Wear) sau prin meniul principal (sus stânga ecranului, dacă fila nu este afișată) puteți
 
 * Retrimiteți toate datele. Ar putea fi de ajutor dacă ceasul nu a fost conectat de ceva timp și doriți să împingeți informațiile către ceas.
-* Open settings on your watch directly from your phone.
+* Deschideți setările pe ceas direct de pe telefon.
 
 ### Autotune
 
 You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
 
-### Maintenance
+### Mentenanță
 
-Access this tab to export / import settings.
+Accesați această filă pentru a exporta / importa setările.
 
 ### Configurarea Sistemului (Config Builder)
 
-This current tab.
+Această filă curentă.
