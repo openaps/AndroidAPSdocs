@@ -169,9 +169,9 @@ Când folosiți bucla ar trebui să încercați acești pași:
 
 Pre- and post-processing of these settings is important. Faceți schimbările la timp, înainte de sport si luați în considerare efectul de umplere cu glucoză a mușchilor.
 
-Dacă faceți sport în mod regulat în aceeași perioadă a zilei (spre exemplu o oră de sport în sală) puteți lua în considerare utilizarea unei [automatizări](../DailyLifeWithAaps/Automations.md) pentru schimbarea de profil și o țintă temporară. Location based automation might also be an idea but makes preprocessing more difficult.
+Dacă faceți sport în mod regulat în aceeași perioadă a zilei (spre exemplu o oră de sport în sală) puteți lua în considerare utilizarea unei [automatizări](../DailyLifeWithAaps/Automations.md) pentru schimbarea de profil și o țintă temporară. Automatizarea bazată pe locație ar putea fi de asemenea o idee, dar face preprocesarea mai dificilă.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+Procentul de schimbare a profilului, valoarea pentru ținta temporară a activității tale și momentul cel mai bun pentru modificări sunt setări individuale. Începeți pe partea sigură dacă sunteți în căutarea valorii corecte pentru dumneavoastră (începeți cu un procent mai mic și cu o țintă temporară mai mare).
 
 #### Sex
 
