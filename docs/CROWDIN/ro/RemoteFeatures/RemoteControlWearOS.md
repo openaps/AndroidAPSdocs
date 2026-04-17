@@ -100,9 +100,9 @@ Pictograma cu steaua umplută este pentru starea activată (**Pornit**), iar pic
 
 * **Asistent în Meniu** (implicit `Pornit`): Permite în meniul principal să se introducă carbohidrații și să se seteze bolusul din ceas
 * **Amorsare în meniu** (implicit`Oprit`): Permite Amorsare/Umplere de pe ceas
-* **Single Target** (default `On`):
+* **Țintă unică** (implicit `Pornit`):
   
-  * `On`: you set a single value for TT
+  * `Pornit`: ați setat o singură valoare pentru Ținta Temporară
   * `Off`: ați setat ținta inferioară și superioară pentru ȚintaTemporară
 
 * **Asistent Procentaj** (implicit `Oprit`): Permiteți corecții bolus din asistent (valoarea introdusă în procente înainte de notificarea de confirmare)
@@ -160,61 +160,61 @@ AAPS furnizează următoarele complicații:
   * *Meniu*: Meniu principal AAPS
   * *Asistent*: asistent bolusare - calculator pentru bolus
   * *Bolus*: introducere directă a valorii bolus
-  * *eCarb*: eCarb configuration dialog
-  * *Status*: status sub-menu
-  * *None*: Disables tap action on AAPS complications
-* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
+  * *Carbohidrați extinși*: dialog de configurare carbohidrați extinși
+  * *Stare*: submeniul de stare
+  * *Niciunul*: Dezactivează acțiunea de atingere a complicațiilor AAPS
+* **Unicode în complicații** (implicit `Pornit`): Când e `Pornit`, complicațiile vor folosi caractere Unicode pentru simboluri ca `Δ` Delta, `⁞` separator vertical din puncte sau `⎍` simbol pentru Rata Bazală. Afișarea lor depinde de font, și asta poate fi foarte specific pentru fiecare cadran. Această opțiune permite comutarea simbolurilor Unicode `Oprit` dacă este necesar - când caracterul utilizat de către fața de ceas personalizată nu suportă acele simboluri - pentru a evita erorile grafice.
 
 (WearOsSmartwatch-wear-os-tiles)=
 
-## Wear OS Tiles
+## Panouri Wear OS
 
-Wear OS Tiles provide easy access to users' information and actions to get things done. The tiles are only available on Android smartwatches running on Wear Os version 2.0 and higher.
+Panourile Wear OS oferă acces facil la informațiile utilizatorilor și la acțiunile acestora pentru a rezolva lucrurile cum trebuie. Panourile sunt disponibile doar pe ceasurile inteligente Android care rulează Wear OS versiunea 2.0 sau mai mare.
 
-Tiles allow you to quickly access actions on the AAPS application without going through the watch face menu. The tiles are optional and can be added and configured by the user.
+Panourile vă permit să accesați rapid acțiunile de pe aplicația AAPS fără a trece prin meniul de ceas. Panourile sunt opționale și pot fi adăugate și configurate de către utilizator.
 
-The tiles are used "next to" any watch face. To access a tile, when enabled, swipe right to left on your watch face to show them.
+Panourile sunt folosite "lângă" orice față de ceas. Pentru a accesa un panou, când este activat, glisați dreapta spre stânga pe fața ceasului pentru a le afișa.
 
-Please note; that the tiles do not hold the actual state of the AAPS phone app and will only make a request, which has to be confirmed on the watch before it is applied.
+Vă rugăm să rețineți; că panourile nu păstrează starea actuală a aplicației de telefon AAPS și vor face doar o solicitare, care trebuie să fie confirmată pe ceas înainte de a fi aplicată.
 
-## How to add Tiles
+## Cum să adăugați Panouri
 
-Before using the tiles, you have to switch on "Control from Watch" in the "Wear OS" settings of Android APS.
+Înainte de a folosi panourile, trebuie să activați "Control de la ceas" în setările "Wear OS" pentru Android APS.
 
-![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
+![Preferințele telefonului sunt activate](../images/wear_phone_preferences.jpg)
 
-Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
+În funcție de versiunea dumneavoastră Wear OS, marca și telefonul dumneavoastră inteligent există două modalități de a activa panourile:
 
-1. On your watch, from your watch face; 
-  * Swipe right to left till you reach the "+ Add tiles" 
-  * Select one of the tiles.
-2. On your phone open the companion app for your watch. 
-  * For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
-  * In the click on the section "Tiles", followed by "+ Add" button
-  * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
-  * The order of the tiles can be changed by dragging and dropping
+1. Pe ceas, de pe fața ceasului; 
+  * Glisați de la dreapta la stânga până ajungeți la ”+ Adăugați panouri” 
+  * Selectați unul dintre panouri.
+2. Pe telefonul dumneavoastră deschideți aplicația companion pentru ceas. 
+  * Pentru Samsung deschideți "Galaxy Wearable" sau pentru alte mărci "Wear OS"
+  * Click pe secțiunea "Panouri", urmată de butonul "+Adăugați"
+  * Găsiți panoul AAPS pe care doriți să-l adăugați prin selectarea sa. ![Telefon Wear adăugați panou](../images/wear_companion_app_add_tile.png)
+  * Ordinea panourilor poate fi schimbată prin glisare și plasare
 
-The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
+Conținutul panourilor poate fi personalizat prin apăsarea lungă a unei iconițe și apăsarea butonului "Editare" sau iconița cu "roata dințată".
 
-### APS(Actions) Tile
+### Panou APS(Acțiuni)
 
-The action tile can hold 1 to 4 user-defined action buttons. To configure, long-press the tile, which will show the configuration options. Similar actions are also available through the standard watch menu.
+Panoul de acțiune poate conține 1 până la 4 butoane de acțiune definite de utilizator. Pentru a configura, apăsați lung pe panou, care va afișa opțiunile de configurare. Acțiuni similare sunt disponibile și prin intermediul meniului standard de ceas.
 
-Actions supported in the Action tile can request the AAPS phone app for:
+Acțiunile suportate în panoul de acțiune pot solicita aplicația de telefon AAPS pentru:
 
-* **Calc**; do a bolus calculation, based on carb input and optional a percentage [1]
-* **Insulin**; request insulin delivery by entering the unit of insulin
-* **Treatment**; request both insulin delivery and add carbs
-* **Carbs**; add (extended) carbs
-* **TempT**; set a custom temporary target and duration
+* **Calculator**; faceți un calcul pentru bolus, bazat pe introducerea carbohidraților și pe un procent [1] opțional
+* **Insulină**; solicitați administrarea insulinei prin introducerea unității de insulină
+* **Tratamentul**; cere atât administrarea insulinei cât și adăugarea carbohidraților
+* **Carbohidrați**; adăugați carbohidrați (extinși)
+* **Țintă Temporară**; setați o țintă temporară personalizată și durata
 
-![Wear action tile, sample calculator](../images/wear_actions.png)
+![Panou Wear de acțiune, calculator eșantion](../images/wear_actions.png)
 
-[1] Via, the Wear OS menu, set the "Calculator Percentage" option to "ON" to show the percentage input in the bolus calculator. The default percentage is based on the phone settings in the "Overview" section ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result) When the user does not provide a percentage, the default value from the phone is used. Configure the other parameters for the bolus calculator in the phone app via "Preferences" "Wizard Settings".
+[1] Via, meniul Wear OS, setați opțiunea "Calculator procentaj" ca "Pornită" pentru a afișa procentajul de intrare în calculatorul de bolus. Procentul implicit este bazat pe setările telefonului din secțiunea ["Administrează această parte a rezultatului asistentului de bolusuri %"](#Preferences-deliver-this-part-of-bolus-wizard-result) Când utilizatorul nu oferă un procentaj, valoarea implicită de pe telefon este folosită. Configurați ceilalți parametri pentru calculatorul de bolus din aplicația de telefon prin intermediul "Preferințe" "Setări asistent".
 
-### AAPS(Temp Target) Tile
+### Panou AAPS(Țintă temporară)
 
-The Temp Target Tile can request a temporary target based on AAPS phone presets. Configurați ora și țintele prestabilite prin setarea aplicației telefonului prin accesarea "Preferințelor", "Prezentare", ["Ținte temporare implicite"](#Preferences-default-temp-targets) și setați durata și țintele pentru fiecare presetare. Configurați acțiunile vizibile pe panou prin setările de panou. Apăsați lung pe iconiță pentru a afișa opțiunile de configurare și selectați 1 până la 4 opțiuni:
+Panoul țintă temporară poate solicita o țintă temporară pe baza presetărilor telefonului AAPS. Configurați ora și țintele prestabilite prin setarea aplicației telefonului prin accesarea "Preferințelor", "Prezentare", ["Ținte temporare implicite"](#Preferences-default-temp-targets) și setați durata și țintele pentru fiecare presetare. Configurați acțiunile vizibile pe panou prin setările de panou. Apăsați lung pe iconiță pentru a afișa opțiunile de configurare și selectați 1 până la 4 opțiuni:
 
 * **Activitate**; pentru sport
 * **Hipo**; pentru a crește ținta în timpul tratamentului hipoglicemiei
@@ -281,8 +281,8 @@ Deoarece nu putem face compromisuri în comunicare (avem nevoie de date actualiz
 * De obicei, fețele de ceas implicite sunt mai bine optimizate decât cele personalizate, descărcate din magazin.
 * Este mai bine să utilizați fețe de ceas care limitează cantitatea de date afișate în modul inactiv/estompat.
 * Fiți conștient când amestecați alte complicații, cum ar fi widgeturile meteorologice terțe, sau alte ce utilizează date din surse externe.
-* Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
+* Începeti cu fețe de ceas mai simple. Adăugați pe rând câte o complicație și observați cum afectează durata de viața a bateriei.
+* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). Pe dispozitivele OLED, va limita numărul de puncte iluminate și va limita defectarea ecranului.
 * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
 * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
