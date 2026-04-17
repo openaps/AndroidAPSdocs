@@ -51,55 +51,55 @@ Pictograma cu steaua umplută este pentru starea activată (**Pornit**), iar pic
 
 ### Parametrii AAPS însoțitor
 
-* **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* **Vibrare la Bolus** (implicit `Pornit`):
+* **Unități pentru Acțiuni** (implicit `mg/dl`): dacă este **Pornit** unitatea de măsură este `mg/dl`, dacă este **Oprit** unitatea de măsură folosită este `mmol/l`. Folosit la setarea unei ținte temporare din ceas.
 
 (Watchfaces-watchface-settings)=
 
-### Watchface settings
+### Setări fețe de ceas
 
-* **Show Date** (default `Off`): note, date is not available on all watchfaces
-* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
-* **Show COB** (default `On`): Display or not COB value
-* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
-* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
-* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
-* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
-* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
-* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
-* **Show BG** (default `On`): Display or not last BG value
-* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
-* **Show Ago** (default `On`): show how many minutes since last reading.
-* **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
-* **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
-* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
-* **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
+* **Afișați data** (implicit `Oprit`): notă, datele nu sunt disponibile pe toate fețele de ceas
+* **Afișați IOB** (implicit `Pornit`): Afișează sau nu valoarea IOB (setarea pentru valoarea detaliată este în parametrii de ceas din AAPS)
+* **Afișați COB** (implicit `Pornit`): Afișează sau nu valoarea COB
+* **Afișați Variația** (implicit `Pornit`): Afișează sau nu variația glicemiei din ultimele 5 minute
+* **Afișați variația medie** (implicit `Pornit`): Afișează sau nu variația medie a glicemiei din ultimele 15 minute
+* **Afișați bateria telefonului** (implicit `Pornit`): Baterie telefon în %. Roșu dacă e sub 30%.
+* **Afișați baterie dispozitiv** (implicit `Oprit`): Bateria dispozitivului este o sinteză a bateriilor din telefon, pompă și senzor (în general, cea mai mică dintre cele 3 valori)
+* **Afișați Rata Bazală** (implicit `Pornit`): Afișare sau nu a ratei bazale curente (în U/h sau în % dacă RBT)
+* **Afișați starea buclei** (implicit `Pornit`): arată câte minute au trecut de la ultima buclă activă (săgețile din jurul valorii devin roșii dacă este peste 15').
+* **Afișați glicemia** (implicit `Pornit`): Afișează sau nu ultima valoare a glicemiei
+* **Afișați săgeata de direcție** (implicit `Pornit`): Afișează sau nu săgeata tendinței glicemiei
+* **Afișați vechime** (implicit `Pornit`): arată numărul de minute de la ultima citire.
+* **Întunecat** (implicit `Pornit`): Puteți comuta de pe fundal negru pe fundal alb (cu excepția fețelor de ceas Cockpit și Steampunk)
+* **Evidențiați bazalele** (implicit `Oprit`): Îmbunătățirea vizibilității ratei bazalelor și bazalelor temporare
+* **Potrivire separator** (implicit `Oprit`): Pentru fețele de ceas AAPS, AAPSv2 și AAPS (Mare), se poate seta un fundalul în contrast pentru separator (**Oprit**) sau se poate potrivi separatorul cu culoarea fundalului (**Pornit**)
+* **Interval de timp al graficului** (implicit `3 ore`): puteți selecta în sub-meniu intervalul maxim de timp al graficului între 1 oră și 5 ore.
 
-### User Interface setting
+### Setări Interfață Utilizator
 
-* **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
+* **Design de intrare**: cu acest parametru, poți selecta poziția butoanelor "+" și "-" atunci când introduci comenzi pentru AAPS (ținte temporare, insulină, carbohidrați)
 
-![Input design options](../images/Watchface_InputDesign.png)
+![Opțiuni pentru designul de intrare](../images/Watchface_InputDesign.png)
 
-### Specific watchface parameters
+### Parametrii specifici pentru fețele de ceas
 
 #### Fața de ceas Steampunk
 
-* **Delta Granularity** (default `Medium`)
+* **Granularitate variație** (implicit `Mediu`)
 
 ![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Cadran FațaCeas
 
-* **Big Numbers** (default `Off`): Increase text size to improve visibility
-* **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
-* **Light Ring History** (default `On`): Ring history more discrete with a darker gray
-* **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
+* **Cifre mari** (implicit `Oprit`): Crește dimensiunea textului pentru a îmbunătăți vizibilitatea
+* **Istoric cu cercuri** (implicit`Oprit`): Vizualizare grafică istoric glicemie cu inele gri în interiorul inelului verde al orei
+* **Istoric cu cerc luminos** (implicit `Pornit`): cercul de istoric este mai discret cu un gri mai închis
+* **Animații** (implicit `Pornit`): Când este activat și acceptat de ceas și nu e în modul rezoluție mică pentru economisirea energiei, cadranul ceasului va fi animat
 
-### Commands settings
+### Setări comenzi
 
-* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
-* **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
+* **Asistent în Meniu** (implicit `Pornit`): Permite în meniul principal să se introducă carbohidrații și să se seteze bolusul din ceas
+* **Amorsare în meniu** (implicit`Oprit`): Permite Amorsare/Umplere de pe ceas
 * **Single Target** (default `On`):
   
   * `On`: you set a single value for TT
