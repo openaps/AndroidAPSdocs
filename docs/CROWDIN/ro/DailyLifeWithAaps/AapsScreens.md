@@ -349,7 +349,7 @@ Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
 
 Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+Notă, trebuie să fiți în [Obiectivul 8](#objectives-objective8) pentru a permite Detectării Sensibilității /[Autosens](#Open-APS-features-autosens) să ajusteze automat cantitatea de insulină livrată. Before reaching that objective, the line in your graph is displayed for information only.
 
 ### Variable sensitivity
 

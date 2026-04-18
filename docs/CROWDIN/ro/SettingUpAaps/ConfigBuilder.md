@@ -93,75 +93,75 @@ Selectați sursa de monitorizare a glicemiei din sânge pe care o folosiți. Ved
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [Glicemie NSClient](../CompatibleCgms/CgmNightscoutUpload.md) - doar dacă știți ce faceți, vedeți [Sursă glicemie](../Getting-Started/CompatiblesCgms.md).
 * [MM640g](../CompatibleCgms/MM640g.md)
-* Glimp - only version 4.15.57 and newer are supported
-* [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+* Glimp - doar versiunea 4.15.57 și versiuni mai noi sunt acceptate
+* [Construiește-ți propria aplicație Dexcom (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 * [Poctech](../CompatibleCgms/PocTech.md)
-* Tomato App for MiaoMiao device
-* [Glunovo App](https://infinovo.com/) for Glunovo CGM system
+* Aplicația Tomato pentru dispozitivul MiaoMiao
+* [Aplicația Glunovo](https://infinovo.com/) pentru sistemul de monitorizare al glicemiei Glunovo
 * [Ottai](../CompatibleCgms/OttaiM8.md)
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
-* Random BG: Generates random BG data (Demo mode only)
+* Glicemie aleatorie: generează valori aleatorii ale glicemiei (doar în modul DEMO)
 
 ## Smoothing
 
 ![Smoothing](../images/ConfBuild_Smoothing.png)
 
-See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Vedeți [Netezirea datelor de glicemie](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 (Config-Builder-pump)=
 
 ## Pump
 
-Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
+Alegeți tipul de pompă pe care îl folosiți. Vezi pagina [Pompe Compatibile](../Getting-Started/CompatiblePumps.md) pentru mai multe informații despre configurare.
 
-![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS33.png) ![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS33-2.png)
+![Selecție pompă pentru configurare](../images/ConfBuild_Pump_AAPS33.png) ![Selecție pompă pentru configurare](../images/ConfBuild_Pump_AAPS33-2.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+* Dana R Coreeană (pentru pompa DanaR domestică)
+* Dana Rv2 (Pompa DanaR cu actualizare de firmware neoficială)
 * [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
-* [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
+* [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 * [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
-* Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
-* Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+* Omnipod pentru [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
+* Dash pentru [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 * [Medtronic](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
-* Virtual pump: open loop - **AAPS** suggestions only 
-  * as you make you first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
-  * for pump which doesn't have any driver yet
+* Pompă virtuală: doar sugestii pentru buclă deschisă - **AAPS** 
+  * pe măsură ce faceți primii pași cu **AAPS**, în timpul primelor [obiective](../SettingUpAaps/CompletingTheObjectives.md)
+  * pentru pompa care încă nu are driver
 
 ## Detectare Sensibilitate
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Alegeți tipul de detecție a sensibilității. Pentru mai multe detalii despre diferite designuri, vă rugăm să [citiți aici](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Această funcție analizează în timp real datele istorice și face ajustări dacă consideră că reacționați mai sensibil (sau invers, sunteți mai rezistent) la insulină decât de obicei. Mai multe detalii despre Algoritmul de Sensibilitate pot fi citite în [Documentația OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs). You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+Vă puteți vedea sensibilitatea pe ecranul principal într-un [grafic adițional](#AapsScreens-section-g-additional-graphs). Vă puteți vedea sensibilitatea la insulină pe ecranul principal prin selectarea SEN și prin urmărirea liniei albe în grafic. Notă, trebuie să fiți în [Obiectivul 8](#objectives-objective8) pentru a permite Detectării Sensibilității /[Autosens](#Open-APS-features-autosens) să ajusteze automat cantitatea de insulină livrată. Înainte de a ajunge la acest obiectiv, procentajul Autosens / linia din grafic este afișată doar pentru informare.
 
 ### Setări absorbție
 
-If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+Dacă utilizați Oref1 cu **SMB** trebuie să schimbați **min_5m_carbimpact** (impactul estimat al carbohidraților la fiecare 5 minute) la 8. Valoarea este utilizată în timpul întreruperii citirilor **CGM** sau atunci când activitatea fizică „folosește” întreaga creștere a glicemiei, care altfel ar determina **AAPS** să scadă COB. În momentele în care [absorbția de carbohidrați](../DailyLifeWithAaps/CobCalculation.md) nu poate fi ajustată dinamic pe baza reacțiilor din sânge, se introduce o degradare implicită a carbohidraților. Practic, este un sistem de siguranță.
 
 (Config-Builder-aps)=
 
 ## APS
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+Selectați algoritmul APS dorit pentru ajustări ale terapiei. Puteți vedea detaliile despre algoritmul ales în fila OpenAPS (OAPS).
 
 * OpenAPS AMA 
-  * Advanced Meal Assist: older algorithm not recommended anymore.
-  * In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
+  * Asistență Avansată pentru Masă: algoritmul mai vechi nu mai este recomandat.
+  * Pe scurt, avantajul este că, după ce îți administrezi un bolus pentru masă, sistemul poate crește mai rapid nivelul temporar al insulinei DACĂ introduci corect valorile pentru carbohidrați.
 * [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb) 
-  * Super Micro Bolus: most recent algorithm recommended for all users.
-  * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
-  * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
+  * Super Micro Bolus: cel mai recent algoritm recomandat pentru toți utilizatorii.
+  * Spre deosebire de AMA, SMB nu folosește rate bazale temporare pentru a controla nivelurile glicemiei, ci în principal mici **Super Micro Bolusuri**.
+  * Notă: Este recomandat să utilizați acest algoritm de la început, chiar dacă nu veți primi Super Micro Bolusuri (SMB) până la [Obiectivul 9](#objectives-objective9).
 
-If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Preferences > Sensitivity detection > Sensitivity Oref1 settings](../SettingUpAaps/Preferences.md).
+Dacă treceți de la algoritmul AMA la algoritmul SMB, *min_5m_carbimpact* trebuie modificat manual în **8** (valoarea implicită pentru SMB) în [Preferințe > Detecția Sensibilității > Setări sensibilitate Oref1 ](../SettingUpAaps/Preferences.md).
 
 ## Buclă
 
-This module should not be disabled as it is a core part of **AAPS**.
+Acest modul nu poate fi dezactivat deoarece este o parte de bază a **AAPS**.
 
 ## Constrângeri
 
@@ -239,7 +239,7 @@ O filă care oferă mai multe butoane pentru a întreprinde [acțiuni](#screens-
 
 ### Automatizare
 
-O filă pentru gestionarea [Automatizărilor](../DailyLifeWithAaps/Automations.md), disponibilă începând cu [Obiectivul 10](#objectives-objective10).
+O filă pentru gestionarea <0>Automatizărilor</0>, disponibilă de la <1>Obiectivul 10</1>.
 
 (Config-Builder-sms-communicator)=
 
@@ -259,23 +259,23 @@ Notă: Intrările nu pot fi utilizate în calculatorul **AAPS**. (Numai vizualiz
 
 Monitorizați și controlați AAPS folosind ceasul Android Wear (vedeți [pagina Afișaj Ceas](../WearOS/WearOsSmartwatch.md)). Utilizați setările (rotiță dințată) pentru a stabili variabilele care ar trebui luate în considerare la calcularea bolusului dat de ceas (spre exemplu tendința de 15 minute, COB...).
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+Dacă doriți să bolusați șamd. de pe ceas, în "Setări Wear", trebuie să activați "Control de pe Ceas".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Setări Wear](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Prin fila Ceas (Wear) sau prin meniul principal (sus stânga ecranului, dacă fila nu este afișată) puteți
 
-* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* Retrimiteți toate datele. Ar putea fi de ajutor dacă ceasul nu a fost conectat de ceva timp și doriți să împingeți informațiile către ceas.
+* Deschideți setările pe ceas direct de pe telefon.
 
 ### Autotune
 
 You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
 
-### Maintenance
+### Mentenanță
 
-Access this tab to export / import settings.
+Accesați această filă pentru a exporta / importa setările.
 
 ### Configurarea Sistemului (Config Builder)
 
-This current tab.
+Această filă curentă.

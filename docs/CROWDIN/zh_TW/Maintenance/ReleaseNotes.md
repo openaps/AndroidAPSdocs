@@ -56,10 +56,10 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 (version3422)=
 
-## Version 3.4.2.2
+## 版本 3.4.2.2
 
-- Fixing issues with Equil and Medtronic
-- Improve safety of Medtrum
+- 修正 Equil 與 Medtronic 的問題
+- 提升 Medtrum 的安全性
 
 (version3421)=
 

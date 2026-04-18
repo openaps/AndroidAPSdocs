@@ -85,7 +85,7 @@ In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a para
 
 ### Nightscout settings
 
-#### AAPSClient says 'not allowed' and does not upload data. What can I do?
+#### AAPSClient says 'not allowed' and does not upload data. Ce pot face?
 
 In AAPSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
 
@@ -97,81 +97,81 @@ If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll 
 
 ### Pump
 
-#### Where to place the pump?
+#### Unde să montați pompa pe corp?
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
+Există nenumărate posibilități de a plasa pompa. Nu contează dacă folosiți sau nu bucla.
 
-#### Batteries
+#### Baterii
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
+Folosirea buclei poate duce la reducerea timpului de utilizare a bateriilor, deoarece sistemul interacționează cu pompa mult mai des decât ar face-o un utilizator obișnuit. Se recomandă să schimbați bateriile la 25%, deoarece comunicația devine problematică sub această valoare. Puteți seta alarme de avertizare pentru bateria pompei folosind variabila PUMP_WARN_BATT_P în site-ul dumneavoastră Nightscout. Sfaturi pentru îmbunătățirea vieții bateriilor:
 
-- reduce the length of time the LCD stays on (within pump settings menu)
-- reduce the length of time the backlight stays on (within pump settings menu)
-- select notification settings to a beep rather than vibrate (within pump settings menu)
+- reduceți perioada de timp cât ecranul pompei stă aprins (din setările pompei)
+- reduceți perioada de timp cât iluminarea ecranului pompei este pornită (din setările pompei)
+- selectați notificarea să fie prin intermediul unui sunet mai degrabă decât prin vibrație (în setările pompei)
 - only press the buttons on the pump to reload, use AAPS to view all history, battery level and reservoir volume.
-- AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, whitelist AAPS app in the phone battery settings to stop the app power monitor closing it down.
+- AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. Acest lucru consumă baterie. Pentru a vedea dacă se întâmplă astfel, mergeți la Preferințe > NSClient și activați 'Înregistrează pornirea aplicației pe NS'. Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, whitelist AAPS app in the phone battery settings to stop the app power monitor closing it down.
     
-    For example, to whitelist on a Samsung phone running Android Pie:
+    De exemplu, pentru a acorda toate permisiunile pe un telefon Samsung care rulează cu Android Pie:
     
-    - Go to Settings -> Device Care -> Battery 
+    - Mergeți la Setări-> Îngrijire dispozitiv-> Baterie 
     - Scroll until you find AAPS and select it
-    - De-select "Put app to sleep"
-    - ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
+    - Dezactivați "Pune aplicația în repaus"
+    - DE ASEMENEA mergeți la Setări -> Aplicații -> (Simbolul format din trei cercuri în dreapta sus a ecranului) selectați "acces special" -> Optimizare utilizare baterie
     - Scroll to AAPS and make sure it is de-selected.
 
-- clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
+- curățați bornele bateriei cu tampon cu alcool, pentru a vă asigura că nu a rămas ceară/unsoare.
 
-- for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
+- pentru [pompele Dana R/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) procedura de pornire trage un curent mare prin baterie pentru a rupe în mod intenționat filmul de pasivizare (care previne pierderea de energie în timp ce este în stocare), dar nu funcționează întotdeauna pentru a-l rupe 100%. Fie scoateți și reintroduceți bateria de 2-3 ori până când se afișează 100% pe ecran, fie utilizați cheia bateriei pentru o scurtcircuitare rapidă înainte de a fi introdusă, prin aplicarea sa la ambele borne pentru o fracțiune de secundă.
 - see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
 
-#### Changing reservoirs and cannulas
+#### Schimbarea rezervoarelor și a canulelor
 
 The change of cartridge cannot be done via AAPS but must be carried out as before directly via the pump.
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
 - Now nnect the pump and change the reservoir as per pump instructions.
 - Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](#screens-action-tab) in the actions tab just to record the change.
-- Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+- Odată reconectat la pompă continuați bucla prin apăsare lungă pe 'Suspendat (X m)'.
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](#screens-action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Aceasta înseamnă că nu întrerupe o rată bazală temporară care rulează în prezent. În pagina Acțiuni (Act), utilizați butonul de [AMORSARE/UMPLERE](#screens-action-tab) pentru a seta cantitatea de insulină necesară pentru a umple setul de infuzie și a începe amorsarea. Dacă cantitatea nu este suficientă, repetați umplerea. Puteți seta butoanele pentru cantitatea standard în Preferințe > Altele > Cantități standard de insulină umplere/amorsare. Vedeți instrucțiunile cuprinse în prezentarea aflată în cutia canulei pentru a vedea de câte unități este nevoie pentru a face amorsarea pompei, în funcție de lungimea acului și a tubului.
 
-### Wallpaper
+### Fundal
 
 You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phone-wallpaper).
 
-### Daily usage
+### Utilizare zilnică
 
-#### Hygiene
+#### Igienă
 
-##### What to do when taking a shower or bath?
+##### Ce trebuie făcut când se face duș sau baie?
 
-You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
+Puteți îndepărta pompa în timp ce faceți duș sau baie. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
 
-#### Work
+#### Serviciu
 
 Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
-### Leisure activities
+### Activități de agrement
 
 (FAQ-sports)=
 
-#### Sports
+#### Sporturi
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+Trebuie să vă adaptați vechile obiceiuri sportive din vremurile dinaintea buclei. Dacă doar ați consuma mai mulți carbohidrați la fel ca înainte, sistemul de buclă închisă îi va recunoaște și îi va corecta în mod corespunzător.
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+Deci, ați avea mai mulți carbohidrați la bord, dar în același timp bucla ar contracara și va elibera insulina.
 
-When looping you should try these steps:
+Când folosiți bucla ar trebui să încercați acești pași:
 
 - Make a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) < 100%.
 - Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target.
 - If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
 
-Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+Pre- and post-processing of these settings is important. Faceți schimbările la timp, înainte de sport si luați în considerare efectul de umplere cu glucoză a mușchilor.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../DailyLifeWithAaps/Automations.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+Dacă faceți sport în mod regulat în aceeași perioadă a zilei (spre exemplu o oră de sport în sală) puteți lua în considerare utilizarea unei [automatizări](../DailyLifeWithAaps/Automations.md) pentru schimbarea de profil și o țintă temporară. Automatizarea bazată pe locație ar putea fi de asemenea o idee, dar face preprocesarea mai dificilă.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+Procentul de schimbare a profilului, valoarea pentru ținta temporară a activității tale și momentul cel mai bun pentru modificări sunt setări individuale. Începeți pe partea sigură dacă sunteți în căutarea valorii corecte pentru dumneavoastră (începeți cu un procent mai mic și cu o țintă temporară mai mare).
 
 #### Sex
 

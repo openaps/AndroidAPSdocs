@@ -1,46 +1,46 @@
-# DanaRS and Dana-i Pump
+# Pompele DanaRS și Dana-i
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
+*Aceste instrucțiuni sunt destinate configurării aplicației și pompei dumneavoastră pentru cazul în care aveți o pompă model DanaRS model 2017 sau mai nouă sau mai recentă Dana-i. Vizitați <0>Pompa de insulină DanaR</0> dacă aveți în schimb DanaR original.*
 
-**New Dana RS firmware v3 can be used from AAPS version 2.7 onwards.**
+**Noul firmware v3 Dana RS poate fi folosit cu AndroidAPS începând cu versiunea 2.7.**
 
-**New Dana-i can be used from AAPS version 3.0 onwards.**
+**Noul Dana-i poate fi folosit de la AAPS versiunea 3.0.**
 
-* In DanaRS/i pump "BASAL A" is used by the app. Existing data gets overwritten.
+* În pompa DanaRS doar "BAZALĂ A" este folosită de aplicație. Datele preexistente vor fi suprascrise.
 
 (DanaRS-Insulin-Pump-pairing-pump)=
 
-## Pairing pump
+## Asociere pompă
 
-* On AAPS homescreen click hamburger menu on the top left corner and go to Config Builder.
-* In pump section select 'Dana-i/RS'.
-* Click on gear wheel to get directly to the pump settings or return to homescreen.
+* Pe ecranul principal AAPS dați click pe meniul Hamburger din colțul din stânga sus și mergeți la Configurator.
+* În secțiunea de pompă selectați 'Dana-i/RS'.
+* Atingeți rotița dințată pentru a ajunge direct la setările pompei sau reveniți la ecranul de pornire.
     
-    ![AAPS config builder Dana-i/RS](../images/DanaRS_i_ConfigB.png)
+    ![Configurator AAPS Dana-i/RS](../images/DanaRS_i_ConfigB.png)
 
-* Go to 'DANA-i/RS' tab.
+* Mergeți la fila 'DANA-i/RS'.
 
-* Select preferences menu by tapping the 3 dots in the top right. 
-* Select 'Dana-i/RS Preferences'.
-* Click on "Selected pump".
-* In the pairing window click on the entry for your pump.
+* Selectați meniul de preferințe prin atingerea celor 3 puncte din dreapta sus. 
+* Selectați 'Preferințe Dana-i/RS'.
+* Atingeți pe "Pompa selectată".
+* În fereastra de asociere atingeți intrarea pompei dumneavoastră.
     
-    ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
+    ![Asocierea AAPS cu Dana-i/RS](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* **Trebuie să confirmați de pe pompă asocierea!** Acesta este exact modul în care sunteți obișnuit cu alte asocieri Bluetooth (spre exemplu telefon inteligent și sistemul audio al automobilului).
     
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    ![Confirmare asociere Dana RS](../images/DanaRS_Pairing.png)
 
-* Follow the pairing process based on the type and firmware of your pump:
+* Urmăriți procesul de asociere în funcție de tipul și firmware-ul pompei dumneavoastră:
     
-    * For DanaRS v1 select pump password in preferences and set your password.
-    * For DanaRS v3 you have to type 2 sequences of numbers and letters displayed on pump to AAPS pairing dialog.
-    * For Dana-i standard Android pairing dialog appear and you have to enter 6-digit number displayed on pump.
+    * Pentru DanaRS v1 selectați parola pompei în preferințe și setați parola.
+    * Pentru DanaRS v3 trebuie să tastați 2 secvențe de numere și litere afișate pe pompă în dialogul de asociere AAPS.
+    * Pentru Dana-i dialogul de asociere Android standard apare și trebuie să introduceți un număr format din 6 cifre afișat în pompă.
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Selectați Viteză Bolus pentru a schimba valoarea implicită de livrare a unui bolus (12 secunde per unitate, 30 secunde per unitate sau 60 de secunde pentru livrarea unei unități de insulină).
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
-* Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
+* Stabiliți pasul bazalei în pompă la 0,01 U/h prin intermediul meniului de doctor (vedeți manualul de utilizare al pompei).
+* Stabiliți pasul bazalei în pompă la 0,05 U/oră prin intermediul meniului de doctor (vedeți manualul de utilizare al pompei).
 * Activați bolusurile extinse în pompă
 
 (DanaRS-Insulin-Pump-default-password)=
@@ -48,26 +48,26 @@
 ### Parola implicită
 
 * Pentru DanaRS cu firmware v1 şi v2 parola implicită este 1234.
-* For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24).
+* Pentru DanaRS cu firmware v3 sau Dana-i parola implicită este derivată din data de fabricație și se calculează ca LLZZ unde LL este luna și ZZ este ziua, pompa a fost produsă (ex "0124" reprezentând luna 01 și ziua 24).
     
-    * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
-    * Number 3 is manifacturing date. 
-    * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AAPS.
+    * Din MENU PRINCIPAL selectați REVIZUIRE și deschideți INFORMAȚII DE LIVRARE din sub-meniu
+    * Numărul 3 este data producției. 
+    * Pentru v3/i, această parolă este folosită numai pentru blocarea meniului în pompă. Nu este folosit pentru comunicare și nu este necesar să intrați în AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
 
 ## Schimbă parola pe pompă
 
 * Apăsaţi butonul OK pe pompă
-* In main menu select "OPTION" (move right by pressing arrow button several times)
+* În meniul principal selectați "OPȚIUNE" (mută spre dreapta prin apăsarea butonului săgeată de mai multe ori)
     
     ![Meniu principal DanaRS](../images/DanaRSPW_01_MainMenu.png)
 
-* In options menu select "USER OPTION"
+* În meniul de opțiuni selectați "OPȚIUNE UTILIZATOR"
     
-    ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
+    ![Meniu opțiuni DanaRS](../images/DanaRSPW_02_OptionMenu.png)
 
-* Use arrow button to scroll down to "11. parolă"
+* Folosiți butonul săgeată pentru a derula în jos la "11. parolă"
     
     ![DanaRS 11. Parolă](../images/DanaRSPW_03_11PW.png)
 
@@ -91,7 +91,7 @@
 
 * Deplasați în jos la "14. IEȘIRE" și apăsați butonul OK.
     
-    ![DanaRS Ieșire](../images/DanaRSPW_07_Exit.png)
+    ![Ieșire DanaRS](../images/DanaRSPW_07_Exit.png)
 
 (DanaRS-Insulin-Pump-dana-rs-specific-errors)=
 
@@ -103,30 +103,30 @@
 
 ![Alarmă pentru administrarea insulinei](../images/DanaRS_Error_bolus.png)
 
-* In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in [treatments tab](#screens-bolus-carbs) if you wish.
-* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
+* În cele mai multe cazuri, aceasta este doar o problemă de comunicare, iar cantitatea corectă de insulină este administrată.
+* Verificați istoricul pompei (fie în pompă, fie prin fila Dana > istoricul pompei > bolusuri) dacă bolusul corect a fost administrat.
+* Ștergeți intrarea eronată din [fila Tratamente](#screens-bolus-carbs) dacă doriți.
+* Cantitatea reală este citită și înregistrată la următoarea conectare. Pentru a forța acest lucru, apăsați pictograma Bluetooth în fila Dana sau doar așteptați următoarea conectare.
 
-## Special note when switching phone
+## Notă specială atunci când se schimbă telefonul
 
-When switching to a new phone the following steps are necessary:
+Când treceți la un telefon nou, sunt necesari următorii pași:
 
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
-* Transfer settings from old to new phone
+* [Exportați setările](../Maintenance/ExportImportSettings.md) pe telefonul tău vechi
+* Transferați setările de pe un telefon vechi pe unul nou
 
 ### DanaRS v1
 
-* **Manually pair** Dana RS with the new phone
-* As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AAPS on the new phone.
-* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
+* **Asociați manual** Dana RS cu noul telefon
+* Deoarece setările pompei sunt, de asemenea, importate AAPS de pe noul telefon deja va „știi” pompa și, prin urmare, nu va începe o scanare Bluetooth. Prin urmare, telefonul nou și pompa trebuie asociate manual.
+* Instalați AAPS pe noul telefon.
+* [Importați setările](../Maintenance/ExportImportSettings.md) pe telefonul dumneavoastră nou
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
-* Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
+* Începeți procedura de asociere așa cum este descrisă [mai sus](#DanaRS-Insulin-Pump-pairing-pump).
+* Uneori, ar putea fi necesară curățarea informațiilor de asociere în AAPS cu o atingere lungă pe pictograma Bluetooth din fila Dana-i/RS.
 
-## Timezone traveling with Dana RS pump
+## Traversarea fusurilor orare cu pompa Dana RS
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+Pentru informații despre călătoriile de-a lungul fusurilor orare, consultați secțiunea [Călătorii de-a lungul fusurilor orare cu pompe](#timezone-traveling-danarv2-danars).

@@ -66,11 +66,11 @@ Es kann etwas dauern bis die Synchronisierung abgeschlossen ist, da die Anpassun
 
 Der alte, auf Ruffy basierende, Treiber passt die Zeit nicht automatisch ein. In diesem Setup muss die Anpassung von Hand erfolgen. Unten findest Du die nötigen Schritte, um die Anpassungen wegen eines Zeitzonenenwechsels oder wegen der Zeitumstellung sicher durchzuführen.
 
-## Timezone Change for Medtrum
+## Zeitzonenänderung für Medtrum
 
 Der Treiber passt die Uhrzeit in der Pumpe automatisch an die Zeit im Smartphone an.
 
-Time zone changes keep the history intact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and **IOB**. If you change time manually double check the **IOB**.
+Änderungen der Zeitzone haben ggf. einen Einfluss auf den gespeicherten Gesamtinsulinbedarf (TDD). Die übrige Historie bleibt unberührt. Manuelle Anpassungen der Uhrzeit kann zu Problemen mit der Pumpenhistorie und dem **IOB** führen. Falls Du die Uhrzeit manuell anpasst, überprüfe das **IOB** (aktives Insulin).
 
 When the time zone or time changes running **TBR's** are stopped.
 
@@ -89,29 +89,29 @@ Depending on your pump and CGM setup, jumps in time can lead to problems with **
 
 If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
 
-### DST for Accu-Chek Insight
+### Zeitumstellung für Accu-Chek Insight
 
 * Zeitumstellung erfolgt automatisch. Keine Maßnahme erforderlich.
 
-### DST for Medtrum
+### Zeitumstellung für Medtrum
 
 * Zeitumstellung erfolgt automatisch. Keine Maßnahme erforderlich.
 
-### DST for Omnipod Dash
+### Zeitumstellung für Omnipod Dash
 
-* Either allow **AAPS** to temporarily default background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day prior DST is due to take place to avoid overnight disruption. NOTE THIS OPTION MAY CAUSE YOUR POD TO PREMATURELY EXPIRE. PLEASE HAVE SUPPLIES WITH YOU IF OPTING FOR THE FEATURE BELOW.
+* Entweder lässt Du nach der Zeitumstellung, wie sie oben beschrieben ist, temporär zu, dass **AAPS** das im Profil hinterlegte Basal abgibt.
+* Oder, für den Fall, dass Du nicht möchtest, dass **AAPS** vorübergehend das hinterlegte Basal die Nacht hinweg nutzt, kannst Du die Zeitzone am Vortag der Zeitumstellung ändern, um so in der Nacht nicht gestört zu werden. HINWEIS: DIESE OPTION KANN DAZU FÜHREN, DASS DEIN POD VORZEITIG UNBRAUCHBAR WIRD. STELLE BEI DIESEM WEG BITTE SICHER, DASS DU GENUG ERSATZ ZUR HAND HAST.
 
 #### Vor der Zeitumstellung notwendige Maßnahmen
 
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
+1. Schalte alle Einstellungen Deines Smartphones AUS, die die Zeitzone des Smartphones automatisch anpassen, damit auf eine Zeitzone, die keine Sommerzeit-Umstellung hat, gewechselt werden kann. Wie Du das machst, hängt von Deinem Smartphone und der Android-Version ab.
    
-   * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF).
-   * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. In diesem Fall musst Du eben beide ausschalten.
+   * Manche Smartphones haben zwei Einstellungen, eine für die automatische Zeiteinstellung (die idealerweise AN bleiben sollte) und eine für den automatischen Zeitzonenwechsel (die Du AUSSCHALTEN musst).
+   * Unglücklicherweise haben manche Android-Versionen nur eine Einstellmöglichkeit für beides zusammen. In diesem Fall musst Du eben beide ausschalten.
 
 <img width="576" height="1289" alt="Screenshot_20260329-110315 (1)" src="https://github.com/user-attachments/assets/ca40c1c6-1697-4832-ae10-5cf6a1dc0bce" />
 
-2. Find a timezone that has the same time as your current location but doesn't use DST.
+2. Suche Dir eine Zeitzone, die dieselbe Uhrzeit wie Du hat, aber nicht zwischen Winter- und Sommerzeit wechselt.
    
    * Eine Liste dieser Länder findest Du z.B. auf [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/).
    * Für die Mitteleuropäische Zeit (MEZ) könnte dies z.B. "Brazzaville" (Kongo) sein. Stelle die Zeitzone deines Smartphones manuell auf Kongo.
@@ -120,9 +120,9 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
 
 3. **AAPS** refresh your pump and switch to your desired **Profile**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the Fully Closed Loop for at least one DIA and Max-Carb-Time - whatever is bigger.
+4. Prüfe die **IOB**- und **COB**-Werte in **AAPS**. Deaktiviere den Closed Loop für mindestens die Insulinwirkdauer (DIA) oder „Max-Carb-Time“ (je nachdem welcher Zeitraum länger ist), sofern die Werte falsch sein sollten.
 
-5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
+5. Nach der Zeitumstellung notwendige Maßnahmen. Der Zeitpunkt zum Zurückkehren in die lokale Zeitzone ist ideal, wenn der **IOB** niedrig ist. E.g. an hour before a meal such as breakfast. Sowohl Dein **COB**, als auch Dein **IOB** sollten idealerweise dabei nahe Null sein.
 
 ### DST for Accu-Chek Combo
 
@@ -139,7 +139,7 @@ This section is only valid for the old, Ruffy-based driver. Der neue Treiber pas
    
    Screenshot_20260329-110315 (1)
 
-2. Find a timezone that has the same time as your current location but doesn't use DST.
+2. Suche Dir eine Zeitzone, die dieselbe Uhrzeit wie Du hat, aber nicht zwischen Winter- und Sommerzeit wechselt.
    
    * Eine Liste dieser Länder findest Du z.B. auf [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/).
    * Für die Mitteleuropäische Zeit (MEZ) könnte dies z.B. "Brazzaville" (Kongo) sein. Stelle die Zeitzone deines Smartphones manuell auf Kongo.
