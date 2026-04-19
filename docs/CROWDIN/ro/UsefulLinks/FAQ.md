@@ -177,7 +177,7 @@ Procentul de schimbare a profilului, valoarea pentru ținta temporară a activit
 
 You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
 
-#### Drinking alcohol
+#### Consumul de alcool
 
 Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AAPS:
 
