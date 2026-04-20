@@ -1,6 +1,6 @@
 # Telefoane
 
-The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
+Versiunea actuală a **AAPS** (3.4) necesită un telefon inteligent Android cu Google **Android 12.0 sau o versiune ulterioară**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
 
 Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.
 
