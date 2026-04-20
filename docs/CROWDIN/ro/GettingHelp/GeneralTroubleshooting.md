@@ -14,7 +14,7 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 
 ### **Building & updating**
 
-* [Lost keystore](#troubleshooting_androidstudio-lost-keystore)
+* [Cheie (keystore) pierdută](#troubleshooting_androidstudio-lost-keystore)
 * [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
 
 ### **Installing**
