@@ -12,8 +12,8 @@
 
 Atentie: AAPS va scrie întotdeauna date în **primul profil al ratei bazale din pompă**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Getting-Started/ComponentOverview) page which Android version is required to run AAPS.)
-* The AAPS app installed on your phone
+* Un telefon Android (în principiu orice versiune de Android ar funcționa cu Insight, dar verificați pe pagina [Module](../Getting-Started/ComponentOverview) care este versiunea Android necesară pentru a rula AndroidAPS.)
+* Aplicația AAPS instalată pe telefonul dumneavoastră
 
 ## Instalare
 
@@ -21,13 +21,13 @@ Atentie: AAPS va scrie întotdeauna date în **primul profil al ratei bazale din
     
     ![Captura de ecran Insight Eliminare glucometru](../images/Insight_RemoveMeter.png)
 
-* In [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md), select Accu-Chek Insight.
+* În [Confiigurator > Pompă](../SettingUpAaps/ConfigBuilder.md), selectați Accu-Chek Insight.
     
     ![Captura de ecran Insight ConfigBuilder](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Atinge roata pentru a deschide setările Insight.
 
-* În setări, apasă butonul 'Insight conectare' din partea de sus a ecranului. Ar trebui să vezi o listă cu toate dispozitivele bluetooth din apropiere (jos stânga).
+* În setări, apasă butonul 'Insight conectare' din partea de sus a ecranului. Ar trebui să vedeți o listă cu toate dispozitivele bluetooth din apropiere (jos stânga).
 * Pe pompa Insight mergi la Menu > Settings > Communication > Add Device. Pompa va afișa pe următorul ecran (mai jos dreapta) numărul de serie al pompei.
     
     ![Captura de ecran Insight Împerechere 1](../images/Insight_Pairing1.png)
@@ -98,7 +98,7 @@ Pentru perioadele în care pompa a fost oprită, AAPS va înregistra o rată baz
 În AAPS, fila Accu-Chek Insight afișează starea curentă a pompei și are două butoane:
 
 * "Refresh": Actualizeaza starea pompei
-* "Activează/Dezactivează notificarea de RBT": O pompă standard Insight emite o alarmă atunci când un RBT este terminat. Acest buton permite să activezi sau să dezactivezi această alarmă fără a fi nevoie de configurarea software-ului.
+* "Activează/Dezactivează notificarea de RBT": O pompă standard Insight emite o alarmă atunci când un RBT este terminat. Acest buton permite să activedeți sau să dezactivedeți această alarmă fără a fi nevoie de configurarea software-ului.
     
     ![Captura de ecran Stare Insight](../images/Insight_Status2.png)
 
