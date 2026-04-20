@@ -247,7 +247,7 @@ Avoid using tables with long texts as the contents is difficult to set in Markdo
 
 ## Style Guide
 
-### Contents
+### Cuprins
 
 1. English language writing tips
 
@@ -261,7 +261,7 @@ Avoid using tables with long texts as the contents is difficult to set in Markdo
 
 Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?"*
+În loc de: *"Ce provoacă vârfuri mari de după masă ale glicemiei în bucla închisă?"*
 
 Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
 
@@ -345,7 +345,7 @@ For example:
 
 | Verb      | Nominalization |
 | --------- | -------------- |
-| complete  | completion     |
+| complet   | completion     |
 | introduce | introduction   |
 | provide   | provision      |
 | fail      | failure        |
@@ -390,13 +390,13 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
 
 ##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- naratorul vorbește direct cititorului: În acest tutorial **vei** (noi) ar putea fi folosit pentru a transmite ideea de „suntem împreună în asta” în unele cazuri rare
 
 - Future Tense -> to show the final target
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Modul Imperativ -> pentru realizarea sarcinilor -> Pași concreți - evită conceptele abstracte
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Timpul trecut -> pentru a arăta sarcinile îndeplinite -> Rezultate vizibile rapide și imediate
 
 - Minimum Explanations -> strict necessary to complete the task - **what and why**
 
@@ -410,7 +410,7 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
 
 - Prerequisites (Level 2 heading)
 
-- Steps:
+- Pași:
 
 - Step 1 — Doing the First Thing (Level 2 heading)
 
@@ -468,7 +468,7 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
 
 - Optional Prerequisites (paragraph or Level 2 heading if more than 1)
 
-- Steps:
+- Pași:
 
 - Step 1 — Doing the First Thing (Level 2 heading)
 
@@ -564,7 +564,7 @@ The **editor (e.g. a fellow AAPS user, or the person who receives the pull reque
 
 [Diátaxis (diataxis.fr)](https://diataxis.fr/)
 
-[Technical Writer Style Guide Examples | Technical Writer HQ](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
+[Exemple de ghid de stil pentru scriitor tehnic | Technical Writer HQ](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
 
 [DigitalOcean's Technical Writing Guidelines | DigitalOcean](https://www.digitalocean.com/community/tutorials/digitalocean-s-technical-writing-guidelines)
 
