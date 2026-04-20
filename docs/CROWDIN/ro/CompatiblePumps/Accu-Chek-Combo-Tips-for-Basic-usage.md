@@ -1,6 +1,6 @@
-# Accu-Chek Combo Tips for basic usage
+# Sfaturi pentru utilizarea de bază a Accu-Chek Combo
 
-## How to ensure smooth operations
+## Cum se asigură buna derulare a operațiunilor
 
 * Întotdeauna **purtați telefonul inteligent asupra dumnevoastră**, lăsați-l lângă patul dumneavoastră noaptea. Deoarece pompa dumneavoastră poate sta în spatele sau sub corpul dumneavoastră în timp ce dormiți, o poziție mai înaltă (pe un raft sau pe o masă) funcționează cel mai bine.
 * Asigurați-vă întotdeauna că bateria pompei este cât se poate de încărcată. Vedeți secțiunea despre baterie pentru sfaturi legate de aceasta.
