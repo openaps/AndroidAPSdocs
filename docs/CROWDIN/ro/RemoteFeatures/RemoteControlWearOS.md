@@ -285,16 +285,16 @@ Deoarece nu putem face compromisuri în comunicare (avem nevoie de date actualiz
 * Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). Pe dispozitivele OLED, va limita numărul de puncte iluminate și va limita defectarea ecranului.
 * Verificați ce funcționează mai bine pe ceas: fața standard de ceas sau alte fețe cu complicații AAPS.
 * Observați timp de câteva zile, cu diferite profiluri de activitate. Cele mai multe ceasuri activează afișarea la ridicarea încheieturii, mișcare și alți declanșatori legați de utilizare.
-* Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
+* Verificați setările globale ale sistemului care afectează performanța: notificările, luminozitatea/timpul de expirare al ecranului activ, când este activat GPS-ul.
 * Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
-* **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+* **Nu putem garanta că datele afișate pe fața de ceas sau pe complicații sunt actuale**. În cele din urmă, depinde de Wear OS să decidă când actualizează fața de ceas sau complicațiile. Chiar și atunci când aplicația AAPS solicită actualizarea, Sistemul poate decide să amâne sau să ignore actualizările pentru a economisi bateria. Când aveți dubii și bateria ceasului este scăzută - verificați întotdeauna cu aplicația principală AAPS de pe telefon.
 
 (Watchfaces-troubleshooting-the-wear-app)=
 
-## Troubleshooting the wear app:
+## Depanarea aplicației de pe ceas:
 
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
-* If Complications does not update data - check first if AAPS watchfaces work at all.
+* Activați ADB debugging în Opțiuni Dezvoltator (de pe ceas), conectați ceasul prin intermediul unui USB și porniți aplicația de ceas cel puțin o dată în Android Studio.
+* Dacă complicațiile nu actualizează datele - verificați mai întâi dacă fețele de ceas AAPS funcționează.
 
 ## Additional AAPS custom watchfaces are also available
 
