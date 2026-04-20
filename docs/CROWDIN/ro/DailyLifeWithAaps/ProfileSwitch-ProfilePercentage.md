@@ -24,7 +24,7 @@ Once a new **Profile** has been created and saved, **AAPS** will maintain a libr
 
 A. In order use this feature the user must have more than one **Profile** saved within **AAPS**. To activate a **Profile Switch**:
 
-- **long-press** on the name of the **Profile** (the example below adopts a ‘Profile’ saved as: “School” on **AAPS’** homescreen and selects the desired **Profile** from the drop down tab:
+- **Apăsare lungă** pe numele **Profilului ** (exemplul de mai jos adoptă un "Profil" salvat ca: "Școală" pe **AAPS"** și selectează **profilul** dorit din fila de tip derulant:
 
 1. Long press **Profile**;
 2. Select desired **Profile**; and
@@ -99,23 +99,23 @@ mg/dl/UI         | UI to lower
 
 A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
+- **lucrători în schimburi de noapte sau cu program variabil**: gestionează schimburile de noapte prin modificarea numărului de ore (cu cât mai târziu sau mai devreme) față de ora de culcare sau de trezire setată în **Profil**; 
 - **users changing time zones during travelling**; or
 - **users who are type 1 children**: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
 
 It is always a question of which hour’s **Profile’s** settings should replace the settings of the current time. This time must be shifted by x hours. So please be mindful of the directions as described in the following example:
 
-- Current time: 12:00
-- **Positive** time shift 
+- Ora curentă: 12:00
+- **Pozitiv** decalare timp 
     - 2:00 **+10 h** -> 12:00
-    - Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-- **Negative** time shift 
+    - Setările de la ora 2:00 vor fi utilizate în loc de setările utilizate în mod normal la ora 12:00 datorită decalării pozitive de timp.
+- **Negativ** decalare timp 
     - 22:00 **-10 h** -> 12:00
-    - Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
+    - Vor fi utilizate setările de la ora 22:00 (10 pm) în loc de setările utilizate în mod normal la ora 12:00, datorită decalării negative a timpului.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Sensul decalării orare a profilului](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+Acest mecanism de a face imagini ale **profilului** permite o calculare mult mai precisă a trecutului și posibilitatea de a urmări modificările din **profil**.
 
 ## Keep a profile switch for later use
 
