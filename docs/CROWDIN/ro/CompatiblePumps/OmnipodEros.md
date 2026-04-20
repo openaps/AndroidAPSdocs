@@ -133,7 +133,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
     > ![Activate_Pod_1](../images/omnipod/Activate_Pod_1.png) ![Activate_Pod_2](../images/omnipod/Activate_Pod_2.png)
 
-02. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units.
+02. Ecranul **Umplere Pompă** este afișat. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units.
 
     > ![Activate_Pod_3](../images/omnipod/Activate_Pod_3.png)
     > 
@@ -143,15 +143,15 @@ Before you can activate a pod please ensure you have properly configured and con
 
     > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
 
-04. Upon successful priming a green checkmark will be shown and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
+04. Upon successful priming a green checkmark will be shown and the **Next** button will become enabled. Apăsați pe butonul **Următorul** pentru a finaliza inițializarea de amorsare a pompei și pentru afișarea ecranului **Atașați Pompa**.
 
     > ![Activate_Pod_6](../images/omnipod/Activate_Pod_6.png)
 
-05. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your usually selected site on your body. When finished, click on the **Next** button.
+05. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your usually selected site on your body. Când ați terminat, apăsați pe butonul **Următorul**.
 
     > ![Activate_Pod_7](../images/omnipod/Activate_Pod_7.png)
 
-06. The **Attach Pod** dialog box will now appear. **ONLY click on the OK button if you are ready to deploy the cannula**.
+06. Caseta de dialog **Atașează Pompă** va apărea acum. **ONLY click on the OK button if you are ready to deploy the cannula**.
 
     > ![Activate_Pod_8](../images/omnipod/Activate_Pod_8.png)
 
@@ -161,7 +161,7 @@ Before you can activate a pod please ensure you have properly configured and con
     > 
     > If the RileyLink is out of Bluetooth range or does not have an active connection to the phone, you will receive an error message **No response from RileyLink**. If this occurs, move the RileyLink closer to the phone and click the **Retry** button.
     > 
-    > *NOTE: Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
+    > *NOTE: Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. Acest lucru asigură o inserare lină a acului și va reduce riscul de apariție a ocluziilor.*
     > 
     > ![Activate_Pod_9](../images/omnipod/Activate_Pod_9.png)
     > 
@@ -171,11 +171,11 @@ Before you can activate a pod please ensure you have properly configured and con
 
     > ![Activate_Pod_12](../images/omnipod/Activate_Pod_12.png)
 
-09. The **Pod activated** screen is displayed. Click on the green **Finished** button. Congratulations! You have now started a new active pod session.
+09. Ecranul **Pompă activată** este afișat. Apăsați pe butonul verde **Finalizare**. Felicitări! You have now started a new active pod session.
 
     > ![Activate_Pod_13](../images/omnipod/Activate_Pod_13.png)
 
-10. The **Pod management** menu screen should now display with the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
+10. The **Pod management** menu screen should now display with the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. Acest lucru se datorează faptului că o pompă este acum activă și nu puteți activa o pompă suplimentară fără a dezactiva mai întâi pompa activă.
 
     Click on the back button on your phone to return to the **Omnipod (POD)** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
 
@@ -283,7 +283,7 @@ The process below will show you how to acknowledge and dismiss pod beeps that oc
 
 (OmnipodEros-view-pod-history)=
 
-### View Pod History
+### Vedeți istoricul pompei
 
 This section shows you how to review your active pod history and filter by different action categories. The pod history tool allows you to view the actions and results committed to your currently active pod during its three day (72 - 80 hours) life.
 
@@ -371,7 +371,7 @@ This screen provides information in reverse chronological order of each state or
    > 
    > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
-##### Fields
+##### Câmpuri
 
 > - **Date & Time**: In reverse chronological order the timestamp of each event.
 > - **Device:** The device to which the current action or state is referring.
@@ -387,7 +387,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 > ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
 
-### Fields
+### Câmpuri
 
 - **RileyLink Status:** Displays the current connection status of the RileyLink
 
@@ -411,27 +411,27 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 - **Last connection:** Displays the last time communication with the active pod was achieved.
 
-- *Moments ago* - less than 20 seconds ago.
-- *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
-- *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
-- *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
+- *Adineauri* - mai puțin de 20 de secunde în urmă.
+- *Cu mai puțin de un minut în urmă* - mai mult de 20 de secunde, dar mai puțin de 60 de secunde în urmă.
+- *Acum 1 minut* - mai mult de 60 de secunde, dar mai puțin de 120 de secunde (2 minute)
+- *XX minute în urmă* - mai mult de 2 minute în urmă așa cum este definit de valoarea XX
 
 - **Last bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
 
-- **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
+- **Rată bazală de bază:** Afișați rata bazală programată pentru timpul curent din profilul ratei bazale.
 
-- **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
+- **Rata bazalei temporare:** Afișați rata bazală temporară care rulează în prezent în următorul format
 
 - Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
 - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
 
-- **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below this value the exact units are displayed in yellow text.
+- **Rezervor:** Afișați peste 50+U rămase atunci când mai mult de 50 de unități au rămas în rezervor. Below this value the exact units are displayed in yellow text.
 
-- **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
+- **Total livrat:** Afișați numărul total de unități de insulină livrate din rezervor. *Note this is an approximation as priming and filling the pod is not an exact process.*
 
-- **Errors:** Displays the last error encountered. Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **Eroare:** Afișați ultima eroare întâlnită. Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
-- **Active pod alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
+- **Alerte active de pompă:** Rezervat pentru rularea alertelor pe pompa activă. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
 
 ### Icons
 
@@ -441,7 +441,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
   > 
   > Sends a refresh command to the active pod to update communication
   > 
-  > Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
+  > Folosiți pentru a reîmprospăta starea pompei și a închide câmpurile de stare care conțin textul (incert).
   > 
   > See the [Troubleshooting section](#OmnipodEros-troubleshooting) below for additional information.
 
@@ -477,7 +477,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
   > 
   > > Resumes the currently suspended, active pod
 
-### Pod Management Menu
+### Meniu Gestionare Pompă
 
 Below is an explanation of the layout and meaning of the icons on the **Pod Management** menu accessed from the **Omnipod (POD)** tab.
 
@@ -489,7 +489,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
   > 
   > Primes and activates a new pod
 
-- **Deactivate Pod**
+- **Dezactivare pompă**
 
   > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
@@ -692,8 +692,8 @@ Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This i
 
 > - **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
 > - **Below 50 Units** - Reports an approximate calculated value of insulin remaining in the reservoir.
-> - **SMS** - Returns value or 50+U for SMS responses
-> - **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
+> - **SMS** - Returnează valoarea sau 50+U pentru răspunsuri SMS
+> - **Nightscout** - Încarcă în Nightscout valoarea de 50 atunci când sunt peste 50 de unități (versiunea 14.07 și mai vechi).  Newer versions will report a value of 50+ when over 50 units.
 
 **Battery Level**
 
@@ -708,7 +708,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 (OmnipodEros-troubleshooting)=
 
-## Troubleshooting
+## Depanare
 
 ### Pod Failures
 
