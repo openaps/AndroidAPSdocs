@@ -44,7 +44,7 @@ It is advisable to first establish a well-tuned **HC**L before considering the t
 
 **FCL** requires fast insulin.  This is so that at the start of meal-related **BG** rise, **FCL** is able to keep **BG** in range (by common definition, under 180 mg/dl (10 mmol/l)).
 
-Un studiu de modelare (detalii vezi LINK FullLoop V2/March2023; secțiunea 2.2) poate arăta în termeni cantitativi că <0>insulinele mai rapide</0>
+Un studiu de modelare (detalii vedeți LINK FullLoop V2/March2023; secțiunea 2.2) poate arăta în termeni cantitativi că <0>insulinele mai rapide</0>
 
 Source:
 
@@ -281,7 +281,7 @@ Problems can arise with overlapping definitions in **Automations**. Example: The
 
 Also it is very easy and quick to adjust any conditions or actions at any time, within seconds, just on your AAPS smartphone; for instance if you head into a very special eating event. (But don’t forget to set it back to normal on/for the next day).
 
-## Troubleshooting
+## Depanare
 
 ### How to get back into Hybrid Closed Loop
 
