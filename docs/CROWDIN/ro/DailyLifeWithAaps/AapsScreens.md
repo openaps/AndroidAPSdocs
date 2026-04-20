@@ -7,29 +7,29 @@
 
 (AapsScreens-the-homescreen)=
 
-## The Homescreen
+## Ecranul de pornire
 
 ![Homescreen V2.7](../images/Home_Homescreen.png)
 
 This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
 
-### Section A - Tabs
+### Secțiunea A - Pagini
 
 * Navigate between the various **AAPS** modules.
-* Alternatively you can change screens by swiping left or right.
+* Alternativ, puteți schimba ecranele prin glisare în stânga sau în dreapta.
 * Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
 
 (aaps-screens-profile--target)=
 
-### Section B - Profile & target
+### Secțiunea B - Profil & țintă
 
-#### Current Profile
+#### Profil curent
 
 The current profile is displayed in the left bar.
 
-Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Apăsați scurt pe bara de profil pentru a vizualiza detaliile profilului. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+![Durata rămasă pentru schimbarea profilului](../images/Home2020_ProfileSwitch.png)
 
 1. Regular display with a standard profile activation.
 2. Profile switch with a remaining duration of 59mn.
@@ -38,11 +38,11 @@ Short press profile bar to view profile details. Long press profile bar to [swit
 5. Profile switch with a time shift of -1 hour.
 6. Profile switch with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
 
-#### Target
+#### Țintă
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Durata rămasă pentru ținta temporară](../images/Home2020_TT.png)
 
-Current target blood glucose level is displayed in the right bar.
+Valoarea țintă curentă a glicemiei este afișată în bara dreaptă.
 
 Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
 
@@ -50,33 +50,33 @@ If a temp target is set, the bar turns yellow and the remaining time in minutes 
 
 (AapsScreens-visualization-of-dynamic-target-adjustment)=
 
-#### Visualization of Dynamic target adjustment
+#### Vizualizarea ajustare dinamică a țintei
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+![Vizualizarea ajustare dinamică a țintei](../images/Home2020_DynamicTargetAdjustment.png)
 
 When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
 
 Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](#Preferences-openaps-smb-settings):
 
-     * "sensitivity raises target" and/or 
-     * "resistance lowers target" 
+     * "sensibilitatea ridică ținta" şi/sau 
+     * "rezistența scade ținta" 
     
 
 If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
 
 (AapsScreens-section-c-bg-loop-status)=
 
-### Section C - BG & loop status
+### Secțiunea C - Glicemie & stare buclă
 
-#### Current blood glucose
+#### Valoarea actuală a glicemiei
 
 The latest blood glucose reading from your CGM is shown on the left side.
 
 The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
 
-     * green = in range
-     * red = below range
-     * yellow = above range 
+     * verde = în interval
+     * roșu = sub interval
+     * galben = deasupra intervalului 
     
 
 ![Deltas](../images/Home_Delta.png)
@@ -84,14 +84,14 @@ The color of the BG value reflects the status to the defined [range](#Preference
 The blocks in the middle shows:
 
 1. how many minutes since last **CGM** reading
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-  Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
+2. diferențe față de ultima citire: Δ, și cu media pe ultimele 15 și 40 de minute (Δ15 și Δ40).  
+  Diferențele lungi sunt calculate ca o valoare medie a diferențelor din trecut, indicând care a fost schimbarea medie.
 
 (AapsScreens-loop-status)=
 
-#### Loop status
+#### Stare buclă
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Stare buclă](../images/Home2020_LoopStatus.png)
 
 On the right side, an icon shows the loop status:
 
@@ -100,14 +100,14 @@ On the right side, an icon shows the loop status:
 3. Red circle = loop disabled (not working permanently)
 4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
 5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-6. Orange circle = super bolus running - remaining time is shown below icon
+6. cerc portocaliu = rulează super bolus - timpul rămas este afișat sub iconiță
 7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
 
-Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
+Apăsați scurt sau apăsați lung pe pictogramă pentru a deschide dialogul de buclă pentru a schimba modul buclei (Închisă, Suspendare hipoglicemie, Deschisă sau Dezactivată), suspendare / reactivare buclă sau deconectare / reconectare pompă.
 
-     * If short press on Loop icon, a validation is required after selection in Loop Dialog
+     * Dacă apăsați scurt pe pictograma buclă, este necesară o validare după selecție în dialogul de buclă
     
-     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+     ![Meniu stare buclă](../images/Home2020_Loop_Dialog.png)
     
 
 (aaps-screens-bg-warning-sign)=
@@ -161,7 +161,7 @@ Special note for Libre users:
 
 *Note*: Up to 30h hours are taken into accord for **AAPS** calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
-#### Simple mode
+#### Mod simplu
 
 An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
 
@@ -169,27 +169,27 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 ### Secțiunea D - IOB, COB, BR și AS
 
-![Section D](../images/Home2020_TBR.png)
+![Secțiunea D](../images/Home2020_TBR.png)
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-  The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
+1. **Seringa**: insulină la bord (IOB) - cantitatea de insulină activă din corpul dumneavoastră  
+  Cantitatea de insulină la bord ar fi zero dacă ar rula doar bazala standard și nu ar mai exista insulină din bolusurile anterioare.
   
-  * IOB may be negative if there have recently been periods of reduced basal.
-  * Press the icon to see the split of bolus and basal insulin
+  * IOB poate fi negativ dacă s-au înregistrat recent perioade de bazală redusă.
+  * Apăsați pictograma pentru a vedea împărțirea insulinei între bolus și bazală
 
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
+2. **Spic**: [carbohidrați la bord (COB)](../DailyLifeWithAaps/CobCalculation.md) - carbohidrați neabsorbiți pe care i-ați mâncat deja Pictograma pulsează roșu dacă sunt necesari carbohidrați (vedeți [mai jos](#aaps-screens-carbs-required))
 
 3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%) 
-  * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
+  * Apăsați pictograma pentru a vedea rata bazalei și detaliile oricărei bazale temporare (inclusiv durata rămasă)
 4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
   * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
   * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
 
 (aaps-screens-carbs-required)=
 
-#### Carbs required
+#### Carbohidrați necesari
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Carbohidrați necesari](../images/Home2020_CarbsRequired.png)
 
 Sunt oferite sugestii pentru carbohidrați atunci când designul de referință detectează că este nevoie de carbohidrați.
 
@@ -534,7 +534,7 @@ Chiar dacă [bolusurile extinse](#extended-bolus-and-why-they-wont-work-in-close
 
 ### Careportal - section N
 
-Afișează informații la:
+Afișați informații la:
 
      * vechime & nivel senzor (procentaj baterie)
      * vechime & nivel insulină (unități)
