@@ -92,7 +92,7 @@ See the instructions for [transferring and installing AAPS](../SettingUpAaps/Tra
 
 Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
 
-## Troubleshooting
+## Depanare
 
 If anything goes wrong, don't panic.
 
