@@ -179,47 +179,47 @@ You can remove the pump to be 'free', but you should tell AAPS so that the IOB c
 
 #### Consumul de alcool
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AAPS:
+Consumul de alcool este riscant în modul de buclă închisă deoarece algoritmul nu poate prezice corect dacă alcoolul a influențat glicemia. You have to check out your own method for treating this using the following functions in AAPS:
 
-- Deactivating closed loop mode and treating the diabetes manually or
-- setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-- do a profile switch to noticeably less than 100% 
+- Dezactivarea modului de buclă închisă și tratarea manuală a diabetului sau
+- stabilirea unor ținte temporare ridicate și dezactivarea UAM pentru a evita ca bucla să crească IOB din cauza unei mese inexistente sau
+- faceți o schimbare de profil la mult sub 100% 
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+Atunci când consumați alcool, trebuie să fiți întotdeauna atent la CGM pentru a evita manual o hipoglicemie prin consumul de carbohidrați.
 
-#### Sleeping
+#### Dormitul
 
-##### How can I loop during the night without mobile and WIFI radiation?
+##### Cum pot repeta în timpul nopții fără radiații mobile și WiFi?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Mulți utilizatori activează modul avion pe timp de noapte. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Activați modul avion în telefon.
 2. Așteptați până când modul avion este activ.
 3. Activați Bluetooth.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Acum nu mai primiți apeluri și nici nu sunteți conectat la internet. Dar bucla încă rulează.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Unele persoane au descoperit probleme cu transmiterea locală (AAPS nu primește valorile glicemiei din xDrip+) atunci când telefonul este în modul avion. Mergeți la Setări > Setări Inter-app > Identificați destinatarul și introduceți `info.nightscout.androidaps`.
 
 ![xDrip+ identificare receptor prin setări de bază inter-aplicații](../images/xDrip_InterApp_NS.png)
 
-#### Travelling
+#### Călătoritul
 
-##### How to deal with time zone changes?
+##### Cum să facem față schimbărilor de fus orar?
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+Cu Dana R și Dana R Korean nu trebuie să faci nimic. For other pumps see [time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
 
-### Medical topics
+### Subiecte medicale
 
-#### Hospitalization
+#### Spitalizare
 
 If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
 
-#### Medical appointment with your endocrinologist
+#### Programare medicală la endocrinologul dumneavoastră
 
-##### Reporting
+##### Raportare
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Puteți afișa rapoartele Nightscout (https://YOUR-NS-SITE.com/report) sau să verificați [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
 ## Frequent questions on Discord and their answers...
 
@@ -294,7 +294,7 @@ Properly configuring Power Management is important to prevent your Phone's OS to
 
 ### Pump unreachable alerts several times a day or at night.
 
-Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings) Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
+Telefonul dumneavoastră ar putea suspenda serviciile AAPS sau chiar Bluetooth, ceea ce determină pierderea conexiunii la RL (a se vedea economisirea bateriei) Luați în considerare configurarea alertelor de inaccesibilitate la 120 de minute prin accesarea meniului cu trei puncte din partea dreaptă sus, și selectați Preferințe->Alerte Locale->Pompă prag inaccesibil [min].
 
 ### Where can I delete treatments in AAPS v3 ?
 
