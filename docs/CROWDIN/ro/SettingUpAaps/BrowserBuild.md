@@ -6,7 +6,7 @@ Building AAPS with GitHub Actions.
 
 **Minimum AAPS version supported is 3.3.2.1.**
 
-## Build yourself instead of download
+## Construiți-vă în loc să descărcați
 
 **The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
 
