@@ -144,4 +144,4 @@ There is quite a bit of back and forth between the windows but this will ensure 
 
 ![](../images/Building-the-App/building_0014.png)
 
-Congratulations! Now you have created an AAPS-dedicated Google account. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+Felicitări! Now you have created an AAPS-dedicated Google account. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
