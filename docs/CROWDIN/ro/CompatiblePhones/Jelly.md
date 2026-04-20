@@ -2,30 +2,30 @@
 
 ## Jelly 2
 
-Do not confuse with Jelly Star (below).
+A nu se confunda cu Jelly Star (mai jos).
 
-**Advantages**
+**Avantaje**
 
-* It's really small.
+* E foarte mic.
 * Android 11.
-* Even if you tell people, they might not consider it as a normal smartphone and will except it easier as a exception when phones are normally not allowed.
+* Chiar dacă le spui oamenilor, este posibil ca aceștia să nu considere că este un telefon inteligent normal și va fi acceptat mai ușor în circumstanțe în care telefoanele sunt în mod normal interzise.
 
-**Disadvantages**
+**Dezavantaje**
 
-* Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
-* Can only be used as LooperPhone. It's better to have a normal smartphone in your pocket. 
+* Recomandat numai pentru utilizatori de buclă experimentați (unele setări nu sunt recunoscute, trebuie să le știți din experiența cu un telefon Android mai mare folosit la AAPS, cum și unde se află. Unele butoane AAPS sunt greu de atins și necesită mult pipăit, dar nu cu degete butucănoase.)
+* Poate fi folosit numai ca telefon special pentru buclă. E mai bine să aveți un telefon inteligent normal în buzunar. 
 
-### Battery life optimization
+### Optimizarea vieții bateriei
 
-The Jelly 2 comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip+, OOP2, Juggluco, etc...).
+Jelly 2 vine cu caracteristici puternice de optimizare care **trebuie** dezactivate pentru AAPS (și pentru alte aplicații DIY precum BYODA, xDrip+, OOP2, Juggluco, șamd).
 
 ![](../images/Jelly_Settings1.png)
 
-You can leave Intelligent assistance enabled, but it **must be disabled for DIY apps**.
+Puteți lăsa asistența inteligentă activată, dar **trebuie dezactivată pentru aplicațiile DIY**.
 
 ![](../images/Jelly_Settings2.png)
 
-You can enable NFC for Libre sensors.
+Poți activa NFC pentru senzorii Libre.
 
 ![](../images/Jelly_Settings3.png)
 
@@ -36,24 +36,24 @@ You can enable NFC for Libre sensors.
 * Android 13
 * 8 GB RAM
 
-### Battery life optimization
+### Optimizarea vieții bateriei
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' (and other **DIY apps** like BYODA, xDrip+, OOP2, Juggluco, etc...).
+Pentru a evita interferența cu **AAPS**, utilizarea bateriei Jelly Star ar trebui să fie dezactivată prin selectarea "nerestricționat" (și pentru alte aplicații **DIY** cum ar fi BYODA, xDrip+, OOP2, Juggluco, șamd).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
-### Intelligent Assistance and App Blocker
+### Asistență inteligentă și blocarea aplicațiilor
 
-Like with the Jelly 2 (above), the Jelly Star should have 'Intelligent Assistance' disabled for **DIY apps**. Similarly, 'App Blocker' under 'Settings' must also be switched off to avoid disruption with **AAPS**:
+Ca și în cazul Jelly 2 (deasupra), Jelly Star ar trebui să aibă "Asistență Inteligentă" dezactivată pentru aplicațiile **DIY**. Similar, 'App Blocker' sub 'Settings' trebuie de asemenea oprit pentru a evita perturbările privind **AAPS**:
 
 ![App Blocker Screenshot 2025-08-03 213400](../images/JellyStarMini2.jpg)
 
-### Google Play Protect
+### Protecție Google Play
 
-Remember to disable Google Play Protect.
+Nu uitați să dezactivați Google Play Protect.
 
-### Remote Connection for Weak apk
+### Conexiune la distanță pentru apk Wear 
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly 2, **Wear.apk** & **AAPS** remotely via wifi.
+Pentru anumite ceasuri inteligente, cum ar fi Galaxy Samsung, 'Conexiune la distanță' sub funcțiile avansate ale Galaxy Samsung trebuie să fie trecute cu **pornit** pentru a utiliza Jelly 2, **Wear.apk** & **AAPS** de la distanță prin wifi.
 
 ![MURCIMG-20251007-WA0000](https://github.com/user-attachments/assets/5db08a08-f256-49a0-8843-46bdd01b33d6)
