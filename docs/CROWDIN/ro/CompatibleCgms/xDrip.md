@@ -59,7 +59,7 @@ Amintiți-vă să dezactivați Importul de sunete pentru a evita declanșarea su
 #### Identificare receptor
 
 - Dacă sunt probleme cu transmisiunea locală (AAPS nu primește valori glicemice din xDrip+) mergeți la → Hamburger Menu (1) Setări (2) → Setări între aplicații (3) → Identifică receptorul (7) și introduceți `info.nightscout.androidaps` pentru AAPS (dacă folosești PumpControl, vă rugăm să introduceți `info.nightscout.aapspumpcontrol` în schimb!!).
-- Atenție: Auto-corectarea tinde uneori să schimbe litera i în majuscula I. **Trebuie să utilizați doar litere mici** când tastați `info.nightscout.androidaps` (sau `info.nightscout.aapspumpcontrol` pentru PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
+- Atenție: Auto-corectarea tinde uneori să schimbe litera i în majuscula I. **Trebuie să utilizați doar litere mici** când tastați `info.nightscout.androidaps` (sau `info.nightscout.aapspumpcontrol` pentru PumpControl). i scris I, ca majusculă, ar împiedica AAPS să primească valori ale glicemiei de la xDrip+.
     
     ![xDrip+ identificare receptor prin setări de bază inter-aplicații](../images/xDrip_InterApp_NS.png)
 
@@ -220,28 +220,28 @@ Urmați [aceste instrucțiuni](https://navid200.github.io/xDrip/docs/Dexcom/Sens
     
     - Dacă xDrip+ nu poate găsi puntea, asigurați-vă că nu este conectat la aplicația oficială. Puneți-l pe principal și resetați.
     
-    ![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+    ![xDrip+ Start transmițător Libre & Senzor 2](../images/xDrip_Libre_Transmitter02.png)
 
-- Start the sensor in xDrip+.
+- Porniți senzorul în xDrip+.
     
-        {admonition} Safety warning
-        :class: warning
-        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
+        {admonition} Avertisment de siguranță
+        :class: avertizare
+        Nu utilizați datele senzorului înainte ca încălzirea de o oră să se termine: valorile pot fi extrem de mari și pot cauza decizii greșite în AAPS.
     
-    → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
+    → Hamburger Meniu (1) → Pornire senzor (2) → Pornire senzor (3) → Setează ora exactă la care l-ai pornit cu cititorul sau cu aplicația oficială. Dacă nu l-ați pornit astăzi, răspundeți "Nu astăzi" (4).
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Start transmițător Libre & Senzor 3](../images/xDrip_Libre_Transmitter03.png)
 
-(xdrip-libre2-patched-app)=
+(xdrip-libre2-patched-app) =
 
-## Libre 2 patched app
+## Aplicație Libre 2 modificată
 
-- Set the data source to Libre patched app.
+- Setați sursa de date la aplicația Libre modificată.
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
+    → Meniu Hamburger (1) → Setări (2) → Selectați Libre (aplicație modificată) în sursă de date hardware (3)
     
-    ![xDrip+ Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
+    ![xDrip+ aplicație Libre modificată 1](../images/xDrip_Libre_Patched01.png)
 
-- You can add `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
+- Puteți adăuga `BgReading:d,xdrip libre_receiver:v` sub Setări mai puțin comune>Setări suplimentare de jurnalizare->Etichete suplimentare pentru jurnalizare. Aceasta va înregistra mesaje de eroare suplimentare pentru a depana problema.
 
-![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
+![xDrip+ jurnalizare LibreLink](../images/Libre2_Tags.png)
