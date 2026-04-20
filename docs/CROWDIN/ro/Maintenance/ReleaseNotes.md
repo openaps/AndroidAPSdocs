@@ -849,7 +849,7 @@ Data lansării: 26-10-2019
 
 (Releasenotes-important-notes-2-5-0)=
 
-### Important notes
+### Note importante
 
 - Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../SettingUpAaps/BuildingAaps.md) or [update](UpdateToNewVersion).
 - If you are using xDrip [identify receiver](#xdrip-identify-receiver) must be set.
