@@ -10,7 +10,7 @@
 - [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
 - CGM list update. Dexcom G5, Tomato, Glimp removed.
 - [Site rotation UI](#Aapsscreens-site-rotation)
-- [Running mode](#AapsScreens-running-mode)
+- [Mod de rulare](#AapsScreens-running-mode)
 - [Autotune](../AdvancedOptions/Autotune.md)
 
 ## December 2025
@@ -227,7 +227,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [Bolus calculator](#AapsScreens-wrong-cob-detection) - slow carb absorption
 - [Nightscout security](#Nightscout-security-considerations)
 - [Profile timeshift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) (more details)
-- [Monitorizarea la distanţă](../RemoteFeatures/RemoteMonitoring.md)
+- [Monitorizarea la distanță](../RemoteFeatures/RemoteMonitoring.md)
 - [What is a closed loop system?](#Introduction-what-does-hybrid-closed-loop-mean)
 
 ## August 2019
