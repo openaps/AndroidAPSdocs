@@ -27,7 +27,7 @@ Additionally, unlike parent/caregiver follower phones (which rely on the mobile 
 
 There are currently five main ways in which smartwatches are used in conjunction with **AAPS**. These are shown in the table below: 
 
-| Watch Setup         | Features                            | Requirements                                                                                                                                                                                                                                          |
+| Watch Setup         | Features                            | Cerințe                                                                                                                                                                                                                                               |
 | ------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Standalone          | AAPS without a phone                | Full Android smartwatch (check min Android)</br> Running **app-fullRelease**                                                                                                                                                                          |
 | Full remote control | Most AAPS functions                 | Android **Wear OS** watch (check Android/API)</br>Running **wear-fullRelease**                                                                                                                                                                        |
