@@ -203,7 +203,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [New Freestyle Libre 2 tutorial](../CompatibleCgms/Libre2.md)
 - [Profile switch with percentage - example](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [SMS commands update](../RemoteFeatures/SMSCommands.md)
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
+- [Depanare Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
 - [Troubleshooting - link collection](../GettingHelp/GeneralTroubleshooting.md)
 - Update - quick walk-through for experienced users
 - Docs - update [edit](#edit-the-docs-code-syntax) and [translation](#translations-translation-of-the-documentation).
