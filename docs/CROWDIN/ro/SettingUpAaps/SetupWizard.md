@@ -444,7 +444,7 @@ Later, for closed looping, you will generally have only one value for top and bo
 
 Enter/confirm the target values:
 
-![Target](../images/setup-wizard/Wizard22.png)
+![Țintă](../images/setup-wizard/Wizard22.png)
 
 Save the profile by clicking on "SAVE":
 
