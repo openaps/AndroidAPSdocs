@@ -152,36 +152,36 @@ Călătoritul spre est înseamnă că vei adăuga ore la ora curentă (spre exem
 
 Problemele observate în timpul călătoriei spre vest sunt cunoscute de dezvoltatori și lucrul la o posibilă soluție este în curs de desfășurare. Vedeți https://github.com/andyrozman/RileyLinkAAPS/issues/145 pentru mai multe detalii. Pentru moment, vă rugăm să rețineți că această problemă poate apărea și să monitorizați cu atenție atunci când se schimbă fusele orare.
 
-### Is a GNARL a fully compatible Rileylink compatible device?
+### Este GNARL este un dispozitiv complet compatibil Rileylink?
 
-The GNARL code fully supports all of the functions used by the Medtronic driver in AAPS which means it is fully compatible. It is important to note that this will require additional work as you will have to source compatible hardware and then load the GNARL code on to the device.
+Codul GNARL acceptă pe deplin toate funcțiile folosite de driverul Medtronic în AAPS, ceea ce înseamnă că este complet compatibil. Este important să rețineți că acest lucru va necesita muncă suplimentară, deoarece va trebui să obțineți hardware compatibil și apoi să încărcați codul GNARL pe dispozitiv.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Notă autorului:** Vă rugăm să rețineți că software-ul GNARL este încă experimental și puțin testat, și nu trebuie să fie considerat sigure pentru utilizarea RileyLink.
 
 (MedtronicPump-faq)=
 
-## FAQ
+## Întrebări frecvente
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### What to do if I loose connection to RileyLink and/or pump?
+### Ce trebuie făcut dacă am pierdut conexiunea la RileyLink și/sau pompă?
 
-There are a number of options to try and resolve connectivity issues.
+Există o serie de opțiuni pentru încercarea rezolvării problemelor de conectivitate.
 
-- Use the "Wake Up and Tune" button in the ACT tab as detailed above.
-- Disable Bluetooth on your phone, wait 10 seconds and then enable it again. This will force the Rileylink device to reconnect to the phone.
-- Reset the Rileylink device. You must then use the "Reset Rileylink Config" button in the ACT tab.
+- Utilizați butonul "Trezire și Reinițializare" în fila ACT așa cum este detaliat mai sus.
+- Dezactivați Bluetooth de pe telefon, așteptați 10 secunde și apoi activați din nou. Acest lucru va forța dispozitivul RileyLink să se reconecteze la telefon.
+- Resetați dispozitivul RileyLink. Apoi trebuie să utilizați butonul "Resetare Configurare RileyLink" în fila ACT.
 - Other users have found the following steps to be effective in restoring connectivity when other methods have not: 
-    1. Restart the phone
-    2. *While* the phone is restarting restart the Rileylink device
-    3. Open AAPS and allow the connection to restore
+    1. Reporniți telefonul
+    2. *În timp ce* telefonul repornește reporniți dispozitivul RileyLink
+    3. Deschideți AAPS și permite conexiunii să se restabilească
 
-### How to determine what Frequency my pump uses
+### Cum să determinați ce frecvență utilizează pompa dumneavoastră
 
-![Pump Model](../images/Medtronic06.png)
+![Model pompă](../images/Medtronic06.png)
 
-On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
+Pe spatele pompei veți găsi o linie care detaliază numărul modelului dumneavoastră, împreună cu un cod special de 3 litere. Primele două litere determină tipul de frecvență și ultimul determină culoarea. Iată valorile posibile pentru frecvență:
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+- NA - America de Nord (în selecția de frecvențe trebuie să selectați „US & Canada (916 MHz)”)
+- CA - Canada (în selecția de frecvențe trebuie să selectați "US & Canada (916 MHz)")
+- WW - Lume (în selectarea frecvenței trebuie să selectați "Worldwide (868 Mhz)")
