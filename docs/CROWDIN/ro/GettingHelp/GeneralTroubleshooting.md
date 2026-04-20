@@ -1,6 +1,6 @@
 (generaltroubleshooting)=
 
-# **Troubleshooting**
+# **Depanare**
 
 You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem for various known issues.
 
@@ -48,9 +48,9 @@ Ignore it: More details, Install anyway.
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## **Bluetooth related issues**
+## **Probleme legate de Bluetooth**
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Pentru probleme cunoscute cu conexiunile Bluetooth, întreruperile pompei, activarea și problemele de conexiune [Depanarea Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
