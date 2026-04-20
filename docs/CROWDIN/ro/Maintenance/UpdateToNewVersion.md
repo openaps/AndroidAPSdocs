@@ -1,6 +1,6 @@
 # Update to a new version or branch
 
-## Build yourself instead of download
+## Construiți-vă în loc să descărcați
 
 **AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
@@ -26,7 +26,7 @@ Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS 
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-### Check AAPS version on phone
+### Verificați versiunea AAPS pe telefon
 
 Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
 
@@ -37,4 +37,4 @@ After you installed the new apk:
 - action a 'full synchroniation' under **NSClient** to ensure **AAPS** is working off accurate & complete data; and
 - please check your **AAPS'** settings under **Preferences** and ensure these remain accurate.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Versiune AAPS instalată](../images/Update_VersionCheck.png)
