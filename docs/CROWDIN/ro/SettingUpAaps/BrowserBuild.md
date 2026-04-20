@@ -372,7 +372,7 @@ This script will export your previously configured keystore information (from Op
 Before using this export method, make sure your keystore and Google Drive settings have been completed.
 ```
 
-### Steps:
+### Pași:
 
 1. **Add ZIP Password Secret:**
    - Go to your repository's **Settings** → **Secrets and variables** → **Actions**
