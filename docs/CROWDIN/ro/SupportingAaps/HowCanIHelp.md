@@ -1,35 +1,35 @@
-# How to help with AAPS
+# Cum să ajutați cu AAPS
 
-## AAPS operates entirely on volunteer efforts and has no paid staff.
+## AAPS funcționează integral pe baza eforturilor de voluntariat și nu are personal remunerat.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Dezvoltatorii sunt părinți, îngrijitorii, cei dragi și persoanele cu diabet care lucrează împreună pentru dezvoltarea și îmbunătățirea unei soluții pentru o nevoie des întâlnită. Dezvoltatorii își donează timpul lor liber fără a cere nimic în schimb și este totuși un pic nedrept să ne așteptăm de la ei să aibă costuri financiare adiționale pentru a putea dintr-un proiect așa de minunat ceva open source și gratuit pentru toți.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Pentru a putea testa în întregime un dispozitiv nou, dezvoltatorii trebuie să folosească un telefon de rezervă și o pompă de rezervă, deoarece sistemul nu poate fi folosit pe oameni atâta timp cât nu este stabil. Noile modele necesită testare pe măsură ce devin disponibile. O parte din banii donați sunt necesari, de asemenea, pentru a acoperi costurile logistice de curierat al acestor dispozitive între diferitele țări, între dezvoltatori. Câteodată este frumos să se contribuie la acoperirea costurilor pe care dezvoltatorii le suportă pentru a se putea întâlni la conferințe sau evenimente în vederea participării la ședințe care să le permită să-și pună împreună la muncă creativitatea și mintea analitică.*
 
-## I can write code! How do I participate?
+## Pot scrie cod! Cum pot participa?
 
-Yay! Look at the issues, ask in the discord channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Ura! Uitați-vă la problemele existente, întrebați pe canalul de Discord, întotdeauna se va găsi ceva de făcut! Alegeți-vă o sarcină ușoară, pentru început, și faceți prima dumneavoastră cerere de fuziune (pull request)! :)
 
-## I know the system and can write documentation!
+## Cunosc sistemul și pot scrie documentație!
 
-Great, this is a highly appreciated thing and a good way to pay it forward!
+Minunat, ăsta e un lucru foarte apreciat și o modalitate bună de a plăti în avans!
 
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
+* Canalul Discord referitor la Wiki poate fi găsit aici: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* Un ghid despre cum să faci înregistrări pe wiki in engleză poate fi găsit aici: [Cum să faci un PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
 
-## I do speak multiple languages and want to translate the app or the documentation
+## Vorbesc mai multe limbi și doresc să traduc aplicația sau documentația
 
-If you are translating something for the first time, please start with translating the strings for the app, as this is easier and you will get results faster.
+Dacă traduceți ceva pentru prima dată, vă rugăm să începeți cu traducerea frazelor pentru aplicație, pentru că este mai ușor și veți obține rezultate mai rapid.
 
-You are welcome to start as a translator for the documentation in parallel or later.
+Sunteți bineveniți să începeți ca traducător pentru documentație în paralel sau mai târziu.
 
-You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
+Puteți verifica starea traducerilor în diferite limbi pentru aplicație și documentație [aici](#StateOfTranslations).
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* Dacă doriți să traduceți **aplicația** în alte limbi (mulțumesc), vă rugăm să folosiți [crowdin](https://crowdin.com/project/androidaps).
+* Dacă doriți să traduceți **documentația** în alte limbi (mulțumesc), vă rugăm să folosiți [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Doar înscrieți-vă pe CROWDIN, alegeți-vă limba, așteptați autorizarea din partea administratorului și mergeți înainte!
 
-## Are there other ways to help?
+## Există alte modalități de a ajuta?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+Abilitățile necesare includ design grafic, UX design, traducători, editori wiki sau pur și simplu să ajuți prin a răspunde la întrebările simple de pe Discord & Facebook pentru a oferi dezvoltatorilor timpul și spațiul să se concentreze pe lucrurile mai grele.
