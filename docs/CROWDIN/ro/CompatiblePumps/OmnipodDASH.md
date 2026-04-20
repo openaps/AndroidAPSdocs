@@ -1,51 +1,51 @@
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**, available in **AAPS** from version 3.0.
+Aceste instrucțiuni sunt pentru configurarea pompei de generație **Omnipod DASH** **(NU Omnipod Eros)**, disponibilă ca parte a versiunii 3.0 a **AAPS**.
 
-## Omnipod DASH specifications
+## Specificații Omnipod DASH
 
-These are the specifications of the **Omnipod DASH** ('DASH') and what differentiates it from the **Omnipod EROS** ('EROS'):
+Acestea sunt specificațiile modelului **Omnipod DASH** („DASH”) și ce îl diferențiază de modelul **Omnipod EROS** („EROS”):
 
-- The DASH pods are identified by a **blue needle cap** (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
-- DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-- The DASH's Bluetooth connection is used only when sending a command (e.g a Bolus), and disconnects right after issuing the command.
-- No more "no connection to link device / pod" errors with DASH.
-- **AAPS** will wait for pod's accessibility to send commands.
-- On pod activation, **AAPS** will find and connect to a new DASH pod.
-- Expected range from phone: 5-10 meters (YMMV).
+- Pompele DASH sunt identificate printr-un **capac albastru pentru ac** (EROS are un capac transparent pentru ac). Capsulele sunt în rest identice în ceea ce privește dimensiunile fizice.
+- DASH nu necesită un dispozitiv BLE link/bridge (NU este nevoie de RileyLink, OrangeLink sau EmaLink).
+- Conexiunea Bluetooth a DASH este utilizată numai atunci când se trimite o comandă (spre exemplu un Bolus) și se deconectează imediat după emiterea comenzii.
+- Gata cu erorile „fără conexiune la dispozitivul/podul conectat” cu DASH.
+- **AAPS** va aștepta accesibilitatea pompei pentru a trimite comenzi.
+- La activarea pompei, **AAPS** va găsi și se va conecta la o nouă pompă DASH.
+- Rază de acțiune preconizată: 5-10 metri (Rezultatele pot varia).
 
 (omnipod-dash-constraints)=
 
-## Omnipod DASH known AAPS constraints/issues
-- Android 16 requires **AAPS** version 3.3.2.1 or later.
-- General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
-- Too frequent basal updates may cause basal insulin delivery [problems](https://github.com/nightscout/AndroidAPS/issues/4158) with Omnipod Dash. When using **SMB**, limit the interval to 5 minutes minimum to avoid this issue.
-- Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
-- The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to export settings after each pod activation to allow a restore of that pods activation state if something happens to your rig.
-- When setting a new basal profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basal profile won't automatically re-start. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
-- If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
-- There are a number of known issues with Bluetooth which can cause pod activation problems. See [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md) for the known issue and solutions to these problems.
+## Constrângeri/probleme AAPS cunoscute pentru Omnipod DASH
+- Android 16 necesită **AAPS** versiunea 3.3.2.1 sau mai târziu.
+- Recomandare generală este de a rula **AAPS** pe Android 14 sau 16. Android 15 are multe probleme [raportate ](https://github.com/nightscout/AndroidAPS/issues/3471) de către comunitate. Cu toate acestea, dacă rulați pe Android 15, este posibil să fie nevoie să activați și să utilizați Bluetooth Bonding cu succes pompele, vedeți [Depanare](../GettingHelp/GeneralTroubleshooting.md) pentru mai multe informații despre setările de asociere.
+- Actualizările prea frecvente ale bazalelor pot cauza [probleme](https://github.com/nightscout/AndroidAPS/issues/4158) în administrarea insulinei bazale cu Omnipod Dash. Când se utilizează **SMB**, limitează intervalul la minim 5 minute pentru a evita această problemă.
+- Dash acceptă doar rata bazale în pași de 0,05 U/h. Dacă încercați să setați bazala cu pași de 0,01 în profilul **AAPS**, AAPS nu vă va da un avertisment, chiar dacă pompa va rotunji rata bazală în pași de 0,05. Dacă afișați Gestionare Pompă/Istoric Pompă vă va arată că s-a setat o bazală de 0,05. Acest lucru înseamnă, de asemenea, cea mai mică rată bazală permisă de DASH din **AAPS** este de 0,05U/h.
+- Starea de activare a unei pompe este stocată în fișierul de setări, dacă exportați un fișier de setări cu o pompă activă. Apoi schimbați la o nouă pompă, restabiliți setările din exportul anterior și veți fi restabilit activarea pompei vechi și veți fi eliminat activarea pompei noi. De aceea, vă recomandăm să exportați setările după fiecare activare de pompă pentru a permite o restaurare a stării de activare a pompei, dacă ceva se întâmplă cu dispozitivul dumneavoastră.
+- La setarea unui profil bazal nou, DASH va suspenda livrarea înainte de a seta noul **Profil** bazal. Dacă există o întrerupere sau o eroare de comunicare, profilul bazalei nu va reporni automat. Vedeți secțiunea [Reluarea Administrării de insulină](#omnipod-dash-resuming-insulin-delivery) pentru detalii.
+- În cazul în care alertele sunt configurate, iar pompa este pe cale să expire, pompa va continua să piuie până când alertele sunt reduse la tăcere, Vedeți [Suprimarea alertelor pompei](#omnipod-dash-silencing-pod-alerts) pentru detalii.
+- Există o serie de probleme cunoscute cu Bluetooth, care pot cauza probleme de activare a pompei. Vedeți [Depanarea Bluetooth](../GettingHelp/BluetoothTroubleshooting.md) pentru problema cunoscută și soluțiile la aceste probleme.
 
 (hardware-software-requirements)=
 
 (omnipod-dash-hardware-software-requirements)=
-## Hardware/Software Requirements
+## Cerințe hardware/software
 
-- Omnipod DASH is identified by the blue needle cap.
+- Omnipod DASH este identificat prin capacul albastru al acului.
 
-![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
+![Pompă Omnipod](../images/DASH_images/Omnipod_Pod.png)
 
-- **A Compatible Android phone** with a Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info), additionally the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
-    -  The **AAPS** Omnipod Dash driver connects with the DASH Pod using Bluetooth.  
-      **AAPS** will automatically establish a new Bluetooth connection to the Pod every time it needs to send a command (e.g a Bolus), after sending the command the Bluetooth connection is immediately disconnected.
+- **Un telefon Android** compatibil cu Bluetooth Low Energy (BLE) (a se vedea [Telefoane](../Getting-Started/Phones.md) pentru mai multe informații), În plus, următoarele informații vă vor ghida cu privire la alte aspecte esențiale legate de activarea și utilizarea cu succes a DASH pe un telefon compatibil:
+    -  Driverul **AAPS** Omnipod Dash se conectează cu pompa DASH folosind Bluetooth.  
+      **AAPS** va stabili automat o nouă conexiune Bluetooth la pompă de fiecare dată când trebuie să trimită o comandă (spre exemplu, un bolus), după trimiterea comenzii, conexiunea Bluetooth este deconectată imediat.
        - **NOTĂ:**
-         - The Bluetooth connection can be interrupted/disturbed by other Bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... Devices like this can cause connection errors or pod activation issues on some models of phones. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) list for known working configurations before committing to a new rig built around Omnipod DASH.
-         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
-    - For **Android 15** or below: You **MUST** use **Version 3.0 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, however it's advisable to run the latest released version.
-    - For **Android 16**: you **MUST** use **Version 3.3.2.1 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, due to Android 16 changing how its Bluetooth works. Any version earlier than 3.3.2.1 will likely cause pod failures and/or activation [issues](https://github.com/nightscout/AndroidAPS/issues/3471).
-- A supported [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+         - Conexiunea Bluetooth poate fi întreruptă/perturbată de alte dispozitive Bluetooth conectate la telefonul care rulează **AAPS**, cum ar fi căștile șamd... Dispozitive ca acestea pot cauza erori de conectare sau probleme de activare ale pompei pe unele modele de telefoane. Este o idee bună să revizuiți lista [pentru configurațiile hardware testate](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) pentru configurațiile de lucru cunoscute înainte de a te înhăma la un nou dispozitiv pregătit pentru Omnipod DASH.
+         - Există o serie de probleme cunoscute cu Bluetooth, care pot cauza probleme de activare a pompei (Vedeți [Depanarea](#troubleshooting) pentru sfaturi cu privire la alte probleme Bluetooth) în mod specific secțiunea [probleme legate de Bluetooth](#omnipod-dash-bluetooth-related-issues).
+    - Pentru **Android 15** sau mai jos: Dumneavoastră **TREBUIE** să utilizați ** cel puțin Versiunea 3.0 de AAPS** folosind instrucțiunile [**Construire APK**](../SettingUpAaps/BuildingAaps.md), cu toate acestea, este recomandabil să rulați ultima versiune publicată.
+    - Pentru **Android 16**: **TREBUIE** să folosești **Versiunea 3.3.2. sau mai nou de AAPS** folosind instrucțiunile [**Construire APK**](../SettingUpAaps/BuildingAaps.md), datorită modificării modului de funcționare a sistemului Bluetooth de către Android 16. Orice versiune mai veche de 3.3.2.1 va cauza probabil defecțiuni ale pompei și/sau [probleme](https://github.com/nightscout/AndroidAPS/issues/3471) la activare.
+- Un [**Senzor de monitorizare continuă a glicemiei (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-The instructions below explain how to activate a new pod session using **AAPS**. You should wait for your current Pod to be close expiry, as you will need to activate a new Pod with **AAPS**. Once a pod is de-activated it cannot be reused/re-activated, the de-activation is final.
+Instrucțiunile de mai jos explică cum să activați o nouă sesiune de pompă prin utilizarea **AAPS**. Ar trebui să așteptați ca pompa curentă să fie aproape de expirare pentru că va trebui să activați o pompă nouă cu **AAPS**. Once a pod is de-activated it cannot be reused/re-activated, the de-activation is final.
 
 ## Before You Begin
 
@@ -122,79 +122,79 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
 ### Activate Pod
 
-1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
+1. Navigați la fila **DASH** și faceți clic pe butonul **Gestionare pompă (1)** și apoi apăsați pe **Activați pompă (2)**.
 
    ![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
-2. The **Fill Pod** screen is displayed. Fill a new pod with **at least 80 units** of insulin and listen for two beeps indicating that the pod is ready to be primed.
+2. Ecranul **Umplere Pompă** este afișat. Umpleți un nouă pompă cu **cel puțin 80 unități** de insulină și ascultați două semnale sonore care indică faptul că pompa este gata de amorsare.
 
-   ***NOTE:** When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.*
+   ***NOTĂ:** La calcularea cantității totale de insulină de care aveți nevoie pentru 3 zile, vă rugăm să luați în considerare faptul că amorsarea pompei va utiliza aproximativ 3-10 unități.*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)
 
    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-   Ensure that the new pod and the phone running **AAPS** are within close proximity of each other and click the **Next** button.
+   Asigurați-vă că noua pompă și telefonul pe care rulează **AAPS** se află în imediata apropiere și apăsați pe butonul **Următorul**.
 
-   ***NOTE**: if the  error message below pops up _'Could not find an available pod for activation'_ (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.*
+   ***NOTĂ**: dacă mesajul de eroare de mai jos apare _'Nu s-a putut găsi o pompă disponibilă pentru activare'_ (se poate întâmpla), nu intrați în panică. Apăsați pe butonul **Reîncercați**. În majoritatea situațiilor, activarea va continua cu succes.*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
-3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  
-   A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
+3. Pe ecranul **Inițializați pompa**, pompa va începe amorsarea (veți auzi un clic urmat de o serie de ticăituri pe parcursul amorsării pompei).  
+   Un marcaj verde va fi afișat la amorsarea cu succes, iar butonul **Următorul** va fi activat. Apăsați pe butonul **Următorul** pentru a finaliza inițializarea de amorsare a pompei și pentru afișarea ecranului **Atașați Pompa**.
 
    ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-4. Next, prepare the infusion site ready to receive the new pod. Wash hands to avoid any risk of infection. Clean the infusion site by either using soap and water or an alcohol wipe to disinfect and let the skin air dry completely before proceeding.   
-   If you get skin irritation from the adhesive consider using a Barrier Wipe or Barrier Spray.
+4. Apoi, pregătiți locul de infuzare pentru a fi gata să primească noua pompă. Spălați-vă pe mâini pentru a evita orice risc de infecție. Curățați locul de infuzie fie cu apă și săpun, fie cu un tampon cu alcool pentru a dezinfecta zona și lăsați aerul să usuce pielea complet înainte de a continua.   
+   Dacă aveți iritații ale pielii de la adeziv, luați în considerare folosirea un șervețel (umed) pentru barieră cutanată sau un spray pentru barieră cutanată.
 
-   Remove the pod's blue plastic needle cap. If you see something that sticks out of the pod or it looks unusual, **STOP** the process and start with a new pod. If everything looks **OK**, proceed to take off the white paper backing from the adhesive and stick the pod to the selected site on your body.
+   Îndepărtați capacul de plastic al acului, de culoare albastră. Dacă vedeți ceva ce iese din pompă sau ceva care arată neobișnuit, **OPRIȚI** procesul și începeți cu o nouă pompă. Dacă totul arată **OK**, continuați să îndepărtați folia de protecție albă de pe adeziv și lipiți pompa pe locul selectat de pe corpul dumneavoastră.
 
-   When finished, click on the **Next** button.
+   Când ați terminat, apăsați pe butonul **Următorul**.
 
    ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-6. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula!**
+6. Caseta de dialog **Atașează Pompă** va apărea acum. **Apăsați pe butonul OK DOAR dacă sunteți pregătit să introduceți canula!**
 
    ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
-7. After pressing **OK**, it may take some time before the DASH responds and inserts the cannula (1-2 minutes maximum). **Be patient!**
+7. După ce apăsați **OK**, poate dura ceva timp până când DASH răspunde și introduce canula (maxim 1-2 minute). **Aveți răbdare**
 
-   ***NOTE:** Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
+   ***NOTĂ:** Înainte de inserarea canulei, este recomandat să prindeți pielea (între degete) lângă punctul de inserție al canulei. Acest lucru asigură o inserare lină a acului și va reduce riscul de apariție a ocluziilor.*
 
    ![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-8. A green checkmark is shown on the screen, and the **Next** button becomes available to select upon successful cannula insertion.   
-   Click on the **Next** button.
+8. Un marcaj verde este afișat pe ecran, iar butonul **Următorul** devine disponibil după inserarea cu succes a canulei.   
+   Apăsați pe butonul **Următorul**.
 
    ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-1. The **Pod activated** screen is displayed.
+1. Ecranul **Pompă activată** este afișat.
 
-   Click on the green **Finished** button.
+   Apăsați pe butonul verde **Finalizare**.
 
-   Congratulations! You have now started a new pod session.
+   Felicitări! Tocmai ați început o nouă sesiune de pompă.
 
    ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
-2. The **Pod management** menu screen should now display the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
+2. Meniul **Gestionare pompă** de pe ecran ar trebui să afișeze acum butonul **Activare pompă (1)** ca dezactivat și butonul ** Dezactivare pompă (2)** ca *activat*. Acest lucru se datorează faptului că o pompă este acum activă și nu puteți activa o pompă suplimentară fără a dezactiva mai întâi pompa activă.
 
-    Click on the back button on your phone to return to the **DASH** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
+    Apăsați pe butonul înapoi de pe telefonul dumneavoastră pentru a reveni la fila **DASH**, care va afișa acum informații despre pompă pentru sesiunea activă de pompă, inclusiv rata bazală curentă, nivelul rezervorului, insulina livrată, erorile pompei și alertele.
 
-    ***NOTE:** For more details on the information displayed go to the [**DASH Tab**](#omnipod-dash-tab) section of this document.*
+    ***NOTĂ:** Pentru mai multe detalii despre informațiile afișate, accesați [**Fila DASH**](#omnipod-dash-tab) a acestui document.*
 
    ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
 
    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-   ***NOTE:** It is good practice to export settings AFTER activating the pod. Settings should be exported after each pod change and once a month, ensure you copy the exported settings file to a cloud storage location (e.g. Google Drive) or somewhere off your phone in case you loose your phone (see [**Export settings**](../Maintenance/ExportImportSettings.md)).*
+   ***NOTĂ:** Este recomandat să exportați setările DUPĂ activarea pompei. Setările trebuie exportate după fiecare schimbare de pompă și o dată pe lună, asigurați-vă că veți copia fișierul de setări exportat într-o locație de stocare în cloud (spre exemplu Google Drive) sau undeva în afara telefonului în cazul în care vă pierdeți telefonul (vedeți [**Export setări**](../Maintenance/ExportImportSettings.md)).*
 
 
 (omnipod-dash-deactivate-pod)=
 
-### Deactivate Pod
+### Dezactivare pompă
 
 Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of total pod usage.
 
@@ -275,123 +275,123 @@ The process below will show you how to acknowledge and dismiss pod beeps when th
 
    ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
-4. Go to the **DASH** tab. Under the **Active Pod alerts** field, the warning message is no longer displayed, and the active pod will no longer issue pod expiration warning beeps.
+4. Mergeți la fila **DASH**. Sub câmpul **Alerte pompă activă**, mesajul de avertizare nu mai este afișat, iar pompa activă nu va mai emite semnale sonore legate de expirare.
 
 (omnipod-dash-view-pod-history)=
 
-### View Pod History
+### Vedeți istoricul pompei
 
-This section explains how to review your active pod history and filter by different action categories. The pod history tool allows you to view the actions and results committed to your currently active pod during its three days (72 - 80 hours) life.
+Această secțiune explică modul de revizuire al istoricului pompei active și filtrarea după diferite categorii de acțiune. Instrumentul Istoric pompă vă permite să vizualizați acțiunile și rezultatele înregistrate pentru pompa dumneavoastră activă curent, pe parcursul celor trei zile (72 – 80 de ore) de viață ale acesteia.
 
-This feature is helpful in verifying boluses, TBRs and basal commands that were sent to the pod. The remaining categories are useful for troubleshooting issues and determining the order of events that occurred leading up to a failure.
+Această funcție este utilă în verificarea bolusurilor, a RBT și a comenzilor bazale care au fost trimise către pompă. Restul categoriilor sunt utile pentru depanarea problemelor și pentru determinarea ordinii evenimentelor care au dus la o defecțiune.
 
-***NOTE:** **Only the last command can be uncertain**. New commands *will not be sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. The way to 'fix' uncertain commands is to **'refresh pod status'**.*
+***NOTĂ:** **Numai ultima comandă poate fi incertă**. Comenzile noi *nu vor fi trimise* până când comanda **nu va fi ultima 'incertă' devine 'confirmată' sau 'refuzată'**. Modul de a 'rezolva' comenzile incerte este de a **'reîmprospăta starea pompei'**.*
 
-1. Go to the **DASH** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu and then press the **Pod history (2)** button to access the pod history screen.
+1. Mergeți la fila **DASH** și apăsați butonul **Gestionare pompă (1)** pentru a accesa meniul **Gestionare pompă** și apoi apăsați butonul **Istoric Pompă (2)** pentru a accesa ecranul istoricului de pompă.
 
    ![Pod_history_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)  
    ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
 
-2. On the **Pod history** screen, the default category of **All (1)** is displayed, showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **DASH** tab in the main **AAPS** interface.
+2. Pe ecranul **Istoric pompă**, categoria implicită **Toate (1)** este afișată, afișează **Data și ora (2)** ale tuturor **Acțiunilor (3)** și **Rezultate (4)** în ordine cronologică inversă. Folosește de **2 ori** butonul **de înapoi** al telefonului tău pentru a te întoarce la fila **DASH** din interfața principală <0>AAPS</0>.
 
    ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
 (omnipod-dash-tab)=
 
-## DASH Tab
+## Fila DASH
 
-Below is an explanation of the layout and meaning of the icons and status fields on the **DASH** tab in the main AAPS interface.
+Mai jos este o explicație a aspectului și semnificației pictogramelor și a câmpurilor de stare din fila **DASH** din interfața principală AAPS.
 
-***NOTE:** If any message in the **DASH** tab status fields report (uncertain), then you will need to press the Refresh button to clear it and refresh the pod status.*
+***NOTĂ:** Dacă vreun mesaj din câmpurile de stare ale filei **DASH** raportează (incert), atunci va trebui să apăsați butonul Reîmprospătare pentru a șterge mesajul și a actualiza starea pompei.*
 
 ![DASH_Tab_1](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
-### Fields
+### Câmpuri
 
 
 
-- **Bluetooth Address:** Displays the current bluetooth address of the connected Pod.
+- **Adresa Bluetooth:** Afișați adresa curentă Bluetooth a pompei conectate.
 
-- **Bluetooth Status:**  Displays the current connection status.
+- **Stare Bluetooth:**  Afișați starea curentă a conexiunii.
 
-- **Sequence Number:** Displays the sequence number of the active POD.
+- **Număr secvență:** Afișați numărul secvenței al pompei active.
 
-- **Firmware Version:** Displays the firmware version for the active connection.
+- **Versiunea firmware:** Afișați versiunea de firmware pentru conexiunea activă.
 
-- **Time on Pod:** Displays the current time on the Pod.
+- **Timpul pe pompă:** Afișați ora curentă de pe pompă.
 
-- **Pod status:** Displays the Pod status.
+- **Stare pompă:** Afișați starea pompei.
 
-- **Last connection:** Displays time of last communication with the Pod.
+- **Ultima conexiune:** Afișați timpul ultimei comunicări cu pompa.
 
-  - *Moments ago* - less than 20 seconds ago.
+  - *Adineauri* - mai puțin de 20 de secunde în urmă.
 
-  - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
+  - *Cu mai puțin de un minut în urmă* - mai mult de 20 de secunde, dar mai puțin de 60 de secunde în urmă.
 
-  - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
+  - *Acum 1 minut* - mai mult de 60 de secunde, dar mai puțin de 120 de secunde (2 minute)
 
-  - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
+  - *XX minute în urmă* - mai mult de 2 minute în urmă așa cum este definit de valoarea XX
 
-- **Last bolus:** Displays the amount of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
+- **Ultimul bolus:** Afișați cantitatea ultimului bolus trimis către pompa activă și cu cât timp în urmă a fost emis în paranteză.
 
-- **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
+- **Rată bazală de bază:** Afișați rata bazală programată pentru timpul curent din profilul ratei bazale.
 
-- **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
-  - {Units per hour} @{TBR start time}  ({minutes run}/{total minutes TBR will be run})
+- **Rata bazalei temporare:** Afișați rata bazală temporară care rulează în prezent în următorul format
+  - {Unități pe oră} @{timp de început RBT} ({minute rulate}/{total minute în care va fi rulat RBT})
 
-  - Example:* 0.00U/h @18:25 ( 90/120 minutes)
+  - Exemplu: * 0,00U/h @18:25 ( 90/120 minute)
 
-- **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below 50 U, the exact units are displayed.
+- **Rezervor:** Afișați peste 50+U rămase atunci când mai mult de 50 de unități au rămas în rezervor. Sub 50 U, unitățile exacte sunt afișate.
 
-- **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming.
+- **Total livrat:** Afișați numărul total de unități de insulină livrate din rezervor. Acestea includ insulina utilizată pentru activare și amorsare.
 
-- **Errors:** Displays the last error encountered. Review the [Pod history](#omnipod-dash-view-pod-history) and log files for past errors and more detailed information.
+- **Eroare:** Afișați ultima eroare întâlnită. Revizuiți [Istoricul de pompă](#omnipod-dash-view-pod-history) și fișierele de jurnal pentru erorile anterioare și informații mai detaliate.
 
-- **Active pod alerts:** Reserved for currently running alerts on the active pod.
-
-
-
-### Buttons
-
-![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) Sends a refresh command to the active pod to update communication.
-
-  - *Use to refresh the pod status and dismiss status fields that contain the text (uncertain).*
-
-  - *See the [Troubleshooting](#omnipod-dash-troubleshooting) section below for additional information.*
-
-![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png)   Navigates to the Pod management menu.
-
-![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
-
-  - *Button is displayed only when pod time is past expiration warning time.*
-  -  *Upon successful dismissal, this icon will no longer appear.*
-
-![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png)    Resumes the currently suspended insulin delivery in the active pod.
+- **Alerte active de pompă:** Rezervat pentru rularea alertelor pe pompa activă.
 
 
 
-### Pod Management Menu
+### Butoane
 
-Below is describes the purpose of each icon on the **Pod Management** menu, accessed by pressing **POD MGMT (1)** button from the **DASH** tab.
+![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) Trimite comanda de reîmprospătare la pompa activă pentru a actualiza comunicarea.
+
+  - *Folosiți pentru a reîmprospăta starea pompei și a închide câmpurile de stare care conțin textul (incert).*
+
+  - *Vedeți secțiunea [Depanare](#omnipod-dash-troubleshooting) de mai jos pentru informații suplimentare.*
+
+![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png)   Navigare la meniul de gestionare pompă.
+
+![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) Când este apăsat acesta va dezactiva alertele sonore ale pompei și notificările (expirare, rezervor scăzut..).
+
+  - *Butonul este afișat numai atunci când timpul pompei e trecut de timpul de avertizare al expirării.*
+  -  *După închiderea cu succes, această pictogramă nu va mai apărea.*
+
+![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png)    Reluați livrarea administrării curente de insulină în pompa activă.
+
+
+
+### Meniu Gestionare Pompă
+
+Mai jos este descris scopul fiecărei pictograme din meniul **Gestionare pompă**, accesat prin apăsarea butonului **Gestionare pompă (1)** din fila **DASH**.
 
 ![DASH_Tab_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
 
 ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-**The table below describes each button and it's function:**
+**Tabelul de mai jos descrie fiecare buton și funcția sa:**
 
-| Button | Function                                                                                      |
-| ------ | --------------------------------------------------------------------------------------------- |
-| 1      | Access the Pod Mgmt settings                                                                  |
-| 2      | [**Activate Pod**](#omnipod-dash-activate-pod): Primes and activates a new pod.               |
-| 3      | [**Deactivate Pod**](#omnipod-dash-deactivate-pod): Deactivates the currently active pod.     |
-| 4      | **Play Test Beep** : Plays a single test beep on the pod when pressed.                        |
-| 5      | [**Pod history**](#omnipod-dash-view-pod-history) : Displays the active pod activity history. |
+| Buton | Funcție                                                                                                 |
+| ----- | ------------------------------------------------------------------------------------------------------- |
+| 1     | Accesați setările Gestionare pompă                                                                      |
+| 2     | [**Activați pompa**](#omnipod-dash-activate-pod): Amorsează și activează o nouă pompă.                  |
+| 3     | [**Dezactivați pompa**](#omnipod-dash-deactivate-pod): Dezactivează pompa activă în prezent.            |
+| 4     | **Redați semnal sonor** : Redă un singur semnal sonor de test pe pompă atunci când este apăsat.         |
+| 5     | [**Istoricul de pompă**](#omnipod-dash-view-pod-history) : Afișați istoricul activității pompei active. |
 
 
 (omnipod-dash-settings)=
 
-## Dash Settings
+## Setări Dash
 
 The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜ **Pump**  **Dash** ➜ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the **AAPS** interface titled **DASH**.
 
@@ -476,34 +476,34 @@ The DASH overview tab will display as described the below:
   * **Above 50 Units** - The pod reports more than 50 units currently in the reservoir.
   * **Below 50 Units** - The amount of insulin remaining in the reservoir as reported by the Pod.
 
-Additional note:
-  * **SMS** - Returns value or 50+U for SMS responses
-  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
+Notă suplimentară:
+  * **SMS** - Returnează valoarea sau 50+U pentru răspunsuri SMS
+  * **Nightscout** - Încarcă în Nightscout valoarea de 50 atunci când sunt peste 50 de unități (versiunea 14.07 și mai vechi).  Newer versions will report a value of 50+ when over 50 units.
 
 (omnipod-dash-troubleshooting)=
 
-## Troubleshooting
+## Depanare
 
 (omnipod-dash-delivery-suspended)=
 
-This section covers common known issues and solutions for Omnipod DASH use with AAPS. There is also [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
+Prezenta secțiune se referă la problemele comune cunoscute și la soluțiile pentru utilizarea Omnipod DASH împreună cu AAPS. Există, de asemenea, secțiunea [Depanare generală](../GettingHelp/GeneralTroubleshooting.md) în documentație care ar trebui să fie reluată deoarece acoperă subiecte relevante și pentru unele probleme specifice pompei Omnipod.
 
 ---
 
 (omnipod-dash-bluetooth-related-issues)=
 
-## **Bluetooth related issues**
+## **Probleme legate de Bluetooth**
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Pentru probleme cunoscute cu conexiunile Bluetooth, întreruperile pompei, activarea și problemele de conexiune [Depanarea Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
-### Delivery suspended
+### Administrarea insulinei suspendată
 
-  - There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes.
-  - During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile**. If communication fails between the two commands, then delivery can stay suspended. When this happens:
-     - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
-     - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
-     - **AAPS** will try to set the new basal profile every 15 minutes.
+  - Nu mai există niciun buton de suspendare. Dacă doriți să "suspendați" pompa, puteți seta o **RBT** zero pentru x minute.
+  - În timpul **Comutării de profil**, DASH trebuie să suspende administrarea înainte de a seta noul **profil** bazal. Dacă comunicarea nu reușește între cele două comenzi, atunci administrarea poate rămâne suspendată. Când se întâmplă acest lucru:
+     - Nu va fi nicio administrare a insulinei, nici bazală, SMB, bolusare manuală șamd.
+     - Este posibil să existe notificări că una dintre comenzi este neconfirmată: acest lucru depinde de când a avut loc eșecul.
+     - **AAPS** va încerca să seteze noul profil bazal la fiecare 15 minute.
      - **AAPS** will show a notification informing that the delivery is suspended every 15 minutes, if the delivery is still suspended (resume delivery failed).
      - The [**Resume delivery**](#omnipod-dash-resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
      - If **AAPS** fails to resume delivery on its own (this happens if the pod is unreachable, sound is muted, etc), the pod will start beeping 4 times every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20 minutes.
