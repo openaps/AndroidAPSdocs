@@ -1,36 +1,36 @@
-# How-to configure a Huawei phone
+# Cum să configurați un telefon Huawei
 
-There are different options, some Android specific, some Huawei specific:
+Există diferite opțiuni, unele specifice Android, altele specifice Huawei:
 
-* Add AAPS and xdrip+ to apps list which ignore battery optimisations:
+* Adăugați AAPS și xDrip+ la lista de aplicații care ignoră optimizarea bateriei:
   
-  * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
+  * Setări / Aplicații / Setări / autorizări speciale / Ignorați optimizarea bateriei / Selectați "Toate aplicațiile" / Setați aplicația la permise
     
-    ![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+    ![Huawei - ignoră optimizarea bateriei](../images/Huawei_BatteryOptimization.png)
 
-* Set battery option settings:
+* Setați setările opțiunii bateriei:
   
-  * Settings / App / Select AndroidAPS/xdrip+ / Under Battery / App launch
+  * Setări / Aplicație / Selectați AndroidAPS/xdrip+ / Sub baterie / Lansarea aplicației
     
-    * Make sure to remove "automatic management"
-    * Allow:
+    * Asigurați-vă că eliminați „gestionarea automată”
+    * Permiteți:
       
-      * Automatic launch
-      * Secondary launch (can be launched from other apps)
-      * Background run
+      * Lansare automată
+      * Lansare secundară (poate fi lansată de către alte aplicații)
+      * Pornire în fundal
         
-        ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+        ![Huawei - opțiuni baterie](../images/Huawei_BatteryOptions.png)
 
-* Lock App
+* Blocați aplicația
   
-  * Go into App recent list and select the lock icon
+  * Accesați lista de aplicații recente și selectați pictograma de blocare
     
-    ![Huawei - lock app](../images/Huawei_LockApp.png)
+    ![Huawei - blocați aplicația](../images/Huawei_LockApp.png)
 
-For xDrip+, you must enable persistent notifications (within xDrip+ app):
+Pentru xDrip+, trebuie să activați notificările persistente (în aplicația xDrip+):
 
-* Settings / less common settings / other misc options / Run Collector in foreground
+* Setări / setări mai puțin obișnuite / alte diverse opțiuni / Pornește Colectorul în prim-plan
   
-  ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
+  ![Setări xDrip+ - colector în prim-plan](../images/xdrip_collector_foreground.png)
 
-Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
+În funcție de versiunea Android, aceste setări sunt în altă parte. Aceste explicații sunt pentru Android 8.1.
