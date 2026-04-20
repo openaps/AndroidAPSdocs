@@ -8,7 +8,7 @@
 
 Când există setări suplimentare disponibile în cadrul modulului, poți face clic pe rotița dințată (B), care te va duce la setările specifice din secțiunea de preferințe.
 
-![Casuta Configurare sistem şi rotita](../images/ConfBuild_ConfigBuilder.png)
+![Casuta Configurare sistem și rotita](../images/ConfBuild_ConfigBuilder.png)
 
 (Config-Builder-tab-or-hamburger-menu)=
 
@@ -52,7 +52,7 @@ Mai multe informații pentru a înțelege Profilul Insulinei așa cum este indic
 
 ![Tip de insulină Oref Acțiune-Rapidă](../images/ConfBuild_Insulin_RAO.png)
 
-* recomandat pentru Humalog, Novolog şi Novorapid
+* recomandat pentru Humalog, Novolog și Novorapid
 * DIA = cel puțin 5 ore
 * Maximum vârf = 75 minute după injectare (fix, nemodificabilă)
 
@@ -110,7 +110,7 @@ Vedeți [Netezirea datelor de glicemie](../CompatibleCgms/SmoothingBloodGlucoseD
 
 (Config-Builder-pump)=
 
-## Pump
+## Pompă
 
 Alegeți tipul de pompă pe care îl folosiți. Vezi pagina [Pompe Compatibile](../Getting-Started/CompatiblePumps.md) pentru mai multe informații despre configurare.
 
