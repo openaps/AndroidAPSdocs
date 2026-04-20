@@ -439,7 +439,7 @@ Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
 
 #### Asistent Rapid
 
-Easily enter amount of carbs and set calculation basics.
+Introduceți cu ușurință cantitatea de carbohidrați și stabiliți calculele de bază.
 
 Details are set up in [Preferences > Overview > QuickWizard settings](#Preferences-quick-wizard).
 
@@ -447,39 +447,39 @@ Details are set up in [Preferences > Overview > QuickWizard settings](#Preferenc
 
 ## Asistent Bolus
 
-![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
+![Asistent bolusare](../images/Home2020_BolusWizard_v2.png)
 
 When you want to make a meal bolus, this is where you will normally make it from.
 
 ### Secțiunea I
 
-Shows the calculated bolus.
+Afișați bolusul calculat.
 
-If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+În cazul în care cantitatea de insulină la bord depășește bolusul calculat, atunci aceasta va afișa doar cantitatea de carbohidrați care mai sunt necesari.
 
 (AapsScreens-section-j)=
 
 ### Secțiunea J
 
-BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank.
+Câmpul glicemie este deja completat cu ultima citire din CGM. Dacă nu aveți un CGM funcțional, atunci acesta va fi gol.
 
 In the **Carbs** field, you add your estimate of the amount of carbs - or equivalent - that you want to bolus for.
 
 The **Corr** field is if you want to modify the end dosage for some reason.
 
-The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Puteți să puneți un număr negativ în acest câmp dacă bolusați pentru carbohidrați anteriori.
 
 **Eating reminder** : For carbs in the future, the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at the given time, when to eat the carbs you have input into **AAPS**.
 
-![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
+![Asistent bolusare cu memento pentru mâncat](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Secțiunea K
 
 **Profile** allows you to select a different profile than the current one, to make the calculation for the insulin required. This profile selection applies only for the current bolus, it is not a profile change.
 
-**Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](#Preferences-advanced-settings-overview). The idea is to deliver the insulin sooner and hopefully reduce spikes.
+**Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](#Preferences-advanced-settings-overview). Ideea este de a administra insulina mai devreme în speranța de a reduce vârfurile.
 
-For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
+Pentru detalii vizitați [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Secțiunea L
 
@@ -489,12 +489,12 @@ You can deselect any that you do not want to include, but you normally wouldn't 
 
 For safety reasons the **TT box must be ticked manually**, if you want the bolus wizard to calculate based on an existing temporary target.
 
-#### Combinations of COB and IOB and what they mean
+#### Combinații de COB și IOB și ce înseamnă acestea
 
 * For safety reasons, the IOB box cannot be unticked when COB box is ticked as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
 * If you tick COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+* If you tick IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Acest lucru conduce la o notiță "carbohidrați lipsă”.
+* Dacă bolusați pentru **mâncare suplimentară** la scurt timp după o masă (spre exemplu desert suplimentar) poate fi util să **debifați toate căsuțele**. În acest fel, doar noii carbohidrați sunt adăugați deoarece masa principală nu va fi absorbită astfel încât IOB nu se potrivește cu precizie cu COB la scurt timp după un bolus de masă.
 
 ![BolusWizard with Details](../images/Home2021_BolusWizard_Details.png)
 
@@ -502,9 +502,9 @@ The box near the eye allows you to choose between the detailed view, with the nu
 
 (AapsScreens-wrong-cob-detection)=
 
-#### Wrong COB detection
+#### Detectare cantitate COB greșită 
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Absorbție lentă a carbohidraților](../images/Calculator_SlowCarbAbsorption.png)
 
 If you see the warning above after using bolus wizard, **AAPS** has detected that the calculated COB value may be wrong. So, if you want to bolus again after a previous meal with COB, you should be aware of overdosing!
 
@@ -514,7 +514,7 @@ For details, see the hints on [COB calculation page](#CobCalculation-detection-o
 
 ## Pagina Acțiuni
 
-![Actions tab](../images/Home_Action.png)
+![Fila Acțiuni](../images/Home_Action.png)
 
 ### Acțiuni - secțiunea M
 
@@ -524,9 +524,9 @@ Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alterna
 
 Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
 
-Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+Chiar dacă [bolusurile extinse](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) nu funcționează cu adevărat într-un sistem de buclă închisă, unii oameni au cerut opțiunea de a utiliza oricum bolusul extins.
 
-* This option is only available for Dana RS and Insight pumps. 
+* Această opțiune este disponibilă doar pentru pompele Dana RS și Insight. 
   * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
   * Make sure to read the [details](../DailyLifeWithAaps/ExtendedCarbs.md) before using this option.
 
@@ -534,19 +534,19 @@ Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-
 
 ### Careportal - section N
 
-Displays information on:
+Afișează informații la:
 
-     * sensor age & level (battery percentage)
-     * insulin age & level (units)
-     * cannula age
-     * pump battery age & level (percentage
+     * vechime & nivel senzor (procentaj baterie)
+     * vechime & nivel insulină (unități)
+     * vechime canulă
+     * vechime & nivel baterie pompă (procentaj)
     
 
 Less information will be shown if **low resolution skin** is used ([Preferences > General > Skin](#Preferences-skin)).
 
 (screens-sensor-level-battery)=
 
-#### Sensor level (battery)
+#### Nivel senzor (baterie)
 
 Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
 
@@ -554,9 +554,9 @@ Thresholds can be set in [Preferences > Overview > Status lights](#Preferences-s
 
 ### Careportal - section O
 
-BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#aaps-screens-careportal).
+Verificare glicemie (BG), amorsare/umplere (prime/fill), inserție senzor și schimbare baterie pompă sunt baza pentru datele afișate în [secțiunea N](#aaps-screens-careportal).
 
-Prime/Fill allows you to record pump site and insulin cartridge change.
+Amorsarea/Umplerea (Prime/Fill) vă permite să înregistrați schimbarea locului de inserție al pompei și a cartușului de insulină.
 
 Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
 
@@ -564,7 +564,7 @@ Section O reflects the Nightscout careportal. So exercise, announcement and ques
 
 (Aapsscreens-site-rotation)=
 
-#### Site Rotation
+#### Rotație loc
 
 Site Rotation button opens the Site Rotation Dialog in View mode:
 
@@ -604,21 +604,21 @@ Filtering can be done graphically on the image, or clicking a therapy event in t
 
 ![Filtering](../images/SiteRotation/Filtering.png)
 
-#### History Browser
+#### Vizualizare istoric
 
 Allows you to ride back in **AAPS** [history](../Maintenance/Reviewing.md).
 
 #### TDD
 
-Total daily dose = bolus + basal per day
+Doza zilnică totală = bolus + bazală pe zi
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50.
+Unii medici folosesc – în special pentru noii utilizatori de pompe – un raport bazal-bolus de 50:50.
 
 Therefore, ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours).
 
-Others prefer range of 32% to 37% of TDD for TBB.
+Alți medici preferă TBB între 32% și 37% din DZT.
 
-Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Ca majoritatea regulilor generale, formulele acestea au o valabilitate reală limitată. Notă: Diabetul dumneavoastră poate varia!
 
 (AapsScreens-insulin-profile)=
 
@@ -685,8 +685,8 @@ This view can be accessed by pressing the 3 dots on the right of the menu, then 
 
 * Bolus & carbs
 * [Bolus extins](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temporary basal rate
-* [Temporary target](../DailyLifeWithAaps/TempTargets.md)
+* Rată bazală temporară
+* [Țintă temporară](../DailyLifeWithAaps/TempTargets.md)
 * [Schimbare de profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 * Careportal: notes entered through action tab and notes in dialogues
 * Running mode : history of loop status
@@ -716,7 +716,7 @@ The treatment tab can be used to correct faulty carb entries (*i.e.* you over- o
 
 1. Check and remember actual COB and IOB on homescreen.
 2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
+3. Eliminați înregistrarea cu cantitatea eronată de carbohidrați. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. Make sure carbs are removed successfully by checking COB on homescreen again.
 5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
   
@@ -726,9 +726,9 @@ The treatment tab can be used to correct faulty carb entries (*i.e.* you over- o
 
 7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
 
-### Temp Basal
+### Bazală temporară
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Bazală temporară](../images/TreatmentsView2.png)
 
 The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown in green. It can be:
 
@@ -739,15 +739,15 @@ Deleting the entries only affects your reports in Nightscout and will probably t
 
 On the left of a line, a red S means “Suspend” : it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
 
-### Temporary target
+### Țintă temporară
 
-![Temporary target](../images/TreatmentsView3.png)
+![Țintă temporară](../images/TreatmentsView3.png)
 
 The history of temporary targets can be seen here.
 
-### Profile Switch
+### Schimbare profil
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Schimbare profil](../images/TreatmentsView4.png)
 
 The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user. Line **2**, stored both in NS and PH, correspond to the actual switch.
 
@@ -757,9 +757,9 @@ You can use the **Clone** button shown on line **1** to make a copy of a **Profi
 
 (AapsScreens-running-mode)=
 
-### Running mode
+### Mod de rulare
 
-![Running mode](../images/TreatmentsView6.png)
+![Mod de rulare](../images/TreatmentsView6.png)
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
 
@@ -771,7 +771,7 @@ This tab shows all notes and alerts recorded in Nightscout.
 
 (aaps-screens-running-mode)=
 
-## History Browser
+## Vizualizare istoric
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then History. It is not possible to put in the main menu through the Config Builder. It can also be accessed through a button at the bottom of the [Action tab](#screens-action-tab).
 
