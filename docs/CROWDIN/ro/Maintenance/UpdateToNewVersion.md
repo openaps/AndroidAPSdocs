@@ -4,7 +4,7 @@
 
 **AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
-## Important notes
+## Note importante
 
 - Please update to the new version of **AAPS** as soon as possible after a new release is available.
 - When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
