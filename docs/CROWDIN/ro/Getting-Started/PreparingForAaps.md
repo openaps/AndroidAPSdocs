@@ -184,7 +184,7 @@ Here is an approximate timeframe:
 
 Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
 
-## Requirements
+## Cerințe
 
 ### Medical considerations
 
