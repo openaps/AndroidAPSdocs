@@ -517,9 +517,9 @@ Once a pump requiring AAPS to use Bluetooth is select, you will see a warning: A
 
 In this case we select "Virtual Pump".
 
-![Pump](../images/setup-wizard/Wizard23-Pump.png)
+![Pompă](../images/setup-wizard/Wizard23-Pump.png)
 
-## APS algorithm
+## Algoritm APS
 
 Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
 
