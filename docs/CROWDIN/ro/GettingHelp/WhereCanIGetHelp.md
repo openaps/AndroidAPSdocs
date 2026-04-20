@@ -2,13 +2,13 @@
 
 ## I'm getting stuck; What do I do? Who can I ask?
 
-This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:
+Acest proiect se bazează pe activitatea de voluntariat, astfel încât se aplică unele reguli pentru a evita munca suplimentară în cazul celor care își donează cu amabilitate timpul și competențele:
 
 * level 1: Read the Wiki - we now have a search function to help you!
 * level 2: Search the Facebook group, if there is not already an answer then ask your question in the [AndroidAPS Users Facebook group](https://www.facebook.com/groups/1900195340201874/)
 * level 3: If facebook did not get results then ask in [discord](https://discord.gg/4fQUWHZ4Mw). Direct crossposts will be ignored/deleted on both channels to avoid duplicate answers. Don't forget that the majority of developers are in Europe so the response may not be 24/7; you may have to wait for several hours especially over weekends and holidays.
 * level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md)
-* level 5: email *developers@aaps.app* (only if personal data is involved that should not go in a public channel and your problems have not been resolved in the other levels)
+* nivelul 5: e-mail *developers@aaps. pp* (numai în cazul în care sunt implicate date cu caracter personal care nu ar trebui să intre într-un canal public și problemele dumneavoastră nu au fost rezolvate la alte niveluri)
 
 For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xDrip+](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
 
@@ -22,7 +22,7 @@ Please note that Facebook has recently removed external links shared within the 
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): covers all DIY closed loop systems (OpenAPS, Loop and AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
+* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM în general
 * [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
 ## Country / language specific resources
@@ -47,10 +47,10 @@ Please note that Facebook has recently removed external links shared within the 
 * [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
 * [Looped-DE](https://www.facebook.com/groups/loopedDE/)
 
-### Netherlands
+### Țările de Jos
 
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch-speaking users of OpenAPS, Loop and AndroidAPS
-* [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
+* [CGM in the cloud Țările de Jos](https://www.facebook.com/groups/1764754560436596)
 
 ### Norway
 
@@ -60,10 +60,10 @@ Please note that Facebook has recently removed external links shared within the 
 
 * [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group)
 
-### Sweden
+### Suedia
 
 * [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
 
-### UK
+### Regatul Unit
 
 * [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
