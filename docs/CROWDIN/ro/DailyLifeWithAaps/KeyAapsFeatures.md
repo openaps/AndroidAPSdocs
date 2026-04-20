@@ -8,7 +8,7 @@ The loop status is shown on the main screen with one of the icons below.
 
 See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode.
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Stare buclă](../images/Home2020_LoopStatus.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
