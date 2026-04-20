@@ -54,43 +54,43 @@ Awaiting release of t:mobi in Europe (other two are not yet released anywhere). 
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Comentarii:** Niciun succes al comunității în comunicarea cu pompa Solo.
 
 ### Ypsomed Pump
 
-**Comments:** Ypso added very heavy 3rd party encryption.
+**Comentarii:** Ypso a adăugat o criptare terță foarte puternică.
 
 ## Cerințe pentru pompele cu care se poate face Buclă
 
 **Cerințe preliminare**
 
-- Pump has to support some kind of remote control. (BT, radio frecvență etc.)
-- Protocol is hacked/documented/etc.
+- Pompa trebuie să accepte un fel de control la distanță. (BT, radio frecvență etc.)
+- Protocolul este descifrat/documentat/șamd
 
-**Minimal requirement**
+**Cerință minimă**
 
 - Setează Rata Bazală Temporară
-- Get Status
+- Preia Starea
 - Anulează Rata Bazală Temporară
 
-**For oref1(SMB) or Bolusing:**
+**Pentru oref1(SMB) sau Bolus:**
 
 - Setează bolusul
 
-**Good to have**
+**Bine de avut**
 
 - Anulează Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Preia Profilul Bazalei (aproape obligatoriu)
+- Setare Profil Bazală (bine de avut)
+- Citește Istoric 
 
-**Other (not required but good to have)**
+**Altele (nu sunt necesare, dar bune de avut)**
 
-- Set Extended Bolus
+- Setați bolus extins
 - Renunță la bolusul extins
-- Read History
-- Read TDD
+- Citește Istoric
+- Citiți DTZ (Doză Totală Zilnică)
 
-### Other pumps support
+### Suport pentru alte pompe
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Dacă aveți și alte pompe a căror starea doriți să o aflați, vă rugăm să ne contactați pe Discord.
