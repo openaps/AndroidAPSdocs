@@ -322,13 +322,13 @@ The **Automation** will:
 
 ![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
 
-## Troubleshooting
+## Depanare
 
 * Problem: __My automations are not being triggered by AAPS?__
 
 Check the box to the right of **Automation** event is ‘ticked’ to ensure the rule is activated.
 
-## Troubleshooting
+## Depanare
 
 ![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
 
