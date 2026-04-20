@@ -199,7 +199,7 @@ It is common to have different **ICR** at different times of day due to hormone 
 
 > **NOTĂ:**
 > 
-> În unele ţări europene, se utilizează unităţi de pâine pentru determinarea cantității de insulină necesară pentru alimente. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
+> În unele țări europene, se utilizează unități de pâine pentru determinarea cantității de insulină necesară pentru alimente. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
 > 
 > În acest model s-a stabilit cantitatea de carbohidrați și cantitatea de insulină a fost variabilă. ("Cât insulină este necesară pentru a acoperi o felie de pâine?")
 > 
@@ -297,7 +297,7 @@ The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a 
 
 **Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
 
-Asistentul de profil oferă seturi de date de la două spitale diferite pentru copii pentru a găsi profilul iniţial pentru copilul dumneavoastră de până la 18 ani.
+Asistentul de profil oferă seturi de date de la două spitale diferite pentru copii pentru a găsi profilul inițial pentru copilul dumneavoastră de până la 18 ani.
 
 ![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
 
@@ -319,7 +319,7 @@ See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-Pro
 (your-aaps-profile-clone-profile-switch)=
 ### Clone a Profile switch to a new Profile
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Schimbare profil](../images/TreatmentsView4.png)
 
 The [Treatments](#aaps-screens-treatments) tab shows all past **Profile Switches**. When going to the **Profile Switch** sub-tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
 
