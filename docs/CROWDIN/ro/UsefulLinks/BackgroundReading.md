@@ -10,13 +10,13 @@ Before you build your rig, you're going to have to do a lot of reading in order 
 
 [Loop Docs - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
-[Fine-Tuning your settings - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
+[Ajustarea fină a setărilor - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 [Tim Omer – Hypodiabetic Blog - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
 
 [DIYPS - https://diyps.org/](https://diyps.org/)
 
-[Diabet şi Tehnologie - Where Diabetes meets Tech - https://www.diabettech.com/](https://www.diabettech.com/)
+[Diabet și Tehnologie - Where Diabetes meets Tech - https://www.diabettech.com/](https://www.diabettech.com/)
 
 [OpenAPS Reference Design - https://openaps.org/reference-design/](https://openaps.org/reference-design/)
 
