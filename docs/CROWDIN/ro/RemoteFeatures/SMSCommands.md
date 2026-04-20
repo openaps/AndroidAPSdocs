@@ -195,7 +195,7 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 | BG         | No   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                             |
 | CAL 5.6/90 | Yes  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent* |
 
-### Pump
+### Pompă
 
 | Command              | Auth | Function & *Response*                                                                                 |
 | -------------------- | ---- | ----------------------------------------------------------------------------------------------------- |
