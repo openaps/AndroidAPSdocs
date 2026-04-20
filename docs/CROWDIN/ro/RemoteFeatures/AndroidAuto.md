@@ -56,30 +56,30 @@ Primul ecran arată așa. Derulează în jos până la sfârșitul paginii.
 
 ![Activați modul dezvoltator](../images/android_auto_07.png)
 
-Aici vedeți versiunea de Android Auto prezentată. Atingeți de 10 ori (în cuvinte zece) pe versiunea Android Auto. With this hidden combination you have now enabled developer mode.
+Aici vedeți versiunea de Android Auto prezentată. Atingeți de 10 ori (în cuvinte zece) pe versiunea Android Auto. Cu această combinație ascunsă ați activat acum modul de dezvoltator.
 
 ![Activați modul dezvoltator](../images/android_auto_08.png)
 
-Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
+Confirmați că doriți să activați modul dezvoltator în dialogul modal "Permiteți setările de dezvoltare?".
 
 ![Activați modul dezvoltator](../images/android_auto_09.png)
 
-In the **developer settings** enable the "Unknown sources".
+În setările **pentru dezvoltator** activați „Surse necunoscute”.
 
 ![Activați modul dezvoltator](../images/android_auto_10.png)
 
-Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
+Acum puteți ieși din modul de dezvoltator dacă doriți. Atingeți meniul cu trei puncte din dreapta sus pentru a face asta.
 
-## Show notifications in car
+## Afișați notificările în mașină
 
-Tap the **number icon** on the lower right side in Android Auto in your car.
+Apăsați pe **pictograma număr** din partea dreaptă jos a Android Auto din mașina dumneavoastră.
 
-![number icon - Android Auto in car](../images/android_auto_11.png)
+![pictogramă număr - Android Auto în mașină](../images/android_auto_11.png)
 
-Your CGM data will be shown as follows:
+Datele dumneavoastră CGM vor fi afișate după cum urmează:
 
 ![Date CGM AAPS pe Android Auto](../images/android_auto_01.png)
 
-## Troubleshooting:
+## Depanare:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#use-system-notifications-in-aaps-for-alerts-and-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
+* Dacă nu vedeți notificarea, verificați dacă [ați permis AAPS să afișeze notificările](#use-system-notifications-in-aaps-for-alerts-and-notifications) în Android și dacă [Android Auto are drepturi de acces la notificări](#allow-the-use-of-unknown-sources-with-android-auto).
