@@ -75,7 +75,7 @@ Difference between the other skins depends on the phone's display orientation:
 ![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
 (Preferences-protection)=
-## Protecţie
+## Protecție
 
 ![Preferences > General - Protection](../images/Pref2020_General2.png)
 
@@ -96,7 +96,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
 
-![Protecţie](../images/Pref2020_Protection.png)
+![Protecție](../images/Pref2020_Protection.png)
 
 ### Application protection
 
@@ -215,11 +215,11 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 Status lights give a visual warning for:
 
-- Sensor age
+- Vechime senzor
 - Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
-- Insulin age (days reservoir is used)
-- Reservoir level (units)
-- Cannula age
+- Vechimea insulinei (de câte zile este utilizat rezervorul)
+- Nivelul rezervorului (unități)
+- Vechime canulă
 - Pump battery age
 - Pump battery level (%)
 
@@ -355,7 +355,7 @@ If you often eat high fat or protein meals you will need to increase your meal a
 - Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
 - Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
-## Pump
+## Pompă
 
 ### BT Watchdog
 
@@ -457,9 +457,9 @@ Select which location service shall be used:
 Settings should be self-explanatory.
 
 (preferences-maintenance-settings)=
-## Setări Întreţinere
+## Setări Întreținere
 
-![Setări Întreţinere](../images/Pref2020_Maintenance.png)
+![Setări Întreținere](../images/Pref2020_Maintenance.png)
 
 **Email recipient**: Standard recipient of logs is <logs@aaps.app>.
 
