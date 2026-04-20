@@ -419,7 +419,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 (minimallooper-troubleshooting)=
 
-### Troubleshooting
+### Depanare
 
 #### Failure to scan the sensor with NFC
 
