@@ -15,7 +15,7 @@ There is no issue with changing timezone in phone because pump doesn't use histo
 
 These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
 
-To avoid this there are two possibilities:
+Pentru a se evita acest lucru, există două posibilități:
 
 ### Option 1: Keep home time and timeshift profile
 
@@ -38,7 +38,7 @@ To avoid this there are two possibilities:
 
 * Turn off 'Automatic date and time' in your phone settings (manual time zone change)
 
-When get out of plane:
+Când se iese din avion:
 
 * turn off pump
 * change timezone on phone
@@ -50,7 +50,7 @@ When get out of plane:
 
 ## Timezone Change for Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Driverul reglează automat ora pompei la data telefonului.
 
 The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in **AAPS** despite the time change.
 
@@ -68,7 +68,7 @@ The old, Ruffy-based driver does not adjust the time automatically. The user has
 
 ## Timezone Change for Medtrum
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Driverul reglează automat ora pompei la data telefonului.
 
 Time zone changes keep the history intact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and **IOB**. If you change time manually double check the **IOB**.
 
@@ -122,7 +122,7 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
 
 4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the Fully Closed Loop for at least one DIA and Max-Carb-Time - whatever is bigger.
 
-5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
+5. Acțiuni care trebuie întreprinse după schimbarea ceasului. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
 
 ### DST for Accu-Chek Combo
 
