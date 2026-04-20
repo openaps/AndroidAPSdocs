@@ -367,7 +367,7 @@ After a settings import the driver will sync history with the pump, this can tak
 
 From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen: ![Sync progress](../images/medtrum/SyncProgress.png)
 
-## Troubleshooting
+## Depanare
 
 ### Connection issues
 
@@ -375,7 +375,7 @@ If you are experiencing connection timeouts or other connection issues:
 - In Android application settings for AAPS: Set location permission to "Allow all the time".
 
 ### Bluetooth issues
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Pentru probleme cunoscute cu conexiunile Bluetooth, întreruperile pompei, activarea și problemele de conexiune [Depanarea Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ### Activation interrupted
 
