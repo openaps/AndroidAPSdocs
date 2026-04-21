@@ -291,7 +291,7 @@ If you have stored profiles on Nightscout and want to download them to **AAPS**,
 
 Go back to the previous screen and select "Alarm option":
 
-![Alarms](../images/setup-wizard/Wizard16-Alarm.png)
+![Alarme](../images/setup-wizard/Wizard16-Alarm.png)
 
 For now, leave the switches disabled. We only walked to the screen to make you familiar with possible options you might configure in the future. At the moment there is no need to do it.
 
