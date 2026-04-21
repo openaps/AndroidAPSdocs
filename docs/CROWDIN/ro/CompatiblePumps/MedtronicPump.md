@@ -15,50 +15,50 @@ Puteți afla cum să verificați firmware-ul de pe pompele de la [documentația 
 
 ## Cerințe hardware și software
 
-- **Telefon:** Driverul Medtronic ar trebui să funcționeze cu orice telefon Android care acceptă conexiuni Bluetooth. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary. For example, some phones will handle enabling/disabling Bluetooth differently. This can impact the user experience when AAPS needs to reconnect to your Rileylink type device.**
-- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a separate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection. The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.
+- **Telefon:** Driverul Medtronic ar trebui să funcționeze cu orice telefon Android care acceptă conexiuni Bluetooth. **IMPORTANT: Implementările Bluetooth ale producătorilor de telefoane pot varia, astfel că modul în care se comportă fiecare model de telefon poate fi diferit. De exemplu, unele telefoane vor gestiona activarea/dezactivarea Bluetooth în mod diferit. Acest lucru poate avea impact asupra experienței utilizatorului când AAPS trebuie să se reconecteze la dispozitivul de tip RileyLink.**
+- **Dispozitiv compatibil RileyLink:** Telefoanele Android nu pot comunica cu pompele Medtronic fără un dispozitiv separat pentru a gestiona comunicațiile. Acest dispozitiv se va conecta cu telefonul dumneavoastră prin Bluetooth și cu pompa printr-o conexiune radio compatibilă. Primul astfel de dispozitiv s-a numit RileyLink, dar acum sunt disponibile o serie de alte opțiuni care pot oferi funcționalitate suplimentară.
     
-    - Rileylink available at [getrileylink.org](https://getrileylink.org/product/rileylink916)
-    - Orangelink available at [getrileylink.org](https://getrileylink.org/product/orangelink)
-    - Emalink (multiple model options) available at [github.com](https://github.com/sks01/EmaLink)
-    - Gnarl (some additional DIY required) details available at [github.com](https://github.com/ecc1/gnarl)
+    - RileyLink disponibil la [getrileylink.org](https://getrileylink.org/product/rileylink916)
+    - OrangeLink disponibil la [getrileylink.org](https://getrileylink.org/product/orangelink)
+    - EmaLink (mai multe opțiuni ale modelului) disponibil pe [github.com](https://github.com/sks01/EmaLink)
+    - Gnarl (necesită unele adaptări/modificări suplimentare de tip „Fă-o Singur" - DIY) detalii disponibile pe [github.com](https://github.com/ecc1/gnarl)
 
-A comparison chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+Un grafic de comparație pentru diferitele dispozitive compatibile RileyLink poate fi găsit la [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
 (MedtronicPump-configuration-of-the-pump)=
 
-## Configuration of the pump
+## Configurarea pompei
 
-The following settings should be configured on the pump in order for AAPS to remotely send commands. The steps necessary to make each change on a Medtronic 715 are shown in brackets for each setting. The exact steps may vary based on pump type and/or firmware version.
+Următoarele setări trebuie să fie configurate în pompă pentru ca AAPS să trimită comenzi de la distanță. Etapele necesare pentru a face fiecare modificare pe un Medtronic 715 sunt indicate în paranteze pentru fiecare setare. Etapele exacte pot varia în funcție de tipul pompei și/sau versiunea firmware.
 
-- **Enable remote mode on Pump** (On the pump press Act and go to Utilities -> Remote Options, Select On, and on next screen do Add ID and add any random id such as 111111). At least one ID must be on the Remote ID list in order for the pump to expect remote communication.
-- **Set Max Basal** (On the pump press Act and got to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
-- **Set Max Bolus** (On the pump press Act and to to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. The maximum value permitted by the pump is 25.
-- **Set profile to Standard**. (On the pump press Act and go to Basal and then Select Patterns) The pump will only need one profile as AAPS will manage different profiles on your phone. No other patterns are required.
-- **Set Temporary Basal Rate type** (On the pump press Act and go to Basal and then Temp Basal Type). Select Absolute (not Percent).
+- **Activează modul de la distanță în pompa** (Pe pompă apasă Act și mergi la utilități -> Opțiuni de distanță, Selectați Activat, și pe ecranul următor să adăugați ID și să adăugați orice ID aleatoriu cum ar fi 111111). Cel puțin un ID trebuie să fie pe lista de ID-uri la distanță pentru ca pompa să se aștepte la comunicarea la distanță.
+- **Setați bazala maximă** (Pe pompă apăsați Act și ajungeți la bazală și apoi selectați Rată bazală Max) ca un exemplu de setare a acestei valori la de patru ori rata bazală standard maximă ar permite o rată bazală temporară de 400 %. Valoarea maximă permisă de pompă este de 34,9 unități pe oră.
+- **Setează bolusul maxim** (Pe pompă, apăsați pe Act și mergeți la bolus, apoi selectați bolus maxim) Acesta este cel mai mare bolus pe care pompa îl va accepta. Valoarea maximă permisă de pompă este 25.
+- **Setează profilul la standard**. (Pe pompă, apăsați pe Act și mergeți la Bazal, apoi Selectați Tipare) Pompa va avea nevoie de un singur profil, deoarece AAPS va gestiona profiluri diferite pe telefonul dumneavoastră. Nu sunt necesare alte tipare.
+- **Setează tipul de rată bazală temporară** (În pompă apăsați Act și mergeți la bazală și apoi tipul bazalei temporare). Selectați Absolut (nu Procent).
 
-## Medtronic Configuration of Phone/AAPS
+## Configurare Medtronic a telefonului/AAPS
 
-- **Do not pair RileyLink compatible device with the Bluetooth menu on your phone.** Pairing via the Bluetooth menu on your phone will stop AAPS from seeing your Rileylink Compatible device when you follow the instructions below.
-- Disable automatic screen rotation on your phone. On certain devices automatic screen rotation causes Bluetooth sessions to restart which would cause issues for your Medtronic pump. 
-- There are two ways to configure your Medtronic pump in AAPS:
+- **Nu asociați dispozitivul compatibil RileyLink din meniul Bluetooth de pe telefonul dumneavoastră** Asocierea prin meniul Bluetooth de pe telefon va opri AAPS să vadă dispozitivul compatibil RileyLink atunci când urmați instrucțiunile de mai jos.
+- Dezactivați rotirea automată a ecranului pe telefon. Pe anumite dispozitive rotirea automată a ecranului determină repornirea sesiunilor Bluetooth, ceea ce ar cauza probleme pompei Medtronic. 
+- Există două modalități de a configura pompa Medtronic în AAPS:
 
-1. Using the setup wizard as part of a fresh install
-2. By selecting the cog icon beside the Medtronic selection in the pump selection option in Config Builder
+1. Utilizarea asistentului de configurare ca parte a unei noi instalări
+2. Selectând pictograma roată dințată (sau: iconița setări) de lângă selecția Medtronic, în opțiunea de selectare a pompei din Configurator
 
-When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot successfully connect to the pump). Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
+Când configurați pompa Medtronic cu ajutorul asistentului de configurare, este posibil să nu puteți finaliza configurarea din cauza problemelor Bluetooth (spre exemplu nu vă puteți conecta cu succes la pompă). Dacă se întâmplă acest lucru, trebuie să selectați opțiunea pompei virtuale pentru a finaliza configurația și pentru a permite depanarea ulterioară folosind opțiunea 2.
 
-![Medtronic Settings](../images/Medtronic01a.png)
+![Setări Medtronic](../images/Medtronic01a.png)
 
-While setting up AAPS to work with your medtronic pump you need to set following items: (see picture above)
+În timpul configurării AAPS pentru a lucra cu pompa Medtronic trebuie să setați următoarele elemente: (vedeți imaginea de mai sus)
 
-- **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
-- **Pump Type**: The model pump you are using (e.g. 522). 
-- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select): 
-    - for US & Canada, frequency used is 916 Mhz
-    - for Worldwide, frequency used is 868 Mhz
-- **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above). Again this setting must be carefully selected as it will determine how much AAPS can deliver via your basal rate. This will effectively set the maximum temporary basal rate. As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
-- **Max Bolus on Pump (U)** (in an hour): This needs to match the setting set on your pump (see Configuration of the pump above). This setting should be carefully considered as it determines how large a bolus AAPS can ever set.
+- **Numărul de serie al pompei**: afișat pe spatele pompei și începe cu SN. Ar trebui să introduceți doar cele 6 numere afișate fără nici un caracter alfabetic (de exemplu 123456).
+- **Tip pompă**: Pompa model pe care o folosiți (de exemplu 522). 
+- **Frecvența pompei**: Există două opțiuni bazate pe locul în care pompa a fost distribuită inițial. Vă rugăm să verificați [Întrebările frecvente](#MedtronicPump-faq) dacă nu sunteți sigur ce opțiune să selectați: 
+    - pentru SUA & Canada, frecvența utilizată este de 916 Mhz
+    - pentru restul lumii, frecvența utilizată este 868 Mhz
+- **Bazală maximă în pompă (U/h)**: Aceasta trebuie să corespundă setării din pompă (vedeți Configurarea pompei de mai sus). Din nou, această setare trebuie selectată cu atenție, deoarece va determina cât de mult AAPS poate livra prin rata bazală. Aceasta va stabili efectiv rata bazală temporară maximă. De exemplu, stabilirea acestei valori la de patru ori valoarea maximă a valorii bazalei standard ar permite o rată bazală temporară de 400%. Valoarea maximă permisă de pompă este de 34,9 unități pe oră.
+- **Bolus maxim în pompă (U)** (într-o oră): Aceasta trebuie să corespundă setării setate de pompă (vedeți Configurarea pompei de mai sus). Această setare trebuie analizată cu atenție, deoarece determină cât de mare poate fi setat bolusul de către AAPS.
 - **Întârziere înainte ca bolusul să înceapă (s)**: Numărul de secunde după ce un bolus este emis înainte ca această comandă să fie trimisă la pompă. Această perioadă de timp permite utilizatorului să anuleze bolusul în cazul în care o comandă bolus este trimisă din greșeală. Nu este posibilă anularea unui bolus care a început prin AAPS. Singurul mod de a anula un bolus care a început deja este de a suspenda pompa manual, urmat de reluare.
 - **Codificarea Medtronic**: Determină dacă codarea Medtronic se efectuează. Selectarea codificării hardware (adică, efectuată de dispozitivul compatibil Rileylink) este preferată, deoarece aceasta duce la trimiterea mai multor date. Selectarea codificării Software (spre exemplu realizată de AAPS) poate ajuta în cazul în care se văd deconectări frecvente. Această setare va fi ignorată dacă aveți versiunea de firmware 0.x pe dispozitivele Rileylink.
 - **Tipul bateriei (Power View)**: Pentru a determina corect nivelul rămas al bateriei ar trebui să selectați tipul de baterie AAA în uz. Atunci când o altă valoare decât vizualizarea simplă este selectată AAPS va afișa nivelul procentual al bateriei și voltajul. Sunt disponibile următoarele opțiuni:
@@ -182,6 +182,6 @@ Există o serie de opțiuni pentru încercarea rezolvării problemelor de conect
 
 Pe spatele pompei veți găsi o linie care detaliază numărul modelului dumneavoastră, împreună cu un cod special de 3 litere. Primele două litere determină tipul de frecvență și ultimul determină culoarea. Iată valorile posibile pentru frecvență:
 
-- NA - America de Nord (în selecția de frecvențe trebuie să selectați „US & Canada (916 MHz)”)
+- NA - America de Nord (în selecția de frecvențe trebuie să selectați „US & Canada (916 MHz)")
 - CA - Canada (în selecția de frecvențe trebuie să selectați "US & Canada (916 MHz)")
 - WW - Lume (în selectarea frecvenței trebuie să selectați "Worldwide (868 Mhz)")
