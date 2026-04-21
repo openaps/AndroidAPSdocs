@@ -260,7 +260,7 @@ For Tidepool it is even simpler, as you only need your personal login informatio
 
 After making your selection, please press the cogwheel button next to the item you selected :
 
-![Synchronization](../images/setup-wizard/Wizard15.png)
+![Sincronizare](../images/setup-wizard/Wizard15.png)
 
 Here you are configuring the Nightscout reporting server.
 
@@ -333,7 +333,7 @@ Press "NEXT" to go to the next screen.
 
 ![Name](../images/setup-wizard/Wizard17.png)
 
-## Patient type
+## Tip de pacient
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
 
