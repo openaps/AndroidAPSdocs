@@ -45,7 +45,7 @@ CAUTION: When activating a patch with AAPS you **MUST** disable all other device
 
 ### Step 1: Select Medtrum pump
 
-#### Option 1: New installations
+#### Opțiunea 1: Instalări noi
 
 If you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “Medtrum” when you reach Pump selection.
 
@@ -53,7 +53,7 @@ If in doubt you can also select “Virtual Pump” and select “Medtrum” late
 
 ![Setup Wizard](../images/medtrum/SetupWizard.png)
 
-#### Option 2: The Config Builder
+#### Opțiunea 2: Configurator
 
 On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
 
