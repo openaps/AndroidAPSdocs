@@ -132,7 +132,7 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 - Define which buttons are visible on the bottom of your home screen.
 - Setting hidden in [simple mode](#preferences-simple-mode).
 
-![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
+![Preferințe > Butoane](../images/Pref2020_OV_Buttons.png)
 
 - The **Increment** options allow you to define the amount for the three buttons in the carb and insulin dialogues, for easy entry.
 
@@ -145,57 +145,57 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 
 Create customized buttons for certain standard meals or snacks which will be displayed on the home screen. Useful for standard meals frequently eaten.
 
-For each button, you define the carbs and calculation method for the bolus. Then, you define during which time period the button will be visible on your home screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+For each button, you define the carbs and calculation method for the bolus. Then, you define during which time period the button will be visible on your home screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. Dacă sunt specificate ore diferite pentru diferite mese, veți avea întotdeauna butonul de masă standard corespunzător pe ecranul de pornire, în funcție de ora zilei.
 
 ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
 
 If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
 
-The proposal has to be confirmed before insulin is delivered.
+Propunerea trebuie confirmată înainte de a se administra insulină.
 
-![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
+![Preferințe > buton Asistent rapid](../images/Pref2020_OV_QuickWizard2.png)
 
 Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### Ținte temporare implicite
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
 [Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
 
-Here you can change the target and the duration for each predefined TT. Preset values are:
+Here you can change the target and the duration for each predefined TT. Valorile prestabilite sunt:
 
 * Eating soon: target 72 mg/dL / 4.0 mmol/l, duration 45 min
 * Activity: target 140 mg/dL / 7.8 mmol/l, duration 90 min
 * Hypo: target 125 mg/dL / 6.9 mmol/l, duration 45 min
 
-![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
+![Preferințe > Ținte temporare implicite](../images/Pref2020_OV_DefaultTT.png)
 
 Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
 
-### Fill/Prime standard insulin amounts
+### Umplere/Amorsare cantități standard de insulină
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
 If you want to fill the tube or prime cannula through **AAPS** you can do this through the [**Actions** tab](#screens-action-tab).
 
-Pre-set values can be defined in this dialogue. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+În acest dialog pot fi definite valori prestabilite. Alege butonul corespunzător cantității implicite de insulina pentru umplere/amorsare, în funcție de lungimea cateterului.
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### Intervalul pentru vizualizare
 
-Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. Este doar pentru vizualizare, nu este intervalul țintă al glicemiei. Exemplu: 70-180 mg/dl sau 3,9-10 mmol/l
 
-![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
+![Preferințe > Interval de vizualizare](../images/Pref2020_OV_Range2.png)
 
-### Shorten tab titles
+### Scurtează titlurile filelor
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
 Useful to see more tab titles on screen.
 
-For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+De exemplu, fila "OpenAPS AMA" devine "OAPS", "OBIECTIVE" devine "OBJ" șamd.
 
 ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
