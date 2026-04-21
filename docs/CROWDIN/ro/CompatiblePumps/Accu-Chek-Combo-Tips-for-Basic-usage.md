@@ -24,7 +24,7 @@
 
 ### Cauzele fundamentale și consecințele erorilor frecvente de comunicare
 
-* Pe telefoanele cu **memorie mică** (sau **setări agresive de economisire a energiei**), AAPS este adesea închis. Vă puteți da seama prin faptul că butoanele Bolus și Calculator de pe ecranul de pornire nu sunt afișate la deschiderea AAPS deoarece sistemul se inițializează. Acest lucru poate declanșa "alarma de pompă indisponibilă" la pornire. In the **Last Connection** field of the Combo tab, you can check when AAPS last communicated with the pump.
+* Pe telefoanele cu **memorie mică** (sau **setări agresive de economisire a energiei**), AAPS este adesea închis. Vă puteți da seama prin faptul că butoanele Bolus și Calculator de pe ecranul de pornire nu sunt afișate la deschiderea AAPS deoarece sistemul se inițializează. Acest lucru poate declanșa "alarma de pompă indisponibilă" la pornire. În câmpul **Ultima Conexiune** din fila Combo, poți verifica când AAPS a comunicat ultima dată cu pompa.
 
 ![Pompă indisponibilă](../images/combo/combo-tips-pump-unreachable.png)
 
@@ -63,37 +63,37 @@
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Ranges for typical life time of the different battery types are as follows:
+Intervalele pentru durata de viața tipică a diferitelor tipuri de baterie sunt următoarele:
 
-* **Energizer Ultimate Lithium**: 4 to 7 weeks
-* **Power One Alkaline** (Varta) from the service pack: 2 to 4 weeks
-* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
+* **Energizer Ultimate Litiu**: 4 până la 7 săptămâni
+* **Power One Alcalin** (Varta) din pachetul de servicii: 2 până la 4 săptămâni
+* Baterii ** Eneloop reîncărcabile** (BK-3MCCE): 1 până la 3 săptămâni
 
-If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
+Dacă durata de viață a bateriei este semnificativ mai scurtă decât cea de mai sus, vă rugăm să verificați următoarele cauze:
 
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period. 
-* The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+* Există unele variante ale capacului bateriei cu filet al pompei Combo, care scurtcircuitează parțial bateriilor și le consumă rapid. Capacele fără această problemă pot fi recunoscute după contactele metalice aurite.
+* Dacă ceasul pompei nu "supraviețuiește" o schimbare scurtă a bateriilor, este probabil ca condensatorul, ceea ce menține ceasul în funcțiune în timpul unei scurte întreruperi a alimentării, să fie stricat. În acest caz, ar putea ajuta înlocuirea pompei de către Roche, ceea ce nu reprezintă o problemă în perioada de garanție. 
+* Hardware-ul și software-ul pentru telefoanele inteligente (sistemul de operare Android și stiva Bluetooth) influențează, de asemenea, durata de viață a bateriei pompei, chiar dacă factorii exacți nu sunt încă pe deplin cunoscuți. Dacă aveți ocazia, încercați un alt telefon inteligent și comparați durata de viață a bateriei.
 
-## Extended bolus, multiwave bolus
+## Bolus extins, bolus multiplu
 
-The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
+Algoritmul OpenAPS nu suportă un bolus paralel extins sau bolusuri multiple. Dar un tratament similar poate fi obținut prin următoarele alternative:
 
-* Use **e-Carbs** when entering carbs or using the Calculator by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in you blood. The system will then calculate small carbs equally distributed over the whole duration which will cause th algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immediate bolus with e-carbs. 
-* Before eating, on the **Actions tab** in AAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. The duration should be based on the interval you would choose for an extended bolus. This will keep your target lower than usual and therefore increase the amount of insulin delivered.
-* Then use the **CALCULATOR** to enter the full carbs of the meal, but do not directly apply the values suggested by the bolus calculator. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max IE / h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
+* Folosiți **carbohidrați extinși** când introduceți carbohidrații sau folosiți calculatorul prin introducerea carbohidraților la întreaga masă și durata de timp în care vă așteptați transformarea carbohidraților în glucoză în sângele dumneavoastră. Sistemul va calcula apoi carbohidrați mici distribuiți egal pe întreaga durată de absorbție, ceea ce va determina algoritmul să asigure o dozare echivalentă de insulină, verificând în același timp în permanență creșterea/scăderea generală a glicemiei. Pentru o abordare cu bolus dual, puteți de asemenea să combinați un mic bolus imediat împreună cu carbohidrați extinși. 
+* Înainte de a mânca, în secțiunea **Acțiuni** din AAPS setați ca un obiectiv temporar **Mănânc în curând** cu o țintă a glicemiei de 80 pentru câteva ore. Durata ar trebui să se bazeze pe intervalul pe care l-ați alege pentru bolusul prelungit. Acest lucru vă va menține ținta mai mică decât de obicei și, prin urmare, va crește cantitatea de insulină furnizată.
+* Apoi folosiți **CALCULATORUL** pentru a introduce în întregime carbohidrații pentru masă, dar nu implementați direct valorile sugerate de calculatorul de bolus. Dacă un bolus multiplu urmează să fie administrat, corectați în jos dozajul de insulină. În funcție de masă, algoritmul trebuie acum să furnizeze SMB suplimentare sau rate bazale temporare mai mari pentru a contracara creșterea glicemiei. În acest caz, limitarea de siguranța a ratei bazale (Max IE / h, IOB bazală maximă) trebuie experimentată cu foarte mare atenție și, dacă este necesar, temporar modificată.
 
-* If you are tempted to just use the extended or multiwave bolus directly on the pump, AAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
+* Dacă sunteți tentat să utilizați direct bolusul extins sau multiplu din pompă, AAPS vă va penaliza prin dezactivarea buclei închisă pentru următoarele șase ore pentru a se asigura că nu se calculează doze de insulină în exces.
 
-![Disabled loop after multiwave bolus](../images/combo/combo-tips-multiwave-bolus.png)
+![Buclă dezactivată după bolus multiplu](../images/combo/combo-tips-multiwave-bolus.png)
 
-## Alarms at bolus delivery
+## Alarme la administrarea bolusului
 
-* If AAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical number of insulin units. If your really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
-* The alarm is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Here indistinguishable entries must be prevented.
+* Dacă AAPS detectează că un bolus identic a fost livrat cu succes în același minut, administrarea bolusului va fi prevenită cu un număr identic de unități de insulină. Dacă doriți să bolusați aceeași cantitate de insulină de două ori în succesiune rapidă, așteptați încă două minute și apoi administrați din nou bolusul. În cazul în care primul bolus a fost întrerupt sau nu a fost livrat din alte motive, puteți retrimite imediat bolusul de la AAPS 2.0 încoace.
+* Alarma este un mecanism de siguranță care citește istoricul bolusurilor din pompă înainte de a trimite un nou bolus pentru a calcula corect insulina la bord (IOB), chiar și atunci când un bolus este administrat direct din pompă. În acest caz, trebuie prevenite înregistrările care nu pot fi distinse.
 
-![Double bolus](../images/combo/combo-tips-doppelbolus.png)
+![Bolus dublu](../images/combo/combo-tips-doppelbolus.png)
 
-* This mechanism is also responsible for a second cause of the error: If during the use of the bolus calculator another bolus is delivered via the pump and thereby the bolus history changes, the basis of the bolus calculation is wrong and the bolus is aborted. 
+* Acest mecanism este, de asemenea, responsabil de o a doua cauză a erorii: Dacă în timpul utilizării calculatorului de bolus, un alt bolus este administrat prin intermediul pompei și astfel se modifică istoricul bolusului, baza de calcul a bolusului este greșită și bolusul este întrerupt. 
 
-![Canceled bolus](../images/combo/combo-tips-history-changed.png)
+![Bolus anulat](../images/combo/combo-tips-history-changed.png)
