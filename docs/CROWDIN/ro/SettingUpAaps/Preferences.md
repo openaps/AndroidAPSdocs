@@ -200,37 +200,37 @@ De exemplu, fila "OpenAPS AMA" devine "OAPS", "OBIECTIVE" devine "OBJ" șamd.
 ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes field in treatments dialogs
+### Afișați zona pentru note în dialogurile de tratamente
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
-Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+Oferă posibilitatea sa adaugi texte scurte la tratament (ajutor la bolusare, carbohidrați, insulină...)
 
-![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
+![Preferințe > Note în dialogurile de tratament](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
 ### Lumini de stare
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
-Status lights give a visual warning for:
+Luminile de stare oferă un avertisment vizual pentru:
 
 - Vechime senzor
 - Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
 - Vechimea insulinei (de câte zile este utilizat rezervorul)
 - Nivelul rezervorului (unități)
 - Vechime canulă
-- Pump battery age
-- Pump battery level (%)
+- Vechime baterie pompă
+- Nivel baterie pompă (%)
 
 If the warning threshold is exceeded, values will be shown in yellow. If the critical threshold is exceeded, values will be shown in red.
 
 The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
 
-![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
+![Preferințe > Lumini de stare](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Deliver this part of bolus wizard result
+### Administrează doar această parte din cantitatea calculată de asistent
 
 Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
 
@@ -259,7 +259,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 % todo
 
 (Preferences-advanced-settings-overview)=
-### Advanced Settings (Overview)
+### Setări avansate (Privire generală)
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
@@ -267,43 +267,43 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
-Option to enable superbolus in bolus wizard.
+Activarea superbolusului în asistentul de bolus.
 
 [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. It is different from *super micro bolus*!
 
-Use with caution and do not enable it until you learn what it really does. Practic, bazala pentru următoarele două ore este adăugată la bolus și se activează în următoarele două ore o bazală temporară zero. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Use with caution and do not enable it until you learn what it really does. Practic, bazala pentru următoarele două ore este adăugată la bolus și se activează în următoarele două ore o bazală temporară zero. **Funcțiile buclei AAPS vor fi dezactivate - așa că utilizați cu grijă! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ## Siguranța tratamentului
 
 (preferences-patient-type)=
-### Patient type
+### Tip de pacient
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
+- Limitele de siguranță sunt stabilite în baza vârstei selectate în această setare.
+- Dacă începeți să vă loviți de aceste limite dure (cum ar fi bolusul maxim) este timpul să vă mutați cu un pas mai sus.
 - It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
 - If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 ### Max allowed bolus
 
 - Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
+- Această setare are rațiunea de a fi o limită de siguranță pentru a preveni livrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului.
+- Este recomandat să stabiliți această valoare la o cantitate de bun simț, care corespunde în linii mari cu maximul de bolus de insulină pe care l-ați putea face la o masă sau ca pe o corecție în mod obișnuit.
+- Restricția este, de asemenea, aplicată și rezultatele calculatorului de bolus.
 
 ### Max allowed carbs
 
 - Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- Această setare are rațiunea de a fi o limită de siguranță pentru a preveni livrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului.
+- Se recomandă să stabiliți această setare la o valoare de bun simț, care să corespundă, în linii mari, cantității maxime de carbohidrați pe care ați putea-o ingera la o masă.
 
 ## Buclă
 
 As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
 
 (Preferences-minimal-request-change)=
-### Minimal request change
+### Cereri minime pentru modificări
 
-When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the minimal request rate. This defines the relative change required to trigger a notification.
+When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the minimal request rate. Aceasta definește modificarea relativa care declanșează o notificare.
 
 ## Asistent avansat la masă (AMA) sau Super Micro bolus (SMB)
 
@@ -334,21 +334,21 @@ The algorithm uses BGI (blood glucose impact) to determine when [carbs are absor
 
 At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. Practic, este un sistem de siguranță. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
 
-To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Schimbare mare=mulți carbohidrați etc.
+Pentru a spune mai simplu: Algoritmul "știe" cum *ar trebui* să se comporte glicemia ta atunci când este afectată de doza actuală de insulină șamd. Ori de câte ori există o deviere pozitivă de la comportamentul așteptat, câțiva carbohidrați sunt absorbiți/eliminați. Schimbare mare=mulți carbohidrați etc.
 
-The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+Algoritmul min_5m_carbimpact definește impactul implicit al absorbției carbohidraților per 5 minute. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-Standard value for AMA is 5, for SMB it's 8.
+Valoarea standard pentru AMA este 5, pentru SMB este 8.
 
-The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+Graficul COB de pe ecranul principal indică atunci când este folosit min_5m_impact punând un cerc portocaliu în partea de sus.
 
 ![COB graph](../images/Pref2020_min_5m_carbimpact.png)
 
 ### Meal max absorption time
 
-If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Dacă mâncați în mod obișnuit mâncăruri grase sau cu proteine multe, va trebui să creșteți timpul de absorbție.
 
-### Advanced settings - autosens ratio
+### Setări avansate - raport autosens
 
 ![Setări absorbție](../images/Pref2020_Absorption.png)
 
@@ -359,7 +359,7 @@ If you often eat high fat or protein meals you will need to increase your meal a
 
 ### BT Watchdog
 
-Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+Activate BT watchdog if necessary (e.g. for Dana pumps). Asta va opri Bluetooth pentru o secundă daca nu este posibilă conexiunea la pompă. Aceasta poate ajuta în cazul unor telefoane cărora le îngheață stiva Bluetooth.
 
 ## Setări pompă
 
@@ -380,7 +380,7 @@ Original communication protocol, can be used with older Nightscout versions.
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 - The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
 - This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
+- Verificați temeinic să nu existe greșeli de scriere în aceste setări, în cazul în care nu puteți îndeplini Obiectivul 1.
 
 ## NSClientV3
 
@@ -398,11 +398,11 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 - In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **NS access token** (not your API Secret!).
 - This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
+- Verificați temeinic să nu existe greșeli de scriere în aceste setări, în cazul în care nu puteți îndeplini Obiectivul 1.
 - Leave Connect to websockets enabled (recommended).
 
 (Preferences-nsclient-synchronization)=
-### Synchronization
+### Sincronizare
 
 ![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
 
