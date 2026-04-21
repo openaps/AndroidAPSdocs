@@ -12,7 +12,7 @@ See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for 
 
 (KeyAapsFeatures-OpenLoop)=
 
-### Open Loop
+### Buclă deschisă
 
 **AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
 
@@ -22,7 +22,7 @@ This option is for getting to know how **AAPS** works or if you are using an uns
 
 (KeyAapsFeatures-LGS)=
 
-### Low Glucose Suspend (LGS)
+### Suspendare la Hipoglicemie (LGS =Low Glucose Suspend)
 
 In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
 
@@ -32,7 +32,7 @@ This mode is available starting at **[Objective 6](#objectives-objective6)**.
 
 (KeyAapsFeatures-ClosedLoop)=
 
-### Closed Loop
+### Buclă închisă
 
 **AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (*i.e.* without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
 
@@ -68,8 +68,8 @@ SMBs are shown on the main graph with blue triangles. Tap on the triangle to see
 
 **SMB's** features contain some safety mechanisms:
 
-1. **Largest single SMB dose**  
-    The largest single SMB dose can only be the smallest value of:
+1. **Cea mai mare doză unică de SMB**  
+    Cea mai mare doză de SMB poate fi doar cea mai mică valoare din:
     
     - value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
     - half the amount of insulin currently required, or
@@ -97,11 +97,11 @@ The settings for OpenAPS SMB are described below.
 
 This safety setting determines the maximum temporary basal rate the insulin pump may deliver. It is also known as **max-basal**.
 
-The value is measured in units per hour (U/h). It is advised to set this to something sensible. A good recommendation for setting this parameter is:
+Această valoare se măsoară în unități de insulina per oră (u/o). Se recomandă setarea unei valori de bun simț. A good recommendation for setting this parameter is:
 
 **MAX-BASAL = HIGHEST BASAL RATE x 4**
 
-For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
+De exemplu, dacă cea mai mare rată bazală din profilul tău a fost 0,5 U/h puteți multiplica cu 4 pentru a obține o valoare de 2 U/h.
 
 **AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
 
@@ -123,7 +123,7 @@ If the current IOB (e.g. after a meal bolus) is above the defined value, the loo
 
 A good start for setting this parameter is:
 
-    maxIOB = average mealbolus + 3x max daily basal
+    maxIOB = medie bolus de masă + 3x maximul bazalei zilnice
     
 
 Be careful and patient when adjusting your **max-IOB**. It is different for everyone and can also depend on the average total daily dose (TDD).
@@ -142,15 +142,15 @@ Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
-### Enable dynamic sensitivity
+### Activați sensibilitate dinamică
 
 This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
 
-### Use Autosens feature
+### Folosește opțiunea autosens
 
 This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
 
-Autosens looks at blood glucose deviations (positive/negative/neutral). It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
+Autosens looks at blood glucose deviations (positive/negative/neutral). Pe baza acestor deviații va încerca să-și dea seama cât de sensibil/rezistent sunteți și va ajusta rata bazală și ISF pe baza lor.
 
 When enabled, new settings become available.
 
@@ -287,7 +287,7 @@ You can find more information in the [OpenAPS documentation](https://newer-docs.
 
 ### Maximul U/oră la care poate fi setată o bazală temporară (OpenAPS "max-bazal")
 
-This safety setting helps **AAPS** from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+This safety setting helps **AAPS** from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. Se recomandă setarea unei valori de bun simț. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
 
 You cannot choose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
 
