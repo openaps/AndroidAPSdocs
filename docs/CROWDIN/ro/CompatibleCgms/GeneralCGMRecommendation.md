@@ -9,33 +9,33 @@ Whichever CGM system you are using, if you are going to use blood based calibrat
 -   Avoid calibrating when glucose levels are moving up or down.
 -   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
 -   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
--   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+-   Dacă este posibil, calibrați cu unele valori dintr-o gamă mai mică (4-5mmol/l sau 72-90mg/dl) și unele de la un nivel ușor mai înalt (7-9mmol/l sau 126-160mg/dl), deoarece aceasta oferă o gamă mai bună pentru calibrarea punctelor/pantei.
 
 ## Inserare senzor (G6)
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor contacts should not come into contact with blood.
+Atunci când este inserat senzorul, este recomandat să nu se apese prea ferm pe inserator pentru a evita sângerarea. Contactele senzorului nu trebuie să intre în contact cu sângele.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Atenție! First click in the square side and then press down the round side.
+După inserarea senzorului, transmițătorul poate fi apăsat în suportul de pe senzor. Atenție! Mai întâi îl introduceți în partea ascuțită și apoi apăsați pe partea rotundă.
 
-(general-cgm-troubleshooting)=
+(depanare-generală-cgm)=
 ## Depanare
 
 ### Probleme de conectare
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip+ does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
+Conexiunea Bluetooth poate fi deranjată de alte dispozitive Bluetooth din apropiere, cum ar fi glucometre, căști, tablete sau dispozitive de bucătărie cum ar fi cuptoarele cu microunde sau plitele electrice. În acest caz, xDrip nu afișează valorile glicemiei. Când conexiunea Bluetooth este restabilită, datele sunt recuperate și completate.
 
 ### Erori senzor
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor contacts should not come into contact with blood.
+Dacă apar erori de senzor repetate, încercați să alegeți un alt loc pe corp pentru a insera senzorul. Contactele senzorului nu trebuie să intre în contact cu sângele.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Adesea o eroare de senzor poate fi corectată prin hidratare imediată și masare ușoară în jurul senzorului!
 
 ### Valori săltărețe
 
-You might try to change settings for noise blocking in xDrip+ (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Ați putea încerca să modificați setările pentru blocarea zgomotului în xDrip+ (Setările între aplicații - Blocarea zgomotului), adică "Blocare zgomot foarte mare și mai rău". Vedeți de asemenea [Netezirea datelor de glicemie](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Vârstă negativă a senzorului
 
-![Negative sensor age](../images/Troubleshooting_SensorAge.png)
+![Vechimea negativă a senzorului](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](#screens-action-tab) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
+Acest lucru se întâmplă dacă există fie o înregistrare dublă "Inserare senzor CGM" în [fila / meniul de acțiuni](#screens-action-tab) sau un senzor inserat cu dată greșită. Mergeți la fila de tratamente \> careportal și ștergeți intrarea greșită.
