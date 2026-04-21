@@ -45,47 +45,47 @@
 
 ### Metoda 1) Verificați pompa din nou după ce setările din aplicația AAPS au fost finalizate.
 
-- Click on the 3 dots button on the top right.
+- Atingeți pe butonul 3 puncte din dreapta sus.
 
 ![image](../images/DiaconnG8/DiaconnG8_09.jpg)
 
-- Click on Exit.
+- Apăsați pe Ieșire.
 
 ![image](../images/DiaconnG8/DiaconnG8_10.jpg)
 
-### Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+### Metoda 2) Dacă prima metodă nu funcționează, deconectați Bluetooth și apoi reconectați.
 
-- Press and hold the Bluetooth button at the top for about 3 seconds.
+- Apăsați și mențineți apăsat butonul Bluetooth din partea de sus timp de aproximativ 3 secunde.
 
 ![image](../images/DiaconnG8/DiaconnG8_11.jpg)
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- Apăsați pe butonul de setare al pompei de insulină Diaconn G8 asociate.
 
 ![image](../images/DiaconnG8/DiaconnG8_12.jpg)
 
-- Unpair.
+- Dezasociați.
 
 ![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- Repeat the Bluetooth pairing process for the pump (see above).
+- Repetați procesul de asociere cu Bluetooth pentru pompă (vedeți mai sus).
 
-## Further Information
+## Informații suplimentare
 
-### Diaconn G8 Insulin pump option setting
+### Setări pompă de insulină Diaconn G8
 
-- Config manager > pump > Diaconn G8 > Settings
-- DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+- Manager configurare > pompă > Diaconn G8 > Setări
+- DIACONN G8 din partea de sus> buton 3 puncte din dreapta sus > Preferințe Diaconn G8
 
-![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
+![Opțiuni pompă Diaconn G8](../images/DiaconnG8/DiaconnG8_14.jpg)
 
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+- În cazul în care opțiunea **Înregistrați schimbările de rezervor** este activată, detaliile relevante sunt încărcate automat în Nightscout, atunci când apare un eveniment "Schimbare insulină".
+- Dacă opțiunea **Înregistrați schimbare ac** este activată, detaliile relevante sunt încărcate automat în Nightscout, atunci când are loc un eveniment "Schimbare loc".
+- În cazul în care opțiunea **Înregistrați schimbările de tub** este activată, detaliile relevante sunt încărcate automat în Nightscout, atunci când apare un eveniment "Schimbare tub".
+- În cazul în care opțiunea **Înregistrează schimbările de baterie** este activată, detaliile relevante sunt încărcate automat în Nightscout, atunci când are loc un eveniment "Schimbare baterie" și butonul SCHIMBARE BATERIE POMPĂ din fila ACȚIUNI este dezactivat. (Notă: Pentru a schimba bateria, vă rugăm să opriți toate funcțiile în curs ce implică injectar înainte de a continua)
 
-![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
+![Meniu acțiuni Diaconn G8](../images/DiaconnG8/DiaconnG8_15.jpg)
 
-### Extended Bolus function
+### Funcția de bolus extins
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- Dacă utilizați bolusul extins, acesta va dezactiva bucla închisă.
+- Vedeți [această pagină](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) pentru detalii de ce bolusul extins nu funcționează într-un scenariu de buclă închisă.
