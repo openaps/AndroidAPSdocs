@@ -263,13 +263,13 @@ Your apk was built successfully and can be transferred to your phone!
 3. Enable airplane mode & turn off bluetooth.
 4. Instalați noua versiune ("app-full release.apk")
 5. [Importă setările](../Maintenance/ExportImportSettings.md)
-6. Turn bluetooth back on and disable airplane mode
+6. Activați din nou Bluetooth și dezactivați modul avion
 
 ## Apk installed but old version
 
 If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
-## None of the above worked
+## Niciuna dintre cele de mai sus nu a funcționat
 
 If none of the above tips helped you might consider building the apk from scratch:
 
@@ -277,7 +277,7 @@ If none of the above tips helped you might consider building the apk from scratc
 
 2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
 
-    Or you just use a new keystore.
+    Sau folosiți o nouă cheie de identificare (keystore).
 
 3. Build the apk from scratch as described [here](#Building-APK-download-AAPS-code).
 
@@ -285,9 +285,9 @@ If none of the above tips helped you might consider building the apk from scratc
 5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
 6. You should check your battery optimization options and disable them again.
 
-## Worst case scenario
+## Scenariul cel mai nefavorabil
 
-If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scratch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scratch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuale pentru dezinstalare completă pot fi găsite online, spre exemplu
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
