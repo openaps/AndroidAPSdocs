@@ -514,61 +514,61 @@ Pentru probleme cunoscute cu conexiunile Bluetooth, întreruperile pompei, activ
 ---
 ### Eșecuri pompă
 
-- Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself.
-- It is best practice not to raise support / replacement cases with Insulet, since AAPS is not an approved method of using the Pods.
-- A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+- Ocazional, apare un eșec din cauza unei varietăți de probleme, inclusiv a problemelor de hardware cu pompa în sine.
+- Este recomandat să nu deschideți tichete de suport sau cereri de înlocuire la Insulet, deoarece AAPS nu este o metodă de utilizare aprobată pentru pompe.
+- O listă a codurilor de defecțiuni poate fi [**găsită aici**](https://github.com/openaps/openomni/wiki/Fault-event-codes) pentru a ajuta la determinarea cauzei.
 
 ---
-### Preventing error 49 pod failures
+### Prevenirea erorii 49 de pompă
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a built-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
-
----
-
-### Pump Unreachable Alerts
-
-When no communication can be established with the pod for a pre-configured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences** ➜ **Local Alerts** ➜ **Pump unreachable threshold [min]**. Recommended value is alerting after **120** minutes.
+Acest eșec este legat de o stare incorectă a pompei pentru o comandă sau o eroare în timpul unei comenzi de administrare a insulinei. Asta se întâmplă atunci când driverul și pompa sunt în dezacord cu starea de fapt. Pompa (datorită unei măsuri de siguranță integrate) reacționează apoi cu un cod de eroare nevalorificabil 49 (0x31) care se termină cu ceea ce se știe ca un "sunet țipător": sunetul lung și iritant care poate fi oprit doar prin perforarea unei găuri la locul potrivit în spatele pompei. Originea exactă a "defecțiunii 49 a pompei" este adesea greu de identificat. În situații care sunt suspectate de această defecțiune (de exemplu, la închiderile din senin ale aplicației, rularea unei versiuni de dezvoltare sau reinstalare).
 
 ---
-### Export  Settings
 
-Exporting **AAPS** settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling **AAPS** or in case of phone loss, reinstalling on the new phone.
+### Alerte de pompă inaccesibilă
 
-***NOTE:** The active pod information is included in the exported settings. If you import an "old" exported file, your actual pod will "die". There is no other alternative. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore **AAPS'** settings **while keeping the current active Pod**. In this case it is important to only use the recently exported settings file containing the pod currently active.*
-
-**It is good practice to do an export immediately after activating a pod**. This way you will always be able to restore the current active pod in case of a problem. For instance when moving to another backup phone.
-
-Regularly (after each export preferably) copy your exported settings to a safe place (a cloud drive e.g. Google Drive) that is accessible by any phone when needed. This allows you to restore to a phone from anywhere in case of a phone loss or factory reset of your phone while you are not at home.
+Atunci când nu poate fi stabilită nicio comunicare cu pompa pentru o perioadă preconfigurată de timp o alertă de tip „pompă inaccesibilă” va fi emisă. Alertele de pompă inaccesibilă pot fi configurate mergând în meniul cu trei puncte din dreapta sus, selectând **Preferințe** ➜ **Alerte Locale** ➜**Prag pompă inaccesibilă [min]**. Valoarea recomandată este alertarea după **120** minute.
 
 ---
-### Import Settings
+### Exportați setările
 
-**WARNING**: Please note that importing settings will possibly import an outdated Pod status (depending when you made the last export/backup).  
-As a result, there is a **risk of losing the active Pod!** (see **Exporting Settings**).
-1. Only try an import when no other options are available.
-2. When importing settings with an active Pod, make sure the export was done with the currently active pod.
+Prin exportarea setărilor **AAPS** vă permite să restabiliți toate setările și, poate mai important, toate obiectivele dumneavoastră. Este posibil să fie necesară restabilirea setărilor la „ultima configurație funcțională cunoscută” fie după dezinstalarea/reinstalarea **AAPS**, fie în cazul pierderii telefonului și reinstalării aplicației pe un dispozitiv nou.
 
-**Importing while on an active Pod:** (you risk losing the Pod!)
+***NOTĂ:** Informațiile pompei active sunt incluse în setările exportate. Dacă importați un fișier "vechi" exportat, pompa dumneavoastră reală va "muri". Nu există nicio altă alternativă. În unele cazuri (cum ar fi o schimbare de telefon _programată_), s-ar putea să fie necesar să utilizați fișierul exportat pentru a restaura setările **AAPS păstrând în același timp pompa activă curent**. În acest caz, este important să se utilizeze doar fișierul de setări recent exportat care conține în prezent pompa activă.*
 
-1. **Make sure you are importing settings that were recently exported with the currently active Pod!**
-2. Import your settings.
-3. Check all preferences.
+**Este o bună practică să faci un export imediat după activarea unei pompe**. În acest fel veți putea întotdeauna să restabiliți pompa activă curent în cazul unei probleme. De exemplu, la mutarea pe un alt telefon de rezervă.
 
-**Importing (no active Pod session)**
-
-1. Importing any recent export should work (see above)
-2. Import your settings.
-3. Check all preferences.
-4. You may need to **Deactivate** the "non existing" pod if the imported settings included any active pod data.
+Copiați în mod regulat setările exportate (preferabil după fiecare exportare) într-un loc sigur (un disc în cloud, spre exemplu Google Drive) care este accesibil de pe orice telefon atunci când este nevoie. Acest lucru vă permite să restaurați de pe orice telefon de oriunde în cazul unei pierderi de telefon sau a unei resetări din fabrică a telefonului în timp ce nu sunteți acasă.
 
 ---
-### Importing settings that contain Pod state from an inactive Pod
+### Importați setările
 
-When importing settings containing data for a Pod that is no longer active, AAPS will try to connect with it, which will obviously fail. You can not activate a new Pod in this situation.
+**ATENȚIE**: Vă rugăm să rețineți că este posibil ca setările de import să importe o stare a pompei învechită (în funcție de momentul în care ați făcut ultimul export/backup).  
+Ca rezultat, există un **risc de a pierde pompa activă!** (a se vedea **Setările de export**).
+1. Încercați o importare doar atunci când nu sunt disponibile alte opțiuni.
+2. Atunci când importați setări cu o pompă activă, asigurați-vă că exportarea a fost făcut cu pompa activă curent.
 
-To remove the old pod session:
-1. “try” to de-activate the Pod. The de-activation will likely fail.
-2. Select “Retry”.
+**Importarea în timp ce sunteți pe o pompă activă:** (riscați să pierdeți pompa!)
+
+1. **Asigurați-vă că importați setări care au fost exportate recent cu pompa activă în prezent!**
+2. Importați-vă setările.
+3. Verificați toate preferințele.
+
+**Importare (nicio sesiune de pompă activă)**
+
+1. Importarea oricărui export recent ar trebui să funcționeze (vedeți mai sus)
+2. Importați-vă setările.
+3. Verificați toate preferințele.
+4. Este posibil să fie nevoie să **Dezactivați** pompa "inexistentă" dacă setările importate includ datele vreunei pompe active.
+
+---
+### Importă setările care conțin starea pompei de la o pompă inactivă
+
+Atunci când se importă setări care conțin date pentru o pompă care nu mai este activă, AAPS va încerca să se conecteze cu ea, ceea ce în mod evident va eșua. Nu poți activa o nouă pompă în această situație.
+
+Pentru a elimina vechea sesiune de pompă:
+1. „Încercați” pentru a dezactiva pompa. Dezactivarea va eșua, cel mai probabil.
+2. Selectați „Reîncercați”.
 3. After the second or third retry you will get the option to remove the pod.
 4. Once the old pod is removed you will be able to activate a new pod.
 
@@ -594,7 +594,7 @@ When on an active Pod, make sure that you have an export for the current pod ses
 1. Export your settings and store a copy in a safe place (e.g Google Drive).
 2. Uninstall **AAPS** and restart your phone.
 3. Install the new version of **AAPS**.
-4. Import your settings.
+4. Importați-vă setările.
 5. Verify all preferences (optionally import settings again).
 6. Activate a new pod.
 7. When done: Export current settings.
@@ -637,12 +637,12 @@ All of the development work for the DASH is done by the community on a **volunte
 When requesting help come prepared with the following information to help those in the community with your specific questions and problems:
 - Android phone make and model
 - Android OS version (e.g 15 or 16)
-  - Did you recently upgrade your Android OS version?
-- The version of **AAPS** you are running
-- Plain english description of the problem you are facing considering some of the following things
-   - Was it working before now?
-   - When did it work or not work?
-   - Did you make any changes to configuration or profile settings?
-   - Did you pair a new bluetooth device?
-   - Did you upgrade or install a new app?
-   - How long was it working before it stopped working?
+  - Ați actualizat recent versiunea Android OS?
+- Versiunea **AAPS** pe care o utilizați
+- Descriere simplă în limba engleză a problemei cu care vă confruntați luând în considerare câteva dintre următoarele lucruri
+   - A funcționat până acum?
+   - Când a funcționat sau nu a funcționat?
+   - Ați făcut vreo modificare în configurație sau în setările de profil?
+   - Ați asociat un nou dispozitiv Bluetooth?
+   - Ați actualizat sau instalat o aplicație nouă?
+   - Cât de mult a funcționat înainte să înceteze să funcționeze?
