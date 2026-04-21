@@ -1,19 +1,19 @@
-# Freestyle Libre 2 and 2+
+# Freestyle Libre 2 și 2+
 
-The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
+Senzorul Libre 2 Freestyle Libre este acum un adevărat CGM chiar și cu aplicația oficială. Totuși, LibreLink nu poate trimite date către AAPS. Există mai multe soluții pentru a-l utiliza cu AAPS.
 
-## 1. Use a Bluetooth bridge and OOP
+## 1. Utilizați o punte Bluetooth și OOP
 
-Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an out of process algorithm app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](./Libre1.md).
+Transmițătoarele prin Bluetooth pot fi utilizate împreună cu Libre 2 (UE) sau 2 + (UE) și cu o aplicație algoritm în afara procesului. Poți primi valori ale glicemiei la fiecare 5 minute, ca în cazul [Libre 1](./Libre1.md).
 
-Check the bridge and app you want to use are compatible with your sensor and xDrip+.
+Verificați dacă puntea și aplicația pe care doriți să le utilizați sunt compatibile cu senzorul și xDrip+.
 
-The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings as with the original reader. AAPS with Libre 2 do a 10 to 25 minutes smoothing to avoid certain jumps. See below [Value smoothing & raw values](#libre2-value-smoothing-raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
+OOP pentru Libre2 (găsiți-l [aici](#Libre2_OOP2)) creează aceleași citiri de glicemie ca și în cazul cititorului original. AAPS cu Libre 2 face o uniformizare de 10 până la 25 de minute pentru a evita anumite salturi. Vedeți mai jos [Valoare uniformizată& valori brute](#libre2-value-smoothing-raw-values). OOP generează citiri la fiecare 5 minute, în medie cu o medie de 5 minute. Prin urmare, valorile glicemiei nu sunt atât de uniformizate, ci se potrivesc cu cele ale dispozitivului de citire original și urmează mai degrabă valorile "reale" ale glicemiei. Dacă încercați să faceți bucla cu OOP, vă rugăm să activați toate setările de uniformizare din xDrip+.
 
-There are some good reasons to use a Bluetooth transmitter:
+Există motive întemeiate pentru a utiliza un transmițător Bluetooth:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the the readers like values with "calibrate based on glucose".  
-  Make sure to leave OOP1 disabled (2).
+-   Puteți alege diferite strategii de calibrare OOP2 (1): cu valorile cititorului folosind "Fără calibrare", sau prin calibrarea senzorului ca un Libre 1 folosind "calibrare bazată pe valori brute" sau, în cele din urmă, să calibreze valorile cititorului cu "calibrare bazată pe glicemie".  
+  Asigurați-vă că lăsați OOP1 dezactivat (2).
 
     → Hamburger Menu → Settings → Less common settings → Other misc. options
 
@@ -51,9 +51,9 @@ Only Libre 2 and 2+ **EU** models.
 ```
 
 - Follow [these instructions](./Libre2MinimalL00per.md) to setup xDrip+ as the original documentation links to an obsolete OOP2  version.
-- Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+- Urmăriți instrucțiunile de configurare pe pagina [xDrip+ de setări](../CompatibleCgms/xDrip.md).
 
--   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
 
 (libre2-value-smoothing-raw-values)=
 
@@ -81,11 +81,11 @@ You can calibrate the Libre2 **with an offset of -40 mg/dl to +20 mg/dL \[-2,2 m
 
 ## 3. Use Diabox
 
-- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, enable Share data with other apps.
+- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). În Setări, Integrare, activați Partajarea datelor cu alte aplicații.
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
 
 ## 4. Use Juggluco
 
