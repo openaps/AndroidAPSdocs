@@ -57,7 +57,7 @@ xDrip+ can read notifications from the vendor app, like ESEL does. No backfillin
 
 - Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
 - As data source in xDrip+ “Companion App” must be selected.
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
 - Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../CompatibleCgms/xDrip.md).
 - Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
 
