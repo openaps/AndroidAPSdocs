@@ -749,7 +749,7 @@ Informational alert that Pod has been suspended.
 
 Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
 
-#### Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
+#### Unable to verify whether SMB bolus succeeded. Nu s-a putut verifica dacă bolusul SMB a reușit. Daca sunteți sigur că bolusul nu a reușit, ar trebui să ștergeți manual intrarea SMB din Tratamente.
 
 Alert that the SMB bolus success could not be verified, you will need to verify the *Last bolus* field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
 
