@@ -196,37 +196,37 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
 ### Dezactivare pompă
 
-Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of total pod usage.
+În condiții normale, durata de viață preconizată a unei pompe este de trei zile (72 de ore) și de încă 8 ore după avertismentul privind expirarea pompei, pentru un total de 80 de ore de utilizare totală a pompei.
 
-To deactivate a pod (either from expiration or from a pod failure):
+Pentru a dezactiva o pompă (fie de la expirare, fie de la o defecțiune de pompă):
 
-1. Go to the **DASH** tab, click on the **POD MGMT (1)** button, on the **Pod Management** screen click on the **Deactivate Pod (2)** button.
+1. Mergeți la fila **DASH**, faceți clic pe butonul **Gestionare pompă (1)**, iar pe ecranul **Gestionare pompă** click pe butonul **Dezactivează pompă (2)**.
 
    ![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
 
    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
 
-2. On the **Deactivate Pod** screen, click on the **Next** button to begin the process of deactivating the pod.
+2. Pe ecranul **Dezactivați pompă**, faceți clic pe butonul **Următorul** pentru a începe procesul de dezactivare a pompei.
 
-   You will receive a confirmation beep from the pod that deactivation was successful.
+   Veți primi un semnal sonor de confirmare de la pompă că dezactivarea a reușit.
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
-3. A green checkmark will be displayed upon successful deactivation. Click on the **Next** button to display the pod deactivated screen.
+3. O bifă verde va fi afișată la dezactivarea cu succes. Faceți clic pe butonul **Următorul** pentru a afișa ecranul de pompă dezactivată.
 
-   You may now remove your pod as the active session has been deactivated.
+   Acum puteți să dați jos pompa deoarece sesiunea activă a fost dezactivată.
 
    ![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
-4. Click on the green button to return to the **Pod Management** screen.
+4. Faceți clic pe butonul verde pentru a reveni la ecranul **Gestionare pompă**.
 
    ![Deactivate_Pod_6](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_6.jpg)
 
-5. You are now on the **Pod Management** menu; press the back button on your phone to return to the **DASH** tab.
+5. Acum sunteți în meniul **Gestionare pompă**, apăsați butonul înapoi de pe telefon pentru a reveni la fila **DASH**.
 
-   Verify that the **Pod status:** field displays a **No active Pod** message.
+   Verifică dacă câmpul **Stare pompă** afișează un mesaj **Nicio pompă**.
 
    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
 
@@ -235,43 +235,43 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 (omnipod-dash-resuming-insulin-delivery)=
 
-### Resuming Insulin Delivery
+### Reluarea administrării de insulină
 
-**NOTE**: During **Profile Switches**, like when using the PDM, AAPS must suspend delivery on the Pod before setting the new basal **Profile**. If communication fails between the suspend and resume commands, then delivery can stay suspended, Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
+**NOTĂ**: În timpul **Comutării de profil**, ca atunci când se utiliza PDM, AAPS trebuie să suspende administrarea de pe pompă înainte de a seta noul **profil** bazal. În cazul în care comunicarea nu reușește între comenzile de suspendare și reluare, administrarea poate rămâne suspendată, Citește [**Administrare suspendată**](#omnipod-dash-delivery-suspended) în secțiunea ce ține de depanare pentru mai multe detalii.
 
-When insulin delivery is suspended you will need to issue a command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal **Profile**. The pod will again accept commands for bolus, **TBR**, and **SMB**.
+Când administrarea insulinei este suspendată, va trebui să dați o comandă pentru a instrui pompa activă, suspendată în prezent, să reia administrarea de insulină. După procesarea cu succes a comenzii, insulina va relua administrarea normală folosind rata bazală curentă în funcție de timpul curent în baza **profilului** activ de bazală. Pompa va accepta din nou comenzi pentru bolus, **RBT**și **SMB**.
 
-1. Go to the **DASH** tab and ensure the **Pod status (1)** field displays **SUSPENDED**, then press the **RESUME DELIVERY (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod Status (3)** field.
+1. Mergeți la fila **DASH** și asigurați-vă că câmpul **Stare pompă (1)** afișează **SUSPENDAT**, apoi apăsați butonul **RELUAȚI LIVRAREA(2)** pentru a începe procesul de instruire a pompei curente pentru reluarea administrării normale de insulină. Un mesaj **RELUAȚI LIVRAREA** va fi afișat în câmpul **Stare pompă (3)**.
 
    ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)   ![Resume_2](../images/DASH_images/Resume/Resume_2.jpg)
 
-2. When the Resume delivery command is successful, a confirmation dialog will display the message **Insulin delivery has been resumed**. Click **OK** to confirm and proceed.
+2. Atunci când comanda de reluare a livrării a avut succes, un dialog de confirmare va afișa mesajul **Administrarea insulinei a fost reluată**. Apăsați **OK** pentru a confirma și continua.
 
    ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
 
-3. The **DASH** tab will update the **Pod status (1)** field to display **RUNNING,** and the **Resume Delivery** button will no longer be displayed
+3. Fila **DASH** va actualiza câmpul **Stare pompă (1)** pentru a afișa **RULEAZĂ,** iar butonul **Reluați administrarea** nu va mai fi afișat
 
    ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
 
 (omnipod-dash-silencing-pod-alerts)=
 
-### Silencing Pod Alerts
+### Amuțirea alertelor de pompă
 
-The process below will show you how to acknowledge and dismiss pod beeps when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Dash alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
+Procedura de mai jos vă va arăta cum să recunoașteți și să opriți semnalele sonore pompei atunci când timpul de utilizare al pompei active atinge limita de avertizare înainte de expirarea pompei la 72 de ore (3 zile). Acest termen de avertizare este definit în setarea de alerte Dash numită **Orele de dinainte de închidere**. Durata maximă de viață a unei pompe este de 80 de ore (3 zile 8 ore), cu toate acestea, Insulet recomandă să nu fie depășită limita de 72 de ore (3 zile).
 
-***NOTE**: The **SILENCE ALERTS (3)** button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the **SILENCE ALERTS** button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
+***NOTĂ**: Butonul **AMUȚEȘTE ALERTELE(3)** este disponibil doar în fila **DASH** atunci când sunt declanșate alerta de expirare a pompei sau cea de rezervor scăzut. Dacă butonul **AMUȚEȘTE ALERTE** nu este vizibil și auziți semnale sonore din pompă, încercați să "Reîmprospătați starea pompei".*
 
-1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will be required soon.  
-   You can verify this on the **DASH** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation), and the text will turn **red** after this time has passed.  
-   Under the **Active Pod alerts (2)** field the status message **Pod will expire soon** is displayed. This also will trigger displaying the **SILENCE ALERTS (3)** button.
+1. Când este atinsă limita de timp definită **Ore înainte de închidere**, poma va emite semnale sonore de avertizare pentru a vă informa că se apropie de ora expirării și că va fi necesară o modificare a pompei în curând.  
+   Puteți verifica acest lucru în fila **DASH**, câmpul **Pompa expiră: (1)** va arăta ora exactă la care pompa va expira (72 ore după activare), iar textul se va face **roșu** după ce a trecut acest timp.  
+   Sub câmpul **Alerte active ale pompei (2)** mesajul **Pompa va expira în curând** este afișat. Acest lucru va declanșa, de asemenea, afișarea butonului **AMUȚIRE ALERTE(3)**.
 
    ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
-2. Go to the **DASH** tab and press the **SILENCE ALERTS (2)** button. **AAPS** sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
+2. Mergeți la fila **DASH** și apăsați butonul **AMUȚEȘTE ALERTELE(2)**. **AAPS** trimite comanda către pompă pentru a dezactiva semnalele sonore de avertizare a expirării pompei și actualizează câmpul **Status pompă (1)** cu **CONFIRMAȚI ALERTELE**.
 
    ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
-3. Upon **successful deactivation** of the alerts, **2 beeps** will be issued by the active pod and a confirmation dialog will display the message **Activate alerts have been Silenced**. Click the **OK** button to confirm and dismiss the dialog.
+3. La **dezactivarea cu succes** a alertelor, **2 semnale de sonore** vor fi emise de către dispozitivul activ și un dialog de confirmare va afișa mesajul **Alertele active au fost dezactivate**. Apăsați pe butonul **OK** pentru a confirma și a închide dialogul.
 
    ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
@@ -504,15 +504,15 @@ Pentru probleme cunoscute cu conexiunile Bluetooth, întreruperile pompei, activ
      - Nu va fi nicio administrare a insulinei, nici bazală, SMB, bolusare manuală șamd.
      - Este posibil să existe notificări că una dintre comenzi este neconfirmată: acest lucru depinde de când a avut loc eșecul.
      - **AAPS** va încerca să seteze noul profil bazal la fiecare 15 minute.
-     - **AAPS** will show a notification informing that the delivery is suspended every 15 minutes, if the delivery is still suspended (resume delivery failed).
-     - The [**Resume delivery**](#omnipod-dash-resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
-     - If **AAPS** fails to resume delivery on its own (this happens if the pod is unreachable, sound is muted, etc), the pod will start beeping 4 times every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20 minutes.
-  - For unconfirmed commands, "refresh pod status" should confirm/deny them.
+     - **AAPS** va afișa o notificare care va informa că administrarea este suspendată la fiecare 15 minute, dacă administrarea este încă suspendată (reluarea administrării a eșuat).
+     - Butonul [**Reluați administrarea**](#omnipod-dash-resuming-insulin-delivery) va fi activ dacă utilizatorul alege să reia administrarea manual.
+     - Dacă **AAPS** nu reia singur administrarea (acest lucru se întâmplă dacă pompa nu este accesibilă, sunetul este dezactivat, șamd), pompa va începe să emită semnale sonore de 4 ori pe minut timp de 3 minute; se repetă la fiecare 15 minute, dacă administrarea este încă suspendată timp de peste 20 de minute.
+  - Pentru comenzile neconfirmate, "Reîmprospătare stare pompă" ar trebui să le confirme/infirme.
 
-*****NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !******
+*****NOTĂ:** Când auziți semnale sonore de la pompă, nu presupuneți că administrarea va continua fără a verifica telefonul, administrarea poate rămâne suspendată, ***așa că trebuie să verificați!******
 
 ---
-### Pod Failures
+### Eșecuri pompă
 
 - Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself.
 - It is best practice not to raise support / replacement cases with Insulet, since AAPS is not an approved method of using the Pods.
