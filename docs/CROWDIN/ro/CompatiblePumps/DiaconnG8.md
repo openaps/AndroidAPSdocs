@@ -1,49 +1,49 @@
-# Diaconn G8 Insulin Pump
+# Pompa de insulină Diaconn G8
 
-## Insulin Pump Bluetooth Pairing
+## Cuplarea pompei de insulină prin Bluetooth
 
-- Click on the hamburger menu in the top left corner.
+- Apăsați pe meniul hamburger din colțul din stânga sus.
 
 ![image](../images/DiaconnG8/DiaconnG8_01.jpg)
 
-- Click on Config Builder.
+- Apăsați pe Configurator.
 
 ![image](../images/DiaconnG8/DiaconnG8_02.jpg)
 
-- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
+- După selectarea pompei Diaconn G8, apăsați pe pictograma Setări (rotița dințată).
 
 ![image](../images/DiaconnG8/DiaconnG8_03.jpg)
 
-- Choose Selected pump.
+- Alegeți pompa selectată.
 
 ![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
-- Select your insulin pump’s model number once it appears in the list.
+- După ce apare în listă, alegeți modelul pompei de insulină.
 
 ![image](../images/DiaconnG8/DiaconnG8_05.jpg)
 
-- There are two options to check your model number:
+- Există două opțiuni pentru a verifica numărul modelului:
 
-1. The last 5 digits of the SN number on the back of the pump.
-2. Click on O button > Information > BLE > Last 5 digits.
+1. Ultimele 5 cifre ale numărului SN de pe spatele pompei.
+2. Apăsați pe butonul O > Informații > BLE > Ultimele 5 cifre.
 
 ![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
+- Odată ce ați selectat pompa dumneavoastră, o fereastră va apărea și va cere un cod PIN. Introduceți numărul PIN afișat în pompă pentru a finaliza conexiunea.
 
  ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-## Pump status check and log synchronization
+## Verificarea stării pompei și sincronizarea jurnalelor
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+- Odată ce pompa este conectată, apăsați pe simbolul Bluetooth pentru a verifica starea și pentru a sincroniza jurnalele.
 
 ![image](../images/DiaconnG8/DiaconnG8_08.jpg)
 
-## Bluetooth Troubleshooting
+## Depanare Bluetooth
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+**Ce trebuie să faceți în cazul unei conexiuni Bluetooth instabile cu pompa.**
 
-### Method 1 ) Check the pump again after AAPS application is completed.
+### Metoda 1) Verificați pompa din nou după ce setările din aplicația AAPS au fost finalizate.
 
 - Click on the 3 dots button on the top right.
 
