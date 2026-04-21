@@ -515,9 +515,9 @@ Release date: 19-07-2022
 - MDI plugin removed in favor of VirtualPump
 - new automation action: StopProcessing (following rules)
 
-## Version 3.0.0
+## Versiunea 3.0.0
 
-Release date: 31-01-2022
+Data lansării: 31-01-2022
 
 (Releasenotes-important-hints-3-0-0)=
 ### Important hints
@@ -627,21 +627,21 @@ Data lansării: 12-01-2021
 
 - Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
 - If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
-- ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
-- NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
+- ATENȚIE: NU faceți acest lucru dacă aveți alte aplicații care manipulează tratamente (cum ar fi transmisiunea xDrip/încărcare/sincronizare...).
+- NS_UPLOAD_ONLY poate fi oprit doar dacă modul inginerie este activat.
 
-### Major changes
+### Modificări majore
 
-- RileyLink, Omnipod and MDT pump improvements and fixes
-- forced NS_UPLOAD_ONLY
+- RileyLink, Omnipod și îmbunătățiri și remedieri pentru pompele MDT
+- NS_UPLOAD_ONLY forțat
 - fix for SMB & Dexcom app
-- watchface fixes
-- crash reporting improved
+- setări fețe de ceas
+- raportarea erorilor îmbunătățită
 - gradle reverted to allow direct watchface installation
-- automation fixes
-- RS driver improvement
-- various crashes fixed
-- UI fixes and improvements
+- remedieri automatizări
+- Îmbunătățirea driverului RS
+- diverse erori de funcționare remediate
+- Remedieri și îmbunătățiri ale interfeței
 - new translations
 
 (Releasenotes-version-2-8-0)=
@@ -656,12 +656,12 @@ Data lansării: 01-01-2021
 - Repository location still on <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../SettingUpAaps/BuildingAaps.md).
 - Please use [Android Studio 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
 
-### Major new features
+### Caracteristici noi majore
 
 - [Omnipod Eros support](../CompatiblePumps/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
 - [bolus advisor](#Preferences-quick-wizard) & [eating reminder](#AapsScreens-section-j) @MilosKozak
 - New watchface @rICTx-T1D
-- Dana RS connection improvements @MilosKozak
+- Îmbunătățiri la conexiunea cu Dana RS @MilosKozak
 - Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
 - New [Low Resolution Skin](#Preferences-skin)
 - New ["Pregnant" patient type](#Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
@@ -683,7 +683,7 @@ Data lansării: 24-09-2020
 
 You need at least start [objective 11 (in later versions objective 10!)](#objectives-objective10) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11. This will not effect other objectives you have already finished. You will keep all finished objectives!
 
-### Major new features
+### Caracteristici noi majore
 
 - internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
 - using modules for Dana pumps @MilosKozak
@@ -720,7 +720,7 @@ Data lansării: 04-05-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
-### Major new features
+### Caracteristici noi majore
 
 - Insight: Disable vibration on bolus for firmware version 3 - second attempt
 - Otherwise is equal to 2.6.1.3. Update is optional.
@@ -731,7 +731,7 @@ Data lansării: 03-05-02020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
-### Major new features
+### Caracteristici noi majore
 
 - Insight: Disable vibration on bolus for firmware version 3
 - Otherwise is equal to 2.6.1.2. Update is optional.
@@ -742,7 +742,7 @@ Data lansării: 19-04-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
-### Major new features
+### Caracteristici noi majore
 
 - Fix crashing in Insight service
 - Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
@@ -753,7 +753,7 @@ Data lansării: 06-04-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
-### Major new features
+### Caracteristici noi majore
 
 - Resolves SMS CARBS command issue while using Combo pump
 - Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
@@ -764,7 +764,7 @@ Data lansării: 21-03-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
-### Major new features
+### Caracteristici noi majore
 
 - Allow to enter only `https://` in NSClient settings
 - Fixed [BGI](../UsefulLinks/Glossary.md) displaying bug on watches
@@ -784,7 +784,7 @@ Data lansării: 29-02-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
-### Major new features
+### Caracteristici noi majore
 
 - Small design changes (startpage...)
 
@@ -864,7 +864,7 @@ Data lansării: 26-10-2019
 - 600SeriesUploader
 - Patched Dexcom from 2.3 directory
 
-### Major new features
+### Caracteristici noi majore
 
 - Internal change of targetSDK to 28 (Android 9), jetpack support
 - RxJava2, Okhttp3, Retrofit support
@@ -884,7 +884,7 @@ Data lansării: 26-10-2019
 
 Data lansării: 25-04-2019
 
-### Major new features
+### Caracteristici noi majore
 
 - Important safety fix for Insight (really important if you use Insight!)
 - Fix History-Browser
@@ -900,7 +900,7 @@ Data lansării: 25-04-2019
 
 Data lansării: 07-04-2019
 
-### Major new features
+### Caracteristici noi majore
 
 - Autosens fix: deactivate TT raises/lowers target
 - New translations
@@ -911,7 +911,7 @@ Data lansării: 07-04-2019
 
 Data lansării: 29-03-2019
 
-### Major new features
+### Caracteristici noi majore
 
 - [DST fix](#time-adjustment-daylight-savings-time-dst)
 - Wear Update
@@ -923,7 +923,7 @@ Data lansării: 29-03-2019
 
 Data lansării: 03-03-2019
 
-### Major new features
+### Caracteristici noi majore
 
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
 - Status lights on main screen (Nico Schmitz)
@@ -942,7 +942,7 @@ Data lansării: 03-03-2019
 
 Data lansării: 03-11-2018
 
-### Major new features
+### Caracteristici noi majore
 
 - oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
 - Accu-Chek Combo pump support
