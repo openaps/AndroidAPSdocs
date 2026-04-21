@@ -620,7 +620,7 @@ Un rezumat al principalelor alerte pe care este posibil să le întâlniți este
 - No active Pod session detected. Această alertă poate fi dezactivată temporar prin apăsarea **AMÂNAȚI** dar va continua să se declanșeze atâta timp cât o nouă pompă nu a fost activată. Once activated this alert is automatically silenced.
 - Pompă suspendată Alertă informațională că pompa a fost suspendată.
 - Setarea bazalei în **Profil** a eșuat: Administrarea ar putea fi suspendată! Reîmprospătați manual starea pompei din fila Omnipod și reluați livrarea, dacă este necesar. Alertă informativă că setarea bazalei din pompă în **Profil** a eșuat și va trebui să apăsați *Reîmprospătați* pe fila Omnipod.
-- Nu s-a putut verifica dacă bolusul **SMB** a avut loc cu succes. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments. Alert that the **SMB** bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if **SMB** bolus succeeded and if not remove the entry from the Treatments tab.
+- Nu s-a putut verifica dacă bolusul **SMB** a avut loc cu succes. Nu s-a putut verifica dacă bolusul SMB a reușit. Daca sunteți sigur că bolusul nu a reușit, ar trebui să ștergeți manual intrarea SMB din Tratamente. Alert that the **SMB** bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if **SMB** bolus succeeded and if not remove the entry from the Treatments tab.
 - Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
 
 (omnipod-dash-where-to-get-help-for-dash)=
