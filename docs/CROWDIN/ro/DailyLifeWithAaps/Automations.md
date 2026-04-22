@@ -163,7 +163,7 @@ Several conditions can be linked with
 
 * Use passive location: **AAPS** only takes locations when other apps are requesting it.
 * Use network location: Location of your Wi-Fi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+* Utilizează locația GPS (Atenție! This can cause excessive battery drain!)
 
 **Triggers** : pump and sensor data
 
