@@ -410,9 +410,9 @@ Synchronization choices will depend on the way you will want to use **AAPS**.
 
 You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
-### Alarm options
+### Opțiuni alarme
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
+![Opțiuni alarme](../images/Pref2024_NSClient_Alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
 - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -421,20 +421,20 @@ You can select which data you want to [upload and download to or from Nightscout
 - Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
 - You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 
-### Connection settings
+### Setări conexiune
 
-![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
+![NSClient setări de conexiune](../images/ConfBuild_ConnectionSettings.png)
 
 - Connection settings define when Nightscout connection will be enabled.
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
+- Restricționați încărcarea Nightscout doar prin Wi-Fi sau doar prin anumite rețele Wi-Fi.
 - If you want to use only a specific Wi-Fi network you can enter its Wi-Fi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+- Rețele SSID multiple pot fi separate prin punct și virgulă.
+- Pentru a șterge toate rețelele SSID introduceți un spațiu gol în câmp.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
+### Setări avansate (NSClient)
 
-![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
+![Setări avansate NS Client](../images/Pref2024_NSClientAdv.png)
 
 Options in advanced settings are self-explanatory.
 
@@ -444,17 +444,17 @@ More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.m
 
 ## Automatizare
 
-Select which location service shall be used:
+Selectați ce serviciu de localizare va fi folosit:
 
 - Use passive location: **AAPS** only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! May cause excessive battery drain!)
+- Folosiți locația de rețea: Locația Wi-Fi
+- Utilizează locația GPS (Atenție! Poate cauza un consum excesiv de baterie!)
 
 ## Alerte locale
 
 ![Alerte locale](../images/Pref2020_LocalAlerts.png)
 
-Settings should be self-explanatory.
+Setările ar trebui să fie de la sine înțelese.
 
 (preferences-maintenance-settings)=
 ## Setări Întreținere
@@ -463,7 +463,7 @@ Settings should be self-explanatory.
 
 **Email recipient**: Standard recipient of logs is <logs@aaps.app>.
 
-**Data Choices**
+**Alegerea datelor**
 
 ![Selecție date](../images/Pref2020_DataChoice.png)
 
@@ -475,7 +475,7 @@ After the grace period of 1 week has passed the stored password expires and any 
 
 After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
 
-### Log files
+### Fișiere jurnal
 
 AAPS will save logs for troubleshooting.
 
@@ -529,4 +529,4 @@ Poți ajuta comunitatea prin donarea datelor tale către proiecte de cercetare! 
 
 In Preferences, you can define when data shall be uploaded
 - only if connected to Wi-Fi
-- only if charging
+- doar când se încarcă
