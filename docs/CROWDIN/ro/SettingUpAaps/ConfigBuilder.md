@@ -270,7 +270,7 @@ Prin fila Ceas (Wear) sau prin meniul principal (sus stânga ecranului, dacă fi
 
 ### Autotune
 
-You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+Puteți activa Autotune, vedeți [aici](../AdvancedOptions/Autotune.md).
 
 ### Mentenanță
 
