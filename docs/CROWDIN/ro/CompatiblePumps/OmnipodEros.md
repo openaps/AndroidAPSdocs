@@ -217,7 +217,7 @@ Pentru a dezactiva o pompă (fie de la expirare, fie de la o defecțiune de pomp
 
    > ![Deactivate_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Deactivate_Pod_10](../images/omnipod/Deactivate_Pod_10.png)
 
-### Suspending and Resuming Insulin Delivery
+### Suspendarea și reluarea administrării insulinei
 
 The process below will show you how to suspend and resume insulin pump delivery.
 
@@ -749,11 +749,11 @@ Informational alert that Pod has been suspended.
 
 Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
 
-#### Unable to verify whether SMB bolus succeeded. Nu s-a putut verifica dacă bolusul SMB a reușit. Daca sunteți sigur că bolusul nu a reușit, ar trebui să ștergeți manual intrarea SMB din Tratamente.
+#### Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
 
 Alert that the SMB bolus success could not be verified, you will need to verify the *Last bolus* field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
 
-#### Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
+#### Nu se știe sigur dacă "sarcina bolus/TBR/SMB" a fost finalizată, vă rugăm să verificați manual dacă aceasta a avut succes.
 
 Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is *uncertain* if a command was successfully processed. The need to inform the user of this uncertainty was necessary.
 
@@ -787,7 +787,7 @@ The image below shows the optimal way to position the RileyLink during pod activ
 
 All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
 
-- **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
+- **Nivelul 0:** Citiți secțiunea relevantă a acestei documentații pentru a vă asigura că înțelegeți cum ar trebui să meargă funcționalitatea cu care aveți dificultăți.
 - **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
 - **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
-- **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+- **Fiți răbdători - majoritatea membrilor comunității noastre sunt voluntari bine-voitori, și rezolvarea problemelor necesită adesea timp și răbdare atât din partea utilizatorilor cât și din partea dezvoltatorilor.**
