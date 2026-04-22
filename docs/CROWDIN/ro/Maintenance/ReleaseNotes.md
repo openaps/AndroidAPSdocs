@@ -662,17 +662,17 @@ Data lansării: 01-01-2021
 - [bolus advisor](#Preferences-quick-wizard) & [eating reminder](#AapsScreens-section-j) @MilosKozak
 - New watchface @rICTx-T1D
 - Îmbunătățiri la conexiunea cu Dana RS @MilosKozak
-- Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
+- Comportamentul "Valori CGM neschimbate" a fost eliminat în SMB pentru aplicația nativă Dexcom
 - New [Low Resolution Skin](#Preferences-skin)
 - New ["Pregnant" patient type](#Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
-- New NSClient tablet layout @MilosKozak
+- Aspect nou tabletă NSClient @MilosKozak
 - NSClient transfer insulin, sensitivity and display settings directly from main AAPS @MilosKozak
 - [Preferences filter](../SettingUpAaps/Preferences.md) @Brian Quinion
-- New pump icons @Rig22 @@teleriddler @osodebailar
+- Pictograme noi ale pompei @Rig22 @@0ridler @osodebailar
 - New [insulin type Lyumjev](#Config-Builder-lyumjev)
-- SetupWizard improvements @MilosKozak
-- Security improvements @dlvoy
-- Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
+- Îmbunătățiri asistent de configurare @MilosKozak
+- Îmbunătățiri de securitate @dlvoy
+- Diverse îmbunătățiri și reparații @AdrianLxM @Philoul @swissalpine @MilosKozak @Brian Quinion
 
 (Releasenotes-version-2-7-0)=
 ## Versiunea 2.7.0
@@ -681,37 +681,37 @@ Data lansării: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** [here](../Maintenance/Update2_7.md).
 
-You need at least start [objective 11 (in later versions objective 10!)](#objectives-objective10) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11. This will not effect other objectives you have already finished. You will keep all finished objectives!
+You need at least start [objective 11 (in later versions objective 10!)](#objectives-objective10) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11. This will not effect other objectives you have already finished. Veți păstra toate obiectivele finalizate!
 
 ### Caracteristici noi majore
 
-- internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
-- using modules for Dana pumps @MilosKozak
+- utilizarea internă a injecției de dependență, actualizarea bibliotecilor, codul rescris în kotlin @MilosKozak @AdrianLxM
+- utilizarea de module pentru pompele Dana @MilosKozak
 - [new layout, layout selection](../DailyLifeWithAaps/AapsScreens.md) @MilosKozak
 - new [status lights layout](#Preferences-status-lights) @MilosKozak
 - [multiple graphs support](#AapsScreens-activate-optional-information) @MilosKozak
 - [Profile helper](../SettingUpAaps/YourAapsProfile.md) @MilosKozak
 - visualization of [dynamic target adjustment](#AapsScreens-visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - new [preferences layout](../SettingUpAaps/Preferences.md) @MilosKozak
-- SMB algorithm update @Tornado-Tim
+- Actualizare algoritm SMB @Tornado-Tim
 - [Low glucose suspend mode](#KeyAapsFeatures-LGS) @Tornado-Tim
 - [carbs required notifications](#key-aaps-features-minimal-carbs-required-for-suggestion) @twain47 @Tornado-Tim
-- removed Careportal (moved to Actions) @MilosKozak
+- eliminat Careportal (mutat la acțiuni) @MilosKozak
 - [new encrypted backup format](ExportImportSettings.md) @dlvoy
 - [new SMS TOTP authentication](../RemoteFeatures/SMSCommands.md) @dlvoy
 - [new SMS PUMP CONNECT, DISCONNECT](#SMSCommands-commands) commands @Lexsus
-- better support for tiny basals on Dana pumps @Mackwe
-- small Insight fixes @TebbeUbben @MilosKozak
+- suport mai bun pentru bazale mici pe pompele Dana @Mackwe
+- mici reparații Insight @TebbeUbben @MilosKozak
 - ["Default language" option](#Preferences-general) @MilosKozak
-- vector icons @Philoul
+- pictograme vector @Philoul
 - [set neutral temps for MDT pump](#MedtronicPump-configuration-of-the-pump) @Tornado-Tim
-- History browser improvements @MilosKozak
-- removed OpenAPS MA algorithm @Tornado-Tim
-- removed Oref0 sensitivity @Tornado-Tim
+- îmbunătățiri istoric browser @MilosKozak
+- eliminat algoritmul OpenAPS MA @Tornado-Tim
+- înlătură sensibilitatea Oref0 @Tornado-Tim
 - [Biometric or password protection](#Preferences-protection) for settings, bolus @MilosKozak
 - [new automation trigger](../DailyLifeWithAaps/Automations.md) @PoweRGbg
 - [Open Humans uploader](../SupportingAaps/OpenHumans.md) @TebbeUbben @AdrianLxM
-- New documentation @Achim
+- Documentație nouă @Achim
 
 (Releasenotes-version-2-6-1-4)=
 ## Versiunea 2.6.1.4
@@ -722,8 +722,8 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 ### Caracteristici noi majore
 
-- Insight: Disable vibration on bolus for firmware version 3 - second attempt
-- Otherwise is equal to 2.6.1.3. Update is optional.
+- Insight: Dezactivați vibrațiile pe bolus pentru versiunea 3 de firmware - a doua încercare
+- Otherwise is equal to 2.6.1.3. Actualizarea este opțională.
 
 ## Versiunea 2.6.1.3
 
@@ -733,8 +733,8 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 ### Caracteristici noi majore
 
-- Insight: Disable vibration on bolus for firmware version 3
-- Otherwise is equal to 2.6.1.2. Update is optional.
+- Insight: Dezactivați vibrațiile pe bolus pentru versiunea 3 de firmware
+- Otherwise is equal to 2.6.1.2. Actualizarea este opțională.
 
 ## Versiunea 2.6.1.2
 
@@ -744,8 +744,8 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 ### Caracteristici noi majore
 
-- Fix crashing in Insight service
-- Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
+- Repară blocarea serviciului Insight
+- Otherwise is equal to 2.6.1.1. Dacă nu sunteți afectat de această problemă, nu este nevoie să actualizați.
 
 ## Versiunea 2.6.1.1
 
@@ -755,8 +755,8 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 ### Caracteristici noi majore
 
-- Resolves SMS CARBS command issue while using Combo pump
-- Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
+- Rezolvă comanda SMS CARBS în timp ce utilizați pompa Combo
+- Otherwise is equal to 2.6.1. Dacă nu sunteți afectat de această problemă, nu este nevoie să actualizați.
 
 ## Versiunea 2.6.1
 
@@ -768,14 +768,14 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Allow to enter only `https://` in NSClient settings
 - Fixed [BGI](../UsefulLinks/Glossary.md) displaying bug on watches
-- Fixed small UI bugs
-- Fixed Insight crashes
-- Fixed future carbs with Combo pump
+- Erori mici de interfață reparate
+- Rezolvarea prăbușirilor Insight
+- Rezolvarea carbohidraților viitori cu pompa Combo
 - Fixed LocalProfile -> NS sync
-- Insight alerts improvements
-- Improved detection of boluses from pump history
-- Fixed NSClient connection settings (wifi, charging)
-- Fixed sending of calibrations to xDrip
+- Îmbunătățiri alerte Insight
+- Detectare îmbunătățită a bolusurilor din istoricul pompelor
+- Setările conexiunii NSClient au fost reparate (WiFi, încărcare)
+- Remediată trimiterea calibrărilor la xDrip
 
 (Releasenotes-version-2-6-0)=
 ## Versiunea 2.6.0
@@ -786,55 +786,55 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 ### Caracteristici noi majore
 
-- Small design changes (startpage...)
+- Mici schimbări de design (startpage...)
 
 - Careportal tab / menu removed
 
 - New Local Profile plugin
 
-  - Local profile can hold more than 1 profile
-  - Profiles can be cloned and edited
-  - Ability of upload profiles to NS
-  - Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
+  - Profilul local poate ține mai mult de un profil
+  - Profilurile pot fi clonate și modificate
+  - Abilitatea de încărcare a profilurilor în NS
+  - Schimbările vechi de profil pot fi clonate într-un nou profil în LocalProfile (se aplică decalajul și procentajul)
   - Vertical NumberPicker for targets
 
-- SimpleProfile is removed
+- SimpleProfile este eliminat
 
 - [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
 
-- MDT plugin: Fixed bug with duplicated entries
+- Modul MDT: S-a remediat problema cu intrări duplicate
 
-- Units are not specified in profile but it's global setting
+- Unitățile nu sunt specificate în profil dar este o setare generală
 
-- Added new settings to startup wizard
+- S-au adăugat noi setări la asistentul de pornire
 
-- Different UI and internal improvements
+- Îmbunătățiri diferite ale interfeței și îmbunătățiri interne
 
 - [Wear complications](../WearOS/WearOsSmartwatch.md)
 
 - New [SMS commands](../RemoteFeatures/SMSCommands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 
-- Fixed language support
+- A fost reparat suportul de limbă
 
 - Objectives: [Allow to go back](#CompletingTheObjectives-go-back-in-objectives), Time fetching dialog
 
 - Automation: [allow sorting](#Automations-the-order-of-the-automations-in-the-list-matters)
 
-- Automation: fixed bug when automation was running with disabled loop
+- Automatizare: eroare rezolvată atunci când automatizarea rulează cu bucla dezactivată
 
-- New status line for Combo
+- Noua linie de stare pentru Combo
 
-- GlucoseStatus improvement
+- Îmbunătăţirea GlucoseStatus
 
-- Fixed TempTarget NS sync
+- Repararea sincronizării în NS a țintei temporare
 
-- New statistics activity
+- Activitate nouă pentru statistici
 
-- Allow Extended bolus in open loop mode
+- Permite bolusul extins în modul buclă deschisă
 
-- Android 10 alarm support
+- Suport pentru alarmă în Android 10
 
-- Tons on new translations
+- Tone de traduceri noi
 
 ## Versiunea 2.5.1
 
@@ -975,12 +975,12 @@ Data lansării: 03-11-2018
 
 ### Watch
 
-- Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
-- Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
-- confirmations and info dialogs now work on wear 2.0 as well
-- Added eCarbs menu entry
+- S-a renunțat la varianta de construcție separată, fiind acum integrată în construcția completă. Pentru a utiliza controalele de bolus din ceas, activați această setare pe telefon
+- Asistentul solicită acum doar carbohidrați (și procentaj, dacă este activat în setările de ceas). Ce parametri sunt incluși în calcul pot fi configurați în setările de pe telefon
+- confirmările și dialogurile de informații funcționează acum și pe Wear 2.0
+- Intrare de carbohidrați extinși adăugată în meniu
 
-### New plugins
+### Module noi
 
 - PocTech app as BG source
 - Dexcom patched app as BG source
