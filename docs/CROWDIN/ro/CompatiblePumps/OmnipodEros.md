@@ -570,7 +570,7 @@ The Omnipod driver settings are configurable from the top-left hand corner **ham
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
-The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
+Grupurile de setări sunt listate mai jos; puteți activa sau dezactiva printr-un comutator pentru majoritatea intrărilor descrise mai jos:
 
 ![Omnipod_Settings_3](../images/omnipod/Omnipod_Settings_3.png)
 
@@ -589,7 +589,7 @@ Allows for scanning of a pod communication device. The Omnipod driver cannot sel
 
 - **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
 
-### Confirmation beeps
+### Semnale sonore de confirmare
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
@@ -753,7 +753,7 @@ Informational alert that the Pod basal profile setting has failed, and you will 
 
 Alert that the SMB bolus success could not be verified, you will need to verify the *Last bolus* field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
 
-#### Nu se știe sigur dacă "sarcina bolus/TBR/SMB" a fost finalizată, vă rugăm să verificați manual dacă aceasta a avut succes.
+#### Nu este sigur dacă "sarcina bolus/RBT/SMB" s-a finalizat; vă rugăm verificați manual dacă a avut succes.
 
 Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is *uncertain* if a command was successfully processed. The need to inform the user of this uncertainty was necessary.
 
