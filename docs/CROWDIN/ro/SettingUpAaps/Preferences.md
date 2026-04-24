@@ -6,13 +6,13 @@
 
 - You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
 
-![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
+![Deschideți preferințele modulului](../images/Pref2020_OpenPlugin2.png)
 
 - **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
 
 ![Open submenu](../images/Pref2020_Submenu2.png)
 
-- With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+- With the **filter** on top of the preferences screen you can quickly access certain preferences. Trebuie doar începeți să tastați o parte din textul pe care îl căutați.
 
 ![Preferences filter](../images/Pref2021_Filter.png)
 
@@ -24,15 +24,15 @@
 (Preferences-general)=
 ## General
 
-![Preferences > General](../images/Pref2020_General.png)
+![Preferințe > General](../images/Pref2020_General.png)
 
-**Units**
+**Unități**
 
-- Set units to mmol/l or mg/dl depending on your preferences.
+- Setați unitățile in mmol/l sau mg/dl în funcție de preferințe.
 
-**Language**
+**Limba**
 
-- New option to use phone's default language (recommended).
+- Opțiune nouă de utilizare a limbii implicite a telefonului (recomandat).
 
 - In case you want **AAPS** in a different language than your standard phone language, you can choose from a broad variety.
 
@@ -43,17 +43,17 @@
 
 The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
 
-**Patient name**
+**Limba**
 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 - Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-### Skin
+### Piele
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
-You can choose from four types of skins:
+Puteți alege din patru tipuri de piele:
 
 ![Select skin](../images/Pref2021_SkinWExample.png)
 
@@ -61,18 +61,18 @@ You can choose from four types of skins:
 
 Difference between the other skins depends on the phone's display orientation:
 
-#### Portrait orientation
+#### Orientare în mod vertical
 
 - **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
 - **Large Display** has an increased height for all graphs compared to other skins
 
-#### Landscape orientation
+#### Orientare în mod orizontal
 
 - Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
 
 - **Large Display** has an increased height for all graphs compared to other skins
 
-![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
+![Pieile în funcție de orientarea de afișare a telefonului](../images/Screenshots_Skins.png)
 
 (Preferences-protection)=
 ## Protecție
@@ -80,7 +80,7 @@ Difference between the other skins depends on the phone's display orientation:
 ![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-### Master password
+### Parola principală
 
 Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
 
@@ -88,7 +88,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Set master password](../images/MasterPW.png)
 
-### Settings protection
+### Protecție setări
 
 - Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
 
@@ -98,19 +98,19 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Protecție](../images/Pref2020_Protection.png)
 
-### Application protection
+### Protecția aplicației
 
 If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
 
 **AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
 
-### Bolus protection
+### Protecția bolusului
 
 - Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
-- In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter thr master password.
+- In exemplul de mai jos se vede solicitarea pentru protecția biometrică. If biometric authentication does not work, click in the space above the white prompt and enter thr master password.
 
-![Prompt biometric protection](../images/Pref2020_PW.png)
+![Solicitați protecție biometrică](../images/Pref2020_PW.png)
 
 ### Password and PIN retention
 
@@ -120,7 +120,7 @@ Define how long (in seconds), the preferences or bolus functionalities remain un
 
 In the **Overview** section, you can define the preferences for the home screen.
 
-![Preferences > Overview](../images/Pref2020_OverviewII.png)
+![Preferințe > Vedere de ansamblu](../images/Pref2020_OverviewII.png)
 
 ### Keep screen on
 
