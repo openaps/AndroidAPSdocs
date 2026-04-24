@@ -145,12 +145,12 @@ O atenționare are loc într-o situație de prioritate medie sau redusă. Când 
 
 Diferitele tipuri de atenționări sunt explicate mai jos.
 
-| Atenționări                                   | Explicație                                                                                                                            |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Sfârșitul suspendării de insulină             | Se întâmplă când timpul setat de utilizator s-a scurs după ce suspendarea perfuziei de insulină a fost finalizată.                    |
-| Nivel rezervor scăzut                         | Se întâmplă atunci când cantitatea de insulină rămasă din plasture este sub valoarea fixată.                                          |
-| Durata de funcționare a plasturelui a expirat | Occurs when the patch usage period is over.                                                                                           |
-| Patch will expire soon                        | Occurs 1 hour before the patch must be discarded.                                                                                     |
-| Incomplete Patch activation                   | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed. |
-| Patch battery low                             | Occurs when the patch's battery is low.                                                                                               |
+| Atenționări                                   | Explicație                                                                                                                                             |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Sfârșitul suspendării de insulină             | Se întâmplă când timpul setat de utilizator s-a scurs după ce suspendarea perfuziei de insulină a fost finalizată.                                     |
+| Nivel rezervor scăzut                         | Se întâmplă atunci când cantitatea de insulină rămasă din plasture este sub valoarea fixată.                                                           |
+| Durata de funcționare a plasturelui a expirat | Se întâmplă când durata de utilizare a plasturelui s-a încheiat.                                                                                       |
+| Plasturele va expira în curând                | Se întâmplă cu o oră înainte de expirarea plasturelui.                                                                                                 |
+| Activarea plasturelui incompletă              | Se întâmplă când au trecut mai mult de 3 minute din cauza unei întreruperi în timpul aplicării plasturelui, în etapa de după finalizarea împerecherii. |
+| Baterie plasture slabă                        | Se întâmplă când bateria plasturelui este scăzută.                                                                                                     |
 
