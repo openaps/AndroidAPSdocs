@@ -321,7 +321,7 @@ Most users find the following configuration of additional graphs to be adequate 
 * Graph 1 with IOB, COB, Sensitivity change
 * Graph 2 with Deviations and BGI.
 
-#### Insulină totală
+#### Insulină absolută
 
 Insulina activă, inclusiv bolusuri **și bazală**.
 
@@ -431,7 +431,7 @@ Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
 
 #### CGM
 
-Deschide xDrip+.
+Deschideți xDrip+
 
 Back button returns to **AAPS**.
 
@@ -493,7 +493,7 @@ For safety reasons the **TT box must be ticked manually**, if you want the bolus
 
 * For safety reasons, the IOB box cannot be unticked when COB box is ticked as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
 * If you tick COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Acest lucru conduce la o notiță "carbohidrați lipsă”.
+* If you tick IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Acest lucru conduce la o notiță "carbohidrați lipsă".
 * Dacă bolusați pentru **mâncare suplimentară** la scurt timp după o masă (spre exemplu desert suplimentar) poate fi util să **debifați toate căsuțele**. În acest fel, doar noii carbohidrați sunt adăugați deoarece masa principală nu va fi absorbită astfel încât IOB nu se potrivește cu precizie cu COB la scurt timp după un bolus de masă.
 
 ![BolusWizard with Details](../images/Home2021_BolusWizard_Details.png)
