@@ -397,15 +397,15 @@ Setările driverului Dash sunt configurabile din colțul stânga-sus **meniul ha
 
 ![Dash_settings_1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
-***NOTE:** A faster way to access the **Dash settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **DASH** tab and selecting **Dash preferences (2)** from the dropdown menu.*
+***NOTĂ:** O modalitate mai rapidă de a accesa setările **Dash** este accesând meniul **3 puncte (1)** în colțul din dreapta sus al filei **DASH** și selectând **preferințe Dash(2)** din meniul derulant.*
 
 ![Dash_settings_3](../images/DASH_images/Dash_settings/Dash_settings_3.png)
 
-The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
+Grupurile de setări sunt listate mai jos; puteți activa sau dezactiva printr-un comutator pentru majoritatea intrărilor descrise mai jos:
 
-***NOTE:** An asterisk (\*) denotes the default setting is enabled.*
+***NOTĂ:** Un asterisc (\*) denotă că setarea implicită este activată.*
 
-### Confirmation beeps
+### Semnale sonore de confirmare
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
