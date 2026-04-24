@@ -10,7 +10,7 @@ Juggluco poate, de asemenea, să transmită date către LibreView pentru partaja
 
 În cadrul xDrip+, senzorul poate fi calibrat în intervalul -40 mg/dl și +20 mg/dl (-2,2 mmol/l la +1,1 mmol/l) pentru a corecta diferențele dintre citirile unui glucometru și citirile senzorului.
 
-## Metoda 1: utilizează citiri din minut în minut în mod direct
+## Metoda 1: utilizați citiri din minut în minut în mod direct
 AndroidAPS este programat pentru citiri la fiecare 5 minute. Prin urmare, procesarea valorilor din minut în minut are limitări ocazionale.
 
 Vedeți [aici](#juggluco-to-aaps).
