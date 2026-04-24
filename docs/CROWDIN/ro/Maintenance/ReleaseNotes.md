@@ -395,9 +395,9 @@ Release date: 29-12-2024
 
 (version3204)=
 
-## [Version 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
+## [Versiunea 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
 
-Release date: 27-02-2024
+Data lansării: 27-02-2024
 
 This version is the last one supporting Android 10. If you cannot upgrade to Android 11, [update AAPS to 3.2.0.4](#update-aaps-3204).
 
@@ -412,9 +412,9 @@ This version is the last one supporting Android 10. If you cannot upgrade to And
 
 ## Version 3.2.0.0 dedicated to @Philoul
 
-Release date: 23-10-2023
+Data lansării: 23-10-02023
 
-### Important hints
+### Sugestii importante
 
 - NS 15 is required
 - While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internally. The same is valid for AAPS and AAPSClient itself.
@@ -487,12 +487,12 @@ RECOMMENDED SETTING
 
 (version3100)=
 
-## Version 3.1.0
+## Versiunea 3.1.0
 
-Release date: 19-07-2022
+Data lansării: 19-07-2022
 
 (Releasenotes-important-hints-3-1-0)=
-### Important hints
+### Sugestii importante
 
 - after update uninstall Wear app and install new version
 - Omnipod users: update on pod change !!!
@@ -520,7 +520,7 @@ Release date: 19-07-2022
 Data lansării: 31-01-2022
 
 (Releasenotes-important-hints-3-0-0)=
-### Important hints
+### Sugestii importante
 
 - **Minimum Android version is 9.0 now.**
 - **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
@@ -623,7 +623,7 @@ Data lansării: 23-01-2021
 Data lansării: 12-01-2021
 
 (important-hints-2-8-1-1)=
-### Important hints
+### Sugestii importante
 
 - Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
 - If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
@@ -649,7 +649,7 @@ Data lansării: 12-01-2021
 
 Data lansării: 01-01-2021
 
-### Important hints
+### Sugestii importante
 
 - **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
 - [Objectives have changed.](#objectives-objective3) **Finish not completed objectives before update.**
@@ -840,7 +840,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 Data lansării: 31-10-2019
 
-Please note the [important notes](#Releasenotes-version-2-5-0) and [limitations](#Releasenotes-is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](#Releasenotes-version-2-5-0). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
+Please note the [important notes](#Releasenotes-version-2-5-0) and [limitations](#Releasenotes-is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](#Releasenotes-version-2-5-0). \* A fost rezolvată o eroare în sistemul de recepție a rețelei care duce la prăbușiri cu mulți (nu e critic, dar irosea multe lucruri de recalculare a energiei). \* O nouă versionare, care va permite efectuarea de actualizări minore fără a declanșa notificarea actualizării.
 
 (Releasenotes-version-2-5-0)=
 ## Versiunea 2.5.0
@@ -854,28 +854,28 @@ Data lansării: 26-10-2019
 - Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../SettingUpAaps/BuildingAaps.md) or [update](UpdateToNewVersion).
 - If you are using xDrip [identify receiver](#xdrip-identify-receiver) must be set.
 - If you are using Dexcom G6 with the patched Dexcom app you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
-- Glimp is supported from version 4.15.57 and newer.
+- Glimp este acceptat de la versiunea 4.15.57 și mai nouă.
 
 (Releasenotes-is-this-update-for-me-currently-is-not-supported)=
-### Is this update for me? Currently is NOT supported
+### Este această actualizare pentru mine? În prezent NU este acceptat
 
-- Android 5 and lower
+- Android 5 și mai mic
 - Poctech
 - 600SeriesUploader
-- Patched Dexcom from 2.3 directory
+- Dexcom modificat din dosarul 2.3
 
 ### Caracteristici noi majore
 
-- Internal change of targetSDK to 28 (Android 9), jetpack support
-- RxJava2, Okhttp3, Retrofit support
+- Schimbarea internă a targetSDK la 28 (Android 9), suport jetpack
+- RxJava2, Okhttp3, suport Retrofit
 - Old [Medtronic pumps](../CompatiblePumps/MedtronicPump.md) support (RileyLink need)
 - New [Automation plugin](../DailyLifeWithAaps/Automations.md)
 - Allow to [bolus only part](#Preferences-advanced-settings-overview) from bolus wizard calculation
-- Rendering insulin activity
+- Redarea activității insulinei
 - Adjusting IOB predictions by autosens result
 - New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
-- Signature verifier
-- Allow to bypass objectives for OpenAPS users
+- Verificare semnătură
+- Permiteți ocolirea obiectivelor pentru utilizatorii OpenAPS
 - New [objectives](../SettingUpAaps/CompletingTheObjectives.md) - exam, application handling (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 - Fixed bug in Dana\* drivers where false time difference was reported
 - Fixed bug in [SMS communicator](../RemoteFeatures/SMSCommands.md)
@@ -886,15 +886,15 @@ Data lansării: 25-04-2019
 
 ### Caracteristici noi majore
 
-- Important safety fix for Insight (really important if you use Insight!)
-- Fix History-Browser
-- Fix delta calculations
-- Language updates
-- Check for GIT and warn on gradle upgrade
-- More automatic testing
-- Fixing potential crash in AlarmSound Service (thanks @lee-b !)
-- Fix broadcast of BG data (works independently of SMS permission now!)
-- New Version-Checker
+- Remediere importantă de siguranță pentru Insight (foarte importantă dacă utilizați Insight!)
+- Reparație vizualizarea de istoric
+- Reparație calcule diferență
+- Actualizări de limbă
+- Verifică GIT și avertizează la actualizarea Gradle
+- Mai multă testare automată
+- Rezolvarea unui potențiale erori în serviciul AlarmSound (mulțumim @lee-b !)
+- Repară transmiterea datelor glicemice (funcționează independent de permisiunea SMS acum!)
+- Verificator de versiune nou
 
 ## Versiunea 2.2.2
 
@@ -902,10 +902,10 @@ Data lansării: 07-04-2019
 
 ### Caracteristici noi majore
 
-- Autosens fix: deactivate TT raises/lowers target
+- Rezolvarea Autosen: dezactivare țintă temporară crește/coboară ținta
 - New translations
-- Insight driver fixes
-- SMS plugin fix
+- Rezolvări driver Insight
+- Remediere modul SMS
 
 ## Versiunea 2.2
 
@@ -914,10 +914,10 @@ Data lansării: 29-03-2019
 ### Caracteristici noi majore
 
 - [DST fix](#time-adjustment-daylight-savings-time-dst)
-- Wear Update
+- Actualizare Wear
 - [SMS plugin](../RemoteFeatures/SMSCommands.md) update
-- Go back in objectives.
-- Stop loop if phone disk is full
+- Megeți înapoi la obiective.
+- Opriți bucla dacă spațiul de stocare al telefonului este plin
 
 ## Versiunea 2.1
 
@@ -926,7 +926,7 @@ Data lansării: 03-03-2019
 ### Caracteristici noi majore
 
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
-- Status lights on main screen (Nico Schmitz)
+- Luminile de stare pe ecranul principal (Nico Schmitz)
 - Daylight saving time helper (Roumen Georgiev)
 - Fix processing profile names coming from NS (Johannes Mockenhaupt)
 - Fix UI blocking (Johannes Mockenhaupt)
@@ -949,25 +949,25 @@ Data lansării: 03-11-2018
 - Setup wizard: guides you through the process of setting up AAPS
 
 (Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=
-### Settings to adjust when switching from AMA to SMB
+### Setări de reglat la trecerea de la AMA la SMB
 
-- Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
+- Obiectivul 10 trebuie inițiat pentru ca SMB să fie activat (fila SMB arată în general ce restricții se aplică)
 
-- maxIOB now includes \_all\_ IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
+- maxIOB now includes \_all\_ IOB, not just added basal. Adică, dacă se administrează un bolus de 8 U pentru o masă, iar maxIOB este 7 U, nu va fi administrată insulină prin SMB până când IOB nu scade sub 7 U.
 
-- min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually
+- valoarea implicită min_5m_carbimpact s-a schimbat de la 3 la 8 prin schimbarea de la AMA la SMB. Dacă treceți de la AMA la SMB, trebuie să îl schimbați manual
 
-- Note when building AAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:
+- Note when building AAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Dacă construcția dumneavoastră eșuează cu o eroare în ceea ce privește "on demand configuration"", puteți face următoarele:
 
   - Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
   - In the left pane, click Build, Execution, Deployment > Compiler.
   - Uncheck the Configure on demand checkbox.
-  - Click Apply or OK.
+  - Apăsați pe Aplicați sau OK.
 
 (Releasenotes-overview-tab)=
-### Overview tab
+### Fila privire de ansamblu
 
-- Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). TTs use defaults set in preferences. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
+- Panglica de sus oferă acces la suspendare/dezactivare buclei, vizualizare/ajustare profil și pentru a porni/opri țintele temporare (TT). Țintele temporare folosesc valori implicite setate în preferințe. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
 - Treatment buttons: old treatment button still available, but hidden by default. Visibility of buttons can now be configured. New insulin button, new carbs button (including [eCarbs/extended carbs](../DailyLifeWithAaps/ExtendedCarbs.md))
 - [Colored prediction lines](#aaps-screens-prediction-lines)
 - Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
