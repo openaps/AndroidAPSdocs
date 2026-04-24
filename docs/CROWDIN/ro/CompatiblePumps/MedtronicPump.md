@@ -21,7 +21,7 @@ Puteți afla cum să verificați firmware-ul de pe pompele de la [documentația 
     - RileyLink disponibil la [getrileylink.org](https://getrileylink.org/product/rileylink916)
     - OrangeLink disponibil la [getrileylink.org](https://getrileylink.org/product/orangelink)
     - EmaLink (mai multe opțiuni ale modelului) disponibil pe [github.com](https://github.com/sks01/EmaLink)
-    - Gnarl (necesită unele adaptări/modificări suplimentare de tip „Fă-o Singur" - DIY) detalii disponibile pe [github.com](https://github.com/ecc1/gnarl)
+    - Gnarl (necesită unele adaptări/modificări suplimentare de tip "Fă-o Singur" - DIY) detalii disponibile pe [github.com](https://github.com/ecc1/gnarl)
 
 Un grafic de comparație pentru diferitele dispozitive compatibile RileyLink poate fi găsit la [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
@@ -171,7 +171,7 @@ Există o serie de opțiuni pentru încercarea rezolvării problemelor de conect
 - Utilizați butonul "Trezire și Reinițializare" în fila ACT așa cum este detaliat mai sus.
 - Dezactivați Bluetooth de pe telefon, așteptați 10 secunde și apoi activați din nou. Acest lucru va forța dispozitivul RileyLink să se reconecteze la telefon.
 - Resetați dispozitivul RileyLink. Apoi trebuie să utilizați butonul "Resetare Configurare RileyLink" în fila ACT.
-- Other users have found the following steps to be effective in restoring connectivity when other methods have not: 
+- Alți utilizatori consideră că următorii pași sunt eficienți în restabilirea conectivității atunci când alte metode nu au fost: 
     1. Reporniți telefonul
     2. *În timp ce* telefonul repornește reporniți dispozitivul RileyLink
     3. Deschideți AAPS și permite conexiunii să se restabilească
@@ -182,6 +182,6 @@ Există o serie de opțiuni pentru încercarea rezolvării problemelor de conect
 
 Pe spatele pompei veți găsi o linie care detaliază numărul modelului dumneavoastră, împreună cu un cod special de 3 litere. Primele două litere determină tipul de frecvență și ultimul determină culoarea. Iată valorile posibile pentru frecvență:
 
-- NA - America de Nord (în selecția de frecvențe trebuie să selectați „US & Canada (916 MHz)")
+- NA - America de Nord (în selecția de frecvențe trebuie să selectați "US & Canada (916 MHz)")
 - CA - Canada (în selecția de frecvențe trebuie să selectați "US & Canada (916 MHz)")
 - WW - Lume (în selectarea frecvenței trebuie să selectați "Worldwide (868 Mhz)")
