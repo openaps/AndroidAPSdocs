@@ -591,14 +591,14 @@ Allows for scanning of a pod communication device. The Omnipod driver cannot sel
 
 ### Semnale sonore de confirmare
 
-Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
+Furnizează semnale acustice de confirmare de la pompă pentru administrarea și modificările de bolus, insulină bazală, SMB și TBR.
 
 - **\*Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
 - **\*Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
 - **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
 - **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 
-### Alerts
+### Alerte
 
 Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
