@@ -54,7 +54,7 @@ Links with anchor :
 - [how long will it take?](#preparing-how-long-will-it-take)
 - [NSClient settings in Preferences](#Preferences-nsclient).
 - [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4
-- [Screenshots](../DailyLifeWithAaps/AapsScreens.md)
+- [Capturi de ecran](../DailyLifeWithAaps/AapsScreens.md)
 - [Screenshot main graph](#aaps-screens-main-graph) to header level 3
 - [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
 - [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
