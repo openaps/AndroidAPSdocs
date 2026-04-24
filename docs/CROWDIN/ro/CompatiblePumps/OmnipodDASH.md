@@ -4,12 +4,12 @@ Aceste instrucțiuni sunt pentru configurarea pompei de generație **Omnipod DAS
 
 ## Specificații Omnipod DASH
 
-Acestea sunt specificațiile modelului **Omnipod DASH** („DASH") și ce îl diferențiază de modelul **Omnipod EROS** („EROS"):
+Acestea sunt specificațiile modelului **Omnipod DASH** ("DASH") și ce îl diferențiază de modelul **Omnipod EROS** ("EROS"):
 
 - Pompele DASH sunt identificate printr-un **capac albastru pentru ac** (EROS are un capac transparent pentru ac). Capsulele sunt în rest identice în ceea ce privește dimensiunile fizice.
 - DASH nu necesită un dispozitiv BLE link/bridge (NU este nevoie de RileyLink, OrangeLink sau EmaLink).
 - Conexiunea Bluetooth a DASH este utilizată numai atunci când se trimite o comandă (spre exemplu un Bolus) și se deconectează imediat după emiterea comenzii.
-- Gata cu erorile „fără conexiune la dispozitivul/podul conectat" cu DASH.
+- Gata cu erorile "fără conexiune la dispozitivul/podul conectat" cu DASH.
 - **AAPS** va aștepta accesibilitatea pompei pentru a trimite comenzi.
 - La activarea pompei, **AAPS** va găsi și se va conecta la o nouă pompă DASH.
 - Rază de acțiune preconizată: 5-10 metri (Rezultatele pot varia).
@@ -245,7 +245,7 @@ Când administrarea insulinei este suspendată, va trebui să dați o comandă p
 
    ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)   ![Resume_2](../images/DASH_images/Resume/Resume_2.jpg)
 
-2. Atunci când comanda de reluare a livrării a avut succes, un dialog de confirmare va afișa mesajul **Administrarea insulinei a fost reluată**. Apăsați **OK** pentru a confirma și continua.
+2. Atunci când comanda de reluare a administrării a avut succes, un dialog de confirmare va afișa mesajul **Administrarea insulinei a fost reluată**. Apăsați **OK** pentru a confirma și continua.
 
    ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
 
@@ -425,60 +425,60 @@ Furnizează semnale acustice de confirmare de la pompă pentru administrarea și
 
 ![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
-Provides **AAPS** alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
+Furnizează alerte **AAPS** în ceea ce privește expirarea pompei, închiderii, rezervorului scăzut în baza unităților prag definite.
 
-***NOTE:** an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
+***NOTĂ:** o notificare AAPS va fi ÎNTOTDEAUNA emisă pentru orice alertă după comunicarea inițială cu pompa de când a fost declanșată alerta. Închiderea notificării NU va anula alerta DECÂT dacă opțiunea de recunoaștere automată a alertelor de pompă este activată. Pentru a închide MANUAL alerta trebuie să vizitați fila **DASH** și să apăsați butonul **Reducere la tăcere a alertelor**.*
 
-**Expiration reminder enabled:**    Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
+**Memento expirare activat:** Activați sau dezactivați mementoul de expirare a al pompei, setat să se declanșeze atunci când este atins numărul de ore definit, înainte de oprirea acesteia.
 
-**Hours before shutdown:**  Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
+**Ore înainte de închidere:**  Definiți numărul de ore înainte ca pompa activă să se închidă, ceea ce va declanșa apoi alerta de expirare.
 
-**Low reservoir alert enabled:**    Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
+**Alertă de rezervor scăzut activată:** Activați sau dezactivați  o alertă atunci când se atinge limita joasă a rezervorului rămase în pompă, așa cum a fost definit în câmpul Număr de unități.
 
-**Number of units:**    The number of units at which to trigger the pod low reservoir alert.
+**Numărul de unități:** Numărul de unități la care să fie declanșată alerta rezervor scăzut al pompei.
 
 
 
-### Notifications
+### Notificări
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
-The Notification section allows the user to select their preferred notifications and audible phone alerts when AAPS is uncertain about the status of TBR, SMB, or bolus, and when delivery suspended events were successful.
+Secțiunea Notificări permite utilizatorului să își selecteze notificările preferate și alertele sonore atunci când AAPS nu este sigur de starea RBT, SMB, sau a bolusurilor, și când evenimentele de suspendare a administrării au avut succes.
 
-***NOTE:** These are notifications only, no audible beep alerts are made.*
+***NOTĂ:** Acestea sunt doar notificări, nu sunt create alerte sonore.*
 
-**Sound for uncertain TBR notifications enabled:**  Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a TBR was successfully set.
+**Sunet pentru notificări RBT incerte activat:** Activați sau dezactivați această setare pentru a declanșa o alertă sonoră și o notificare vizuală atunci când **AAPS** nu este sigur dacă un RBT a fost setat cu succes.
 
-**Sound for uncertain SMB notifications enabled:**  Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if an SMB was successfully delivered.
+**Sunet pentru notificări SMB incerte activat:** Activați sau dezactivați această setare pentru a declanșa o alertă sonoră și o notificare vizuală atunci când **AAPS** nu este sigur dacă un SMB a fost administrat cu succes.
 
-**Sound for uncertain bolus notifications enabled:**    Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a bolus was successfully delivered.
+**Sunet pentru notificări de bolus incert activat:** Activați sau dezactivați această setare pentru a declanșa o alertă sonoră și o notificare vizuală atunci când **AAPS** nu este sigur dacă un bolus a fost administrat cu succes.
 
-**Sound when delivery suspended notifications enabled:**    Enable or disable this setting to trigger an audible alert and visual notification when suspend delivery was successfully delivered.
+**Sunet pentru notificările de suspendare a livrării activat:** Activați sau dezactivați această setare pentru a declanșa o alertă sonoră și o notificare vizuală atunci când comanda de suspendare a administrării a fost executată cu succes.
 
-## Actions (ACT) Tab
+## Fila Acțiuni (ACT)
 
-This tab is well documented in the main **AAPS** documentation but there are a few items on this tab that are specific to how the DASH differs from tube based pumps, especially after the processes of applying a new pod.
+Această filă este bine documentată în documentația principală **AAPS**, dar există câteva elemente în această filă care sunt specifice modului în care DASH diferă de pompele bazate pe fir, mai ales după aplicarea unei noi pompe.
 
-1. Go to the **Actions (ACT)** tab in the main **AAPS** interface.
+1. Mergeți la fila **Acțiuni (ACT)** din interfața principală **AAPS**.
 
-2. Under the **Careportal (1)** section the **Insulin** and **Cannula** fields will have their **age reset** to 0 days and 0 hours **after each pod change**. This is done because of how the Omnipod pump is built and operates. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours). The **pump battery** and **insulin reservoir** are self contained inside of each pod.
+2. În secțiunea **Careportal (1)** câmpurile **Insulină** și **Canula** vor avea **vechimea resetată** la 0 zile și 0 ore **după fiecare schimbare de pompă**. Asta se face datorită modului în care pompa Omnipod este construită și funcționează. Deoarece pompa inserează canula direct în piele la locul aplicării pompei, un fir obișnuit nu este utilizată în pompele Omnipod. *Prin urmare, după schimbarea pompei vechimea fiecăreia dintre aceste valori se va reseta automat la zero.* **Vechimea bateriei pompei** nu este raportată deoarece bateria din pompă va fi întotdeauna mai mare decât durata de viață a pompei (maxim 80 de ore). **Bateria pompei** și **rezervorul de insulină** sunt integrate înăuntrul fiecărei pompe.
 
    ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-### Level
+### Nivel
 
-**Insulin Level**
+**Nivelul insulinei**
 
-Insulin level displayed is the amount reported by DASH. However, the pod only reports the actual insulin reservoir level when it is below 50 units. Until then “Above 50 units” will be displayed. The amount reported is not exact: when the pod reports ‘empty’ in most cases the reservoir will still have some additional units of insulin left.
+Nivelul insulinei afișat este cantitatea raportată de DASH. Cu toate acestea, pompa raportează nivelul real al rezervorului de insulină numai atunci când acesta este sub 50 de unități. Până atunci va fi afișat "Peste 50 de unități". Cantitatea raportată nu este exactă: când pompa raportează "gol" în majoritatea cazurilor, rezervorul va mai avea încă câteva unități suplimentare de insulină.
 
-The DASH overview tab will display as described the below:
+Fila vedere de ansamblu DASH va afișa după cum este descris mai jos:
 
-  * **Above 50 Units** - The pod reports more than 50 units currently in the reservoir.
-  * **Below 50 Units** - The amount of insulin remaining in the reservoir as reported by the Pod.
+  * **Peste 50 de unități** - Pompa raportează peste 50 de unități în prezent în rezervor.
+  * **Sub 50 de unități** - cantitatea de insulină rămasă în rezervor, așa cum este raportată de către pompă.
 
 Notă suplimentară:
   * **SMS** - Returnează valoarea sau 50+U pentru răspunsuri SMS
-  * **Nightscout** - Încarcă în Nightscout valoarea de 50 atunci când sunt peste 50 de unități (versiunea 14.07 și mai vechi).  Newer versions will report a value of 50+ when over 50 units.
+  * **Nightscout** - Încarcă în Nightscout valoarea de 50 atunci când sunt peste 50 de unități (versiunea 14.07 și mai vechi).  Versiunile mai noi vor raporta o valoare de 50+ atunci când depășesc 50 de unități.
 
 (omnipod-dash-troubleshooting)=
 
@@ -527,12 +527,12 @@ Acest eșec este legat de o stare incorectă a pompei pentru o comandă sau o er
 
 ### Alerte de pompă inaccesibilă
 
-Atunci când nu poate fi stabilită nicio comunicare cu pompa pentru o perioadă preconfigurată de timp o alertă de tip „pompă inaccesibilă" va fi emisă. Alertele de pompă inaccesibilă pot fi configurate mergând în meniul cu trei puncte din dreapta sus, selectând **Preferințe** ➜ **Alerte Locale** ➜**Prag pompă inaccesibilă [min]**. Valoarea recomandată este alertarea după **120** minute.
+Atunci când nu poate fi stabilită nicio comunicare cu pompa pentru o perioadă preconfigurată de timp o alertă de tip "pompă inaccesibilă" va fi emisă. Alertele de pompă inaccesibilă pot fi configurate mergând în meniul cu trei puncte din dreapta sus, selectând **Preferințe** ➜ **Alerte Locale** ➜**Prag pompă inaccesibilă [min]**. Valoarea recomandată este alertarea după **120** minute.
 
 ---
 ### Exportați setările
 
-Prin exportarea setărilor **AAPS** vă permite să restabiliți toate setările și, poate mai important, toate obiectivele dumneavoastră. Este posibil să fie necesară restabilirea setărilor la „ultima configurație funcțională cunoscută" fie după dezinstalarea/reinstalarea **AAPS**, fie în cazul pierderii telefonului și reinstalării aplicației pe un dispozitiv nou.
+Prin exportarea setărilor **AAPS** vă permite să restabiliți toate setările și, poate mai important, toate obiectivele dumneavoastră. Este posibil să fie necesară restabilirea setărilor la "ultima configurație funcțională cunoscută" fie după dezinstalarea/reinstalarea **AAPS**, fie în cazul pierderii telefonului și reinstalării aplicației pe un dispozitiv nou.
 
 ***NOTĂ:** Informațiile pompei active sunt incluse în setările exportate. Dacă importați un fișier "vechi" exportat, pompa dumneavoastră reală va "muri". Nu există nicio altă alternativă. În unele cazuri (cum ar fi o schimbare de telefon _programată_), s-ar putea să fie necesar să utilizați fișierul exportat pentru a restaura setările **AAPS păstrând în același timp pompa activă curent**. În acest caz, este important să se utilizeze doar fișierul de setări recent exportat care conține în prezent pompa activă.*
 
@@ -567,8 +567,8 @@ Ca rezultat, există un **risc de a pierde pompa activă!** (a se vedea **Setăr
 Atunci când se importă setări care conțin date pentru o pompă care nu mai este activă, AAPS va încerca să se conecteze cu ea, ceea ce în mod evident va eșua. Nu poți activa o nouă pompă în această situație.
 
 Pentru a elimina vechea sesiune de pompă:
-1. „Încercați" pentru a dezactiva pompa. Dezactivarea va eșua, cel mai probabil.
-2. Selectați „Reîncercați".
+1. "Încercați" pentru a dezactiva pompa. Dezactivarea va eșua, cel mai probabil.
+2. Selectați "Reîncercați".
 3. După cea de-a doua și ce de-a treia reîncercare veți primi opțiunea de a elimina pompa.
 4. Odată ce vechea pompă este eliminată, veți putea activa o nouă pompă.
 
