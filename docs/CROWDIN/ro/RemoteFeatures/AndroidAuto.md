@@ -24,15 +24,15 @@ Aceasta înseamnă că:
 
 Deschideți meniul în 3 puncte din dreapta sus în **AAPS** și selectați **Preferințe**
 
-![Utilizați notificările sistemului pentru alerte și notificări](../images/android_auto_02.png)
+![Utilizați notificările de sistem pentru alerte și notificări](../images/android_auto_02.png)
 
 În **Alerte locale** activați **Utilizați notificările de sistem pentru alerte și notificări**
 
-![Utilizați notificările sistemului pentru alerte și notificări](../images/android_auto_03.png)
+![Utilizați notificările de sistem pentru alerte și notificări](../images/android_auto_03.png)
 
 Verificați acum dacă primiți notificări de la **AAPS** pe telefon înainte de a merge la mașina dumneavoastră!
 
-![Utilizați notificările sistemului pentru alerte și notificări](../images/android_auto_04.png)
+![Utilizați notificările de sistem pentru alerte și notificări](../images/android_auto_04.png)
 
 ## Permiteți utilizarea de "surse necunoscute" cu Android Auto.
 
@@ -64,7 +64,7 @@ Confirmați că doriți să activați modul dezvoltator în dialogul modal "Perm
 
 ![Activați modul dezvoltator](../images/android_auto_09.png)
 
-În setările **pentru dezvoltator** activați „Surse necunoscute”.
+În setările **pentru dezvoltator** activați "Surse necunoscute".
 
 ![Activați modul dezvoltator](../images/android_auto_10.png)
 
