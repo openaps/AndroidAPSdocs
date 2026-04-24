@@ -409,19 +409,19 @@ Grupurile de setări sunt listate mai jos; puteți activa sau dezactiva printr-u
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
-Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
+Furnizează semnale acustice de confirmare de la pompă pentru administrarea și modificările de bolus, insulină bazală, SMB și TBR.
 
-**Bolus beeps enabled:**    Enable or disable confirmation beeps when a bolus is delivered.
+**Semnale sonore activate pentru bolusuri:** Activați sau dezactivați semnalele sonore de confirmare atunci când un bolus este administrat.
 
-**Basal beeps enabled:**    Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
+**Semnale sonore activate pentru bazale** Activați sau dezactivați semnalele sonore de confirmare atunci când o nouă rată bazală este setată, rata bazală activă este anulată sau rata bazală curentă este schimbată.
 
-**SMB beeps enabled:**  Enable or disable confirmation beeps when a SMB is delivered.
+**Semnale sonore SMB:** Activați sau dezactivați semnalele sonore de confirmare atunci când un SMB este administrat.
 
-**TBR beeps enabled:**  Enable or disable confirmation beeps when a TBR is set or canceled.
+**Semnale sonore RBT:**  Activați sau dezactivați mesajele de confirmare atunci când o RBT este setată sau anulată.
 
 
 
-### Alerts
+### Alerte
 
 ![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
