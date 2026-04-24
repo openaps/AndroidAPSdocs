@@ -1,6 +1,6 @@
 # Automatizare
 
-## What is an Automation?
+## Ce este o Automatizare?
 
 "**Automation**" is a feature which can automate task for AAPS.
 
