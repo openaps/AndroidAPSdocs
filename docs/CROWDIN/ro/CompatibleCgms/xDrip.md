@@ -76,7 +76,7 @@ Amintiți-vă să dezactivați Importul de sunete pentru a evita declanșarea su
 
 ### Versiunea xDrip+ în funcție de seria transmitatorului G6.
 
-- Toate transmițătoarele G6 fabricate după toamnă/sfârșitul anului 2018 se numesc „Firefly”. Nu permit repornirea senzorului fără ca [ transmițătorul să fie scos](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), nu trimit date brute. Este recomandat să utilizați cel mai recent [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+- Toate transmițătoarele G6 fabricate după toamnă/sfârșitul anului 2018 se numesc "Firefly". Nu permit repornirea senzorului fără ca [ transmițătorul să fie scos](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), nu trimit date brute. Este recomandat să utilizați cel mai recent [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 - Transmițătoarele vechi reasamblate cu o nouă baterie și transmițătoarele modificate permit extinderea duratei de viață a senzorilor și repornirea, acestea trimit, de asemenea, date brute. Puteți utiliza [ultimul APK (stabil)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
 
 ### Setări specifice Dexcom
@@ -195,7 +195,7 @@ Urmați [aceste instrucțiuni](https://navid200.github.io/xDrip/docs/Dexcom/Sens
 
 - Lăsați toate celelalte opțiuni dezactivate dacă nu știți de ce doriți să le activați.
     
-    ![xDrip+ Libre Bluetooth Settings 3](../images/xDrip_Libre_BTSettings3.png)
+    ![Setări Bluetooth Libre xDrip+ 3](../images/xDrip_Libre_BTSettings3.png)
 
 ### Nivel baterie de la transmițătorul Libre
 
