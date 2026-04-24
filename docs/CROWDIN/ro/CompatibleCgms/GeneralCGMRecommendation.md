@@ -2,13 +2,13 @@
 
 ## Igiena CGM
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+Indiferent de sistemul CGM pe care îl utilizați, dacă doriți să utilizați calibrarea bazată pe glucometru, atunci există unele reguli foarte clare pe care ar trebui să le aplicați, indiferent dacă utilizați sau nu software-ul DIY CGM sau aplicațiile oficiale.
 
--   Make sure hands and kit are clean.
--   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
--   Avoid calibrating when glucose levels are moving up or down.
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
--   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
+-   Asigurați-vă că mâinile și trusa sunt curate.
+-   Încercați să calibrați atunci când aveți o serie de puncte cu o evoluție orizontală (15-30 de minute este de obicei suficient)
+-   Evitați calibrarea atunci când nivelurile glicemiei se mișcă în sus sau în jos.
+-   Faceți "suficiente" calibrări - în aplicațiile oficiale vi se vor cere una sau două verificări ale glicemiei pe zi. În cazul sistemelor DIY este posibil să nu fiți alertat și ar trebui să fiți prudent când continuați fără calibrări.
+-   În cazul senzorilor care nu necesită sau nu permit calibrarea, verificați cel puțin zilnic glicemia reală din sânge. AAPS va fi la fel de sigur pe cât de încredere sunt citirile senzorului dumnevoastră.
 -   Dacă este posibil, calibrați cu unele valori dintr-o gamă mai mică (4-5mmol/l sau 72-90mg/dl) și unele de la un nivel ușor mai înalt (7-9mmol/l sau 126-160mg/dl), deoarece aceasta oferă o gamă mai bună pentru calibrarea punctelor/pantei.
 
 ## Inserare senzor (G6)
