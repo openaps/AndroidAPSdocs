@@ -53,14 +53,14 @@ Dacă rulați ESEL cu o instalare nouă de Eversense pentru prima dată, poate d
 
 ## xDrip+
 
-xDrip+ poate citi notificările de la aplicația oficială, așa cum face ESEL. No backfilling available.
+xDrip+ poate citi notificările de la aplicația oficială, așa cum face ESEL. Nu este disponibilă scrierea înapoi a datelor lipsă.
 
 - Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ “Companion App” must be selected.
+- Trebuie selectat "Companion App" ca sursă de date în xDrip+.
 - Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../CompatibleCgms/xDrip.md).
-- Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
+- Reglați setările xDrip+ în funcție de explicațiile de pe pagina de setări xDrip+ [Setări xDrip+ ](../CompatibleCgms/xDrip.md).
+- Activați [Netezire exponențială](../CompatibleCgms/SmoothingBloodGlucoseData.md) în AAPS.
 
 ```{warning}
-BG values reading frequency is not always 5 minutes and duplicates can occur.
+Frecvența citirii valorilor glicemiei nu este întotdeauna de 5 minute și pot apărea duplicate.
 ```
