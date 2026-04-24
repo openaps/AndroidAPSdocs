@@ -34,11 +34,11 @@ Valorile glicemiei sunt primite de aplicația xDrip+ de pe telefonul inteligent.
 
 ![xDrip+ jurnalizare LibreLink](../images/Libre2_Tags.png)
 
-- Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+- Tehnic, valoarea actuală a glicemiei este transmisă către xDrip+ în fiecare minut. Un filtru de medie ponderată calculează o valoare uniformizată pe baza ultimelor 25 de minute, în mod implicit. Puteți schimba perioada din meniul de caracteristici NFC.
 
-  → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+  → Meniu Hamburger → Setări → Caracteristici scanare NFC → Uniformizați libre 3 când se utilizează metoda xxx
 
-  ![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+  ![Setări avansate xDrip+ Libre 2 & valori brute](../images/xDrip_Libre3_Smooth.png)
 
 
 
