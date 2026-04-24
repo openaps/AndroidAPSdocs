@@ -393,7 +393,7 @@ Mai jos este descris scopul fiecărei pictograme din meniul **Gestionare pompă*
 
 ## Setări Dash
 
-The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜ **Pump**  **Dash** ➜ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the **AAPS** interface titled **DASH**.
+Setările driverului Dash sunt configurabile din colțul stânga-sus **meniul hamburger** sub **Constructorul de configurație (1)** ➜ **Pompă** **Dash** ➜ **Rotița de setări (3) ** prin selectarea **butonului radio (2)** denumit **Dash**. Bifarea **casetei de selecție (4)** aproape de **Roata zimțată de setări (3)** va permite meniului DASH să fie afișat ca o filă intitulată DASH în interfața **AAPS**.
 
 ![Dash_settings_1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
