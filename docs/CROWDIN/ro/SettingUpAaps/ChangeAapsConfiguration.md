@@ -34,7 +34,7 @@ The documentation of the preferences is available [here](../SettingUpAaps/Prefer
 
 ## Plugin preferences
 
-![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
+![Deschideți preferințele modulului](../images/Pref2020_OpenPlugin2.png)
 
 The **plugin preferences** dialogue can be reached via the top right _three dots_ menu on the home screen of **AAPS**. It allows to change the configuration of the **plugin currently on screen**.
 
