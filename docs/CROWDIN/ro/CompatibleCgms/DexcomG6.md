@@ -51,7 +51,7 @@ Dexcom G6 BYODA este acum o versiune foarte veche a aplicației și nu poate fi 
 
 -   Selectați 'Dexcom App (patched)' în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
 
--   Dacă nu primiți nici o valoare selectați orice altă sursă de date, apoi reselectați „Dexcom App (patched)” pentru a declanșa cererea de permisiuni de stabilire a conexiunii dintre AAPS și BYODA.
+-   Dacă nu primiți nici o valoare selectați orice altă sursă de date, apoi reselectați "Dexcom App (patched)" pentru a declanșa cererea de permisiuni de stabilire a conexiunii dintre AAPS și BYODA.
 
 ### Setări pentru xDrip+
 
@@ -60,16 +60,16 @@ Dexcom G6 BYODA este acum o versiune foarte veche a aplicației și nu poate fi 
 
 
 (DexcomG6-troubleshooting-g6)=
-## Troubleshooting G6 and ONE
+## Depanare pentru G6 și ONE
 
-### Dexcom G6/ONE specific troubleshooting
+### Depanare specifică Dexcom G6/ONE
 
--   Scroll down to **Troubleshooting** [here](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+-   Derulați în jos până la **Depanare** [aici](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
-### General troubleshooting
+### Depanare generală
 
-General Troubleshooting for CGMs can be found [here](#general-cgm-troubleshooting).
+Depanare generală pentru CGMs se poate găsi [aici](#general-cgm-troubleshooting).
 
 ### Transmițător nou cu senzor în funcțiune
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found [here](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). If you opt for [this solution](https://youtu.be/tx-kTsrkNUM) instead, you must be careful to avoid [damaging sensor contacts](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html) with the strip.
+Dacă se întâmplă să schimbați transmițătorul în timpul unei sesiuni de senzor care funcționează, ați putea încerca să înlăturați transmițătorul fără a deteriora senzorul. Un videoclip poate fi găsit [aici](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). Dacă optați pentru [această soluție](https://youtu.be/tx-kTsrkNUM) în schimb, trebuie să aveți grijă să evitați [deteriorarea contactelor senzorului](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html) cu bandeleta.
