@@ -190,7 +190,7 @@ Click the "NEXT" button:
 
 ![Location 2](../images/setup-wizard/Wizard11.png)
 
-## Master password
+## Parola principală
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
@@ -222,7 +222,7 @@ Tap RESTORE SETTINGS to select which file to restore, then NEXT.
 
 Please select if your glucose values are in mg/dL or mmol/L and then please click the "NEXT" button:
 
-![Units](../images/setup-wizard/Wizard13.png)
+![Unități](../images/setup-wizard/Wizard13.png)
 
 ## Display settings
 
@@ -321,7 +321,7 @@ Go back twice, to the list of plugins and select "NEXT" to go to the next screen
 
 ![image](../images/setup-wizard/Wizard16-App.png)
 
-## Patient name
+## Limba
 
 Here you can setup your name in **AAPS**.
 
