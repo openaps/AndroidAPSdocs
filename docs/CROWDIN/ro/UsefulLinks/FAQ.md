@@ -199,7 +199,7 @@ Mulți utilizatori activează modul avion pe timp de noapte. If you want the loo
 
 Acum nu mai primiți apeluri și nici nu sunteți conectat la internet. Dar bucla încă rulează.
 
-Unele persoane au descoperit probleme cu transmiterea locală (AAPS nu primește valorile glicemiei din xDrip+) atunci când telefonul este în modul avion. Mergeți la Setări > Setări Inter-app > Identificați destinatarul și introduceți `info.nightscout.androidaps`.
+Unele persoane au descoperit probleme cu transmiterea locală (AAPS nu primește valorile glicemiei din xDrip+) atunci când telefonul este în modul avion. Mergeți la Setări > Setări între aplicații > Identificați destinatarul și introduceți <0>info.nightscout.androidaps</0>.
 
 ![xDrip+ identificare receptor prin setări de bază inter-aplicații](../images/xDrip_InterApp_NS.png)
 
