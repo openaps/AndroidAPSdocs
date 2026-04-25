@@ -2,7 +2,7 @@
 
 These instructions are for configuring the Medtrum insulin pump.
 
-This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.
+Această aplicație face parte dintr-o soluție DIY (do-it-yourself/ o aplicație pe care o construiți singur) și nu este un produs finit; și necesită ca dumneavoastră să citiți, să învățați și să înțelegeți sistemul, de la construcție pana la modul de utilizare. You alone are responsible for what you do with it.
 
 ```{contents} Table of contents
 :depth: 1
@@ -14,7 +14,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
 * Automatic DST and timezone handling
 * Extended bolus is not supported by AAPS driver
 
-## Hardware and Software Requirements
+## Cerințe hardware și software
 * **Compatible Medtrum pumpbase and reservoir patches**
     - Currently supported:
         - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
@@ -25,7 +25,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
     - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
 * [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-## Before you begin
+## Înainte să începeți
 
 **SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves).
 
