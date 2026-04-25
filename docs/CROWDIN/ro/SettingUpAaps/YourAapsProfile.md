@@ -151,7 +151,7 @@ A **lower / stronger ISF** (i.e. 40 instead of 50) means insulin drops your **BG
 
 A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
 
-**Example:**
+**Exemplu:**
 * **BG** is 190 mg/dL (10,5 mmol/L) and target is 100 mg/dL (5,6 mmol/L).
 * So, you want a correction of `190 - 110 = 90 mg/dL` or `10,5 - 5,6 = 4.9 mmol/L`
 * If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
@@ -205,7 +205,7 @@ It is common to have different **ICR** at different times of day due to hormone 
 > 
 > When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. ("Câte grame de carbohidrati pot fi acoperite de o singură unitate de insulină?")
 > 
-> Example:
+> Exemplu:
 > 
 > Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
