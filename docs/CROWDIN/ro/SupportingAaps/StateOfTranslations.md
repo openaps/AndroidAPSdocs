@@ -1,26 +1,26 @@
-# state of translation for app and the documentation
+# starea traducerii pentru aplicație și documentație
 
-The state is once per hour updated and reflects only the state in Crowdin.
+Starea este actualizată o dată pe oră și reflectă doar starea din Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations.
-It's better to look only at the percentage level of translations to see if work is to be done.
+Atenție, procentajul de corectare trebuie să fie mai mic decât procentajul de traduceri, dar este decis să fie arătat deasupra traducerilor.
+Este mai bine să privim doar la nivelul procentual al traducerilor pentru a vedea dacă mai este de lucru.
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+După traducerea Crowdin o sincronizare în Github este programată în fiecare zi pentru a transfera traducerile către Github ca cerere de integrare (PR).
 
-The acceptance of the PR is a manual task which will be done es fast as possible.
+Acceptarea propunerii de integrare este o sarcină manuală care va fi realizată cât mai repede posibil.
 ```
 
-## state app translation
+## starea traducerii aplicației
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+Starea traducerii **aplicației** per limbă (cod de țară, procentaj traducere, procentaj corectare).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![starea traducerii aplicației](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
 ## Stadiul traducerii documentației
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+Starea traducerii **documentației** per limbă (cod de țară, procentaj traducere, procentaj corectare).
 
 ![Stadiul traducerii documentației](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
