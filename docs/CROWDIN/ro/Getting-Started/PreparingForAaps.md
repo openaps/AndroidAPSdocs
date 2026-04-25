@@ -12,7 +12,7 @@ Many experience-related details in the **AAPS** documentation make more sense wh
 
 (preparing-safety-first)=
 
-## Safety First
+## Siguranța pe primul loc
 “With great power comes great responsibility…”
 
 ### Technical safety
