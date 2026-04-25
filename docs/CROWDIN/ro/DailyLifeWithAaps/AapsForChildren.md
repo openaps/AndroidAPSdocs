@@ -2,7 +2,7 @@
 
 **AAPS** can be used successfully with type 1 kids as well. Anyway, there are things to consider.
 
-## Things to consider
+## Lucrurile de luat în considerare
 
 ### Initial Profile
 
