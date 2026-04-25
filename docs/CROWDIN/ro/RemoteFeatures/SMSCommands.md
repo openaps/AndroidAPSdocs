@@ -1,4 +1,4 @@
-# SMS Commands
+# Comenzi prin mesaje SMS
 
 ```{contents} Table of contents
 :depth: 2
@@ -15,23 +15,23 @@ Most of the adjustments of temp targets, following **AAPS** etc. can be done on 
 
 4. If your other methods of remote control (Nightscout/AAPSClient) are temporarily not working
 
-## Safety First
+## Siguranța pe primul loc
 
 If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to export **AAPS** settings).
 
 Additionally, it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. This way, you can use the second number to [disable](#SMSCommands-other) SMS communicator in case your main remote phone gets compromised.
 
-The default minimum time delay between bolus commands is 15 minutes. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
+The default minimum time delay between bolus commands is 15 minutes. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Încercați mai târziu"
 
-AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Este recomandabil să fie configurat astfel încât textele de confirmare să fie trimise la cel puțin două numere de telefon diferite, în cazul în care unul dintre telefoanele receptoare este furat.
 
 **If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient, Nightscout...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
 
 For the sensitive commands, an authenticator app with a time-based one-time password must be used to increase safety.
 
-If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “[Reset Authenticators](#sms-commands-authenticator-setup)” in **AAPS** or send the SMS command “[SMS stop](#SMSCommands-other)”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
+If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “[Reset Authenticators](#sms-commands-authenticator-setup)” in **AAPS** or send the SMS command “[SMS stop](#SMSCommands-other)”. By resetting authenticators you make ALL the caregivers' phones invalid. Va trebui să le setați din nou.
 
-## Setup SMS commands
+## Setare comenzi SMS
 
 ```{contents} The overall process is as follows
 :depth: 1
@@ -39,14 +39,14 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 ```
 
 (sms-commands-authenticator-setup)=
-### Authenticator setup
+### Setare Authenticator
 
-Two-factor authentication is used to improve safety.
+Autentificarea cu doi factori este folosită pentru a îmbunătăți siguranța.
 
-On the caregiver phone, download (from the App store or Google play) and install an Authenticator app. Popular free apps are:
+On the caregiver phone, download (from the App store or Google play) and install an Authenticator app. Aplicațiile gratuite populare sunt:
   - [Authy](https://authy.com/download/)
-  - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
-  - [LastPass Authenticator](https://lastpass.com/auth/)
+  - Autentificator Google - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
+  - [LastPass Autentificator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
 These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
@@ -59,7 +59,7 @@ On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phon
 
 ### Date and time syncing
 
-The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+Timpul de pe ambele telefoane trebuie sa fie sincronizat. Cel mai bine este să le setați să preia timpul automat din rețea. Diferențele de timp pot duce la probleme de autentificare.
 
 On both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific device, you may need to try out different settings.
 
@@ -78,7 +78,7 @@ Enable “allow remote commands via SMS”:
 ![image](../images/remote-control-11.png)
 
 (SMSCommands-authorized-phone-numbers)=
-#### Allowed phone numbers
+#### Numere de telefon permise
 
 Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
 * UK phone number: +447976304596
@@ -92,33 +92,33 @@ If you have more than one phone number to add, separate them by semicolons, with
 
 ![image](../images/remote-control-12.png)
 
-#### Minutes between bolus commands
+#### Minute între comenzile de bolus
 
 - You can define the minimum delay between two boluses issued via SMS.
 - For safety reasons you have to add at least two authorized phone numbers to edit this value.
 
-#### Additional mandatory PIN at token end
+#### PIN obligatoriu suplimentar la sfârșitul codului
 
 For safety reasons, the reply code must be followed by a PIN. Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
 
 PIN requirements are:
 
-* 3 to 6 digits
+* 3-6 cifre
 * not the same digits (_i.e._ 1111 or 1224)
 * not sequential numbers (_i.e._ 1234)
 
 ![image](../images/remote-control-13.png)
 
-#### Authenticator setup
+#### Setare Authenticator
 
 * Follow the step-by-step instructions on the screen.
 * Open your installed authenticator app on the _caregiver’s phone_, set up a new connection and
 * Use the caregiver phone to scan the QR code provided by **AAPS**, when prompted.
 * Test the one-time passcode from the authenticator app on the caregiver phone followed by your PIN:
 
-Example:
+Exemplu:
 * The token from the authenticator app is 457051
-* Your mandatory PIN is 2401
+* Codul dumneavoastră PIN obligatoriu este 2401
 * Code to check: 4570512401
 
 If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
@@ -127,7 +127,7 @@ If the entry is correct, the red text “WRONG PIN” will change automatically 
 
 You should now be set up with SMS commands.
 
-Use button "Authenticator setup > Reset Authenticators" if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
+Use button "Authenticator setup > Reset Authenticators" if you want to remove provisioned authenticators. (Prin resetarea autentificatorilor, toți autentificatorii existenți sunt invalidați. Va trebui să îi setați din nou.)
 
 ## SMS commands usage
 
