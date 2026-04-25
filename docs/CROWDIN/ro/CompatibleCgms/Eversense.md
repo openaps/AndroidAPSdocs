@@ -55,7 +55,7 @@ Dacă rulați ESEL cu o instalare nouă de Eversense pentru prima dată, poate d
 
 xDrip+ poate citi notificările de la aplicația oficială, așa cum face ESEL. Nu este disponibilă scrierea înapoi a datelor lipsă.
 
-- Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- Descărcați și instalați xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
 - Trebuie selectat "Companion App" ca sursă de date în xDrip+.
 - Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
 - Reglați setările xDrip+ în funcție de explicațiile de pe pagina de setări xDrip+ [Setări xDrip+ ](../CompatibleCgms/xDrip.md).
