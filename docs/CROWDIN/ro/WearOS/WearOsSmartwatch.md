@@ -81,7 +81,7 @@ To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy
 
 ### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
 
- ![image](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
+ ![imagine](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
 Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
 
@@ -100,37 +100,37 @@ Alternatively, but not for Wear OS 5, you can:
 
 1)   Download _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ from the Play Store onto phone
 
-![image](../images/wearos/easyfire01.png)
+![imagine](../images/wearos/easyfire01.png)
 
 2)  Make yourself a developer in the watch (once set up and connected to phone):
 
 Go to settings >about watch (bottom option) -> software info -> software version.
 
-![image](../images/wearos/easyfire02.png)
+![imagine](../images/wearos/easyfire02.png)
 
 Rapidly tap on “ software version” until a notification appears that the watch is now in "developer mode".
 
-![image](../images/wearos/easyfire03.png)
+![imagine](../images/wearos/easyfire03.png)
 
 Return to the top of settings menu, scroll to the bottom and see “developer options” below “about watch”.
 
 In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **192.168.1.214**.5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.
 
-![image](../images/wearos/easyfire04.png)
+![imagine](../images/wearos/easyfire04.png)
 
 STEP 3)     Enter IP address _e.g._ **192.168.1.214** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address).
 
-![image](../images/wearos/easyfire05.png)
+![imagine](../images/wearos/easyfire05.png)
 
 Then click the plug socket icon on the top right. It will turn green when connected.
 
-![image](../images/wearos/easyfire06.png)
+![imagine](../images/wearos/easyfire06.png)
 
 
 STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  aaps-wear.apk onto the smartwatch using Easy Fire tools
 
 
-![image](../images/wearos/easyfire07.png)
+![imagine](../images/wearos/easyfire07.png)
 
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
@@ -149,7 +149,7 @@ On the watch:
 - Go to Settings → Developer options. Enable **ADB debugging**
 - Go to Settings → Developer options → Wireless debugging → **Pair new device**
 
-You will see a Wi-Fi paring code and IP address and port appearing: ![image](../images/wearos/ADB03.png)
+You will see a Wi-Fi paring code and IP address and port appearing: ![imagine](../images/wearos/ADB03.png)
 
 - In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299`
 - You will be asked for the pairing code. Enter it.
