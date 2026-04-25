@@ -4,40 +4,40 @@
 
 - Apăsați pe meniul hamburger din colțul din stânga sus.
 
-![image](../images/DiaconnG8/DiaconnG8_01.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_01.jpg)
 
 - Apăsați pe Configurator.
 
-![image](../images/DiaconnG8/DiaconnG8_02.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_02.jpg)
 
 - După selectarea pompei Diaconn G8, apăsați pe pictograma Setări (rotița dințată).
 
-![image](../images/DiaconnG8/DiaconnG8_03.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_03.jpg)
 
 - Alegeți pompa selectată.
 
-![image](../images/DiaconnG8/DiaconnG8_04.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 - După ce apare în listă, alegeți modelul pompei de insulină.
 
-![image](../images/DiaconnG8/DiaconnG8_05.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_05.jpg)
 
 - Există două opțiuni pentru a verifica numărul modelului:
 
 1. Ultimele 5 cifre ale numărului SN de pe spatele pompei.
 2. Apăsați pe butonul O > Informații > BLE > Ultimele 5 cifre.
 
-![image](../images/DiaconnG8/DiaconnG8_06.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Odată ce ați selectat pompa dumneavoastră, o fereastră va apărea și va cere un cod PIN. Introduceți numărul PIN afișat în pompă pentru a finaliza conexiunea.
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+ ![imagine](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 ## Verificarea stării pompei și sincronizarea jurnalelor
 
 - Odată ce pompa este conectată, apăsați pe simbolul Bluetooth pentru a verifica starea și pentru a sincroniza jurnalele.
 
-![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ## Depanare Bluetooth
 
@@ -47,25 +47,25 @@
 
 - Atingeți pe butonul 3 puncte din dreapta sus.
 
-![image](../images/DiaconnG8/DiaconnG8_09.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_09.jpg)
 
 - Apăsați pe Ieșire.
 
-![image](../images/DiaconnG8/DiaconnG8_10.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_10.jpg)
 
 ### Metoda 2) Dacă prima metodă nu funcționează, deconectați Bluetooth și apoi reconectați.
 
 - Apăsați și mențineți apăsat butonul Bluetooth din partea de sus timp de aproximativ 3 secunde.
 
-![image](../images/DiaconnG8/DiaconnG8_11.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_11.jpg)
 
 - Apăsați pe butonul de setare al pompei de insulină Diaconn G8 asociate.
 
-![image](../images/DiaconnG8/DiaconnG8_12.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_12.jpg)
 
 - Dezasociați.
 
-![image](../images/DiaconnG8/DiaconnG8_13.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_13.jpg)
 
 - Repetați procesul de asociere cu Bluetooth pentru pompă (vedeți mai sus).
 
