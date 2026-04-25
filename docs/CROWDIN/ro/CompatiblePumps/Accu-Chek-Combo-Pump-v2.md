@@ -2,44 +2,44 @@
 
 **Acesta aplicație face parte dintr-o soluție DIY (do-it-yourself/ o aplicație pe care o construiești singur) și nu este un produs finit; ea solicita implicarea utilizatorului: să citească, să învețe și să înțeleagă sistemul, de la construcție pana la modul de utilizare. Nu este un facut pentru a vă gestiona tratamentul diabetul in totalitate, dar vă permite să vă îmbunătățiți calitatea vieții alaturi de diabet, dacă sunteți dispus să acordați timpul necesar. Acordați-vă timp pentru a învăța sa-l intelegeti si folosi. You alone are responsible for what you do with it.**
 
-## Cerinţe hardware şi software
+## Cerințe hardware și software
 
-* A Roche Accu-Chek Combo (any firmware, they all work).
-* Un dispozitiv Smartpix sau Realtyme împreună cu Softul de Configurare 360 pentru a configura pompa. (Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.)
-* A compatible phone. Android 9 (Pie) or newer is a must. If using LineageOS, the minimum supported version is 16.1. See [release notes](#maintenance-android-version-aaps-version) for details.
-* The AndroidAPS app installed on your phone.
+* O pompă de insulină Accu-Chek Combo (orice versiune de firmware, funcționează toate).
+* Un dispozitiv Smartpix sau Realtyme împreună cu Softul de Configurare 360 pentru a configura pompa. (Roche trimite clienților lor la cerere și gratuit dispozitivele Smartpix împreuna cu softul de configurare)
+* Un telefon compatibil. Android 9 (Pie) sau mai nou este obligatoriu. Dacă folosiți LineageOS, versiunea minimă acceptată este 16.1. Vedeți notele [de eliberare](#maintenance-android-version-aaps-version) pentru detalii.
+* Aplicația AndroidAPS instalată pe telefon.
 
-Some phones may work better than others, depending on their quality of Bluetooth support and whether or not they have additional, very aggressive power saving logic. A list of phones can be found in the [AAPS Phones](#Phones-list-of-tested-phones) document. Atenție la faptul că aceasta nu este o listă completă și reflectă doar experiența avută de utilizator în folosire. Vă încurajăm să scrieți și experiența pe care o aveți dumneavoastră, cu scopul de a ajuta și alte persoane în luarea unei decizii (toate aceste proiecte sunt despre a vă aduce propria contribuție la binele comunității).
+Unele telefoane pot funcționa mai bine decât altele, în funcție de calitatea conexiunii prin Bluetooth și dacă au sau nu o logică suplimentară foarte agresivă de economisire a energiei. O listă de telefoane poate fi găsită în documentul [Telefoane AAPS](#Phones-list-of-tested-phones). Atenție la faptul că aceasta nu este o listă completă și reflectă doar experiența avută de utilizator în folosire. Vă încurajăm să scrieți și experiența pe care o aveți dumneavoastră, cu scopul de a ajuta și alte persoane în luarea unei decizii (toate aceste proiecte sunt despre a vă aduce propria contribuție la binele comunității).
 
 (combov2-before-you-begin)=
-## Before you begin
+## Înainte să începeți
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error. Keep your Smartpix / Realtyme device handy, along with the 360 Configuration Software. Plan on spending about an hour for setting everything up and checking that everything is working properly.
+**SIGURANȚA MAI ÎNTÂI** - nu încercați acest proces într-un mediu în care nu vă puteți recupera după o eroare. Țineți la îndemână dispozitivul Smartpix / Realtyme, împreună cu programul de configurare 360. Planificați pentru a petrece aproximativ o oră pentru a configura totul și pentru a verifica dacă totul funcționează corect.
 
-Be aware of the following limitations:
+Fiți conștienți de următoarele limitări:
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
-* Only one basal profile (the first one) is supported.
-* The loop is disabled if the currently active profile on the pump isn't profile no. 1. This continues until profile no. 1 is made the active one; when that is done, the next time AAPS connects (either on its own after a while or because the user presses the Refresh button in the combov2 user interface), it will notice that profile no. 1 is the current one, and enable the loop again.
-* If the loop requests a running TBR to be cancelled, the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because actually cancelling a TBR causes an alert on the pump which causes a lot of vibrations, and these vibrations cannot be disabled.
-* Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. If that error occurs, make sure Bluetooth is enabled, press the Refresh button in the Combo tab to see if this was caused by an intermitted issue and if still no connection is established, reboot the phone which should usually fix this.
-* There is another issue were a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
+* Bolusul extins și bolusul multiplu nu sunt acceptate în prezent (puteți utiliza [Carbohidrați extinși](../DailyLifeWithAaps/ExtendedCarbs.md)).
+* Doar un singur profil bazal (primul) este acceptat.
+* Bucla este dezactivată dacă profilul actual activ al pompei nu este profilul cu numărul 1. Acest lucru continuă până când profilul cu numărul 1 devine activ; când se face acest lucru, data viitoare când AAPS se conectează (fie pe cont propriu după un timp, fie pentru că utilizatorul apasă butonul de reîmprospătare din interfața de utilizator combov2), va observa că acel profil cu numărul 1 este cel curent și bucla se va activa din nou.
+* Dacă bucla solicită ca o RBT care rulează să fie anulată, Combo va seta o RBT de 90% sau 110% timp de 15 minute. Acest lucru se datorează faptului că anularea unui RBT provoacă o alertă în pompă care provoacă o mulțime de vibrații, iar aceste vibrații nu pot fi dezactivate.
+* Stabilitatea conexiunii Bluetooth variază în funcție de telefon, ceea ce cauzează apariția alertei "pompă inaccesibilă" și nu se mai realizează nici o altă conexiune între telefon și pompă. Dacă apare această eroare, asigurați-vă că Bluetooth este activat, apăsați butonul Refresh în pagina Combo pentru a afla dacă aceasta a fost cauzată de o problemă intermitentă și dacă în continuare nu există conexiune, reporniți telefonul ceea ce de obicei rezolvă problema.
+* Există și o altă problemă atunci când o repornire a telefonului nu ajută, dar apăsarea unui buton al pompei trebuie apăsat (buton ce resetează sistemul Bluetooth al pompei), înainte ca pompa să accepte din nou conexiuni cu telefonul.
 * Setarea unei RBT în pompă ar trebui evitată, deoarece doar bucla ar trebuie să ia astfel de decizii și să facă astfel de acțiuni - ar trebui să fie singura care controlează RBT-urile. Detectarea unei RBT noi în pompă durează până la 20 de minute și efectul RBT-ului va fi luat în calcul doar începând cu momentul detecției, astfel că în cazul cel mai rău pot exista 20 de minute a unei RBT a cărei valoare să nu se reflecte în IOB.
 
-If you have been using the old Combo driver that depends on the separate Ruffy app, and want to move to this new one, note that the pairing has to be done again - Ruffy and the new Combo driver are not able to share pairing information. Also, make sure that Ruffy is _not_ running. If in doubt, long-press the Ruffy app icon to bring up a context menu. In that menu, press on "App Info". In the UI that just opened up, press "Force stop". That way, it is ensured that an active Ruffy instance cannot interfere with the new driver.
+Dacă ați folosit vechiul driver Combo care depinde de aplicația Ruffy separată și doriți să mutați la una nouă, observați că asocierea trebuie refăcută – Ruffy și noul driver Combo nu pot împărtăși informații privind asocierea. De asemenea, asigurați-vă că Ruffy _nu_ rulează. Dacă aveți dubii, apăsați lung pictograma Ruffy pentru a deschide un meniu contextual. În acel meniu, apăsați pe "App Info". În interfața care tocmai s-a deschis, apăsați "Oprire Forțată". În acest fel, se asigură că o instanță activă Ruffy nu poate interfera cu noul driver.
 
-Also, if you are migrating from the old driver, be aware that the new driver communicates a bolus command in an entirely different way to the Combo that is much faster, so don't be surprised when a bolus starts immediately regardless of the dosage. Furthermore, the general suggestions, tips and tricks etc. about dealing with Ruffy pairing and connection problems do not apply here, since this is an entirely new driver that shares no code with the old one.
+De asemenea, dacă migrați de la vechiul driver, fiți conștient de faptul că noul driver comunică comanda unui bolus într-un mod complet diferit către Combo, care este mult mai rapid, astfel încât să nu fiți surprinși atunci când un bolus începe imediat, indiferent de doză. În plus, sugestiile, sfaturile și trucurile generale șamd cu privire la modul de abordare al asocierii la Ruffy și problemele de conexiune nu se aplică aici, de vreme ce acesta este un driver complet nou care nu împarte niciun cod cu cel vechi.
 
-This new driver is currently written to support the following languages on the Combo. (This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
+Acest nou driver este scris în prezent pentru a sprijini următoarele limbi pe Combo. (Acest lucru nu are legătură cu limba din AAPS - este limba afișată în LCD al pompei Combo însăși.)
 
-* English
-* Spanish
-* French
-* Italian
-* Russian
-* Turkish
-* Polish
-* Czech
+* Engleză
+* Spaniolă
+* Franceză
+* Italiană
+* Rusă
+* Turcă
+* Poloneză
+* Cehă
 * Hungarian
 * Slovak
 * Romanian
@@ -96,63 +96,63 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
   ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
 
-* Tap the cog-wheel to open the driver settings.
+* Atingeți rotița pentru a deschide setările driverului.
 
-* In the settings user interface, tap on the button 'Pair with pump' at the top of the screen. This opens the Combo pairing user interface. Follow the instructions shown on screen to start pairing. When Android asks for permission to make the phone visible to other Bluetooth devices, press "allow". Eventually, the Combo will show a custom 10-digit pairing PIN on its screen, and the driver will request it. Enter that PIN in the corresponding field.
+* În setările interfeței utilizatorului, apăsați pe butonul 'Asociați cu pompa' din partea de sus a ecranului. Aceasta deschide interfața utilizatorului de asociere Combo. Urmați instrucțiunile afișate pe ecran pentru a începe asocierea. Când Android solicită permisiunea de a face telefonul vizibil pentru alte dispozitive Bluetooth, apăsați "Permiteți". În cele din urmă, Combo va afișa un cod PIN personalizat de 10 cifre pe ecran, iar driverul îl va solicita. Introduceți acel cod PIN în câmpul corespunzător.
 
-  ![Screenshot of Combo Pairing UI 1](../images/combo/combov2-pairing-screen-1.png)
+  ![Captură de ecran a interfeței de asociere Combo 1](../images/combo/combov2-pairing-screen-1.png)
 
-  ![Screenshot of Combo Pairing UI 2](../images/combo/combov2-pairing-screen-2.png)
+  ![Captură de ecran a interfeței de asociere Combo 2](../images/combo/combov2-pairing-screen-2.png)
 
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png)
+  ![Captură de ecran a interfeței de asociere Combo 3](../images/combo/combov2-pairing-screen-3.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
+  ![Captură de ecran a interfeței de asociere Combo 4](../images/combo/combov2-pairing-screen-4.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Captură de ecran a interfeței de asociere Combo 4](../images/combo/combov2-pairing-screen-5.png)
 
-* When the driver asks for the 10-digit PIN that is shown on the Combo, and the code is entered incorrectly, this is shown: ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+* Când driverul cere codul PIN de 10 cifre afișat în Combo, iar codul este introdus incorect, următorul mesaj este afișat: ![Captură de ecran a interfeței de asociere Combo 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
-* Once pairing is done, the pairing user interface is closed by pressing the OK button in the screen that states that pairing succeeded. After it is closed, you return to the driver settings user interface. The 'Pair with pump' button should now be greyed out and disabled.
+* Odată ce asocierea a fost făcută, interfața utilizatorului este închisă prin apăsarea butonului OK din ecran care arată că asocierea a reușit. După ce a fost închis, reveniți la interfața de utilizare a setărilor de driver. Butonul "Asociați pompă" ar trebui acum să fie gri și dezactivat.
 
-  The Accu-Chek Combo tab looks like this after successfully pairing:
+  Fila Combo Accu-Chek arată așa după asocierea cu succes:
 
-  ![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
+  ![Captura de ecran a filei Combo Accu-Chek cu asocierea](../images/combo/combov2-tab-with-pairing.png)
 
-  if however there is no pairing with the Combo, the tab looks like this instead:
+  dacă totuși nu există o asociere cu Combo, fila arată așa:
 
-  ![Screenshot of Accu-Chek Combo tab without pairing](../images/combo/combov2-tab-without-pairing.png)
+  ![Captură de ecran a filei Combo Accu-Chek fără asociere](../images/combo/combov2-tab-without-pairing.png)
 
-* To verify your setup (with the pump **disconnected** from any cannula to be safe!) use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+* Pentru a verifica configurarea (cu pompa **deconectată** de la orice canulă pentru a fi în siguranță!) utilizați AAPS pentru a seta o RBT de 500% pentru 15 minute și administrați un bolus. Pompa ar trebui să aibă acum un RBT activă și să afișeze bolusul în istoric. AAPS ar trebui, de asemenea, să afișeze RBT activă și bolusul administrat.
 
-* On the Combo, it is recommended to enable the key lock to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit.
+* Pe Combo, este recomandat să activați blocarea tastelor pentru a preveni bolusul de la pompă, în special când pompa a fost utilizată înainte și utilizarea funcției de "bolus rapid" era un obicei.
 
-## Notes about pairing
+## Note despre asociere
 
-The Accu-Chek Combo was developed before Bluetooth 4.0 was released, and just one year after the very first Android version was released. This is why its way of pairing with other devices is not 100% compatible with how it is done in Android today. To fully overcome this, AAPS would need system level permissions, which are only available for system apps. These are installed by the phone makers into the phone - users cannot install system apps.
+Accu-Chek Combo a fost dezvoltată înainte ca Bluetooth 4.0 să fie lansat și la doar un an de la lansarea primei versiuni de Android. Acesta este motivul pentru care modul ei de asociere cu alte dispozitive nu este 100 % compatibil cu modul în care se face astăzi în Android. Pentru a depăși pe deplin această situație, AAPS ar avea nevoie de permisiuni la nivelul sistemului, care sunt disponibile doar pentru aplicațiile de sistem. Acestea sunt instalate de către producătorii de telefoane pe telefon - utilizatorii nu pot instala aplicațiile de sistem.
 
-The consequence of this is that pairing will never be 100% without problems, though it is greatly improved in this new driver. In particular, during pairing, Android's Bluetooth PIN dialog can briefly show up and automatically go away. But sometimes, it stays on screen, and asks for a 4-digit PIN. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
+Consecința acestui fapt este că asocierea nu va fi niciodată 100% fără probleme, deși se îmbunătățește considerabil în acest nou driver. În special, în timpul asocierii, dialogul Android cu privire la PIN Bluetooth poate apărea pe scurt și poate dispărea automat. Dar câteodată rămâne pe ecran și cere un cod PIN de 4 cifre. (Aceasta nu trebuie confundată cu codul PIN de asociere Combo de 10 cifre) Nu introduceți nimic, doar apăsați pe butonul de anularea. Dacă asocierea nu continuă, urmați instrucțiunile de pe ecran pentru a reîncerca încercarea de asociere.
 
 (combov2-tab-contents)=
-## Accu-Chek Combo tab contents
+## Conținutul filei Accu-Chek Combo
 
-The tab shows the following information when a pump was paired (items are listed from top to bottom):
+Fila afișează următoarele informații atunci când o pompă a fost asociată (elementele sunt enumerate de sus în jos):
 
-![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
+![Captura de ecran a filei Combo Accu-Chek cu asocierea](../images/combo/combov2-tab-with-pairing.png)
 
-1. _Driver state_: The driver can be in one of the following states:
-   - "Disconnected" : There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
-   - "Connecting"
-   - "Checking pump" : the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
-   - "Ready" : the driver is ready to accept commands from AAPS
-   - "Suspended" : the pump is suspended (shown as "stopped" in the Combo)
-   - "Executing command" : an AAPS command is being executed
-   - "Error" : an error occurred; the connection was terminated, any ongoing command was aborted
-2. _Last connection_: How many minutes ago did the driver successfully connect to the Combo; if this goes beyond 30 minutes, this item is shown with a red color
-3. _Current activity_: Additional detail about what the pump is currently doing; this is also where a thin progress bar can show a command's execution progress, like setting a basal profile
-4. _Battery_: Battery level; the Combo only indicates "full", "low", "empty" battery, and does not offer anything more accurate (like a percentage), so only these three levels are shown here
-5. _Reservoir_: How many IU are currently in the Combo's reservoir
-6. _Last bolus_: How many minutes ago the last bolus was delivered; if none was delivered yet after AAPS was started, this is empty
-7. _Temp basal_: Details about the currently active temporary basal; if none is currently active, this is empty
+1. _Starea driverului_: Driverul poate fi într-una din următoarele stări:
+   - "Deconectat": nu există nicio conexiune Bluetooth; driver se află de cele mai multe ori în această stare și se conectează la pompă doar atunci când este necesar - acest lucru economisește energia
+   - "Se conectează"
+   - "Verificarea pompei": pompa este conectată, dar driverul efectuează în prezent verificări de siguranță pentru a se asigura că totul este în regulă și actualizat
+   - "Pregătit" : driverul este gata să accepte comenzi din AAPS
+   - "Suspendat": pompa este suspendată (indicată ca "oprit" în Combo)
+   - "Executarea comenzii" : o comandă AAPS este executată
+   - "Eroare" : a apărut o eroare; conexiunea a fost terminată, orice comandă în desfășurare a fost abandonată
+2. _Ultima conexiune_: Cu câte minute în urmă s-a conectat cu succes driverul la Combo; dacă acest lucru depășește 30 de minute, acest element este afișat cu o culoare roșie
+3. _Activitatea curentă_: Detalii suplimentare despre ceea ce face pompa în prezent; aici este de asemenea unde o bară de progres subțire poate arăta progresul executării unei comenzi, cum ar fi setarea unui profil bazal
+4. _Baterie_: nivel baterie; Combo indică numai dacă bateria este "plină", "joasă", "descărcată", și nu oferă nimic mai precis (cum ar fi un procentaj), astfel încât doar aceste trei niveluri sunt prezentate aici
+5. _Rezervor_: Câte unități sunt în prezent în rezervorul pompei Combo
+6. _Ultimul bolus_: Cu câte minute în urmă a fost administrat ultimul bolus; dacă niciunul nu a fost administrat încă după ce AAPS a fost pornit, acesta este gol
+7. _Bazală temporară_: Detalii despre bazala temporară activată în prezent; dacă niciuna nu este activă, acesta este gol
 8. _Base basal rate_: Currently active base basal rate ("base" means the basal rate without any active TBR influencing the basal rate factor)
 9. _Serial number_: Combo serial number as indicated by the pump (this corresponds to the serial number shown on the back of the Combo)
 10. _Bluetooth address_: The Combo's 6-byte Bluetooth address, shown in the `XX:XX:XX:XX:XX:XX` format
@@ -198,27 +198,27 @@ Certain warnings are automatically dismissed by the driver. These are:
 - W2 "battery low" : the driver turns this into a "low battery" warning that is shown on the AAPS main tab
 - W3, W6, W7, W8 : these are all purely informational for the user, so it is safe for the driver to auto-dismiss them
 
-Other warnings are _not_ automatically dismissed. Also, errors are _never_ automatically dismissed. Both of these are handled the same way: They cause the driver to produce an alert dialog on top of the AAPS UI, and also cause it to abort any ongoing command execution. The driver then switches to the "error" state (see [the Accu-Chek Combo tab contents description above](#combov2-tab-contents)). This state does not allow for any command execution. The user has to handle the error on the pump; for example, an occlusion error may require replacing the cannula. Once the user took care of the error, normal operation can be resumed by pressing the "Refresh" button on the Accu-Chek Combo tab. The driver then connects to the Combo and updates its status, checking for whether an error is still shown on screen etc. Also, the driver auto-refreshes the pump status after a while, so manually pressing that button is not mandatory.
+Other warnings are _not_ automatically dismissed. Also, errors are _never_ automatically dismissed. Both of these are handled the same way: They cause the driver to produce an alert dialog on top of the AAPS UI, and also cause it to abort any ongoing command execution. The driver then switches to the "error" state (see [the Accu-Chek Combo tab contents description above](#combov2-tab-contents)). Această stare nu permite executarea comenzilor. Utilizatorul trebuie să gestioneze eroarea de pe pompă; de exemplu, o eroare de ocluzie poate necesita înlocuirea canulei. Odată ce utilizatorul s-a ocupat de eroare, operația normală poate fi reluată prin apăsarea butonului "Reîmprospătare" de pe fila Accu-Chek Combo. Driverul se conectează apoi la pompa Combo și îi actualizează starea, verifică dacă vreo eroare mai este încă afișată pe ecran șamd. De asemenea, driverul reîmprospătează automat starea pompei după un timp, așa că apăsarea manuală a butonului nu este obligatorie.
 
-Bolusing is a special case. It is done in the Combo's command mode, which does not report mid-bolus that an alert appeared. As a consequence, the driver cannot automatically dismiss warnings _during_ a bolus. This means that unfortunately, the pump will be beeping until the bolus is finished. The most common mid-bolus alert typically is W1 "reservoir low". **Don't** dismiss Comnbo warnings on the pump itself manually during a bolus. You risk interrupting the bolus. The driver will take care of the warning once the bolus is over.
+Bolusarea este un caz special. Se face în modul de comandă Combo, care nu raportează în timpul bolusului că a apărut vreo alerta. În consecință, driverul nu poate respinge automat avertismentele _în timpul_ unui bolus. Aceasta înseamnă că, din păcate, pompa va emite semnale sonore până la terminarea bolusului. Alerta cea mai comună din timpul unui bolus este de obicei W1 "rezervor golit". **Nu** respingeți avertismentele Combo de pe pompă în timpul unui bolus. Riscați să întrerupeți bolusul. Driverul se va ocupa de avertisment odată ce bolusul s-a terminat.
 
-Alerts that happen while the driver is not connected to the Combo will not be noticed by the driver. The Combo has no way of automatically pushing that alert to the phone; it is always the phone that has to initiate the connection. As a consequence, the alert will persist until the driver connects to the pump. Users can press the "Refresh" button to trigger a connection and let the driver handle the alert right then and there (instead of waiting until AAPS itself decides to initiate a connection).
+Alertele care au loc în timp ce driverul nu este conectat la Combo nu vor fi observate de către driver. Combo nu are nici o modalitate de a împinge automat acea alertă la telefon; întotdeauna telefonul este cel care trebuie să inițieze conexiunea. În consecință, alerta va persista până când driverul se conectează la pompă. Utilizatorii pot apăsa butonul "Reîmprospătați" pentru a declanșa o conexiune și permite driverului să gestioneze alerta chiar atunci și acolo (în loc să aștepte până când AAPS însuși decide să inițieze o conexiune).
 
-**IMPORTANT**: If an error occurs, or a warning shows up that isn't one of those that are automatically dismissed, the driver enters the error state. In that state, the loop **WILL BE BLOCKED** until the pump status is refreshed! It is unblocked after the pump status is updated (either by manual "Refresh" button press or by the driver's eventual auto-update) and no error is shown anymore.
+**IMPORTANT**: Dacă are loc o eroare, sau apare un avertisment care nu este unul dintre cei care sunt revocați automat, driverul intră în starea de eroare. În această stare, bucla **VA FI BLOCATĂ** până când starea pompei este reîmprospătată! Aceasta este deblocată după ce starea pompei este actualizată (fie prin apăsarea manuală a butonului "Reîmprospătare" sau prin eventuala actualizare a driverului) și nicio eroare nu mai este afișată.
 
-## Things to be careful about when using the Combo
+## Lucruri despre care trebuie să fiți atent când utilizați Combo
 
-* Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
-* Due to the way the Combo's remote control functionality works, several operations (especially setting a basal profile) are slow compared to other pumps. This is an unfortunate limitation of the Combo that cannot be overcome.
-* Don't set or cancel a TBR on the pump. The loop assumes control of TBRs and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
-* Don't press any buttons on the pump while AAPS communicates with the pump (the Bluetooth logo is shown on the pump while it is connected to AAPS). Doing that will interrupt the Bluetooth connection. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](#combov2-before-you-begin)).
-* Don't press any buttons while the pump is bolusing. In particular, don't try to dismiss alerts by pressing buttons. See [the section about alerts](#combov2-alerts) for a more detailed explanation why.
+* Țineți cont că acesta nu este un produs, mai ales la început, utilizatorul trebuie să monitorizeze și să înțeleagă sistemul, limitările și modul în care poate eșua. Se recomandă ferm să NU utilizați acest sistem atunci când persoana care îl utilizează nu este capabilă să înțeleagă complet sistemul.
+* Datorită modului în care merge funcționalitatea de control la distanță a pompei Combo, mai multe operațiuni (în special setarea unui profil bazal) sunt lente în comparație cu alte pompe. Aceasta este o limitare regretabilă a Combo, care nu poate fi depășită.
+* Nu stabiliți sau anulați o RBT direct în pompă. Bucla presupune controlul RBT și nu poate funcționa în mod fiabil în caz contrar, din moment ce nu este posibil să se determine ora de începere a RBT care a fost setată de către utilizatorul pompei.
+* Nu apăsați niciun buton de pe pompă în timp ce AAPS comunică cu pompa (simbolul Bluetooth este afișat în pompă în timp ce este conectat la AAPS). Acest lucru va întrerupe conexiunea Bluetooth. Faceți acest lucru numai dacă există probleme cu stabilirea unei conexiuni (vedeți secțiunea ["Înainte să începeți" de deasupra](#combov2-before-you-begin)).
+* Nu apăsați niciun buton în timp ce pompa bolusează. În special, nu încercați să respingeți alertele prin apăsarea de butoane. Vedeți [secțiunea despre alerte](#combov2-alerts) pentru o explicație mai detaliată de ce.
 
-## Checklist for when no connection can be established with the Combo
+## Listă de verificare atunci când nu poate fi stabilită nicio conexiune cu Combo
 
-The driver does its best to connect to the Combo, and uses a couple of tricks to maximize reliability. Still, sometimes, connections aren't established. Here are some steps to take for trying to remedy this situation.
+Driverul face tot posibilul să se conecteze la Combo, și folosește câteva trucuri pentru a maximiza fiabilitatea. Cu toate acestea, uneori, conexiunile nu sunt stabilite. Iată câțiva pași de făcut pentru a încerca să remediem această situație.
 
-1. Press a button on the Combo. Sometimes, the Combo's Bluetooth stack becomes non-responsive, and does not accept connections anymore. By pressing a button on the Combo and making the LCD show something, the Bluetooth stack is reset. Most of the time, this is the only step that's needed to fix the connection issues.
-2. Restart the phone. This may be needed if there is an issue with the phone's Bluetooth stack itself.
-3. If the Combo's battery cap is old, consider replacing it. Old battery caps can cause issues with the Combo's power supply, which affect Bluetooth.
-4. If connection attempts still keep failing, consider unpairing and then re-pairing the pump.
+1. Apăsați un buton de pe Combo. Uneori, stiva de Bluetooth a pompei Combo devine non-responsivă și nu mai acceptă conexiuni. Prin apăsarea unui buton din Combo și aprinderea afișajului LCD, stiva Bluetooth este resetată. De cele mai multe ori, acesta este singurul pas necesar pentru rezolvarea problemelor de conectare.
+2. Reporniți telefonul. Acest lucru ar putea fi necesar dacă există o problemă cu stiva Bluetooth a telefonului în sine.
+3. Dacă capacul de baterie al Combo-ului este vechi, luați în considerare înlocuirea lui. Capacele vechi de baterie pot cauza probleme cu sursa de alimentare a Combo, care afectează Bluetooth.
+4. Dacă încercările de conexiune tot nu reușesc, luați în considerare dezasocierea și apoi reasocierea pompei.
