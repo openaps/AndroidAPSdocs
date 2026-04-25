@@ -16,7 +16,7 @@ An artificial pancreas can be thought of as an [“autopilot for your diabetes�
 
 In an aircraft, an autopilot does not do the complete job of the human pilot, the pilot cannot sleep through the entire flight. The autopilot aids the work of the pilot. It relieves them of the burden of permanently monitoring the aircraft, allowing the pilot to concentrate on wider monitoring from time to time. Autopilotul primește semnale de la diferiți senzori The pilot no longer has to worry about constantly making decisions.
 
-![image](../images/autopilot.png)
+![imagine](../images/autopilot.png)
 
 (Introduction-what-does-hybrid-closed-loop-mean)=
 ## What does hybrid closed loop mean?
@@ -33,7 +33,7 @@ Several commercial hybrid closed loop systems have been launched, the most recen
 
 ## What is Android APS (AAPS)?
 
-![image](../images/basic-outline-of-AAPS.png)
+![imagine](../images/basic-outline-of-AAPS.png)
 
 **Figure 1**. Basic outline of the Android APS (Artificial Pancreas System), AAPS.
 
