@@ -55,7 +55,7 @@ These Authenticator apps produce a time-limited, one-time 6-digit password, simi
 
 On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phone** are allowed.
 
-![image](../images/remote-control-08.png)
+![imagine](../images/remote-control-08.png)
 
 ### Date and time syncing
 
@@ -75,7 +75,7 @@ Go to the Preferences for SMS Communicator.
 
 Enable “allow remote commands via SMS”:
 
-![image](../images/remote-control-11.png)
+![imagine](../images/remote-control-11.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Numere de telefon permise
@@ -90,7 +90,7 @@ Note that the “+” in front of the number may or may not be required based on
 
 If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select “OK”:
 
-![image](../images/remote-control-12.png)
+![imagine](../images/remote-control-12.png)
 
 #### Minute între comenzile de bolus
 
@@ -107,7 +107,7 @@ PIN requirements are:
 * not the same digits (_i.e._ 1111 or 1224)
 * not sequential numbers (_i.e._ 1234)
 
-![image](../images/remote-control-13.png)
+![imagine](../images/remote-control-13.png)
 
 #### Setare Authenticator
 
@@ -123,7 +123,7 @@ Exemplu:
 
 If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
 
-![image](../images/remote-control-14.png)
+![imagine](../images/remote-control-14.png)
 
 You should now be set up with SMS commands.
 
@@ -135,7 +135,7 @@ Use button "Authenticator setup > Reset Authenticators" if you want to remove pr
 
 1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
 
-![image](../images/remote-control-15.png)
+![imagine](../images/remote-control-15.png)
 
 If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
 
@@ -143,7 +143,7 @@ If you don't receive any response, check the [Troubleshooting](#SMSCommands-trou
 
 When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
 
-![image](../images/remote-control-16.png)
+![imagine](../images/remote-control-16.png)
 
 The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
 
@@ -162,7 +162,7 @@ To avoid hypos, it is a good idea to start conservatively, by bolusing **less in
 **The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or **AAPSClient** with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions subsection below) , and are therefore quicker than SMS commands.
 
 (SMSCommands-commands)=
-## Commands
+## Comenzi
 
 ```{contents} List of command groups
 :depth: 1
@@ -180,7 +180,7 @@ The **SMS Commands Tables** below show all the possible SMS commands. _Example v
 
 Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
 
-![image](../images/remote-control-06.png)
+![imagine](../images/remote-control-06.png)
 
 Commands which need more security require a code to be entered, for example:
 
@@ -188,43 +188,43 @@ Commands which need more security require a code to be entered, for example:
 
 The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
 
-### CGM data
+### Date CGM
 
 | Command    | Auth | Function & *Response*                                                                                                                                                                       |
 | ---------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | No   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                             |
-| CAL 5.6/90 | Yes  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent* |
+| BG         | Nu   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                             |
+| CAL 5.6/90 | Da   | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent* |
 
 ### Pompă
 
 | Command              | Auth | Function & *Response*                                                                                 |
 | -------------------- | ---- | ----------------------------------------------------------------------------------------------------- |
-| PUMP                 | No   | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Yes  | To disconnect pump for *30* minutes                                                                   |
-| PUMP CONNECT         | Yes  | Pump reconnected                                                                                      |
+| PUMP                 | Nu   | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Da   | To disconnect pump for *30* minutes                                                                   |
+| PUMP CONNECT         | Da   | Pompă reconectată                                                                                     |
 
-### Basal
+### Rate bazale
 
 | Command           | Auth | Function & *Response*            |
 | ----------------- | ---- | -------------------------------- |
-| BASAL 0.3         | Yes  | To start basal 0.3U/h for 30 min |
-| BASAL 0.3 20      | Yes  | To start basal 0.3U/h for 20 min |
-| BASAL 30%         | Yes  | To start basal 30% for 30 min    |
-| BASAL 30% 50      | Yes  | To start basal 30% for 50 min    |
-| BASAL STOP/CANCEL | Yes  | To stop temp basal               |
+| BASAL 0.3         | Da   | To start basal 0.3U/h for 30 min |
+| BASAL 0.3 20      | Da   | To start basal 0.3U/h for 20 min |
+| BASAL 30%         | Da   | To start basal 30% for 30 min    |
+| BASAL 30% 50      | Da   | To start basal 30% for 50 min    |
+| BASAL STOP/CANCEL | Da   | To stop temp basal               |
 
 
 ### Buclă
 
 | Command           | Auth | Function & *Response*                                                                                                                                                                                                                     |
 | ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | No   | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled or LGS<br/> - *Loop is enabled* if the loop is closed or open<br/> - *Suspended (10 min)* if the loop is disconnected or suspended |
-| LOOP STOP/DISABLE | Yes  | The pump will revert to the pre-programmed basal rate.<br/>*Loop has been disabled*                                                                                                                                                 |
-| LOOP START/ENABLE | Yes  | *Loop has been enabled*                                                                                                                                                                                                                   |
-| LOOP SUSPEND 20   | Yes  | *Loop suspended for 20 minutes*                                                                                                                                                                                                           |
-| LOOP RESUME       | Yes  | *Loop resumed*                                                                                                                                                                                                                            |
-| LOOP CLOSED       | Yes  | *Current loop mode: Closed Loop*                                                                                                                                                                                                          |
-| LOOP LGS          | Yes  | *Current loop mode: Low Glucose Suspend*                                                                                                                                                                                                  |
+| LOOP STATUS       | Nu   | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled or LGS<br/> - *Loop is enabled* if the loop is closed or open<br/> - *Suspended (10 min)* if the loop is disconnected or suspended |
+| LOOP STOP/DISABLE | Da   | The pump will revert to the pre-programmed basal rate.<br/>*Loop has been disabled*                                                                                                                                                 |
+| LOOP START/ENABLE | Da   | *Bucla a fost activată*                                                                                                                                                                                                                   |
+| LOOP SUSPEND 20   | Da   | *Loop suspended for 20 minutes*                                                                                                                                                                                                           |
+| LOOP RESUME       | Da   | *Buclă restabilită*                                                                                                                                                                                                                       |
+| LOOP CLOSED       | Da   | *Current loop mode: Closed Loop*                                                                                                                                                                                                          |
+| LOOP LGS          | Da   | *Current loop mode: Low Glucose Suspend*                                                                                                                                                                                                  |
 
 ### Bolus
 
@@ -232,28 +232,28 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 
 | Command              | Auth | Function & *Response*                                                                                                        |
 | -------------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
-| BOLUS 1.2            | Yes  |                                                                                                                              |
-| BOLUS 0.60 MEAL      | Yes  | Delivers the specified 0.60U bolus<br/>**and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target) |
-| CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                                 |
-| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends<br/> on the time setting (12h/24h) on the phone.    |
-| EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#screens-action-tab).                          |
-| EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                       |
+| BOLUS 1.2            | Da   |                                                                                                                              |
+| BOLUS 0.60 MEAL      | Da   | Delivers the specified 0.60U bolus<br/>**and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target) |
+| CARBS 5              | Da   | To enter 5g, without a bolus                                                                                                 |
+| CARBS 5 17:35/5:35PM | Da   | To enter 5g at 17:35.<br/>The acceptable time format depends<br/> on the time setting (12h/24h) on the phone.    |
+| EXTENDED 2 120       | Da   | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#screens-action-tab).                          |
+| EXTENDED STOP/CANCEL | Da   | To stop extended bolus                                                                                                       |
 
 ### Profil
 
 | Command        | Auth | Function & *Response*                                                                                                                                        |
 | -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| PROFILE STATUS | No   | Current profile and percentage                                                                                                                               |
-| PROFILE LIST   | No   | The current list of profiles in **AAPS**, e.g.:<br/>1. Profile1<br/> 2. Profile2                                                                 |
-| PROFILE 1      | Yes  | To switch profile to profile 1 in the list.<br/>Use the numbers as returned by the **PROFILE LIST**,<br/>not the profile names as you saved them |
-| PROFILE 2 30   | Yes  | To switch profile to Profile2 30%                                                                                                                            |
+| PROFILE STATUS | Nu   | Current profile and percentage                                                                                                                               |
+| PROFILE LIST   | Nu   | The current list of profiles in **AAPS**, e.g.:<br/>1. Profile1<br/> 2. Profile2                                                                 |
+| PROFILE 1      | Da   | To switch profile to profile 1 in the list.<br/>Use the numbers as returned by the **PROFILE LIST**,<br/>not the profile names as you saved them |
+| PROFILE 2 30   | Da   | To switch profile to Profile2 30%                                                                                                                            |
 
 ### Temporary Targets
 
 | Command                   | Auth | Function & *Response*                     |
 | ------------------------- | ---- | ----------------------------------------- |
-| TARGET MEAL/ACTIVITY/HYPO | Yes  | To set the Temp Target MEAL/ACTIVITY/HYPO |
-| TARGET STOP/CANCEL        | Yes  | To cancel Temp Target                     |
+| TARGET MEAL/ACTIVITY/HYPO | Da   | To set the Temp Target MEAL/ACTIVITY/HYPO |
+| TARGET STOP/CANCEL        | Da   | To cancel Temp Target                     |
 
 
 (SMSCommands-other)=
@@ -261,11 +261,11 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 
 | Command            | Auth | Function & *Response*                                                                                                                                                                                     |
 | ------------------ | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TREATMENTS REFRESH | No   | Refresh treatments from NS                                                                                                                                                                                |
-| AAPSCLIENT RESTART | No   | Useful if you notice a communication problem<br/>with Nightscout or **AAPSClient**                                                                                                                  |
-| RESTART            | No   | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                         |
-| SMS DISABLE/STOP   | No   | To disable the SMS Remote Service reply with code Any.<br/>Keep in mind that you'll able to reactivate it directly<br/>from the **AAPS** master smartphone only.                              |
-| HELP               | No   | Returns all functions available for interrogation:<br/>BG, LOOP, TREATMENTS, ....<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
+| TREATMENTS REFRESH | Nu   | Refresh treatments from NS                                                                                                                                                                                |
+| AAPSCLIENT RESTART | Nu   | Useful if you notice a communication problem<br/>with Nightscout or **AAPSClient**                                                                                                                  |
+| RESTART            | Nu   | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                         |
+| SMS DISABLE/STOP   | Nu   | To disable the SMS Remote Service reply with code Any.<br/>Keep in mind that you'll able to reactivate it directly<br/>from the **AAPS** master smartphone only.                              |
+| HELP               | Nu   | Returns all functions available for interrogation:<br/>BG, LOOP, TREATMENTS, ....<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
 | HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                      |
 
 (SMSCommands-troubleshooting)=
@@ -319,7 +319,7 @@ There are several possible reasons the command may not be successful:
 
 Common errors are shown in the examples below:
 
-![image](../images/remote-control-17.png)
+![imagine](../images/remote-control-17.png)
 
 ### How can I stop a command once it has been authenticated?
 
