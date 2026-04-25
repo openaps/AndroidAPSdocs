@@ -6,7 +6,7 @@ These instructions are for configuring the Equil insulin pump.
 
 §todo
 
-## Hardware and Software Requirements
+## Cerințe hardware și software
 * **Compatible Equil hardware**
 
   Currently Equil 5.3 and 5.4 is supported
