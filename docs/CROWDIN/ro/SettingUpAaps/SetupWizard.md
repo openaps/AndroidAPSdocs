@@ -62,11 +62,11 @@ Select the "AAPS" app:
 
 Enable "Allow display over other apps" by sliding the slider to the right:
 
-![image](../images/setup-wizard/Wizard04-AndroidSettings2.png)
+![imagine](../images/setup-wizard/Wizard04-AndroidSettings2.png)
 
 The slider should look this way if it is enabled:
 
-![image](../images/setup-wizard/Wizard04-AndroidSettings3.png)
+![imagine](../images/setup-wizard/Wizard04-AndroidSettings3.png)
 
 ### Battery optimization
 
@@ -137,7 +137,7 @@ Click the first "ASK FOR PERMISSION" button:
 
 Click "Allow":
 
-![image](../images/setup-wizard/Wizard06-Memory.png)
+![imagine](../images/setup-wizard/Wizard06-Memory.png)
 
 Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information.
 
@@ -319,7 +319,7 @@ Leave "Slow down uploads" disabled. You would only use it in unusual circumstanc
 
 Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Wizard16-App.png)
+![imagine](../images/setup-wizard/Wizard16-App.png)
 
 ## Limba
 
@@ -404,7 +404,7 @@ If a robot has an incorrect input it will fail - consistently. **AAPS** can only
 
 Press "NEXT" to go to the next screen. Enter a "profile name":
 
-![image](../images/setup-wizard/Wizard21.png)
+![imagine](../images/setup-wizard/Wizard21.png)
 
 
 You can have several profiles in the long-term if needed. We only create one here.
@@ -433,7 +433,7 @@ Press "ISF". Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-fact
 
 Press "BAS". Enter your [basal values](#your-aaps-profile-basal-rates):
 
-![image](../images/setup-wizard/Wizard21-Basal.png)
+![imagine](../images/setup-wizard/Wizard21-Basal.png)
 
 
 Press "TARG". Enter your blood sugar target values.
@@ -460,7 +460,7 @@ You can have several profiles defined, but only one activated profile running at
 
 Press "Activate Profile":
 
-![image](../images/setup-wizard/Wizard22-Activate.png)
+![imagine](../images/setup-wizard/Wizard22-Activate.png)
 
 
 
@@ -492,7 +492,7 @@ Your profile has now been set:
 ![Info](../images/setup-wizard/Wizard22-Info.png)
 
 
-## Insulin pump
+## Pompa de insulină
 
 
 
@@ -577,7 +577,7 @@ This was done when we switched to our new profile.
 
 You can click "SNOOZE" and it will disappear.
 
-![image](../images/setup-wizard/Wizard26-Done.png)
+![imagine](../images/setup-wizard/Wizard26-Done.png)
 
 If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
 
