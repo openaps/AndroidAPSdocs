@@ -164,6 +164,7 @@ General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
 - Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
 Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
 Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+Trobleshooting NSClient <./GettingHelp/TroubleshootingNsClient.md>
 Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 ```
 
@@ -186,6 +187,14 @@ State of translations <./SupportingAaps/StateOfTranslations.md>
 Open Humans Uploader <./SupportingAaps/OpenHumans.md>
 
 ```
+```{toctree}
+:hidden:
+
+Sandbox/crowdintest.md
+Sandbox/imageTranslation.md
+Sandbox/sandbox1.md
+```
+
 ```{toctree}
 :caption: 11) Resources
 
